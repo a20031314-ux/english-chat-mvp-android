@@ -4569,6 +4569,22 @@
    "src": "made"
   }
  ],
+ "w|beredar": [
+  {
+   "text": "Video latihan Bayu sempat beredar di grup anggota gym.",
+   "en": "Bayu's workout video circulated in the gym members' group chat.",
+   "ko": "바유의 운동 영상이 헬스장 회원 단톡방에 돌았어요.",
+   "blank": "beredar",
+   "src": "made"
+  },
+  {
+   "text": "Kabar restoran itu akan tutup sempat beredar, tapi ternyata hanya renovasi.",
+   "en": "A rumor that the restaurant would close went around, but it was only a renovation.",
+   "ko": "그 식당이 문을 닫는다는 소문이 돌았지만 알고 보니 수리만 하는 거였어요.",
+   "blank": "beredar",
+   "src": "made"
+  }
+ ],
  "w|berenang": [
   {
    "text": "Anak-anak suka berenang di kolam.",
@@ -10411,6 +10427,22 @@
    "src": "made"
   }
  ],
+ "w|deskripsi": [
+  {
+   "text": "Di brosur gym ada deskripsi singkat tentang setiap kelas.",
+   "en": "The gym brochure has a short description of each class.",
+   "ko": "헬스장 안내서에는 수업마다 짧은 설명이 있어요.",
+   "blank": "deskripsi",
+   "src": "made"
+  },
+  {
+   "text": "Intan membaca deskripsi setiap hidangan sebelum memesan.",
+   "en": "Intan reads the description of each dish before ordering.",
+   "ko": "인탄은 주문하기 전에 요리마다 설명을 읽어요.",
+   "blank": "deskripsi",
+   "src": "made"
+  }
+ ],
  "w|detail": [
   {
    "text": "Rudi memakai kaca pembesar untuk melihat detail ukiran pada perahu miniatur.",
@@ -12513,6 +12545,22 @@
    "blank": "Gas"
   }
  ],
+ "w|gatal": [
+  {
+   "text": "Kulit Bayu terasa gatal setelah memakai matras yang jarang dibersihkan.",
+   "en": "Bayu's skin felt itchy after using a mat that is rarely cleaned.",
+   "ko": "잘 안 닦은 매트를 쓰고 나서 바유의 피부가 가려웠어요.",
+   "blank": "gatal",
+   "src": "made"
+  },
+  {
+   "text": "Tenggorokan Intan terasa gatal setelah makan sambal terlalu banyak.",
+   "en": "Intan's throat felt itchy after eating too much chili sauce.",
+   "ko": "인탄은 삼발을 너무 많이 먹어서 목이 간질거렸어요.",
+   "blank": "gatal",
+   "src": "made"
+  }
+ ],
  "w|gaun": [
   {
    "text": "Gaun putih itu sangat elegan.",
@@ -13087,6 +13135,22 @@
    "en": "She likes eating fried bananas in the afternoon.",
    "ko": "그는 오후에 바나나 튀김 먹기를 좋아해.",
    "blank": "goreng"
+  }
+ ],
+ "w|goresan": [
+  {
+   "text": "Ada goresan kecil di lengan Bayu karena tersangkut alat angkat beban.",
+   "en": "There is a small scratch on Bayu's arm from catching it on the weight machine.",
+   "ko": "바유 팔에 웨이트 기구에 걸려서 생긴 작은 긁힌 자국이 있어요.",
+   "blank": "goresan",
+   "src": "made"
+  },
+  {
+   "text": "Ada goresan panjang di meja kayu tempat keluarga Intan duduk.",
+   "en": "There is a long scratch on the wooden table where Intan's family sits.",
+   "ko": "인탄 가족이 앉은 나무 식탁에 긴 긁힌 자국이 있어요.",
+   "blank": "goresan",
+   "src": "made"
   }
  ],
  "w|gosip": [
@@ -18429,6 +18493,22 @@
    "src": "made"
   }
  ],
+ "w|kehamilan": [
+  {
+   "text": "Gym itu punya kelas yoga khusus untuk ibu-ibu di masa kehamilan.",
+   "en": "The gym has a yoga class specially for mothers during pregnancy.",
+   "ko": "그 헬스장에는 임신 중인 엄마들을 위한 요가 수업이 있어요.",
+   "blank": "kehamilan",
+   "src": "made"
+  },
+  {
+   "text": "Kakak ipar Intan mengumumkan kabar kehamilannya saat makan malam keluarga.",
+   "en": "Intan's sister-in-law announced her pregnancy at the family dinner.",
+   "ko": "인탄의 올케가 가족 저녁 식사 자리에서 임신 소식을 알렸어요.",
+   "blank": "kehamilannya",
+   "src": "made"
+  }
+ ],
  "w|kehancuran": [
   {
    "text": "Kehancuran kota itu membuat warga sedih.",
@@ -18587,6 +18667,22 @@
    "en": "The words he spoke were so cruel.",
    "ko": "그가 한 말이 정말 잔인했어.",
    "blank": "Kejam"
+  }
+ ],
+ "w|kejang": [
+  {
+   "text": "Bayu terbangun malam-malam karena kejang di betisnya.",
+   "en": "Bayu woke up in the night because of a cramp in his calf.",
+   "ko": "바유는 종아리에 쥐가 나서 한밤중에 깼어요.",
+   "blank": "kejang",
+   "src": "made"
+  },
+  {
+   "text": "Pelayan restoran itu pernah belajar cara menolong orang yang mengalami kejang.",
+   "en": "The restaurant's waiter once learned how to help someone having a seizure.",
+   "ko": "그 식당 종업원은 발작을 일으킨 사람을 돕는 법을 배운 적이 있어요.",
+   "blank": "kejang",
+   "src": "made"
   }
  ],
  "w|kejayaan": [
@@ -19689,6 +19785,22 @@
    "en": "He builds trust through honesty.",
    "ko": "그는 정직함으로 신뢰를 쌓아.",
    "blank": "kepercayaan"
+  }
+ ],
+ "w|keperluan": [
+  {
+   "text": "Bayu membawa tas berisi keperluan mandi setiap kali ke gym.",
+   "en": "Bayu brings a bag with toiletries every time he goes to the gym.",
+   "ko": "바유는 헬스장에 갈 때마다 세면도구를 넣은 가방을 챙겨요.",
+   "blank": "keperluan",
+   "src": "made"
+  },
+  {
+   "text": "Intan membawa tas berisi keperluan bayi ke restoran.",
+   "en": "Intan brings a bag of baby supplies to the restaurant.",
+   "ko": "인탄은 식당에 아기 용품을 담은 가방을 가져와요.",
+   "blank": "keperluan",
+   "src": "made"
   }
  ],
  "w|kepolisian": [
@@ -22183,6 +22295,22 @@
    "src": "made"
   }
  ],
+ "w|kumis": [
+  {
+   "text": "Pelatih baru di gym itu punya kumis tebal dan suara keras.",
+   "en": "The new trainer at the gym has a thick mustache and a loud voice.",
+   "ko": "그 헬스장의 새 트레이너는 콧수염이 덥수룩하고 목소리가 커요.",
+   "blank": "kumis",
+   "src": "made"
+  },
+  {
+   "text": "Ayah Intan mengelap kumis yang terkena kuah soto.",
+   "en": "Intan's father wipes his mustache, which got some soto broth on it.",
+   "ko": "인탄의 아버지는 소토 국물이 묻은 콧수염을 닦아요.",
+   "blank": "kumis",
+   "src": "made"
+  }
+ ],
  "w|kumpulan": [
   {
    "text": "Eko menyimpan kumpulan artikel terbaiknya dalam satu map biru.",
@@ -23561,6 +23689,22 @@
    "en": "Grandma's cake is so delicious.",
    "ko": "할머니가 만든 케이크가 정말 맛있어.",
    "blank": "Lezat"
+  }
+ ],
+ "w|lho": [
+  {
+   "text": "Bayu bilang ke temannya, \"Angkat beban itu nggak seberat kelihatannya, lho.\"",
+   "en": "Bayu tells his friend, \"Lifting weights isn't as hard as it looks, you know.\"",
+   "ko": "바유는 친구에게 \"웨이트 생각보다 안 무거워, 진짜야\"라고 말해요.",
+   "blank": "lho",
+   "src": "made"
+  },
+  {
+   "text": "Intan berbisik kepada suaminya, \"Rendang di sini enak banget, lho.\"",
+   "en": "Intan whispers to her husband, \"The rendang here is really good, you know.\"",
+   "ko": "인탄은 남편에게 \"여기 른당 진짜 맛있다니까\"라고 속삭여요.",
+   "blank": "lho",
+   "src": "made"
   }
  ],
  "w|libur": [
@@ -25053,6 +25197,22 @@
    "blank": "Masing-masing"
   }
  ],
+ "w|masker": [
+  {
+   "text": "Saat flu, Bayu memakai masker kalau tetap datang ke gym.",
+   "en": "When he has the flu, Bayu wears a mask if he still comes to the gym.",
+   "ko": "독감에 걸렸을 때 바유는 그래도 헬스장에 오면 마스크를 써요.",
+   "blank": "masker",
+   "src": "made"
+  },
+  {
+   "text": "Pelayan di dapur selalu memakai masker dan sarung tangan.",
+   "en": "The kitchen staff always wear masks and gloves.",
+   "ko": "주방 직원들은 늘 마스크와 장갑을 껴요.",
+   "blank": "masker",
+   "src": "made"
+  }
+ ],
  "w|massa": [
   {
    "text": "Ratusan massa berkumpul di depan gedung pengadilan menunggu putusan.",
@@ -26415,6 +26575,22 @@
    "blank": "memandang"
   }
  ],
+ "w|memandangi": [
+  {
+   "text": "Bayu memandangi pantulan dirinya di cermin sambil memeriksa posisi tubuh.",
+   "en": "Bayu stares at his reflection in the mirror while checking his posture.",
+   "ko": "바유는 자세를 확인하며 거울 속 자기 모습을 바라봐요.",
+   "blank": "memandangi",
+   "src": "made"
+  },
+  {
+   "text": "Anak Intan memandangi akuarium besar di sudut restoran.",
+   "en": "Intan's child gazes at the big aquarium in the corner of the restaurant.",
+   "ko": "인탄의 아이는 식당 구석의 큰 수족관을 바라봐요.",
+   "blank": "memandangi",
+   "src": "made"
+  }
+ ],
  "w|memandu": [
   {
    "text": "Petugas layanan pelanggan memandu Fajar langkah demi langkah untuk mengajukan retur.",
@@ -27281,6 +27457,22 @@
    "en": "She started to hate lies.",
    "ko": "그는 거짓말을 미워하기 시작했어.",
    "blank": "membenci"
+  }
+ ],
+ "w|membengkak": [
+  {
+   "text": "Pergelangan kaki Bayu membengkak setelah salah mendarat dari lompatan.",
+   "en": "Bayu's ankle swelled after he landed badly from a jump.",
+   "ko": "바유는 점프 후 잘못 착지해서 발목이 부었어요.",
+   "blank": "membengkak",
+   "src": "made"
+  },
+  {
+   "text": "Bibir Intan sedikit membengkak setelah makan udang, jadi ia berhenti makan.",
+   "en": "Intan's lips swelled a little after eating shrimp, so she stopped eating.",
+   "ko": "인탄은 새우를 먹고 입술이 살짝 부어서 그만 먹었어요.",
+   "blank": "membengkak",
+   "src": "made"
   }
  ],
  "w|membentuk": [
@@ -28349,6 +28541,22 @@
    "en": "This machine can separate the seed from its husk.",
    "ko": "이 기계는 씨앗과 껍질을 분리할 수 있어.",
    "blank": "memisahkan"
+  }
+ ],
+ "w|memodifikasi": [
+  {
+   "text": "Pelatih memodifikasi program latihan Bayu karena lututnya belum pulih.",
+   "en": "The trainer modified Bayu's training program because his knee hasn't recovered yet.",
+   "ko": "트레이너는 바유의 무릎이 아직 낫지 않아 운동 프로그램을 바꿨어요.",
+   "blank": "memodifikasi",
+   "src": "made"
+  },
+  {
+   "text": "Koki bersedia memodifikasi resep supaya tidak terlalu pedas untuk anak-anak.",
+   "en": "The chef is willing to modify the recipe so it isn't too spicy for children.",
+   "ko": "요리사는 아이들에게 너무 맵지 않게 레시피를 바꿔 줄 수 있어요.",
+   "blank": "memodifikasi",
+   "src": "made"
   }
  ],
  "w|memohon": [
@@ -29683,6 +29891,22 @@
    "blank": "menara"
   }
  ],
+ "w|menargetkan": [
+  {
+   "text": "Bulan ini Bayu menargetkan bisa lari lima kilometer tanpa berhenti.",
+   "en": "This month Bayu aims to be able to run five kilometers without stopping.",
+   "ko": "이번 달 바유는 쉬지 않고 오 킬로미터 달리기를 목표로 해요.",
+   "blank": "menargetkan",
+   "src": "made"
+  },
+  {
+   "text": "Restoran keluarga itu menargetkan pelanggan yang datang bersama anak kecil.",
+   "en": "The family restaurant targets customers who come with small children.",
+   "ko": "그 패밀리 레스토랑은 어린아이를 데리고 오는 손님을 겨냥해요.",
+   "blank": "menargetkan",
+   "src": "made"
+  }
+ ],
  "w|menari": [
   {
    "text": "Anak-anak suka menari.",
@@ -30516,6 +30740,22 @@
    "en": "Her old neighbor hugged Siti and wished her happiness in the new house.",
    "ko": "예전 이웃은 시티를 안아 주며 새집에서 잘 지내길 빌어 줬어요.",
    "blank": "mendoakan",
+   "src": "made"
+  }
+ ],
+ "w|mendobrak": [
+  {
+   "text": "Petugas keamanan terpaksa mendobrak pintu ruang ganti yang macet.",
+   "en": "The security guard had to break down the jammed locker room door.",
+   "ko": "경비원은 고장 나서 안 열리는 탈의실 문을 부수고 열어야 했어요.",
+   "blank": "mendobrak",
+   "src": "made"
+  },
+  {
+   "text": "Pemilik restoran itu berani mendobrak tradisi dengan menyajikan rendang versi vegetarian.",
+   "en": "The restaurant owner dared to break with tradition by serving a vegetarian rendang.",
+   "ko": "그 식당 주인은 채식 른당을 내놓으며 과감하게 전통을 깼어요.",
+   "blank": "mendobrak",
    "src": "made"
   }
  ],
@@ -31527,6 +31767,22 @@
    "blank": "Mengakui"
   }
  ],
+ "w|mengalah": [
+  {
+   "text": "Bayu memilih mengalah dan membiarkan anggota lain memakai alat itu lebih dulu.",
+   "en": "Bayu chose to give way and let another member use the machine first.",
+   "ko": "바유는 양보하고 다른 회원이 그 기구를 먼저 쓰게 했어요.",
+   "blank": "mengalah",
+   "src": "made"
+  },
+  {
+   "text": "Intan mengalah dan membiarkan adiknya memilih menu penutup.",
+   "en": "Intan gave in and let her younger sibling choose the dessert.",
+   "ko": "인탄은 양보하고 동생이 디저트를 고르게 했어요.",
+   "blank": "mengalah",
+   "src": "made"
+  }
+ ],
  "w|mengalahkan": [
   {
    "text": "Tim kami mengalahkan mereka.",
@@ -31822,6 +32078,22 @@
    "en": "Every Saturday, Wati's father takes her to music school by motorbike.",
    "ko": "토요일마다 와티 아빠가 오토바이로 와티를 음악 학원에 데려다줘요.",
    "blank": "mengantarkan",
+   "src": "made"
+  }
+ ],
+ "w|mengantuk": [
+  {
+   "text": "Bayu sering mengantuk kalau latihan terlalu pagi.",
+   "en": "Bayu often feels sleepy when he trains too early in the morning.",
+   "ko": "바유는 너무 이른 아침에 운동하면 자주 졸려요.",
+   "blank": "mengantuk",
+   "src": "made"
+  },
+  {
+   "text": "Setelah makan siang yang besar, kakek Intan mulai mengantuk di kursinya.",
+   "en": "After a big lunch, Intan's grandfather starts to get drowsy in his chair.",
+   "ko": "푸짐한 점심 뒤 인탄의 할아버지는 의자에서 졸기 시작해요.",
+   "blank": "mengantuk",
    "src": "made"
   }
  ],
@@ -32437,6 +32709,22 @@
    "en": "The story he told was so terrifying.",
    "ko": "그가 한 이야기는 정말 무시무시했어.",
    "blank": "Mengerikan"
+  }
+ ],
+ "w|mengeringkan": [
+  {
+   "text": "Bayu mengeringkan rambut dengan handuk sebelum pulang.",
+   "en": "Bayu dries his hair with a towel before going home.",
+   "ko": "바유는 집에 가기 전에 수건으로 머리를 말려요.",
+   "blank": "mengeringkan",
+   "src": "made"
+  },
+  {
+   "text": "Pelayan mengeringkan gelas-gelas dengan lap bersih sebelum ditata.",
+   "en": "The waiter dries the glasses with a clean cloth before setting them out.",
+   "ko": "종업원은 유리컵을 놓기 전에 깨끗한 행주로 닦아 말려요.",
+   "blank": "mengeringkan",
+   "src": "made"
   }
  ],
  "w|mengerjai": [
@@ -33875,6 +34163,22 @@
    "blank": "mengontrol"
   }
  ],
+ "w|mengoperasi": [
+  {
+   "text": "Dokter harus mengoperasi lutut pelatih Bayu setelah cedera saat bertanding.",
+   "en": "The doctor had to operate on Bayu's trainer's knee after an injury during a match.",
+   "ko": "바유 트레이너는 시합 중 다친 무릎을 의사에게 수술받아야 했어요.",
+   "blank": "mengoperasi",
+   "src": "made"
+  },
+  {
+   "text": "Paman Intan bercerita bahwa dokter akan mengoperasi matanya bulan depan.",
+   "en": "Intan's uncle says the doctor will operate on his eye next month.",
+   "ko": "인탄의 삼촌은 다음 달에 눈 수술을 받는다고 이야기해요.",
+   "blank": "mengoperasi",
+   "src": "made"
+  }
+ ],
  "w|mengorbankan": [
   {
    "text": "Dia bersedia mengorbankan waktu untuk keluarga.",
@@ -35227,6 +35531,22 @@
    "src": "made"
   }
  ],
+ "w|menular": [
+  {
+   "text": "Penyakit kulit bisa menular lewat handuk yang dipakai bergantian.",
+   "en": "Skin diseases can spread through towels that are shared.",
+   "ko": "피부병은 돌려 쓰는 수건으로 옮을 수 있어요.",
+   "blank": "menular",
+   "src": "made"
+  },
+  {
+   "text": "Intan menyuruh anaknya cuci tangan supaya kuman tidak menular.",
+   "en": "Intan tells her child to wash his hands so germs don't spread.",
+   "ko": "인탄은 세균이 옮지 않게 아이에게 손을 씻으라고 해요.",
+   "blank": "menular",
+   "src": "made"
+  }
+ ],
  "w|menulis": [
   {
    "text": "Aku sedang menulis surat.",
@@ -35301,6 +35621,22 @@
    "en": "That player bowed his head to respect the referee.",
    "ko": "그 선수가 심판에게 고개를 숙여 인사했어.",
    "blank": "menunduk"
+  }
+ ],
+ "w|menundukkan": [
+  {
+   "text": "Saat peregangan, Bayu menundukkan kepala sampai dagunya hampir menyentuh dada.",
+   "en": "During stretching, Bayu bows his head until his chin almost touches his chest.",
+   "ko": "스트레칭할 때 바유는 턱이 가슴에 닿을 만큼 고개를 숙여요.",
+   "blank": "menundukkan",
+   "src": "made"
+  },
+  {
+   "text": "Sebelum makan, seluruh keluarga Intan menundukkan kepala untuk berdoa.",
+   "en": "Before eating, Intan's whole family bows their heads to pray.",
+   "ko": "밥 먹기 전에 인탄 가족은 모두 고개를 숙여 기도해요.",
+   "blank": "menundukkan",
+   "src": "made"
   }
  ],
  "w|menunggu": [
@@ -36475,6 +36811,22 @@
    "blank": "menyimpan"
   }
  ],
+ "w|menyimpang": [
+  {
+   "text": "Pelatih menegur Bayu karena gerakan punggungnya menyimpang dari posisi yang benar.",
+   "en": "The trainer corrected Bayu because his back movement strayed from the correct position.",
+   "ko": "바유의 허리 동작이 바른 자세에서 벗어나서 트레이너가 지적했어요.",
+   "blank": "menyimpang",
+   "src": "made"
+  },
+  {
+   "text": "Obrolan keluarga Intan sering menyimpang dari topik awal ke cerita masa kecil.",
+   "en": "Intan's family conversations often drift from the original topic to childhood stories.",
+   "ko": "인탄 가족의 대화는 처음 주제에서 자주 어린 시절 이야기로 새요.",
+   "blank": "menyimpang",
+   "src": "made"
+  }
+ ],
  "w|menyimpulkan": [
   {
    "text": "Dari peta, Agus menyimpulkan bahwa jalan lewat gunung lebih cepat.",
@@ -36611,6 +36963,22 @@
    "en": "She likes old movies.",
    "ko": "걔는 옛날 영화를 좋아해.",
    "blank": "menyukai"
+  }
+ ],
+ "w|menyumbangkan": [
+  {
+   "text": "Gym itu menyumbangkan alat-alat lama ke sekolah olahraga di desa.",
+   "en": "The gym donated its old equipment to a sports school in the village.",
+   "ko": "그 헬스장은 낡은 기구를 시골의 체육 학교에 기증했어요.",
+   "blank": "menyumbangkan",
+   "src": "made"
+  },
+  {
+   "text": "Restoran itu menyumbangkan makanan sisa yang masih layak ke panti asuhan.",
+   "en": "The restaurant donates leftover food that is still good to an orphanage.",
+   "ko": "그 식당은 아직 먹을 만한 남은 음식을 보육원에 기부해요.",
+   "blank": "menyumbangkan",
+   "src": "made"
   }
  ],
  "w|menyuntik": [
@@ -37977,6 +38345,22 @@
    "blank": "muak"
   }
  ],
+ "w|mual": [
+  {
+   "text": "Bayu merasa mual karena minum susu protein terlalu cepat.",
+   "en": "Bayu felt nauseous from drinking his protein shake too fast.",
+   "ko": "바유는 단백질 셰이크를 너무 빨리 마셔서 속이 메스꺼웠어요.",
+   "blank": "mual",
+   "src": "made"
+  },
+  {
+   "text": "Adik Intan merasa mual setelah mencium bau durian dari meja sebelah.",
+   "en": "Intan's younger sibling felt nauseous after smelling durian from the next table.",
+   "ko": "인탄의 동생은 옆 테이블의 두리안 냄새를 맡고 속이 메스꺼웠어요.",
+   "blank": "mual",
+   "src": "made"
+  }
+ ],
  "w|muda": [
   {
    "text": "Dia masih muda.",
@@ -38304,6 +38688,22 @@
    "en": "Putri's child said the giant tomato in the kitchen looked like a mutant from a movie.",
    "ko": "푸트리의 아이는 부엌에 있는 거대한 토마토가 영화 속 돌연변이 같다고 했어요.",
    "blank": "mutan",
+   "src": "made"
+  }
+ ],
+ "w|mutlak": [
+  {
+   "text": "Di gym itu, aturan memakai sepatu olahraga bersifat mutlak.",
+   "en": "At that gym, the rule about wearing sports shoes is absolute.",
+   "ko": "그 헬스장에서는 운동화 착용 규칙이 절대적이에요.",
+   "blank": "mutlak",
+   "src": "made"
+  },
+  {
+   "text": "Di keluarga Intan, keputusan nenek soal tempat makan itu mutlak.",
+   "en": "In Intan's family, grandmother's decision on where to eat is final.",
+   "ko": "인탄네 집에서는 어디서 먹을지에 대한 할머니의 결정이 절대적이에요.",
+   "blank": "mutlak",
    "src": "made"
   }
  ],
@@ -39431,6 +39831,22 @@
    "blank": "otomatis"
   }
  ],
+ "w|otopsi": [
+  {
+   "text": "Di ruang ganti, dua anggota gym membahas film detektif tentang hasil otopsi yang dipalsukan.",
+   "en": "In the locker room, two gym members discuss a detective film about a faked autopsy result.",
+   "ko": "탈의실에서 헬스장 회원 둘이 조작된 부검 결과를 다룬 탐정 영화 이야기를 해요.",
+   "blank": "otopsi",
+   "src": "made"
+  },
+  {
+   "text": "Sambil makan, paman Intan menceritakan novel misteri tentang dokter yang melakukan otopsi.",
+   "en": "While eating, Intan's uncle describes a mystery novel about a doctor who performs an autopsy.",
+   "ko": "인탄의 삼촌은 밥을 먹으며 부검하는 의사가 나오는 추리 소설 이야기를 해요.",
+   "blank": "otopsi",
+   "src": "made"
+  }
+ ],
  "w|otoritas": [
   {
    "text": "Sekolah Andi harus mendapat izin dari otoritas pendidikan sebelum membuka kelas baru.",
@@ -39619,6 +40035,22 @@
    "en": "This morning the air is cool.",
    "ko": "오늘 아침 공기가 선선해.",
    "blank": "Pagi"
+  }
+ ],
+ "w|paha": [
+  {
+   "text": "Pelatih menyuruh Bayu melatih otot paha dengan squat.",
+   "en": "The trainer told Bayu to train his thigh muscles with squats.",
+   "ko": "트레이너는 바유에게 스쿼트로 허벅지 근육을 단련하라고 했어요.",
+   "blank": "paha",
+   "src": "made"
+  },
+  {
+   "text": "Anak Intan memilih ayam goreng bagian paha karena dagingnya empuk.",
+   "en": "Intan's child picks the fried chicken thigh because the meat is tender.",
+   "ko": "인탄의 아이는 살이 연해서 닭다리 튀김을 골라요.",
+   "blank": "paha",
+   "src": "made"
   }
  ],
  "w|paham": [
@@ -41777,6 +42209,22 @@
    "src": "made"
   }
  ],
+ "w|pembuluh": [
+  {
+   "text": "Olahraga rutin membantu menjaga kesehatan pembuluh darah.",
+   "en": "Regular exercise helps keep the blood vessels healthy.",
+   "ko": "꾸준한 운동은 혈관 건강을 지키는 데 도움이 돼요.",
+   "blank": "pembuluh",
+   "src": "made"
+  },
+  {
+   "text": "Kata dokter, makanan terlalu asin bisa merusak pembuluh darah kakek Intan.",
+   "en": "The doctor said overly salty food could damage the blood vessels of Intan's grandfather.",
+   "ko": "의사는 너무 짠 음식이 인탄 할아버지의 혈관을 상하게 할 수 있다고 했어요.",
+   "blank": "pembuluh",
+   "src": "made"
+  }
+ ],
  "w|pembunuh": [
   {
    "text": "Pembunuh itu masih kabur.",
@@ -42041,6 +42489,22 @@
    "src": "made"
   }
  ],
+ "w|pemulihan": [
+  {
+   "text": "Setelah operasi, Bayu mengikuti program pemulihan khusus di gym.",
+   "en": "After surgery, Bayu followed a special recovery program at the gym.",
+   "ko": "수술 후 바유는 헬스장에서 특별 회복 프로그램을 받았어요.",
+   "blank": "pemulihan",
+   "src": "made"
+  },
+  {
+   "text": "Makan malam itu merayakan pemulihan ayah Intan setelah lama sakit.",
+   "en": "The dinner celebrates the recovery of Intan's father after a long illness.",
+   "ko": "그 저녁 식사는 오래 아팠던 인탄 아버지의 회복을 축하하는 자리예요.",
+   "blank": "pemulihan",
+   "src": "made"
+  }
+ ],
  "w|pena": [
   {
    "text": "Dia menulis catatan dengan pena biru.",
@@ -42247,6 +42711,22 @@
    "en": "The search results appeared on the screen.",
    "ko": "검색 결과가 화면에 나타났어.",
    "blank": "pencarian"
+  }
+ ],
+ "w|pencegahan": [
+  {
+   "text": "Pemanasan yang cukup adalah cara pencegahan cedera paling mudah.",
+   "en": "Proper warming up is the easiest way to prevent injury.",
+   "ko": "충분한 준비 운동이 부상을 막는 가장 쉬운 방법이에요.",
+   "blank": "pencegahan",
+   "src": "made"
+  },
+  {
+   "text": "Restoran itu memasang poster tentang pencegahan demam berdarah di dekat kasir.",
+   "en": "The restaurant put up a poster about dengue prevention near the cashier.",
+   "ko": "그 식당은 계산대 옆에 뎅기열 예방 포스터를 붙였어요.",
+   "blank": "pencegahan",
+   "src": "made"
   }
  ],
  "w|pencerahan": [
@@ -42671,6 +43151,22 @@
    "en": "The museum displayed the discovery of an ancient artifact.",
    "ko": "박물관이 고대 유물 발견을 전시했어.",
    "blank": "penemuan"
+  }
+ ],
+ "w|penenang": [
+  {
+   "text": "Bagi Bayu, berenang sore hari adalah penenang setelah kerja seharian.",
+   "en": "For Bayu, an afternoon swim is a calming break after a full day of work.",
+   "ko": "바유에게 오후 수영은 하루 종일 일한 뒤의 진정제예요.",
+   "blank": "penenang",
+   "src": "made"
+  },
+  {
+   "text": "Teh jahe hangat menjadi penenang bagi perut Intan yang kembung.",
+   "en": "Warm ginger tea soothes Intan's bloated stomach.",
+   "ko": "따뜻한 생강차가 더부룩한 인탄의 배를 달래 줘요.",
+   "blank": "penenang",
+   "src": "made"
   }
  ],
  "w|penerbangan": [
@@ -44153,6 +44649,22 @@
    "en": "The police opened a new investigation.",
    "ko": "경찰이 새 수사를 시작했어.",
    "blank": "penyelidikan"
+  }
+ ],
+ "w|penyembuhan": [
+  {
+   "text": "Setelah cedera, Bayu menjalani proses penyembuhan selama dua bulan.",
+   "en": "After the injury, Bayu went through a two-month healing process.",
+   "ko": "부상 후 바유는 두 달 동안 치료 과정을 거쳤어요.",
+   "blank": "penyembuhan",
+   "src": "made"
+  },
+  {
+   "text": "Keluarga Intan berdoa untuk penyembuhan paman yang masih dirawat.",
+   "en": "Intan's family prays for the recovery of the uncle who is still in hospital.",
+   "ko": "인탄의 가족은 아직 입원 중인 삼촌이 낫기를 기도해요.",
+   "blank": "penyembuhan",
+   "src": "made"
   }
  ],
  "w|penyerang": [
@@ -46663,6 +47175,22 @@
    "src": "made"
   }
  ],
+ "w|pinggul": [
+  {
+   "text": "Bayu memutar pinggul perlahan untuk pemanasan.",
+   "en": "Bayu slowly rotates his hips to warm up.",
+   "ko": "바유는 몸을 풀려고 엉덩이를 천천히 돌려요.",
+   "blank": "pinggul",
+   "src": "made"
+  },
+  {
+   "text": "Nenek Intan mengeluh pinggul terasa pegal karena kursi restoran terlalu keras.",
+   "en": "Intan's grandmother complains her hip aches because the restaurant chair is too hard.",
+   "ko": "인탄의 할머니는 식당 의자가 너무 딱딱해서 골반이 뻐근하다고 해요.",
+   "blank": "pinggul",
+   "src": "made"
+  }
+ ],
  "w|pingsan": [
   {
    "text": "Dia pingsan karena kelelahan.",
@@ -47565,6 +48093,22 @@
    "src": "made"
   }
  ],
+ "w|psikologi": [
+  {
+   "text": "Pelatih Bayu dulu kuliah psikologi olahraga sebelum membuka gym.",
+   "en": "Bayu's trainer studied sports psychology before opening the gym.",
+   "ko": "바유의 트레이너는 헬스장을 열기 전에 스포츠 심리학을 공부했어요.",
+   "blank": "psikologi",
+   "src": "made"
+  },
+  {
+   "text": "Sepupu Intan baru lulus kuliah psikologi dan bercerita soal pekerjaan barunya.",
+   "en": "Intan's cousin just graduated in psychology and talks about her new job.",
+   "ko": "인탄의 사촌은 심리학과를 막 졸업하고 새 일 이야기를 해요.",
+   "blank": "psikologi",
+   "src": "made"
+  }
+ ],
  "w|psikopat": [
   {
    "text": "Rina suka menonton serial tentang detektif yang mengejar psikopat.",
@@ -47607,6 +48151,22 @@
    "en": "That speech was broadcast to the wider public.",
    "ko": "그 연설은 넓은 대중에게 방송됐어.",
    "blank": "publik"
+  }
+ ],
+ "w|pucat": [
+  {
+   "text": "Wajah Bayu tampak pucat setelah lari di treadmill tanpa sarapan.",
+   "en": "Bayu's face looked pale after running on the treadmill without breakfast.",
+   "ko": "아침을 거르고 러닝머신을 뛴 뒤 바유의 얼굴이 창백해 보였어요.",
+   "blank": "pucat",
+   "src": "made"
+  },
+  {
+   "text": "Intan melihat anaknya pucat dan langsung memesan teh manis hangat.",
+   "en": "Intan saw that her child was pale and immediately ordered warm sweet tea.",
+   "ko": "인탄은 아이가 창백한 걸 보고 바로 따뜻한 단 차를 시켰어요.",
+   "blank": "pucat",
+   "src": "made"
   }
  ],
  "w|puing": [
@@ -47999,6 +48559,22 @@
    "blank": "Radio"
   }
  ],
+ "w|raga": [
+  {
+   "text": "Poster di dinding gym berbunyi bahwa jiwa yang sehat ada dalam raga yang kuat.",
+   "en": "A poster on the gym wall says a healthy mind lives in a strong body.",
+   "ko": "헬스장 벽 포스터에는 건강한 정신은 튼튼한 몸에 깃든다고 쓰여 있어요.",
+   "blank": "raga",
+   "src": "made"
+  },
+  {
+   "text": "Nenek Intan selalu bilang makanan rumahan baik untuk jiwa dan raga.",
+   "en": "Intan's grandmother always says home cooking is good for body and soul.",
+   "ko": "인탄의 할머니는 집밥이 몸과 마음에 좋다고 늘 말해요.",
+   "blank": "raga",
+   "src": "made"
+  }
+ ],
  "w|ragu": [
   {
    "text": "Saya masih ragu dengan keputusan itu.",
@@ -48011,6 +48587,22 @@
    "en": "Doubt will only slow your steps.",
    "ko": "망설임은 네 발걸음만 늦출 뿐이야.",
    "blank": "Ragu"
+  }
+ ],
+ "w|rahang": [
+  {
+   "text": "Bayu sadar rahang dan bahunya tegang saat mengangkat beban berat.",
+   "en": "Bayu realized his jaw and shoulders were tense when lifting heavy weights.",
+   "ko": "바유는 무거운 걸 들 때 턱과 어깨에 힘이 들어간다는 걸 알았어요.",
+   "blank": "rahang",
+   "src": "made"
+  },
+  {
+   "text": "Kakek Intan mengunyah pelan karena rahangnya sakit.",
+   "en": "Intan's grandfather chews slowly because his jaw hurts.",
+   "ko": "인탄의 할아버지는 턱이 아파서 천천히 씹어요.",
+   "blank": "rahangnya",
+   "src": "made"
   }
  ],
  "w|rahasia": [
@@ -49399,6 +49991,22 @@
    "blank": "Rusak"
   }
  ],
+ "w|rusuk": [
+  {
+   "text": "Pelatih meminta Bayu bernapas dalam sampai tulang rusuk terasa mengembang.",
+   "en": "The trainer asked Bayu to breathe deeply until he could feel his ribs expand.",
+   "ko": "트레이너는 바유에게 갈비뼈가 펴지는 게 느껴질 때까지 깊게 숨 쉬라고 했어요.",
+   "blank": "rusuk",
+   "src": "made"
+  },
+  {
+   "text": "Kakek Intan pernah patah tulang rusuk, jadi ia duduk pelan-pelan di kursi restoran.",
+   "en": "Intan's grandfather once broke a rib, so he sits down slowly on the restaurant chair.",
+   "ko": "인탄의 할아버지는 갈비뼈가 부러진 적이 있어서 식당 의자에 천천히 앉아요.",
+   "blank": "rusuk",
+   "src": "made"
+  }
+ ],
  "w|rute": [
   {
    "text": "Rute baru lebih cepat dan aman.",
@@ -49481,6 +50089,22 @@
    "en": "Self-awareness is important.",
    "ko": "자기 인식이 중요해.",
    "blank": "Sadar"
+  }
+ ],
+ "w|sadis": [
+  {
+   "text": "Bayu bercanda bahwa jadwal latihan dari pelatihnya terasa sadis.",
+   "en": "Bayu jokes that his trainer's workout schedule feels brutal.",
+   "ko": "바유는 트레이너의 운동 일정이 잔혹하게 느껴진다고 농담해요.",
+   "blank": "sadis",
+   "src": "made"
+  },
+  {
+   "text": "Anak Intan menyebut tokoh penyihir dalam film kartun itu sadis.",
+   "en": "Intan's child calls the witch character in the cartoon cruel.",
+   "ko": "인탄의 아이는 그 만화 영화 속 마녀가 잔인하다고 말해요.",
+   "blank": "sadis",
+   "src": "made"
   }
  ],
  "w|sah": [
@@ -59556,6 +60180,22 @@
    "en": "Lestari counts the money in the kitchen after closing the shop.",
    "ko": "레스타리는 가게 문을 닫은 뒤 부엌에서 돈을 세요.",
    "blank": "usai",
+   "src": "made"
+  }
+ ],
+ "w|usang": [
+  {
+   "text": "Banyak alat di gym kampung itu sudah usang tapi masih dipakai.",
+   "en": "Much of the equipment at the neighborhood gym is worn out but still used.",
+   "ko": "그 동네 헬스장 기구는 상당수가 낡았지만 아직 쓰여요.",
+   "blank": "usang",
+   "src": "made"
+  },
+  {
+   "text": "Buku menu restoran itu sudah usang dan beberapa halamannya robek.",
+   "en": "The restaurant's menu book is worn out and some of its pages are torn.",
+   "ko": "그 식당 메뉴판은 낡아서 몇 장이 찢어졌어요.",
+   "blank": "usang",
    "src": "made"
   }
  ],

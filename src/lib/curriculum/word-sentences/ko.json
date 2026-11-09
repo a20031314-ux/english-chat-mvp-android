@@ -3399,6 +3399,22 @@
    "blank": "겨누니"
   }
  ],
+ "w|겨루다": [
+  {
+   "text": "신랑 친구들과 신부 친구들이 춤 실력을 겨뤘어요.",
+   "en": "The groom's friends and the bride's friends competed in a dance-off.",
+   "ko": "신랑 친구들과 신부 친구들이 춤 실력을 겨뤘어요.",
+   "blank": "겨뤘어요",
+   "src": "made"
+  },
+  {
+   "text": "두 기타리스트가 무대 위에서 즉흥 연주로 실력을 겨루었어요.",
+   "en": "Two guitarists competed on stage with improvised solos.",
+   "ko": "두 기타리스트가 무대 위에서 즉흥 연주로 실력을 겨루었어요.",
+   "blank": "겨루었어요",
+   "src": "made"
+  }
+ ],
  "w|겨우": [
   {
    "text": "겨우 제시간에 왔어.",
@@ -4176,6 +4192,22 @@
    "en": "Daeun built up her competitiveness by studying a foreign language over the holiday.",
    "ko": "다은은 연휴 동안 외국어 공부를 하며 자신의 경쟁력을 키웠어요.",
    "blank": "경쟁력을",
+   "src": "made"
+  }
+ ],
+ "w|경쟁하다": [
+  {
+   "text": "사촌 동생들은 신부 옆자리에 앉으려고 서로 경쟁했어요.",
+   "en": "The younger cousins competed with each other to sit next to the bride.",
+   "ko": "사촌 동생들은 신부 옆자리에 앉으려고 서로 경쟁했어요.",
+   "blank": "경쟁했어요",
+   "src": "made"
+  },
+  {
+   "text": "인기 공연이라서 수많은 팬들이 티켓을 두고 경쟁해야 했어요.",
+   "en": "It was a popular concert, so countless fans had to compete for tickets.",
+   "ko": "인기 공연이라서 수많은 팬들이 티켓을 두고 경쟁해야 했어요.",
+   "blank": "경쟁해야",
    "src": "made"
   }
  ],
@@ -5029,6 +5061,22 @@
    "en": "I've been thinking over that problem for days.",
    "ko": "며칠째 그 문제를 고민했어.",
    "blank": "고민했어"
+  }
+ ],
+ "w|고발하다": [
+  {
+   "text": "축의금을 훔친 사람을 예식장 측이 경찰에 고발했다는 뉴스가 나왔어요.",
+   "en": "There was news that a wedding hall reported a person who stole gift money to the police.",
+   "ko": "축의금을 훔친 사람을 예식장 측이 경찰에 고발했다는 뉴스가 나왔어요.",
+   "blank": "고발했다는",
+   "src": "made"
+  },
+  {
+   "text": "소속사는 표를 비싸게 되판 암표상들을 경찰에 고발했어요.",
+   "en": "The agency reported the scalpers who resold tickets at high prices to the police.",
+   "ko": "소속사는 표를 비싸게 되판 암표상들을 경찰에 고발했어요.",
+   "blank": "고발했어요",
+   "src": "made"
   }
  ],
  "w|고백하다": [
@@ -6839,6 +6887,22 @@
    "src": "made"
   }
  ],
+ "w|광부": [
+  {
+   "text": "준호의 할아버지는 젊을 때 탄광에서 광부로 일하셨대요.",
+   "en": "Junho's grandfather is said to have worked as a miner in a coal mine when he was young.",
+   "ko": "준호의 할아버지는 젊을 때 탄광에서 광부로 일하셨대요.",
+   "blank": "광부로",
+   "src": "made"
+  },
+  {
+   "text": "이번 공연에서는 광부의 삶을 노래한 옛 민요가 흘러나왔어요.",
+   "en": "At this concert, an old folk song about the life of miners was played.",
+   "ko": "이번 공연에서는 광부의 삶을 노래한 옛 민요가 흘러나왔어요.",
+   "blank": "광부의",
+   "src": "made"
+  }
+ ],
  "w|광장": [
   {
    "text": "졸업식이 끝나고 태윤은 학교 앞 광장에서 가족들과 사진을 찍었어요.",
@@ -7825,6 +7889,22 @@
    "en": "There was a march in front of the National Assembly.",
    "ko": "국회 앞에서 행진이 있었어.",
    "blank": "국회"
+  }
+ ],
+ "w|국회의원": [
+  {
+   "text": "지역 국회의원이 보낸 화환이 예식장 입구에 놓여 있었어요.",
+   "en": "A flower wreath sent by the local member of the National Assembly stood at the entrance of the wedding hall.",
+   "ko": "지역 국회의원이 보낸 화환이 예식장 입구에 놓여 있었어요.",
+   "blank": "국회의원이",
+   "src": "made"
+  },
+  {
+   "text": "객석 앞줄에 앉은 국회의원을 보고 사람들이 수군거렸어요.",
+   "en": "People whispered when they saw a member of the National Assembly sitting in the front row.",
+   "ko": "객석 앞줄에 앉은 국회의원을 보고 사람들이 수군거렸어요.",
+   "blank": "국회의원을",
+   "src": "made"
   }
  ],
  "w|군대": [
@@ -10087,6 +10167,22 @@
    "en": "I set a new record.",
    "ko": "새 기록을 세웠어.",
    "blank": "기록을"
+  }
+ ],
+ "w|기록하다": [
+  {
+   "text": "준호의 동생이 결혼식의 모든 순간을 영상으로 기록했어요.",
+   "en": "Junho's younger sibling recorded every moment of the wedding on video.",
+   "ko": "준호의 동생이 결혼식의 모든 순간을 영상으로 기록했어요.",
+   "blank": "기록했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 그날의 감동을 일기장에 꼼꼼히 기록해 두었어요.",
+   "en": "Haeun carefully recorded that day's emotions in her diary.",
+   "ko": "하은은 그날의 감동을 일기장에 꼼꼼히 기록해 두었어요.",
+   "blank": "기록해",
+   "src": "made"
   }
  ],
  "w|기르다": [
@@ -14267,6 +14363,22 @@
    "blank": "논쟁을"
   }
  ],
+ "w|논쟁하다": [
+  {
+   "text": "준호와 신부는 신혼집 위치를 두고 한참 논쟁했어요.",
+   "en": "Junho and the bride argued for a long time over where their new home should be.",
+   "ko": "준호와 신부는 신혼집 위치를 두고 한참 논쟁했어요.",
+   "blank": "논쟁했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은과 친구는 어느 곡이 최고였는지 집에 가는 내내 논쟁했어요.",
+   "en": "Haeun and her friend argued all the way home about which song was the best.",
+   "ko": "하은과 친구는 어느 곡이 최고였는지 집에 가는 내내 논쟁했어요.",
+   "blank": "논쟁했어요",
+   "src": "made"
+  }
+ ],
  "w|놀다": [
   {
    "text": "숙제 끝나면 놀자.",
@@ -18199,6 +18311,22 @@
    "en": "You need courage to take on a challenge.",
    "ko": "도전에 나서는 용기가 필요해.",
    "blank": "도전에"
+  }
+ ],
+ "w|도전하다": [
+  {
+   "text": "노래를 못하는 준호가 용기를 내서 축가에 도전했어요.",
+   "en": "Junho, who can't sing, got up his courage and took on the wedding song.",
+   "ko": "노래를 못하는 준호가 용기를 내서 축가에 도전했어요.",
+   "blank": "도전했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 이번에 처음으로 티켓팅에 도전해서 앞자리를 잡았어요.",
+   "en": "Haeun tried ticketing for the first time this time and got a front seat.",
+   "ko": "하은은 이번에 처음으로 티켓팅에 도전해서 앞자리를 잡았어요.",
+   "blank": "도전해서",
+   "src": "made"
   }
  ],
  "w|도주": [
@@ -24091,6 +24219,22 @@
    "blank": "목소리를"
   }
  ],
+ "w|목수": [
+  {
+   "text": "신혼집 식탁은 목수인 삼촌이 선물로 직접 짜 주셨어요.",
+   "en": "Junho's uncle, a carpenter, built the dining table for the newlyweds' home himself as a gift.",
+   "ko": "신혼집 식탁은 목수인 삼촌이 선물로 직접 짜 주셨어요.",
+   "blank": "목수인",
+   "src": "made"
+  },
+  {
+   "text": "무대 위 나무 계단은 목수가 공연에 맞춰 새로 만든 거래요.",
+   "en": "The wooden steps on stage were newly built by a carpenter for the show.",
+   "ko": "무대 위 나무 계단은 목수가 공연에 맞춰 새로 만든 거래요.",
+   "blank": "목수가",
+   "src": "made"
+  }
+ ],
  "w|목숨": [
   {
    "text": "목숨을 걸고 구조했어.",
@@ -24193,6 +24337,22 @@
    "ko": "긴급 환자가 발생하자 선장은 가장 가까운 항구로 배를 몰았다.",
    "blank": "몰았다",
    "src": "krdict"
+  }
+ ],
+ "w|몰두하다": [
+  {
+   "text": "준호는 축사 원고를 고치느라 밤늦게까지 몰두했어요.",
+   "en": "Junho was absorbed in revising his speech until late at night.",
+   "ko": "준호는 축사 원고를 고치느라 밤늦게까지 몰두했어요.",
+   "blank": "몰두했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 공연 내내 노래에 몰두해서 시간 가는 줄 몰랐어요.",
+   "en": "Haeun was so absorbed in the music throughout the show that she lost track of time.",
+   "ko": "하은은 공연 내내 노래에 몰두해서 시간 가는 줄 몰랐어요.",
+   "blank": "몰두해서",
+   "src": "made"
   }
  ],
  "w|몰래": [
@@ -25885,6 +26045,22 @@
    "src": "made"
   }
  ],
+ "w|미용사": [
+  {
+   "text": "신부는 아침 일찍 미용사에게 머리를 맡기고 화장을 받았어요.",
+   "en": "Early in the morning the bride had her hair done by a hairdresser and got her makeup done.",
+   "ko": "신부는 아침 일찍 미용사에게 머리를 맡기고 화장을 받았어요.",
+   "blank": "미용사에게",
+   "src": "made"
+  },
+  {
+   "text": "가수의 화려한 머리는 전속 미용사가 무대 뒤에서 매번 손봐 준대요.",
+   "en": "They say the singer's fancy hair is fixed backstage each time by a personal hairdresser.",
+   "ko": "가수의 화려한 머리는 전속 미용사가 무대 뒤에서 매번 손봐 준대요.",
+   "blank": "미용사가",
+   "src": "made"
+  }
+ ],
  "w|미용실": [
   {
    "text": "내일 미용실에 예약했어.",
@@ -27497,6 +27673,22 @@
    "blank": "방문이"
   }
  ],
+ "w|방문객": [
+  {
+   "text": "예식장에는 다른 결혼식 방문객까지 섞여서 로비가 북적였어요.",
+   "en": "Visitors for another wedding mixed in too, so the lobby of the hall was crowded.",
+   "ko": "예식장에는 다른 결혼식 방문객까지 섞여서 로비가 북적였어요.",
+   "blank": "방문객까지",
+   "src": "made"
+  },
+  {
+   "text": "공연장 근처 카페는 방문객이 몰려서 자리가 하나도 없었어요.",
+   "en": "The café near the venue was packed with visitors and didn't have a single seat.",
+   "ko": "공연장 근처 카페는 방문객이 몰려서 자리가 하나도 없었어요.",
+   "blank": "방문객이",
+   "src": "made"
+  }
+ ],
  "w|방문하다": [
   {
    "text": "내일 고객사를 방문할 거야.",
@@ -27701,6 +27893,22 @@
    "src": "made"
   }
  ],
+ "w|배관공": [
+  {
+   "text": "예식장 화장실 물이 넘쳐서 배관공이 식 도중에 다녀갔어요.",
+   "en": "The toilet at the wedding hall overflowed, so a plumber came by during the ceremony.",
+   "ko": "예식장 화장실 물이 넘쳐서 배관공이 식 도중에 다녀갔어요.",
+   "blank": "배관공이",
+   "src": "made"
+  },
+  {
+   "text": "공연장 화장실 배관이 터져서 배관공을 급히 불렀대요.",
+   "en": "A pipe burst in the venue's restroom, so they urgently called a plumber.",
+   "ko": "공연장 화장실 배관이 터져서 배관공을 급히 불렀대요.",
+   "blank": "배관공을",
+   "src": "made"
+  }
+ ],
  "w|배급": [
   {
    "text": "역사 시간에 재원은 전쟁 때 식량 배급을 받던 사람들의 사진을 봤어요.",
@@ -27743,6 +27951,22 @@
    "en": "Delivery arrived sooner than expected.",
    "ko": "배달이 예상보다 빨리 왔어.",
    "blank": "배달이"
+  }
+ ],
+ "w|배달원": [
+  {
+   "text": "꽃 배달원이 주소를 헷갈려서 부케가 조금 늦게 도착했어요.",
+   "en": "The flower delivery man got the address mixed up, so the bouquet arrived a little late.",
+   "ko": "꽃 배달원이 주소를 헷갈려서 부케가 조금 늦게 도착했어요.",
+   "blank": "배달원이",
+   "src": "made"
+  },
+  {
+   "text": "공연이 끝나고 하은은 배달원에게 떡볶이를 주문해서 친구와 먹었어요.",
+   "en": "After the concert, Haeun ordered tteokbokki from a delivery person and ate it with a friend.",
+   "ko": "공연이 끝나고 하은은 배달원에게 떡볶이를 주문해서 친구와 먹었어요.",
+   "blank": "배달원에게",
+   "src": "made"
   }
  ],
  "w|배달하다": [
@@ -28269,6 +28493,22 @@
    "en": "The subtitle translation feels awkward.",
    "ko": "자막 번역이 자연스럽지 않아.",
    "blank": "번역이"
+  }
+ ],
+ "w|번역가": [
+  {
+   "text": "청첩장 문구는 번역가로 일하는 사촌이 두 가지 언어로 써 줬어요.",
+   "en": "A cousin who works as a translator wrote the invitation wording in two languages.",
+   "ko": "청첩장 문구는 번역가로 일하는 사촌이 두 가지 언어로 써 줬어요.",
+   "blank": "번역가로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 팬클럽에서 가사를 번역하는 번역가와 친해졌어요.",
+   "en": "Haeun became friends with the translator who translates lyrics for the fan club.",
+   "ko": "하은은 팬클럽에서 가사를 번역하는 번역가와 친해졌어요.",
+   "blank": "번역가와",
+   "src": "made"
   }
  ],
  "w|번지다": [
@@ -32384,6 +32624,22 @@
    "blank": "비행기를"
   }
  ],
+ "w|비행사": [
+  {
+   "text": "신혼여행 비행기에서 비행사가 두 사람의 결혼을 방송으로 축하해 줬어요.",
+   "en": "On the honeymoon flight, the pilot congratulated the couple on their marriage over the announcement.",
+   "ko": "신혼여행 비행기에서 비행사가 두 사람의 결혼을 방송으로 축하해 줬어요.",
+   "blank": "비행사가",
+   "src": "made"
+  },
+  {
+   "text": "공연 중 하늘을 나는 장면에서 가수는 비행사 옷을 입고 나왔어요.",
+   "en": "For the flying scene during the show, the singer came out in an aviator's outfit.",
+   "ko": "공연 중 하늘을 나는 장면에서 가수는 비행사 옷을 입고 나왔어요.",
+   "blank": "비행사",
+   "src": "made"
+  }
+ ],
  "w|비효율적": [
   {
    "text": "반죽을 손으로 하나씩 치대는 건 비효율적이지만 현우는 그 맛을 포기하지 못해요.",
@@ -34696,6 +34952,22 @@
    "blank": "상담이"
   }
  ],
+ "w|상담하다": [
+  {
+   "text": "준호는 웨딩플래너와 하객 수를 몇 번이나 상담했어요.",
+   "en": "Junho consulted with the wedding planner several times about the number of guests.",
+   "ko": "준호는 웨딩플래너와 하객 수를 몇 번이나 상담했어요.",
+   "blank": "상담했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 환불 문제로 예매처 고객센터와 전화로 상담했어요.",
+   "en": "Haeun consulted with the ticketing site's customer center by phone about a refund.",
+   "ko": "하은은 환불 문제로 예매처 고객센터와 전화로 상담했어요.",
+   "blank": "상담했어요",
+   "src": "made"
+  }
+ ],
  "w|상당하다": [
   {
    "text": "그 기사는 독자들 사이에서 상당한 반응을 얻었어요.",
@@ -36876,6 +37148,22 @@
    "en": "I showed my report card to my parents.",
    "ko": "성적표를 부모님께 보여 드렸어.",
    "blank": "성적표를"
+  }
+ ],
+ "w|성직자": [
+  {
+   "text": "성직자가 두 사람 앞에서 혼인 서약을 천천히 읽어 주었어요.",
+   "en": "The priest slowly read the marriage vows in front of the two.",
+   "ko": "성직자가 두 사람 앞에서 혼인 서약을 천천히 읽어 주었어요.",
+   "blank": "성직자가",
+   "src": "made"
+  },
+  {
+   "text": "합창단 공연에는 성직자도 무대에 올라 함께 노래했어요.",
+   "en": "At the choir's concert, a clergyman also went up on stage and sang along.",
+   "ko": "합창단 공연에는 성직자도 무대에 올라 함께 노래했어요.",
+   "blank": "성직자도",
+   "src": "made"
   }
  ],
  "w|성질": [
@@ -39892,6 +40180,22 @@
    "blank": "승리가"
   }
  ],
+ "w|승리하다": [
+  {
+   "text": "피로연 줄다리기에서는 덩치 큰 신랑 친구들이 가볍게 승리했어요.",
+   "en": "In the reception tug-of-war, the groom's big friends won easily.",
+   "ko": "피로연 줄다리기에서는 덩치 큰 신랑 친구들이 가볍게 승리했어요.",
+   "blank": "승리했어요",
+   "src": "made"
+  },
+  {
+   "text": "오디션 프로그램에서 승리한 밴드가 오늘 첫 단독 공연을 열었어요.",
+   "en": "The band that won an audition show held its first solo concert today.",
+   "ko": "오디션 프로그램에서 승리한 밴드가 오늘 첫 단독 공연을 열었어요.",
+   "blank": "승리한",
+   "src": "made"
+  }
+ ],
  "w|승무원": [
   {
    "text": "승무원이 성호에게 담요를 한 장 더 가져다줬어요.",
@@ -41237,6 +41541,22 @@
    "en": "Sohee talked all night on this beach with her peers when she was a new employee.",
    "ko": "소희는 신입사원 시절 동기들과 이 해변에서 밤새 이야기했어요.",
    "blank": "신입사원",
+   "src": "made"
+  }
+ ],
+ "w|신자": [
+  {
+   "text": "신부 집안은 오래된 성당 신자라서 성당에서 식을 올렸어요.",
+   "en": "The bride's family are longtime members of a Catholic church, so they held the ceremony there.",
+   "ko": "신부 집안은 오래된 성당 신자라서 성당에서 식을 올렸어요.",
+   "blank": "신자라서",
+   "src": "made"
+  },
+  {
+   "text": "자선 콘서트에는 근처 교회 신자들도 단체로 왔어요.",
+   "en": "Members of a nearby church also came as a group to the charity concert.",
+   "ko": "자선 콘서트에는 근처 교회 신자들도 단체로 왔어요.",
+   "blank": "신자들도",
    "src": "made"
   }
  ],
@@ -44459,6 +44779,22 @@
    "en": "The soybean paste stew at the office cafeteria had big chunks of zucchini in it.",
    "ko": "회사 식당 된장찌개에는 애호박이 큼직하게 들어 있었어요.",
    "blank": "애호박이",
+   "src": "made"
+  }
+ ],
+ "w|앵커": [
+  {
+   "text": "준호의 결혼식 사회는 방송국에서 일하는 친구 앵커가 맡았어요.",
+   "en": "A friend who works as a news anchor at a broadcasting station hosted Junho's wedding.",
+   "ko": "준호의 결혼식 사회는 방송국에서 일하는 친구 앵커가 맡았어요.",
+   "blank": "앵커가",
+   "src": "made"
+  },
+  {
+   "text": "하은은 공연 시작 전에 뉴스 앵커 출신 사회자를 알아봤어요.",
+   "en": "Before the show started, Haeun recognized the host as a former news anchor.",
+   "ko": "하은은 공연 시작 전에 뉴스 앵커 출신 사회자를 알아봤어요.",
+   "blank": "앵커",
    "src": "made"
   }
  ],
@@ -49588,6 +49924,22 @@
    "src": "made"
   }
  ],
+ "w|외교관": [
+  {
+   "text": "신부의 아버지는 외교관이라서 해외 손님이 유난히 많았어요.",
+   "en": "The bride's father is a diplomat, so there were unusually many guests from abroad.",
+   "ko": "신부의 아버지는 외교관이라서 해외 손님이 유난히 많았어요.",
+   "blank": "외교관이라서",
+   "src": "made"
+  },
+  {
+   "text": "이번 해외 공연은 현지 외교관이 많이 도와줘서 무사히 열렸대요.",
+   "en": "They say this overseas concert went smoothly because a local diplomat helped a lot.",
+   "ko": "이번 해외 공연은 현지 외교관이 많이 도와줘서 무사히 열렸대요.",
+   "blank": "외교관이",
+   "src": "made"
+  }
+ ],
  "w|외국": [
   {
    "text": "외국에서 살았어.",
@@ -50484,6 +50836,22 @@
    "blank": "우주"
   }
  ],
+ "w|우주인": [
+  {
+   "text": "어릴 때 우주인이 꿈이었던 준호는 축가로 별 노래를 골랐어요.",
+   "en": "Junho, who dreamed of becoming an astronaut as a child, picked a song about stars for the wedding song.",
+   "ko": "어릴 때 우주인이 꿈이었던 준호는 축가로 별 노래를 골랐어요.",
+   "blank": "우주인이",
+   "src": "made"
+  },
+  {
+   "text": "하은은 우주인 콘셉트의 무대 의상이 제일 마음에 들었어요.",
+   "en": "Haeun liked the astronaut-themed stage costume the most.",
+   "ko": "하은은 우주인 콘셉트의 무대 의상이 제일 마음에 들었어요.",
+   "blank": "우주인",
+   "src": "made"
+  }
+ ],
  "w|우체국": [
   {
    "text": "우체국에서 부쳤어.",
@@ -50496,6 +50864,22 @@
    "en": "The post office is closed.",
    "ko": "우체국이 닫혔어.",
    "blank": "우체국이"
+  }
+ ],
+ "w|우체부": [
+  {
+   "text": "옛날 우체부였던 이웃 할아버지도 청첩장을 받고 와 주셨어요.",
+   "en": "The elderly neighbor who used to be a mailman also came after getting an invitation.",
+   "ko": "옛날 우체부였던 이웃 할아버지도 청첩장을 받고 와 주셨어요.",
+   "blank": "우체부였던",
+   "src": "made"
+  },
+  {
+   "text": "하은이 보낸 팬레터는 우체부가 소속사 사무실까지 가져다줬을 거예요.",
+   "en": "The mailman must have carried the fan letter Haeun sent all the way to the agency office.",
+   "ko": "하은이 보낸 팬레터는 우체부가 소속사 사무실까지 가져다줬을 거예요.",
+   "blank": "우체부가",
+   "src": "made"
   }
  ],
  "w|우편": [
@@ -51075,6 +51459,22 @@
    "en": "Daeun donates a little each month to an overseas aid organization.",
    "ko": "다은은 해외 원조 단체에 매달 조금씩 기부하고 있어요.",
    "blank": "원조",
+   "src": "made"
+  }
+ ],
+ "w|원주민": [
+  {
+   "text": "준호 부부는 신혼여행지에서 원주민 마을 축제를 구경했어요.",
+   "en": "On their honeymoon, Junho and his wife watched a festival in an indigenous village.",
+   "ko": "준호 부부는 신혼여행지에서 원주민 마을 축제를 구경했어요.",
+   "blank": "원주민",
+   "src": "made"
+  },
+  {
+   "text": "원주민의 전통 악기 연주가 나오자 객석이 조용해졌어요.",
+   "en": "When the indigenous people's traditional instruments began to play, the audience went quiet.",
+   "ko": "원주민의 전통 악기 연주가 나오자 객석이 조용해졌어요.",
+   "blank": "원주민의",
    "src": "made"
   }
  ],
@@ -53295,6 +53695,22 @@
    "en": "Yuna's cousin emigrated to Canada to work as a factory technician.",
    "ko": "유나의 사촌은 공장 기술자로 일하려고 캐나다로 이민 갔어요.",
    "blank": "이민",
+   "src": "made"
+  }
+ ],
+ "w|이발사": [
+  {
+   "text": "준호는 결혼식 전날 단골 이발사한테 가서 머리를 짧게 잘랐어요.",
+   "en": "The day before the wedding, Junho went to his regular barber and got his hair cut short.",
+   "ko": "준호는 결혼식 전날 단골 이발사한테 가서 머리를 짧게 잘랐어요.",
+   "blank": "이발사한테",
+   "src": "made"
+  },
+  {
+   "text": "드러머가 공연 전날 이발사에게 머리를 맡겼다가 너무 짧게 잘렸대요.",
+   "en": "The drummer went to a barber the day before the show and had his hair cut far too short.",
+   "ko": "드러머가 공연 전날 이발사에게 머리를 맡겼다가 너무 짧게 잘렸대요.",
+   "blank": "이발사에게",
    "src": "made"
   }
  ],
@@ -57720,6 +58136,22 @@
    "src": "made"
   }
  ],
+ "w|저장하다": [
+  {
+   "text": "준호는 결혼식 사진을 전부 외장 하드에 저장했어요.",
+   "en": "Junho saved all the wedding photos on an external hard drive.",
+   "ko": "준호는 결혼식 사진을 전부 외장 하드에 저장했어요.",
+   "blank": "저장했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 공연 영상을 휴대폰에 저장해 두고 자기 전에 또 봤어요.",
+   "en": "Haeun saved the concert video on her phone and watched it again before bed.",
+   "ko": "하은은 공연 영상을 휴대폰에 저장해 두고 자기 전에 또 봤어요.",
+   "blank": "저장해",
+   "src": "made"
+  }
+ ],
  "w|저절로": [
   {
    "text": "문이 저절로 열렸어.",
@@ -59512,6 +59944,22 @@
    "blank": "정부"
   }
  ],
+ "w|정비사": [
+  {
+   "text": "웨딩카 시동이 안 걸려서 급하게 정비사를 불러야 했어요.",
+   "en": "The wedding car wouldn't start, so they had to call a mechanic in a hurry.",
+   "ko": "웨딩카 시동이 안 걸려서 급하게 정비사를 불러야 했어요.",
+   "blank": "정비사를",
+   "src": "made"
+  },
+  {
+   "text": "투어 버스가 고장 나서 정비사가 공연장 주차장까지 와야 했어요.",
+   "en": "The tour bus broke down, so a mechanic had to come all the way to the venue's parking lot.",
+   "ko": "투어 버스가 고장 나서 정비사가 공연장 주차장까지 와야 했어요.",
+   "blank": "정비사가",
+   "src": "made"
+  }
+ ],
  "w|정서": [
   {
    "text": "재원의 편지에는 어린 시절의 따뜻한 정서가 그대로 담겨 있었어요.",
@@ -60043,6 +60491,22 @@
    "en": "A police officer in uniform asked Yuna for directions on the street.",
    "ko": "길에서 제복을 입은 경찰관이 유나에게 길을 물었어요.",
    "blank": "제복을",
+   "src": "made"
+  }
+ ],
+ "w|제빵사": [
+  {
+   "text": "웨딩 케이크는 동네 빵집 제빵사가 밤새 만들어 줬대요.",
+   "en": "They say the wedding cake was made overnight by the baker at the neighborhood bakery.",
+   "ko": "웨딩 케이크는 동네 빵집 제빵사가 밤새 만들어 줬대요.",
+   "blank": "제빵사가",
+   "src": "made"
+  },
+  {
+   "text": "공연장 앞 푸드트럭에서 제빵사가 갓 구운 빵을 팔고 있었어요.",
+   "en": "At a food truck in front of the venue, a baker was selling freshly baked bread.",
+   "ko": "공연장 앞 푸드트럭에서 제빵사가 갓 구운 빵을 팔고 있었어요.",
+   "blank": "제빵사가",
    "src": "made"
   }
  ],
@@ -63834,6 +64298,22 @@
    "src": "made"
   }
  ],
+ "w|진행자": [
+  {
+   "text": "진행자가 신랑 입장을 외치자 준호는 긴장한 얼굴로 걸어 나왔어요.",
+   "en": "When the emcee called for the groom's entrance, Junho walked out looking nervous.",
+   "ko": "진행자가 신랑 입장을 외치자 준호는 긴장한 얼굴로 걸어 나왔어요.",
+   "blank": "진행자가",
+   "src": "made"
+  },
+  {
+   "text": "라디오 진행자로 유명한 가수가 오늘 콘서트의 마지막 무대를 맡았어요.",
+   "en": "A singer famous as a radio host took the last stage of tonight's concert.",
+   "ko": "라디오 진행자로 유명한 가수가 오늘 콘서트의 마지막 무대를 맡았어요.",
+   "blank": "진행자로",
+   "src": "made"
+  }
+ ],
  "w|진행하다": [
   {
    "text": "그는 발표와 토론을 적절히 조화시켜 수업을 진행해 나갔다.",
@@ -65118,6 +65598,22 @@
    "blank": "참"
   }
  ],
+ "w|참가자": [
+  {
+   "text": "부케 받기 게임에 참가자가 너무 많아서 준호가 웃음을 터뜨렸어요.",
+   "en": "So many people joined the bouquet-catching game that Junho burst out laughing.",
+   "ko": "부케 받기 게임에 참가자가 너무 많아서 준호가 웃음을 터뜨렸어요.",
+   "blank": "참가자가",
+   "src": "made"
+  },
+  {
+   "text": "하은은 팬 이벤트 참가자로 뽑혀서 무대 위에 올라갔어요.",
+   "en": "Haeun was chosen as a participant in the fan event and went up on stage.",
+   "ko": "하은은 팬 이벤트 참가자로 뽑혀서 무대 위에 올라갔어요.",
+   "blank": "참가자로",
+   "src": "made"
+  }
+ ],
  "w|참가하다": [
   {
    "text": "마라톤에 처음 참가해 봤어.",
@@ -65172,6 +65668,22 @@
    "en": "I barely held back my laughter.",
    "ko": "웃음을 겨우 참았어.",
    "blank": "참았어"
+  }
+ ],
+ "w|참석자": [
+  {
+   "text": "식이 끝나고 준호는 참석자 모두에게 답례품을 나눠 줬어요.",
+   "en": "After the ceremony, Junho handed out return gifts to all the attendees.",
+   "ko": "식이 끝나고 준호는 참석자 모두에게 답례품을 나눠 줬어요.",
+   "blank": "참석자",
+   "src": "made"
+  },
+  {
+   "text": "팬 사인회 참석자는 미리 이름을 적어 내야 했어요.",
+   "en": "Attendees of the fan signing event had to submit their names in advance.",
+   "ko": "팬 사인회 참석자는 미리 이름을 적어 내야 했어요.",
+   "blank": "참석자는",
+   "src": "made"
   }
  ],
  "w|참석하다": [
@@ -65746,6 +66258,22 @@
    "en": "They say he lied to avoid punishment.",
    "ko": "처벌을 피하려고 거짓말했대.",
    "blank": "처벌을"
+  }
+ ],
+ "w|처벌하다": [
+  {
+   "text": "기사에 따르면 법원은 그 도둑을 법에 따라 엄하게 처벌했대요.",
+   "en": "According to the article, the court punished the thief strictly according to the law.",
+   "ko": "기사에 따르면 법원은 그 도둑을 법에 따라 엄하게 처벌했대요.",
+   "blank": "처벌했대요",
+   "src": "made"
+  },
+  {
+   "text": "신문에 따르면 법원은 그 암표상들을 벌금으로 처벌했어요.",
+   "en": "According to the newspaper, the court punished those scalpers with fines.",
+   "ko": "신문에 따르면 법원은 그 암표상들을 벌금으로 처벌했어요.",
+   "blank": "처벌했어요",
+   "src": "made"
   }
  ],
  "w|처음": [
@@ -69504,6 +70032,22 @@
    "blank": "택배를"
   }
  ],
+ "w|택배기사": [
+  {
+   "text": "식 다음 날 택배기사가 축하 선물 상자를 잔뜩 들고 왔어요.",
+   "en": "The day after the ceremony, a delivery driver came carrying a pile of gift boxes.",
+   "ko": "식 다음 날 택배기사가 축하 선물 상자를 잔뜩 들고 왔어요.",
+   "blank": "택배기사가",
+   "src": "made"
+  },
+  {
+   "text": "하은은 콘서트 굿즈를 들고 온 택배기사에게 연신 고맙다고 했어요.",
+   "en": "Haeun kept thanking the delivery driver who brought her concert merchandise.",
+   "ko": "하은은 콘서트 굿즈를 들고 온 택배기사에게 연신 고맙다고 했어요.",
+   "blank": "택배기사에게",
+   "src": "made"
+  }
+ ],
  "w|택시": [
   {
    "text": "택시를 불러 줘.",
@@ -69946,6 +70490,22 @@
    "en": "The live interpreting is really fast.",
    "ko": "실시간 통역이 정말 빠르다.",
    "blank": "통역이"
+  }
+ ],
+ "w|통역사": [
+  {
+   "text": "신부 쪽 친척들이 외국에서 와서 준호는 통역사를 따로 불렀어요.",
+   "en": "The bride's relatives came from abroad, so Junho hired an interpreter separately.",
+   "ko": "신부 쪽 친척들이 외국에서 와서 준호는 통역사를 따로 불렀어요.",
+   "blank": "통역사를",
+   "src": "made"
+  },
+  {
+   "text": "외국 밴드의 인사말을 통역사가 옆에서 바로 한국어로 옮겼어요.",
+   "en": "An interpreter standing beside the foreign band put their greeting straight into Korean.",
+   "ko": "외국 밴드의 인사말을 통역사가 옆에서 바로 한국어로 옮겼어요.",
+   "blank": "통역사가",
+   "src": "made"
   }
  ],
  "w|통일": [
@@ -71044,6 +71604,22 @@
    "en": "There's something to learn even from defeat.",
    "ko": "패배에서도 배울 게 있어.",
    "blank": "패배에서도"
+  }
+ ],
+ "w|패배하다": [
+  {
+   "text": "준호의 친구들은 술 마시기 내기에서 신부 오빠에게 패배했어요.",
+   "en": "Junho's friends were defeated by the bride's older brother in a drinking bet.",
+   "ko": "준호의 친구들은 술 마시기 내기에서 신부 오빠에게 패배했어요.",
+   "blank": "패배했어요",
+   "src": "made"
+  },
+  {
+   "text": "지난 대회에서 패배한 그 밴드는 오늘 공연에서 실력을 제대로 보여 줬어요.",
+   "en": "That band, which lost at the last contest, really showed its skills at tonight's concert.",
+   "ko": "지난 대회에서 패배한 그 밴드는 오늘 공연에서 실력을 제대로 보여 줬어요.",
+   "blank": "패배한",
+   "src": "made"
   }
  ],
  "w|패션": [
@@ -73566,6 +74142,22 @@
    "src": "made"
   }
  ],
+ "w|합의하다": [
+  {
+   "text": "두 집안은 결국 식을 봄에 올리기로 합의했어요.",
+   "en": "The two families finally agreed to hold the ceremony in the spring.",
+   "ko": "두 집안은 결국 식을 봄에 올리기로 합의했어요.",
+   "blank": "합의했어요",
+   "src": "made"
+  },
+  {
+   "text": "밴드 멤버들은 앙코르 곡을 무엇으로 할지 겨우 합의했어요.",
+   "en": "The band members barely agreed on what to play for the encore.",
+   "ko": "밴드 멤버들은 앙코르 곡을 무엇으로 할지 겨우 합의했어요.",
+   "blank": "합의했어요",
+   "src": "made"
+  }
+ ],
  "w|합치다": [
   {
    "text": "두 팀을 하나로 합쳤어.",
@@ -73654,6 +74246,22 @@
    "en": "Always stay healthy.",
    "ko": "항상 건강하세요.",
    "blank": "항상"
+  }
+ ],
+ "w|항의하다": [
+  {
+   "text": "음식이 식어서 나오자 준호는 예식장 직원에게 정중하게 항의했어요.",
+   "en": "When the food came out cold, Junho politely complained to the hall staff.",
+   "ko": "음식이 식어서 나오자 준호는 예식장 직원에게 정중하게 항의했어요.",
+   "blank": "항의했어요",
+   "src": "made"
+  },
+  {
+   "text": "공연이 한 시간이나 늦게 시작되자 관객들이 매표소에 항의했어요.",
+   "en": "When the concert started a whole hour late, the audience complained at the ticket office.",
+   "ko": "공연이 한 시간이나 늦게 시작되자 관객들이 매표소에 항의했어요.",
+   "blank": "항의했어요",
+   "src": "made"
   }
  ],
  "w|해": [
@@ -75010,6 +75618,22 @@
    "en": "Let's align on the terms in the negotiation.",
    "ko": "협상에서 조건을 맞춰 보자.",
    "blank": "협상에서"
+  }
+ ],
+ "w|협상하다": [
+  {
+   "text": "준호는 예식장 대관료를 조금이라도 깎으려고 끈질기게 협상했어요.",
+   "en": "Junho negotiated persistently to get the hall rental fee lowered even a little.",
+   "ko": "준호는 예식장 대관료를 조금이라도 깎으려고 끈질기게 협상했어요.",
+   "blank": "협상했어요",
+   "src": "made"
+  },
+  {
+   "text": "소속사는 공연장 대관 기간을 두고 시청과 오래 협상했대요.",
+   "en": "They say the agency negotiated with city hall for a long time over the venue rental period.",
+   "ko": "소속사는 공연장 대관 기간을 두고 시청과 오래 협상했대요.",
+   "blank": "협상했대요",
+   "src": "made"
   }
  ],
  "w|협정": [
@@ -77344,6 +77968,22 @@
    "en": "A strong person lifted it for me.",
    "ko": "힘센 사람이 들어 줬어.",
    "blank": "힘센"
+  }
+ ],
+ "w|힘쓰다": [
+  {
+   "text": "양가 부모님은 하객 대접에 끝까지 힘쓰셨어요.",
+   "en": "Both sets of parents worked hard to look after the guests until the very end.",
+   "ko": "양가 부모님은 하객 대접에 끝까지 힘쓰셨어요.",
+   "blank": "힘쓰셨어요",
+   "src": "made"
+  },
+  {
+   "text": "스태프들은 관객 안전에 힘써서 큰 사고 없이 공연을 마쳤어요.",
+   "en": "The staff worked hard on audience safety, so the show ended without any major accidents.",
+   "ko": "스태프들은 관객 안전에 힘써서 큰 사고 없이 공연을 마쳤어요.",
+   "blank": "힘써서",
+   "src": "made"
   }
  ]
 }

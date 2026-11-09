@@ -1077,6 +1077,22 @@
    "blank": "不再"
   }
  ],
+ "w|不利": [
+  {
+   "text": "首演那天下大雨，天气对票房非常不利。",
+   "en": "It poured on opening night, which was very bad for ticket sales.",
+   "ko": "첫 공연 날 큰비가 와서 날씨가 흥행에 아주 불리했어요.",
+   "blank": "不利",
+   "src": "made"
+  },
+  {
+   "text": "今年春天一直不下雨，对小麦生长很不利。",
+   "en": "It hasn't rained all spring, which is bad for the wheat.",
+   "ko": "올봄 내내 비가 안 와서 밀이 자라기에 아주 불리해요.",
+   "blank": "不利",
+   "src": "made"
+  }
+ ],
  "w|不可": [
   {
    "text": "主编说这篇报道今晚非发出去不可，周强只好熬夜。",
@@ -1920,6 +1936,22 @@
    "en": "The company website only has an English version, and Yang Yang suggested adding a Chinese one.",
    "ko": "회사 웹사이트가 영어판뿐이어서 양양은 중국어판을 추가하자고 했어요.",
    "blank": "中文",
+   "src": "made"
+  }
+ ],
+ "w|中部": [
+  {
+   "text": "剧团下个月要去中部几个城市演出。",
+   "en": "The troupe will perform in several cities in the central region next month.",
+   "ko": "극단은 다음 달 중부의 몇몇 도시에서 공연해요.",
+   "blank": "中部",
+   "src": "made"
+  },
+  {
+   "text": "王芳的农场在省的中部，气候比较温和。",
+   "en": "Wang Fang's farm is in the central part of the province, where the climate is fairly mild.",
+   "ko": "왕팡의 농장은 성 중부에 있어서 기후가 비교적 온화해요.",
+   "blank": "中部",
    "src": "made"
   }
  ],
@@ -2778,6 +2810,22 @@
    "en": "Lin Jing grabbed tickets the moment they went on sale, hoping to get a window seat.",
    "ko": "린징은 표가 풀리자마자 창가 자리를 잡으려고 바로 예매에 뛰어들었어요.",
    "blank": "争取",
+   "src": "made"
+  }
+ ],
+ "w|争论": [
+  {
+   "text": "周强和编剧为结局争论了一个晚上。",
+   "en": "Zhou Qiang and the playwright argued about the ending all evening.",
+   "ko": "저우창과 작가는 결말을 두고 저녁 내내 논쟁했어요.",
+   "blank": "争论",
+   "src": "made"
+  },
+  {
+   "text": "王芳和丈夫常常为种什么争论半天。",
+   "en": "Wang Fang and her husband often argue for ages about what to plant.",
+   "ko": "왕팡과 남편은 뭘 심을지를 두고 자주 한참 논쟁해요.",
+   "blank": "争论",
    "src": "made"
   }
  ],
@@ -4197,6 +4245,22 @@
    "blank": "以为"
   }
  ],
+ "w|以便": [
+  {
+   "text": "周强提前两个小时到后台，以便有时间化妆。",
+   "en": "Zhou Qiang got backstage two hours early so he would have time for makeup.",
+   "ko": "저우창은 분장할 시간을 갖도록 두 시간 일찍 무대 뒤에 갔어요.",
+   "blank": "以便",
+   "src": "made"
+  },
+  {
+   "text": "王芳每天早上把牛奶冷藏起来，以便下午送到镇上。",
+   "en": "Wang Fang chills the milk every morning so it can be taken to town in the afternoon.",
+   "ko": "왕팡은 오후에 읍내로 보내려고 매일 아침 우유를 냉장해 둬요.",
+   "blank": "以便",
+   "src": "made"
+  }
+ ],
  "w|以前": [
   {
    "text": "我以前来过。",
@@ -4399,6 +4463,22 @@
    "en": "This task is hard.",
    "ko": "이 임무는 어려워.",
    "blank": "任务"
+  }
+ ],
+ "w|任命": [
+  {
+   "text": "剧团刚任命了一位新的艺术总监。",
+   "en": "The troupe has just appointed a new artistic director.",
+   "ko": "극단은 새 예술 감독을 막 임명했어요.",
+   "blank": "任命",
+   "src": "made"
+  },
+  {
+   "text": "王芳被乡里任命为合作社的负责人。",
+   "en": "Wang Fang was appointed head of the cooperative by the township.",
+   "ko": "왕팡은 향에서 협동조합 책임자로 임명됐어요.",
+   "blank": "任命",
+   "src": "made"
   }
  ],
  "w|份": [
@@ -4963,6 +5043,22 @@
    "blank": "住手"
   }
  ],
+ "w|体制": [
+  {
+   "text": "剧团改了管理体制以后，演员的收入提高了。",
+   "en": "After the troupe changed its management system, the actors' income went up.",
+   "ko": "극단이 관리 체제를 바꾼 뒤 배우들 수입이 올랐어요.",
+   "blank": "体制",
+   "src": "made"
+  },
+  {
+   "text": "村里改了土地体制以后，王芳承包了更多的田。",
+   "en": "After the village reformed its land system, Wang Fang leased more fields.",
+   "ko": "마을이 토지 체제를 바꾼 뒤 왕팡은 밭을 더 많이 도급받았어요.",
+   "blank": "体制",
+   "src": "made"
+  }
+ ],
  "w|体系": [
   {
    "text": "学校今年换了一套新的评分体系，大家都还不太习惯。",
@@ -5307,6 +5403,22 @@
    "en": "Use it carefully.",
    "ko": "조심해서 써.",
    "blank": "使用"
+  }
+ ],
+ "w|例外": [
+  {
+   "text": "剧院规定演出中不能拍照，演员的家属也不例外。",
+   "en": "The theater forbids photos during shows, and actors' families are no exception.",
+   "ko": "극장은 공연 중 사진 촬영을 금지하는데 배우 가족도 예외가 아니에요.",
+   "blank": "例外",
+   "src": "made"
+  },
+  {
+   "text": "农场的狗都很乖，只有那只小黑是个例外。",
+   "en": "The farm dogs are all well-behaved, with Xiaohei the only exception.",
+   "ko": "농장 개들은 다 순한데 샤오헤이만 예외예요.",
+   "blank": "例外",
+   "src": "made"
   }
  ],
  "w|例如": [
@@ -10305,6 +10417,22 @@
    "blank": "协议"
   }
  ],
+ "w|协调": [
+  {
+   "text": "舞台监督负责协调灯光和音响，忙得连饭都顾不上吃。",
+   "en": "The stage manager coordinates lighting and sound and is too busy even to eat.",
+   "ko": "무대 감독은 조명과 음향을 조율하느라 밥 먹을 틈도 없어요.",
+   "blank": "协调",
+   "src": "made"
+  },
+  {
+   "text": "收麦子的时候，王芳要协调好几户人家一起帮忙。",
+   "en": "At wheat harvest, Wang Fang has to coordinate several households to help together.",
+   "ko": "밀을 거둘 때 왕팡은 여러 집이 함께 도울 수 있게 조율해야 해요.",
+   "blank": "协调",
+   "src": "made"
+  }
+ ],
  "w|卑鄙": [
   {
    "text": "有人偷偷把周强的工具藏起来，这种做法真卑鄙。",
@@ -10909,6 +11037,22 @@
    "en": "So that's how it is.",
    "ko": "그렇구나.",
    "blank": "原来"
+  }
+ ],
+ "w|原理": [
+  {
+   "text": "灯光师给新人讲解了追光灯的工作原理。",
+   "en": "The lighting technician explained to the newcomer how a follow spot works.",
+   "ko": "조명 기사는 신입에게 핀 조명의 작동 원리를 설명해 줬어요.",
+   "blank": "原理",
+   "src": "made"
+  },
+  {
+   "text": "王芳的儿子在研究温室保温的原理。",
+   "en": "Wang Fang's son is studying the principles of keeping a greenhouse warm.",
+   "ko": "왕팡의 아들은 온실 보온의 원리를 연구하고 있어요.",
+   "blank": "原理",
+   "src": "made"
   }
  ],
  "w|原谅": [
@@ -13769,6 +13913,22 @@
    "src": "made"
   }
  ],
+ "w|品种": [
+  {
+   "text": "剧场门口摆了好几个品种的鲜花，是观众送给周强的。",
+   "en": "Several varieties of fresh flowers sat at the theater entrance, gifts to Zhou Qiang from the audience.",
+   "ko": "극장 입구에 관객이 저우창에게 보낸 여러 품종의 꽃이 놓여 있었어요.",
+   "blank": "品种",
+   "src": "made"
+  },
+  {
+   "text": "王芳今年试种了一个新的西红柿品种。",
+   "en": "Wang Fang tried growing a new variety of tomato this year.",
+   "ko": "왕팡은 올해 새 토마토 품종을 시험 삼아 심었어요.",
+   "blank": "品种",
+   "src": "made"
+  }
+ ],
  "w|哇": [
   {
    "text": "哇，这也太好吃了。",
@@ -15133,6 +15293,22 @@
    "src": "made"
   }
  ],
+ "w|圆": [
+  {
+   "text": "演员们手拉着手，在舞台上站成一个圆。",
+   "en": "The actors held hands and stood in a circle on stage.",
+   "ko": "배우들은 손을 맞잡고 무대 위에 원을 그리며 섰어요.",
+   "blank": "圆",
+   "src": "made"
+  },
+  {
+   "text": "王芳用木棍在院子里画了一个圆，教孩子们玩游戏。",
+   "en": "Wang Fang drew a circle in the yard with a stick to teach the kids a game.",
+   "ko": "왕팡은 마당에 막대로 동그라미를 그려 아이들에게 놀이를 가르쳤어요.",
+   "blank": "圆",
+   "src": "made"
+  }
+ ],
  "w|圈": [
   {
    "text": "王刚在盘子边上挤了一圈酱汁，看起来很漂亮。",
@@ -15563,6 +15739,22 @@
    "en": "This rain is heavy.",
    "ko": "이번 비가 세게 와.",
    "blank": "场"
+  }
+ ],
+ "w|场合": [
+  {
+   "text": "周强在正式场合说话很拘谨，跟台上完全不一样。",
+   "en": "Zhou Qiang is very reserved in formal settings, totally different from on stage.",
+   "ko": "저우창은 공식 자리에서는 말이 아주 조심스러워서 무대 위와 딴판이에요.",
+   "blank": "场合",
+   "src": "made"
+  },
+  {
+   "text": "王芳平时穿得很随便，只有重要场合才换上新衣服。",
+   "en": "Wang Fang usually dresses casually and only changes into new clothes for important occasions.",
+   "ko": "왕팡은 평소엔 편하게 입고 중요한 자리에만 새 옷을 입어요.",
+   "blank": "场合",
+   "src": "made"
   }
  ],
  "w|场所": [
@@ -16106,6 +16298,22 @@
    "en": "Sun Yue put up a notice at the door: this shop doesn't take large banknotes.",
    "ko": "쑨웨는 문 앞에 \"본 가게는 고액권을 받지 않습니다\"라는 공지를 붙였어요.",
    "blank": "声明",
+   "src": "made"
+  }
+ ],
+ "w|声称": [
+  {
+   "text": "有个观众声称在后台见过鬼，大家都笑了。",
+   "en": "One audience member claimed to have seen a ghost backstage, and everyone laughed.",
+   "ko": "한 관객이 무대 뒤에서 귀신을 봤다고 주장해서 모두 웃었어요.",
+   "blank": "声称",
+   "src": "made"
+  },
+  {
+   "text": "卖种子的人声称这种瓜一亩能收五千斤。",
+   "en": "The seed seller claimed this melon yields five thousand jin per mu.",
+   "ko": "종자 장수는 이 참외가 한 무에 오천 근이 난다고 주장했어요.",
+   "blank": "声称",
    "src": "made"
   }
  ],
@@ -18901,6 +19109,22 @@
    "blank": "完全"
   }
  ],
+ "w|完善": [
+  {
+   "text": "导演让周强再完善一下第二幕的台词。",
+   "en": "The director asked Zhou Qiang to polish the lines in Act Two a bit more.",
+   "ko": "감독은 저우창에게 이 막 대사를 좀 더 다듬으라고 했어요.",
+   "blank": "完善",
+   "src": "made"
+  },
+  {
+   "text": "王芳打算明年完善一下农场的灌溉系统。",
+   "en": "Wang Fang plans to improve the farm's irrigation system next year.",
+   "ko": "왕팡은 내년에 농장 관개 시설을 손볼 생각이에요.",
+   "blank": "完善",
+   "src": "made"
+  }
+ ],
  "w|完成": [
   {
    "text": "已经完成了。",
@@ -19047,6 +19271,22 @@
    "en": "Let's set a time.",
    "ko": "우리 시간 정하자.",
    "blank": "定"
+  }
+ ],
+ "w|定义": [
+  {
+   "text": "导演说，成功的定义不是票卖了多少，而是观众记住了什么。",
+   "en": "The director says success isn't defined by how many tickets sell, but by what the audience remembers.",
+   "ko": "감독은 성공의 정의는 표가 얼마나 팔렸느냐가 아니라 관객이 무엇을 기억하느냐라고 말해요.",
+   "blank": "定义",
+   "src": "made"
+  },
+  {
+   "text": "王芳的女儿问：“什么才算有机蔬菜？有没有严格的定义？”",
+   "en": "Wang Fang's daughter asked, \"What counts as organic vegetables? Is there a strict definition?\"",
+   "ko": "왕팡의 딸이 “뭐가 유기농 채소야? 엄격한 정의가 있어?”라고 물었어요.",
+   "blank": "定义",
+   "src": "made"
   }
  ],
  "w|定位": [
@@ -22203,6 +22443,22 @@
    "src": "made"
   }
  ],
+ "w|广泛": [
+  {
+   "text": "这部话剧在年轻人中引起了广泛的讨论。",
+   "en": "The play sparked wide discussion among young people.",
+   "ko": "이 연극은 젊은이들 사이에서 폭넓은 논의를 불러일으켰어요.",
+   "blank": "广泛",
+   "src": "made"
+  },
+  {
+   "text": "这种玉米适应性强，在北方种得很广泛。",
+   "en": "This kind of corn is very adaptable and is widely grown in the north.",
+   "ko": "이 옥수수는 적응력이 강해서 북쪽에서 널리 재배돼요.",
+   "blank": "广泛",
+   "src": "made"
+  }
+ ],
  "w|庆祝": [
   {
    "text": "我们庆祝生日。",
@@ -22861,6 +23117,22 @@
    "blank": "张"
   }
  ],
+ "w|弱点": [
+  {
+   "text": "周强知道自己的弱点是唱歌，所以每天都练嗓子。",
+   "en": "Zhou Qiang knows singing is his weak point, so he practices his voice every day.",
+   "ko": "저우창은 노래가 약점이라는 걸 알아서 매일 목을 풀어요.",
+   "blank": "弱点",
+   "src": "made"
+  },
+  {
+   "text": "王芳承认，不会算账是她最大的弱点。",
+   "en": "Wang Fang admits that not being good with accounts is her biggest weakness.",
+   "ko": "왕팡은 계산을 못 하는 게 자기 가장 큰 약점이라고 인정해요.",
+   "blank": "弱点",
+   "src": "made"
+  }
+ ],
  "w|弹": [
   {
    "text": "公司年会上，黄涛弹了一首吉他曲，大家都很惊讶。",
@@ -22874,6 +23146,22 @@
    "en": "There's an old piano in a corner of the restaurant, and after eating Yang Yang went over and played a short piece.",
    "ko": "식당 구석에 낡은 피아노가 있어서 양양은 밥을 다 먹고 가서 한 소절 쳤어요.",
    "blank": "弹",
+   "src": "made"
+  }
+ ],
+ "w|弹药": [
+  {
+   "text": "战争戏里的弹药箱其实是空纸盒刷了漆。",
+   "en": "The ammunition boxes in the war play are really empty cardboard boxes painted over.",
+   "ko": "전쟁극의 탄약 상자는 사실 빈 종이 상자에 칠을 한 거예요.",
+   "blank": "弹药",
+   "src": "made"
+  },
+  {
+   "text": "王芳的爷爷说，打仗那年家里的地窖藏过弹药。",
+   "en": "Wang Fang's grandfather says the family cellar once hid ammunition in the year of the war.",
+   "ko": "왕팡의 할아버지는 전쟁이 난 해에 집 움 안에 탄약을 숨긴 적이 있다고 해요.",
+   "blank": "弹药",
    "src": "made"
   }
  ],
@@ -23665,6 +23953,22 @@
    "src": "made"
   }
  ],
+ "w|必然": [
+  {
+   "text": "排练这么少，演出出问题几乎是必然的。",
+   "en": "With so little rehearsal, problems during the show were almost inevitable.",
+   "ko": "연습이 이렇게 적으니 공연에서 문제가 생기는 건 거의 당연했어요.",
+   "blank": "必然",
+   "src": "made"
+  },
+  {
+   "text": "不施肥，土地变得越来越贫瘠是必然的。",
+   "en": "Without fertilizer, it's inevitable that the soil grows poorer and poorer.",
+   "ko": "비료를 안 주면 땅이 점점 메마르는 건 필연이에요.",
+   "blank": "必然",
+   "src": "made"
+  }
+ ],
  "w|必要": [
   {
    "text": "没必要担心。",
@@ -24011,6 +24315,22 @@
    "en": "I agree with this idea.",
    "ko": "이 생각에 동의해.",
    "blank": "思想"
+  }
+ ],
+ "w|思维": [
+  {
+   "text": "导演希望演员们打开思维，不要只照着剧本演。",
+   "en": "The director wants the actors to open their minds and not just follow the script.",
+   "ko": "감독은 배우들이 사고를 넓혀서 대본대로만 연기하지 않기를 바라요.",
+   "blank": "思维",
+   "src": "made"
+  },
+  {
+   "text": "王芳说，种地也需要新的思维，不能只靠老办法。",
+   "en": "Wang Fang says farming needs new thinking too; you can't rely on old methods alone.",
+   "ko": "왕팡은 농사에도 새로운 사고가 필요해서 옛 방법만으로는 안 된다고 해요.",
+   "blank": "思维",
+   "src": "made"
   }
  ],
  "w|思考": [
@@ -25283,6 +25603,22 @@
    "blank": "成为"
   }
  ],
+ "w|成分": [
+  {
+   "text": "周强的表演里有很多即兴的成分。",
+   "en": "Zhou Qiang's performance contains a lot of improvisation.",
+   "ko": "저우창의 연기에는 즉흥적인 요소가 많아요.",
+   "blank": "成分",
+   "src": "made"
+  },
+  {
+   "text": "王芳把土样送去化验，看看里面有什么成分。",
+   "en": "Wang Fang sent a soil sample to the lab to see what's in it.",
+   "ko": "왕팡은 흙 표본을 검사에 보내 어떤 성분이 있는지 알아봤어요.",
+   "blank": "成分",
+   "src": "made"
+  }
+ ],
  "w|成功": [
   {
    "text": "终于成功了。",
@@ -25577,6 +25913,22 @@
    "en": "The battle is over.",
    "ko": "전투가 끝났어.",
    "blank": "战斗"
+  }
+ ],
+ "w|战斗机": [
+  {
+   "text": "第三幕开始时，音响里传来战斗机飞过的轰鸣声。",
+   "en": "As the third act began, the roar of a fighter jet flying over came from the speakers.",
+   "ko": "삼 막이 시작되자 스피커에서 전투기가 지나가는 굉음이 들렸어요.",
+   "blank": "战斗机",
+   "src": "made"
+  },
+  {
+   "text": "附近有个空军基地，战斗机常常从农场上空飞过。",
+   "en": "There's an air base nearby, and fighter jets often fly over the farm.",
+   "ko": "근처에 공군 기지가 있어서 전투기가 자주 농장 위를 지나가요.",
+   "blank": "战斗机",
+   "src": "made"
   }
  ],
  "w|战术": [
@@ -27961,6 +28313,22 @@
    "blank": "推"
   }
  ],
+ "w|推出": [
+  {
+   "text": "剧院今年秋天推出了一部新的喜剧。",
+   "en": "The theater launched a new comedy this autumn.",
+   "ko": "극장은 올가을 새 희극을 선보였어요.",
+   "blank": "推出",
+   "src": "made"
+  },
+  {
+   "text": "村里的合作社今年推出了自己的蜂蜜品牌。",
+   "en": "The village cooperative launched its own honey label this year.",
+   "ko": "마을 협동조합은 올해 자체 꿀 브랜드를 내놓았어요.",
+   "blank": "推出",
+   "src": "made"
+  }
+ ],
  "w|推动": [
   {
    "text": "新馆长上任后，大力推动博物馆免费开放。",
@@ -30069,6 +30437,22 @@
    "blank": "无辜"
   }
  ],
+ "w|无限": [
+  {
+   "text": "导演说，舞台虽小，想象的空间却是无限的。",
+   "en": "The director says the stage may be small, but the room for imagination is limitless.",
+   "ko": "감독은 무대는 작아도 상상의 공간은 끝이 없다고 말해요.",
+   "blank": "无限",
+   "src": "made"
+  },
+  {
+   "text": "站在田边，王芳觉得天地之间有无限的可能。",
+   "en": "Standing at the edge of the field, Wang Fang feels there are endless possibilities between heaven and earth.",
+   "ko": "밭가에 서면 왕팡은 하늘과 땅 사이에 끝없는 가능성이 있다고 느껴요.",
+   "blank": "无限",
+   "src": "made"
+  }
+ ],
  "w|既": [
   {
    "text": "他既聪明又勤奋。",
@@ -31201,6 +31585,22 @@
    "src": "made"
   }
  ],
+ "w|有力": [
+  {
+   "text": "周强那段有力的独白让全场安静了下来。",
+   "en": "Zhou Qiang's powerful monologue silenced the whole house.",
+   "ko": "저우창의 힘 있는 독백에 극장 전체가 조용해졌어요.",
+   "blank": "有力",
+   "src": "made"
+  },
+  {
+   "text": "那头老牛走路还是那么有力。",
+   "en": "That old ox still walks with real strength.",
+   "ko": "그 늙은 소는 아직도 힘차게 걸어요.",
+   "blank": "有力",
+   "src": "made"
+  }
+ ],
  "w|有名": [
   {
    "text": "这家酒店最有名的是顶楼的早餐，能看到整座城市。",
@@ -31403,6 +31803,22 @@
    "en": "Money can't buy health.",
    "ko": "돈이 있어도 건강은 못 사.",
    "blank": "有钱"
+  }
+ ],
+ "w|有限": [
+  {
+   "text": "剧场的座位有限，周强只给家人留了两张票。",
+   "en": "Seats in the theater are limited, so Zhou Qiang saved only two tickets for his family.",
+   "ko": "극장 좌석이 한정돼 있어서 저우창은 가족에게 표 두 장만 남겨 뒀어요.",
+   "blank": "有限",
+   "src": "made"
+  },
+  {
+   "text": "农场的地有限，王芳只能少养几头牛。",
+   "en": "The farm has limited land, so Wang Fang can only keep a few cows.",
+   "ko": "농장 땅이 한정돼 있어서 왕팡은 소를 몇 마리만 키울 수 있어요.",
+   "blank": "有限",
+   "src": "made"
   }
  ],
  "w|朋友": [
@@ -31627,6 +32043,22 @@
    "en": "It was supposed to be simple.",
    "ko": "원래는 꽤 간단했어.",
    "blank": "本来"
+  }
+ ],
+ "w|本质": [
+  {
+   "text": "这出戏看起来是喜剧，本质上却是个悲伤的故事。",
+   "en": "The play looks like a comedy, but in essence it's a sad story.",
+   "ko": "이 연극은 겉보기엔 희극이지만 본질은 슬픈 이야기예요.",
+   "blank": "本质",
+   "src": "made"
+  },
+  {
+   "text": "王芳说，种地的本质就是跟天气打交道。",
+   "en": "Wang Fang says farming at its core is dealing with the weather.",
+   "ko": "왕팡은 농사의 본질은 날씨와 씨름하는 거라고 말해요.",
+   "blank": "本质",
+   "src": "made"
   }
  ],
  "w|本身": [
@@ -31935,6 +32367,22 @@
    "en": "I accept this condition.",
    "ko": "이 조건을 받아들일게.",
    "blank": "条件"
+  }
+ ],
+ "w|条例": [
+  {
+   "text": "按照消防条例，剧场里的通道不能堆放道具。",
+   "en": "Under fire regulations, props can't be stacked in the theater aisles.",
+   "ko": "소방 조례에 따라 극장 통로에 소품을 쌓아 두면 안 돼요.",
+   "blank": "条例",
+   "src": "made"
+  },
+  {
+   "text": "新的动物防疫条例要求每头猪都打疫苗。",
+   "en": "New animal disease-control regulations require every pig to be vaccinated.",
+   "ko": "새 동물 방역 조례는 돼지마다 백신을 맞히라고 요구해요.",
+   "blank": "条例",
+   "src": "made"
   }
  ],
  "w|条约": [
@@ -39703,6 +40151,22 @@
    "blank": "确认"
   }
  ],
+ "w|碎": [
+  {
+   "text": "演出时道具杯子掉在地上摔碎了，周强只好接着演下去。",
+   "en": "A prop cup fell and shattered during the show, so Zhou Qiang had no choice but to keep acting.",
+   "ko": "공연 중 소품 컵이 바닥에 떨어져 산산조각 났지만 저우창은 그냥 연기를 이어 갔어요.",
+   "blank": "碎",
+   "src": "made"
+  },
+  {
+   "text": "鸡蛋在路上颠碎了好几个，王芳心疼得不得了。",
+   "en": "Several eggs got cracked on the bumpy road, and Wang Fang was terribly upset.",
+   "ko": "달걀 몇 개가 길에서 흔들려 깨져서 왕팡은 무척 속상했어요.",
+   "blank": "碎",
+   "src": "made"
+  }
+ ],
  "w|碎片": [
   {
    "text": "修复师把古书的碎片一点点拼了回去。",
@@ -41137,6 +41601,22 @@
    "blank": "答案"
   }
  ],
+ "w|策划": [
+  {
+   "text": "这次巡演是由一位年轻制作人策划的。",
+   "en": "This tour was planned by a young producer.",
+   "ko": "이번 순회공연은 젊은 프로듀서가 기획했어요.",
+   "blank": "策划",
+   "src": "made"
+  },
+  {
+   "text": "王芳正在策划一个让城里孩子来摘草莓的活动。",
+   "en": "Wang Fang is planning an event for city kids to come pick strawberries.",
+   "ko": "왕팡은 도시 아이들이 딸기를 따러 오는 행사를 기획하고 있어요.",
+   "blank": "策划",
+   "src": "made"
+  }
+ ],
  "w|策略": [
   {
    "text": "周强采访时有个策略，先聊家常，再问难回答的问题。",
@@ -42553,6 +43033,22 @@
    "src": "made"
   }
  ],
+ "w|罚款": [
+  {
+   "text": "剧院因为超员演出，被罚款了好几万元。",
+   "en": "The theater was fined tens of thousands of yuan for overselling a show.",
+   "ko": "극장은 정원을 넘겨 공연해서 벌금을 몇만 위안이나 냈어요.",
+   "blank": "罚款",
+   "src": "made"
+  },
+  {
+   "text": "有人在河边偷偷倒垃圾，被罚款了五百块。",
+   "en": "Someone secretly dumping trash by the river was fined five hundred yuan.",
+   "ko": "누군가 강가에 몰래 쓰레기를 버리다가 벌금 오백 위안을 물었어요.",
+   "blank": "罚款",
+   "src": "made"
+  }
+ ],
  "w|罢了": [
   {
    "text": "不过是玩笑罢了。",
@@ -43679,6 +44175,22 @@
    "src": "made"
   }
  ],
+ "w|胡说八道": [
+  {
+   "text": "剧里的老爷爷总是胡说八道，逗得观众哈哈大笑。",
+   "en": "The old man in the play always talks nonsense and makes the audience roar with laughter.",
+   "ko": "극 속 할아버지는 늘 엉뚱한 소리를 해서 관객을 크게 웃겨요.",
+   "blank": "胡说八道",
+   "src": "made"
+  },
+  {
+   "text": "王芳笑着说：“你别胡说八道，咱家的猪哪会开门？”",
+   "en": "Wang Fang laughed: \"Stop talking nonsense—how could our pig open the gate?\"",
+   "ko": "왕팡은 웃으며 “헛소리 마, 우리 돼지가 어떻게 문을 열어?”라고 했어요.",
+   "blank": "胡说八道",
+   "src": "made"
+  }
+ ],
  "w|胳膊": [
   {
    "text": "一个小男孩摔伤了胳膊，妈妈急急忙忙带他来买纱布。",
@@ -43853,6 +44365,22 @@
    "en": "Lift your foot.",
    "ko": "발을 들어.",
    "blank": "脚"
+  }
+ ],
+ "w|脚步": [
+  {
+   "text": "后台很安静，只听得见周强来回走动的脚步。",
+   "en": "Backstage was quiet; only Zhou Qiang's footsteps pacing back and forth could be heard.",
+   "ko": "무대 뒤는 조용해서 저우창이 왔다 갔다 하는 발걸음 소리만 들렸어요.",
+   "blank": "脚步",
+   "src": "made"
+  },
+  {
+   "text": "王芳听见门外有脚步，原来是邮递员来了。",
+   "en": "Wang Fang heard footsteps outside—it was the mailman.",
+   "ko": "왕팡이 문밖에서 발소리를 들었는데 우체부가 온 거였어요.",
+   "blank": "脚步",
+   "src": "made"
   }
  ],
  "w|脱": [
@@ -45699,6 +46227,22 @@
    "src": "made"
   }
  ],
+ "w|装饰": [
+  {
+   "text": "舞台上的装饰都是周强和朋友们亲手做的。",
+   "en": "The decorations on stage were all handmade by Zhou Qiang and his friends.",
+   "ko": "무대 장식은 모두 저우창과 친구들이 직접 만들었어요.",
+   "blank": "装饰",
+   "src": "made"
+  },
+  {
+   "text": "过年时，王芳在门上贴了红纸剪的装饰。",
+   "en": "At New Year, Wang Fang put red paper-cut decorations on the door.",
+   "ko": "설에 왕팡은 문에 빨간 종이를 오린 장식을 붙였어요.",
+   "blank": "装饰",
+   "src": "made"
+  }
+ ],
  "w|裙子": [
   {
    "text": "这条裙子很漂亮。",
@@ -45995,6 +46539,22 @@
    "en": "The doctor is observing the patient.",
    "ko": "의사가 환자를 관찰하고 있어.",
    "blank": "观察"
+  }
+ ],
+ "w|观念": [
+  {
+   "text": "这出戏讲的是两代人之间观念的冲突。",
+   "en": "The play is about a clash of values between two generations.",
+   "ko": "이 연극은 두 세대 사이의 가치관 충돌을 다뤄요.",
+   "blank": "观念",
+   "src": "made"
+  },
+  {
+   "text": "王芳觉得，年轻人回乡种地的观念正在慢慢变化。",
+   "en": "Wang Fang feels attitudes toward young people returning home to farm are slowly changing.",
+   "ko": "왕팡은 젊은이가 고향에 돌아와 농사짓는 데 대한 인식이 조금씩 바뀌고 있다고 느껴요.",
+   "blank": "观念",
+   "src": "made"
   }
  ],
  "w|观点": [
@@ -46617,6 +47177,22 @@
    "en": "Many things to do.",
    "ko": "할 일이 많아.",
    "blank": "许多"
+  }
+ ],
+ "w|讽刺": [
+  {
+   "text": "这出戏用幽默的方式讽刺了办公室里的官僚作风。",
+   "en": "The play satirizes office bureaucracy in a humorous way.",
+   "ko": "이 연극은 유머러스한 방식으로 사무실의 관료주의를 풍자해요.",
+   "blank": "讽刺",
+   "src": "made"
+  },
+  {
+   "text": "邻居讽刺王芳种菜像绣花，王芳却一点也不在意。",
+   "en": "A neighbor mocked Wang Fang for gardening like she was embroidering, but she didn't mind at all.",
+   "ko": "이웃이 왕팡이 채소를 수놓듯 기른다고 비꼬았지만 왕팡은 전혀 신경 쓰지 않았어요.",
+   "blank": "讽刺",
+   "src": "made"
   }
  ],
  "w|设备": [
@@ -51361,6 +51937,22 @@
    "blank": "部分"
   }
  ],
+ "w|部署": [
+  {
+   "text": "大戏开演前，剧院在门口部署了更多保安。",
+   "en": "Before the big show opened, the theater deployed more security at the entrance.",
+   "ko": "큰 공연이 시작되기 전 극장은 입구에 경비원을 더 배치했어요.",
+   "blank": "部署",
+   "src": "made"
+  },
+  {
+   "text": "台风要来了，镇里连夜部署了抢收工作。",
+   "en": "A typhoon was coming, so the town organized an emergency harvest overnight.",
+   "ko": "태풍이 온다고 해서 읍에서 밤새 긴급 수확 작업을 배치했어요.",
+   "blank": "部署",
+   "src": "made"
+  }
+ ],
  "w|部落": [
   {
    "text": "这个部落住在森林里。",
@@ -52319,6 +52911,22 @@
    "blank": "问题"
   }
  ],
+ "w|闯": [
+  {
+   "text": "周强二十岁就一个人来北京闯世界。",
+   "en": "Zhou Qiang came to Beijing alone at twenty to make his way in the world.",
+   "ko": "저우창은 스무 살에 혼자 베이징에 와서 세상에 부딪쳤어요.",
+   "blank": "闯",
+   "src": "made"
+  },
+  {
+   "text": "一只野猪昨晚闯进了王芳的菜地。",
+   "en": "A wild boar burst into Wang Fang's vegetable patch last night.",
+   "ko": "어젯밤 멧돼지 한 마리가 왕팡의 채소밭에 뛰어들었어요.",
+   "blank": "闯",
+   "src": "made"
+  }
+ ],
  "w|间": [
   {
    "text": "两间房。",
@@ -52527,6 +53135,22 @@
    "en": "Open the curtains and let the sunlight in.",
    "ko": "커튼을 열어 햇빛이 들어오게 해.",
    "blank": "阳光"
+  }
+ ],
+ "w|阴影": [
+  {
+   "text": "灯一打，演员身后就出现了一大片阴影。",
+   "en": "When the light hit, a large shadow appeared behind the actor.",
+   "ko": "조명이 켜지자 배우 뒤로 커다란 그림자가 생겼어요.",
+   "blank": "阴影",
+   "src": "made"
+  },
+  {
+   "text": "中午太阳太晒，牛都躲在大树的阴影里。",
+   "en": "The midday sun is so strong that the cows all hide in the shade of the big tree.",
+   "ko": "한낮 햇볕이 너무 따가워서 소들이 다 큰 나무 그늘에 숨어요.",
+   "blank": "阴影",
+   "src": "made"
   }
  ],
  "w|阴谋": [
@@ -53858,6 +54482,22 @@
    "en": "Wang Fang saw on the news that several national leaders use the same phone model.",
    "ko": "왕팡은 여러 나라 지도자가 모두 같은 기종의 휴대폰을 쓴다는 뉴스를 봤어요.",
    "blank": "领袖",
+   "src": "made"
+  }
+ ],
+ "w|频率": [
+  {
+   "text": "这个剧团演出的频率很高，几乎每周都有新戏。",
+   "en": "The troupe performs very frequently, with a new show almost every week.",
+   "ko": "이 극단은 공연 빈도가 높아서 거의 매주 새 연극이 있어요.",
+   "blank": "频率",
+   "src": "made"
+  },
+  {
+   "text": "王芳每天测量浇水的频率，记在本子上。",
+   "en": "Wang Fang tracks how often she waters every day and writes it in a notebook.",
+   "ko": "왕팡은 매일 물 주는 빈도를 재서 공책에 적어요.",
+   "blank": "频率",
    "src": "made"
   }
  ],

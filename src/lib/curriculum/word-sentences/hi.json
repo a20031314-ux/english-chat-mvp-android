@@ -27,6 +27,22 @@
    "blank": "अंकल"
   }
  ],
+ "w|अकादमी": [
+  {
+   "text": "रोहन ने निर्माण अकादमी से छह महीने का कोर्स किया था।",
+   "en": "Rohan did a six-month course at a construction academy.",
+   "ko": "로한은 건설 아카데미에서 여섯 달 과정을 들었어요.",
+   "blank": "अकादमी",
+   "src": "made"
+  },
+  {
+   "text": "मीना की बेटी सर्दियों में एक संगीत अकादमी में दाख़िला लेने वाली है।",
+   "en": "Meena's daughter is going to join a music academy in winter.",
+   "ko": "미나의 딸은 겨울에 음악 학원에 들어갈 거예요.",
+   "blank": "अकादमी",
+   "src": "made"
+  }
+ ],
  "w|अंकुरित": [
   {
    "text": "सेहत का ध्यान रखने वाले ग्राहक अजय से अंकुरित मूँग माँगते हैं।",
@@ -141,6 +157,22 @@
    "en": "We often go for a walk in the park.",
    "ko": "우리는 자주 공원에 산책하러 가.",
    "blank": "अक्सर"
+  }
+ ],
+ "w|अखंड": [
+  {
+   "text": "मंदिर के खंभे एक ही अखंड पत्थर से तराशे गए हैं।",
+   "en": "The temple pillars are carved from a single unbroken stone.",
+   "ko": "사원 기둥은 통돌 하나로 깎아 만들었어요.",
+   "blank": "अखंड",
+   "src": "made"
+  },
+  {
+   "text": "दिवाली की रात पूजा घर में एक अखंड दीया जलता रहता है।",
+   "en": "On Diwali night, an unbroken lamp keeps burning in the prayer room.",
+   "ko": "디왈리 밤에는 기도방에 꺼지지 않는 등불이 계속 타요.",
+   "blank": "अखंड",
+   "src": "made"
   }
  ],
  "w|अख़बार": [
@@ -422,6 +454,22 @@
    "en": "The workers carried out the move with great care.",
    "ko": "인부들은 아주 조심스럽게 이사를 마쳤어요.",
    "blank": "अंजाम",
+   "src": "made"
+  }
+ ],
+ "w|अंजाम देना": [
+  {
+   "text": "रोहन की टीम ने सबसे मुश्किल काम रात भर में अंजाम दिया।",
+   "en": "Rohan's team carried out the hardest job overnight.",
+   "ko": "로한 팀은 가장 어려운 일을 밤새 해냈어요.",
+   "blank": "अंजाम दिया",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने अकेले ही पूरे घर की सफ़ाई का काम दिवाली से पहले अंजाम दिया।",
+   "en": "Meena single-handedly got the whole house cleaned before Diwali.",
+   "ko": "미나는 디왈리 전에 혼자서 집 안 청소를 다 해냈어요.",
+   "blank": "अंजाम दिया",
    "src": "made"
   }
  ],
@@ -1169,6 +1217,22 @@
    "blank": "अनजान"
   }
  ],
+ "w|अनजाना": [
+  {
+   "text": "खुदाई में मज़दूरों को एक अनजाना पुराना कुआँ मिला।",
+   "en": "While digging, the workers found an unknown old well.",
+   "ko": "땅을 파다가 노동자들이 아무도 몰랐던 옛 우물을 발견했어요.",
+   "blank": "अनजाना",
+   "src": "made"
+  },
+  {
+   "text": "पहली बारिश की ख़ुशबू मीना को किसी अनजानी याद में ले जाती है।",
+   "en": "The smell of the first rain takes Meena to some unknown memory.",
+   "ko": "첫비 냄새는 미나를 어떤 낯선 기억 속으로 데려가요.",
+   "blank": "अनजानी",
+   "src": "made"
+  }
+ ],
  "w|अनंत": [
   {
    "text": "गणित की कक्षा में सुनील सर ने समझाया कि संख्याएँ अनंत होती हैं।",
@@ -1182,6 +1246,22 @@
    "en": "When bargaining, Kavita has endless patience.",
    "ko": "흥정할 때 카비타는 인내심이 끝이 없어요.",
    "blank": "अनंत",
+   "src": "made"
+  }
+ ],
+ "w|अनदेखी": [
+  {
+   "text": "सुरक्षा नियमों की अनदेखी पर ठेकेदार पर जुर्माना लगा।",
+   "en": "The contractor was fined for ignoring safety rules.",
+   "ko": "안전 규칙을 무시해서 도급업자가 벌금을 물었어요.",
+   "blank": "अनदेखी",
+   "src": "made"
+  },
+  {
+   "text": "मौसम की चेतावनी की अनदेखी करने वाले कई लोग बाढ़ में फँस गए।",
+   "en": "Many people who ignored the weather warning got stuck in the flood.",
+   "ko": "기상 경보를 무시한 많은 사람이 홍수에 갇혔어요.",
+   "blank": "अनदेखी",
    "src": "made"
   }
  ],
@@ -2910,6 +2990,22 @@
    "en": "The hotel's small museum shows how many attacks the fort withstood.",
    "ko": "호텔의 작은 전시실에는 그 성이 얼마나 많은 침략을 견뎠는지 나와 있어요.",
    "blank": "आक्रमण",
+   "src": "made"
+  }
+ ],
+ "w|आक्रामक": [
+  {
+   "text": "गार्ड का कुत्ता अजनबियों के साथ थोड़ा आक्रामक हो जाता है।",
+   "en": "The guard's dog gets a bit aggressive with strangers.",
+   "ko": "경비원의 개는 낯선 사람에게 좀 사나워져요.",
+   "blank": "आक्रामक",
+   "src": "made"
+  },
+  {
+   "text": "गर्मी में बंदर कुछ ज़्यादा ही आक्रामक हो जाते हैं।",
+   "en": "In summer, the monkeys get rather aggressive.",
+   "ko": "여름엔 원숭이들이 꽤 사나워져요.",
+   "blank": "आक्रामक",
    "src": "made"
   }
  ],
@@ -5505,6 +5601,22 @@
    "blank": "उत्तर"
   }
  ],
+ "w|उत्तीर्ण": [
+  {
+   "text": "सुरक्षा परीक्षा में उत्तीर्ण मज़दूरों को ही ऊँचाई पर काम करने दिया जाता है।",
+   "en": "Only workers who passed the safety test are allowed to work at height.",
+   "ko": "안전 시험에 합격한 노동자만 높은 곳에서 일할 수 있어요.",
+   "blank": "उत्तीर्ण",
+   "src": "made"
+  },
+  {
+   "text": "गर्मी की छुट्टियों से पहले मीना की सारी छात्राएँ उत्तीर्ण हो गईं।",
+   "en": "Before the summer holidays, all of Meena's students passed.",
+   "ko": "여름방학 전에 미나의 학생들이 모두 합격했어요.",
+   "blank": "उत्तीर्ण",
+   "src": "made"
+  }
+ ],
  "w|उत्थान": [
   {
    "text": "रोहन की नई योजना झुग्गी बस्तियों के उत्थान के लिए बनाई गई है।",
@@ -7276,6 +7388,22 @@
    "en": "Meena's new house is in a quiet spot, far from the old industrial area.",
    "ko": "미나의 새집은 옛 공업 지역에서 멀리 떨어진 조용한 곳에 있어요.",
    "blank": "औद्योगिक",
+   "src": "made"
+  }
+ ],
+ "w|औपचारिक": [
+  {
+   "text": "उद्घाटन से पहले एक औपचारिक पूजा रखी गई।",
+   "en": "A formal puja was held before the inauguration.",
+   "ko": "준공식 전에 격식을 갖춘 기도 의식을 열었어요.",
+   "blank": "औपचारिक",
+   "src": "made"
+  },
+  {
+   "text": "नए साल पर मीना ने सबको एक औपचारिक कार्ड भेजा।",
+   "en": "For the new year, Meena sent everyone a formal card.",
+   "ko": "새해에 미나는 모두에게 격식 있는 카드를 보냈어요.",
+   "blank": "औपचारिक",
    "src": "made"
   }
  ],
@@ -9079,6 +9207,22 @@
    "blank": "कामयाब"
   }
  ],
+ "w|कामयाबी": [
+  {
+   "text": "बारिश से पहले छत डालना रोहन की टीम की बड़ी कामयाबी थी।",
+   "en": "Laying the roof before the rain was a big success for Rohan's team.",
+   "ko": "비 오기 전에 지붕을 올린 건 로한 팀의 큰 성과였어요.",
+   "blank": "कामयाबी",
+   "src": "made"
+  },
+  {
+   "text": "गर्मियों में टमाटर उगाने में मीना को इस बार कामयाबी मिली।",
+   "en": "This time Meena succeeded in growing tomatoes in summer.",
+   "ko": "이번엔 미나가 여름에 토마토 키우기에 성공했어요.",
+   "blank": "कामयाबी",
+   "src": "made"
+  }
+ ],
  "w|क़ायम": [
   {
    "text": "राहुल चाहता है कि पुराने पड़ोसियों से रिश्ता क़ायम रहे।",
@@ -9092,6 +9236,22 @@
    "en": "Even after the long shoot, the freshness on Priya's face remained.",
    "ko": "긴 촬영 뒤에도 프리야의 얼굴은 생기가 그대로였어요.",
    "blank": "क़ायम",
+   "src": "made"
+  }
+ ],
+ "w|क़ायम रखना": [
+  {
+   "text": "काम की रफ़्तार क़ायम रखने के लिए रोहन ने दो शिफ़्ट लगाईं।",
+   "en": "To keep up the pace of work, Rohan set up two shifts.",
+   "ko": "작업 속도를 유지하려고 로한은 교대를 둘로 짰어요.",
+   "blank": "क़ायम रखने",
+   "src": "made"
+  },
+  {
+   "text": "मीना सर्दियों में भी सुबह की सैर की आदत क़ायम रखती है।",
+   "en": "Meena keeps up her habit of a morning walk even in winter.",
+   "ko": "미나는 겨울에도 아침 산책 습관을 지켜요.",
+   "blank": "क़ायम रखती",
    "src": "made"
   }
  ],
@@ -9240,6 +9400,22 @@
    "en": "Volunteers from the cleanliness drive were going shop to shop handing out cloth bags.",
    "ko": "청결 캠페인 활동가들이 가게마다 돌며 천 가방을 나눠 주고 있었어요.",
    "blank": "कार्यकर्ता",
+   "src": "made"
+  }
+ ],
+ "w|कार्यकारी": [
+  {
+   "text": "कंपनी के कार्यकारी निदेशक ने अचानक साइट का दौरा किया।",
+   "en": "The company's executive director made a surprise visit to the site.",
+   "ko": "회사 전무가 갑자기 현장을 둘러보러 왔어요.",
+   "blank": "कार्यकारी",
+   "src": "made"
+  },
+  {
+   "text": "मीना की सहेली अब एक बड़ी कंपनी में कार्यकारी पद पर है।",
+   "en": "Meena's friend now holds an executive post in a big company.",
+   "ko": "미나의 친구는 이제 큰 회사에서 임원 자리에 있어요.",
+   "blank": "कार्यकारी",
    "src": "made"
   }
  ],
@@ -12079,6 +12255,22 @@
    "src": "made"
   }
  ],
+ "w|खाद": [
+  {
+   "text": "साइट के पास के खेत में किसान खाद डाल रहा था, और गंध पूरे इलाक़े में फैल गई।",
+   "en": "A farmer was spreading manure in the field next to the site, and the smell spread over the whole area.",
+   "ko": "현장 옆 밭에서 농부가 거름을 뿌려서 냄새가 온 동네에 퍼졌어요.",
+   "blank": "खाद",
+   "src": "made"
+  },
+  {
+   "text": "पतझड़ के सूखे पत्तों से मीना घर पर ही खाद बनाती है।",
+   "en": "Meena makes compost at home from dry autumn leaves.",
+   "ko": "미나는 가을 마른 잎으로 집에서 퇴비를 만들어요.",
+   "blank": "खाद",
+   "src": "made"
+  }
+ ],
  "w|खाद्य": [
   {
    "text": "सरकार ने गाँव के गोदाम में खाद्य सामग्री का भंडार रखा है ताकि सर्दियों में कमी न हो।",
@@ -12894,6 +13086,22 @@
    "en": "On Republic Day the hotel made a tricolour cake for the guests.",
    "ko": "공화국의 날에 호텔은 손님들을 위해 삼색 케이크를 만들었어요.",
    "blank": "गणतंत्र",
+   "src": "made"
+  }
+ ],
+ "w|गणना": [
+  {
+   "text": "रोहन की गणना के हिसाब से छत के लिए और सरिया चाहिए।",
+   "en": "By Rohan's calculation, more steel rods are needed for the roof.",
+   "ko": "로한의 계산으로는 지붕에 철근이 더 필요해요.",
+   "blank": "गणना",
+   "src": "made"
+  },
+  {
+   "text": "पंचांग की गणना के हिसाब से इस बार दिवाली जल्दी है।",
+   "en": "By the almanac's reckoning, Diwali is early this time.",
+   "ko": "달력 계산으로는 올해 디왈리가 이르대요.",
+   "blank": "गणना",
    "src": "made"
   }
  ],
@@ -19338,6 +19546,22 @@
    "en": "Anjali's brother did his holiday project on the creatures in the garden.",
    "ko": "안잘리의 남동생은 방학 숙제를 정원의 생물들로 했어요.",
    "blank": "जीव जंतु",
+   "src": "made"
+  }
+ ],
+ "w|जीव विज्ञान": [
+  {
+   "text": "रोहन की बहन जीव विज्ञान पढ़ती है, पर रोहन को ईंट-सीमेंट ज़्यादा भाता है।",
+   "en": "Rohan's sister studies biology, but Rohan prefers bricks and cement.",
+   "ko": "로한의 여동생은 생물학을 공부하지만 로한은 벽돌과 시멘트가 더 좋아요.",
+   "blank": "जीव विज्ञान",
+   "src": "made"
+  },
+  {
+   "text": "मीना जीव विज्ञान की टीचर है और बच्चों को पत्तों का रंग बदलना समझाती है।",
+   "en": "Meena is a biology teacher and explains to children why leaves change colour.",
+   "ko": "미나는 생물 선생님이라 아이들에게 잎 색이 바뀌는 이유를 설명해요.",
+   "blank": "जीव विज्ञान",
    "src": "made"
   }
  ],
@@ -28133,6 +28357,22 @@
    "src": "made"
   }
  ],
+ "w|निधि": [
+  {
+   "text": "स्कूल की नई इमारत सरकारी निधि से बन रही है।",
+   "en": "The new school building is being built with government funds.",
+   "ko": "새 학교 건물은 정부 기금으로 짓고 있어요.",
+   "blank": "निधि",
+   "src": "made"
+  },
+  {
+   "text": "मोहल्ले ने बाढ़ पीड़ितों के लिए एक छोटी निधि जमा की।",
+   "en": "The neighbourhood collected a small fund for flood victims.",
+   "ko": "동네 사람들이 홍수 피해자를 위해 작은 기금을 모았어요.",
+   "blank": "निधि",
+   "src": "made"
+  }
+ ],
  "w|निपटना": [
   {
    "text": "बाकी काम से जल्दी निपटना होगा।",
@@ -28250,6 +28490,22 @@
    "en": "Police were posted in the market to control the festival crowds.",
    "ko": "명절 인파를 통제하려고 시장에 경찰이 배치됐어요.",
    "blank": "नियंत्रण",
+   "src": "made"
+  }
+ ],
+ "w|नियंत्रित करना": [
+  {
+   "text": "क्रेन को नियंत्रित करने के लिए एक अनुभवी ऑपरेटर बुलाया गया।",
+   "en": "An experienced operator was called in to control the crane.",
+   "ko": "크레인을 조종하려고 숙련된 기사를 불렀어요.",
+   "blank": "नियंत्रित करने",
+   "src": "made"
+  },
+  {
+   "text": "ठंड में मीना हीटर से कमरे का तापमान नियंत्रित करती है।",
+   "en": "In the cold, Meena controls the room temperature with a heater.",
+   "ko": "추울 때 미나는 히터로 방 온도를 조절해요.",
+   "blank": "नियंत्रित करती",
    "src": "made"
   }
  ],
@@ -29417,6 +29673,22 @@
    "blank": "पक्का"
   }
  ],
+ "w|पंक्ति": [
+  {
+   "text": "रोहन ने ईंटों की हर पंक्ति धागे से सीधी नापी।",
+   "en": "Rohan checked every row of bricks was straight with a string.",
+   "ko": "로한은 벽돌 줄마다 실로 반듯한지 쟀어요.",
+   "blank": "पंक्ति",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने डायरी में बारिश पर एक कविता की पहली पंक्ति लिखी।",
+   "en": "Meena wrote the first line of a poem about rain in her diary.",
+   "ko": "미나는 일기장에 비에 관한 시 첫 줄을 적었어요.",
+   "blank": "पंक्ति",
+   "src": "made"
+  }
+ ],
  "w|पक्ष": [
   {
    "text": "जज ने दोनों पक्षों की बात ध्यान से सुनी।",
@@ -29652,6 +29924,22 @@
    "en": "On the night flight a child boarded the plane already in pyjamas.",
    "ko": "밤 비행기에 한 아이는 잠옷 바지를 입은 채 탔어요.",
    "blank": "पजामा",
+   "src": "made"
+  }
+ ],
+ "w|पंजीकृत": [
+  {
+   "text": "साइट पर सिर्फ़ पंजीकृत ठेकेदारों को काम मिलता है।",
+   "en": "Only registered contractors get work on the site.",
+   "ko": "현장에서는 등록된 도급업자만 일을 받아요.",
+   "blank": "पंजीकृत",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने बेटी को शहर के एक पंजीकृत तैराकी क्लब में डाला।",
+   "en": "Meena put her daughter in a registered swimming club in the city.",
+   "ko": "미나는 딸을 시내 등록된 수영 클럽에 보냈어요.",
+   "blank": "पंजीकृत",
    "src": "made"
   }
  ],
@@ -30074,6 +30362,22 @@
    "en": "Dipa explained to her little brother that some materials shrink in the cold.",
    "ko": "디파는 남동생에게 추우면 어떤 물질은 줄어든다고 설명해 줬어요.",
    "blank": "पदार्थ",
+   "src": "made"
+  }
+ ],
+ "w|पद्धति": [
+  {
+   "text": "इस इमारत में भूकंप से बचाने वाली नई पद्धति अपनाई गई है।",
+   "en": "A new earthquake-proofing method has been used in this building.",
+   "ko": "이 건물에는 지진에 견디는 새 공법이 쓰였어요.",
+   "blank": "पद्धति",
+   "src": "made"
+  },
+  {
+   "text": "मीना की दादी आम का अचार पुरानी पद्धति से बनाती हैं।",
+   "en": "Meena's grandmother makes mango pickle the traditional way.",
+   "ko": "미나의 할머니는 옛 방식으로 망고 피클을 담가요.",
+   "blank": "पद्धति",
    "src": "made"
   }
  ],
@@ -32317,6 +32621,22 @@
    "src": "made"
   }
  ],
+ "w|पुष्टि करना": [
+  {
+   "text": "ट्रक भेजने से पहले रोहन ने सप्लायर से फ़ोन पर ऑर्डर की पुष्टि की।",
+   "en": "Before the truck was sent, Rohan confirmed the order with the supplier by phone.",
+   "ko": "트럭을 보내기 전에 로한은 공급업체에 전화로 주문을 확인했어요.",
+   "blank": "पुष्टि की",
+   "src": "made"
+  },
+  {
+   "text": "डॉक्टर ने मीना के बुख़ार में मौसमी फ़्लू की पुष्टि की।",
+   "en": "The doctor confirmed that Meena's fever was seasonal flu.",
+   "ko": "의사는 미나의 열이 계절 독감이라고 확인했어요.",
+   "blank": "पुष्टि की",
+   "src": "made"
+  }
+ ],
  "w|पुस्तक": [
   {
    "text": "यह पुस्तक बहुत रोचक है।",
@@ -32501,6 +32821,38 @@
    "en": "I trust them completely.",
    "ko": "나는 그 사람을 완전히 믿어.",
    "blank": "पूर्ण"
+  }
+ ],
+ "w|पूर्णतः": [
+  {
+   "text": "तीसरी मंज़िल का काम अब पूर्णतः ख़त्म हो चुका है।",
+   "en": "Work on the third floor is now completely finished.",
+   "ko": "삼 층 공사는 이제 완전히 끝났어요.",
+   "blank": "पूर्णतः",
+   "src": "made"
+  },
+  {
+   "text": "जनवरी तक तालाब का पानी पूर्णतः जम गया था।",
+   "en": "By January, the pond water had frozen completely.",
+   "ko": "일월이 되자 연못물이 꽁꽁 얼었어요.",
+   "blank": "पूर्णतः",
+   "src": "made"
+  }
+ ],
+ "w|पूर्ति": [
+  {
+   "text": "सीमेंट की पूर्ति रुकने से काम दो दिन ठप रहा।",
+   "en": "Work stood still for two days when the cement supply stopped.",
+   "ko": "시멘트 공급이 끊겨서 공사가 이틀 멈췄어요.",
+   "blank": "पूर्ति",
+   "src": "made"
+  },
+  {
+   "text": "गर्मियों में शहर में पानी की पूर्ति कम हो जाती है।",
+   "en": "In summer, the water supply in the city goes down.",
+   "ko": "여름에는 도시에 물 공급이 줄어요.",
+   "blank": "पूर्ति",
+   "src": "made"
   }
  ],
  "w|पूर्व": [
@@ -32719,6 +33071,22 @@
    "en": "They decided to learn a new profession.",
    "ko": "그들은 새 직업을 배우기로 했어.",
    "blank": "पेशा"
+  }
+ ],
+ "w|पेशेवर": [
+  {
+   "text": "बिजली का काम हमेशा किसी पेशेवर इलेक्ट्रीशियन से करवाना चाहिए।",
+   "en": "Electrical work should always be done by a professional electrician.",
+   "ko": "전기 공사는 늘 전문 전기 기사에게 맡겨야 해요.",
+   "blank": "पेशेवर",
+   "src": "made"
+  },
+  {
+   "text": "शादी के मौसम में पेशेवर फ़ोटोग्राफ़र मिलना मुश्किल हो जाता है।",
+   "en": "In wedding season it gets hard to find a professional photographer.",
+   "ko": "결혼 시즌에는 전문 사진사를 구하기 어려워져요.",
+   "blank": "पेशेवर",
+   "src": "made"
   }
  ],
  "w|पेंसिल": [
@@ -33336,6 +33704,22 @@
    "en": "The village's progressive farmers together formed a cooperative.",
    "ko": "마을의 진보적인 농부들이 함께 협동조합을 만들었어요.",
    "blank": "प्रगतिशील",
+   "src": "made"
+  }
+ ],
+ "w|प्रचंड": [
+  {
+   "text": "जून की प्रचंड गर्मी में दोपहर का काम रोक दिया जाता है।",
+   "en": "In the fierce June heat, afternoon work is stopped.",
+   "ko": "유월 무더위에는 한낮 작업을 멈춰요.",
+   "blank": "प्रचंड",
+   "src": "made"
+  },
+  {
+   "text": "मई की प्रचंड धूप में मीना दोपहर को घर से नहीं निकलती।",
+   "en": "In the scorching May sun, Meena doesn't go out at midday.",
+   "ko": "오월 뙤약볕에 미나는 한낮엔 밖에 나가지 않아요.",
+   "blank": "प्रचंड",
    "src": "made"
   }
  ],
@@ -43859,6 +44243,22 @@
    "blank": "मूल्य"
   }
  ],
+ "w|मूल्यांकन": [
+  {
+   "text": "इंजीनियर ने नींव की मज़बूती का मूल्यांकन किया।",
+   "en": "The engineer assessed the strength of the foundation.",
+   "ko": "기술자가 기초가 얼마나 튼튼한지 평가했어요.",
+   "blank": "मूल्यांकन",
+   "src": "made"
+  },
+  {
+   "text": "साल के अंत में मीना अपने विद्यार्थियों का मूल्यांकन करती है।",
+   "en": "At the end of the year, Meena evaluates her students.",
+   "ko": "연말이면 미나가 학생들을 평가해요.",
+   "blank": "मूल्यांकन",
+   "src": "made"
+  }
+ ],
  "w|मृत": [
   {
    "text": "पेड़ मृत लग रहा था, फिर भी हरा हो गया।",
@@ -49141,6 +49541,22 @@
    "src": "made"
   }
  ],
+ "w|विभाजित": [
+  {
+   "text": "बड़ा काम छोटे हिस्सों में विभाजित हो तो जल्दी होता है।",
+   "en": "A big job goes faster when it is divided into small parts.",
+   "ko": "큰 일은 작게 나누면 빨리 끝나요.",
+   "blank": "विभाजित",
+   "src": "made"
+  },
+  {
+   "text": "मीना का साल चार मौसमों में नहीं, त्योहारों में विभाजित है।",
+   "en": "Meena's year is divided not into four seasons but into festivals.",
+   "ko": "미나의 한 해는 사계절이 아니라 명절로 나뉘어요.",
+   "blank": "विभाजित",
+   "src": "made"
+  }
+ ],
  "w|विभिन्न": [
   {
    "text": "बाज़ार में विभिन्न रंगों के कपड़े हैं।",
@@ -50029,6 +50445,22 @@
    "blank": "व्याकरण"
   }
  ],
+ "w|व्याख्या": [
+  {
+   "text": "नक्शे की व्याख्या पर रोहन और आर्किटेक्ट में लंबी बहस हुई।",
+   "en": "Rohan and the architect had a long debate over how to read the plan.",
+   "ko": "도면 해석을 두고 로한과 건축가가 오래 논쟁했어요.",
+   "blank": "व्याख्या",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने बच्चों को कविता की व्याख्या करते हुए बादलों की ओर इशारा किया।",
+   "en": "While explaining the poem to the children, Meena pointed at the clouds.",
+   "ko": "미나는 아이들에게 시를 풀이하면서 구름을 가리켰어요.",
+   "blank": "व्याख्या",
+   "src": "made"
+  }
+ ],
  "w|व्यापक": [
   {
    "text": "रेस्तराँ के मेन्यू में उत्तर से दक्षिण तक के व्यंजनों का व्यापक चुनाव है।",
@@ -50085,6 +50517,38 @@
    "en": "Be sure to drink water after exercise.",
    "ko": "운동 후에는 꼭 물을 마셔.",
    "blank": "व्यायाम"
+  }
+ ],
+ "w|व्यावसायिक": [
+  {
+   "text": "सड़क के उस पार एक नया व्यावसायिक परिसर बन रहा है।",
+   "en": "A new commercial complex is going up across the road.",
+   "ko": "길 건너편에 새 상업 단지가 들어서고 있어요.",
+   "blank": "व्यावसायिक",
+   "src": "made"
+  },
+  {
+   "text": "सर्दियों में ऊनी कपड़ों की व्यावसायिक माँग बहुत बढ़ जाती है।",
+   "en": "In winter, commercial demand for woollen clothes rises a lot.",
+   "ko": "겨울엔 털옷의 상업적 수요가 크게 늘어요.",
+   "blank": "व्यावसायिक",
+   "src": "made"
+  }
+ ],
+ "w|व्यावहारिक": [
+  {
+   "text": "रोहन किताबों से ज़्यादा व्यावहारिक अनुभव पर भरोसा करता है।",
+   "en": "Rohan trusts hands-on experience more than books.",
+   "ko": "로한은 책보다 실제 경험을 더 믿어요.",
+   "blank": "व्यावहारिक",
+   "src": "made"
+  },
+  {
+   "text": "बरसात में मीना छाते की जगह रेनकोट को ज़्यादा व्यावहारिक मानती है।",
+   "en": "In the rains, Meena finds a raincoat more practical than an umbrella.",
+   "ko": "장마철에 미나는 우산보다 비옷이 더 실용적이라고 여겨요.",
+   "blank": "व्यावहारिक",
+   "src": "made"
   }
  ],
  "w|व्यास": [
@@ -51435,6 +51899,22 @@
    "blank": "शेष"
   }
  ],
+ "w|शैक्षिक": [
+  {
+   "text": "मज़दूरों के बच्चों के लिए साइट पर एक शैक्षिक केंद्र खोला गया।",
+   "en": "An educational centre was opened on the site for the workers' children.",
+   "ko": "노동자 아이들을 위해 현장에 교육 센터를 열었어요.",
+   "blank": "शैक्षिक",
+   "src": "made"
+  },
+  {
+   "text": "मीना बच्चों को एक शैक्षिक यात्रा पर पहाड़ों में बर्फ़ दिखाने ले गई।",
+   "en": "Meena took the children on an educational trip to see snow in the mountains.",
+   "ko": "미나는 아이들을 데리고 산에 눈을 보러 교육 여행을 갔어요.",
+   "blank": "शैक्षिक",
+   "src": "made"
+  }
+ ],
  "w|शैतान": [
   {
    "text": "रोहन की बेटी पूरी शैतान है, दफ़्तर आते ही सबकी मेज़ से पेन उठा लेती है।",
@@ -51619,6 +52099,22 @@
    "blank": "श्रेणी"
   }
  ],
+ "w|श्रेय": [
+  {
+   "text": "पुल समय पर बनने का श्रेय रोहन ने पूरी टीम को दिया।",
+   "en": "Rohan gave the whole team the credit for finishing the bridge on time.",
+   "ko": "로한은 다리를 제때 완성한 공을 팀 전체에 돌렸어요.",
+   "blank": "श्रेय",
+   "src": "made"
+  },
+  {
+   "text": "मीना कहती है कि बग़ीचे की हरियाली का श्रेय बारिश को जाता है।",
+   "en": "Meena says the credit for the garden's greenery goes to the rain.",
+   "ko": "미나는 정원이 푸른 건 비 덕분이라고 말해요.",
+   "blank": "श्रेय",
+   "src": "made"
+  }
+ ],
  "w|श्रेष्ठ": [
   {
    "text": "पैकर्स वालों में सबसे श्रेष्ठ कारीगर ने काँच की अलमारी सँभाली।",
@@ -51724,6 +52220,22 @@
    "en": "On New Year Dipa resolved to get up early every morning.",
    "ko": "새해에 디파는 매일 아침 일찍 일어나기로 다짐했어요.",
    "blank": "संकल्प",
+   "src": "made"
+  }
+ ],
+ "w|संकाय": [
+  {
+   "text": "यह इमारत विश्वविद्यालय के इंजीनियरिंग संकाय के लिए बन रही है।",
+   "en": "This building is being built for the university's engineering faculty.",
+   "ko": "이 건물은 대학 공학부를 위해 짓고 있어요.",
+   "blank": "संकाय",
+   "src": "made"
+  },
+  {
+   "text": "मीना के कॉलेज का विज्ञान संकाय हर सर्दी में मेला लगाता है।",
+   "en": "Meena's college science faculty holds a fair every winter.",
+   "ko": "미나네 대학 이과대는 겨울마다 축제를 열어요.",
+   "blank": "संकाय",
    "src": "made"
   }
  ],
@@ -52843,6 +53355,22 @@
    "src": "made"
   }
  ],
+ "w|सबक़": [
+  {
+   "text": "पिछली दीवार गिरने से रोहन ने बड़ा सबक़ सीखा।",
+   "en": "Rohan learned a big lesson when the last wall fell down.",
+   "ko": "지난번 벽이 무너지면서 로한은 큰 교훈을 얻었어요.",
+   "blank": "सबक़",
+   "src": "made"
+  },
+  {
+   "text": "पिछली सर्दी में बीमार पड़ने के बाद मीना ने सबक़ लिया और अब गरम कपड़े जल्दी निकालती है।",
+   "en": "After falling ill last winter, Meena learned her lesson and now gets warm clothes out early.",
+   "ko": "지난겨울 앓고 난 뒤 미나는 교훈을 얻어 이제 겨울옷을 일찍 꺼내요.",
+   "blank": "सबक़",
+   "src": "made"
+  }
+ ],
  "w|संबंध": [
   {
    "text": "दोनों परिवारों का पुराना संबंध है।",
@@ -53061,6 +53589,22 @@
    "en": "Everyone liked the food.",
    "ko": "모두 음식을 마음에 들어 했어.",
    "blank": "सभी"
+  }
+ ],
+ "w|सभ्य": [
+  {
+   "text": "रोहन चाहता है कि साइट पर हर कोई सभ्य भाषा में बात करे।",
+   "en": "Rohan wants everyone on the site to speak in civil language.",
+   "ko": "로한은 현장에서 모두가 점잖은 말을 쓰길 바라요.",
+   "blank": "सभ्य",
+   "src": "made"
+  },
+  {
+   "text": "शहर के सभ्य लोग भी होली पर बच्चों की तरह रंग खेलते हैं।",
+   "en": "Even the city's refined people play with colours like children at Holi.",
+   "ko": "도시의 점잖은 사람들도 홀리에는 아이처럼 물감 놀이를 해요.",
+   "blank": "सभ्य",
+   "src": "made"
   }
  ],
  "w|समक्ष": [
@@ -53961,6 +54505,22 @@
    "src": "made"
   }
  ],
+ "w|सर्वेक्षण": [
+  {
+   "text": "काम शुरू करने से पहले ज़मीन का पूरा सर्वेक्षण किया गया।",
+   "en": "Before work began, a full survey of the land was carried out.",
+   "ko": "공사를 시작하기 전에 땅을 꼼꼼히 측량했어요.",
+   "blank": "सर्वेक्षण",
+   "src": "made"
+  },
+  {
+   "text": "मौसम विभाग के सर्वेक्षण के मुताबिक़ इस बार ठंड ज़्यादा पड़ेगी।",
+   "en": "According to the weather department's survey, it will be colder this time.",
+   "ko": "기상청 조사에 따르면 올해는 더 추울 거래요.",
+   "blank": "सर्वेक्षण",
+   "src": "made"
+  }
+ ],
  "w|सर्वोच्च": [
   {
    "text": "राहुल ने बच्चों की पढ़ाई को सर्वोच्च प्राथमिकता देकर स्कूल के पास घर लिया।",
@@ -53974,6 +54534,22 @@
    "en": "Priya said honesty is the highest value for her.",
    "ko": "프리야는 정직이 자기에게 가장 소중한 가치라고 말했어요.",
    "blank": "सर्वोच्च",
+   "src": "made"
+  }
+ ],
+ "w|सर्वोत्तम": [
+  {
+   "text": "रोहन हमेशा सर्वोत्तम क्वालिटी का सीमेंट ही मँगवाता है।",
+   "en": "Rohan always orders only the best-quality cement.",
+   "ko": "로한은 늘 최고 품질 시멘트만 주문해요.",
+   "blank": "सर्वोत्तम",
+   "src": "made"
+  },
+  {
+   "text": "मीना के हिसाब से अक्टूबर घूमने के लिए सर्वोत्तम महीना है।",
+   "en": "In Meena's view, October is the best month for travelling.",
+   "ko": "미나 생각엔 시월이 여행하기에 가장 좋은 달이에요.",
+   "blank": "सर्वोत्तम",
    "src": "made"
   }
  ],
@@ -54802,6 +55378,22 @@
    "en": "Priya and her friend saved on delivery by placing a joint order.",
    "ko": "프리야와 친구는 함께 주문해서 배송비를 아꼈어요.",
    "blank": "साझा",
+   "src": "made"
+  }
+ ],
+ "w|साझा करना": [
+  {
+   "text": "रोहन ने अपना खाना नए मज़दूर के साथ साझा किया।",
+   "en": "Rohan shared his food with the new worker.",
+   "ko": "로한은 새로 온 노동자와 밥을 나눠 먹었어요.",
+   "blank": "साझा किया",
+   "src": "made"
+  },
+  {
+   "text": "मीना पड़ोसियों के साथ अपने पेड़ के आम हर गर्मी साझा करती है।",
+   "en": "Every summer, Meena shares the mangoes from her tree with the neighbours.",
+   "ko": "미나는 여름마다 자기 나무 망고를 이웃과 나눠요.",
+   "blank": "साझा करती",
    "src": "made"
   }
  ],
@@ -56559,6 +57151,22 @@
    "blank": "सुविधा"
   }
  ],
+ "w|सुशील": [
+  {
+   "text": "साइट का चौकीदार बड़ा सुशील आदमी है, सबसे अदब से बात करता है।",
+   "en": "The site watchman is a very well-mannered man who speaks politely to everyone.",
+   "ko": "현장 경비원은 아주 점잖은 사람이라 누구에게나 공손히 말해요.",
+   "blank": "सुशील",
+   "src": "made"
+  },
+  {
+   "text": "मीना की बहू बड़ी सुशील है, सर्दी में सबके लिए अदरक वाली चाय बनाती है।",
+   "en": "Meena's daughter-in-law is very gracious and makes ginger tea for everyone in winter.",
+   "ko": "미나의 며느리는 참 상냥해서 겨울엔 모두에게 생강차를 끓여 줘요.",
+   "blank": "सुशील",
+   "src": "made"
+  }
+ ],
  "w|सुहाना": [
   {
    "text": "बारिश के बाद शाम का मौसम बड़ा सुहाना हो गया।",
@@ -56779,6 +57387,22 @@
    "en": "In summer the sun is very strong.",
    "ko": "여름에는 태양이 아주 세.",
    "blank": "सूर्य"
+  }
+ ],
+ "w|सृजन": [
+  {
+   "text": "रोहन के लिए हर नई इमारत एक तरह का सृजन है।",
+   "en": "For Rohan, every new building is a kind of creation.",
+   "ko": "로한에게 새 건물 하나하나는 일종의 창조예요.",
+   "blank": "सृजन",
+   "src": "made"
+  },
+  {
+   "text": "वसंत में प्रकृति हर तरफ़ नया सृजन करती है।",
+   "en": "In spring, nature creates new life everywhere.",
+   "ko": "봄이면 자연이 곳곳에서 새 생명을 빚어내요.",
+   "blank": "सृजन",
+   "src": "made"
   }
  ],
  "w|सृष्टि": [
@@ -58450,6 +59074,22 @@
    "en": "Kavita recalled how, as children, the two friends used to watch Father plough the field.",
    "ko": "카비타는 어릴 때 둘이 밭에서 아버지가 쟁기질하는 걸 보곤 했던 걸 떠올렸어요.",
    "blank": "हल चलाते",
+   "src": "made"
+  }
+ ],
+ "w|हल निकालना": [
+  {
+   "text": "पानी भरने की समस्या का रोहन ने एक सस्ता हल निकाला।",
+   "en": "Rohan came up with a cheap fix for the waterlogging problem.",
+   "ko": "로한은 물이 고이는 문제에 싼 해결책을 찾아냈어요.",
+   "blank": "हल निकाला",
+   "src": "made"
+  },
+  {
+   "text": "छत टपकने का हल निकालने के लिए मीना ने बरसात से पहले मिस्त्री बुलाया।",
+   "en": "To find a fix for the leaking roof, Meena called a mason before the rainy season.",
+   "ko": "미나는 지붕 새는 걸 해결하려고 장마 전에 기술자를 불렀어요.",
+   "blank": "हल निकालने",
    "src": "made"
   }
  ],

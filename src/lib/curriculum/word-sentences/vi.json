@@ -815,6 +815,22 @@
    "src": "made"
   }
  ],
+ "w|áp lực": [
+  {
+   "text": "Hùng chịu nhiều áp lực vì chủ đầu tư muốn khai trương sớm.",
+   "en": "Hùng is under a lot of pressure because the investor wants to open early.",
+   "ko": "건축주가 일찍 개업하고 싶어 해서 훙은 압박을 많이 받아요.",
+   "blank": "áp lực",
+   "src": "made"
+  },
+  {
+   "text": "Ca trực đêm có nhiều áp lực, nhưng Hương luôn giữ được giọng nói nhẹ nhàng.",
+   "en": "Night shifts are full of pressure, but Hương always keeps her voice gentle.",
+   "ko": "야간 당직은 압박이 크지만 흐엉은 늘 부드러운 목소리를 유지해요.",
+   "blank": "áp lực",
+   "src": "made"
+  }
+ ],
  "w|ấy": [
   {
    "text": "Hôm ấy mưa suốt ngày.",
@@ -1717,6 +1733,22 @@
    "en": "Is this evidence convincing enough?",
    "ko": "이 증거가 충분히 설득력 있어?",
    "blank": "Bằng chứng"
+  }
+ ],
+ "w|bằng mọi giá": [
+  {
+   "text": "Chủ thầu muốn bằng mọi giá phải cất nóc trước Tết, nên Hùng tăng ca liên tục.",
+   "en": "The contractor wants the roof finished before Tet at all costs, so Hùng keeps working overtime.",
+   "ko": "도급업자가 무슨 수를 써서라도 설 전에 상량을 하길 원해서 훙은 계속 야근해요.",
+   "blank": "bằng mọi giá",
+   "src": "made"
+  },
+  {
+   "text": "Bác sĩ Hương quyết tâm bằng mọi giá giữ được bàn chân cho anh thợ bị tai nạn.",
+   "en": "Dr. Hương is determined to save the injured worker's foot at all costs.",
+   "ko": "흐엉 선생님은 사고를 당한 기술자의 발을 무슨 수를 써서라도 살리기로 마음먹었어요.",
+   "blank": "bằng mọi giá",
+   "src": "made"
   }
  ],
  "w|băng qua": [
@@ -3869,6 +3901,22 @@
    "src": "tatoeba:8991765/dotheduyet1999 en:65662/CK"
   }
  ],
+ "w|bồi dưỡng": [
+  {
+   "text": "Công ty bồi dưỡng thêm cho Hùng kỹ năng đọc bản vẽ kết cấu.",
+   "en": "The company gives Hùng extra training in reading structural drawings.",
+   "ko": "회사는 훙에게 구조 도면 읽는 법을 추가로 가르쳐요.",
+   "blank": "bồi dưỡng",
+   "src": "made"
+  },
+  {
+   "text": "Hương thường bồi dưỡng thêm cho các bác sĩ trẻ về cách giao tiếp với người nhà bệnh nhân.",
+   "en": "Hương often gives young doctors extra coaching on talking with patients' families.",
+   "ko": "흐엉은 젊은 의사들에게 환자 가족과 소통하는 법을 따로 가르치곤 해요.",
+   "blank": "bồi dưỡng",
+   "src": "made"
+  }
+ ],
  "w|bơi lội": [
   {
    "text": "Bơi lội giúp cơ thể dẻo dai hơn.",
@@ -5823,6 +5871,22 @@
    "en": "If it's necessary, just call me.",
    "ko": "필요하면 그냥 나 불러.",
    "blank": "Cần thiết"
+  }
+ ],
+ "w|cẩn trọng": [
+  {
+   "text": "Khi tháo cốp pha, Hùng luôn cẩn trọng để không làm nứt mặt bê tông.",
+   "en": "When removing the formwork, Hùng is always careful not to crack the concrete surface.",
+   "ko": "거푸집을 뗄 때 훙은 콘크리트 면이 갈라지지 않게 늘 신중해요.",
+   "blank": "cẩn trọng",
+   "src": "made"
+  },
+  {
+   "text": "Trước khi kê đơn cho phụ nữ mang thai, Hương luôn rất cẩn trọng.",
+   "en": "Before prescribing for pregnant women, Hương is always very careful.",
+   "ko": "임신부에게 처방하기 전에 흐엉은 늘 아주 신중해요.",
+   "blank": "cẩn trọng",
+   "src": "made"
   }
  ],
  "w|càng": [
@@ -7797,6 +7861,22 @@
    "src": "made"
   }
  ],
+ "w|chỉ tiêu": [
+  {
+   "text": "Tuần này đội của Hùng phải hoàn thành chỉ tiêu đổ xong ba tầng sàn.",
+   "en": "This week Hùng's crew has to meet the target of pouring three floors.",
+   "ko": "이번 주 훙의 팀은 바닥 세 층을 다 붓는 목표를 채워야 해요.",
+   "blank": "chỉ tiêu",
+   "src": "made"
+  },
+  {
+   "text": "Khoa của Hương đặt chỉ tiêu giảm thời gian chờ khám xuống còn một nửa.",
+   "en": "Hương's department set a target of cutting waiting time in half.",
+   "ko": "흐엉의 과는 진료 대기 시간을 절반으로 줄이는 목표를 세웠어요.",
+   "blank": "chỉ tiêu",
+   "src": "made"
+  }
+ ],
  "w|chia": [
   {
    "text": "Chia đều cho mọi người.",
@@ -7945,6 +8025,22 @@
    "blank": "Chiến đấu"
   }
  ],
+ "w|chiến lược": [
+  {
+   "text": "Ban chỉ huy công trường bàn chiến lược thi công mùa mưa cùng anh Hùng.",
+   "en": "The site management discusses the rainy-season construction strategy with Hùng.",
+   "ko": "현장 지휘부는 훙과 함께 우기 시공 전략을 논의해요.",
+   "blank": "chiến lược",
+   "src": "made"
+  },
+  {
+   "text": "Giám đốc bệnh viện giao cho Hương xây dựng chiến lược phòng dịch cho mùa đông.",
+   "en": "The hospital director asks Hương to build an epidemic-prevention strategy for winter.",
+   "ko": "병원장은 흐엉에게 겨울철 방역 전략을 세우라고 맡겼어요.",
+   "blank": "chiến lược",
+   "src": "made"
+  }
+ ],
  "w|chiến thắng": [
   {
    "text": "Chúng tôi đã chiến thắng trận chiến",
@@ -7959,6 +8055,22 @@
    "ko": "우리 모두 이기려고 애쓰고 있어요.",
    "blank": "chiến thắng",
    "src": "tatoeba:5144952/truongap en:5027034/CK"
+  }
+ ],
+ "w|chiến thuật": [
+  {
+   "text": "Để kịp đổ mái trước bão, Hùng chia đội làm hai ca, một chiến thuật khá hiệu quả.",
+   "en": "To pour the roof before the storm, Hùng splits the crew into two shifts, a fairly effective tactic.",
+   "ko": "태풍 전에 지붕을 부으려고 훙은 팀을 두 교대로 나눴는데, 꽤 효과적인 전술이었어요.",
+   "blank": "chiến thuật",
+   "src": "made"
+  },
+  {
+   "text": "Để bệnh nhi bớt sợ, Hương có chiến thuật riêng là vừa tiêm vừa kể chuyện.",
+   "en": "To keep young patients from being scared, Hương has her own tactic of telling a story while giving the shot.",
+   "ko": "아이 환자가 덜 무서워하도록 흐엉은 주사를 놓으며 이야기를 들려주는 자기만의 전술이 있어요.",
+   "blank": "chiến thuật",
+   "src": "made"
   }
  ],
  "w|chiến tranh": [
@@ -8935,6 +9047,22 @@
    "en": "Write the letters a bit bigger.",
    "ko": "글씨 좀 더 크게 써 줘.",
    "blank": "chữ"
+  }
+ ],
+ "w|chu đáo": [
+  {
+   "text": "Bà chủ nhà rất chu đáo, chiều nào cũng mang nước chè ra mời Hùng và anh em.",
+   "en": "The homeowner is very considerate and brings out tea for Hùng and the crew every afternoon.",
+   "ko": "집주인 아주머니는 아주 세심해서 오후마다 훙과 동료들에게 차를 내와요.",
+   "blank": "chu đáo",
+   "src": "made"
+  },
+  {
+   "text": "Cô y tá chu đáo đắp thêm chăn cho cụ ông giường bên cạnh Hương.",
+   "en": "The thoughtful nurse puts an extra blanket on the old man in the bed next to Hương.",
+   "ko": "세심한 간호사가 흐엉 옆 침대 할아버지께 담요를 한 장 더 덮어 드려요.",
+   "blank": "chu đáo",
+   "src": "made"
   }
  ],
  "w|chủ doanh nghiệp": [
@@ -10085,6 +10213,22 @@
    "en": "I'm trying hard to learn English.",
    "ko": "영어 배우려고 열심히 하고 있어.",
    "blank": "cố gắng"
+  }
+ ],
+ "w|có hệ thống": [
+  {
+   "text": "Hùng ghi nhật ký công trình một cách có hệ thống, ngày nào cũng có ảnh kèm theo.",
+   "en": "Hùng keeps the site log systematically, with photos attached every day.",
+   "ko": "훙은 공사 일지를 체계적으로 써서 날마다 사진을 붙여 둬요.",
+   "blank": "có hệ thống",
+   "src": "made"
+  },
+  {
+   "text": "Khoa của Hương lưu hồ sơ bệnh án có hệ thống nên tra cứu rất nhanh.",
+   "en": "Hương's department files medical records systematically, so looking them up is very fast.",
+   "ko": "흐엉의 과는 진료 기록을 체계적으로 보관해서 찾기가 아주 빨라요.",
+   "blank": "có hệ thống",
+   "src": "made"
   }
  ],
  "w|cơ hội": [
@@ -11512,6 +11656,22 @@
    "en": "Every afternoon Thảo goes into the forest to gather firewood.",
    "ko": "타오는 매일 오후 숲에 들어가 땔나무를 주워요.",
    "blank": "củi",
+   "src": "made"
+  }
+ ],
+ "w|cúi xuống": [
+  {
+   "text": "Hùng cúi xuống nhặt con ốc vít rơi cạnh chân cột.",
+   "en": "Hùng bends down to pick up a screw that fell by the base of the column.",
+   "ko": "훙은 기둥 밑에 떨어진 나사를 주우려고 몸을 숙여요.",
+   "blank": "cúi xuống",
+   "src": "made"
+  },
+  {
+   "text": "Hương cúi xuống nghe nhịp thở của em bé đang ngủ.",
+   "en": "Hương bends down to listen to the sleeping baby's breathing.",
+   "ko": "흐엉은 잠든 아기의 숨소리를 들으려고 몸을 숙여요.",
+   "blank": "cúi xuống",
    "src": "made"
   }
  ],
@@ -13009,6 +13169,22 @@
    "blank": "danh dự"
   }
  ],
+ "w|đánh giá": [
+  {
+   "text": "Cuối tháng, trưởng ban sẽ đánh giá tay nghề của từng người trong đội Hùng.",
+   "en": "At the end of the month, the head will evaluate the skills of each person on Hùng's crew.",
+   "ko": "월말에 팀장님이 훙 팀원 한 사람 한 사람의 실력을 평가해요.",
+   "blank": "đánh giá",
+   "src": "made"
+  },
+  {
+   "text": "Mỗi quý, bệnh nhân được mời đánh giá thái độ phục vụ của Hương và đồng nghiệp.",
+   "en": "Every quarter, patients are invited to rate the service of Hương and her colleagues.",
+   "ko": "분기마다 환자들은 흐엉과 동료들의 응대 태도를 평가해 달라는 요청을 받아요.",
+   "blank": "đánh giá",
+   "src": "made"
+  }
+ ],
  "w|danh lam thắng cảnh": [
   {
    "text": "Phong phải học thuộc tên các danh lam thắng cảnh trong tour miền Trung.",
@@ -13234,6 +13410,22 @@
    "en": "Mai's grandmother is Buddhist, so the small room upstairs still has a statue of Guanyin.",
    "ko": "마이의 외할머니가 불교 신자라 위층 작은 방에는 아직 관음상이 있어요.",
    "blank": "đạo Phật",
+   "src": "made"
+  }
+ ],
+ "w|đào tạo": [
+  {
+   "text": "Công ty cử Hùng đi đào tạo về an toàn lao động trong hai tuần.",
+   "en": "The company sends Hùng to two weeks of training on workplace safety.",
+   "ko": "회사는 훙을 산업 안전 교육에 이 주 동안 보내요.",
+   "blank": "đào tạo",
+   "src": "made"
+  },
+  {
+   "text": "Hương được cử đi Hà Nội học hai tháng để đào tạo về siêu âm tim.",
+   "en": "Hương is sent to Hanoi for two months of training in cardiac ultrasound.",
+   "ko": "흐엉은 심장 초음파 교육을 받으러 두 달 동안 하노이에 파견돼요.",
+   "blank": "đào tạo",
    "src": "made"
   }
  ],
@@ -13867,6 +14059,22 @@
    "src": "tatoeba:13340675/leucammieuvu en:6954573/CK"
   }
  ],
+ "w|dẫu sao": [
+  {
+   "text": "Công việc nặng thật, nhưng dẫu sao Hùng vẫn thấy vui khi nhìn tòa nhà mọc lên.",
+   "en": "The work is hard, but still, Hùng feels happy watching the building rise.",
+   "ko": "일은 정말 고되지만 그래도 훙은 건물이 올라가는 걸 보면 기뻐요.",
+   "blank": "dẫu sao",
+   "src": "made"
+  },
+  {
+   "text": "Ca trực đêm mệt thật, nhưng dẫu sao Hương vẫn yêu nghề.",
+   "en": "Night shifts are truly exhausting, but still, Hương loves her job.",
+   "ko": "야간 당직은 정말 피곤하지만 그래도 흐엉은 자기 일을 사랑해요.",
+   "blank": "dẫu sao",
+   "src": "made"
+  }
+ ],
  "w|đầu tiên": [
   {
    "text": "Đây là lần đầu tiên mình đến đây.",
@@ -14172,6 +14380,22 @@
    "en": "The hen lays eggs every day.",
    "ko": "암탉이 날마다 알을 낳아요.",
    "blank": "đẻ",
+   "src": "made"
+  }
+ ],
+ "w|đề án": [
+  {
+   "text": "Hùng mừng khi nghe tin đề án xây cầu bộ hành qua sông đã được tỉnh thông qua.",
+   "en": "The plan for a pedestrian bridge over the river has been approved by the province, and Hùng is glad to hear it.",
+   "ko": "강을 건너는 보행교 건설안이 도에서 통과됐다는 소식에 훙은 기뻐해요.",
+   "blank": "đề án",
+   "src": "made"
+  },
+  {
+   "text": "Hương đang viết đề án mở phòng khám dành riêng cho người cao tuổi.",
+   "en": "Hương is writing a proposal to open a clinic just for the elderly.",
+   "ko": "흐엉은 노인 전용 진료실을 여는 사업안을 쓰고 있어요.",
+   "blank": "đề án",
    "src": "made"
   }
  ],
@@ -17341,6 +17565,38 @@
    "src": "made"
   }
  ],
+ "w|dù sao": [
+  {
+   "text": "Trời đã tối, nhưng dù sao Hùng cũng muốn đổ xong mẻ vữa cuối.",
+   "en": "It's already dark, but Hùng wants to finish the last batch of mortar anyway.",
+   "ko": "날이 벌써 어두워졌지만 훙은 어쨌든 마지막 모르타르를 다 붓고 싶어 해요.",
+   "blank": "dù sao",
+   "src": "made"
+  },
+  {
+   "text": "Ca mổ không hoàn hảo, nhưng dù sao bệnh nhân của Hương cũng đã qua cơn nguy kịch.",
+   "en": "The surgery wasn't perfect, but anyway Hương's patient is out of danger.",
+   "ko": "수술이 완벽하진 않았지만 어쨌든 흐엉의 환자는 고비를 넘겼어요.",
+   "blank": "dù sao",
+   "src": "made"
+  }
+ ],
+ "w|dù sao đi nữa": [
+  {
+   "text": "Hùng dù sao đi nữa cũng không cho ai lên giàn giáo khi chưa đeo dây an toàn.",
+   "en": "No matter what, Hùng doesn't let anyone on the scaffolding without a safety harness.",
+   "ko": "무슨 일이 있어도 훙은 안전줄을 안 맨 사람은 비계에 못 올라가게 해요.",
+   "blank": "dù sao đi nữa",
+   "src": "made"
+  },
+  {
+   "text": "Hương dù sao đi nữa cũng không bao giờ bỏ qua bước rửa tay trước khi khám.",
+   "en": "Whatever happens, Hương never skips washing her hands before an examination.",
+   "ko": "무슨 일이 있어도 흐엉은 진찰 전에 손 씻기를 절대 빼먹지 않아요.",
+   "blank": "dù sao đi nữa",
+   "src": "made"
+  }
+ ],
  "w|dừa": [
   {
    "text": "Chặt đôi quả dừa ra.",
@@ -17673,6 +17929,22 @@
    "src": "made"
   }
  ],
+ "w|đứng dậy": [
+  {
+   "text": "Nghỉ trưa xong, Hùng đứng dậy phủi bụi rồi leo lại lên giàn giáo.",
+   "en": "After the lunch break, Hùng gets up, brushes off the dust, and climbs back onto the scaffolding.",
+   "ko": "점심 휴식 뒤 훙은 일어나 먼지를 털고 다시 비계 위로 올라가요.",
+   "blank": "đứng dậy",
+   "src": "made"
+  },
+  {
+   "text": "Hương dìu cụ bà đứng dậy khỏi xe lăn để tập đi.",
+   "en": "Hương helps the old woman get up from the wheelchair to practice walking.",
+   "ko": "흐엉은 할머니가 걷기 연습을 하도록 휠체어에서 일으켜 드려요.",
+   "blank": "đứng dậy",
+   "src": "made"
+  }
+ ],
  "w|đúng giờ": [
   {
    "text": "Lần này nhớ đến đúng giờ.",
@@ -17699,6 +17971,22 @@
    "en": "Stop and think before you decide.",
    "ko": "결정하기 전에 멈춰서 생각해 봐.",
    "blank": "dừng lại"
+  }
+ ],
+ "w|đứng lên": [
+  {
+   "text": "Nghe tiếng còi báo động, cả đội của Hùng đứng lên chạy ra bãi tập trung.",
+   "en": "Hearing the alarm, Hùng's whole crew stands up and runs to the assembly area.",
+   "ko": "경보가 울리자 훙의 팀 전체가 일어나 집결지로 뛰어가요.",
+   "blank": "đứng lên",
+   "src": "made"
+  },
+  {
+   "text": "Sau ba tuần nằm viện, cụ ông đã tự đứng lên được trước sự vui mừng của Hương.",
+   "en": "After three weeks in hospital, the old man could stand up on his own, much to Hương's delight.",
+   "ko": "입원 삼 주 만에 할아버지가 혼자 일어서자 흐엉은 무척 기뻤어요.",
+   "blank": "đứng lên",
+   "src": "made"
   }
  ],
  "w|đúng lúc": [
@@ -19975,6 +20263,38 @@
    "en": "The baby's schedule has been a bit off these past few days.",
    "ko": "아기 시간 리듬이 요 며칠 좀 흐트러졌어.",
    "blank": "Giờ giấc"
+  }
+ ],
+ "w|giờ hành chính": [
+  {
+   "text": "Muốn gặp kỹ sư trưởng thì Hùng phải lên văn phòng trong giờ hành chính.",
+   "en": "To see the chief engineer, Hùng has to go to the office during business hours.",
+   "ko": "수석 엔지니어를 만나려면 훙은 업무 시간에 사무실로 가야 해요.",
+   "blank": "giờ hành chính",
+   "src": "made"
+  },
+  {
+   "text": "Phòng khám ngoại trú của Hương chỉ mở cửa trong giờ hành chính.",
+   "en": "Hương's outpatient clinic is open only during office hours.",
+   "ko": "흐엉의 외래 진료실은 업무 시간에만 문을 열어요.",
+   "blank": "giờ hành chính",
+   "src": "made"
+  }
+ ],
+ "w|giờ làm việc": [
+  {
+   "text": "Để không làm phiền hàng xóm, Hùng cho đội chỉ khoan đục trong giờ làm việc.",
+   "en": "So as not to disturb the neighbors, Hùng only lets the crew drill during working hours.",
+   "ko": "이웃에 폐를 끼치지 않으려고 훙은 근무 시간에만 드릴 작업을 하게 해요.",
+   "blank": "giờ làm việc",
+   "src": "made"
+  },
+  {
+   "text": "Ngoài giờ làm việc, Hương vẫn trả lời tin nhắn của bệnh nhân nặng.",
+   "en": "Outside working hours, Hương still answers messages from seriously ill patients.",
+   "ko": "근무 시간 외에도 흐엉은 중환자들의 메시지에 답해요.",
+   "blank": "giờ làm việc",
+   "src": "made"
   }
  ],
  "w|giò lụa": [
@@ -23255,6 +23575,22 @@
    "src": "made"
   }
  ],
+ "w|huống hồ": [
+  {
+   "text": "Thợ lâu năm còn thấy việc này khó, huống hồ hai cậu học việc của Hùng.",
+   "en": "Even veteran workers find this job hard, let alone Hùng's two apprentices.",
+   "ko": "오래 일한 기술자도 이 일을 어려워하는데 하물며 훙의 견습생 둘은 어떻겠어요.",
+   "blank": "huống hồ",
+   "src": "made"
+  },
+  {
+   "text": "Người lớn còn sợ kim tiêm, huống hồ cậu bé năm tuổi mà Hương đang chăm.",
+   "en": "Even adults are afraid of needles, let alone the five-year-old boy Hương is caring for.",
+   "ko": "어른도 주삿바늘을 무서워하는데 하물며 흐엉이 돌보는 다섯 살 꼬마는 어떻겠어요.",
+   "blank": "huống hồ",
+   "src": "made"
+  }
+ ],
  "w|hươu": [
   {
    "text": "Đức chụp ảnh đàn hươu đang gặm cỏ trên đồi gần biển.",
@@ -23702,6 +24038,22 @@
    "en": "The phone signal in the new flat is a bit weak, so Lan has to go out on the balcony to call.",
    "ko": "새 집은 휴대폰 신호가 좀 약해서 란은 발코니에 나가서 전화해야 해요.",
    "blank": "kém",
+   "src": "made"
+  }
+ ],
+ "w|kèm cặp": [
+  {
+   "text": "Anh Hùng được giao kèm cặp hai cậu thợ phụ mới vào nghề.",
+   "en": "Hùng is assigned to mentor two new apprentice workers.",
+   "ko": "훙은 갓 들어온 보조공 두 명을 가르치는 일을 맡았어요.",
+   "blank": "kèm cặp",
+   "src": "made"
+  },
+  {
+   "text": "Hương kèm cặp một bác sĩ nội trú trong suốt ca trực đêm.",
+   "en": "Hương mentors a resident throughout the night shift.",
+   "ko": "흐엉은 야간 당직 내내 레지던트 한 명을 곁에서 가르쳐요.",
+   "blank": "kèm cặp",
    "src": "made"
   }
  ],
@@ -25139,6 +25491,22 @@
    "src": "made"
   }
  ],
+ "w|khối lượng công việc": [
+  {
+   "text": "Gần ngày bàn giao, khối lượng công việc của Hùng nhiều gấp đôi bình thường.",
+   "en": "Close to handover, Hùng's workload is twice the usual.",
+   "ko": "인도일이 가까워지자 훙의 업무량이 평소의 두 배가 됐어요.",
+   "blank": "khối lượng công việc",
+   "src": "made"
+  },
+  {
+   "text": "Mùa cúm về, khối lượng công việc ở khoa cấp cứu khiến Hương gần như không có giờ nghỉ.",
+   "en": "In flu season, the workload in the emergency department leaves Hương with almost no breaks.",
+   "ko": "독감철이 되면 응급실 업무량 때문에 흐엉은 쉴 틈이 거의 없어요.",
+   "blank": "khối lượng công việc",
+   "src": "made"
+  }
+ ],
  "w|khởi nghiệp": [
   {
    "text": "Long đang viết một loạt bài về phong trào khởi nghiệp của sinh viên.",
@@ -26134,6 +26502,22 @@
    "en": "Looking at the city sparkling from above, Hương finds it truly magical.",
    "ko": "위에서 반짝이는 도시를 보며 흐엉은 정말 신기하다고 느껴요.",
    "blank": "kỳ diệu",
+   "src": "made"
+  }
+ ],
+ "w|ký duyệt": [
+  {
+   "text": "Phải chờ giám đốc ký duyệt bản vẽ sửa đổi, đội của Hùng mới được làm tiếp.",
+   "en": "Hùng's crew can only continue once the director signs off on the revised drawings.",
+   "ko": "사장님이 수정 도면을 결재해야 훙의 팀이 작업을 계속할 수 있어요.",
+   "blank": "ký duyệt",
+   "src": "made"
+  },
+  {
+   "text": "Trưởng khoa vừa ký duyệt đơn xin nghỉ phép của Hương.",
+   "en": "The department head just approved Hương's leave request.",
+   "ko": "과장님이 흐엉의 휴가 신청서를 막 결재했어요.",
+   "blank": "ký duyệt",
    "src": "made"
   }
  ],
@@ -32587,6 +32971,22 @@
    "src": "made"
   }
  ],
+ "w|năng suất": [
+  {
+   "text": "Từ khi có máy trộn bê tông mới, năng suất của đội anh Hùng tăng hẳn.",
+   "en": "Since getting the new concrete mixer, Hùng's crew has become much more productive.",
+   "ko": "새 콘크리트 믹서가 생긴 뒤로 훙 팀의 생산성이 확 올랐어요.",
+   "blank": "năng suất",
+   "src": "made"
+  },
+  {
+   "text": "Bệnh viện của Hương mua thêm máy xét nghiệm để tăng năng suất phòng lab.",
+   "en": "Hương's hospital bought more testing machines to raise the lab's productivity.",
+   "ko": "흐엉의 병원은 검사실 생산성을 높이려고 검사 기계를 더 샀어요.",
+   "blank": "năng suất",
+   "src": "made"
+  }
+ ],
  "w|nào": [
   {
    "text": "Đi đường nào gần hơn?",
@@ -34163,6 +34563,22 @@
    "en": "He wants to become a soccer star.",
    "ko": "그는 축구 스타가 되고 싶어해.",
    "blank": "ngôi sao"
+  }
+ ],
+ "w|ngồi xuống": [
+  {
+   "text": "Hùng ngồi xuống bậc gạch, mở hộp cơm vợ chuẩn bị từ sáng.",
+   "en": "Hùng sits down on the brick step and opens the lunchbox his wife packed that morning.",
+   "ko": "훙은 벽돌 계단에 앉아 아내가 아침에 싸 준 도시락을 열어요.",
+   "blank": "ngồi xuống",
+   "src": "made"
+  },
+  {
+   "text": "Hương mời người nhà bệnh nhân ngồi xuống trước khi giải thích kết quả.",
+   "en": "Hương invites the patient's family to sit down before explaining the results.",
+   "ko": "흐엉은 결과를 설명하기 전에 환자 가족에게 앉으시라고 권해요.",
+   "blank": "ngồi xuống",
+   "src": "made"
   }
  ],
  "w|ngon": [
@@ -37563,6 +37979,22 @@
    "blank": "nửa đêm"
   }
  ],
+ "w|nữa là": [
+  {
+   "text": "Hùng còn chưa kịp ăn sáng, nữa là nghỉ ngơi.",
+   "en": "Hùng hasn't even had time for breakfast, let alone a rest.",
+   "ko": "훙은 아침 먹을 틈도 없는데 쉬는 건 말할 것도 없어요.",
+   "blank": "nữa là",
+   "src": "made"
+  },
+  {
+   "text": "Hương bận đến mức không kịp uống ngụm nước, nữa là ăn trưa.",
+   "en": "Hương is so busy she can't even take a sip of water, let alone eat lunch.",
+   "ko": "흐엉은 물 한 모금 마실 틈도 없는데 점심은 말할 것도 없어요.",
+   "blank": "nữa là",
+   "src": "made"
+  }
+ ],
  "w|núi": [
   {
    "text": "Cuối tuần mình leo núi với bạn.",
@@ -39913,6 +40345,22 @@
    "src": "made"
   }
  ],
+ "w|phương án": [
+  {
+   "text": "Đất yếu hơn dự kiến, Hùng phải đưa ra phương án gia cố móng khác.",
+   "en": "The soil is weaker than expected, so Hùng has to propose a different plan to reinforce the foundation.",
+   "ko": "땅이 예상보다 약해서 훙은 다른 기초 보강 방안을 내야 해요.",
+   "blank": "phương án",
+   "src": "made"
+  },
+  {
+   "text": "Hội đồng mổ cân nhắc hai phương án, cuối cùng chọn cách của bác sĩ Hương.",
+   "en": "The surgical board weighed two options and in the end chose Dr. Hương's approach.",
+   "ko": "수술 위원회는 두 가지 방안을 저울질하다가 결국 흐엉 선생님의 방법을 골랐어요.",
+   "blank": "phương án",
+   "src": "made"
+  }
+ ],
  "w|phương pháp": [
   {
    "text": "Phương pháp của cô ấy tiến bộ hơn của chúng tôi nhiều.",
@@ -40867,6 +41315,22 @@
    "blank": "quý giá"
   }
  ],
+ "w|quỳ gối": [
+  {
+   "text": "Hùng quỳ gối trên sàn để căn chỉnh từng viên gạch men.",
+   "en": "Hùng kneels on the floor to align each ceramic tile.",
+   "ko": "훙은 바닥에 무릎을 꿇고 타일 하나하나를 맞춰요.",
+   "blank": "quỳ gối",
+   "src": "made"
+  },
+  {
+   "text": "Hương quỳ gối bên giường để nói chuyện ngang tầm mắt với bệnh nhi.",
+   "en": "Hương kneels by the bed to talk to the child at eye level.",
+   "ko": "흐엉은 아이 환자와 눈높이를 맞춰 이야기하려고 침대 옆에 무릎을 꿇어요.",
+   "blank": "quỳ gối",
+   "src": "made"
+  }
+ ],
  "w|quý mến": [
   {
    "text": "Bạn bè của em gái ai cũng quý mến Minh.",
@@ -41797,6 +42261,22 @@
    "blank": "Rời khỏi"
   }
  ],
+ "w|rời rạc": [
+  {
+   "text": "Bản vẽ cũ rời rạc từng tờ, Hùng phải ngồi xếp lại cả buổi.",
+   "en": "The old drawings were loose sheets, and Hùng had to sit putting them in order all morning.",
+   "ko": "옛 도면이 낱장으로 흩어져 있어서 훙은 한나절 앉아서 다시 정리해야 했어요.",
+   "blank": "rời rạc",
+   "src": "made"
+  },
+  {
+   "text": "Lời kể của bệnh nhân khá rời rạc, nên Hương phải hỏi lại nhiều lần.",
+   "en": "The patient's account was quite disjointed, so Hương had to ask again several times.",
+   "ko": "환자의 이야기가 두서없어서 흐엉은 여러 번 다시 물어야 했어요.",
+   "blank": "rời rạc",
+   "src": "made"
+  }
+ ],
  "w|rồng": [
   {
    "text": "Trong chuyện cổ tích có con rồng.",
@@ -42555,6 +43035,22 @@
    "en": "Let's meet at the cafe tomorrow morning.",
    "ko": "내일 아침에 카페에서 보자.",
    "blank": "Sáng"
+  }
+ ],
+ "w|sáng kiến": [
+  {
+   "text": "Nhờ sáng kiến dùng ròng rọc kéo gạch của Hùng, cả đội đỡ mệt hẳn.",
+   "en": "Hùng's idea of using a pulley to haul bricks saves the whole crew a lot of effort.",
+   "ko": "도르래로 벽돌을 끌어올리자는 훙의 아이디어 덕분에 팀 전체가 덜 힘들어졌어요.",
+   "blank": "sáng kiến",
+   "src": "made"
+  },
+  {
+   "text": "Nhờ sáng kiến lấy số khám qua điện thoại của Hương, sảnh chờ bớt đông hẳn.",
+   "en": "Hương's idea of getting a queue number by phone made the waiting hall much less crowded.",
+   "ko": "전화로 진료 번호표를 받자는 흐엉의 아이디어 덕분에 대기실이 훨씬 한산해졌어요.",
+   "blank": "sáng kiến",
+   "src": "made"
   }
  ],
  "w|sáng nay": [
@@ -43710,6 +44206,22 @@
    "en": "Hương's three-pointer caught the attention of the scouts.",
    "ko": "흐엉의 3점 슛이 스카우트들의 주목을 끌었어요.",
    "blank": "sự chú ý",
+   "src": "made"
+  }
+ ],
+ "w|sự cố gắng": [
+  {
+   "text": "Cả đội ghi nhận sự cố gắng của Hùng trong suốt mùa mưa vừa qua.",
+   "en": "The whole crew recognizes Hùng's effort throughout the past rainy season.",
+   "ko": "팀 전체가 지난 우기 동안 훙이 기울인 노력을 인정해요.",
+   "blank": "sự cố gắng",
+   "src": "made"
+  },
+  {
+   "text": "Gia đình bệnh nhân gửi thư cảm ơn sự cố gắng của Hương trong ca mổ kéo dài.",
+   "en": "The patient's family sent a letter thanking Hương for her efforts during the long operation.",
+   "ko": "환자 가족은 긴 수술 동안 흐엉이 기울인 노력에 감사 편지를 보냈어요.",
+   "blank": "sự cố gắng",
    "src": "made"
   }
  ],
@@ -44971,6 +45483,38 @@
    "src": "made"
   }
  ],
+ "w|tận tâm": [
+  {
+   "text": "Chú thợ hàn già rất tận tâm, lần nào cũng kiểm tra lại mối hàn của Hùng.",
+   "en": "The old welder is very dedicated and always rechecks Hùng's welds.",
+   "ko": "나이 든 용접공 아저씨는 아주 성실해서 늘 훙의 용접 부위를 다시 확인해요.",
+   "blank": "tận tâm",
+   "src": "made"
+  },
+  {
+   "text": "Bác sĩ Hương nổi tiếng tận tâm, bệnh nhân nào cũng được chị hỏi han kỹ càng.",
+   "en": "Dr. Hương is known for her dedication; she asks every patient about their condition in detail.",
+   "ko": "흐엉 선생님은 헌신적이기로 유명해서 환자 한 명 한 명을 꼼꼼히 살펴요.",
+   "blank": "tận tâm",
+   "src": "made"
+  }
+ ],
+ "w|tận tụy": [
+  {
+   "text": "Cô kỹ sư giám sát làm việc tận tụy, có hôm ở lại công trường với Hùng đến khuya.",
+   "en": "The supervising engineer is devoted and some days stays on site with Hùng until late.",
+   "ko": "감독 엔지니어는 헌신적으로 일해서 어떤 날은 훙과 함께 밤늦게까지 현장에 남아요.",
+   "blank": "tận tụy",
+   "src": "made"
+  },
+  {
+   "text": "Chị điều dưỡng trưởng tận tụy với nghề đến mức ba mươi năm chưa nghỉ phép dài ngày.",
+   "en": "The head nurse is so devoted that she hasn't taken a long leave in thirty years.",
+   "ko": "수간호사님은 일에 너무 헌신적이라 삼십 년 동안 긴 휴가를 한 번도 안 썼어요.",
+   "blank": "tận tụy",
+   "src": "made"
+  }
+ ],
  "w|tăng": [
   {
    "text": "Giá xăng tăng nữa rồi.",
@@ -45621,6 +46165,22 @@
    "en": "He didn't even call back.",
    "ko": "그 사람은 전화조차 안 했어.",
    "blank": "thậm chí"
+  }
+ ],
+ "w|thẩm định": [
+  {
+   "text": "Đoàn kiểm tra đến thẩm định chất lượng bê tông mà Hùng vừa đổ.",
+   "en": "The inspection team comes to assess the quality of the concrete Hùng just poured.",
+   "ko": "점검단이 훙이 막 부은 콘크리트의 품질을 심사하러 와요.",
+   "blank": "thẩm định",
+   "src": "made"
+  },
+  {
+   "text": "Hội đồng y đức sẽ thẩm định đề tài nghiên cứu của Hương vào tuần sau.",
+   "en": "The medical ethics board will review Hương's research topic next week.",
+   "ko": "의료 윤리 위원회가 다음 주에 흐엉의 연구 주제를 심사해요.",
+   "blank": "thẩm định",
+   "src": "made"
   }
  ],
  "w|tham dự": [
@@ -47635,6 +48195,22 @@
    "src": "made"
   }
  ],
+ "w|thời hạn": [
+  {
+   "text": "Hợp đồng ghi rõ thời hạn bàn giao nhà, nên Hùng không dám lơ là.",
+   "en": "The contract clearly states the handover deadline, so Hùng doesn't dare slack off.",
+   "ko": "계약서에 인도 기한이 분명히 적혀 있어서 훙은 방심할 수 없어요.",
+   "blank": "thời hạn",
+   "src": "made"
+  },
+  {
+   "text": "Thuốc này còn thời hạn sử dụng đến cuối năm, Hương kiểm tra rồi mới phát.",
+   "en": "This medicine is good until the end of the year; Hương checks before handing it out.",
+   "ko": "이 약은 유효 기간이 연말까지라 흐엉은 확인하고 나서야 나눠 줘요.",
+   "blank": "thời hạn",
+   "src": "made"
+  }
+ ],
  "w|thời khóa biểu": [
   {
    "text": "Quang ghé thăm ngôi trường nhỏ trong rừng và xem thời khóa biểu dán trên tường.",
@@ -48895,6 +49471,22 @@
    "blank": "tí"
   }
  ],
+ "w|tỉ mỉ": [
+  {
+   "text": "Hùng lát gạch rất tỉ mỉ, từng đường ron thẳng tắp.",
+   "en": "Hùng lays tiles very meticulously, every grout line perfectly straight.",
+   "ko": "훙은 타일을 아주 꼼꼼하게 깔아서 줄눈 하나하나가 곧게 뻗어 있어요.",
+   "blank": "tỉ mỉ",
+   "src": "made"
+  },
+  {
+   "text": "Hương khâu vết thương rất tỉ mỉ để sau này sẹo không lộ.",
+   "en": "Hương stitches the wound very carefully so the scar won't show later.",
+   "ko": "흐엉은 나중에 흉터가 안 보이게 상처를 아주 꼼꼼하게 꿰매요.",
+   "blank": "tỉ mỉ",
+   "src": "made"
+  }
+ ],
  "w|ti vi": [
   {
    "text": "Ti vi trong phòng khách bị hỏng rồi.",
@@ -49183,6 +49775,22 @@
    "en": "The electricity bill must be paid before month end.",
    "ko": "전기 요금은 월말 전에 내야 해.",
    "blank": "Tiền điện"
+  }
+ ],
+ "w|tiến độ": [
+  {
+   "text": "Mưa suốt một tuần làm tiến độ công trình của Hùng chậm hẳn.",
+   "en": "A week of rain slowed the progress of Hùng's project considerably.",
+   "ko": "일주일 내내 비가 와서 훙의 공사 진도가 확 늦어졌어요.",
+   "blank": "tiến độ",
+   "src": "made"
+  },
+  {
+   "text": "Hương theo dõi tiến độ hồi phục của bệnh nhân qua từng lần thay băng.",
+   "en": "Hương tracks the patient's recovery progress with each change of dressing.",
+   "ko": "흐엉은 붕대를 갈 때마다 환자의 회복 경과를 살펴요.",
+   "blank": "tiến độ",
+   "src": "made"
   }
  ],
  "w|tiến hành": [
@@ -51234,6 +51842,22 @@
    "en": "We exchanged phone numbers.",
    "ko": "우리는 서로 전화번호를 주고받았어요.",
    "blank": "trao đổi",
+   "src": "made"
+  }
+ ],
+ "w|trật tự": [
+  {
+   "text": "Kho vật tư được Hùng sắp xếp rất trật tự, ai cần gì cũng tìm thấy ngay.",
+   "en": "Hùng keeps the materials store very orderly, so anyone can find what they need right away.",
+   "ko": "훙이 자재 창고를 아주 질서 있게 정리해서 누구든 필요한 걸 바로 찾아요.",
+   "blank": "trật tự",
+   "src": "made"
+  },
+  {
+   "text": "Hương nhắc người nhà giữ trật tự để bệnh nhân trong phòng được nghỉ ngơi.",
+   "en": "Hương reminds families to keep quiet so the patients in the room can rest.",
+   "ko": "흐엉은 병실 환자들이 쉴 수 있게 가족들에게 조용히 해 달라고 일러요.",
+   "blank": "trật tự",
    "src": "made"
   }
  ],
@@ -56461,6 +57085,22 @@
    "ko": "그건 다시 생각해 봐야 할 것 같아요.",
    "blank": "xem xét",
    "src": "tatoeba:10669069/quoctrong018 en:6253195/CK"
+  }
+ ],
+ "w|xét duyệt": [
+  {
+   "text": "Hồ sơ xin phép đào đường của Hùng đang chờ phường xét duyệt.",
+   "en": "Hùng's application to dig up the road is waiting for the ward to review it.",
+   "ko": "훙의 도로 굴착 허가 신청서는 동사무소 심사를 기다리고 있어요.",
+   "blank": "xét duyệt",
+   "src": "made"
+  },
+  {
+   "text": "Hội đồng khoa học đang xét duyệt bài báo Hương gửi từ tháng trước.",
+   "en": "The scientific board is reviewing the paper Hương submitted last month.",
+   "ko": "학술 위원회가 흐엉이 지난달 보낸 논문을 심사하고 있어요.",
+   "blank": "xét duyệt",
+   "src": "made"
   }
  ],
  "w|xét nghiệm": [
