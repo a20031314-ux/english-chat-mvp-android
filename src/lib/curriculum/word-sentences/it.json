@@ -87,6 +87,22 @@
    "src": "made"
   }
  ],
+ "w|abbigliamento": [
+  {
+   "text": "Marco riempie tre scatoloni solo con l'abbigliamento invernale.",
+   "en": "Marco fills three boxes with winter clothing alone.",
+   "ko": "마르코는 겨울옷만으로 상자 세 개를 채워요.",
+   "blank": "abbigliamento",
+   "src": "made"
+  },
+  {
+   "text": "Giulia passa la serata a guardare abbigliamento sportivo in saldo.",
+   "en": "Giulia spends the evening looking at sportswear on sale.",
+   "ko": "줄리아는 할인 중인 운동복을 구경하며 저녁을 보내요.",
+   "blank": "abbigliamento",
+   "src": "made"
+  }
+ ],
  "w|abbracciare": [
   {
    "text": "Quando la vicina è tornata dall'ospedale, Paolo l'ha abbracciata forte.",
@@ -439,6 +455,22 @@
    "en": "He always turns on the radio in the morning.",
    "ko": "그는 아침에 항상 라디오를 켜.",
    "blank": "Accende"
+  }
+ ],
+ "w|accendino": [
+  {
+   "text": "Senza gas, Marco accende la stufa con un accendino trovato in un cassetto.",
+   "en": "Without gas, Marco lights the stove with a lighter he found in a drawer.",
+   "ko": "가스가 없어서 마르코는 서랍에서 찾은 라이터로 난로를 켜요.",
+   "blank": "accendino",
+   "src": "made"
+  },
+  {
+   "text": "Con le candele Giulia riceve in regalo anche un accendino.",
+   "en": "Along with the candles Giulia also gets a lighter as a gift.",
+   "ko": "줄리아는 양초와 함께 사은품으로 라이터도 받아요.",
+   "blank": "accendino",
+   "src": "made"
   }
  ],
  "w|accennare": [
@@ -2433,6 +2465,22 @@
    "blank": "alto"
   }
  ],
+ "w|altoparlante": [
+  {
+   "text": "Marco appende un altoparlante in ogni stanza della casa nuova.",
+   "en": "Marco hangs a speaker in every room of the new house.",
+   "ko": "마르코는 새집 방마다 스피커를 하나씩 달아요.",
+   "blank": "altoparlante",
+   "src": "made"
+  },
+  {
+   "text": "L'altoparlante comprato da Giulia si collega al telefono in un attimo.",
+   "en": "The speaker Giulia bought connects to her phone in a moment.",
+   "ko": "줄리아가 산 스피커는 휴대폰과 금방 연결돼요.",
+   "blank": "altoparlante",
+   "src": "made"
+  }
+ ],
  "w|altrettanto": [
   {
    "text": "Lei è gentile e lui è altrettanto.",
@@ -3219,6 +3267,22 @@
    "en": "The child looked bored at the theater.",
    "ko": "아이가 극장에서 지루해 보였어.",
    "blank": "annoiato"
+  }
+ ],
+ "w|annuale": [
+  {
+   "text": "Marco deve ancora pagare la tassa annuale sui rifiuti per la casa vecchia.",
+   "en": "Marco still has to pay the yearly waste tax for the old house.",
+   "ko": "마르코는 옛집의 연간 쓰레기 세금을 아직 내야 해요.",
+   "blank": "annuale",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha rinnovato l'abbonamento annuale per la spedizione gratuita.",
+   "en": "Giulia has renewed her annual subscription for free delivery.",
+   "ko": "줄리아는 무료 배송을 위해 연간 회원권을 갱신했어요.",
+   "blank": "annuale",
+   "src": "made"
   }
  ],
  "w|annullare": [
@@ -4577,6 +4641,22 @@
    "blank": "asciugamano"
   }
  ],
+ "w|asciugare": [
+  {
+   "text": "Marco stende le tende appena lavate sul balcone ad asciugare.",
+   "en": "Marco hangs the freshly washed curtains on the balcony to dry.",
+   "ko": "마르코는 막 빨아 놓은 커튼을 발코니에 널어 말려요.",
+   "blank": "asciugare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ordina un asciugacapelli nuovo, ma intanto deve asciugare i capelli con un asciugamano.",
+   "en": "Giulia orders a new hairdryer, but meanwhile she has to dry her hair with a towel.",
+   "ko": "줄리아는 새 드라이기를 주문했지만 그동안은 수건으로 머리를 말려야 해요.",
+   "blank": "asciugare",
+   "src": "made"
+  }
+ ],
  "w|asciutto": [
   {
    "text": "Fuori piove, ma Luca arriva in biblioteca con l'ombrello e resta asciutto.",
@@ -5434,6 +5514,22 @@
    "en": "The mountain rescue helicopter has to land in the meadow behind Laura's house.",
    "ko": "산악 구조 헬기가 라우라네 집 뒤 풀밭에 착륙해야 해요.",
    "blank": "atterrare",
+   "src": "made"
+  }
+ ],
+ "w|attico": [
+  {
+   "text": "Marco si trasferisce in un attico con una vista su tutta la città.",
+   "en": "Marco is moving into a penthouse with a view over the whole city.",
+   "ko": "마르코는 도시 전체가 내려다보이는 꼭대기 층 집으로 이사해요.",
+   "blank": "attico",
+   "src": "made"
+  },
+  {
+   "text": "Giulia abita all'ultimo piano, e il corriere si lamenta di dover salire fino all'attico.",
+   "en": "Giulia lives on the top floor, and the courier complains about having to climb to the penthouse.",
+   "ko": "줄리아는 맨 위층에 살아서 택배 기사가 꼭대기 층까지 올라가야 한다고 투덜대요.",
+   "blank": "attico",
    "src": "made"
   }
  ],
@@ -6561,6 +6657,22 @@
    "src": "made"
   }
  ],
+ "w|baita": [
+  {
+   "text": "Per qualche giorno Marco dorme nella baita dello zio, finché la casa non è pronta.",
+   "en": "For a few days Marco sleeps in his uncle's mountain hut until the house is ready.",
+   "ko": "집이 준비될 때까지 마르코는 며칠 동안 삼촌의 산장에서 자요.",
+   "blank": "baita",
+   "src": "made"
+  },
+  {
+   "text": "Giulia prenota online un fine settimana in una baita sulle Dolomiti.",
+   "en": "Giulia books a weekend in a mountain hut in the Dolomites online.",
+   "ko": "줄리아는 돌로미티의 산장에서 보낼 주말을 온라인으로 예약해요.",
+   "blank": "baita",
+   "src": "made"
+  }
+ ],
  "w|balcone": [
   {
    "text": "D'estate Simone cena sul balcone con vista sul cortile.",
@@ -7295,6 +7407,22 @@
    "en": "That joke made everyone laugh.",
    "ko": "그 농담에 모두 웃었어.",
    "blank": "battuta"
+  }
+ ],
+ "w|baule": [
+  {
+   "text": "In soffitta Marco trova un vecchio baule pieno di lettere.",
+   "en": "In the attic Marco finds an old trunk full of letters.",
+   "ko": "다락방에서 마르코는 편지가 가득한 낡은 트렁크를 발견해요.",
+   "blank": "baule",
+   "src": "made"
+  },
+  {
+   "text": "Per la macchina Giulia ordina un organizer da mettere nel baule.",
+   "en": "For the car Giulia orders an organiser to put in the boot.",
+   "ko": "줄리아는 차 트렁크에 넣을 정리함을 주문해요.",
+   "blank": "baule",
+   "src": "made"
   }
  ],
  "w|beato": [
@@ -8939,6 +9067,22 @@
    "blank": "caldo"
   }
  ],
+ "w|calendario": [
+  {
+   "text": "Sul calendario della cucina Marco ha cerchiato di rosso il giorno del trasloco.",
+   "en": "On the kitchen calendar Marco has circled moving day in red.",
+   "ko": "마르코는 부엌 달력에 이삿날을 빨간색으로 동그라미 쳐 놨어요.",
+   "blank": "calendario",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha ordinato su internet un calendario con le foto del suo gatto.",
+   "en": "Giulia has ordered a calendar online with photos of her cat.",
+   "ko": "줄리아는 자기 고양이 사진이 들어간 달력을 인터넷으로 주문했어요.",
+   "blank": "calendario",
+   "src": "made"
+  }
+ ],
  "w|calma": [
   {
    "text": "Mantieni la calma in ogni situazione.",
@@ -9681,6 +9825,22 @@
    "blank": "capo"
   }
  ],
+ "w|capodanno": [
+  {
+   "text": "Marco vuole festeggiare il capodanno nella casa nuova con gli amici.",
+   "en": "Marco wants to celebrate New Year in the new house with his friends.",
+   "ko": "마르코는 새집에서 친구들과 새해를 맞고 싶어요.",
+   "blank": "capodanno",
+   "src": "made"
+  },
+  {
+   "text": "Per capodanno Giulia ha ordinato un vestito rosso con le paillettes.",
+   "en": "For New Year's Eve Giulia has ordered a red sequinned dress.",
+   "ko": "새해 전야를 위해 줄리아는 빨간 스팽글 원피스를 주문했어요.",
+   "blank": "capodanno",
+   "src": "made"
+  }
+ ],
  "w|cappello": [
   {
    "text": "Ha dimenticato il cappello sul treno.",
@@ -9707,6 +9867,22 @@
    "en": "I left the coat on the hanger.",
    "ko": "코트를 옷걸이에 걸어 뒀어.",
    "blank": "cappotto"
+  }
+ ],
+ "w|cappuccio": [
+  {
+   "text": "Mentre piove, Marco porta gli scatoloni con il cappuccio della felpa tirato su.",
+   "en": "While it rains, Marco carries the boxes with his hoodie's hood pulled up.",
+   "ko": "비가 오는 동안 마르코는 후드티 모자를 뒤집어쓰고 상자를 날라요.",
+   "blank": "cappuccio",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ordina un cappotto con il cappuccio di pelliccia finta.",
+   "en": "Giulia orders a coat with a faux-fur hood.",
+   "ko": "줄리아는 인조 모피 모자가 달린 코트를 주문해요.",
+   "blank": "cappuccio",
+   "src": "made"
   }
  ],
  "w|capra": [
@@ -10172,6 +10348,22 @@
    "en": "The covered market Francesca goes to used to be a police barracks.",
    "ko": "프란체스카가 다니는 실내 시장은 예전에 경찰 막사였어요.",
    "blank": "caserma",
+   "src": "made"
+  }
+ ],
+ "w|casetta": [
+  {
+   "text": "La nuova casa di Marco è una casetta bianca con l'orto.",
+   "en": "Marco's new home is a little white house with a vegetable patch.",
+   "ko": "마르코의 새집은 텃밭이 딸린 하얀 작은 집이에요.",
+   "blank": "casetta",
+   "src": "made"
+  },
+  {
+   "text": "Giulia compra online una casetta di legno per il gatto.",
+   "en": "Giulia buys a little wooden house for the cat online.",
+   "ko": "줄리아는 온라인으로 고양이용 나무 집을 사요.",
+   "blank": "casetta",
    "src": "made"
   }
  ],
@@ -12589,6 +12781,22 @@
    "en": "The necklace broke during the party.",
    "ko": "목걸이가 파티 중에 끊어졌어.",
    "blank": "collana"
+  }
+ ],
+ "w|collare": [
+  {
+   "text": "Marco mette al gatto un collare con il nuovo indirizzo.",
+   "en": "Marco puts a collar with the new address on the cat.",
+   "ko": "마르코는 고양이에게 새 주소가 적힌 목걸이를 채워요.",
+   "blank": "collare",
+   "src": "made"
+  },
+  {
+   "text": "Il collare che Giulia ha comprato per il cane è troppo largo.",
+   "en": "The collar Giulia bought for the dog is too loose.",
+   "ko": "줄리아가 개에게 사 준 목걸이가 너무 헐렁해요.",
+   "blank": "collare",
+   "src": "made"
   }
  ],
  "w|collassare": [
@@ -15107,6 +15315,22 @@
    "src": "made"
   }
  ],
+ "w|contemporaneamente": [
+  {
+   "text": "Marco cerca di parlare al telefono e smontare il letto contemporaneamente.",
+   "en": "Marco tries to talk on the phone and take the bed apart at the same time.",
+   "ko": "마르코는 전화를 하면서 동시에 침대를 분해하려고 해요.",
+   "blank": "contemporaneamente",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha aperto tre siti contemporaneamente per confrontare i prezzi.",
+   "en": "Giulia has opened three sites at the same time to compare prices.",
+   "ko": "줄리아는 가격을 비교하려고 사이트 세 개를 동시에 열어 놨어요.",
+   "blank": "contemporaneamente",
+   "src": "made"
+  }
+ ],
  "w|contenere": [
   {
    "text": "Questa scatola può contenere molti libri.",
@@ -16199,6 +16423,22 @@
    "src": "made"
   }
  ],
+ "w|costantemente": [
+  {
+   "text": "Il cane di Marco gira costantemente tra gli scatoloni, tutto agitato.",
+   "en": "Marco's dog keeps wandering among the boxes, all worked up.",
+   "ko": "마르코의 개는 잔뜩 들떠서 상자 사이를 계속 돌아다녀요.",
+   "blank": "costantemente",
+   "src": "made"
+  },
+  {
+   "text": "Giulia controlla costantemente il telefono per sapere dov'è il corriere.",
+   "en": "Giulia constantly checks her phone to know where the courier is.",
+   "ko": "줄리아는 택배 기사가 어디쯤인지 휴대폰을 계속 확인해요.",
+   "blank": "costantemente",
+   "src": "made"
+  }
+ ],
  "w|costare": [
   {
    "text": "Quanto può costare un biglietto del treno?",
@@ -16945,6 +17185,22 @@
    "src": "made"
   }
  ],
+ "w|cuffia": [
+  {
+   "text": "Marco porta la cuffia per sentire la musica mentre svuota gli scatoloni.",
+   "en": "Marco wears headphones to listen to music while he unpacks the boxes.",
+   "ko": "마르코는 상자를 풀면서 음악을 들으려고 헤드폰을 써요.",
+   "blank": "cuffia",
+   "src": "made"
+  },
+  {
+   "text": "Giulia confronta le recensioni di due cuffie senza fili.",
+   "en": "Giulia compares the reviews of two wireless headphones.",
+   "ko": "줄리아는 무선 헤드폰 두 개의 후기를 비교해요.",
+   "blank": "cuffie",
+   "src": "made"
+  }
+ ],
  "w|cugina": [
   {
    "text": "Mia cugina arriva stasera in treno.",
@@ -17601,6 +17857,22 @@
    "blank": "deciso"
   }
  ],
+ "w|decollare": [
+  {
+   "text": "Dal terrazzo nuovo Marco vede gli aerei decollare dall'aeroporto.",
+   "en": "From the new terrace Marco sees the planes taking off from the airport.",
+   "ko": "새 테라스에서 마르코는 공항에서 비행기가 이륙하는 걸 봐요.",
+   "blank": "decollare",
+   "src": "made"
+  },
+  {
+   "text": "Il drone ordinato da Giulia non riesce a decollare.",
+   "en": "The drone Giulia ordered can't take off.",
+   "ko": "줄리아가 주문한 드론이 이륙하지 못해요.",
+   "blank": "decollare",
+   "src": "made"
+  }
+ ],
  "w|decorare": [
   {
    "text": "A dicembre Stefano vuole decorare la vetrina della farmacia con le luci.",
@@ -17662,6 +17934,22 @@
    "en": "Giulia and the owner still have to set the day for handing over the keys.",
    "ko": "줄리아와 집주인은 아직 열쇠 넘겨줄 날을 정해야 해요.",
    "blank": "definire",
+   "src": "made"
+  }
+ ],
+ "w|definitivamente": [
+  {
+   "text": "Marco chiude definitivamente la porta della casa dove è cresciuto.",
+   "en": "Marco closes the door of the house where he grew up for good.",
+   "ko": "마르코는 자기가 자란 집의 문을 완전히 닫아요.",
+   "blank": "definitivamente",
+   "src": "made"
+  },
+  {
+   "text": "Dopo l'ennesimo ritardo, Giulia cancella definitivamente il suo account.",
+   "en": "After yet another delay, Giulia deletes her account for good.",
+   "ko": "또 배송이 늦어지자 줄리아는 계정을 완전히 지워요.",
+   "blank": "definitivamente",
    "src": "made"
   }
  ],
@@ -26389,6 +26677,22 @@
    "blank": "freddo"
   }
  ],
+ "w|freezer": [
+  {
+   "text": "Prima di partire Marco svuota il freezer e regala tutto ai vicini.",
+   "en": "Before leaving Marco empties the freezer and gives everything to the neighbours.",
+   "ko": "떠나기 전에 마르코는 냉동고를 비워 이웃들에게 다 나눠 줘요.",
+   "blank": "freezer",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ordina gelati in vaschetta, ma il freezer è già pieno.",
+   "en": "Giulia orders tubs of ice cream, but the freezer is already full.",
+   "ko": "줄리아는 통 아이스크림을 주문했지만 냉동고가 이미 꽉 찼어요.",
+   "blank": "freezer",
+   "src": "made"
+  }
+ ],
  "w|fregare": [
   {
    "text": "Non lasciarti fregare da lui.",
@@ -26445,6 +26749,22 @@
    "en": "His children want to attend the same school.",
    "ko": "그의 아이들이 같은 학교를 다니고 싶어해.",
    "blank": "frequentare"
+  }
+ ],
+ "w|frequente": [
+  {
+   "text": "Nel quartiere nuovo di Marco i guasti alla corrente sono frequenti.",
+   "en": "In Marco's new neighbourhood power cuts are frequent.",
+   "ko": "마르코의 새 동네는 정전이 잦아요.",
+   "blank": "frequenti",
+   "src": "made"
+  },
+  {
+   "text": "Giulia è una cliente frequente di quel negozio online.",
+   "en": "Giulia is a frequent customer of that online shop.",
+   "ko": "줄리아는 그 온라인 쇼핑몰의 단골 손님이에요.",
+   "blank": "frequente",
+   "src": "made"
   }
  ],
  "w|frequenza": [
@@ -29141,6 +29461,22 @@
    "blank": "guardare"
   }
  ],
+ "w|guardaroba": [
+  {
+   "text": "Marco monta da solo il guardaroba della camera da letto.",
+   "en": "Marco assembles the bedroom wardrobe on his own.",
+   "ko": "마르코는 혼자서 침실 옷장을 조립해요.",
+   "blank": "guardaroba",
+   "src": "made"
+  },
+  {
+   "text": "Giulia rinnova tutto il guardaroba con i saldi di gennaio.",
+   "en": "Giulia renews her whole wardrobe in the January sales.",
+   "ko": "줄리아는 1월 할인 때 옷장을 통째로 바꿔요.",
+   "blank": "guardaroba",
+   "src": "made"
+  }
+ ],
  "w|guardia": [
   {
    "text": "La guardia controlla i documenti.",
@@ -29271,6 +29607,22 @@
    "en": "Can you drive for a stretch?",
    "ko": "한동안 네가 운전할래?",
    "blank": "guidare"
+  }
+ ],
+ "w|guinzaglio": [
+  {
+   "text": "Marco non trova più il guinzaglio del cane e lo porta fuori con una corda.",
+   "en": "Marco can't find the dog's lead any more and takes him out on a rope.",
+   "ko": "마르코는 개 목줄을 못 찾아서 밧줄로 산책을 시켜요.",
+   "blank": "guinzaglio",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ordina un guinzaglio che si allunga fino a cinque metri.",
+   "en": "Giulia orders a lead that extends up to five metres.",
+   "ko": "줄리아는 5미터까지 늘어나는 목줄을 주문해요.",
+   "blank": "guinzaglio",
+   "src": "made"
   }
  ],
  "w|guscio": [
@@ -29856,6 +30208,22 @@
    "en": "Martina's painting tells the story of immigration through a family's suitcases.",
    "ko": "마르티나의 그림은 한 가족의 여행 가방으로 이민 이야기를 들려줘요.",
    "blank": "immigrazione",
+   "src": "made"
+  }
+ ],
+ "w|imminente": [
+  {
+   "text": "Con il trasloco imminente, Marco non trova più nemmeno uno spazzolino.",
+   "en": "With the move just days away, Marco can't even find a toothbrush.",
+   "ko": "이사가 코앞이라 마르코는 칫솔 하나도 못 찾아요.",
+   "blank": "imminente",
+   "src": "made"
+  },
+  {
+   "text": "Un messaggio avvisa Giulia della consegna imminente.",
+   "en": "A message tells Giulia that the delivery is imminent.",
+   "ko": "곧 배송된다는 메시지가 줄리아에게 와요.",
+   "blank": "imminente",
    "src": "made"
   }
  ],
@@ -35413,6 +35781,22 @@
    "src": "made"
   }
  ],
+ "w|locanda": [
+  {
+   "text": "La sera del trasloco Marco cena in una locanda vicino alla casa nuova.",
+   "en": "On the evening of the move Marco has dinner at an inn near the new house.",
+   "ko": "이삿날 저녁 마르코는 새집 근처 여관에서 저녁을 먹어요.",
+   "blank": "locanda",
+   "src": "made"
+  },
+  {
+   "text": "Con un buono sconto Giulia prenota una cena in una vecchia locanda.",
+   "en": "With a discount voucher Giulia books dinner at an old inn.",
+   "ko": "할인 쿠폰으로 줄리아는 오래된 여관에서 저녁을 예약해요.",
+   "blank": "locanda",
+   "src": "made"
+  }
+ ],
  "w|lode": [
   {
    "text": "La prima lode del capo rende Matteo felicissimo.",
@@ -38446,6 +38830,22 @@
    "en": "A TV crew put a microphone in front of Francesca for a report on the neighbourhood.",
    "ko": "방송국 촬영팀이 동네 취재를 하며 프란체스카 앞에 마이크를 들이댔어요.",
    "blank": "microfono",
+   "src": "made"
+  }
+ ],
+ "w|microonde": [
+  {
+   "text": "La prima sera Marco cena con un piatto pronto scaldato nel microonde.",
+   "en": "The first evening Marco has a ready meal heated in the microwave for dinner.",
+   "ko": "첫날 저녁 마르코는 전자레인지에 데운 즉석 요리로 저녁을 때워요.",
+   "blank": "microonde",
+   "src": "made"
+  },
+  {
+   "text": "Il microonde ordinato da Giulia arriva con lo sportello rotto.",
+   "en": "The microwave Giulia ordered arrives with a broken door.",
+   "ko": "줄리아가 주문한 전자레인지가 문이 깨진 채 도착해요.",
+   "blank": "microonde",
    "src": "made"
   }
  ],
@@ -43457,6 +43857,22 @@
    "src": "made"
   }
  ],
+ "w|padella": [
+  {
+   "text": "Il primo oggetto che Marco tira fuori dagli scatoloni è una padella.",
+   "en": "The first thing Marco takes out of the boxes is a frying pan.",
+   "ko": "마르코가 상자에서 제일 먼저 꺼낸 건 프라이팬이에요.",
+   "blank": "padella",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha comprato una padella antiaderente con un buono sconto.",
+   "en": "Giulia bought a non-stick frying pan with a discount voucher.",
+   "ko": "줄리아는 할인 쿠폰으로 코팅 프라이팬을 샀어요.",
+   "blank": "padella",
+   "src": "made"
+  }
+ ],
  "w|padre": [
   {
    "text": "Mio padre fa il medico.",
@@ -46586,6 +47002,22 @@
    "en": "A runner dressed as a penguin overtakes Martina at kilometre twenty.",
    "ko": "이십 킬로미터 지점에서 펭귄 옷을 입은 주자가 마르티나를 앞질러요.",
    "blank": "pinguino",
+   "src": "made"
+  }
+ ],
+ "w|pinza": [
+  {
+   "text": "Per staccare i chiodi dal muro Marco usa una pinza.",
+   "en": "To pull the nails out of the wall Marco uses pliers.",
+   "ko": "벽에서 못을 빼려고 마르코는 펜치를 써요.",
+   "blank": "pinza",
+   "src": "made"
+  },
+  {
+   "text": "Nel kit di attrezzi di Giulia manca la pinza.",
+   "en": "The pliers are missing from Giulia's tool kit.",
+   "ko": "줄리아의 공구 세트에 펜치가 빠져 있어요.",
+   "blank": "pinza",
    "src": "made"
   }
  ],
@@ -51449,6 +51881,22 @@
    "src": "made"
   }
  ],
+ "w|rampa": [
+  {
+   "text": "I traslocatori spingono il frigorifero di Marco su per la rampa del furgone.",
+   "en": "The movers push Marco's fridge up the van's ramp.",
+   "ko": "이삿짐센터 직원들이 마르코의 냉장고를 승합차 경사판 위로 밀어 올려요.",
+   "blank": "rampa",
+   "src": "made"
+  },
+  {
+   "text": "Il corriere lascia il frigorifero di Giulia in fondo alla rampa del garage.",
+   "en": "The courier leaves Giulia's fridge at the bottom of the garage ramp.",
+   "ko": "택배 기사가 줄리아의 냉장고를 차고 경사로 아래에 두고 가요.",
+   "blank": "rampa",
+   "src": "made"
+  }
+ ],
  "w|rana": [
   {
    "text": "Di sera Andrea sente gracidare una rana nello stagno.",
@@ -51703,6 +52151,22 @@
    "en": "That stamp is very rare and valuable.",
    "ko": "그 우표는 매우 희귀하고 비싸.",
    "blank": "raro"
+  }
+ ],
+ "w|rasoio": [
+  {
+   "text": "Marco mette il rasoio nella borsa del bagno per non perderlo.",
+   "en": "Marco puts his razor in the toiletry bag so as not to lose it.",
+   "ko": "마르코는 잃어버리지 않으려고 면도기를 세면 가방에 넣어요.",
+   "blank": "rasoio",
+   "src": "made"
+  },
+  {
+   "text": "Giulia regala al fratello un rasoio elettrico comprato online.",
+   "en": "Giulia gives her brother an electric razor bought online.",
+   "ko": "줄리아는 온라인으로 산 전기면도기를 오빠에게 선물해요.",
+   "blank": "rasoio",
+   "src": "made"
   }
  ],
  "w|ratto": [
@@ -52417,6 +52881,22 @@
    "src": "made"
   }
  ],
+ "w|regolarmente": [
+  {
+   "text": "Il nuovo padrone di casa chiede a Marco di pagare l'affitto regolarmente.",
+   "en": "The new landlord asks Marco to pay the rent regularly.",
+   "ko": "새 집주인은 마르코에게 월세를 꼬박꼬박 내 달라고 해요.",
+   "blank": "regolarmente",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ordina regolarmente cibo per il cane sullo stesso sito.",
+   "en": "Giulia regularly orders dog food from the same site.",
+   "ko": "줄리아는 같은 사이트에서 개 사료를 정기적으로 주문해요.",
+   "blank": "regolarmente",
+   "src": "made"
+  }
+ ],
  "w|relativo": [
   {
    "text": "Matteo cerca i dati relativi agli incidenti stradali dell'ultimo anno.",
@@ -52490,6 +52970,22 @@
    "en": "The couple arrive by boat, and Anna watches the groom row to the jetty.",
    "ko": "신랑 신부가 배를 타고 오고, 안나는 신랑이 선착장까지 노를 젓는 걸 지켜봐요.",
    "blank": "remare",
+   "src": "made"
+  }
+ ],
+ "w|remoto": [
+  {
+   "text": "In un cassetto Marco trova le foto di un passato remoto.",
+   "en": "In a drawer Marco finds photos from a distant past.",
+   "ko": "서랍에서 마르코는 아주 먼 옛날 사진들을 발견해요.",
+   "blank": "remoto",
+   "src": "made"
+  },
+  {
+   "text": "Il pacco di Giulia parte da un magazzino in un paese remoto.",
+   "en": "Giulia's parcel leaves from a warehouse in a remote village.",
+   "ko": "줄리아의 택배는 외딴 마을의 창고에서 출발해요.",
+   "blank": "remoto",
    "src": "made"
   }
  ],
@@ -55385,6 +55881,22 @@
    "en": "Friends don't steal from each other.",
    "ko": "친구 사이에 훔치면 안 되지.",
    "blank": "ruba"
+  }
+ ],
+ "w|rubinetto": [
+  {
+   "text": "Nel bagno nuovo di Marco il rubinetto perde un po'.",
+   "en": "In Marco's new bathroom the tap drips a little.",
+   "ko": "마르코의 새 욕실은 수도꼭지가 조금 새요.",
+   "blank": "rubinetto",
+   "src": "made"
+  },
+  {
+   "text": "Su internet Giulia trova un rubinetto uguale a quello rotto in cucina.",
+   "en": "Online Giulia finds a tap identical to the broken one in the kitchen.",
+   "ko": "인터넷에서 줄리아는 부엌의 고장 난 것과 똑같은 수도꼭지를 찾아요.",
+   "blank": "rubinetto",
+   "src": "made"
   }
  ],
  "w|rumore": [
@@ -58911,6 +59423,22 @@
    "blank": "sesto"
   }
  ],
+ "w|seta": [
+  {
+   "text": "Marco avvolge le cravatte di seta nella carta velina prima di inscatolarle.",
+   "en": "Marco wraps his silk ties in tissue paper before boxing them up.",
+   "ko": "마르코는 실크 넥타이를 상자에 넣기 전에 얇은 종이로 감싸요.",
+   "blank": "seta",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ordina online una camicetta di seta per il matrimonio della cugina.",
+   "en": "Giulia orders a silk blouse online for her cousin's wedding.",
+   "ko": "줄리아는 사촌 결혼식에 입을 실크 블라우스를 온라인으로 주문해요.",
+   "blank": "seta",
+   "src": "made"
+  }
+ ],
  "w|setacciare": [
   {
    "text": "Matteo deve setacciare vecchie email per trovare un contratto.",
@@ -62141,6 +62669,22 @@
    "src": "made"
   }
  ],
+ "w|spilla": [
+  {
+   "text": "Tra i libri Marco ritrova la spilla che gli aveva regalato la nonna.",
+   "en": "Among the books Marco finds the brooch his grandmother had given him.",
+   "ko": "책들 사이에서 마르코는 할머니가 준 브로치를 다시 찾아요.",
+   "blank": "spilla",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ordina una spilla a forma di ape per la giacca.",
+   "en": "Giulia orders a bee-shaped brooch for her jacket.",
+   "ko": "줄리아는 재킷에 달 벌 모양 브로치를 주문해요.",
+   "blank": "spilla",
+   "src": "made"
+  }
+ ],
  "w|spina": [
   {
    "text": "Davide si è punto il piede con una spina di riccio di mare.",
@@ -64597,6 +65141,22 @@
    "src": "made"
   }
  ],
+ "w|talvolta": [
+  {
+   "text": "Nella casa nuova di Marco talvolta l'acqua calda tarda ad arrivare.",
+   "en": "In Marco's new house the hot water sometimes takes a while to come.",
+   "ko": "마르코의 새집은 가끔 뜨거운 물이 늦게 나와요.",
+   "blank": "talvolta",
+   "src": "made"
+  },
+  {
+   "text": "Giulia talvolta compra cose online solo perché sono in sconto.",
+   "en": "Giulia sometimes buys things online just because they're on sale.",
+   "ko": "줄리아는 가끔 할인 중이라는 이유만으로 온라인에서 물건을 사요.",
+   "blank": "talvolta",
+   "src": "made"
+  }
+ ],
  "w|tana": [
   {
    "text": "Vicino alla riva Paolo scopre la tana di una volpe.",
@@ -65164,6 +65724,22 @@
    "en": "Tomorrow a TV programme will film some scenes in Elena's department.",
    "ko": "내일 한 텔레비전 프로그램이 엘레나의 매장에서 몇 장면을 찍을 거예요.",
    "blank": "televisivo",
+   "src": "made"
+  }
+ ],
+ "w|televisore": [
+  {
+   "text": "Due amici aiutano Marco a portare il televisore giù per le scale.",
+   "en": "Two friends help Marco carry the television down the stairs.",
+   "ko": "친구 둘이 마르코를 도와 텔레비전을 계단 아래로 옮겨요.",
+   "blank": "televisore",
+   "src": "made"
+  },
+  {
+   "text": "Giulia aspetta un televisore nuovo per vedere la partita.",
+   "en": "Giulia is waiting for a new television to watch the match.",
+   "ko": "줄리아는 경기를 보려고 새 텔레비전을 기다리고 있어요.",
+   "blank": "televisore",
    "src": "made"
   }
  ],
@@ -68743,6 +69319,22 @@
    "src": "made"
   }
  ],
+ "w|vagone": [
+  {
+   "text": "Il pianoforte della nonna di Marco viaggia in un vagone merci fino a Torino.",
+   "en": "Marco's grandmother's piano travels in a goods wagon to Turin.",
+   "ko": "마르코 할머니의 피아노는 화물칸에 실려 토리노까지 가요.",
+   "blank": "vagone",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ordina un trenino con un vagone rosso per il nipote.",
+   "en": "Giulia orders a toy train with a red carriage for her nephew.",
+   "ko": "줄리아는 조카에게 줄 빨간 객차가 달린 장난감 기차를 주문해요.",
+   "blank": "vagone",
+   "src": "made"
+  }
+ ],
  "w|valere": [
   {
    "text": "Questo anello vale molto.",
@@ -69647,6 +70239,22 @@
    "src": "made"
   }
  ],
+ "w|vetrina": [
+  {
+   "text": "Sotto casa di Marco c'è una panetteria con una vetrina piena di dolci.",
+   "en": "Below Marco's flat there's a bakery with a window full of cakes.",
+   "ko": "마르코의 집 아래에는 진열장이 과자로 가득한 빵집이 있어요.",
+   "blank": "vetrina",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha visto quella lampada in vetrina, ma la compra online perché costa meno.",
+   "en": "Giulia saw that lamp in a shop window, but buys it online because it costs less.",
+   "ko": "줄리아는 그 스탠드를 쇼윈도에서 봤지만 더 싸서 온라인으로 사요.",
+   "blank": "vetrina",
+   "src": "made"
+  }
+ ],
  "w|vetro": [
   {
    "text": "Il vetro della finestra è incrinato.",
@@ -69731,6 +70339,22 @@
    "en": "I'll book the trip tonight.",
    "ko": "오늘 밤에 여행을 예약할게.",
    "blank": "viaggio"
+  }
+ ],
+ "w|vialetto": [
+  {
+   "text": "Il camion dei traslochi non riesce a entrare nel vialetto di Marco.",
+   "en": "The removal lorry can't get into Marco's driveway.",
+   "ko": "이삿짐 트럭이 마르코네 진입로에 들어가지 못해요.",
+   "blank": "vialetto",
+   "src": "made"
+  },
+  {
+   "text": "Il corriere lascia il pacco di Giulia in fondo al vialetto.",
+   "en": "The courier leaves Giulia's parcel at the end of the path.",
+   "ko": "택배 기사가 줄리아의 택배를 진입로 끝에 두고 가요.",
+   "blank": "vialetto",
+   "src": "made"
   }
  ],
  "w|vice": [
@@ -69896,6 +70520,22 @@
    "en": "A firefighter stops by to remind Giulia that lighting fires is forbidden.",
    "ko": "소방관이 들러 줄리아에게 불을 피우면 안 된다고 다시 알려 줘요.",
    "blank": "vigile",
+   "src": "made"
+  }
+ ],
+ "w|vigilia": [
+  {
+   "text": "Marco ha finito di riempire gli scatoloni proprio alla vigilia del trasloco.",
+   "en": "Marco finished filling the boxes right on the eve of the move.",
+   "ko": "마르코는 이사 바로 전날에야 상자를 다 채웠어요.",
+   "blank": "vigilia",
+   "src": "made"
+  },
+  {
+   "text": "Il pacco di Giulia arriva solo alla vigilia di Natale.",
+   "en": "Giulia's parcel only arrives on Christmas Eve.",
+   "ko": "줄리아의 택배는 크리스마스이브에야 도착해요.",
+   "blank": "vigilia",
    "src": "made"
   }
  ],
