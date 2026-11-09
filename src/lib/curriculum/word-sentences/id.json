@@ -459,6 +459,22 @@
    "src": "made"
   }
  ],
+ "w|akurat": [
+  {
+   "text": "Hasil rontgen digital membuat diagnosis dokter lebih akurat.",
+   "en": "Digital X-rays make the dentist's diagnosis more accurate.",
+   "ko": "디지털 엑스레이 덕분에 의사의 진단이 더 정확해요.",
+   "blank": "akurat",
+   "src": "made"
+  },
+  {
+   "text": "Ukuran jendela harus akurat supaya kaca barunya pas.",
+   "en": "The window measurements have to be accurate so the new glass fits.",
+   "ko": "새 유리가 꼭 맞으려면 창문 치수가 정확해야 해요.",
+   "blank": "akurat",
+   "src": "made"
+  }
+ ],
  "w|alam": [
   {
    "text": "Kami suka pergi ke alam.",
@@ -542,6 +558,22 @@
    "en": "Wati's guitar teacher has just released his first instrumental album.",
    "ko": "와티의 기타 선생님이 첫 연주 앨범을 냈어요.",
    "blank": "album",
+   "src": "made"
+  }
+ ],
+ "w|alergi": [
+  {
+   "text": "Sebelum dibius, dokter bertanya apakah Agus punya alergi obat.",
+   "en": "Before the anaesthetic, the doctor asked whether Agus had any drug allergies.",
+   "ko": "마취 전에 의사는 아구스에게 약물 알레르기가 있는지 물었어요.",
+   "blank": "alergi",
+   "src": "made"
+  },
+  {
+   "text": "Debu dari loteng membuat alergi Wati kambuh.",
+   "en": "The dust from the attic made Wati's allergy flare up.",
+   "ko": "다락방 먼지 때문에 와티의 알레르기가 도졌어요.",
+   "blank": "alergi",
    "src": "made"
   }
  ],
@@ -1703,6 +1735,22 @@
    "blank": "Bahkan"
   }
  ],
+ "w|bahu": [
+  {
+   "text": "Perawat menepuk bahu Agus supaya dia tidak tegang.",
+   "en": "The nurse patted Agus on the shoulder so he wouldn't be tense.",
+   "ko": "간호사가 긴장하지 말라고 아구스의 어깨를 토닥였어요.",
+   "blank": "bahu",
+   "src": "made"
+  },
+  {
+   "text": "Wati memikul papan kayu di bahu menuju lantai atas.",
+   "en": "Wati carried a wooden plank on her shoulder up to the top floor.",
+   "ko": "와티는 나무 판자를 어깨에 메고 위층으로 올라갔어요.",
+   "blank": "bahu",
+   "src": "made"
+  }
+ ],
  "w|bahwa": [
   {
    "text": "Aku yakin bahwa dia jujur.",
@@ -2285,6 +2333,22 @@
    "en": "That stone is very heavy.",
    "ko": "그 돌은 아주 무거워.",
    "blank": "Batu"
+  }
+ ],
+ "w|batuk": [
+  {
+   "text": "Pasien di kursi sebelah terus batuk selama diperiksa.",
+   "en": "The patient in the next chair kept coughing during the check-up.",
+   "ko": "옆 의자 환자는 진료 내내 기침을 했어요.",
+   "blank": "batuk",
+   "src": "made"
+  },
+  {
+   "text": "Wati terus batuk setiap kali menyapu loteng yang berdebu.",
+   "en": "Wati keeps coughing every time she sweeps the dusty attic.",
+   "ko": "와티는 먼지 쌓인 다락방을 쓸 때마다 계속 기침을 해요.",
+   "blank": "batuk",
+   "src": "made"
   }
  ],
  "w|bau": [
@@ -3985,6 +4049,22 @@
    "blank": "Berkendara"
   }
  ],
+ "w|berkeringat": [
+  {
+   "text": "Telapak tangan Agus berkeringat saat duduk di kursi periksa.",
+   "en": "Agus's palms were sweating as he sat in the dental chair.",
+   "ko": "진료 의자에 앉자 아구스의 손바닥에 땀이 났어요.",
+   "blank": "berkeringat",
+   "src": "made"
+  },
+  {
+   "text": "Wati berkeringat deras saat membongkar lantai keramik di siang bolong.",
+   "en": "Wati sweated heavily ripping up the ceramic floor in the midday heat.",
+   "ko": "와티는 한낮에 타일 바닥을 뜯어내느라 땀을 뻘뻘 흘렸어요.",
+   "blank": "berkeringat",
+   "src": "made"
+  }
+ ],
  "w|berkomunikasi": [
   {
    "text": "Mereka berkomunikasi lewat pesan singkat.",
@@ -3997,6 +4077,22 @@
    "en": "It is important to communicate clearly.",
    "ko": "명확하게 소통하는 게 중요해.",
    "blank": "berkomunikasi"
+  }
+ ],
+ "w|berkorban": [
+  {
+   "text": "Ibu Agus rela berkorban waktu kerja untuk menemaninya ke klinik.",
+   "en": "Agus's mother was willing to give up work time to go with him to the clinic.",
+   "ko": "아구스의 어머니는 일하는 시간을 내서 기꺼이 치과에 같이 와 줬어요.",
+   "blank": "berkorban",
+   "src": "made"
+  },
+  {
+   "text": "Wati rela berkorban tabungannya demi menyelamatkan rumah peninggalan keluarga.",
+   "en": "Wati was willing to sacrifice her savings to save the family house.",
+   "ko": "와티는 집안에서 물려받은 집을 지키려고 기꺼이 저금을 털었어요.",
+   "blank": "berkorban",
+   "src": "made"
   }
  ],
  "w|berkuasa": [
@@ -4443,6 +4539,22 @@
    "en": "Going to war is not the only way out.",
    "ko": "전쟁이 유일한 출구는 아니야.",
    "blank": "Berperang"
+  }
+ ],
+ "w|berperilaku": [
+  {
+   "text": "Anak-anak yang berperilaku baik selama diperiksa mendapat stiker dari perawat.",
+   "en": "Children who behave well during the check-up get a sticker from the nurse.",
+   "ko": "진료 중에 얌전히 있는 아이들은 간호사에게 스티커를 받아요.",
+   "blank": "berperilaku",
+   "src": "made"
+  },
+  {
+   "text": "Kucing liar di halaman mulai berperilaku jinak sejak Wati memberinya makan.",
+   "en": "The stray cat in the yard has started behaving tamely since Wati began feeding it.",
+   "ko": "와티가 먹이를 준 뒤로 마당의 길고양이가 순하게 굴기 시작했어요.",
+   "blank": "berperilaku",
+   "src": "made"
   }
  ],
  "w|berpesta": [
@@ -5905,6 +6017,22 @@
    "blank": "buatan"
   }
  ],
+ "w|bubar": [
+  {
+   "text": "Antrean pasien baru bubar setelah klinik tutup pukul delapan malam.",
+   "en": "The line of patients only cleared after the clinic closed at eight in the evening.",
+   "ko": "환자 줄은 치과가 저녁 여덟 시에 문을 닫고 나서야 흩어졌어요.",
+   "blank": "bubar",
+   "src": "made"
+  },
+  {
+   "text": "Para tetangga yang menonton di pagar bubar setelah tembok lama berhasil dirobohkan.",
+   "en": "The neighbours watching by the fence dispersed after the old wall was knocked down.",
+   "ko": "울타리에서 구경하던 이웃들은 옛 벽이 무너지자 흩어졌어요.",
+   "blank": "bubar",
+   "src": "made"
+  }
+ ],
  "w|bubuk": [
   {
    "text": "Kopi bubuk di dapur redaksi selalu habis sebelum tengah malam.",
@@ -6381,6 +6509,22 @@
    "blank": "cantik"
   }
  ],
+ "w|capek": [
+  {
+   "text": "Agus sudah capek menahan sakit gigi selama seminggu.",
+   "en": "Agus is tired of putting up with toothache for a week.",
+   "ko": "아구스는 일주일 동안 치통을 참느라 지쳤어요.",
+   "blank": "capek",
+   "src": "made"
+  },
+  {
+   "text": "Wati sudah capek, tapi masih ingin menyelesaikan pintu dapur hari ini.",
+   "en": "Wati is tired, but she still wants to finish the kitchen door today.",
+   "ko": "와티는 지쳤지만 오늘 부엌문까지는 끝내고 싶어요.",
+   "blank": "capek",
+   "src": "made"
+  }
+ ],
  "w|cara": [
   {
    "text": "Ada cara lain?",
@@ -6422,6 +6566,22 @@
    "en": "The men play chess on the bench in front of Lestari's shop.",
    "ko": "아저씨들이 레스타리 가게 앞 벤치에서 체스를 둬요.",
    "blank": "catur",
+   "src": "made"
+  }
+ ],
+ "w|cedera": [
+  {
+   "text": "Gigi depan Agus patah karena cedera saat bermain futsal.",
+   "en": "Agus's front tooth broke from an injury while playing futsal.",
+   "ko": "아구스의 앞니는 풋살을 하다 다쳐서 부러졌어요.",
+   "blank": "cedera",
+   "src": "made"
+  },
+  {
+   "text": "Tukang itu memakai sarung tangan tebal untuk mencegah cedera saat memotong kaca.",
+   "en": "The builder wore thick gloves to prevent injury while cutting glass.",
+   "ko": "그 인부는 유리를 자를 때 다치지 않으려고 두꺼운 장갑을 꼈어요.",
+   "blank": "cedera",
    "src": "made"
   }
  ],
@@ -7343,6 +7503,22 @@
    "blank": "departemen"
   }
  ],
+ "w|depresi": [
+  {
+   "text": "Poster di dinding klinik menjelaskan bahwa depresi juga bisa membuat orang malas merawat gigi.",
+   "en": "A poster on the clinic wall explains that depression can also make people neglect their teeth.",
+   "ko": "치과 벽 포스터에는 우울증 때문에 이 관리를 소홀히 할 수도 있다고 쓰여 있어요.",
+   "blank": "depresi",
+   "src": "made"
+  },
+  {
+   "text": "Pemilik lama rumah itu dulu pernah berjuang melawan depresi, kata tetangga.",
+   "en": "According to the neighbours, the house's previous owner once struggled with depression.",
+   "ko": "이웃들 말로는 그 집 예전 주인이 한때 우울증과 싸웠대요.",
+   "blank": "depresi",
+   "src": "made"
+  }
+ ],
  "w|derajat": [
   {
    "text": "Suhu naik beberapa derajat hari ini.",
@@ -7400,6 +7576,22 @@
    "en": "Rina pays attention to every detail of the cloth on sale, from the stitching to the color.",
    "ko": "리나는 파는 천의 바느질부터 색깔까지 하나하나 꼼꼼히 봐요.",
    "blank": "detail",
+   "src": "made"
+  }
+ ],
+ "w|detak": [
+  {
+   "text": "Agus bisa merasakan detak jantungnya makin cepat saat bor dinyalakan.",
+   "en": "Agus could feel his heartbeat getting faster when the drill was switched on.",
+   "ko": "드릴이 켜지자 아구스는 심장 박동이 빨라지는 걸 느꼈어요.",
+   "blank": "detak",
+   "src": "made"
+  },
+  {
+   "text": "Di malam yang sepi, Wati bisa mendengar detak jam dinding tua dari dapur.",
+   "en": "On quiet nights, Wati can hear the ticking of the old wall clock from the kitchen.",
+   "ko": "조용한 밤이면 와티는 부엌에서 낡은 벽시계 똑딱거리는 소리를 들을 수 있어요.",
+   "blank": "detak",
    "src": "made"
   }
  ],
@@ -8595,6 +8787,22 @@
    "blank": "fisik"
   }
  ],
+ "w|flu": [
+  {
+   "text": "Agus sempat menunda jadwal periksa karena terkena flu.",
+   "en": "Agus postponed his appointment because he caught the flu.",
+   "ko": "아구스는 독감에 걸려서 진료 날짜를 미뤘어요.",
+   "blank": "flu",
+   "src": "made"
+  },
+  {
+   "text": "Gara-gara tidur di rumah yang belum berjendela, Wati terserang flu.",
+   "en": "Because she slept in the house before it had windows, Wati came down with the flu.",
+   "ko": "창문도 없는 집에서 자는 바람에 와티는 독감에 걸렸어요.",
+   "blank": "flu",
+   "src": "made"
+  }
+ ],
  "w|fokus": [
   {
    "text": "Fokus pada pekerjaanmu.",
@@ -8985,6 +9193,22 @@
    "en": "We work in the building next door.",
    "ko": "우리 옆 건물에서 일해.",
    "blank": "gedung"
+  }
+ ],
+ "w|gejala": [
+  {
+   "text": "Dokter bertanya kapan gejala ngilu pertama kali muncul.",
+   "en": "The doctor asked when the aching symptoms first appeared.",
+   "ko": "의사는 시린 증상이 언제 처음 나타났는지 물었어요.",
+   "blank": "gejala",
+   "src": "made"
+  },
+  {
+   "text": "Retakan kecil di dinding bisa jadi gejala fondasi yang mulai turun.",
+   "en": "Small cracks in the wall can be a sign that the foundation is starting to sink.",
+   "ko": "벽의 작은 금은 기초가 내려앉기 시작했다는 징후일 수 있어요.",
+   "blank": "gejala",
+   "src": "made"
   }
  ],
  "w|gelap": [
@@ -10629,6 +10853,22 @@
    "en": "She works in the food industry.",
    "ko": "그녀는 식품 산업에서 일해.",
    "blank": "industri"
+  }
+ ],
+ "w|infeksi": [
+  {
+   "text": "Dokter gigi bilang infeksi gusi bisa memengaruhi organ lain seperti jantung.",
+   "en": "The dentist said a gum infection can affect other organs like the heart.",
+   "ko": "치과 의사는 잇몸 염증이 심장 같은 다른 장기에도 영향을 줄 수 있다고 했어요.",
+   "blank": "infeksi",
+   "src": "made"
+  },
+  {
+   "text": "Tangan Wati tergores paku berkarat, jadi dia cepat-cepat membersihkannya agar tidak infeksi.",
+   "en": "Wati scratched her hand on a rusty nail, so she cleaned it quickly to avoid infection.",
+   "ko": "와티는 녹슨 못에 손이 긁혀서 덧나지 않게 얼른 소독했어요.",
+   "blank": "infeksi",
+   "src": "made"
   }
  ],
  "w|info": [
@@ -13039,6 +13279,22 @@
    "blank": "kebutuhan"
   }
  ],
+ "w|kecanduan": [
+  {
+   "text": "Dokter bilang kecanduan minuman manis membuat gigi Agus cepat berlubang.",
+   "en": "The doctor said an addiction to sugary drinks makes Agus's teeth get cavities quickly.",
+   "ko": "의사는 단 음료에 빠진 습관 때문에 아구스의 이가 빨리 썩는다고 했어요.",
+   "blank": "kecanduan",
+   "src": "made"
+  },
+  {
+   "text": "Wati bercanda bahwa merenovasi rumah tua itu seperti kecanduan yang sulit dihentikan.",
+   "en": "Wati jokes that renovating old houses is like an addiction that's hard to stop.",
+   "ko": "와티는 낡은 집 고치는 게 끊기 힘든 중독 같다며 농담해요.",
+   "blank": "kecanduan",
+   "src": "made"
+  }
+ ],
  "w|kecantikan": [
   {
    "text": "Kecantikan alami lebih tahan lama.",
@@ -13667,6 +13923,22 @@
    "en": "I'll go into class first.",
    "ko": "먼저 교실에 들어갈게.",
    "blank": "kelas"
+  }
+ ],
+ "w|kelelahan": [
+  {
+   "text": "Dokter gigi itu tampak kelelahan setelah menangani dua puluh pasien.",
+   "en": "The dentist looked exhausted after treating twenty patients.",
+   "ko": "그 치과 의사는 환자 스무 명을 본 뒤 지쳐 보였어요.",
+   "blank": "kelelahan",
+   "src": "made"
+  },
+  {
+   "text": "Wati tertidur di sofa karena kelelahan mengecat dinding seharian.",
+   "en": "Wati fell asleep on the sofa, exhausted from painting walls all day.",
+   "ko": "와티는 하루 종일 벽을 칠하느라 지쳐서 소파에서 잠들었어요.",
+   "blank": "kelelahan",
+   "src": "made"
   }
  ],
  "w|kelemahan": [
@@ -15255,6 +15527,22 @@
    "blank": "kolonel"
   }
  ],
+ "w|koma": [
+  {
+   "text": "Sambil menunggu, Agus membaca berita tentang pasien yang sadar dari koma setelah sebulan.",
+   "en": "While waiting, Agus read a news story about a patient who woke from a coma after a month.",
+   "ko": "기다리는 동안 아구스는 한 달 만에 혼수상태에서 깨어난 환자 기사를 읽었어요.",
+   "blank": "koma",
+   "src": "made"
+  },
+  {
+   "text": "Wati menemukan tumpukan surat lama yang ditulis tanpa titik dan koma.",
+   "en": "Wati found a pile of old letters written without full stops or commas.",
+   "ko": "와티는 마침표도 쉼표도 없이 쓴 옛 편지 더미를 찾았어요.",
+   "blank": "koma",
+   "src": "made"
+  }
+ ],
  "w|komandan": [
   {
    "text": "Semua tentara patuh pada komandan.",
@@ -16043,6 +16331,22 @@
    "blank": "Kuil"
   }
  ],
+ "w|kuku": [
+  {
+   "text": "Agus menggigit kuku karena gugup di ruang tunggu.",
+   "en": "Agus bit his nails out of nerves in the waiting room.",
+   "ko": "아구스는 대기실에서 긴장해서 손톱을 물어뜯었어요.",
+   "blank": "kuku",
+   "src": "made"
+  },
+  {
+   "text": "Setelah memperbaiki jendela, kuku Wati penuh cat.",
+   "en": "Wati's nails are covered in paint after fixing the windows.",
+   "ko": "창문을 고친 뒤 와티의 손톱은 페인트투성이였어요.",
+   "blank": "kuku",
+   "src": "made"
+  }
+ ],
  "w|kuliah": [
   {
    "text": "Dia terlambat masuk kuliah pagi.",
@@ -16775,6 +17079,22 @@
    "blank": "leher"
   }
  ],
+ "w|lekas": [
+  {
+   "text": "Perawat mendoakan Agus agar lekas sembuh setelah gigi bungsunya dicabut.",
+   "en": "The nurse wished Agus a quick recovery after his wisdom tooth was pulled.",
+   "ko": "사랑니를 뽑은 아구스에게 간호사가 빨리 나으라고 인사했어요.",
+   "blank": "lekas",
+   "src": "made"
+  },
+  {
+   "text": "Wati ingin renovasi itu lekas selesai supaya bisa pindah sebelum Lebaran.",
+   "en": "Wati wants the renovation to finish soon so she can move in before Eid.",
+   "ko": "와티는 르바란 전에 이사할 수 있게 공사가 빨리 끝나길 바라요.",
+   "blank": "lekas",
+   "src": "made"
+  }
+ ],
  "w|lelah": [
   {
    "text": "Aku lelah setelah kerja.",
@@ -17413,6 +17733,22 @@
    "blank": "lumayan"
   }
  ],
+ "w|lumpuh": [
+  {
+   "text": "Setelah suntikan bius, separuh wajah Agus terasa lumpuh.",
+   "en": "After the anaesthetic injection, half of Agus's face felt numb.",
+   "ko": "마취 주사를 맞자 아구스의 얼굴 반쪽이 마비된 느낌이었어요.",
+   "blank": "lumpuh",
+   "src": "made"
+  },
+  {
+   "text": "Kakek yang dulu tinggal di rumah itu lumpuh sejak terjatuh dari tangga.",
+   "en": "The grandfather who used to live in the house was paralysed after falling down the stairs.",
+   "ko": "그 집에 살던 할아버지는 계단에서 떨어진 뒤로 몸이 마비됐어요.",
+   "blank": "lumpuh",
+   "src": "made"
+  }
+ ],
  "w|lupa": [
   {
    "text": "Aku lupa namanya.",
@@ -17439,6 +17775,22 @@
    "en": "That line must stay straight.",
    "ko": "그 선은 계속 곧아야 해.",
    "blank": "lurus"
+  }
+ ],
+ "w|lutut": [
+  {
+   "text": "Anak kecil di ruang tunggu duduk memeluk lutut sambil menangis.",
+   "en": "The little child in the waiting room sat hugging his knees and crying.",
+   "ko": "대기실 꼬마가 무릎을 끌어안고 앉아 울고 있었어요.",
+   "blank": "lutut",
+   "src": "made"
+  },
+  {
+   "text": "Wati berlutut di lantai, lalu memakai bantalan untuk melindungi lutut saat mengampelas.",
+   "en": "Wati knelt on the floor and used pads to protect her knees while sanding.",
+   "ko": "와티는 바닥에 꿇어앉아 사포질할 때 무릎을 보호하려고 패드를 댔어요.",
+   "blank": "lutut",
+   "src": "made"
   }
  ],
  "w|maaf": [
@@ -17809,6 +18161,22 @@
    "en": "His luck really is unfortunate today.",
    "ko": "오늘 그의 운은 정말 불운해.",
    "blank": "malang"
+  }
+ ],
+ "w|malas": [
+  {
+   "text": "Poster di dinding klinik menjelaskan bahwa depresi juga bisa membuat orang malas merawat gigi.",
+   "en": "A poster on the clinic wall explains that depression can also make people neglect their teeth.",
+   "ko": "치과 벽 포스터에는 우울증 때문에 이 관리를 소홀히 할 수도 있다고 쓰여 있어요.",
+   "blank": "malas",
+   "src": "made"
+  },
+  {
+   "text": "Tukang yang malas itu akhirnya diganti oleh Wati.",
+   "en": "Wati eventually replaced the lazy builder.",
+   "ko": "와티는 결국 그 게으른 인부를 바꿨어요.",
+   "blank": "malas",
+   "src": "made"
   }
  ],
  "w|malu": [
@@ -20393,6 +20761,22 @@
    "blank": "memperlakukan"
   }
  ],
+ "w|memperlambat": [
+  {
+   "text": "Obat kumur itu bisa memperlambat pertumbuhan karang gigi.",
+   "en": "That mouthwash can slow down the build-up of tartar.",
+   "ko": "그 구강 청결제는 치석이 생기는 걸 늦출 수 있어요.",
+   "blank": "memperlambat",
+   "src": "made"
+  },
+  {
+   "text": "Hujan berhari-hari memperlambat pekerjaan memasang atap baru.",
+   "en": "Days of rain slowed down the work on the new roof.",
+   "ko": "며칠 동안 내린 비 때문에 새 지붕 공사가 더뎌졌어요.",
+   "blank": "memperlambat",
+   "src": "made"
+  }
+ ],
  "w|memperlihatkan": [
   {
    "text": "Budi memperlihatkan hasil gambarnya kepada wali kelas.",
@@ -20523,6 +20907,22 @@
    "en": "Considering the risks is very important.",
    "ko": "위험을 따져 보는 건 아주 중요해.",
    "blank": "Mempertimbangkan"
+  }
+ ],
+ "w|mempesona": [
+  {
+   "text": "Senyum Agus terlihat mempesona setelah giginya diputihkan.",
+   "en": "Agus's smile looked dazzling after his teeth were whitened.",
+   "ko": "미백을 하고 나니 아구스의 미소가 눈부셨어요.",
+   "blank": "mempesona",
+   "src": "made"
+  },
+  {
+   "text": "Lantai ubin motif lama di ruang tengah terlihat mempesona setelah dicuci.",
+   "en": "The old patterned floor tiles in the main room looked stunning after being washed.",
+   "ko": "가운데 방의 옛 무늬 타일 바닥은 닦고 나니 눈부시게 예뻤어요.",
+   "blank": "mempesona",
+   "src": "made"
   }
  ],
  "w|mempunyai": [
@@ -20713,6 +21113,22 @@
    "en": "His performance was truly amazing.",
    "ko": "그의 공연이 정말 대단했어.",
    "blank": "menakjubkan"
+  }
+ ],
+ "w|menaklukkan": [
+  {
+   "text": "Hari itu Agus akhirnya berhasil menaklukkan rasa takutnya pada bor gigi.",
+   "en": "That day Agus finally managed to conquer his fear of the dental drill.",
+   "ko": "그날 아구스는 마침내 치과 드릴에 대한 두려움을 이겨 냈어요.",
+   "blank": "menaklukkan",
+   "src": "made"
+  },
+  {
+   "text": "Wati akhirnya bisa menaklukkan pintu macet yang tidak terbuka selama bertahun-tahun.",
+   "en": "Wati finally managed to conquer the stuck door that hadn't opened for years.",
+   "ko": "와티는 몇 년 동안 안 열리던 꽉 낀 문을 드디어 열어 냈어요.",
+   "blank": "menaklukkan",
+   "src": "made"
   }
  ],
  "w|menakuti": [
@@ -21944,6 +22360,22 @@
    "en": "Lestari learned how to access the digital payment app from her child.",
    "ko": "레스타리는 아이에게서 디지털 결제 앱 쓰는 법을 배웠어요.",
    "blank": "mengakses",
+   "src": "made"
+  }
+ ],
+ "w|mengaktifkan": [
+  {
+   "text": "Resepsionis meminta Agus mengaktifkan notifikasi untuk pengingat jadwal kontrol.",
+   "en": "The receptionist asked Agus to turn on notifications for appointment reminders.",
+   "ko": "접수 직원은 아구스에게 재진 알림을 받도록 알림을 켜 달라고 했어요.",
+   "blank": "mengaktifkan",
+   "src": "made"
+  },
+  {
+   "text": "Teknisi datang untuk mengaktifkan kembali sambungan listrik rumah tua itu.",
+   "en": "A technician came to reconnect the old house's electricity supply.",
+   "ko": "기술자가 와서 그 낡은 집의 전기를 다시 연결했어요.",
+   "blank": "mengaktifkan",
    "src": "made"
   }
  ],
@@ -23275,6 +23707,22 @@
    "en": "The office will send official invitations.",
    "ko": "사무실이 공식 초청장을 보낼 거야.",
    "blank": "mengirimkan"
+  }
+ ],
+ "w|mengisap": [
+  {
+   "text": "Asisten dokter memakai alat kecil untuk mengisap air liur Agus.",
+   "en": "The dental assistant used a small tool to suck up Agus's saliva.",
+   "ko": "치과 보조원이 작은 기구로 아구스의 침을 빨아들였어요.",
+   "blank": "mengisap",
+   "src": "made"
+  },
+  {
+   "text": "Wati memakai mesin penyedot untuk mengisap debu dari celah lantai kayu.",
+   "en": "Wati used a vacuum to suck the dust out of the gaps in the wooden floor.",
+   "ko": "와티는 청소기로 나무 바닥 틈의 먼지를 빨아들였어요.",
+   "blank": "mengisap",
+   "src": "made"
   }
  ],
  "w|mengisi": [
@@ -25200,6 +25648,22 @@
    "en": "That afternoon Rina put together a to-do list for her first week.",
    "ko": "그날 오후 리나는 첫 주에 할 일 목록을 정리했어요.",
    "blank": "menyusun",
+   "src": "made"
+  }
+ ],
+ "w|menyusup": [
+  {
+   "text": "Sisa makanan bisa menyusup ke celah gigi dan menyebabkan lubang.",
+   "en": "Food remains can get into the gaps between teeth and cause cavities.",
+   "ko": "음식 찌꺼기가 이 틈에 끼어 들어가 충치를 만들 수 있어요.",
+   "blank": "menyusup",
+   "src": "made"
+  },
+  {
+   "text": "Air hujan menyusup lewat celah genteng dan membasahi plafon.",
+   "en": "Rainwater seeped through the gaps in the roof tiles and soaked the ceiling.",
+   "ko": "빗물이 기와 틈으로 스며들어 천장을 적셨어요.",
+   "blank": "menyusup",
    "src": "made"
   }
  ],
@@ -27131,6 +27595,22 @@
    "en": "That child is very close to their parents.",
    "ko": "그 아이는 부모와 아주 가까워.",
    "blank": "orangtua"
+  }
+ ],
+ "w|organ": [
+  {
+   "text": "Dokter gigi bilang infeksi gusi bisa memengaruhi organ lain seperti jantung.",
+   "en": "The dentist said a gum infection can affect other organs like the heart.",
+   "ko": "치과 의사는 잇몸 염증이 심장 같은 다른 장기에도 영향을 줄 수 있다고 했어요.",
+   "blank": "organ",
+   "src": "made"
+  },
+  {
+   "text": "Di ruang tamu ada organ tua peninggalan nenek yang tidak bisa berbunyi lagi.",
+   "en": "In the living room there's an old organ left by grandmother that no longer plays.",
+   "ko": "거실에는 할머니가 남긴, 이제 소리가 안 나는 낡은 오르간이 있어요.",
+   "blank": "organ",
+   "src": "made"
   }
  ],
  "w|organisasi": [
@@ -29137,6 +29617,22 @@
    "blank": "Pendapatnya"
   }
  ],
+ "w|pendarahan": [
+  {
+   "text": "Dokter menekan gusi Agus dengan kapas untuk menghentikan pendarahan.",
+   "en": "The doctor pressed Agus's gum with cotton to stop the bleeding.",
+   "ko": "의사는 피를 멈추려고 아구스의 잇몸을 솜으로 눌렀어요.",
+   "blank": "pendarahan",
+   "src": "made"
+  },
+  {
+   "text": "Wati mengikat jarinya kuat-kuat untuk menghentikan pendarahan setelah teriris gergaji.",
+   "en": "Wati bound her finger tightly to stop the bleeding after cutting it on the saw.",
+   "ko": "와티는 톱에 손가락을 베인 뒤 피를 멈추려고 꽉 묶었어요.",
+   "blank": "pendarahan",
+   "src": "made"
+  }
+ ],
  "w|pendek": [
   {
    "text": "Cerita pendek itu sangat menarik.",
@@ -30515,6 +31011,22 @@
    "en": "This is only the first attempt, don't worry.",
    "ko": "이건 첫 시도일 뿐이니 걱정 마.",
    "blank": "percobaan"
+  }
+ ],
+ "w|percuma": [
+  {
+   "text": "Kata dokter, sikat gigi keras-keras itu percuma kalau tidak pakai benang gigi.",
+   "en": "The dentist said brushing hard is pointless if you don't floss.",
+   "ko": "의사는 치실을 안 쓰면 세게 양치해도 소용없다고 했어요.",
+   "blank": "percuma",
+   "src": "made"
+  },
+  {
+   "text": "Mengecat ulang tembok itu percuma kalau rembesan air belum diperbaiki.",
+   "en": "Repainting the wall is pointless if the water seepage hasn't been fixed.",
+   "ko": "물이 새는 걸 고치지 않으면 벽을 다시 칠해도 소용없어요.",
+   "blank": "percuma",
+   "src": "made"
   }
  ],
  "w|perdagangan": [
@@ -32571,6 +33083,22 @@
    "en": "They are working on a project together.",
    "ko": "그들은 프로젝트를 함께 하고 있어.",
    "blank": "proyek"
+  }
+ ],
+ "w|psikiater": [
+  {
+   "text": "Kakak Agus bekerja sebagai psikiater di rumah sakit yang sama.",
+   "en": "Agus's older sibling works as a psychiatrist at the same hospital.",
+   "ko": "아구스의 형은 같은 병원에서 정신건강의학과 의사로 일해요.",
+   "blank": "psikiater",
+   "src": "made"
+  },
+  {
+   "text": "Wati menemukan kartu nama seorang psikiater terselip di laci meja tua.",
+   "en": "Wati found a psychiatrist's business card tucked in an old desk drawer.",
+   "ko": "와티는 낡은 책상 서랍에 끼워진 정신과 의사 명함을 발견했어요.",
+   "blank": "psikiater",
+   "src": "made"
   }
  ],
  "w|puas": [
@@ -36485,6 +37013,22 @@
    "blank": "serta"
   }
  ],
+ "w|seru": [
+  {
+   "text": "Video kartun di ruang tunggu cukup seru sampai anak-anak lupa takut.",
+   "en": "The cartoon in the waiting room is fun enough that the children forget to be scared.",
+   "ko": "대기실 만화가 재미있어서 아이들이 무서운 것도 잊어요.",
+   "blank": "seru",
+   "src": "made"
+  },
+  {
+   "text": "Mencari barang antik di gudang belakang ternyata seru sekali.",
+   "en": "Searching for antiques in the back shed turned out to be great fun.",
+   "ko": "뒤쪽 창고에서 골동품을 찾는 건 알고 보니 정말 재미있었어요.",
+   "blank": "seru",
+   "src": "made"
+  }
+ ],
  "w|sesaat": [
   {
    "text": "Dia terdiam sesaat sebelum menjawab.",
@@ -38719,6 +39263,22 @@
    "blank": "Tegang"
   }
  ],
+ "w|tegas": [
+  {
+   "text": "Dokter gigi itu ramah tapi tegas soal larangan merokok setelah cabut gigi.",
+   "en": "The dentist is friendly but firm about not smoking after an extraction.",
+   "ko": "그 치과 의사는 친절하지만 발치 후 금연에 대해선 단호해요.",
+   "blank": "tegas",
+   "src": "made"
+  },
+  {
+   "text": "Wati bersikap tegas kepada tukang yang sering datang terlambat.",
+   "en": "Wati is firm with the builder who often comes late.",
+   "ko": "와티는 자주 늦는 인부에게 단호하게 대해요.",
+   "blank": "tegas",
+   "src": "made"
+  }
+ ],
  "w|teh": [
   {
    "text": "Mau minum teh hangat?",
@@ -39043,6 +39603,38 @@
    "en": "He was lost in his own thoughts.",
    "ko": "그는 자기 생각에 잠겼어.",
    "blank": "tenggelam"
+  }
+ ],
+ "w|tenggorokan": [
+  {
+   "text": "Dokter gigi juga melihat tenggorokan Agus yang tampak merah.",
+   "en": "The dentist also looked at Agus's throat, which looked red.",
+   "ko": "치과 의사는 빨갛게 부은 아구스의 목구멍도 살펴봤어요.",
+   "blank": "tenggorokan",
+   "src": "made"
+  },
+  {
+   "text": "Debu semen membuat tenggorokan Wati terasa kering.",
+   "en": "The cement dust made Wati's throat feel dry.",
+   "ko": "시멘트 가루 때문에 와티의 목이 칼칼했어요.",
+   "blank": "tenggorokan",
+   "src": "made"
+  }
+ ],
+ "w|tengkorak": [
+  {
+   "text": "Di ruang praktik ada model tengkorak untuk menjelaskan posisi gigi.",
+   "en": "In the clinic there's a model skull for explaining the position of the teeth.",
+   "ko": "진료실에는 치아 위치를 설명하는 두개골 모형이 있어요.",
+   "blank": "tengkorak",
+   "src": "made"
+  },
+  {
+   "text": "Wati menemukan tengkorak burung kecil di loteng rumah tua itu.",
+   "en": "Wati found a small bird skull in the attic of the old house.",
+   "ko": "와티는 그 낡은 집 다락방에서 작은 새의 두개골을 발견했어요.",
+   "blank": "tengkorak",
+   "src": "made"
   }
  ],
  "w|tentang": [
@@ -40205,6 +40797,22 @@
    "blank": "terpisah"
   }
  ],
+ "w|terputus": [
+  {
+   "text": "Panggilan video dengan dokter sempat terputus karena sinyal lemah.",
+   "en": "The video call with the doctor cut out because of a weak signal.",
+   "ko": "신호가 약해서 의사와의 영상 통화가 끊겼어요.",
+   "blank": "terputus",
+   "src": "made"
+  },
+  {
+   "text": "Aliran air ke rumah Wati terputus selama pipa diganti.",
+   "en": "The water supply to Wati's house was cut off while the pipes were replaced.",
+   "ko": "배관을 바꾸는 동안 와티네 집 물이 끊겼어요.",
+   "blank": "terputus",
+   "src": "made"
+  }
+ ],
  "w|tersangka": [
   {
    "text": "Tersangka dibawa ke kantor polisi.",
@@ -41153,6 +41761,22 @@
    "src": "made"
   }
  ],
+ "w|trauma": [
+  {
+   "text": "Agus punya trauma ke dokter gigi sejak dicabut giginya waktu kecil.",
+   "en": "Agus has had a fear of dentists ever since he had a tooth pulled as a child.",
+   "ko": "아구스는 어릴 때 이를 뽑은 뒤로 치과에 대한 트라우마가 있어요.",
+   "blank": "trauma",
+   "src": "made"
+  },
+  {
+   "text": "Setelah atap ambruk tahun lalu, Wati masih punya sedikit trauma tiap hujan deras.",
+   "en": "Since the roof collapsed last year, Wati still feels a little traumatised every time it pours.",
+   "ko": "작년에 지붕이 무너진 뒤로 와티는 비가 세게 올 때마다 아직 좀 겁이 나요.",
+   "blank": "trauma",
+   "src": "made"
+  }
+ ],
  "w|trik": [
   {
    "text": "Trik sulapnya membuat anak-anak kagum.",
@@ -41319,6 +41943,22 @@
    "en": "That dog is chewing a big bone.",
    "ko": "그 개는 큰 뼈를 물어뜯고 있어.",
    "blank": "tulang"
+  }
+ ],
+ "w|tuli": [
+  {
+   "text": "Kakek Agus agak tuli, jadi dokter harus bicara keras.",
+   "en": "Agus's grandfather is a bit deaf, so the doctor has to speak loudly.",
+   "ko": "아구스의 할아버지는 귀가 좀 어두워서 의사가 크게 말해야 해요.",
+   "blank": "tuli",
+   "src": "made"
+  },
+  {
+   "text": "Tetangga sebelah yang sudah tuli tidak terganggu suara palu dari rumah Wati.",
+   "en": "The deaf neighbour next door isn't bothered by the hammering from Wati's house.",
+   "ko": "귀가 들리지 않는 옆집 이웃은 와티네 망치 소리에도 아무렇지 않아요.",
+   "blank": "tuli",
+   "src": "made"
   }
  ],
  "w|tulisan": [
