@@ -253,6 +253,22 @@
    "blank": "accaduto"
   }
  ],
+ "w|accampamento": [
+  {
+   "text": "Per un reportage Simone passa la notte in un accampamento di scout.",
+   "en": "For a report Simone spends the night in a scout camp.",
+   "ko": "취재를 위해 시모네는 스카우트 야영지에서 밤을 보내요.",
+   "blank": "accampamento",
+   "src": "made"
+  },
+  {
+   "text": "Per il ritiro aziendale, Anna organizza un accampamento in tenda vicino al lago.",
+   "en": "For the company retreat, Anna organises a tent camp by the lake.",
+   "ko": "회사 워크숍으로 안나는 호숫가 텐트 야영을 준비해요.",
+   "blank": "accampamento",
+   "src": "made"
+  }
+ ],
  "w|accanto": [
   {
    "text": "Siediti accanto a me.",
@@ -761,6 +777,38 @@
    "en": "He threw the coat on quickly.",
    "ko": "그는 서둘러 코트를 걸쳤어.",
    "blank": "addosso"
+  }
+ ],
+ "w|adeguato": [
+  {
+   "text": "Simone cerca una foto adeguata per la notizia del ponte.",
+   "en": "Simone looks for a suitable photo for the bridge story.",
+   "ko": "시모네는 다리 소식에 맞는 사진을 찾아요.",
+   "blank": "adeguata",
+   "src": "made"
+  },
+  {
+   "text": "Anna cerca un ufficio adeguato per dieci persone.",
+   "en": "Anna is looking for an office suitable for ten people.",
+   "ko": "안나는 열 명이 쓰기 알맞은 사무실을 찾아요.",
+   "blank": "adeguato",
+   "src": "made"
+  }
+ ],
+ "w|adesivo": [
+  {
+   "text": "Sul portatile di Simone c'è un adesivo con il logo del giornale.",
+   "en": "On Simone's laptop there's a sticker with the newspaper's logo.",
+   "ko": "시모네의 노트북에는 신문사 로고 스티커가 붙어 있어요.",
+   "blank": "adesivo",
+   "src": "made"
+  },
+  {
+   "text": "La startup di Anna regala un adesivo a ogni nuovo cliente.",
+   "en": "Anna's startup gives a sticker to every new customer.",
+   "ko": "안나의 스타트업은 새 고객마다 스티커를 하나씩 줘요.",
+   "blank": "adesivo",
+   "src": "made"
   }
  ],
  "w|adesso": [
@@ -3415,6 +3463,22 @@
    "blank": "articolo"
   }
  ],
+ "w|artificiale": [
+  {
+   "text": "Simone scrive un articolo sull'intelligenza artificiale nelle scuole.",
+   "en": "Simone writes an article on artificial intelligence in schools.",
+   "ko": "시모네는 학교 속 인공지능에 관한 기사를 써요.",
+   "blank": "artificiale",
+   "src": "made"
+  },
+  {
+   "text": "La pianta nell'ufficio di Anna è artificiale, ma tutti la innaffiano per scherzo.",
+   "en": "The plant in Anna's office is artificial, but everyone waters it as a joke.",
+   "ko": "안나 사무실의 화분은 조화인데, 다들 장난으로 물을 줘요.",
+   "blank": "artificiale",
+   "src": "made"
+  }
+ ],
  "w|artista": [
   {
    "text": "Quell'artista espone le sue opere in città.",
@@ -4771,6 +4835,22 @@
    "blank": "avvocato"
   }
  ],
+ "w|avvolgere": [
+  {
+   "text": "In redazione Simone si avvolge la sciarpa al collo, perché il riscaldamento è rotto.",
+   "en": "In the newsroom Simone wraps his scarf around his neck, because the heating is broken.",
+   "ko": "편집실 난방이 고장 나서 시모네는 목에 목도리를 감아요.",
+   "blank": "avvolge",
+   "src": "made"
+  },
+  {
+   "text": "Anna avvolge il cavo del caricatore prima di uscire dall'ufficio.",
+   "en": "Anna winds up her charger cable before leaving the office.",
+   "ko": "안나는 사무실을 나서기 전에 충전기 선을 감아요.",
+   "blank": "avvolge",
+   "src": "made"
+  }
+ ],
  "w|azienda": [
   {
    "text": "Lavoro in un'azienda di software da tre anni.",
@@ -5107,6 +5187,22 @@
    "en": "The bank closes at four.",
    "ko": "은행은 네 시에 닫아.",
    "blank": "banca"
+  }
+ ],
+ "w|bancarotta": [
+  {
+   "text": "Simone scrive della bancarotta di una storica pasticceria del centro.",
+   "en": "Simone writes about the bankruptcy of a historic pastry shop downtown.",
+   "ko": "시모네는 시내 오래된 제과점의 파산에 대해 써요.",
+   "blank": "bancarotta",
+   "src": "made"
+  },
+  {
+   "text": "Anna teme la bancarotta se il nuovo finanziamento non arriva entro l'estate.",
+   "en": "Anna fears bankruptcy if the new funding doesn't come through by summer.",
+   "ko": "안나는 새 투자가 여름까지 안 들어오면 파산할까 봐 걱정해요.",
+   "blank": "bancarotta",
+   "src": "made"
   }
  ],
  "w|banco": [
@@ -6181,6 +6277,22 @@
    "en": "The bottle is almost empty.",
    "ko": "병이 거의 비었어.",
    "blank": "bottiglia"
+  }
+ ],
+ "w|bottino": [
+  {
+   "text": "La polizia ha ritrovato il bottino della rapina in un garage, scrive Simone.",
+   "en": "The police found the loot from the robbery in a garage, Simone writes.",
+   "ko": "시모네는 경찰이 강도 사건의 장물을 차고에서 찾았다고 써요.",
+   "blank": "bottino",
+   "src": "made"
+  },
+  {
+   "text": "Nel videogioco della startup di Anna, i pirati si dividono il bottino.",
+   "en": "In the video game from Anna's startup, the pirates share out the loot.",
+   "ko": "안나 스타트업의 게임에서는 해적들이 전리품을 나눠 가져요.",
+   "blank": "bottino",
+   "src": "made"
   }
  ],
  "w|bottone": [
@@ -11925,6 +12037,22 @@
    "src": "made"
   }
  ],
+ "w|contributo": [
+  {
+   "text": "Il giornale ringrazia i lettori per il loro contributo, scrive Simone nell'editoriale.",
+   "en": "The paper thanks readers for their contribution, Simone writes in the editorial.",
+   "ko": "시모네는 사설에 독자들의 기여에 감사한다고 써요.",
+   "blank": "contributo",
+   "src": "made"
+  },
+  {
+   "text": "Il contributo di Anna al progetto open source è stato accettato.",
+   "en": "Anna's contribution to the open-source project was accepted.",
+   "ko": "오픈 소스 프로젝트에 낸 안나의 기여가 받아들여졌어요.",
+   "blank": "contributo",
+   "src": "made"
+  }
+ ],
  "w|contro": [
   {
    "text": "Non ho nulla contro di te.",
@@ -12539,6 +12667,22 @@
    "en": "It's no small matter.",
    "ko": "작은 일이 아니야.",
    "blank": "cosa"
+  }
+ ],
+ "w|cosciente": [
+  {
+   "text": "Simone è cosciente che un errore in prima pagina costerebbe caro.",
+   "en": "Simone is aware that a mistake on the front page would cost dearly.",
+   "ko": "시모네는 일면에 실수가 나면 큰일이라는 걸 알고 있어요.",
+   "blank": "cosciente",
+   "src": "made"
+  },
+  {
+   "text": "Anna è cosciente che il prodotto ha ancora qualche bug.",
+   "en": "Anna is aware that the product still has a few bugs.",
+   "ko": "안나는 제품에 아직 버그가 좀 있다는 걸 알고 있어요.",
+   "blank": "cosciente",
+   "src": "made"
   }
  ],
  "w|coscienza": [
@@ -18011,6 +18155,22 @@
    "src": "made"
   }
  ],
+ "w|estrazione": [
+  {
+   "text": "Il pezzo di Simone parla dell'estrazione del marmo nelle cave di montagna.",
+   "en": "Simone's piece is about marble quarrying in the mountain quarries.",
+   "ko": "시모네의 기사는 산속 채석장의 대리석 채굴을 다뤄요.",
+   "blank": "estrazione",
+   "src": "made"
+  },
+  {
+   "text": "Il programma di Anna velocizza l'estrazione dei dati dai documenti.",
+   "en": "Anna's program speeds up data extraction from documents.",
+   "ko": "안나의 프로그램은 문서에서 자료를 뽑아내는 속도를 높여요.",
+   "blank": "estrazione",
+   "src": "made"
+  }
+ ],
  "w|estremamente": [
   {
    "text": "Il film era estremamente noioso.",
@@ -20025,6 +20185,22 @@
    "en": "This fork fell on the floor.",
    "ko": "이 포크가 바닥에 떨어졌어.",
    "blank": "forchetta"
+  }
+ ],
+ "w|forense": [
+  {
+   "text": "Secondo la perizia forense citata da Simone, l'incendio è partito dalla cucina.",
+   "en": "According to the forensic report Simone quotes, the fire started in the kitchen.",
+   "ko": "시모네가 인용한 법의학 감정에 따르면 불은 부엌에서 시작됐어요.",
+   "blank": "forense",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente di Anna è un laboratorio di analisi forense.",
+   "en": "One of Anna's clients is a forensic analysis lab.",
+   "ko": "안나의 고객 중 하나는 법의학 분석 연구소예요.",
+   "blank": "forense",
+   "src": "made"
   }
  ],
  "w|foresta": [
@@ -22105,6 +22281,22 @@
    "blank": "giustizia"
   }
  ],
+ "w|giustiziare": [
+  {
+   "text": "Simone scrive una recensione di un romanzo storico in cui il re fa giustiziare un traditore.",
+   "en": "Simone reviews a historical novel in which the king has a traitor executed.",
+   "ko": "시모네는 왕이 배신자를 처형하는 역사 소설의 서평을 써요.",
+   "blank": "giustiziare",
+   "src": "made"
+  },
+  {
+   "text": "Nel gioco storico di Anna, il giocatore deve evitare che la regina faccia giustiziare l'eroe.",
+   "en": "In Anna's history game, the player must stop the queen from having the hero executed.",
+   "ko": "안나의 역사 게임에서 플레이어는 여왕이 주인공을 처형하지 못하게 막아야 해요.",
+   "blank": "giustiziare",
+   "src": "made"
+  }
+ ],
  "w|giusto": [
   {
    "text": "Mi sembra giusto così.",
@@ -23171,6 +23363,22 @@
    "src": "made"
   }
  ],
+ "w|immenso": [
+  {
+   "text": "Simone resta colpito dall'archivio immenso nel seminterrato del giornale.",
+   "en": "Simone is struck by the immense archive in the newspaper's basement.",
+   "ko": "시모네는 신문사 지하의 어마어마한 자료실에 놀라요.",
+   "blank": "immenso",
+   "src": "made"
+  },
+  {
+   "text": "Anna prova una gioia immensa quando l'app supera i mille utenti.",
+   "en": "Anna feels immense joy when the app passes a thousand users.",
+   "ko": "앱 사용자가 천 명을 넘자 안나는 엄청난 기쁨을 느껴요.",
+   "blank": "immensa",
+   "src": "made"
+  }
+ ],
  "w|immigrazione": [
   {
    "text": "In classe Andrea fa una ricerca sulla storia dell'immigrazione italiana in America.",
@@ -23515,6 +23723,22 @@
    "blank": "impossibile"
   }
  ],
+ "w|impostore": [
+  {
+   "text": "Un lettore segnala a Simone un impostore che si finge giornalista.",
+   "en": "A reader tells Simone about an impostor pretending to be a journalist.",
+   "ko": "한 독자가 기자 행세를 하는 사기꾼을 시모네에게 알려 줘요.",
+   "blank": "impostore",
+   "src": "made"
+  },
+  {
+   "text": "Anna scopre che il presunto esperto di marketing è un impostore.",
+   "en": "Anna discovers that the so-called marketing expert is an impostor.",
+   "ko": "안나는 마케팅 전문가라던 사람이 사기꾼이라는 걸 알게 돼요.",
+   "blank": "impostore",
+   "src": "made"
+  }
+ ],
  "w|impresa": [
   {
    "text": "La nuova impresa cerca giovani talenti.",
@@ -23661,6 +23885,22 @@
    "en": "See you in the square.",
    "ko": "광장에서 보자.",
    "blank": "in"
+  }
+ ],
+ "w|inaugurazione": [
+  {
+   "text": "Simone va all'inaugurazione del nuovo museo per scattare qualche foto.",
+   "en": "Simone goes to the opening of the new museum to take some photos.",
+   "ko": "시모네는 새 박물관 개관식에 가서 사진을 몇 장 찍어요.",
+   "blank": "inaugurazione",
+   "src": "made"
+  },
+  {
+   "text": "Anna invita tutti gli amici all'inaugurazione del nuovo ufficio.",
+   "en": "Anna invites all her friends to the opening of the new office.",
+   "ko": "안나는 새 사무실 개소식에 친구들을 모두 초대해요.",
+   "blank": "inaugurazione",
+   "src": "made"
   }
  ],
  "w|incantesimo": [
@@ -24026,6 +24266,22 @@
    "en": "Sara has a small independent stall where she sells mountain cheeses.",
    "ko": "사라는 산지 치즈를 파는 작은 개인 노점을 해요.",
    "blank": "indipendente",
+   "src": "made"
+  }
+ ],
+ "w|indipendenza": [
+  {
+   "text": "Simone è orgoglioso dell'indipendenza del suo giornale dagli sponsor.",
+   "en": "Simone is proud of his paper's independence from sponsors.",
+   "ko": "시모네는 신문이 광고주에게서 독립적인 게 자랑스러워요.",
+   "blank": "indipendenza",
+   "src": "made"
+  },
+  {
+   "text": "Anna ha lasciato il posto fisso per avere più indipendenza.",
+   "en": "Anna left her permanent job to have more independence.",
+   "ko": "안나는 더 자유롭게 일하려고 정규직을 그만뒀어요.",
+   "blank": "indipendenza",
    "src": "made"
   }
  ],
@@ -24761,6 +25017,22 @@
    "src": "made"
   }
  ],
+ "w|insegnamento": [
+  {
+   "text": "Per Simone l'insegnamento più utile del vecchio direttore è controllare sempre le fonti.",
+   "en": "For Simone the most useful lesson from the old editor is to always check sources.",
+   "ko": "시모네에게 옛 편집장의 가장 쓸모 있는 가르침은 늘 출처를 확인하라는 거예요.",
+   "blank": "insegnamento",
+   "src": "made"
+  },
+  {
+   "text": "Prima della startup, Anna ha lavorato nell'insegnamento per qualche anno.",
+   "en": "Before the startup, Anna worked in teaching for a few years.",
+   "ko": "스타트업 전에 안나는 몇 년 동안 교직에 있었어요.",
+   "blank": "insegnamento",
+   "src": "made"
+  }
+ ],
  "w|insegnante": [
   {
    "text": "La mia insegnante è molto paziente.",
@@ -25061,6 +25333,22 @@
    "blank": "intenzione"
   }
  ],
+ "w|intercettare": [
+  {
+   "text": "Simone riesce a intercettare il ministro all'uscita della conferenza.",
+   "en": "Simone manages to catch the minister on the way out of the conference.",
+   "ko": "시모네는 회의장을 나서는 장관을 붙잡는 데 성공해요.",
+   "blank": "intercettare",
+   "src": "made"
+  },
+  {
+   "text": "Il software di Anna sa intercettare le email sospette prima che arrivino.",
+   "en": "Anna's software can intercept suspicious emails before they arrive.",
+   "ko": "안나의 소프트웨어는 수상한 이메일을 도착 전에 가로챌 수 있어요.",
+   "blank": "intercettare",
+   "src": "made"
+  }
+ ],
  "w|interessante": [
   {
    "text": "Il libro è davvero interessante.",
@@ -25202,6 +25490,22 @@
    "en": "Anna has to decipher her husband's handwriting on the order list.",
    "ko": "안나는 주문 목록에 쓴 남편 글씨를 알아봐야 해요.",
    "blank": "interpretare",
+   "src": "made"
+  }
+ ],
+ "w|interpretazione": [
+  {
+   "text": "Il caporedattore contesta l'interpretazione dei dati che Simone ha dato nell'articolo.",
+   "en": "The editor-in-chief challenges Simone's interpretation of the data in the article.",
+   "ko": "편집장은 시모네가 기사에서 한 자료 해석에 이의를 제기해요.",
+   "blank": "interpretazione",
+   "src": "made"
+  },
+  {
+   "text": "Anna e il socio hanno un'interpretazione diversa dei dati di vendita.",
+   "en": "Anna and her partner have a different interpretation of the sales data.",
+   "ko": "안나와 동업자는 판매 자료를 다르게 해석해요.",
+   "blank": "interpretazione",
    "src": "made"
   }
  ],
@@ -26755,6 +27059,22 @@
    "en": "I need to free up some space.",
    "ko": "공간을 좀 비워야 해.",
    "blank": "liberare"
+  }
+ ],
+ "w|liberazione": [
+  {
+   "text": "Il numero speciale di Simone ricorda la liberazione della città con vecchie foto.",
+   "en": "Simone's special issue commemorates the town's liberation with old photos.",
+   "ko": "시모네의 특별호는 옛 사진으로 도시 해방을 기려요.",
+   "blank": "liberazione",
+   "src": "made"
+  },
+  {
+   "text": "Per Anna, finire il codice prima di Natale è stata una vera liberazione.",
+   "en": "For Anna, finishing the code before Christmas was a real relief.",
+   "ko": "안나에게 크리스마스 전에 코드를 끝낸 건 정말 해방감이었어요.",
+   "blank": "liberazione",
+   "src": "made"
   }
  ],
  "w|libero": [
@@ -28618,6 +28938,22 @@
    "en": "Francesca helps a university freshman choose seasonal fruit.",
    "ko": "프란체스카는 대학 신입생이 제철 과일 고르는 걸 도와줘요.",
    "blank": "matricola",
+   "src": "made"
+  }
+ ],
+ "w|matrimoniale": [
+  {
+   "text": "Simone segue un caso di truffa matrimoniale finito in tribunale.",
+   "en": "Simone covers a marriage fraud case that ended up in court.",
+   "ko": "시모네는 법정까지 간 결혼 사기 사건을 취재해요.",
+   "blank": "matrimoniale",
+   "src": "made"
+  },
+  {
+   "text": "Anna sviluppa un'app per trovare il letto matrimoniale giusto.",
+   "en": "Anna is developing an app for finding the right double bed.",
+   "ko": "안나는 딱 맞는 더블 침대를 찾는 앱을 개발해요.",
+   "blank": "matrimoniale",
    "src": "made"
   }
  ],
@@ -30927,6 +31263,22 @@
    "src": "made"
   }
  ],
+ "w|necessariamente": [
+  {
+   "text": "Un titolo lungo non è necessariamente un titolo migliore, spiega Simone allo stagista.",
+   "en": "A long headline isn't necessarily a better one, Simone explains to the intern.",
+   "ko": "긴 제목이 꼭 더 좋은 건 아니라고 시모네가 인턴에게 설명해요.",
+   "blank": "necessariamente",
+   "src": "made"
+  },
+  {
+   "text": "Per Anna lavorare tanto non significa necessariamente lavorare bene.",
+   "en": "For Anna working a lot doesn't necessarily mean working well.",
+   "ko": "안나에게 많이 일하는 게 꼭 잘 일하는 건 아니에요.",
+   "blank": "necessariamente",
+   "src": "made"
+  }
+ ],
  "w|necessario": [
   {
    "text": "Non è necessario arrivare così presto.",
@@ -30939,6 +31291,22 @@
    "en": "Pack only the essentials in the suitcase.",
    "ko": "캐리어에는 꼭 필요한 것만 넣어.",
    "blank": "necessario"
+  }
+ ],
+ "w|necessitare": [
+  {
+   "text": "Il pezzo di Simone necessita di un titolo più corto, dice il caporedattore.",
+   "en": "Simone's article needs a shorter headline, says the editor-in-chief.",
+   "ko": "편집장은 시모네의 기사에 더 짧은 제목이 필요하다고 해요.",
+   "blank": "necessita",
+   "src": "made"
+  },
+  {
+   "text": "Il progetto di Anna necessita di più server prima del lancio.",
+   "en": "Anna's project needs more servers before the launch.",
+   "ko": "안나의 프로젝트는 출시 전에 서버가 더 필요해요.",
+   "blank": "necessita",
+   "src": "made"
   }
  ],
  "w|negare": [
@@ -32217,6 +32585,22 @@
    "blank": "okay"
   }
  ],
+ "w|olandese": [
+  {
+   "text": "Per la pagina della cultura, Simone visita una mostra di pittura olandese.",
+   "en": "For the culture page, Simone visits an exhibition of Dutch painting.",
+   "ko": "문화면을 위해 시모네는 네덜란드 회화 전시를 보러 가요.",
+   "blank": "olandese",
+   "src": "made"
+  },
+  {
+   "text": "Il primo investitore di Anna è una società olandese.",
+   "en": "Anna's first investor is a Dutch company.",
+   "ko": "안나의 첫 투자자는 네덜란드 회사예요.",
+   "blank": "olandese",
+   "src": "made"
+  }
+ ],
  "w|olio": [
   {
    "text": "Aggiungi un filo d'olio all'insalata.",
@@ -32730,6 +33114,22 @@
    "en": "In the book Laura reads by the fire, an orphan finds a new family in the mountains.",
    "ko": "라우라가 난롯가에서 읽는 책에서 한 고아가 산에서 새 가족을 만나요.",
    "blank": "orfano",
+   "src": "made"
+  }
+ ],
+ "w|orfanotrofio": [
+  {
+   "text": "Simone racconta la storia di un vecchio orfanotrofio diventato biblioteca.",
+   "en": "Simone tells the story of an old orphanage that became a library.",
+   "ko": "시모네는 도서관이 된 옛 고아원 이야기를 전해요.",
+   "blank": "orfanotrofio",
+   "src": "made"
+  },
+  {
+   "text": "La startup di Anna dona vecchi computer a un orfanotrofio della città.",
+   "en": "Anna's startup donates old computers to an orphanage in the city.",
+   "ko": "안나의 스타트업은 시내 고아원에 옛 컴퓨터를 기부해요.",
+   "blank": "orfanotrofio",
    "src": "made"
   }
  ],
@@ -33576,6 +33976,22 @@
    "en": "After the night shift, Francesca is pale and needs to sleep.",
    "ko": "야간 근무 후에 프란체스카는 창백하고 잠이 필요해요.",
    "blank": "pallida",
+   "src": "made"
+  }
+ ],
+ "w|pallina": [
+  {
+   "text": "Sulla scrivania di Simone c'è una pallina antistress tutta morsicata.",
+   "en": "On Simone's desk there's a stress ball that's been chewed all over.",
+   "ko": "시모네의 책상 위에는 여기저기 깨문 자국이 있는 스트레스 공이 있어요.",
+   "blank": "pallina",
+   "src": "made"
+  },
+  {
+   "text": "Mentre pensa, Anna fa rimbalzare una pallina da tennis contro il muro.",
+   "en": "While thinking, Anna bounces a tennis ball against the wall.",
+   "ko": "생각하는 동안 안나는 테니스공을 벽에 튀겨요.",
+   "blank": "pallina",
    "src": "made"
   }
  ],
@@ -35881,6 +36297,22 @@
    "en": "We try to use less plastic at home.",
    "ko": "집에서는 플라스틱을 덜 쓰려고 해.",
    "blank": "plastica"
+  }
+ ],
+ "w|plotone": [
+  {
+   "text": "Per l'anniversario, Simone intervista un ex soldato del plotone che liberò la città.",
+   "en": "For the anniversary, Simone interviews a former soldier from the platoon that freed the town.",
+   "ko": "기념일을 맞아 시모네는 도시를 해방한 소대의 옛 병사를 인터뷰해요.",
+   "blank": "plotone",
+   "src": "made"
+  },
+  {
+   "text": "Un plotone di nuovi stagisti entra nell'ufficio di Anna lunedì.",
+   "en": "A platoon of new interns walks into Anna's office on Monday.",
+   "ko": "월요일에 새 인턴 한 무리가 안나의 사무실로 들어와요.",
+   "blank": "plotone",
+   "src": "made"
   }
  ],
  "w|po'": [
@@ -39529,6 +39961,22 @@
    "src": "made"
   }
  ],
+ "w|rango": [
+  {
+   "text": "In redazione nessuno bada al rango, e Simone dà del tu anche al direttore.",
+   "en": "In the newsroom nobody cares about rank, and Simone is on first-name terms even with the editor.",
+   "ko": "편집실에서는 아무도 서열을 따지지 않아서 시모네는 편집장에게도 말을 놓아요.",
+   "blank": "rango",
+   "src": "made"
+  },
+  {
+   "text": "Nell'app di Anna, i giocatori salgono di rango completando le sfide.",
+   "en": "In Anna's app, players rise in rank by completing challenges.",
+   "ko": "안나의 앱에서는 도전을 마치면 등급이 올라가요.",
+   "blank": "rango",
+   "src": "made"
+  }
+ ],
  "w|rapidamente": [
   {
    "text": "Quando il giudice è entrato, Andrea si è alzato rapidamente in piedi.",
@@ -40343,6 +40791,22 @@
    "blank": "reputazione"
   }
  ],
+ "w|residente": [
+  {
+   "text": "Ogni residente del quartiere ha scritto a Simone per lamentarsi del rumore.",
+   "en": "Every resident of the neighbourhood wrote to Simone to complain about the noise.",
+   "ko": "동네 주민 모두가 소음 때문에 시모네에게 항의 편지를 보냈어요.",
+   "blank": "residente",
+   "src": "made"
+  },
+  {
+   "text": "Per avere lo sconto sull'affitto, Anna deve essere residente nel comune.",
+   "en": "To get the rent discount, Anna has to be a resident of the town.",
+   "ko": "임대료 할인을 받으려면 안나는 그 시의 주민이어야 해요.",
+   "blank": "residente",
+   "src": "made"
+  }
+ ],
  "w|resistenza": [
   {
    "text": "La resistenza del materiale è sorprendente.",
@@ -40467,6 +40931,22 @@
    "en": "I'll do the rest tomorrow.",
    "ko": "나머지는 내일 할게.",
    "blank": "resto"
+  }
+ ],
+ "w|restringere": [
+  {
+   "text": "Per far entrare la pubblicità, Simone deve restringere la colonna dello sport.",
+   "en": "To fit the advert in, Simone has to narrow the sports column.",
+   "ko": "광고를 넣으려고 시모네는 스포츠 칸을 줄여야 해요.",
+   "blank": "restringere",
+   "src": "made"
+  },
+  {
+   "text": "Per finire in tempo, Anna decide di restringere le funzioni della prima versione.",
+   "en": "To finish on time, Anna decides to narrow down the features of the first version.",
+   "ko": "제때 끝내려고 안나는 첫 버전의 기능을 줄이기로 해요.",
+   "blank": "restringere",
+   "src": "made"
   }
  ],
  "w|rete": [
@@ -41769,6 +42249,22 @@
    "src": "made"
   }
  ],
+ "w|rispettabile": [
+  {
+   "text": "Simone intervista un signore rispettabile che dirige la banda del paese.",
+   "en": "Simone interviews a respectable gentleman who leads the town band.",
+   "ko": "시모네는 마을 악단을 이끄는 점잖은 신사를 인터뷰해요.",
+   "blank": "rispettabile",
+   "src": "made"
+  },
+  {
+   "text": "Gli investitori trovano rispettabile il piano di Anna, anche se rischioso.",
+   "en": "The investors find Anna's plan respectable, even if risky.",
+   "ko": "투자자들은 안나의 계획이 위험하긴 해도 꽤 괜찮다고 봐요.",
+   "blank": "rispettabile",
+   "src": "made"
+  }
+ ],
  "w|rispettare": [
   {
    "text": "Dobbiamo rispettare le regole del gioco.",
@@ -42164,6 +42660,22 @@
    "en": "Before the race the mayor addressed a greeting to the runners, and Laura applauded.",
    "ko": "경기 전에 시장이 주자들에게 인사말을 하자 라우라가 박수를 쳤어요.",
    "blank": "rivolto",
+   "src": "made"
+  }
+ ],
+ "w|rivoltare": [
+  {
+   "text": "L'inizio non funziona, così Simone decide di rivoltare l'articolo come un calzino.",
+   "en": "The opening doesn't work, so Simone decides to turn the article completely inside out.",
+   "ko": "도입부가 별로라서 시모네는 기사를 완전히 뜯어고치기로 해요.",
+   "blank": "rivoltare",
+   "src": "made"
+  },
+  {
+   "text": "In pausa pranzo, Anna aiuta un collega a rivoltare la frittata nella cucina comune.",
+   "en": "At lunch break, Anna helps a colleague flip the omelette in the shared kitchen.",
+   "ko": "점심시간에 안나는 공용 부엌에서 동료가 프리타타를 뒤집는 걸 도와줘요.",
+   "blank": "rivoltare",
    "src": "made"
   }
  ],
@@ -43711,6 +44223,22 @@
    "blank": "schifoso"
   }
  ],
+ "w|schizzare": [
+  {
+   "text": "Simone versa il caffè troppo in fretta e fa schizzare macchie sulle bozze.",
+   "en": "Simone pours his coffee too quickly and splashes stains on the proofs.",
+   "ko": "시모네가 커피를 너무 급하게 따르다가 교정쇄에 얼룩을 튀겨요.",
+   "blank": "schizzare",
+   "src": "made"
+  },
+  {
+   "text": "Quando arriva il primo ordine, Anna fa schizzare via la sedia per l'entusiasmo.",
+   "en": "When the first order arrives, Anna sends her chair flying with excitement.",
+   "ko": "첫 주문이 들어오자 안나는 신이 나서 의자를 박차고 일어나요.",
+   "blank": "schizzare",
+   "src": "made"
+  }
+ ],
  "w|sciarpa": [
   {
    "text": "Indossa la sciarpa prima di uscire.",
@@ -43779,6 +44307,22 @@
    "en": "Kids love watching the monkeys at the zoo.",
    "ko": "아이들은 동물원에서 원숭이 보는 걸 좋아해.",
    "blank": "scimmie"
+  }
+ ],
+ "w|scintilla": [
+  {
+   "text": "Dopo una discussione con il fotografo, Simone sente la scintilla per una nuova inchiesta.",
+   "en": "After a talk with the photographer, Simone feels the spark for a new investigation.",
+   "ko": "사진기자와 이야기한 뒤 시모네는 새 탐사 보도에 대한 불꽃을 느껴요.",
+   "blank": "scintilla",
+   "src": "made"
+  },
+  {
+   "text": "Anna dice che a volte basta una scintilla per far nascere un'idea.",
+   "en": "Anna says that sometimes a spark is all it takes for an idea to be born.",
+   "ko": "안나는 때로는 불씨 하나면 아이디어가 생긴다고 말해요.",
+   "blank": "scintilla",
+   "src": "made"
   }
  ],
  "w|scioccare": [
@@ -45124,6 +45668,22 @@
    "en": "Giulia put together a sequence of old photos to project on the wall.",
    "ko": "줄리아는 벽에 비출 옛 사진들을 차례대로 엮었어요.",
    "blank": "sequenza",
+   "src": "made"
+  }
+ ],
+ "w|sequestro": [
+  {
+   "text": "Simone scrive del sequestro di merce contraffatta al porto.",
+   "en": "Simone writes about the seizure of counterfeit goods at the port.",
+   "ko": "시모네는 항구에서 위조품이 압수된 일을 써요.",
+   "blank": "sequestro",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il sequestro del portatile in dogana, Anna lavora con un computer prestato.",
+   "en": "After her laptop is seized at customs, Anna works on a borrowed computer.",
+   "ko": "세관에서 노트북을 압수당한 뒤 안나는 빌린 컴퓨터로 일해요.",
+   "blank": "sequestro",
    "src": "made"
   }
  ],
@@ -47867,6 +48427,22 @@
    "blank": "spinto"
   }
  ],
+ "w|spionaggio": [
+  {
+   "text": "Simone recensisce una serie di spionaggio ambientata durante la guerra fredda.",
+   "en": "Simone reviews a spy series set during the Cold War.",
+   "ko": "시모네는 냉전 시대 배경의 첩보 드라마를 평해요.",
+   "blank": "spionaggio",
+   "src": "made"
+  },
+  {
+   "text": "Anna protegge i dati dei clienti da ogni tentativo di spionaggio industriale.",
+   "en": "Anna protects customer data from any attempt at industrial espionage.",
+   "ko": "안나는 고객 자료를 산업 스파이 시도에서 지켜요.",
+   "blank": "spionaggio",
+   "src": "made"
+  }
+ ],
  "w|spirito": [
   {
    "text": "Ha uno spirito di squadra incredibile.",
@@ -47909,6 +48485,22 @@
    "en": "What a splendid view from this terrace.",
    "ko": "이 테라스에서 보이는 전망이 정말 멋져.",
    "blank": "splendido"
+  }
+ ],
+ "w|spontaneo": [
+  {
+   "text": "La gente in piazza ha organizzato un applauso spontaneo, racconta Simone nel pezzo.",
+   "en": "The people in the square broke into spontaneous applause, Simone recounts in the piece.",
+   "ko": "시모네는 기사에서 광장 사람들이 저절로 박수를 쳤다고 전해요.",
+   "blank": "spontaneo",
+   "src": "made"
+  },
+  {
+   "text": "In ufficio Anna ama gli incontri spontanei davanti alla macchinetta del caffè.",
+   "en": "At the office Anna loves the spontaneous chats by the coffee machine.",
+   "ko": "안나는 사무실 커피 머신 앞에서의 즉흥적인 만남을 좋아해요.",
+   "blank": "spontanei",
+   "src": "made"
   }
  ],
  "w|sporco": [
@@ -51375,6 +51967,22 @@
    "src": "made"
   }
  ],
+ "w|tossicologico": [
+  {
+   "text": "Simone aspetta l'esito dell'esame tossicologico prima di chiudere l'articolo.",
+   "en": "Simone waits for the toxicology test result before finishing the article.",
+   "ko": "시모네는 기사를 마감하기 전에 독성 검사 결과를 기다려요.",
+   "blank": "tossicologico",
+   "src": "made"
+  },
+  {
+   "text": "Anna crea un database per i laboratori di analisi tossicologica.",
+   "en": "Anna creates a database for toxicology labs.",
+   "ko": "안나는 독성 분석 연구소를 위한 데이터베이스를 만들어요.",
+   "blank": "tossicologica",
+   "src": "made"
+  }
+ ],
  "w|tossire": [
   {
    "text": "Ha iniziato a tossire durante la riunione.",
@@ -51662,6 +52270,22 @@
    "en": "The failure of her first startup was tragic for Sara, but it taught her a lot.",
    "ko": "첫 스타트업의 실패는 사라에게 비극적이었지만 많은 걸 가르쳐 줬어요.",
    "blank": "tragico",
+   "src": "made"
+  }
+ ],
+ "w|trama": [
+  {
+   "text": "Simone scrive la critica di un film con una trama molto confusa.",
+   "en": "Simone writes a review of a film with a very confusing plot.",
+   "ko": "시모네는 줄거리가 아주 복잡한 영화의 비평을 써요.",
+   "blank": "trama",
+   "src": "made"
+  },
+  {
+   "text": "Anna scrive la trama del video di presentazione con il suo socio.",
+   "en": "Anna writes the storyline of the launch video with her partner.",
+   "ko": "안나는 동업자와 함께 소개 영상의 줄거리를 써요.",
+   "blank": "trama",
    "src": "made"
   }
  ],
@@ -52354,6 +52978,22 @@
    "en": "For the long journey Chiara wears a comfortable tracksuit and trainers.",
    "ko": "긴 여행이라 키아라는 편한 운동복에 운동화를 신었어요.",
    "blank": "tuta",
+   "src": "made"
+  }
+ ],
+ "w|tutore": [
+  {
+   "text": "Simone intervista il tutore legale di un ragazzo che ha vinto un premio di poesia.",
+   "en": "Simone interviews the legal guardian of a boy who won a poetry prize.",
+   "ko": "시모네는 시 대회에서 상을 받은 소년의 법정 후견인을 인터뷰해요.",
+   "blank": "tutore",
+   "src": "made"
+  },
+  {
+   "text": "Il tutore di Anna al dottorato oggi è uno dei suoi investitori.",
+   "en": "Anna's doctoral supervisor is now one of her investors.",
+   "ko": "안나의 박사 과정 지도 교수는 지금 투자자 중 한 명이에요.",
+   "blank": "tutore",
    "src": "made"
   }
  ],

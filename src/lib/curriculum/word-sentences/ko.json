@@ -535,6 +535,22 @@
    "blank": "가스레인지"
   }
  ],
+ "w|가스비": [
+  {
+   "text": "민수는 겨울 난방 때문에 가스비가 얼마나 나올지 궁금해요.",
+   "en": "Minsu wonders how much the gas bill will be because of winter heating.",
+   "ko": "민수는 겨울 난방 때문에 가스비가 얼마나 나올지 궁금해요.",
+   "blank": "가스비가",
+   "src": "made"
+  },
+  {
+   "text": "겨울에 가스비를 아끼려고 지영은 하루 종일 도서관에 있어요.",
+   "en": "To save on the gas bill in winter, Jiyoung stays at the library all day.",
+   "ko": "겨울에 가스비를 아끼려고 지영은 하루 종일 도서관에 있어요.",
+   "blank": "가스비를",
+   "src": "made"
+  }
+ ],
  "w|가슴": [
   {
    "text": "가슴이 두근거려.",
@@ -1879,6 +1895,22 @@
    "src": "made"
   }
  ],
+ "w|개다": [
+  {
+   "text": "민수는 이삿짐을 싸기 전에 옷을 차곡차곡 갰어요.",
+   "en": "Before packing, Minsu neatly folded the clothes.",
+   "ko": "민수는 이삿짐을 싸기 전에 옷을 차곡차곡 갰어요.",
+   "blank": "갰어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 반납된 담요를 개고 나서 책 정리를 도왔어요.",
+   "en": "After folding the returned blankets, Jiyoung helped organize the books.",
+   "ko": "지영은 반납된 담요를 개고 나서 책 정리를 도왔어요.",
+   "blank": "개고",
+   "src": "made"
+  }
+ ],
  "w|개미": [
   {
    "text": "개미가 줄지어 설탕을 옮긴다.",
@@ -3107,6 +3139,22 @@
    "blank": "겨울"
   }
  ],
+ "w|겨자": [
+  {
+   "text": "현우는 핫도그 빵 옆에 겨자를 작은 통에 담아 둬요.",
+   "en": "Hyunwoo keeps mustard in a small container next to the hot dog buns.",
+   "ko": "현우는 핫도그 빵 옆에 겨자를 작은 통에 담아 둬요.",
+   "blank": "겨자를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 냉면에 겨자를 너무 많이 넣어서 코가 찡했어요.",
+   "en": "Sujin put too much mustard in her cold noodles and felt a sting in her nose.",
+   "ko": "수진은 냉면에 겨자를 너무 많이 넣어서 코가 찡했어요.",
+   "blank": "겨자를",
+   "src": "made"
+  }
+ ],
  "w|격려": [
   {
    "text": "선생님의 격려가 큰 힘이었어.",
@@ -3295,6 +3343,22 @@
    "en": "The next meeting place is set.",
    "ko": "다음 모임 장소가 정해져.",
    "blank": "결정돼"
+  }
+ ],
+ "w|결정적": [
+  {
+   "text": "민수가 그 집을 계약한 결정적인 이유는 넓은 창이었어요.",
+   "en": "The decisive reason Minsu signed for that house was the large windows.",
+   "ko": "민수가 그 집을 계약한 결정적인 이유는 넓은 창이었어요.",
+   "blank": "결정적인",
+   "src": "made"
+  },
+  {
+   "text": "지영은 오래된 신문에서 사건을 풀 결정적인 단서를 찾았어요.",
+   "en": "Jiyoung found a decisive clue to the case in an old newspaper.",
+   "ko": "지영은 오래된 신문에서 사건을 풀 결정적인 단서를 찾았어요.",
+   "blank": "결정적인",
+   "src": "made"
   }
  ],
  "w|결정하다": [
@@ -4179,6 +4243,22 @@
    "src": "made"
   }
  ],
+ "w|계획적": [
+  {
+   "text": "현우는 계획적으로 돈을 모아서 서른 살에 자기 빵집을 열었어요.",
+   "en": "Hyunwoo saved money in a planned way and opened his own bakery at thirty.",
+   "ko": "현우는 계획적으로 돈을 모아서 서른 살에 자기 빵집을 열었어요.",
+   "blank": "계획적으로",
+   "src": "made"
+  },
+  {
+   "text": "수진은 계획적인 사람이라 한 주 일정을 월요일 아침에 다 정해요.",
+   "en": "Sujin is a methodical person, so she sets the whole week's schedule on Monday morning.",
+   "ko": "수진은 계획적인 사람이라 한 주 일정을 월요일 아침에 다 정해요.",
+   "blank": "계획적인",
+   "src": "made"
+  }
+ ],
  "w|계획하다": [
   {
    "text": "주말을 어떻게 계획했어?",
@@ -4517,6 +4597,22 @@
    "blank": "고백했어"
   }
  ],
+ "w|고사리": [
+  {
+   "text": "현우는 명절 전에 시장에서 고사리를 사서 어머니께 갖다드렸어요.",
+   "en": "Before the holiday, Hyunwoo bought bracken at the market and brought it to his mother.",
+   "ko": "현우는 명절 전에 시장에서 고사리를 사서 어머니께 갖다드렸어요.",
+   "blank": "고사리를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 회사 식당 비빔밥에 들어간 고사리가 제일 맛있었어요.",
+   "en": "The bracken in the office cafeteria's bibimbap was Sujin's favorite part.",
+   "ko": "수진은 회사 식당 비빔밥에 들어간 고사리가 제일 맛있었어요.",
+   "blank": "고사리가",
+   "src": "made"
+  }
+ ],
  "w|고상하다": [
   {
    "text": "경민은 고상한 척하는 누나를 보고 웃음을 참았어요.",
@@ -4769,6 +4865,22 @@
    "en": "The gochujang flavor is just right.",
    "ko": "고추장 맛이 알맞아.",
    "blank": "고추장"
+  }
+ ],
+ "w|고춧가루": [
+  {
+   "text": "현우는 매콤한 피자빵에 고춧가루를 살짝 뿌렸어요.",
+   "en": "Hyunwoo sprinkled a little red pepper powder on the spicy pizza bread.",
+   "ko": "현우는 매콤한 피자빵에 고춧가루를 살짝 뿌렸어요.",
+   "blank": "고춧가루를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 회사 식당 김치찌개에 고춧가루가 너무 많아서 물을 계속 마셨어요.",
+   "en": "There was so much red pepper powder in the office cafeteria's kimchi stew that Sujin kept drinking water.",
+   "ko": "수진은 회사 식당 김치찌개에 고춧가루가 너무 많아서 물을 계속 마셨어요.",
+   "blank": "고춧가루가",
+   "src": "made"
   }
  ],
  "w|고치다": [
@@ -5136,6 +5248,22 @@
    "en": "The bench in front of the shop is a public facility, so anyone can sit there.",
    "ko": "가게 앞 벤치는 공공 시설이라서 누구나 앉을 수 있어요.",
    "blank": "공공",
+   "src": "made"
+  }
+ ],
+ "w|공과금": [
+  {
+   "text": "민수는 이사 나가기 전에 밀린 공과금을 모두 냈어요.",
+   "en": "Before moving out, Minsu paid all the overdue utility bills.",
+   "ko": "민수는 이사 나가기 전에 밀린 공과금을 모두 냈어요.",
+   "blank": "공과금을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 공과금을 아끼는 방법이 담긴 책을 빌렸어요.",
+   "en": "Jiyoung borrowed a book with ways to save on utility bills.",
+   "ko": "지영은 공과금을 아끼는 방법이 담긴 책을 빌렸어요.",
+   "blank": "공과금을",
    "src": "made"
   }
  ],
@@ -5885,6 +6013,22 @@
    "ko": "우리 도서관은 열람실 관리를 위해 오늘 하루 휴관한다.",
    "blank": "관리를",
    "src": "krdict"
+  }
+ ],
+ "w|관리비": [
+  {
+   "text": "민수네 새 아파트는 관리비가 전에 살던 곳보다 조금 비싸요.",
+   "en": "The maintenance fee at Minsu's new apartment is a bit higher than at his old place.",
+   "ko": "민수네 새 아파트는 관리비가 전에 살던 곳보다 조금 비싸요.",
+   "blank": "관리비가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 관리비 내역을 보는 법을 생활 정보 책에서 배웠어요.",
+   "en": "Jiyoung learned how to read the maintenance fee statement from a lifestyle information book.",
+   "ko": "지영은 관리비 내역을 보는 법을 생활 정보 책에서 배웠어요.",
+   "blank": "관리비",
+   "src": "made"
   }
  ],
  "w|관리인": [
@@ -8335,6 +8479,22 @@
    "src": "made"
   }
  ],
+ "w|극단적": [
+  {
+   "text": "민수는 짐을 반으로 줄이자는 아내의 극단적인 제안에 웃음이 났어요.",
+   "en": "Minsu laughed at his wife's extreme suggestion to cut their stuff in half.",
+   "ko": "민수는 짐을 반으로 줄이자는 아내의 극단적인 제안에 웃음이 났어요.",
+   "blank": "극단적인",
+   "src": "made"
+  },
+  {
+   "text": "지영은 극단적인 다이어트를 경고하는 건강 서적을 읽었어요.",
+   "en": "Jiyoung read a health book that warns against extreme diets.",
+   "ko": "지영은 극단적인 다이어트를 경고하는 건강 서적을 읽었어요.",
+   "blank": "극단적인",
+   "src": "made"
+  }
+ ],
  "w|극도": [
   {
    "text": "판결을 기다리는 동안 재원은 극도로 긴장해서 손이 떨렸어요.",
@@ -8518,6 +8678,22 @@
    "en": "Mikyung suggested fixing the root cause instead of just patching it every time.",
    "ko": "미경은 매번 땜질만 하지 말고 근본 원인을 고치자고 했어요.",
    "blank": "근본",
+   "src": "made"
+  }
+ ],
+ "w|근본적": [
+  {
+   "text": "민수는 곰팡이 문제를 근본적으로 해결하려고 벽지를 새로 발랐어요.",
+   "en": "Minsu put up new wallpaper to fix the mold problem at its root.",
+   "ko": "민수는 곰팡이 문제를 근본적으로 해결하려고 벽지를 새로 발랐어요.",
+   "blank": "근본적으로",
+   "src": "made"
+  },
+  {
+   "text": "지영은 그 철학책이 삶에 대한 근본적인 질문을 던진다고 느꼈어요.",
+   "en": "Jiyoung felt that the philosophy book raises fundamental questions about life.",
+   "ko": "지영은 그 철학책이 삶에 대한 근본적인 질문을 던진다고 느꼈어요.",
+   "blank": "근본적인",
    "src": "made"
   }
  ],
@@ -9229,6 +9405,22 @@
    "en": "Don't touch the default settings.",
    "ko": "기본 설정을 건드리지 마.",
    "blank": "기본"
+  }
+ ],
+ "w|기본적": [
+  {
+   "text": "민수는 이사 전에 가스와 전기 같은 기본적인 것부터 확인했어요.",
+   "en": "Before moving, Minsu checked basic things like gas and electricity first.",
+   "ko": "민수는 이사 전에 가스와 전기 같은 기본적인 것부터 확인했어요.",
+   "blank": "기본적인",
+   "src": "made"
+  },
+  {
+   "text": "지영은 코딩의 기본적인 개념을 설명한 입문서를 골랐어요.",
+   "en": "Jiyoung chose an introductory book explaining the basic concepts of coding.",
+   "ko": "지영은 코딩의 기본적인 개념을 설명한 입문서를 골랐어요.",
+   "blank": "기본적인",
+   "src": "made"
   }
  ],
  "w|기부": [
@@ -10129,6 +10321,22 @@
    "en": "The screen got a little cracked.",
    "ko": "화면이 살짝 깨졌네.",
    "blank": "깨졌네"
+  }
+ ],
+ "w|깻잎": [
+  {
+   "text": "현우는 향긋한 깻잎을 넣은 치아바타를 시험 삼아 구워 봤어요.",
+   "en": "Hyunwoo baked a ciabatta with fragrant perilla leaves as a test.",
+   "ko": "현우는 향긋한 깻잎을 넣은 치아바타를 시험 삼아 구워 봤어요.",
+   "blank": "깻잎을",
+   "src": "made"
+  },
+  {
+   "text": "수진은 고기를 먹을 때 깻잎에 싸 먹는 걸 좋아해요.",
+   "en": "When eating meat, Sujin likes to wrap it in perilla leaves.",
+   "ko": "수진은 고기를 먹을 때 깻잎에 싸 먹는 걸 좋아해요.",
+   "blank": "깻잎에",
+   "src": "made"
   }
  ],
  "w|꺼내다": [
@@ -13993,6 +14201,22 @@
    "blank": "다시"
   }
  ],
+ "w|다시마": [
+  {
+   "text": "현우는 빵에 감칠맛을 더하려고 다시마로 우린 물을 써 봤어요.",
+   "en": "To add savory flavor to the bread, Hyunwoo tried using water steeped with kelp.",
+   "ko": "현우는 빵에 감칠맛을 더하려고 다시마로 우린 물을 써 봤어요.",
+   "blank": "다시마로",
+   "src": "made"
+  },
+  {
+   "text": "수진은 출장 선물로 바닷가 특산물인 다시마를 받았어요.",
+   "en": "Sujin received kelp, a seaside specialty, as a business trip gift.",
+   "ko": "수진은 출장 선물로 바닷가 특산물인 다시마를 받았어요.",
+   "blank": "다시마를",
+   "src": "made"
+  }
+ ],
  "w|다양하다": [
   {
    "text": "취향이 다양하다 보니 고르기 즐거워.",
@@ -14218,6 +14442,22 @@
    "en": "Mikyung met the owner one-on-one, away from the other staff, to talk about her pay.",
    "ko": "미경은 직원들 몰래 사장님과 단독으로 만나 월급 이야기를 했어요.",
    "blank": "단독으로",
+   "src": "made"
+  }
+ ],
+ "w|단독주택": [
+  {
+   "text": "민수는 언젠가 마당 있는 단독주택에서 개를 키우고 싶어요.",
+   "en": "Minsu wants to someday raise a dog in a detached house with a yard.",
+   "ko": "민수는 언젠가 마당 있는 단독주택에서 개를 키우고 싶어요.",
+   "blank": "단독주택에서",
+   "src": "made"
+  },
+  {
+   "text": "지영은 오래된 단독주택을 고쳐서 만든 동네 도서관을 좋아해요.",
+   "en": "Jiyoung loves the neighborhood library made by renovating an old detached house.",
+   "ko": "지영은 오래된 단독주택을 고쳐서 만든 동네 도서관을 좋아해요.",
+   "blank": "단독주택을",
    "src": "made"
   }
  ],
@@ -14495,6 +14735,22 @@
    "en": "I stopped, wanting to suddenly rush in.",
    "ko": "갑자기 달려들다 싶어 멈췄어.",
    "blank": "달려들다"
+  }
+ ],
+ "w|달력": [
+  {
+   "text": "민수는 새 집 부엌 벽에 가장 먼저 달력을 걸었어요.",
+   "en": "The first thing Minsu did in the new kitchen was hang a calendar on the wall.",
+   "ko": "민수는 새 집 부엌 벽에 가장 먼저 달력을 걸었어요.",
+   "blank": "달력을",
+   "src": "made"
+  },
+  {
+   "text": "도서관 입구에는 이달의 행사가 적힌 큰 달력이 붙어 있어요.",
+   "en": "A big calendar listing this month's events is posted at the library entrance.",
+   "ko": "도서관 입구에는 이달의 행사가 적힌 큰 달력이 붙어 있어요.",
+   "blank": "달력이",
+   "src": "made"
   }
  ],
  "w|달리": [
@@ -15723,6 +15979,22 @@
    "blank": "대통령"
   }
  ],
+ "w|대파": [
+  {
+   "text": "현우는 대파를 듬뿍 넣은 크림치즈 빵을 새로 내놓았어요.",
+   "en": "Hyunwoo launched a new cream cheese bread packed with green onions.",
+   "ko": "현우는 대파를 듬뿍 넣은 크림치즈 빵을 새로 내놓았어요.",
+   "blank": "대파를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 퇴근길에 시장에 들러 대파 한 단을 샀어요.",
+   "en": "On her way home from work, Sujin stopped by the market and bought a bunch of green onions.",
+   "ko": "수진은 퇴근길에 시장에 들러 대파 한 단을 샀어요.",
+   "blank": "대파",
+   "src": "made"
+  }
+ ],
  "w|대표": [
   {
    "text": "반 대표가 의견을 모아 전달했어.",
@@ -16319,6 +16591,22 @@
    "blank": "도둑을"
   }
  ],
+ "w|도라지": [
+  {
+   "text": "현우의 할머니는 감기에 좋다며 도라지를 꿀에 재워 보내 주셨어요.",
+   "en": "Hyunwoo's grandmother sent him bellflower root soaked in honey, saying it was good for colds.",
+   "ko": "현우의 할머니는 감기에 좋다며 도라지를 꿀에 재워 보내 주셨어요.",
+   "blank": "도라지를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 목이 칼칼해서 도라지 차를 한 잔 타 마셨어요.",
+   "en": "Sujin's throat felt scratchy, so she made a cup of bellflower root tea.",
+   "ko": "수진은 목이 칼칼해서 도라지 차를 한 잔 타 마셨어요.",
+   "blank": "도라지",
+   "src": "made"
+  }
+ ],
  "w|도련님": [
   {
    "text": "신부는 민수의 남동생을 도련님이라고 부르는 게 아직 어색해요.",
@@ -16668,6 +16956,22 @@
    "en": "Yuna's grandfather told her how hard life was for factory workers during the dictatorship era.",
    "ko": "유나의 할아버지는 독재 시절 공장 노동자들이 얼마나 힘들었는지 들려주셨어요.",
    "blank": "독재",
+   "src": "made"
+  }
+ ],
+ "w|독창적": [
+  {
+   "text": "현우의 빵집 간판은 밀가루 포대를 닮은 독창적인 모양이에요.",
+   "en": "The sign of Hyunwoo's bakery has an original shape that looks like a flour sack.",
+   "ko": "현우의 빵집 간판은 밀가루 포대를 닮은 독창적인 모양이에요.",
+   "blank": "독창적인",
+   "src": "made"
+  },
+  {
+   "text": "수진의 광고 기획안은 독창적이라는 평가를 받았어요.",
+   "en": "Sujin's advertising proposal was praised as original.",
+   "ko": "수진의 광고 기획안은 독창적이라는 평가를 받았어요.",
+   "blank": "독창적이라는",
    "src": "made"
   }
  ],
@@ -17941,6 +18245,22 @@
    "en": "Just hear me out.",
    "ko": "내 말 좀 들어 봐.",
    "blank": "들어"
+  }
+ ],
+ "w|들기름": [
+  {
+   "text": "현우는 고소한 맛을 내려고 반죽에 들기름을 한 숟가락 넣어요.",
+   "en": "Hyunwoo adds a spoonful of perilla oil to the dough for a nutty taste.",
+   "ko": "현우는 고소한 맛을 내려고 반죽에 들기름을 한 숟가락 넣어요.",
+   "blank": "들기름을",
+   "src": "made"
+  },
+  {
+   "text": "수진은 시골에서 보내 준 들기름을 동료들과 나눴어요.",
+   "en": "Sujin shared the perilla oil sent from the countryside with her colleagues.",
+   "ko": "수진은 시골에서 보내 준 들기름을 동료들과 나눴어요.",
+   "blank": "들기름을",
+   "src": "made"
   }
  ],
  "w|들다": [
@@ -20988,6 +21308,38 @@
    "en": "Jiyoung posted articles introducing her farm on various media outlets.",
    "ko": "지영은 여러 매체에 자기 농장을 소개하는 글을 올렸어요.",
    "blank": "매체에",
+   "src": "made"
+  }
+ ],
+ "w|매트": [
+  {
+   "text": "민수는 아랫집에 소리가 덜 나도록 거실에 매트를 깔았어요.",
+   "en": "Minsu laid a mat in the living room so less noise would reach the downstairs neighbors.",
+   "ko": "민수는 아랫집에 소리가 덜 나도록 거실에 매트를 깔았어요.",
+   "blank": "매트를",
+   "src": "made"
+  },
+  {
+   "text": "어린이 열람실 바닥에는 푹신한 매트가 깔려 있어요.",
+   "en": "Soft mats are laid on the floor of the children's reading room.",
+   "ko": "어린이 열람실 바닥에는 푹신한 매트가 깔려 있어요.",
+   "blank": "매트가",
+   "src": "made"
+  }
+ ],
+ "w|매트리스": [
+  {
+   "text": "민수는 새 집에 맞는 큰 매트리스를 따로 주문했어요.",
+   "en": "Minsu separately ordered a big mattress that fits the new home.",
+   "ko": "민수는 새 집에 맞는 큰 매트리스를 따로 주문했어요.",
+   "blank": "매트리스를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 침대 고르는 법을 알고 싶어서 매트리스에 관한 책을 빌렸어요.",
+   "en": "Jiyoung wanted to learn how to choose a bed, so she borrowed a book about mattresses.",
+   "ko": "지영은 침대 고르는 법을 알고 싶어서 매트리스에 관한 책을 빌렸어요.",
+   "blank": "매트리스에",
    "src": "made"
   }
  ],
@@ -26295,6 +26647,22 @@
    "blank": "베개"
   }
  ],
+ "w|베란다": [
+  {
+   "text": "민수는 새 집 베란다에 작은 화분을 몇 개 놓았어요.",
+   "en": "Minsu put a few small flowerpots on the balcony of the new home.",
+   "ko": "민수는 새 집 베란다에 작은 화분을 몇 개 놓았어요.",
+   "blank": "베란다에",
+   "src": "made"
+  },
+  {
+   "text": "지영은 집 베란다에 의자를 두고 빌린 책을 읽어요.",
+   "en": "Jiyoung puts a chair on her balcony at home and reads borrowed books.",
+   "ko": "지영은 집 베란다에 의자를 두고 빌린 책을 읽어요.",
+   "blank": "베란다에",
+   "src": "made"
+  }
+ ],
  "w|베이컨": [
   {
    "text": "베이컨을 바삭하게 튀겼어.",
@@ -27119,6 +27487,22 @@
    "src": "made"
   }
  ],
+ "w|보증금": [
+  {
+   "text": "민수는 집주인에게 보증금을 돌려받고 나서야 마음이 놓였어요.",
+   "en": "Minsu only felt relieved after getting his deposit back from the landlord.",
+   "ko": "민수는 집주인에게 보증금을 돌려받고 나서야 마음이 놓였어요.",
+   "blank": "보증금을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 전세 보증금에 관한 법률 책을 찾아 읽었어요.",
+   "en": "Jiyoung looked up and read a law book about lease deposits.",
+   "ko": "지영은 전세 보증금에 관한 법률 책을 찾아 읽었어요.",
+   "blank": "보증금에",
+   "src": "made"
+  }
+ ],
  "w|보통": [
   {
    "text": "보통 이 시간에 와.",
@@ -27443,6 +27827,22 @@
    "en": "We need identity verification.",
    "ko": "본인 확인이 필요해.",
    "blank": "본인"
+  }
+ ],
+ "w|본질적": [
+  {
+   "text": "민수는 집의 크기보다 가족이 함께 지내는 시간이 본질적으로 더 중요하다고 생각해요.",
+   "en": "Minsu thinks the time the family spends together is essentially more important than the size of the house.",
+   "ko": "민수는 집의 크기보다 가족이 함께 지내는 시간이 본질적으로 더 중요하다고 생각해요.",
+   "blank": "본질적으로",
+   "src": "made"
+  },
+  {
+   "text": "지영은 독서 모임에서 사랑의 본질적인 의미에 대해 이야기했어요.",
+   "en": "At the book club, Jiyoung talked about the essential meaning of love.",
+   "ko": "지영은 독서 모임에서 사랑의 본질적인 의미에 대해 이야기했어요.",
+   "blank": "본질적인",
+   "src": "made"
   }
  ],
  "w|볼": [
@@ -29092,6 +29492,22 @@
    "blank": "브랜드는"
   }
  ],
+ "w|브로콜리": [
+  {
+   "text": "현우는 아이들도 먹을 수 있게 브로콜리를 넣은 키시를 만들었어요.",
+   "en": "Hyunwoo made a quiche with broccoli so children could eat it too.",
+   "ko": "현우는 아이들도 먹을 수 있게 브로콜리를 넣은 키시를 만들었어요.",
+   "blank": "브로콜리를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 간식으로 데친 브로콜리를 통에 담아 와요.",
+   "en": "Sujin brings blanched broccoli in a container as a snack.",
+   "ko": "수진은 간식으로 데친 브로콜리를 통에 담아 와요.",
+   "blank": "브로콜리를",
+   "src": "made"
+  }
+ ],
  "w|비": [
   {
    "text": "비 오기 전에 들어가.",
@@ -29712,6 +30128,22 @@
    "blank": "비행기를"
   }
  ],
+ "w|비효율적": [
+  {
+   "text": "반죽을 손으로 하나씩 치대는 건 비효율적이지만 현우는 그 맛을 포기하지 못해요.",
+   "en": "Kneading each dough by hand is inefficient, but Hyunwoo can't give up that taste.",
+   "ko": "반죽을 손으로 하나씩 치대는 건 비효율적이지만 현우는 그 맛을 포기하지 못해요.",
+   "blank": "비효율적이지만",
+   "src": "made"
+  },
+  {
+   "text": "수진은 같은 서류를 세 번씩 출력하는 비효율적인 절차를 없앴어요.",
+   "en": "Sujin got rid of the inefficient procedure of printing the same document three times.",
+   "ko": "수진은 같은 서류를 세 번씩 출력하는 비효율적인 절차를 없앴어요.",
+   "blank": "비효율적인",
+   "src": "made"
+  }
+ ],
  "w|빈곤": [
   {
    "text": "민수는 빈곤 문제를 다룬 다큐멘터리를 보고 감상문을 썼어요.",
@@ -29740,6 +30172,22 @@
    "en": "I begged for forgiveness with both hands together.",
    "ko": "용서를 두 손 모아 구했어.",
    "blank": "빌었어"
+  }
+ ],
+ "w|빌라": [
+  {
+   "text": "민수는 신혼 때 살던 작은 빌라를 떠나 아파트로 이사했어요.",
+   "en": "Minsu left the small villa he lived in as a newlywed and moved into an apartment.",
+   "ko": "민수는 신혼 때 살던 작은 빌라를 떠나 아파트로 이사했어요.",
+   "blank": "빌라를",
+   "src": "made"
+  },
+  {
+   "text": "지영이 사는 빌라 바로 옆에 작은 도서관이 생겼어요.",
+   "en": "A small library opened right next to the villa where Jiyoung lives.",
+   "ko": "지영이 사는 빌라 바로 옆에 작은 도서관이 생겼어요.",
+   "blank": "빌라",
+   "src": "made"
   }
  ],
  "w|빌려주다": [
@@ -29984,6 +30432,22 @@
    "en": "I should do the laundry today.",
    "ko": "오늘 빨래 좀 해야겠어.",
    "blank": "빨래"
+  }
+ ],
+ "w|빨래하다": [
+  {
+   "text": "민수는 이사 전날 밀린 옷을 몽땅 빨래했어요.",
+   "en": "The day before the move, Minsu did all the laundry that had piled up.",
+   "ko": "민수는 이사 전날 밀린 옷을 몽땅 빨래했어요.",
+   "blank": "빨래했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 빨래하는 동안 근처 도서관에 가서 잡지를 읽어요.",
+   "en": "While her laundry is going, Jiyoung goes to the nearby library to read magazines.",
+   "ko": "지영은 빨래하는 동안 근처 도서관에 가서 잡지를 읽어요.",
+   "blank": "빨래하는",
+   "src": "made"
   }
  ],
  "w|빨리": [
@@ -32558,6 +33022,22 @@
    "blank": "생산"
   }
  ],
+ "w|생산적": [
+  {
+   "text": "현우는 손님이 없는 오후 시간을 생산적으로 쓰려고 새 메뉴를 연구해요.",
+   "en": "Hyunwoo researches new menu items to use the quiet afternoon hours productively.",
+   "ko": "현우는 손님이 없는 오후 시간을 생산적으로 쓰려고 새 메뉴를 연구해요.",
+   "blank": "생산적으로",
+   "src": "made"
+  },
+  {
+   "text": "오늘 회의는 의견이 많이 나와서 생산적이었다고 수진은 만족했어요.",
+   "en": "Sujin was satisfied that today's meeting was productive with lots of opinions shared.",
+   "ko": "오늘 회의는 의견이 많이 나와서 생산적이었다고 수진은 만족했어요.",
+   "blank": "생산적이었다고",
+   "src": "made"
+  }
+ ],
  "w|생생하다": [
   {
    "text": "준호는 이 동네로 처음 이사 온 날이 아직도 생생해요.",
@@ -32693,6 +33173,22 @@
    "en": "Haeun registered her facial biometric data to get an access card.",
    "ko": "하은은 출입증을 만들려고 얼굴 생체 정보를 등록했어요.",
    "blank": "생체",
+   "src": "made"
+  }
+ ],
+ "w|생크림": [
+  {
+   "text": "현우는 케이크에 바를 생크림을 아침마다 직접 휘핑해요.",
+   "en": "Every morning, Hyunwoo whips the fresh cream to spread on cakes by himself.",
+   "ko": "현우는 케이크에 바를 생크림을 아침마다 직접 휘핑해요.",
+   "blank": "생크림을",
+   "src": "made"
+  },
+  {
+   "text": "팀원 생일이라 수진은 생크림이 듬뿍 올라간 케이크를 샀어요.",
+   "en": "It was a teammate's birthday, so Sujin bought a cake topped with lots of fresh cream.",
+   "ko": "팀원 생일이라 수진은 생크림이 듬뿍 올라간 케이크를 샀어요.",
+   "blank": "생크림이",
    "src": "made"
   }
  ],
@@ -33749,6 +34245,22 @@
    "en": "Mikyeong hastily painted over it before the paint dried, and the colors bled.",
    "ko": "미경은 물감이 마르기 전에 성급하게 덧칠해서 색이 번졌어요.",
    "blank": "성급하게",
+   "src": "made"
+  }
+ ],
+ "w|성냥": [
+  {
+   "text": "민수는 이사 전날 정전이 돼서 성냥을 찾아 촛불을 켰어요.",
+   "en": "The power went out the day before the move, so Minsu found matches and lit a candle.",
+   "ko": "민수는 이사 전날 정전이 돼서 성냥을 찾아 촛불을 켰어요.",
+   "blank": "성냥을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 도서관 기록실에서 옛날 성냥 상표를 모은 책을 발견했어요.",
+   "en": "In the library archive, Jiyoung found a book that collected old matchbox labels.",
+   "ko": "지영은 도서관 기록실에서 옛날 성냥 상표를 모은 책을 발견했어요.",
+   "blank": "성냥",
    "src": "made"
   }
  ],
@@ -35446,6 +35958,22 @@
    "blank": "수도"
   }
  ],
+ "w|수도세": [
+  {
+   "text": "민수네 새 집은 수도세가 관리비에 포함돼 있어요.",
+   "en": "At Minsu's new home, the water bill is included in the maintenance fee.",
+   "ko": "민수네 새 집은 수도세가 관리비에 포함돼 있어요.",
+   "blank": "수도세가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 수도세 고지서를 들고 도서관 컴퓨터로 요금을 확인했어요.",
+   "en": "Jiyoung took her water bill and checked the charges on a library computer.",
+   "ko": "지영은 수도세 고지서를 들고 도서관 컴퓨터로 요금을 확인했어요.",
+   "blank": "수도세",
+   "src": "made"
+  }
+ ],
  "w|수리": [
   {
    "text": "현우는 엘리베이터 수리가 끝날 때까지 계단으로 다녔어요.",
@@ -36016,6 +36544,22 @@
    "en": "There's more homework than I thought.",
    "ko": "숙제가 생각보다 많아.",
    "blank": "숙제가"
+  }
+ ],
+ "w|숙주": [
+  {
+   "text": "현우는 베트남식 샌드위치에 숙주를 넣어 볼까 고민했어요.",
+   "en": "Hyunwoo wondered whether to put mung bean sprouts in a Vietnamese-style sandwich.",
+   "ko": "현우는 베트남식 샌드위치에 숙주를 넣어 볼까 고민했어요.",
+   "blank": "숙주를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 쌀국수를 먹을 때 숙주를 듬뿍 넣어요.",
+   "en": "When eating pho, Sujin adds plenty of mung bean sprouts.",
+   "ko": "수진은 쌀국수를 먹을 때 숙주를 듬뿍 넣어요.",
+   "blank": "숙주를",
+   "src": "made"
   }
  ],
  "w|순간": [
@@ -36852,6 +37396,22 @@
    "blank": "시금치"
   }
  ],
+ "w|시급하다": [
+  {
+   "text": "이사 날짜가 다가와서 민수에게는 짐 정리가 가장 시급했어요.",
+   "en": "With moving day approaching, sorting things out was Minsu's most urgent task.",
+   "ko": "이사 날짜가 다가와서 민수에게는 짐 정리가 가장 시급했어요.",
+   "blank": "시급했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 시험이 코앞이라 도서관 자리를 잡는 게 시급해요.",
+   "en": "With the exam right around the corner, getting a seat at the library is urgent for Jiyoung.",
+   "ko": "지영은 시험이 코앞이라 도서관 자리를 잡는 게 시급해요.",
+   "blank": "시급해요",
+   "src": "made"
+  }
+ ],
  "w|시기": [
   {
    "text": "이직하기 좋은 시기인 것 같아.",
@@ -37404,6 +37964,22 @@
    "src": "made"
   }
  ],
+ "w|식빵": [
+  {
+   "text": "현우의 빵집에서는 갓 구운 식빵이 오전에 다 팔려요.",
+   "en": "At Hyunwoo's bakery, freshly baked white bread sells out in the morning.",
+   "ko": "현우의 빵집에서는 갓 구운 식빵이 오전에 다 팔려요.",
+   "blank": "식빵이",
+   "src": "made"
+  },
+  {
+   "text": "수진은 바쁜 날이면 식빵에 잼만 발라서 책상에서 먹어요.",
+   "en": "On busy days, Sujin just spreads jam on bread and eats at her desk.",
+   "ko": "수진은 바쁜 날이면 식빵에 잼만 발라서 책상에서 먹어요.",
+   "blank": "식빵에",
+   "src": "made"
+  }
+ ],
  "w|식사": [
   {
    "text": "식사는 같이 할까?",
@@ -37416,6 +37992,38 @@
    "en": "Let's take a walk after the meal.",
    "ko": "식사 후에 산책하자.",
    "blank": "식사"
+  }
+ ],
+ "w|식용유": [
+  {
+   "text": "현우는 도넛을 튀길 때 식용유를 매일 새로 갈아요.",
+   "en": "Hyunwoo changes the cooking oil every day when frying doughnuts.",
+   "ko": "현우는 도넛을 튀길 때 식용유를 매일 새로 갈아요.",
+   "blank": "식용유를",
+   "src": "made"
+  },
+  {
+   "text": "사무실 탕비실에 누가 식용유를 쏟아서 수진이 닦았어요.",
+   "en": "Someone spilled cooking oil in the office pantry, so Sujin wiped it up.",
+   "ko": "사무실 탕비실에 누가 식용유를 쏟아서 수진이 닦았어요.",
+   "blank": "식용유를",
+   "src": "made"
+  }
+ ],
+ "w|식재료": [
+  {
+   "text": "현우는 새벽마다 시장에 가서 신선한 식재료를 직접 골라요.",
+   "en": "Every dawn, Hyunwoo goes to the market to pick fresh ingredients himself.",
+   "ko": "현우는 새벽마다 시장에 가서 신선한 식재료를 직접 골라요.",
+   "blank": "식재료를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 급식 업체와 계약하면서 식재료 원산지를 꼼꼼히 확인했어요.",
+   "en": "When signing with the catering company, Sujin carefully checked where the ingredients came from.",
+   "ko": "수진은 급식 업체와 계약하면서 식재료 원산지를 꼼꼼히 확인했어요.",
+   "blank": "식재료",
+   "src": "made"
   }
  ],
  "w|식초": [
@@ -40878,6 +41486,22 @@
    "blank": "애정이"
   }
  ],
+ "w|애호박": [
+  {
+   "text": "현우는 채소 빵에 애호박을 잘게 다져 넣어요.",
+   "en": "Hyunwoo finely chops zucchini into his vegetable bread.",
+   "ko": "현우는 채소 빵에 애호박을 잘게 다져 넣어요.",
+   "blank": "애호박을",
+   "src": "made"
+  },
+  {
+   "text": "회사 식당 된장찌개에는 애호박이 큼직하게 들어 있었어요.",
+   "en": "The soybean paste stew at the office cafeteria had big chunks of zucchini in it.",
+   "ko": "회사 식당 된장찌개에는 애호박이 큼직하게 들어 있었어요.",
+   "blank": "애호박이",
+   "src": "made"
+  }
+ ],
  "w|야": [
   {
    "text": "야, 너 뭐해?",
@@ -41256,6 +41880,22 @@
    "en": "I ran into the neighbor by chance.",
    "ko": "옆집 양반을 우연히 만났어.",
    "blank": "양반을"
+  }
+ ],
+ "w|양배추": [
+  {
+   "text": "현우의 샌드위치에는 아삭한 양배추가 잔뜩 들어가요.",
+   "en": "Hyunwoo's sandwiches are filled with crunchy cabbage.",
+   "ko": "현우의 샌드위치에는 아삭한 양배추가 잔뜩 들어가요.",
+   "blank": "양배추가",
+   "src": "made"
+  },
+  {
+   "text": "수진은 다이어트 중이라 점심으로 양배추 샐러드를 먹어요.",
+   "en": "Sujin is on a diet, so she eats cabbage salad for lunch.",
+   "ko": "수진은 다이어트 중이라 점심으로 양배추 샐러드를 먹어요.",
+   "blank": "양배추",
+   "src": "made"
   }
  ],
  "w|양복": [
@@ -43574,6 +44214,22 @@
    "blank": "연극이"
   }
  ],
+ "w|연근": [
+  {
+   "text": "현우는 연근을 얇게 구워서 빵 위에 장식으로 올렸어요.",
+   "en": "Hyunwoo roasted lotus root thinly and put it on top of the bread as decoration.",
+   "ko": "현우는 연근을 얇게 구워서 빵 위에 장식으로 올렸어요.",
+   "blank": "연근을",
+   "src": "made"
+  },
+  {
+   "text": "수진의 도시락 반찬은 오늘 연근 조림이에요.",
+   "en": "Today's side dish in Sujin's lunch box is braised lotus root.",
+   "ko": "수진의 도시락 반찬은 오늘 연근 조림이에요.",
+   "blank": "연근",
+   "src": "made"
+  }
+ ],
  "w|연금": [
   {
    "text": "동민은 국민연금 개편안에 대한 해설 기사를 썼어요.",
@@ -45120,6 +45776,22 @@
    "blank": "오토바이를"
   }
  ],
+ "w|오피스텔": [
+  {
+   "text": "민수의 동생은 회사 근처 오피스텔에서 혼자 살아요.",
+   "en": "Minsu's younger sibling lives alone in a studio officetel near the company.",
+   "ko": "민수의 동생은 회사 근처 오피스텔에서 혼자 살아요.",
+   "blank": "오피스텔에서",
+   "src": "made"
+  },
+  {
+   "text": "지영은 오피스텔 계약서 쓰는 법을 도서관 책으로 공부했어요.",
+   "en": "Jiyoung studied how to write an officetel lease using library books.",
+   "ko": "지영은 오피스텔 계약서 쓰는 법을 도서관 책으로 공부했어요.",
+   "blank": "오피스텔",
+   "src": "made"
+  }
+ ],
  "w|오해": [
   {
    "text": "오해하지 마.",
@@ -45950,6 +46622,22 @@
    "blank": "요구가"
   }
  ],
+ "w|요구르트": [
+  {
+   "text": "현우는 플레인 요구르트를 넣어서 촉촉한 머핀을 만들어요.",
+   "en": "Hyunwoo makes moist muffins by adding plain yogurt.",
+   "ko": "현우는 플레인 요구르트를 넣어서 촉촉한 머핀을 만들어요.",
+   "blank": "요구르트를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 아침을 거를 때 요구르트 하나로 버텨요.",
+   "en": "When Sujin skips breakfast, she gets by on a single yogurt.",
+   "ko": "수진은 아침을 거를 때 요구르트 하나로 버텨요.",
+   "blank": "요구르트",
+   "src": "made"
+  }
+ ],
  "w|요구하다": [
   {
    "text": "고객이 환불을 요구했어.",
@@ -46362,6 +47050,22 @@
    "blank": "용의자의"
   }
  ],
+ "w|우동": [
+  {
+   "text": "현우는 일본 여행에서 먹은 우동의 쫄깃한 면을 잊지 못해요.",
+   "en": "Hyunwoo can't forget the chewy noodles of the udon he ate on a trip to Japan.",
+   "ko": "현우는 일본 여행에서 먹은 우동의 쫄깃한 면을 잊지 못해요.",
+   "blank": "우동의",
+   "src": "made"
+  },
+  {
+   "text": "야근하던 수진은 편의점에서 컵 우동을 사 왔어요.",
+   "en": "Working late, Sujin bought cup udon from the convenience store.",
+   "ko": "야근하던 수진은 편의점에서 컵 우동을 사 왔어요.",
+   "blank": "우동을",
+   "src": "made"
+  }
+ ],
  "w|우려": [
   {
    "text": "학부모들은 학교 앞 공사로 아이들이 다칠까 봐 우려를 나타냈어요.",
@@ -46494,6 +47198,22 @@
    "src": "made"
   }
  ],
+ "w|우엉": [
+  {
+   "text": "현우는 우엉을 졸여서 김밥 맛 빵의 속으로 넣었어요.",
+   "en": "Hyunwoo braised burdock and used it as filling for his gimbap-flavored bread.",
+   "ko": "현우는 우엉을 졸여서 김밥 맛 빵의 속으로 넣었어요.",
+   "blank": "우엉을",
+   "src": "made"
+  },
+  {
+   "text": "수진은 우엉으로 만든 차를 사무실에서 자주 마셔요.",
+   "en": "Sujin often drinks tea made from burdock at the office.",
+   "ko": "수진은 우엉으로 만든 차를 사무실에서 자주 마셔요.",
+   "blank": "우엉으로",
+   "src": "made"
+  }
+ ],
  "w|우연": [
   {
    "text": "친구와 내가 똑같은 옷을 입고 학교에 온 것은 순전히 우연이었다.",
@@ -46508,6 +47228,22 @@
    "ko": "내가 일을 맡게 된 것은 우연이 아니라 그동안의 성과를 인정받았기 때문이었다.",
    "blank": "우연이",
    "src": "krdict"
+  }
+ ],
+ "w|우연하다": [
+  {
+   "text": "현우는 우연한 실수로 탄 빵이 오히려 인기를 끌어서 놀랐어요.",
+   "en": "Hyunwoo was surprised when bread he burned by an accidental mistake became popular instead.",
+   "ko": "현우는 우연한 실수로 탄 빵이 오히려 인기를 끌어서 놀랐어요.",
+   "blank": "우연한",
+   "src": "made"
+  },
+  {
+   "text": "수진은 엘리베이터에서 우연하게 대학 동기를 만났어요.",
+   "en": "Sujin ran into a university classmate by chance in the elevator.",
+   "ko": "수진은 엘리베이터에서 우연하게 대학 동기를 만났어요.",
+   "blank": "우연하게",
+   "src": "made"
   }
  ],
  "w|우연히": [
@@ -46914,6 +47650,22 @@
    "blank": "웃음으로"
   }
  ],
+ "w|웅장하다": [
+  {
+   "text": "새 아파트 단지의 정문은 생각보다 웅장했어요.",
+   "en": "The main gate of the new apartment complex was grander than Minsu expected.",
+   "ko": "새 아파트 단지의 정문은 생각보다 웅장했어요.",
+   "blank": "웅장했어요",
+   "src": "made"
+  },
+  {
+   "text": "국립 도서관의 웅장한 열람실에 들어서자 지영은 저절로 목소리를 낮췄어요.",
+   "en": "Stepping into the national library's grand reading room, Jiyoung lowered her voice without thinking.",
+   "ko": "국립 도서관의 웅장한 열람실에 들어서자 지영은 저절로 목소리를 낮췄어요.",
+   "blank": "웅장한",
+   "src": "made"
+  }
+ ],
  "w|워낙": [
   {
    "text": "지수는 워낙 바빠서 고향에도 잘 안 내려온다.",
@@ -47002,6 +47754,22 @@
    "en": "They say raw material prices went up.",
    "ko": "원료 가격이 올랐대.",
    "blank": "원료"
+  }
+ ],
+ "w|원룸": [
+  {
+   "text": "민수는 대학생 때 학교 앞 원룸에서 사 년을 살았어요.",
+   "en": "When he was a university student, Minsu lived in a one-room flat in front of the school for four years.",
+   "ko": "민수는 대학생 때 학교 앞 원룸에서 사 년을 살았어요.",
+   "blank": "원룸에서",
+   "src": "made"
+  },
+  {
+   "text": "지영의 원룸은 좁아서 책은 주로 도서관에서 읽어요.",
+   "en": "Jiyoung's studio is small, so she mostly reads books at the library.",
+   "ko": "지영의 원룸은 좁아서 책은 주로 도서관에서 읽어요.",
+   "blank": "원룸은",
+   "src": "made"
   }
  ],
  "w|원리": [
@@ -48264,6 +49032,22 @@
    "blank": "의논하고"
   }
  ],
+ "w|의도적": [
+  {
+   "text": "현우는 의도적으로 빵을 조금 덜 달게 만들어요.",
+   "en": "Hyunwoo intentionally makes his bread a little less sweet.",
+   "ko": "현우는 의도적으로 빵을 조금 덜 달게 만들어요.",
+   "blank": "의도적으로",
+   "src": "made"
+  },
+  {
+   "text": "수진은 동료가 의도적인 실수를 했다고 생각하지 않았어요.",
+   "en": "Sujin didn't think her colleague's mistake was intentional.",
+   "ko": "수진은 동료가 의도적인 실수를 했다고 생각하지 않았어요.",
+   "blank": "의도적인",
+   "src": "made"
+  }
+ ],
  "w|의뢰인": [
   {
    "text": "변호사는 의뢰인 대신 시청에 서류를 내러 왔어요.",
@@ -49280,6 +50064,22 @@
    "src": "made"
   }
  ],
+ "w|이삿짐": [
+  {
+   "text": "민수는 혼자서 이삿짐을 나르다가 허리를 삐끗했어요.",
+   "en": "Minsu strained his back carrying the moving boxes by himself.",
+   "ko": "민수는 혼자서 이삿짐을 나르다가 허리를 삐끗했어요.",
+   "blank": "이삿짐을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 이삿짐 싸는 요령을 담은 책을 친구에게 추천했어요.",
+   "en": "Jiyoung recommended a book with tips on packing for a move to her friend.",
+   "ko": "지영은 이삿짐 싸는 요령을 담은 책을 친구에게 추천했어요.",
+   "blank": "이삿짐",
+   "src": "made"
+  }
+ ],
  "w|이상": [
   {
    "text": "그 이상은 비밀이야.",
@@ -49786,6 +50586,22 @@
    "src": "made"
   }
  ],
+ "w|인공적": [
+  {
+   "text": "현우는 인공적인 색소 대신 단호박 가루로 빵에 색을 입혀요.",
+   "en": "Instead of artificial coloring, Hyunwoo colors his bread with sweet pumpkin powder.",
+   "ko": "현우는 인공적인 색소 대신 단호박 가루로 빵에 색을 입혀요.",
+   "blank": "인공적인",
+   "src": "made"
+  },
+  {
+   "text": "수진은 사무실에 인공적인 화초 대신 진짜 화분을 들여놓았어요.",
+   "en": "Sujin brought real potted plants into the office instead of artificial ones.",
+   "ko": "수진은 사무실에 인공적인 화초 대신 진짜 화분을 들여놓았어요.",
+   "blank": "인공적인",
+   "src": "made"
+  }
+ ],
  "w|인구": [
   {
    "text": "이 도시의 인구가 늘고 있어.",
@@ -49998,6 +50814,22 @@
    "ko": "대기 인원이 많아서 이번 비행기를 탈 수 있을 지 모르겠다.",
    "blank": "인원이",
    "src": "krdict"
+  }
+ ],
+ "w|인위적": [
+  {
+   "text": "현우는 인위적인 향을 넣지 않고 버터만으로 맛을 내요.",
+   "en": "Hyunwoo doesn't add artificial flavoring and gets the taste from butter alone.",
+   "ko": "현우는 인위적인 향을 넣지 않고 버터만으로 맛을 내요.",
+   "blank": "인위적인",
+   "src": "made"
+  },
+  {
+   "text": "새 사무실의 조명은 너무 인위적이라서 수진은 창가 자리를 원했어요.",
+   "en": "The lighting in the new office felt too artificial, so Sujin wanted a seat by the window.",
+   "ko": "새 사무실의 조명은 너무 인위적이라서 수진은 창가 자리를 원했어요.",
+   "blank": "인위적이라서",
+   "src": "made"
   }
  ],
  "w|인정": [
@@ -50994,6 +51826,22 @@
    "blank": "자격이"
   }
  ],
+ "w|자그마하다": [
+  {
+   "text": "민수의 새 집에는 자그마한 마당이 딸려 있어요.",
+   "en": "Minsu's new house comes with a small yard.",
+   "ko": "민수의 새 집에는 자그마한 마당이 딸려 있어요.",
+   "blank": "자그마한",
+   "src": "made"
+  },
+  {
+   "text": "지영은 창가의 자그마한 책상을 제일 좋아해요.",
+   "en": "Jiyoung likes the little desk by the window the most.",
+   "ko": "지영은 창가의 자그마한 책상을 제일 좋아해요.",
+   "blank": "자그마한",
+   "src": "made"
+  }
+ ],
  "w|자극": [
   {
    "text": "반장의 성실한 모습이 태윤에게 좋은 자극이 됐어요.",
@@ -51607,6 +52455,22 @@
    "en": "Seoyeon put off her homework and brought an all-nighter on herself.",
    "ko": "서연은 숙제를 미루다가 밤샘을 자초했어요.",
    "blank": "자초했어요",
+   "src": "made"
+  }
+ ],
+ "w|자취방": [
+  {
+   "text": "민수는 첫 자취방에서 라면만 끓여 먹던 시절을 떠올렸어요.",
+   "en": "Minsu remembered the days of eating nothing but ramen in his first rented room.",
+   "ko": "민수는 첫 자취방에서 라면만 끓여 먹던 시절을 떠올렸어요.",
+   "blank": "자취방에서",
+   "src": "made"
+  },
+  {
+   "text": "지영의 자취방에는 도서관에서 빌린 책이 늘 쌓여 있어요.",
+   "en": "Books borrowed from the library are always piled up in Jiyoung's rented room.",
+   "ko": "지영의 자취방에는 도서관에서 빌린 책이 늘 쌓여 있어요.",
+   "blank": "자취방에는",
    "src": "made"
   }
  ],
@@ -52866,6 +53730,22 @@
    "src": "made"
   }
  ],
+ "w|재활용": [
+  {
+   "text": "민수는 이사하면서 나온 상자를 모두 재활용으로 내놓았어요.",
+   "en": "Minsu put out all the boxes from the move for recycling.",
+   "ko": "민수는 이사하면서 나온 상자를 모두 재활용으로 내놓았어요.",
+   "blank": "재활용으로",
+   "src": "made"
+  },
+  {
+   "text": "지영은 도서관에서 열리는 재활용 공예 수업에 참여했어요.",
+   "en": "Jiyoung joined a recycling craft class held at the library.",
+   "ko": "지영은 도서관에서 열리는 재활용 공예 수업에 참여했어요.",
+   "blank": "재활용",
+   "src": "made"
+  }
+ ],
  "w|잼": [
   {
    "text": "토스트에 잼을 발랐어.",
@@ -53564,6 +54444,22 @@
    "blank": "전기"
   }
  ],
+ "w|전기세": [
+  {
+   "text": "민수는 에어컨을 많이 틀어서 여름 전기세가 걱정이에요.",
+   "en": "Minsu runs the air conditioner a lot, so he's worried about the summer electricity bill.",
+   "ko": "민수는 에어컨을 많이 틀어서 여름 전기세가 걱정이에요.",
+   "blank": "전기세가",
+   "src": "made"
+  },
+  {
+   "text": "도서관은 여름에 에어컨을 틀어 주니까 지영은 집 전기세를 아낄 수 있어요.",
+   "en": "The library runs the air conditioning in summer, so Jiyoung can save on her electricity bill at home.",
+   "ko": "도서관은 여름에 에어컨을 틀어 주니까 지영은 집 전기세를 아낄 수 있어요.",
+   "blank": "전기세를",
+   "src": "made"
+  }
+ ],
  "w|전날": [
   {
    "text": "시험 전날에 복습했어.",
@@ -53698,6 +54594,22 @@
    "src": "made"
   }
  ],
+ "w|전문적": [
+  {
+   "text": "현우는 제빵 학교에서 일 년 동안 전문적인 교육을 받았어요.",
+   "en": "Hyunwoo received professional training at a baking school for a year.",
+   "ko": "현우는 제빵 학교에서 일 년 동안 전문적인 교육을 받았어요.",
+   "blank": "전문적인",
+   "src": "made"
+  },
+  {
+   "text": "수진은 계약서를 검토하려고 전문적인 법률 자문을 받았어요.",
+   "en": "Sujin got professional legal advice to review the contract.",
+   "ko": "수진은 계약서를 검토하려고 전문적인 법률 자문을 받았어요.",
+   "blank": "전문적인",
+   "src": "made"
+  }
+ ],
  "w|전부": [
   {
    "text": "이게 전부야.",
@@ -53803,6 +54715,22 @@
    "en": "On race day, roads throughout the city were closed for the morning.",
    "ko": "대회 날 도시 전역의 도로가 오전 동안 통제됐어요.",
    "blank": "전역의",
+   "src": "made"
+  }
+ ],
+ "w|전원주택": [
+  {
+   "text": "민수의 부모님은 은퇴 후 시골 전원주택으로 옮기셨어요.",
+   "en": "After retiring, Minsu's parents moved to a country house.",
+   "ko": "민수의 부모님은 은퇴 후 시골 전원주택으로 옮기셨어요.",
+   "blank": "전원주택으로",
+   "src": "made"
+  },
+  {
+   "text": "지영은 전원주택 정원 가꾸기 책을 세 권이나 빌렸어요.",
+   "en": "Jiyoung borrowed as many as three books on gardening for a country house.",
+   "ko": "지영은 전원주택 정원 가꾸기 책을 세 권이나 빌렸어요.",
+   "blank": "전원주택",
    "src": "made"
   }
  ],
@@ -53924,6 +54852,22 @@
    "en": "Keeping tradition matters.",
    "ko": "전통을 지키는 게 중요해.",
    "blank": "전통을"
+  }
+ ],
+ "w|전통적": [
+  {
+   "text": "현우는 쑥과 팥을 넣은 전통적인 떡빵도 팔아요.",
+   "en": "Hyunwoo also sells traditional rice-cake bread with mugwort and red beans.",
+   "ko": "현우는 쑥과 팥을 넣은 전통적인 떡빵도 팔아요.",
+   "blank": "전통적인",
+   "src": "made"
+  },
+  {
+   "text": "수진의 회사는 아직도 전통적인 결재 방식을 고집해요.",
+   "en": "Sujin's company still insists on the traditional approval process.",
+   "ko": "수진의 회사는 아직도 전통적인 결재 방식을 고집해요.",
+   "blank": "전통적인",
+   "src": "made"
   }
  ],
  "w|전투": [
@@ -54156,6 +55100,22 @@
    "en": "I hang on to overcome despair.",
    "ko": "절망을 이겨 내려고 버텨.",
    "blank": "절망을"
+  }
+ ],
+ "w|절실하다": [
+  {
+   "text": "아이가 커 가면서 민수 가족은 방 하나가 더 절실했어요.",
+   "en": "As the child grew, Minsu's family badly needed one more room.",
+   "ko": "아이가 커 가면서 민수 가족은 방 하나가 더 절실했어요.",
+   "blank": "절실했어요",
+   "src": "made"
+  },
+  {
+   "text": "논문 마감을 앞둔 지영에게는 조용한 공간이 절실해요.",
+   "en": "With her thesis deadline coming up, Jiyoung desperately needs a quiet space.",
+   "ko": "논문 마감을 앞둔 지영에게는 조용한 공간이 절실해요.",
+   "blank": "절실해요",
+   "src": "made"
   }
  ],
  "w|절약하다": [
@@ -55558,6 +56518,22 @@
    "src": "krdict"
   }
  ],
+ "w|조미료": [
+  {
+   "text": "현우는 빵 맛을 살리려고 조미료를 거의 쓰지 않아요.",
+   "en": "To bring out the bread's flavor, Hyunwoo uses hardly any seasoning.",
+   "ko": "현우는 빵 맛을 살리려고 조미료를 거의 쓰지 않아요.",
+   "blank": "조미료를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 도시락을 쌀 때 조미료를 적게 넣으려고 해요.",
+   "en": "Sujin tries to use less seasoning when she packs her lunch.",
+   "ko": "수진은 도시락을 쌀 때 조미료를 적게 넣으려고 해요.",
+   "blank": "조미료를",
+   "src": "made"
+  }
+ ],
  "w|조사": [
   {
    "text": "사고 원인이 조사 중이야.",
@@ -56524,6 +57500,22 @@
    "src": "made"
   }
  ],
+ "w|주요하다": [
+  {
+   "text": "민수가 이사를 결정한 주요한 이유는 아이 학교였어요.",
+   "en": "The main reason Minsu decided to move was his child's school.",
+   "ko": "민수가 이사를 결정한 주요한 이유는 아이 학교였어요.",
+   "blank": "주요한",
+   "src": "made"
+  },
+  {
+   "text": "지영은 보고서에 그 시대의 주요한 사건들을 정리했어요.",
+   "en": "Jiyoung summarized the major events of that era in her report.",
+   "ko": "지영은 보고서에 그 시대의 주요한 사건들을 정리했어요.",
+   "blank": "주요한",
+   "src": "made"
+  }
+ ],
  "w|주의하다": [
   {
    "text": "관리실은 현우에게 계단이 미끄러우니 주의하라고 했어요.",
@@ -56960,6 +57952,22 @@
    "blank": "중간쯤에"
   }
  ],
+ "w|중개인": [
+  {
+   "text": "부동산 중개인은 민수에게 남향 집을 추천했어요.",
+   "en": "The real estate agent recommended a south-facing home to Minsu.",
+   "ko": "부동산 중개인은 민수에게 남향 집을 추천했어요.",
+   "blank": "중개인은",
+   "src": "made"
+  },
+  {
+   "text": "지영은 부동산 중개인 시험을 준비하느라 매일 도서관에 와요.",
+   "en": "Jiyoung comes to the library every day to prepare for the real estate agent exam.",
+   "ko": "지영은 부동산 중개인 시험을 준비하느라 매일 도서관에 와요.",
+   "blank": "중개인",
+   "src": "made"
+  }
+ ],
  "w|중년": [
   {
    "text": "동민은 어느새 친구들과 중년의 고민을 나누고 있었어요.",
@@ -57212,6 +58220,22 @@
    "en": "Tell me right away if a problem comes up.",
    "ko": "문제 생기면 즉시 말해.",
    "blank": "즉시"
+  }
+ ],
+ "w|즉흥적": [
+  {
+   "text": "그 호두 단팥빵은 현우가 즉흥적으로 만든 빵인데 제일 잘 팔려요.",
+   "en": "That walnut red bean bread was something Hyunwoo made on a whim, but it sells the best.",
+   "ko": "그 호두 단팥빵은 현우가 즉흥적으로 만든 빵인데 제일 잘 팔려요.",
+   "blank": "즉흥적으로",
+   "src": "made"
+  },
+  {
+   "text": "수진의 팀장님은 즉흥적인 회의를 자주 잡아서 팀원들이 힘들어해요.",
+   "en": "Sujin's team leader often calls impromptu meetings, which wears the team out.",
+   "ko": "수진의 팀장님은 즉흥적인 회의를 자주 잡아서 팀원들이 힘들어해요.",
+   "blank": "즉흥적인",
+   "src": "made"
   }
  ],
  "w|즐거움": [
@@ -60122,6 +61146,38 @@
    "src": "made"
   }
  ],
+ "w|창의적": [
+  {
+   "text": "현우는 김치를 넣은 창의적인 빵으로 동네에서 유명해졌어요.",
+   "en": "Hyunwoo became famous in the neighborhood for his creative bread with kimchi in it.",
+   "ko": "현우는 김치를 넣은 창의적인 빵으로 동네에서 유명해졌어요.",
+   "blank": "창의적인",
+   "src": "made"
+  },
+  {
+   "text": "수진은 창의적인 아이디어를 내려고 회의실 벽에 포스트잇을 붙여요.",
+   "en": "Sujin puts sticky notes on the meeting room wall to come up with creative ideas.",
+   "ko": "수진은 창의적인 아이디어를 내려고 회의실 벽에 포스트잇을 붙여요.",
+   "blank": "창의적인",
+   "src": "made"
+  }
+ ],
+ "w|창틀": [
+  {
+   "text": "민수는 이사 들어가기 전에 창틀에 낀 먼지를 꼼꼼히 닦았어요.",
+   "en": "Before moving in, Minsu carefully wiped the dust stuck in the window frames.",
+   "ko": "민수는 이사 들어가기 전에 창틀에 낀 먼지를 꼼꼼히 닦았어요.",
+   "blank": "창틀에",
+   "src": "made"
+  },
+  {
+   "text": "도서관 창틀에 앉은 고양이가 지영을 빤히 쳐다봤어요.",
+   "en": "A cat sitting on the library window frame stared right at Jiyoung.",
+   "ko": "도서관 창틀에 앉은 고양이가 지영을 빤히 쳐다봤어요.",
+   "blank": "창틀에",
+   "src": "made"
+  }
+ ],
  "w|창피하다": [
   {
    "text": "앞에서 넘어져서 창피해.",
@@ -60962,6 +62018,22 @@
    "src": "made"
   }
  ],
+ "w|체계적": [
+  {
+   "text": "현우는 재료 재고를 체계적으로 관리하려고 장부를 새로 만들었어요.",
+   "en": "Hyunwoo made a new ledger to manage his ingredient stock systematically.",
+   "ko": "현우는 재료 재고를 체계적으로 관리하려고 장부를 새로 만들었어요.",
+   "blank": "체계적으로",
+   "src": "made"
+  },
+  {
+   "text": "수진은 새로 온 직원을 위해 체계적인 업무 안내서를 만들었어요.",
+   "en": "Sujin made a systematic work guide for the new employee.",
+   "ko": "수진은 새로 온 직원을 위해 체계적인 업무 안내서를 만들었어요.",
+   "blank": "체계적인",
+   "src": "made"
+  }
+ ],
  "w|체력": [
   {
    "text": "요즘 체력이 많이 떨어져.",
@@ -61210,6 +62282,22 @@
    "blank": "초등학교"
   }
  ],
+ "w|초라하다": [
+  {
+   "text": "짐을 다 빼고 나니 오래 살던 방이 갑자기 초라해 보였어요.",
+   "en": "After all the things were moved out, the room Minsu had lived in for so long suddenly looked shabby.",
+   "ko": "짐을 다 빼고 나니 오래 살던 방이 갑자기 초라해 보였어요.",
+   "blank": "초라해",
+   "src": "made"
+  },
+  {
+   "text": "지영은 초라한 시골 도서관에도 좋은 책이 많다는 걸 알게 됐어요.",
+   "en": "Jiyoung learned that even a humble rural library has lots of good books.",
+   "ko": "지영은 초라한 시골 도서관에도 좋은 책이 많다는 걸 알게 됐어요.",
+   "blank": "초라한",
+   "src": "made"
+  }
+ ],
  "w|초록색": [
   {
    "text": "초록색 모자 샀어.",
@@ -61280,6 +62368,22 @@
    "en": "The moist cake suited my taste.",
    "ko": "촉촉한 케이크가 입에 맞았어.",
    "blank": "촉촉한"
+  }
+ ],
+ "w|촌스럽다": [
+  {
+   "text": "민수는 엄마가 골라 준 꽃무늬 커튼이 좀 촌스럽다고 생각했어요.",
+   "en": "Minsu thought the floral curtains his mom picked were a bit tacky.",
+   "ko": "민수는 엄마가 골라 준 꽃무늬 커튼이 좀 촌스럽다고 생각했어요.",
+   "blank": "촌스럽다고",
+   "src": "made"
+  },
+  {
+   "text": "지영은 오래된 소설의 표지가 촌스러워도 내용이 좋아서 끝까지 읽었어요.",
+   "en": "Even though the old novel's cover was dated, Jiyoung read it to the end because the story was good.",
+   "ko": "지영은 오래된 소설의 표지가 촌스러워도 내용이 좋아서 끝까지 읽었어요.",
+   "blank": "촌스러워도",
+   "src": "made"
   }
  ],
  "w|총": [
@@ -62448,6 +63552,22 @@
    "blank": "치마가"
   }
  ],
+ "w|치명적": [
+  {
+   "text": "민수는 물이 새는 게 집에 치명적인 문제라는 걸 처음 알았어요.",
+   "en": "Minsu learned for the first time that a water leak is a critical problem for a house.",
+   "ko": "민수는 물이 새는 게 집에 치명적인 문제라는 걸 처음 알았어요.",
+   "blank": "치명적인",
+   "src": "made"
+  },
+  {
+   "text": "지영은 습기가 오래된 책에 치명적이라는 사서의 말을 들었어요.",
+   "en": "Jiyoung heard the librarian say that humidity is fatal to old books.",
+   "ko": "지영은 습기가 오래된 책에 치명적이라는 사서의 말을 들었어요.",
+   "blank": "치명적이라는",
+   "src": "made"
+  }
+ ],
  "w|치사하다": [
   {
    "text": "성호는 간식을 혼자 다 먹은 동료에게 치사하다고 농담했어요.",
@@ -62910,6 +64030,22 @@
    "blank": "칼"
   }
  ],
+ "w|칼국수": [
+  {
+   "text": "현우는 비 오는 날이면 가게 문을 닫고 근처에서 칼국수를 먹어요.",
+   "en": "On rainy days, Hyunwoo closes the shop and eats knife-cut noodles nearby.",
+   "ko": "현우는 비 오는 날이면 가게 문을 닫고 근처에서 칼국수를 먹어요.",
+   "blank": "칼국수를",
+   "src": "made"
+  },
+  {
+   "text": "비가 오자 수진의 팀은 다 같이 칼국수를 먹으러 나갔어요.",
+   "en": "When it rained, Sujin's team all went out together to eat knife-cut noodles.",
+   "ko": "비가 오자 수진의 팀은 다 같이 칼국수를 먹으러 나갔어요.",
+   "blank": "칼국수를",
+   "src": "made"
+  }
+ ],
  "w|칼럼": [
   {
    "text": "민수는 학교 신문에 급식에 관한 칼럼을 썼어요.",
@@ -63280,6 +64416,22 @@
    "blank": "콩"
   }
  ],
+ "w|콩나물": [
+  {
+   "text": "현우는 점심으로 어머니가 싸 주신 콩나물 무침을 먹었어요.",
+   "en": "For lunch, Hyunwoo ate the seasoned bean sprouts his mother packed for him.",
+   "ko": "현우는 점심으로 어머니가 싸 주신 콩나물 무침을 먹었어요.",
+   "blank": "콩나물",
+   "src": "made"
+  },
+  {
+   "text": "회식 다음 날 수진은 콩나물이 듬뿍 들어간 해장국을 먹었어요.",
+   "en": "The day after the work dinner, Sujin had a hangover soup full of bean sprouts.",
+   "ko": "회식 다음 날 수진은 콩나물이 듬뿍 들어간 해장국을 먹었어요.",
+   "blank": "콩나물이",
+   "src": "made"
+  }
+ ],
  "w|쾌활하다": [
   {
    "text": "경민이 인터뷰한 할머니는 아흔이 넘었는데도 쾌활했어요.",
@@ -63586,6 +64738,22 @@
    "en": "Be careful in front of others.",
    "ko": "타인 앞에서 조심해.",
    "blank": "타인"
+  }
+ ],
+ "w|탁월하다": [
+  {
+   "text": "민수가 고른 이삿짐센터는 포장 솜씨가 탁월했어요.",
+   "en": "The moving company Minsu chose was excellent at packing.",
+   "ko": "민수가 고른 이삿짐센터는 포장 솜씨가 탁월했어요.",
+   "blank": "탁월했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영이 빌린 번역서는 문장이 탁월해서 원서를 읽는 것 같았어요.",
+   "en": "The translation Jiyoung borrowed had such excellent sentences it felt like reading the original.",
+   "ko": "지영이 빌린 번역서는 문장이 탁월해서 원서를 읽는 것 같았어요.",
+   "blank": "탁월해서",
+   "src": "made"
   }
  ],
  "w|탁자": [
@@ -66506,6 +67674,22 @@
    "blank": "피로가"
   }
  ],
+ "w|피망": [
+  {
+   "text": "현우는 피자빵에 빨간 피망을 얇게 썰어 올렸어요.",
+   "en": "Hyunwoo sliced red bell pepper thinly and put it on the pizza bread.",
+   "ko": "현우는 피자빵에 빨간 피망을 얇게 썰어 올렸어요.",
+   "blank": "피망을",
+   "src": "made"
+  },
+  {
+   "text": "수진은 점심 볶음밥에서 피망만 골라냈어요.",
+   "en": "Sujin picked out only the bell peppers from her lunch fried rice.",
+   "ko": "수진은 점심 볶음밥에서 피망만 골라냈어요.",
+   "blank": "피망만",
+   "src": "made"
+  }
+ ],
  "w|피부": [
   {
    "text": "피부 촉촉해 보여.",
@@ -66603,6 +67787,22 @@
    "en": "At this gathering, a second round at karaoke is almost a must.",
    "ko": "이 모임에서 노래방 이차는 거의 필수 코스예요.",
    "blank": "필수",
+   "src": "made"
+  }
+ ],
+ "w|필수적": [
+  {
+   "text": "민수에게 지하철역과 가까운 집은 필수적인 조건이었어요.",
+   "en": "For Minsu, a home close to a subway station was an essential condition.",
+   "ko": "민수에게 지하철역과 가까운 집은 필수적인 조건이었어요.",
+   "blank": "필수적인",
+   "src": "made"
+  },
+  {
+   "text": "도서관 회원증은 책을 빌리는 데 필수적이에요.",
+   "en": "A library card is essential for borrowing books.",
+   "ko": "도서관 회원증은 책을 빌리는 데 필수적이에요.",
+   "blank": "필수적이에요",
    "src": "made"
   }
  ],
@@ -66793,6 +67993,22 @@
    "en": "Yuna saw a hippo yawning at the zoo near the hotel.",
    "ko": "유나는 호텔 근처 동물원에서 하마가 하품하는 걸 봤어요.",
    "blank": "하마가",
+   "src": "made"
+  }
+ ],
+ "w|하숙집": [
+  {
+   "text": "민수는 상경해서 처음 일 년은 하숙집에서 지냈어요.",
+   "en": "When he first came to Seoul, Minsu spent a year in a boarding house.",
+   "ko": "민수는 상경해서 처음 일 년은 하숙집에서 지냈어요.",
+   "blank": "하숙집에서",
+   "src": "made"
+  },
+  {
+   "text": "지영은 하숙집 이야기가 나오는 옛 소설을 읽다가 웃음을 터뜨렸어요.",
+   "en": "Jiyoung burst out laughing while reading an old novel set in a boarding house.",
+   "ko": "지영은 하숙집 이야기가 나오는 옛 소설을 읽다가 웃음을 터뜨렸어요.",
+   "blank": "하숙집",
    "src": "made"
   }
  ],
@@ -68010,6 +69226,22 @@
    "blank": "핵심만"
   }
  ],
+ "w|핵심적": [
+  {
+   "text": "민수에게 출퇴근 시간은 집을 고를 때 핵심적인 기준이었어요.",
+   "en": "Commute time was a key criterion for Minsu when choosing a home.",
+   "ko": "민수에게 출퇴근 시간은 집을 고를 때 핵심적인 기준이었어요.",
+   "blank": "핵심적인",
+   "src": "made"
+  },
+  {
+   "text": "지영은 책을 읽으며 핵심적인 문장에만 연필로 밑줄을 그어요.",
+   "en": "While reading, Jiyoung underlines only the key sentences in pencil.",
+   "ko": "지영은 책을 읽으며 핵심적인 문장에만 연필로 밑줄을 그어요.",
+   "blank": "핵심적인",
+   "src": "made"
+  }
+ ],
  "w|핸드폰": [
   {
    "text": "핸드폰 액정 깨졌어.",
@@ -68530,6 +69762,22 @@
    "en": "Cash is more convenient at the market.",
    "ko": "시장에서는 현금이 더 편해.",
    "blank": "현금이"
+  }
+ ],
+ "w|현대적": [
+  {
+   "text": "현우의 빵집은 하얀 벽과 유리창으로 현대적인 느낌을 줘요.",
+   "en": "Hyunwoo's bakery gives a modern feel with its white walls and glass windows.",
+   "ko": "현우의 빵집은 하얀 벽과 유리창으로 현대적인 느낌을 줘요.",
+   "blank": "현대적인",
+   "src": "made"
+  },
+  {
+   "text": "수진은 새로 이사한 현대적인 사무실 건물이 마음에 들어요.",
+   "en": "Sujin likes the modern office building they recently moved into.",
+   "ko": "수진은 새로 이사한 현대적인 사무실 건물이 마음에 들어요.",
+   "blank": "현대적인",
+   "src": "made"
   }
  ],
  "w|현명하다": [
@@ -70086,6 +71334,22 @@
    "blank": "효과를"
   }
  ],
+ "w|효과적": [
+  {
+   "text": "현우는 반죽을 냉장고에서 하룻밤 숙성하는 게 맛에 가장 효과적이라고 믿어요.",
+   "en": "Hyunwoo believes resting the dough overnight in the fridge is the most effective for flavor.",
+   "ko": "현우는 반죽을 냉장고에서 하룻밤 숙성하는 게 맛에 가장 효과적이라고 믿어요.",
+   "blank": "효과적이라고",
+   "src": "made"
+  },
+  {
+   "text": "수진은 짧은 회의가 긴 회의보다 훨씬 효과적이라고 팀원들을 설득했어요.",
+   "en": "Sujin persuaded her team that short meetings are much more effective than long ones.",
+   "ko": "수진은 짧은 회의가 긴 회의보다 훨씬 효과적이라고 팀원들을 설득했어요.",
+   "blank": "효과적이라고",
+   "src": "made"
+  }
+ ],
  "w|효율": [
   {
    "text": "경민은 공부 효율을 높이려고 시간표를 새로 짰어요.",
@@ -70099,6 +71363,22 @@
    "en": "If you prep all the ingredients in advance, cooking becomes much more efficient.",
    "ko": "재료를 미리 다 손질해 두면 요리 효율이 훨씬 좋아져요.",
    "blank": "효율이",
+   "src": "made"
+  }
+ ],
+ "w|효율적": [
+  {
+   "text": "현우는 새벽 작업 순서를 바꿔서 빵 굽는 시간을 효율적으로 줄였어요.",
+   "en": "Hyunwoo changed the order of his early-morning work and efficiently cut down baking time.",
+   "ko": "현우는 새벽 작업 순서를 바꿔서 빵 굽는 시간을 효율적으로 줄였어요.",
+   "blank": "효율적으로",
+   "src": "made"
+  },
+  {
+   "text": "수진은 메일 대신 메신저를 쓰는 게 더 효율적이라고 생각해요.",
+   "en": "Sujin thinks using a messenger instead of email is more efficient.",
+   "ko": "수진은 메일 대신 메신저를 쓰는 게 더 효율적이라고 생각해요.",
+   "blank": "효율적이라고",
    "src": "made"
   }
  ],

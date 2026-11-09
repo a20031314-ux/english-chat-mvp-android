@@ -1745,6 +1745,22 @@
    "src": "made"
   }
  ],
+ "w|благословение": [
+  {
+   "text": "Никита получил благословение главного редактора на долгое расследование.",
+   "en": "Nikita got the editor-in-chief's blessing for a long investigation.",
+   "ko": "니키타는 긴 탐사 취재를 하라는 편집장의 허락을 받았어요.",
+   "blank": "благословение",
+   "src": "made"
+  },
+  {
+   "text": "Совет директоров дал Татьяне благословение на выход на новые рынки.",
+   "en": "The board gave Tatiana its blessing to enter new markets.",
+   "ko": "이사회는 타티야나가 새 시장에 진출하는 걸 승인해 줬어요.",
+   "blank": "благословение",
+   "src": "made"
+  }
+ ],
  "w|благословить": [
   {
    "text": "Перед открытием нового моста священник пришёл благословить его, и Алексей стоял рядом.",
@@ -2456,6 +2472,22 @@
    "en": "An elderly British tourist joined Natalia in her compartment.",
    "ko": "나이 든 영국인 관광객이 나탈리야의 칸에 함께 탔어요.",
    "blank": "британский",
+   "src": "made"
+  }
+ ],
+ "w|бродить": [
+  {
+   "text": "Перед репортажем Никита целый день бродил по рынку.",
+   "en": "Before the report, Nikita wandered around the market all day.",
+   "ko": "취재 전에 니키타는 하루 종일 시장을 돌아다녔어요.",
+   "blank": "бродил",
+   "src": "made"
+  },
+  {
+   "text": "Во время созвонов Татьяна любит бродить по офису с ноутбуком.",
+   "en": "During calls Tatiana likes to wander around the office with her laptop.",
+   "ko": "화상 회의 중에 타티야나는 노트북을 들고 사무실을 돌아다니는 걸 좋아해요.",
+   "blank": "бродить",
    "src": "made"
   }
  ],
@@ -3619,6 +3651,22 @@
    "src": "made"
   }
  ],
+ "w|вешать": [
+  {
+   "text": "В редакции Никита любит вешать на стену лучшие первые полосы.",
+   "en": "At the newsroom Nikita likes to hang the best front pages on the wall.",
+   "ko": "편집부에서 니키타는 제일 잘 나온 1면을 벽에 거는 걸 좋아해요.",
+   "blank": "вешать",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна старается не вешать на команду лишние задачи.",
+   "en": "Tatiana tries not to pile extra tasks onto the team.",
+   "ko": "타티야나는 팀에 쓸데없는 일을 떠넘기지 않으려고 해요.",
+   "blank": "вешать",
+   "src": "made"
+  }
+ ],
  "w|вещество": [
   {
    "text": "Друг-химик объяснял Дмитрию, из какого вещества делают краски.",
@@ -3679,6 +3727,22 @@
    "ko": "그 대신 내가 뭘 해야 해?",
    "blank": "взамен",
    "src": "tatoeba:4571366/Selena777 en:3821160/CK"
+  }
+ ],
+ "w|взвод": [
+  {
+   "text": "Дед Никиты служил командиром взвода, и внук написал о нём статью.",
+   "en": "Nikita's grandfather served as a platoon commander, and his grandson wrote an article about him.",
+   "ko": "니키타의 할아버지는 소대장으로 복무했고, 손자가 그분에 대한 기사를 썼어요.",
+   "blank": "взвода",
+   "src": "made"
+  },
+  {
+   "text": "В офис привезли пиццу на целый взвод голодных программистов.",
+   "en": "Pizza for a whole platoon of hungry programmers was delivered to the office.",
+   "ko": "배고픈 개발자 한 소대가 먹을 만큼 피자가 사무실에 배달됐어요.",
+   "blank": "взвод",
+   "src": "made"
   }
  ],
  "w|взгляд": [
@@ -4341,6 +4405,22 @@
    "src": "made"
   }
  ],
+ "w|вложить": [
+  {
+   "text": "Иван решил вложить премию в новый инструмент.",
+   "en": "Ivan decided to invest his bonus in new tools.",
+   "ko": "이반은 보너스를 새 공구에 쓰기로 했어요.",
+   "blank": "вложить",
+   "src": "made"
+  },
+  {
+   "text": "Анна не жалеет, что решила вложить столько времени в изучение старых рукописей.",
+   "en": "Anna doesn't regret investing so much time in studying old manuscripts.",
+   "ko": "안나는 옛 필사본 연구에 그 많은 시간을 쏟기로 한 걸 후회하지 않아요.",
+   "blank": "вложить",
+   "src": "made"
+  }
+ ],
  "w|влюбиться": [
   {
    "text": "Как я мог влюбиться в неё так быстро?",
@@ -4795,6 +4875,22 @@
    "src": "tatoeba:3344577/odexed en:1386709/quickfitter"
   }
  ],
+ "w|возвращать": [
+  {
+   "text": "Иван не забывает возвращать чужие инструменты на место.",
+   "en": "Ivan doesn't forget to put other people's tools back in their place.",
+   "ko": "이반은 남의 공구를 꼭 제자리에 돌려놓아요.",
+   "blank": "возвращать",
+   "src": "made"
+  },
+  {
+   "text": "Анна всегда старается возвращать книги вовремя.",
+   "en": "Anna always tries to return books on time.",
+   "ko": "안나는 늘 책을 제때 반납하려고 해요.",
+   "blank": "возвращать",
+   "src": "made"
+  }
+ ],
  "w|возвращаться": [
   {
    "text": "Возвращайся поскорее.",
@@ -4947,6 +5043,22 @@
    "ko": "라디오 켜도 괜찮아?",
    "blank": "возражать",
    "src": "tatoeba:2609808/odexed en:29762/CM"
+  }
+ ],
+ "w|возражение": [
+  {
+   "text": "Редактор выслушал возражения Никиты и всё-таки сократил текст.",
+   "en": "The editor listened to Nikita's objections and still cut the text.",
+   "ko": "편집장은 니키타의 반대 의견을 듣고도 결국 글을 줄였어요.",
+   "blank": "возражения",
+   "src": "made"
+  },
+  {
+   "text": "У Татьяны есть одно возражение против нового дизайна.",
+   "en": "Tatiana has one objection to the new design.",
+   "ko": "타티야나는 새 디자인에 반대하는 점이 하나 있어요.",
+   "blank": "возражение",
+   "src": "made"
   }
  ],
  "w|возраст": [
@@ -5759,6 +5871,22 @@
    "ko": "넌 내 친구야, 적이야?",
    "blank": "враг",
    "src": "tatoeba:13458055/marafon en:11900764/CK"
+  }
+ ],
+ "w|враньё": [
+  {
+   "text": "«Это враньё!» — возмутился мэр, прочитав статью Никиты.",
+   "en": "\"That's a lie!\" the mayor exclaimed indignantly after reading Nikita's article.",
+   "ko": "\"다 거짓말이에요!\" 니키타의 기사를 읽은 시장이 화를 냈어요.",
+   "blank": "враньё",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна терпеть не может враньё в отчётах.",
+   "en": "Tatiana can't stand lies in reports.",
+   "ko": "타티야나는 보고서에 거짓말이 있는 걸 질색해요.",
+   "blank": "враньё",
+   "src": "made"
   }
  ],
  "w|врата": [
@@ -6937,6 +7065,22 @@
    "src": "made"
   }
  ],
+ "w|выпускать": [
+  {
+   "text": "Завод, где Иван покупает кирпич, теперь будет выпускать и черепицу.",
+   "en": "The factory where Ivan buys bricks will now also produce roof tiles.",
+   "ko": "이반이 벽돌을 사는 공장이 이제 기와도 만들 거래요.",
+   "blank": "выпускать",
+   "src": "made"
+  },
+  {
+   "text": "Библиотека Анны начала выпускать собственный литературный журнал.",
+   "en": "Anna's library started publishing its own literary magazine.",
+   "ko": "안나네 도서관은 자체 문학 잡지를 내기 시작했어요.",
+   "blank": "выпускать",
+   "src": "made"
+  }
+ ],
  "w|выпускной": [
   {
    "text": "Весь класс Ивана готовится к выпускному вечеру.",
@@ -7015,6 +7159,22 @@
    "ko": "사과 씨를 심으면 나무로 자랄 수도 있어요.",
    "blank": "вырасти",
    "src": "tatoeba:912700/joulin en:681742/Source_VOA"
+  }
+ ],
+ "w|вырастить": [
+  {
+   "text": "Никита пишет очерк о фермерше, которая сумела вырастить виноград на севере.",
+   "en": "Nikita is writing a feature about a farmer who managed to grow grapes in the north.",
+   "ko": "니키타는 북쪽 지방에서 포도를 길러 낸 농부에 대한 르포를 쓰고 있어요.",
+   "blank": "вырастить",
+   "src": "made"
+  },
+  {
+   "text": "За два года Татьяна смогла вырастить команду из трёх человек до тридцати.",
+   "en": "In two years Tatiana managed to grow the team from three people to thirty.",
+   "ko": "이 년 만에 타티야나는 세 명이던 팀을 서른 명으로 키웠어요.",
+   "blank": "вырастить",
+   "src": "made"
   }
  ],
  "w|вырвать": [
@@ -8161,6 +8321,22 @@
    "ko": "열 나고 목 아파?",
    "blank": "горло",
    "src": "tatoeba:2717243/Leonid204 en:434590/lukaszpp"
+  }
+ ],
+ "w|горничная": [
+  {
+   "text": "Новую гостиницу строит бригада Ивана, а горничная из соседнего отеля каждый день приносит им чай.",
+   "en": "Ivan's crew is building a new hotel, and a maid from the neighboring hotel brings them tea every day.",
+   "ko": "이반의 작업반이 새 호텔을 짓고 있는데, 옆 호텔 객실 청소원이 날마다 차를 가져다줘요.",
+   "blank": "горничная",
+   "src": "made"
+  },
+  {
+   "text": "Анна читает детектив, где убийство раскрывает гостиничная горничная.",
+   "en": "Anna is reading a detective story in which a hotel maid solves a murder.",
+   "ko": "안나는 호텔 객실 청소원이 살인 사건을 푸는 추리 소설을 읽고 있어요.",
+   "blank": "горничная",
+   "src": "made"
   }
  ],
  "w|город": [
@@ -9607,6 +9783,22 @@
    "blank": "дело"
   }
  ],
+ "w|деловой": [
+  {
+   "text": "На стройку приехал заказчик в строгом деловом костюме, и Иван провёл его по этажам.",
+   "en": "The client arrived at the site in a strict business suit, and Ivan showed him around the floors.",
+   "ko": "정장 차림의 발주처 사람이 현장에 왔고, 이반이 층마다 안내했어요.",
+   "blank": "деловом",
+   "src": "made"
+  },
+  {
+   "text": "В отделе деловой литературы Анна искала книгу о переговорах.",
+   "en": "In the business literature section Anna was looking for a book on negotiations.",
+   "ko": "경영 도서 코너에서 안나는 협상에 관한 책을 찾고 있었어요.",
+   "blank": "деловой",
+   "src": "made"
+  }
+ ],
  "w|демон": [
   {
    "text": "В этой сказке демон живёт в старом колодце.",
@@ -10275,6 +10467,22 @@
    "blank": "доверяй"
   }
  ],
+ "w|довести": [
+  {
+   "text": "Главный редактор попросил Никиту довести статью до конца к вечеру.",
+   "en": "The editor-in-chief asked Nikita to finish the article by evening.",
+   "ko": "편집장은 니키타에게 저녁까지 기사를 끝까지 마무리하라고 했어요.",
+   "blank": "довести",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна обещала инвесторам довести приложение до релиза к весне.",
+   "en": "Tatiana promised investors to get the app to release by spring.",
+   "ko": "타티야나는 투자자들에게 봄까지 앱을 출시까지 끌고 가겠다고 약속했어요.",
+   "blank": "довести",
+   "src": "made"
+  }
+ ],
  "w|довольный": [
   {
    "text": "Вид у тебя довольный.",
@@ -10302,6 +10510,22 @@
    "en": "Try to guess who I ran into!",
    "ko": "내가 누구 만났는지 맞혀 봐!",
    "blank": "догадаться",
+   "src": "made"
+  }
+ ],
+ "w|догадываться": [
+  {
+   "text": "Читатели уже догадываются, кто пишет анонимную колонку в газете Никиты.",
+   "en": "Readers are already guessing who writes the anonymous column in Nikita's paper.",
+   "ko": "독자들은 니키타네 신문의 익명 칼럼을 누가 쓰는지 벌써 짐작하고 있어요.",
+   "blank": "догадываются",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна давно догадывалась, что конкуренты готовят похожий сервис.",
+   "en": "Tatiana had long suspected that competitors were preparing a similar service.",
+   "ko": "타티야나는 경쟁사가 비슷한 서비스를 준비한다는 걸 오래전부터 눈치채고 있었어요.",
+   "blank": "догадывалась",
    "src": "made"
   }
  ],
@@ -11019,6 +11243,22 @@
    "src": "tatoeba:3800641/odexed en:2360307/CK"
   }
  ],
+ "w|доход": [
+  {
+   "text": "Летом доход Ивана растёт, потому что строят больше.",
+   "en": "In summer Ivan's income goes up because there's more construction.",
+   "ko": "여름에는 공사가 많아서 이반의 수입이 늘어요.",
+   "blank": "доход",
+   "src": "made"
+  },
+  {
+   "text": "Анна читала статью о том, как писатели получали доход в прошлом веке.",
+   "en": "Anna read an article about how writers earned an income in the last century.",
+   "ko": "안나는 지난 세기 작가들이 어떻게 수입을 얻었는지에 대한 글을 읽었어요.",
+   "blank": "доход",
+   "src": "made"
+  }
+ ],
  "w|дочка": [
   {
    "text": "Соседка рассказала Михаилу, что едет к дочке на свадьбу.",
@@ -11373,6 +11613,22 @@
    "ko": "악마가 교실에 숨어 있어요.",
    "blank": "Дьявол",
    "src": "tatoeba:993934/shanghainese en:993929/sacredceltic"
+  }
+ ],
+ "w|дюжина": [
+  {
+   "text": "Иван заказал для бригады дюжину пирожков.",
+   "en": "Ivan ordered a dozen pies for the crew.",
+   "ko": "이반은 작업반 먹으라고 피로시키를 한 다스 주문했어요.",
+   "blank": "дюжину",
+   "src": "made"
+  },
+  {
+   "text": "Анна взяла домой целую дюжину детективов на каникулы.",
+   "en": "Anna took a whole dozen detective novels home for the holidays.",
+   "ko": "안나는 방학 동안 읽으려고 추리 소설을 한 다스나 빌려 갔어요.",
+   "blank": "дюжину",
+   "src": "made"
   }
  ],
  "w|дядя": [
@@ -12345,6 +12601,22 @@
    "en": "Someone already picked up the package.",
    "ko": "택배는 이미 찾아갔어.",
    "blank": "забрали"
+  }
+ ],
+ "w|забраться": [
+  {
+   "text": "Чтобы снять толпу сверху, фотограф Никиты забрался на крышу киоска.",
+   "en": "To shoot the crowd from above, Nikita's photographer climbed onto the roof of a kiosk.",
+   "ko": "군중을 위에서 찍으려고 니키타네 사진기자가 가판대 지붕에 올라갔어요.",
+   "blank": "забрался",
+   "src": "made"
+  },
+  {
+   "text": "Офисный кот умудрился забраться на шкаф с серверами, и Татьяна сняла это на видео.",
+   "en": "The office cat managed to climb onto the server cabinet, and Tatiana filmed it.",
+   "ko": "사무실 고양이가 서버 장 위로 기어 올라갔고, 타티야나가 그걸 영상으로 찍었어요.",
+   "blank": "забраться",
+   "src": "made"
   }
  ],
  "w|забывать": [
@@ -15895,6 +16167,22 @@
    "src": "made"
   }
  ],
+ "w|ирония": [
+  {
+   "text": "В фельетонах Никиты много тонкой иронии.",
+   "en": "Nikita's satirical pieces are full of subtle irony.",
+   "ko": "니키타의 풍자 칼럼에는 은근한 아이러니가 많아요.",
+   "blank": "иронии",
+   "src": "made"
+  },
+  {
+   "text": "По иронии судьбы Татьяна опоздала на презентацию своего приложения для планирования.",
+   "en": "By an irony of fate, Tatiana was late to the presentation of her own planning app.",
+   "ko": "아이러니하게도 타티야나는 자기가 만든 일정 관리 앱 발표회에 늦었어요.",
+   "blank": "иронии",
+   "src": "made"
+  }
+ ],
  "w|иск": [
   {
    "text": "Мне предъявили иск.",
@@ -16302,6 +16590,22 @@
    "en": "Elena was nervous about the outcome of the bakers' competition right up to the announcement.",
    "ko": "엘레나는 발표 직전까지 제빵 대회 결과가 걱정됐어요.",
    "blank": "исход",
+   "src": "made"
+  }
+ ],
+ "w|исходить": [
+  {
+   "text": "Никита всегда старается исходить из фактов, а не из слухов.",
+   "en": "Nikita always tries to proceed from facts, not rumors.",
+   "ko": "니키타는 늘 소문이 아니라 사실에서 출발하려고 해요.",
+   "blank": "исходить",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна предлагает исходить из того, что бюджет в этом году не увеличится.",
+   "en": "Tatiana suggests working on the assumption that the budget won't grow this year.",
+   "ko": "타티야나는 올해 예산이 늘지 않는다는 전제에서 출발하자고 해요.",
+   "blank": "исходить",
    "src": "made"
   }
  ],
@@ -18137,6 +18441,22 @@
    "src": "tatoeba:645294/nami en:64775"
   }
  ],
+ "w|конференция": [
+  {
+   "text": "Ивана отправили на конференцию по новым строительным материалам.",
+   "en": "Ivan was sent to a conference on new building materials.",
+   "ko": "이반은 새 건축 자재에 관한 학회에 파견됐어요.",
+   "blank": "конференцию",
+   "src": "made"
+  },
+  {
+   "text": "В зале на втором этаже Анна слушала конференцию молодых историков.",
+   "en": "In the hall on the second floor Anna listened to a conference of young historians.",
+   "ko": "이 층 강당에서 안나는 젊은 역사학자들의 학술 대회를 들었어요.",
+   "blank": "конференцию",
+   "src": "made"
+  }
+ ],
  "w|конфета": [
   {
    "text": "Официантка принесла детям Ивана по конфете вместе со счётом.",
@@ -19049,6 +19369,22 @@
    "blank": "кроме"
   }
  ],
+ "w|крошечный": [
+  {
+   "text": "Между кирпичами Иван нашёл крошечного котёнка.",
+   "en": "Ivan found a tiny kitten between the bricks.",
+   "ko": "이반은 벽돌 사이에서 아주 작은 새끼 고양이를 찾았어요.",
+   "blank": "крошечного",
+   "src": "made"
+  },
+  {
+   "text": "Анна разглядывала крошечную книжку размером со спичечный коробок.",
+   "en": "Anna was examining a tiny book the size of a matchbox.",
+   "ko": "안나는 성냥갑만 한 아주 작은 책을 들여다보고 있었어요.",
+   "blank": "крошечную",
+   "src": "made"
+  }
+ ],
  "w|крошка": [
   {
    "text": "У него в бороде крошка.",
@@ -19761,6 +20097,22 @@
    "src": "tatoeba:5791162/marafon en:5790223/Eccles17"
   }
  ],
+ "w|лекция": [
+  {
+   "text": "Утром инженер прочитал рабочим короткую лекцию о технике безопасности, и Иван внимательно слушал.",
+   "en": "In the morning the engineer gave the workers a short lecture on safety, and Ivan listened carefully.",
+   "ko": "아침에 기사가 인부들에게 안전 수칙에 대해 짧은 강의를 했고, 이반은 귀 기울여 들었어요.",
+   "blank": "лекцию",
+   "src": "made"
+  },
+  {
+   "text": "Анна пришла в библиотеку на лекцию о старинных картах.",
+   "en": "Anna came to the library for a lecture on old maps.",
+   "ko": "안나는 옛 지도에 관한 강연을 들으러 도서관에 왔어요.",
+   "blank": "лекцию",
+   "src": "made"
+  }
+ ],
  "w|лес": [
   {
    "text": "Мы прошли сквозь лес и пришли к озеру.",
@@ -20043,6 +20395,22 @@
    "ko": "엘리베이터 좀 잡아 줄래?",
    "blank": "лифт",
    "src": "tatoeba:6317373/marafon en:3043615/CK"
+  }
+ ],
+ "w|лицензия": [
+  {
+   "text": "Для работы на кране Ивану нужна специальная лицензия.",
+   "en": "Ivan needs a special license to operate the crane.",
+   "ko": "크레인을 다루려면 이반에게 특별 면허가 필요해요.",
+   "blank": "лицензия",
+   "src": "made"
+  },
+  {
+   "text": "Библиотека Анны купила лицензию на электронные журналы.",
+   "en": "Anna's library bought a license for electronic journals.",
+   "ko": "안나네 도서관은 전자 저널 이용권을 샀어요.",
+   "blank": "лицензию",
+   "src": "made"
   }
  ],
  "w|лицо": [
@@ -20799,6 +21167,22 @@
    "src": "made"
   }
  ],
+ "w|маньяк": [
+  {
+   "text": "Для культурной рубрики Никита написал рецензию на детектив о маньяке.",
+   "en": "For the culture section, Nikita reviewed a detective novel about a serial killer.",
+   "ko": "문화면에 싣기 위해 니키타는 연쇄살인범이 나오는 추리 소설의 서평을 썼어요.",
+   "blank": "маньяке",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна в шутку называет себя маньяком чистого кода.",
+   "en": "Tatiana jokingly calls herself a clean-code maniac.",
+   "ko": "타티야나는 농담으로 자기를 깔끔한 코드 광이라고 불러요.",
+   "blank": "маньяком",
+   "src": "made"
+  }
+ ],
  "w|март": [
   {
    "text": "Для меня март - самый важный месяц года.",
@@ -20941,6 +21325,22 @@
    "ko": "이것저것 다 하는 사람은 아무것도 제대로 못 해요.",
    "blank": "мастер",
    "src": "tatoeba:1424784/Snark en:24978/CK"
+  }
+ ],
+ "w|математика": [
+  {
+   "text": "Иван признаётся, что в школе математика давалась ему с трудом.",
+   "en": "Ivan admits that math was hard for him at school.",
+   "ko": "이반은 학교 다닐 때 수학이 어려웠다고 털어놔요.",
+   "blank": "математика",
+   "src": "made"
+  },
+  {
+   "text": "Для племянника Анна нашла простой учебник, где математика объясняется на картинках.",
+   "en": "For her nephew, Anna found a simple textbook where math is explained with pictures.",
+   "ko": "안나는 조카를 위해 수학을 그림으로 설명하는 쉬운 교과서를 찾았어요.",
+   "blank": "математика",
+   "src": "made"
   }
  ],
  "w|материал": [
@@ -22421,6 +22821,22 @@
    "src": "made"
   }
  ],
+ "w|монах": [
+  {
+   "text": "Для воскресного номера Никита взял интервью у старого монаха.",
+   "en": "For the Sunday issue, Nikita interviewed an old monk.",
+   "ko": "일요일 호를 위해 니키타는 나이 든 수도사를 인터뷰했어요.",
+   "blank": "монаха",
+   "src": "made"
+  },
+  {
+   "text": "После неудачного запуска Татьяна шутила, что уйдёт в монахи.",
+   "en": "After the failed launch Tatiana joked that she would become a monk.",
+   "ko": "출시가 실패한 뒤 타티야나는 수도원에나 들어가겠다고 농담했어요.",
+   "blank": "монахи",
+   "src": "made"
+  }
+ ],
  "w|монстр": [
   {
    "text": "Я боюсь, что монстр придёт сегодня ночью.",
@@ -22435,6 +22851,22 @@
    "ko": "괴물한테 쫓기는 꿈을 꿨어요.",
    "blank": "монстр",
    "src": "tatoeba:11264016/Wezel en:10325964/CK"
+  }
+ ],
+ "w|мораль": [
+  {
+   "text": "Колонка Никиты всегда заканчивается короткой моралью.",
+   "en": "Nikita's column always ends with a short moral.",
+   "ko": "니키타의 칼럼은 늘 짧은 교훈으로 끝나요.",
+   "blank": "моралью",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна рассказала команде историю своего первого провала, и мораль была простой.",
+   "en": "Tatiana told the team the story of her first failure, and the moral was simple.",
+   "ko": "타티야나는 팀에게 첫 실패 이야기를 들려줬는데, 교훈은 간단했어요.",
+   "blank": "мораль",
+   "src": "made"
   }
  ],
  "w|море": [
@@ -22730,6 +23162,22 @@
    "en": "A band was travelling in the carriage, and Anna listened to their songs until late at night.",
    "ko": "객차에 음악 밴드가 타고 있어서 안나는 밤늦게까지 그들의 노래를 들었어요.",
    "blank": "музыкальная",
+   "src": "made"
+  }
+ ],
+ "w|музыкант": [
+  {
+   "text": "По вечерам Иван играет на гитаре, а в молодости мечтал стать музыкантом.",
+   "en": "In the evenings Ivan plays the guitar, and in his youth he dreamed of becoming a musician.",
+   "ko": "이반은 저녁마다 기타를 치는데, 젊을 때는 음악가가 되는 게 꿈이었어요.",
+   "blank": "музыкантом",
+   "src": "made"
+  },
+  {
+   "text": "В фойе библиотеки играл уличный музыкант, и Анна остановилась послушать.",
+   "en": "A street musician was playing in the library lobby, and Anna stopped to listen.",
+   "ko": "도서관 로비에서 거리 음악가가 연주하고 있어서 안나는 멈춰 서서 들었어요.",
+   "blank": "музыкант",
    "src": "made"
   }
  ],
@@ -24659,6 +25107,22 @@
    "src": "tatoeba:13428405/marafon en:13428373/rul"
   }
  ],
+ "w|начальство": [
+  {
+   "text": "Иван не любит, когда начальство приезжает на стройку без предупреждения.",
+   "en": "Ivan doesn't like it when the bosses come to the site without warning.",
+   "ko": "이반은 윗사람들이 예고 없이 현장에 오는 걸 싫어해요.",
+   "blank": "начальство",
+   "src": "made"
+  },
+  {
+   "text": "Анна попросила у начальства разрешения задержаться в архиве.",
+   "en": "Anna asked her superiors for permission to stay late in the archive.",
+   "ko": "안나는 기록실에 늦게까지 남아도 되는지 윗사람에게 허락을 구했어요.",
+   "blank": "начальства",
+   "src": "made"
+  }
+ ],
  "w|начать": [
   {
    "text": "Давай начнём.",
@@ -25025,6 +25489,22 @@
    "ko": "무슨 말을 하셔도 마음 안 바꿀 거예요.",
    "blank": "Независимо",
    "src": "tatoeba:3115032/odexed en:2585780/CK"
+  }
+ ],
+ "w|независимость": [
+  {
+   "text": "Никита считает, что независимость газеты важнее денег от рекламы.",
+   "en": "Nikita believes the newspaper's independence matters more than advertising money.",
+   "ko": "니키타는 신문의 독립성이 광고비보다 중요하다고 생각해요.",
+   "blank": "независимость",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна очень ценит финансовую независимость своей компании.",
+   "en": "Tatiana highly values her company's financial independence.",
+   "ko": "타티야나는 자기 회사의 재정적 독립을 아주 소중히 여겨요.",
+   "blank": "независимость",
+   "src": "made"
   }
  ],
  "w|незаконный": [
@@ -26905,6 +27385,22 @@
    "src": "made"
   }
  ],
+ "w|обложка": [
+  {
+   "text": "Фотография Никиты попала на обложку субботнего приложения.",
+   "en": "Nikita's photo made it onto the cover of the Saturday supplement.",
+   "ko": "니키타의 사진이 토요일 부록 표지에 실렸어요.",
+   "blank": "обложку",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна попала на обложку делового журнала.",
+   "en": "Tatiana made the cover of a business magazine.",
+   "ko": "타티야나가 경제 잡지 표지에 실렸어요.",
+   "blank": "обложку",
+   "src": "made"
+  }
+ ],
  "w|обман": [
   {
    "text": "Учитель назвал списывание обманом, и Иван покраснел.",
@@ -27282,6 +27778,22 @@
    "en": "The pool management replied to Natalia's request within a day.",
    "ko": "수영장 관리실은 나탈리야의 요청에 하루 만에 답했어요.",
    "blank": "обращение",
+   "src": "made"
+  }
+ ],
+ "w|обрести": [
+  {
+   "text": "На стройке Иван наконец смог обрести уверенность в себе.",
+   "en": "At the construction site Ivan was finally able to gain self-confidence.",
+   "ko": "건설 현장에서 이반은 드디어 자신감을 얻을 수 있었어요.",
+   "blank": "обрести",
+   "src": "made"
+  },
+  {
+   "text": "В тишине библиотеки Анна смогла обрести покой после трудной недели.",
+   "en": "In the silence of the library Anna was able to find peace after a hard week.",
+   "ko": "도서관의 고요함 속에서 안나는 힘든 한 주를 보내고 마음의 평화를 찾을 수 있었어요.",
+   "blank": "обрести",
    "src": "made"
   }
  ],
@@ -27673,6 +28185,22 @@
    "en": "This point is required.",
    "ko": "이 항목은 필수야.",
    "blank": "обязательный"
+  }
+ ],
+ "w|обязательство": [
+  {
+   "text": "Фирма Ивана взяла на себя обязательство закончить школу к сентябрю.",
+   "en": "Ivan's firm committed to finishing the school by September.",
+   "ko": "이반의 회사는 구월까지 학교 공사를 끝내기로 약속했어요.",
+   "blank": "обязательство",
+   "src": "made"
+  },
+  {
+   "text": "Записываясь в библиотеку, Анна дала письменное обязательство беречь книги.",
+   "en": "When signing up at the library, Anna gave a written pledge to take care of the books.",
+   "ko": "도서관에 가입하면서 안나는 책을 아껴 쓰겠다는 서약서를 썼어요.",
+   "blank": "обязательство",
+   "src": "made"
   }
  ],
  "w|овощ": [
@@ -28987,6 +29515,22 @@
    "src": "tatoeba:5451833/Wezel en:5439376/Objectivesea"
   }
  ],
+ "w|основать": [
+  {
+   "text": "Дед Ивана помог основать строительную фирму, где теперь работает внук.",
+   "en": "Ivan's grandfather helped found the construction firm where his grandson now works.",
+   "ko": "이반의 할아버지는 지금 손자가 일하는 건설 회사를 세우는 데 힘을 보탰어요.",
+   "blank": "основать",
+   "src": "made"
+  },
+  {
+   "text": "Анна узнала, что библиотеку помог основать местный купец.",
+   "en": "Anna learned that a local merchant helped found the library.",
+   "ko": "안나는 그 도서관을 세우는 데 그 지역 상인이 도왔다는 걸 알았어요.",
+   "blank": "основать",
+   "src": "made"
+  }
+ ],
  "w|основной": [
   {
    "text": "Картофель — основной продукт в меню этого ресторана.",
@@ -29369,6 +29913,22 @@
    "ko": "이 주소로 데려다주실 수 있어요?",
    "blank": "отвезти",
    "src": "tatoeba:13128316/marafon en:3766666/tanay"
+  }
+ ],
+ "w|отверстие": [
+  {
+   "text": "В заметке Никиты говорилось о большом отверстии в стене старого моста.",
+   "en": "Nikita's article was about a large hole in the wall of the old bridge.",
+   "ko": "니키타의 기사는 옛 다리 벽에 난 큰 구멍에 관한 것이었어요.",
+   "blank": "отверстии",
+   "src": "made"
+  },
+  {
+   "text": "Чтобы протянуть кабель, Татьяна попросила просверлить отверстие в стене.",
+   "en": "To run a cable through, Tatiana asked for a hole to be drilled in the wall.",
+   "ko": "케이블을 연결하려고 타티야나는 벽에 구멍을 뚫어 달라고 했어요.",
+   "blank": "отверстие",
+   "src": "made"
   }
  ],
  "w|отвести": [
@@ -31669,6 +32229,22 @@
    "blank": "перестал"
   }
  ],
+ "w|перестрелка": [
+  {
+   "text": "В вечерней сводке Никита коротко сообщил о перестрелке на окраине города.",
+   "en": "In the evening news roundup, Nikita briefly reported on a shootout on the outskirts of the city.",
+   "ko": "저녁 소식란에서 니키타는 도시 외곽에서 있었던 총격전을 짧게 전했어요.",
+   "blank": "перестрелке",
+   "src": "made"
+  },
+  {
+   "text": "Новая игра от стартапа Татьяны — весёлая перестрелка водяными пистолетами.",
+   "en": "The new game from Tatiana's startup is a fun water-pistol shootout.",
+   "ko": "타티야나 스타트업의 새 게임은 물총으로 하는 신나는 총싸움이에요.",
+   "blank": "перестрелка",
+   "src": "made"
+  }
+ ],
  "w|период": [
   {
    "text": "Какой период истории ты изучаешь?",
@@ -32327,6 +32903,22 @@
    "src": "made"
   }
  ],
+ "w|плёнка": [
+  {
+   "text": "Иван накрыл свежий бетон плёнкой, чтобы его не намочил дождь.",
+   "en": "Ivan covered the fresh concrete with plastic film so the rain wouldn't wet it.",
+   "ko": "이반은 비에 젖지 않도록 갓 부은 콘크리트를 비닐로 덮었어요.",
+   "blank": "плёнкой",
+   "src": "made"
+  },
+  {
+   "text": "Старые газеты в библиотеке хранятся на плёнке, и Анна читает их через аппарат.",
+   "en": "Old newspapers in the library are kept on microfilm, and Anna reads them through a viewer.",
+   "ko": "도서관의 옛 신문은 필름으로 보관돼 있어서 안나는 기계로 읽어요.",
+   "blank": "плёнке",
+   "src": "made"
+  }
+ ],
  "w|плечо": [
   {
    "text": "Тебе нужно плечо, чтобы выплакаться?",
@@ -32959,6 +33551,22 @@
    "src": "made"
   }
  ],
+ "w|повестка": [
+  {
+   "text": "Никита заранее изучил повестку заседания городского совета.",
+   "en": "Nikita studied the agenda of the city council meeting in advance.",
+   "ko": "니키타는 시의회 회의 안건을 미리 살펴봤어요.",
+   "blank": "повестку",
+   "src": "made"
+  },
+  {
+   "text": "Каждое утро Татьяна рассылает команде повестку планёрки.",
+   "en": "Every morning Tatiana sends the team the agenda for the stand-up.",
+   "ko": "매일 아침 타티야나는 팀에 회의 안건을 보내요.",
+   "blank": "повестку",
+   "src": "made"
+  }
+ ],
  "w|повидать": [
   {
    "text": "Андрей приехал в этот город, чтобы повидать брата.",
@@ -33315,6 +33923,22 @@
    "ko": "망치 좀 건네주실 수 있어요?",
    "blank": "подать",
    "src": "tatoeba:11242248/marafon en:4015652/CK"
+  }
+ ],
+ "w|подбросить": [
+  {
+   "text": "После смены прораб предложил подбросить Ивана до метро.",
+   "en": "After the shift the foreman offered to give Ivan a lift to the metro.",
+   "ko": "교대가 끝나고 현장 소장이 이반을 지하철역까지 태워 주겠다고 했어요.",
+   "blank": "подбросить",
+   "src": "made"
+  },
+  {
+   "text": "Сосед согласился подбросить Анну до библиотеки, потому что шёл дождь.",
+   "en": "The neighbor agreed to give Anna a lift to the library because it was raining.",
+   "ko": "비가 와서 이웃이 안나를 도서관까지 태워 주기로 했어요.",
+   "blank": "подбросить",
+   "src": "made"
   }
  ],
  "w|подвал": [
@@ -33729,6 +34353,22 @@
    "src": "made"
   }
  ],
+ "w|подозрительный": [
+  {
+   "text": "Ночью у забора стройки Иван заметил подозрительный фургон.",
+   "en": "At night Ivan noticed a suspicious van by the construction site fence.",
+   "ko": "밤에 이반은 공사장 울타리 옆에서 수상한 승합차를 봤어요.",
+   "blank": "подозрительный",
+   "src": "made"
+  },
+  {
+   "text": "В тихом зале подозрительный шорох заставил Анну оглянуться.",
+   "en": "In the quiet hall a suspicious rustle made Anna look around.",
+   "ko": "조용한 열람실에서 수상한 바스락 소리가 나서 안나는 뒤를 돌아봤어요.",
+   "blank": "подозрительный",
+   "src": "made"
+  }
+ ],
  "w|подойти": [
   {
    "text": "Подойди на минуту.",
@@ -33804,6 +34444,22 @@
    "en": "When a customer asks for \"something to go with tea\", Elena knows he means pastries.",
    "ko": "손님이 \"차랑 먹을 것\"을 달라고 하면 엘레나는 케이크를 말하는 걸 알아요.",
    "blank": "подразумевает",
+   "src": "made"
+  }
+ ],
+ "w|подраться": [
+  {
+   "text": "Никита писал о болельщиках, которые подрались после матча.",
+   "en": "Nikita wrote about fans who got into a fight after the match.",
+   "ko": "니키타는 경기가 끝나고 싸움을 벌인 팬들에 대해 썼어요.",
+   "blank": "подрались",
+   "src": "made"
+  },
+  {
+   "text": "Два программиста чуть не подрались из-за названия переменной, вспоминает Татьяна.",
+   "en": "Two programmers almost got into a fight over a variable name, Tatiana recalls.",
+   "ko": "개발자 두 명이 변수 이름 때문에 싸울 뻔했다고 타티야나가 회상해요.",
+   "blank": "подрались",
    "src": "made"
   }
  ],
@@ -35961,6 +36617,22 @@
    "src": "made"
   }
  ],
+ "w|поприветствовать": [
+  {
+   "text": "Директор фирмы приехал поприветствовать Ивана и новых рабочих.",
+   "en": "The company director came to greet Ivan and the new workers.",
+   "ko": "회사 대표가 이반과 새 인부들을 맞으러 왔어요.",
+   "blank": "поприветствовать",
+   "src": "made"
+  },
+  {
+   "text": "Библиотекарь вышла поприветствовать Анну и её маленькую дочь.",
+   "en": "The librarian came out to greet Anna and her little daughter.",
+   "ko": "사서가 안나와 어린 딸을 맞으러 나왔어요.",
+   "blank": "поприветствовать",
+   "src": "made"
+  }
+ ],
  "w|попробовать": [
   {
    "text": "Попробуй этот сыр.",
@@ -36207,6 +36879,22 @@
    "ko": "그거 어디에 심을지 알아?",
    "blank": "посадить",
    "src": "tatoeba:11684146/marafon en:11669705/tieguy"
+  }
+ ],
+ "w|посвятить": [
+  {
+   "text": "Никита решил посвятить колонку бездомным животным.",
+   "en": "Nikita decided to devote his column to homeless animals.",
+   "ko": "니키타는 칼럼을 유기 동물에 바치기로 했어요.",
+   "blank": "посвятить",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна решила посвятить выходные тестированию новой версии.",
+   "en": "Tatiana decided to dedicate the weekend to testing the new version.",
+   "ko": "타티야나는 주말을 새 버전 테스트에 쓰기로 했어요.",
+   "blank": "посвятить",
+   "src": "made"
   }
  ],
  "w|посетитель": [
@@ -36907,6 +37595,22 @@
    "ko": "얼마나 쓰고 싶으세요?",
    "blank": "потратить",
    "src": "tatoeba:2080915/Lathean en:2013885/CK"
+  }
+ ],
+ "w|потребность": [
+  {
+   "text": "Никита пишет о потребности района в новой поликлинике.",
+   "en": "Nikita is writing about the district's need for a new clinic.",
+   "ko": "니키타는 동네에 새 진료소가 필요하다는 기사를 쓰고 있어요.",
+   "blank": "потребности",
+   "src": "made"
+  },
+  {
+   "text": "Перед каждым обновлением Татьяна изучает потребности пользователей.",
+   "en": "Before every update Tatiana studies users' needs.",
+   "ko": "업데이트 전마다 타티야나는 사용자들의 요구를 살펴봐요.",
+   "blank": "потребности",
+   "src": "made"
   }
  ],
  "w|потребоваться": [
@@ -38155,6 +38859,22 @@
    "blank": "прекратился"
   }
  ],
+ "w|прекращать": [
+  {
+   "text": "Из-за сильного ветра Ивану пришлось прекращать работу на высоте.",
+   "en": "Because of the strong wind Ivan had to stop working at height.",
+   "ko": "바람이 세서 이반은 높은 곳 작업을 멈춰야 했어요.",
+   "blank": "прекращать",
+   "src": "made"
+  },
+  {
+   "text": "Библиотекарь попросила Анну прекращать разговоры по телефону в зале.",
+   "en": "The librarian asked Anna to stop talking on the phone in the hall.",
+   "ko": "사서는 안나에게 열람실에서 전화 통화를 그만하라고 했어요.",
+   "blank": "прекращать",
+   "src": "made"
+  }
+ ],
  "w|прелесть": [
   {
    "text": "В старых поездах есть своя прелесть.",
@@ -38200,6 +38920,38 @@
    "en": "Elena managed to overcome her laziness and went for a run after all.",
    "ko": "엘레나는 게으름을 이겨 내고 결국 달리러 나갔어요.",
    "blank": "преодолеть",
+   "src": "made"
+  }
+ ],
+ "w|препятствие": [
+  {
+   "text": "Отсутствие свидетелей стало главным препятствием для расследования Никиты.",
+   "en": "The lack of witnesses became the main obstacle to Nikita's investigation.",
+   "ko": "목격자가 없다는 게 니키타의 취재에 가장 큰 걸림돌이 됐어요.",
+   "blank": "препятствием",
+   "src": "made"
+  },
+  {
+   "text": "Нехватка денег долго была серьёзным препятствием для стартапа Татьяны.",
+   "en": "A lack of money was a serious obstacle for Tatiana's startup for a long time.",
+   "ko": "돈이 모자란 게 오랫동안 타티야나 스타트업의 큰 장애물이었어요.",
+   "blank": "препятствием",
+   "src": "made"
+  }
+ ],
+ "w|прервать": [
+  {
+   "text": "Звонок из типографии прервал планёрку, на которой выступал Никита.",
+   "en": "A call from the printing house interrupted the meeting where Nikita was speaking.",
+   "ko": "인쇄소에서 걸려 온 전화가 니키타가 발표하던 회의를 끊었어요.",
+   "blank": "прервал",
+   "src": "made"
+  },
+  {
+   "text": "Татьяне пришлось прервать встречу из-за сбоя на сервере.",
+   "en": "Tatiana had to interrupt the meeting because of a server failure.",
+   "ko": "서버 장애 때문에 타티야나는 회의를 중단해야 했어요.",
+   "blank": "прервать",
    "src": "made"
   }
  ],
@@ -38592,6 +39344,22 @@
    "en": "Svetlana has picked up a habit of drinking tea right at the till.",
    "ko": "스베틀라나는 계산대에서 차를 마시는 습관이 생겼어요.",
    "blank": "привычка",
+   "src": "made"
+  }
+ ],
+ "w|привязать": [
+  {
+   "text": "Курьер привязал пачку газет к багажнику велосипеда и уехал, а Никита помахал ему.",
+   "en": "The courier tied a bundle of newspapers to his bike rack and rode off, and Nikita waved to him.",
+   "ko": "배달원이 신문 뭉치를 자전거 짐받이에 묶고 떠나자 니키타가 손을 흔들었어요.",
+   "blank": "привязал",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна наконец привязала банковскую карту к рабочему аккаунту.",
+   "en": "Tatiana finally linked her bank card to the work account.",
+   "ko": "타티야나는 드디어 업무 계정에 은행 카드를 연결했어요.",
+   "blank": "привязала",
    "src": "made"
   }
  ],
@@ -39078,6 +39846,22 @@
    "en": "Anna covered her face with a fan so as not to laugh on stage.",
    "ko": "안나는 무대에서 웃음이 터지지 않게 부채로 얼굴을 가렸어요.",
    "blank": "прикрыла",
+   "src": "made"
+  }
+ ],
+ "w|приложить": [
+  {
+   "text": "Иван не забыл приложить к отчёту фотографии фундамента.",
+   "en": "Ivan didn't forget to attach photos of the foundation to the report.",
+   "ko": "이반은 보고서에 기초 사진을 첨부하는 걸 잊지 않았어요.",
+   "blank": "приложить",
+   "src": "made"
+  },
+  {
+   "text": "К заявке на редкую книгу Анна должна приложить копию паспорта.",
+   "en": "Anna has to attach a copy of her passport to the request for a rare book.",
+   "ko": "희귀 도서 신청서에 안나는 여권 사본을 첨부해야 해요.",
+   "blank": "приложить",
    "src": "made"
   }
  ],
@@ -39569,6 +40353,22 @@
    "src": "made"
   }
  ],
+ "w|причастный": [
+  {
+   "text": "Никита выяснил, что чиновник был причастен к скандалу со стройкой.",
+   "en": "Nikita found out that the official was involved in the construction scandal.",
+   "ko": "니키타는 그 공무원이 공사 스캔들에 연루됐다는 걸 알아냈어요.",
+   "blank": "причастен",
+   "src": "made"
+  },
+  {
+   "text": "Все сотрудники, причастные к запуску, получили от Татьяны премию.",
+   "en": "All the employees involved in the launch got a bonus from Tatiana.",
+   "ko": "출시에 참여한 직원 모두가 타티야나에게서 보너스를 받았어요.",
+   "blank": "причастные",
+   "src": "made"
+  }
+ ],
  "w|причем": [
   {
    "text": "Он опоздал, причём уже третий раз.",
@@ -39839,6 +40639,22 @@
    "en": "We're spending the evening at home.",
    "ko": "저녁은 집에서 보내.",
    "blank": "проводим"
+  }
+ ],
+ "w|проголосовать": [
+  {
+   "text": "Жители района пришли проголосовать за новый парк, и Никита взял у них интервью.",
+   "en": "Local residents came to vote for a new park, and Nikita interviewed them.",
+   "ko": "동네 주민들이 새 공원에 찬성표를 던지러 왔고, 니키타가 그들을 인터뷰했어요.",
+   "blank": "проголосовать",
+   "src": "made"
+  },
+  {
+   "text": "Команда Татьяны решила проголосовать за название нового продукта.",
+   "en": "Tatiana's team decided to vote on the name of the new product.",
+   "ko": "타티야나의 팀은 새 제품 이름을 투표로 정하기로 했어요.",
+   "blank": "проголосовать",
+   "src": "made"
   }
  ],
  "w|программа": [
@@ -40797,6 +41613,22 @@
    "src": "made"
   }
  ],
+ "w|профессия": [
+  {
+   "text": "Иван гордится своей профессией каменщика.",
+   "en": "Ivan is proud of his profession as a bricklayer.",
+   "ko": "이반은 벽돌공이라는 자기 직업이 자랑스러워요.",
+   "blank": "профессией",
+   "src": "made"
+  },
+  {
+   "text": "Анна выбирает профессию и читает всё о работе переводчика.",
+   "en": "Anna is choosing a profession and reading everything about a translator's work.",
+   "ko": "안나는 직업을 고르는 중이라 번역가 일에 관한 건 다 읽고 있어요.",
+   "blank": "профессию",
+   "src": "made"
+  }
+ ],
  "w|профессор": [
   {
    "text": "Профессор не мог понять, о чём я говорю.",
@@ -40905,6 +41737,22 @@
    "ko": "절차를 서두르려고 하고 있어요.",
    "blank": "процесс",
    "src": "tatoeba:12030433/Wezel en:11980018/ddnktr"
+  }
+ ],
+ "w|прочее": [
+  {
+   "text": "Иван отвечает за кирпич, раствор и прочее.",
+   "en": "Ivan is in charge of bricks, mortar and everything else.",
+   "ko": "이반은 벽돌, 모르타르 같은 것들을 맡고 있어요.",
+   "blank": "прочее",
+   "src": "made"
+  },
+  {
+   "text": "В сумке у Анны были книги, тетради, ручки и прочее.",
+   "en": "In Anna's bag there were books, notebooks, pens and so on.",
+   "ko": "안나의 가방에는 책, 공책, 펜 같은 것들이 들어 있었어요.",
+   "blank": "прочее",
+   "src": "made"
   }
  ],
  "w|прочесть": [
@@ -41074,6 +41922,22 @@
    "en": "The coach let Natalia jump into the water from the high board for the first time.",
    "ko": "코치가 처음으로 나탈리야에게 높은 다이빙대에서 물에 뛰어들어도 된다고 했어요.",
    "blank": "прыгнуть",
+   "src": "made"
+  }
+ ],
+ "w|прыжок": [
+  {
+   "text": "Одним прыжком Иван перемахнул через лужу с цементом.",
+   "en": "In one jump Ivan cleared the puddle of cement.",
+   "ko": "이반은 시멘트 웅덩이를 한 번에 펄쩍 뛰어넘었어요.",
+   "blank": "прыжком",
+   "src": "made"
+  },
+  {
+   "text": "Для сына Анна нашла книгу о спорте с картинками, где каждый прыжок разобран по шагам.",
+   "en": "For her son Anna found a picture book about sports where every jump is broken down step by step.",
+   "ko": "안나는 아들에게 점프 하나하나를 단계별로 풀어 놓은 그림 스포츠 책을 찾아 줬어요.",
+   "blank": "прыжок",
    "src": "made"
   }
  ],
@@ -41280,6 +42144,22 @@
    "en": "Let the kids play for another half hour.",
    "ko": "애들 삼십 분만 더 놀게 해 줘.",
    "blank": "Пускай",
+   "src": "made"
+  }
+ ],
+ "w|пускать": [
+  {
+   "text": "Охранник не хотел пускать Ивана на объект без каски.",
+   "en": "The guard didn't want to let Ivan onto the site without a hard hat.",
+   "ko": "경비원은 안전모 없는 이반을 현장에 들여보내려 하지 않았어요.",
+   "blank": "пускать",
+   "src": "made"
+  },
+  {
+   "text": "После закрытия охранник больше никого не станет пускать в зал, поэтому Анна поторопилась.",
+   "en": "After closing time the guard won't let anyone else into the hall, so Anna hurried.",
+   "ko": "문 닫은 뒤에는 경비원이 아무도 열람실에 들여보내지 않으니 안나는 서둘렀어요.",
+   "blank": "пускать",
    "src": "made"
   }
  ],
@@ -42831,6 +43711,22 @@
    "src": "tatoeba:10708273/Yokhor en:2948325/Hybrid"
   }
  ],
+ "w|расчёт": [
+  {
+   "text": "Иван ещё раз проверил расчёт нагрузки на перекрытие.",
+   "en": "Ivan double-checked the load calculation for the floor slab.",
+   "ko": "이반은 바닥판 하중 계산을 한 번 더 확인했어요.",
+   "blank": "расчёт",
+   "src": "made"
+  },
+  {
+   "text": "Анна знает, что штраф за просрочку берут из расчёта по рублю в день.",
+   "en": "Anna knows that the late fee is calculated at a ruble a day.",
+   "ko": "안나는 연체료가 하루에 일 루블씩 계산된다는 걸 알아요.",
+   "blank": "расчёта",
+   "src": "made"
+  }
+ ],
  "w|раунд": [
   {
    "text": "После обеда начался новый раунд переговоров между сторонами.",
@@ -43254,6 +44150,22 @@
    "en": "The bank sent Anna a rejection of her loan for the kitchen renovation.",
    "ko": "은행은 안나의 부엌 수리 대출을 거절했어요.",
    "blank": "ремонт",
+   "src": "made"
+  }
+ ],
+ "w|репетиция": [
+  {
+   "text": "Перед сдачей дома бригада Ивана провела репетицию пожарной эвакуации.",
+   "en": "Before handing over the building, Ivan's crew held a fire evacuation drill.",
+   "ko": "건물을 넘기기 전에 이반의 작업반은 화재 대피 예행연습을 했어요.",
+   "blank": "репетицию",
+   "src": "made"
+  },
+  {
+   "text": "В читальном зале Анна случайно попала на репетицию школьного спектакля.",
+   "en": "In the reading room Anna happened upon a rehearsal of a school play.",
+   "ko": "열람실에서 안나는 우연히 학교 연극 리허설을 보게 됐어요.",
+   "blank": "репетицию",
    "src": "made"
   }
  ],
@@ -43976,6 +44888,22 @@
    "en": "The theater's artistic director offered Anna the lead role.",
    "ko": "극장 예술감독이 안나에게 주연을 제안했어요.",
    "blank": "руководитель",
+   "src": "made"
+  }
+ ],
+ "w|руководить": [
+  {
+   "text": "Через год Иван уже будет руководить своей бригадой.",
+   "en": "In a year Ivan will already be in charge of his own crew.",
+   "ko": "일 년 뒤면 이반은 자기 작업반을 이끌게 될 거예요.",
+   "blank": "руководить",
+   "src": "made"
+  },
+  {
+   "text": "Читальным залом уже двадцать лет продолжает руководить строгая пожилая дама, и Анна её немного боится.",
+   "en": "A strict elderly lady has been running the reading room for twenty years, and Anna is a little afraid of her.",
+   "ko": "엄격한 노부인이 이십 년째 열람실을 관리하고 있어서 안나는 그분이 조금 무서워요.",
+   "blank": "руководить",
    "src": "made"
   }
  ],
@@ -44909,6 +45837,22 @@
    "src": "tatoeba:2509472/sharptoothed en:2509471/sharptoothed"
   }
  ],
+ "w|сдержать": [
+  {
+   "text": "Прораб умеет сдержать слово, поэтому Иван ему доверяет.",
+   "en": "The foreman knows how to keep his word, so Ivan trusts him.",
+   "ko": "현장 소장은 약속을 지킬 줄 아는 사람이라 이반은 그를 믿어요.",
+   "blank": "сдержать",
+   "src": "made"
+  },
+  {
+   "text": "Увидев смешную подпись на полях, Анна не смогла сдержать смех.",
+   "en": "Seeing a funny note in the margins, Anna couldn't hold back her laughter.",
+   "ko": "여백에 적힌 웃긴 메모를 보고 안나는 웃음을 참지 못했어요.",
+   "blank": "сдержать",
+   "src": "made"
+  }
+ ],
  "w|сдохнуть": [
   {
    "text": "Посреди смены у Ивана сдох аккумулятор в шуруповёрте.",
@@ -45138,6 +46082,22 @@
    "en": "In biology Irina calmly explained the topic of sexual health to the senior pupils.",
    "ko": "생물 시간에 이리나는 고학년 학생들에게 성 건강에 대해 차분하게 설명했어요.",
    "blank": "сексуального",
+   "src": "made"
+  }
+ ],
+ "w|сектор": [
+  {
+   "text": "Иван отвечает за восточный сектор стройки.",
+   "en": "Ivan is responsible for the eastern section of the construction site.",
+   "ko": "이반은 공사 현장의 동쪽 구역을 맡고 있어요.",
+   "blank": "сектор",
+   "src": "made"
+  },
+  {
+   "text": "Анна долго искала нужный сектор в каталоге.",
+   "en": "Anna searched for the right section in the catalog for a long time.",
+   "ko": "안나는 목록에서 필요한 분류를 한참 찾았어요.",
+   "blank": "сектор",
    "src": "made"
   }
  ],
@@ -46003,6 +46963,22 @@
    "src": "tatoeba:4937263/marafon en:4524167/Hybrid"
   }
  ],
+ "w|скрыться": [
+  {
+   "text": "Никита написал заметку о воре, которому удалось скрыться с места кражи.",
+   "en": "Nikita wrote a short piece about a thief who managed to escape from the scene.",
+   "ko": "니키타는 현장에서 달아나는 데 성공한 도둑에 대한 짧은 기사를 썼어요.",
+   "blank": "скрыться",
+   "src": "made"
+  },
+  {
+   "text": "Как только начался ливень, программисты Татьяны поспешили скрыться в ближайшем кафе.",
+   "en": "As soon as the downpour started, Tatiana's programmers hurried to take cover in the nearest café.",
+   "ko": "소나기가 쏟아지자 타티야나네 개발자들은 서둘러 가까운 카페로 몸을 피했어요.",
+   "blank": "скрыться",
+   "src": "made"
+  }
+ ],
  "w|скучать": [
   {
    "text": "Я по тебе скучаю.",
@@ -46173,6 +47149,22 @@
    "blank": "слежу"
   }
  ],
+ "w|следователь": [
+  {
+   "text": "Никите удалось поговорить со следователем по делу о пожаре.",
+   "en": "Nikita managed to talk to the investigator on the fire case.",
+   "ko": "니키타는 화재 사건 담당 수사관과 이야기할 수 있었어요.",
+   "blank": "следователем",
+   "src": "made"
+  },
+  {
+   "text": "Когда у компании украли данные, Татьяна долго беседовала со следователем.",
+   "en": "When the company's data was stolen, Tatiana had a long talk with the investigator.",
+   "ko": "회사 데이터가 도난당했을 때 타티야나는 수사관과 오래 이야기했어요.",
+   "blank": "следователем",
+   "src": "made"
+  }
+ ],
  "w|следовать": [
   {
    "text": "Следуй за мной, не отставай.",
@@ -46291,6 +47283,22 @@
    "en": "In short, no.",
    "ko": "한마디로, 안 돼.",
    "blank": "словом"
+  }
+ ],
+ "w|сложить": [
+  {
+   "text": "Никита аккуратно сложил свежие газеты в стопку.",
+   "en": "Nikita neatly stacked the fresh newspapers in a pile.",
+   "ko": "니키타는 새 신문을 가지런히 한 무더기로 쌓았어요.",
+   "blank": "сложил",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна попросила сложить все старые ноутбуки в кладовку.",
+   "en": "Tatiana asked for all the old laptops to be put away in the storeroom.",
+   "ko": "타티야나는 낡은 노트북을 전부 창고에 넣어 두라고 했어요.",
+   "blank": "сложить",
+   "src": "made"
   }
  ],
  "w|сложный": [
@@ -47297,6 +48305,22 @@
    "src": "made"
   }
  ],
+ "w|совместный": [
+  {
+   "text": "Редакция Никиты готовит совместный выпуск с соседней газетой.",
+   "en": "Nikita's newsroom is preparing a joint issue with a neighboring newspaper.",
+   "ko": "니키타네 편집부는 이웃 신문사와 합동호를 준비하고 있어요.",
+   "blank": "совместный",
+   "src": "made"
+  },
+  {
+   "text": "Стартап Татьяны запустил совместный проект с крупным банком.",
+   "en": "Tatiana's startup launched a joint project with a big bank.",
+   "ko": "타티야나의 스타트업은 큰 은행과 공동 프로젝트를 시작했어요.",
+   "blank": "совместный",
+   "src": "made"
+  }
+ ],
  "w|совпадать": [
   {
    "text": "Наши мнения редко совпадают.",
@@ -47827,6 +48851,22 @@
    "en": "They told us about the delay.",
    "ko": "늦는다고 우리에게 알렸어.",
    "blank": "сообщили"
+  }
+ ],
+ "w|сообщник": [
+  {
+   "text": "В статье Никиты говорилось, что у похитителя картины был сообщник.",
+   "en": "Nikita's article said that the painting thief had an accomplice.",
+   "ko": "니키타의 기사에 따르면 그림 도둑에게는 공범이 있었어요.",
+   "blank": "сообщник",
+   "src": "made"
+  },
+  {
+   "text": "Свой первый стартап Татьяна затеяла вместе с младшим братом, своим верным сообщником.",
+   "en": "Tatiana started her first startup together with her younger brother, her loyal partner in crime.",
+   "ko": "타티야나는 첫 스타트업을 든든한 공범인 남동생과 함께 시작했어요.",
+   "blank": "сообщником",
+   "src": "made"
   }
  ],
  "w|соответствие": [
@@ -48505,6 +49545,22 @@
    "en": "Add milk to the list.",
    "ko": "목록에 우유를 넣어.",
    "blank": "список"
+  }
+ ],
+ "w|сплетня": [
+  {
+   "text": "Никита никогда не печатает сплетни без проверки.",
+   "en": "Nikita never prints gossip without checking it.",
+   "ko": "니키타는 확인하지 않은 뒷소문은 절대 싣지 않아요.",
+   "blank": "сплетни",
+   "src": "made"
+  },
+  {
+   "text": "В офисе Татьяны быстро разлетелась сплетня о продаже компании.",
+   "en": "A rumor about the company being sold quickly spread through Tatiana's office.",
+   "ko": "타티야나의 사무실에 회사가 팔린다는 뒷소문이 금세 퍼졌어요.",
+   "blank": "сплетня",
+   "src": "made"
   }
  ],
  "w|сплошной": [
@@ -49769,6 +50825,22 @@
    "src": "tatoeba:8822137/marafon en:286505"
   }
  ],
+ "w|стратегия": [
+  {
+   "text": "Прораб объяснил Ивану новую стратегию: сначала крыша, потом отделка.",
+   "en": "The foreman explained the new strategy to Ivan: roof first, then finishing.",
+   "ko": "현장 소장은 이반에게 새 전략을 설명했어요. 먼저 지붕, 그다음 마감이에요.",
+   "blank": "стратегию",
+   "src": "made"
+  },
+  {
+   "text": "Анна пролистала книгу о шахматной стратегии и поставила её обратно.",
+   "en": "Anna leafed through a book on chess strategy and put it back.",
+   "ko": "안나는 체스 전략 책을 훑어보고 다시 꽂아 두었어요.",
+   "blank": "стратегии",
+   "src": "made"
+  }
+ ],
  "w|страх": [
   {
    "text": "Ты знаешь, что такое страх?",
@@ -50114,6 +51186,22 @@
    "en": "In the evening Olga watches series with English subtitles.",
    "ko": "저녁에 올가는 영어 자막으로 드라마를 봐요.",
    "blank": "субтитрами",
+   "src": "made"
+  }
+ ],
+ "w|субъект": [
+  {
+   "text": "Подозрительный субъект весь день стоял у дверей редакции, вспоминает Никита.",
+   "en": "A suspicious character stood by the newsroom door all day, Nikita recalls.",
+   "ko": "수상한 사람이 하루 종일 편집부 문 앞에 서 있었다고 니키타가 떠올려요.",
+   "blank": "субъект",
+   "src": "made"
+  },
+  {
+   "text": "По закону компания Татьяны считается субъектом малого бизнеса.",
+   "en": "By law, Tatiana's company counts as a small business entity.",
+   "ko": "법적으로 타티야나의 회사는 소기업 주체로 분류돼요.",
+   "blank": "субъектом",
    "src": "made"
   }
  ],
@@ -50479,6 +51567,22 @@
    "ko": "넘어지지 않게 그녀를 붙잡아야 했어요.",
    "blank": "схватить",
    "src": "tatoeba:5549419/sharptoothed en:308545/CK"
+  }
+ ],
+ "w|схема": [
+  {
+   "text": "Иван долго разглядывал схему проводки, прежде чем звать электрика.",
+   "en": "Ivan studied the wiring diagram for a long time before calling the electrician.",
+   "ko": "이반은 전기 기사를 부르기 전에 배선도를 한참 들여다봤어요.",
+   "blank": "схему",
+   "src": "made"
+  },
+  {
+   "text": "На стене у входа висит схема библиотеки, и Анна сразу нашла отдел поэзии.",
+   "en": "A map of the library hangs on the wall by the entrance, and Anna immediately found the poetry section.",
+   "ko": "입구 벽에 도서관 안내도가 걸려 있어서 안나는 시 코너를 바로 찾았어요.",
+   "blank": "схема",
+   "src": "made"
   }
  ],
  "w|сходить": [
@@ -51941,6 +53045,22 @@
    "ko": "이런 케이크 구울 수 있어요?",
    "blank": "торт",
    "src": "tatoeba:7260384/marafon en:7258015/Hybrid"
+  }
+ ],
+ "w|торчать": [
+  {
+   "text": "Из земли торчали старые трубы, и Иван чуть не споткнулся.",
+   "en": "Old pipes were sticking out of the ground, and Ivan nearly tripped.",
+   "ko": "땅에서 낡은 파이프가 삐죽 나와 있어서 이반은 하마터면 넘어질 뻔했어요.",
+   "blank": "торчали",
+   "src": "made"
+  },
+  {
+   "text": "Анна может часами торчать в отделе редких книг.",
+   "en": "Anna can hang around the rare books section for hours.",
+   "ko": "안나는 희귀 도서 코너에 몇 시간이고 붙어 있을 수 있어요.",
+   "blank": "торчать",
+   "src": "made"
   }
  ],
  "w|тост": [
@@ -53449,6 +54569,22 @@
    "src": "tatoeba:7919788/carlosalberto en:254621/Zifre"
   }
  ],
+ "w|удерживать": [
+  {
+   "text": "Газете всё труднее удерживать подписчиков, жалуется Никита.",
+   "en": "It's getting harder and harder for the paper to keep subscribers, Nikita complains.",
+   "ko": "신문이 구독자를 붙잡아 두기가 점점 어려워진다고 니키타가 투덜거려요.",
+   "blank": "удерживать",
+   "src": "made"
+  },
+  {
+   "text": "Татьяне непросто удерживать лучших разработчиков в маленькой фирме.",
+   "en": "It's not easy for Tatiana to keep the best developers in a small firm.",
+   "ko": "타티야나에게는 작은 회사에 뛰어난 개발자들을 붙잡아 두는 게 쉽지 않아요.",
+   "blank": "удерживать",
+   "src": "made"
+  }
+ ],
  "w|удивительный": [
   {
    "text": "Я думаю, ты и вправду удивительный.",
@@ -53751,6 +54887,22 @@
    "en": "He left without a word.",
    "ko": "그 사람은 말없이 떠났어.",
    "blank": "ушёл"
+  }
+ ],
+ "w|указание": [
+  {
+   "text": "Иван ждал указаний прораба, прежде чем снимать опалубку.",
+   "en": "Ivan waited for the foreman's instructions before removing the formwork.",
+   "ko": "이반은 거푸집을 떼기 전에 현장 소장의 지시를 기다렸어요.",
+   "blank": "указаний",
+   "src": "made"
+  },
+  {
+   "text": "Библиотекарь дала Анне указание не выносить редкие книги из зала.",
+   "en": "The librarian instructed Anna not to take rare books out of the hall.",
+   "ko": "사서는 안나에게 희귀 도서를 열람실 밖으로 가지고 나가지 말라고 일렀어요.",
+   "blank": "указание",
+   "src": "made"
   }
  ],
  "w|указать": [
@@ -54393,6 +55545,22 @@
    "src": "tatoeba:4347556/odexed en:69993/CK"
   }
  ],
+ "w|успешный": [
+  {
+   "text": "Иван считает прошлый сезон очень успешным для бригады.",
+   "en": "Ivan considers last season very successful for the crew.",
+   "ko": "이반은 지난 시즌이 작업반에게 아주 성공적이었다고 생각해요.",
+   "blank": "успешным",
+   "src": "made"
+  },
+  {
+   "text": "Анна мечтает написать биографию успешной женщины-учёного.",
+   "en": "Anna dreams of writing a biography of a successful woman scientist.",
+   "ko": "안나는 성공한 여성 과학자의 전기를 쓰는 게 꿈이에요.",
+   "blank": "успешной",
+   "src": "made"
+  }
+ ],
  "w|успокоить": [
   {
    "text": "Библиотекарь попыталась успокоить Павла, который потерял читательский билет.",
@@ -54485,6 +55653,22 @@
    "blank": "Устрой"
   }
  ],
+ "w|устроиться": [
+  {
+   "text": "Племянник Ивана хочет устроиться к нему на стройку на лето.",
+   "en": "Ivan's nephew wants to get a summer job with him at the construction site.",
+   "ko": "이반의 조카는 여름 동안 이반네 현장에 일자리를 얻고 싶어 해요.",
+   "blank": "устроиться",
+   "src": "made"
+  },
+  {
+   "text": "Анна мечтает устроиться в библиотеку на полставки.",
+   "en": "Anna dreams of getting a part-time job at the library.",
+   "ko": "안나는 도서관에 시간제로 취직하는 게 꿈이에요.",
+   "blank": "устроиться",
+   "src": "made"
+  }
+ ],
  "w|устройство": [
   {
    "text": "У меня сломалось зарядное устройство.",
@@ -54515,6 +55699,22 @@
    "ko": "그건 확실하게 말할 수 있어요.",
    "blank": "утверждать",
    "src": "tatoeba:4682613/odexed en:7689038/AlanF_US"
+  }
+ ],
+ "w|утечка": [
+  {
+   "text": "Иван первым заметил утечку газа в подвале.",
+   "en": "Ivan was the first to notice the gas leak in the basement.",
+   "ko": "지하실에서 가스가 새는 걸 이반이 제일 먼저 알아챘어요.",
+   "blank": "утечку",
+   "src": "made"
+  },
+  {
+   "text": "После дождя в архиве обнаружили утечку воды, и Анна помогла спасать книги.",
+   "en": "After the rain a water leak was found in the archive, and Anna helped save the books.",
+   "ko": "비가 온 뒤 기록실에서 물이 새는 게 발견돼서 안나가 책 구하는 걸 도왔어요.",
+   "blank": "утечку",
+   "src": "made"
   }
  ],
  "w|утонуть": [
@@ -55181,6 +56381,22 @@
    "ko": "그 회사는 외국에서 경영하고 있어요.",
    "blank": "фирма",
    "src": "tatoeba:1511742/Biga en:49095/CK"
+  }
+ ],
+ "w|фишка": [
+  {
+   "text": "Главная фишка рубрики Никиты — письма читателей.",
+   "en": "The main feature of Nikita's section is letters from readers.",
+   "ko": "니키타 코너의 핵심 포인트는 독자 편지예요.",
+   "blank": "фишка",
+   "src": "made"
+  },
+  {
+   "text": "Главная фишка приложения Татьяны — голосовой помощник.",
+   "en": "The main selling point of Tatiana's app is the voice assistant.",
+   "ko": "타티야나 앱의 핵심 기능은 음성 비서예요.",
+   "blank": "фишка",
+   "src": "made"
   }
  ],
  "w|флаг": [
@@ -55851,6 +57067,22 @@
    "src": "made"
   }
  ],
+ "w|хранение": [
+  {
+   "text": "Старые номера газеты сдали на хранение в городской архив.",
+   "en": "The old issues of the newspaper were handed over to the city archive for storage.",
+   "ko": "신문 옛 호들은 시립 기록관에 보관하도록 맡겼어요.",
+   "blank": "хранение",
+   "src": "made"
+  },
+  {
+   "text": "Компания Татьяны платит немалые деньги за хранение данных в облаке.",
+   "en": "Tatiana's company pays a lot of money for cloud data storage.",
+   "ko": "타티야나의 회사는 클라우드 데이터 저장에 적지 않은 돈을 내요.",
+   "blank": "хранение",
+   "src": "made"
+  }
+ ],
  "w|хранилище": [
   {
    "text": "Том отнёс две коробки в хранилище.",
@@ -55913,6 +57145,22 @@
    "ko": "이건 내가 본 영화 중 최악이야.",
    "blank": "худший",
    "src": "tatoeba:11859204/marafon en:3923354/CK"
+  }
+ ],
+ "w|царство": [
+  {
+   "text": "Архив редакции Никита в шутку называет царством пыли.",
+   "en": "Nikita jokingly calls the newsroom archive the kingdom of dust.",
+   "ko": "니키타는 편집부 자료실을 농담으로 먼지 왕국이라고 불러요.",
+   "blank": "царством",
+   "src": "made"
+  },
+  {
+   "text": "Кухня в офисе Татьяны — настоящее царство печенья и кофе.",
+   "en": "The kitchen in Tatiana's office is a true kingdom of cookies and coffee.",
+   "ko": "타티야나네 사무실 주방은 그야말로 과자와 커피의 왕국이에요.",
+   "blank": "царство",
+   "src": "made"
   }
  ],
  "w|царь": [
@@ -57133,6 +58381,22 @@
    "src": "tatoeba:7990240/fjay69 en:1665565/Amastan"
   }
  ],
+ "w|шахта": [
+  {
+   "text": "До стройки Иван несколько лет работал в угольной шахте.",
+   "en": "Before the construction site, Ivan worked in a coal mine for several years.",
+   "ko": "건설 현장에 오기 전에 이반은 몇 년 동안 탄광에서 일했어요.",
+   "blank": "шахте",
+   "src": "made"
+  },
+  {
+   "text": "Анна взяла в библиотеке роман о жизни шахтёров и их опасной шахте.",
+   "en": "Anna borrowed a novel from the library about miners and their dangerous mine.",
+   "ko": "안나는 광부들과 위험한 탄광 이야기를 다룬 소설을 도서관에서 빌렸어요.",
+   "blank": "шахте",
+   "src": "made"
+  }
+ ],
  "w|шевелиться": [
   {
    "text": "Ты не можешь шевелиться быстрее?",
@@ -57460,6 +58724,22 @@
    "en": "A customer whispered, asking Irina to check whether a spy had installed an app on his phone.",
    "ko": "한 손님은 누가 스파이처럼 휴대폰에 프로그램을 깔지 않았는지 봐 달라고 이리나에게 속삭였어요.",
    "blank": "шпион",
+   "src": "made"
+  }
+ ],
+ "w|шпионить": [
+  {
+   "text": "Соседи жаловались, что Никита будто бы шпионит за ними ради статьи.",
+   "en": "The neighbors complained that Nikita was supposedly spying on them for an article.",
+   "ko": "이웃들은 니키타가 기사 때문에 자기들을 몰래 엿본다고 불평했어요.",
+   "blank": "шпионит",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна подозревала, что приложение конкурентов шпионит за пользователями.",
+   "en": "Tatiana suspected that the competitors' app was spying on users.",
+   "ko": "타티야나는 경쟁사 앱이 사용자를 몰래 감시한다고 의심했어요.",
+   "blank": "шпионит",
    "src": "made"
   }
  ],

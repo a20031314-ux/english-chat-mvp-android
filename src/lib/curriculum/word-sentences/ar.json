@@ -447,6 +447,22 @@
    "blank": "أثبت"
   }
  ],
+ "w|أثث": [
+  {
+   "text": "أثث سامي غرفته القديمة بمكتب وكراس جديدة.",
+   "en": "Sami furnished his old room with a new desk and chairs.",
+   "ko": "사미는 옛날 자기 방을 새 책상과 의자로 꾸몄어요.",
+   "blank": "أثث",
+   "src": "made"
+  },
+  {
+   "text": "تريد رنا أن تؤثث شقتها كلها من سوق الأشياء المستعملة.",
+   "en": "Rana wants to furnish her whole apartment from the secondhand market.",
+   "ko": "라나는 아파트 전체를 중고 시장 물건으로 꾸미고 싶어 해요.",
+   "blank": "تؤثث",
+   "src": "made"
+  }
+ ],
  "w|أثر": [
   {
    "text": "ترك الحادث أثر كبير في نفسي.",
@@ -2855,6 +2871,22 @@
    "en": "I will try again.",
    "ko": "다시 시도할 거야.",
    "blank": "سأعيد"
+  }
+ ],
+ "w|أعدم": [
+  {
+   "text": "روى الفيلم الوثائقي كيف أعدم الحاكم خصومه في ساحة المدينة.",
+   "en": "The documentary told how the ruler executed his opponents in the city square.",
+   "ko": "다큐멘터리는 통치자가 도시 광장에서 정적들을 처형한 일을 다뤘어요.",
+   "blank": "أعدم",
+   "src": "made"
+  },
+  {
+   "text": "باع رجل لرنا جريدة قديمة تروي كيف أعدم الملك وزيره الخائن.",
+   "en": "A man sold Rana an old newspaper describing how the king executed his treacherous minister.",
+   "ko": "한 남자가 왕이 배신한 신하를 처형한 일을 다룬 옛 신문을 라나에게 팔았어요.",
+   "blank": "أعدم",
+   "src": "made"
   }
  ],
  "w|أعرب": [
@@ -5817,6 +5849,22 @@
    "blank": "إضراب"
   }
  ],
+ "w|إطار": [
+  {
+   "text": "وضع سامي صورة جدته في إطار خشبي جميل.",
+   "en": "Sami put his grandmother's photo in a beautiful wooden frame.",
+   "ko": "사미는 할머니 사진을 예쁜 나무 액자에 넣었어요.",
+   "blank": "إطار",
+   "src": "made"
+  },
+  {
+   "text": "اشترت رنا إطار مرآة نحاسيا بثمن رخيص.",
+   "en": "Rana bought a copper mirror frame at a cheap price.",
+   "ko": "라나는 구리 거울 테두리를 싼값에 샀어요.",
+   "blank": "إطار",
+   "src": "made"
+  }
+ ],
  "w|إطفاء": [
   {
    "text": "نسي علي إطفاء الفرن، فلامته أخته بصوت عال.",
@@ -6635,6 +6683,22 @@
    "src": "made"
   }
  ],
+ "w|ابتز": [
+  {
+   "text": "شاهدت العائلة فيلما عن رجل ابتز جاره بصور قديمة.",
+   "en": "The family watched a film about a man who blackmailed his neighbor with old photos.",
+   "ko": "가족은 오래된 사진으로 이웃을 협박한 남자에 관한 영화를 봤어요.",
+   "blank": "ابتز",
+   "src": "made"
+  },
+  {
+   "text": "سمعت رنا بائعا يحكي عن لص ابتز تجار السوق قبل سنوات.",
+   "en": "Rana heard a seller talking about a thief who blackmailed the market traders years ago.",
+   "ko": "라나는 몇 년 전 시장 상인들을 협박한 도둑 이야기를 하는 상인의 말을 들었어요.",
+   "blank": "ابتز",
+   "src": "made"
+  }
+ ],
  "w|ابتسامة": [
   {
    "text": "ابتسامة الطفل أضاءت الغرفة.",
@@ -7045,6 +7109,22 @@
    "en": "I need help now.",
    "ko": "지금 도움이 필요해.",
    "blank": "احتاج"
+  }
+ ],
+ "w|احتال": [
+  {
+   "text": "حكى الجد قصة تاجر احتال على أهل القرية قبل سنوات طويلة.",
+   "en": "Grandpa told the story of a merchant who swindled the villagers many years ago.",
+   "ko": "할아버지는 오래전 마을 사람들을 속인 상인 이야기를 들려줬어요.",
+   "blank": "احتال",
+   "src": "made"
+  },
+  {
+   "text": "اكتشفت رنا أن البائع احتال عليها وباعها ساعة مزيفة.",
+   "en": "Rana discovered that the seller had cheated her and sold her a fake watch.",
+   "ko": "라나는 상인이 자기를 속여 가짜 시계를 판 것을 알게 됐어요.",
+   "blank": "احتال",
+   "src": "made"
   }
  ],
  "w|احتج": [
@@ -7509,6 +7589,22 @@
    "src": "made"
   }
  ],
+ "w|اختلس": [
+  {
+   "text": "قرأ سامي في الجريدة عن موظف اختلس أموال الشركة.",
+   "en": "Sami read in the newspaper about an employee who embezzled the company's money.",
+   "ko": "사미는 신문에서 회사 돈을 횡령한 직원에 관한 기사를 읽었어요.",
+   "blank": "اختلس",
+   "src": "made"
+  },
+  {
+   "text": "وجدت رنا رواية قديمة عن محاسب اختلس أموال بنك صغير.",
+   "en": "Rana found an old novel about an accountant who embezzled money from a small bank.",
+   "ko": "라나는 작은 은행 돈을 횡령한 회계사에 관한 오래된 소설을 찾았어요.",
+   "blank": "اختلس",
+   "src": "made"
+  }
+ ],
  "w|اختلف": [
   {
    "text": "اختلف رأي الطلاب حول الموضوع.",
@@ -7669,6 +7765,22 @@
    "en": "He wore formal attire for the party.",
    "ko": "파티에 정장을 입었다.",
    "blank": "ارتدى"
+  }
+ ],
+ "w|ارتشى": [
+  {
+   "text": "ذكرت نشرة الأخبار أن مسؤولا ارتشى مقابل عقد بناء.",
+   "en": "The news bulletin reported that an official took a bribe in exchange for a construction contract.",
+   "ko": "뉴스에서 한 관리가 건설 계약 대가로 뇌물을 받았다고 보도했어요.",
+   "blank": "ارتشى",
+   "src": "made"
+  },
+  {
+   "text": "قرأت رنا في جريدة قديمة خبرا عن قاض ارتشى في قضية مشهورة.",
+   "en": "Rana read a story in an old newspaper about a judge who took a bribe in a famous case.",
+   "ko": "라나는 오래된 신문에서 유명한 사건으로 뇌물을 받은 판사에 관한 기사를 읽었어요.",
+   "blank": "ارتشى",
+   "src": "made"
   }
  ],
  "w|ارتعب": [
@@ -8551,6 +8663,22 @@
    "src": "made"
   }
  ],
+ "w|استعمر": [
+  {
+   "text": "درس سامي في الجامعة كيف استعمرت دول أوروبية أجزاء من إفريقيا.",
+   "en": "At university Sami studied how European countries colonized parts of Africa.",
+   "ko": "사미는 대학에서 유럽 나라들이 아프리카 일부를 식민지로 삼은 과정을 공부했어요.",
+   "blank": "استعمرت",
+   "src": "made"
+  },
+  {
+   "text": "اشترت رنا خريطة قديمة رسمها جيش استعمر المنطقة قديما.",
+   "en": "Rana bought an old map drawn by an army that once colonized the region.",
+   "ko": "라나는 예전에 그 지역을 식민지로 삼았던 군대가 그린 옛 지도를 샀어요.",
+   "blank": "استعمر",
+   "src": "made"
+  }
+ ],
  "w|استعمل": [
   {
    "text": "استعمل الهاتف للاتصال بأمي.",
@@ -8782,6 +8910,22 @@
    "en": "The cooking course Sara teaches drew students of different ages.",
    "ko": "사라가 여는 요리 강좌에는 여러 나이대의 수강생이 모였어요.",
    "blank": "استقطبت",
+   "src": "made"
+  }
+ ],
+ "w|استقل": [
+  {
+   "text": "يقول الجد إنه يتذكر جيدا اليوم الذي استقل فيه البلد.",
+   "en": "Grandpa says he remembers well the day the country became independent.",
+   "ko": "할아버지는 나라가 독립한 날을 잘 기억한다고 해요.",
+   "blank": "استقل",
+   "src": "made"
+  },
+  {
+   "text": "عرض بائع طوابع صدرت في السنة التي استقل فيها البلد.",
+   "en": "A seller displayed stamps issued in the year the country became independent.",
+   "ko": "한 상인이 나라가 독립한 해에 나온 우표를 진열했어요.",
+   "blank": "استقل",
    "src": "made"
   }
  ],
@@ -9035,6 +9179,22 @@
    "en": "The merchant imported new cars.",
    "ko": "상인이 새 차를 수입했어.",
    "blank": "استورد"
+  }
+ ],
+ "w|استوطن": [
+  {
+   "text": "استوطن أجداد سامي هذا الوادي منذ زمن بعيد.",
+   "en": "Sami's ancestors settled this valley long ago.",
+   "ko": "사미의 조상들은 오래전에 이 골짜기에 터를 잡았어요.",
+   "blank": "استوطن",
+   "src": "made"
+  },
+  {
+   "text": "يقال إن عائلات من الجبل استوطنت هذا الحي قبل قرن.",
+   "en": "It is said that families from the mountain settled this neighborhood a century ago.",
+   "ko": "산에서 온 가족들이 백 년 전에 이 동네에 자리 잡았다고 해요.",
+   "blank": "استوطنت",
+   "src": "made"
   }
  ],
  "w|استوعب": [
@@ -9695,6 +9855,22 @@
    "blank": "تعتنى"
   }
  ],
+ "w|اغتال": [
+  {
+   "text": "يتحدث كتاب التاريخ الذي يقرؤه سامي عن ثائر اغتال حاكما ظالما.",
+   "en": "The history book Sami is reading tells of a rebel who assassinated an unjust ruler.",
+   "ko": "사미가 읽는 역사책은 부당한 통치자를 암살한 혁명가에 관한 내용이에요.",
+   "blank": "اغتال",
+   "src": "made"
+  },
+  {
+   "text": "اشترت رنا كتابا قديما عن رجل اغتال وزيرا في القرن التاسع عشر.",
+   "en": "Rana bought an old book about a man who assassinated a minister in the nineteenth century.",
+   "ko": "라나는 십구 세기에 장관을 암살한 남자에 관한 오래된 책을 샀어요.",
+   "blank": "اغتال",
+   "src": "made"
+  }
+ ],
  "w|اغتسل": [
   {
    "text": "يجب أن اغتسل بعد التمرين.",
@@ -9933,6 +10109,22 @@
    "en": "Did you borrow a book from the library?",
    "ko": "도서관에서 책을 빌렸니?",
    "blank": "اقترضت"
+  }
+ ],
+ "w|اقترع": [
+  {
+   "text": "اقترع سكان الحي يوم الأحد لاختيار رئيس جديد للبلدية.",
+   "en": "The residents of the neighborhood voted on Sunday to choose a new mayor.",
+   "ko": "동네 주민들은 일요일에 새 시장을 뽑으려고 투표했어요.",
+   "blank": "اقترع",
+   "src": "made"
+  },
+  {
+   "text": "اقترع أعضاء جمعية الباعة لاختيار يوم جديد للسوق.",
+   "en": "The members of the sellers' association voted to choose a new day for the market.",
+   "ko": "상인 협회 회원들은 시장 날을 새로 정하려고 투표했어요.",
+   "blank": "اقترع",
+   "src": "made"
   }
  ],
  "w|اقتصاد": [
@@ -10859,6 +11051,22 @@
    "en": "The student transferred to another school.",
    "ko": "학생이 다른 학교로 전학 갔어요.",
    "blank": "انتقل"
+  }
+ ],
+ "w|انتقم": [
+  {
+   "text": "في الرواية التي أنهاها سامي، انتقم البطل ممن ظلموه ثم ندم.",
+   "en": "In the novel Sami finished, the hero took revenge on those who wronged him and then regretted it.",
+   "ko": "사미가 다 읽은 소설에서 주인공은 자기를 괴롭힌 사람들에게 복수하고 나서 후회했어요.",
+   "blank": "انتقم",
+   "src": "made"
+  },
+  {
+   "text": "في الفيلم القديم الذي اشترته رنا، انتقم البطل لأبيه.",
+   "en": "In the old film Rana bought, the hero avenged his father.",
+   "ko": "라나가 산 옛날 영화에서 주인공은 아버지의 원수를 갚았어요.",
+   "blank": "انتقم",
+   "src": "made"
   }
  ],
  "w|انتماء": [
@@ -13882,6 +14090,22 @@
    "en": "The store got a new licence from the municipality, so Rana told the staff.",
    "ko": "백화점이 시청에서 새 허가를 받아서 라나가 직원들에게 알렸어요.",
    "blank": "البلدية",
+   "src": "made"
+  }
+ ],
+ "w|بلط": [
+  {
+   "text": "بلط سامي ممر الحديقة بحجارة ملونة.",
+   "en": "Sami paved the garden path with colored stones.",
+   "ko": "사미는 정원 길에 색깔 있는 돌을 깔았어요.",
+   "blank": "بلط",
+   "src": "made"
+  },
+  {
+   "text": "بلط عامل أرض مطبخ رنا بقطع قديمة وجدتها في السوق.",
+   "en": "A worker tiled Rana's kitchen floor with old pieces she found at the market.",
+   "ko": "일꾼이 라나가 시장에서 찾은 오래된 조각으로 라나의 부엌 바닥에 타일을 깔았어요.",
+   "blank": "بلط",
    "src": "made"
   }
  ],
@@ -22779,6 +23003,22 @@
    "blank": "حارب"
   }
  ],
+ "w|حارة": [
+  {
+   "text": "خرج سامي مع أبيه للمشي في الحارة التي ولد فيها.",
+   "en": "Sami went out with his father for a walk in the neighborhood where he was born.",
+   "ko": "사미는 아버지와 함께 자기가 태어난 동네를 걸으러 나갔어요.",
+   "blank": "الحارة",
+   "src": "made"
+  },
+  {
+   "text": "تمتد البسطات على طول حارة ضيقة في وسط المدينة.",
+   "en": "The stalls stretch along a narrow alley in the city center.",
+   "ko": "노점들이 시내 한가운데 좁은 골목을 따라 늘어서 있어요.",
+   "blank": "حارة",
+   "src": "made"
+  }
+ ],
  "w|حارس": [
   {
    "text": "الحارس فتح الباب للضيوف.",
@@ -24833,6 +25073,22 @@
    "blank": "حلاق"
   }
  ],
+ "w|حلاقة": [
+  {
+   "text": "اشترى سامي ماكينة حلاقة جديدة لأبيه هدية للعيد.",
+   "en": "Sami bought his father a new shaver as a holiday gift.",
+   "ko": "사미는 명절 선물로 아버지께 새 면도기를 사 드렸어요.",
+   "blank": "حلاقة",
+   "src": "made"
+  },
+  {
+   "text": "يبيع رجل مسن أدوات حلاقة قديمة مصنوعة من الفضة.",
+   "en": "An elderly man sells old shaving tools made of silver.",
+   "ko": "나이 든 남자가 은으로 만든 오래된 면도 도구를 팔아요.",
+   "blank": "حلاقة",
+   "src": "made"
+  }
+ ],
  "w|حلبة": [
   {
    "text": "حول الجيران ساحة العمارة إلى حلبة رقص في حفل الزفاف.",
@@ -25618,6 +25874,22 @@
    "en": "Huda's grandfather worked as a servant for a cloth merchant in his youth, then opened his own shop.",
    "ko": "후다의 할아버지는 젊을 때 옷감 상인 밑에서 심부름꾼으로 일하다가 자기 가게를 열었어요.",
    "blank": "خادما",
+   "src": "made"
+  }
+ ],
+ "w|خادمة": [
+  {
+   "text": "تقرأ أخت سامي رواية عن خادمة تعمل في قصر قديم.",
+   "en": "Sami's sister is reading a novel about a maid working in an old palace.",
+   "ko": "사미의 누나는 오래된 궁전에서 일하는 하녀에 관한 소설을 읽고 있어요.",
+   "blank": "خادمة",
+   "src": "made"
+  },
+  {
+   "text": "وجدت رنا لوحة قديمة تظهر فيها خادمة تحمل جرة ماء.",
+   "en": "Rana found an old painting showing a maid carrying a water jar.",
+   "ko": "라나는 물항아리를 든 하녀가 그려진 오래된 그림을 발견했어요.",
+   "blank": "خادمة",
    "src": "made"
   }
  ],
@@ -28423,6 +28695,22 @@
    "blank": "دوري"
   }
  ],
+ "w|دورية": [
+  {
+   "text": "مرت دورية الشرطة في الشارع الهادئ ليلة العيد.",
+   "en": "A police patrol passed through the quiet street on the night of the holiday.",
+   "ko": "명절 밤 조용한 거리에 경찰 순찰대가 지나갔어요.",
+   "blank": "دورية",
+   "src": "made"
+  },
+  {
+   "text": "توقفت دورية الشرطة عند مدخل السوق لتنظيم السير.",
+   "en": "A police patrol stopped at the market entrance to direct traffic.",
+   "ko": "경찰 순찰대가 교통을 정리하려고 시장 입구에 멈췄어요.",
+   "blank": "دورية",
+   "src": "made"
+  }
+ ],
  "w|دولار": [
   {
    "text": "دفعت خمسة دولار.",
@@ -30717,6 +31005,22 @@
    "blank": "رمل"
   }
  ],
+ "w|رمم": [
+  {
+   "text": "رمم الأب سقف المطبخ قبل وصول الضيوف.",
+   "en": "The father repaired the kitchen ceiling before the guests arrived.",
+   "ko": "아버지는 손님들이 오기 전에 부엌 천장을 보수했어요.",
+   "blank": "رمم",
+   "src": "made"
+  },
+  {
+   "text": "رممت رنا خزانة قديمة اشترتها بثمن رخيص.",
+   "en": "Rana restored an old wardrobe she had bought cheaply.",
+   "ko": "라나는 싸게 산 오래된 옷장을 손봤어요.",
+   "blank": "رممت",
+   "src": "made"
+  }
+ ],
  "w|رمى": [
   {
    "text": "رمى الكرة إلى صديقه.",
@@ -30833,6 +31137,22 @@
    "en": "He remained a hostage in that place for several days.",
    "ko": "그는 그곳에 며칠 동안 인질로 남아 있었다.",
    "blank": "رهينة"
+  }
+ ],
+ "w|رواق": [
+  {
+   "text": "علق سامي صور العطلة على جدار الرواق الطويل.",
+   "en": "Sami hung the holiday photos on the wall of the long corridor.",
+   "ko": "사미는 긴 복도 벽에 휴가 사진을 걸었어요.",
+   "blank": "الرواق",
+   "src": "made"
+  },
+  {
+   "text": "مشت رنا في رواق ضيق مليء بالأواني النحاسية.",
+   "en": "Rana walked down a narrow aisle full of copper pots.",
+   "ko": "라나는 구리 그릇이 가득한 좁은 통로를 걸었어요.",
+   "blank": "رواق",
+   "src": "made"
   }
  ],
  "w|رواية": [
@@ -31581,6 +31901,22 @@
    "en": "My husband does not drink coffee at night.",
    "ko": "남편은 밤에 커피를 안 마셔.",
    "blank": "زوجي"
+  }
+ ],
+ "w|زور": [
+  {
+   "text": "اكتشف المحقق في المسلسل أن البطل زور توقيع أخيه.",
+   "en": "The detective in the series discovered that the hero forged his brother's signature.",
+   "ko": "드라마 속 형사는 주인공이 형의 서명을 위조한 것을 알아냈어요.",
+   "blank": "زور",
+   "src": "made"
+  },
+  {
+   "text": "شك البائع في أن أحدا زور توقيع الرسام على اللوحة.",
+   "en": "The seller suspected that someone had forged the painter's signature on the painting.",
+   "ko": "상인은 누군가 그림에 있는 화가의 서명을 위조했다고 의심했어요.",
+   "blank": "زور",
+   "src": "made"
   }
  ],
  "w|زيادة": [
@@ -34483,6 +34819,22 @@
    "blank": "شاهد"
   }
  ],
+ "w|شاور": [
+  {
+   "text": "شاور سامي إخوته قبل أن يختار مكان الرحلة.",
+   "en": "Sami consulted his siblings before choosing the place for the trip.",
+   "ko": "사미는 여행지를 고르기 전에 형제들과 상의했어요.",
+   "blank": "شاور",
+   "src": "made"
+  },
+  {
+   "text": "شاورت رنا صديقتها قبل أن تدفع ثمن الخزانة.",
+   "en": "Rana consulted her friend before paying for the wardrobe.",
+   "ko": "라나는 옷장 값을 치르기 전에 친구와 상의했어요.",
+   "blank": "شاورت",
+   "src": "made"
+  }
+ ],
  "w|شاي": [
   {
    "text": "أشرب شاي أخضر كل مساء.",
@@ -36077,6 +36429,22 @@
    "en": "The child became happy when he saw his mother.",
    "ko": "아기는 엄마를 보자 행복해졌어.",
    "blank": "صار"
+  }
+ ],
+ "w|صارح": [
+  {
+   "text": "صارح سامي أمه بأنه يريد ترك عمله والعودة إلى الدراسة.",
+   "en": "Sami told his mother frankly that he wants to leave his job and go back to studying.",
+   "ko": "사미는 일을 그만두고 다시 공부하고 싶다고 어머니께 솔직히 말했어요.",
+   "blank": "صارح",
+   "src": "made"
+  },
+  {
+   "text": "صارحت رنا البائع بأن السعر مرتفع جدا.",
+   "en": "Rana told the seller frankly that the price was too high.",
+   "ko": "라나는 상인에게 값이 너무 비싸다고 솔직히 말했어요.",
+   "blank": "صارحت",
+   "src": "made"
   }
  ],
  "w|صاروخ": [
@@ -39978,6 +40346,22 @@
    "en": "The foreign programmer needs a transit visa to attend the meeting.",
    "ko": "외국인 개발자는 회의에 오려면 경유 비자가 필요해요.",
    "blank": "عبور",
+   "src": "made"
+  }
+ ],
+ "w|عتبة": [
+  {
+   "text": "وقفت الجدة على عتبة الباب تستقبل أحفادها.",
+   "en": "Grandma stood on the doorstep welcoming her grandchildren.",
+   "ko": "할머니는 문턱에 서서 손주들을 맞이했어요.",
+   "blank": "عتبة",
+   "src": "made"
+  },
+  {
+   "text": "جلس بائع الصحون على عتبة متجره ينتظر الزبائن.",
+   "en": "The plate seller sat on the threshold of his shop waiting for customers.",
+   "ko": "접시 장수는 가게 문턱에 앉아 손님을 기다렸어요.",
+   "blank": "عتبة",
    "src": "made"
   }
  ],
@@ -43903,6 +44287,22 @@
    "blank": "فرز"
   }
  ],
+ "w|فرش": [
+  {
+   "text": "فرشت أم سامي السجادة الجديدة في غرفة الجلوس.",
+   "en": "Sami's mother spread the new rug in the living room.",
+   "ko": "사미의 어머니는 거실에 새 양탄자를 깔았어요.",
+   "blank": "فرشت",
+   "src": "made"
+  },
+  {
+   "text": "فرش رجل بساطا على الأرض ووضع عليه الأواني.",
+   "en": "A man spread a mat on the ground and laid the pots on it.",
+   "ko": "한 남자가 바닥에 깔개를 펴고 그 위에 그릇을 놓았어요.",
+   "blank": "فرش",
+   "src": "made"
+  }
+ ],
  "w|فرشاة": [
   {
    "text": "أحتاج إلى فرشاة جديدة للأسنان.",
@@ -44595,6 +44995,22 @@
    "en": "I love visiting art exhibitions.",
    "ko": "나는 미술 전시회를 방문하는 것을 좋아해.",
    "blank": "فن"
+  }
+ ],
+ "w|فناء": [
+  {
+   "text": "جلست العائلة في فناء البيت تحت شجرة الليمون.",
+   "en": "The family sat in the courtyard of the house under the lemon tree.",
+   "ko": "가족은 레몬나무 아래 집 안뜰에 앉았어요.",
+   "blank": "فناء",
+   "src": "made"
+  },
+  {
+   "text": "يقام سوق الأشياء المستعملة كل سبت في فناء مدرسة قديمة.",
+   "en": "The secondhand market is held every Saturday in the courtyard of an old school.",
+   "ko": "중고 시장은 토요일마다 오래된 학교 마당에서 열려요.",
+   "blank": "فناء",
+   "src": "made"
   }
  ],
  "w|فنان": [
@@ -47499,6 +47915,22 @@
    "src": "made"
   }
  ],
+ "w|كدس": [
+  {
+   "text": "كدس سامي الهدايا في زاوية الغرفة حتى صباح العيد.",
+   "en": "Sami piled the gifts in the corner of the room until the morning of the holiday.",
+   "ko": "사미는 명절 아침까지 선물을 방 구석에 쌓아 두었어요.",
+   "blank": "كدس",
+   "src": "made"
+  },
+  {
+   "text": "كدس البائعون الكتب القديمة في صناديق كرتونية.",
+   "en": "The sellers piled the old books into cardboard boxes.",
+   "ko": "상인들은 오래된 책을 종이 상자에 쌓았어요.",
+   "blank": "كدس",
+   "src": "made"
+  }
+ ],
  "w|كذاب": [
   {
    "text": "ضحك الجميع حين قال سامي إن العريس كذاب في مواعيده فقط.",
@@ -48331,6 +48763,22 @@
    "en": "This is my favorite sweater in winter.",
    "ko": "이게 겨울에 내가 제일 좋아하는 스웨터야.",
    "blank": "كنزتي"
+  }
+ ],
+ "w|كنس": [
+  {
+   "text": "كنس سامي الشرفة بعد سهرة العيد.",
+   "en": "Sami swept the balcony after the holiday party.",
+   "ko": "사미는 명절 밤 모임이 끝나고 발코니를 쓸었어요.",
+   "blank": "كنس",
+   "src": "made"
+  },
+  {
+   "text": "كنس البائع المكان قبل أن يرتب بضاعته.",
+   "en": "The seller swept the spot before arranging his goods.",
+   "ko": "상인은 물건을 정리하기 전에 자리를 쓸었어요.",
+   "blank": "كنس",
+   "src": "made"
   }
  ],
  "w|كنيسة": [
@@ -50518,6 +50966,22 @@
    "en": "Huda sat down at the dinner table in the final scene.",
    "ko": "후다는 마지막 장면에서 저녁 식탁에 앉았어요.",
    "blank": "مائدة",
+   "src": "made"
+  }
+ ],
+ "w|مائية": [
+  {
+   "text": "رسمت ابنة أخت سامي البحر بالألوان المائية.",
+   "en": "Sami's niece painted the sea with watercolors.",
+   "ko": "사미의 조카딸은 수채 물감으로 바다를 그렸어요.",
+   "blank": "المائية",
+   "src": "made"
+  },
+  {
+   "text": "اشترت رنا علبة ألوان مائية لم تفتح بعد.",
+   "en": "Rana bought a box of watercolors that hadn't been opened yet.",
+   "ko": "라나는 아직 뜯지 않은 수채 물감 한 상자를 샀어요.",
+   "blank": "مائية",
    "src": "made"
   }
  ],
@@ -53283,6 +53747,22 @@
    "blank": "مذاق"
   }
  ],
+ "w|مذكرات": [
+  {
+   "text": "وجد سامي دفتر مذكرات جده في صندوق تحت السرير.",
+   "en": "Sami found his grandfather's diary in a box under the bed.",
+   "ko": "사미는 침대 밑 상자에서 할아버지의 일기장을 찾았어요.",
+   "blank": "مذكرات",
+   "src": "made"
+  },
+  {
+   "text": "وجدت رنا كتاب مذكرات لممثلة عاشت في القرن الماضي.",
+   "en": "Rana found a memoir by an actress who lived in the last century.",
+   "ko": "라나는 지난 세기에 살았던 여배우의 회고록을 찾았어요.",
+   "blank": "مذكرات",
+   "src": "made"
+  }
+ ],
  "w|مذكرة": [
   {
    "text": "كتبت واجبي في مذكرة صغيرة.",
@@ -53649,6 +54129,22 @@
    "en": "I like the house to be organized.",
    "ko": "집이 정돈되어 있는 게 좋아.",
    "blank": "مرتب"
+  }
+ ],
+ "w|مرتبة": [
+  {
+   "text": "نام سامي على مرتبة في غرفة الضيوف لأن أقاربه جاؤوا.",
+   "en": "Sami slept on a mattress in the guest room because his relatives came.",
+   "ko": "친척들이 와서 사미는 손님방 매트리스에서 잤어요.",
+   "blank": "مرتبة",
+   "src": "made"
+  },
+  {
+   "text": "رفضت رنا شراء مرتبة مستعملة مهما كان سعرها.",
+   "en": "Rana refused to buy a used mattress no matter the price.",
+   "ko": "라나는 값이 얼마든 중고 매트리스는 사지 않았어요.",
+   "blank": "مرتبة",
+   "src": "made"
   }
  ],
  "w|مرتبك": [
@@ -54415,6 +54911,22 @@
    "blank": "مساواة"
   }
  ],
+ "w|مسبح": [
+  {
+   "text": "ملأ سامي المسبح الصغير بالماء ليلعب فيه أبناء أخيه.",
+   "en": "Sami filled the small pool with water so his nephews could play in it.",
+   "ko": "사미는 조카들이 놀 수 있게 작은 수영장에 물을 채웠어요.",
+   "blank": "المسبح",
+   "src": "made"
+  },
+  {
+   "text": "يقف بائع الكراسي القديمة كل أسبوع قرب المسبح البلدي.",
+   "en": "The seller of old chairs stands near the municipal pool every week.",
+   "ko": "오래된 의자를 파는 상인은 매주 시립 수영장 근처에 서 있어요.",
+   "blank": "المسبح",
+   "src": "made"
+  }
+ ],
  "w|مسبقا": [
   {
    "text": "حجزت الغرفة مسبقا.",
@@ -54743,6 +55255,22 @@
    "blank": "مسجد"
   }
  ],
+ "w|مسجل": [
+  {
+   "text": "أخرج والد سامي مسجلا قديما من الخزانة وشغل أغاني شبابه.",
+   "en": "Sami's father took an old tape recorder out of the closet and played the songs of his youth.",
+   "ko": "사미의 아버지는 옷장에서 오래된 녹음기를 꺼내 젊은 시절 노래를 틀었어요.",
+   "blank": "مسجلا",
+   "src": "made"
+  },
+  {
+   "text": "جربت رنا مسجلا قديما لتتأكد أنه ما زال يعمل.",
+   "en": "Rana tried an old tape recorder to make sure it still worked.",
+   "ko": "라나는 오래된 녹음기가 아직 작동하는지 확인하려고 켜 봤어요.",
+   "blank": "مسجلا",
+   "src": "made"
+  }
+ ],
  "w|مسح": [
   {
    "text": "مسح اللوح بعد الدرس.",
@@ -54755,6 +55283,22 @@
    "en": "Please wipe the table before eating.",
    "ko": "식사 전에 테이블을 닦아주세요.",
    "blank": "تمسح"
+  }
+ ],
+ "w|مسحوق": [
+  {
+   "text": "نفد مسحوق الغسيل، فذهب سامي إلى البقالة.",
+   "en": "The laundry powder ran out, so Sami went to the grocery store.",
+   "ko": "세탁 가루가 떨어져서 사미가 식료품 가게에 갔어요.",
+   "blank": "مسحوق",
+   "src": "made"
+  },
+  {
+   "text": "استعملت رنا مسحوق التنظيف لتلميع الإبريق النحاسي.",
+   "en": "Rana used cleaning powder to polish the copper jug.",
+   "ko": "라나는 구리 주전자를 닦으려고 세제 가루를 썼어요.",
+   "blank": "مسحوق",
+   "src": "made"
   }
  ],
  "w|مسدس": [
@@ -54811,6 +55355,22 @@
    "en": "The school is happy with the students' results.",
    "ko": "학교가 학생들의 결과에 만족해.",
    "blank": "مسرور"
+  }
+ ],
+ "w|مسكن": [
+  {
+   "text": "يقضي سامي العطلة في المسكن العائلي القريب من البحر.",
+   "en": "Sami is spending the holiday at the family home near the sea.",
+   "ko": "사미는 바다 근처 가족 집에서 휴가를 보내고 있어요.",
+   "blank": "المسكن",
+   "src": "made"
+  },
+  {
+   "text": "تبحث رنا عن أثاث رخيص لأن مسكنها الجديد شبه فارغ.",
+   "en": "Rana is looking for cheap furniture because her new home is almost empty.",
+   "ko": "라나는 새집이 거의 비어 있어서 싼 가구를 찾고 있어요.",
+   "blank": "مسكنها",
+   "src": "made"
   }
  ],
  "w|مسكين": [
@@ -55870,6 +56430,22 @@
    "en": "Delivery downtown was disrupted by a big demonstration, so Layla waited an extra day.",
    "ko": "시내에서 큰 시위가 있어 배송이 막히는 바람에 라일라는 하루 더 기다렸어요.",
    "blank": "مظاهرة",
+   "src": "made"
+  }
+ ],
+ "w|مظلم": [
+  {
+   "text": "كان الممر المؤدي إلى غرفة الجد مظلما، فأشعل سامي المصباح.",
+   "en": "The hallway leading to grandpa's room was dark, so Sami turned on the lamp.",
+   "ko": "할아버지 방으로 가는 복도가 어두워서 사미가 등을 켰어요.",
+   "blank": "مظلما",
+   "src": "made"
+  },
+  {
+   "text": "كان ركن الكتب في السوق مظلما، فاستعملت رنا ضوء هاتفها.",
+   "en": "The book corner at the market was dark, so Rana used her phone's light.",
+   "ko": "시장의 책 코너가 어두워서 라나는 휴대폰 불빛을 썼어요.",
+   "blank": "مظلما",
    "src": "made"
   }
  ],
@@ -58725,6 +59301,22 @@
    "src": "made"
   }
  ],
+ "w|منضدة": [
+  {
+   "text": "وضعت أم سامي إبريق الشاي على المنضدة في غرفة الجلوس.",
+   "en": "Sami's mother put the teapot on the table in the living room.",
+   "ko": "사미의 어머니는 거실 탁자 위에 찻주전자를 놓았어요.",
+   "blank": "المنضدة",
+   "src": "made"
+  },
+  {
+   "text": "عرض البائع الأساور على منضدة خشبية صغيرة.",
+   "en": "The seller displayed the bracelets on a small wooden table.",
+   "ko": "상인은 작은 나무 탁자 위에 팔찌를 진열했어요.",
+   "blank": "منضدة",
+   "src": "made"
+  }
+ ],
  "w|منطق": [
   {
    "text": "لا أجد منطق في هذا القرار.",
@@ -59947,6 +60539,22 @@
    "en": "This shirt really suited my taste.",
    "ko": "이 셔츠는 내 취향에 정말 잘 맞았어.",
    "blank": "ناسب"
+  }
+ ],
+ "w|ناشد": [
+  {
+   "text": "ناشد الجد أبناءه أن يجتمعوا في بيته كل عيد.",
+   "en": "Grandpa urged his children to gather at his house every holiday.",
+   "ko": "할아버지는 자식들에게 명절마다 자기 집에 모이라고 간곡히 부탁했어요.",
+   "blank": "ناشد",
+   "src": "made"
+  },
+  {
+   "text": "ناشد منظمو السوق الزوار أن يحافظوا على نظافة المكان.",
+   "en": "The market organizers appealed to visitors to keep the place clean.",
+   "ko": "시장 운영진은 방문객들에게 장소를 깨끗이 써 달라고 호소했어요.",
+   "blank": "ناشد",
+   "src": "made"
   }
  ],
  "w|ناصر": [
@@ -63095,6 +63703,22 @@
    "src": "made"
   }
  ],
+ "w|وازن": [
+  {
+   "text": "وازن سامي بين الراحة ومساعدة أمه في أعمال البيت.",
+   "en": "Sami balanced resting with helping his mother with the housework.",
+   "ko": "사미는 쉬는 것과 어머니의 집안일을 돕는 것 사이에서 균형을 잡았어요.",
+   "blank": "وازن",
+   "src": "made"
+  },
+  {
+   "text": "وازنت رنا بين جمال الكرسي وحالته السيئة قبل أن تقرر.",
+   "en": "Rana weighed the chair's beauty against its poor condition before deciding.",
+   "ko": "라나는 결정하기 전에 의자의 아름다움과 나쁜 상태를 저울질했어요.",
+   "blank": "وازنت",
+   "src": "made"
+  }
+ ],
  "w|واسع": [
   {
    "text": "هذا الشارع واسع جدا.",
@@ -63209,6 +63833,22 @@
    "en": "He stayed standing for a long time.",
    "ko": "오랫동안 서 있었어.",
    "blank": "واقف"
+  }
+ ],
+ "w|واكب": [
+  {
+   "text": "يحاول سامي أن يواكب أحاديث أبناء أخيه عن الألعاب الجديدة.",
+   "en": "Sami tries to keep up with his nephews' talk about the new games.",
+   "ko": "사미는 새 게임에 관한 조카들의 이야기를 따라가려고 애써요.",
+   "blank": "يواكب",
+   "src": "made"
+  },
+  {
+   "text": "صار باعة السوق يواكبون موضة الملابس القديمة التي يحبها الشباب.",
+   "en": "The market sellers have started keeping up with the vintage clothing trend young people love.",
+   "ko": "시장 상인들은 젊은이들이 좋아하는 빈티지 옷 유행을 따라가기 시작했어요.",
+   "blank": "يواكبون",
+   "src": "made"
   }
  ],
  "w|والد": [

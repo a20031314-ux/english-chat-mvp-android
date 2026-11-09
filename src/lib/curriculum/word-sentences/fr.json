@@ -539,6 +539,22 @@
    "blank": "acheter"
   }
  ],
+ "w|acheteur": [
+  {
+   "text": "Le premier acheteur de la maison l'avait laissée à l'abandon, et Hugo répare tout.",
+   "en": "The house's first buyer had let it go to ruin, and Hugo is fixing everything.",
+   "ko": "그 집의 첫 구매자가 방치해 둔 탓에 위고가 전부 고치고 있어요.",
+   "blank": "acheteur",
+   "src": "made"
+  },
+  {
+   "text": "Léa négocie le contrat avec un acheteur d'une grande chaîne de magasins.",
+   "en": "Léa negotiates the contract with a buyer from a big store chain.",
+   "ko": "레아는 대형 체인점 구매 담당자와 계약을 협상해요.",
+   "blank": "acheteur",
+   "src": "made"
+  }
+ ],
  "w|achever": [
   {
    "text": "Louis espère achever la cuisine avant l'hiver.",
@@ -2219,6 +2235,22 @@
    "en": "I met a childhood friend yesterday.",
    "ko": "어제 어린 시절 친구를 만났어.",
    "blank": "ami"
+  }
+ ],
+ "w|amical": [
+  {
+   "text": "Le maçon d'Hugo est très amical et partage son café chaque matin.",
+   "en": "Hugo's builder is very friendly and shares his coffee every morning.",
+   "ko": "위고네 미장이는 아주 다정해서 아침마다 커피를 나눠 마셔요.",
+   "blank": "amical",
+   "src": "made"
+  },
+  {
+   "text": "Léa garde un ton amical même quand un client se montre impatient.",
+   "en": "Léa keeps a friendly tone even when a client gets impatient.",
+   "ko": "고객이 조급하게 굴어도 레아는 다정한 말투를 유지해요.",
+   "blank": "amical",
+   "src": "made"
   }
  ],
  "w|amie": [
@@ -5447,6 +5479,22 @@
    "blank": "balancer"
   }
  ],
+ "w|balcon": [
+  {
+   "text": "Hugo a remplacé la rambarde rouillée du balcon.",
+   "en": "Hugo replaced the rusty railing on the balcony.",
+   "ko": "위고는 발코니의 녹슨 난간을 바꿨어요.",
+   "blank": "balcon",
+   "src": "made"
+  },
+  {
+   "text": "Le bureau de Léa a un petit balcon où les collègues prennent leur café.",
+   "en": "Léa's office has a small balcony where colleagues have their coffee.",
+   "ko": "레아의 사무실에는 동료들이 커피를 마시는 작은 발코니가 있어요.",
+   "blank": "balcon",
+   "src": "made"
+  }
+ ],
  "w|baleine": [
   {
    "text": "Paul a une affiche de baleine accrochée au-dessus de son lit.",
@@ -5553,6 +5601,22 @@
    "blank": "banc"
   }
  ],
+ "w|bancaire": [
+  {
+   "text": "Thomas a oublié sa carte bancaire, alors il paie son café au refuge en liquide.",
+   "en": "Thomas forgot his bank card, so he pays for his coffee at the shelter in cash.",
+   "ko": "토마는 은행 카드를 잊어서 산장 커피값을 현금으로 내요.",
+   "blank": "bancaire",
+   "src": "made"
+  },
+  {
+   "text": "Chloé a perdu le papier, alors elle demande à sa voisine les coordonnées bancaires du syndic.",
+   "en": "Chloé lost the note, so she asks her neighbour for the building manager's bank details.",
+   "ko": "클로에는 쪽지를 잃어버려서 이웃에게 관리 회사 계좌 정보를 물어봐요.",
+   "blank": "bancaires",
+   "src": "made"
+  }
+ ],
  "w|bande": [
   {
    "text": "La bande de copains se retrouve ce soir.",
@@ -5579,6 +5643,22 @@
    "en": "That guy is a real bandit.",
    "ko": "저 사람 완전 깡패야.",
    "blank": "bandit"
+  }
+ ],
+ "w|banlieue": [
+  {
+   "text": "Hugo a quitté la banlieue pour retaper une maison à la campagne.",
+   "en": "Hugo left the suburbs to do up a house in the countryside.",
+   "ko": "위고는 교외를 떠나 시골집을 고치러 왔어요.",
+   "blank": "banlieue",
+   "src": "made"
+  },
+  {
+   "text": "Chaque matin, Léa prend le RER depuis la banlieue.",
+   "en": "Every morning, Léa takes the RER in from the suburbs.",
+   "ko": "매일 아침 레아는 교외에서 RER을 타고 와요.",
+   "blank": "banlieue",
+   "src": "made"
   }
  ],
  "w|bannir": [
@@ -6115,6 +6195,22 @@
    "blank": "bébé"
   }
  ],
+ "w|bec": [
+  {
+   "text": "Un héron attrape un poisson avec son long bec sous les yeux de Thomas.",
+   "en": "A heron catches a fish with its long beak right in front of Thomas.",
+   "ko": "토마가 보는 앞에서 왜가리가 긴 부리로 물고기를 잡아요.",
+   "blank": "bec",
+   "src": "made"
+  },
+  {
+   "text": "Le perroquet de la voisine a pincé le doigt de Chloé avec son bec.",
+   "en": "The neighbour's parrot nipped Chloé's finger with its beak.",
+   "ko": "이웃집 앵무새가 부리로 클로에의 손가락을 콕 물었어요.",
+   "blank": "bec",
+   "src": "made"
+  }
+ ],
  "w|beignet": [
   {
    "text": "Pendant le carnaval, Antoine fait frire des centaines de beignets.",
@@ -6263,6 +6359,22 @@
    "en": "Don't say anything silly in front of your parents.",
    "ko": "부모님 앞에서 바보 같은 말 하지 마.",
    "blank": "bêtise"
+  }
+ ],
+ "w|béton": [
+  {
+   "text": "Hugo coule une dalle de béton dans la cave.",
+   "en": "Hugo pours a concrete slab in the cellar.",
+   "ko": "위고는 지하실에 콘크리트 바닥을 부어요.",
+   "blank": "béton",
+   "src": "made"
+  },
+  {
+   "text": "Le bureau de Léa se trouve dans un immeuble en béton près du périphérique.",
+   "en": "Léa's office is in a concrete building near the ring road.",
+   "ko": "레아의 사무실은 순환 도로 근처 콘크리트 건물에 있어요.",
+   "blank": "béton",
+   "src": "made"
   }
  ],
  "w|beurre": [
@@ -7451,6 +7563,22 @@
    "src": "made"
   }
  ],
+ "w|brancher": [
+  {
+   "text": "L'électricien conseille à Hugo de ne rien brancher avant d'avoir changé les prises.",
+   "en": "The electrician advises Hugo not to plug anything in before changing the sockets.",
+   "ko": "전기 기사는 콘센트를 바꾸기 전엔 아무것도 꽂지 말라고 위고에게 말해요.",
+   "blank": "brancher",
+   "src": "made"
+  },
+  {
+   "text": "Léa cherche une prise pour brancher son ordinateur avant la présentation.",
+   "en": "Léa looks for a socket to plug in her laptop before the presentation.",
+   "ko": "레아는 발표 전에 노트북을 꽂을 콘센트를 찾아요.",
+   "blank": "brancher",
+   "src": "made"
+  }
+ ],
  "w|braquage": [
   {
    "text": "La pièce raconte un braquage raté, et Thomas joue le chauffeur maladroit.",
@@ -7831,6 +7959,22 @@
    "en": "We have to stick to the budget for this project.",
    "ko": "이 프로젝트 예산을 지켜야 해.",
    "blank": "budget"
+  }
+ ],
+ "w|buisson": [
+  {
+   "text": "Un lièvre sort d'un buisson juste devant Thomas.",
+   "en": "A hare bursts out of a bush right in front of Thomas.",
+   "ko": "토마 바로 앞에서 산토끼가 덤불 밖으로 튀어나와요.",
+   "blank": "buisson",
+   "src": "made"
+  },
+  {
+   "text": "Le chat de Chloé se cache dans le buisson du voisin.",
+   "en": "Chloé's cat hides in the neighbour's bush.",
+   "ko": "클로에의 고양이가 이웃집 덤불에 숨어요.",
+   "blank": "buisson",
+   "src": "made"
   }
  ],
  "w|bulle": [
@@ -9161,6 +9305,22 @@
    "blank": "cave"
   }
  ],
+ "w|caverne": [
+  {
+   "text": "Thomas s'abrite de la pluie dans une petite caverne au-dessus de la rivière.",
+   "en": "Thomas shelters from the rain in a small cave above the river.",
+   "ko": "토마는 강 위쪽 작은 동굴에서 비를 피해요.",
+   "blank": "caverne",
+   "src": "made"
+  },
+  {
+   "text": "Le garage du voisin de Chloé ressemble à une caverne pleine de trésors.",
+   "en": "Chloé's neighbour's garage looks like a cave full of treasures.",
+   "ko": "클로에 이웃의 차고는 보물이 가득한 동굴 같아요.",
+   "blank": "caverne",
+   "src": "made"
+  }
+ ],
  "w|ce": [
   {
    "text": "Ce livre est intéressant.",
@@ -9419,6 +9579,22 @@
    "blank": "centaine"
   }
  ],
+ "w|centime": [
+  {
+   "text": "Le permis de pêche de Thomas coûte quinze euros et cinquante centimes.",
+   "en": "Thomas's fishing permit costs fifteen euros fifty cents.",
+   "ko": "토마의 낚시 허가증은 십오 유로 오십 센트예요.",
+   "blank": "centimes",
+   "src": "made"
+  },
+  {
+   "text": "Chloé et ses voisins comptent chaque centime de la cagnotte pour repeindre le hall.",
+   "en": "Chloé and her neighbours count every cent of the kitty to repaint the hall.",
+   "ko": "클로에와 이웃들은 현관을 다시 칠하려고 모은 돈을 한 푼까지 세요.",
+   "blank": "centime",
+   "src": "made"
+  }
+ ],
  "w|centimètre": [
   {
    "text": "J'ai grandi d'un centimètre cet été.",
@@ -9545,6 +9721,22 @@
    "en": "They organized a beautiful ceremony.",
    "ko": "그들은 아름다운 행사를 준비했어.",
    "blank": "cérémonie"
+  }
+ ],
+ "w|cerf": [
+  {
+   "text": "À l'aube, Thomas surprend un cerf qui boit à la rivière.",
+   "en": "At dawn, Thomas comes upon a stag drinking at the river.",
+   "ko": "새벽에 토마는 강물을 마시는 사슴과 마주쳐요.",
+   "blank": "cerf",
+   "src": "made"
+  },
+  {
+   "text": "Le voisin de Chloé a accroché une tête de cerf en bois au-dessus de sa porte.",
+   "en": "Chloé's neighbour has hung a wooden stag's head above his door.",
+   "ko": "클로에의 이웃은 문 위에 나무로 된 사슴 머리를 걸어 놨어요.",
+   "blank": "cerf",
+   "src": "made"
   }
  ],
  "w|cerise": [
@@ -11589,6 +11781,22 @@
    "blank": "cloche"
   }
  ],
+ "w|clone": [
+  {
+   "text": "Thomas plaisante en disant que tous les sapins de la forêt sont des clones.",
+   "en": "Thomas jokes that all the fir trees in the forest are clones.",
+   "ko": "토마는 숲의 전나무들이 다 복제품 같다고 농담해요.",
+   "blank": "clones",
+   "src": "made"
+  },
+  {
+   "text": "Chloé dit que sa voisine est le clone de sa propre mère.",
+   "en": "Chloé says her neighbour is a clone of her own mother.",
+   "ko": "클로에는 이웃이 자기 엄마랑 판박이라고 말해요.",
+   "blank": "clone",
+   "src": "made"
+  }
+ ],
  "w|clore": [
   {
    "text": "La maîtresse veut clore la discussion pour que Paul et ses camarades passent aux maths.",
@@ -11602,6 +11810,22 @@
    "en": "The cheesemonger insists on closing the sale with a little tasting for Émilie.",
    "ko": "치즈 가게 주인은 꼭 에밀리에게 시식을 권하며 거래를 마무리해요.",
    "blank": "clore",
+   "src": "made"
+  }
+ ],
+ "w|clôture": [
+  {
+   "text": "Hugo repeint la clôture du jardin en vert foncé.",
+   "en": "Hugo repaints the garden fence dark green.",
+   "ko": "위고는 정원 울타리를 짙은 초록색으로 다시 칠해요.",
+   "blank": "clôture",
+   "src": "made"
+  },
+  {
+   "text": "Léa prépare la clôture des comptes de fin d'année.",
+   "en": "Léa is preparing the year-end closing of the accounts.",
+   "ko": "레아는 연말 결산을 준비해요.",
+   "blank": "clôture",
    "src": "made"
   }
  ],
@@ -12573,6 +12797,38 @@
    "blank": "compassion"
   }
  ],
+ "w|compatible": [
+  {
+   "text": "Hugo vérifie que les nouvelles ampoules sont compatibles avec les vieilles lampes.",
+   "en": "Hugo checks that the new bulbs are compatible with the old lamps.",
+   "ko": "위고는 새 전구가 옛 램프와 맞는지 확인해요.",
+   "blank": "compatibles",
+   "src": "made"
+  },
+  {
+   "text": "Le nouveau logiciel de Léa n'est pas compatible avec la vieille imprimante.",
+   "en": "Léa's new software isn't compatible with the old printer.",
+   "ko": "레아의 새 프로그램은 오래된 프린터와 호환되지 않아요.",
+   "blank": "compatible",
+   "src": "made"
+  }
+ ],
+ "w|compenser": [
+  {
+   "text": "Hugo pose un isolant épais pour compenser les fenêtres trop fines.",
+   "en": "Hugo puts in thick insulation to make up for the thin windows.",
+   "ko": "위고는 얇은 창문을 보완하려고 두꺼운 단열재를 깔아요.",
+   "blank": "compenser",
+   "src": "made"
+  },
+  {
+   "text": "Léa reste tard ce soir pour compenser son rendez-vous chez le dentiste.",
+   "en": "Léa is staying late tonight to make up for her dentist appointment.",
+   "ko": "레아는 치과 예약으로 비운 시간을 메우려고 오늘 늦게까지 남아요.",
+   "blank": "compenser",
+   "src": "made"
+  }
+ ],
  "w|compétence": [
   {
    "text": "Il a vraiment développé sa compétence en dessin.",
@@ -12774,6 +13030,22 @@
    "en": "Claire has to enter the locker code before getting changed.",
    "ko": "클레르는 옷을 갈아입기 전에 사물함 비밀번호를 눌러야 해요.",
    "blank": "composer",
+   "src": "made"
+  }
+ ],
+ "w|compréhensible": [
+  {
+   "text": "Avec toute la pluie de ce mois-ci, Hugo trouve le retard du chantier compréhensible.",
+   "en": "With all the rain this month, Hugo finds the building delay understandable.",
+   "ko": "이번 달 내내 비가 와서 위고는 공사가 늦어진 게 이해가 돼요.",
+   "blank": "compréhensible",
+   "src": "made"
+  },
+  {
+   "text": "Léa réécrit le rapport pour qu'il soit compréhensible par tout le monde.",
+   "en": "Léa rewrites the report so that everyone can understand it.",
+   "ko": "레아는 누구나 이해할 수 있게 보고서를 다시 써요.",
+   "blank": "compréhensible",
    "src": "made"
   }
  ],
@@ -13394,6 +13666,22 @@
    "en": "Émilie mixed up the two terminals and had to run.",
    "ko": "에밀리는 두 터미널을 헷갈려서 뛰어야 했어요.",
    "blank": "confondu",
+   "src": "made"
+  }
+ ],
+ "w|confort": [
+  {
+   "text": "Hugo sacrifie un peu de confort pour garder le charme de l'ancien.",
+   "en": "Hugo sacrifies a bit of comfort to keep the old-fashioned charm.",
+   "ko": "위고는 옛 멋을 살리려고 편리함을 조금 포기해요.",
+   "blank": "confort",
+   "src": "made"
+  },
+  {
+   "text": "Les nouvelles chaises ont amélioré le confort de toute l'équipe de Léa.",
+   "en": "The new chairs have improved the comfort of Léa's whole team.",
+   "ko": "새 의자 덕분에 레아네 팀 모두가 편해졌어요.",
+   "blank": "confort",
    "src": "made"
   }
  ],
@@ -14451,6 +14739,22 @@
    "src": "made"
   }
  ],
+ "w|corbeau": [
+  {
+   "text": "Un corbeau croasse au-dessus de Thomas pendant qu'il pêche.",
+   "en": "A crow caws above Thomas while he fishes.",
+   "ko": "토마가 낚시하는 동안 까마귀가 머리 위에서 울어요.",
+   "blank": "corbeau",
+   "src": "made"
+  },
+  {
+   "text": "Un corbeau vole les croquettes du chat sur le balcon de Chloé.",
+   "en": "A crow steals the cat's kibble from Chloé's balcony.",
+   "ko": "까마귀 한 마리가 클로에네 발코니에서 고양이 사료를 훔쳐 가요.",
+   "blank": "corbeau",
+   "src": "made"
+  }
+ ],
  "w|corde": [
   {
    "text": "Tire sur la corde pour ouvrir la porte.",
@@ -15105,6 +15409,22 @@
    "blank": "cousin"
   }
  ],
+ "w|coussin": [
+  {
+   "text": "Le soir, Hugo s'effondre sur un coussin au milieu des cartons.",
+   "en": "In the evening, Hugo collapses onto a cushion among the boxes.",
+   "ko": "저녁이면 위고는 상자들 사이 쿠션 위에 털썩 쓰러져요.",
+   "blank": "coussin",
+   "src": "made"
+  },
+  {
+   "text": "Léa a apporté un coussin pour soulager son dos au bureau.",
+   "en": "Léa brought a cushion to ease her back at the office.",
+   "ko": "레아는 허리를 편하게 하려고 사무실에 쿠션을 가져왔어요.",
+   "blank": "coussin",
+   "src": "made"
+  }
+ ],
  "w|couteau": [
   {
    "text": "Attention, ce couteau coupe très bien.",
@@ -15755,6 +16075,22 @@
    "src": "made"
   }
  ],
+ "w|crue": [
+  {
+   "text": "Au printemps, la crue de la rivière oblige Thomas à déplacer sa barque.",
+   "en": "In spring, the river's flooding forces Thomas to move his boat.",
+   "ko": "봄이 되면 강물이 불어나 토마는 배를 옮겨야 해요.",
+   "blank": "crue",
+   "src": "made"
+  },
+  {
+   "text": "Pendant la crue, les voisins de Chloé ont monté leurs meubles à l'étage.",
+   "en": "During the flood, Chloé's neighbours carried their furniture upstairs.",
+   "ko": "홍수 때 클로에의 이웃들은 가구를 위층으로 옮겼어요.",
+   "blank": "crue",
+   "src": "made"
+  }
+ ],
  "w|cruel": [
   {
    "text": "C’est une décision vraiment cruelle.",
@@ -16039,6 +16375,22 @@
    "blank": "curiosité"
   }
  ],
+ "w|cycle": [
+  {
+   "text": "Thomas observe le cycle des saisons à travers le même vieux chêne.",
+   "en": "Thomas watches the cycle of the seasons through the same old oak.",
+   "ko": "토마는 같은 늙은 참나무로 계절의 순환을 지켜봐요.",
+   "blank": "cycle",
+   "src": "made"
+  },
+  {
+   "text": "Chloé a un cycle de sommeil différent de ses voisins, qui se couchent très tôt.",
+   "en": "Chloé has a different sleep cycle from her neighbours, who go to bed very early.",
+   "ko": "클로에는 아주 일찍 자는 이웃들과 수면 주기가 달라요.",
+   "blank": "cycle",
+   "src": "made"
+  }
+ ],
  "w|d'accord": [
   {
    "text": "D’accord, je viens avec toi.",
@@ -16178,6 +16530,22 @@
    "en": "Émilie forgot to date the customs form.",
    "ko": "에밀리는 세관 신고서에 날짜를 적는 걸 잊었어요.",
    "blank": "dater",
+   "src": "made"
+  }
+ ],
+ "w|dauphin": [
+  {
+   "text": "Au bout de la rivière, Thomas a eu la chance de voir un dauphin dans la baie.",
+   "en": "At the end of the river, Thomas was lucky enough to see a dolphin in the bay.",
+   "ko": "강 끝에서 토마는 운 좋게도 만에서 돌고래를 봤어요.",
+   "blank": "dauphin",
+   "src": "made"
+  },
+  {
+   "text": "Le fils du voisin offre à Chloé un dessin de dauphin.",
+   "en": "The neighbour's son gives Chloé a drawing of a dolphin.",
+   "ko": "이웃집 아들이 클로에에게 돌고래 그림을 줘요.",
+   "blank": "dauphin",
    "src": "made"
   }
  ],
@@ -16634,6 +17002,38 @@
    "en": "For Christmas, Léa changes all the decorations in the dining room.",
    "ko": "크리스마스에 레아는 식당 장식을 싹 바꿔요.",
    "blank": "décor",
+   "src": "made"
+  }
+ ],
+ "w|décoration": [
+  {
+   "text": "Hugo garde la décoration simple pour laisser respirer les vieilles pierres.",
+   "en": "Hugo keeps the decor simple to let the old stones breathe.",
+   "ko": "위고는 오래된 돌벽이 돋보이게 장식을 단순하게 해요.",
+   "blank": "décoration",
+   "src": "made"
+  },
+  {
+   "text": "Léa s'occupe de la décoration du bureau pour Noël.",
+   "en": "Léa is in charge of decorating the office for Christmas.",
+   "ko": "레아는 크리스마스 사무실 장식을 맡았어요.",
+   "blank": "décoration",
+   "src": "made"
+  }
+ ],
+ "w|décorer": [
+  {
+   "text": "Les enfants d'Hugo veulent décorer leur chambre avec des étoiles au plafond.",
+   "en": "Hugo's children want to decorate their room with stars on the ceiling.",
+   "ko": "위고의 아이들은 방 천장을 별로 꾸미고 싶어 해요.",
+   "blank": "décorer",
+   "src": "made"
+  },
+  {
+   "text": "Pour le départ du directeur, Léa et ses collègues vont décorer la salle de réunion.",
+   "en": "For the director's leaving do, Léa and her colleagues are going to decorate the meeting room.",
+   "ko": "부장의 송별회를 위해 레아와 동료들이 회의실을 꾸밀 거예요.",
+   "blank": "décorer",
    "src": "made"
   }
  ],
@@ -19437,6 +19837,22 @@
    "src": "made"
   }
  ],
+ "w|distributeur": [
+  {
+   "text": "Hugo achète une bouteille d'eau au distributeur du magasin de bricolage.",
+   "en": "Hugo buys a bottle of water from the vending machine at the DIY store.",
+   "ko": "위고는 철물점 자판기에서 물 한 병을 사요.",
+   "blank": "distributeur",
+   "src": "made"
+  },
+  {
+   "text": "Le distributeur du deuxième étage a encore avalé la monnaie de Léa.",
+   "en": "The vending machine on the second floor has swallowed Léa's change again.",
+   "ko": "이층 자판기가 또 레아의 동전을 먹었어요.",
+   "blank": "distributeur",
+   "src": "made"
+  }
+ ],
  "w|distribution": [
   {
    "text": "Nicolas s'occupe de la distribution du courrier quand l'assistante est absente.",
@@ -20877,6 +21293,22 @@
    "src": "made"
   }
  ],
+ "w|écurie": [
+  {
+   "text": "Après la balade à cheval, Thomas ramène les bêtes à l'écurie.",
+   "en": "After the horse ride, Thomas brings the animals back to the stable.",
+   "ko": "승마가 끝나고 토마는 말들을 마구간으로 데려가요.",
+   "blank": "écurie",
+   "src": "made"
+  },
+  {
+   "text": "La voisine de Chloé travaille dans une écurie et rentre toujours en bottes.",
+   "en": "Chloé's neighbour works in a stable and always comes home in boots.",
+   "ko": "클로에의 이웃은 마구간에서 일해서 늘 장화를 신고 돌아와요.",
+   "blank": "écurie",
+   "src": "made"
+  }
+ ],
  "w|éditeur": [
   {
    "text": "Le client de Louis est éditeur et veut une bibliothèque dans chaque pièce.",
@@ -22281,6 +22713,22 @@
    "blank": "engager"
   }
  ],
+ "w|engendrer": [
+  {
+   "text": "Une simple fuite peut engendrer des moisissures, alors Hugo vérifie chaque tuyau.",
+   "en": "A simple leak can cause mould, so Hugo checks every pipe.",
+   "ko": "작은 누수도 곰팡이를 일으킬 수 있어서 위고는 배관을 하나하나 확인해요.",
+   "blank": "engendrer",
+   "src": "made"
+  },
+  {
+   "text": "Selon Léa, le nouveau logiciel risque d'engendrer plus de travail qu'il n'en fait gagner.",
+   "en": "According to Léa, the new software risks creating more work than it saves.",
+   "ko": "레아는 새 프로그램이 아끼는 일보다 만드는 일이 더 많을 거라고 봐요.",
+   "blank": "engendrer",
+   "src": "made"
+  }
+ ],
  "w|engin": [
   {
    "text": "Dans la salle des transports, Lucas montre un vieil engin à vapeur.",
@@ -23089,6 +23537,22 @@
    "blank": "épisode"
   }
  ],
+ "w|éponge": [
+  {
+   "text": "Hugo nettoie les carreaux de la cuisine avec une vieille éponge.",
+   "en": "Hugo cleans the kitchen tiles with an old sponge.",
+   "ko": "위고는 낡은 스펀지로 부엌 타일을 닦아요.",
+   "blank": "éponge",
+   "src": "made"
+  },
+  {
+   "text": "Léa passe une éponge sur le tableau blanc après la réunion.",
+   "en": "Léa wipes the whiteboard with a sponge after the meeting.",
+   "ko": "레아는 회의 후 스펀지로 화이트보드를 닦아요.",
+   "blank": "éponge",
+   "src": "made"
+  }
+ ],
  "w|époque": [
   {
    "text": "Cette époque était pleine de changements.",
@@ -23830,6 +24294,38 @@
    "en": "Inès reads an article on ethics in sport during her break.",
    "ko": "이네스는 쉬는 시간에 스포츠 윤리에 관한 기사를 읽어요.",
    "blank": "éthique",
+   "src": "made"
+  }
+ ],
+ "w|étincelle": [
+  {
+   "text": "Thomas éteint le feu de camp avec soin pour qu'aucune étincelle ne s'envole.",
+   "en": "Thomas puts out the campfire carefully so that no spark flies off.",
+   "ko": "토마는 불티가 날리지 않게 모닥불을 조심스럽게 꺼요.",
+   "blank": "étincelle",
+   "src": "made"
+  },
+  {
+   "text": "Entre Chloé et son nouveau voisin, il y a eu une étincelle dès le premier jour.",
+   "en": "Between Chloé and her new neighbour, there was a spark from day one.",
+   "ko": "클로에와 새 이웃 사이에는 첫날부터 불꽃이 튀었어요.",
+   "blank": "étincelle",
+   "src": "made"
+  }
+ ],
+ "w|étiquette": [
+  {
+   "text": "Sur chaque bocal de champignons, Thomas colle une étiquette avec le lieu de cueillette.",
+   "en": "On each jar of mushrooms, Thomas sticks a label with where they were picked.",
+   "ko": "토마는 버섯 병마다 딴 장소를 적은 라벨을 붙여요.",
+   "blank": "étiquette",
+   "src": "made"
+  },
+  {
+   "text": "Chloé trouve une étiquette avec son nom sur le colis que le voisin a gardé pour elle.",
+   "en": "Chloé finds a label with her name on the parcel the neighbour kept for her.",
+   "ko": "클로에는 이웃이 맡아 준 소포에서 자기 이름이 적힌 라벨을 봐요.",
+   "blank": "étiquette",
    "src": "made"
   }
  ],
@@ -25573,6 +26069,22 @@
    "blank": "fatigué"
   }
  ],
+ "w|faucon": [
+  {
+   "text": "Thomas suit des yeux un faucon qui tourne au-dessus de la clairière.",
+   "en": "Thomas watches a falcon circling above the clearing.",
+   "ko": "토마는 숲속 빈터 위를 맴도는 매를 눈으로 좇아요.",
+   "blank": "faucon",
+   "src": "made"
+  },
+  {
+   "text": "Le voisin de Chloé dresse un faucon dans son jardin.",
+   "en": "Chloé's neighbour is training a falcon in his garden.",
+   "ko": "클로에의 이웃은 정원에서 매를 길들여요.",
+   "blank": "faucon",
+   "src": "made"
+  }
+ ],
  "w|faufiler": [
   {
    "text": "En retard pour la réunion, Thomas se faufile discrètement jusqu'à sa chaise.",
@@ -26064,6 +26576,22 @@
    "en": "Sarah says laughing that she has no maternal streak, but she adores her friends' children.",
    "ko": "사라는 웃으며 자기는 모성애 체질이 아니라고 하지만 친구들 아이들은 무척 예뻐해요.",
    "blank": "fibre",
+   "src": "made"
+  }
+ ],
+ "w|ficelle": [
+  {
+   "text": "Hugo tend une ficelle entre deux clous pour tracer une ligne droite.",
+   "en": "Hugo stretches a string between two nails to mark a straight line.",
+   "ko": "위고는 곧은 선을 그으려고 못 두 개 사이에 끈을 매요.",
+   "blank": "ficelle",
+   "src": "made"
+  },
+  {
+   "text": "Léa attache les dossiers avec de la ficelle avant de les envoyer aux archives.",
+   "en": "Léa ties the files with string before sending them to the archives.",
+   "ko": "레아는 서류철을 끈으로 묶어 기록 보관소로 보내요.",
+   "blank": "ficelle",
    "src": "made"
   }
  ],
@@ -26599,6 +27127,38 @@
    "blank": "flic"
   }
  ],
+ "w|flirter": [
+  {
+   "text": "Deux canards semblent flirter sur l'eau, et Thomas les prend en photo.",
+   "en": "Two ducks seem to be flirting on the water, and Thomas takes a photo of them.",
+   "ko": "오리 두 마리가 물 위에서 서로 꼬시는 것 같아서 토마가 사진을 찍어요.",
+   "blank": "flirter",
+   "src": "made"
+  },
+  {
+   "text": "Chloé voit le voisin du troisième flirter avec la fleuriste en bas de l'immeuble.",
+   "en": "Chloé sees the third-floor neighbour flirting with the florist downstairs.",
+   "ko": "클로에는 사층 이웃이 아파트 아래 꽃집 주인에게 작업 거는 걸 봐요.",
+   "blank": "flirter",
+   "src": "made"
+  }
+ ],
+ "w|flot": [
+  {
+   "text": "Après l'orage, Thomas regarde le flot boueux emporter des branches.",
+   "en": "After the storm, Thomas watches the muddy torrent carry branches away.",
+   "ko": "폭풍이 지나간 뒤 토마는 흙탕물 물살이 나뭇가지를 쓸어 가는 걸 봐요.",
+   "blank": "flot",
+   "src": "made"
+  },
+  {
+   "text": "Chaque matin, un flot d'enfants passe sous les fenêtres de Chloé.",
+   "en": "Every morning, a stream of children passes under Chloé's windows.",
+   "ko": "매일 아침 아이들이 줄지어 클로에네 창문 아래를 지나가요.",
+   "blank": "flot",
+   "src": "made"
+  }
+ ],
  "w|flotte": [
   {
    "text": "La flotte de navires approche du port.",
@@ -26642,6 +27202,22 @@
    "en": "Because of the fog, Camille can only see a blurry figure at the end of the path.",
    "ko": "안개 때문에 카미유에게는 길 끝의 흐릿한 형체만 보여요.",
    "blank": "floue",
+   "src": "made"
+  }
+ ],
+ "w|fluide": [
+  {
+   "text": "Thomas met un peu de fluide dans son briquet avant de partir camper.",
+   "en": "Thomas puts a little fluid in his lighter before going camping.",
+   "ko": "토마는 캠핑 가기 전에 라이터에 기름을 조금 넣어요.",
+   "blank": "fluide",
+   "src": "made"
+  },
+  {
+   "text": "Le voisin de Chloé a renversé du fluide de frein sur le parking.",
+   "en": "Chloé's neighbour spilled brake fluid in the car park.",
+   "ko": "클로에의 이웃이 주차장에 브레이크액을 쏟았어요.",
+   "blank": "fluide",
    "src": "made"
   }
  ],
@@ -27417,6 +27993,22 @@
    "src": "made"
   }
  ],
+ "w|frangin": [
+  {
+   "text": "Le frangin d'Hugo vient l'aider à arracher la vieille moquette.",
+   "en": "Hugo's brother comes to help him rip up the old carpet.",
+   "ko": "위고의 형이 낡은 카펫 뜯는 걸 도우러 와요.",
+   "blank": "frangin",
+   "src": "made"
+  },
+  {
+   "text": "Léa montre à ses collègues une photo de son frangin en costume de mariage.",
+   "en": "Léa shows her colleagues a photo of her brother in his wedding suit.",
+   "ko": "레아는 동료들에게 결혼식 정장을 입은 남동생 사진을 보여 줘요.",
+   "blank": "frangin",
+   "src": "made"
+  }
+ ],
  "w|frapper": [
   {
    "text": "N’oublie pas de frapper avant d’entrer.",
@@ -28181,6 +28773,22 @@
    "blank": "gars"
   }
  ],
+ "w|gaspiller": [
+  {
+   "text": "Hugo refuse de gaspiller de l'argent et récupère les vieilles tuiles du toit.",
+   "en": "Hugo refuses to waste money and salvages the old roof tiles.",
+   "ko": "위고는 돈을 낭비하기 싫어서 지붕의 옛 기와를 다시 써요.",
+   "blank": "gaspiller",
+   "src": "made"
+  },
+  {
+   "text": "Léa déteste gaspiller du papier et imprime toujours en recto verso.",
+   "en": "Léa hates wasting paper and always prints double-sided.",
+   "ko": "레아는 종이 낭비를 싫어해서 늘 양면으로 인쇄해요.",
+   "blank": "gaspiller",
+   "src": "made"
+  }
+ ],
  "w|gâté": [
   {
    "text": "Antoine jette les fruits gâtés au compost du camping.",
@@ -28667,6 +29275,22 @@
    "src": "made"
   }
  ],
+ "w|gilet": [
+  {
+   "text": "Thomas met toujours un gilet de sauvetage avant de monter dans le canoë.",
+   "en": "Thomas always puts on a life jacket before getting into the canoe.",
+   "ko": "토마는 카누에 타기 전에 늘 구명조끼를 입어요.",
+   "blank": "gilet",
+   "src": "made"
+  },
+  {
+   "text": "La voisine du dessous tricote un gilet pour le bébé de Chloé.",
+   "en": "The downstairs neighbour is knitting a cardigan for Chloé's baby.",
+   "ko": "아래층 이웃이 클로에의 아기에게 줄 카디건을 떠요.",
+   "blank": "gilet",
+   "src": "made"
+  }
+ ],
  "w|glace": [
   {
    "text": "Je voudrais une glace à la vanille.",
@@ -28722,6 +29346,22 @@
    "en": "Claire follows the news on global warming on the radio.",
    "ko": "클레르는 라디오로 지구 온난화 소식을 챙겨 들어요.",
    "blank": "global",
+   "src": "made"
+  }
+ ],
+ "w|globe": [
+  {
+   "text": "Dans sa cabane, Thomas garde un vieux globe pour montrer aux enfants où va la rivière.",
+   "en": "In his cabin, Thomas keeps an old globe to show the children where the river goes.",
+   "ko": "토마는 강이 어디로 흐르는지 아이들에게 보여 주려고 오두막에 낡은 지구본을 둬요.",
+   "blank": "globe",
+   "src": "made"
+  },
+  {
+   "text": "La lampe du couloir a un globe en verre que Chloé a remplacé.",
+   "en": "The hallway lamp has a glass globe that Chloé replaced.",
+   "ko": "복도 등에는 클로에가 갈아 끼운 유리 등갓이 있어요.",
+   "blank": "globe",
    "src": "made"
   }
  ],
@@ -30129,6 +30769,22 @@
    "blank": "héritage"
   }
  ],
+ "w|hériter": [
+  {
+   "text": "Thomas a hérité de la cabane de son grand-père au bord de la forêt.",
+   "en": "Thomas inherited his grandfather's cabin at the edge of the forest.",
+   "ko": "토마는 숲 가장자리에 있는 할아버지의 오두막을 물려받았어요.",
+   "blank": "hérité",
+   "src": "made"
+  },
+  {
+   "text": "La voisine de Chloé vient d'hériter d'un piano et cherche des bras pour le monter.",
+   "en": "Chloé's neighbour has just inherited a piano and is looking for people to carry it up.",
+   "ko": "클로에의 이웃이 피아노를 물려받아서 올려 줄 사람을 찾고 있어요.",
+   "blank": "hériter",
+   "src": "made"
+  }
+ ],
  "w|héritier": [
   {
    "text": "Selon la rumeur, le nouveau collègue de Julien serait l'héritier du fondateur.",
@@ -31167,6 +31823,22 @@
    "src": "made"
   }
  ],
+ "w|immédiat": [
+  {
+   "text": "En voyant l'orage arriver, Thomas a pris la décision immédiate de quitter la rivière.",
+   "en": "Seeing the storm coming, Thomas made the immediate decision to leave the river.",
+   "ko": "폭풍이 오는 걸 보고 토마는 곧바로 강을 떠나기로 했어요.",
+   "blank": "immédiate",
+   "src": "made"
+  },
+  {
+   "text": "Chloé a appelé les pompiers et ils sont venus de façon presque immédiate.",
+   "en": "Chloé called the fire brigade and they came almost immediately.",
+   "ko": "클로에가 소방서에 전화하자 거의 곧바로 출동했어요.",
+   "blank": "immédiate",
+   "src": "made"
+  }
+ ],
  "w|immédiatement": [
   {
    "text": "Réponds immédiatement s’il te plaît.",
@@ -31631,6 +32303,22 @@
    "src": "made"
   }
  ],
+ "w|inapproprié": [
+  {
+   "text": "Hugo trouve inapproprié de mettre un lustre en cristal dans une vieille ferme.",
+   "en": "Hugo thinks a crystal chandelier would be out of place in an old farmhouse.",
+   "ko": "위고는 오래된 농가에 크리스털 샹들리에는 어울리지 않는다고 생각해요.",
+   "blank": "inapproprié",
+   "src": "made"
+  },
+  {
+   "text": "Léa a signalé aux RH un commentaire inapproprié pendant la réunion.",
+   "en": "Léa reported an inappropriate comment during the meeting to HR.",
+   "ko": "레아는 회의 중에 나온 부적절한 발언을 인사팀에 알렸어요.",
+   "blank": "inapproprié",
+   "src": "made"
+  }
+ ],
  "w|inattendu": [
   {
    "text": "Un témoignage inattendu a changé le cours du procès, raconte Antoine.",
@@ -31687,6 +32375,22 @@
    "en": "This incident surprised everyone.",
    "ko": "이 사건은 모두를 놀라게 했어.",
    "blank": "incident"
+  }
+ ],
+ "w|inciter": [
+  {
+   "text": "Les aides de la région incitent Hugo à installer des panneaux solaires.",
+   "en": "Regional grants encourage Hugo to install solar panels.",
+   "ko": "지역 보조금 덕분에 위고는 태양광 패널을 달고 싶어져요.",
+   "blank": "incitent",
+   "src": "made"
+  },
+  {
+   "text": "La nouvelle cafétéria incite Léa à déjeuner avec ses collègues.",
+   "en": "The new cafeteria encourages Léa to have lunch with her colleagues.",
+   "ko": "새 구내식당 덕분에 레아는 동료들과 점심을 먹게 돼요.",
+   "blank": "incite",
+   "src": "made"
   }
  ],
  "w|inclure": [
@@ -33675,6 +34379,22 @@
    "blank": "ivre"
   }
  ],
+ "w|ivrogne": [
+  {
+   "text": "Dans la légende que raconte Thomas, un vieil ivrogne se perd dans la forêt et rencontre un loup qui parle.",
+   "en": "In the legend Thomas tells, an old drunkard gets lost in the forest and meets a talking wolf.",
+   "ko": "토마가 들려주는 전설에서 늙은 술주정뱅이가 숲에서 길을 잃고 말하는 늑대를 만나요.",
+   "blank": "ivrogne",
+   "src": "made"
+  },
+  {
+   "text": "Un ivrogne chante sous les fenêtres et réveille Chloé et tout l'immeuble.",
+   "en": "A drunk sings under the windows and wakes up Chloé and the whole building.",
+   "ko": "술 취한 사람이 창 아래서 노래를 불러 클로에와 아파트 사람들을 다 깨워요.",
+   "blank": "ivrogne",
+   "src": "made"
+  }
+ ],
  "w|jalousie": [
   {
    "text": "Sa jalousie gâche leurs soirées.",
@@ -35163,6 +35883,22 @@
    "src": "made"
   }
  ],
+ "w|lessive": [
+  {
+   "text": "Avec la poussière du chantier, Hugo fait une lessive tous les soirs.",
+   "en": "With all the building dust, Hugo does a load of laundry every evening.",
+   "ko": "공사 먼지 때문에 위고는 매일 저녁 빨래를 해요.",
+   "blank": "lessive",
+   "src": "made"
+  },
+  {
+   "text": "Léa a oublié d'étendre sa lessive avant de partir au travail.",
+   "en": "Léa forgot to hang out her washing before leaving for work.",
+   "ko": "레아는 출근 전에 빨래 너는 걸 깜빡했어요.",
+   "blank": "lessive",
+   "src": "made"
+  }
+ ],
  "w|lettre": [
   {
    "text": "J'ai reçu une lettre de ma sœur.",
@@ -35217,6 +35953,22 @@
    "en": "He cut his lip while eating.",
    "ko": "그는 먹다가 입술을 베었어.",
    "blank": "lèvre"
+  }
+ ],
+ "w|lézard": [
+  {
+   "text": "Un lézard se chauffe au soleil sur la pierre où Thomas veut s'asseoir.",
+   "en": "A lizard is basking in the sun on the stone where Thomas wants to sit.",
+   "ko": "토마가 앉으려는 돌 위에서 도마뱀이 햇볕을 쬐고 있어요.",
+   "blank": "lézard",
+   "src": "made"
+  },
+  {
+   "text": "Le fils de Chloé a trouvé un lézard dans la boîte aux lettres du voisin.",
+   "en": "Chloé's son found a lizard in the neighbour's letterbox.",
+   "ko": "클로에의 아들이 이웃집 우편함에서 도마뱀을 찾았어요.",
+   "blank": "lézard",
+   "src": "made"
   }
  ],
  "w|liaison": [
@@ -35649,6 +36401,22 @@
    "en": "Can you locate the package on the app?",
    "ko": "앱에서 소포 위치를 찾을 수 있어?",
    "blank": "localiser"
+  }
+ ],
+ "w|locataire": [
+  {
+   "text": "Hugo veut louer le rez-de-chaussée à un locataire une fois les travaux finis.",
+   "en": "Hugo wants to rent the ground floor to a tenant once the work is done.",
+   "ko": "위고는 공사가 끝나면 일층을 세입자에게 세놓고 싶어 해요.",
+   "blank": "locataire",
+   "src": "made"
+  },
+  {
+   "text": "Léa rentre vite le soir pour faire visiter son appartement à un futur locataire.",
+   "en": "Léa hurries home in the evening to show her flat to a prospective tenant.",
+   "ko": "레아는 저녁에 미래 세입자에게 집을 보여 주려고 서둘러 퇴근해요.",
+   "blank": "locataire",
+   "src": "made"
   }
  ],
  "w|location": [
@@ -36281,6 +37049,22 @@
    "en": "She believes in the magical power of words.",
    "ko": "그녀는 단어의 magique 한 힘을 믿어.",
    "blank": "magique"
+  }
+ ],
+ "w|magnétique": [
+  {
+   "text": "Thomas explique que les oiseaux migrateurs se guident grâce au champ magnétique de la Terre.",
+   "en": "Thomas explains that migrating birds find their way using the Earth's magnetic field.",
+   "ko": "토마는 철새들이 지구 자기장을 따라 길을 찾는다고 설명해요.",
+   "blank": "magnétique",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants de Chloé collent des lettres magnétiques sur le frigo de la voisine.",
+   "en": "Chloé's children stick magnetic letters on the neighbour's fridge.",
+   "ko": "클로에의 아이들이 이웃집 냉장고에 자석 글자를 붙여요.",
+   "blank": "magnétiques",
+   "src": "made"
   }
  ],
  "w|magnifique": [
@@ -36945,6 +37729,22 @@
    "blank": "mannequin"
   }
  ],
+ "w|manoir": [
+  {
+   "text": "Les gens du village appellent la maison d'Hugo le manoir, alors qu'elle est toute petite.",
+   "en": "The villagers call Hugo's house the manor, even though it's tiny.",
+   "ko": "마을 사람들은 위고의 집을 저택이라고 부르지만 사실 아주 작아요.",
+   "blank": "manoir",
+   "src": "made"
+  },
+  {
+   "text": "Le séminaire de l'entreprise de Léa a lieu dans un manoir à la campagne.",
+   "en": "Léa's company seminar takes place in a manor in the countryside.",
+   "ko": "레아 회사의 세미나는 시골 저택에서 열려요.",
+   "blank": "manoir",
+   "src": "made"
+  }
+ ],
  "w|manque": [
   {
    "text": "Il ressent un grand manque après son départ.",
@@ -37113,6 +37913,22 @@
    "en": "The show is scheduled for Tuesday evening.",
    "ko": "공연은 화요일 저녁에 예정되어 있어.",
    "blank": "mardi"
+  }
+ ],
+ "w|marée": [
+  {
+   "text": "Près de l'embouchure, Thomas attend que la marée monte pour lancer sa ligne.",
+   "en": "Near the river mouth, Thomas waits for the tide to come in before casting his line.",
+   "ko": "강어귀 근처에서 토마는 밀물이 들어오길 기다렸다가 낚싯줄을 던져요.",
+   "blank": "marée",
+   "src": "made"
+  },
+  {
+   "text": "Chloé et sa voisine vont pêcher des coques à marée basse le dimanche.",
+   "en": "Chloé and her neighbour go digging for cockles at low tide on Sundays.",
+   "ko": "클로에와 이웃은 일요일마다 썰물 때 조개를 캐러 가요.",
+   "blank": "marée",
+   "src": "made"
   }
  ],
  "w|marge": [
@@ -39671,6 +40487,22 @@
    "blank": "mouillé"
   }
  ],
+ "w|moulin": [
+  {
+   "text": "Thomas aime pique-niquer près du vieux moulin à eau.",
+   "en": "Thomas likes picnicking near the old water mill.",
+   "ko": "토마는 오래된 물레방아 근처에서 소풍하는 걸 좋아해요.",
+   "blank": "moulin",
+   "src": "made"
+  },
+  {
+   "text": "Chloé emprunte le moulin à café électrique de sa voisine.",
+   "en": "Chloé borrows her neighbour's electric coffee grinder.",
+   "ko": "클로에는 이웃의 전동 커피 그라인더를 빌려요.",
+   "blank": "moulin",
+   "src": "made"
+  }
+ ],
  "w|mourant": [
   {
    "text": "Il était presque mourant après la course.",
@@ -40555,6 +41387,22 @@
    "en": "This family is of noble origin.",
    "ko": "이 가족은 귀족 출신이야.",
    "blank": "noble"
+  }
+ ],
+ "w|noce": [
+  {
+   "text": "Un cortège de noce s'arrête au bord de la rivière pour les photos, et Thomas les regarde passer.",
+   "en": "A wedding procession stops by the river for photos, and Thomas watches them go by.",
+   "ko": "결혼식 행렬이 사진을 찍으려고 강가에 멈추고, 토마는 그들이 지나가는 걸 봐요.",
+   "blank": "noce",
+   "src": "made"
+  },
+  {
+   "text": "Les voisins de Chloé fêtent leurs noces d'or dans la cour de l'immeuble.",
+   "en": "Chloé's neighbours are celebrating their golden wedding anniversary in the building's courtyard.",
+   "ko": "클로에의 이웃 부부가 아파트 마당에서 금혼식을 열어요.",
+   "blank": "noces",
+   "src": "made"
   }
  ],
  "w|noël": [
@@ -41615,6 +42463,22 @@
    "blank": "Oh"
   }
  ],
+ "w|oie": [
+  {
+   "text": "Une oie sauvage se pose sur l'étang, et Thomas retient son souffle.",
+   "en": "A wild goose lands on the pond, and Thomas holds his breath.",
+   "ko": "야생 거위 한 마리가 연못에 내려앉자 토마는 숨을 죽여요.",
+   "blank": "oie",
+   "src": "made"
+  },
+  {
+   "text": "Pour Noël, les voisins de Chloé cuisinent une oie entière.",
+   "en": "For Christmas, Chloé's neighbours cook a whole goose.",
+   "ko": "크리스마스에 클로에의 이웃들은 거위 한 마리를 통째로 요리해요.",
+   "blank": "oie",
+   "src": "made"
+  }
+ ],
  "w|oignon": [
   {
    "text": "Tu peux couper l’oignon pour la salade ?",
@@ -42602,6 +43466,22 @@
    "en": "Chloé spent almost all her pay on this trip to Italy.",
    "ko": "클로에는 이번 이탈리아 여행에 월급을 거의 다 썼어요.",
    "blank": "paie",
+   "src": "made"
+  }
+ ],
+ "w|paiement": [
+  {
+   "text": "Thomas règle le paiement de son permis de pêche en ligne.",
+   "en": "Thomas pays for his fishing permit online.",
+   "ko": "토마는 낚시 허가비를 온라인으로 결제해요.",
+   "blank": "paiement",
+   "src": "made"
+  },
+  {
+   "text": "Chloé aide sa voisine âgée à faire un paiement sur internet.",
+   "en": "Chloé helps her elderly neighbour make a payment online.",
+   "ko": "클로에는 나이 든 이웃이 인터넷으로 결제하는 걸 도와줘요.",
+   "blank": "paiement",
    "src": "made"
   }
  ],
@@ -45669,6 +46549,22 @@
    "blank": "planche"
   }
  ],
+ "w|plancher": [
+  {
+   "text": "Sous la moquette, Hugo découvre un beau plancher en chêne.",
+   "en": "Under the carpet, Hugo discovers a lovely oak floor.",
+   "ko": "카펫 아래에서 위고는 멋진 참나무 마루를 발견해요.",
+   "blank": "plancher",
+   "src": "made"
+  },
+  {
+   "text": "Une souris court sur le plancher et toute l'équipe de Léa se met à crier.",
+   "en": "A mouse runs across the floor and Léa's whole team starts screaming.",
+   "ko": "생쥐 한 마리가 바닥을 지나가자 레아의 팀이 모두 소리를 질러요.",
+   "blank": "plancher",
+   "src": "made"
+  }
+ ],
  "w|planète": [
   {
    "text": "La planète Terre est magnifique.",
@@ -46187,6 +47083,22 @@
    "blank": "poil"
   }
  ],
+ "w|poilu": [
+  {
+   "text": "Le chat poilu des voisins vient dormir sur les sacs de plâtre d'Hugo.",
+   "en": "The neighbours' furry cat comes to sleep on Hugo's plaster bags.",
+   "ko": "이웃집 털북숭이 고양이가 위고의 석고 포대 위에 와서 자요.",
+   "blank": "poilu",
+   "src": "made"
+  },
+  {
+   "text": "Le collègue de Léa porte un pull poilu qui fait éternuer tout le monde.",
+   "en": "Léa's colleague wears a fluffy jumper that makes everyone sneeze.",
+   "ko": "레아의 동료는 모두를 재채기하게 만드는 털복숭이 스웨터를 입어요.",
+   "blank": "poilu",
+   "src": "made"
+  }
+ ],
  "w|poing": [
   {
    "text": "Il a serré le poing de colère.",
@@ -46459,6 +47371,22 @@
    "en": "Call a firefighter if you see smoke.",
    "ko": "연기를 보면 pompier 를 불러.",
    "blank": "pompier"
+  }
+ ],
+ "w|poney": [
+  {
+   "text": "Un poney sauvage s'approche de Thomas près du gué.",
+   "en": "A wild pony comes up to Thomas near the ford.",
+   "ko": "야생 조랑말 한 마리가 여울 근처에서 토마에게 다가와요.",
+   "blank": "poney",
+   "src": "made"
+  },
+  {
+   "text": "Pour l'anniversaire de sa fille, Chloé loue un poney avec les voisins.",
+   "en": "For her daughter's birthday, Chloé hires a pony with the neighbours.",
+   "ko": "딸의 생일에 클로에는 이웃들과 함께 조랑말을 빌려요.",
+   "blank": "poney",
+   "src": "made"
   }
  ],
  "w|pont": [
@@ -46817,6 +47745,22 @@
    "src": "made"
   }
  ],
+ "w|pou": [
+  {
+   "text": "Thomas a lu qu'un seul pou peut vivre des semaines sur un oiseau.",
+   "en": "Thomas has read that a single louse can live for weeks on a bird.",
+   "ko": "토마는 이 한 마리가 새 몸에서 몇 주를 살 수 있다는 글을 읽었어요.",
+   "blank": "pou",
+   "src": "made"
+  },
+  {
+   "text": "La voisine prévient Chloé qu'un enfant de l'école a un pou dans les cheveux.",
+   "en": "The neighbour warns Chloé that a child at school has a louse in their hair.",
+   "ko": "이웃은 학교 아이 하나가 머리에 이가 있다고 클로에에게 알려 줘요.",
+   "blank": "pou",
+   "src": "made"
+  }
+ ],
  "w|poubelle": [
   {
    "text": "Jette ce papier à la poubelle, s'il te plaît.",
@@ -46941,6 +47885,22 @@
    "en": "I work to earn money.",
    "ko": "나는 돈을 벌기 위해 일해.",
    "blank": "pour"
+  }
+ ],
+ "w|pourboire": [
+  {
+   "text": "Hugo laisse un petit pourboire au livreur qui a monté les sacs de ciment.",
+   "en": "Hugo leaves a small tip for the delivery man who carried up the cement bags.",
+   "ko": "위고는 시멘트 포대를 올려 준 배달원에게 팁을 조금 줘요.",
+   "blank": "pourboire",
+   "src": "made"
+  },
+  {
+   "text": "Le midi, Léa laisse toujours un pourboire au serveur de la brasserie d'en face.",
+   "en": "At lunch, Léa always leaves a tip for the waiter at the brasserie opposite.",
+   "ko": "점심에 레아는 늘 맞은편 식당 종업원에게 팁을 남겨요.",
+   "blank": "pourboire",
+   "src": "made"
   }
  ],
  "w|pourchasser": [
@@ -47278,6 +48238,22 @@
    "en": "The butcher cuts the meat with a precision that impresses Émilie.",
    "ko": "정육점 주인이 고기를 정확하게 썰어서 에밀리가 감탄해요.",
    "blank": "précision",
+   "src": "made"
+  }
+ ],
+ "w|prédateur": [
+  {
+   "text": "Thomas apprend aux enfants que le brochet est un prédateur redoutable.",
+   "en": "Thomas teaches the children that the pike is a formidable predator.",
+   "ko": "토마는 아이들에게 강꼬치고기가 무서운 포식자라고 가르쳐요.",
+   "blank": "prédateur",
+   "src": "made"
+  },
+  {
+   "text": "Chloé rassure sa voisine : aucun prédateur ne peut entrer dans le poulailler.",
+   "en": "Chloé reassures her neighbour: no predator can get into the henhouse.",
+   "ko": "클로에는 어떤 포식자도 닭장에 못 들어온다고 이웃을 안심시켜요.",
+   "blank": "prédateur",
    "src": "made"
   }
  ],
@@ -48669,6 +49645,22 @@
    "blank": "promettre"
   }
  ],
+ "w|promo": [
+  {
+   "text": "Thomas a acheté ses bottes de pêche en promo au magasin du village.",
+   "en": "Thomas bought his fishing boots on sale at the village shop.",
+   "ko": "토마는 마을 가게에서 낚시 장화를 할인가에 샀어요.",
+   "blank": "promo",
+   "src": "made"
+  },
+  {
+   "text": "Chloé prévient ses voisins qu'il y a une promo sur les pots de fleurs au supermarché.",
+   "en": "Chloé tells her neighbours there's a deal on flower pots at the supermarket.",
+   "ko": "클로에는 이웃들에게 마트에서 화분을 할인한다고 알려 줘요.",
+   "blank": "promo",
+   "src": "made"
+  }
+ ],
  "w|promotion": [
   {
    "text": "J'ai obtenu une promotion au travail aujourd'hui.",
@@ -48845,6 +49837,22 @@
    "en": "The property is surrounded by a big fence.",
    "ko": "그 부동산은 큰 울타리로 둘러싸여 있어.",
    "blank": "propriété"
+  }
+ ],
+ "w|proprio": [
+  {
+   "text": "L'ancien proprio avait caché des lettres d'amour sous l'escalier, et Hugo les a trouvées.",
+   "en": "The previous owner had hidden love letters under the stairs, and Hugo found them.",
+   "ko": "예전 집주인이 계단 밑에 숨겨 둔 연애편지를 위고가 찾아냈어요.",
+   "blank": "proprio",
+   "src": "made"
+  },
+  {
+   "text": "Léa se plaint à ses collègues que son proprio augmente encore le loyer.",
+   "en": "Léa complains to her colleagues that her landlord is raising the rent again.",
+   "ko": "레아는 집주인이 또 월세를 올린다고 동료들에게 투덜거려요.",
+   "blank": "proprio",
+   "src": "made"
   }
  ],
  "w|protection": [
@@ -50093,6 +51101,38 @@
    "blank": "ramener"
   }
  ],
+ "w|rampe": [
+  {
+   "text": "Hugo installe une rampe en bois le long de l'escalier.",
+   "en": "Hugo fits a wooden handrail along the staircase.",
+   "ko": "위고는 계단을 따라 나무 손잡이를 달아요.",
+   "blank": "rampe",
+   "src": "made"
+  },
+  {
+   "text": "Pour son collègue en fauteuil, Léa a demandé une rampe à l'entrée du bâtiment.",
+   "en": "For her colleague in a wheelchair, Léa asked for a ramp at the building entrance.",
+   "ko": "휠체어를 타는 동료를 위해 레아는 건물 입구에 경사로를 요청했어요.",
+   "blank": "rampe",
+   "src": "made"
+  }
+ ],
+ "w|ramper": [
+  {
+   "text": "Pour réparer les tuyaux, Hugo doit ramper sous le plancher de la cuisine.",
+   "en": "To fix the pipes, Hugo has to crawl under the kitchen floor.",
+   "ko": "배관을 고치려고 위고는 부엌 바닥 밑을 기어 다녀야 해요.",
+   "blank": "ramper",
+   "src": "made"
+  },
+  {
+   "text": "Les câbles sont tellement emmêlés que Léa doit ramper sous la table pour les démêler.",
+   "en": "The cables are so tangled that Léa has to crawl under the desk to sort them out.",
+   "ko": "전선이 너무 엉켜서 레아는 책상 밑으로 기어들어 가 풀어야 해요.",
+   "blank": "ramper",
+   "src": "made"
+  }
+ ],
  "w|rançon": [
   {
    "text": "Ils exigent une rançon énorme.",
@@ -51235,6 +52275,22 @@
    "blank": "réfléchir"
   }
  ],
+ "w|reflet": [
+  {
+   "text": "Le reflet des arbres dans l'eau calme émerveille Thomas.",
+   "en": "The reflection of the trees in the still water amazes Thomas.",
+   "ko": "잔잔한 물에 비친 나무 그림자가 토마를 감탄하게 해요.",
+   "blank": "reflet",
+   "src": "made"
+  },
+  {
+   "text": "Chloé voit le reflet de sa voisine dans la vitre de l'ascenseur.",
+   "en": "Chloé sees her neighbour's reflection in the lift window.",
+   "ko": "클로에는 엘리베이터 유리에 비친 이웃의 모습을 봐요.",
+   "blank": "reflet",
+   "src": "made"
+  }
+ ],
  "w|réflexion": [
   {
    "text": "Après réflexion, Julien accepte de présider la commission des sports.",
@@ -52324,6 +53380,22 @@
    "en": "A customer came out with such a funny comeback that Camille burst out laughing.",
    "ko": "한 손님이 너무 재치 있게 받아쳐서 카미유는 웃음을 터뜨렸어요.",
    "blank": "réplique",
+   "src": "made"
+  }
+ ],
+ "w|répondeur": [
+  {
+   "text": "Dans le grenier, Hugo trouve un vieux répondeur à cassettes.",
+   "en": "In the attic, Hugo finds an old cassette answering machine.",
+   "ko": "다락방에서 위고는 테이프식 옛 자동 응답기를 찾아요.",
+   "blank": "répondeur",
+   "src": "made"
+  },
+  {
+   "text": "En rentrant de réunion, Léa écoute trois messages sur son répondeur.",
+   "en": "Back from a meeting, Léa listens to three messages on her voicemail.",
+   "ko": "회의에서 돌아온 레아는 음성 사서함의 메시지 세 개를 들어요.",
+   "blank": "répondeur",
    "src": "made"
   }
  ],
@@ -53753,6 +54825,22 @@
    "blank": "rituel"
   }
  ],
+ "w|rive": [
+  {
+   "text": "Thomas plante sa tente sur la rive gauche, à l'abri du vent.",
+   "en": "Thomas pitches his tent on the left bank, sheltered from the wind.",
+   "ko": "토마는 바람을 피해 강 왼쪽 기슭에 텐트를 쳐요.",
+   "blank": "rive",
+   "src": "made"
+  },
+  {
+   "text": "La voisine de Chloé habite sur l'autre rive du canal.",
+   "en": "Chloé's neighbour lives on the other bank of the canal.",
+   "ko": "클로에의 이웃은 운하 건너편 기슭에 살아요.",
+   "blank": "rive",
+   "src": "made"
+  }
+ ],
  "w|rivière": [
   {
    "text": "La rivière traverse la ville.",
@@ -53977,6 +55065,22 @@
    "en": "Red wine is my favorite.",
    "ko": "나는 레드와인을 제일 좋아해.",
    "blank": "rouge"
+  }
+ ],
+ "w|rouleau": [
+  {
+   "text": "Hugo passe un rouleau de peinture blanche sur les murs du salon.",
+   "en": "Hugo runs a roller of white paint over the living room walls.",
+   "ko": "위고는 거실 벽에 흰 페인트 롤러를 밀어요.",
+   "blank": "rouleau",
+   "src": "made"
+  },
+  {
+   "text": "Léa change le rouleau de papier de l'imprimante d'étiquettes.",
+   "en": "Léa changes the paper roll in the label printer.",
+   "ko": "레아는 라벨 프린터의 종이 롤을 갈아 끼워요.",
+   "blank": "rouleau",
+   "src": "made"
   }
  ],
  "w|rouler": [
@@ -54943,6 +56047,22 @@
    "en": "The rescue boat went out early.",
    "ko": "구조선이 일찍 나갔어.",
    "blank": "sauvetage"
+  }
+ ],
+ "w|sauveur": [
+  {
+   "text": "Le garde forestier est devenu le sauveur de Thomas quand sa barque a chaviré.",
+   "en": "The forest ranger became Thomas's saviour when his boat capsized.",
+   "ko": "토마의 배가 뒤집혔을 때 산림 감시원이 그를 구해 줬어요.",
+   "blank": "sauveur",
+   "src": "made"
+  },
+  {
+   "text": "Le voisin qui a retrouvé le chat de Chloé est devenu son sauveur.",
+   "en": "The neighbour who found Chloé's cat has become her hero.",
+   "ko": "클로에의 고양이를 찾아 준 이웃은 그녀의 구세주가 됐어요.",
+   "blank": "sauveur",
+   "src": "made"
   }
  ],
  "w|savoir": [
@@ -57423,6 +58543,38 @@
    "blank": "sonnerie"
   }
  ],
+ "w|sonnette": [
+  {
+   "text": "La sonnette ne marche plus, alors les amis d'Hugo frappent à la fenêtre.",
+   "en": "The doorbell doesn't work any more, so Hugo's friends knock on the window.",
+   "ko": "초인종이 고장 나서 위고의 친구들은 창문을 두드려요.",
+   "blank": "sonnette",
+   "src": "made"
+  },
+  {
+   "text": "Léa n'entend pas la sonnette de l'accueil avec son casque sur les oreilles.",
+   "en": "Léa doesn't hear the reception bell with her headphones on.",
+   "ko": "레아는 헤드폰을 끼고 있어서 안내 데스크 벨 소리를 못 들어요.",
+   "blank": "sonnette",
+   "src": "made"
+  }
+ ],
+ "w|sonore": [
+  {
+   "text": "Hugo fait remarquer que la grande pièce vide est très sonore.",
+   "en": "Hugo points out that the big empty room is very echoey.",
+   "ko": "위고는 텅 빈 큰 방이 소리가 많이 울린다고 말해요.",
+   "blank": "sonore",
+   "src": "made"
+  },
+  {
+   "text": "L'open space est si sonore que Léa travaille avec un casque.",
+   "en": "The open-plan office is so noisy that Léa works with headphones.",
+   "ko": "개방형 사무실이 너무 시끄러워서 레아는 헤드폰을 끼고 일해요.",
+   "blank": "sonore",
+   "src": "made"
+  }
+ ],
  "w|sophistiqué": [
   {
    "text": "Le logiciel de l'entreprise est bien plus sophistiqué que ce que Thomas connaissait.",
@@ -58321,6 +59473,22 @@
    "src": "made"
   }
  ],
+ "w|stand": [
+  {
+   "text": "Au marché du village, Thomas tient un stand de miel de forêt.",
+   "en": "At the village market, Thomas runs a forest honey stall.",
+   "ko": "마을 장터에서 토마는 숲 꿀을 파는 가판대를 열어요.",
+   "blank": "stand",
+   "src": "made"
+  },
+  {
+   "text": "À la fête des voisins, Chloé tient le stand des crêpes.",
+   "en": "At the street party, Chloé runs the crêpe stand.",
+   "ko": "이웃 잔치에서 클로에는 크레페 가판대를 맡아요.",
+   "blank": "stand",
+   "src": "made"
+  }
+ ],
  "w|standard": [
   {
    "text": "Paul a pris une tente de taille standard pour deux personnes.",
@@ -58423,6 +59591,22 @@
    "en": "Do you want steak or fish?",
    "ko": "스테이크랑 생선 중에 뭐가 좋아?",
    "blank": "steak"
+  }
+ ],
+ "w|stock": [
+  {
+   "text": "Thomas garde un petit stock de bois sec sous l'auvent de la cabane.",
+   "en": "Thomas keeps a small stock of dry wood under the cabin's awning.",
+   "ko": "토마는 오두막 차양 아래에 마른 장작을 조금 쌓아 둬요.",
+   "blank": "stock",
+   "src": "made"
+  },
+  {
+   "text": "L'épicier du coin dit à Chloé que la farine n'est plus en stock.",
+   "en": "The corner grocer tells Chloé that the flour is out of stock.",
+   "ko": "동네 식료품점 주인이 클로에에게 밀가루가 다 떨어졌다고 해요.",
+   "blank": "stock",
+   "src": "made"
   }
  ],
  "w|stop": [
@@ -60341,6 +61525,22 @@
    "blank": "temporaire"
   }
  ],
+ "w|temporel": [
+  {
+   "text": "Dans la forêt, Thomas perd tout repère temporel et oublie de regarder sa montre.",
+   "en": "In the forest, Thomas loses all sense of time and forgets to look at his watch.",
+   "ko": "숲에 있으면 토마는 시간 감각을 잃고 시계 보는 것도 잊어요.",
+   "blank": "temporel",
+   "src": "made"
+  },
+  {
+   "text": "Le voisin de Chloé est passionné par les paradoxes temporels des films de science-fiction.",
+   "en": "Chloé's neighbour is fascinated by the time paradoxes in science fiction films.",
+   "ko": "클로에의 이웃은 공상 과학 영화 속 시간 역설에 푹 빠져 있어요.",
+   "blank": "temporels",
+   "src": "made"
+  }
+ ],
  "w|temps": [
   {
    "text": "Le temps passe vite.",
@@ -61215,6 +62415,22 @@
    "en": "A thunderclap woke us up.",
    "ko": "천둥 한 방에 우리가 깼어.",
    "blank": "tonnerre"
+  }
+ ],
+ "w|torche": [
+  {
+   "text": "Hugo descend à la cave avec une torche parce que l'ampoule a grillé.",
+   "en": "Hugo goes down to the cellar with a torch because the bulb has blown.",
+   "ko": "전구가 나가서 위고는 손전등을 들고 지하실로 내려가요.",
+   "blank": "torche",
+   "src": "made"
+  },
+  {
+   "text": "Pendant la coupure de courant, Léa éclaire le couloir avec la torche de son téléphone.",
+   "en": "During the power cut, Léa lights the corridor with her phone's torch.",
+   "ko": "정전 동안 레아는 휴대폰 손전등으로 복도를 비춰요.",
+   "blank": "torche",
+   "src": "made"
   }
  ],
  "w|tordre": [
@@ -62535,6 +63751,22 @@
    "blank": "truc"
   }
  ],
+ "w|truquer": [
+  {
+   "text": "Hugo soupçonne l'ancien vendeur d'avoir truqué le rapport sur l'humidité.",
+   "en": "Hugo suspects the previous seller of rigging the damp report.",
+   "ko": "위고는 전 매도인이 습기 보고서를 조작했을 거라고 의심해요.",
+   "blank": "truqué",
+   "src": "made"
+  },
+  {
+   "text": "Léa a découvert qu'un fournisseur avait truqué ses factures.",
+   "en": "Léa discovered that a supplier had rigged his invoices.",
+   "ko": "레아는 한 납품업체가 송장을 조작했다는 걸 알아냈어요.",
+   "blank": "truqué",
+   "src": "made"
+  }
+ ],
  "w|tu": [
   {
    "text": "Tu viens avec nous?",
@@ -63279,6 +64511,22 @@
    "src": "made"
   }
  ],
+ "w|vase": [
+  {
+   "text": "Hugo trouve un vase ébréché derrière la cheminée.",
+   "en": "Hugo finds a chipped vase behind the fireplace.",
+   "ko": "위고는 벽난로 뒤에서 이가 빠진 꽃병을 찾아요.",
+   "blank": "vase",
+   "src": "made"
+  },
+  {
+   "text": "Un client a offert à Léa un vase plein de tulipes.",
+   "en": "A client gave Léa a vase full of tulips.",
+   "ko": "한 고객이 레아에게 튤립이 가득 꽂힌 꽃병을 선물했어요.",
+   "blank": "vase",
+   "src": "made"
+  }
+ ],
  "w|vaste": [
   {
    "text": "Le terrain est si vaste que Louis le parcourt à vélo.",
@@ -63725,6 +64973,22 @@
    "en": "It's cold, put on your jacket.",
    "ko": "추우니까 veste 를 입어.",
    "blank": "veste"
+  }
+ ],
+ "w|vestiaire": [
+  {
+   "text": "Hugo transforme le petit débarras de l'entrée en vestiaire pour les manteaux.",
+   "en": "Hugo turns the little box room by the entrance into a cloakroom for coats.",
+   "ko": "위고는 현관 옆 작은 창고를 외투 걸어 두는 곳으로 바꿔요.",
+   "blank": "vestiaire",
+   "src": "made"
+  },
+  {
+   "text": "Léa laisse ses baskets au vestiaire avant de partir à la salle de sport.",
+   "en": "Léa leaves her trainers in the locker room before going to the gym.",
+   "ko": "레아는 헬스장에 가기 전에 운동화를 탈의실에 둬요.",
+   "blank": "vestiaire",
+   "src": "made"
   }
  ],
  "w|vêtement": [
@@ -64575,6 +65839,22 @@
    "en": "The neighbor always makes noise at night.",
    "ko": "이웃이 밤마다 항상 시끄럽게 해.",
    "blank": "voisin"
+  }
+ ],
+ "w|voisinage": [
+  {
+   "text": "Le bruit de la perceuse dérange tout le voisinage, alors Hugo s'excuse avec des croissants.",
+   "en": "The noise of the drill bothers the whole neighbourhood, so Hugo apologizes with croissants.",
+   "ko": "드릴 소리가 온 동네를 시끄럽게 해서 위고는 크루아상으로 사과해요.",
+   "blank": "voisinage",
+   "src": "made"
+  },
+  {
+   "text": "Léa s'entend bien avec le voisinage de bureau, surtout l'équipe du comptable.",
+   "en": "Léa gets on well with her office neighbours, especially the accountant's team.",
+   "ko": "레아는 옆 사무실 사람들, 특히 회계팀과 사이가 좋아요.",
+   "blank": "voisinage",
+   "src": "made"
   }
  ],
  "w|voiture": [

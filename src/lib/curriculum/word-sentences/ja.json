@@ -4377,6 +4377,22 @@
    "blank": "しっかり"
   }
  ],
+ "w|じっくり": [
+  {
+   "text": "弁護士の拓也は、法廷に立つ前に証拠をじっくり読み込んだ。",
+   "en": "Before standing in court, lawyer Takuya read through the evidence carefully.",
+   "ko": "변호사 다쿠야는 법정에 서기 전에 증거를 꼼꼼히 읽었어요.",
+   "blank": "じっくり",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、飼い主の話をじっくり聞いてから診察を始める。",
+   "en": "Keiko listens carefully to the owner before starting an examination.",
+   "ko": "게이코는 보호자 이야기를 차분히 듣고 나서 진찰을 시작해요.",
+   "blank": "じっくり",
+   "src": "made"
+  }
+ ],
  "w|シナリオ": [
   {
    "text": "拓也はいつか、自分でシナリオを書いて上演したいと思っている。",
@@ -9095,6 +9111,22 @@
    "src": "made"
   }
  ],
+ "w|プライバシー": [
+  {
+   "text": "被害者のプライバシーを守るため、名前は法廷で伏せられた。",
+   "en": "To protect the victim's privacy, the name was withheld in court.",
+   "ko": "피해자의 사생활을 지키려고 법정에서 이름은 공개되지 않았어요.",
+   "blank": "プライバシー",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、飼い主のプライバシーに配慮してカルテを管理している。",
+   "en": "Keiko manages medical records with care for the owners' privacy.",
+   "ko": "게이코는 보호자의 사생활을 배려해서 진료 기록을 관리해요.",
+   "blank": "プライバシー",
+   "src": "made"
+  }
+ ],
  "w|プライベート": [
   {
    "text": "翔太は、週に一度プライベートレッスンを受けている。",
@@ -11193,6 +11225,22 @@
    "src": "made"
   }
  ],
+ "w|ようこそ": [
+  {
+   "text": "警察署の見学に来た子どもたちを、署長は「ようこそ」と笑顔で迎えた。",
+   "en": "The police chief welcomed the children who came to tour the station with a smile, saying \"Welcome.\"",
+   "ko": "경찰서 견학을 온 아이들을 서장님은 \"어서 와요\" 하고 웃으며 맞았어요.",
+   "blank": "ようこそ",
+   "src": "made"
+  },
+  {
+   "text": "朝礼で部長が「さくらさん、ようこそ」と皆に紹介した。",
+   "en": "At the morning meeting, the department head introduced her to everyone, saying, \"Sakura, welcome.\"",
+   "ko": "아침 조회에서 부장님이 \"사쿠라 씨, 환영해요\" 하고 모두에게 소개했어요.",
+   "blank": "ようこそ",
+   "src": "made"
+  }
+ ],
  "w|ようやく": [
   {
    "text": "ようやく終わったよ。",
@@ -12595,6 +12643,22 @@
    "blank": "上記"
   }
  ],
+ "w|上限": [
+  {
+   "text": "大輔の署では、残業時間の上限が厳しく決められている。",
+   "en": "At Daisuke's station, the upper limit on overtime hours is strictly set.",
+   "ko": "다이스케의 경찰서에서는 야근 시간 상한이 엄격하게 정해져 있어요.",
+   "blank": "上限",
+   "src": "made"
+  },
+  {
+   "text": "会社のカードには、一回に使える金額の上限がある。",
+   "en": "The company card has an upper limit on how much can be spent at one time.",
+   "ko": "회사 카드에는 한 번에 쓸 수 있는 금액 상한이 있어요.",
+   "blank": "上限",
+   "src": "made"
+  }
+ ],
  "w|下": [
   {
    "text": "下に置いといて。",
@@ -12713,6 +12777,22 @@
    "en": "I don't mind if it's inconvenient.",
    "ko": "불편해도 상관없어.",
    "blank": "不便"
+  }
+ ],
+ "w|不具合": [
+  {
+   "text": "車のブレーキの不具合をめぐって、客がメーカーを訴えた。",
+   "en": "A customer sued the manufacturer over a defect in the car's brakes.",
+   "ko": "자동차 브레이크 결함을 두고 손님이 제조사를 고소했어요.",
+   "blank": "不具合",
+   "src": "made"
+  },
+  {
+   "text": "レントゲンの機械に不具合が出て、恵子は業者を呼んだ。",
+   "en": "A problem occurred with the X-ray machine, so Keiko called a technician.",
+   "ko": "엑스레이 기계에 문제가 생겨서 게이코는 업체를 불렀어요.",
+   "blank": "不具合",
+   "src": "made"
   }
  ],
  "w|不動産": [
@@ -13655,6 +13735,22 @@
    "blank": "乗り換える"
   }
  ],
+ "w|乗り越える": [
+  {
+   "text": "依頼人は、長い裁判を家族の支えで乗り越えた。",
+   "en": "The client got through the long trial with the support of her family.",
+   "ko": "의뢰인은 긴 재판을 가족의 도움으로 이겨 냈어요.",
+   "blank": "乗り越えた",
+   "src": "made"
+  },
+  {
+   "text": "大きな病気を乗り越えた猫が、元気な顔で検診に来た。",
+   "en": "A cat that had overcome a serious illness came in for a checkup looking healthy.",
+   "ko": "큰 병을 이겨 낸 고양이가 건강한 얼굴로 검진을 받으러 왔어요.",
+   "blank": "乗り越えた",
+   "src": "made"
+  }
+ ],
  "w|乗る": [
   {
    "text": "乗っていい？",
@@ -13730,6 +13826,22 @@
    "en": "Chihiro's family has kept a turtle for over ten years.",
    "ko": "지히로네 집에서는 거북이를 십 년 넘게 키우고 있어요.",
    "blank": "亀",
+   "src": "made"
+  }
+ ],
+ "w|了承": [
+  {
+   "text": "裁判長の了承を得て、拓也は新しい証拠を提出した。",
+   "en": "With the presiding judge's approval, Takuya submitted new evidence.",
+   "ko": "재판장의 승낙을 얻어 다쿠야는 새 증거를 제출했어요.",
+   "blank": "了承",
+   "src": "made"
+  },
+  {
+   "text": "手術の前に、恵子は飼い主から了承のサインをもらった。",
+   "en": "Before the surgery, Keiko got the owner's signature giving consent.",
+   "ko": "수술 전에 게이코는 보호자에게 승낙 서명을 받았어요.",
+   "blank": "了承",
    "src": "made"
   }
  ],
@@ -16043,6 +16155,22 @@
    "blank": "使える"
   }
  ],
+ "w|使命": [
+  {
+   "text": "拓也は、弱い立場の人を守ることが自分の使命だと考えている。",
+   "en": "Takuya believes it is his mission to protect people in vulnerable positions.",
+   "ko": "다쿠야는 약한 처지의 사람을 지키는 게 자기 사명이라고 생각해요.",
+   "blank": "使命",
+   "src": "made"
+  },
+  {
+   "text": "動物の命を一つでも多く救うことが、恵子の使命だ。",
+   "en": "Keiko's mission is to save as many animals' lives as possible.",
+   "ko": "동물의 생명을 하나라도 더 구하는 게 게이코의 사명이에요.",
+   "blank": "使命",
+   "src": "made"
+  }
+ ],
  "w|使用": [
   {
    "text": "使用中だよ。",
@@ -16186,6 +16314,22 @@
    "en": "To keep burglars from breaking in, Misaki put new locks on the windows.",
    "ko": "미사키는 도둑이 침입하지 못하게 창문에 새 잠금장치를 달았어요.",
    "blank": "侵入",
+   "src": "made"
+  }
+ ],
+ "w|侵害": [
+  {
+   "text": "大輔は、ネットでの著作権の侵害について相談を受けた。",
+   "en": "Daisuke received a consultation about copyright infringement online.",
+   "ko": "다이스케는 인터넷 저작권 침해에 관해 상담을 받았어요.",
+   "blank": "侵害",
+   "src": "made"
+  },
+  {
+   "text": "研修で、さくらはプライバシーの侵害に気をつけるよう教わった。",
+   "en": "In training, Sakura was taught to be careful about invasions of privacy.",
+   "ko": "연수에서 사쿠라는 사생활 침해에 주의하라고 배웠어요.",
+   "blank": "侵害",
    "src": "made"
   }
  ],
@@ -16882,6 +17026,22 @@
    "en": "The piece Keiko happened to hear turned out to be the next assigned piece.",
    "ko": "게이코가 우연히 들은 곡이 다음 과제곡이었어요.",
    "blank": "偶然",
+   "src": "made"
+  }
+ ],
+ "w|傑作": [
+  {
+   "text": "拓也の最終弁論は、先輩たちから傑作だと褒められた。",
+   "en": "Takuya's closing argument was praised as a masterpiece by senior lawyers.",
+   "ko": "다쿠야의 최종 변론은 선배들에게서 걸작이라고 칭찬받았어요.",
+   "blank": "傑作",
+   "src": "made"
+  },
+  {
+   "text": "待合室に飾ってある猫の絵は、近所の画家の傑作だ。",
+   "en": "The cat painting hanging in the waiting room is a masterpiece by a local artist.",
+   "ko": "대기실에 걸린 고양이 그림은 동네 화가의 걸작이에요.",
+   "blank": "傑作",
    "src": "made"
   }
  ],
@@ -17643,6 +17803,22 @@
    "blank": "全国"
   }
  ],
+ "w|全滅": [
+  {
+   "text": "大雨で、署の家庭菜園のトマトは全滅してしまった。",
+   "en": "Because of the heavy rain, all the tomatoes in the station's garden were wiped out.",
+   "ko": "폭우로 경찰서 텃밭 토마토가 전멸해 버렸어요.",
+   "blank": "全滅",
+   "src": "made"
+  },
+  {
+   "text": "会社のボウリング大会で、さくらのチームは全滅に近かった。",
+   "en": "At the company bowling tournament, Sakura's team was nearly wiped out.",
+   "ko": "회사 볼링 대회에서 사쿠라 팀은 거의 전멸이었어요.",
+   "blank": "全滅",
+   "src": "made"
+  }
+ ],
  "w|全然": [
   {
    "text": "全然足りないよ。",
@@ -17761,6 +17937,22 @@
    "blank": "公園"
   }
  ],
+ "w|公平": [
+  {
+   "text": "裁判官は、両方の言い分を公平に聞かなければならない。",
+   "en": "A judge must listen fairly to both sides' arguments.",
+   "ko": "판사는 양쪽 주장을 공평하게 들어야 해요.",
+   "blank": "公平",
+   "src": "made"
+  },
+  {
+   "text": "恵子は二匹の子犬に、おやつを公平に分けてあげた。",
+   "en": "Keiko gave treats to the two puppies, sharing them out fairly.",
+   "ko": "게이코는 두 강아지에게 간식을 공평하게 나눠 줬어요.",
+   "blank": "公平",
+   "src": "made"
+  }
+ ],
  "w|公式": [
   {
    "text": "公式が認めたよ。",
@@ -17773,6 +17965,22 @@
    "en": "Is that official?",
    "ko": "공식 정보야?",
    "blank": "公式"
+  }
+ ],
+ "w|公正": [
+  {
+   "text": "拓也は、公正な裁判を受ける権利は誰にでもあると話した。",
+   "en": "Takuya said that everyone has the right to a fair trial.",
+   "ko": "다쿠야는 누구에게나 공정한 재판을 받을 권리가 있다고 말했어요.",
+   "blank": "公正",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、治療費を公正に決めるように心がけている。",
+   "en": "Keiko makes an effort to set treatment fees fairly.",
+   "ko": "게이코는 치료비를 공정하게 정하려고 신경 써요.",
+   "blank": "公正",
+   "src": "made"
   }
  ],
  "w|公演": [
@@ -17965,6 +18173,22 @@
    "en": "I started feeling unwell.",
    "ko": "컨디션이 나빠졌어.",
    "blank": "具合"
+  }
+ ],
+ "w|典型": [
+  {
+   "text": "この事件は、高齢者を狙った詐欺の典型だと検察官は述べた。",
+   "en": "The prosecutor said this case was a typical example of fraud targeting the elderly.",
+   "ko": "검사는 이 사건이 노인을 노린 사기의 전형이라고 말했어요.",
+   "blank": "典型",
+   "src": "made"
+  },
+  {
+   "text": "恵子によると、この咳は老犬によくある症状の典型だそうだ。",
+   "en": "According to Keiko, this cough is a typical symptom common in old dogs.",
+   "ko": "게이코 말로는 이 기침은 늙은 개에게 흔한 증상의 전형이래요.",
+   "blank": "典型",
+   "src": "made"
   }
  ],
  "w|内側": [
@@ -18887,6 +19111,22 @@
    "src": "made"
   }
  ],
+ "w|分散": [
+  {
+   "text": "祭りの日は、警察官を町のあちらこちらに分散して配置する。",
+   "en": "On festival days, police officers are spread out across the town.",
+   "ko": "축제 날에는 경찰관을 동네 곳곳에 분산해서 배치해요.",
+   "blank": "分散",
+   "src": "made"
+  },
+  {
+   "text": "さくらの歓迎会は、人数が多いので二つの店に分散した。",
+   "en": "There were so many people at Sakura's welcome party that it was split between two restaurants.",
+   "ko": "사쿠라의 환영회는 인원이 많아서 두 가게로 나눴어요.",
+   "blank": "分散",
+   "src": "made"
+  }
+ ],
  "w|分析": [
   {
    "text": "データを分析する。",
@@ -18899,6 +19139,22 @@
    "en": "I analyzed the cause.",
    "ko": "원인을 분석했어.",
    "blank": "分析"
+  }
+ ],
+ "w|分裂": [
+  {
+   "text": "会社の分裂をめぐって、元の社長どうしが法廷で争っている。",
+   "en": "The former presidents are fighting in court over the split of the company.",
+   "ko": "회사 분열을 두고 전 사장끼리 법정에서 다투고 있어요.",
+   "blank": "分裂",
+   "src": "made"
+  },
+  {
+   "text": "顕微鏡をのぞくと、細胞が分裂する様子が見えた。",
+   "en": "Looking through the microscope, Keiko could see cells dividing.",
+   "ko": "현미경을 들여다보니 세포가 분열하는 모습이 보였어요.",
+   "blank": "分裂",
+   "src": "made"
   }
  ],
  "w|分解": [
@@ -19022,6 +19278,22 @@
    "en": "Let's charge it before the battery dies.",
    "ko": "배터리가 다 떨어지기 전에 충전하자.",
    "blank": "切れる",
+   "src": "made"
+  }
+ ],
+ "w|切断": [
+  {
+   "text": "工事中に電線が切断され、町が停電した件で裁判が開かれた。",
+   "en": "A trial was held over an incident in which a power line was cut during construction, causing a blackout in the town.",
+   "ko": "공사 중에 전선이 절단돼 동네가 정전된 일로 재판이 열렸어요.",
+   "blank": "切断",
+   "src": "made"
+  },
+  {
+   "text": "事故にあった猫は、残念ながら後ろ脚の切断が必要だった。",
+   "en": "Unfortunately, the cat that was in an accident needed a hind leg amputated.",
+   "ko": "사고를 당한 고양이는 안타깝게도 뒷다리 절단이 필요했어요.",
+   "blank": "切断",
    "src": "made"
   }
  ],
@@ -20017,6 +20289,22 @@
    "en": "The situation is finally moving.",
    "ko": "상황이 겨우 움직인다.",
    "blank": "動く"
+  }
+ ],
+ "w|動ける": [
+  {
+   "text": "足をけがした大輔は、一週間ほど思うように動けなかった。",
+   "en": "Daisuke, who hurt his leg, couldn't move as he wanted for about a week.",
+   "ko": "다리를 다친 다이스케는 일주일쯤 마음대로 움직일 수 없었어요.",
+   "blank": "動けなかった",
+   "src": "made"
+  },
+  {
+   "text": "机が狭くて、さくらは椅子から立つと思うように動けない。",
+   "en": "The desk area is so cramped that Sakura can't move freely when she stands up.",
+   "ko": "책상 자리가 좁아서 사쿠라는 의자에서 일어나면 마음대로 움직일 수 없어요.",
+   "blank": "動けない",
+   "src": "made"
   }
  ],
  "w|動作": [
@@ -21251,6 +21539,22 @@
    "blank": "反応"
   }
  ],
+ "w|反撃": [
+  {
+   "text": "剣道の練習で、大輔は先輩の反撃をかわせなかった。",
+   "en": "In kendo practice, Daisuke couldn't dodge his senior's counterattack.",
+   "ko": "검도 연습에서 다이스케는 선배의 반격을 피하지 못했어요.",
+   "blank": "反撃",
+   "src": "made"
+  },
+  {
+   "text": "ゲームで負けていたさくらは、最後に見事な反撃を見せた。",
+   "en": "Sakura, who was losing the game, made a splendid comeback at the end.",
+   "ko": "게임에서 지고 있던 사쿠라는 마지막에 멋진 반격을 보여 줬어요.",
+   "blank": "反撃",
+   "src": "made"
+  }
+ ],
  "w|反映": [
   {
    "text": "利用者の希望を反映して、漫画のコーナーが広くなった。",
@@ -22247,6 +22551,22 @@
    "src": "made"
   }
  ],
+ "w|名義": [
+  {
+   "text": "事件の犯人は、他人の名義で部屋を借りていた。",
+   "en": "The culprit had rented the room under someone else's name.",
+   "ko": "사건 범인은 다른 사람 명의로 방을 빌렸어요.",
+   "blank": "名義",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、会社の口座の名義を変える手続きをした。",
+   "en": "Sakura went through the procedure to change the name on the company account.",
+   "ko": "사쿠라는 회사 계좌 명의를 바꾸는 절차를 밟았어요.",
+   "blank": "名義",
+   "src": "made"
+  }
+ ],
  "w|名誉": [
   {
    "text": "名誉ある賞をもらった。",
@@ -22643,6 +22963,22 @@
    "blank": "命令"
   }
  ],
+ "w|和解": [
+  {
+   "text": "長い裁判の末、二つの家族はようやく和解した。",
+   "en": "After a long trial, the two families finally reconciled.",
+   "ko": "긴 재판 끝에 두 가족은 마침내 화해했어요.",
+   "blank": "和解",
+   "src": "made"
+  },
+  {
+   "text": "喧嘩していた二匹の猫が、恵子の病院でようやく和解したようだ。",
+   "en": "The two cats that had been fighting seem to have finally made peace at Keiko's clinic.",
+   "ko": "싸우던 고양이 두 마리가 게이코의 병원에서 드디어 화해한 것 같아요.",
+   "blank": "和解",
+   "src": "made"
+  }
+ ],
  "w|咲く": [
   {
    "text": "会場の庭の隅には、小さな白い花がたくさん咲いていた。",
@@ -22824,6 +23160,22 @@
    "en": "Yumi ordered honey candies that are gentle on the throat.",
    "ko": "유미는 목에 좋은 꿀 사탕을 주문했어요.",
    "blank": "喉",
+   "src": "made"
+  }
+ ],
+ "w|喋る": [
+  {
+   "text": "証人は緊張のあまり、法廷でほとんど喋ることができなかった。",
+   "en": "The witness was so nervous that he could hardly speak in court.",
+   "ko": "증인은 너무 긴장해서 법정에서 거의 말을 하지 못했어요.",
+   "blank": "喋る",
+   "src": "made"
+  },
+  {
+   "text": "待合室のインコが、飼い主の口癖をそっくりに喋った。",
+   "en": "A parakeet in the waiting room spoke its owner's catchphrase exactly.",
+   "ko": "대기실의 잉꼬가 주인의 말버릇을 똑같이 따라 했어요.",
+   "blank": "喋った",
    "src": "made"
   }
  ],
@@ -23709,6 +24061,22 @@
    "blank": "坂"
   }
  ],
+ "w|坊主": [
+  {
+   "text": "拓也は、中学生のころ野球部で坊主頭だった。",
+   "en": "Takuya had a buzz cut when he was on the baseball team in middle school.",
+   "ko": "다쿠야는 중학생 때 야구부에서 까까머리였어요.",
+   "blank": "坊主",
+   "src": "made"
+  },
+  {
+   "text": "恵子の甥は三日坊主で、犬の散歩もすぐにさぼるようになった。",
+   "en": "Keiko's nephew never sticks with anything, and soon started skipping the dog's walks too.",
+   "ko": "게이코의 조카는 작심삼일이라 개 산책도 금방 빼먹게 됐어요.",
+   "blank": "坊主",
+   "src": "made"
+  }
+ ],
  "w|城": [
   {
    "text": "城を見に行こう。",
@@ -23825,6 +24193,22 @@
    "en": "The foundation matters.",
    "ko": "기초가 중요해.",
    "blank": "基礎"
+  }
+ ],
+ "w|堂々": [
+  {
+   "text": "新人の大輔は、記者会見で堂々と事件の説明をした。",
+   "en": "Rookie Daisuke explained the case confidently at the press conference.",
+   "ko": "신입인 다이스케는 기자회견에서 당당하게 사건을 설명했어요.",
+   "blank": "堂々",
+   "src": "made"
+  },
+  {
+   "text": "さくらは初めての発表なのに、堂々と話していた。",
+   "en": "Even though it was her first presentation, Sakura spoke with confidence.",
+   "ko": "사쿠라는 첫 발표인데도 당당하게 말했어요.",
+   "blank": "堂々",
+   "src": "made"
   }
  ],
  "w|報ずる": [
@@ -24133,6 +24517,22 @@
    "en": "I want to be a voice actor.",
    "ko": "성우가 되고 싶어.",
    "blank": "声優"
+  }
+ ],
+ "w|声明": [
+  {
+   "text": "事件について、警察署は夕方に正式な声明を出した。",
+   "en": "The police station issued an official statement about the case in the evening.",
+   "ko": "사건에 관해 경찰서는 저녁에 공식 성명을 냈어요.",
+   "blank": "声明",
+   "src": "made"
+  },
+  {
+   "text": "会社が新しい方針についての声明を出し、さくらも内容を読んだ。",
+   "en": "The company issued a statement about its new policy, and Sakura read it too.",
+   "ko": "회사가 새 방침에 관한 성명을 내서 사쿠라도 내용을 읽었어요.",
+   "blank": "声明",
+   "src": "made"
   }
  ],
  "w|売る": [
@@ -24769,6 +25169,22 @@
    "src": "made"
   }
  ],
+ "w|大使": [
+  {
+   "text": "大使の来日に合わせて、大輔の署も警備を強化した。",
+   "en": "In line with the ambassador's visit to Japan, Daisuke's station also stepped up security.",
+   "ko": "대사의 일본 방문에 맞춰 다이스케의 경찰서도 경비를 강화했어요.",
+   "blank": "大使",
+   "src": "made"
+  },
+  {
+   "text": "さくらの父は、以前ある国の大使を務めていたそうだ。",
+   "en": "Sakura's father apparently once served as an ambassador to a certain country.",
+   "ko": "사쿠라의 아버지는 예전에 어느 나라 대사를 지냈대요.",
+   "blank": "大使",
+   "src": "made"
+  }
+ ],
  "w|大切": [
   {
    "text": "大切にしてね。",
@@ -24933,6 +25349,22 @@
    "blank": "大手"
   }
  ],
+ "w|大抵": [
+  {
+   "text": "拓也は、大抵の裁判では朝一番に法廷に入る。",
+   "en": "Takuya usually enters the courtroom first thing in the morning for most trials.",
+   "ko": "다쿠야는 대개의 재판에서 아침 일찍 법정에 들어가요.",
+   "blank": "大抵",
+   "src": "made"
+  },
+  {
+   "text": "恵子の病院に来るのは、大抵が犬か猫だ。",
+   "en": "Most of the animals that come to Keiko's clinic are dogs or cats.",
+   "ko": "게이코의 병원에 오는 건 대개 개나 고양이예요.",
+   "blank": "大抵",
+   "src": "made"
+  }
+ ],
  "w|大統領": [
   {
    "text": "大統領が来た。",
@@ -25051,6 +25483,22 @@
    "en": "That's a godsend.",
    "ko": "하늘의 도움이야.",
    "blank": "天"
+  }
+ ],
+ "w|天下": [
+  {
+   "text": "大輔の先輩は、柔道の大会で天下を取ったこともある。",
+   "en": "Daisuke's senior colleague once came out on top of the whole judo tournament.",
+   "ko": "다이스케의 선배는 유도 대회에서 천하를 제패한 적도 있어요.",
+   "blank": "天下",
+   "src": "made"
+  },
+  {
+   "text": "歴史好きのさくらは、天下統一の時代の小説が大好きだ。",
+   "en": "History buff Sakura loves novels set in the age of the unification of the country.",
+   "ko": "역사를 좋아하는 사쿠라는 천하 통일 시대 소설을 아주 좋아해요.",
+   "blank": "天下",
+   "src": "made"
   }
  ],
  "w|天井": [
@@ -28461,6 +28909,22 @@
    "src": "made"
   }
  ],
+ "w|幼い": [
+  {
+   "text": "交番に来た幼い女の子は、お母さんとはぐれて泣いていた。",
+   "en": "The little girl who came to the police box was crying because she had gotten separated from her mother.",
+   "ko": "파출소에 온 어린 여자아이는 엄마와 떨어져서 울고 있었어요.",
+   "blank": "幼い",
+   "src": "made"
+  },
+  {
+   "text": "さくらには幼い子どもがいるので、早く帰る日がある。",
+   "en": "Sakura has a young child, so there are days she leaves early.",
+   "ko": "사쿠라는 어린 아이가 있어서 일찍 퇴근하는 날이 있어요.",
+   "blank": "幼い",
+   "src": "made"
+  }
+ ],
  "w|幼稚園": [
   {
    "text": "妹は幼稚園に通っている。",
@@ -29051,6 +29515,22 @@
    "blank": "強化"
   }
  ],
+ "w|強盗": [
+  {
+   "text": "深夜、コンビニに強盗が入ったと通報があった。",
+   "en": "Late at night, there was a report that a convenience store had been robbed.",
+   "ko": "한밤중에 편의점에 강도가 들었다는 신고가 있었어요.",
+   "blank": "強盗",
+   "src": "made"
+  },
+  {
+   "text": "さくらが勧めた映画は、銀行強盗の話だった。",
+   "en": "The movie Sakura recommended was about a bank robbery.",
+   "ko": "사쿠라가 추천한 영화는 은행 강도 이야기였어요.",
+   "blank": "強盗",
+   "src": "made"
+  }
+ ],
  "w|強調": [
   {
    "text": "誠は、新郎の誠実さを特に強調して話した。",
@@ -29107,6 +29587,22 @@
    "en": "The ball will hit you.",
    "ko": "공이 맞아.",
    "blank": "当たる"
+  }
+ ],
+ "w|当事者": [
+  {
+   "text": "裁判では、当事者どうしが顔を合わせることになった。",
+   "en": "In the trial, the parties involved ended up facing each other.",
+   "ko": "재판에서는 당사자끼리 얼굴을 마주하게 됐어요.",
+   "blank": "当事者",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、ペットを手放すかどうかは当事者の家族が決めることだと話した。",
+   "en": "Keiko said that whether to give up a pet is for the family involved to decide.",
+   "ko": "게이코는 반려동물을 포기할지는 당사자인 가족이 정할 일이라고 말했어요.",
+   "blank": "当事者",
+   "src": "made"
   }
  ],
  "w|当初": [
@@ -30299,6 +30795,22 @@
    "blank": "恋愛"
   }
  ],
+ "w|恐らく": [
+  {
+   "text": "大輔は、落とし物の財布は恐らく駅の近くで見つかると考えた。",
+   "en": "Daisuke thought the lost wallet would probably be found near the station.",
+   "ko": "다이스케는 잃어버린 지갑이 아마 역 근처에서 발견될 거라고 생각했어요.",
+   "blank": "恐らく",
+   "src": "made"
+  },
+  {
+   "text": "さくらの話し方からすると、恐らく関西の出身だろう。",
+   "en": "Judging from the way Sakura talks, she's probably from the Kansai region.",
+   "ko": "사쿠라의 말투로 보면 아마 간사이 출신일 거예요.",
+   "blank": "恐らく",
+   "src": "made"
+  }
+ ],
  "w|恐れ": [
   {
    "text": "健太は、失礼なことを書いた恐れがあると思い、手紙を読み直した。",
@@ -31221,6 +31733,22 @@
    "src": "made"
   }
  ],
+ "w|戦力": [
+  {
+   "text": "新しく入った若い弁護士は、すぐに事務所の戦力になった。",
+   "en": "The young lawyer who just joined quickly became a valuable asset to the firm.",
+   "ko": "새로 들어온 젊은 변호사는 금방 사무소의 전력이 됐어요.",
+   "blank": "戦力",
+   "src": "made"
+  },
+  {
+   "text": "新しく来た看護師は経験が豊富で、すぐに病院の戦力になった。",
+   "en": "The newly arrived nurse had lots of experience and quickly became an asset to the clinic.",
+   "ko": "새로 온 간호사는 경험이 풍부해서 금방 병원의 전력이 됐어요.",
+   "blank": "戦力",
+   "src": "made"
+  }
+ ],
  "w|戦国": [
   {
    "text": "城下町の祭りでは、戦国時代の武将の行列が人気だ。",
@@ -31475,6 +32003,22 @@
    "blank": "手伝おう"
   }
  ],
+ "w|手元": [
+  {
+   "text": "証人が話すあいだ、拓也は手元の資料に何度も目を落とした。",
+   "en": "While the witness spoke, Takuya kept glancing down at the papers in front of him.",
+   "ko": "증인이 말하는 동안 다쿠야는 손에 든 자료로 여러 번 눈을 돌렸어요.",
+   "blank": "手元",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、注射をするときは必ず手元を明るくする。",
+   "en": "Keiko always makes sure her hands are well lit when giving an injection.",
+   "ko": "게이코는 주사를 놓을 때 꼭 손 주변을 밝게 해요.",
+   "blank": "手元",
+   "src": "made"
+  }
+ ],
  "w|手前": [
   {
    "text": "亮はいつも、会社の一つ手前の駅で降りて歩く。",
@@ -31641,6 +32185,22 @@
    "ko": "자기 재능을 보여 주려면 이 드문 기회를 최대한 활용해야 해요.",
    "blank": "才能",
    "src": "tatoeba:149847 en:264711/CK"
+  }
+ ],
+ "w|打ち上げる": [
+  {
+   "text": "事件が解決した夜、大輔の課は居酒屋で打ち上げをした。",
+   "en": "The night the case was solved, Daisuke's section held a wrap-up party at a pub.",
+   "ko": "사건이 해결된 밤, 다이스케네 과는 술집에서 뒤풀이를 했어요.",
+   "blank": "打ち上げ",
+   "src": "made"
+  },
+  {
+   "text": "さくらの前の職場は、人工衛星を打ち上げる会社だった。",
+   "en": "Sakura's previous workplace was a company that launches satellites.",
+   "ko": "사쿠라의 전 직장은 인공위성을 쏘아 올리는 회사였어요.",
+   "blank": "打ち上げる",
+   "src": "made"
   }
  ],
  "w|打つ": [
@@ -31815,6 +32375,22 @@
    "en": "Don't throw the problem at me.",
    "ko": "문제를 던지지 마.",
    "blank": "投げ"
+  }
+ ],
+ "w|投下": [
+  {
+   "text": "会社が巨額の資金を投下した事業をめぐって、株主が訴えを起こした。",
+   "en": "Shareholders filed a suit over a business into which the company had invested a huge sum.",
+   "ko": "회사가 거액의 자금을 투입한 사업을 두고 주주들이 소송을 걸었어요.",
+   "blank": "投下",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、新しい検査機器に大きな資金を投下した。",
+   "en": "Keiko invested a large sum of money in new testing equipment.",
+   "ko": "게이코는 새 검사 장비에 큰 자금을 투입했어요.",
+   "blank": "投下",
+   "src": "made"
   }
  ],
  "w|投入": [
@@ -32009,6 +32585,22 @@
    "en": "Don't resist forcibly.",
    "ko": "억지로 저항하지 마.",
    "blank": "抵抗"
+  }
+ ],
+ "w|押さえ": [
+  {
+   "text": "拓也は、週末の草野球では押さえのピッチャーを任されている。",
+   "en": "In weekend sandlot baseball, Takuya is trusted as the closing pitcher.",
+   "ko": "다쿠야는 주말 동네 야구에서 마무리 투수를 맡고 있어요.",
+   "blank": "押さえ",
+   "src": "made"
+  },
+  {
+   "text": "暴れる大型犬の押さえ役を、恵子は看護師に頼んだ。",
+   "en": "Keiko asked a nurse to be the one to hold down a big dog that was struggling.",
+   "ko": "게이코는 날뛰는 대형견을 붙잡는 역할을 간호사에게 부탁했어요.",
+   "blank": "押さえ",
+   "src": "made"
   }
  ],
  "w|押す": [
@@ -32440,6 +33032,22 @@
    "en": "A regular told Misaki that a shoplifter had been caught near the shop.",
    "ko": "가게 근처에서 좀도둑이 잡혔다고 단골손님이 알려 줬어요.",
    "blank": "捕まった",
+   "src": "made"
+  }
+ ],
+ "w|捕虜": [
+  {
+   "text": "大輔は休みの日に、戦争中の捕虜についての資料館を訪れた。",
+   "en": "On his day off, Daisuke visited a museum about prisoners of war during wartime.",
+   "ko": "다이스케는 쉬는 날에 전쟁 중 포로에 관한 자료관을 찾았어요.",
+   "blank": "捕虜",
+   "src": "made"
+  },
+  {
+   "text": "さくらの祖父は、戦争中に捕虜になった経験を本に書いた。",
+   "en": "Sakura's grandfather wrote a book about his experience of becoming a prisoner during the war.",
+   "ko": "사쿠라의 할아버지는 전쟁 중 포로가 된 경험을 책으로 썼어요.",
+   "blank": "捕虜",
    "src": "made"
   }
  ],
@@ -32877,6 +33485,22 @@
    "src": "made"
   }
  ],
+ "w|握る": [
+  {
+   "text": "パトカーのハンドルを握ると、大輔の顔は引き締まる。",
+   "en": "When Daisuke grips the steering wheel of the patrol car, his face tightens.",
+   "ko": "순찰차 핸들을 잡으면 다이스케의 얼굴은 진지해져요.",
+   "blank": "握る",
+   "src": "made"
+  },
+  {
+   "text": "初日の挨拶で、さくらは緊張して手をぎゅっと握っていた。",
+   "en": "During her first-day greeting, Sakura was nervous and squeezing her hands tightly.",
+   "ko": "첫날 인사 때 사쿠라는 긴장해서 손을 꽉 쥐고 있었어요.",
+   "blank": "握って",
+   "src": "made"
+  }
+ ],
  "w|援助": [
   {
    "text": "この図書館の建物は、ある財団の援助で建てられた。",
@@ -33149,6 +33773,22 @@
    "en": "Let's all pitch in.",
    "ko": "다 같이 지원하자.",
    "blank": "支援"
+  }
+ ],
+ "w|支部": [
+  {
+   "text": "大輔は、地域の防犯協会の支部の会合に出席した。",
+   "en": "Daisuke attended a meeting of the local branch of the crime prevention association.",
+   "ko": "다이스케는 지역 방범 협회 지부 모임에 참석했어요.",
+   "blank": "支部",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、来月から大阪支部に移る予定だ。",
+   "en": "Sakura is scheduled to move to the Osaka branch next month.",
+   "ko": "사쿠라는 다음 달부터 오사카 지부로 옮길 예정이에요.",
+   "blank": "支部",
+   "src": "made"
   }
  ],
  "w|支配": [
@@ -33527,6 +34167,22 @@
    "src": "made"
   }
  ],
+ "w|救出": [
+  {
+   "text": "拓也が扱う裁判は、遭難者の救出に遅れた責任を問うものだった。",
+   "en": "The trial Takuya was handling questioned who was responsible for the delay in rescuing the stranded people.",
+   "ko": "다쿠야가 맡은 재판은 조난자 구출이 늦어진 책임을 묻는 것이었어요.",
+   "blank": "救出",
+   "src": "made"
+  },
+  {
+   "text": "側溝から救出された子猫が、恵子の病院に運ばれてきた。",
+   "en": "A kitten rescued from a gutter was brought to Keiko's clinic.",
+   "ko": "배수로에서 구출된 새끼 고양이가 게이코의 병원으로 실려 왔어요.",
+   "blank": "救出",
+   "src": "made"
+  }
+ ],
  "w|救助": [
   {
    "text": "テレビで、山で迷った人の救助の様子が流れていた。",
@@ -33556,6 +34212,22 @@
    "en": "At Yumi's company, everyone took a first-aid course.",
    "ko": "유미의 회사에서는 전원이 응급 처치 강습을 받았어요.",
    "blank": "救急",
+   "src": "made"
+  }
+ ],
+ "w|救済": [
+  {
+   "text": "詐欺の被害者の救済のために、警察は専用の窓口を作った。",
+   "en": "The police set up a dedicated desk to provide relief for fraud victims.",
+   "ko": "경찰은 사기 피해자 구제를 위해 전용 창구를 만들었어요.",
+   "blank": "救済",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、中小企業の救済の制度について詳しい。",
+   "en": "Sakura knows a lot about relief programs for small businesses.",
+   "ko": "사쿠라는 중소기업 구제 제도에 대해 잘 알아요.",
+   "blank": "救済",
    "src": "made"
   }
  ],
@@ -34111,6 +34783,38 @@
    "blank": "新幹線"
   }
  ],
+ "w|新曲": [
+  {
+   "text": "この裁判は、歌手の新曲が盗作かどうかを争うものだ。",
+   "en": "This trial is a dispute over whether a singer's new song was plagiarized.",
+   "ko": "이 재판은 가수의 신곡이 표절인지 아닌지를 다투는 거예요.",
+   "blank": "新曲",
+   "src": "made"
+  },
+  {
+   "text": "待合室のラジオから、人気歌手の新曲が流れていた。",
+   "en": "A popular singer's new song was playing on the radio in the waiting room.",
+   "ko": "대기실 라디오에서 인기 가수의 신곡이 흘러나오고 있었어요.",
+   "blank": "新曲",
+   "src": "made"
+  }
+ ],
+ "w|新着": [
+  {
+   "text": "拓也は休廷中に、事務所からの新着メールを確認した。",
+   "en": "During the recess, Takuya checked new emails from his office.",
+   "ko": "다쿠야는 휴정 중에 사무소에서 온 새 메일을 확인했어요.",
+   "blank": "新着",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、動物の病気に関する新着の論文を毎朝読んでいる。",
+   "en": "Keiko reads newly published papers on animal diseases every morning.",
+   "ko": "게이코는 동물 질병에 관한 새로 나온 논문을 매일 아침 읽어요.",
+   "blank": "新着",
+   "src": "made"
+  }
+ ],
  "w|新聞": [
   {
    "text": "新聞、読んだ？",
@@ -34635,6 +35339,22 @@
    "en": "I saw a star.",
    "ko": "별 보였어.",
    "blank": "星"
+  }
+ ],
+ "w|映る": [
+  {
+   "text": "防犯カメラの映像には、被告の姿がはっきりと映っていた。",
+   "en": "The defendant was clearly visible in the security camera footage.",
+   "ko": "방범 카메라 영상에는 피고의 모습이 또렷이 찍혀 있었어요.",
+   "blank": "映って",
+   "src": "made"
+  },
+  {
+   "text": "超音波の画面に、子犬の小さな心臓が映っていた。",
+   "en": "A puppy's tiny heart showed up on the ultrasound screen.",
+   "ko": "초음파 화면에 강아지의 작은 심장이 비쳤어요.",
+   "blank": "映って",
+   "src": "made"
   }
  ],
  "w|映像": [
@@ -35481,6 +36201,22 @@
    "blank": "有料"
   }
  ],
+ "w|有無": [
+  {
+   "text": "裁判官は、被告の前科の有無を確認した。",
+   "en": "The judge checked whether the defendant had a criminal record.",
+   "ko": "판사는 피고의 전과 유무를 확인했어요.",
+   "blank": "有無",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、薬のアレルギーの有無を飼い主に必ず聞く。",
+   "en": "Keiko always asks owners whether their pets have any drug allergies.",
+   "ko": "게이코는 약 알레르기 유무를 보호자에게 꼭 물어요.",
+   "blank": "有無",
+   "src": "made"
+  }
+ ],
  "w|服": [
   {
    "text": "この服、似合うよ。",
@@ -35967,6 +36703,22 @@
    "en": "Tell me the conditions.",
    "ko": "조건 알려줘.",
    "blank": "条件"
+  }
+ ],
+ "w|条例": [
+  {
+   "text": "拓也は、市の新しい条例が憲法に反すると主張した。",
+   "en": "Takuya argued that the city's new ordinance violated the constitution.",
+   "ko": "다쿠야는 시의 새 조례가 헌법에 어긋난다고 주장했어요.",
+   "blank": "条例",
+   "src": "made"
+  },
+  {
+   "text": "この町には、犬の散歩のふんの始末に関する条例がある。",
+   "en": "This town has an ordinance about cleaning up after dogs on walks.",
+   "ko": "이 동네에는 개 산책 때 배설물 처리에 관한 조례가 있어요.",
+   "blank": "条例",
+   "src": "made"
   }
  ],
  "w|条約": [
@@ -37973,6 +38725,22 @@
    "src": "tatoeba:173443 en:241027"
   }
  ],
+ "w|民衆": [
+  {
+   "text": "歴史好きの大輔は、民衆が王に立ち向かう映画をよく見る。",
+   "en": "History buff Daisuke often watches movies about the common people standing up to a king.",
+   "ko": "역사를 좋아하는 다이스케는 민중이 왕에게 맞서는 영화를 자주 봐요.",
+   "blank": "民衆",
+   "src": "made"
+  },
+  {
+   "text": "さくらは大学で、革命と民衆の歴史を研究していた。",
+   "en": "At university, Sakura studied the history of revolution and the common people.",
+   "ko": "사쿠라는 대학에서 혁명과 민중의 역사를 연구했어요.",
+   "blank": "民衆",
+   "src": "made"
+  }
+ ],
  "w|民間": [
   {
    "text": "民間の力が大きい。",
@@ -38521,6 +39289,22 @@
    "en": "We ran out of oil.",
    "ko": "기름이 모자랐어.",
    "blank": "油"
+  }
+ ],
+ "w|治安": [
+  {
+   "text": "裁判官は判決の中で、町の治安を守ることの大切さに触れた。",
+   "en": "In the ruling, the judge touched on the importance of keeping the town safe.",
+   "ko": "판사는 판결에서 동네 치안을 지키는 것의 중요성을 언급했어요.",
+   "blank": "治安",
+   "src": "made"
+  },
+  {
+   "text": "恵子の病院がある地区は、治安が良くて夜も静かだ。",
+   "en": "The district where Keiko's clinic is located is safe and quiet even at night.",
+   "ko": "게이코의 병원이 있는 지역은 치안이 좋아서 밤에도 조용해요.",
+   "blank": "治安",
+   "src": "made"
   }
  ],
  "w|治療": [
@@ -39449,6 +40233,22 @@
    "blank": "準備"
   }
  ],
+ "w|溜まる": [
+  {
+   "text": "忙しい裁判が続き、拓也の机には書類が山のように溜まっていた。",
+   "en": "With one busy trial after another, documents had piled up on Takuya's desk.",
+   "ko": "바쁜 재판이 이어져 다쿠야의 책상에는 서류가 산더미처럼 쌓여 있었어요.",
+   "blank": "溜まって",
+   "src": "made"
+  },
+  {
+   "text": "検査の結果、その犬はお腹に水が溜まっていた。",
+   "en": "The tests showed that the dog had fluid built up in its belly.",
+   "ko": "검사 결과 그 개는 배에 물이 차 있었어요.",
+   "blank": "溜まって",
+   "src": "made"
+  }
+ ],
  "w|溢れる": [
   {
    "text": "選挙の夜、編集部には電話の音が溢れていた。",
@@ -39462,6 +40262,22 @@
    "en": "Misaki's heart filled with nostalgia, and tears welled up.",
    "ko": "미사키는 그리움으로 가슴이 벅차 눈물이 흘러넘쳤어요.",
    "blank": "溢れ",
+   "src": "made"
+  }
+ ],
+ "w|溶ける": [
+  {
+   "text": "差し入れのアイスは、大輔が戻る前にすっかり溶けていた。",
+   "en": "The ice cream someone brought had completely melted before Daisuke got back.",
+   "ko": "선물로 들어온 아이스크림은 다이스케가 돌아오기 전에 다 녹아 있었어요.",
+   "blank": "溶けて",
+   "src": "made"
+  },
+  {
+   "text": "さくらが配ったお土産のチョコは、暖房のせいで少し溶けていた。",
+   "en": "The chocolates Sakura handed out as souvenirs had melted a little because of the heater.",
+   "ko": "사쿠라가 나눠 준 기념품 초콜릿은 난방 때문에 조금 녹아 있었어요.",
+   "blank": "溶けて",
    "src": "made"
   }
  ],
@@ -39601,6 +40417,22 @@
    "en": "This manga's good.",
    "ko": "이 만화 재밌어.",
    "blank": "漫画"
+  }
+ ],
+ "w|潜在": [
+  {
+   "text": "拓也は、この事件の背景に潜在的な差別の問題があると主張した。",
+   "en": "Takuya argued that there was a latent issue of discrimination behind this case.",
+   "ko": "다쿠야는 이 사건 배경에 잠재적인 차별 문제가 있다고 주장했어요.",
+   "blank": "潜在",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、猫の腎臓病は潜在的に多いと飼い主に説明した。",
+   "en": "Keiko explained to the owner that kidney disease in cats is more common than it appears.",
+   "ko": "게이코는 고양이 신장병이 잠재적으로 많다고 보호자에게 설명했어요.",
+   "blank": "潜在",
+   "src": "made"
   }
  ],
  "w|潰す": [
@@ -39843,6 +40675,22 @@
    "en": "Oh, this one's free.",
    "ko": "이거 무료래.",
    "blank": "無料"
+  }
+ ],
+ "w|無断": [
+  {
+   "text": "空き地に無断で車を止める人が多いと、近所から相談があった。",
+   "en": "Neighbors complained that many people park on the empty lot without permission.",
+   "ko": "빈터에 무단으로 차를 세우는 사람이 많다고 이웃들이 상담하러 왔어요.",
+   "blank": "無断",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、会社の資料を無断で持ち出さないよう注意された。",
+   "en": "Sakura was warned not to take company documents out without permission.",
+   "ko": "사쿠라는 회사 자료를 무단으로 가지고 나가지 말라는 주의를 받았어요.",
+   "blank": "無断",
+   "src": "made"
   }
  ],
  "w|無理": [
@@ -40095,6 +40943,22 @@
    "en": "Laughter exploded.",
    "ko": "웃음이 폭발했어.",
    "blank": "爆発"
+  }
+ ],
+ "w|爆破": [
+  {
+   "text": "駅の爆破予告をした男の裁判が、今日開かれた。",
+   "en": "The trial of the man who threatened to blow up the station was held today.",
+   "ko": "역 폭파 예고를 한 남자의 재판이 오늘 열렸어요.",
+   "blank": "爆破",
+   "src": "made"
+  },
+  {
+   "text": "近くで古いビルの爆破解体があり、病院の犬たちが怖がった。",
+   "en": "An old building nearby was demolished with explosives, and the dogs at the clinic were frightened.",
+   "ko": "근처에서 낡은 빌딩 폭파 해체가 있어서 병원 개들이 무서워했어요.",
+   "blank": "爆破",
+   "src": "made"
   }
  ],
  "w|爪": [
@@ -40457,6 +41321,22 @@
    "en": "Crime is on the rise.",
    "ko": "범죄가 늘고 있어.",
    "blank": "犯罪"
+  }
+ ],
+ "w|犯行": [
+  {
+   "text": "防犯カメラには、犯行の様子がはっきり映っていた。",
+   "en": "The security camera clearly captured the crime being committed.",
+   "ko": "방범 카메라에는 범행 모습이 또렷하게 찍혀 있었어요.",
+   "blank": "犯行",
+   "src": "made"
+  },
+  {
+   "text": "さくらの好きなドラマでは、刑事が犯行の動機を追っている。",
+   "en": "In Sakura's favorite drama, a detective pursues the motive for a crime.",
+   "ko": "사쿠라가 좋아하는 드라마에서는 형사가 범행 동기를 쫓아요.",
+   "blank": "犯行",
+   "src": "made"
   }
  ],
  "w|状態": [
@@ -43109,6 +43989,22 @@
    "src": "made"
   }
  ],
+ "w|知名度": [
+  {
+   "text": "署のマスコットキャラクターは、地元での知名度が高い。",
+   "en": "The station's mascot character is well known locally.",
+   "ko": "경찰서 마스코트 캐릭터는 동네에서 지명도가 높아요.",
+   "blank": "知名度",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、会社の知名度を上げるためにSNSを担当している。",
+   "en": "Sakura is in charge of social media to raise the company's profile.",
+   "ko": "사쿠라는 회사 지명도를 높이기 위해 SNS를 맡고 있어요.",
+   "blank": "知名度",
+   "src": "made"
+  }
+ ],
  "w|知恵": [
   {
    "text": "健太は、おばあちゃんの生活の知恵を自由研究にまとめた。",
@@ -43313,6 +44209,22 @@
    "en": "Ask if it's really certain.",
    "ko": "정말 확실한지 물어봐.",
    "blank": "確か"
+  }
+ ],
+ "w|確かめる": [
+  {
+   "text": "大輔は、通報の内容が本当かどうか現場に行って確かめた。",
+   "en": "Daisuke went to the scene to check whether the report was true.",
+   "ko": "다이스케는 신고 내용이 사실인지 현장에 가서 확인했어요.",
+   "blank": "確かめた",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、送る前にメールの宛先を二度確かめる。",
+   "en": "Sakura double-checks the address before sending an email.",
+   "ko": "사쿠라는 메일을 보내기 전에 받는 사람을 두 번 확인해요.",
+   "blank": "確かめる",
+   "src": "made"
   }
  ],
  "w|確保": [
@@ -43661,6 +44573,22 @@
    "blank": "私たち"
   }
  ],
+ "w|私立": [
+  {
+   "text": "拓也は、私立の高校と保護者の間のトラブルを担当している。",
+   "en": "Takuya is handling a dispute between a private high school and parents.",
+   "ko": "다쿠야는 사립 고등학교와 학부모 사이의 분쟁을 맡고 있어요.",
+   "blank": "私立",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、私立の大学の獣医学部を卒業した。",
+   "en": "Keiko graduated from the veterinary school of a private university.",
+   "ko": "게이코는 사립 대학 수의학부를 졸업했어요.",
+   "blank": "私立",
+   "src": "made"
+  }
+ ],
  "w|秋": [
   {
    "text": "秋が来たね。",
@@ -43778,6 +44706,22 @@
    "en": "Aoi is gathering materials for a documentary about an immigrant family.",
    "ko": "아오이는 이민자 가족을 그린 다큐멘터리 자료를 모으고 있어요.",
    "blank": "移民",
+   "src": "made"
+  }
+ ],
+ "w|移籍": [
+  {
+   "text": "署の野球チームのエースが、本部のチームに移籍した。",
+   "en": "The ace of the station's baseball team transferred to the headquarters team.",
+   "ko": "경찰서 야구팀 에이스가 본부 팀으로 이적했어요.",
+   "blank": "移籍",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、同じ業界のライバル会社から移籍してきた。",
+   "en": "Sakura moved over from a rival company in the same industry.",
+   "ko": "사쿠라는 같은 업계의 경쟁사에서 이직해 왔어요.",
+   "blank": "移籍",
    "src": "made"
   }
  ],
@@ -44535,6 +45479,22 @@
    "src": "made"
   }
  ],
+ "w|系統": [
+  {
+   "text": "無線の系統が故障して、大輔たちは携帯電話で連絡を取り合った。",
+   "en": "The radio system broke down, so Daisuke and the others kept in touch by cell phone.",
+   "ko": "무선 계통이 고장 나서 다이스케네는 휴대폰으로 연락을 주고받았어요.",
+   "blank": "系統",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、電車の系統が分からず、初日に少し遅刻した。",
+   "en": "Sakura didn't understand the train lines and was a little late on her first day.",
+   "ko": "사쿠라는 전철 노선을 몰라서 첫날 조금 지각했어요.",
+   "blank": "系統",
+   "src": "made"
+  }
+ ],
  "w|約束": [
   {
    "text": "約束を守ってね。",
@@ -45031,6 +45991,22 @@
    "src": "made"
   }
  ],
+ "w|結末": [
+  {
+   "text": "長く続いた裁判は、意外な結末を迎えた。",
+   "en": "The long-running trial came to an unexpected conclusion.",
+   "ko": "오래 이어진 재판은 뜻밖의 결말을 맞았어요.",
+   "blank": "結末",
+   "src": "made"
+  },
+  {
+   "text": "恵子が休み時間に読んでいる小説は、結末が気になって止まらない。",
+   "en": "Keiko can't stop reading the novel she's reading on breaks because she wants to know how it ends.",
+   "ko": "게이코가 쉬는 시간에 읽는 소설은 결말이 궁금해서 멈출 수가 없어요.",
+   "blank": "結末",
+   "src": "made"
+  }
+ ],
  "w|結果": [
   {
    "text": "結果、出た？",
@@ -45072,6 +46048,22 @@
    "en": "Sakura summarized in her report the conclusion that they should go ahead with the contract.",
    "ko": "사쿠라는 계약을 진행해야 한다는 결론을 보고서에 정리했어요.",
    "blank": "結論",
+   "src": "made"
+  }
+ ],
+ "w|絡む": [
+  {
+   "text": "酔っ払いが通行人に絡んでいると、大輔に連絡が入った。",
+   "en": "Daisuke got a call that a drunk was picking on passersby.",
+   "ko": "취객이 행인에게 시비를 걸고 있다고 다이스케에게 연락이 왔어요.",
+   "blank": "絡んで",
+   "src": "made"
+  },
+  {
+   "text": "ケーブルが足元で絡んで、さくらは危うく転びそうになった。",
+   "en": "Cables got tangled at her feet, and Sakura almost tripped.",
+   "ko": "케이블이 발밑에서 엉켜서 사쿠라는 하마터면 넘어질 뻔했어요.",
+   "blank": "絡んで",
    "src": "made"
   }
  ],
@@ -45163,6 +46155,22 @@
    "en": "You're really good at drawing.",
    "ko": "그림 잘 그리네.",
    "blank": "絵"
+  }
+ ],
+ "w|絵画": [
+  {
+   "text": "美術館から盗まれた絵画が、三年ぶりに見つかった。",
+   "en": "A painting stolen from the art museum was found after three years.",
+   "ko": "미술관에서 도난당한 그림이 삼 년 만에 발견됐어요.",
+   "blank": "絵画",
+   "src": "made"
+  },
+  {
+   "text": "さくらの趣味は絵画で、週末は美術教室に通っている。",
+   "en": "Sakura's hobby is painting, and she goes to an art class on weekends.",
+   "ko": "사쿠라의 취미는 그림이라 주말에는 미술 교실에 다녀요.",
+   "blank": "絵画",
+   "src": "made"
   }
  ],
  "w|絶対": [
@@ -45889,6 +46897,22 @@
    "blank": "耐える"
   }
  ],
+ "w|耐久": [
+  {
+   "text": "新しいパトカーは、耐久テストを何度も受けてから配られた。",
+   "en": "The new patrol cars were handed out after undergoing durability tests many times.",
+   "ko": "새 순찰차는 내구 시험을 여러 번 거친 뒤에 배치됐어요.",
+   "blank": "耐久",
+   "src": "made"
+  },
+  {
+   "text": "さくらは趣味で、十二時間の耐久レースに出たことがあるそうだ。",
+   "en": "Sakura says she once took part in a twelve-hour endurance race as a hobby.",
+   "ko": "사쿠라는 취미로 열두 시간 내구 레이스에 나간 적이 있대요.",
+   "blank": "耐久",
+   "src": "made"
+  }
+ ],
  "w|耳": [
   {
    "text": "耳、痛い？",
@@ -46252,6 +47276,22 @@
    "en": "The new virus poses a threat to older people's health.",
    "ko": "새 바이러스는 고령자 건강에 위협이 돼요.",
    "blank": "脅威",
+   "src": "made"
+  }
+ ],
+ "w|脅迫": [
+  {
+   "text": "被告は、元の同僚に脅迫の手紙を送った罪に問われている。",
+   "en": "The defendant is charged with sending threatening letters to a former coworker.",
+   "ko": "피고는 전 동료에게 협박 편지를 보낸 죄로 기소돼 있어요.",
+   "blank": "脅迫",
+   "src": "made"
+  },
+  {
+   "text": "ニュースでは、ペットを人質にした脅迫事件が報じられていた。",
+   "en": "The news was reporting a blackmail case in which a pet was held hostage.",
+   "ko": "뉴스에서는 반려동물을 인질로 잡은 협박 사건이 보도되고 있었어요.",
+   "blank": "脅迫",
    "src": "made"
   }
  ],
@@ -47837,6 +48877,22 @@
    "en": "I saw news about the trial.",
    "ko": "재판 뉴스를 봤어.",
    "blank": "裁判"
+  }
+ ],
+ "w|裁判官": [
+  {
+   "text": "大輔の父は、長年地方裁判所の裁判官を務めた。",
+   "en": "Daisuke's father served for many years as a judge at a district court.",
+   "ko": "다이스케의 아버지는 오랫동안 지방법원 판사로 일했어요.",
+   "blank": "裁判官",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、子どものころ裁判官になるのが夢だった。",
+   "en": "When she was a child, Sakura dreamed of becoming a judge.",
+   "ko": "사쿠라는 어릴 때 판사가 되는 게 꿈이었어요.",
+   "blank": "裁判官",
+   "src": "made"
   }
  ],
  "w|裁判所": [
@@ -49565,6 +50621,22 @@
    "src": "made"
   }
  ],
+ "w|話し合い": [
+  {
+   "text": "裁判の前に、双方の弁護士が話し合いの場を持った。",
+   "en": "Before the trial, the lawyers for both sides held a meeting.",
+   "ko": "재판 전에 양측 변호사가 협의 자리를 가졌어요.",
+   "blank": "話し合い",
+   "src": "made"
+  },
+  {
+   "text": "治療の方針は、恵子と飼い主の話し合いで決まった。",
+   "en": "The treatment plan was decided through a discussion between Keiko and the owner.",
+   "ko": "치료 방침은 게이코와 보호자가 의논해서 정했어요.",
+   "blank": "話し合い",
+   "src": "made"
+  }
+ ],
  "w|話す": [
   {
    "text": "あとで話そう。",
@@ -49816,6 +50888,22 @@
    "en": "While unpacking, Mayu nearly gave in to the temptation to nap several times.",
    "ko": "정리하던 중에 마유는 낮잠 자고 싶은 유혹에 몇 번이나 넘어갈 뻔했어요.",
    "blank": "誘惑",
+   "src": "made"
+  }
+ ],
+ "w|誘拐": [
+  {
+   "text": "大輔は、昔の誘拐事件の資料を読んで解決の手がかりを探した。",
+   "en": "Daisuke read the files on an old kidnapping case to look for clues to solve it.",
+   "ko": "다이스케는 옛 유괴 사건 자료를 읽으며 해결의 실마리를 찾았어요.",
+   "blank": "誘拐",
+   "src": "made"
+  },
+  {
+   "text": "さくらは昼休みに、誘拐事件を描いた小説を読んでいた。",
+   "en": "At lunch, Sakura was reading a novel about a kidnapping.",
+   "ko": "사쿠라는 점심시간에 유괴 사건을 그린 소설을 읽고 있었어요.",
+   "blank": "誘拐",
    "src": "made"
   }
  ],
@@ -50159,6 +51247,22 @@
    "en": "I've already given up.",
    "ko": "이미 포기했어.",
    "blank": "諦めた"
+  }
+ ],
+ "w|諸国": [
+  {
+   "text": "拓也は、ヨーロッパ諸国の法律と日本の法律を比べた本を読んでいる。",
+   "en": "Takuya is reading a book comparing the laws of European countries with Japanese law.",
+   "ko": "다쿠야는 유럽 여러 나라의 법률과 일본 법률을 비교한 책을 읽고 있어요.",
+   "blank": "諸国",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、アジア諸国の獣医が集まる学会に参加した。",
+   "en": "Keiko took part in a conference attended by veterinarians from Asian countries.",
+   "ko": "게이코는 아시아 여러 나라 수의사가 모이는 학회에 참가했어요.",
+   "blank": "諸国",
+   "src": "made"
   }
  ],
  "w|謎": [
@@ -51103,6 +52207,22 @@
    "blank": "質問"
   }
  ],
+ "w|賭け": [
+  {
+   "text": "新しい証人を呼ぶのは、拓也にとって大きな賭けだった。",
+   "en": "Calling a new witness was a big gamble for Takuya.",
+   "ko": "새 증인을 부르는 건 다쿠야에게 큰 도박이었어요.",
+   "blank": "賭け",
+   "src": "made"
+  },
+  {
+   "text": "難しい手術だったが、恵子は賭けに出て成功させた。",
+   "en": "It was a difficult operation, but Keiko took a gamble and pulled it off.",
+   "ko": "어려운 수술이었지만 게이코는 모험을 걸어 성공시켰어요.",
+   "blank": "賭け",
+   "src": "made"
+  }
+ ],
  "w|購入": [
   {
    "text": "ネットで購入した。",
@@ -51361,6 +52481,22 @@
    "en": "We'll have enough time.",
    "ko": "시간은 충분해.",
    "blank": "足りる"
+  }
+ ],
+ "w|足元": [
+  {
+   "text": "雪の日のパトロールでは、大輔は足元に気をつけて歩く。",
+   "en": "On snowy days, Daisuke watches his step while on patrol.",
+   "ko": "눈 오는 날 순찰 때 다이스케는 발밑을 조심하며 걸어요.",
+   "blank": "足元",
+   "src": "made"
+  },
+  {
+   "text": "ケーブルが足元で絡んで、さくらは危うく転びそうになった。",
+   "en": "Cables got tangled at her feet, and Sakura almost tripped.",
+   "ko": "케이블이 발밑에서 엉켜서 사쿠라는 하마터면 넘어질 뻔했어요.",
+   "blank": "足元",
+   "src": "made"
   }
  ],
  "w|距離": [
@@ -51646,6 +52782,22 @@
    "en": "Keiko's homeroom teacher changed careers from office worker to teacher.",
    "ko": "게이코의 담임 선생님은 회사원에서 이직해서 교사가 됐어요.",
    "blank": "転職",
+   "src": "made"
+  }
+ ],
+ "w|転載": [
+  {
+   "text": "写真の無断転載をめぐって、写真家がネットの会社を訴えた。",
+   "en": "A photographer sued an internet company over the unauthorized reposting of his photos.",
+   "ko": "사진 무단 전재를 두고 사진가가 인터넷 회사를 고소했어요.",
+   "blank": "転載",
+   "src": "made"
+  },
+  {
+   "text": "病院のブログ記事が、許可なく他のサイトに転載されていた。",
+   "en": "An article from the clinic's blog had been reposted on another site without permission.",
+   "ko": "병원 블로그 글이 허락 없이 다른 사이트에 전재돼 있었어요.",
+   "blank": "転載",
    "src": "made"
   }
  ],
@@ -52686,6 +53838,38 @@
    "en": "Cooperation between school and home is important.",
    "ko": "학교와 가정의 협력이 중요해요.",
    "blank": "連携",
+   "src": "made"
+  }
+ ],
+ "w|連発": [
+  {
+   "text": "署長が冗談を連発して、会議の空気が和らいだ。",
+   "en": "The chief cracked one joke after another, and the mood of the meeting relaxed.",
+   "ko": "서장님이 농담을 연발해서 회의 분위기가 풀렸어요.",
+   "blank": "連発",
+   "src": "made"
+  },
+  {
+   "text": "慣れないパソコンで、さくらは入力ミスを連発した。",
+   "en": "On the unfamiliar computer, Sakura made one typing mistake after another.",
+   "ko": "익숙하지 않은 컴퓨터로 사쿠라는 입력 실수를 연발했어요.",
+   "blank": "連発",
+   "src": "made"
+  }
+ ],
+ "w|連盟": [
+  {
+   "text": "この裁判では、スポーツの連盟の判断が正しかったかが争われた。",
+   "en": "This trial disputed whether a sports federation's decision had been correct.",
+   "ko": "이 재판에서는 스포츠 연맹의 판단이 옳았는지가 쟁점이 됐어요.",
+   "blank": "連盟",
+   "src": "made"
+  },
+  {
+   "text": "恵子の病院は、地域の動物病院の連盟に入っている。",
+   "en": "Keiko's clinic belongs to the local federation of animal hospitals.",
+   "ko": "게이코의 병원은 지역 동물병원 연맹에 가입돼 있어요.",
+   "blank": "連盟",
    "src": "made"
   }
  ],
@@ -54059,6 +55243,22 @@
    "src": "made"
   }
  ],
+ "w|野党": [
+  {
+   "text": "選挙の日、大輔は野党の演説会場の警備を担当した。",
+   "en": "On election day, Daisuke was in charge of security at an opposition party rally.",
+   "ko": "선거 날 다이스케는 야당 유세장 경비를 맡았어요.",
+   "blank": "野党",
+   "src": "made"
+  },
+  {
+   "text": "昼休みのニュースで、野党の党首が会見を開いていた。",
+   "en": "On the lunchtime news, the leader of the opposition party was holding a press conference.",
+   "ko": "점심 뉴스에서 야당 대표가 기자회견을 열고 있었어요.",
+   "blank": "野党",
+   "src": "made"
+  }
+ ],
  "w|野球": [
   {
    "text": "野球、見に行こう。",
@@ -54397,6 +55597,22 @@
    "en": "The mirror broke.",
    "ko": "거울이 깨졌어.",
    "blank": "鏡"
+  }
+ ],
+ "w|鑑定": [
+  {
+   "text": "現場に残された指紋は、鑑定に回された。",
+   "en": "The fingerprints left at the scene were sent for analysis.",
+   "ko": "현장에 남은 지문은 감정에 넘겨졌어요.",
+   "blank": "鑑定",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、前の会社で宝石の鑑定をしていたらしい。",
+   "en": "Sakura apparently appraised jewelry at her previous company.",
+   "ko": "사쿠라는 전 회사에서 보석 감정을 했대요.",
+   "blank": "鑑定",
+   "src": "made"
   }
  ],
  "w|鑑賞": [
@@ -54956,6 +56172,22 @@
    "en": "On rainy days, everyone wants to work from home.",
    "ko": "비가 오는 날에는 다들 집에서 일하고 싶어 해요.",
    "blank": "降る",
+   "src": "made"
+  }
+ ],
+ "w|降伏": [
+  {
+   "text": "立てこもっていた男は、説得されてついに降伏した。",
+   "en": "The barricaded man was persuaded and finally surrendered.",
+   "ko": "농성하던 남자는 설득 끝에 결국 항복했어요.",
+   "blank": "降伏",
+   "src": "made"
+  },
+  {
+   "text": "さくらが将棋で強すぎて、課長はすぐに降伏した。",
+   "en": "Sakura was so good at shogi that the section chief surrendered right away.",
+   "ko": "사쿠라가 장기를 너무 잘 둬서 과장님은 금방 항복했어요.",
+   "blank": "降伏",
    "src": "made"
   }
  ],
@@ -56075,6 +57307,22 @@
    "src": "made"
   }
  ],
+ "w|順調": [
+  {
+   "text": "拓也が担当する裁判は、今のところ順調に進んでいる。",
+   "en": "The trial Takuya is handling is going smoothly so far.",
+   "ko": "다쿠야가 맡은 재판은 지금까지 순조롭게 진행되고 있어요.",
+   "blank": "順調",
+   "src": "made"
+  },
+  {
+   "text": "手術を受けた犬の回復は順調だと、獣医の恵子は飼い主に伝えた。",
+   "en": "Veterinarian Keiko told the owner that the dog's recovery after surgery was going well.",
+   "ko": "수의사 게이코는 수술받은 개의 회복이 순조롭다고 보호자에게 전했어요.",
+   "blank": "順調",
+   "src": "made"
+  }
+ ],
  "w|頑張る": [
   {
    "text": "頑張ってね。",
@@ -56498,6 +57746,22 @@
    "en": "Eating and drinking at the poolside is only allowed in designated areas.",
    "ko": "수영장 가장자리에서의 음식물 섭취는 정해진 곳에서만 할 수 있어요.",
    "blank": "飲食",
+   "src": "made"
+  }
+ ],
+ "w|飼う": [
+  {
+   "text": "大輔の勤める交番では、迷子の子猫をしばらく飼うことになった。",
+   "en": "At the police box where Daisuke works, they decided to keep a lost kitten for a while.",
+   "ko": "다이스케가 근무하는 파출소에서는 길 잃은 새끼 고양이를 당분간 키우기로 했어요.",
+   "blank": "飼う",
+   "src": "made"
+  },
+  {
+   "text": "新しく来たさくらは、家で犬を二匹飼っているそうだ。",
+   "en": "Sakura, who just joined, apparently keeps two dogs at home.",
+   "ko": "새로 온 사쿠라는 집에서 개를 두 마리 키운대요.",
+   "blank": "飼って",
    "src": "made"
   }
  ],
@@ -57043,6 +58307,22 @@
    "en": "I eat hot noodles.",
    "ko": "뜨거운 면을 먹어.",
    "blank": "麺"
+  }
+ ],
+ "w|麻雀": [
+  {
+   "text": "大輔は、署の先輩たちと月に一度麻雀をする。",
+   "en": "Daisuke plays mahjong once a month with senior colleagues from the station.",
+   "ko": "다이스케는 한 달에 한 번 경찰서 선배들과 마작을 해요.",
+   "blank": "麻雀",
+   "src": "made"
+  },
+  {
+   "text": "さくらの趣味が麻雀だと知って、先輩たちは驚いた。",
+   "en": "The senior colleagues were surprised to learn that Sakura's hobby was mahjong.",
+   "ko": "사쿠라의 취미가 마작이라는 걸 알고 선배들은 놀랐어요.",
+   "blank": "麻雀",
+   "src": "made"
   }
  ],
  "w|黄色": [

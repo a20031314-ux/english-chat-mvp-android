@@ -2449,6 +2449,22 @@
    "blank": "आकृति"
   }
  ],
+ "w|आक्रमण": [
+  {
+   "text": "पुराने टाउन हॉल की दीवारों पर सदियों पहले हुए एक आक्रमण के निशान अब भी हैं।",
+   "en": "The walls of the old town hall still bear the marks of an attack from centuries ago.",
+   "ko": "옛 시청 벽에는 몇백 년 전 침략의 흔적이 아직 남아 있어요.",
+   "blank": "आक्रमण",
+   "src": "made"
+  },
+  {
+   "text": "होटल के छोटे संग्रहालय में दिखाया गया है कि किले ने कितने आक्रमण झेले।",
+   "en": "The hotel's small museum shows how many attacks the fort withstood.",
+   "ko": "호텔의 작은 전시실에는 그 성이 얼마나 많은 침략을 견뎠는지 나와 있어요.",
+   "blank": "आक्रमण",
+   "src": "made"
+  }
+ ],
  "w|आँख": [
   {
    "text": "आँख में धूल चली गई।",
@@ -3163,6 +3179,22 @@
    "blank": "आपकी"
   }
  ],
+ "w|आपराधिक": [
+  {
+   "text": "रोहन ने बताया कि सरकारी रिकॉर्ड जलाना एक आपराधिक काम है।",
+   "en": "Rohan explained that burning government records is a criminal act.",
+   "ko": "로한은 정부 기록을 태우는 건 범죄 행위라고 설명했어요.",
+   "blank": "आपराधिक",
+   "src": "made"
+  },
+  {
+   "text": "होटल में चोरी के बाद पुलिस ने एक आपराधिक मामला दर्ज किया।",
+   "en": "After the theft at the hotel, the police registered a criminal case.",
+   "ko": "호텔 도난 사건 뒤 경찰이 형사 사건으로 접수했어요.",
+   "blank": "आपराधिक",
+   "src": "made"
+  }
+ ],
  "w|आपस": [
   {
    "text": "आपस में झगड़ा मत करो।",
@@ -3550,6 +3582,22 @@
    "en": "Deepa listens carefully even to criticism of her work.",
    "ko": "디파는 자기 일에 대한 비판도 귀 기울여 들어요.",
    "blank": "आलोचना",
+   "src": "made"
+  }
+ ],
+ "w|आलोचना करना": [
+  {
+   "text": "कुछ पार्षदों ने नए पानी टैक्स की खुलकर आलोचना की।",
+   "en": "Some councillors openly criticised the new water tax.",
+   "ko": "몇몇 시의원이 새 수도세를 대놓고 비판했어요.",
+   "blank": "आलोचना की",
+   "src": "made"
+  },
+  {
+   "text": "एक पत्रकार ने होटल की धीमी सेवा की आलोचना की, पर मीना ने उसकी बात शांति से सुनी।",
+   "en": "A journalist criticised the hotel's slow service, but Meena listened calmly.",
+   "ko": "한 기자가 호텔의 느린 서비스를 비판했지만 미나는 차분히 들었어요.",
+   "blank": "आलोचना की",
    "src": "made"
   }
  ],
@@ -4815,6 +4863,22 @@
    "en": "The answer was not clear.",
    "ko": "답이 분명하지 않았어.",
    "blank": "उत्तर"
+  }
+ ],
+ "w|उत्थान": [
+  {
+   "text": "रोहन की नई योजना झुग्गी बस्तियों के उत्थान के लिए बनाई गई है।",
+   "en": "Rohan's new plan has been made for the upliftment of slum settlements.",
+   "ko": "로한의 새 계획은 빈민가를 살리기 위해 만들어졌어요.",
+   "blank": "उत्थान",
+   "src": "made"
+  },
+  {
+   "text": "होटल अपनी कमाई का एक हिस्सा गाँव की महिलाओं के उत्थान पर ख़र्च करता है।",
+   "en": "The hotel spends part of its earnings on the upliftment of village women.",
+   "ko": "호텔은 수익 일부를 마을 여성들의 자립을 돕는 데 써요.",
+   "blank": "उत्थान",
+   "src": "made"
   }
  ],
  "w|उत्पन्न": [
@@ -6725,6 +6789,22 @@
    "blank": "कतार"
   }
  ],
+ "w|कथन": [
+  {
+   "text": "महापौर के इस कथन पर तालियाँ बजीं कि शहर सबका है।",
+   "en": "The mayor's statement that the city belongs to everyone drew applause.",
+   "ko": "도시는 모두의 것이라는 시장의 말에 박수가 터졌어요.",
+   "blank": "कथन",
+   "src": "made"
+  },
+  {
+   "text": "मीना अपनी पहली मैनेजर के इस कथन को याद रखती है कि मुस्कान सबसे सस्ता उपहार है।",
+   "en": "Meena remembers her first manager's statement that a smile is the cheapest gift.",
+   "ko": "미나는 미소가 가장 값싼 선물이라는 첫 매니저의 말을 기억해요.",
+   "blank": "कथन",
+   "src": "made"
+  }
+ ],
  "w|कथा": [
   {
    "text": "दादी ने रात को कथा सुनाई।",
@@ -7147,6 +7227,22 @@
    "en": "Honest earnings keep the mind at peace.",
    "ko": "정직한 수입이면 마음이 편해.",
    "blank": "कमाई"
+  }
+ ],
+ "w|कमान": [
+  {
+   "text": "इस बार सफ़ाई अभियान की कमान रोहन को सौंपी गई है।",
+   "en": "This time Rohan has been put in charge of the cleanliness drive.",
+   "ko": "이번에는 청소 캠페인 지휘를 로한이 맡게 됐어요.",
+   "blank": "कमान",
+   "src": "made"
+  },
+  {
+   "text": "मैनेजर छुट्टी पर गए, तो होटल की कमान मीना के हाथ में आ गई।",
+   "en": "When the manager went on leave, the running of the hotel came into Meena's hands.",
+   "ko": "매니저가 휴가를 가자 호텔 운영이 미나 손에 넘어왔어요.",
+   "blank": "कमान",
+   "src": "made"
   }
  ],
  "w|कमाना": [
@@ -7961,6 +8057,22 @@
    "en": "Elder sister works at the office.",
    "ko": "언니는 사무실에서 일해.",
    "blank": "काम करती"
+  }
+ ],
+ "w|काम चलाना": [
+  {
+   "text": "नया कंप्यूटर आने तक रोहन एक पुराने लैपटॉप से काम चला रहा है।",
+   "en": "Until the new computer arrives, Rohan is making do with an old laptop.",
+   "ko": "새 컴퓨터가 올 때까지 로한은 낡은 노트북으로 버티고 있어요.",
+   "blank": "काम चला",
+   "src": "made"
+  },
+  {
+   "text": "लिफ़्ट ख़राब होने से मेहमानों को सीढ़ियों से काम चलाना पड़ा।",
+   "en": "Because the lift was broken, the guests had to make do with the stairs.",
+   "ko": "엘리베이터가 고장 나서 손님들은 계단으로 버텨야 했어요.",
+   "blank": "काम चलाना",
+   "src": "made"
   }
  ],
  "w|कामकाज": [
@@ -11537,6 +11649,22 @@
    "src": "made"
   }
  ],
+ "w|गणतंत्र": [
+  {
+   "text": "गणतंत्र दिवस पर टाउन हॉल की छत पर तिरंगा फहराया गया।",
+   "en": "On Republic Day the tricolour was hoisted on the roof of the town hall.",
+   "ko": "공화국의 날에 시청 지붕에 삼색기가 올라갔어요.",
+   "blank": "गणतंत्र",
+   "src": "made"
+  },
+  {
+   "text": "गणतंत्र दिवस पर होटल ने मेहमानों के लिए तिरंगे रंगों वाला केक बनाया।",
+   "en": "On Republic Day the hotel made a tricolour cake for the guests.",
+   "ko": "공화국의 날에 호텔은 손님들을 위해 삼색 케이크를 만들었어요.",
+   "blank": "गणतंत्र",
+   "src": "made"
+  }
+ ],
  "w|गणित": [
   {
    "text": "गणित मेरा पसंदीदा विषय है।",
@@ -13071,6 +13199,22 @@
    "en": "There are eleven players on the team.",
    "ko": "팀에 열한 명의 선수가 있어.",
    "blank": "ग्यारह"
+  }
+ ],
+ "w|ग्रस्त": [
+  {
+   "text": "रोहन के मोहल्ले की सड़कें बरसों से जलभराव की समस्या से ग्रस्त हैं।",
+   "en": "The roads in Rohan's neighbourhood have suffered from waterlogging for years.",
+   "ko": "로한네 동네 길은 몇 년째 물이 고이는 문제에 시달리고 있어요.",
+   "blank": "ग्रस्त",
+   "src": "made"
+  },
+  {
+   "text": "एक बुज़ुर्ग मेहमान जोड़ों के दर्द से ग्रस्त थे, इसलिए मीना ने उन्हें नीचे का कमरा दिया।",
+   "en": "An elderly guest suffered from joint pain, so Meena gave him a room on the ground floor.",
+   "ko": "나이 든 손님 한 분이 관절통을 앓고 계셔서 미나는 아래층 방을 드렸어요.",
+   "blank": "ग्रस्त",
+   "src": "made"
   }
  ],
  "w|ग्रह": [
@@ -16045,6 +16189,22 @@
    "blank": "छुआ"
   }
  ],
+ "w|छेड़छाड़": [
+  {
+   "text": "किसी ने नोटिस बोर्ड से छेड़छाड़ की थी, इसलिए रोहन ने वहाँ कैमरा लगवाया।",
+   "en": "Someone had tampered with the notice board, so Rohan had a camera installed there.",
+   "ko": "누군가 게시판을 건드려 놓아서 로한은 거기에 카메라를 달았어요.",
+   "blank": "छेड़छाड़",
+   "src": "made"
+  },
+  {
+   "text": "किसी ने कमरे की तिजोरी से छेड़छाड़ की कोशिश की थी, इसलिए मीना ने पुलिस बुलाई।",
+   "en": "Someone had tried to tamper with the room safe, so Meena called the police.",
+   "ko": "누군가 객실 금고를 건드리려 해서 미나는 경찰을 불렀어요.",
+   "blank": "छेड़छाड़",
+   "src": "made"
+  }
+ ],
  "w|छोटा": [
   {
    "text": "छोटा बच्चा पालने में सो रहा है।",
@@ -18245,6 +18405,22 @@
    "src": "made"
   }
  ],
+ "w|झलक": [
+  {
+   "text": "नए भवन के नक्शे में रोहन को एक आधुनिक शहर की झलक दिखी।",
+   "en": "In the plan for the new building, Rohan saw a glimpse of a modern city.",
+   "ko": "로한은 새 청사 도면에서 현대적인 도시의 모습을 언뜻 봤어요.",
+   "blank": "झलक",
+   "src": "made"
+  },
+  {
+   "text": "होटल की छत से दूर पहाड़ों की हल्की-सी झलक मिलती है।",
+   "en": "From the hotel roof you get a faint glimpse of the distant mountains.",
+   "ko": "호텔 옥상에서는 먼 산이 살짝 보여요.",
+   "blank": "झलक",
+   "src": "made"
+  }
+ ],
  "w|झाँकना": [
   {
    "text": "दरवाज़े की दरार से झाँकना गलत है।",
@@ -18657,6 +18833,22 @@
    "blank": "टिप्पणी"
   }
  ],
+ "w|टिप्पणी करना": [
+  {
+   "text": "रोहन ने मसौदे के हाशिये पर कुछ ज़रूरी बातों पर टिप्पणी की।",
+   "en": "Rohan commented on a few important points in the margin of the draft.",
+   "ko": "로한은 초안 여백에 중요한 점 몇 가지에 대해 의견을 적었어요.",
+   "blank": "टिप्पणी की",
+   "src": "made"
+  },
+  {
+   "text": "एक मेहमान ने होटल के खाने पर ऑनलाइन बहुत अच्छी टिप्पणी की।",
+   "en": "A guest posted a very good comment online about the hotel's food.",
+   "ko": "한 손님이 호텔 음식에 대해 온라인에 아주 좋은 평을 남겼어요.",
+   "blank": "टिप्पणी की",
+   "src": "made"
+  }
+ ],
  "w|टिफ़िन": [
   {
    "text": "बचा हुआ खाना राहुल ने अगले दिन के लिए टिफ़िन में पैक करवा लिया।",
@@ -18773,6 +18965,22 @@
    "en": "A small piece of paper is lying on the table.",
    "ko": "종이 조각이 책상 위에 있어.",
    "blank": "टुकड़ा"
+  }
+ ],
+ "w|टूट पड़ना": [
+  {
+   "text": "नई योजना के फ़ॉर्म बँटते ही लोग खिड़की पर टूट पड़े।",
+   "en": "As soon as the forms for the new scheme were handed out, people rushed at the counter.",
+   "ko": "새 제도 신청서를 나눠 주자마자 사람들이 창구로 우르르 몰려들었어요.",
+   "blank": "टूट पड़े",
+   "src": "made"
+  },
+  {
+   "text": "नाश्ते का बुफ़े खुलते ही भूखे सैलानी जलेबियों पर टूट पड़े।",
+   "en": "As soon as the breakfast buffet opened, the hungry tourists pounced on the jalebis.",
+   "ko": "아침 뷔페가 열리자마자 배고픈 관광객들이 잘레비에 달려들었어요.",
+   "blank": "टूट पड़े",
+   "src": "made"
   }
  ],
  "w|टूटना": [
@@ -20199,6 +20407,22 @@
    "blank": "तनाव"
   }
  ],
+ "w|तपस्या": [
+  {
+   "text": "रोहन कहता है कि सरकारी परीक्षा की तैयारी किसी तपस्या से कम नहीं थी।",
+   "en": "Rohan says preparing for the government exam was no less than an act of penance.",
+   "ko": "로한은 공무원 시험 준비가 고행이나 다름없었다고 말해요.",
+   "blank": "तपस्या",
+   "src": "made"
+  },
+  {
+   "text": "मीना हँसकर कहती है कि शादियों के मौसम में होटल चलाना तपस्या जैसा है।",
+   "en": "Meena laughs and says running a hotel in wedding season is like penance.",
+   "ko": "미나는 웃으면서 결혼 시즌에 호텔을 운영하는 건 고행 같다고 말해요.",
+   "blank": "तपस्या",
+   "src": "made"
+  }
+ ],
  "w|तब": [
   {
    "text": "खाना गरमागरम हो, तब परोसना।",
@@ -20270,6 +20494,22 @@
    "en": "When moving house Seema had to throw away all sorts of old papers.",
    "ko": "이사하면서 시마는 온갖 오래된 서류를 버려야 했어요.",
    "blank": "तमाम",
+   "src": "made"
+  }
+ ],
+ "w|तमाशा": [
+  {
+   "text": "दो पार्षदों की बहस देखकर रोहन बोला कि यह बैठक नहीं, तमाशा है।",
+   "en": "Watching two councillors argue, Rohan said this was not a meeting but a circus.",
+   "ko": "시의원 둘이 다투는 걸 보고 로한은 이건 회의가 아니라 구경거리라고 했어요.",
+   "blank": "तमाशा",
+   "src": "made"
+  },
+  {
+   "text": "दो मेहमानों की बहस ने लॉबी में अच्छा-ख़ासा तमाशा खड़ा कर दिया।",
+   "en": "An argument between two guests turned into quite a scene in the lobby.",
+   "ko": "손님 둘의 말다툼이 로비에서 꽤 큰 구경거리가 됐어요.",
+   "blank": "तमाशा",
    "src": "made"
   }
  ],
@@ -23059,6 +23299,22 @@
    "blank": "दुर्घटना"
   }
  ],
+ "w|दुर्लभ": [
+  {
+   "text": "नगर निगम के संग्रह में शहर की कुछ दुर्लभ पुरानी तस्वीरें रखी हैं।",
+   "en": "The municipal collection holds some rare old photographs of the city.",
+   "ko": "시청 소장품에는 도시의 귀한 옛 사진이 몇 장 있어요.",
+   "blank": "दुर्लभ",
+   "src": "made"
+  },
+  {
+   "text": "होटल के बग़ीचे में सुबह-सुबह कुछ दुर्लभ पक्षी दिख जाते हैं।",
+   "en": "Some rare birds can be spotted in the hotel garden early in the morning.",
+   "ko": "이른 아침이면 호텔 정원에서 보기 드문 새들이 눈에 띄어요.",
+   "blank": "दुर्लभ",
+   "src": "made"
+  }
+ ],
  "w|दुलारना": [
   {
    "text": "बकरी का एक बच्चा पास आया और रोहन की बहन उसे दुलारने लगी।",
@@ -25039,6 +25295,22 @@
    "blank": "नागरिक"
   }
  ],
+ "w|नागरिकता": [
+  {
+   "text": "रोहन ने समझाया कि मतदाता सूची में नाम जोड़ने के लिए नागरिकता का प्रमाण चाहिए।",
+   "en": "Rohan explained that proof of citizenship is needed to add a name to the voter list.",
+   "ko": "로한은 선거인 명부에 이름을 올리려면 시민권 증명이 필요하다고 설명했어요.",
+   "blank": "नागरिकता",
+   "src": "made"
+  },
+  {
+   "text": "विदेशी मेहमानों से चेक-इन के समय पासपोर्ट और नागरिकता की जानकारी ली जाती है।",
+   "en": "Foreign guests are asked for passport and citizenship details at check-in.",
+   "ko": "외국인 손님에게는 체크인할 때 여권과 국적 정보를 받아요.",
+   "blank": "नागरिकता",
+   "src": "made"
+  }
+ ],
  "w|नाचना": [
   {
    "text": "शादी में सबको नाचना अच्छा लगता है।",
@@ -26593,6 +26865,22 @@
    "blank": "न्यायालय"
   }
  ],
+ "w|न्यायिक": [
+  {
+   "text": "ज़मीन का यह मामला अब न्यायिक जाँच के अधीन है, इसलिए रोहन कुछ नहीं कह सकता।",
+   "en": "This land case is now under judicial inquiry, so Rohan can't say anything.",
+   "ko": "이 토지 사건은 지금 사법 조사 중이라 로한은 아무 말도 할 수 없어요.",
+   "blank": "न्यायिक",
+   "src": "made"
+  },
+  {
+   "text": "शहर में न्यायिक अधिकारियों का सम्मेलन होने से होटल के सारे कमरे भरे हैं।",
+   "en": "Because of a conference of judicial officers in the city, all the hotel rooms are full.",
+   "ko": "도시에서 사법관 회의가 열려서 호텔 방이 전부 찼어요.",
+   "blank": "न्यायिक",
+   "src": "made"
+  }
+ ],
  "w|न्यूनतम": [
   {
    "text": "डॉक्टर ने करण को न्यूनतम मात्रा में दर्द की दवा दी।",
@@ -28035,6 +28323,22 @@
    "blank": "पलना"
   }
  ],
+ "w|पलायन": [
+  {
+   "text": "गाँवों से शहर की ओर पलायन बढ़ने से नगर निगम पर बोझ बढ़ गया है।",
+   "en": "Growing migration from villages to the city has increased the burden on the municipal corporation.",
+   "ko": "시골에서 도시로 떠나오는 사람이 늘어 시청의 부담이 커졌어요.",
+   "blank": "पलायन",
+   "src": "made"
+  },
+  {
+   "text": "मीना का परिवार भी काम की तलाश में गाँव से पलायन करके शहर आया था।",
+   "en": "Meena's family too had migrated from the village to the city in search of work.",
+   "ko": "미나네 가족도 일자리를 찾아 시골을 떠나 도시로 왔어요.",
+   "blank": "पलायन",
+   "src": "made"
+  }
+ ],
  "w|पवित्र": [
   {
    "text": "यह मंदिर बहुत पवित्र माना जाता है।",
@@ -28281,6 +28585,22 @@
    "en": "The first bus has left without us.",
    "ko": "첫 버스는 놓쳤어.",
    "blank": "पहली"
+  }
+ ],
+ "w|पहलू": [
+  {
+   "text": "रोहन ने कहा कि बजट के हर पहलू पर खुलकर चर्चा होनी चाहिए।",
+   "en": "Rohan said every aspect of the budget should be discussed openly.",
+   "ko": "로한은 예산의 모든 측면을 터놓고 논의해야 한다고 말했어요.",
+   "blank": "पहलू",
+   "src": "made"
+  },
+  {
+   "text": "मीना किसी भी शिकायत के हर पहलू को ध्यान से सुनती है।",
+   "en": "Meena listens carefully to every aspect of any complaint.",
+   "ko": "미나는 어떤 불만이든 모든 면을 귀 기울여 들어요.",
+   "blank": "पहलू",
+   "src": "made"
   }
  ],
  "w|पहले": [
@@ -29083,6 +29403,22 @@
    "en": "Don't get left behind.",
    "ko": "너는 뒤에 처지지 마.",
    "blank": "पीछे"
+  }
+ ],
+ "w|पीछे हटना": [
+  {
+   "text": "शिकायत सुनने के बाद ठेकेदार अपनी ज़्यादा पैसे की माँग से पीछे हट गया।",
+   "en": "After hearing the complaint, the contractor backed down from his demand for more money.",
+   "ko": "항의를 듣고 나서 업자는 돈을 더 달라던 요구에서 물러섰어요.",
+   "blank": "पीछे हट",
+   "src": "made"
+  },
+  {
+   "text": "शादी वाले परिवार ने आख़िरी समय पर बुकिंग से पीछे हटने का फ़ैसला किया।",
+   "en": "The wedding family decided at the last moment to back out of the booking.",
+   "ko": "결혼식 가족은 마지막 순간에 예약을 물리기로 했어요.",
+   "blank": "पीछे हटने",
+   "src": "made"
   }
  ],
  "w|पीटना": [
@@ -33491,6 +33827,22 @@
    "blank": "बराबर"
   }
  ],
+ "w|बराबरी": [
+  {
+   "text": "रोहन चाहता है कि ठेके देने में सबको बराबरी का मौक़ा मिले।",
+   "en": "Rohan wants everyone to get an equal chance when contracts are awarded.",
+   "ko": "로한은 계약을 줄 때 모두가 똑같은 기회를 얻기를 바라요.",
+   "blank": "बराबरी",
+   "src": "made"
+  },
+  {
+   "text": "मीना हर कर्मचारी के साथ बराबरी का व्यवहार करती है।",
+   "en": "Meena treats every employee as an equal.",
+   "ko": "미나는 모든 직원을 똑같이 대해요.",
+   "blank": "बराबरी",
+   "src": "made"
+  }
+ ],
  "w|बरामद": [
   {
    "text": "चोरी हुए पोशाक के बक्से पुलिस को बाद में एक गोदाम से बरामद हुए।",
@@ -33669,6 +34021,22 @@
    "en": "Bring a new bulb from the market.",
    "ko": "시장에서 새 전구를 사 와.",
    "blank": "बल्ब"
+  }
+ ],
+ "w|बवाल": [
+  {
+   "text": "पानी के नए बिलों पर टाउन हॉल के बाहर ख़ूब बवाल हुआ।",
+   "en": "There was a big uproar outside the town hall over the new water bills.",
+   "ko": "새 수도 요금 고지서 때문에 시청 앞에서 큰 소동이 벌어졌어요.",
+   "blank": "बवाल",
+   "src": "made"
+  },
+  {
+   "text": "रात को पानी बंद होने पर एक मेहमान ने रिसेप्शन पर बवाल मचा दिया।",
+   "en": "When the water was cut off at night, a guest kicked up a fuss at reception.",
+   "ko": "밤에 물이 끊기자 한 손님이 프런트에서 소란을 피웠어요.",
+   "blank": "बवाल",
+   "src": "made"
   }
  ],
  "w|बस": [
@@ -37685,6 +38053,22 @@
    "blank": "मधुमेह"
   }
  ],
+ "w|मधुर": [
+  {
+   "text": "सभा की शुरुआत स्कूल के बच्चों के एक मधुर गीत से हुई।",
+   "en": "The meeting began with a sweet song by the school children.",
+   "ko": "회의는 학교 아이들의 고운 노래로 시작됐어요.",
+   "blank": "मधुर",
+   "src": "made"
+  },
+  {
+   "text": "होटल की लॉबी में दिन भर धीमा, मधुर संगीत बजता रहता है।",
+   "en": "Soft, sweet music plays all day in the hotel lobby.",
+   "ko": "호텔 로비에는 하루 종일 잔잔하고 달콤한 음악이 흘러요.",
+   "blank": "मधुर",
+   "src": "made"
+  }
+ ],
  "w|मध्य": [
   {
    "text": "कमरे के मध्य में मेज़ है।",
@@ -38205,6 +38589,22 @@
    "blank": "महँगाई"
   }
  ],
+ "w|महज़": [
+  {
+   "text": "रोहन को यह फ़ाइल पास कराने में महज़ दो दिन लगे।",
+   "en": "It took Rohan a mere two days to get this file approved.",
+   "ko": "로한이 이 서류를 통과시키는 데는 겨우 이틀 걸렸어요.",
+   "blank": "महज़",
+   "src": "made"
+  },
+  {
+   "text": "मीना को यह नौकरी महज़ एक छोटे-से इंटरव्यू के बाद मिल गई थी।",
+   "en": "Meena got this job after merely one short interview.",
+   "ko": "미나는 짧은 면접 한 번만으로 이 일자리를 얻었어요.",
+   "blank": "महज़",
+   "src": "made"
+  }
+ ],
  "w|महत्व": [
   {
    "text": "स्वास्थ्य का महत्व सब समझते हैं।",
@@ -38331,6 +38731,22 @@
    "en": "Measuring the depth of the ocean is hard.",
    "ko": "대양의 깊이를 재는 건 어려워.",
    "blank": "महासागर"
+  }
+ ],
+ "w|महिमा": [
+  {
+   "text": "गाइड ने पर्यटकों के सामने पुराने टाउन हॉल की महिमा का बखान किया।",
+   "en": "The guide praised the grandeur of the old town hall in front of the tourists.",
+   "ko": "가이드는 관광객들 앞에서 옛 시청의 위엄을 한껏 자랑했어요.",
+   "blank": "महिमा",
+   "src": "made"
+  },
+  {
+   "text": "होटल का गाइड मेहमानों को पास के पुराने किले की महिमा के बारे में बताता है।",
+   "en": "The hotel guide tells guests about the glory of the old fort nearby.",
+   "ko": "호텔 가이드는 손님들에게 근처 옛 성의 영광에 대해 이야기해요.",
+   "blank": "महिमा",
+   "src": "made"
   }
  ],
  "w|महिला": [
@@ -38511,6 +38927,22 @@
    "blank": "माता"
   }
  ],
+ "w|मातृभाषा": [
+  {
+   "text": "नगर निगम के फ़ॉर्म अब नागरिकों की मातृभाषा में भी मिलते हैं।",
+   "en": "Municipal forms are now also available in citizens' mother tongues.",
+   "ko": "시청 서식은 이제 시민들의 모국어로도 받을 수 있어요.",
+   "blank": "मातृभाषा",
+   "src": "made"
+  },
+  {
+   "text": "मीना मेहमानों की मातृभाषा में दो-चार शब्द बोलना सीख लेती है।",
+   "en": "Meena learns to say a few words in the guests' mother tongue.",
+   "ko": "미나는 손님들의 모국어로 몇 마디 하는 법을 익혀 둬요.",
+   "blank": "मातृभाषा",
+   "src": "made"
+  }
+ ],
  "w|मात्र": [
   {
    "text": "काम पूरा होने में मात्र एक दिन बचा है।",
@@ -38638,6 +39070,22 @@
    "en": "Anjali jumping in to save an unknown child from drowning was true humanity.",
    "ko": "모르는 아이를 구하려고 뛰어든 안잘리의 행동은 진정한 인간애였어요.",
    "blank": "मानवता",
+   "src": "made"
+  }
+ ],
+ "w|मानवाधिकार": [
+  {
+   "text": "सभा में मानवाधिकार संगठन की एक प्रतिनिधि ने बेघर लोगों की बात उठाई।",
+   "en": "At the meeting, a representative of a human rights group raised the issue of homeless people.",
+   "ko": "회의에서 인권 단체 대표 한 분이 노숙인 문제를 꺼냈어요.",
+   "blank": "मानवाधिकार",
+   "src": "made"
+  },
+  {
+   "text": "इस हफ़्ते होटल में मानवाधिकार पर एक बड़ा सम्मेलन हो रहा है।",
+   "en": "This week a big conference on human rights is being held at the hotel.",
+   "ko": "이번 주 호텔에서는 인권에 관한 큰 회의가 열리고 있어요.",
+   "blank": "मानवाधिकार",
    "src": "made"
   }
  ],
@@ -41589,6 +42037,22 @@
    "blank": "रहस्य"
   }
  ],
+ "w|राक्षस": [
+  {
+   "text": "टाउन हॉल में हुए बच्चों के नाटक में रोहन का बेटा राक्षस बना था।",
+   "en": "In the children's play held at the town hall, Rohan's son played a demon.",
+   "ko": "시청에서 열린 어린이 연극에서 로한의 아들은 괴물 역을 맡았어요.",
+   "blank": "राक्षस",
+   "src": "made"
+  },
+  {
+   "text": "राक्षस की कहानी सुनकर एक बच्ची डर गई, तो मीना ने उसे परियों की कहानी सुनाई।",
+   "en": "A little girl got scared after hearing a demon story, so Meena told her a fairy tale.",
+   "ko": "괴물 이야기를 듣고 꼬마 여자아이가 무서워하자 미나는 요정 이야기를 들려줬어요.",
+   "blank": "राक्षस",
+   "src": "made"
+  }
+ ],
  "w|राख": [
   {
    "text": "चूल्हे की राख बाहर फेंक दो।",
@@ -42417,6 +42881,22 @@
    "en": "The doctor explained the treatment for the disease.",
    "ko": "의사가 병의 치료법을 알려 줬어.",
    "blank": "रोग"
+  }
+ ],
+ "w|रोचक": [
+  {
+   "text": "नगर निगम के इतिहास पर रोहन की प्रस्तुति काफ़ी रोचक थी।",
+   "en": "Rohan's presentation on the history of the municipal corporation was quite interesting.",
+   "ko": "시청 역사에 관한 로한의 발표는 꽤 흥미로웠어요.",
+   "blank": "रोचक",
+   "src": "made"
+  },
+  {
+   "text": "एक बूढ़े मेहमान ने मीना को अपनी यात्राओं के रोचक क़िस्से सुनाए।",
+   "en": "An old guest told Meena interesting stories from his travels.",
+   "ko": "나이 든 손님 한 분이 미나에게 여행 중 겪은 재미있는 이야기를 들려줬어요.",
+   "blank": "रोचक",
+   "src": "made"
   }
  ],
  "w|रोज़": [
@@ -44333,6 +44813,22 @@
    "blank": "वास्तविक"
   }
  ],
+ "w|वास्तविकता": [
+  {
+   "text": "काग़ज़ पर नई सड़क बन चुकी थी, पर वास्तविकता कुछ और ही थी।",
+   "en": "On paper the new road had been built, but the reality was quite different.",
+   "ko": "서류상으로는 새 도로가 다 지어졌지만, 실제는 전혀 달랐어요.",
+   "blank": "वास्तविकता",
+   "src": "made"
+  },
+  {
+   "text": "वेबसाइट पर कमरा बड़ा दिखता था, पर वास्तविकता में वह काफ़ी छोटा निकला।",
+   "en": "The room looked big on the website, but in reality it turned out quite small.",
+   "ko": "웹사이트에서는 방이 넓어 보였는데 실제로는 꽤 좁았어요.",
+   "blank": "वास्तविकता",
+   "src": "made"
+  }
+ ],
  "w|वाह": [
   {
    "text": "वाह, कितना सुंदर दृश्य है!",
@@ -44477,6 +44973,22 @@
    "en": "Everyone was happy after the victory.",
    "ko": "승리 뒤에 모두가 기뻤어.",
    "blank": "विजय"
+  }
+ ],
+ "w|विजयी": [
+  {
+   "text": "चुनाव के बाद विजयी पार्षद ने सबसे पहले रोहन से हाथ मिलाया।",
+   "en": "After the election, the winning councillor shook hands with Rohan first.",
+   "ko": "선거가 끝나자 당선된 시의원은 맨 먼저 로한과 악수했어요.",
+   "blank": "विजयी",
+   "src": "made"
+  },
+  {
+   "text": "विजयी क्रिकेट टीम ने होटल में देर रात तक जश्न मनाया।",
+   "en": "The winning cricket team celebrated at the hotel until late at night.",
+   "ko": "우승한 크리켓 팀이 호텔에서 밤늦게까지 축하 파티를 했어요.",
+   "blank": "विजयी",
+   "src": "made"
   }
  ],
  "w|विजेता": [
@@ -45609,6 +46121,22 @@
    "src": "made"
   }
  ],
+ "w|व्यंग्य": [
+  {
+   "text": "अख़बार में नगर निगम की धीमी चाल पर एक तीखा व्यंग्य छपा।",
+   "en": "A sharp satire on the municipal corporation's slowness appeared in the newspaper.",
+   "ko": "신문에 시청의 느린 일 처리를 꼬집는 날카로운 풍자가 실렸어요.",
+   "blank": "व्यंग्य",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने एक मेहमान की बात में छिपा व्यंग्य समझ लिया और बस मुस्कुरा दी।",
+   "en": "Meena caught the sarcasm hidden in a guest's remark and just smiled.",
+   "ko": "미나는 손님 말 속에 숨은 비꼼을 알아채고 그냥 웃었어요.",
+   "blank": "व्यंग्य",
+   "src": "made"
+  }
+ ],
  "w|व्यंजन": [
   {
    "text": "मेज़ पर कई पारंपरिक व्यंजन सजे थे।",
@@ -45621,6 +46149,22 @@
    "en": "This dish is very light and tasty.",
    "ko": "이 요리는 아주 담백하고 맛있어.",
    "blank": "व्यंजन"
+  }
+ ],
+ "w|व्यर्थ": [
+  {
+   "text": "रोहन मानता है कि बिना योजना के पैसा ख़र्च करना व्यर्थ है।",
+   "en": "Rohan believes spending money without a plan is pointless.",
+   "ko": "로한은 계획 없이 돈을 쓰는 건 헛된 일이라고 생각해요.",
+   "blank": "व्यर्थ",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने रसोइये से कहा कि इतना खाना व्यर्थ फेंकना ठीक नहीं है।",
+   "en": "Meena told the cook that it isn't right to throw away so much food uselessly.",
+   "ko": "미나는 요리사에게 음식을 이렇게 헛되이 버리는 건 옳지 않다고 했어요.",
+   "blank": "व्यर्थ",
+   "src": "made"
   }
  ],
  "w|व्यवसाय": [
@@ -45765,6 +46309,22 @@
    "blank": "व्रत"
   }
  ],
+ "w|व्रत रखना": [
+  {
+   "text": "रोहन की सहकर्मी आज व्रत रख रही है, इसलिए उसने दोपहर का खाना नहीं खाया।",
+   "en": "Rohan's colleague is fasting today, so she didn't eat lunch.",
+   "ko": "로한의 동료는 오늘 금식 중이라 점심을 먹지 않았어요.",
+   "blank": "व्रत रख",
+   "src": "made"
+  },
+  {
+   "text": "एक मेहमान ने बताया कि उन्होंने आज व्रत रखा है, तो मीना ने फलाहार मँगवाया।",
+   "en": "A guest said she was fasting today, so Meena ordered a fruit meal.",
+   "ko": "한 손님이 오늘 금식 중이라고 하자 미나는 과일 식사를 주문했어요.",
+   "blank": "व्रत रखा",
+   "src": "made"
+  }
+ ],
  "w|व्हेल": [
   {
    "text": "विकास की बेटी ने टीवी पर डॉल्फ़िन देखी और पूछा कि क्या व्हेल उससे बड़ी होती है।",
@@ -45836,6 +46396,22 @@
    "en": "Neha's brother set up a powerful speaker on the roof, and even the neighbours started dancing.",
    "ko": "네하 남동생이 옥상에 센 스피커를 달자 이웃들까지 춤을 췄어요.",
    "blank": "शक्तिशाली",
+   "src": "made"
+  }
+ ],
+ "w|शक्ल": [
+  {
+   "text": "मरम्मत के बाद पुराने टाउन हॉल की शक्ल पूरी तरह बदल गई है।",
+   "en": "After the repairs, the look of the old town hall has completely changed.",
+   "ko": "수리 뒤로 옛 시청 건물의 모습이 완전히 바뀌었어요.",
+   "blank": "शक्ल",
+   "src": "made"
+  },
+  {
+   "text": "थकान से मेहमान की शक्ल उतरी हुई थी, तो मीना ने तुरंत चाय भिजवाई।",
+   "en": "The guest's face looked drawn from tiredness, so Meena sent tea right away.",
+   "ko": "손님 얼굴이 피곤에 지쳐 보여서 미나는 바로 차를 보냈어요.",
+   "blank": "शक्ल",
    "src": "made"
   }
  ],
@@ -46955,6 +47531,22 @@
    "blank": "शेष"
   }
  ],
+ "w|शैतान": [
+  {
+   "text": "रोहन की बेटी पूरी शैतान है, दफ़्तर आते ही सबकी मेज़ से पेन उठा लेती है।",
+   "en": "Rohan's daughter is a little devil; as soon as she comes to the office she grabs pens from everyone's desk.",
+   "ko": "로한의 딸은 장난꾸러기라 사무실에 오자마자 모두의 책상에서 펜을 집어 가요.",
+   "blank": "शैतान",
+   "src": "made"
+  },
+  {
+   "text": "दूसरी मंज़िल का एक शैतान बच्चा बार-बार लिफ़्ट के सारे बटन दबा देता है।",
+   "en": "A naughty kid from the second floor keeps pressing all the lift buttons.",
+   "ko": "이 층에 묵는 장난꾸러기 아이가 자꾸 엘리베이터 버튼을 전부 눌러요.",
+   "blank": "शैतान",
+   "src": "made"
+  }
+ ],
  "w|शैम्पू": [
   {
    "text": "पानी चला गया और अजय के बालों में शैम्पू लगा रह गया।",
@@ -47347,6 +47939,22 @@
    "en": "The organization's meeting will be tomorrow.",
    "ko": "단체 회의는 내일이야.",
    "blank": "संगठन"
+  }
+ ],
+ "w|संगठित": [
+  {
+   "text": "इस बार बाढ़ राहत का काम पहले से ज़्यादा संगठित ढंग से हुआ।",
+   "en": "This time the flood relief work was done in a more organised way than before.",
+   "ko": "이번 홍수 구호 작업은 전보다 훨씬 체계적으로 이뤄졌어요.",
+   "blank": "संगठित",
+   "src": "made"
+  },
+  {
+   "text": "मीना की टीम इतनी संगठित है कि बड़ी शादी में भी कोई गड़बड़ नहीं होती।",
+   "en": "Meena's team is so organised that nothing goes wrong even at a big wedding.",
+   "ko": "미나의 팀은 손발이 잘 맞아서 큰 결혼식에서도 실수가 없어요.",
+   "blank": "संगठित",
+   "src": "made"
   }
  ],
  "w|संगीत": [
@@ -50551,6 +51159,22 @@
    "blank": "सालों"
   }
  ],
+ "w|सावधान": [
+  {
+   "text": "रोहन ने चपरासी से कहा कि सीढ़ियाँ गीली हैं, सावधान रहना।",
+   "en": "Rohan told the peon that the stairs were wet, so be careful.",
+   "ko": "로한은 계단이 젖어 있으니 조심하라고 사환에게 말했어요.",
+   "blank": "सावधान",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने मेहमानों को बताया कि पूल के किनारे फिसलन है, ज़रा सावधान रहिए।",
+   "en": "Meena told the guests that the poolside is slippery, so please be careful.",
+   "ko": "미나는 손님들에게 수영장 가장자리가 미끄러우니 조심하시라고 했어요.",
+   "blank": "सावधान",
+   "src": "made"
+  }
+ ],
  "w|सावधानी से": [
   {
    "text": "काँच का गिलास सावधानी से उठाना।",
@@ -53383,6 +54007,22 @@
    "en": "The lush green mountain view captivates the mind.",
    "ko": "푸르른 산 풍경이 마음을 사로잡아.",
    "blank": "हरा भरा"
+  }
+ ],
+ "w|हराना": [
+  {
+   "text": "नगर निगम की क्रिकेट टीम ने पुलिस की टीम को आसानी से हराया।",
+   "en": "The municipal corporation's cricket team easily beat the police team.",
+   "ko": "시청 크리켓 팀이 경찰 팀을 손쉽게 이겼어요.",
+   "blank": "हराया",
+   "src": "made"
+  },
+  {
+   "text": "शतरंज में मीना को हराकर एक छोटा मेहमान ख़ुशी से उछल पड़ा।",
+   "en": "After beating Meena at chess, a young guest jumped with joy.",
+   "ko": "꼬마 손님 하나가 체스에서 미나를 이기고 신나서 펄쩍 뛰었어요.",
+   "blank": "हराकर",
+   "src": "made"
   }
  ],
  "w|हरी मिर्च": [
