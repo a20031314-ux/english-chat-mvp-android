@@ -7433,6 +7433,22 @@
    "src": "made"
   }
  ],
+ "w|आवेदक": [
+  {
+   "text": "क्रेन ऑपरेटर की नौकरी के लिए रोहन ने कई आवेदकों का इंटरव्यू लिया।",
+   "en": "Rohan interviewed several applicants for the crane operator job.",
+   "ko": "로한은 크레인 기사 자리에 지원한 여러 사람을 면접했어요.",
+   "blank": "आवेदकों",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने सहायक की नौकरी के लिए आए हर आवेदक से एक केक सजवाया।",
+   "en": "Meena had every applicant for the assistant job decorate a cake.",
+   "ko": "미나는 보조 자리에 지원한 사람마다 케이크를 하나씩 장식해 보게 했어요.",
+   "blank": "आवेदक",
+   "src": "made"
+  }
+ ],
  "w|आवेदन": [
   {
    "text": "नौकरी के लिए आवेदन भर दो।",
@@ -9834,6 +9850,22 @@
    "en": "The village women have together started a small pickle-making business.",
    "ko": "마을 여자들이 함께 작은 장아찌 사업을 시작했어요.",
    "blank": "उद्यम",
+   "src": "made"
+  }
+ ],
+ "w|उद्यमिता": [
+  {
+   "text": "रोहन के ठेकेदार दोस्त की उद्यमिता ने एक छोटी कंपनी को बड़ा बना दिया।",
+   "en": "The entrepreneurship of Rohan's contractor friend turned a small company into a big one.",
+   "ko": "로한의 친구인 시공업자의 기업가 정신이 작은 회사를 크게 키웠어요.",
+   "blank": "उद्यमिता",
+   "src": "made"
+  },
+  {
+   "text": "मीना की उद्यमिता देखकर मोहल्ले की और औरतों ने भी अपना काम शुरू किया।",
+   "en": "Inspired by Meena's entrepreneurship, other women in the neighbourhood also started their own businesses.",
+   "ko": "미나의 사업 수완을 보고 동네의 다른 여자들도 자기 일을 시작했어요.",
+   "blank": "उद्यमिता",
    "src": "made"
   }
  ],
@@ -14187,6 +14219,22 @@
    "src": "made"
   }
  ],
+ "w|कसाई": [
+  {
+   "text": "साइट के बग़ल में एक कसाई की पुरानी दुकान है, जिसका मालिक रोहन से धूल की शिकायत करता है।",
+   "en": "Next to the site is an old butcher's shop whose owner complains to Rohan about the dust.",
+   "ko": "현장 옆에는 오래된 정육점이 있는데 주인이 로한에게 먼지 때문에 불평해요.",
+   "blank": "कसाई",
+   "src": "made"
+  },
+  {
+   "text": "मीना की बेकरी के बग़ल में एक कसाई की दुकान है, पर दोनों दुकानदार अच्छे दोस्त हैं।",
+   "en": "There is a butcher's shop next to Meena's bakery, but the two shopkeepers are good friends.",
+   "ko": "미나의 빵집 옆에는 정육점이 있는데 두 가게 주인은 친한 친구예요.",
+   "blank": "कसाई",
+   "src": "made"
+  }
+ ],
  "w|कस्टम": [
   {
    "text": "सुनील ने हवाई अड्डे पर कस्टम में पकड़े गए सोने की ख़बर लिखी।",
@@ -15099,6 +15147,22 @@
    "src": "made"
   }
  ],
+ "w|कार्यकुशलता": [
+  {
+   "text": "रोहन की कार्यकुशलता से इमारत का ढाँचा तय समय से पहले खड़ा हो गया।",
+   "en": "Thanks to Rohan's efficiency, the building's frame went up ahead of schedule.",
+   "ko": "로한의 일솜씨 덕분에 건물 골조가 예정보다 일찍 올라갔어요.",
+   "blank": "कार्यकुशलता",
+   "src": "made"
+  },
+  {
+   "text": "मीना की कार्यकुशलता की वजह से बेकरी में सुबह होने से पहले सारी ब्रेड तैयार हो जाती है।",
+   "en": "Because of Meena's efficiency, all the bread in the bakery is ready before dawn.",
+   "ko": "미나의 일솜씨 덕분에 빵집의 빵은 동트기 전에 전부 준비돼요.",
+   "blank": "कार्यकुशलता",
+   "src": "made"
+  }
+ ],
  "w|कार्यक्रम": [
   {
    "text": "कार्यक्रम शाम को शुरू होगा।",
@@ -15270,6 +15334,22 @@
    "en": "Meena had plants put in the office to make the workplace feel like home.",
    "ko": "미나는 일터를 집처럼 만들려고 사무실에 화분을 들였어요.",
    "blank": "कार्यस्थल",
+   "src": "made"
+  }
+ ],
+ "w|कार्यात्मक": [
+  {
+   "text": "रोहन चाहता है कि इमारत सुंदर ही नहीं, कार्यात्मक भी हो।",
+   "en": "Rohan wants the building to be not just beautiful but functional too.",
+   "ko": "로한은 건물이 아름다울 뿐 아니라 쓸모도 있기를 바라요.",
+   "blank": "कार्यात्मक",
+   "src": "made"
+  },
+  {
+   "text": "मीना की रसोई छोटी है, पर हर चीज़ कार्यात्मक ढंग से रखी है।",
+   "en": "Meena's kitchen is small, but everything is arranged in a functional way.",
+   "ko": "미나의 주방은 작지만 모든 게 쓰기 편하게 놓여 있어요.",
+   "blank": "कार्यात्मक",
    "src": "made"
   }
  ],
@@ -18243,6 +18323,22 @@
    "en": "The holiday will end tomorrow.",
    "ko": "휴가가 내일 끝나.",
    "blank": "खत्म हो"
+  }
+ ],
+ "w|खदेड़ना": [
+  {
+   "text": "रोहन ने सुबह सुना कि चौकीदार ने रात को साइट में घुसे आवारा कुत्तों को खदेड़ दिया।",
+   "en": "Rohan heard in the morning that the watchman had chased off stray dogs that got into the site at night.",
+   "ko": "로한은 경비원이 밤에 현장에 들어온 떠돌이 개들을 쫓아냈다는 얘기를 아침에 들었어요.",
+   "blank": "खदेड़",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने झाड़ू लेकर बेकरी से चूहों को खदेड़ा।",
+   "en": "Meena took a broom and chased the mice out of the bakery.",
+   "ko": "미나는 빗자루를 들고 빵집에서 쥐들을 쫓아냈어요.",
+   "blank": "खदेड़ा",
+   "src": "made"
   }
  ],
  "w|खनकना": [
@@ -22609,6 +22705,22 @@
    "blank": "घुमाना"
   }
  ],
+ "w|घुमावदार": [
+  {
+   "text": "रोहन की टीम ने लॉबी में एक घुमावदार सीढ़ी बनाई।",
+   "en": "Rohan's team built a spiral staircase in the lobby.",
+   "ko": "로한의 팀은 로비에 나선형 계단을 만들었어요.",
+   "blank": "घुमावदार",
+   "src": "made"
+  },
+  {
+   "text": "मीना की बेकरी एक घुमावदार गली के आख़िर में है।",
+   "en": "Meena's bakery is at the end of a winding lane.",
+   "ko": "미나의 빵집은 구불구불한 골목 끝에 있어요.",
+   "blank": "घुमावदार",
+   "src": "made"
+  }
+ ],
  "w|घुलना": [
   {
    "text": "अजय ने देखा कि बालकनी की नमी से दीवार का रंग घुलकर बह रहा है।",
@@ -24254,6 +24366,22 @@
    "en": "A local painter has drawn pictures of smiling teeth on the walls of Seema's clinic.",
    "ko": "동네 화가가 시마 치과 벽에 웃는 이 그림을 그려 놓았어요.",
    "blank": "चित्रकार",
+   "src": "made"
+  }
+ ],
+ "w|चित्रकारी": [
+  {
+   "text": "रोहन ने लॉबी की दीवार पर चित्रकारी के लिए एक कलाकार को बुलाया।",
+   "en": "Rohan called in an artist to paint a mural on the lobby wall.",
+   "ko": "로한은 로비 벽에 그림을 그릴 화가를 불렀어요.",
+   "blank": "चित्रकारी",
+   "src": "made"
+  },
+  {
+   "text": "मीना केक पर क्रीम से ऐसी चित्रकारी करती है कि लोग उसे काटना नहीं चाहते।",
+   "en": "Meena paints such designs on cakes with cream that people don't want to cut them.",
+   "ko": "미나가 크림으로 케이크에 그림을 너무 예쁘게 그려서 사람들이 자르기 아까워해요.",
+   "blank": "चित्रकारी",
    "src": "made"
   }
  ],
@@ -29309,6 +29437,22 @@
    "src": "made"
   }
  ],
+ "w|जौहरी": [
+  {
+   "text": "रोहन ने बताया कि इमारत की पहली मंज़िल एक जौहरी ने किराए पर ली है।",
+   "en": "Rohan said that a jeweller has rented the first floor of the building.",
+   "ko": "로한은 건물 일 층을 보석상이 임대했다고 했어요.",
+   "blank": "जौहरी",
+   "src": "made"
+  },
+  {
+   "text": "शहर के एक जौहरी ने अपनी बेटी की शादी का केक मीना से बनवाया।",
+   "en": "A jeweller in the city had Meena make the cake for his daughter's wedding.",
+   "ko": "시내의 한 보석상이 딸의 결혼식 케이크를 미나에게 맡겼어요.",
+   "blank": "जौहरी",
+   "src": "made"
+  }
+ ],
  "w|ज्ञात": [
   {
    "text": "इस सिक्के के बनाने वाले का नाम आज तक ज्ञात नहीं है।",
@@ -30799,6 +30943,22 @@
    "en": "Payment will happen when the contract is finished.",
    "ko": "계약이 끝나면 대금이 지급돼.",
    "blank": "ठेका"
+  }
+ ],
+ "w|ठेका देना": [
+  {
+   "text": "कंपनी ने रोहन की सलाह पर बिजली के काम का ठेका दिया।",
+   "en": "On Rohan's advice, the company awarded the contract for the electrical work.",
+   "ko": "회사는 로한의 조언에 따라 전기 공사 계약을 줬어요.",
+   "blank": "ठेका दिया",
+   "src": "made"
+  },
+  {
+   "text": "स्कूल ने बच्चों के नाश्ते का ठेका दिया, तो मीना की बेकरी को चुना गया।",
+   "en": "When the school gave out the contract for children's breakfast, Meena's bakery was chosen.",
+   "ko": "학교가 아이들 아침 식사 계약을 맡기면서 미나의 빵집이 뽑혔어요.",
+   "blank": "ठेका दिया",
+   "src": "made"
   }
  ],
  "w|ठेकेदार": [
@@ -36071,6 +36231,22 @@
    "src": "made"
   }
  ],
+ "w|दिलकश": [
+  {
+   "text": "छत से शहर का दिलकश नज़ारा देखकर रोहन अपनी थकान भूल गया।",
+   "en": "Seeing the charming view of the city from the roof, Rohan forgot his tiredness.",
+   "ko": "옥상에서 도시의 멋진 풍경을 보자 로한은 피로를 잊었어요.",
+   "blank": "दिलकश",
+   "src": "made"
+  },
+  {
+   "text": "मीना की बेकरी की खिड़की में सजे दिलकश केक राहगीरों को रोक लेते हैं।",
+   "en": "The charming cakes displayed in Meena's bakery window stop passers-by in their tracks.",
+   "ko": "미나의 빵집 창가에 진열된 멋진 케이크들이 지나가는 사람들의 발길을 붙잡아요.",
+   "blank": "दिलकश",
+   "src": "made"
+  }
+ ],
  "w|दिलचस्प": [
   {
    "text": "यह किताब बहुत दिलचस्प है।",
@@ -40487,6 +40663,22 @@
    "src": "made"
   }
  ],
+ "w|निचला": [
+  {
+   "text": "रोहन ने इमारत की निचली मंज़िल पर पार्किंग बनाने का सुझाव दिया।",
+   "en": "Rohan suggested building parking on the lower floor of the building.",
+   "ko": "로한은 건물 아래층에 주차장을 만들자고 제안했어요.",
+   "blank": "निचली",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने ओवन की निचली ट्रे में बिस्किट रखे।",
+   "en": "Meena put the biscuits on the lower tray of the oven.",
+   "ko": "미나는 오븐 아래 칸 쟁반에 비스킷을 넣었어요.",
+   "blank": "निचली",
+   "src": "made"
+  }
+ ],
  "w|निचोड़ना": [
   {
    "text": "कपड़े को अच्छी तरह निचोड़ो।",
@@ -40901,6 +41093,22 @@
    "en": "The officer's appointment will be next month.",
    "ko": "간부 임명은 다음 달에 있을 거야.",
    "blank": "नियुक्ति"
+  }
+ ],
+ "w|नियोक्ता": [
+  {
+   "text": "रोहन ने कहा कि हर नियोक्ता की ज़िम्मेदारी है कि मज़दूरों को हेलमेट मिले।",
+   "en": "Rohan said it is every employer's duty to make sure workers get helmets.",
+   "ko": "로한은 인부들에게 안전모를 주는 건 모든 고용주의 책임이라고 했어요.",
+   "blank": "नियोक्ता",
+   "src": "made"
+  },
+  {
+   "text": "मीना एक अच्छी नियोक्ता है, जो कर्मचारियों को त्योहार पर बोनस देती है।",
+   "en": "Meena is a good employer who gives her staff a festival bonus.",
+   "ko": "미나는 명절에 직원들에게 보너스를 주는 좋은 고용주예요.",
+   "blank": "नियोक्ता",
+   "src": "made"
   }
  ],
  "w|निरंकुश": [
@@ -44075,6 +44283,22 @@
    "src": "made"
   }
  ],
+ "w|पराया": [
+  {
+   "text": "रोहन के ज़्यादातर मज़दूर दूर से आए हैं, पर साइट पर कोई ख़ुद को पराया नहीं समझता।",
+   "en": "Most of Rohan's workers have come from far away, but no one on site feels like an outsider.",
+   "ko": "로한의 인부들은 대부분 멀리서 왔지만 현장에서 아무도 자신을 남이라 여기지 않아요.",
+   "blank": "पराया",
+   "src": "made"
+  },
+  {
+   "text": "नए शहर में मीना को शुरू में सब कुछ पराया लगता था।",
+   "en": "In the new city, everything felt foreign to Meena at first.",
+   "ko": "새 도시에서 미나는 처음엔 모든 게 낯설게 느껴졌어요.",
+   "blank": "पराया",
+   "src": "made"
+  }
+ ],
  "w|परिकल्पना": [
   {
    "text": "संपादक ने रोहन से कहा कि बिना सबूत की परिकल्पना को ख़बर मत बनाओ।",
@@ -44178,6 +44402,22 @@
    "en": "Ripe apples were hanging on the trees, and Neha bought a basket.",
    "ko": "나무마다 잘 익은 사과가 달려 있어서 네하는 한 바구니 샀어요.",
    "blank": "परिपक्व",
+   "src": "made"
+  }
+ ],
+ "w|परिपत्र": [
+  {
+   "text": "नगर निगम के नए परिपत्र के मुताबिक़ रोहन रात में मशीनें नहीं चला सकता।",
+   "en": "According to the municipal corporation's new circular, Rohan cannot run machines at night.",
+   "ko": "시청의 새 공문에 따라 로한은 밤에 기계를 돌릴 수 없어요.",
+   "blank": "परिपत्र",
+   "src": "made"
+  },
+  {
+   "text": "खाद्य विभाग के परिपत्र के बाद मीना ने हर पैकेट पर तारीख़ छापनी शुरू की।",
+   "en": "After the food department's circular, Meena started printing the date on every packet.",
+   "ko": "식품 당국의 공문이 나온 뒤 미나는 포장마다 날짜를 찍기 시작했어요.",
+   "blank": "परिपत्र",
    "src": "made"
   }
  ],
@@ -44404,6 +44644,22 @@
    "en": "Deepa finds true joy in helping others, so she teaches painting free to the children of the slum.",
    "ko": "디파는 남을 돕는 데서 진정한 기쁨을 느껴서 동네 아이들에게 그림을 무료로 가르쳐요.",
    "blank": "परोपकार",
+   "src": "made"
+  }
+ ],
+ "w|परोपकारी": [
+  {
+   "text": "एक परोपकारी व्यापारी ने रोहन की साइट के मज़दूरों के बच्चों के लिए स्कूल बनवाया।",
+   "en": "A charitable merchant built a school for the children of the workers at Rohan's site.",
+   "ko": "자선심 많은 상인이 로한 현장 인부들의 아이들을 위해 학교를 지었어요.",
+   "blank": "परोपकारी",
+   "src": "made"
+  },
+  {
+   "text": "मीना परोपकारी स्वभाव की है और बची हुई ब्रेड अनाथालय भेज देती है।",
+   "en": "Meena has a charitable nature and sends leftover bread to the orphanage.",
+   "ko": "미나는 남을 돕는 성품이라 남은 빵을 보육원에 보내요.",
+   "blank": "परोपकारी",
    "src": "made"
   }
  ],
@@ -46911,6 +47167,22 @@
    "src": "made"
   }
  ],
+ "w|पूंजीपति": [
+  {
+   "text": "रोहन ने बताया कि इस मॉल में एक बड़े पूंजीपति का पैसा लगा है।",
+   "en": "Rohan said that a big capitalist's money has gone into this mall.",
+   "ko": "로한은 이 쇼핑몰에 큰 자본가의 돈이 들어갔다고 했어요.",
+   "blank": "पूंजीपति",
+   "src": "made"
+  },
+  {
+   "text": "एक पूंजीपति ने मीना की बेकरी ख़रीदने की पेशकश की, पर मीना ने मना कर दिया।",
+   "en": "A capitalist offered to buy Meena's bakery, but Meena refused.",
+   "ko": "한 자본가가 미나의 빵집을 사겠다고 했지만 미나는 거절했어요.",
+   "blank": "पूंजीपति",
+   "src": "made"
+  }
+ ],
  "w|पूंजीवाद": [
   {
    "text": "अर्थशास्त्र की क्लास में राहुल ने पूंजीवाद और समाजवाद पर एक निबंध लिखा।",
@@ -47166,6 +47438,22 @@
    "en": "The assistant tightened the loose screw on the dental chair's armrest.",
    "ko": "조수가 치과 의자 팔걸이의 헐거운 나사를 조였어요.",
    "blank": "पेंच",
+   "src": "made"
+  }
+ ],
+ "w|पेचीदा": [
+  {
+   "text": "पुराने पाइपों का नक़्शा इतना पेचीदा था कि रोहन को उसे समझने में घंटों लगे।",
+   "en": "The layout of the old pipes was so complicated that it took Rohan hours to understand it.",
+   "ko": "옛 배관 도면이 너무 복잡해서 로한은 이해하는 데 몇 시간이 걸렸어요.",
+   "blank": "पेचीदा",
+   "src": "made"
+  },
+  {
+   "text": "शादी के केक का डिज़ाइन इतना पेचीदा था कि मीना ने रात भर काम किया।",
+   "en": "The wedding cake design was so intricate that Meena worked all night.",
+   "ko": "결혼식 케이크 디자인이 너무 복잡해서 미나는 밤새 일했어요.",
+   "blank": "पेचीदा",
    "src": "made"
   }
  ],
@@ -48911,6 +49199,22 @@
    "src": "made"
   }
  ],
+ "w|प्रपत्र": [
+  {
+   "text": "रोहन ने हर मज़दूर से सुरक्षा प्रपत्र पर दस्तख़त करवाए।",
+   "en": "Rohan had every worker sign the safety form.",
+   "ko": "로한은 모든 인부에게 안전 서식에 서명하게 했어요.",
+   "blank": "प्रपत्र",
+   "src": "made"
+  },
+  {
+   "text": "खाद्य लाइसेंस के लिए मीना ने एक लंबा प्रपत्र भरा।",
+   "en": "Meena filled out a long form for her food licence.",
+   "ko": "미나는 식품 허가를 받으려고 긴 서식을 작성했어요.",
+   "blank": "प्रपत्र",
+   "src": "made"
+  }
+ ],
  "w|प्रबंध करना": [
   {
    "text": "गर्मी को देखते हुए राहुल ने मज़दूरों के लिए ठंडे पानी का प्रबंध किया।",
@@ -49243,6 +49547,22 @@
    "en": "Students examine samples in the laboratory.",
    "ko": "학생들이 실험실에서 표본을 검사해.",
    "blank": "प्रयोगशाला"
+  }
+ ],
+ "w|प्रयोगात्मक": [
+  {
+   "text": "रोहन साइट पर एक प्रयोगात्मक ईंट आज़मा रहा है, जो प्लास्टिक कचरे से बनी है।",
+   "en": "Rohan is trying out an experimental brick made from plastic waste on site.",
+   "ko": "로한은 현장에서 플라스틱 쓰레기로 만든 실험용 벽돌을 시험하고 있어요.",
+   "blank": "प्रयोगात्मक",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने बाजरे के आटे से एक प्रयोगात्मक केक बनाया।",
+   "en": "Meena made an experimental cake with millet flour.",
+   "ko": "미나는 수수 가루로 실험적인 케이크를 만들었어요.",
+   "blank": "प्रयोगात्मक",
+   "src": "made"
   }
  ],
  "w|प्रलोभन": [
@@ -49719,6 +50039,22 @@
    "en": "Your proposal is worth hearing.",
    "ko": "네 제안은 들어볼 만해.",
    "blank": "प्रस्ताव"
+  }
+ ],
+ "w|प्रस्तावना": [
+  {
+   "text": "रोहन ने परियोजना रिपोर्ट की प्रस्तावना में इमारत का मक़सद समझाया।",
+   "en": "In the introduction to the project report, Rohan explained the purpose of the building.",
+   "ko": "로한은 사업 보고서 서문에 건물의 목적을 설명했어요.",
+   "blank": "प्रस्तावना",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने अपनी रेसिपी की किताब की प्रस्तावना अपनी दादी को समर्पित की।",
+   "en": "Meena dedicated the preface of her recipe book to her grandmother.",
+   "ko": "미나는 요리책 서문을 할머니께 바쳤어요.",
+   "blank": "प्रस्तावना",
+   "src": "made"
   }
  ],
  "w|प्रस्तावित": [
@@ -52451,6 +52787,22 @@
    "blank": "बंद की"
   }
  ],
+ "w|बदतमीज़ी": [
+  {
+   "text": "रोहन ने साफ़ कहा कि साइट पर किसी भी तरह की बदतमीज़ी बर्दाश्त नहीं होगी।",
+   "en": "Rohan said clearly that no rudeness of any kind would be tolerated on site.",
+   "ko": "로한은 현장에서 어떤 무례도 용납하지 않겠다고 분명히 말했어요.",
+   "blank": "बदतमीज़ी",
+   "src": "made"
+  },
+  {
+   "text": "एक ग्राहक ने बदतमीज़ी की, फिर भी मीना ने शांति से बात की।",
+   "en": "A customer was rude, yet Meena spoke calmly.",
+   "ko": "손님 한 명이 무례하게 굴었지만 미나는 차분하게 말했어요.",
+   "blank": "बदतमीज़ी",
+   "src": "made"
+  }
+ ],
  "w|बदतर": [
   {
    "text": "इलाज के बिना हालत बदतर हो गई।",
@@ -53072,6 +53424,22 @@
    "en": "Years ago Priya's uncle was dismissed from his job in the forest department.",
    "ko": "프리야의 삼촌은 오래전에 산림청에서 해고됐어요.",
    "blank": "बर्ख़ास्त",
+   "src": "made"
+  }
+ ],
+ "w|बर्ख़ास्तगी": [
+  {
+   "text": "नशे में क्रेन चलाने वाले की बर्ख़ास्तगी का फ़ैसला रोहन ने तुरंत लिया।",
+   "en": "Rohan immediately decided to dismiss the man who had operated the crane while drunk.",
+   "ko": "로한은 술에 취해 크레인을 몬 사람을 즉시 해고하기로 했어요.",
+   "blank": "बर्ख़ास्तगी",
+   "src": "made"
+  },
+  {
+   "text": "बार-बार देर से आने वाले कर्मचारी की बर्ख़ास्तगी मीना के लिए मुश्किल फ़ैसला था।",
+   "en": "Dismissing the employee who kept coming late was a hard decision for Meena.",
+   "ko": "자꾸 지각하는 직원을 해고하는 건 미나에게 어려운 결정이었어요.",
+   "blank": "बर्ख़ास्तगी",
    "src": "made"
   }
  ],
@@ -54199,6 +54567,22 @@
    "blank": "बार बार"
   }
  ],
+ "w|बारंबार": [
+  {
+   "text": "रोहन ने बारंबार कहा कि हेलमेट के बिना कोई ऊपर नहीं जाएगा।",
+   "en": "Rohan said again and again that no one would go up without a helmet.",
+   "ko": "로한은 안전모 없이는 아무도 위에 올라가면 안 된다고 거듭 말했어요.",
+   "blank": "बारंबार",
+   "src": "made"
+  },
+  {
+   "text": "मीना बारंबार आटा छानती है, ताकि ब्रेड हल्की बने।",
+   "en": "Meena sifts the flour again and again so the bread turns out light.",
+   "ko": "미나는 빵이 가볍게 나오도록 밀가루를 몇 번이고 체에 쳐요.",
+   "blank": "बारंबार",
+   "src": "made"
+  }
+ ],
  "w|बारह": [
   {
    "text": "घड़ी पर बारह बज रहे हैं।",
@@ -55099,6 +55483,22 @@
    "blank": "बुधवार"
   }
  ],
+ "w|बुनकर": [
+  {
+   "text": "रोहन की साइट पर बन रहा भवन बुनकरों के लिए एक नया बाज़ार होगा।",
+   "en": "The building going up at Rohan's site will be a new market for weavers.",
+   "ko": "로한의 현장에서 짓고 있는 건물은 직조공들을 위한 새 시장이 될 거예요.",
+   "blank": "बुनकरों",
+   "src": "made"
+  },
+  {
+   "text": "मीना की बेकरी में ब्रेड रखने की टोकरियाँ गाँव के एक बुनकर ने बनाई हैं।",
+   "en": "The bread baskets in Meena's bakery were made by a village weaver.",
+   "ko": "미나의 빵집 빵 바구니는 시골의 한 직조공이 만든 거예요.",
+   "blank": "बुनकर",
+   "src": "made"
+  }
+ ],
  "w|बुनना": [
   {
    "text": "मकड़ियों को जाल बुनना अच्छा लगता है।",
@@ -55441,6 +55841,38 @@
    "src": "made"
   }
  ],
+ "w|बेदाग़": [
+  {
+   "text": "रोहन का सुरक्षा रिकॉर्ड अब तक बेदाग़ है।",
+   "en": "Rohan's safety record is spotless so far.",
+   "ko": "로한의 안전 기록은 지금까지 흠잡을 데가 없어요.",
+   "blank": "बेदाग़",
+   "src": "made"
+  },
+  {
+   "text": "दिन ख़त्म होने पर भी मीना का एप्रन बेदाग़ रहता है।",
+   "en": "Even at the end of the day, Meena's apron stays spotless.",
+   "ko": "하루가 끝나도 미나의 앞치마는 얼룩 하나 없어요.",
+   "blank": "बेदाग़",
+   "src": "made"
+  }
+ ],
+ "w|बेपरवाह": [
+  {
+   "text": "एक बेपरवाह मज़दूर ने सीढ़ी पर औज़ार छोड़ दिए, तो रोहन ने उसे टोका।",
+   "en": "A careless worker left his tools on the ladder, so Rohan pulled him up.",
+   "ko": "부주의한 인부가 사다리에 공구를 두고 가자 로한이 주의를 줬어요.",
+   "blank": "बेपरवाह",
+   "src": "made"
+  },
+  {
+   "text": "मीना का नया सहायक थोड़ा बेपरवाह है और ओवन का टाइमर भूल जाता है।",
+   "en": "Meena's new assistant is a bit careless and forgets the oven timer.",
+   "ko": "미나의 새 보조는 좀 덜렁대서 오븐 타이머를 잊어버려요.",
+   "blank": "बेपरवाह",
+   "src": "made"
+  }
+ ],
  "w|बेबस": [
   {
    "text": "कंप्यूटर का पासवर्ड न चलने से राहुल ख़ुद को बेबस महसूस कर रहा था।",
@@ -55696,6 +56128,22 @@
    "en": "Of course this medicine is expensive, but it works quickly.",
    "ko": "물론 이 약은 비싸지만 효과가 빨라요.",
    "blank": "बेशक",
+   "src": "made"
+  }
+ ],
+ "w|बेशक़ीमती": [
+  {
+   "text": "खुदाई में मिले पुराने सिक्के बेशक़ीमती निकले, तो रोहन ने पुलिस को ख़बर की।",
+   "en": "The old coins found during digging turned out to be very valuable, so Rohan informed the police.",
+   "ko": "땅을 파다 나온 옛 동전이 아주 귀한 것이어서 로한은 경찰에 알렸어요.",
+   "blank": "बेशक़ीमती",
+   "src": "made"
+  },
+  {
+   "text": "मीना के लिए दादी की हाथ से लिखी रेसिपी बेशक़ीमती है।",
+   "en": "For Meena, her grandmother's handwritten recipe is priceless.",
+   "ko": "미나에게 할머니가 손으로 쓴 요리법은 값을 매길 수 없을 만큼 소중해요.",
+   "blank": "बेशक़ीमती",
    "src": "made"
   }
  ],
@@ -56710,6 +57158,22 @@
    "en": "The hotel gave Meena a free breakfast to make up for the booking mix-up.",
    "ko": "호텔은 예약 착오를 보상하려고 미나에게 무료 아침을 줬어요.",
    "blank": "भरपाई",
+   "src": "made"
+  }
+ ],
+ "w|भरपाई करना": [
+  {
+   "text": "बारिश से हुई देरी की भरपाई करने के लिए रोहन ने रविवार को भी काम रखा।",
+   "en": "To make up for the delay caused by the rain, Rohan scheduled work on Sunday too.",
+   "ko": "비로 늦어진 일정을 메우려고 로한은 일요일에도 작업을 잡았어요.",
+   "blank": "भरपाई करने",
+   "src": "made"
+  },
+  {
+   "text": "जला हुआ केक बदलकर मीना ने ग्राहक के नुक़सान की भरपाई की।",
+   "en": "Meena made up for the customer's loss by replacing the burnt cake.",
+   "ko": "미나는 탄 케이크를 바꿔 줘서 손님의 손해를 메워 줬어요.",
+   "blank": "भरपाई की",
    "src": "made"
   }
  ],
@@ -59134,6 +59598,22 @@
    "en": "Fed up with the hotels' high-handedness, Neha spent the night in a tent.",
    "ko": "호텔들이 제멋대로 굴자 질려서 네하는 텐트에서 밤을 보냈어요.",
    "blank": "मनमानी",
+   "src": "made"
+  }
+ ],
+ "w|मनमौजी": [
+  {
+   "text": "रोहन का मनमौजी ड्राइवर कभी समय पर ट्रक नहीं लाता।",
+   "en": "Rohan's whimsical driver never brings the truck on time.",
+   "ko": "로한의 제멋대로인 운전기사는 트럭을 제시간에 가져온 적이 없어요.",
+   "blank": "मनमौजी",
+   "src": "made"
+  },
+  {
+   "text": "मीना का भाई मनमौजी है, कभी दिन भर मदद करता है, कभी हफ़्तों नहीं दिखता।",
+   "en": "Meena's brother is a free spirit: sometimes he helps all day, sometimes he isn't seen for weeks.",
+   "ko": "미나의 남동생은 제멋대로라서 어떤 날은 종일 돕고 어떤 때는 몇 주씩 안 보여요.",
+   "blank": "मनमौजी",
    "src": "made"
   }
  ],
@@ -62282,6 +62762,22 @@
    "en": "In the monsoon Seema went to see the river mouth, where the water meets the sea.",
    "ko": "장마철에 시마는 강물이 바다와 만나는 강어귀를 보러 갔어요.",
    "blank": "मुहाना",
+   "src": "made"
+  }
+ ],
+ "w|मुहावरा": [
+  {
+   "text": "टेढ़ी दीवार देखकर रोहन ने नाच न जाने आँगन टेढ़ा वाला मुहावरा सुनाया और सब हँस पड़े।",
+   "en": "Seeing the crooked wall, Rohan quoted the idiom about a bad dancer blaming the floor, and everyone laughed.",
+   "ko": "삐뚤어진 벽을 보고 로한이 서툰 목수가 연장 탓한다는 관용구를 말하자 모두 웃었어요.",
+   "blank": "मुहावरा",
+   "src": "made"
+  },
+  {
+   "text": "मीना का पसंदीदा मुहावरा है, जैसी करनी वैसी भरनी।",
+   "en": "Meena's favourite saying is, as you sow, so shall you reap.",
+   "ko": "미나가 가장 좋아하는 관용구는 뿌린 대로 거둔다예요.",
+   "blank": "मुहावरा",
    "src": "made"
   }
  ],
@@ -66899,6 +67395,22 @@
    "blank": "लंबाई"
   }
  ],
+ "w|ललकारना": [
+  {
+   "text": "पुराने मिस्त्री ने रोहन को ललकारा कि वह एक दिन में इतनी ईंटें नहीं लगा सकता।",
+   "en": "The old mason challenged Rohan, saying he couldn't lay that many bricks in a day.",
+   "ko": "늙은 미장이는 로한에게 하루에 그렇게 많은 벽돌은 못 쌓을 거라며 도전장을 내밀었어요.",
+   "blank": "ललकारा",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोस के हलवाई ने मीना को ललकारा कि उसकी जलेबी जैसी मिठाई कोई नहीं बना सकता।",
+   "en": "The neighbouring sweet-maker challenged Meena, saying no one could make sweets like his jalebi.",
+   "ko": "이웃 과자 가게 주인은 자기 잘레비 같은 과자는 아무도 못 만든다며 미나에게 도전했어요.",
+   "blank": "ललकारा",
+   "src": "made"
+  }
+ ],
  "w|ललचाना": [
   {
    "text": "कैंटीन में रखे गरम समोसे करण को बहुत ललचा रहे थे।",
@@ -67601,6 +68113,22 @@
    "en": "There are two liters of water in the bottle.",
    "ko": "병에 물 두 리터가 있어.",
    "blank": "लीटर"
+  }
+ ],
+ "w|लुकना": [
+  {
+   "text": "बारिश से बचने के लिए एक बिल्ली रोहन के दफ़्तर की मेज़ के नीचे लुककर बैठी थी।",
+   "en": "To escape the rain, a cat was hiding under the desk in Rohan's office.",
+   "ko": "비를 피하려고 고양이 한 마리가 로한의 사무실 책상 밑에 숨어 있었어요.",
+   "blank": "लुककर",
+   "src": "made"
+  },
+  {
+   "text": "मीना की भतीजी काउंटर के पीछे लुककर कुकी खा रही थी।",
+   "en": "Meena's niece was hiding behind the counter eating a cookie.",
+   "ko": "미나의 조카딸이 계산대 뒤에 숨어서 쿠키를 먹고 있었어요.",
+   "blank": "लुककर",
+   "src": "made"
   }
  ],
  "w|लुटना": [
@@ -68456,6 +68984,22 @@
    "en": "Meena described the whole race to her grandmother over the phone.",
    "ko": "미나는 전화로 할머니께 경기 이야기를 자세히 들려드렸어요.",
    "blank": "वर्णन",
+   "src": "made"
+  }
+ ],
+ "w|वर्णमाला": [
+  {
+   "text": "रोहन रविवार को साइट के मज़दूरों को वर्णमाला सिखाता है।",
+   "en": "On Sundays Rohan teaches the alphabet to the site workers.",
+   "ko": "로한은 일요일마다 현장 인부들에게 글자를 가르쳐요.",
+   "blank": "वर्णमाला",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने बच्चों के लिए वर्णमाला के अक्षरों वाले बिस्किट बनाए।",
+   "en": "Meena made alphabet-letter biscuits for the children.",
+   "ko": "미나는 아이들을 위해 글자 모양 비스킷을 만들었어요.",
+   "blank": "वर्णमाला",
    "src": "made"
   }
  ],
@@ -69463,6 +70007,22 @@
    "blank": "विटामिन"
   }
  ],
+ "w|वितरक": [
+  {
+   "text": "सीमेंट के वितरक ने देर कर दी, तो रोहन का काम दो दिन रुका रहा।",
+   "en": "The cement distributor was late, so Rohan's work stayed stalled for two days.",
+   "ko": "시멘트 유통업체가 늦는 바람에 로한의 공사가 이틀 동안 멈췄어요.",
+   "blank": "वितरक",
+   "src": "made"
+  },
+  {
+   "text": "आटे का वितरक हर सोमवार मीना की बेकरी में माल पहुँचाता है।",
+   "en": "The flour distributor delivers stock to Meena's bakery every Monday.",
+   "ko": "밀가루 유통업자는 매주 월요일 미나의 빵집에 물건을 대 줘요.",
+   "blank": "वितरक",
+   "src": "made"
+  }
+ ],
  "w|वितरण": [
   {
    "text": "खाने के वितरण का ज़िम्मा इस हफ़्ते रोहन के पास है।",
@@ -70203,6 +70763,22 @@
    "src": "made"
   }
  ],
+ "w|विलोम": [
+  {
+   "text": "लंच के वक़्त मज़दूरों के बच्चों के साथ रोहन विलोम बताने का खेल खेलता है।",
+   "en": "At lunchtime Rohan plays a game of naming opposites with the workers' children.",
+   "ko": "점심시간에 로한은 인부들의 아이들과 반대말 맞히기 놀이를 해요.",
+   "blank": "विलोम",
+   "src": "made"
+  },
+  {
+   "text": "मीना हँसकर कहती है कि उसकी बेकरी में बासी का विलोम ही मिलता है, यानी ताज़ा।",
+   "en": "Meena laughs and says her bakery only has the opposite of stale, that is, fresh.",
+   "ko": "미나는 자기 빵집엔 묵은 것의 반대, 즉 신선한 것만 있다며 웃어요.",
+   "blank": "विलोम",
+   "src": "made"
+  }
+ ],
  "w|विवरण": [
   {
    "text": "हर व्यंजन की लागत का विवरण एक रजिस्टर में लिखा जाता है।",
@@ -70445,6 +71021,22 @@
    "en": "A computer expert solved the problem.",
    "ko": "컴퓨터 전문가가 문제를 풀었어.",
    "blank": "विशेषज्ञ"
+  }
+ ],
+ "w|विशेषण": [
+  {
+   "text": "लंच में रोहन ने एक मज़दूर के बेटे का होमवर्क कराया, जिसमें विशेषण पहचानने थे।",
+   "en": "At lunch Rohan helped a worker's son with homework that involved identifying adjectives.",
+   "ko": "점심시간에 로한은 한 인부의 아들 숙제를 도와줬는데 형용사를 찾는 문제였어요.",
+   "blank": "विशेषण",
+   "src": "made"
+  },
+  {
+   "text": "मीना को अपने केक के लिए नरम से बेहतर कोई विशेषण नहीं सूझता।",
+   "en": "Meena can't think of a better adjective for her cake than soft.",
+   "ko": "미나는 자기 케이크에 부드럽다보다 좋은 형용사가 떠오르지 않아요.",
+   "blank": "विशेषण",
+   "src": "made"
   }
  ],
  "w|विशेषता": [
@@ -72749,6 +73341,22 @@
    "en": "He was educated at the village school.",
    "ko": "그는 마을 학교에서 배웠어.",
    "blank": "शिक्षा"
+  }
+ ],
+ "w|शिक्षाविद": [
+  {
+   "text": "नए स्कूल की इमारत देखने एक शिक्षाविद साइट पर आए, और रोहन ने उन्हें नक़्शा दिखाया।",
+   "en": "An educationist came to the site to see the new school building, and Rohan showed him the plan.",
+   "ko": "새 학교 건물을 보러 교육학자 한 분이 현장에 오셨고 로한이 도면을 보여 드렸어요.",
+   "blank": "शिक्षाविद",
+   "src": "made"
+  },
+  {
+   "text": "एक बुज़ुर्ग शिक्षाविद रोज़ मीना की बेकरी से रस्क ख़रीदते हैं।",
+   "en": "An elderly educationist buys rusks from Meena's bakery every day.",
+   "ko": "나이 지긋한 교육학자 한 분이 매일 미나의 빵집에서 러스크를 사 가세요.",
+   "blank": "शिक्षाविद",
+   "src": "made"
   }
  ],
  "w|शिक्षित": [
@@ -76074,6 +76682,22 @@
    "en": "The release was delayed because of poor coordination between the design and coding teams.",
    "ko": "디자인 팀과 개발 팀의 손발이 안 맞아서 출시가 미뤄졌어요.",
    "blank": "समन्वय",
+   "src": "made"
+  }
+ ],
+ "w|समन्वयक": [
+  {
+   "text": "रोहन साइट पर सारे ठेकेदारों के बीच समन्वयक का काम करता है।",
+   "en": "Rohan acts as the coordinator among all the contractors on site.",
+   "ko": "로한은 현장에서 모든 시공업자 사이의 조율자 역할을 해요.",
+   "blank": "समन्वयक",
+   "src": "made"
+  },
+  {
+   "text": "शादी के बड़े ऑर्डर के लिए मीना ने अपनी बहन को समन्वयक बनाया।",
+   "en": "For the big wedding order, Meena made her sister the coordinator.",
+   "ko": "큰 결혼식 주문을 위해 미나는 여동생을 조율 담당으로 정했어요.",
+   "blank": "समन्वयक",
    "src": "made"
   }
  ],
@@ -83856,6 +84480,22 @@
    "en": "Seema intervened in the argument between two customers and calmed things down.",
    "ko": "시마는 두 손님의 말다툼에 끼어들어 상황을 진정시켰어요.",
    "blank": "हस्तक्षेप किया",
+   "src": "made"
+  }
+ ],
+ "w|हस्तशिल्प": [
+  {
+   "text": "रोहन की नई इमारत में हस्तशिल्प की दुकानों के लिए अलग गलियारा है।",
+   "en": "Rohan's new building has a separate corridor for handicraft shops.",
+   "ko": "로한의 새 건물에는 수공예품 가게들을 위한 통로가 따로 있어요.",
+   "blank": "हस्तशिल्प",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने अपनी बेकरी को हस्तशिल्प की चीज़ों से सजाया है।",
+   "en": "Meena has decorated her bakery with handicrafts.",
+   "ko": "미나는 빵집을 수공예품으로 꾸며 놓았어요.",
+   "blank": "हस्तशिल्प",
    "src": "made"
   }
  ],

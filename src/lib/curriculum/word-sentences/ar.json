@@ -2229,6 +2229,22 @@
    "src": "made"
   }
  ],
+ "w|أرخ": [
+  {
+   "text": "أرخ عمر الرسالة بتاريخ اليوم قبل أن يوقعها.",
+   "en": "Omar dated the letter with today's date before signing it.",
+   "ko": "오마르는 서명하기 전에 편지에 오늘 날짜를 적었어요.",
+   "blank": "أرخ",
+   "src": "made"
+  },
+  {
+   "text": "أرخت فاطمة رحلتها في دفتر صغير يوما بيوم.",
+   "en": "Fatima recorded her trip day by day in a small notebook.",
+   "ko": "파티마는 작은 공책에 여행을 하루하루 기록했어요.",
+   "blank": "أرخت",
+   "src": "made"
+  }
+ ],
  "w|أرخبيل": [
   {
    "text": "يحلم كريم بأن يبحر بقاربه بين جزر أرخبيل بعيد.",
@@ -2360,6 +2376,22 @@
    "en": "Sara archived the photos of old experiments on the computer.",
    "ko": "사라는 예전 실험 사진들을 컴퓨터에 보관해 두었어요.",
    "blank": "أرشفت",
+   "src": "made"
+  }
+ ],
+ "w|أرشيف": [
+  {
+   "text": "بحث عمر في أرشيف الشركة عن عقد قديم.",
+   "en": "Omar searched the company archive for an old contract.",
+   "ko": "오마르는 회사 문서 보관소에서 오래된 계약서를 찾았어요.",
+   "blank": "أرشيف",
+   "src": "made"
+  },
+  {
+   "text": "حفظت فاطمة صور رحلاتها في أرشيف على حاسوبها.",
+   "en": "Fatima saved her travel photos in an archive on her computer.",
+   "ko": "파티마는 여행 사진을 컴퓨터 보관 폴더에 저장했어요.",
+   "blank": "أرشيف",
    "src": "made"
   }
  ],
@@ -4251,6 +4283,22 @@
    "blank": "أغضب"
   }
  ],
+ "w|أغفل": [
+  {
+   "text": "أغفل عمر بندا مهما في العقد فأعاده المدير إليه.",
+   "en": "Omar overlooked an important clause in the contract, so the manager sent it back to him.",
+   "ko": "오마르가 계약서의 중요한 조항을 빠뜨려서 상사가 서류를 돌려보냈어요.",
+   "blank": "أغفل",
+   "src": "made"
+  },
+  {
+   "text": "أغفلت فاطمة كتابة رقم رحلتها في الاستمارة.",
+   "en": "Fatima left out her flight number on the form.",
+   "ko": "파티마는 서류에 항공편 번호를 적는 걸 빠뜨렸어요.",
+   "blank": "أغفلت",
+   "src": "made"
+  }
+ ],
  "w|أغلبية": [
   {
    "text": "صوتت أغلبية الفرقة لصالح اقتراح حسن.",
@@ -4591,6 +4639,22 @@
    "en": "I love visiting relatives in summer.",
    "ko": "여름에 친척들을 방문하는 것을 좋아해.",
    "blank": "أقارب"
+  }
+ ],
+ "w|أقال": [
+  {
+   "text": "أقال مجلس الإدارة المدير القديم، فصار عمر رئيس القسم.",
+   "en": "The board dismissed the old manager, and Omar became head of the department.",
+   "ko": "이사회가 예전 부장을 해임해서 오마르가 부서장이 됐어요.",
+   "blank": "أقال",
+   "src": "made"
+  },
+  {
+   "text": "أقالت شركة الطيران الموظف الذي أساء معاملة فاطمة.",
+   "en": "The airline dismissed the employee who had treated Fatima badly.",
+   "ko": "항공사는 파티마에게 무례하게 굴었던 직원을 해고했어요.",
+   "blank": "أقالت",
+   "src": "made"
   }
  ],
  "w|أقام": [
@@ -5625,6 +5689,22 @@
    "en": "Hope you succeed in your work.",
    "ko": "네 일이 성공하길 바래.",
    "blank": "أمل"
+  }
+ ],
+ "w|أملى": [
+  {
+   "text": "أملى المدير على عمر نص الرسالة كلمة كلمة.",
+   "en": "The manager dictated the text of the letter to Omar word by word.",
+   "ko": "상사는 오마르에게 편지 내용을 한 마디씩 불러 줬어요.",
+   "blank": "أملى",
+   "src": "made"
+  },
+  {
+   "text": "أملت فاطمة رقم جوازها على موظفة الحجز.",
+   "en": "Fatima dictated her passport number to the booking agent.",
+   "ko": "파티마는 예약 직원에게 여권 번호를 불러 줬어요.",
+   "blank": "أملت",
+   "src": "made"
   }
  ],
  "w|أمم": [
@@ -8359,6 +8439,22 @@
    "src": "made"
   }
  ],
+ "w|إفلاس": [
+  {
+   "text": "خشي عمر إفلاس الشركة بعد خسارة أكبر عميل.",
+   "en": "Omar feared the company's bankruptcy after losing its biggest client.",
+   "ko": "오마르는 가장 큰 고객을 잃은 뒤 회사가 파산할까 봐 걱정했어요.",
+   "blank": "إفلاس",
+   "src": "made"
+  },
+  {
+   "text": "ألغيت رحلة فاطمة بسبب إفلاس شركة الطيران.",
+   "en": "Fatima's flight was canceled because the airline went bankrupt.",
+   "ko": "항공사가 파산해서 파티마의 비행편이 취소됐어요.",
+   "blank": "إفلاس",
+   "src": "made"
+  }
+ ],
  "w|إقامة": [
   {
    "text": "هل لديك إقامة دائمة هنا؟",
@@ -9169,6 +9265,22 @@
    "blank": "إيجار"
   }
  ],
+ "w|إيداع": [
+  {
+   "text": "أكد البنك لعمر وصول إيداع الشركة.",
+   "en": "The bank confirmed to Omar that the company's deposit had arrived.",
+   "ko": "은행은 오마르에게 회사 입금이 들어왔다고 확인해 줬어요.",
+   "blank": "إيداع",
+   "src": "made"
+  },
+  {
+   "text": "أجرت فاطمة إيداعا في حسابها من الصراف الآلي في المطار.",
+   "en": "Fatima made a deposit into her account from the ATM at the airport.",
+   "ko": "파티마는 공항 현금 인출기에서 자기 계좌에 입금했어요.",
+   "blank": "إيداعا",
+   "src": "made"
+  }
+ ],
  "w|إيراد": [
   {
    "text": "ارتفع إيراد المصنع بعد توقيع عقد مع شركة أجنبية.",
@@ -9336,6 +9448,22 @@
    "en": "Sara's clinic will open its doors starting from seven in the morning.",
    "ko": "사라의 병원은 아침 일곱 시부터 문을 열어요.",
    "blank": "ابتداء",
+   "src": "made"
+  }
+ ],
+ "w|ابتدائية": [
+  {
+   "text": "اكتشف عمر أن زميله الجديد صديقه القديم من الابتدائية.",
+   "en": "Omar discovered that his new colleague was his old friend from primary school.",
+   "ko": "오마르는 새 동료가 초등학교 때 옛 친구라는 걸 알게 됐어요.",
+   "blank": "الابتدائية",
+   "src": "made"
+  },
+  {
+   "text": "قابلت فاطمة في المطار معلمتها في الابتدائية.",
+   "en": "Fatima met her primary school teacher at the airport.",
+   "ko": "파티마는 공항에서 초등학교 때 선생님을 만났어요.",
+   "blank": "الابتدائية",
    "src": "made"
   }
  ],
@@ -12238,6 +12366,22 @@
    "en": "Layla sounded out her friend about the idea of meeting in the summer.",
    "ko": "라일라는 여름에 만나자는 생각을 친구가 어떻게 여기는지 물어봤어요.",
    "blank": "استطلعت",
+   "src": "made"
+  }
+ ],
+ "w|استظهر": [
+  {
+   "text": "استظهر عمر نقاط العرض كلها قبل الاجتماع.",
+   "en": "Omar memorized all the points of the presentation before the meeting.",
+   "ko": "오마르는 회의 전에 발표 요점을 전부 외웠어요.",
+   "blank": "استظهر",
+   "src": "made"
+  },
+  {
+   "text": "استظهرت فاطمة عنوان الفندق خوفا من ضياع الورقة.",
+   "en": "Fatima memorized the hotel address in case she lost the paper.",
+   "ko": "파티마는 종이를 잃어버릴까 봐 호텔 주소를 외웠어요.",
+   "blank": "استظهرت",
    "src": "made"
   }
  ],
@@ -19415,6 +19559,22 @@
    "blank": "بستان"
   }
  ],
+ "w|بستاني": [
+  {
+   "text": "يسقي بستاني الشركة النباتات في مكتب عمر كل أسبوع.",
+   "en": "The company gardener waters the plants in Omar's office every week.",
+   "ko": "회사 정원사가 매주 오마르 사무실의 화분에 물을 줘요.",
+   "blank": "بستاني",
+   "src": "made"
+  },
+  {
+   "text": "اعتنى بستاني بالحديقة الصغيرة داخل صالة المطار، فصورتها فاطمة.",
+   "en": "A gardener tended the small garden inside the airport hall, and Fatima took a photo of it.",
+   "ko": "정원사가 공항 안 작은 정원을 가꿨고, 파티마는 그 정원을 사진으로 찍었어요.",
+   "blank": "بستاني",
+   "src": "made"
+  }
+ ],
  "w|بسرعة": [
   {
    "text": "ركض الطفل بسرعة.",
@@ -19427,6 +19587,22 @@
    "en": "I finished the homework quickly.",
    "ko": "나는 숙제를 빨리 끝냈어.",
    "blank": "بسرعة"
+  }
+ ],
+ "w|بسط": [
+  {
+   "text": "بسط عمر الخريطة على طاولة الاجتماعات.",
+   "en": "Omar spread the map out on the meeting table.",
+   "ko": "오마르는 회의 탁자에 지도를 펼쳤어요.",
+   "blank": "بسط",
+   "src": "made"
+  },
+  {
+   "text": "بسطت فاطمة معطفها على المقعد ونامت قليلا.",
+   "en": "Fatima spread her coat on the seat and slept a little.",
+   "ko": "파티마는 의자에 외투를 펴고 잠깐 잤어요.",
+   "blank": "بسطت",
+   "src": "made"
   }
  ],
  "w|بسطة": [
@@ -23023,6 +23199,22 @@
    "en": "The police warning was clear to everyone.",
    "ko": "경찰의 경고는 모두에게 분명했어.",
    "blank": "تحذير"
+  }
+ ],
+ "w|تحرر": [
+  {
+   "text": "وصف عمر العمل من البيت بأنه تحرر من زحمة الطريق.",
+   "en": "Omar described working from home as freedom from traffic jams.",
+   "ko": "오마르는 재택근무를 출퇴근길 정체에서 벗어나는 일이라고 했어요.",
+   "blank": "تحرر",
+   "src": "made"
+  },
+  {
+   "text": "شعرت فاطمة أن السفر وحدها تحرر من روتين البيت.",
+   "en": "Fatima felt that traveling alone was freedom from the routine of home.",
+   "ko": "파티마는 혼자 하는 여행이 집안일 일상에서 벗어나는 일이라고 느꼈어요.",
+   "blank": "تحرر",
+   "src": "made"
   }
  ],
  "w|تحرش": [
@@ -26721,6 +26913,22 @@
    "src": "made"
   }
  ],
+ "w|تغافل": [
+  {
+   "text": "تغافل عمر عن أخطاء زميله الجديد في أسبوعه الأول.",
+   "en": "Omar turned a blind eye to his new colleague's mistakes in his first week.",
+   "ko": "오마르는 새 동료가 첫 주에 한 실수를 못 본 척했어요.",
+   "blank": "تغافل",
+   "src": "made"
+  },
+  {
+   "text": "تغافل موظف الجوازات عن وزن حقيبة فاطمة الزائد قليلا.",
+   "en": "The passport officer overlooked Fatima's slightly overweight bag.",
+   "ko": "출입국 직원은 파티마의 가방이 조금 무거운 걸 눈감아 줬어요.",
+   "blank": "تغافل",
+   "src": "made"
+  }
+ ],
  "w|تغدى": [
   {
    "text": "تغدى مع عائلته في المطعم.",
@@ -27022,6 +27230,22 @@
    "en": "Mona's idea was unique in combining education and play.",
    "ko": "모나의 아이디어는 교육과 놀이를 합친 점이 독특했어요.",
    "blank": "تفردت",
+   "src": "made"
+  }
+ ],
+ "w|تفرغ": [
+  {
+   "text": "تفرغ عمر يوما كاملا لكتابة التقرير.",
+   "en": "Omar set aside a whole day to write the report.",
+   "ko": "오마르는 보고서를 쓰려고 하루를 통째로 비웠어요.",
+   "blank": "تفرغ",
+   "src": "made"
+  },
+  {
+   "text": "تفرغت فاطمة للقراءة حين تأخرت رحلتها.",
+   "en": "Fatima devoted herself to reading when her flight was delayed.",
+   "ko": "비행기가 늦어지자 파티마는 책 읽기에만 몰두했어요.",
+   "blank": "تفرغت",
    "src": "made"
   }
  ],
@@ -27885,6 +28109,22 @@
    "src": "made"
   }
  ],
+ "w|تلصص": [
+  {
+   "text": "تلصص زميل على شاشة عمر ليعرف راتبه.",
+   "en": "A colleague peeked at Omar's screen to find out his salary.",
+   "ko": "한 동료가 오마르의 월급을 알아내려고 화면을 몰래 엿봤어요.",
+   "blank": "تلصص",
+   "src": "made"
+  },
+  {
+   "text": "تلصص راكب على هاتف فاطمة في قاعة الانتظار.",
+   "en": "A passenger peeked at Fatima's phone in the waiting hall.",
+   "ko": "대합실에서 한 승객이 파티마의 휴대폰을 몰래 엿봤어요.",
+   "blank": "تلصص",
+   "src": "made"
+  }
+ ],
  "w|تلعثم": [
   {
    "text": "تلعثم علي قليلا في أول جولة يقدمها للزوار.",
@@ -28661,6 +28901,22 @@
    "src": "made"
   }
  ],
+ "w|تنسيق": [
+  {
+   "text": "تولى عمر تنسيق الاجتماع مع الفرع الآخر.",
+   "en": "Omar took charge of coordinating the meeting with the other branch.",
+   "ko": "오마르는 다른 지점과의 회의 조율을 맡았어요.",
+   "blank": "تنسيق",
+   "src": "made"
+  },
+  {
+   "text": "صعدت فاطمة إلى الطائرة بسرعة بفضل تنسيق جيد بين الموظفين.",
+   "en": "Fatima boarded the plane quickly thanks to good coordination among the staff.",
+   "ko": "직원들이 손발을 잘 맞춰서 파티마는 빨리 비행기에 탔어요.",
+   "blank": "تنسيق",
+   "src": "made"
+  }
+ ],
  "w|تنصت": [
   {
    "text": "تدور مسرحية عمر الجديدة حول تنصت جار فضولي على جيرانه.",
@@ -28952,6 +29208,22 @@
    "en": "Huda never slacks on memorizing her lines before each scene.",
    "ko": "후다는 장면마다 대사 외우는 걸 결코 소홀히 하지 않아요.",
    "blank": "تتهاون",
+   "src": "made"
+  }
+ ],
+ "w|تهجى": [
+  {
+   "text": "تهجى عمر اسم العميل الأجنبي على الهاتف.",
+   "en": "Omar spelled out the foreign client's name on the phone.",
+   "ko": "오마르는 전화로 외국 고객의 이름 철자를 하나하나 불렀어요.",
+   "blank": "تهجى",
+   "src": "made"
+  },
+  {
+   "text": "تهجت فاطمة اسمها لموظف شركة الطيران.",
+   "en": "Fatima spelled her name for the airline employee.",
+   "ko": "파티마는 항공사 직원에게 이름 철자를 불러 줬어요.",
+   "blank": "تهجت",
    "src": "made"
   }
  ],
@@ -42949,6 +43221,22 @@
    "blank": "الربة"
   }
  ],
+ "w|ربت": [
+  {
+   "text": "ربت المدير على كتف عمر بعد العرض الناجح.",
+   "en": "The manager patted Omar on the shoulder after the successful presentation.",
+   "ko": "발표가 성공적으로 끝나자 상사가 오마르의 어깨를 두드렸어요.",
+   "blank": "ربت",
+   "src": "made"
+  },
+  {
+   "text": "ربتت فاطمة على رأس طفل يبكي في الطابور.",
+   "en": "Fatima patted the head of a crying child in the queue.",
+   "ko": "파티마는 줄에서 우는 아이의 머리를 쓰다듬었어요.",
+   "blank": "ربتت",
+   "src": "made"
+  }
+ ],
  "w|ربح": [
   {
    "text": "ربح فريقنا المباراة اليوم.",
@@ -43902,6 +44190,22 @@
    "en": "Rana noticed a change in the government's tone toward the press.",
    "ko": "라나는 정부의 언론 대하는 말투가 달라진 걸 포착했어요.",
    "blank": "رصدت",
+   "src": "made"
+  }
+ ],
+ "w|رصيد": [
+  {
+   "text": "تأكد عمر من رصيد حساب الشركة قبل دفع الرواتب.",
+   "en": "Omar checked the balance of the company account before paying salaries.",
+   "ko": "오마르는 월급을 주기 전에 회사 계좌 잔액을 확인했어요.",
+   "blank": "رصيد",
+   "src": "made"
+  },
+  {
+   "text": "شحنت فاطمة رصيد هاتفها في المطار.",
+   "en": "Fatima topped up her phone credit at the airport.",
+   "ko": "파티마는 공항에서 휴대폰 요금을 충전했어요.",
+   "blank": "رصيد",
    "src": "made"
   }
  ],
@@ -45162,6 +45466,22 @@
    "en": "In the small garden, Fatima found a spiritual calm she had missed in the city.",
    "ko": "파티마는 작은 정원에서 도시에서 그리워하던 마음의 평온을 찾았어요.",
    "blank": "روحيا",
+   "src": "made"
+  }
+ ],
+ "w|روضة": [
+  {
+   "text": "يوصل عمر ابنته إلى الروضة قبل الذهاب إلى المكتب.",
+   "en": "Omar drops his daughter off at kindergarten before going to the office.",
+   "ko": "오마르는 출근하기 전에 딸을 유치원에 데려다줘요.",
+   "blank": "الروضة",
+   "src": "made"
+  },
+  {
+   "text": "تعمل فاطمة معلمة في روضة، وتسافر في العطلة الصيفية.",
+   "en": "Fatima works as a kindergarten teacher and travels during the summer holiday.",
+   "ko": "파티마는 유치원 교사로 일하고 여름 방학에 여행을 다녀요.",
+   "blank": "روضة",
    "src": "made"
   }
  ],
@@ -47701,6 +48021,22 @@
    "src": "made"
   }
  ],
+ "w|سدد": [
+  {
+   "text": "سدد عمر فاتورة الكهرباء للمكتب.",
+   "en": "Omar paid the office electricity bill.",
+   "ko": "오마르는 사무실 전기 요금을 냈어요.",
+   "blank": "سدد",
+   "src": "made"
+  },
+  {
+   "text": "سددت فاطمة رسوم الوزن الزائد عند مكتب شركة الطيران.",
+   "en": "Fatima paid the excess baggage fee at the airline desk.",
+   "ko": "파티마는 항공사 카운터에서 초과 수하물 요금을 냈어요.",
+   "blank": "سددت",
+   "src": "made"
+  }
+ ],
  "w|سدس": [
   {
    "text": "أعطى كريم أخاه سدس المحصول مقابل مساعدته.",
@@ -49301,6 +49637,22 @@
    "en": "They celebrate the festival annually.",
    "ko": "그들은 매년 축제를 기념해.",
    "blank": "سنويا"
+  }
+ ],
+ "w|سها": [
+  {
+   "text": "سها عمر عن إرسال التقرير قبل نهاية الدوام.",
+   "en": "Omar forgot to send the report before the end of the workday.",
+   "ko": "오마르는 퇴근 전에 보고서 보내는 걸 깜빡했어요.",
+   "blank": "سها",
+   "src": "made"
+  },
+  {
+   "text": "سهت فاطمة عن موعد الصعود وهي تتسوق في السوق الحرة.",
+   "en": "Fatima lost track of the boarding time while shopping in the duty-free.",
+   "ko": "파티마는 면세점에서 쇼핑하다가 탑승 시간을 깜빡했어요.",
+   "blank": "سهت",
+   "src": "made"
   }
  ],
  "w|سهل": [
@@ -51365,6 +51717,22 @@
    "en": "I am a partner in this project.",
    "ko": "나는 이 프로젝트의 파트너다.",
    "blank": "شريك"
+  }
+ ],
+ "w|شطب": [
+  {
+   "text": "شطب عمر المهام المنتهية من قائمته.",
+   "en": "Omar crossed the finished tasks off his list.",
+   "ko": "오마르는 끝낸 일을 목록에서 지웠어요.",
+   "blank": "شطب",
+   "src": "made"
+  },
+  {
+   "text": "شطبت فاطمة الهدايا التي اشترتها من القائمة.",
+   "en": "Fatima crossed the gifts she had bought off the list.",
+   "ko": "파티마는 산 선물을 목록에서 지웠어요.",
+   "blank": "شطبت",
+   "src": "made"
   }
  ],
  "w|شطرنج": [
@@ -56485,6 +56853,22 @@
    "en": "Can you order for me?",
    "ko": "나 대신 주문해줄 수 있어?",
    "blank": "تطلب"
+  }
+ ],
+ "w|طلبية": [
+  {
+   "text": "وصلت طلبية الأوراق والأقلام إلى مكتب عمر.",
+   "en": "The order of paper and pens arrived at Omar's office.",
+   "ko": "주문한 종이와 펜이 오마르의 사무실에 도착했어요.",
+   "blank": "طلبية",
+   "src": "made"
+  },
+  {
+   "text": "انتظرت فاطمة طلبية القهوة في مقهى المطار طويلا.",
+   "en": "Fatima waited a long time for her coffee order at the airport café.",
+   "ko": "파티마는 공항 카페에서 주문한 커피를 한참 기다렸어요.",
+   "blank": "طلبية",
+   "src": "made"
   }
  ],
  "w|طلق": [
@@ -62061,6 +62445,22 @@
    "src": "made"
   }
  ],
+ "w|غفل": [
+  {
+   "text": "غفل عمر عن هاتفه فرن طويلا دون أن يسمعه.",
+   "en": "Omar didn't pay attention to his phone, so it rang for a long time without him hearing it.",
+   "ko": "오마르가 휴대폰에 신경을 안 써서 전화가 한참 울려도 못 들었어요.",
+   "blank": "غفل",
+   "src": "made"
+  },
+  {
+   "text": "غفلت فاطمة عن حقيبتها لحظة فأخذها عامل النظافة إلى قسم المفقودات.",
+   "en": "Fatima took her eyes off her bag for a moment, and a cleaner took it to lost and found.",
+   "ko": "파티마가 잠깐 가방에서 눈을 뗀 사이 청소부가 분실물 센터로 가져갔어요.",
+   "blank": "غفلت",
+   "src": "made"
+  }
+ ],
  "w|غفوة": [
   {
    "text": "أخذ كريم غفوة قصيرة على كرسيه بين موعدين.",
@@ -62410,6 +62810,22 @@
    "en": "Sara wrote that their old friend was sentenced in absentia over debts he didn't pay.",
    "ko": "사라는 옛 친구가 갚지 않은 빚 때문에 궐석 판결을 받았다고 썼어요.",
    "blank": "غيابي",
+   "src": "made"
+  }
+ ],
+ "w|غيار": [
+  {
+   "text": "طلب عمر قطع غيار للطابعة المعطلة.",
+   "en": "Omar ordered spare parts for the broken printer.",
+   "ko": "오마르는 고장 난 프린터 부품을 주문했어요.",
+   "blank": "غيار",
+   "src": "made"
+  },
+  {
+   "text": "حملت فاطمة ملابس غيار في حقيبة اليد.",
+   "en": "Fatima carried a change of clothes in her hand luggage.",
+   "ko": "파티마는 기내 가방에 갈아입을 옷을 챙겼어요.",
+   "blank": "غيار",
    "src": "made"
   }
  ],
@@ -70187,6 +70603,22 @@
    "blank": "كلف"
   }
  ],
+ "w|كلفة": [
+  {
+   "text": "حسب عمر كلفة المشروع قبل أن يعرضه على المدير.",
+   "en": "Omar calculated the cost of the project before presenting it to the manager.",
+   "ko": "오마르는 상사에게 보여 주기 전에 프로젝트 비용을 계산했어요.",
+   "blank": "كلفة",
+   "src": "made"
+  },
+  {
+   "text": "ارتفعت كلفة تذكرة فاطمة لأنها حجزت متأخرة.",
+   "en": "The cost of Fatima's ticket went up because she booked late.",
+   "ko": "파티마는 늦게 예약해서 항공권 값이 올랐어요.",
+   "blank": "كلفة",
+   "src": "made"
+  }
+ ],
  "w|كلم": [
   {
    "text": "كلم صديقه عبر الهاتف.",
@@ -72393,6 +72825,22 @@
    "src": "made"
   }
  ],
+ "w|لقن": [
+  {
+   "text": "لقن المدير عمر درسا في الالتزام بالمواعيد.",
+   "en": "The manager taught Omar a lesson about being on time.",
+   "ko": "상사는 오마르에게 시간 약속을 지키는 법을 단단히 가르쳤어요.",
+   "blank": "لقن",
+   "src": "made"
+  },
+  {
+   "text": "لقنت فاطمة ابنها ما يقوله لموظف الجوازات.",
+   "en": "Fatima coached her son on what to say to the passport officer.",
+   "ko": "파티마는 아들에게 출입국 직원에게 할 말을 미리 가르쳤어요.",
+   "blank": "لقنت",
+   "src": "made"
+  }
+ ],
  "w|لكمة": [
   {
    "text": "يعرض المتحف قفازات ملاكم قديم، ويحكي يوسف عن لكمة شهيرة أنهت مباراته الأخيرة.",
@@ -73732,6 +74180,22 @@
    "en": "Mona's first experience resembled that of many young entrepreneurs.",
    "ko": "모나의 첫 경험은 많은 젊은 창업자들의 경험과 비슷했어요.",
    "blank": "ماثلت",
+   "src": "made"
+  }
+ ],
+ "w|ماجستير": [
+  {
+   "text": "يدرس عمر الماجستير في المساء بعد العمل.",
+   "en": "Omar studies for his master's degree in the evening after work.",
+   "ko": "오마르는 퇴근 후 저녁에 석사 공부를 해요.",
+   "blank": "الماجستير",
+   "src": "made"
+  },
+  {
+   "text": "تسافر فاطمة لتكمل دراسة الماجستير في الخارج.",
+   "en": "Fatima is traveling to finish her master's studies abroad.",
+   "ko": "파티마는 해외에서 석사 공부를 마치려고 떠나요.",
+   "blank": "الماجستير",
    "src": "made"
   }
  ],
@@ -75392,6 +75856,22 @@
    "en": "Sara is looking forward to taking part in a longer race next year.",
    "ko": "사라는 내년에 더 긴 경주에 나가기를 고대하고 있어요.",
    "blank": "متطلعة",
+   "src": "made"
+  }
+ ],
+ "w|متطوع": [
+  {
+   "text": "ساعد متطوع شاب عمر في تنظيم المؤتمر.",
+   "en": "A young volunteer helped Omar organize the conference.",
+   "ko": "젊은 자원봉사자가 오마르의 학회 준비를 도왔어요.",
+   "blank": "متطوع",
+   "src": "made"
+  },
+  {
+   "text": "دل متطوع في المطار فاطمة على البوابة الصحيحة.",
+   "en": "A volunteer at the airport directed Fatima to the right gate.",
+   "ko": "공항 자원봉사자가 파티마에게 맞는 탑승구를 알려 줬어요.",
+   "blank": "متطوع",
    "src": "made"
   }
  ],
@@ -77391,6 +77871,22 @@
    "en": "I am looking for a shop near here.",
    "ko": "나는 이 근처에 있는 가게를 찾고 있다.",
    "blank": "محل"
+  }
+ ],
+ "w|محلل": [
+  {
+   "text": "يعمل عمر محللا ماليا في شركة كبيرة.",
+   "en": "Omar works as a financial analyst at a large company.",
+   "ko": "오마르는 큰 회사에서 재무 분석가로 일해요.",
+   "blank": "محللا",
+   "src": "made"
+  },
+  {
+   "text": "جلس بجانب فاطمة محلل اقتصادي ظل يتحدث عن الأسعار.",
+   "en": "An economic analyst sat next to Fatima and kept talking about prices.",
+   "ko": "파티마 옆에 앉은 경제 분석가가 계속 물가 얘기를 했어요.",
+   "blank": "محلل",
+   "src": "made"
   }
  ],
  "w|محلول": [
@@ -80331,6 +80827,38 @@
    "src": "made"
   }
  ],
+ "w|مستثمر": [
+  {
+   "text": "قدم عمر المشروع أمام مستثمر أجنبي.",
+   "en": "Omar presented the project to a foreign investor.",
+   "ko": "오마르는 외국 투자자 앞에서 프로젝트를 소개했어요.",
+   "blank": "مستثمر",
+   "src": "made"
+  },
+  {
+   "text": "تعرفت فاطمة في صالة الانتظار على مستثمر يسافر كل أسبوع.",
+   "en": "In the waiting lounge Fatima met an investor who travels every week.",
+   "ko": "파티마는 대기실에서 매주 비행기를 타는 투자자와 알게 됐어요.",
+   "blank": "مستثمر",
+   "src": "made"
+  }
+ ],
+ "w|مستجد": [
+  {
+   "text": "لم يطرأ أي مستجد على المشروع منذ اجتماع عمر الأخير.",
+   "en": "Nothing new has come up in the project since Omar's last meeting.",
+   "ko": "오마르의 지난 회의 이후 프로젝트에 새로운 일은 없었어요.",
+   "blank": "مستجد",
+   "src": "made"
+  },
+  {
+   "text": "طلبت فاطمة من الموظف أن يخبرها بأي مستجد عن رحلتها المتأخرة.",
+   "en": "Fatima asked the employee to tell her of any news about her delayed flight.",
+   "ko": "파티마는 직원에게 지연된 비행편에 새 소식이 있으면 알려 달라고 했어요.",
+   "blank": "مستجد",
+   "src": "made"
+  }
+ ],
  "w|مستحق": [
   {
    "text": "نال حسن جائزة الصحافة، وقال زملاؤه إنها جائزة مستحقة.",
@@ -80686,6 +81214,22 @@
    "en": "Mona got tired of the constant ringing of the phone in the office.",
    "ko": "모나는 사무실 전화가 끊임없이 울려서 지쳤어요.",
    "blank": "المستمر",
+   "src": "made"
+  }
+ ],
+ "w|مستند": [
+  {
+   "text": "فقد عمر مستندا مهما ثم وجده في درج زميله.",
+   "en": "Omar lost an important document and then found it in his colleague's drawer.",
+   "ko": "오마르는 중요한 서류를 잃어버렸다가 동료 서랍에서 찾았어요.",
+   "blank": "مستندا",
+   "src": "made"
+  },
+  {
+   "text": "طلب الموظف من فاطمة مستندا يثبت حجز الفندق.",
+   "en": "The employee asked Fatima for a document proving her hotel booking.",
+   "ko": "직원은 파티마에게 호텔 예약을 증명하는 서류를 달라고 했어요.",
+   "blank": "مستندا",
    "src": "made"
   }
  ],
@@ -83563,6 +84107,22 @@
    "src": "made"
   }
  ],
+ "w|معماري": [
+  {
+   "text": "زار مهندس معماري مكتب عمر ليعرض تصميم الفرع الجديد.",
+   "en": "An architect visited Omar's office to present the design of the new branch.",
+   "ko": "건축가가 새 지점 설계를 보여 주려고 오마르의 사무실에 왔어요.",
+   "blank": "معماري",
+   "src": "made"
+  },
+  {
+   "text": "أعجبت فاطمة بسقف المطار الذي صممه معماري شاب.",
+   "en": "Fatima admired the airport ceiling designed by a young architect.",
+   "ko": "파티마는 젊은 건축가가 설계한 공항 천장에 감탄했어요.",
+   "blank": "معماري",
+   "src": "made"
+  }
+ ],
  "w|معمر": [
   {
    "text": "في حديقة المتحف شجرة زيتون معمرة يقال إن عمرها ألف سنة.",
@@ -84530,6 +85090,22 @@
    "en": "Mariam thinks buying a large amount of fruit before the rain is a gamble.",
    "ko": "마리암은 비 오기 전에 과일을 많이 사 두는 게 도박 같다고 생각해요.",
    "blank": "مقامرة",
+   "src": "made"
+  }
+ ],
+ "w|مقاول": [
+  {
+   "text": "تأخر المقاول في تجديد مكتب عمر.",
+   "en": "The contractor was late in renovating Omar's office.",
+   "ko": "시공업자가 오마르의 사무실 공사를 늦게 끝냈어요.",
+   "blank": "المقاول",
+   "src": "made"
+  },
+  {
+   "text": "كان جار فاطمة في الطائرة مقاولا يبني الفنادق.",
+   "en": "Fatima's neighbor on the plane was a contractor who builds hotels.",
+   "ko": "비행기에서 파티마 옆자리 사람은 호텔을 짓는 시공업자였어요.",
+   "blank": "مقاولا",
    "src": "made"
   }
  ],
@@ -85931,6 +86507,22 @@
    "src": "made"
   }
  ],
+ "w|ملخص": [
+  {
+   "text": "كتب عمر ملخصا للاجتماع وأرسله للفريق.",
+   "en": "Omar wrote a summary of the meeting and sent it to the team.",
+   "ko": "오마르는 회의 요약을 써서 팀에 보냈어요.",
+   "blank": "ملخصا",
+   "src": "made"
+  },
+  {
+   "text": "قرأت فاطمة ملخص الرواية قبل أن تشتريها من مكتبة المطار.",
+   "en": "Fatima read the novel's summary before buying it at the airport bookshop.",
+   "ko": "파티마는 공항 서점에서 소설을 사기 전에 줄거리 요약을 읽었어요.",
+   "blank": "ملخص",
+   "src": "made"
+  }
+ ],
  "w|ملزم": [
   {
    "text": "قال حسن إن الصحفي ملزم بحماية مصادره.",
@@ -86903,6 +87495,22 @@
    "en": "The resort provides excellent services.",
    "ko": "리조트가 훌륭한 서비스를 제공해.",
    "blank": "المنتجع"
+  }
+ ],
+ "w|منتدى": [
+  {
+   "text": "شارك عمر في منتدى الأعمال السنوي.",
+   "en": "Omar took part in the annual business forum.",
+   "ko": "오마르는 연례 비즈니스 포럼에 참가했어요.",
+   "blank": "منتدى",
+   "src": "made"
+  },
+  {
+   "text": "التقت فاطمة في المطار بباحثين ذاهبين إلى منتدى علمي.",
+   "en": "At the airport Fatima met researchers heading to a scientific forum.",
+   "ko": "파티마는 공항에서 과학 포럼에 가는 연구자들을 만났어요.",
+   "blank": "منتدى",
+   "src": "made"
   }
  ],
  "w|منتزه": [
@@ -95731,6 +96339,22 @@
    "blank": "وصل"
   }
  ],
+ "w|وصلة": [
+  {
+   "text": "أرسل عمر وصلة الاجتماع إلى كل الزملاء.",
+   "en": "Omar sent the meeting link to all his colleagues.",
+   "ko": "오마르는 회의 링크를 동료 모두에게 보냈어요.",
+   "blank": "وصلة",
+   "src": "made"
+  },
+  {
+   "text": "احتاجت فاطمة وصلة لتشحن هاتفها من مقبس المطار.",
+   "en": "Fatima needed a cable to charge her phone from the airport socket.",
+   "ko": "파티마는 공항 콘센트로 휴대폰을 충전하려고 케이블이 필요했어요.",
+   "blank": "وصلة",
+   "src": "made"
+  }
+ ],
  "w|وصول": [
   {
    "text": "وصول القطار كان متأخراً اليوم.",
@@ -96478,6 +97102,22 @@
    "en": "Mariam asked for the girl's guardian's signature before handing her the room key.",
    "ko": "마리암은 방 열쇠를 주기 전에 그 소녀의 보호자 서명을 받았어요.",
    "blank": "ولي",
+   "src": "made"
+  }
+ ],
+ "w|وميض": [
+  {
+   "text": "لاحظ عمر وميض ضوء أحمر على آلة التصوير.",
+   "en": "Omar noticed a red light flashing on the photocopier.",
+   "ko": "오마르는 복사기에서 빨간 불이 깜빡이는 걸 봤어요.",
+   "blank": "وميض",
+   "src": "made"
+  },
+  {
+   "text": "رأت فاطمة وميض أضواء المدرج من نافذة الطائرة.",
+   "en": "Fatima saw the runway lights flashing from the plane window.",
+   "ko": "파티마는 비행기 창밖으로 활주로 불빛이 깜빡이는 걸 봤어요.",
+   "blank": "وميض",
    "src": "made"
   }
  ],
