@@ -1713,6 +1713,22 @@
    "src": "made"
   }
  ],
+ "w|अनभिज्ञ": [
+  {
+   "text": "नई प्रिंसिपल स्कूल के पुराने नियमों से अनभिज्ञ थीं, इसलिए राहुल ने उन्हें सब बताया।",
+   "en": "The new principal was unaware of the school's old rules, so Rahul told her everything.",
+   "ko": "새 교장 선생님이 학교의 옛 규칙을 몰라서 라훌이 다 알려 드렸어요.",
+   "blank": "अनभिज्ञ",
+   "src": "made"
+  },
+  {
+   "text": "शहर से आई प्रिया की सहेली पहाड़ी सर्दी की कड़ाई से अनभिज्ञ थी।",
+   "en": "Priya's friend from the city was unaware of how harsh the hill winter is.",
+   "ko": "도시에서 온 프리야의 친구는 산골 겨울이 얼마나 혹독한지 몰랐어요.",
+   "blank": "अनभिज्ञ",
+   "src": "made"
+  }
+ ],
  "w|अनमोल": [
   {
    "text": "रवि अपने गुरु की दी हुई पुरानी क़लम को अनमोल मानता है।",
@@ -3507,6 +3523,22 @@
    "blank": "अवधि"
   }
  ],
+ "w|अवरुद्ध": [
+  {
+   "text": "पानी भरने से स्कूल का मुख्य रास्ता अवरुद्ध हो गया था।",
+   "en": "The school's main path was blocked by waterlogging.",
+   "ko": "물이 차서 학교 정문 길이 막혔어요.",
+   "blank": "अवरुद्ध",
+   "src": "made"
+  },
+  {
+   "text": "भारी बर्फ़ से घाटी का रास्ता तीन दिन तक अवरुद्ध रहा।",
+   "en": "Heavy snow kept the road to the valley blocked for three days.",
+   "ko": "폭설로 골짜기 길이 사흘 동안 막혔어요.",
+   "blank": "अवरुद्ध",
+   "src": "made"
+  }
+ ],
  "w|अवश्य": [
   {
    "text": "तुम्हें अवश्य आना चाहिए।",
@@ -5283,6 +5315,22 @@
    "blank": "आधुनिकता"
   }
  ],
+ "w|आधुनिकीकरण": [
+  {
+   "text": "स्कूल की लैब के आधुनिकीकरण के लिए नए कंप्यूटर आए हैं।",
+   "en": "New computers have arrived to modernise the school lab.",
+   "ko": "학교 실험실을 현대화하려고 새 컴퓨터가 들어왔어요.",
+   "blank": "आधुनिकीकरण",
+   "src": "made"
+  },
+  {
+   "text": "खेती के आधुनिकीकरण से अब किसान मौसम का हाल फ़ोन पर देख लेते हैं।",
+   "en": "With the modernisation of farming, farmers now check the weather on their phones.",
+   "ko": "농업이 현대화돼서 이제 농부들은 휴대폰으로 날씨를 확인해요.",
+   "blank": "आधुनिकीकरण",
+   "src": "made"
+  }
+ ],
  "w|आध्यात्मिक": [
   {
    "text": "रविवार के पन्ने पर पहाड़ों की आध्यात्मिक यात्राओं पर एक लेख था।",
@@ -5987,6 +6035,22 @@
    "src": "made"
   }
  ],
+ "w|आलस्य": [
+  {
+   "text": "टीचर ने कहा कि राहुल में प्रतिभा है, बस आलस्य छोड़ना होगा।",
+   "en": "The teacher said Rahul has talent, he just has to give up laziness.",
+   "ko": "선생님은 라훌이 재능은 있는데 게으름만 버리면 된다고 했어요.",
+   "blank": "आलस्य",
+   "src": "made"
+  },
+  {
+   "text": "सर्दी की सुबह रज़ाई से निकलने में प्रिया को बड़ा आलस्य आता है।",
+   "en": "On winter mornings Priya feels very lazy about getting out of the quilt.",
+   "ko": "겨울 아침이면 프리야는 이불 밖으로 나오기가 정말 귀찮아요.",
+   "blank": "आलस्य",
+   "src": "made"
+  }
+ ],
  "w|आला": [
   {
    "text": "अमित की नई मेज़ के पीछे दीवार में एक छोटा आला है, जिसमें उसने गणेश जी की मूर्ति रखी।",
@@ -6530,6 +6594,22 @@
    "en": "Deepa made a graph of the data gathered over a week.",
    "ko": "디파는 일주일 동안 모은 데이터로 그래프를 그렸어요.",
    "blank": "इकट्ठा",
+   "src": "made"
+  }
+ ],
+ "w|इकलौता": [
+  {
+   "text": "राहुल अपने माँ-बाप का इकलौता बेटा है, फिर भी स्कूल में सबसे ज़्यादा दोस्तों वाला है।",
+   "en": "Rahul is his parents' only son, yet he has the most friends at school.",
+   "ko": "라훌은 외아들인데도 학교에서 친구가 제일 많아요.",
+   "blank": "इकलौता",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया के गाँव में बरगद का इकलौता पेड़ हर मौसम में छाँव देता है।",
+   "en": "The only banyan tree in Priya's village gives shade in every season.",
+   "ko": "프리야네 마을에 하나뿐인 반얀나무는 철마다 그늘을 드리워요.",
+   "blank": "इकलौता",
    "src": "made"
   }
  ],
@@ -8017,6 +8097,22 @@
    "src": "made"
   }
  ],
+ "w|उत्पात": [
+  {
+   "text": "टीचर के बाहर जाते ही पिछली बेंच के बच्चों ने उत्पात मचा दिया।",
+   "en": "As soon as the teacher went out, the kids on the back bench started creating a ruckus.",
+   "ko": "선생님이 나가자마자 뒷자리 아이들이 소란을 피웠어요.",
+   "blank": "उत्पात",
+   "src": "made"
+  },
+  {
+   "text": "आँधी की रात बंदरों ने छत पर ख़ूब उत्पात मचाया।",
+   "en": "On the night of the storm, the monkeys caused a lot of mischief on the roof.",
+   "ko": "폭풍 치던 밤 원숭이들이 지붕 위에서 한바탕 난리를 쳤어요.",
+   "blank": "उत्पात",
+   "src": "made"
+  }
+ ],
  "w|उत्पाद": [
   {
    "text": "यह उत्पाद स्थानीय बाज़ार में मिलता है।",
@@ -9175,6 +9271,22 @@
    "blank": "उम्मीदवार"
   }
  ],
+ "w|उम्मीदवारी": [
+  {
+   "text": "राहुल ने छात्र परिषद के अध्यक्ष पद के लिए अपनी उम्मीदवारी दर्ज कराई।",
+   "en": "Rahul registered his candidacy for president of the student council.",
+   "ko": "라훌은 학생회장 선거에 후보로 등록했어요.",
+   "blank": "उम्मीदवारी",
+   "src": "made"
+  },
+  {
+   "text": "सर्दियों में होने वाले पंचायत चुनाव के लिए प्रिया की मौसी ने उम्मीदवारी भरी।",
+   "en": "Priya's aunt filed her candidacy for the panchayat election held in winter.",
+   "ko": "프리야의 이모는 겨울에 있을 마을 의회 선거에 후보로 나섰어요.",
+   "blank": "उम्मीदवारी",
+   "src": "made"
+  }
+ ],
  "w|उम्र": [
   {
    "text": "तुम्हारी उम्र क्या है?",
@@ -9701,6 +9813,22 @@
    "en": "What he said turned out completely right.",
    "ko": "그의 말이 완전히 맞았어.",
    "blank": "एकदम"
+  }
+ ],
+ "w|एकमत": [
+  {
+   "text": "सारे टीचर एकमत थे कि खेल का पीरियड कम नहीं होगा।",
+   "en": "All the teachers were unanimous that the sports period would not be cut.",
+   "ko": "선생님들은 체육 시간을 줄이지 않기로 뜻을 모았어요.",
+   "blank": "एकमत",
+   "src": "made"
+  },
+  {
+   "text": "गाँव वाले एकमत थे कि इस बार मेला बरसात के बाद होगा।",
+   "en": "The villagers agreed unanimously that the fair would be held after the rains this time.",
+   "ko": "마을 사람들은 이번 장터는 장마 뒤에 열자고 한목소리를 냈어요.",
+   "blank": "एकमत",
+   "src": "made"
   }
  ],
  "w|एकमात्र": [
@@ -11203,6 +11331,22 @@
    "src": "made"
   }
  ],
+ "w|कबूल करना": [
+  {
+   "text": "राहुल ने खिड़की का शीशा तोड़ने की बात सबके सामने कबूल कर ली।",
+   "en": "Rahul admitted in front of everyone that he had broken the window pane.",
+   "ko": "라훌은 창유리를 깬 걸 모두 앞에서 인정했어요.",
+   "blank": "कबूल कर",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने कबूल किया कि उसे गर्मियों की लंबी दोपहरें बिल्कुल पसंद नहीं।",
+   "en": "Priya admitted that she doesn't like long summer afternoons at all.",
+   "ko": "프리야는 여름의 긴 오후가 전혀 좋지 않다고 털어놨어요.",
+   "blank": "कबूल किया",
+   "src": "made"
+  }
+ ],
  "w|क़ब्ज़ा": [
   {
    "text": "एक बुज़ुर्ग महिला ने शिकायत की कि पड़ोसी ने उनकी ज़मीन पर क़ब्ज़ा कर लिया है।",
@@ -12583,6 +12727,22 @@
    "src": "made"
   }
  ],
+ "w|क़ायदा": [
+  {
+   "text": "स्कूल का क़ायदा है कि घंटी बजते ही सब कक्षा में पहुँचें।",
+   "en": "The school rule is that everyone must reach class as soon as the bell rings.",
+   "ko": "학교 규칙은 종이 울리면 모두 교실에 들어가는 거예요.",
+   "blank": "क़ायदा",
+   "src": "made"
+  },
+  {
+   "text": "गाँव का क़ायदा है कि पहली बारिश के बाद ही बुआई शुरू होती है।",
+   "en": "The village custom is that sowing begins only after the first rain.",
+   "ko": "마을 관례상 첫비가 온 뒤에야 씨를 뿌려요.",
+   "blank": "क़ायदा",
+   "src": "made"
+  }
+ ],
  "w|क़ायम": [
   {
    "text": "राहुल चाहता है कि पुराने पड़ोसियों से रिश्ता क़ायम रहे।",
@@ -12612,6 +12772,22 @@
    "en": "Meena keeps up her habit of a morning walk even in winter.",
    "ko": "미나는 겨울에도 아침 산책 습관을 지켜요.",
    "blank": "क़ायम रखती",
+   "src": "made"
+  }
+ ],
+ "w|कायर": [
+  {
+   "text": "राहुल ने कहानी में लिखा कि राजा का सेनापति कायर निकला और युद्ध से भाग गया।",
+   "en": "Rahul wrote in his story that the king's general turned out to be cowardly and fled the battle.",
+   "ko": "라훌은 이야기에서 왕의 장군이 겁쟁이라 전쟁터에서 도망쳤다고 썼어요.",
+   "blank": "कायर",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया हँसकर कहती है कि वह ठंड के मामले में बहुत कायर है।",
+   "en": "Priya laughingly says she's a real coward when it comes to cold.",
+   "ko": "프리야는 추위 앞에선 완전 겁쟁이라며 웃어요.",
+   "blank": "कायर",
    "src": "made"
   }
  ],
@@ -15131,6 +15307,22 @@
    "src": "made"
   }
  ],
+ "w|कोहराम": [
+  {
+   "text": "नतीजे आने पर कक्षा में ऐसा कोहराम मचा कि टीचर को आना पड़ा।",
+   "en": "When the results came out, such an uproar broke out in class that the teacher had to come.",
+   "ko": "성적이 나오자 교실이 난리가 나서 선생님이 오셔야 했어요.",
+   "blank": "कोहराम",
+   "src": "made"
+  },
+  {
+   "text": "अचानक आई ओलावृष्टि से खेतों में कोहराम मच गया।",
+   "en": "The sudden hailstorm caused havoc in the fields.",
+   "ko": "갑자기 쏟아진 우박에 밭이 아수라장이 됐어요.",
+   "blank": "कोहराम",
+   "src": "made"
+  }
+ ],
  "w|कौआ": [
   {
    "text": "एक कौआ अमित के हाथ से भुने चने छीनकर उड़ गया।",
@@ -15526,6 +15718,22 @@
    "en": "The fire caused heavy damage to some of the lab's equipment.",
    "ko": "불이 나서 실험실 장비 몇 대가 크게 망가졌어요.",
    "blank": "क्षति",
+   "src": "made"
+  }
+ ],
+ "w|क्षतिपूर्ति": [
+  {
+   "text": "बस वाले ने टूटे शीशे की क्षतिपूर्ति के लिए स्कूल को पैसे दिए।",
+   "en": "The bus operator paid the school compensation for the broken glass.",
+   "ko": "버스 회사는 깨진 유리를 배상하려고 학교에 돈을 냈어요.",
+   "blank": "क्षतिपूर्ति",
+   "src": "made"
+  },
+  {
+   "text": "ओलों से बर्बाद फ़सल की क्षतिपूर्ति के लिए किसानों ने सरकार को अर्ज़ी दी।",
+   "en": "Farmers applied to the government for compensation for crops ruined by hail.",
+   "ko": "농부들은 우박으로 망친 농작물을 보상받으려고 정부에 신청서를 냈어요.",
+   "blank": "क्षतिपूर्ति",
    "src": "made"
   }
  ],
@@ -16295,6 +16503,22 @@
    "blank": "ख़ासकर"
   }
  ],
+ "w|ख़ासतौर": [
+  {
+   "text": "इस साल की प्रदर्शनी ख़ासतौर पर पानी बचाने के विषय पर है।",
+   "en": "This year's exhibition is especially on the theme of saving water.",
+   "ko": "올해 전시회는 특히 물 절약을 주제로 해요.",
+   "blank": "ख़ासतौर",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया को सब मौसम पसंद हैं, पर ख़ासतौर पर बसंत।",
+   "en": "Priya likes all seasons, but especially spring.",
+   "ko": "프리야는 모든 계절을 좋아하지만 특히 봄을 좋아해요.",
+   "blank": "ख़ासतौर",
+   "src": "made"
+  }
+ ],
  "w|ख़ासियत": [
   {
    "text": "इस रेस्तराँ की ख़ासियत मसालेदार करी है।",
@@ -16725,6 +16949,22 @@
    "en": "I was very happy when I passed the exam.",
    "ko": "시험에 합격하니 정말 기뻤어.",
    "blank": "ख़ुशी"
+  }
+ ],
+ "w|खूँखार": [
+  {
+   "text": "विज्ञान की किताब में एक खूँखार शेर की तस्वीर देखकर छोटे बच्चे डर गए।",
+   "en": "The little children got scared seeing a picture of a ferocious lion in the science book.",
+   "ko": "과학책에서 사나운 사자 사진을 보고 어린아이들이 겁을 먹었어요.",
+   "blank": "खूँखार",
+   "src": "made"
+  },
+  {
+   "text": "बरसात में नदी इतनी खूँखार हो जाती है कि कोई नाव नहीं चलती।",
+   "en": "In the rains the river gets so ferocious that no boat runs.",
+   "ko": "장마철이면 강이 너무 사나워져서 배가 한 척도 안 다녀요.",
+   "blank": "खूँखार",
+   "src": "made"
   }
  ],
  "w|खूँटी": [
@@ -19771,6 +20011,22 @@
    "blank": "घृणा"
   }
  ],
+ "w|घृणित": [
+  {
+   "text": "प्रिंसिपल ने कहा कि किसी कमज़ोर बच्चे को तंग करना घृणित काम है।",
+   "en": "The principal said bullying a weaker child is a despicable act.",
+   "ko": "교장 선생님은 약한 아이를 괴롭히는 건 비열한 짓이라고 하셨어요.",
+   "blank": "घृणित",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया को गर्मी में नाले से आने वाली घृणित बदबू से बड़ी परेशानी होती है।",
+   "en": "In summer Priya is very bothered by the disgusting stench from the drain.",
+   "ko": "프리야는 여름이면 도랑에서 올라오는 역겨운 냄새 때문에 괴로워요.",
+   "blank": "घृणित",
+   "src": "made"
+  }
+ ],
  "w|घेरना": [
   {
    "text": "पुलिस ने इलाके को घेर लिया।",
@@ -20753,6 +21009,22 @@
    "en": "Silver jewelry shines during festivals.",
    "ko": "축제 때 은 장신구가 반짝여.",
    "blank": "चाँदी"
+  }
+ ],
+ "w|चापलूसी": [
+  {
+   "text": "राहुल को टीचर की चापलूसी करने वाले बच्चे बिल्कुल पसंद नहीं।",
+   "en": "Rahul doesn't like children who flatter the teacher at all.",
+   "ko": "라훌은 선생님께 아부하는 아이들을 전혀 좋아하지 않아요.",
+   "blank": "चापलूसी",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की सहेली ने मज़ाक में कहा कि मौसम चापलूसी से नहीं बदलता।",
+   "en": "Priya's friend joked that the weather doesn't change through flattery.",
+   "ko": "프리야의 친구는 아부한다고 날씨가 바뀌지는 않는다며 농담했어요.",
+   "blank": "चापलूसी",
+   "src": "made"
   }
  ],
  "w|चाबी": [
@@ -23757,6 +24029,22 @@
    "blank": "ज़रूरी"
   }
  ],
+ "w|जर्जर": [
+  {
+   "text": "स्कूल की जर्जर इमारत की मरम्मत इस गर्मी की छुट्टियों में होगी।",
+   "en": "The school's dilapidated building will be repaired during these summer holidays.",
+   "ko": "학교의 낡은 건물은 이번 여름 방학에 수리할 거예요.",
+   "blank": "जर्जर",
+   "src": "made"
+  },
+  {
+   "text": "बरसात से पहले प्रिया ने जर्जर छप्पर पर नई तिरपाल डलवाई।",
+   "en": "Before the rains, Priya had a new tarpaulin put on the dilapidated thatch.",
+   "ko": "장마 전에 프리야는 낡은 초가지붕에 새 방수포를 덮었어요.",
+   "blank": "जर्जर",
+   "src": "made"
+  }
+ ],
  "w|जलन": [
   {
    "text": "मिर्च से मुँह में जलन हो गई।",
@@ -24488,6 +24776,22 @@
    "en": "Deepa's dupatta had a fine net of golden threads on it.",
    "ko": "디파의 두파타에는 금실로 섬세한 그물 무늬가 놓여 있었어요.",
    "blank": "जाल",
+   "src": "made"
+  }
+ ],
+ "w|ज़ालिम": [
+  {
+   "text": "नाटक में राहुल ने एक ज़ालिम ज़मींदार का किरदार निभाया।",
+   "en": "In the play Rahul played the role of a cruel landlord.",
+   "ko": "연극에서 라훌은 잔인한 지주 역을 맡았어요.",
+   "blank": "ज़ालिम",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया के दादाजी ठंड को हँसी में ज़ालिम मौसम कहते हैं।",
+   "en": "Priya's grandfather jokingly calls the cold a cruel season.",
+   "ko": "프리야의 할아버지는 추위를 농담 삼아 잔인한 계절이라고 하세요.",
+   "blank": "ज़ालिम",
    "src": "made"
   }
  ],
@@ -26077,6 +26381,22 @@
    "en": "The old broom will have to be replaced.",
    "ko": "낡은 빗자루를 바꿔야 해.",
    "blank": "झाड़ू"
+  }
+ ],
+ "w|झाँसा": [
+  {
+   "text": "राहुल ने दोस्त का झाँसा पहचान लिया और उसकी कॉपी देने से मना कर दिया।",
+   "en": "Rahul saw through his friend's trick and refused to hand over his notebook.",
+   "ko": "라훌은 친구의 꾀를 눈치채고 공책을 넘겨주지 않았어요.",
+   "blank": "झाँसा",
+   "src": "made"
+  },
+  {
+   "text": "धूप देखकर प्रिया छाता छोड़ गई, पर मौसम ने झाँसा दे दिया और बारिश शुरू हो गई।",
+   "en": "Seeing the sun, Priya left her umbrella behind, but the weather fooled her and it started raining.",
+   "ko": "햇볕을 보고 프리야는 우산을 두고 나갔지만 날씨에 속아 비를 만났어요.",
+   "blank": "झाँसा",
+   "src": "made"
   }
  ],
  "w|झील": [
@@ -29003,6 +29323,22 @@
    "src": "made"
   }
  ],
+ "w|तहज़ीब": [
+  {
+   "text": "प्रिंसिपल कहती हैं कि पढ़ाई के साथ तहज़ीब भी ज़रूरी है।",
+   "en": "The principal says good manners are as important as studies.",
+   "ko": "교장 선생님은 공부와 함께 예절도 중요하다고 하세요.",
+   "blank": "तहज़ीब",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की नानी लखनऊ की तहज़ीब और वहाँ की सर्दियों को बहुत याद करती हैं।",
+   "en": "Priya's grandmother greatly misses Lucknow's refined culture and its winters.",
+   "ko": "프리야의 외할머니는 러크나우의 예법과 그곳의 겨울을 무척 그리워하세요.",
+   "blank": "तहज़ीब",
+   "src": "made"
+  }
+ ],
  "w|तहत": [
   {
    "text": "सरकारी योजना के तहत फ़ैक्टरी में सौर पैनल लगाए गए।",
@@ -30662,6 +30998,22 @@
    "en": "The shopkeeper had to pay a heavy fine for using a fake scale.",
    "ko": "가짜 저울을 쓴 상인은 무거운 벌금을 물었어요.",
    "blank": "दंड",
+   "src": "made"
+  }
+ ],
+ "w|दंडित": [
+  {
+   "text": "परीक्षा में नक़ल करते पकड़े गए दो छात्रों को दंडित किया गया।",
+   "en": "The two students caught cheating in the exam were punished.",
+   "ko": "시험에서 부정행위를 하다 걸린 학생 둘이 처벌을 받았어요.",
+   "blank": "दंडित",
+   "src": "made"
+  },
+  {
+   "text": "बरसात में खेत में पराली जलाने वाले किसानों को पंचायत ने दंडित किया।",
+   "en": "The panchayat penalised farmers who burned stubble in the fields.",
+   "ko": "마을 의회는 밭에서 짚을 태운 농부들에게 벌을 줬어요.",
+   "blank": "दंडित",
    "src": "made"
   }
  ],
@@ -33007,6 +33359,22 @@
    "src": "made"
   }
  ],
+ "w|दैत्य": [
+  {
+   "text": "लाइब्रेरी की एक किताब में एक दैत्य पहाड़ के नीचे सोता रहता है।",
+   "en": "In a book in the library, a giant demon sleeps under a mountain.",
+   "ko": "도서관 책 한 권에는 산 밑에서 잠자는 거인 괴물이 나와요.",
+   "blank": "दैत्य",
+   "src": "made"
+  },
+  {
+   "text": "गाँव की लोककथा में सर्दी को एक बर्फ़ीला दैत्य माना गया है।",
+   "en": "In the village folk tale, winter is seen as an icy demon.",
+   "ko": "마을 민담에서는 겨울을 얼음 괴물로 여겨요.",
+   "blank": "दैत्य",
+   "src": "made"
+  }
+ ],
  "w|दैनिक": [
   {
    "text": "दैनिक अख़बार मेज़ पर है।",
@@ -33958,6 +34326,22 @@
    "en": "There is a fine for smoking inside the store.",
    "ko": "매장 안에서 흡연하면 벌금이 있어요.",
    "blank": "धूम्रपान",
+   "src": "made"
+  }
+ ],
+ "w|धूर्त": [
+  {
+   "text": "पंचतंत्र की कहानी में धूर्त लोमड़ी ने कौए से रोटी छीन ली।",
+   "en": "In the Panchatantra story, the cunning fox snatched the bread from the crow.",
+   "ko": "판차탄트라 이야기에서 교활한 여우가 까마귀에게서 빵을 빼앗았어요.",
+   "blank": "धूर्त",
+   "src": "made"
+  },
+  {
+   "text": "बाज़ार में एक धूर्त दुकानदार ने बारिश का फ़ायदा उठाकर छाते महँगे कर दिए।",
+   "en": "At the market, a cunning shopkeeper took advantage of the rain and raised umbrella prices.",
+   "ko": "시장의 한 약삭빠른 가게 주인이 비를 틈타 우산 값을 올렸어요.",
+   "blank": "धूर्त",
    "src": "made"
   }
  ],
@@ -40479,6 +40863,22 @@
    "blank": "पारंपरिक"
   }
  ],
+ "w|पारस्परिक": [
+  {
+   "text": "टीचर ने कहा कि अच्छी टीम पारस्परिक भरोसे से बनती है।",
+   "en": "The teacher said a good team is built on mutual trust.",
+   "ko": "선생님은 좋은 팀은 서로 믿는 데서 만들어진다고 하셨어요.",
+   "blank": "पारस्परिक",
+   "src": "made"
+  },
+  {
+   "text": "बुआई के मौसम में किसान पारस्परिक मदद से एक-दूसरे के खेत जोतते हैं।",
+   "en": "In sowing season, farmers plough each other's fields through mutual help.",
+   "ko": "파종기에는 농부들이 서로 도와 남의 밭도 갈아 줘요.",
+   "blank": "पारस्परिक",
+   "src": "made"
+  }
+ ],
  "w|पारित": [
   {
    "text": "विधानसभा में पारित एक प्रस्ताव से संग्रहालय को नई इमारत मिली।",
@@ -41631,6 +42031,22 @@
    "src": "made"
   }
  ],
+ "w|पूंजीवाद": [
+  {
+   "text": "अर्थशास्त्र की क्लास में राहुल ने पूंजीवाद और समाजवाद पर एक निबंध लिखा।",
+   "en": "In economics class Rahul wrote an essay on capitalism and socialism.",
+   "ko": "라훌은 경제 수업에서 자본주의와 사회주의에 관한 글을 썼어요.",
+   "blank": "पूंजीवाद",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया के चाचा कहते हैं कि पूंजीवाद के दौर में फ़सल का दाम मौसम से ज़्यादा बाज़ार तय करता है।",
+   "en": "Priya's uncle says that in the age of capitalism the market, more than the weather, sets crop prices.",
+   "ko": "프리야의 삼촌은 자본주의 시대에는 날씨보다 시장이 농작물 값을 정한다고 해요.",
+   "blank": "पूंजीवाद",
+   "src": "made"
+  }
+ ],
  "w|पूरा": [
   {
    "text": "पूरा गिलास पानी पी लो।",
@@ -41762,6 +42178,22 @@
    "en": "An elderly patient laughed and said his ancestors cleaned their teeth only with neem twigs.",
    "ko": "한 노인 환자는 웃으며 조상들은 님 나뭇가지로만 이를 닦았다고 했어요.",
    "blank": "पूर्वज",
+   "src": "made"
+  }
+ ],
+ "w|पूर्वाग्रह": [
+  {
+   "text": "टीचर ने समझाया कि किसी बच्चे के बारे में पूर्वाग्रह रखकर उसे आँकना ग़लत है।",
+   "en": "The teacher explained that judging a child with prejudice is wrong.",
+   "ko": "선생님은 편견을 갖고 아이를 판단하면 안 된다고 설명하셨어요.",
+   "blank": "पूर्वाग्रह",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया का पूर्वाग्रह था कि बरसात उबाऊ होती है, पर पहाड़ों में उसकी राय बदल गई।",
+   "en": "Priya had a bias that the monsoon is boring, but in the mountains her view changed.",
+   "ko": "프리야는 장마철이 지루하다는 선입견이 있었는데 산에서 생각이 바뀌었어요.",
+   "blank": "पूर्वाग्रह",
    "src": "made"
   }
  ],
@@ -49231,6 +49663,22 @@
    "blank": "बेईमान"
   }
  ],
+ "w|बेक़सूर": [
+  {
+   "text": "राहुल को डाँट पड़ी, पर बाद में पता चला कि वह बेक़सूर था।",
+   "en": "Rahul got scolded, but later it turned out he was innocent.",
+   "ko": "라훌은 꾸중을 들었지만 나중에 죄가 없다는 게 밝혀졌어요.",
+   "blank": "बेक़सूर",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया को लगता है कि बाढ़ में सबसे ज़्यादा बेक़सूर जानवर मारे जाते हैं।",
+   "en": "Priya feels that in floods innocent animals suffer the most deaths.",
+   "ko": "프리야는 홍수 때 죄 없는 동물들이 가장 많이 죽는다고 생각해요.",
+   "blank": "बेक़सूर",
+   "src": "made"
+  }
+ ],
  "w|बेकार": [
   {
    "text": "टूटा फ़ोन अब बेकार हो गया।",
@@ -50180,6 +50628,22 @@
    "en": "The phone ringing broke Deepa's concentration and the solution spilled.",
    "ko": "전화가 울려 디파의 집중이 깨지는 바람에 용액이 쏟아졌어요.",
    "blank": "भंग",
+   "src": "made"
+  }
+ ],
+ "w|भगदड़": [
+  {
+   "text": "छुट्टी की घंटी बजते ही सीढ़ियों पर भगदड़ न हो, इसलिए बच्चे क़तार में उतरते हैं।",
+   "en": "So there is no stampede on the stairs when the bell rings, children come down in a line.",
+   "ko": "종이 울릴 때 계단에서 우르르 몰리지 않게 아이들은 줄을 서서 내려와요.",
+   "blank": "भगदड़",
+   "src": "made"
+  },
+  {
+   "text": "अचानक तेज़ बारिश हुई तो मेले में भगदड़ जैसी हालत हो गई।",
+   "en": "When heavy rain suddenly fell, the fair turned into something like a stampede.",
+   "ko": "갑자기 폭우가 쏟아지자 장터가 아수라장처럼 됐어요.",
+   "blank": "भगदड़",
    "src": "made"
   }
  ],
@@ -55037,6 +55501,22 @@
    "src": "made"
   }
  ],
+ "w|मुजरिम": [
+  {
+   "text": "स्कूल के नाटक में राहुल ने एक मुजरिम का किरदार निभाया, जो आख़िर में पकड़ा जाता है।",
+   "en": "In the school play Rahul played a criminal who gets caught in the end.",
+   "ko": "학교 연극에서 라훌은 끝내 붙잡히는 범인 역을 맡았어요.",
+   "blank": "मुजरिम",
+   "src": "made"
+  },
+  {
+   "text": "रेडियो की ख़बर थी कि धुंध का फ़ायदा उठाकर एक मुजरिम जेल से भाग गया।",
+   "en": "The radio news said a convict escaped from jail taking advantage of the fog.",
+   "ko": "라디오 뉴스에서 한 죄수가 안개를 틈타 감옥에서 달아났다고 했어요.",
+   "blank": "मुजरिम",
+   "src": "made"
+  }
+ ],
  "w|मुट्ठी": [
   {
    "text": "राहुल ने रबर की गेंद को मुट्ठी में ज़ोर से दबाया।",
@@ -57421,6 +57901,22 @@
    "en": "Stop rubbing your eyes out of laziness.",
    "ko": "게으름에 눈을 비비지 마.",
    "blank": "रगड़ना"
+  }
+ ],
+ "w|रंगत": [
+  {
+   "text": "धूप में खेलकर राहुल के चेहरे की रंगत थोड़ी साँवली हो गई है।",
+   "en": "Playing in the sun has darkened Rahul's complexion a little.",
+   "ko": "햇볕 아래서 놀다 보니 라훌의 얼굴빛이 좀 그을렸어요.",
+   "blank": "रंगत",
+   "src": "made"
+  },
+  {
+   "text": "पतझड़ में पत्तों की रंगत हरे से सुनहरी हो जाती है।",
+   "en": "In autumn the colour of the leaves turns from green to golden.",
+   "ko": "가을이면 나뭇잎 빛깔이 초록에서 황금빛으로 바뀌어요.",
+   "blank": "रंगत",
+   "src": "made"
   }
  ],
  "w|रँगना": [
@@ -60677,6 +61173,22 @@
    "src": "made"
   }
  ],
+ "w|लौकिक": [
+  {
+   "text": "दर्शनशास्त्र की क्लास में लौकिक और आध्यात्मिक जीवन पर बहस हुई।",
+   "en": "In philosophy class there was a debate on worldly and spiritual life.",
+   "ko": "철학 수업에서 세속적인 삶과 영적인 삶을 놓고 토론했어요.",
+   "blank": "लौकिक",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की दादी कहती हैं कि मौसम लौकिक चीज़ है, आता-जाता रहता है।",
+   "en": "Priya's grandmother says the weather is a worldly thing; it keeps coming and going.",
+   "ko": "프리야의 할머니는 날씨란 세상일이라 오고 가는 법이라고 하세요.",
+   "blank": "लौकिक",
+   "src": "made"
+  }
+ ],
  "w|लौटना": [
   {
    "text": "शाम तक घर लौटना है।",
@@ -61136,6 +61648,22 @@
    "en": "Priya saw on the packet that this snack has a lot of fat.",
    "ko": "프리야는 이 과자 봉지를 보고 지방이 너무 많다는 걸 알았어요.",
    "blank": "वसा",
+   "src": "made"
+  }
+ ],
+ "w|वसीयत": [
+  {
+   "text": "एक पुराने दानदाता ने अपनी वसीयत में स्कूल के नाम एक बग़ीचा छोड़ा था।",
+   "en": "An old benefactor had left a garden to the school in his will.",
+   "ko": "오래전 한 후원자가 유언장에 학교 앞으로 정원 하나를 남겼어요.",
+   "blank": "वसीयत",
+   "src": "made"
+  },
+  {
+   "text": "दादाजी ने अपनी वसीयत में आम का बाग़ प्रिया के नाम लिखा है।",
+   "en": "Grandfather has left the mango orchard to Priya in his will.",
+   "ko": "할아버지는 유언장에 망고 과수원을 프리야 앞으로 남기셨어요.",
+   "blank": "वसीयत",
    "src": "made"
   }
  ],
@@ -61626,6 +62154,22 @@
    "en": "The room looked big on the website, but in reality it turned out quite small.",
    "ko": "웹사이트에서는 방이 넓어 보였는데 실제로는 꽤 좁았어요.",
    "blank": "वास्तविकता",
+   "src": "made"
+  }
+ ],
+ "w|वास्तुकला": [
+  {
+   "text": "इतिहास की क्लास में बच्चों ने मुग़ल वास्तुकला पर एक प्रोजेक्ट बनाया।",
+   "en": "In history class the children made a project on Mughal architecture.",
+   "ko": "역사 수업에서 아이들은 무굴 건축에 관한 과제를 만들었어요.",
+   "blank": "वास्तुकला",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ी घरों की वास्तुकला ऐसी है कि सर्दी में भी अंदर गर्माहट रहती है।",
+   "en": "The architecture of hill houses keeps them warm inside even in winter.",
+   "ko": "산골 집은 건축 방식 덕분에 겨울에도 안이 따뜻해요.",
+   "blank": "वास्तुकला",
    "src": "made"
   }
  ],
@@ -64291,6 +64835,22 @@
    "src": "made"
   }
  ],
+ "w|शरीक": [
+  {
+   "text": "राहुल वाद-विवाद प्रतियोगिता में शरीक होने के लिए दूसरे शहर गया।",
+   "en": "Rahul went to another city to take part in a debate competition.",
+   "ko": "라훌은 토론 대회에 참가하려고 다른 도시에 갔어요.",
+   "blank": "शरीक",
+   "src": "made"
+  },
+  {
+   "text": "पूरा गाँव फ़सल कटने के उत्सव में शरीक हुआ।",
+   "en": "The whole village joined in the harvest festival.",
+   "ko": "온 마을이 추수 축제에 함께했어요.",
+   "blank": "शरीक",
+   "src": "made"
+  }
+ ],
  "w|शरीफ़": [
   {
    "text": "नए चपरासी बड़े शरीफ़ आदमी हैं और हर बच्चे से प्यार से बात करते हैं।",
@@ -65639,6 +66199,22 @@
    "src": "made"
   }
  ],
+ "w|शोहरत": [
+  {
+   "text": "राहुल के स्कूल के एक पुराने छात्र ने क्रिकेट में खूब शोहरत कमाई है।",
+   "en": "A former student of Rahul's school has earned a lot of fame in cricket.",
+   "ko": "라훌네 학교 졸업생 한 명은 크리켓으로 큰 명성을 얻었어요.",
+   "blank": "शोहरत",
+   "src": "made"
+  },
+  {
+   "text": "गाँव के आम अपनी मिठास के लिए दूर-दूर तक शोहरत पा चुके हैं।",
+   "en": "The village mangoes have won fame far and wide for their sweetness.",
+   "ko": "마을 망고는 달콤한 맛으로 멀리까지 이름이 났어요.",
+   "blank": "शोहरत",
+   "src": "made"
+  }
+ ],
  "w|शौक़": [
   {
    "text": "राहुल ने बताया कि रिटायर होकर उसने पुराने सिक्के जमा करने का शौक़ पाल लिया है।",
@@ -66898,6 +67474,22 @@
    "en": "Seeing satisfaction on the guests' faces, Anjali's tiredness goes away.",
    "ko": "손님들 얼굴에 만족스러운 표정을 보면 안잘리의 피로가 풀려요.",
    "blank": "संतोष",
+   "src": "made"
+  }
+ ],
+ "w|संतोषजनक": [
+  {
+   "text": "राहुल का गणित का नतीजा संतोषजनक रहा, पर हिंदी में और मेहनत चाहिए।",
+   "en": "Rahul's maths result was satisfactory, but he needs to work harder on Hindi.",
+   "ko": "라훌의 수학 성적은 괜찮았지만 힌디어는 더 노력해야 해요.",
+   "blank": "संतोषजनक",
+   "src": "made"
+  },
+  {
+   "text": "किसानों ने कहा कि इस साल की बारिश संतोषजनक रही।",
+   "en": "The farmers said this year's rainfall was satisfactory.",
+   "ko": "농부들은 올해 비가 만족스러웠다고 했어요.",
+   "blank": "संतोषजनक",
    "src": "made"
   }
  ],
@@ -72907,6 +73499,22 @@
    "src": "made"
   }
  ],
+ "w|सैद्धांतिक": [
+  {
+   "text": "भौतिकी के मास्टरजी सैद्धांतिक बातों के साथ प्रयोग भी करवाते हैं।",
+   "en": "The physics teacher does experiments along with the theoretical material.",
+   "ko": "물리 선생님은 이론과 함께 실험도 시켜 주세요.",
+   "blank": "सैद्धांतिक",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया के भाई ने बताया कि मौसम बदलने की सैद्धांतिक वजह धरती का झुकाव है।",
+   "en": "Priya's brother explained that the theoretical reason for the changing seasons is the earth's tilt.",
+   "ko": "프리야의 오빠는 계절이 바뀌는 이론적인 이유가 지구의 기울기라고 설명했어요.",
+   "blank": "सैद्धांतिक",
+   "src": "made"
+  }
+ ],
  "w|सैनिक": [
   {
    "text": "युवा सैनिक सीमा पर तैनात है।",
@@ -73157,6 +73765,22 @@
    "en": "Walk a hundred steps ahead.",
    "ko": "백 걸음 앞으로 걸어.",
    "blank": "सौ"
+  }
+ ],
+ "w|सौजन्य": [
+  {
+   "text": "स्कूल का नया पुस्तकालय एक स्थानीय बैंक के सौजन्य से बना है।",
+   "en": "The school's new library was built courtesy of a local bank.",
+   "ko": "학교 새 도서관은 지역 은행의 후원으로 지어졌어요.",
+   "blank": "सौजन्य",
+   "src": "made"
+  },
+  {
+   "text": "मौसम की यह जानकारी मौसम विभाग के सौजन्य से रेडियो पर आती है।",
+   "en": "This weather information comes on the radio courtesy of the weather department.",
+   "ko": "이 날씨 정보는 기상청 제공으로 라디오에 나와요.",
+   "blank": "सौजन्य",
+   "src": "made"
   }
  ],
  "w|सौंदर्य": [
@@ -75416,6 +76040,22 @@
    "en": "Kavita's mother says saving money is in the whole family's interest.",
    "ko": "카비타의 엄마는 저축이 온 가족에게 이롭다고 해요.",
    "blank": "हित",
+   "src": "made"
+  }
+ ],
+ "w|हिदायत": [
+  {
+   "text": "पिकनिक से पहले टीचर ने हिदायत दी कि कोई नदी के पास न जाए।",
+   "en": "Before the picnic, the teacher instructed that no one go near the river.",
+   "ko": "소풍 전에 선생님은 아무도 강가에 가지 말라고 단단히 일렀어요.",
+   "blank": "हिदायत",
+   "src": "made"
+  },
+  {
+   "text": "डॉक्टर ने प्रिया को हिदायत दी कि मौसम बदलते समय ठंडा पानी न पिए।",
+   "en": "The doctor instructed Priya not to drink cold water while the season is changing.",
+   "ko": "의사는 프리야에게 환절기에는 찬물을 마시지 말라고 일렀어요.",
+   "blank": "हिदायत",
    "src": "made"
   }
  ],

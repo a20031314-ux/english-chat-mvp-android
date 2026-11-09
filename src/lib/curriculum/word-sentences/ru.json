@@ -2705,6 +2705,22 @@
    "src": "tatoeba:10144735/marafon en:9735644/DJ_Saidez"
   }
  ],
+ "w|благодать": [
+  {
+   "text": "После шумной улицы в тихом зале Павел почувствовал настоящую благодать.",
+   "en": "After the noisy street Pavel felt true bliss in the quiet hall.",
+   "ko": "시끄러운 거리를 지나 조용한 전시실에 들어서자 파벨은 정말 평온함을 느꼈어요.",
+   "blank": "благодать",
+   "src": "made"
+  },
+  {
+   "text": "Когда съёмки закончились раньше, Елена назвала свободный вечер благодатью.",
+   "en": "When the shoot ended early, Elena called the free evening a blessing.",
+   "ko": "촬영이 일찍 끝나자 옐레나는 자유로운 저녁이 축복 같다고 했어요.",
+   "blank": "благодатью",
+   "src": "made"
+  }
+ ],
  "w|благородный": [
   {
    "text": "Павел считает, что помогать младшим — благородное дело.",
@@ -3117,6 +3133,22 @@
    "src": "made"
   }
  ],
+ "w|боеприпас": [
+  {
+   "text": "В витрине военного зала Павел увидел старые боеприпасы времён войны.",
+   "en": "In a display case in the military hall Pavel saw old wartime ammunition.",
+   "ko": "파벨은 군사 전시실 진열장에서 전쟁 때의 오래된 탄약을 봤어요.",
+   "blank": "боеприпасы",
+   "src": "made"
+  },
+  {
+   "text": "Пиротехник проверил каждый холостой боеприпас перед сценой с Еленой.",
+   "en": "The pyrotechnician checked every blank round before the scene with Elena.",
+   "ko": "특수 효과 담당자는 옐레나가 나오는 장면 전에 공포탄을 하나하나 확인했어요.",
+   "blank": "боеприпас",
+   "src": "made"
+  }
+ ],
  "w|боец": [
   {
    "text": "Тренер назвал Сергея настоящим бойцом после трудной игры.",
@@ -3179,6 +3211,22 @@
    "ko": "싸움은 빠른 주먹다짐으로 시작됐어요.",
    "blank": "Бой",
    "src": "tatoeba:2571458/sharptoothed en:2571457/sharptoothed"
+  }
+ ],
+ "w|бойня": [
+  {
+   "text": "В военном зале Павел читал о бойне, которая случилась у переправы.",
+   "en": "In the military hall Pavel read about the massacre that happened at the river crossing.",
+   "ko": "파벨은 군사 전시실에서 나루터에서 벌어진 학살에 관한 글을 읽었어요.",
+   "blank": "бойне",
+   "src": "made"
+  },
+  {
+   "text": "Сцену бойни снимали без Елены, и она весь день читала в трейлере.",
+   "en": "The massacre scene was shot without Elena, and she spent the whole day reading in her trailer.",
+   "ko": "학살 장면은 옐레나 없이 찍어서 옐레나는 하루 종일 트레일러에서 책을 읽었어요.",
+   "blank": "бойни",
+   "src": "made"
   }
  ],
  "w|бойфренд": [
@@ -5193,6 +5241,22 @@
    "ko": "이제 즐겨 보자!",
    "blank": "веселье",
    "src": "tatoeba:4146892/marafon en:1874653/CM"
+  }
+ ],
+ "w|веский": [
+  {
+   "text": "Павел не нашёл веских причин верить, что меч действительно принадлежал князю.",
+   "en": "Pavel found no strong reasons to believe the sword really belonged to the prince.",
+   "ko": "파벨은 그 칼이 정말 공작의 것이었다고 믿을 만한 확실한 근거를 찾지 못했어요.",
+   "blank": "веских",
+   "src": "made"
+  },
+  {
+   "text": "У Елены был веский повод отказаться от трюка, но она всё равно прыгнула.",
+   "en": "Elena had a good reason to refuse the stunt, but she jumped anyway.",
+   "ko": "옐레나는 스턴트를 거절할 충분한 이유가 있었지만 그래도 뛰어내렸어요.",
+   "blank": "веский",
+   "src": "made"
   }
  ],
  "w|весна": [
@@ -7575,6 +7639,22 @@
    "src": "made"
   }
  ],
+ "w|вопреки": [
+  {
+   "text": "Павел пошёл в музей вопреки прогнозу погоды и не пожалел.",
+   "en": "Pavel went to the museum despite the weather forecast and didn't regret it.",
+   "ko": "파벨은 일기 예보에도 불구하고 박물관에 갔고 후회하지 않았어요.",
+   "blank": "вопреки",
+   "src": "made"
+  },
+  {
+   "text": "Съёмки продолжались вопреки дождю, и Елена промокла до нитки.",
+   "en": "Filming continued in spite of the rain, and Elena got soaked to the skin.",
+   "ko": "비가 오는데도 촬영이 계속돼서 옐레나는 흠뻑 젖었어요.",
+   "blank": "вопреки",
+   "src": "made"
+  }
+ ],
  "w|вопрос": [
   {
    "text": "Можно вопрос?",
@@ -7715,6 +7795,22 @@
    "ko": "저는 여든네 살이에요.",
    "blank": "восемьдесят",
    "src": "tatoeba:7846010/marafon en:7845777/JeanM"
+  }
+ ],
+ "w|воскресение": [
+  {
+   "text": "На древней фреске Павел разглядел сцену воскресения.",
+   "en": "On an ancient fresco Pavel made out a scene of the resurrection.",
+   "ko": "파벨은 오래된 프레스코화에서 부활 장면을 알아봤어요.",
+   "blank": "воскресения",
+   "src": "made"
+  },
+  {
+   "text": "Критики назвали новый фильм Елены воскресением забытого жанра.",
+   "en": "Critics called Elena's new film the resurrection of a forgotten genre.",
+   "ko": "비평가들은 옐레나의 새 영화를 잊힌 장르의 부활이라고 했어요.",
+   "blank": "воскресением",
+   "src": "made"
   }
  ],
  "w|воскресенье": [
@@ -9755,6 +9851,22 @@
    "src": "made"
   }
  ],
+ "w|выложить": [
+  {
+   "text": "Вечером Павел выложил в сеть фотографии из музея.",
+   "en": "In the evening Pavel posted photos from the museum online.",
+   "ko": "저녁에 파벨은 박물관에서 찍은 사진을 인터넷에 올렸어요.",
+   "blank": "выложил",
+   "src": "made"
+  },
+  {
+   "text": "Елена попросила никого не выкладывать фото со съёмок, но кто-то всё-таки выложил кадр.",
+   "en": "Elena asked everyone not to post photos from the shoot, but someone posted a shot anyway.",
+   "ko": "옐레나는 촬영 사진을 올리지 말라고 부탁했지만 누군가 결국 한 장면을 올렸어요.",
+   "blank": "выложил",
+   "src": "made"
+  }
+ ],
  "w|вымыть": [
   {
    "text": "Перед зимой Сергей успел вымыть машину и поменять шины.",
@@ -11363,6 +11475,22 @@
    "en": "Don't lose heart.",
    "ko": "풀 죽지 마.",
    "blank": "голову"
+  }
+ ],
+ "w|головка": [
+  {
+   "text": "В витрине лежала крошечная фарфоровая головка куклы, и Павел долго её рассматривал.",
+   "en": "A tiny porcelain doll's head lay in the display case, and Pavel looked at it for a long time.",
+   "ko": "진열장에 작은 도자기 인형 머리가 있었고 파벨은 그걸 한참 들여다봤어요.",
+   "blank": "головка",
+   "src": "made"
+  },
+  {
+   "text": "Ассистент принёс Елене на обед головку сыра и хлеб.",
+   "en": "The assistant brought Elena a round of cheese and bread for lunch.",
+   "ko": "조수가 옐레나에게 점심으로 치즈 한 덩이와 빵을 가져다줬어요.",
+   "blank": "головку",
+   "src": "made"
   }
  ],
  "w|головной": [
@@ -14467,6 +14595,22 @@
    "src": "made"
   }
  ],
+ "w|довод": [
+  {
+   "text": "Главным доводом за подлинность вазы Павел считает её глазурь.",
+   "en": "Pavel considers the glaze the main argument for the vase's authenticity.",
+   "ko": "파벨은 꽃병이 진품이라는 가장 큰 근거로 유약을 꼽아요.",
+   "blank": "доводом",
+   "src": "made"
+  },
+  {
+   "text": "Елена привела режиссёру убедительный довод, и сцену переписали.",
+   "en": "Elena gave the director a convincing argument, and the scene was rewritten.",
+   "ko": "옐레나가 설득력 있는 이유를 대자 감독이 장면을 다시 썼어요.",
+   "blank": "довод",
+   "src": "made"
+  }
+ ],
  "w|довольный": [
   {
    "text": "Вид у тебя довольный.",
@@ -16835,6 +16979,22 @@
    "blank": "Живая"
   }
  ],
+ "w|живопись": [
+  {
+   "text": "Павел больше всего любит русскую живопись девятнадцатого века.",
+   "en": "Pavel likes nineteenth-century Russian painting most of all.",
+   "ko": "파벨은 십구 세기 러시아 회화를 가장 좋아해요.",
+   "blank": "живопись",
+   "src": "made"
+  },
+  {
+   "text": "Художник по декорациям когда-то учил Елену азам живописи.",
+   "en": "The set designer once taught Elena the basics of painting.",
+   "ko": "미술 감독은 예전에 옐레나에게 그림의 기초를 가르쳤어요.",
+   "blank": "живописи",
+   "src": "made"
+  }
+ ],
  "w|живот": [
   {
    "text": "Когда у тебя в последний раз болел живот?",
@@ -18557,6 +18717,22 @@
    "src": "tatoeba:10059050/Ooneykcall en:9142546/acell"
   }
  ],
+ "w|заложить": [
+  {
+   "text": "Гид рассказал Павлу, что первый камень музея заложили ещё при царе.",
+   "en": "The guide told Pavel that the museum's first stone was laid back in the tsar's time.",
+   "ko": "가이드는 파벨에게 박물관 주춧돌이 이미 황제 시대에 놓였다고 말했어요.",
+   "blank": "заложили",
+   "src": "made"
+  },
+  {
+   "text": "Продюсер заложил в бюджет фильма три дня на пересъёмки, и Елена вздохнула с облегчением.",
+   "en": "The producer built three days for reshoots into the film's budget, and Elena sighed with relief.",
+   "ko": "제작자가 재촬영 사흘을 예산에 넣어 둬서 옐레나는 안도의 한숨을 쉬었어요.",
+   "blank": "заложил",
+   "src": "made"
+  }
+ ],
  "w|заложник": [
   {
    "text": "Ольга рассказала, что пишет роман про заложника на корабле.",
@@ -19375,6 +19551,22 @@
    "src": "made"
   }
  ],
+ "w|запускать": [
+  {
+   "text": "Музей начал запускать ночные экскурсии, и Павел записался на первую.",
+   "en": "The museum started launching night tours, and Pavel signed up for the first one.",
+   "ko": "박물관이 야간 투어를 시작하자 파벨은 첫 투어에 신청했어요.",
+   "blank": "запускать",
+   "src": "made"
+  },
+  {
+   "text": "Дрон пора запускать, крикнул режиссёр, и Елена заняла место.",
+   "en": "Time to launch the drone, the director shouted, and Elena took her place.",
+   "ko": "이제 드론을 띄우자고 감독이 외치자 옐레나는 제자리에 섰어요.",
+   "blank": "запускать",
+   "src": "made"
+  }
+ ],
  "w|запустить": [
   {
    "text": "В мэрии решили запустить сайт для жалоб жителей, и проект поручили Алексею.",
@@ -19548,6 +19740,22 @@
    "en": "Anna's phone had almost no charge left after the night shift.",
    "ko": "야간 근무가 끝나자 안나의 휴대폰 배터리가 거의 없었어요.",
    "blank": "заряда",
+   "src": "made"
+  }
+ ],
+ "w|зарядить": [
+  {
+   "text": "У входа в музей Павел попросил зарядить телефон на стойке информации.",
+   "en": "At the museum entrance Pavel asked to charge his phone at the information desk.",
+   "ko": "파벨은 박물관 입구 안내 데스크에서 휴대폰 충전을 부탁했어요.",
+   "blank": "зарядить",
+   "src": "made"
+  },
+  {
+   "text": "Ночью на площадке Елена не помнила, зарядила ли она рацию, и пошла проверить.",
+   "en": "At night on set Elena couldn't remember whether she had charged the radio, and went to check.",
+   "ko": "밤에 촬영장에서 옐레나는 무전기를 충전했는지 기억이 안 나서 확인하러 갔어요.",
+   "blank": "зарядила",
    "src": "made"
   }
  ],
@@ -19770,6 +19978,22 @@
    "en": "Tatyana's elderly student often dozes off while everyone is drawing the vase.",
    "ko": "타티야나의 나이 든 학생은 다들 꽃병을 그리는 동안 자주 졸아요.",
    "blank": "засыпает",
+   "src": "made"
+  }
+ ],
+ "w|затащить": [
+  {
+   "text": "Павел с трудом затащил друга в музей, но тот потом сам не хотел уходить.",
+   "en": "Pavel barely managed to drag his friend to the museum, but then the friend didn't want to leave.",
+   "ko": "파벨은 친구를 겨우 박물관에 끌고 왔는데, 나중엔 친구가 오히려 나가기 싫어했어요.",
+   "blank": "затащил",
+   "src": "made"
+  },
+  {
+   "text": "Рабочие затащили тяжёлый кран на крышу, чтобы снять Елену сверху.",
+   "en": "The crew hauled a heavy crane onto the roof to film Elena from above.",
+   "ko": "작업자들은 옐레나를 위에서 찍으려고 무거운 크레인을 지붕까지 끌어올렸어요.",
+   "blank": "затащили",
    "src": "made"
   }
  ],
@@ -22707,6 +22931,22 @@
    "src": "made"
   }
  ],
+ "w|исторический": [
+  {
+   "text": "Павел любит исторический музей больше, чем художественный.",
+   "en": "Pavel likes the history museum more than the art museum.",
+   "ko": "파벨은 미술관보다 역사박물관을 더 좋아해요.",
+   "blank": "исторический",
+   "src": "made"
+  },
+  {
+   "text": "Елене удалось осуществить старую мечту — сыграть в историческом фильме.",
+   "en": "Elena managed to fulfil an old dream: to act in a historical film.",
+   "ko": "옐레나는 사극에 출연하겠다는 오랜 꿈을 이뤘어요.",
+   "blank": "историческом",
+   "src": "made"
+  }
+ ],
  "w|история": [
   {
    "text": "Расскажи историю.",
@@ -25021,6 +25261,22 @@
    "src": "made"
   }
  ],
+ "w|компромисс": [
+  {
+   "text": "Павел с женой нашли компромисс: утром музей, вечером парк.",
+   "en": "Pavel and his wife found a compromise: the museum in the morning, the park in the evening.",
+   "ko": "파벨과 아내는 오전엔 박물관, 저녁엔 공원으로 타협했어요.",
+   "blank": "компромисс",
+   "src": "made"
+  },
+  {
+   "text": "Сценарист и Елена долго спорили, но в итоге нашли компромисс.",
+   "en": "The screenwriter and Elena argued for a long time but eventually found a compromise.",
+   "ko": "작가와 옐레나는 오래 말다툼했지만 결국 타협점을 찾았어요.",
+   "blank": "компромисс",
+   "src": "made"
+  }
+ ],
  "w|компьютер": [
   {
    "text": "Сколько ты заплатил за этот компьютер?",
@@ -25417,6 +25673,22 @@
    "src": "made"
   }
  ],
+ "w|конфиденциальность": [
+  {
+   "text": "Павел подписал бумагу о конфиденциальности, прежде чем увидеть запасники.",
+   "en": "Pavel signed a confidentiality paper before seeing the storerooms.",
+   "ko": "파벨은 수장고를 보기 전에 비밀 유지 서약서에 서명했어요.",
+   "blank": "конфиденциальности",
+   "src": "made"
+  },
+  {
+   "text": "В договоре Елены есть пункт о конфиденциальности, поэтому про сюжет она молчит.",
+   "en": "Elena's contract has a confidentiality clause, so she keeps quiet about the plot.",
+   "ko": "옐레나의 계약서에는 비밀 유지 조항이 있어서 줄거리에 대해선 입을 다물어요.",
+   "blank": "конфиденциальности",
+   "src": "made"
+  }
+ ],
  "w|конфликт": [
   {
    "text": "Библиотекарь быстро уладила конфликт между Павлом и шумными школьниками.",
@@ -25559,6 +25831,22 @@
    "ko": "그 보고서 사본 있어?",
    "blank": "копия",
    "src": "tatoeba:9594845/odexed en:4013549/CK"
+  }
+ ],
+ "w|копьё": [
+  {
+   "text": "Павел удивился, какое тяжёлое копьё носили древние воины.",
+   "en": "Pavel was surprised at how heavy a spear ancient warriors carried.",
+   "ko": "파벨은 옛날 전사들이 들던 창이 얼마나 무거운지 놀랐어요.",
+   "blank": "копьё",
+   "src": "made"
+  },
+  {
+   "text": "В батальной сцене Елене дали бутафорское копьё из пластика.",
+   "en": "In the battle scene Elena was given a fake plastic spear.",
+   "ko": "전투 장면에서 옐레나는 플라스틱으로 만든 소품 창을 받았어요.",
+   "blank": "копьё",
+   "src": "made"
   }
  ],
  "w|корабль": [
@@ -38193,6 +38481,22 @@
    "src": "made"
   }
  ],
+ "w|обычай": [
+  {
+   "text": "Павел узнал на выставке о свадебном обычае северных народов.",
+   "en": "At the exhibition Pavel learned about a wedding custom of northern peoples.",
+   "ko": "파벨은 전시에서 북쪽 민족의 결혼 풍습에 대해 알게 됐어요.",
+   "blank": "обычае",
+   "src": "made"
+  },
+  {
+   "text": "На площадке у Елены есть обычай: перед первым дублем она съедает яблоко.",
+   "en": "Elena has a custom on set: before the first take she eats an apple.",
+   "ko": "옐레나에게는 촬영장에서 첫 테이크 전에 사과를 하나 먹는 습관이 있어요.",
+   "blank": "обычай",
+   "src": "made"
+  }
+ ],
  "w|обычно": [
   {
    "text": "Я обычно встаю рано.",
@@ -40650,6 +40954,22 @@
    "en": "In her column Olga didn't condemn the official but simply laid out the facts.",
    "ko": "칼럼에서 올가는 그 공무원을 비난하지 않고 사실만 담담히 적었어요.",
    "blank": "осуждать",
+   "src": "made"
+  }
+ ],
+ "w|осуществить": [
+  {
+   "text": "Павел давно мечтал осуществить поездку в большой музей в столице.",
+   "en": "Pavel had long dreamed of making a trip to the big museum in the capital.",
+   "ko": "파벨은 수도의 큰 박물관에 가 보는 걸 오래전부터 꿈꿔 왔어요.",
+   "blank": "осуществить",
+   "src": "made"
+  },
+  {
+   "text": "Елене удалось осуществить старую мечту — сыграть в историческом фильме.",
+   "en": "Elena managed to fulfil an old dream: to act in a historical film.",
+   "ko": "옐레나는 사극에 출연하겠다는 오랜 꿈을 이뤘어요.",
+   "blank": "осуществить",
    "src": "made"
   }
  ],
@@ -43879,6 +44199,22 @@
    "src": "made"
   }
  ],
+ "w|перемирие": [
+  {
+   "text": "Под стеклом лежал договор о перемирии, подписанный два века назад, прочитал Павел.",
+   "en": "Under the glass lay a truce agreement signed two centuries ago, Pavel read.",
+   "ko": "유리 아래에는 두 세기 전에 맺은 휴전 협정서가 놓여 있었다고 파벨이 읽었어요.",
+   "blank": "перемирии",
+   "src": "made"
+  },
+  {
+   "text": "После ссоры Елена и режиссёр заключили шуточное перемирие до конца смены.",
+   "en": "After the quarrel Elena and the director made a joking truce until the end of the shift.",
+   "ko": "다툰 뒤 옐레나와 감독은 촬영이 끝날 때까지 장난스럽게 휴전하기로 했어요.",
+   "blank": "перемирие",
+   "src": "made"
+  }
+ ],
  "w|перенести": [
   {
    "text": "Ты не можешь перенести это на завтра?",
@@ -46421,6 +46757,22 @@
    "src": "made"
   }
  ],
+ "w|подвох": [
+  {
+   "text": "Бесплатный вход показался Павлу странным, и он стал искать подвох.",
+   "en": "Free admission seemed strange to Pavel, and he started looking for a catch.",
+   "ko": "무료 입장이 이상하다고 생각한 파벨은 무슨 꿍꿍이가 있는지 찾아봤어요.",
+   "blank": "подвох",
+   "src": "made"
+  },
+  {
+   "text": "Елена сразу почувствовала подвох в слишком простой сцене.",
+   "en": "Elena immediately sensed a catch in the overly simple scene.",
+   "ko": "옐레나는 너무 쉬운 장면에 함정이 있다는 걸 바로 느꼈어요.",
+   "blank": "подвох",
+   "src": "made"
+  }
+ ],
  "w|подготовить": [
   {
    "text": "Ничто не может тебя к этому подготовить.",
@@ -46642,6 +46994,22 @@
    "en": "Maria laughed that the fruit at the refreshment point could bribe any runner.",
    "ko": "마리아는 급수대 과일이면 어떤 주자든 매수할 수 있겠다며 웃었어요.",
    "blank": "подкупить",
+   "src": "made"
+  }
+ ],
+ "w|подмога": [
+  {
+   "text": "Когда толпа школьников окружила гида, ему на подмогу пришёл Павел.",
+   "en": "When a crowd of schoolchildren surrounded the guide, Pavel came to help him.",
+   "ko": "학생들이 가이드를 에워싸자 파벨이 도우러 왔어요.",
+   "blank": "подмогу",
+   "src": "made"
+  },
+  {
+   "text": "Без подмоги каскадёров Елена не смогла бы снять эту погоню.",
+   "en": "Without the stuntmen's help Elena couldn't have shot this chase.",
+   "ko": "스턴트맨들의 도움이 없었다면 옐레나는 이 추격 장면을 찍지 못했을 거예요.",
+   "blank": "подмоги",
    "src": "made"
   }
  ],
@@ -49765,6 +50133,22 @@
    "src": "tatoeba:12461454/marafon en:3258655/rul"
   }
  ],
+ "w|популярность": [
+  {
+   "text": "После выставки про динозавров у музея резко выросла популярность, заметил Павел.",
+   "en": "After the dinosaur exhibition the museum's popularity shot up, Pavel noticed.",
+   "ko": "공룡 전시 이후 박물관 인기가 확 올랐다는 걸 파벨이 알아챘어요.",
+   "blank": "популярность",
+   "src": "made"
+  },
+  {
+   "text": "Роль в сериале принесла Елене неожиданную популярность.",
+   "en": "The role in the series brought Elena unexpected popularity.",
+   "ko": "드라마 배역으로 옐레나는 뜻밖의 인기를 얻었어요.",
+   "blank": "популярность",
+   "src": "made"
+  }
+ ],
  "w|популярный": [
   {
    "text": "Самое популярное блюдо в заводской столовой — борщ, и Иван берёт его каждый день.",
@@ -51210,6 +51594,22 @@
    "en": "Natalya touched the water in the pool and decided not to swim.",
    "ko": "나탈리야는 수영장 물을 만져 보고 들어가지 않기로 했어요.",
    "blank": "потрогала",
+   "src": "made"
+  }
+ ],
+ "w|потрудиться": [
+  {
+   "text": "Экскурсовод даже не потрудился ответить на вопрос Павла.",
+   "en": "The guide didn't even bother to answer Pavel's question.",
+   "ko": "가이드는 파벨의 질문에 대답할 생각조차 하지 않았어요.",
+   "blank": "потрудился",
+   "src": "made"
+  },
+  {
+   "text": "Режиссёр не потрудился объяснить Елене, зачем снимать сцену в десятый раз.",
+   "en": "The director didn't bother to explain to Elena why the scene had to be shot for the tenth time.",
+   "ko": "감독은 왜 그 장면을 열 번째로 찍어야 하는지 옐레나에게 설명할 생각도 안 했어요.",
+   "blank": "потрудился",
    "src": "made"
   }
  ],
@@ -58335,6 +58735,22 @@
    "blank": "раз"
   }
  ],
+ "w|разбирательство": [
+  {
+   "text": "Павел прочитал, что после кражи картины было долгое разбирательство.",
+   "en": "Pavel read that there was a long investigation after the painting was stolen.",
+   "ko": "파벨은 그 그림을 도난당한 뒤 긴 조사가 있었다는 글을 읽었어요.",
+   "blank": "разбирательство",
+   "src": "made"
+  },
+  {
+   "text": "Из-за сломанной камеры на студии началось разбирательство, и Елена ушла домой.",
+   "en": "An inquiry started at the studio over the broken camera, and Elena went home.",
+   "ko": "고장 난 카메라 때문에 스튜디오에서 조사가 시작되자 옐레나는 집에 갔어요.",
+   "blank": "разбирательство",
+   "src": "made"
+  }
+ ],
  "w|разбираться": [
   {
    "text": "Как ты будешь с этим разбираться?",
@@ -64857,6 +65273,22 @@
    "src": "made"
   }
  ],
+ "w|слезать": [
+  {
+   "text": "Смотритель попросил мальчика слезать с пьедестала, и Павел едва сдержал смех.",
+   "en": "The attendant asked the boy to get down off the pedestal, and Pavel barely held back a laugh.",
+   "ko": "관리인이 남자아이에게 받침대에서 내려오라고 하자 파벨은 웃음을 겨우 참았어요.",
+   "blank": "слезать",
+   "src": "made"
+  },
+  {
+   "text": "По сценарию Елена должна медленно слезать с лошади.",
+   "en": "According to the script Elena has to get down from the horse slowly.",
+   "ko": "대본에 따르면 옐레나는 말에서 천천히 내려와야 해요.",
+   "blank": "слезать",
+   "src": "made"
+  }
+ ],
  "w|слезть": [
   {
    "text": "Учитель велел Ивану немедленно слезть с подоконника.",
@@ -64917,6 +65349,22 @@
    "en": "You're too loud.",
    "ko": "너 너무 시끄러워.",
    "blank": "слишком"
+  }
+ ],
+ "w|словечко": [
+  {
+   "text": "Гид то и дело вставлял какое-то учёное словечко, и Павел переспрашивал.",
+   "en": "The guide kept inserting some learned little word, and Pavel kept asking again.",
+   "ko": "가이드가 자꾸 어려운 학술 용어를 섞어서 파벨은 계속 되물었어요.",
+   "blank": "словечко",
+   "src": "made"
+  },
+  {
+   "text": "Режиссёр просил Елену не добавлять в текст ни одного своего словечка.",
+   "en": "The director asked Elena not to add a single word of her own to the lines.",
+   "ko": "감독은 옐레나에게 대사에 자기 말을 한마디도 보태지 말라고 했어요.",
+   "blank": "словечка",
+   "src": "made"
   }
  ],
  "w|словно": [
@@ -66946,6 +67394,22 @@
    "en": "Every autumn a gentle sadness accompanies Anna.",
    "ko": "가을마다 안나에게는 은은한 쓸쓸함이 따라와요.",
    "blank": "сопровождает",
+   "src": "made"
+  }
+ ],
+ "w|сопровождение": [
+  {
+   "text": "В залах с золотом Павел ходил только в сопровождении охранника.",
+   "en": "In the halls with gold Pavel walked only accompanied by a guard.",
+   "ko": "금 유물이 있는 전시실에서는 파벨이 경비원과 함께해야만 다닐 수 있었어요.",
+   "blank": "сопровождении",
+   "src": "made"
+  },
+  {
+   "text": "Для сцены на мосту Елене нужно было музыкальное сопровождение.",
+   "en": "For the scene on the bridge Elena needed musical accompaniment.",
+   "ko": "다리 장면에서 옐레나에게는 배경 음악이 필요했어요.",
+   "blank": "сопровождение",
    "src": "made"
   }
  ],
@@ -71227,6 +71691,22 @@
    "blank": "там"
   }
  ],
+ "w|танго": [
+  {
+   "text": "В музейном дворе пары танцевали танго, и Павел остановился посмотреть.",
+   "en": "Couples were dancing tango in the museum courtyard, and Pavel stopped to watch.",
+   "ko": "박물관 마당에서 커플들이 탱고를 추고 있어서 파벨은 멈춰서 구경했어요.",
+   "blank": "танго",
+   "src": "made"
+  },
+  {
+   "text": "Ради роли Елена три месяца училась танцевать танго.",
+   "en": "For the role Elena spent three months learning to dance tango.",
+   "ko": "배역을 위해 옐레나는 석 달 동안 탱고를 배웠어요.",
+   "blank": "танго",
+   "src": "made"
+  }
+ ],
  "w|танец": [
   {
    "text": "Он пригласил меня на медленный танец.",
@@ -71383,6 +71863,22 @@
    "en": "It's your turn.",
    "ko": "너 차례야.",
    "blank": "твоя"
+  }
+ ],
+ "w|творение": [
+  {
+   "text": "Павел долго стоял перед творением неизвестного мастера.",
+   "en": "Pavel stood for a long time in front of the creation of an unknown master.",
+   "ko": "파벨은 이름 모를 장인의 작품 앞에 오래 서 있었어요.",
+   "blank": "творением",
+   "src": "made"
+  },
+  {
+   "text": "Режиссёр называет свой фильм лучшим творением, а Елена только улыбается.",
+   "en": "The director calls his film his best creation, and Elena just smiles.",
+   "ko": "감독은 자기 영화를 최고의 작품이라고 부르고 옐레나는 그냥 웃어요.",
+   "blank": "творением",
+   "src": "made"
   }
  ],
  "w|творить": [
@@ -72912,6 +73408,22 @@
    "en": "It worries Natalya that this winter is so warm.",
    "ko": "나탈리야는 올겨울이 이렇게 따뜻한 게 걱정이에요.",
    "blank": "тревожит",
+   "src": "made"
+  }
+ ],
+ "w|трезвый": [
+  {
+   "text": "Перед залом с иллюзиями Павел шутил, что выйдет оттуда уже не трезвым.",
+   "en": "Before the hall of illusions Pavel joked that he wouldn't come out sober.",
+   "ko": "착시 전시실 앞에서 파벨은 거기서 나오면 정신이 멀쩡하지 않을 거라고 농담했어요.",
+   "blank": "трезвым",
+   "src": "made"
+  },
+  {
+   "text": "В сцене на свадьбе Елена играла единственную трезвую гостью.",
+   "en": "In the wedding scene Elena played the only sober guest.",
+   "ko": "결혼식 장면에서 옐레나는 유일하게 술에 취하지 않은 하객을 연기했어요.",
+   "blank": "трезвую",
    "src": "made"
   }
  ],
@@ -74617,6 +75129,22 @@
    "src": "tatoeba:7919788/carlosalberto en:254621/Zifre"
   }
  ],
+ "w|удержаться": [
+  {
+   "text": "Павел не удержался и потрогал старинную вазу.",
+   "en": "Pavel couldn't resist and touched the antique vase.",
+   "ko": "파벨은 참지 못하고 오래된 꽃병을 만져 봤어요.",
+   "blank": "удержался",
+   "src": "made"
+  },
+  {
+   "text": "Елена с трудом удержалась на ногах, когда включили ветродуй.",
+   "en": "Elena barely stayed on her feet when they turned on the wind machine.",
+   "ko": "바람 기계를 켜자 옐레나는 겨우 버티고 서 있었어요.",
+   "blank": "удержалась",
+   "src": "made"
+  }
+ ],
  "w|удерживать": [
   {
    "text": "Газете всё труднее удерживать подписчиков, жалуется Никита.",
@@ -75961,6 +76489,22 @@
    "ko": "다른 조건은 뭐예요?",
    "blank": "условие",
    "src": "tatoeba:5132962/Karok en:4016593/CK"
+  }
+ ],
+ "w|усложнять": [
+  {
+   "text": "Длинные подписи только усложняют экспозицию, считает Павел.",
+   "en": "Long captions only complicate the exhibition, Pavel thinks.",
+   "ko": "긴 설명문은 전시를 복잡하게 만들 뿐이라고 파벨은 생각해요.",
+   "blank": "усложняют",
+   "src": "made"
+  },
+  {
+   "text": "Не надо усложнять сцену, сказала Елена оператору.",
+   "en": "There's no need to complicate the scene, Elena told the cameraman.",
+   "ko": "장면을 복잡하게 만들 필요 없다고 옐레나가 촬영 감독에게 말했어요.",
+   "blank": "усложнять",
+   "src": "made"
   }
  ],
  "w|услуга": [
@@ -78411,6 +78955,22 @@
    "src": "made"
   }
  ],
+ "w|хранитель": [
+  {
+   "text": "В запаснике хранитель коллекции показал Павлу письма самого художника.",
+   "en": "In the storeroom the collection's curator showed Pavel letters by the artist himself.",
+   "ko": "수장고에서 소장품 관리인은 파벨에게 화가가 직접 쓴 편지를 보여 줬어요.",
+   "blank": "хранитель",
+   "src": "made"
+  },
+  {
+   "text": "Елену на съёмки пустили в настоящий замок, где хранитель следил за каждым шагом группы.",
+   "en": "Elena was let into a real castle for the shoot, where the keeper watched the crew's every step.",
+   "ko": "옐레나는 촬영차 진짜 성에 들어갔는데, 관리인이 제작진의 걸음 하나하나를 지켜봤어요.",
+   "blank": "хранитель",
+   "src": "made"
+  }
+ ],
  "w|хранить": [
   {
    "text": "Сколько ещё ты будешь хранить это молчание?",
@@ -79027,6 +79587,22 @@
    "src": "made"
   }
  ],
+ "w|частность": [
+  {
+   "text": "Павла интересуют старые карты, в частности морские.",
+   "en": "Pavel is interested in old maps, sea charts in particular.",
+   "ko": "파벨은 옛 지도, 특히 해도에 관심이 많아요.",
+   "blank": "частности",
+   "src": "made"
+  },
+  {
+   "text": "Елена не стала спорить о частностях и согласилась на дубль.",
+   "en": "Elena didn't argue about details and agreed to another take.",
+   "ko": "옐레나는 세부 사항을 따지지 않고 다시 찍는 데 동의했어요.",
+   "blank": "частностях",
+   "src": "made"
+  }
+ ],
  "w|частный": [
   {
    "text": "Раньше новая коллега Ивана работала в частной клинике.",
@@ -79338,6 +79914,22 @@
    "en": "Anna found her old suitcase in the attic before the trip.",
    "ko": "안나는 여행 전에 다락에서 낡은 여행 가방을 찾았어요.",
    "blank": "чердаке",
+   "src": "made"
+  }
+ ],
+ "w|черёд": [
+  {
+   "text": "Когда настал черёд египетского зала, Павел уже порядком устал.",
+   "en": "By the time it was the Egyptian hall's turn, Pavel was already quite tired.",
+   "ko": "이집트 전시실 차례가 됐을 때 파벨은 이미 꽤 지쳐 있었어요.",
+   "blank": "черёд",
+   "src": "made"
+  },
+  {
+   "text": "Елена ждала в гримёрке, пока дойдёт черёд до её сцены.",
+   "en": "Elena waited in the dressing room until it was her scene's turn.",
+   "ko": "옐레나는 자기 장면 차례가 올 때까지 분장실에서 기다렸어요.",
+   "blank": "черёд",
    "src": "made"
   }
  ],
@@ -79937,6 +80529,22 @@
    "src": "tatoeba:411329/Hellerick en:314231/CK"
   }
  ],
+ "w|чудно": [
+  {
+   "text": "В зале старинных часов было чудно тихо, и Павел просидел там полчаса.",
+   "en": "The hall of antique clocks was wonderfully quiet, and Pavel sat there for half an hour.",
+   "ko": "옛 시계 전시실은 놀랄 만큼 조용해서 파벨은 거기서 삼십 분을 앉아 있었어요.",
+   "blank": "чудно",
+   "src": "made"
+  },
+  {
+   "text": "На закате в поле было чудно красиво, и Елена попросила снять ещё дубль.",
+   "en": "At sunset the field was wonderfully beautiful, and Elena asked for one more take.",
+   "ko": "해 질 녘 들판이 너무 아름다워서 옐레나는 한 번 더 찍자고 했어요.",
+   "blank": "чудно",
+   "src": "made"
+  }
+ ],
  "w|чудо": [
   {
    "text": "Я ведь могу надеяться на чудо?",
@@ -80045,6 +80653,22 @@
    "ko": "조금만 더 기다려도 될까요?",
    "blank": "чуть-чуть",
    "src": "tatoeba:4802389/odexed en:1886260/CK"
+  }
+ ],
+ "w|чутьё": [
+  {
+   "text": "Павлу чутьё подсказало, что подпись на картине поддельная.",
+   "en": "Pavel's instinct told him the signature on the painting was fake.",
+   "ko": "파벨은 그림의 서명이 가짜라는 걸 직감했어요.",
+   "blank": "чутьё",
+   "src": "made"
+  },
+  {
+   "text": "У Елены отличное чутьё на хорошие сценарии.",
+   "en": "Elena has an excellent instinct for good scripts.",
+   "ko": "옐레나는 좋은 대본을 알아보는 감이 뛰어나요.",
+   "blank": "чутьё",
+   "src": "made"
   }
  ],
  "w|чушь": [
@@ -80250,6 +80874,22 @@
    "en": "Don't move, there's a bee on your shoulder!",
    "ko": "움직이지 마, 어깨에 벌 있어!",
    "blank": "шевелись",
+   "src": "made"
+  }
+ ],
+ "w|шедевр": [
+  {
+   "text": "Павел наконец увидел шедевр, который знал только по открыткам.",
+   "en": "Pavel finally saw the masterpiece he had known only from postcards.",
+   "ko": "파벨은 엽서로만 알던 걸작을 드디어 직접 봤어요.",
+   "blank": "шедевр",
+   "src": "made"
+  },
+  {
+   "text": "Этот фильм не шедевр, честно признаётся Елена, но сниматься было весело.",
+   "en": "This film isn't a masterpiece, Elena honestly admits, but it was fun to make.",
+   "ko": "옐레나는 이 영화가 걸작은 아니지만 찍는 건 재미있었다고 솔직히 말해요.",
+   "blank": "шедевр",
    "src": "made"
   }
  ],

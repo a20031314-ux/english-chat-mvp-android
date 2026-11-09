@@ -773,6 +773,22 @@
    "src": "made"
   }
  ],
+ "w|กระป๋อง": [
+  {
+   "text": "เอกเปิดนมข้นกระป๋องใหม่มาทำท็อปปิ้งขนมปังปิ้ง",
+   "en": "Ek opened a new can of condensed milk to make the toast topping.",
+   "ko": "에크는 토스트 토핑을 만들려고 연유 새 캔을 땄어요.",
+   "blank": "กระป๋อง",
+   "src": "made"
+  },
+  {
+   "text": "ในมินิบาร์มีเบียร์กระป๋องกับขนมขบเคี้ยวเล็กน้อย",
+   "en": "The minibar had canned beer and a few snacks.",
+   "ko": "미니바에는 캔맥주와 과자가 조금 있었어요.",
+   "blank": "กระป๋อง",
+   "src": "made"
+  }
+ ],
  "w|กระเป๋า": [
   {
    "text": "กระเป๋าใบนี้สวยจัง",
@@ -16793,6 +16809,22 @@
    "src": "made"
   }
  ],
+ "w|ชง": [
+  {
+   "text": "เอกชงกาแฟดริปแก้วแรกให้ตัวเองก่อนเปิดร้าน",
+   "en": "Ek brews the first cup of drip coffee for himself before opening the shop.",
+   "ko": "에크는 가게를 열기 전에 자기 몫으로 첫 드립 커피를 내려요.",
+   "blank": "ชง",
+   "src": "made"
+  },
+  {
+   "text": "ในห้องมีชาซองให้ปิยะชงดื่มเองได้",
+   "en": "The room had tea bags so Piya could make her own tea.",
+   "ko": "방에는 피야가 직접 우려 마실 티백이 있었어요.",
+   "blank": "ชง",
+   "src": "made"
+  }
+ ],
  "w|ชดเชย": [
   {
    "text": "โรงงานจ่ายเงินชดเชยให้คนงานที่บาดเจ็บระหว่างทำงาน",
@@ -16838,6 +16870,22 @@
    "en": "Strong waves pushed a small boat into the rocks near the pier.",
    "ko": "거센 파도가 작은 배를 부두 근처 바위에 부딪히게 했어요.",
    "blank": "ชน",
+   "src": "made"
+  }
+ ],
+ "w|ชนแก้ว": [
+  {
+   "text": "วันเปิดร้านครบปี เอกกับลูกน้องชนแก้วน้ำส้มกันในครัว",
+   "en": "On the shop's first anniversary, Ek and his staff clinked glasses of orange juice in the kitchen.",
+   "ko": "가게 개업 일 년째 날, 에크와 직원들은 주방에서 오렌지 주스 잔을 부딪쳤어요.",
+   "blank": "ชนแก้ว",
+   "src": "made"
+  },
+  {
+   "text": "ในงานเลี้ยงรับรองที่ล็อบบี้ ปิยะชนแก้วกับแขกจากหลายบริษัท",
+   "en": "At the reception in the lobby, Piya clinked glasses with guests from many companies.",
+   "ko": "로비 환영 파티에서 피야는 여러 회사 손님들과 잔을 부딪쳤어요.",
+   "blank": "ชนแก้ว",
    "src": "made"
   }
  ],
@@ -16901,6 +16949,22 @@
    "en": "We beat them easily.",
    "ko": "그 사람들 이기기 쉬웠어.",
    "blank": "ชนะ"
+  }
+ ],
+ "w|ชนะเลิศ": [
+  {
+   "text": "ขนมปังลูกเกดของเอกชนะเลิศการประกวดของจังหวัด",
+   "en": "Ek's raisin bread won first prize in the provincial contest.",
+   "ko": "에크의 건포도 빵이 도 대회에서 우승했어요.",
+   "blank": "ชนะเลิศ",
+   "src": "made"
+  },
+  {
+   "text": "ทีมบาร์เทนเดอร์ของโรงแรมเคยชนะเลิศการแข่งขันผสมเครื่องดื่ม",
+   "en": "The hotel's bartending team once won first place in a cocktail competition.",
+   "ko": "호텔 바텐더 팀은 음료 칵테일 대회에서 우승한 적이 있어요.",
+   "blank": "ชนะเลิศ",
+   "src": "made"
   }
  ],
  "w|ชนิด": [
@@ -18510,6 +18574,22 @@
    "en": "Porn didn't think she could run this far in her first year.",
    "ko": "폰은 첫해에 이렇게 멀리 달릴 수 있을 줄 몰랐어요.",
    "blank": "เช่นนี้",
+   "src": "made"
+  }
+ ],
+ "w|เชฟ": [
+  {
+   "text": "เอกเคยเป็นเชฟขนมในโรงแรมก่อนจะออกมาเปิดร้านเอง",
+   "en": "Ek used to be a pastry chef at a hotel before opening his own shop.",
+   "ko": "에크는 자기 가게를 열기 전에 호텔 제과 셰프였어요.",
+   "blank": "เชฟ",
+   "src": "made"
+  },
+  {
+   "text": "เชฟของโรงแรมออกมาทักทายปิยะที่โต๊ะริมหน้าต่าง",
+   "en": "The hotel chef came out to greet Piya at the table by the window.",
+   "ko": "호텔 셰프가 창가 테이블에 있는 피야에게 인사하러 나왔어요.",
+   "blank": "เชฟ",
    "src": "made"
   }
  ],
@@ -20175,6 +20255,22 @@
    "en": "The flowers are blooming so beautifully.",
    "ko": "꽃이 피어서 예뻐.",
    "blank": "ดอกไม้"
+  }
+ ],
+ "w|ดอง": [
+  {
+   "text": "ยายของเอกดองมะม่วงไว้ให้ร้านทำเป็นไส้ขนมปังรสเปรี้ยวหวาน",
+   "en": "Ek's grandmother pickles mangoes for the shop to use as a sweet-and-sour bread filling.",
+   "ko": "에크의 할머니는 가게 빵 속으로 쓸 새콤달콤한 망고를 절여 줘요.",
+   "blank": "ดอง",
+   "src": "made"
+  },
+  {
+   "text": "บุฟเฟต์เช้าของโรงแรมมีผักดองหลายชนิดให้ปิยะเลือก",
+   "en": "The hotel breakfast buffet had several kinds of pickled vegetables for Piya to choose from.",
+   "ko": "호텔 조식 뷔페에는 피야가 고를 수 있는 절인 채소가 여러 가지 있었어요.",
+   "blank": "ดอง",
+   "src": "made"
   }
  ],
  "w|ด้อย": [
@@ -23351,6 +23447,22 @@
    "blank": "ตะวันออก"
   }
  ],
+ "w|ตัก": [
+  {
+   "text": "เอกใช้ช้อนตักแป้งใส่ถ้วยตวงทีละนิด",
+   "en": "Ek used a spoon to scoop flour into the measuring cup a little at a time.",
+   "ko": "에크는 숟가락으로 밀가루를 계량컵에 조금씩 떠 넣었어요.",
+   "blank": "ตัก",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานห้องอาหารตักข้าวต้มใส่ชามให้ปิยะ",
+   "en": "The restaurant staff ladled rice soup into a bowl for Piya.",
+   "ko": "식당 직원이 피야에게 죽을 그릇에 떠 줬어요.",
+   "blank": "ตัก",
+   "src": "made"
+  }
+ ],
  "w|ตั้ง": [
   {
    "text": "สมชายตั้งนาฬิกาปลุกในมือถือไว้เตือนก่อนประชุมสิบนาที",
@@ -24104,6 +24216,22 @@
    "en": "This term's class schedule is very full.",
    "ko": "이번 학기 수업 시간표가 아주 빡빡해.",
    "blank": "ตารางเวลา",
+   "src": "made"
+  }
+ ],
+ "w|ตำ": [
+  {
+   "text": "ลูกน้องของเอกตำกระเทียมกับพริกทำไส้ขนมปังรสจัด",
+   "en": "Ek's assistant pounded garlic and chilies to make a spicy bread filling.",
+   "ko": "에크의 직원은 마늘과 고추를 빻아 매콤한 빵 소를 만들었어요.",
+   "blank": "ตำ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเห็นแม่ครัวของโรงแรมตำพริกกับกระเทียมในครกหินหลังร้าน",
+   "en": "Piya saw the hotel cook pounding chilies and garlic in a stone mortar behind the restaurant.",
+   "ko": "피야는 호텔 요리사가 식당 뒤에서 돌절구에 고추와 마늘을 빻는 걸 봤어요.",
+   "blank": "ตำ",
    "src": "made"
   }
  ],
@@ -25333,6 +25461,22 @@
    "src": "made"
   }
  ],
+ "w|ถกเถียง": [
+  {
+   "text": "เอกกับภรรยาถกเถียงกันนานว่าจะขึ้นราคาขนมปังดีไหม",
+   "en": "Ek and his wife argued for a long time over whether to raise bread prices.",
+   "ko": "에크와 아내는 빵값을 올릴지 오래 따졌어요.",
+   "blank": "ถกเถียง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะได้ยินแขกห้องข้างๆ ถกเถียงกันเรื่องแผนเที่ยวพรุ่งนี้",
+   "en": "Piya heard the guests next door arguing about tomorrow's travel plans.",
+   "ko": "피야는 옆방 손님들이 내일 여행 계획으로 다투는 소리를 들었어요.",
+   "blank": "ถกเถียง",
+   "src": "made"
+  }
+ ],
  "w|ถนน": [
   {
    "text": "ถนนนี้รถติดมาก",
@@ -26179,6 +26323,22 @@
    "blank": "แถว"
   }
  ],
+ "w|แถวๆ": [
+  {
+   "text": "ร้านของเอกอยู่แถวๆ ตลาดเช้าใกล้สถานีรถไฟ",
+   "en": "Ek's shop is somewhere around the morning market near the train station.",
+   "ko": "에크의 가게는 기차역 근처 아침 시장 쪽에 있어요.",
+   "blank": "แถวๆ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะถามพนักงานว่ามีร้านขายยาแถวๆ โรงแรมไหม",
+   "en": "Piya asked the staff if there was a pharmacy around the hotel.",
+   "ko": "피야는 직원에게 호텔 근처에 약국이 있는지 물었어요.",
+   "blank": "แถวๆ",
+   "src": "made"
+  }
+ ],
  "w|ทดแทน": [
   {
    "text": "โรงเรียนซื้อคอมพิวเตอร์ชุดใหม่มาทดแทนเครื่องเก่าในห้องที่ธนาเรียน",
@@ -26462,6 +26622,22 @@
    "en": "A customer dropped her phone in the water during a beach trip, so she came to Chan.",
    "ko": "한 손님이 바닷가 여행 중에 휴대폰을 물에 빠뜨려서 짠을 찾아왔어요.",
    "blank": "ทริป",
+   "src": "made"
+  }
+ ],
+ "w|ทรุด": [
+  {
+   "text": "เค้กชิ้นแรกของเอกทรุดลงตรงกลางเพราะเปิดเตาเร็วเกินไป",
+   "en": "Ek's first cake sank in the middle because he opened the oven too soon.",
+   "ko": "에크의 첫 케이크는 오븐을 너무 일찍 열어서 가운데가 꺼졌어요.",
+   "blank": "ทรุด",
+   "src": "made"
+  },
+  {
+   "text": "พื้นลานจอดรถหลังโรงแรมทรุดหลังฝนตกติดต่อกันหลายวัน",
+   "en": "The parking lot behind the hotel subsided after days of nonstop rain.",
+   "ko": "며칠 동안 비가 계속 온 뒤 호텔 뒤 주차장 바닥이 내려앉았어요.",
+   "blank": "ทรุด",
    "src": "made"
   }
  ],
@@ -29005,6 +29181,22 @@
    "src": "made"
   }
  ],
+ "w|ทุบ": [
+  {
+   "text": "เอกทุบอัลมอนด์ให้แตกเป็นชิ้นเล็กๆ ไว้โรยหน้าคุกกี้",
+   "en": "Ek smashed almonds into small pieces to sprinkle on the cookies.",
+   "ko": "에크는 쿠키 위에 뿌리려고 아몬드를 잘게 부쉈어요.",
+   "blank": "ทุบ",
+   "src": "made"
+  },
+  {
+   "text": "เสียงช่างทุบผนังห้องข้างๆ ทำให้ปิยะต้องขอย้ายห้อง",
+   "en": "The noise of workers knocking down the wall next door made Piya ask to change rooms.",
+   "ko": "옆방 벽을 부수는 소리 때문에 피야는 방을 바꿔 달라고 했어요.",
+   "blank": "ทุบ",
+   "src": "made"
+  }
+ ],
  "w|ทุ่ม": [
   {
    "text": "พ่อแม่ทุ่มเงินเก็บก้อนใหญ่ให้งานแต่งของประยุทธ",
@@ -31085,6 +31277,22 @@
    "blank": "น่ากลัว"
   }
  ],
+ "w|น่ากิน": [
+  {
+   "text": "ครัวซองต์ที่เพิ่งออกจากเตาดูน่ากินจนเด็กๆ ยืนมองหน้าตู้",
+   "en": "The croissants fresh from the oven looked so tasty that the kids stood staring at the display case.",
+   "ko": "오븐에서 막 나온 크루아상이 너무 먹음직스러워서 아이들이 진열장 앞에 서서 바라봤어요.",
+   "blank": "น่ากิน",
+   "src": "made"
+  },
+  {
+   "text": "ผลไม้บนบุฟเฟต์จัดเรียงไว้สวยและดูน่ากินมาก",
+   "en": "The fruit on the buffet was arranged beautifully and looked very appetizing.",
+   "ko": "뷔페 과일이 예쁘게 놓여 있어 아주 먹음직스러워 보였어요.",
+   "blank": "น่ากิน",
+   "src": "made"
+  }
+ ],
  "w|น่าเกลียด": [
   {
    "text": "คำพูดนั้นน่าเกลียดมาก",
@@ -31963,6 +32171,38 @@
    "blank": "น้ำผลไม้"
   }
  ],
+ "w|น้ำผึ้ง": [
+  {
+   "text": "เอกใช้น้ำผึ้งจากสวนของญาติทาหน้าขนมปังให้เงา",
+   "en": "Ek brushes honey from a relative's farm on top of the bread to make it shine.",
+   "ko": "에크는 친척 농장의 꿀을 빵 위에 발라 윤기를 내요.",
+   "blank": "น้ำผึ้ง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเติมน้ำผึ้งลงในชามะนาวร้อนเพราะเจ็บคอ",
+   "en": "Piya added honey to her hot lemon tea because she had a sore throat.",
+   "ko": "피야는 목이 아파서 뜨거운 레몬차에 꿀을 넣었어요.",
+   "blank": "น้ำผึ้ง",
+   "src": "made"
+  }
+ ],
+ "w|น้ำพริก": [
+  {
+   "text": "เอกลองทำขนมปังไส้น้ำพริกเผาแล้วกลายเป็นเมนูขายดี",
+   "en": "Ek tried making bread filled with roasted chili paste, and it became a best seller.",
+   "ko": "에크가 시험 삼아 만든 남프릭파오 빵이 인기 메뉴가 됐어요.",
+   "blank": "น้ำพริก",
+   "src": "made"
+  },
+  {
+   "text": "เชฟจัดผักลวกกับน้ำพริกกะปิให้ปิยะลองชิม",
+   "en": "The chef served blanched vegetables with shrimp paste chili dip for Piya to try.",
+   "ko": "셰프가 피야에게 데친 채소와 새우젓 남프릭을 맛보라고 내줬어요.",
+   "blank": "น้ำพริก",
+   "src": "made"
+  }
+ ],
  "w|น้ำพุ": [
   {
    "text": "ลานหน้าสถานีมีน้ำพุที่เด็กๆ ชอบไปเล่นน้ำ",
@@ -32723,6 +32963,22 @@
    "src": "made"
   }
  ],
+ "w|เนียน": [
+  {
+   "text": "เอกนวดแป้งจนเนื้อเนียนแล้วจึงพักไว้ให้ขึ้นฟู",
+   "en": "Ek kneaded the dough until it was smooth and then left it to rise.",
+   "ko": "에크는 반죽이 매끈해질 때까지 치댄 뒤 부풀게 두었어요.",
+   "blank": "เนียน",
+   "src": "made"
+  },
+  {
+   "text": "ผ้าปูที่นอนของโรงแรมนี้เนียนนุ่มจนปิยะหลับสบาย",
+   "en": "The sheets at this hotel were so smooth and soft that Piya slept well.",
+   "ko": "이 호텔 침대 시트가 매끄럽고 부드러워서 피야는 푹 잤어요.",
+   "blank": "เนียน",
+   "src": "made"
+  }
+ ],
  "w|เนื้อ": [
   {
    "text": "เนื้อวัวชิ้นนี้เหนียว",
@@ -32795,6 +33051,22 @@
    "en": "This cut of beef is tender.",
    "ko": "이 소고기 부위가 부드러워.",
    "blank": "เนื้อวัว"
+  }
+ ],
+ "w|เนื้อสัตว์": [
+  {
+   "text": "เอกทำขนมปังสูตรมังสวิรัติที่ไม่มีเนื้อสัตว์เลยด้วย",
+   "en": "Ek also makes vegetarian bread with no meat at all.",
+   "ko": "에크는 고기가 전혀 안 들어간 채식 빵도 만들어요.",
+   "blank": "เนื้อสัตว์",
+   "src": "made"
+  },
+  {
+   "text": "ห้องอาหารมีเมนูแยกสำหรับแขกที่ไม่กินเนื้อสัตว์",
+   "en": "The restaurant has a separate menu for guests who don't eat meat.",
+   "ko": "식당에는 고기를 안 먹는 손님을 위한 메뉴가 따로 있어요.",
+   "blank": "เนื้อสัตว์",
+   "src": "made"
   }
  ],
  "w|เนื้อสัมผัส": [
@@ -36917,6 +37189,22 @@
    "blank": "ปรึกษา"
   }
  ],
+ "w|ปรุง": [
+  {
+   "text": "เอกปรุงไส้หมูสับด้วยซีอิ๊วและพริกไทยก่อนห่อเป็นขนมปังไส้หมู",
+   "en": "Ek seasoned the minced pork filling with soy sauce and pepper before wrapping the pork buns.",
+   "ko": "에크는 돼지고기 빵을 싸기 전에 다진 고기 소를 간장과 후추로 양념했어요.",
+   "blank": "ปรุง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะขอให้พนักงานบอกครัวว่าไม่ต้องปรุงรสเผ็ด",
+   "en": "Piya asked the staff to tell the kitchen not to make it spicy.",
+   "ko": "피야는 직원에게 맵게 양념하지 말아 달라고 주방에 전해 달라 했어요.",
+   "blank": "ปรุง",
+   "src": "made"
+  }
+ ],
  "w|ปลด": [
   {
    "text": "พอหน้าร้อนมาถึง ธนาก็ปลดผ้าห่มหนาออกจากเตียง",
@@ -38904,6 +39192,22 @@
    "en": "Pranee wrote \"please handle with care, fragile\" on the box.",
    "ko": "쁘라니는 상자에 깨지기 쉬우니 조심해 달라고 적었어요.",
    "blank": "โปรด",
+   "src": "made"
+  }
+ ],
+ "w|โปรตีน": [
+  {
+   "text": "ลูกค้าที่เข้ายิมชอบซื้อขนมปังโปรตีนสูงของเอก",
+   "en": "Customers who go to the gym like buying Ek's high-protein bread.",
+   "ko": "헬스장에 다니는 손님들은 에크의 고단백 빵을 즐겨 사요.",
+   "blank": "โปรตีน",
+   "src": "made"
+  },
+  {
+   "text": "หลังออกกำลังกายที่ฟิตเนสของโรงแรม ปิยะดื่มโปรตีนเชคหนึ่งแก้ว",
+   "en": "After working out in the hotel gym, Piya drank a protein shake.",
+   "ko": "호텔 헬스장에서 운동한 뒤 피야는 단백질 셰이크를 한 잔 마셨어요.",
+   "blank": "โปรตีน",
    "src": "made"
   }
  ],
@@ -41513,6 +41817,22 @@
    "src": "made"
   }
  ],
+ "w|พ่น": [
+  {
+   "text": "เอกพ่นน้ำบางๆ ใส่ก้อนแป้งก่อนเข้าเตาให้เปลือกกรอบ",
+   "en": "Ek sprays a light mist of water on the dough before baking so the crust gets crisp.",
+   "ko": "에크는 굽기 전에 반죽에 물을 살짝 뿌려 껍질을 바삭하게 해요.",
+   "blank": "พ่น",
+   "src": "made"
+  },
+  {
+   "text": "แม่บ้านพ่นสเปรย์ปรับอากาศในห้องก่อนปิยะเข้าพัก",
+   "en": "The housekeeper sprayed air freshener in the room before Piya checked in.",
+   "ko": "객실 청소원이 피야가 들어오기 전에 방에 방향제를 뿌렸어요.",
+   "blank": "พ่น",
+   "src": "made"
+  }
+ ],
  "w|พ้น": [
   {
    "text": "หลังผ่าตัดสามวัน ลูกหมาก็พ้นขีดอันตรายแล้ว",
@@ -41632,6 +41952,22 @@
    "en": "Pranee and a coworker arranged to meet in the staff room at noon.",
    "ko": "프라니와 동료는 점심때 직원 휴게실에서 만나기로 했어요.",
    "blank": "พบกัน",
+   "src": "made"
+  }
+ ],
+ "w|พบปะ": [
+  {
+   "text": "ทุกเช้าวันอาทิตย์ร้านของเอกเป็นที่พบปะของคนในชุมชน",
+   "en": "Every Sunday morning Ek's shop is a meeting place for people in the neighborhood.",
+   "ko": "일요일 아침마다 에크의 가게는 동네 사람들이 만나는 곳이에요.",
+   "blank": "พบปะ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะมาที่โรงแรมนี้เพื่อพบปะลูกค้าจากต่างจังหวัด",
+   "en": "Piya came to this hotel to meet clients from other provinces.",
+   "ko": "피야는 지방에서 온 고객들을 만나러 이 호텔에 왔어요.",
+   "blank": "พบปะ",
    "src": "made"
   }
  ],
@@ -42730,6 +43066,22 @@
    "en": "The chamber of commerce and a trade association bought out an entire special performance.",
    "ko": "상공회의소와 무역 협회가 특별 공연 표를 통째로 샀어요.",
    "blank": "พาณิชย์",
+   "src": "made"
+  }
+ ],
+ "w|พาย": [
+  {
+   "text": "พายมะพร้าวของเอกขายหมดก่อนเที่ยงทุกวันเสาร์",
+   "en": "Ek's coconut pies sell out before noon every Saturday.",
+   "ko": "에크의 코코넛 파이는 토요일마다 정오 전에 다 팔려요.",
+   "blank": "พาย",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งพายแอปเปิลกับชาร้อนมากินที่ห้อง",
+   "en": "Piya ordered apple pie and hot tea to eat in the room.",
+   "ko": "피야는 사과 파이와 따뜻한 차를 방으로 주문했어요.",
+   "blank": "พาย",
    "src": "made"
   }
  ],
@@ -44023,6 +44375,22 @@
    "blank": "ฟ้อง"
   }
  ],
+ "w|ฟ้องร้อง": [
+  {
+   "text": "เจ้าของตึกขู่จะฟ้องร้องถ้าเอกไม่จ่ายค่าเช่าที่ค้าง",
+   "en": "The building owner threatened to sue if Ek didn't pay the overdue rent.",
+   "ko": "건물주는 에크가 밀린 월세를 안 내면 소송하겠다고 했어요.",
+   "blank": "ฟ้องร้อง",
+   "src": "made"
+  },
+  {
+   "text": "แขกคนหนึ่งขู่จะฟ้องร้องโรงแรมเพราะกระเป๋าหายในล็อบบี้",
+   "en": "One guest threatened to sue the hotel because his bag went missing in the lobby.",
+   "ko": "한 손님이 로비에서 가방을 잃어버렸다며 호텔을 고소하겠다고 했어요.",
+   "blank": "ฟ้องร้อง",
+   "src": "made"
+  }
+ ],
  "w|ฟอร์ม": [
   {
    "text": "อนันต์ช่วยยายกรอกฟอร์มขอรับเงินชดเชยที่เคาน์เตอร์ศาล",
@@ -45043,6 +45411,22 @@
    "src": "made"
   }
  ],
+ "w|ภาษาศาสตร์": [
+  {
+   "text": "ลูกสาวเอกเรียนภาษาศาสตร์และมาช่วยที่ร้านช่วงปิดเทอม",
+   "en": "Ek's daughter studies linguistics and helps at the shop during school breaks.",
+   "ko": "에크의 딸은 언어학을 공부하고 방학 때 가게 일을 도와요.",
+   "blank": "ภาษาศาสตร์",
+   "src": "made"
+  },
+  {
+   "text": "โรงแรมจัดงานสัมมนาภาษาศาสตร์และมีอาจารย์มาพักกันเต็ม",
+   "en": "The hotel hosted a linguistics seminar, and it was full of lecturers staying over.",
+   "ko": "호텔에서 언어학 세미나가 열려서 교수들이 가득 묵었어요.",
+   "blank": "ภาษาศาสตร์",
+   "src": "made"
+  }
+ ],
  "w|ภาษาอังกฤษ": [
   {
    "text": "ภาษาอังกฤษช่วยสมัครงานต่างประเทศ",
@@ -45557,6 +45941,22 @@
    "ko": "나는 바다에서 수영하고 있어.",
    "blank": "มหาสมุทร",
    "src": "tatoeba:2905457 en:2708792"
+  }
+ ],
+ "w|มหาอำนาจ": [
+  {
+   "text": "เอกเปิดสารคดีเรื่องมหาอำนาจในอดีตฟังระหว่างรอขนมปังขึ้นฟู",
+   "en": "Ek put on a documentary about former great powers while waiting for the bread to rise.",
+   "ko": "에크는 빵이 부풀기를 기다리며 옛 강대국에 관한 다큐멘터리를 틀었어요.",
+   "blank": "มหาอำนาจ",
+   "src": "made"
+  },
+  {
+   "text": "คณะผู้แทนจากประเทศมหาอำนาจเข้าพักที่ชั้นบนสุดของโรงแรม",
+   "en": "A delegation from a world power stayed on the hotel's top floor.",
+   "ko": "강대국 대표단이 호텔 꼭대기 층에 묵었어요.",
+   "blank": "มหาอำนาจ",
+   "src": "made"
   }
  ],
  "w|มหึมา": [
@@ -47783,6 +48183,22 @@
    "src": "made"
   }
  ],
+ "w|ยกตัวอย่างเช่น": [
+  {
+   "text": "ร้านเอกมีขนมไทยหลายอย่าง ยกตัวอย่างเช่นขนมชั้นและทองหยิบ",
+   "en": "Ek's shop has many Thai sweets, for example layered dessert and golden egg-yolk flowers.",
+   "ko": "에크의 가게에는 여러 태국 과자가 있어요, 예를 들면 카놈찬과 텅입이요.",
+   "blank": "ยกตัวอย่างเช่น",
+   "src": "made"
+  },
+  {
+   "text": "โรงแรมมีบริการให้ยืมของหลายอย่าง ยกตัวอย่างเช่นที่ชาร์จโทรศัพท์และร่ม",
+   "en": "The hotel lends out many things, for example phone chargers and umbrellas.",
+   "ko": "호텔은 여러 물건을 빌려줘요, 예를 들면 휴대폰 충전기나 우산이요.",
+   "blank": "ยกตัวอย่างเช่น",
+   "src": "made"
+  }
+ ],
  "w|ยกโทษให้": [
   {
    "text": "น้องสาวบอกว่ายกโทษให้แล้ว แต่ขอเวลาสักพัก",
@@ -49300,6 +49716,22 @@
    "en": "Somsak was only recently transferred to this province, so he didn't know the route yet.",
    "ko": "솜삭은 이 도로 막 전근 와서 아직 코스를 몰라요.",
    "blank": "โยกย้าย",
+   "src": "made"
+  }
+ ],
+ "w|โยง": [
+  {
+   "text": "เอกโยงเชือกจากเพดานมาแขวนป้ายเมนูเหนือเคาน์เตอร์",
+   "en": "Ek ran a cord from the ceiling to hang the menu sign over the counter.",
+   "ko": "에크는 천장에서 줄을 이어 카운터 위에 메뉴판을 걸었어요.",
+   "blank": "โยง",
+   "src": "made"
+  },
+  {
+   "text": "ช่างโยงสายไฟชั่วคราวไปที่ห้องประชุมเพราะปลั๊กเสีย",
+   "en": "The technician ran a temporary power cable to the meeting room because the outlet was broken.",
+   "ko": "콘센트가 고장 나서 기사가 회의실까지 임시 전선을 이었어요.",
+   "blank": "โยง",
    "src": "made"
   }
  ],
@@ -51155,6 +51587,22 @@
    "blank": "ราชินี"
   }
  ],
+ "w|ราด": [
+  {
+   "text": "เอกราดช็อกโกแลตร้อนๆ ลงบนบราวนี่ก่อนตัดเป็นชิ้น",
+   "en": "Ek pours hot chocolate sauce over the brownies before cutting them into pieces.",
+   "ko": "에크는 브라우니를 자르기 전에 뜨거운 초콜릿을 부어요.",
+   "blank": "ราด",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานราดซอสบนสเต๊กให้ปิยะต่อหน้า",
+   "en": "The staff poured the sauce over Piya's steak right in front of her.",
+   "ko": "직원이 피야 앞에서 스테이크 위에 소스를 부어 줬어요.",
+   "blank": "ราด",
+   "src": "made"
+  }
+ ],
  "w|ราตรีสวัสดิ์": [
   {
    "text": "ราตรีสวัสดิ์ นอนหลับฝันดี",
@@ -51650,6 +52098,22 @@
    "en": "The city demolished the old building that Somsak had reported was about to collapse.",
    "ko": "시는 솜삭이 곧 무너질 것 같다고 보도했던 낡은 건물을 철거했어요.",
    "blank": "รื้อ",
+   "src": "made"
+  }
+ ],
+ "w|รุก": [
+  {
+   "text": "ร้านเบเกอรี่เจ้าใหญ่เริ่มรุกเข้ามาเปิดสาขาในซอยเดียวกับเอก",
+   "en": "A big bakery chain started pushing in and opened a branch on the same lane as Ek.",
+   "ko": "큰 베이커리 체인이 밀고 들어와 에크와 같은 골목에 지점을 냈어요.",
+   "blank": "รุก",
+   "src": "made"
+  },
+  {
+   "text": "โรงแรมเครือใหญ่กำลังรุกตลาดเมืองรองด้วยห้องพักราคาประหยัด",
+   "en": "A big hotel chain is pushing into secondary-city markets with budget rooms.",
+   "ko": "큰 호텔 체인이 저렴한 객실로 지방 도시 시장에 공세를 펴고 있어요.",
+   "blank": "รุก",
    "src": "made"
   }
  ],
@@ -52981,6 +53445,22 @@
    "blank": "ลม"
   }
  ],
+ "w|ล่ม": [
+  {
+   "text": "ระบบสั่งของออนไลน์ของร้านเอกล่มไปทั้งคืนเพราะคนเข้าพร้อมกันมากเกินไป",
+   "en": "Ek's online ordering system went down all night because too many people logged on at once.",
+   "ko": "동시에 너무 많은 사람이 들어와서 에크 가게의 온라인 주문이 밤새 먹통이었어요.",
+   "blank": "ล่ม",
+   "src": "made"
+  },
+  {
+   "text": "ระบบจองห้องล่มไปครึ่งวันทำให้แขกต่อแถวยาวที่เคาน์เตอร์",
+   "en": "The booking system crashed for half a day, leaving guests in a long queue at the counter.",
+   "ko": "예약 시스템이 반나절 먹통이 돼서 손님들이 카운터에 길게 줄을 섰어요.",
+   "blank": "ล่ม",
+   "src": "made"
+  }
+ ],
  "w|ล้ม": [
   {
    "text": "ระวังล้มนะ",
@@ -53383,6 +53863,22 @@
    "en": "Sugar dissolves in warm tea.",
    "ko": "설탕이 따뜻한 차에 녹아.",
    "blank": "ละลาย"
+  }
+ ],
+ "w|ละเลย": [
+  {
+   "text": "เอกไม่เคยละเลยเรื่องความสะอาดของครัวแม้วันที่งานยุ่งที่สุด",
+   "en": "Ek never neglects kitchen cleanliness, even on the busiest days.",
+   "ko": "에크는 가장 바쁜 날에도 주방 청결을 소홀히 하지 않아요.",
+   "blank": "ละเลย",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดการย้ำว่าพนักงานต้องไม่ละเลยคำขอของแขกแม้เป็นเรื่องเล็ก",
+   "en": "The manager stressed that staff must not neglect guests' requests, even small ones.",
+   "ko": "매니저는 작은 일이라도 손님 요청을 소홀히 하면 안 된다고 강조했어요.",
+   "blank": "ละเลย",
+   "src": "made"
   }
  ],
  "w|ละอายใจ": [
@@ -54936,6 +55432,22 @@
    "en": "The parrot at the pet shop mimics the shopkeeper's voice remarkably well.",
    "ko": "애완동물 가게의 앵무새는 주인 아주머니 목소리를 아주 똑같이 흉내 내요.",
    "blank": "เลียน",
+   "src": "made"
+  }
+ ],
+ "w|เลี่ยน": [
+  {
+   "text": "ลูกค้าบอกเอกว่าครีมเค้กก้อนนี้หวานจนเลี่ยน",
+   "en": "A customer told Ek the cream on this cake was so sweet it was cloying.",
+   "ko": "손님이 에크에게 이 케이크 크림이 너무 달아서 느끼하다고 했어요.",
+   "blank": "เลี่ยน",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะกินแกงกะทิไปครึ่งชามก็เริ่มรู้สึกเลี่ยน",
+   "en": "After half a bowl of coconut curry, Piya started to find it too rich.",
+   "ko": "피야는 코코넛 카레를 반 그릇 먹고 나서 느끼해지기 시작했어요.",
+   "blank": "เลี่ยน",
    "src": "made"
   }
  ],
@@ -56732,6 +57244,22 @@
    "en": "This is a truly wonderful day.",
    "ko": "정말 멋진 날이야.",
    "blank": "วิเศษ",
+   "src": "made"
+  }
+ ],
+ "w|วิสกี้": [
+  {
+   "text": "เอกลองทำเค้กผลไม้แช่วิสกี้สำหรับขายช่วงปีใหม่",
+   "en": "Ek tried making a whisky-soaked fruitcake to sell over New Year.",
+   "ko": "에크는 새해에 팔려고 위스키에 절인 과일 케이크를 만들어 봤어요.",
+   "blank": "วิสกี้",
+   "src": "made"
+  },
+  {
+   "text": "บาร์บนดาดฟ้าของโรงแรมมีวิสกี้จากหลายประเทศ",
+   "en": "The hotel's rooftop bar has whisky from many countries.",
+   "ko": "호텔 옥상 바에는 여러 나라 위스키가 있어요.",
+   "blank": "วิสกี้",
    "src": "made"
   }
  ],
@@ -59021,6 +59549,22 @@
    "blank": "สโมสร"
   }
  ],
+ "w|สรรหา": [
+  {
+   "text": "เอกตั้งใจสรรหาแป้งที่ดีที่สุดจากโรงสีเล็กๆ ทางเหนือ",
+   "en": "Ek takes care to seek out the best flour from small mills in the north.",
+   "ko": "에크는 북부 작은 제분소에서 가장 좋은 밀가루를 골라 구해요.",
+   "blank": "สรรหา",
+   "src": "made"
+  },
+  {
+   "text": "ฝ่ายบุคคลของโรงแรมกำลังสรรหาพนักงานต้อนรับที่พูดได้หลายภาษา",
+   "en": "The hotel's HR department is recruiting front-desk staff who speak several languages.",
+   "ko": "호텔 인사팀은 여러 언어를 하는 프런트 직원을 뽑고 있어요.",
+   "blank": "สรรหา",
+   "src": "made"
+  }
+ ],
  "w|สร้อย": [
   {
    "text": "สร้อยเส้นนี้ดูหรูมาก",
@@ -59336,6 +59880,22 @@
    "en": "We went to pick mangosteens at the orchard.",
    "ko": "우리는 과수원에 망고스틴을 따러 갔어.",
    "blank": "สวนผลไม้",
+   "src": "made"
+  }
+ ],
+ "w|ส่วนผสม": [
+  {
+   "text": "เอกไม่ยอมบอกส่วนผสมลับของขนมปังเนยสดให้ใครรู้",
+   "en": "Ek won't tell anyone the secret ingredient in his butter bread.",
+   "ko": "에크는 버터 빵의 비밀 재료를 아무에게도 알려 주지 않아요.",
+   "blank": "ส่วนผสม",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะอ่านส่วนผสมบนขวดแชมพูของโรงแรมเพราะแพ้ง่าย",
+   "en": "Piya read the ingredients on the hotel shampoo bottle because she is easily allergic.",
+   "ko": "피야는 알레르기가 잘 생겨서 호텔 샴푸 병의 성분을 읽었어요.",
+   "blank": "ส่วนผสม",
    "src": "made"
   }
  ],
@@ -60333,6 +60893,22 @@
    "src": "made"
   }
  ],
+ "w|สับ": [
+  {
+   "text": "เอกปรุงไส้หมูสับด้วยซีอิ๊วและพริกไทยก่อนห่อเป็นขนมปังไส้หมู",
+   "en": "Ek seasoned the minced pork filling with soy sauce and pepper before wrapping the pork buns.",
+   "ko": "에크는 돼지고기 빵을 싸기 전에 다진 고기 소를 간장과 후추로 양념했어요.",
+   "blank": "สับ",
+   "src": "made"
+  },
+  {
+   "text": "เชฟสอนปิยะสับหอมแดงให้ละเอียดในคลาสทำอาหารของโรงแรม",
+   "en": "The chef taught Piya to finely chop shallots in the hotel cooking class.",
+   "ko": "셰프가 호텔 요리 교실에서 피야에게 샬롯을 잘게 다지는 법을 가르쳐 줬어요.",
+   "blank": "สับ",
+   "src": "made"
+  }
+ ],
  "w|สับปะรด": [
   {
    "text": "หั่นสับปะรดใส่ในผลไม้รวม",
@@ -61017,6 +61593,22 @@
    "en": "She feels proud of succeeding in this work.",
    "ko": "그녀는 이 일을 해낸 것이 자랑스러워.",
    "blank": "สำเร็จ"
+  }
+ ],
+ "w|สำเร็จรูป": [
+  {
+   "text": "เอกไม่ใช้แป้งสำเร็จรูปเพราะอยากให้รสชาติเป็นของร้านเอง",
+   "en": "Ek doesn't use ready-made mix because he wants the taste to be his shop's own.",
+   "ko": "에크는 가게만의 맛을 내고 싶어서 완제품 믹스를 안 써요.",
+   "blank": "สำเร็จรูป",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะหิวตอนดึกเลยต้มบะหมี่สำเร็จรูปด้วยกาต้มน้ำในห้อง",
+   "en": "Piya got hungry late at night and made instant noodles with the kettle in the room.",
+   "ko": "피야는 밤늦게 배가 고파서 방 주전자로 컵라면을 끓였어요.",
+   "blank": "สำเร็จรูป",
+   "src": "made"
   }
  ],
  "w|สำหรับ": [
@@ -61768,6 +62360,22 @@
    "en": "Pranee's grandmother quoted the proverb about choosing a house by its neighbors.",
    "ko": "쁘라니의 할머니는 집을 고를 땐 이웃을 보라는 속담을 들려줬어요.",
    "blank": "สุภาษิต",
+   "src": "made"
+  }
+ ],
+ "w|สุรา": [
+  {
+   "text": "ร้านของเอกไม่ขายสุราแต่มีกาแฟและชาให้ดื่มคู่กับขนม",
+   "en": "Ek's shop doesn't sell liquor, but it has coffee and tea to go with the pastries.",
+   "ko": "에크의 가게는 술은 안 팔지만 빵과 곁들일 커피와 차가 있어요.",
+   "blank": "สุรา",
+   "src": "made"
+  },
+  {
+   "text": "ป้ายหน้าบาร์ของโรงแรมเตือนว่าห้ามขายสุราให้ผู้ที่อายุไม่ถึงเกณฑ์",
+   "en": "A sign at the hotel bar warns that liquor may not be sold to minors.",
+   "ko": "호텔 바 앞 안내문에는 미성년자에게 술을 팔지 않는다고 적혀 있어요.",
+   "blank": "สุรา",
    "src": "made"
   }
  ],
@@ -63720,6 +64328,22 @@
    "en": "The rice in the rice cooker is still warm.",
    "ko": "밥솥의 밥이 아직 따뜻해.",
    "blank": "หม้อหุงข้าว",
+   "src": "made"
+  }
+ ],
+ "w|หมัด": [
+  {
+   "text": "เอกชอบดูมวยและเปิดถ่ายทอดสดให้ลูกค้าดูนักมวยปล่อยหมัด",
+   "en": "Ek likes boxing and puts on live broadcasts so customers can watch boxers throw punches.",
+   "ko": "에크는 권투를 좋아해서 손님들이 선수들 주먹 날리는 걸 보게 생중계를 틀어요.",
+   "blank": "หมัด",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเห็นนักมวยซ้อมหมัดอยู่ในห้องฟิตเนสตอนเช้ามืด",
+   "en": "Piya saw a boxer practicing punches in the gym early in the morning.",
+   "ko": "피야는 새벽에 헬스장에서 권투 선수가 주먹 연습을 하는 걸 봤어요.",
+   "blank": "หมัด",
    "src": "made"
   }
  ],

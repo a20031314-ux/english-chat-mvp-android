@@ -5589,6 +5589,22 @@
    "blank": "aproveitar"
   }
  ],
+ "w|aproximação": [
+  {
+   "text": "A exposição propõe uma aproximação entre a arte popular e a arte dos museus.",
+   "en": "The exhibition proposes a rapprochement between folk art and museum art.",
+   "ko": "그 전시는 민중 미술과 박물관 미술을 가깝게 잇자고 제안해요.",
+   "blank": "aproximação",
+   "src": "made"
+  },
+  {
+   "text": "A câmera fez uma aproximação lenta até o rosto da atriz.",
+   "en": "The camera made a slow approach to the actress's face.",
+   "ko": "카메라가 배우 얼굴로 천천히 다가갔어요.",
+   "blank": "aproximação",
+   "src": "made"
+  }
+ ],
  "w|aproximadamente": [
   {
    "text": "A viagem dos tios até a casa do Gabriel leva aproximadamente seis horas.",
@@ -5976,6 +5992,22 @@
    "en": "An Argentine investor wants to meet Inês's team.",
    "ko": "아르헨티나 투자자 한 명이 이네스의 팀을 만나고 싶어 해요.",
    "blank": "argentino",
+   "src": "made"
+  }
+ ],
+ "w|argumentar": [
+  {
+   "text": "Na reunião, o Tiago tentou argumentar que a escultura merecia uma sala só para ela.",
+   "en": "At the meeting, Tiago tried to argue that the sculpture deserved a room of its own.",
+   "ko": "회의에서 치아구는 그 조각에 전용 전시실이 필요하다고 주장해 봤어요.",
+   "blank": "argumentar",
+   "src": "made"
+  },
+  {
+   "text": "O roteirista quis argumentar com a Inês, mas ela já tinha cortado a cena.",
+   "en": "The screenwriter wanted to argue with Inês, but she had already cut the scene.",
+   "ko": "작가는 이네스와 따져 보려 했지만 그녀는 이미 그 장면을 잘라 냈어요.",
+   "blank": "argumentar",
    "src": "made"
   }
  ],
@@ -9946,6 +9978,22 @@
    "en": "Mariana thought finding an apartment near work was a blessing.",
    "ko": "마리아나는 직장 가까이에 집을 구한 게 축복이라고 생각했어요.",
    "blank": "bênção",
+   "src": "made"
+  }
+ ],
+ "w|beneficiar": [
+  {
+   "text": "A reforma do telhado vai beneficiar principalmente a sala dos quadros mais frágeis.",
+   "en": "The roof renovation will mainly benefit the room with the most fragile paintings.",
+   "ko": "지붕 보수는 무엇보다 가장 약한 그림들이 있는 전시실에 도움이 될 거예요.",
+   "blank": "beneficiar",
+   "src": "made"
+  },
+  {
+   "text": "A filmagem na vila vai beneficiar o comércio local por quase um mês.",
+   "en": "The shoot in the village will benefit local businesses for almost a month.",
+   "ko": "마을 촬영은 거의 한 달 동안 동네 상점들에 도움이 될 거예요.",
+   "blank": "beneficiar",
    "src": "made"
   }
  ],
@@ -14761,6 +14809,22 @@
    "blank": "chance"
   }
  ],
+ "w|chanceler": [
+  {
+   "text": "Uma carta assinada por um chanceler do século passado está na vitrine principal.",
+   "en": "A letter signed by a chancellor from the last century is in the main display case.",
+   "ko": "지난 세기 한 재상이 서명한 편지가 중앙 진열장에 있어요.",
+   "blank": "chanceler",
+   "src": "made"
+  },
+  {
+   "text": "Um ator veterano interpreta o chanceler que negocia a paz no filme.",
+   "en": "A veteran actor plays the chancellor who negotiates peace in the film.",
+   "ko": "베테랑 배우가 영화에서 평화를 협상하는 재상을 맡았어요.",
+   "blank": "chanceler",
+   "src": "made"
+  }
+ ],
  "w|chantagear": [
   {
    "text": "No mesmo filme, o vilão tenta chantagear a família pelo resgate do cão.",
@@ -16018,6 +16082,22 @@
    "en": "At New Year's, Beatriz's whole clan gathered at her grandmother's house.",
    "ko": "새해 전날 베아트리스네 온 집안이 할머니 댁에 모였어요.",
    "blank": "clã",
+   "src": "made"
+  }
+ ],
+ "w|clandestino": [
+  {
+   "text": "O Tiago mostrou aos alunos uma prensa usada num jornal clandestino durante a ditadura.",
+   "en": "Tiago showed the students a press used by an underground newspaper during the dictatorship.",
+   "ko": "치아구는 독재 시절 지하 신문이 쓰던 인쇄기를 학생들에게 보여 줬어요.",
+   "blank": "clandestino",
+   "src": "made"
+  },
+  {
+   "text": "Um passageiro clandestino escondido no navio é o herói da história da Inês.",
+   "en": "A stowaway hidden on the ship is the hero of Inês's story.",
+   "ko": "배에 몰래 숨어 탄 사람이 이네스 이야기의 주인공이에요.",
+   "blank": "clandestino",
    "src": "made"
   }
  ],
@@ -17829,6 +17909,22 @@
    "ko": "우리 약속을 취소해야 해요.",
    "blank": "compromisso",
    "src": "tatoeba:7345503/Ricardo14 en:2387255/CK"
+  }
+ ],
+ "w|comprovar": [
+  {
+   "text": "O laboratório conseguiu comprovar que a pintura tinha mais de trezentos anos.",
+   "en": "The lab was able to prove that the painting was over three hundred years old.",
+   "ko": "실험실은 그 그림이 삼백 년이 넘었다는 걸 증명해 냈어요.",
+   "blank": "comprovar",
+   "src": "made"
+  },
+  {
+   "text": "A produtora pediu notas fiscais para comprovar cada gasto da filmagem.",
+   "en": "The producer asked for receipts to prove every shooting expense.",
+   "ko": "제작자는 촬영 비용 하나하나를 증명할 영수증을 요구했어요.",
+   "blank": "comprovar",
+   "src": "made"
   }
  ],
  "w|computador": [
@@ -22909,6 +23005,22 @@
    "blank": "deles"
   }
  ],
+ "w|deliberadamente": [
+  {
+   "text": "A luz da sala é mantida baixa deliberadamente para proteger os tecidos antigos.",
+   "en": "The light in the room is deliberately kept low to protect the old fabrics.",
+   "ko": "오래된 직물을 보호하려고 전시실 조명은 일부러 어둡게 해 둬요.",
+   "blank": "deliberadamente",
+   "src": "made"
+  },
+  {
+   "text": "A Inês deixou a porta do cenário aberta deliberadamente para criar suspense.",
+   "en": "Inês deliberately left the set door open to create suspense.",
+   "ko": "이네스는 긴장감을 주려고 세트의 문을 일부러 열어 뒀어요.",
+   "blank": "deliberadamente",
+   "src": "made"
+  }
+ ],
  "w|delicado": [
   {
    "text": "Um delicado aroma de jasmim preenche o ar.",
@@ -23444,6 +23556,22 @@
    "en": "A congressman bought one of Sofia's paintings at the art fair.",
    "ko": "한 국회의원이 미술 장터에서 소피아의 그림을 샀어요.",
    "blank": "deputado",
+   "src": "made"
+  }
+ ],
+ "w|derivar": [
+  {
+   "text": "O Tiago explicou que o nome da cidade pode derivar de uma palavra indígena.",
+   "en": "Tiago explained that the town's name may derive from an indigenous term.",
+   "ko": "치아구는 도시 이름이 원주민 말에서 왔을 수도 있다고 설명했어요.",
+   "blank": "derivar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês explicou que o filme vai derivar de um conto curto escrito pela avó dela.",
+   "en": "Inês explained that the film will derive from a short story written by her grandmother.",
+   "ko": "이네스는 그 영화가 할머니가 쓴 짧은 이야기에서 나온다고 설명했어요.",
+   "blank": "derivar",
    "src": "made"
   }
  ],
@@ -25567,6 +25695,22 @@
    "src": "made"
   }
  ],
+ "w|dinamarquês": [
+  {
+   "text": "O museu recebeu emprestada uma coleção de móveis do design dinamarquês.",
+   "en": "The museum received on loan a collection of Danish design furniture.",
+   "ko": "박물관은 덴마크 디자인 가구 컬렉션을 빌려 왔어요.",
+   "blank": "dinamarquês",
+   "src": "made"
+  },
+  {
+   "text": "O diretor de fotografia é dinamarquês e trouxe a câmera favorita dele.",
+   "en": "The cinematographer is Danish and brought his favorite camera.",
+   "ko": "촬영 감독은 덴마크 사람이라 아끼는 카메라를 가져왔어요.",
+   "blank": "dinamarquês",
+   "src": "made"
+  }
+ ],
  "w|dinâmico": [
   {
    "text": "O editor contratou o Gabriel porque queria um repórter jovem e dinâmico na equipe.",
@@ -26122,6 +26266,22 @@
    "en": "Ana's set is an hour from the city, so the crew leaves early.",
    "ko": "아나의 촬영장은 도시에서 한 시간 거리라서 팀은 일찍 출발해요.",
    "blank": "dista",
+   "src": "made"
+  }
+ ],
+ "w|distinguir": [
+  {
+   "text": "Com uma lupa, o Tiago ensinou os alunos a distinguir uma moeda verdadeira de uma cópia.",
+   "en": "With a magnifying glass, Tiago taught the students to tell a real coin from a copy.",
+   "ko": "치아구는 돋보기로 진짜 동전과 복제품을 구별하는 법을 학생들에게 가르쳤어요.",
+   "blank": "distinguir",
+   "src": "made"
+  },
+  {
+   "text": "De longe, era difícil distinguir o dublê do ator principal.",
+   "en": "From a distance, it was hard to tell the stunt double from the lead actor.",
+   "ko": "멀리서는 대역과 주연 배우를 구별하기 어려웠어요.",
+   "blank": "distinguir",
    "src": "made"
   }
  ],
@@ -27168,6 +27328,22 @@
    "en": "By the pool, Carla was reading a novel about a duke in love with a cook.",
    "ko": "카를라는 수영장 가에서 요리사와 사랑에 빠진 공작 이야기를 읽고 있었어요.",
    "blank": "duque",
+   "src": "made"
+  }
+ ],
+ "w|duquesa": [
+  {
+   "text": "O vestido da duquesa é a peça que mais atrai as visitantes jovens.",
+   "en": "The duchess's dress is the piece that most attracts young visitors.",
+   "ko": "공작부인의 드레스는 젊은 관람객이 가장 많이 몰리는 작품이에요.",
+   "blank": "duquesa",
+   "src": "made"
+  },
+  {
+   "text": "A figurinista levou semanas para costurar o vestido da duquesa.",
+   "en": "The costume designer took weeks to sew the duchess's dress.",
+   "ko": "의상 담당은 공작부인의 드레스를 바느질하는 데 몇 주가 걸렸어요.",
+   "blank": "duquesa",
    "src": "made"
   }
  ],
@@ -28886,6 +29062,22 @@
    "en": "The museum shows the rope the king ordered used to hang the rebels, according to the guide.",
    "ko": "가이드에 따르면 박물관에는 왕이 반란군을 목매달 때 쓰게 한 밧줄이 있어요.",
    "blank": "enforcar",
+   "src": "made"
+  }
+ ],
+ "w|enfraquecer": [
+  {
+   "text": "A umidade pode enfraquecer as fibras do papel, por isso o Tiago confere o aparelho toda semana.",
+   "en": "Humidity can weaken the paper fibers, so Tiago checks the device every week.",
+   "ko": "습기는 종이 섬유를 약하게 할 수 있어서 치아구는 매주 기계를 점검해요.",
+   "blank": "enfraquecer",
+   "src": "made"
+  },
+  {
+   "text": "A chuva começou a enfraquecer, e a Inês mandou todos voltarem às posições.",
+   "en": "The rain began to weaken, and Inês told everyone to go back to their positions.",
+   "ko": "비가 약해지기 시작하자 이네스는 모두 제자리로 돌아가라고 했어요.",
+   "blank": "enfraquecer",
    "src": "made"
   }
  ],
@@ -31117,6 +31309,22 @@
    "src": "made"
   }
  ],
+ "w|espontâneo": [
+  {
+   "text": "A visita guiada virou um bate-papo espontâneo quando um senhor começou a contar histórias.",
+   "en": "The guided tour turned into a spontaneous chat when an old man started telling stories.",
+   "ko": "한 노인이 이야기를 시작하자 안내 관람은 즉석 수다로 바뀌었어요.",
+   "blank": "espontâneo",
+   "src": "made"
+  },
+  {
+   "text": "O riso mais espontâneo do dia saiu num erro, e a Inês decidiu manter a cena.",
+   "en": "The most spontaneous laugh of the day came from a mistake, and Inês decided to keep the scene.",
+   "ko": "그날 가장 자연스러운 웃음이 실수에서 나와서 이네스는 그 장면을 살리기로 했어요.",
+   "blank": "espontâneo",
+   "src": "made"
+  }
+ ],
  "w|esporte": [
   {
    "text": "De qual esporte vocês gostam mais?",
@@ -32051,6 +32259,22 @@
    "src": "made"
   }
  ],
+ "w|estritamente": [
+  {
+   "text": "É estritamente proibido tocar nas peças, e o Tiago lembra isso a cada grupo.",
+   "en": "It's strictly forbidden to touch the pieces, and Tiago reminds every group of that.",
+   "ko": "작품을 만지는 건 엄격히 금지돼 있고 치아구는 단체마다 그걸 일러 줘요.",
+   "blank": "estritamente",
+   "src": "made"
+  },
+  {
+   "text": "O acesso ao set é estritamente controlado, e nem os parentes do elenco entram.",
+   "en": "Access to the set is strictly controlled, and not even the cast's relatives get in.",
+   "ko": "촬영장 출입은 엄격히 통제돼서 배우 가족도 못 들어가요.",
+   "blank": "estritamente",
+   "src": "made"
+  }
+ ],
  "w|estrutura": [
   {
    "text": "O cérebro tem uma estrutura complexa.",
@@ -32814,6 +33038,22 @@
    "en": "The market renovation is underway, and Mariana walks through a path of hoardings.",
    "ko": "시장 보수 공사가 진행 중이라 마리아나는 가림막 사이로 다녀요.",
    "blank": "execução",
+   "src": "made"
+  }
+ ],
+ "w|executado": [
+  {
+   "text": "O painel conta a história de um rei executado durante uma revolução antiga.",
+   "en": "The panel tells the story of a king executed during an old revolution.",
+   "ko": "안내판은 옛 혁명 때 처형된 왕의 이야기를 들려줘요.",
+   "blank": "executado",
+   "src": "made"
+  },
+  {
+   "text": "O plano foi bem executado, e a Inês não precisou repetir a cena da ponte.",
+   "en": "The plan was well executed, and Inês didn't need to repeat the bridge scene.",
+   "ko": "계획이 잘 실행돼서 이네스는 다리 장면을 다시 찍지 않아도 됐어요.",
+   "blank": "executado",
    "src": "made"
   }
  ],
@@ -34022,6 +34262,22 @@
    "en": "Luísa was afraid the catering company would go under before the party.",
    "ko": "루이자는 출장 뷔페 업체가 잔치 전에 망할까 봐 걱정했어요.",
    "blank": "falir",
+   "src": "made"
+  }
+ ],
+ "w|falsificação": [
+  {
+   "text": "Uma sala inteira é dedicada à história da falsificação de obras de arte.",
+   "en": "A whole room is dedicated to the history of art forgery.",
+   "ko": "전시실 하나가 통째로 미술품 위조의 역사에 할애돼 있어요.",
+   "blank": "falsificação",
+   "src": "made"
+  },
+  {
+   "text": "O enredo gira em torno da falsificação de um testamento numa família rica.",
+   "en": "The plot revolves around the forgery of a will in a rich family.",
+   "ko": "줄거리는 한 부잣집의 유언장 위조를 중심으로 돌아가요.",
+   "blank": "falsificação",
    "src": "made"
   }
  ],
@@ -35483,6 +35739,22 @@
    "src": "made"
   }
  ],
+ "w|finalizar": [
+  {
+   "text": "O Tiago precisa finalizar as etiquetas da nova sala antes da abertura de sábado.",
+   "en": "Tiago needs to finish the labels for the new room before Saturday's opening.",
+   "ko": "치아구는 토요일 개관 전에 새 전시실의 설명표를 마무리해야 해요.",
+   "blank": "finalizar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês quer finalizar a cena da praia antes que o sol desapareça.",
+   "en": "Inês wants to finish the beach scene before the sun disappears.",
+   "ko": "이네스는 해가 지기 전에 해변 장면을 끝내고 싶어 해요.",
+   "blank": "finalizar",
+   "src": "made"
+  }
+ ],
  "w|finalmente": [
   {
    "text": "Finalmente chegou o pedido.",
@@ -36904,6 +37176,22 @@
    "en": "How often do you go to the gym?",
    "ko": "헬스장 얼마나 자주 가요?",
    "blank": "frequência",
+   "src": "made"
+  }
+ ],
+ "w|frequentar": [
+  {
+   "text": "Desde criança, o Tiago gosta de frequentar o museu nas manhãs de domingo.",
+   "en": "Since he was a child, Tiago has liked going to the museum on Sunday mornings.",
+   "ko": "치아구는 어릴 때부터 일요일 아침마다 박물관에 다니는 걸 좋아했어요.",
+   "blank": "frequentar",
+   "src": "made"
+  },
+  {
+   "text": "Para preparar o papel, o ator passou a frequentar um bar de pescadores.",
+   "en": "To prepare for the role, the actor began frequenting a fishermen's bar.",
+   "ko": "배역을 준비하려고 그 배우는 어부들이 가는 술집에 드나들기 시작했어요.",
+   "blank": "frequentar",
    "src": "made"
   }
  ],
@@ -38333,6 +38621,22 @@
    "src": "made"
   }
  ],
+ "w|genuíno": [
+  {
+   "text": "Os especialistas confirmaram que o manuscrito era genuíno e não uma cópia tardia.",
+   "en": "The experts confirmed that the manuscript was genuine and not a later copy.",
+   "ko": "전문가들은 그 필사본이 나중의 사본이 아니라 진본이라고 확인했어요.",
+   "blank": "genuíno",
+   "src": "made"
+  },
+  {
+   "text": "O choro da atriz foi tão genuíno que a equipe ficou em silêncio.",
+   "en": "The actress's crying was so genuine that the crew went silent.",
+   "ko": "배우의 울음이 너무 진짜 같아서 스태프가 조용해졌어요.",
+   "blank": "genuíno",
+   "src": "made"
+  }
+ ],
  "w|geografia": [
   {
    "text": "O Pedro sempre gostou de geografia e sabe para onde vai cada carga da fábrica.",
@@ -38871,6 +39175,22 @@
    "ko": "주지사가 그 범죄자를 사면했어요.",
    "blank": "governador",
    "src": "tatoeba:13817747/carlosalberto en:2796808/sharptoothed"
+  }
+ ],
+ "w|governante": [
+  {
+   "text": "O retrato do primeiro governante da província fica logo na entrada.",
+   "en": "The portrait of the province's first ruler is right at the entrance.",
+   "ko": "주의 첫 통치자 초상화는 입구 바로 앞에 있어요.",
+   "blank": "governante",
+   "src": "made"
+  },
+  {
+   "text": "No filme da Inês, o governante corrupto perde tudo num único dia.",
+   "en": "In Inês's film, the corrupt ruler loses everything in a single day.",
+   "ko": "이네스의 영화에서 부패한 통치자는 단 하루 만에 모든 걸 잃어요.",
+   "blank": "governante",
+   "src": "made"
   }
  ],
  "w|governar": [
@@ -43373,6 +43693,22 @@
    "src": "tatoeba:1112849/bufo en:914074/Jane_Austen"
   }
  ],
+ "w|intensidade": [
+  {
+   "text": "O Tiago ficou impressionado com a intensidade das cores depois da restauração.",
+   "en": "Tiago was impressed by the intensity of the colors after the restoration.",
+   "ko": "복원 뒤 색이 얼마나 강렬한지 치아구는 감탄했어요.",
+   "blank": "intensidade",
+   "src": "made"
+  },
+  {
+   "text": "A atriz manteve a intensidade da cena mesmo depois da décima tomada.",
+   "en": "The actress kept the intensity of the scene even after the tenth take.",
+   "ko": "그 배우는 열 번째 촬영 뒤에도 장면의 강도를 유지했어요.",
+   "blank": "intensidade",
+   "src": "made"
+  }
+ ],
  "w|intenso": [
   {
    "text": "Aquele jogo foi mesmo intenso!",
@@ -44101,6 +44437,22 @@
    "src": "made"
   }
  ],
+ "w|invocar": [
+  {
+   "text": "A máscara da exposição era usada para invocar a chuva em antigas cerimônias.",
+   "en": "The mask in the exhibition was used to invoke rain in ancient ceremonies.",
+   "ko": "전시된 가면은 옛 의식에서 비를 부르는 데 쓰였어요.",
+   "blank": "invocar",
+   "src": "made"
+  },
+  {
+   "text": "Na cena do ritual, a atriz precisava invocar os espíritos com a voz baixa.",
+   "en": "In the ritual scene, the actress had to invoke the spirits in a low voice.",
+   "ko": "의식 장면에서 그 배우는 낮은 목소리로 영혼을 불러내야 했어요.",
+   "blank": "invocar",
+   "src": "made"
+  }
+ ],
  "w|ir": [
   {
    "text": "Quero ir para casa.",
@@ -44236,6 +44588,22 @@
    "en": "Beatriz knew it was irrational to cry about leaving such a small apartment.",
    "ko": "베아트리스는 그렇게 작은 집을 떠나는 게 슬퍼 우는 건 말이 안 된다는 걸 알았어요.",
    "blank": "irracional",
+   "src": "made"
+  }
+ ],
+ "w|irregular": [
+  {
+   "text": "O vaso tem uma forma irregular porque foi feito à mão, sem torno.",
+   "en": "The vase has an irregular shape because it was made by hand, without a wheel.",
+   "ko": "그 꽃병은 물레 없이 손으로 만들어서 모양이 고르지 않아요.",
+   "blank": "irregular",
+   "src": "made"
+  },
+  {
+   "text": "O som estava irregular por causa do vento, e a equipe teve de gravar de novo.",
+   "en": "The sound was uneven because of the wind, and the crew had to record again.",
+   "ko": "바람 때문에 소리가 고르지 않아 스태프는 다시 녹음해야 했어요.",
+   "blank": "irregular",
    "src": "made"
   }
  ],
@@ -47887,6 +48255,22 @@
    "src": "tatoeba:6803303/mervert1 en:6465620/mervert1"
   }
  ],
+ "w|mágica": [
+  {
+   "text": "Para as crianças, o Tiago transforma a visita numa mágica cheia de perguntas.",
+   "en": "For the children, Tiago turns the visit into a kind of magic full of questions.",
+   "ko": "치아구는 아이들을 위해 관람을 질문 가득한 마법 같은 시간으로 바꿔요.",
+   "blank": "mágica",
+   "src": "made"
+  },
+  {
+   "text": "Graças a uma mágica de edição, a Inês juntou duas tomadas como se fossem uma só.",
+   "en": "Thanks to a bit of editing magic, Inês joined two takes as if they were one.",
+   "ko": "편집의 마법 덕분에 이네스는 두 장면을 하나처럼 이어 붙였어요.",
+   "blank": "mágica",
+   "src": "made"
+  }
+ ],
  "w|mágico": [
   {
    "text": "Foi um dia mágico.",
@@ -51127,6 +51511,22 @@
    "src": "made"
   }
  ],
+ "w|molde": [
+  {
+   "text": "O Tiago mostrou o molde de gesso usado para fazer a estátua de bronze.",
+   "en": "Tiago showed the plaster mold used to make the bronze statue.",
+   "ko": "치아구는 청동상을 만들 때 쓴 석고 틀을 보여 줬어요.",
+   "blank": "molde",
+   "src": "made"
+  },
+  {
+   "text": "O maquiador fez um molde do rosto do ator para criar a máscara do monstro.",
+   "en": "The makeup artist made a mold of the actor's face to create the monster mask.",
+   "ko": "분장사는 괴물 가면을 만들려고 배우 얼굴의 본을 떴어요.",
+   "blank": "molde",
+   "src": "made"
+  }
+ ],
  "w|mole": [
   {
    "text": "O pão de leite do Bruno sai do forno bem mole e cheiroso.",
@@ -52357,6 +52757,22 @@
    "blank": "nariz"
   }
  ],
+ "w|narrador": [
+  {
+   "text": "No áudio-guia, o narrador tem uma voz tão calma que alguns visitantes dormem no banco.",
+   "en": "On the audio guide, the narrator has such a calm voice that some visitors fall asleep on the bench.",
+   "ko": "오디오 가이드 해설자 목소리가 너무 차분해서 벤치에서 조는 관람객도 있어요.",
+   "blank": "narrador",
+   "src": "made"
+  },
+  {
+   "text": "A Inês escolheu um narrador de voz grave para abrir o filme.",
+   "en": "Inês chose a narrator with a deep voice to open the film.",
+   "ko": "이네스는 영화를 여는 해설자로 낮은 목소리를 골랐어요.",
+   "blank": "narrador",
+   "src": "made"
+  }
+ ],
  "w|nascer": [
   {
    "text": "Nasci numa cidade pequena.",
@@ -52401,6 +52817,22 @@
    "ko": "생년월일이 어떻게 되세요?",
    "blank": "nascimento",
    "src": "tatoeba:3998845/alexmarcelo en:3730767/CM"
+  }
+ ],
+ "w|natação": [
+  {
+   "text": "O Tiago descobriu que a primeira piscina da cidade era usada para aulas de natação no rio.",
+   "en": "Tiago found out that the town's first pool was used for swimming lessons in the river.",
+   "ko": "치아구는 그 도시의 첫 수영장이 강에서 하던 수영 수업에 쓰였다는 걸 알아냈어요.",
+   "blank": "natação",
+   "src": "made"
+  },
+  {
+   "text": "A atriz principal fez aulas de natação para gravar a cena no lago.",
+   "en": "The lead actress took swimming lessons to shoot the scene in the lake.",
+   "ko": "주연 배우는 호수 장면을 찍으려고 수영 수업을 받았어요.",
+   "blank": "natação",
+   "src": "made"
   }
  ],
  "w|natal": [
@@ -59269,6 +59701,22 @@
    "src": "tatoeba:2342773/Matheus en:499475/blay_paul"
   }
  ],
+ "w|placar": [
+  {
+   "text": "Na sala de esportes, há um placar antigo de madeira de um estádio demolido.",
+   "en": "In the sports room, there's an old wooden scoreboard from a demolished stadium.",
+   "ko": "스포츠 전시실에는 철거된 경기장의 옛 나무 점수판이 있어요.",
+   "blank": "placar",
+   "src": "made"
+  },
+  {
+   "text": "Entre as tomadas, a equipe acompanhava o placar do jogo pelo celular.",
+   "en": "Between takes, the crew followed the game's score on their phones.",
+   "ko": "촬영 사이사이 스태프는 휴대폰으로 경기 점수를 확인했어요.",
+   "blank": "placar",
+   "src": "made"
+  }
+ ],
  "w|planejamento": [
   {
    "text": "Sem um bom planejamento, o projeto do Tiago não ia sair do papel.",
@@ -61719,6 +62167,22 @@
    "src": "made"
   }
  ],
+ "w|previsível": [
+  {
+   "text": "O Tiago achou a exposição previsível, com as mesmas obras de sempre.",
+   "en": "Tiago found the exhibition predictable, with the same works as always.",
+   "ko": "치아구는 늘 보던 작품뿐이라 그 전시가 뻔하다고 느꼈어요.",
+   "blank": "previsível",
+   "src": "made"
+  },
+  {
+   "text": "A Inês reescreveu o final porque achou a primeira versão muito previsível.",
+   "en": "Inês rewrote the ending because she found the first version too predictable.",
+   "ko": "이네스는 첫 버전이 너무 뻔해서 결말을 다시 썼어요.",
+   "blank": "previsível",
+   "src": "made"
+  }
+ ],
  "w|previsto": [
   {
    "text": "A cirurgia do gato demorou o dobro do tempo previsto.",
@@ -62966,6 +63430,22 @@
    "en": "After carrying bricks, Inês needs food with a lot of protein.",
    "ko": "벽돌을 나르고 나면 이네스는 단백질이 많은 음식이 필요해요.",
    "blank": "proteína",
+   "src": "made"
+  }
+ ],
+ "w|protestante": [
+  {
+   "text": "A exposição sobre a imprensa mostra uma bíblia protestante impressa há séculos.",
+   "en": "The exhibition on printing shows a Protestant Bible printed centuries ago.",
+   "ko": "인쇄 전시에는 수백 년 전에 찍은 개신교 성경이 나와 있어요.",
+   "blank": "protestante",
+   "src": "made"
+  },
+  {
+   "text": "A cena do casamento foi gravada numa pequena igreja protestante do interior.",
+   "en": "The wedding scene was shot in a small Protestant church in the countryside.",
+   "ko": "결혼 장면은 시골의 작은 개신교 교회에서 찍었어요.",
+   "blank": "protestante",
    "src": "made"
   }
  ],
@@ -67319,6 +67799,22 @@
    "src": "made"
   }
  ],
+ "w|retaguarda": [
+  {
+   "text": "Durante a mudança das peças, o Tiago ficou na retaguarda para conferir as caixas.",
+   "en": "During the moving of the pieces, Tiago stayed at the rear to check the boxes.",
+   "ko": "작품을 옮기는 동안 치아구는 뒤쪽에 남아 상자를 확인했어요.",
+   "blank": "retaguarda",
+   "src": "made"
+  },
+  {
+   "text": "Na cena da batalha, os figurantes da retaguarda só precisavam correr e gritar.",
+   "en": "In the battle scene, the extras at the rear only needed to run and shout.",
+   "ko": "전투 장면에서 뒤쪽 엑스트라들은 뛰면서 소리만 지르면 됐어요.",
+   "blank": "retaguarda",
+   "src": "made"
+  }
+ ],
  "w|retardar": [
   {
    "text": "O diretor pediu ao Bruno para retardar a entrada em cena por alguns segundos.",
@@ -67618,6 +68114,22 @@
    "en": "The organizers decided to reverse the route change after the residents' complaints.",
    "ko": "주최 측은 주민들의 항의를 받고 코스 변경을 되돌리기로 했어요.",
    "blank": "reverter",
+   "src": "made"
+  }
+ ],
+ "w|reviravolta": [
+  {
+   "text": "A descoberta de uma carta escondida no quadro foi uma reviravolta para a pesquisa do Tiago.",
+   "en": "Finding a letter hidden in the painting was a turning point for Tiago's research.",
+   "ko": "그림 속에 숨겨진 편지를 찾은 건 치아구의 연구에 반전이었어요.",
+   "blank": "reviravolta",
+   "src": "made"
+  },
+  {
+   "text": "A Inês guardou a grande reviravolta da história para os últimos minutos.",
+   "en": "Inês saved the story's big twist for the last minutes.",
+   "ko": "이네스는 이야기의 큰 반전을 마지막 몇 분에 남겨 뒀어요.",
+   "blank": "reviravolta",
    "src": "made"
   }
  ],
@@ -68556,6 +69068,22 @@
    "en": "A rumor went around that the market was going to change streets.",
    "ko": "벼룩시장이 다른 거리로 옮긴다는 소문이 돌았어요.",
    "blank": "rumor",
+   "src": "made"
+  }
+ ],
+ "w|ruptura": [
+  {
+   "text": "A sala nova mostra a ruptura entre a pintura clássica e a arte moderna.",
+   "en": "The new room shows the break between classical painting and modern art.",
+   "ko": "새 전시실은 고전 회화와 현대 미술의 단절을 보여 줘요.",
+   "blank": "ruptura",
+   "src": "made"
+  },
+  {
+   "text": "O filme conta a ruptura de dois irmãos que brigaram pela herança do pai.",
+   "en": "The film tells of the rift between two brothers who fought over their father's inheritance.",
+   "ko": "영화는 아버지 유산 때문에 싸운 두 형제의 갈라섬을 그려요.",
+   "blank": "ruptura",
    "src": "made"
   }
  ],
@@ -71299,6 +71827,22 @@
    "src": "tatoeba:5448272/carlosalberto en:5448027/deyta"
   }
  ],
+ "w|sinceridade": [
+  {
+   "text": "A sinceridade do menino, que disse achar a múmia feia, fez o Tiago rir.",
+   "en": "The boy's sincerity, saying he thought the mummy was ugly, made Tiago laugh.",
+   "ko": "미라가 못생겼다고 한 소년의 솔직함에 치아구는 웃었어요.",
+   "blank": "sinceridade",
+   "src": "made"
+  },
+  {
+   "text": "A Inês pediu ao elenco mais sinceridade e menos teatro na cena da despedida.",
+   "en": "Inês asked the cast for more sincerity and less theatrics in the farewell scene.",
+   "ko": "이네스는 작별 장면에서 연기를 덜고 진심을 더 담아 달라고 배우들에게 부탁했어요.",
+   "blank": "sinceridade",
+   "src": "made"
+  }
+ ],
  "w|sincero": [
   {
    "text": "Eu quero que você seja sincero comigo.",
@@ -71545,6 +72089,22 @@
    "en": "It's all under control.",
    "ko": "다 통제되고 있어.",
    "blank": "sob"
+  }
+ ],
+ "w|soberano": [
+  {
+   "text": "A coroa exposta pertenceu a um príncipe soberano de um pequeno reino.",
+   "en": "The crown on display belonged to a sovereign prince of a small kingdom.",
+   "ko": "전시된 왕관은 작은 왕국을 다스린 군주의 것이었어요.",
+   "blank": "soberano",
+   "src": "made"
+  },
+  {
+   "text": "A Inês queria o trono do rei soberano no centro do quadro, iluminado de cima.",
+   "en": "Inês wanted the sovereign king's throne in the center of the frame, lit from above.",
+   "ko": "이네스는 군주의 옥좌를 화면 한가운데 두고 위에서 비추길 원했어요.",
+   "blank": "soberano",
+   "src": "made"
   }
  ],
  "w|sobra": [
@@ -73170,6 +73730,22 @@
    "en": "The sunscreen was cheaper at the pharmacy than at the supermarket.",
    "ko": "선크림은 슈퍼마켓보다 약국이 더 쌌어요.",
    "blank": "supermercado",
+   "src": "made"
+  }
+ ],
+ "w|superstição": [
+  {
+   "text": "Segundo uma superstição antiga, quem tocar no espelho do museu tem sete anos de azar.",
+   "en": "According to an old superstition, whoever touches the museum mirror has seven years of bad luck.",
+   "ko": "옛 미신에 따르면 박물관 거울을 만지는 사람은 칠 년 동안 운이 나빠요.",
+   "blank": "superstição",
+   "src": "made"
+  },
+  {
+   "text": "Por superstição, a Inês sempre bate três vezes na claquete antes da primeira cena.",
+   "en": "Out of superstition, Inês always knocks three times on the clapperboard before the first scene.",
+   "ko": "이네스는 미신 때문에 첫 장면 전에 늘 슬레이트를 세 번 두드려요.",
+   "blank": "superstição",
    "src": "made"
   }
  ],
@@ -75395,6 +75971,22 @@
    "blank": "tira"
   }
  ],
+ "w|tirano": [
+  {
+   "text": "Na galeria de retratos, o Tiago aponta o tirano que governou a região por décadas.",
+   "en": "In the portrait gallery, Tiago points out the tyrant who ruled the region for decades.",
+   "ko": "초상화 전시실에서 치아구는 수십 년간 그 지역을 다스린 폭군을 가리켜요.",
+   "blank": "tirano",
+   "src": "made"
+  },
+  {
+   "text": "O ator que faz o tirano é, fora das câmeras, a pessoa mais doce do elenco.",
+   "en": "The actor who plays the tyrant is, off camera, the sweetest person in the cast.",
+   "ko": "폭군을 연기하는 배우는 카메라 밖에선 출연진 중 가장 다정한 사람이에요.",
+   "blank": "tirano",
+   "src": "made"
+  }
+ ],
  "w|tirar": [
   {
    "text": "Pode tirar o casaco.",
@@ -76388,6 +76980,22 @@
    "en": "For the important meeting, Inês chose more formal attire.",
    "ko": "중요한 회의를 위해 이네스는 좀 더 격식 있는 옷을 골랐어요.",
    "blank": "traje",
+   "src": "made"
+  }
+ ],
+ "w|trajetória": [
+  {
+   "text": "Uma linha do tempo no chão mostra a trajetória da artista desde a infância.",
+   "en": "A timeline on the floor shows the artist's path since childhood.",
+   "ko": "바닥의 연표가 그 화가의 어린 시절부터의 행로를 보여 줘요.",
+   "blank": "trajetória",
+   "src": "made"
+  },
+  {
+   "text": "O documentário acompanha a trajetória de uma cantora que começou nos bares.",
+   "en": "The documentary follows the path of a singer who started out in bars.",
+   "ko": "다큐멘터리는 술집에서 시작한 한 가수의 행로를 따라가요.",
+   "blank": "trajetória",
    "src": "made"
   }
  ],
@@ -78116,6 +78724,22 @@
    "en": "The test kit Carla bought analyzes urine in a few minutes.",
    "ko": "카를라가 산 검사 키트는 몇 분 만에 소변을 분석해요.",
    "blank": "urina",
+   "src": "made"
+  }
+ ],
+ "w|urna": [
+  {
+   "text": "Na entrada, há uma urna para os visitantes deixarem sugestões.",
+   "en": "At the entrance, there's a box for visitors to leave suggestions.",
+   "ko": "입구에는 관람객이 의견을 넣는 함이 있어요.",
+   "blank": "urna",
+   "src": "made"
+  },
+  {
+   "text": "Na cena da eleição, os figurantes faziam fila para votar numa urna de papelão.",
+   "en": "In the election scene, the extras lined up to vote at a cardboard ballot box.",
+   "ko": "선거 장면에서 엑스트라들은 종이 상자 투표함 앞에 줄을 섰어요.",
+   "blank": "urna",
    "src": "made"
   }
  ],

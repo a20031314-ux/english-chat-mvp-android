@@ -1789,6 +1789,22 @@
    "blank": "与"
   }
  ],
+ "w|与众不同": [
+  {
+   "text": "这趟观光列车的车厢装修得与众不同，像一个小酒吧。",
+   "en": "The carriages on this sightseeing train are decorated unlike any other, like a little bar.",
+   "ko": "이 관광 열차의 객차는 남다르게 꾸며져서 작은 바 같아요.",
+   "blank": "与众不同",
+   "src": "made"
+  },
+  {
+   "text": "今年的秋天有点与众不同，十月了还像夏天一样热。",
+   "en": "This autumn is a little unusual: it's October and still as hot as summer.",
+   "ko": "올가을은 좀 남달라서 시월인데도 여름처럼 더워요.",
+   "blank": "与众不同",
+   "src": "made"
+  }
+ ],
  "w|与其": [
   {
    "text": "王刚觉得与其等消息，不如自己去现场看看。",
@@ -1941,6 +1957,22 @@
    "en": "The world out there is big.",
    "ko": "바깥세상은 넓어.",
    "blank": "世界"
+  }
+ ],
+ "w|世界各地": [
+  {
+   "text": "车厢里坐着来自世界各地的游客，大家用各种语言聊天。",
+   "en": "The carriage was full of tourists from all over the world chatting in all kinds of languages.",
+   "ko": "객차에는 세계 각지에서 온 여행객들이 여러 언어로 이야기하고 있었어요.",
+   "blank": "世界各地",
+   "src": "made"
+  },
+  {
+   "text": "每到樱花季，世界各地的游客都会来这个小城。",
+   "en": "Every cherry blossom season, tourists from all over the world come to this small city.",
+   "ko": "벚꽃 철마다 세계 각지의 관광객들이 이 작은 도시에 와요.",
+   "blank": "世界各地",
+   "src": "made"
   }
  ],
  "w|世纪": [
@@ -3198,6 +3230,22 @@
    "en": "Many runners from out of town flew in for the race.",
    "ko": "다른 지역 선수들이 많이 비행기를 타고 대회에 왔어요.",
    "blank": "乘",
+   "src": "made"
+  }
+ ],
+ "w|乘坐": [
+  {
+   "text": "这是小明第一次乘坐卧铺列车，他兴奋得睡不着。",
+   "en": "This was the first time Xiao Ming rode a sleeper train, and he was too excited to sleep.",
+   "ko": "샤오밍은 처음으로 침대칸 열차를 타서 너무 신나 잠이 안 왔어요.",
+   "blank": "乘坐",
+   "src": "made"
+  },
+  {
+   "text": "下雪路滑，丽丽决定乘坐地铁去上班。",
+   "en": "The roads were slippery with snow, so Lili decided to take the subway to work.",
+   "ko": "눈 때문에 길이 미끄러워서 리리는 지하철을 타고 출근하기로 했어요.",
+   "blank": "乘坐",
    "src": "made"
   }
  ],
@@ -4687,6 +4735,22 @@
    "blank": "今晚"
   }
  ],
+ "w|介入": [
+  {
+   "text": "两个乘客为了座位吵起来，最后乘警介入才平息。",
+   "en": "Two passengers argued over a seat, and it only calmed down when the railway police stepped in.",
+   "ko": "승객 둘이 자리 때문에 다투다가 철도 경찰이 끼어들고 나서야 진정됐어요.",
+   "blank": "介入",
+   "src": "made"
+  },
+  {
+   "text": "新闻说，这次干旱太严重，政府已经介入帮农民抗旱。",
+   "en": "The news said this drought is so severe that the government has stepped in to help farmers.",
+   "ko": "뉴스에서 이번 가뭄이 너무 심해 정부가 나서서 농민들을 돕고 있다고 했어요.",
+   "blank": "介入",
+   "src": "made"
+  }
+ ],
  "w|介意": [
   {
    "text": "你介意吗？",
@@ -5291,6 +5355,22 @@
    "en": "It's the first time since we met.",
    "ko": "만난 이후로 처음이야.",
    "blank": "以来"
+  }
+ ],
+ "w|以防": [
+  {
+   "text": "小明带了一包饼干，以防餐车的饭太贵。",
+   "en": "Xiao Ming brought a pack of crackers in case the dining car food was too expensive.",
+   "ko": "샤오밍은 식당칸 음식이 너무 비쌀까 봐 과자 한 봉지를 챙겼어요.",
+   "blank": "以防",
+   "src": "made"
+  },
+  {
+   "text": "换季的时候，丽丽总在包里放一件外套，以防突然降温。",
+   "en": "At the change of seasons, Lili always keeps a jacket in her bag in case the temperature suddenly drops.",
+   "ko": "환절기에 리리는 갑자기 추워질까 봐 가방에 늘 겉옷을 넣어 다녀요.",
+   "blank": "以防",
+   "src": "made"
   }
  ],
  "w|仪器": [
@@ -7549,6 +7629,22 @@
    "src": "made"
   }
  ],
+ "w|修建": [
+  {
+   "text": "这条铁路修建在悬崖边上，看着让人心惊。",
+   "en": "This railway was built along the edge of a cliff, and it's nerve-racking to look at.",
+   "ko": "이 철도는 절벽 가에 놓여 있어서 보기만 해도 아찔해요.",
+   "blank": "修建",
+   "src": "made"
+  },
+  {
+   "text": "为了防洪，村里在河边修建了一道新堤坝。",
+   "en": "To prevent floods, the village built a new embankment along the river.",
+   "ko": "홍수를 막으려고 마을은 강가에 새 둑을 쌓았어요.",
+   "blank": "修建",
+   "src": "made"
+  }
+ ],
  "w|修改": [
   {
    "text": "农场的种植计划被大雨打乱了，赵磊只好重新修改。",
@@ -8481,6 +8577,22 @@
    "en": "The sunlight is glaring.",
    "ko": "햇빛이 눈부셔.",
    "blank": "光"
+  }
+ ],
+ "w|光临": [
+  {
+   "text": "列车广播说：“欢迎光临本次列车，祝您旅途愉快。”",
+   "en": "The train announcement said, \"Welcome aboard this train, and have a pleasant journey.\"",
+   "ko": "기차 안내 방송에서 \"본 열차에 오신 것을 환영합니다. 즐거운 여행 되세요.\"라고 했어요.",
+   "blank": "光临",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的花店门口挂着“春季新品，欢迎光临”的牌子。",
+   "en": "A sign hangs at Lili's flower shop door: \"New spring arrivals, welcome.\"",
+   "ko": "리리의 꽃집 문 앞에는 \"봄 신상품, 어서 오세요\"라는 간판이 걸려 있어요.",
+   "blank": "光临",
+   "src": "made"
   }
  ],
  "w|光明": [
@@ -11666,6 +11778,22 @@
    "en": "Yang Yang says that when the kids grow up, he wants to buy a small villa by the sea.",
    "ko": "양양은 아이들이 크면 바닷가에 작은 별장을 사고 싶다고 해요.",
    "blank": "别墅",
+   "src": "made"
+  }
+ ],
+ "w|别处": [
+  {
+   "text": "小明的座位被人占了，列车员只好帮他在别处找了个空位。",
+   "en": "Someone had taken Xiao Ming's seat, so the conductor found him an empty one elsewhere.",
+   "ko": "샤오밍 자리에 누가 앉아 있어서 승무원이 다른 곳에 빈자리를 찾아 줬어요.",
+   "blank": "别处",
+   "src": "made"
+  },
+  {
+   "text": "丽丽觉得，这里的春天比别处来得都早。",
+   "en": "Lili feels spring comes earlier here than anywhere else.",
+   "ko": "리리는 이곳 봄이 다른 곳보다 일찍 온다고 느껴요.",
+   "blank": "别处",
    "src": "made"
   }
  ],
@@ -16197,6 +16325,22 @@
    "src": "made"
   }
  ],
+ "w|合成": [
+  {
+   "text": "小明用手机把几张风景照合成了一张全景图。",
+   "en": "Xiao Ming used his phone to merge several landscape photos into one panorama.",
+   "ko": "샤오밍은 휴대폰으로 풍경 사진 몇 장을 합쳐 파노라마 사진을 만들었어요.",
+   "blank": "合成",
+   "src": "made"
+  },
+  {
+   "text": "老师告诉丽丽，树叶在夏天通过阳光合成养分。",
+   "en": "The teacher told Lili that leaves make nutrients from sunlight in summer.",
+   "ko": "선생님은 리리에게 나뭇잎이 여름에 햇빛으로 양분을 만든다고 알려 줬어요.",
+   "blank": "合成",
+   "src": "made"
+  }
+ ],
  "w|合格": [
   {
    "text": "换季前，黄涛检查了暖气，确认各项指标都合格。",
@@ -17555,6 +17699,22 @@
    "en": "We're hiking this weekend.",
    "ko": "이번 주말에 등산 가.",
    "blank": "周末"
+  }
+ ],
+ "w|周边": [
+  {
+   "text": "小明住的酒店周边有很多小吃店，晚上特别热闹。",
+   "en": "There are lots of snack shops around Xiao Ming's hotel, and it's especially lively at night.",
+   "ko": "샤오밍이 묵는 호텔 주변에는 분식집이 많아서 밤에 특히 북적여요.",
+   "blank": "周边",
+   "src": "made"
+  },
+  {
+   "text": "周末，丽丽常去城市周边的山里看红叶。",
+   "en": "On weekends, Lili often goes to the mountains around the city to see the autumn leaves.",
+   "ko": "주말이면 리리는 자주 도시 주변 산에 단풍을 보러 가요.",
+   "blank": "周边",
+   "src": "made"
   }
  ],
  "w|味": [
@@ -19115,6 +19275,22 @@
    "en": "He hasn't answered yet.",
    "ko": "아직 대답 안 했어.",
    "blank": "回答"
+  }
+ ],
+ "w|回避": [
+  {
+   "text": "对面的女孩一直回避小明的目光，好像有点害羞。",
+   "en": "The girl across from him kept avoiding Xiao Ming's gaze, as if she were a little shy.",
+   "ko": "맞은편 여자아이는 계속 샤오밍의 눈길을 피했는데 좀 수줍은 것 같았어요.",
+   "blank": "回避",
+   "src": "made"
+  },
+  {
+   "text": "一说到冬天要早起，丽丽的弟弟就开始回避这个话题。",
+   "en": "Whenever getting up early in winter comes up, Lili's younger brother starts avoiding the subject.",
+   "ko": "겨울에 일찍 일어나야 한다는 얘기만 나오면 리리의 남동생은 화제를 피해요.",
+   "blank": "回避",
+   "src": "made"
   }
  ],
  "w|回顾": [
@@ -21233,6 +21409,22 @@
    "src": "made"
   }
  ],
+ "w|外界": [
+  {
+   "text": "车进了深山，手机没了信号，小明一下子和外界断了联系。",
+   "en": "Deep in the mountains the phone lost signal, and Xiao Ming was suddenly cut off from the outside world.",
+   "ko": "기차가 깊은 산으로 들어가자 신호가 끊겨 샤오밍은 갑자기 바깥세상과 연락이 끊겼어요.",
+   "blank": "外界",
+   "src": "made"
+  },
+  {
+   "text": "冬天大雪封山，村子几乎和外界隔绝了。",
+   "en": "In winter heavy snow seals off the mountain, and the village is nearly cut off from the outside world.",
+   "ko": "겨울엔 폭설로 산이 막혀 마을이 바깥세상과 거의 단절돼요.",
+   "blank": "外界",
+   "src": "made"
+  }
+ ],
  "w|外表": [
   {
    "text": "黄涛常说，不能只看一个人的外表就下结论。",
@@ -23299,6 +23491,22 @@
    "en": "What's so funny?",
    "ko": "뭐가 웃겨?",
    "blank": "好笑"
+  }
+ ],
+ "w|好转": [
+  {
+   "text": "吃了晕车药以后，小明的头晕慢慢好转了。",
+   "en": "After taking motion sickness medicine, Xiao Ming's dizziness slowly got better.",
+   "ko": "멀미약을 먹고 나서 샤오밍의 어지럼증이 천천히 나아졌어요.",
+   "blank": "好转",
+   "src": "made"
+  },
+  {
+   "text": "春天来了，丽丽的鼻炎终于有所好转。",
+   "en": "Spring arrived, and Lili's rhinitis finally got somewhat better.",
+   "ko": "봄이 오자 리리의 비염이 드디어 좀 나아졌어요.",
+   "blank": "好转",
+   "src": "made"
   }
  ],
  "w|好运": [
@@ -27639,6 +27847,22 @@
    "src": "made"
   }
  ],
+ "w|市中心": [
+  {
+   "text": "这趟火车直接开到市中心，下车就能坐地铁。",
+   "en": "This train goes straight to the city center, and you can take the subway right after getting off.",
+   "ko": "이 기차는 시내 중심까지 바로 가서 내리면 바로 지하철을 탈 수 있어요.",
+   "blank": "市中心",
+   "src": "made"
+  },
+  {
+   "text": "一下雪，市中心的路就堵得厉害，丽丽只好走路上班。",
+   "en": "As soon as it snows, the roads downtown get badly jammed, so Lili has to walk to work.",
+   "ko": "눈만 오면 시내 중심 도로가 심하게 막혀서 리리는 걸어서 출근해요.",
+   "blank": "市中心",
+   "src": "made"
+  }
+ ],
  "w|市区": [
   {
    "text": "马林住的酒店在市区，离火车站只要走十分钟。",
@@ -28835,6 +29059,22 @@
    "src": "made"
   }
  ],
+ "w|庙": [
+  {
+   "text": "山坡上有一座小庙，红墙在树林里特别显眼。",
+   "en": "There's a small temple on the hillside, its red walls standing out among the trees.",
+   "ko": "언덕 위에 작은 사당이 있는데 붉은 담이 숲속에서 유난히 눈에 띄어요.",
+   "blank": "庙",
+   "src": "made"
+  },
+  {
+   "text": "每年春天，山上的庙前都开满了桃花。",
+   "en": "Every spring, peach blossoms bloom all around the temple on the mountain.",
+   "ko": "해마다 봄이면 산 위 사당 앞에 복숭아꽃이 가득 피어요.",
+   "blank": "庙",
+   "src": "made"
+  }
+ ],
  "w|庞大": [
   {
    "text": "阿杰现在管理着一个庞大的团队，小明听了很佩服。",
@@ -29170,6 +29410,22 @@
    "en": "This seaside trip sparked Liu Fang's interest in diving.",
    "ko": "이번 바닷가 여행으로 류팡은 다이빙에 관심이 생겼어요.",
    "blank": "开启",
+   "src": "made"
+  }
+ ],
+ "w|开头": [
+  {
+   "text": "小明在火车上读的那本小说，开头就让人放不下。",
+   "en": "The novel Xiao Ming read on the train was gripping right from the beginning.",
+   "ko": "샤오밍이 기차에서 읽은 소설은 시작부터 손을 놓을 수 없었어요.",
+   "blank": "开头",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的日记每年都以第一场雪作为开头。",
+   "en": "Every year, Lili's diary begins with the first snowfall.",
+   "ko": "리리의 일기는 해마다 첫눈으로 시작해요.",
+   "blank": "开头",
    "src": "made"
   }
  ],
@@ -32737,6 +32993,22 @@
    "blank": "成功"
   }
  ],
+ "w|成千上万": [
+  {
+   "text": "每到春运，成千上万的人挤在火车上回家过年。",
+   "en": "Every Spring Festival travel season, tens of thousands of people crowd onto trains to go home for New Year.",
+   "ko": "춘절 귀성철마다 수많은 사람들이 기차에 몰려 고향으로 설을 쇠러 가요.",
+   "blank": "成千上万",
+   "src": "made"
+  },
+  {
+   "text": "每年秋天，成千上万只候鸟从这片湖上飞过。",
+   "en": "Every autumn, tens of thousands of migratory birds fly over this lake.",
+   "ko": "해마다 가을이면 수많은 철새가 이 호수 위를 날아가요.",
+   "blank": "成千上万",
+   "src": "made"
+  }
+ ],
  "w|成员": [
   {
    "text": "他是团队成员。",
@@ -33278,6 +33550,22 @@
    "en": "Wang Fang said the crux of the problem was just a loose ribbon cable.",
    "ko": "왕팡은 문제의 원인은 사실 헐거워진 케이블 하나였다고 했어요.",
    "blank": "所在",
+   "src": "made"
+  }
+ ],
+ "w|所在地": [
+  {
+   "text": "小明的目的地是省政府所在地，下午就能到。",
+   "en": "Xiao Ming's destination is the provincial capital, and he'll get there in the afternoon.",
+   "ko": "샤오밍의 목적지는 성 정부 소재지인데 오후에 도착해요.",
+   "blank": "所在地",
+   "src": "made"
+  },
+  {
+   "text": "丽丽说，她们县政府所在地一到冬天就特别冷清。",
+   "en": "Lili said the seat of her county government gets especially quiet once winter comes.",
+   "ko": "리리는 자기네 현 정부 소재지가 겨울만 되면 아주 썰렁해진다고 했어요.",
+   "blank": "所在地",
    "src": "made"
   }
  ],
@@ -35397,6 +35685,22 @@
    "src": "made"
   }
  ],
+ "w|指南": [
+  {
+   "text": "小明一路上翻着旅游指南，计划明天去哪儿玩。",
+   "en": "Xiao Ming flipped through a travel guide the whole way, planning where to go tomorrow.",
+   "ko": "샤오밍은 가는 내내 여행 안내서를 넘기며 내일 어디 갈지 계획했어요.",
+   "blank": "指南",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在网上找了一份冬季养花指南，照着一步一步做。",
+   "en": "Lili found a winter plant-care guide online and followed it step by step.",
+   "ko": "리리는 인터넷에서 겨울철 꽃 기르기 안내서를 찾아 하나하나 따라 했어요.",
+   "blank": "指南",
+   "src": "made"
+  }
+ ],
  "w|指定": [
   {
    "text": "王刚把书放回了管理员指定的书架上。",
@@ -36027,6 +36331,22 @@
    "en": "He grasped the truth.",
    "ko": "그는 진실을 파악했어.",
    "blank": "掌握"
+  }
+ ],
+ "w|掌管": [
+  {
+   "text": "列车长掌管整趟列车的安全，一路上来回巡视。",
+   "en": "The chief conductor is in charge of the whole train's safety and patrols back and forth the entire way.",
+   "ko": "열차장은 열차 전체의 안전을 맡아서 가는 내내 오가며 순찰해요.",
+   "blank": "掌管",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的奶奶掌管家里的菜园，什么季节种什么她最清楚。",
+   "en": "Lili's grandma runs the family vegetable garden and knows best what to plant each season.",
+   "ko": "리리의 할머니는 집 텃밭을 맡고 있어서 철마다 뭘 심을지 제일 잘 알아요.",
+   "blank": "掌管",
+   "src": "made"
   }
  ],
  "w|排": [
@@ -36747,6 +37067,22 @@
    "src": "made"
   }
  ],
+ "w|插手": [
+  {
+   "text": "邻座的夫妻在吵架，小明觉得不该插手，就戴上了耳机。",
+   "en": "The couple in the next seats were quarreling, and Xiao Ming felt he shouldn't interfere, so he put on his earphones.",
+   "ko": "옆자리 부부가 싸우고 있었는데 샤오밍은 끼어들 일이 아니라 생각해서 이어폰을 꼈어요.",
+   "blank": "插手",
+   "src": "made"
+  },
+  {
+   "text": "妈妈种花的时候不喜欢别人插手，丽丽只能在旁边看。",
+   "en": "Mom doesn't like others interfering when she plants flowers, so Lili can only watch from the side.",
+   "ko": "엄마는 꽃 심을 때 남이 손대는 걸 싫어해서 리리는 옆에서 보기만 해요.",
+   "blank": "插手",
+   "src": "made"
+  }
+ ],
  "w|握": [
   {
    "text": "王刚紧紧握着借书卡，生怕把它弄丢了。",
@@ -36792,6 +37128,22 @@
    "en": "After heavy snow blocked the road, people from the next village hurried over to help stranded drivers.",
    "ko": "폭설로 길이 막히자 이웃 마을 사람들이 갇힌 운전자들을 도우러 왔어요.",
    "blank": "援助",
+   "src": "made"
+  }
+ ],
+ "w|搜寻": [
+  {
+   "text": "一位乘客丢了钱包，列车员帮他在车厢里搜寻了半天。",
+   "en": "A passenger lost his wallet, and the conductor spent ages helping him search the carriage.",
+   "ko": "한 승객이 지갑을 잃어버려서 승무원이 한참 동안 객차를 같이 뒤졌어요.",
+   "blank": "搜寻",
+   "src": "made"
+  },
+  {
+   "text": "初春时，丽丽在草地上搜寻第一朵开放的野花。",
+   "en": "In early spring, Lili searches the meadow for the first wildflower to bloom.",
+   "ko": "이른 봄이면 리리는 풀밭에서 처음 핀 들꽃을 찾아다녀요.",
+   "blank": "搜寻",
    "src": "made"
   }
  ],
@@ -37913,6 +38265,22 @@
    "en": "Is this story true?",
    "ko": "이 이야기 진짜야?",
    "blank": "故事"
+  }
+ ],
+ "w|故乡": [
+  {
+   "text": "坐在小明旁边的老人说，他是回故乡看看的。",
+   "en": "The old man sitting next to Xiao Ming said he was going back to visit his hometown.",
+   "ko": "샤오밍 옆에 앉은 할아버지는 고향을 보러 가는 길이라고 했어요.",
+   "blank": "故乡",
+   "src": "made"
+  },
+  {
+   "text": "每当秋风吹起，丽丽就会想念远方的故乡。",
+   "en": "Whenever the autumn wind blows, Lili misses her faraway hometown.",
+   "ko": "가을바람이 불 때마다 리리는 먼 고향이 그리워요.",
+   "blank": "故乡",
+   "src": "made"
   }
  ],
  "w|故意": [
@@ -40267,6 +40635,22 @@
    "src": "made"
   }
  ],
+ "w|景象": [
+  {
+   "text": "火车穿过草原，窗外牛羊成群的景象让小明看呆了。",
+   "en": "As the train crossed the grassland, the sight of herds of cattle and sheep outside left Xiao Ming spellbound.",
+   "ko": "기차가 초원을 지날 때 창밖에 소와 양이 무리 지어 있는 광경에 샤오밍은 넋을 잃었어요.",
+   "blank": "景象",
+   "src": "made"
+  },
+  {
+   "text": "秋天一到，整座山都变红了，那景象美得像一幅画。",
+   "en": "When autumn comes, the whole mountain turns red, a sight as beautiful as a painting.",
+   "ko": "가을이 오면 산 전체가 붉게 물들어서 그 풍경이 그림처럼 아름다워요.",
+   "blank": "景象",
+   "src": "made"
+  }
+ ],
  "w|晴天": [
   {
    "text": "连着几个晴天，赵磊终于把晒好的玉米收进了仓库。",
@@ -41474,6 +41858,22 @@
    "en": "Wang Fang's neighbor is a retired mechanic, and everyone goes to him when something breaks.",
    "ko": "왕팡의 이웃은 은퇴한 기계 기술자라서 누구네 물건이 고장 나면 다들 그를 찾아요.",
    "blank": "机械",
+   "src": "made"
+  }
+ ],
+ "w|机票": [
+  {
+   "text": "小明本来想坐飞机，可是机票太贵，只好改坐火车。",
+   "en": "Xiao Ming had wanted to fly, but the plane ticket was too expensive, so he took the train instead.",
+   "ko": "샤오밍은 원래 비행기를 타려 했지만 항공권이 너무 비싸서 기차로 바꿨어요.",
+   "blank": "机票",
+   "src": "made"
+  },
+  {
+   "text": "丽丽订了暑假的机票，打算带父母去看海。",
+   "en": "Lili booked plane tickets for the summer holiday, planning to take her parents to see the sea.",
+   "ko": "리리는 여름휴가 항공권을 예약해서 부모님을 모시고 바다를 보러 갈 계획이에요.",
+   "blank": "机票",
    "src": "made"
   }
  ],
@@ -44591,6 +44991,22 @@
    "blank": "汤"
   }
  ],
+ "w|汽油": [
+  {
+   "text": "对面的大叔说，现在油价太高，他宁可坐火车也不开车，省得买汽油。",
+   "en": "The man across from him said fuel prices are too high now, so he'd rather take the train than drive and buy gasoline.",
+   "ko": "맞은편 아저씨는 요즘 기름값이 너무 비싸서 휘발유 넣느니 차 대신 기차를 탄다고 했어요.",
+   "blank": "汽油",
+   "src": "made"
+  },
+  {
+   "text": "冬天快到了，丽丽的爸爸提前给发电机加满了汽油。",
+   "en": "With winter coming, Lili's dad filled the generator with gasoline ahead of time.",
+   "ko": "겨울이 다가오자 리리의 아빠는 미리 발전기에 휘발유를 가득 채웠어요.",
+   "blank": "汽油",
+   "src": "made"
+  }
+ ],
  "w|汽车": [
   {
    "text": "他开着汽车来了。",
@@ -46615,6 +47031,22 @@
    "src": "made"
   }
  ],
+ "w|潜水": [
+  {
+   "text": "小明这次去海岛，最期待的就是第一次潜水。",
+   "en": "On this island trip, what Xiao Ming looks forward to most is diving for the first time.",
+   "ko": "샤오밍은 이번 섬 여행에서 처음 해 보는 다이빙을 제일 기대해요.",
+   "blank": "潜水",
+   "src": "made"
+  },
+  {
+   "text": "夏天一到，丽丽就和朋友去海边潜水。",
+   "en": "As soon as summer arrives, Lili goes diving at the beach with friends.",
+   "ko": "여름이 오면 리리는 친구들과 바닷가에 다이빙하러 가요.",
+   "blank": "潜水",
+   "src": "made"
+  }
+ ],
  "w|潜艇": [
   {
    "text": "陈杰在科技节上做了一个会下潜的潜艇模型。",
@@ -46831,6 +47263,22 @@
    "en": "The train is late.",
    "ko": "기차가 늦었어.",
    "blank": "火车"
+  }
+ ],
+ "w|火车站": [
+  {
+   "text": "小明提前一个小时就到了火车站，在候车室吃了碗面。",
+   "en": "Xiao Ming got to the train station an hour early and had a bowl of noodles in the waiting room.",
+   "ko": "샤오밍은 한 시간 일찍 기차역에 도착해서 대합실에서 국수 한 그릇을 먹었어요.",
+   "blank": "火车站",
+   "src": "made"
+  },
+  {
+   "text": "春节前，丽丽冒着寒风去火车站接回家的哥哥。",
+   "en": "Before Spring Festival, Lili braved the cold wind to go to the train station and pick up her brother coming home.",
+   "ko": "설 전에 리리는 찬바람을 무릅쓰고 기차역에 집에 오는 오빠를 마중 나갔어요.",
+   "blank": "火车站",
+   "src": "made"
   }
  ],
  "w|灭亡": [
@@ -48897,6 +49345,22 @@
    "src": "made"
   }
  ],
+ "w|理会": [
+  {
+   "text": "后排的人一直在大声打电话，小明决定不去理会。",
+   "en": "Someone in the back kept making loud phone calls, and Xiao Ming decided to ignore it.",
+   "ko": "뒷줄 사람이 계속 큰 소리로 통화했지만 샤오밍은 신경 쓰지 않기로 했어요.",
+   "blank": "理会",
+   "src": "made"
+  },
+  {
+   "text": "窗外的知了叫了一整天，丽丽干脆不去理会，专心看书。",
+   "en": "The cicadas outside buzzed all day, so Lili simply ignored them and focused on reading.",
+   "ko": "창밖 매미가 하루 종일 울었지만 리리는 아예 신경 끄고 책에 집중했어요.",
+   "blank": "理会",
+   "src": "made"
+  }
+ ],
  "w|理念": [
   {
    "text": "周强的创作理念是让普通观众也能看懂。",
@@ -50497,6 +50961,22 @@
    "src": "made"
   }
  ],
+ "w|皇宫": [
+  {
+   "text": "小明打算下车后先去参观古代的皇宫。",
+   "en": "Xiao Ming plans to visit the ancient imperial palace first after getting off.",
+   "ko": "샤오밍은 기차에서 내리면 먼저 옛 황궁을 구경할 생각이에요.",
+   "blank": "皇宫",
+   "src": "made"
+  },
+  {
+   "text": "下雪后的皇宫特别安静，丽丽觉得像回到了古代。",
+   "en": "The imperial palace was especially quiet after the snow, and Lili felt like she'd gone back in time.",
+   "ko": "눈 온 뒤 황궁은 아주 고요해서 리리는 옛날로 돌아간 것 같았어요.",
+   "blank": "皇宫",
+   "src": "made"
+  }
+ ],
  "w|皇帝": [
   {
    "text": "赵磊在研究一位古代皇帝的书信，借了一大摞书。",
@@ -51666,6 +52146,22 @@
    "en": "As soon as her registration went through, Wang Fang began drawing up a training plan.",
    "ko": "신청이 끝나자 왕팡은 바로 훈련 계획 세우기에 들어갔어요.",
    "blank": "着手",
+   "src": "made"
+  }
+ ],
+ "w|着陆": [
+  {
+   "text": "小明从车窗里看到一架飞机正在附近的机场着陆。",
+   "en": "From the train window, Xiao Ming saw a plane landing at a nearby airport.",
+   "ko": "샤오밍은 기차 창문으로 비행기 한 대가 근처 공항에 착륙하는 걸 봤어요.",
+   "blank": "着陆",
+   "src": "made"
+  },
+  {
+   "text": "大雾天，好几架飞机都没法按时着陆。",
+   "en": "On the foggy day, several planes couldn't land on time.",
+   "ko": "안개가 짙은 날 비행기 여러 대가 제시간에 착륙하지 못했어요.",
+   "blank": "着陆",
    "src": "made"
   }
  ],
@@ -54663,6 +55159,22 @@
    "src": "made"
   }
  ],
+ "w|精细": [
+  {
+   "text": "小明在车站买了一把木梳，上面的雕花非常精细。",
+   "en": "Xiao Ming bought a wooden comb at the station with very fine carvings on it.",
+   "ko": "샤오밍은 역에서 나무 빗을 샀는데 새긴 무늬가 아주 정교했어요.",
+   "blank": "精细",
+   "src": "made"
+  },
+  {
+   "text": "窗户上的冰花非常精细，丽丽忍不住拍了好几张照片。",
+   "en": "The frost patterns on the window were so delicate that Lili couldn't help taking several photos.",
+   "ko": "창문의 성에 무늬가 아주 섬세해서 리리는 사진을 여러 장 찍었어요.",
+   "blank": "精细",
+   "src": "made"
+  }
+ ],
  "w|糊涂": [
   {
    "text": "奶奶年纪大了，有时会糊涂，把春天说成秋天。",
@@ -55362,6 +55874,22 @@
    "en": "Wang Fang wasn't happy with the new treatment plan, so she ended the contract.",
    "ko": "왕팡은 새 치료 계획이 마음에 들지 않아서 계약을 해지했어요.",
    "blank": "终止",
+   "src": "made"
+  }
+ ],
+ "w|终点": [
+  {
+   "text": "火车开了一整夜，第二天早上终于到了终点。",
+   "en": "The train ran all night and finally reached the last stop the next morning.",
+   "ko": "기차는 밤새 달려서 다음 날 아침 드디어 종점에 도착했어요.",
+   "blank": "终点",
+   "src": "made"
+  },
+  {
+   "text": "秋季马拉松的终点设在湖边公园，丽丽在那里等朋友。",
+   "en": "The finish line of the autumn marathon was set in the lakeside park, and Lili waited for her friend there.",
+   "ko": "가을 마라톤 결승점이 호숫가 공원에 있어서 리리는 거기서 친구를 기다렸어요.",
+   "blank": "终点",
    "src": "made"
   }
  ],
@@ -56580,6 +57108,22 @@
    "en": "The airport opened a dedicated lane for special groups like the elderly and children.",
    "ko": "공항은 노인과 어린이 같은 특별한 집단을 위해 전용 통로를 열었어요.",
    "blank": "群体",
+   "src": "made"
+  }
+ ],
+ "w|群岛": [
+  {
+   "text": "小明这次坐火车去海边，打算再坐船去附近的群岛看看。",
+   "en": "This time Xiao Ming took the train to the coast, planning to take a boat to the nearby islands.",
+   "ko": "샤오밍은 이번에 기차로 바닷가에 가서 배를 타고 근처 군도에 가 볼 생각이에요.",
+   "blank": "群岛",
+   "src": "made"
+  },
+  {
+   "text": "天气预报说，台风会先经过南边的群岛，再往北移动。",
+   "en": "The weather forecast said the typhoon will pass the southern islands first and then move north.",
+   "ko": "일기 예보에서 태풍이 먼저 남쪽 군도를 지나 북쪽으로 올라간다고 했어요.",
+   "blank": "群岛",
    "src": "made"
   }
  ],
@@ -58747,6 +59291,22 @@
    "en": "We'll go by boat.",
    "ko": "우리 배로 가자.",
    "blank": "船"
+  }
+ ],
+ "w|船只": [
+  {
+   "text": "火车沿着江边开，小明数着江上来往的船只。",
+   "en": "The train ran along the river, and Xiao Ming counted the boats going back and forth.",
+   "ko": "기차가 강을 따라 달리는 동안 샤오밍은 강을 오가는 배들을 셌어요.",
+   "blank": "船只",
+   "src": "made"
+  },
+  {
+   "text": "秋天是捕鱼的季节，港口停满了船只。",
+   "en": "Autumn is fishing season, and the harbor is full of boats.",
+   "ko": "가을은 고기잡이 철이라 항구에 배가 가득해요.",
+   "blank": "船只",
+   "src": "made"
   }
  ],
  "w|船员": [
@@ -64523,6 +65083,22 @@
    "src": "made"
   }
  ],
+ "w|路边": [
+  {
+   "text": "火车慢下来时，小明看到路边有小孩在挥手。",
+   "en": "As the train slowed, Xiao Ming saw children waving by the roadside.",
+   "ko": "기차가 느려질 때 샤오밍은 길가에서 손 흔드는 아이들을 봤어요.",
+   "blank": "路边",
+   "src": "made"
+  },
+  {
+   "text": "春天一到，路边的迎春花全开了。",
+   "en": "As soon as spring comes, the winter jasmine along the roadside is in full bloom.",
+   "ko": "봄이 오자 길가의 개나리가 활짝 피었어요.",
+   "blank": "路边",
+   "src": "made"
+  }
+ ],
  "w|路过": [
   {
    "text": "每天早上，王刚都会路过菜市场，顺便挑些新鲜的蔬菜。",
@@ -64958,6 +65534,22 @@
    "en": "Lin Jing locked the door, turned to go downstairs, and only then remembered she'd forgotten her umbrella.",
    "ko": "린징은 문을 잠그고 돌아서 내려가다가 그제야 우산을 깜빡한 게 생각났어요.",
    "blank": "转身",
+   "src": "made"
+  }
+ ],
+ "w|轮胎": [
+  {
+   "text": "火车站外，一辆出租车的轮胎爆了，司机正蹲着换胎。",
+   "en": "Outside the train station, a taxi had a blown tire, and the driver was crouching to change it.",
+   "ko": "기차역 밖에서 택시 한 대 타이어가 터져서 기사님이 쪼그려 앉아 갈고 있었어요.",
+   "blank": "轮胎",
+   "src": "made"
+  },
+  {
+   "text": "入冬前，丽丽的爸爸把车的轮胎换成了雪地胎。",
+   "en": "Before winter, Lili's dad switched the car's tires to snow tires.",
+   "ko": "겨울이 오기 전에 리리의 아빠는 차 타이어를 스노타이어로 바꿨어요.",
+   "blank": "轮胎",
    "src": "made"
   }
  ],
@@ -66089,6 +66681,22 @@
    "blank": "远"
   }
  ],
+ "w|远处": [
+  {
+   "text": "小明看见远处的雪山在阳光下闪闪发亮。",
+   "en": "Xiao Ming saw the snowy mountains in the distance glittering in the sunlight.",
+   "ko": "샤오밍은 멀리 설산이 햇빛에 반짝이는 걸 봤어요.",
+   "blank": "远处",
+   "src": "made"
+  },
+  {
+   "text": "站在阳台上，丽丽能看到远处的山顶已经白了。",
+   "en": "Standing on the balcony, Lili could see the distant mountaintops had already turned white.",
+   "ko": "발코니에 서면 리리는 먼 산꼭대기가 벌써 하얘진 걸 볼 수 있어요.",
+   "blank": "远处",
+   "src": "made"
+  }
+ ],
  "w|远离": [
   {
    "text": "请远离火源。",
@@ -66791,6 +67399,22 @@
    "src": "made"
   }
  ],
+ "w|递给": [
+  {
+   "text": "小明把剥好的橘子递给了对面的小朋友。",
+   "en": "Xiao Ming handed the peeled tangerine to the little kid across from him.",
+   "ko": "샤오밍은 껍질 깐 귤을 맞은편 아이에게 건넸어요.",
+   "blank": "递给",
+   "src": "made"
+  },
+  {
+   "text": "丽丽把刚摘的柿子递给了隔壁的老奶奶。",
+   "en": "Lili handed the persimmons she had just picked to the old lady next door.",
+   "ko": "리리는 방금 딴 감을 옆집 할머니께 건넸어요.",
+   "blank": "递给",
+   "src": "made"
+  }
+ ],
  "w|途中": [
   {
    "text": "马林在去酒店的途中，顺便买了一束花。",
@@ -67260,6 +67884,22 @@
    "en": "The groom's grandfather left him an old watch in his will, and the groom is wearing it today.",
    "ko": "신랑 할아버지가 유언장에 손자에게 낡은 손목시계를 남겼는데, 신랑이 오늘 그걸 차고 있어요.",
    "blank": "遗嘱",
+   "src": "made"
+  }
+ ],
+ "w|遗址": [
+  {
+   "text": "火车经过一座古城遗址，导游说那里有两千多年的历史。",
+   "en": "The train passed the ruins of an ancient city, and the guide said it has over two thousand years of history.",
+   "ko": "기차가 고대 도시 유적을 지나자 가이드가 이천 년이 넘는 역사가 있다고 했어요.",
+   "blank": "遗址",
+   "src": "made"
+  },
+  {
+   "text": "秋天，丽丽跟着老师去参观了一处古代村落的遗址。",
+   "en": "In autumn, Lili went with her teacher to visit the ruins of an ancient village.",
+   "ko": "가을에 리리는 선생님을 따라 옛 마을 유적지를 견학했어요.",
+   "blank": "遗址",
    "src": "made"
   }
  ],

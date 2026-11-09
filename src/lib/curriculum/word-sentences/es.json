@@ -5101,6 +5101,22 @@
    "blank": "ambulancia"
   }
  ],
+ "w|ambulante": [
+  {
+   "text": "A la salida de la fábrica siempre hay un vendedor ambulante de churros.",
+   "en": "At the factory exit there's always a street vendor selling churros.",
+   "ko": "공장 출구에는 늘 추로스 노점상이 있어요.",
+   "blank": "ambulante",
+   "src": "made"
+  },
+  {
+   "text": "Sofía empezó tocando con un músico ambulante en las plazas de su ciudad.",
+   "en": "Sofía started out playing with a wandering musician in the squares of her town.",
+   "ko": "소피아는 처음에 떠돌이 음악가와 함께 동네 광장에서 연주했어요.",
+   "blank": "ambulante",
+   "src": "made"
+  }
+ ],
  "w|amén": [
   {
    "text": "Todos respondieron amén al final.",
@@ -6228,6 +6244,22 @@
    "en": "The annual music festival fills the city with people.",
    "ko": "매년 열리는 음악 축제로 도시가 사람들로 가득 차요.",
    "blank": "anual",
+   "src": "made"
+  }
+ ],
+ "w|anuario": [
+  {
+   "text": "La empresa publica un anuario con fotos de todos los empleados.",
+   "en": "The company publishes a yearbook with photos of all the employees.",
+   "ko": "회사는 전 직원 사진이 실린 연감을 내요.",
+   "blank": "anuario",
+   "src": "made"
+  },
+  {
+   "text": "La foto de Sofía con su violín salió en el anuario de la escuela.",
+   "en": "The photo of Sofía with her violin appeared in the school yearbook.",
+   "ko": "바이올린을 든 소피아의 사진이 학교 졸업 앨범에 실렸어요.",
+   "blank": "anuario",
    "src": "made"
   }
  ],
@@ -10375,6 +10407,22 @@
    "blank": "avenida"
   }
  ],
+ "w|aventón": [
+  {
+   "text": "Cuando se le averió el coche, un compañero le dio un aventón a Diego hasta la fábrica.",
+   "en": "When his car broke down, a coworker gave Diego a ride to the factory.",
+   "ko": "차가 고장 나자 동료가 디에고를 공장까지 태워 줬어요.",
+   "blank": "aventón",
+   "src": "made"
+  },
+  {
+   "text": "Sofía llegó a la escuela de música gracias a un aventón de su vecino.",
+   "en": "Sofía got to the music school thanks to a ride from her neighbour.",
+   "ko": "소피아는 이웃이 태워 준 덕분에 음악 학교에 도착했어요.",
+   "blank": "aventón",
+   "src": "made"
+  }
+ ],
  "w|aventura": [
   {
    "text": "Buscamos una aventura en la montaña.",
@@ -10726,6 +10774,38 @@
    "en": "Lucía asked for a seat on the port side to see the sea at takeoff.",
    "ko": "루시아는 이륙할 때 바다를 보려고 왼쪽 좌석을 달라고 했어요.",
    "blank": "babor",
+   "src": "made"
+  }
+ ],
+ "w|bache": [
+  {
+   "text": "El camión de reparto se quedó atascado en un bache a la entrada de la fábrica.",
+   "en": "The delivery lorry got stuck in a pothole at the factory entrance.",
+   "ko": "배송 트럭이 공장 입구의 움푹 팬 곳에 빠졌어요.",
+   "blank": "bache",
+   "src": "made"
+  },
+  {
+   "text": "Sofía tuvo un bache de motivación y estuvo un mes sin tocar el violín.",
+   "en": "Sofía went through a motivation slump and didn't play the violin for a month.",
+   "ko": "소피아는 의욕이 떨어져서 한 달 동안 바이올린을 켜지 않았어요.",
+   "blank": "bache",
+   "src": "made"
+  }
+ ],
+ "w|bachillerato": [
+  {
+   "text": "Diego empezó a trabajar en la fábrica nada más terminar el bachillerato.",
+   "en": "Diego started working at the factory right after finishing secondary school.",
+   "ko": "디에고는 고등학교를 마치자마자 공장에서 일하기 시작했어요.",
+   "blank": "bachillerato",
+   "src": "made"
+  },
+  {
+   "text": "Sofía compagina el conservatorio con el bachillerato y casi no tiene tiempo libre.",
+   "en": "Sofía combines the conservatory with secondary school and has almost no free time.",
+   "ko": "소피아는 음악원과 고등학교를 같이 다녀서 자유 시간이 거의 없어요.",
+   "blank": "bachillerato",
    "src": "made"
   }
  ],
@@ -14109,6 +14189,22 @@
    "blank": "búsqueda"
   }
  ],
+ "w|buzo": [
+  {
+   "text": "Para revisar el depósito de agua, la fábrica contrató a un buzo profesional.",
+   "en": "To inspect the water tank, the factory hired a professional diver.",
+   "ko": "물탱크를 점검하려고 공장은 전문 잠수부를 고용했어요.",
+   "blank": "buzo",
+   "src": "made"
+  },
+  {
+   "text": "El profesor de trompeta de Sofía trabajó de buzo antes de dedicarse a la música.",
+   "en": "Sofía's trumpet teacher worked as a diver before devoting himself to music.",
+   "ko": "소피아의 트럼펫 선생님은 음악을 하기 전에 잠수부로 일했어요.",
+   "blank": "buzo",
+   "src": "made"
+  }
+ ],
  "w|buzón": [
   {
    "text": "Una carta para Lucas llegó al buzón equivocado.",
@@ -15855,6 +15951,22 @@
    "src": "made"
   }
  ],
+ "w|canoa": [
+  {
+   "text": "Los fines de semana, Diego se olvida de la fábrica y sale en canoa por el río.",
+   "en": "At weekends, Diego forgets about the factory and goes out on the river in a canoe.",
+   "ko": "주말이면 디에고는 공장을 잊고 카누를 타고 강에 나가요.",
+   "blank": "canoa",
+   "src": "made"
+  },
+  {
+   "text": "El profesor de guitarra de Sofía compuso una canción sobre un viaje en canoa.",
+   "en": "Sofía's guitar teacher wrote a song about a canoe trip.",
+   "ko": "소피아의 기타 선생님은 카누 여행에 관한 노래를 만들었어요.",
+   "blank": "canoa",
+   "src": "made"
+  }
+ ],
  "w|cañón": [
   {
    "text": "El cañón del río es impresionante.",
@@ -15955,6 +16067,22 @@
    "en": "The amount of work overwhelms me.",
    "ko": "일의 양이 감당이 안 돼.",
    "blank": "cantidad"
+  }
+ ],
+ "w|cantina": [
+  {
+   "text": "En la cantina de la fábrica ponen lentejas todos los lunes.",
+   "en": "In the factory canteen they serve lentils every Monday.",
+   "ko": "공장 구내식당에서는 월요일마다 렌틸콩 요리가 나와요.",
+   "blank": "cantina",
+   "src": "made"
+  },
+  {
+   "text": "Entre clase y clase, Sofía toma un té en la cantina de la escuela.",
+   "en": "Between classes, Sofía has a tea in the school canteen.",
+   "ko": "소피아는 수업 사이에 학교 매점에서 차를 마셔요.",
+   "blank": "cantina",
+   "src": "made"
   }
  ],
  "w|canto": [
@@ -19353,6 +19481,22 @@
    "blank": "cine"
   }
  ],
+ "w|cineasta": [
+  {
+   "text": "Una cineasta vino a la fábrica a grabar un documental sobre los obreros.",
+   "en": "A filmmaker came to the factory to shoot a documentary about the workers.",
+   "ko": "한 영화감독이 노동자에 관한 다큐멘터리를 찍으러 공장에 왔어요.",
+   "blank": "cineasta",
+   "src": "made"
+  },
+  {
+   "text": "Un cineasta le pidió a Sofía que compusiera la música de su cortometraje.",
+   "en": "A filmmaker asked Sofía to compose the music for his short film.",
+   "ko": "한 영화감독이 소피아에게 단편 영화 음악을 작곡해 달라고 했어요.",
+   "blank": "cineasta",
+   "src": "made"
+  }
+ ],
  "w|cínico": [
   {
    "text": "Cuando el director prometió arreglar la calefacción, Sergio hizo un comentario cínico.",
@@ -21523,6 +21667,22 @@
    "blank": "comparar"
   }
  ],
+ "w|compartimento": [
+  {
+   "text": "Diego guarda el casco en un compartimento de su taquilla.",
+   "en": "Diego keeps his helmet in a compartment of his locker.",
+   "ko": "디에고는 사물함 칸 하나에 안전모를 넣어 둬요.",
+   "blank": "compartimento",
+   "src": "made"
+  },
+  {
+   "text": "Sofía guarda la resina del arco en el compartimento pequeño del estuche.",
+   "en": "Sofía keeps the bow rosin in the small compartment of the case.",
+   "ko": "소피아는 활 송진을 악기 케이스의 작은 칸에 넣어 둬요.",
+   "blank": "compartimento",
+   "src": "made"
+  }
+ ],
  "w|compartir": [
   {
    "text": "Prefiero compartir el postre contigo.",
@@ -22774,6 +22934,22 @@
    "en": "In an airport campaign, some volunteers were explaining condom use to travelers.",
    "ko": "공항 캠페인에서 자원봉사자들이 여행객들에게 콘돔 사용법을 알려 줬어요.",
    "blank": "condón",
+   "src": "made"
+  }
+ ],
+ "w|conducción": [
+  {
+   "text": "Diego tuvo que hacer un curso de conducción de carretillas elevadoras.",
+   "en": "Diego had to take a forklift driving course.",
+   "ko": "디에고는 지게차 운전 교육을 받아야 했어요.",
+   "blank": "conducción",
+   "src": "made"
+  },
+  {
+   "text": "Sofía estudia para el examen de conducción entre ensayo y ensayo.",
+   "en": "Sofía studies for her driving test between rehearsals.",
+   "ko": "소피아는 연습 사이사이 운전면허 시험공부를 해요.",
+   "blank": "conducción",
    "src": "made"
   }
  ],
@@ -25513,6 +25689,22 @@
    "en": "He doesn't usually reply to my messages.",
    "ko": "그는 보통 내 메시지에 답하지 않아.",
    "blank": "corresponder"
+  }
+ ],
+ "w|corresponsal": [
+  {
+   "text": "Un corresponsal de la radio local entrevistó a Diego sobre la huelga.",
+   "en": "A local radio correspondent interviewed Diego about the strike.",
+   "ko": "지역 라디오 통신원이 파업에 대해 디에고를 인터뷰했어요.",
+   "blank": "corresponsal",
+   "src": "made"
+  },
+  {
+   "text": "La madre de Sofía es corresponsal en el extranjero y la ve tocar por videollamada.",
+   "en": "Sofía's mother is a foreign correspondent and watches her play by video call.",
+   "ko": "소피아의 어머니는 해외 특파원이라 영상 통화로 소피아의 연주를 봐요.",
+   "blank": "corresponsal",
+   "src": "made"
   }
  ],
  "w|corrida": [
@@ -30447,6 +30639,22 @@
    "src": "made"
   }
  ],
+ "w|desempleo": [
+  {
+   "text": "Cuando cerró la otra fábrica del pueblo, el desempleo se disparó.",
+   "en": "When the town's other factory closed, unemployment shot up.",
+   "ko": "마을의 다른 공장이 문을 닫자 실업이 치솟았어요.",
+   "blank": "desempleo",
+   "src": "made"
+  },
+  {
+   "text": "Muchos músicos pasan épocas de desempleo entre una gira y otra.",
+   "en": "Many musicians go through periods of unemployment between tours.",
+   "ko": "많은 음악가가 공연 투어 사이사이 실직 기간을 겪어요.",
+   "blank": "desempleo",
+   "src": "made"
+  }
+ ],
  "w|desencadenar": [
   {
    "text": "La dentista le dijo a Javier que una infección pequeña puede desencadenar problemas mayores.",
@@ -34713,6 +34921,22 @@
    "blank": "educar"
   }
  ],
+ "w|educativo": [
+  {
+   "text": "La fábrica abre sus puertas a colegios para hacer visitas de tipo educativo.",
+   "en": "The factory opens its doors to schools for educational visits.",
+   "ko": "공장은 학교들에 문을 열어 교육용 견학을 받아요.",
+   "blank": "educativo",
+   "src": "made"
+  },
+  {
+   "text": "Sofía colabora con un programa educativo que lleva conciertos a los hospitales.",
+   "en": "Sofía works with an educational programme that takes concerts to hospitals.",
+   "ko": "소피아는 병원에 연주회를 여는 교육 프로그램에 참여해요.",
+   "blank": "educativo",
+   "src": "made"
+  }
+ ],
  "w|efectivamente": [
   {
    "text": "Javier confirmó que, efectivamente, el plazo terminaba el viernes.",
@@ -34770,6 +34994,22 @@
    "en": "The coach taught Lucía a more effective kick for breaststroke.",
    "ko": "코치는 루시아에게 평영에 더 효과적인 발차기를 가르쳐 줬어요.",
    "blank": "eficaz",
+   "src": "made"
+  }
+ ],
+ "w|eficiencia": [
+  {
+   "text": "Con las máquinas nuevas, la eficiencia de la línea mejoró muchísimo.",
+   "en": "With the new machines, the line's efficiency improved enormously.",
+   "ko": "새 기계 덕분에 생산 라인 효율이 크게 좋아졌어요.",
+   "blank": "eficiencia",
+   "src": "made"
+  },
+  {
+   "text": "La profesora valora la eficiencia en el estudio más que las horas de práctica.",
+   "en": "The teacher values efficient study more than hours of practice.",
+   "ko": "선생님은 연습 시간보다 효율적인 공부를 더 중요하게 여겨요.",
+   "blank": "eficiencia",
    "src": "made"
   }
  ],
@@ -35845,6 +36085,22 @@
    "blank": "empleado"
   }
  ],
+ "w|empleador": [
+  {
+   "text": "Diego dice que su empleador siempre paga a tiempo, y eso hoy vale mucho.",
+   "en": "Diego says his employer always pays on time, and that's worth a lot these days.",
+   "ko": "디에고는 고용주가 늘 제때 월급을 줘서 요즘 그게 큰 장점이라고 해요.",
+   "blank": "empleador",
+   "src": "made"
+  },
+  {
+   "text": "El primer empleador de Sofía fue una orquesta de cámara de su ciudad.",
+   "en": "Sofía's first employer was a chamber orchestra in her city.",
+   "ko": "소피아의 첫 고용주는 고향의 실내악단이었어요.",
+   "blank": "empleador",
+   "src": "made"
+  }
+ ],
  "w|emplear": [
   {
    "text": "Diego suele emplear frases cortas para que la noticia se lea rápido.",
@@ -35887,6 +36143,22 @@
    "en": "The company opened a new office.",
    "ko": "회사가 새 사무실을 열었어.",
    "blank": "empresa"
+  }
+ ],
+ "w|empresarial": [
+  {
+   "text": "La fábrica forma parte de un grupo empresarial con sedes en varios países.",
+   "en": "The factory is part of a business group with offices in several countries.",
+   "ko": "그 공장은 여러 나라에 지사를 둔 기업 그룹에 속해 있어요.",
+   "blank": "empresarial",
+   "src": "made"
+  },
+  {
+   "text": "La escuela recibe donaciones de un club empresarial de la ciudad.",
+   "en": "The school receives donations from a business club in the city.",
+   "ko": "학교는 도시의 기업인 모임에서 후원금을 받아요.",
+   "blank": "empresarial",
+   "src": "made"
   }
  ],
  "w|empresario": [
@@ -37783,6 +38055,22 @@
    "blank": "error"
   }
  ],
+ "w|erudito": [
+  {
+   "text": "El abuelo de Diego, todo un erudito en máquinas antiguas, sabe arreglar cualquier telar.",
+   "en": "Diego's grandfather, a real scholar of old machines, can fix any loom.",
+   "ko": "옛 기계에 정통한 디에고의 할아버지는 어떤 베틀이든 고칠 줄 알아요.",
+   "blank": "erudito",
+   "src": "made"
+  },
+  {
+   "text": "Un erudito de la música barroca dio una conferencia en el auditorio de la escuela.",
+   "en": "A scholar of Baroque music gave a lecture in the school's auditorium.",
+   "ko": "바로크 음악 학자가 학교 강당에서 강연을 했어요.",
+   "blank": "erudito",
+   "src": "made"
+  }
+ ],
  "w|erupción": [
   {
    "text": "En la isla de enfrente, Mateo visitó el cráter de un volcán sin ninguna erupción desde hace siglos.",
@@ -37966,6 +38254,22 @@
    "en": "With Nuria's app, you can scan a receipt and save the expense instantly.",
    "ko": "누리아의 앱으로 영수증을 스캔하면 바로 지출이 저장돼요.",
    "blank": "escanear",
+   "src": "made"
+  }
+ ],
+ "w|escaneo": [
+  {
+   "text": "Cada caja pasa por un escaneo antes de salir del almacén.",
+   "en": "Every box goes through a scan before leaving the warehouse.",
+   "ko": "상자는 모두 창고를 나가기 전에 스캔을 거쳐요.",
+   "blank": "escaneo",
+   "src": "made"
+  },
+  {
+   "text": "La biblioteca de la escuela hizo un escaneo de las partituras más antiguas.",
+   "en": "The school library made a scan of the oldest sheet music.",
+   "ko": "학교 도서관은 가장 오래된 악보들을 스캔했어요.",
+   "blank": "escaneo",
    "src": "made"
   }
  ],
@@ -38755,6 +39059,22 @@
    "en": "The Spanish wine from this region is famous.",
    "ko": "이 지역의 스페인 와인은 유명해.",
    "blank": "español"
+  }
+ ],
+ "w|espantar": [
+  {
+   "text": "El ruido de las prensas suele espantar a las palomas del tejado.",
+   "en": "The noise of the presses usually scares the pigeons off the roof.",
+   "ko": "프레스 소리에 지붕 위 비둘기들이 보통 놀라서 날아가요.",
+   "blank": "espantar",
+   "src": "made"
+  },
+  {
+   "text": "Los nervios del primer concierto no consiguieron espantar a Sofía.",
+   "en": "The nerves of the first concert didn't manage to scare Sofía off.",
+   "ko": "첫 연주회의 긴장도 소피아를 겁먹게 하지는 못했어요.",
+   "blank": "espantar",
+   "src": "made"
   }
  ],
  "w|espantoso": [
@@ -41371,6 +41691,22 @@
    "src": "made"
   }
  ],
+ "w|exigencia": [
+  {
+   "text": "Diego se queja de que la exigencia de producción ha subido mucho este año.",
+   "en": "Diego complains that production demands have gone up a lot this year.",
+   "ko": "디에고는 올해 생산 요구량이 많이 늘었다고 불평해요.",
+   "blank": "exigencia",
+   "src": "made"
+  },
+  {
+   "text": "La exigencia de la profesora de piano hace llorar a más de un alumno.",
+   "en": "The piano teacher's strictness makes more than one pupil cry.",
+   "ko": "피아노 선생님이 너무 엄격해서 우는 학생도 있어요.",
+   "blank": "exigencia",
+   "src": "made"
+  }
+ ],
  "w|exigente": [
   {
    "text": "La profesora de Mateo es muy exigente con la limpieza de la mesa.",
@@ -43911,6 +44247,22 @@
    "en": "I finally understood the lesson.",
    "ko": "드디어 수업을 이해했어.",
    "blank": "Finalmente"
+  }
+ ],
+ "w|financiación": [
+  {
+   "text": "La fábrica consiguió financiación para cambiar las máquinas viejas.",
+   "en": "The factory got funding to replace the old machines.",
+   "ko": "공장은 낡은 기계를 바꿀 자금을 마련했어요.",
+   "blank": "financiación",
+   "src": "made"
+  },
+  {
+   "text": "La escuela busca financiación para comprar un piano de cola nuevo.",
+   "en": "The school is looking for funding to buy a new grand piano.",
+   "ko": "학교는 새 그랜드 피아노를 살 후원금을 찾고 있어요.",
+   "blank": "financiación",
+   "src": "made"
   }
  ],
  "w|financiar": [
@@ -46783,6 +47135,22 @@
    "src": "made"
   }
  ],
+ "w|geografía": [
+  {
+   "text": "A Diego le gustaba la geografía y por eso conoce todos los países a los que exportan.",
+   "en": "Diego liked geography, which is why he knows every country they export to.",
+   "ko": "디에고는 지리를 좋아해서 수출하는 나라를 다 알아요.",
+   "blank": "geografía",
+   "src": "made"
+  },
+  {
+   "text": "Sofía dejó la clase de geografía para tener más horas de ensayo.",
+   "en": "Sofía dropped her geography class to have more rehearsal hours.",
+   "ko": "소피아는 연습 시간을 늘리려고 지리 수업을 그만뒀어요.",
+   "blank": "geografía",
+   "src": "made"
+  }
+ ],
  "w|gerente": [
   {
    "text": "El gerente aprobó el nuevo horario.",
@@ -47983,6 +48351,22 @@
    "en": "Keep the secret until the end.",
    "ko": "끝까지 비밀을 지켜.",
    "blank": "Guarda"
+  }
+ ],
+ "w|guardabosques": [
+  {
+   "text": "El hermano de Diego dejó la fábrica para trabajar de guardabosques en la sierra.",
+   "en": "Diego's brother left the factory to work as a forest ranger in the mountains.",
+   "ko": "디에고의 형은 공장을 그만두고 산에서 산림 감시원으로 일해요.",
+   "blank": "guardabosques",
+   "src": "made"
+  },
+  {
+   "text": "Sofía tocó en la boda de un guardabosques en una ermita del bosque.",
+   "en": "Sofía played at a forest ranger's wedding in a chapel in the woods.",
+   "ko": "소피아는 숲속 작은 성당에서 열린 산림 감시원의 결혼식에서 연주했어요.",
+   "blank": "guardabosques",
+   "src": "made"
   }
  ],
  "w|guardaespaldas": [
@@ -51586,6 +51970,22 @@
    "en": "Nuria always has a printed map of the project stuck on the wall.",
    "ko": "누리아는 늘 벽에 프로젝트 지도를 출력해서 붙여 둬요.",
    "blank": "impreso",
+   "src": "made"
+  }
+ ],
+ "w|impresora": [
+  {
+   "text": "La impresora de la oficina se atasca cada vez que Diego imprime los turnos.",
+   "en": "The office printer jams every time Diego prints the shift rota.",
+   "ko": "디에고가 근무표를 인쇄할 때마다 사무실 프린터가 걸려요.",
+   "blank": "impresora",
+   "src": "made"
+  },
+  {
+   "text": "Sofía imprimió las partituras en la impresora de la biblioteca.",
+   "en": "Sofía printed the sheet music on the library printer.",
+   "ko": "소피아는 도서관 프린터로 악보를 인쇄했어요.",
+   "blank": "impresora",
    "src": "made"
   }
  ],
@@ -57605,6 +58005,22 @@
    "src": "made"
   }
  ],
+ "w|lechuga": [
+  {
+   "text": "Diego se prepara un bocadillo de atún con lechuga para el turno de noche.",
+   "en": "Diego makes himself a tuna and lettuce sandwich for the night shift.",
+   "ko": "디에고는 야간 근무에 먹을 참치 양상추 샌드위치를 만들어요.",
+   "blank": "lechuga",
+   "src": "made"
+  },
+  {
+   "text": "Antes de cantar, Sofía evita comer lechuga porque dice que le seca la garganta.",
+   "en": "Before singing, Sofía avoids eating lettuce because she says it dries her throat.",
+   "ko": "소피아는 목이 마른다며 노래하기 전에 양상추를 먹지 않아요.",
+   "blank": "lechuga",
+   "src": "made"
+  }
+ ],
  "w|lector": [
   {
    "text": "Javier es un lector incansable de guías sobre aves y árboles.",
@@ -58235,6 +58651,22 @@
    "en": "He asked for a week's leave.",
    "ko": "일주일 휴가를 신청했어.",
    "blank": "licencia"
+  }
+ ],
+ "w|licenciado": [
+  {
+   "text": "El nuevo jefe de turno es licenciado en química, pero nunca había pisado una fábrica.",
+   "en": "The new shift manager has a chemistry degree but had never set foot in a factory.",
+   "ko": "새 교대 반장은 화학 학사지만 공장에 와 본 적이 없었어요.",
+   "blank": "licenciado",
+   "src": "made"
+  },
+  {
+   "text": "El nuevo profesor de solfeo es licenciado en matemáticas y lo explica todo con fórmulas.",
+   "en": "The new music theory teacher has a maths degree and explains everything with formulas.",
+   "ko": "새 음악 이론 선생님은 수학을 전공해서 모든 걸 공식으로 설명해요.",
+   "blank": "licenciado",
+   "src": "made"
   }
  ],
  "w|licor": [
@@ -61751,6 +62183,22 @@
    "src": "made"
   }
  ],
+ "w|matutino": [
+  {
+   "text": "Diego prefiere el turno matutino porque así tiene las tardes libres.",
+   "en": "Diego prefers the morning shift because that way he has his afternoons free.",
+   "ko": "디에고는 오후가 자유로워서 오전 근무를 더 좋아해요.",
+   "blank": "matutino",
+   "src": "made"
+  },
+  {
+   "text": "El ensayo matutino del coro empieza antes de que abra la cafetería.",
+   "en": "The choir's morning rehearsal starts before the café opens.",
+   "ko": "합창단 오전 연습은 카페가 문을 열기도 전에 시작해요.",
+   "blank": "matutino",
+   "src": "made"
+  }
+ ],
  "w|máximo": [
   {
    "text": "El máximo de personas es veinte.",
@@ -62691,6 +63139,22 @@
    "blank": "menudo"
   }
  ],
+ "w|mercader": [
+  {
+   "text": "Según la historia del pueblo, la fábrica la fundó un mercader de lana.",
+   "en": "According to the town's history, the factory was founded by a wool merchant.",
+   "ko": "마을 역사에 따르면 그 공장은 양모 상인이 세웠대요.",
+   "blank": "mercader",
+   "src": "made"
+  },
+  {
+   "text": "En la ópera del trimestre, Sofía canta el papel de la hija de un mercader.",
+   "en": "In this term's opera, Sofía sings the role of a merchant's daughter.",
+   "ko": "이번 학기 오페라에서 소피아는 상인의 딸 역을 노래해요.",
+   "blank": "mercader",
+   "src": "made"
+  }
+ ],
  "w|mercado": [
   {
    "text": "Compré fruta fresca en el mercado.",
@@ -63194,6 +63658,22 @@
    "en": "Sofía buys ready meals at the market to heat up in the microwave.",
    "ko": "소피아는 전자레인지에 데워 먹으려고 시장에서 반찬을 사요.",
    "blank": "microondas",
+   "src": "made"
+  }
+ ],
+ "w|microscopio": [
+  {
+   "text": "En el laboratorio de calidad, Diego miró por el microscopio una grieta en una pieza.",
+   "en": "In the quality lab, Diego looked at a crack in a part through the microscope.",
+   "ko": "품질 실험실에서 디에고는 현미경으로 부품의 금을 들여다봤어요.",
+   "blank": "microscopio",
+   "src": "made"
+  },
+  {
+   "text": "Un luthier le enseñó a Sofía la madera de su violín bajo el microscopio.",
+   "en": "A violin maker showed Sofía the wood of her violin under the microscope.",
+   "ko": "현악기 장인이 현미경으로 소피아의 바이올린 나무를 보여 줬어요.",
+   "blank": "microscopio",
    "src": "made"
   }
  ],
@@ -69079,6 +69559,22 @@
    "blank": "organización"
   }
  ],
+ "w|organizador": [
+  {
+   "text": "Diego es el organizador de la cena de Navidad de la plantilla.",
+   "en": "Diego is the organiser of the staff Christmas dinner.",
+   "ko": "디에고는 직원 성탄절 저녁 모임의 주최자예요.",
+   "blank": "organizador",
+   "src": "made"
+  },
+  {
+   "text": "La organizadora del festival escuchó a Sofía y la invitó a tocar en verano.",
+   "en": "The festival organiser heard Sofía and invited her to play in the summer.",
+   "ko": "축제 기획자가 소피아의 연주를 듣고 여름 공연에 초대했어요.",
+   "blank": "organizadora",
+   "src": "made"
+  }
+ ],
  "w|organizar": [
   {
    "text": "Vamos a organizar la fiesta juntos.",
@@ -69599,6 +70095,22 @@
    "en": "Hey, you don't say that.",
    "ko": "야, 그런 말은 하면 안 돼.",
    "blank": "Oye"
+  }
+ ],
+ "w|oyente": [
+  {
+   "text": "En la charla de seguridad, Diego fue el único oyente que hizo preguntas.",
+   "en": "At the safety talk, Diego was the only listener who asked questions.",
+   "ko": "안전 교육에서 질문한 청중은 디에고뿐이었어요.",
+   "blank": "oyente",
+   "src": "made"
+  },
+  {
+   "text": "Sofía se matriculó como oyente en la clase de composición.",
+   "en": "Sofía enrolled as an auditor in the composition class.",
+   "ko": "소피아는 작곡 수업에 청강생으로 등록했어요.",
+   "blank": "oyente",
+   "src": "made"
   }
  ],
  "w|pabellón": [
@@ -78993,6 +79505,22 @@
    "blank": "punta"
   }
  ],
+ "w|puntaje": [
+  {
+   "text": "El equipo de Diego obtuvo el mejor puntaje en la auditoría de seguridad.",
+   "en": "Diego's team got the best score in the safety audit.",
+   "ko": "디에고 팀이 안전 감사에서 최고 점수를 받았어요.",
+   "blank": "puntaje",
+   "src": "made"
+  },
+  {
+   "text": "En la prueba de acceso, Sofía sacó el puntaje más alto de su grupo.",
+   "en": "In the entrance exam, Sofía got the highest score in her group.",
+   "ko": "입학시험에서 소피아는 같은 조에서 가장 높은 점수를 받았어요.",
+   "blank": "puntaje",
+   "src": "made"
+  }
+ ],
  "w|puntería": [
   {
    "text": "En el juego de dardos de la sala infantil, Andrés demostró una puntería increíble.",
@@ -80894,6 +81422,22 @@
    "en": "Her coworkers call Lola \"the recruit\" because she's the newest on the team.",
    "ko": "동료들은 롤라가 팀에서 막내라서 '신병'이라고 불러요.",
    "blank": "recluta",
+   "src": "made"
+  }
+ ],
+ "w|reclutamiento": [
+  {
+   "text": "Este mes la fábrica abrió un proceso de reclutamiento para el turno de noche.",
+   "en": "This month the factory opened a recruitment process for the night shift.",
+   "ko": "이번 달 공장은 야간 근무 채용을 시작했어요.",
+   "blank": "reclutamiento",
+   "src": "made"
+  },
+  {
+   "text": "La orquesta juvenil hace cada otoño una campaña de reclutamiento de violonchelistas.",
+   "en": "The youth orchestra runs a recruitment drive for cellists every autumn.",
+   "ko": "청소년 오케스트라는 가을마다 첼로 연주자를 모집해요.",
+   "blank": "reclutamiento",
    "src": "made"
   }
  ],
@@ -85395,6 +85939,22 @@
    "blank": "ruego"
   }
  ],
+ "w|rufián": [
+  {
+   "text": "En la película que vio Diego, un rufián intentaba robar las nóminas de una fábrica.",
+   "en": "In the film Diego watched, a scoundrel tried to steal a factory's payroll.",
+   "ko": "디에고가 본 영화에서는 악당이 공장 월급을 훔치려 했어요.",
+   "blank": "rufián",
+   "src": "made"
+  },
+  {
+   "text": "En la ópera que ensaya Sofía, el tenor hace de rufián que engaña a todo el pueblo.",
+   "en": "In the opera Sofía is rehearsing, the tenor plays a scoundrel who tricks the whole village.",
+   "ko": "소피아가 연습하는 오페라에서 테너는 온 마을을 속이는 건달 역을 맡아요.",
+   "blank": "rufián",
+   "src": "made"
+  }
+ ],
  "w|rugby": [
   {
    "text": "Sergio no entiende las reglas del rugby, pero tuvo que escribir la crónica del partido.",
@@ -85701,6 +86261,22 @@
    "en": "The taste of the coffee is very strong.",
    "ko": "커피 맛이 아주 진해.",
    "blank": "sabor"
+  }
+ ],
+ "w|saborear": [
+  {
+   "text": "En el descanso, Diego se sienta al sol a saborear su café sin prisas.",
+   "en": "On his break, Diego sits in the sun to savour his coffee without rushing.",
+   "ko": "쉬는 시간에 디에고는 햇볕 아래 앉아 커피를 천천히 음미해요.",
+   "blank": "saborear",
+   "src": "made"
+  },
+  {
+   "text": "La profesora le pidió a Sofía que tocara despacio y que aprendiera a saborear cada nota.",
+   "en": "The teacher asked Sofía to play slowly and learn to savour every note.",
+   "ko": "선생님은 소피아에게 천천히 연주하며 음 하나하나를 음미하라고 했어요.",
+   "blank": "saborear",
+   "src": "made"
   }
  ],
  "w|sabotaje": [
@@ -86592,6 +87168,22 @@
    "en": "Sofía designed an app so that a tailor could take measurements from a phone.",
    "ko": "소피아는 재단사가 휴대폰으로 치수를 잴 수 있는 앱을 만들었어요.",
    "blank": "sastre",
+   "src": "made"
+  }
+ ],
+ "w|satelital": [
+  {
+   "text": "Los camiones de la fábrica llevan un sistema satelital para saber dónde están.",
+   "en": "The factory's lorries have a satellite system to know where they are.",
+   "ko": "공장 트럭에는 위치를 알 수 있는 위성 장치가 달려 있어요.",
+   "blank": "satelital",
+   "src": "made"
+  },
+  {
+   "text": "El concierto de fin de curso se retransmitió en directo gracias a una conexión satelital.",
+   "en": "The end-of-year concert was broadcast live thanks to a satellite link.",
+   "ko": "학년 말 연주회는 위성 연결 덕분에 생중계됐어요.",
+   "blank": "satelital",
    "src": "made"
   }
  ],
@@ -88101,6 +88693,22 @@
    "en": "I closed the session on the other device.",
    "ko": "다른 기기에서 세션을 종료했어.",
    "blank": "sesión"
+  }
+ ],
+ "w|seta": [
+  {
+   "text": "El otoño pasado, Diego llevó a la fábrica una cesta de setas que había cogido en el monte.",
+   "en": "Last autumn, Diego brought the factory a basket of mushrooms he had picked in the hills.",
+   "ko": "지난가을 디에고는 산에서 딴 버섯 한 바구니를 공장에 가져왔어요.",
+   "blank": "setas",
+   "src": "made"
+  },
+  {
+   "text": "El conserje de la escuela de música trajo setas de su pueblo para todos los profesores.",
+   "en": "The music school's caretaker brought mushrooms from his village for all the teachers.",
+   "ko": "음악 학교 관리인이 고향에서 버섯을 가져와 선생님들에게 나눠 줬어요.",
+   "blank": "setas",
+   "src": "made"
   }
  ],
  "w|setenta": [
@@ -90217,6 +90825,22 @@
    "src": "made"
   }
  ],
+ "w|subdirector": [
+  {
+   "text": "El subdirector bajó a la nave para escuchar las quejas de Diego.",
+   "en": "The deputy director came down to the shop floor to hear Diego's complaints.",
+   "ko": "부공장장이 디에고의 불만을 들으러 작업장에 내려왔어요.",
+   "blank": "subdirector",
+   "src": "made"
+  },
+  {
+   "text": "El subdirector de la escuela toca el contrabajo en una banda de jazz.",
+   "en": "The school's deputy head plays double bass in a jazz band.",
+   "ko": "학교 교감은 재즈 밴드에서 콘트라베이스를 연주해요.",
+   "blank": "subdirector",
+   "src": "made"
+  }
+ ],
  "w|súbdito": [
   {
    "text": "En su artículo de historia, Sergio cita la carta de un súbdito al rey.",
@@ -90398,6 +91022,22 @@
    "en": "Sofía read the local news section of the paper while the train rolled on.",
    "ko": "기차가 달리는 동안 소피아는 신문의 사건·사고 면을 읽었어요.",
    "blank": "sucesos",
+   "src": "made"
+  }
+ ],
+ "w|sucesor": [
+  {
+   "text": "El dueño de la fábrica todavía no ha elegido a su sucesor.",
+   "en": "The factory owner still hasn't chosen his successor.",
+   "ko": "공장 주인은 아직 후계자를 정하지 않았어요.",
+   "blank": "sucesor",
+   "src": "made"
+  },
+  {
+   "text": "El viejo director de la escuela ya ha anunciado quién será su sucesor.",
+   "en": "The school's old director has already announced who his successor will be.",
+   "ko": "학교의 나이 든 교장은 이미 후임자가 누구일지 발표했어요.",
+   "blank": "sucesor",
    "src": "made"
   }
  ],
