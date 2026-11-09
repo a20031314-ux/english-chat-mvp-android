@@ -1167,6 +1167,22 @@
    "blank": "aglio"
   }
  ],
+ "w|agosto": [
+  {
+   "text": "Ad agosto Andrea raccoglie i pomodori dalla mattina alla sera.",
+   "en": "In August Andrea picks tomatoes from morning till night.",
+   "ko": "팔월에 안드레아는 아침부터 저녁까지 토마토를 따요.",
+   "blank": "agosto",
+   "src": "made"
+  },
+  {
+   "text": "Ad agosto Martina prepara già il programma del nuovo anno scolastico.",
+   "en": "In August Martina is already preparing the plan for the new school year.",
+   "ko": "팔월에 마르티나는 벌써 새 학년 수업 계획을 짜요.",
+   "blank": "agosto",
+   "src": "made"
+  }
+ ],
  "w|ah": [
   {
    "text": "Ah, ora capisco.",
@@ -2307,6 +2323,22 @@
    "en": "My grandfather is elderly but still active.",
    "ko": "할아버지는 연세가 있어도 여전히 활발하셔.",
    "blank": "anziano"
+  }
+ ],
+ "w|ape": [
+  {
+   "text": "Andrea si è avvicinato troppo all'arnia e un'ape lo ha punto.",
+   "en": "Andrea got too close to the hive and a bee stung him.",
+   "ko": "안드레아가 벌통에 너무 가까이 갔다가 벌에 쏘였어요.",
+   "blank": "ape",
+   "src": "made"
+  },
+  {
+   "text": "Martina spiega ai bambini come un'ape trasforma il nettare in miele.",
+   "en": "Martina explains to the children how a bee turns nectar into honey.",
+   "ko": "마르티나는 아이들에게 벌이 꿀물을 꿀로 바꾸는 과정을 설명해요.",
+   "blank": "ape",
+   "src": "made"
   }
  ],
  "w|aperto": [
@@ -3987,6 +4019,22 @@
    "src": "made"
   }
  ],
+ "w|autunno": [
+  {
+   "text": "In autunno la fattoria di Andrea si riempie di zucche e castagne.",
+   "en": "In autumn Andrea's farm fills up with pumpkins and chestnuts.",
+   "ko": "가을이면 안드레아의 농장은 호박과 밤으로 가득해요.",
+   "blank": "autunno",
+   "src": "made"
+  },
+  {
+   "text": "In autunno i bambini di Martina raccolgono foglie per un cartellone.",
+   "en": "In autumn Martina's pupils collect leaves for a poster.",
+   "ko": "가을에 마르티나네 반 아이들은 게시판을 꾸밀 나뭇잎을 모아요.",
+   "blank": "autunno",
+   "src": "made"
+  }
+ ],
  "w|avanti": [
   {
    "text": "Avanti, accomodati.",
@@ -4485,6 +4533,22 @@
    "en": "I found an antique doll in the attic.",
    "ko": "다락에서 오래된 인형을 찾았어.",
    "blank": "bambola"
+  }
+ ],
+ "w|banana": [
+  {
+   "text": "Per merenda Andrea mangia una banana seduto sul trattore.",
+   "en": "For a snack Andrea eats a banana sitting on the tractor.",
+   "ko": "간식으로 안드레아는 트랙터에 앉아 바나나를 먹어요.",
+   "blank": "banana",
+   "src": "made"
+  },
+  {
+   "text": "A merenda un'alunna offre a Martina metà della sua banana.",
+   "en": "At snack time a pupil offers Martina half of her banana.",
+   "ko": "간식 시간에 한 학생이 마르티나에게 바나나 반쪽을 나눠 줘요.",
+   "blank": "banana",
+   "src": "made"
   }
  ],
  "w|banca": [
@@ -5477,6 +5541,22 @@
    "en": "The bottle is almost empty.",
    "ko": "병이 거의 비었어.",
    "blank": "bottiglia"
+  }
+ ],
+ "w|bottone": [
+  {
+   "text": "Andrea ha perso un bottone della giacca mentre aggiustava il recinto.",
+   "en": "Andrea lost a button off his jacket while fixing the fence.",
+   "ko": "안드레아는 울타리를 고치다가 재킷 단추 하나를 잃어버렸어요.",
+   "blank": "bottone",
+   "src": "made"
+  },
+  {
+   "text": "Martina aiuta un bambino ad allacciare l'ultimo bottone del grembiule.",
+   "en": "Martina helps a child do up the last button of his smock.",
+   "ko": "마르티나는 한 아이가 덧옷 마지막 단추를 채우는 걸 도와줘요.",
+   "blank": "bottone",
+   "src": "made"
   }
  ],
  "w|braccio": [
@@ -6685,6 +6765,22 @@
    "blank": "cappotto"
   }
  ],
+ "w|capra": [
+  {
+   "text": "Una capra di Andrea è scappata e ha mangiato i fiori della vicina.",
+   "en": "One of Andrea's goats escaped and ate the neighbor's flowers.",
+   "ko": "안드레아의 염소 한 마리가 도망쳐서 이웃집 꽃을 먹어 버렸어요.",
+   "blank": "capra",
+   "src": "made"
+  },
+  {
+   "text": "In gita la classe di Martina ha dato da mangiare a una capra.",
+   "en": "On the trip Martina's class fed a goat.",
+   "ko": "견학에서 마르티나네 반은 염소에게 먹이를 줬어요.",
+   "blank": "capra",
+   "src": "made"
+  }
+ ],
  "w|caramella": [
   {
    "text": "Il bambino chiede una caramella dopo pranzo.",
@@ -6711,6 +6807,22 @@
    "en": "This typeface is elegant.",
    "ko": "이 글꼴은 우아해.",
    "blank": "carattere"
+  }
+ ],
+ "w|carbone": [
+  {
+   "text": "Il nonno di Andrea scaldava la casa con una stufa a carbone.",
+   "en": "Andrea's grandfather heated the house with a coal stove.",
+   "ko": "안드레아의 할아버지는 석탄 난로로 집을 데웠어요.",
+   "blank": "carbone",
+   "src": "made"
+  },
+  {
+   "text": "Martina racconta ai bambini come si estraeva il carbone nelle miniere.",
+   "en": "Martina tells the children how coal used to be mined.",
+   "ko": "마르티나는 아이들에게 옛날에 광산에서 석탄을 캐던 방법을 이야기해요.",
+   "blank": "carbone",
+   "src": "made"
   }
  ],
  "w|carburante": [
@@ -12787,6 +12899,22 @@
    "src": "made"
   }
  ],
+ "w|destinazione": [
+  {
+   "text": "La fattoria di Andrea è diventata una destinazione per le gite scolastiche.",
+   "en": "Andrea's farm has become a destination for school trips.",
+   "ko": "안드레아의 농장은 학교 견학지가 되었어요.",
+   "blank": "destinazione",
+   "src": "made"
+  },
+  {
+   "text": "Per la gita di primavera, Martina lascia scegliere la destinazione ai bambini.",
+   "en": "For the spring trip, Martina lets the children choose the destination.",
+   "ko": "봄 소풍 장소는 마르티나가 아이들에게 고르게 해요.",
+   "blank": "destinazione",
+   "src": "made"
+  }
+ ],
  "w|destino": [
   {
    "text": "Crede nel destino e nella fortuna.",
@@ -13022,6 +13150,22 @@
    "en": "Martina followed a debate on the radio about the right to repair.",
    "ko": "마르티나는 라디오에서 수리할 권리에 관한 토론을 들었어요.",
    "blank": "dibattito",
+   "src": "made"
+  }
+ ],
+ "w|dicembre": [
+  {
+   "text": "A dicembre Andrea vende l'olio nuovo al mercato del paese.",
+   "en": "In December Andrea sells the new olive oil at the village market.",
+   "ko": "십이월에 안드레아는 마을 장터에서 햇올리브유를 팔아요.",
+   "blank": "dicembre",
+   "src": "made"
+  },
+  {
+   "text": "Prima delle vacanze di dicembre, la scuola di Martina fa la recita di Natale.",
+   "en": "Before the December holidays, Martina's school puts on a Christmas play.",
+   "ko": "십이월 방학 전에 마르티나의 학교는 크리스마스 연극을 해요.",
+   "blank": "dicembre",
    "src": "made"
   }
  ],
@@ -15191,6 +15335,22 @@
    "blank": "Ehi"
   }
  ],
+ "w|elefante": [
+  {
+   "text": "Il figlio piccolo di Andrea vuole sapere quanto pesa un elefante rispetto a una mucca.",
+   "en": "Andrea's youngest wants to know how much an elephant weighs compared to a cow.",
+   "ko": "안드레아의 막내는 코끼리가 소보다 얼마나 무거운지 궁금해해요.",
+   "blank": "elefante",
+   "src": "made"
+  },
+  {
+   "text": "Alla gita allo zoo, il preferito dei bambini di Martina è stato l'elefante.",
+   "en": "On the zoo trip, Martina's pupils' favorite was the elephant.",
+   "ko": "동물원 견학에서 마르티나네 반 아이들이 가장 좋아한 건 코끼리였어요.",
+   "blank": "elefante",
+   "src": "made"
+  }
+ ],
  "w|elegante": [
   {
    "text": "Indossa un abito elegante per la cena.",
@@ -15643,6 +15803,22 @@
    "en": "Every child dreams of being a hero.",
    "ko": "모든 아이는 영웅이 되는 꿈을 꿔.",
    "blank": "eroe"
+  }
+ ],
+ "w|eroina": [
+  {
+   "text": "La figlia di Andrea legge un fumetto dove l'eroina salva tutti gli animali della fattoria.",
+   "en": "Andrea's daughter reads a comic where the heroine saves all the farm animals.",
+   "ko": "안드레아의 딸은 여주인공이 농장 동물을 모두 구하는 만화를 읽어요.",
+   "blank": "eroina",
+   "src": "made"
+  },
+  {
+   "text": "Nel libro che Martina legge in classe, l'eroina è una ragazza che salva il suo villaggio.",
+   "en": "In the book Martina reads in class, the heroine is a girl who saves her village.",
+   "ko": "마르티나가 수업 시간에 읽어 주는 책에서 여주인공은 마을을 구하는 소녀예요.",
+   "blank": "eroina",
+   "src": "made"
   }
  ],
  "w|errore": [
@@ -17655,6 +17831,22 @@
    "src": "made"
   }
  ],
+ "w|foglia": [
+  {
+   "text": "Andrea usa ogni foglia secca dell'orto per fare il compost.",
+   "en": "Andrea uses every dry leaf from the vegetable garden to make compost.",
+   "ko": "안드레아는 텃밭의 마른 잎을 하나도 빠짐없이 퇴비로 써요.",
+   "blank": "foglia",
+   "src": "made"
+  },
+  {
+   "text": "Martina chiede ai bambini di disegnare una foglia di quercia.",
+   "en": "Martina asks the children to draw an oak leaf.",
+   "ko": "마르티나는 아이들에게 참나무 잎을 그리라고 해요.",
+   "blank": "foglia",
+   "src": "made"
+  }
+ ],
  "w|foglio": [
   {
    "text": "Gli ordini arrivano su un foglio che il cameriere appende davanti a Stefano.",
@@ -18475,6 +18667,22 @@
    "blank": "fugge"
   }
  ],
+ "w|fulmine": [
+  {
+   "text": "Durante il temporale un fulmine ha colpito la vecchia quercia di Andrea.",
+   "en": "During the storm a bolt of lightning struck Andrea's old oak.",
+   "ko": "폭풍우 때 번개가 안드레아의 오래된 참나무에 떨어졌어요.",
+   "blank": "fulmine",
+   "src": "made"
+  },
+  {
+   "text": "Durante il temporale un fulmine ha fatto saltare la corrente nella scuola di Martina.",
+   "en": "During the storm a bolt of lightning knocked out the power at Martina's school.",
+   "ko": "폭풍우 때 번개가 쳐서 마르티나의 학교에 전기가 나갔어요.",
+   "blank": "fulmine",
+   "src": "made"
+  }
+ ],
  "w|fumare": [
   {
    "text": "Ha smesso di fumare l'anno scorso.",
@@ -18656,6 +18864,22 @@
    "en": "There is only one toilet for twelve people in the office, and Sara often complains.",
    "ko": "사무실에 열두 명이 쓰는 화장실이 하나뿐이라 사라가 자주 불평해요.",
    "blank": "gabinetto",
+   "src": "made"
+  }
+ ],
+ "w|galassia": [
+  {
+   "text": "Lontano dalle luci della città, Andrea vede la galassia a occhio nudo.",
+   "en": "Far from the city lights, Andrea sees the galaxy with the naked eye.",
+   "ko": "도시 불빛에서 멀리 떨어져 있어서 안드레아는 은하수를 맨눈으로 봐요.",
+   "blank": "galassia",
+   "src": "made"
+  },
+  {
+   "text": "Martina mostra alla classe una foto della nostra galassia.",
+   "en": "Martina shows the class a photo of our galaxy.",
+   "ko": "마르티나는 반 아이들에게 우리 은하 사진을 보여 줘요.",
+   "blank": "galassia",
    "src": "made"
   }
  ],
@@ -18941,6 +19165,22 @@
    "en": "As a parent, I worry.",
    "ko": "부모 입장이라 걱정돼.",
    "blank": "genitore"
+  }
+ ],
+ "w|gennaio": [
+  {
+   "text": "A gennaio Andrea ripara le recinzioni e prepara i semi.",
+   "en": "In January Andrea repairs the fences and prepares the seeds.",
+   "ko": "일월에 안드레아는 울타리를 고치고 씨앗을 준비해요.",
+   "blank": "gennaio",
+   "src": "made"
+  },
+  {
+   "text": "A gennaio Martina ha accolto in classe un nuovo alunno.",
+   "en": "In January Martina welcomed a new pupil to her class.",
+   "ko": "일월에 마르티나는 반에 새 학생을 맞이했어요.",
+   "blank": "gennaio",
+   "src": "made"
   }
  ],
  "w|gente": [
@@ -25023,6 +25263,22 @@
    "blank": "mare"
   }
  ],
+ "w|marea": [
+  {
+   "text": "D'estate Andrea porta i figli al mare e controlla gli orari della marea.",
+   "en": "In summer Andrea takes the kids to the sea and checks the tide times.",
+   "ko": "여름이면 안드레아는 아이들을 바다에 데려가며 물때를 확인해요.",
+   "blank": "marea",
+   "src": "made"
+  },
+  {
+   "text": "Martina spiega alla classe che la Luna causa la marea.",
+   "en": "Martina explains to the class that the Moon causes the tide.",
+   "ko": "마르티나는 반 아이들에게 달이 밀물과 썰물을 일으킨다고 설명해요.",
+   "blank": "marea",
+   "src": "made"
+  }
+ ],
  "w|marina": [
   {
    "text": "Mio zio serve nella marina militare.",
@@ -25112,6 +25368,22 @@
    "en": "During the evening Giulia found out that Luca is a carpenter and always carries a hammer.",
    "ko": "그날 저녁 줄리아는 루카가 목수라서 늘 망치를 들고 다닌다는 걸 알았어요.",
    "blank": "martello",
+   "src": "made"
+  }
+ ],
+ "w|marzo": [
+  {
+   "text": "A marzo nascono gli agnelli, e Andrea dorme pochissimo.",
+   "en": "In March the lambs are born, and Andrea sleeps very little.",
+   "ko": "삼월이면 새끼 양들이 태어나서 안드레아는 잠을 거의 못 자요.",
+   "blank": "marzo",
+   "src": "made"
+  },
+  {
+   "text": "A marzo la classe di Martina pianta dei semi in vasetti di yogurt.",
+   "en": "In March Martina's class plants seeds in yogurt pots.",
+   "ko": "삼월에 마르티나네 반은 요구르트 통에 씨앗을 심어요.",
+   "blank": "marzo",
    "src": "made"
   }
  ],
@@ -25665,6 +25937,22 @@
    "en": "Let's check the merchandise before shipping it.",
    "ko": "발송하기 전에 상품을 확인하자.",
    "blank": "merce"
+  }
+ ],
+ "w|mercoledì": [
+  {
+   "text": "Il mercoledì Andrea porta le uova al negozio del paese.",
+   "en": "On Wednesdays Andrea takes the eggs to the village shop.",
+   "ko": "수요일마다 안드레아는 달걀을 마을 가게에 가져가요.",
+   "blank": "mercoledì",
+   "src": "made"
+  },
+  {
+   "text": "Il mercoledì Martina accompagna la classe in piscina.",
+   "en": "On Wednesdays Martina takes the class to the swimming pool.",
+   "ko": "수요일마다 마르티나는 반 아이들을 수영장에 데려가요.",
+   "blank": "mercoledì",
+   "src": "made"
   }
  ],
  "w|meritare": [
@@ -27279,6 +27567,22 @@
    "blank": "neanche"
   }
  ],
+ "w|nebbia": [
+  {
+   "text": "Stamattina c'era così tanta nebbia che Andrea non vedeva le pecore.",
+   "en": "This morning there was so much fog that Andrea couldn't see the sheep.",
+   "ko": "오늘 아침 안개가 너무 짙어서 안드레아는 양들이 안 보였어요.",
+   "blank": "nebbia",
+   "src": "made"
+  },
+  {
+   "text": "Con la nebbia, lo scuolabus di Martina arriva sempre in ritardo.",
+   "en": "With the fog, Martina's school bus always arrives late.",
+   "ko": "안개가 끼면 마르티나네 학교 버스는 늘 늦게 와요.",
+   "blank": "nebbia",
+   "src": "made"
+  }
+ ],
  "w|necessario": [
   {
    "text": "Non è necessario arrivare così presto.",
@@ -27881,6 +28185,22 @@
    "blank": "nove"
   }
  ],
+ "w|novembre": [
+  {
+   "text": "In fattoria Andrea pianta l'aglio a novembre, prima delle gelate.",
+   "en": "On the farm Andrea plants garlic in November, before the frosts.",
+   "ko": "농장에서 안드레아는 서리가 내리기 전인 십일월에 마늘을 심어요.",
+   "blank": "novembre",
+   "src": "made"
+  },
+  {
+   "text": "A novembre Martina organizza con la sua classe una raccolta di cappotti usati.",
+   "en": "In November Martina organizes a used-coat collection with her class.",
+   "ko": "십일월에 마르티나는 반 아이들과 헌 외투 모으기를 해요.",
+   "blank": "novembre",
+   "src": "made"
+  }
+ ],
  "w|novità": [
   {
    "text": "C'è una novità importante da raccontarti.",
@@ -27979,6 +28299,22 @@
    "blank": "nuotare"
   }
  ],
+ "w|nuovamente": [
+  {
+   "text": "Il trattore di Andrea si è rotto nuovamente, proprio durante la vendemmia.",
+   "en": "Andrea's tractor broke down again, right during the grape harvest.",
+   "ko": "안드레아의 트랙터가 하필 포도 수확 중에 또 고장 났어요.",
+   "blank": "nuovamente",
+   "src": "made"
+  },
+  {
+   "text": "Martina spiega nuovamente le frazioni, perché metà della classe non ha capito.",
+   "en": "Martina explains fractions again, because half the class didn't understand.",
+   "ko": "반의 절반이 이해하지 못해서 마르티나는 분수를 다시 설명해요.",
+   "blank": "nuovamente",
+   "src": "made"
+  }
+ ],
  "w|nuovo": [
   {
    "text": "C'è un locale nuovo in centro.",
@@ -28006,6 +28342,22 @@
    "en": "Anna feeds the sourdough starter with water and flour every day.",
    "ko": "안나는 매일 천연 효모에 물과 밀가루를 먹여요.",
    "blank": "nutre",
+   "src": "made"
+  }
+ ],
+ "w|nuvola": [
+  {
+   "text": "Andrea guarda una nuvola nera sopra la collina e porta dentro il fieno.",
+   "en": "Andrea looks at a black cloud over the hill and brings the hay inside.",
+   "ko": "안드레아는 언덕 위 먹구름을 보고 건초를 안으로 들여요.",
+   "blank": "nuvola",
+   "src": "made"
+  },
+  {
+   "text": "Un bambino dice a Martina che quella nuvola sembra un coniglio.",
+   "en": "A child tells Martina that cloud looks like a rabbit.",
+   "ko": "한 아이가 마르티나에게 저 구름이 토끼처럼 생겼다고 말해요.",
+   "blank": "nuvola",
    "src": "made"
   }
  ],
@@ -28819,6 +29171,22 @@
    "en": "My work schedule is flexible.",
    "ko": "내 근무 시간은 유연해.",
    "blank": "orario"
+  }
+ ],
+ "w|orbita": [
+  {
+   "text": "Il figlio di Andrea sogna di andare in orbita come astronauta.",
+   "en": "Andrea's son dreams of going into orbit as an astronaut.",
+   "ko": "안드레아의 아들은 우주 비행사가 되어 궤도에 오르는 꿈을 꿔요.",
+   "blank": "orbita",
+   "src": "made"
+  },
+  {
+   "text": "Con una palla e una torcia, Martina spiega l'orbita della Luna.",
+   "en": "With a ball and a torch, Martina explains the Moon's orbit.",
+   "ko": "마르티나는 공과 손전등으로 달의 궤도를 설명해요.",
+   "blank": "orbita",
+   "src": "made"
   }
  ],
  "w|ordinare": [
@@ -29703,6 +30071,22 @@
    "en": "They found an empty bullet casing in the garden.",
    "ko": "정원에서 빈 탄피를 찾았어.",
    "blank": "pallottola"
+  }
+ ],
+ "w|panchina": [
+  {
+   "text": "Davanti alla casa di Andrea c'è una panchina di legno dove si riposa la sera.",
+   "en": "In front of Andrea's house there's a wooden bench where he rests in the evening.",
+   "ko": "안드레아의 집 앞에는 저녁에 쉬는 나무 벤치가 있어요.",
+   "blank": "panchina",
+   "src": "made"
+  },
+  {
+   "text": "Martina corregge i quaderni seduta su una panchina del cortile.",
+   "en": "Martina marks the exercise books sitting on a bench in the playground.",
+   "ko": "마르티나는 운동장 벤치에 앉아 공책을 채점해요.",
+   "blank": "panchina",
+   "src": "made"
   }
  ],
  "w|pancia": [
@@ -31149,6 +31533,22 @@
    "blank": "pesca"
   }
  ],
+ "w|pescare": [
+  {
+   "text": "La domenica Andrea va a pescare nel torrente dietro la fattoria.",
+   "en": "On Sundays Andrea goes fishing in the stream behind the farm.",
+   "ko": "일요일이면 안드레아는 농장 뒤 개울로 낚시하러 가요.",
+   "blank": "pescare",
+   "src": "made"
+  },
+  {
+   "text": "Un alunno racconta a Martina che domenica è andato a pescare con il nonno.",
+   "en": "A pupil tells Martina that on Sunday he went fishing with his grandfather.",
+   "ko": "한 학생이 마르티나에게 일요일에 할아버지와 낚시하러 갔다고 이야기해요.",
+   "blank": "pescare",
+   "src": "made"
+  }
+ ],
  "w|pesce": [
   {
    "text": "Stasera mangiamo del pesce fresco.",
@@ -32415,6 +32815,22 @@
    "en": "I basically haven't slept since yesterday.",
    "ko": "어제부터 거의 잠을 못 잤어.",
    "blank": "Praticamente"
+  }
+ ],
+ "w|prato": [
+  {
+   "text": "Ogni mattina Andrea porta le pecore sul prato vicino al bosco.",
+   "en": "Every morning Andrea takes the sheep to the meadow near the woods.",
+   "ko": "매일 아침 안드레아는 양들을 숲 근처 풀밭으로 데려가요.",
+   "blank": "prato",
+   "src": "made"
+  },
+  {
+   "text": "Durante l'intervallo i bambini di Martina giocano a calcio sul prato della scuola.",
+   "en": "During break Martina's pupils play football on the school lawn.",
+   "ko": "쉬는 시간에 마르티나네 반 아이들은 학교 잔디밭에서 축구를 해요.",
+   "blank": "prato",
+   "src": "made"
   }
  ],
  "w|precedente": [
@@ -34779,6 +35195,22 @@
    "blank": "racconto"
   }
  ],
+ "w|radice": [
+  {
+   "text": "Andrea strappa le erbacce con tutta la radice.",
+   "en": "Andrea pulls up the weeds roots and all.",
+   "ko": "안드레아는 잡초를 뿌리째 뽑아요.",
+   "blank": "radice",
+   "src": "made"
+  },
+  {
+   "text": "In giardino Martina mostra ai bambini la radice di una carota.",
+   "en": "In the garden Martina shows the children the root of a carrot.",
+   "ko": "정원에서 마르티나는 아이들에게 당근 뿌리를 보여 줘요.",
+   "blank": "radice",
+   "src": "made"
+  }
+ ],
  "w|radio": [
   {
    "text": "Ascolto la radio mentre guido.",
@@ -34953,6 +35385,22 @@
    "en": "He's asking a reasonable price for the car.",
    "ko": "그는 차에 합리적인 값을 불러.",
    "blank": "ragionevole"
+  }
+ ],
+ "w|ragno": [
+  {
+   "text": "Nel fienile di Andrea un ragno enorme ha fatto la tela sopra la porta.",
+   "en": "In Andrea's barn a huge spider has spun its web above the door.",
+   "ko": "안드레아의 헛간에 커다란 거미가 문 위에 거미줄을 쳤어요.",
+   "blank": "ragno",
+   "src": "made"
+  },
+  {
+   "text": "Una bambina urla perché c'è un ragno sul banco, e Martina lo porta fuori.",
+   "en": "A girl screams because there's a spider on the desk, and Martina takes it outside.",
+   "ko": "책상에 거미가 있어서 한 여자아이가 소리치자 마르티나가 밖으로 내보내요.",
+   "blank": "ragno",
+   "src": "made"
   }
  ],
  "w|rallentare": [
@@ -36473,6 +36921,22 @@
    "src": "made"
   }
  ],
+ "w|rimandare": [
+  {
+   "text": "Per la pioggia Andrea ha dovuto rimandare la semina del grano.",
+   "en": "Because of the rain Andrea had to postpone sowing the wheat.",
+   "ko": "비 때문에 안드레아는 밀 파종을 미뤄야 했어요.",
+   "blank": "rimandare",
+   "src": "made"
+  },
+  {
+   "text": "A causa della neve, Martina ha dovuto rimandare la verifica di storia.",
+   "en": "Because of the snow, Martina had to postpone the history test.",
+   "ko": "눈 때문에 마르티나는 역사 시험을 미뤄야 했어요.",
+   "blank": "rimandare",
+   "src": "made"
+  }
+ ],
  "w|rimanere": [
   {
    "text": "Rimani a cena con noi?",
@@ -37309,6 +37773,22 @@
    "blank": "riuscire"
   }
  ],
+ "w|riva": [
+  {
+   "text": "Le mucche di Andrea bevono sulla riva del fiume.",
+   "en": "Andrea's cows drink on the riverbank.",
+   "ko": "안드레아의 소들은 강가에서 물을 마셔요.",
+   "blank": "riva",
+   "src": "made"
+  },
+  {
+   "text": "In primavera Martina porta la classe a fare un picnic sulla riva del lago.",
+   "en": "In spring Martina takes the class for a picnic on the lake shore.",
+   "ko": "봄에 마르티나는 반 아이들을 데리고 호숫가로 소풍을 가요.",
+   "blank": "riva",
+   "src": "made"
+  }
+ ],
  "w|rivedere": [
   {
    "text": "Spero di rivedere i miei amici presto.",
@@ -37525,6 +38005,22 @@
    "src": "made"
   }
  ],
+ "w|rotta": [
+  {
+   "text": "Ogni anno Andrea guarda le cicogne che seguono la stessa rotta verso sud.",
+   "en": "Every year Andrea watches the storks following the same route south.",
+   "ko": "해마다 안드레아는 같은 길로 남쪽으로 가는 황새들을 바라봐요.",
+   "blank": "rotta",
+   "src": "made"
+  },
+  {
+   "text": "Sulla carta geografica, Martina segna la rotta di Colombo.",
+   "en": "On the map, Martina marks Columbus's route.",
+   "ko": "지도 위에 마르티나는 콜럼버스의 항로를 표시해요.",
+   "blank": "rotta",
+   "src": "made"
+  }
+ ],
  "w|rotto": [
   {
    "text": "Il vaso è caduto ed è rotto.",
@@ -37551,6 +38047,22 @@
    "en": "After the breakup they stayed friends.",
    "ko": "헤어진 뒤에도 그들은 친구로 남았어.",
    "blank": "rottura"
+  }
+ ],
+ "w|routine": [
+  {
+   "text": "La routine di Andrea comincia alle cinque, con la mungitura delle mucche.",
+   "en": "Andrea's routine starts at five, with milking the cows.",
+   "ko": "안드레아의 일과는 다섯 시에 소젖 짜기로 시작해요.",
+   "blank": "routine",
+   "src": "made"
+  },
+  {
+   "text": "La maestra Martina comincia ogni lezione con una piccola routine: saluto, data e meteo.",
+   "en": "Teacher Martina starts every lesson with a little routine: greeting, date and weather.",
+   "ko": "마르티나 선생님은 매 수업을 인사, 날짜, 날씨라는 작은 순서로 시작해요.",
+   "blank": "routine",
+   "src": "made"
   }
  ],
  "w|rovina": [
@@ -38117,6 +38629,22 @@
    "blank": "sapore"
   }
  ],
+ "w|sasso": [
+  {
+   "text": "Prima di arare, Andrea toglie ogni sasso grosso dal campo.",
+   "en": "Before ploughing, Andrea removes every big stone from the field.",
+   "ko": "밭을 갈기 전에 안드레아는 큰 돌을 하나하나 치워요.",
+   "blank": "sasso",
+   "src": "made"
+  },
+  {
+   "text": "Un alunno ha portato a Martina un sasso a forma di cuore.",
+   "en": "A pupil brought Martina a heart-shaped stone.",
+   "ko": "한 학생이 마르티나에게 하트 모양 돌을 가져왔어요.",
+   "blank": "sasso",
+   "src": "made"
+  }
+ ],
  "w|satellite": [
   {
    "text": "Sdraiato sulla spiaggia, Davide ha visto passare un satellite tra le stelle.",
@@ -38248,6 +38776,22 @@
    "en": "Between lessons, Elena plays chess with the guitar teacher.",
    "ko": "수업 사이사이에 엘레나는 기타 선생님과 체스를 둬요.",
    "blank": "scacchi",
+   "src": "made"
+  }
+ ],
+ "w|scadere": [
+  {
+   "text": "Il contratto d'affitto del campo grande sta per scadere, e Andrea deve rinnovarlo.",
+   "en": "The lease on the big field is about to expire, and Andrea has to renew it.",
+   "ko": "큰 밭의 임대 계약이 곧 끝나서 안드레아는 갱신해야 해요.",
+   "blank": "scadere",
+   "src": "made"
+  },
+  {
+   "text": "Martina ricorda ai genitori che il termine per le iscrizioni sta per scadere.",
+   "en": "Martina reminds the parents that the enrolment deadline is about to pass.",
+   "ko": "마르티나는 학부모들에게 등록 마감이 곧 끝난다고 알려요.",
+   "blank": "scadere",
    "src": "made"
   }
  ],
@@ -39138,6 +39682,22 @@
    "en": "A rude patron raised his voice, but Laura answered him kindly.",
    "ko": "무례한 이용자가 언성을 높였지만 라우라는 친절하게 대답했어요.",
    "blank": "scortese",
+   "src": "made"
+  }
+ ],
+ "w|scossa": [
+  {
+   "text": "Toccando il recinto elettrico, Andrea ha preso una piccola scossa.",
+   "en": "Touching the electric fence, Andrea got a small shock.",
+   "ko": "전기 울타리를 만졌다가 안드레아가 살짝 감전됐어요.",
+   "blank": "scossa",
+   "src": "made"
+  },
+  {
+   "text": "Durante la prova di evacuazione, Martina spiega cosa fare in caso di scossa di terremoto.",
+   "en": "During the evacuation drill, Martina explains what to do in case of an earthquake tremor.",
+   "ko": "대피 훈련 때 마르티나는 지진이 나면 어떻게 해야 하는지 설명해요.",
+   "blank": "scossa",
    "src": "made"
   }
  ],
@@ -42981,6 +43541,22 @@
    "blank": "stella"
   }
  ],
+ "w|stellare": [
+  {
+   "text": "Di notte, sopra la fattoria di Andrea, il cielo stellare è spettacolare.",
+   "en": "At night, above Andrea's farm, the starry sky is spectacular.",
+   "ko": "밤이 되면 안드레아의 농장 위로 별이 가득한 하늘이 장관이에요.",
+   "blank": "stellare",
+   "src": "made"
+  },
+  {
+   "text": "Per il progetto di scienze, Martina ha fatto costruire alla classe una mappa stellare.",
+   "en": "For the science project, Martina had the class build a star map.",
+   "ko": "과학 과제로 마르티나는 반 아이들에게 별자리 지도를 만들게 했어요.",
+   "blank": "stellare",
+   "src": "made"
+  }
+ ],
  "w|stendere": [
   {
    "text": "C'è il sole, così Matteo va a stendere il bucato in terrazzo.",
@@ -44809,6 +45385,22 @@
    "en": "The ground was still wet after the rain.",
    "ko": "비 온 뒤에도 땅이 아직 축축했어.",
    "blank": "terreno"
+  }
+ ],
+ "w|terrestre": [
+  {
+   "text": "Il figlio di Andrea disegna la superficie terrestre vista dallo spazio.",
+   "en": "Andrea's son draws the Earth's surface as seen from space.",
+   "ko": "안드레아의 아들은 우주에서 본 지구 표면을 그려요.",
+   "blank": "terrestre",
+   "src": "made"
+  },
+  {
+   "text": "Martina spiega che la crosta terrestre è divisa in grandi placche.",
+   "en": "Martina explains that the Earth's crust is divided into large plates.",
+   "ko": "마르티나는 지구의 지각이 커다란 판들로 나뉘어 있다고 설명해요.",
+   "blank": "terrestre",
+   "src": "made"
   }
  ],
  "w|terribile": [
@@ -47311,6 +47903,22 @@
    "blank": "vendita"
   }
  ],
+ "w|venditore": [
+  {
+   "text": "Un venditore di attrezzi agricoli passa da Andrea una volta al mese.",
+   "en": "A farm equipment seller stops by Andrea's once a month.",
+   "ko": "농기구 판매원이 한 달에 한 번 안드레아네 들러요.",
+   "blank": "venditore",
+   "src": "made"
+  },
+  {
+   "text": "Davanti alla scuola di Martina c'è un venditore di caramelle che i bambini adorano.",
+   "en": "In front of Martina's school there's a candy seller the children love.",
+   "ko": "마르티나의 학교 앞에는 아이들이 아주 좋아하는 사탕 장수가 있어요.",
+   "blank": "venditore",
+   "src": "made"
+  }
+ ],
  "w|venerdì": [
   {
    "text": "Venerdì sera usciamo con gli amici.",
@@ -48275,6 +48883,22 @@
    "blank": "volontario"
   }
  ],
+ "w|volpe": [
+  {
+   "text": "Stanotte una volpe è entrata nel pollaio di Andrea.",
+   "en": "Last night a fox got into Andrea's henhouse.",
+   "ko": "어젯밤 여우 한 마리가 안드레아의 닭장에 들어왔어요.",
+   "blank": "volpe",
+   "src": "made"
+  },
+  {
+   "text": "La classe di Martina legge una favola su una volpe furba e un corvo.",
+   "en": "Martina's class reads a fable about a clever fox and a crow.",
+   "ko": "마르티나네 반은 꾀 많은 여우와 까마귀 우화를 읽어요.",
+   "blank": "volpe",
+   "src": "made"
+  }
+ ],
  "w|volta": [
   {
    "text": "C'era una volta un re.",
@@ -48462,6 +49086,22 @@
    "en": "A student always buys a focaccia from Anna to put in his backpack.",
    "ko": "한 학생은 늘 안나에게서 포카치아를 사서 배낭에 넣어 가요.",
    "blank": "zaino",
+   "src": "made"
+  }
+ ],
+ "w|zampa": [
+  {
+   "text": "Il cane di Andrea si è ferito una zampa con il filo spinato.",
+   "en": "Andrea's dog hurt its paw on the barbed wire.",
+   "ko": "안드레아의 개가 철조망에 발을 다쳤어요.",
+   "blank": "zampa",
+   "src": "made"
+  },
+  {
+   "text": "Il gatto della scuola si è fatto male a una zampa, e la classe di Martina lo cura.",
+   "en": "The school cat hurt its paw, and Martina's class is looking after it.",
+   "ko": "학교 고양이가 발을 다쳐서 마르티나네 반이 돌보고 있어요.",
+   "blank": "zampa",
    "src": "made"
   }
  ],

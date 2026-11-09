@@ -1713,6 +1713,22 @@
    "blank": "Alguns"
   }
  ],
+ "w|alho": [
+  {
+   "text": "O Miguel levou uma cabeça de alho para o feijão do almoço.",
+   "en": "Miguel took a head of garlic for the lunch beans.",
+   "ko": "미겔은 점심 콩 요리에 쓸 마늘 한 통을 샀어요.",
+   "blank": "alho",
+   "src": "made"
+  },
+  {
+   "text": "A avó da Rita jura que alho cru cura gripe, mas a farmacêutica riu.",
+   "en": "Rita's grandmother swears raw garlic cures the flu, but the pharmacist laughed.",
+   "ko": "히타의 할머니는 생마늘이 독감을 낫게 한다고 하셨지만 약사는 웃었어요.",
+   "blank": "alho",
+   "src": "made"
+  }
+ ],
  "w|ali": [
   {
    "text": "Deixa a bolsa ali.",
@@ -2205,6 +2221,22 @@
    "ko": "우리 아들 고무 오리는 노란색이에요.",
    "blank": "amarelo",
    "src": "tatoeba:1630244/alexmarcelo en:1627317/Spamster"
+  }
+ ],
+ "w|amargo": [
+  {
+   "text": "O café da venda é forte e um pouco amargo, do jeito que o Miguel gosta.",
+   "en": "The shop's coffee is strong and a little bitter, just how Miguel likes it.",
+   "ko": "가게 커피는 미겔 취향대로 진하고 약간 써요.",
+   "blank": "amargo",
+   "src": "made"
+  },
+  {
+   "text": "O xarope tinha um gosto tão amargo que a Rita fez careta.",
+   "en": "The syrup tasted so bitter that Rita made a face.",
+   "ko": "시럽이 너무 써서 히타는 얼굴을 찡그렸어요.",
+   "blank": "amargo",
+   "src": "made"
   }
  ],
  "w|amarrar": [
@@ -3965,6 +3997,22 @@
    "src": "made"
   }
  ],
+ "w|assado": [
+  {
+   "text": "No domingo, a venda do Miguel vende frango assado na porta.",
+   "en": "On Sundays, Miguel's shop sells roast chicken at the door.",
+   "ko": "일요일이면 미겔의 가게는 문 앞에서 통닭구이를 팔아요.",
+   "blank": "assado",
+   "src": "made"
+  },
+  {
+   "text": "A Rita queimou a mão tirando o pão assado do forno e foi à farmácia.",
+   "en": "Rita burned her hand taking the baked bread out of the oven and went to the pharmacy.",
+   "ko": "히타는 오븐에서 구운 빵을 꺼내다 손을 데어 약국에 갔어요.",
+   "blank": "assado",
+   "src": "made"
+  }
+ ],
  "w|assalto": [
   {
    "text": "Foi um assalto que não deu certo.",
@@ -3979,6 +4027,22 @@
    "ko": "브루노는 강도질을 준비했어요.",
    "blank": "assalto",
    "src": "tatoeba:13457569/carlosalberto en:11679295/Amastan"
+  }
+ ],
+ "w|assar": [
+  {
+   "text": "A mãe do Miguel acorda cedo para assar o pão de queijo da venda.",
+   "en": "Miguel's mother wakes up early to bake the shop's cheese bread.",
+   "ko": "미겔의 어머니는 가게에서 팔 치즈빵을 굽느라 일찍 일어나요.",
+   "blank": "assar",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica disse que a Rita pode assar batata-doce sem problema na dieta.",
+   "en": "The pharmacist said Rita can bake sweet potatoes on her diet without any problem.",
+   "ko": "약사는 히타가 식단 중에도 고구마를 구워 먹어도 괜찮다고 했어요.",
+   "blank": "assar",
+   "src": "made"
   }
  ],
  "w|assassinado": [
@@ -4877,6 +4941,22 @@
    "ko": "허가가 필요해요.",
    "blank": "autorização",
    "src": "tatoeba:4134687/mervert1 en:2241413/CK"
+  }
+ ],
+ "w|autorizar": [
+  {
+   "text": "O dono pediu ao Miguel para autorizar a entrega do gás na casa dele.",
+   "en": "The owner asked Miguel to authorize the gas delivery at his house.",
+   "ko": "주인은 미겔에게 가스 배달을 허락해 달라고 했어요.",
+   "blank": "autorizar",
+   "src": "made"
+  },
+  {
+   "text": "O médico precisa autorizar a troca do remédio da Rita.",
+   "en": "The doctor needs to authorize the change in Rita's medicine.",
+   "ko": "히타의 약을 바꾸려면 의사가 허락해야 해요.",
+   "blank": "autorizar",
+   "src": "made"
   }
  ],
  "w|avaliação": [
@@ -5879,6 +5959,22 @@
    "blank": "bebida"
   }
  ],
+ "w|bebido": [
+  {
+   "text": "Um cliente meio bebido tentou pagar o Miguel com tampinhas de garrafa.",
+   "en": "A somewhat tipsy customer tried to pay Miguel with bottle caps.",
+   "ko": "술에 조금 취한 손님이 병뚜껑으로 미겔에게 돈을 내려 했어요.",
+   "blank": "bebido",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica avisou a Rita para não dirigir depois de ter bebido.",
+   "en": "The pharmacist warned Rita not to drive after drinking.",
+   "ko": "약사는 히타에게 술 마신 뒤에는 운전하지 말라고 했어요.",
+   "blank": "bebido",
+   "src": "made"
+  }
+ ],
  "w|beco": [
   {
    "text": "É um beco sem saída.",
@@ -6472,6 +6568,22 @@
    "en": "A stranger was kind enough to return the lost documents to the station.",
    "ko": "한 낯선 사람이 친절하게도 잃어버린 서류를 경찰서에 가져다줬어요.",
    "blank": "bondade",
+   "src": "made"
+  }
+ ],
+ "w|boné": [
+  {
+   "text": "O dono da venda usa sempre o mesmo boné azul.",
+   "en": "The shop owner always wears the same blue cap.",
+   "ko": "가게 주인은 늘 같은 파란 모자를 써요.",
+   "blank": "boné",
+   "src": "made"
+  },
+  {
+   "text": "O entregador da farmácia trouxe os remédios da Rita de boné e capa de chuva.",
+   "en": "The pharmacy courier brought Rita's medicine wearing a cap and raincoat.",
+   "ko": "약국 배달원이 모자를 쓰고 우비를 입은 채 히타의 약을 가져왔어요.",
+   "blank": "boné",
    "src": "made"
   }
  ],
@@ -7355,6 +7467,22 @@
    "src": "made"
   }
  ],
+ "w|calcinha": [
+  {
+   "text": "A lojinha da esquina vende de tudo, até calcinha e meia.",
+   "en": "The corner shop sells everything, even panties and socks.",
+   "ko": "모퉁이 가게는 팬티와 양말까지 뭐든지 팔아요.",
+   "blank": "calcinha",
+   "src": "made"
+  },
+  {
+   "text": "A farmácia da Rita também vende calcinha descartável para viagem.",
+   "en": "Rita's pharmacy also sells disposable panties for travel.",
+   "ko": "히타의 약국은 여행용 일회용 팬티도 팔아요.",
+   "blank": "calcinha",
+   "src": "made"
+  }
+ ],
  "w|calcular": [
   {
    "text": "O Pedro precisa calcular quanto material a fábrica vai gastar na semana.",
@@ -7939,6 +8067,22 @@
    "src": "tatoeba:1063534/alexmarcelo en:1040744/CK"
   }
  ],
+ "w|capacete": [
+  {
+   "text": "O Miguel comprou um capacete para o filho andar de bicicleta.",
+   "en": "Miguel bought a helmet for his son to ride his bike.",
+   "ko": "미겔은 아들이 자전거 탈 때 쓸 헬멧을 샀어요.",
+   "blank": "capacete",
+   "src": "made"
+  },
+  {
+   "text": "A Rita bateu a cabeça de bicicleta e agradeceu por estar de capacete.",
+   "en": "Rita hit her head on her bike and was thankful she was wearing a helmet.",
+   "ko": "히타는 자전거를 타다 머리를 부딪쳤고 헬멧을 써서 다행이라고 생각했어요.",
+   "blank": "capacete",
+   "src": "made"
+  }
+ ],
  "w|capacidade": [
   {
    "text": "Você teria capacidade de fazer aquilo?",
@@ -8333,6 +8477,22 @@
    "blank": "cartão"
   }
  ],
+ "w|cartão de crédito": [
+  {
+   "text": "A maquininha da venda não aceitou o cartão de crédito do Miguel.",
+   "en": "The shop's card machine didn't accept Miguel's credit card.",
+   "ko": "가게 카드 단말기가 미겔의 신용카드를 받지 않았어요.",
+   "blank": "cartão de crédito",
+   "src": "made"
+  },
+  {
+   "text": "A Rita pagou os remédios com o cartão de crédito da mãe.",
+   "en": "Rita paid for the medicine with her mother's credit card.",
+   "ko": "히타는 어머니 신용카드로 약값을 냈어요.",
+   "blank": "cartão de crédito",
+   "src": "made"
+  }
+ ],
  "w|carteira": [
   {
    "text": "Onde você encontrou a minha carteira?",
@@ -8649,6 +8809,38 @@
    "ko": "동굴 안에서는 안전하다고 느꼈어요.",
    "blank": "caverna",
    "src": "tatoeba:8911835/JGEN en:8889754/CK"
+  }
+ ],
+ "w|cebola": [
+  {
+   "text": "O Miguel chorou cortando a cebola para o molho.",
+   "en": "Miguel cried cutting the onion for the sauce.",
+   "ko": "미겔은 소스에 넣을 양파를 썰다가 눈물을 흘렸어요.",
+   "blank": "cebola",
+   "src": "made"
+  },
+  {
+   "text": "A Rita ouviu que xarope de cebola ajuda na tosse.",
+   "en": "Rita heard that onion syrup helps with coughs.",
+   "ko": "히타는 양파 시럽이 기침에 좋다고 들었어요.",
+   "blank": "cebola",
+   "src": "made"
+  }
+ ],
+ "w|ceder": [
+  {
+   "text": "O Miguel não quis ceder a vaga na fila para o homem apressado.",
+   "en": "Miguel didn't want to give up his place in line to the man in a hurry.",
+   "ko": "미겔은 서두르는 남자에게 줄 자리를 양보하지 않았어요.",
+   "blank": "ceder",
+   "src": "made"
+  },
+  {
+   "text": "A Rita decidiu ceder a cadeira da fila para uma senhora grávida.",
+   "en": "Rita decided to give up her seat in line to a pregnant woman.",
+   "ko": "히타는 줄에서 자기 의자를 임신부에게 양보하기로 했어요.",
+   "blank": "ceder",
+   "src": "made"
   }
  ],
  "w|cedo": [
@@ -10987,6 +11179,22 @@
    "src": "tatoeba:8908910/Brasiliense en:7112826/CM"
   }
  ],
+ "w|compensar": [
+  {
+   "text": "O dono da venda deu um chocolate ao Miguel para compensar o troco errado.",
+   "en": "The shop owner gave Miguel a chocolate to make up for the wrong change.",
+   "ko": "가게 주인은 거스름돈을 잘못 준 걸 미안해하며 미겔에게 초콜릿을 줬어요.",
+   "blank": "compensar",
+   "src": "made"
+  },
+  {
+   "text": "O plano de saúde vai compensar parte do que a Rita gastou com remédios.",
+   "en": "The health plan will cover part of what Rita spent on medicine.",
+   "ko": "건강보험이 히타가 약값으로 쓴 돈의 일부를 보전해 줄 거예요.",
+   "blank": "compensar",
+   "src": "made"
+  }
+ ],
  "w|competição": [
   {
    "text": "Eu vencerei a competição esta semana.",
@@ -12497,6 +12705,22 @@
    "src": "tatoeba:10790462/megamanenm en:9558486/Adelpa"
   }
  ],
+ "w|cooperar": [
+  {
+   "text": "Os comerciantes da rua decidiram cooperar para comprar mais barato do fornecedor.",
+   "en": "The street's shopkeepers decided to cooperate to buy cheaper from the supplier.",
+   "ko": "그 거리 상인들은 공급업체에서 더 싸게 사려고 협력하기로 했어요.",
+   "blank": "cooperar",
+   "src": "made"
+  },
+  {
+   "text": "A farmácia pediu aos clientes que cooperassem usando máscara lá dentro.",
+   "en": "The pharmacy asked customers to cooperate by wearing a mask inside.",
+   "ko": "약국은 손님들에게 안에서 마스크를 써 달라고 협조를 구했어요.",
+   "blank": "cooperassem",
+   "src": "made"
+  }
+ ],
  "w|coordenada": [
   {
    "text": "O aplicativo do Lucas grava as coordenadas de cada corrida.",
@@ -12998,6 +13222,22 @@
    "en": "Carla rests the guitar on her left thigh, as the classical method says.",
    "ko": "카를라는 클래식 주법대로 기타를 왼쪽 허벅지에 올려요.",
    "blank": "coxa",
+   "src": "made"
+  }
+ ],
+ "w|cozido": [
+  {
+   "text": "Na hora do almoço, a venda serve milho cozido com manteiga.",
+   "en": "At lunchtime, the shop serves boiled corn with butter.",
+   "ko": "점심때면 그 가게는 버터 바른 삶은 옥수수를 팔아요.",
+   "blank": "cozido",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica sugeriu que a Rita comesse legumes cozidos durante a gastrite.",
+   "en": "The pharmacist suggested Rita eat boiled vegetables during her gastritis.",
+   "ko": "약사는 위염이 있는 동안 히타에게 삶은 채소를 먹으라고 했어요.",
+   "blank": "cozidos",
    "src": "made"
   }
  ],
@@ -14939,6 +15179,22 @@
    "ko": "여긴 낯선 곳이에요.",
    "blank": "desconhecido",
    "src": "tatoeba:11166772/Advanced en:5726638/CM"
+  }
+ ],
+ "w|desconto": [
+  {
+   "text": "O dono da venda deu um desconto ao Miguel porque ele é cliente antigo.",
+   "en": "The shop owner gave Miguel a discount because he's a longtime customer.",
+   "ko": "가게 주인은 미겔이 단골이라 할인해 줬어요.",
+   "blank": "desconto",
+   "src": "made"
+  },
+  {
+   "text": "A Rita ganhou um desconto na farmácia por ser cliente cadastrada.",
+   "en": "Rita got a discount at the pharmacy for being a registered customer.",
+   "ko": "히타는 등록 고객이라 약국에서 할인을 받았어요.",
+   "blank": "desconto",
+   "src": "made"
   }
  ],
  "w|descrever": [
@@ -17193,6 +17449,22 @@
    "src": "made"
   }
  ],
+ "w|economizar": [
+  {
+   "text": "Para economizar, o Miguel compra arroz no pacote grande.",
+   "en": "To save money, Miguel buys rice in the big bag.",
+   "ko": "미겔은 돈을 아끼려고 쌀을 큰 포대로 사요.",
+   "blank": "economizar",
+   "src": "made"
+  },
+  {
+   "text": "A Rita compra remédio genérico para economizar.",
+   "en": "Rita buys generic medicine to save money.",
+   "ko": "히타는 돈을 아끼려고 복제약을 사요.",
+   "blank": "economizar",
+   "src": "made"
+  }
+ ],
  "w|edição": [
   {
    "text": "A nova edição do manual de segurança chegou à obra hoje cedo.",
@@ -17254,6 +17526,22 @@
    "en": "The polite boy said excuse me before walking past Carla's towel.",
    "ko": "예의 바른 남자아이는 카를라의 수건 옆을 지나기 전에 실례한다고 했어요.",
    "blank": "educado",
+   "src": "made"
+  }
+ ],
+ "w|educar": [
+  {
+   "text": "O dono da venda tenta educar os filhos para tratar bem os clientes.",
+   "en": "The shop owner tries to raise his kids to treat customers well.",
+   "ko": "가게 주인은 아이들이 손님을 잘 대하도록 가르치려 해요.",
+   "blank": "educar",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica gosta de educar os clientes sobre o uso certo dos antibióticos.",
+   "en": "The pharmacist likes to educate customers about the right use of antibiotics.",
+   "ko": "약사는 손님들에게 항생제를 제대로 쓰는 법을 알려 주는 걸 좋아해요.",
+   "blank": "educar",
    "src": "made"
   }
  ],
@@ -18657,6 +18945,22 @@
    "ko": "그 인터뷰 읽었어요?",
    "blank": "entrevista",
    "src": "tatoeba:10618678/bill en:8946654/sundown"
+  }
+ ],
+ "w|envenenar": [
+  {
+   "text": "O dono da venda usa armadilha em vez de envenenar os ratos do depósito.",
+   "en": "The shop owner uses traps instead of poisoning the rats in the storeroom.",
+   "ko": "가게 주인은 창고의 쥐를 독으로 죽이는 대신 덫을 써요.",
+   "blank": "envenenar",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica explicou à Rita que tomar remédio demais pode envenenar o fígado.",
+   "en": "The pharmacist explained to Rita that taking too much medicine can poison the liver.",
+   "ko": "약사는 히타에게 약을 너무 많이 먹으면 간이 중독될 수 있다고 설명했어요.",
+   "blank": "envenenar",
+   "src": "made"
   }
  ],
  "w|envergonhado": [
@@ -20869,6 +21173,22 @@
    "src": "made"
   }
  ],
+ "w|expulso": [
+  {
+   "text": "Um rapaz foi expulso da venda por tentar roubar uma cerveja.",
+   "en": "A young man was thrown out of the shop for trying to steal a beer.",
+   "ko": "한 청년이 맥주를 훔치려다 가게에서 쫓겨났어요.",
+   "blank": "expulso",
+   "src": "made"
+  },
+  {
+   "text": "O cachorro da Rita foi expulso da farmácia porque latia sem parar.",
+   "en": "Rita's dog was kicked out of the pharmacy because it barked nonstop.",
+   "ko": "히타의 개는 쉬지 않고 짖어서 약국에서 쫓겨났어요.",
+   "blank": "expulso",
+   "src": "made"
+  }
+ ],
  "w|exterior": [
   {
    "text": "Eu sempre sonhei em viver no exterior.",
@@ -21307,6 +21627,22 @@
    "en": "What a fantastic idea.",
    "ko": "정말 멋진 생각이야.",
    "blank": "fantástica"
+  }
+ ],
+ "w|farinha": [
+  {
+   "text": "A vizinha pediu ao Miguel um quilo de farinha de trigo.",
+   "en": "The neighbor asked Miguel for a kilo of wheat flour.",
+   "ko": "이웃 아주머니가 미겔에게 밀가루 일 킬로를 달라고 했어요.",
+   "blank": "farinha",
+   "src": "made"
+  },
+  {
+   "text": "A Rita perguntou se a farinha de aveia ajuda a baixar o colesterol.",
+   "en": "Rita asked if oat flour helps lower cholesterol.",
+   "ko": "히타는 귀리 가루가 콜레스테롤을 낮추는 데 도움이 되는지 물었어요.",
+   "blank": "farinha",
+   "src": "made"
   }
  ],
  "w|farmácia": [
@@ -27389,6 +27725,22 @@
    "blank": "jogo"
   }
  ],
+ "w|joia": [
+  {
+   "text": "A filha do dono da venda faz joias de miçanga e vende no balcão.",
+   "en": "The shop owner's daughter makes beaded jewelry and sells it at the counter.",
+   "ko": "가게 주인의 딸은 구슬 장신구를 만들어 계산대에서 팔아요.",
+   "blank": "joias",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica pediu à Rita que tirasse as joias antes do exame de pressão.",
+   "en": "The pharmacist asked Rita to take off her jewelry before the blood pressure check.",
+   "ko": "약사는 혈압을 재기 전에 히타에게 장신구를 빼 달라고 했어요.",
+   "blank": "joias",
+   "src": "made"
+  }
+ ],
  "w|jornada": [
   {
    "text": "Nós tivemos que andar na última parte da jornada.",
@@ -28339,6 +28691,22 @@
    "en": "I have to remember the password.",
    "ko": "비밀번호를 기억해야 해.",
    "blank": "lembrar"
+  }
+ ],
+ "w|lenço": [
+  {
+   "text": "O Miguel comprou um pacote de lenços de papel porque estava gripado.",
+   "en": "Miguel bought a pack of tissues because he had the flu.",
+   "ko": "미겔은 독감에 걸려서 휴지 한 팩을 샀어요.",
+   "blank": "lenços",
+   "src": "made"
+  },
+  {
+   "text": "A Rita comprou lenço umedecido para a viagem com o bebê.",
+   "en": "Rita bought baby wipes for the trip with the baby.",
+   "ko": "히타는 아기와 여행 가려고 물티슈를 샀어요.",
+   "blank": "lenço",
+   "src": "made"
   }
  ],
  "w|lençol": [
@@ -29330,6 +29698,22 @@
    "en": "The town was in mourning for three days.",
    "ko": "그 도시는 사흘 동안 애도했어요.",
    "blank": "luto",
+   "src": "made"
+  }
+ ],
+ "w|luva": [
+  {
+   "text": "O Miguel esqueceu a luva de lã em cima do balcão.",
+   "en": "Miguel forgot his wool glove on the counter.",
+   "ko": "미겔은 털장갑을 계산대 위에 두고 왔어요.",
+   "blank": "luva",
+   "src": "made"
+  },
+  {
+   "text": "A Rita viu a farmacêutica trocar de luva antes de aplicar a injeção.",
+   "en": "Rita saw the pharmacist change gloves before giving the injection.",
+   "ko": "히타는 약사가 주사를 놓기 전에 장갑을 바꿔 끼는 걸 봤어요.",
+   "blank": "luva",
    "src": "made"
   }
  ],
@@ -31065,6 +31449,22 @@
    "en": "Those two deserve the credit.",
    "ko": "그 둘 다 공을 인정받아야 해.",
    "blank": "merecem"
+  }
+ ],
+ "w|mergulhar": [
+  {
+   "text": "O Miguel gosta de mergulhar o pão no café com leite.",
+   "en": "Miguel likes to dip his bread in coffee with milk.",
+   "ko": "미겔은 빵을 밀크커피에 찍어 먹는 걸 좋아해요.",
+   "blank": "mergulhar",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica mandou a Rita mergulhar o pé torcido em água gelada.",
+   "en": "The pharmacist told Rita to soak her twisted foot in ice water.",
+   "ko": "약사는 히타에게 삔 발을 얼음물에 담그라고 했어요.",
+   "blank": "mergulhar",
+   "src": "made"
   }
  ],
  "w|meritíssimo": [
@@ -36885,6 +37285,22 @@
    "src": "tatoeba:6277552/bill en:1804044/Spamster"
   }
  ],
+ "w|pervertido": [
+  {
+   "text": "O Miguel acha que o sentido do anúncio foi pervertido pela fofoca da vizinhança.",
+   "en": "Miguel thinks the meaning of the notice was twisted by the neighborhood gossip.",
+   "ko": "미겔은 동네 소문 때문에 공지의 뜻이 왜곡됐다고 생각해요.",
+   "blank": "pervertido",
+   "src": "made"
+  },
+  {
+   "text": "Num livro que a Rita lia na fila, o detetive descobre um plano pervertido do médico vilão.",
+   "en": "In a book Rita was reading in line, the detective uncovers the villainous doctor's twisted plan.",
+   "ko": "히타가 줄 서서 읽던 책에서 탐정은 악당 의사의 비뚤어진 계획을 밝혀내요.",
+   "blank": "pervertido",
+   "src": "made"
+  }
+ ],
  "w|pesadelo": [
   {
    "text": "Eu tive um pesadelo sobre vampiros.",
@@ -37175,6 +37591,22 @@
    "ko": "제발 살려 주세요!",
    "blank": "piedade",
    "src": "tatoeba:1236740/alexmarcelo en:1640717/kerbear407"
+  }
+ ],
+ "w|pijama": [
+  {
+   "text": "O Miguel desceu de pijama para comprar pão na esquina.",
+   "en": "Miguel went down in his pajamas to buy bread at the corner.",
+   "ko": "미겔은 잠옷 바람으로 모퉁이에 빵을 사러 내려갔어요.",
+   "blank": "pijama",
+   "src": "made"
+  },
+  {
+   "text": "A Rita foi à farmácia de madrugada ainda de pijama.",
+   "en": "Rita went to the pharmacy in the early hours still in her pajamas.",
+   "ko": "히타는 새벽에 잠옷 차림 그대로 약국에 갔어요.",
+   "blank": "pijama",
+   "src": "made"
   }
  ],
  "w|pilha": [
@@ -38969,6 +39401,22 @@
    "src": "tatoeba:8154604/ritualesatanum en:3820137/CK"
   }
  ],
+ "w|presumir": [
+  {
+   "text": "O Miguel presumiu que a venda abria no feriado, mas estava fechada.",
+   "en": "Miguel assumed the shop was open on the holiday, but it was closed.",
+   "ko": "미겔은 휴일에도 가게가 연다고 생각했지만 문이 닫혀 있었어요.",
+   "blank": "presumiu",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica não quis presumir nada e perguntou se a Rita tinha alergia.",
+   "en": "The pharmacist didn't want to assume anything and asked if Rita had allergies.",
+   "ko": "약사는 짐작하지 않고 히타에게 알레르기가 있는지 물었어요.",
+   "blank": "presumir",
+   "src": "made"
+  }
+ ],
  "w|presunto": [
   {
    "text": "O misto-quente do Bruno leva presunto e muito queijo.",
@@ -40125,6 +40573,22 @@
    "src": "tatoeba:11713376/ajdavidl en:6713184/Eccles17"
   }
  ],
+ "w|pulseira": [
+  {
+   "text": "O Miguel comprou uma pulseira barata para a sobrinha na venda.",
+   "en": "Miguel bought a cheap bracelet for his niece at the shop.",
+   "ko": "미겔은 가게에서 조카에게 줄 싼 팔찌를 샀어요.",
+   "blank": "pulseira",
+   "src": "made"
+  },
+  {
+   "text": "A Rita usa uma pulseira com o nome da alergia dela.",
+   "en": "Rita wears a bracelet with the name of her allergy.",
+   "ko": "히타는 자기 알레르기 이름이 적힌 팔찌를 차요.",
+   "blank": "pulseira",
+   "src": "made"
+  }
+ ],
  "w|pulso": [
   {
    "text": "Eu o peguei pelo pulso.",
@@ -41145,6 +41609,22 @@
    "src": "made"
   }
  ],
+ "w|rasgar": [
+  {
+   "text": "A sacola de papel acabou de rasgar no meio da calçada, e o Miguel juntou as laranjas.",
+   "en": "The paper bag just tore in the middle of the sidewalk, and Miguel picked up the oranges.",
+   "ko": "종이 봉투가 보도 한가운데서 찢어져서 미겔이 오렌지를 주웠어요.",
+   "blank": "rasgar",
+   "src": "made"
+  },
+  {
+   "text": "A Rita teve que rasgar a embalagem com os dentes para abrir o curativo.",
+   "en": "Rita had to tear the package with her teeth to open the bandage.",
+   "ko": "히타는 반창고를 뜯으려고 포장을 이로 찢어야 했어요.",
+   "blank": "rasgar",
+   "src": "made"
+  }
+ ],
  "w|rastrear": [
   {
    "text": "O Gabriel usou o celular para rastrear o pacote dos presentes.",
@@ -41453,6 +41933,22 @@
    "ko": "마을 사람들이 우리를 냉랭하게 맞았어요.",
    "blank": "recepção",
    "src": "tatoeba:10166359/DavidDias en:249012/CK"
+  }
+ ],
+ "w|recibo": [
+  {
+   "text": "O Miguel guardou o recibo para mostrar à mulher quanto gastou.",
+   "en": "Miguel kept the receipt to show his wife how much he spent.",
+   "ko": "미겔은 얼마 썼는지 아내에게 보여 주려고 영수증을 챙겼어요.",
+   "blank": "recibo",
+   "src": "made"
+  },
+  {
+   "text": "A Rita pediu o recibo para pedir reembolso ao plano de saúde.",
+   "en": "Rita asked for the receipt to get reimbursed by her health plan.",
+   "ko": "히타는 건강보험 환급을 받으려고 영수증을 달라고 했어요.",
+   "blank": "recibo",
+   "src": "made"
   }
  ],
  "w|reciclagem": [
@@ -42141,6 +42637,22 @@
    "src": "made"
   }
  ],
+ "w|render": [
+  {
+   "text": "O Miguel diz que um pacote de macarrão pode render três jantares.",
+   "en": "Miguel says a pack of pasta can stretch to three dinners.",
+   "ko": "미겔은 파스타 한 봉지로 저녁 세 끼를 해결할 수 있대요.",
+   "blank": "render",
+   "src": "made"
+  },
+  {
+   "text": "A Rita perguntou quantos dias o frasco de vitamina ia render.",
+   "en": "Rita asked how many days the vitamin bottle would last.",
+   "ko": "히타는 비타민 한 병이 며칠 가는지 물었어요.",
+   "blank": "render",
+   "src": "made"
+  }
+ ],
  "w|reparar": [
   {
    "text": "O João pediu ao técnico para reparar o ar-condicionado do quarto.",
@@ -42263,6 +42775,22 @@
    "ko": "제 평판이 걸려 있어요.",
    "blank": "reputação",
    "src": "tatoeba:5976941/bill en:3831266/CK"
+  }
+ ],
+ "w|requerer": [
+  {
+   "text": "Abrir uma venda na esquina vai requerer uma licença da prefeitura.",
+   "en": "Opening a shop on the corner will require a license from city hall.",
+   "ko": "모퉁이에 가게를 열려면 시청 허가가 필요할 거예요.",
+   "blank": "requerer",
+   "src": "made"
+  },
+  {
+   "text": "Alguns remédios controlados vão requerer a receita original.",
+   "en": "Some controlled medicines will require the original prescription.",
+   "ko": "일부 관리 의약품은 원본 처방전이 필요할 거예요.",
+   "blank": "requerer",
+   "src": "made"
   }
  ],
  "w|reserva": [
@@ -43479,6 +44007,22 @@
    "en": "What a pain, this wait.",
    "ko": "이 기다림 진짜 짜증나.",
    "blank": "saco"
+  }
+ ],
+ "w|sacola": [
+  {
+   "text": "O Miguel colocou o pão e o leite numa sacola de pano.",
+   "en": "Miguel put the bread and milk in a cloth bag.",
+   "ko": "미겔은 빵과 우유를 천 가방에 넣었어요.",
+   "blank": "sacola",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica colocou os remédios da Rita numa sacola de papel.",
+   "en": "The pharmacist put Rita's medicine in a paper bag.",
+   "ko": "약사는 히타의 약을 종이 봉투에 넣었어요.",
+   "blank": "sacola",
+   "src": "made"
   }
  ],
  "w|sacrificar": [
@@ -45759,6 +46303,22 @@
    "blank": "soldado"
   }
  ],
+ "w|solicitar": [
+  {
+   "text": "O Miguel foi solicitar ao dono que trouxesse um café mais barato.",
+   "en": "Miguel went to ask the owner to bring in a cheaper coffee.",
+   "ko": "미겔은 주인에게 더 싼 커피를 들여놓아 달라고 부탁했어요.",
+   "blank": "solicitar",
+   "src": "made"
+  },
+  {
+   "text": "A Rita precisou solicitar uma segunda via da receita ao médico.",
+   "en": "Rita had to request a copy of the prescription from the doctor.",
+   "ko": "히타는 의사에게 처방전 재발급을 요청해야 했어요.",
+   "blank": "solicitar",
+   "src": "made"
+  }
+ ],
  "w|sólido": [
   {
    "text": "Depois da extração, o Bruno só pôde comer alimento sólido no dia seguinte.",
@@ -46453,6 +47013,22 @@
    "src": "tatoeba:8649630/JGEN en:8594955/CK"
   }
  ],
+ "w|supermercado": [
+  {
+   "text": "O Miguel prefere a venda da esquina porque o supermercado fica longe.",
+   "en": "Miguel prefers the corner shop because the supermarket is far away.",
+   "ko": "미겔은 슈퍼마켓이 멀어서 모퉁이 가게를 더 좋아해요.",
+   "blank": "supermercado",
+   "src": "made"
+  },
+  {
+   "text": "O protetor solar estava mais barato na farmácia do que no supermercado.",
+   "en": "The sunscreen was cheaper at the pharmacy than at the supermarket.",
+   "ko": "선크림은 슈퍼마켓보다 약국이 더 쌌어요.",
+   "blank": "supermercado",
+   "src": "made"
+  }
+ ],
  "w|supor": [
   {
    "text": "Suponho que ele aceite.",
@@ -46528,6 +47104,22 @@
    "en": "Becoming a mother was my supreme moment of joy.",
    "ko": "엄마가 된 순간이 제 인생 최고의 기쁨이었어요.",
    "blank": "supremo",
+   "src": "made"
+  }
+ ],
+ "w|suprimento": [
+  {
+   "text": "O Miguel fez um estoque de suprimentos antes da greve dos caminhoneiros.",
+   "en": "Miguel stocked up on supplies before the truckers' strike.",
+   "ko": "미겔은 화물차 파업 전에 생필품을 쟁여 뒀어요.",
+   "blank": "suprimentos",
+   "src": "made"
+  },
+  {
+   "text": "A farmácia recebe um novo suprimento de vacinas toda segunda.",
+   "en": "The pharmacy gets a new supply of vaccines every Monday.",
+   "ko": "약국은 매주 월요일 새 백신 물량을 받아요.",
+   "blank": "suprimento",
    "src": "made"
   }
  ],
@@ -50423,6 +51015,22 @@
    "blank": "vender"
   }
  ],
+ "w|vendido": [
+  {
+   "text": "O pão doce da venda já estava todo vendido às oito da manhã.",
+   "en": "The shop's sweet bread was already all sold out by eight in the morning.",
+   "ko": "가게의 단팥빵은 아침 여덟 시에 벌써 다 팔렸어요.",
+   "blank": "vendido",
+   "src": "made"
+  },
+  {
+   "text": "O repelente mais vendido da farmácia acabou antes do carnaval.",
+   "en": "The pharmacy's best-selling repellent ran out before carnival.",
+   "ko": "약국에서 제일 잘 팔리는 모기 기피제는 카니발 전에 동났어요.",
+   "blank": "vendido",
+   "src": "made"
+  }
+ ],
  "w|veneno": [
   {
    "text": "Este líquido escuro contém veneno.",
@@ -50961,6 +51569,22 @@
    "ko": "우리 엄마는 스무 살에 결혼하셨어요.",
    "blank": "vinte",
    "src": "tatoeba:5014420/alexmarcelo en:251815/CK"
+  }
+ ],
+ "w|violar": [
+  {
+   "text": "Vender cigarro para menor de idade é violar a lei, lembra sempre o Miguel.",
+   "en": "Selling cigarettes to minors is breaking the law, Miguel always reminds people.",
+   "ko": "미겔은 미성년자에게 담배를 파는 건 법을 어기는 거라고 늘 말해요.",
+   "blank": "violar",
+   "src": "made"
+  },
+  {
+   "text": "Vender antibiótico sem receita seria violar as regras da farmácia.",
+   "en": "Selling antibiotics without a prescription would break the pharmacy's rules.",
+   "ko": "처방전 없이 항생제를 파는 건 약국 규정을 어기는 일이에요.",
+   "blank": "violar",
+   "src": "made"
   }
  ],
  "w|violência": [
@@ -51547,6 +52171,22 @@
    "en": "I know that voice.",
    "ko": "이 목소리는 알아.",
    "blank": "voz"
+  }
+ ],
+ "w|vulnerável": [
+  {
+   "text": "O Miguel se preocupa com os idosos vulneráveis que fazem compras sozinhos.",
+   "en": "Miguel worries about the vulnerable elderly people who shop alone.",
+   "ko": "미겔은 혼자 장 보는 취약한 노인들이 걱정돼요.",
+   "blank": "vulneráveis",
+   "src": "made"
+  },
+  {
+   "text": "A farmacêutica disse que bebês e idosos são mais vulneráveis no inverno.",
+   "en": "The pharmacist said babies and the elderly are more vulnerable in winter.",
+   "ko": "약사는 겨울에 아기와 노인이 더 취약하다고 했어요.",
+   "blank": "vulneráveis",
+   "src": "made"
   }
  ],
  "w|xadrez": [
