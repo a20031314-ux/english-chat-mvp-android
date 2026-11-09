@@ -3089,6 +3089,22 @@
    "src": "made"
   }
  ],
+ "w|أطروحة": [
+  {
+   "text": "استعان أحمد بأطروحة جامعية عن تاريخ الصحف المحلية.",
+   "en": "Ahmed drew on a university thesis about the history of local newspapers.",
+   "ko": "아흐마드는 지역 신문의 역사를 다룬 대학 논문을 참고했어요.",
+   "blank": "بأطروحة",
+   "src": "made"
+  },
+  {
+   "text": "هنأت مريم صديقتها على مناقشة أطروحة الدكتوراه.",
+   "en": "Mariam congratulated her friend on defending her doctoral thesis.",
+   "ko": "마리암은 박사 논문 심사를 마친 친구를 축하했어요.",
+   "blank": "أطروحة",
+   "src": "made"
+  }
+ ],
  "w|أطعم": [
   {
    "text": "أطعم القطط كل صباح.",
@@ -6273,6 +6289,22 @@
    "src": "made"
   }
  ],
+ "w|إساءة": [
+  {
+   "text": "اعتذرت الصحيفة بعد أن رأى القراء في عنوان أحمد إساءة لسكان القرية.",
+   "en": "The newspaper apologized after readers saw Ahmed's headline as an insult to the villagers.",
+   "ko": "독자들이 아흐마드의 제목을 마을 주민들에 대한 모욕으로 받아들이자 신문사가 사과했어요.",
+   "blank": "إساءة",
+   "src": "made"
+  },
+  {
+   "text": "اعتذرت مريم لصديقتها عن إساءة قديمة لم تنسها.",
+   "en": "Mariam apologized to her friend for an old hurt she had never forgotten.",
+   "ko": "마리암은 잊지 못한 옛 잘못에 대해 친구에게 사과했어요.",
+   "blank": "إساءة",
+   "src": "made"
+  }
+ ],
  "w|إسعاف": [
   {
    "text": "وصلت سيارة إسعاف إلى الموقع بسرعة.",
@@ -9089,6 +9121,22 @@
    "blank": "ازداد"
   }
  ],
+ "w|ازدهار": [
+  {
+   "text": "كتب أحمد مقالا عن ازدهار المقاهي الصغيرة في وسط المدينة.",
+   "en": "Ahmed wrote an article about the boom of small cafés downtown.",
+   "ko": "아흐마드는 시내 작은 카페들이 번창하는 현상에 대한 글을 썼어요.",
+   "blank": "ازدهار",
+   "src": "made"
+  },
+  {
+   "text": "وصفت مريم ازدهار حديقتها بعد أمطار الربيع.",
+   "en": "Mariam described how her garden flourished after the spring rains.",
+   "ko": "마리암은 봄비가 온 뒤 정원이 무성해진 모습을 적었어요.",
+   "blank": "ازدهار",
+   "src": "made"
+  }
+ ],
  "w|ازدهر": [
   {
    "text": "ازدهر نادي القراءة بعد أن انضم إليه أحمد وأصدقاؤه.",
@@ -9102,6 +9150,22 @@
    "en": "The almond trees in Maryam's garden blossomed after a warm week.",
    "ko": "따뜻한 한 주가 지나자 마리암네 정원의 아몬드 나무에 꽃이 활짝 폈어요.",
    "blank": "ازدهرت",
+   "src": "made"
+  }
+ ],
+ "w|ازدياد": [
+  {
+   "text": "لاحظ أحمد ازدياد عدد القراء على الهاتف هذا العام.",
+   "en": "Ahmed noticed the rise in readers on phones this year.",
+   "ko": "아흐마드는 올해 휴대폰으로 읽는 독자가 늘어난 걸 알아챘어요.",
+   "blank": "ازدياد",
+   "src": "made"
+  },
+  {
+   "text": "اشتكت مريم من ازدياد الزحام في الحي الذي كبرتا فيه.",
+   "en": "Mariam complained about the growing crowds in the neighborhood where the two of them grew up.",
+   "ko": "마리암은 둘이 자란 동네가 점점 붐빈다고 불평했어요.",
+   "blank": "ازدياد",
    "src": "made"
   }
  ],
@@ -10739,6 +10803,22 @@
    "blank": "اشتاق"
   }
  ],
+ "w|اشتباك": [
+  {
+   "text": "غطى أحمد اشتباك المتظاهرين مع الشرطة من بعيد.",
+   "en": "Ahmed covered the clash between protesters and police from a distance.",
+   "ko": "아흐마드는 시위대와 경찰의 충돌을 멀리서 취재했어요.",
+   "blank": "اشتباك",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت مريم اشتباك الطالبات بالأيدي في ساحة المدرسة وكيف فرقتهما المعلمة.",
+   "en": "Mariam recalled a fistfight between schoolgirls in the yard and how the teacher separated them.",
+   "ko": "마리암은 학교 마당에서 여학생들이 몸싸움을 벌이자 선생님이 떼어 놓았던 일을 떠올렸어요.",
+   "blank": "اشتباك",
+   "src": "made"
+  }
+ ],
  "w|اشتبه": [
   {
    "text": "اشتبه الطبيب في أن يوسف مصاب بفقر الدم، فطلب تحليلا.",
@@ -10978,6 +11058,22 @@
    "en": "Mariam's patient has been suffering from a sleep disorder for weeks.",
    "ko": "마리암의 환자는 몇 주째 수면 장애를 겪고 있어요.",
    "blank": "اضطراب",
+   "src": "made"
+  }
+ ],
+ "w|اضطرار": [
+  {
+   "text": "أزعج أحمد اضطرار الفريق إلى حذف نصف التقرير.",
+   "en": "Ahmed was annoyed that the team had to cut half the report.",
+   "ko": "아흐마드는 팀이 기사 절반을 잘라내야 했던 게 속상했어요.",
+   "blank": "اضطرار",
+   "src": "made"
+  },
+  {
+   "text": "شرحت مريم أن اضطرار عائلتها إلى الانتقال هو سبب انقطاع رسائلها.",
+   "en": "Mariam explained that her family having to move was why her letters stopped.",
+   "ko": "마리암은 가족이 이사를 가야 했던 탓에 편지가 끊겼다고 설명했어요.",
+   "blank": "اضطرار",
    "src": "made"
   }
  ],
@@ -12459,6 +12555,22 @@
    "en": "I feel grateful for all I have.",
    "ko": "나는 내가 가진 모든 것에 감사함을 느껴.",
    "blank": "امتن"
+  }
+ ],
+ "w|امتناع": [
+  {
+   "text": "كتب أحمد عن امتناع الوزير عن الإجابة عن أسئلة الصحفيين.",
+   "en": "Ahmed wrote about the minister's refusal to answer journalists' questions.",
+   "ko": "아흐마드는 장관이 기자들의 질문에 답하지 않은 일을 기사로 썼어요.",
+   "blank": "امتناع",
+   "src": "made"
+  },
+  {
+   "text": "سألت مريم صديقتها عن سبب امتناعها عن الرد طوال الشتاء.",
+   "en": "Mariam asked her friend why she hadn't written back all winter.",
+   "ko": "마리암은 친구에게 겨우내 왜 답장을 안 했는지 물었어요.",
+   "blank": "امتناعها",
+   "src": "made"
   }
  ],
  "w|امتنان": [
@@ -16285,6 +16397,22 @@
    "blank": "بكاء"
   }
  ],
+ "w|بكالوريوس": [
+  {
+   "text": "درس أحمد البكالوريوس في الإعلام ثم بدأ العمل مباشرة.",
+   "en": "Ahmed did a bachelor's in media and then started working right away.",
+   "ko": "아흐마드는 언론학 학사를 마치고 바로 일을 시작했어요.",
+   "blank": "البكالوريوس",
+   "src": "made"
+  },
+  {
+   "text": "سألت مريم صديقتها هل أنهى ابنها البكالوريوس أم ما زال يدرس.",
+   "en": "Mariam asked her friend whether her son had finished his bachelor's or was still studying.",
+   "ko": "마리암은 친구에게 아들이 학사를 마쳤는지 아직 공부 중인지 물었어요.",
+   "blank": "البكالوريوس",
+   "src": "made"
+  }
+ ],
  "w|بكر": [
   {
    "text": "حاول أن بكر في النوم الليلة.",
@@ -17422,6 +17550,22 @@
    "en": "Rana attends a training course for new staff every morning.",
    "ko": "라나는 매일 아침 신입 직원 교육 과정에 참여해요.",
    "blank": "تأهيل",
+   "src": "made"
+  }
+ ],
+ "w|تأييد": [
+  {
+   "text": "حصل اقتراح أحمد على تأييد أغلب المحررين في الاجتماع.",
+   "en": "Ahmed's proposal won the support of most editors at the meeting.",
+   "ko": "아흐마드의 제안은 회의에서 대부분 편집자의 지지를 얻었어요.",
+   "blank": "تأييد",
+   "src": "made"
+  },
+  {
+   "text": "عبرت مريم عن تأييدها لقرار صديقتها بترك المدينة.",
+   "en": "Mariam expressed her support for her friend's decision to leave the city.",
+   "ko": "마리암은 도시를 떠나기로 한 친구의 결정을 응원한다고 썼어요.",
+   "blank": "تأييدها",
    "src": "made"
   }
  ],
@@ -18649,6 +18793,22 @@
    "src": "made"
   }
  ],
+ "w|تخصيص": [
+  {
+   "text": "طالب أحمد بتخصيص صفحة كاملة لأخبار الأحياء الفقيرة.",
+   "en": "Ahmed called for dedicating a full page to news from poor neighborhoods.",
+   "ko": "아흐마드는 가난한 동네 소식에 한 면을 통째로 할애하자고 했어요.",
+   "blank": "بتخصيص",
+   "src": "made"
+  },
+  {
+   "text": "اقترحت مريم تخصيص يوم في الصيف للقاء في قريتهما.",
+   "en": "Mariam suggested setting aside a day in summer to meet in their village.",
+   "ko": "마리암은 여름에 하루를 정해 고향 마을에서 만나자고 했어요.",
+   "blank": "تخصيص",
+   "src": "made"
+  }
+ ],
  "w|تخطيط": [
   {
    "text": "أجرى خالد تخطيط قلب للقطة قبل أن يعطيها المخدر.",
@@ -18926,6 +19086,22 @@
    "en": "People poured into the market on Saturday morning, and Huda didn't sit down for a moment.",
    "ko": "토요일 아침에 사람들이 시장으로 몰려와 후다는 잠시도 앉지 못했어요.",
    "blank": "تدفق",
+   "src": "made"
+  }
+ ],
+ "w|تدقيق": [
+  {
+   "text": "لا ينشر أحمد أي خبر قبل تدقيق المعلومات مع مصدرين.",
+   "en": "Ahmed doesn't publish any story before checking the facts with two sources.",
+   "ko": "아흐마드는 두 취재원에게 사실을 확인하기 전에는 어떤 기사도 내지 않아요.",
+   "blank": "تدقيق",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت مريم من عادتها في تدقيق كل رسالة ثلاث مرات قبل إرسالها.",
+   "en": "Mariam laughed at her habit of proofreading every letter three times before sending it.",
+   "ko": "마리암은 편지를 보내기 전에 세 번씩 다시 읽어 보는 자기 버릇에 웃었어요.",
+   "blank": "تدقيق",
    "src": "made"
   }
  ],
@@ -19707,6 +19883,22 @@
    "src": "made"
   }
  ],
+ "w|تسهيل": [
+  {
+   "text": "طلب أحمد تسهيل دخول الصحفيين إلى قاعة المحكمة.",
+   "en": "Ahmed asked for journalists' access to the courtroom to be made easier.",
+   "ko": "아흐마드는 기자들이 법정에 더 쉽게 들어갈 수 있게 해 달라고 요청했어요.",
+   "blank": "تسهيل",
+   "src": "made"
+  },
+  {
+   "text": "وعدت مريم بتسهيل الزيارة بإرسال خريطة للطريق.",
+   "en": "Mariam promised to make the visit easier by sending a map of the route.",
+   "ko": "마리암은 길 지도를 보내서 방문을 쉽게 해 주겠다고 약속했어요.",
+   "blank": "بتسهيل",
+   "src": "made"
+  }
+ ],
  "w|تسوق": [
   {
    "text": "أحب الذهاب إلى تسوق كل يوم جمعة.",
@@ -20165,6 +20357,22 @@
    "en": "He browses the internet every morning.",
    "ko": "그는 매일 아침 인터넷을 본다.",
    "blank": "تصفح"
+  }
+ ],
+ "w|تصفيق": [
+  {
+   "text": "علا التصفيق في غرفة الأخبار عندما فاز أحمد بالجائزة.",
+   "en": "Applause rang out in the newsroom when Ahmed won the award.",
+   "ko": "아흐마드가 상을 받자 뉴스룸에 박수가 터졌어요.",
+   "blank": "التصفيق",
+   "src": "made"
+  },
+  {
+   "text": "وصفت مريم تصفيق الجمهور لابنتها في حفل المدرسة.",
+   "en": "Mariam described the audience applauding her daughter at the school concert.",
+   "ko": "마리암은 학교 공연에서 관객들이 딸에게 박수를 보낸 모습을 적었어요.",
+   "blank": "تصفيق",
+   "src": "made"
   }
  ],
  "w|تصميم": [
@@ -21369,6 +21577,22 @@
    "en": "Please sit down, the coffee is ready.",
    "ko": "앉으세요, 커피가 준비됐어요.",
    "blank": "تفضلي"
+  }
+ ],
+ "w|تفضيل": [
+  {
+   "text": "لا يخفي أحمد تفضيل الكتابة الميدانية على العمل في المكتب.",
+   "en": "Ahmed doesn't hide his preference for field reporting over office work.",
+   "ko": "아흐마드는 사무실 일보다 현장 취재를 더 좋아한다는 걸 숨기지 않아요.",
+   "blank": "تفضيل",
+   "src": "made"
+  },
+  {
+   "text": "ذكرت مريم صديقتها بتفضيلها الشاي على القهوة منذ الصغر.",
+   "en": "Mariam reminded her friend of her preference for tea over coffee since childhood.",
+   "ko": "마리암은 친구에게 어릴 때부터 커피보다 차를 좋아했던 걸 떠올리게 했어요.",
+   "blank": "بتفضيلها",
+   "src": "made"
   }
  ],
  "w|تفقد": [
@@ -23346,6 +23570,22 @@
    "en": "The paperwork for hiring Mona took a whole month.",
    "ko": "모나의 채용 절차는 꼬박 한 달이 걸렸어요.",
    "blank": "توظيف",
+   "src": "made"
+  }
+ ],
+ "w|توعية": [
+  {
+   "text": "أطلق أحمد سلسلة مقالات للتوعية بمخاطر الأخبار الكاذبة.",
+   "en": "Ahmed launched a series of articles to raise awareness about the dangers of fake news.",
+   "ko": "아흐마드는 가짜 뉴스의 위험을 알리는 연재 기사를 시작했어요.",
+   "blank": "للتوعية",
+   "src": "made"
+  },
+  {
+   "text": "أخبرت مريم صديقتها أنها تتطوع في حملة توعية صحية في الحي.",
+   "en": "Mariam told her friend she volunteers in a health awareness campaign in the neighborhood.",
+   "ko": "마리암은 친구에게 동네 건강 알리기 캠페인에서 봉사한다고 알렸어요.",
+   "blank": "توعية",
    "src": "made"
   }
  ],
@@ -32151,6 +32391,22 @@
    "src": "made"
   }
  ],
+ "w|دبلوم": [
+  {
+   "text": "حصل أحمد على دبلوم في التصوير الصحفي قبل أن ينضم إلى الصحيفة.",
+   "en": "Ahmed earned a diploma in photojournalism before joining the newspaper.",
+   "ko": "아흐마드는 신문사에 들어오기 전에 보도사진 과정을 수료했어요.",
+   "blank": "دبلوم",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت مريم صورة دبلوم التمريض الذي حصلت عليه أخيرا.",
+   "en": "Mariam sent a photo of the nursing diploma she finally earned.",
+   "ko": "마리암은 드디어 받은 간호 수료증 사진을 보냈어요.",
+   "blank": "دبلوم",
+   "src": "made"
+  }
+ ],
  "w|دبلوماسي": [
   {
    "text": "رد سامي بأسلوب دبلوماسي على زائر غاضب من الغرامة.",
@@ -34973,6 +35229,22 @@
    "blank": "رسميا"
   }
  ],
+ "w|رسوب": [
+  {
+   "text": "كتب أحمد تقريرا عن ارتفاع نسبة الرسوب في امتحانات هذا العام.",
+   "en": "Ahmed wrote a report on the rising failure rate in this year's exams.",
+   "ko": "아흐마드는 올해 시험 낙제율이 오른 것에 대한 기사를 썼어요.",
+   "blank": "الرسوب",
+   "src": "made"
+  },
+  {
+   "text": "طمأنت مريم صديقتها بأن رسوب ابنها مرة واحدة ليس نهاية الطريق.",
+   "en": "Mariam reassured her friend that her son failing once is not the end of the road.",
+   "ko": "마리암은 아들이 한 번 떨어졌다고 끝난 게 아니라며 친구를 안심시켰어요.",
+   "blank": "رسوب",
+   "src": "made"
+  }
+ ],
  "w|رسوم": [
   {
    "text": "يجب دفع رسوم التسجيل عند القبول.",
@@ -35554,6 +35826,22 @@
    "en": "Huda dreams of her app becoming the best-known digital shop for used books.",
    "ko": "후다는 자기 앱이 가장 유명한 중고 책 디지털 상점이 되기를 꿈꿔요.",
    "blank": "رقمي",
+   "src": "made"
+  }
+ ],
+ "w|رقمية": [
+  {
+   "text": "يحضر أحمد دورة في الصحافة الرقمية كل أسبوع.",
+   "en": "Ahmed takes a course in digital journalism every week.",
+   "ko": "아흐마드는 매주 디지털 저널리즘 강좌를 들어요.",
+   "blank": "الرقمية",
+   "src": "made"
+  },
+  {
+   "text": "قالت مريم في رسالتها إن الرسائل الورقية أدفأ من كل الوسائل الرقمية.",
+   "en": "Mariam said in her letter that paper letters are warmer than any digital means.",
+   "ko": "마리암은 편지에서 손편지가 어떤 디지털 수단보다 따뜻하다고 했어요.",
+   "blank": "الرقمية",
    "src": "made"
   }
  ],
@@ -37709,6 +37997,22 @@
    "en": "I have already visited this place before.",
    "ko": "난 전에 이곳을 방문한 적 있어.",
    "blank": "سبق"
+  }
+ ],
+ "w|سبورة": [
+  {
+   "text": "رسم أحمد خطة الأسبوع على السبورة البيضاء في غرفة الأخبار.",
+   "en": "Ahmed sketched the week's plan on the whiteboard in the newsroom.",
+   "ko": "아흐마드는 뉴스룸 화이트보드에 이번 주 계획을 그렸어요.",
+   "blank": "السبورة",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت مريم المعلمة التي كانت تكتب أسماء المتأخرين على سبورة الصف.",
+   "en": "Mariam remembered the teacher who used to write latecomers' names on the class board.",
+   "ko": "마리암은 늦게 온 아이들 이름을 칠판에 적던 선생님을 떠올렸어요.",
+   "blank": "سبورة",
+   "src": "made"
   }
  ],
  "w|سبيل": [
@@ -40711,6 +41015,22 @@
    "en": "The anger was intense in the meeting.",
    "ko": "회의에서 분노가 심했어.",
    "blank": "شديد"
+  }
+ ],
+ "w|شذوذ": [
+  {
+   "text": "انتبه أحمد إلى شذوذ في أرقام الميزانية التي نشرتها البلدية.",
+   "en": "Ahmed noticed an anomaly in the budget figures the municipality published.",
+   "ko": "아흐마드는 시청이 발표한 예산 숫자에서 이상한 점을 발견했어요.",
+   "blank": "شذوذ",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت مريم من شذوذ الطقس هذا العام حين أمطرت في الصيف.",
+   "en": "Mariam laughed at this year's odd weather when it rained in summer.",
+   "ko": "마리암은 올해 여름에 비가 오는 이상한 날씨에 웃었어요.",
+   "blank": "شذوذ",
+   "src": "made"
   }
  ],
  "w|شر": [
@@ -44773,6 +45093,22 @@
    "blank": "طباخ"
   }
  ],
+ "w|طباشير": [
+  {
+   "text": "زار أحمد مصنعا صغيرا للطباشير ليكتب عن مهنة تختفي.",
+   "en": "Ahmed visited a small chalk factory to write about a disappearing trade.",
+   "ko": "아흐마드는 사라져 가는 직업에 대해 쓰려고 작은 분필 공장을 찾았어요.",
+   "blank": "للطباشير",
+   "src": "made"
+  },
+  {
+   "text": "كتبت مريم أن رائحة الطباشير ما زالت تعيدها إلى صفهما القديم.",
+   "en": "Mariam wrote that the smell of chalk still takes her back to their old classroom.",
+   "ko": "마리암은 분필 냄새가 아직도 둘의 옛 교실을 떠올리게 한다고 썼어요.",
+   "blank": "الطباشير",
+   "src": "made"
+  }
+ ],
  "w|طبخ": [
   {
    "text": "أحب أن طبخ الطعام مع عائلتي.",
@@ -47324,6 +47660,22 @@
    "en": "Rana stopped at the entrance to listen to the violinist playing.",
    "ko": "라나는 입구에서 바이올리니스트의 연주를 들으려고 멈춰 섰어요.",
    "blank": "عزف",
+   "src": "made"
+  }
+ ],
+ "w|عزل": [
+  {
+   "text": "كتب أحمد أن الحزب عزل رئيسه بعد الفضيحة.",
+   "en": "Ahmed wrote that the party removed its leader after the scandal.",
+   "ko": "아흐마드는 그 당이 추문 뒤 대표를 물러나게 했다고 썼어요.",
+   "blank": "عزل",
+   "src": "made"
+  },
+  {
+   "text": "كتبت مريم أن المرض عزل جدتها عن الناس شهورا.",
+   "en": "Mariam wrote that illness cut her grandmother off from people for months.",
+   "ko": "마리암은 병 때문에 할머니가 몇 달 동안 사람들과 떨어져 지냈다고 썼어요.",
+   "blank": "عزل",
    "src": "made"
   }
  ],
@@ -53591,6 +53943,22 @@
    "blank": "قرص"
   }
  ],
+ "w|قرصان": [
+  {
+   "text": "كتب أحمد تحقيقا عن قرصان اخترق حسابات بنك محلي.",
+   "en": "Ahmed wrote an investigation about a hacker who broke into a local bank's accounts.",
+   "ko": "아흐마드는 지역 은행 계좌를 해킹한 해커에 대한 탐사 기사를 썼어요.",
+   "blank": "قرصان",
+   "src": "made"
+  },
+  {
+   "text": "حكت مريم في رسالتها أن ابنها يريد أن يلبس زي قرصان في الحفلة.",
+   "en": "Mariam wrote in her letter that her son wants to dress up as a pirate at the party.",
+   "ko": "마리암은 편지에 아들이 파티에서 해적 옷을 입고 싶어 한다고 적었어요.",
+   "blank": "قرصان",
+   "src": "made"
+  }
+ ],
  "w|قرض": [
   {
    "text": "حصلت على قرض من البنك.",
@@ -55685,6 +56053,22 @@
    "blank": "كذلك"
   }
  ],
+ "w|كراسة": [
+  {
+   "text": "يدون أحمد أسماء مصادره في كراسة صغيرة لا تفارق جيبه.",
+   "en": "Ahmed jots his sources' names in a small notebook that never leaves his pocket.",
+   "ko": "아흐마드는 늘 주머니에 넣고 다니는 작은 공책에 취재원 이름을 적어요.",
+   "blank": "كراسة",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت مريم صفحة من كراسة الرسم التي احتفظت بها منذ الطفولة.",
+   "en": "Mariam sent a page from the sketchbook she had kept since childhood.",
+   "ko": "마리암은 어릴 때부터 간직한 그림 공책의 한 장을 보냈어요.",
+   "blank": "كراسة",
+   "src": "made"
+  }
+ ],
  "w|كراهية": [
   {
    "text": "لا أريد أن أعيش في كراهية.",
@@ -56073,6 +56457,22 @@
    "en": "We need a capable person for this task.",
    "ko": "이 일에는 유능한 사람이 필요해.",
    "blank": "كفء"
+  }
+ ],
+ "w|كفاءة": [
+  {
+   "text": "أشاد رئيس التحرير بكفاءة أحمد في تغطية الانتخابات.",
+   "en": "The editor-in-chief praised Ahmed's competence in covering the election.",
+   "ko": "편집장은 선거를 취재한 아흐마드의 역량을 칭찬했어요.",
+   "blank": "بكفاءة",
+   "src": "made"
+  },
+  {
+   "text": "كتبت مريم أن ابنتها تدير متجرها الصغير بكفاءة تفوق عمرها.",
+   "en": "Mariam wrote that her daughter runs her little shop with a competence beyond her years.",
+   "ko": "마리암은 딸이 나이에 비해 작은 가게를 아주 잘 꾸려 간다고 썼어요.",
+   "blank": "بكفاءة",
+   "src": "made"
   }
  ],
  "w|كفالة": [
@@ -59403,6 +59803,22 @@
    "blank": "مايو"
   }
  ],
+ "w|مبادرة": [
+  {
+   "text": "كتب أحمد عن مبادرة شبابية لتنظيف الشاطئ.",
+   "en": "Ahmed wrote about a youth initiative to clean the beach.",
+   "ko": "아흐마드는 해변을 청소하는 청년들의 활동에 대해 썼어요.",
+   "blank": "مبادرة",
+   "src": "made"
+  },
+  {
+   "text": "شكرت مريم صديقتها لأنها أخذت مبادرة الكتابة بعد سنوات الصمت.",
+   "en": "Mariam thanked her friend for taking the initiative to write after years of silence.",
+   "ko": "마리암은 몇 년간 연락이 없다가 먼저 편지를 써 준 친구에게 고마워했어요.",
+   "blank": "مبادرة",
+   "src": "made"
+  }
+ ],
  "w|مباراة": [
   {
    "text": "سأشاهد مباراة مهمة الليلة.",
@@ -59534,6 +59950,22 @@
    "en": "Mona criticized the wasteful council that spent the budget on parties.",
    "ko": "모나는 예산을 잔치에 쓴 헤픈 의회를 비판했어요.",
    "blank": "المبذر",
+   "src": "made"
+  }
+ ],
+ "w|مبراة": [
+  {
+   "text": "استعار أحمد مبراة من زميلته لأن قلمه انكسر.",
+   "en": "Ahmed borrowed a pencil sharpener from his colleague because his pencil broke.",
+   "ko": "아흐마드는 연필심이 부러져서 동료에게 연필깎이를 빌렸어요.",
+   "blank": "مبراة",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت مريم وهي تتذكر مبراة صديقتها التي كانت تأكل نصف القلم.",
+   "en": "Mariam laughed remembering her friend's pencil sharpener that used to eat half the pencil.",
+   "ko": "마리암은 연필을 반이나 먹어 버리던 친구의 연필깎이를 떠올리며 웃었어요.",
+   "blank": "مبراة",
    "src": "made"
   }
  ],
@@ -63089,6 +63521,22 @@
    "src": "made"
   }
  ],
+ "w|مراسلة": [
+  {
+   "text": "يعمل أحمد مراسلا ويتابع مراسلة طويلة مع مصدر في الوزارة.",
+   "en": "Ahmed works as a reporter and keeps up a long correspondence with a source at the ministry.",
+   "ko": "아흐마드는 기자로 일하면서 부처 안 취재원과 오래 연락을 주고받고 있어요.",
+   "blank": "مراسلة",
+   "src": "made"
+  },
+  {
+   "text": "بدأت مراسلة مريم وصديقتها منذ أيام المدرسة.",
+   "en": "Mariam and her friend's correspondence began back in their school days.",
+   "ko": "마리암과 친구의 편지 왕래는 학창 시절부터 시작됐어요.",
+   "blank": "مراسلة",
+   "src": "made"
+  }
+ ],
  "w|مراسم": [
   {
    "text": "حضر عمر مراسم تكريم كبار الممثلين في دار الأوبرا.",
@@ -63340,6 +63788,22 @@
    "en": "The clerk told Mona the flight was likely to be delayed by an hour.",
    "ko": "직원은 모나에게 비행기가 한 시간쯤 늦어질 것 같다고 말했어요.",
    "blank": "المرجح",
+   "src": "made"
+  }
+ ],
+ "w|مرجع": [
+  {
+   "text": "يعتبر زملاء أحمد أنه مرجع في قضايا السكن.",
+   "en": "Ahmed's colleagues consider him an authority on housing issues.",
+   "ko": "아흐마드의 동료들은 주거 문제라면 그를 전문가로 여겨요.",
+   "blank": "مرجع",
+   "src": "made"
+  },
+  {
+   "text": "كتبت مريم أن كتاب الطبخ الذي أهدتها إياه صديقتها صار مرجعها في المطبخ.",
+   "en": "Mariam wrote that the cookbook her friend gave her has become her go-to reference in the kitchen.",
+   "ko": "마리암은 친구가 선물한 요리책이 부엌에서 늘 찾아보는 책이 됐다고 썼어요.",
+   "blank": "مرجعها",
    "src": "made"
   }
  ],
@@ -64209,6 +64673,22 @@
    "src": "made"
   }
  ],
+ "w|مساهمة": [
+  {
+   "text": "شكر رئيس التحرير أحمد على مساهمة قيمة في العدد الخاص.",
+   "en": "The editor-in-chief thanked Ahmed for a valuable contribution to the special issue.",
+   "ko": "편집장은 특집호에 귀한 기여를 한 아흐마드에게 고마워했어요.",
+   "blank": "مساهمة",
+   "src": "made"
+  },
+  {
+   "text": "شكرت مريم صديقتها على مساهمتها في هدية زفاف أختها.",
+   "en": "Mariam thanked her friend for chipping in on her sister's wedding present.",
+   "ko": "마리암은 동생 결혼 선물에 보태 준 친구에게 고마워했어요.",
+   "blank": "مساهمتها",
+   "src": "made"
+  }
+ ],
  "w|مساواة": [
   {
    "text": "نطالب بتحقيق مساواة بين الجميع.",
@@ -64451,6 +64931,22 @@
    "en": "I think a lot about my children's future.",
    "ko": "나는 내 아이들의 미래에 대해 많이 생각한다.",
    "blank": "مستقبل"
+  }
+ ],
+ "w|مستقبلا": [
+  {
+   "text": "ينوي أحمد مستقبلا أن يكتب كتابا عن تجربته في الصحافة.",
+   "en": "In the future Ahmed intends to write a book about his experience in journalism.",
+   "ko": "아흐마드는 나중에 기자 생활에 관한 책을 쓸 생각이에요.",
+   "blank": "مستقبلا",
+   "src": "made"
+  },
+  {
+   "text": "تمنت مريم أن تزورها صديقتها مستقبلا مع أولادها.",
+   "en": "Mariam hoped her friend would visit her in the future with her children.",
+   "ko": "마리암은 언젠가 친구가 아이들과 함께 놀러 오기를 바랐어요.",
+   "blank": "مستقبلا",
+   "src": "made"
   }
  ],
  "w|مستقبلي": [
@@ -64747,6 +65243,22 @@
    "en": "The school is happy with the students' results.",
    "ko": "학교가 학생들의 결과에 만족해.",
    "blank": "مسرور"
+  }
+ ],
+ "w|مسطرة": [
+  {
+   "text": "قاس أحمد عرض العمود بمسطرة قبل أن يرسل الصفحة إلى المطبعة.",
+   "en": "Ahmed measured the column width with a ruler before sending the page to the printer.",
+   "ko": "아흐마드는 지면을 인쇄소에 보내기 전에 자로 단 너비를 쟀어요.",
+   "blank": "بمسطرة",
+   "src": "made"
+  },
+  {
+   "text": "وجدت مريم في درجها مسطرة خشبية كتبت عليها صديقتها اسمها.",
+   "en": "Mariam found in her drawer a wooden ruler on which her friend had written her name.",
+   "ko": "마리암은 서랍에서 친구가 이름을 써 둔 나무 자를 찾았어요.",
+   "blank": "مسطرة",
+   "src": "made"
   }
  ],
  "w|مسعف": [
@@ -66323,6 +66835,22 @@
    "blank": "معجزة"
   }
  ],
+ "w|معجم": [
+  {
+   "text": "يفتح أحمد معجم اللغة كلما شك في معنى كلمة.",
+   "en": "Ahmed opens the dictionary whenever he is unsure of a meaning.",
+   "ko": "아흐마드는 뜻이 헷갈릴 때마다 사전을 펼쳐요.",
+   "blank": "معجم",
+   "src": "made"
+  },
+  {
+   "text": "سألت مريم صديقتها عن معجم الأمثال الذي كانتا تقرآن منه.",
+   "en": "Mariam asked her friend about the dictionary of proverbs they used to read from.",
+   "ko": "마리암은 둘이 함께 읽던 속담 사전에 대해 친구에게 물었어요.",
+   "blank": "معجم",
+   "src": "made"
+  }
+ ],
  "w|معجنات": [
   {
    "text": "اشتريت معجنات طازجة من المخبز.",
@@ -67639,6 +68167,22 @@
    "src": "made"
   }
  ],
+ "w|مقرر": [
+  {
+   "text": "طلب رئيس التحرير من أحمد أن يكتب عن المقرر الجديد لمادة التاريخ في المدارس.",
+   "en": "The editor-in-chief asked Ahmed to write about the new history syllabus in schools.",
+   "ko": "편집장은 아흐마드에게 학교 역사 과목 새 교과 과정에 대해 기사를 쓰라고 했어요.",
+   "blank": "المقرر",
+   "src": "made"
+  },
+  {
+   "text": "كتبت مريم لصديقتها القديمة أنها تدرس الآن المقرر نفسه الذي درستاه معا.",
+   "en": "Mariam wrote to her old friend that she now teaches the same syllabus they once studied together.",
+   "ko": "마리암은 옛 친구에게 둘이 함께 배웠던 그 교과 과정을 지금 자기가 가르친다고 썼어요.",
+   "blank": "المقرر",
+   "src": "made"
+  }
+ ],
  "w|مقرف": [
   {
    "text": "هذا الطعام مقرف جداً ولا أستطيع أكله.",
@@ -68199,6 +68743,22 @@
    "blank": "مكسور"
   }
  ],
+ "w|مكلف": [
+  {
+   "text": "أصبح أحمد مكلفا بتغطية أخبار البرلمان هذا الشهر.",
+   "en": "Ahmed has been put in charge of covering parliament news this month.",
+   "ko": "아흐마드는 이번 달 국회 소식 취재를 맡게 됐어요.",
+   "blank": "مكلفا",
+   "src": "made"
+  },
+  {
+   "text": "اشتكت مريم من أن السفر بالقطار صار مكلفا جدا.",
+   "en": "Mariam complained that traveling by train has become very expensive.",
+   "ko": "마리암은 기차 여행이 너무 비싸졌다고 불평했어요.",
+   "blank": "مكلفا",
+   "src": "made"
+  }
+ ],
  "w|مكمل": [
   {
    "text": "نصح الطبيب يوسف بتناول مكمل غذائي فيه الكالسيوم.",
@@ -68461,6 +69021,22 @@
    "en": "The project cost millions and it is still not done.",
    "ko": "그 사업은 수백만이 들었는데 아직 안 끝났어.",
    "blank": "ملايين"
+  }
+ ],
+ "w|ملتزم": [
+  {
+   "text": "يعرف الجميع أن أحمد صحفي ملتزم بالمواعيد.",
+   "en": "Everyone knows Ahmed is a journalist who keeps to deadlines.",
+   "ko": "아흐마드가 마감을 잘 지키는 기자라는 건 모두 알아요.",
+   "blank": "ملتزم",
+   "src": "made"
+  },
+  {
+   "text": "كتبت مريم أن أخاها ما زال ملتزما بالركض كل صباح.",
+   "en": "Mariam wrote that her brother is still committed to running every morning.",
+   "ko": "마리암은 오빠가 아직도 매일 아침 꾸준히 달린다고 썼어요.",
+   "blank": "ملتزما",
+   "src": "made"
   }
  ],
  "w|ملتو": [
@@ -68915,6 +69491,22 @@
    "blank": "الممثلة"
   }
  ],
+ "w|ممحاة": [
+  {
+   "text": "يحتفظ أحمد بممحاة على مكتبه لأنه يكتب ملاحظاته بقلم الرصاص.",
+   "en": "Ahmed keeps an eraser on his desk because he writes his notes in pencil.",
+   "ko": "아흐마드는 메모를 연필로 써서 책상에 지우개를 두고 다녀요.",
+   "blank": "بممحاة",
+   "src": "made"
+  },
+  {
+   "text": "ذكرت مريم صديقتها بممحاة على شكل فراولة تبادلتاها في الصف الثالث.",
+   "en": "Mariam reminded her friend of a strawberry-shaped eraser they swapped in third grade.",
+   "ko": "마리암은 삼 학년 때 서로 바꿨던 딸기 모양 지우개 이야기를 꺼냈어요.",
+   "blank": "بممحاة",
+   "src": "made"
+  }
+ ],
  "w|ممر": [
   {
    "text": "رسم الأطفال لوحاتهم على جدران الممر.",
@@ -69260,6 +69852,22 @@
    "en": "Mona's company submitted a bid in a government tender to develop a website.",
    "ko": "모나의 회사는 웹사이트 개발 정부 입찰에 제안서를 냈어요.",
    "blank": "مناقصة",
+   "src": "made"
+  }
+ ],
+ "w|مناوبة": [
+  {
+   "text": "بدأ أحمد مناوبة الليل في غرفة الأخبار عند العاشرة.",
+   "en": "Ahmed started the night shift in the newsroom at ten.",
+   "ko": "아흐마드는 열 시에 뉴스룸 야간 근무를 시작했어요.",
+   "blank": "مناوبة",
+   "src": "made"
+  },
+  {
+   "text": "كتبت مريم رسالتها في الليل بعد مناوبة طويلة في المخبز.",
+   "en": "Mariam wrote her letter at night after a long shift at the bakery.",
+   "ko": "마리암은 빵집에서 긴 근무를 마치고 밤에 편지를 썼어요.",
+   "blank": "مناوبة",
    "src": "made"
   }
  ],
@@ -70890,6 +71498,22 @@
    "en": "Fatima's neighbor forgot the doctor's appointment, so Fatima reminded her.",
    "ko": "이웃이 병원 예약을 잊어서 파티마가 알려 줬어요.",
    "blank": "ميعاد",
+   "src": "made"
+  }
+ ],
+ "w|ميكانيكي": [
+  {
+   "text": "أجرى أحمد مقابلة مع ميكانيكي يصلح الحافلات القديمة في المدينة.",
+   "en": "Ahmed interviewed a mechanic who repairs the city's old buses.",
+   "ko": "아흐마드는 도시의 낡은 버스를 고치는 정비사를 인터뷰했어요.",
+   "blank": "ميكانيكي",
+   "src": "made"
+  },
+  {
+   "text": "كتبت مريم أن زوجها ترك المكتب وصار ميكانيكي سيارات.",
+   "en": "Mariam wrote that her husband left his office job and became a car mechanic.",
+   "ko": "마리암은 남편이 회사를 그만두고 자동차 정비사가 됐다고 썼어요.",
+   "blank": "ميكانيكي",
    "src": "made"
   }
  ],
@@ -76827,6 +77451,22 @@
    "en": "In the end it all turned out to be an illusion.",
    "ko": "결국 전부 착각으로 드러났어.",
    "blank": "وهم"
+  }
+ ],
+ "w|ويب": [
+  {
+   "text": "نشر أحمد التقرير على موقع الصحيفة على الويب قبل الطبعة الورقية.",
+   "en": "Ahmed published the report on the newspaper's website before the print edition.",
+   "ko": "아흐마드는 종이 신문이 나오기 전에 신문사 웹사이트에 기사를 올렸어요.",
+   "blank": "الويب",
+   "src": "made"
+  },
+  {
+   "text": "أخبرت مريم صديقتها أنها تعلمت تصميم صفحات الويب في عطلة الصيف.",
+   "en": "Mariam told her friend she learned web design over the summer break.",
+   "ko": "마리암은 친구에게 여름 방학에 웹 페이지 만드는 법을 배웠다고 알렸어요.",
+   "blank": "الويب",
+   "src": "made"
   }
  ],
  "w|ويل": [

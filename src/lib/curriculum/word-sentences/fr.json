@@ -3043,6 +3043,22 @@
    "blank": "annoncer"
   }
  ],
+ "w|annuaire": [
+  {
+   "text": "Louis cherche le numéro du maire dans un vieil annuaire posé sur l'étagère.",
+   "en": "Louis looks for the mayor's number in an old directory on the shelf.",
+   "ko": "루이는 선반 위 낡은 전화번호부에서 시장 번호를 찾아요.",
+   "blank": "annuaire",
+   "src": "made"
+  },
+  {
+   "text": "Sans réseau, Claire cherche un garagiste dans l'annuaire de l'auberge.",
+   "en": "With no signal, Claire looks for a mechanic in the inn's phone book.",
+   "ko": "신호가 안 잡혀서 클레르는 여관 전화번호부에서 정비소를 찾아요.",
+   "blank": "annuaire",
+   "src": "made"
+  }
+ ],
  "w|annuel": [
   {
    "text": "Louis rappelle aux propriétaires le vaccin annuel de leurs chats.",
@@ -7153,6 +7169,22 @@
    "blank": "bénéfice"
   }
  ],
+ "w|bénévole": [
+  {
+   "text": "Un bénévole de l'association est venu raconter la crue à la rédaction.",
+   "en": "A volunteer from the association came to the newsroom to describe the flood.",
+   "ko": "단체의 자원봉사자가 편집국에 와서 홍수 이야기를 들려줬어요.",
+   "blank": "bénévole",
+   "src": "made"
+  },
+  {
+   "text": "Un bénévole de l'office de tourisme conseille à Claire une route à travers les vignes.",
+   "en": "A volunteer at the tourist office recommends a route through the vineyards to Claire.",
+   "ko": "관광 안내소 자원봉사자가 클레르에게 포도밭 사이 길을 추천해요.",
+   "blank": "bénévole",
+   "src": "made"
+  }
+ ],
  "w|bénir": [
   {
    "text": "Le prêtre va bénir la maison demain matin.",
@@ -8769,6 +8801,22 @@
    "en": "In short, the meeting was useful.",
    "ko": "간단히 말해 회의는 유익했다.",
    "blank": "bref"
+  }
+ ],
+ "w|brevet": [
+  {
+   "text": "Louis raconte l'histoire d'un artisan qui a déposé un brevet pour une serrure.",
+   "en": "Louis tells the story of a craftsman who filed a patent for a lock.",
+   "ko": "루이는 자물쇠로 특허를 낸 장인의 이야기를 써요.",
+   "blank": "brevet",
+   "src": "made"
+  },
+  {
+   "text": "Le moniteur de plongée demande à Claire si elle a son brevet avant de l'emmener en mer.",
+   "en": "The diving instructor asks Claire if she has her certificate before taking her out to sea.",
+   "ko": "다이빙 강사는 바다에 데려가기 전에 클레르에게 자격증이 있는지 물어요.",
+   "blank": "brevet",
+   "src": "made"
   }
  ],
  "w|brigade": [
@@ -13439,6 +13487,22 @@
    "blank": "classique"
   }
  ],
+ "w|clause": [
+  {
+   "text": "Le directeur a ajouté une clause de confidentialité au contrat de Louis.",
+   "en": "The director added a confidentiality clause to Louis's contract.",
+   "ko": "국장은 루이의 계약서에 비밀 유지 조항을 넣었어요.",
+   "blank": "clause",
+   "src": "made"
+  },
+  {
+   "text": "Le contrat de location contient une clause sur les routes de montagne, et Claire la lit deux fois.",
+   "en": "The rental contract has a clause about mountain roads, and Claire reads it twice.",
+   "ko": "렌터카 계약서에 산길 관련 조항이 있어서 클레르는 두 번 읽어요.",
+   "blank": "clause",
+   "src": "made"
+  }
+ ],
  "w|clé": [
   {
    "text": "J'ai perdu ma clé ce matin.",
@@ -13511,6 +13575,22 @@
    "en": "I served a nice client today.",
    "ko": "오늘 친절한 손님을 응대했어.",
    "blank": "client"
+  }
+ ],
+ "w|clientèle": [
+  {
+   "text": "Le journal perd sa clientèle âgée depuis que l'édition papier coûte plus cher.",
+   "en": "The paper is losing its older clientele since the print edition became more expensive.",
+   "ko": "종이판 값이 오른 뒤로 신문은 나이 든 고객층을 잃고 있어요.",
+   "blank": "clientèle",
+   "src": "made"
+  },
+  {
+   "text": "Ce petit restaurant de bord de route a une clientèle de routiers fidèles, remarque Claire.",
+   "en": "This little roadside restaurant has a clientele of loyal truckers, Claire notices.",
+   "ko": "클레르는 이 길가 식당 손님이 단골 트럭 기사들이라는 걸 알아채요.",
+   "blank": "clientèle",
+   "src": "made"
   }
  ],
  "w|climat": [
@@ -14020,6 +14100,22 @@
    "en": "Sarah takes part in a clothing collection for the neighbourhood charity.",
    "ko": "사라는 동네 단체의 옷 모으기 행사에 참여해요.",
    "blank": "collecte",
+   "src": "made"
+  }
+ ],
+ "w|collecter": [
+  {
+   "text": "Louis passe la matinée à collecter des témoignages au marché.",
+   "en": "Louis spends the morning collecting accounts at the market.",
+   "ko": "루이는 시장에서 사람들 이야기를 모으며 오전을 보내요.",
+   "blank": "collecter",
+   "src": "made"
+  },
+  {
+   "text": "Claire aime collecter les cartes postales de chaque ville traversée.",
+   "en": "Claire likes collecting postcards from every town she passes through.",
+   "ko": "클레르는 지나가는 도시마다 엽서를 모으는 걸 좋아해요.",
+   "blank": "collecter",
    "src": "made"
   }
  ],
@@ -14999,6 +15095,22 @@
    "en": "One must behave well at school.",
    "ko": "학교에서 바르게 행동해야 해.",
    "blank": "comporter"
+  }
+ ],
+ "w|composant": [
+  {
+   "text": "Louis enquête sur une usine qui produit un composant pour les téléphones.",
+   "en": "Louis is investigating a factory that makes a component for phones.",
+   "ko": "루이는 휴대폰 부품을 만드는 공장을 취재하고 있어요.",
+   "blank": "composant",
+   "src": "made"
+  },
+  {
+   "text": "Le garagiste doit commander un composant pour réparer la climatisation de Claire.",
+   "en": "The mechanic has to order a part to fix Claire's air conditioning.",
+   "ko": "정비사는 클레르 차 에어컨을 고치려고 부품을 주문해야 해요.",
+   "blank": "composant",
+   "src": "made"
   }
  ],
  "w|composé": [
@@ -16806,6 +16918,22 @@
    "en": "Émilie's son smuggled sweets into his room.",
    "ko": "에밀리의 아들은 사탕을 몰래 방에 가지고 들어갔어요.",
    "blank": "contrebande",
+   "src": "made"
+  }
+ ],
+ "w|contredire": [
+  {
+   "text": "Les chiffres du ministère semblent contredire ce que Louis a vu sur place.",
+   "en": "The ministry's figures seem to contradict what Louis saw on the ground.",
+   "ko": "정부 부처의 숫자는 루이가 현장에서 본 것과 어긋나 보여요.",
+   "blank": "contredire",
+   "src": "made"
+  },
+  {
+   "text": "Claire n'ose pas contredire le vieux monsieur qui lui indique une route plus longue.",
+   "en": "Claire doesn't dare contradict the old man who points her to a longer route.",
+   "ko": "클레르는 더 먼 길을 알려 주는 할아버지에게 차마 토를 달지 못해요.",
+   "blank": "contredire",
    "src": "made"
   }
  ],
@@ -19625,6 +19753,22 @@
    "blank": "débile"
   }
  ],
+ "w|débordé": [
+  {
+   "text": "Ce soir, toute la rédaction est débordée à cause des élections municipales.",
+   "en": "Tonight the whole newsroom is swamped because of the local elections.",
+   "ko": "오늘 밤 편집국 전체가 지방 선거 때문에 정신없이 바빠요.",
+   "blank": "débordée",
+   "src": "made"
+  },
+  {
+   "text": "Le patron du gîte, débordé, a oublié de préparer la chambre de Claire.",
+   "en": "The guesthouse owner, overwhelmed, forgot to get Claire's room ready.",
+   "ko": "너무 바빴던 숙소 주인이 클레르 방을 준비하는 걸 잊었어요.",
+   "blank": "débordé",
+   "src": "made"
+  }
+ ],
  "w|déborder": [
   {
    "text": "Paul laisse toujours son cartable déborder de feuilles froissées.",
@@ -20253,6 +20397,22 @@
    "en": "This product has a manufacturing defect.",
    "ko": "이 제품에는 제조 défaut이 있어.",
    "blank": "défaut"
+  }
+ ],
+ "w|défectueux": [
+  {
+   "text": "Louis travaille encore sur un ordinateur défectueux qui s'éteint tout seul.",
+   "en": "Louis still works on a faulty computer that shuts down on its own.",
+   "ko": "루이는 아직도 저절로 꺼지는 고장 난 컴퓨터로 일해요.",
+   "blank": "défectueux",
+   "src": "made"
+  },
+  {
+   "text": "Le pneu défectueux a éclaté sur l'autoroute, mais Claire a gardé son calme.",
+   "en": "The faulty tyre burst on the motorway, but Claire stayed calm.",
+   "ko": "불량 타이어가 고속도로에서 터졌지만 클레르는 침착했어요.",
+   "blank": "défectueux",
+   "src": "made"
   }
  ],
  "w|défendre": [
@@ -23655,6 +23815,22 @@
    "src": "made"
   }
  ],
+ "w|divulguer": [
+  {
+   "text": "Même devant le juge, Louis refuse de divulguer le nom de sa source.",
+   "en": "Even before the judge, Louis refuses to reveal his source's name.",
+   "ko": "판사 앞에서도 루이는 제보자 이름을 밝히지 않아요.",
+   "blank": "divulguer",
+   "src": "made"
+  },
+  {
+   "text": "Les habitants refusent de divulguer l'emplacement de la source chaude, ce qui agace Claire.",
+   "en": "The locals refuse to reveal where the hot spring is, which annoys Claire.",
+   "ko": "주민들이 온천 위치를 알려 주지 않아서 클레르는 짜증이 나요.",
+   "blank": "divulguer",
+   "src": "made"
+  }
+ ],
  "w|dix": [
   {
    "text": "J'ai dix minutes pour finir.",
@@ -25297,6 +25473,22 @@
    "en": "She is efficient in everything she does.",
    "ko": "그녀는 하는 모든 일에 능률적이야.",
    "blank": "efficace"
+  }
+ ],
+ "w|efficacité": [
+  {
+   "text": "Le rédacteur en chef vante l'efficacité de Louis quand l'actualité s'emballe.",
+   "en": "The editor-in-chief praises Louis's efficiency when the news gets hectic.",
+   "ko": "편집장은 뉴스가 몰아칠 때 루이의 일 처리 능력을 칭찬해요.",
+   "blank": "efficacité",
+   "src": "made"
+  },
+  {
+   "text": "Claire range le coffre avec une efficacité qui impressionne son frère.",
+   "en": "Claire packs the boot so efficiently that her brother is impressed.",
+   "ko": "클레르가 트렁크를 척척 정리해서 오빠가 감탄해요.",
+   "blank": "efficacité",
+   "src": "made"
   }
  ],
  "w|effondrer": [
@@ -28497,6 +28689,22 @@
    "src": "made"
   }
  ],
+ "w|estimation": [
+  {
+   "text": "Selon une estimation de Louis, la moitié des lecteurs ne lisent que les titres.",
+   "en": "By Louis's estimate, half the readers only read the headlines.",
+   "ko": "루이의 추정으로는 독자 절반이 제목만 읽어요.",
+   "blank": "estimation",
+   "src": "made"
+  },
+  {
+   "text": "L'estimation du GPS était trop optimiste, et Claire arrive avec deux heures de retard.",
+   "en": "The GPS estimate was too optimistic, and Claire arrives two hours late.",
+   "ko": "내비 예상 시간이 너무 낙관적이어서 클레르는 두 시간 늦게 도착해요.",
+   "blank": "estimation",
+   "src": "made"
+  }
+ ],
  "w|estime": [
   {
    "text": "J’ai beaucoup d’estime pour elle.",
@@ -29891,6 +30099,22 @@
    "src": "made"
   }
  ],
+ "w|exploitation": [
+  {
+   "text": "Louis prépare un dossier sur l'exploitation des livreurs à vélo.",
+   "en": "Louis is preparing a feature on the exploitation of bike couriers.",
+   "ko": "루이는 자전거 배달원 착취에 관한 특집을 준비하고 있어요.",
+   "blank": "exploitation",
+   "src": "made"
+  },
+  {
+   "text": "Le soir, Claire dort dans une ferme qui vit de l'exploitation de la lavande.",
+   "en": "In the evening, Claire sleeps on a farm that makes its living from growing lavender.",
+   "ko": "저녁에 클레르는 라벤더 재배로 먹고사는 농장에서 묵어요.",
+   "blank": "exploitation",
+   "src": "made"
+  }
+ ],
  "w|exploiter": [
   {
    "text": "Thomas apprend à mieux exploiter les données des clients.",
@@ -30145,6 +30369,22 @@
    "src": "made"
   }
  ],
+ "w|extraction": [
+  {
+   "text": "L'article de Louis sur l'extraction du sable dans la rivière a fait réagir la mairie.",
+   "en": "Louis's article on sand extraction from the river got a reaction from the town hall.",
+   "ko": "강에서 모래를 퍼 가는 일에 대한 루이의 기사에 시청이 반응했어요.",
+   "blank": "extraction",
+   "src": "made"
+  },
+  {
+   "text": "Claire visite une ancienne carrière où l'extraction de l'ardoise a duré des siècles.",
+   "en": "Claire visits an old quarry where slate was extracted for centuries.",
+   "ko": "클레르는 수백 년 동안 슬레이트를 캐던 옛 채석장을 둘러봐요.",
+   "blank": "extraction",
+   "src": "made"
+  }
+ ],
  "w|extraire": [
   {
    "text": "Le plombier a dû extraire une bague coincée dans le lavabo de Hugo.",
@@ -30262,6 +30502,22 @@
    "en": "The guitarist is testing a prototype amplifier given by a local manufacturer.",
    "ko": "기타리스트는 지역 제조사가 준 시제품 앰프를 시험해요.",
    "blank": "fabricant",
+   "src": "made"
+  }
+ ],
+ "w|fabrication": [
+  {
+   "text": "La fabrication du journal commence vers minuit à l'imprimerie.",
+   "en": "Production of the paper starts around midnight at the printing plant.",
+   "ko": "신문 제작은 자정쯤 인쇄소에서 시작돼요.",
+   "blank": "fabrication",
+   "src": "made"
+  },
+  {
+   "text": "Dans un village de Provence, Claire achète du nougat de fabrication artisanale.",
+   "en": "In a village in Provence, Claire buys handmade nougat.",
+   "ko": "프로방스의 한 마을에서 클레르는 수제 누가를 사요.",
+   "blank": "fabrication",
    "src": "made"
   }
  ],
@@ -30555,6 +30811,22 @@
    "en": "My hunger grows when I see bread.",
    "ko": "빵을 보면 내 배고픔이 커져.",
    "blank": "faim"
+  }
+ ],
+ "w|fainéant": [
+  {
+   "text": "Le chef traite le stagiaire de fainéant, mais Louis le trouve surtout perdu.",
+   "en": "The boss calls the intern lazy, but Louis thinks he's mostly lost.",
+   "ko": "상사는 인턴을 게으르다고 하지만, 루이는 그가 그냥 헤매는 거라고 봐요.",
+   "blank": "fainéant",
+   "src": "made"
+  },
+  {
+   "text": "Le frère de Claire est trop fainéant pour conduire après le déjeuner.",
+   "en": "Claire's brother is too lazy to drive after lunch.",
+   "ko": "클레르의 오빠는 점심 먹고 나면 너무 게을러서 운전을 안 해요.",
+   "blank": "fainéant",
+   "src": "made"
   }
  ],
  "w|faire": [
@@ -35601,6 +35873,22 @@
    "src": "made"
   }
  ],
+ "w|grotesque": [
+  {
+   "text": "Le titre proposé par le stagiaire est si grotesque que Louis éclate de rire.",
+   "en": "The headline the intern suggested is so ridiculous that Louis bursts out laughing.",
+   "ko": "인턴이 낸 제목이 너무 우스꽝스러워서 루이가 웃음을 터뜨려요.",
+   "blank": "grotesque",
+   "src": "made"
+  },
+  {
+   "text": "Claire rit devant la statue grotesque d'un escargot géant à l'entrée du village.",
+   "en": "Claire laughs at the absurd statue of a giant snail at the entrance to the village.",
+   "ko": "클레르는 마을 입구의 우스꽝스러운 거대 달팽이 조각을 보고 웃어요.",
+   "blank": "grotesque",
+   "src": "made"
+  }
+ ],
  "w|grotte": [
   {
    "text": "La grotte est sombre et humide.",
@@ -38175,6 +38463,22 @@
    "src": "made"
   }
  ],
+ "w|imprimé": [
+  {
+   "text": "Louis a trouvé un imprimé anonyme glissé sous la porte de la rédaction.",
+   "en": "Louis found an anonymous leaflet slipped under the newsroom door.",
+   "ko": "루이는 편집국 문 밑으로 들어온 익명의 인쇄물을 발견했어요.",
+   "blank": "imprimé",
+   "src": "made"
+  },
+  {
+   "text": "Claire porte une chemise à imprimé fleuri achetée sur un marché.",
+   "en": "Claire is wearing a shirt with a floral print she bought at a market.",
+   "ko": "클레르는 시장에서 산 꽃무늬 셔츠를 입고 있어요.",
+   "blank": "imprimé",
+   "src": "made"
+  }
+ ],
  "w|imprimer": [
   {
    "text": "Nicolas fait imprimer les consignes de sécurité en grand format.",
@@ -38804,6 +39108,22 @@
    "en": "The water is below twenty degrees, but Manon dives in anyway.",
    "ko": "물이 이십 도도 안 되지만 마농은 그래도 뛰어들어요.",
    "blank": "inférieure",
+   "src": "made"
+  }
+ ],
+ "w|infernal": [
+  {
+   "text": "La veille du bouclage, le rythme est infernal à la rédaction.",
+   "en": "The day before the deadline, the pace in the newsroom is hellish.",
+   "ko": "마감 전날 편집국은 정신없이 돌아가요.",
+   "blank": "infernal",
+   "src": "made"
+  },
+  {
+   "text": "Sans climatisation, la chaleur dans la voiture est infernale, soupire Claire.",
+   "en": "Without air conditioning, the heat in the car is unbearable, Claire sighs.",
+   "ko": "에어컨이 없어서 차 안이 지옥같이 덥다고 클레르가 한숨을 쉬어요.",
+   "blank": "infernale",
    "src": "made"
   }
  ],
@@ -39835,6 +40155,22 @@
    "blank": "intention"
   }
  ],
+ "w|intercepter": [
+  {
+   "text": "La secrétaire de rédaction a pu intercepter l'erreur avant l'impression, au grand soulagement de Louis.",
+   "en": "The copy editor managed to catch the mistake before printing, to Louis's great relief.",
+   "ko": "교열 담당자가 인쇄 전에 실수를 잡아내서 루이는 크게 안도했어요.",
+   "blank": "intercepter",
+   "src": "made"
+  },
+  {
+   "text": "Le chien de Claire a failli intercepter le sandwich d'un randonneur.",
+   "en": "Claire's dog nearly snatched a hiker's sandwich.",
+   "ko": "클레르의 개가 등산객 샌드위치를 낚아챌 뻔했어요.",
+   "blank": "intercepter",
+   "src": "made"
+  }
+ ],
  "w|interdiction": [
   {
    "text": "Nicolas rappelle l'interdiction de prendre des photos avec flash.",
@@ -40654,6 +40990,22 @@
    "en": "It's thirty degrees in October, and Léa finds it rather ironic for the start of term.",
    "ko": "시월에 삼십 도라니, 레아는 개학철에 좀 아이러니하다고 생각해요.",
    "blank": "ironique",
+   "src": "made"
+  }
+ ],
+ "w|irrésistible": [
+  {
+   "text": "Le café de la machine est infect, mais l'odeur des croissants est irrésistible pour Louis.",
+   "en": "The machine coffee is awful, but Louis finds the smell of croissants irresistible.",
+   "ko": "자판기 커피는 형편없지만, 루이는 크루아상 냄새를 참을 수가 없어요.",
+   "blank": "irrésistible",
+   "src": "made"
+  },
+  {
+   "text": "Au bord de la plage, l'odeur des crêpes est irrésistible, alors Claire s'arrête.",
+   "en": "By the beach, the smell of crêpes is irresistible, so Claire stops.",
+   "ko": "해변의 크레페 냄새를 참을 수 없어서 클레르는 차를 세워요.",
+   "blank": "irrésistible",
    "src": "made"
   }
  ],
@@ -42999,6 +43351,22 @@
    "blank": "liquide"
   }
  ],
+ "w|liquider": [
+  {
+   "text": "Le groupe de presse veut liquider le vieux journal du dimanche, regrette Louis.",
+   "en": "The press group wants to wind up the old Sunday paper, Louis laments.",
+   "ko": "루이는 언론 그룹이 오래된 일요판을 정리하려 한다며 아쉬워해요.",
+   "blank": "liquider",
+   "src": "made"
+  },
+  {
+   "text": "Le dernier jour, Claire veut liquider les restes du pique-nique avant de rendre la voiture.",
+   "en": "On the last day, Claire wants to finish off the picnic leftovers before returning the car.",
+   "ko": "마지막 날 클레르는 차를 반납하기 전에 남은 소풍 음식을 다 먹어 치우고 싶어 해요.",
+   "blank": "liquider",
+   "src": "made"
+  }
+ ],
  "w|lire": [
   {
    "text": "J’aime lire avant de dormir.",
@@ -44249,6 +44617,22 @@
    "blank": "major"
   }
  ],
+ "w|majordome": [
+  {
+   "text": "Pour son portrait du château, Louis a interviewé le majordome du comte.",
+   "en": "For his profile of the château, Louis interviewed the count's butler.",
+   "ko": "성 이야기를 쓰려고 루이는 백작의 집사를 인터뷰했어요.",
+   "blank": "majordome",
+   "src": "made"
+  },
+  {
+   "text": "Dans le château qu'elle visite, Claire croise un majordome en costume d'époque.",
+   "en": "In the château she visits, Claire runs into a butler in period costume.",
+   "ko": "클레르는 들른 성에서 옛날 옷을 입은 집사를 마주쳐요.",
+   "blank": "majordome",
+   "src": "made"
+  }
+ ],
  "w|majorité": [
   {
    "text": "La majorité a voté contre.",
@@ -44449,6 +44833,22 @@
    "en": "It's sad to see an unhappy child.",
    "ko": "불행한 아이를 보는 건 슬퍼.",
    "blank": "malheureux"
+  }
+ ],
+ "w|malhonnête": [
+  {
+   "text": "Un élu malhonnête a tenté d'acheter le silence de Louis.",
+   "en": "A dishonest official tried to buy Louis's silence.",
+   "ko": "부정직한 정치인이 루이의 입을 막으려고 돈을 내밀었어요.",
+   "blank": "malhonnête",
+   "src": "made"
+  },
+  {
+   "text": "Un vendeur malhonnête a essayé de vendre à Claire un faux miel de lavande.",
+   "en": "A dishonest seller tried to sell Claire fake lavender honey.",
+   "ko": "부정직한 상인이 클레르에게 가짜 라벤더 꿀을 팔려고 했어요.",
+   "blank": "malhonnête",
+   "src": "made"
   }
  ],
  "w|malin": [
@@ -44873,6 +45273,22 @@
    "src": "made"
   }
  ],
+ "w|maquette": [
+  {
+   "text": "La graphiste montre à Louis la maquette de la nouvelle une.",
+   "en": "The designer shows Louis the mock-up of the new front page.",
+   "ko": "디자이너가 루이에게 새 1면 시안을 보여 줘요.",
+   "blank": "maquette",
+   "src": "made"
+  },
+  {
+   "text": "Dans un petit musée, Claire admire la maquette d'un ancien port.",
+   "en": "In a small museum, Claire admires a scale model of an old harbour.",
+   "ko": "작은 박물관에서 클레르는 옛 항구 모형을 감탄하며 봐요.",
+   "blank": "maquette",
+   "src": "made"
+  }
+ ],
  "w|maquillage": [
   {
    "text": "J’ai acheté un nouveau maquillage hier.",
@@ -45116,6 +45532,22 @@
    "en": "With her daughter, Inès makes a sock puppet.",
    "ko": "이네스는 딸과 함께 양말 인형을 만들어요.",
    "blank": "marionnette",
+   "src": "made"
+  }
+ ],
+ "w|marketing": [
+  {
+   "text": "Louis doit superviser le stagiaire qui écrit la page sur le marketing des grandes surfaces.",
+   "en": "Louis has to supervise the intern writing the page on supermarket marketing.",
+   "ko": "루이는 대형 마트 마케팅 기사를 쓰는 인턴을 감독해야 해요.",
+   "blank": "marketing",
+   "src": "made"
+  },
+  {
+   "text": "Claire trouve que le marketing de cette station-service est plus soigné que son café.",
+   "en": "Claire thinks this service station's marketing is more polished than its coffee.",
+   "ko": "클레르는 이 주유소가 커피보다 마케팅에 더 공을 들인다고 생각해요.",
+   "blank": "marketing",
    "src": "made"
   }
  ],
@@ -56551,6 +56983,22 @@
    "src": "made"
   }
  ],
+ "w|postuler": [
+  {
+   "text": "Une jeune journaliste veut postuler au service politique où travaille Louis.",
+   "en": "A young journalist wants to apply to the politics desk where Louis works.",
+   "ko": "젊은 기자 한 명이 루이가 일하는 정치부에 지원하고 싶어 해요.",
+   "blank": "postuler",
+   "src": "made"
+  },
+  {
+   "text": "En route, Claire apprend que l'entreprise où elle voulait postuler cherche toujours quelqu'un.",
+   "en": "On the road, Claire learns that the company she wanted to apply to is still hiring.",
+   "ko": "가는 길에 클레르는 지원하고 싶던 회사가 아직 사람을 구한다는 걸 알게 돼요.",
+   "blank": "postuler",
+   "src": "made"
+  }
+ ],
  "w|pot": [
   {
    "text": "J'ai mis les fleurs dans un pot en terre cuite.",
@@ -59401,6 +59849,22 @@
    "blank": "public"
   }
  ],
+ "w|publicitaire": [
+  {
+   "text": "Au dernier moment, une page publicitaire a remplacé l'enquête de Louis.",
+   "en": "At the last minute, an advertising page replaced Louis's investigation.",
+   "ko": "마지막 순간에 광고 지면이 루이의 취재 기사를 밀어냈어요.",
+   "blank": "publicitaire",
+   "src": "made"
+  },
+  {
+   "text": "Sur la nationale, Claire passe sous un vieux panneau publicitaire à moitié effacé.",
+   "en": "On the main road, Claire drives under an old, half-faded billboard.",
+   "ko": "국도에서 클레르는 반쯤 지워진 낡은 광고판 아래를 지나가요.",
+   "blank": "publicitaire",
+   "src": "made"
+  }
+ ],
  "w|publicité": [
   {
    "text": "Je vois cette publicité tous les jours à la télé.",
@@ -59628,6 +60092,22 @@
    "en": "Sarah remembers how pure the air was at the top of the last hill.",
    "ko": "사라는 마지막 언덕 꼭대기의 깨끗한 공기를 기억해요.",
    "blank": "pureté",
+   "src": "made"
+  }
+ ],
+ "w|purger": [
+  {
+   "text": "Louis a dû purger ses archives pour libérer de la place sur le serveur.",
+   "en": "Louis had to purge his archives to free up space on the server.",
+   "ko": "루이는 서버 공간을 비우려고 자료를 정리해야 했어요.",
+   "blank": "purger",
+   "src": "made"
+  },
+  {
+   "text": "Le garagiste conseille à Claire de faire purger les freins avant la descente du col.",
+   "en": "The mechanic advises Claire to have the brakes bled before going down the pass.",
+   "ko": "정비사는 클레르에게 고갯길을 내려가기 전에 브레이크 공기를 빼라고 권해요.",
+   "blank": "purger",
    "src": "made"
   }
  ],
@@ -61023,6 +61503,22 @@
    "en": "I met the film director last night.",
    "ko": "어젯밤에 영화 감독을 만났어.",
    "blank": "réalisateur"
+  }
+ ],
+ "w|réalisation": [
+  {
+   "text": "La réalisation du documentaire a pris à Louis plus d'un an.",
+   "en": "Making the documentary took Louis more than a year.",
+   "ko": "다큐멘터리 제작에 루이는 일 년 넘게 걸렸어요.",
+   "blank": "réalisation",
+   "src": "made"
+  },
+  {
+   "text": "Avec la musique et le générique, le film de vacances de Claire est une vraie réalisation.",
+   "en": "With music and credits, Claire's holiday film is a real production.",
+   "ko": "음악과 엔딩 자막까지 넣어서 클레르의 여행 영상은 제대로 된 작품이에요.",
+   "blank": "réalisation",
+   "src": "made"
   }
  ],
  "w|réaliser": [
@@ -62955,6 +63451,22 @@
    "en": "He had to give up his project because of lack of money.",
    "ko": "돈이 부족해서 프로젝트를 포기해야 했어.",
    "blank": "renoncer"
+  }
+ ],
+ "w|renouveler": [
+  {
+   "text": "Le journal a décidé de renouveler le contrat de Louis pour deux ans.",
+   "en": "The paper decided to renew Louis's contract for two years.",
+   "ko": "신문사는 루이의 계약을 이 년 연장하기로 했어요.",
+   "blank": "renouveler",
+   "src": "made"
+  },
+  {
+   "text": "Claire a oublié de renouveler son abonnement au télépéage.",
+   "en": "Claire forgot to renew her electronic toll subscription.",
+   "ko": "클레르는 하이패스 이용권 갱신하는 걸 잊었어요.",
+   "blank": "renouveler",
+   "src": "made"
   }
  ],
  "w|renseignement": [
@@ -69677,6 +70189,22 @@
    "src": "made"
   }
  ],
+ "w|souligner": [
+  {
+   "text": "Dans son éditorial, Louis tient à souligner le travail des pompiers.",
+   "en": "In his editorial, Louis makes a point of highlighting the firefighters' work.",
+   "ko": "사설에서 루이는 소방관들의 노고를 꼭 강조하고 싶어 해요.",
+   "blank": "souligner",
+   "src": "made"
+  },
+  {
+   "text": "Le guide prend soin de souligner que la route du col ferme la nuit, et Claire le note.",
+   "en": "The guide is careful to point out that the pass road closes at night, and Claire makes a note.",
+   "ko": "안내인이 고갯길이 밤엔 닫힌다고 강조해서 클레르는 적어 둬요.",
+   "blank": "souligner",
+   "src": "made"
+  }
+ ],
  "w|soumettre": [
   {
    "text": "Hugo doit soumettre son rapport au juge avant midi.",
@@ -70263,6 +70791,38 @@
    "blank": "splendide"
   }
  ],
+ "w|sponsor": [
+  {
+   "text": "Le club de foot a perdu son sponsor principal, et Louis a eu l'information en premier.",
+   "en": "The football club lost its main sponsor, and Louis got the news first.",
+   "ko": "축구 클럽이 주요 후원사를 잃었는데, 루이가 그 소식을 가장 먼저 알았어요.",
+   "blank": "sponsor",
+   "src": "made"
+  },
+  {
+   "text": "Le festival de musique où se rend Claire a trouvé un nouveau sponsor.",
+   "en": "The music festival Claire is heading to has found a new sponsor.",
+   "ko": "클레르가 가는 음악 축제에 새 후원사가 생겼어요.",
+   "blank": "sponsor",
+   "src": "made"
+  }
+ ],
+ "w|spontané": [
+  {
+   "text": "Pour Louis, le témoignage le plus spontané est souvent le plus juste.",
+   "en": "For Louis, the most spontaneous testimony is often the most accurate.",
+   "ko": "루이에게는 가장 즉흥적인 증언이 가장 정확할 때가 많아요.",
+   "blank": "spontané",
+   "src": "made"
+  },
+  {
+   "text": "Ce voyage est né d'une idée spontanée de Claire un dimanche soir.",
+   "en": "This trip came from a spur-of-the-moment idea Claire had one Sunday evening.",
+   "ko": "이 여행은 어느 일요일 저녁 클레르의 즉흥적인 생각에서 시작됐어요.",
+   "blank": "spontanée",
+   "src": "made"
+  }
+ ],
  "w|sport": [
   {
    "text": "Le sport est important pour la santé.",
@@ -70595,6 +71155,22 @@
    "en": "His strategy was very smart.",
    "ko": "그의 전략은 정말 똑똑했어.",
    "blank": "stratégie"
+  }
+ ],
+ "w|stratégique": [
+  {
+   "text": "Pour le groupe, le rachat du journal est un choix stratégique, explique Louis.",
+   "en": "For the group, buying the paper is a strategic choice, Louis explains.",
+   "ko": "루이는 신문 인수가 그룹에게 전략적인 선택이라고 설명해요.",
+   "blank": "stratégique",
+   "src": "made"
+  },
+  {
+   "text": "La halte à Lyon est stratégique, car Claire peut y dormir chez une amie.",
+   "en": "The stop in Lyon is strategic, because Claire can sleep at a friend's place there.",
+   "ko": "리옹에서 쉬는 건 전략적이에요, 클레르가 친구 집에서 잘 수 있거든요.",
+   "blank": "stratégique",
+   "src": "made"
   }
  ],
  "w|stress": [
@@ -71188,6 +71764,22 @@
    "en": "Léa makes fun of her grandmother's old superstition about black cats.",
    "ko": "레아는 검은 고양이에 관한 할머니의 오래된 미신을 놀려요.",
    "blank": "superstition",
+   "src": "made"
+  }
+ ],
+ "w|superviser": [
+  {
+   "text": "Louis doit superviser le stagiaire qui écrit la page sur le marketing des grandes surfaces.",
+   "en": "Louis has to supervise the intern writing the page on supermarket marketing.",
+   "ko": "루이는 대형 마트 마케팅 기사를 쓰는 인턴을 감독해야 해요.",
+   "blank": "superviser",
+   "src": "made"
+  },
+  {
+   "text": "Au camping, le gérant doit superviser l'arrivée des camping-cars, et Claire attend son tour.",
+   "en": "At the campsite, the manager has to oversee the camper vans arriving, and Claire waits her turn.",
+   "ko": "캠핑장에서 관리인이 캠핑카 입장을 챙기는 동안 클레르는 차례를 기다려요.",
+   "blank": "superviser",
    "src": "made"
   }
  ],
@@ -75329,6 +75921,22 @@
    "blank": "trou"
   }
  ],
+ "w|troublant": [
+  {
+   "text": "Louis trouve troublant que deux témoins racontent exactement la même chose.",
+   "en": "Louis finds it troubling that two witnesses tell exactly the same story.",
+   "ko": "루이는 두 증인이 똑같은 이야기를 하는 게 마음에 걸려요.",
+   "blank": "troublant",
+   "src": "made"
+  },
+  {
+   "text": "Claire trouve troublant ce village désert où tous les volets sont fermés.",
+   "en": "Claire finds this deserted village, with all its shutters closed, unsettling.",
+   "ko": "클레르는 덧문이 전부 닫힌 텅 빈 마을이 묘하게 마음에 걸려요.",
+   "blank": "troublant",
+   "src": "made"
+  }
+ ],
  "w|trouble": [
   {
    "text": "J'ai eu beaucoup de trouble avec ce projet.",
@@ -77479,6 +78087,22 @@
    "src": "made"
   }
  ],
+ "w|virtuel": [
+  {
+   "text": "La conférence de rédaction se tient désormais dans une salle virtuelle.",
+   "en": "The editorial meeting is now held in a virtual room.",
+   "ko": "편집 회의는 이제 가상 회의실에서 열려요.",
+   "blank": "virtuelle",
+   "src": "made"
+  },
+  {
+   "text": "Avant de partir, Claire a fait une visite virtuelle de la grotte sur son téléphone.",
+   "en": "Before leaving, Claire took a virtual tour of the cave on her phone.",
+   "ko": "떠나기 전에 클레르는 휴대폰으로 동굴 가상 투어를 해 봤어요.",
+   "blank": "virtuelle",
+   "src": "made"
+  }
+ ],
  "w|virus": [
   {
    "text": "Le virus se propage rapidement.",
@@ -77742,6 +78366,22 @@
    "en": "A vocal ensemble is giving a concert in the lounge, and Léa sets out the chairs.",
    "ko": "성악 앙상블이 라운지에서 공연을 해서 레아가 의자를 놓아요.",
    "blank": "vocal",
+   "src": "made"
+  }
+ ],
+ "w|vocation": [
+  {
+   "text": "Louis répète souvent que le journalisme est une vocation plus qu'un métier.",
+   "en": "Louis often says that journalism is a calling more than a job.",
+   "ko": "루이는 기자 일이 직업이라기보다 소명이라고 자주 말해요.",
+   "blank": "vocation",
+   "src": "made"
+  },
+  {
+   "text": "Le guide parle de son métier avec tant de passion que Claire y voit une vraie vocation.",
+   "en": "The guide talks about his job with such passion that Claire sees it as a true calling.",
+   "ko": "안내인이 자기 일을 너무 열정적으로 말해서 클레르는 그게 진짜 천직이라고 느껴요.",
+   "blank": "vocation",
    "src": "made"
   }
  ],

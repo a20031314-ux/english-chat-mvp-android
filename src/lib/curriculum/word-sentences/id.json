@@ -1641,6 +1641,22 @@
    "blank": "Aset"
   }
  ],
+ "w|asin": [
+  {
+   "text": "Instruktur bilang sup buatan Andi sedikit terlalu asin.",
+   "en": "The instructor said Andi's soup was a little too salty.",
+   "ko": "강사는 안디가 만든 수프가 조금 짜다고 했어요.",
+   "blank": "asin",
+   "src": "made"
+  },
+  {
+   "text": "Rani menulis bahwa angin laut di kotanya terasa asin setiap pagi.",
+   "en": "Rani wrote that the sea breeze in her town tastes salty every morning.",
+   "ko": "라니는 자기 동네 바닷바람이 아침마다 짭짤하다고 썼어요.",
+   "blank": "asin",
+   "src": "made"
+  }
+ ],
  "w|asing": [
   {
    "text": "Suara itu terdengar asing.",
@@ -6911,6 +6927,22 @@
    "src": "made"
   }
  ],
+ "w|berpelukan": [
+  {
+   "text": "Para peserta berpelukan di akhir kelas setelah menerima sertifikat.",
+   "en": "The participants hugged each other at the end of class after getting their certificates.",
+   "ko": "참가자들은 수료증을 받고 수업이 끝날 때 서로 껴안았어요.",
+   "blank": "berpelukan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menempelkan foto mereka berpelukan saat wisuda di surat itu.",
+   "en": "Dewi attached a photo of them hugging at graduation to the letter.",
+   "ko": "데위는 졸업식 때 둘이 껴안고 찍은 사진을 편지에 붙였어요.",
+   "blank": "berpelukan",
+   "src": "made"
+  }
+ ],
  "w|berpencar": [
   {
    "text": "Setelah apel pagi, para tukang berpencar ke bagian masing-masing.",
@@ -8863,6 +8895,22 @@
    "src": "made"
   }
  ],
+ "w|biskuit": [
+  {
+   "text": "Andi menghancurkan biskuit untuk dijadikan dasar kue keju.",
+   "en": "Andi crushed biscuits to make the base for the cheesecake.",
+   "ko": "안디는 치즈케이크 바닥을 만들려고 비스킷을 부쉈어요.",
+   "blank": "biskuit",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengirim sekaleng biskuit mentega bersama suratnya.",
+   "en": "Dewi sent a tin of butter biscuits along with her letter.",
+   "ko": "데위는 편지와 함께 버터 비스킷 한 통을 보냈어요.",
+   "blank": "biskuit",
+   "src": "made"
+  }
+ ],
  "w|bisnis": [
   {
    "text": "Bisnis ini sedang naik.",
@@ -9310,6 +9358,22 @@
    "en": "Ayu uses silica powder to dry phones that got wet.",
    "ko": "아유는 물에 젖은 휴대폰을 말리려고 실리카 가루를 써요.",
    "blank": "bubuk",
+   "src": "made"
+  }
+ ],
+ "w|bubur": [
+  {
+   "text": "Andi menambahkan jahe ke bubur supaya rasanya lebih hangat.",
+   "en": "Andi added ginger to the porridge to give it a warmer taste.",
+   "ko": "안디는 죽 맛이 더 따뜻하도록 생강을 넣었어요.",
+   "blank": "bubur",
+   "src": "made"
+  },
+  {
+   "text": "Dewi rindu bubur ayam di warung dekat asrama mereka dulu.",
+   "en": "Dewi misses the chicken porridge from the stall near their old dormitory.",
+   "ko": "데위는 예전 기숙사 근처 가게의 닭죽이 그리워요.",
+   "blank": "bubur",
    "src": "made"
   }
  ],
@@ -12079,6 +12143,22 @@
    "blank": "Dompet"
   }
  ],
+ "w|donat": [
+  {
+   "text": "Andi menaburkan gula halus di atas donat yang masih hangat.",
+   "en": "Andi sprinkled powdered sugar on the still-warm doughnuts.",
+   "ko": "안디는 아직 따뜻한 도넛 위에 슈가파우더를 뿌렸어요.",
+   "blank": "donat",
+   "src": "made"
+  },
+  {
+   "text": "Rani bercerita bahwa toko donat langganan mereka sudah tutup.",
+   "en": "Rani wrote that their favorite doughnut shop has closed.",
+   "ko": "라니는 둘이 자주 가던 도넛 가게가 문을 닫았다고 했어요.",
+   "blank": "donat",
+   "src": "made"
+  }
+ ],
  "w|dong": [
   {
    "text": "Bantu aku dong.",
@@ -13549,6 +13629,22 @@
    "blank": "ganda"
   }
  ],
+ "w|gandum": [
+  {
+   "text": "Roti yang dibuat Andi memakai tepung gandum utuh.",
+   "en": "The bread Andi made uses whole wheat flour.",
+   "ko": "안디가 만든 빵은 통밀가루를 써요.",
+   "blank": "gandum",
+   "src": "made"
+  },
+  {
+   "text": "Dalam suratnya, Rani bilang ladang gandum di desanya sudah menguning.",
+   "en": "In her letter, Rani said the wheat fields in her village have turned golden.",
+   "ko": "라니는 편지에 마을 밀밭이 누렇게 익었다고 썼어요.",
+   "blank": "gandum",
+   "src": "made"
+  }
+ ],
  "w|gangguan": [
   {
    "text": "Ada gangguan sinyal di daerah ini.",
@@ -14003,6 +14099,22 @@
    "en": "That teen gang often gathers in the park.",
    "ko": "그 십대 무리는 자주 공원에 모여.",
    "blank": "Geng"
+  }
+ ],
+ "w|genggaman": [
+  {
+   "text": "Instruktur memperbaiki genggaman Andi pada pisau agar jarinya aman.",
+   "en": "The instructor corrected Andi's grip on the knife so his fingers would be safe.",
+   "ko": "강사는 손가락이 안전하도록 안디의 칼 잡는 법을 고쳐 줬어요.",
+   "blank": "genggaman",
+   "src": "made"
+  },
+  {
+   "text": "Dewi ingat genggaman tangan Rani saat mereka berpisah di stasiun.",
+   "en": "Dewi remembers Rani's grip on her hand when they said goodbye at the station.",
+   "ko": "데위는 역에서 헤어질 때 꼭 잡던 라니의 손을 기억해요.",
+   "blank": "genggaman",
+   "src": "made"
   }
  ],
  "w|gerak": [
@@ -17945,6 +18057,22 @@
    "src": "made"
   }
  ],
+ "w|kafe": [
+  {
+   "text": "Andi bermimpi membuka kafe kecil setelah lulus kelas masak.",
+   "en": "Andi dreams of opening a small café after finishing cooking class.",
+   "ko": "안디는 요리 수업을 마치면 작은 카페를 여는 꿈을 꿔요.",
+   "blank": "kafe",
+   "src": "made"
+  },
+  {
+   "text": "Dewi sering menulis surat untuk Rani di sebuah kafe dekat kantornya.",
+   "en": "Dewi often writes letters to Rani at a café near her office.",
+   "ko": "데위는 회사 근처 카페에서 라니에게 편지를 자주 써요.",
+   "blank": "kafe",
+   "src": "made"
+  }
+ ],
  "w|kaget": [
   {
    "text": "Dia kaget mendengar kabar mendadak itu.",
@@ -18175,6 +18303,22 @@
    "en": "The teacher asked students to write a simple sentence.",
    "ko": "선생님이 학생들에게 간단한 문장을 쓰라고 하셨어.",
    "blank": "kalimat"
+  }
+ ],
+ "w|kalkun": [
+  {
+   "text": "Untuk kelas spesial akhir tahun, Andi belajar memanggang daging kalkun utuh.",
+   "en": "For the special year-end class, Andi learned to roast a whole turkey.",
+   "ko": "연말 특별 수업에서 안디는 칠면조 한 마리를 통째로 굽는 법을 배웠어요.",
+   "blank": "kalkun",
+   "src": "made"
+  },
+  {
+   "text": "Rani menulis bahwa keluarga suaminya selalu makan kalkun panggang saat hari raya.",
+   "en": "Rani wrote that her husband's family always eats roast turkey on holidays.",
+   "ko": "라니는 시댁에서 명절마다 칠면조 구이를 먹는다고 썼어요.",
+   "blank": "kalkun",
+   "src": "made"
   }
  ],
  "w|kalung": [
@@ -20713,6 +20857,22 @@
    "src": "made"
   }
  ],
+ "w|kelapa": [
+  {
+   "text": "Andi memarut kelapa untuk membuat santan segar.",
+   "en": "Andi grated coconut to make fresh coconut milk.",
+   "ko": "안디는 신선한 코코넛 밀크를 만들려고 코코넛을 갈았어요.",
+   "blank": "kelapa",
+   "src": "made"
+  },
+  {
+   "text": "Rani bilang pohon kelapa di halaman rumah lamanya masih berdiri.",
+   "en": "Rani said the coconut tree in the yard of her old house is still standing.",
+   "ko": "라니는 옛집 마당의 야자나무가 아직 서 있다고 했어요.",
+   "blank": "kelapa",
+   "src": "made"
+  }
+ ],
  "w|kelaparan": [
   {
    "text": "Kelaparan membuat penduduk desa sangat lemah.",
@@ -21381,6 +21541,22 @@
    "src": "made"
   }
  ],
+ "w|kenyang": [
+  {
+   "text": "Setelah mencicipi semua masakan teman sekelas, Andi sudah terlalu kenyang untuk makan siang.",
+   "en": "After tasting all his classmates' dishes, Andi was too full for lunch.",
+   "ko": "반 친구들 요리를 다 맛본 뒤 안디는 너무 배불러서 점심을 못 먹었어요.",
+   "blank": "kenyang",
+   "src": "made"
+  },
+  {
+   "text": "Dewi ingat mereka pernah makan nasi goreng sampai terlalu kenyang untuk berjalan pulang.",
+   "en": "Dewi remembers once eating fried rice until they were too full to walk home.",
+   "ko": "데위는 둘이 볶음밥을 너무 먹어서 집에 걸어갈 수 없을 만큼 배불렀던 걸 기억해요.",
+   "blank": "kenyang",
+   "src": "made"
+  }
+ ],
  "w|kenyataan": [
   {
    "text": "Dia menolak kenyataan pahit.",
@@ -21512,6 +21688,22 @@
    "en": "Intan brings a bag of baby supplies to the restaurant.",
    "ko": "인탄은 식당에 아기 용품을 담은 가방을 가져와요.",
    "blank": "keperluan",
+   "src": "made"
+  }
+ ],
+ "w|kepiting": [
+  {
+   "text": "Peserta kelas diajari cara membersihkan kepiting tanpa terjepit capitnya.",
+   "en": "The class was taught how to clean a crab without getting pinched by its claws.",
+   "ko": "참가자들은 집게에 물리지 않고 게를 손질하는 법을 배웠어요.",
+   "blank": "kepiting",
+   "src": "made"
+  },
+  {
+   "text": "Dewi masih ingat makan kepiting saus padang bersama Rani di pantai.",
+   "en": "Dewi still remembers eating chili crab with Rani at the beach.",
+   "ko": "데위는 라니와 해변에서 파당 소스 게를 먹던 걸 아직 기억해요.",
+   "blank": "kepiting",
    "src": "made"
   }
  ],
@@ -23555,6 +23747,22 @@
    "src": "made"
   }
  ],
+ "w|konsisten": [
+  {
+   "text": "Kalau mau hasilnya bagus, ukuran potongan sayur harus konsisten, kata instruktur.",
+   "en": "If you want good results, the vegetable pieces have to be a consistent size, the instructor said.",
+   "ko": "결과가 좋으려면 채소 크기가 일정해야 한다고 강사가 말했어요.",
+   "blank": "konsisten",
+   "src": "made"
+  },
+  {
+   "text": "Selama belasan tahun, Dewi konsisten membalas surat Rani setiap bulan.",
+   "en": "For more than ten years, Dewi has consistently replied to Rani's letters every month.",
+   "ko": "십수 년 동안 데위는 매달 꾸준히 라니의 편지에 답장했어요.",
+   "blank": "konsisten",
+   "src": "made"
+  }
+ ],
  "w|konspirasi": [
   {
    "text": "Rina menuduh Budi dan Ibu membuat konspirasi untuk menyalahkannya.",
@@ -24655,6 +24863,22 @@
    "en": "The school laboratory needs modern equipment.",
    "ko": "학교 실험실에 최신 장비가 필요해.",
    "blank": "Laboratorium"
+  }
+ ],
+ "w|labu": [
+  {
+   "text": "Instruktur meminta Andi mengukus labu sampai empuk untuk sup.",
+   "en": "The instructor asked Andi to steam the pumpkin until soft for the soup.",
+   "ko": "강사는 안디에게 수프용 호박을 부드러워질 때까지 찌라고 했어요.",
+   "blank": "labu",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menulis resep kolak labu yang dulu sering mereka makan saat buka puasa.",
+   "en": "Dewi wrote down the pumpkin kolak recipe they often ate when breaking the fast.",
+   "ko": "데위는 둘이 금식을 깰 때 자주 먹던 호박 콜락 요리법을 적었어요.",
+   "blank": "labu",
+   "src": "made"
   }
  ],
  "w|laci": [
@@ -27173,6 +27397,22 @@
    "src": "made"
   }
  ],
+ "w|mangkuk": [
+  {
+   "text": "Andi menuang adonan ke dalam mangkuk besar sambil mendengarkan instruktur.",
+   "en": "Andi poured the batter into a big bowl while listening to the instructor.",
+   "ko": "안디는 강사 말을 들으면서 반죽을 큰 그릇에 부었어요.",
+   "blank": "mangkuk",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menyimpan surat-surat dari Rani di sebuah mangkuk keramik tua di atas meja.",
+   "en": "Dewi keeps the letters from Rani in an old ceramic bowl on the table.",
+   "ko": "데위는 라니에게 받은 편지들을 탁자 위 낡은 도자기 그릇에 넣어 둬요.",
+   "blank": "mangkuk",
+   "src": "made"
+  }
+ ],
  "w|maniak": [
   {
    "text": "Sepupu Fajar adalah maniak fotografi yang memotret setiap detail dekorasi pernikahan.",
@@ -28018,6 +28258,22 @@
    "en": "The number of dengue patients this month exceeded the hospital's estimate.",
    "ko": "이번 달 뎅기열 환자 수가 병원 예상을 넘었어요.",
    "blank": "melampaui",
+   "src": "made"
+  }
+ ],
+ "w|melanda": [
+  {
+   "text": "Rasa gugup sempat melanda Andi saat ujian praktik dimulai.",
+   "en": "A wave of nerves hit Andi when the practical exam began.",
+   "ko": "실기 시험이 시작되자 안디는 잠깐 긴장감에 휩싸였어요.",
+   "blank": "melanda",
+   "src": "made"
+  },
+  {
+   "text": "Rani bercerita bahwa banjir sempat melanda desanya bulan lalu.",
+   "en": "Rani wrote that a flood hit her village last month.",
+   "ko": "라니는 지난달 마을에 홍수가 났었다고 썼어요.",
+   "blank": "melanda",
    "src": "made"
   }
  ],
@@ -28915,6 +29171,22 @@
    "src": "made"
   }
  ],
+ "w|memanaskan": [
+  {
+   "text": "Sebelum menggoreng, Andi memanaskan minyak sampai benar-benar panas.",
+   "en": "Before frying, Andi heats the oil until it's really hot.",
+   "ko": "안디는 튀기기 전에 기름을 충분히 뜨겁게 달궈요.",
+   "blank": "memanaskan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menulis bahwa sekarang ia cukup memanaskan makanan beku untuk makan malam.",
+   "en": "Dewi wrote that these days she just heats up frozen food for dinner.",
+   "ko": "데위는 요즘 저녁으로 냉동식품을 데워 먹는 게 다라고 썼어요.",
+   "blank": "memanaskan",
+   "src": "made"
+  }
+ ],
  "w|memancing": [
   {
    "text": "Mereka pergi memancing di sungai pagi-pagi.",
@@ -29001,6 +29273,22 @@
    "en": "That's just how it is.",
    "ko": "원래 그런 거야.",
    "blank": "Memang"
+  }
+ ],
+ "w|memanggang": [
+  {
+   "text": "Andi baru pertama kali memanggang roti dengan oven besar milik sekolah masak.",
+   "en": "It was Andi's first time baking bread in the cooking school's big oven.",
+   "ko": "안디는 요리 학교의 큰 오븐으로 빵을 처음 구워 봤어요.",
+   "blank": "memanggang",
+   "src": "made"
+  },
+  {
+   "text": "Rani menulis bahwa sekarang ia suka memanggang kue setiap akhir pekan.",
+   "en": "Rani wrote that she now likes baking cakes every weekend.",
+   "ko": "라니는 요즘 주말마다 케이크 굽는 게 좋다고 썼어요.",
+   "blank": "memanggang",
+   "src": "made"
   }
  ],
  "w|memanggil": [
@@ -29591,6 +29879,22 @@
    "src": "made"
   }
  ],
+ "w|membasmi": [
+  {
+   "text": "Sekolah masak itu rutin memanggil petugas untuk membasmi semut di gudang tepung.",
+   "en": "The cooking school regularly calls in someone to get rid of ants in the flour storeroom.",
+   "ko": "그 요리 학교는 밀가루 창고의 개미를 없애려고 정기적으로 업체를 불러요.",
+   "blank": "membasmi",
+   "src": "made"
+  },
+  {
+   "text": "Rani menulis bahwa warga desanya bergotong royong membasmi hama tikus di sawah.",
+   "en": "Rani wrote that her villagers worked together to wipe out the rats in the rice fields.",
+   "ko": "라니는 마을 사람들이 힘을 모아 논의 쥐를 없앴다고 썼어요.",
+   "blank": "membasmi",
+   "src": "made"
+  }
+ ],
  "w|membatalkan": [
   {
    "text": "Mereka membatalkan rapat karena hujan.",
@@ -29985,6 +30289,22 @@
    "en": "Please clean the table.",
    "ko": "탁자 좀 닦아줘.",
    "blank": "membersihkan"
+  }
+ ],
+ "w|membesar": [
+  {
+   "text": "Adonan roti Andi membesar dua kali lipat setelah didiamkan satu jam.",
+   "en": "Andi's bread dough doubled in size after resting for an hour.",
+   "ko": "안디의 빵 반죽은 한 시간 두었더니 두 배로 부풀었어요.",
+   "blank": "membesar",
+   "src": "made"
+  },
+  {
+   "text": "Rani bercerita bahwa usaha kue kecilnya mulai membesar sejak tahun lalu.",
+   "en": "Rani wrote that her small cake business has been growing since last year.",
+   "ko": "라니는 작은 케이크 장사가 작년부터 커지기 시작했다고 썼어요.",
+   "blank": "membesar",
+   "src": "made"
   }
  ],
  "w|membesarkan": [
@@ -30566,6 +30886,22 @@
    "en": "Siti forgot to empty the fridge, so the vegetables rotted during the trip.",
    "ko": "시티가 냉장고 비우는 걸 깜빡해서 가는 동안 채소가 썩었어요.",
    "blank": "membusuk",
+   "src": "made"
+  }
+ ],
+ "w|membutakan": [
+  {
+   "text": "Uap panas dari panci sempat membutakan kacamata Andi beberapa detik.",
+   "en": "The hot steam from the pot briefly fogged up Andi's glasses for a few seconds.",
+   "ko": "냄비에서 나온 뜨거운 김 때문에 안디의 안경이 몇 초 동안 뿌옇게 됐어요.",
+   "blank": "membutakan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menulis bahwa cahaya lampu kendaraan di malam hari sering membutakan matanya.",
+   "en": "Dewi wrote that car headlights at night often blind her.",
+   "ko": "데위는 밤에 차 불빛 때문에 자주 눈이 부시다고 썼어요.",
+   "blank": "membutakan",
    "src": "made"
   }
  ],
@@ -33323,6 +33659,22 @@
    "blank": "mendengarkan"
   }
  ],
+ "w|mendengkur": [
+  {
+   "text": "Kucing pemilik sekolah masak mendengkur di dekat jendela dapur.",
+   "en": "The cooking school owner's cat purred near the kitchen window.",
+   "ko": "요리 학교 주인의 고양이가 부엌 창가에서 골골거렸어요.",
+   "blank": "mendengkur",
+   "src": "made"
+  },
+  {
+   "text": "Dewi bercerita bahwa suaminya mendengkur keras setiap malam.",
+   "en": "Dewi wrote that her husband snores loudly every night.",
+   "ko": "데위는 남편이 밤마다 코를 크게 곤다고 썼어요.",
+   "blank": "mendengkur",
+   "src": "made"
+  }
+ ],
  "w|menderita": [
   {
    "text": "Dia menderita lama.",
@@ -33380,6 +33732,22 @@
    "en": "The new system can detect fake transactions within seconds.",
    "ko": "새 시스템은 가짜 거래를 몇 초 만에 잡아낼 수 있어요.",
    "blank": "mendeteksi",
+   "src": "made"
+  }
+ ],
+ "w|mendidih": [
+  {
+   "text": "Andi memasukkan mi setelah air di panci mendidih.",
+   "en": "Andi put the noodles in after the water in the pot came to a boil.",
+   "ko": "안디는 냄비 물이 끓은 뒤에 면을 넣었어요.",
+   "blank": "mendidih",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menunggu air mendidih untuk teh sambil membaca ulang surat Rani.",
+   "en": "Dewi waited for the water to boil for tea while rereading Rani's letter.",
+   "ko": "데위는 차 끓일 물이 끓기를 기다리며 라니의 편지를 다시 읽었어요.",
+   "blank": "mendidih",
    "src": "made"
   }
  ],
@@ -36745,6 +37113,22 @@
    "src": "made"
   }
  ],
+ "w|menginformasikan": [
+  {
+   "text": "Pihak sekolah menginformasikan lewat pesan bahwa kelas besok dimulai lebih awal.",
+   "en": "The school notified everyone by message that tomorrow's class starts earlier.",
+   "ko": "학교 측은 내일 수업이 더 일찍 시작한다고 메시지로 알렸어요.",
+   "blank": "menginformasikan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menginformasikan alamat barunya kepada Rani di akhir surat.",
+   "en": "Dewi gave Rani her new address at the end of the letter.",
+   "ko": "데위는 편지 끝에 라니에게 새 주소를 알려 줬어요.",
+   "blank": "menginformasikan",
+   "src": "made"
+  }
+ ],
  "w|mengingat": [
   {
    "text": "Aku masih mengingat namanya.",
@@ -39985,6 +40369,22 @@
    "blank": "Menyewa"
   }
  ],
+ "w|menyewakan": [
+  {
+   "text": "Sekolah masak itu juga menyewakan dapurnya untuk acara ulang tahun.",
+   "en": "The cooking school also rents out its kitchen for birthday parties.",
+   "ko": "그 요리 학교는 생일 파티용으로 부엌을 빌려주기도 해요.",
+   "blank": "menyewakan",
+   "src": "made"
+  },
+  {
+   "text": "Rani sekarang menyewakan kamar kosong di rumahnya untuk mahasiswa.",
+   "en": "Rani now rents out the empty room in her house to university students.",
+   "ko": "라니는 지금 집의 빈방을 대학생에게 세놓아요.",
+   "blank": "menyewakan",
+   "src": "made"
+  }
+ ],
  "w|menyia-nyiakan": [
   {
    "text": "Dimas bilang jangan menyia-nyiakan obat dengan memberikannya tanpa resep.",
@@ -40659,6 +41059,22 @@
    "src": "made"
   }
  ],
+ "w|merebus": [
+  {
+   "text": "Instruktur mengajari Andi merebus telur supaya kuningnya tetap lembut.",
+   "en": "The instructor taught Andi to boil eggs so the yolks stay soft.",
+   "ko": "강사는 안디에게 노른자가 부드럽게 남도록 달걀 삶는 법을 가르쳤어요.",
+   "blank": "merebus",
+   "src": "made"
+  },
+  {
+   "text": "Dewi ingat ibunya selalu merebus jagung setiap kali Rani menginap.",
+   "en": "Dewi remembers her mother always boiled corn whenever Rani stayed over.",
+   "ko": "데위는 라니가 자고 갈 때마다 어머니가 옥수수를 삶아 주셨던 걸 기억해요.",
+   "blank": "merebus",
+   "src": "made"
+  }
+ ],
  "w|merebut": [
   {
    "text": "Mereka mencoba merebut kembali kota itu.",
@@ -41228,6 +41644,22 @@
    "en": "Ayu inherited an old box of brushes from her grandmother, who was a batik painter.",
    "ko": "아유는 바틱 화가였던 할머니의 오래된 붓 상자를 물려받았어요.",
    "blank": "mewarisi",
+   "src": "made"
+  }
+ ],
+ "w|mewariskan": [
+  {
+   "text": "Instruktur itu ingin mewariskan resep rendang keluarganya kepada murid-murid.",
+   "en": "The instructor wants to pass down her family's rendang recipe to her students.",
+   "ko": "그 강사는 집안의 른당 요리법을 학생들에게 물려주고 싶어 해요.",
+   "blank": "mewariskan",
+   "src": "made"
+  },
+  {
+   "text": "Nenek Dewi ingin mewariskan kalung emasnya kepada cucu perempuan pertama.",
+   "en": "Dewi's grandmother wants to pass down her gold necklace to her first granddaughter.",
+   "ko": "데위의 할머니는 금목걸이를 첫 손녀에게 물려주고 싶어 하세요.",
+   "blank": "mewariskan",
    "src": "made"
   }
  ],
@@ -43373,6 +43805,22 @@
    "src": "made"
   }
  ],
+ "w|organik": [
+  {
+   "text": "Sayuran untuk kelas ini dipasok dari kebun organik di pinggir kota.",
+   "en": "The vegetables for this class are supplied by an organic farm on the edge of town.",
+   "ko": "이 수업 채소는 도시 외곽의 유기농 농장에서 들어와요.",
+   "blank": "organik",
+   "src": "made"
+  },
+  {
+   "text": "Rani sekarang bekerja di pertanian organik dan mengirim foto sawahnya kepada Dewi.",
+   "en": "Rani now works on an organic farm and sent Dewi photos of her rice fields.",
+   "ko": "라니는 지금 유기농 농장에서 일하고 데위에게 논 사진을 보냈어요.",
+   "blank": "organik",
+   "src": "made"
+  }
+ ],
  "w|organisasi": [
   {
    "text": "Organisasi itu membantu korban bencana.",
@@ -43651,6 +44099,22 @@
    "blank": "paham"
   }
  ],
+ "w|pahit": [
+  {
+   "text": "Andi kaget karena saus buatannya terasa pahit akibat bawang putihnya gosong.",
+   "en": "Andi was surprised that his sauce tasted bitter because the garlic had burned.",
+   "ko": "안디는 마늘이 타서 소스가 쓴맛이 나 깜짝 놀랐어요.",
+   "blank": "pahit",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengaku kopi tanpa gula masih terlalu pahit baginya.",
+   "en": "Dewi admitted that coffee without sugar is still too bitter for her.",
+   "ko": "데위는 설탕 없는 커피가 아직 너무 쓰다고 털어놨어요.",
+   "blank": "pahit",
+   "src": "made"
+  }
+ ],
  "w|pahlawan": [
   {
    "text": "Pahlawan itu menyelamatkan kota.",
@@ -43663,6 +44127,22 @@
    "en": "Kids idolize heroes.",
    "ko": "아이들은 영웅을 우상으로 여겨.",
    "blank": "pahlawan"
+  }
+ ],
+ "w|pai": [
+  {
+   "text": "Kulit pai buatan Andi retak karena adonannya terlalu kering.",
+   "en": "The crust of Andi's pie cracked because the dough was too dry.",
+   "ko": "반죽이 너무 말라서 안디가 만든 파이 껍질이 갈라졌어요.",
+   "blank": "pai",
+   "src": "made"
+  },
+  {
+   "text": "Dewi bercerita tentang pai apel pertama yang ia buat untuk ulang tahun ibunya.",
+   "en": "Dewi wrote about the first apple pie she made for her mother's birthday.",
+   "ko": "데위는 어머니 생신에 처음 만든 사과 파이 얘기를 썼어요.",
+   "blank": "pai",
+   "src": "made"
   }
  ],
  "w|pajak": [
@@ -55869,6 +56349,22 @@
    "blank": "Sebesar"
   }
  ],
+ "w|sebetulnya": [
+  {
+   "text": "Andi sebetulnya tidak suka makanan pedas, tapi tetap mencicipi sambal buatan temannya.",
+   "en": "Andi doesn't actually like spicy food, but he still tasted his friend's chili sauce.",
+   "ko": "안디는 사실 매운 음식을 안 좋아하지만 친구가 만든 삼발을 맛봤어요.",
+   "blank": "sebetulnya",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengaku sebetulnya ia iri dengan kehidupan tenang Rani di desa.",
+   "en": "Dewi admitted she's actually envious of Rani's quiet life in the village.",
+   "ko": "데위는 사실 라니의 조용한 시골 생활이 부럽다고 털어놨어요.",
+   "blank": "sebetulnya",
+   "src": "made"
+  }
+ ],
  "w|sebotol": [
   {
    "text": "Saat jam istirahat, Andi menghabiskan sebotol teh manis dingin.",
@@ -56755,6 +57251,22 @@
    "en": "Let's leave while the weather is still nice.",
    "ko": "날씨가 아직 좋을 때 출발하자.",
    "blank": "selagi"
+  }
+ ],
+ "w|selai": [
+  {
+   "text": "Andi mengoleskan selai stroberi buatan sendiri ke roti panggang.",
+   "en": "Andi spread homemade strawberry jam on the toast.",
+   "ko": "안디는 직접 만든 딸기잼을 토스트에 발랐어요.",
+   "blank": "selai",
+   "src": "made"
+  },
+  {
+   "text": "Dewi berterima kasih atas selai nanas yang dikirim Rani bulan lalu.",
+   "en": "Dewi thanked Rani for the pineapple jam she sent last month.",
+   "ko": "데위는 라니가 지난달 보내 준 파인애플 잼에 고마워했어요.",
+   "blank": "selai",
+   "src": "made"
   }
  ],
  "w|selain": [
@@ -59513,6 +60025,22 @@
    "blank": "sosial"
   }
  ],
+ "w|sosis": [
+  {
+   "text": "Hari ini peserta kelas belajar membuat sosis ayam sendiri.",
+   "en": "Today the class participants are learning to make their own chicken sausages.",
+   "ko": "오늘 수업 참가자들은 닭고기 소시지를 직접 만드는 법을 배워요.",
+   "blank": "sosis",
+   "src": "made"
+  },
+  {
+   "text": "Dewi bercerita kepada Rani tentang sosis bakar yang dulu mereka beli di depan sekolah.",
+   "en": "Dewi told Rani about the grilled sausages they used to buy in front of school.",
+   "ko": "데위는 라니에게 예전에 학교 앞에서 사 먹던 구운 소시지 얘기를 했어요.",
+   "blank": "sosis",
+   "src": "made"
+  }
+ ],
  "w|sosok": [
   {
    "text": "Rudi melihat sosok neneknya duduk tenang di barisan depan.",
@@ -59922,6 +60450,22 @@
    "en": "The faces of runners who had just finished their first marathon radiated joy.",
    "ko": "첫 마라톤을 막 마친 주자들 얼굴에서 기쁨이 빛났어요.",
    "blank": "sukacita",
+   "src": "made"
+  }
+ ],
+ "w|sukar": [
+  {
+   "text": "Menurut Andi, membuat adonan kue sus termasuk teknik yang paling sukar.",
+   "en": "According to Andi, making choux pastry is one of the hardest techniques.",
+   "ko": "안디에 따르면 슈 반죽 만들기는 가장 어려운 기술 중 하나예요.",
+   "blank": "sukar",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengaku sukar menemukan teman sedekat Rani di kota baru.",
+   "en": "Dewi admitted it's hard to find a friend as close as Rani in the new city.",
+   "ko": "데위는 새 도시에서 라니만큼 가까운 친구를 찾기 어렵다고 털어놨어요.",
+   "blank": "sukar",
    "src": "made"
   }
  ],
@@ -61955,6 +62499,22 @@
    "blank": "terang"
   }
  ],
+ "w|terangsang": [
+  {
+   "text": "Aroma bawang goreng membuat selera makan Andi langsung terangsang.",
+   "en": "The smell of fried shallots immediately whetted Andi's appetite.",
+   "ko": "튀긴 샬롯 냄새에 안디는 곧바로 입맛이 돌았어요.",
+   "blank": "terangsang",
+   "src": "made"
+  },
+  {
+   "text": "Rani menulis bahwa rasa ingin tahunya terangsang setelah membaca buku sejarah kiriman Dewi.",
+   "en": "Rani wrote that her curiosity was sparked after reading the history book Dewi sent.",
+   "ko": "라니는 데위가 보낸 역사책을 읽고 호기심이 생겼다고 썼어요.",
+   "blank": "terangsang",
+   "src": "made"
+  }
+ ],
  "w|terapi": [
   {
    "text": "Terapi fisik membantunya pulih lebih cepat.",
@@ -63427,6 +63987,22 @@
    "src": "made"
   }
  ],
+ "w|terpecahkan": [
+  {
+   "text": "Misteri kue yang selalu bantat akhirnya terpecahkan: Andi lupa memakai pengembang.",
+   "en": "The mystery of the cake that always came out dense was finally solved: Andi forgot the leavening.",
+   "ko": "늘 떡처럼 되던 케이크의 수수께끼가 드디어 풀렸어요. 안디가 팽창제를 깜빡했던 거예요.",
+   "blank": "terpecahkan",
+   "src": "made"
+  },
+  {
+   "text": "Rani menulis bahwa teka-teki silang yang dikirim Dewi akhirnya terpecahkan juga.",
+   "en": "Rani wrote that the crossword Dewi sent had finally been solved.",
+   "ko": "라니는 데위가 보낸 십자말풀이를 드디어 풀었다고 썼어요.",
+   "blank": "terpecahkan",
+   "src": "made"
+  }
+ ],
  "w|terpencil": [
   {
    "text": "Stasiun kecil itu terletak di desa terpencil yang belum ada sinyal internet.",
@@ -64041,6 +64617,22 @@
    "en": "That promise is already written in the contract.",
    "ko": "그 약속은 이미 계약서에 적혀 있어.",
    "blank": "tertulis"
+  }
+ ],
+ "w|tertunda": [
+  {
+   "text": "Kelas memanggang roti minggu ini tertunda karena ovennya rusak.",
+   "en": "This week's bread-baking class was postponed because the oven broke.",
+   "ko": "오븐이 고장 나서 이번 주 빵 굽기 수업이 미뤄졌어요.",
+   "blank": "tertunda",
+   "src": "made"
+  },
+  {
+   "text": "Rencana Dewi mengunjungi Rani tertunda lagi karena urusan kantor.",
+   "en": "Dewi's plan to visit Rani was postponed again because of work.",
+   "ko": "라니를 찾아가려던 데위의 계획은 회사 일 때문에 또 미뤄졌어요.",
+   "blank": "tertunda",
+   "src": "made"
   }
  ],
  "w|tertutup": [
@@ -64703,6 +65295,22 @@
    "blank": "Tolong"
   }
  ],
+ "w|tomat": [
+  {
+   "text": "Andi mengiris tomat tipis-tipis untuk hiasan salad.",
+   "en": "Andi sliced the tomatoes thinly to garnish the salad.",
+   "ko": "안디는 샐러드 장식용으로 토마토를 얇게 썰었어요.",
+   "blank": "tomat",
+   "src": "made"
+  },
+  {
+   "text": "Dalam suratnya, Dewi bilang tanaman tomat di balkonnya mulai berbuah.",
+   "en": "In her letter, Dewi said the tomato plants on her balcony have started bearing fruit.",
+   "ko": "데위는 편지에 베란다의 토마토가 열매를 맺기 시작했다고 썼어요.",
+   "blank": "tomat",
+   "src": "made"
+  }
+ ],
  "w|tombak": [
   {
    "text": "Dimas membaca buku bergambar tentang pemburu yang memakai tombak bambu.",
@@ -64910,6 +65518,22 @@
    "en": "For that customer, losing all the wedding photos was a tragic event.",
    "ko": "그 손님에게 결혼사진을 몽땅 잃은 건 비극이었어요.",
    "blank": "tragis",
+   "src": "made"
+  }
+ ],
+ "w|traktir": [
+  {
+   "text": "Kalau masakanku dapat nilai terbaik, aku traktir kalian semua, kata Andi.",
+   "en": "If my dish gets the best score, I'll treat you all, Andi said.",
+   "ko": "내 요리가 최고 점수를 받으면 다 한턱낼게, 하고 안디가 말했어요.",
+   "blank": "traktir",
+   "src": "made"
+  },
+  {
+   "text": "Dewi berjanji akan traktir Rani makan malam kalau Rani datang ke kotanya.",
+   "en": "Dewi promised to treat Rani to dinner if Rani came to her city.",
+   "ko": "데위는 라니가 자기 도시에 오면 저녁을 사겠다고 약속했어요.",
+   "blank": "traktir",
    "src": "made"
   }
  ],
@@ -65455,6 +66079,22 @@
    "en": "Choose polite wording when you speak.",
    "ko": "말할 때 정중한 표현을 골라.",
    "blank": "ucapan"
+  }
+ ],
+ "w|udang": [
+  {
+   "text": "Andi belajar mengupas udang dan membuang kotorannya dengan pisau kecil.",
+   "en": "Andi learned to peel shrimp and remove the vein with a small knife.",
+   "ko": "안디는 작은 칼로 새우 껍질을 벗기고 내장을 빼는 법을 배웠어요.",
+   "blank": "udang",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menceritakan kerupuk udang buatan neneknya yang selalu habis dalam sehari.",
+   "en": "Dewi wrote about her grandmother's shrimp crackers that were always gone within a day.",
+   "ko": "데위는 늘 하루 만에 동나던 할머니표 새우 과자 얘기를 썼어요.",
+   "blank": "udang",
+   "src": "made"
   }
  ],
  "w|udara": [
