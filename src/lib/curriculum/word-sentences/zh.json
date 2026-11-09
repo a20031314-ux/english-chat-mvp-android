@@ -239,6 +239,22 @@
    "src": "made"
   }
  ],
+ "w|一带": [
+  {
+   "text": "酒店经理说，这一带晚上很安静，适合散步。",
+   "en": "The hotel manager said this area is quiet at night and good for a walk.",
+   "ko": "호텔 매니저는 이 일대가 밤에 조용해서 산책하기 좋다고 했어요.",
+   "blank": "一带",
+   "src": "made"
+  },
+  {
+   "text": "这一带只有孙悦开了面包店，早上总是排长队。",
+   "en": "Sun Yue runs the only bakery in this area, so there's always a long line in the morning.",
+   "ko": "이 일대에는 빵집이 쑨웨네 가게뿐이라 아침마다 줄이 길어요.",
+   "blank": "一带",
+   "src": "made"
+  }
+ ],
  "w|一旦": [
   {
    "text": "一旦开始就别停。",
@@ -6705,6 +6721,22 @@
    "src": "made"
   }
  ],
+ "w|保管": [
+  {
+   "text": "退房以后，前台可以替客人保管行李。",
+   "en": "After checkout, the front desk can look after guests' luggage.",
+   "ko": "체크아웃한 뒤에도 프런트에서 손님 짐을 맡아 줘요.",
+   "blank": "保管",
+   "src": "made"
+  },
+  {
+   "text": "孙悦把店里的备用钥匙交给隔壁大姐保管。",
+   "en": "Sun Yue gave the shop's spare key to the woman next door for safekeeping.",
+   "ko": "쑨웨는 가게 여분 열쇠를 옆집 아주머니께 맡겼어요.",
+   "blank": "保管",
+   "src": "made"
+  }
+ ],
  "w|保证": [
   {
    "text": "我保证没问题。",
@@ -7453,6 +7485,22 @@
    "blank": "停车"
   }
  ],
+ "w|停车场": [
+  {
+   "text": "这家酒店的停车场在地下，住店客人可以免费停车。",
+   "en": "This hotel's parking lot is underground, and guests can park for free.",
+   "ko": "이 호텔 주차장은 지하에 있고 투숙객은 무료로 주차할 수 있어요.",
+   "blank": "停车场",
+   "src": "made"
+  },
+  {
+   "text": "面包店门前没有停车场，顾客只好把车停在路边。",
+   "en": "There's no parking lot in front of the bakery, so customers have to park on the street.",
+   "ko": "빵집 앞에 주차장이 없어서 손님들은 길가에 차를 세울 수밖에 없어요.",
+   "blank": "停车场",
+   "src": "made"
+  }
+ ],
  "w|健康": [
   {
    "text": "保持健康。",
@@ -8088,6 +8136,22 @@
    "en": "The day the company got its investment, Lin Jing's whole family came to the office to celebrate.",
    "ko": "회사가 투자를 받던 날 린징네 온 가족이 사무실에 와서 축하해 줬어요.",
    "blank": "全家",
+   "src": "made"
+  }
+ ],
+ "w|全市": [
+  {
+   "text": "酒店的观光车可以带客人游遍全市的景点。",
+   "en": "The hotel's sightseeing bus can take guests to every attraction in the city.",
+   "ko": "호텔 관광버스를 타면 시 전체의 명소를 다 둘러볼 수 있어요.",
+   "blank": "全市",
+   "src": "made"
+  },
+  {
+   "text": "孙悦做的菠萝包在全市都很有名。",
+   "en": "Sun Yue's pineapple buns are famous all over the city.",
+   "ko": "쑨웨가 만든 파인애플빵은 온 시내에 소문이 나 있어요.",
+   "blank": "全市",
    "src": "made"
   }
  ],
@@ -9413,6 +9477,22 @@
    "en": "There are many animals on the farm.",
    "ko": "농장에 동물이 많아.",
    "blank": "农场"
+  }
+ ],
+ "w|农村": [
+  {
+   "text": "马林打算明天去农村转转，体验一下慢生活。",
+   "en": "Ma Lin plans to visit the countryside tomorrow and experience a slower life.",
+   "ko": "마린은 내일 농촌에 가서 느린 생활을 좀 느껴 볼 생각이에요.",
+   "blank": "农村",
+   "src": "made"
+  },
+  {
+   "text": "店里的面粉都是从附近农村直接买来的。",
+   "en": "All the flour in the shop is bought directly from nearby farming villages.",
+   "ko": "가게 밀가루는 모두 근처 농촌에서 바로 사 와요.",
+   "blank": "农村",
+   "src": "made"
   }
  ],
  "w|农民": [
@@ -11009,6 +11089,22 @@
    "blank": "刺激"
   }
  ],
+ "w|刻": [
+  {
+   "text": "老木匠在木牌上刻了酒店的名字，挂在大门口。",
+   "en": "The old carpenter carved the hotel's name on a wooden sign and hung it at the entrance.",
+   "ko": "늙은 목수가 나무 간판에 호텔 이름을 새겨서 정문에 걸었어요.",
+   "blank": "刻",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在月饼模子上刻了一朵梅花。",
+   "en": "Sun Yue carved a plum blossom into the mooncake mold.",
+   "ko": "쑨웨는 월병 틀에 매화 한 송이를 새겼어요.",
+   "blank": "刻",
+   "src": "made"
+  }
+ ],
  "w|前": [
   {
    "text": "晚饭前到。",
@@ -11050,6 +11146,22 @@
    "en": "The dentist says healthy gums are a prerequisite for getting an implant.",
    "ko": "의사는 잇몸이 건강해야 임플란트를 할 수 있다고 해요.",
    "blank": "前提",
+   "src": "made"
+  }
+ ],
+ "w|前方": [
+  {
+   "text": "出租车司机提醒马林，前方路口右转就是酒店。",
+   "en": "The taxi driver told Ma Lin the hotel was just a right turn at the intersection ahead.",
+   "ko": "택시 기사가 마린에게 앞쪽 교차로에서 오른쪽으로 돌면 바로 호텔이라고 알려 줬어요.",
+   "blank": "前方",
+   "src": "made"
+  },
+  {
+   "text": "孙悦告诉问路的人，沿着这条街走，前方就是邮局。",
+   "en": "Sun Yue told the person asking directions to follow this street, and the post office would be just ahead.",
+   "ko": "쑨웨는 길을 묻는 사람에게 이 길을 따라가면 앞쪽에 바로 우체국이 있다고 알려 줬어요.",
+   "blank": "前方",
    "src": "made"
   }
  ],
@@ -14857,6 +14969,22 @@
    "blank": "各位"
   }
  ],
+ "w|各国": [
+  {
+   "text": "酒店里住着来自各国的游客，早餐时能听到好几种语言。",
+   "en": "Tourists from many countries stay at the hotel, and you can hear several languages at breakfast.",
+   "ko": "호텔에는 여러 나라에서 온 여행객이 묵어서 아침 식사 때 여러 언어가 들려요.",
+   "blank": "各国",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的梦想是学会各国的传统面包。",
+   "en": "Sun Yue's dream is to learn the traditional breads of every country.",
+   "ko": "쑨웨의 꿈은 여러 나라의 전통 빵을 배우는 거예요.",
+   "blank": "各国",
+   "src": "made"
+  }
+ ],
  "w|各地": [
   {
    "text": "来自各地的客人都在留言本上写下了对赵磊的感谢。",
@@ -17715,6 +17843,22 @@
    "blank": "困难"
   }
  ],
+ "w|围绕": [
+  {
+   "text": "酒店的花园是围绕着一个小湖修建的。",
+   "en": "The hotel garden was built around a small lake.",
+   "ko": "호텔 정원은 작은 호수를 둘러싸고 지어졌어요.",
+   "blank": "围绕",
+   "src": "made"
+  },
+  {
+   "text": "顾客们围绕新口味的蛋糕讨论了好久。",
+   "en": "The customers talked for ages about the new cake flavor.",
+   "ko": "손님들은 새로운 맛 케이크를 두고 한참 이야기를 나눴어요.",
+   "blank": "围绕",
+   "src": "made"
+  }
+ ],
  "w|固定": [
   {
    "text": "张伟和老朋友约好每个月固定写一封信。",
@@ -18279,6 +18423,22 @@
    "blank": "地址"
   }
  ],
+ "w|地带": [
+  {
+   "text": "这家酒店建在沿海地带，一年四季都很温暖。",
+   "en": "This hotel is built in a coastal zone, so it's warm all year round.",
+   "ko": "이 호텔은 해안 지대에 있어서 일 년 내내 따뜻해요.",
+   "blank": "地带",
+   "src": "made"
+  },
+  {
+   "text": "这款面包用的麦子产自北方的平原地带。",
+   "en": "The wheat in this bread comes from the plains of the north.",
+   "ko": "이 빵에 쓰는 밀은 북쪽 평원 지대에서 나요.",
+   "blank": "地带",
+   "src": "made"
+  }
+ ],
  "w|地方": [
   {
    "text": "这地方真好。",
@@ -18365,6 +18525,22 @@
    "en": "Protect the Earth.",
    "ko": "지구를 지켜.",
    "blank": "地球"
+  }
+ ],
+ "w|地理": [
+  {
+   "text": "马林对当地的地理不熟，就向服务员要了一张地图。",
+   "en": "Ma Lin didn't know the local geography, so he asked a staff member for a map.",
+   "ko": "마린은 이곳 지리를 잘 몰라서 직원에게 지도를 한 장 달라고 했어요.",
+   "blank": "地理",
+   "src": "made"
+  },
+  {
+   "text": "店里挂着一张地图，标出各种面包的来源，顾客说像在上地理课。",
+   "en": "A map in the shop marks where each kind of bread comes from, and customers say it's like a geography class.",
+   "ko": "가게에 빵마다 어디서 왔는지 표시한 지도가 걸려 있어서 손님들은 지리 수업 같다고 해요.",
+   "blank": "地理",
+   "src": "made"
   }
  ],
  "w|地盘": [
@@ -19392,6 +19568,22 @@
    "en": "Xiaoxue's sister works at the foreign ministry and is abroad most of the year; the first thing she does back home is see the dentist.",
    "ko": "샤오쉐 언니는 외교부에서 일해서 일 년 내내 해외에 있다가 귀국하면 제일 먼저 치과에 가요.",
    "blank": "外交",
+   "src": "made"
+  }
+ ],
+ "w|外出": [
+  {
+   "text": "下雨天马林不想外出，就在房间里看书。",
+   "en": "On rainy days Ma Lin doesn't want to go out, so he reads in his room.",
+   "ko": "비 오는 날 마린은 밖에 나가기 싫어서 방에서 책을 읽어요.",
+   "blank": "外出",
+   "src": "made"
+  },
+  {
+   "text": "孙悦外出进货时，店里由小李看着。",
+   "en": "When Sun Yue goes out to buy supplies, Xiao Li minds the shop.",
+   "ko": "쑨웨가 물건을 떼러 나가면 가게는 샤오리가 봐요.",
+   "blank": "外出",
    "src": "made"
   }
  ],
@@ -22381,6 +22573,22 @@
    "blank": "安全"
   }
  ],
+ "w|安定": [
+  {
+   "text": "听说航班恢复了，滞留在酒店的旅客情绪才安定下来。",
+   "en": "Only after hearing that flights had resumed did the stranded travelers at the hotel calm down.",
+   "ko": "항공편이 다시 뜬다는 말을 듣고서야 호텔에 발이 묶인 여행객들의 마음이 안정됐어요.",
+   "blank": "安定",
+   "src": "made"
+  },
+  {
+   "text": "店里的生意稳了，孙悦的生活也慢慢安定下来。",
+   "en": "Once business at the shop steadied, Sun Yue's life gradually settled down too.",
+   "ko": "가게 장사가 자리를 잡자 쑨웨의 생활도 차츰 안정됐어요.",
+   "blank": "安定",
+   "src": "made"
+  }
+ ],
  "w|安心": [
   {
    "text": "妈妈说只要两兄妹和好了，她就安心了。",
@@ -24033,6 +24241,22 @@
    "src": "made"
   }
  ],
+ "w|小岛": [
+  {
+   "text": "前台告诉马林，附近有座小岛，坐船很快就到。",
+   "en": "The front desk told Ma Lin there's a small island nearby that you can reach quickly by boat.",
+   "ko": "프런트에서 마린에게 근처에 작은 섬이 있는데 배로 금방 간다고 알려 줬어요.",
+   "blank": "小岛",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的面包店每天给对面小岛上的民宿送早餐。",
+   "en": "Sun Yue's bakery delivers breakfast every day to a guesthouse on the small island opposite.",
+   "ko": "쑨웨의 빵집은 매일 맞은편 작은 섬의 민박에 아침을 배달해요.",
+   "blank": "小岛",
+   "src": "made"
+  }
+ ],
  "w|小心": [
   {
    "text": "小心脚下。",
@@ -24929,6 +25153,22 @@
    "blank": "岛"
   }
  ],
+ "w|岛屿": [
+  {
+   "text": "站在酒店顶楼，能看到海上的几座岛屿。",
+   "en": "From the hotel rooftop you can see several islands out at sea.",
+   "ko": "호텔 옥상에 서면 바다 위의 섬 몇 개가 보여요.",
+   "blank": "岛屿",
+   "src": "made"
+  },
+  {
+   "text": "孙悦翻着旅行杂志，看到南方岛屿上的特色点心，看得入了迷。",
+   "en": "Leafing through a travel magazine, Sun Yue was captivated by the local pastries of the southern islands.",
+   "ko": "쑨웨는 여행 잡지를 넘기다가 남쪽 섬들의 특색 있는 간식을 보고 푹 빠졌어요.",
+   "blank": "岛屿",
+   "src": "made"
+  }
+ ],
  "w|岩石": [
   {
    "text": "赵磊家的果园后面是一片岩石，什么庄稼也种不了。",
@@ -25380,6 +25620,22 @@
    "en": "Every Wednesday Liu Fang goes into town to get stock from the city wholesale depot.",
    "ko": "류팡은 매주 수요일마다 시내에 나가 도매상에서 물건을 떼 와요.",
    "blank": "市",
+   "src": "made"
+  }
+ ],
+ "w|市区": [
+  {
+   "text": "马林住的酒店在市区，离火车站只要走十分钟。",
+   "en": "The hotel Ma Lin is staying at is downtown, just a ten-minute walk from the train station.",
+   "ko": "마린이 묵는 호텔은 시내에 있어서 기차역까지 걸어서 십 분이면 돼요.",
+   "blank": "市区",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的面包店开在市区一条老街上。",
+   "en": "Sun Yue's bakery is on an old street downtown.",
+   "ko": "쑨웨의 빵집은 시내의 오래된 거리에 있어요.",
+   "blank": "市区",
    "src": "made"
   }
  ],
@@ -26189,6 +26445,22 @@
    "en": "Luckily, we made it.",
    "ko": "운 좋게도 제시간에 왔어.",
    "blank": "幸运"
+  }
+ ],
+ "w|乡下": [
+  {
+   "text": "马林小时候在乡下长大，所以很喜欢酒店外的田野。",
+   "en": "Ma Lin grew up in the countryside, so he loves the fields outside the hotel.",
+   "ko": "마린은 어릴 때 시골에서 자라서 호텔 밖 들판이 아주 좋아요.",
+   "blank": "乡下",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的奶奶住在乡下，最会做老式馒头。",
+   "en": "Sun Yue's grandmother lives in the countryside and makes the best old-fashioned steamed buns.",
+   "ko": "쑨웨의 할머니는 시골에 사시는데 옛날식 찐빵을 제일 잘 만드세요.",
+   "blank": "乡下",
+   "src": "made"
   }
  ],
  "w|乡村": [
@@ -34467,6 +34739,22 @@
    "src": "made"
   }
  ],
+ "w|改进": [
+  {
+   "text": "酒店根据客人的意见改进了早餐。",
+   "en": "The hotel improved its breakfast based on guests' feedback.",
+   "ko": "호텔은 손님들의 의견을 받아 아침 식사를 개선했어요.",
+   "blank": "改进",
+   "src": "made"
+  },
+  {
+   "text": "孙悦一次次改进配方，终于做出了满意的吐司。",
+   "en": "Sun Yue kept improving the recipe until she finally made toast she was happy with.",
+   "ko": "쑨웨는 레시피를 거듭 고쳐서 마침내 마음에 드는 식빵을 만들었어요.",
+   "blank": "改进",
+   "src": "made"
+  }
+ ],
  "w|改造": [
   {
    "text": "这栋老楼去年改造过，现在有了电梯。",
@@ -38181,6 +38469,22 @@
    "src": "made"
   }
  ],
+ "w|村庄": [
+  {
+   "text": "从房间窗口望出去，远处的村庄冒着几缕炊烟。",
+   "en": "Looking out the room window, wisps of cooking smoke rose from a distant village.",
+   "ko": "방 창문으로 내다보니 멀리 있는 마을에서 밥 짓는 연기가 몇 줄기 피어올랐어요.",
+   "blank": "村庄",
+   "src": "made"
+  },
+  {
+   "text": "孙悦用的蜂蜜来自山里的一个村庄。",
+   "en": "The honey Sun Yue uses comes from a village in the mountains.",
+   "ko": "쑨웨가 쓰는 꿀은 산속 마을에서 와요.",
+   "blank": "村庄",
+   "src": "made"
+  }
+ ],
  "w|条": [
   {
    "text": "一条路。",
@@ -38377,6 +38681,22 @@
    "src": "made"
   }
  ],
+ "w|极为": [
+  {
+   "text": "这家酒店的服务极为周到，马林住得很满意。",
+   "en": "This hotel's service was extremely attentive, and Ma Lin was very happy with his stay.",
+   "ko": "이 호텔은 서비스가 무척 세심해서 마린은 아주 만족했어요.",
+   "blank": "极为",
+   "src": "made"
+  },
+  {
+   "text": "这款千层蛋糕做起来极为费时。",
+   "en": "This mille-feuille cake is extremely time-consuming to make.",
+   "ko": "이 크레이프 케이크는 만드는 데 시간이 무척 많이 걸려요.",
+   "blank": "极为",
+   "src": "made"
+  }
+ ],
  "w|极了": [
   {
    "text": "赢了这场官司，马林高兴极了，请全组同事吃饭。",
@@ -38470,6 +38790,22 @@
    "en": "Sun Yue filled the feverish patient's cup with warm water.",
    "ko": "쑨웨는 열이 나는 환자의 컵에 따뜻한 물을 가득 따라 줬어요.",
    "blank": "杯子",
+   "src": "made"
+  }
+ ],
+ "w|杰出": [
+  {
+   "text": "酒店大厅挂着一位杰出画家的作品。",
+   "en": "The hotel lobby displays work by an outstanding painter.",
+   "ko": "호텔 로비에 뛰어난 화가의 작품이 걸려 있어요.",
+   "blank": "杰出",
+   "src": "made"
+  },
+  {
+   "text": "教孙悦做面包的师傅是一位杰出的面包师。",
+   "en": "The master who taught Sun Yue to bake is an outstanding baker.",
+   "ko": "쑨웨에게 빵을 가르친 스승은 뛰어난 제빵사예요.",
+   "blank": "杰出",
    "src": "made"
   }
  ],
@@ -41803,6 +42139,22 @@
    "src": "made"
   }
  ],
+ "w|海外": [
+  {
+   "text": "这家酒店的客人有不少来自海外。",
+   "en": "Quite a few of this hotel's guests come from overseas.",
+   "ko": "이 호텔 손님 중에는 해외에서 온 사람이 꽤 많아요.",
+   "blank": "海外",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的表姐在海外读书，常给她寄来新的食谱。",
+   "en": "Sun Yue's cousin studies overseas and often sends her new recipes.",
+   "ko": "쑨웨의 사촌 언니는 해외에서 공부하는데 새 레시피를 자주 보내 줘요.",
+   "blank": "海外",
+   "src": "made"
+  }
+ ],
  "w|海岸": [
   {
    "text": "这条河一直流到海岸边，王刚想沿着河走到入海口。",
@@ -42865,6 +43217,22 @@
    "src": "made"
   }
  ],
+ "w|灰色": [
+  {
+   "text": "酒店房间的地毯是灰色的，看上去很素净。",
+   "en": "The carpet in the hotel room is gray and looks plain and clean.",
+   "ko": "호텔 방 카펫은 회색이라 깔끔해 보여요.",
+   "blank": "灰色",
+   "src": "made"
+  },
+  {
+   "text": "孙悦给店员们定做了灰色的围裙。",
+   "en": "Sun Yue had gray aprons made for her staff.",
+   "ko": "쑨웨는 직원들에게 회색 앞치마를 맞춰 줬어요.",
+   "blank": "灰色",
+   "src": "made"
+  }
+ ],
  "w|灵魂": [
   {
    "text": "触及灵魂。",
@@ -43014,6 +43382,22 @@
    "en": "At the class meeting, Wang Fang suggested an idea: change seats once a week.",
    "ko": "학급회의에서 왕팡이 매주 자리를 바꾸자는 아이디어를 냈어요.",
    "blank": "点子",
+   "src": "made"
+  }
+ ],
+ "w|点燃": [
+  {
+   "text": "服务员点燃了壁炉，大厅马上暖和起来。",
+   "en": "The staff member lit the fireplace, and the lobby warmed up right away.",
+   "ko": "직원이 벽난로에 불을 붙이자 로비가 금세 따뜻해졌어요.",
+   "blank": "点燃",
+   "src": "made"
+  },
+  {
+   "text": "孙悦点燃了生日蛋糕上的蜡烛，大家一起唱起歌来。",
+   "en": "Sun Yue lit the candles on the birthday cake, and everyone started singing.",
+   "ko": "쑨웨가 생일 케이크 초에 불을 붙이자 모두 함께 노래를 불렀어요.",
+   "blank": "点燃",
    "src": "made"
   }
  ],
@@ -45225,6 +45609,22 @@
    "en": "He was late because of work.",
    "ko": "일 때문에 그는 늦었어.",
    "blank": "由于"
+  }
+ ],
+ "w|由此": [
+  {
+   "text": "这家酒店的回头客很多，由此可见服务不错。",
+   "en": "This hotel has many repeat guests, which shows its service is good.",
+   "ko": "이 호텔은 다시 찾는 손님이 많은데, 이걸 보면 서비스가 좋다는 걸 알 수 있어요.",
+   "blank": "由此",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的面包每天都卖光，由此可见大家有多喜欢。",
+   "en": "Sun Yue's bread sells out every day, which shows how much people love it.",
+   "ko": "쑨웨의 빵은 날마다 다 팔리는데, 이걸 보면 사람들이 얼마나 좋아하는지 알 수 있어요.",
+   "blank": "由此",
+   "src": "made"
   }
  ],
  "w|甲板": [
@@ -49739,6 +50139,22 @@
    "src": "made"
   }
  ],
+ "w|粉碎": [
+  {
+   "text": "酒吧的机器能把冰块粉碎，用来调冰沙。",
+   "en": "The bar's machine can crush ice to make slushies.",
+   "ko": "바에 있는 기계는 얼음을 잘게 부숴서 슬러시를 만들 수 있어요.",
+   "blank": "粉碎",
+   "src": "made"
+  },
+  {
+   "text": "孙悦先把核桃粉碎，再拌进面团里。",
+   "en": "Sun Yue first crushes the walnuts, then mixes them into the dough.",
+   "ko": "쑨웨는 먼저 호두를 잘게 부순 다음 반죽에 섞어요.",
+   "blank": "粉碎",
+   "src": "made"
+  }
+ ],
  "w|粗": [
   {
    "text": "哥哥说话声音粗，张伟以前总以为他在生气。",
@@ -50255,6 +50671,22 @@
    "blank": "线索"
   }
  ],
+ "w|线路": [
+  {
+   "text": "酒店门口贴着一张公交线路图，方便客人出行。",
+   "en": "A bus route map is posted at the hotel entrance to make getting around easier for guests.",
+   "ko": "호텔 입구에 버스 노선도가 붙어 있어서 손님들이 다니기 편해요.",
+   "blank": "线路",
+   "src": "made"
+  },
+  {
+   "text": "送货车走错了线路，面包晚到了半小时。",
+   "en": "The delivery van took the wrong route, so the bread arrived half an hour late.",
+   "ko": "배송 차가 노선을 잘못 타서 빵이 삼십 분 늦게 도착했어요.",
+   "blank": "线路",
+   "src": "made"
+  }
+ ],
  "w|练": [
   {
    "text": "健身的小伙子来买护膝，说练腿的时候肌肉拉伤了。",
@@ -50419,6 +50851,22 @@
    "en": "He finally agreed.",
    "ko": "그 사람이 드디어 승낙했어.",
    "blank": "终于"
+  }
+ ],
+ "w|终结": [
+  {
+   "text": "高铁通车以后，这家酒店独占客源的日子就终结了。",
+   "en": "Once the high-speed rail opened, the days of this hotel having all the guests to itself came to an end.",
+   "ko": "고속철도가 개통된 뒤로 이 호텔이 손님을 독차지하던 시절은 끝났어요.",
+   "blank": "终结",
+   "src": "made"
+  },
+  {
+   "text": "那家老面包房一关门，就终结了街上几十年的老味道。",
+   "en": "When that old bakery closed, it ended a flavor the street had known for decades.",
+   "ko": "그 오래된 빵집이 문을 닫으면서 거리의 수십 년 된 옛 맛도 끝이 났어요.",
+   "blank": "终结",
+   "src": "made"
   }
  ],
  "w|终身": [
@@ -51206,6 +51654,22 @@
    "en": "I met him online.",
    "ko": "저는 그를 인터넷에서 알게 됐어요.",
    "blank": "网络",
+   "src": "made"
+  }
+ ],
+ "w|罕见": [
+  {
+   "text": "这么大的雪在当地十分罕见，酒店客人纷纷出来拍照。",
+   "en": "Snow this heavy is very rare here, so hotel guests came out one after another to take photos.",
+   "ko": "이렇게 큰 눈은 이곳에서 아주 드물어서 호텔 손님들이 잇달아 나와 사진을 찍었어요.",
+   "blank": "罕见",
+   "src": "made"
+  },
+  {
+   "text": "这种黑麦面包在本地很罕见，常有人专程来买。",
+   "en": "This rye bread is rare around here, so people often come specially to buy it.",
+   "ko": "이런 호밀빵은 이 지역에서 드물어서 일부러 사러 오는 사람이 많아요.",
+   "blank": "罕见",
    "src": "made"
   }
  ],
@@ -53439,6 +53903,38 @@
    "src": "made"
   }
  ],
+ "w|航线": [
+  {
+   "text": "一家航空公司新开了一条航线，直飞这座海滨城市。",
+   "en": "An airline has opened a new route that flies directly to this seaside city.",
+   "ko": "한 항공사가 이 바닷가 도시로 바로 가는 노선을 새로 열었어요.",
+   "blank": "航线",
+   "src": "made"
+  },
+  {
+   "text": "有位常客是飞行员，他飞的航线要经过好几个国家。",
+   "en": "One regular customer is a pilot whose route passes through several countries.",
+   "ko": "단골 중에 조종사가 있는데 그 사람이 비행하는 노선은 여러 나라를 지나요.",
+   "blank": "航线",
+   "src": "made"
+  }
+ ],
+ "w|航行": [
+  {
+   "text": "马林在大厅看到一张海报，介绍一次环岛航行。",
+   "en": "In the lobby Ma Lin saw a poster advertising a voyage around the island.",
+   "ko": "마린은 로비에서 섬 일주 항해를 소개하는 포스터를 봤어요.",
+   "blank": "航行",
+   "src": "made"
+  },
+  {
+   "text": "这批黄油经过很长的海上航行，才运到港口。",
+   "en": "This batch of butter made a long sea voyage before reaching the port.",
+   "ko": "이번 버터는 긴 항해를 거쳐서야 항구에 도착했어요.",
+   "blank": "航行",
+   "src": "made"
+  }
+ ],
  "w|舰长": [
   {
    "text": "王刚退役前是海军，他的老舰长至今还和他通电话。",
@@ -54551,6 +55047,38 @@
    "en": "There's too much luggage.",
    "ko": "짐이 너무 많아.",
    "blank": "行李"
+  }
+ ],
+ "w|行程": [
+  {
+   "text": "服务员帮马林把明天的行程安排好了。",
+   "en": "The staff member arranged Ma Lin's itinerary for tomorrow.",
+   "ko": "직원이 마린의 내일 일정을 다 짜 줬어요.",
+   "blank": "行程",
+   "src": "made"
+  },
+  {
+   "text": "孙悦把下个月去外地考察的行程排得满满的。",
+   "en": "Sun Yue packed next month's research trip itinerary full.",
+   "ko": "쑨웨는 다음 달 다른 지역 답사 일정을 빽빽하게 짰어요.",
+   "blank": "行程",
+   "src": "made"
+  }
+ ],
+ "w|行走": [
+  {
+   "text": "马林沿着海边行走了很久，才慢慢回到酒店。",
+   "en": "Ma Lin walked along the seashore for a long time before slowly heading back to the hotel.",
+   "ko": "마린은 바닷가를 따라 한참 걷다가 천천히 호텔로 돌아왔어요.",
+   "blank": "行走",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的腿受过伤，长时间行走就会疼。",
+   "en": "Sun Yue once hurt her leg, so it aches if she walks for a long time.",
+   "ko": "쑨웨는 다리를 다친 적이 있어서 오래 걸으면 아파요.",
+   "blank": "行走",
+   "src": "made"
   }
  ],
  "w|街": [
@@ -58847,6 +59375,22 @@
    "blank": "身份"
   }
  ],
+ "w|身份证": [
+  {
+   "text": "前台提醒马林，入住时要出示身份证。",
+   "en": "The front desk reminded Ma Lin that he needs to show his ID card when checking in.",
+   "ko": "프런트에서 마린에게 체크인할 때 신분증을 보여 줘야 한다고 알려 줬어요.",
+   "blank": "身份证",
+   "src": "made"
+  },
+  {
+   "text": "孙悦去办营业执照时，忘了带身份证。",
+   "en": "When Sun Yue went to get her business license, she forgot to bring her ID card.",
+   "ko": "쑨웨는 사업자 등록을 하러 갔다가 신분증을 깜빡했어요.",
+   "blank": "身份证",
+   "src": "made"
+  }
+ ],
  "w|身体": [
   {
    "text": "身体还好吗？",
@@ -59533,6 +60077,22 @@
    "en": "Things are much better now than before.",
    "ko": "예전에 비하면 지금은 훨씬 나아.",
    "blank": "过去"
+  }
+ ],
+ "w|过夜": [
+  {
+   "text": "马林原本只想歇歇脚，最后却在这家小旅馆过夜了。",
+   "en": "Ma Lin only meant to rest his feet, but ended up spending the night at this little inn.",
+   "ko": "마린은 잠깐 쉬어 가려던 건데 결국 이 작은 여관에서 하룻밤을 묵었어요.",
+   "blank": "过夜",
+   "src": "made"
+  },
+  {
+   "text": "为了赶制婚礼蛋糕，孙悦干脆在店里过夜，第二天一早接着烤。",
+   "en": "To finish the wedding cake in time, Sun Yue simply spent the night at the shop and kept baking early the next morning.",
+   "ko": "웨딩 케이크를 서둘러 만드느라 쑨웨는 아예 가게에서 밤을 보내고 다음 날 아침 일찍 다시 구웠어요.",
+   "blank": "过夜",
+   "src": "made"
   }
  ],
  "w|过度": [
@@ -60756,6 +61316,22 @@
    "en": "After talking it through, Yang Yang and his sister's relationship gradually got better.",
    "ko": "속 시원히 얘기한 뒤 양양과 누나 사이는 점점 좋아졌어요.",
    "blank": "逐渐",
+   "src": "made"
+  }
+ ],
+ "w|途中": [
+  {
+   "text": "马林在去酒店的途中，顺便买了一束花。",
+   "en": "On the way to the hotel, Ma Lin picked up a bunch of flowers.",
+   "ko": "마린은 호텔로 가는 길에 꽃 한 다발을 샀어요.",
+   "blank": "途中",
+   "src": "made"
+  },
+  {
+   "text": "送蛋糕的途中下起了大雨，孙悦赶紧把盒子护在怀里。",
+   "en": "It started pouring on the way to deliver the cake, so Sun Yue quickly hugged the box to her chest.",
+   "ko": "케이크를 배달하러 가는 길에 큰비가 쏟아져서 쑨웨는 얼른 상자를 품에 감쌌어요.",
+   "blank": "途中",
    "src": "made"
   }
  ],
@@ -64469,6 +65045,22 @@
    "src": "made"
   }
  ],
+ "w|预约": [
+  {
+   "text": "马林提前一周在网上预约了房间。",
+   "en": "Ma Lin booked his room online a week in advance.",
+   "ko": "마린은 일주일 전에 인터넷으로 방을 예약했어요.",
+   "blank": "预约",
+   "src": "made"
+  },
+  {
+   "text": "定做生日蛋糕需要提前三天预约。",
+   "en": "Custom birthday cakes need to be ordered three days in advance.",
+   "ko": "생일 케이크를 맞추려면 사흘 전에 예약해야 해요.",
+   "blank": "预约",
+   "src": "made"
+  }
+ ],
  "w|预言": [
   {
    "text": "专家预言今年房价会回落，王刚却不太相信。",
@@ -65181,6 +65773,22 @@
    "blank": "马上"
   }
  ],
+ "w|马车": [
+  {
+   "text": "酒店门口停着一辆马车，专门带客人游古城。",
+   "en": "A horse-drawn carriage waits at the hotel entrance to take guests around the old town.",
+   "ko": "호텔 입구에 마차가 한 대 서 있는데 손님들을 태우고 옛 도시를 돌아요.",
+   "blank": "马车",
+   "src": "made"
+  },
+  {
+   "text": "孙悦把一款面包做成了马车的形状，孩子们特别喜欢。",
+   "en": "Sun Yue shaped one bread like a horse carriage, and kids love it.",
+   "ko": "쑨웨가 빵 하나를 마차 모양으로 만들었더니 아이들이 무척 좋아해요.",
+   "blank": "马车",
+   "src": "made"
+  }
+ ],
  "w|驴": [
   {
    "text": "沙滩上有人骑着驴招揽游客拍照。",
@@ -65270,6 +65878,22 @@
    "en": "Lili's nephew came to visit and used the cardboard boxes as a knight's armour.",
    "ko": "리리의 조카가 새집에 놀러 와서 종이 상자를 기사 갑옷으로 삼았어요.",
    "blank": "骑士",
+   "src": "made"
+  }
+ ],
+ "w|骑马": [
+  {
+   "text": "酒店每周组织客人去附近的草原骑马。",
+   "en": "Every week the hotel takes guests horseback riding on the nearby grassland.",
+   "ko": "호텔은 매주 손님들을 데리고 근처 초원에 말을 타러 가요.",
+   "blank": "骑马",
+   "src": "made"
+  },
+  {
+   "text": "周末孙悦带女儿去郊外骑马，店里交给伙计看着。",
+   "en": "On weekends Sun Yue takes her daughter horseback riding outside the city and leaves the shop to her assistant.",
+   "ko": "주말에 쑨웨는 딸을 데리고 교외로 말을 타러 가고 가게는 직원에게 맡겨요.",
+   "blank": "骑马",
    "src": "made"
   }
  ],
@@ -65436,6 +66060,22 @@
    "en": "Liu Fang's title is senior engineer, and it's even busier than she expected.",
    "ko": "류팡의 직위는 선임 엔지니어인데 생각보다 더 바빠요.",
    "blank": "高级",
+   "src": "made"
+  }
+ ],
+ "w|高速公路": [
+  {
+   "text": "从机场到酒店要走一段高速公路，大概一个小时。",
+   "en": "Getting from the airport to the hotel takes a stretch of highway, about an hour.",
+   "ko": "공항에서 호텔까지는 고속도로를 한참 달려야 해서 한 시간쯤 걸려요.",
+   "blank": "高速公路",
+   "src": "made"
+  },
+  {
+   "text": "孙悦每周开车走高速公路去批发市场进货。",
+   "en": "Every week Sun Yue drives the highway to the wholesale market to stock up.",
+   "ko": "쑨웨는 매주 고속도로로 차를 몰고 도매 시장에 물건을 떼러 가요.",
+   "blank": "高速公路",
    "src": "made"
   }
  ],

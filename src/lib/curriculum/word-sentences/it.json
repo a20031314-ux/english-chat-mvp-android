@@ -2199,6 +2199,22 @@
    "src": "made"
   }
  ],
+ "w|allacciare": [
+  {
+   "text": "Prima di entrare in aula Davide si ferma ad allacciare la toga.",
+   "en": "Before entering the courtroom Davide stops to fasten his gown.",
+   "ko": "법정에 들어가기 전에 다비데는 멈춰 서서 법복을 여며요.",
+   "blank": "allacciare",
+   "src": "made"
+  },
+  {
+   "text": "Con il primo freddo Elena deve allacciare il cappotto fino al collo.",
+   "en": "With the first cold Elena has to button her coat up to the neck.",
+   "ko": "첫 추위가 오자 엘레나는 코트를 목까지 여며야 해요.",
+   "blank": "allacciare",
+   "src": "made"
+  }
+ ],
  "w|allargare": [
   {
    "text": "Dopo il pranzo Matteo deve allargare la cintura di un buco.",
@@ -2914,6 +2930,22 @@
    "en": "Anna copies an old painting that shows a sick man in his bed.",
    "ko": "안나는 침대에 누운 환자를 그린 옛 그림을 따라 그려요.",
    "blank": "ammalato",
+   "src": "made"
+  }
+ ],
+ "w|ammanettare": [
+  {
+   "text": "Davide sostiene che la polizia non doveva ammanettare il ragazzo davanti a tutti.",
+   "en": "Davide argues the police shouldn't have handcuffed the boy in front of everyone.",
+   "ko": "다비데는 경찰이 모두가 보는 앞에서 소년에게 수갑을 채워서는 안 됐다고 주장해요.",
+   "blank": "ammanettare",
+   "src": "made"
+  },
+  {
+   "text": "In un giallo letto da Elena, il detective deve ammanettare il colpevole sotto la neve.",
+   "en": "In a crime novel Elena reads, the detective has to handcuff the culprit in the snow.",
+   "ko": "엘레나가 읽는 추리소설에서 형사는 눈 속에서 범인에게 수갑을 채워야 해요.",
+   "blank": "ammanettare",
    "src": "made"
   }
  ],
@@ -4695,6 +4727,22 @@
    "src": "made"
   }
  ],
+ "w|artiglio": [
+  {
+   "text": "Davide mostra alla giuria i segni lasciati dall'artiglio del cane.",
+   "en": "Davide shows the jury the marks left by the dog's claw.",
+   "ko": "다비데는 배심원에게 개 발톱이 남긴 자국을 보여 줘요.",
+   "blank": "artiglio",
+   "src": "made"
+  },
+  {
+   "text": "D'inverno il gatto di Elena graffia la porta con un artiglio per entrare.",
+   "en": "In winter Elena's cat scratches the door with a claw to get in.",
+   "ko": "겨울이면 엘레나의 고양이가 들어오려고 발톱으로 문을 긁어요.",
+   "blank": "artiglio",
+   "src": "made"
+  }
+ ],
  "w|artista": [
   {
    "text": "Quell'artista espone le sue opere in città.",
@@ -6303,6 +6351,22 @@
    "blank": "avere"
   }
  ],
+ "w|aviazione": [
+  {
+   "text": "Il testimone principale di Davide è un ex pilota dell'aviazione militare.",
+   "en": "Davide's key witness is a former military aviation pilot.",
+   "ko": "다비데의 핵심 증인은 공군 조종사 출신이에요.",
+   "blank": "aviazione",
+   "src": "made"
+  },
+  {
+   "text": "Lo zio di Elena lavorava nell'aviazione e conosce bene i venti di ogni stagione.",
+   "en": "Elena's uncle worked in aviation and knows the winds of every season well.",
+   "ko": "엘레나의 삼촌은 항공 분야에서 일해서 계절마다 부는 바람을 잘 알아요.",
+   "blank": "aviazione",
+   "src": "made"
+  }
+ ],
  "w|avido": [
   {
    "text": "Il padrone di casa di Simone è avido e alza l'affitto ogni anno.",
@@ -6316,6 +6380,22 @@
    "en": "The supplier is greedy and wants to be paid in advance, Anna complains.",
    "ko": "납품업자가 욕심이 많아서 선불을 원한다고 안나가 불평해요.",
    "blank": "avido",
+   "src": "made"
+  }
+ ],
+ "w|avvelenamento": [
+  {
+   "text": "Il caso di Davide riguarda un avvelenamento in una fabbrica chimica.",
+   "en": "Davide's case concerns a poisoning at a chemical factory.",
+   "ko": "다비데의 사건은 화학 공장에서 일어난 중독 사고에 관한 거예요.",
+   "blank": "avvelenamento",
+   "src": "made"
+  },
+  {
+   "text": "In autunno Elena raccoglie solo i funghi che conosce, per paura di un avvelenamento.",
+   "en": "In autumn Elena only picks the mushrooms she knows, for fear of poisoning.",
+   "ko": "가을에 엘레나는 중독될까 봐 아는 버섯만 따요.",
+   "blank": "avvelenamento",
    "src": "made"
   }
  ],
@@ -9070,6 +9150,22 @@
    "en": "Sara hears a knock at the door: it's the first investor of the day.",
    "ko": "사라는 문 두드리는 소리를 들어요. 오늘의 첫 투자자예요.",
    "blank": "bussare",
+   "src": "made"
+  }
+ ],
+ "w|bussola": [
+  {
+   "text": "Sul tavolo delle prove c'è la bussola trovata nella barca, e Davide la osserva.",
+   "en": "On the evidence table there's the compass found in the boat, and Davide studies it.",
+   "ko": "증거물 탁자에는 배에서 발견된 나침반이 있고 다비데가 그걸 살펴봐요.",
+   "blank": "bussola",
+   "src": "made"
+  },
+  {
+   "text": "In autunno Elena va per funghi e si porta sempre una bussola.",
+   "en": "In autumn Elena goes mushroom picking and always takes a compass.",
+   "ko": "가을이면 엘레나는 버섯을 따러 가면서 늘 나침반을 챙겨요.",
+   "blank": "bussola",
    "src": "made"
   }
  ],
@@ -12167,6 +12263,22 @@
    "src": "made"
   }
  ],
+ "w|cigno": [
+  {
+   "text": "Davide segue la causa di un uomo che ha ferito un cigno nel parco.",
+   "en": "Davide is handling the case of a man who injured a swan in the park.",
+   "ko": "다비데는 공원에서 백조를 다치게 한 남자의 사건을 맡고 있어요.",
+   "blank": "cigno",
+   "src": "made"
+  },
+  {
+   "text": "Sul lago vicino a casa di Elena in primavera torna un cigno bianco.",
+   "en": "On the lake near Elena's house a white swan comes back in spring.",
+   "ko": "봄이면 엘레나네 집 근처 호수에 하얀 백조가 돌아와요.",
+   "blank": "cigno",
+   "src": "made"
+  }
+ ],
  "w|cima": [
   {
    "text": "Abbiamo raggiunto la cima della montagna.",
@@ -13175,6 +13287,22 @@
    "blank": "collezione"
   }
  ],
+ "w|collezionista": [
+  {
+   "text": "Il cliente di Davide è un collezionista accusato di comprare quadri rubati.",
+   "en": "Davide's client is a collector accused of buying stolen paintings.",
+   "ko": "다비데의 의뢰인은 도난 그림을 산 혐의를 받는 수집가예요.",
+   "blank": "collezionista",
+   "src": "made"
+  },
+  {
+   "text": "Elena vende le sue foglie secche dipinte a un collezionista di Milano.",
+   "en": "Elena sells her painted dried leaves to a collector from Milan.",
+   "ko": "엘레나는 그림을 그린 마른 잎을 밀라노의 한 수집가에게 팔아요.",
+   "blank": "collezionista",
+   "src": "made"
+  }
+ ],
  "w|collina": [
   {
    "text": "La casa è sulla collina dietro il paese.",
@@ -13375,6 +13503,22 @@
    "en": "The knife is too sharp.",
    "ko": "칼이 너무 날카로워.",
    "blank": "coltello"
+  }
+ ],
+ "w|coltivare": [
+  {
+   "text": "L'imputato difeso da Davide è accusato di coltivare canapa in giardino.",
+   "en": "The defendant Davide is representing is accused of growing hemp in his garden.",
+   "ko": "다비데가 변호하는 피고인은 정원에서 대마를 재배한 혐의를 받아요.",
+   "blank": "coltivare",
+   "src": "made"
+  },
+  {
+   "text": "In primavera Elena comincia a coltivare pomodori sul balcone.",
+   "en": "In spring Elena starts growing tomatoes on the balcony.",
+   "ko": "봄이 되면 엘레나는 발코니에서 토마토를 키우기 시작해요.",
+   "blank": "coltivare",
+   "src": "made"
   }
  ],
  "w|colto": [
@@ -13792,6 +13936,22 @@
    "en": "Elena is moved when she sees the swallows return to the balcony.",
    "ko": "제비가 발코니로 돌아오는 걸 보고 엘레나는 뭉클해요.",
    "blank": "commossa",
+   "src": "made"
+  }
+ ],
+ "w|commovente": [
+  {
+   "text": "La lettera della figlia dell'imputato è così commovente che Davide fa fatica a leggerla.",
+   "en": "The defendant's daughter's letter is so moving that Davide struggles to read it.",
+   "ko": "피고인 딸의 편지가 너무 감동적이라 다비데는 읽기가 힘들어요.",
+   "blank": "commovente",
+   "src": "made"
+  },
+  {
+   "text": "Per Elena è commovente vedere i primi germogli dopo un inverno lungo.",
+   "en": "For Elena it's moving to see the first shoots after a long winter.",
+   "ko": "엘레나에게 긴 겨울 뒤 첫 새싹을 보는 건 감동적이에요.",
+   "blank": "commovente",
    "src": "made"
   }
  ],
@@ -14521,6 +14681,22 @@
    "en": "We bought the tickets for the concert.",
    "ko": "우리는 콘서트 표를 샀어.",
    "blank": "concerto"
+  }
+ ],
+ "w|concessione": [
+  {
+   "text": "Il comune ha tolto la concessione della spiaggia al cliente di Davide.",
+   "en": "The council has taken the beach concession away from Davide's client.",
+   "ko": "시청은 다비데 의뢰인의 해변 영업 허가를 취소했어요.",
+   "blank": "concessione",
+   "src": "made"
+  },
+  {
+   "text": "Il comune ha dato a Elena la concessione di un orto per la primavera.",
+   "en": "The council has given Elena the use of an allotment for the spring.",
+   "ko": "시청은 엘레나에게 봄 동안 쓸 텃밭을 허가해 줬어요.",
+   "blank": "concessione",
+   "src": "made"
   }
  ],
  "w|concetto": [
@@ -18043,6 +18219,22 @@
    "blank": "debito"
   }
  ],
+ "w|debitore": [
+  {
+   "text": "Il cliente di Davide è un debitore che non riesce più a pagare il mutuo.",
+   "en": "Davide's client is a debtor who can no longer pay his mortgage.",
+   "ko": "다비데의 의뢰인은 주택 대출을 더는 갚지 못하는 채무자예요.",
+   "blank": "debitore",
+   "src": "made"
+  },
+  {
+   "text": "Ogni dicembre Elena rincorre un vecchio debitore che le deve ancora dei soldi.",
+   "en": "Every December Elena chases an old debtor who still owes her money.",
+   "ko": "12월마다 엘레나는 아직 돈을 갚지 않은 오래된 채무자를 쫓아다녀요.",
+   "blank": "debitore",
+   "src": "made"
+  }
+ ],
  "w|debole": [
   {
    "text": "Mi sento debole dopo la febbre.",
@@ -18225,6 +18417,22 @@
    "src": "made"
   }
  ],
+ "w|decollo": [
+  {
+   "text": "Il pilota spiega a Davide che il problema è cominciato subito dopo il decollo.",
+   "en": "The pilot explains to Davide that the problem started right after take-off.",
+   "ko": "조종사는 이륙 직후에 문제가 시작됐다고 다비데에게 설명해요.",
+   "blank": "decollo",
+   "src": "made"
+  },
+  {
+   "text": "A marzo Elena guarda le cicogne pronte al decollo verso nord.",
+   "en": "In March Elena watches the storks ready to take off northward.",
+   "ko": "3월에 엘레나는 북쪽으로 날아오를 준비를 하는 황새들을 봐요.",
+   "blank": "decollo",
+   "src": "made"
+  }
+ ],
  "w|decorare": [
   {
    "text": "A dicembre Stefano vuole decorare la vetrina della farmacia con le luci.",
@@ -18394,6 +18602,22 @@
    "en": "The guard stopped a crook who was leaving with three perfumes hidden in his pocket.",
    "ko": "경비원이 향수 세 병을 주머니에 숨기고 나가던 좀도둑을 붙잡았어요.",
    "blank": "delinquente",
+   "src": "made"
+  }
+ ],
+ "w|delirio": [
+  {
+   "text": "Quando arriva la sentenza, i tifosi dell'imputato vanno in delirio, e Davide sorride.",
+   "en": "When the verdict comes, the defendant's supporters go wild, and Davide smiles.",
+   "ko": "판결이 나오자 피고인 지지자들이 열광하고 다비데는 미소 지어요.",
+   "blank": "delirio",
+   "src": "made"
+  },
+  {
+   "text": "Alla prima neve i bambini del palazzo di Elena vanno in delirio.",
+   "en": "At the first snow the children in Elena's building go wild.",
+   "ko": "첫눈이 오자 엘레나네 건물 아이들이 신이 나서 난리예요.",
+   "blank": "delirio",
    "src": "made"
   }
  ],
@@ -20903,6 +21127,22 @@
    "src": "made"
   }
  ],
+ "w|divieto": [
+  {
+   "text": "Davide dimostra che il cartello di divieto di sosta non era visibile.",
+   "en": "Davide proves that the no-parking sign wasn't visible.",
+   "ko": "다비데는 주차 금지 표지판이 보이지 않았다는 걸 증명해요.",
+   "blank": "divieto",
+   "src": "made"
+  },
+  {
+   "text": "D'estate c'è il divieto di accendere fuochi nel bosco dietro la casa di Elena.",
+   "en": "In summer there's a ban on lighting fires in the woods behind Elena's house.",
+   "ko": "여름에는 엘레나네 집 뒤 숲에서 불을 피우는 게 금지돼요.",
+   "blank": "divieto",
+   "src": "made"
+  }
+ ],
  "w|divino": [
   {
    "text": "Quel dolce era semplicemente divino.",
@@ -22767,6 +23007,22 @@
    "blank": "enorme"
   }
  ],
+ "w|ente": [
+  {
+   "text": "Davide fa causa a un ente pubblico per un cliente licenziato.",
+   "en": "Davide sues a public body on behalf of a dismissed client.",
+   "ko": "다비데는 해고된 의뢰인을 대신해 공공기관을 상대로 소송을 걸어요.",
+   "blank": "ente",
+   "src": "made"
+  },
+  {
+   "text": "Elena controlla le previsioni di un ente meteorologico ogni mattina.",
+   "en": "Elena checks a weather agency's forecast every morning.",
+   "ko": "엘레나는 매일 아침 기상청 예보를 확인해요.",
+   "blank": "ente",
+   "src": "made"
+  }
+ ],
  "w|entrambi": [
   {
    "text": "Li conosco entrambi.",
@@ -23560,6 +23816,22 @@
    "en": "Chiara suggests to Anna that they explore Sicily together next autumn.",
    "ko": "키아라는 안나에게 내년 가을에 시칠리아를 함께 둘러보자고 해요.",
    "blank": "esplorare",
+   "src": "made"
+  }
+ ],
+ "w|esploratore": [
+  {
+   "text": "Davide chiama come testimone del naufragio un esploratore.",
+   "en": "An explorer is called by Davide as a witness to the shipwreck.",
+   "ko": "다비데는 난파 사고의 증인으로 한 탐험가를 불러요.",
+   "blank": "esploratore",
+   "src": "made"
+  },
+  {
+   "text": "Il figlio di Elena è nei giovani esploratori e d'estate va in campeggio.",
+   "en": "Elena's son is in the scouts and goes camping in summer.",
+   "ko": "엘레나의 아들은 스카우트 단원이라 여름이면 캠핑을 가요.",
+   "blank": "esploratori",
    "src": "made"
   }
  ],
@@ -28482,6 +28754,22 @@
    "en": "At the refreshment point Giulia cools off under a jet of cold water.",
    "ko": "급수대에서 줄리아는 찬물 줄기 아래서 몸을 식혀요.",
    "blank": "getto",
+   "src": "made"
+  }
+ ],
+ "w|ghetto": [
+  {
+   "text": "Davide studia una vecchia causa sul ghetto ebraico di Venezia.",
+   "en": "Davide studies an old case about the Jewish ghetto in Venice.",
+   "ko": "다비데는 베네치아 유대인 게토에 관한 옛 소송을 연구해요.",
+   "blank": "ghetto",
+   "src": "made"
+  },
+  {
+   "text": "Elena va a vedere una mostra fotografica sul ghetto di Roma.",
+   "en": "Elena goes to see a photography exhibition about the Rome ghetto.",
+   "ko": "엘레나는 로마 게토에 관한 사진전을 보러 가요.",
+   "blank": "ghetto",
    "src": "made"
   }
  ],
@@ -33453,6 +33741,22 @@
    "src": "made"
   }
  ],
+ "w|insulto": [
+  {
+   "text": "Il giudice richiama un testimone per un insulto rivolto a Davide.",
+   "en": "The judge reprimands a witness for an insult aimed at Davide.",
+   "ko": "판사는 다비데에게 모욕적인 말을 한 증인에게 주의를 줘요.",
+   "blank": "insulto",
+   "src": "made"
+  },
+  {
+   "text": "Il freddo improvviso di ottobre è un insulto, scherza Elena.",
+   "en": "October's sudden cold is an insult, Elena jokes.",
+   "ko": "10월의 갑작스러운 추위는 모욕이라고 엘레나가 농담해요.",
+   "blank": "insulto",
+   "src": "made"
+  }
+ ],
  "w|intanto": [
   {
    "text": "Tu prepara la cena, intanto io apparecchio.",
@@ -33947,6 +34251,22 @@
    "blank": "intervista"
   }
  ],
+ "w|intervistare": [
+  {
+   "text": "Dopo l'udienza un giornalista vuole intervistare Davide sui gradini del tribunale.",
+   "en": "After the hearing a journalist wants to interview Davide on the courthouse steps.",
+   "ko": "재판이 끝나자 한 기자가 법원 계단에서 다비데를 인터뷰하고 싶어 해요.",
+   "blank": "intervistare",
+   "src": "made"
+  },
+  {
+   "text": "La radio locale vuole intervistare Elena sul suo orto d'autunno.",
+   "en": "The local radio wants to interview Elena about her autumn vegetable garden.",
+   "ko": "지역 라디오가 엘레나의 가을 텃밭에 대해 인터뷰하고 싶어 해요.",
+   "blank": "intervistare",
+   "src": "made"
+  }
+ ],
  "w|intestino": [
   {
    "text": "Dopo gli antibiotici Stefano consiglia fermenti lattici per l'intestino.",
@@ -34041,6 +34361,22 @@
    "src": "made"
   }
  ],
+ "w|intrusione": [
+  {
+   "text": "Il caso di Davide riguarda un'intrusione nei computer di una banca.",
+   "en": "Davide's case concerns an intrusion into a bank's computers.",
+   "ko": "다비데의 사건은 은행 컴퓨터 무단 침입에 관한 거예요.",
+   "blank": "intrusione",
+   "src": "made"
+  },
+  {
+   "text": "D'inverno i topi cercano un'intrusione nella cantina di Elena.",
+   "en": "In winter mice try to find a way into Elena's cellar.",
+   "ko": "겨울이면 쥐들이 엘레나네 지하실에 들어오려고 해요.",
+   "blank": "intrusione",
+   "src": "made"
+  }
+ ],
  "w|intruso": [
   {
    "text": "Durante la recita, un cane è entrato sul palco come un intruso e Davide è scoppiato a ridere.",
@@ -34085,6 +34421,22 @@
    "en": "This tool is now useless.",
    "ko": "이 도구는 이제 쓸모없어.",
    "blank": "inutile"
+  }
+ ],
+ "w|invadere": [
+  {
+   "text": "Secondo Davide, i fotografi non devono invadere la vita privata del suo cliente.",
+   "en": "According to Davide, photographers mustn't invade his client's private life.",
+   "ko": "다비데는 사진기자들이 의뢰인의 사생활을 침해해서는 안 된다고 해요.",
+   "blank": "invadere",
+   "src": "made"
+  },
+  {
+   "text": "A luglio i turisti cominciano a invadere la spiaggia sotto casa di Elena.",
+   "en": "In July tourists start to invade the beach below Elena's house.",
+   "ko": "7월이면 엘레나네 집 아래 해변에 관광객이 몰려들기 시작해요.",
+   "blank": "invadere",
+   "src": "made"
   }
  ],
  "w|invasione": [
@@ -34222,6 +34574,22 @@
    "en": "Francesca's oddest customer says he's a retired detective.",
    "ko": "프란체스카의 가장 별난 손님은 자기가 은퇴한 탐정이래요.",
    "blank": "investigatore",
+   "src": "made"
+  }
+ ],
+ "w|investigazione": [
+  {
+   "text": "Davide chiede al giudice più tempo per l'investigazione.",
+   "en": "Davide asks the judge for more time for the investigation.",
+   "ko": "다비데는 판사에게 조사할 시간을 더 달라고 해요.",
+   "blank": "investigazione",
+   "src": "made"
+  },
+  {
+   "text": "Elena legge di un'investigazione sulle cause delle estati sempre più calde.",
+   "en": "Elena reads about an investigation into the causes of ever-hotter summers.",
+   "ko": "엘레나는 점점 더워지는 여름의 원인에 대한 조사 기사를 읽어요.",
+   "blank": "investigazione",
    "src": "made"
   }
  ],
@@ -37677,6 +38045,22 @@
    "blank": "Mangiamo"
   }
  ],
+ "w|mania": [
+  {
+   "text": "Secondo Davide, l'imputato ha la mania di fotografare tutto.",
+   "en": "According to Davide, the defendant has a mania for photographing everything.",
+   "ko": "다비데에 따르면 피고인은 모든 걸 사진 찍는 버릇이 있어요.",
+   "blank": "mania",
+   "src": "made"
+  },
+  {
+   "text": "A ogni cambio di stagione Elena ha la mania di riordinare tutti gli armadi.",
+   "en": "At every change of season Elena has a mania for reorganising all the wardrobes.",
+   "ko": "계절이 바뀔 때마다 엘레나는 옷장을 다 정리하는 버릇이 있어요.",
+   "blank": "mania",
+   "src": "made"
+  }
+ ],
  "w|manica": [
   {
    "text": "Marco ha macchiato d'inchiostro la manica della camicia bianca.",
@@ -38076,6 +38460,22 @@
    "en": "Martina painted the portrait of an old retired warrant officer from her village.",
    "ko": "마르티나는 고향 마을의 은퇴한 늙은 준위의 초상화를 그렸어요.",
    "blank": "maresciallo",
+   "src": "made"
+  }
+ ],
+ "w|margherita": [
+  {
+   "text": "Sulla scrivania di Davide c'è un vasetto con una margherita.",
+   "en": "On Davide's desk there's a little pot with a daisy.",
+   "ko": "다비데의 책상 위에는 데이지 한 송이가 꽂힌 작은 화분이 있어요.",
+   "blank": "margherita",
+   "src": "made"
+  },
+  {
+   "text": "Ad aprile il prato davanti alla casa di Elena si riempie di margherite.",
+   "en": "In April the lawn in front of Elena's house fills with daisies.",
+   "ko": "4월이면 엘레나네 집 앞 잔디밭이 데이지로 가득해요.",
+   "blank": "margherite",
    "src": "made"
   }
  ],
@@ -39761,6 +40161,22 @@
    "blank": "militare"
   }
  ],
+ "w|milizia": [
+  {
+   "text": "Nel processo storico che studia Davide, una milizia locale aveva occupato il paese.",
+   "en": "In the historical trial Davide is studying, a local militia had occupied the village.",
+   "ko": "다비데가 연구하는 옛 재판에서는 지역 민병대가 마을을 점령했었어요.",
+   "blank": "milizia",
+   "src": "made"
+  },
+  {
+   "text": "Nel libro di storia di Elena, una milizia di contadini resiste per tutto l'inverno.",
+   "en": "In Elena's history book, a militia of farmers holds out all winter.",
+   "ko": "엘레나의 역사책에서는 농민 민병대가 겨우내 버텨요.",
+   "blank": "milizia",
+   "src": "made"
+  }
+ ],
  "w|mille": [
   {
    "text": "Ti ho detto mille volte di stare attento.",
@@ -39816,6 +40232,22 @@
    "en": "Giulia visits the mine where her great-grandfather worked as a miner.",
    "ko": "줄리아는 증조할아버지가 광부로 일하던 광산을 찾아가요.",
    "blank": "minatore",
+   "src": "made"
+  }
+ ],
+ "w|minestra": [
+  {
+   "text": "Nella pausa pranzo Davide mangia una minestra al bar del tribunale.",
+   "en": "At lunchtime Davide has a soup at the courthouse café.",
+   "ko": "점심시간에 다비데는 법원 카페에서 수프를 먹어요.",
+   "blank": "minestra",
+   "src": "made"
+  },
+  {
+   "text": "Appena arriva il freddo, Elena prepara una minestra di verdure.",
+   "en": "As soon as the cold arrives, Elena makes a vegetable soup.",
+   "ko": "추위가 오자마자 엘레나는 채소 수프를 끓여요.",
+   "blank": "minestra",
    "src": "made"
   }
  ],
@@ -39875,6 +40307,22 @@
    "en": "They appointed a new minister.",
    "ko": "새 장관을 임명했어.",
    "blank": "ministro"
+  }
+ ],
+ "w|minoranza": [
+  {
+   "text": "Davide difende i diritti di una minoranza linguistica delle Alpi.",
+   "en": "Davide defends the rights of a linguistic minority in the Alps.",
+   "ko": "다비데는 알프스 지역 언어 소수자들의 권리를 변호해요.",
+   "blank": "minoranza",
+   "src": "made"
+  },
+  {
+   "text": "Solo una minoranza di vicini resta in paese durante l'inverno, nota Elena.",
+   "en": "Only a minority of neighbours stay in the village over winter, Elena notes.",
+   "ko": "겨울 동안 마을에 남는 이웃은 소수뿐이라고 엘레나가 말해요.",
+   "blank": "minoranza",
+   "src": "made"
   }
  ],
  "w|minore": [
@@ -40865,6 +41313,22 @@
    "en": "The new motorcycle is red and fast.",
    "ko": "새 오토바이는 빨갛고 빨라.",
    "blank": "moto"
+  }
+ ],
+ "w|motociclista": [
+  {
+   "text": "Davide difende un motociclista accusato di aver passato col rosso.",
+   "en": "Davide defends a motorcyclist accused of running a red light.",
+   "ko": "다비데는 빨간불에 지나간 혐의를 받는 오토바이 운전자를 변호해요.",
+   "blank": "motociclista",
+   "src": "made"
+  },
+  {
+   "text": "A maggio Elena vede passare il primo motociclista senza giacca.",
+   "en": "In May Elena sees the first motorcyclist go by without a jacket.",
+   "ko": "5월에 엘레나는 재킷 없이 지나가는 첫 오토바이 운전자를 봐요.",
+   "blank": "motociclista",
+   "src": "made"
   }
  ],
  "w|motore": [
@@ -47571,6 +48035,22 @@
    "blank": "piantare"
   }
  ],
+ "w|pianto": [
+  {
+   "text": "In aula si sente il pianto di una madre, e Davide abbassa la voce.",
+   "en": "In the courtroom a mother's weeping can be heard, and Davide lowers his voice.",
+   "ko": "법정에 한 어머니의 울음소리가 들리자 다비데는 목소리를 낮춰요.",
+   "blank": "pianto",
+   "src": "made"
+  },
+  {
+   "text": "La nipotina di Elena scoppia in un pianto disperato quando finisce l'estate.",
+   "en": "Elena's little niece bursts into desperate tears when summer ends.",
+   "ko": "여름이 끝나자 엘레나의 어린 조카가 서럽게 울음을 터뜨려요.",
+   "blank": "pianto",
+   "src": "made"
+  }
+ ],
  "w|piattaforma": [
   {
    "text": "Il giornale di Matteo pubblica i video su una nuova piattaforma online.",
@@ -48385,6 +48865,22 @@
    "src": "made"
   }
  ],
+ "w|polare": [
+  {
+   "text": "Fuori dal tribunale soffia un vento polare, e Davide alza il bavero.",
+   "en": "Outside the courthouse a polar wind is blowing, and Davide turns up his collar.",
+   "ko": "법원 밖에는 얼음 같은 바람이 불어서 다비데는 옷깃을 세워요.",
+   "blank": "polare",
+   "src": "made"
+  },
+  {
+   "text": "A gennaio arriva un'ondata di freddo polare, ed Elena accende il camino.",
+   "en": "In January a wave of polar cold arrives, and Elena lights the fireplace.",
+   "ko": "1월에 극지방 한파가 닥치자 엘레나는 벽난로에 불을 피워요.",
+   "blank": "polare",
+   "src": "made"
+  }
+ ],
  "w|politica": [
   {
    "text": "Non parlo di politica a tavola.",
@@ -48439,6 +48935,22 @@
    "en": "My uncle is a retired police officer.",
    "ko": "우리 삼촌은 은퇴한 경찰이야.",
    "blank": "poliziotto"
+  }
+ ],
+ "w|polizza": [
+  {
+   "text": "Davide legge con attenzione la polizza dell'assicurazione.",
+   "en": "Davide reads the insurance policy carefully.",
+   "ko": "다비데는 보험 증권을 꼼꼼히 읽어요.",
+   "blank": "polizza",
+   "src": "made"
+  },
+  {
+   "text": "Prima dell'inverno Elena rinnova la polizza contro la grandine.",
+   "en": "Before winter Elena renews her hail insurance policy.",
+   "ko": "겨울이 오기 전에 엘레나는 우박 피해 보험을 갱신해요.",
+   "blank": "polizza",
+   "src": "made"
   }
  ],
  "w|pollice": [
@@ -55969,6 +56481,22 @@
    "src": "made"
   }
  ],
+ "w|riservatezza": [
+  {
+   "text": "Davide chiede ai giornalisti di rispettare la riservatezza della vittima.",
+   "en": "Davide asks the journalists to respect the victim's privacy.",
+   "ko": "다비데는 기자들에게 피해자의 사생활을 존중해 달라고 해요.",
+   "blank": "riservatezza",
+   "src": "made"
+  },
+  {
+   "text": "D'inverno Elena apprezza la riservatezza del paese senza turisti.",
+   "en": "In winter Elena appreciates the privacy of the village without tourists.",
+   "ko": "겨울이면 엘레나는 관광객 없는 마을의 한적함이 좋아요.",
+   "blank": "riservatezza",
+   "src": "made"
+  }
+ ],
  "w|riservato": [
   {
    "text": "Il fratello di Stefano è un ragazzo riservato e non vuole fare il discorso.",
@@ -57325,6 +57853,22 @@
    "src": "made"
   }
  ],
+ "w|salmone": [
+  {
+   "text": "Il processo di Davide riguarda una partita di salmone mal conservato.",
+   "en": "Davide's trial concerns a batch of badly stored salmon.",
+   "ko": "다비데가 맡은 재판은 잘못 보관된 연어 한 무더기에 관한 거예요.",
+   "blank": "salmone",
+   "src": "made"
+  },
+  {
+   "text": "In autunno Elena guarda i video del salmone che risale i fiumi.",
+   "en": "In autumn Elena watches videos of salmon swimming upriver.",
+   "ko": "가을에 엘레나는 강을 거슬러 오르는 연어 영상을 봐요.",
+   "blank": "salmone",
+   "src": "made"
+  }
+ ],
  "w|salone": [
   {
    "text": "Matteo ha spostato il tavolo grande nel salone per il pranzo di Natale.",
@@ -57773,6 +58317,22 @@
    "en": "I took your umbrella by mistake.",
    "ko": "실수로 네 우산을 가져갔어.",
    "blank": "sbaglio"
+  }
+ ],
+ "w|sbarcare": [
+  {
+   "text": "Il testimone di Davide ha visto i contrabbandieri sbarcare di notte.",
+   "en": "Davide's witness saw the smugglers come ashore at night.",
+   "ko": "다비데의 증인은 밀수꾼들이 밤에 배에서 내리는 걸 봤어요.",
+   "blank": "sbarcare",
+   "src": "made"
+  },
+  {
+   "text": "A settembre Elena vede i turisti sbarcare per l'ultima volta dal traghetto.",
+   "en": "In September Elena sees the tourists get off the ferry for the last time.",
+   "ko": "9월에 엘레나는 관광객들이 마지막으로 배에서 내리는 걸 봐요.",
+   "blank": "sbarcare",
+   "src": "made"
   }
  ],
  "w|sbarra": [
@@ -60645,6 +61205,22 @@
    "blank": "settimana"
   }
  ],
+ "w|settimanale": [
+  {
+   "text": "Un settimanale locale dedica la copertina al processo di Davide.",
+   "en": "A local weekly devotes its cover to Davide's trial.",
+   "ko": "지역 주간지가 다비데의 재판을 표지 기사로 다뤄요.",
+   "blank": "settimanale",
+   "src": "made"
+  },
+  {
+   "text": "Su un settimanale Elena legge le ricette di stagione.",
+   "en": "In a weekly magazine Elena reads the seasonal recipes.",
+   "ko": "엘레나는 주간지에서 제철 요리법을 읽어요.",
+   "blank": "settimanale",
+   "src": "made"
+  }
+ ],
  "w|settimo": [
   {
    "text": "Per Paolo è il settimo trasloco in dieci anni, ma questo palazzo gli piace.",
@@ -63271,6 +63847,22 @@
    "en": "He seems frightened by something.",
    "ko": "뭔가에 겁먹은 것 같아.",
    "blank": "spaventato"
+  }
+ ],
+ "w|spavento": [
+  {
+   "text": "La testimone racconta a Davide lo spavento provato durante la rapina.",
+   "en": "The witness tells Davide about the fright she had during the robbery.",
+   "ko": "증인은 강도를 당할 때 느낀 공포를 다비데에게 이야기해요.",
+   "blank": "spavento",
+   "src": "made"
+  },
+  {
+   "text": "Il primo tuono d'estate fa prendere a Elena un bello spavento.",
+   "en": "The first thunder of summer gives Elena quite a fright.",
+   "ko": "여름 첫 천둥소리에 엘레나는 깜짝 놀라요.",
+   "blank": "spavento",
+   "src": "made"
   }
  ],
  "w|spaventoso": [
@@ -69259,6 +69851,38 @@
    "blank": "tribunale"
   }
  ],
+ "w|tributo": [
+  {
+   "text": "Il cliente di Davide è accusato di non aver pagato il tributo comunale.",
+   "en": "Davide's client is accused of not paying the municipal tax.",
+   "ko": "다비데의 의뢰인은 지방세를 내지 않은 혐의를 받아요.",
+   "blank": "tributo",
+   "src": "made"
+  },
+  {
+   "text": "La festa d'autunno del paese di Elena è un tributo ai raccoglitori di olive.",
+   "en": "The autumn festival in Elena's village is a tribute to the olive pickers.",
+   "ko": "엘레나네 마을 가을 축제는 올리브 수확꾼들에게 바치는 행사예요.",
+   "blank": "tributo",
+   "src": "made"
+  }
+ ],
+ "w|trincea": [
+  {
+   "text": "Il nonno del giudice ha combattuto in trincea, racconta Davide durante la pausa.",
+   "en": "The judge's grandfather fought in the trenches, Davide says during the break.",
+   "ko": "판사의 할아버지가 참호에서 싸웠다고 다비데가 쉬는 시간에 이야기해요.",
+   "blank": "trincea",
+   "src": "made"
+  },
+  {
+   "text": "Nel museo vicino a casa Elena vede una trincea ricostruita sotto la neve.",
+   "en": "At the museum near home Elena sees a reconstructed trench under snow.",
+   "ko": "집 근처 박물관에서 엘레나는 눈 덮인 복원된 참호를 봐요.",
+   "blank": "trincea",
+   "src": "made"
+  }
+ ],
  "w|trionfo": [
   {
    "text": "Il grande quadro mostra a Paolo il trionfo di un generale romano.",
@@ -70264,6 +70888,22 @@
    "en": "After the launch Francesca's inbox looks as if a hurricane hit it.",
    "ko": "출시 후 프란체스카의 메일함은 허리케인이 지나간 것 같아요.",
    "blank": "uragano",
+   "src": "made"
+  }
+ ],
+ "w|urbano": [
+  {
+   "text": "Il processo di Davide riguarda un progetto di sviluppo urbano.",
+   "en": "Davide's trial concerns an urban development project.",
+   "ko": "다비데의 재판은 도시 개발 사업에 관한 거예요.",
+   "blank": "urbano",
+   "src": "made"
+  },
+  {
+   "text": "In estate il traffico urbano diminuisce ed Elena va al lavoro in bici.",
+   "en": "In summer city traffic drops and Elena cycles to work.",
+   "ko": "여름에는 도시 교통량이 줄어서 엘레나는 자전거로 출근해요.",
+   "blank": "urbano",
    "src": "made"
   }
  ],

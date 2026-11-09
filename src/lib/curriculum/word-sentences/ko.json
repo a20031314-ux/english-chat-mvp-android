@@ -6487,6 +6487,22 @@
    "src": "made"
   }
  ],
+ "w|공감하다": [
+  {
+   "text": "동민은 숲이 사라질까 걱정하는 주민들의 마음에 깊이 공감해요.",
+   "en": "Dongmin deeply sympathizes with residents who worry the forest will disappear.",
+   "ko": "동민은 숲이 사라질까 걱정하는 주민들의 마음에 깊이 공감해요.",
+   "blank": "공감해요",
+   "src": "made"
+  },
+  {
+   "text": "서연은 여름이 제일 힘들다는 동료의 말에 크게 공감했어요.",
+   "en": "Seoyeon strongly agreed with her coworker who said summer is the hardest season.",
+   "ko": "서연은 여름이 제일 힘들다는 동료의 말에 크게 공감했어요.",
+   "blank": "공감했어요",
+   "src": "made"
+  }
+ ],
  "w|공개": [
   {
    "text": "경찰은 공개 수배로 전환하고 범인의 얼굴 사진을 뿌렸어요.",
@@ -7783,6 +7799,22 @@
    "blank": "광고"
   }
  ],
+ "w|광물": [
+  {
+   "text": "동민은 계곡 바위에서 반짝이는 광물 조각을 주워 조카에게 보여 줬어요.",
+   "en": "Dongmin picked up a glittering piece of mineral from a valley rock and showed it to his nephew.",
+   "ko": "동민은 계곡 바위에서 반짝이는 광물 조각을 주워 조카에게 보여 줬어요.",
+   "blank": "광물",
+   "src": "made"
+  },
+  {
+   "text": "서연은 과학관에서 계절에 따라 색이 변하는 광물을 신기하게 봤어요.",
+   "en": "At the science museum, Seoyeon was fascinated by a mineral that changes color with the seasons.",
+   "ko": "서연은 과학관에서 계절에 따라 색이 변하는 광물을 신기하게 봤어요.",
+   "blank": "광물을",
+   "src": "made"
+  }
+ ],
  "w|광범위하다": [
   {
    "text": "이번 정전은 동네 전체에 걸쳐 광범위하게 일어났어요.",
@@ -8783,6 +8815,22 @@
    "blank": "국내는"
   }
  ],
+ "w|국립공원": [
+  {
+   "text": "동민은 쉬는 날이면 가까운 국립공원에서 야생화를 찍어요.",
+   "en": "On his days off, Dongmin photographs wildflowers at a nearby national park.",
+   "ko": "동민은 쉬는 날이면 가까운 국립공원에서 야생화를 찍어요.",
+   "blank": "국립공원에서",
+   "src": "made"
+  },
+  {
+   "text": "서연은 단풍철이면 국립공원 입구가 차로 꽉 막힌다고 투덜댔어요.",
+   "en": "Seoyeon grumbled that in autumn-foliage season the national park entrance is jammed with cars.",
+   "ko": "서연은 단풍철이면 국립공원 입구가 차로 꽉 막힌다고 투덜댔어요.",
+   "blank": "국립공원",
+   "src": "made"
+  }
+ ],
  "w|국물": [
   {
    "text": "민수네 국밥은 국물이 진해서 손님들이 좋아해요.",
@@ -9453,6 +9501,22 @@
    "en": "Another call was annoying.",
    "ko": "또 전화 오니까 귀찮았어.",
    "blank": "귀찮았어"
+  }
+ ],
+ "w|귀찮아하다": [
+  {
+   "text": "동민의 조카는 산에 오르는 걸 귀찮아해서 늘 중간에 주저앉아요.",
+   "en": "Dongmin's nephew finds climbing the mountain a chore and always sits down halfway.",
+   "ko": "동민의 조카는 산에 오르는 걸 귀찮아해서 늘 중간에 주저앉아요.",
+   "blank": "귀찮아해서",
+   "src": "made"
+  },
+  {
+   "text": "서연은 추운 날 아침마다 이불 밖으로 나오는 걸 귀찮아해요.",
+   "en": "On cold mornings Seoyeon can't be bothered to get out from under the blanket.",
+   "ko": "서연은 추운 날 아침마다 이불 밖으로 나오는 걸 귀찮아해요.",
+   "blank": "귀찮아해요",
+   "src": "made"
   }
  ],
  "w|귀하다": [
@@ -10495,6 +10559,22 @@
    "en": "I'm only saying it because I feel sorry.",
    "ko": "그저 미안해서 하는 말이야.",
    "blank": "그저"
+  }
+ ],
+ "w|그저께": [
+  {
+   "text": "동민은 그저께 숲에서 멧돼지 발자국을 발견했어요.",
+   "en": "The day before yesterday, Dongmin found wild boar tracks in the forest.",
+   "ko": "동민은 그저께 숲에서 멧돼지 발자국을 발견했어요.",
+   "blank": "그저께",
+   "src": "made"
+  },
+  {
+   "text": "서연은 그저께까지만 해도 반팔을 입었는데 오늘은 패딩을 꺼냈어요.",
+   "en": "Seoyeon was wearing short sleeves as recently as the day before yesterday, but today she took out her padded jacket.",
+   "ko": "서연은 그저께까지만 해도 반팔을 입었는데 오늘은 패딩을 꺼냈어요.",
+   "blank": "그저께까지만",
+   "src": "made"
   }
  ],
  "w|그쪽": [
@@ -12575,6 +12655,22 @@
    "src": "made"
   }
  ],
+ "w|깃털": [
+  {
+   "text": "동민은 강가에서 주운 왜가리 깃털을 책갈피로 써요.",
+   "en": "Dongmin uses a heron feather he picked up by the river as a bookmark.",
+   "ko": "동민은 강가에서 주운 왜가리 깃털을 책갈피로 써요.",
+   "blank": "깃털을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 겨울이 오기 전에 깃털 이불을 꺼내 햇볕에 말렸어요.",
+   "en": "Before winter came, Seoyeon took out her down comforter and aired it in the sun.",
+   "ko": "서연은 겨울이 오기 전에 깃털 이불을 꺼내 햇볕에 말렸어요.",
+   "blank": "깃털",
+   "src": "made"
+  }
+ ],
  "w|깊다": [
   {
    "text": "호수가 생각보다 깊어.",
@@ -12692,6 +12788,22 @@
    "en": "After walking all day in new shoes, Yuna's heels got rubbed raw.",
    "ko": "새 구두를 신고 하루 종일 걸었더니 유나는 뒤꿈치가 까졌어요.",
    "blank": "까졌어요",
+   "src": "made"
+  }
+ ],
+ "w|까치": [
+  {
+   "text": "아침에 까치가 울어서 동민은 반가운 손님이 오려나 했어요.",
+   "en": "A magpie cried in the morning, so Dongmin wondered if a welcome guest was coming.",
+   "ko": "아침에 까치가 울어서 동민은 반가운 손님이 오려나 했어요.",
+   "blank": "까치가",
+   "src": "made"
+  },
+  {
+   "text": "봄이 되자 서연네 아파트 앞 나무에 까치가 둥지를 틀었어요.",
+   "en": "When spring came, magpies built a nest in the tree in front of Seoyeon's apartment.",
+   "ko": "봄이 되자 서연네 아파트 앞 나무에 까치가 둥지를 틀었어요.",
+   "blank": "까치가",
    "src": "made"
   }
  ],
@@ -13287,6 +13399,22 @@
    "en": "Those are words as sweet as honey.",
    "ko": "꿀처럼 달콤한 말이야.",
    "blank": "꿀처럼"
+  }
+ ],
+ "w|꿀벌": [
+  {
+   "text": "동민은 숲 가장자리에 꿀벌 통을 몇 개 놓고 꿀을 받아요.",
+   "en": "Dongmin puts a few beehives at the edge of the forest and collects honey.",
+   "ko": "동민은 숲 가장자리에 꿀벌 통을 몇 개 놓고 꿀을 받아요.",
+   "blank": "꿀벌",
+   "src": "made"
+  },
+  {
+   "text": "봄꽃이 피자 서연네 베란다 화분에도 꿀벌이 날아들었어요.",
+   "en": "When the spring flowers bloomed, bees flew even to the pots on Seoyeon's balcony.",
+   "ko": "봄꽃이 피자 서연네 베란다 화분에도 꿀벌이 날아들었어요.",
+   "blank": "꿀벌이",
+   "src": "made"
   }
  ],
  "w|꿇다": [
@@ -18181,6 +18309,22 @@
    "src": "made"
   }
  ],
+ "w|달래다": [
+  {
+   "text": "동민은 벌에 쏘여 우는 아이를 사탕으로 달랬어요.",
+   "en": "Dongmin soothed a child crying from a bee sting with a piece of candy.",
+   "ko": "동민은 벌에 쏘여 우는 아이를 사탕으로 달랬어요.",
+   "blank": "달랬어요",
+   "src": "made"
+  },
+  {
+   "text": "서연은 겨울 방학이 끝나 학교에 가기 싫다는 동생을 겨우 달랬어요.",
+   "en": "Seoyeon barely managed to soothe her younger sibling, who didn't want to go back to school after winter break.",
+   "ko": "서연은 겨울 방학이 끝나 학교에 가기 싫다는 동생을 겨우 달랬어요.",
+   "blank": "달랬어요",
+   "src": "made"
+  }
+ ],
  "w|달려가다": [
   {
    "text": "사고가 나서 병원으로 달려갔어.",
@@ -18295,6 +18439,22 @@
    "en": "The juice is so sweet even the scent spreads.",
    "ko": "과즙이 달콤하다 못해 향까지 퍼져.",
    "blank": "달콤하다"
+  }
+ ],
+ "w|달팽이": [
+  {
+   "text": "동민은 상추 잎을 갉아 먹은 달팽이를 숲으로 돌려보냈어요.",
+   "en": "Dongmin sent the snail that had nibbled his lettuce back to the forest.",
+   "ko": "동민은 상추 잎을 갉아 먹은 달팽이를 숲으로 돌려보냈어요.",
+   "blank": "달팽이를",
+   "src": "made"
+  },
+  {
+   "text": "장마철이면 서연네 화단 벽에 달팽이가 줄지어 붙어 있어요.",
+   "en": "In the rainy season, snails line up on the wall of Seoyeon's flower bed.",
+   "ko": "장마철이면 서연네 화단 벽에 달팽이가 줄지어 붙어 있어요.",
+   "blank": "달팽이가",
+   "src": "made"
   }
  ],
  "w|닭": [
@@ -21588,6 +21748,22 @@
    "en": "Seeing a child crying alone on a rainy day, Yuna felt sympathy.",
    "ko": "비 오는 날 혼자 우는 아이를 보니 유나는 동정심이 생겼어요.",
    "blank": "동정심이",
+   "src": "made"
+  }
+ ],
+ "w|동정하다": [
+  {
+   "text": "동민은 다친 새끼 고라니를 동정해서 집으로 데려와 돌봤어요.",
+   "en": "Dongmin felt sorry for an injured baby water deer and brought it home to care for it.",
+   "ko": "동민은 다친 새끼 고라니를 동정해서 집으로 데려와 돌봤어요.",
+   "blank": "동정해서",
+   "src": "made"
+  },
+  {
+   "text": "한겨울에 밖에서 떠는 길고양이들을 서연은 동정해서 집 앞에 상자를 놓아 뒀어요.",
+   "en": "Feeling sorry for the stray cats shivering outside in midwinter, Seoyeon left a box in front of her house.",
+   "ko": "한겨울에 밖에서 떠는 길고양이들을 서연은 동정해서 집 앞에 상자를 놓아 뒀어요.",
+   "blank": "동정해서",
    "src": "made"
   }
  ],
@@ -26497,6 +26673,22 @@
    "blank": "메고"
   }
  ],
+ "w|메뚜기": [
+  {
+   "text": "동민의 조카는 풀밭에서 메뚜기를 잡느라 해 지는 줄도 몰랐어요.",
+   "en": "Dongmin's nephew was so busy catching grasshoppers in the grass that he didn't notice the sun setting.",
+   "ko": "동민의 조카는 풀밭에서 메뚜기를 잡느라 해 지는 줄도 몰랐어요.",
+   "blank": "메뚜기를",
+   "src": "made"
+  },
+  {
+   "text": "서연은 가을 들판에서 메뚜기가 튀어 오르는 소리에 어린 시절이 떠올랐어요.",
+   "en": "The sound of grasshoppers jumping in the autumn field reminded Seoyeon of her childhood.",
+   "ko": "서연은 가을 들판에서 메뚜기가 튀어 오르는 소리에 어린 시절이 떠올랐어요.",
+   "blank": "메뚜기가",
+   "src": "made"
+  }
+ ],
  "w|메모하다": [
   {
    "text": "동민은 챙겨야 할 캠핑 장비를 수첩에 하나하나 메모했어요.",
@@ -30449,6 +30641,22 @@
    "src": "made"
   }
  ],
+ "w|반딧불이": [
+  {
+   "text": "물이 맑아지자 동민네 개울에 다시 반딧불이가 나타났어요.",
+   "en": "Once the water got clean, fireflies appeared again at the stream near Dongmin's place.",
+   "ko": "물이 맑아지자 동민네 개울에 다시 반딧불이가 나타났어요.",
+   "blank": "반딧불이가",
+   "src": "made"
+  },
+  {
+   "text": "서연은 한여름 밤 시골 할머니 댁에서 반딧불이를 처음 봤어요.",
+   "en": "Seoyeon saw fireflies for the first time on a midsummer night at her grandmother's house in the country.",
+   "ko": "서연은 한여름 밤 시골 할머니 댁에서 반딧불이를 처음 봤어요.",
+   "blank": "반딧불이를",
+   "src": "made"
+  }
+ ],
  "w|반란": [
   {
    "text": "국사 시간에 동민은 농민들이 일으킨 반란에 대해 배웠어요.",
@@ -30743,6 +30951,22 @@
    "en": "I stumbled upon a new cafe.",
    "ko": "새 카페를 우연히 발견했어.",
    "blank": "발견했어"
+  }
+ ],
+ "w|발굽": [
+  {
+   "text": "진흙에 찍힌 사슴 발굽 자국을 따라 동민은 숲 깊이 들어갔어요.",
+   "en": "Dongmin followed the deer hoof prints in the mud deep into the forest.",
+   "ko": "진흙에 찍힌 사슴 발굽 자국을 따라 동민은 숲 깊이 들어갔어요.",
+   "blank": "발굽",
+   "src": "made"
+  },
+  {
+   "text": "서연은 눈길을 걷는 말의 발굽 소리가 담긴 영상을 보며 잠들어요.",
+   "en": "Seoyeon falls asleep watching a video with the sound of horse hooves on a snowy road.",
+   "ko": "서연은 눈길을 걷는 말의 발굽 소리가 담긴 영상을 보며 잠들어요.",
+   "blank": "발굽",
+   "src": "made"
   }
  ],
  "w|발명하다": [
@@ -31785,6 +32009,22 @@
    "ko": "수려한 외모와 뛰어난 언변, 몸에 배어 있는 매너를 갖춘 그에게서 백작의 품위를 느낄 수 있었다.",
    "blank": "백작의",
    "src": "krdict"
+  }
+ ],
+ "w|백조": [
+  {
+   "text": "겨울이 되면 강 하류에 백조가 날아와서 동민은 망원경을 챙겨 나가요.",
+   "en": "In winter swans fly to the lower river, so Dongmin heads out with binoculars.",
+   "ko": "겨울이 되면 강 하류에 백조가 날아와서 동민은 망원경을 챙겨 나가요.",
+   "blank": "백조가",
+   "src": "made"
+  },
+  {
+   "text": "서연은 겨울 호수에 떠 있는 백조를 보러 해마다 같은 곳에 가요.",
+   "en": "Seoyeon goes to the same place every year to see the swans floating on the winter lake.",
+   "ko": "서연은 겨울 호수에 떠 있는 백조를 보러 해마다 같은 곳에 가요.",
+   "blank": "백조를",
+   "src": "made"
   }
  ],
  "w|백합": [
@@ -33513,6 +33753,22 @@
    "ko": "노동자들의 권리 보호를 위해 김 사장은 하루 열 시간 이상 근무하는 것을 금지시켰다.",
    "blank": "보호를",
    "src": "krdict"
+  }
+ ],
+ "w|보호구역": [
+  {
+   "text": "동민이 일하는 숲은 철새 보호구역이라 사냥이 금지돼 있어요.",
+   "en": "The forest where Dongmin works is a migratory bird sanctuary, so hunting is banned.",
+   "ko": "동민이 일하는 숲은 철새 보호구역이라 사냥이 금지돼 있어요.",
+   "blank": "보호구역이라",
+   "src": "made"
+  },
+  {
+   "text": "서연은 봄마다 습지 보호구역에서 자원봉사를 해요.",
+   "en": "Every spring Seoyeon volunteers at a wetland reserve.",
+   "ko": "서연은 봄마다 습지 보호구역에서 자원봉사를 해요.",
+   "blank": "보호구역에서",
+   "src": "made"
   }
  ],
  "w|보호자": [
@@ -36019,6 +36275,22 @@
    "blank": "비누를"
   }
  ],
+ "w|비늘": [
+  {
+   "text": "동민은 잡은 물고기의 비늘이 햇빛에 반짝이는 걸 한참 바라봤어요.",
+   "en": "Dongmin stared for a long time at the scales of the fish he caught glittering in the sun.",
+   "ko": "동민은 잡은 물고기의 비늘이 햇빛에 반짝이는 걸 한참 바라봤어요.",
+   "blank": "비늘이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 제철 생선을 손질하다가 비늘이 사방에 튀어서 진땀을 뺐어요.",
+   "en": "While cleaning seasonal fish, Seoyeon broke into a sweat because scales flew everywhere.",
+   "ko": "서연은 제철 생선을 손질하다가 비늘이 사방에 튀어서 진땀을 뺐어요.",
+   "blank": "비늘이",
+   "src": "made"
+  }
+ ],
  "w|비닐": [
   {
    "text": "현우는 페인트가 튀지 않게 가구를 비닐로 덮었어요.",
@@ -38437,6 +38709,22 @@
    "src": "made"
   }
  ],
+ "w|산사태": [
+  {
+   "text": "나무를 너무 많이 베면 산사태가 날 수 있다고 동민은 늘 경고해요.",
+   "en": "Dongmin always warns that cutting down too many trees can cause landslides.",
+   "ko": "나무를 너무 많이 베면 산사태가 날 수 있다고 동민은 늘 경고해요.",
+   "blank": "산사태가",
+   "src": "made"
+  },
+  {
+   "text": "장마가 길어지자 서연은 산사태 위험 때문에 등산 계획을 미뤘어요.",
+   "en": "When the rainy season dragged on, Seoyeon postponed her hiking plans because of the risk of landslides.",
+   "ko": "장마가 길어지자 서연은 산사태 위험 때문에 등산 계획을 미뤘어요.",
+   "blank": "산사태",
+   "src": "made"
+  }
+ ],
  "w|산소": [
   {
    "text": "마스크로 산소를 공급했어.",
@@ -39417,6 +39705,22 @@
    "en": "The wound still hasn't healed.",
    "ko": "상처 아직 안 나았어.",
    "blank": "상처"
+  }
+ ],
+ "w|상처받다": [
+  {
+   "text": "동민은 관광객이 숲길이 지루하다고 하자 조금 상처받았어요.",
+   "en": "Dongmin was a little hurt when a tourist said the forest trail was boring.",
+   "ko": "동민은 관광객이 숲길이 지루하다고 하자 조금 상처받았어요.",
+   "blank": "상처받았어요",
+   "src": "made"
+  },
+  {
+   "text": "서연은 크리스마스 약속을 친구가 잊어버려서 상처받았어요.",
+   "en": "Seoyeon was hurt because her friend forgot their Christmas plans.",
+   "ko": "서연은 크리스마스 약속을 친구가 잊어버려서 상처받았어요.",
+   "blank": "상처받았어요",
+   "src": "made"
   }
  ],
  "w|상추": [
@@ -40599,6 +40903,22 @@
    "blank": "서서히"
   }
  ],
+ "w|서식지": [
+  {
+   "text": "동민은 수달의 서식지를 지키려고 강가 공사를 막는 서명을 받았어요.",
+   "en": "To protect the otters' habitat, Dongmin collected signatures to stop construction by the river.",
+   "ko": "동민은 수달의 서식지를 지키려고 강가 공사를 막는 서명을 받았어요.",
+   "blank": "서식지를",
+   "src": "made"
+  },
+  {
+   "text": "서연은 겨울 철새의 서식지가 해마다 북쪽으로 올라간다는 기사를 읽었어요.",
+   "en": "Seoyeon read an article saying winter migratory birds' habitats move further north every year.",
+   "ko": "서연은 겨울 철새의 서식지가 해마다 북쪽으로 올라간다는 기사를 읽었어요.",
+   "blank": "서식지가",
+   "src": "made"
+  }
+ ],
  "w|서약": [
   {
    "text": "신입 공무원들은 첫날 청렴 서약을 하고 서명했어요.",
@@ -40747,6 +41067,22 @@
    "en": "More cars run without petroleum now.",
    "ko": "석유 없이 돌아가는 차가 늘어.",
    "blank": "석유"
+  }
+ ],
+ "w|석탄": [
+  {
+   "text": "동민의 할아버지는 이 산 너머 탄광에서 석탄을 캐셨대요.",
+   "en": "Dongmin's grandfather says he used to mine coal at the mine over this mountain.",
+   "ko": "동민의 할아버지는 이 산 너머 탄광에서 석탄을 캐셨대요.",
+   "blank": "석탄을",
+   "src": "made"
+  },
+  {
+   "text": "서연의 할머니는 옛날 겨울엔 석탄 난로 하나로 온 가족이 버텼다고 하셨어요.",
+   "en": "Seoyeon's grandmother said that in the old days the whole family got through winter with a single coal stove.",
+   "ko": "서연의 할머니는 옛날 겨울엔 석탄 난로 하나로 온 가족이 버텼다고 하셨어요.",
+   "blank": "석탄",
+   "src": "made"
   }
  ],
  "w|섞다": [
@@ -48027,6 +48363,22 @@
    "src": "made"
   }
  ],
+ "w|쓰나미": [
+  {
+   "text": "동민은 다큐멘터리에서 쓰나미가 지나간 해안 숲이 다시 살아나는 과정을 봤어요.",
+   "en": "In a documentary, Dongmin watched a coastal forest come back to life after a tsunami.",
+   "ko": "동민은 다큐멘터리에서 쓰나미가 지나간 해안 숲이 다시 살아나는 과정을 봤어요.",
+   "blank": "쓰나미가",
+   "src": "made"
+  },
+  {
+   "text": "서연은 바닷가 숙소에서 쓰나미 대피 경로를 먼저 확인해요.",
+   "en": "At a seaside lodging, Seoyeon checks the tsunami evacuation route first.",
+   "ko": "서연은 바닷가 숙소에서 쓰나미 대피 경로를 먼저 확인해요.",
+   "blank": "쓰나미",
+   "src": "made"
+  }
+ ],
  "w|쓰다": [
   {
    "text": "모자를 쓰고 나갔어요.",
@@ -50338,6 +50690,22 @@
    "en": "Daeun organized her to-do list and budget with a wedding planning app.",
    "ko": "다은은 결혼 준비 앱으로 해야 할 일과 예산을 정리했어요.",
    "blank": "앱으로",
+   "src": "made"
+  }
+ ],
+ "w|앵무새": [
+  {
+   "text": "동민의 이웃이 기르는 앵무새는 동민의 이름을 부를 줄 알아요.",
+   "en": "The parrot Dongmin's neighbor keeps knows how to call Dongmin's name.",
+   "ko": "동민의 이웃이 기르는 앵무새는 동민의 이름을 부를 줄 알아요.",
+   "blank": "앵무새는",
+   "src": "made"
+  },
+  {
+   "text": "서연의 앵무새는 날이 추워지면 털을 부풀리고 웅크려 있어요.",
+   "en": "When it gets cold, Seoyeon's parrot puffs up its feathers and huddles.",
+   "ko": "서연의 앵무새는 날이 추워지면 털을 부풀리고 웅크려 있어요.",
+   "blank": "앵무새는",
    "src": "made"
   }
  ],
@@ -54667,6 +55035,22 @@
    "src": "made"
   }
  ],
+ "w|예방하다": [
+  {
+   "text": "동민은 진드기를 예방하려고 숲에 갈 때 긴소매 옷을 입어요.",
+   "en": "To prevent ticks, Dongmin wears long sleeves when he goes into the forest.",
+   "ko": "동민은 진드기를 예방하려고 숲에 갈 때 긴소매 옷을 입어요.",
+   "blank": "예방하려고",
+   "src": "made"
+  },
+  {
+   "text": "서연은 환절기 감기를 예방하려고 미리 독감 주사를 맞았어요.",
+   "en": "To prevent colds at the change of seasons, Seoyeon got a flu shot in advance.",
+   "ko": "서연은 환절기 감기를 예방하려고 미리 독감 주사를 맞았어요.",
+   "blank": "예방하려고",
+   "src": "made"
+  }
+ ],
  "w|예비": [
   {
    "text": "정전에 대비해서 시청에는 예비 발전기가 있어요.",
@@ -55707,6 +56091,22 @@
    "en": "The answer was so correct everyone clapped.",
    "ko": "답이 올바르다 못해 다들 박수를 쳤어.",
    "blank": "올바르다"
+  }
+ ],
+ "w|올빼미": [
+  {
+   "text": "밤에 숲길을 걷던 동민은 나뭇가지 위의 올빼미와 눈이 마주쳤어요.",
+   "en": "Walking a forest path at night, Dongmin locked eyes with an owl on a branch.",
+   "ko": "밤에 숲길을 걷던 동민은 나뭇가지 위의 올빼미와 눈이 마주쳤어요.",
+   "blank": "올빼미와",
+   "src": "made"
+  },
+  {
+   "text": "서연은 밤늦게까지 깨어 있는 자기를 올빼미라고 불러요.",
+   "en": "Seoyeon calls herself a night owl because she stays up late.",
+   "ko": "서연은 밤늦게까지 깨어 있는 자기를 올빼미라고 불러요.",
+   "blank": "올빼미라고",
+   "src": "made"
   }
  ],
  "w|올해": [
@@ -56851,6 +57251,22 @@
    "blank": "용서하기"
   }
  ],
+ "w|용암": [
+  {
+   "text": "동민은 강가의 검은 돌이 오래전 용암이 굳은 거라고 아이들에게 설명했어요.",
+   "en": "Dongmin explained to the kids that the black stones by the river are lava that hardened long ago.",
+   "ko": "동민은 강가의 검은 돌이 오래전 용암이 굳은 거라고 아이들에게 설명했어요.",
+   "blank": "용암이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 여름휴가 때 화산섬에서 굳은 용암 위를 걸어 봤어요.",
+   "en": "On summer vacation, Seoyeon walked on hardened lava on a volcanic island.",
+   "ko": "서연은 여름휴가 때 화산섬에서 굳은 용암 위를 걸어 봤어요.",
+   "blank": "용암",
+   "src": "made"
+  }
+ ],
  "w|용의자": [
   {
    "text": "경찰이 용의자를 불러 조사했어.",
@@ -57313,6 +57729,22 @@
    "en": "There was a lot of dust on the school field.",
    "ko": "운동장에 먼지가 많이 났어.",
    "blank": "운동장에"
+  }
+ ],
+ "w|운동하다": [
+  {
+   "text": "동민은 헬스장 대신 강둑을 따라 달리면서 운동해요.",
+   "en": "Instead of going to the gym, Dongmin works out by running along the riverbank.",
+   "ko": "동민은 헬스장 대신 강둑을 따라 달리면서 운동해요.",
+   "blank": "운동해요",
+   "src": "made"
+  },
+  {
+   "text": "겨울에는 해가 짧아서 서연은 퇴근 후 실내에서 운동해요.",
+   "en": "Days are short in winter, so Seoyeon works out indoors after work.",
+   "ko": "겨울에는 해가 짧아서 서연은 퇴근 후 실내에서 운동해요.",
+   "blank": "운동해요",
+   "src": "made"
   }
  ],
  "w|운동화": [
@@ -58147,6 +58579,22 @@
    "en": "I offered comfort and held their hand.",
    "ko": "위로를 건네며 손을 잡았어.",
    "blank": "위로를"
+  }
+ ],
+ "w|위로하다": [
+  {
+   "text": "동민은 낚시에 실패한 조카를 강가에서 위로했어요.",
+   "en": "Dongmin comforted his nephew by the river after he failed to catch any fish.",
+   "ko": "동민은 낚시에 실패한 조카를 강가에서 위로했어요.",
+   "blank": "위로했어요",
+   "src": "made"
+  },
+  {
+   "text": "가을을 타서 우울해하는 친구를 서연이 따뜻한 차 한 잔으로 위로했어요.",
+   "en": "Seoyeon comforted a friend feeling down from the autumn blues with a cup of warm tea.",
+   "ko": "가을을 타서 우울해하는 친구를 서연이 따뜻한 차 한 잔으로 위로했어요.",
+   "blank": "위로했어요",
+   "src": "made"
   }
  ],
  "w|위생": [
@@ -59741,6 +60189,22 @@
    "en": "This one's the best.",
    "ko": "이것이 제일 나아.",
    "blank": "이것이"
+  }
+ ],
+ "w|이겨내다": [
+  {
+   "text": "동민은 숲에서 혼자 지내며 도시에서 받은 스트레스를 이겨냈어요.",
+   "en": "Living alone in the forest, Dongmin overcame the stress he got in the city.",
+   "ko": "동민은 숲에서 혼자 지내며 도시에서 받은 스트레스를 이겨냈어요.",
+   "blank": "이겨냈어요",
+   "src": "made"
+  },
+  {
+   "text": "서연은 매년 봄마다 찾아오는 꽃가루 알레르기를 약으로 이겨내요.",
+   "en": "Seoyeon gets through the pollen allergy that comes every spring with medicine.",
+   "ko": "서연은 매년 봄마다 찾아오는 꽃가루 알레르기를 약으로 이겨내요.",
+   "blank": "이겨내요",
+   "src": "made"
   }
  ],
  "w|이곳": [
@@ -66773,6 +67237,22 @@
    "src": "made"
   }
  ],
+ "w|절망하다": [
+  {
+   "text": "숲이 불에 탄 걸 본 마을 사람들은 절망했지만 동민은 나무를 다시 심자고 했어요.",
+   "en": "The villagers despaired when they saw the burned forest, but Dongmin suggested planting trees again.",
+   "ko": "숲이 불에 탄 걸 본 마을 사람들은 절망했지만 동민은 나무를 다시 심자고 했어요.",
+   "blank": "절망했지만",
+   "src": "made"
+  },
+  {
+   "text": "서연은 겨울이 끝나지 않을 것 같아 절망한 적도 있었어요.",
+   "en": "There were times Seoyeon despaired that winter would never end.",
+   "ko": "서연은 겨울이 끝나지 않을 것 같아 절망한 적도 있었어요.",
+   "blank": "절망한",
+   "src": "made"
+  }
+ ],
  "w|절벽": [
   {
    "text": "동민은 강가 절벽 위에 둥지를 튼 독수리를 발견했어요.",
@@ -69349,6 +69829,22 @@
    "src": "made"
   }
  ],
+ "w|좌절하다": [
+  {
+   "text": "동민은 장마에 애써 만든 산책로가 쓸려 가자 크게 좌절했어요.",
+   "en": "Dongmin was deeply discouraged when the trail he worked so hard on was washed away by the monsoon.",
+   "ko": "동민은 장마에 애써 만든 산책로가 쓸려 가자 크게 좌절했어요.",
+   "blank": "좌절했어요",
+   "src": "made"
+  },
+  {
+   "text": "서연은 봄에 본 시험에서 떨어져 좌절했지만 가을에 다시 도전했어요.",
+   "en": "Seoyeon was discouraged after failing the exam in spring, but tried again in autumn.",
+   "ko": "서연은 봄에 본 시험에서 떨어져 좌절했지만 가을에 다시 도전했어요.",
+   "blank": "좌절했지만",
+   "src": "made"
+  }
+ ],
  "w|죄": [
   {
    "text": "그 죄를 인정하고 사과했어.",
@@ -69913,6 +70409,22 @@
    "en": "I was so shocked by the news I thought the floor would give way.",
    "ko": "소식에 놀라 바닥이 주저앉는 줄 알았어.",
    "blank": "주저앉는"
+  }
+ ],
+ "w|주저하다": [
+  {
+   "text": "동민은 차가운 강물에 발을 담그기 전에 잠시 주저했어요.",
+   "en": "Dongmin hesitated for a moment before dipping his feet into the cold river.",
+   "ko": "동민은 차가운 강물에 발을 담그기 전에 잠시 주저했어요.",
+   "blank": "주저했어요",
+   "src": "made"
+  },
+  {
+   "text": "서연은 두꺼운 겨울 코트를 살까 말까 한참 주저했어요.",
+   "en": "Seoyeon hesitated for a long time over whether to buy a thick winter coat.",
+   "ko": "서연은 두꺼운 겨울 코트를 살까 말까 한참 주저했어요.",
+   "blank": "주저했어요",
+   "src": "made"
   }
  ],
  "w|주전자": [
@@ -70855,6 +71367,22 @@
    "blank": "증오를"
   }
  ],
+ "w|증오하다": [
+  {
+   "text": "동민은 강에 쓰레기를 버리는 사람을 증오하지는 않지만 꼭 말려요.",
+   "en": "Dongmin doesn't hate people who throw trash in the river, but he always stops them.",
+   "ko": "동민은 강에 쓰레기를 버리는 사람을 증오하지는 않지만 꼭 말려요.",
+   "blank": "증오하지는",
+   "src": "made"
+  },
+  {
+   "text": "서연은 끈적끈적한 장마철을 증오한다고 농담처럼 말해요.",
+   "en": "Seoyeon jokingly says she hates the sticky rainy season.",
+   "ko": "서연은 끈적끈적한 장마철을 증오한다고 농담처럼 말해요.",
+   "blank": "증오한다고",
+   "src": "made"
+  }
+ ],
  "w|증인": [
   {
    "text": "증인이 그날의 장면을 자세히 설명했어.",
@@ -71272,6 +71800,22 @@
    "en": "The subway on the way to work was so terribly crowded that Haeun could hardly breathe.",
    "ko": "출근길 지하철이 지독하게 붐벼서 하은은 숨이 막혔어요.",
    "blank": "지독하게",
+   "src": "made"
+  }
+ ],
+ "w|지렁이": [
+  {
+   "text": "동민은 비 온 뒤 숲길에 나온 지렁이를 흙으로 옮겨 줬어요.",
+   "en": "After the rain, Dongmin moved the earthworms that had come out onto the forest path back to the soil.",
+   "ko": "동민은 비 온 뒤 숲길에 나온 지렁이를 흙으로 옮겨 줬어요.",
+   "blank": "지렁이를",
+   "src": "made"
+  },
+  {
+   "text": "봄비가 내린 아침 서연은 길에 나온 지렁이를 밟지 않으려고 조심조심 걸었어요.",
+   "en": "On a morning after spring rain, Seoyeon walked carefully so as not to step on the earthworms on the road.",
+   "ko": "봄비가 내린 아침 서연은 길에 나온 지렁이를 밟지 않으려고 조심조심 걸었어요.",
+   "blank": "지렁이를",
    "src": "made"
   }
  ],
@@ -73153,6 +73697,22 @@
    "blank": "짝사랑이라"
   }
  ],
+ "w|짝사랑하다": [
+  {
+   "text": "동민은 강 건너 마을의 선생님을 몇 년째 짝사랑해요.",
+   "en": "Dongmin has had a secret crush on the teacher in the village across the river for years.",
+   "ko": "동민은 강 건너 마을의 선생님을 몇 년째 짝사랑해요.",
+   "blank": "짝사랑해요",
+   "src": "made"
+  },
+  {
+   "text": "서연은 고등학교 때 벚꽃 아래서 처음 본 선배를 오래 짝사랑했어요.",
+   "en": "In high school, Seoyeon had a long crush on an upperclassman she first saw under the cherry blossoms.",
+   "ko": "서연은 고등학교 때 벚꽃 아래서 처음 본 선배를 오래 짝사랑했어요.",
+   "blank": "짝사랑했어요",
+   "src": "made"
+  }
+ ],
  "w|짠맛": [
   {
    "text": "젓갈의 짠맛이 너무 세서 민수는 물을 벌컥벌컥 마셨어요.",
@@ -74061,6 +74621,22 @@
    "src": "made"
   }
  ],
+ "w|참새": [
+  {
+   "text": "동민이 벼를 말리는 동안 참새 떼가 자꾸 날아들었어요.",
+   "en": "While Dongmin was drying rice, flocks of sparrows kept flying in.",
+   "ko": "동민이 벼를 말리는 동안 참새 떼가 자꾸 날아들었어요.",
+   "blank": "참새",
+   "src": "made"
+  },
+  {
+   "text": "눈 덮인 마당에서 참새들이 모이를 찾는 걸 서연이 창문으로 지켜봤어요.",
+   "en": "Seoyeon watched through the window as sparrows looked for feed in the snow-covered yard.",
+   "ko": "눈 덮인 마당에서 참새들이 모이를 찾는 걸 서연이 창문으로 지켜봤어요.",
+   "blank": "참새들이",
+   "src": "made"
+  }
+ ],
  "w|참석자": [
   {
    "text": "식이 끝나고 준호는 참석자 모두에게 답례품을 나눠 줬어요.",
@@ -74843,6 +75419,22 @@
    "en": "I held the child gently like an angel.",
    "ko": "아이를 천사처럼 다정하게 안아 줬어.",
    "blank": "천사처럼"
+  }
+ ],
+ "w|천연가스": [
+  {
+   "text": "숲 아래에 천연가스 관을 묻는다는 소식에 동민은 걱정이 많아요.",
+   "en": "Dongmin is worried by the news that a natural gas pipeline will be buried under the forest.",
+   "ko": "숲 아래에 천연가스 관을 묻는다는 소식에 동민은 걱정이 많아요.",
+   "blank": "천연가스",
+   "src": "made"
+  },
+  {
+   "text": "겨울이 되면 천연가스 요금이 올라서 서연은 보일러 온도를 낮춰요.",
+   "en": "Natural gas bills go up in winter, so Seoyeon turns down the boiler temperature.",
+   "ko": "겨울이 되면 천연가스 요금이 올라서 서연은 보일러 온도를 낮춰요.",
+   "blank": "천연가스",
+   "src": "made"
   }
  ],
  "w|천장": [
@@ -76832,6 +77424,22 @@
    "en": "The boss always trusts the employees' loyalty to the company.",
    "ko": "사장님은 직원들의 회사에 대한 충성심을 늘 믿어요.",
    "blank": "충성심을",
+   "src": "made"
+  }
+ ],
+ "w|충전하다": [
+  {
+   "text": "동민은 숲에 들어가기 전에 무전기 배터리를 꼭 충전해요.",
+   "en": "Dongmin always charges the radio battery before going into the forest.",
+   "ko": "동민은 숲에 들어가기 전에 무전기 배터리를 꼭 충전해요.",
+   "blank": "충전해요",
+   "src": "made"
+  },
+  {
+   "text": "추운 날엔 휴대폰 배터리가 빨리 닳아서 서연은 보조 배터리로 자주 충전해요.",
+   "en": "On cold days her phone battery drains fast, so Seoyeon often charges it with a power bank.",
+   "ko": "추운 날엔 휴대폰 배터리가 빨리 닳아서 서연은 보조 배터리로 자주 충전해요.",
+   "blank": "충전해요",
    "src": "made"
   }
  ],
@@ -84247,6 +84855,22 @@
    "blank": "해외"
   }
  ],
+ "w|해일": [
+  {
+   "text": "동민은 강 하구 마을이 해일에 대비해 둑을 높였다는 기사를 읽었어요.",
+   "en": "Dongmin read an article saying the village at the river mouth raised its embankment to prepare for storm surges.",
+   "ko": "동민은 강 하구 마을이 해일에 대비해 둑을 높였다는 기사를 읽었어요.",
+   "blank": "해일에",
+   "src": "made"
+  },
+  {
+   "text": "태풍이 오는 늦여름이면 서연의 고향 바닷가 마을은 해일을 늘 걱정해요.",
+   "en": "In late summer when typhoons come, Seoyeon's seaside hometown always worries about storm surges.",
+   "ko": "태풍이 오는 늦여름이면 서연의 고향 바닷가 마을은 해일을 늘 걱정해요.",
+   "blank": "해일을",
+   "src": "made"
+  }
+ ],
  "w|해적": [
   {
    "text": "재원은 해적 행위로 기소된 선원들의 재판을 방청했어요.",
@@ -85821,6 +86445,22 @@
    "en": "I saved the number wanting to call in an emergency.",
    "ko": "비상시에 호출하다 싶어 번호를 저장했어.",
    "blank": "호출하다"
+  }
+ ],
+ "w|호칭": [
+  {
+   "text": "동민은 숲 해설사로 일하면서 아이들이 자기를 부르는 호칭을 선생님 대신 삼촌으로 바꿨어요.",
+   "en": "Working as a forest guide, Dongmin changed what the kids call him from teacher to uncle.",
+   "ko": "동민은 숲 해설사로 일하면서 아이들이 자기를 부르는 호칭을 선생님 대신 삼촌으로 바꿨어요.",
+   "blank": "호칭을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 회사를 옮기고 새 직장에서 쓰는 호칭이 낯설어서 한동안 헷갈렸어요.",
+   "en": "After changing jobs, Seoyeon was confused for a while because the titles used at the new workplace were unfamiliar.",
+   "ko": "서연은 회사를 옮기고 새 직장에서 쓰는 호칭이 낯설어서 한동안 헷갈렸어요.",
+   "blank": "호칭이",
+   "src": "made"
   }
  ],
  "w|호텔": [
