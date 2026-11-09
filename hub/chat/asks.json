@@ -628,7 +628,11 @@
       ],
       "base": "f8e65b71f169052ce56e0d2fd3c915e2ea50483d",
       "head": "f8e65b7",
-      "status": "open"
+      "status": "맞음",
+      "by": "2",
+      "note": "My 화면(studyMap·notes)에 플랫폼 조건 없음 — Logbank 오늘 📞 수업·숙제 통화가 iOS에도 그대로 나옴. 옛 voiceCallAvailable 참조 0",
+      "until": "",
+      "answeredAt": "2026-11-09 19:26"
     },
     {
       "id": "a261109-6-3",
@@ -887,7 +891,11 @@
       ],
       "base": "f8e65b71f169052ce56e0d2fd3c915e2ea50483d",
       "head": "64865477",
-      "status": "open"
+      "status": "맞음",
+      "by": "2",
+      "note": "My 네이티브: Logbank 끝(my-full)·Quizbank 문제 아래(quiz-inline)·Languagebank 끝·사전·표현 카드·칸 설명·넘겨 보기 끝·실력 확인 결과·수업 끝. My는 BANNER_TABS에 없음, LessonHost 닫기 전면 없음. 전면은 끝 자리만(quizBreak·homeworkEnd·flipEnd·skillCheckEnd)",
+      "until": "",
+      "answeredAt": "2026-11-09 19:26"
     },
     {
       "id": "a261109-5-3",
@@ -1040,7 +1048,11 @@
       ],
       "base": "origin/main",
       "head": "d88135a",
-      "status": "open"
+      "status": "맞음",
+      "by": "2",
+      "note": "Quizbank 새 묶음(head)·다시 볼 것(askKeys → turnedGrammar) 둘 다 turnPrepared(그 칸 퀴즈 답 수 차례). es-gv g|3:1·g|3:4 데이터 있음, preparedQuiz.test 8 통과. FirstCheck는 prepared 안 씀",
+      "until": "",
+      "answeredAt": "2026-11-09 19:26"
     }
   ],
   "scopes": [
