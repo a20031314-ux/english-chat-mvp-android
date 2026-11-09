@@ -53,12 +53,10 @@
 |---|---|---|
 | `callEnd` | AI 통화가 끝나고 돌아보기로 넘어갈 때 | AI 통화 (어디서나 뜨는 층 CallHost `call` · `RoleplayScreen.tsx` |
 | `chatLeave` | AI 채팅을 몇 번(설정 `interstitialAfterChats`) 보낸 뒤 채팅 화면을 떠나거나 대화를 끝낼 때 | 앱 틀 `shell` · `AppHome.tsx` ／ AI 채팅 (대화 → AI 튜터 줄) `chat` · `ChatWindow.tsx` |
-| `checkupEnd` | 정기 시험(Quizbank 시험 탭)·단계 시험(통과 못 함)·단계 미리 확인을 끝까지 풀고 결과를 닫을 때 | My 탭 `my` · `studyMap/CheckupPlayer.tsx` ／ My 탭 `my` · `studyMap/TodayPlan.tsx` |
 | `quizBreak` | Quizbank 칸 안에서 이어 푸는 퀴즈(InlineQuiz)가 10문제를 넘긴 뒤 다음 묶음으로 넘어갈 때 — 문제 도중·답 보기 중에는 없음(2026-11-01) | My 탭 `my` · `studyMap/InlineQuiz.tsx` |
 | `quizEnd` | My 퀴즈(묶음 퀴즈·단어 시험)를 끝까지 풀고 닫을 때 — 오늘 할 것에서 연 묶음은 오늘 할 것 끝에 한 번 | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
 | `roomLeave` | 공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외 | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
-| `scriptEnd` | My 단계 화면에서 직접 연 수업·대본·꺼내 쓰기를 끝까지 하고 닫을 때(✕·끝 화면 닫기, 중간에 닫으면 없음). 오늘 할 것에서 연 것은 항목 사이에 없고, 그날 오늘 할 것을 다 끝낸 순간 한 번(`lib/ads.ts` noteTodayFinished·fireTodayEnd, 2026-11-01) | My 탭 `my` · `studyMap/FrameLesson.tsx` ／ My 탭 `my` · `studyMap/RecallPlayer.tsx` ／ My 탭 `my` · `studyMap/StageFrames.tsx` ／ My 탭 `my` · `studyMap/StageScripts.tsx` |
-| `stageUp` | 단계 시험을 통과해 단계가 올라갈 때(통과 화면을 닫거나 다음 단계로 넘어갈 때, 2026-11-01) | My 탭 `my` · `notes/NotebookSection.tsx` ／ My 탭 `my` · `studyMap/CheckupPlayer.tsx` |
+| `scriptEnd` | My 단계 화면에서 직접 연 수업·대본·꺼내 쓰기를 끝까지 하고 닫을 때(✕·끝 화면 닫기, 중간에 닫으면 없음). 오늘 할 것에서 연 것은 항목 사이에 없고, 그날 오늘 할 것을 다 끝낸 순간 한 번(`lib/ads.ts` noteTodayFinished·fireTodayEnd, 2026-11-01) | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `videoLeave` | 영상을 몇 분(설정 `videoLeaveMinutes`) 넘게 보고 나올 때 | 영상 학습 탭 `video` · `videoLearning/VideoLearningTab.tsx` |
 
 모든 전면 광고는 서로 3분(설정 `interstitialMinGapSeconds`) 안에 다시 뜨지 않고, 미리 받아 둔 광고가 있을 때만 뜬다.
@@ -70,34 +68,25 @@
 | `call` | `call-live` | — | AI 통화 (어디서나 뜨는 층 CallHost `call` · `roleplay/CallParts.tsx` |
 | `chat-locked` | `chat-locked` | AI 채팅 잠김 화면(입력칸 없음)의 빈 공간에 네이티브 하나(사용자 2026-11-01 예외) — 위 구독 버튼과 넉넉히 띄움. | AI 채팅 (대화 → AI 튜터 줄) `chat` · `ChatWindow.tsx` |
 | `my-full` | `logbank-list` | Logbank 아래 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙. | My 탭 `my` · `studyMap/Logbank.tsx` |
-| `my-full` | `stagebank-stage` | 단계 화면 ‘이 단계에선 이런 대화가 돼요’ 대화 예시 앞 네이티브 하나(2026-11-01, 전체 화면에서만 — 바닥 My는 배너, 오늘 할 것 상태의 stagebank-today와 한 화면에 안 겹침), 줄과 띄움. | My 탭 `my` · `notes/NotebookSection.tsx` |
-| `my-full` | `stagebank-today` | Stagebank 전체 화면: 오늘 할 것 아래 빈 공간에 네이티브 하나(바닥 화면은 배너가 있어 전체 화면에서만). | My 탭 `my` · `notes/NotebookSection.tsx` |
 | `people-tab` | `board-after-3` | 세 번째 글 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). 글을 열면 시트가 덮어 멈춘다. | 사람 탭 `people` · `rooms/BoardView.tsx` |
 | `people-tab` | `people-after-4` | 네 번째 사람 뒤에 네이티브 광고 하나(무료·안드로이드만). 프로필을 열면 시트가 덮어 멈춘다. | 사람 탭 `people` · `rooms/RoomPeople.tsx` |
 | `people-tab` | `people-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만) — 📞·로그인 버튼과 띄움. | 사람 탭 `people` · `rooms/PeopleTab.tsx` |
 | `quiz-inline` | `${adKey}-${adRound}` | Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. | My 탭 `my` · `studyMap/InlineQuiz.tsx` |
 | `quiz-inline` | `lesson-${itemId}-${adRound}` | 수업 퀴즈 아래 빈 공간에 네이티브 하나(사용자 2026-11-01 ‘수업 퀴즈 단계에도’) — 버튼과 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `call-end` | — | AI 통화 (어디서나 뜨는 층 CallHost `call` · `RoleplayScreen.tsx` |
-| `results` | `checkup-end` | 시험 결과 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. 지난 결과만 다시 볼 때는 없음. | My 탭 `my` · `studyMap/CheckupPlayer.tsx` |
-| `results` | `frames-skip-${skipped.join(",")}` | — | My 탭 `my` · `studyMap/StageFrames.tsx` |
 | `results` | `lesson-end-${itemId}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/FrameLesson.tsx` |
 | `results` | `quiz-end-${seed}` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
-| `results` | `recall-end` | 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/RecallPlayer.tsx` |
-| `results` | `script-end` | 대본 끝 화면 버튼 아래 네이티브 하나(2026-11-02 사용자 제안 1·2 — 다른 끝 화면과 같은 모양, 닫을 때 전면은 그대로) — 입력칸이 사라진 뒤라 키보드 없음, 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/StageScripts.tsx` |
 | `room-lobby` | `room-lobby-after-2` | 두 번째 방 뒤에 네이티브 광고 하나(무료·안드로이드만). 방에 들어가면 방 화면이 덮어 멈춘다. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-after-5` | 다섯 번째 방 뒤에 하나 더(같은 피드 3개 한도 안, 2026-11-01). | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만, 방 밖) — 버튼과 띄움. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `sheets` | `bank-help-${bank}` | 시트 맨 끝(그림·영상 아래) 네이티브 하나(2026-11-01 — 읽는 안내 시트, 시트가 맨 위 층일 때만). | My 탭 `my` · `studyMap/BankHelp.tsx` |
 | `sheets` | `guide-end` | 장 본문 맨 끝 네이티브 하나(2026-11-01 — 읽는 안내 끝, 장 머리 스위치·‘이 화면으로 가기’와 떨어짐). 쓸 기능 고르기에는 없음. | 앱 틀 `shell` · `GuideSheet.tsx` |
-| `sheets` | `my-progress-end` | 익힌 것 목록 끝 네이티브 하나(2026-11-01 — ✓ 칩만 읽는 곳, 토글은 맨 위). 익힌 것이 없으면(새 사용자 — 토글 한 줄뿐) 두지 않음. | My 탭 `my` · `notes/NotebookSection.tsx` |
-| `sheets` | `scope-end` | 시트 맨 끝 네이티브 하나(2026-11-01 — 읽기만 하는 시트, 누를 것은 ✕뿐, 시트가 맨 위 층일 때만). | My 탭 `my` · `studyMap/ContentScope.tsx` |
-| `sheets` | `skill-record-end` | 기록 끝 네이티브 하나(2026-11-01 — 읽는 기록 화면, 결과가 있을 때만, 한 장을 열면 없음). 줄과 띄움. | My 탭 `my` · `studyMap/SkillRecord.tsx` |
 | `talk-list` | `talk-after-account` | 로그인 전이면 계정 카드 아래에 네이티브 광고 하나(무료·안드로이드만). | 대화 탭 `talk` · `rooms/MessagesTab.tsx` |
 | `talk-list` | `talk-between-lists` | — | 대화 탭 `talk` · `rooms/MessagesTab.tsx` |
 | `video-library` | `video-library-after-3` | 세 번째 영상 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 | `video-library` | `video-library-after-8` | 여덟 번째 영상 뒤에 하나 더(2026-11-01 — 같은 피드 두 번째, 한 피드 3개 한도 안, 첫 광고와 한 화면에 안 겹침). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 
-피드 10개, 자리 29개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
+피드 10개, 자리 20개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
 
 ### 배너 · 앱 오프닝 · 보상형
 
