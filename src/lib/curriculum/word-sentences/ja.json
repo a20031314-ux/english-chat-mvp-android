@@ -21035,6 +21035,22 @@
    "src": "made"
   }
  ],
+ "w|偏差": [
+  {
+   "text": "大輔は偏差値の高い高校を出たのに、料理の道を選んだ。",
+   "en": "Even though Daisuke graduated from a high school with high exam scores, he chose a career in cooking.",
+   "ko": "다이스케는 편차치가 높은 고등학교를 나왔는데도 요리의 길을 택했어요.",
+   "blank": "偏差",
+   "src": "made"
+  },
+  {
+   "text": "古い受験問題集を手に取った学生は、偏差値の表を見て苦笑いした。",
+   "en": "A student who picked up an old exam workbook gave a wry smile at the table of exam scores.",
+   "ko": "오래된 수험 문제집을 집어 든 학생은 편차치 표를 보고 쓴웃음을 지었어요.",
+   "blank": "偏差",
+   "src": "made"
+  }
+ ],
  "w|偏見": [
   {
    "text": "旧友は、都会で暮らす人への偏見がなくなったと書いていた。",
@@ -23327,6 +23343,22 @@
    "src": "made"
   }
  ],
+ "w|最優秀": [
+  {
+   "text": "大輔は、若手料理人のコンテストで最優秀賞を取った。",
+   "en": "Daisuke won the top prize in a contest for young chefs.",
+   "ko": "다이스케는 젊은 요리사 대회에서 최우수상을 받았어요.",
+   "blank": "最優秀",
+   "src": "made"
+  },
+  {
+   "text": "ブースの飾り付けコンテストで、さくらのブースが最優秀に選ばれた。",
+   "en": "Sakura's booth was chosen as the best in the booth decoration contest.",
+   "ko": "부스 꾸미기 대회에서 사쿠라의 부스가 최우수로 뽑혔어요.",
+   "blank": "最優秀",
+   "src": "made"
+  }
+ ],
  "w|最先端": [
   {
    "text": "店は、最先端の真空調理器を取り入れた。",
@@ -23400,6 +23432,22 @@
    "en": "The hotel tries to meet guests' requests as fully as it can.",
    "ko": "호텔은 손님 요청에 최대한 응하려고 노력해요.",
    "blank": "最大限",
+   "src": "made"
+  }
+ ],
+ "w|最小": [
+  {
+   "text": "ガスの火を最小にして、大輔はスープをじっくり煮込んだ。",
+   "en": "Turning the gas flame to its lowest, Daisuke slowly simmered the soup.",
+   "ko": "가스 불을 최소로 줄이고 다이스케는 수프를 천천히 끓였어요.",
+   "blank": "最小",
+   "src": "made"
+  },
+  {
+   "text": "荷物を最小にするため、さくらは小さな品物だけを持って行った。",
+   "en": "To keep her luggage to a minimum, Sakura brought only small items.",
+   "ko": "짐을 최소로 하려고 사쿠라는 작은 물건만 가져갔어요.",
+   "blank": "最小",
    "src": "made"
   }
  ],
@@ -24687,6 +24735,22 @@
    "blank": "切符"
   }
  ],
+ "w|刊行": [
+  {
+   "text": "料理長のレシピをまとめた本が、来月刊行される。",
+   "en": "A book compiling the head chef's recipes will be published next month.",
+   "ko": "주방장의 레시피를 모은 책이 다음 달 간행돼요.",
+   "blank": "刊行",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、ずっと昔に刊行された料理雑誌を見つけて買った。",
+   "en": "Sakura found and bought a cooking magazine published a long time ago.",
+   "ko": "사쿠라는 아주 오래전에 간행된 요리 잡지를 찾아서 샀어요.",
+   "blank": "刊行",
+   "src": "made"
+  }
+ ],
  "w|刑事": [
   {
    "text": "刑事ドラマを見た。",
@@ -25583,6 +25647,22 @@
    "src": "made"
   }
  ],
+ "w|割り当て": [
+  {
+   "text": "朝の仕込みの割り当ては、料理長が毎日ホワイトボードに書く。",
+   "en": "The head chef writes the morning prep assignments on the whiteboard every day.",
+   "ko": "아침 밑준비 배정은 주방장이 매일 화이트보드에 적어요.",
+   "blank": "割り当て",
+   "src": "made"
+  },
+  {
+   "text": "出店場所の割り当ては、くじ引きで決まった。",
+   "en": "The booth locations were assigned by lottery.",
+   "ko": "출점 장소 배정은 제비뽑기로 정해졌어요.",
+   "blank": "割り当て",
+   "src": "made"
+  }
+ ],
  "w|割る": [
   {
    "text": "子どもがぶつかって展示ケースのガラスを割る事故が、昔あったらしい。",
@@ -26001,6 +26081,22 @@
    "en": "I'll help if you're stuck.",
    "ko": "힘들면 도와줄게.",
    "blank": "助ける"
+  }
+ ],
+ "w|助成": [
+  {
+   "text": "店は、市の助成金を使って厨房の換気扇を新しくした。",
+   "en": "The restaurant used a city subsidy to replace the kitchen's ventilation fan.",
+   "ko": "가게는 시 보조금을 써서 주방 환풍기를 새것으로 바꿨어요.",
+   "blank": "助成",
+   "src": "made"
+  },
+  {
+   "text": "このフリーマーケットは、町の助成を受けて開かれている。",
+   "en": "This flea market is held with support from the town.",
+   "ko": "이 벼룩시장은 마을의 지원금을 받아 열려요.",
+   "blank": "助成",
+   "src": "made"
   }
  ],
  "w|助手": [
@@ -27079,6 +27175,22 @@
    "en": "Congrats on graduating.",
    "ko": "졸업 축하해.",
    "blank": "卒業"
+  }
+ ],
+ "w|卒業生": [
+  {
+   "text": "この店の厨房では、調理師学校の卒業生が多く働いている。",
+   "en": "Many graduates of culinary school work in this restaurant's kitchen.",
+   "ko": "이 가게 주방에서는 조리사 학교 졸업생이 많이 일해요.",
+   "blank": "卒業生",
+   "src": "made"
+  },
+  {
+   "text": "近くの美術大学の卒業生が、自分の作品を並べていた。",
+   "en": "Graduates of a nearby art university were displaying their own work.",
+   "ko": "근처 미술 대학 졸업생이 자기 작품을 진열하고 있었어요.",
+   "blank": "卒業生",
+   "src": "made"
   }
  ],
  "w|協会": [
@@ -29721,6 +29833,22 @@
    "src": "made"
   }
  ],
+ "w|同窓会": [
+  {
+   "text": "店の二階で、大輔の高校の同窓会が開かれた。",
+   "en": "Daisuke's high school reunion was held on the second floor of the restaurant.",
+   "ko": "가게 이층에서 다이스케의 고등학교 동창회가 열렸어요.",
+   "blank": "同窓会",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、同窓会で久しぶりに会った友人と一緒にブースを出した。",
+   "en": "Sakura ran a booth with a friend she had reconnected with at a class reunion.",
+   "ko": "사쿠라는 동창회에서 오랜만에 만난 친구와 함께 부스를 냈어요.",
+   "blank": "同窓会",
+   "src": "made"
+  }
+ ],
  "w|同等": [
   {
    "text": "この工場の部品は、海外の有名メーカーと同等の品質を持つ。",
@@ -30962,6 +31090,22 @@
    "en": "While waiting for the test results, Sakura killed time at the café across the street.",
    "ko": "검사 결과를 기다리는 동안 사쿠라는 맞은편 찻집에서 시간을 보냈어요.",
    "blank": "喫茶店",
+   "src": "made"
+  }
+ ],
+ "w|営利": [
+  {
+   "text": "大輔は、営利だけを追う店にはしたくないと思っている。",
+   "en": "Daisuke doesn't want the restaurant to be one that only chases profit.",
+   "ko": "다이스케는 영리만 좇는 가게로 만들고 싶지 않다고 생각해요.",
+   "blank": "営利",
+   "src": "made"
+  },
+  {
+   "text": "このフリーマーケットは営利目的ではなく、売り上げの一部は寄付される。",
+   "en": "This flea market isn't for profit, and part of the proceeds are donated.",
+   "ko": "이 벼룩시장은 영리 목적이 아니라 매출 일부가 기부돼요.",
+   "blank": "営利",
    "src": "made"
   }
  ],
@@ -36619,6 +36763,22 @@
    "blank": "完全"
   }
  ],
+ "w|完売": [
+  {
+   "text": "大輔が考えた限定メニューは、昼過ぎには完売した。",
+   "en": "The limited-time dish Daisuke came up with sold out by early afternoon.",
+   "ko": "다이스케가 생각한 한정 메뉴는 점심이 지나자 완판됐어요.",
+   "blank": "完売",
+   "src": "made"
+  },
+  {
+   "text": "さくらが出した手作りのアクセサリーは、昼前に完売した。",
+   "en": "The handmade accessories Sakura put out sold out before noon.",
+   "ko": "사쿠라가 내놓은 수제 액세서리는 점심 전에 완판됐어요.",
+   "blank": "完売",
+   "src": "made"
+  }
+ ],
  "w|完成": [
   {
    "text": "やっと完成したよ。",
@@ -36849,6 +37009,22 @@
    "blank": "定義"
   }
  ],
+ "w|定食": [
+  {
+   "text": "この店の一番人気は、日替わりの焼き魚定食だ。",
+   "en": "This restaurant's most popular dish is the daily grilled fish set meal.",
+   "ko": "이 가게에서 가장 인기 있는 건 매일 바뀌는 생선구이 정식이에요.",
+   "blank": "定食",
+   "src": "made"
+  },
+  {
+   "text": "フリーマーケットが終わったあと、さくらは近くの食堂でしょうが焼き定食を食べた。",
+   "en": "After the flea market, Sakura had a ginger pork set meal at a nearby diner.",
+   "ko": "벼룩시장이 끝나고 사쿠라는 근처 식당에서 생강구이 정식을 먹었어요.",
+   "blank": "定食",
+   "src": "made"
+  }
+ ],
  "w|宝": [
   {
    "text": "祖母にもらった古い指輪は、悠斗にとって一番の宝だ。",
@@ -36862,6 +37038,22 @@
    "en": "The antique shop was piled with old tools like a mountain of treasure.",
    "ko": "골동품 가게에는 보물 산처럼 오래된 도구들이 쌓여 있었어요.",
    "blank": "宝",
+   "src": "made"
+  }
+ ],
+ "w|宝物": [
+  {
+   "text": "大輔の宝物は、修業時代から使っている包丁だ。",
+   "en": "Daisuke's treasure is the knife he has used since his apprenticeship.",
+   "ko": "다이스케의 보물은 수습 시절부터 써 온 식칼이에요.",
+   "blank": "宝物",
+   "src": "made"
+  },
+  {
+   "text": "古いおもちゃの山の中から、さくらは子どものころの宝物とそっくりな人形を見つけた。",
+   "en": "In a pile of old toys, Sakura found a doll just like a treasure from her childhood.",
+   "ko": "낡은 장난감 더미 속에서 사쿠라는 어릴 적 보물과 꼭 닮은 인형을 찾았어요.",
+   "blank": "宝物",
    "src": "made"
   }
  ],
@@ -38053,6 +38245,22 @@
    "src": "made"
   }
  ],
+ "w|専念": [
+  {
+   "text": "料理長は、経営を息子に任せて料理に専念することにした。",
+   "en": "The head chef decided to leave the management to his son and concentrate on cooking.",
+   "ko": "주방장은 경영을 아들에게 맡기고 요리에 전념하기로 했어요.",
+   "blank": "専念",
+   "src": "made"
+  },
+  {
+   "text": "会社を辞めたさくらは、今は手作り雑貨の販売に専念している。",
+   "en": "Having quit her company job, Sakura now focuses on selling handmade goods.",
+   "ko": "회사를 그만둔 사쿠라는 지금은 수제 잡화 판매에 전념하고 있어요.",
+   "blank": "専念",
+   "src": "made"
+  }
+ ],
  "w|専攻": [
   {
    "text": "誠は大学で建築を専攻していた。",
@@ -38449,6 +38657,22 @@
    "src": "made"
   }
  ],
+ "w|小銭": [
+  {
+   "text": "レジの小銭が足りなくなり、大輔は銀行へ両替に走った。",
+   "en": "The register ran short of coins, so Daisuke rushed to the bank for change.",
+   "ko": "계산대 잔돈이 모자라서 다이스케는 은행에 환전하러 뛰어갔어요.",
+   "blank": "小銭",
+   "src": "made"
+  },
+  {
+   "text": "お釣り用の小銭を、さくらは前の晩にたくさん用意した。",
+   "en": "Sakura prepared plenty of coins for change the night before.",
+   "ko": "거스름돈용 잔돈을 사쿠라는 전날 밤에 많이 준비했어요.",
+   "blank": "小銭",
+   "src": "made"
+  }
+ ],
  "w|少々": [
   {
    "text": "担当の者が参りますので、少々お待ちください。",
@@ -38816,6 +39040,22 @@
    "en": "The cooking class teacher apparently sold ramen from a street stall when he was young.",
    "ko": "요리 교실 선생님은 젊었을 때 포장마차에서 라멘을 팔았대요.",
    "blank": "屋台",
+   "src": "made"
+  }
+ ],
+ "w|屋外": [
+  {
+   "text": "夏の間、店は屋外の席でも料理とビールを出している。",
+   "en": "During the summer, the restaurant also serves food and beer at outdoor tables.",
+   "ko": "여름 동안 가게는 야외 자리에서도 요리와 맥주를 내요.",
+   "blank": "屋外",
+   "src": "made"
+  },
+  {
+   "text": "会場が屋外なので、さくらは日焼け止めを忘れずに塗った。",
+   "en": "Since the venue was outdoors, Sakura made sure to put on sunscreen.",
+   "ko": "행사장이 야외라서 사쿠라는 잊지 않고 선크림을 발랐어요.",
+   "blank": "屋外",
    "src": "made"
   }
  ],
@@ -40385,6 +40625,22 @@
    "blank": "店"
   }
  ],
+ "w|店主": [
+  {
+   "text": "この店の店主は、大輔の料理の師匠でもある。",
+   "en": "The owner of this restaurant is also Daisuke's cooking mentor.",
+   "ko": "이 가게 주인은 다이스케의 요리 스승이기도 해요.",
+   "blank": "店主",
+   "src": "made"
+  },
+  {
+   "text": "隣のブースの店主は、古いカメラばかり売っているおじいさんだった。",
+   "en": "The owner of the next booth was an old man who sold nothing but old cameras.",
+   "ko": "옆 부스 주인은 오래된 카메라만 파는 할아버지였어요.",
+   "blank": "店主",
+   "src": "made"
+  }
+ ],
  "w|店内": [
   {
    "text": "小さな店だが、店内はいつもきれいに片づいている。",
@@ -40518,6 +40774,22 @@
    "en": "The two brothers sat apart in the yard without speaking to each other.",
    "ko": "형과 남동생은 마당에서 말도 안 하고 따로 앉아 있었어요.",
    "blank": "庭",
+   "src": "made"
+  }
+ ],
+ "w|庭園": [
+  {
+   "text": "厨房の小さな窓からは、手入れの行き届いた日本庭園が見える。",
+   "en": "From the small kitchen window, you can see a well-kept Japanese garden.",
+   "ko": "주방의 작은 창으로는 손질이 잘된 일본 정원이 보여요.",
+   "blank": "庭園",
+   "src": "made"
+  },
+  {
+   "text": "今回のフリーマーケットは、市立庭園の広場で開かれた。",
+   "en": "This flea market was held in the open space of the city garden.",
+   "ko": "이번 벼룩시장은 시립 정원 광장에서 열렸어요.",
+   "blank": "庭園",
    "src": "made"
   }
  ],
@@ -43481,6 +43753,22 @@
    "src": "made"
   }
  ],
+ "w|悪役": [
+  {
+   "text": "厨房では、いつも料理長が厳しい悪役を引き受けている。",
+   "en": "In the kitchen, the head chef always takes on the role of the strict bad guy.",
+   "ko": "주방에서는 늘 주방장이 엄한 악역을 맡아요.",
+   "blank": "悪役",
+   "src": "made"
+  },
+  {
+   "text": "昔の特撮番組の悪役の人形が、高い値段で売られていた。",
+   "en": "A figure of a villain from an old special-effects TV show was being sold at a high price.",
+   "ko": "옛날 특촬 프로그램 악역 인형이 비싼 값에 팔리고 있었어요.",
+   "blank": "悪役",
+   "src": "made"
+  }
+ ],
  "w|悪意": [
   {
    "text": "昔のけんかで言ったことに悪意はなかったと、翔太はやっと伝えられた。",
@@ -44435,6 +44723,22 @@
    "blank": "成果"
   }
  ],
+ "w|成熟": [
+  {
+   "text": "長い経験に裏打ちされた料理長の味は、成熟した深みがある。",
+   "en": "The head chef's cooking, backed by long experience, has a mature depth.",
+   "ko": "오랜 경험에서 나온 주방장의 맛에는 성숙한 깊이가 있어요.",
+   "blank": "成熟",
+   "src": "made"
+  },
+  {
+   "text": "中古の市場が成熟して、若い人も古着を気軽に買うようになった。",
+   "en": "As the secondhand market has matured, young people have started buying used clothes casually.",
+   "ko": "중고 시장이 성숙해서 젊은 사람들도 헌 옷을 부담 없이 사게 됐어요.",
+   "blank": "成熟",
+   "src": "made"
+  }
+ ],
  "w|成立": [
   {
    "text": "契約が成立したよ。",
@@ -44902,6 +45206,22 @@
    "en": "\"An app is just a tool after all, so let's build it with the user in mind,\" Mayu said.",
    "ko": "\"앱은 결국 도구니까 쓰는 사람을 보고 만들자\"라고 마유는 말했어요.",
    "blank": "所詮",
+   "src": "made"
+  }
+ ],
+ "w|所長": [
+  {
+   "text": "近くの研究所の所長は、毎週金曜に必ず来る常連だ。",
+   "en": "The director of the nearby research institute is a regular who comes every Friday without fail.",
+   "ko": "근처 연구소 소장은 매주 금요일마다 꼭 오는 단골이에요.",
+   "blank": "所長",
+   "src": "made"
+  },
+  {
+   "text": "古い時計を買っていったのは、近所の郵便局の所長だった。",
+   "en": "The person who bought the old clock was the head of the local post office.",
+   "ko": "오래된 시계를 사 간 사람은 동네 우체국 국장이었어요.",
+   "blank": "所長",
    "src": "made"
   }
  ],
@@ -47197,6 +47517,22 @@
    "src": "made"
   }
  ],
+ "w|接待": [
+  {
+   "text": "今夜は、近くの会社の接待で個室が予約されている。",
+   "en": "Tonight the private room is booked for a nearby company's business entertaining.",
+   "ko": "오늘 밤은 근처 회사 접대로 개인실이 예약돼 있어요.",
+   "blank": "接待",
+   "src": "made"
+  },
+  {
+   "text": "父が接待ゴルフで使っていたクラブを、さくらは安く出品した。",
+   "en": "Sakura listed the golf clubs her father had used for business golf at a low price.",
+   "ko": "아버지가 접대 골프에 쓰던 클럽을 사쿠라는 싸게 내놓았어요.",
+   "blank": "接待",
+   "src": "made"
+  }
+ ],
  "w|接種": [
   {
    "text": "図書館の掲示板に、ワクチン接種の案内が貼ってあった。",
@@ -48294,6 +48630,22 @@
    "en": "Yumi sent users a notice about the revision of the pricing plans.",
    "ko": "요금제 개정에 대해 유미는 사용자에게 공지를 보냈어요.",
    "blank": "改定",
+   "src": "made"
+  }
+ ],
+ "w|改札": [
+  {
+   "text": "大輔は駅の改札を出ると、急ぎ足で店へ向かった。",
+   "en": "As soon as he exited the station ticket gate, Daisuke hurried to the restaurant.",
+   "ko": "다이스케는 역 개찰구를 나오자 서둘러 가게로 향했어요.",
+   "blank": "改札",
+   "src": "made"
+  },
+  {
+   "text": "会場は、駅の改札を出てすぐの公園だった。",
+   "en": "The venue was a park right outside the station ticket gates.",
+   "ko": "행사장은 역 개찰구를 나오면 바로 있는 공원이었어요.",
+   "blank": "改札",
    "src": "made"
   }
  ],
@@ -49422,6 +49774,22 @@
    "en": "Yoko restudied English grammar so she could enter races abroad.",
    "ko": "요코는 해외 대회에 나가려고 영어 문법을 다시 공부했어요.",
    "blank": "文法",
+   "src": "made"
+  }
+ ],
+ "w|文献": [
+  {
+   "text": "大輔は、昔の料理を再現するために古い文献を調べた。",
+   "en": "Daisuke researched old documents to recreate dishes from long ago.",
+   "ko": "다이스케는 옛날 요리를 재현하려고 오래된 문헌을 조사했어요.",
+   "blank": "文献",
+   "src": "made"
+  },
+  {
+   "text": "大学で歴史を研究している男性が、古い文献を探しに来ていた。",
+   "en": "A man who researches history at a university had come looking for old documents.",
+   "ko": "대학에서 역사를 연구하는 남성이 오래된 문헌을 찾으러 와 있었어요.",
+   "blank": "文献",
    "src": "made"
   }
  ],
@@ -52303,6 +52671,22 @@
    "blank": "本当"
   }
  ],
+ "w|本数": [
+  {
+   "text": "大輔は、一日に開けたワインの本数を毎晩記録している。",
+   "en": "Every night, Daisuke records the number of wine bottles opened that day.",
+   "ko": "다이스케는 하루에 딴 와인 병 수를 매일 밤 기록해요.",
+   "blank": "本数",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、出品する傘の本数を数えてから家を出た。",
+   "en": "Sakura counted how many umbrellas she was putting up for sale before leaving home.",
+   "ko": "사쿠라는 내놓을 우산 개수를 세고 나서 집을 나섰어요.",
+   "blank": "本数",
+   "src": "made"
+  }
+ ],
  "w|本文": [
   {
    "text": "拓也は、安全マニュアルの本文を何度も読み返した。",
@@ -52345,6 +52729,22 @@
    "en": "Show your true self.",
    "ko": "본래 모습을 보여줘.",
    "blank": "本来"
+  }
+ ],
+ "w|本業": [
+  {
+   "text": "大輔の本業は料理人だが、週末はギターを教えている。",
+   "en": "Daisuke's main job is being a cook, but he teaches guitar on weekends.",
+   "ko": "다이스케의 본업은 요리사지만 주말에는 기타를 가르쳐요.",
+   "blank": "本業",
+   "src": "made"
+  },
+  {
+   "text": "隣のブースの男性は、本業は大工だそうだ。",
+   "en": "The man at the next booth is a carpenter by trade, apparently.",
+   "ko": "옆 부스 남성은 본업이 목수래요.",
+   "blank": "本業",
+   "src": "made"
   }
  ],
  "w|本気": [
@@ -55778,6 +56178,22 @@
    "en": "A civil dispute arose between two villages over the use of river water.",
    "ko": "강물 이용을 둘러싸고 두 마을 사이에 민사 분쟁이 일어났어요.",
    "blank": "民事",
+   "src": "made"
+  }
+ ],
+ "w|民営": [
+  {
+   "text": "大輔は、民営の駐車場に車を止めてから店に入った。",
+   "en": "Daisuke parked in a private parking lot before going into the restaurant.",
+   "ko": "다이스케는 민영 주차장에 차를 세우고 가게에 들어갔어요.",
+   "blank": "民営",
+   "src": "made"
+  },
+  {
+   "text": "会場までは、民営のバスが臨時便を出していた。",
+   "en": "A privately run bus company was operating extra buses to the venue.",
+   "ko": "행사장까지는 민영 버스가 임시편을 운행했어요.",
+   "blank": "民営",
    "src": "made"
   }
  ],
@@ -60359,6 +60775,22 @@
    "src": "made"
   }
  ],
+ "w|物流": [
+  {
+   "text": "大雪で物流が止まった日は、店に野菜が届かなかった。",
+   "en": "On the day heavy snow stopped deliveries, no vegetables reached the restaurant.",
+   "ko": "폭설로 물류가 멈춘 날은 가게에 채소가 오지 않았어요.",
+   "blank": "物流",
+   "src": "made"
+  },
+  {
+   "text": "ネット販売は物流のコストが高いので、さくらはフリーマーケットで売ることにした。",
+   "en": "Selling online has high shipping costs, so Sakura decided to sell at flea markets.",
+   "ko": "인터넷 판매는 물류비가 비싸서 사쿠라는 벼룩시장에서 팔기로 했어요.",
+   "blank": "物流",
+   "src": "made"
+  }
+ ],
  "w|物理": [
   {
    "text": "物理の宿題が多い。",
@@ -60983,6 +61415,22 @@
    "en": "I have a cat.",
    "ko": "고양이 키우고 있어.",
    "blank": "猫"
+  }
+ ],
+ "w|猶予": [
+  {
+   "text": "料理長は大輔に一か月の猶予を与えて、魚のさばき方を覚えさせた。",
+   "en": "The head chef gave Daisuke a month's grace to learn how to fillet fish.",
+   "ko": "주방장은 다이스케에게 한 달의 유예를 주고 생선 손질법을 익히게 했어요.",
+   "blank": "猶予",
+   "src": "made"
+  },
+  {
+   "text": "出店料の支払いには、当日の朝まで猶予がある。",
+   "en": "There's a grace period for paying the booth fee until the morning of the event.",
+   "ko": "출점비 납부는 당일 아침까지 유예가 있어요.",
+   "blank": "猶予",
+   "src": "made"
   }
  ],
  "w|猿": [
@@ -62309,6 +62757,22 @@
    "blank": "申請"
   }
  ],
+ "w|申込": [
+  {
+   "text": "料理コンテストの申込書を、大輔は締め切りぎりぎりに出した。",
+   "en": "Daisuke submitted the application form for the cooking contest right before the deadline.",
+   "ko": "다이스케는 요리 대회 신청서를 마감 직전에 냈어요.",
+   "blank": "申込",
+   "src": "made"
+  },
+  {
+   "text": "次回の出店の申込は、インターネットでもできる。",
+   "en": "Applications for a booth at the next market can also be made online.",
+   "ko": "다음 출점 신청은 인터넷으로도 할 수 있어요.",
+   "blank": "申込",
+   "src": "made"
+  }
+ ],
  "w|男": [
   {
    "text": "男の人も来てる。",
@@ -62984,6 +63448,22 @@
    "en": "The old fridge was making a strange noise, so Yoko called for a repair.",
    "ko": "낡은 냉장고에서 이상한 소리가 나서 요코는 수리를 부탁했어요.",
    "blank": "発する",
+   "src": "made"
+  }
+ ],
+ "w|発作": [
+  {
+   "text": "客の一人がぜんそくの発作を起こし、大輔はすぐに救急車を呼んだ。",
+   "en": "One of the customers had an asthma attack, and Daisuke immediately called an ambulance.",
+   "ko": "손님 한 명이 천식 발작을 일으켜서 다이스케는 바로 구급차를 불렀어요.",
+   "blank": "発作",
+   "src": "made"
+  },
+  {
+   "text": "会場で男性が急な心臓の発作で倒れ、救急隊が駆けつけた。",
+   "en": "A man collapsed at the venue from a sudden heart attack, and paramedics rushed over.",
+   "ko": "행사장에서 한 남성이 갑작스러운 심장 발작으로 쓰러져 구급대가 달려왔어요.",
+   "blank": "発作",
    "src": "made"
   }
  ],
@@ -64229,6 +64709,22 @@
    "blank": "相当"
   }
  ],
+ "w|相応": [
+  {
+   "text": "高い食材を使う以上、それ相応の値段をつけるべきだと料理長は言う。",
+   "en": "The head chef says that if you use expensive ingredients, you should charge a price to match.",
+   "ko": "비싼 식재료를 쓰는 이상 그에 상응하는 값을 매겨야 한다고 주방장은 말해요.",
+   "blank": "相応",
+   "src": "made"
+  },
+  {
+   "text": "状態のいい品物には、さくらはそれ相応の値段をつけた。",
+   "en": "Sakura put appropriate prices on the items in good condition.",
+   "ko": "상태가 좋은 물건에는 사쿠라는 그에 맞는 값을 매겼어요.",
+   "blank": "相応",
+   "src": "made"
+  }
+ ],
  "w|相性": [
   {
    "text": "誠は、二人の相性は誰が見ても抜群だと思った。",
@@ -64521,6 +65017,22 @@
    "src": "made"
   }
  ],
+ "w|真夜中": [
+  {
+   "text": "厨房の片づけが終わるのは、いつも真夜中を過ぎてからだ。",
+   "en": "Cleaning up the kitchen always finishes after midnight.",
+   "ko": "주방 정리가 끝나는 건 늘 한밤중이 지나서예요.",
+   "blank": "真夜中",
+   "src": "made"
+  },
+  {
+   "text": "さくらは真夜中まで、売る品物に値札をつけていた。",
+   "en": "Sakura was putting price tags on the items to sell until midnight.",
+   "ko": "사쿠라는 한밤중까지 팔 물건에 가격표를 붙였어요.",
+   "blank": "真夜中",
+   "src": "made"
+  }
+ ],
  "w|真実": [
   {
    "text": "真実を知りたい。",
@@ -64701,6 +65213,22 @@
    "en": "You still have that on.",
    "ko": "아직 그거 입고 있잖아.",
    "blank": "着た"
+  }
+ ],
+ "w|着手": [
+  {
+   "text": "大輔は、新しいデザートの開発に着手した。",
+   "en": "Daisuke started developing a new dessert.",
+   "ko": "다이스케는 새 디저트 개발에 착수했어요.",
+   "blank": "着手",
+   "src": "made"
+  },
+  {
+   "text": "家に帰ったさくらは、すぐに次回の品物づくりに着手した。",
+   "en": "Once home, Sakura immediately got started on making items for the next market.",
+   "ko": "집에 돌아온 사쿠라는 바로 다음 물건 만들기에 착수했어요.",
+   "blank": "着手",
+   "src": "made"
   }
  ],
  "w|着替える": [
@@ -65023,6 +65551,22 @@
    "en": "Short hair suits you.",
    "ko": "짧은 머리가 잘 어울려.",
    "blank": "短い"
+  }
+ ],
+ "w|短時間": [
+  {
+   "text": "大輔は、短時間で大量のキャベツを千切りにできる。",
+   "en": "Daisuke can shred a huge amount of cabbage in a short time.",
+   "ko": "다이스케는 짧은 시간에 많은 양배추를 채 썰 수 있어요.",
+   "blank": "短時間",
+   "src": "made"
+  },
+  {
+   "text": "さくらの古着は、店を開いてほんの短時間で売り切れた。",
+   "en": "Sakura's secondhand clothes sold out in just a short time after she opened.",
+   "ko": "사쿠라의 헌 옷은 가게를 열고 아주 짧은 시간에 다 팔렸어요.",
+   "blank": "短時間",
+   "src": "made"
   }
  ],
  "w|短期": [
@@ -67216,6 +67760,22 @@
    "en": "Yumi heard the city council's answers on the culture budget on the news.",
    "ko": "유미는 문화 예산을 둘러싼 시의회 답변을 뉴스로 들었어요.",
    "blank": "答弁",
+   "src": "made"
+  }
+ ],
+ "w|策定": [
+  {
+   "text": "店は、保健所の指導を受けて衛生管理の計画を策定した。",
+   "en": "Following guidance from the health center, the restaurant drew up a hygiene management plan.",
+   "ko": "가게는 보건소 지도를 받아 위생 관리 계획을 수립했어요.",
+   "blank": "策定",
+   "src": "made"
+  },
+  {
+   "text": "主催者は、ごみを減らすための新しいルールを策定した。",
+   "en": "The organizers drew up new rules to reduce waste.",
+   "ko": "주최 측은 쓰레기를 줄이기 위한 새 규칙을 마련했어요.",
+   "blank": "策定",
    "src": "made"
   }
  ],
@@ -71191,6 +71751,22 @@
    "src": "made"
   }
  ],
+ "w|致命": [
+  {
+   "text": "塩と砂糖を間違えるのは、料理人として致命的なミスだ。",
+   "en": "Mixing up salt and sugar is a fatal mistake for a cook.",
+   "ko": "소금과 설탕을 헷갈리는 건 요리사로서 치명적인 실수예요.",
+   "blank": "致命",
+   "src": "made"
+  },
+  {
+   "text": "さくらが買った古いラジオには致命的な故障はなく、少し直せば使えた。",
+   "en": "The old radio Sakura bought had no fatal faults and worked after a small repair.",
+   "ko": "사쿠라가 산 오래된 라디오는 치명적인 고장이 없어서 조금 고치니 쓸 수 있었어요.",
+   "blank": "致命",
+   "src": "made"
+  }
+ ],
  "w|興味": [
   {
    "text": "興味ある？",
@@ -72417,6 +72993,22 @@
    "blank": "血"
   }
  ],
+ "w|血圧": [
+  {
+   "text": "料理長は血圧が高めなので、大輔はまかないの塩分を控えている。",
+   "en": "The head chef's blood pressure is on the high side, so Daisuke keeps the salt down in staff meals.",
+   "ko": "주방장은 혈압이 높은 편이라 다이스케는 직원 식사의 염분을 줄여요.",
+   "blank": "血圧",
+   "src": "made"
+  },
+  {
+   "text": "会場の一角では、看護師たちが無料で血圧を測っていた。",
+   "en": "In one corner of the venue, nurses were measuring blood pressure for free.",
+   "ko": "행사장 한쪽에서는 간호사들이 무료로 혈압을 재고 있었어요.",
+   "blank": "血圧",
+   "src": "made"
+  }
+ ],
  "w|血液": [
   {
    "text": "血液検査の結果を待つ。",
@@ -72728,6 +73320,22 @@
    "en": "This graph shows the change in sales since last year.",
    "ko": "이 그래프는 작년부터의 매출 변화를 나타내고 있어요.",
    "blank": "表して",
+   "src": "made"
+  }
+ ],
+ "w|表彰": [
+  {
+   "text": "大輔は、一度も遅刻せずに働いたことで店から表彰された。",
+   "en": "Daisuke was honored by the restaurant for never once being late to work.",
+   "ko": "다이스케는 한 번도 지각하지 않고 일해서 가게로부터 표창을 받았어요.",
+   "blank": "表彰",
+   "src": "made"
+  },
+  {
+   "text": "長年このフリーマーケットを支えてきたボランティアが、市から表彰された。",
+   "en": "A volunteer who had supported this flea market for many years was honored by the city.",
+   "ko": "오랫동안 이 벼룩시장을 지켜 온 자원봉사자가 시로부터 표창을 받았어요.",
+   "blank": "表彰",
    "src": "made"
   }
  ],
@@ -76006,6 +76614,22 @@
    "en": "Yumi sent an email by mistake and immediately wrote an apology.",
    "ko": "유미는 잘못된 메일을 보내 버려서 바로 사과문을 썼어요.",
    "blank": "誤った",
+   "src": "made"
+  }
+ ],
+ "w|誤字": [
+  {
+   "text": "新しいメニュー表に誤字が見つかり、大輔は急いで印刷し直した。",
+   "en": "A typo was found in the new menu, so Daisuke hurriedly reprinted it.",
+   "ko": "새 메뉴판에서 오자가 발견돼서 다이스케는 서둘러 다시 인쇄했어요.",
+   "blank": "誤字",
+   "src": "made"
+  },
+  {
+   "text": "手書きの値札に誤字があって、さくらは客に笑われた。",
+   "en": "There was a typo on Sakura's handwritten price tag, and a customer laughed at it.",
+   "ko": "손글씨 가격표에 오자가 있어서 사쿠라는 손님에게 웃음을 샀어요.",
+   "blank": "誤字",
    "src": "made"
   }
  ],
@@ -83366,6 +83990,22 @@
    "en": "Mayu heard that her childhood friend married the eldest son of that farming family.",
    "ko": "소꿉친구는 그 농가의 장남과 결혼했다고 들었어요.",
    "blank": "長男",
+   "src": "made"
+  }
+ ],
+ "w|長距離": [
+  {
+   "text": "大輔は休みの日に、長距離バスで実家に帰る。",
+   "en": "On his days off, Daisuke takes a long-distance bus back to his parents' home.",
+   "ko": "다이스케는 쉬는 날에 장거리 버스로 본가에 가요.",
+   "blank": "長距離",
+   "src": "made"
+  },
+  {
+   "text": "長距離トラックの運転手だという男性が、古い地図を買っていった。",
+   "en": "A man who said he was a long-haul truck driver bought an old map.",
+   "ko": "장거리 트럭 운전사라는 남성이 오래된 지도를 사 갔어요.",
+   "blank": "長距離",
    "src": "made"
   }
  ],

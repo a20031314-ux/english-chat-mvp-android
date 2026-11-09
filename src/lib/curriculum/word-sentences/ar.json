@@ -4525,6 +4525,22 @@
    "blank": "أقل"
   }
  ],
+ "w|أقلام": [
+  {
+   "text": "وجد خالد أقلام ابنه متناثرة على أرض الصالة.",
+   "en": "Khalid found his son's pens scattered on the living room floor.",
+   "ko": "칼리드는 아들의 펜들이 거실 바닥에 흩어져 있는 걸 봤어요.",
+   "blank": "أقلام",
+   "src": "made"
+  },
+  {
+   "text": "اشترت ليلى أقلاما ملونة لتزين بها رسائلها.",
+   "en": "Layla bought colored pens to decorate her letters with.",
+   "ko": "라일라는 편지를 꾸미려고 색깔 펜을 샀어요.",
+   "blank": "أقلاما",
+   "src": "made"
+  }
+ ],
  "w|أقلع": [
   {
    "text": "أقلع عمر عن التدخين قبل أن يشترك في النادي بشهر.",
@@ -11749,6 +11765,22 @@
    "src": "made"
   }
  ],
+ "w|استشعر": [
+  {
+   "text": "استشعر خالد رائحة غاز على الدرج، فاتصل بحارس البناية فورا.",
+   "en": "Khalid sensed a smell of gas on the stairs and called the building's caretaker right away.",
+   "ko": "칼리드는 계단에서 가스 냄새를 느끼고 곧장 건물 관리인에게 전화했어요.",
+   "blank": "استشعر",
+   "src": "made"
+  },
+  {
+   "text": "استشعرت ليلى حزنا خفيا بين سطور رسالة صديقتها.",
+   "en": "Layla sensed a hidden sadness between the lines of her friend's letter.",
+   "ko": "라일라는 친구의 편지 행간에서 숨은 슬픔을 느꼈어요.",
+   "blank": "استشعرت",
+   "src": "made"
+  }
+ ],
  "w|استشهد": [
   {
    "text": "استشهد أحمد ببيت من الشعر في موضوع التعبير.",
@@ -11762,6 +11794,22 @@
    "en": "Maryam quoted a folk saying about rain while talking to her neighbor.",
    "ko": "마리암은 이웃과 이야기하며 비에 관한 옛 속담을 인용했어요.",
    "blank": "استشهدت",
+   "src": "made"
+  }
+ ],
+ "w|استصعب": [
+  {
+   "text": "استصعب خالد صعود الدرج حاملا الأكياس بعد تعطل المصعد.",
+   "en": "Khalid found it hard to climb the stairs carrying bags after the elevator broke down.",
+   "ko": "엘리베이터가 고장 나서 칼리드는 봉지를 들고 계단을 오르기가 힘들었어요.",
+   "blank": "استصعب",
+   "src": "made"
+  },
+  {
+   "text": "استصعبت ليلى كتابة الرسالة الأولى بعد سنوات من الصمت.",
+   "en": "Layla found it hard to write the first letter after years of silence.",
+   "ko": "라일라는 몇 년 동안 연락이 끊긴 뒤라 첫 편지를 쓰기가 어려웠어요.",
+   "blank": "استصعبت",
    "src": "made"
   }
  ],
@@ -11806,6 +11854,22 @@
    "en": "Maryam took part in a survey about people's favorite season.",
    "ko": "마리암은 사람들이 좋아하는 계절에 관한 설문에 참여했어요.",
    "blank": "استطلاع",
+   "src": "made"
+  }
+ ],
+ "w|استطلع": [
+  {
+   "text": "استطلع خالد آراء الجيران قبل أن يطلي مدخل البناية.",
+   "en": "Khalid surveyed the neighbors' opinions before painting the building entrance.",
+   "ko": "칼리드는 건물 입구를 칠하기 전에 이웃들의 의견을 물어봤어요.",
+   "blank": "استطلع",
+   "src": "made"
+  },
+  {
+   "text": "استطلعت ليلى رأي صديقتها في فكرة اللقاء في الصيف.",
+   "en": "Layla sounded out her friend about the idea of meeting in the summer.",
+   "ko": "라일라는 여름에 만나자는 생각을 친구가 어떻게 여기는지 물어봤어요.",
+   "blank": "استطلعت",
    "src": "made"
   }
  ],
@@ -11880,6 +11944,22 @@
    "en": "Sara doesn't like rushing to diagnose any illness.",
    "ko": "사라는 어떤 병이든 서둘러 진단하는 걸 싫어해요.",
    "blank": "الاستعجال",
+   "src": "made"
+  }
+ ],
+ "w|استعجب": [
+  {
+   "text": "استعجب خالد من هدوء البناية في ليلة العيد.",
+   "en": "Khalid was surprised at how quiet the building was on the night of the holiday.",
+   "ko": "칼리드는 명절 밤에 건물이 너무 조용해서 의아했어요.",
+   "blank": "استعجب",
+   "src": "made"
+  },
+  {
+   "text": "استعجبت ليلى من خط صديقتها الذي لم يتغير منذ المدرسة.",
+   "en": "Layla marveled at her friend's handwriting, which hadn't changed since school.",
+   "ko": "라일라는 학교 때와 똑같은 친구의 글씨를 보고 신기해했어요.",
+   "blank": "استعجبت",
    "src": "made"
   }
  ],
@@ -12021,6 +12101,22 @@
    "blank": "استعمل"
   }
  ],
+ "w|استغاث": [
+  {
+   "text": "استغاث جار عجوز من خلف بابه المقفل، فكسر خالد القفل وأنقذه.",
+   "en": "An old neighbor cried for help from behind his locked door, so Khalid broke the lock and rescued him.",
+   "ko": "늙은 이웃이 잠긴 문 안에서 도와 달라고 외치자 칼리드가 자물쇠를 부수고 구해 냈어요.",
+   "blank": "استغاث",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن رجلا عجوزا استغاث بها في الشارع، فساعدته على عبور الطريق.",
+   "en": "Layla wrote that an old man called to her for help in the street, so she helped him cross the road.",
+   "ko": "라일라는 길에서 할아버지가 도와 달라고 해서 길을 건너게 도와드렸다고 썼어요.",
+   "blank": "استغاث",
+   "src": "made"
+  }
+ ],
  "w|استغراب": [
   {
    "text": "كان في وجهه استغراب شديد عندما سمع الخبر.",
@@ -12155,6 +12251,22 @@
    "src": "made"
   }
  ],
+ "w|استفز": [
+  {
+   "text": "استفز صوت الموسيقى العالية خالدا في منتصف الليل.",
+   "en": "The loud music provoked Khalid in the middle of the night.",
+   "ko": "한밤중에 시끄러운 음악 소리가 칼리드의 신경을 건드렸어요.",
+   "blank": "استفز",
+   "src": "made"
+  },
+  {
+   "text": "اعترفت ليلى بأن تعليق صديقتها القديم استفز غضبها يومها.",
+   "en": "Layla admitted that her friend's old remark had provoked her anger back then.",
+   "ko": "라일라는 그때 친구의 말 한마디에 화가 났었다고 털어놨어요.",
+   "blank": "استفز",
+   "src": "made"
+  }
+ ],
  "w|استفسار": [
   {
    "text": "أرسل كريم استفسارا إلى قسم الموظفين عن أيام الإجازة.",
@@ -12183,6 +12295,22 @@
    "en": "I asked about the trip details.",
    "ko": "나는 여행의 세부사항을 문의했어.",
    "blank": "استفسرت"
+  }
+ ],
+ "w|استفهم": [
+  {
+   "text": "استفهم خالد من الحارس عن سبب انقطاع الماء.",
+   "en": "Khalid asked the caretaker why the water had been cut off.",
+   "ko": "칼리드는 관리인에게 왜 물이 끊겼는지 물었어요.",
+   "blank": "استفهم",
+   "src": "made"
+  },
+  {
+   "text": "استفهمت ليلى في رسالتها عن صحة والد صديقتها.",
+   "en": "Layla asked in her letter about her friend's father's health.",
+   "ko": "라일라는 편지에서 친구 아버지의 건강을 물었어요.",
+   "blank": "استفهمت",
+   "src": "made"
   }
  ],
  "w|استقال": [
@@ -12273,6 +12401,22 @@
    "src": "made"
   }
  ],
+ "w|استقصى": [
+  {
+   "text": "استقصى خالد مصدر التسرب حتى وجده في شقة الجار.",
+   "en": "Khalid tracked down the source of the leak until he found it in the neighbor's apartment.",
+   "ko": "칼리드는 물이 새는 곳을 끝까지 찾아다니다가 이웃집에서 발견했어요.",
+   "blank": "استقصى",
+   "src": "made"
+  },
+  {
+   "text": "استقصت ليلى أخبار زملاء المدرسة لتكتبها لصديقتها.",
+   "en": "Layla looked into news of their schoolmates to write it to her friend.",
+   "ko": "라일라는 친구에게 전하려고 학교 동창들 소식을 알아봤어요.",
+   "blank": "استقصت",
+   "src": "made"
+  }
+ ],
  "w|استقطب": [
   {
    "text": "استقطب المستشفى الجديد أطباء من مدن كثيرة، ومنهم الدكتور يوسف.",
@@ -12337,6 +12481,22 @@
    "src": "made"
   }
  ],
+ "w|استكمل": [
+  {
+   "text": "استكمل خالد طلاء غرفة النوم في عطلة الأسبوع.",
+   "en": "Khalid finished painting the bedroom over the weekend.",
+   "ko": "칼리드는 주말에 침실 칠하기를 마저 끝냈어요.",
+   "blank": "استكمل",
+   "src": "made"
+  },
+  {
+   "text": "استكملت ليلى الرسالة في الصباح بعد أن نامت وهي تكتبها.",
+   "en": "Layla finished the letter in the morning after falling asleep while writing it.",
+   "ko": "라일라는 편지를 쓰다 잠들어서 아침에 마저 썼어요.",
+   "blank": "استكملت",
+   "src": "made"
+  }
+ ],
  "w|استلزم": [
   {
    "text": "استلزم علاج يوسف البقاء في المستشفى أسبوعا كاملا.",
@@ -12381,6 +12541,22 @@
    "blank": "استلمت"
   }
  ],
+ "w|استلهم": [
+  {
+   "text": "استلهم خالد ألوان الشقة من بيت جدته القديم.",
+   "en": "Khalid drew inspiration for the apartment's colors from his grandmother's old house.",
+   "ko": "칼리드는 할머니의 옛집에서 영감을 얻어 집 안 색깔을 정했어요.",
+   "blank": "استلهم",
+   "src": "made"
+  },
+  {
+   "text": "استلهمت ليلى قصيدة قصيرة من ذكريات صديقتها وأرسلتها إليها.",
+   "en": "Layla drew a short poem from memories of her friend and sent it to her.",
+   "ko": "라일라는 친구와의 추억에서 영감을 얻어 짧은 시를 써 보냈어요.",
+   "blank": "استلهمت",
+   "src": "made"
+  }
+ ],
  "w|استمارة": [
   {
    "text": "ملأ حسن استمارة طلب بطاقة صحفية جديدة.",
@@ -12411,6 +12587,22 @@
    "blank": "استماع"
   }
  ],
+ "w|استمال": [
+  {
+   "text": "استمال خالد قلب الجارة الغاضبة بطبق من الحلوى.",
+   "en": "Khalid won over the angry neighbor with a plate of sweets.",
+   "ko": "칼리드는 화가 난 이웃 아주머니의 마음을 과자 한 접시로 달랬어요.",
+   "blank": "استمال",
+   "src": "made"
+  },
+  {
+   "text": "استمالت ليلى صديقتها إلى فكرة اللقاء بذكريات الطفولة.",
+   "en": "Layla won her friend over to the idea of meeting by recalling childhood memories.",
+   "ko": "라일라는 어린 시절 추억을 꺼내 친구가 만나자는 생각에 마음이 기울게 했어요.",
+   "blank": "استمالت",
+   "src": "made"
+  }
+ ],
  "w|استمتاع": [
   {
    "text": "قال الزميل لأحمد إن الفريق الجيد هو سر الاستمتاع بالعمل.",
@@ -12439,6 +12631,22 @@
    "en": "He enjoyed the new song a lot.",
    "ko": "그는 새 노래를 아주 즐겼다.",
    "blank": "استمتع"
+  }
+ ],
+ "w|استمد": [
+  {
+   "text": "استمد خالد الصبر من جيرانه حين طال إصلاح السقف.",
+   "en": "Khalid drew patience from his neighbors when the roof repair dragged on.",
+   "ko": "지붕 수리가 길어지자 칼리드는 이웃들 덕분에 버틸 힘을 얻었어요.",
+   "blank": "استمد",
+   "src": "made"
+  },
+  {
+   "text": "استمدت ليلى قوتها من رسائل صديقتها في أيام الوحدة.",
+   "en": "Layla drew her strength from her friend's letters during lonely days.",
+   "ko": "라일라는 외로운 날들에 친구의 편지에서 힘을 얻었어요.",
+   "blank": "استمدت",
+   "src": "made"
   }
  ],
  "w|استمر": [
@@ -12513,6 +12721,22 @@
    "blank": "استنتجت"
   }
  ],
+ "w|استنجد": [
+  {
+   "text": "استنجد خالد بالسباك حين امتلأ المطبخ بالماء.",
+   "en": "Khalid called the plumber for help when the kitchen filled with water.",
+   "ko": "부엌에 물이 차오르자 칼리드는 배관공에게 도움을 청했어요.",
+   "blank": "استنجد",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن أخاها استنجد بها لتساعده في الانتقال.",
+   "en": "Layla wrote that her brother had called on her for help with his move.",
+   "ko": "라일라는 남동생이 이사를 도와 달라고 자기에게 부탁했다고 썼어요.",
+   "blank": "استنجد",
+   "src": "made"
+  }
+ ],
  "w|استند": [
   {
    "text": "استند يوسف إلى ذراع الممرضة وهو يمشي في الممر.",
@@ -12526,6 +12750,22 @@
    "en": "Sara bases her recipes on what she learned from her grandmother.",
    "ko": "사라의 요리법은 할머니에게 배운 것에 바탕을 둬요.",
    "blank": "تستند",
+   "src": "made"
+  }
+ ],
+ "w|استنزف": [
+  {
+   "text": "استنزف إصلاح السقف معظم مدخرات خالد.",
+   "en": "Fixing the roof drained most of Khalid's savings.",
+   "ko": "지붕 수리에 칼리드의 저금이 거의 다 들어갔어요.",
+   "blank": "استنزف",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن العمل الليلي استنزف طاقتها هذا العام.",
+   "en": "Layla wrote that night work had drained her energy this year.",
+   "ko": "라일라는 올해 야간 근무로 기운이 다 빠졌다고 썼어요.",
+   "blank": "استنزف",
    "src": "made"
   }
  ],
@@ -15789,6 +16029,22 @@
    "en": "Why did you withdraw from the discussion?",
    "ko": "왜 토론에서 빠졌어?",
    "blank": "انسحبت"
+  }
+ ],
+ "w|انسداد": [
+  {
+   "text": "حدث انسداد في أنابيب البناية، فانقطع الماء عن خالد وجيرانه.",
+   "en": "A blockage happened in the building's pipes, and water was cut off for Khalid and his neighbors.",
+   "ko": "건물 배관이 막혀서 칼리드와 이웃들 집에 물이 끊겼어요.",
+   "blank": "انسداد",
+   "src": "made"
+  },
+  {
+   "text": "حكت ليلى عن انسداد الطريق إلى قريتها بعد الثلج الكثيف.",
+   "en": "Layla told about the road to her village being blocked after the heavy snow.",
+   "ko": "라일라는 폭설로 고향 마을 가는 길이 막혔던 이야기를 했어요.",
+   "blank": "انسداد",
+   "src": "made"
   }
  ],
  "w|انشراح": [
@@ -24177,6 +24433,22 @@
    "src": "made"
   }
  ],
+ "w|تشقق": [
+  {
+   "text": "لاحظ خالد تشققا في طلاء الحمام بسبب الرطوبة.",
+   "en": "Khalid noticed cracking in the bathroom paint because of the damp.",
+   "ko": "칼리드는 습기 때문에 욕실 페인트가 갈라진 걸 봤어요.",
+   "blank": "تشققا",
+   "src": "made"
+  },
+  {
+   "text": "تشكو ليلى في رسالتها من تشقق يديها في البرد.",
+   "en": "Layla complains in her letter about her hands cracking in the cold.",
+   "ko": "라일라는 편지에서 추위에 손이 튼다고 하소연해요.",
+   "blank": "تشقق",
+   "src": "made"
+  }
+ ],
  "w|تشكيل": [
   {
    "text": "أعلن المدير تشكيل فريق جديد يقوده كريم.",
@@ -24316,6 +24588,22 @@
    "en": "Sara spends the evening marking her pupils' papers, as she wrote to her friend.",
    "ko": "사라는 친구에게 저녁마다 학생들 시험지를 채점한다고 썼어요.",
    "blank": "تصحيح",
+   "src": "made"
+  }
+ ],
+ "w|تصدع": [
+  {
+   "text": "ظهر تصدع في جدار الدرج بعد الهزة الخفيفة، فأبلغ خالد المالك.",
+   "en": "A crack appeared in the stairwell wall after the slight tremor, so Khalid told the owner.",
+   "ko": "약한 지진 뒤 계단 벽에 금이 가서 칼리드가 건물주에게 알렸어요.",
+   "blank": "تصدع",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن صداقتهما لم يصبها أي تصدع رغم البعد.",
+   "en": "Layla wrote that their friendship hadn't suffered any crack despite the distance.",
+   "ko": "라일라는 멀리 떨어져 있어도 둘의 우정엔 금 하나 가지 않았다고 썼어요.",
+   "blank": "تصدع",
    "src": "made"
   }
  ],
@@ -26975,6 +27263,22 @@
    "src": "made"
   }
  ],
+ "w|تماس": [
+  {
+   "text": "سبب تماس كهربائي انطفاء الأنوار في طابق خالد كله.",
+   "en": "A short circuit made the lights go out on Khalid's whole floor.",
+   "ko": "합선 때문에 칼리드네 층 전체의 불이 나갔어요.",
+   "blank": "تماس",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن تماسا كهربائيا أحرق جزءا من مطبخها في الصيف.",
+   "en": "Layla wrote that a short circuit burned part of her kitchen in the summer.",
+   "ko": "라일라는 여름에 합선으로 부엌 일부가 탔다고 썼어요.",
+   "blank": "تماسا",
+   "src": "made"
+  }
+ ],
  "w|تماسك": [
   {
    "text": "تماسك علي ولم يرد على الزبون الذي صرخ في وجهه.",
@@ -27095,6 +27399,22 @@
    "en": "The cat stretched out in the sun.",
    "ko": "고양이가 햇볕에서 몸을 늘였어.",
    "blank": "تمددت"
+  }
+ ],
+ "w|تمديد": [
+  {
+   "text": "طلب خالد من المالك تمديد عقد الإيجار سنة أخرى.",
+   "en": "Khalid asked the landlord to extend the lease for another year.",
+   "ko": "칼리드는 집주인에게 임대 계약을 일 년 더 연장해 달라고 했어요.",
+   "blank": "تمديد",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن مديرتها وافقت على تمديد إجازتها لتزور صديقتها.",
+   "en": "Layla wrote that her manager agreed to extend her leave so she could visit her friend.",
+   "ko": "라일라는 친구를 만나러 가도록 상사가 휴가 연장을 허락했다고 썼어요.",
+   "blank": "تمديد",
+   "src": "made"
   }
  ],
  "w|تمر": [
@@ -30833,6 +31153,22 @@
    "src": "made"
   }
  ],
+ "w|جص": [
+  {
+   "text": "سد خالد الحفرة في الجدار بقليل من الجص.",
+   "en": "Khalid filled the hole in the wall with a little plaster.",
+   "ko": "칼리드는 벽에 난 구멍을 석고로 조금 메웠어요.",
+   "blank": "الجص",
+   "src": "made"
+  },
+  {
+   "text": "حكت ليلى أن بيتهما القديم كان سقفه من الجص المنقوش.",
+   "en": "Layla recalled that their old house had a ceiling of carved plaster.",
+   "ko": "라일라는 둘이 살던 옛집 천장이 무늬를 새긴 석고였다고 이야기했어요.",
+   "blank": "الجص",
+   "src": "made"
+  }
+ ],
  "w|جعل": [
   {
    "text": "جعل الطفل يضحك الجميع.",
@@ -32047,6 +32383,22 @@
    "en": "My neighbors helped me when I moved into the new house.",
    "ko": "이웃들이 내가 새 집으로 이사할 때 도와줬어.",
    "blank": "جيران"
+  }
+ ],
+ "w|جيرة": [
+  {
+   "text": "جمعت جيرة طويلة بين خالد وجاره العجوز في الطابق الأول.",
+   "en": "A long neighborliness bound Khalid and his old neighbor on the first floor.",
+   "ko": "칼리드와 일 층 늙은 이웃은 오랜 세월 이웃으로 지냈어요.",
+   "blank": "جيرة",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت ليلى أيام الجيرة حين كان بين بيتها وبيت صديقتها جدار واحد.",
+   "en": "Layla remembered the days of being neighbors, when a single wall stood between her house and her friend's.",
+   "ko": "라일라는 친구네 집과 벽 하나를 사이에 두고 이웃으로 살던 시절을 떠올렸어요.",
+   "blank": "الجيرة",
+   "src": "made"
   }
  ],
  "w|جيش": [
@@ -34463,6 +34815,22 @@
    "src": "made"
   }
  ],
+ "w|حفاض": [
+  {
+   "text": "رأى خالد الأب الشاب في المدخل يغير حفاض طفله على عجل.",
+   "en": "Khalid saw the young father in the entrance hastily changing his baby's diaper.",
+   "ko": "칼리드는 젊은 아빠가 현관에서 급하게 아기 기저귀를 가는 걸 봤어요.",
+   "blank": "حفاض",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت ليلى وهي تكتب أن ابنها صار يرفض الحفاض.",
+   "en": "Layla laughed as she wrote that her son had started refusing the diaper.",
+   "ko": "라일라는 아들이 기저귀를 싫어하기 시작했다고 웃으며 썼어요.",
+   "blank": "الحفاض",
+   "src": "made"
+  }
+ ],
  "w|حفاظ": [
   {
    "text": "حفاظ السر بينا أهم شي.",
@@ -36733,6 +37101,22 @@
    "src": "made"
   }
  ],
+ "w|خرطوم": [
+  {
+   "text": "يسقي خالد نباتات الشرفة بخرطوم صغير كل مساء.",
+   "en": "Khalid waters the balcony plants with a small hose every evening.",
+   "ko": "칼리드는 저녁마다 작은 호스로 발코니 화분에 물을 줘요.",
+   "blank": "بخرطوم",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت ليلى كيف رشتهما جدتها بالخرطوم في أيام الحر.",
+   "en": "Layla remembered how her grandmother sprayed the two of them with the hose on hot days.",
+   "ko": "라일라는 더운 날 할머니가 호스로 둘에게 물을 뿌려 주던 걸 떠올렸어요.",
+   "blank": "بالخرطوم",
+   "src": "made"
+  }
+ ],
  "w|خرق": [
   {
    "text": "شعر علي أن أخته خرقت وعدها حين قرأت رسائله.",
@@ -37228,6 +37612,22 @@
    "en": "Rana underwent a small operation to remove her wisdom tooth.",
    "ko": "라나는 사랑니를 빼는 간단한 수술을 받았어요.",
    "blank": "خضعت",
+   "src": "made"
+  }
+ ],
+ "w|خضوع": [
+  {
+   "text": "رفض خالد الخضوع لطلب المالك برفع الإيجار فجأة.",
+   "en": "Khalid refused to give in to the landlord's demand to suddenly raise the rent.",
+   "ko": "칼리드는 집세를 갑자기 올리겠다는 집주인의 요구에 굴하지 않았어요.",
+   "blank": "الخضوع",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن صديقتها لم تعرف الخضوع لأحد منذ صغرها.",
+   "en": "Layla wrote that her friend had never bowed to anyone since she was little.",
+   "ko": "라일라는 친구가 어릴 때부터 누구에게도 굽힌 적이 없다고 썼어요.",
+   "blank": "الخضوع",
    "src": "made"
   }
  ],
@@ -39956,6 +40356,22 @@
    "en": "A police patrol stopped at the market entrance to direct traffic.",
    "ko": "경찰 순찰대가 교통을 정리하려고 시장 입구에 멈췄어요.",
    "blank": "دورية",
+   "src": "made"
+  }
+ ],
+ "w|دولاب": [
+  {
+   "text": "رتب خالد ملابس الشتاء في الدولاب قبل أن يبرد الجو.",
+   "en": "Khalid arranged his winter clothes in the wardrobe before the weather turned cold.",
+   "ko": "칼리드는 날이 추워지기 전에 겨울옷을 옷장에 정리했어요.",
+   "blank": "الدولاب",
+   "src": "made"
+  },
+  {
+   "text": "وجدت ليلى رسائل صديقتها القديمة في دولاب أمها.",
+   "en": "Layla found her friend's old letters in her mother's cupboard.",
+   "ko": "라일라는 어머니의 장롱에서 친구의 옛 편지를 찾았어요.",
+   "blank": "دولاب",
    "src": "made"
   }
  ],
@@ -48517,6 +48933,22 @@
    "src": "made"
   }
  ],
+ "w|شامبو": [
+  {
+   "text": "نفد الشامبو في حمام خالد، فاستعار قليلا من جاره.",
+   "en": "Khalid ran out of shampoo in the bathroom, so he borrowed a little from his neighbor.",
+   "ko": "칼리드는 욕실에 샴푸가 떨어져서 이웃에게 조금 빌렸어요.",
+   "blank": "الشامبو",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت ليلى لصديقتها شامبو مصنوعا من الأعشاب.",
+   "en": "Layla sent her friend a shampoo made from herbs.",
+   "ko": "라일라는 친구에게 허브로 만든 샴푸를 보냈어요.",
+   "blank": "شامبو",
+   "src": "made"
+  }
+ ],
  "w|شامل": [
   {
    "text": "أجرى كريم جردا شاملا لأدوية الصيدلية في آخر الشهر.",
@@ -48709,6 +49141,22 @@
    "en": "Are you full after lunch?",
    "ko": "점심 먹고 배불러?",
    "blank": "شبعان"
+  }
+ ],
+ "w|شبك": [
+  {
+   "text": "ركب خالد شبكا على النافذة لمنع البعوض.",
+   "en": "Khalid put a mesh screen on the window to keep mosquitoes out.",
+   "ko": "칼리드는 모기가 들어오지 않게 창문에 방충망을 달았어요.",
+   "blank": "شبكا",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت ليلى ملعب المدرسة والشبك المكسور حوله.",
+   "en": "Layla remembered the school playground and the broken fence around it.",
+   "ko": "라일라는 학교 운동장과 그 둘레의 망가진 철망을 떠올렸어요.",
+   "blank": "والشبك",
+   "src": "made"
   }
  ],
  "w|شبكة": [
@@ -49277,6 +49725,22 @@
    "en": "Did you explain the idea to your friend?",
    "ko": "아이디어를 친구에게 설명했어?",
    "blank": "شرحت"
+  }
+ ],
+ "w|شرخ": [
+  {
+   "text": "في زجاج نافذة خالد شرخ صغير لم يصلحه منذ الشتاء.",
+   "en": "There's a small crack in Khalid's window glass that he hasn't fixed since winter.",
+   "ko": "칼리드네 창유리에는 겨울부터 고치지 않은 작은 금이 있어요.",
+   "blank": "شرخ",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت ليلى شرخا في مرآة غرفتهما كانتا تخافان منه.",
+   "en": "Layla remembered a crack in their bedroom mirror that they used to be afraid of.",
+   "ko": "라일라는 둘이 무서워하던 방 거울의 금을 떠올렸어요.",
+   "blank": "شرخا",
+   "src": "made"
   }
  ],
  "w|شرد": [
@@ -52123,6 +52587,22 @@
    "blank": "صلة"
   }
  ],
+ "w|صلصال": [
+  {
+   "text": "صنعت ابنة خالد جرة من الصلصال ووضعتها على رف الصالة.",
+   "en": "Khalid's daughter made a jar out of clay and put it on the living room shelf.",
+   "ko": "칼리드의 딸이 찰흙으로 항아리를 만들어 거실 선반에 올려놨어요.",
+   "blank": "الصلصال",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت ليلى التماثيل الصغيرة التي صنعتها مع صديقتها من صلصال النهر.",
+   "en": "Layla remembered the little figures she made with her friend from river clay.",
+   "ko": "라일라는 친구와 강가 진흙으로 만들던 작은 인형들을 떠올렸어요.",
+   "blank": "صلصال",
+   "src": "made"
+  }
+ ],
  "w|صلصة": [
   {
    "text": "أريد صلصة طماطم مع المعكرونة.",
@@ -54320,6 +54800,22 @@
    "en": "Rana remembered the paper boat that floated on the river when they were little.",
    "ko": "라나는 어릴 때 강물 위에 떠 가던 종이배를 떠올렸어요.",
    "blank": "طفا",
+   "src": "made"
+  }
+ ],
+ "w|طفاية": [
+  {
+   "text": "وضع خالد طفاية حريق صغيرة قرب باب المطبخ.",
+   "en": "Khalid put a small fire extinguisher near the kitchen door.",
+   "ko": "칼리드는 부엌문 옆에 작은 소화기를 뒀어요.",
+   "blank": "طفاية",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن أباها رمى طفاية السجائر يوم أقلع عن التدخين.",
+   "en": "Layla wrote that her father threw away the ashtray the day he quit smoking.",
+   "ko": "라일라는 아버지가 담배를 끊던 날 재떨이를 버렸다고 썼어요.",
+   "blank": "طفاية",
    "src": "made"
   }
  ],
@@ -70301,6 +70797,22 @@
    "src": "made"
   }
  ],
+ "w|لهاية": [
+  {
+   "text": "وجد خالد لهاية طفل على الدرج، فعلقها على باب الجيران.",
+   "en": "Khalid found a baby's pacifier on the stairs and hung it on the neighbors' door.",
+   "ko": "칼리드는 계단에서 아기 공갈젖꼭지를 주워 이웃집 문에 걸어 뒀어요.",
+   "blank": "لهاية",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت ليلى صورة ابنها الصغير وفي فمه لهاية زرقاء.",
+   "en": "Layla sent a photo of her little son with a blue pacifier in his mouth.",
+   "ko": "라일라는 파란 공갈젖꼭지를 문 어린 아들 사진을 보냈어요.",
+   "blank": "لهاية",
+   "src": "made"
+  }
+ ],
  "w|لهب": [
   {
    "text": "شرح يوسف كيف كان الناس يحافظون على لهب القناديل طوال الليل.",
@@ -72139,6 +72651,22 @@
    "en": "Is this seat available?",
    "ko": "이 자리가 비어 있나요?",
    "blank": "متاح"
+  }
+ ],
+ "w|متاع": [
+  {
+   "text": "حمل خالد متاعه إلى الشقة الجديدة في سيارة صغيرة.",
+   "en": "Khalid carried his belongings to the new apartment in a small car.",
+   "ko": "칼리드는 작은 차에 짐을 싣고 새집으로 옮겼어요.",
+   "blank": "متاعه",
+   "src": "made"
+  },
+  {
+   "text": "حزمت ليلى قليلا من المتاع وسافرت لزيارة صديقتها.",
+   "en": "Layla packed a few belongings and traveled to visit her friend.",
+   "ko": "라일라는 짐을 조금 꾸려 친구를 만나러 떠났어요.",
+   "blank": "المتاع",
+   "src": "made"
   }
  ],
  "w|متاعب": [
@@ -75625,6 +76153,22 @@
    "src": "made"
   }
  ],
+ "w|مدخنة": [
+  {
+   "text": "يخرج دخان أسود من مدخنة البناية المقابلة لشقة خالد.",
+   "en": "Black smoke comes out of the chimney of the building opposite Khalid's apartment.",
+   "ko": "칼리드네 집 맞은편 건물 굴뚝에서 검은 연기가 나와요.",
+   "blank": "مدخنة",
+   "src": "made"
+  },
+  {
+   "text": "وصفت ليلى بيتها الريفي الجديد، وفيه مدخنة حجرية قديمة.",
+   "en": "Layla described her new country house, which has an old stone chimney.",
+   "ko": "라일라는 오래된 돌 굴뚝이 있는 새 시골집을 묘사했어요.",
+   "blank": "مدخنة",
+   "src": "made"
+  }
+ ],
  "w|مدد": [
   {
    "text": "مدد سامي أنابيب الري إلى آخر الحقل.",
@@ -77629,6 +78173,22 @@
    "blank": "مسبقا"
   }
  ],
+ "w|مستأجر": [
+  {
+   "text": "يعيش خالد في شقة مستأجرة في الطابق الرابع منذ سنوات.",
+   "en": "Khalid has lived in a rented apartment on the fourth floor for years.",
+   "ko": "칼리드는 몇 년째 사 층의 셋집에 살아요.",
+   "blank": "مستأجرة",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أنها تركت البيت المستأجر واشترت شقة صغيرة.",
+   "en": "Layla wrote that she left the rented house and bought a small apartment.",
+   "ko": "라일라는 셋집을 나와 작은 아파트를 샀다고 썼어요.",
+   "blank": "المستأجر",
+   "src": "made"
+  }
+ ],
  "w|مستاء": [
   {
    "text": "شعرت مستاء بعد حديثه.",
@@ -78613,6 +79173,22 @@
    "src": "made"
   }
  ],
+ "w|مشبك": [
+  {
+   "text": "سقط مشبك الغسيل من شرفة خالد إلى شرفة الجار في الأسفل.",
+   "en": "The clothespin fell from Khalid's balcony onto the neighbor's balcony below.",
+   "ko": "빨래집게가 칼리드네 발코니에서 아래층 이웃 발코니로 떨어졌어요.",
+   "blank": "مشبك",
+   "src": "made"
+  },
+  {
+   "text": "جمعت ليلى رسائل صديقتها كلها بمشبك أحمر.",
+   "en": "Layla gathered all of her friend's letters with a red clip.",
+   "ko": "라일라는 친구의 편지를 모두 빨간 집게로 묶어 뒀어요.",
+   "blank": "بمشبك",
+   "src": "made"
+  }
+ ],
  "w|مشتاق": [
   {
    "text": "أنا مشتاق لرؤيتك.",
@@ -79416,6 +79992,22 @@
    "en": "Mona said closing the old market would be a disaster for the merchants.",
    "ko": "모나는 옛 시장을 닫으면 상인들에게 큰 재앙이 될 거라고 말했어요.",
    "blank": "مصيبة",
+   "src": "made"
+  }
+ ],
+ "w|مصيدة": [
+  {
+   "text": "وضع خالد مصيدة فئران في المخزن تحت الدرج.",
+   "en": "Khalid set a mousetrap in the storeroom under the stairs.",
+   "ko": "칼리드는 계단 밑 창고에 쥐덫을 놨어요.",
+   "blank": "مصيدة",
+   "src": "made"
+  },
+  {
+   "text": "حكت ليلى كيف علقت قطتها في مصيدة الجيران ثم نجت.",
+   "en": "Layla told how her cat got caught in the neighbors' trap and then escaped.",
+   "ko": "라일라는 고양이가 이웃집 덫에 걸렸다가 무사히 빠져나온 이야기를 했어요.",
+   "blank": "مصيدة",
    "src": "made"
   }
  ],
@@ -81543,6 +82135,22 @@
    "src": "made"
   }
  ],
+ "w|مفكرة": [
+  {
+   "text": "يكتب خالد مواعيد دفع الفواتير في مفكرة صغيرة قرب الهاتف.",
+   "en": "Khalid writes the bill payment dates in a small notebook by the phone.",
+   "ko": "칼리드는 전화기 옆 작은 수첩에 공과금 내는 날을 적어 둬요.",
+   "blank": "مفكرة",
+   "src": "made"
+  },
+  {
+   "text": "وجدت ليلى عنوان صديقتها في المفكرة القديمة.",
+   "en": "Layla found her friend's address in the old notebook.",
+   "ko": "라일라는 옛 수첩에서 친구 주소를 찾았어요.",
+   "blank": "المفكرة",
+   "src": "made"
+  }
+ ],
  "w|مفهوم": [
   {
    "text": "شرح المعلم الدرس بشكل مفهوم.",
@@ -82628,6 +83236,22 @@
    "en": "Laila put one sugar cube in her coffee.",
    "ko": "라일라는 커피에 각설탕 하나를 넣었어요.",
    "blank": "مكعب",
+   "src": "made"
+  }
+ ],
+ "w|مكعبات": [
+  {
+   "text": "بنت ابنة خالد برجا عاليا من المكعبات في الممر.",
+   "en": "Khalid's daughter built a tall tower of blocks in the hallway.",
+   "ko": "칼리드의 딸이 복도에 블록으로 높은 탑을 쌓았어요.",
+   "blank": "المكعبات",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت ليلى أنها كانت تلعب مع صديقتها بالمكعبات الخشبية.",
+   "en": "Layla remembered playing with wooden blocks with her friend.",
+   "ko": "라일라는 친구와 나무 블록으로 놀던 걸 기억했어요.",
+   "blank": "بالمكعبات",
    "src": "made"
   }
  ],
@@ -86918,6 +87542,22 @@
    "en": "Nour follows economic news in developing countries.",
    "ko": "누르는 개발도상국 경제 뉴스를 챙겨 봐요.",
    "blank": "النامية",
+   "src": "made"
+  }
+ ],
+ "w|نبأ": [
+  {
+   "text": "وصل نبأ زواج ابن الحارس إلى كل سكان البناية في يوم واحد.",
+   "en": "The news of the caretaker's son's wedding reached every resident of the building in a single day.",
+   "ko": "관리인 아들이 결혼한다는 소식이 하루 만에 건물 주민 모두에게 퍼졌어요.",
+   "blank": "نبأ",
+   "src": "made"
+  },
+  {
+   "text": "حمل البريد إلى ليلى نبأ ولادة طفلة صديقتها.",
+   "en": "The mail brought Layla the news of her friend's baby girl's birth.",
+   "ko": "우편으로 친구가 딸을 낳았다는 소식이 라일라에게 왔어요.",
+   "blank": "نبأ",
    "src": "made"
   }
  ],

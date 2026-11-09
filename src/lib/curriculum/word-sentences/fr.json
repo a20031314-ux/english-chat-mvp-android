@@ -5905,6 +5905,22 @@
    "blank": "associé"
   }
  ],
+ "w|assoiffé": [
+  {
+   "text": "Thomas sert une canette de soda bien fraîche à un enfant assoiffé.",
+   "en": "Thomas serves a nice cold can of soda to a thirsty child.",
+   "ko": "토마는 목마른 아이에게 시원한 탄산음료 한 캔을 내줘요.",
+   "blank": "assoiffé",
+   "src": "made"
+  },
+  {
+   "text": "Après des heures de chiffonnage, Chloé est assoiffée et cherche une fontaine.",
+   "en": "After hours of rummaging, Chloé is parched and looks for a fountain.",
+   "ko": "몇 시간 물건을 뒤적인 클로에는 목이 말라 분수대를 찾아요.",
+   "blank": "assoiffée",
+   "src": "made"
+  }
+ ],
  "w|assommer": [
   {
    "text": "Ce manuel de droit fiscal risque d'assommer n'importe quel étudiant, plaisante Nicolas.",
@@ -6709,6 +6725,22 @@
    "en": "She found comfort with her family.",
    "ko": "그녀는 가족 곁에서 위안을 얻었어.",
    "blank": "auprès de"
+  }
+ ],
+ "w|aurore": [
+  {
+   "text": "Thomas se lève avant l'aurore pour faire le pain du jour.",
+   "en": "Thomas gets up before dawn to bake the day's bread.",
+   "ko": "토마는 그날 빵을 만들려고 새벽이 오기 전에 일어나요.",
+   "blank": "aurore",
+   "src": "made"
+  },
+  {
+   "text": "Chloé arrive dès l'aurore pour avoir les meilleures affaires.",
+   "en": "Chloé arrives at the crack of dawn to get the best deals.",
+   "ko": "클로에는 제일 좋은 물건을 건지려고 새벽부터 나와요.",
+   "blank": "aurore",
+   "src": "made"
   }
  ],
  "w|aussi": [
@@ -9815,6 +9847,22 @@
    "src": "made"
   }
  ],
+ "w|blouson": [
+  {
+   "text": "Un client a oublié son blouson sur une chaise, et Thomas le range derrière le comptoir.",
+   "en": "A customer forgot his jacket on a chair, and Thomas puts it away behind the counter.",
+   "ko": "손님이 의자에 점퍼를 두고 가서 토마가 계산대 뒤에 보관해요.",
+   "blank": "blouson",
+   "src": "made"
+  },
+  {
+   "text": "Chloé déniche un blouson en cuir des années quatre-vingt presque neuf.",
+   "en": "Chloé unearths an almost new leather jacket from the eighties.",
+   "ko": "클로에는 거의 새것 같은 팔십 년대 가죽 점퍼를 찾아내요.",
+   "blank": "blouson",
+   "src": "made"
+  }
+ ],
  "w|bluff": [
   {
    "text": "Thomas a vite compris que les menaces du suspect n'étaient que du bluff.",
@@ -11173,6 +11221,22 @@
    "blank": "britannique"
   }
  ],
+ "w|broche": [
+  {
+   "text": "Thomas fait rôtir un poulet à la broche dans la cheminée du restaurant.",
+   "en": "Thomas roasts a chicken on the spit in the restaurant fireplace.",
+   "ko": "토마는 식당 벽난로에서 닭을 꼬챙이에 꽂아 구워요.",
+   "blank": "broche",
+   "src": "made"
+  },
+  {
+   "text": "Chloé achète une broche en forme d'abeille pour sa grand-mère.",
+   "en": "Chloé buys a bee-shaped brooch for her grandmother.",
+   "ko": "클로에는 할머니께 드릴 벌 모양 브로치를 사요.",
+   "blank": "broche",
+   "src": "made"
+  }
+ ],
  "w|brochure": [
   {
    "text": "Lucas trouve sur la table une brochure de voyage que sa sœur Léa a oubliée.",
@@ -11400,6 +11464,22 @@
    "en": "Sarah's cat is all brown except for a white spot on its nose.",
    "ko": "사라네 고양이는 코에 흰 점 하나 빼고 온통 갈색이에요.",
    "blank": "brun",
+   "src": "made"
+  }
+ ],
+ "w|brunch": [
+  {
+   "text": "Le dimanche, Thomas a ajouté un brunch à la carte pour attirer les jeunes.",
+   "en": "On Sundays, Thomas has added a brunch to the menu to attract young people.",
+   "ko": "토마는 젊은 손님을 끌려고 일요일 메뉴에 브런치를 넣었어요.",
+   "blank": "brunch",
+   "src": "made"
+  },
+  {
+   "text": "Avant la brocante, Chloé prend un brunch rapide avec ses amies.",
+   "en": "Before the flea market, Chloé has a quick brunch with her friends.",
+   "ko": "벼룩시장에 가기 전에 클로에는 친구들과 간단히 브런치를 먹어요.",
+   "blank": "brunch",
    "src": "made"
   }
  ],
@@ -11949,6 +12029,22 @@
    "blank": "café"
   }
  ],
+ "w|caféine": [
+  {
+   "text": "Après minuit, Thomas évite la caféine pour réussir à dormir.",
+   "en": "After midnight, Thomas avoids caffeine so he can get to sleep.",
+   "ko": "토마는 잠을 자려고 자정 넘어서는 카페인을 피해요.",
+   "blank": "caféine",
+   "src": "made"
+  },
+  {
+   "text": "Chloé a besoin d'une dose de caféine pour tenir jusqu'à la fermeture.",
+   "en": "Chloé needs a dose of caffeine to last until closing.",
+   "ko": "클로에는 문 닫을 때까지 버티려면 카페인이 필요해요.",
+   "blank": "caféine",
+   "src": "made"
+  }
+ ],
  "w|cafétéria": [
   {
    "text": "Julien livre ses viennoiseries à la cafétéria de l'hôpital chaque matin.",
@@ -12039,6 +12135,22 @@
    "en": "Please put the money in the cash register.",
    "ko": "돈을 caisse 에 넣어 줘.",
    "blank": "caisse"
+  }
+ ],
+ "w|cake": [
+  {
+   "text": "Thomas propose une part de cake aux fruits confits avec le café.",
+   "en": "Thomas offers a slice of candied fruit cake with the coffee.",
+   "ko": "토마는 커피와 함께 설탕에 절인 과일 케이크 한 조각을 내놓아요.",
+   "blank": "cake",
+   "src": "made"
+  },
+  {
+   "text": "Une voisine de stand offre à Chloé une tranche de cake au citron.",
+   "en": "A neighboring stallholder offers Chloé a slice of lemon cake.",
+   "ko": "옆 가판대 주인이 클로에에게 레몬 케이크 한 조각을 건네요.",
+   "blank": "cake",
+   "src": "made"
   }
  ],
  "w|calcul": [
@@ -12471,6 +12583,22 @@
    "src": "made"
   }
  ],
+ "w|canette": [
+  {
+   "text": "Thomas sert une canette de soda bien fraîche à un enfant assoiffé.",
+   "en": "Thomas serves a nice cold can of soda to a thirsty child.",
+   "ko": "토마는 목마른 아이에게 시원한 탄산음료 한 캔을 내줘요.",
+   "blank": "canette",
+   "src": "made"
+  },
+  {
+   "text": "Chloé boit une canette de limonade assise sur une vieille malle.",
+   "en": "Chloé drinks a can of lemonade sitting on an old trunk.",
+   "ko": "클로에는 낡은 트렁크에 앉아 레모네이드 한 캔을 마셔요.",
+   "blank": "canette",
+   "src": "made"
+  }
+ ],
  "w|canne": [
   {
    "text": "Un vieux monsieur avec une canne amène son perroquet chez Paul.",
@@ -12484,6 +12612,22 @@
    "en": "The director, who has walked with a cane since his accident, welcomes Émilie warmly.",
    "ko": "사고 이후 지팡이를 짚는 원장이 에밀리를 따뜻하게 맞아요.",
    "blank": "canne",
+   "src": "made"
+  }
+ ],
+ "w|cannelle": [
+  {
+   "text": "Thomas saupoudre de la cannelle sur le riz au lait de sa mère.",
+   "en": "Thomas sprinkles cinnamon on his mother's rice pudding.",
+   "ko": "토마는 어머니가 만든 쌀 푸딩에 계피 가루를 뿌려요.",
+   "blank": "cannelle",
+   "src": "made"
+  },
+  {
+   "text": "Le vieux coffre que Chloé achète sent encore la cannelle.",
+   "en": "The old chest Chloé buys still smells of cinnamon.",
+   "ko": "클로에가 산 낡은 궤짝에서는 아직도 계피 냄새가 나요.",
+   "blank": "cannelle",
    "src": "made"
   }
  ],
@@ -17849,6 +17993,22 @@
    "blank": "commentaire"
   }
  ],
+ "w|commerçant": [
+  {
+   "text": "Le boucher est le commerçant préféré de Thomas, il lui garde toujours les meilleurs morceaux.",
+   "en": "The butcher is Thomas's favorite shopkeeper; he always saves him the best cuts.",
+   "ko": "정육점 주인은 토마가 가장 좋아하는 상인이라 늘 제일 좋은 부위를 따로 챙겨 줘요.",
+   "blank": "commerçant",
+   "src": "made"
+  },
+  {
+   "text": "Le commerçant d'à côté prête une table pliante à Chloé.",
+   "en": "The shopkeeper next door lends Chloé a folding table.",
+   "ko": "옆 가게 상인이 클로에에게 접이식 탁자를 빌려줘요.",
+   "blank": "commerçant",
+   "src": "made"
+  }
+ ],
  "w|commerce": [
   {
    "text": "Mon frère travaille dans le commerce international.",
@@ -20353,6 +20513,22 @@
    "src": "made"
   }
  ],
+ "w|consulat": [
+  {
+   "text": "Un employé du consulat déjeune tous les mardis dans le restaurant familial de Thomas.",
+   "en": "An employee from the consulate has lunch every Tuesday at Thomas's family restaurant.",
+   "ko": "영사관 직원 한 명이 화요일마다 토마의 가족 식당에서 점심을 먹어요.",
+   "blank": "consulat",
+   "src": "made"
+  },
+  {
+   "text": "Chloé reconnaît sur un stand une vieille plaque en cuivre du consulat d'autrefois.",
+   "en": "At a stall, Chloé recognizes an old copper plaque from the former consulate.",
+   "ko": "클로에는 한 가판대에서 옛 영사관의 구리 명판을 알아봐요.",
+   "blank": "consulat",
+   "src": "made"
+  }
+ ],
  "w|consultation": [
   {
    "text": "La consultation de Louis coûte moins cher le samedi matin.",
@@ -21731,6 +21907,22 @@
    "blank": "côté"
   }
  ],
+ "w|côtelette": [
+  {
+   "text": "Thomas grille une côtelette d'agneau pour son père qui fête ses quatre-vingts ans.",
+   "en": "Thomas grills a lamb chop for his father, who is celebrating his eightieth birthday.",
+   "ko": "토마는 팔순을 맞은 아버지를 위해 양갈비를 구워요.",
+   "blank": "côtelette",
+   "src": "made"
+  },
+  {
+   "text": "Le stand de grillades sent la côtelette, et Chloé a soudain faim.",
+   "en": "The grill stand smells of chops, and Chloé suddenly feels hungry.",
+   "ko": "구이 가판대에서 갈비 냄새가 나자 클로에는 갑자기 배가 고파져요.",
+   "blank": "côtelette",
+   "src": "made"
+  }
+ ],
  "w|coton": [
   {
    "text": "Antoine plie les serviettes en coton avant l'arrivée des premiers clients.",
@@ -22647,6 +22839,22 @@
    "blank": "créature"
   }
  ],
+ "w|crèche": [
+  {
+   "text": "Thomas passe chercher son fils à la crèche avant le service du soir.",
+   "en": "Thomas picks up his son from nursery before the evening service.",
+   "ko": "토마는 저녁 영업 전에 아들을 어린이집에서 데려와요.",
+   "blank": "crèche",
+   "src": "made"
+  },
+  {
+   "text": "Chloé trouve des santons pour compléter la crèche de Noël de sa mère.",
+   "en": "Chloé finds figurines to complete her mother's Christmas nativity scene.",
+   "ko": "클로에는 어머니의 성탄 구유 장식을 채울 작은 인형들을 찾아요.",
+   "blank": "crèche",
+   "src": "made"
+  }
+ ],
  "w|crédibilité": [
   {
    "text": "Les nombreux mensonges ont détruit la crédibilité du témoin.",
@@ -22734,6 +22942,22 @@
    "en": "With the farm's buckwheat, Sarah makes a savory crepe for dinner.",
    "ko": "사라는 농장 메밀로 저녁에 짭짤한 크레프를 만들어요.",
    "blank": "crêpe",
+   "src": "made"
+  }
+ ],
+ "w|crépuscule": [
+  {
+   "text": "Au crépuscule, Thomas allume les bougies sur la terrasse.",
+   "en": "At dusk, Thomas lights the candles on the terrace.",
+   "ko": "해 질 녘에 토마는 테라스의 초에 불을 켜요.",
+   "blank": "crépuscule",
+   "src": "made"
+  },
+  {
+   "text": "Chloé replie son stand au crépuscule, les bras chargés de trouvailles.",
+   "en": "Chloé packs up her stall at dusk, her arms full of finds.",
+   "ko": "클로에는 해 질 녘에 물건을 한가득 안고 가판대를 정리해요.",
+   "blank": "crépuscule",
    "src": "made"
   }
  ],
@@ -23081,6 +23305,22 @@
    "en": "He wears a cross around his neck.",
    "ko": "그는 목에 croix 를 걸고 있어.",
    "blank": "croix"
+  }
+ ],
+ "w|croquer": [
+  {
+   "text": "La petite-fille de Thomas aime croquer les cornichons en cachette.",
+   "en": "Thomas's granddaughter loves crunching on pickles on the sly.",
+   "ko": "토마의 손녀는 몰래 오이 피클을 아작아작 씹어 먹는 걸 좋아해요.",
+   "blank": "croquer",
+   "src": "made"
+  },
+  {
+   "text": "Chloé ne résiste pas et va croquer une pomme d'amour avant de partir.",
+   "en": "Chloé can't resist and goes to bite into a candy apple before leaving.",
+   "ko": "클로에는 참지 못하고 떠나기 전에 사과 사탕을 한 입 베어 물어요.",
+   "blank": "croquer",
+   "src": "made"
   }
  ],
  "w|crosse": [
@@ -25463,6 +25703,22 @@
    "en": "This fabric is very delicate, be careful.",
    "ko": "이 천은 매우 섬세하니까 조심해.",
    "blank": "délicat"
+  }
+ ],
+ "w|délice": [
+  {
+   "text": "Les clients disent que la tarte tatin de Thomas est un vrai délice.",
+   "en": "Customers say that Thomas's tarte tatin is a real delight.",
+   "ko": "손님들은 토마의 타르트 타탱이 정말 맛있다고 해요.",
+   "blank": "délice",
+   "src": "made"
+  },
+  {
+   "text": "Pour Chloé, fouiller dans les caisses de vieux livres est un pur délice.",
+   "en": "For Chloé, rummaging in crates of old books is pure delight.",
+   "ko": "클로에에게 낡은 책 상자를 뒤지는 건 그야말로 즐거움이에요.",
+   "blank": "délice",
+   "src": "made"
   }
  ],
  "w|délicieux": [
@@ -30989,6 +31245,22 @@
    "src": "made"
   }
  ],
+ "w|écosser": [
+  {
+   "text": "Le dimanche, Thomas apprend à sa fille à écosser les petits pois.",
+   "en": "On Sundays, Thomas teaches his daughter to shell peas.",
+   "ko": "일요일이면 토마는 딸에게 완두콩 까는 법을 가르쳐요.",
+   "blank": "écosser",
+   "src": "made"
+  },
+  {
+   "text": "Une vieille dame vend des haricots frais et propose à Chloé de l'aider à les écosser.",
+   "en": "An old lady sells fresh beans and offers to help Chloé shell them.",
+   "ko": "한 할머니가 생콩을 팔면서 클로에에게 콩 까는 걸 도와주겠다고 해요.",
+   "blank": "écosser",
+   "src": "made"
+  }
+ ],
  "w|écoulé": [
   {
    "text": "Le dossier indique le temps écoulé depuis la dernière visite du perroquet chez Louis.",
@@ -34421,6 +34693,22 @@
    "src": "made"
   }
  ],
+ "w|épicé": [
+  {
+   "text": "Thomas prévient les clients que le curry du jour est très épicé.",
+   "en": "Thomas warns customers that today's curry is very spicy.",
+   "ko": "토마는 손님들에게 오늘의 카레가 아주 맵다고 미리 알려요.",
+   "blank": "épicé",
+   "src": "made"
+  },
+  {
+   "text": "Sur un stand voisin, Chloé goûte un chocolat chaud épicé au piment.",
+   "en": "At a nearby stall, Chloé tastes a hot chocolate spiced with chili.",
+   "ko": "클로에는 옆 가판대에서 고추를 넣은 매콤한 핫초코를 맛봐요.",
+   "blank": "épicé",
+   "src": "made"
+  }
+ ],
  "w|épicerie": [
   {
    "text": "L'épicerie du coin ferme tard.",
@@ -34511,6 +34799,22 @@
    "en": "Every episode of this cartoon makes me laugh.",
    "ko": "이 만화의 모든 에피소드가 나를 웃게 해.",
    "blank": "épisode"
+  }
+ ],
+ "w|éplucher": [
+  {
+   "text": "Thomas fait éplucher les pommes de terre au nouveau commis.",
+   "en": "Thomas has the new kitchen assistant peel the potatoes.",
+   "ko": "토마는 새로 온 주방 보조에게 감자 껍질을 벗기게 해요.",
+   "blank": "éplucher",
+   "src": "made"
+  },
+  {
+   "text": "Une marchande de légumes est en train d'éplucher des oignons sous les yeux de Chloé.",
+   "en": "A vegetable seller is peeling onions right in front of Chloé.",
+   "ko": "채소 장수가 클로에 눈앞에서 양파 껍질을 벗기고 있어요.",
+   "blank": "éplucher",
+   "src": "made"
   }
  ],
  "w|éponge": [
@@ -34967,6 +35271,22 @@
    "en": "Be careful going down the stairs.",
    "ko": "계단 내려갈 때 조심해.",
    "blank": "escalier"
+  }
+ ],
+ "w|escargot": [
+  {
+   "text": "Le père de Thomas prépare chaque escargot au beurre persillé pour les fêtes.",
+   "en": "Thomas's father prepares every snail with parsley butter for the holidays.",
+   "ko": "토마의 아버지는 명절이면 달팽이를 하나하나 파슬리 버터로 요리해요.",
+   "blank": "escargot",
+   "src": "made"
+  },
+  {
+   "text": "Chloé repère une assiette ancienne décorée d'un escargot peint à la main.",
+   "en": "Chloé spots an old plate decorated with a hand-painted snail.",
+   "ko": "클로에는 손으로 그린 달팽이가 장식된 오래된 접시를 발견해요.",
+   "blank": "escargot",
+   "src": "made"
   }
  ],
  "w|esclavage": [
@@ -41027,6 +41347,22 @@
    "blank": "frère"
   }
  ],
+ "w|friandise": [
+  {
+   "text": "Avec l'addition, Thomas offre une petite friandise à chaque enfant.",
+   "en": "With the bill, Thomas gives each child a little treat.",
+   "ko": "토마는 계산서와 함께 아이들마다 작은 간식을 하나씩 줘요.",
+   "blank": "friandise",
+   "src": "made"
+  },
+  {
+   "text": "Chloé retrouve sur un stand une friandise de son enfance aux couleurs vives.",
+   "en": "At a stall, Chloé comes across a brightly colored treat from her childhood.",
+   "ko": "클로에는 한 가판대에서 어릴 때 먹던 알록달록한 간식을 다시 만나요.",
+   "blank": "friandise",
+   "src": "made"
+  }
+ ],
  "w|fric": [
   {
    "text": "J'ai plus de fric pour acheter ce livre.",
@@ -41639,6 +41975,22 @@
    "en": "You might spoil the surprise.",
    "ko": "네가 그 놀람을 망칠 수도 있어.",
    "blank": "gâcher"
+  }
+ ],
+ "w|gadget": [
+  {
+   "text": "La mère de Thomas refuse tout gadget en cuisine, sauf son vieux presse-ail.",
+   "en": "Thomas's mother refuses any gadget in the kitchen, except her old garlic press.",
+   "ko": "토마의 어머니는 오래된 마늘 다지기 말고는 주방에 어떤 신기한 도구도 들이지 않아요.",
+   "blank": "gadget",
+   "src": "made"
+  },
+  {
+   "text": "Un vendeur essaie de convaincre Chloé qu'un gadget rouillé est une invention géniale.",
+   "en": "A seller tries to convince Chloé that a rusty gadget is a brilliant invention.",
+   "ko": "한 상인이 녹슨 도구가 천재적인 발명품이라고 클로에를 설득하려 해요.",
+   "blank": "gadget",
+   "src": "made"
   }
  ],
  "w|gaffe": [
@@ -42632,6 +42984,22 @@
    "en": "Dr Moreau grew up in a neighborhood the press called a ghetto.",
    "ko": "모로 선생님은 언론이 게토라고 부르던 동네에서 자랐어요.",
    "blank": "ghetto",
+   "src": "made"
+  }
+ ],
+ "w|gibier": [
+  {
+   "text": "En automne, Thomas propose du gibier, comme le civet de lièvre.",
+   "en": "In autumn, Thomas offers game, such as jugged hare.",
+   "ko": "가을이면 토마는 산토끼 스튜 같은 사냥고기 요리를 내놓아요.",
+   "blank": "gibier",
+   "src": "made"
+  },
+  {
+   "text": "Chloé découvre un vieux livre de recettes de gibier écrit à la main.",
+   "en": "Chloé discovers an old handwritten cookbook of game recipes.",
+   "ko": "클로에는 손으로 쓴 오래된 사냥고기 요리책을 발견해요.",
+   "blank": "gibier",
    "src": "made"
   }
  ],
@@ -52365,6 +52733,22 @@
    "src": "made"
   }
  ],
+ "w|lasagne": [
+  {
+   "text": "Le mercredi, Thomas prépare des lasagnes pour toute la famille avant l'ouverture.",
+   "en": "On Wednesdays, Thomas makes lasagna for the whole family before opening.",
+   "ko": "수요일이면 토마는 문 열기 전에 온 가족이 먹을 라자냐를 만들어요.",
+   "blank": "lasagnes",
+   "src": "made"
+  },
+  {
+   "text": "Chloé trouve un plat en terre cuite parfait pour ses lasagnes.",
+   "en": "Chloé finds an earthenware dish perfect for her lasagna.",
+   "ko": "클로에는 라자냐를 만들기에 딱 좋은 토기 접시를 찾아요.",
+   "blank": "lasagnes",
+   "src": "made"
+  }
+ ],
  "w|laser": [
   {
    "text": "Le thermomètre laser de Thomas mesure la chaleur de la poêle en une seconde.",
@@ -55619,6 +56003,22 @@
    "en": "This vendor knows every customer.",
    "ko": "이 상인은 손님을 다 알아.",
    "blank": "marchand"
+  }
+ ],
+ "w|marchander": [
+  {
+   "text": "Thomas va au marché de gros et sait marchander le prix des tomates.",
+   "en": "Thomas goes to the wholesale market and knows how to haggle over the price of tomatoes.",
+   "ko": "토마는 도매 시장에 가서 토마토값을 흥정할 줄 알아요.",
+   "blank": "marchander",
+   "src": "made"
+  },
+  {
+   "text": "Chloé adore marchander, même quand le prix est déjà bas.",
+   "en": "Chloé loves to haggle, even when the price is already low.",
+   "ko": "클로에는 값이 이미 싸도 흥정하는 걸 좋아해요.",
+   "blank": "marchander",
+   "src": "made"
   }
  ],
  "w|marchandise": [
@@ -61017,6 +61417,22 @@
    "blank": "noir"
   }
  ],
+ "w|noisette": [
+  {
+   "text": "Thomas fait fondre le beurre jusqu'à ce qu'il prenne une couleur noisette.",
+   "en": "Thomas melts the butter until it turns a hazelnut color.",
+   "ko": "토마는 버터가 갈색이 될 때까지 녹여요.",
+   "blank": "noisette",
+   "src": "made"
+  },
+  {
+   "text": "Chloé grignote un sachet de noisettes grillées en se promenant entre les stands.",
+   "en": "Chloé nibbles on a bag of roasted hazelnuts while strolling between the stalls.",
+   "ko": "클로에는 가판대 사이를 거닐며 구운 헤이즐넛을 집어 먹어요.",
+   "blank": "noisettes",
+   "src": "made"
+  }
+ ],
  "w|noix": [
   {
    "text": "J'adore manger une noix après le repas.",
@@ -65789,6 +66205,22 @@
    "src": "made"
   }
  ],
+ "w|peignoir": [
+  {
+   "text": "Le grand-père de Thomas descend encore en peignoir pour goûter la sauce du matin.",
+   "en": "Thomas's grandfather still comes down in his bathrobe to taste the morning sauce.",
+   "ko": "토마의 할아버지는 아직도 목욕 가운 차림으로 내려와 아침 소스를 맛봐요.",
+   "blank": "peignoir",
+   "src": "made"
+  },
+  {
+   "text": "Chloé hésite devant un peignoir en soie brodé de fleurs.",
+   "en": "Chloé hesitates in front of a silk dressing gown embroidered with flowers.",
+   "ko": "클로에는 꽃이 수놓인 실크 가운 앞에서 망설여요.",
+   "blank": "peignoir",
+   "src": "made"
+  }
+ ],
  "w|peindre": [
   {
    "text": "J'aime peindre des paysages le week-end.",
@@ -67819,6 +68251,22 @@
    "blank": "place"
   }
  ],
+ "w|placement": [
+  {
+   "text": "Thomas s'occupe du placement des clients pour que chaque famille ait sa table.",
+   "en": "Thomas takes care of seating customers so that each family has its own table.",
+   "ko": "토마는 가족마다 자기 테이블이 있도록 손님 자리를 안내해요.",
+   "blank": "placement",
+   "src": "made"
+  },
+  {
+   "text": "Pour Chloé, les meubles anciens sont un meilleur placement que les actions.",
+   "en": "For Chloé, antique furniture is a better investment than shares.",
+   "ko": "클로에에게는 오래된 가구가 주식보다 나은 투자예요.",
+   "blank": "placement",
+   "src": "made"
+  }
+ ],
  "w|placer": [
   {
    "text": "Tu peux placer le vase sur la table.",
@@ -69449,6 +69897,22 @@
    "src": "made"
   }
  ],
+ "w|portion": [
+  {
+   "text": "Thomas sert une portion généreuse de frites aux ouvriers du chantier voisin.",
+   "en": "Thomas serves a generous portion of fries to the workers from the nearby building site.",
+   "ko": "토마는 옆 공사장 일꾼들에게 감자튀김을 넉넉히 담아 줘요.",
+   "blank": "portion",
+   "src": "made"
+  },
+  {
+   "text": "Chloé partage une portion de churros avec son frère.",
+   "en": "Chloé shares a serving of churros with her brother.",
+   "ko": "클로에는 남동생과 추로스 한 접시를 나눠 먹어요.",
+   "blank": "portion",
+   "src": "made"
+  }
+ ],
  "w|portrait": [
   {
    "text": "Peux-tu me montrer ton portrait préféré ?",
@@ -70509,6 +70973,22 @@
    "src": "made"
   }
  ],
+ "w|prématuré": [
+  {
+   "text": "Ouvrir une deuxième salle serait prématuré, estime le père de Thomas.",
+   "en": "Opening a second dining room would be premature, Thomas's father thinks.",
+   "ko": "토마의 아버지는 두 번째 홀을 여는 건 아직 이르다고 생각해요.",
+   "blank": "prématuré",
+   "src": "made"
+  },
+  {
+   "text": "Chloé trouve prématuré de ranger les parasols alors que le soleil brille encore.",
+   "en": "Chloé thinks it's premature to put away the parasols while the sun is still shining.",
+   "ko": "클로에는 아직 해가 쨍쨍한데 파라솔을 접는 건 이르다고 생각해요.",
+   "blank": "prématuré",
+   "src": "made"
+  }
+ ],
  "w|premier": [
   {
    "text": "C'est mon premier voyage à Paris.",
@@ -70942,6 +71422,22 @@
    "en": "A guest in a hurry asks Léa to squeeze an orange for him.",
    "ko": "급한 손님이 레아에게 오렌지를 짜 달라고 해요.",
    "blank": "presser",
+   "src": "made"
+  }
+ ],
+ "w|pressing": [
+  {
+   "text": "Thomas dépose les nappes blanches au pressing chaque lundi matin.",
+   "en": "Thomas drops the white tablecloths off at the dry cleaner's every Monday morning.",
+   "ko": "토마는 월요일 아침마다 하얀 식탁보를 세탁소에 맡겨요.",
+   "blank": "pressing",
+   "src": "made"
+  },
+  {
+   "text": "Chloé fait nettoyer au pressing le manteau en laine qu'elle a trouvé à la brocante.",
+   "en": "Chloé has the wool coat she found at the flea market cleaned at the dry cleaner's.",
+   "ko": "클로에는 벼룩시장에서 산 모직 코트를 세탁소에 맡겨요.",
+   "blank": "pressing",
    "src": "made"
   }
  ],
@@ -72829,6 +73325,22 @@
    "en": "He is always cautious before making a decision.",
    "ko": "그는 결정을 내리기 전에 항상 신중해.",
    "blank": "prudent"
+  }
+ ],
+ "w|prune": [
+  {
+   "text": "En septembre, Thomas fait une tarte avec les prunes du jardin familial.",
+   "en": "In September, Thomas makes a tart with plums from the family garden.",
+   "ko": "구월이면 토마는 집 마당에서 딴 자두로 타르트를 만들어요.",
+   "blank": "prunes",
+   "src": "made"
+  },
+  {
+   "text": "Chloé achète un pot de confiture de prunes à une fermière.",
+   "en": "Chloé buys a jar of plum jam from a farmer.",
+   "ko": "클로에는 농장 아주머니에게서 자두잼 한 병을 사요.",
+   "blank": "prunes",
+   "src": "made"
   }
  ],
  "w|pseudo": [
@@ -78959,6 +79471,22 @@
    "blank": "restantes"
   }
  ],
+ "w|restau": [
+  {
+   "text": "Pour beaucoup d'habitués, le petit restau de Thomas est comme une deuxième maison.",
+   "en": "For many regulars, Thomas's little restaurant is like a second home.",
+   "ko": "많은 단골에게 토마의 작은 식당은 두 번째 집 같아요.",
+   "blank": "restau",
+   "src": "made"
+  },
+  {
+   "text": "À midi, Chloé et son frère vont manger dans un petit restau près de la place.",
+   "en": "At noon, Chloé and her brother go eat at a little restaurant near the square.",
+   "ko": "정오에 클로에와 남동생은 광장 근처 작은 식당에 밥 먹으러 가요.",
+   "blank": "restau",
+   "src": "made"
+  }
+ ],
  "w|restaurant": [
   {
    "text": "On va au restaurant ce soir ?",
@@ -78971,6 +79499,22 @@
    "en": "This restaurant is very popular.",
    "ko": "이 레스토랑은 정말 인기 많아.",
    "blank": "restaurant"
+  }
+ ],
+ "w|restauration": [
+  {
+   "text": "Thomas a fait une formation en restauration avant de reprendre l'affaire familiale.",
+   "en": "Thomas trained in catering before taking over the family business.",
+   "ko": "토마는 가업을 잇기 전에 외식업 교육을 받았어요.",
+   "blank": "restauration",
+   "src": "made"
+  },
+  {
+   "text": "Le stand de restauration rapide attire tous les chineurs, Chloé comprise.",
+   "en": "The fast food stand attracts all the bargain hunters, Chloé included.",
+   "ko": "간이음식 가판대에는 클로에를 비롯해 물건 사냥꾼들이 몰려요.",
+   "blank": "restauration",
+   "src": "made"
   }
  ],
  "w|restaurer": [
@@ -79493,6 +80037,22 @@
    "en": "I must wake up at seven o’clock.",
    "ko": "나는 일곱 시에 일어나야 해.",
    "blank": "réveiller"
+  }
+ ],
+ "w|réveillon": [
+  {
+   "text": "Le restaurant de Thomas affiche complet pour le réveillon depuis des semaines.",
+   "en": "Thomas's restaurant has been fully booked for New Year's Eve for weeks.",
+   "ko": "토마의 식당은 몇 주 전부터 연말 만찬 예약이 꽉 찼어요.",
+   "blank": "réveillon",
+   "src": "made"
+  },
+  {
+   "text": "Chloé cherche de la vaisselle ancienne pour la table du réveillon.",
+   "en": "Chloé is looking for antique dishes for the Christmas Eve table.",
+   "ko": "클로에는 성탄 전야 식탁에 올릴 오래된 그릇을 찾고 있어요.",
+   "blank": "réveillon",
+   "src": "made"
   }
  ],
  "w|révélation": [
@@ -81985,6 +82545,22 @@
    "src": "made"
   }
  ],
+ "w|saveur": [
+  {
+   "text": "Thomas garde la recette de sa grand-mère pour ne pas perdre la saveur du ragoût.",
+   "en": "Thomas keeps his grandmother's recipe so as not to lose the flavor of the stew.",
+   "ko": "토마는 스튜 맛을 잃지 않으려고 할머니의 요리법을 지켜요.",
+   "blank": "saveur",
+   "src": "made"
+  },
+  {
+   "text": "Chloé goûte un miel de lavande à la saveur étonnante.",
+   "en": "Chloé tastes a lavender honey with a surprising flavor.",
+   "ko": "클로에는 맛이 놀라운 라벤더 꿀을 맛봐요.",
+   "blank": "saveur",
+   "src": "made"
+  }
+ ],
  "w|savoir": [
   {
    "text": "Tu veux savoir la réponse?",
@@ -83053,6 +83629,22 @@
    "en": "He is starting to seem tired.",
    "ko": "그는 피곤해 보이기 시작해.",
    "blank": "sembler"
+  }
+ ],
+ "w|semelle": [
+  {
+   "text": "À force de courir entre les tables, Thomas a usé la semelle de ses chaussures.",
+   "en": "From running between tables, Thomas has worn out the soles of his shoes.",
+   "ko": "테이블 사이를 뛰어다니다 보니 토마의 신발 밑창이 닳았어요.",
+   "blank": "semelle",
+   "src": "made"
+  },
+  {
+   "text": "La botte que Chloé essaie a une semelle complètement décollée.",
+   "en": "The boot Chloé tries on has a sole that's come completely unstuck.",
+   "ko": "클로에가 신어 본 부츠는 밑창이 완전히 떨어져 있어요.",
+   "blank": "semelle",
+   "src": "made"
   }
  ],
  "w|semence": [
@@ -87251,6 +87843,22 @@
    "blank": "sucre"
   }
  ],
+ "w|sucrerie": [
+  {
+   "text": "La tante de Thomas cache une sucrerie dans la poche de chaque neveu.",
+   "en": "Thomas's aunt hides a sweet in each nephew's pocket.",
+   "ko": "토마의 이모는 조카들 주머니마다 사탕을 하나씩 몰래 넣어 둬요.",
+   "blank": "sucrerie",
+   "src": "made"
+  },
+  {
+   "text": "Chloé offre une sucrerie à la petite fille du stand voisin.",
+   "en": "Chloé gives a sweet to the little girl at the next stall.",
+   "ko": "클로에는 옆 가판대 꼬마에게 사탕을 하나 줘요.",
+   "blank": "sucrerie",
+   "src": "made"
+  }
+ ],
  "w|sud": [
   {
    "text": "Nous partons vers le sud demain.",
@@ -87652,6 +88260,22 @@
    "en": "The new apprentice makes her first baguettes under Claire's supervision.",
    "ko": "새 견습생은 클레르의 감독 아래 첫 바게트를 만들어요.",
    "blank": "supervision",
+   "src": "made"
+  }
+ ],
+ "w|supplément": [
+  {
+   "text": "Chez Thomas, le fromage râpé est servi sans supplément.",
+   "en": "At Thomas's, grated cheese is served at no extra charge.",
+   "ko": "토마네 식당에서는 간 치즈를 추가 요금 없이 줘요.",
+   "blank": "supplément",
+   "src": "made"
+  },
+  {
+   "text": "Le vendeur demande un supplément à Chloé pour livrer l'armoire chez elle.",
+   "en": "The seller asks Chloé for an extra charge to deliver the wardrobe to her home.",
+   "ko": "상인은 옷장을 집까지 배달하는 데 추가 요금을 달라고 클로에에게 말해요.",
+   "blank": "supplément",
    "src": "made"
   }
  ],
@@ -95023,6 +95647,22 @@
    "en": "This wine comes from Bordeaux.",
    "ko": "이 와인은 보르도에서 왔어.",
    "blank": "vin"
+  }
+ ],
+ "w|vinaigre": [
+  {
+   "text": "Thomas fait sa vinaigrette avec un vinaigre de cidre maison.",
+   "en": "Thomas makes his dressing with homemade cider vinegar.",
+   "ko": "토마는 집에서 만든 사과 식초로 드레싱을 만들어요.",
+   "blank": "vinaigre",
+   "src": "made"
+  },
+  {
+   "text": "Un vendeur conseille à Chloé du vinaigre blanc pour nettoyer le cuivre.",
+   "en": "A seller advises Chloé to use white vinegar to clean the copper.",
+   "ko": "한 상인이 구리를 닦을 때는 흰 식초를 쓰라고 클로에에게 알려 줘요.",
+   "blank": "vinaigre",
+   "src": "made"
   }
  ],
  "w|vingt": [

@@ -2975,6 +2975,22 @@
    "src": "made"
   }
  ],
+ "w|अपूर्ण": [
+  {
+   "text": "नक़्शा अपूर्ण था, इसलिए अमित को झरने तक पहुँचने में घंटों लगे।",
+   "en": "The map was incomplete, so it took Amit hours to reach the waterfall.",
+   "ko": "지도가 불완전해서 아밋은 폭포까지 가는 데 몇 시간이 걸렸어요.",
+   "blank": "अपूर्ण",
+   "src": "made"
+  },
+  {
+   "text": "मोहन के बिना यह मिलन अपूर्ण लगता, इसलिए नेहा उसे ख़ुद लेने गई।",
+   "en": "The reunion would have felt incomplete without Mohan, so Neha went to pick him up herself.",
+   "ko": "모한이 없으면 모임이 허전할 것 같아서 네하가 직접 데리러 갔어요.",
+   "blank": "अपूर्ण",
+   "src": "made"
+  }
+ ],
  "w|अपूर्व": [
   {
    "text": "खिड़की से शहर का अपूर्व नज़ारा देखकर राहुल कुछ देर काम भूल गया।",
@@ -3139,6 +3155,22 @@
    "en": "Drink less tea from now on.",
    "ko": "이제부터 차는 적게 마셔.",
    "blank": "अब से"
+  }
+ ],
+ "w|अभयारण्य": [
+  {
+   "text": "अमित और उसके दोस्तों को अभयारण्य के अंदर तंबू लगाने की इजाज़त नहीं मिली।",
+   "en": "Amit and his friends were not allowed to pitch tents inside the sanctuary.",
+   "ko": "아밋과 친구들은 보호구역 안에 텐트를 칠 허가를 받지 못했어요.",
+   "blank": "अभयारण्य",
+   "src": "made"
+  },
+  {
+   "text": "विकास ने नेहा को बताया कि वह अब एक पक्षी अभयारण्य में गाइड है।",
+   "en": "Vikas told Neha that he is now a guide at a bird sanctuary.",
+   "ko": "비카스는 네하에게 지금 조류 보호구역에서 가이드로 일한다고 했어요.",
+   "blank": "अभयारण्य",
+   "src": "made"
   }
  ],
  "w|अभाव": [
@@ -4264,6 +4296,22 @@
    "en": "Small children often get restless when they hear the drill.",
    "ko": "어린아이들은 드릴 소리를 들으면 자주 불안해해요.",
    "blank": "अशांत",
+   "src": "made"
+  }
+ ],
+ "w|अशुद्ध": [
+  {
+   "text": "अमित ने झरने का अशुद्ध पानी उबालकर ही पिया।",
+   "en": "Amit drank the impure water from the waterfall only after boiling it.",
+   "ko": "아밋은 깨끗하지 않은 폭포 물을 꼭 끓여서 마셨어요.",
+   "blank": "अशुद्ध",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने याद दिलाया कि विकास की चिट्ठियों में वर्तनी कितनी अशुद्ध होती थी।",
+   "en": "Neha reminded everyone how incorrect the spelling in Vikas's letters used to be.",
+   "ko": "네하는 비카스의 편지에 맞춤법이 얼마나 틀렸었는지 상기시켰어요.",
+   "blank": "अशुद्ध",
    "src": "made"
   }
  ],
@@ -5658,6 +5706,22 @@
    "en": "After her husband passed away, Seema became self-reliant by running the shop.",
    "ko": "남편이 세상을 떠난 뒤 시마는 가게를 꾸려 스스로 살아갈 힘을 얻었어요.",
    "blank": "आत्मनिर्भर",
+   "src": "made"
+  }
+ ],
+ "w|आत्मनिर्भरता": [
+  {
+   "text": "जंगल में तीन दिन बिताकर अमित को आत्मनिर्भरता का असली मतलब समझ आया।",
+   "en": "After spending three days in the forest, Amit understood the real meaning of self-reliance.",
+   "ko": "숲에서 사흘을 보내고 나서 아밋은 자립의 진짜 의미를 알게 됐어요.",
+   "blank": "आत्मनिर्भरता",
+   "src": "made"
+  },
+  {
+   "text": "सुमन ने अपनी आत्मनिर्भरता की कहानी सुनाई कि कैसे उसने अकेले दुकान खड़ी की।",
+   "en": "Suman told the story of her self-reliance, how she built up a shop on her own.",
+   "ko": "수만은 혼자서 가게를 일으킨 자립 이야기를 들려줬어요.",
+   "blank": "आत्मनिर्भरता",
    "src": "made"
   }
  ],
@@ -8597,6 +8661,22 @@
    "src": "made"
   }
  ],
+ "w|उजाड़ना": [
+  {
+   "text": "किसी ने पेड़ काटकर इस ढलान को उजाड़ दिया है, यह देखकर अमित उदास हो गया।",
+   "en": "Amit grew sad seeing that someone had laid waste to this slope by cutting the trees.",
+   "ko": "누군가 나무를 베어 이 비탈을 황폐하게 만든 걸 보고 아밋은 우울해졌어요.",
+   "blank": "उजाड़",
+   "src": "made"
+  },
+  {
+   "text": "नेहा को दुख हुआ कि नई सड़क ने कॉलेज के पीछे वाले बाग़ को उजाड़ दिया।",
+   "en": "Neha was sad that the new road had destroyed the garden behind the college.",
+   "ko": "네하는 새 도로 때문에 대학 뒤 정원이 망가진 게 속상했어요.",
+   "blank": "उजाड़",
+   "src": "made"
+  }
+ ],
  "w|उजाला": [
   {
    "text": "करण सुबह उजाला होने से पहले ही खेत पहुँच जाता है।",
@@ -10081,6 +10161,22 @@
    "blank": "उफ़"
   }
  ],
+ "w|उफान": [
+  {
+   "text": "बारिश के बाद नदी में उफान देखकर अमित ने तंबू ऊँची जगह पर लगाया।",
+   "en": "Seeing the river swell after the rain, Amit pitched the tent on higher ground.",
+   "ko": "비가 온 뒤 강물이 불어난 걸 보고 아밋은 텐트를 높은 곳에 쳤어요.",
+   "blank": "उफान",
+   "src": "made"
+  },
+  {
+   "text": "पुरानी तस्वीरें देखकर नेहा के मन में यादों का उफान आ गया।",
+   "en": "Looking at old photos, a surge of memories rose in Neha's heart.",
+   "ko": "옛 사진을 보자 네하의 마음에 추억이 북받쳐 올랐어요.",
+   "blank": "उफान",
+   "src": "made"
+  }
+ ],
  "w|उबरना": [
   {
    "text": "बाढ़ से उबरने के बाद गाँव कैसे बसा, इस पर करण ने लंबी रिपोर्ट लिखी।",
@@ -11319,6 +11415,22 @@
    "src": "made"
   }
  ],
+ "w|ओज़ोन": [
+  {
+   "text": "अमित के दोस्त ने बताया कि ओज़ोन की परत सूरज की हानिकारक किरणों को रोकती है।",
+   "en": "Amit's friend explained that the ozone layer blocks the sun's harmful rays.",
+   "ko": "아밋의 친구는 오존층이 해로운 햇빛을 막아 준다고 설명했어요.",
+   "blank": "ओज़ोन",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया के बेटे ने ओज़ोन पर एक निबंध लिखकर इनाम जीता है।",
+   "en": "Priya's son won a prize for writing an essay on ozone.",
+   "ko": "프리야의 아들은 오존에 관한 글을 써서 상을 받았어요.",
+   "blank": "ओज़ोन",
+   "src": "made"
+  }
+ ],
  "w|ओटीपी": [
   {
    "text": "ऑनलाइन परीक्षा में लॉग इन करने के लिए राहुल के फ़ोन पर ओटीपी आया।",
@@ -12331,6 +12443,22 @@
    "en": "This cloth is soft and light.",
    "ko": "이 천은 부드럽고 가벼워.",
    "blank": "कपड़ा"
+  }
+ ],
+ "w|कंपन": [
+  {
+   "text": "पास से गुज़रती मालगाड़ी के कंपन से अमित की नींद टूट गई।",
+   "en": "The vibration of a passing goods train woke Amit up.",
+   "ko": "지나가는 화물열차의 진동에 아밋은 잠이 깼어요.",
+   "blank": "कंपन",
+   "src": "made"
+  },
+  {
+   "text": "सबको धन्यवाद कहते समय नेहा की आवाज़ में हल्का कंपन था।",
+   "en": "There was a slight tremor in Neha's voice as she thanked everyone.",
+   "ko": "모두에게 고맙다고 말할 때 네하의 목소리가 살짝 떨렸어요.",
+   "blank": "कंपन",
+   "src": "made"
   }
  ],
  "w|कंपनी": [
@@ -20841,6 +20969,22 @@
    "blank": "गोरा"
   }
  ],
+ "w|गोरिल्ला": [
+  {
+   "text": "अलाव के पास बैठकर अमित ने दोस्तों को गोरिल्ला पर बनी एक डॉक्यूमेंट्री के बारे में बताया।",
+   "en": "Sitting by the bonfire, Amit told his friends about a documentary on gorillas.",
+   "ko": "모닥불 옆에 앉아 아밋은 친구들에게 고릴라 다큐멘터리 이야기를 했어요.",
+   "blank": "गोरिल्ला",
+   "src": "made"
+  },
+  {
+   "text": "स्कूल के नाटक में विकास ने गोरिल्ला का किरदार निभाया था, यह याद करके सब हँस पड़े।",
+   "en": "Everyone burst out laughing remembering that Vikas had played a gorilla in the school play.",
+   "ko": "학교 연극에서 비카스가 고릴라 역을 했던 게 생각나서 모두 웃음을 터뜨렸어요.",
+   "blank": "गोरिल्ला",
+   "src": "made"
+  }
+ ],
  "w|गोल": [
   {
    "text": "बच्चे ने गोल गेंद पकड़ ली।",
@@ -21900,6 +22044,22 @@
    "en": "The train's wheels kept turning, and Deepa fell asleep.",
    "ko": "기차 바퀴가 쉼 없이 굴러가는 사이 디파는 잠이 들었어요.",
    "blank": "चक्र",
+   "src": "made"
+  }
+ ],
+ "w|चक्रवात": [
+  {
+   "text": "रेडियो पर चक्रवात की ख़बर सुनते ही अमित ने कैंप समेट लिया।",
+   "en": "As soon as he heard news of the cyclone on the radio, Amit packed up the camp.",
+   "ko": "라디오에서 사이클론 소식을 듣자마자 아밋은 캠프를 걷었어요.",
+   "blank": "चक्रवात",
+   "src": "made"
+  },
+  {
+   "text": "अजय की फ़्लाइट चक्रवात के कारण रद्द हो गई थी, फिर भी वह ट्रेन से पहुँच गया।",
+   "en": "Ajay's flight had been cancelled because of a cyclone, but he still arrived by train.",
+   "ko": "아자이의 비행기는 사이클론 때문에 취소됐지만 그래도 기차를 타고 왔어요.",
+   "blank": "चक्रवात",
    "src": "made"
   }
  ],
@@ -24297,6 +24457,22 @@
    "src": "made"
   }
  ],
+ "w|छलना": [
+  {
+   "text": "रास्ते की एक दुकान वाले ने अमित को छला और ख़राब टॉर्च बेच दी।",
+   "en": "A shopkeeper along the way cheated Amit and sold him a faulty torch.",
+   "ko": "길가 가게 주인이 아밋을 속여서 고장 난 손전등을 팔았어요.",
+   "blank": "छला",
+   "src": "made"
+  },
+  {
+   "text": "ताश के खेल में मोहन ने हमेशा की तरह सबको छलने की कोशिश की।",
+   "en": "In the card game, Mohan tried to trick everyone as always.",
+   "ko": "카드 게임에서 모한은 늘 그랬듯 모두를 속이려 했어요.",
+   "blank": "छलने",
+   "src": "made"
+  }
+ ],
  "w|छलनी": [
   {
    "text": "रसोई के डिब्बे में सबसे ऊपर आटे की छलनी रखी थी।",
@@ -25282,6 +25458,22 @@
    "en": "Seema clamped a heavy lock on the grain store.",
    "ko": "시마는 곡식 창고에 커다란 자물쇠를 채웠어요.",
    "blank": "जड़",
+   "src": "made"
+  }
+ ],
+ "w|जड़ी बूटी": [
+  {
+   "text": "गाइड ने अमित को एक जड़ी बूटी दिखाई जो खाँसी में काम आती है।",
+   "en": "The guide showed Amit a herb that helps with coughs.",
+   "ko": "가이드가 아밋에게 기침에 좋은 약초를 보여 줬어요.",
+   "blank": "जड़ी बूटी",
+   "src": "made"
+  },
+  {
+   "text": "सुमन ने नेहा और बाक़ी दोस्तों को अपनी दादी की जड़ी बूटी वाली चाय पिलाई।",
+   "en": "Suman served Neha and the other friends her grandmother's herbal tea.",
+   "ko": "수만은 네하와 다른 친구들에게 할머니의 약초 차를 대접했어요.",
+   "blank": "जड़ी बूटी",
    "src": "made"
   }
  ],
@@ -27585,6 +27777,22 @@
    "src": "made"
   }
  ],
+ "w|जूझना": [
+  {
+   "text": "पूरी रात अमित तेज़ हवा से तंबू को बचाने के लिए जूझता रहा।",
+   "en": "All night Amit struggled to save the tent from the strong wind.",
+   "ko": "밤새 아밋은 강풍에서 텐트를 지키려고 씨름했어요.",
+   "blank": "जूझता",
+   "src": "made"
+  },
+  {
+   "text": "अजय ने बताया कि वह कई साल बेरोज़गारी से जूझा, तब जाकर नौकरी मिली।",
+   "en": "Ajay said he struggled with unemployment for several years before finally getting a job.",
+   "ko": "아자이는 몇 년 동안 실업과 씨름하다가 겨우 일자리를 얻었다고 했어요.",
+   "blank": "जूझा",
+   "src": "made"
+  }
+ ],
  "w|जूता": [
   {
    "text": "मेरा दायाँ जूता गीला हो गया।",
@@ -27714,6 +27922,22 @@
    "en": "During the move the jam jar broke and the box got sticky.",
    "ko": "이사하다가 잼 병이 깨져서 상자가 끈적끈적해졌어요.",
    "blank": "जैम",
+   "src": "made"
+  }
+ ],
+ "w|जैव विविधता": [
+  {
+   "text": "गाइड ने अमित से कहा कि इस घाटी की जैव विविधता देखने दूर-दूर से लोग आते हैं।",
+   "en": "The guide told Amit that people come from far and wide to see this valley's biodiversity.",
+   "ko": "가이드는 아밋에게 이 골짜기의 생물 다양성을 보러 멀리서도 사람들이 온다고 했어요.",
+   "blank": "जैव विविधता",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया अब जैव विविधता पढ़ाती है, यह सुनकर नेहा हैरान रह गई।",
+   "en": "Neha was surprised to hear that Priya now teaches biodiversity.",
+   "ko": "프리야가 이제 생물 다양성을 가르친다는 말에 네하는 깜짝 놀랐어요.",
+   "blank": "जैव विविधता",
    "src": "made"
   }
  ],
@@ -28054,6 +28278,22 @@
    "en": "Anjali's grandmother checks astrology to say whether a competition day is auspicious.",
    "ko": "안잘리의 할머니는 점성술을 보고 대회 날이 길한지 알려 줘요.",
    "blank": "ज्योतिष",
+   "src": "made"
+  }
+ ],
+ "w|ज्वलंत": [
+  {
+   "text": "अलाव के पास जंगलों की कटाई का ज्वलंत मुद्दा छिड़ा तो अमित देर तक बोलता रहा।",
+   "en": "When the burning issue of deforestation came up by the fire, Amit talked for a long time.",
+   "ko": "모닥불 옆에서 산림 벌채라는 뜨거운 문제가 나오자 아밋은 한참 동안 이야기했어요.",
+   "blank": "ज्वलंत",
+   "src": "made"
+  },
+  {
+   "text": "खाने की मेज़ पर महँगाई का ज्वलंत सवाल उठा, तो नेहा के दोस्तों में बहस छिड़ गई।",
+   "en": "When the burning question of inflation came up at the dinner table, a debate broke out among Neha's friends.",
+   "ko": "식탁에서 물가라는 뜨거운 문제가 나오자 네하의 친구들 사이에 논쟁이 붙었어요.",
+   "blank": "ज्वलंत",
    "src": "made"
   }
  ],
@@ -28601,6 +28841,22 @@
    "en": "I want to hang the picture on the wall.",
    "ko": "사진을 벽에 걸고 싶어.",
    "blank": "टाँगना"
+  }
+ ],
+ "w|टापू": [
+  {
+   "text": "झील के बीच एक छोटा-सा टापू था, जहाँ अमित नाव से गया।",
+   "en": "There was a small island in the middle of the lake, and Amit went there by boat.",
+   "ko": "호수 한가운데 작은 섬이 있어서 아밋은 배를 타고 갔어요.",
+   "blank": "टापू",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने नेहा को एक टापू पर बिताई अपनी छुट्टियों की तस्वीरें दिखाईं।",
+   "en": "Priya showed Neha photos of her holiday on an island.",
+   "ko": "프리야는 네하에게 섬에서 보낸 휴가 사진을 보여 줬어요.",
+   "blank": "टापू",
+   "src": "made"
   }
  ],
  "w|टायर": [
@@ -36357,6 +36613,22 @@
    "src": "made"
   }
  ],
+ "w|धारदार": [
+  {
+   "text": "अमित अपने बैग में हमेशा एक धारदार चाकू रखता है, ताकि लकड़ी छील सके।",
+   "en": "Amit always keeps a sharp knife in his bag so he can whittle wood.",
+   "ko": "아밋은 나무를 깎을 수 있게 가방에 늘 날카로운 칼을 넣어 다녀요.",
+   "blank": "धारदार",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की धारदार बातों से उसके दोस्त आज भी थोड़ा डरते हैं।",
+   "en": "Neha's friends are still a little afraid of her sharp remarks.",
+   "ko": "네하의 친구들은 지금도 네하의 날카로운 말을 좀 무서워해요.",
+   "blank": "धारदार",
+   "src": "made"
+  }
+ ],
  "w|धारा": [
   {
    "text": "नदी की धारा तेज़ बह रही है।",
@@ -37101,6 +37373,22 @@
    "en": "To my eye this price is fair.",
    "ko": "내가 보기엔 이 값이 적당해.",
    "blank": "नज़र"
+  }
+ ],
+ "w|नज़रअंदाज़ करना": [
+  {
+   "text": "अमित ने मौसम की चेतावनी को नज़रअंदाज़ किया और बाद में बहुत पछताया।",
+   "en": "Amit ignored the weather warning and regretted it a lot later.",
+   "ko": "아밋은 날씨 경보를 무시했다가 나중에 크게 후회했어요.",
+   "blank": "नज़रअंदाज़ किया",
+   "src": "made"
+  },
+  {
+   "text": "राजीव ने बरसों तक नेहा के फ़ोन नज़रअंदाज़ किए थे, पर आज उसने माफ़ी माँग ली।",
+   "en": "Rajeev had ignored Neha's calls for years, but today he apologized.",
+   "ko": "라지브는 몇 년 동안 네하의 전화를 무시했지만 오늘은 사과했어요.",
+   "blank": "नज़रअंदाज़ किए",
+   "src": "made"
   }
  ],
  "w|नज़रिया": [
@@ -40027,6 +40315,22 @@
    "blank": "नीति"
   }
  ],
+ "w|नीतिगत": [
+  {
+   "text": "वन अधिकारी ने कहा कि कैंपिंग पर रोक एक नीतिगत फ़ैसला है, अमित की ग़लती नहीं।",
+   "en": "The forest officer said the ban on camping was a policy decision, not Amit's fault.",
+   "ko": "산림 공무원은 캠핑 금지가 정책상 결정이지 아밋의 잘못이 아니라고 했어요.",
+   "blank": "नीतिगत",
+   "src": "made"
+  },
+  {
+   "text": "सरकारी अफ़सर बन चुके अजय ने कहा कि वह नीतिगत मामलों पर कुछ नहीं बोलेगा।",
+   "en": "Ajay, who has become a government officer, said he would not say anything on policy matters.",
+   "ko": "공무원이 된 아자이는 정책 문제에 대해서는 아무 말도 하지 않겠다고 했어요.",
+   "blank": "नीतिगत",
+   "src": "made"
+  }
+ ],
  "w|नींद": [
   {
    "text": "कल रात अच्छी नींद आई।",
@@ -40097,6 +40401,22 @@
    "blank": "नीम"
   }
  ],
+ "w|नीरस": [
+  {
+   "text": "पहले दिन की लंबी चढ़ाई अमित को थोड़ी नीरस लगी।",
+   "en": "Amit found the long climb on the first day a bit dull.",
+   "ko": "첫날의 긴 오르막은 아밋에게 좀 지루했어요.",
+   "blank": "नीरस",
+   "src": "made"
+  },
+  {
+   "text": "विकास बोला कि ऑफ़िस की नीरस ज़िंदगी में आज जैसा दिन कम आता है।",
+   "en": "Vikas said that in his dull office life, a day like today rarely comes.",
+   "ko": "비카스는 지루한 회사 생활에서 오늘 같은 날은 드물다고 했어요.",
+   "blank": "नीरस",
+   "src": "made"
+  }
+ ],
  "w|नीलकंठ": [
   {
    "text": "अजय ने नदी के ऊपर उड़ता हुआ एक नीलकंठ देखा।",
@@ -40110,6 +40430,22 @@
    "en": "On Dussehra morning, Seema saw an Indian roller on the shop roof and was happy.",
    "ko": "두세라 아침에 시마는 가게 지붕에서 파랑새를 보고 기뻐했어요.",
    "blank": "नीलकंठ",
+   "src": "made"
+  }
+ ],
+ "w|नीलगाय": [
+  {
+   "text": "सुबह-सुबह अमित ने खेत के किनारे एक नीलगाय को घास चरते देखा।",
+   "en": "Early in the morning Amit saw a nilgai grazing at the edge of a field.",
+   "ko": "이른 아침 아밋은 밭 가장자리에서 풀을 뜯는 닐가이를 봤어요.",
+   "blank": "नीलगाय",
+   "src": "made"
+  },
+  {
+   "text": "राजीव ने बताया कि उसके गाँव में नीलगाय फ़सलें चर जाती हैं।",
+   "en": "Rajeev said that in his village nilgai graze on the crops.",
+   "ko": "라지브는 자기 마을에서는 닐가이가 농작물을 뜯어 먹는다고 했어요.",
+   "blank": "नीलगाय",
    "src": "made"
   }
  ],
@@ -41219,6 +41555,22 @@
    "blank": "पट्टी"
   }
  ],
+ "w|पठार": [
+  {
+   "text": "अमित और उसके दोस्तों ने पठार पर तंबू लगाए, जहाँ से पूरी घाटी दिखती थी।",
+   "en": "Amit and his friends pitched tents on the plateau, from where the whole valley was visible.",
+   "ko": "아밋과 친구들은 골짜기 전체가 보이는 고원에 텐트를 쳤어요.",
+   "blank": "पठार",
+   "src": "made"
+  },
+  {
+   "text": "मोहन अब पठार के एक छोटे क़स्बे में स्कूल चलाता है।",
+   "en": "Mohan now runs a school in a small town on the plateau.",
+   "ko": "모한은 지금 고원의 작은 마을에서 학교를 운영해요.",
+   "blank": "पठार",
+   "src": "made"
+  }
+ ],
  "w|पड़ाव": [
   {
    "text": "अमित को लगा कि यह नौकरी उसके करियर का एक अहम पड़ाव है।",
@@ -42043,6 +42395,22 @@
    "src": "made"
   }
  ],
+ "w|पराग": [
+  {
+   "text": "फूलों पर मधुमक्खियाँ पराग इकट्ठा कर रही थीं और अमित उनकी तस्वीरें ले रहा था।",
+   "en": "Bees were collecting pollen on the flowers and Amit was taking pictures of them.",
+   "ko": "벌들이 꽃가루를 모으고 있었고 아밋은 그 사진을 찍고 있었어요.",
+   "blank": "पराग",
+   "src": "made"
+  },
+  {
+   "text": "सुमन को फूलों के पराग से एलर्जी है, इसलिए नेहा ने गुलदस्ता बाहर रख दिया।",
+   "en": "Suman is allergic to flower pollen, so Neha put the bouquet outside.",
+   "ko": "수만이 꽃가루 알레르기가 있어서 네하는 꽃다발을 밖에 내놓았어요.",
+   "blank": "पराग",
+   "src": "made"
+  }
+ ],
  "w|पराजित": [
   {
    "text": "पराजित टीम के कप्तान ने भी राहुल से हाथ मिलाया।",
@@ -42720,6 +43088,22 @@
    "en": "Meena's family too had migrated from the village to the city in search of work.",
    "ko": "미나네 가족도 일자리를 찾아 시골을 떠나 도시로 왔어요.",
    "blank": "पलायन",
+   "src": "made"
+  }
+ ],
+ "w|पलाश": [
+  {
+   "text": "पहाड़ी ढलान पर खिले पलाश के लाल फूल देखकर अमित रुक गया।",
+   "en": "Amit stopped when he saw the red palash flowers blooming on the hillside.",
+   "ko": "언덕 비탈에 핀 빨간 팔라시 꽃을 보고 아밋은 걸음을 멈췄어요.",
+   "blank": "पलाश",
+   "src": "made"
+  },
+  {
+   "text": "नेहा को याद आया कि कॉलेज के गेट पर पलाश का एक बड़ा पेड़ था।",
+   "en": "Neha remembered that there was a big palash tree at the college gate.",
+   "ko": "네하는 대학 정문에 큰 팔라시 나무가 있었던 게 떠올랐어요.",
+   "blank": "पलाश",
    "src": "made"
   }
  ],
@@ -43675,6 +44059,22 @@
    "en": "This decision came from family advice.",
    "ko": "이 결정은 가족 상의로 나왔어.",
    "blank": "पारिवारिक"
+  }
+ ],
+ "w|पारिस्थितिकी": [
+  {
+   "text": "अमित ने दोस्तों को समझाया कि प्लास्टिक छोड़ने से जंगल की पारिस्थितिकी बिगड़ती है।",
+   "en": "Amit explained to his friends that leaving plastic behind damages the forest's ecology.",
+   "ko": "아밋은 플라스틱을 버리면 숲 생태계가 망가진다고 친구들에게 설명했어요.",
+   "blank": "पारिस्थितिकी",
+   "src": "made"
+  },
+  {
+   "text": "सुमन ने बताया कि उसकी बेटी पारिस्थितिकी में पीएचडी कर रही है।",
+   "en": "Suman said that her daughter is doing a PhD in ecology.",
+   "ko": "수만은 딸이 생태학 박사 과정을 밟고 있다고 했어요.",
+   "blank": "पारिस्थितिकी",
+   "src": "made"
   }
  ],
  "w|पारी": [
@@ -45638,6 +46038,22 @@
    "en": "Before packing, Seema quickly made poha and fed everyone.",
    "ko": "짐을 싸기 전에 시마는 얼른 포하를 만들어 모두에게 먹였어요.",
    "blank": "पोहा",
+   "src": "made"
+  }
+ ],
+ "w|पौध": [
+  {
+   "text": "लौटते समय अमित ने वन विभाग की नर्सरी से नीम की पौध ख़रीदी।",
+   "en": "On the way back Amit bought neem saplings from the forest department nursery.",
+   "ko": "돌아오는 길에 아밋은 산림청 묘목장에서 님나무 묘목을 샀어요.",
+   "blank": "पौध",
+   "src": "made"
+  },
+  {
+   "text": "जाते समय नेहा ने हर दोस्त को तुलसी की एक पौध दी।",
+   "en": "As they left, Neha gave each friend a tulsi seedling.",
+   "ko": "헤어질 때 네하는 친구마다 툴시 묘목을 하나씩 줬어요.",
+   "blank": "पौध",
    "src": "made"
   }
  ],
@@ -47902,6 +48318,22 @@
    "en": "The store is usually very crowded before the festivals.",
    "ko": "명절 전에는 매장이 대개 무척 붐벼요.",
    "blank": "प्रायः",
+   "src": "made"
+  }
+ ],
+ "w|प्रायद्वीप": [
+  {
+   "text": "अगली बार अमित प्रायद्वीप के दक्षिणी सिरे पर समुद्र किनारे कैंप करना चाहता है।",
+   "en": "Next time Amit wants to camp by the sea at the southern tip of the peninsula.",
+   "ko": "다음번에 아밋은 반도 남쪽 끝 바닷가에서 캠핑하고 싶어 해요.",
+   "blank": "प्रायद्वीप",
+   "src": "made"
+  },
+  {
+   "text": "राजीव का परिवार अब प्रायद्वीप के एक तटीय शहर में रहता है।",
+   "en": "Rajeev's family now lives in a coastal city on the peninsula.",
+   "ko": "라지브 가족은 지금 반도의 한 해안 도시에 살아요.",
+   "blank": "प्रायद्वीप",
    "src": "made"
   }
  ],
@@ -50649,6 +51081,22 @@
    "src": "made"
   }
  ],
+ "w|बरतना": [
+  {
+   "text": "जंगल में आग जलाते समय अमित पूरी सावधानी बरतता है।",
+   "en": "Amit takes full care when lighting a fire in the forest.",
+   "ko": "숲에서 불을 피울 때 아밋은 아주 조심해요.",
+   "blank": "बरतता",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने हँसकर कहा कि मोहन से पैसे का लेन-देन करते समय सावधानी बरतनी चाहिए।",
+   "en": "Neha laughed and said one should be careful when dealing with money with Mohan.",
+   "ko": "네하는 웃으며 모한과 돈거래를 할 때는 조심해야 한다고 했어요.",
+   "blank": "बरतनी",
+   "src": "made"
+  }
+ ],
  "w|बरसना": [
   {
    "text": "आज शाम को बारिश बरसना शुरू हो सकती है।",
@@ -51420,6 +51868,22 @@
    "en": "This year Deepa holds the reins of the panchayat.",
    "ko": "올해 마을 의회는 디파가 이끌고 있어요.",
    "blank": "बागडोर",
+   "src": "made"
+  }
+ ],
+ "w|बागवानी": [
+  {
+   "text": "अमित की माँ को बागवानी का शौक़ है, इसलिए वह जंगल से कुछ बीज ले आया।",
+   "en": "Amit's mother loves gardening, so he brought back some seeds from the forest.",
+   "ko": "아밋의 어머니가 원예를 좋아해서 아밋은 숲에서 씨앗을 좀 가져왔어요.",
+   "blank": "बागवानी",
+   "src": "made"
+  },
+  {
+   "text": "कॉलेज की सहेली प्रिया ने बताया कि अब उसका पूरा दिन बागवानी में बीतता है।",
+   "en": "Neha's college friend Priya said she now spends her whole day gardening.",
+   "ko": "대학 친구 프리야는 요즘 하루 종일 정원을 가꾸며 지낸다고 했어요.",
+   "blank": "बागवानी",
    "src": "made"
   }
  ],
@@ -55063,6 +55527,22 @@
    "blank": "भूगोल"
   }
  ],
+ "w|भूजल": [
+  {
+   "text": "गाँव वालों ने अमित को बताया कि इस इलाक़े में भूजल बहुत नीचे चला गया है।",
+   "en": "The villagers told Amit that the groundwater in this area has dropped very low.",
+   "ko": "마을 사람들이 아밋에게 이 지역 지하수가 아주 깊이 내려갔다고 말해 줬어요.",
+   "blank": "भूजल",
+   "src": "made"
+  },
+  {
+   "text": "नेहा के पुराने दोस्त राजीव ने बताया कि वह आजकल भूजल बचाने वाली एक संस्था में काम करता है।",
+   "en": "Neha's old friend Rajeev said he now works at an organization that conserves groundwater.",
+   "ko": "네하의 옛 친구 라지브는 요즘 지하수를 지키는 단체에서 일한다고 했어요.",
+   "blank": "भूजल",
+   "src": "made"
+  }
+ ],
  "w|भूत": [
   {
    "text": "चौकीदार मज़ाक में कहता है कि रात को पुराने महल वाले कमरे में भूत घूमता है।",
@@ -57215,6 +57695,22 @@
    "en": "Today is just a day for fun.",
    "ko": "오늘은 그냥 노는 날이야.",
    "blank": "मस्ती"
+  }
+ ],
+ "w|महकना": [
+  {
+   "text": "सुबह जंगल की गीली मिट्टी ऐसी महक रही थी कि अमित तंबू से बाहर आ गया।",
+   "en": "In the morning the wet forest soil smelled so good that Amit came out of the tent.",
+   "ko": "아침에 숲의 젖은 흙냄새가 너무 좋아서 아밋은 텐트 밖으로 나왔어요.",
+   "blank": "महक",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की बनाई बिरयानी की ख़ुशबू से पूरा आँगन महक उठा।",
+   "en": "The whole courtyard filled with the aroma of the biryani Neha had made.",
+   "ko": "네하가 만든 비리야니 냄새로 마당 전체가 향긋해졌어요.",
+   "blank": "महक",
+   "src": "made"
   }
  ],
  "w|महँगा": [
@@ -62863,6 +63359,22 @@
    "blank": "राष्ट्रीय"
   }
  ],
+ "w|राष्ट्रीय उद्यान": [
+  {
+   "text": "अमित का कैंप राष्ट्रीय उद्यान की सीमा से बस थोड़ी दूर था।",
+   "en": "Amit's camp was just a short distance from the national park boundary.",
+   "ko": "아밋의 캠프는 국립공원 경계에서 조금 떨어진 곳이었어요.",
+   "blank": "राष्ट्रीय उद्यान",
+   "src": "made"
+  },
+  {
+   "text": "अगली मुलाक़ात किसी राष्ट्रीय उद्यान में करने का सुझाव नेहा ने दिया।",
+   "en": "Neha suggested holding the next get-together at a national park.",
+   "ko": "네하는 다음 모임을 국립공원에서 하자고 제안했어요.",
+   "blank": "राष्ट्रीय उद्यान",
+   "src": "made"
+  }
+ ],
  "w|राष्ट्रीयता": [
   {
    "text": "करण ने लिखा कि हादसे में घायल विदेशी पर्यटकों की राष्ट्रीयता अभी पता नहीं चली है।",
@@ -64961,6 +65473,22 @@
    "blank": "लू"
   }
  ],
+ "w|लू चलना": [
+  {
+   "text": "दोपहर में लू चल रही थी, इसलिए अमित पेड़ की छाँव में सो गया।",
+   "en": "A hot wind was blowing in the afternoon, so Amit slept in the shade of a tree.",
+   "ko": "오후에 뜨거운 바람이 불어서 아밋은 나무 그늘에서 잠들었어요.",
+   "blank": "लू चल",
+   "src": "made"
+  },
+  {
+   "text": "बाहर लू चल रही थी, इसलिए सब नेहा के ठंडे कमरे में ही बैठे रहे।",
+   "en": "A hot wind was blowing outside, so everyone stayed in Neha's cool room.",
+   "ko": "밖에 뜨거운 바람이 불어서 모두 네하의 시원한 방에 그대로 있었어요.",
+   "blank": "लू चल",
+   "src": "made"
+  }
+ ],
  "w|लूटना": [
   {
    "text": "डाकुओं ने दुकान लूट ली।",
@@ -66222,6 +66750,22 @@
    "en": "In winter the city's air gets so bad that Dipa wears a mask.",
    "ko": "겨울이면 도시 공기가 너무 나빠져서 디파는 마스크를 써요.",
    "blank": "वायु",
+   "src": "made"
+  }
+ ],
+ "w|वायुमंडल": [
+  {
+   "text": "पहाड़ पर वायुमंडल इतना साफ़ था कि अमित को रात में आकाशगंगा दिख रही थी।",
+   "en": "The atmosphere on the mountain was so clear that Amit could see the Milky Way at night.",
+   "ko": "산 위의 대기가 너무 맑아서 아밋은 밤에 은하수를 볼 수 있었어요.",
+   "blank": "वायुमंडल",
+   "src": "made"
+  },
+  {
+   "text": "विकास ने बताया कि उसकी बेटी वायुमंडल के प्रदूषण पर स्कूल प्रोजेक्ट बना रही है।",
+   "en": "Vikas said his daughter is making a school project on atmospheric pollution.",
+   "ko": "비카스는 딸이 대기 오염에 관한 학교 과제를 하고 있다고 했어요.",
+   "blank": "वायुमंडल",
    "src": "made"
   }
  ],
@@ -74093,6 +74637,22 @@
    "blank": "सरल"
   }
  ],
+ "w|सरस": [
+  {
+   "text": "अलाव के पास अमित के दोस्त ने एक सरस कहानी सुनाई और सब देर तक हँसते रहे।",
+   "en": "By the fire Amit's friend told a delightful story, and everyone kept laughing for a long time.",
+   "ko": "모닥불 옆에서 아밋의 친구가 재미있는 이야기를 들려줘서 모두 한참 웃었어요.",
+   "blank": "सरस",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने कॉलेज के दिनों की एक सरस कविता पढ़कर सुनाई।",
+   "en": "Neha read out a charming poem from her college days.",
+   "ko": "네하는 대학 시절의 맛깔스러운 시 한 편을 읽어 줬어요.",
+   "blank": "सरस",
+   "src": "made"
+  }
+ ],
  "w|सरसों": [
   {
    "text": "खेत में पीली सरसों लहलहा रही है।",
@@ -74152,6 +74712,22 @@
    "en": "Seema's neighbors used to run a small roadside inn on the highway.",
    "ko": "시마의 이웃은 고속도로 변에서 작은 여인숙을 했었어요.",
    "blank": "सराय",
+   "src": "made"
+  }
+ ],
+ "w|सरासर": [
+  {
+   "text": "अमित ने कहा कि नदी किनारे कचरा फेंकना सरासर बेवकूफ़ी है।",
+   "en": "Amit said that throwing garbage on the riverbank is sheer stupidity.",
+   "ko": "아밋은 강가에 쓰레기를 버리는 건 순전히 어리석은 짓이라고 했어요.",
+   "blank": "सरासर",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने कहा कि नेहा का यह दावा सरासर झूठ है कि वह कभी क्लास नहीं छोड़ती थी।",
+   "en": "Priya said Neha's claim that she never skipped class is a downright lie.",
+   "ko": "프리야는 네하가 수업을 한 번도 빠진 적 없다는 말은 새빨간 거짓말이라고 했어요.",
+   "blank": "सरासर",
    "src": "made"
   }
  ],
@@ -76683,6 +77259,22 @@
    "src": "made"
   }
  ],
+ "w|सियार": [
+  {
+   "text": "रात को दूर से सियार की आवाज़ आई तो अमित के दोस्त डर गए।",
+   "en": "When a jackal's howl came from far away at night, Amit's friends got scared.",
+   "ko": "밤에 멀리서 자칼 소리가 들리자 아밋의 친구들은 겁을 먹었어요.",
+   "blank": "सियार",
+   "src": "made"
+  },
+  {
+   "text": "मोहन ने मज़ाक़ में कहा कि हॉस्टल का वार्डन सियार की तरह चालाक था।",
+   "en": "Mohan joked that the hostel warden had been as cunning as a jackal.",
+   "ko": "모한은 기숙사 사감이 자칼처럼 교활했다고 농담했어요.",
+   "blank": "सियार",
+   "src": "made"
+  }
+ ],
  "w|सियासत": [
   {
    "text": "करण कहता है कि ख़बर लिखते समय सियासत से दूर रहना चाहिए।",
@@ -77457,6 +78049,22 @@
    "en": "Everyone stayed quiet during the hearing.",
    "ko": "심리 중에는 다들 조용했어.",
    "blank": "सुनवाई"
+  }
+ ],
+ "w|सुनसान": [
+  {
+   "text": "रात को झील का किनारा इतना सुनसान था कि अमित को अपनी साँस सुनाई दे रही थी।",
+   "en": "The lakeshore was so deserted at night that Amit could hear his own breathing.",
+   "ko": "밤에 호숫가가 너무 고요해서 아밋은 자기 숨소리까지 들렸어요.",
+   "blank": "सुनसान",
+   "src": "made"
+  },
+  {
+   "text": "जब सब चले गए, तो नेहा का घर अचानक सुनसान लगने लगा।",
+   "en": "When everyone left, Neha's house suddenly felt empty.",
+   "ko": "모두 떠나고 나니 네하의 집이 갑자기 썰렁하게 느껴졌어요.",
+   "blank": "सुनसान",
+   "src": "made"
   }
  ],
  "w|सुनहरा": [
@@ -78469,6 +79077,22 @@
    "en": "The stroll by the sea was memorable.",
    "ko": "바닷가 산책이 기억에 남았어.",
    "blank": "सैर"
+  }
+ ],
+ "w|सैलाब": [
+  {
+   "text": "बाँध खुलने की ख़बर आई तो अमित को डर था कि घाटी में सैलाब आ सकता है।",
+   "en": "When news came that the dam had opened, Amit feared a flood might hit the valley.",
+   "ko": "댐이 열렸다는 소식에 아밋은 골짜기에 홍수가 날까 봐 걱정했어요.",
+   "blank": "सैलाब",
+   "src": "made"
+  },
+  {
+   "text": "दोस्तों के आते ही नेहा के घर में हँसी का सैलाब उमड़ पड़ा।",
+   "en": "As soon as the friends arrived, a flood of laughter filled Neha's house.",
+   "ko": "친구들이 오자마자 네하의 집에 웃음이 넘쳐흘렀어요.",
+   "blank": "सैलाब",
+   "src": "made"
   }
  ],
  "w|सॉकेट": [
@@ -79852,6 +80476,22 @@
    "en": "The office AC is so strong that Pooja keeps a sweater on her chair.",
    "ko": "사무실 에어컨이 너무 세서 푸자는 의자에 스웨터를 하나 걸어 둬요.",
    "blank": "स्वेटर",
+   "src": "made"
+  }
+ ],
+ "w|स्वैच्छिक": [
+  {
+   "text": "जंगल की सफ़ाई का काम स्वैच्छिक था, फिर भी अमित ने पूरी सुबह कचरा उठाया।",
+   "en": "Cleaning the forest was voluntary, yet Amit picked up litter all morning.",
+   "ko": "숲 청소는 자율이었는데도 아밋은 아침 내내 쓰레기를 주웠어요.",
+   "blank": "स्वैच्छिक",
+   "src": "made"
+  },
+  {
+   "text": "मिलन समारोह का चंदा स्वैच्छिक था, पर नेहा के सभी दोस्तों ने दिल खोलकर दिया।",
+   "en": "The contribution for the reunion was voluntary, but all of Neha's friends gave generously.",
+   "ko": "동창 모임 회비는 자율이었지만 네하의 친구들은 모두 넉넉히 냈어요.",
+   "blank": "स्वैच्छिक",
    "src": "made"
   }
  ],

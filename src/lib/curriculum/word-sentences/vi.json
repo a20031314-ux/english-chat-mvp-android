@@ -2305,6 +2305,22 @@
    "src": "made"
   }
  ],
+ "w|bán thời gian": [
+  {
+   "text": "Xưởng của Tuấn tuyển thêm sinh viên làm bán thời gian dịp cao điểm.",
+   "en": "Tuấn's factory hires extra students part-time during the peak season.",
+   "ko": "뚜언의 공장은 성수기에 학생들을 아르바이트로 더 뽑아요.",
+   "blank": "bán thời gian",
+   "src": "made"
+  },
+  {
+   "text": "Mai làm bán thời gian ở quán cà phê để có tiền đi các giải chạy.",
+   "en": "Mai works part-time at a café to have money to enter races.",
+   "ko": "마이는 대회에 나갈 돈을 마련하려고 카페에서 아르바이트를 해요.",
+   "blank": "bán thời gian",
+   "src": "made"
+  }
+ ],
  "w|bản tin": [
   {
    "text": "Tối nay, bản tin truyền hình sẽ phát cảnh Tuấn trao trả chiếc ví cho chủ nhân.",
@@ -3222,6 +3238,22 @@
    "en": "I like grilled corn.",
    "ko": "저는 구운 옥수수를 좋아해요.",
    "blank": "bắp",
+   "src": "made"
+  }
+ ],
+ "w|bấp bênh": [
+  {
+   "text": "Thu nhập của công nhân thời vụ khá bấp bênh, Tuấn hiểu rõ điều đó.",
+   "en": "Seasonal workers' income is quite unstable, and Tuấn understands that well.",
+   "ko": "계절 노동자의 수입은 꽤 불안정하고 뚜언은 그걸 잘 알아요.",
+   "blank": "bấp bênh",
+   "src": "made"
+  },
+  {
+   "text": "Phong độ của Mai mấy tuần trước giải khá bấp bênh vì chấn thương cũ.",
+   "en": "Mai's form in the weeks before the race was quite shaky because of an old injury.",
+   "ko": "마이는 옛 부상 때문에 대회 몇 주 전 컨디션이 꽤 들쭉날쭉했어요.",
+   "blank": "bấp bênh",
    "src": "made"
   }
  ],
@@ -8097,6 +8129,22 @@
    "src": "made"
   }
  ],
+ "w|cân xứng": [
+  {
+   "text": "Tuấn chỉnh lại khuôn để hai nửa vỏ hộp cân xứng với nhau.",
+   "en": "Tuấn adjusted the mold so the two halves of the casing match evenly.",
+   "ko": "뚜언은 케이스 양쪽이 균형 있게 맞도록 틀을 다시 맞췄어요.",
+   "blank": "cân xứng",
+   "src": "made"
+  },
+  {
+   "text": "Huấn luyện viên khen sải chân của Mai rất cân xứng.",
+   "en": "The coach praised Mai's stride for being very balanced.",
+   "ko": "코치는 마이의 보폭이 아주 균형 잡혔다고 칭찬했어요.",
+   "blank": "cân xứng",
+   "src": "made"
+  }
+ ],
  "w|càng": [
   {
    "text": "Vậy thì càng tốt.",
@@ -10373,6 +10421,22 @@
    "src": "tatoeba:12007180/dotheduyet1999 en:6048823/CK"
   }
  ],
+ "w|chế tạo": [
+  {
+   "text": "Nhà máy nơi Tuấn làm chế tạo phụ tùng xe máy.",
+   "en": "The factory where Tuấn works manufactures motorbike parts.",
+   "ko": "뚜언이 일하는 공장은 오토바이 부품을 만들어요.",
+   "blank": "chế tạo",
+   "src": "made"
+  },
+  {
+   "text": "Ban tổ chức giải marathon đặt chế tạo huy chương bằng gỗ tái chế, Mai rất thích.",
+   "en": "The marathon organizers had medals manufactured from recycled wood, which Mai loves.",
+   "ko": "마라톤 조직위가 재활용 나무로 메달을 제작하게 해서 마이는 무척 마음에 들었어요.",
+   "blank": "chế tạo",
+   "src": "made"
+  }
+ ],
  "w|chém": [
   {
    "text": "Đầu bếp khách mời hay chém gió về những nhà hàng mình từng làm.",
@@ -10949,6 +11013,22 @@
    "en": "Grandpa tells stories about wartime.",
    "ko": "할아버지가 전쟁 시절 이야기를 해 주셔.",
    "blank": "chiến tranh"
+  }
+ ],
+ "w|chiết khấu": [
+  {
+   "text": "Tuấn thương lượng mức chiết khấu cao hơn cho khách mua số lượng lớn.",
+   "en": "Tuấn negotiated a higher discount for customers buying in bulk.",
+   "ko": "뚜언은 대량 구매 고객에게 더 높은 할인율을 협상했어요.",
+   "blank": "chiết khấu",
+   "src": "made"
+  },
+  {
+   "text": "Mai đăng ký sớm nên được chiết khấu phí tham gia.",
+   "en": "Mai registered early, so she got a discount on the entry fee.",
+   "ko": "마이는 일찍 등록해서 참가비를 할인받았어요.",
+   "blank": "chiết khấu",
+   "src": "made"
   }
  ],
  "w|chiếu": [
@@ -14878,6 +14958,22 @@
    "en": "Linh's class has a prosecutor who's learning to cook to relieve stress.",
    "ko": "린의 반에는 스트레스를 풀려고 요리를 배우는 검사가 있어요.",
    "blank": "công tố viên",
+   "src": "made"
+  }
+ ],
+ "w|công trường": [
+  {
+   "text": "Tuấn mang phụ tùng ra tận công trường cho đội lắp đặt.",
+   "en": "Tuấn took the parts all the way to the construction site for the installation team.",
+   "ko": "뚜언은 설치팀에게 부품을 공사 현장까지 직접 가져다줬어요.",
+   "blank": "công trường",
+   "src": "made"
+  },
+  {
+   "text": "Đường chạy đi ngang một công trường nên Mai phải né mấy hố nhỏ.",
+   "en": "The course passed a construction site, so Mai had to dodge some small holes.",
+   "ko": "코스가 공사장을 지나가서 마이는 작은 구덩이 몇 개를 피해 가야 했어요.",
+   "blank": "công trường",
    "src": "made"
   }
  ],
@@ -18823,6 +18919,22 @@
    "src": "made"
   }
  ],
+ "w|dây chuyền": [
+  {
+   "text": "Từ khi dây chuyền mới chạy êm hơn, Tuấn đỡ phải đứng máy cả ngày.",
+   "en": "Since the new production line runs more smoothly, Tuấn doesn't have to stand at the machine all day.",
+   "ko": "새 생산 라인이 더 매끄럽게 돌아가서 뚜언은 하루 종일 기계 앞에 서 있지 않아도 돼요.",
+   "blank": "dây chuyền",
+   "src": "made"
+  },
+  {
+   "text": "Mai đeo sợi dây chuyền bạc mẹ tặng để lấy may khi chạy.",
+   "en": "Mai wears the silver necklace her mother gave her for luck when she runs.",
+   "ko": "마이는 달릴 때 행운을 빌며 어머니가 준 은목걸이를 해요.",
+   "blank": "dây chuyền",
+   "src": "made"
+  }
+ ],
  "w|dạy dỗ": [
   {
    "text": "Nam cảm ơn thầy chủ nhiệm cũ đã dạy dỗ anh nên người.",
@@ -19203,6 +19315,22 @@
    "en": "Watch your steps so you don't trip.",
    "ko": "넘어지지 않게 발걸음을 조심해.",
    "blank": "Để ý"
+  }
+ ],
+ "w|để ý thấy": [
+  {
+   "text": "Tuấn để ý thấy một con ốc bị lỏng trên băng chuyền.",
+   "en": "Tuấn noticed a loose screw on the conveyor belt.",
+   "ko": "뚜언은 컨베이어 벨트에 나사 하나가 헐거워진 걸 눈치챘어요.",
+   "blank": "để ý thấy",
+   "src": "made"
+  },
+  {
+   "text": "Giữa đường chạy, Mai để ý thấy một cụ ông chạy cùng nhịp với mình.",
+   "en": "Midway through the race, Mai noticed an old man running at the same pace as her.",
+   "ko": "달리던 중에 마이는 한 할아버지가 자기와 같은 속도로 달리는 걸 눈치챘어요.",
+   "blank": "để ý thấy",
+   "src": "made"
   }
  ],
  "w|đem": [
@@ -21469,6 +21597,22 @@
    "src": "made"
   }
  ],
+ "w|doanh số": [
+  {
+   "text": "Quý này doanh số của xưởng tăng mạnh, Tuấn được thưởng thêm.",
+   "en": "This quarter the factory's sales rose sharply, and Tuấn got an extra bonus.",
+   "ko": "이번 분기 공장 매출이 크게 늘어서 뚜언은 보너스를 더 받았어요.",
+   "blank": "doanh số",
+   "src": "made"
+  },
+  {
+   "text": "Nhãn hàng tài trợ giải chạy hy vọng doanh số đồ thể thao sẽ tăng, Mai nghe người dẫn chương trình nói vậy.",
+   "en": "The race sponsor hopes sales of sportswear will rise, Mai heard the announcer say.",
+   "ko": "마이는 후원 브랜드가 스포츠용품 매출이 늘기를 기대한다고 사회자가 말하는 걸 들었어요.",
+   "blank": "doanh số",
+   "src": "made"
+  }
+ ],
  "w|doanh thu": [
   {
    "text": "Nhờ món mới, doanh thu tháng này của nhà hàng tăng rõ rệt.",
@@ -21879,6 +22023,22 @@
    "blank": "đôi khi"
   }
  ],
+ "w|đối lập": [
+  {
+   "text": "Tuấn và quản đốc có quan điểm đối lập về việc tăng ca cuối tuần.",
+   "en": "Tuấn and the foreman hold opposing views on weekend overtime.",
+   "ko": "뚜언과 작업반장은 주말 잔업에 대해 생각이 정반대예요.",
+   "blank": "đối lập",
+   "src": "made"
+  },
+  {
+   "text": "Tính cách điềm tĩnh của Mai đối lập với cô bạn chạy cùng hay nóng vội.",
+   "en": "Mai's calm personality is the opposite of her impatient running partner's.",
+   "ko": "마이의 차분한 성격은 성급한 달리기 친구와 정반대예요.",
+   "blank": "đối lập",
+   "src": "made"
+  }
+ ],
  "w|đổi lịch": [
   {
    "text": "Tôi muốn đổi lịch hẹn sang thứ Sáu.",
@@ -22118,6 +22278,22 @@
    "en": "There's a police station near the new house, so Lan's mother feels reassured.",
    "ko": "새 집 근처에 경찰서가 있어서 란의 엄마는 안심해요.",
    "blank": "đồn cảnh sát",
+   "src": "made"
+  }
+ ],
+ "w|đơn đặt hàng": [
+  {
+   "text": "Cuối năm, Tuấn nhận một đơn đặt hàng lớn từ đối tác cũ.",
+   "en": "At year's end, Tuấn received a big order from an old partner.",
+   "ko": "연말에 뚜언은 오랜 거래처에서 큰 주문을 받았어요.",
+   "blank": "đơn đặt hàng",
+   "src": "made"
+  },
+  {
+   "text": "Cửa hàng nhận đơn đặt hàng áo đồng phục cho cả câu lạc bộ chạy của Mai.",
+   "en": "The shop took an order for uniform shirts for Mai's entire running club.",
+   "ko": "가게가 마이네 러닝 클럽 전체 유니폼 셔츠 주문을 받았어요.",
+   "blank": "đơn đặt hàng",
    "src": "made"
   }
  ],
@@ -22529,6 +22705,22 @@
    "en": "He trusts every teammate on the team.",
    "ko": "그는 팀의 모든 동료를 믿어.",
    "blank": "đồng đội"
+  }
+ ],
+ "w|đóng gói": [
+  {
+   "text": "Ca đêm, Tuấn cùng tổ đóng gói hàng để kịp xe sáng mai.",
+   "en": "On the night shift, Tuấn and his team pack goods to make tomorrow morning's truck.",
+   "ko": "야간 근무 때 뚜언은 내일 아침 차에 맞추려고 팀원들과 물건을 포장해요.",
+   "blank": "đóng gói",
+   "src": "made"
+  },
+  {
+   "text": "Mai đóng gói gel năng lượng vào túi đeo hông trước khi xuất phát.",
+   "en": "Mai packed energy gels into her hip pouch before the start.",
+   "ko": "마이는 출발 전에 에너지 젤을 허리 가방에 챙겨 넣었어요.",
+   "blank": "đóng gói",
+   "src": "made"
   }
  ],
  "w|đóng góp": [
@@ -23462,6 +23654,22 @@
    "en": "On the way up the mountain to see the ripe rice season, Ngọc stops at a small village.",
    "ko": "벼 익는 철을 보러 산에 오르던 길에 응옥은 작은 마을에 머물러요.",
    "blank": "dừng chân",
+   "src": "made"
+  }
+ ],
+ "w|dụng cụ": [
+  {
+   "text": "Tuấn luôn lau sạch dụng cụ trước khi cất vào tủ.",
+   "en": "Tuấn always wipes his tools clean before putting them in the cabinet.",
+   "ko": "뚜언은 공구를 보관함에 넣기 전에 늘 깨끗이 닦아요.",
+   "blank": "dụng cụ",
+   "src": "made"
+  },
+  {
+   "text": "Mai mang theo bộ dụng cụ sơ cứu nhỏ trong mỗi lần chạy dài.",
+   "en": "Mai carries a small first-aid kit on every long run.",
+   "ko": "마이는 장거리 달리기 때마다 작은 구급상자를 가지고 다녀요.",
+   "blank": "dụng cụ",
    "src": "made"
   }
  ],
@@ -25415,6 +25623,22 @@
    "blank": "giả"
   }
  ],
+ "w|giá bán": [
+  {
+   "text": "Ở xưởng may, Tuấn được giao tính giá bán mới cho lô áo khoác mùa đông.",
+   "en": "At the garment factory, Tuấn was assigned to work out the new selling price for the batch of winter jackets.",
+   "ko": "봉제 공장에서 뚜언은 겨울 재킷 물량의 새 판매가를 계산하는 일을 맡았어요.",
+   "blank": "giá bán",
+   "src": "made"
+  },
+  {
+   "text": "Trước giải chạy, Mai so sánh giá bán của mấy đôi giày chạy bộ trên mạng.",
+   "en": "Before the race, Mai compared the selling prices of several pairs of running shoes online.",
+   "ko": "대회 전에 마이는 인터넷에서 러닝화 몇 켤레의 판매가를 비교했어요.",
+   "blank": "giá bán",
+   "src": "made"
+  }
+ ],
  "w|giá buốt": [
   {
    "text": "Gió biển mùa đông giá buốt, nhưng Đức vẫn ra khơi từ lúc trời chưa sáng.",
@@ -26310,6 +26534,22 @@
    "en": "Every spring, Thảo's school arranges an exchange with a school in the highlands.",
    "ko": "봄마다 타오의 학교는 고산 지대 학교와 학생 교류를 해요.",
    "blank": "giao lưu",
+   "src": "made"
+  }
+ ],
+ "w|giao nhận": [
+  {
+   "text": "Tuấn gọi điện cho bên giao nhận hỏi vì sao lô hàng bị chậm.",
+   "en": "Tuấn called the forwarding company to ask why the shipment was late.",
+   "ko": "뚜언은 물류 업체에 전화해서 화물이 왜 늦었는지 물었어요.",
+   "blank": "giao nhận",
+   "src": "made"
+  },
+  {
+   "text": "Mai gửi đồ qua dịch vụ giao nhận để lấy lại ở vạch đích.",
+   "en": "Mai sent her bag through the courier service to pick up at the finish line.",
+   "ko": "마이는 결승선에서 찾으려고 짐 배송 서비스로 가방을 보냈어요.",
+   "blank": "giao nhận",
    "src": "made"
   }
  ],
@@ -28549,6 +28789,22 @@
    "src": "made"
   }
  ],
+ "w|hàng tồn kho": [
+  {
+   "text": "Tuấn lo vì hàng tồn kho cuối năm nhiều hơn dự kiến.",
+   "en": "Tuấn is worried because year-end inventory is higher than expected.",
+   "ko": "연말 재고가 예상보다 많아서 뚜언은 걱정이에요.",
+   "blank": "hàng tồn kho",
+   "src": "made"
+  },
+  {
+   "text": "Cửa hàng thể thao xả hàng tồn kho sau giải, Mai mua được áo rẻ.",
+   "en": "The sports shop cleared out its inventory after the race, and Mai got a cheap shirt.",
+   "ko": "대회가 끝나고 스포츠 매장이 재고를 떨이로 팔아서 마이는 셔츠를 싸게 샀어요.",
+   "blank": "hàng tồn kho",
+   "src": "made"
+  }
+ ],
  "w|hàng tuần": [
   {
    "text": "Họ họp nhóm hàng tuần vào thứ hai.",
@@ -28958,6 +29214,22 @@
    "en": "Lan got up at three in the morning so as to be at the starting line on time.",
    "ko": "란은 출발선에 제때 도착하려고 새벽 세 시에 일어났어요.",
    "blank": "hầu",
+   "src": "made"
+  }
+ ],
+ "w|hậu cần": [
+  {
+   "text": "Tuấn chuyển sang phòng hậu cần sau năm năm đứng máy.",
+   "en": "Tuấn moved to the logistics department after five years on the machines.",
+   "ko": "뚜언은 오 년 동안 기계를 돌리다가 물류 부서로 옮겼어요.",
+   "blank": "hậu cần",
+   "src": "made"
+  },
+  {
+   "text": "Đội hậu cần của giải đã dựng trạm nước cách nhau năm cây số, Mai rất yên tâm.",
+   "en": "The race logistics team set up water stations every five kilometers, which reassured Mai.",
+   "ko": "대회 지원팀이 오 킬로미터마다 급수대를 세워서 마이는 마음이 놓였어요.",
+   "blank": "hậu cần",
    "src": "made"
   }
  ],
@@ -33689,6 +33961,22 @@
    "src": "made"
   }
  ],
+ "w|kho hàng": [
+  {
+   "text": "Mưa dột làm ướt mấy thùng giấy, Tuấn phải gọi thợ sửa mái kho hàng ngay.",
+   "en": "Leaks soaked some cardboard boxes, so Tuấn had to call someone to fix the warehouse roof right away.",
+   "ko": "비가 새서 상자 몇 개가 젖자 뚜언은 바로 창고 지붕을 고칠 사람을 불렀어요.",
+   "blank": "kho hàng",
+   "src": "made"
+  },
+  {
+   "text": "Mai làm tình nguyện viên, phát nước từ kho hàng của ban tổ chức.",
+   "en": "Mai volunteered, handing out water from the organizers' warehouse.",
+   "ko": "마이는 자원봉사자로 조직위 창고에서 물을 꺼내 나눠 줬어요.",
+   "blank": "kho hàng",
+   "src": "made"
+  }
+ ],
  "w|khô hanh": [
   {
    "text": "Thời tiết khô hanh nên Đức phải dặn cả nhóm cẩn thận với lửa trại.",
@@ -34963,6 +35251,22 @@
    "src": "made"
   }
  ],
+ "w|kiểm kê": [
+  {
+   "text": "Cuối tháng, Tuấn ở lại muộn kiểm kê từng kệ hàng.",
+   "en": "At the end of the month, Tuấn stays late to take stock of every shelf.",
+   "ko": "월말에 뚜언은 늦게까지 남아 선반마다 재고를 조사해요.",
+   "blank": "kiểm kê",
+   "src": "made"
+  },
+  {
+   "text": "Sau giải, Mai cùng tình nguyện viên kiểm kê số huy chương còn lại.",
+   "en": "After the race, Mai and the volunteers counted up the remaining medals.",
+   "ko": "대회가 끝나고 마이는 자원봉사자들과 남은 메달 수를 점검했어요.",
+   "blank": "kiểm kê",
+   "src": "made"
+  }
+ ],
  "w|kiểm soát": [
   {
    "text": "Bạn không thể kiểm soát tôi.",
@@ -35414,6 +35718,38 @@
    "en": "In her letter, Hương recalls the days the two of them went to the river and scrubbed each other's backs.",
    "ko": "흐엉은 편지에서 둘이 강에 가서 서로 등을 밀어 주던 날들을 떠올려요.",
    "blank": "kỳ",
+   "src": "made"
+  }
+ ],
+ "w|kỹ": [
+  {
+   "text": "Tuấn đọc kỹ bản hợp đồng trước khi chuyển cho giám đốc ký.",
+   "en": "Tuấn read the contract carefully before passing it to the director to sign.",
+   "ko": "뚜언은 사장에게 서명받기 전에 계약서를 꼼꼼히 읽었어요.",
+   "blank": "kỹ",
+   "src": "made"
+  },
+  {
+   "text": "Trước giải, Mai buộc kỹ dây giày để khỏi bị tuột giữa đường.",
+   "en": "Before the race, Mai tied her shoelaces tightly so they wouldn't come undone mid-course.",
+   "ko": "대회 전에 마이는 도중에 풀리지 않게 신발 끈을 단단히 묶었어요.",
+   "blank": "kỹ",
+   "src": "made"
+  }
+ ],
+ "w|kỹ càng": [
+  {
+   "text": "Tuấn kiểm tra kỹ càng từng sản phẩm trước khi xuất xưởng.",
+   "en": "Tuấn thoroughly inspects each product before it leaves the factory.",
+   "ko": "뚜언은 공장을 나가기 전에 제품을 하나하나 꼼꼼하게 점검해요.",
+   "blank": "kỹ càng",
+   "src": "made"
+  },
+  {
+   "text": "Mai chuẩn bị kỹ càng cho giải chạy đầu tiên của mình.",
+   "en": "Mai prepared thoroughly for her first race.",
+   "ko": "마이는 첫 대회를 꼼꼼하게 준비했어요.",
+   "blank": "kỹ càng",
    "src": "made"
   }
  ],
@@ -36819,6 +37155,22 @@
    "src": "made"
   }
  ],
+ "w|lắp ráp": [
+  {
+   "text": "Tuấn hướng dẫn công nhân mới cách lắp ráp bảng mạch.",
+   "en": "Tuấn shows new workers how to assemble the circuit boards.",
+   "ko": "뚜언은 신입 직원들에게 회로 기판 조립하는 법을 알려 줘요.",
+   "blank": "lắp ráp",
+   "src": "made"
+  },
+  {
+   "text": "Đêm trước giải, Mai lắp ráp chiếc giá để bình nước cho xe đạp hỗ trợ.",
+   "en": "The night before the race, Mai assembled the water bottle holder for the support bike.",
+   "ko": "대회 전날 밤 마이는 지원 자전거에 물병 거치대를 조립했어요.",
+   "blank": "lắp ráp",
+   "src": "made"
+  }
+ ],
  "w|lập tức": [
   {
    "text": "Gọi mình lập tức nếu cần giúp.",
@@ -37505,6 +37857,38 @@
    "ko": "톰이 메리에게 일정을 설명했어요.",
    "blank": "lịch trình",
    "src": "tatoeba:13791101/daroth2504 en:1094151/CK"
+  }
+ ],
+ "w|liếc": [
+  {
+   "text": "Tuấn liếc đồng hồ, chỉ còn năm phút nữa là hết ca.",
+   "en": "Tuấn glanced at the clock; only five minutes left until the end of the shift.",
+   "ko": "뚜언이 시계를 힐끗 보니 교대까지 오 분밖에 안 남았어요.",
+   "blank": "liếc",
+   "src": "made"
+  },
+  {
+   "text": "Mai liếc đồng hồ thể thao để xem nhịp tim.",
+   "en": "Mai glanced at her sports watch to check her heart rate.",
+   "ko": "마이는 심박수를 보려고 스포츠 시계를 힐끗 봤어요.",
+   "blank": "liếc",
+   "src": "made"
+  }
+ ],
+ "w|liếc nhìn": [
+  {
+   "text": "Tuấn liếc nhìn bảng tiến độ rồi gật đầu hài lòng.",
+   "en": "Tuấn glanced at the progress board and nodded with satisfaction.",
+   "ko": "뚜언은 진행 현황판을 힐끗 보고 만족스럽게 고개를 끄덕였어요.",
+   "blank": "liếc nhìn",
+   "src": "made"
+  },
+  {
+   "text": "Mai liếc nhìn người chạy bên cạnh rồi tăng tốc vượt lên.",
+   "en": "Mai glanced at the runner beside her and then sped up to pass.",
+   "ko": "마이는 옆 주자를 힐끗 보더니 속도를 올려 앞질렀어요.",
+   "blank": "liếc nhìn",
+   "src": "made"
   }
  ],
  "w|liếm": [
@@ -38390,6 +38774,22 @@
    "en": "Ngọc worried that the dress she planned to wear to the wedding was out of fashion.",
    "ko": "응옥은 결혼식에 입으려던 원피스가 유행이 지났을까 봐 걱정했어요.",
    "blank": "lỗi mốt",
+   "src": "made"
+  }
+ ],
+ "w|lời nhắc": [
+  {
+   "text": "Tuấn dán lời nhắc đeo kính bảo hộ ở cửa xưởng.",
+   "en": "Tuấn put up a reminder to wear safety goggles at the workshop door.",
+   "ko": "뚜언은 작업장 문에 보안경을 쓰라는 알림을 붙였어요.",
+   "blank": "lời nhắc",
+   "src": "made"
+  },
+  {
+   "text": "Điện thoại hiện lời nhắc uống nước khi Mai chạy được nửa đường.",
+   "en": "Mai's phone showed a reminder to drink water when she was halfway through.",
+   "ko": "마이가 반쯤 달렸을 때 휴대폰에 물 마시라는 알림이 떴어요.",
+   "blank": "lời nhắc",
    "src": "made"
   }
  ],
@@ -40807,6 +41207,22 @@
    "ko": "하늘의 진짜 색은 뭐예요?",
    "blank": "Màu sắc",
    "src": "tatoeba:11311573/chaule3 en:11311569/chaule3"
+  }
+ ],
+ "w|mâu thuẫn": [
+  {
+   "text": "Hai báo cáo về số hàng hỏng có số liệu mâu thuẫn, Tuấn phải đếm lại.",
+   "en": "The two reports on defective goods had contradictory figures, so Tuấn had to recount.",
+   "ko": "불량품에 관한 두 보고서 수치가 서로 맞지 않아서 뚜언은 다시 세야 했어요.",
+   "blank": "mâu thuẫn",
+   "src": "made"
+  },
+  {
+   "text": "Mai có cảm xúc mâu thuẫn: vừa muốn dừng lại, vừa muốn về đích thật nhanh.",
+   "en": "Mai had mixed feelings: she wanted to stop and also wanted to reach the finish as fast as possible.",
+   "ko": "마이는 멈추고 싶기도 하고 빨리 결승선에 닿고 싶기도 한 엇갈린 감정이 들었어요.",
+   "blank": "mâu thuẫn",
+   "src": "made"
   }
  ],
  "w|màu trắng": [
@@ -47373,6 +47789,22 @@
    "src": "made"
   }
  ],
+ "w|nguyên liệu": [
+  {
+   "text": "Tuấn kiểm tra nguyên liệu từng lô trước khi đưa vào sản xuất.",
+   "en": "Tuấn checks the raw materials of each batch before they go into production.",
+   "ko": "뚜언은 생산에 들어가기 전에 원료를 한 로트씩 확인해요.",
+   "blank": "nguyên liệu",
+   "src": "made"
+  },
+  {
+   "text": "Mai tự làm thanh năng lượng từ nguyên liệu đơn giản như yến mạch và mật ong.",
+   "en": "Mai makes her own energy bars from simple ingredients like oats and honey.",
+   "ko": "마이는 귀리와 꿀 같은 간단한 재료로 에너지 바를 직접 만들어요.",
+   "blank": "nguyên liệu",
+   "src": "made"
+  }
+ ],
  "w|nguyên nhân": [
   {
    "text": "Họ tìm nguyên nhân của sự cố mất điện.",
@@ -48463,6 +48895,22 @@
    "src": "made"
   }
  ],
+ "w|nhận thấy": [
+  {
+   "text": "Tuấn nhận thấy công nhân hay mệt vào giữa ca chiều.",
+   "en": "Tuấn noticed that workers often get tired in the middle of the afternoon shift.",
+   "ko": "뚜언은 직원들이 오후 근무 중반에 자주 지친다는 걸 알아챘어요.",
+   "blank": "nhận thấy",
+   "src": "made"
+  },
+  {
+   "text": "Mai nhận thấy mình chạy nhanh hơn hẳn từ khi tập đều đặn buổi sáng.",
+   "en": "Mai noticed she runs much faster since training regularly in the mornings.",
+   "ko": "마이는 아침마다 꾸준히 연습한 뒤로 훨씬 빨라졌다는 걸 느꼈어요.",
+   "blank": "nhận thấy",
+   "src": "made"
+  }
+ ],
  "w|nhắn tin": [
   {
    "text": "Tối nay nhắn tin cho mình nhé.",
@@ -48644,6 +49092,22 @@
    "en": "Ngọc's mother said imported grapes are too expensive, so they bought oranges from her uncle's garden.",
    "ko": "응옥의 엄마는 수입 포도가 너무 비싸서 큰아버지 밭의 귤을 사자고 했어요.",
    "blank": "nhập khẩu",
+   "src": "made"
+  }
+ ],
+ "w|nhập kho": [
+  {
+   "text": "Sáng nay Tuấn ký giấy nhập kho cho ba xe nguyên liệu vải.",
+   "en": "This morning Tuấn signed the receiving slip for three trucks of fabric.",
+   "ko": "오늘 아침 뚜언은 원단 세 트럭분의 입고 서류에 서명했어요.",
+   "blank": "nhập kho",
+   "src": "made"
+  },
+  {
+   "text": "Mai giúp ban tổ chức nhập kho mấy nghìn chai nước trước ngày đua.",
+   "en": "Mai helped the organizers put thousands of bottles of water into storage before race day.",
+   "ko": "마이는 대회 전날 조직위가 물 수천 병을 창고에 들이는 걸 도왔어요.",
+   "blank": "nhập kho",
    "src": "made"
   }
  ],
@@ -49259,6 +49723,22 @@
    "en": "Come look, a rainbow.",
    "ko": "나와 봐, 무지개야.",
    "blank": "nhìn"
+  }
+ ],
+ "w|nhìn chằm chằm": [
+  {
+   "text": "Tuấn nhìn chằm chằm vào màn hình, cố tìm lỗi trong bảng số liệu.",
+   "en": "Tuấn stared at the screen, trying to find the error in the spreadsheet.",
+   "ko": "뚜언은 화면을 뚫어지게 보며 수치표의 오류를 찾으려 했어요.",
+   "blank": "nhìn chằm chằm",
+   "src": "made"
+  },
+  {
+   "text": "Mấy đứa trẻ bên đường nhìn chằm chằm vào bộ trang phục siêu nhân của Mai.",
+   "en": "The kids by the road stared at Mai's superhero costume.",
+   "ko": "길가 아이들이 마이의 슈퍼히어로 복장을 빤히 쳐다봤어요.",
+   "blank": "nhìn chằm chằm",
+   "src": "made"
   }
  ],
  "w|nhìn thấy": [
@@ -54793,6 +55273,22 @@
    "blank": "Quân nhân"
   }
  ],
+ "w|quan sát": [
+  {
+   "text": "Trước khi sửa máy, Tuấn quan sát cách nó chạy suốt mười phút.",
+   "en": "Before fixing the machine, Tuấn observed how it ran for ten minutes.",
+   "ko": "기계를 고치기 전에 뚜언은 십 분 동안 돌아가는 모습을 관찰했어요.",
+   "blank": "quan sát",
+   "src": "made"
+  },
+  {
+   "text": "Mai quan sát những người chạy giỏi để học cách giữ nhịp thở.",
+   "en": "Mai watches good runners to learn how to keep her breathing steady.",
+   "ko": "마이는 잘 달리는 사람들을 관찰하며 호흡 리듬 지키는 법을 배워요.",
+   "blank": "quan sát",
+   "src": "made"
+  }
+ ],
  "w|quần short": [
   {
    "text": "Nam mặc quần short đi rừng nên bị cỏ cứa xước hết chân.",
@@ -55832,6 +56328,22 @@
    "en": "Thanks to her determination, Linh finally passed her driving test.",
    "ko": "결심한 덕분에 린은 마침내 운전면허 시험에 붙었어요.",
    "blank": "quyết tâm",
+   "src": "made"
+  }
+ ],
+ "w|quyết toán": [
+  {
+   "text": "Tuấn thức khuya quyết toán chi phí của cả dự án.",
+   "en": "Tuấn stayed up late settling the costs of the whole project.",
+   "ko": "뚜언은 밤늦게까지 프로젝트 전체 비용을 결산했어요.",
+   "blank": "quyết toán",
+   "src": "made"
+  },
+  {
+   "text": "Trưởng câu lạc bộ nhờ Mai quyết toán tiền quỹ sau chuyến đi giải.",
+   "en": "The club leader asked Mai to settle the club's funds after the race trip.",
+   "ko": "클럽 회장은 대회 원정이 끝나고 마이에게 회비 결산을 부탁했어요.",
+   "blank": "quyết toán",
    "src": "made"
   }
  ],
@@ -59077,6 +59589,22 @@
    "ko": "운명에서 벗어나기는 어려워요.",
    "blank": "số phận",
    "src": "tatoeba:6275258/moriole en:2148868/AlanF_US"
+  }
+ ],
+ "w|sơ qua": [
+  {
+   "text": "Tuấn giới thiệu sơ qua quy trình cho đoàn khách tham quan nhà máy.",
+   "en": "Tuấn gave a brief overview of the process to the group visiting the factory.",
+   "ko": "뚜언은 공장 견학 온 손님들에게 공정을 간단히 소개했어요.",
+   "blank": "sơ qua",
+   "src": "made"
+  },
+  {
+   "text": "Trước giải, Mai xem sơ qua bản đồ đường chạy.",
+   "en": "Before the race, Mai took a quick look at the course map.",
+   "ko": "대회 전에 마이는 코스 지도를 대충 훑어봤어요.",
+   "blank": "sơ qua",
+   "src": "made"
   }
  ],
  "w|sơ sài": [
@@ -68865,6 +69393,22 @@
    "src": "made"
   }
  ],
+ "w|toàn thời gian": [
+  {
+   "text": "Sau ba tháng thử việc, Tuấn được ký hợp đồng toàn thời gian.",
+   "en": "After a three-month probation, Tuấn got a full-time contract.",
+   "ko": "석 달 수습을 마치고 뚜언은 정규직 계약을 맺었어요.",
+   "blank": "toàn thời gian",
+   "src": "made"
+  },
+  {
+   "text": "Mai làm nhân viên toàn thời gian nhưng vẫn dậy lúc bốn giờ để chạy.",
+   "en": "Mai is a full-time employee but still gets up at four to run.",
+   "ko": "마이는 정규직 직원이지만 그래도 새벽 네 시에 일어나 달려요.",
+   "blank": "toàn thời gian",
+   "src": "made"
+  }
+ ],
  "w|toàn vẹn": [
   {
    "text": "Phong yêu cầu đăng toàn vẹn bức thư của bạn đọc, không cắt câu nào.",
@@ -69796,6 +70340,22 @@
    "en": "Regular guests don't mind the small room; on the contrary, they praise Linh's attentive service.",
    "ko": "단골손님들은 방이 작아도 개의치 않고, 오히려 린의 세심한 서비스를 칭찬해요.",
    "blank": "trái lại",
+   "src": "made"
+  }
+ ],
+ "w|trái ngược": [
+  {
+   "text": "Hai ca trực có cách làm trái ngược nhau, Tuấn phải đứng ra thống nhất.",
+   "en": "The two shifts work in opposite ways, so Tuấn had to step in and unify them.",
+   "ko": "두 근무조의 방식이 정반대여서 뚜언이 나서서 하나로 맞춰야 했어요.",
+   "blank": "trái ngược",
+   "src": "made"
+  },
+  {
+   "text": "Lời khuyên của hai huấn luyện viên trái ngược nhau khiến Mai bối rối.",
+   "en": "The two coaches' advice was contradictory, which confused Mai.",
+   "ko": "두 코치의 조언이 정반대라 마이는 헷갈렸어요.",
+   "blank": "trái ngược",
    "src": "made"
   }
  ],
@@ -72981,6 +73541,22 @@
    "src": "made"
   }
  ],
+ "w|tương phản": [
+  {
+   "text": "Xưởng cũ tối tăm tương phản hẳn với khu văn phòng sáng sủa nơi Tuấn ngồi.",
+   "en": "The dim old workshop is in stark contrast to the bright office area where Tuấn sits.",
+   "ko": "어두운 옛 작업장은 뚜언이 앉는 밝은 사무실과 확연히 대비돼요.",
+   "blank": "tương phản",
+   "src": "made"
+  },
+  {
+   "text": "Áo vàng của Mai tương phản với nền đường nhựa đen trong ảnh chụp.",
+   "en": "Mai's yellow shirt stood out against the black asphalt in the photo.",
+   "ko": "사진에서 마이의 노란 셔츠가 검은 아스팔트와 선명하게 대비됐어요.",
+   "blank": "tương phản",
+   "src": "made"
+  }
+ ],
  "w|tương tự": [
   {
    "text": "Phong nhận ra hai bài báo có lập luận tương tự nhau đến lạ.",
@@ -73102,6 +73678,22 @@
    "en": "The flight was three hours late; even so, Hương still made it to the wedding.",
    "ko": "비행기가 세 시간 늦었지만 그래도 흐엉은 결혼식에 늦지 않았어요.",
    "blank": "tuy thế",
+   "src": "made"
+  }
+ ],
+ "w|tùy theo": [
+  {
+   "text": "Lương của Tuấn thay đổi tùy theo số giờ tăng ca mỗi tháng.",
+   "en": "Tuấn's pay varies according to the overtime hours each month.",
+   "ko": "뚜언의 월급은 매달 잔업 시간에 따라 달라져요.",
+   "blank": "tùy theo",
+   "src": "made"
+  },
+  {
+   "text": "Huấn luyện viên chia nhóm cho Mai tùy theo tốc độ chạy của từng người.",
+   "en": "The coach divided Mai's group according to each person's running pace.",
+   "ko": "코치는 사람마다 달리는 속도에 따라 마이네 조를 나눴어요.",
+   "blank": "tùy theo",
    "src": "made"
   }
  ],
@@ -74237,6 +74829,22 @@
    "src": "made"
   }
  ],
+ "w|vận chuyển": [
+  {
+   "text": "Chi phí vận chuyển tăng khiến Tuấn phải tìm đối tác chở hàng khác.",
+   "en": "Rising transport costs forced Tuấn to look for another shipping partner.",
+   "ko": "운송비가 올라서 뚜언은 다른 운송 업체를 찾아야 했어요.",
+   "blank": "vận chuyển",
+   "src": "made"
+  },
+  {
+   "text": "Ban tổ chức lo việc vận chuyển vận động viên từ khách sạn đến vạch xuất phát, Mai đỡ lo.",
+   "en": "The organizers handle transportation of runners from the hotel to the starting line, so Mai has less to worry about.",
+   "ko": "조직위가 호텔에서 출발선까지 선수 수송을 맡아서 마이는 걱정을 덜었어요.",
+   "blank": "vận chuyển",
+   "src": "made"
+  }
+ ],
  "w|vẫn còn": [
   {
    "text": "Cơm vẫn còn nóng trên bàn.",
@@ -74550,6 +75158,22 @@
    "en": "Linh doesn't mind petty things like customers haggling over a few thousand đồng.",
    "ko": "린은 손님이 몇천 동 깎는 것 같은 사소한 일은 신경 쓰지 않아요.",
    "blank": "vặt",
+   "src": "made"
+  }
+ ],
+ "w|vật liệu": [
+  {
+   "text": "Giá vật liệu xây dựng tăng nên xưởng của Tuấn hoãn việc mở rộng.",
+   "en": "Building material prices rose, so Tuấn's factory postponed its expansion.",
+   "ko": "건축 자재값이 올라서 뚜언의 공장은 확장을 미뤘어요.",
+   "blank": "vật liệu",
+   "src": "made"
+  },
+  {
+   "text": "Mai chọn áo làm từ vật liệu thoáng khí để không bị nóng khi chạy.",
+   "en": "Mai chose a shirt made of breathable material so she wouldn't overheat while running.",
+   "ko": "마이는 달릴 때 덥지 않게 통기성 좋은 소재로 된 셔츠를 골랐어요.",
+   "blank": "vật liệu",
    "src": "made"
   }
  ],
@@ -77848,6 +78472,22 @@
    "en": "Ngọc's father works at a cashew export company and rarely gets long breaks.",
    "ko": "응옥의 아빠는 캐슈너트 수출 회사에서 일해서 긴 휴가가 드물어요.",
    "blank": "xuất khẩu",
+   "src": "made"
+  }
+ ],
+ "w|xuất kho": [
+  {
+   "text": "Trước Tết, ngày nào Tuấn cũng phải xuất kho cả chục pallet bánh kẹo.",
+   "en": "Before Tet, Tuấn has to dispatch dozens of pallets of sweets from the warehouse every day.",
+   "ko": "설 전에는 뚜언이 매일 과자 수십 팔레트를 출고해야 해요.",
+   "blank": "xuất kho",
+   "src": "made"
+  },
+  {
+   "text": "Sáng sớm, nhóm của Mai xuất kho áo mưa phát cho người chạy vì trời có mây đen.",
+   "en": "Early in the morning, Mai's group took raincoats out of storage to hand to runners because of dark clouds.",
+   "ko": "이른 아침 먹구름이 끼자 마이네 팀은 창고에서 우비를 꺼내 주자들에게 나눠 줬어요.",
+   "blank": "xuất kho",
    "src": "made"
   }
  ],

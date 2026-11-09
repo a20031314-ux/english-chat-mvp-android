@@ -1795,6 +1795,22 @@
    "blank": "affitto"
   }
  ],
+ "w|affliggere": [
+  {
+   "text": "Dopo otto ore alla scrivania, il solito mal di schiena affligge Marco.",
+   "en": "After eight hours at his desk, the usual backache troubles Marco.",
+   "ko": "책상에 여덟 시간 앉아 있고 나면 마르코는 늘 그렇듯 허리가 아파요.",
+   "blank": "affligge",
+   "src": "made"
+  },
+  {
+   "text": "Dopo ogni viaggio lungo il jet lag affligge Giulia per giorni.",
+   "en": "After every long trip jet lag plagues Giulia for days.",
+   "ko": "긴 여행을 하고 나면 줄리아는 며칠씩 시차 때문에 힘들어해요.",
+   "blank": "affligge",
+   "src": "made"
+  }
+ ],
  "w|affogare": [
   {
    "text": "Simone ha annaffiato troppo e rischia di affogare le piante del balcone.",
@@ -5439,6 +5455,22 @@
    "en": "They fear a cardiac arrest.",
    "ko": "그들은 심정지를 두려워해.",
    "blank": "arresto"
+  }
+ ],
+ "w|arretrare": [
+  {
+   "text": "Durante la trattativa Marco non vuole arretrare sulla sua proposta.",
+   "en": "During the negotiation Marco doesn't want to back down on his proposal.",
+   "ko": "마르코는 협상 중에 자기 제안에서 물러서고 싶지 않아요.",
+   "blank": "arretrare",
+   "src": "made"
+  },
+  {
+   "text": "L'agente chiede a Giulia di arretrare dietro la linea gialla.",
+   "en": "The officer asks Giulia to step back behind the yellow line.",
+   "ko": "직원이 줄리아에게 노란 선 뒤로 물러서 달라고 해요.",
+   "blank": "arretrare",
+   "src": "made"
   }
  ],
  "w|arrivare": [
@@ -9389,6 +9421,22 @@
    "en": "The library closes at eight.",
    "ko": "도서관은 여덟 시에 닫아.",
    "blank": "biblioteca"
+  }
+ ],
+ "w|bibliotecario": [
+  {
+   "text": "Marco chiede al bibliotecario dell'azienda un vecchio manuale tecnico.",
+   "en": "Marco asks the company librarian for an old technical manual.",
+   "ko": "마르코는 회사 사서에게 오래된 기술 설명서를 부탁해요.",
+   "blank": "bibliotecario",
+   "src": "made"
+  },
+  {
+   "text": "Accanto a Giulia in aereo siede un bibliotecario che legge per tutto il volo.",
+   "en": "Next to Giulia on the plane sits a librarian who reads for the whole flight.",
+   "ko": "비행기에서 줄리아 옆자리에 앉은 사서는 비행 내내 책을 읽어요.",
+   "blank": "bibliotecario",
+   "src": "made"
   }
  ],
  "w|bicchiere": [
@@ -14963,6 +15011,22 @@
    "blank": "cliente"
   }
  ],
+ "w|clientela": [
+  {
+   "text": "La clientela di Marco è composta soprattutto da piccole imprese.",
+   "en": "Marco's clientele is made up mostly of small businesses.",
+   "ko": "마르코의 고객은 주로 작은 회사들이에요.",
+   "blank": "clientela",
+   "src": "made"
+  },
+  {
+   "text": "Il duty free dell'aeroporto ha una clientela molto internazionale, nota Giulia.",
+   "en": "The airport duty free has a very international clientele, Giulia notices.",
+   "ko": "공항 면세점 손님들은 정말 국적이 다양하다고 줄리아는 느껴요.",
+   "blank": "clientela",
+   "src": "made"
+  }
+ ],
  "w|clima": [
   {
    "text": "Secondo Paolo il clima della valle è più mite di quello della città.",
@@ -16440,6 +16504,22 @@
    "en": "To make up for the calories she burned, Sara eats a huge plate of pasta.",
    "ko": "사라는 태운 칼로리를 보충하려고 파스타를 한가득 먹어요.",
    "blank": "compensare",
+   "src": "made"
+  }
+ ],
+ "w|competente": [
+  {
+   "text": "Per il nuovo progetto Marco cerca un collega competente e disponibile.",
+   "en": "For the new project Marco is looking for a competent and willing colleague.",
+   "ko": "마르코는 새 프로젝트를 함께할 유능하고 협조적인 동료를 찾고 있어요.",
+   "blank": "competente",
+   "src": "made"
+  },
+  {
+   "text": "Il personale del banco informazioni è competente e aiuta Giulia in un attimo.",
+   "en": "The staff at the information desk are competent and help Giulia in no time.",
+   "ko": "안내 데스크 직원들이 능숙해서 줄리아를 금방 도와줘요.",
+   "blank": "competente",
    "src": "made"
   }
  ],
@@ -18748,6 +18828,22 @@
    "en": "Francesca has a bruise on her arm after moving an old wardrobe.",
    "ko": "프란체스카는 낡은 옷장을 옮기다가 팔에 멍이 들었어요.",
    "blank": "contusione",
+   "src": "made"
+  }
+ ],
+ "w|convegno": [
+  {
+   "text": "Il mese prossimo Marco parlerà a un convegno sul lavoro da remoto.",
+   "en": "Next month Marco will speak at a conference on remote work.",
+   "ko": "마르코는 다음 달 재택근무에 관한 학회에서 발표해요.",
+   "blank": "convegno",
+   "src": "made"
+  },
+  {
+   "text": "Giulia vola a Lisbona per un convegno di medicina.",
+   "en": "Giulia is flying to Lisbon for a medical conference.",
+   "ko": "줄리아는 의학 학회에 가려고 리스본행 비행기를 타요.",
+   "blank": "convegno",
    "src": "made"
   }
  ],
@@ -22059,6 +22155,22 @@
    "src": "made"
   }
  ],
+ "w|depositare": [
+  {
+   "text": "Entro stasera Marco deve depositare i documenti firmati in segreteria.",
+   "en": "By this evening Marco has to drop off the signed documents at the office.",
+   "ko": "마르코는 오늘 저녁까지 서명한 서류를 사무실에 맡겨야 해요.",
+   "blank": "depositare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia va a depositare il bagaglio al banco del check-in.",
+   "en": "Giulia goes to drop off her luggage at the check-in desk.",
+   "ko": "줄리아는 체크인 카운터에 짐을 맡기러 가요.",
+   "blank": "depositare",
+   "src": "made"
+  }
+ ],
  "w|deposito": [
   {
    "text": "Il deposito dei bagagli è vicino all'ingresso.",
@@ -24927,6 +25039,22 @@
    "blank": "doccia"
   }
  ],
+ "w|docente": [
+  {
+   "text": "Un docente universitario tiene un corso di formazione per Marco e i colleghi.",
+   "en": "A university lecturer runs a training course for Marco and his colleagues.",
+   "ko": "대학 교수가 마르코와 동료들을 위해 연수 강좌를 열어요.",
+   "blank": "docente",
+   "src": "made"
+  },
+  {
+   "text": "In fila al gate Giulia riconosce una sua vecchia docente dell'università.",
+   "en": "In the queue at the gate Giulia recognises one of her old university lecturers.",
+   "ko": "줄리아는 게이트 줄에서 대학 시절 교수님을 알아봐요.",
+   "blank": "docente",
+   "src": "made"
+  }
+ ],
  "w|documentario": [
   {
    "text": "A scienze la classe di Davide ha visto un documentario sulle balene.",
@@ -25302,6 +25430,22 @@
    "en": "With every purchase, the department store makes a small donation to a children's hospital.",
    "ko": "구매할 때마다 백화점이 어린이 병원에 작은 기부를 해요.",
    "blank": "donazione",
+   "src": "made"
+  }
+ ],
+ "w|dondolare": [
+  {
+   "text": "Mentre pensa, Marco si dondola sulla sedia.",
+   "en": "While he thinks, Marco rocks back on his chair.",
+   "ko": "마르코는 생각할 때 의자를 앞뒤로 흔들어요.",
+   "blank": "dondola",
+   "src": "made"
+  },
+  {
+   "text": "Il bambino seduto davanti a Giulia continua a dondolare le gambe.",
+   "en": "The child sitting in front of Giulia keeps swinging his legs.",
+   "ko": "줄리아 앞에 앉은 아이가 계속 다리를 흔들어요.",
+   "blank": "dondolare",
    "src": "made"
   }
  ],
@@ -26332,6 +26476,22 @@
    "en": "The organisation is efficient, and Giulia picks up her bag in a few minutes.",
    "ko": "운영이 효율적이라 줄리아는 몇 분 만에 가방을 찾아요.",
    "blank": "efficiente",
+   "src": "made"
+  }
+ ],
+ "w|efficienza": [
+  {
+   "text": "Nelle riunioni del lunedì il capo di Marco parla sempre di efficienza.",
+   "en": "In the Monday meetings Marco's boss always talks about efficiency.",
+   "ko": "월요일 회의마다 마르코의 상사는 늘 효율 이야기를 해요.",
+   "blank": "efficienza",
+   "src": "made"
+  },
+  {
+   "text": "Giulia è colpita dall'efficienza dei controlli di sicurezza.",
+   "en": "Giulia is impressed by the efficiency of the security checks.",
+   "ko": "줄리아는 보안 검색이 빠르고 효율적이라 놀라요.",
+   "blank": "efficienza",
    "src": "made"
   }
  ],
@@ -28769,6 +28929,22 @@
    "blank": "fabbrica"
   }
  ],
+ "w|fabbricare": [
+  {
+   "text": "L'azienda di Marco ha cominciato a fabbricare pezzi per biciclette elettriche.",
+   "en": "Marco's company has started making parts for electric bikes.",
+   "ko": "마르코의 회사는 전기 자전거 부품을 만들기 시작했어요.",
+   "blank": "fabbricare",
+   "src": "made"
+  },
+  {
+   "text": "Sulla rivista di bordo Giulia legge che servono anni per fabbricare un aereo di linea.",
+   "en": "In the in-flight magazine Giulia reads that it takes years to build an airliner.",
+   "ko": "줄리아는 기내지에서 여객기 한 대를 만드는 데 몇 년이 걸린다는 글을 읽어요.",
+   "blank": "fabbricare",
+   "src": "made"
+  }
+ ],
  "w|fabbro": [
   {
    "text": "Il fabbro del quartiere ha riparato la griglia della cucina di Marco.",
@@ -29247,6 +29423,22 @@
    "en": "I need to stop by the pharmacy to get the medicine.",
    "ko": "약 받으러 약국에 들러야 해.",
    "blank": "farmacia"
+  }
+ ],
+ "w|farmacista": [
+  {
+   "text": "La moglie di Marco fa la farmacista proprio sotto il suo ufficio.",
+   "en": "Marco's wife works as a pharmacist right below his office.",
+   "ko": "마르코의 아내는 바로 마르코 사무실 아래층에서 약사로 일해요.",
+   "blank": "farmacista",
+   "src": "made"
+  },
+  {
+   "text": "Giulia chiede alla farmacista dell'aeroporto qualcosa contro il mal d'aria.",
+   "en": "Giulia asks the airport pharmacist for something for airsickness.",
+   "ko": "줄리아는 공항 약사에게 비행기 멀미약을 달라고 해요.",
+   "blank": "farmacista",
+   "src": "made"
   }
  ],
  "w|farmaco": [
@@ -30428,6 +30620,22 @@
    "en": "With the new server Francesca's app starts running smoothly.",
    "ko": "새 서버 덕분에 프란체스카의 앱이 매끄럽게 돌아가기 시작해요.",
    "blank": "filare",
+   "src": "made"
+  }
+ ],
+ "w|filiale": [
+  {
+   "text": "Marco viene trasferito per sei mesi nella filiale di Torino.",
+   "en": "Marco is transferred to the Turin branch for six months.",
+   "ko": "마르코는 여섯 달 동안 토리노 지점으로 발령이 나요.",
+   "blank": "filiale",
+   "src": "made"
+  },
+  {
+   "text": "Giulia vola a Londra per visitare la filiale della sua azienda.",
+   "en": "Giulia flies to London to visit her company's branch.",
+   "ko": "줄리아는 회사 지점을 방문하러 런던으로 날아가요.",
+   "blank": "filiale",
    "src": "made"
   }
  ],
@@ -31778,6 +31986,22 @@
    "en": "Martina recovered a lady's entire photo archive from her broken phone.",
    "ko": "마르티나는 고장 난 휴대폰에서 한 부인의 사진 기록을 전부 살려 냈어요.",
    "blank": "fotografico",
+   "src": "made"
+  }
+ ],
+ "w|fotografo": [
+  {
+   "text": "L'azienda chiama un fotografo per le foto del nuovo sito, e Marco si mette la cravatta.",
+   "en": "The company calls in a photographer for the new website photos, and Marco puts on a tie.",
+   "ko": "회사가 새 웹사이트 사진을 찍으려고 사진가를 불러서 마르코는 넥타이를 매요.",
+   "blank": "fotografo",
+   "src": "made"
+  },
+  {
+   "text": "Dalla terrazza panoramica un fotografo scatta foto agli aerei, e Giulia lo osserva.",
+   "en": "From the viewing terrace a photographer takes pictures of the planes, and Giulia watches him.",
+   "ko": "전망대에서 사진가가 비행기를 찍는 모습을 줄리아가 지켜봐요.",
+   "blank": "fotografo",
    "src": "made"
   }
  ],
@@ -34500,6 +34724,22 @@
    "en": "In English class Francesca reads an article about the global economy.",
    "ko": "영어 수업에서 프란체스카는 세계 경제에 관한 기사를 읽어요.",
    "blank": "globale",
+   "src": "made"
+  }
+ ],
+ "w|globo": [
+  {
+   "text": "Sulla scrivania di Marco c'è un piccolo globo che gira.",
+   "en": "On Marco's desk there is a small spinning globe.",
+   "ko": "마르코의 책상 위에는 빙글빙글 도는 작은 지구본이 있어요.",
+   "blank": "globo",
+   "src": "made"
+  },
+  {
+   "text": "Nell'atrio dell'aeroporto c'è un enorme globo luminoso, e Giulia ci fa una foto.",
+   "en": "In the airport hall there is a huge illuminated globe, and Giulia takes a photo of it.",
+   "ko": "공항 로비에 커다란 빛나는 지구본이 있어서 줄리아가 사진을 찍어요.",
+   "blank": "globo",
    "src": "made"
   }
  ],
@@ -37463,6 +37703,22 @@
    "blank": "incendio"
   }
  ],
+ "w|incentivare": [
+  {
+   "text": "L'azienda vuole incentivare l'uso della bicicletta, e Marco riceve un bonus.",
+   "en": "The company wants to encourage cycling, and Marco gets a bonus.",
+   "ko": "회사가 자전거 출퇴근을 장려하려고 해서 마르코가 보너스를 받아요.",
+   "blank": "incentivare",
+   "src": "made"
+  },
+  {
+   "text": "Per incentivare l'uso del treno, l'aeroporto offre a Giulia uno sconto sul biglietto.",
+   "en": "To encourage people to take the train, the airport offers Giulia a discount on the ticket.",
+   "ko": "공항은 기차 이용을 늘리려고 줄리아에게 승차권 할인을 해 줘요.",
+   "blank": "incentivare",
+   "src": "made"
+  }
+ ],
  "w|inchiesta": [
   {
    "text": "La procura ha aperto un'inchiesta, e Andrea ha preparato tutti i fascicoli.",
@@ -39895,6 +40151,22 @@
    "src": "made"
   }
  ],
+ "w|intenzionale": [
+  {
+   "text": "Marco giura che la cancellazione del file non è stata intenzionale.",
+   "en": "Marco swears that deleting the file wasn't intentional.",
+   "ko": "마르코는 파일을 지운 게 일부러 그런 게 아니라고 맹세해요.",
+   "blank": "intenzionale",
+   "src": "made"
+  },
+  {
+   "text": "La hostess si scusa con Giulia: il ritardo non è intenzionale.",
+   "en": "The flight attendant apologises to Giulia: the delay isn't intentional.",
+   "ko": "승무원이 줄리아에게 일부러 늦어진 게 아니라며 사과해요.",
+   "blank": "intenzionale",
+   "src": "made"
+  }
+ ],
  "w|intenzione": [
   {
    "text": "L'ho fatto senza intenzione.",
@@ -41189,6 +41461,22 @@
    "src": "made"
   }
  ],
+ "w|irrompere": [
+  {
+   "text": "Il capo irrompe nell'ufficio di Marco con una notizia urgente.",
+   "en": "The boss bursts into Marco's office with urgent news.",
+   "ko": "상사가 급한 소식을 들고 마르코의 사무실에 들이닥쳐요.",
+   "blank": "irrompe",
+   "src": "made"
+  },
+  {
+   "text": "Un gruppo di turisti irrompe nella sala d'attesa cantando, e Giulia si toglie le cuffie.",
+   "en": "A group of tourists bursts into the waiting lounge singing, and Giulia takes off her headphones.",
+   "ko": "관광객 무리가 노래를 부르며 대기실로 몰려들자 줄리아는 헤드폰을 벗어요.",
+   "blank": "irrompe",
+   "src": "made"
+  }
+ ],
  "w|irruzione": [
   {
    "text": "A metà lezione, i ragazzi della classe accanto hanno fatto irruzione con una torta per Marco.",
@@ -41293,6 +41581,22 @@
    "en": "I spoke with the inspector this morning.",
    "ko": "오늘 아침 경위와 이야기했어.",
    "blank": "ispettore"
+  }
+ ],
+ "w|ispezionare": [
+  {
+   "text": "Un tecnico viene a ispezionare l'impianto antincendio, e Marco gli mostra le planimetrie.",
+   "en": "A technician comes to inspect the fire safety system, and Marco shows him the floor plans.",
+   "ko": "기사가 소방 설비를 점검하러 와서 마르코가 도면을 보여 줘요.",
+   "blank": "ispezionare",
+   "src": "made"
+  },
+  {
+   "text": "Al controllo di sicurezza gli agenti vogliono ispezionare la valigia di Giulia.",
+   "en": "At the security check the officers want to inspect Giulia's suitcase.",
+   "ko": "보안 검색대에서 직원들이 줄리아의 여행 가방을 검사하려고 해요.",
+   "blank": "ispezionare",
+   "src": "made"
   }
  ],
  "w|ispezione": [
@@ -44337,6 +44641,22 @@
    "en": "She hopes to get over the illness soon.",
    "ko": "그녀는 병을 빨리 이겨내길 바라.",
    "blank": "malattia"
+  }
+ ],
+ "w|maldestro": [
+  {
+   "text": "Con un gesto maldestro Marco fa cadere tutte le cartelle dalla scrivania.",
+   "en": "With a clumsy movement Marco knocks all the folders off the desk.",
+   "ko": "마르코는 서투른 손짓에 책상 위 서류철을 몽땅 떨어뜨려요.",
+   "blank": "maldestro",
+   "src": "made"
+  },
+  {
+   "text": "Un cameriere maldestro rovescia il cappuccino sulla giacca di Giulia.",
+   "en": "A clumsy waiter spills cappuccino on Giulia's jacket.",
+   "ko": "서툰 종업원이 줄리아의 재킷에 카푸치노를 쏟아요.",
+   "blank": "maldestro",
+   "src": "made"
   }
  ],
  "w|male": [
@@ -50127,6 +50447,22 @@
    "en": "The result is truly remarkable.",
    "ko": "결과가 정말 놀랍네.",
    "blank": "notevole"
+  }
+ ],
+ "w|notifica": [
+  {
+   "text": "Una notifica sul telefono ricorda a Marco la riunione del pomeriggio.",
+   "en": "A notification on his phone reminds Marco about the afternoon meeting.",
+   "ko": "휴대폰 알림이 마르코에게 오후 회의를 알려 줘요.",
+   "blank": "notifica",
+   "src": "made"
+  },
+  {
+   "text": "Giulia riceve una notifica: il suo volo partirà da un altro gate.",
+   "en": "Giulia gets a notification: her flight will leave from a different gate.",
+   "ko": "줄리아에게 비행기가 다른 게이트에서 출발한다는 알림이 와요.",
+   "blank": "notifica",
+   "src": "made"
   }
  ],
  "w|notizia": [
@@ -56291,6 +56627,22 @@
    "src": "made"
   }
  ],
+ "w|piastra": [
+  {
+   "text": "Nella cucina dell'ufficio Marco scalda il panino sulla piastra.",
+   "en": "In the office kitchen Marco heats his sandwich on the hotplate.",
+   "ko": "마르코는 사무실 부엌에서 그릴판에 샌드위치를 데워요.",
+   "blank": "piastra",
+   "src": "made"
+  },
+  {
+   "text": "Al bar dell'aeroporto Giulia ordina un toast fatto sulla piastra.",
+   "en": "At the airport café Giulia orders a toasted sandwich made on the griddle.",
+   "ko": "줄리아는 공항 카페에서 그릴판에 구운 토스트를 주문해요.",
+   "blank": "piastra",
+   "src": "made"
+  }
+ ],
  "w|piattaforma": [
   {
    "text": "Il giornale di Matteo pubblica i video su una nuova piattaforma online.",
@@ -57080,6 +57432,22 @@
    "en": "A platoon of new interns walks into Anna's office on Monday.",
    "ko": "월요일에 새 인턴 한 무리가 안나의 사무실로 들어와요.",
    "blank": "plotone",
+   "src": "made"
+  }
+ ],
+ "w|plurale": [
+  {
+   "text": "Marco corregge il plurale sbagliato nel titolo della presentazione.",
+   "en": "Marco corrects the wrong plural in the title of the presentation.",
+   "ko": "마르코는 발표 자료 제목에 잘못 쓴 복수형을 고쳐요.",
+   "blank": "plurale",
+   "src": "made"
+  },
+  {
+   "text": "Sul cartello in inglese Giulia nota un plurale sbagliato e sorride.",
+   "en": "On the sign in English Giulia notices a wrong plural and smiles.",
+   "ko": "줄리아는 영어 안내판에서 틀린 복수형을 발견하고 웃어요.",
+   "blank": "plurale",
    "src": "made"
   }
  ],
@@ -59163,6 +59531,22 @@
    "src": "made"
   }
  ],
+ "w|preventivo": [
+  {
+   "text": "Oggi Marco prepara un preventivo per un nuovo cliente.",
+   "en": "Today Marco is preparing a quote for a new client.",
+   "ko": "마르코는 오늘 새 고객에게 보낼 견적서를 준비해요.",
+   "blank": "preventivo",
+   "src": "made"
+  },
+  {
+   "text": "Prima di partire Giulia ha chiesto un preventivo per il parcheggio dell'aeroporto.",
+   "en": "Before leaving Giulia asked for a quote for the airport car park.",
+   "ko": "줄리아는 떠나기 전에 공항 주차장 요금 견적을 받아 봤어요.",
+   "blank": "preventivo",
+   "src": "made"
+  }
+ ],
  "w|previdenza": [
   {
    "text": "All'ora di educazione civica Marco studia come funziona la previdenza sociale.",
@@ -59729,6 +60113,22 @@
    "src": "made"
   }
  ],
+ "w|produttivo": [
+  {
+   "text": "Marco è più produttivo la mattina presto, quando l'ufficio è vuoto.",
+   "en": "Marco is more productive early in the morning, when the office is empty.",
+   "ko": "마르코는 사무실이 비어 있는 이른 아침에 일이 더 잘돼요.",
+   "blank": "produttivo",
+   "src": "made"
+  },
+  {
+   "text": "Giulia approfitta del ritardo per un pomeriggio produttivo al computer.",
+   "en": "Giulia takes advantage of the delay for a productive afternoon on her computer.",
+   "ko": "줄리아는 비행기가 늦어진 김에 컴퓨터로 알찬 오후를 보내요.",
+   "blank": "produttivo",
+   "src": "made"
+  }
+ ],
  "w|produttore": [
   {
    "text": "Il produttore del film è famoso.",
@@ -60022,6 +60422,22 @@
    "en": "Laura has to schedule the volunteers' shifts for next month.",
    "ko": "라우라는 다음 달 자원봉사자 근무 일정을 짜야 해요.",
    "blank": "programmare",
+   "src": "made"
+  }
+ ],
+ "w|programmazione": [
+  {
+   "text": "Marco passa la mattina sulla programmazione delle ferie del reparto.",
+   "en": "Marco spends the morning planning the department's holidays.",
+   "ko": "마르코는 오전 내내 부서 휴가 일정을 짜요.",
+   "blank": "programmazione",
+   "src": "made"
+  },
+  {
+   "text": "Per un errore di programmazione il volo di Giulia compare due volte sul tabellone.",
+   "en": "Because of a scheduling error Giulia's flight appears twice on the departures board.",
+   "ko": "일정 입력 오류로 줄리아의 비행기가 전광판에 두 번 떠요.",
+   "blank": "programmazione",
    "src": "made"
   }
  ],
@@ -61529,6 +61945,22 @@
    "blank": "quale"
   }
  ],
+ "w|qualifica": [
+  {
+   "text": "Marco frequenta un corso serale per ottenere una qualifica in contabilità.",
+   "en": "Marco is taking an evening course to get a qualification in accounting.",
+   "ko": "마르코는 회계 자격을 따려고 야간 강좌를 듣고 있어요.",
+   "blank": "qualifica",
+   "src": "made"
+  },
+  {
+   "text": "Il pilota del volo di Giulia ha appena ottenuto la qualifica di comandante.",
+   "en": "The pilot of Giulia's flight has just qualified as captain.",
+   "ko": "줄리아가 탄 비행기의 조종사는 막 기장 자격을 땄어요.",
+   "blank": "qualifica",
+   "src": "made"
+  }
+ ],
  "w|qualificato": [
   {
    "text": "L'insegnante di Andrea è uno chef molto qualificato.",
@@ -62999,6 +63431,22 @@
    "blank": "reazione"
   }
  ],
+ "w|recapitare": [
+  {
+   "text": "Il corriere deve recapitare un pacco a Marco entro mezzogiorno.",
+   "en": "The courier has to deliver a parcel to Marco by noon.",
+   "ko": "택배 기사는 정오까지 마르코에게 소포를 배달해야 해요.",
+   "blank": "recapitare",
+   "src": "made"
+  },
+  {
+   "text": "La compagnia promette di recapitare entro domani la valigia smarrita a casa di Giulia.",
+   "en": "The airline promises to deliver the lost suitcase to Giulia's home by tomorrow.",
+   "ko": "항공사는 잃어버린 가방을 내일까지 줄리아의 집으로 보내 주겠다고 약속해요.",
+   "blank": "recapitare",
+   "src": "made"
+  }
+ ],
  "w|recare": [
   {
    "text": "Ogni estate Andrea si reca in campeggio nello stesso bosco.",
@@ -63815,6 +64263,22 @@
    "blank": "reputazione"
   }
  ],
+ "w|requisito": [
+  {
+   "text": "Per il posto che Marco vuole, l'inglese fluente è un requisito.",
+   "en": "For the position Marco wants, fluent English is a requirement.",
+   "ko": "마르코가 원하는 자리는 유창한 영어가 필수 조건이에요.",
+   "blank": "requisito",
+   "src": "made"
+  },
+  {
+   "text": "L'impiegata ricorda a Giulia che il passaporto valido è un requisito fondamentale.",
+   "en": "The clerk reminds Giulia that a valid passport is an essential requirement.",
+   "ko": "직원이 줄리아에게 유효한 여권이 꼭 필요하다고 다시 알려 줘요.",
+   "blank": "requisito",
+   "src": "made"
+  }
+ ],
  "w|residente": [
   {
    "text": "Ogni residente del quartiere ha scritto a Simone per lamentarsi del rumore.",
@@ -64041,6 +64505,22 @@
    "en": "He accepted responsibility for the mistake.",
    "ko": "그는 실수에 대한 책임을 받아들였어.",
    "blank": "responsabilità"
+  }
+ ],
+ "w|restante": [
+  {
+   "text": "Marco dedica la parte restante del pomeriggio alle email.",
+   "en": "Marco devotes the rest of the afternoon to emails.",
+   "ko": "마르코는 남은 오후 시간을 이메일에 써요.",
+   "blank": "restante",
+   "src": "made"
+  },
+  {
+   "text": "Giulia passa il tempo restante prima dell'imbarco in libreria.",
+   "en": "Giulia spends the remaining time before boarding in the bookshop.",
+   "ko": "줄리아는 탑승 전 남은 시간을 서점에서 보내요.",
+   "blank": "restante",
+   "src": "made"
   }
  ],
  "w|restare": [
@@ -65719,6 +66199,22 @@
    "blank": "rinunciare"
   }
  ],
+ "w|rinvenire": [
+  {
+   "text": "In un cassetto Marco rinviene il contratto che tutti cercavano.",
+   "en": "In a drawer Marco comes across the contract everyone was looking for.",
+   "ko": "마르코는 서랍에서 모두가 찾던 계약서를 발견해요.",
+   "blank": "rinviene",
+   "src": "made"
+  },
+  {
+   "text": "La polizia aeroportuale ha rinvenuto in un bagno il portafoglio di Giulia.",
+   "en": "The airport police found Giulia's wallet in a toilet.",
+   "ko": "공항 경찰이 화장실에서 줄리아의 지갑을 찾아냈어요.",
+   "blank": "rinvenuto",
+   "src": "made"
+  }
+ ],
  "w|rinviare": [
   {
    "text": "Per motivi di lavoro Simone è costretto a rinviare la visita a Paolo.",
@@ -67339,6 +67835,22 @@
    "en": "Rain can ruin the picnic.",
    "ko": "비가 소풍을 망칠 수 있어.",
    "blank": "rovinare"
+  }
+ ],
+ "w|rozzo": [
+  {
+   "text": "Marco trova rozzo il modo in cui il collega risponde ai clienti.",
+   "en": "Marco finds the way his colleague answers clients crude.",
+   "ko": "마르코는 동료가 고객에게 대답하는 방식이 거칠다고 생각해요.",
+   "blank": "rozzo",
+   "src": "made"
+  },
+  {
+   "text": "Un passeggero rozzo spinge Giulia per salire per primo.",
+   "en": "A rude passenger pushes Giulia to board first.",
+   "ko": "무례한 승객이 먼저 타려고 줄리아를 밀쳐요.",
+   "blank": "rozzo",
+   "src": "made"
   }
  ],
  "w|rubare": [
@@ -73679,6 +74191,22 @@
    "src": "made"
   }
  ],
+ "w|sommergere": [
+  {
+   "text": "Appena Marco accende il computer, le email del lunedì lo sommergono.",
+   "en": "As soon as Marco turns on the computer, Monday's emails swamp him.",
+   "ko": "마르코가 컴퓨터를 켜자마자 월요일 이메일이 쏟아져요.",
+   "blank": "sommergono",
+   "src": "made"
+  },
+  {
+   "text": "Le domande dei turisti sommergono l'unica impiegata, e Giulia aspetta con pazienza.",
+   "en": "The tourists' questions swamp the only clerk, and Giulia waits patiently.",
+   "ko": "관광객들의 질문이 하나뿐인 직원에게 쏟아져서 줄리아는 참을성 있게 기다려요.",
+   "blank": "sommergono",
+   "src": "made"
+  }
+ ],
  "w|sommerso": [
   {
    "text": "Paolo è sommerso di richieste di mascherine all'inizio dell'inverno.",
@@ -76083,6 +76611,22 @@
    "blank": "stabile"
   }
  ],
+ "w|stabilimento": [
+  {
+   "text": "Una volta al mese Marco visita lo stabilimento fuori città.",
+   "en": "Once a month Marco visits the plant outside town.",
+   "ko": "마르코는 한 달에 한 번 시외에 있는 공장을 둘러봐요.",
+   "blank": "stabilimento",
+   "src": "made"
+  },
+  {
+   "text": "Dal finestrino Giulia vede lo stabilimento dove si costruiscono gli aerei.",
+   "en": "From the window Giulia sees the plant where the planes are built.",
+   "ko": "줄리아는 창밖으로 비행기를 만드는 공장을 봐요.",
+   "blank": "stabilimento",
+   "src": "made"
+  }
+ ],
  "w|stabilire": [
   {
    "text": "Dobbiamo stabilire una data precisa.",
@@ -76279,6 +76823,22 @@
    "en": "Check the print before handing it in.",
    "ko": "제출하기 전에 인쇄물을 확인해.",
    "blank": "stampa"
+  }
+ ],
+ "w|stampante": [
+  {
+   "text": "La stampante si inceppa proprio quando Marco ha fretta.",
+   "en": "The printer jams just when Marco is in a hurry.",
+   "ko": "마르코가 급할 때 꼭 프린터에 종이가 걸려요.",
+   "blank": "stampante",
+   "src": "made"
+  },
+  {
+   "text": "La stampante del check-in automatico non funziona, e Giulia usa la carta d'imbarco sul telefono.",
+   "en": "The self check-in printer isn't working, so Giulia uses the boarding pass on her phone.",
+   "ko": "무인 체크인기 프린터가 고장 나서 줄리아는 휴대폰 탑승권을 써요.",
+   "blank": "stampante",
+   "src": "made"
   }
  ],
  "w|stampare": [
@@ -77957,6 +78517,22 @@
    "blank": "superato"
   }
  ],
+ "w|superbo": [
+  {
+   "text": "Il nuovo direttore sembra superbo, ma Marco scopre che è solo timido.",
+   "en": "The new director seems arrogant, but Marco discovers he is just shy.",
+   "ko": "새 이사는 거만해 보이지만 마르코는 그가 그냥 수줍음이 많다는 걸 알게 돼요.",
+   "blank": "superbo",
+   "src": "made"
+  },
+  {
+   "text": "Dall'aereo Giulia ammira un superbo tramonto sulle Alpi.",
+   "en": "From the plane Giulia admires a magnificent sunset over the Alps.",
+   "ko": "줄리아는 비행기에서 알프스 위로 지는 장엄한 노을을 감상해요.",
+   "blank": "superbo",
+   "src": "made"
+  }
+ ],
  "w|supereroe": [
   {
    "text": "Per Carnevale Davide è andato a scuola vestito da supereroe.",
@@ -78871,6 +79447,22 @@
    "src": "made"
   }
  ],
+ "w|tastiera": [
+  {
+   "text": "Marco ha rovesciato il caffè sulla tastiera del computer.",
+   "en": "Marco has spilled coffee on the computer keyboard.",
+   "ko": "마르코가 컴퓨터 키보드에 커피를 쏟았어요.",
+   "blank": "tastiera",
+   "src": "made"
+  },
+  {
+   "text": "Nella sala d'attesa Giulia scrive sul tablet con una tastiera pieghevole.",
+   "en": "In the waiting lounge Giulia types on her tablet with a folding keyboard.",
+   "ko": "줄리아는 대기실에서 접이식 키보드로 태블릿에 글을 써요.",
+   "blank": "tastiera",
+   "src": "made"
+  }
+ ],
  "w|tata": [
   {
    "text": "La tata gioca con i bambini in giardino.",
@@ -79160,6 +79752,22 @@
    "en": "Above the tables there's a white canvas stretched against the sun, and Anna photographs it.",
    "ko": "테이블 위로 햇빛을 가리는 하얀 천이 쳐져 있어서 안나가 사진을 찍어요.",
    "blank": "tela",
+   "src": "made"
+  }
+ ],
+ "w|telaio": [
+  {
+   "text": "Nel catalogo Marco controlla il prezzo di un telaio in alluminio.",
+   "en": "In the catalogue Marco checks the price of an aluminium frame.",
+   "ko": "마르코는 카탈로그에서 알루미늄 프레임 가격을 확인해요.",
+   "blank": "telaio",
+   "src": "made"
+  },
+  {
+   "text": "La bicicletta di Giulia viaggia in stiva, con il telaio avvolto nel cartone.",
+   "en": "Giulia's bike travels in the hold, with the frame wrapped in cardboard.",
+   "ko": "줄리아의 자전거는 프레임을 골판지로 감싼 채 화물칸에 실려 가요.",
+   "blank": "telaio",
    "src": "made"
   }
  ],
@@ -81829,6 +82437,22 @@
    "en": "This stretch of road is dangerous.",
    "ko": "이 구간 도로는 위험해.",
    "blank": "tratto"
+  }
+ ],
+ "w|trattore": [
+  {
+   "text": "Marco vende pezzi di ricambio per trattori alle aziende agricole della zona.",
+   "en": "Marco sells spare parts for tractors to the local farms.",
+   "ko": "마르코는 지역 농장들에 트랙터 부품을 팔아요.",
+   "blank": "trattori",
+   "src": "made"
+  },
+  {
+   "text": "Sotto il finestrino di Giulia un piccolo trattore traina i carrelli dei bagagli.",
+   "en": "Below Giulia's window a small tractor tows the baggage carts.",
+   "ko": "줄리아의 창 아래에서 작은 견인차가 짐 수레를 끌고 가요.",
+   "blank": "trattore",
+   "src": "made"
   }
  ],
  "w|trauma": [
@@ -85258,6 +85882,22 @@
    "en": "Giulia follows the forecast on a virtual map of the sky.",
    "ko": "줄리아는 하늘을 보여 주는 가상 지도로 일기 예보를 봐요.",
    "blank": "virtuale",
+   "src": "made"
+  }
+ ],
+ "w|virtuoso": [
+  {
+   "text": "Il collega di Marco dà un esempio virtuoso: spegne sempre le luci quando esce.",
+   "en": "Marco's colleague sets a fine example: he always turns off the lights when he leaves.",
+   "ko": "마르코의 동료는 나갈 때 꼭 불을 끄는 모범을 보여요.",
+   "blank": "virtuoso",
+   "src": "made"
+  },
+  {
+   "text": "Durante il decollo Giulia ascolta in cuffia un pianista virtuoso.",
+   "en": "During take-off Giulia listens to a virtuoso pianist on her headphones.",
+   "ko": "줄리아는 이륙하는 동안 헤드폰으로 뛰어난 피아니스트의 연주를 들어요.",
+   "blank": "virtuoso",
    "src": "made"
   }
  ],

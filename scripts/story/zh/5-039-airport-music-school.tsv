@@ -3,7 +3,7 @@ A	王刚对这次旅行抱着十足的期待。	Wang Gang has very high hopes fo
 A	从市中心到机场大约一个小时车程。	It's about an hour's drive from the city center to the airport.	시내에서 공항까지는 차로 한 시간쯤 걸려요.	车程=车程
 A	机场快线的车厢里挤满了拖着箱子的旅客。	The airport express carriage was packed with travelers dragging suitcases.	공항 급행열차 객차 안은 캐리어를 끄는 여행객들로 꽉 찼어요.	车厢=车厢
 A	从停车场到航站楼步行要十几分钟。	It's a walk of over ten minutes from the parking lot to the terminal.	주차장에서 터미널까지 걸어서 십몇 분이 걸려요.	步行=步行
-A	王刚的妻子开车送行，可走时忘了记租来那辆车的车牌。	Wang Gang's wife drove him there but forgot to note the license plate of the rental car.	왕강의 아내가 차로 배웅했는데 떠날 때 렌터카 번호판을 기억해 두는 걸 깜빡했어요.	车牌=车牌
+A	王刚把租来的车还了，才想起没记下那辆车的车牌。	Wang Gang returned the rental car and only then remembered he hadn't written down its license plate.	왕강은 렌터카를 반납하고 나서야 그 차 번호판을 적어 두지 않은 게 생각났어요.	车牌=车牌
 A	出租车停靠点在航站楼西边。	The taxi stand is on the west side of the terminal.	택시 승강장은 터미널 서쪽에 있어요.	西边=西边
 A	航站楼的外部全是玻璃，阳光照进来很亮。	The outside of the terminal is all glass, and the sunlight makes it bright inside.	터미널 외벽이 전부 유리라 햇빛이 들어와서 아주 밝아요.	外部=外部
 A	机场大巴就停在马路对面。	The airport bus stops right across the road.	공항버스는 바로 길 건너편에 서요.	马路=马路
@@ -12,7 +12,7 @@ A	工作人员说这条走廊通向国际出发厅。	A staff member said this c
 A	航站楼大厅里挂着各国的国旗。	Flags of many countries hang in the terminal hall.	터미널 홀에는 여러 나라 국기가 걸려 있어요.	国旗=国旗
 A	王刚忘了行李箱的密码，只好请工作人员帮忙破解。	Wang Gang forgot his suitcase's combination and had to ask staff to help crack it.	왕강은 캐리어 비밀번호를 잊어버려서 직원에게 풀어 달라고 부탁할 수밖에 없었어요.	破解=破解
 A	王刚临走又给行李添了一个小包，结果超重了。	At the last minute Wang Gang added another small bag to his luggage, and it ended up overweight.	왕강은 떠나기 직전 짐에 작은 가방을 하나 더 얹었다가 무게가 초과됐어요.	添=添
-A	王刚提醒同事，出国前别盲目换一大堆外币。	Wang Gang reminded his colleague not to blindly exchange a pile of foreign currency before the trip.	왕강은 동료에게 무작정 외화를 잔뜩 바꾸지 말라고 일렀어요.	盲目=盲目
+A	王刚提醒同事，旅行前别盲目换一大堆外币。	Wang Gang reminded his colleague not to blindly exchange a pile of foreign currency before the trip.	왕강은 동료에게 무작정 외화를 잔뜩 바꾸지 말라고 일렀어요.	盲目=盲目
 A	安检是机场的最后一道防线。	Security screening is the airport's last line of defense.	보안 검색은 공항의 마지막 방어선이에요.	防线=防线
 A	因为有重要会议，机场今天提高了警戒级别。	Because of an important conference, the airport has raised its alert level today.	중요한 회의가 있어서 공항은 오늘 경계 등급을 높였어요.	警戒=警戒
 A	王刚在免税店里逛了半个多小时。	Wang Gang browsed the duty-free shop for over half an hour.	왕강은 면세점에서 삼십 분 넘게 구경했어요.	逛=逛
@@ -37,7 +37,7 @@ A	机场为第一条国际航线举行了盛大的开通仪式。	The airport he
 A	从飞机上往下看，江面上的桥梁一座接一座。	Looking down from the plane, one bridge after another spanned the river.	비행기에서 내려다보니 강 위에 다리가 줄줄이 놓여 있었어요.	桥梁=桥梁
 A	王刚订的酒店在一个安静的老街区。	The hotel Wang Gang booked is in a quiet old neighborhood.	왕강이 예약한 호텔은 조용한 옛 동네에 있어요.	街区=街区
 A	王刚给这段旅途准备了好几本书。	Wang Gang packed several books for the journey.	왕강은 이번 여정을 위해 책을 여러 권 챙겼어요.	旅途=旅途
-A	看到久别的父亲平安归来，王刚的妹妹在接机口哭了。	Seeing their long-absent father return safely, Wang Gang's sister cried at the arrivals gate.	오래 떨어져 지낸 아버지가 무사히 돌아오는 걸 보고 왕강의 여동생은 입국장에서 울었어요.	归来=归来
+A	接机口挤满了等着亲人归来的人。	The arrivals gate was crowded with people waiting for their loved ones to come back.	입국장은 가족이 돌아오길 기다리는 사람들로 붐볐어요.	归来=归来
 B	音乐学校在城市西边，周围很安静。	The music school is on the west side of the city, and the area around it is quiet.	음악 학교는 도시 서쪽에 있고 주변이 조용해요.	西边=西边
 B	李娜每天步行去学校，路上顺便背谱子。	Li Na walks to school every day and memorizes her scores on the way.	리나는 매일 걸어서 학교에 가며 가는 길에 악보를 외워요.	步行=步行
 B	李娜过马路时嘴里还在哼着旋律。	Li Na was still humming a melody as she crossed the road.	리나는 길을 건너면서도 입으로 멜로디를 흥얼거렸어요.	马路=马路

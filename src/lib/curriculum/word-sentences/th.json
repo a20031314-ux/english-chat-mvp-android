@@ -1031,6 +1031,22 @@
    "src": "made"
   }
  ],
+ "w|กรีด": [
+  {
+   "text": "เอกใช้คัตเตอร์กรีดกล่องพัสดุที่ผู้อ่านส่งมาให้",
+   "en": "Ek slit open the parcel a reader had sent with a box cutter.",
+   "ko": "엑은 커터칼로 독자가 보낸 소포 상자를 갈랐어요.",
+   "blank": "กรีด",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะตื่นไปกรีดยางตั้งแต่ตีสามก่อนแดดออก",
+   "en": "Piya gets up at three in the morning to tap rubber before the sun comes out.",
+   "ko": "삐야는 해가 뜨기 전 새벽 세 시에 일어나 고무 수액을 채취하러 가요.",
+   "blank": "กรีด",
+   "src": "made"
+  }
+ ],
  "w|กรีดร้อง": [
   {
    "text": "เด็กคนหนึ่งกรีดร้องเมื่อเห็นโครงกระดูกไดโนเสาร์ขนาดยักษ์ กิตติต้องรีบเข้าไปปลอบ",
@@ -1788,6 +1804,22 @@
    "en": "The teachers' room has piles of sheet music so high you can barely see the desks.",
    "ko": "교무실에는 악보 더미가 높이 쌓여서 책상이 거의 안 보여요.",
    "blank": "กอง",
+   "src": "made"
+  }
+ ],
+ "w|กองกำลัง": [
+  {
+   "text": "เอกรายงานข่าวกองกำลังรักษาสันติภาพที่เดินทางกลับประเทศ",
+   "en": "Ek reported on the peacekeeping force returning home.",
+   "ko": "엑은 귀국하는 평화유지군 소식을 보도했어요.",
+   "blank": "กองกำลัง",
+   "src": "made"
+  },
+  {
+   "text": "กองกำลังชายแดนเดินลาดตระเวนผ่านหมู่บ้านของปิยะทุกสัปดาห์",
+   "en": "The border force patrols through Piya's village every week.",
+   "ko": "국경 부대가 매주 삐야의 마을을 지나며 순찰해요.",
+   "blank": "กองกำลัง",
    "src": "made"
   }
  ],
@@ -5663,6 +5695,22 @@
    "src": "made"
   }
  ],
+ "w|ของดี": [
+  {
+   "text": "เอกเขียนคอลัมน์แนะนำของดีประจำจังหวัด",
+   "en": "Ek writes a column introducing each province's specialties.",
+   "ko": "엑은 각 지방의 특산품을 소개하는 칼럼을 써요.",
+   "blank": "ของดี",
+   "src": "made"
+  },
+  {
+   "text": "ชาของหมู่บ้านปิยะขึ้นชื่อว่าเป็นของดีของอำเภอ",
+   "en": "The tea from Piya's village is famous as the district's specialty.",
+   "ko": "삐야네 마을 차는 군의 특산품으로 이름났어요.",
+   "blank": "ของดี",
+   "src": "made"
+  }
+ ],
  "w|ของฝาก": [
   {
    "text": "ก่อนเช็กเอาต์ วิชัยซื้อขนมเป็นของฝากให้เพื่อนที่ออฟฟิศ",
@@ -6027,6 +6075,22 @@
    "en": "Can I get more information?",
    "ko": "정보 좀 더 줘.",
    "blank": "ข้อมูล"
+  }
+ ],
+ "w|ข้อยกเว้น": [
+  {
+   "text": "กฎของกองบรรณาธิการไม่มีข้อยกเว้น แม้แต่เอกก็ต้องส่งต้นฉบับตรงเวลา",
+   "en": "The newsroom's rules have no exceptions; even Ek must hand in his copy on time.",
+   "ko": "편집국 규칙에는 예외가 없어서 엑도 원고를 제시간에 내야 해요.",
+   "blank": "ข้อยกเว้น",
+   "src": "made"
+  },
+  {
+   "text": "รถทุกคันต้องจอดที่ลานจอดล่าง ข้อยกเว้นมีแค่รถพยาบาล",
+   "en": "All vehicles must park in the lower lot; the only exception is ambulances.",
+   "ko": "모든 차는 아래 주차장에 세워야 하고, 예외는 구급차뿐이에요.",
+   "blank": "ข้อยกเว้น",
+   "src": "made"
   }
  ],
  "w|ขอร้อง": [
@@ -7055,6 +7119,22 @@
    "en": "Do not be lazy in the morning.",
    "ko": "아침에 게으름 피우지 마.",
    "blank": "ขี้เกียจ"
+  }
+ ],
+ "w|ขี้โกง": [
+  {
+   "text": "ผู้อ่านส่งจดหมายร้องเรียนร้านค้าขี้โกงตาชั่ง",
+   "en": "A reader sent a letter complaining about a shop that cheats with its scales.",
+   "ko": "한 독자가 저울을 속이는 가게를 고발하는 편지를 보냈어요.",
+   "blank": "ขี้โกง",
+   "src": "made"
+  },
+  {
+   "text": "พ่อค้าคนกลางขี้โกงกดราคากาแฟของชาวบ้านจนปิยะต้องหาตลาดเอง",
+   "en": "Crooked middlemen pushed down the villagers' coffee prices, so Piya had to find buyers himself.",
+   "ko": "속임수 쓰는 중간 상인들이 주민들의 커피값을 후려쳐서 삐야는 직접 판로를 찾아야 했어요.",
+   "blank": "ขี้โกง",
+   "src": "made"
   }
  ],
  "w|ขี้ขลาด": [
@@ -12795,6 +12875,22 @@
    "blank": "คำสัญญา"
   }
  ],
+ "w|คำสาป": [
+  {
+   "text": "เอกเขียนสารคดีเรื่องตำนานคำสาปของเมืองโบราณ",
+   "en": "Ek wrote a documentary piece about the legend of an ancient city's curse.",
+   "ko": "엑은 고대 도시의 저주 전설에 관한 르포를 썼어요.",
+   "blank": "คำสาป",
+   "src": "made"
+  },
+  {
+   "text": "คนเฒ่าคนแก่เล่าให้ปิยะฟังถึงคำสาปของถ้ำบนยอดเขา",
+   "en": "The elders told Piya about the curse of the cave on the mountaintop.",
+   "ko": "어르신들은 삐야에게 산꼭대기 동굴의 저주 이야기를 들려줬어요.",
+   "blank": "คำสาป",
+   "src": "made"
+  }
+ ],
  "w|คำอธิบาย": [
   {
    "text": "วิชัยอ่านคำอธิบายวิธีใช้ตู้เซฟในห้องแล้วก็ยังงงอยู่",
@@ -13103,6 +13199,22 @@
    "en": "Have you eaten?",
    "ko": "밥 먹었어요?",
    "blank": "คุณ"
+  }
+ ],
+ "w|คุณๆ": [
+  {
+   "text": "บรรณาธิการเดินเข้ามาแล้วพูดว่า คุณๆ ทั้งหลาย ข่าวหน้าหนึ่งต้องเสร็จก่อนสองทุ่ม",
+   "en": "The editor walked in and said, \"All of you, the front-page story must be done before eight.\"",
+   "ko": "편집장이 들어와서 \"여러분, 일면 기사는 저녁 여덟 시 전에 끝내야 해요\"라고 했어요.",
+   "blank": "คุณๆ",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ใหญ่บ้านประกาศเสียงตามสายว่า คุณๆ ที่มีรถกระบะช่วยมารับของบริจาคที่ศาลาด้วย",
+   "en": "The village head announced over the loudspeaker, \"Those of you with pickups, please come collect donations at the pavilion.\"",
+   "ko": "이장은 마을 방송으로 \"픽업트럭 있는 분들은 정자로 와서 기부 물품을 실어 주세요\"라고 알렸어요.",
+   "blank": "คุณๆ",
+   "src": "made"
   }
  ],
  "w|คุณครู": [
@@ -13895,6 +14007,22 @@
    "en": "I'm excited for my first flight.",
    "ko": "처음 비행기 타서 설레.",
    "blank": "เครื่องบิน"
+  }
+ ],
+ "w|เครื่องแบบ": [
+  {
+   "text": "ตำรวจในเครื่องแบบมาให้ข้อมูลที่สำนักงานหนังสือพิมพ์",
+   "en": "A uniformed police officer came to the newspaper office to give information.",
+   "ko": "제복을 입은 경찰관이 신문사 사무실에 와서 정보를 전했어요.",
+   "blank": "เครื่องแบบ",
+   "src": "made"
+  },
+  {
+   "text": "เด็กนักเรียนบนดอยใส่เครื่องแบบเก่าที่ปิยะรับบริจาคมา",
+   "en": "The schoolchildren on the mountain wear old uniforms that Piya collected as donations.",
+   "ko": "산마을 학생들은 삐야가 기부받아 온 낡은 교복을 입어요.",
+   "blank": "เครื่องแบบ",
+   "src": "made"
   }
  ],
  "w|เครื่องประดับ": [
@@ -18349,6 +18477,22 @@
    "src": "made"
   }
  ],
+ "w|ชะตากรรม": [
+  {
+   "text": "ผู้อ่านเขียนมาถามถึงชะตากรรมของครอบครัวที่เอกเคยลงข่าว",
+   "en": "Readers wrote in asking about the fate of the family Ek once reported on.",
+   "ko": "독자들은 엑이 예전에 보도한 가족의 운명이 어떻게 됐는지 편지로 물었어요.",
+   "blank": "ชะตากรรม",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะห่วงชะตากรรมของช้างป่าที่ไม่มีที่อยู่",
+   "en": "Piya worries about the fate of the wild elephants that have nowhere to live.",
+   "ko": "삐야는 살 곳을 잃은 야생 코끼리들의 운명이 걱정돼요.",
+   "blank": "ชะตากรรม",
+   "src": "made"
+  }
+ ],
  "w|ชะลอ": [
   {
    "text": "ธนาขอให้รถส่งของชะลอความเร็วเพราะเด็กๆ ชอบวิ่งเล่นในซอย",
@@ -20193,6 +20337,22 @@
    "en": "You should spend carefully.",
    "ko": "지출은 신중하게 해야 해.",
    "blank": "ใช้จ่าย"
+  }
+ ],
+ "w|ใช้ชีวิต": [
+  {
+   "text": "เอกสัมภาษณ์ชายชราที่ใช้ชีวิตอยู่ริมคลองมาเกือบร้อยปี",
+   "en": "Ek interviewed an old man who has lived by the canal for nearly a hundred years.",
+   "ko": "엑은 운하 옆에서 거의 백 년을 살아온 노인을 인터뷰했어요.",
+   "blank": "ใช้ชีวิต",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเลือกมาใช้ชีวิตเรียบง่ายบนดอยหลังลาออกจากงานในเมือง",
+   "en": "Piya chose to live simply in the mountains after quitting his job in the city.",
+   "ko": "삐야는 도시의 직장을 그만두고 산에서 소박하게 살기로 했어요.",
+   "blank": "ใช้ชีวิต",
+   "src": "made"
   }
  ],
  "w|ใช้ได้": [
@@ -25008,6 +25168,22 @@
    "en": "When the fire alarm went off, Pranee kept calm and led the guests down the fire stairs.",
    "ko": "화재경보가 울리자 프라니는 침착하게 손님들을 비상계단으로 안내했어요.",
    "blank": "ตั้งสติ",
+   "src": "made"
+  }
+ ],
+ "w|ตัณหา": [
+  {
+   "text": "เอกสัมภาษณ์พระนักเทศน์ที่สอนว่าตัณหาเป็นต้นเหตุของความทุกข์",
+   "en": "Ek interviewed a preaching monk who teaches that craving is the root of suffering.",
+   "ko": "엑은 갈애가 괴로움의 근원이라고 가르치는 설법 스님을 인터뷰했어요.",
+   "blank": "ตัณหา",
+   "src": "made"
+  },
+  {
+   "text": "ผู้เฒ่าบอกปิยะว่าตัณหาของคนทำให้ป่าหายไปทีละน้อย",
+   "en": "The elder told Piya that human craving makes the forest disappear little by little.",
+   "ko": "어르신은 삐야에게 사람의 욕망 때문에 숲이 조금씩 사라진다고 말했어요.",
+   "blank": "ตัณหา",
    "src": "made"
   }
  ],
@@ -30315,6 +30491,22 @@
    "blank": "ที่พัก"
   }
  ],
+ "w|ที่พึ่ง": [
+  {
+   "text": "สำหรับชาวบ้านหลายคน หนังสือพิมพ์ท้องถิ่นเป็นที่พึ่งเวลาถูกเอาเปรียบ",
+   "en": "For many locals, the local newspaper is somewhere to turn when they are taken advantage of.",
+   "ko": "많은 주민에게 지역 신문은 부당한 일을 당했을 때 기댈 곳이에요.",
+   "blank": "ที่พึ่ง",
+   "src": "made"
+  },
+  {
+   "text": "ร้านค้าเล็กๆ ของปิยะเป็นที่พึ่งของชาวบ้านเวลาฝนตกจนลงดอยไม่ได้",
+   "en": "Piya's little shop is what villagers rely on when rain keeps them from going down the mountain.",
+   "ko": "비 때문에 산을 내려갈 수 없을 때 삐야의 작은 가게는 주민들이 의지하는 곳이에요.",
+   "blank": "ที่พึ่ง",
+   "src": "made"
+  }
+ ],
  "w|ทีม": [
   {
    "text": "ทีมเราต้องช่วยกัน",
@@ -31511,6 +31703,22 @@
    "en": "You can use this instead.",
    "ko": "이거 대신 써도 돼.",
    "blank": "แทน"
+  }
+ ],
+ "w|แท่น": [
+  {
+   "text": "โรงพิมพ์ยังเก็บแท่นพิมพ์รุ่นแรกไว้ให้นักศึกษามาดู",
+   "en": "The printing house still keeps its first printing press for students to see.",
+   "ko": "인쇄소는 학생들이 볼 수 있게 첫 인쇄기를 아직 보관하고 있어요.",
+   "blank": "แท่น",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านตั้งพระพุทธรูปไว้บนแท่นหินกลางลานหมู่บ้าน",
+   "en": "The villagers placed a Buddha image on a stone pedestal in the middle of the village square.",
+   "ko": "주민들은 마을 광장 한가운데 돌 받침대 위에 불상을 모셨어요.",
+   "blank": "แท่น",
+   "src": "made"
   }
  ],
  "w|แทนที่": [
@@ -34273,6 +34481,22 @@
    "src": "made"
   }
  ],
+ "w|นิคม": [
+  {
+   "text": "เอกลงพื้นที่ทำข่าวน้ำเสียจากนิคมอุตสาหกรรม",
+   "en": "Ek went into the field to report on wastewater from the industrial estate.",
+   "ko": "엑은 산업단지에서 나온 폐수를 취재하러 현장에 갔어요.",
+   "blank": "นิคม",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเกิดในนิคมสร้างตนเองตีนดอยก่อนย้ายขึ้นมาอยู่ข้างบน",
+   "en": "Piya was born in a self-help settlement at the foot of the mountain before moving up.",
+   "ko": "삐야는 산기슭의 자립 정착촌에서 태어나 위쪽으로 이사 왔어요.",
+   "blank": "นิคม",
+   "src": "made"
+  }
+ ],
  "w|นิ่ง": [
   {
    "text": "น้ำในทะเลสาบนิ่งมาก",
@@ -34515,6 +34739,22 @@
    "en": "Don't point with your finger.",
    "ko": "손가락으로 가리키지 마.",
    "blank": "นิ้ว"
+  }
+ ],
+ "w|นิวเคลียร์": [
+  {
+   "text": "เอกแปลข่าวต่างประเทศเรื่องการประชุมลดอาวุธนิวเคลียร์",
+   "en": "Ek translated foreign news about a nuclear disarmament conference.",
+   "ko": "엑은 핵무기 감축 회의에 관한 외신을 번역했어요.",
+   "blank": "นิวเคลียร์",
+   "src": "made"
+  },
+  {
+   "text": "ครูบนดอยสอนเด็กๆ ว่าพลังงานนิวเคลียร์ผลิตไฟฟ้าได้อย่างไร",
+   "en": "The mountain teacher taught the kids how nuclear power produces electricity.",
+   "ko": "산마을 선생님은 아이들에게 원자력이 어떻게 전기를 만드는지 가르쳤어요.",
+   "blank": "นิวเคลียร์",
+   "src": "made"
   }
  ],
  "w|นิสัย": [
@@ -35432,6 +35672,22 @@
    "en": "In the school musical, Pranee took on the role of leading the band.",
    "ko": "학교 뮤지컬에서 쁘라니는 밴드를 이끄는 역할을 맡았어요.",
    "blank": "บทบาท",
+   "src": "made"
+  }
+ ],
+ "w|บทเพลง": [
+  {
+   "text": "เอกเขียนบทความถึงบทเพลงเก่าที่กลับมาดังในโซเชียล",
+   "en": "Ek wrote an article about an old song that has become popular again on social media.",
+   "ko": "엑은 소셜 미디어에서 다시 유행하는 옛 노래에 관한 기사를 썼어요.",
+   "blank": "บทเพลง",
+   "src": "made"
+  },
+  {
+   "text": "เด็กบนดอยร้องบทเพลงพื้นบ้านต้อนรับปิยะ",
+   "en": "The children on the mountain sang a folk song to welcome Piya.",
+   "ko": "산마을 아이들이 민요를 부르며 삐야를 맞이했어요.",
+   "blank": "บทเพลง",
    "src": "made"
   }
  ],
@@ -36406,6 +36662,22 @@
    "en": "Somsak felt he had left something at home but couldn't remember what.",
    "ko": "솜삭은 집에 뭔가를 두고 온 것 같았지만 생각이 안 났어요.",
    "blank": "บางสิ่ง",
+   "src": "made"
+  }
+ ],
+ "w|บางสิ่งบางอย่าง": [
+  {
+   "text": "เอกรู้สึกว่าแหล่งข่าวกำลังปิดบังบางสิ่งบางอย่าง",
+   "en": "Ek felt that his source was hiding something.",
+   "ko": "엑은 취재원이 뭔가를 숨기고 있다고 느꼈어요.",
+   "blank": "บางสิ่งบางอย่าง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเชื่อว่าการมาอยู่บนดอยสอนบางสิ่งบางอย่างที่ในเมืองไม่มี",
+   "en": "Piya believes living on the mountain teaches something the city can't.",
+   "ko": "삐야는 산에 살면서 도시에는 없는 무언가를 배운다고 믿어요.",
+   "blank": "บางสิ่งบางอย่าง",
    "src": "made"
   }
  ],
@@ -40697,6 +40969,22 @@
    "src": "made"
   }
  ],
+ "w|เป็นจริง": [
+  {
+   "text": "ข่าวลือเรื่องการปิดโรงงานกลายเป็นจริงในที่สุด",
+   "en": "The rumor about the factory closing finally came true.",
+   "ko": "공장이 문을 닫는다는 소문은 결국 사실이 됐어요.",
+   "blank": "เป็นจริง",
+   "src": "made"
+  },
+  {
+   "text": "ความฝันของปิยะที่จะมีโรงเรียนในหมู่บ้านเป็นจริงขึ้นมาแล้ว",
+   "en": "Piya's dream of having a school in the village has come true.",
+   "ko": "마을에 학교를 세우겠다던 삐야의 꿈이 이루어졌어요.",
+   "blank": "เป็นจริง",
+   "src": "made"
+  }
+ ],
  "w|เป็นเจ้าของ": [
   {
    "text": "วิชัยฝันว่าวันหนึ่งจะได้เป็นเจ้าของบริษัทรับเหมาเล็ก ๆ",
@@ -41435,6 +41723,22 @@
    "en": "Happy means to be happy.",
    "ko": "Happy는 행복하다는 뜻이야.",
    "blank": "แปลว่า"
+  }
+ ],
+ "w|แปะ": [
+  {
+   "text": "เอกแปะโพสต์อิทเตือนตัวเองไว้ข้างจอคอมพิวเตอร์",
+   "en": "Ek stuck a sticky note beside his computer screen as a reminder.",
+   "ko": "엑은 컴퓨터 화면 옆에 메모지를 붙여 스스로에게 알림을 남겼어요.",
+   "blank": "แปะ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะแปะประกาศงานบุญไว้ที่ศาลาหมู่บ้าน",
+   "en": "Piya posted a notice about the merit-making festival at the village pavilion.",
+   "ko": "삐야는 마을 정자에 공덕 행사 안내문을 붙였어요.",
+   "blank": "แปะ",
+   "src": "made"
   }
  ],
  "w|โปรแกรม": [
@@ -42536,6 +42840,22 @@
    "en": "Fon feels attached to the tamarind tree in front of the house that her grandmother planted.",
    "ko": "폰은 할머니가 심은 집 앞 타마린드 나무에 정이 들었어요.",
    "blank": "ผูกพัน",
+   "src": "made"
+  }
+ ],
+ "w|ผู้กระทำผิด": [
+  {
+   "text": "หนังสือพิมพ์ของเอกไม่เปิดเผยชื่อผู้กระทำผิดที่ยังเป็นเยาวชน",
+   "en": "Ek's newspaper does not reveal the names of offenders who are still minors.",
+   "ko": "엑의 신문은 미성년 가해자의 이름을 공개하지 않아요.",
+   "blank": "ผู้กระทำผิด",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านช่วยกันตามหาผู้กระทำผิดที่ลอบตัดไม้ในป่าชุมชน",
+   "en": "The villagers worked together to track down the offenders who secretly logged the community forest.",
+   "ko": "주민들은 공동체 숲에서 몰래 나무를 벤 범인을 함께 찾아 나섰어요.",
+   "blank": "ผู้กระทำผิด",
    "src": "made"
   }
  ],
@@ -44123,6 +44443,22 @@
    "src": "made"
   }
  ],
+ "w|ฝึกหัด": [
+  {
+   "text": "เอกดูแลนักข่าวฝึกหัดสองคนที่เพิ่งเรียนจบ",
+   "en": "Ek looks after two trainee reporters who just graduated.",
+   "ko": "엑은 막 졸업한 수습기자 두 명을 맡고 있어요.",
+   "blank": "ฝึกหัด",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะฝึกหัดทอผ้ากับยายข้างบ้านทุกเย็น",
+   "en": "Piya practices weaving with the grandmother next door every evening.",
+   "ko": "삐야는 저녁마다 옆집 할머니에게 베 짜기를 배워요.",
+   "blank": "ฝึกหัด",
+   "src": "made"
+  }
+ ],
  "w|ฝึกอบรม": [
   {
    "text": "พนักงานใหม่ต้องฝึกอบรมเรื่องความปลอดภัยก่อนใช้เครื่องจักร",
@@ -45137,6 +45473,22 @@
    "en": "We're hungry.",
    "ko": "우리 배고파.",
    "blank": "พวกเรา"
+  }
+ ],
+ "w|พวง": [
+  {
+   "text": "เพื่อนร่วมงานซื้อพวงมาลัยมาไหว้ศาลพระภูมิหน้าสำนักพิมพ์",
+   "en": "A colleague bought a flower garland to offer at the spirit house in front of the publishing office.",
+   "ko": "동료는 출판사 앞 수호신 사당에 바칠 꽃목걸이를 사 왔어요.",
+   "blank": "พวง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะได้พวงกุญแจผ้าทอเป็นของฝากจากหมู่บ้าน",
+   "en": "Piya got a woven-cloth keychain as a souvenir from the village.",
+   "ko": "삐야는 마을 기념품으로 직물 열쇠고리를 받았어요.",
+   "blank": "พวง",
+   "src": "made"
   }
  ],
  "w|พอ": [
@@ -50051,6 +50403,22 @@
    "src": "made"
   }
  ],
+ "w|มูลเหตุ": [
+  {
+   "text": "เอกพยายามหามูลเหตุที่แท้จริงของไฟไหม้ตลาด",
+   "en": "Ek is trying to find the real cause of the market fire.",
+   "ko": "엑은 시장 화재의 진짜 원인을 찾으려 애쓰고 있어요.",
+   "blank": "มูลเหตุ",
+   "src": "made"
+  },
+  {
+   "text": "นักวิชาการมาศึกษามูลเหตุที่คนหนุ่มสาวย้ายออกจากหมู่บ้านของปิยะ",
+   "en": "Researchers came to study why young people are leaving Piya's village.",
+   "ko": "학자들이 젊은이들이 삐야네 마을을 떠나는 원인을 연구하러 왔어요.",
+   "blank": "มูลเหตุ",
+   "src": "made"
+  }
+ ],
  "w|เมฆ": [
   {
    "text": "มีเมฆขาวลอยอยู่",
@@ -51514,6 +51882,22 @@
    "en": "Suda wedged a brick against the cart's wheel to stop it rolling down the ramp.",
    "ko": "수다는 벽돌로 수레 바퀴를 받쳐 경사로에서 굴러가지 않게 했어요.",
    "blank": "ยัน",
+   "src": "made"
+  }
+ ],
+ "w|ยับยั้ง": [
+  {
+   "text": "เอกเขียนบทบรรณาธิการเรียกร้องให้รัฐยับยั้งโครงการสร้างเขื่อน",
+   "en": "Ek wrote an editorial calling on the state to halt the dam project.",
+   "ko": "엑은 정부에 댐 건설 사업을 중단하라고 촉구하는 사설을 썼어요.",
+   "blank": "ยับยั้ง",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านทำแนวกันไฟเพื่อยับยั้งไฟป่าไม่ให้ลามเข้าหมู่บ้าน",
+   "en": "The villagers made a firebreak to stop forest fires from spreading into the village.",
+   "ko": "주민들은 산불이 마을로 번지는 걸 막으려고 방화선을 만들었어요.",
+   "blank": "ยับยั้ง",
    "src": "made"
   }
  ],
@@ -53666,6 +54050,22 @@
    "en": "Suda has made sixty percent of her shots this season.",
    "ko": "수다는 이번 시즌 슛 성공률이 육십 퍼센트예요.",
    "blank": "ร้อยละ",
+   "src": "made"
+  }
+ ],
+ "w|ระฆัง": [
+  {
+   "text": "ทุกเช้า เอกได้ยินเสียงระฆังจากวัดข้างสำนักงาน",
+   "en": "Every morning, Ek hears the bell from the temple next to the office.",
+   "ko": "엑은 매일 아침 사무실 옆 절에서 울리는 종소리를 들어요.",
+   "blank": "ระฆัง",
+   "src": "made"
+  },
+  {
+   "text": "เสียงระฆังวัดบนดอยดังก้องไปทั่วหุบเขาตอนเย็น",
+   "en": "The sound of the mountain temple bell echoes across the valley in the evening.",
+   "ko": "저녁이면 산사의 종소리가 골짜기 전체에 울려 퍼져요.",
+   "blank": "ระฆัง",
    "src": "made"
   }
  ],
@@ -57543,6 +57943,22 @@
    "src": "made"
   }
  ],
+ "w|ลามก": [
+  {
+   "text": "เอกรายงานว่าศาลสั่งปิดเว็บไซต์ลามกหลายร้อยแห่ง",
+   "en": "Ek reported that a court ordered hundreds of pornographic websites shut down.",
+   "ko": "엑은 법원이 음란 사이트 수백 곳을 폐쇄하라고 명령했다고 보도했어요.",
+   "blank": "ลามก",
+   "src": "made"
+  },
+  {
+   "text": "ครูบนดอยขอให้ปิยะช่วยตั้งค่ากรองเว็บลามกในคอมพิวเตอร์ของโรงเรียน",
+   "en": "The mountain teacher asked Piya to help set up filters for obscene websites on the school computers.",
+   "ko": "산마을 선생님은 삐야에게 학교 컴퓨터에 음란 사이트 차단 설정을 해 달라고 부탁했어요.",
+   "blank": "ลามก",
+   "src": "made"
+  }
+ ],
  "w|ลาย": [
   {
    "text": "เพดานห้องประชุมใหญ่มีลายไม้แกะสลักสวยงาม",
@@ -58359,6 +58775,22 @@
    "blank": "ลูกสาว"
   }
  ],
+ "w|ลูกเสือ": [
+  {
+   "text": "เอกถ่ายรูปลูกเสือที่ช่วยเก็บขยะหลังงานวัด",
+   "en": "Ek photographed the scouts who helped pick up trash after the temple fair.",
+   "ko": "엑은 절 축제가 끝난 뒤 쓰레기를 줍는 보이스카우트를 사진에 담았어요.",
+   "blank": "ลูกเสือ",
+   "src": "made"
+  },
+  {
+   "text": "คณะลูกเสือจากในเมืองขึ้นมาตั้งค่ายใกล้บ้านปิยะ",
+   "en": "A scout troop from the city came up to camp near Piya's house.",
+   "ko": "도시에서 온 보이스카우트 단원들이 삐야의 집 근처에 야영지를 차렸어요.",
+   "blank": "ลูกเสือ",
+   "src": "made"
+  }
+ ],
  "w|ลูกหนี้": [
   {
    "text": "ข่าวพาดหัววันนี้เป็นเรื่องลูกหนี้นอกระบบที่ถูกทวงเงินอย่างรุนแรง",
@@ -59145,6 +59577,22 @@
    "blank": "และ"
   }
  ],
+ "w|โล่": [
+  {
+   "text": "เอกได้รับโล่ประกาศเกียรติคุณจากสมาคมนักข่าว",
+   "en": "Ek received an honorary plaque from the journalists' association.",
+   "ko": "엑은 기자 협회에서 공로패를 받았어요.",
+   "blank": "โล่",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะได้รับโล่จากอำเภอในฐานะอาสาสมัครดีเด่น",
+   "en": "Piya received a plaque from the district as an outstanding volunteer.",
+   "ko": "삐야는 우수 자원봉사자로 군청에서 상패를 받았어요.",
+   "blank": "โล่",
+   "src": "made"
+  }
+ ],
  "w|โลก": [
   {
    "text": "โลกกว้างจริง",
@@ -59220,6 +59668,22 @@
    "en": "Pranee was relieved to find the guest's wallet under the bed.",
    "ko": "프라니는 손님 지갑을 침대 밑에서 찾아서 안도했어요.",
    "blank": "โล่งอก",
+   "src": "made"
+  }
+ ],
+ "w|โลภ": [
+  {
+   "text": "เอกเปิดโปงนายทุนโลภที่รุกที่ดินสาธารณะ",
+   "en": "Ek exposed a greedy investor who encroached on public land.",
+   "ko": "엑은 공공 부지를 침범한 탐욕스러운 자본가를 폭로했어요.",
+   "blank": "โลภ",
+   "src": "made"
+  },
+  {
+   "text": "ผู้เฒ่าในหมู่บ้านสอนปิยะว่าอย่าโลภเก็บเห็ดจนหมดป่า",
+   "en": "The village elder taught Piya not to be greedy and pick the forest clean of mushrooms.",
+   "ko": "마을 어르신은 삐야에게 욕심내서 숲의 버섯을 싹쓸이하지 말라고 가르쳤어요.",
+   "blank": "โลภ",
    "src": "made"
   }
  ],
@@ -60224,6 +60688,22 @@
    "en": "In the year coffee prices fell, the village faced a crisis and many families had to go work in the city.",
    "ko": "커피값이 떨어진 해에 마을은 위기를 맞아 여러 집이 도시로 일하러 내려가야 했어요.",
    "blank": "วิกฤต",
+   "src": "made"
+  }
+ ],
+ "w|วิกฤตการณ์": [
+  {
+   "text": "เอกทำข่าววิกฤตการณ์น้ำมันแพงติดต่อกันหลายสัปดาห์",
+   "en": "Ek covered the high oil price crisis for several weeks in a row.",
+   "ko": "엑은 몇 주 연속으로 유가 급등 위기를 취재했어요.",
+   "blank": "วิกฤตการณ์",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงวิกฤตการณ์ภัยแล้ง ปิยะต้องหาบน้ำจากลำธารขึ้นมาใช้",
+   "en": "During the drought crisis, Piya had to carry water up from the stream.",
+   "ko": "가뭄 위기 때 삐야는 개울에서 물을 지고 올라와 써야 했어요.",
+   "blank": "วิกฤตการณ์",
    "src": "made"
   }
  ],
@@ -62351,6 +62831,22 @@
    "src": "made"
   }
  ],
+ "w|สนั่น": [
+  {
+   "text": "เสียงเชียร์ฟุตบอลจากร้านข้างล่างดังสนั่นจนเอกต้องปิดหน้าต่าง",
+   "en": "The football cheering from the shop downstairs was so deafening that Ek had to close the window.",
+   "ko": "아래층 가게의 축구 응원 소리가 너무 요란해서 엑은 창문을 닫아야 했어요.",
+   "blank": "สนั่น",
+   "src": "made"
+  },
+  {
+   "text": "ฟ้าร้องดังสนั่นหุบเขาจนปิยะสะดุ้งตื่น",
+   "en": "Thunder roared through the valley so loudly that Piya woke with a start.",
+   "ko": "천둥이 골짜기를 쩌렁쩌렁 울려서 삐야는 깜짝 놀라 깼어요.",
+   "blank": "สนั่น",
+   "src": "made"
+  }
+ ],
  "w|สนับสนุน": [
   {
    "text": "เทศบาลสนับสนุนให้ชาวบ้านปลูกต้นไม้ริมถนน",
@@ -62575,6 +63071,22 @@
    "en": "Check the car's condition before leaving.",
    "ko": "출발 전에 차 상태를 점검해.",
    "blank": "สภาพ"
+  }
+ ],
+ "w|สภาพการณ์": [
+  {
+   "text": "เอกรายงานสภาพการณ์หลังพายุผ่านไปจากพื้นที่จริง",
+   "en": "Ek reported on the situation after the storm from the scene itself.",
+   "ko": "엑은 폭풍이 지나간 뒤의 상황을 현장에서 직접 보도했어요.",
+   "blank": "สภาพการณ์",
+   "src": "made"
+  },
+  {
+   "text": "นายอำเภอขึ้นมาดูสภาพการณ์ของหมู่บ้านปิยะหลังดินสไลด์",
+   "en": "The district chief came up to inspect the situation in Piya's village after the landslide.",
+   "ko": "군수가 산사태 후 삐야네 마을 상황을 살피러 올라왔어요.",
+   "blank": "สภาพการณ์",
+   "src": "made"
   }
  ],
  "w|สภาพภูมิอากาศ": [
@@ -63316,6 +63828,22 @@
    "en": "Somsak and his friend take turns driving two hours each.",
    "ko": "솜싹과 친구는 두 시간씩 번갈아 운전해요.",
    "blank": "สลับ",
+   "src": "made"
+  }
+ ],
+ "w|สลับซับซ้อน": [
+  {
+   "text": "คดีที่เอกตามอยู่มีเส้นทางการเงินสลับซับซ้อนมาก",
+   "en": "The case Ek is following has a very complicated money trail.",
+   "ko": "엑이 쫓고 있는 사건은 돈의 흐름이 매우 복잡해요.",
+   "blank": "สลับซับซ้อน",
+   "src": "made"
+  },
+  {
+   "text": "ทางเดินขึ้นดอยสลับซับซ้อนจนคนนอกหลงง่าย",
+   "en": "The trails up the mountain are so intricate that outsiders get lost easily.",
+   "ko": "산으로 오르는 길은 무척 복잡해서 외지인은 쉽게 길을 잃어요.",
+   "blank": "สลับซับซ้อน",
    "src": "made"
   }
  ],
@@ -64360,6 +64888,22 @@
    "en": "In the final scene, the villain is killed in the middle of the stage.",
    "ko": "마지막 장면에서 악당은 무대 한가운데에서 살해당해요.",
    "blank": "สังหาร",
+   "src": "made"
+  }
+ ],
+ "w|สัญชาตญาณ": [
+  {
+   "text": "สัญชาตญาณนักข่าวบอกเอกว่าเรื่องนี้มีอะไรมากกว่าที่เห็น",
+   "en": "Ek's reporter's instinct told him there was more to this story than met the eye.",
+   "ko": "기자의 직감은 엑에게 이 일에 보이는 것 이상이 있다고 말했어요.",
+   "blank": "สัญชาตญาณ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเชื่อสัญชาตญาณแล้วพาครอบครัวออกจากบ้านก่อนดินถล่ม",
+   "en": "Piya trusted his instinct and took his family out of the house before the landslide.",
+   "ko": "삐야는 직감을 믿고 산사태 전에 가족을 데리고 집을 나왔어요.",
+   "blank": "สัญชาตญาณ",
    "src": "made"
   }
  ],
@@ -65426,6 +65970,22 @@
    "en": "Chan left her things at the bag-drop tent before starting the run.",
    "ko": "짠은 달리기 전에 물품 보관 텐트에 물건을 맡겼어요.",
    "blank": "สิ่งของ",
+   "src": "made"
+  }
+ ],
+ "w|สิ่งใด": [
+  {
+   "text": "เอกถือหลักว่าไม่ลงข่าวสิ่งใดที่ยังไม่ได้ตรวจสอบ",
+   "en": "Ek holds to the rule of not publishing anything that hasn't been verified.",
+   "ko": "엑은 확인하지 않은 것은 어떤 것도 기사로 싣지 않는다는 원칙을 지켜요.",
+   "blank": "สิ่งใด",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะบอกว่าไม่มีสิ่งใดสวยไปกว่าทะเลหมอกยามเช้า",
+   "en": "Piya says nothing is more beautiful than the sea of mist in the morning.",
+   "ko": "삐야는 아침 운해보다 아름다운 건 없다고 해요.",
+   "blank": "สิ่งใด",
    "src": "made"
   }
  ],
@@ -67099,6 +67659,22 @@
    "en": "Turn on the light for some brightness.",
    "ko": "밝게 하려고 불을 켜.",
    "blank": "แสง"
+  }
+ ],
+ "w|แสงไฟ": [
+  {
+   "text": "แสงไฟในสำนักงานหนังสือพิมพ์ยังสว่างอยู่จนเกือบเช้า",
+   "en": "The lights in the newspaper office stayed on until almost morning.",
+   "ko": "신문사 사무실 불빛은 거의 아침까지 켜져 있었어요.",
+   "blank": "แสงไฟ",
+   "src": "made"
+  },
+  {
+   "text": "จากบ้านปิยะมองเห็นแสงไฟของเมืองระยิบระยับอยู่ไกลๆ",
+   "en": "From Piya's house you can see the city lights twinkling far away.",
+   "ko": "삐야의 집에서는 멀리 도시 불빛이 반짝이는 게 보여요.",
+   "blank": "แสงไฟ",
+   "src": "made"
   }
  ],
  "w|แสงสว่าง": [
@@ -69515,6 +70091,22 @@
    "src": "made"
   }
  ],
+ "w|หลุดพ้น": [
+  {
+   "text": "เอกเขียนสกู๊ปเรื่องชายที่หลุดพ้นจากวงจรหนี้นอกระบบ",
+   "en": "Ek wrote a feature about a man who broke free from the cycle of loan-shark debt.",
+   "ko": "엑은 사채의 굴레에서 벗어난 남자에 관한 특집 기사를 썼어요.",
+   "blank": "หลุดพ้น",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเล่าว่าการนั่งสมาธิกับพระบนดอยช่วยให้หลุดพ้นจากความเครียด",
+   "en": "Piya says meditating with the monks on the mountain helped him break free from stress.",
+   "ko": "삐야는 산에서 스님과 명상한 덕에 스트레스에서 벗어났다고 해요.",
+   "blank": "หลุดพ้น",
+   "src": "made"
+  }
+ ],
  "w|หลุม": [
   {
    "text": "นักโบราณคดีพบเครื่องมือหินในหลุมขุดค้นใกล้พิพิธภัณฑ์",
@@ -70622,6 +71214,22 @@
    "en": "One lab mouse vanished from its cage, so Piya had to search the whole room.",
    "ko": "실험용 쥐 한 마리가 우리에서 사라져서 삐야는 방을 다 뒤져야 했어요.",
    "blank": "หายตัว",
+   "src": "made"
+  }
+ ],
+ "w|หายนะ": [
+  {
+   "text": "เอกเขียนบทวิเคราะห์ว่าน้ำท่วมใหญ่เป็นหายนะของเกษตรกรภาคกลาง",
+   "en": "Ek wrote an analysis saying the great flood was a disaster for farmers in the central region.",
+   "ko": "엑은 대홍수가 중부 농민들에게 재앙이었다는 분석 기사를 썼어요.",
+   "blank": "หายนะ",
+   "src": "made"
+  },
+  {
+   "text": "ไฟป่าเมื่อหลายปีก่อนเป็นหายนะที่ปิยะไม่มีวันลืม",
+   "en": "The forest fire years ago was a catastrophe Piya will never forget.",
+   "ko": "몇 년 전 산불은 삐야가 결코 잊지 못할 재앙이었어요.",
+   "blank": "หายนะ",
    "src": "made"
   }
  ],
@@ -71789,6 +72397,22 @@
    "en": "She wears a ring on her middle finger.",
    "ko": "그녀는 중지에 반지를 껴.",
    "blank": "แหวน"
+  }
+ ],
+ "w|โห่": [
+  {
+   "text": "ผู้ชุมนุมโห่ไล่นักการเมืองตอนเอกไปทำข่าว",
+   "en": "The protesters booed a politician away while Ek was covering the story.",
+   "ko": "엑이 취재하러 갔을 때 시위대가 정치인에게 야유를 퍼부었어요.",
+   "blank": "โห่",
+   "src": "made"
+  },
+  {
+   "text": "เด็กๆ โห่ร้องดีใจเมื่อไฟฟ้าเข้าถึงหมู่บ้าน",
+   "en": "The children cheered when electricity reached the village.",
+   "ko": "마을에 전기가 들어오자 아이들이 환호성을 질렀어요.",
+   "blank": "โห่",
+   "src": "made"
   }
  ],
  "w|โหดร้าย": [
@@ -75060,6 +75684,22 @@
    "en": "Fon put her chest X-ray film in an envelope on the luggage rack.",
    "ko": "폰은 폐 엑스레이 필름을 봉투에 넣어 짐칸에 올려 두었어요.",
    "blank": "เอกซเรย์",
+   "src": "made"
+  }
+ ],
+ "w|เอกภาพ": [
+  {
+   "text": "บรรณาธิการขอให้ทีมข่าวมีเอกภาพในการเสนอข่าว",
+   "en": "The editor asked the news team to be united in how they present the news.",
+   "ko": "편집장은 보도 방향에 일관성을 갖추라고 취재팀에 당부했어요.",
+   "blank": "เอกภาพ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะบอกว่าหมู่บ้านอยู่รอดได้เพราะชาวบ้านมีเอกภาพ",
+   "en": "Piya says the village survives because the villagers are united.",
+   "ko": "삐야는 주민들이 하나로 뭉쳐 있어서 마을이 버틸 수 있다고 해요.",
+   "blank": "เอกภาพ",
    "src": "made"
   }
  ],
