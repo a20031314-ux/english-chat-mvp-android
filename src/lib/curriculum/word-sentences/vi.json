@@ -531,6 +531,22 @@
    "blank": "an toàn"
   }
  ],
+ "w|an toàn giao thông": [
+  {
+   "text": "Tháng này bảo tàng mở thêm một góc tương tác về an toàn giao thông cho trẻ em.",
+   "en": "This month the museum opened an interactive corner on road safety for children.",
+   "ko": "이번 달 박물관은 아이들을 위한 교통안전 체험 코너를 새로 열었어요.",
+   "blank": "an toàn giao thông",
+   "src": "made"
+  },
+  {
+   "text": "Khi quay cảnh xe máy trên phố, đoàn phải có người lo an toàn giao thông.",
+   "en": "When shooting motorbike scenes on the street, the crew has to have someone in charge of traffic safety.",
+   "ko": "거리에서 오토바이 장면을 찍을 때는 교통안전을 맡을 사람이 있어야 해요.",
+   "blank": "an toàn giao thông",
+   "src": "made"
+  }
+ ],
  "w|ăn tối": [
   {
    "text": "Tối nay ăn tối ở nhà mình nhé.",
@@ -4599,6 +4615,22 @@
    "src": "made"
   }
  ],
+ "w|biến động": [
+  {
+   "text": "Long giới thiệu cho khách giai đoạn đất nước biến động mạnh vào đầu thế kỷ trước.",
+   "en": "Long tells visitors about the period early last century when the country went through great upheaval.",
+   "ko": "롱은 관람객에게 지난 세기 초 나라가 크게 요동치던 시기를 소개해요.",
+   "blank": "biến động",
+   "src": "made"
+  },
+  {
+   "text": "Giá thuê thiết bị biến động liên tục nên nhà sản xuất rất đau đầu.",
+   "en": "Equipment rental prices keep fluctuating, which gives the producer a headache.",
+   "ko": "장비 대여료가 계속 출렁여서 제작자는 골치가 아파요.",
+   "blank": "biến động",
+   "src": "made"
+  }
+ ],
  "w|biên giới": [
   {
    "text": "Chúng tôi đi qua biên giới bằng xe buýt.",
@@ -6585,6 +6617,22 @@
    "en": "Selling online helps save on shop space.",
    "ko": "온라인 장사는 매장 비용을 아껴 줘.",
    "blank": "Buôn bán"
+  }
+ ],
+ "w|buôn lậu": [
+  {
+   "text": "Chiếc bình gốm này từng bị thu giữ trong một đường dây buôn lậu cổ vật.",
+   "en": "This ceramic vase was once seized from an antiques smuggling ring.",
+   "ko": "이 도자기 병은 한때 골동품 밀수 조직에서 압수된 거예요.",
+   "blank": "buôn lậu",
+   "src": "made"
+  },
+  {
+   "text": "Linh vào vai một nữ cảnh sát chuyên điều tra buôn lậu ở cảng biển.",
+   "en": "Linh plays a policewoman who investigates smuggling at a seaport.",
+   "ko": "린은 항구에서 밀수를 수사하는 여경 역을 맡았어요.",
+   "blank": "buôn lậu",
+   "src": "made"
   }
  ],
  "w|buồn ngủ": [
@@ -9497,6 +9545,22 @@
    "blank": "chăm sóc"
   }
  ],
+ "w|chạm trán": [
+  {
+   "text": "Bức tranh tái hiện cảnh hai đạo quân chạm trán bên bờ sông.",
+   "en": "The painting recreates the scene of two armies clashing on the riverbank.",
+   "ko": "그 그림은 두 군대가 강가에서 맞닥뜨리는 장면을 재현해요.",
+   "blank": "chạm trán",
+   "src": "made"
+  },
+  {
+   "text": "Trong cảnh cao trào, nhân vật của Linh chạm trán kẻ thù trên mái nhà.",
+   "en": "In the climax, Linh's character confronts her enemy on the rooftop.",
+   "ko": "절정 장면에서 린의 인물은 지붕 위에서 원수와 맞닥뜨려요.",
+   "blank": "chạm trán",
+   "src": "made"
+  }
+ ],
  "w|chậm trễ": [
   {
    "text": "Hùng hẹn ra chợ lúc bảy giờ, nhưng xe buýt chậm trễ nên đến muộn nửa tiếng.",
@@ -10755,6 +10819,22 @@
    "ko": "문제는 비용보다 시간이에요.",
    "blank": "chi phí",
    "src": "tatoeba:9393190/dotheduyet1999 en:323911/CK"
+  }
+ ],
+ "w|chi phối": [
+  {
+   "text": "Ngân sách hằng năm chi phối gần như mọi kế hoạch của Long.",
+   "en": "The annual budget governs almost every plan Long makes.",
+   "ko": "매년 예산이 롱의 거의 모든 계획을 좌우해요.",
+   "blank": "chi phối",
+   "src": "made"
+  },
+  {
+   "text": "Thời tiết chi phối toàn bộ lịch quay ngoài trời.",
+   "en": "The weather governs the entire outdoor shooting schedule.",
+   "ko": "날씨가 야외 촬영 일정 전체를 좌우해요.",
+   "blank": "chi phối",
+   "src": "made"
   }
  ],
  "w|chỉ tay": [
@@ -12657,6 +12737,22 @@
    "en": "I'm getting dinner ready.",
    "ko": "저녁 준비하고 있어.",
    "blank": "chuẩn bị"
+  }
+ ],
+ "w|chuẩn mực": [
+  {
+   "text": "Bộ áo dài trưng bày cho thấy chuẩn mực cái đẹp đã thay đổi qua từng thời kỳ.",
+   "en": "The áo dài collection shows how the standard of beauty changed across eras.",
+   "ko": "전시된 아오자이들은 아름다움의 기준이 시대마다 바뀌었다는 걸 보여 줘요.",
+   "blank": "chuẩn mực",
+   "src": "made"
+  },
+  {
+   "text": "Linh muốn vai diễn phá vỡ những chuẩn mực cũ về hình ảnh người phụ nữ.",
+   "en": "Linh wants the role to break the old norms about the image of women.",
+   "ko": "린은 이 배역이 여성상에 대한 낡은 기준을 깨길 바라요.",
+   "blank": "chuẩn mực",
+   "src": "made"
   }
  ],
  "w|chúc": [
@@ -14837,6 +14933,22 @@
    "src": "made"
   }
  ],
+ "w|công cộng": [
+  {
+   "text": "Long muốn bảo tàng thành một không gian công cộng ai cũng có thể ghé.",
+   "en": "Long wants the museum to be a public space anyone can drop by.",
+   "ko": "롱은 박물관이 누구나 들를 수 있는 공공 공간이 되길 바라요.",
+   "blank": "công cộng",
+   "src": "made"
+  },
+  {
+   "text": "Đoàn phim phải xin phép trước khi quay ở công viên và các nơi công cộng.",
+   "en": "The crew must get permission before filming in parks and other public places.",
+   "ko": "촬영팀은 공원 같은 공공장소에서 찍기 전에 허가를 받아야 해요.",
+   "blank": "công cộng",
+   "src": "made"
+  }
+ ],
  "w|công cụ": [
   {
    "text": "Tôi thậm chí còn không sở hữu công cụ nào.",
@@ -15785,6 +15897,22 @@
    "ko": "독감이 퍼지고 있어요.",
    "blank": "cúm",
    "src": "tatoeba:13896386/leucammieuvu en:13890976/frpzzd"
+  }
+ ],
+ "w|cùn": [
+  {
+   "text": "Lưỡi rìu đá đã cùn sau hàng nghìn năm nằm dưới đất.",
+   "en": "The stone axe blade has gone blunt after thousands of years underground.",
+   "ko": "돌도끼 날은 수천 년 땅속에 묻혀 있어서 무뎌졌어요.",
+   "blank": "cùn",
+   "src": "made"
+  },
+  {
+   "text": "Con dao trong cảnh bếp đã được mài cùn để không ai bị đứt tay.",
+   "en": "The knife in the kitchen scene had been dulled so no one would cut themselves.",
+   "ko": "부엌 장면의 칼은 아무도 손을 베지 않게 무디게 갈아 놓았어요.",
+   "blank": "cùn",
+   "src": "made"
   }
  ],
  "w|cùng": [
@@ -17219,6 +17347,22 @@
    "blank": "đàn ông"
   }
  ],
+ "w|dân sự": [
+  {
+   "text": "Nhân viên tư vấn dân sự của tòa án từng đến mượn hồ sơ lưu trữ.",
+   "en": "A civil affairs adviser from the court once came to borrow archived records.",
+   "ko": "법원의 민사 담당 상담원이 보관 기록을 빌리러 온 적이 있어요.",
+   "blank": "dân sự",
+   "src": "made"
+  },
+  {
+   "text": "Cảnh tòa xử vụ tranh chấp đất đai dân sự được quay trong một hội trường cũ.",
+   "en": "The scene of the court hearing the civil land dispute was shot in an old hall.",
+   "ko": "민사 토지 분쟁 재판 장면은 낡은 강당에서 찍었어요.",
+   "blank": "dân sự",
+   "src": "made"
+  }
+ ],
  "w|dân tộc": [
   {
    "text": "Người Anh là dân tộc lịch sự.",
@@ -17874,6 +18018,22 @@
    "en": "Trang has recently been trying to grow strawberries in a greenhouse.",
    "ko": "최근 짱은 비닐하우스에서 딸기를 길러 보고 있어요.",
    "blank": "dạo gần đây",
+   "src": "made"
+  }
+ ],
+ "w|đạo lý": [
+  {
+   "text": "Bộ sưu tập ca dao trên tường dạy về đạo lý uống nước nhớ nguồn.",
+   "en": "The folk verse collection on the wall teaches the moral of remembering one's roots.",
+   "ko": "벽에 걸린 민요 모음은 근본을 잊지 말라는 도리를 가르쳐요.",
+   "blank": "đạo lý",
+   "src": "made"
+  },
+  {
+   "text": "Kịch bản đặt ra câu hỏi về đạo lý giữa tình thân và công lý.",
+   "en": "The script raises questions about morality between family ties and justice.",
+   "ko": "대본은 가족의 정과 정의 사이의 도리에 대해 질문을 던져요.",
+   "blank": "đạo lý",
    "src": "made"
   }
  ],
@@ -23891,6 +24051,22 @@
    "src": "made"
   }
  ],
+ "w|đụng phải": [
+  {
+   "text": "Đang mải đọc chú thích, cậu bé đụng phải cột đá giữa phòng.",
+   "en": "Absorbed in reading the caption, the boy bumped into the stone pillar in the middle of the room.",
+   "ko": "설명문을 읽느라 정신이 팔린 소년이 방 한가운데 돌기둥에 부딪쳤어요.",
+   "blank": "đụng phải",
+   "src": "made"
+  },
+  {
+   "text": "Trong lúc tập thoại, Linh lùi lại và đụng phải giá đèn.",
+   "en": "While rehearsing lines, Linh stepped back and bumped into a light stand.",
+   "ko": "대사 연습 중에 린이 뒤로 물러서다 조명 스탠드에 부딪쳤어요.",
+   "blank": "đụng phải",
+   "src": "made"
+  }
+ ],
  "w|đúng rồi": [
   {
    "text": "Đúng rồi, chính là chỗ đó.",
@@ -25077,6 +25253,22 @@
    "blank": "Gặp mặt"
   }
  ],
+ "w|gặp phải": [
+  {
+   "text": "Khi chuyển kho, nhóm của Long gặp phải nhiều thùng hồ sơ không có nhãn.",
+   "en": "When moving the storeroom, Long's team ran into many boxes of files with no labels.",
+   "ko": "창고를 옮길 때 롱의 팀은 이름표 없는 서류 상자를 잔뜩 맞닥뜨렸어요.",
+   "blank": "gặp phải",
+   "src": "made"
+  },
+  {
+   "text": "Đoàn phim gặp phải mưa bão nên phải hoãn quay cả tuần.",
+   "en": "The crew ran into a storm and had to postpone filming for a whole week.",
+   "ko": "촬영팀은 폭풍우를 만나 일주일 내내 촬영을 미뤄야 했어요.",
+   "blank": "gặp phải",
+   "src": "made"
+  }
+ ],
  "w|gấp quần áo": [
   {
    "text": "Vợ Quang gấp quần áo gọn gàng xếp vào ba lô cho cả nhà.",
@@ -25228,6 +25420,22 @@
    "en": "Linh uses a long stick to hook down the box of noodles from the high shelf.",
    "ko": "린은 긴 막대로 높은 선반의 라면 상자를 끌어내려요.",
    "blank": "gậy",
+   "src": "made"
+  }
+ ],
+ "w|gây ảnh hưởng": [
+  {
+   "text": "Long giải thích rằng ánh sáng mạnh có thể gây ảnh hưởng đến màu của tranh cổ.",
+   "en": "Long explained that strong light can affect the colors of old paintings.",
+   "ko": "롱은 강한 빛이 옛 그림의 색에 영향을 줄 수 있다고 설명했어요.",
+   "blank": "gây ảnh hưởng",
+   "src": "made"
+  },
+  {
+   "text": "Tiếng máy phát điện có thể gây ảnh hưởng đến chất lượng âm thanh.",
+   "en": "The noise of the generator can affect the sound quality.",
+   "ko": "발전기 소리가 음질에 영향을 줄 수 있어요.",
+   "blank": "gây ảnh hưởng",
    "src": "made"
   }
  ],
@@ -32571,6 +32779,22 @@
    "blank": "Kể từ"
   }
  ],
+ "w|kể từ khi": [
+  {
+   "text": "Long đỡ vất vả hẳn kể từ khi bảo tàng bán vé điện tử.",
+   "en": "Long has had a much easier time since the museum started selling electronic tickets.",
+   "ko": "박물관이 전자 티켓을 팔기 시작한 뒤로 롱은 훨씬 덜 힘들어요.",
+   "blank": "kể từ khi",
+   "src": "made"
+  },
+  {
+   "text": "Linh nhận được rất nhiều lời mời kể từ khi bộ phim đầu tay thành công.",
+   "en": "Linh has received a lot of offers since her first film's success.",
+   "ko": "첫 영화가 성공한 뒤로 린은 출연 제의를 많이 받았어요.",
+   "blank": "kể từ khi",
+   "src": "made"
+  }
+ ],
  "w|kẻ xấu": [
   {
    "text": "Minh dặn bảo vệ khóa kho cẩn thận kẻo kẻ xấu lẻn vào lấy sắt thép.",
@@ -33236,6 +33460,22 @@
    "en": "He reported the stolen car to the police.",
    "ko": "그는 차를 잃어버린 걸 경찰에 신고했어요.",
    "blank": "khai báo",
+   "src": "made"
+  }
+ ],
+ "w|khai thác": [
+  {
+   "text": "Bảo tàng của Long đang khai thác kho tư liệu cũ để làm triển lãm mới.",
+   "en": "Long's museum is drawing on its old archives to put together a new exhibition.",
+   "ko": "롱의 박물관은 새 전시를 만들려고 옛 자료 창고를 활용하고 있어요.",
+   "blank": "khai thác",
+   "src": "made"
+  },
+  {
+   "text": "Đạo diễn muốn khai thác vẻ đẹp hoang sơ của vùng núi trong phim mới.",
+   "en": "The director wants to make use of the untouched beauty of the mountains in the new film.",
+   "ko": "감독은 새 영화에서 산악 지대의 때 묻지 않은 아름다움을 살리고 싶어 해요.",
+   "blank": "khai thác",
    "src": "made"
   }
  ],
@@ -38845,6 +39085,22 @@
    "src": "made"
   }
  ],
+ "w|lời đe dọa": [
+  {
+   "text": "Long từng nhận được lời đe dọa từ một kẻ đòi lấy lại món cổ vật.",
+   "en": "Long once received a threat from someone demanding the return of an antique.",
+   "ko": "롱은 골동품을 돌려 달라는 사람에게서 협박을 받은 적이 있어요.",
+   "blank": "lời đe dọa",
+   "src": "made"
+  },
+  {
+   "text": "Linh nhận được lời đe dọa trên mạng nên công ty phải thuê vệ sĩ.",
+   "en": "Linh received threats online, so the company had to hire a bodyguard.",
+   "ko": "린이 인터넷에서 협박을 받아서 회사가 경호원을 붙였어요.",
+   "blank": "lời đe dọa",
+   "src": "made"
+  }
+ ],
  "w|lối đi": [
   {
    "text": "Tuấn tả lại lối đi nhỏ dẫn ra bờ sông mà hai đứa hay đạp xe qua.",
@@ -39645,6 +39901,22 @@
    "blank": "Luật"
   }
  ],
+ "w|luật lệ": [
+  {
+   "text": "Long kể về những luật lệ khắt khe của triều đình ngày xưa.",
+   "en": "Long talks about the strict laws of the royal court in the old days.",
+   "ko": "롱은 옛 왕실의 엄격한 법도에 대해 이야기해요.",
+   "blank": "luật lệ",
+   "src": "made"
+  },
+  {
+   "text": "Diễn viên mới phải học thuộc luật lệ của đoàn: không ai được đến muộn.",
+   "en": "New actors have to learn the crew's rules by heart: nobody may be late.",
+   "ko": "신인 배우는 촬영팀 규칙을 외워야 해요, 아무도 늦으면 안 된다는 것.",
+   "blank": "luật lệ",
+   "src": "made"
+  }
+ ],
  "w|luật pháp": [
   {
    "text": "Đạo diễn muốn vở kịch khiến khán giả nghĩ về luật pháp và công lý.",
@@ -39823,6 +40095,22 @@
    "en": "Carrying a heavy backpack hurts the back.",
    "ko": "무거운 배낭이 허리를 아프게 해.",
    "blank": "lưng"
+  }
+ ],
+ "w|lũng đoạn": [
+  {
+   "text": "Khu cuối kể chuyện các thương nhân nước ngoài từng lũng đoạn thị trường tơ lụa.",
+   "en": "The last section tells how foreign merchants once monopolized the silk market.",
+   "ko": "마지막 구역은 외국 상인들이 한때 비단 시장을 독점했던 이야기를 해요.",
+   "blank": "lũng đoạn",
+   "src": "made"
+  },
+  {
+   "text": "Nhân vật phản diện là một ông trùm lũng đoạn nguồn cung cát xây dựng.",
+   "en": "The villain is a tycoon who monopolizes the supply of construction sand.",
+   "ko": "악역은 건설용 모래 공급을 독점하는 거물이에요.",
+   "blank": "lũng đoạn",
+   "src": "made"
   }
  ],
  "w|lung lay": [
@@ -40353,6 +40641,22 @@
    "en": "The demons in the movie are just costumes.",
    "ko": "영화 속 귀신은 분장일 뿐이야.",
    "blank": "Ma quỷ"
+  }
+ ],
+ "w|ma túy": [
+  {
+   "text": "Khu trưng bày về lịch sử chống ma túy thu hút nhiều học sinh.",
+   "en": "The exhibit on the history of the fight against drugs draws many students.",
+   "ko": "마약 퇴치의 역사를 다룬 전시 구역에 학생들이 많이 와요.",
+   "blank": "ma túy",
+   "src": "made"
+  },
+  {
+   "text": "Đạo cụ trong cảnh khám xét chỉ là bột mì giả làm ma túy.",
+   "en": "The prop in the search scene is just flour pretending to be drugs.",
+   "ko": "수색 장면의 소품은 마약인 척한 밀가루일 뿐이에요.",
+   "blank": "ma túy",
+   "src": "made"
   }
  ],
  "w|mắc": [
@@ -46635,6 +46939,22 @@
    "src": "made"
   }
  ],
+ "w|ngoằn ngoèo": [
+  {
+   "text": "Bản đồ cổ vẽ con sông ngoằn ngoèo chảy qua kinh thành.",
+   "en": "The ancient map shows the river winding through the capital.",
+   "ko": "옛 지도에는 구불구불한 강이 도성을 지나 흘러요.",
+   "blank": "ngoằn ngoèo",
+   "src": "made"
+  },
+  {
+   "text": "Xe chở đạo cụ phải bò qua con đèo ngoằn ngoèo suốt hai tiếng.",
+   "en": "The prop truck had to crawl over the winding mountain pass for two hours.",
+   "ko": "소품 트럭은 꼬불꼬불한 고갯길을 두 시간 내내 기어올라야 했어요.",
+   "blank": "ngoằn ngoèo",
+   "src": "made"
+  }
+ ],
  "w|ngốc": [
   {
    "text": "Đừng có ngốc thế chứ.",
@@ -47137,6 +47457,22 @@
    "en": "Smelling freshly baked bread feels lovely.",
    "ko": "갓 구운 빵 냄새를 맡으니 정말 좋아.",
    "blank": "Ngửi"
+  }
+ ],
+ "w|ngửi thấy": [
+  {
+   "text": "Bước vào kho, Long ngửi thấy mùi giấy cũ và long não.",
+   "en": "Stepping into the storeroom, Long smelled old paper and camphor.",
+   "ko": "창고에 들어서자 롱은 오래된 종이와 장뇌 냄새를 맡았어요.",
+   "blank": "ngửi thấy",
+   "src": "made"
+  },
+  {
+   "text": "Vừa mở cửa xe, Linh đã ngửi thấy mùi khói từ cảnh cháy nhà.",
+   "en": "As soon as she opened the car door, Linh smelled smoke from the house-fire scene.",
+   "ko": "차 문을 열자마자 린은 집 화재 장면에서 나는 연기 냄새를 맡았어요.",
+   "blank": "ngửi thấy",
+   "src": "made"
   }
  ],
  "w|ngưng": [
@@ -51243,6 +51579,22 @@
    "src": "made"
   }
  ],
+ "w|nội quy": [
+  {
+   "text": "Ngay cửa vào có treo bảng nội quy bằng ba thứ tiếng.",
+   "en": "Right at the entrance hangs a list of rules in three languages.",
+   "ko": "입구에 세 가지 언어로 된 관람 규칙 안내판이 걸려 있어요.",
+   "blank": "nội quy",
+   "src": "made"
+  },
+  {
+   "text": "Trợ lý đọc to nội quy trường quay cho các diễn viên quần chúng.",
+   "en": "The assistant read the studio rules aloud to the extras.",
+   "ko": "조수가 보조 출연자들에게 촬영장 규칙을 큰 소리로 읽어 줬어요.",
+   "blank": "nội quy",
+   "src": "made"
+  }
+ ],
  "w|nỗi sợ": [
   {
    "text": "Tôi thấy nỗi sợ trong mắt của bạn.",
@@ -54973,6 +55325,22 @@
    "src": "made"
   }
  ],
+ "w|phục hồi": [
+  {
+   "text": "Các chuyên gia mất gần một năm để phục hồi bức tranh lụa bị ẩm mốc.",
+   "en": "The experts spent nearly a year restoring the mildewed silk painting.",
+   "ko": "전문가들은 곰팡이 핀 비단 그림을 복원하는 데 거의 일 년을 썼어요.",
+   "blank": "phục hồi",
+   "src": "made"
+  },
+  {
+   "text": "Linh mất hai tháng mới phục hồi giọng sau cảnh hét trong mưa.",
+   "en": "It took Linh two months to recover her voice after the scene of screaming in the rain.",
+   "ko": "빗속에서 소리 지르는 장면 뒤로 린은 목소리를 회복하는 데 두 달이 걸렸어요.",
+   "blank": "phục hồi",
+   "src": "made"
+  }
+ ],
  "w|phúc lợi": [
   {
    "text": "Minh hỏi thầy vì sao giáo viên ở trường tư lại có phúc lợi khác trường công.",
@@ -58467,6 +58835,22 @@
    "src": "tatoeba:13340213/leucammieuvu en:9152492/CK"
   }
  ],
+ "w|sắc": [
+  {
+   "text": "Thanh gươm trong tủ kính vẫn còn sắc dù đã qua mấy trăm năm.",
+   "en": "The sword in the glass case is still sharp after several hundred years.",
+   "ko": "유리장 속 검은 몇백 년이 지났는데도 아직 날카로워요.",
+   "blank": "sắc",
+   "src": "made"
+  },
+  {
+   "text": "Đạo diễn yêu cầu đường kẻ mắt của Linh phải thật sắc.",
+   "en": "The director demanded that Linh's eyeliner be very sharp.",
+   "ko": "감독은 린의 아이라인을 아주 날렵하게 그리라고 했어요.",
+   "blank": "sắc",
+   "src": "made"
+  }
+ ],
  "w|sạc": [
   {
    "text": "Những viên pin đó có sạc được không?",
@@ -58480,6 +58864,22 @@
    "en": "I need to charge my phone.",
    "ko": "휴대폰 충전해야 해요.",
    "blank": "sạc",
+   "src": "made"
+  }
+ ],
+ "w|sắc bén": [
+  {
+   "text": "Bài thuyết minh của Long ngắn gọn mà sắc bén, khách nào nghe cũng nhớ.",
+   "en": "Long's commentary is short but incisive; every visitor who hears it remembers it.",
+   "ko": "롱의 해설은 짧지만 날카로워서 듣는 사람마다 기억해요.",
+   "blank": "sắc bén",
+   "src": "made"
+  },
+  {
+   "text": "Các nhà phê bình khen lời thoại sắc bén của biên kịch trẻ.",
+   "en": "Critics praised the young screenwriter's sharp dialogue.",
+   "ko": "평론가들은 젊은 각본가의 날카로운 대사를 칭찬했어요.",
+   "blank": "sắc bén",
    "src": "made"
   }
  ],
@@ -60049,6 +60449,22 @@
    "en": "The notebook is under the stack of books on the desk.",
    "ko": "수첩이 책상 위 책더미 아래에 있어.",
    "blank": "Sổ tay"
+  }
+ ],
+ "w|sờ thấy": [
+  {
+   "text": "Đeo găng tay vào, Long vẫn sờ thấy những vết khắc nhỏ trên thanh kiếm.",
+   "en": "Even with gloves on, Long could still feel the small engravings on the sword.",
+   "ko": "장갑을 꼈는데도 롱은 칼에 새겨진 작은 무늬를 손끝으로 느꼈어요.",
+   "blank": "sờ thấy",
+   "src": "made"
+  },
+  {
+   "text": "Trong cảnh tối om, Linh phải sờ thấy tay nắm cửa mới mở được.",
+   "en": "In the pitch-dark scene, Linh had to feel for the door handle to open it.",
+   "ko": "캄캄한 장면에서 린은 손으로 문손잡이를 더듬어 찾아야 열 수 있었어요.",
+   "blank": "sờ thấy",
+   "src": "made"
   }
  ],
  "w|sở thích": [
@@ -61797,6 +62213,38 @@
    "src": "made"
   }
  ],
+ "w|sụt giảm": [
+  {
+   "text": "Mùa dịch năm ấy, lượng vé bán ra sụt giảm hơn một nửa.",
+   "en": "During the pandemic that year, ticket sales fell by more than half.",
+   "ko": "그해 전염병이 돌 때 표 판매량이 절반 넘게 뚝 떨어졌어요.",
+   "blank": "sụt giảm",
+   "src": "made"
+  },
+  {
+   "text": "Nhiệt độ trên núi sụt giảm bất thường khiến cả đoàn phải mặc thêm áo.",
+   "en": "The temperature on the mountain dropped unusually, so the whole crew had to put on more layers.",
+   "ko": "산 위 기온이 갑자기 뚝 떨어져서 촬영팀 모두 옷을 껴입었어요.",
+   "blank": "sụt giảm",
+   "src": "made"
+  }
+ ],
+ "w|suy giảm": [
+  {
+   "text": "Long lo rằng số khách trẻ đến bảo tàng đang suy giảm dần.",
+   "en": "Long worries that the number of young visitors to the museum is gradually declining.",
+   "ko": "롱은 박물관을 찾는 젊은 관람객이 점점 줄어드는 게 걱정이에요.",
+   "blank": "suy giảm",
+   "src": "made"
+  },
+  {
+   "text": "Sau ba tuần quay đêm, sức khỏe của Linh suy giảm rõ rệt.",
+   "en": "After three weeks of night shoots, Linh's health clearly declined.",
+   "ko": "삼 주 동안 밤 촬영을 하고 나서 린의 건강이 눈에 띄게 나빠졌어요.",
+   "blank": "suy giảm",
+   "src": "made"
+  }
+ ],
  "w|suy nghĩ": [
   {
    "text": "Suy nghĩ kỹ trước khi quyết định.",
@@ -62161,6 +62609,22 @@
    "en": "Drive carefully to avoid an accident.",
    "ko": "사고 나지 않게 조심히 운전해.",
    "blank": "tai nạn"
+  }
+ ],
+ "w|tai nạn giao thông": [
+  {
+   "text": "Một chiếc xe đạp méo mó được trưng bày để nhắc mọi người về tai nạn giao thông.",
+   "en": "A twisted bicycle is on display to remind everyone about traffic accidents.",
+   "ko": "찌그러진 자전거 한 대가 사람들에게 교통사고를 일깨우려고 전시돼 있어요.",
+   "blank": "tai nạn giao thông",
+   "src": "made"
+  },
+  {
+   "text": "Nhân vật của Linh mất cha trong một tai nạn giao thông từ năm mười tuổi.",
+   "en": "Linh's character lost her father in a traffic accident when she was ten.",
+   "ko": "린이 맡은 인물은 열 살 때 교통사고로 아버지를 잃었어요.",
+   "blank": "tai nạn giao thông",
+   "src": "made"
   }
  ],
  "w|tài năng": [
@@ -64548,6 +65012,22 @@
    "en": "Trang once went to the Mongolian steppe to report on nomadic life.",
    "ko": "짱은 유목 생활을 취재하러 몽골 초원에 간 적이 있어요.",
    "blank": "thảo nguyên",
+   "src": "made"
+  }
+ ],
+ "w|thao túng": [
+  {
+   "text": "Một bức tranh biếm họa vẽ cảnh bọn quan lại thao túng chợ gạo.",
+   "en": "A caricature depicts corrupt officials manipulating the rice market.",
+   "ko": "풍자화 한 점은 관리들이 쌀 시장을 조종하는 장면을 그렸어요.",
+   "blank": "thao túng",
+   "src": "made"
+  },
+  {
+   "text": "Trong phim, tên trùm dùng tiền để thao túng cả một thị trấn.",
+   "en": "In the film, the boss uses money to manipulate an entire town.",
+   "ko": "영화에서 두목은 돈으로 마을 전체를 조종해요.",
+   "blank": "thao túng",
    "src": "made"
   }
  ],
@@ -70877,6 +71357,22 @@
    "blank": "Trách nhiệm"
   }
  ],
+ "w|trách nhiệm xã hội": [
+  {
+   "text": "Một công ty tài trợ cho chuyến tham quan miễn phí như một phần trách nhiệm xã hội.",
+   "en": "A company sponsors free tours as part of its social responsibility.",
+   "ko": "한 회사가 사회적 책임의 일환으로 무료 관람을 후원해요.",
+   "blank": "trách nhiệm xã hội",
+   "src": "made"
+  },
+  {
+   "text": "Nhà sản xuất gắn bộ phim với một chiến dịch về trách nhiệm xã hội của doanh nghiệp.",
+   "en": "The producer tied the film to a campaign on corporate social responsibility.",
+   "ko": "제작자는 영화를 기업의 사회적 책임 캠페인과 연결했어요.",
+   "blank": "trách nhiệm xã hội",
+   "src": "made"
+  }
+ ],
  "w|trai": [
   {
    "text": "Phong cạy một con trai bám trên cọc gỗ để xem bên trong có gì.",
@@ -71979,6 +72475,22 @@
    "en": "Don't steal other people's things.",
    "ko": "남의 물건을 훔치지 마.",
    "blank": "trộm"
+  }
+ ],
+ "w|trộm cắp": [
+  {
+   "text": "Để phòng trộm cắp, Long cho gắn camera ở mọi góc phòng.",
+   "en": "To guard against theft, Long had cameras installed in every corner of the rooms.",
+   "ko": "도난을 막으려고 롱은 방마다 구석구석 카메라를 달았어요.",
+   "blank": "trộm cắp",
+   "src": "made"
+  },
+  {
+   "text": "Đoàn phim thuê bảo vệ vì nạn trộm cắp thiết bị ở khu trường quay.",
+   "en": "The crew hired guards because of equipment theft at the studio lot.",
+   "ko": "촬영장에서 장비 도난이 잦아서 촬영팀은 경비원을 고용했어요.",
+   "blank": "trộm cắp",
+   "src": "made"
   }
  ],
  "w|tròn": [
@@ -74947,6 +75459,22 @@
    "blank": "Ước"
   }
  ],
+ "w|ước chừng": [
+  {
+   "text": "Mỗi cuối tuần có ước chừng ba nghìn lượt khách ghé thăm.",
+   "en": "Each weekend there are roughly three thousand visits.",
+   "ko": "주말마다 대략 삼천 명쯤 관람객이 찾아와요.",
+   "blank": "ước chừng",
+   "src": "made"
+  },
+  {
+   "text": "Cảnh chợ đêm cần ước chừng một trăm diễn viên quần chúng.",
+   "en": "The night-market scene needs roughly a hundred extras.",
+   "ko": "야시장 장면에는 보조 출연자가 대략 백 명 필요해요.",
+   "blank": "ước chừng",
+   "src": "made"
+  }
+ ],
  "w|ước mơ": [
   {
    "text": "Ước mơ của mình là đi du lịch xa.",
@@ -75191,6 +75719,22 @@
    "src": "made"
   }
  ],
+ "w|va": [
+  {
+   "text": "Long dặn các em học sinh đi chậm để khỏi va vào tủ kính.",
+   "en": "Long told the students to walk slowly so they wouldn't knock into the glass cases.",
+   "ko": "롱은 학생들에게 유리 진열장에 부딪히지 않게 천천히 걸으라고 일렀어요.",
+   "blank": "va",
+   "src": "made"
+  },
+  {
+   "text": "Diễn viên đóng thế được dặn phải va vào cửa kính thật mạnh nhưng đúng chỗ.",
+   "en": "The stunt double was told to crash into the glass door hard but in exactly the right spot.",
+   "ko": "스턴트 배우는 유리문에 세게, 하지만 정확한 자리에 부딪히라는 지시를 받았어요.",
+   "blank": "va",
+   "src": "made"
+  }
+ ],
  "w|vá": [
   {
    "text": "Mẹ Tuấn ngồi vá lại chiếc tạp dề bị rách.",
@@ -75250,6 +75794,22 @@
    "en": "A tourist pulling a suitcase came into Hà's shop to ask the way to the bus station.",
    "ko": "여행 가방을 끄는 관광객이 하 아주머니 가게에 들어와 버스 터미널 가는 길을 물었어요.",
    "blank": "va li",
+   "src": "made"
+  }
+ ],
+ "w|va phải": [
+  {
+   "text": "Một khách du lịch lùi lại chụp ảnh và va phải bệ tượng.",
+   "en": "A tourist stepped back to take a photo and bumped into the statue's pedestal.",
+   "ko": "관광객 한 명이 사진을 찍으려고 뒤로 물러서다 조각상 받침대에 부딪혔어요.",
+   "blank": "va phải",
+   "src": "made"
+  },
+  {
+   "text": "Quay cảnh rượt đuổi, anh quay phim suýt va phải cột điện.",
+   "en": "Shooting the chase scene, the cameraman nearly ran into a power pole.",
+   "ko": "추격 장면을 찍다가 촬영 기사가 전봇대에 부딪칠 뻔했어요.",
+   "blank": "va phải",
    "src": "made"
   }
  ],
@@ -76401,6 +76961,22 @@
    "src": "made"
   }
  ],
+ "w|vi phạm": [
+  {
+   "text": "Chụp ảnh có đèn flash ở đây bị coi là vi phạm và sẽ bị nhắc nhở.",
+   "en": "Flash photography here counts as a violation and will be warned against.",
+   "ko": "여기서 플래시를 켜고 사진을 찍으면 위반으로 여겨져 주의를 받아요.",
+   "blank": "vi phạm",
+   "src": "made"
+  },
+  {
+   "text": "Việc quay lén ở khu di tích bị coi là một vi phạm nghiêm trọng.",
+   "en": "Filming secretly at the heritage site is regarded as a serious violation.",
+   "ko": "유적지에서 몰래 촬영하는 건 심각한 위반으로 여겨져요.",
+   "blank": "vi phạm",
+   "src": "made"
+  }
+ ],
  "w|vi rút": [
   {
    "text": "Phòng tập lau máy mỗi ngày để tránh vi rút lây lan.",
@@ -77345,6 +77921,22 @@
    "blank": "vụ"
   }
  ],
+ "w|vụ án": [
+  {
+   "text": "Phòng trưng bày tầng hai kể lại một vụ án nổi tiếng từ thời Pháp thuộc.",
+   "en": "The second-floor gallery retells a famous criminal case from the colonial era.",
+   "ko": "이 층 전시실은 식민지 시대의 유명한 사건을 다시 들려줘요.",
+   "blank": "vụ án",
+   "src": "made"
+  },
+  {
+   "text": "Bộ phim Linh tham gia dựa trên một vụ án có thật ở miền Trung.",
+   "en": "The film Linh is in is based on a real criminal case in central Vietnam.",
+   "ko": "린이 출연하는 영화는 중부 지방에서 실제 있었던 사건을 바탕으로 해요.",
+   "blank": "vụ án",
+   "src": "made"
+  }
+ ],
  "w|vũ khí": [
   {
    "text": "Vũ khí trong phim chỉ là đạo cụ.",
@@ -77357,6 +77949,22 @@
    "en": "They confiscated illegal weapons.",
    "ko": "그들은 불법 무기를 압수했어.",
    "blank": "vũ khí"
+  }
+ ],
+ "w|vụ việc": [
+  {
+   "text": "Sau vụ việc tấm kính bị nứt, Long cho lắp thêm hàng rào quanh tủ trưng bày.",
+   "en": "After the incident with the cracked glass, Long had a railing installed around the display case.",
+   "ko": "유리가 금 간 일이 있은 뒤 롱은 진열장 둘레에 울타리를 더 설치했어요.",
+   "blank": "vụ việc",
+   "src": "made"
+  },
+  {
+   "text": "Đoàn phim phải xin lỗi dân địa phương về vụ việc xe tải chắn đường.",
+   "en": "The film crew had to apologize to local residents for the incident with a truck blocking the road.",
+   "ko": "촬영팀은 트럭이 길을 막은 일로 주민들에게 사과해야 했어요.",
+   "blank": "vụ việc",
+   "src": "made"
   }
  ],
  "w|vua": [
@@ -77385,6 +77993,22 @@
    "en": "The rain just stopped.",
    "ko": "비가 방금 그쳤어.",
    "blank": "vừa"
+  }
+ ],
+ "w|vừa đủ": [
+  {
+   "text": "Ánh đèn trong phòng tranh chỉ vừa đủ để nhìn rõ nét vẽ.",
+   "en": "The light in the painting gallery is just enough to see the brushstrokes clearly.",
+   "ko": "그림 전시실 조명은 붓 자국이 겨우 보일 만큼만 밝아요.",
+   "blank": "vừa đủ",
+   "src": "made"
+  },
+  {
+   "text": "Linh chỉ ngủ vừa đủ để giữ sức cho cảnh quay sáng sớm.",
+   "en": "Linh only sleeps just enough to keep her strength for the early-morning shoot.",
+   "ko": "린은 이른 아침 촬영을 버틸 만큼만 딱 자요.",
+   "blank": "vừa đủ",
+   "src": "made"
   }
  ],
  "w|vừa mới": [
@@ -78168,6 +78792,22 @@
    "en": "The opposing lawyer asked very crafty questions, but Trang didn't fall into the trap.",
    "ko": "상대 변호사가 아주 교활한 질문을 던졌지만 짱은 덫에 걸리지 않았어요.",
    "blank": "xảo quyệt",
+   "src": "made"
+  }
+ ],
+ "w|xấp xỉ": [
+  {
+   "text": "Bức tượng đồng nặng xấp xỉ một tấn, phải dùng cần cẩu để di chuyển.",
+   "en": "The bronze statue weighs approximately one ton and has to be moved with a crane.",
+   "ko": "청동상은 무게가 거의 일 톤이라 크레인으로 옮겨야 해요.",
+   "blank": "xấp xỉ",
+   "src": "made"
+  },
+  {
+   "text": "Kinh phí làm phim xấp xỉ hai mươi tỷ đồng.",
+   "en": "The film's budget is approximately twenty billion đồng.",
+   "ko": "영화 제작비는 거의 이백억 동이에요.",
+   "blank": "xấp xỉ",
    "src": "made"
   }
  ],
