@@ -4227,6 +4227,22 @@
    "src": "tatoeba:11541561/carlosalberto en:11541555/carlosalberto"
   }
  ],
+ "w|analista": [
+  {
+   "text": "Uma analista de qualidade revisa os relatórios do Tiago toda sexta-feira.",
+   "en": "A quality analyst reviews Tiago's reports every Friday.",
+   "ko": "품질 분석가가 금요일마다 치아구의 보고서를 검토해요.",
+   "blank": "analista",
+   "src": "made"
+  },
+  {
+   "text": "A amiga da Inês é analista de crédito e ajudou a calcular o financiamento.",
+   "en": "Inês's friend is a credit analyst and helped calculate the loan.",
+   "ko": "이네스의 친구는 신용 분석가라서 대출 계산을 도와줬어요.",
+   "blank": "analista",
+   "src": "made"
+  }
+ ],
  "w|anão": [
   {
    "text": "Na peça da escola, o filho do Bruno fez o papel de um anão do bosque.",
@@ -5155,6 +5171,22 @@
    "src": "made"
   }
  ],
+ "w|apelar": [
+  {
+   "text": "O sindicato decidiu apelar à justiça contra a mudança de turnos.",
+   "en": "The union decided to appeal to the courts against the shift change.",
+   "ko": "노조는 교대 근무 변경에 맞서 법원에 호소하기로 했어요.",
+   "blank": "apelar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês teve que apelar para a paciência do marceneiro depois de mudar o projeto pela terceira vez.",
+   "en": "Inês had to appeal to the carpenter's patience after changing the plan for the third time.",
+   "ko": "이네스는 설계를 세 번째로 바꾼 뒤 목수에게 조금만 더 참아 달라고 사정해야 했어요.",
+   "blank": "apelar",
+   "src": "made"
+  }
+ ],
  "w|apelido": [
   {
    "text": "Em uma semana, o Rafael já ganhou um apelido da equipe: Rafa Planilha.",
@@ -5359,6 +5391,22 @@
    "src": "made"
   }
  ],
+ "w|aplicação": [
+  {
+   "text": "O Tiago supervisiona a aplicação da tinta nas peças de metal.",
+   "en": "Tiago supervises the application of paint to the metal parts.",
+   "ko": "치아구는 금속 부품에 페인트를 칠하는 작업을 감독해요.",
+   "blank": "aplicação",
+   "src": "made"
+  },
+  {
+   "text": "A Inês leu as instruções de aplicação do verniz antes de começar a pintar a porta.",
+   "en": "Inês read the varnish application instructions before starting to paint the door.",
+   "ko": "이네스는 문을 칠하기 전에 바니시 바르는 법을 읽었어요.",
+   "blank": "aplicação",
+   "src": "made"
+  }
+ ],
  "w|aplicar": [
   {
    "text": "O pintor vai aplicar duas demãos de tinta na parede do Pedro.",
@@ -5372,6 +5420,22 @@
    "en": "Beatriz forgot to apply the discount code before paying.",
    "ko": "베아트리스는 결제 전에 할인 코드를 적용하는 걸 잊었어요.",
    "blank": "aplicar",
+   "src": "made"
+  }
+ ],
+ "w|aplicativo": [
+  {
+   "text": "Os operários agora marcam o ponto por um aplicativo no celular.",
+   "en": "The workers now clock in using an app on their phones.",
+   "ko": "이제 작업자들은 휴대폰 앱으로 출퇴근을 찍어요.",
+   "blank": "aplicativo",
+   "src": "made"
+  },
+  {
+   "text": "A Inês usa um aplicativo para medir os cômodos com a câmera do celular.",
+   "en": "Inês uses an app to measure the rooms with her phone camera.",
+   "ko": "이네스는 휴대폰 카메라로 방 크기를 재는 앱을 써요.",
+   "blank": "aplicativo",
    "src": "made"
   }
  ],
@@ -6422,6 +6486,22 @@
    "en": "The renovation architect wants more natural light in the reading room.",
    "ko": "보수 공사를 맡은 건축가는 열람실에 자연광을 더 들이고 싶어 해요.",
    "blank": "arquiteto",
+   "src": "made"
+  }
+ ],
+ "w|arquitetura": [
+  {
+   "text": "O Tiago estudou arquitetura de sistemas antes de trabalhar na indústria.",
+   "en": "Tiago studied systems architecture before working in industry.",
+   "ko": "치아구는 산업 현장에서 일하기 전에 시스템 설계를 공부했어요.",
+   "blank": "arquitetura",
+   "src": "made"
+  },
+  {
+   "text": "A arquitetura colonial da casa foi o que mais encantou a Inês.",
+   "en": "The house's colonial architecture was what charmed Inês the most.",
+   "ko": "이네스가 가장 반한 건 그 집의 식민지 시대 건축 양식이었어요.",
+   "blank": "arquitetura",
    "src": "made"
   }
  ],
@@ -8323,6 +8403,22 @@
    "src": "tatoeba:729157/lenon_perez en:241775/CK"
   }
  ],
+ "w|atualização": [
+  {
+   "text": "A máquina parou por causa de uma atualização do sistema que ninguém avisou.",
+   "en": "The machine stopped because of a system update nobody had announced.",
+   "ko": "아무도 알리지 않은 시스템 업데이트 때문에 기계가 멈췄어요.",
+   "blank": "atualização",
+   "src": "made"
+  },
+  {
+   "text": "A instalação elétrica da casa precisava de uma atualização completa.",
+   "en": "The house's electrical wiring needed a complete upgrade.",
+   "ko": "집의 전기 배선은 전부 새로 바꿔야 했어요.",
+   "blank": "atualização",
+   "src": "made"
+  }
+ ],
  "w|atualmente": [
   {
    "text": "Qual é o filme mais popular atualmente?",
@@ -8925,6 +9021,22 @@
    "blank": "avião"
   }
  ],
+ "w|avisado": [
+  {
+   "text": "O Tiago já estava avisado de que a inspeção seria na segunda-feira.",
+   "en": "Tiago had already been told that the inspection would be on Monday.",
+   "ko": "치아구는 점검이 월요일이라는 걸 이미 통보받았어요.",
+   "blank": "avisado",
+   "src": "made"
+  },
+  {
+   "text": "A Inês foi avisada de que a obra no telhado ia atrasar por causa da chuva.",
+   "en": "Inês was told that the roof work would be delayed because of the rain.",
+   "ko": "이네스는 비 때문에 지붕 공사가 늦어질 거라는 연락을 받았어요.",
+   "blank": "avisada",
+   "src": "made"
+  }
+ ],
  "w|avisar": [
   {
    "text": "Avisa se for atrasar.",
@@ -9188,6 +9300,22 @@
    "en": "Rita had lunch at a beach kiosk overlooking the bay.",
    "ko": "히타는 만이 내려다보이는 작은 가게에서 점심을 먹었어요.",
    "blank": "baía",
+   "src": "made"
+  }
+ ],
+ "w|bailarino": [
+  {
+   "text": "Ninguém na fábrica sabia que o Tiago já tinha sido bailarino antes de virar operário.",
+   "en": "Nobody at the factory knew that Tiago had been a dancer before becoming a factory worker.",
+   "ko": "공장 사람들은 치아구가 공장 일을 하기 전에 무용수였다는 걸 아무도 몰랐어요.",
+   "blank": "bailarino",
+   "src": "made"
+  },
+  {
+   "text": "O antigo dono da casa era bailarino e deixou uma barra de balé no sótão.",
+   "en": "The former owner of the house was a dancer and left a ballet barre in the attic.",
+   "ko": "집의 전 주인은 무용수였는데 다락방에 발레 바를 남겨 뒀어요.",
+   "blank": "bailarino",
    "src": "made"
   }
  ],
@@ -12451,6 +12579,22 @@
    "src": "made"
   }
  ],
+ "w|cadete": [
+  {
+   "text": "Um cadete da escola técnica veio conhecer a fábrica com a turma.",
+   "en": "A cadet from the technical school came to visit the factory with his class.",
+   "ko": "기술 학교 생도 한 명이 반 친구들과 함께 공장 견학을 왔어요.",
+   "blank": "cadete",
+   "src": "made"
+  },
+  {
+   "text": "O vizinho da Inês é cadete da Aeronáutica e ajudou a carregar o sofá.",
+   "en": "Inês's neighbor is an Air Force cadet and helped carry the sofa.",
+   "ko": "이네스의 이웃은 공군 생도인데 소파 옮기는 걸 도와줬어요.",
+   "blank": "cadete",
+   "src": "made"
+  }
+ ],
  "w|café": [
   {
    "text": "Esse café está amargo.",
@@ -13711,6 +13855,22 @@
    "src": "made"
   }
  ],
+ "w|capturado": [
+  {
+   "text": "O ladrão de cobre capturado no pátio da fábrica foi levado à delegacia.",
+   "en": "The copper thief caught in the factory yard was taken to the police station.",
+   "ko": "공장 마당에서 붙잡힌 구리 도둑은 경찰서로 넘겨졌어요.",
+   "blank": "capturado",
+   "src": "made"
+  },
+  {
+   "text": "O morcego capturado no forro foi solto no quintal pela Inês.",
+   "en": "The bat caught in the ceiling was released in the backyard by Inês.",
+   "ko": "이네스는 천장 속에서 잡은 박쥐를 마당에 풀어 줬어요.",
+   "blank": "capturado",
+   "src": "made"
+  }
+ ],
  "w|capturar": [
   {
    "text": "Os cães não tentam capturar camundongos.",
@@ -13754,6 +13914,22 @@
    "en": "The loveliest feature of the party was the grandmother's dessert table.",
    "ko": "잔치에서 가장 예뻤던 건 할머니의 디저트 테이블이었어요.",
    "blank": "característica",
+   "src": "made"
+  }
+ ],
+ "w|característico": [
+  {
+   "text": "O cheiro característico de solda se espalha pelo galpão inteiro.",
+   "en": "The characteristic smell of welding spreads throughout the whole shed.",
+   "ko": "특유의 용접 냄새가 창고 전체에 퍼져요.",
+   "blank": "característico",
+   "src": "made"
+  },
+  {
+   "text": "O piso de taco tem aquele rangido característico das casas antigas.",
+   "en": "The parquet floor has that characteristic creak of old houses.",
+   "ko": "쪽마루에서 옛날 집 특유의 삐걱거리는 소리가 나요.",
+   "blank": "característico",
    "src": "made"
   }
  ],
@@ -14036,6 +14212,22 @@
    "en": "Sofia climbed the stairs loaded with bags and arrived out of breath.",
    "ko": "소피아는 봉투를 잔뜩 들고 계단을 올라 숨이 찼어요.",
    "blank": "carregada",
+   "src": "made"
+  }
+ ],
+ "w|carregador": [
+  {
+   "text": "O carregador da empilhadeira queimou no meio do turno.",
+   "en": "The forklift's charger burned out in the middle of the shift.",
+   "ko": "지게차 충전기가 근무 도중에 타 버렸어요.",
+   "blank": "carregador",
+   "src": "made"
+  },
+  {
+   "text": "A Inês contratou um carregador para levar os móveis velhos ao caminhão.",
+   "en": "Inês hired a mover to take the old furniture to the truck.",
+   "ko": "이네스는 낡은 가구를 트럭까지 옮겨 줄 짐꾼을 불렀어요.",
+   "blank": "carregador",
    "src": "made"
   }
  ],
@@ -17351,6 +17543,22 @@
    "src": "made"
   }
  ],
+ "w|colaborar": [
+  {
+   "text": "O Tiago pediu aos colegas de outro setor que pudessem colaborar no inventário.",
+   "en": "Tiago asked colleagues from another department to help with the inventory.",
+   "ko": "치아구는 다른 부서 동료들에게 재고 조사를 도와 달라고 했어요.",
+   "blank": "colaborar",
+   "src": "made"
+  },
+  {
+   "text": "Os irmãos da Inês prometeram colaborar com a pintura da fachada.",
+   "en": "Inês's brothers promised to help with painting the façade.",
+   "ko": "이네스의 형제들은 집 앞면 칠하는 걸 돕겠다고 약속했어요.",
+   "blank": "colaborar",
+   "src": "made"
+  }
+ ],
  "w|colapso": [
   {
    "text": "Com as provas e a briga com o irmão, a Clara disse que estava perto de um colapso.",
@@ -18788,6 +18996,22 @@
    "en": "When her throat starts hurting in the cold, Rita takes a pill and rests.",
    "ko": "추위에 목이 아프기 시작하면 히타는 알약을 먹고 쉬어요.",
    "blank": "comprimido",
+   "src": "made"
+  }
+ ],
+ "w|comprimir": [
+  {
+   "text": "A máquina usa ar para comprimir as caixas de papelão antes da reciclagem.",
+   "en": "The machine uses air to compress the cardboard boxes before recycling.",
+   "ko": "그 기계는 재활용 전에 공기로 종이 상자를 압축해요.",
+   "blank": "comprimir",
+   "src": "made"
+  },
+  {
+   "text": "A Inês teve que comprimir o entulho em sacos para caber na caçamba.",
+   "en": "Inês had to compress the rubble into bags to fit in the dumpster.",
+   "ko": "이네스는 컨테이너에 다 들어가도록 잔해를 자루에 꾹꾹 눌러 담아야 했어요.",
+   "blank": "comprimir",
    "src": "made"
   }
  ],
@@ -21524,6 +21748,22 @@
    "en": "Carla also bought a digital body thermometer.",
    "ko": "카를라는 디지털 체온계도 샀어요.",
    "blank": "corporal",
+   "src": "made"
+  }
+ ],
+ "w|corporativo": [
+  {
+   "text": "O Tiago recebeu um e-mail corporativo sobre as novas regras de férias.",
+   "en": "Tiago received a company email about the new vacation rules.",
+   "ko": "치아구는 새 휴가 규정에 관한 회사 이메일을 받았어요.",
+   "blank": "corporativo",
+   "src": "made"
+  },
+  {
+   "text": "A Inês recusou um móvel de estilo corporativo porque queria algo mais aconchegante.",
+   "en": "Inês turned down an office-style piece of furniture because she wanted something cozier.",
+   "ko": "이네스는 더 아늑한 걸 원해서 사무실풍 가구를 거절했어요.",
+   "blank": "corporativo",
    "src": "made"
   }
  ],
@@ -27347,6 +27587,22 @@
    "blank": "diretor"
   }
  ],
+ "w|diretoria": [
+  {
+   "text": "A diretoria aprovou a compra de uma nova prensa para o setor do Tiago.",
+   "en": "The board approved the purchase of a new press for Tiago's department.",
+   "ko": "경영진은 치아구 부서의 새 프레스 구매를 승인했어요.",
+   "blank": "diretoria",
+   "src": "made"
+  },
+  {
+   "text": "O condomínio do lado mandou um aviso da diretoria sobre o barulho da obra.",
+   "en": "The building next door sent a notice from its board about the construction noise.",
+   "ko": "옆 건물 관리 위원회에서 공사 소음에 관한 안내문을 보냈어요.",
+   "blank": "diretoria",
+   "src": "made"
+  }
+ ],
  "w|dirigir": [
   {
    "text": "Não gosto de dirigir à noite.",
@@ -27818,6 +28074,22 @@
    "en": "Beatriz gave her nephews a board game as a distraction until midnight.",
    "ko": "베아트리스는 자정까지 심심하지 않게 조카들에게 보드게임을 줬어요.",
    "blank": "distração",
+   "src": "made"
+  }
+ ],
+ "w|distraído": [
+  {
+   "text": "Um operário distraído deixou a luva cair dentro da esteira.",
+   "en": "A distracted worker dropped his glove into the conveyor.",
+   "ko": "딴생각하던 작업자가 장갑을 컨베이어 안에 떨어뜨렸어요.",
+   "blank": "distraído",
+   "src": "made"
+  },
+  {
+   "text": "A Inês estava tão distraída que pintou o interruptor junto com a parede.",
+   "en": "Inês was so distracted that she painted the light switch along with the wall.",
+   "ko": "이네스는 딴생각을 하다가 벽과 함께 스위치까지 칠해 버렸어요.",
+   "blank": "distraída",
    "src": "made"
   }
  ],
@@ -30385,6 +30657,22 @@
    "src": "made"
   }
  ],
+ "w|encolher": [
+  {
+   "text": "O Tiago lavou o uniforme novo em água quente e viu a camisa encolher.",
+   "en": "Tiago washed the new uniform in hot water and saw the shirt shrink.",
+   "ko": "치아구가 새 작업복을 뜨거운 물에 빨았더니 셔츠가 줄어들었어요.",
+   "blank": "encolher",
+   "src": "made"
+  },
+  {
+   "text": "A madeira nova pode encolher no inverno, então o marceneiro deixou uma folga.",
+   "en": "New wood can shrink in winter, so the carpenter left a gap.",
+   "ko": "새 목재는 겨울에 줄어들 수 있어서 목수가 틈을 남겨 뒀어요.",
+   "blank": "encolher",
+   "src": "made"
+  }
+ ],
  "w|encomenda": [
   {
    "text": "A encomenda de vacinas atrasou, e o Lucas teve que remarcar as consultas.",
@@ -31712,6 +32000,22 @@
    "en": "Put a little herb in the tea.",
    "ko": "차에 허브를 조금 넣어.",
    "blank": "erva",
+   "src": "made"
+  }
+ ],
+ "w|esboço": [
+  {
+   "text": "O engenheiro fez um esboço da nova linha de montagem num guardanapo.",
+   "en": "The engineer sketched the new assembly line on a napkin.",
+   "ko": "엔지니어는 냅킨에 새 조립 라인의 밑그림을 그렸어요.",
+   "blank": "esboço",
+   "src": "made"
+  },
+  {
+   "text": "A Inês desenhou um esboço da varanda nova no caderno.",
+   "en": "Inês drew a sketch of the new porch in her notebook.",
+   "ko": "이네스는 공책에 새 베란다 밑그림을 그렸어요.",
+   "blank": "esboço",
    "src": "made"
   }
  ],
@@ -33362,6 +33666,22 @@
    "en": "The new train is more stable, and Sofia managed to drink coffee without spilling.",
    "ko": "새 기차는 흔들림이 적어서 소피아는 커피를 쏟지 않고 마셨어요.",
    "blank": "estabilidade",
+   "src": "made"
+  }
+ ],
+ "w|estabilizar": [
+  {
+   "text": "O Tiago ajustou a temperatura do forno para estabilizar a produção.",
+   "en": "Tiago adjusted the oven temperature to stabilize production.",
+   "ko": "치아구는 생산을 안정시키려고 가마 온도를 조절했어요.",
+   "blank": "estabilizar",
+   "src": "made"
+  },
+  {
+   "text": "O pedreiro colocou vigas novas para estabilizar o telhado.",
+   "en": "The bricklayer put in new beams to stabilize the roof.",
+   "ko": "미장이는 지붕을 안정시키려고 새 들보를 넣었어요.",
+   "blank": "estabilizar",
    "src": "made"
   }
  ],
@@ -35222,6 +35542,22 @@
    "en": "Grandma, an experienced cook, taught Luísa how to make cheese bread.",
    "ko": "노련한 요리사인 할머니가 루이자에게 치즈빵 만드는 법을 가르쳐 줬어요.",
    "blank": "experiente",
+   "src": "made"
+  }
+ ],
+ "w|experimental": [
+  {
+   "text": "A fábrica começou um turno experimental de quatro dias por semana.",
+   "en": "The factory started an experimental four-day-week shift.",
+   "ko": "공장은 주 사 일 근무를 시범적으로 시작했어요.",
+   "blank": "experimental",
+   "src": "made"
+  },
+  {
+   "text": "A Inês testou uma tinta experimental feita de argila na parede do quarto.",
+   "en": "Inês tested an experimental clay-based paint on the bedroom wall.",
+   "ko": "이네스는 침실 벽에 흙으로 만든 실험적인 페인트를 발라 봤어요.",
+   "blank": "experimental",
    "src": "made"
   }
  ],
@@ -42789,6 +43125,22 @@
    "src": "made"
   }
  ],
+ "w|horroroso": [
+  {
+   "text": "O barulho da máquina velha é horroroso e todos usam protetor de ouvido.",
+   "en": "The noise of the old machine is horrendous and everyone wears ear protection.",
+   "ko": "낡은 기계 소리가 끔찍해서 모두 귀마개를 껴요.",
+   "blank": "horroroso",
+   "src": "made"
+  },
+  {
+   "text": "O papel de parede antigo era tão horroroso que a Inês arrancou tudo no primeiro dia.",
+   "en": "The old wallpaper was so hideous that Inês tore it all off on the first day.",
+   "ko": "옛 벽지가 너무 흉해서 이네스는 첫날 다 뜯어냈어요.",
+   "blank": "horroroso",
+   "src": "made"
+  }
+ ],
  "w|hóspede": [
   {
    "text": "Você é nossa hóspede da semana.",
@@ -44117,6 +44469,22 @@
    "src": "tatoeba:2479329/MarlonX19 en:1664333/Spamster"
   }
  ],
+ "w|impresso": [
+  {
+   "text": "O manual impresso da máquina está todo em alemão.",
+   "en": "The machine's printed manual is all in German.",
+   "ko": "기계의 인쇄된 설명서는 전부 독일어예요.",
+   "blank": "impresso",
+   "src": "made"
+  },
+  {
+   "text": "A Inês levou à loja o projeto impresso para escolher os azulejos.",
+   "en": "Inês took the printed plan to the store to choose the tiles.",
+   "ko": "이네스는 타일을 고르려고 인쇄한 도면을 가게에 가져갔어요.",
+   "blank": "impresso",
+   "src": "made"
+  }
+ ],
  "w|impressora": [
   {
    "text": "A impressora do escritório da fábrica vive sem papel, reclama o Pedro.",
@@ -44657,6 +45025,22 @@
    "src": "tatoeba:1288382/alexmarcelo en:681206/Source_VOA"
   }
  ],
+ "w|independentemente": [
+  {
+   "text": "O bônus é pago a todos, independentemente do cargo.",
+   "en": "The bonus is paid to everyone, regardless of position.",
+   "ko": "보너스는 직급과 상관없이 모두에게 지급돼요.",
+   "blank": "independentemente",
+   "src": "made"
+  },
+  {
+   "text": "A Inês vai terminar a reforma, independentemente do que a família acha.",
+   "en": "Inês is going to finish the renovation, regardless of what her family thinks.",
+   "ko": "이네스는 가족이 뭐라 하든 상관없이 집수리를 끝낼 거예요.",
+   "blank": "independentemente",
+   "src": "made"
+  }
+ ],
  "w|indiano": [
   {
    "text": "Ele é indiano e fala Inglês.",
@@ -45128,6 +45512,22 @@
    "en": "The region's climate tends to influence the flavor of Carla's coffee.",
    "ko": "그 지역 기후가 카를라 커피의 맛에 영향을 줘요.",
    "blank": "influenciar",
+   "src": "made"
+  }
+ ],
+ "w|influente": [
+  {
+   "text": "O dono da fábrica é um empresário influente na associação comercial da cidade.",
+   "en": "The factory owner is an influential businessman in the city's commercial association.",
+   "ko": "공장 주인은 시 상공회에서 영향력 있는 사업가예요.",
+   "blank": "influente",
+   "src": "made"
+  },
+  {
+   "text": "Um blog influente de decoração publicou fotos da casa da Inês.",
+   "en": "An influential decor blog published photos of Inês's house.",
+   "ko": "영향력 있는 인테리어 블로그가 이네스 집 사진을 실었어요.",
+   "blank": "influente",
    "src": "made"
   }
  ],
@@ -51763,6 +52163,22 @@
    "src": "made"
   }
  ],
+ "w|manuscrito": [
+  {
+   "text": "O Tiago achou no arquivo da fábrica um manuscrito do fundador com as primeiras receitas de tinta.",
+   "en": "Tiago found in the factory archive a manuscript by the founder with the first paint formulas.",
+   "ko": "치아구는 공장 기록실에서 창업자가 직접 쓴 첫 페인트 배합 원고를 찾았어요.",
+   "blank": "manuscrito",
+   "src": "made"
+  },
+  {
+   "text": "Atrás de um armário, a Inês encontrou um manuscrito com receitas da antiga moradora.",
+   "en": "Behind a cupboard, Inês found a manuscript with recipes from the former resident.",
+   "ko": "이네스는 찬장 뒤에서 옛 집주인이 손으로 쓴 요리법 원고를 찾았어요.",
+   "blank": "manuscrito",
+   "src": "made"
+  }
+ ],
  "w|manutenção": [
   {
    "text": "A coifa estava fazendo barulho, então o Bruno chamou a manutenção.",
@@ -52164,6 +52580,22 @@
    "en": "On the final stretch, Mariana's legs felt like a puppet's, moving without control.",
    "ko": "마지막 직선 구간에서 마리아나의 다리는 꼭두각시처럼 제멋대로 움직였어요.",
    "blank": "marionete",
+   "src": "made"
+  }
+ ],
+ "w|marketing": [
+  {
+   "text": "O pessoal do marketing quer fotografar a linha de produção para o site.",
+   "en": "The marketing team wants to photograph the production line for the website.",
+   "ko": "마케팅 팀은 웹사이트에 올리려고 생산 라인을 촬영하고 싶어 해요.",
+   "blank": "marketing",
+   "src": "made"
+  },
+  {
+   "text": "A Inês trabalha com marketing e faz a reforma nos fins de semana.",
+   "en": "Inês works in marketing and does the renovation on weekends.",
+   "ko": "이네스는 마케팅 일을 하고 주말마다 집을 고쳐요.",
+   "blank": "marketing",
    "src": "made"
   }
  ],
@@ -54453,6 +54885,22 @@
    "en": "There's another way to do it.",
    "ko": "하는 방법이 또 있어.",
    "blank": "modo"
+  }
+ ],
+ "w|módulo": [
+  {
+   "text": "A fábrica comprou um novo módulo de controle para a linha de montagem.",
+   "en": "The factory bought a new control module for the assembly line.",
+   "ko": "공장은 조립 라인에 쓸 새 제어 모듈을 샀어요.",
+   "blank": "módulo",
+   "src": "made"
+  },
+  {
+   "text": "A Inês comprou uma cozinha planejada e montou cada módulo sozinha.",
+   "en": "Inês bought a fitted kitchen and assembled each module by herself.",
+   "ko": "이네스는 맞춤 주방을 사서 모듈 하나하나를 혼자 조립했어요.",
+   "blank": "módulo",
+   "src": "made"
   }
  ],
  "w|moeda": [
@@ -62303,6 +62751,22 @@
    "blank": "pesquisa"
   }
  ],
+ "w|pesquisador": [
+  {
+   "text": "Um pesquisador da universidade está testando um material novo na fábrica.",
+   "en": "A university researcher is testing a new material at the factory.",
+   "ko": "대학 연구원 한 명이 공장에서 새 소재를 시험하고 있어요.",
+   "blank": "pesquisador",
+   "src": "made"
+  },
+  {
+   "text": "Um pesquisador de patrimônio veio ver os azulejos originais da casa da Inês.",
+   "en": "A heritage researcher came to see the original tiles in Inês's house.",
+   "ko": "문화유산 연구자가 이네스 집의 원래 타일을 보러 왔어요.",
+   "blank": "pesquisador",
+   "src": "made"
+  }
+ ],
  "w|pesquisar": [
   {
    "text": "Antes de escrever, o Gabriel gosta de pesquisar tudo nos arquivos.",
@@ -66985,6 +67449,22 @@
    "src": "made"
   }
  ],
+ "w|protótipo": [
+  {
+   "text": "O Tiago mostrou à diretoria o primeiro protótipo da nova embalagem.",
+   "en": "Tiago showed the board the first prototype of the new packaging.",
+   "ko": "치아구는 경영진에게 새 포장재의 첫 시제품을 보여 줬어요.",
+   "blank": "protótipo",
+   "src": "made"
+  },
+  {
+   "text": "A Inês montou um protótipo da prateleira com caixas antes de chamar o marceneiro.",
+   "en": "Inês built a mock-up of the shelf out of boxes before calling the carpenter.",
+   "ko": "이네스는 목수를 부르기 전에 상자로 선반 모형을 만들어 봤어요.",
+   "blank": "protótipo",
+   "src": "made"
+  }
+ ],
  "w|prova": [
   {
    "text": "Tenho prova amanhã.",
@@ -70765,6 +71245,22 @@
    "src": "made"
   }
  ],
+ "w|renovar": [
+  {
+   "text": "A empresa decidiu renovar o contrato do Tiago por mais dois anos.",
+   "en": "The company decided to renew Tiago's contract for two more years.",
+   "ko": "회사는 치아구의 계약을 이 년 더 연장하기로 했어요.",
+   "blank": "renovar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês quer renovar o banheiro sem perder a banheira antiga.",
+   "en": "Inês wants to renovate the bathroom without losing the old bathtub.",
+   "ko": "이네스는 옛 욕조는 살리면서 욕실을 고치고 싶어 해요.",
+   "blank": "renovar",
+   "src": "made"
+  }
+ ],
  "w|renunciar": [
   {
    "text": "Na aula de história, o Rafael aprendeu por que o imperador decidiu renunciar ao trono.",
@@ -73831,6 +74327,22 @@
    "src": "made"
   }
  ],
+ "w|saque": [
+  {
+   "text": "No dia do pagamento, o Tiago fez um saque no caixa eletrônico da portaria.",
+   "en": "On payday, Tiago made a withdrawal at the ATM by the entrance.",
+   "ko": "월급날 치아구는 정문 옆 현금 인출기에서 돈을 뽑았어요.",
+   "blank": "saque",
+   "src": "made"
+  },
+  {
+   "text": "A Inês fez um saque grande para pagar o pedreiro em dinheiro.",
+   "en": "Inês made a big withdrawal to pay the bricklayer in cash.",
+   "ko": "이네스는 미장이에게 현금으로 주려고 돈을 많이 찾았어요.",
+   "blank": "saque",
+   "src": "made"
+  }
+ ],
  "w|sarar": [
   {
    "text": "A fáscia foi rompida e precisa de sarar.",
@@ -73890,6 +74402,22 @@
    "en": "Mariana felt great satisfaction finishing her first surf lesson.",
    "ko": "마리아나는 첫 서핑 수업을 마치고 큰 뿌듯함을 느꼈어요.",
    "blank": "satisfação",
+   "src": "made"
+  }
+ ],
+ "w|satisfatório": [
+  {
+   "text": "O resultado do teste de resistência foi satisfatório para o cliente.",
+   "en": "The strength test result was satisfactory for the client.",
+   "ko": "내구성 시험 결과는 고객이 만족할 만했어요.",
+   "blank": "satisfatório",
+   "src": "made"
+  },
+  {
+   "text": "O resultado da primeira demão de tinta não foi satisfatório.",
+   "en": "The result of the first coat of paint wasn't satisfactory.",
+   "ko": "첫 번째 페인트칠 결과는 만족스럽지 않았어요.",
+   "blank": "satisfatório",
    "src": "made"
   }
  ],
@@ -75626,6 +76154,22 @@
    "en": "The falling leaves brought a significant change to the view on Rita's street.",
    "ko": "낙엽이 지자 히타네 거리 풍경이 크게 바뀌었어요.",
    "blank": "significativa",
+   "src": "made"
+  }
+ ],
+ "w|silenciar": [
+  {
+   "text": "O Tiago instalou um abafador para silenciar o compressor.",
+   "en": "Tiago installed a muffler to silence the compressor.",
+   "ko": "치아구는 압축기 소리를 줄이려고 소음기를 달았어요.",
+   "blank": "silenciar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês colocou janelas duplas para silenciar o barulho da avenida.",
+   "en": "Inês put in double-glazed windows to silence the noise from the avenue.",
+   "ko": "이네스는 대로 소음을 막으려고 이중창을 달았어요.",
+   "blank": "silenciar",
    "src": "made"
   }
  ],
@@ -77829,6 +78373,22 @@
    "src": "made"
   }
  ],
+ "w|supervisão": [
+  {
+   "text": "Os novatos trabalham sob a supervisão do Tiago no primeiro mês.",
+   "en": "The new hires work under Tiago's supervision during the first month.",
+   "ko": "신입들은 첫 달 동안 치아구의 감독 아래 일해요.",
+   "blank": "supervisão",
+   "src": "made"
+  },
+  {
+   "text": "A parte elétrica foi feita sob a supervisão de um engenheiro.",
+   "en": "The electrical work was done under an engineer's supervision.",
+   "ko": "전기 작업은 엔지니어의 감독 아래 진행됐어요.",
+   "blank": "supervisão",
+   "src": "made"
+  }
+ ],
  "w|supervisor": [
   {
    "text": "O supervisor do Rafael pediu o relatório até sexta.",
@@ -78380,6 +78940,22 @@
    "en": "Mariana published a series about the tobacco industry in the countryside of the state.",
    "ko": "마리아나는 주 내륙의 담배 산업에 관한 연재 기사를 냈어요.",
    "blank": "tabaco",
+   "src": "made"
+  }
+ ],
+ "w|tabela": [
+  {
+   "text": "O Tiago preenche uma tabela com a produção de cada máquina no fim do dia.",
+   "en": "Tiago fills in a spreadsheet with each machine's output at the end of the day.",
+   "ko": "치아구는 하루가 끝나면 기계별 생산량을 표에 적어요.",
+   "blank": "tabela",
+   "src": "made"
+  },
+  {
+   "text": "A Inês colou na geladeira uma tabela com os preços de cada material.",
+   "en": "Inês stuck a chart with the price of each material on the fridge.",
+   "ko": "이네스는 자재별 가격 표를 냉장고에 붙였어요.",
+   "blank": "tabela",
    "src": "made"
   }
  ],
@@ -79453,6 +80029,22 @@
    "en": "His theory doesn't hold up.",
    "ko": "그 사람 이론은 엉터이야.",
    "blank": "teoria"
+  }
+ ],
+ "w|teórico": [
+  {
+   "text": "O curso de segurança tem uma parte teórica e outra prática no chão de fábrica.",
+   "en": "The safety course has a theoretical part and a practical one on the factory floor.",
+   "ko": "안전 교육은 이론 수업과 공장 현장 실습으로 나뉘어요.",
+   "blank": "teórica",
+   "src": "made"
+  },
+  {
+   "text": "O irmão da Inês é muito teórico e passa mais tempo vendo vídeos do que pintando.",
+   "en": "Inês's brother is very theoretical and spends more time watching videos than painting.",
+   "ko": "이네스의 오빠는 너무 이론만 따져서 칠하기보다 영상 보는 시간이 더 길어요.",
+   "blank": "teórico",
+   "src": "made"
   }
  ],
  "w|tequila": [
@@ -83317,6 +83909,22 @@
    "src": "made"
   }
  ],
+ "w|vaga": [
+  {
+   "text": "A fábrica abriu uma vaga de técnico de manutenção no turno da noite.",
+   "en": "The factory opened a maintenance technician position on the night shift.",
+   "ko": "공장은 야간 근무 정비 기술자 자리를 하나 냈어요.",
+   "blank": "vaga",
+   "src": "made"
+  },
+  {
+   "text": "A casa da Inês tem vaga para dois carros, mas a garagem está cheia de entulho.",
+   "en": "Inês's house has space for two cars, but the garage is full of rubble.",
+   "ko": "이네스 집에는 차 두 대를 댈 자리가 있지만 차고가 잔해로 가득해요.",
+   "blank": "vaga",
+   "src": "made"
+  }
+ ],
  "w|vagabundo": [
   {
    "text": "O Tiago desistiu da jaqueta porque o tecido parecia meio vagabundo.",
@@ -84699,6 +85307,22 @@
    "src": "made"
   }
  ],
+ "w|vibrar": [
+  {
+   "text": "Quando a esteira começa a vibrar, o Tiago sabe que é hora de trocar a correia.",
+   "en": "When the conveyor starts to vibrate, Tiago knows it's time to change the belt.",
+   "ko": "컨베이어가 떨리기 시작하면 치아구는 벨트를 갈 때가 된 걸 알아요.",
+   "blank": "vibrar",
+   "src": "made"
+  },
+  {
+   "text": "A furadeira fez a parede inteira vibrar e caiu reboco no chão.",
+   "en": "The drill made the whole wall vibrate and plaster fell to the floor.",
+   "ko": "드릴 때문에 벽 전체가 흔들려서 회반죽이 바닥에 떨어졌어요.",
+   "blank": "vibrar",
+   "src": "made"
+  }
+ ],
  "w|viciado": [
   {
    "text": "O Rafael brinca que o gato dele é viciado em caixa de papelão.",
@@ -85700,6 +86324,22 @@
    "en": "The amount of boxes scared Mariana when she saw everything piled up in the living room.",
    "ko": "거실에 쌓인 상자 양을 보고 마리아나는 깜짝 놀랐어요.",
    "blank": "volume",
+   "src": "made"
+  }
+ ],
+ "w|voluntariamente": [
+  {
+   "text": "O Tiago ficou voluntariamente até mais tarde para terminar o pedido urgente.",
+   "en": "Tiago voluntarily stayed late to finish the urgent order.",
+   "ko": "치아구는 급한 주문을 끝내려고 자진해서 늦게까지 남았어요.",
+   "blank": "voluntariamente",
+   "src": "made"
+  },
+  {
+   "text": "O vizinho se ofereceu voluntariamente para consertar o portão da Inês.",
+   "en": "The neighbor voluntarily offered to fix Inês's gate.",
+   "ko": "이웃은 자진해서 이네스네 대문을 고쳐 주겠다고 나섰어요.",
+   "blank": "voluntariamente",
    "src": "made"
   }
  ],

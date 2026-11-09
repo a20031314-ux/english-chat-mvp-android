@@ -8479,6 +8479,22 @@
    "src": "made"
   }
  ],
+ "w|관리직": [
+  {
+   "text": "동민은 관리직으로 승진하면서 직접 일할 시간이 줄었어요.",
+   "en": "As Dongmin was promoted to management, his time doing hands-on work decreased.",
+   "ko": "동민은 관리직으로 승진하면서 직접 일할 시간이 줄었어요.",
+   "blank": "관리직으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 관리직이 된 뒤로 사람 문제로 고민이 많다고 털어놓았어요.",
+   "en": "Seoyeon confided that since becoming a manager she worries a lot about people issues.",
+   "ko": "서연은 관리직이 된 뒤로 사람 문제로 고민이 많다고 털어놓았어요.",
+   "blank": "관리직이",
+   "src": "made"
+  }
+ ],
  "w|관리하다": [
   {
    "text": "예산을 꼼꼼히 관리해.",
@@ -9807,6 +9823,22 @@
    "en": "Which country's passport is it?",
    "ko": "어느 국가 여권이야?",
    "blank": "국가"
+  }
+ ],
+ "w|국가고시": [
+  {
+   "text": "동민의 후배는 회사를 다니며 국가고시를 준비하고 있어요.",
+   "en": "Dongmin's junior colleague is preparing for a national exam while working.",
+   "ko": "동민의 후배는 회사를 다니며 국가고시를 준비하고 있어요.",
+   "blank": "국가고시를",
+   "src": "made"
+  },
+  {
+   "text": "서연은 국가고시에 합격한 지수에게 축하 편지를 보냈어요.",
+   "en": "Seoyeon sent a congratulatory letter to Jisu, who passed the national exam.",
+   "ko": "서연은 국가고시에 합격한 지수에게 축하 편지를 보냈어요.",
+   "blank": "국가고시에",
+   "src": "made"
   }
  ],
  "w|국경": [
@@ -12011,6 +12043,22 @@
    "src": "made"
   }
  ],
+ "w|근무지": [
+  {
+   "text": "동민의 근무지가 다음 달부터 부산으로 바뀌어요.",
+   "en": "Dongmin's workplace changes to Busan starting next month.",
+   "ko": "동민의 근무지가 다음 달부터 부산으로 바뀌어요.",
+   "blank": "근무지가",
+   "src": "made"
+  },
+  {
+   "text": "서연은 근무지가 바닷가 근처라서 점심마다 바다를 본다고 썼어요.",
+   "en": "Seoyeon wrote that her workplace is near the beach, so she sees the sea every lunch.",
+   "ko": "서연은 근무지가 바닷가 근처라서 점심마다 바다를 본다고 썼어요.",
+   "blank": "근무지가",
+   "src": "made"
+  }
+ ],
  "w|근무하다": [
   {
    "text": "주말에도 근무해야 해.",
@@ -12070,6 +12118,22 @@
    "en": "Jiyoung felt that the philosophy book raises fundamental questions about life.",
    "ko": "지영은 그 철학책이 삶에 대한 근본적인 질문을 던진다고 느꼈어요.",
    "blank": "근본적인",
+   "src": "made"
+  }
+ ],
+ "w|근본적으로": [
+  {
+   "text": "동민은 회의를 줄이는 것만으로는 야근 문제가 근본적으로 해결되지 않는다고 말했어요.",
+   "en": "Dongmin said cutting meetings alone wouldn't fundamentally solve the overtime problem.",
+   "ko": "동민은 회의를 줄이는 것만으로는 야근 문제가 근본적으로 해결되지 않는다고 말했어요.",
+   "blank": "근본적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 지수와 자신이 근본적으로 닮은 사람이라고 편지에 썼어요.",
+   "en": "Seoyeon wrote in her letter that she and Jisu are fundamentally alike.",
+   "ko": "서연은 지수와 자신이 근본적으로 닮은 사람이라고 편지에 썼어요.",
+   "blank": "근본적으로",
    "src": "made"
   }
  ],
@@ -13087,6 +13151,22 @@
    "src": "made"
   }
  ],
+ "w|기본적으로": [
+  {
+   "text": "동민은 신입 사원에게 기본적으로 메일은 당일에 답하라고 가르쳤어요.",
+   "en": "Dongmin taught the new hire to answer emails the same day as a basic rule.",
+   "ko": "동민은 신입 사원에게 기본적으로 메일은 당일에 답하라고 가르쳤어요.",
+   "blank": "기본적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 기본적으로 낙천적이라서 힘든 일도 편지에 가볍게 적어요.",
+   "en": "Seoyeon is basically optimistic, so she writes even about hard things lightly in her letters.",
+   "ko": "서연은 기본적으로 낙천적이라서 힘든 일도 편지에 가볍게 적어요.",
+   "blank": "기본적으로",
+   "src": "made"
+  }
+ ],
  "w|기부": [
   {
    "text": "옷가지를 기부하러 갔어.",
@@ -13278,6 +13358,22 @@
    "en": "The newspaper's website was down for an hour due to a technical problem.",
    "ko": "신문사 홈페이지가 기술적인 문제로 한 시간 동안 멈췄어요.",
    "blank": "기술적인",
+   "src": "made"
+  }
+ ],
+ "w|기술직": [
+  {
+   "text": "회사는 기술직 경력자를 급하게 찾고 있어요.",
+   "en": "The company is urgently looking for experienced technical staff.",
+   "ko": "회사는 기술직 경력자를 급하게 찾고 있어요.",
+   "blank": "기술직",
+   "src": "made"
+  },
+  {
+   "text": "서연의 동생은 통신 회사 기술직에 합격했대요.",
+   "en": "Seoyeon's younger sibling apparently got a technical job at a telecom company.",
+   "ko": "서연의 동생은 통신 회사 기술직에 합격했대요.",
+   "blank": "기술직에",
    "src": "made"
   }
  ],
@@ -17341,6 +17437,22 @@
    "src": "made"
   }
  ],
+ "w|노동력": [
+  {
+   "text": "공장 자동화로 회사는 필요한 노동력을 크게 줄였어요.",
+   "en": "Through factory automation, the company greatly reduced the labor it needed.",
+   "ko": "공장 자동화로 회사는 필요한 노동력을 크게 줄였어요.",
+   "blank": "노동력을",
+   "src": "made"
+  },
+  {
+   "text": "서연의 고향은 젊은 노동력이 도시로 떠나서 조용해졌대요.",
+   "en": "Seoyeon's hometown has become quiet since its young workforce left for the cities.",
+   "ko": "서연의 고향은 젊은 노동력이 도시로 떠나서 조용해졌대요.",
+   "blank": "노동력이",
+   "src": "made"
+  }
+ ],
  "w|노동자": [
   {
    "text": "노동자의 권리가 법으로 보호돼.",
@@ -19717,6 +19829,22 @@
    "blank": "단어가"
   }
  ],
+ "w|단연": [
+  {
+   "text": "올해 영업 실적은 동민이 단연 일등이었어요.",
+   "en": "Dongmin was by far number one in sales performance this year.",
+   "ko": "올해 영업 실적은 동민이 단연 일등이었어요.",
+   "blank": "단연",
+   "src": "made"
+  },
+  {
+   "text": "서연은 학창 시절 가장 즐거웠던 날은 단연 수학여행이었다고 썼어요.",
+   "en": "Seoyeon wrote that the happiest day of their school years was by far the school trip.",
+   "ko": "서연은 학창 시절 가장 즐거웠던 날은 단연 수학여행이었다고 썼어요.",
+   "blank": "단연",
+   "src": "made"
+  }
+ ],
  "w|단절되다": [
   {
    "text": "폭설로 인터넷이 단절되자 재원네 가족은 오랜만에 윷놀이를 했어요.",
@@ -20761,6 +20889,22 @@
    "blank": "대개는"
   }
  ],
+ "w|대거": [
+  {
+   "text": "연말에 부장급 직원들이 대거 승진했어요.",
+   "en": "At year's end, managers at the department-head level were promoted en masse.",
+   "ko": "연말에 부장급 직원들이 대거 승진했어요.",
+   "blank": "대거",
+   "src": "made"
+  },
+  {
+   "text": "서연의 편지에는 봄마다 철새가 대거 강가로 날아온다는 소식이 있었어요.",
+   "en": "Seoyeon's letter said migratory birds fly to the riverside in large numbers every spring.",
+   "ko": "서연의 편지에는 봄마다 철새가 대거 강가로 날아온다는 소식이 있었어요.",
+   "blank": "대거",
+   "src": "made"
+  }
+ ],
  "w|대걸레": [
   {
    "text": "공사가 끝난 날 현우는 대걸레로 집 안 바닥을 전부 닦았어요.",
@@ -21672,6 +21816,22 @@
    "en": "On her way home from work, Sujin stopped by the market and bought a bunch of green onions.",
    "ko": "수진은 퇴근길에 시장에 들러 대파 한 단을 샀어요.",
    "blank": "대파",
+   "src": "made"
+  }
+ ],
+ "w|대폭": [
+  {
+   "text": "회사는 내년 신입 사원 채용을 대폭 늘릴 계획이에요.",
+   "en": "The company plans to greatly increase new hires next year.",
+   "ko": "회사는 내년 신입 사원 채용을 대폭 늘릴 계획이에요.",
+   "blank": "대폭",
+   "src": "made"
+  },
+  {
+   "text": "서연은 고향 마을이 대폭 바뀌어서 알아보기 힘들었다고 편지에 적었어요.",
+   "en": "Seoyeon wrote in her letter that her hometown had changed so drastically it was hard to recognize.",
+   "ko": "서연은 고향 마을이 대폭 바뀌어서 알아보기 힘들었다고 편지에 적었어요.",
+   "blank": "대폭",
    "src": "made"
   }
  ],
@@ -36793,6 +36953,22 @@
    "src": "krdict"
   }
  ],
+ "w|복리후생": [
+  {
+   "text": "동민은 연봉보다 복리후생을 보고 이 회사를 골랐어요.",
+   "en": "Dongmin chose this company for its benefits rather than its salary.",
+   "ko": "동민은 연봉보다 복리후생을 보고 이 회사를 골랐어요.",
+   "blank": "복리후생을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 새 회사의 복리후생이 좋아서 휴가가 길다고 전했어요.",
+   "en": "Seoyeon said her new company's benefits are good, so her vacations are long.",
+   "ko": "서연은 새 회사의 복리후생이 좋아서 휴가가 길다고 전했어요.",
+   "blank": "복리후생이",
+   "src": "made"
+  }
+ ],
  "w|복사기": [
   {
    "text": "공장 사무실 복사기가 또 종이가 걸려서 태윤이 고쳤어요.",
@@ -37122,6 +37298,22 @@
    "en": "At the book club, Jiyoung talked about the essential meaning of love.",
    "ko": "지영은 독서 모임에서 사랑의 본질적인 의미에 대해 이야기했어요.",
    "blank": "본질적인",
+   "src": "made"
+  }
+ ],
+ "w|본질적으로": [
+  {
+   "text": "두 부서가 하는 일은 이름만 다를 뿐 본질적으로 같아요.",
+   "en": "The two departments' jobs are essentially the same, only the names differ.",
+   "ko": "두 부서가 하는 일은 이름만 다를 뿐 본질적으로 같아요.",
+   "blank": "본질적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 우정은 본질적으로 시간이 지나도 변하지 않는다고 믿어요.",
+   "en": "Seoyeon believes friendship essentially doesn't change over time.",
+   "ko": "서연은 우정은 본질적으로 시간이 지나도 변하지 않는다고 믿어요.",
+   "blank": "본질적으로",
    "src": "made"
   }
  ],
@@ -41267,6 +41459,22 @@
    "blank": "사무실"
   }
  ],
+ "w|사무직": [
+  {
+   "text": "동민은 사무직이지만 가끔 공장에 나가 생산 과정을 봐요.",
+   "en": "Dongmin is an office worker, but he sometimes goes to the factory to watch production.",
+   "ko": "동민은 사무직이지만 가끔 공장에 나가 생산 과정을 봐요.",
+   "blank": "사무직이지만",
+   "src": "made"
+  },
+  {
+   "text": "서연은 사무직이 몸은 편해도 어깨가 자주 결린다고 썼어요.",
+   "en": "Seoyeon wrote that an office job may be physically easy, but her shoulders often get stiff.",
+   "ko": "서연은 사무직이 몸은 편해도 어깨가 자주 결린다고 썼어요.",
+   "blank": "사무직이",
+   "src": "made"
+  }
+ ],
  "w|사방": [
   {
    "text": "봄이 되니 사방이 꽃으로 둘러싸였다.",
@@ -43941,6 +44149,22 @@
    "src": "made"
   }
  ],
+ "w|생산직": [
+  {
+   "text": "회사는 생산직 직원들의 근무 시간을 줄였어요.",
+   "en": "The company reduced working hours for its production workers.",
+   "ko": "회사는 생산직 직원들의 근무 시간을 줄였어요.",
+   "blank": "생산직",
+   "src": "made"
+  },
+  {
+   "text": "서연의 오빠는 자동차 공장 생산직으로 일하고 있대요.",
+   "en": "Seoyeon's older brother apparently works in production at a car factory.",
+   "ko": "서연의 오빠는 자동차 공장 생산직으로 일하고 있대요.",
+   "blank": "생산직으로",
+   "src": "made"
+  }
+ ],
  "w|생산하다": [
   {
    "text": "경민은 버려진 페트병으로 옷을 생산하는 공장을 취재했어요.",
@@ -44502,6 +44726,22 @@
    "en": "Yuna's app is used by owners in the service industry, such as restaurants, to manage reservations.",
    "ko": "유나의 앱은 식당 같은 서비스업 사장님들이 예약을 관리할 때 써요.",
    "blank": "서비스업",
+   "src": "made"
+  }
+ ],
+ "w|서비스직": [
+  {
+   "text": "동민의 여동생은 호텔 서비스직에서 일해요.",
+   "en": "Dongmin's younger sister works in a hotel service job.",
+   "ko": "동민의 여동생은 호텔 서비스직에서 일해요.",
+   "blank": "서비스직에서",
+   "src": "made"
+  },
+  {
+   "text": "서연은 서비스직은 웃는 얼굴 뒤에 숨은 피로가 크다고 썼어요.",
+   "en": "Seoyeon wrote that in service jobs there's a lot of fatigue hidden behind the smiling faces.",
+   "ko": "서연은 서비스직은 웃는 얼굴 뒤에 숨은 피로가 크다고 썼어요.",
+   "blank": "서비스직은",
    "src": "made"
   }
  ],
@@ -48345,6 +48585,22 @@
    "blank": "수술했어"
   }
  ],
+ "w|수습": [
+  {
+   "text": "신입 사원은 석 달 동안 수습 기간을 거쳐요.",
+   "en": "New employees go through a three-month probation period.",
+   "ko": "신입 사원은 석 달 동안 수습 기간을 거쳐요.",
+   "blank": "수습",
+   "src": "made"
+  },
+  {
+   "text": "서연은 수습을 무사히 마치고 정직원이 됐다고 자랑했어요.",
+   "en": "Seoyeon boasted that she'd safely finished her probation and become a full employee.",
+   "ko": "서연은 수습을 무사히 마치고 정직원이 됐다고 자랑했어요.",
+   "blank": "수습을",
+   "src": "made"
+  }
+ ],
  "w|수신": [
   {
    "text": "교실 뒤쪽은 와이파이 수신이 약해서 현우는 앞자리로 옮겼어요.",
@@ -51899,6 +52155,38 @@
    "blank": "실망하지"
   }
  ],
+ "w|실무": [
+  {
+   "text": "동민은 학교에서 배운 것과 실무가 많이 다르다는 걸 느꼈어요.",
+   "en": "Dongmin felt that what he learned in school was very different from actual work.",
+   "ko": "동민은 학교에서 배운 것과 실무가 많이 다르다는 걸 느꼈어요.",
+   "blank": "실무가",
+   "src": "made"
+  },
+  {
+   "text": "서연은 이제 실무에 익숙해져서 일이 재미있다고 했어요.",
+   "en": "Seoyeon said she's now used to the actual work, so the job is fun.",
+   "ko": "서연은 이제 실무에 익숙해져서 일이 재미있다고 했어요.",
+   "blank": "실무에",
+   "src": "made"
+  }
+ ],
+ "w|실무자": [
+  {
+   "text": "동민은 회의에 실무자를 꼭 데려가요.",
+   "en": "Dongmin always brings the staff who actually do the work to meetings.",
+   "ko": "동민은 회의에 실무자를 꼭 데려가요.",
+   "blank": "실무자를",
+   "src": "made"
+  },
+  {
+   "text": "서연은 현장 실무자들과 일하면서 많이 배운다고 썼어요.",
+   "en": "Seoyeon wrote that she learns a lot working with the people on the ground.",
+   "ko": "서연은 현장 실무자들과 일하면서 많이 배운다고 썼어요.",
+   "blank": "실무자들과",
+   "src": "made"
+  }
+ ],
  "w|실수": [
   {
    "text": "실수했어. 미안해.",
@@ -51973,6 +52261,22 @@
    "en": "I'm worried about unemployment.",
    "ko": "실업을 걱정하고 있어.",
    "blank": "실업을"
+  }
+ ],
+ "w|실업급여": [
+  {
+   "text": "회사가 문을 닫자 동민의 친구는 실업급여를 신청했어요.",
+   "en": "When the company closed, Dongmin's friend applied for unemployment benefits.",
+   "ko": "회사가 문을 닫자 동민의 친구는 실업급여를 신청했어요.",
+   "blank": "실업급여를",
+   "src": "made"
+  },
+  {
+   "text": "서연은 실업급여를 받으며 쉬는 동안 그림을 배웠다고 적었어요.",
+   "en": "Seoyeon wrote that she learned painting while resting on unemployment benefits.",
+   "ko": "서연은 실업급여를 받으며 쉬는 동안 그림을 배웠다고 적었어요.",
+   "blank": "실업급여를",
+   "src": "made"
   }
  ],
  "w|실업률": [
@@ -52128,6 +52432,22 @@
    "en": "Unemployment rose among the seaside villagers as the factory closed.",
    "ko": "공장이 문을 닫으면서 바닷가 마을 사람들의 실직이 늘었어요.",
    "blank": "실직이",
+   "src": "made"
+  }
+ ],
+ "w|실질적으로": [
+  {
+   "text": "동민은 직함만 대리였지 실질적으로 팀장 역할을 했어요.",
+   "en": "Dongmin was an assistant manager in title only and effectively served as team leader.",
+   "ko": "동민은 직함만 대리였지 실질적으로 팀장 역할을 했어요.",
+   "blank": "실질적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 지수의 조언이 실질적으로 큰 도움이 됐다고 고마워했어요.",
+   "en": "Seoyeon thanked Jisu, saying her advice had been of real practical help.",
+   "ko": "서연은 지수의 조언이 실질적으로 큰 도움이 됐다고 고마워했어요.",
+   "blank": "실질적으로",
    "src": "made"
   }
  ],
@@ -55317,6 +55637,22 @@
    "src": "made"
   }
  ],
+ "w|애초에": [
+  {
+   "text": "동민은 애초에 그 프로젝트가 무리라고 생각했어요.",
+   "en": "Dongmin thought from the start that the project was too much.",
+   "ko": "동민은 애초에 그 프로젝트가 무리라고 생각했어요.",
+   "blank": "애초에",
+   "src": "made"
+  },
+  {
+   "text": "서연은 애초에 편지를 짧게 쓰려 했지만 세 장을 넘겼어요.",
+   "en": "Seoyeon meant to write a short letter from the start but went over three pages.",
+   "ko": "서연은 애초에 편지를 짧게 쓰려 했지만 세 장을 넘겼어요.",
+   "blank": "애초에",
+   "src": "made"
+  }
+ ],
  "w|애호박": [
   {
    "text": "현우는 채소 빵에 애호박을 잘게 다져 넣어요.",
@@ -57403,6 +57739,22 @@
    "src": "made"
   }
  ],
+ "w|엄연히": [
+  {
+   "text": "야근 수당은 엄연히 직원의 권리라고 동민이 말했어요.",
+   "en": "Dongmin said overtime pay is clearly the employees' right.",
+   "ko": "야근 수당은 엄연히 직원의 권리라고 동민이 말했어요.",
+   "blank": "엄연히",
+   "src": "made"
+  },
+  {
+   "text": "서연은 둘이 다툰 것은 엄연히 자기 잘못이었다고 편지에서 사과했어요.",
+   "en": "In her letter, Seoyeon apologized that their fight was clearly her own fault.",
+   "ko": "서연은 둘이 다툰 것은 엄연히 자기 잘못이었다고 편지에서 사과했어요.",
+   "blank": "엄연히",
+   "src": "made"
+  }
+ ],
  "w|엄지": [
   {
    "text": "동민의 아이디어에 팀장은 엄지를 치켜세웠어요.",
@@ -57584,6 +57936,22 @@
    "en": "Seoyeon presented on King Sejong's achievements in history class.",
    "ko": "서연은 역사 시간에 세종대왕의 업적을 발표했어요.",
    "blank": "업적을",
+   "src": "made"
+  }
+ ],
+ "w|업종": [
+  {
+   "text": "동민의 회사는 업종을 바꿔서 이제 화장품을 만들어요.",
+   "en": "Dongmin's company switched industries and now makes cosmetics.",
+   "ko": "동민의 회사는 업종을 바꿔서 이제 화장품을 만들어요.",
+   "blank": "업종을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 지수에게 요즘 뜨는 업종이 뭔지 물었어요.",
+   "en": "Seoyeon asked Jisu which industries are booming these days.",
+   "ko": "서연은 지수에게 요즘 뜨는 업종이 뭔지 물었어요.",
+   "blank": "업종이",
    "src": "made"
   }
  ],
@@ -59804,6 +60172,22 @@
    "en": "The co-founder, a former salesperson at a big company, landed the first contract.",
    "ko": "대기업 영업사원 출신인 공동 창업자가 첫 계약을 따냈어요.",
    "blank": "영업사원",
+   "src": "made"
+  }
+ ],
+ "w|영업직": [
+  {
+   "text": "동민은 말솜씨가 좋아서 영업직이 잘 맞아요.",
+   "en": "Dongmin is good with words, so sales suits him well.",
+   "ko": "동민은 말솜씨가 좋아서 영업직이 잘 맞아요.",
+   "blank": "영업직이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 지수가 영업직에서 일 년 만에 최고 실적을 냈다는 소식에 기뻐했어요.",
+   "en": "Seoyeon was delighted to hear Jisu had the best sales results within a year in her sales job.",
+   "ko": "서연은 지수가 영업직에서 일 년 만에 최고 실적을 냈다는 소식에 기뻐했어요.",
+   "blank": "영업직에서",
    "src": "made"
   }
  ],
@@ -63643,6 +64027,22 @@
    "blank": "원칙을"
   }
  ],
+ "w|원칙적으로": [
+  {
+   "text": "회사 규정상 원칙적으로 재택근무는 일주일에 이틀까지만 돼요.",
+   "en": "Under company rules, working from home is in principle allowed only up to two days a week.",
+   "ko": "회사 규정상 원칙적으로 재택근무는 일주일에 이틀까지만 돼요.",
+   "blank": "원칙적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 지수에게 원칙적으로 일요일엔 일을 안 한다고 썼어요.",
+   "en": "Seoyeon wrote to Jisu that on principle she doesn't work on Sundays.",
+   "ko": "서연은 지수에게 원칙적으로 일요일엔 일을 안 한다고 썼어요.",
+   "blank": "원칙적으로",
+   "src": "made"
+  }
+ ],
  "w|원피스": [
   {
    "text": "여름에 가벼운 원피스를 입었어.",
@@ -66207,6 +66607,22 @@
    "src": "krdict"
   }
  ],
+ "w|이론적으로": [
+  {
+   "text": "그 계획은 이론적으로 완벽했지만 현장에서는 잘 안 맞았어요.",
+   "en": "The plan was theoretically perfect but didn't work well in practice.",
+   "ko": "그 계획은 이론적으로 완벽했지만 현장에서는 잘 안 맞았어요.",
+   "blank": "이론적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 이론적으로는 매주 편지를 쓸 수 있지만 현실은 다르다고 웃었어요.",
+   "en": "Seoyeon laughed that in theory she could write every week, but reality is different.",
+   "ko": "서연은 이론적으로는 매주 편지를 쓸 수 있지만 현실은 다르다고 웃었어요.",
+   "blank": "이론적으로는",
+   "src": "made"
+  }
+ ],
  "w|이롭다": [
   {
    "text": "공장장은 짧은 스트레칭이 직원 건강에 이롭다며 매일 하게 했어요.",
@@ -67223,6 +67639,22 @@
    "src": "made"
   }
  ],
+ "w|이직": [
+  {
+   "text": "팀장이 이직을 하는 바람에 동민이 팀을 맡게 됐어요.",
+   "en": "Because the team leader changed jobs, Dongmin ended up in charge of the team.",
+   "ko": "팀장이 이직을 하는 바람에 동민이 팀을 맡게 됐어요.",
+   "blank": "이직을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 이직을 고민 중이라며 지수의 생각을 물었어요.",
+   "en": "Seoyeon said she's thinking of changing jobs and asked what Jisu thought.",
+   "ko": "서연은 이직을 고민 중이라며 지수의 생각을 물었어요.",
+   "blank": "이직을",
+   "src": "made"
+  }
+ ],
  "w|이쪽": [
   {
    "text": "이쪽이 더 빨라.",
@@ -67643,6 +68075,22 @@
    "src": "made"
   }
  ],
+ "w|인력": [
+  {
+   "text": "동민의 부서는 인력이 부족해서 다들 야근을 해요.",
+   "en": "Dongmin's department is understaffed, so everyone works overtime.",
+   "ko": "동민의 부서는 인력이 부족해서 다들 야근을 해요.",
+   "blank": "인력이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 지수의 병원에 간호 인력이 부족하다는 말을 듣고 걱정했어요.",
+   "en": "Seoyeon worried after hearing that Jisu's hospital is short on nursing staff.",
+   "ko": "서연은 지수의 병원에 간호 인력이 부족하다는 말을 듣고 걱정했어요.",
+   "blank": "인력이",
+   "src": "made"
+  }
+ ],
  "w|인물": [
   {
    "text": "우리 대학에서 세계적으로 유명한 인물이 배출되었다.",
@@ -67911,6 +68359,22 @@
    "src": "made"
   }
  ],
+ "w|인재": [
+  {
+   "text": "동민은 좋은 인재를 뽑으려고 면접 질문을 새로 짰어요.",
+   "en": "Dongmin wrote new interview questions to hire talented people.",
+   "ko": "동민은 좋은 인재를 뽑으려고 면접 질문을 새로 짰어요.",
+   "blank": "인재를",
+   "src": "made"
+  },
+  {
+   "text": "서연은 지수 같은 인재가 회사를 떠나서 아깝다고 썼어요.",
+   "en": "Seoyeon wrote that it was a shame a talented person like Jisu left the company.",
+   "ko": "서연은 지수 같은 인재가 회사를 떠나서 아깝다고 썼어요.",
+   "blank": "인재가",
+   "src": "made"
+  }
+ ],
  "w|인정": [
   {
    "text": "민수는 선생님께 인정을 받고 싶어서 더 열심히 했어요.",
@@ -68057,6 +68521,22 @@
    "en": "My first day as an intern was nerve-wracking.",
    "ko": "인턴 첫날이 긴장됐어.",
    "blank": "인턴"
+  }
+ ],
+ "w|인턴십": [
+  {
+   "text": "대학생 때 한 인턴십 덕분에 동민은 이 회사에 들어왔어요.",
+   "en": "Thanks to an internship he did in college, Dongmin got into this company.",
+   "ko": "대학생 때 한 인턴십 덕분에 동민은 이 회사에 들어왔어요.",
+   "blank": "인턴십",
+   "src": "made"
+  },
+  {
+   "text": "서연은 해외 인턴십을 마치고 돌아왔다고 지수에게 알렸어요.",
+   "en": "Seoyeon told Jisu she'd come back after finishing an overseas internship.",
+   "ko": "서연은 해외 인턴십을 마치고 돌아왔다고 지수에게 알렸어요.",
+   "blank": "인턴십을",
+   "src": "made"
   }
  ],
  "w|인테리어": [
@@ -68236,6 +68716,22 @@
    "en": "At pools, it's standard to wear a swim cap.",
    "ko": "수영장에서는 수영모를 쓰는 게 일반적이에요.",
    "blank": "일반적이에요",
+   "src": "made"
+  }
+ ],
+ "w|일반적으로": [
+  {
+   "text": "이 회사에서는 일반적으로 아홉 시 전에 출근해요.",
+   "en": "At this company, people generally get to work before nine.",
+   "ko": "이 회사에서는 일반적으로 아홉 시 전에 출근해요.",
+   "blank": "일반적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 요즘 사람들은 일반적으로 편지보다 문자를 쓴다며 아쉬워했어요.",
+   "en": "Seoyeon lamented that people these days generally text rather than write letters.",
+   "ko": "서연은 요즘 사람들은 일반적으로 편지보다 문자를 쓴다며 아쉬워했어요.",
+   "blank": "일반적으로",
    "src": "made"
   }
  ],
@@ -73046,6 +73542,38 @@
    "en": "Sujin got professional legal advice to review the contract.",
    "ko": "수진은 계약서를 검토하려고 전문적인 법률 자문을 받았어요.",
    "blank": "전문적인",
+   "src": "made"
+  }
+ ],
+ "w|전문직": [
+  {
+   "text": "동민의 동기는 회사를 그만두고 전문직 자격증을 준비해요.",
+   "en": "Dongmin's peer quit the company to prepare for a professional license.",
+   "ko": "동민의 동기는 회사를 그만두고 전문직 자격증을 준비해요.",
+   "blank": "전문직",
+   "src": "made"
+  },
+  {
+   "text": "서연은 전문직이라고 다 편한 건 아니라는 지수의 말에 공감했어요.",
+   "en": "Seoyeon agreed with Jisu that not every professional job is easy.",
+   "ko": "서연은 전문직이라고 다 편한 건 아니라는 지수의 말에 공감했어요.",
+   "blank": "전문직이라고",
+   "src": "made"
+  }
+ ],
+ "w|전반적으로": [
+  {
+   "text": "동민의 팀은 올해 전반적으로 실적이 좋았어요.",
+   "en": "Dongmin's team had good results overall this year.",
+   "ko": "동민의 팀은 올해 전반적으로 실적이 좋았어요.",
+   "blank": "전반적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 새 직장이 전반적으로 마음에 든다고 지수에게 편지를 썼어요.",
+   "en": "Seoyeon wrote to Jisu that she liked her new job overall.",
+   "ko": "서연은 새 직장이 전반적으로 마음에 든다고 지수에게 편지를 썼어요.",
+   "blank": "전반적으로",
    "src": "made"
   }
  ],
@@ -79825,6 +80353,22 @@
    "src": "made"
   }
  ],
+ "w|직군": [
+  {
+   "text": "회사는 개발 직군의 연봉을 따로 올렸어요.",
+   "en": "The company separately raised salaries for the development job group.",
+   "ko": "회사는 개발 직군의 연봉을 따로 올렸어요.",
+   "blank": "직군의",
+   "src": "made"
+  },
+  {
+   "text": "서연은 회사가 직군별로 다른 교육을 한다고 편지에 설명했어요.",
+   "en": "Seoyeon explained in her letter that her company gives different training by job group.",
+   "ko": "서연은 회사가 직군별로 다른 교육을 한다고 편지에 설명했어요.",
+   "blank": "직군별로",
+   "src": "made"
+  }
+ ],
  "w|직업": [
   {
    "text": "꿈의 직업을 찾고 있어.",
@@ -79925,6 +80469,22 @@
    "en": "It's a letter I wrote myself.",
    "ko": "직접 쓴 편지야.",
    "blank": "직접"
+  }
+ ],
+ "w|직종": [
+  {
+   "text": "동민은 같은 직종에서 십 년째 일하고 있어요.",
+   "en": "Dongmin has been working in the same occupation for ten years.",
+   "ko": "동민은 같은 직종에서 십 년째 일하고 있어요.",
+   "blank": "직종에서",
+   "src": "made"
+  },
+  {
+   "text": "서연은 편지에서 직종을 바꿔 디자이너가 됐다는 소식을 전했어요.",
+   "en": "In her letter, Seoyeon shared the news that she'd changed occupations and become a designer.",
+   "ko": "서연은 편지에서 직종을 바꿔 디자이너가 됐다는 소식을 전했어요.",
+   "blank": "직종을",
+   "src": "made"
   }
  ],
  "w|직책": [
@@ -88639,6 +89199,22 @@
    "src": "made"
   }
  ],
+ "w|퇴직금": [
+  {
+   "text": "동민의 선배는 퇴직금으로 작은 카페를 차렸어요.",
+   "en": "Dongmin's senior colleague opened a small café with his severance pay.",
+   "ko": "동민의 선배는 퇴직금으로 작은 카페를 차렸어요.",
+   "blank": "퇴직금으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 아버지가 퇴직금으로 시골에 작은 집을 사셨다고 썼어요.",
+   "en": "Seoyeon wrote that her father bought a small house in the countryside with his severance pay.",
+   "ko": "서연은 아버지가 퇴직금으로 시골에 작은 집을 사셨다고 썼어요.",
+   "blank": "퇴직금으로",
+   "src": "made"
+  }
+ ],
  "w|투명성": [
   {
    "text": "재원은 예산 사용의 투명성을 위해 지출 내역을 홈페이지에 올려요.",
@@ -96681,6 +97257,22 @@
    "blank": "환영했어"
   }
  ],
+ "w|환원하다": [
+  {
+   "text": "동민의 회사는 올해 이익의 일부를 지역 사회에 환원하기로 했어요.",
+   "en": "Dongmin's company decided to give part of this year's profits back to the local community.",
+   "ko": "동민의 회사는 올해 이익의 일부를 지역 사회에 환원하기로 했어요.",
+   "blank": "환원하기로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 친구에게 쓴 편지에서 할아버지가 땅을 마을에 환원하셨다고 전했어요.",
+   "en": "In a letter to her friend, Seoyeon wrote that her grandfather had given his land back to the village.",
+   "ko": "서연은 친구에게 쓴 편지에서 할아버지가 땅을 마을에 환원하셨다고 전했어요.",
+   "blank": "환원하셨다고",
+   "src": "made"
+  }
+ ],
  "w|환자": [
   {
    "text": "환자가 많이 대기 중이야.",
@@ -97881,6 +98473,22 @@
    "src": "made"
   }
  ],
+ "w|휴직": [
+  {
+   "text": "동민의 동료는 아기가 태어나서 일 년 동안 휴직을 했어요.",
+   "en": "Dongmin's coworker took a year of leave after her baby was born.",
+   "ko": "동민의 동료는 아기가 태어나서 일 년 동안 휴직을 했어요.",
+   "blank": "휴직을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 몸이 안 좋아서 석 달 휴직을 했다고 털어놓았어요.",
+   "en": "Seoyeon confided that she'd taken three months of leave because she wasn't well.",
+   "ko": "서연은 몸이 안 좋아서 석 달 휴직을 했다고 털어놓았어요.",
+   "blank": "휴직을",
+   "src": "made"
+  }
+ ],
  "w|휴학하다": [
   {
    "text": "건강 때문에 한 학기 휴학했어.",
@@ -98175,6 +98783,22 @@
    "src": "made"
   }
  ],
+ "w|흡수하다": [
+  {
+   "text": "동민의 회사는 작은 경쟁사를 흡수해서 직원이 두 배로 늘었어요.",
+   "en": "Dongmin's company absorbed a small competitor and doubled its staff.",
+   "ko": "동민의 회사는 작은 경쟁사를 흡수해서 직원이 두 배로 늘었어요.",
+   "blank": "흡수해서",
+   "src": "made"
+  },
+  {
+   "text": "서연은 새 동네 분위기를 빨리 흡수하고 있다고 친구에게 썼어요.",
+   "en": "Seoyeon wrote to her friend that she was quickly absorbing the feel of her new neighborhood.",
+   "ko": "서연은 새 동네 분위기를 빨리 흡수하고 있다고 친구에게 썼어요.",
+   "blank": "흡수하고",
+   "src": "made"
+  }
+ ],
  "w|흥미": [
   {
    "text": "그 이야기에 흥미가 생겼어.",
@@ -98305,6 +98929,22 @@
    "en": "The victim's family held a press conference.",
    "ko": "희생자 가족이 기자회견을 했어.",
    "blank": "희생자"
+  }
+ ],
+ "w|희생하다": [
+  {
+   "text": "동민은 주말을 희생해 가며 보고서를 끝냈어요.",
+   "en": "Dongmin finished the report at the cost of his weekend.",
+   "ko": "동민은 주말을 희생해 가며 보고서를 끝냈어요.",
+   "blank": "희생해",
+   "src": "made"
+  },
+  {
+   "text": "서연은 부모님이 자식들을 위해 많은 걸 희생하셨다는 걸 이제야 안다고 썼어요.",
+   "en": "Seoyeon wrote that only now does she know her parents sacrificed a lot for their children.",
+   "ko": "서연은 부모님이 자식들을 위해 많은 걸 희생하셨다는 걸 이제야 안다고 썼어요.",
+   "blank": "희생하셨다는",
+   "src": "made"
   }
  ],
  "w|희한하다": [

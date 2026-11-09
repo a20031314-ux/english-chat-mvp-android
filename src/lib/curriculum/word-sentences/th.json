@@ -1669,6 +1669,22 @@
    "src": "made"
   }
  ],
+ "w|กว้างใหญ่": [
+  {
+   "text": "สวนสาธารณะหลังหมู่บ้านกว้างใหญ่จนประยุทธวิ่งรอบเดียวก็เหนื่อย",
+   "en": "The park behind the village is so vast that Prayut gets tired after one lap.",
+   "ko": "마을 뒤 공원은 아주 넓어서 쁘라윳은 한 바퀴만 뛰어도 지쳐요.",
+   "blank": "กว้างใหญ่",
+   "src": "made"
+  },
+  {
+   "text": "จากหน้าต่างคลินิกชั้นบน จันทร์มองเห็นทุ่งนากว้างใหญ่",
+   "en": "From the clinic's upstairs window, Jan can see vast rice fields.",
+   "ko": "치과 위층 창문에서 짠은 드넓은 논을 볼 수 있어요.",
+   "blank": "กว้างใหญ่",
+   "src": "made"
+  }
+ ],
  "w|กว่าจะ": [
   {
    "text": "กว่าจะถึงบ้านก็มืดแล้ว",
@@ -4381,6 +4397,22 @@
    "blank": "เกี่ยวข้อง"
   }
  ],
+ "w|เกี่ยวพัน": [
+  {
+   "text": "ประยุทธเพิ่งรู้ว่าเพื่อนบ้านเกี่ยวพันเป็นญาติห่างๆ กับภรรยา",
+   "en": "Prayut just found out his neighbor is distantly related to his wife.",
+   "ko": "쁘라윳은 이웃이 아내와 먼 친척 관계라는 걸 막 알았어요.",
+   "blank": "เกี่ยวพัน",
+   "src": "made"
+  },
+  {
+   "text": "หมออธิบายว่าโรคเหงือกเกี่ยวพันกับโรคหัวใจด้วย",
+   "en": "The dentist explained that gum disease is also linked to heart disease.",
+   "ko": "의사는 잇몸병이 심장병과도 관련이 있다고 설명했어요.",
+   "blank": "เกี่ยวพัน",
+   "src": "made"
+  }
+ ],
  "w|เกือบ": [
   {
    "text": "เกือบเสร็จแล้ว",
@@ -4407,6 +4439,22 @@
    "en": "The work is almost done.",
    "ko": "일이 거의 끝났어.",
    "blank": "เกือบจะ"
+  }
+ ],
+ "w|เกือบไป": [
+  {
+   "text": "ประยุทธรับกระถางที่ตกจากระเบียงได้ทัน เกือบไปแล้วเชียว",
+   "en": "Prayut caught the pot that fell from the balcony just in time; that was a close call.",
+   "ko": "쁘라윳은 발코니에서 떨어진 화분을 겨우 받아 냈어요, 정말 큰일 날 뻔했어요.",
+   "blank": "เกือบไป",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์บอกว่าเกือบไปแล้ว ถ้ามาหาหมอช้ากว่านี้ฟันซี่นั้นคงต้องถอน",
+   "en": "Jan said it was a close call; if she'd come later, that tooth would've had to be pulled.",
+   "ko": "짠은 큰일 날 뻔했다며 조금만 늦게 왔으면 그 이를 뽑아야 했을 거라고 했어요.",
+   "blank": "เกือบไป",
+   "src": "made"
   }
  ],
  "w|แก": [
@@ -4554,6 +4602,22 @@
    "en": "Somsak says when he gets old he'll write a book about a reporter's life.",
    "ko": "솜삭은 나이가 들면 기자의 삶에 관한 책을 쓰겠다고 해요.",
    "blank": "แก่ตัว",
+   "src": "made"
+  }
+ ],
+ "w|แก้ตัว": [
+  {
+   "text": "ลูกข้างบ้านพยายามแก้ตัวว่าไม่ได้เป็นคนเตะบอลใส่กระจก",
+   "en": "The neighbor's kid tried to make excuses that he wasn't the one who kicked the ball at the window.",
+   "ko": "옆집 아이는 유리창에 공을 찬 사람이 자기가 아니라고 변명하려 했어요.",
+   "blank": "แก้ตัว",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์แก้ตัวกับหมอว่าลืมใช้ไหมขัดฟันเพราะงานยุ่ง",
+   "en": "Jan made the excuse to the dentist that she forgot to floss because work was busy.",
+   "ko": "짠은 일이 바빠서 치실 쓰는 걸 잊었다고 의사에게 변명했어요.",
+   "blank": "แก้ตัว",
    "src": "made"
   }
  ],
@@ -5475,6 +5539,22 @@
    "blank": "ข้อความ"
   }
  ],
+ "w|ขอความช่วยเหลือ": [
+  {
+   "text": "ตอนน้ำท่วม ประยุทธขอความช่วยเหลือจากเพื่อนบ้านให้ยกของขึ้นที่สูง",
+   "en": "During the flood, Prayut asked the neighbors for help lifting things to higher ground.",
+   "ko": "홍수 때 쁘라윳은 이웃들에게 물건을 높은 곳으로 옮겨 달라고 도움을 청했어요.",
+   "blank": "ขอความช่วยเหลือ",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์โทรขอความช่วยเหลือจากคลินิกตอนฟันหักกลางดึก",
+   "en": "Jan called the clinic for help when her tooth broke in the middle of the night.",
+   "ko": "짠은 한밤중에 이가 부러지자 치과에 전화해 도움을 청했어요.",
+   "blank": "ขอความช่วยเหลือ",
+   "src": "made"
+  }
+ ],
  "w|ของ": [
   {
    "text": "นี่ของใคร",
@@ -6289,6 +6369,22 @@
    "en": "I'm driving today.",
    "ko": "오늘은 내가 운전해.",
    "blank": "ขับ"
+  }
+ ],
+ "w|ขับเคลื่อน": [
+  {
+   "text": "ประยุทธเป็นแกนหลักขับเคลื่อนโครงการคัดแยกขยะในชุมชน",
+   "en": "Prayut is the key person driving the community's waste-sorting project.",
+   "ko": "쁘라윳은 동네 분리수거 사업을 이끄는 핵심 인물이에요.",
+   "blank": "ขับเคลื่อน",
+   "src": "made"
+  },
+  {
+   "text": "คลินิกเล็กๆ นี้ขับเคลื่อนด้วยทีมงานแค่สี่คน",
+   "en": "This small clinic is run by a team of just four people.",
+   "ko": "이 작은 치과는 직원 단 네 명이 꾸려 가요.",
+   "blank": "ขับเคลื่อน",
+   "src": "made"
   }
  ],
  "w|ขับรถ": [
@@ -9049,6 +9145,22 @@
    "en": "It's been cloudy all day.",
    "ko": "하루 종일 날씨가 흐려.",
    "blank": "ครึ้ม"
+  }
+ ],
+ "w|ครุ่นคิด": [
+  {
+   "text": "ประยุทธนั่งครุ่นคิดว่าจะคุยกับเพื่อนบ้านเรื่องกิ่งไม้ที่ยื่นเข้ามาอย่างไร",
+   "en": "Prayut sat pondering how to talk to his neighbor about the branches hanging over.",
+   "ko": "쁘라윳은 넘어온 나뭇가지 문제를 이웃에게 어떻게 말할지 곰곰이 생각했어요.",
+   "blank": "ครุ่นคิด",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ครุ่นคิดอยู่นานว่าจะจัดฟันดีไหม",
+   "en": "Jan pondered for a long time whether to get braces.",
+   "ko": "짠은 교정을 할지 말지 오래 고민했어요.",
+   "blank": "ครุ่นคิด",
+   "src": "made"
   }
  ],
  "w|ครู": [
@@ -11925,6 +12037,22 @@
    "en": "He expects he will be late.",
    "ko": "그는 늦을 거라고 예상해.",
    "blank": "คาด"
+  }
+ ],
+ "w|คาดการณ์": [
+  {
+   "text": "ประยุทธคาดการณ์ว่าราคาบ้านในซอยจะขึ้นหลังรถไฟฟ้าเปิด",
+   "en": "Prayut predicts house prices in the lane will rise after the train line opens.",
+   "ko": "쁘라윳은 전철이 개통하면 골목 집값이 오를 거라고 예상해요.",
+   "blank": "คาดการณ์",
+   "src": "made"
+  },
+  {
+   "text": "หมอคาดการณ์ว่าจันทร์ต้องใส่เหล็กจัดฟันราวสองปี",
+   "en": "The dentist estimates Jan will need to wear braces for about two years.",
+   "ko": "의사는 짠이 교정기를 이 년쯤 껴야 할 거라고 예상해요.",
+   "blank": "คาดการณ์",
+   "src": "made"
   }
  ],
  "w|คาดว่า": [
@@ -15779,6 +15907,22 @@
    "en": "Do not limit your child’s thinking.",
    "ko": "아이 생각을 제한하지 마.",
    "blank": "จำกัด"
+  }
+ ],
+ "w|จำกัดความ": [
+  {
+   "text": "ประยุทธว่ายากจะจำกัดความว่าเพื่อนบ้านที่ดีเป็นแบบไหน",
+   "en": "Prayut says it's hard to define what a good neighbor is like.",
+   "ko": "쁘라윳은 좋은 이웃이 어떤 건지 정의하기 어렵다고 해요.",
+   "blank": "จำกัดความ",
+   "src": "made"
+  },
+  {
+   "text": "หมอจำกัดความอาการเสียวฟันให้จันทร์ฟังว่าเป็นอาการที่ฟันไวต่อความเย็น",
+   "en": "The dentist defined tooth sensitivity for Jan as teeth reacting to cold.",
+   "ko": "의사는 짠에게 시린 이를 차가운 것에 민감한 증상이라고 정의해 줬어요.",
+   "blank": "จำกัดความ",
+   "src": "made"
   }
  ],
  "w|จำคุก": [
@@ -20225,6 +20369,22 @@
    "blank": "ซักผ้า"
   }
  ],
+ "w|ซัด": [
+  {
+   "text": "พายุเมื่อคืนซัดหลังคาสังกะสีของบ้านหลังข้างประยุทธจนปลิว",
+   "en": "Last night's storm blew the tin roof off the house next to Prayut's.",
+   "ko": "어젯밤 폭풍이 쁘라윳 옆집의 함석지붕을 날려 버렸어요.",
+   "blank": "ซัด",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ซัดขนมหวานไปสามถุงก่อนวันนัดหมอฟัน",
+   "en": "Jan wolfed down three bags of sweets right before her dentist appointment.",
+   "ko": "짠은 치과 예약 전에 과자를 세 봉지나 먹어 치웠어요.",
+   "blank": "ซัด",
+   "src": "made"
+  }
+ ],
  "w|ซับซ้อน": [
   {
    "text": "ปัญหานี้ซับซ้อนเกินไป",
@@ -21667,6 +21827,22 @@
    "src": "made"
   }
  ],
+ "w|ดิ้นรน": [
+  {
+   "text": "เพื่อนบ้านคนใหม่ของประยุทธดิ้นรนเปิดร้านข้าวมันไก่หน้าหมู่บ้าน",
+   "en": "Prayut's new neighbor is struggling to run a chicken rice shop at the village entrance.",
+   "ko": "쁘라윳의 새 이웃은 마을 입구에서 닭고기덮밥 가게를 하느라 고군분투하고 있어요.",
+   "blank": "ดิ้นรน",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ช่วยทันตแพทย์เล่าว่าเคยดิ้นรนทำงานสองที่เพื่อส่งตัวเองเรียน",
+   "en": "The dental assistant said she once struggled working two jobs to pay for her own studies.",
+   "ko": "치과 보조원은 학비를 벌려고 두 군데서 일하며 애썼던 적이 있다고 했어요.",
+   "blank": "ดิ้นรน",
+   "src": "made"
+  }
+ ],
  "w|ดินสอ": [
   {
    "text": "ขอดินสอสีดำหน่อย",
@@ -22680,6 +22856,22 @@
    "en": "Napha rode a songthaew from the district town to the forest entrance.",
    "ko": "나파는 군청 소재지에서 숲 입구까지 송태우를 타고 갔어요.",
    "blank": "โดยสาร",
+   "src": "made"
+  }
+ ],
+ "w|โดยสิ้นเชิง": [
+  {
+   "text": "หลังได้คุยกัน ประยุทธเปลี่ยนความคิดเรื่องเพื่อนบ้านใหม่โดยสิ้นเชิง",
+   "en": "After talking, Prayut completely changed his mind about the new neighbor.",
+   "ko": "이야기를 나눈 뒤 쁘라윳은 새 이웃에 대한 생각을 완전히 바꿨어요.",
+   "blank": "โดยสิ้นเชิง",
+   "src": "made"
+  },
+  {
+   "text": "อาการปวดฟันของจันทร์หายไปโดยสิ้นเชิงหลังรักษารากฟัน",
+   "en": "Jan's toothache went away completely after the root canal.",
+   "ko": "신경 치료 후 짠의 치통은 완전히 사라졌어요.",
+   "blank": "โดยสิ้นเชิง",
    "src": "made"
   }
  ],
@@ -23969,6 +24161,22 @@
    "blank": "ตอบกลับ"
   }
  ],
+ "w|ตอบคำถาม": [
+  {
+   "text": "ประยุทธตอบคำถามของเจ้าหน้าที่สำรวจประชากรอย่างใจเย็น",
+   "en": "Prayut calmly answered the census officer's questions.",
+   "ko": "쁘라윳은 인구 조사원의 질문에 차분하게 대답했어요.",
+   "blank": "ตอบคำถาม",
+   "src": "made"
+  },
+  {
+   "text": "หมอตอบคำถามของจันทร์ทุกข้อโดยไม่รีบ",
+   "en": "The dentist answered all of Jan's questions without rushing.",
+   "ko": "의사는 짠의 질문 하나하나에 서두르지 않고 답해 줬어요.",
+   "blank": "ตอบคำถาม",
+   "src": "made"
+  }
+ ],
  "w|ตอบโต้": [
   {
    "text": "บริษัทที่ถูกวิจารณ์ออกแถลงการณ์ตอบโต้บทความของเอก",
@@ -24106,6 +24314,22 @@
    "en": "Napha said she'll dare to pitch ideas in meetings only once she understands the work well.",
    "ko": "나파는 일을 잘 이해하고 나서야 회의에서 아이디어를 낼 수 있겠다고 했어요.",
    "blank": "ต่อเมื่อ",
+   "src": "made"
+  }
+ ],
+ "w|ต่อย": [
+  {
+   "text": "ลูกชายสองบ้านต่อยกันเพราะแย่งลูกฟุตบอล",
+   "en": "The sons of the two houses got into a fistfight over a football.",
+   "ko": "두 집 아들이 축구공을 두고 주먹다짐을 했어요.",
+   "blank": "ต่อย",
+   "src": "made"
+  },
+  {
+   "text": "หมอฟันเล่าว่านักมวยคนหนึ่งฟันหักเพราะโดนต่อยตอนแข่ง",
+   "en": "The dentist said a boxer broke a tooth from getting punched in a match.",
+   "ko": "치과 의사는 한 권투 선수가 경기 중에 주먹을 맞아 이가 부러졌다고 했어요.",
+   "blank": "ต่อย",
    "src": "made"
   }
  ],
@@ -26985,6 +27209,22 @@
    "blank": "ถ้าหาก"
   }
  ],
+ "w|ถ้าหากว่า": [
+  {
+   "text": "ถ้าหากว่าน้ำประปาไม่ไหลอีก ประยุทธจะโทรแจ้งการประปา",
+   "en": "If the tap water stops again, Prayut will call the water authority.",
+   "ko": "수돗물이 또 안 나오면 쁘라윳은 수도국에 전화할 거예요.",
+   "blank": "ถ้าหากว่า",
+   "src": "made"
+  },
+  {
+   "text": "ถ้าหากว่าเหงือกยังบวม จันทร์ต้องกลับมาให้หมอดูอีกที",
+   "en": "If her gums are still swollen, Jan has to come back for the dentist to check again.",
+   "ko": "잇몸이 계속 부어 있으면 짠은 다시 와서 진료를 받아야 해요.",
+   "blank": "ถ้าหากว่า",
+   "src": "made"
+  }
+ ],
  "w|ถ้าอย่างนั้น": [
   {
    "text": "ลูกค้าเลื่อนนัดเป็นบ่ายสาม อนันต์เลยบอกว่าถ้าอย่างนั้นจะเตรียมห้องไว้ให้",
@@ -27378,6 +27618,22 @@
    "en": "The ministry announced that corn prices should be better this year than last.",
    "ko": "정부 부처는 올해 옥수수 가격이 작년보다 좋을 거라고 발표했어요.",
    "blank": "แถลง",
+   "src": "made"
+  }
+ ],
+ "w|แถลงข่าว": [
+  {
+   "text": "เทศบาลแถลงข่าวว่าจะซ่อมถนนในหมู่บ้านของประยุทธเดือนหน้า",
+   "en": "The municipality announced at a press conference that it will fix the roads in Prayut's village next month.",
+   "ko": "시청은 다음 달에 쁘라윳네 마을 도로를 고친다고 발표했어요.",
+   "blank": "แถลงข่าว",
+   "src": "made"
+  },
+  {
+   "text": "สมาคมทันตแพทย์แถลงข่าวเตือนเรื่องร้านจัดฟันเถื่อน",
+   "en": "The dental association held a press conference warning about illegal braces shops.",
+   "ko": "치과의사협회는 불법 교정 업소에 대해 경고하는 기자회견을 열었어요.",
+   "blank": "แถลงข่าว",
    "src": "made"
   }
  ],
@@ -35385,6 +35641,22 @@
    "blank": "บอก"
   }
  ],
+ "w|บอกกล่าว": [
+  {
+   "text": "ประยุทธบอกกล่าวเพื่อนบ้านล่วงหน้าก่อนจะต่อเติมบ้าน",
+   "en": "Prayut notified the neighbors in advance before extending his house.",
+   "ko": "쁘라윳은 집을 증축하기 전에 이웃들에게 미리 알렸어요.",
+   "blank": "บอกกล่าว",
+   "src": "made"
+  },
+  {
+   "text": "คลินิกบอกกล่าวคนไข้ทางข้อความว่าวันหยุดยาวจะปิดทำการ",
+   "en": "The clinic informed patients by message that it will be closed over the long holiday.",
+   "ko": "치과는 긴 연휴에 휴진한다고 환자들에게 문자로 알렸어요.",
+   "blank": "บอกกล่าว",
+   "src": "made"
+  }
+ ],
  "w|บ่อน": [
   {
    "text": "ตำรวจบุกจับบ่อนการพนันเถื่อน และเจ้าของถูกฟ้องต่อศาลนี้",
@@ -36100,6 +36372,22 @@
    "en": "The slow songs at the wedding helped ease Piya's stress.",
    "ko": "결혼식의 잔잔한 노래가 피야의 스트레스를 잘 풀어 줬어요.",
    "blank": "บำบัด",
+   "src": "made"
+  }
+ ],
+ "w|บำเพ็ญ": [
+  {
+   "text": "วันหยุด ประยุทธชวนเพื่อนบ้านบำเพ็ญประโยชน์ทำความสะอาดลานวัด",
+   "en": "On the holiday, Prayut invited the neighbors to volunteer cleaning the temple grounds.",
+   "ko": "쉬는 날 쁘라윳은 이웃들에게 절 마당 청소 봉사를 하자고 했어요.",
+   "blank": "บำเพ็ญ",
+   "src": "made"
+  },
+  {
+   "text": "หมอฟันไปบำเพ็ญประโยชน์ตรวจฟันเด็กที่โรงเรียนบนดอยทุกปี",
+   "en": "Every year the dentist volunteers to check children's teeth at a school in the mountains.",
+   "ko": "치과 의사는 해마다 산골 학교에서 아이들 치아 검진 봉사를 해요.",
+   "blank": "บำเพ็ญ",
    "src": "made"
   }
  ],
@@ -40659,6 +40947,22 @@
    "blank": "แปรงสีฟัน"
   }
  ],
+ "w|แปรเปลี่ยน": [
+  {
+   "text": "หมู่บ้านของประยุทธแปรเปลี่ยนไปมากหลังมีคอนโดมาสร้าง",
+   "en": "Prayut's neighborhood changed a lot after condos were built.",
+   "ko": "콘도가 들어선 뒤 쁘라윳네 동네는 많이 변했어요.",
+   "blank": "แปรเปลี่ยน",
+   "src": "made"
+  },
+  {
+   "text": "สีหน้าของจันทร์แปรเปลี่ยนทันทีเมื่อเห็นเข็มฉีดยา",
+   "en": "Jan's expression changed instantly when she saw the needle.",
+   "ko": "주삿바늘을 보자 짠의 표정이 순식간에 바뀌었어요.",
+   "blank": "แปรเปลี่ยน",
+   "src": "made"
+  }
+ ],
  "w|แปรรูป": [
   {
    "text": "ช่างเอาไม้เก่าที่รื้อออกไปแปรรูปเป็นชั้นวางหนังสือ",
@@ -43809,6 +44113,22 @@
    "src": "made"
   }
  ],
+ "w|พยากรณ์": [
+  {
+   "text": "กรมอุตุฯ พยากรณ์ว่าคืนนี้จะมีพายุ ประยุทธจึงเตือนเพื่อนบ้านให้เก็บของ",
+   "en": "The weather bureau forecast a storm tonight, so Prayut warned the neighbors to bring things in.",
+   "ko": "기상청이 오늘 밤 폭풍을 예보해서 쁘라윳은 이웃들에게 물건을 들여놓으라고 알렸어요.",
+   "blank": "พยากรณ์",
+   "src": "made"
+  },
+  {
+   "text": "ข่าวพยากรณ์อากาศในทีวีห้องรอบอกว่าพรุ่งนี้ฝนจะตกหนัก",
+   "en": "The weather forecast on the waiting room TV said it will rain heavily tomorrow.",
+   "ko": "대기실 TV의 일기 예보에서 내일 비가 많이 온다고 했어요.",
+   "blank": "พยากรณ์",
+   "src": "made"
+  }
+ ],
  "w|พยาน": [
   {
    "text": "มีพยานเห็นเหตุการณ์ไหม",
@@ -44539,6 +44859,22 @@
    "src": "made"
   }
  ],
+ "w|พอง": [
+  {
+   "text": "สีผนังบ้านของประยุทธพองเป็นตุ่มเพราะความชื้น",
+   "en": "The paint on Prayut's wall bubbled up because of the damp.",
+   "ko": "쁘라윳네 벽 페인트가 습기 때문에 부풀어 올랐어요.",
+   "blank": "พอง",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์อมน้ำยาบ้วนปากจนแก้มพอง",
+   "en": "Jan held mouthwash in her mouth until her cheeks puffed out.",
+   "ko": "짠은 볼이 빵빵해지도록 가글을 머금었어요.",
+   "blank": "พอง",
+   "src": "made"
+  }
+ ],
  "w|พอใจ": [
   {
    "text": "ฉันพอใจกับผลลัพธ์",
@@ -44973,6 +45309,22 @@
    "src": "made"
   }
  ],
+ "w|พ่ายแพ้": [
+  {
+   "text": "ทีมฟุตบอลของซอยประยุทธพ่ายแพ้ซอยข้างๆ อย่างขาดลอย",
+   "en": "The football team from Prayut's lane lost badly to the next lane's team.",
+   "ko": "쁘라윳네 골목 축구팀은 옆 골목 팀에 크게 졌어요.",
+   "blank": "พ่ายแพ้",
+   "src": "made"
+  },
+  {
+   "text": "นักกีฬาที่มาทำฟันเล่าว่าเพิ่งพ่ายแพ้ในรอบชิงชนะเลิศ",
+   "en": "An athlete getting dental work said he had just lost in the final.",
+   "ko": "치료받으러 온 운동선수는 결승전에서 막 졌다고 했어요.",
+   "blank": "พ่ายแพ้",
+   "src": "made"
+  }
+ ],
  "w|พายเรือ": [
   {
    "text": "สมชายพายเรือคายัคข้ามแม่น้ำไปดูวัดฝั่งตรงข้าม",
@@ -45032,6 +45384,22 @@
    "en": "There's a ramp here for disabled people.",
    "ko": "여기에 장애인용 경사로가 있어.",
    "blank": "พิการ",
+   "src": "made"
+  }
+ ],
+ "w|พิง": [
+  {
+   "text": "ประยุทธพิงรั้วคุยกับป้าข้างบ้านทุกเย็น",
+   "en": "Prayut leans on the fence and chats with the auntie next door every evening.",
+   "ko": "쁘라윳은 저녁마다 울타리에 기대어 옆집 아주머니와 수다를 떨어요.",
+   "blank": "พิง",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์พิงพนักเก้าอี้ทำฟันแล้วอ้าปากกว้าง",
+   "en": "Jan leaned back in the dental chair and opened her mouth wide.",
+   "ko": "짠은 치과 의자에 기대어 입을 크게 벌렸어요.",
+   "blank": "พิง",
    "src": "made"
   }
  ],
@@ -50433,6 +50801,22 @@
    "blank": "ยกเว้น"
   }
  ],
+ "w|ย่น": [
+  {
+   "text": "ประยุทธย่นจมูกเมื่อได้กลิ่นขยะจากบ้านตรงข้าม",
+   "en": "Prayut wrinkled his nose when he smelled the garbage from the house across the street.",
+   "ko": "쁘라윳은 건너편 집에서 나는 쓰레기 냄새에 코를 찡그렸어요.",
+   "blank": "ย่น",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ย่นหน้าตอนหมอฉีดยาชาที่เหงือก",
+   "en": "Jan screwed up her face when the dentist injected anesthetic into her gums.",
+   "ko": "의사가 잇몸에 마취 주사를 놓을 때 짠은 얼굴을 찡그렸어요.",
+   "blank": "ย่น",
+   "src": "made"
+  }
+ ],
  "w|ยศ": [
   {
    "text": "ลุงของกิตติเกษียณจากทหารเรือด้วยยศนาวาเอกแล้วมาคุมงานรักษาความปลอดภัยที่โรงงาน",
@@ -51895,6 +52279,22 @@
    "src": "made"
   }
  ],
+ "w|แย้ม": [
+  {
+   "text": "ป้าข้างบ้านแย้มว่าลูกสาวกำลังจะแต่งงานเร็วๆ นี้",
+   "en": "The auntie next door hinted that her daughter is getting married soon.",
+   "ko": "옆집 아주머니는 딸이 곧 결혼한다고 살짝 귀띔했어요.",
+   "blank": "แย้ม",
+   "src": "made"
+  },
+  {
+   "text": "หมอแย้มว่าเดือนหน้าคลินิกจะมีโปรโมชันฟอกสีฟัน",
+   "en": "The dentist hinted that the clinic will have a whitening promotion next month.",
+   "ko": "의사는 다음 달에 치아 미백 할인 행사가 있을 거라고 살짝 알려 줬어요.",
+   "blank": "แย้ม",
+   "src": "made"
+  }
+ ],
  "w|โยกย้าย": [
   {
    "text": "ชัยถูกโยกย้ายไปประจำโต๊ะข่าวเศรษฐกิจตั้งแต่ต้นปี",
@@ -52536,6 +52936,22 @@
    "en": "The sales team asked Suda to make one more set of sales charts.",
    "ko": "영업팀은 수다에게 매출 그래프를 한 세트 더 만들어 달라고 요청했어요.",
    "blank": "ร้องขอ",
+   "src": "made"
+  }
+ ],
+ "w|ร้องทุกข์": [
+  {
+   "text": "ประยุทธไปร้องทุกข์กับนิติบุคคลเรื่องเสียงดังจากห้องข้างบน",
+   "en": "Prayut went to complain to the building management about the noise from upstairs.",
+   "ko": "쁘라윳은 위층 소음 때문에 관리사무소에 민원을 넣으러 갔어요.",
+   "blank": "ร้องทุกข์",
+   "src": "made"
+  },
+  {
+   "text": "คนไข้รายหนึ่งร้องทุกข์ว่าต้องรอคิวนานเกินไป",
+   "en": "One patient complained that the wait was too long.",
+   "ko": "한 환자가 대기 시간이 너무 길다고 불만을 제기했어요.",
+   "blank": "ร้องทุกข์",
    "src": "made"
   }
  ],
@@ -53210,6 +53626,22 @@
    "en": "There's a beehive under the roof.",
    "ko": "지붕 밑에 벌집이 있어.",
    "blank": "รัง",
+   "src": "made"
+  }
+ ],
+ "w|รั้ง": [
+  {
+   "text": "ประยุทธพยายามรั้งเพื่อนบ้านที่สนิทไว้ไม่ให้ย้ายออก",
+   "en": "Prayut tried to hold back his close neighbor from moving out.",
+   "ko": "쁘라윳은 친한 이웃이 이사 가지 않도록 붙잡으려 했어요.",
+   "blank": "รั้ง",
+   "src": "made"
+  },
+  {
+   "text": "แม่รั้งมือลูกไว้ไม่ให้วิ่งเข้าห้องทำฟัน",
+   "en": "The mother held back her child's hand so he wouldn't run into the treatment room.",
+   "ko": "엄마는 아이가 진료실로 뛰어 들어가지 못하게 손을 붙잡았어요.",
+   "blank": "รั้ง",
    "src": "made"
   }
  ],
@@ -53958,6 +54390,22 @@
    "en": "Somsak went to cover the floods on the central plains.",
    "ko": "솜삭은 중부 평야의 홍수를 취재하러 현장에 갔어요.",
    "blank": "ราบ",
+   "src": "made"
+  }
+ ],
+ "w|ราบรื่น": [
+  {
+   "text": "การประชุมหมู่บ้านคืนนี้ผ่านไปอย่างราบรื่น",
+   "en": "Tonight's village meeting went smoothly.",
+   "ko": "오늘 밤 마을 회의는 순조롭게 끝났어요.",
+   "blank": "ราบรื่น",
+   "src": "made"
+  },
+  {
+   "text": "การถอนฟันคุดของจันทร์เป็นไปอย่างราบรื่น",
+   "en": "Jan's wisdom tooth extraction went smoothly.",
+   "ko": "짠의 사랑니 발치는 순조롭게 끝났어요.",
+   "blank": "ราบรื่น",
    "src": "made"
   }
  ],
@@ -54740,6 +55188,22 @@
    "en": "The municipality announced that dredging the canals is urgent before the rainy season.",
    "ko": "시청은 우기 전에 운하 준설이 시급하다고 발표했어요.",
    "blank": "เร่งด่วน",
+   "src": "made"
+  }
+ ],
+ "w|เร่งมือ": [
+  {
+   "text": "ช่างเร่งมือซ่อมท่อน้ำหน้าบ้านประยุทธให้เสร็จก่อนมืด",
+   "en": "The workers hurried to fix the water pipe in front of Prayut's house before dark.",
+   "ko": "인부들은 어두워지기 전에 쁘라윳네 집 앞 수도관 수리를 서둘러 끝냈어요.",
+   "blank": "เร่งมือ",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ช่วยหมอเร่งมือเตรียมเครื่องมือเพราะคนไข้รอเต็มห้อง",
+   "en": "The dental assistant hurried to prepare the tools because the room was full of waiting patients.",
+   "ko": "대기실이 환자로 가득해서 치과 보조원은 서둘러 기구를 준비했어요.",
+   "blank": "เร่งมือ",
    "src": "made"
   }
  ],
@@ -56006,6 +56470,22 @@
    "en": "The crew took a boat down the river to scout filming locations.",
    "ko": "스태프들은 촬영 장소를 찾으려고 배를 타고 강을 따라 내려갔어요.",
    "blank": "ล่องเรือ",
+   "src": "made"
+  }
+ ],
+ "w|ลอด": [
+  {
+   "text": "แมวของเพื่อนบ้านชอบลอดรั้วเข้ามานอนในสวนของประยุทธ",
+   "en": "The neighbor's cat likes to slip under the fence to sleep in Prayut's garden.",
+   "ko": "이웃집 고양이는 울타리 밑으로 빠져나와 쁘라윳네 정원에서 자는 걸 좋아해요.",
+   "blank": "ลอด",
+   "src": "made"
+  },
+  {
+   "text": "หมอใช้ไหมขัดฟันลอดซอกฟันให้จันทร์ดูเป็นตัวอย่าง",
+   "en": "The dentist threaded floss between the teeth to show Jan how.",
+   "ko": "의사는 치실을 이 사이로 통과시키며 짠에게 시범을 보여 줬어요.",
+   "blank": "ลอด",
    "src": "made"
   }
  ],
@@ -59277,6 +59757,22 @@
    "en": "Don't run in the house.",
    "ko": "집에서 뛰지 마.",
    "blank": "วิ่ง"
+  }
+ ],
+ "w|วิ่งหนี": [
+  {
+   "text": "หมาข้างบ้านวิ่งหนีออกไปตอนประยุทธเปิดประตูรั้ว",
+   "en": "The neighbor's dog ran off when Prayut opened the gate.",
+   "ko": "쁘라윳이 대문을 열자 옆집 개가 도망쳐 나갔어요.",
+   "blank": "วิ่งหนี",
+   "src": "made"
+  },
+  {
+   "text": "เด็กชายร้องไห้แล้ววิ่งหนีออกจากห้องตรวจ",
+   "en": "The boy cried and ran away out of the exam room.",
+   "ko": "남자아이는 울면서 진료실 밖으로 도망쳤어요.",
+   "blank": "วิ่งหนี",
+   "src": "made"
   }
  ],
  "w|วิจัย": [
@@ -64657,6 +65153,22 @@
    "blank": "สี่"
   }
  ],
+ "w|สีน้ำตาล": [
+  {
+   "text": "ประยุทธทาสีรั้วใหม่เป็นสีน้ำตาลให้เข้ากับตัวบ้าน",
+   "en": "Prayut repainted the fence brown to match the house.",
+   "ko": "쁘라윳은 집과 어울리게 울타리를 갈색으로 새로 칠했어요.",
+   "blank": "สีน้ำตาล",
+   "src": "made"
+  },
+  {
+   "text": "หมอบอกว่าคราบสีน้ำตาลบนฟันเกิดจากการดื่มกาแฟ",
+   "en": "The dentist said the brown stains on the teeth come from drinking coffee.",
+   "ko": "의사는 치아의 갈색 얼룩이 커피 때문에 생긴다고 했어요.",
+   "blank": "สีน้ำตาล",
+   "src": "made"
+  }
+ ],
  "w|สี่แยก": [
   {
    "text": "ระวังรถที่สี่แยกให้ดี",
@@ -65785,6 +66297,22 @@
    "en": "Don't forget to plug in the flash drive.",
    "ko": "USB 꽂는 거 잊지 마.",
    "blank": "เสียบ"
+  }
+ ],
+ "w|เสียเปรียบ": [
+  {
+   "text": "บ้านประยุทธอยู่ท้ายซอยจึงเสียเปรียบเรื่องน้ำประปาไหลอ่อน",
+   "en": "Prayut's house is at the end of the lane, so it's at a disadvantage with weak water pressure.",
+   "ko": "쁘라윳네 집은 골목 끝에 있어서 수압이 약한 게 불리해요.",
+   "blank": "เสียเปรียบ",
+   "src": "made"
+  },
+  {
+   "text": "หมอบอกว่าคนที่ฟันเกเสียเปรียบเพราะทำความสะอาดยากกว่า",
+   "en": "The dentist said people with crooked teeth are at a disadvantage because cleaning is harder.",
+   "ko": "의사는 치열이 고르지 않은 사람은 청소가 더 어려워서 불리하다고 했어요.",
+   "blank": "เสียเปรียบ",
+   "src": "made"
   }
  ],
  "w|เสียแล้ว": [
@@ -66966,6 +67494,22 @@
    "en": "One employee nearly fainted from standing too long in front of the hot oven.",
    "ko": "한 직원이 뜨거운 오븐 앞에 너무 오래 서 있다가 기절할 뻔했어요.",
    "blank": "หมดสติ",
+   "src": "made"
+  }
+ ],
+ "w|หมดสิ้น": [
+  {
+   "text": "ข้อขัดแย้งเรื่องที่จอดรถหมดสิ้นไปหลังประยุทธทำที่จอดเพิ่ม",
+   "en": "The parking dispute ended completely after Prayut made more parking space.",
+   "ko": "쁘라윳이 주차 공간을 더 만든 뒤 주차 갈등은 완전히 사라졌어요.",
+   "blank": "หมดสิ้น",
+   "src": "made"
+  },
+  {
+   "text": "ความกลัวหมอฟันของจันทร์หมดสิ้นไปเมื่อเจอหมอที่ใจดี",
+   "en": "Jan's fear of dentists disappeared completely when she met a kind dentist.",
+   "ko": "친절한 의사를 만나자 짠의 치과 공포증은 싹 사라졌어요.",
+   "blank": "หมดสิ้น",
    "src": "made"
   }
  ],
@@ -69487,6 +70031,22 @@
    "blank": "หายาก"
   }
  ],
+ "w|หาร": [
+  {
+   "text": "ประยุทธกับเพื่อนบ้านหารค่าซ่อมรั้วกันคนละครึ่ง",
+   "en": "Prayut and his neighbor split the cost of fixing the fence half and half.",
+   "ko": "쁘라윳과 이웃은 울타리 수리비를 반반씩 나눴어요.",
+   "blank": "หาร",
+   "src": "made"
+  },
+  {
+   "text": "ค่าขูดหินปูนของสามพี่น้องหารกันแล้วไม่แพงเลย",
+   "en": "Split among the three siblings, the cost of the scaling wasn't expensive at all.",
+   "ko": "세 남매의 스케일링 비용은 나눠 내니 하나도 비싸지 않았어요.",
+   "blank": "หาร",
+   "src": "made"
+  }
+ ],
  "w|หารือ": [
   {
    "text": "สมชายหารือกับพี่น้องว่าปีนี้จะฉลองปีใหม่ที่บ้านใคร",
@@ -69500,6 +70060,22 @@
    "en": "Malee discussed with her husband whether to repaint the living room.",
    "ko": "말리는 거실을 새로 칠할지 남편과 의논했어요.",
    "blank": "หารือ",
+   "src": "made"
+  }
+ ],
+ "w|หาเรื่อง": [
+  {
+   "text": "ชายบ้านท้ายซอยชอบหาเรื่องทะเลาะกับประยุทธเรื่องที่จอดรถ",
+   "en": "The man at the end of the lane likes to pick fights with Prayut about parking.",
+   "ko": "골목 끝 집 남자는 주차 문제로 쁘라윳에게 시비 거는 걸 좋아해요.",
+   "blank": "หาเรื่อง",
+   "src": "made"
+  },
+  {
+   "text": "เด็กในห้องรอหาเรื่องแกล้งน้องจนแม่ต้องดุ",
+   "en": "A kid in the waiting room kept picking on his little sibling until their mother scolded him.",
+   "ko": "대기실의 한 아이가 동생에게 시비를 걸어서 엄마가 꾸짖어야 했어요.",
+   "blank": "หาเรื่อง",
    "src": "made"
   }
  ],
@@ -69530,6 +70106,22 @@
    "en": "His voice is gruff and loud.",
    "ko": "그의 목소리는 굵고 커.",
    "blank": "ห้าว",
+   "src": "made"
+  }
+ ],
+ "w|หาเสียง": [
+  {
+   "text": "ผู้สมัครเลือกตั้งท้องถิ่นเดินหาเสียงตามบ้านในหมู่บ้านของประยุทธ",
+   "en": "A local election candidate went door to door campaigning in Prayut's village.",
+   "ko": "지방 선거 후보가 쁘라윳네 마을 집집마다 다니며 유세를 했어요.",
+   "blank": "หาเสียง",
+   "src": "made"
+  },
+  {
+   "text": "ระหว่างรอหมอ จันทร์เห็นรถหาเสียงขับผ่านหน้าคลินิก",
+   "en": "While waiting for the dentist, Jan saw a campaign truck drive past the clinic.",
+   "ko": "의사를 기다리는 동안 짠은 유세 차량이 치과 앞을 지나가는 걸 봤어요.",
+   "blank": "หาเสียง",
    "src": "made"
   }
  ],
@@ -70591,6 +71183,22 @@
    "blank": "แหวน"
   }
  ],
+ "w|โหดร้าย": [
+  {
+   "text": "ประยุทธดูข่าวคนทำร้ายสัตว์แล้วรู้สึกว่าโหดร้ายเกินไป",
+   "en": "Prayut watched the news about animal abuse and felt it was too cruel.",
+   "ko": "쁘라윳은 동물 학대 뉴스를 보고 너무 잔인하다고 느꼈어요.",
+   "blank": "โหดร้าย",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์อ่านนิยายในห้องรอ เป็นเรื่องของกษัตริย์ที่โหดร้ายในอดีต",
+   "en": "Jan read a novel in the waiting room about a cruel king of the past.",
+   "ko": "짠은 대기실에서 옛날 잔인한 왕에 관한 소설을 읽었어요.",
+   "blank": "โหดร้าย",
+   "src": "made"
+  }
+ ],
  "w|โหระพา": [
   {
    "text": "ลูกค้าขอโหระพาเพิ่มอีกจานไว้กินกับแกงเขียวหวาน",
@@ -71529,6 +72137,22 @@
    "en": "The weather is bad; however, the event still goes on.",
    "ko": "날씨가 나빠도 행사는 열려.",
    "blank": "อย่างไรก็ตาม"
+  }
+ ],
+ "w|อย่างว่า": [
+  {
+   "text": "ประยุทธบอกว่าอย่างว่า อยู่บ้านติดกันก็ต้องมีกระทบกระทั่งกันบ้าง",
+   "en": "Prayut says that, well, living next door you're bound to have some friction.",
+   "ko": "쁘라윳은 하긴 바로 옆집에 살면 부딪치는 일이 좀 있기 마련이라고 해요.",
+   "blank": "อย่างว่า",
+   "src": "made"
+  },
+  {
+   "text": "อย่างว่าแหละ ใครๆ ก็กลัวหมอฟัน จันทร์เองก็เหมือนกัน",
+   "en": "Well, everyone is scared of the dentist, and Jan is no different.",
+   "ko": "하긴 누구나 치과를 무서워하죠, 짠도 마찬가지예요.",
+   "blank": "อย่างว่า",
+   "src": "made"
   }
  ],
  "w|อยู่": [
