@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { keyName, oftenUsed, studyWith, talkCounts, containsWord, framesWith } from "./wordUse.ts";
+import { keyName, oftenUsed, studyWith, talkCounts, containsWord, framesWith, missingKeys, studyFor } from "./wordUse.ts";
 import type { LogEvent } from "./logLedger.ts";
 
 const T0 = Date.UTC(2026, 10, 2, 3) / 1000;
@@ -64,4 +64,14 @@ test("containsWord: 낱말 단위(th เกิน ≠ กิน) · 일본어 �
 test("framesWith: 예문 빈칸에 이 말이 든 틀(es casa · ja 食べる)", () => {
   assert.ok(framesWith("es", "casa").length > 0);
   assert.ok(framesWith("ja", "食べる").includes("ja-f2-03"));
+});
+
+test("studyFor: 하고 싶었던 말 — 편한 말로 썼으면 전부, 고친 말이면 고친 곳(ja · es · ko)", () => {
+  const ja = studyFor({ language: "ja", locale: "ko", line: "明日、映画を見に行きたいです。", events: [], dayOf: utcDay }).map((one) => one.key);
+  assert.ok(ja.includes("f|ja-f2-03"), ja.join(","));
+  const es = studyFor({ language: "es", locale: "ko", line: "Ayer fui al cine con mi hermana.", said: "Ayer voy al cine con mi hermana.", events: [], dayOf: utcDay }).map((one) => one.key);
+  assert.ok(es.includes("f|es-f2-01"), es.join(","));
+  assert.deepEqual(missingKeys("es", "Hola.", "Hola."), [], "고칠 게 없으면 막힌 것 없음");
+  const ko = studyFor({ language: "ko", locale: "en", line: "내일 영화 보러 가고 싶어요.", events: [], dayOf: utcDay });
+  assert.ok(ko.some((one) => one.key.startsWith("g|") && one.label), "문법은 앱 언어 이름으로");
 });

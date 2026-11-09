@@ -68,6 +68,8 @@ import { saidPhrase } from "@/lib/learner/practice";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { ExpressionPeek } from "@/components/ExpressionPeek";
 import { rememberHowToSay } from "@/lib/curriculum/gaps";
+import { noteLedger } from "@/lib/curriculum/logLedger";
+import { missingKeys } from "@/lib/curriculum/wordUse";
 import { compressChatImage } from "@/lib/chatImage";
 import { correctionRisk } from "@/lib/correctionRisk";
 import { captureSceneSoon } from "@/lib/notes/sceneShots";
@@ -1462,6 +1464,8 @@ export function ChatWindow({
     if (!data.expression?.trim()) throw new Error("empty card");
     // 말하고 싶었는데 몰랐던 말 → My 지속 학습이 퀴즈로(curriculum/gaps.ts, 내가 쓴 줄은 이 폰에만).
     rememberHowToSay(sessionLanguageCode, { expression: data.expression, example: data.example, mine: message });
+    // 그 표현에 든 문장구조·표현·문법 = 막힌 것(장부 chat miss → Quizbank 다시 볼 것 먼저, 같이 배우기 칩과 같은 열쇠 — curriculum/wordUse.ts missingKeys).
+    noteLedger(sessionLanguageCode, missingKeys(sessionLanguageCode, data.expression).map((k) => ({ k, src: "chat" as const, r: "miss" as const })));
     setTurns((previous) =>
       previous.map((turn) =>
         turn.id === turnId ? { ...turn, expressionResult: data } : turn,
@@ -2179,6 +2183,8 @@ export function ChatWindow({
                 {turn.ownLanguage && turn.userMessage.trim() ? (
                   <ExpressionPeek
                     ui={ui}
+                    language={sessionLanguageCode}
+                    locale={locale}
                     expression={turn.expressionResult}
                     onOpen={() => openExpressionCard(turn.id, turn.userMessage)}
                     onUse={(text) => {

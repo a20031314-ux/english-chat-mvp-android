@@ -4,6 +4,7 @@ import { useState } from "react";
 import { TTSButton } from "@/components/TTSButton";
 import type { UICopy } from "@/lib/copy";
 import type { HowToSayExpression } from "@/lib/howToSay";
+import { StudyChips } from "@/components/studyMap/StudyChips";
 
 /**
  * Under a line written in the learner's own language: how to say it in the
@@ -17,15 +18,21 @@ import type { HowToSayExpression } from "@/lib/howToSay";
  * counted as one.
  *
  * 처음 한 번 띄우던 설명 줄은 뺐다(2026-10-22 사용자 — 쓰는 법은 사용법 창에).
+ * 표현 아래 같이 배우기 칩(studyMap/StudyChips, 2026-11-09 사용자 "발화 의도 → 해당 카드"): 그 표현에 든 문장구조·표현·문법, 누르면 그 수업(채팅 층 위).
  */
 
 export function ExpressionPeek({
   ui,
+  language,
+  locale,
   expression,
   onOpen,
   onUse,
 }: {
   ui: UICopy;
+  /** 학습 언어·앱 언어 — 같이 배우기 칩. */
+  language: string;
+  locale: string;
   /** Already fetched for this line, if it was opened before. */
   expression?: HowToSayExpression;
   onOpen: () => Promise<void>;
@@ -96,6 +103,7 @@ export function ExpressionPeek({
               >
                 {ui.chatUseExpression}
               </button>
+              <StudyChips ui={ui} language={language} locale={locale} line={expression.expression} above />
             </>
           )}
         </div>

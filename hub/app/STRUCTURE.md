@@ -35,7 +35,7 @@
 │          칸 머리 ?(Logbank·Quizbank) → studyMap/BankHelp(lib/guide/banks.ts)
 │
 ├ 대화 talk ─ AI 튜터 줄(AiTutorRow — 고른·팔로우한 튜터마다, 마지막 말, 통화 문 넷 CallDoors [📞 자유대화 · 🎓 수업 · 🎲 게임 · 🧑‍🏫 가르치기], 숙제 줄 TutorHomework·점)
-│           │   └ 줄 → AI 채팅 ChatWindow(튜터별 대화방 — ⋮ 튜터 목소리·말 빠르기·튜터가 쓰는 말·고친 문장 보기·채팅 기록)
+│           │   └ 줄 → AI 채팅 ChatWindow(튜터별 대화방 — ⋮ 튜터 목소리·말 빠르기·튜터가 쓰는 말·고친 문장 보기·채팅 기록 · 편한 말 줄 → 표현 보기 ExpressionPeek → 같이 배우기 studyMap/StudyChips)
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
 │           └ 1:1 메시지(요청 → 열림, 📞 → 둘만의 비공개 방 = AI 통화와 같은 통화 화면 rooms/RoomCall)
 ├ 사람 people ─ 맨 위 AI 튜터 둘(AiTutorPeople — 💬 · 문 넷 아이콘) → 튜터 프로필(AiTutorProfile — ProfileFrame · 문 넷 · 숙제 · 마지막 메모 · 팔로우·메시지·통화 기록)
@@ -47,7 +47,7 @@
   AI 통화 CallHost(startCall · practice · openCall) → RoleplayScreen
      통화 중: roleplay/CallParts CallStage(위 튜터 얼굴·💬 자막 · 아래 내 사진) · CallControls(🙉 · 💡 — 자유대화는 막혔을 때만, 수업은 없음)
        교정: 자유대화 = 내 얼굴 아래 카드(CoachCardView quiet) · 수업 = 튜터가 짚고 다시 말해 보기(director coachRules) · 게임 = 감독 규칙 roleplay/callGames.ts
-     끝: CallSummary · 튜터 메모 · 이렇게도 말할 수 있었어요(roleplay/CallReplay — 장면 ReplayPlayer) · 대본(CallPages) · 통화 정리(roleplay/CallRecap → openLesson · 🔎 My에서 찾기)
+     끝: CallSummary · 튜터 메모 · 이렇게도 말할 수 있었어요(roleplay/CallReplay — 장면 ReplayPlayer) · 대본(CallPages) · 통화 정리(roleplay/CallRecap — 줄마다 같이 배우기 studyMap/StudyChips → openLesson · 🔎 My에서 찾기)
          · 이번 통화의 고쳐 씀(CallGrowthPairs) · 수업이면 숙제 [퀴즈 | 대화](HomeworkSheet, roleplay/homeworkQuiz.ts) · 0단계면 📝 글자·소리 숙제(openLettersBank)
      통화 기록 CallList(튜터 프로필, 칩 [자유대화 | 수업 | 게임 | 가르치기], lib/roleplay/callStore.ts 이 폰)
   소재 수업 studyMap/LessonHost(openLesson) → FrameLesson [설명 › 퀴즈 › 대화] · GrammarExplain(문법 한 장) · ExpressionCard(표현 카드) · FixedExplain(고정 수업)
@@ -147,9 +147,9 @@
 - 다른 영역이 씀: `rooms/RandomScreen` ← 앱 틀
 
 ### My 탭 — 계정 카드·칸 셋 Logbank·Quizbank·Languagebank·첫 측정·소재 수업 `my`
-- 화면: `notes/NotebookSection` · `studyMap/BankFlip` · `studyMap/BankHelp` · `studyMap/DictNotes` · `studyMap/Dictionary` · `studyMap/ExpressionCard` · `studyMap/FirstCheck` · `studyMap/FixedExplain` · `studyMap/FrameLesson` · `studyMap/GrammarExplain` · `studyMap/Growth` · `studyMap/InlineQuiz` · `studyMap/LanguageBank` · `studyMap/LessonHost` · `studyMap/LineParts` · `studyMap/Logbank` · `studyMap/QuizPlayer` · `studyMap/Quizbank` · `studyMap/ScriptPractice` · `studyMap/SkillHexagon` · `studyMap/StudyMapTab` · `studyMap/TodayCards` · `studyMap/UpNext` · `studyMap/bankTone`
+- 화면: `notes/NotebookSection` · `studyMap/BankFlip` · `studyMap/BankHelp` · `studyMap/DictNotes` · `studyMap/Dictionary` · `studyMap/ExpressionCard` · `studyMap/FirstCheck` · `studyMap/FixedExplain` · `studyMap/FrameLesson` · `studyMap/GrammarExplain` · `studyMap/Growth` · `studyMap/InlineQuiz` · `studyMap/LanguageBank` · `studyMap/LessonHost` · `studyMap/LineParts` · `studyMap/Logbank` · `studyMap/QuizPlayer` · `studyMap/Quizbank` · `studyMap/ScriptPractice` · `studyMap/SkillHexagon` · `studyMap/StudyChips` · `studyMap/StudyMapTab` · `studyMap/TodayCards` · `studyMap/UpNext` · `studyMap/bankTone`
 - API: `curriculum/ask` · `curriculum/choices` · `curriculum/fixed-lesson` · `curriculum/frame-lesson` · `curriculum/generate`(학습 기록 공통) · `curriculum/item-lesson` · `curriculum/mission-check` · `curriculum/mission-seen` · `curriculum/missions` · `curriculum/option-notes` · `curriculum/pick` · `curriculum/progress` · `curriculum/qbank`(AI 통화) · `curriculum/recall` · `curriculum/restore`(학습 기록 공통) · `curriculum/review` · `curriculum`(AI 통화, 학습 기록 공통) · `curriculum/script` · `curriculum/scripts`(AI 통화) · `curriculum/stages` · `curriculum/typed-check` · `curriculum/words` · `notebook`(문장분석·표현 시트) · `notes/place` · `video-index/find`(학습 기록 공통)
-- 다른 영역이 씀: `studyMap/DictNotes` ← AI 채팅, 영상 학습 탭 · `studyMap/Dictionary` ← 문장분석·표현 시트 · `studyMap/Growth` ← AI 통화 · `studyMap/LessonHost` ← 앱 틀 · `studyMap/QuizPlayer` ← AI 통화 · `studyMap/SkillHexagon` ← AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
+- 다른 영역이 씀: `studyMap/DictNotes` ← AI 채팅, 영상 학습 탭 · `studyMap/Dictionary` ← 문장분석·표현 시트 · `studyMap/Growth` ← AI 통화 · `studyMap/LessonHost` ← 앱 틀 · `studyMap/QuizPlayer` ← AI 통화 · `studyMap/SkillHexagon` ← AI 통화 · `studyMap/StudyChips` ← AI 채팅, AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
 
 ### 계정·로그인 `account`
 - 화면: `account/AccountCard` · `account/ProfileFacts`

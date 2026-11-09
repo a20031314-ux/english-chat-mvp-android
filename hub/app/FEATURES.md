@@ -5,7 +5,7 @@
 > **쓰는 탭**은 코드에서 자동(`node scripts/scope.mjs <기능 id>`로 파일까지) — 둘 이상인 기능을 고치면 끝내기 훅이 그 탭들에 확인 요청을 만들게 한다(`hub/chat/ASKS.md`).
 > 기능을 빼면 줄을 지우고 코드·문구 14개 언어·사용법·문서를 같은 커밋에서 지운다. 옛 앱이 쓰는 서버만 "옛 앱 전용"으로 남기고 지울 조건을 적는다.
 
-## 지금 앱 (41)
+## 지금 앱 (42)
 
 ### 앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법
 
@@ -87,10 +87,11 @@
 | 학습 타임라인 | Logbank 그날 세부 — 학습 시간(10분 쉼으로 끊음) → 요소별 카드 → 카드 지난 기록 | 1 메인 · 2 My · 3 AI | `lib/curriculum/studyTimeline.ts` |  |
 | 아는 정도 표시 `lbFresh` (화면: 학습) | 학습 · n번 학습(+ 마지막이 틀렸으면 ✗, 퀴즈 답만) — 퀴즈 답 뒤·사전·배운 것·타임라인 같은 표시, 대화에서 쓴 것은 카드의 쓴 곳·활용 칸에만 | 1 메인 · 2 My · 3 AI | `lib/curriculum/studyTimeline.ts` | 체크 셋 이름(New·적용이 힘듦·알아요) 표시 · 점 셋 |
 | Quizbank `keepTitle` | 한 흐름 퀴즈 — 다시 볼 것(막힌 것 먼저)과 새 묶음 번갈아, 낱말·표현은 카드 한 칸 가림, 답 뒤 📕 | 1 메인 · 2 My · 3 AI | `components/studyMap/Quizbank.tsx` · `components/studyMap/InlineQuiz.tsx` · `lib/curriculum/quiz.ts` | Quizbank 탭 [어휘 \| 다시 보기 \| 시험] · 📝 단어 시험 · 정기 시험 · 😴 쉬워요 줄 · ⚙ 어떤 낱말 |
-| Languagebank `languagebankTitle` | 사전 — 찾기 + 자주 쓴 말(대화 수) + 종류(품사\|주제 × 난이도) → 묶음([학습 \| 대화] 순서) → 낱말 화면(학습 · 대화에서 n번 씀 따로, 같이 배우기 칩), 표현·문법은 소재 수업, 칠하기 = 실력 확인 추정, 숫자 = 개수(학습은 낱말 화면에만) | 1 메인 · 2 My · 3 AI | `components/studyMap/LanguageBank.tsx` · `components/studyMap/Dictionary.tsx` · `lib/curriculum/wordUse.ts` · `lib/curriculum/skillCheck.ts` | Stagebank · 📕 단어 사전 버튼 · 📖 배울 수 있는 것 |
+| Languagebank `languagebankTitle` | 사전 — 찾기 + 자주 쓴 말(대화 수) + 종류(품사\|주제 × 난이도) → 묶음([학습 \| 대화] 순서) → 낱말 화면(학습 · 대화에서 n번 씀 따로, 같이 배우기), 표현·문법은 소재 수업, 칠하기 = 실력 확인 추정, 숫자 = 개수(학습은 낱말 화면에만) | 1 메인 · 2 My · 3 AI | `components/studyMap/LanguageBank.tsx` · `components/studyMap/Dictionary.tsx` · `lib/curriculum/wordUse.ts` · `lib/curriculum/skillCheck.ts` | Stagebank · 📕 단어 사전 버튼 · 📖 배울 수 있는 것 |
 | 넘겨 보기 `flipStart` | Languagebank 묶음 ▶ — 뜻·단어·예문 중 하나 가림 → [다시 \| 됐어요] | 2 My | `components/studyMap/BankFlip.tsx` · `lib/curriculum/bankFlip.ts` |  |
 | 글자·소리 `fcLetters` (화면: 글자) | 글자가 다른 학습 언어 — Languagebank 첫 줄 칸, 0단계면 Logbank 오늘 = 오늘의 글자 묶음 | 2 My · 3 AI | `components/studyMap/ScriptPractice.tsx` · `lib/curriculum/lettersOpen.ts` |  |
 | 소재 수업 | 어디서나 여는 층(openLesson) — 문장구조 수업 [설명 › 퀴즈 › 대화] · 문법 한 장 · 표현 카드 | 2 My | `components/studyMap/LessonHost.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/GrammarExplain.tsx` |  |
+| 같이 배우기 `lbStudyWith` | 칩 최대 셋 → 소재 수업 — Languagebank 단어 화면(그 단어와 같이) · 채팅 표현 보기 아래 · 통화 정리 줄(하고 싶었던 말에 든 문장구조·표현·문법), 덜 다진 것 먼저, 모델 없음 | 1 메인 · 2 My · 3 AI | `components/studyMap/StudyChips.tsx` · `lib/curriculum/wordUse.ts` |  |
 | 사전 주석 | 학습 언어 문장 아래 📕 + 그 문장의 단어·표현 칩 → 사전 시트·소재 수업(대화 줄·자막·퀴즈 답 뒤) | 1 메인 · 2 My · 3 AI | `components/studyMap/DictNotes.tsx` · `lib/curriculum/dictNotes.ts` |  |
 | 칸 설명 | Logbank·Quizbank 머리 ? — 핵심 하나 + 세부 한 줄씩 | 1 메인 · 2 My | `components/studyMap/BankHelp.tsx` · `lib/guide/banks.ts` |  |
 

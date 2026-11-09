@@ -16,7 +16,7 @@ import { grownItems, growBank } from "@/lib/curriculum/qbank";
 import { cachedGlosses, fetchWordChunk } from "@/lib/curriculum/useWordBank";
 import { glossFor } from "@/lib/curriculum/stageScripts";
 import { studyWith, talkCounts } from "@/lib/curriculum/wordUse";
-import { openLesson } from "@/lib/appIntents";
+import { StudyChipRow } from "@/components/studyMap/StudyChips";
 
 /**
  * Quizbank 어휘 탭의 단어 사전(2026-11-04). 빈도 목록을 단어·뜻으로 찾고, 항목은 품사·단계·짧은 뜻·예문 둘.
@@ -346,25 +346,5 @@ function StudyWithRow({ ui, language, locale, word, lines, above }: { ui: UICopy
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [language, locale, word, key],
   );
-  if (!list.length) return null;
-  return (
-    <div data-study-with className="mt-3">
-      <p className="text-meta text-slate-500">{ui.lbStudyWith}</p>
-      <div className="mt-1.5 flex flex-wrap gap-1.5">
-        {list.map((one) => (
-          <button
-            key={one.key}
-            type="button"
-            dir="auto"
-            data-study-with-key={one.key}
-            onClick={() => openLesson({ language, key: one.key, ...(above ? { above: true } : {}) })}
-            className="rounded-lg border border-line px-2.5 py-1 text-start text-note text-ink hover:bg-white/5"
-          >
-            <span aria-hidden className="me-1">{one.key.startsWith("e|") ? "💬" : one.key.startsWith("g|") ? "📐" : "🧩"}</span>
-            {one.label}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
+  return <StudyChipRow ui={ui} language={language} list={list} above={above} />;
 }

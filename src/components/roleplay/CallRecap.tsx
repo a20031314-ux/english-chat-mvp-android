@@ -2,15 +2,15 @@
 
 import { FindInMy } from "@/components/FindInMy";
 import { RightWithChanges, SaidWithMistakes } from "@/components/RoleplayReview";
-import { openLesson } from "@/lib/appIntents";
 import { correctionReplacementSnippet } from "@/lib/textDiff";
-import { expressionKeysIn, type LessonScene } from "@/lib/curriculum/lessonKey";
+import type { LessonScene } from "@/lib/curriculum/lessonKey";
+import { StudyChips } from "@/components/studyMap/StudyChips";
 import type { UICopy } from "@/lib/copy";
 import type { RecapItem } from "@/lib/roleplay/recap";
 
 /**
  * 통화 정리 카드 — 통화가 끝난 화면 맨 아래와 통화 기록 돌아보기(2026-10-30 사용자 "통화 기록을 학습자료로, My 해당 부분으로 연결").
- * 줄마다: 무엇인지(고친 말·힌트·못 알아들은 말·뜻을 본 말) · 학습 언어 문장 · 그 문장의 문장구조 🧩(누르면 My n단계 그 수업) — 틀이 없으면 🔎 My에서 찾기.
+ * 줄마다: 무엇인지(고친 말·힌트·못 알아들은 말·뜻을 본 말) · 학습 언어 문장 · 같이 배우기 칩(StudyChips — 그 말에 든 문장구조·표현·문법, 누르면 그 수업) — 없으면 🔎 My에서 찾기.
  * 설명 글은 없음(화면 속 부연설명 금지) — 이름·상태만.
  */
 export function CallRecap({
@@ -55,31 +55,17 @@ export function CallRecap({
               {item.said ? <RightWithChanges said={item.said} right={item.line} /> : <bdi dir="auto">{item.line}</bdi>}
             </p>
             {item.meaning ? <p className="mt-0.5 text-meta text-slate-400">{item.meaning}</p> : null}
-            {item.frames.length || expressionKeysIn(language, item.line).length ? (
-              <div className="mt-1.5 flex flex-wrap gap-1.5">
-                {expressionKeysIn(language, item.line).map((key) => (
-                  <button key={key} type="button" data-recap-expression onClick={() => openLesson({ language, key, scene: sceneOf(item) })} className="inline-flex items-center gap-1 rounded-full border border-line px-2.5 py-1 text-meta text-slate-100 hover:bg-white/10">
-                    <span aria-hidden>🔤</span>
-                    <bdi dir="auto">{key.slice(2)}</bdi>
-                  </button>
-                ))}
-                {item.frames.map((frame) => (
-                  <button
-                    key={frame.id}
-                    type="button"
-                    // 그 문장을 들고 그 수업으로(수업 맨 위 "통화에서" 카드) — 통화 화면 위에 열려 닫으면 여기로 돌아온다.
-                    onClick={() => openLesson({ language, key: `f|${frame.id}`, scene: sceneOf(item) })}
-                    className="inline-flex items-center gap-1 rounded-full border border-line px-2.5 py-1 text-meta text-slate-100 hover:bg-white/10"
-                  >
-                    <span aria-hidden>🧩</span>
-                    <bdi dir="auto">{frame.pattern}</bdi>
-                    <span className="text-slate-400">· {ui.stageNumber.replace("{n}", String(frame.stage))}</span>
-                  </button>
-                ))}
-              </div>
-            ) : (
-              <FindInMy ui={ui} text={findText(item)} sentence={item.line} language={language} locale={locale} onDone={onLeave} lessonScene={sceneOf(item)} />
-            )}
+            {/* 하고 싶었던 말의 같이 배우기(studyMap/StudyChips — 고친 말이면 고친 곳에 든 것, 덜 다진 것 먼저) — 없으면 🔎 My에서 찾기. */}
+            <StudyChips
+              ui={ui}
+              language={language}
+              locale={locale}
+              line={item.line}
+              said={item.said}
+              scene={sceneOf(item)}
+              title={false}
+              fallback={<FindInMy ui={ui} text={findText(item)} sentence={item.line} language={language} locale={locale} onDone={onLeave} lessonScene={sceneOf(item)} />}
+            />
           </li>
         ))}
       </ol>

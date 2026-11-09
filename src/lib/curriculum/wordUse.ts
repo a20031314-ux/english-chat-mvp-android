@@ -106,8 +106,32 @@ export function studyWith(input: { language: string; locale: string; word: strin
   for (const key of seen.filter((one) => one.startsWith("f|"))) add(key);
   for (const key of seen.filter((one) => one.startsWith("e|"))) add(key);
   for (const key of seen.filter((one) => one.startsWith("g|"))) add(key);
+  return rankStudy({ language, locale, keys: found, events, dayOf, max });
+}
+
+/**
+ * 순수: 하고 싶었던 말 한 줄의 같이 배우기(2026-11-09 사용자 "발화 의도 — 이 말을 하고 싶은데 문법·표현을 모름 → 해당 카드").
+ * line = 학습 언어로 된 그 말(채팅 표현 보기의 표현 · 통화 고친 말의 바른 문장), said = 내가 실제로 한 말(없으면 "").
+ * 바른 문장에만 든 문장구조·표현·문법(recapLedgerKeys miss — 고친 말이면 고친 곳, 편한 말로 썼으면 전부).
+ */
+export function studyFor(input: { language: string; locale: string; line: string; said?: string; events: readonly LogEvent[]; dayOf: (t: number) => string; max?: number }): StudyWith[] {
+  const { language, locale, line, said = "", events, dayOf, max = 3 } = input;
+  const keys = missingKeys(language, line, said);
+  const order = [...keys.filter((key) => key.startsWith("f|")), ...keys.filter((key) => key.startsWith("e|")), ...keys.filter((key) => key.startsWith("g|"))];
+  return rankStudy({ language, locale, keys: order, events, dayOf, max });
+}
+
+/** 순수: 바른 문장에만 든 열쇠(문장구조는 내 말에도 있어도 넣음 — 틀을 틀리게 쓴 것). 장부에 막힌 것으로 남길 때도 쓴다. */
+export function missingKeys(language: string, line: string, said = ""): string[] {
+  if (!line.trim() || said.trim() === line.trim()) return [];
+  return recapLedgerKeys(language, [{ who: "learner", text: said, better: line }]).miss;
+}
+
+/** 이름이 있는 것만, 퀴즈로 답한 날이 2일 미만인 것 먼저(같으면 찾은 순서), 최대 max. */
+function rankStudy(input: { language: string; locale: string; keys: readonly string[]; events: readonly LogEvent[]; dayOf: (t: number) => string; max: number }): StudyWith[] {
+  const { language, locale, keys, events, dayOf, max } = input;
   const days = quizDayCounts(events, dayOf);
-  const labelled = found
+  const labelled = keys
     .map((key) => ({ key, label: keyName(language, locale, key), days: days.get(key) ?? 0 }))
     .filter((one) => one.label);
   return [...labelled.filter((one) => one.days < 2), ...labelled.filter((one) => one.days >= 2)].slice(0, max);
