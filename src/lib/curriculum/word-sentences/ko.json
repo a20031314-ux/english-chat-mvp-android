@@ -41,6 +41,22 @@
    "blank": "가구를"
   }
  ],
+ "w|가까스로": [
+  {
+   "text": "태윤은 마감 일 분 전에 가까스로 기사를 넘겼어요.",
+   "en": "Taeyun barely turned in his article one minute before the deadline.",
+   "ko": "태윤은 마감 일 분 전에 가까스로 기사를 넘겼어요.",
+   "blank": "가까스로",
+   "src": "made"
+  },
+  {
+   "text": "유나의 회사는 통장 잔고가 바닥나기 직전에 가까스로 투자를 받았어요.",
+   "en": "Yuna's company barely secured investment just before its bank balance ran out.",
+   "ko": "유나의 회사는 통장 잔고가 바닥나기 직전에 가까스로 투자를 받았어요.",
+   "blank": "가까스로",
+   "src": "made"
+  }
+ ],
  "w|가까이": [
   {
    "text": "좀 더 가까이 와 봐.",
@@ -1037,6 +1053,22 @@
    "blank": "간호사한테"
   }
  ],
+ "w|간혹": [
+  {
+   "text": "간혹 제보 전화가 장난일 때도 있어서 태윤은 꼭 다시 확인해요.",
+   "en": "Occasionally a tip call turns out to be a prank, so Taeyun always double-checks.",
+   "ko": "간혹 제보 전화가 장난일 때도 있어서 태윤은 꼭 다시 확인해요.",
+   "blank": "간혹",
+   "src": "made"
+  },
+  {
+   "text": "유나는 간혹 새벽에 좋은 아이디어가 떠오르면 바로 메모해요.",
+   "en": "Occasionally, when a good idea comes to her at dawn, Yuna jots it down right away.",
+   "ko": "유나는 간혹 새벽에 좋은 아이디어가 떠오르면 바로 메모해요.",
+   "blank": "간혹",
+   "src": "made"
+  }
+ ],
  "w|갇히다": [
   {
    "text": "엘리베이터에 갇혔어.",
@@ -1167,6 +1199,22 @@
    "en": "Go home and change clothes quickly.",
    "ko": "집에 가서 빨리 갈아입어.",
    "blank": "갈아입어"
+  }
+ ],
+ "w|갈아타다": [
+  {
+   "text": "태윤은 현장에 빨리 가려고 지하철을 두 번이나 갈아탔어요.",
+   "en": "Taeyun changed subway lines twice to get to the scene quickly.",
+   "ko": "태윤은 현장에 빨리 가려고 지하철을 두 번이나 갈아탔어요.",
+   "blank": "갈아탔어요",
+   "src": "made"
+  },
+  {
+   "text": "유나는 투자자 미팅에 가려고 버스에서 지하철로 갈아탔어요.",
+   "en": "Yuna switched from the bus to the subway to get to the investor meeting.",
+   "ko": "유나는 투자자 미팅에 가려고 버스에서 지하철로 갈아탔어요.",
+   "blank": "갈아탔어요",
+   "src": "made"
   }
  ],
  "w|감": [
@@ -1821,6 +1869,22 @@
    "src": "made"
   }
  ],
+ "w|강사": [
+  {
+   "text": "태윤은 학원 강사들의 근무 환경을 다룬 기사를 썼어요.",
+   "en": "Taeyun wrote an article about the working conditions of private academy instructors.",
+   "ko": "태윤은 학원 강사들의 근무 환경을 다룬 기사를 썼어요.",
+   "blank": "강사들의",
+   "src": "made"
+  },
+  {
+   "text": "유나는 코딩 학원 강사로 일하다가 창업을 결심했어요.",
+   "en": "Yuna decided to start a company while working as an instructor at a coding academy.",
+   "ko": "유나는 코딩 학원 강사로 일하다가 창업을 결심했어요.",
+   "blank": "강사로",
+   "src": "made"
+  }
+ ],
  "w|강아지": [
   {
    "text": "강아지 너무 귀엽다.",
@@ -2097,6 +2161,22 @@
    "en": "We're pouring effort into new product development.",
    "ko": "신제품 개발에 힘을 쏟아.",
    "blank": "개발에"
+  }
+ ],
+ "w|개발자": [
+  {
+   "text": "태윤은 앱 개인정보 유출 사건을 취재하려고 개발자 출신 전문가를 찾아갔어요.",
+   "en": "To cover an app data leak, Taeyun went to see an expert who used to be a developer.",
+   "ko": "태윤은 앱 개인정보 유출 사건을 취재하려고 개발자 출신 전문가를 찾아갔어요.",
+   "blank": "개발자",
+   "src": "made"
+  },
+  {
+   "text": "유나는 회사 첫 개발자로 들어와서 앱의 뼈대를 혼자 만들었어요.",
+   "en": "Yuna joined as the company's first developer and built the app's framework on her own.",
+   "ko": "유나는 회사 첫 개발자로 들어와서 앱의 뼈대를 혼자 만들었어요.",
+   "blank": "개발자로",
+   "src": "made"
   }
  ],
  "w|개발하다": [
@@ -2970,6 +3050,22 @@
    "en": "It was noisy in front of the village for a while because of the coastal road construction.",
    "ko": "해안 도로 건설 때문에 마을 앞이 한동안 시끄러웠어요.",
    "blank": "건설",
+   "src": "made"
+  }
+ ],
+ "w|건설업": [
+  {
+   "text": "경기가 나빠지면서 건설업 일자리가 크게 줄었다고 태윤이 보도했어요.",
+   "en": "Taeyun reported that construction jobs fell sharply as the economy worsened.",
+   "ko": "경기가 나빠지면서 건설업 일자리가 크게 줄었다고 태윤이 보도했어요.",
+   "blank": "건설업",
+   "src": "made"
+  },
+  {
+   "text": "유나는 건설업 현장의 안전 점검을 돕는 앱을 새로 기획했어요.",
+   "en": "Yuna planned a new app to help with safety inspections at construction sites.",
+   "ko": "유나는 건설업 현장의 안전 점검을 돕는 앱을 새로 기획했어요.",
+   "blank": "건설업",
    "src": "made"
   }
  ],
@@ -4783,6 +4879,22 @@
    "src": "made"
   }
  ],
+ "w|고객센터": [
+  {
+   "text": "방송이 나간 뒤 방송국 고객센터에 시청자 전화가 쏟아졌어요.",
+   "en": "After the broadcast, viewer calls poured into the station's customer service center.",
+   "ko": "방송이 나간 뒤 방송국 고객센터에 시청자 전화가 쏟아졌어요.",
+   "blank": "고객센터에",
+   "src": "made"
+  },
+  {
+   "text": "앱 오류가 나자 고객센터 전화가 하루 종일 울렸어요.",
+   "en": "When the app had an error, the customer service phone rang all day.",
+   "ko": "앱 오류가 나자 고객센터 전화가 하루 종일 울렸어요.",
+   "blank": "고객센터",
+   "src": "made"
+  }
+ ],
  "w|고구마": [
   {
    "text": "고구마를 오븐에 구웠어.",
@@ -5977,6 +6089,22 @@
    "en": "I saw dinosaur bones at the museum.",
    "ko": "박물관에서 공룡 뼈를 봤어.",
    "blank": "공룡"
+  }
+ ],
+ "w|공무원": [
+  {
+   "text": "시청 공무원은 태윤의 질문에 끝까지 답하지 않았어요.",
+   "en": "The city hall official never answered Taeyun's questions.",
+   "ko": "시청 공무원은 태윤의 질문에 끝까지 답하지 않았어요.",
+   "blank": "공무원은",
+   "src": "made"
+  },
+  {
+   "text": "유나는 공무원으로 일하는 아버지에게 창업 소식을 조심스럽게 전했어요.",
+   "en": "Yuna carefully broke the news of her startup to her father, who works as a civil servant.",
+   "ko": "유나는 공무원으로 일하는 아버지에게 창업 소식을 조심스럽게 전했어요.",
+   "blank": "공무원으로",
+   "src": "made"
   }
  ],
  "w|공범": [
@@ -7231,6 +7359,22 @@
    "src": "made"
   }
  ],
+ "w|교직원": [
+  {
+   "text": "학교 급식 문제는 익명을 요구한 교직원이 태윤에게 처음 제보했어요.",
+   "en": "The school lunch issue was first tipped off to Taeyun by a school staff member who asked to remain anonymous.",
+   "ko": "학교 급식 문제는 익명을 요구한 교직원이 태윤에게 처음 제보했어요.",
+   "blank": "교직원이",
+   "src": "made"
+  },
+  {
+   "text": "유나의 첫 작품은 학교 교직원들이 쓰는 일정 관리 앱이었어요.",
+   "en": "Yuna's first product was a scheduling app used by school staff.",
+   "ko": "유나의 첫 작품은 학교 교직원들이 쓰는 일정 관리 앱이었어요.",
+   "blank": "교직원들이",
+   "src": "made"
+  }
+ ],
  "w|교체하다": [
   {
    "text": "민수는 오래된 가게 간판을 새것으로 교체했어요.",
@@ -7967,6 +8111,22 @@
    "en": "He often talks about army stories.",
    "ko": "군대 이야기를 자주 해.",
    "blank": "군대"
+  }
+ ],
+ "w|군무원": [
+  {
+   "text": "태윤은 군부대에서 일하는 군무원을 인터뷰하려고 몇 주를 기다렸어요.",
+   "en": "Taeyun waited for weeks to interview a civilian employee working at a military base.",
+   "ko": "태윤은 군부대에서 일하는 군무원을 인터뷰하려고 몇 주를 기다렸어요.",
+   "blank": "군무원을",
+   "src": "made"
+  },
+  {
+   "text": "국방 관련 프로젝트 때문에 군무원 한 명이 유나의 사무실을 자주 찾아왔어요.",
+   "en": "Because of a defense-related project, a military civilian employee often visited Yuna's office.",
+   "ko": "국방 관련 프로젝트 때문에 군무원 한 명이 유나의 사무실을 자주 찾아왔어요.",
+   "blank": "군무원",
+   "src": "made"
   }
  ],
  "w|군사": [
@@ -9497,6 +9657,38 @@
    "en": "But that was a bit much.",
    "ko": "근데 그건 좀 심했어.",
    "blank": "근데"
+  }
+ ],
+ "w|근로": [
+  {
+   "text": "태윤은 새 근로 시간 제도가 현장에서 잘 지켜지는지 확인했어요.",
+   "en": "Taeyun checked whether the new working-hours system was being followed on site.",
+   "ko": "태윤은 새 근로 시간 제도가 현장에서 잘 지켜지는지 확인했어요.",
+   "blank": "근로",
+   "src": "made"
+  },
+  {
+   "text": "유나는 근로 계약서를 직원마다 꼼꼼하게 다시 썼어요.",
+   "en": "Yuna carefully rewrote each employee's labor contract.",
+   "ko": "유나는 근로 계약서를 직원마다 꼼꼼하게 다시 썼어요.",
+   "blank": "근로",
+   "src": "made"
+  }
+ ],
+ "w|근로자": [
+  {
+   "text": "폭염 속에서 일하는 근로자들의 모습을 태윤이 직접 찍어 왔어요.",
+   "en": "Taeyun went out and filmed workers laboring in the heat wave himself.",
+   "ko": "폭염 속에서 일하는 근로자들의 모습을 태윤이 직접 찍어 왔어요.",
+   "blank": "근로자들의",
+   "src": "made"
+  },
+  {
+   "text": "유나는 직원이 열 명을 넘자 근로자 대표를 뽑자고 제안했어요.",
+   "en": "When the staff passed ten people, Yuna proposed electing an employee representative.",
+   "ko": "유나는 직원이 열 명을 넘자 근로자 대표를 뽑자고 제안했어요.",
+   "blank": "근로자",
+   "src": "made"
   }
  ],
  "w|근무": [
@@ -12713,6 +12905,22 @@
    "blank": "날리다"
   }
  ],
+ "w|날마다": [
+  {
+   "text": "태윤은 날마다 아침 여섯 시에 그날 신문을 다 훑어봐요.",
+   "en": "Every day at six in the morning, Taeyun skims through all of that day's newspapers.",
+   "ko": "태윤은 날마다 아침 여섯 시에 그날 신문을 다 훑어봐요.",
+   "blank": "날마다",
+   "src": "made"
+  },
+  {
+   "text": "유나는 날마다 아침 회의에서 팀원들의 이야기를 먼저 들어요.",
+   "en": "Every day at the morning meeting, Yuna listens to her team members first.",
+   "ko": "유나는 날마다 아침 회의에서 팀원들의 이야기를 먼저 들어요.",
+   "blank": "날마다",
+   "src": "made"
+  }
+ ],
  "w|날씨": [
   {
    "text": "날씨 좋다 오늘.",
@@ -13978,6 +14186,22 @@
    "en": "Seoyeon wants to keep swimming even in her old age.",
    "ko": "서연은 노년에도 수영을 계속하고 싶어요.",
    "blank": "노년에도",
+   "src": "made"
+  }
+ ],
+ "w|노동": [
+  {
+   "text": "태윤의 이번 기획 기사는 서비스업 종사자들의 감정 노동을 다뤘어요.",
+   "en": "Taeyun's feature story this time dealt with the emotional labor of service industry workers.",
+   "ko": "태윤의 이번 기획 기사는 서비스업 종사자들의 감정 노동을 다뤘어요.",
+   "blank": "노동을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 밤샘 노동이 당연한 회사는 만들지 않겠다고 다짐했어요.",
+   "en": "Yuna vowed not to build a company where all-night labor is taken for granted.",
+   "ko": "유나는 밤샘 노동이 당연한 회사는 만들지 않겠다고 다짐했어요.",
+   "blank": "노동이",
    "src": "made"
   }
  ],
@@ -17367,6 +17591,22 @@
    "blank": "대위가"
   }
  ],
+ "w|대응하다": [
+  {
+   "text": "오보가 나가자 보도국은 정정 보도로 빠르게 대응했어요.",
+   "en": "When an incorrect report went out, the newsroom quickly responded with a correction.",
+   "ko": "오보가 나가자 보도국은 정정 보도로 빠르게 대응했어요.",
+   "blank": "대응했어요",
+   "src": "made"
+  },
+  {
+   "text": "서버가 다운되자 유나의 팀은 밤새 대응했어요.",
+   "en": "When the server went down, Yuna's team responded all night.",
+   "ko": "서버가 다운되자 유나의 팀은 밤새 대응했어요.",
+   "blank": "대응했어요",
+   "src": "made"
+  }
+ ],
  "w|대의": [
   {
    "text": "민수는 학생회 선거에서 개인보다 학교 전체라는 대의를 앞세웠어요.",
@@ -17472,6 +17712,22 @@
    "en": "Daeun's lab also has measures prepared in case of a fire.",
    "ko": "실험실에 불이 날 경우를 대비한 대책이 다은의 연구실에도 마련돼 있어요.",
    "blank": "대책이",
+   "src": "made"
+  }
+ ],
+ "w|대처하다": [
+  {
+   "text": "생방송 중에 원고가 사라졌지만 태윤은 침착하게 대처했어요.",
+   "en": "The script disappeared during the live broadcast, but Taeyun handled it calmly.",
+   "ko": "생방송 중에 원고가 사라졌지만 태윤은 침착하게 대처했어요.",
+   "blank": "대처했어요",
+   "src": "made"
+  },
+  {
+   "text": "투자가 갑자기 취소됐을 때도 유나는 차분하게 대처했어요.",
+   "en": "Even when the investment was suddenly canceled, Yuna dealt with it calmly.",
+   "ko": "투자가 갑자기 취소됐을 때도 유나는 차분하게 대처했어요.",
+   "blank": "대처했어요",
    "src": "made"
   }
  ],
@@ -19935,6 +20191,22 @@
    "blank": "드리다"
   }
  ],
+ "w|드물게": [
+  {
+   "text": "태윤은 드물게 일찍 퇴근한 날 가족과 외식을 했어요.",
+   "en": "On one of his rare early days off work, Taeyun ate out with his family.",
+   "ko": "태윤은 드물게 일찍 퇴근한 날 가족과 외식을 했어요.",
+   "blank": "드물게",
+   "src": "made"
+  },
+  {
+   "text": "유나는 아주 드물게 주말에 출근하지만 그럴 땐 꼭 맛있는 걸 사 와요.",
+   "en": "Yuna very rarely comes in on weekends, but when she does she always brings something tasty.",
+   "ko": "유나는 아주 드물게 주말에 출근하지만 그럴 땐 꼭 맛있는 걸 사 와요.",
+   "blank": "드물게",
+   "src": "made"
+  }
+ ],
  "w|드물다": [
   {
    "text": "이런 기회는 드물어.",
@@ -20356,6 +20628,22 @@
    "en": "The Korean teacher took on the role of director for the school play.",
    "ko": "학교 연극의 디렉터는 국어 선생님이 맡으셨어요.",
    "blank": "디렉터는",
+   "src": "made"
+  }
+ ],
+ "w|디자이너": [
+  {
+   "text": "신문 일 면 그래픽은 디자이너가 마감 직전까지 고쳤어요.",
+   "en": "The designer kept revising the front-page graphic right up until the deadline.",
+   "ko": "신문 일 면 그래픽은 디자이너가 마감 직전까지 고쳤어요.",
+   "blank": "디자이너가",
+   "src": "made"
+  },
+  {
+   "text": "디자이너와 유나는 버튼 색깔 하나로 한 시간을 이야기했어요.",
+   "en": "The designer and Yuna talked for an hour about the color of a single button.",
+   "ko": "디자이너와 유나는 버튼 색깔 하나로 한 시간을 이야기했어요.",
+   "blank": "디자이너와",
    "src": "made"
   }
  ],
@@ -21297,6 +21585,22 @@
    "blank": "뛰어오다"
   }
  ],
+ "w|뛰어오르다": [
+  {
+   "text": "태윤의 기사가 나간 뒤 그 회사 주가가 갑자기 뛰어올랐어요.",
+   "en": "After Taeyun's article came out, that company's stock price suddenly shot up.",
+   "ko": "태윤의 기사가 나간 뒤 그 회사 주가가 갑자기 뛰어올랐어요.",
+   "blank": "뛰어올랐어요",
+   "src": "made"
+  },
+  {
+   "text": "앱이 뉴스에 소개되자 가입자 수가 하루 만에 뛰어올랐어요.",
+   "en": "When the app was featured on the news, the number of sign-ups jumped in a single day.",
+   "ko": "앱이 뉴스에 소개되자 가입자 수가 하루 만에 뛰어올랐어요.",
+   "blank": "뛰어올랐어요",
+   "src": "made"
+  }
+ ],
  "w|뜨겁다": [
   {
    "text": "국이 너무 뜨거워.",
@@ -22083,6 +22387,22 @@
    "en": "The rain finally stopped.",
    "ko": "마침내 비가 그쳤어.",
    "blank": "마침내"
+  }
+ ],
+ "w|마케팅": [
+  {
+   "text": "신문사도 이제 마케팅 없이는 구독자를 늘리기 힘들어요.",
+   "en": "Even newspapers now find it hard to grow subscribers without marketing.",
+   "ko": "신문사도 이제 마케팅 없이는 구독자를 늘리기 힘들어요.",
+   "blank": "마케팅",
+   "src": "made"
+  },
+  {
+   "text": "유나는 마케팅에 돈을 쓰기보다 입소문을 믿어 보기로 했어요.",
+   "en": "Rather than spending money on marketing, Yuna decided to trust word of mouth.",
+   "ko": "유나는 마케팅에 돈을 쓰기보다 입소문을 믿어 보기로 했어요.",
+   "blank": "마케팅에",
+   "src": "made"
   }
  ],
  "w|마트": [
@@ -35224,6 +35544,38 @@
    "blank": "상담이"
   }
  ],
+ "w|상담사": [
+  {
+   "text": "험한 사건을 오래 맡은 태윤은 회사 상담사와 정기적으로 이야기를 나눠요.",
+   "en": "Having covered rough cases for a long time, Taeyun talks regularly with the company counselor.",
+   "ko": "험한 사건을 오래 맡은 태윤은 회사 상담사와 정기적으로 이야기를 나눠요.",
+   "blank": "상담사와",
+   "src": "made"
+  },
+  {
+   "text": "유나의 회사는 심리 상담사와 이용자를 연결해 주는 앱을 만들어요.",
+   "en": "Yuna's company makes an app that connects users with psychological counselors.",
+   "ko": "유나의 회사는 심리 상담사와 이용자를 연결해 주는 앱을 만들어요.",
+   "blank": "상담사와",
+   "src": "made"
+  }
+ ],
+ "w|상담원": [
+  {
+   "text": "태윤은 통신사 상담원으로 일하는 사람들의 하루를 따라가며 취재했어요.",
+   "en": "Taeyun followed and reported on a day in the life of people working as telecom call center agents.",
+   "ko": "태윤은 통신사 상담원으로 일하는 사람들의 하루를 따라가며 취재했어요.",
+   "blank": "상담원으로",
+   "src": "made"
+  },
+  {
+   "text": "이용자가 늘어서 유나는 채팅 상담원을 두 명 더 뽑았어요.",
+   "en": "As users increased, Yuna hired two more chat support agents.",
+   "ko": "이용자가 늘어서 유나는 채팅 상담원을 두 명 더 뽑았어요.",
+   "blank": "상담원을",
+   "src": "made"
+  }
+ ],
  "w|상담하다": [
   {
    "text": "준호는 웨딩플래너와 하객 수를 몇 번이나 상담했어요.",
@@ -36431,6 +36783,22 @@
    "en": "The booking site's server went down, so Yuna barely got a ticket.",
    "ko": "예매 사이트 서버가 다운돼서 유나는 표를 겨우 구했어요.",
    "blank": "서버가",
+   "src": "made"
+  }
+ ],
+ "w|서비스업": [
+  {
+   "text": "태윤의 이번 기획 기사는 서비스업 종사자들의 감정 노동을 다뤘어요.",
+   "en": "Taeyun's feature story this time dealt with the emotional labor of service industry workers.",
+   "ko": "태윤의 이번 기획 기사는 서비스업 종사자들의 감정 노동을 다뤘어요.",
+   "blank": "서비스업",
+   "src": "made"
+  },
+  {
+   "text": "유나의 앱은 식당 같은 서비스업 사장님들이 예약을 관리할 때 써요.",
+   "en": "Yuna's app is used by owners in the service industry, such as restaurants, to manage reservations.",
+   "ko": "유나의 앱은 식당 같은 서비스업 사장님들이 예약을 관리할 때 써요.",
+   "blank": "서비스업",
    "src": "made"
   }
  ],
@@ -37704,6 +38072,22 @@
    "en": "Try fitting the triangle piece.",
    "ko": "세모 조각을 맞춰 봐.",
    "blank": "세모"
+  }
+ ],
+ "w|세무사": [
+  {
+   "text": "태윤은 바뀐 세법을 설명해 줄 세무사를 찾느라 하루를 다 썼어요.",
+   "en": "Taeyun spent a whole day looking for a tax accountant to explain the revised tax law.",
+   "ko": "태윤은 바뀐 세법을 설명해 줄 세무사를 찾느라 하루를 다 썼어요.",
+   "blank": "세무사를",
+   "src": "made"
+  },
+  {
+   "text": "유나는 세금 신고를 세무사에게 맡기고 나서야 마음이 놓였어요.",
+   "en": "Yuna only felt at ease after leaving her tax filing to a tax accountant.",
+   "ko": "유나는 세금 신고를 세무사에게 맡기고 나서야 마음이 놓였어요.",
+   "blank": "세무사에게",
+   "src": "made"
   }
  ],
  "w|세부": [
@@ -47914,6 +48298,22 @@
    "blank": "연구원이"
   }
  ],
+ "w|연구자": [
+  {
+   "text": "태윤은 미세먼지 기사를 쓰려고 대학 연구자에게 자료를 부탁했어요.",
+   "en": "Taeyun asked a university researcher for data to write an article on fine dust.",
+   "ko": "태윤은 미세먼지 기사를 쓰려고 대학 연구자에게 자료를 부탁했어요.",
+   "blank": "연구자에게",
+   "src": "made"
+  },
+  {
+   "text": "유나의 회사는 대학 연구자들과 함께 새 인공지능 기능을 만들었어요.",
+   "en": "Yuna's company built a new AI feature together with university researchers.",
+   "ko": "유나의 회사는 대학 연구자들과 함께 새 인공지능 기능을 만들었어요.",
+   "blank": "연구자들과",
+   "src": "made"
+  }
+ ],
  "w|연구하다": [
   {
    "text": "기후를 오래 연구했어.",
@@ -48645,6 +49045,22 @@
    "en": "Seoyeon's uncle works in car sales.",
    "ko": "서연의 삼촌은 자동차 영업을 하세요.",
    "blank": "영업을",
+   "src": "made"
+  }
+ ],
+ "w|영업사원": [
+  {
+   "text": "태윤은 하루에 백 곳을 돈다는 영업사원을 따라다녀 봤어요.",
+   "en": "Taeyun tagged along with a salesperson who says he visits a hundred places a day.",
+   "ko": "태윤은 하루에 백 곳을 돈다는 영업사원을 따라다녀 봤어요.",
+   "blank": "영업사원을",
+   "src": "made"
+  },
+  {
+   "text": "대기업 영업사원 출신인 공동 창업자가 첫 계약을 따냈어요.",
+   "en": "The co-founder, a former salesperson at a big company, landed the first contract.",
+   "ko": "대기업 영업사원 출신인 공동 창업자가 첫 계약을 따냈어요.",
+   "blank": "영업사원",
    "src": "made"
   }
  ],
@@ -52894,6 +53310,22 @@
    "blank": "은행에"
   }
  ],
+ "w|은행원": [
+  {
+   "text": "보이스피싱을 막아 낸 은행원의 이야기가 저녁 뉴스에 나왔어요.",
+   "en": "The story of a bank teller who stopped a phone scam was on the evening news.",
+   "ko": "보이스피싱을 막아 낸 은행원의 이야기가 저녁 뉴스에 나왔어요.",
+   "blank": "은행원의",
+   "src": "made"
+  },
+  {
+   "text": "대출을 받으러 간 유나에게 은행원은 사업 계획서를 다시 써 오라고 했어요.",
+   "en": "When Yuna went to get a loan, the bank clerk told her to rewrite her business plan.",
+   "ko": "대출을 받으러 간 유나에게 은행원은 사업 계획서를 다시 써 오라고 했어요.",
+   "blank": "은행원은",
+   "src": "made"
+  }
+ ],
  "w|은혜": [
   {
    "text": "성호는 졸업식에서 선생님의 은혜에 감사하는 노래를 불렀어요.",
@@ -53686,6 +54118,22 @@
    "en": "They say it's going to rain later.",
    "ko": "이따가 비 온대.",
    "blank": "이따가"
+  }
+ ],
+ "w|이따금": [
+  {
+   "text": "이따금 독자가 보낸 손편지가 태윤의 책상에 놓여 있어요.",
+   "en": "Now and then, a handwritten letter from a reader is left on Taeyun's desk.",
+   "ko": "이따금 독자가 보낸 손편지가 태윤의 책상에 놓여 있어요.",
+   "blank": "이따금",
+   "src": "made"
+  },
+  {
+   "text": "유나는 이따금 회사 옥상에 올라가서 머리를 식혀요.",
+   "en": "Now and then, Yuna goes up to the office rooftop to clear her head.",
+   "ko": "유나는 이따금 회사 옥상에 올라가서 머리를 식혀요.",
+   "blank": "이따금",
+   "src": "made"
   }
  ],
  "w|이러다": [
@@ -60084,6 +60532,22 @@
    "src": "made"
   }
  ],
+ "w|접수원": [
+  {
+   "text": "방송국 일 층 접수원이 태윤에게 손님이 와 있다고 알려 줬어요.",
+   "en": "The receptionist on the first floor of the station told Taeyun a visitor was waiting.",
+   "ko": "방송국 일 층 접수원이 태윤에게 손님이 와 있다고 알려 줬어요.",
+   "blank": "접수원이",
+   "src": "made"
+  },
+  {
+   "text": "유나는 공유 오피스 접수원에게 택배를 대신 받아 달라고 부탁했어요.",
+   "en": "Yuna asked the receptionist at the shared office to receive a package for her.",
+   "ko": "유나는 공유 오피스 접수원에게 택배를 대신 받아 달라고 부탁했어요.",
+   "blank": "접수원에게",
+   "src": "made"
+  }
+ ],
  "w|접시": [
   {
    "text": "접시 깨졌어.",
@@ -61142,6 +61606,22 @@
    "src": "made"
   }
  ],
+ "w|제조업": [
+  {
+   "text": "지방 경제를 취재하던 태윤은 제조업 공장이 줄줄이 문을 닫는 걸 봤어요.",
+   "en": "While covering the regional economy, Taeyun saw manufacturing plants closing one after another.",
+   "ko": "지방 경제를 취재하던 태윤은 제조업 공장이 줄줄이 문을 닫는 걸 봤어요.",
+   "blank": "제조업",
+   "src": "made"
+  },
+  {
+   "text": "투자자는 유나에게 제조업 공장에도 이 프로그램을 팔 수 있냐고 물었어요.",
+   "en": "An investor asked Yuna whether she could sell this program to manufacturing plants too.",
+   "ko": "투자자는 유나에게 제조업 공장에도 이 프로그램을 팔 수 있냐고 물었어요.",
+   "blank": "제조업",
+   "src": "made"
+  }
+ ],
  "w|제품": [
   {
    "text": "피부 타입에 맞는 제품을 골랐어.",
@@ -61286,6 +61766,22 @@
    "en": "Let's add a little more salt.",
    "ko": "소금은 조금 더 넣자.",
    "blank": "조금"
+  }
+ ],
+ "w|조금도": [
+  {
+   "text": "태윤은 기사 내용에 조금도 거짓이 없다고 말했어요.",
+   "en": "Taeyun said there wasn't the slightest falsehood in his article.",
+   "ko": "태윤은 기사 내용에 조금도 거짓이 없다고 말했어요.",
+   "blank": "조금도",
+   "src": "made"
+  },
+  {
+   "text": "유나는 실패할 거라는 말에도 조금도 흔들리지 않았어요.",
+   "en": "Yuna wasn't shaken in the slightest by people saying she would fail.",
+   "ko": "유나는 실패할 거라는 말에도 조금도 흔들리지 않았어요.",
+   "blank": "조금도",
+   "src": "made"
   }
  ],
  "w|조금씩": [
@@ -62636,6 +63132,22 @@
    "blank": "주차장이"
   }
  ],
+ "w|주차하다": [
+  {
+   "text": "방송국 차가 들어갈 곳이 없어서 태윤은 골목에 겨우 주차했어요.",
+   "en": "There was nowhere for the station car to go, so Taeyun barely managed to park in an alley.",
+   "ko": "방송국 차가 들어갈 곳이 없어서 태윤은 골목에 겨우 주차했어요.",
+   "blank": "주차했어요",
+   "src": "made"
+  },
+  {
+   "text": "사무실 건물에 자리가 없어서 유나는 근처 공영 주차장에 주차했어요.",
+   "en": "There were no spots at the office building, so Yuna parked in a nearby public lot.",
+   "ko": "사무실 건물에 자리가 없어서 유나는 근처 공영 주차장에 주차했어요.",
+   "blank": "주차했어요",
+   "src": "made"
+  }
+ ],
  "w|주치의": [
   {
    "text": "할머니의 주치의도 결혼식에 와서 축하해 주셨어요.",
@@ -63681,6 +64193,22 @@
    "en": "Jiyoung said local leaders should listen more to farmers' voices.",
    "ko": "지영은 지역 지도층이 농민의 목소리를 더 들어야 한다고 말했어요.",
    "blank": "지도층이",
+   "src": "made"
+  }
+ ],
+ "w|지도하다": [
+  {
+   "text": "태윤은 신입 기자들이 기사 쓰는 법을 익히도록 직접 지도했어요.",
+   "en": "Taeyun personally guided the new reporters so they could learn how to write articles.",
+   "ko": "태윤은 신입 기자들이 기사 쓰는 법을 익히도록 직접 지도했어요.",
+   "blank": "지도했어요",
+   "src": "made"
+  },
+  {
+   "text": "유나는 인턴들이 코드를 직접 짜 보도록 한 달 동안 지도했어요.",
+   "en": "Yuna mentored the interns for a month so they could write code themselves.",
+   "ko": "유나는 인턴들이 코드를 직접 짜 보도록 한 달 동안 지도했어요.",
+   "blank": "지도했어요",
    "src": "made"
   }
  ],
@@ -68092,6 +68620,22 @@
    "en": "I saved the trip as photo memories.",
    "ko": "여행 추억 사진으로 남겨 뒀어.",
    "blank": "추억"
+  }
+ ],
+ "w|추억하다": [
+  {
+   "text": "태윤은 동료들과 함께 밤새 마감하던 시절을 추억하며 웃었어요.",
+   "en": "Taeyun laughed with his colleagues, reminiscing about the days of working all night to meet deadlines.",
+   "ko": "태윤은 동료들과 함께 밤새 마감하던 시절을 추억하며 웃었어요.",
+   "blank": "추억하며",
+   "src": "made"
+  },
+  {
+   "text": "유나와 동료들은 첫 출시 날 다 같이 먹은 라면을 아직도 추억해요.",
+   "en": "Yuna and her colleagues still fondly remember the ramen they all ate together on launch day.",
+   "ko": "유나와 동료들은 첫 출시 날 다 같이 먹은 라면을 아직도 추억해요.",
+   "blank": "추억해요",
+   "src": "made"
   }
  ],
  "w|추잡하다": [
@@ -73462,6 +74006,22 @@
    "blank": "프라이팬에"
   }
  ],
+ "w|프로그래머": [
+  {
+   "text": "보도국 홈페이지가 멈추자 태윤은 사내 프로그래머에게 급히 전화했어요.",
+   "en": "When the newsroom website froze, Taeyun urgently called the in-house programmer.",
+   "ko": "보도국 홈페이지가 멈추자 태윤은 사내 프로그래머에게 급히 전화했어요.",
+   "blank": "프로그래머에게",
+   "src": "made"
+  },
+  {
+   "text": "유나는 경력 있는 프로그래머를 뽑으려고 면접을 열 번도 넘게 봤어요.",
+   "en": "Yuna held more than ten interviews to hire an experienced programmer.",
+   "ko": "유나는 경력 있는 프로그래머를 뽑으려고 면접을 열 번도 넘게 봤어요.",
+   "blank": "프로그래머를",
+   "src": "made"
+  }
+ ],
  "w|프로그램": [
   {
    "text": "그 프로그램을 설치했어.",
@@ -76820,6 +77380,22 @@
    "src": "made"
   }
  ],
+ "w|홍보팀": [
+  {
+   "text": "기업 홍보팀이 기사를 빼 달라고 전화했지만 태윤은 거절했어요.",
+   "en": "A company's PR team called asking him to pull the article, but Taeyun refused.",
+   "ko": "기업 홍보팀이 기사를 빼 달라고 전화했지만 태윤은 거절했어요.",
+   "blank": "홍보팀이",
+   "src": "made"
+  },
+  {
+   "text": "회사가 커지면서 유나는 홍보팀을 따로 만들었어요.",
+   "en": "As the company grew, Yuna set up a separate PR team.",
+   "ko": "회사가 커지면서 유나는 홍보팀을 따로 만들었어요.",
+   "blank": "홍보팀을",
+   "src": "made"
+  }
+ ],
  "w|홍수": [
   {
    "text": "폭우로 마을에 홍수가 났어.",
@@ -77466,6 +78042,22 @@
    "src": "made"
   }
  ],
+ "w|회계사": [
+  {
+   "text": "회사 장부가 이상하다는 걸 처음 알아챈 사람은 외부 회계사였대요.",
+   "en": "The first person to notice something odd in the company's books was an outside accountant.",
+   "ko": "회사 장부가 이상하다는 걸 처음 알아챈 사람은 외부 회계사였대요.",
+   "blank": "회계사였대요",
+   "src": "made"
+  },
+  {
+   "text": "투자를 받기 전에 유나는 회계사와 재무 자료를 꼼꼼히 맞춰 봤어요.",
+   "en": "Before taking investment, Yuna carefully went over the financial data with an accountant.",
+   "ko": "투자를 받기 전에 유나는 회계사와 재무 자료를 꼼꼼히 맞춰 봤어요.",
+   "blank": "회계사와",
+   "src": "made"
+  }
+ ],
  "w|회관": [
   {
    "text": "모임은 마을 회관에서 열려.",
@@ -77522,6 +78114,22 @@
    "en": "The office workers had dinner together.",
    "ko": "회사원들끼리 저녁을 먹었어.",
    "blank": "회사원끼리"
+  }
+ ],
+ "w|회상하다": [
+  {
+   "text": "은퇴하는 선배는 처음 특종을 잡던 날을 회상했어요.",
+   "en": "The retiring senior reporter looked back on the day he landed his first scoop.",
+   "ko": "은퇴하는 선배는 처음 특종을 잡던 날을 회상했어요.",
+   "blank": "회상했어요",
+   "src": "made"
+  },
+  {
+   "text": "유나는 인터뷰에서 작은 원룸에서 창업하던 날을 회상했어요.",
+   "en": "In an interview, Yuna looked back on the day she started the company in a small studio.",
+   "ko": "유나는 인터뷰에서 작은 원룸에서 창업하던 날을 회상했어요.",
+   "blank": "회상했어요",
+   "src": "made"
   }
  ],
  "w|회식": [
@@ -77910,6 +78518,22 @@
    "blank": "훈련이"
   }
  ],
+ "w|훈련하다": [
+  {
+   "text": "태윤은 재난 현장에 대비해 안전 장비 쓰는 법을 미리 훈련했어요.",
+   "en": "Taeyun trained in advance on how to use safety gear in preparation for disaster sites.",
+   "ko": "태윤은 재난 현장에 대비해 안전 장비 쓰는 법을 미리 훈련했어요.",
+   "blank": "훈련했어요",
+   "src": "made"
+  },
+  {
+   "text": "유나는 고객 응대 챗봇을 실제 상담 기록으로 훈련했어요.",
+   "en": "Yuna trained the customer service chatbot on real support records.",
+   "ko": "유나는 고객 응대 챗봇을 실제 상담 기록으로 훈련했어요.",
+   "blank": "훈련했어요",
+   "src": "made"
+  }
+ ],
  "w|훈장": [
   {
    "text": "역사 시간에 현우는 독립운동가가 받은 훈장 사진을 봤어요.",
@@ -78068,6 +78692,22 @@
    "en": "I started again after enough rest.",
    "ko": "충분한 휴식 후에 다시 시작했어.",
    "blank": "휴식"
+  }
+ ],
+ "w|휴식하다": [
+  {
+   "text": "태윤은 큰 선거가 끝나고 나서야 겨우 이틀 휴식했어요.",
+   "en": "Only after the big election was over did Taeyun finally rest for two days.",
+   "ko": "태윤은 큰 선거가 끝나고 나서야 겨우 이틀 휴식했어요.",
+   "blank": "휴식했어요",
+   "src": "made"
+  },
+  {
+   "text": "유나는 직원들이 오후에 잠깐 휴식할 수 있도록 회사에 안마 의자를 들였어요.",
+   "en": "Yuna brought a massage chair into the office so staff could rest briefly in the afternoon.",
+   "ko": "유나는 직원들이 오후에 잠깐 휴식할 수 있도록 회사에 안마 의자를 들였어요.",
+   "blank": "휴식할",
+   "src": "made"
   }
  ],
  "w|휴일": [
