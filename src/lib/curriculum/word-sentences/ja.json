@@ -43329,6 +43329,22 @@
    "blank": "定義"
   }
  ],
+ "w|定額": [
+  {
+   "text": "健太の店は、定額で食べ放題のランチを始めた。",
+   "en": "Kenta's restaurant started an all-you-can-eat lunch for a fixed price.",
+   "ko": "겐타의 가게는 정액으로 무한 리필 점심을 시작했어요.",
+   "blank": "定額",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、空港の駐車場の定額プランを使った。",
+   "en": "Misaki used the flat-rate plan at the airport parking lot.",
+   "ko": "미사키는 공항 주차장 정액 요금제를 이용했어요.",
+   "blank": "定額",
+   "src": "made"
+  }
+ ],
  "w|定食": [
   {
    "text": "この店の一番人気は、日替わりの焼き魚定食だ。",
@@ -43804,6 +43820,22 @@
    "en": "Yoko did vocal warm-ups in her hotel room during a concert tour.",
    "ko": "요코는 연주 여행 때 묵은 호텔 객실에서 발성 연습을 했어요.",
    "blank": "客室",
+   "src": "made"
+  }
+ ],
+ "w|客席": [
+  {
+   "text": "健太は、厨房から客席の様子をそっとのぞいた。",
+   "en": "From the kitchen, Kenta quietly peeked out at the dining area.",
+   "ko": "겐타는 주방에서 객석 분위기를 살짝 엿봤어요.",
+   "blank": "客席",
+   "src": "made"
+  },
+  {
+   "text": "美咲の乗った飛行機の客席は、ほとんど埋まっていた。",
+   "en": "The seats on Misaki's plane were almost all taken.",
+   "ko": "미사키가 탄 비행기 객석은 거의 다 차 있었어요.",
+   "blank": "客席",
    "src": "made"
   }
  ],
@@ -44433,6 +44465,22 @@
    "blank": "寒い"
   }
  ],
+ "w|寛容": [
+  {
+   "text": "皿を割った新人に、健太は寛容な態度で接した。",
+   "en": "Kenta was forgiving toward the new hire who broke a plate.",
+   "ko": "접시를 깬 신입에게 겐타는 너그러운 태도로 대했어요.",
+   "blank": "寛容",
+   "src": "made"
+  },
+  {
+   "text": "地上係員の美咲は、遅れて来た乗客にも寛容に接した。",
+   "en": "Misaki, a ground staff member, was understanding even toward passengers who arrived late.",
+   "ko": "지상 직원인 미사키는 늦게 온 승객에게도 너그럽게 대했어요.",
+   "blank": "寛容",
+   "src": "made"
+  }
+ ],
  "w|寝かす": [
   {
    "text": "健太は、売れ残った在庫をしばらく倉庫に寝かしておいた。",
@@ -44586,6 +44634,22 @@
    "en": "Keiko paints when she gets tired of dealing with people.",
    "ko": "게이코는 대인 관계에 지칠 때 그림을 그려요.",
    "blank": "対人",
+   "src": "made"
+  }
+ ],
+ "w|対価": [
+  {
+   "text": "料理人の仕事には見合う対価を払うべきだと、健太は店長に言った。",
+   "en": "Kenta told the manager that cooks should be paid fairly for their work.",
+   "ko": "요리사의 일에는 그에 맞는 대가를 줘야 한다고 겐타는 점장에게 말했어요.",
+   "blank": "対価",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、残業の対価として休みを一日もらった。",
+   "en": "Misaki got a day off as compensation for her overtime.",
+   "ko": "미사키는 야근의 대가로 하루 휴가를 받았어요.",
+   "blank": "対価",
    "src": "made"
   }
  ],
@@ -45390,6 +45454,38 @@
    "en": "Yoko's flute has a clear sound like a little bird's chirping.",
    "ko": "요코의 플루트는 작은 새가 지저귀는 듯한 맑은 소리가 나요.",
    "blank": "小鳥",
+   "src": "made"
+  }
+ ],
+ "w|小麦": [
+  {
+   "text": "健太は、国産の小麦で作ったパスタにこだわっている。",
+   "en": "Kenta insists on pasta made from domestically grown wheat.",
+   "ko": "겐타는 국산 밀로 만든 파스타를 고집해요.",
+   "blank": "小麦",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、小麦アレルギーの乗客のために特別な機内食を手配した。",
+   "en": "Misaki arranged a special in-flight meal for a passenger with a wheat allergy.",
+   "ko": "미사키는 밀 알레르기가 있는 승객을 위해 특별 기내식을 준비했어요.",
+   "blank": "小麦",
+   "src": "made"
+  }
+ ],
+ "w|小麦粉": [
+  {
+   "text": "健太は、天ぷらの衣のために小麦粉を冷水で溶いた。",
+   "en": "Kenta mixed flour with cold water for the tempura batter.",
+   "ko": "겐타는 튀김옷을 만들려고 밀가루를 찬물에 풀었어요.",
+   "blank": "小麦粉",
+   "src": "made"
+  },
+  {
+   "text": "空港で売っているせんべいは小麦粉でできていると、美咲は客に説明した。",
+   "en": "Misaki explained to a customer that the crackers sold at the airport are made from wheat flour.",
+   "ko": "공항에서 파는 센베이는 밀가루로 만들었다고 미사키는 손님에게 설명했어요.",
+   "blank": "小麦粉",
    "src": "made"
   }
  ],
@@ -47613,6 +47709,22 @@
    "src": "made"
   }
  ],
+ "w|幼なじみ": [
+  {
+   "text": "健太の店でパンを焼いているのは、幼なじみの翔太だ。",
+   "en": "The one baking bread at Kenta's restaurant is his childhood friend Shota.",
+   "ko": "겐타네 가게에서 빵을 굽는 사람은 소꿉친구 쇼타예요.",
+   "blank": "幼なじみ",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、空港で偶然幼なじみに再会した。",
+   "en": "Misaki happened to run into her childhood friend at the airport.",
+   "ko": "미사키는 공항에서 우연히 소꿉친구를 다시 만났어요.",
+   "blank": "幼なじみ",
+   "src": "made"
+  }
+ ],
  "w|幼児": [
   {
    "text": "会場には、ベビーカーに乗った幼児を連れた家族もいた。",
@@ -48687,6 +48799,22 @@
    "en": "You've got a strong will.",
    "ko": "기가 세네.",
    "blank": "強い"
+  }
+ ],
+ "w|強み": [
+  {
+   "text": "健太の店の強みは、手作りのソースだ。",
+   "en": "The strength of Kenta's restaurant is its homemade sauce.",
+   "ko": "겐타네 가게의 강점은 직접 만든 소스예요.",
+   "blank": "強み",
+   "src": "made"
+  },
+  {
+   "text": "いくつもの言葉を話せるのが、美咲の強みだ。",
+   "en": "Being able to speak several languages is Misaki's strength.",
+   "ko": "여러 언어를 할 줄 아는 것이 미사키의 강점이에요.",
+   "blank": "強み",
+   "src": "made"
   }
  ],
  "w|強め": [
@@ -58151,6 +58279,22 @@
    "blank": "政策"
   }
  ],
+ "w|故人": [
+  {
+   "text": "健太は、故人が好きだった料理を法事のために作った。",
+   "en": "Kenta made the deceased's favorite dishes for a memorial service.",
+   "ko": "겐타는 고인이 좋아하던 요리를 제사를 위해 만들었어요.",
+   "blank": "故人",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、故人の遺品を運ぶ家族を丁寧に案内した。",
+   "en": "Misaki courteously guided a family carrying the belongings of their late relative.",
+   "ko": "미사키는 고인의 유품을 옮기는 가족을 정중하게 안내했어요.",
+   "blank": "故人",
+   "src": "made"
+  }
+ ],
  "w|故意": [
   {
    "text": "本を故意に汚した場合は、弁償しなければならない。",
@@ -60657,6 +60801,22 @@
    "src": "made"
   }
  ],
+ "w|明言": [
+  {
+   "text": "健太の店の店長は、今年は値上げをしないと明言した。",
+   "en": "The manager of Kenta's restaurant stated clearly that there would be no price increase this year.",
+   "ko": "겐타네 가게 점장은 올해는 가격을 올리지 않겠다고 분명히 말했어요.",
+   "blank": "明言",
+   "src": "made"
+  },
+  {
+   "text": "航空会社は欠航の理由をまだ明言していないと、美咲は乗客に伝えた。",
+   "en": "Misaki told passengers that the airline hadn't yet clearly stated the reason for the cancellation.",
+   "ko": "항공사가 결항 이유를 아직 밝히지 않았다고 미사키는 승객들에게 전했어요.",
+   "blank": "明言",
+   "src": "made"
+  }
+ ],
  "w|明記": [
   {
    "text": "看板には、工事の期間と連絡先が明記されている。",
@@ -61831,6 +61991,22 @@
    "en": "I updated it.",
    "ko": "갱신했어.",
    "blank": "更新"
+  }
+ ],
+ "w|書き下ろし": [
+  {
+   "text": "健太は、料理雑誌に書き下ろしのレシピを載せた。",
+   "en": "Kenta published an original recipe written specially for a cooking magazine.",
+   "ko": "겐타는 요리 잡지에 새로 쓴 레시피를 실었어요.",
+   "blank": "書き下ろし",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、空港の書店で人気作家の書き下ろしの小説を買った。",
+   "en": "At the airport bookstore, Misaki bought a newly written novel by a popular author.",
+   "ko": "미사키는 공항 서점에서 인기 작가의 신작 소설을 샀어요.",
+   "blank": "書き下ろし",
+   "src": "made"
   }
  ],
  "w|書き方": [
@@ -66745,6 +66921,22 @@
    "src": "made"
   }
  ],
+ "w|母ちゃん": [
+  {
+   "text": "「母ちゃんの味を再現したい」と健太は言った。",
+   "en": "\"I want to recreate my mom's cooking,\" Kenta said.",
+   "ko": "\"엄마 손맛을 재현하고 싶어\"라고 겐타는 말했어요.",
+   "blank": "母ちゃん",
+   "src": "made"
+  },
+  {
+   "text": "「母ちゃん、着いたよ」と電話する少年を、美咲はほほえましく見ていた。",
+   "en": "Misaki smiled as she watched a boy call his mom and say, \"Mom, I'm here.\"",
+   "ko": "\"엄마, 도착했어\"라고 전화하는 소년을 미사키는 흐뭇하게 바라봤어요.",
+   "blank": "母ちゃん",
+   "src": "made"
+  }
+ ],
  "w|母乳": [
   {
    "text": "育休から戻った先輩は、母乳を冷凍して保育園に預けていると話した。",
@@ -70791,6 +70983,22 @@
    "en": "I'm still getting ready.",
    "ko": "아직 준비 중이야.",
    "blank": "準備"
+  }
+ ],
+ "w|準拠": [
+  {
+   "text": "健太の店の厨房は、衛生の基準に準拠して作られている。",
+   "en": "The kitchen of Kenta's restaurant is built in compliance with hygiene standards.",
+   "ko": "겐타네 가게 주방은 위생 기준에 맞춰 만들어졌어요.",
+   "blank": "準拠",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、国際ルールに準拠した手荷物の大きさを乗客に説明した。",
+   "en": "Misaki explained to passengers the carry-on size that complies with international rules.",
+   "ko": "미사키는 국제 규정에 맞는 기내 수하물 크기를 승객에게 설명했어요.",
+   "blank": "準拠",
+   "src": "made"
   }
  ],
  "w|準決勝": [
@@ -78359,6 +78567,22 @@
    "blank": "真実"
   }
  ],
+ "w|真珠": [
+  {
+   "text": "健太は、真珠のように光るいくらを寿司にのせた。",
+   "en": "Kenta put salmon roe that glistened like pearls on the sushi.",
+   "ko": "겐타는 진주처럼 반짝이는 연어알을 초밥 위에 올렸어요.",
+   "blank": "真珠",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、免税店で真珠のネックレスを眺めた。",
+   "en": "Misaki looked at a pearl necklace in the duty-free shop.",
+   "ko": "미사키는 면세점에서 진주 목걸이를 구경했어요.",
+   "blank": "真珠",
+   "src": "made"
+  }
+ ],
  "w|真理": [
   {
    "text": "「現場にこそ答えがある」というのが、亮の上司の口癖だ。それは一つの真理だと亮は思う。",
@@ -81961,6 +82185,22 @@
    "blank": "米"
   }
  ],
+ "w|粉末": [
+  {
+   "text": "健太は、だしの粉末を使わず、昆布と鰹節からだしを取る。",
+   "en": "Kenta doesn't use powdered stock; he makes broth from kelp and bonito flakes.",
+   "ko": "겐타는 가루 육수를 쓰지 않고 다시마와 가쓰오부시로 육수를 내요.",
+   "blank": "粉末",
+   "src": "made"
+  },
+  {
+   "text": "粉末の調味料を機内に持ち込めるかと、美咲は乗客に聞かれた。",
+   "en": "A passenger asked Misaki whether powdered seasoning could be brought on the plane.",
+   "ko": "가루 조미료를 기내에 가지고 탈 수 있냐고 미사키는 승객에게 질문을 받았어요.",
+   "blank": "粉末",
+   "src": "made"
+  }
+ ],
  "w|粉砕": [
   {
    "text": "大輔は、集めた貝殻を粉砕して庭にまいた。",
@@ -84668,6 +84908,22 @@
    "en": "The day after finishing the race, Mayu's muscles ached so much that going downstairs was hard.",
    "ko": "완주한 다음 날 마유는 근육통 때문에 계단을 내려가기가 힘들었어요.",
    "blank": "翌日",
+   "src": "made"
+  }
+ ],
+ "w|翌朝": [
+  {
+   "text": "健太は、仕込んだスープを翌朝まで寝かせた。",
+   "en": "Kenta let the soup he had prepared rest until the next morning.",
+   "ko": "겐타는 준비해 둔 수프를 다음 날 아침까지 숙성시켰어요.",
+   "blank": "翌朝",
+   "src": "made"
+  },
+  {
+   "text": "欠航のため、美咲は乗客を翌朝の便に振り替えた。",
+   "en": "Because of the cancellation, Misaki rebooked passengers onto the next morning's flight.",
+   "ko": "결항 때문에 미사키는 승객들을 다음 날 아침 비행기로 바꿔 줬어요.",
+   "blank": "翌朝",
    "src": "made"
   }
  ],
@@ -94885,6 +95141,22 @@
    "src": "made"
   }
  ],
+ "w|赴任": [
+  {
+   "text": "健太は、海外の支店に料理長として赴任することになった。",
+   "en": "Kenta is going to be posted overseas as head chef of a branch restaurant.",
+   "ko": "겐타는 해외 지점에 주방장으로 부임하게 됐어요.",
+   "blank": "赴任",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、海外に赴任する夫を空港で見送った。",
+   "en": "Misaki saw her husband off at the airport as he left for an overseas posting.",
+   "ko": "미사키는 해외로 부임하는 남편을 공항에서 배웅했어요.",
+   "blank": "赴任",
+   "src": "made"
+  }
+ ],
  "w|起きる": [
   {
    "text": "もう起きた？",
@@ -95384,6 +95656,22 @@
    "en": "The order form had a delivery option for people with physical disabilities.",
    "ko": "주문서에는 몸이 불편한 사람을 위한 배송 옵션이 있었어요.",
    "blank": "身体",
+   "src": "made"
+  }
+ ],
+ "w|身元": [
+  {
+   "text": "健太の店では、新しく雇う人の身元をきちんと確認する。",
+   "en": "Kenta's restaurant carefully checks the identity of new hires.",
+   "ko": "겐타네 가게에서는 새로 고용하는 사람의 신원을 꼼꼼히 확인해요.",
+   "blank": "身元",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、落とし物の持ち主の身元を確かめてから荷物を渡した。",
+   "en": "Misaki confirmed the identity of the owner of the lost item before handing it over.",
+   "ko": "미사키는 분실물 주인의 신원을 확인한 뒤에 짐을 건넸어요.",
+   "blank": "身元",
    "src": "made"
   }
  ],
@@ -100015,6 +100303,22 @@
    "blank": "部隊"
   }
  ],
+ "w|部類": [
+  {
+   "text": "健太の店のカレーは、かなり辛い部類に入る。",
+   "en": "The curry at Kenta's restaurant is on the quite spicy side.",
+   "ko": "겐타네 가게 카레는 꽤 매운 편에 속해요.",
+   "blank": "部類",
+   "src": "made"
+  },
+  {
+   "text": "美咲の働く空港は、国内では小さい部類に入る。",
+   "en": "The airport where Misaki works is one of the smaller ones in the country.",
+   "ko": "미사키가 일하는 공항은 국내에서는 작은 편에 속해요.",
+   "blank": "部類",
+   "src": "made"
+  }
+ ],
  "w|郵便": [
   {
    "text": "空港の中にも郵便ポストがあって、大輔は絵はがきを出した。",
@@ -100824,6 +101128,22 @@
    "en": "The company's summer event was an outdoor barbecue.",
    "ko": "회사 여름 행사는 야외 바비큐였어요.",
    "blank": "野外",
+   "src": "made"
+  }
+ ],
+ "w|野望": [
+  {
+   "text": "自分の店を持つという野望を、健太は胸に秘めている。",
+   "en": "Kenta secretly harbors the ambition of owning his own restaurant.",
+   "ko": "자기 가게를 갖겠다는 야망을 겐타는 가슴속에 품고 있어요.",
+   "blank": "野望",
+   "src": "made"
+  },
+  {
+   "text": "いつかパイロットになるという野望を、美咲は捨てていない。",
+   "en": "Misaki hasn't given up her ambition to become a pilot someday.",
+   "ko": "언젠가 파일럿이 되겠다는 야망을 미사키는 버리지 않았어요.",
+   "blank": "野望",
    "src": "made"
   }
  ],
