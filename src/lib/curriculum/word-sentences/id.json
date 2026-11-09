@@ -951,6 +951,22 @@
    "blank": "aneh"
   }
  ],
+ "w|anggaran": [
+  {
+   "text": "Tahun ini anggaran ruang redaksi dipotong, jadi Budi jarang liputan ke luar kota.",
+   "en": "This year the newsroom's budget was cut, so Budi rarely covers stories out of town.",
+   "ko": "올해 편집국 예산이 깎여서 부디는 지방 취재를 거의 못 가요.",
+   "blank": "anggaran",
+   "src": "made"
+  },
+  {
+   "text": "Siti harus pintar membagi anggaran untuk buku baru dan perbaikan atap.",
+   "en": "Siti has to split the budget wisely between new books and roof repairs.",
+   "ko": "시티는 새 책과 지붕 수리에 예산을 잘 나눠야 해요.",
+   "blank": "anggaran",
+   "src": "made"
+  }
+ ],
  "w|anggota": [
   {
    "text": "Anggota baru sudah diperkenalkan.",
@@ -2859,6 +2875,22 @@
    "blank": "bawah"
   }
  ],
+ "w|bawahan": [
+  {
+   "text": "Pemimpin redaksi itu dikenal adil kepada semua bawahan.",
+   "en": "The editor-in-chief is known for being fair to all his subordinates.",
+   "ko": "그 편집장은 부하 직원 모두에게 공정하기로 유명해요.",
+   "blank": "bawahan",
+   "src": "made"
+  },
+  {
+   "text": "Siti kini punya dua bawahan yang mengurus bagian buku digital.",
+   "en": "Siti now has two subordinates who handle the digital books section.",
+   "ko": "시티는 이제 전자책 부서를 맡은 부하 직원이 둘 있어요.",
+   "blank": "bawahan",
+   "src": "made"
+  }
+ ],
  "w|bawang": [
   {
    "text": "Fajar menggoreng bawang merah untuk taburan roti abon.",
@@ -4120,6 +4152,22 @@
    "en": "Ayu is learning to make peace with small mistakes in her paintings.",
    "ko": "아유는 그림 속 작은 실수를 받아들이는 법을 배우고 있어요.",
    "blank": "berdamai",
+   "src": "made"
+  }
+ ],
+ "w|berdandan": [
+  {
+   "text": "Sebelum tampil di siaran langsung, Budi berdandan sebentar di toilet kantor.",
+   "en": "Before appearing on the live broadcast, Budi quickly groomed himself in the office restroom.",
+   "ko": "생방송에 나가기 전 부디는 사무실 화장실에서 잠깐 몸단장을 했어요.",
+   "blank": "berdandan",
+   "src": "made"
+  },
+  {
+   "text": "Siti tidak sempat berdandan karena harus membuka perpustakaan pagi-pagi.",
+   "en": "Siti didn't have time to get dressed up because she had to open the library early.",
+   "ko": "시티는 아침 일찍 도서관을 열어야 해서 꾸밀 시간이 없었어요.",
+   "blank": "berdandan",
    "src": "made"
   }
  ],
@@ -10109,6 +10157,22 @@
    "src": "made"
   }
  ],
+ "w|dinas": [
+  {
+   "text": "Budi menelepon dinas kesehatan untuk memastikan jumlah pasien demam berdarah.",
+   "en": "Budi called the health department to confirm the number of dengue patients.",
+   "ko": "부디는 뎅기열 환자 수를 확인하려고 보건소에 전화했어요.",
+   "blank": "dinas",
+   "src": "made"
+  },
+  {
+   "text": "Perpustakaan itu berada di bawah dinas pendidikan kota.",
+   "en": "The library is under the city's education office.",
+   "ko": "그 도서관은 시 교육청 소관이에요.",
+   "blank": "dinas",
+   "src": "made"
+  }
+ ],
  "w|dinasti": [
   {
    "text": "Dimas membuat garis waktu dinasti kerajaan Tiongkok untuk tugas sejarah.",
@@ -12909,6 +12973,22 @@
    "blank": "Harapan"
   }
  ],
+ "w|harfiah": [
+  {
+   "text": "Redaktur menegur Budi karena menerjemahkan pernyataan menteri terlalu harfiah.",
+   "en": "The editor scolded Budi for translating the minister's statement too literally.",
+   "ko": "편집자는 장관의 발언을 너무 직역했다고 부디를 나무랐어요.",
+   "blank": "harfiah",
+   "src": "made"
+  },
+  {
+   "text": "Siti menjelaskan arti harfiah nama kota itu kepada rombongan pelajar.",
+   "en": "Siti explained the literal meaning of the city's name to a group of students.",
+   "ko": "시티는 학생 단체에게 그 도시 이름의 글자 그대로의 뜻을 설명했어요.",
+   "blank": "harfiah",
+   "src": "made"
+  }
+ ],
  "w|harga": [
   {
    "text": "Harga tiket mahal sekali.",
@@ -15328,6 +15408,22 @@
    "en": "To haggle over the moving fee, Siti pulled out her trusty trick.",
    "ko": "시티는 운반비를 깎으려고 비장의 수를 꺼냈어요.",
    "blank": "jurus",
+   "src": "made"
+  }
+ ],
+ "w|jurusan": [
+  {
+   "text": "Di kampus dulu, Budi mengambil jurusan sastra, bukan jurnalistik.",
+   "en": "At university, Budi majored in literature, not journalism.",
+   "ko": "부디는 대학에서 언론학이 아니라 문학을 전공했어요.",
+   "blank": "jurusan",
+   "src": "made"
+  },
+  {
+   "text": "Mahasiswa jurusan sejarah sering datang ke perpustakaan untuk membaca arsip.",
+   "en": "History majors often come to the library to read the archives.",
+   "ko": "사학과 학생들이 자료를 보러 도서관에 자주 와요.",
+   "blank": "jurusan",
    "src": "made"
   }
  ],
@@ -20387,6 +20483,22 @@
    "src": "made"
   }
  ],
+ "w|konsultan": [
+  {
+   "text": "Perusahaan media itu menyewa konsultan untuk merancang ulang situs berita.",
+   "en": "The media company hired a consultant to redesign the news website.",
+   "ko": "그 언론사는 뉴스 사이트를 새로 설계하려고 컨설턴트를 고용했어요.",
+   "blank": "konsultan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang konsultan arsitektur memeriksa gedung perpustakaan yang retak.",
+   "en": "An architectural consultant inspected the cracked library building.",
+   "ko": "건축 컨설턴트가 금이 간 도서관 건물을 점검했어요.",
+   "blank": "konsultan",
+   "src": "made"
+  }
+ ],
  "w|kontak": [
   {
    "text": "Simpan nomor kontak saya.",
@@ -21129,6 +21241,22 @@
    "en": "The chair in the corner is broken.",
    "ko": "구석 의자가 이미 고장 났어.",
    "blank": "Kursi"
+  }
+ ],
+ "w|kursus": [
+  {
+   "text": "Tiap Sabtu, Budi ikut kursus fotografi supaya fotonya lebih tajam.",
+   "en": "Every Saturday, Budi takes a photography course so his photos come out sharper.",
+   "ko": "부디는 사진을 더 선명하게 찍으려고 토요일마다 사진 강좌를 들어요.",
+   "blank": "kursus",
+   "src": "made"
+  },
+  {
+   "text": "Perpustakaan menawarkan kursus bahasa Inggris gratis untuk lansia.",
+   "en": "The library offers a free English course for seniors.",
+   "ko": "도서관은 어르신을 위한 무료 영어 강좌를 열어요.",
+   "blank": "kursus",
+   "src": "made"
   }
  ],
  "w|kurungan": [
@@ -22075,6 +22203,38 @@
    "blank": "lembah"
   }
  ],
+ "w|lembar": [
+  {
+   "text": "Budi mencetak tiga lembar jadwal sidang dan menempelkannya di dinding.",
+   "en": "Budi printed three sheets of the hearing schedule and stuck them on the wall.",
+   "ko": "부디는 재판 일정을 세 장 출력해서 벽에 붙였어요.",
+   "blank": "lembar",
+   "src": "made"
+  },
+  {
+   "text": "Siti menemukan dua lembar foto tua terselip di dalam buku atlas.",
+   "en": "Siti found two old photos tucked inside an atlas.",
+   "ko": "시티는 지도책 속에 끼어 있던 옛날 사진 두 장을 찾았어요.",
+   "blank": "lembar",
+   "src": "made"
+  }
+ ],
+ "w|lembur": [
+  {
+   "text": "Menjelang pemilu, hampir semua wartawan di ruang redaksi kena giliran lembur.",
+   "en": "Ahead of the election, almost every reporter in the newsroom takes an overtime shift.",
+   "ko": "선거를 앞두고 편집국 기자들은 거의 다 야근 차례가 돌아와요.",
+   "blank": "lembur",
+   "src": "made"
+  },
+  {
+   "text": "Saat pameran buku, Siti dapat uang lembur dari perpustakaan.",
+   "en": "During the book fair, Siti gets overtime pay from the library.",
+   "ko": "도서전 기간에 시티는 도서관에서 초과 근무 수당을 받아요.",
+   "blank": "lembur",
+   "src": "made"
+  }
+ ],
  "w|lembut": [
   {
    "text": "Kain ini terasa sangat lembut.",
@@ -22419,6 +22579,22 @@
    "blank": "listrik"
   }
  ],
+ "w|lobi": [
+  {
+   "text": "Seorang tamu menunggu Budi di lobi kantor sejak pukul tujuh.",
+   "en": "A visitor has been waiting for Budi in the office lobby since seven o'clock.",
+   "ko": "손님 한 명이 일곱 시부터 사무실 로비에서 부디를 기다리고 있어요.",
+   "blank": "lobi",
+   "src": "made"
+  },
+  {
+   "text": "Di lobi perpustakaan ada papan pengumuman untuk lomba menulis.",
+   "en": "In the library lobby there's a notice board for a writing contest.",
+   "ko": "도서관 로비에 글쓰기 대회 게시판이 있어요.",
+   "blank": "lobi",
+   "src": "made"
+  }
+ ],
  "w|logam": [
   {
    "text": "Logam itu meleleh pada suhu tinggi.",
@@ -22661,6 +22837,22 @@
    "en": "Graduating from college is a happy moment.",
    "ko": "대학 졸업은 행복한 순간이야.",
    "blank": "Lulus"
+  }
+ ],
+ "w|lulusan": [
+  {
+   "text": "Ruang redaksi itu menerima dua lulusan jurnalistik sebagai wartawan magang.",
+   "en": "The newsroom took on two journalism graduates as intern reporters.",
+   "ko": "편집국은 언론학과 졸업생 둘을 수습기자로 받았어요.",
+   "blank": "lulusan",
+   "src": "made"
+  },
+  {
+   "text": "Perpustakaan itu membuka lowongan untuk lulusan ilmu perpustakaan.",
+   "en": "The library has an opening for library science graduates.",
+   "ko": "그 도서관은 문헌정보학 졸업생을 뽑고 있어요.",
+   "blank": "lulusan",
+   "src": "made"
   }
  ],
  "w|lumayan": [
@@ -23899,6 +24091,22 @@
    "en": "Put the book on the table.",
    "ko": "책을 탁자 위에 놔.",
    "blank": "meja"
+  }
+ ],
+ "w|mekanik": [
+  {
+   "text": "Budi menulis tentang mekanik bengkel yang memperbaiki ambulans desa secara gratis.",
+   "en": "Budi wrote about a workshop mechanic who repairs the village ambulance for free.",
+   "ko": "부디는 마을 구급차를 무료로 고쳐 주는 정비소 정비사에 대해 썼어요.",
+   "blank": "mekanik",
+   "src": "made"
+  },
+  {
+   "text": "Buku panduan mesin motor paling sering dipinjam oleh para mekanik muda.",
+   "en": "Motorbike engine manuals are borrowed most often by young mechanics.",
+   "ko": "오토바이 엔진 안내서는 젊은 정비사들이 가장 자주 빌려 가요.",
+   "blank": "mekanik",
+   "src": "made"
   }
  ],
  "w|melacak": [
@@ -25512,6 +25720,22 @@
    "en": "The iced tea Putri bought at the station froze because it was kept near the cooler.",
    "ko": "푸트리가 역에서 산 아이스티는 냉방기 옆에 둬서 얼어 버렸어요.",
    "blank": "membeku",
+   "src": "made"
+  }
+ ],
+ "w|membekukan": [
+  {
+   "text": "Bank sentral membekukan rekening perusahaan itu, dan Budi segera menulis beritanya.",
+   "en": "The central bank froze the company's accounts, and Budi quickly wrote the story.",
+   "ko": "중앙은행이 그 회사 계좌를 동결하자 부디는 곧바로 기사를 썼어요.",
+   "blank": "membekukan",
+   "src": "made"
+  },
+  {
+   "text": "Perpustakaan membekukan kartu anggota yang belum mengembalikan buku setahun.",
+   "en": "The library freezes the membership cards of people who haven't returned books for a year.",
+   "ko": "도서관은 일 년 동안 책을 반납하지 않은 회원의 카드를 정지해요.",
+   "blank": "membekukan",
    "src": "made"
   }
  ],
@@ -27149,6 +27373,22 @@
    "src": "made"
   }
  ],
+ "w|memprogram": [
+  {
+   "text": "Tim teknis memprogram situs berita agar judul utama berganti setiap jam.",
+   "en": "The tech team programs the news site so the headline changes every hour.",
+   "ko": "기술 팀은 주요 제목이 매시간 바뀌도록 뉴스 사이트를 프로그래밍해요.",
+   "blank": "memprogram",
+   "src": "made"
+  },
+  {
+   "text": "Siti belajar memprogram mesin peminjaman agar buku bisa dipinjam tanpa antre.",
+   "en": "Siti is learning to program the checkout machine so books can be borrowed without queuing.",
+   "ko": "시티는 줄 서지 않고 책을 빌릴 수 있게 대출기 프로그래밍을 배우고 있어요.",
+   "blank": "memprogram",
+   "src": "made"
+  }
+ ],
  "w|mempromosikan": [
   {
    "text": "Restoran meminta seorang penyanyi lokal mempromosikan menu nasi goreng terbaru.",
@@ -28719,6 +28959,22 @@
    "src": "made"
   }
  ],
+ "w|menegakkan": [
+  {
+   "text": "Dalam editorialnya, Budi meminta pemerintah menegakkan aturan soal parkir liar.",
+   "en": "In his editorial, Budi asked the government to enforce the rules on illegal parking.",
+   "ko": "부디는 사설에서 정부에 불법 주차 규정을 제대로 집행하라고 요구했어요.",
+   "blank": "menegakkan",
+   "src": "made"
+  },
+  {
+   "text": "Siti berusaha menegakkan aturan tidak boleh makan di ruang baca.",
+   "en": "Siti tries to enforce the no-eating rule in the reading room.",
+   "ko": "시티는 열람실 음식 금지 규칙을 지키게 하려고 애써요.",
+   "blank": "menegakkan",
+   "src": "made"
+  }
+ ],
  "w|menegaskan": [
   {
    "text": "Kepala koki menegaskan bahwa semua orang wajib memakai penutup rambut.",
@@ -29274,6 +29530,22 @@
    "en": "Siti's manager let her know that the interview schedule was postponed.",
    "ko": "시티의 매니저가 인터뷰 일정이 미뤄졌다고 알려 줬어요.",
    "blank": "mengabari",
+   "src": "made"
+  }
+ ],
+ "w|mengabdi": [
+  {
+   "text": "Budi menulis kisah bidan yang mengabdi di desa terpencil selama puluhan tahun.",
+   "en": "Budi wrote the story of a midwife who has served a remote village for decades.",
+   "ko": "부디는 외딴 마을에서 수십 년간 헌신한 조산사 이야기를 썼어요.",
+   "blank": "mengabdi",
+   "src": "made"
+  },
+  {
+   "text": "Siti sudah mengabdi di perpustakaan itu sejak masih muda.",
+   "en": "Siti has devoted herself to that library since she was young.",
+   "ko": "시티는 젊을 때부터 그 도서관에서 헌신해 왔어요.",
+   "blank": "mengabdi",
    "src": "made"
   }
  ],
@@ -30525,6 +30797,22 @@
    "blank": "mengetuk"
   }
  ],
+ "w|mengevaluasi": [
+  {
+   "text": "Setiap akhir bulan, redaktur mengevaluasi jumlah pembaca setiap artikel Budi.",
+   "en": "At the end of every month, the editor evaluates the readership of each of Budi's articles.",
+   "ko": "매달 말 편집자는 부디의 기사마다 독자 수를 평가해요.",
+   "blank": "mengevaluasi",
+   "src": "made"
+  },
+  {
+   "text": "Kepala perpustakaan mengevaluasi koleksi buku anak setiap enam bulan.",
+   "en": "The head librarian evaluates the children's book collection every six months.",
+   "ko": "도서관장은 육 개월마다 어린이 도서를 평가해요.",
+   "blank": "mengevaluasi",
+   "src": "made"
+  }
+ ],
  "w|menggabungkan": [
   {
    "text": "Dimas berencana menggabungkan kliniknya dengan toko makanan hewan di sebelah.",
@@ -30538,6 +30826,22 @@
    "en": "Putri combined the two solutions in a test tube.",
    "ko": "푸트리는 두 용액을 시험관 안에서 섞었어요.",
    "blank": "menggabungkan",
+   "src": "made"
+  }
+ ],
+ "w|menggagalkan": [
+  {
+   "text": "Polisi berhasil menggagalkan penyelundupan satwa, dan Budi mendapat bahan berita.",
+   "en": "The police managed to foil an animal smuggling attempt, and Budi got material for a story.",
+   "ko": "경찰이 동물 밀수를 막아 내자 부디는 기삿거리를 얻었어요.",
+   "blank": "menggagalkan",
+   "src": "made"
+  },
+  {
+   "text": "Hujan deras hampir menggagalkan acara bedah buku di taman perpustakaan.",
+   "en": "Heavy rain nearly ruined the book discussion event in the library garden.",
+   "ko": "폭우 때문에 도서관 정원의 책 토론회가 하마터면 무산될 뻔했어요.",
+   "blank": "menggagalkan",
    "src": "made"
   }
  ],
@@ -31376,6 +31680,22 @@
    "en": "Rina accidentally stepped on a cable and her colleague's laptop nearly fell.",
    "ko": "리나가 실수로 전선을 밟아서 동료의 노트북이 떨어질 뻔했어요.",
    "blank": "menginjak",
+   "src": "made"
+  }
+ ],
+ "w|menginspirasi": [
+  {
+   "text": "Liputan Budi tentang guru honorer menginspirasi banyak pembaca untuk berdonasi.",
+   "en": "Budi's coverage of contract teachers inspired many readers to donate.",
+   "ko": "비정규직 교사에 관한 부디의 기사는 많은 독자가 기부하도록 영감을 줬어요.",
+   "blank": "menginspirasi",
+   "src": "made"
+  },
+  {
+   "text": "Siti ingin perpustakaan menginspirasi anak-anak untuk menulis cerita sendiri.",
+   "en": "Siti wants the library to inspire children to write their own stories.",
+   "ko": "시티는 도서관이 아이들에게 직접 이야기를 쓰도록 영감을 주길 바라요.",
+   "blank": "menginspirasi",
    "src": "made"
   }
  ],
@@ -32397,6 +32717,22 @@
    "src": "made"
   }
  ],
+ "w|menjabat": [
+  {
+   "text": "Pemimpin redaksi yang sekarang sudah menjabat selama delapan tahun.",
+   "en": "The current editor-in-chief has held the post for eight years.",
+   "ko": "지금 편집장은 팔 년째 그 자리를 맡고 있어요.",
+   "blank": "menjabat",
+   "src": "made"
+  },
+  {
+   "text": "Ayah Siti pernah menjabat sebagai kepala perpustakaan provinsi.",
+   "en": "Siti's father once served as head of the provincial library.",
+   "ko": "시티의 아버지는 한때 주립 도서관장을 지냈어요.",
+   "blank": "menjabat",
+   "src": "made"
+  }
+ ],
  "w|menjadi": [
   {
    "text": "Dia ingin menjadi guru.",
@@ -32423,6 +32759,22 @@
    "en": "Don't turn a small problem into a big one.",
    "ko": "작은 문제를 크게 만들지 마.",
    "blank": "menjadikan"
+  }
+ ],
+ "w|menjadwalkan": [
+  {
+   "text": "Sekretaris redaksi menjadwalkan wawancara Budi dengan gubernur hari Kamis.",
+   "en": "The editorial secretary scheduled Budi's interview with the governor for Thursday.",
+   "ko": "편집국 비서가 부디의 주지사 인터뷰를 목요일로 잡았어요.",
+   "blank": "menjadwalkan",
+   "src": "made"
+  },
+  {
+   "text": "Siti menjadwalkan kelas mendongeng untuk anak-anak setiap Minggu pagi.",
+   "en": "Siti scheduled a storytelling class for children every Sunday morning.",
+   "ko": "시티는 일요일 아침마다 어린이 동화 구연 수업을 잡았어요.",
+   "blank": "menjadwalkan",
+   "src": "made"
   }
  ],
  "w|menjaga": [
@@ -33819,6 +34171,22 @@
    "blank": "Menyerang"
   }
  ],
+ "w|menyerap": [
+  {
+   "text": "Budi menulis bahwa sawah membantu menyerap air hujan dan mencegah banjir.",
+   "en": "Budi wrote that rice fields help absorb rainwater and prevent floods.",
+   "ko": "부디는 논이 빗물을 흡수해 홍수를 막는 데 도움이 된다고 썼어요.",
+   "blank": "menyerap",
+   "src": "made"
+  },
+  {
+   "text": "Siti membuka jendela supaya kertas buku tua tidak menyerap terlalu banyak lembap.",
+   "en": "Siti opens the windows so old book pages don't absorb too much damp.",
+   "ko": "시티는 오래된 책장이 습기를 너무 빨아들이지 않게 창문을 열어요.",
+   "blank": "menyerap",
+   "src": "made"
+  }
+ ],
  "w|menyerbu": [
   {
    "text": "Begitu mendengar teriakan, Ibu langsung menyerbu masuk ke kamar Rina.",
@@ -34053,6 +34421,38 @@
    "en": "He wants to get rid of bad habits.",
    "ko": "그는 나쁜 습관을 없애고 싶어해.",
    "blank": "menyingkirkan"
+  }
+ ],
+ "w|menyisakan": [
+  {
+   "text": "Redaktur memangkas tulisan Budi dan hanya menyisakan tiga paragraf.",
+   "en": "The editor cut Budi's piece down and left only three paragraphs.",
+   "ko": "편집자는 부디의 글을 줄여 세 단락만 남겼어요.",
+   "blank": "menyisakan",
+   "src": "made"
+  },
+  {
+   "text": "Rombongan pelajar itu hanya menyisakan dua buku sejarah di rak.",
+   "en": "The group of students left only two history books on the shelf.",
+   "ko": "학생 단체가 다녀간 뒤 책장에는 역사책이 두 권만 남았어요.",
+   "blank": "menyisakan",
+   "src": "made"
+  }
+ ],
+ "w|menyisir": [
+  {
+   "text": "Budi menyisir rambut dengan jari sebelum masuk ruang rapat.",
+   "en": "Budi combed his hair with his fingers before entering the meeting room.",
+   "ko": "부디는 회의실에 들어가기 전에 손가락으로 머리를 빗었어요.",
+   "blank": "menyisir",
+   "src": "made"
+  },
+  {
+   "text": "Siti menyisir setiap rak untuk mencari kamus yang hilang.",
+   "en": "Siti combed through every shelf looking for the missing dictionary.",
+   "ko": "시티는 없어진 사전을 찾으려고 책장을 샅샅이 뒤졌어요.",
+   "blank": "menyisir",
+   "src": "made"
   }
  ],
  "w|menyita": [
@@ -38865,6 +39265,22 @@
    "blank": "pembuat"
   }
  ],
+ "w|pembuatan": [
+  {
+   "text": "Budi menulis berita tentang pembuatan jalan tol yang terus tertunda.",
+   "en": "Budi wrote about the construction of a toll road that keeps being delayed.",
+   "ko": "부디는 계속 늦어지는 고속도로 건설에 대한 기사를 썼어요.",
+   "blank": "pembuatan",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengajak anak-anak ikut pembuatan buku cerita dari kertas bekas.",
+   "en": "Siti invited the children to join in making storybooks from scrap paper.",
+   "ko": "시티는 아이들에게 폐지로 동화책 만들기를 같이 하자고 했어요.",
+   "blank": "pembuatan",
+   "src": "made"
+  }
+ ],
  "w|pembukaan": [
   {
    "text": "Agus menyiapkan pidato untuk pembukaan festival kota.",
@@ -39763,6 +40179,22 @@
    "blank": "Pengaman"
   }
  ],
+ "w|pengamatan": [
+  {
+   "text": "Menurut pengamatan Budi, pembaca lebih suka berita pendek di ponsel.",
+   "en": "From Budi's observation, readers prefer short news on their phones.",
+   "ko": "부디가 관찰해 보니 독자들은 휴대폰으로 짧은 기사를 더 좋아해요.",
+   "blank": "pengamatan",
+   "src": "made"
+  },
+  {
+   "text": "Dari pengamatan Siti, anak-anak paling ramai datang setelah jam sekolah.",
+   "en": "From Siti's observation, children come in the biggest numbers after school.",
+   "ko": "시티가 지켜보니 아이들은 방과 후에 가장 많이 와요.",
+   "blank": "pengamatan",
+   "src": "made"
+  }
+ ],
  "w|pengambilan": [
   {
    "text": "Koran itu meliput pengambilan sumpah wali kota yang baru.",
@@ -39975,6 +40407,22 @@
    "src": "made"
   }
  ],
+ "w|pengembangan": [
+  {
+   "text": "Koran itu mengirim Budi ke pelatihan pengembangan jurnalisme data.",
+   "en": "The paper sent Budi to a training on developing data journalism.",
+   "ko": "신문사는 부디를 데이터 저널리즘 역량 개발 연수에 보냈어요.",
+   "blank": "pengembangan",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengusulkan pengembangan ruang komputer di lantai dua.",
+   "en": "Siti proposed developing a computer room on the second floor.",
+   "ko": "시티는 이 층에 컴퓨터실을 만들자고 제안했어요.",
+   "blank": "pengembangan",
+   "src": "made"
+  }
+ ],
  "w|pengemudi": [
   {
    "text": "Di warung kopi, pengemudi truk memberi tahu Agus jalan pintas ke pantai.",
@@ -40143,6 +40591,22 @@
    "en": "He received an award for his hard work.",
    "ko": "그는 열심히 일한 공로로 상을 받았어.",
    "blank": "penghargaan"
+  }
+ ],
+ "w|penghasilan": [
+  {
+   "text": "Banyak wartawan lepas mencari penghasilan tambahan dengan menulis untuk majalah.",
+   "en": "Many freelance journalists look for extra income by writing for magazines.",
+   "ko": "많은 프리랜서 기자들이 잡지에 글을 써서 부수입을 찾아요.",
+   "blank": "penghasilan",
+   "src": "made"
+  },
+  {
+   "text": "Siti menambah penghasilan dengan mengajar membaca kepada anak tetangga.",
+   "en": "Siti supplements her income by teaching the neighbors' children to read.",
+   "ko": "시티는 이웃 아이들에게 읽기를 가르치며 수입을 보태요.",
+   "blank": "penghasilan",
+   "src": "made"
   }
  ],
  "w|penghinaan": [
@@ -40559,6 +41023,22 @@
    "en": "Many spectators came to that concert.",
    "ko": "그 콘서트에 관객이 많이 왔어.",
    "blank": "penonton"
+  }
+ ],
+ "w|pensil": [
+  {
+   "text": "Budi selalu membawa buku catatan kecil dan pensil ke setiap liputan.",
+   "en": "Budi always brings a small notebook and a pencil to every assignment.",
+   "ko": "부디는 취재 갈 때마다 작은 수첩과 연필을 챙겨요.",
+   "blank": "pensil",
+   "src": "made"
+  },
+  {
+   "text": "Di meja peminjaman, Siti menulis nomor kartu dengan pensil.",
+   "en": "At the checkout desk, Siti writes the card number in pencil.",
+   "ko": "대출 데스크에서 시티는 연필로 카드 번호를 적어요.",
+   "blank": "pensil",
+   "src": "made"
   }
  ],
  "w|pensiun": [
@@ -42155,6 +42635,22 @@
    "blank": "persediaan"
   }
  ],
+ "w|persegi": [
+  {
+   "text": "Foto Budi dipasang dalam kotak persegi di samping judul utama.",
+   "en": "Budi's photo was placed in a square box next to the headline.",
+   "ko": "부디의 사진은 주요 제목 옆 네모 칸에 들어갔어요.",
+   "blank": "persegi",
+   "src": "made"
+  },
+  {
+   "text": "Ruang baca anak di perpustakaan itu luasnya sekitar empat puluh meter persegi.",
+   "en": "The children's reading room in that library is about forty square meters.",
+   "ko": "그 도서관 어린이 열람실은 사십 제곱미터쯤 돼요.",
+   "blank": "persegi",
+   "src": "made"
+  }
+ ],
  "w|persembahan": [
   {
    "text": "Kelas Agus menyiapkan lagu sebagai persembahan untuk guru di Hari Guru.",
@@ -42593,6 +43089,22 @@
    "en": "He held his stomach after eating too much.",
    "ko": "너무 많이 먹은 뒤 배를 움켜쥐었어.",
    "blank": "perut"
+  }
+ ],
+ "w|perwakilan": [
+  {
+   "text": "Budi bertanya kepada perwakilan warga tentang rencana penggusuran pasar.",
+   "en": "Budi asked the residents' representative about the plan to clear the market.",
+   "ko": "부디는 주민 대표에게 시장 철거 계획을 물었어요.",
+   "blank": "perwakilan",
+   "src": "made"
+  },
+  {
+   "text": "Siti menyambut perwakilan sekolah yang ingin meminjam buku dalam jumlah banyak.",
+   "en": "Siti welcomed the school representatives who wanted to borrow many books.",
+   "ko": "시티는 책을 많이 빌리고 싶어 하는 학교 대표들을 맞이했어요.",
+   "blank": "perwakilan",
+   "src": "made"
   }
  ],
  "w|perwira": [
@@ -43506,6 +44018,22 @@
    "en": "It turned out the boy once nicknamed the class thug is now a religion teacher.",
    "ko": "예전에 반 깡패로 불리던 아이가 알고 보니 지금은 종교 선생님이 됐어요.",
    "blank": "preman",
+   "src": "made"
+  }
+ ],
+ "w|presentasi": [
+  {
+   "text": "Pagi ini Budi memberi presentasi singkat tentang berita banjir kepada para editor.",
+   "en": "This morning Budi gave a short presentation on the flood story to the editors.",
+   "ko": "오늘 아침 부디는 편집자들에게 홍수 기사에 대해 짧게 발표했어요.",
+   "blank": "presentasi",
+   "src": "made"
+  },
+  {
+   "text": "Hari ini ada presentasi tentang sejarah kota di aula perpustakaan.",
+   "en": "Today there's a presentation on the city's history in the library hall.",
+   "ko": "오늘 도서관 강당에서 도시 역사에 관한 발표가 있어요.",
+   "blank": "presentasi",
    "src": "made"
   }
  ],
@@ -48581,6 +49109,22 @@
    "blank": "serangga"
   }
  ],
+ "w|serangkaian": [
+  {
+   "text": "Budi menulis serangkaian artikel tentang sampah plastik di sungai.",
+   "en": "Budi wrote a series of articles about plastic waste in rivers.",
+   "ko": "부디는 강의 플라스틱 쓰레기에 관한 연재 기사를 썼어요.",
+   "blank": "serangkaian",
+   "src": "made"
+  },
+  {
+   "text": "Perpustakaan mengadakan serangkaian lokakarya menulis selama liburan sekolah.",
+   "en": "The library is holding a series of writing workshops during the school holidays.",
+   "ko": "도서관은 방학 동안 글쓰기 워크숍을 연달아 열어요.",
+   "blank": "serangkaian",
+   "src": "made"
+  }
+ ],
  "w|seratus": [
   {
    "text": "Ada seratus kursi di aula itu.",
@@ -49431,6 +49975,22 @@
    "en": "Civilians must be protected during conflict.",
    "ko": "분쟁 때 민간인은 보호되어야 해.",
    "blank": "sipil"
+  }
+ ],
+ "w|sipir": [
+  {
+   "text": "Budi mewawancarai seorang sipir yang sudah dua puluh tahun bekerja di lapas.",
+   "en": "Budi interviewed a prison guard who has worked at the prison for twenty years.",
+   "ko": "부디는 교도소에서 이십 년을 일한 교도관을 인터뷰했어요.",
+   "blank": "sipir",
+   "src": "made"
+  },
+  {
+   "text": "Siti meminjamkan novel kepada seorang sipir yang setiap pekan datang ke perpustakaan.",
+   "en": "Siti lent a novel to a prison guard who comes to the library every week.",
+   "ko": "시티는 매주 도서관에 오는 교도관에게 소설을 빌려줬어요.",
+   "blank": "sipir",
+   "src": "made"
   }
  ],
  "w|sirkuit": [
@@ -53139,6 +53699,22 @@
    "blank": "terpaksa"
   }
  ],
+ "w|terpengaruh": [
+  {
+   "text": "Redaktur meminta Budi tetap netral dan tidak terpengaruh oleh narasumber.",
+   "en": "The editor asked Budi to stay neutral and not be swayed by his sources.",
+   "ko": "편집자는 부디에게 취재원에 휘둘리지 말고 중립을 지키라고 했어요.",
+   "blank": "terpengaruh",
+   "src": "made"
+  },
+  {
+   "text": "Gaya menulis Siti banyak terpengaruh oleh novel-novel lama di rak belakang.",
+   "en": "Siti's writing style is heavily influenced by the old novels on the back shelf.",
+   "ko": "시티의 글솜씨는 뒤쪽 책장의 옛 소설들에서 많은 영향을 받았어요.",
+   "blank": "terpengaruh",
+   "src": "made"
+  }
+ ],
  "w|terpenting": [
   {
    "text": "Hal terpenting adalah saling percaya.",
@@ -53287,6 +53863,22 @@
    "en": "That document contains important evidence.",
    "ko": "그 문서에는 중요한 증거가 있어.",
    "blank": "tersebut"
+  }
+ ],
+ "w|tersedak": [
+  {
+   "text": "Budi tersedak kopi waktu melihat judul berita yang salah ketik.",
+   "en": "Budi choked on his coffee when he saw a headline with a typo.",
+   "ko": "부디는 오타 난 제목을 보고 커피에 사레들렸어요.",
+   "blank": "tersedak",
+   "src": "made"
+  },
+  {
+   "text": "Seorang anak tersedak permen di ruang baca, dan Siti cepat menolongnya.",
+   "en": "A child choked on a candy in the reading room, and Siti quickly helped.",
+   "ko": "한 아이가 열람실에서 사탕이 목에 걸리자 시티가 재빨리 도왔어요.",
+   "blank": "tersedak",
+   "src": "made"
   }
  ],
  "w|tersedia": [
@@ -54971,6 +55563,22 @@
    "src": "made"
   }
  ],
+ "w|ungu": [
+  {
+   "text": "Budi selalu menandai berita penting dengan stabilo ungu.",
+   "en": "Budi always marks important stories with a purple highlighter.",
+   "ko": "부디는 중요한 기사를 늘 보라색 형광펜으로 표시해요.",
+   "blank": "ungu",
+   "src": "made"
+  },
+  {
+   "text": "Rak buku anak di perpustakaan itu dicat ungu dan kuning.",
+   "en": "The children's bookshelves in that library are painted purple and yellow.",
+   "ko": "그 도서관의 어린이 책장은 보라색과 노란색으로 칠해져 있어요.",
+   "blank": "ungu",
+   "src": "made"
+  }
+ ],
  "w|unik": [
   {
    "text": "Gaya tulisannya sangat unik dan menarik.",
@@ -55053,6 +55661,22 @@
    "en": "They attended the graduation ceremony together.",
    "ko": "그들은 졸업식에 함께 참석했어.",
    "blank": "upacara"
+  }
+ ],
+ "w|upah": [
+  {
+   "text": "Wartawan muda di ruang redaksi itu mengeluh upah mereka belum naik tiga tahun.",
+   "en": "The young reporters in that newsroom complain their wages haven't gone up in three years.",
+   "ko": "그 편집국의 젊은 기자들은 삼 년째 급여가 오르지 않았다고 불평해요.",
+   "blank": "upah",
+   "src": "made"
+  },
+  {
+   "text": "Siti bekerja di perpustakaan kota dengan upah yang pas-pasan.",
+   "en": "Siti works at the city library for a modest wage.",
+   "ko": "시티는 넉넉하지 않은 급여를 받으며 시립 도서관에서 일해요.",
+   "blank": "upah",
+   "src": "made"
   }
  ],
  "w|upaya": [
@@ -55595,6 +56219,22 @@
    "en": "She was nervous before an important interview.",
    "ko": "중요한 면접 전에 그녀는 긴장했어.",
    "blank": "wawancara"
+  }
+ ],
+ "w|wewenang": [
+  {
+   "text": "Hanya pemimpin redaksi yang punya wewenang menarik berita yang sudah terbit.",
+   "en": "Only the editor-in-chief has the authority to pull a story that's already been published.",
+   "ko": "이미 나간 기사를 내릴 권한은 편집장에게만 있어요.",
+   "blank": "wewenang",
+   "src": "made"
+  },
+  {
+   "text": "Siti tidak punya wewenang untuk menghapus denda anggota.",
+   "en": "Siti doesn't have the authority to waive members' fines.",
+   "ko": "시티에게는 회원 연체료를 없애 줄 권한이 없어요.",
+   "blank": "wewenang",
+   "src": "made"
   }
  ],
  "w|wilayah": [
