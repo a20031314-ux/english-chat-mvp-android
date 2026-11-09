@@ -76,11 +76,14 @@ const slug = (s: string) => s.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-
 const fresh = (list: string[]) => list.filter((s) => !done.some((f) => f.includes(slug(s))));
 const groupA = conf.topicSetting[used[0] ?? ""] ?? "people";
 const optionsA = fresh(conf.settings[groupA] ?? []);
-const settingA = optionsA[done.length % Math.max(optionsA.length, 1)] ?? conf.settings[groupA]?.[0] ?? "neighbors";
+// 다 쓴 무대 묶음이면 묶음 수로 돌려 가며(같은 무대 연달아 안 나오게).
+const allA = conf.settings[groupA] ?? ["neighbors"];
+const settingA = optionsA.length ? optionsA[done.length % optionsA.length]! : allA[done.length % allA.length]!;
 const others = Object.keys(conf.settings).filter((g) => g !== groupA && !used.some((t) => conf.topicSetting[t] === g));
 const groupB = others[(done.length * 7 + 3) % others.length]!;
 const optionsB = fresh(conf.settings[groupB] ?? []);
-const settingB = optionsB[0] ?? conf.settings[groupB]![0]!;
+const allB = conf.settings[groupB]!;
+const settingB = optionsB[0] ?? allB[(done.length * 3 + 1) % allB.length]!;
 const names = conf.names[lang] ?? [];
 const nameA = names[(done.length * 2) % names.length] ?? "A";
 const nameB = names[(done.length * 2 + 1) % names.length] ?? "B";

@@ -2243,6 +2243,22 @@
    "src": "made"
   }
  ],
+ "w|カジノ": [
+  {
+   "text": "旅行帰りの常連さんが、海外のカジノの話を楽しそうにしていた。",
+   "en": "A regular back from a trip was happily telling stories about a casino abroad.",
+   "ko": "여행에서 돌아온 단골손님이 해외 카지노 이야기를 즐겁게 했어요.",
+   "blank": "カジノ",
+   "src": "made"
+  },
+  {
+   "text": "歓迎会で、課長が昔カジノで大負けした話をして皆を笑わせた。",
+   "en": "At the welcome party, the section chief made everyone laugh with a story about losing big at a casino long ago.",
+   "ko": "환영회에서 과장님이 옛날에 카지노에서 크게 잃은 이야기를 해서 모두를 웃겼어요.",
+   "blank": "カジノ",
+   "src": "made"
+  }
+ ],
  "w|ガス": [
   {
    "text": "ガスが切れた。",
@@ -4421,6 +4437,22 @@
    "src": "made"
   }
  ],
+ "w|ジャーナリスト": [
+  {
+   "text": "地元の商店街を取材しに、ジャーナリストが悠斗の店を訪れた。",
+   "en": "A journalist visited Yuto's shop to report on the local shopping street.",
+   "ko": "동네 상점가를 취재하러 기자가 유토의 가게를 찾아왔어요.",
+   "blank": "ジャーナリスト",
+   "src": "made"
+  },
+  {
+   "text": "千尋の同期には、元ジャーナリストという変わった経歴の人もいる。",
+   "en": "Among the people who joined with Chihiro, there's one with an unusual background as a former journalist.",
+   "ko": "치히로의 입사 동기 중에는 전직 기자라는 특이한 경력의 사람도 있어요.",
+   "blank": "ジャーナリスト",
+   "src": "made"
+  }
+ ],
  "w|じゃあ": [
   {
    "text": "じゃあ、またね。",
@@ -4733,6 +4765,22 @@
    "src": "made"
   }
  ],
+ "w|スイーツ": [
+  {
+   "text": "悠斗の店では、最近コンビニに負けないスイーツも置き始めた。",
+   "en": "Yuto's shop recently started stocking sweets that can compete with convenience stores.",
+   "ko": "유토의 가게는 요즘 편의점 못지않은 디저트도 두기 시작했어요.",
+   "blank": "スイーツ",
+   "src": "made"
+  },
+  {
+   "text": "休憩室には、誰かが差し入れたスイーツが置いてあった。",
+   "en": "Someone had left sweets as a treat in the break room.",
+   "ko": "휴게실에는 누가 사 온 디저트가 놓여 있었어요.",
+   "blank": "スイーツ",
+   "src": "made"
+  }
+ ],
  "w|スイッチ": [
   {
    "text": "悠斗は、フリーマーケットで電源のスイッチが壊れたラジオを安く買った。",
@@ -4746,6 +4794,22 @@
    "en": "When Chihiro switched on the room light, her younger brother was standing there with an angry face.",
    "ko": "지히로가 방 불 스위치를 켜자 남동생이 화난 얼굴로 서 있었어요.",
    "blank": "スイッチ",
+   "src": "made"
+  }
+ ],
+ "w|ずいぶん": [
+  {
+   "text": "近所の子どもは、しばらく見ないうちにずいぶん背が伸びた。",
+   "en": "The neighborhood kid has grown a lot taller since Yuto last saw him.",
+   "ko": "동네 아이는 한동안 못 본 사이에 키가 꽤 컸어요.",
+   "blank": "ずいぶん",
+   "src": "made"
+  },
+  {
+   "text": "初日なのに、千尋はずいぶん遅くまで会社に残った。",
+   "en": "Even though it was her first day, Chihiro stayed at the office quite late.",
+   "ko": "첫날인데도 치히로는 꽤 늦게까지 회사에 남았어요.",
+   "blank": "ずいぶん",
    "src": "made"
   }
  ],
@@ -11911,6 +11975,22 @@
    "blank": "わけ"
   }
  ],
+ "w|わざと": [
+  {
+   "text": "悠斗はおまけを入れたのに、わざと知らないふりをした。",
+   "en": "Yuto put in a little extra, but deliberately pretended not to know.",
+   "ko": "유토는 덤을 넣어 놓고 일부러 모르는 척했어요.",
+   "blank": "わざと",
+   "src": "made"
+  },
+  {
+   "text": "緊張をほぐそうと、先輩がわざと冗談を言ってくれた。",
+   "en": "To ease her nerves, a senior deliberately made a joke.",
+   "ko": "긴장을 풀어 주려고 선배가 일부러 농담을 해 줬어요.",
+   "blank": "わざと",
+   "src": "made"
+  }
+ ],
  "w|わざわざ": [
   {
    "text": "わざわざ来てくれたね。",
@@ -12913,6 +12993,22 @@
    "blank": "世紀"
   }
  ],
+ "w|世話": [
+  {
+   "text": "悠斗は店の裏で、近所の猫の世話をしている。",
+   "en": "Yuto looks after a neighborhood cat behind the shop.",
+   "ko": "유토는 가게 뒤에서 동네 고양이를 돌보고 있어요.",
+   "blank": "世話",
+   "src": "made"
+  },
+  {
+   "text": "教育係の先輩が、千尋の世話を何かと焼いてくれた。",
+   "en": "The senior assigned to train her looked after Chihiro in all sorts of ways.",
+   "ko": "교육 담당 선배가 이것저것 치히로를 챙겨 줬어요.",
+   "blank": "世話",
+   "src": "made"
+  }
+ ],
  "w|世間": [
   {
    "text": "世間の目が気になる。",
@@ -13249,6 +13345,22 @@
    "blank": "主人公"
   }
  ],
+ "w|主体": [
+  {
+   "text": "商店街の祭りは、店主たちが主体となって準備している。",
+   "en": "The shopping street festival is prepared mainly by the shop owners themselves.",
+   "ko": "상점가 축제는 가게 주인들이 주체가 되어 준비해요.",
+   "blank": "主体",
+   "src": "made"
+  },
+  {
+   "text": "社長は、社員一人ひとりが主体になって動いてほしいと話した。",
+   "en": "The president said he wants each employee to take initiative and act on their own.",
+   "ko": "사장님은 직원 한 사람 한 사람이 주체가 되어 움직이길 바란다고 말했어요.",
+   "blank": "主体",
+   "src": "made"
+  }
+ ],
  "w|主催": [
   {
    "text": "イベントの主催を引き受けた。",
@@ -13291,6 +13403,38 @@
    "en": "That claim doesn't hold up.",
    "ko": "그 주장은 무리야.",
    "blank": "主張"
+  }
+ ],
+ "w|主役": [
+  {
+   "text": "悠斗の店に来る子どもたちは、昨日のドラマの主役の話で盛り上がっていた。",
+   "en": "The kids who come to Yuto's shop were excitedly talking about the lead actor in yesterday's drama.",
+   "ko": "유토의 가게에 오는 아이들은 어제 드라마 주인공 이야기로 들떠 있었어요.",
+   "blank": "主役",
+   "src": "made"
+  },
+  {
+   "text": "歓迎会の主役は、新しく入った千尋たち三人だった。",
+   "en": "The guests of honor at the welcome party were Chihiro and the two others who had just joined.",
+   "ko": "환영회의 주인공은 새로 들어온 치히로네 세 명이었어요.",
+   "blank": "主役",
+   "src": "made"
+  }
+ ],
+ "w|主流": [
+  {
+   "text": "最近は、ネットで買い物をするのが主流になってきた。",
+   "en": "These days, shopping online has become the norm.",
+   "ko": "요즘은 인터넷으로 장을 보는 게 대세가 됐어요.",
+   "blank": "主流",
+   "src": "made"
+  },
+  {
+   "text": "千尋の部署では、紙よりもチャットでのやり取りが主流だ。",
+   "en": "In Chihiro's department, communicating by chat is more common than paper.",
+   "ko": "치히로의 부서에서는 종이보다 채팅으로 주고받는 게 대세예요.",
+   "blank": "主流",
+   "src": "made"
   }
  ],
  "w|主演": [
@@ -17031,6 +17175,22 @@
    "blank": "光"
   }
  ],
+ "w|光景": [
+  {
+   "text": "閉店後の静かな商店街は、悠斗にとって見慣れた光景だ。",
+   "en": "The quiet shopping street after closing is a familiar sight to Yuto.",
+   "ko": "문 닫은 뒤 조용한 상점가는 유토에게 익숙한 풍경이에요.",
+   "blank": "光景",
+   "src": "made"
+  },
+  {
+   "text": "オフィスの窓から見える夕焼けの光景に、千尋は思わず見とれた。",
+   "en": "Chihiro couldn't help gazing at the sunset seen from the office window.",
+   "ko": "사무실 창으로 보이는 노을 풍경에 치히로는 저도 모르게 넋을 잃고 봤어요.",
+   "blank": "光景",
+   "src": "made"
+  }
+ ],
  "w|免許": [
   {
    "text": "免許を取ったよ。",
@@ -18053,6 +18213,22 @@
    "blank": "冷たい"
   }
  ],
+ "w|冷凍": [
+  {
+   "text": "悠斗は、売れ残ったパンを冷凍して次の日に食べる。",
+   "en": "Yuto freezes leftover bread and eats it the next day.",
+   "ko": "유토는 팔다 남은 빵을 냉동해서 다음 날 먹어요.",
+   "blank": "冷凍",
+   "src": "made"
+  },
+  {
+   "text": "社員食堂のカレーは、冷凍とは思えないほどおいしかった。",
+   "en": "The curry in the staff cafeteria was so good you'd never think it was frozen.",
+   "ko": "사원 식당 카레는 냉동이라고 생각할 수 없을 만큼 맛있었어요.",
+   "blank": "冷凍",
+   "src": "made"
+  }
+ ],
  "w|冷蔵庫": [
   {
    "text": "冷蔵庫に牛乳がある。",
@@ -18427,6 +18603,22 @@
    "en": "Departure time is approaching.",
    "ko": "출발 시간이 다가와.",
    "blank": "出発"
+  }
+ ],
+ "w|出荷": [
+  {
+   "text": "悠斗の店では、地元の農家が出荷した野菜を毎朝並べている。",
+   "en": "At Yuto's shop, vegetables shipped by local farmers are set out every morning.",
+   "ko": "유토의 가게에서는 동네 농가가 출하한 채소를 매일 아침 진열해요.",
+   "blank": "出荷",
+   "src": "made"
+  },
+  {
+   "text": "千尋の新しい職場は、ネットで買った商品の出荷を担当する部署だった。",
+   "en": "Chihiro's new workplace was the department in charge of shipping products bought online.",
+   "ko": "치히로의 새 직장은 인터넷으로 산 상품의 출하를 맡은 부서였어요.",
+   "blank": "出荷",
+   "src": "made"
   }
  ],
  "w|出身": [
@@ -19527,6 +19719,22 @@
    "en": "Your courage is amazing.",
    "ko": "네 용기가 대단해.",
    "blank": "勇気"
+  }
+ ],
+ "w|勇者": [
+  {
+   "text": "店に来た小学生が、ゲームの勇者のまねをして棒を振っていた。",
+   "en": "A grade schooler who came to the shop was swinging a stick, pretending to be the hero of a game.",
+   "ko": "가게에 온 초등학생이 게임 속 용사 흉내를 내며 막대기를 휘둘렀어요.",
+   "blank": "勇者",
+   "src": "made"
+  },
+  {
+   "text": "課長は、新人の千尋たちを「わが社の勇者たち」と冗談めかして呼んだ。",
+   "en": "The section chief jokingly called Chihiro and the other newcomers \"our company's brave heroes.\"",
+   "ko": "과장님은 신입인 치히로네를 \"우리 회사의 용사들\"이라고 농담 삼아 불렀어요.",
+   "blank": "勇者",
+   "src": "made"
   }
  ],
  "w|勉強": [
@@ -23381,6 +23589,22 @@
    "src": "tatoeba:230956 en:68323/CM"
   }
  ],
+ "w|境界": [
+  {
+   "text": "悠斗の店は、ちょうど二つの町の境界に建っている。",
+   "en": "Yuto's shop stands right on the border between two towns.",
+   "ko": "유토의 가게는 딱 두 동네의 경계에 서 있어요.",
+   "blank": "境界",
+   "src": "made"
+  },
+  {
+   "text": "先輩は、仕事とプライベートの境界をはっきり分けている。",
+   "en": "The senior draws a clear line between work and private life.",
+   "ko": "선배는 일과 사생활의 경계를 확실히 나누고 있어요.",
+   "blank": "境界",
+   "src": "made"
+  }
+ ],
  "w|墓": [
   {
    "text": "お盆の時期は、墓の周りでの盗難に注意するよう呼びかけている。",
@@ -23571,6 +23795,22 @@
    "src": "made"
   }
  ],
+ "w|売買": [
+  {
+   "text": "悠斗の店の隣は、昔から中古車の売買をしている店だ。",
+   "en": "Next to Yuto's shop is a place that has long bought and sold used cars.",
+   "ko": "유토 가게 옆은 예전부터 중고차 매매를 하는 가게예요.",
+   "blank": "売買",
+   "src": "made"
+  },
+  {
+   "text": "入社式の後、先輩が会社の主な事業は不動産の売買だと説明した。",
+   "en": "After the welcome ceremony, a senior employee explained that the company's main business is buying and selling real estate.",
+   "ko": "입사식 뒤에 선배가 회사의 주요 사업은 부동산 매매라고 설명했어요.",
+   "blank": "売買",
+   "src": "made"
+  }
+ ],
  "w|変": [
   {
    "text": "なんか変だよ。",
@@ -23611,6 +23851,22 @@
    "en": "The season's changing.",
    "ko": "계절이 바뀌네.",
    "blank": "変わる"
+  }
+ ],
+ "w|変動": [
+  {
+   "text": "野菜の値段は天気によって変動するので、悠斗は毎朝値札を書き直す。",
+   "en": "Vegetable prices change with the weather, so Yuto rewrites the price tags every morning.",
+   "ko": "채소 값은 날씨에 따라 변동해서 유토는 매일 아침 가격표를 다시 써요.",
+   "blank": "変動",
+   "src": "made"
+  },
+  {
+   "text": "千尋の部署は、為替の変動の影響を受けやすいそうだ。",
+   "en": "Chihiro's department is apparently easily affected by exchange rate fluctuations.",
+   "ko": "치히로의 부서는 환율 변동의 영향을 받기 쉽대요.",
+   "blank": "変動",
+   "src": "made"
   }
  ],
  "w|変化": [
@@ -24365,6 +24621,22 @@
    "blank": "天"
   }
  ],
+ "w|天井": [
+  {
+   "text": "店の天井の電球が切れて、悠斗は脚立を出した。",
+   "en": "The light bulb on the shop's ceiling burned out, so Yuto got out a stepladder.",
+   "ko": "가게 천장 전구가 나가서 유토는 사다리를 꺼냈어요.",
+   "blank": "天井",
+   "src": "made"
+  },
+  {
+   "text": "新しいオフィスは天井が高く、とても明るかった。",
+   "en": "The new office had high ceilings and was very bright.",
+   "ko": "새 사무실은 천장이 높고 아주 밝았어요.",
+   "blank": "天井",
+   "src": "made"
+  }
+ ],
  "w|天使": [
   {
    "text": "天使のような笑顔だ。",
@@ -24481,6 +24753,22 @@
    "en": "Your arms are thick.",
    "ko": "팔이 굵네.",
    "blank": "太い"
+  }
+ ],
+ "w|太る": [
+  {
+   "text": "店の売れ残りを食べ続けて、悠斗は少し太ってしまった。",
+   "en": "From eating the shop's leftovers all the time, Yuto has put on a bit of weight.",
+   "ko": "가게에서 팔다 남은 걸 계속 먹다 보니 유토는 살이 조금 쪘어요.",
+   "blank": "太って",
+   "src": "made"
+  },
+  {
+   "text": "先輩は「この会社に入ってから五キロ太ったよ」と笑った。",
+   "en": "The senior laughed, saying, \"I've gained five kilos since joining this company.\"",
+   "ko": "선배는 \"이 회사 들어와서 오 킬로 쪘어\" 하고 웃었어요.",
+   "blank": "太った",
+   "src": "made"
   }
  ],
  "w|太陽": [
@@ -26149,6 +26437,22 @@
    "src": "made"
   }
  ],
+ "w|容赦": [
+  {
+   "text": "夏の日差しは容赦なく、店の前の打ち水もすぐに乾いた。",
+   "en": "The summer sun was merciless, and the water sprinkled in front of the shop dried right away.",
+   "ko": "여름 햇볕이 사정없이 내리쬐어 가게 앞에 뿌린 물도 금방 말랐어요.",
+   "blank": "容赦",
+   "src": "made"
+  },
+  {
+   "text": "部長は仕事には容赦がないが、普段はとても優しい人だ。",
+   "en": "The department head is merciless about work, but usually a very kind person.",
+   "ko": "부장님은 일에는 사정없지만 평소엔 아주 다정한 분이에요.",
+   "blank": "容赦",
+   "src": "made"
+  }
+ ],
  "w|容量": [
   {
    "text": "スマホの容量がいっぱいで、亮は古い写真を整理した。",
@@ -26559,6 +26863,22 @@
    "src": "made"
   }
  ],
+ "w|尊重": [
+  {
+   "text": "悠斗は、お客さん一人ひとりの好みを尊重して品物をすすめる。",
+   "en": "Yuto recommends goods while respecting each customer's tastes.",
+   "ko": "유토는 손님 한 사람 한 사람의 취향을 존중해서 물건을 권해요.",
+   "blank": "尊重",
+   "src": "made"
+  },
+  {
+   "text": "この会社では、若手の意見も尊重されると千尋は感じた。",
+   "en": "Chihiro felt that young employees' opinions are respected at this company too.",
+   "ko": "치히로는 이 회사에서는 젊은 직원 의견도 존중받는다고 느꼈어요.",
+   "blank": "尊重",
+   "src": "made"
+  }
+ ],
  "w|尋ねる": [
   {
    "text": "道を尋ねることにした。",
@@ -26657,6 +26977,22 @@
    "en": "The elementary kid next door is energetic.",
    "ko": "옆집 초등학생 기운차네.",
    "blank": "小学生"
+  }
+ ],
+ "w|小屋": [
+  {
+   "text": "店の裏の小屋には、段ボールや古い看板がしまってある。",
+   "en": "Cardboard boxes and old signs are stored in the shed behind the shop.",
+   "ko": "가게 뒤 창고에는 상자랑 낡은 간판이 넣어져 있어요.",
+   "blank": "小屋",
+   "src": "made"
+  },
+  {
+   "text": "会社の裏には、古い道具をしまう小屋がある。",
+   "en": "Behind the company there is a shed for storing old tools.",
+   "ko": "회사 뒤에는 낡은 도구를 넣어 두는 창고가 있어요.",
+   "blank": "小屋",
+   "src": "made"
   }
  ],
  "w|小説": [
@@ -27409,6 +27745,22 @@
    "src": "made"
   }
  ],
+ "w|帰還": [
+  {
+   "text": "テレビでは、宇宙飛行士の帰還のニュースが流れていた。",
+   "en": "The TV was showing news of the astronauts' return.",
+   "ko": "텔레비전에서는 우주비행사 귀환 뉴스가 나오고 있었어요.",
+   "blank": "帰還",
+   "src": "made"
+  },
+  {
+   "text": "海外出張からの部長の帰還を、部署の皆で拍手して迎えた。",
+   "en": "Everyone in the department welcomed the department head back from his overseas trip with applause.",
+   "ko": "해외 출장에서 돌아온 부장님의 귀환을 부서 모두가 박수로 맞이했어요.",
+   "blank": "帰還",
+   "src": "made"
+  }
+ ],
  "w|常識": [
   {
    "text": "ゴミを道に捨てないのは常識だと、警官は若者に言った。",
@@ -27689,6 +28041,22 @@
    "en": "Can you drop them off at kindergarten?",
    "ko": "유치원 데려다주기를 부탁해도 돼?",
    "blank": "幼稚園"
+  }
+ ],
+ "w|幽霊": [
+  {
+   "text": "近所の子どもたちは、空き家に幽霊が出るとうわさしている。",
+   "en": "The neighborhood kids are spreading a rumor that a ghost appears in the empty house.",
+   "ko": "동네 아이들은 빈집에 유령이 나온다고 소문내고 있어요.",
+   "blank": "幽霊",
+   "src": "made"
+  },
+  {
+   "text": "先輩によると、夜の会議室には幽霊が出るという噂があるらしい。",
+   "en": "According to a senior, there's a rumor that a ghost appears in the meeting room at night.",
+   "ko": "선배 말로는 밤 회의실에 유령이 나온다는 소문이 있대요.",
+   "blank": "幽霊",
+   "src": "made"
   }
  ],
  "w|広い": [
@@ -30333,6 +30701,22 @@
    "src": "made"
   }
  ],
+ "w|我が家": [
+  {
+   "text": "「我が家の夕飯はいつもこの店のコロッケだ」と常連さんが笑った。",
+   "en": "\"Our family's dinner is always croquettes from this shop,\" a regular said with a laugh.",
+   "ko": "\"우리 집 저녁은 늘 이 가게 고로케예요\" 하고 단골손님이 웃었어요.",
+   "blank": "我が家",
+   "src": "made"
+  },
+  {
+   "text": "初出勤の朝、千尋の母は「我が家から社会人が出るなんて」と喜んだ。",
+   "en": "On the morning of her first day, Chihiro's mother rejoiced, \"To think our family has a working adult now.\"",
+   "ko": "첫 출근 날 아침, 치히로의 엄마는 \"우리 집에서 사회인이 나오다니\" 하고 기뻐했어요.",
+   "blank": "我が家",
+   "src": "made"
+  }
+ ],
  "w|我慢": [
   {
    "text": "もう我慢できない。",
@@ -30656,6 +31040,22 @@
    "en": "Mayu's new apartment is just before the shopping street.",
    "ko": "마유의 새 아파트는 상점가 조금 앞에 있어요.",
    "blank": "手前",
+   "src": "made"
+  }
+ ],
+ "w|手数料": [
+  {
+   "text": "悠斗の店でカードを使っても、お客さんに手数料はかからない。",
+   "en": "Customers aren't charged a fee even if they use a card at Yuto's shop.",
+   "ko": "유토의 가게에서 카드를 써도 손님에게 수수료는 안 붙어요.",
+   "blank": "手数料",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、給料の振込口座を手数料の安い銀行にした。",
+   "en": "Chihiro chose a bank with low fees for her salary deposit account.",
+   "ko": "치히로는 월급 계좌를 수수료가 싼 은행으로 했어요.",
+   "blank": "手数料",
    "src": "made"
   }
  ],
@@ -32567,6 +32967,22 @@
    "src": "made"
   }
  ],
+ "w|救い": [
+  {
+   "text": "一人暮らしのおばあさんにとって、悠斗との立ち話は小さな救いだ。",
+   "en": "For an old woman living alone, chatting with Yuto is a small comfort.",
+   "ko": "혼자 사는 할머니에게 유토와 나누는 수다는 작은 위안이에요.",
+   "blank": "救い",
+   "src": "made"
+  },
+  {
+   "text": "失敗して落ち込んだ千尋にとって、先輩の一言が救いになった。",
+   "en": "For Chihiro, who was down after a mistake, a senior's words were a relief.",
+   "ko": "실수해서 풀이 죽은 치히로에게 선배의 한마디가 위안이 됐어요.",
+   "blank": "救い",
+   "src": "made"
+  }
+ ],
  "w|救う": [
   {
    "text": "拓也の素早い対応が、大事なお客さんとの契約を救った。",
@@ -32829,6 +33245,22 @@
    "en": "The maintenance was done properly.",
    "ko": "정비가 제대로 끝났어.",
    "blank": "整備"
+  }
+ ],
+ "w|整形": [
+  {
+   "text": "店の向かいの整形外科には、朝からお年寄りが並んでいる。",
+   "en": "There's a line of elderly people at the orthopedic clinic across from the shop from early morning.",
+   "ko": "가게 맞은편 정형외과에는 아침부터 어르신들이 줄 서 있어요.",
+   "blank": "整形",
+   "src": "made"
+  },
+  {
+   "text": "昼休みに、同期の女性が整形の話を気軽にしていて千尋は驚いた。",
+   "en": "At lunch, Chihiro was surprised that a woman who joined with her casually talked about cosmetic surgery.",
+   "ko": "점심시간에 입사 동기 여성이 성형 이야기를 가볍게 해서 치히로는 놀랐어요.",
+   "blank": "整形",
+   "src": "made"
   }
  ],
  "w|整理": [
@@ -34239,6 +34671,22 @@
    "src": "made"
   }
  ],
+ "w|曖昧": [
+  {
+   "text": "注文の電話の声が曖昧で、悠斗は品物の名前を聞き直した。",
+   "en": "The voice on the phone order was unclear, so Yuto asked the name of the item again.",
+   "ko": "주문 전화 목소리가 애매해서 유토는 물건 이름을 다시 물었어요.",
+   "blank": "曖昧",
+   "src": "made"
+  },
+  {
+   "text": "指示が曖昧だったので、千尋はもう一度先輩に確認した。",
+   "en": "The instructions were vague, so Chihiro checked with her senior once more.",
+   "ko": "지시가 애매해서 치히로는 선배에게 한 번 더 확인했어요.",
+   "blank": "曖昧",
+   "src": "made"
+  }
+ ],
  "w|曲": [
   {
    "text": "この曲、好きだよ。",
@@ -34469,6 +34917,22 @@
    "en": "I got my clothes dirty.",
    "ko": "옷 더러워졌어.",
    "blank": "服"
+  }
+ ],
+ "w|服装": [
+  {
+   "text": "悠斗はいつも楽な服装で店に立っている。",
+   "en": "Yuto always works in the shop in comfortable clothes.",
+   "ko": "유토는 늘 편한 옷차림으로 가게를 봐요.",
+   "blank": "服装",
+   "src": "made"
+  },
+  {
+   "text": "千尋は初日の服装に悩んで、結局紺のスーツを選んだ。",
+   "en": "Chihiro agonized over what to wear on her first day and ended up choosing a navy suit.",
+   "ko": "치히로는 첫날 옷차림을 고민하다가 결국 남색 정장을 골랐어요.",
+   "blank": "服装",
+   "src": "made"
   }
  ],
  "w|望む": [
@@ -34927,6 +35391,22 @@
    "en": "Tell me the conditions.",
    "ko": "조건 알려줘.",
    "blank": "条件"
+  }
+ ],
+ "w|条約": [
+  {
+   "text": "常連のおじいさんは、昔の条約の話を始めると止まらない。",
+   "en": "Once the old regular starts talking about treaties of the past, he can't stop.",
+   "ko": "단골 할아버지는 옛날 조약 이야기를 시작하면 멈추지 않아요.",
+   "blank": "条約",
+   "src": "made"
+  },
+  {
+   "text": "歴史好きの課長は、昼休みに古い条約の本を読んでいた。",
+   "en": "The section chief, a history lover, was reading a book about old treaties at lunch.",
+   "ko": "역사를 좋아하는 과장님은 점심시간에 옛 조약에 관한 책을 읽고 있었어요.",
+   "blank": "条約",
+   "src": "made"
   }
  ],
  "w|来る": [
@@ -35512,6 +35992,22 @@
    "en": "This apartment building is extremely close to the station and very convenient for commuting.",
    "ko": "이 아파트는 역에서 아주 가까워서 출퇴근하기 정말 편해요.",
    "blank": "極めて",
+   "src": "made"
+  }
+ ],
+ "w|極端": [
+  {
+   "text": "悠斗は、値段を極端に下げる大型店とは競争しないと決めている。",
+   "en": "Yuto has decided not to compete with big stores that slash prices to extremes.",
+   "ko": "유토는 값을 극단적으로 내리는 대형 매장과는 경쟁하지 않기로 했어요.",
+   "blank": "極端",
+   "src": "made"
+  },
+  {
+   "text": "先輩は「最初から極端に頑張りすぎないで」と千尋に言った。",
+   "en": "A senior told Chihiro, \"Don't go to extremes trying too hard from the start.\"",
+   "ko": "선배는 치히로에게 \"처음부터 너무 극단적으로 애쓰지 마\" 하고 말했어요.",
+   "blank": "極端",
    "src": "made"
   }
  ],
@@ -38775,6 +39271,22 @@
    "blank": "熱い"
   }
  ],
+ "w|熱心": [
+  {
+   "text": "熱心な常連さんが、悠斗に新しいお茶の入れ方を教えてくれた。",
+   "en": "An enthusiastic regular taught Yuto a new way to brew tea.",
+   "ko": "열성적인 단골손님이 유토에게 새로운 차 우리는 법을 가르쳐 줬어요.",
+   "blank": "熱心",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、教わったことを熱心にノートに書き込んだ。",
+   "en": "Chihiro eagerly wrote down what she was taught in her notebook.",
+   "ko": "치히로는 배운 것을 열심히 노트에 적었어요.",
+   "blank": "熱心",
+   "src": "made"
+  }
+ ],
  "w|黙る": [
   {
    "text": "彼女は黙るようにと私が頼んだ後でもしゃべり続けた。",
@@ -40827,6 +41339,22 @@
    "blank": "発言"
   }
  ],
+ "w|発送": [
+  {
+   "text": "悠斗の店では、遠くに住むお客さんにお米の発送もしている。",
+   "en": "Yuto's shop also ships rice to customers who live far away.",
+   "ko": "유토의 가게는 멀리 사는 손님에게 쌀 발송도 해요.",
+   "blank": "発送",
+   "src": "made"
+  },
+  {
+   "text": "千尋の最初の仕事は、取引先へのカタログの発送だった。",
+   "en": "Chihiro's first task was sending catalogs to business partners.",
+   "ko": "치히로의 첫 업무는 거래처에 카탈로그를 발송하는 일이었어요.",
+   "blank": "発送",
+   "src": "made"
+  }
+ ],
  "w|発達": [
   {
    "text": "冷凍技術の発達で、遠くの魚も新鮮なまま届くようになった。",
@@ -42587,6 +43115,22 @@
    "blank": "積極的"
   }
  ],
+ "w|穏やか": [
+  {
+   "text": "穏やかな日曜の午後、悠斗の店はのんびりしていた。",
+   "en": "On a calm Sunday afternoon, Yuto's shop was quiet and relaxed.",
+   "ko": "온화한 일요일 오후, 유토의 가게는 한가했어요.",
+   "blank": "穏やか",
+   "src": "made"
+  },
+  {
+   "text": "千尋の上司は、穏やかな話し方をする人だった。",
+   "en": "Chihiro's boss was a person with a gentle way of speaking.",
+   "ko": "치히로의 상사는 말투가 온화한 사람이었어요.",
+   "blank": "穏やか",
+   "src": "made"
+  }
+ ],
  "w|穴": [
   {
    "text": "ここに穴が開いてる。",
@@ -43883,6 +44427,22 @@
    "en": "Write down an emergency contact.",
    "ko": "긴급 연락처를 적어.",
    "blank": "緊急"
+  }
+ ],
+ "w|総務": [
+  {
+   "text": "近くの会社の総務の人が、お茶菓子をまとめて買っていった。",
+   "en": "Someone from general affairs at a nearby company bought tea snacks in bulk.",
+   "ko": "근처 회사 총무 담당자가 다과를 한꺼번에 사 갔어요.",
+   "blank": "総務",
+   "src": "made"
+  },
+  {
+   "text": "千尋は総務の窓口で、社員証と名刺を受け取った。",
+   "en": "At the general affairs desk, Chihiro received her employee ID and business cards.",
+   "ko": "치히로는 총무 창구에서 사원증과 명함을 받았어요.",
+   "blank": "総務",
+   "src": "made"
   }
  ],
  "w|総合": [
@@ -45445,6 +46005,22 @@
    "src": "made"
   }
  ],
+ "w|花粉": [
+  {
+   "text": "春になると、花粉のせいでマスクを買う客が一気に増える。",
+   "en": "When spring comes, customers buying masks because of pollen suddenly increase.",
+   "ko": "봄이 되면 꽃가루 때문에 마스크를 사는 손님이 확 늘어요.",
+   "blank": "花粉",
+   "src": "made"
+  },
+  {
+   "text": "隣の席の先輩は花粉症で、朝からくしゃみが止まらなかった。",
+   "en": "The senior at the next desk had hay fever and couldn't stop sneezing from the morning.",
+   "ko": "옆자리 선배는 꽃가루 알레르기라서 아침부터 재채기가 멈추지 않았어요.",
+   "blank": "花粉",
+   "src": "made"
+  }
+ ],
  "w|芸人": [
   {
    "text": "人気の芸人が来るよ。",
@@ -45943,6 +46519,22 @@
    "en": "You should be able to go this way.",
    "ko": "이 길로 갈 수 있을 거야.",
    "blank": "行ける"
+  }
+ ],
+ "w|行事": [
+  {
+   "text": "町内会の行事があるたびに、悠斗の店は飲み物を用意する。",
+   "en": "Whenever there's a neighborhood association event, Yuto's shop provides the drinks.",
+   "ko": "동네 모임 행사가 있을 때마다 유토의 가게는 음료를 준비해요.",
+   "blank": "行事",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社では、春に新人歓迎の行事がある。",
+   "en": "At Chihiro's company, there is an event to welcome new employees in spring.",
+   "ko": "치히로의 회사에서는 봄에 신입 환영 행사가 있어요.",
+   "blank": "行事",
+   "src": "made"
   }
  ],
  "w|行動": [
@@ -47291,6 +47883,22 @@
    "blank": "解除"
   }
  ],
+ "w|解雇": [
+  {
+   "text": "工場で解雇された常連客の話を聞いて、悠斗は胸が痛んだ。",
+   "en": "Yuto's heart ached when he heard about a regular who had been laid off from the factory.",
+   "ko": "공장에서 해고된 단골손님 이야기를 듣고 유토는 마음이 아팠어요.",
+   "blank": "解雇",
+   "src": "made"
+  },
+  {
+   "text": "研修では、解雇に関する法律についても簡単に学んだ。",
+   "en": "In the training, they also briefly learned about laws concerning dismissal.",
+   "ko": "연수에서는 해고에 관한 법률도 간단히 배웠어요.",
+   "blank": "解雇",
+   "src": "made"
+  }
+ ],
  "w|触る": [
   {
    "text": "「熱いから鍋には触るなよ」と大輔は新人に注意した。",
@@ -48556,6 +49164,22 @@
    "en": "Keiko attended a lecture on restoring old traditional houses.",
    "ko": "게이코는 고택 재생을 주제로 한 강연에 참가했어요.",
    "blank": "講演",
+   "src": "made"
+  }
+ ],
+ "w|講義": [
+  {
+   "text": "近くの大学生が、講義の前によくおにぎりを買いに来る。",
+   "en": "College students nearby often come to buy rice balls before their lectures.",
+   "ko": "근처 대학생들이 강의 전에 자주 주먹밥을 사러 와요.",
+   "blank": "講義",
+   "src": "made"
+  },
+  {
+   "text": "新人研修の講義は、まるで大学の授業のようだった。",
+   "en": "The lectures in the new-employee training were just like college classes.",
+   "ko": "신입 연수 강의는 마치 대학 수업 같았어요.",
+   "blank": "講義",
    "src": "made"
   }
  ],
@@ -52030,6 +52654,22 @@
    "en": "During the shoot on the boat, Misaki got terribly seasick.",
    "ko": "배 위 촬영에서 미사키는 심하게 멀미를 했어요.",
    "blank": "酔っ",
+   "src": "made"
+  }
+ ],
+ "w|酵素": [
+  {
+   "text": "悠斗の店では、酵素入りの洗剤がよく売れている。",
+   "en": "Detergent with enzymes sells well at Yuto's shop.",
+   "ko": "유토의 가게에서는 효소가 든 세제가 잘 팔려요.",
+   "blank": "酵素",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、食品用の酵素を作るメーカーだ。",
+   "en": "Chihiro's company is a manufacturer that makes enzymes for food.",
+   "ko": "치히로의 회사는 식품용 효소를 만드는 업체예요.",
+   "blank": "酵素",
    "src": "made"
   }
  ],

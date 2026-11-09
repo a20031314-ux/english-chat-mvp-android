@@ -629,6 +629,22 @@
    "blank": "上来"
   }
  ],
+ "w|上校": [
+  {
+   "text": "张伟的室友迷上了一部战争片，里面的上校说话特别有意思。",
+   "en": "Zhang Wei's roommate got hooked on a war movie in which the colonel talks in a really funny way.",
+   "ko": "장웨이의 룸메이트는 한 전쟁 영화에 빠졌는데, 거기 나오는 대령의 말투가 아주 재미있대요.",
+   "blank": "上校",
+   "src": "made"
+  },
+  {
+   "text": "刘芳听说顶楼住着一位退伍的上校，平时特别守时。",
+   "en": "Liu Fang heard a retired colonel lives on the top floor and is always very punctual.",
+   "ko": "류팡은 꼭대기 층에 퇴역한 대령이 사는데 평소에 시간을 아주 잘 지킨다고 들었어요.",
+   "blank": "上校",
+   "src": "made"
+  }
+ ],
  "w|上次": [
   {
    "text": "上次见过你。",
@@ -1197,6 +1213,22 @@
    "en": "The rain keeps falling.",
    "ko": "비가 계속 내려.",
    "blank": "不断"
+  }
+ ],
+ "w|不止": [
+  {
+   "text": "张伟这次来的目的不止是吃饭，他还想见见多年不见的室友。",
+   "en": "Zhang Wei came not just to eat; he also wanted to see his roommate he hadn't seen in years.",
+   "ko": "장웨이가 이번에 온 건 밥만 먹으려는 게 아니라 몇 년 못 본 룸메이트도 보고 싶어서였어요.",
+   "blank": "不止",
+   "src": "made"
+  },
+  {
+   "text": "楼道里堆杂物的不止刘芳隔壁一家，好几层都有。",
+   "en": "It's not just Liu Fang's next-door neighbor piling stuff in the stairwell; several floors do it.",
+   "ko": "복도에 잡동사니를 쌓아 두는 건 류팡의 옆집만이 아니라 여러 층이 다 그래요.",
+   "blank": "不止",
+   "src": "made"
   }
  ],
  "w|不然": [
@@ -2913,6 +2945,22 @@
    "blank": "亲"
   }
  ],
+ "w|亲人": [
+  {
+   "text": "张伟觉得，这些老同学早就像亲人一样了。",
+   "en": "Zhang Wei feels these old classmates have long been like family to him.",
+   "ko": "장웨이는 이 옛 동창들이 이미 가족 같은 사람이 됐다고 느껴요.",
+   "blank": "亲人",
+   "src": "made"
+  },
+  {
+   "text": "刘芳一个人在外地，楼里的老邻居对她就像亲人一样。",
+   "en": "Liu Fang lives alone far from home, and the old neighbors in the building treat her like family.",
+   "ko": "류팡은 타지에서 혼자 사는데, 건물의 오랜 이웃들이 그녀를 가족처럼 대해 줘요.",
+   "blank": "亲人",
+   "src": "made"
+  }
+ ],
  "w|亲密": [
   {
    "text": "周强和摄影师老李合作了十年，关系非常亲密。",
@@ -2926,6 +2974,22 @@
    "en": "Wang Fang has lived next to Auntie Zhang for twenty years, and the two families are as close as relatives.",
    "ko": "왕팡은 옆집 장 아주머니와 이십 년을 이웃으로 살아서 두 집이 친척처럼 가까워요.",
    "blank": "亲密",
+   "src": "made"
+  }
+ ],
+ "w|亲戚": [
+  {
+   "text": "聊着聊着才发现，张伟和老赵竟然是远房亲戚。",
+   "en": "Chatting along, they discovered that Zhang Wei and Old Zhao are actually distant relatives.",
+   "ko": "이야기하다 보니 장웨이와 라오자오가 알고 보니 먼 친척이었어요.",
+   "blank": "亲戚",
+   "src": "made"
+  },
+  {
+   "text": "过节的时候，刘芳家来了好多亲戚，楼道里都是鞋。",
+   "en": "During the holiday, lots of relatives came to Liu Fang's place, and the stairwell was full of shoes.",
+   "ko": "명절에 류팡네 집에 친척이 많이 와서 복도가 신발로 가득했어요.",
+   "blank": "亲戚",
    "src": "made"
   }
  ],
@@ -3377,6 +3441,22 @@
    "en": "I never lie.",
    "ko": "난 절대 거짓말 안 해.",
    "blank": "从不"
+  }
+ ],
+ "w|从事": [
+  {
+   "text": "老同学们现在从事的行业五花八门，有做设计的，也有开店的。",
+   "en": "The old classmates now work in all sorts of fields, some in design and some running shops.",
+   "ko": "옛 동창들은 지금 하는 일이 가지각색이라 디자인하는 사람도 있고 가게를 하는 사람도 있어요.",
+   "blank": "从事",
+   "src": "made"
+  },
+  {
+   "text": "住在一楼的大哥从事装修工作，谁家有问题都找他。",
+   "en": "The guy on the first floor works in renovation, so everyone goes to him with problems.",
+   "ko": "일 층에 사는 아저씨는 인테리어 일을 해서 집에 문제가 생기면 다들 그를 찾아요.",
+   "blank": "从事",
+   "src": "made"
   }
  ],
  "w|从前": [
@@ -3919,6 +3999,22 @@
    "blank": "份"
   }
  ],
+ "w|仿佛": [
+  {
+   "text": "大家一唱起毕业歌，张伟仿佛又回到了十八岁。",
+   "en": "As soon as everyone sang the graduation song, Zhang Wei felt as if he were eighteen again.",
+   "ko": "다들 졸업 노래를 부르기 시작하자 장웨이는 마치 다시 열여덟 살로 돌아간 것 같았어요.",
+   "blank": "仿佛",
+   "src": "made"
+  },
+  {
+   "text": "晚上楼道的灯一闪一闪的，刘芳仿佛走进了恐怖片。",
+   "en": "The stairwell lights flickered at night, and Liu Fang felt as if she'd walked into a horror movie.",
+   "ko": "밤에 복도 불이 깜빡거려서 류팡은 마치 공포 영화에 들어온 것 같았어요.",
+   "blank": "仿佛",
+   "src": "made"
+  }
+ ],
  "w|企业": [
   {
    "text": "这家饭店常接企业的年会订单，后厨一忙就是一整天。",
@@ -3935,6 +4031,22 @@
    "src": "made"
   }
  ],
+ "w|企图": [
+  {
+   "text": "张伟企图偷偷把账结了，结果被老同学一把拦住。",
+   "en": "Zhang Wei tried to sneakily pay the bill, but an old classmate stopped him.",
+   "ko": "장웨이는 몰래 계산하려고 했다가 옛 동창에게 바로 붙잡혔어요.",
+   "blank": "企图",
+   "src": "made"
+  },
+  {
+   "text": "监控拍到有人企图撬开楼下的自行车锁，保安马上赶了过去。",
+   "en": "The camera caught someone trying to pry open a bike lock downstairs, and the guard rushed over.",
+   "ko": "감시 카메라에 누군가 아래층 자전거 자물쇠를 따려는 모습이 찍혀서 경비원이 바로 달려갔어요.",
+   "blank": "企图",
+   "src": "made"
+  }
+ ],
  "w|休息": [
   {
    "text": "休息一下吧。",
@@ -3947,6 +4059,22 @@
    "en": "Rest well over the weekend.",
    "ko": "주말에 푹 쉬어.",
    "blank": "休息"
+  }
+ ],
+ "w|众人": [
+  {
+   "text": "张伟举杯说了几句心里话，众人听完都安静了一会儿。",
+   "en": "Zhang Wei raised his glass and said a few heartfelt words, and everyone fell quiet for a moment.",
+   "ko": "장웨이가 잔을 들고 진심 어린 말을 하자 모두 듣고 나서 잠시 조용해졌어요.",
+   "blank": "众人",
+   "src": "made"
+  },
+  {
+   "text": "停电的时候，刘芳拿着手电筒带众人慢慢走下楼。",
+   "en": "During the blackout, Liu Fang led everyone slowly downstairs with a flashlight.",
+   "ko": "정전이 됐을 때 류팡은 손전등을 들고 사람들을 데리고 천천히 계단을 내려갔어요.",
+   "blank": "众人",
+   "src": "made"
   }
  ],
  "w|优势": [
@@ -4599,6 +4727,22 @@
    "blank": "作用"
   }
  ],
+ "w|作者": [
+  {
+   "text": "小林送给张伟一本书，她就是这本书的作者。",
+   "en": "Xiaolin gave Zhang Wei a book, and she is its author.",
+   "ko": "샤오린은 장웨이에게 책을 한 권 줬는데, 그녀가 바로 그 책의 저자예요.",
+   "blank": "作者",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在电梯里遇见一位邻居，没想到她就是自己最喜欢的那本书的作者。",
+   "en": "Liu Fang met a neighbor in the elevator and never guessed she was the author of her favorite book.",
+   "ko": "류팡은 엘리베이터에서 한 이웃을 만났는데, 그분이 자기가 제일 좋아하는 책의 저자일 줄은 몰랐어요.",
+   "blank": "作者",
+   "src": "made"
+  }
+ ],
  "w|你": [
   {
    "text": "你很累吗？",
@@ -4729,6 +4873,22 @@
    "en": "It's still quiet here.",
    "ko": "여기는 여전히 조용해.",
    "blank": "依然"
+  }
+ ],
+ "w|依靠": [
+  {
+   "text": "刚毕业那几年，张伟主要依靠朋友们介绍工作才站稳脚跟。",
+   "en": "In the first few years after graduation, Zhang Wei relied mainly on friends' job referrals to get on his feet.",
+   "ko": "졸업하고 몇 년 동안 장웨이는 친구들이 소개해 준 일자리에 의지해서 겨우 자리를 잡았어요.",
+   "blank": "依靠",
+   "src": "made"
+  },
+  {
+   "text": "楼里的独居老人很多都依靠邻居帮忙买菜。",
+   "en": "Many of the elderly people living alone in the building rely on neighbors to help buy groceries.",
+   "ko": "건물에 혼자 사는 어르신들 중 많은 분이 이웃의 장보기 도움에 의지해요.",
+   "blank": "依靠",
+   "src": "made"
   }
  ],
  "w|侦探": [
@@ -5174,6 +5334,22 @@
    "en": "That customer was so unlucky: he cracked the screen of his new phone just three days after buying it.",
    "ko": "그 손님은 정말 운이 나빴어요. 새 휴대폰을 산 지 사흘 만에 화면을 깨뜨렸거든요.",
    "blank": "倒霉",
+   "src": "made"
+  }
+ ],
+ "w|候选人": [
+  {
+   "text": "老同学里有人当过学生会主席的候选人，大家又翻出了当年的海报。",
+   "en": "One of the classmates was once a candidate for student union president, and everyone dug out the old poster.",
+   "ko": "옛 동창 중에 학생회장 후보였던 사람이 있어서 다들 그때 포스터를 다시 꺼내 봤어요.",
+   "blank": "候选人",
+   "src": "made"
+  },
+  {
+   "text": "业主委员会改选，刘芳也被大家推成了候选人。",
+   "en": "When the residents' committee held new elections, everyone nominated Liu Fang as a candidate too.",
+   "ko": "입주자 대표 회의를 다시 뽑을 때 류팡도 다들 후보로 추천했어요.",
+   "blank": "候选人",
    "src": "made"
   }
  ],
@@ -5689,6 +5865,22 @@
    "en": "Bro, help me out.",
    "ko": "형제, 나 좀 도와줘.",
    "blank": "兄弟"
+  }
+ ],
+ "w|充分": [
+  {
+   "text": "为了这次聚会，张伟做了充分的准备，连老照片都洗出来了。",
+   "en": "Zhang Wei prepared thoroughly for the reunion, even printing out old photos.",
+   "ko": "장웨이는 이번 모임을 위해 충분히 준비해서 옛날 사진까지 인화해 왔어요.",
+   "blank": "充分",
+   "src": "made"
+  },
+  {
+   "text": "搬进来以前，刘芳充分了解了这栋楼的管理费和规矩。",
+   "en": "Before moving in, Liu Fang fully looked into the building's management fees and rules.",
+   "ko": "이사 오기 전에 류팡은 이 건물의 관리비와 규칙을 충분히 알아봤어요.",
+   "blank": "充分",
+   "src": "made"
   }
  ],
  "w|充满": [
@@ -8403,6 +8595,22 @@
    "en": "He joined too.",
    "ko": "그 사람도 들어왔어.",
    "blank": "加入"
+  }
+ ],
+ "w|加强": [
+  {
+   "text": "张伟说毕业后大家联系太少，以后得加强来往。",
+   "en": "Zhang Wei said everyone has kept in touch too little since graduation and they need to see each other more.",
+   "ko": "장웨이는 졸업 후 다들 연락이 너무 뜸했으니 앞으로는 더 자주 왕래해야 한다고 했어요.",
+   "blank": "加强",
+   "src": "made"
+  },
+  {
+   "text": "物业说最近要加强门禁，外人不能随便进楼了。",
+   "en": "Property management said it would tighten access control, so outsiders can't just walk into the building anymore.",
+   "ko": "관리사무소는 앞으로 출입 관리를 강화해서 외부인이 함부로 건물에 들어올 수 없다고 했어요.",
+   "blank": "加强",
+   "src": "made"
   }
  ],
  "w|加油": [
@@ -12197,6 +12405,22 @@
    "blank": "哪个"
   }
  ],
+ "w|哪些": [
+  {
+   "text": "张伟拿着名单问大家，还有哪些人没联系上。",
+   "en": "Zhang Wei held the list and asked everyone which people they still hadn't reached.",
+   "ko": "장웨이는 명단을 들고 아직 연락이 안 된 사람이 누구누구인지 물었어요.",
+   "blank": "哪些",
+   "src": "made"
+  },
+  {
+   "text": "刘芳问物业，楼里的公共区域有哪些可以放自行车。",
+   "en": "Liu Fang asked property management which public areas in the building can be used for bikes.",
+   "ko": "류팡은 관리사무소에 건물 공용 공간 중 어디에 자전거를 둘 수 있는지 물었어요.",
+   "blank": "哪些",
+   "src": "made"
+  }
+ ],
  "w|哪儿": [
   {
    "text": "你去哪儿？",
@@ -12384,6 +12608,22 @@
    "en": "Yang Yang's sister studied business management in college and always speaks very logically.",
    "ko": "양양의 누나는 대학에서 경영학을 전공해서 말이 늘 조리 있어요.",
    "blank": "商业",
+   "src": "made"
+  }
+ ],
+ "w|商人": [
+  {
+   "text": "班长毕业后成了商人，在好几个城市都开了公司。",
+   "en": "The class monitor became a businessman after graduation and opened companies in several cities.",
+   "ko": "반장은 졸업 후 사업가가 되어 여러 도시에 회사를 차렸어요.",
+   "blank": "商人",
+   "src": "made"
+  },
+  {
+   "text": "楼下新搬来一位做茶叶生意的商人，给每家都送了一小包茶。",
+   "en": "A tea merchant who just moved in downstairs gave every household a small packet of tea.",
+   "ko": "아래층에 새로 이사 온 찻잎 장사하는 상인이 집집마다 작은 차 한 봉지씩 돌렸어요.",
+   "blank": "商人",
    "src": "made"
   }
  ],
@@ -13031,6 +13271,22 @@
    "src": "made"
   }
  ],
+ "w|团体": [
+  {
+   "text": "张伟提议以后组成一个读书团体，每个月见一次面。",
+   "en": "Zhang Wei suggested they form a reading group and meet once a month.",
+   "ko": "장웨이는 앞으로 독서 모임을 만들어 한 달에 한 번 만나자고 제안했어요.",
+   "blank": "团体",
+   "src": "made"
+  },
+  {
+   "text": "小区里有个跳舞的团体，每天傍晚都在楼前的空地练习。",
+   "en": "There's a dance group in the complex that practices on the open space in front of the building every evening.",
+   "ko": "단지에 춤 모임이 있어서 매일 저녁 건물 앞 공터에서 연습해요.",
+   "blank": "团体",
+   "src": "made"
+  }
+ ],
  "w|团队": [
   {
    "text": "我们是一个团队。",
@@ -13151,6 +13407,22 @@
    "en": "He went back to his own country.",
    "ko": "그는 자기 나라로 돌아갔어.",
    "blank": "国家"
+  }
+ ],
+ "w|国民": [
+  {
+   "text": "聊到这些年的变化，张伟说国民的生活水平确实提高了不少。",
+   "en": "Talking about the changes over the years, Zhang Wei said the people's standard of living has really improved a lot.",
+   "ko": "요 몇 년의 변화를 이야기하다가 장웨이는 국민 생활 수준이 확실히 많이 높아졌다고 했어요.",
+   "blank": "国民",
+   "src": "made"
+  },
+  {
+   "text": "社区宣传栏上写着，爱护公共设施是每个国民的责任。",
+   "en": "The community notice board says caring for public facilities is every citizen's responsibility.",
+   "ko": "동네 게시판에는 공공시설을 아끼는 것이 모든 국민의 책임이라고 적혀 있어요.",
+   "blank": "国民",
+   "src": "made"
   }
  ],
  "w|国王": [
@@ -14547,6 +14819,22 @@
    "en": "Most of the time he is busy.",
    "ko": "대부분 그는 바빠.",
    "blank": "大多数"
+  }
+ ],
+ "w|大夫": [
+  {
+   "text": "学医的同学现在在医院当大夫，忙得很少有空出来。",
+   "en": "The classmate who studied medicine is now a doctor at a hospital and rarely has time to come out.",
+   "ko": "의학을 공부한 동창은 지금 병원 의사라서 너무 바빠 나올 시간이 별로 없어요.",
+   "blank": "大夫",
+   "src": "made"
+  },
+  {
+   "text": "刘芳半夜胃疼，幸好隔壁住着一位大夫。",
+   "en": "Liu Fang had a stomachache in the middle of the night; luckily a doctor lives next door.",
+   "ko": "류팡이 한밤중에 배가 아팠는데 다행히 옆집에 의사가 살았어요.",
+   "blank": "大夫",
+   "src": "made"
   }
  ],
  "w|大学": [
@@ -16119,6 +16407,22 @@
    "blank": "娶"
   }
  ],
+ "w|婆婆": [
+  {
+   "text": "小林说婆婆帮她带孩子，她才有空来参加聚会。",
+   "en": "Xiaolin said her mother-in-law was looking after the kids, which is why she had time to come to the reunion.",
+   "ko": "샤오린은 시어머니가 아이를 봐 주셔서 모임에 올 시간이 생겼다고 했어요.",
+   "blank": "婆婆",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的婆婆每天早上都在楼下和邻居们打太极。",
+   "en": "Liu Fang's mother-in-law does tai chi with the neighbors downstairs every morning.",
+   "ko": "류팡의 시어머니는 매일 아침 아래층에서 이웃들과 태극권을 해요.",
+   "blank": "婆婆",
+   "src": "made"
+  }
+ ],
  "w|婚姻": [
   {
    "text": "婚姻需要信任。",
@@ -17153,6 +17457,22 @@
    "en": "There's nobody home.",
    "ko": "집에 아무도 없어.",
    "blank": "家里"
+  }
+ ],
+ "w|家长": [
+  {
+   "text": "好几个老同学当了家长，聊着聊着就说到孩子上学的事。",
+   "en": "Several old classmates have become parents, and the talk kept drifting to their kids' schooling.",
+   "ko": "옛 동창 몇 명은 학부모가 돼서 이야기하다 보면 어느새 아이 학교 얘기로 넘어갔어요.",
+   "blank": "家长",
+   "src": "made"
+  },
+  {
+   "text": "楼下的小孩一放学就在院子里玩，家长们就坐在旁边聊天。",
+   "en": "The kids downstairs play in the courtyard after school while the parents sit nearby and chat.",
+   "ko": "아래층 아이들은 학교가 끝나면 마당에서 놀고, 부모들은 옆에 앉아서 이야기를 나눠요.",
+   "blank": "家长",
+   "src": "made"
   }
  ],
  "w|容易": [
@@ -21321,6 +21641,22 @@
    "en": "He is always like this.",
    "ko": "그 사람은 항상 이래.",
    "blank": "总是"
+  }
+ ],
+ "w|总理": [
+  {
+   "text": "电视上正在播总理讲话的新闻，餐馆里吵得什么也听不清。",
+   "en": "The TV was showing news of the premier's speech, but the restaurant was too noisy to hear anything.",
+   "ko": "텔레비전에서 총리 연설 뉴스가 나오고 있었지만 식당이 시끄러워 아무것도 들리지 않았어요.",
+   "blank": "总理",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的邻居在看一部历史剧，里面的总理是个很有魅力的角色。",
+   "en": "Liu Fang's neighbor is watching a historical drama in which the prime minister is a very charismatic character.",
+   "ko": "류팡의 이웃은 역사 드라마를 보는데, 거기 나오는 총리가 아주 매력 있는 인물이래요.",
+   "blank": "总理",
+   "src": "made"
   }
  ],
  "w|总监": [
@@ -25805,6 +26141,22 @@
    "blank": "教堂"
   }
  ],
+ "w|教师": [
+  {
+   "text": "张伟的老同学现在在中学当教师，说起学生来停不下来。",
+   "en": "Zhang Wei's old classmate now teaches at a middle school and can't stop talking about the students.",
+   "ko": "장웨이의 옛 동창은 지금 중학교 교사인데 학생 얘기만 나오면 멈추질 않아요.",
+   "blank": "教师",
+   "src": "made"
+  },
+  {
+   "text": "刘芳对门的邻居是个音乐教师，周末常在家教钢琴。",
+   "en": "Liu Fang's neighbor across the hall is a music teacher who often gives piano lessons at home on weekends.",
+   "ko": "류팡의 맞은편 이웃은 음악 교사라서 주말이면 집에서 피아노를 자주 가르쳐요.",
+   "blank": "教师",
+   "src": "made"
+  }
+ ],
  "w|教授": [
   {
    "text": "教授在上课。",
@@ -29849,6 +30201,22 @@
    "src": "made"
   }
  ],
+ "w|毫米": [
+  {
+   "text": "做工程的老赵说，他们干活误差不能超过一毫米。",
+   "en": "Old Zhao, who works in engineering, said that in their work the margin of error can't exceed one millimeter.",
+   "ko": "공사 일을 하는 라오자오는 자기들 일은 오차가 일 밀리미터를 넘으면 안 된다고 했어요.",
+   "blank": "毫米",
+   "src": "made"
+  },
+  {
+   "text": "刘芳量了量窗户，发现左右两边差了好几毫米。",
+   "en": "Liu Fang measured the window and found the two sides differed by several millimeters.",
+   "ko": "류팡이 창문을 재어 보니 왼쪽과 오른쪽이 몇 밀리미터나 차이가 났어요.",
+   "blank": "毫米",
+   "src": "made"
+  }
+ ],
  "w|民主": [
   {
    "text": "这部戏讲的是一个小镇的人怎样争取民主的故事。",
@@ -30153,6 +30521,22 @@
    "en": "Camels are suited to the desert.",
    "ko": "낙타는 사막에 잘 맞아.",
    "blank": "沙漠"
+  }
+ ],
+ "w|沟通": [
+  {
+   "text": "多年没见，张伟发现和有些老朋友沟通起来已经有点难了。",
+   "en": "After so many years apart, Zhang Wei found it a bit hard to communicate with some old friends.",
+   "ko": "오랜만에 만나 보니 장웨이는 어떤 옛 친구들과는 소통하기가 좀 어려워졌다는 걸 알았어요.",
+   "blank": "沟通",
+   "src": "made"
+  },
+  {
+   "text": "楼上漏水了，刘芳上去和邻居沟通了半天才解决。",
+   "en": "There was a leak from upstairs, and Liu Fang went up and talked it through with the neighbor for ages before it was solved.",
+   "ko": "위층에서 물이 새서 류팡이 올라가 이웃과 한참 이야기한 끝에야 해결됐어요.",
+   "blank": "沟通",
+   "src": "made"
   }
  ],
  "w|没": [
@@ -31031,6 +31415,22 @@
    "en": "Children yearn for attention.",
    "ko": "아이들은 관심을 갈망해.",
    "blank": "渴望"
+  }
+ ],
+ "w|游客": [
+  {
+   "text": "吃完饭大家去江边散步，那里到处都是拍照的游客。",
+   "en": "After dinner everyone walked along the river, where tourists were taking photos everywhere.",
+   "ko": "밥을 먹고 다들 강가를 산책했는데, 거기엔 사진 찍는 관광객이 가득했어요.",
+   "blank": "游客",
+   "src": "made"
+  },
+  {
+   "text": "这栋楼靠近景点，周末楼下总有拖着行李的游客。",
+   "en": "This building is near a tourist spot, so on weekends there are always tourists with luggage downstairs.",
+   "ko": "이 건물은 관광지와 가까워서 주말이면 아래층에 늘 짐을 끄는 관광객이 있어요.",
+   "blank": "游客",
+   "src": "made"
   }
  ],
  "w|游戏": [
@@ -32211,6 +32611,22 @@
    "src": "made"
   }
  ],
+ "w|独特": [
+  {
+   "text": "聚会选在一家很独特的小餐馆，墙上挂满了旧唱片。",
+   "en": "The reunion was held at a quite unique little restaurant with old records all over the walls.",
+   "ko": "모임은 벽에 옛 레코드판이 가득 걸린 아주 독특한 작은 식당에서 열렸어요.",
+   "blank": "独特",
+   "src": "made"
+  },
+  {
+   "text": "这栋老楼的阳台设计很独特，每一层的形状都不一样。",
+   "en": "The balconies of this old building have a unique design; each floor is shaped differently.",
+   "ko": "이 오래된 건물은 발코니 설계가 독특해서 층마다 모양이 달라요.",
+   "blank": "独特",
+   "src": "made"
+  }
+ ],
  "w|独立": [
   {
    "text": "她很早就独立生活了。",
@@ -32622,6 +33038,22 @@
    "en": "A group of basketball players boarded, every one so tall they had to duck through the door.",
    "ko": "농구 선수 한 무리가 탔는데 다들 키가 커서 고개를 숙이고 들어왔어요.",
    "blank": "球员",
+   "src": "made"
+  }
+ ],
+ "w|球队": [
+  {
+   "text": "大学时张伟是系里球队的队长，每周都拉着大家练球。",
+   "en": "In college Zhang Wei was captain of the department's team and dragged everyone to practice every week.",
+   "ko": "대학 때 장웨이는 학과 팀 주장이라 매주 다들 끌고 가서 공을 찼어요.",
+   "blank": "球队",
+   "src": "made"
+  },
+  {
+   "text": "楼里的几个男生组了一支球队，周末在附近的球场比赛。",
+   "en": "A few guys in the building formed a team and play matches at the nearby court on weekends.",
+   "ko": "건물의 남자 몇 명이 팀을 만들어 주말마다 근처 경기장에서 시합해요.",
+   "blank": "球队",
    "src": "made"
   }
  ],
@@ -33942,6 +34374,22 @@
    "en": "The teacher had Xiaoxue's class split into groups and check each other's homework.",
    "ko": "선생님은 샤오쉐네 반을 조로 나눠 서로 숙제를 검사하게 했어요.",
    "blank": "相互",
+   "src": "made"
+  }
+ ],
+ "w|相似": [
+  {
+   "text": "张伟和老同学的经历很相似，都是毕业后去了外地打拼。",
+   "en": "Zhang Wei and his classmate had similar experiences; both went to other cities to make it after graduation.",
+   "ko": "장웨이와 옛 동창은 겪은 일이 비슷해서 둘 다 졸업 후 타지로 가서 고생했어요.",
+   "blank": "相似",
+   "src": "made"
+  },
+  {
+   "text": "这一片的楼长得都很相似，刘芳第一次来还走错了门。",
+   "en": "The buildings around here all look similar, and Liu Fang went to the wrong entrance the first time.",
+   "ko": "이 일대 건물들이 다 비슷하게 생겨서 류팡은 처음 왔을 때 입구를 잘못 찾아갔어요.",
+   "blank": "相似",
    "src": "made"
   }
  ],
@@ -35511,6 +35959,22 @@
    "blank": "移动"
   }
  ],
+ "w|移民": [
+  {
+   "text": "有位老同学几年前出国了，现在已经是那边的新移民。",
+   "en": "One old classmate went abroad a few years ago and is now a new immigrant there.",
+   "ko": "한 옛 동창은 몇 년 전에 외국에 가서 지금은 그곳의 새 이민자가 됐어요.",
+   "blank": "移民",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的邻居一家是新来的移民，正在努力学习当地话。",
+   "en": "Liu Fang's neighbors are new immigrants who are working hard to learn the local language.",
+   "ko": "류팡의 이웃 가족은 새로 온 이민자라서 현지 말을 열심히 배우고 있어요.",
+   "blank": "移民",
+   "src": "made"
+  }
+ ],
  "w|程序": [
   {
    "text": "按程序办事。",
@@ -35993,6 +36457,22 @@
    "en": "Wait for me.",
    "ko": "나 기다려.",
    "blank": "等"
+  }
+ ],
+ "w|等于": [
+  {
+   "text": "老同学开玩笑说，不来聚会就等于不认这些朋友了。",
+   "en": "An old classmate joked that skipping the reunion is the same as disowning these friends.",
+   "ko": "옛 동창은 모임에 안 오는 건 이 친구들을 모른 척하는 거나 마찬가지라고 농담했어요.",
+   "blank": "等于",
+   "src": "made"
+  },
+  {
+   "text": "物业说，不按时交管理费就等于放弃了投票的权利。",
+   "en": "Property management said not paying the fee on time is the same as giving up the right to vote.",
+   "ko": "관리사무소는 관리비를 제때 안 내면 투표할 권리를 포기하는 거나 마찬가지라고 했어요.",
+   "blank": "等于",
+   "src": "made"
   }
  ],
  "w|等候": [
@@ -41195,6 +41675,22 @@
    "src": "made"
   }
  ],
+ "w|诗人": [
+  {
+   "text": "当年班里那个爱写诗的男生，现在真成了诗人。",
+   "en": "The boy in class who loved writing poems back then has actually become a poet.",
+   "ko": "그 시절 반에서 시 쓰기를 좋아하던 남학생이 지금은 정말 시인이 됐어요.",
+   "blank": "诗人",
+   "src": "made"
+  },
+  {
+   "text": "刘芳家对面住着一位老诗人，阳台上种满了花。",
+   "en": "An old poet lives across from Liu Fang's place, and his balcony is full of flowers.",
+   "ko": "류팡네 맞은편에는 나이 든 시인이 사는데, 발코니에 꽃이 가득해요.",
+   "blank": "诗人",
+   "src": "made"
+  }
+ ],
  "w|诚实": [
   {
    "text": "陈杰觉得，当公务员最要紧的就是诚实。",
@@ -41253,6 +41749,22 @@
    "en": "You should get some sleep.",
    "ko": "너 이제 자야지.",
    "blank": "该"
+  }
+ ],
+ "w|详细": [
+  {
+   "text": "张伟在群里发了聚会的详细地址，还附上了停车的地方。",
+   "en": "Zhang Wei posted the detailed address for the reunion in the group chat, along with where to park.",
+   "ko": "장웨이는 단체방에 모임의 자세한 주소를 올리고 주차할 곳도 같이 적었어요.",
+   "blank": "详细",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在楼下的公告栏里看到了停水的详细通知。",
+   "en": "Liu Fang saw the detailed notice about the water shutoff on the bulletin board downstairs.",
+   "ko": "류팡은 아래층 게시판에서 단수에 관한 자세한 공지를 봤어요.",
+   "blank": "详细",
+   "src": "made"
   }
  ],
  "w|语言": [
@@ -41875,6 +42387,22 @@
    "blank": "负责"
   }
  ],
+ "w|负责人": [
+  {
+   "text": "这次聚会的负责人是张伟，从订座到收钱都是他管。",
+   "en": "Zhang Wei was in charge of this reunion, handling everything from booking to collecting money.",
+   "ko": "이번 모임의 책임자는 장웨이라서 자리 예약부터 회비 걷기까지 다 그가 맡았어요.",
+   "blank": "负责人",
+   "src": "made"
+  },
+  {
+   "text": "刘芳打电话找物业的负责人，问电梯什么时候能修好。",
+   "en": "Liu Fang called the person in charge at property management to ask when the elevator would be fixed.",
+   "ko": "류팡은 관리사무소 책임자에게 전화해서 엘리베이터가 언제 고쳐지는지 물었어요.",
+   "blank": "负责人",
+   "src": "made"
+  }
+ ],
  "w|贡献": [
   {
    "text": "校长表扬了几位老师对学校的贡献。",
@@ -41966,6 +42494,22 @@
    "en": "Yang Yang said the bag was too expensive, but his sister felt the quality made it worth it.",
    "ko": "양양은 그 가방이 너무 비싸다고 했지만 누나는 품질이 좋아서 살 만하다고 생각했어요.",
    "blank": "贵",
+   "src": "made"
+  }
+ ],
+ "w|贵族": [
+  {
+   "text": "张伟上学时演话剧总演贵族，大家到现在还叫他少爷。",
+   "en": "Zhang Wei always played aristocrats in school plays, and everyone still calls him \"young master.\"",
+   "ko": "장웨이는 학교 때 연극에서 늘 귀족 역을 해서 다들 지금도 그를 도련님이라고 불러요.",
+   "blank": "贵族",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的邻居在写一本小说，讲的是古代贵族家里的故事。",
+   "en": "Liu Fang's neighbor is writing a novel about life in an ancient aristocratic family.",
+   "ko": "류팡의 이웃은 옛날 귀족 집안 이야기를 다룬 소설을 쓰고 있어요.",
+   "blank": "贵族",
    "src": "made"
   }
  ],
@@ -43367,6 +43911,22 @@
    "en": "Exercising more is good for health.",
    "ko": "운동을 많이 하면 건강에 좋아.",
    "blank": "运动"
+  }
+ ],
+ "w|运动员": [
+  {
+   "text": "当年系里最能跑的同学，后来真成了专业的长跑运动员。",
+   "en": "The fastest runner in the department back then later actually became a professional long-distance athlete.",
+   "ko": "그 시절 학과에서 제일 잘 달리던 동창은 나중에 정말 프로 장거리 육상 선수가 됐어요.",
+   "blank": "运动员",
+   "src": "made"
+  },
+  {
+   "text": "住在六楼的姑娘是游泳运动员，每天天不亮就出门训练。",
+   "en": "The young woman on the sixth floor is a swimmer who leaves for training before dawn every day.",
+   "ko": "육 층에 사는 아가씨는 수영 선수라서 매일 날이 밝기 전에 훈련하러 나가요.",
+   "blank": "运动员",
+   "src": "made"
   }
  ],
  "w|运气": [
@@ -45119,6 +45679,22 @@
    "blank": "采取"
   }
  ],
+ "w|采用": [
+  {
+   "text": "餐馆采用了自助点菜的方式，大家用手机就能下单。",
+   "en": "The restaurant uses self-service ordering, so everyone can order on their phones.",
+   "ko": "식당은 셀프 주문 방식을 써서 다들 휴대폰으로 주문할 수 있었어요.",
+   "blank": "采用",
+   "src": "made"
+  },
+  {
+   "text": "新电梯采用了刷卡系统，没有卡就上不了楼。",
+   "en": "The new elevator uses a card system; you can't go up without a card.",
+   "ko": "새 엘리베이터는 카드 시스템을 써서 카드가 없으면 위층에 못 올라가요.",
+   "blank": "采用",
+   "src": "made"
+  }
+ ],
  "w|采访": [
   {
    "text": "记者想采访这位老师。",
@@ -46021,6 +46597,22 @@
    "blank": "陛下"
   }
  ],
+ "w|院长": [
+  {
+   "text": "大家聊起大学时的院长，都说他上课特别有意思。",
+   "en": "Everyone talked about the dean from their university days and said his classes were really interesting.",
+   "ko": "다들 대학 시절 학장님 얘기를 하며 그분 수업이 정말 재미있었다고 했어요.",
+   "blank": "院长",
+   "src": "made"
+  },
+  {
+   "text": "住在刘芳楼上的老先生退休前是一家医院的院长。",
+   "en": "The old gentleman living above Liu Fang was the director of a hospital before he retired.",
+   "ko": "류팡의 위층에 사는 할아버지는 은퇴 전에 한 병원의 원장이었어요.",
+   "blank": "院长",
+   "src": "made"
+  }
+ ],
  "w|除": [
   {
    "text": "王刚家除饺子以外，还要做一条红烧鱼，图个年年有余。",
@@ -46531,6 +47123,22 @@
    "en": "What do you need?",
    "ko": "뭐가 필요해?",
    "blank": "需要"
+  }
+ ],
+ "w|青年": [
+  {
+   "text": "张伟说，青年时代的朋友最难得，长大了就很难交到。",
+   "en": "Zhang Wei said friends from one's youth are the most precious; they're hard to make as an adult.",
+   "ko": "장웨이는 청년 시절 친구가 가장 소중하고, 어른이 되면 사귀기 어렵다고 했어요.",
+   "blank": "青年",
+   "src": "made"
+  },
+  {
+   "text": "社区组织了一群青年志愿者，帮楼里的老人修电器。",
+   "en": "The community organized a group of young volunteers to repair appliances for the building's elderly residents.",
+   "ko": "동네에서 청년 자원봉사자들을 모아 건물 어르신들의 가전제품을 고쳐 드렸어요.",
+   "blank": "青年",
+   "src": "made"
   }
  ],
  "w|非": [
@@ -47551,6 +48159,22 @@
    "src": "made"
   }
  ],
+ "w|高手": [
+  {
+   "text": "喝了几杯以后，大家公认张伟是唱歌的高手。",
+   "en": "After a few drinks, everyone agreed Zhang Wei was a master at singing.",
+   "ko": "몇 잔 마시고 나서 다들 장웨이가 노래 고수라고 인정했어요.",
+   "blank": "高手",
+   "src": "made"
+  },
+  {
+   "text": "五楼的小伙子是下棋高手，楼里的老人都爱找他下。",
+   "en": "The young man on the fifth floor is a chess master, and the building's old folks all love to play him.",
+   "ko": "오 층 청년은 장기 고수라서 건물 어르신들이 다 그와 두고 싶어 해요.",
+   "blank": "高手",
+   "src": "made"
+  }
+ ],
  "w|高级": [
   {
    "text": "婚宴上的菜都很高级，客人们吃得赞不绝口。",
@@ -47827,6 +48451,22 @@
    "en": "Black makes you look slimmer.",
    "ko": "검은색이 더 날씬해 보여.",
    "blank": "黑色"
+  }
+ ],
+ "w|鼓励": [
+  {
+   "text": "当年是张伟鼓励小林去参加歌唱比赛的，现在她成了歌手。",
+   "en": "Back then it was Zhang Wei who encouraged Xiaolin to enter the singing contest, and now she's a singer.",
+   "ko": "그때 샤오린에게 노래 대회에 나가 보라고 응원한 사람이 장웨이였는데, 지금 그녀는 가수가 됐어요.",
+   "blank": "鼓励",
+   "src": "made"
+  },
+  {
+   "text": "邻居们鼓励刘芳去参加业主委员会，说她做事认真。",
+   "en": "The neighbors encouraged Liu Fang to join the residents' committee, saying she's conscientious.",
+   "ko": "이웃들은 류팡이 일을 꼼꼼히 한다며 입주자 대표 회의에 나가 보라고 권했어요.",
+   "blank": "鼓励",
+   "src": "made"
   }
  ],
  "w|鼻子": [

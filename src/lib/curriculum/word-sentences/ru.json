@@ -197,6 +197,22 @@
    "blank": "адвокату"
   }
  ],
+ "w|администрация": [
+  {
+   "text": "Андрей отнёс в администрацию школы справку от врача.",
+   "en": "Andrei took a doctor's note to the school office.",
+   "ko": "안드레이는 진단서를 학교 행정실에 냈어요.",
+   "blank": "администрацию",
+   "src": "made"
+  },
+  {
+   "text": "По выходным администрация студии разрешает Ирине приходить рисовать.",
+   "en": "The studio management allowed Irina to come and paint at weekends.",
+   "ko": "화실 측은 이리나가 주말에도 와서 그림을 그려도 된다고 허락했어요.",
+   "blank": "администрация",
+   "src": "made"
+  }
+ ],
  "w|адмирал": [
   {
    "text": "Дедушка Ольги был адмиралом, и она хранит его фотографию.",
@@ -1745,6 +1761,22 @@
    "src": "made"
   }
  ],
+ "w|благотворительность": [
+  {
+   "text": "Андрей с классом собирали игрушки для детского дома в рамках благотворительности.",
+   "en": "Andrei and his class collected toys for an orphanage as part of a charity drive.",
+   "ko": "안드레이는 반 친구들과 자선 활동으로 보육원에 보낼 장난감을 모았어요.",
+   "blank": "благотворительности",
+   "src": "made"
+  },
+  {
+   "text": "Ирина продаёт открытки со своими рисунками, а деньги отдаёт на благотворительность.",
+   "en": "Irina sells cards with her drawings and gives the money to charity.",
+   "ko": "이리나는 자기 그림으로 만든 엽서를 팔아 그 돈을 기부해요.",
+   "blank": "благотворительность",
+   "src": "made"
+  }
+ ],
  "w|блестящий": [
   {
    "text": "Учительница назвала доклад Павла блестящим.",
@@ -1883,6 +1915,22 @@
    "en": "I hope we're not late.",
    "ko": "늦으면 큰일이야.",
    "blank": "бог"
+  }
+ ],
+ "w|богатство": [
+  {
+   "text": "Учитель сказал Андрею, что знания — главное богатство человека.",
+   "en": "The teacher told Andrei that knowledge is a person's greatest wealth.",
+   "ko": "선생님은 안드레이에게 지식이 사람의 가장 큰 재산이라고 했어요.",
+   "blank": "богатство",
+   "src": "made"
+  },
+  {
+   "text": "Преподаватель говорит Ирине, что главное богатство художника — наблюдательность.",
+   "en": "The teacher tells Irina that an artist's greatest wealth is the power of observation.",
+   "ko": "선생님은 이리나에게 화가의 가장 큰 재산은 관찰력이라고 말해요.",
+   "blank": "богатство",
+   "src": "made"
   }
  ],
  "w|богатый": [
@@ -3027,6 +3075,22 @@
    "src": "tatoeba:14092115/marafon en:10932609/sabretou"
   }
  ],
+ "w|вежливый": [
+  {
+   "text": "Андрей всегда вежлив с вахтёршей, и она пускает его в школу пораньше.",
+   "en": "Andrei is always polite to the caretaker, and she lets him into school early.",
+   "ko": "안드레이가 경비 아주머니에게 늘 공손해서 아주머니는 일찍 학교에 들여보내 줘요.",
+   "blank": "вежлив",
+   "src": "made"
+  },
+  {
+   "text": "Преподаватель у Ирины вежливый, но очень требовательный.",
+   "en": "Irina's teacher is polite but very demanding.",
+   "ko": "이리나의 선생님은 예의 바르지만 아주 깐깐해요.",
+   "blank": "вежливый",
+   "src": "made"
+  }
+ ],
  "w|везде": [
   {
    "text": "Дождь преследует меня везде!",
@@ -4021,6 +4085,22 @@
    "src": "made"
   }
  ],
+ "w|винтовка": [
+  {
+   "text": "В школьном музее Андрей видел винтовку, с которой прадед прошёл войну.",
+   "en": "In the school museum Andrei saw a rifle his great-grandfather carried through the war.",
+   "ko": "학교 박물관에서 안드레이는 증조할아버지가 전쟁 내내 들었던 소총을 봤어요.",
+   "blank": "винтовку",
+   "src": "made"
+  },
+  {
+   "text": "На учебном натюрморте у Ирины лежала старая охотничья винтовка рядом с фруктами.",
+   "en": "In Irina's practice still life an old hunting rifle lay next to the fruit.",
+   "ko": "이리나의 정물화 연습 소재로 과일 옆에 낡은 사냥용 소총이 놓여 있었어요.",
+   "blank": "винтовка",
+   "src": "made"
+  }
+ ],
  "w|вирус": [
   {
    "text": "Ты не боишься подхватить вирус?",
@@ -4743,6 +4823,22 @@
    "ko": "그녀는 늦게 들어온 딸을 혼냈어요.",
    "blank": "возвращение",
    "src": "tatoeba:2832665/odexed en:313125/CK"
+  }
+ ],
+ "w|воздействие": [
+  {
+   "text": "На биологии Андрей изучал воздействие света на рост растений.",
+   "en": "In biology Andrei studied the effect of light on plant growth.",
+   "ko": "생물 시간에 안드레이는 빛이 식물 성장에 미치는 영향을 연구했어요.",
+   "blank": "воздействие",
+   "src": "made"
+  },
+  {
+   "text": "Преподаватель объяснил Ирине, какое воздействие на зрителя оказывает красный цвет.",
+   "en": "The teacher explained to Irina what effect the colour red has on the viewer.",
+   "ko": "선생님은 이리나에게 빨간색이 보는 사람에게 어떤 영향을 주는지 설명했어요.",
+   "blank": "воздействие",
+   "src": "made"
   }
  ],
  "w|воздух": [
@@ -6401,6 +6497,22 @@
    "src": "made"
   }
  ],
+ "w|выдавать": [
+  {
+   "text": "В библиотеке Андрею выдают учебники на весь год.",
+   "en": "At the library Andrei is issued textbooks for the whole year.",
+   "ko": "도서관에서 안드레이는 일 년 치 교과서를 받아요.",
+   "blank": "выдают",
+   "src": "made"
+  },
+  {
+   "text": "В начале курса студии выдавали Ирине бумагу и краски бесплатно.",
+   "en": "At the start of the course the studio gave Irina paper and paints for free.",
+   "ko": "과정 초반에 화실은 이리나에게 종이와 물감을 무료로 나눠 줬어요.",
+   "blank": "выдавали",
+   "src": "made"
+  }
+ ],
  "w|выдать": [
   {
    "text": "В декабре Сергею на работе выдали премию.",
@@ -7221,6 +7333,22 @@
    "src": "tatoeba:13308776/frpzzd en:12303604/CK"
   }
  ],
+ "w|галерея": [
+  {
+   "text": "В школьной галерее повесили фотографии Андрея из летнего лагеря.",
+   "en": "Andrei's photos from summer camp were hung in the school gallery.",
+   "ko": "학교 갤러리에 안드레이가 여름 캠프에서 찍은 사진이 걸렸어요.",
+   "blank": "галерее",
+   "src": "made"
+  },
+  {
+   "text": "Работы Ирины выставили в маленькой галерее на набережной.",
+   "en": "Irina's works were exhibited in a small gallery on the embankment.",
+   "ko": "이리나의 작품이 강변의 작은 갤러리에 전시됐어요.",
+   "blank": "галерее",
+   "src": "made"
+  }
+ ],
  "w|галстук": [
   {
    "text": "Ты всегда надеваешь галстук на работу?",
@@ -7391,6 +7519,38 @@
    "ko": "사람들이 나보고 전쟁 영웅이래.",
    "blank": "герой",
    "src": "tatoeba:6325398/marafon en:5852021/CK"
+  }
+ ],
+ "w|герцог": [
+  {
+   "text": "В школьном спектакле Андрей сыграл старого герцога.",
+   "en": "In the school play Andrei played an old duke.",
+   "ko": "학교 연극에서 안드레이는 늙은 공작 역을 맡았어요.",
+   "blank": "герцога",
+   "src": "made"
+  },
+  {
+   "text": "Ирина долго разглядывала портрет герцога в бархатном плаще.",
+   "en": "Irina spent a long time looking at a portrait of a duke in a velvet cloak.",
+   "ko": "이리나는 벨벳 망토를 걸친 공작의 초상화를 오래 바라봤어요.",
+   "blank": "герцога",
+   "src": "made"
+  }
+ ],
+ "w|гибель": [
+  {
+   "text": "Андрей сделал доклад о гибели «Титаника».",
+   "en": "Andrei gave a report on the sinking of the Titanic.",
+   "ko": "안드레이는 타이타닉호 침몰에 대해 발표했어요.",
+   "blank": "гибели",
+   "src": "made"
+  },
+  {
+   "text": "На выставке Ирина остановилась у полотна о гибели корабля в шторм.",
+   "en": "At the exhibition Irina stopped by a canvas depicting the loss of a ship in a storm.",
+   "ko": "전시회에서 이리나는 폭풍 속에 침몰하는 배를 그린 그림 앞에 멈췄어요.",
+   "blank": "гибели",
+   "src": "made"
   }
  ],
  "w|гигантский": [
@@ -8232,6 +8392,22 @@
    "en": "On the radio at the pool Natalia heard that the police had caught the robber from the next street.",
    "ko": "나탈리야는 수영장 라디오에서 경찰이 옆 동네 강도를 잡았다는 소식을 들었어요.",
    "blank": "грабителя",
+   "src": "made"
+  }
+ ],
+ "w|грабить": [
+  {
+   "text": "В книге, которую Андрей читал по литературе, разбойники грабили купцов на дороге.",
+   "en": "In the book Andrei read for literature, bandits robbed merchants on the road.",
+   "ko": "안드레이가 문학 시간에 읽은 책에서 도적들이 길에서 상인들을 약탈했어요.",
+   "blank": "грабили",
+   "src": "made"
+  },
+  {
+   "text": "На картине, которую копировала Ирина, пираты грабят торговый корабль.",
+   "en": "In the painting Irina was copying, pirates are plundering a merchant ship.",
+   "ko": "이리나가 따라 그린 그림에서는 해적들이 상선을 약탈하고 있어요.",
+   "blank": "грабят",
    "src": "made"
   }
  ],
@@ -10078,6 +10254,22 @@
    "en": "Try to guess who I ran into!",
    "ko": "내가 누구 만났는지 맞혀 봐!",
    "blank": "догадаться",
+   "src": "made"
+  }
+ ],
+ "w|догнать": [
+  {
+   "text": "На стадионе Андрей пытался догнать лучшего бегуна школы.",
+   "en": "At the stadium Andrei tried to catch up with the school's best runner.",
+   "ko": "운동장에서 안드레이는 학교에서 제일 빠른 아이를 따라잡으려 애썼어요.",
+   "blank": "догнать",
+   "src": "made"
+  },
+  {
+   "text": "Ирина бежала за автобусом, но так и не смогла его догнать и опоздала на урок рисования.",
+   "en": "Irina ran after the bus but couldn't catch it and was late for her art class.",
+   "ko": "이리나는 버스를 쫓아 뛰었지만 끝내 따라잡지 못해 미술 수업에 늦었어요.",
+   "blank": "догнать",
    "src": "made"
   }
  ],
@@ -12567,6 +12759,22 @@
    "src": "made"
   }
  ],
+ "w|задумываться": [
+  {
+   "text": "Перед выбором профиля Андрей впервые всерьёз задумывается о будущем.",
+   "en": "Before choosing his specialisation Andrei is thinking seriously about the future for the first time.",
+   "ko": "진로 과목을 고르기 전에 안드레이는 처음으로 미래를 진지하게 고민해요.",
+   "blank": "задумывается",
+   "src": "made"
+  },
+  {
+   "text": "Рисуя натюрморт, Ирина задумывается о том, как падает свет.",
+   "en": "While painting a still life, Irina thinks about how the light falls.",
+   "ko": "정물화를 그리면서 이리나는 빛이 어떻게 떨어지는지 고민해요.",
+   "blank": "задумывается",
+   "src": "made"
+  }
+ ],
  "w|заехать": [
   {
    "text": "Перед аэропортом Андрей решил заехать в кафе за кофе.",
@@ -13067,6 +13275,22 @@
    "src": "made"
   }
  ],
+ "w|замечание": [
+  {
+   "text": "Андрей получил замечание в дневник за разговоры на уроке.",
+   "en": "Andrei got a note in his school diary for talking in class.",
+   "ko": "안드레이는 수업 중 떠든 탓에 알림장에 지적을 받았어요.",
+   "blank": "замечание",
+   "src": "made"
+  },
+  {
+   "text": "Преподаватель сделал Ирине замечание: тени слишком тёмные.",
+   "en": "The teacher made a remark to Irina: the shadows are too dark.",
+   "ko": "선생님이 이리나에게 그림자가 너무 어둡다고 지적했어요.",
+   "blank": "замечание",
+   "src": "made"
+  }
+ ],
  "w|замечательный": [
   {
    "text": "Замечательный план!",
@@ -13503,6 +13727,22 @@
    "src": "tatoeba:3755965/Ooneykcall en:3433979/Hybrid"
   }
  ],
+ "w|запрет": [
+  {
+   "text": "В школе ввели запрет на телефоны, и Андрей теперь оставляет свой в шкафчике.",
+   "en": "The school introduced a phone ban, so Andrei now leaves his in the locker.",
+   "ko": "학교에서 휴대폰 사용을 금지해서 안드레이는 이제 사물함에 두고 다녀요.",
+   "blank": "запрет",
+   "src": "made"
+  },
+  {
+   "text": "В студии строгий запрет на еду возле мольбертов, и Ирина обедает в коридоре.",
+   "en": "The studio has a strict ban on food near the easels, so Irina eats lunch in the corridor.",
+   "ko": "화실에서는 이젤 근처에서 음식을 먹는 게 엄격히 금지돼서 이리나는 복도에서 점심을 먹어요.",
+   "blank": "запрет",
+   "src": "made"
+  }
+ ],
  "w|запретить": [
   {
    "text": "Ты не можешь запретить нам ехать.",
@@ -13865,6 +14105,22 @@
    "ko": "빨리 걷지는 못해도 오래 걸을 수는 있어요.",
    "blank": "зато",
    "src": "tatoeba:1383899/Biga en:274035/CK"
+  }
+ ],
+ "w|захват": [
+  {
+   "text": "В учебнике Андрей читал о захвате крепости в средние века.",
+   "en": "In the textbook Andrei read about the capture of a fortress in the Middle Ages.",
+   "ko": "안드레이는 교과서에서 중세 요새 점령에 대해 읽었어요.",
+   "blank": "захвате",
+   "src": "made"
+  },
+  {
+   "text": "Ирина изучала картину, где изображён захват города войском.",
+   "en": "Irina studied a painting showing the capture of a city by an army.",
+   "ko": "이리나는 군대가 도시를 점령하는 장면을 그린 그림을 연구했어요.",
+   "blank": "захват",
+   "src": "made"
   }
  ],
  "w|захватить": [
@@ -19767,6 +20023,22 @@
    "src": "made"
   }
  ],
+ "w|логика": [
+  {
+   "text": "Учитель математики хвалит Андрея за железную логику.",
+   "en": "The maths teacher praises Andrei for his iron logic.",
+   "ko": "수학 선생님은 안드레이의 빈틈없는 논리를 칭찬해요.",
+   "blank": "логику",
+   "src": "made"
+  },
+  {
+   "text": "Преподаватель сказал Ирине, что в композиции нужна своя логика.",
+   "en": "The teacher told Irina that a composition needs its own logic.",
+   "ko": "선생님은 이리나에게 구도에도 나름의 논리가 있어야 한다고 했어요.",
+   "blank": "логика",
+   "src": "made"
+  }
+ ],
  "w|логичный": [
   {
    "text": "Маршрут по выставке показался Сергею вполне логичным.",
@@ -20871,6 +21143,22 @@
    "blank": "мере"
   }
  ],
+ "w|мерзкий": [
+  {
+   "text": "В столовой дали мерзкий кисель, и Андрей оставил его на подносе.",
+   "en": "The canteen served a revolting fruit jelly drink, and Andrei left it on his tray.",
+   "ko": "식당에서 맛없는 젤리 음료가 나와서 안드레이는 쟁반에 그대로 남겼어요.",
+   "blank": "мерзкий",
+   "src": "made"
+  },
+  {
+   "text": "Ирина смешала слишком много цветов и получила мерзкий бурый оттенок.",
+   "en": "Irina mixed too many colours and got a disgusting brownish shade.",
+   "ko": "이리나는 색을 너무 많이 섞어서 칙칙한 갈색이 나왔어요.",
+   "blank": "мерзкий",
+   "src": "made"
+  }
+ ],
  "w|мероприятие": [
   {
    "text": "Сергей помогал украшать зал к праздничному мероприятию.",
@@ -21893,6 +22181,22 @@
    "blank": "Момент"
   }
  ],
+ "w|монастырь": [
+  {
+   "text": "Класс Андрея ездил на экскурсию в старый монастырь за городом.",
+   "en": "Andrei's class went on a trip to an old monastery outside the city.",
+   "ko": "안드레이네 반은 교외의 오래된 수도원으로 견학을 갔어요.",
+   "blank": "монастырь",
+   "src": "made"
+  },
+  {
+   "text": "Ирина рисует акварелью белый монастырь на холме.",
+   "en": "Irina is painting a white monastery on a hill in watercolour.",
+   "ko": "이리나는 언덕 위 하얀 수도원을 수채화로 그리고 있어요.",
+   "blank": "монастырь",
+   "src": "made"
+  }
+ ],
  "w|монстр": [
   {
    "text": "Я боюсь, что монстр придёт сегодня ночью.",
@@ -22064,6 +22368,22 @@
    "en": "Svetlana nearly sent money to a scammer who was selling fake race numbers.",
    "ko": "스베틀라나는 가짜 배번을 팔던 사기꾼에게 돈을 보낼 뻔했어요.",
    "blank": "мошеннику",
+   "src": "made"
+  }
+ ],
+ "w|мошенничество": [
+  {
+   "text": "На обществознании Андрей разбирал случаи мошенничества в интернете.",
+   "en": "In social studies Andrei looked at cases of internet fraud.",
+   "ko": "사회 시간에 안드레이는 인터넷 사기 사례를 살펴봤어요.",
+   "blank": "мошенничества",
+   "src": "made"
+  },
+  {
+   "text": "Ирина прочитала, что продажа поддельных картин — это мошенничество, а копии надо подписывать.",
+   "en": "Irina read that selling forged paintings is fraud and that copies must be signed.",
+   "ko": "이리나는 위작을 파는 건 사기이고 모작에는 서명을 해야 한다는 글을 읽었어요.",
+   "blank": "мошенничество",
    "src": "made"
   }
  ],
@@ -26187,6 +26507,22 @@
    "src": "made"
   }
  ],
+ "w|обернуться": [
+  {
+   "text": "Кто-то окликнул Андрея в коридоре, и он обернулся.",
+   "en": "Someone called out to Andrei in the corridor, and he turned around.",
+   "ko": "복도에서 누가 안드레이를 불러서 그가 뒤돌아봤어요.",
+   "blank": "обернулся",
+   "src": "made"
+  },
+  {
+   "text": "Ирина обернулась и увидела, что вся группа смотрит на её рисунок.",
+   "en": "Irina turned around and saw the whole group looking at her drawing.",
+   "ko": "이리나가 뒤돌아보니 반 사람들이 모두 그녀의 그림을 보고 있었어요.",
+   "blank": "обернулась",
+   "src": "made"
+  }
+ ],
  "w|обеспечить": [
   {
    "text": "Я могу обеспечить свою семью едой и одеждой.",
@@ -26518,6 +26854,22 @@
    "en": "The coach put Olga on defense against the tallest opponent.",
    "ko": "코치는 올가에게 상대 팀 최장신 선수를 수비하게 했어요.",
    "blank": "оборону",
+   "src": "made"
+  }
+ ],
+ "w|оборотень": [
+  {
+   "text": "Младший брат Андрея боится оборотней и не выходит во двор в полнолуние.",
+   "en": "Andrei's little brother is afraid of werewolves and won't go outside at full moon.",
+   "ko": "안드레이의 남동생은 늑대인간이 무서워서 보름달이 뜨면 마당에 안 나가요.",
+   "blank": "оборотней",
+   "src": "made"
+  },
+  {
+   "text": "Для конкурса Ирина нарисовала оборотня, который воет на луну.",
+   "en": "For the competition Irina painted a werewolf howling at the moon.",
+   "ko": "대회에 내려고 이리나는 달을 보고 울부짖는 늑대인간을 그렸어요.",
+   "blank": "оборотня",
    "src": "made"
   }
  ],
@@ -27689,6 +28041,22 @@
    "src": "tatoeba:407844/Hellerick en:279840/CN"
   }
  ],
+ "w|окружающий": [
+  {
+   "text": "На уроке природоведения Андрей изучал окружающий мир через лупу.",
+   "en": "In nature studies Andrei explored the world around him through a magnifying glass.",
+   "ko": "자연 시간에 안드레이는 돋보기로 주변 세상을 관찰했어요.",
+   "blank": "окружающий",
+   "src": "made"
+  },
+  {
+   "text": "Преподаватель учит Ирину замечать окружающие предметы как формы и тени.",
+   "en": "The teacher teaches Irina to see the surrounding objects as shapes and shadows.",
+   "ko": "선생님은 이리나에게 주변 사물을 형태와 그림자로 보라고 가르쳐요.",
+   "blank": "окружающие",
+   "src": "made"
+  }
+ ],
  "w|октябрь": [
   {
    "text": "В октябре Сергей собирает с деревьев последние яблоки.",
@@ -28170,6 +28538,22 @@
    "en": "Olga said she'd seen a crime film where the heroine was issued an arrest warrant.",
    "ko": "올가는 여주인공에게 체포 영장이 발부되는 형사 영화를 봤다고 했어요.",
    "blank": "ордер",
+   "src": "made"
+  }
+ ],
+ "w|оркестр": [
+  {
+   "text": "В школьном оркестре Андрей играет на трубе.",
+   "en": "Andrei plays the trumpet in the school orchestra.",
+   "ko": "안드레이는 학교 오케스트라에서 트럼펫을 불어요.",
+   "blank": "оркестре",
+   "src": "made"
+  },
+  {
+   "text": "Ирина рисует под записи симфонического оркестра.",
+   "en": "Irina paints to recordings of a symphony orchestra.",
+   "ko": "이리나는 교향악단 음반을 틀어 놓고 그림을 그려요.",
+   "blank": "оркестра",
    "src": "made"
   }
  ],
@@ -31591,6 +31975,22 @@
    "src": "tatoeba:2557103/paul_lingvo en:2395967/CK"
   }
  ],
+ "w|племя": [
+  {
+   "text": "На истории Андрей делал проект о кочевом племени.",
+   "en": "In history Andrei did a project about a nomadic tribe.",
+   "ko": "역사 시간에 안드레이는 유목 부족에 관한 과제를 했어요.",
+   "blank": "племени",
+   "src": "made"
+  },
+  {
+   "text": "На лекции по искусству Ирина узнала о масках африканского племени.",
+   "en": "At an art lecture Irina learned about the masks of an African tribe.",
+   "ko": "미술 강의에서 이리나는 아프리카 부족의 가면에 대해 배웠어요.",
+   "blank": "племени",
+   "src": "made"
+  }
+ ],
  "w|племянник": [
   {
    "text": "Андрей учит соседского племянника кататься на велосипеде.",
@@ -31984,6 +32384,22 @@
    "en": "Irina's old house stands on the coast, a couple of minutes from the sea.",
    "ko": "이리나의 오래된 집은 바다에서 몇 분 거리인 해안가에 있어요.",
    "blank": "побережье",
+   "src": "made"
+  }
+ ],
+ "w|побить": [
+  {
+   "text": "Андрей побил школьный рекорд по прыжкам в высоту.",
+   "en": "Andrei broke the school high-jump record.",
+   "ko": "안드레이는 학교 높이뛰기 기록을 깼어요.",
+   "blank": "побил",
+   "src": "made"
+  },
+  {
+   "text": "Мальчик за соседним столом случайно побил банки с водой, и Ирина помогла вытереть пол.",
+   "en": "The boy at the next table accidentally broke the water jars, and Irina helped wipe the floor.",
+   "ko": "옆 책상 남자아이가 물통을 실수로 깨뜨려서 이리나가 바닥 닦는 걸 도왔어요.",
+   "blank": "побил",
    "src": "made"
   }
  ],
@@ -34133,6 +34549,22 @@
    "src": "made"
   }
  ],
+ "w|покрыть": [
+  {
+   "text": "На труде Андрей покрыл табуретку лаком.",
+   "en": "In woodwork Andrei coated the stool with varnish.",
+   "ko": "기술 시간에 안드레이는 의자에 니스를 칠했어요.",
+   "blank": "покрыл",
+   "src": "made"
+  },
+  {
+   "text": "Ирина покрыла холст тонким слоем грунта.",
+   "en": "Irina covered the canvas with a thin layer of primer.",
+   "ko": "이리나는 캔버스에 젯소를 얇게 발랐어요.",
+   "blank": "покрыла",
+   "src": "made"
+  }
+ ],
  "w|покупатель": [
   {
    "text": "Подруга рассказала Дмитрию, что в её книжном магазине теперь больше покупателей.",
@@ -34701,6 +35133,22 @@
    "ko": "식단을 바꿔야 해요?",
    "blank": "поменять",
    "src": "tatoeba:3597171/sharptoothed en:434518/lukaszpp"
+  }
+ ],
+ "w|поменяться": [
+  {
+   "text": "Андрей поменялся местами с другом, чтобы лучше видеть доску.",
+   "en": "Andrei swapped seats with his friend to see the board better.",
+   "ko": "안드레이는 칠판이 잘 보이게 친구와 자리를 바꿨어요.",
+   "blank": "поменялся",
+   "src": "made"
+  },
+  {
+   "text": "На перерыве Ирина поменялась с подругой карандашами.",
+   "en": "During the break Irina swapped pencils with her friend.",
+   "ko": "쉬는 시간에 이리나는 친구와 연필을 바꿨어요.",
+   "blank": "поменялась",
+   "src": "made"
   }
  ],
  "w|поместить": [
@@ -36541,6 +36989,22 @@
    "src": "tatoeba:5162752/odexed en:7535366/shekitten"
   }
  ],
+ "w|править": [
+  {
+   "text": "На истории Андрей рассказывал о царе, который долго правил страной.",
+   "en": "In history Andrei talked about a tsar who ruled the country for a long time.",
+   "ko": "역사 시간에 안드레이는 나라를 오래 다스린 황제에 대해 이야기했어요.",
+   "blank": "правил",
+   "src": "made"
+  },
+  {
+   "text": "Ирина решила не править рисунок, а начать новый лист.",
+   "en": "Irina decided not to correct the drawing but to start a new sheet.",
+   "ko": "이리나는 그림을 고치지 않고 새 종이에 다시 그리기로 했어요.",
+   "blank": "править",
+   "src": "made"
+  }
+ ],
  "w|право": [
   {
    "text": "Это моё право.",
@@ -36760,6 +37224,22 @@
    "en": "He turned out to be a traitor.",
    "ko": "그는 배신자였어요.",
    "blank": "предателем",
+   "src": "made"
+  }
+ ],
+ "w|предательство": [
+  {
+   "text": "Андрей писал сочинение о предательстве в романе, который они проходили.",
+   "en": "Andrei wrote an essay on betrayal in the novel they were studying.",
+   "ko": "안드레이는 수업에서 다룬 소설 속 배신에 대해 글을 썼어요.",
+   "blank": "предательстве",
+   "src": "made"
+  },
+  {
+   "text": "Ирина нарисовала иллюстрацию к легенде о предательстве друга.",
+   "en": "Irina drew an illustration for a legend about a friend's betrayal.",
+   "ko": "이리나는 친구의 배신에 관한 전설의 삽화를 그렸어요.",
+   "blank": "предательстве",
    "src": "made"
   }
  ],
@@ -41855,6 +42335,22 @@
    "src": "made"
   }
  ],
+ "w|рация": [
+  {
+   "text": "На военных сборах Андрею дали рацию и поставили связистом.",
+   "en": "At the military training camp Andrei was given a radio and made the signaller.",
+   "ko": "군사 훈련 캠프에서 안드레이는 무전기를 받고 통신병을 맡았어요.",
+   "blank": "рацию",
+   "src": "made"
+  },
+  {
+   "text": "Охранник галереи что-то быстро сказал по рации, и Ирину пропустили без билета.",
+   "en": "The gallery guard said something quickly into his radio, and Irina was let in without a ticket.",
+   "ko": "갤러리 경비원이 무전기로 뭔가 말하더니 이리나를 표 없이 들여보내 줬어요.",
+   "blank": "рации",
+   "src": "made"
+  }
+ ],
  "w|реагировать": [
   {
    "text": "Учительница похвалила Алексея за то, что он спокойно реагирует на критику.",
@@ -43741,6 +44237,22 @@
    "ko": "저는 그 신부님이 좋아요.",
    "blank": "священник",
    "src": "tatoeba:13341235/amanshi en:12200852/Miktsoanit"
+  }
+ ],
+ "w|священный": [
+  {
+   "text": "Андрей узнал на уроке, что для древних египтян кошки были священными животными.",
+   "en": "Andrei learned in class that cats were sacred animals for the ancient Egyptians.",
+   "ko": "안드레이는 수업에서 고대 이집트인에게 고양이가 신성한 동물이었다는 걸 배웠어요.",
+   "blank": "священными",
+   "src": "made"
+  },
+  {
+   "text": "Ирина копирует старинную икону, где священный огонь горит над головой святого.",
+   "en": "Irina is copying an old icon in which a sacred flame burns above the saint's head.",
+   "ko": "이리나는 성인의 머리 위에 성스러운 불이 타오르는 옛 성화를 따라 그리고 있어요.",
+   "blank": "священный",
+   "src": "made"
   }
  ],
  "w|сгореть": [
@@ -47419,6 +47931,22 @@
    "blank": "список"
   }
  ],
+ "w|сплошной": [
+  {
+   "text": "Контрольная по алгебре оказалась сплошной путаницей, и Андрей сдал её последним.",
+   "en": "The algebra test turned out to be a complete muddle, and Andrei handed it in last.",
+   "ko": "대수 시험이 온통 헷갈려서 안드레이는 맨 마지막에 냈어요.",
+   "blank": "сплошной",
+   "src": "made"
+  },
+  {
+   "text": "Небо на картине у Ирины получилось сплошным синим пятном.",
+   "en": "The sky in Irina's painting came out as one solid blue blotch.",
+   "ko": "이리나 그림의 하늘은 온통 파란 얼룩이 됐어요.",
+   "blank": "сплошным",
+   "src": "made"
+  }
+ ],
  "w|спокойно": [
   {
    "text": "Сергей спокойно сидел у воды с удочкой до самого вечера.",
@@ -47726,6 +48254,22 @@
    "en": "Irina carefully went down into the cellar on the creaky stairs.",
    "ko": "이리나는 삐걱거리는 계단으로 조심스럽게 지하실에 내려갔어요.",
    "blank": "спускалась",
+   "src": "made"
+  }
+ ],
+ "w|спустить": [
+  {
+   "text": "На физкультуре Андрей проколол мяч, и тот спустил прямо во время игры.",
+   "en": "In PE Andrei punctured the ball, and it went flat in the middle of the game.",
+   "ko": "체육 시간에 안드레이가 공에 구멍을 내서 경기 도중에 바람이 빠졌어요.",
+   "blank": "спустил",
+   "src": "made"
+  },
+  {
+   "text": "После урока Ирина спустила воду из баночек в раковину.",
+   "en": "After the lesson Irina poured the water from the jars down the sink.",
+   "ko": "수업이 끝나고 이리나는 물통의 물을 개수대에 버렸어요.",
+   "blank": "спустила",
    "src": "made"
   }
  ],
@@ -48789,6 +49333,22 @@
    "src": "tatoeba:9958096/Ooneykcall en:9956959/Akh2403"
   }
  ],
+ "w|строгий": [
+  {
+   "text": "У Андрея строгая учительница русского, но объясняет она понятно.",
+   "en": "Andrei has a strict Russian teacher, but she explains things clearly.",
+   "ko": "안드레이의 국어 선생님은 엄하지만 설명은 알기 쉽게 해요.",
+   "blank": "строгая",
+   "src": "made"
+  },
+  {
+   "text": "Преподаватель строгий: Ирине пришлось переделать набросок три раза.",
+   "en": "The teacher is strict: Irina had to redo the sketch three times.",
+   "ko": "선생님이 엄해서 이리나는 스케치를 세 번이나 다시 했어요.",
+   "blank": "строгий",
+   "src": "made"
+  }
+ ],
  "w|строго": [
   {
    "text": "Директор строго посмотрел на опоздавшего Ивана.",
@@ -49201,6 +49761,22 @@
    "ko": "그녀가 사정을 설명해 줬어요.",
    "blank": "суть",
    "src": "tatoeba:4981620/Ooneykcall en:314156/CK"
+  }
+ ],
+ "w|сухой": [
+  {
+   "text": "Учитель попросил Андрея протереть доску сухой тряпкой.",
+   "en": "The teacher asked Andrei to wipe the board with a dry cloth.",
+   "ko": "선생님은 안드레이에게 마른 걸레로 칠판을 닦으라고 했어요.",
+   "blank": "сухой",
+   "src": "made"
+  },
+  {
+   "text": "Ирина научилась работать сухой кистью, чтобы передать фактуру дерева.",
+   "en": "Irina learned to work with a dry brush to convey the texture of wood.",
+   "ko": "이리나는 나무 질감을 살리려고 마른 붓 기법을 배웠어요.",
+   "blank": "сухой",
+   "src": "made"
   }
  ],
  "w|суша": [
@@ -49617,6 +50193,22 @@
    "en": "Put the bag here.",
    "ko": "가방은 여기에 둬.",
    "blank": "сюда"
+  }
+ ],
+ "w|сюжет": [
+  {
+   "text": "Андрей пересказал классу сюжет любимой книги за пять минут.",
+   "en": "Andrei retold the plot of his favourite book to the class in five minutes.",
+   "ko": "안드레이는 좋아하는 책의 줄거리를 반 친구들에게 오 분 만에 들려줬어요.",
+   "blank": "сюжет",
+   "src": "made"
+  },
+  {
+   "text": "Ирина придумала сюжет для серии рисунков о жизни своей кошки.",
+   "en": "Irina came up with a storyline for a series of drawings about her cat's life.",
+   "ko": "이리나는 자기 고양이의 일상을 담은 연작 그림의 줄거리를 짰어요.",
+   "blank": "сюжет",
+   "src": "made"
   }
  ],
  "w|сюрприз": [
@@ -50599,6 +51191,22 @@
    "ko": "들었는데 무슨 얘기인지 알아들을 수 없었어요.",
    "blank": "толк",
    "src": "tatoeba:1515404/Biga en:264401/CK"
+  }
+ ],
+ "w|толкать": [
+  {
+   "text": "Дежурный попросил Андрея не толкать младших на лестнице.",
+   "en": "The monitor asked Andrei not to push the younger kids on the stairs.",
+   "ko": "당번은 안드레이에게 계단에서 동생들을 밀지 말라고 했어요.",
+   "blank": "толкать",
+   "src": "made"
+  },
+  {
+   "text": "Ирина просит соседа по мольберту не толкать её стол.",
+   "en": "Irina asks the person at the next easel not to push her table.",
+   "ko": "이리나는 옆 이젤 사람에게 자기 책상을 밀지 말아 달라고 해요.",
+   "blank": "толкать",
+   "src": "made"
   }
  ],
  "w|толпа": [
@@ -52491,6 +53099,22 @@
    "ko": "우리는 좁은 복도로 들어갔어요.",
    "blank": "узкий",
    "src": "tatoeba:3644870/Selena777 en:7634703/AlanF_US"
+  }
+ ],
+ "w|узнавать": [
+  {
+   "text": "На уроках Андрей каждый день узнаёт что-то новое о своём городе.",
+   "en": "In lessons Andrei learns something new about his town every day.",
+   "ko": "안드레이는 수업 시간마다 자기 도시에 대해 새로운 것을 알게 돼요.",
+   "blank": "узнаёт",
+   "src": "made"
+  },
+  {
+   "text": "На курсах Ирина узнаёт, как смешивать краски без грязи.",
+   "en": "At the course Irina is learning how to mix paints without making them muddy.",
+   "ko": "이리나는 강좌에서 색이 탁해지지 않게 물감을 섞는 법을 배워요.",
+   "blank": "узнаёт",
+   "src": "made"
   }
  ],
  "w|узнать": [
@@ -54947,6 +55571,22 @@
    "ko": "지난 일요일에 교회 갔어?",
    "blank": "церковь",
    "src": "tatoeba:7442395/odexed en:6910045/CK"
+  }
+ ],
+ "w|цивилизация": [
+  {
+   "text": "Андрей мечтает стать археологом и изучать древние цивилизации.",
+   "en": "Andrei dreams of becoming an archaeologist and studying ancient civilisations.",
+   "ko": "안드레이는 고고학자가 되어 고대 문명을 연구하는 게 꿈이에요.",
+   "blank": "цивилизации",
+   "src": "made"
+  },
+  {
+   "text": "Ирину вдохновляет искусство древних цивилизаций, особенно египетская роспись.",
+   "en": "Irina is inspired by the art of ancient civilisations, especially Egyptian painting.",
+   "ko": "이리나는 고대 문명의 예술, 특히 이집트 벽화에서 영감을 받아요.",
+   "blank": "цивилизаций",
+   "src": "made"
   }
  ],
  "w|цирк": [

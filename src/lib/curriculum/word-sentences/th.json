@@ -1457,6 +1457,22 @@
    "blank": "กางเกงยีนส์"
   }
  ],
+ "w|ก๊าซ": [
+  {
+   "text": "สมชายสั่งก๊าซหุงต้มถังใหม่ไว้ทำอาหารเลี้ยงญาติ",
+   "en": "Somchai ordered a new tank of cooking gas to cook for his relatives.",
+   "ko": "솜차이는 친척들에게 음식을 대접하려고 새 취사용 가스통을 주문했어요.",
+   "blank": "ก๊าซ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีได้กลิ่นก๊าซในครัว เลยรีบปิดวาล์วแล้วเปิดหน้าต่าง",
+   "en": "Malee smelled gas in the kitchen, so she quickly shut the valve and opened the window.",
+   "ko": "말리는 부엌에서 가스 냄새가 나서 얼른 밸브를 잠그고 창문을 열었어요.",
+   "blank": "ก๊าซ",
+   "src": "made"
+  }
+ ],
  "w|กาต้มน้ำ": [
   {
    "text": "ใช้กาต้มน้ำต้มน้ำร้อน",
@@ -3381,6 +3397,22 @@
    "blank": "ขณะที่"
   }
  ],
+ "w|ขณะนี้": [
+  {
+   "text": "ป้ายในห้างบอกว่าขณะนี้ของขวัญปีใหม่ลดราคาเกือบทุกร้าน",
+   "en": "A sign in the mall said that New Year gifts are now on sale in almost every shop.",
+   "ko": "쇼핑몰 안내판에 지금 거의 모든 가게에서 새해 선물을 할인한다고 쓰여 있었어요.",
+   "blank": "ขณะนี้",
+   "src": "made"
+  },
+  {
+   "text": "ข่าวบอกว่าขณะนี้ฝนตกหนักทั่วเมือง มาลีเลยตัดสินใจอยู่บ้าน",
+   "en": "The news said it is currently raining hard across the city, so Malee decided to stay home.",
+   "ko": "뉴스에서 지금 도시 전역에 비가 많이 온다고 해서 말리는 집에 있기로 했어요.",
+   "blank": "ขณะนี้",
+   "src": "made"
+  }
+ ],
  "w|ขน": [
   {
    "text": "แมวตัวนี้ขนยาวมาก",
@@ -3657,6 +3689,22 @@
    "en": "Open the bottle for me.",
    "ko": "병 좀 열어 줘.",
    "blank": "ขวด"
+  }
+ ],
+ "w|ขวบ": [
+  {
+   "text": "ลูกสาวของสมชายจะอายุห้าขวบในเดือนมกราคม",
+   "en": "Somchai's daughter will turn five in January.",
+   "ko": "솜차이의 딸은 일월에 다섯 살이 돼요.",
+   "blank": "ขวบ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกคนเล็กของมาลีเพิ่งสามขวบ แต่เก็บของเล่นเองได้แล้ว",
+   "en": "Malee's youngest is only three, but already puts away her own toys.",
+   "ko": "말리의 막내는 겨우 세 살인데 벌써 장난감을 혼자 치워요.",
+   "blank": "ขวบ",
+   "src": "made"
   }
  ],
  "w|ขวา": [
@@ -9747,6 +9795,22 @@
    "blank": "ฆาตกร"
   }
  ],
+ "w|ฆาตกรรม": [
+  {
+   "text": "คืนสิ้นปี สมชายนั่งดูหนังสืบสวนคดีฆาตกรรมกับเพื่อนจนดึก",
+   "en": "On New Year's Eve, Somchai stayed up late with friends watching a murder mystery film.",
+   "ko": "섣달그믐 밤에 솜차이는 친구들과 늦게까지 살인 사건 추리 영화를 봤어요.",
+   "blank": "ฆาตกรรม",
+   "src": "made"
+  },
+  {
+   "text": "มาลีอ่านนิยายฆาตกรรมจบทั้งเล่มในบ่ายวันเดียว",
+   "en": "Malee finished a whole murder novel in a single afternoon.",
+   "ko": "말리는 살인 추리 소설 한 권을 오후 한나절 만에 다 읽었어요.",
+   "blank": "ฆาตกรรม",
+   "src": "made"
+  }
+ ],
  "w|ฆ่าตัวตาย": [
   {
    "text": "สังคมควรช่วยเหลือผู้ที่คิดฆ่าตัวตาย",
@@ -10229,6 +10293,22 @@
    "en": "Try to memorize this route on the map.",
    "ko": "이 지도 경로를 외워 봐.",
    "blank": "จดจำ"
+  }
+ ],
+ "w|จดทะเบียน": [
+  {
+   "text": "สมชายตั้งใจจะจดทะเบียนร้านออนไลน์ให้เสร็จก่อนสิ้นปี",
+   "en": "Somchai intends to finish registering his online shop before the end of the year.",
+   "ko": "솜차이는 연말 전에 온라인 가게 등록을 마칠 생각이에요.",
+   "blank": "จดทะเบียน",
+   "src": "made"
+  },
+  {
+   "text": "มาลีกับสามีจดทะเบียนสมรสเมื่อสิบปีก่อน",
+   "en": "Malee and her husband registered their marriage ten years ago.",
+   "ko": "말리와 남편은 십 년 전에 혼인 신고를 했어요.",
+   "blank": "จดทะเบียน",
+   "src": "made"
   }
  ],
  "w|จดหมาย": [
@@ -10988,6 +11068,22 @@
    "en": "Fon read in the news that the defendant in the food poisoning case was fined.",
    "ko": "폰은 식중독 사건 피고인이 벌금형을 받았다는 뉴스를 읽었어요.",
    "blank": "จำเลย",
+   "src": "made"
+  }
+ ],
+ "w|จำหน่าย": [
+  {
+   "text": "ร้านขนมใกล้บ้านสมชายจำหน่ายกระเช้าปีใหม่ถึงสิ้นเดือนนี้เท่านั้น",
+   "en": "The bakery near Somchai's house sells New Year baskets only until the end of this month.",
+   "ko": "솜차이 집 근처 과자 가게는 이달 말까지만 새해 바구니를 팔아요.",
+   "blank": "จำหน่าย",
+   "src": "made"
+  },
+  {
+   "text": "มาลีสั่งขนมจากร้านที่จำหน่ายทางออนไลน์มาให้ครอบครัวกินระหว่างดูหนัง",
+   "en": "Malee ordered snacks from a shop that sells online for the family to eat during the film.",
+   "ko": "말리는 가족이 영화 보면서 먹을 간식을 온라인으로 파는 가게에서 주문했어요.",
+   "blank": "จำหน่าย",
    "src": "made"
   }
  ],
@@ -14123,6 +14219,22 @@
    "blank": "เซ็น"
   }
  ],
+ "w|เซลล์": [
+  {
+   "text": "สมชายอ่านบทความว่าการนอนให้พอช่วยให้เซลล์ในร่างกายฟื้นตัว",
+   "en": "Somchai read an article saying that enough sleep helps the body's cells recover.",
+   "ko": "솜차이는 잠을 충분히 자면 몸속 세포가 회복된다는 기사를 읽었어요.",
+   "blank": "เซลล์",
+   "src": "made"
+  },
+  {
+   "text": "ลูกชายของมาลีส่องกล้องดูเซลล์หัวหอมเป็นการบ้านวิทยาศาสตร์",
+   "en": "Malee's son looked at onion cells under a microscope for science homework.",
+   "ko": "말리의 아들은 과학 숙제로 현미경으로 양파 세포를 봤어요.",
+   "blank": "เซลล์",
+   "src": "made"
+  }
+ ],
  "w|เซิร์ฟเวอร์": [
   {
    "text": "เซิร์ฟเวอร์ของบริษัทล่ม วิชัยเลยเปิดแบบแปลนในแท็บเล็ตไม่ได้ทั้งเช้า",
@@ -14405,6 +14517,22 @@
    "blank": "ด้วยกัน"
   }
  ],
+ "w|ดอก": [
+  {
+   "text": "แม่ของสมชายจัดดอกดาวเรืองใส่แจกันไว้รับปีใหม่",
+   "en": "Somchai's mother arranged marigold flowers in a vase to welcome the New Year.",
+   "ko": "솜차이의 어머니는 새해를 맞으려고 금잔화 꽃을 꽃병에 꽂았어요.",
+   "blank": "ดอก",
+   "src": "made"
+  },
+  {
+   "text": "มาลีกับลูกช่วยกันเก็บดอกมะลิในสวนมาร้อยพวงมาลัย",
+   "en": "Malee and her child picked jasmine flowers from the garden to string a garland.",
+   "ko": "말리와 아이는 정원에서 재스민 꽃을 따서 꽃목걸이를 엮었어요.",
+   "blank": "ดอก",
+   "src": "made"
+  }
+ ],
  "w|ดอกกุหลาบ": [
   {
    "text": "เขาให้ดอกกุหลาบแดงกับแฟน",
@@ -14479,6 +14607,22 @@
    "en": "The flowers are blooming so beautifully.",
    "ko": "꽃이 피어서 예뻐.",
    "blank": "ดอกไม้"
+  }
+ ],
+ "w|ดอลลาร์": [
+  {
+   "text": "ญาติที่ทำงานต่างประเทศส่งเงินดอลลาร์มาให้สมชายช่วยซื้อของปีใหม่",
+   "en": "A relative working abroad sent Somchai dollars to help buy things for New Year.",
+   "ko": "해외에서 일하는 친척이 새해 장보기에 쓰라고 솜차이에게 달러를 보냈어요.",
+   "blank": "ดอลลาร์",
+   "src": "made"
+  },
+  {
+   "text": "มาลีสอนลูกแลกเงินบาทเป็นดอลลาร์ในเกมกระดาน",
+   "en": "Malee taught her child to exchange baht for dollars in a board game.",
+   "ko": "말리는 보드게임에서 아이에게 바트를 달러로 바꾸는 법을 가르쳤어요.",
+   "blank": "ดอลลาร์",
+   "src": "made"
   }
  ],
  "w|ดัง": [
@@ -14893,6 +15037,22 @@
    "blank": "ดี"
   }
  ],
+ "w|ดีขึ้น": [
+  {
+   "text": "หลังได้พักช่วงวันหยุด อาการปวดหลังของสมชายก็ดีขึ้น",
+   "en": "After resting over the holidays, Somchai's back pain got better.",
+   "ko": "연휴 동안 쉬고 나니 솜차이의 허리 통증이 나아졌어요.",
+   "blank": "ดีขึ้น",
+   "src": "made"
+  },
+  {
+   "text": "ไข้ของลูกสาวมาลีดีขึ้นแล้ว หลังจากนอนพักมาสองวัน",
+   "en": "Malee's daughter's fever has gone down after two days of rest.",
+   "ko": "말리 딸의 열은 이틀 쉬고 나서 나아졌어요.",
+   "blank": "ดีขึ้น",
+   "src": "made"
+  }
+ ],
  "w|ดีใจ": [
   {
    "text": "ดีใจที่ได้เจอ",
@@ -15031,6 +15191,22 @@
    "en": "Who's looking after the kid?",
    "ko": "애는 누가 봐?",
    "blank": "ดูแล"
+  }
+ ],
+ "w|ดูแลตัวเอง": [
+  {
+   "text": "ปู่อวยพรให้สมชายรู้จักดูแลตัวเองให้ดีในปีใหม่",
+   "en": "Grandpa wished Somchai to take good care of himself in the New Year.",
+   "ko": "할아버지는 새해에는 몸을 잘 챙기라고 솜차이에게 덕담했어요.",
+   "blank": "ดูแลตัวเอง",
+   "src": "made"
+  },
+  {
+   "text": "มาลีอยากให้ลูกๆ ฝึกดูแลตัวเองตั้งแต่ยังเล็ก",
+   "en": "Malee wants her children to learn to look after themselves from a young age.",
+   "ko": "말리는 아이들이 어릴 때부터 스스로를 돌보는 법을 익히길 바라요.",
+   "blank": "ดูแลตัวเอง",
+   "src": "made"
   }
  ],
  "w|ดูแลรักษา": [
@@ -17075,6 +17251,22 @@
    "en": "The hostage situation is very tense.",
    "ko": "인질 상황이 매우 긴장돼.",
    "blank": "ตัวประกัน"
+  }
+ ],
+ "w|ตัวแปร": [
+  {
+   "text": "สมชายบอกว่าสภาพอากาศเป็นตัวแปรสำคัญว่าจะจัดงานในสวนได้หรือไม่",
+   "en": "Somchai said the weather is the key variable in whether they can hold the party in the garden.",
+   "ko": "솜차이는 정원에서 파티를 할 수 있을지는 날씨가 중요한 변수라고 했어요.",
+   "blank": "ตัวแปร",
+   "src": "made"
+  },
+  {
+   "text": "ลูกสาวของมาลีถามวิธีหาค่าตัวแปรในโจทย์คณิตศาสตร์",
+   "en": "Malee's daughter asked how to find the value of the variable in a maths problem.",
+   "ko": "말리의 딸은 수학 문제에서 변수 값을 구하는 법을 물었어요.",
+   "blank": "ตัวแปร",
+   "src": "made"
   }
  ],
  "w|ตัวละคร": [
@@ -19323,6 +19515,22 @@
    "blank": "ทหาร"
   }
  ],
+ "w|ท่อ": [
+  {
+   "text": "ก่อนญาติมาค้าง สมชายเรียกช่างมาซ่อมท่อที่รั่วใต้อ่างล้างจาน",
+   "en": "Before the relatives came to stay, Somchai called a plumber to fix the leaking pipe under the sink.",
+   "ko": "친척들이 묵으러 오기 전에 솜차이는 개수대 밑에 새는 관을 고치러 기사를 불렀어요.",
+   "blank": "ท่อ",
+   "src": "made"
+  },
+  {
+   "text": "น้ำไม่ไหลทั้งเช้าเพราะท่อหน้าบ้านมาลีแตก",
+   "en": "There was no water all morning because the pipe in front of Malee's house burst.",
+   "ko": "말리네 집 앞 수도관이 터져서 아침 내내 물이 안 나왔어요.",
+   "blank": "ท่อ",
+   "src": "made"
+  }
+ ],
  "w|ทอง": [
   {
    "text": "น้องสาวคิดว่าเอกเอาสร้อยทองของยายไปจำนำ",
@@ -19714,6 +19922,22 @@
    "en": "The organisers thanked all the volunteers who got up from two in the morning.",
    "ko": "주최 측은 새벽 두 시부터 일어난 모든 자원봉사자에게 감사했어요.",
    "blank": "ทั้งหลาย",
+   "src": "made"
+  }
+ ],
+ "w|ทัน": [
+  {
+   "text": "สมชายรีบขับรถไปตลาดให้ทันก่อนร้านปิด",
+   "en": "Somchai drove quickly to the market to make it before the shops closed.",
+   "ko": "솜차이는 가게가 문 닫기 전에 시장에 닿으려고 서둘러 차를 몰았어요.",
+   "blank": "ทัน",
+   "src": "made"
+  },
+  {
+   "text": "มาลีกลับจากตลาดมาทันดูละครตอนเย็นกับแม่",
+   "en": "Malee got back from the market in time to watch the evening drama with her mother.",
+   "ko": "말리는 시장에서 돌아와 어머니와 저녁 드라마를 볼 시간에 맞췄어요.",
+   "blank": "ทัน",
    "src": "made"
   }
  ],
@@ -21615,6 +21839,22 @@
    "en": "He forgot to call back as promised.",
    "ko": "그는 약속대로 다시 전화하는 걸 잊었어.",
    "blank": "โทรกลับ"
+  }
+ ],
+ "w|โทรทัศน์": [
+  {
+   "text": "คืนวันสิ้นปี สมชายเปิดโทรทัศน์ดูการนับถอยหลัง",
+   "en": "On New Year's Eve, Somchai turned on the television to watch the countdown.",
+   "ko": "섣달그믐 밤에 솜차이는 카운트다운을 보려고 텔레비전을 켰어요.",
+   "blank": "โทรทัศน์",
+   "src": "made"
+  },
+  {
+   "text": "ลูกๆ ของมาลีแย่งกันเลือกช่องโทรทัศน์ทั้งบ่าย",
+   "en": "Malee's children fought over the TV channel all afternoon.",
+   "ko": "말리의 아이들은 오후 내내 텔레비전 채널을 두고 다퉜어요.",
+   "blank": "โทรทัศน์",
+   "src": "made"
   }
  ],
  "w|โทรศัพท์": [
@@ -24289,6 +24529,22 @@
    "blank": "บริจาค"
   }
  ],
+ "w|บริโภค": [
+  {
+   "text": "สมชายดูวันหมดอายุก่อนซื้ออาหารแห้งไว้บริโภคช่วงหยุดยาว",
+   "en": "Somchai checked the expiry dates before buying dry food to eat over the long holiday.",
+   "ko": "솜차이는 긴 연휴 동안 먹을 건조식품을 사기 전에 유통기한을 확인했어요.",
+   "blank": "บริโภค",
+   "src": "made"
+  },
+  {
+   "text": "แม่ของมาลีสอนว่าน้ำจากบ่อหลังบ้านไม่ควรนำมาบริโภคโดยไม่ต้มก่อน",
+   "en": "Malee's mother taught her that water from the well behind the house shouldn't be consumed without boiling.",
+   "ko": "말리의 어머니는 뒷마당 우물물은 끓이지 않고 마시면 안 된다고 가르쳤어요.",
+   "blank": "บริโภค",
+   "src": "made"
+  }
+ ],
  "w|บริเวณ": [
   {
    "text": "กิตติรอเพื่อนอยู่บริเวณหน้าโรงเรียนเก่าก่อนไปร้านด้วยกัน",
@@ -24925,6 +25181,22 @@
    "en": "Personal data must be kept secret.",
    "ko": "개인 정보는 비밀로 보관해야 해.",
    "blank": "บุคคล"
+  }
+ ],
+ "w|บุคลากร": [
+  {
+   "text": "บริษัทของสมชายจัดงานเลี้ยงปีใหม่ให้บุคลากรทุกแผนก",
+   "en": "Somchai's company held a New Year party for staff from every department.",
+   "ko": "솜차이의 회사는 모든 부서 직원을 위해 신년 파티를 열었어요.",
+   "blank": "บุคลากร",
+   "src": "made"
+  },
+  {
+   "text": "น้องชายของมาลีเล่าว่าโรงพยาบาลที่ทำงานขาดบุคลากรช่วงวันหยุดยาว",
+   "en": "Malee's younger brother said the hospital where he works is short of staff over the long holiday.",
+   "ko": "말리의 남동생은 자기가 일하는 병원이 긴 연휴 동안 인력이 부족하다고 했어요.",
+   "blank": "บุคลากร",
+   "src": "made"
   }
  ],
  "w|บุคลิก": [
@@ -25745,6 +26017,22 @@
    "blank": "ประกอบ"
   }
  ],
+ "w|ประกอบการ": [
+  {
+   "text": "เพื่อนของสมชายประกอบการร้านขายส่งของขวัญมาสิบปีแล้ว",
+   "en": "Somchai's friend has run a wholesale gift shop for ten years.",
+   "ko": "솜차이의 친구는 선물 도매점을 십 년째 운영하고 있어요.",
+   "blank": "ประกอบการ",
+   "src": "made"
+  },
+  {
+   "text": "สามีของมาลีเคยประกอบการร้านกาแฟ ก่อนจะมาทำงานบริษัท",
+   "en": "Malee's husband used to run a café before he started working for a company.",
+   "ko": "말리의 남편은 회사에 다니기 전에 카페를 운영했어요.",
+   "blank": "ประกอบการ",
+   "src": "made"
+  }
+ ],
  "w|ประกอบด้วย": [
   {
    "text": "คลินิกของเอกประกอบด้วยห้องตรวจสองห้องและห้องผ่าตัดหนึ่งห้อง",
@@ -26211,6 +26499,22 @@
    "blank": "ประสบการณ์"
   }
  ],
+ "w|ประสาท": [
+  {
+   "text": "หมอบอกสมชายว่าอาการชาที่มือเกี่ยวกับเส้นประสาท",
+   "en": "The doctor told Somchai that the numbness in his hand has to do with a nerve.",
+   "ko": "의사는 솜차이에게 손 저림이 신경과 관련 있다고 말했어요.",
+   "blank": "ประสาท",
+   "src": "made"
+  },
+  {
+   "text": "พ่อของมาลีกินวิตามินบำรุงประสาทตามที่หมอแนะนำ",
+   "en": "Malee's father takes nerve vitamins as the doctor recommended.",
+   "ko": "말리의 아버지는 의사가 권한 대로 신경 영양제를 먹어요.",
+   "blank": "ประสาท",
+   "src": "made"
+  }
+ ],
  "w|ประสาน": [
   {
    "text": "ครูประจำชั้นประสานกับผู้ปกครองเรื่องทัศนศึกษาปลายเทอม",
@@ -26641,6 +26945,22 @@
    "en": "Find a free outlet near the desk.",
    "ko": "책상 근처 빈 콘센트를 찾아 봐.",
    "blank": "ปลั๊ก"
+  }
+ ],
+ "w|ปลัด": [
+  {
+   "text": "ปลัดอำเภอมาเปิดงานปีใหม่ที่หมู่บ้านของสมชาย",
+   "en": "The deputy district officer came to open the New Year fair in Somchai's village.",
+   "ko": "부군수가 솜차이네 마을 새해 행사를 열러 왔어요.",
+   "blank": "ปลัด",
+   "src": "made"
+  },
+  {
+   "text": "ลุงของมาลีเป็นปลัดจังหวัด เลยไม่ค่อยได้กลับบ้านช่วงวันหยุด",
+   "en": "Malee's uncle is a deputy provincial governor, so he rarely gets home during the holidays.",
+   "ko": "말리의 삼촌은 부지사라서 휴일에 집에 잘 못 와요.",
+   "blank": "ปลัด",
+   "src": "made"
   }
  ],
  "w|ปลา": [
@@ -27783,6 +28103,22 @@
    "blank": "แปด"
   }
  ],
+ "w|แป๊บ": [
+  {
+   "text": "สมชายบอกลูกว่ารอแป๊บนะ พ่อขอห่อของขวัญให้เสร็จก่อน",
+   "en": "Somchai told his child to wait a sec while he finished wrapping the presents.",
+   "ko": "솜차이는 아이에게 선물 포장 다 할 때까지 잠깐만 기다리라고 했어요.",
+   "blank": "แป๊บ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีบอกลูกว่าแป๊บเดียวนะ แม่ขอตากผ้าก่อน",
+   "en": "Malee told her child to hang on a sec while she hung out the washing.",
+   "ko": "말리는 아이에게 빨래 좀 널고 올 테니 잠깐만 기다리라고 했어요.",
+   "blank": "แป๊บ",
+   "src": "made"
+  }
+ ],
  "w|แปรงฟัน": [
   {
    "text": "แปรงฟันให้สะอาด",
@@ -28889,6 +29225,22 @@
    "blank": "ผู้นำ"
   }
  ],
+ "w|ผู้บริโภค": [
+  {
+   "text": "ช่วงปีใหม่ ผู้บริโภคแห่ซื้อกระเช้าจนร้านค้าของหมดเร็ว",
+   "en": "Around New Year, consumers rushed to buy gift baskets and the shops quickly sold out.",
+   "ko": "새해 무렵 소비자들이 선물 바구니를 몰려 사서 가게 물건이 금방 동났어요.",
+   "blank": "ผู้บริโภค",
+   "src": "made"
+  },
+  {
+   "text": "มาลีดูรายการที่สอนผู้บริโภคให้อ่านฉลากก่อนซื้อ",
+   "en": "Malee watched a programme teaching consumers to read labels before buying.",
+   "ko": "말리는 소비자에게 사기 전에 라벨을 읽으라고 알려 주는 프로그램을 봤어요.",
+   "blank": "ผู้บริโภค",
+   "src": "made"
+  }
+ ],
  "w|ผู้บริสุทธิ์": [
   {
    "text": "เพื่อนบ้านของชัยถูกสงสัยอยู่หลายวัน สุดท้ายตำรวจก็บอกว่าเขาเป็นผู้บริสุทธิ์",
@@ -29278,6 +29630,22 @@
    "en": "A hotel near the shop sent its front desk's walkie-talkie for Chan to repair.",
    "ko": "가게 근처 호텔이 프런트의 무전기를 짠에게 수리를 맡겼어요.",
    "blank": "แผนกต้อนรับ",
+   "src": "made"
+  }
+ ],
+ "w|แผ่นดิน": [
+  {
+   "text": "ปู่ของสมชายบอกว่าแผ่นดินแถวนี้อุดมสมบูรณ์ ปลูกอะไรก็ขึ้น",
+   "en": "Somchai's grandfather says the land around here is so fertile that anything grows.",
+   "ko": "솜차이의 할아버지는 이 근처 땅이 비옥해서 뭘 심어도 잘 자란다고 해요.",
+   "blank": "แผ่นดิน",
+   "src": "made"
+  },
+  {
+   "text": "พ่อของมาลีเล่านิทานเรื่องเจ้าชายที่ออกเดินทางไปทั่วแผ่นดินให้หลานฟัง",
+   "en": "Malee's father told the grandkids a story about a prince who travelled all over the land.",
+   "ko": "말리의 아버지는 손주들에게 온 나라를 여행한 왕자 이야기를 들려줬어요.",
+   "blank": "แผ่นดิน",
    "src": "made"
   }
  ],
@@ -29797,6 +30165,22 @@
    "en": "He already switched parties.",
    "ko": "그는 이미 정당을 옮겼어.",
    "blank": "พรรค"
+  }
+ ],
+ "w|พรรคการเมือง": [
+  {
+   "text": "สมชายเห็นป้ายอวยพรปีใหม่ของหลายพรรคการเมืองตามถนน",
+   "en": "Somchai saw New Year greeting banners from several political parties along the road.",
+   "ko": "솜차이는 길가에서 여러 정당의 새해 인사 현수막을 봤어요.",
+   "blank": "พรรคการเมือง",
+   "src": "made"
+  },
+  {
+   "text": "พ่อกับลุงของมาลีคุยเรื่องพรรคการเมืองกันที่โต๊ะอาหารจนแม่ต้องเปลี่ยนเรื่อง",
+   "en": "Malee's father and uncle talked about political parties at the table until her mother had to change the subject.",
+   "ko": "말리의 아버지와 삼촌이 식탁에서 정당 얘기를 해서 어머니가 화제를 돌려야 했어요.",
+   "blank": "พรรคการเมือง",
+   "src": "made"
   }
  ],
  "w|พรรณนา": [
@@ -30529,6 +30913,22 @@
    "blank": "พัน"
   }
  ],
+ "w|พันธุ์": [
+  {
+   "text": "สมชายซื้อมะม่วงพันธุ์ดีมาฝากญาติช่วงปีใหม่",
+   "en": "Somchai bought good-variety mangoes as a New Year gift for his relatives.",
+   "ko": "솜차이는 새해에 친척들에게 줄 좋은 품종의 망고를 샀어요.",
+   "blank": "พันธุ์",
+   "src": "made"
+  },
+  {
+   "text": "มาลีอยากเลี้ยงหมาพันธุ์เล็ก เพราะบ้านไม่ค่อยมีที่",
+   "en": "Malee wants a small breed of dog because the house doesn't have much space.",
+   "ko": "말리는 집이 좁아서 소형견을 키우고 싶어 해요.",
+   "blank": "พันธุ์",
+   "src": "made"
+  }
+ ],
  "w|พันแผล": [
   {
    "text": "เอกสอนเจ้าของให้พันแผลที่อุ้งเท้าแมวเองที่บ้าน",
@@ -30737,6 +31137,22 @@
    "blank": "พิเศษ"
   }
  ],
+ "w|พิษ": [
+  {
+   "text": "สมชายไม่กล้ากินหอยที่ค้างคืน กลัวอาหารเป็นพิษตอนปีใหม่",
+   "en": "Somchai didn't dare eat the leftover shellfish, afraid of food poisoning over New Year.",
+   "ko": "솜차이는 새해에 식중독에 걸릴까 봐 하룻밤 지난 조개를 못 먹었어요.",
+   "blank": "พิษ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเตือนลูกว่าเห็ดป่าบางชนิดมีพิษ ห้ามเก็บมากินเอง",
+   "en": "Malee warned her kids that some wild mushrooms are poisonous and not to pick them to eat.",
+   "ko": "말리는 아이들에게 어떤 야생 버섯은 독이 있으니 따서 먹지 말라고 했어요.",
+   "blank": "พิษ",
+   "src": "made"
+  }
+ ],
  "w|พิสูจน์": [
   {
    "text": "หลักฐานนี้พิสูจน์ความบริสุทธิ์",
@@ -30838,6 +31254,22 @@
    "en": "The company handbook says staff should dress smartly on days they meet clients.",
    "ko": "회사 안내서에는 직원은 고객을 만나는 날 단정하게 입어야 한다고 쓰여 있어요.",
    "blank": "พึง",
+   "src": "made"
+  }
+ ],
+ "w|พืช": [
+  {
+   "text": "สมชายย้ายกระถางพืชที่ทนแดดไปวางไว้หน้าบ้าน",
+   "en": "Somchai moved the pots of sun-loving plants to the front of the house.",
+   "ko": "솜차이는 햇볕에 강한 식물 화분을 집 앞으로 옮겼어요.",
+   "blank": "พืช",
+   "src": "made"
+  },
+  {
+   "text": "ลูกชายของมาลีทำการบ้านเรื่องการเจริญเติบโตของพืช",
+   "en": "Malee's son is doing homework on how plants grow.",
+   "ko": "말리의 아들은 식물의 성장에 관한 숙제를 하고 있어요.",
+   "blank": "พืช",
    "src": "made"
   }
  ],
@@ -30974,6 +31406,22 @@
    "en": "The auntie next to the shop likes talking about the days when snacks cost one baht a pack.",
    "ko": "가게 옆 아주머니는 과자 한 봉지가 일 바트였던 시절 이야기를 즐겨 해요.",
    "blank": "พูดถึง",
+   "src": "made"
+  }
+ ],
+ "w|เพชร": [
+  {
+   "text": "สมชายซื้อแหวนเพชรเป็นของขวัญปีใหม่ให้ภรรยา",
+   "en": "Somchai bought a diamond ring as a New Year gift for his wife.",
+   "ko": "솜차이는 아내에게 새해 선물로 다이아몬드 반지를 샀어요.",
+   "blank": "เพชร",
+   "src": "made"
+  },
+  {
+   "text": "คุณยายเล่าให้มาลีฟังว่าต่างหูเพชรคู่นี้ได้มาตั้งแต่วันแต่งงาน",
+   "en": "Grandma told Malee that she got this pair of diamond earrings on her wedding day.",
+   "ko": "할머니는 이 다이아몬드 귀걸이를 결혼식 날 받았다고 말리에게 이야기해 줬어요.",
+   "blank": "เพชร",
    "src": "made"
   }
  ],
@@ -31817,6 +32265,22 @@
    "src": "made"
   }
  ],
+ "w|ไฟฟ้า": [
+  {
+   "text": "สมชายเรียกช่างไฟฟ้ามาดูปลั๊กก่อนแขวนดวงไฟหน้าบ้าน",
+   "en": "Somchai called an electrician to check the sockets before hanging lights in front of the house.",
+   "ko": "솜차이는 집 앞에 전등을 달기 전에 전기 기사를 불러 콘센트를 점검했어요.",
+   "blank": "ไฟฟ้า",
+   "src": "made"
+  },
+  {
+   "text": "พอไฟฟ้าดับตอนบ่าย มาลีก็พาลูกๆ ไปนั่งเล่นที่ระเบียง",
+   "en": "When the power went out in the afternoon, Malee took the kids out to the balcony.",
+   "ko": "오후에 정전이 되자 말리는 아이들을 데리고 베란다에 나가 앉았어요.",
+   "blank": "ไฟฟ้า",
+   "src": "made"
+  }
+ ],
  "w|ไฟล์": [
   {
    "text": "ส่งไฟล์ให้ฉันหน่อย",
@@ -32033,6 +32497,22 @@
    "en": "Submit the work within this week.",
    "ko": "이번 주 안에 과제를 내.",
    "blank": "ภายใน"
+  }
+ ],
+ "w|ภายหลัง": [
+  {
+   "text": "สมชายลืมซื้อพลุ แต่ภายหลังเพื่อนบ้านก็แบ่งให้",
+   "en": "Somchai forgot to buy fireworks, but later his neighbour shared some.",
+   "ko": "솜차이는 폭죽 사는 걸 잊었지만 나중에 이웃이 나눠 줬어요.",
+   "blank": "ภายหลัง",
+   "src": "made"
+  },
+  {
+   "text": "มาลีบอกลูกให้ทำการบ้านก่อน ส่วนเรื่องเล่นเกมค่อยว่ากันภายหลัง",
+   "en": "Malee told her child to do homework first and they'd talk about games later.",
+   "ko": "말리는 아이에게 숙제부터 하고 게임은 나중에 얘기하자고 했어요.",
+   "blank": "ภายหลัง",
+   "src": "made"
   }
  ],
  "w|ภารกิจ": [
@@ -33507,6 +33987,22 @@
    "en": "Your viewpoint is interesting.",
    "ko": "네 관점이 흥미로워.",
    "blank": "มุมมอง"
+  }
+ ],
+ "w|มูลค่า": [
+  {
+   "text": "ของขวัญที่บริษัทแจกพนักงานปีนี้มีมูลค่าไม่มาก แต่สมชายก็ดีใจ",
+   "en": "The gift the company gave staff this year wasn't worth much, but Somchai was still happy.",
+   "ko": "올해 회사가 직원들에게 준 선물은 값어치가 크지 않았지만 솜차이는 기뻤어요.",
+   "blank": "มูลค่า",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเพิ่งรู้ว่านาฬิกาเก่าของปู่มีมูลค่ามากกว่าที่คิด",
+   "en": "Malee just found out that Grandpa's old watch is worth more than she thought.",
+   "ko": "말리는 할아버지의 낡은 시계가 생각보다 값어치가 크다는 걸 이제 알았어요.",
+   "blank": "มูลค่า",
+   "src": "made"
   }
  ],
  "w|มูลนิธิ": [
@@ -35673,6 +36169,22 @@
    "blank": "รวย"
   }
  ],
+ "w|รส": [
+  {
+   "text": "ขนมเปี๊ยะร้านนี้มีหลายรส สมชายเลยซื้อมาลองทุกอย่าง",
+   "en": "This shop's pastries come in many flavours, so Somchai bought one of each to try.",
+   "ko": "이 가게 월병은 맛이 여러 가지라서 솜차이는 전부 사서 맛봤어요.",
+   "blank": "รส",
+   "src": "made"
+  },
+  {
+   "text": "มาลีปรุงต้มยำให้รสอ่อนลง เพราะลูกๆ กินเผ็ดไม่ได้",
+   "en": "Malee made the tom yum milder because the kids can't eat spicy food.",
+   "ko": "아이들이 매운 걸 못 먹어서 말리는 똠얌 맛을 순하게 했어요.",
+   "blank": "รส",
+   "src": "made"
+  }
+ ],
  "w|รสชาติ": [
   {
    "text": "รสชาตินี้เข้มข้นดี",
@@ -37451,6 +37963,22 @@
    "en": "I want to hear your story.",
    "ko": "네 이야기를 듣고 싶어.",
    "blank": "เรื่องราว"
+  }
+ ],
+ "w|เรือน": [
+  {
+   "text": "ครอบครัวของสมชายช่วยกันทำความสะอาดเรือนไม้หลังเก่าของยายก่อนปีใหม่",
+   "en": "Somchai's family cleaned Grandma's old wooden house together before the New Year.",
+   "ko": "솜차이 가족은 새해 전에 할머니의 오래된 나무집을 함께 청소했어요.",
+   "blank": "เรือน",
+   "src": "made"
+  },
+  {
+   "text": "บ้านของมาลีเป็นเรือนไทยสองชั้นที่ปู่สร้างไว้",
+   "en": "Malee's home is a two-storey traditional Thai house that her grandfather built.",
+   "ko": "말리의 집은 할아버지가 지은 이층짜리 태국 전통 가옥이에요.",
+   "blank": "เรือน",
+   "src": "made"
   }
  ],
  "w|เรือนจำ": [
@@ -40657,6 +41185,22 @@
    "blank": "วินาที"
   }
  ],
+ "w|วินิจฉัย": [
+  {
+   "text": "หมอวินิจฉัยว่าสมชายแค่เครียดจากงานช่วงสิ้นปี ไม่ได้ป่วยหนัก",
+   "en": "The doctor diagnosed Somchai with just end-of-year work stress, nothing serious.",
+   "ko": "의사는 솜차이가 연말 업무 스트레스일 뿐 심각한 병은 아니라고 진단했어요.",
+   "blank": "วินิจฉัย",
+   "src": "made"
+  },
+  {
+   "text": "มาลีพาแม่ไปหาหมอ แล้วหมอวินิจฉัยว่าเป็นโรคกระเพาะ",
+   "en": "Malee took her mother to the doctor, who diagnosed a stomach ailment.",
+   "ko": "말리는 어머니를 모시고 병원에 갔고 의사는 위염이라고 진단했어요.",
+   "blank": "วินิจฉัย",
+   "src": "made"
+  }
+ ],
  "w|วิว": [
   {
    "text": "วิชัยขอเปลี่ยนห้องเพราะอยากได้ห้องที่เห็นวิวทะเล",
@@ -41068,6 +41612,22 @@
    "en": "The monk at the temple by the lane has disciples who come to sweep the temple grounds every morning.",
    "ko": "골목 앞 절의 스님에게는 매일 아침 절 마당을 쓸러 오는 제자들이 있어요.",
    "blank": "ศิษย์",
+   "src": "made"
+  }
+ ],
+ "w|ศีรษะ": [
+  {
+   "text": "สมชายก้มศีรษะไหว้ขอพรปู่ย่าในเช้าวันปีใหม่",
+   "en": "On New Year's morning, Somchai bowed his head to ask his grandparents for their blessing.",
+   "ko": "새해 아침에 솜차이는 머리를 숙여 조부모님께 덕담을 청했어요.",
+   "blank": "ศีรษะ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีนวดศีรษะให้แม่ที่บ่นว่าปวดหัว",
+   "en": "Malee massaged the head of her mother, who was complaining of a headache.",
+   "ko": "말리는 두통을 호소하는 어머니의 머리를 주물러 드렸어요.",
+   "blank": "ศีรษะ",
    "src": "made"
   }
  ],
@@ -42003,6 +42563,22 @@
    "blank": "สมัยก่อน"
   }
  ],
+ "w|สมัยใหม่": [
+  {
+   "text": "สมชายเลือกปฏิทินลายสมัยใหม่แทนแบบเดิมที่บ้านใช้ทุกปี",
+   "en": "Somchai chose a calendar with a modern design instead of the usual one the family uses every year.",
+   "ko": "솜차이는 집에서 해마다 쓰던 것 대신 현대적인 디자인의 달력을 골랐어요.",
+   "blank": "สมัยใหม่",
+   "src": "made"
+  },
+  {
+   "text": "ลูกของมาลีชอบเพลงสมัยใหม่ ส่วนยายชอบเพลงลูกทุ่ง",
+   "en": "Malee's child likes modern music, while Grandma likes country songs.",
+   "ko": "말리의 아이는 요즘 노래를 좋아하고 할머니는 룩퉁 노래를 좋아해요.",
+   "blank": "สมัยใหม่",
+   "src": "made"
+  }
+ ],
  "w|สมาคม": [
   {
    "text": "สมาคมครูจัดอบรมประจำปี",
@@ -42881,6 +43457,22 @@
    "en": "Wait and see for a while first.",
    "ko": "잠깐 두고 보자.",
    "blank": "สัก"
+  }
+ ],
+ "w|สักครู่": [
+  {
+   "text": "พนักงานขอให้สมชายรอสักครู่ระหว่างห่อกระเช้าของขวัญ",
+   "en": "The staff asked Somchai to wait a moment while they wrapped the gift basket.",
+   "ko": "직원은 선물 바구니를 포장하는 동안 솜차이에게 잠시 기다려 달라고 했어요.",
+   "blank": "สักครู่",
+   "src": "made"
+  },
+  {
+   "text": "มาลีบอกให้ทุกคนนั่งรอสักครู่ ข้าวผัดใกล้เสร็จแล้ว",
+   "en": "Malee asked everyone to sit and wait a moment because the fried rice was nearly done.",
+   "ko": "말리는 볶음밥이 거의 다 됐으니 다들 잠시 앉아 기다리라고 했어요.",
+   "blank": "สักครู่",
+   "src": "made"
   }
  ],
  "w|สั่ง": [
@@ -44673,6 +45265,22 @@
    "blank": "เสื้อเชิ้ต"
   }
  ],
+ "w|เสื้อผ้า": [
+  {
+   "text": "ก่อนปีใหม่ สมชายพาลูกไปซื้อเสื้อผ้าชุดใหม่",
+   "en": "Before the New Year, Somchai took his child to buy new clothes.",
+   "ko": "새해 전에 솜차이는 아이를 데리고 새 옷을 사러 갔어요.",
+   "blank": "เสื้อผ้า",
+   "src": "made"
+  },
+  {
+   "text": "วันหยุดนี้มาลีจะจัดตู้เสื้อผ้าใหม่ทั้งตู้",
+   "en": "This holiday, Malee is going to reorganise her whole wardrobe.",
+   "ko": "이번 휴일에 말리는 옷장을 통째로 새로 정리할 거예요.",
+   "blank": "เสื้อผ้า",
+   "src": "made"
+  }
+ ],
  "w|เสื้อยืด": [
   {
    "text": "ฉันใส่เสื้อยืดไปเดินเล่น",
@@ -45458,6 +46066,22 @@
    "en": "A delivery rider took off his helmet and handed Chan a phone with a cracked screen.",
    "ko": "배달 기사가 헬멧을 벗고 액정이 깨진 휴대폰을 짠에게 내밀었어요.",
    "blank": "หมวกกันน็อก",
+   "src": "made"
+  }
+ ],
+ "w|หมวด": [
+  {
+   "text": "สมชายจดรายการของที่ต้องซื้อแยกเป็นหมวด ทั้งของกิน ของใช้ และของขวัญ",
+   "en": "Somchai wrote his shopping list in categories: food, household items and gifts.",
+   "ko": "솜차이는 살 물건 목록을 먹을 것, 쓸 것, 선물로 분류해서 적었어요.",
+   "blank": "หมวด",
+   "src": "made"
+  },
+  {
+   "text": "มาลีให้ลูกจัดหนังสือบนชั้นเป็นหมวด ทั้งนิทาน การ์ตูน และสารคดี",
+   "en": "Malee had her child sort the books on the shelf into categories: stories, comics and non-fiction.",
+   "ko": "말리는 아이에게 책장의 책을 동화, 만화, 논픽션으로 분류해 정리하게 했어요.",
+   "blank": "หมวด",
    "src": "made"
   }
  ],
@@ -47261,6 +47885,22 @@
    "en": "This kind of flower is rare in the city.",
    "ko": "이런 꽃은 도시에서 보기 드물어.",
    "blank": "หายาก"
+  }
+ ],
+ "w|หารือ": [
+  {
+   "text": "สมชายหารือกับพี่น้องว่าปีนี้จะฉลองปีใหม่ที่บ้านใคร",
+   "en": "Somchai discussed with his siblings whose house they'd celebrate New Year at this year.",
+   "ko": "솜차이는 올해 누구 집에서 새해를 맞을지 형제들과 의논했어요.",
+   "blank": "หารือ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีหารือกับสามีว่าจะทาสีห้องนั่งเล่นใหม่ดีไหม",
+   "en": "Malee discussed with her husband whether to repaint the living room.",
+   "ko": "말리는 거실을 새로 칠할지 남편과 의논했어요.",
+   "blank": "หารือ",
+   "src": "made"
   }
  ],
  "w|หาว": [
