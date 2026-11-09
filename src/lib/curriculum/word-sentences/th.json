@@ -679,6 +679,22 @@
    "src": "made"
   }
  ],
+ "w|กรีดร้อง": [
+  {
+   "text": "เด็กคนหนึ่งกรีดร้องเมื่อเห็นโครงกระดูกไดโนเสาร์ขนาดยักษ์ กิตติต้องรีบเข้าไปปลอบ",
+   "en": "A child screamed at the sight of the giant dinosaur skeleton, and Kitti had to hurry over to comfort her.",
+   "ko": "한 아이가 거대한 공룡 뼈를 보고 비명을 질러서 끼띠가 얼른 달래러 갔어요.",
+   "blank": "กรีดร้อง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเกือบกรีดร้องเมื่อเห็นหนูวิ่งผ่านหลังร้านตอนเช้ามืด",
+   "en": "Wanna nearly screamed when she saw a rat run behind the shop before dawn.",
+   "ko": "완나는 새벽에 가게 뒤로 쥐가 뛰어가는 걸 보고 비명을 지를 뻔했어요.",
+   "blank": "กรีดร้อง",
+   "src": "made"
+  }
+ ],
  "w|กรุณา": [
   {
    "text": "ป้ายหน้าห้องน้ำร้านวิชัยเขียนว่ากรุณารักษาความสะอาด",
@@ -3261,6 +3277,22 @@
    "src": "made"
   }
  ],
+ "w|แก่น": [
+  {
+   "text": "กิตติสรุปแก่นของนิทรรศการว่าเป็นเรื่องการค้าขายระหว่างเมืองท่า",
+   "en": "Kitti summed up the core of the exhibition as being about trade between port cities.",
+   "ko": "끼띠는 전시의 핵심을 항구 도시들 사이의 교역이라고 요약했어요.",
+   "blank": "แก่น",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาบอกลูกน้องว่าแก่นของงานร้านขนมคือความสดใหม่ทุกวัน",
+   "en": "Wanna told her staff the core of bakery work is freshness every day.",
+   "ko": "완나는 직원들에게 빵집 일의 핵심은 매일의 신선함이라고 말했어요.",
+   "blank": "แก่น",
+   "src": "made"
+  }
+ ],
  "w|แก้ม": [
   {
    "text": "แก้มเธอแดงเพราะอากาศหนาว",
@@ -4347,6 +4379,22 @@
    "blank": "ขอร้อง"
   }
  ],
+ "w|ข้อสรุป": [
+  {
+   "text": "หลังศึกษาหลายปี นักวิจัยได้ข้อสรุปว่าพระพิมพ์นี้มีอายุเก่ากว่าที่คิด",
+   "en": "After years of study, the researchers concluded that this votive tablet is older than thought.",
+   "ko": "몇 년 연구 끝에 연구자들은 이 불상 판이 생각보다 오래됐다는 결론을 냈어요.",
+   "blank": "ข้อสรุป",
+   "src": "made"
+  },
+  {
+   "text": "วรรณากับสามีคุยกันนานแต่ยังไม่ได้ข้อสรุปว่าจะขยายร้านหรือไม่",
+   "en": "Wanna and her husband talked for a long time but haven't reached a conclusion on expanding the shop.",
+   "ko": "완나와 남편은 오래 이야기했지만 가게를 넓힐지 결론을 못 냈어요.",
+   "blank": "ข้อสรุป",
+   "src": "made"
+  }
+ ],
  "w|ข้อสอบ": [
   {
    "text": "อ่านข้อสอบให้ครบก่อนลงมือทำ",
@@ -5377,6 +5425,22 @@
    "en": "I don't get it.",
    "ko": "나 이해가 안 돼.",
    "blank": "เข้าใจ"
+  }
+ ],
+ "w|เข้าใจผิด": [
+  {
+   "text": "หลายคนเข้าใจผิดว่ารูปปั้นนี้ทำจากทองคำ แต่กิตติบอกว่าเป็นสำริด",
+   "en": "Many people mistakenly think this statue is made of gold, but Kitti says it's bronze.",
+   "ko": "많은 사람이 이 조각상을 금으로 만든 줄 오해하지만 끼띠는 청동이라고 해요.",
+   "blank": "เข้าใจผิด",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าเข้าใจผิดคิดว่าร้านของวรรณาเปิดวันจันทร์ เลยมาเจอประตูปิด",
+   "en": "A customer mistakenly thought Wanna's shop opens on Mondays and found the door shut.",
+   "ko": "손님은 완나네 가게가 월요일에 연다고 잘못 알고 왔다가 닫힌 문을 봤어요.",
+   "blank": "เข้าใจผิด",
+   "src": "made"
   }
  ],
  "w|เข้าถึง": [
@@ -7265,6 +7329,22 @@
    "en": "Explain the difference for me.",
    "ko": "차이점을 설명해 줘.",
    "blank": "ความแตกต่าง"
+  }
+ ],
+ "w|ความถี่": [
+  {
+   "text": "กิตติเปิดวิทยุในห้องควบคุมแล้วหมุนหาความถี่ของสถานีท้องถิ่น",
+   "en": "Kitti turned on the radio in the control room and tuned to the local station's frequency.",
+   "ko": "끼띠는 관제실 라디오를 켜고 지역 방송 주파수를 찾았어요.",
+   "blank": "ความถี่",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเพิ่มความถี่ในการส่งขนมให้คาเฟ่จากสัปดาห์ละครั้งเป็นวันเว้นวัน",
+   "en": "Wanna increased the frequency of deliveries to the café from once a week to every other day.",
+   "ko": "완나는 카페 납품 횟수를 일주일에 한 번에서 이틀에 한 번으로 늘렸어요.",
+   "blank": "ความถี่",
+   "src": "made"
   }
  ],
  "w|ความทรงจำ": [
@@ -10169,6 +10249,22 @@
    "blank": "ใคร"
   }
  ],
+ "w|ใครๆ": [
+  {
+   "text": "ห้องมัมมี่เป็นห้องที่ใครๆ ก็อยากเข้าไปดู",
+   "en": "The mummy room is the one everyone wants to see.",
+   "ko": "미라 전시실은 누구나 들어가 보고 싶어 하는 방이에요.",
+   "blank": "ใครๆ",
+   "src": "made"
+  },
+  {
+   "text": "บราวนี่ของวรรณาอร่อยจนใครๆ ในซอยก็ต้องแวะซื้อ",
+   "en": "Wanna's brownies are so good that everyone in the lane has to stop by and buy some.",
+   "ko": "완나의 브라우니가 너무 맛있어서 골목 사람 누구나 들러 사 가요.",
+   "blank": "ใครๆ",
+   "src": "made"
+  }
+ ],
  "w|ใครบางคน": [
   {
    "text": "มีใครบางคนโทรมา",
@@ -12202,6 +12298,22 @@
    "en": "Old documents say her great-grandfather was once the plaintiff in a land boundary case.",
    "ko": "옛 서류에 따르면 증조할아버지는 토지 경계 소송의 원고였어요.",
    "blank": "โจทก์",
+   "src": "made"
+  }
+ ],
+ "w|โจมตี": [
+  {
+   "text": "กิตติอธิบายว่ากำแพงเมืองเก่าสร้างขึ้นเพื่อป้องกันศัตรูไม่ให้โจมตีจากทางเหนือ",
+   "en": "Kitti explained that the old city wall was built to stop enemies attacking from the north.",
+   "ko": "끼띠는 옛 성벽이 북쪽에서 적이 공격하지 못하게 쌓은 거라고 설명했어요.",
+   "blank": "โจมตี",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาขำเมื่อเห็นนกพิราบฝูงหนึ่งโจมตีเศษขนมปังที่หน้าร้าน",
+   "en": "Wanna laughed when she saw a flock of pigeons attack the bread crumbs outside the shop.",
+   "ko": "완나는 비둘기 떼가 가게 앞 빵 부스러기에 달려드는 걸 보고 웃었어요.",
+   "blank": "โจมตี",
    "src": "made"
   }
  ],
@@ -14269,6 +14381,22 @@
    "blank": "แชร์"
   }
  ],
+ "w|โชค": [
+  {
+   "text": "กิตติบอกว่าการเจอเหรียญโบราณในทุ่งนาเป็นเรื่องของโชคล้วนๆ",
+   "en": "Kitti said finding ancient coins in a rice field is pure luck.",
+   "ko": "끼띠는 논에서 옛 동전을 찾은 건 순전히 운이라고 했어요.",
+   "blank": "โชค",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาบอกว่าร้านอยู่รอดมาได้ส่วนหนึ่งเพราะโชค อีกส่วนเพราะขยัน",
+   "en": "Wanna says the shop survived partly by luck and partly by hard work.",
+   "ko": "완나는 가게가 버틴 건 반은 운이고 반은 부지런함 덕이라고 해요.",
+   "blank": "โชค",
+   "src": "made"
+  }
+ ],
  "w|โชคดี": [
   {
    "text": "วันนี้ฉันโชคดีมาก",
@@ -14461,6 +14589,22 @@
    "en": "Why did you hide it?",
    "ko": "왜 숨긴 거야?",
    "blank": "ซ่อน"
+  }
+ ],
+ "w|ซ้อน": [
+  {
+   "text": "กิตติระวังไม่ให้ใครวางกล่องซ้อนกันบนตู้โชว์ของเก่า",
+   "en": "Kitti makes sure no one stacks boxes on top of the antique display cases.",
+   "ko": "끼띠는 아무도 골동품 진열장 위에 상자를 겹쳐 놓지 않게 조심해요.",
+   "blank": "ซ้อน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาซ้อนแพนเค้กสามชั้นแล้วราดน้ำผึ้งด้านบน",
+   "en": "Wanna stacked three pancakes and drizzled honey on top.",
+   "ko": "완나는 팬케이크를 세 장 쌓고 위에 꿀을 뿌렸어요.",
+   "blank": "ซ้อน",
+   "src": "made"
   }
  ],
  "w|ซ่อนตัว": [
@@ -16033,6 +16177,22 @@
    "en": "Just a little more time, please.",
    "ko": "조금만 더 시간 줘.",
    "blank": "เดียว"
+  }
+ ],
+ "w|เดี่ยว": [
+  {
+   "text": "ภาพเหมือนเดี่ยวของเจ้าเมืองถูกแขวนไว้ตรงกลางห้องโถง",
+   "en": "The single portrait of the city's ruler hangs in the middle of the hall.",
+   "ko": "성주의 단독 초상화가 홀 한가운데 걸려 있어요.",
+   "blank": "เดี่ยว",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเคยส่งเค้กเข้าประกวดในประเภทเดี่ยว และได้รางวัลที่สองกลับมา",
+   "en": "Wanna once entered a cake contest in the solo category and came back with second prize.",
+   "ko": "완나는 케이크 대회 개인 부문에 나가 이 등 상을 받아 온 적이 있어요.",
+   "blank": "เดี่ยว",
+   "src": "made"
   }
  ],
  "w|เดี๋ยว": [
@@ -20411,6 +20571,22 @@
    "blank": "ทอน"
   }
  ],
+ "w|ท่อน": [
+  {
+   "text": "ท่อนซุงที่ใช้ทำเรือขุดลำนี้มาจากต้นตะเคียนอายุหลายร้อยปี",
+   "en": "The log used to make this dugout canoe came from a centuries-old ironwood tree.",
+   "ko": "이 통나무배를 만든 통나무는 수백 년 된 나무에서 나왔어요.",
+   "blank": "ท่อน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาหั่นขนมปังฝรั่งเศสเป็นท่อนสั้นๆ ไว้ทำกระเทียมบัตเตอร์",
+   "en": "Wanna cut the baguette into short pieces to make garlic butter bread.",
+   "ko": "완나는 바게트를 짧게 토막 내 마늘 버터빵을 만들었어요.",
+   "blank": "ท่อน",
+   "src": "made"
+  }
+ ],
  "w|ทะเบียน": [
   {
    "text": "ตรวจทะเบียนรถก่อนออกเดินทาง",
@@ -22243,6 +22419,22 @@
    "blank": "เทศกาล"
   }
  ],
+ "w|เทศบาล": [
+  {
+   "text": "เทศบาลให้งบพิพิธภัณฑ์ของกิตติซ่อมหลังคาที่รั่ว",
+   "en": "The municipality gave Kitti's museum a budget to fix the leaking roof.",
+   "ko": "시청은 끼띠의 박물관에 새는 지붕을 고칠 예산을 줬어요.",
+   "blank": "เทศบาล",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าหน้าที่เทศบาลมาตรวจความสะอาดในครัวของวรรณาเดือนละครั้ง",
+   "en": "Municipal officials come to inspect the cleanliness of Wanna's kitchen once a month.",
+   "ko": "시청 직원이 한 달에 한 번 완나네 주방 위생을 점검하러 와요.",
+   "blank": "เทศบาล",
+   "src": "made"
+  }
+ ],
  "w|เทอม": [
   {
    "text": "เทอมนี้ฉันยุ่งกับโปรเจกต์มาก",
@@ -22373,6 +22565,22 @@
    "en": "That is all there is to it.",
    "ko": "일이 그것뿐이야.",
    "blank": "เท่านั้นเอง"
+  }
+ ],
+ "w|เท่าไร": [
+  {
+   "text": "นักท่องเที่ยวถามกิตติว่าตั๋วเข้าชมสำหรับผู้ใหญ่ราคาเท่าไร",
+   "en": "A tourist asked Kitti how much an adult admission ticket costs.",
+   "ko": "관광객은 끼띠에게 성인 입장권이 얼마냐고 물었어요.",
+   "blank": "เท่าไร",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาไม่แน่ใจว่าวันนี้จะขายขนมปังได้เท่าไร เพราะฝนตกทั้งวัน",
+   "en": "Wanna isn't sure how much bread she'll sell today because it's been raining all day.",
+   "ko": "완나는 하루 종일 비가 와서 오늘 빵을 얼마나 팔지 모르겠어요.",
+   "blank": "เท่าไร",
+   "src": "made"
   }
  ],
  "w|เที่ยง": [
@@ -23761,6 +23969,22 @@
    "en": "It will probably rain tomorrow.",
    "ko": "내일은 비가 올 것 같아.",
    "blank": "น่าจะ"
+  }
+ ],
+ "w|น่าเชื่อ": [
+  {
+   "text": "คำอธิบายของนักโบราณคดีฟังดูน่าเชื่อ กิตติจึงนำไปใส่ในป้ายนิทรรศการ",
+   "en": "The archaeologist's explanation sounded convincing, so Kitti put it on the exhibition label.",
+   "ko": "고고학자의 설명이 그럴듯해서 끼띠는 그걸 전시 안내판에 넣었어요.",
+   "blank": "น่าเชื่อ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าบอกว่าขนมปังร้านวรรณาทำจากแป้งออร์แกนิกทั้งหมด ซึ่งฟังดูน่าเชื่อเพราะรสชาติดีมาก",
+   "en": "A customer said Wanna's bread is all organic flour, which sounds believable because it tastes so good.",
+   "ko": "손님은 완나네 빵이 전부 유기농 밀가루라고 했는데 맛이 아주 좋아서 그럴듯하게 들렸어요.",
+   "blank": "น่าเชื่อ",
+   "src": "made"
   }
  ],
  "w|น่าตื่นเต้น": [
@@ -25971,6 +26195,22 @@
    "src": "made"
   }
  ],
+ "w|บาน": [
+  {
+   "text": "กิตติจัดดอกบัวที่บานเต็มที่ไว้ในอ่างหน้าทางเข้าพิพิธภัณฑ์",
+   "en": "Kitti set out fully bloomed lotus flowers in the basin at the museum entrance.",
+   "ko": "끼띠는 박물관 입구 수반에 활짝 핀 연꽃을 놓았어요.",
+   "blank": "บาน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาซื้อดอกกุหลาบที่บานสวยมาแต่งหน้าเค้กแต่งงาน",
+   "en": "Wanna bought beautifully bloomed roses to decorate the wedding cake.",
+   "ko": "완나는 예쁘게 핀 장미를 사서 웨딩 케이크를 장식했어요.",
+   "blank": "บาน",
+   "src": "made"
+  }
+ ],
  "w|บ้าน": [
   {
    "text": "บ้านอยู่ไกล",
@@ -26482,6 +26722,22 @@
    "en": "The architect brought a model of the new pool to show Pranee and the club members.",
    "ko": "건축가가 새 수영장 모형을 가져와 쁘라니와 클럽 회원들에게 보여 줬어요.",
    "blank": "แบบจำลอง",
+   "src": "made"
+  }
+ ],
+ "w|แบบแผน": [
+  {
+   "text": "กิตติเล่าว่าการแต่งกายของชาววังสมัยก่อนมีแบบแผนเคร่งครัดมาก",
+   "en": "Kitti said court dress in the old days followed very strict conventions.",
+   "ko": "끼띠는 옛날 궁중 복장에 아주 엄격한 격식이 있었다고 했어요.",
+   "blank": "แบบแผน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาไม่ทำตามแบบแผนเดิม เธอชอบลองใส่ใบเตยลงในขนมฝรั่ง",
+   "en": "Wanna doesn't follow the usual conventions; she likes adding pandan to Western pastries.",
+   "ko": "완나는 기존 틀을 따르지 않고 서양 과자에 판단 잎을 넣어 보는 걸 좋아해요.",
+   "blank": "แบบแผน",
    "src": "made"
   }
  ],
@@ -27421,6 +27677,22 @@
    "en": "Just pick the type you like.",
    "ko": "좋아하는 종류를 골라.",
    "blank": "ประเภท"
+  }
+ ],
+ "w|ประมวลกฎหมาย": [
+  {
+   "text": "พิพิธภัณฑ์จัดแสดงประมวลกฎหมายฉบับแรกที่พิมพ์ด้วยเครื่องพิมพ์ในประเทศ",
+   "en": "The museum displays the first legal code printed on a press in the country.",
+   "ko": "박물관은 국내 인쇄기로 찍은 첫 법전을 전시하고 있어요.",
+   "blank": "ประมวลกฎหมาย",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าที่เป็นทนายถือประมวลกฎหมายเล่มหนามานั่งอ่านในร้านวรรณาทุกบ่าย",
+   "en": "A lawyer customer brings a thick legal code to read in Wanna's shop every afternoon.",
+   "ko": "변호사 손님은 매일 오후 두꺼운 법전을 들고 완나네 가게에 와서 읽어요.",
+   "blank": "ประมวลกฎหมาย",
+   "src": "made"
   }
  ],
  "w|ประมาณ": [
@@ -30649,6 +30921,22 @@
    "blank": "เผ็ด"
   }
  ],
+ "w|เผย": [
+  {
+   "text": "กิตติเผยว่าพิพิธภัณฑ์จะเปิดห้องจัดแสดงใหม่ในเดือนหน้า",
+   "en": "Kitti revealed that the museum will open a new gallery next month.",
+   "ko": "끼띠는 박물관이 다음 달에 새 전시실을 연다고 밝혔어요.",
+   "blank": "เผย",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเผยเคล็ดลับว่าครัวซองต์จะกรอบถ้าพักแป้งในตู้เย็นข้ามคืน",
+   "en": "Wanna revealed the secret: croissants turn out crisp if the dough rests in the fridge overnight.",
+   "ko": "완나는 반죽을 냉장고에서 하룻밤 재우면 크루아상이 바삭해진다는 비결을 밝혔어요.",
+   "blank": "เผย",
+   "src": "made"
+  }
+ ],
  "w|เผยแพร่": [
   {
    "text": "การรถไฟเผยแพร่ตารางเดินรถใหม่ทางเว็บไซต์เมื่อวาน",
@@ -31381,6 +31669,22 @@
    "src": "made"
   }
  ],
+ "w|พร้อมทั้ง": [
+  {
+   "text": "กิตติพาคณะนักเรียนชมห้องเครื่องปั้นดินเผา พร้อมทั้งเล่าประวัติของแต่ละชิ้น",
+   "en": "Kitti showed the school group the pottery room and told them the history of each piece as well.",
+   "ko": "끼띠는 학생 단체에게 도자기실을 보여 주면서 각 작품의 역사도 들려줬어요.",
+   "blank": "พร้อมทั้ง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาส่งเค้กวันเกิดให้ลูกค้า พร้อมทั้งเทียนและการ์ดอวยพร",
+   "en": "Wanna delivered the birthday cake to the customer, along with candles and a greeting card.",
+   "ko": "완나는 생일 케이크를 초와 축하 카드까지 함께 손님에게 보냈어요.",
+   "blank": "พร้อมทั้ง",
+   "src": "made"
+  }
+ ],
  "w|พระ": [
   {
    "text": "พระกำลังสวดมนต์",
@@ -31701,6 +32005,22 @@
    "en": "This bottle is clear plastic.",
    "ko": "이 병은 투명한 플라스틱이야.",
    "blank": "พลาสติก"
+  }
+ ],
+ "w|พลิก": [
+  {
+   "text": "กิตติใส่ถุงมือก่อนพลิกหน้าสมุดข่อยโบราณให้ผู้เชี่ยวชาญดู",
+   "en": "Kitti put on gloves before turning the pages of the ancient folding manuscript for the expert.",
+   "ko": "끼띠는 장갑을 끼고 나서 전문가에게 고대 접이식 문서의 장을 넘겨 보여 줬어요.",
+   "blank": "พลิก",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาพลิกขนมเบื้องในกระทะให้สุกทั้งสองด้าน",
+   "en": "Wanna flipped the crispy pancakes in the pan so both sides were cooked.",
+   "ko": "완나는 팬에서 크레페를 뒤집어 양면을 다 익혔어요.",
+   "blank": "พลิก",
+   "src": "made"
   }
  ],
  "w|พลุกพล่าน": [
@@ -32751,6 +33071,22 @@
    "en": "There is only a little time left.",
    "ko": "시간이 조금만 남았어.",
    "blank": "เพียง"
+  }
+ ],
+ "w|เพียงแค่": [
+  {
+   "text": "กิตติบอกนักท่องเที่ยวว่าเพียงแค่แสดงบัตรนักศึกษาก็เข้าพิพิธภัณฑ์ได้ฟรี",
+   "en": "Kitti told the tourists that just showing a student card gets them into the museum for free.",
+   "ko": "끼띠는 관광객들에게 학생증만 보여 주면 박물관에 무료로 들어갈 수 있다고 했어요.",
+   "blank": "เพียงแค่",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาบอกลูกค้าว่าเพียงแค่สั่งล่วงหน้าหนึ่งวันก็ได้เค้กตามแบบที่ต้องการ",
+   "en": "Wanna told the customer that just ordering a day ahead gets her the cake she wants.",
+   "ko": "완나는 하루 전에만 주문하면 원하는 대로 케이크를 만들어 준다고 손님에게 말했어요.",
+   "blank": "เพียงแค่",
+   "src": "made"
   }
  ],
  "w|เพียงใด": [
@@ -34143,6 +34479,22 @@
    "blank": "มนุษย์"
   }
  ],
+ "w|มรดก": [
+  {
+   "text": "กิตติภูมิใจที่ได้ดูแลมรดกทางวัฒนธรรมของบ้านเกิด",
+   "en": "Kitti is proud to look after his hometown's cultural heritage.",
+   "ko": "끼띠는 고향의 문화유산을 돌보는 일을 자랑스러워해요.",
+   "blank": "มรดก",
+   "src": "made"
+  },
+  {
+   "text": "สูตรขนมปังลูกเกดเป็นมรดกที่ยายของวรรณาทิ้งไว้ให้",
+   "en": "The raisin bread recipe is a legacy Wanna's grandmother left her.",
+   "ko": "건포도빵 레시피는 완나의 할머니가 남겨 준 유산이에요.",
+   "blank": "มรดก",
+   "src": "made"
+  }
+ ],
  "w|มลพิษ": [
   {
    "text": "แม่น้ำนี้ไม่มีมลพิษ",
@@ -34819,6 +35171,22 @@
    "src": "made"
   }
  ],
+ "w|มารยาท": [
+  {
+   "text": "กิตติเตือนผู้ชมเรื่องมารยาท เช่น ห้ามจับของและห้ามใช้แฟลช",
+   "en": "Kitti reminded visitors about etiquette, like not touching objects and not using flash.",
+   "ko": "끼띠는 물건을 만지지 말고 플래시를 쓰지 말라는 등 관람 예절을 일렀어요.",
+   "blank": "มารยาท",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาสอนลูกน้องเรื่องมารยาทในการต้อนรับลูกค้า เช่น ยิ้มและทักทายก่อน",
+   "en": "Wanna teaches her staff the manners of greeting customers, like smiling and saying hello first.",
+   "ko": "완나는 직원들에게 먼저 웃고 인사하는 등 손님 맞는 예절을 가르쳐요.",
+   "blank": "มารยาท",
+   "src": "made"
+  }
+ ],
  "w|ม้าลาย": [
   {
    "text": "ม้าลายมีลายขาวดำ",
@@ -35203,6 +35571,22 @@
    "en": "Your viewpoint is interesting.",
    "ko": "네 관점이 흥미로워.",
    "blank": "มุมมอง"
+  }
+ ],
+ "w|มูล": [
+  {
+   "text": "กิตติอธิบายว่าคนโบราณเอามูลวัวผสมดินเพื่อฉาบผนังบ้าน",
+   "en": "Kitti explained that people long ago mixed cow dung with earth to plaster their house walls.",
+   "ko": "끼띠는 옛사람들이 소똥을 흙에 섞어 집 벽을 발랐다고 설명했어요.",
+   "blank": "มูล",
+   "src": "made"
+  },
+  {
+   "text": "ข่าวลือว่าร้านวรรณาใช้เนยเทียมไม่มีมูลความจริงเลย",
+   "en": "The rumour that Wanna's shop uses margarine has no basis in truth at all.",
+   "ko": "완나네 가게가 마가린을 쓴다는 소문은 전혀 근거가 없어요.",
+   "blank": "มูล",
+   "src": "made"
   }
  ],
  "w|มูลค่า": [
@@ -36931,6 +37315,22 @@
    "blank": "ยุติธรรม"
   }
  ],
+ "w|ยุทธศาสตร์": [
+  {
+   "text": "กิตติเล่าว่าแม่ทัพวางยุทธศาสตร์ตั้งค่ายบนเนินเพื่อมองเห็นข้าศึก",
+   "en": "Kitti said the general's strategy was to set up camp on a hill to see the enemy.",
+   "ko": "끼띠는 장군이 적을 내려다보려고 언덕에 진을 치는 전략을 세웠다고 했어요.",
+   "blank": "ยุทธศาสตร์",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาวางยุทธศาสตร์ขายขนมออนไลน์เพื่อหาลูกค้ากลุ่มใหม่",
+   "en": "Wanna drew up a strategy to sell online to reach new customers.",
+   "ko": "완나는 새 고객층을 찾으려고 온라인 판매 전략을 세웠어요.",
+   "blank": "ยุทธศาสตร์",
+   "src": "made"
+  }
+ ],
  "w|เย้": [
   {
    "text": "เย้ เราชนะแล้ว",
@@ -37297,6 +37697,22 @@
    "en": "The cars are stuck at a long red light.",
    "ko": "자동차들이 빨간불에 오래 막혔어.",
    "blank": "รถยนต์"
+  }
+ ],
+ "w|รบ": [
+  {
+   "text": "ภาพวาดในห้องนี้แสดงทหารสองฝ่ายที่รบกันริมแม่น้ำเมื่อหลายร้อยปีก่อน",
+   "en": "The painting in this room shows soldiers from two sides fighting by a river hundreds of years ago.",
+   "ko": "이 방의 그림은 수백 년 전 강가에서 싸운 양측 병사들을 보여 줘요.",
+   "blank": "รบ",
+   "src": "made"
+  },
+  {
+   "text": "ระหว่างรอแป้งขึ้นฟู วรรณาดูหนังเรื่องอัศวินที่ออกรบในยุคกลาง",
+   "en": "While waiting for the dough to rise, Wanna watched a film about knights who went to war in the Middle Ages.",
+   "ko": "반죽이 부풀기를 기다리며 완나는 중세에 전쟁에 나간 기사 영화를 봤어요.",
+   "blank": "รบ",
+   "src": "made"
   }
  ],
  "w|ร่ม": [
@@ -38325,6 +38741,22 @@
    "src": "made"
   }
  ],
+ "w|ราชวงศ์": [
+  {
+   "text": "กิตติชี้ให้ดูเครื่องถ้วยที่ราชวงศ์จีนส่งมาเป็นของขวัญ",
+   "en": "Kitti pointed out the porcelain a Chinese dynasty sent as a gift.",
+   "ko": "끼띠는 중국 왕조가 선물로 보낸 도자기를 가리켜 보여 줬어요.",
+   "blank": "ราชวงศ์",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าคนหนึ่งเล่าให้วรรณาฟังว่าขนมไข่สูตรนี้เคยทำถวายราชวงศ์",
+   "en": "A customer told Wanna that this egg cake recipe was once made for the royal family.",
+   "ko": "한 손님이 이 계란빵 레시피가 예전에 왕실에 바쳐졌다고 완나에게 이야기했어요.",
+   "blank": "ราชวงศ์",
+   "src": "made"
+  }
+ ],
  "w|ราชอาณาจักร": [
   {
    "text": "ครูสังคมให้ธนาค้นประวัติราชอาณาจักรสุโขทัยมาเล่าหน้าห้อง",
@@ -38338,6 +38770,22 @@
    "en": "Suda listened to a podcast about ancient kingdoms while riding the skytrain.",
    "ko": "수다는 지상철을 타고 가면서 고대 왕국에 관한 팟캐스트를 들었어요.",
    "blank": "ราชอาณาจักร",
+   "src": "made"
+  }
+ ],
+ "w|ราชา": [
+  {
+   "text": "ห้องสุดท้ายจัดแสดงบัลลังก์ของราชาที่ครองเมืองนี้เมื่อพันปีก่อน",
+   "en": "The last room displays the throne of the king who ruled this city a thousand years ago.",
+   "ko": "마지막 방에는 천 년 전 이 도시를 다스린 왕의 옥좌가 전시돼 있어요.",
+   "blank": "ราชา",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาตั้งชื่อเค้กช็อกโกแลตก้อนใหญ่ที่สุดในร้านว่าราชาแห่งความหวาน",
+   "en": "Wanna named the biggest chocolate cake in the shop the king of sweetness.",
+   "ko": "완나는 가게에서 가장 큰 초콜릿 케이크에 달콤함의 왕이라는 이름을 붙였어요.",
+   "blank": "ราชา",
    "src": "made"
   }
  ],
@@ -38887,6 +39335,22 @@
    "en": "Put the photo in this frame.",
    "ko": "사진을 이 액자에 넣어.",
    "blank": "รูปถ่าย"
+  }
+ ],
+ "w|รูปทรง": [
+  {
+   "text": "กิตติชวนเด็กๆ สังเกตรูปทรงของหม้อดินเผาที่แตกต่างกันในแต่ละยุค",
+   "en": "Kitti invited the children to notice how the shape of clay pots differs from era to era.",
+   "ko": "끼띠는 아이들에게 시대마다 다른 토기의 모양을 관찰해 보라고 했어요.",
+   "blank": "รูปทรง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาปั้นคุกกี้เป็นรูปทรงสัตว์ต่างๆ ให้เด็กๆ เลือก",
+   "en": "Wanna shapes cookies into different animal forms for the kids to choose from.",
+   "ko": "완나는 아이들이 고를 수 있게 쿠키를 여러 동물 모양으로 빚어요.",
+   "blank": "รูปทรง",
+   "src": "made"
   }
  ],
  "w|รูปแบบ": [
@@ -42569,6 +43033,22 @@
    "src": "made"
   }
  ],
+ "w|วิถีชีวิต": [
+  {
+   "text": "ห้องชั้นสองจำลองวิถีชีวิตของชาวนาในภาคกลางเมื่อร้อยปีก่อน",
+   "en": "The second-floor room recreates the way of life of central-region farmers a century ago.",
+   "ko": "이 층 방은 백 년 전 중부 지방 농민의 생활을 재현해 놓았어요.",
+   "blank": "วิถีชีวิต",
+   "src": "made"
+  },
+  {
+   "text": "การตื่นตีสี่มานวดแป้งกลายเป็นวิถีชีวิตปกติของวรรณาไปแล้ว",
+   "en": "Getting up at four to knead dough has become Wanna's normal way of life.",
+   "ko": "새벽 네 시에 일어나 반죽하는 게 완나의 일상이 됐어요.",
+   "blank": "วิถีชีวิต",
+   "src": "made"
+  }
+ ],
  "w|วิทยาศาสตร์": [
   {
    "text": "วิทยาศาสตร์อธิบายปรากฏการณ์ธรรมชาติ",
@@ -42731,6 +43211,22 @@
    "en": "How long is a tourist visa valid?",
    "ko": "관광 비자는 얼마나 오래 쓸 수 있어요?",
    "blank": "วีซ่า"
+  }
+ ],
+ "w|วุฒิสภา": [
+  {
+   "text": "คณะสมาชิกวุฒิสภามาเยี่ยมชมพิพิธภัณฑ์ และกิตติเป็นคนนำชม",
+   "en": "A group of senators visited the museum, and Kitti was their guide.",
+   "ko": "상원 의원단이 박물관을 방문했고 끼띠가 안내를 맡았어요.",
+   "blank": "วุฒิสภา",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเคยทำเค้กไปส่งงานเลี้ยงที่อาคารวุฒิสภาครั้งหนึ่ง",
+   "en": "Wanna once delivered a cake to a party at the Senate building.",
+   "ko": "완나는 한번 상원 건물 파티에 케이크를 배달한 적이 있어요.",
+   "blank": "วุฒิสภา",
+   "src": "made"
   }
  ],
  "w|วุ่นวาย": [
@@ -43793,6 +44289,22 @@
    "src": "made"
   }
  ],
+ "w|สถาปัตยกรรม": [
+  {
+   "text": "กิตติเรียนจบด้านสถาปัตยกรรม จึงเล่าเรื่องอาคารเก่าได้ละเอียด",
+   "en": "Kitti studied architecture, so he can describe old buildings in detail.",
+   "ko": "끼띠는 건축을 전공해서 옛 건물 이야기를 자세히 할 수 있어요.",
+   "blank": "สถาปัตยกรรม",
+   "src": "made"
+  },
+  {
+   "text": "ร้านขนมของวรรณาอยู่ในตึกแถวเก่าที่มีสถาปัตยกรรมแบบชิโนโปรตุกีส",
+   "en": "Wanna's bakery is in an old shophouse with Sino-Portuguese architecture.",
+   "ko": "완나의 빵집은 중국·포르투갈풍 건축의 오래된 상가 건물에 있어요.",
+   "blank": "สถาปัตยกรรม",
+   "src": "made"
+  }
+ ],
  "w|สถิติ": [
   {
    "text": "ธนาทำกราฟจากสถิติการมาสายของนักเรียนแต่ละชั้น",
@@ -44076,6 +44588,22 @@
    "en": "Malee thinks the extras who stood in the sun all day deserve extra pay.",
    "ko": "말리는 하루 종일 땡볕에 서 있던 엑스트라들이 수당을 더 받아야 마땅하다고 봐요.",
    "blank": "สมควร",
+   "src": "made"
+  }
+ ],
+ "w|สมดุล": [
+  {
+   "text": "กิตติอธิบายว่าเจดีย์องค์นี้สร้างให้เกิดสมดุลระหว่างฐานกับยอด",
+   "en": "Kitti explained that this stupa was built to balance its base and its spire.",
+   "ko": "끼띠는 이 탑이 기단과 꼭대기가 균형을 이루도록 지어졌다고 설명했어요.",
+   "blank": "สมดุล",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาบอกว่าเค้กที่ดีต้องมีสมดุลระหว่างความหวานกับความเปรี้ยว",
+   "en": "Wanna says a good cake needs a balance between sweet and sour.",
+   "ko": "완나는 좋은 케이크는 단맛과 신맛이 균형을 이뤄야 한다고 해요.",
+   "blank": "สมดุล",
    "src": "made"
   }
  ],
@@ -44571,6 +45099,22 @@
    "src": "made"
   }
  ],
+ "w|ส่วนรวม": [
+  {
+   "text": "กิตติขอให้ผู้ชมช่วยกันรักษาความสะอาด เพราะพิพิธภัณฑ์เป็นของส่วนรวม",
+   "en": "Kitti asked visitors to help keep things clean because the museum belongs to everyone.",
+   "ko": "끼띠는 박물관이 모두의 것이니 함께 깨끗이 써 달라고 관람객에게 부탁했어요.",
+   "blank": "ส่วนรวม",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาบริจาคขนมปังที่เหลือให้โรงทาน เพราะอยากทำประโยชน์เพื่อส่วนรวม",
+   "en": "Wanna donates leftover bread to the soup kitchen because she wants to do something for the common good.",
+   "ko": "완나는 공익을 위해 남은 빵을 무료 급식소에 기부해요.",
+   "blank": "ส่วนรวม",
+   "src": "made"
+  }
+ ],
  "w|ส่วนร่วม": [
   {
    "text": "กิตติมีส่วนร่วมในการจัดงานกีฬาสีของโรงเรียน",
@@ -44813,6 +45357,22 @@
    "en": "There are two ways.",
    "ko": "길이 두 갈래야.",
    "blank": "สอง"
+  }
+ ],
+ "w|ส่อง": [
+  {
+   "text": "กิตติใช้ไฟฉายส่องดูลายแกะสลักเล็กๆ บนกำไลโบราณ",
+   "en": "Kitti shone a torch to look at the tiny carvings on the ancient bracelet.",
+   "ko": "끼띠는 손전등을 비춰 고대 팔찌의 작은 조각 무늬를 살펴봤어요.",
+   "blank": "ส่อง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาส่องดูในเตาว่าขนมปังขึ้นสีสวยหรือยัง",
+   "en": "Wanna peered into the oven to see if the bread had browned nicely.",
+   "ko": "완나는 빵이 예쁘게 색이 났는지 오븐 안을 들여다봤어요.",
+   "blank": "ส่อง",
+   "src": "made"
   }
  ],
  "w|สอดคล้อง": [
@@ -48923,6 +49483,22 @@
    "src": "made"
   }
  ],
+ "w|หลุม": [
+  {
+   "text": "นักโบราณคดีพบเครื่องมือหินในหลุมขุดค้นใกล้พิพิธภัณฑ์",
+   "en": "Archaeologists found stone tools in an excavation pit near the museum.",
+   "ko": "고고학자들은 박물관 근처 발굴 구덩이에서 돌 도구를 찾았어요.",
+   "blank": "หลุม",
+   "src": "made"
+  },
+  {
+   "text": "รถส่งแป้งตกหลุมหน้าร้าน วรรณาจึงต้องออกไปช่วยขนกระสอบ",
+   "en": "The flour delivery truck got stuck in a pothole in front of the shop, so Wanna had to help carry the sacks.",
+   "ko": "밀가루 배달 트럭이 가게 앞 구덩이에 빠져서 완나가 나가 포대를 날라야 했어요.",
+   "blank": "หลุม",
+   "src": "made"
+  }
+ ],
  "w|ห่วง": [
   {
    "text": "แม่ห่วงเธอ",
@@ -49079,6 +49655,22 @@
    "en": "I comb my hair every time after showering.",
    "ko": "나는 샤워 후에 항상 머리를 빗어.",
    "blank": "หวีผม"
+  }
+ ],
+ "w|หอ": [
+  {
+   "text": "หลังเลิกงาน กิตติชอบเดินไปหอศิลป์ที่อยู่ตรงข้ามพิพิธภัณฑ์",
+   "en": "After work, Kitti likes to walk to the art gallery across from the museum.",
+   "ko": "끼띠는 퇴근 후 박물관 맞은편 미술관에 걸어가는 걸 좋아해요.",
+   "blank": "หอ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาส่งขนมปังให้หอพักนักศึกษาข้างมหาวิทยาลัยทุกเช้า",
+   "en": "Wanna delivers bread to the student dormitory next to the university every morning.",
+   "ko": "완나는 매일 아침 대학 옆 학생 기숙사에 빵을 배달해요.",
+   "blank": "หอ",
+   "src": "made"
   }
  ],
  "w|ห่อ": [
@@ -50489,6 +51081,22 @@
    "blank": "เหลือง"
   }
  ],
+ "w|เหลือเชื่อ": [
+  {
+   "text": "กิตติเล่าเรื่องเหลือเชื่อของชาวประมงที่ลากแจกันโบราณขึ้นมาจากทะเล",
+   "en": "Kitti told the incredible story of a fisherman who hauled an ancient vase out of the sea.",
+   "ko": "끼띠는 바다에서 고대 꽃병을 건져 올린 어부의 믿기 힘든 이야기를 들려줬어요.",
+   "blank": "เหลือเชื่อ",
+   "src": "made"
+  },
+  {
+   "text": "ขนมปังที่วรรณาอบเมื่อเช้าหมดภายในชั่วโมงเดียว นับว่าเหลือเชื่อจริงๆ",
+   "en": "The bread Wanna baked this morning sold out within an hour, which is truly incredible.",
+   "ko": "완나가 아침에 구운 빵이 한 시간 만에 다 팔렸는데 정말 믿기 힘들어요.",
+   "blank": "เหลือเชื่อ",
+   "src": "made"
+  }
+ ],
  "w|เหลือบ": [
   {
    "text": "เธอเหลือบมองนาฬิกาเบา ๆ",
@@ -51027,6 +51635,22 @@
    "en": "The documents have not been approved yet.",
    "ko": "서류가 아직 승인되지 않았어.",
    "blank": "อนุมัติ"
+  }
+ ],
+ "w|อนุสัญญา": [
+  {
+   "text": "กิตติบอกว่าการคืนโบราณวัตถุให้ประเทศเดิมเป็นไปตามอนุสัญญาระหว่างประเทศ",
+   "en": "Kitti said returning antiquities to their country of origin follows an international convention.",
+   "ko": "끼띠는 유물을 원래 나라에 돌려주는 건 국제 협약에 따른 거라고 했어요.",
+   "blank": "อนุสัญญา",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาอ่านบทความเรื่องอนุสัญญาว่าด้วยสิทธิแรงงานก่อนจ้างพนักงานเพิ่ม",
+   "en": "Wanna read an article on the labour rights convention before hiring more staff.",
+   "ko": "완나는 직원을 더 뽑기 전에 노동권 협약에 관한 글을 읽었어요.",
+   "blank": "อนุสัญญา",
+   "src": "made"
   }
  ],
  "w|อนุสาวรีย์": [
@@ -52100,6 +52724,22 @@
    "en": "The criminal case the neighbour told Chan about happened in this lane long ago.",
    "ko": "이웃이 짠에게 들려준 형사 사건은 오래전 이 골목에서 일어났어요.",
    "blank": "อาญา",
+   "src": "made"
+  }
+ ],
+ "w|อาณาจักร": [
+  {
+   "text": "แผนที่บนผนังแสดงอาณาจักรโบราณที่เคยรุ่งเรืองในแถบลุ่มน้ำนี้",
+   "en": "The wall map shows ancient realms that once flourished in this river basin.",
+   "ko": "벽 지도는 한때 이 유역에서 번성한 고대 왕국들을 보여 줘요.",
+   "blank": "อาณาจักร",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาฝันอยากสร้างอาณาจักรร้านขนมให้มีสาขาทั่วประเทศ",
+   "en": "Wanna dreams of building a bakery empire with branches across the country.",
+   "ko": "완나는 전국에 지점이 있는 빵집 왕국을 세우는 꿈을 꿔요.",
+   "blank": "อาณาจักร",
    "src": "made"
   }
  ],

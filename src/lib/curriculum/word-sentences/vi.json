@@ -823,6 +823,22 @@
    "blank": "bà ấy"
   }
  ],
+ "w|ba chỉ": [
+  {
+   "text": "Quang chọn miếng ba chỉ có đủ nạc lẫn mỡ để làm món luộc.",
+   "en": "Quang chooses a piece of pork belly with both lean and fat for the boiled dish.",
+   "ko": "꽝은 수육용으로 살코기와 비계가 고루 섞인 삼겹살을 골라요.",
+   "blank": "ba chỉ",
+   "src": "made"
+  },
+  {
+   "text": "Hà khéo léo vẽ từng lớp mỡ nạc của miếng ba chỉ trong bức tranh chợ.",
+   "en": "Hà skillfully paints each layer of fat and lean in the pork belly in her market painting.",
+   "ko": "하는 시장 그림 속 삼겹살의 비계와 살코기 층을 하나하나 솜씨 있게 그려요.",
+   "blank": "ba chỉ",
+   "src": "made"
+  }
+ ],
  "w|bà chủ": [
   {
    "text": "Bà chủ quán rất dễ thương.",
@@ -3075,6 +3091,22 @@
    "blank": "biết"
   }
  ],
+ "w|biết đâu": [
+  {
+   "text": "Quang nghĩ biết đâu sau khóa này anh có thể mở một quán ăn nhỏ.",
+   "en": "Quang thinks that maybe after this course he could open a small eatery.",
+   "ko": "꽝은 이 과정이 끝나면 어쩌면 작은 식당을 열 수 있을지도 모른다고 생각해요.",
+   "blank": "biết đâu",
+   "src": "made"
+  },
+  {
+   "text": "Hà nghĩ biết đâu bức tranh này sẽ được chọn đi triển lãm.",
+   "en": "Hà thinks maybe this painting will be chosen for the exhibition.",
+   "ko": "하는 어쩌면 이 그림이 전시회에 뽑힐지도 모른다고 생각해요.",
+   "blank": "biết đâu",
+   "src": "made"
+  }
+ ],
  "w|biết ơn": [
   {
    "text": "Em rất biết ơn anh.",
@@ -4679,6 +4711,22 @@
    "blank": "cả"
   }
  ],
+ "w|cá chép": [
+  {
+   "text": "Cả lớp của Quang học cách hấp cá chép với hành gừng cho dịp cúng ông Táo.",
+   "en": "Quang's class learns to steam carp with scallion and ginger for the Kitchen God offering.",
+   "ko": "꽝의 반은 부엌신 제사에 쓸 잉어를 파와 생강으로 찌는 법을 배워요.",
+   "blank": "cá chép",
+   "src": "made"
+  },
+  {
+   "text": "Bức tranh đàn cá chép vàng của Hà được treo ngay giữa phòng học.",
+   "en": "Hà's painting of golden carp is hung right in the middle of the classroom.",
+   "ko": "하의 금빛 잉어 떼 그림이 교실 한가운데 걸려요.",
+   "blank": "cá chép",
+   "src": "made"
+  }
+ ],
  "w|cà chua": [
   {
    "text": "Tôi thích ăn cà chua.",
@@ -4743,6 +4791,22 @@
    "src": "made"
   }
  ],
+ "w|cá hồi": [
+  {
+   "text": "Quang áp chảo miếng cá hồi cho da giòn mà thịt bên trong vẫn hồng.",
+   "en": "Quang pan-sears the salmon so the skin is crisp while the inside stays pink.",
+   "ko": "꽝은 연어를 팬에 구워 껍질은 바삭하고 속은 분홍빛으로 남겨요.",
+   "blank": "cá hồi",
+   "src": "made"
+  },
+  {
+   "text": "Hà pha màu cam nhạt để vẽ lát cá hồi trên đĩa sứ trắng.",
+   "en": "Hà mixes a pale orange to paint the slice of salmon on the white porcelain plate.",
+   "ko": "하는 흰 자기 접시 위 연어 한 점을 그리려고 연한 주황색을 섞어요.",
+   "blank": "cá hồi",
+   "src": "made"
+  }
+ ],
  "w|cá kho": [
   {
    "text": "Nam học nấu cá kho tộ theo công thức của cô giáo người Huế.",
@@ -4788,6 +4852,22 @@
    "en": "Sharks have a lot of teeth.",
    "ko": "상어는 이빨이 아주 많아요.",
    "blank": "Cá mập",
+   "src": "made"
+  }
+ ],
+ "w|cá ngừ": [
+  {
+   "text": "Quang thử làm gỏi cá ngừ với chanh và rau thơm theo công thức của cô giáo.",
+   "en": "Quang tries making a tuna salad with lime and herbs following the teacher's recipe.",
+   "ko": "꽝은 선생님 조리법대로 라임과 향채를 넣은 참치 무침을 만들어 봐요.",
+   "blank": "cá ngừ",
+   "src": "made"
+  },
+  {
+   "text": "Hà mang theo hộp cơm cá ngừ để ăn trưa giữa hai buổi vẽ.",
+   "en": "Hà brings a tuna rice box to eat at lunch between two drawing sessions.",
+   "ko": "하는 두 그림 수업 사이에 먹으려고 참치 도시락을 싸 와요.",
+   "blank": "cá ngừ",
    "src": "made"
   }
  ],
@@ -4865,6 +4945,22 @@
    "en": "I want to become a famous singer.",
    "ko": "나는 유명한 가수가 되고 싶어.",
    "blank": "ca sĩ"
+  }
+ ],
+ "w|cá thu": [
+  {
+   "text": "Thầy dặn Quang muốn kho cá thu cho ngon thì phải ướp từ tối hôm trước.",
+   "en": "The teacher tells Quang that to braise mackerel well, he must marinate it the night before.",
+   "ko": "선생님은 고등어조림을 맛있게 하려면 전날 밤부터 재워야 한다고 꽝에게 일러요.",
+   "blank": "cá thu",
+   "src": "made"
+  },
+  {
+   "text": "Thầy bày ba con cá thu lên đĩa để cả lớp của Hà tập vẽ vảy cá.",
+   "en": "The teacher lays three mackerels on a plate for Hà's class to practice drawing fish scales.",
+   "ko": "선생님은 하의 반이 비늘 그리기를 연습하도록 고등어 세 마리를 접시에 올려놓아요.",
+   "blank": "cá thu",
+   "src": "made"
   }
  ],
  "w|cà vạt": [
@@ -6333,6 +6429,22 @@
    "src": "made"
   }
  ],
+ "w|chả lụa": [
+  {
+   "text": "Quang mang ổ bánh mì chả lụa đi ăn sáng trước giờ học.",
+   "en": "Quang brings a pork roll banh mi for breakfast before class.",
+   "ko": "꽝은 수업 전에 아침으로 짜루어 반미를 가져가요.",
+   "blank": "chả lụa",
+   "src": "made"
+  },
+  {
+   "text": "Hà đứng ngoài cổng ăn vội ổ bánh mì chả lụa rồi chạy vào lớp.",
+   "en": "Hà quickly eats a pork roll banh mi outside the gate, then runs into class.",
+   "ko": "하는 정문 밖에서 짜루어 반미를 급히 먹고 교실로 뛰어 들어가요.",
+   "blank": "chả lụa",
+   "src": "made"
+  }
+ ],
  "w|cha mẹ": [
   {
    "text": "Cha mẹ muốn gặp cậu.",
@@ -6547,6 +6659,22 @@
    "en": "Sit and stretch your legs out.",
    "ko": "앉아서 다리 쭉 펴.",
    "blank": "chân"
+  }
+ ],
+ "w|chần": [
+  {
+   "text": "Trước khi xào, Quang chần bông cải qua nước sôi cho mềm.",
+   "en": "Before stir-frying, Quang blanches the broccoli in boiling water to soften it.",
+   "ko": "볶기 전에 꽝은 브로콜리를 끓는 물에 살짝 데쳐 부드럽게 해요.",
+   "blank": "chần",
+   "src": "made"
+  },
+  {
+   "text": "Bà của Hà dạy cô chần lá dong cho mềm trước khi gói bánh.",
+   "en": "Hà's grandmother teaches her to blanch dong leaves to soften them before wrapping cakes.",
+   "ko": "하의 할머니는 떡을 싸기 전에 동잎을 데쳐 부드럽게 하는 법을 가르쳐 줘요.",
+   "blank": "chần",
+   "src": "made"
   }
  ],
  "w|chán chường": [
@@ -11781,6 +11909,22 @@
    "src": "made"
   }
  ],
+ "w|đậm": [
+  {
+   "text": "Thầy nếm thử nước sốt của Quang rồi khen vị vừa đậm vừa thơm.",
+   "en": "The teacher tastes Quang's sauce and praises its rich, fragrant flavor.",
+   "ko": "선생님은 꽝의 소스를 맛보고 진하고 향긋하다고 칭찬해요.",
+   "blank": "đậm",
+   "src": "made"
+  },
+  {
+   "text": "Thầy khuyên Hà tô màu đậm hơn ở phần bóng của quả táo.",
+   "en": "The teacher advises Hà to use a darker color on the apple's shadow.",
+   "ko": "선생님은 하에게 사과 그림자 부분을 더 진하게 칠하라고 조언해요.",
+   "blank": "đậm",
+   "src": "made"
+  }
+ ],
  "w|đảm bảo": [
   {
    "text": "Tôi sẽ đảm bảo chuyện này không xảy ra lần nữa.",
@@ -16397,6 +16541,22 @@
    "src": "made"
   }
  ],
+ "w|đồng thời": [
+  {
+   "text": "Quang khuấy nồi cháo, đồng thời canh chừng chảo cá trên bếp bên cạnh.",
+   "en": "Quang stirs the porridge while also keeping an eye on the fish pan on the next burner.",
+   "ko": "꽝은 죽을 저으면서 동시에 옆 화구의 생선 팬도 지켜봐요.",
+   "blank": "đồng thời",
+   "src": "made"
+  },
+  {
+   "text": "Thầy dạy Hà nhìn mẫu, đồng thời để ý ánh sáng từ cửa sổ.",
+   "en": "The teacher teaches Hà to look at the model while also noticing the light from the window.",
+   "ko": "선생님은 하에게 모델을 보면서 동시에 창문 빛에도 신경 쓰라고 가르쳐요.",
+   "blank": "đồng thời",
+   "src": "made"
+  }
+ ],
  "w|động vật": [
   {
    "text": "Động vật cũng cần được bảo vệ.",
@@ -17350,6 +17510,22 @@
    "en": "Mai chooses a graceful hanging lamp with a cream fabric shade for the living room.",
    "ko": "마이는 거실에 크림색 천 갓을 씌운 우아한 펜던트 등을 골라요.",
    "blank": "duyên dáng",
+   "src": "made"
+  }
+ ],
+ "w|e rằng": [
+  {
+   "text": "Nhìn nồi nước dùng sôi trào, Quang e rằng mình đã cho quá nhiều lửa.",
+   "en": "Seeing the broth boil over, Quang fears he has turned the heat up too high.",
+   "ko": "국물이 끓어 넘치는 걸 보고 꽝은 불을 너무 세게 했나 봐 걱정해요.",
+   "blank": "e rằng",
+   "src": "made"
+  },
+  {
+   "text": "Hà e rằng mình tô màu xanh hơi quá tay ở góc trời.",
+   "en": "Hà fears she has overdone the blue in the corner of the sky.",
+   "ko": "하는 하늘 귀퉁이에 파란색을 좀 과하게 칠했나 봐 걱정돼요.",
+   "blank": "e rằng",
    "src": "made"
   }
  ],
@@ -19209,6 +19385,22 @@
    "blank": "Giờ giấc"
   }
  ],
+ "w|giò lụa": [
+  {
+   "text": "Thầy cho cả lớp xem cách gói giò lụa bằng lá chuối cho đẹp.",
+   "en": "The teacher shows the class how to wrap pork roll neatly in banana leaves.",
+   "ko": "선생님은 바나나 잎으로 조루어를 예쁘게 싸는 법을 반 전체에게 보여 줘요.",
+   "blank": "giò lụa",
+   "src": "made"
+  },
+  {
+   "text": "Bạn ngồi cạnh mời Hà một khoanh giò lụa mang từ nhà.",
+   "en": "The classmate next to Hà offers her a slice of pork roll brought from home.",
+   "ko": "옆자리 친구가 집에서 가져온 조루어 한 조각을 하에게 권해요.",
+   "blank": "giò lụa",
+   "src": "made"
+  }
+ ],
  "w|giỏi": [
   {
    "text": "Cậu nấu ăn giỏi thật.",
@@ -20124,6 +20316,22 @@
    "en": "Swimming two kilometres without a break, Thảo must have trained for years.",
    "ko": "쉬지 않고 이 킬로미터를 내리 헤엄치는 걸 보면 타오는 분명 몇 년을 연습했을 거예요.",
    "blank": "hẳn là",
+   "src": "made"
+  }
+ ],
+ "w|hẳn nhiên": [
+  {
+   "text": "Quang chăm chỉ tập mỗi tối, nên tay nghề tiến bộ là điều hẳn nhiên.",
+   "en": "Quang practices diligently every evening, so naturally his skills improve.",
+   "ko": "꽝은 매일 저녁 열심히 연습하니 실력이 느는 게 당연해요.",
+   "blank": "hẳn nhiên",
+   "src": "made"
+  },
+  {
+   "text": "Hà vẽ nhiều nhất lớp, nên tranh của cô đẹp lên là chuyện hẳn nhiên.",
+   "en": "Hà draws more than anyone in the class, so of course her paintings get better.",
+   "ko": "하는 반에서 그림을 제일 많이 그리니 그림이 좋아지는 건 당연한 일이에요.",
+   "blank": "hẳn nhiên",
    "src": "made"
   }
  ],
@@ -22069,6 +22277,22 @@
    "en": "They talk about marriage quite seriously.",
    "ko": "그들은 결혼에 대해 꽤 진지하게 이야기해.",
    "blank": "hôn nhân"
+  }
+ ],
+ "w|hơn nữa": [
+  {
+   "text": "Lớp học gần nhà, hơn nữa học phí rẻ, nên Quang rủ cả em trai đi cùng.",
+   "en": "The class is near home, and moreover the fee is cheap, so Quang brings his younger brother too.",
+   "ko": "교실이 집에서 가깝고 게다가 수강료도 싸서 꽝은 남동생까지 데려가요.",
+   "blank": "hơn nữa",
+   "src": "made"
+  },
+  {
+   "text": "Lớp vẽ có thầy giỏi, hơn nữa giờ học buổi tối rất hợp với Hà.",
+   "en": "The art class has a good teacher, and moreover the evening schedule suits Hà well.",
+   "ko": "미술 수업은 선생님이 훌륭하고, 게다가 저녁 시간이라 하에게 딱 맞아요.",
+   "blank": "hơn nữa",
+   "src": "made"
   }
  ],
  "w|hồng": [
@@ -26065,6 +26289,22 @@
    "blank": "lập tức"
   }
  ],
+ "w|lạp xưởng": [
+  {
+   "text": "Quang thái lạp xưởng thật mỏng để trộn vào đĩa xôi.",
+   "en": "Quang slices the Chinese sausage very thin to mix into the sticky rice.",
+   "ko": "꽝은 찹쌀밥에 섞으려고 랍청을 아주 얇게 썰어요.",
+   "blank": "lạp xưởng",
+   "src": "made"
+  },
+  {
+   "text": "Hà treo vài xâu lạp xưởng lên giá làm mẫu cho bài vẽ chủ đề Tết.",
+   "en": "Hà hangs a few strings of Chinese sausage on a rack as a model for the Tet-themed drawing.",
+   "ko": "하는 설날 주제 그림의 모델로 랍청 몇 줄을 걸대에 걸어요.",
+   "blank": "lạp xưởng",
+   "src": "made"
+  }
+ ],
  "w|lật": [
   {
    "text": "Nam lật miếng bánh xèo thật nhanh để không bị cháy.",
@@ -26828,6 +27068,22 @@
    "en": "Lan's assistant takes care of meals for the crew of over thirty people.",
    "ko": "란의 조수가 삼십 명 넘는 팀의 식사를 챙겨요.",
    "blank": "lo liệu",
+   "src": "made"
+  }
+ ],
+ "w|lờ mờ": [
+  {
+   "text": "Khói bếp mù mịt khiến Quang chỉ thấy lờ mờ cái nồi trước mặt.",
+   "en": "The thick kitchen smoke means Quang can only dimly see the pot in front of him.",
+   "ko": "주방 연기가 자욱해서 꽝은 눈앞의 냄비가 흐릿하게만 보여요.",
+   "blank": "lờ mờ",
+   "src": "made"
+  },
+  {
+   "text": "Hà muốn vẽ dãy núi lờ mờ sau làn sương như cô thấy hồi đi Sa Pa.",
+   "en": "Hà wants to paint the mountain range faintly visible behind the mist, as she saw in Sa Pa.",
+   "ko": "하는 사파에서 본 것처럼 안개 너머 희미한 산줄기를 그리고 싶어요.",
+   "blank": "lờ mờ",
    "src": "made"
   }
  ],
@@ -28411,6 +28667,22 @@
    "src": "made"
   }
  ],
+ "w|mặn mà": [
+  {
+   "text": "Cô giáo dạy nấu ăn của Quang nói năng mặn mà, ai cũng thích nghe.",
+   "en": "Quang's cooking teacher speaks warmly, and everyone enjoys listening to her.",
+   "ko": "꽝의 요리 선생님은 말씨가 정감 있어서 다들 듣기 좋아해요.",
+   "blank": "mặn mà",
+   "src": "made"
+  },
+  {
+   "text": "Cô giáo dạy vẽ của Hà là người miền Tây, giọng nói mặn mà dễ thương.",
+   "en": "Hà's art teacher is from the Mekong region and has a warm, lovely voice.",
+   "ko": "하의 미술 선생님은 메콩 지방 출신이라 목소리가 정감 있고 다정해요.",
+   "blank": "mặn mà",
+   "src": "made"
+  }
+ ],
  "w|mãn nguyện": [
   {
    "text": "Hùng viết rằng giờ anh thấy mãn nguyện với cuộc sống giản dị ở quê.",
@@ -28634,6 +28906,22 @@
    "en": "The chubby baby is very cute.",
    "ko": "통통한 아기가 아주 귀여워요.",
    "blank": "mập mạp",
+   "src": "made"
+  }
+ ],
+ "w|mập mờ": [
+  {
+   "text": "Công thức cũ của bà ghi mập mờ quá, Quang phải đoán lượng đường.",
+   "en": "Grandma's old recipe is too vague, so Quang has to guess the amount of sugar.",
+   "ko": "할머니의 옛 조리법이 너무 애매해서 꽝은 설탕 양을 짐작해야 해요.",
+   "blank": "mập mờ",
+   "src": "made"
+  },
+  {
+   "text": "Đường viền trong tranh của Hà còn mập mờ, thầy bảo cô tô lại cho rõ.",
+   "en": "The outlines in Hà's painting are still blurry, so the teacher tells her to redo them clearly.",
+   "ko": "하의 그림 윤곽선이 아직 흐릿해서 선생님이 또렷하게 다시 그리라고 해요.",
+   "blank": "mập mờ",
    "src": "made"
   }
  ],
@@ -31029,6 +31317,22 @@
    "src": "made"
   }
  ],
+ "w|nạc": [
+  {
+   "text": "Bà học viên lớn tuổi nhất lớp chỉ ăn phần nạc, Quang bèn lọc giúp bà hết mỡ.",
+   "en": "The oldest student in the class only eats lean meat, so Quang trims off all the fat for her.",
+   "ko": "반에서 가장 나이 많은 할머니 수강생은 살코기만 드셔서 꽝이 비계를 다 떼어 드려요.",
+   "blank": "nạc",
+   "src": "made"
+  },
+  {
+   "text": "Hà dặn người bán thịt cắt cho cô miếng nạc để tối về nấu cháo.",
+   "en": "Hà asks the butcher to cut her a lean piece to make porridge tonight.",
+   "ko": "하는 저녁에 죽을 끓이려고 정육점 주인에게 살코기를 잘라 달라고 해요.",
+   "blank": "nạc",
+   "src": "made"
+  }
+ ],
  "w|nặc danh": [
   {
    "text": "Hùng nhận được một bó hoa nặc danh sau buổi diễn.",
@@ -31411,6 +31715,22 @@
    "blank": "nấu ăn"
   }
  ],
+ "w|nấu canh": [
+  {
+   "text": "Buổi thứ ba, cả lớp học nấu canh chua cá lóc theo kiểu miền Tây.",
+   "en": "In the third session, the class learns to make sour snakehead fish soup Mekong-style.",
+   "ko": "세 번째 수업에서 반 전체가 메콩 지방식 가물치 신맛 국 끓이는 법을 배워요.",
+   "blank": "nấu canh",
+   "src": "made"
+  },
+  {
+   "text": "Hà vội về nhà nấu canh cho bố trước khi đi lớp vẽ tối.",
+   "en": "Hà hurries home to make soup for her father before the evening art class.",
+   "ko": "하는 저녁 미술 수업에 가기 전에 아빠께 국을 끓여 드리려고 서둘러 집에 가요.",
+   "blank": "nấu canh",
+   "src": "made"
+  }
+ ],
  "w|nấu cơm": [
   {
    "text": "Bán xong, Nam về nhà nấu cơm cho hai đứa con.",
@@ -31624,6 +31944,22 @@
    "en": "I want to buy a new mattress.",
    "ko": "새 매트리스를 사고 싶어요.",
    "blank": "nệm",
+   "src": "made"
+  }
+ ],
+ "w|nem rán": [
+  {
+   "text": "Quang cuốn nem rán chặt tay để khi chiên vỏ không bị bung.",
+   "en": "Quang rolls the fried spring rolls tightly so the wrappers don't burst when fried.",
+   "ko": "꽝은 튀길 때 피가 터지지 않게 넴을 단단히 말아요.",
+   "blank": "nem rán",
+   "src": "made"
+  },
+  {
+   "text": "Hà vẽ một đĩa nem rán vàng ruộm bên chén nước mắm chua ngọt.",
+   "en": "Hà paints a plate of golden fried spring rolls next to a bowl of sweet and sour fish sauce.",
+   "ko": "하는 새콤달콤한 느억맘 종지 옆 노릇한 넴 한 접시를 그려요.",
+   "blank": "nem rán",
    "src": "made"
   }
  ],
@@ -32927,6 +33263,22 @@
    "en": "The mangoes are really sweet this year.",
    "ko": "올해 망고가 아주 달아.",
    "blank": "ngọt"
+  }
+ ],
+ "w|ngọt ngào": [
+  {
+   "text": "Mùi bánh chuối nướng ngọt ngào lan khắp lớp, Quang không nhịn được phải nếm thử.",
+   "en": "The sweet smell of baked banana cake fills the class, and Quang can't resist tasting it.",
+   "ko": "구운 바나나 케이크의 달콤한 냄새가 교실에 퍼지자 꽝은 참지 못하고 맛을 봐요.",
+   "blank": "ngọt ngào",
+   "src": "made"
+  },
+  {
+   "text": "Bức tranh hoa hồng của Hà mang sắc hồng ngọt ngào như kẹo bông.",
+   "en": "Hà's painting of roses has a sweet pink like cotton candy.",
+   "ko": "하의 장미 그림은 솜사탕처럼 달콤한 분홍빛을 띠어요.",
+   "blank": "ngọt ngào",
+   "src": "made"
   }
  ],
  "w|ngột ngạt": [
@@ -34965,6 +35317,22 @@
    "src": "made"
   }
  ],
+ "w|nhỏ hẹp": [
+  {
+   "text": "Gian bếp nhà Quang nhỏ hẹp nên anh thích ở lại lớp tập thêm.",
+   "en": "Quang's kitchen at home is cramped, so he likes to stay in class to practice more.",
+   "ko": "꽝의 집 부엌은 좁아서 꽝은 교실에 남아 더 연습하는 걸 좋아해요.",
+   "blank": "nhỏ hẹp",
+   "src": "made"
+  },
+  {
+   "text": "Phòng vẽ nhỏ hẹp nên Hà phải kê giá vẽ sát cửa sổ.",
+   "en": "The studio is cramped, so Hà has to set her easel right by the window.",
+   "ko": "화실이 좁아서 하는 이젤을 창가에 바짝 붙여 놓아야 해요.",
+   "blank": "nhỏ hẹp",
+   "src": "made"
+  }
+ ],
  "w|nhớ lại": [
   {
    "text": "Cố nhớ lại xem mình để ví đâu.",
@@ -35343,6 +35711,22 @@
    "src": "made"
   }
  ],
+ "w|ninh": [
+  {
+   "text": "Để có nồi nước phở trong, Quang phải ninh xương bò suốt sáu tiếng.",
+   "en": "To get a clear pho broth, Quang has to simmer beef bones for six hours.",
+   "ko": "맑은 쌀국수 국물을 내려고 꽝은 소뼈를 여섯 시간 동안 고아야 해요.",
+   "blank": "ninh",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ Hà ninh nồi chân giò cả buổi chiều để cô mang lên lớp mời bạn.",
+   "en": "Hà's mother simmers a pot of pork trotters all afternoon for her to bring to class for her friends.",
+   "ko": "하의 엄마가 오후 내내 족발을 고아서 하가 반 친구들에게 가져가요.",
+   "blank": "ninh",
+   "src": "made"
+  }
+ ],
  "w|no": [
   {
    "text": "Ăn no rồi mình không muốn đi thêm.",
@@ -35428,6 +35812,22 @@
    "en": "One bánh mì keeps Thảo full until the afternoon.",
    "ko": "반미 하나만 먹어도 타오는 오후까지 배가 든든해요.",
    "blank": "no bụng",
+   "src": "made"
+  }
+ ],
+ "w|nỗ lực": [
+  {
+   "text": "Món cá kho tộ đạt điểm cao là kết quả của bao nỗ lực mà Quang bỏ ra.",
+   "en": "The clay-pot braised fish that scored high is the result of all the effort Quang put in.",
+   "ko": "높은 점수를 받은 생선 뚝배기 조림은 꽝이 쏟은 많은 노력의 결과예요.",
+   "blank": "nỗ lực",
+   "src": "made"
+  },
+  {
+   "text": "Bức tranh đoạt giải là thành quả của nhiều tháng nỗ lực của Hà.",
+   "en": "The prize-winning painting is the fruit of Hà's many months of effort.",
+   "ko": "상을 받은 그림은 하가 몇 달 동안 노력한 결실이에요.",
+   "blank": "nỗ lực",
    "src": "made"
   }
  ],
@@ -36609,6 +37009,22 @@
    "en": "Oh wow, the rain is so heavy!",
    "ko": "아이고 비가 너무 세다!",
    "blank": "Ôi trời"
+  }
+ ],
+ "w|om": [
+  {
+   "text": "Cô giáo bảo Quang om cá với chuối xanh và đậu phụ trong nửa tiếng.",
+   "en": "The teacher tells Quang to braise the fish with green banana and tofu for half an hour.",
+   "ko": "선생님은 꽝에게 생선을 풋바나나와 두부와 함께 삼십 분간 뭉근히 끓이라고 해요.",
+   "blank": "om",
+   "src": "made"
+  },
+  {
+   "text": "Bức tĩnh vật của bạn cùng lớp vẽ nồi ếch om khiến Hà bật cười.",
+   "en": "A classmate's still life of a pot of braised frog makes Hà burst out laughing.",
+   "ko": "반 친구가 그린 개구리 조림 냄비 정물화를 보고 하는 웃음을 터뜨려요.",
+   "blank": "om",
+   "src": "made"
   }
  ],
  "w|ôm": [
@@ -38843,6 +39259,22 @@
    "src": "made"
   }
  ],
+ "w|quay trở lại": [
+  {
+   "text": "Nghỉ một tháng vì bận việc, Quang lại quay trở lại lớp nấu ăn.",
+   "en": "After a month off because of work, Quang comes back to the cooking class.",
+   "ko": "일 때문에 한 달 쉬었던 꽝은 다시 요리 교실로 돌아와요.",
+   "blank": "quay trở lại",
+   "src": "made"
+  },
+  {
+   "text": "Sau mấy năm đi làm, Hà quay trở lại cầm cọ vẽ như hồi còn đi học.",
+   "en": "After a few years of working, Hà picks up the paintbrush again like in her school days.",
+   "ko": "몇 년 일한 뒤 하는 학창 시절처럼 다시 붓을 잡아요.",
+   "blank": "quay trở lại",
+   "src": "made"
+  }
+ ],
  "w|quay về": [
   {
    "text": "Mai mình quay về quê ăn Tết.",
@@ -39271,6 +39703,22 @@
    "en": "The sun's come out.",
    "ko": "해가 났네.",
    "blank": "ra"
+  }
+ ],
+ "w|ra đi": [
+  {
+   "text": "Thầy dạy bếp kể ông chủ cũ của mình đã ra đi để lại cả công thức nước dùng cho học trò.",
+   "en": "The cooking teacher says his old master passed away, leaving his broth recipe to his students.",
+   "ko": "요리 선생님은 옛 스승이 세상을 떠나며 국물 비법을 제자들에게 남겼다고 이야기해요.",
+   "blank": "ra đi",
+   "src": "made"
+  },
+  {
+   "text": "Hà vẽ một chiếc thuyền ra đi trong buổi sáng sương mù.",
+   "en": "Hà paints a boat setting off on a foggy morning.",
+   "ko": "하는 안개 낀 아침에 떠나는 배 한 척을 그려요.",
+   "blank": "ra đi",
+   "src": "made"
   }
  ],
  "w|ra hoa": [
@@ -39843,6 +40291,22 @@
    "blank": "riêng"
   }
  ],
+ "w|rim": [
+  {
+   "text": "Quang rim tôm với nước mắm và đường cho đến khi sánh lại.",
+   "en": "Quang simmers the shrimp in fish sauce and sugar until it thickens.",
+   "ko": "꽝은 새우를 느억맘과 설탕에 걸쭉해질 때까지 조려요.",
+   "blank": "rim",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ của Hà hay rim cá cơm với tiêu, nên hôm nay cô vẽ lại đĩa cá ấy.",
+   "en": "Hà's mother often simmers anchovies with pepper, so today she paints that dish.",
+   "ko": "하의 엄마가 멸치를 후추와 자주 조려서 하는 오늘 그 접시를 그려요.",
+   "blank": "rim",
+   "src": "made"
+  }
+ ],
  "w|rìu": [
   {
    "text": "Trong phòng của Nam treo một cây rìu cũ làm vật trang trí.",
@@ -39959,6 +40423,22 @@
    "blank": "rời"
   }
  ],
+ "w|rời đi": [
+  {
+   "text": "Dọn dẹp xong, Quang là người cuối cùng rời đi khỏi lớp.",
+   "en": "After cleaning up, Quang is the last one to leave the class.",
+   "ko": "정리를 마친 꽝은 교실을 가장 마지막으로 떠나요.",
+   "blank": "rời đi",
+   "src": "made"
+  },
+  {
+   "text": "Người mẫu ngồi suốt hai tiếng rồi lặng lẽ rời đi trước khi Hà kịp cảm ơn.",
+   "en": "The model sits for two hours, then quietly leaves before Hà can thank her.",
+   "ko": "모델은 두 시간 동안 앉아 있다가 하가 고맙다고 하기도 전에 조용히 떠나요.",
+   "blank": "rời đi",
+   "src": "made"
+  }
+ ],
  "w|rời khỏi": [
   {
    "text": "Họ vừa rời khỏi phòng họp.",
@@ -39999,6 +40479,22 @@
    "en": "This wide, it can hold a lot of people.",
    "ko": "이렇게 넓으면 사람을 많이 수용할 수 있어.",
    "blank": "Rộng"
+  }
+ ],
+ "w|rộng lớn": [
+  {
+   "text": "Căn bếp rộng lớn của lớp học có đến mười hai cái lò.",
+   "en": "The class's spacious kitchen has as many as twelve stoves.",
+   "ko": "요리 교실의 넓은 주방에는 화구가 열두 개나 있어요.",
+   "blank": "rộng lớn",
+   "src": "made"
+  },
+  {
+   "text": "Hà vẽ một cánh đồng rộng lớn với vài chấm nhỏ là đàn trâu.",
+   "en": "Hà paints a wide field with a few small dots for a herd of buffalo.",
+   "ko": "하는 넓은 들판에 작은 점 몇 개로 물소 떼를 그려요.",
+   "blank": "rộng lớn",
+   "src": "made"
   }
  ],
  "w|rộng rãi": [
@@ -42244,6 +42740,22 @@
    "en": "The company cafeteria has grilled ribs for lunch today.",
    "ko": "오늘 점심 회사 식당 메뉴는 돼지갈비 구이예요.",
    "blank": "sườn",
+   "src": "made"
+  }
+ ],
+ "w|sườn nướng": [
+  {
+   "text": "Mùi sườn nướng thơm lừng khiến cả lớp của Quang đói cồn cào.",
+   "en": "The smell of grilled ribs makes everyone in Quang's class ravenous.",
+   "ko": "구운 갈비 냄새에 꽝의 반 사람들 모두 배가 고파 죽겠대요.",
+   "blank": "sườn nướng",
+   "src": "made"
+  },
+  {
+   "text": "Sau buổi vẽ, cả nhóm của Hà kéo nhau đi ăn cơm tấm sườn nướng.",
+   "en": "After the drawing session, Hà's group heads off together for broken rice with grilled pork chops.",
+   "ko": "그림 수업이 끝나면 하네 무리는 다 같이 갈비 껌땀을 먹으러 가요.",
+   "blank": "sườn nướng",
    "src": "made"
   }
  ],
@@ -45103,6 +45615,22 @@
    "src": "made"
   }
  ],
+ "w|thịt dê": [
+  {
+   "text": "Buổi học hôm nay, thầy dạy Quang cách khử mùi hôi của thịt dê bằng gừng và rượu.",
+   "en": "In today's class, the teacher shows Quang how to remove the gamey smell of goat meat with ginger and rice wine.",
+   "ko": "오늘 수업에서 선생님은 꽝에게 생강과 술로 염소고기 누린내를 없애는 법을 가르쳐요.",
+   "blank": "thịt dê",
+   "src": "made"
+  },
+  {
+   "text": "Trong giờ nghỉ, cô Hà kể món thịt dê nướng ở quê cô ngon nhất vùng.",
+   "en": "During the break, Hà says the grilled goat meat in her hometown is the best in the region.",
+   "ko": "쉬는 시간에 하는 자기 고향 염소고기 구이가 그 지역에서 제일 맛있다고 이야기해요.",
+   "blank": "thịt dê",
+   "src": "made"
+  }
+ ],
  "w|thịt gà": [
   {
    "text": "Món thịt gà luộc này nhạt quá.",
@@ -45129,6 +45657,22 @@
    "en": "Caramelized pork is very fragrant.",
    "ko": "돼지고기 카라멜 볶음이 아주 향기러워.",
    "blank": "Thịt heo"
+  }
+ ],
+ "w|thịt kho": [
+  {
+   "text": "Món đầu tiên Quang học nấu là nồi thịt kho trứng như mẹ vẫn làm ngày Tết.",
+   "en": "The first dish Quang learns is braised pork with eggs, the way his mother makes it at Tet.",
+   "ko": "꽝이 처음 배운 요리는 엄마가 설날마다 하던 달걀 돼지고기 조림이에요.",
+   "blank": "thịt kho",
+   "src": "made"
+  },
+  {
+   "text": "Hà vẽ nồi đất đựng thịt kho với lớp nước màu cánh gián bóng loáng.",
+   "en": "Hà paints a clay pot of braised pork with a glossy amber sauce.",
+   "ko": "하는 반지르르한 캐러멜색 국물의 돼지고기 조림이 담긴 뚝배기를 그려요.",
+   "blank": "thịt kho",
+   "src": "made"
   }
  ],
  "w|thịt lợn": [
@@ -45174,6 +45718,22 @@
    "en": "The family brings in duck porridge, but Lan reminds them the patient can't eat yet.",
    "ko": "보호자가 오리고기 죽을 가져왔지만 란은 환자가 아직 먹으면 안 된다고 말해요.",
    "blank": "thịt vịt",
+   "src": "made"
+  }
+ ],
+ "w|thịt xông khói": [
+  {
+   "text": "Món mì Ý của Quang được rắc thêm vụn thịt xông khói giòn rụm.",
+   "en": "Quang's pasta is topped with crispy bacon bits.",
+   "ko": "꽝의 파스타 위에는 바삭한 베이컨 조각이 뿌려져 있어요.",
+   "blank": "thịt xông khói",
+   "src": "made"
+  },
+  {
+   "text": "Mùi thịt xông khói từ quán bên cạnh bay vào làm Hà mất tập trung.",
+   "en": "The smell of bacon drifting in from the shop next door distracts Hà.",
+   "ko": "옆 가게에서 풍겨 오는 베이컨 냄새에 하는 집중이 흐트러져요.",
+   "blank": "thịt xông khói",
    "src": "made"
   }
  ],
@@ -45383,6 +45943,22 @@
    "en": "Escaping from bad habits is very hard.",
    "ko": "나쁜 습관에서 벗어나는 건 아주 어려워.",
    "blank": "Thoát khỏi"
+  }
+ ],
+ "w|thói": [
+  {
+   "text": "Cô giáo bảo Quang bỏ cái thói nêm muối mà không nếm trước.",
+   "en": "The teacher tells Quang to drop his habit of adding salt without tasting first.",
+   "ko": "선생님은 맛보지도 않고 소금부터 넣는 버릇을 고치라고 꽝에게 말해요.",
+   "blank": "thói",
+   "src": "made"
+  },
+  {
+   "text": "Thầy nhắc Hà bỏ cái thói tẩy đi tẩy lại khiến giấy rách.",
+   "en": "The teacher reminds Hà to drop her habit of erasing over and over until the paper tears.",
+   "ko": "선생님은 종이가 찢어질 때까지 지우고 또 지우는 버릇을 고치라고 하에게 말해요.",
+   "blank": "thói",
+   "src": "made"
   }
  ],
  "w|thôi": [
@@ -48767,6 +49343,22 @@
    "src": "tatoeba:11318140/chaule3 en:11318139/chaule3"
   }
  ],
+ "w|tráng": [
+  {
+   "text": "Quang tráng một lớp trứng mỏng rồi cuộn lại thành miếng vuông vắn.",
+   "en": "Quang spreads a thin layer of egg in the pan, then rolls it into a neat block.",
+   "ko": "꽝은 달걀을 팬에 얇게 펴서 부친 뒤 반듯하게 말아요.",
+   "blank": "tráng",
+   "src": "made"
+  },
+  {
+   "text": "Hà tráng một lớp màu nước loãng lên cả tờ giấy làm nền trời.",
+   "en": "Hà washes a thin layer of watercolor over the whole sheet for the sky.",
+   "ko": "하는 하늘 배경으로 묽은 수채 물감을 종이 전체에 얇게 펴 발라요.",
+   "blank": "tráng",
+   "src": "made"
+  }
+ ],
  "w|trăng": [
   {
    "text": "Đêm nay trăng tròn rất đẹp.",
@@ -49583,6 +50175,22 @@
    "blank": "Trong khi"
   }
  ],
+ "w|trong khi đó": [
+  {
+   "text": "Quang lo phần chiên cá, trong khi đó bạn cùng nhóm làm nước chấm.",
+   "en": "Quang handles frying the fish, while his teammate makes the dipping sauce.",
+   "ko": "꽝은 생선 튀기기를 맡고, 그동안 같은 조 친구는 소스를 만들어요.",
+   "blank": "trong khi đó",
+   "src": "made"
+  },
+  {
+   "text": "Hà vẽ phác chân dung, trong khi đó bạn cô đang pha màu.",
+   "en": "Hà sketches a portrait, while her friend is mixing paint.",
+   "ko": "하는 초상화를 스케치하고, 그동안 친구는 물감을 섞어요.",
+   "blank": "trong khi đó",
+   "src": "made"
+  }
+ ],
  "w|trong lúc": [
   {
    "text": "Trong lúc chờ, mình đọc sách.",
@@ -49745,6 +50353,22 @@
    "en": "Mom's fried eggs are really good.",
    "ko": "엄마 계란프라이 진짜 맛있어.",
    "blank": "Trứng"
+  }
+ ],
+ "w|trụng": [
+  {
+   "text": "Cô giáo nhắc Quang chỉ trụng rau muống thật nhanh để rau giữ màu xanh.",
+   "en": "The teacher reminds Quang to blanch the water spinach very quickly so it stays green.",
+   "ko": "선생님은 공심채가 초록빛을 유지하게 아주 빨리 데치라고 꽝에게 일러요.",
+   "blank": "trụng",
+   "src": "made"
+  },
+  {
+   "text": "Trước giờ vẽ, Hà ghé quán bún và nhìn bà chủ trụng bún vào nồi nước sôi.",
+   "en": "Before class, Hà stops at a noodle stall and watches the owner dip noodles into boiling water.",
+   "ko": "그림 수업 전에 하는 국수 가게에 들러 주인이 끓는 물에 면을 데치는 걸 봐요.",
+   "blank": "trụng",
+   "src": "made"
   }
  ],
  "w|trung học": [
@@ -50175,6 +50799,22 @@
    "en": "Can you get home on your own?",
    "ko": "혼자 집에 갈 수 있어?",
    "blank": "tự"
+  }
+ ],
+ "w|từ bỏ": [
+  {
+   "text": "Quang không định từ bỏ công việc văn phòng, chỉ học nấu ăn cho vui.",
+   "en": "Quang doesn't plan to quit his office job; he's only learning to cook for fun.",
+   "ko": "꽝은 사무직을 그만둘 생각은 없고 재미로 요리를 배워요.",
+   "blank": "từ bỏ",
+   "src": "made"
+  },
+  {
+   "text": "Có lúc Hà muốn từ bỏ vì mãi không vẽ được bàn tay cho giống.",
+   "en": "Sometimes Hà wants to give up because she still can't draw hands realistically.",
+   "ko": "하는 손을 아무리 해도 비슷하게 못 그려서 가끔 포기하고 싶어요.",
+   "blank": "từ bỏ",
+   "src": "made"
   }
  ],
  "w|từ chối": [

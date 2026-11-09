@@ -3225,6 +3225,22 @@
    "src": "made"
   }
  ],
+ "w|architetto": [
+  {
+   "text": "Matteo intervista l'architetto che ha progettato il nuovo stadio.",
+   "en": "Matteo interviews the architect who designed the new stadium.",
+   "ko": "마테오는 새 경기장을 설계한 건축가를 인터뷰해요.",
+   "blank": "architetto",
+   "src": "made"
+  },
+  {
+   "text": "La nuova collega di Sara è un architetto molto preciso.",
+   "en": "Sara's new colleague is a very precise architect.",
+   "ko": "사라의 새 동료는 아주 꼼꼼한 건축가예요.",
+   "blank": "architetto",
+   "src": "made"
+  }
+ ],
  "w|archivio": [
   {
    "text": "Ho cercato il documento nell'archivio.",
@@ -4089,6 +4105,22 @@
    "en": "The atmosphere in the office is tense today.",
    "ko": "오늘 사무실 분위기가 팽팽해.",
    "blank": "atmosfera"
+  }
+ ],
+ "w|atomico": [
+  {
+   "text": "Matteo prepara un pezzo storico sulla prima bomba atomica.",
+   "en": "Matteo prepares a history piece on the first atomic bomb.",
+   "ko": "마테오는 최초의 원자 폭탄에 관한 역사 기사를 준비해요.",
+   "blank": "atomica",
+   "src": "made"
+  },
+  {
+   "text": "Sara scopre che il nuovo collega ha studiato fisica atomica all'università.",
+   "en": "Sara discovers that the new colleague studied atomic physics at university.",
+   "ko": "사라는 새 동료가 대학에서 원자 물리학을 공부했다는 걸 알게 돼요.",
+   "blank": "atomica",
+   "src": "made"
   }
  ],
  "w|attaccare": [
@@ -5363,6 +5395,22 @@
    "en": "The bank closes at four.",
    "ko": "은행은 네 시에 닫아.",
    "blank": "banca"
+  }
+ ],
+ "w|bancario": [
+  {
+   "text": "Per il pezzo sulle banche, Matteo parla con un bancario in pensione.",
+   "en": "For the piece on banks, Matteo talks to a retired bank clerk.",
+   "ko": "은행 기사를 위해 마테오는 은퇴한 은행원과 이야기해요.",
+   "blank": "bancario",
+   "src": "made"
+  },
+  {
+   "text": "Prima di arrivare qui, il collega di Sara lavorava come bancario a Milano.",
+   "en": "Before coming here, Sara's colleague worked as a bank clerk in Milan.",
+   "ko": "여기 오기 전에 사라의 동료는 밀라노에서 은행원으로 일했어요.",
+   "blank": "bancario",
+   "src": "made"
   }
  ],
  "w|bancarotta": [
@@ -7067,6 +7115,22 @@
    "en": "He's watching the soccer match on TV.",
    "ko": "그는 티비로 축구 경기를 봐.",
    "blank": "calcio"
+  }
+ ],
+ "w|calcolare": [
+  {
+   "text": "Matteo deve calcolare quante righe restano per la notizia dell'ultima ora.",
+   "en": "Matteo has to work out how many lines are left for the breaking news.",
+   "ko": "마테오는 속보에 남은 줄이 몇 줄인지 계산해야 해요.",
+   "blank": "calcolare",
+   "src": "made"
+  },
+  {
+   "text": "Sara insegna al collega a calcolare le ferie con il nuovo programma.",
+   "en": "Sara teaches her colleague to calculate holiday days with the new program.",
+   "ko": "사라는 동료에게 새 프로그램으로 휴가 일수를 계산하는 법을 알려 줘요.",
+   "blank": "calcolare",
+   "src": "made"
   }
  ],
  "w|calcolo": [
@@ -10843,6 +10907,22 @@
    "src": "made"
   }
  ],
+ "w|compatibile": [
+  {
+   "text": "Il vecchio programma della redazione non è compatibile con il portatile di Matteo.",
+   "en": "The newsroom's old program isn't compatible with Matteo's laptop.",
+   "ko": "편집국의 옛 프로그램은 마테오의 노트북과 호환되지 않아요.",
+   "blank": "compatibile",
+   "src": "made"
+  },
+  {
+   "text": "Sara scopre che il nuovo collega ha un carattere compatibile con il suo.",
+   "en": "Sara discovers that the new colleague has a personality that's compatible with hers.",
+   "ko": "사라는 새 동료와 성격이 잘 맞는다는 걸 알게 돼요.",
+   "blank": "compatibile",
+   "src": "made"
+  }
+ ],
  "w|competenza": [
   {
    "text": "Marco ha la competenza giusta per gestire la cucina quando lo chef è assente.",
@@ -10856,6 +10936,22 @@
    "en": "Giulia looks for books to improve her computer skills.",
    "ko": "줄리아는 컴퓨터 실력을 늘릴 책을 찾아요.",
    "blank": "competenza",
+   "src": "made"
+  }
+ ],
+ "w|competere": [
+  {
+   "text": "Il giornale di Matteo deve competere con i siti che pubblicano notizie in pochi secondi.",
+   "en": "Matteo's paper has to compete with websites that publish news in seconds.",
+   "ko": "마테오의 신문은 몇 초 만에 소식을 올리는 사이트들과 경쟁해야 해요.",
+   "blank": "competere",
+   "src": "made"
+  },
+  {
+   "text": "Sara dice a Davide che in questo ufficio non serve competere con nessuno.",
+   "en": "Sara tells Davide that in this office there's no need to compete with anyone.",
+   "ko": "사라는 다비데에게 이 사무실에서는 누구와도 경쟁할 필요가 없다고 말해요.",
+   "blank": "competere",
    "src": "made"
   }
  ],
@@ -11060,6 +11156,22 @@
    "en": "At the market everyone jokes about a fishmongers' plot to raise prices, and Francesca laughs.",
    "ko": "시장에서는 다들 생선 장수들이 값을 올리려고 짠 음모라며 농담하고 프란체스카도 웃어요.",
    "blank": "complotto",
+   "src": "made"
+  }
+ ],
+ "w|componente": [
+  {
+   "text": "Matteo intervista un componente della giuria del festival del cinema.",
+   "en": "Matteo interviews a member of the film festival jury.",
+   "ko": "마테오는 영화제 심사 위원 한 명을 인터뷰해요.",
+   "blank": "componente",
+   "src": "made"
+  },
+  {
+   "text": "Sara presenta Davide come nuovo componente del gruppo di progetto.",
+   "en": "Sara introduces Davide as the new member of the project team.",
+   "ko": "사라는 다비데를 프로젝트 팀의 새 구성원으로 소개해요.",
+   "blank": "componente",
    "src": "made"
   }
  ],
@@ -16081,6 +16193,22 @@
    "blank": "distretto"
   }
  ],
+ "w|distribuire": [
+  {
+   "text": "La domenica Matteo aiuta a distribuire le copie gratuite in stazione.",
+   "en": "On Sundays Matteo helps hand out free copies at the station.",
+   "ko": "일요일마다 마테오는 역에서 무가지 배포를 도와요.",
+   "blank": "distribuire",
+   "src": "made"
+  },
+  {
+   "text": "Sara e il collega devono distribuire i volantini alla fiera.",
+   "en": "Sara and her colleague have to hand out flyers at the trade fair.",
+   "ko": "사라와 동료는 박람회에서 전단지를 나눠 줘야 해요.",
+   "blank": "distribuire",
+   "src": "made"
+  }
+ ],
  "w|distruggere": [
   {
    "text": "Non voglio distruggere la nostra amicizia.",
@@ -17511,6 +17639,22 @@
    "blank": "Ehi"
   }
  ],
+ "w|elaborare": [
+  {
+   "text": "Matteo ha bisogno di un'ora per elaborare tutti i dati del sondaggio.",
+   "en": "Matteo needs an hour to process all the survey data.",
+   "ko": "마테오는 설문 자료를 다 처리하는 데 한 시간이 필요해요.",
+   "blank": "elaborare",
+   "src": "made"
+  },
+  {
+   "text": "Sara aiuta la nuova collega a elaborare la prima presentazione.",
+   "en": "Sara helps the new colleague put together her first presentation.",
+   "ko": "사라는 새 동료가 첫 발표 자료를 만드는 걸 도와요.",
+   "blank": "elaborare",
+   "src": "made"
+  }
+ ],
  "w|elefante": [
   {
    "text": "Il figlio piccolo di Andrea vuole sapere quanto pesa un elefante rispetto a una mucca.",
@@ -18265,6 +18409,22 @@
    "en": "He is an example for all of us.",
    "ko": "그는 우리 모두에게 본보기야.",
    "blank": "esempio"
+  }
+ ],
+ "w|esemplare": [
+  {
+   "text": "Matteo descrive il comportamento esemplare dei tifosi durante la finale.",
+   "en": "Matteo describes the exemplary behaviour of the fans during the final.",
+   "ko": "마테오는 결승전 동안 팬들의 모범적인 행동을 기사로 써요.",
+   "blank": "esemplare",
+   "src": "made"
+  },
+  {
+   "text": "Il capo dice a Sara che il nuovo collega è un lavoratore esemplare.",
+   "en": "The boss tells Sara that the new colleague is an exemplary worker.",
+   "ko": "상사는 새 동료가 모범적인 직원이라고 사라에게 말해요.",
+   "blank": "esemplare",
+   "src": "made"
   }
  ],
  "w|esercitare": [
@@ -20277,6 +20437,38 @@
    "blank": "finalmente"
   }
  ],
+ "w|finanza": [
+  {
+   "text": "Matteo lavora nella sezione di finanza e segue la borsa tutto il giorno.",
+   "en": "Matteo works in the finance section and follows the stock market all day.",
+   "ko": "마테오는 금융부에서 일하며 하루 종일 주식 시장을 지켜봐요.",
+   "blank": "finanza",
+   "src": "made"
+  },
+  {
+   "text": "Davide, il nuovo arrivato, viene dal mondo della finanza e Sara è curiosa.",
+   "en": "Davide, the newcomer, comes from the world of finance, and Sara is curious.",
+   "ko": "새로 온 다비데가 금융계 출신이라 사라는 궁금해해요.",
+   "blank": "finanza",
+   "src": "made"
+  }
+ ],
+ "w|finanziare": [
+  {
+   "text": "Matteo indaga su chi ha finanziato la campagna per il nuovo parcheggio.",
+   "en": "Matteo looks into who funded the campaign for the new car park.",
+   "ko": "마테오는 새 주차장 캠페인에 누가 돈을 댔는지 조사해요.",
+   "blank": "finanziato",
+   "src": "made"
+  },
+  {
+   "text": "L'azienda di Sara vuole finanziare un corso di lingue per i nuovi assunti.",
+   "en": "Sara's company wants to fund a language course for new hires.",
+   "ko": "사라의 회사는 신입 사원을 위한 어학 강좌를 지원하려 해요.",
+   "blank": "finanziare",
+   "src": "made"
+  }
+ ],
  "w|finanziario": [
   {
    "text": "Simone tiene un piccolo quaderno per il resoconto finanziario della bancarella.",
@@ -20899,6 +21091,22 @@
    "blank": "fornire"
   }
  ],
+ "w|fornitore": [
+  {
+   "text": "Il fornitore della carta avvisa Matteo che i prezzi aumenteranno.",
+   "en": "The paper supplier warns Matteo that prices will go up.",
+   "ko": "종이 납품업체가 가격이 오를 거라고 마테오에게 알려요.",
+   "blank": "fornitore",
+   "src": "made"
+  },
+  {
+   "text": "Sara presenta il collega al principale fornitore dell'azienda.",
+   "en": "Sara introduces her colleague to the company's main supplier.",
+   "ko": "사라는 동료를 회사의 주요 납품업체에 소개해요.",
+   "blank": "fornitore",
+   "src": "made"
+  }
+ ],
  "w|forno": [
   {
    "text": "Il profumo della torta nel forno della vicina arriva fino al pianerottolo di Marco.",
@@ -21166,6 +21374,22 @@
    "en": "Chiara misunderstood the announcement and got off one stop early.",
    "ko": "키아라는 안내 방송을 잘못 알아듣고 한 정거장 일찍 내렸어요.",
    "blank": "frainteso",
+   "src": "made"
+  }
+ ],
+ "w|frammento": [
+  {
+   "text": "Matteo scrive del frammento di vaso romano trovato durante gli scavi della metro.",
+   "en": "Matteo writes about the fragment of a Roman vase found during the metro excavations.",
+   "ko": "마테오는 지하철 공사 중 발견된 로마 항아리 조각에 대해 써요.",
+   "blank": "frammento",
+   "src": "made"
+  },
+  {
+   "text": "Sara sente solo un frammento della telefonata del collega e non capisce.",
+   "en": "Sara hears only a fragment of her colleague's phone call and doesn't understand.",
+   "ko": "사라는 동료의 통화를 조금만 들어서 무슨 말인지 몰라요.",
+   "blank": "frammento",
    "src": "made"
   }
  ],
@@ -21765,6 +21989,22 @@
    "en": "They reported the theft of the bike.",
    "ko": "자전거 도난을 신고했어.",
    "blank": "furto"
+  }
+ ],
+ "w|fusione": [
+  {
+   "text": "In redazione si parla della fusione tra due grandi banche, e Matteo prende appunti.",
+   "en": "The newsroom is talking about the merger of two big banks, and Matteo takes notes.",
+   "ko": "편집국에서 두 대형 은행의 합병 이야기가 나오고, 마테오는 메모해요.",
+   "blank": "fusione",
+   "src": "made"
+  },
+  {
+   "text": "Il nuovo collega di Sara è arrivato dopo la fusione con l'azienda di Torino.",
+   "en": "Sara's new colleague arrived after the merger with the Turin company.",
+   "ko": "사라의 새 동료는 토리노 회사와 합병한 뒤에 왔어요.",
+   "blank": "fusione",
+   "src": "made"
   }
  ],
  "w|futuro": [
@@ -23156,6 +23396,22 @@
    "en": "Elena scratched her knee on the rough edge of the pool.",
    "ko": "엘레나는 수영장 가장자리의 거친 벽에 무릎이 긁혔어요.",
    "blank": "graffiata",
+   "src": "made"
+  }
+ ],
+ "w|grammo": [
+  {
+   "text": "Nella ricetta per la rubrica di cucina, Matteo corregge la dose: cento grammi, non mille.",
+   "en": "In the recipe for the cooking column, Matteo corrects the amount: a hundred grams, not a thousand.",
+   "ko": "요리 칼럼 레시피에서 마테오는 분량을 천이 아니라 백 그램으로 고쳐요.",
+   "blank": "grammi",
+   "src": "made"
+  },
+  {
+   "text": "Sara pesa il caffè per la moka con cura: nemmeno un grammo in più.",
+   "en": "Sara weighs the coffee for the moka pot carefully: not a single gram more.",
+   "ko": "사라는 모카포트에 넣을 커피를 꼼꼼히 재요. 일 그램도 더 넣지 않아요.",
+   "blank": "grammo",
    "src": "made"
   }
  ],
@@ -25997,6 +26253,22 @@
    "blank": "insomma"
   }
  ],
+ "w|insopportabile": [
+  {
+   "text": "Il rumore dei telefoni in redazione è insopportabile per Matteo stamattina.",
+   "en": "The noise of phones in the newsroom is unbearable for Matteo this morning.",
+   "ko": "오늘 아침 마테오에게 편집국 전화 소리는 견딜 수 없어요.",
+   "blank": "insopportabile",
+   "src": "made"
+  },
+  {
+   "text": "Il caldo nell'ufficio è insopportabile, dice il nuovo collega a Sara.",
+   "en": "The heat in the office is unbearable, the new colleague tells Sara.",
+   "ko": "새 동료는 사무실 더위를 못 참겠다고 사라에게 말해요.",
+   "blank": "insopportabile",
+   "src": "made"
+  }
+ ],
  "w|instabile": [
   {
    "text": "Il tempo è instabile, quindi Davide ha rimandato la gita all'isola.",
@@ -26531,6 +26803,22 @@
    "blank": "inventare"
   }
  ],
+ "w|invenzione": [
+  {
+   "text": "Matteo prepara un servizio su un'invenzione di due studenti di ingegneria.",
+   "en": "Matteo prepares a report on an invention by two engineering students.",
+   "ko": "마테오는 공대생 둘이 만든 발명품에 관한 기사를 준비해요.",
+   "blank": "invenzione",
+   "src": "made"
+  },
+  {
+   "text": "Sara scherza che la macchina del caffè è la migliore invenzione dell'ufficio.",
+   "en": "Sara jokes that the coffee machine is the office's best invention.",
+   "ko": "사라는 커피 머신이 사무실 최고의 발명품이라고 농담해요.",
+   "blank": "invenzione",
+   "src": "made"
+  }
+ ],
  "w|inverno": [
   {
    "text": "L'inverno quest'anno è mite.",
@@ -26845,6 +27133,22 @@
    "en": "I spoke with the inspector this morning.",
    "ko": "오늘 아침 경위와 이야기했어.",
    "blank": "ispettore"
+  }
+ ],
+ "w|ispezione": [
+  {
+   "text": "Matteo racconta l'ispezione dei carabinieri in una fabbrica abusiva.",
+   "en": "Matteo reports on the police inspection of an illegal factory.",
+   "ko": "마테오는 불법 공장에 대한 경찰 점검을 보도해요.",
+   "blank": "ispezione",
+   "src": "made"
+  },
+  {
+   "text": "Sara avverte il collega che domani c'è un'ispezione della sicurezza.",
+   "en": "Sara warns her colleague that there's a safety inspection tomorrow.",
+   "ko": "사라는 내일 안전 점검이 있다고 동료에게 미리 알려 줘요.",
+   "blank": "ispezione",
+   "src": "made"
   }
  ],
  "w|ispirare": [
@@ -29289,6 +29593,22 @@
    "blank": "mani"
   }
  ],
+ "w|manovra": [
+  {
+   "text": "Matteo deve spiegare ai lettori la manovra economica approvata ieri.",
+   "en": "Matteo has to explain to readers the budget package approved yesterday.",
+   "ko": "마테오는 어제 통과된 경제 대책을 독자들에게 설명해야 해요.",
+   "blank": "manovra",
+   "src": "made"
+  },
+  {
+   "text": "Il parcheggio è stretto, e Sara guida il collega nella manovra.",
+   "en": "The car park is tight, and Sara guides her colleague through the manoeuvre.",
+   "ko": "주차장이 좁아서 사라가 동료의 주차를 봐 줘요.",
+   "blank": "manovra",
+   "src": "made"
+  }
+ ],
  "w|mantenere": [
   {
    "text": "Devi mantenere la calma.",
@@ -29316,6 +29636,22 @@
    "en": "Francesca has never read the manual for the new till and asks her son everything.",
    "ko": "프란체스카는 새 계산대 설명서를 한 번도 안 읽고 아들에게 다 물어봐요.",
    "blank": "manuale",
+   "src": "made"
+  }
+ ],
+ "w|manutenzione": [
+  {
+   "text": "Il sito del giornale è fermo per manutenzione, e Matteo aspetta.",
+   "en": "The paper's website is down for maintenance, and Matteo waits.",
+   "ko": "신문사 사이트가 점검 중이라 마테오는 기다려요.",
+   "blank": "manutenzione",
+   "src": "made"
+  },
+  {
+   "text": "Sara spiega a Davide chi chiamare per la manutenzione delle stampanti.",
+   "en": "Sara explains to Davide whom to call for printer maintenance.",
+   "ko": "사라는 다비데에게 프린터 정비는 누구에게 연락하면 되는지 알려 줘요.",
+   "blank": "manutenzione",
    "src": "made"
   }
  ],
@@ -30335,6 +30671,22 @@
    "blank": "merito"
   }
  ],
+ "w|meschino": [
+  {
+   "text": "Un commento meschino sul sito ferisce Matteo, ma lui non risponde.",
+   "en": "A mean comment on the website hurts Matteo, but he doesn't reply.",
+   "ko": "사이트에 달린 치사한 댓글이 마테오를 상처 입히지만 그는 대꾸하지 않아요.",
+   "blank": "meschino",
+   "src": "made"
+  },
+  {
+   "text": "Sara avverte il collega di non dare peso ai pettegolezzi meschini.",
+   "en": "Sara warns her colleague not to pay attention to petty gossip.",
+   "ko": "사라는 동료에게 치사한 뒷말에 신경 쓰지 말라고 해요.",
+   "blank": "meschini",
+   "src": "made"
+  }
+ ],
  "w|mese": [
   {
    "text": "Manca un mese alla festa.",
@@ -30953,6 +31305,22 @@
    "blank": "miseria"
   }
  ],
+ "w|misero": [
+  {
+   "text": "Matteo si lamenta del misero compenso per i collaboratori esterni.",
+   "en": "Matteo complains about the meagre pay for freelance contributors.",
+   "ko": "마테오는 외부 기고자들의 쥐꼬리만 한 원고료에 불만을 터뜨려요.",
+   "blank": "misero",
+   "src": "made"
+  },
+  {
+   "text": "Il nuovo collega si lamenta con Sara della misera scrivania che gli hanno dato.",
+   "en": "The new colleague complains to Sara about the shabby desk they gave him.",
+   "ko": "새 동료는 받은 책상이 초라하다고 사라에게 투덜대요.",
+   "blank": "misera",
+   "src": "made"
+  }
+ ],
  "w|missile": [
   {
    "text": "Il missile è partito dalla base militare.",
@@ -31109,6 +31477,22 @@
    "en": "Modern design is very simple.",
    "ko": "모던 디자인은 아주 단순해.",
    "blank": "moderno"
+  }
+ ],
+ "w|modifica": [
+  {
+   "text": "Il caporedattore chiede a Matteo un'ultima modifica al titolo.",
+   "en": "The editor-in-chief asks Matteo for one last change to the headline.",
+   "ko": "편집장은 마테오에게 제목을 마지막으로 한 번 고쳐 달라고 해요.",
+   "blank": "modifica",
+   "src": "made"
+  },
+  {
+   "text": "Sara spiega a Davide come segnalare una modifica nel documento condiviso.",
+   "en": "Sara explains to Davide how to flag a change in the shared document.",
+   "ko": "사라는 다비데에게 공유 문서에서 수정 사항을 표시하는 법을 알려 줘요.",
+   "blank": "modifica",
+   "src": "made"
   }
  ],
  "w|modificare": [
@@ -31805,6 +32189,22 @@
    "en": "The underwear is in the top drawer.",
    "ko": "속옷은 위쪽 서랍에 있어.",
    "blank": "mutande"
+  }
+ ],
+ "w|mutuo": [
+  {
+   "text": "Matteo prepara un articolo sui giovani che non riescono a ottenere un mutuo.",
+   "en": "Matteo prepares an article on young people who can't get a mortgage.",
+   "ko": "마테오는 주택 담보 대출을 못 받는 젊은이들에 관한 기사를 준비해요.",
+   "blank": "mutuo",
+   "src": "made"
+  },
+  {
+   "text": "A pranzo il nuovo collega racconta a Sara che ha appena firmato un mutuo per la casa.",
+   "en": "At lunch the new colleague tells Sara he has just signed a mortgage for a house.",
+   "ko": "점심때 새 동료는 막 주택 담보 대출 계약을 했다고 사라에게 말해요.",
+   "blank": "mutuo",
+   "src": "made"
   }
  ],
  "w|nano": [
@@ -36621,6 +37021,22 @@
    "src": "made"
   }
  ],
+ "w|pescatore": [
+  {
+   "text": "Matteo intervista un pescatore che lavora nel porto da quarant'anni.",
+   "en": "Matteo interviews a fisherman who has worked in the harbour for forty years.",
+   "ko": "마테오는 사십 년째 항구에서 일하는 어부를 인터뷰해요.",
+   "blank": "pescatore",
+   "src": "made"
+  },
+  {
+   "text": "Il padre del nuovo collega di Sara faceva il pescatore in Sicilia.",
+   "en": "The father of Sara's new colleague was a fisherman in Sicily.",
+   "ko": "사라의 새 동료의 아버지는 시칠리아에서 어부였어요.",
+   "blank": "pescatore",
+   "src": "made"
+  }
+ ],
  "w|pesce": [
   {
    "text": "Stasera mangiamo del pesce fresco.",
@@ -36865,6 +37281,22 @@
    "en": "It is time to plant the tomatoes.",
    "ko": "토마토를 심을 때야.",
    "blank": "piantare"
+  }
+ ],
+ "w|piattaforma": [
+  {
+   "text": "Il giornale di Matteo pubblica i video su una nuova piattaforma online.",
+   "en": "Matteo's paper publishes videos on a new online platform.",
+   "ko": "마테오의 신문사는 새 온라인 플랫폼에 영상을 올려요.",
+   "blank": "piattaforma",
+   "src": "made"
+  },
+  {
+   "text": "Sara mostra al nuovo arrivato la piattaforma per prenotare le sale riunioni.",
+   "en": "Sara shows the newcomer the platform for booking meeting rooms.",
+   "ko": "사라는 새로 온 사람에게 회의실 예약 플랫폼을 보여 줘요.",
+   "blank": "piattaforma",
+   "src": "made"
   }
  ],
  "w|piatto": [
@@ -40825,6 +41257,22 @@
    "src": "made"
   }
  ],
+ "w|raffinato": [
+  {
+   "text": "Matteo recensisce un ristorante raffinato aperto in centro.",
+   "en": "Matteo reviews a refined restaurant that opened downtown.",
+   "ko": "마테오는 시내에 새로 연 고급 식당을 평해요.",
+   "blank": "raffinato",
+   "src": "made"
+  },
+  {
+   "text": "La nuova collega di Sara ha un gusto raffinato per i vestiti.",
+   "en": "Sara's new colleague has refined taste in clothes.",
+   "ko": "사라의 새 동료는 옷 고르는 안목이 세련됐어요.",
+   "blank": "raffinato",
+   "src": "made"
+  }
+ ],
  "w|raffreddore": [
   {
    "text": "Paolo ha spostato l'appuntamento perché ha un brutto raffreddore.",
@@ -41745,6 +42193,22 @@
    "blank": "regola"
   }
  ],
+ "w|regolamento": [
+  {
+   "text": "Matteo legge il nuovo regolamento sull'uso delle foto prese dai social.",
+   "en": "Matteo reads the new rules on using photos taken from social media.",
+   "ko": "마테오는 소셜 미디어 사진 사용에 관한 새 규정을 읽어요.",
+   "blank": "regolamento",
+   "src": "made"
+  },
+  {
+   "text": "Sara consegna a Davide il regolamento interno e un badge.",
+   "en": "Sara hands Davide the internal rules and a badge.",
+   "ko": "사라는 다비데에게 사내 규정집과 출입증을 건네요.",
+   "blank": "regolamento",
+   "src": "made"
+  }
+ ],
  "w|regolare": [
   {
    "text": "Andrea controlla che ogni atto sia regolare prima dell'udienza.",
@@ -41758,6 +42222,22 @@
    "en": "Martina has a regular salary, but in summer she also does home repairs.",
    "ko": "마르티나는 월급이 꼬박꼬박 나오지만 여름엔 출장 수리도 해요.",
    "blank": "regolare",
+   "src": "made"
+  }
+ ],
+ "w|relativo": [
+  {
+   "text": "Matteo cerca i dati relativi agli incidenti stradali dell'ultimo anno.",
+   "en": "Matteo looks for the data on road accidents over the past year.",
+   "ko": "마테오는 지난 일 년간의 교통사고 관련 자료를 찾아요.",
+   "blank": "relativi",
+   "src": "made"
+  },
+  {
+   "text": "Sara spiega al collega che il ritardo è relativo: qui conta il risultato.",
+   "en": "Sara explains to her colleague that lateness is relative: here results are what count.",
+   "ko": "사라는 동료에게 늦는 건 상대적이고 여기선 결과가 중요하다고 설명해요.",
+   "blank": "relativo",
    "src": "made"
   }
  ],
@@ -41953,6 +42433,22 @@
    "en": "They resisted the cold all night.",
    "ko": "그들은 밤새 추위를 견뎠어.",
    "blank": "resistito"
+  }
+ ],
+ "w|resoconto": [
+  {
+   "text": "Matteo scrive il resoconto della seduta del consiglio comunale.",
+   "en": "Matteo writes the report on the town council meeting.",
+   "ko": "마테오는 시의회 회의 보고 기사를 써요.",
+   "blank": "resoconto",
+   "src": "made"
+  },
+  {
+   "text": "Ogni venerdì Sara manda al capo un breve resoconto del lavoro della settimana.",
+   "en": "Every Friday Sara sends the boss a short report on the week's work.",
+   "ko": "사라는 금요일마다 상사에게 그 주 업무를 간단히 보고해요.",
+   "blank": "resoconto",
+   "src": "made"
   }
  ],
  "w|respingere": [
@@ -42186,6 +42682,22 @@
    "en": "Elena reads a mystery on her lunch break: the main character tries to blackmail a rich banker.",
    "ko": "엘레나는 점심시간에 추리 소설을 읽어요. 주인공이 부자 은행가를 협박하려고 해요.",
    "blank": "ricattare",
+   "src": "made"
+  }
+ ],
+ "w|ricavare": [
+  {
+   "text": "Da una lunga intervista, Matteo riesce a ricavare solo due frasi utili.",
+   "en": "From a long interview, Matteo manages to get only two useful sentences.",
+   "ko": "긴 인터뷰에서 마테오가 건진 쓸 만한 문장은 두 개뿐이에요.",
+   "blank": "ricavare",
+   "src": "made"
+  },
+  {
+   "text": "Dal colloquio con il nuovo collega, Sara ricava un'ottima impressione.",
+   "en": "From her talk with the new colleague, Sara comes away with an excellent impression.",
+   "ko": "새 동료와 이야기해 보고 사라는 아주 좋은 인상을 받아요.",
+   "blank": "ricava",
    "src": "made"
   }
  ],
@@ -43012,6 +43524,22 @@
    "en": "Giulia wanted to mend her relationship with Paola after years of silence.",
    "ko": "줄리아는 몇 년 동안 연락이 끊겼던 파올라와 관계를 회복하고 싶었어요.",
    "blank": "riparare",
+   "src": "made"
+  }
+ ],
+ "w|riparazione": [
+  {
+   "text": "La macchina del caffè della redazione è in riparazione, e Matteo è disperato.",
+   "en": "The newsroom coffee machine is being repaired, and Matteo is desperate.",
+   "ko": "편집국 커피 머신이 수리 중이라 마테오는 절망해요.",
+   "blank": "riparazione",
+   "src": "made"
+  },
+  {
+   "text": "Sara spiega a Davide dove chiedere la riparazione della sedia rotta.",
+   "en": "Sara explains to Davide where to request a repair for the broken chair.",
+   "ko": "사라는 다비데에게 망가진 의자 수리를 어디에 신청하는지 알려 줘요.",
+   "blank": "riparazione",
    "src": "made"
   }
  ],
@@ -46573,6 +47101,22 @@
    "src": "made"
   }
  ],
+ "w|seminario": [
+  {
+   "text": "Matteo partecipa a un seminario sul giornalismo di dati.",
+   "en": "Matteo attends a seminar on data journalism.",
+   "ko": "마테오는 데이터 저널리즘 세미나에 참석해요.",
+   "blank": "seminario",
+   "src": "made"
+  },
+  {
+   "text": "Sara e il nuovo collega vanno insieme a un seminario sulla gestione del tempo.",
+   "en": "Sara and the new colleague go together to a seminar on time management.",
+   "ko": "사라와 새 동료는 시간 관리 세미나에 함께 가요.",
+   "blank": "seminario",
+   "src": "made"
+  }
+ ],
  "w|seminterrato": [
   {
    "text": "Marco tiene la bicicletta nel seminterrato del palazzo.",
@@ -47370,6 +47914,22 @@
    "en": "Laura's bag split open under the weight of the books.",
    "ko": "책 무게 때문에 라우라의 가방 바닥이 터졌어요.",
    "blank": "sfondata",
+   "src": "made"
+  }
+ ],
+ "w|sfondo": [
+  {
+   "text": "Nella foto di Matteo, sullo sfondo si vedono le montagne innevate.",
+   "en": "In Matteo's photo, snowy mountains can be seen in the background.",
+   "ko": "마테오의 사진 배경에는 눈 덮인 산이 보여요.",
+   "blank": "sfondo",
+   "src": "made"
+  },
+  {
+   "text": "Sara aiuta il collega a cambiare lo sfondo del computer.",
+   "en": "Sara helps her colleague change the computer's desktop background.",
+   "ko": "사라는 동료가 컴퓨터 바탕 화면을 바꾸는 걸 도와줘요.",
+   "blank": "sfondo",
    "src": "made"
   }
  ],
@@ -48791,6 +49351,22 @@
    "blank": "sospendere"
   }
  ],
+ "w|sospensione": [
+  {
+   "text": "Matteo scrive della sospensione di un calciatore per tre giornate.",
+   "en": "Matteo writes about a footballer's suspension for three matches.",
+   "ko": "마테오는 한 축구 선수의 세 경기 출전 정지에 대해 써요.",
+   "blank": "sospensione",
+   "src": "made"
+  },
+  {
+   "text": "Sara racconta alla nuova collega della sospensione del servizio mensa ad agosto.",
+   "en": "Sara tells the new colleague about the canteen closing in August.",
+   "ko": "사라는 새 동료에게 팔월에 구내식당이 쉰다고 알려 줘요.",
+   "blank": "sospensione",
+   "src": "made"
+  }
+ ],
  "w|sospettare": [
   {
    "text": "Comincio a sospettare qualcosa di strano.",
@@ -48968,6 +49544,22 @@
    "en": "There's always background music in the office while Sara codes.",
    "ko": "사라가 프로그래밍하는 동안 사무실엔 늘 배경 음악이 흘러요.",
    "blank": "sottofondo",
+   "src": "made"
+  }
+ ],
+ "w|sottoporre": [
+  {
+   "text": "Prima di pubblicare, Matteo deve sottoporre l'articolo all'avvocato del giornale.",
+   "en": "Before publishing, Matteo has to submit the article to the paper's lawyer.",
+   "ko": "마테오는 기사를 내기 전에 신문사 변호사에게 검토를 받아야 해요.",
+   "blank": "sottoporre",
+   "src": "made"
+  },
+  {
+   "text": "Sara vuole sottoporre al capo l'idea del collega.",
+   "en": "Sara wants to put her colleague's idea to the boss.",
+   "ko": "사라는 동료의 아이디어를 상사에게 올리고 싶어요.",
+   "blank": "sottoporre",
    "src": "made"
   }
  ],
@@ -55147,6 +55739,22 @@
    "src": "made"
   }
  ],
+ "w|vapore": [
+  {
+   "text": "In redazione la caffettiera fischia e manda vapore sulla scrivania di Matteo.",
+   "en": "In the newsroom the coffee pot whistles and sends steam over Matteo's desk.",
+   "ko": "편집국 커피 주전자가 휘파람 소리를 내며 마테오 책상 위로 김을 뿜어요.",
+   "blank": "vapore",
+   "src": "made"
+  },
+  {
+   "text": "Sara mostra al nuovo arrivato il ferro a vapore per le camicie nello spogliatoio.",
+   "en": "Sara shows the newcomer the steam iron for shirts in the changing room.",
+   "ko": "사라는 새로 온 사람에게 탈의실에 있는 셔츠용 스팀다리미를 보여 줘요.",
+   "blank": "vapore",
+   "src": "made"
+  }
+ ],
  "w|vario": [
   {
    "text": "Abbiamo un menu vario oggi.",
@@ -55188,6 +55796,22 @@
    "en": "Giulia brought a vase of flowers for the hostess.",
    "ko": "줄리아는 집주인에게 꽃 화분을 가져갔어요.",
    "blank": "vaso",
+   "src": "made"
+  }
+ ],
+ "w|vasto": [
+  {
+   "text": "Il giornale di Matteo ha un pubblico vasto anche all'estero.",
+   "en": "Matteo's paper has a wide readership abroad too.",
+   "ko": "마테오의 신문은 해외에도 독자층이 넓어요.",
+   "blank": "vasto",
+   "src": "made"
+  },
+  {
+   "text": "Sara è colpita dalla vasta esperienza della nuova collega.",
+   "en": "Sara is impressed by the new colleague's broad experience.",
+   "ko": "사라는 새 동료의 폭넓은 경험에 감탄해요.",
+   "blank": "vasta",
    "src": "made"
   }
  ],
@@ -55724,6 +56348,22 @@
    "en": "Chiara's neighbour, a veteran vegetable gardener, teaches her when to sow peas.",
    "ko": "채소밭 베테랑인 키아라의 이웃이 완두콩 씨 뿌릴 때를 가르쳐 줘요.",
    "blank": "veterano",
+   "src": "made"
+  }
+ ],
+ "w|veterinario": [
+  {
+   "text": "Matteo intervista un veterinario che cura gli animali dello zoo.",
+   "en": "Matteo interviews a vet who looks after the zoo animals.",
+   "ko": "마테오는 동물원 동물을 돌보는 수의사를 인터뷰해요.",
+   "blank": "veterinario",
+   "src": "made"
+  },
+  {
+   "text": "Davide, il nuovo collega di Sara, prima faceva il veterinario in campagna.",
+   "en": "Davide, Sara's new colleague, used to be a country vet.",
+   "ko": "사라의 새 동료 다비데는 전에 시골에서 수의사였어요.",
+   "blank": "veterinario",
    "src": "made"
   }
  ],

@@ -861,6 +861,22 @@
    "blank": "admirer"
   }
  ],
+ "w|admission": [
+  {
+   "text": "Nicolas attend la réponse pour son admission à une formation d'ingénieur.",
+   "en": "Nicolas is waiting to hear about his admission to an engineering program.",
+   "ko": "니콜라는 엔지니어 과정 합격 여부를 기다리고 있어요.",
+   "blank": "admission",
+   "src": "made"
+  },
+  {
+   "text": "Inès annonce fièrement l'admission de sa fille à l'école de musique.",
+   "en": "Inès proudly announces her daughter's admission to music school.",
+   "ko": "이네스는 딸이 음악 학교에 합격했다고 자랑스럽게 알려요.",
+   "blank": "admission",
+   "src": "made"
+  }
+ ],
  "w|ado": [
   {
    "text": "Mon ado ne lâche plus son téléphone.",
@@ -1239,6 +1255,22 @@
    "en": "This agency offers good jobs.",
    "ko": "이 기관은 좋은 일자리를 제공해.",
    "blank": "agence"
+  }
+ ],
+ "w|agenda": [
+  {
+   "text": "Nicolas note la visite de l'inspecteur dans son agenda.",
+   "en": "Nicolas writes the inspector's visit in his planner.",
+   "ko": "니콜라는 감독관 방문을 다이어리에 적어요.",
+   "blank": "agenda",
+   "src": "made"
+  },
+  {
+   "text": "Inès a retrouvé un vieil agenda plein de rendez-vous avec son ami.",
+   "en": "Inès found an old planner full of meetups with her friend.",
+   "ko": "이네스는 친구와의 약속이 가득한 옛날 다이어리를 찾았어요.",
+   "blank": "agenda",
+   "src": "made"
   }
  ],
  "w|agent": [
@@ -1692,6 +1724,22 @@
    "en": "Inès refuses to sell alcohol to an alcoholic customer well known in the neighbourhood.",
    "ko": "이네스는 동네에서 잘 알려진 알코올 의존 손님에게 술을 팔지 않아요.",
    "blank": "alcoolique",
+   "src": "made"
+  }
+ ],
+ "w|alentours": [
+  {
+   "text": "Comme Nicolas, beaucoup d'ouvriers viennent des villages des alentours.",
+   "en": "Like Nicolas, many workers come from the surrounding villages.",
+   "ko": "니콜라처럼 많은 노동자가 근처 마을에서 와요.",
+   "blank": "alentours",
+   "src": "made"
+  },
+  {
+   "text": "Inès raconte ses promenades dans les alentours de sa nouvelle ville.",
+   "en": "Inès describes her walks around her new town.",
+   "ko": "이네스는 새로 이사한 도시 근처를 산책한 이야기를 해요.",
+   "blank": "alentours",
    "src": "made"
   }
  ],
@@ -8347,6 +8395,22 @@
    "blank": "cage"
   }
  ],
+ "w|cahier": [
+  {
+   "text": "Nicolas écrit chaque réglage dans un petit cahier à carreaux.",
+   "en": "Nicolas writes every setting in a small squared notebook.",
+   "ko": "니콜라는 설정값을 하나하나 작은 모눈 공책에 적어요.",
+   "blank": "cahier",
+   "src": "made"
+  },
+  {
+   "text": "Inès a gardé le cahier où ils écrivaient des poèmes ensemble.",
+   "en": "Inès has kept the notebook where they used to write poems together.",
+   "ko": "이네스는 둘이 함께 시를 쓰던 공책을 간직하고 있어요.",
+   "blank": "cahier",
+   "src": "made"
+  }
+ ],
  "w|caillou": [
   {
    "text": "Julien a glissé sur un caillou en descendant le sentier.",
@@ -8693,6 +8757,22 @@
    "en": "The candidate answered the questions well.",
    "ko": "그 후보자는 질문에 잘 답했어.",
    "blank": "candidat"
+  }
+ ],
+ "w|candidature": [
+  {
+   "text": "Nicolas a envoyé sa candidature pour le poste de chef d'équipe.",
+   "en": "Nicolas sent in his application for the team leader position.",
+   "ko": "니콜라는 조장 자리에 지원서를 냈어요.",
+   "blank": "candidature",
+   "src": "made"
+  },
+  {
+   "text": "Inès demande à son ami de relire sa lettre de candidature.",
+   "en": "Inès asks her friend to proofread her cover letter.",
+   "ko": "이네스는 친구에게 자기 지원서를 읽어 봐 달라고 부탁해요.",
+   "blank": "candidature",
+   "src": "made"
   }
  ],
  "w|canne": [
@@ -12443,6 +12523,22 @@
    "blank": "comédie"
   }
  ],
+ "w|comédien": [
+  {
+   "text": "Avant l'usine, Nicolas rêvait de devenir comédien de théâtre.",
+   "en": "Before the factory, Nicolas dreamed of becoming a stage actor.",
+   "ko": "공장에 오기 전에 니콜라는 연극배우가 되는 게 꿈이었어요.",
+   "blank": "comédien",
+   "src": "made"
+  },
+  {
+   "text": "Inès apprend que leur ancien camarade de classe est devenu comédien.",
+   "en": "Inès hears that their old classmate has become an actor.",
+   "ko": "이네스는 옛 반 친구가 배우가 됐다는 소식을 들어요.",
+   "blank": "comédien",
+   "src": "made"
+  }
+ ],
  "w|comique": [
   {
    "text": "Le stagiaire a glissé dans la boue de façon si comique que même Louis a ri.",
@@ -12875,6 +12971,22 @@
    "blank": "compétence"
   }
  ],
+ "w|compétent": [
+  {
+   "text": "Le chef trouve Nicolas très compétent pour réparer les vieilles machines.",
+   "en": "The boss finds Nicolas very skilled at repairing old machines.",
+   "ko": "상사는 니콜라가 오래된 기계를 고치는 데 아주 유능하다고 생각해요.",
+   "blank": "compétent",
+   "src": "made"
+  },
+  {
+   "text": "Inès a enfin trouvé un médecin compétent et attentif.",
+   "en": "Inès has finally found a competent and caring doctor.",
+   "ko": "이네스는 드디어 유능하고 세심한 의사를 찾았어요.",
+   "blank": "compétent",
+   "src": "made"
+  }
+ ],
  "w|compétition": [
   {
    "text": "La compétition commence demain.",
@@ -13183,6 +13295,22 @@
    "blank": "compter"
   }
  ],
+ "w|comptoir": [
+  {
+   "text": "Nicolas boit un café au comptoir de la cantine avant de commencer son service.",
+   "en": "Nicolas drinks a coffee at the canteen counter before starting his shift.",
+   "ko": "니콜라는 근무를 시작하기 전에 구내식당 카운터에서 커피를 마셔요.",
+   "blank": "comptoir",
+   "src": "made"
+  },
+  {
+   "text": "Inès a acheté le papier à lettres au comptoir d'une petite papeterie.",
+   "en": "Inès bought the writing paper at the counter of a small stationery shop.",
+   "ko": "이네스는 작은 문구점 카운터에서 편지지를 샀어요.",
+   "blank": "comptoir",
+   "src": "made"
+  }
+ ],
  "w|comte": [
   {
    "text": "Le comte habite dans un vieux château.",
@@ -13255,6 +13383,22 @@
    "en": "I got the idea, not the details.",
    "ko": "큰 그림은 알겠는데 세부는 모르겠어.",
    "blank": "concept"
+  }
+ ],
+ "w|conception": [
+  {
+   "text": "Nicolas participe à la conception d'une nouvelle pièce pour les vélos.",
+   "en": "Nicolas is helping design a new bicycle part.",
+   "ko": "니콜라는 새 자전거 부품 설계에 참여하고 있어요.",
+   "blank": "conception",
+   "src": "made"
+  },
+  {
+   "text": "Inès dit qu'elle n'a pas la même conception de l'amitié que les jeunes d'aujourd'hui.",
+   "en": "Inès says she doesn't have the same idea of friendship as young people today.",
+   "ko": "이네스는 요즘 젊은이들과 우정에 대한 생각이 다르다고 말해요.",
+   "blank": "conception",
+   "src": "made"
   }
  ],
  "w|concernant": [
@@ -13400,6 +13544,22 @@
    "en": "The investors want concrete results before backing Émilie.",
    "ko": "투자자들은 에밀리를 밀어주기 전에 구체적인 성과를 보고 싶어 해요.",
    "blank": "concrets",
+   "src": "made"
+  }
+ ],
+ "w|concurrence": [
+  {
+   "text": "Face à la concurrence étrangère, l'usine de Nicolas doit moderniser ses ateliers.",
+   "en": "Facing foreign competition, Nicolas's factory has to modernize its workshops.",
+   "ko": "해외 경쟁 때문에 니콜라의 공장은 작업장을 현대화해야 해요.",
+   "blank": "concurrence",
+   "src": "made"
+  },
+  {
+   "text": "Inès raconte que sa boulangerie souffre de la concurrence du supermarché voisin.",
+   "en": "Inès says her bakery is suffering from competition with the nearby supermarket.",
+   "ko": "이네스는 자기 빵집이 이웃 슈퍼마켓과의 경쟁으로 힘들다고 이야기해요.",
+   "blank": "concurrence",
    "src": "made"
   }
  ],
@@ -14725,6 +14885,22 @@
    "blank": "copie"
   }
  ],
+ "w|copier": [
+  {
+   "text": "Nicolas demande à l'apprenti de copier les réglages dans le fichier commun.",
+   "en": "Nicolas asks the apprentice to copy the settings into the shared file.",
+   "ko": "니콜라는 견습생에게 설정값을 공용 파일에 복사하라고 해요.",
+   "blank": "copier",
+   "src": "made"
+  },
+  {
+   "text": "Inès avoue qu'elle laissait son ami copier ses devoirs de maths.",
+   "en": "Inès admits she used to let her friend copy her math homework.",
+   "ko": "이네스는 친구에게 수학 숙제를 베끼게 해 줬다고 털어놓아요.",
+   "blank": "copier",
+   "src": "made"
+  }
+ ],
  "w|copine": [
   {
    "text": "Ma copine adore les fleurs.",
@@ -15454,6 +15630,22 @@
    "en": "Léa brought a cushion to ease her back at the office.",
    "ko": "레아는 허리를 편하게 하려고 사무실에 쿠션을 가져왔어요.",
    "blank": "coussin",
+   "src": "made"
+  }
+ ],
+ "w|coût": [
+  {
+   "text": "Le directeur demande à Nicolas de réduire le coût de production des pièces.",
+   "en": "The director asks Nicolas to cut the production cost of the parts.",
+   "ko": "사장은 니콜라에게 부품 생산 비용을 줄이라고 해요.",
+   "blank": "coût",
+   "src": "made"
+  },
+  {
+   "text": "Inès se plaint du coût des timbres, mais elle continue d'écrire à la main.",
+   "en": "Inès complains about the cost of stamps, but she keeps writing by hand.",
+   "ko": "이네스는 우표값이 비싸다고 투덜대지만 계속 손으로 편지를 써요.",
+   "blank": "coût",
    "src": "made"
   }
  ],
@@ -17579,6 +17771,22 @@
    "src": "made"
   }
  ],
+ "w|délégué": [
+  {
+   "text": "Les ouvriers ont élu Nicolas délégué du personnel.",
+   "en": "The workers elected Nicolas as staff representative.",
+   "ko": "노동자들은 니콜라를 직원 대표로 뽑았어요.",
+   "blank": "délégué",
+   "src": "made"
+  },
+  {
+   "text": "Inès rappelle à son ami qu'il était délégué de classe au collège.",
+   "en": "Inès reminds her friend that he was class representative in middle school.",
+   "ko": "이네스는 친구에게 중학교 때 반장이었다는 걸 상기시켜요.",
+   "blank": "délégué",
+   "src": "made"
+  }
+ ],
  "w|délicat": [
   {
    "text": "Ce vase est très délicat, fais attention.",
@@ -18148,6 +18356,22 @@
    "en": "Despite her frustration at losing, Manon shakes her opponent's hand.",
    "ko": "진 게 속상했지만 마농은 상대와 악수해요.",
    "blank": "dépit",
+   "src": "made"
+  }
+ ],
+ "w|déplacement": [
+  {
+   "text": "Pour Nicolas, chaque déplacement chez un client prend toute une journée.",
+   "en": "For Nicolas, every trip to a client takes a whole day.",
+   "ko": "니콜라에게는 고객을 찾아가는 출장마다 하루가 꼬박 걸려요.",
+   "blank": "déplacement",
+   "src": "made"
+  },
+  {
+   "text": "Inès promet d'écrire plus souvent malgré ses nombreux déplacements pour le travail.",
+   "en": "Inès promises to write more often despite her many work trips.",
+   "ko": "이네스는 잦은 출장에도 더 자주 편지하겠다고 약속해요.",
+   "blank": "déplacements",
    "src": "made"
   }
  ],
@@ -19619,6 +19843,22 @@
    "en": "She knows how to lead a meeting well.",
    "ko": "그녀는 회의를 잘 이끌 줄 알아.",
    "blank": "diriger"
+  }
+ ],
+ "w|disciple": [
+  {
+   "text": "Le vieux contremaître appelle Nicolas son disciple, parce qu'il lui a tout appris sur les machines.",
+   "en": "The old foreman calls Nicolas his disciple, because he taught him everything about the machines.",
+   "ko": "늙은 반장은 기계에 대한 모든 걸 가르쳐 줬기 때문에 니콜라를 제자라고 불러요.",
+   "blank": "disciple",
+   "src": "made"
+  },
+  {
+   "text": "Dans sa lettre, Inès raconte qu'elle est devenue la disciple d'une vieille potière.",
+   "en": "In her letter, Inès says she has become the disciple of an old potter.",
+   "ko": "이네스는 편지에서 나이 든 도예가의 제자가 됐다고 이야기해요.",
+   "blank": "disciple",
+   "src": "made"
   }
  ],
  "w|discipline": [
@@ -25337,6 +25577,22 @@
    "blank": "expérience"
   }
  ],
+ "w|expérimenté": [
+  {
+   "text": "Nicolas travaille toujours avec un collègue expérimenté sur les machines dangereuses.",
+   "en": "Nicolas always works with an experienced colleague on the dangerous machines.",
+   "ko": "니콜라는 위험한 기계에서는 늘 경험 많은 동료와 함께 일해요.",
+   "blank": "expérimenté",
+   "src": "made"
+  },
+  {
+   "text": "Dans sa lettre, Inès écrit qu'elle est maintenant une randonneuse expérimentée.",
+   "en": "In her letter, Inès writes that she is now an experienced hiker.",
+   "ko": "이네스는 편지에 이제 숙련된 등산객이 됐다고 써요.",
+   "blank": "expérimentée",
+   "src": "made"
+  }
+ ],
  "w|expert": [
   {
    "text": "Un expert a vérifié les résultats.",
@@ -25349,6 +25605,22 @@
    "en": "She is an expert in IT.",
    "ko": "그녀는 IT 전문가다.",
    "blank": "expert"
+  }
+ ],
+ "w|expirer": [
+  {
+   "text": "Le contrat de maintenance va expirer à la fin du mois, rappelle Nicolas à son chef.",
+   "en": "The maintenance contract will expire at the end of the month, Nicolas reminds his boss.",
+   "ko": "정비 계약이 이달 말에 끝난다고 니콜라가 상사에게 알려 줘요.",
+   "blank": "expirer",
+   "src": "made"
+  },
+  {
+   "text": "Inès rappelle à son ami que son passeport va bientôt expirer.",
+   "en": "Inès reminds her friend that his passport will expire soon.",
+   "ko": "이네스는 친구에게 여권이 곧 만료된다고 일러 줘요.",
+   "blank": "expirer",
+   "src": "made"
   }
  ],
  "w|explication": [
@@ -27731,6 +28003,22 @@
    "blank": "forêt"
   }
  ],
+ "w|formalité": [
+  {
+   "text": "Pour Nicolas, le contrôle des badges à l'entrée n'est qu'une formalité.",
+   "en": "For Nicolas, the badge check at the entrance is just a formality.",
+   "ko": "니콜라에게 입구의 출입증 검사는 형식적인 절차일 뿐이에요.",
+   "blank": "formalité",
+   "src": "made"
+  },
+  {
+   "text": "Inès explique que la dernière formalité de son déménagement est enfin réglée.",
+   "en": "Inès explains that the last formality of her move is finally sorted.",
+   "ko": "이네스는 이사의 마지막 절차가 드디어 끝났다고 설명해요.",
+   "blank": "formalité",
+   "src": "made"
+  }
+ ],
  "w|formation": [
   {
    "text": "Je suis une formation en informatique.",
@@ -28009,6 +28297,22 @@
    "src": "made"
   }
  ],
+ "w|fourrure": [
+  {
+   "text": "L'usine où travaille Nicolas fabriquait autrefois des manteaux en fausse fourrure.",
+   "en": "The factory where Nicolas works used to make faux fur coats.",
+   "ko": "니콜라가 일하는 공장은 예전에 인조 모피 코트를 만들었어요.",
+   "blank": "fourrure",
+   "src": "made"
+  },
+  {
+   "text": "Inès se souvient du chat à la fourrure grise qu'ils avaient adopté ensemble.",
+   "en": "Inès remembers the grey-furred cat they had adopted together.",
+   "ko": "이네스는 둘이 함께 데려왔던 회색 털 고양이를 떠올려요.",
+   "blank": "fourrure",
+   "src": "made"
+  }
+ ],
  "w|foyer": [
   {
    "text": "Le foyer est bien chauffé cet hiver.",
@@ -28181,6 +28485,22 @@
    "en": "He can kick very hard in football.",
    "ko": "그는 축구에서 정말 세게 찰 수 있어.",
    "blank": "frapper"
+  }
+ ],
+ "w|fraternité": [
+  {
+   "text": "À l'usine, Nicolas sent une vraie fraternité entre les ouvriers de l'équipe de nuit.",
+   "en": "At the factory, Nicolas feels real brotherhood among the night-shift workers.",
+   "ko": "공장에서 니콜라는 야간조 노동자들 사이의 진짜 형제애를 느껴요.",
+   "blank": "fraternité",
+   "src": "made"
+  },
+  {
+   "text": "Inès termine sa lettre en parlant de la fraternité qui les unissait au lycée.",
+   "en": "Inès ends her letter talking about the brotherhood that bound them in high school.",
+   "ko": "이네스는 고등학교 때 둘을 이어 주던 우애 이야기로 편지를 마무리해요.",
+   "blank": "fraternité",
+   "src": "made"
   }
  ],
  "w|fraude": [
@@ -30619,6 +30939,22 @@
    "blank": "hache"
   }
  ],
+ "w|hacker": [
+  {
+   "text": "Un hacker a bloqué les ordinateurs de l'usine, et Nicolas a dû tout arrêter.",
+   "en": "A hacker locked the factory computers, and Nicolas had to shut everything down.",
+   "ko": "해커가 공장 컴퓨터를 막아 버려서 니콜라는 모든 걸 멈춰야 했어요.",
+   "blank": "hacker",
+   "src": "made"
+  },
+  {
+   "text": "Inès raconte qu'un hacker a volé son mot de passe, alors elle préfère le papier.",
+   "en": "Inès says a hacker stole her password, so she prefers paper now.",
+   "ko": "이네스는 해커가 비밀번호를 훔쳐 가서 이제 종이가 더 좋다고 해요.",
+   "blank": "hacker",
+   "src": "made"
+  }
+ ],
  "w|haine": [
   {
    "text": "La haine ne résout jamais les problèmes.",
@@ -32391,6 +32727,22 @@
    "blank": "impossible"
   }
  ],
+ "w|imposteur": [
+  {
+   "text": "Le jour de son arrivée, Nicolas se sentait comme un imposteur parmi les techniciens.",
+   "en": "On his first day, Nicolas felt like an impostor among the technicians.",
+   "ko": "처음 온 날 니콜라는 기술자들 사이에서 자신이 가짜 같다고 느꼈어요.",
+   "blank": "imposteur",
+   "src": "made"
+  },
+  {
+   "text": "Dans sa lettre, Inès avoue qu'elle se sent parfois comme un imposteur dans son nouveau métier.",
+   "en": "In her letter, Inès admits she sometimes feels like an impostor in her new job.",
+   "ko": "이네스는 편지에서 새 직업에서 가끔 자신이 가짜 같다고 털어놓아요.",
+   "blank": "imposteur",
+   "src": "made"
+  }
+ ],
  "w|impôt": [
   {
    "text": "L'impôt sur le revenu a augmenté cette année.",
@@ -32460,6 +32812,22 @@
    "en": "Mountain weather is unpredictable, so Claire brings the animals in early.",
    "ko": "산 날씨는 예측할 수 없어서 클레르는 가축을 일찍 들여요.",
    "blank": "imprévisible",
+   "src": "made"
+  }
+ ],
+ "w|imprimer": [
+  {
+   "text": "Nicolas fait imprimer les consignes de sécurité en grand format.",
+   "en": "Nicolas has the safety instructions printed in large format.",
+   "ko": "니콜라는 안전 수칙을 큰 크기로 인쇄해요.",
+   "blank": "imprimer",
+   "src": "made"
+  },
+  {
+   "text": "Inès a fait imprimer leurs vieilles photos pour les glisser dans l'enveloppe.",
+   "en": "Inès had their old photos printed to slip them into the envelope.",
+   "ko": "이네스는 둘의 옛 사진을 인화해서 봉투에 넣었어요.",
+   "blank": "imprimer",
    "src": "made"
   }
  ],
@@ -34025,6 +34393,22 @@
    "blank": "internet"
   }
  ],
+ "w|interprète": [
+  {
+   "text": "Une interprète aide Nicolas à parler avec les ingénieurs venus de l'étranger.",
+   "en": "An interpreter helps Nicolas talk with the engineers from abroad.",
+   "ko": "통역사가 니콜라가 외국에서 온 엔지니어들과 이야기하도록 도와줘요.",
+   "blank": "interprète",
+   "src": "made"
+  },
+  {
+   "text": "Inès travaille maintenant comme interprète dans un hôpital.",
+   "en": "Inès now works as an interpreter in a hospital.",
+   "ko": "이네스는 이제 병원에서 통역사로 일해요.",
+   "blank": "interprète",
+   "src": "made"
+  }
+ ],
  "w|interpréter": [
   {
    "text": "Paul doit interpréter le rôle du loup dans la pièce de l'école.",
@@ -34763,6 +35147,22 @@
    "en": "We are going to plant flowers in the garden.",
    "ko": "우리는 정원에 꽃을 심을 거예요.",
    "blank": "jardin"
+  }
+ ],
+ "w|jardinier": [
+  {
+   "text": "Le jardinier de l'usine taille les haies pendant que Nicolas fait sa pause.",
+   "en": "The factory gardener trims the hedges while Nicolas takes his break.",
+   "ko": "니콜라가 쉬는 동안 공장 정원사가 산울타리를 다듬어요.",
+   "blank": "jardinier",
+   "src": "made"
+  },
+  {
+   "text": "Inès a engagé un jardinier pour s'occuper des rosiers que son ami aimait tant.",
+   "en": "Inès hired a gardener to look after the rosebushes her friend loved so much.",
+   "ko": "이네스는 친구가 그토록 좋아하던 장미 덤불을 돌보려고 정원사를 고용했어요.",
+   "blank": "jardinier",
+   "src": "made"
   }
  ],
  "w|jaune": [
@@ -38073,6 +38473,22 @@
    "blank": "manuel"
   }
  ],
+ "w|manuscrit": [
+  {
+   "text": "Dans un tiroir, Nicolas trouve le manuscrit du premier règlement de l'usine.",
+   "en": "In a drawer, Nicolas finds the handwritten copy of the factory's first rulebook.",
+   "ko": "니콜라는 서랍에서 공장 첫 규정의 원고를 찾아요.",
+   "blank": "manuscrit",
+   "src": "made"
+  },
+  {
+   "text": "Inès envoie à son ami le manuscrit de son premier roman.",
+   "en": "Inès sends her friend the manuscript of her first novel.",
+   "ko": "이네스는 친구에게 첫 소설 원고를 보내요.",
+   "blank": "manuscrit",
+   "src": "made"
+  }
+ ],
  "w|maquillage": [
   {
    "text": "J’ai acheté un nouveau maquillage hier.",
@@ -38599,6 +39015,22 @@
    "src": "made"
   }
  ],
+ "w|mathématique": [
+  {
+   "text": "Nicolas utilise une formule mathématique pour calculer la vitesse de la chaîne.",
+   "en": "Nicolas uses a mathematical formula to calculate the line speed.",
+   "ko": "니콜라는 수학 공식을 써서 라인 속도를 계산해요.",
+   "blank": "mathématique",
+   "src": "made"
+  },
+  {
+   "text": "Inès se souvient que son ami résolvait chaque problème mathématique en un instant.",
+   "en": "Inès remembers that her friend solved every math problem in an instant.",
+   "ko": "이네스는 친구가 수학 문제를 순식간에 풀곤 했던 걸 기억해요.",
+   "blank": "mathématique",
+   "src": "made"
+  }
+ ],
  "w|maths": [
   {
    "text": "Je dois réviser mes maths pour l’examen.",
@@ -38756,6 +39188,22 @@
    "en": "Camille has to ride a mechanical bull for a comic scene.",
    "ko": "카미유는 코믹한 장면을 위해 기계 황소를 타야 해요.",
    "blank": "mécanique",
+   "src": "made"
+  }
+ ],
+ "w|mécanisme": [
+  {
+   "text": "Nicolas démonte le mécanisme de la presse pour trouver la panne.",
+   "en": "Nicolas takes apart the press mechanism to find the fault.",
+   "ko": "니콜라는 고장 난 곳을 찾으려고 프레스 기계 장치를 분해해요.",
+   "blank": "mécanisme",
+   "src": "made"
+  },
+  {
+   "text": "Inès explique le mécanisme de la vieille horloge qu'elle a fait réparer.",
+   "en": "Inès explains the mechanism of the old clock she had repaired.",
+   "ko": "이네스는 수리를 맡긴 오래된 괘종시계의 장치를 설명해요.",
+   "blank": "mécanisme",
    "src": "made"
   }
  ],
@@ -39145,6 +39593,22 @@
    "en": "Why do you want to lie?",
    "ko": "왜 거짓말하고 싶어?",
    "blank": "mentir"
+  }
+ ],
+ "w|mentor": [
+  {
+   "text": "Nicolas est devenu le mentor des deux nouveaux apprentis.",
+   "en": "Nicolas has become the mentor of the two new apprentices.",
+   "ko": "니콜라는 새로 온 견습생 둘의 멘토가 됐어요.",
+   "blank": "mentor",
+   "src": "made"
+  },
+  {
+   "text": "Inès remercie son ami d'avoir été un mentor quand elle était perdue.",
+   "en": "Inès thanks her friend for being a mentor when she was lost.",
+   "ko": "이네스는 길을 잃었을 때 멘토가 되어 준 친구에게 고마워해요.",
+   "blank": "mentor",
+   "src": "made"
   }
  ],
  "w|menu": [
@@ -40123,6 +40587,22 @@
    "blank": "modifier"
   }
  ],
+ "w|module": [
+  {
+   "text": "Nicolas suit un module de formation sur la sécurité des machines.",
+   "en": "Nicolas is taking a training module on machine safety.",
+   "ko": "니콜라는 기계 안전에 관한 교육 과정을 듣고 있어요.",
+   "blank": "module",
+   "src": "made"
+  },
+  {
+   "text": "À l'université, Inès suit un module d'histoire de l'art qui lui rappelle leurs visites de musées.",
+   "en": "At university, Inès is taking an art history module that reminds her of their museum visits.",
+   "ko": "이네스는 대학에서 미술사 과목을 듣는데, 둘이 다니던 박물관이 떠올라요.",
+   "blank": "module",
+   "src": "made"
+  }
+ ],
  "w|moi": [
   {
    "text": "C'est moi qui ai fait le gâteau.",
@@ -40291,6 +40771,22 @@
    "en": "There is a global economic crisis.",
    "ko": "세계 경제 위기가 있다.",
    "blank": "mondiale"
+  }
+ ],
+ "w|moniteur": [
+  {
+   "text": "Nicolas surveille la température du four sur un grand moniteur.",
+   "en": "Nicolas monitors the oven temperature on a big screen.",
+   "ko": "니콜라는 큰 모니터로 가마 온도를 지켜봐요.",
+   "blank": "moniteur",
+   "src": "made"
+  },
+  {
+   "text": "Inès évoque leur moniteur de colonie de vacances qui chantait faux.",
+   "en": "Inès recalls their summer camp counselor who sang out of tune.",
+   "ko": "이네스는 음치였던 여름 캠프 지도 선생님을 떠올려요.",
+   "blank": "moniteur",
+   "src": "made"
   }
  ],
  "w|monnaie": [
@@ -42225,6 +42721,22 @@
    "en": "I'm bad at math.",
    "ko": "나는 수학을 못해.",
    "blank": "nul"
+  }
+ ],
+ "w|numérique": [
+  {
+   "text": "L'usine passe au tout numérique, et Nicolas doit apprendre un nouveau logiciel.",
+   "en": "The factory is going fully digital, and Nicolas has to learn new software.",
+   "ko": "공장이 완전히 디지털로 바뀌어서 니콜라는 새 프로그램을 배워야 해요.",
+   "blank": "numérique",
+   "src": "made"
+  },
+  {
+   "text": "Inès trouve qu'une lettre écrite à la main vaut mieux qu'un message numérique.",
+   "en": "Inès thinks a handwritten letter is worth more than a digital message.",
+   "ko": "이네스는 손으로 쓴 편지가 디지털 메시지보다 낫다고 생각해요.",
+   "blank": "numérique",
+   "src": "made"
   }
  ],
  "w|numéro": [
@@ -46483,6 +46995,22 @@
    "blank": "pilote"
   }
  ],
+ "w|piloter": [
+  {
+   "text": "Nicolas apprend à piloter le nouveau robot de la chaîne d'assemblage.",
+   "en": "Nicolas is learning to operate the new robot on the assembly line.",
+   "ko": "니콜라는 조립 라인의 새 로봇을 조종하는 법을 배워요.",
+   "blank": "piloter",
+   "src": "made"
+  },
+  {
+   "text": "Inès apprend à son ami qu'elle prend des cours pour piloter un petit avion.",
+   "en": "Inès tells her friend she's taking lessons to fly a small plane.",
+   "ko": "이네스는 친구에게 작은 비행기 조종을 배우고 있다고 알려요.",
+   "blank": "piloter",
+   "src": "made"
+  }
+ ],
  "w|pilule": [
   {
    "text": "N'oublie pas de prendre ta pilule ce matin.",
@@ -49533,6 +50061,22 @@
    "blank": "problème"
   }
  ],
+ "w|procédé": [
+  {
+   "text": "Nicolas a mis au point un procédé plus rapide pour souder les pièces.",
+   "en": "Nicolas has developed a faster process for welding the parts.",
+   "ko": "니콜라는 부품을 더 빨리 용접하는 공정을 개발했어요.",
+   "blank": "procédé",
+   "src": "made"
+  },
+  {
+   "text": "Inès décrit le procédé qu'elle utilise pour faire sécher les fleurs du jardin.",
+   "en": "Inès describes the process she uses to dry flowers from the garden.",
+   "ko": "이네스는 정원 꽃을 말리는 방법을 설명해요.",
+   "blank": "procédé",
+   "src": "made"
+  }
+ ],
  "w|procéder": [
   {
    "text": "Thomas procède toujours dans le même ordre pour monter une mayonnaise.",
@@ -50383,6 +50927,22 @@
    "en": "That noise can provoke arguments.",
    "ko": "그 소음이 다툼을 유발할 수 있어.",
    "blank": "provoquer"
+  }
+ ],
+ "w|proximité": [
+  {
+   "text": "Nicolas a choisi un appartement à proximité de l'usine pour y aller à pied.",
+   "en": "Nicolas chose an apartment near the factory so he could walk there.",
+   "ko": "니콜라는 걸어서 출근하려고 공장 가까이에 있는 아파트를 골랐어요.",
+   "blank": "proximité",
+   "src": "made"
+  },
+  {
+   "text": "Inès regrette de ne plus vivre à proximité de son ami d'enfance.",
+   "en": "Inès is sad she no longer lives near her childhood friend.",
+   "ko": "이네스는 어릴 적 친구 가까이에 더는 살지 않는 게 아쉬워요.",
+   "blank": "proximité",
+   "src": "made"
   }
  ],
  "w|prudence": [
@@ -52607,6 +53167,22 @@
    "src": "made"
   }
  ],
+ "w|réduction": [
+  {
+   "text": "Les employés de l'usine ont droit à une réduction sur les produits de la marque.",
+   "en": "Factory employees get a discount on the brand's products.",
+   "ko": "공장 직원들은 그 브랜드 제품을 할인받을 수 있어요.",
+   "blank": "réduction",
+   "src": "made"
+  },
+  {
+   "text": "Inès a eu une réduction sur le train pour aller voir son vieil ami.",
+   "en": "Inès got a discount on the train to go see her old friend.",
+   "ko": "이네스는 오랜 친구를 보러 가는 기차표를 할인받았어요.",
+   "blank": "réduction",
+   "src": "made"
+  }
+ ],
  "w|réduire": [
   {
    "text": "Il faut réduire la vitesse ici.",
@@ -54827,6 +55403,22 @@
    "blank": "retourner"
   }
  ],
+ "w|retrait": [
+  {
+   "text": "Nicolas a annoncé le retrait d'un lot de pièces défectueuses.",
+   "en": "Nicolas announced the recall of a batch of defective parts.",
+   "ko": "니콜라는 불량 부품 한 묶음을 회수한다고 알렸어요.",
+   "blank": "retrait",
+   "src": "made"
+  },
+  {
+   "text": "Inès a oublié sa carte dans le distributeur après un retrait, et elle en rit dans sa lettre.",
+   "en": "Inès left her card in the ATM after a withdrawal, and she laughs about it in her letter.",
+   "ko": "이네스는 돈을 찾고 나서 현금인출기에 카드를 두고 왔는데, 편지에서 그 일을 웃으며 이야기해요.",
+   "blank": "retrait",
+   "src": "made"
+  }
+ ],
  "w|retraite": [
   {
    "text": "Mon père part à la retraite cette année.",
@@ -56606,6 +57198,22 @@
    "en": "The neighbour who found Chloé's cat has become her hero.",
    "ko": "클로에의 고양이를 찾아 준 이웃은 그녀의 구세주가 됐어요.",
    "blank": "sauveur",
+   "src": "made"
+  }
+ ],
+ "w|savant": [
+  {
+   "text": "Les collègues de Nicolas l'appellent le savant parce qu'il lit des revues de physique.",
+   "en": "Nicolas's coworkers call him the scientist because he reads physics journals.",
+   "ko": "니콜라의 동료들은 그가 물리학 잡지를 읽어서 그를 박사님이라고 불러요.",
+   "blank": "savant",
+   "src": "made"
+  },
+  {
+   "text": "Inès imagine son ami en savant fou, enfermé dans son laboratoire.",
+   "en": "Inès pictures her friend as a mad scientist, shut away in his lab.",
+   "ko": "이네스는 친구가 실험실에 틀어박힌 미친 과학자라고 상상해요.",
+   "blank": "savant",
    "src": "made"
   }
  ],
@@ -63681,6 +64289,22 @@
    "blank": "tranquillement"
   }
  ],
+ "w|transaction": [
+  {
+   "text": "Chaque transaction avec les fournisseurs passe par le bureau où travaille Nicolas.",
+   "en": "Every transaction with suppliers goes through the office where Nicolas works.",
+   "ko": "공급업체와의 모든 거래는 니콜라가 일하는 사무실을 거쳐요.",
+   "blank": "transaction",
+   "src": "made"
+  },
+  {
+   "text": "Inès écrit à son ami que la vente de sa maison a été une longue transaction.",
+   "en": "Inès writes to her friend that selling her house was a long transaction.",
+   "ko": "이네스는 친구에게 집을 파는 일이 긴 거래였다고 써요.",
+   "blank": "transaction",
+   "src": "made"
+  }
+ ],
  "w|transférer": [
   {
    "text": "Je vais transférer l’argent maintenant.",
@@ -65803,6 +66427,22 @@
    "en": "She likes the simple life.",
    "ko": "그녀는 단순한 삶을 좋아해.",
    "blank": "vie"
+  }
+ ],
+ "w|vieillard": [
+  {
+   "text": "Un vieillard qui a travaillé ici toute sa vie vient saluer Nicolas devant l'usine.",
+   "en": "An old man who worked here all his life comes to greet Nicolas in front of the factory.",
+   "ko": "평생 여기서 일한 노인이 공장 앞에서 니콜라에게 인사하러 와요.",
+   "blank": "vieillard",
+   "src": "made"
+  },
+  {
+   "text": "Inès décrit un vieillard qui nourrit les pigeons tous les matins sous sa fenêtre.",
+   "en": "Inès describes an old man who feeds the pigeons under her window every morning.",
+   "ko": "이네스는 매일 아침 창문 아래에서 비둘기에게 먹이를 주는 노인을 묘사해요.",
+   "blank": "vieillard",
+   "src": "made"
   }
  ],
  "w|vieillir": [

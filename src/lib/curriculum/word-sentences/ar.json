@@ -215,6 +215,22 @@
    "src": "made"
   }
  ],
+ "w|أبرق": [
+  {
+   "text": "أبرقت السماء فوق النهر فأسرع عمر إلى الكوخ.",
+   "en": "Lightning flashed over the river, so Omar hurried to the hut.",
+   "ko": "강 위로 번개가 치자 오마르는 오두막으로 서둘러 갔어요.",
+   "blank": "أبرقت",
+   "src": "made"
+  },
+  {
+   "text": "أبرق الجو فجأة وانقطعت الكهرباء في المكتبة.",
+   "en": "Lightning suddenly flashed and the power went out in the library.",
+   "ko": "갑자기 번개가 치더니 도서관에 전기가 나갔어요.",
+   "blank": "أبرق",
+   "src": "made"
+  }
+ ],
  "w|أبريل": [
   {
    "text": "أحب الزهور في أبريل.",
@@ -506,6 +522,22 @@
    "en": "It snowed last winter, and Fatima learned that the old windows don't keep the warmth in.",
    "ko": "지난겨울 눈이 와서 파티마는 낡은 창문이 온기를 지키지 못한다는 걸 알았어요.",
    "blank": "أثلجت",
+   "src": "made"
+  }
+ ],
+ "w|أثمر": [
+  {
+   "text": "أثمرت شجرة التين قرب الكوخ أكثر من العام الماضي.",
+   "en": "The fig tree near the hut bore more fruit than last year.",
+   "ko": "오두막 옆 무화과나무에 작년보다 열매가 더 많이 열렸어요.",
+   "blank": "أثمرت",
+   "src": "made"
+  },
+  {
+   "text": "أثمر جهد فاطمة حين امتلأت قاعة القراءة بالطلاب.",
+   "en": "Fatima's effort paid off when the reading room filled with students.",
+   "ko": "열람실이 학생들로 가득 차자 파티마의 노력이 결실을 맺었어요.",
+   "blank": "أثمر",
    "src": "made"
   }
  ],
@@ -1685,6 +1717,22 @@
    "blank": "أرعبني"
   }
  ],
+ "w|أرعد": [
+  {
+   "text": "أرعدت السماء بقوة وارتجفت الطيور في أعشاشها.",
+   "en": "The sky thundered loudly and the birds trembled in their nests.",
+   "ko": "하늘에서 천둥이 크게 치자 새들이 둥지에서 떨었어요.",
+   "blank": "أرعدت",
+   "src": "made"
+  },
+  {
+   "text": "أرعد الجو في الخارج فرفع الأطفال رؤوسهم عن الكتب.",
+   "en": "It thundered outside, and the children lifted their heads from their books.",
+   "ko": "밖에서 천둥이 치자 아이들이 책에서 고개를 들었어요.",
+   "blank": "أرعد",
+   "src": "made"
+  }
+ ],
  "w|أرغم": [
   {
    "text": "أرغم المدير الموظف على البقاء.",
@@ -1857,6 +1905,22 @@
    "en": "The water crisis affects everyone.",
    "ko": "물 위기는 모두에게 영향을 미쳐.",
    "blank": "أزمة"
+  }
+ ],
+ "w|أزهر": [
+  {
+   "text": "أزهر شجر اللوز على طرف الغابة في أول الربيع.",
+   "en": "The almond trees at the edge of the forest blossomed at the start of spring.",
+   "ko": "봄이 시작될 때 숲 가장자리의 아몬드나무에 꽃이 피었어요.",
+   "blank": "أزهر",
+   "src": "made"
+  },
+  {
+   "text": "أزهرت شجرة الياسمين في حديقة المكتبة هذا الأسبوع.",
+   "en": "The jasmine tree in the library garden bloomed this week.",
+   "ko": "이번 주에 도서관 정원의 재스민 나무에 꽃이 피었어요.",
+   "blank": "أزهرت",
+   "src": "made"
   }
  ],
  "w|أزياء": [
@@ -5468,6 +5532,22 @@
    "en": "Rana almost lost her place because of an administrative error in the list of runners.",
    "ko": "선수 명단의 행정 착오로 라나는 하마터면 출전을 못 할 뻔했어요.",
    "blank": "إداري",
+   "src": "made"
+  }
+ ],
+ "w|إدراك": [
+  {
+   "text": "ساعدت الرحلة عمر على إدراك جمال الطبيعة القريبة من مدينته.",
+   "en": "The trip helped Omar realize the beauty of nature near his city.",
+   "ko": "이번 여행으로 오마르는 자기 도시 가까이 있는 자연의 아름다움을 깨달았어요.",
+   "blank": "إدراك",
+   "src": "made"
+  },
+  {
+   "text": "تقول فاطمة إن القراءة تزيد إدراك الأطفال للعالم.",
+   "en": "Fatima says reading increases children's understanding of the world.",
+   "ko": "파티마는 독서가 아이들이 세상을 이해하는 힘을 키운다고 말해요.",
+   "blank": "إدراك",
    "src": "made"
   }
  ],
@@ -9279,6 +9359,22 @@
    "blank": "استهلكت"
   }
  ],
+ "w|استوائي": [
+  {
+   "text": "زرع الحارس نباتا استوائيا في الدفيئة قرب مدخل الغابة.",
+   "en": "The ranger planted a tropical plant in the greenhouse near the forest entrance.",
+   "ko": "관리인은 숲 입구 근처 온실에 열대 식물을 심었어요.",
+   "blank": "استوائيا",
+   "src": "made"
+  },
+  {
+   "text": "أعارت فاطمة طالبة كتابا عن الطقس الاستوائي.",
+   "en": "Fatima lent a student a book about tropical weather.",
+   "ko": "파티마는 한 학생에게 열대 날씨에 관한 책을 빌려줬어요.",
+   "blank": "الاستوائي",
+   "src": "made"
+  }
+ ],
  "w|استوحش": [
   {
    "text": "استوحش عمر في الساعة الأولى، فلم يكن يعرف أحدا.",
@@ -10109,6 +10205,22 @@
    "src": "made"
   }
  ],
+ "w|افترس": [
+  {
+   "text": "شاهد عمر نسرا افترس أرنبا قرب الضفة.",
+   "en": "Omar watched an eagle prey on a rabbit near the bank.",
+   "ko": "오마르는 독수리가 강둑 근처에서 토끼를 잡아먹는 것을 봤어요.",
+   "blank": "افترس",
+   "src": "made"
+  },
+  {
+   "text": "يشرح كتاب مصور كيف افترست الذئاب قطيع غنم في الجبل.",
+   "en": "A picture book explains how wolves preyed on a flock of sheep in the mountains.",
+   "ko": "그림책은 늑대들이 산에서 양 떼를 덮친 이야기를 들려줘요.",
+   "blank": "افترست",
+   "src": "made"
+  }
+ ],
  "w|افترض": [
   {
    "text": "افترض أن كل شيء ممكن.",
@@ -10471,6 +10583,22 @@
    "en": "How many students enrolled in the course?",
    "ko": "몇 명이 과정에 등록했어?",
    "blank": "التحقوا"
+  }
+ ],
+ "w|التزام": [
+  {
+   "text": "يحترم عمر التزام الزوار بعدم إشعال النار في الغابة.",
+   "en": "Omar respects visitors' commitment not to light fires in the forest.",
+   "ko": "오마르는 숲에서 불을 피우지 않겠다는 방문객들의 약속을 존중해요.",
+   "blank": "التزام",
+   "src": "made"
+  },
+  {
+   "text": "تطلب فاطمة من القراء التزام الهدوء في القاعة.",
+   "en": "Fatima asks readers to keep quiet in the hall.",
+   "ko": "파티마는 독자들에게 열람실에서 조용히 해 달라고 부탁해요.",
+   "blank": "التزام",
+   "src": "made"
   }
  ],
  "w|التزم": [
@@ -11501,6 +11629,22 @@
    "src": "made"
   }
  ],
+ "w|انصهر": [
+  {
+   "text": "انصهر الثلج على قمة الجبل فارتفع ماء النهر.",
+   "en": "The snow on the mountaintop melted and the river rose.",
+   "ko": "산꼭대기 눈이 녹자 강물이 불어났어요.",
+   "blank": "انصهر",
+   "src": "made"
+  },
+  {
+   "text": "قرأت فاطمة للأطفال قصة عن رجل ثلج انصهر في الشمس.",
+   "en": "Fatima read the children a story about a snowman who melted in the sun.",
+   "ko": "파티마는 아이들에게 햇볕에 녹아 버린 눈사람 이야기를 읽어 줬어요.",
+   "blank": "انصهر",
+   "src": "made"
+  }
+ ],
  "w|انضبط": [
   {
    "text": "انضبط خالد بمواعيد الدوام منذ اليوم الأول.",
@@ -11743,6 +11887,22 @@
    "src": "made"
   }
  ],
+ "w|انقرض": [
+  {
+   "text": "قال الحارس لعمر إن نوعا من السمك انقرض من هذا النهر.",
+   "en": "The ranger told Omar that a kind of fish went extinct in this river.",
+   "ko": "관리인은 오마르에게 어떤 물고기가 이 강에서 멸종했다고 말했어요.",
+   "blank": "انقرض",
+   "src": "made"
+  },
+  {
+   "text": "أحب الأطفال كتاب فاطمة عن الديناصورات وكيف انقرضت.",
+   "en": "The children loved Fatima's book about dinosaurs and how they went extinct.",
+   "ko": "아이들은 공룡과 공룡이 어떻게 멸종했는지에 관한 파티마의 책을 좋아했어요.",
+   "blank": "انقرضت",
+   "src": "made"
+  }
+ ],
  "w|انقسم": [
   {
    "text": "انقسم الموظفون إلى مجموعتين، وكان خالد في المجموعة الثانية.",
@@ -11801,6 +11961,22 @@
    "en": "I heard a loud sound and knew the door broke.",
    "ko": "큰 소리를 듣고 문이 부서진 줄 알았어요.",
    "blank": "انكسر"
+  }
+ ],
+ "w|انكمش": [
+  {
+   "text": "انكمش عمر تحت معطفه حين هبت ريح باردة من الجبل.",
+   "en": "Omar huddled under his coat when a cold wind blew from the mountain.",
+   "ko": "산에서 찬 바람이 불어오자 오마르는 외투 속으로 몸을 웅크렸어요.",
+   "blank": "انكمش",
+   "src": "made"
+  },
+  {
+   "text": "انكمشت صفحات الكتاب القديم بعد أن ابتلت.",
+   "en": "The old book's pages shriveled after they got wet.",
+   "ko": "오래된 책의 종이가 젖은 뒤 쭈글쭈글해졌어요.",
+   "blank": "انكمشت",
+   "src": "made"
   }
  ],
  "w|انهزم": [
@@ -14165,6 +14341,22 @@
    "blank": "بلا"
   }
  ],
+ "w|بلاستيك": [
+  {
+   "text": "جمع عمر أكياس البلاستيك التي تركها الزوار على الضفة.",
+   "en": "Omar collected the plastic bags visitors had left on the bank.",
+   "ko": "오마르는 방문객들이 강둑에 두고 간 비닐봉지를 모았어요.",
+   "blank": "البلاستيك",
+   "src": "made"
+  },
+  {
+   "text": "استبدلت فاطمة أغلفة البلاستيك القديمة بأغلفة من الورق.",
+   "en": "Fatima replaced the old plastic covers with paper ones.",
+   "ko": "파티마는 오래된 비닐 커버를 종이 커버로 바꿨어요.",
+   "blank": "البلاستيك",
+   "src": "made"
+  }
+ ],
  "w|بلاط": [
   {
    "text": "تحتاج أرضية الحمام إلى بلاط جديد.",
@@ -14915,6 +15107,22 @@
    "blank": "بينما"
   }
  ],
+ "w|تآكل": [
+  {
+   "text": "تآكلت ضفة النهر بسبب الفيضانات المتكررة.",
+   "en": "The riverbank eroded because of repeated floods.",
+   "ko": "잦은 홍수 때문에 강둑이 깎여 나갔어요.",
+   "blank": "تآكلت",
+   "src": "made"
+  },
+  {
+   "text": "تآكل غلاف المعجم من كثرة الاستعمال.",
+   "en": "The dictionary's cover wore away from heavy use.",
+   "ko": "사전 표지가 너무 많이 써서 닳았어요.",
+   "blank": "تآكل",
+   "src": "made"
+  }
+ ],
  "w|تأثير": [
   {
    "text": "للكلمة تأثير كبير على الناس.",
@@ -15275,6 +15483,22 @@
    "en": "We encourage exchanging ideas in the team.",
    "ko": "팀 내에서 아이디어 교환을 장려해.",
    "blank": "تبادل"
+  }
+ ],
+ "w|تبخر": [
+  {
+   "text": "تبخر الماء من البركة الصغيرة تحت شمس الظهر.",
+   "en": "The water evaporated from the little pond under the midday sun.",
+   "ko": "한낮 햇볕에 작은 웅덩이의 물이 증발했어요.",
+   "blank": "تبخر",
+   "src": "made"
+  },
+  {
+   "text": "تبخرت آمال فاطمة في توسيع المكتبة حين رفضت البلدية الطلب.",
+   "en": "Fatima's hopes of expanding the library evaporated when the municipality rejected the request.",
+   "ko": "시청이 요청을 거절하자 도서관을 넓히려던 파티마의 희망은 사라졌어요.",
+   "blank": "تبخرت",
+   "src": "made"
   }
  ],
  "w|تبديل": [
@@ -16751,6 +16975,22 @@
    "blank": "تركيزك"
   }
  ],
+ "w|ترهل": [
+  {
+   "text": "ترهل حبل الخيمة في الليل فأعاد عمر شده.",
+   "en": "The tent rope sagged in the night, so Omar tightened it again.",
+   "ko": "밤사이 텐트 줄이 늘어져서 오마르가 다시 당겨 맸어요.",
+   "blank": "ترهل",
+   "src": "made"
+  },
+  {
+   "text": "ترهل غلاف الكرسي القديم في ركن القراءة.",
+   "en": "The cover of the old chair in the reading corner sagged.",
+   "ko": "독서 코너의 오래된 의자 덮개가 축 늘어졌어요.",
+   "blank": "ترهل",
+   "src": "made"
+  }
+ ],
  "w|ترياق": [
   {
    "text": "شرح الخبير لأحمد أن الترياق لو وصل مبكرا لنجا المريض.",
@@ -17311,6 +17551,22 @@
    "blank": "تصالح"
   }
  ],
+ "w|تصحر": [
+  {
+   "text": "قرأ عمر أن بعض الأراضي جنوب الغابة بدأت تتصحر.",
+   "en": "Omar read that some land south of the forest has started to turn into desert.",
+   "ko": "오마르는 숲 남쪽 일부 땅이 사막으로 변하기 시작했다는 글을 읽었어요.",
+   "blank": "تتصحر",
+   "src": "made"
+  },
+  {
+   "text": "تبحث فاطمة عن كتاب يشرح لماذا تصحر جزء كبير من الأرض.",
+   "en": "Fatima is looking for a book that explains why a large part of the land turned into desert.",
+   "ko": "파티마는 땅의 큰 부분이 왜 사막이 됐는지 설명하는 책을 찾고 있어요.",
+   "blank": "تصحر",
+   "src": "made"
+  }
+ ],
  "w|تصحيح": [
   {
    "text": "طلب يوسف تصحيح تاريخ خاطئ على لوحة التعريف.",
@@ -17457,6 +17713,22 @@
    "en": "Filming videos is my favorite skill.",
    "ko": "비디오 촬영은 내가 가장 좋아하는 기술이야.",
    "blank": "تصوير"
+  }
+ ],
+ "w|تضاءل": [
+  {
+   "text": "تضاءل ضوء الشمس كلما دخل عمر أعمق في الغابة.",
+   "en": "The sunlight faded the deeper Omar went into the forest.",
+   "ko": "오마르가 숲 깊이 들어갈수록 햇빛이 점점 약해졌어요.",
+   "blank": "تضاءل",
+   "src": "made"
+  },
+  {
+   "text": "تضاءل عدد زوار المكتبة في أيام الصيف الحارة.",
+   "en": "The number of library visitors dwindled in the hot summer days.",
+   "ko": "더운 여름날에는 도서관 방문객 수가 줄었어요.",
+   "blank": "تضاءل",
+   "src": "made"
   }
  ],
  "w|تضاعف": [
@@ -17944,6 +18216,22 @@
    "en": "The camera broke down before the live broadcast, so Nour borrowed her colleague's camera.",
    "ko": "생방송 직전에 카메라가 고장 나서 누르는 동료 카메라를 빌렸어요.",
    "blank": "تعطلت",
+   "src": "made"
+  }
+ ],
+ "w|تعفن": [
+  {
+   "text": "تعفنت الأوراق المتساقطة على الأرض الرطبة.",
+   "en": "The fallen leaves rotted on the damp ground.",
+   "ko": "떨어진 나뭇잎이 축축한 땅 위에서 썩었어요.",
+   "blank": "تعفنت",
+   "src": "made"
+  },
+  {
+   "text": "وجدت فاطمة كتبا تعفنت في المخزن بسبب الرطوبة.",
+   "en": "Fatima found books that had gone moldy in the storeroom because of the damp.",
+   "ko": "파티마는 습기 때문에 창고에서 곰팡이가 핀 책들을 발견했어요.",
+   "blank": "تعفنت",
    "src": "made"
   }
  ],
@@ -18659,6 +18947,38 @@
    "blank": "التقسيط"
   }
  ],
+ "w|تقسيم": [
+  {
+   "text": "اتفق عمر وأصدقاؤه على تقسيم الحمل بينهم بالتساوي.",
+   "en": "Omar and his friends agreed to divide the load equally among them.",
+   "ko": "오마르와 친구들은 짐을 똑같이 나눠 들기로 했어요.",
+   "blank": "تقسيم",
+   "src": "made"
+  },
+  {
+   "text": "اقترحت فاطمة تقسيم الكتب حسب أعمار القراء.",
+   "en": "Fatima suggested dividing the books by readers' ages.",
+   "ko": "파티마는 독자 나이에 따라 책을 나누자고 했어요.",
+   "blank": "تقسيم",
+   "src": "made"
+  }
+ ],
+ "w|تقلص": [
+  {
+   "text": "لاحظ عمر أن النهر تقلص كثيرا منذ زيارته الأخيرة.",
+   "en": "Omar noticed that the river had shrunk a lot since his last visit.",
+   "ko": "오마르는 지난번 왔을 때보다 강이 많이 줄어든 것을 알아챘어요.",
+   "blank": "تقلص",
+   "src": "made"
+  },
+  {
+   "text": "تقلصت ساعات عمل المكتبة بعد أن قلت ميزانيتها.",
+   "en": "The library's opening hours shrank after its budget was cut.",
+   "ko": "예산이 줄자 도서관 운영 시간도 줄었어요.",
+   "blank": "تقلصت",
+   "src": "made"
+  }
+ ],
  "w|تقليد": [
   {
    "text": "هذا تقليد قديم في عائلتنا.",
@@ -18836,6 +19156,22 @@
    "en": "Layla didn't act superior towards her teammates after she became the team's star.",
    "ko": "라일라는 팀의 스타가 된 뒤에도 동료들에게 거만하게 굴지 않았어요.",
    "blank": "تتكبر",
+   "src": "made"
+  }
+ ],
+ "w|تكثف": [
+  {
+   "text": "تكثف الضباب فوق النهر في الصباح الباكر.",
+   "en": "The fog thickened over the river in the early morning.",
+   "ko": "이른 아침 강 위로 안개가 짙어졌어요.",
+   "blank": "تكثف",
+   "src": "made"
+  },
+  {
+   "text": "تكثف البخار على زجاج النافذة في ليلة الشتاء.",
+   "en": "Steam condensed on the window glass on the winter night.",
+   "ko": "겨울밤 창유리에 김이 서렸어요.",
+   "blank": "تكثف",
    "src": "made"
   }
  ],
@@ -22037,6 +22373,22 @@
    "blank": "الجسدي"
   }
  ],
+ "w|جسديا": [
+  {
+   "text": "كان عمر متعبا جسديا بعد يوم كامل من المشي.",
+   "en": "Omar was physically tired after a whole day of walking.",
+   "ko": "오마르는 하루 종일 걸어서 몸이 지쳤어요.",
+   "blank": "جسديا",
+   "src": "made"
+  },
+  {
+   "text": "تعبت فاطمة جسديا بعد نقل صناديق الكتب إلى الطابق الثاني.",
+   "en": "Fatima got physically tired after moving the boxes of books to the second floor.",
+   "ko": "파티마는 책 상자를 이 층으로 옮기고 나서 몸이 지쳤어요.",
+   "blank": "جسديا",
+   "src": "made"
+  }
+ ],
  "w|جسر": [
   {
    "text": "هناك جسر طويل فوق النهر.",
@@ -22091,6 +22443,22 @@
    "en": "Geography helps us learn about countries.",
    "ko": "지리는 우리가 나라에 대해 아는 데 도움을 줘.",
    "blank": "جغرافيا"
+  }
+ ],
+ "w|جف": [
+  {
+   "text": "جف الجدول الصغير الذي كان عمر يشرب منه في طفولته.",
+   "en": "The little stream Omar used to drink from in his childhood dried up.",
+   "ko": "오마르가 어릴 때 물을 마시던 작은 시냇물이 말라 버렸어요.",
+   "blank": "جف",
+   "src": "made"
+  },
+  {
+   "text": "جفت صفحات المخطوطة بعد أن وضعتها فاطمة قرب المدفأة.",
+   "en": "The manuscript pages dried after Fatima put them near the heater.",
+   "ko": "파티마가 난로 옆에 두자 필사본 종이가 말랐어요.",
+   "blank": "جفت",
+   "src": "made"
   }
  ],
  "w|جفاف": [
@@ -29283,6 +29651,22 @@
    "blank": "ذبابة"
   }
  ],
+ "w|ذبل": [
+  {
+   "text": "ذبلت الزهور التي قطفها عمر قبل أن يصل إلى الخيمة.",
+   "en": "The flowers Omar picked wilted before he reached the tent.",
+   "ko": "오마르가 꺾은 꽃은 텐트에 닿기도 전에 시들었어요.",
+   "blank": "ذبلت",
+   "src": "made"
+  },
+  {
+   "text": "ذبل النبات الموضوع على نافذة المكتبة لأن أحدا لم يسقه.",
+   "en": "The plant on the library window wilted because no one watered it.",
+   "ko": "아무도 물을 주지 않아서 도서관 창가 화분이 시들었어요.",
+   "blank": "ذبل",
+   "src": "made"
+  }
+ ],
  "w|ذخيرة": [
   {
    "text": "تأكد عمر أن البنادق على المسرح فارغة ولا تحتوي على ذخيرة.",
@@ -35373,6 +35757,22 @@
    "src": "made"
   }
  ],
+ "w|شجر": [
+  {
+   "text": "أزهر شجر اللوز على طرف الغابة في أول الربيع.",
+   "en": "The almond trees at the edge of the forest blossomed at the start of spring.",
+   "ko": "봄이 시작될 때 숲 가장자리의 아몬드나무에 꽃이 피었어요.",
+   "blank": "شجر",
+   "src": "made"
+  },
+  {
+   "text": "تطل نافذة المكتبة على صف من الشجر العالي.",
+   "en": "The library window overlooks a row of tall trees.",
+   "ko": "도서관 창밖으로 키 큰 나무들이 줄지어 보여요.",
+   "blank": "الشجر",
+   "src": "made"
+  }
+ ],
  "w|شجرة": [
   {
    "text": "زرعنا شجرة في الحديقة.",
@@ -37133,6 +37533,22 @@
    "blank": "صحراء"
   }
  ],
+ "w|صحراوي": [
+  {
+   "text": "وصل إلى الغابة هواء حار من المنخفض الصحراوي في الجنوب.",
+   "en": "Hot air reached the forest from the desert lowland in the south.",
+   "ko": "남쪽 사막 저지대에서 뜨거운 바람이 숲까지 불어왔어요.",
+   "blank": "الصحراوي",
+   "src": "made"
+  },
+  {
+   "text": "تحب فاطمة الروايات التي تجري أحداثها في مكان صحراوي.",
+   "en": "Fatima likes novels set in a desert place.",
+   "ko": "파티마는 사막을 배경으로 한 소설을 좋아해요.",
+   "blank": "صحراوي",
+   "src": "made"
+  }
+ ],
  "w|صحفي": [
   {
    "text": "أخي يعمل صحفي في جريدة.",
@@ -37215,6 +37631,22 @@
    "en": "We sat on a rock near the sea.",
    "ko": "우리는 바다 근처 바위에 앉았어.",
    "blank": "صخرة"
+  }
+ ],
+ "w|صدئ": [
+  {
+   "text": "وجد عمر جسرا حديديا قديما صدئ من كثرة المطر.",
+   "en": "Omar found an old iron bridge that had rusted from all the rain.",
+   "ko": "오마르는 비를 많이 맞아 녹슨 오래된 철다리를 발견했어요.",
+   "blank": "صدئ",
+   "src": "made"
+  },
+  {
+   "text": "صدئ قفل الخزانة الحديدية فلم تستطع فاطمة فتحها.",
+   "en": "The lock of the iron cabinet rusted, so Fatima couldn't open it.",
+   "ko": "철제 캐비닛 자물쇠가 녹슬어서 파티마가 열 수 없었어요.",
+   "blank": "صدئ",
+   "src": "made"
   }
  ],
  "w|صداع": [
@@ -37905,6 +38337,22 @@
    "en": "I like talking with my family's son-in-law.",
    "ko": "나는 가족의 사위와 이야기하는 것을 좋아해.",
    "blank": "صهر"
+  }
+ ],
+ "w|صهل": [
+  {
+   "text": "صهل حصان في المزرعة المجاورة للغابة.",
+   "en": "A horse neighed on the farm next to the forest.",
+   "ko": "숲 옆 농장에서 말이 울었어요.",
+   "blank": "صهل",
+   "src": "made"
+  },
+  {
+   "text": "قلد طفل صوت حصان صهل في القصة التي قرأتها فاطمة.",
+   "en": "A child imitated the sound of a horse that neighed in the story Fatima read.",
+   "ko": "한 아이가 파티마가 읽어 준 이야기 속 말 울음소리를 흉내 냈어요.",
+   "blank": "صهل",
+   "src": "made"
   }
  ],
  "w|صواب": [
@@ -38961,6 +39409,22 @@
    "en": "This is my favorite cap.",
    "ko": "이게 내가 제일 좋아하는 모자야.",
    "blank": "طاقيتي"
+  }
+ ],
+ "w|طال": [
+  {
+   "text": "طال انتظار عمر للقارب حتى غابت الشمس.",
+   "en": "Omar's wait for the boat lasted until the sun set.",
+   "ko": "오마르는 해가 질 때까지 오래도록 배를 기다렸어요.",
+   "blank": "طال",
+   "src": "made"
+  },
+  {
+   "text": "طالت قائمة الكتب التي تريد فاطمة شراءها للمكتبة.",
+   "en": "The list of books Fatima wants to buy for the library grew long.",
+   "ko": "파티마가 도서관에 사고 싶은 책 목록이 길어졌어요.",
+   "blank": "طالت",
+   "src": "made"
   }
  ],
  "w|طالب": [
@@ -41515,6 +41979,22 @@
    "blank": "عشرون"
   }
  ],
+ "w|عشش": [
+  {
+   "text": "رأى عمر طائرا صغيرا عشش بين أغصان الصفصاف.",
+   "en": "Omar saw a small bird that had nested among the willow branches.",
+   "ko": "오마르는 버드나무 가지 사이에 둥지를 튼 작은 새를 봤어요.",
+   "blank": "عشش",
+   "src": "made"
+  },
+  {
+   "text": "عششت حمامة فوق نافذة المكتبة وصارت تزورها كل صباح.",
+   "en": "A pigeon nested above the library window and started visiting it every morning.",
+   "ko": "비둘기 한 마리가 도서관 창 위에 둥지를 틀고 아침마다 찾아왔어요.",
+   "blank": "عششت",
+   "src": "made"
+  }
+ ],
  "w|عشق": [
   {
    "text": "عشق الموسيقى منذ صغره.",
@@ -41631,6 +42111,22 @@
    "en": "In the golden age, art was flourishing.",
    "ko": "황금기에는 예술이 번성했다.",
    "blank": "العصر"
+  }
+ ],
+ "w|عصف": [
+  {
+   "text": "عصفت الرياح بالأشجار طوال الليل فلم ينم عمر.",
+   "en": "The winds lashed the trees all night, so Omar didn't sleep.",
+   "ko": "밤새 바람이 나무들을 세차게 흔들어 오마르는 잠을 못 잤어요.",
+   "blank": "عصفت",
+   "src": "made"
+  },
+  {
+   "text": "عصفت الريح بنوافذ المكتبة فأغلقتها فاطمة بسرعة.",
+   "en": "The wind battered the library windows, so Fatima quickly shut them.",
+   "ko": "바람이 도서관 창문을 세차게 때리자 파티마가 얼른 닫았어요.",
+   "blank": "عصفت",
+   "src": "made"
   }
  ],
  "w|عصفور": [
@@ -43765,6 +44261,22 @@
    "src": "made"
   }
  ],
+ "w|غمر": [
+  {
+   "text": "غمر الماء الحقول القريبة من النهر بعد الأمطار.",
+   "en": "Water flooded the fields near the river after the rains.",
+   "ko": "비가 온 뒤 강 근처 들판이 물에 잠겼어요.",
+   "blank": "غمر",
+   "src": "made"
+  },
+  {
+   "text": "غمرت السعادة فاطمة حين أهدى كاتب مشهور المكتبة كتبه.",
+   "en": "Fatima was overwhelmed with joy when a famous writer gave the library his books.",
+   "ko": "유명한 작가가 도서관에 자기 책을 기증하자 파티마는 기쁨에 벅찼어요.",
+   "blank": "غمرت",
+   "src": "made"
+  }
+ ],
  "w|غموض": [
   {
    "text": "يحيط الغموض بوصفة الصلصة التي يرفض يوسف أن يكشفها.",
@@ -44247,6 +44759,22 @@
    "en": "Red beans are great in salad.",
    "ko": "붉은 콩은 샐러드에 좋다.",
    "blank": "الفاصوليا"
+  }
+ ],
+ "w|فاض": [
+  {
+   "text": "فاض النهر بعد العاصفة وغطى الطريق الترابي.",
+   "en": "The river overflowed after the storm and covered the dirt road.",
+   "ko": "폭풍 뒤에 강물이 넘쳐 흙길을 덮었어요.",
+   "blank": "فاض",
+   "src": "made"
+  },
+  {
+   "text": "فاضت صناديق الكتب المتبرع بها حتى ملأت الممر.",
+   "en": "The boxes of donated books overflowed until they filled the corridor.",
+   "ko": "기증받은 책 상자가 넘쳐서 복도까지 가득 찼어요.",
+   "blank": "فاضت",
+   "src": "made"
   }
  ],
  "w|فاق": [
@@ -50101,6 +50629,22 @@
    "blank": "تلخص"
   }
  ],
+ "w|لدغ": [
+  {
+   "text": "حذر الدليل عمر من ثعبان لدغ سائحا في الصيف الماضي.",
+   "en": "The guide warned Omar about a snake that bit a tourist last summer.",
+   "ko": "안내원은 지난여름 관광객을 문 뱀을 조심하라고 오마르에게 일렀어요.",
+   "blank": "لدغ",
+   "src": "made"
+  },
+  {
+   "text": "لدغت بعوضة فاطمة وهي تقرأ قرب النافذة المفتوحة.",
+   "en": "A mosquito bit Fatima while she was reading near the open window.",
+   "ko": "파티마는 열린 창가에서 책을 읽다가 모기에 물렸어요.",
+   "blank": "لدغت",
+   "src": "made"
+  }
+ ],
  "w|لدى": [
   {
    "text": "لدى صديقي كتاب جديد.",
@@ -50183,6 +50727,22 @@
    "en": "Stick out your tongue at the doctor.",
    "ko": "의사 앞에서 혀를 내밀어.",
    "blank": "لسانك"
+  }
+ ],
+ "w|لسع": [
+  {
+   "text": "لسعت نحلة عمر في يده وهو يقطف الزهور.",
+   "en": "A bee stung Omar on the hand while he was picking flowers.",
+   "ko": "오마르는 꽃을 따다가 벌에 손을 쏘였어요.",
+   "blank": "لسعت",
+   "src": "made"
+  },
+  {
+   "text": "تحكي القصة عن دبور لسع أنف دب صغير.",
+   "en": "The story tells of a wasp that stung a little bear's nose.",
+   "ko": "그 이야기는 말벌이 아기 곰의 코를 쏜 이야기예요.",
+   "blank": "لسع",
+   "src": "made"
   }
  ],
  "w|لص": [
@@ -50758,6 +51318,22 @@
    "en": "A retired major general bought a formal suit from the section Rana manages.",
    "ko": "은퇴한 소장이 라나가 맡은 코너에서 정장을 샀어요.",
    "blank": "لواء",
+   "src": "made"
+  }
+ ],
+ "w|لوث": [
+  {
+   "text": "لوث مصنع قديم مياه النهر قبل أن يغلق.",
+   "en": "An old factory polluted the river water before it closed.",
+   "ko": "오래된 공장이 문을 닫기 전에 강물을 오염시켰어요.",
+   "blank": "لوث",
+   "src": "made"
+  },
+  {
+   "text": "لوث الحبر المسكوب صفحات الكتاب الجديد.",
+   "en": "The spilled ink stained the pages of the new book.",
+   "ko": "쏟아진 잉크가 새 책의 종이를 더럽혔어요.",
+   "blank": "لوث",
    "src": "made"
   }
  ],
@@ -60583,6 +61159,22 @@
    "blank": "موضوع"
   }
  ],
+ "w|موطن": [
+  {
+   "text": "هذه الغابة موطن لأنواع كثيرة من الطيور المهاجرة.",
+   "en": "This forest is home to many kinds of migratory birds.",
+   "ko": "이 숲은 여러 철새들의 서식지예요.",
+   "blank": "موطن",
+   "src": "made"
+  },
+  {
+   "text": "تبحث فاطمة عن كتاب يصف موطن الدب القطبي.",
+   "en": "Fatima is looking for a book describing the polar bear's habitat.",
+   "ko": "파티마는 북극곰의 서식지를 다룬 책을 찾고 있어요.",
+   "blank": "موطن",
+   "src": "made"
+  }
+ ],
  "w|موظف": [
   {
    "text": "أنا موظف في هذه المؤسسة.",
@@ -61381,6 +61973,22 @@
    "en": "I planted a new plant on the balcony.",
    "ko": "나는 발코니에 새로운 식물을 심었어.",
    "blank": "نبات"
+  }
+ ],
+ "w|نبح": [
+  {
+   "text": "نبح كلب الحارس حين اقترب عمر من الكوخ.",
+   "en": "The ranger's dog barked when Omar approached the hut.",
+   "ko": "오마르가 오두막에 다가가자 관리인의 개가 짖었어요.",
+   "blank": "نبح",
+   "src": "made"
+  },
+  {
+   "text": "نبحت كلاب الحي فجأة فضحك الأطفال في قاعة القراءة.",
+   "en": "The neighborhood dogs suddenly barked, and the children in the reading room laughed.",
+   "ko": "동네 개들이 갑자기 짖어서 열람실 아이들이 웃었어요.",
+   "blank": "نبحت",
+   "src": "made"
   }
  ],
  "w|نبذ": [
@@ -62297,6 +62905,22 @@
    "en": "Always follow the doctor's advice.",
    "ko": "항상 의사의 조언을 따라.",
    "blank": "نصيحة"
+  }
+ ],
+ "w|نضج": [
+  {
+   "text": "وجد عمر توتا بريا نضج تحت شمس الصيف.",
+   "en": "Omar found wild berries that had ripened under the summer sun.",
+   "ko": "오마르는 여름 햇볕 아래 익은 산딸기를 찾았어요.",
+   "blank": "نضج",
+   "src": "made"
+  },
+  {
+   "text": "ترى فاطمة أن أسلوب الكاتب نضج كثيرا في روايته الأخيرة.",
+   "en": "Fatima thinks the writer's style matured a lot in his latest novel.",
+   "ko": "파티마는 그 작가의 문체가 마지막 소설에서 많이 성숙해졌다고 봐요.",
+   "blank": "نضج",
+   "src": "made"
   }
  ],
  "w|نطاق": [
@@ -63835,6 +64459,22 @@
    "en": "I learned a lot from yesterday's defeat.",
    "ko": "어제의 패배에서 많은 것을 배웠어.",
    "blank": "هزيمة"
+  }
+ ],
+ "w|هطل": [
+  {
+   "text": "هطل المطر فجأة وابتل عمر حتى عظامه.",
+   "en": "Rain suddenly poured down and Omar got soaked to the bone.",
+   "ko": "갑자기 비가 쏟아져 오마르는 흠뻑 젖었어요.",
+   "blank": "هطل",
+   "src": "made"
+  },
+  {
+   "text": "هطلت الأمطار بغزارة فبقي القراء في المكتبة حتى المساء.",
+   "en": "The rain poured heavily, so the readers stayed in the library until evening.",
+   "ko": "비가 세차게 쏟아져 독자들은 저녁까지 도서관에 머물렀어요.",
+   "blank": "هطلت",
+   "src": "made"
   }
  ],
  "w|هكذا": [
