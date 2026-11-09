@@ -11935,6 +11935,22 @@
    "src": "made"
   }
  ],
+ "w|メンタル": [
+  {
+   "text": "ペットを亡くした飼い主は、メンタルの面でも支えが必要だ。",
+   "en": "Owners who have lost a pet also need emotional support.",
+   "ko": "반려동물을 잃은 보호자는 정신적인 면에서도 도움이 필요해요.",
+   "blank": "メンタル",
+   "src": "made"
+  },
+  {
+   "text": "長い撮影でもメンタルを保てるよう、葵は毎朝散歩をしている。",
+   "en": "Aoi takes a walk every morning to stay mentally steady through the long shoot.",
+   "ko": "긴 촬영에도 멘탈을 지키려고 아오이는 매일 아침 산책을 해요.",
+   "blank": "メンタル",
+   "src": "made"
+  }
+ ],
  "w|めんどくさい": [
   {
    "text": "本の返却の手続きがめんどくさいと、翔太はいつもこぼしている。",
@@ -16602,6 +16618,22 @@
    "en": "Sakura is in charge of HR, so this time she'll present the company at a regional university.",
    "ko": "사쿠라는 인사 담당이라서 이번에는 지방 대학에서 회사 설명을 해요.",
    "blank": "人事",
+   "src": "made"
+  }
+ ],
+ "w|人体": [
+  {
+   "text": "「動物の体の作りは、人体と似ているところも多い」と直樹は説明した。",
+   "en": "\"Animal bodies have a lot in common with the human body,\" Naoki explained.",
+   "ko": "\"동물의 몸 구조는 인체와 닮은 데도 많아요\"라고 나오키는 설명했어요.",
+   "blank": "人体",
+   "src": "made"
+  },
+  {
+   "text": "特殊メイクの担当者は、人体の模型を見ながら傷を作っていた。",
+   "en": "The special-effects makeup artist was making a wound while looking at an anatomical model.",
+   "ko": "특수 분장 담당자는 인체 모형을 보면서 상처를 만들고 있었어요.",
+   "blank": "人体",
    "src": "made"
   }
  ],
@@ -22115,6 +22147,22 @@
    "src": "made"
   }
  ],
+ "w|最短": [
+  {
+   "text": "急患の飼い主に、直樹は夜間病院までの最短の道を教えた。",
+   "en": "Naoki told the owner of an emergency case the shortest route to the night hospital.",
+   "ko": "나오키는 응급 환자의 보호자에게 야간 병원까지 가장 빠른 길을 알려 줬어요.",
+   "blank": "最短",
+   "src": "made"
+  },
+  {
+   "text": "撮影スケジュールが詰まり、移動は最短の距離で組まれた。",
+   "en": "The shooting schedule was packed, so travel was planned over the shortest distances.",
+   "ko": "촬영 일정이 빠듯해서 이동은 가장 짧은 거리로 짜였어요.",
+   "blank": "最短",
+   "src": "made"
+  }
+ ],
  "w|最終": [
   {
    "text": "もう最終だよ。",
@@ -22877,6 +22925,22 @@
    "src": "made"
   }
  ],
+ "w|出血": [
+  {
+   "text": "散歩中にガラスを踏んだ犬の足から、出血が止まらなかった。",
+   "en": "The bleeding wouldn't stop from the paw of a dog that stepped on glass during a walk.",
+   "ko": "산책 중 유리를 밟은 개의 발에서 출혈이 멈추지 않았어요.",
+   "blank": "出血",
+   "src": "made"
+  },
+  {
+   "text": "転ぶ場面で、葵は本当にひざを擦りむいて少し出血した。",
+   "en": "In the scene where she falls, Aoi really scraped her knee and bled a little.",
+   "ko": "넘어지는 장면에서 정말로 무릎이 까져서 피가 조금 났어요.",
+   "blank": "出血",
+   "src": "made"
+  }
+ ],
  "w|出資": [
   {
    "text": "新しいネットメディアには、地方の銀行も出資しているらしい。",
@@ -22996,6 +23060,22 @@
    "en": "Sakura wrote that the election was a turning point that decided the country's future.",
    "ko": "그 선거는 나라의 미래를 정한 분기점이었다고 사쿠라는 썼어요.",
    "blank": "分岐",
+   "src": "made"
+  }
+ ],
+ "w|分布": [
+  {
+   "text": "この地域で多いノミの種類の分布を、直樹は地図にまとめた。",
+   "en": "Naoki put together a map of how the common flea species are spread across the area.",
+   "ko": "나오키는 이 지역에 많은 벼룩 종류의 분포를 지도로 정리했어요.",
+   "blank": "分布",
+   "src": "made"
+  },
+  {
+   "text": "照明の光の分布を確かめるため、スタッフが葵の代わりに立った。",
+   "en": "A crew member stood in for Aoi to check how the light was spread.",
+   "ko": "조명 빛의 분포를 확인하려고 스태프가 아오이 대신 섰어요.",
+   "blank": "分布",
    "src": "made"
   }
  ],
@@ -25183,6 +25263,22 @@
    "en": "I want to become a doctor.",
    "ko": "의사가 되고 싶어.",
    "blank": "医者"
+  }
+ ],
+ "w|医薬品": [
+  {
+   "text": "人間用の医薬品をペットに飲ませるのは危ない、と直樹は注意した。",
+   "en": "Naoki warned that giving pets medicine meant for humans is dangerous.",
+   "ko": "사람용 의약품을 반려동물에게 먹이는 건 위험하다고 나오키는 주의를 줬어요.",
+   "blank": "医薬品",
+   "src": "made"
+  },
+  {
+   "text": "薬局のシーンでは、本物の医薬品のラベルを隠して撮影した。",
+   "en": "For the pharmacy scene, the labels on real medicines were covered up for filming.",
+   "ko": "약국 장면에서는 진짜 의약품 라벨을 가리고 촬영했어요.",
+   "blank": "医薬品",
+   "src": "made"
   }
  ],
  "w|匿名": [
@@ -29223,6 +29319,38 @@
    "src": "made"
   }
  ],
+ "w|固い": [
+  {
+   "text": "お腹を触ると固いしこりがあり、直樹はすぐに検査をした。",
+   "en": "Naoki felt a hard lump in the belly and ran tests right away.",
+   "ko": "배를 만져 보니 딱딱한 멍울이 있어서 나오키는 바로 검사를 했어요.",
+   "blank": "固い",
+   "src": "made"
+  },
+  {
+   "text": "初めての主演で、葵の表情は少し固かった。",
+   "en": "In her first leading role, Aoi's expression was a little stiff.",
+   "ko": "첫 주연이라 아오이의 표정은 조금 굳어 있었어요.",
+   "blank": "固かっ",
+   "src": "made"
+  }
+ ],
+ "w|固まる": [
+  {
+   "text": "傷口の血が固まるまで、看護師がガーゼで押さえていた。",
+   "en": "A nurse held gauze on the wound until the blood clotted.",
+   "ko": "상처의 피가 굳을 때까지 간호사가 거즈로 누르고 있었어요.",
+   "blank": "固まる",
+   "src": "made"
+  },
+  {
+   "text": "監督の怒鳴り声に、現場の空気が一瞬で固まった。",
+   "en": "The director's shout froze the mood on set in an instant.",
+   "ko": "감독의 고함에 현장 분위기가 순식간에 얼어붙었어요.",
+   "blank": "固まっ",
+   "src": "made"
+  }
+ ],
  "w|固定": [
   {
    "text": "ここに固定して。",
@@ -29632,6 +29760,22 @@
    "en": "Mayu condensed a long interview into four hundred characters.",
    "ko": "마유는 긴 인터뷰를 사백 자로 압축했어요.",
    "blank": "圧縮",
+   "src": "made"
+  }
+ ],
+ "w|圧迫": [
+  {
+   "text": "首輪がきつすぎて、犬の喉を圧迫していた。",
+   "en": "The collar was so tight it was pressing on the dog's throat.",
+   "ko": "목걸이가 너무 꽉 껴서 개의 목을 압박하고 있었어요.",
+   "blank": "圧迫",
+   "src": "made"
+  },
+  {
+   "text": "撮影の遅れが、映画の予算を圧迫している。",
+   "en": "The delays in filming are squeezing the movie's budget.",
+   "ko": "촬영 지연이 영화 예산을 압박하고 있어요.",
+   "blank": "圧迫",
    "src": "made"
   }
  ],
@@ -33839,6 +33983,22 @@
    "blank": "安心"
   }
  ],
+ "w|安易": [
+  {
+   "text": "「かわいいからという安易な理由で飼わないで」と直樹は言う。",
+   "en": "\"Don't get a pet for an easy reason like it being cute,\" Naoki says.",
+   "ko": "\"귀엽다는 쉬운 이유로 키우지 마세요\"라고 나오키는 말해요.",
+   "blank": "安易",
+   "src": "made"
+  },
+  {
+   "text": "監督は、安易な泣かせの演出を嫌っている。",
+   "en": "The director dislikes cheap tear-jerking direction.",
+   "ko": "감독은 쉽게 눈물을 짜내는 연출을 싫어해요.",
+   "blank": "安易",
+   "src": "made"
+  }
+ ],
  "w|完了": [
   {
    "text": "作業が完了した。",
@@ -36153,6 +36313,22 @@
    "en": "The result will be affected.",
    "ko": "결과가 좌우돼.",
    "blank": "左右"
+  }
+ ],
+ "w|左手": [
+  {
+   "text": "直樹は左手で犬の頭をなでながら、右手で注射を打った。",
+   "en": "Naoki stroked the dog's head with his left hand while giving the injection with his right.",
+   "ko": "나오키는 왼손으로 개 머리를 쓰다듬으면서 오른손으로 주사를 놓았어요.",
+   "blank": "左手",
+   "src": "made"
+  },
+  {
+   "text": "葵は、左手に台本を持ったまま走るシーンを撮った。",
+   "en": "Aoi shot a scene running with the script still in her left hand.",
+   "ko": "아오이는 왼손에 대본을 든 채로 달리는 장면을 찍었어요.",
+   "blank": "左手",
+   "src": "made"
   }
  ],
  "w|左翼": [
@@ -41801,6 +41977,22 @@
    "src": "made"
   }
  ],
+ "w|投与": [
+  {
+   "text": "抗生物質の投与は、一日二回、一週間続けることになった。",
+   "en": "It was decided the antibiotics would be given twice a day for a week.",
+   "ko": "항생제 투여는 하루 두 번 일주일 동안 계속하기로 했어요.",
+   "blank": "投与",
+   "src": "made"
+  },
+  {
+   "text": "ドラマの中で、医者が患者に薬を投与する場面を撮った。",
+   "en": "They filmed a scene in the drama where a doctor gives a patient medication.",
+   "ko": "드라마 속에서 의사가 환자에게 약을 투여하는 장면을 찍었어요.",
+   "blank": "投与",
+   "src": "made"
+  }
+ ],
  "w|投入": [
   {
    "text": "市は、子育て支援に多くの予算を投入した。",
@@ -45259,6 +45451,22 @@
    "src": "made"
   }
  ],
+ "w|斬新": [
+  {
+   "text": "待合室の壁は、動物の足跡を描いた斬新なデザインだ。",
+   "en": "The waiting room wall has a fresh design painted with animal paw prints.",
+   "ko": "대기실 벽은 동물 발자국을 그린 참신한 디자인이에요.",
+   "blank": "斬新",
+   "src": "made"
+  },
+  {
+   "text": "この映画は、斬新なカメラワークで話題になった。",
+   "en": "This movie drew attention for its innovative camera work.",
+   "ko": "이 영화는 참신한 카메라 워크로 화제가 됐어요.",
+   "blank": "斬新",
+   "src": "made"
+  }
+ ],
  "w|断る": [
   {
    "text": "誘いを断るのが苦手だ。",
@@ -45921,6 +46129,22 @@
    "blank": "日本語"
   }
  ],
+ "w|日焼け": [
+  {
+   "text": "毛の薄い犬は、夏に日焼けで皮膚が赤くなることがある。",
+   "en": "Dogs with thin coats can get red skin from sunburn in summer.",
+   "ko": "털이 얇은 개는 여름에 햇볕에 타서 피부가 빨개질 때가 있어요.",
+   "blank": "日焼け",
+   "src": "made"
+  },
+  {
+   "text": "真夏の屋外ロケで、葵はスタッフに日焼け止めを借りた。",
+   "en": "At an outdoor location shoot in midsummer, Aoi borrowed sunscreen from a crew member.",
+   "ko": "한여름 야외 촬영에서 아오이는 스태프에게 자외선 차단제를 빌렸어요.",
+   "blank": "日焼け",
+   "src": "made"
+  }
+ ],
  "w|日程": [
   {
    "text": "正月休みの日程を決めるために、亮は姉に電話した。",
@@ -46056,6 +46280,22 @@
    "en": "At Chihiro's wedding, the groom's promotion was celebrated too.",
    "ko": "지히로의 결혼식에서는 신랑의 승진 축하도 함께 했어요.",
    "blank": "昇進",
+   "src": "made"
+  }
+ ],
+ "w|明かす": [
+  {
+   "text": "直樹は、なぜ獣医になったのかを子どもたちに明かした。",
+   "en": "Naoki told the children why he had become a vet.",
+   "ko": "나오키는 왜 수의사가 됐는지 아이들에게 밝혔어요.",
+   "blank": "明かし",
+   "src": "made"
+  },
+  {
+   "text": "舞台挨拶で、葵は撮影中の失敗談を明かした。",
+   "en": "At the stage greeting, Aoi revealed a mishap from the shoot.",
+   "ko": "무대 인사에서 아오이는 촬영 중 실수담을 밝혔어요.",
+   "blank": "明かし",
    "src": "made"
   }
  ],
@@ -50213,6 +50453,22 @@
    "blank": "歯"
   }
  ],
+ "w|歯医者": [
+  {
+   "text": "直樹は、犬の歯石を取るたびに歯医者になった気分になる。",
+   "en": "Every time he scrapes tartar off a dog's teeth, Naoki feels like a dentist.",
+   "ko": "나오키는 개 치석을 제거할 때마다 치과 의사가 된 기분이 들어요.",
+   "blank": "歯医者",
+   "src": "made"
+  },
+  {
+   "text": "撮影の合間に、葵は歯医者の予約を入れた。",
+   "en": "Between takes, Aoi made a dentist appointment.",
+   "ko": "촬영 틈틈이 아오이는 치과 예약을 했어요.",
+   "blank": "歯医者",
+   "src": "made"
+  }
+ ],
  "w|歯磨き": [
   {
    "text": "歯磨きを忘れないで。",
@@ -50789,6 +51045,22 @@
    "blank": "毛"
   }
  ],
+ "w|毛穴": [
+  {
+   "text": "犬は人と違って、毛穴から汗をほとんどかかない。",
+   "en": "Unlike people, dogs barely sweat through their pores.",
+   "ko": "개는 사람과 달리 모공으로 땀을 거의 흘리지 않아요.",
+   "blank": "毛穴",
+   "src": "made"
+  },
+  {
+   "text": "高画質のカメラは、俳優の毛穴まではっきり映してしまう。",
+   "en": "High-definition cameras show even the actors' pores clearly.",
+   "ko": "고화질 카메라는 배우의 모공까지 선명하게 비쳐 버려요.",
+   "blank": "毛穴",
+   "src": "made"
+  }
+ ],
  "w|民族": [
   {
    "text": "どのくらいの数の民族がアメリカの人口を構成しているか正確にはだれもわかりません。",
@@ -50935,6 +51207,22 @@
    "en": "I'm in a good mood today.",
    "ko": "오늘 기분 좋아.",
    "blank": "気分"
+  }
+ ],
+ "w|気力": [
+  {
+   "text": "手術の後、老猫には自分でご飯を食べる気力が戻ってきた。",
+   "en": "After surgery, the old cat got back the energy to eat on its own.",
+   "ko": "수술 후 늙은 고양이에게 스스로 밥을 먹을 기력이 돌아왔어요.",
+   "blank": "気力",
+   "src": "made"
+  },
+  {
+   "text": "最後のシーンで、葵は残った気力をふりしぼって叫んだ。",
+   "en": "In the final scene, Aoi summoned all her remaining strength and screamed.",
+   "ko": "마지막 장면에서 아오이는 남은 기력을 짜내서 소리쳤어요.",
+   "blank": "気力",
+   "src": "made"
   }
  ],
  "w|気味": [
@@ -51085,6 +51373,22 @@
    "en": "Wednesday won't work.",
    "ko": "수요일은 안 돼.",
    "blank": "水曜日"
+  }
+ ],
+ "w|水泳": [
+  {
+   "text": "足を痛めたラブラドールに、直樹はプールでの水泳を勧めた。",
+   "en": "Naoki recommended swimming in a pool for the Labrador with the injured leg.",
+   "ko": "나오키는 다리를 다친 래브라도에게 수영장에서 수영을 권했어요.",
+   "blank": "水泳",
+   "src": "made"
+  },
+  {
+   "text": "葵は学生時代に水泳部だったので、水中のシーンも平気だった。",
+   "en": "Aoi was on the swim team in school, so underwater scenes didn't bother her.",
+   "ko": "아오이는 학생 때 수영부였어서 물속 장면도 아무렇지 않았어요.",
+   "blank": "水泳",
+   "src": "made"
   }
  ],
  "w|水準": [
@@ -51687,6 +51991,22 @@
    "en": "Treatment is over.",
    "ko": "치료가 끝났어.",
    "blank": "治療"
+  }
+ ],
+ "w|泊まる": [
+  {
+   "text": "容体が心配で、直樹はその夜病院に泊まった。",
+   "en": "Worried about the animal's condition, Naoki stayed overnight at the clinic.",
+   "ko": "상태가 걱정돼서 나오키는 그날 밤 병원에서 잤어요.",
+   "blank": "泊まっ",
+   "src": "made"
+  },
+  {
+   "text": "地方ロケの間、撮影チームは古い旅館に泊まった。",
+   "en": "During the location shoot in the countryside, the crew stayed at an old inn.",
+   "ko": "지방 촬영 동안 촬영팀은 오래된 료칸에 묵었어요.",
+   "blank": "泊まっ",
+   "src": "made"
   }
  ],
  "w|法令": [
@@ -53209,6 +53529,22 @@
    "src": "made"
   }
  ],
+ "w|滅多": [
+  {
+   "text": "このあたりで蛇にかまれた犬は、滅多に見ない。",
+   "en": "Dogs bitten by snakes are rarely seen around here.",
+   "ko": "이 근처에서 뱀에게 물린 개는 거의 보지 못해요.",
+   "blank": "滅多",
+   "src": "made"
+  },
+  {
+   "text": "厳しい監督が褒めることは、滅多にない。",
+   "en": "The strict director rarely gives praise.",
+   "ko": "엄격한 감독이 칭찬하는 일은 좀처럼 없어요.",
+   "blank": "滅多",
+   "src": "made"
+  }
+ ],
  "w|漏らす": [
   {
    "text": "新製品の情報を外に漏らさないよう、全員が誓約書に署名した。",
@@ -53812,6 +54148,22 @@
    "en": "In this town, children can get vaccinated free of charge.",
    "ko": "이 동네에서는 아이 예방 접종을 무상으로 받을 수 있어요.",
    "blank": "無償",
+   "src": "made"
+  }
+ ],
+ "w|無力": [
+  {
+   "text": "助けられない命もあり、直樹は自分の無力さを感じることがある。",
+   "en": "Some lives can't be saved, and Naoki sometimes feels powerless.",
+   "ko": "구할 수 없는 생명도 있어서 나오키는 자신의 무력함을 느낄 때가 있어요.",
+   "blank": "無力",
+   "src": "made"
+  },
+  {
+   "text": "葵は、嵐の中で何もできない無力な娘の役を演じた。",
+   "en": "Aoi played a helpless daughter who can do nothing in the storm.",
+   "ko": "아오이는 폭풍 속에서 아무것도 못 하는 무력한 딸 역을 연기했어요.",
+   "blank": "無力",
    "src": "made"
   }
  ],
@@ -54505,6 +54857,22 @@
    "en": "I'll clear the desk.",
    "ko": "책상 위를 정리해.",
    "blank": "片付ける"
+  }
+ ],
+ "w|片手": [
+  {
+   "text": "小さなハムスターは、片手に収まるほど軽かった。",
+   "en": "The little hamster was light enough to fit in one hand.",
+   "ko": "작은 햄스터는 한 손에 쏙 들어갈 만큼 가벼웠어요.",
+   "blank": "片手",
+   "src": "made"
+  },
+  {
+   "text": "カメラマンは、片手で重いカメラを支えながら葵の後を追った。",
+   "en": "The cameraman followed Aoi, holding the heavy camera with one hand.",
+   "ko": "촬영 기사는 한 손으로 무거운 카메라를 받치면서 아오이를 따라갔어요.",
+   "blank": "片手",
+   "src": "made"
   }
  ],
  "w|片方": [
@@ -56693,6 +57061,22 @@
    "blank": "疲れない"
   }
  ],
+ "w|疲労": [
+  {
+   "text": "手術が三件続いて、直樹は夕方には疲労でふらふらだった。",
+   "en": "After three surgeries in a row, Naoki was staggering with exhaustion by evening.",
+   "ko": "수술이 세 건 이어져서 나오키는 저녁에는 피로로 휘청거렸어요.",
+   "blank": "疲労",
+   "src": "made"
+  },
+  {
+   "text": "徹夜の撮影が続いて、葵の顔には疲労の色が見えた。",
+   "en": "After a string of all-night shoots, Aoi's face showed signs of fatigue.",
+   "ko": "밤샘 촬영이 이어져서 아오이 얼굴에는 피로한 기색이 보였어요.",
+   "blank": "疲労",
+   "src": "made"
+  }
+ ],
  "w|疾患": [
   {
    "text": "歯周病は、ほかの疾患にもつながることがあるそうだ。",
@@ -57091,6 +57475,22 @@
    "blank": "発生"
   }
  ],
+ "w|発症": [
+  {
+   "text": "猫の病気は、発症してから気づくまでに時間がかかることが多い。",
+   "en": "With cats, it often takes a while to notice an illness after it starts.",
+   "ko": "고양이 병은 발병하고 나서 알아차리기까지 시간이 걸리는 경우가 많아요.",
+   "blank": "発症",
+   "src": "made"
+  },
+  {
+   "text": "主演俳優の花粉症が発症して、撮影が一日延びた。",
+   "en": "The lead actor's hay fever flared up, and the shoot was pushed back a day.",
+   "ko": "주연 배우의 꽃가루 알레르기가 도져서 촬영이 하루 미뤄졌어요.",
+   "blank": "発症",
+   "src": "made"
+  }
+ ],
  "w|発行": [
   {
    "text": "切符の発行が完了した。",
@@ -57372,6 +57772,22 @@
    "en": "The corridor is lined with black-and-white photos from when the hotel opened.",
    "ko": "복도에는 개업 당시의 흑백 사진이 줄지어 있어요.",
    "blank": "白黒",
+   "src": "made"
+  }
+ ],
+ "w|的確": [
+  {
+   "text": "直樹の的確な判断で、子犬は一命を取りとめた。",
+   "en": "Thanks to Naoki's accurate judgment, the puppy's life was saved.",
+   "ko": "나오키의 정확한 판단 덕분에 강아지는 목숨을 건졌어요.",
+   "blank": "的確",
+   "src": "made"
+  },
+  {
+   "text": "助監督の的確な指示で、エキストラが素早く動いた。",
+   "en": "With the assistant director's precise instructions, the extras moved quickly.",
+   "ko": "조감독의 정확한 지시로 엑스트라들이 재빨리 움직였어요.",
+   "blank": "的確",
    "src": "made"
   }
  ],
@@ -59621,6 +60037,22 @@
    "blank": "視聴"
   }
  ],
+ "w|視覚": [
+  {
+   "text": "目の見えない犬は、視覚の代わりに鼻と耳を頼りに歩く。",
+   "en": "A blind dog relies on its nose and ears instead of sight to get around.",
+   "ko": "눈이 안 보이는 개는 시각 대신 코와 귀에 의지해 걸어요.",
+   "blank": "視覚",
+   "src": "made"
+  },
+  {
+   "text": "監督は、音より視覚で観客を驚かせたいと考えている。",
+   "en": "The director wants to surprise the audience through visuals rather than sound.",
+   "ko": "감독은 소리보다 시각으로 관객을 놀라게 하고 싶어 해요.",
+   "blank": "視覚",
+   "src": "made"
+  }
+ ],
  "w|視野": [
   {
    "text": "料理長は、悠斗に海外でも働いて視野を広げるよう勧めた。",
@@ -59681,6 +60113,22 @@
    "en": "That's forbidden.",
    "ko": "금지돼 있어.",
    "blank": "禁止"
+  }
+ ],
+ "w|禁煙": [
+  {
+   "text": "飼い主の健康のためにも、待合室は禁煙になっている。",
+   "en": "The waiting room is non-smoking, for the owners' health too.",
+   "ko": "보호자 건강을 위해서도 대기실은 금연이에요.",
+   "blank": "禁煙",
+   "src": "made"
+  },
+  {
+   "text": "撮影所は全面禁煙で、喫煙所は門の外にしかない。",
+   "en": "The studio is entirely non-smoking, and the only smoking area is outside the gate.",
+   "ko": "촬영소는 전면 금연이라 흡연 구역은 문밖에만 있어요.",
+   "blank": "禁煙",
+   "src": "made"
   }
  ],
  "w|福祉": [
@@ -62771,6 +63219,22 @@
    "blank": "美容"
   }
  ],
+ "w|美肌": [
+  {
+   "text": "受付の女性は、美肌の秘訣は早寝だと患者の飼い主に話していた。",
+   "en": "The receptionist was telling a pet owner that the secret to her nice skin was going to bed early.",
+   "ko": "접수처 여성은 좋은 피부의 비결은 일찍 자는 거라고 보호자에게 말하고 있었어요.",
+   "blank": "美肌",
+   "src": "made"
+  },
+  {
+   "text": "葵の美肌を保つため、メイク係は保湿を欠かさない。",
+   "en": "To keep Aoi's skin looking beautiful, the makeup artist never skips moisturizing.",
+   "ko": "아오이의 고운 피부를 지키려고 분장 담당은 보습을 빼먹지 않아요.",
+   "blank": "美肌",
+   "src": "made"
+  }
+ ],
  "w|美術": [
   {
    "text": "舞台の美術は、若いデザイナーが一から作り上げた。",
@@ -63325,6 +63789,22 @@
    "src": "made"
   }
  ],
+ "w|肝臓": [
+  {
+   "text": "血液検査で、老犬の肝臓の数値が少し高いとわかった。",
+   "en": "A blood test showed the old dog's liver numbers were a little high.",
+   "ko": "혈액 검사에서 노견의 간 수치가 조금 높다는 걸 알았어요.",
+   "blank": "肝臓",
+   "src": "made"
+  },
+  {
+   "text": "お酒の強い役だが、葵は肝臓を気にして撮影ではお茶を飲んでいた。",
+   "en": "The role is a heavy drinker, but Aoi, mindful of her liver, drank tea during filming.",
+   "ko": "술이 센 역이지만 아오이는 간을 생각해서 촬영 때는 차를 마셨어요.",
+   "blank": "肝臓",
+   "src": "made"
+  }
+ ],
  "w|肩": [
   {
    "text": "肩が痛いよ。",
@@ -63778,6 +64258,22 @@
    "en": "The carpenter told Aoi that replacing the entire roof would cost a huge amount.",
    "ko": "지붕을 다 바꾸면 막대한 비용이 든다고 목수에게 들었어요.",
    "blank": "膨大",
+   "src": "made"
+  }
+ ],
+ "w|臨床": [
+  {
+   "text": "直樹は大学病院で、何年も臨床の経験を積んだ。",
+   "en": "Naoki gained years of clinical experience at a university animal hospital.",
+   "ko": "나오키는 대학 병원에서 몇 년 동안 임상 경험을 쌓았어요.",
+   "blank": "臨床",
+   "src": "made"
+  },
+  {
+   "text": "医療ドラマの監修には、臨床医が参加している。",
+   "en": "A practicing doctor is helping to supervise the medical drama.",
+   "ko": "의학 드라마 감수에는 임상의가 참여하고 있어요.",
+   "blank": "臨床",
    "src": "made"
   }
  ],
@@ -65277,6 +65773,22 @@
    "en": "They asked my blood type.",
    "ko": "혈액형을 물어봤어.",
    "blank": "血液"
+  }
+ ],
+ "w|血管": [
+  {
+   "text": "子猫の血管は細く、点滴の針を入れるのが難しい。",
+   "en": "A kitten's blood vessels are thin, so it's hard to put in an IV needle.",
+   "ko": "아기 고양이 혈관은 가늘어서 수액 바늘을 꽂기 어려워요.",
+   "blank": "血管",
+   "src": "made"
+  },
+  {
+   "text": "寒さで手の血管が浮き出ないよう、葵はカイロを握っていた。",
+   "en": "Aoi held a hand warmer so the veins in her hands wouldn't stand out from the cold.",
+   "ko": "추위로 손 혈관이 도드라지지 않게 아오이는 핫팩을 쥐고 있었어요.",
+   "blank": "血管",
+   "src": "made"
   }
  ],
  "w|行う": [
@@ -67044,6 +67556,22 @@
    "en": "Misaki changed the angle of the sign to make it easier to see from the road.",
    "ko": "미사키는 간판 각도를 바꿔서 길에서 잘 보이게 했어요.",
    "blank": "角度",
+   "src": "made"
+  }
+ ],
+ "w|解く": [
+  {
+   "text": "直樹は、犬の足に絡まった釣り糸をゆっくり解いた。",
+   "en": "Naoki slowly untangled the fishing line wrapped around the dog's leg.",
+   "ko": "나오키는 개 다리에 엉킨 낚싯줄을 천천히 풀었어요.",
+   "blank": "解い",
+   "src": "made"
+  },
+  {
+   "text": "葵が演じる探偵は、最後に事件の謎を解く。",
+   "en": "The detective Aoi plays solves the mystery of the case at the end.",
+   "ko": "아오이가 연기하는 탐정은 마지막에 사건의 수수께끼를 풀어요.",
+   "blank": "解く",
    "src": "made"
   }
  ],
@@ -73583,6 +74111,22 @@
    "src": "made"
   }
  ],
+ "w|適度": [
+  {
+   "text": "太った猫には、適度な運動と食事の見直しが必要だ。",
+   "en": "An overweight cat needs moderate exercise and a change in diet.",
+   "ko": "살찐 고양이에게는 적당한 운동과 식사 조절이 필요해요.",
+   "blank": "適度",
+   "src": "made"
+  },
+  {
+   "text": "葵は、撮影の合間に適度な休憩を取るようにしている。",
+   "en": "Aoi makes a point of taking moderate breaks between takes.",
+   "ko": "아오이는 촬영 틈틈이 적당히 쉬려고 해요.",
+   "blank": "適度",
+   "src": "made"
+  }
+ ],
  "w|適当": [
   {
    "text": "適当に選んで。",
@@ -73977,6 +74521,22 @@
    "src": "made"
   }
  ],
+ "w|邪悪": [
+  {
+   "text": "黒猫を邪悪なものと見る迷信は、今も一部に残っている。",
+   "en": "The superstition that black cats are evil still lingers in some places.",
+   "ko": "검은 고양이를 사악한 것으로 보는 미신은 지금도 일부 남아 있어요.",
+   "blank": "邪悪",
+   "src": "made"
+  },
+  {
+   "text": "悪役の俳優は、邪悪な笑みを浮かべて葵をにらんだ。",
+   "en": "The actor playing the villain glared at Aoi with an evil smile.",
+   "ko": "악역 배우는 사악한 미소를 지으며 아오이를 노려봤어요.",
+   "blank": "邪悪",
+   "src": "made"
+  }
+ ],
  "w|邪魔": [
   {
    "text": "邪魔してごめん。",
@@ -74004,6 +74564,22 @@
    "en": "Sakura waved to her subordinate who'd come to see her off on the platform.",
    "ko": "사쿠라는 역 플랫폼까지 배웅하러 온 부하 직원에게 손을 흔들었어요.",
    "blank": "部下",
+   "src": "made"
+  }
+ ],
+ "w|部位": [
+  {
+   "text": "レントゲンを見て、直樹は骨が折れた部位を飼い主に示した。",
+   "en": "Looking at the X-ray, Naoki showed the owner where the bone was broken.",
+   "ko": "나오키는 엑스레이를 보고 뼈가 부러진 부위를 보호자에게 보여 줬어요.",
+   "blank": "部位",
+   "src": "made"
+  },
+  {
+   "text": "メイク係は、傷のメイクをどの部位にするか監督に確認した。",
+   "en": "The makeup artist checked with the director on where to put the wound makeup.",
+   "ko": "분장 담당은 상처 분장을 어느 부위에 할지 감독에게 확인했어요.",
+   "blank": "部位",
    "src": "made"
   }
  ],
@@ -74748,6 +75324,22 @@
    "en": "The woman at the greengrocer gave Chihiro a little off the total.",
    "ko": "채소 가게 아주머니는 계산한 금액에서 조금 깎아 줬어요.",
    "blank": "金額",
+   "src": "made"
+  }
+ ],
+ "w|金髪": [
+  {
+   "text": "金髪の若い女性が、震える子猫を抱えて駆け込んできた。",
+   "en": "A young blonde woman rushed in holding a trembling kitten.",
+   "ko": "금발의 젊은 여성이 떨고 있는 아기 고양이를 안고 뛰어 들어왔어요.",
+   "blank": "金髪",
+   "src": "made"
+  },
+  {
+   "text": "役作りのために、葵は髪を金髪に染めた。",
+   "en": "Aoi dyed her hair blonde for the role.",
+   "ko": "아오이는 배역 준비를 위해 머리를 금발로 염색했어요.",
+   "blank": "金髪",
    "src": "made"
   }
  ],
@@ -75595,6 +76187,22 @@
    "src": "made"
   }
  ],
+ "w|関節": [
+  {
+   "text": "年を取った犬は、後ろ足の関節を痛めやすい。",
+   "en": "Older dogs easily hurt the joints in their hind legs.",
+   "ko": "나이 든 개는 뒷다리 관절을 다치기 쉬워요.",
+   "blank": "関節",
+   "src": "made"
+  },
+  {
+   "text": "アクションシーンの前に、葵は関節をよく回して体をほぐした。",
+   "en": "Before the action scene, Aoi loosened up by rolling her joints well.",
+   "ko": "액션 장면 전에 아오이는 관절을 잘 돌려서 몸을 풀었어요.",
+   "blank": "関節",
+   "src": "made"
+  }
+ ],
  "w|関連": [
   {
    "text": "それと関連あるの？",
@@ -76068,6 +76676,22 @@
    "en": "The teacher, seeing Keiko for the first time in a while, said she had gotten much taller.",
    "ko": "오랜만에 만난 선생님은 게이코를 보고 키가 많이 컸다고 말했어요.",
    "blank": "随分",
+   "src": "made"
+  }
+ ],
+ "w|隔離": [
+  {
+   "text": "感染症の疑いがある猫は、奥の部屋に隔離された。",
+   "en": "The cat suspected of having an infection was isolated in the back room.",
+   "ko": "감염병이 의심되는 고양이는 안쪽 방에 격리됐어요.",
+   "blank": "隔離",
+   "src": "made"
+  },
+  {
+   "text": "ゾンビ映画で、葵は隔離された病院から逃げ出す看護師の役だ。",
+   "en": "In the zombie movie, Aoi plays a nurse escaping from a quarantined hospital.",
+   "ko": "좀비 영화에서 아오이는 격리된 병원에서 탈출하는 간호사 역이에요.",
+   "blank": "隔離",
    "src": "made"
   }
  ],
@@ -78754,6 +79378,22 @@
    "en": "At the training, it was explained that using drugs or dangerous substances means immediate dismissal.",
    "ko": "연수에서 마약이나 위험한 약물 사용은 즉시 해고라고 설명받았어요.",
    "blank": "麻薬",
+   "src": "made"
+  }
+ ],
+ "w|麻酔": [
+  {
+   "text": "麻酔が切れるまで、柴犬はケージの中で静かに眠っていた。",
+   "en": "The Shiba Inu slept quietly in its cage until the anesthesia wore off.",
+   "ko": "마취가 풀릴 때까지 시바견은 케이지 안에서 조용히 잤어요.",
+   "blank": "麻酔",
+   "src": "made"
+  },
+  {
+   "text": "手術シーンの撮影では、俳優が麻酔で眠っている演技をした。",
+   "en": "In the surgery scene, an actor pretended to be asleep under anesthesia.",
+   "ko": "수술 장면 촬영에서는 배우가 마취로 잠든 연기를 했어요.",
+   "blank": "麻酔",
    "src": "made"
   }
  ],
