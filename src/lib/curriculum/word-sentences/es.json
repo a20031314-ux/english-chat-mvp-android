@@ -2363,6 +2363,22 @@
    "blank": "ala"
   }
  ],
+ "w|alambre": [
+  {
+   "text": "Sergio tendió un alambre en el balcón para secar la ropa.",
+   "en": "Sergio strung a wire across the balcony to dry the clothes.",
+   "ko": "세르히오는 빨래를 말리려고 발코니에 철사 줄을 걸었어요.",
+   "blank": "alambre",
+   "src": "made"
+  },
+  {
+   "text": "Un técnico pasó un alambre por el techo para colgar las pantallas.",
+   "en": "A technician ran a wire across the ceiling to hang the screens.",
+   "ko": "기술자가 화면을 매달려고 천장에 철사를 연결했어요.",
+   "blank": "alambre",
+   "src": "made"
+  }
+ ],
  "w|alarma": [
   {
    "text": "La alarma sonó a las seis en punto.",
@@ -2975,6 +2991,22 @@
    "en": "After lunch we took a walk.",
    "ko": "점심 후에 산책을 했어.",
    "blank": "almuerzo"
+  }
+ ],
+ "w|alojamiento": [
+  {
+   "text": "Mientras pintaban su piso, Sergio buscó alojamiento en casa de un amigo.",
+   "en": "While his flat was being painted, Sergio found a place to stay at a friend's house.",
+   "ko": "집에 페인트칠을 하는 동안 세르히오는 친구 집에 묵을 곳을 구했어요.",
+   "blank": "alojamiento",
+   "src": "made"
+  },
+  {
+   "text": "La empresa de Lola paga el alojamiento de los programadores que vienen de lejos.",
+   "en": "Lola's company pays for accommodation for programmers who come from far away.",
+   "ko": "롤라의 회사는 멀리서 오는 개발자들의 숙소비를 대 줘요.",
+   "blank": "alojamiento",
+   "src": "made"
   }
  ],
  "w|alquilar": [
@@ -4012,6 +4044,22 @@
    "en": "Nuria called the technician because the TV antenna in one room wasn't working.",
    "ko": "객실 텔레비전 안테나가 안 돼서 누리아는 기술자를 불렀어요.",
    "blank": "antena",
+   "src": "made"
+  }
+ ],
+ "w|anteojos": [
+  {
+   "text": "Sergio no encontraba sus anteojos y bajó a buscarlos al portal del edificio.",
+   "en": "Sergio couldn't find his glasses and went down to look for them in the building's lobby.",
+   "ko": "세르히오는 안경을 못 찾아서 건물 현관까지 내려가 찾아봤어요.",
+   "blank": "anteojos",
+   "src": "made"
+  },
+  {
+   "text": "Lola se quita los anteojos cada vez que revisa el código de cerca.",
+   "en": "Lola takes off her glasses every time she checks the code up close.",
+   "ko": "롤라는 코드를 가까이 볼 때마다 안경을 벗어요.",
+   "blank": "anteojos",
    "src": "made"
   }
  ],
@@ -7179,6 +7227,22 @@
    "en": "The game depends too much on chance.",
    "ko": "그 게임은 우연에 너무 의존해.",
    "blank": "azar"
+  }
+ ],
+ "w|azotea": [
+  {
+   "text": "En verano, los vecinos cenan juntos en la azotea del edificio.",
+   "en": "In summer, the neighbors have dinner together on the building's rooftop.",
+   "ko": "여름이면 이웃들이 건물 옥상에서 함께 저녁을 먹어요.",
+   "blank": "azotea",
+   "src": "made"
+  },
+  {
+   "text": "Los viernes, el equipo de Lola se reúne en la azotea a tomar algo.",
+   "en": "On Fridays, Lola's team gets together on the rooftop for a drink.",
+   "ko": "금요일마다 롤라 팀은 옥상에 모여 한잔해요.",
+   "blank": "azotea",
+   "src": "made"
   }
  ],
  "w|azúcar": [
@@ -11311,6 +11375,22 @@
    "blank": "casado"
   }
  ],
+ "w|casamiento": [
+  {
+   "text": "Todo el edificio fue invitado al casamiento de la hija del portero.",
+   "en": "The whole building was invited to the doorman's daughter's wedding.",
+   "ko": "건물 사람들 모두가 경비원 딸의 결혼식에 초대받았어요.",
+   "blank": "casamiento",
+   "src": "made"
+  },
+  {
+   "text": "El jefe de ventas se tomó una semana libre por su casamiento.",
+   "en": "The head of sales took a week off for his wedding.",
+   "ko": "영업 팀장은 결혼식 때문에 일주일 휴가를 냈어요.",
+   "blank": "casamiento",
+   "src": "made"
+  }
+ ],
  "w|casar": [
   {
    "text": "Van a casar a su hija en verano.",
@@ -11801,6 +11881,22 @@
    "en": "The old cemetery is near the river.",
    "ko": "오래된 묘지가 강 근처에 있어.",
    "blank": "cementerio"
+  }
+ ],
+ "w|cemento": [
+  {
+   "text": "Los obreros llenaron de cemento las grietas del patio.",
+   "en": "The workers filled the cracks in the courtyard with cement.",
+   "ko": "인부들이 안뜰의 갈라진 틈을 시멘트로 메웠어요.",
+   "blank": "cemento",
+   "src": "made"
+  },
+  {
+   "text": "La oficina de Lola es un antiguo almacén con suelo de cemento.",
+   "en": "Lola's office is an old warehouse with a cement floor.",
+   "ko": "롤라의 사무실은 시멘트 바닥이 있는 옛 창고예요.",
+   "blank": "cemento",
+   "src": "made"
   }
  ],
  "w|cena": [
@@ -13697,6 +13793,22 @@
    "blank": "colección"
   }
  ],
+ "w|coleccionar": [
+  {
+   "text": "A Sergio le gusta coleccionar postales antiguas de la ciudad.",
+   "en": "Sergio likes collecting old postcards of the city.",
+   "ko": "세르히오는 도시의 옛 엽서를 모으는 걸 좋아해요.",
+   "blank": "coleccionar",
+   "src": "made"
+  },
+  {
+   "text": "Uno de los diseñadores de Lola se dedica a coleccionar teclados mecánicos.",
+   "en": "One of Lola's designers collects mechanical keyboards.",
+   "ko": "롤라 회사의 디자이너 한 명은 기계식 키보드를 모으는 게 취미예요.",
+   "blank": "coleccionar",
+   "src": "made"
+  }
+ ],
  "w|colectivo": [
   {
    "text": "Javier coordina un huerto colectivo en un solar del barrio.",
@@ -14233,6 +14345,22 @@
    "en": "I don't know how to get in.",
    "ko": "어떻게 들어가는지 모르겠어.",
    "blank": "cómo"
+  }
+ ],
+ "w|comodidad": [
+  {
+   "text": "Sergio eligió el piso por la comodidad de tener el metro al lado.",
+   "en": "Sergio chose the flat for the convenience of having the metro next door.",
+   "ko": "세르히오는 지하철이 바로 옆에 있는 편리함 때문에 그 집을 골랐어요.",
+   "blank": "comodidad",
+   "src": "made"
+  },
+  {
+   "text": "La aplicación de Lola busca la comodidad del usuario por encima de todo.",
+   "en": "Lola's app puts user comfort above everything.",
+   "ko": "롤라의 앱은 무엇보다 사용자의 편안함을 중요하게 여겨요.",
+   "blank": "comodidad",
+   "src": "made"
   }
  ],
  "w|cómodo": [
@@ -15597,6 +15725,38 @@
    "en": "Stay with me for a bit.",
    "ko": "잠깐만 나랑 있어.",
    "blank": "conmigo"
+  }
+ ],
+ "w|conmovedor": [
+  {
+   "text": "La fiesta de despedida que organizaron los vecinos fue muy conmovedora.",
+   "en": "The farewell party the neighbors organized was very moving.",
+   "ko": "이웃들이 열어 준 송별회는 아주 감동적이었어요.",
+   "blank": "conmovedora",
+   "src": "made"
+  },
+  {
+   "text": "El discurso de Lola en la fiesta de aniversario fue muy conmovedor.",
+   "en": "Lola's speech at the anniversary party was very moving.",
+   "ko": "기념 파티에서 한 롤라의 연설은 아주 감동적이었어요.",
+   "blank": "conmovedor",
+   "src": "made"
+  }
+ ],
+ "w|conmover": [
+  {
+   "text": "La carta de despedida del portero logró conmover a Sergio.",
+   "en": "The doorman's farewell letter managed to move Sergio.",
+   "ko": "경비원의 작별 편지가 세르히오의 마음을 울렸어요.",
+   "blank": "conmover",
+   "src": "made"
+  },
+  {
+   "text": "El mensaje de una usuaria ciega consiguió conmover a todo el equipo de Lola.",
+   "en": "A message from a blind user managed to move Lola's whole team.",
+   "ko": "시각장애인 사용자의 메시지가 롤라 팀 모두를 감동시켰어요.",
+   "blank": "conmover",
+   "src": "made"
   }
  ],
  "w|conocer": [
@@ -17307,6 +17467,22 @@
    "en": "We calculated the cost of the materials.",
    "ko": "자재 비용을 계산했어.",
    "blank": "costo"
+  }
+ ],
+ "w|costoso": [
+  {
+   "text": "Arreglar el tejado del edificio va a ser muy costoso para todos los vecinos.",
+   "en": "Fixing the building's roof is going to be very expensive for all the neighbors.",
+   "ko": "건물 지붕을 고치는 건 모든 이웃에게 아주 비싼 일이 될 거예요.",
+   "blank": "costoso",
+   "src": "made"
+  },
+  {
+   "text": "Lola decidió que un servidor tan costoso no tenía sentido para empezar.",
+   "en": "Lola decided that such an expensive server made no sense to start with.",
+   "ko": "롤라는 처음부터 그렇게 비싼 서버는 의미가 없다고 판단했어요.",
+   "blank": "costoso",
+   "src": "made"
   }
  ],
  "w|costumbre": [
@@ -19139,6 +19315,22 @@
    "blank": "Declaró"
   }
  ],
+ "w|decoración": [
+  {
+   "text": "Sergio se encargó de la decoración navideña del portal.",
+   "en": "Sergio took care of the Christmas decorations in the lobby.",
+   "ko": "세르히오가 현관의 크리스마스 장식을 맡았어요.",
+   "blank": "decoración",
+   "src": "made"
+  },
+  {
+   "text": "Lola no gastó casi nada en la decoración de la oficina.",
+   "en": "Lola spent almost nothing on the office decor.",
+   "ko": "롤라는 사무실 인테리어에 거의 돈을 쓰지 않았어요.",
+   "blank": "decoración",
+   "src": "made"
+  }
+ ],
  "w|dedicar": [
   {
    "text": "Quiere dedicar más tiempo a su familia.",
@@ -19982,6 +20174,22 @@
    "en": "Elena showed a lady how to turn off her phone's notifications.",
    "ko": "엘레나는 한 아주머니에게 휴대폰 알림을 끄는 법을 알려 줬어요.",
    "blank": "desactivar",
+   "src": "made"
+  }
+ ],
+ "w|desacuerdo": [
+  {
+   "text": "Hubo un pequeño desacuerdo entre los vecinos sobre el color de la fachada.",
+   "en": "There was a small disagreement among the neighbors about the color of the façade.",
+   "ko": "건물 외벽 색깔을 두고 이웃들 사이에 작은 의견 차이가 있었어요.",
+   "blank": "desacuerdo",
+   "src": "made"
+  },
+  {
+   "text": "Lola y su socio resolvieron su desacuerdo sobre el precio con un café.",
+   "en": "Lola and her partner settled their disagreement about the price over a coffee.",
+   "ko": "롤라와 동업자는 가격을 둘러싼 의견 차이를 커피 한 잔 하며 풀었어요.",
+   "blank": "desacuerdo",
    "src": "made"
   }
  ],
@@ -20932,6 +21140,22 @@
    "en": "Sofía found it despicable that someone threw rubbish out the window.",
    "ko": "소피아는 누가 창밖으로 쓰레기를 버리는 게 한심하다고 생각했어요.",
    "blank": "despreciable",
+   "src": "made"
+  }
+ ],
+ "w|despreciar": [
+  {
+   "text": "En las reuniones, el administrador suele despreciar las ideas de los inquilinos.",
+   "en": "In meetings, the manager tends to dismiss the tenants' ideas.",
+   "ko": "회의에서 관리인은 세입자들의 의견을 무시하곤 해요.",
+   "blank": "despreciar",
+   "src": "made"
+  },
+  {
+   "text": "Algunos inversores despreciaron la idea de Lola al principio.",
+   "en": "Some investors scorned Lola's idea at first.",
+   "ko": "처음에 몇몇 투자자는 롤라의 아이디어를 깔봤어요.",
+   "blank": "despreciaron",
    "src": "made"
   }
  ],
@@ -23009,6 +23233,22 @@
    "blank": "ducha"
   }
  ],
+ "w|ducharse": [
+  {
+   "text": "Cuando se cortó el agua caliente, Sergio tuvo que ducharse con agua fría.",
+   "en": "When the hot water was cut off, Sergio had to shower with cold water.",
+   "ko": "온수가 끊기자 세르히오는 찬물로 샤워해야 했어요.",
+   "blank": "ducharse",
+   "src": "made"
+  },
+  {
+   "text": "Lola viene en bici y suele ducharse en el gimnasio de la oficina.",
+   "en": "Lola comes by bike and usually showers at the office gym.",
+   "ko": "롤라는 자전거로 출근해서 보통 사무실 헬스장에서 샤워해요.",
+   "blank": "ducharse",
+   "src": "made"
+  }
+ ],
  "w|duda": [
   {
    "text": "No tengo ninguna duda.",
@@ -23725,6 +23965,22 @@
    "en": "A key element is missing from this plan.",
    "ko": "이 계획에 핵심 요소가 하나 빠져 있어.",
    "blank": "elemento"
+  }
+ ],
+ "w|elevador": [
+  {
+   "text": "Sergio vive en el séptimo piso, así que usa el elevador todos los días.",
+   "en": "Sergio lives on the seventh floor, so he uses the elevator every day.",
+   "ko": "세르히오는 7층에 살아서 매일 엘리베이터를 타요.",
+   "blank": "elevador",
+   "src": "made"
+  },
+  {
+   "text": "Lola practica su presentación para inversores mientras sube en el elevador.",
+   "en": "Lola practices her pitch for investors while riding up in the elevator.",
+   "ko": "롤라는 엘리베이터를 타고 올라가면서 투자자 발표를 연습해요.",
+   "blank": "elevador",
+   "src": "made"
   }
  ],
  "w|elevar": [
@@ -25305,6 +25561,22 @@
    "src": "made"
   }
  ],
+ "w|envidiar": [
+  {
+   "text": "Sergio siempre ha envidiado la terraza enorme del vecino de enfrente.",
+   "en": "Sergio has always envied the huge terrace of the neighbor across the hall.",
+   "ko": "세르히오는 늘 맞은편 이웃의 큰 테라스를 부러워했어요.",
+   "blank": "envidiado",
+   "src": "made"
+  },
+  {
+   "text": "Lola no envidia a las grandes empresas, prefiere un equipo pequeño.",
+   "en": "Lola doesn't envy big companies; she prefers a small team.",
+   "ko": "롤라는 대기업을 부러워하지 않고 작은 팀을 더 좋아해요.",
+   "blank": "envidia",
+   "src": "made"
+  }
+ ],
  "w|envío": [
   {
    "text": "El envío llegará el martes por la mañana.",
@@ -25621,6 +25893,22 @@
    "en": "I don't want to be a slave to my phone.",
    "ko": "휴대전화의 노예가 되고 싶지 않아.",
    "blank": "esclavo"
+  }
+ ],
+ "w|escoba": [
+  {
+   "text": "Sergio barre el rellano con una escoba que le prestó el portero.",
+   "en": "Sergio sweeps the landing with a broom the doorman lent him.",
+   "ko": "세르히오는 경비원이 빌려준 빗자루로 층계참을 쓸어요.",
+   "blank": "escoba",
+   "src": "made"
+  },
+  {
+   "text": "Después de la fiesta, Lola agarró una escoba y barrió el confeti.",
+   "en": "After the party, Lola grabbed a broom and swept up the confetti.",
+   "ko": "파티가 끝나고 롤라는 빗자루를 들고 색종이 조각을 쓸었어요.",
+   "blank": "escoba",
+   "src": "made"
   }
  ],
  "w|escocés": [
@@ -26742,6 +27030,22 @@
    "en": "The finish was in the park, next to the duck pond, where Marta's family was waiting.",
    "ko": "결승점은 공원 오리 연못 옆이었고 거기서 마르타의 가족이 기다렸어요.",
    "blank": "estanque",
+   "src": "made"
+  }
+ ],
+ "w|estante": [
+  {
+   "text": "Sergio montó un estante nuevo para sus libros de cocina.",
+   "en": "Sergio put up a new shelf for his cookbooks.",
+   "ko": "세르히오는 요리책을 꽂을 새 선반을 달았어요.",
+   "blank": "estante",
+   "src": "made"
+  },
+  {
+   "text": "Encima del escritorio de Lola hay un estante lleno de prototipos.",
+   "en": "Above Lola's desk there is a shelf full of prototypes.",
+   "ko": "롤라의 책상 위에는 시제품이 가득한 선반이 있어요.",
+   "blank": "estante",
    "src": "made"
   }
  ],
@@ -29623,6 +29927,22 @@
    "src": "made"
   }
  ],
+ "w|finca": [
+  {
+   "text": "Antes de vivir en la ciudad, Sergio creció en una finca con vacas.",
+   "en": "Before living in the city, Sergio grew up on a farm with cows.",
+   "ko": "세르히오는 도시에 살기 전에 소가 있는 농장에서 자랐어요.",
+   "blank": "finca",
+   "src": "made"
+  },
+  {
+   "text": "El socio de Lola trabaja a distancia desde una finca en el campo.",
+   "en": "Lola's partner works remotely from a farm in the country.",
+   "ko": "롤라의 동업자는 시골 농장에서 원격으로 일해요.",
+   "blank": "finca",
+   "src": "made"
+  }
+ ],
  "w|fingir": [
   {
    "text": "No voy a fingir que estoy bien.",
@@ -29935,6 +30255,22 @@
    "src": "made"
   }
  ],
+ "w|foco": [
+  {
+   "text": "Se fundió el foco de la escalera y Sergio subió a oscuras.",
+   "en": "The stairway light bulb burned out and Sergio went up in the dark.",
+   "ko": "계단 전구가 나가서 세르히오는 어둠 속에서 올라갔어요.",
+   "blank": "foco",
+   "src": "made"
+  },
+  {
+   "text": "Este mes, el foco del equipo de Lola está en arreglar errores.",
+   "en": "This month, the focus of Lola's team is on fixing bugs.",
+   "ko": "이번 달 롤라 팀의 초점은 버그 수정이에요.",
+   "blank": "foco",
+   "src": "made"
+  }
+ ],
  "w|folleto": [
   {
    "text": "Andrés le dio a la clienta un folleto sobre la alimentación de los gatos.",
@@ -30123,6 +30459,22 @@
    "en": "Don't force the knee after the injury.",
    "ko": "부상 뒤에 무릎을 무리하게 쓰지 마.",
    "blank": "fuerces"
+  }
+ ],
+ "w|fósforo": [
+  {
+   "text": "Durante el apagón, Sergio encendió una vela con un fósforo.",
+   "en": "During the blackout, Sergio lit a candle with a match.",
+   "ko": "정전 때 세르히오는 성냥으로 초에 불을 붙였어요.",
+   "blank": "fósforo",
+   "src": "made"
+  },
+  {
+   "text": "Para la tarta de cumpleaños, Lola encendió las velas con un fósforo.",
+   "en": "For the birthday cake, Lola lit the candles with a match.",
+   "ko": "생일 케이크에 롤라는 성냥으로 촛불을 붙였어요.",
+   "blank": "fósforo",
+   "src": "made"
   }
  ],
  "w|foto": [
@@ -34487,6 +34839,22 @@
    "blank": "ilegal"
   }
  ],
+ "w|iluminación": [
+  {
+   "text": "Los vecinos pidieron mejorar la iluminación del aparcamiento.",
+   "en": "The neighbors asked for better lighting in the car park.",
+   "ko": "이웃들은 주차장 조명을 좋게 해 달라고 요청했어요.",
+   "blank": "iluminación",
+   "src": "made"
+  },
+  {
+   "text": "Con la iluminación nueva, los ojos de Lola ya no se cansan tanto.",
+   "en": "With the new lighting, Lola's eyes don't get as tired anymore.",
+   "ko": "새 조명 덕분에 롤라는 눈이 예전만큼 피곤하지 않아요.",
+   "blank": "iluminación",
+   "src": "made"
+  }
+ ],
  "w|iluminar": [
   {
    "text": "En la casa de Carlos, las ventanas grandes iluminan toda la sala.",
@@ -38597,6 +38965,22 @@
    "src": "made"
   }
  ],
+ "w|lavabo": [
+  {
+   "text": "El lavabo del baño de Sergio gotea toda la noche.",
+   "en": "The washbasin in Sergio's bathroom drips all night.",
+   "ko": "세르히오네 욕실 세면대는 밤새 물이 똑똑 떨어져요.",
+   "blank": "lavabo",
+   "src": "made"
+  },
+  {
+   "text": "Lola dejó una taza sucia en el lavabo y alguien le escribió una nota.",
+   "en": "Lola left a dirty mug in the sink and someone wrote her a note.",
+   "ko": "롤라가 세면대에 더러운 컵을 두고 갔더니 누군가 쪽지를 남겼어요.",
+   "blank": "lavabo",
+   "src": "made"
+  }
+ ],
  "w|lavado": [
   {
    "text": "El lavado de la ropa termina pronto.",
@@ -38723,6 +39107,22 @@
    "en": "I ran out of milk.",
    "ko": "우유가 다 떨어졌어.",
    "blank": "leche"
+  }
+ ],
+ "w|lecho": [
+  {
+   "text": "La abuela del quinto dice que el sofá es su lecho favorito para la siesta.",
+   "en": "The grandmother on the fifth floor says the sofa is her favorite bed for a nap.",
+   "ko": "5층 할머니는 소파가 낮잠 자기에 제일 좋은 잠자리라고 해요.",
+   "blank": "lecho",
+   "src": "made"
+  },
+  {
+   "text": "La noche del lanzamiento, el sofá de la oficina fue el lecho de medio equipo.",
+   "en": "On launch night, the office sofa was the bed for half the team.",
+   "ko": "출시 날 밤에는 사무실 소파가 팀 절반의 잠자리가 됐어요.",
+   "blank": "lecho",
+   "src": "made"
   }
  ],
  "w|lector": [
@@ -39045,6 +39445,22 @@
    "en": "His handwriting is hard to read sometimes.",
    "ko": "그 사람 글씨가 가끔 읽기 어려워.",
    "blank": "letra"
+  }
+ ],
+ "w|letrero": [
+  {
+   "text": "En la puerta del ascensor, Sergio colgó un letrero que decía «No funciona».",
+   "en": "On the elevator door, Sergio hung a sign that said \"Out of order\".",
+   "ko": "세르히오는 승강기 문에 \"고장\"이라고 쓴 안내판을 걸었어요.",
+   "blank": "letrero",
+   "src": "made"
+  },
+  {
+   "text": "En la entrada de la oficina hay un letrero luminoso con el nombre de la empresa.",
+   "en": "At the office entrance there is a lit-up sign with the company's name.",
+   "ko": "사무실 입구에는 회사 이름이 적힌 불빛 간판이 있어요.",
+   "blank": "letrero",
+   "src": "made"
   }
  ],
  "w|levantar": [
@@ -40543,6 +40959,22 @@
    "src": "made"
   }
  ],
+ "w|malinterpretar": [
+  {
+   "text": "Sergio malinterpretó la nota de la vecina y pensó que estaba enfadada.",
+   "en": "Sergio misread the neighbor's note and thought she was angry.",
+   "ko": "세르히오는 이웃의 쪽지를 잘못 이해해서 그녀가 화난 줄 알았어요.",
+   "blank": "malinterpretó",
+   "src": "made"
+  },
+  {
+   "text": "Es fácil malinterpretar un correo corto, así que Lola prefiere hablar en persona.",
+   "en": "It's easy to misread a short email, so Lola prefers to talk in person.",
+   "ko": "짧은 이메일은 오해하기 쉬워서 롤라는 직접 얘기하는 걸 좋아해요.",
+   "blank": "malinterpretar",
+   "src": "made"
+  }
+ ],
  "w|malo": [
   {
    "text": "Ese chico es malo.",
@@ -40774,6 +41206,22 @@
    "en": "The handle of the umbrella they used in the rain scene broke in Paula's hands.",
    "ko": "비 장면에 쓰던 우산 손잡이가 파울라 손에서 부러졌어요.",
    "blank": "mango",
+   "src": "made"
+  }
+ ],
+ "w|manguera": [
+  {
+   "text": "El portero riega las plantas del patio con una manguera vieja.",
+   "en": "The doorman waters the plants in the courtyard with an old hose.",
+   "ko": "경비원은 낡은 호스로 안뜰 화분에 물을 줘요.",
+   "blank": "manguera",
+   "src": "made"
+  },
+  {
+   "text": "Un programador nuevo trajo una manguera para regar las plantas de la oficina.",
+   "en": "A new programmer brought a hose to water the office plants.",
+   "ko": "새 개발자가 사무실 화분에 물을 주려고 호스를 가져왔어요.",
+   "blank": "manguera",
    "src": "made"
   }
  ],
@@ -42071,6 +42519,22 @@
    "en": "He mentioned your name in the meeting.",
    "ko": "회의에서 네 이름을 언급했어.",
    "blank": "Mencionó"
+  }
+ ],
+ "w|mendigo": [
+  {
+   "text": "Cada invierno, Sergio le lleva un café caliente al mendigo de la esquina.",
+   "en": "Every winter, Sergio brings a hot coffee to the beggar on the corner.",
+   "ko": "세르히오는 겨울마다 길모퉁이의 노숙인에게 따뜻한 커피를 가져다줘요.",
+   "blank": "mendigo",
+   "src": "made"
+  },
+  {
+   "text": "En la novela que lee Lola, un mendigo resulta ser un genio de las matemáticas.",
+   "en": "In the novel Lola is reading, a beggar turns out to be a math genius.",
+   "ko": "롤라가 읽는 소설에서는 거지가 수학 천재로 밝혀져요.",
+   "blank": "mendigo",
+   "src": "made"
   }
  ],
  "w|menor": [
@@ -43797,6 +44261,22 @@
    "en": "They work a lot this week.",
    "ko": "이번 주에는 일을 많이 해.",
    "blank": "mucho"
+  }
+ ],
+ "w|mudanza": [
+  {
+   "text": "La mudanza de Sergio duró un día entero por culpa del piano.",
+   "en": "Sergio's move took a whole day because of the piano.",
+   "ko": "피아노 때문에 세르히오의 이사는 하루 종일 걸렸어요.",
+   "blank": "mudanza",
+   "src": "made"
+  },
+  {
+   "text": "La mudanza a la oficina nueva se hizo un viernes por la tarde.",
+   "en": "The move to the new office happened on a Friday afternoon.",
+   "ko": "새 사무실로의 이사는 금요일 오후에 했어요.",
+   "blank": "mudanza",
+   "src": "made"
   }
  ],
  "w|mudar": [
@@ -48283,6 +48763,22 @@
    "blank": "pasar"
   }
  ],
+ "w|pasatiempo": [
+  {
+   "text": "El pasatiempo favorito de Sergio es hacer crucigramas en el balcón.",
+   "en": "Sergio's favorite hobby is doing crosswords on the balcony.",
+   "ko": "세르히오가 제일 좋아하는 취미는 발코니에서 십자말풀이를 하는 거예요.",
+   "blank": "pasatiempo",
+   "src": "made"
+  },
+  {
+   "text": "Lola empezó a programar como pasatiempo cuando era adolescente.",
+   "en": "Lola started programming as a hobby when she was a teenager.",
+   "ko": "롤라는 십 대 때 취미로 프로그래밍을 시작했어요.",
+   "blank": "pasatiempo",
+   "src": "made"
+  }
+ ],
  "w|pascua": [
   {
    "text": "En las pascuas, toda la familia de Carlos se reúne en su casa.",
@@ -48977,6 +49473,22 @@
    "src": "made"
   }
  ],
+ "w|peluche": [
+  {
+   "text": "La hija de los vecinos perdió su oso de peluche en la escalera.",
+   "en": "The neighbors' daughter lost her teddy bear on the stairs.",
+   "ko": "이웃집 딸이 계단에서 곰 인형을 잃어버렸어요.",
+   "blank": "peluche",
+   "src": "made"
+  },
+  {
+   "text": "La mascota de la empresa de Lola es un pulpo de peluche.",
+   "en": "The mascot of Lola's company is a stuffed octopus.",
+   "ko": "롤라 회사의 마스코트는 문어 인형이에요.",
+   "blank": "peluche",
+   "src": "made"
+  }
+ ],
  "w|peludo": [
   {
    "text": "El perro peludo de Diego durmió todas las vacaciones junto a la chimenea.",
@@ -49655,6 +50167,22 @@
    "blank": "pertenece"
   }
  ],
+ "w|pertenencia": [
+  {
+   "text": "Sergio guardó cada pertenencia en cajas con su nombre escrito.",
+   "en": "Sergio packed every belonging into boxes with his name written on them.",
+   "ko": "세르히오는 소지품 하나하나를 이름을 쓴 상자에 담았어요.",
+   "blank": "pertenencia",
+   "src": "made"
+  },
+  {
+   "text": "Lola pidió que nadie dejara ninguna pertenencia personal en las mesas compartidas.",
+   "en": "Lola asked that nobody leave any personal belonging on the shared desks.",
+   "ko": "롤라는 공용 책상에 개인 소지품을 두지 말라고 부탁했어요.",
+   "blank": "pertenencia",
+   "src": "made"
+  }
+ ],
  "w|perturbar": [
   {
    "text": "Nico dice que el ruido de los petardos perturba a los perros.",
@@ -50059,6 +50587,22 @@
    "en": "There's a pile of clothes on the chair.",
    "ko": "의자에 옷더미가 있어.",
    "blank": "pila"
+  }
+ ],
+ "w|pilar": [
+  {
+   "text": "El ingeniero revisó cada pilar del garaje después de la tormenta.",
+   "en": "The engineer checked every pillar in the garage after the storm.",
+   "ko": "기술자가 폭풍 뒤에 차고의 기둥을 하나하나 점검했어요.",
+   "blank": "pilar",
+   "src": "made"
+  },
+  {
+   "text": "Para Lola, la confianza del equipo es el pilar de la empresa.",
+   "en": "For Lola, the team's trust is the pillar of the company.",
+   "ko": "롤라에게 팀의 신뢰는 회사의 기둥이에요.",
+   "blank": "pilar",
+   "src": "made"
   }
  ],
  "w|píldora": [
@@ -51017,6 +51561,22 @@
    "src": "made"
   }
  ],
+ "w|porción": [
+  {
+   "text": "La vecina del tercero le subió a Sergio una porción de tarta de manzana.",
+   "en": "The neighbor from the third floor brought Sergio up a slice of apple pie.",
+   "ko": "3층 이웃이 세르히오에게 사과 파이 한 조각을 가져다줬어요.",
+   "blank": "porción",
+   "src": "made"
+  },
+  {
+   "text": "Para celebrar el lanzamiento, Lola pidió una porción de pizza para cada uno.",
+   "en": "To celebrate the launch, Lola ordered a slice of pizza for everyone.",
+   "ko": "출시를 축하하려고 롤라는 모두에게 피자 한 조각씩을 주문했어요.",
+   "blank": "porción",
+   "src": "made"
+  }
+ ],
  "w|pornografía": [
   {
    "text": "Sergio informó sobre una ley que limita el acceso de los menores a la pornografía en internet.",
@@ -51131,6 +51691,22 @@
    "en": "The building doorman knows everyone.",
    "ko": "건물 수위가 모두를 알아.",
    "blank": "portero"
+  }
+ ],
+ "w|posada": [
+  {
+   "text": "Antes de mudarse, Sergio pasó una semana en una posada del centro.",
+   "en": "Before moving in, Sergio spent a week at an inn in the town center.",
+   "ko": "세르히오는 이사 오기 전에 시내의 작은 여관에서 일주일을 보냈어요.",
+   "blank": "posada",
+   "src": "made"
+  },
+  {
+   "text": "Para el retiro del equipo, Lola reservó una posada en las montañas.",
+   "en": "For the team retreat, Lola booked an inn in the mountains.",
+   "ko": "롤라는 팀 워크숍을 위해 산속 여관을 예약했어요.",
+   "blank": "posada",
+   "src": "made"
   }
  ],
  "w|poseer": [
@@ -53011,6 +53587,22 @@
    "blank": "protegido"
   }
  ],
+ "w|proteína": [
+  {
+   "text": "Después del gimnasio, Sergio se prepara en casa un batido con mucha proteína.",
+   "en": "After the gym, Sergio makes himself a shake with lots of protein at home.",
+   "ko": "세르히오는 운동 후 집에서 단백질이 듬뿍 든 셰이크를 만들어 마셔요.",
+   "blank": "proteína",
+   "src": "made"
+  },
+  {
+   "text": "En la cocina de la oficina siempre hay barritas de proteína para los programadores.",
+   "en": "In the office kitchen there are always protein bars for the programmers.",
+   "ko": "사무실 주방에는 늘 개발자들을 위한 단백질 바가 있어요.",
+   "blank": "proteína",
+   "src": "made"
+  }
+ ],
  "w|protesta": [
   {
    "text": "Hubo una protesta pacífica frente al ayuntamiento.",
@@ -54769,6 +55361,22 @@
    "en": "I met him recently at a fair.",
    "ko": "최근에 박람회에서 그를 만났어.",
    "blank": "recientemente"
+  }
+ ],
+ "w|recipiente": [
+  {
+   "text": "Sergio dejó la sopa para la vecina en un recipiente de cristal.",
+   "en": "Sergio left the soup for the neighbor in a glass container.",
+   "ko": "세르히오는 이웃에게 줄 수프를 유리 용기에 담아 두었어요.",
+   "blank": "recipiente",
+   "src": "made"
+  },
+  {
+   "text": "Lola guarda los tornillos sueltos en un recipiente de plástico.",
+   "en": "Lola keeps loose screws in a plastic container.",
+   "ko": "롤라는 흩어진 나사들을 플라스틱 통에 모아 둬요.",
+   "blank": "recipiente",
+   "src": "made"
   }
  ],
  "w|reclamar": [
@@ -56869,6 +57477,22 @@
    "en": "The portrait captures her soft smile.",
    "ko": "초상화가 그 부드러운 미소를 담아.",
    "blank": "retrato"
+  }
+ ],
+ "w|retrete": [
+  {
+   "text": "El fontanero tardó una hora en arreglar el retrete de Sergio.",
+   "en": "The plumber took an hour to fix Sergio's toilet.",
+   "ko": "배관공이 세르히오네 변기를 고치는 데 한 시간이 걸렸어요.",
+   "blank": "retrete",
+   "src": "made"
+  },
+  {
+   "text": "En la oficina de Lola solo hay un retrete para veinte personas.",
+   "en": "In Lola's office there's only one toilet for twenty people.",
+   "ko": "롤라의 사무실에는 스무 명에 변기가 하나뿐이에요.",
+   "blank": "retrete",
+   "src": "made"
   }
  ],
  "w|retroceder": [
@@ -65233,6 +65857,22 @@
    "en": "He testified before the court without fear.",
    "ko": "그는 두려움 없이 법정에서 진술했어.",
    "blank": "tribunal"
+  }
+ ],
+ "w|trigo": [
+  {
+   "text": "En la panadería de la planta baja venden pan de trigo recién hecho.",
+   "en": "The bakery on the ground floor sells freshly made wheat bread.",
+   "ko": "1층 빵집에서는 갓 구운 밀빵을 팔아요.",
+   "blank": "trigo",
+   "src": "made"
+  },
+  {
+   "text": "La primera clienta de Lola fue una cooperativa de productores de trigo.",
+   "en": "Lola's first client was a cooperative of wheat growers.",
+   "ko": "롤라의 첫 고객은 밀 농가 협동조합이었어요.",
+   "blank": "trigo",
+   "src": "made"
   }
  ],
  "w|tripa": [
