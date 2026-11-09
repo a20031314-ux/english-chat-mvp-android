@@ -301,6 +301,22 @@
    "src": "made"
   }
  ],
+ "w|가려움": [
+  {
+   "text": "밤마다 가려움이 심해진다는 할머니에게 준호는 보습제를 먼저 권했어요.",
+   "en": "Junho first recommended a moisturizer to an old woman whose itching gets worse every night.",
+   "ko": "밤마다 가려움이 심해진다는 할머니에게 준호는 보습제를 먼저 권했어요.",
+   "blank": "가려움이",
+   "src": "made"
+  },
+  {
+   "text": "하은은 새 운동복 때문에 생긴 가려움을 참으며 끝까지 달렸어요.",
+   "en": "Haeun put up with the itching from her new running clothes and ran to the end.",
+   "ko": "하은은 새 운동복 때문에 생긴 가려움을 참으며 끝까지 달렸어요.",
+   "blank": "가려움을",
+   "src": "made"
+  }
+ ],
  "w|가렵다": [
   {
    "text": "모기에 물려서 가려워.",
@@ -1628,6 +1644,22 @@
    "en": "Sohee drove along the coastal road playing emotional songs.",
    "ko": "소희는 감성 가득한 노래를 틀어 놓고 해안 도로를 달렸어요.",
    "blank": "감성",
+   "src": "made"
+  }
+ ],
+ "w|감소하다": [
+  {
+   "text": "마스크를 쓰는 사람이 많아지면서 준호네 약국의 감기약 판매가 감소했어요.",
+   "en": "As more people wore masks, cold medicine sales at Junho's pharmacy fell.",
+   "ko": "마스크를 쓰는 사람이 많아지면서 준호네 약국의 감기약 판매가 감소했어요.",
+   "blank": "감소했어요",
+   "src": "made"
+  },
+  {
+   "text": "꾸준히 달린 뒤로 하은의 체지방이 눈에 띄게 감소했어요.",
+   "en": "Since she started running regularly, Haeun's body fat has noticeably decreased.",
+   "ko": "꾸준히 달린 뒤로 하은의 체지방이 눈에 띄게 감소했어요.",
+   "blank": "감소했어요",
    "src": "made"
   }
  ],
@@ -3273,6 +3305,22 @@
    "en": "Take care of your health these days.",
    "ko": "요즘 건강 좀 챙겨.",
    "blank": "건강"
+  }
+ ],
+ "w|건강검진": [
+  {
+   "text": "건강검진 결과지를 들고 온 손님이 준호에게 수치의 뜻을 물었어요.",
+   "en": "A customer who brought their health checkup results asked Junho what the numbers meant.",
+   "ko": "건강검진 결과지를 들고 온 손님이 준호에게 수치의 뜻을 물었어요.",
+   "blank": "건강검진",
+   "src": "made"
+  },
+  {
+   "text": "하은은 풀코스에 도전하기 전에 건강검진부터 받았어요.",
+   "en": "Before attempting a full marathon, Haeun first got a health checkup.",
+   "ko": "하은은 풀코스에 도전하기 전에 건강검진부터 받았어요.",
+   "blank": "건강검진부터",
+   "src": "made"
   }
  ],
  "w|건강하다": [
@@ -6491,6 +6539,22 @@
    "blank": "고향이"
   }
  ],
+ "w|고혈압": [
+  {
+   "text": "준호는 고혈압 약을 먹는 손님에게 감기약을 고를 때 꼭 말해 달라고 해요.",
+   "en": "Junho asks customers who take blood pressure medication to tell him when they pick out cold medicine.",
+   "ko": "준호는 고혈압 약을 먹는 손님에게 감기약을 고를 때 꼭 말해 달라고 해요.",
+   "blank": "고혈압",
+   "src": "made"
+  },
+  {
+   "text": "하은이 나간 대회는 고혈압이 있는 참가자에게 출발 전에 의료진을 만나라고 안내했어요.",
+   "en": "The race Haeun entered told runners with high blood pressure to see the medical staff before the start.",
+   "ko": "하은이 나간 대회는 고혈압이 있는 참가자에게 출발 전에 의료진을 만나라고 안내했어요.",
+   "blank": "고혈압이",
+   "src": "made"
+  }
+ ],
  "w|곡식": [
   {
    "text": "가을이 되자 태윤의 창고는 곡식으로 가득 찼어요.",
@@ -7411,6 +7475,22 @@
    "src": "made"
   }
  ],
+ "w|공황장애": [
+  {
+   "text": "준호는 공황장애 약을 처방받은 손님에게 술과 함께 먹지 말라고 당부했어요.",
+   "en": "Junho urged a customer prescribed panic disorder medication not to take it with alcohol.",
+   "ko": "준호는 공황장애 약을 처방받은 손님에게 술과 함께 먹지 말라고 당부했어요.",
+   "blank": "공황장애",
+   "src": "made"
+  },
+  {
+   "text": "하은의 회사 동료는 공황장애를 이겨 내려고 함께 마라톤 연습을 시작했어요.",
+   "en": "Haeun's coworker started marathon training with her to overcome panic disorder.",
+   "ko": "하은의 회사 동료는 공황장애를 이겨 내려고 함께 마라톤 연습을 시작했어요.",
+   "blank": "공황장애를",
+   "src": "made"
+  }
+ ],
  "w|공휴일": [
   {
    "text": "다음 주가 공휴일이야.",
@@ -7632,6 +7712,22 @@
    "en": "Jiyoung urgently ordered materials for her daughter's art assignment by dawn delivery.",
    "ko": "지영의 딸이 미술 과제물에 쓸 재료를 급하게 새벽 배송으로 시켰어요.",
    "blank": "과제물에",
+   "src": "made"
+  }
+ ],
+ "w|과체중": [
+  {
+   "text": "의사가 과체중이라고 했다며 손님이 준호에게 체중계를 보여 달라고 했어요.",
+   "en": "Saying the doctor had called them overweight, a customer asked Junho to show them the scales.",
+   "ko": "의사가 과체중이라고 했다며 손님이 준호에게 체중계를 보여 달라고 했어요.",
+   "blank": "과체중이라고",
+   "src": "made"
+  },
+  {
+   "text": "과체중인 사람은 처음부터 오래 뛰기보다 빠르게 걷는 게 낫다고 하은이 말했어요.",
+   "en": "Haeun said overweight people are better off walking fast than running long distances at first.",
+   "ko": "과체중인 사람은 처음부터 오래 뛰기보다 빠르게 걷는 게 낫다고 하은이 말했어요.",
+   "blank": "과체중인",
    "src": "made"
   }
  ],
@@ -17609,6 +17705,22 @@
    "src": "made"
   }
  ],
+ "w|뇌졸중": [
+  {
+   "text": "한쪽 팔에 힘이 빠지면 뇌졸중일 수 있으니 바로 구급차를 부르라고 준호가 말했어요.",
+   "en": "Junho said that if one arm goes weak it could be a stroke, so you should call an ambulance right away.",
+   "ko": "한쪽 팔에 힘이 빠지면 뇌졸중일 수 있으니 바로 구급차를 부르라고 준호가 말했어요.",
+   "blank": "뇌졸중일",
+   "src": "made"
+  },
+  {
+   "text": "하은의 할아버지는 뇌졸중을 겪은 뒤 걷기 대회부터 다시 나가기 시작하셨어요.",
+   "en": "After having a stroke, Haeun's grandfather started over by entering walking events.",
+   "ko": "하은의 할아버지는 뇌졸중을 겪은 뒤 걷기 대회부터 다시 나가기 시작하셨어요.",
+   "blank": "뇌졸중을",
+   "src": "made"
+  }
+ ],
  "w|누구": [
   {
    "text": "누구 전화야?",
@@ -19599,6 +19711,22 @@
    "en": "I change my diet to manage diabetes.",
    "ko": "당뇨를 관리하려고 식단을 바꿔.",
    "blank": "당뇨를"
+  }
+ ],
+ "w|당뇨병": [
+  {
+   "text": "당뇨병이 있는 아버지를 위해 준호는 설탕이 없는 시럽을 따로 주문해 둬요.",
+   "en": "For his father, who has diabetes, Junho orders sugar-free syrup separately.",
+   "ko": "당뇨병이 있는 아버지를 위해 준호는 설탕이 없는 시럽을 따로 주문해 둬요.",
+   "blank": "당뇨병이",
+   "src": "made"
+  },
+  {
+   "text": "하은과 함께 뛰는 아저씨는 당뇨병을 관리하려고 달리기를 시작했대요.",
+   "en": "The man who runs with Haeun says he started running to manage his diabetes.",
+   "ko": "하은과 함께 뛰는 아저씨는 당뇨병을 관리하려고 달리기를 시작했대요.",
+   "blank": "당뇨병을",
+   "src": "made"
   }
  ],
  "w|당당하다": [
@@ -22991,6 +23119,22 @@
    "en": "Where did you put the keys?",
    "ko": "열쇠 어디 뒀어?",
    "blank": "뒀어"
+  }
+ ],
+ "w|두드러기": [
+  {
+   "text": "준호는 새우를 먹고 두드러기가 났다는 손님에게 알레르기 약을 건넸어요.",
+   "en": "Junho handed allergy medicine to a customer who broke out in hives after eating shrimp.",
+   "ko": "준호는 새우를 먹고 두드러기가 났다는 손님에게 알레르기 약을 건넸어요.",
+   "blank": "두드러기가",
+   "src": "made"
+  },
+  {
+   "text": "하은은 땀을 많이 흘리면 팔에 두드러기가 올라와서 달리기 전에 약을 챙겨요.",
+   "en": "Haeun gets hives on her arms when she sweats a lot, so she brings medicine before running.",
+   "ko": "하은은 땀을 많이 흘리면 팔에 두드러기가 올라와서 달리기 전에 약을 챙겨요.",
+   "blank": "두드러기가",
+   "src": "made"
   }
  ],
  "w|두드리다": [
@@ -27942,6 +28086,22 @@
    "en": "The doctor told Seoyeon to get enough sleep to keep up her immunity when the seasons change.",
    "ko": "의사는 서연에게 계절이 바뀔 때 면역을 지키려면 잠을 충분히 자라고 했어요.",
    "blank": "면역을",
+   "src": "made"
+  }
+ ],
+ "w|면역력": [
+  {
+   "text": "환절기가 되면 준호네 약국에는 면역력을 높여 준다는 영양제를 찾는 손님이 많아져요.",
+   "en": "When the seasons change, more customers come to Junho's pharmacy looking for supplements said to boost immunity.",
+   "ko": "환절기가 되면 준호네 약국에는 면역력을 높여 준다는 영양제를 찾는 손님이 많아져요.",
+   "blank": "면역력을",
+   "src": "made"
+  },
+  {
+   "text": "하은은 꾸준히 달린 뒤로 면역력이 좋아져서 감기에 잘 안 걸려요.",
+   "en": "Since running regularly, Haeun's immunity has improved and she rarely catches colds.",
+   "ko": "하은은 꾸준히 달린 뒤로 면역력이 좋아져서 감기에 잘 안 걸려요.",
+   "blank": "면역력이",
    "src": "made"
   }
  ],
@@ -37159,6 +37319,22 @@
    "src": "krdict"
   }
  ],
+ "w|불면증": [
+  {
+   "text": "불면증으로 고생하는 손님에게 준호는 수면제보다 생활 습관부터 바꿔 보자고 했어요.",
+   "en": "Junho suggested a customer struggling with insomnia change their habits before trying sleeping pills.",
+   "ko": "불면증으로 고생하는 손님에게 준호는 수면제보다 생활 습관부터 바꿔 보자고 했어요.",
+   "blank": "불면증으로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 달리기를 시작하고 나서 불면증이 거의 사라졌어요.",
+   "en": "Since Haeun started running, her insomnia has almost disappeared.",
+   "ko": "하은은 달리기를 시작하고 나서 불면증이 거의 사라졌어요.",
+   "blank": "불면증이",
+   "src": "made"
+  }
+ ],
  "w|불법적": [
   {
    "text": "국립공원에서 몰래 야영하는 건 불법적인 행동이에요.",
@@ -37941,6 +38117,22 @@
    "en": "As the problem stemmed from a small mistake, it grew.",
    "ko": "문제는 작은 실수에서 비롯하다 보니 커졌어.",
    "blank": "비롯하다"
+  }
+ ],
+ "w|비만": [
+  {
+   "text": "준호는 다이어트 약을 찾는 손님에게 비만은 약만으로 해결되지 않는다고 말했어요.",
+   "en": "Junho told a customer looking for diet pills that obesity can't be solved with medicine alone.",
+   "ko": "준호는 다이어트 약을 찾는 손님에게 비만은 약만으로 해결되지 않는다고 말했어요.",
+   "blank": "비만은",
+   "src": "made"
+  },
+  {
+   "text": "하은의 친구 지민은 어릴 때 비만으로 고생했지만 지금은 하프 마라톤을 완주해요.",
+   "en": "Haeun's friend Jimin struggled with obesity as a child but now finishes half marathons.",
+   "ko": "하은의 친구 지민은 어릴 때 비만으로 고생했지만 지금은 하프 마라톤을 완주해요.",
+   "blank": "비만으로",
+   "src": "made"
   }
  ],
  "w|비밀": [
@@ -50109,6 +50301,22 @@
    "blank": "심장"
   }
  ],
+ "w|심장병": [
+  {
+   "text": "준호는 심장병 약과 함께 먹으면 안 되는 진통제를 손님에게 알려 줬어요.",
+   "en": "Junho told the customer which painkillers shouldn't be taken with heart disease medication.",
+   "ko": "준호는 심장병 약과 함께 먹으면 안 되는 진통제를 손님에게 알려 줬어요.",
+   "blank": "심장병",
+   "src": "made"
+  },
+  {
+   "text": "하은은 집안에 심장병을 앓은 사람이 많아서 대회 전에 꼭 심전도 검사를 받아요.",
+   "en": "Many people in Haeun's family have had heart disease, so she always gets an ECG before a race.",
+   "ko": "하은은 집안에 심장병을 앓은 사람이 많아서 대회 전에 꼭 심전도 검사를 받아요.",
+   "blank": "심장병을",
+   "src": "made"
+  }
+ ],
  "w|심정": [
   {
    "text": "경민은 누나에게 서운했던 심정을 편지로 썼어요.",
@@ -57051,6 +57259,22 @@
    "blank": "염소에게"
   }
  ],
+ "w|염좌": [
+  {
+   "text": "발목 염좌로 절뚝이며 들어온 학생에게 준호는 압박 붕대를 골라 줬어요.",
+   "en": "Junho picked out a compression bandage for a student who limped in with a sprained ankle.",
+   "ko": "발목 염좌로 절뚝이며 들어온 학생에게 준호는 압박 붕대를 골라 줬어요.",
+   "blank": "염좌로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 지난해 발목 염좌 때문에 마라톤 대회를 포기해야 했어요.",
+   "en": "Last year Haeun had to give up the marathon because of a sprained ankle.",
+   "ko": "하은은 지난해 발목 염좌 때문에 마라톤 대회를 포기해야 했어요.",
+   "blank": "염좌",
+   "src": "made"
+  }
+ ],
  "w|염증": [
   {
    "text": "잇몸에 염증이 생겼어.",
@@ -57198,6 +57422,22 @@
    "en": "The trainer told Jiyoung that eating a balance of nutrients is as important as exercise.",
    "ko": "트레이너는 지영에게 운동만큼 영양소를 골고루 먹는 게 중요하다고 했어요.",
    "blank": "영양소를",
+   "src": "made"
+  }
+ ],
+ "w|영양실조": [
+  {
+   "text": "준호는 혼자 사는 노인들 사이에 영양실조가 늘고 있다는 기사를 읽었어요.",
+   "en": "Junho read an article saying malnutrition is rising among elderly people who live alone.",
+   "ko": "준호는 혼자 사는 노인들 사이에 영양실조가 늘고 있다는 기사를 읽었어요.",
+   "blank": "영양실조가",
+   "src": "made"
+  },
+  {
+   "text": "하은은 무리한 다이어트로 영양실조에 걸린 선수 이야기를 듣고 식단을 다시 짰어요.",
+   "en": "After hearing about a runner who got malnutrition from an extreme diet, Haeun redid her meal plan.",
+   "ko": "하은은 무리한 다이어트로 영양실조에 걸린 선수 이야기를 듣고 식단을 다시 짰어요.",
+   "blank": "영양실조에",
    "src": "made"
   }
  ],
@@ -57512,6 +57752,22 @@
    "en": "Sohee is sensitive to smells, so she doesn't keep air freshener in the car.",
    "ko": "소희는 냄새에 예민해서 차 안에 방향제를 두지 않아요.",
    "blank": "예민해서",
+   "src": "made"
+  }
+ ],
+ "w|예방접종": [
+  {
+   "text": "준호는 독감 예방접종을 맞은 날에는 무리하지 말라고 손님에게 말했어요.",
+   "en": "Junho told the customer not to overdo it on the day of their flu vaccination.",
+   "ko": "준호는 독감 예방접종을 맞은 날에는 무리하지 말라고 손님에게 말했어요.",
+   "blank": "예방접종을",
+   "src": "made"
+  },
+  {
+   "text": "해외 마라톤에 나가기 전에 하은은 필요한 예방접종이 있는지 확인했어요.",
+   "en": "Before running a marathon abroad, Haeun checked whether she needed any vaccinations.",
+   "ko": "해외 마라톤에 나가기 전에 하은은 필요한 예방접종이 있는지 확인했어요.",
+   "blank": "예방접종이",
    "src": "made"
   }
  ],
@@ -61294,6 +61550,22 @@
    "en": "Chatting with her friends is a great comfort to Daeun.",
    "ko": "다은에게 친구들과의 수다는 큰 위안이 돼요.",
    "blank": "위안이",
+   "src": "made"
+  }
+ ],
+ "w|위암": [
+  {
+   "text": "준호는 위암 수술을 받은 손님의 약 봉투에 식사 시간을 크게 적어 줬어요.",
+   "en": "Junho wrote the mealtimes in big letters on the medicine bag of a customer who had stomach cancer surgery.",
+   "ko": "준호는 위암 수술을 받은 손님의 약 봉투에 식사 시간을 크게 적어 줬어요.",
+   "blank": "위암",
+   "src": "made"
+  },
+  {
+   "text": "하은은 위암을 이겨 낸 어머니와 함께 십 킬로미터 코스를 걸었어요.",
+   "en": "Haeun walked the ten-kilometer course with her mother, who beat stomach cancer.",
+   "ko": "하은은 위암을 이겨 낸 어머니와 함께 십 킬로미터 코스를 걸었어요.",
+   "blank": "위암을",
    "src": "made"
   }
  ],
@@ -65967,6 +66239,22 @@
    "src": "made"
   }
  ],
+ "w|입원": [
+  {
+   "text": "준호는 입원을 앞둔 어머니의 약을 하나씩 목록으로 정리했어요.",
+   "en": "Junho made a list, one by one, of the medicines his mother takes before she goes into the hospital.",
+   "ko": "준호는 입원을 앞둔 어머니의 약을 하나씩 목록으로 정리했어요.",
+   "blank": "입원을",
+   "src": "made"
+  },
+  {
+   "text": "결승선에서 쓰러진 참가자가 입원까지 했다는 소식에 하은은 깜짝 놀랐어요.",
+   "en": "Haeun was shocked to hear that a runner who collapsed at the finish line had even been hospitalized.",
+   "ko": "결승선에서 쓰러진 참가자가 입원까지 했다는 소식에 하은은 깜짝 놀랐어요.",
+   "blank": "입원까지",
+   "src": "made"
+  }
+ ],
  "w|입원하다": [
   {
    "text": "감기가 심해 입원했어.",
@@ -69207,6 +69495,22 @@
    "src": "made"
   }
  ],
+ "w|저혈압": [
+  {
+   "text": "아침마다 어지럽다는 손님에게 준호는 저혈압일 수도 있으니 병원에 가 보라고 했어요.",
+   "en": "Junho told a customer who feels dizzy every morning to see a doctor, since it might be low blood pressure.",
+   "ko": "아침마다 어지럽다는 손님에게 준호는 저혈압일 수도 있으니 병원에 가 보라고 했어요.",
+   "blank": "저혈압일",
+   "src": "made"
+  },
+  {
+   "text": "저혈압이 있는 하은은 출발선에서 갑자기 일어서지 않으려고 조심해요.",
+   "en": "Haeun, who has low blood pressure, is careful not to stand up suddenly at the starting line.",
+   "ko": "저혈압이 있는 하은은 출발선에서 갑자기 일어서지 않으려고 조심해요.",
+   "blank": "저혈압이",
+   "src": "made"
+  }
+ ],
  "w|저희": [
   {
    "text": "저희 집에 놀러 오세요.",
@@ -70317,6 +70621,22 @@
    "src": "made"
   }
  ],
+ "w|전환하다": [
+  {
+   "text": "준호는 손님이 오래 줄을 서지 않도록 약국 예약을 온라인으로 전환했어요.",
+   "en": "Junho switched the pharmacy's bookings to online so customers wouldn't have to wait in long lines.",
+   "ko": "준호는 손님이 오래 줄을 서지 않도록 약국 예약을 온라인으로 전환했어요.",
+   "blank": "전환했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 무릎을 아끼려고 도로 달리기에서 트랙 달리기로 전환했어요.",
+   "en": "To protect her knees, Haeun switched from road running to track running.",
+   "ko": "하은은 무릎을 아끼려고 도로 달리기에서 트랙 달리기로 전환했어요.",
+   "blank": "전환했어요",
+   "src": "made"
+  }
+ ],
  "w|절": [
   {
    "text": "산에 절이 있어.",
@@ -70329,6 +70649,22 @@
    "en": "I sat quietly at the temple.",
    "ko": "절에서 조용히 앉아 봤어.",
    "blank": "절에서"
+  }
+ ],
+ "w|절감하다": [
+  {
+   "text": "준호는 복제약으로 바꿔 드려서 할머니의 한 달 약값을 꽤 절감했어요.",
+   "en": "By switching to a generic drug, Junho cut the old woman's monthly medicine costs quite a bit.",
+   "ko": "준호는 복제약으로 바꿔 드려서 할머니의 한 달 약값을 꽤 절감했어요.",
+   "blank": "절감했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 기록이 떨어지는 걸 보고 꾸준한 연습이 얼마나 중요한지 절감했어요.",
+   "en": "Seeing her times drop, Haeun keenly realized how important steady practice is.",
+   "ko": "하은은 기록이 떨어지는 걸 보고 꾸준한 연습이 얼마나 중요한지 절감했어요.",
+   "blank": "절감했어요",
+   "src": "made"
   }
  ],
  "w|절단": [
@@ -70822,6 +71158,22 @@
    "en": "Mikyung separately examined the animals that had come into contact with the cat with an infectious disease.",
    "ko": "미경은 전염병에 걸린 고양이와 접촉한 동물들을 따로 살펴봤어요.",
    "blank": "접촉한",
+   "src": "made"
+  }
+ ],
+ "w|접하다": [
+  {
+   "text": "준호는 약국에서 일한 지 십 년 만에 처음 보는 처방전을 접했어요.",
+   "en": "Ten years into working at the pharmacy, Junho came across a prescription he'd never seen before.",
+   "ko": "준호는 약국에서 일한 지 십 년 만에 처음 보는 처방전을 접했어요.",
+   "blank": "접했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 대학교 동아리에서 처음 마라톤을 접했어요.",
+   "en": "Haeun first encountered marathon running in a university club.",
+   "ko": "하은은 대학교 동아리에서 처음 마라톤을 접했어요.",
+   "blank": "접했어요",
    "src": "made"
   }
  ],
@@ -71411,6 +71763,22 @@
    "src": "made"
   }
  ],
+ "w|정의하다": [
+  {
+   "text": "준호는 실습생에게 부작용을 어떻게 정의하는지 물었어요.",
+   "en": "Junho first asked the trainee how they would define a side effect.",
+   "ko": "준호는 실습생에게 부작용을 어떻게 정의하는지 물었어요.",
+   "blank": "정의하는지",
+   "src": "made"
+  },
+  {
+   "text": "하은은 완주를 끝까지 포기하지 않은 하루라고 정의해요.",
+   "en": "Haeun defines finishing as a day when she didn't give up until the end.",
+   "ko": "하은은 완주를 끝까지 포기하지 않은 하루라고 정의해요.",
+   "blank": "정의해요",
+   "src": "made"
+  }
+ ],
  "w|정작": [
   {
    "text": "민수는 숙제를 열심히 해 놓고 정작 학교에 가져오는 걸 잊었어요.",
@@ -71759,6 +72127,22 @@
    "src": "krdict"
   }
  ],
+ "w|제기하다": [
+  {
+   "text": "준호는 약사 모임에서 약 봉투 글씨가 너무 작다는 문제를 제기했어요.",
+   "en": "At the pharmacists' meeting, Junho raised the issue that the writing on medicine bags is too small.",
+   "ko": "준호는 약사 모임에서 약 봉투 글씨가 너무 작다는 문제를 제기했어요.",
+   "blank": "제기했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은과 참가자들은 급수대가 너무 멀리 떨어져 있다는 문제를 주최 측에 제기했어요.",
+   "en": "Haeun and other runners raised the issue with the organizers that the water stations were too far apart.",
+   "ko": "하은과 참가자들은 급수대가 너무 멀리 떨어져 있다는 문제를 주최 측에 제기했어요.",
+   "blank": "제기했어요",
+   "src": "made"
+  }
+ ],
  "w|제대로": [
   {
    "text": "주소 제대로 봤어?",
@@ -71893,6 +72277,22 @@
    "src": "made"
   }
  ],
+ "w|제시하다": [
+  {
+   "text": "손님이 처방전을 제시하자 준호는 바로 조제를 시작했어요.",
+   "en": "As soon as the customer presented the prescription, Junho started preparing the medicine.",
+   "ko": "손님이 처방전을 제시하자 준호는 바로 조제를 시작했어요.",
+   "blank": "제시하자",
+   "src": "made"
+  },
+  {
+   "text": "하은의 코치는 대회까지 석 달짜리 훈련 계획을 제시했어요.",
+   "en": "Haeun's coach presented a three-month training plan leading up to the race.",
+   "ko": "하은의 코치는 대회까지 석 달짜리 훈련 계획을 제시했어요.",
+   "blank": "제시했어요",
+   "src": "made"
+  }
+ ],
  "w|제안": [
   {
    "text": "좋은 제안을 해 줬어.",
@@ -71935,6 +72335,22 @@
    "en": "I'll suggest changing the meeting time.",
    "ko": "회의 시간을 바꿔 제안할게.",
    "blank": "제안할게"
+  }
+ ],
+ "w|제약하다": [
+  {
+   "text": "준호는 새 규정이 감기약을 한 번에 살 수 있는 양을 제약한다고 손님에게 설명했어요.",
+   "en": "Junho explained to the customer that a new rule restricts how much cold medicine you can buy at once.",
+   "ko": "준호는 새 규정이 감기약을 한 번에 살 수 있는 양을 제약한다고 손님에게 설명했어요.",
+   "blank": "제약한다고",
+   "src": "made"
+  },
+  {
+   "text": "좁은 코스가 선수들의 속도를 제약해서 하은은 좋은 기록을 내기 어려웠어요.",
+   "en": "The narrow course limited the runners' speed, so it was hard for Haeun to set a good time.",
+   "ko": "좁은 코스가 선수들의 속도를 제약해서 하은은 좋은 기록을 내기 어려웠어요.",
+   "blank": "제약해서",
+   "src": "made"
   }
  ],
  "w|제어": [
@@ -72375,6 +72791,22 @@
    "blank": "조상의"
   }
  ],
+ "w|조성하다": [
+  {
+   "text": "준호는 약국 한쪽에 노인들이 앉아 쉬어 갈 수 있는 공간을 조성했어요.",
+   "en": "Junho set up a space in one corner of the pharmacy where elderly people can sit and rest.",
+   "ko": "준호는 약국 한쪽에 노인들이 앉아 쉬어 갈 수 있는 공간을 조성했어요.",
+   "blank": "조성했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은이 사는 도시는 강변에 달리기 좋은 산책로를 조성했어요.",
+   "en": "The city Haeun lives in built a riverside path that's great for running.",
+   "ko": "하은이 사는 도시는 강변에 달리기 좋은 산책로를 조성했어요.",
+   "blank": "조성했어요",
+   "src": "made"
+  }
+ ],
  "w|조수": [
   {
    "text": "바닷가 캠핑장에서 태윤은 조수 시간표를 확인하고 갯벌에 나갔어요.",
@@ -72541,6 +72973,22 @@
    "src": "made"
   }
  ],
+ "w|조정하다": [
+  {
+   "text": "준호는 의사와 통화해서 아이의 약 용량을 조정했어요.",
+   "en": "Junho called the doctor and adjusted the child's dosage.",
+   "ko": "준호는 의사와 통화해서 아이의 약 용량을 조정했어요.",
+   "blank": "조정했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 대회 일주일 전부터 달리는 거리를 조금씩 조정했어요.",
+   "en": "Starting a week before the race, Haeun adjusted her running distance little by little.",
+   "ko": "하은은 대회 일주일 전부터 달리는 거리를 조금씩 조정했어요.",
+   "blank": "조정했어요",
+   "src": "made"
+  }
+ ],
  "w|조종사": [
   {
    "text": "성호는 어릴 때 비행기 조종사가 되는 게 꿈이었어요.",
@@ -72689,6 +73137,22 @@
    "en": "I've always respected my father.",
    "ko": "아버지를 늘 존경해 왔어.",
    "blank": "존경해"
+  }
+ ],
+ "w|존속하다": [
+  {
+   "text": "동네 약국이 존속하려면 단골손님이 있어야 한다고 준호는 믿어요.",
+   "en": "Junho believes a neighborhood pharmacy needs regulars if it's going to survive.",
+   "ko": "동네 약국이 존속하려면 단골손님이 있어야 한다고 준호는 믿어요.",
+   "blank": "존속하려면",
+   "src": "made"
+  },
+  {
+   "text": "하은은 삼십 년 넘게 존속해 온 동네 마라톤 대회에 해마다 나가요.",
+   "en": "Every year Haeun runs in a neighborhood marathon that has lasted over thirty years.",
+   "ko": "하은은 삼십 년 넘게 존속해 온 동네 마라톤 대회에 해마다 나가요.",
+   "blank": "존속해",
+   "src": "made"
   }
  ],
  "w|존재": [
@@ -73287,6 +73751,22 @@
    "text": "이번 신제품 기획은 하은의 팀이 주도하고 있어요.",
    "en": "Haeun's team is leading the planning for this new product.",
    "ko": "이번 신제품 기획은 하은의 팀이 주도하고 있어요.",
+   "blank": "주도하고",
+   "src": "made"
+  }
+ ],
+ "w|주도하다": [
+  {
+   "text": "준호는 동네 약사들과 함께하는 폐의약품 수거 캠페인을 주도했어요.",
+   "en": "Junho led a campaign with local pharmacists to collect unused medicines.",
+   "ko": "준호는 동네 약사들과 함께하는 폐의약품 수거 캠페인을 주도했어요.",
+   "blank": "주도했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 회사 달리기 모임을 주도하고 있어요.",
+   "en": "Haeun is leading the running group at her company.",
+   "ko": "하은은 회사 달리기 모임을 주도하고 있어요.",
    "blank": "주도하고",
    "src": "made"
   }
@@ -74559,6 +75039,22 @@
    "blank": "즐기다"
   }
  ],
+ "w|증가하다": [
+  {
+   "text": "겨울이 되자 준호의 약국을 찾는 감기 환자가 크게 증가했어요.",
+   "en": "When winter came, the number of cold patients visiting Junho's pharmacy rose sharply.",
+   "ko": "겨울이 되자 준호의 약국을 찾는 감기 환자가 크게 증가했어요.",
+   "blank": "증가했어요",
+   "src": "made"
+  },
+  {
+   "text": "마라톤 참가자가 해마다 증가해서 하은은 신청을 서둘렀어요.",
+   "en": "Marathon entries increase every year, so Haeun hurried to sign up.",
+   "ko": "마라톤 참가자가 해마다 증가해서 하은은 신청을 서둘렀어요.",
+   "blank": "증가해서",
+   "src": "made"
+  }
+ ],
  "w|증거": [
   {
    "text": "증거가 충분해?",
@@ -74586,6 +75082,22 @@
    "en": "Among the regulars at Sohee's bakery, quite a few work at securities firms.",
    "ko": "소희의 빵집 단골 중에는 증권 회사에 다니는 손님이 꽤 많아요.",
    "blank": "증권",
+   "src": "made"
+  }
+ ],
+ "w|증대하다": [
+  {
+   "text": "준호는 매출을 증대하기 위해 영양제 코너를 넓혔어요.",
+   "en": "Junho expanded the supplement section to increase sales.",
+   "ko": "준호는 매출을 증대하기 위해 영양제 코너를 넓혔어요.",
+   "blank": "증대하기",
+   "src": "made"
+  },
+  {
+   "text": "하은은 오르막 훈련으로 심폐 지구력을 증대하려고 해요.",
+   "en": "Haeun is trying to build up her cardiovascular endurance with hill training.",
+   "ko": "하은은 오르막 훈련으로 심폐 지구력을 증대하려고 해요.",
+   "blank": "증대하려고",
    "src": "made"
   }
  ],
@@ -75601,6 +76113,22 @@
    "src": "made"
   }
  ],
+ "w|지적되다": [
+  {
+   "text": "약 설명서가 너무 어렵다는 점이 여러 번 지적되자 준호는 그림 설명서를 만들었어요.",
+   "en": "After it was pointed out several times that the medicine leaflets were too hard, Junho made illustrated ones.",
+   "ko": "약 설명서가 너무 어렵다는 점이 여러 번 지적되자 준호는 그림 설명서를 만들었어요.",
+   "blank": "지적되자",
+   "src": "made"
+  },
+  {
+   "text": "팔을 너무 많이 흔든다는 점이 지적된 뒤로 하은은 자세를 고쳤어요.",
+   "en": "After it was pointed out that she swung her arms too much, Haeun fixed her form.",
+   "ko": "팔을 너무 많이 흔든다는 점이 지적된 뒤로 하은은 자세를 고쳤어요.",
+   "blank": "지적된",
+   "src": "made"
+  }
+ ],
  "w|지적하다": [
   {
    "text": "현우의 아내는 창문 틈으로 바람이 샌다고 지적했어요.",
@@ -75854,6 +76382,22 @@
    "en": "Daeun brought in quick croquis drawings of people hurrying through the subway station.",
    "ko": "다은은 사람들이 바삐 오가는 지하철역 풍경을 크로키로 그려 왔어요.",
    "blank": "지하철역",
+   "src": "made"
+  }
+ ],
+ "w|지향하다": [
+  {
+   "text": "준호는 약을 많이 파는 것보다 오래 믿을 수 있는 약국을 지향해요.",
+   "en": "Rather than selling lots of medicine, Junho aims for a pharmacy people can trust for a long time.",
+   "ko": "준호는 약을 많이 파는 것보다 오래 믿을 수 있는 약국을 지향해요.",
+   "blank": "지향해요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 기록보다 즐겁게 오래 달리는 걸 지향해요.",
+   "en": "Rather than records, Haeun aims to run happily for a long time.",
+   "ko": "하은은 기록보다 즐겁게 오래 달리는 걸 지향해요.",
+   "blank": "지향해요",
    "src": "made"
   }
  ],
@@ -76119,6 +76663,22 @@
    "src": "made"
   }
  ],
+ "w|진단서": [
+  {
+   "text": "회사에 낼 진단서는 약국이 아니라 병원에서 받아야 한다고 준호가 설명했어요.",
+   "en": "Junho explained that a medical certificate for work has to come from a hospital, not a pharmacy.",
+   "ko": "회사에 낼 진단서는 약국이 아니라 병원에서 받아야 한다고 준호가 설명했어요.",
+   "blank": "진단서는",
+   "src": "made"
+  },
+  {
+   "text": "하은은 풀코스 참가 신청서에 낼 진단서를 병원에서 받아 왔어요.",
+   "en": "Haeun got a medical certificate from the hospital to submit with her full-marathon entry.",
+   "ko": "하은은 풀코스 참가 신청서에 낼 진단서를 병원에서 받아 왔어요.",
+   "blank": "진단서를",
+   "src": "made"
+  }
+ ],
  "w|진달래": [
   {
    "text": "농장 뒷산에 진달래가 피면 태윤은 꽃잎을 따서 화전을 부쳐요.",
@@ -76373,6 +76933,22 @@
    "en": "Do you really believe that?",
    "ko": "진짜로 그 말 믿어?",
    "blank": "진짜로"
+  }
+ ],
+ "w|진찰": [
+  {
+   "text": "준호는 열이 사흘째 안 내리면 약보다 의사의 진찰이 먼저라고 했어요.",
+   "en": "Junho said that if a fever hasn't gone down in three days, a doctor's examination comes before medicine.",
+   "ko": "준호는 열이 사흘째 안 내리면 약보다 의사의 진찰이 먼저라고 했어요.",
+   "blank": "진찰이",
+   "src": "made"
+  },
+  {
+   "text": "무릎이 계속 아파서 하은은 정형외과에서 진찰을 받았어요.",
+   "en": "Her knee kept hurting, so Haeun got examined at an orthopedic clinic.",
+   "ko": "무릎이 계속 아파서 하은은 정형외과에서 진찰을 받았어요.",
+   "blank": "진찰을",
+   "src": "made"
   }
  ],
  "w|진찰하다": [
@@ -81271,6 +81847,22 @@
    "blank": "치마가"
   }
  ],
+ "w|치매": [
+  {
+   "text": "준호는 치매가 있는 할아버지가 약을 잊지 않도록 요일별 약통을 챙겨 드렸어요.",
+   "en": "Junho gave a pill organizer by weekday to an old man with dementia so he wouldn't forget his medicine.",
+   "ko": "준호는 치매가 있는 할아버지가 약을 잊지 않도록 요일별 약통을 챙겨 드렸어요.",
+   "blank": "치매가",
+   "src": "made"
+  },
+  {
+   "text": "하은은 치매 예방에 달리기가 좋다는 기사를 할머니께 보여 드렸어요.",
+   "en": "Haeun showed her grandmother an article saying running helps prevent dementia.",
+   "ko": "하은은 치매 예방에 달리기가 좋다는 기사를 할머니께 보여 드렸어요.",
+   "blank": "치매",
+   "src": "made"
+  }
+ ],
  "w|치명적": [
   {
    "text": "민수는 물이 새는 게 집에 치명적인 문제라는 걸 처음 알았어요.",
@@ -82671,6 +83263,22 @@
    "src": "made"
   }
  ],
+ "w|타박상": [
+  {
+   "text": "준호는 축구하다 생긴 타박상에는 처음 이틀 동안 얼음찜질을 하라고 설명했어요.",
+   "en": "Junho explained that for a bruise from playing soccer, you should ice it for the first two days.",
+   "ko": "준호는 축구하다 생긴 타박상에는 처음 이틀 동안 얼음찜질을 하라고 설명했어요.",
+   "blank": "타박상에는",
+   "src": "made"
+  },
+  {
+   "text": "결승선 앞에서 넘어진 하은은 무릎에 타박상만 입고 다시 일어났어요.",
+   "en": "Haeun fell just before the finish line, got only a bruise on her knee, and got back up.",
+   "ko": "결승선 앞에서 넘어진 하은은 무릎에 타박상만 입고 다시 일어났어요.",
+   "blank": "타박상만",
+   "src": "made"
+  }
+ ],
  "w|타오르다": [
   {
    "text": "모닥불이 세차게 타올라.",
@@ -82836,6 +83444,22 @@
    "en": "The trainer told Jiyoung not to cut out carbohydrates completely.",
    "ko": "트레이너는 지영에게 탄수화물을 무조건 끊지는 말라고 했어요.",
    "blank": "탄수화물을",
+   "src": "made"
+  }
+ ],
+ "w|탈수": [
+  {
+   "text": "설사가 이틀째라는 아이 엄마에게 준호는 탈수를 막는 전해질 음료를 권했어요.",
+   "en": "Junho recommended an electrolyte drink to prevent dehydration to a mother whose child had had diarrhea for two days.",
+   "ko": "설사가 이틀째라는 아이 엄마에게 준호는 탈수를 막는 전해질 음료를 권했어요.",
+   "blank": "탈수를",
+   "src": "made"
+  },
+  {
+   "text": "더운 날 달리던 하은은 탈수 증상이 와서 급수대 옆에서 한참 쉬었어요.",
+   "en": "Running on a hot day, Haeun showed signs of dehydration and rested by the water station for a while.",
+   "ko": "더운 날 달리던 하은은 탈수 증상이 와서 급수대 옆에서 한참 쉬었어요.",
+   "blank": "탈수",
    "src": "made"
   }
  ],
@@ -85674,6 +86298,22 @@
    "en": "Migyeong sealed off the unused chimney with bricks.",
    "ko": "미경은 쓰지 않는 굴뚝을 벽돌로 막아 폐쇄했어요.",
    "blank": "폐쇄했어요",
+   "src": "made"
+  }
+ ],
+ "w|폐암": [
+  {
+   "text": "준호네 약국 벽에는 담배가 폐암의 가장 큰 원인이라는 포스터가 붙어 있어요.",
+   "en": "On the wall of Junho's pharmacy there's a poster saying smoking is the biggest cause of lung cancer.",
+   "ko": "준호네 약국 벽에는 담배가 폐암의 가장 큰 원인이라는 포스터가 붙어 있어요.",
+   "blank": "폐암의",
+   "src": "made"
+  },
+  {
+   "text": "하은이 참가한 이번 마라톤은 폐암 환자를 돕는 기부금을 모으는 대회예요.",
+   "en": "The marathon Haeun entered this time raises donations to help lung cancer patients.",
+   "ko": "하은이 참가한 이번 마라톤은 폐암 환자를 돕는 기부금을 모으는 대회예요.",
+   "blank": "폐암",
    "src": "made"
   }
  ],

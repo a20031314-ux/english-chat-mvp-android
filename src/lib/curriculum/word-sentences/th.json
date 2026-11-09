@@ -299,6 +299,22 @@
    "blank": "กรรม"
   }
  ],
+ "w|กรรมกร": [
+  {
+   "text": "ชัยใช้เวลาทั้งวันคุยกับกรรมกรที่ไซต์ก่อสร้างเรื่องค่าแรง",
+   "en": "Chai spent the whole day talking with laborers at the construction site about wages.",
+   "ko": "차이는 하루 종일 공사장 노동자들과 임금 이야기를 나눴어요.",
+   "blank": "กรรมกร",
+   "src": "made"
+  },
+  {
+   "text": "กรรมกรหลายคนจากไซต์ก่อสร้างใกล้ๆ มาลงวิ่งรอบสั้น",
+   "en": "Several laborers from a nearby construction site came to run the short loop.",
+   "ko": "근처 공사장 노동자 여러 명이 짧은 코스를 뛰러 왔어요.",
+   "blank": "กรรมกร",
+   "src": "made"
+  }
+ ],
  "w|กรรมการ": [
   {
    "text": "เพื่อน ๆ เลือกกิตติเป็นกรรมการตัดสินการประกวดร้องเพลงในงาน",
@@ -2769,6 +2785,22 @@
    "src": "made"
   }
  ],
+ "w|การฝึกอบรม": [
+  {
+   "text": "นักข่าวใหม่ทุกคนต้องเข้าการฝึกอบรมเรื่องจริยธรรมสื่อ",
+   "en": "Every new reporter has to attend training on media ethics.",
+   "ko": "신입 기자는 모두 언론 윤리 교육을 받아야 해요.",
+   "blank": "การฝึกอบรม",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์เข้าการฝึกอบรมกับโค้ชวิ่งมาสามเดือนก่อนแข่ง",
+   "en": "Somsak trained with a running coach for three months before the race.",
+   "ko": "솜삭은 경기 전에 석 달 동안 달리기 코치에게 훈련을 받았어요.",
+   "blank": "การฝึกอบรม",
+   "src": "made"
+  }
+ ],
  "w|การพนัน": [
   {
    "text": "การพนันทำให้หลายคนเสียทรัพย์",
@@ -3504,6 +3536,22 @@
    "en": "Porn doesn't know how many water stations she has run past.",
    "ko": "폰은 급수대를 몇 군데나 지났는지 몰라요.",
    "blank": "กี่",
+   "src": "made"
+  }
+ ],
+ "w|กีตาร์": [
+  {
+   "text": "เย็นวันศุกร์ช่างภาพในห้องข่าวชอบหยิบกีตาร์มาเล่นให้ทุกคนฟัง",
+   "en": "On Friday evenings the newsroom photographer likes to pick up a guitar and play for everyone.",
+   "ko": "금요일 저녁이면 보도국 사진기자가 기타를 꺼내 모두에게 연주해 줘요.",
+   "blank": "กีตาร์",
+   "src": "made"
+  },
+  {
+   "text": "วงดนตรีเล่นกีตาร์ให้กำลังใจนักวิ่งตรงทางโค้ง",
+   "en": "A band played guitar to cheer on the runners at the bend.",
+   "ko": "밴드가 굽은 길에서 기타를 치며 주자들을 응원했어요.",
+   "blank": "กีตาร์",
    "src": "made"
   }
  ],
@@ -7715,6 +7763,22 @@
    "blank": "คนขับ"
   }
  ],
+ "w|คนขับรถ": [
+  {
+   "text": "คนขับรถของสถานีพาชัยไปถึงที่เกิดเหตุก่อนสำนักอื่น",
+   "en": "The station's driver got Chai to the scene before the other outlets.",
+   "ko": "방송국 운전기사가 차이를 다른 언론사보다 먼저 현장에 데려다줬어요.",
+   "blank": "คนขับรถ",
+   "src": "made"
+  },
+  {
+   "text": "คนขับรถรถรับส่งพานักวิ่งไปจุดปล่อยตัวตั้งแต่ตีสาม",
+   "en": "The shuttle driver took runners to the start from three a.m.",
+   "ko": "셔틀버스 기사가 새벽 세 시부터 주자들을 출발점으로 태워 날랐어요.",
+   "blank": "คนขับรถ",
+   "src": "made"
+  }
+ ],
  "w|คนไข้": [
   {
    "text": "คนไข้รออยู่หน้าห้อง",
@@ -11807,6 +11871,22 @@
    "src": "made"
   }
  ],
+ "w|ค้ำประกัน": [
+  {
+   "text": "ชัยสืบพบว่านักการเมืองคนนั้นเคยค้ำประกันเงินกู้ให้บริษัทญาติ",
+   "en": "Chai found out that the politician had guaranteed a loan for a relative's company.",
+   "ko": "차이는 그 정치인이 친척 회사의 대출 보증을 섰다는 걸 알아냈어요.",
+   "blank": "ค้ำประกัน",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ต้องให้พี่ชายช่วยค้ำประกันตอนกู้เงินไปซื้อนาฬิกาวิ่ง",
+   "en": "Somsak needed his older brother to act as guarantor when he borrowed money to buy a running watch.",
+   "ko": "솜삭은 러닝 시계를 사려고 돈을 빌릴 때 형에게 보증을 서 달라고 해야 했어요.",
+   "blank": "ค้ำประกัน",
+   "src": "made"
+  }
+ ],
  "w|คำปรึกษา": [
   {
    "text": "ชัยให้คำปรึกษาเรื่องการขอใบอนุญาตก่อสร้างแก่ชาวบ้าน",
@@ -14057,6 +14137,22 @@
    "blank": "เงินบำนาญ"
   }
  ],
+ "w|เงินเฟ้อ": [
+  {
+   "text": "ชัยอธิบายในรายการว่าเงินเฟ้อทำให้ข้าวของแพงขึ้นอย่างไร",
+   "en": "On the program, Chai explained how inflation makes things more expensive.",
+   "ko": "차이는 방송에서 물가 상승이 어떻게 물건값을 올리는지 설명했어요.",
+   "blank": "เงินเฟ้อ",
+   "src": "made"
+  },
+  {
+   "text": "ค่าสมัครวิ่งปีนี้แพงขึ้นเพราะเงินเฟ้อ",
+   "en": "This year's race entry fee went up because of inflation.",
+   "ko": "올해는 물가 상승 때문에 참가비가 올랐어요.",
+   "blank": "เงินเฟ้อ",
+   "src": "made"
+  }
+ ],
  "w|เงินสด": [
   {
    "text": "ร้านนี้รับเฉพาะเงินสด",
@@ -16020,6 +16116,22 @@
    "en": "Chan punched a hole in the corner of the paper to thread a string and hang up her work.",
    "ko": "짠은 작품을 걸려고 종이 모서리에 구멍을 뚫어 끈을 꿰었어요.",
    "blank": "เจาะ",
+   "src": "made"
+  }
+ ],
+ "w|เจาะจง": [
+  {
+   "text": "บรรณาธิการขอให้ชัยเจาะจงชื่อหมู่บ้านในข่าวให้ชัดกว่านี้",
+   "en": "The editor asked Chai to specify the village's name more clearly in the story.",
+   "ko": "편집장은 차이에게 기사 속 마을 이름을 더 분명히 짚어 달라고 했어요.",
+   "blank": "เจาะจง",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดงานไม่ได้เจาะจงว่าต้องใส่เสื้อสีอะไรมาวิ่ง",
+   "en": "The organizers didn't specify what color shirt to wear for the run.",
+   "ko": "주최 측은 무슨 색 옷을 입고 뛰어야 하는지 정하지 않았어요.",
+   "blank": "เจาะจง",
    "src": "made"
   }
  ],
@@ -20829,6 +20941,22 @@
    "blank": "ดู"
   }
  ],
+ "w|ดูงาน": [
+  {
+   "text": "ชัยได้ไปดูงานที่สำนักข่าวต่างประเทศเป็นเวลาหนึ่งเดือน",
+   "en": "Chai went on a month-long study visit to a foreign news agency.",
+   "ko": "차이는 한 달 동안 외국 통신사에 견학을 다녀왔어요.",
+   "blank": "ดูงาน",
+   "src": "made"
+  },
+  {
+   "text": "ทีมจัดงานเคยไปดูงานมาราธอนใหญ่ในต่างประเทศมาก่อน",
+   "en": "The organizing team had gone to observe a big marathon abroad before.",
+   "ko": "주최 팀은 전에 해외의 큰 마라톤을 견학한 적이 있어요.",
+   "blank": "ดูงาน",
+   "src": "made"
+  }
+ ],
  "w|ดูด": [
   {
    "text": "ระหว่างพักศาล อนันต์นั่งดูดกาแฟเย็นอยู่ที่ม้านั่งหน้าอาคาร",
@@ -22318,6 +22446,22 @@
    "en": "Every warranty card from Chan's shop is stamped with the shop's seal.",
    "ko": "짠 가게의 보증서에는 모두 가게 도장이 찍혀 있어요.",
    "blank": "ตรา",
+   "src": "made"
+  }
+ ],
+ "w|ตราสาร": [
+  {
+   "text": "ชัยต้องอ่านเอกสารเรื่องตราสารหนี้หลายรอบกว่าจะเข้าใจ",
+   "en": "Chai had to read the documents on debt instruments several times before he understood.",
+   "ko": "차이는 채무 증권 자료를 여러 번 읽고 나서야 이해했어요.",
+   "blank": "ตราสาร",
+   "src": "made"
+  },
+  {
+   "text": "ตอนซ้อมวิ่งสมศักดิ์ชอบฟังพอดแคสต์เรื่องการลงทุนในตราสารหนี้",
+   "en": "While training, Somsak likes listening to podcasts about investing in debt instruments.",
+   "ko": "솜삭은 달리기 연습할 때 채권 투자 팟캐스트 듣는 걸 좋아해요.",
+   "blank": "ตราสาร",
    "src": "made"
   }
  ],
@@ -25565,6 +25709,22 @@
    "src": "made"
   }
  ],
+ "w|ถ่ายภาพ": [
+  {
+   "text": "ช่างภาพของชัยรีบออกไปถ่ายภาพน้ำท่วมกลางเมือง",
+   "en": "Chai's photographer hurried out to take pictures of the flooding downtown.",
+   "ko": "차이의 사진기자는 시내 홍수를 찍으러 서둘러 나갔어요.",
+   "blank": "ถ่ายภาพ",
+   "src": "made"
+  },
+  {
+   "text": "ช่างภาพยืนรอถ่ายภาพนักวิ่งที่เส้นชัย",
+   "en": "Photographers stood waiting at the finish line to take pictures of the runners.",
+   "ko": "사진사들이 결승선에서 주자들을 찍으려고 기다렸어요.",
+   "blank": "ถ่ายภาพ",
+   "src": "made"
+  }
+ ],
  "w|ถ่ายรูป": [
   {
    "text": "มาถ่ายรูปด้วยกันที่ชายหาด",
@@ -28225,6 +28385,22 @@
    "src": "made"
   }
  ],
+ "w|ที่ทำงาน": [
+  {
+   "text": "ชัยมักกลับถึงบ้านดึกเพราะที่ทำงานอยู่ไกล",
+   "en": "Chai often gets home late because his workplace is far away.",
+   "ko": "차이는 직장이 멀어서 늦게 집에 오는 일이 많아요.",
+   "blank": "ที่ทำงาน",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนจากที่ทำงานของสมศักดิ์มายืนเชียร์ตรงจุดให้น้ำ",
+   "en": "Friends from Somsak's workplace came to cheer at the water station.",
+   "ko": "솜삭의 직장 동료들이 급수대에 와서 응원했어요.",
+   "blank": "ที่ทำงาน",
+   "src": "made"
+  }
+ ],
  "w|ที่นอน": [
   {
    "text": "ที่นอนนี้แข็งเกินไป",
@@ -29735,6 +29911,22 @@
    "en": "The bank is closed on Saturday.",
    "ko": "은행은 토요일에 쉬어.",
    "blank": "ธนาคาร"
+  }
+ ],
+ "w|ธนาคารพาณิชย์": [
+  {
+   "text": "ชัยรายงานว่าธนาคารพาณิชย์หลายแห่งขึ้นดอกเบี้ยเงินกู้",
+   "en": "Chai reported that several commercial banks raised their lending rates.",
+   "ko": "차이는 여러 시중은행이 대출 금리를 올렸다고 보도했어요.",
+   "blank": "ธนาคารพาณิชย์",
+   "src": "made"
+  },
+  {
+   "text": "ธนาคารพาณิชย์แห่งหนึ่งเป็นผู้สนับสนุนหลักของงานวิ่งนี้",
+   "en": "A commercial bank is the main sponsor of this running event.",
+   "ko": "한 시중은행이 이 달리기 대회의 주 후원사예요.",
+   "blank": "ธนาคารพาณิชย์",
+   "src": "made"
   }
  ],
  "w|ธนู": [
@@ -32155,6 +32347,22 @@
    "src": "made"
   }
  ],
+ "w|นิติศาสตร์": [
+  {
+   "text": "ชัยเรียนจบนิติศาสตร์ก่อนจะผันตัวมาเป็นนักข่าว",
+   "en": "Chai graduated in law before switching to become a reporter.",
+   "ko": "차이는 법학을 전공하고 나서 기자로 진로를 바꿨어요.",
+   "blank": "นิติศาสตร์",
+   "src": "made"
+  },
+  {
+   "text": "นักศึกษานิติศาสตร์กลุ่มหนึ่งมาเป็นอาสาสมัครแจกน้ำ",
+   "en": "A group of law students came to volunteer handing out water.",
+   "ko": "법학과 학생 한 무리가 물을 나눠 주는 자원봉사를 하러 왔어요.",
+   "blank": "นิติศาสตร์",
+   "src": "made"
+  }
+ ],
  "w|นิทรรศการ": [
   {
    "text": "ชั้นล่างของศาลากลางมีนิทรรศการภาพถ่ายเมืองในอดีต",
@@ -33141,6 +33349,22 @@
    "src": "made"
   }
  ],
+ "w|บรรณาธิการ": [
+  {
+   "text": "บรรณาธิการขอให้ชัยเจาะจงชื่อหมู่บ้านในข่าวให้ชัดกว่านี้",
+   "en": "The editor asked Chai to specify the village's name more clearly in the story.",
+   "ko": "편집장은 차이에게 기사 속 마을 이름을 더 분명히 짚어 달라고 했어요.",
+   "blank": "บรรณาธิการ",
+   "src": "made"
+  },
+  {
+   "text": "บรรณาธิการนิตยสารวิ่งมาสัมภาษณ์สมศักดิ์หลังเข้าเส้นชัย",
+   "en": "The editor of a running magazine came to interview Somsak after he finished.",
+   "ko": "러닝 잡지 편집장이 결승선을 통과한 솜삭을 인터뷰하러 왔어요.",
+   "blank": "บรรณาธิการ",
+   "src": "made"
+  }
+ ],
  "w|บรรดา": [
   {
    "text": "บรรดาแม่ค้าที่สถานีวิ่งมาขายของที่หน้าต่างรถไฟ",
@@ -33575,6 +33799,22 @@
    "blank": "บ่อย"
   }
  ],
+ "w|บอร์ด": [
+  {
+   "text": "บอร์ดของสถานีประชุมกันเพื่อเลือกผู้อำนวยการคนใหม่",
+   "en": "The station's board met to choose a new director.",
+   "ko": "방송국 이사회가 새 국장을 뽑으려고 모였어요.",
+   "blank": "บอร์ด",
+   "src": "made"
+  },
+  {
+   "text": "บอร์ดหน้าเต็นท์ประกาศผลแสดงชื่อนักวิ่งที่เข้าเส้นชัยแล้ว",
+   "en": "The board in front of the results tent shows the names of runners who have finished.",
+   "ko": "결과 텐트 앞 게시판에 완주한 주자들의 이름이 나와요.",
+   "blank": "บอร์ด",
+   "src": "made"
+  }
+ ],
  "w|บะหมี่": [
   {
    "text": "ต้มบะหมี่กึ่งสำเร็จรูปเร็วดี",
@@ -33927,6 +34167,22 @@
    "en": "Maybe we should rest first.",
    "ko": "어쩌면 먼저 쉬는 게 낫겠어.",
    "blank": "บางที"
+  }
+ ],
+ "w|บางสิ่ง": [
+  {
+   "text": "ชัยรู้สึกว่าข่าวนี้ยังขาดบางสิ่งที่ผู้อ่านอยากรู้",
+   "en": "Chai felt this story was still missing something readers wanted to know.",
+   "ko": "차이는 이 기사에 독자가 알고 싶어 하는 무언가가 아직 빠졌다고 느꼈어요.",
+   "blank": "บางสิ่ง",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์รู้สึกว่าลืมบางสิ่งไว้ที่บ้านแต่นึกไม่ออก",
+   "en": "Somsak felt he had left something at home but couldn't remember what.",
+   "ko": "솜삭은 집에 뭔가를 두고 온 것 같았지만 생각이 안 났어요.",
+   "blank": "บางสิ่ง",
+   "src": "made"
   }
  ],
  "w|บางอย่าง": [
@@ -34786,6 +35042,22 @@
    "en": "The train staff handed out forms for passengers to comment on the service.",
    "ko": "열차 승무원이 승객들에게 서비스 의견을 적는 양식을 나눠 줬어요.",
    "blank": "แบบฟอร์ม",
+   "src": "made"
+  }
+ ],
+ "w|แบบสอบถาม": [
+  {
+   "text": "ทีมข่าวส่งแบบสอบถามให้ผู้อ่านช่วยให้คะแนนหน้าเว็บใหม่",
+   "en": "The news team sent readers a questionnaire to rate the new website.",
+   "ko": "보도팀은 독자들에게 새 웹사이트를 평가해 달라는 설문지를 보냈어요.",
+   "blank": "แบบสอบถาม",
+   "src": "made"
+  },
+  {
+   "text": "หลังวิ่งจบสมศักดิ์กรอกแบบสอบถามความพึงพอใจของงาน",
+   "en": "After the run, Somsak filled out the event's satisfaction questionnaire.",
+   "ko": "달리기를 마치고 솜삭은 행사 만족도 설문지를 작성했어요.",
+   "blank": "แบบสอบถาม",
    "src": "made"
   }
  ],
@@ -35831,6 +36103,22 @@
    "en": "This movie is very impressive.",
    "ko": "이 영화는 정말 인상적이야.",
    "blank": "ประทับใจ"
+  }
+ ],
+ "w|ประทาน": [
+  {
+   "text": "ผู้ประกาศข่าวกล่าวขอประทานโทษผู้ชมที่ภาพขัดข้องไปครู่หนึ่ง",
+   "en": "The news anchor apologized to viewers for the picture cutting out for a moment.",
+   "ko": "뉴스 앵커는 화면이 잠깐 끊긴 것에 대해 시청자에게 사과했어요.",
+   "blank": "ประทาน",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ชนไหล่ผู้หญิงคนหนึ่งตอนออกตัวจึงรีบขอประทานโทษ",
+   "en": "Somsak bumped a woman's shoulder at the start and quickly begged her pardon.",
+   "ko": "솜삭은 출발할 때 한 여자의 어깨를 부딪쳐서 얼른 사과했어요.",
+   "blank": "ประทาน",
+   "src": "made"
   }
  ],
  "w|ประทานโทษ": [
@@ -37019,6 +37307,22 @@
    "blank": "ปลูก"
   }
  ],
+ "w|ปลูกฝัง": [
+  {
+   "text": "ชัยเชื่อว่านักข่าวต้องปลูกฝังนิสัยตรวจข้อเท็จจริงตั้งแต่วันแรก",
+   "en": "Chai believes reporters must instill the habit of checking facts from day one.",
+   "ko": "차이는 기자가 첫날부터 사실 확인 습관을 길러야 한다고 믿어요.",
+   "blank": "ปลูกฝัง",
+   "src": "made"
+  },
+  {
+   "text": "พ่อของสมศักดิ์ปลูกฝังให้ลูกรักการวิ่งตั้งแต่ยังเด็ก",
+   "en": "Somsak's father instilled a love of running in him from childhood.",
+   "ko": "솜삭의 아버지는 어릴 때부터 아들에게 달리기를 좋아하는 마음을 심어 줬어요.",
+   "blank": "ปลูกฝัง",
+   "src": "made"
+  }
+ ],
  "w|ปวด": [
   {
    "text": "ปวดหลังหลังนั่งนาน",
@@ -38149,6 +38453,22 @@
    "en": "Can I exchange this?",
    "ko": "이거 교환돼?",
    "blank": "เปลี่ยน"
+  }
+ ],
+ "w|เปลี่ยนใจ": [
+  {
+   "text": "แหล่งข่าวเปลี่ยนใจไม่ยอมให้สัมภาษณ์ในนาทีสุดท้าย",
+   "en": "The source changed their mind and refused the interview at the last minute.",
+   "ko": "취재원이 마지막 순간에 마음을 바꿔 인터뷰를 거절했어요.",
+   "blank": "เปลี่ยนใจ",
+   "src": "made"
+  },
+  {
+   "text": "เมื่อคืนสมศักดิ์เกือบเปลี่ยนใจไม่ลงแข่งเพราะฝนตกหนัก",
+   "en": "Last night Somsak almost changed his mind about racing because of the heavy rain.",
+   "ko": "어젯밤 솜삭은 비가 많이 와서 경기에 안 나갈 뻔했어요.",
+   "blank": "เปลี่ยนใจ",
+   "src": "made"
   }
  ],
  "w|เปลี่ยนแปลง": [
@@ -39515,6 +39835,22 @@
    "src": "made"
   }
  ],
+ "w|ผูกขาด": [
+  {
+   "text": "ข่าวสืบสวนของชัยเปิดโปงบริษัทที่ผูกขาดการขายปุ๋ยในจังหวัด",
+   "en": "Chai's investigative story exposed a company that monopolized fertilizer sales in the province.",
+   "ko": "차이의 탐사 보도는 도에서 비료 판매를 독점한 회사를 폭로했어요.",
+   "blank": "ผูกขาด",
+   "src": "made"
+  },
+  {
+   "text": "ร้านค้าแถวเส้นชัยบ่นว่าบริษัทเดียวผูกขาดการขายน้ำในงาน",
+   "en": "Shops near the finish complained that one company had a monopoly on selling water at the event.",
+   "ko": "결승선 근처 가게들은 한 회사가 행사장 물 판매를 독점했다고 불평했어요.",
+   "blank": "ผูกขาด",
+   "src": "made"
+  }
+ ],
  "w|ผูกพัน": [
   {
    "text": "แม้จะทะเลาะกันบ่อย เอกก็ผูกพันกับน้องสาวมากกว่าใคร",
@@ -39819,6 +40155,22 @@
    "src": "made"
   }
  ],
+ "w|ผู้ถือหุ้น": [
+  {
+   "text": "ชัยกำลังเขียนข่าวการประชุมผู้ถือหุ้นของบริษัทพลังงาน",
+   "en": "Chai is writing a story about the energy company's shareholders' meeting.",
+   "ko": "차이는 에너지 회사 주주총회 기사를 쓰고 있어요.",
+   "blank": "ผู้ถือหุ้น",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ถือหุ้นของบริษัทผู้สนับสนุนหลายคนลงวิ่งด้วย",
+   "en": "Several shareholders of the sponsoring company ran too.",
+   "ko": "후원사의 주주 여러 명도 함께 뛰었어요.",
+   "blank": "ผู้ถือหุ้น",
+   "src": "made"
+  }
+ ],
  "w|ผู้แทน": [
   {
    "text": "ผู้แทนชาวบ้านมายื่นหนังสือขอให้ซ่อมสะพานที่ศาลากลาง",
@@ -39993,6 +40345,22 @@
    "src": "made"
   }
  ],
+ "w|ผู้ประกาศข่าว": [
+  {
+   "text": "ผู้ประกาศข่าวกล่าวขอประทานโทษผู้ชมที่ภาพขัดข้องไปครู่หนึ่ง",
+   "en": "The news anchor apologized to viewers for the picture cutting out for a moment.",
+   "ko": "뉴스 앵커는 화면이 잠깐 끊긴 것에 대해 시청자에게 사과했어요.",
+   "blank": "ผู้ประกาศข่าว",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ประกาศข่าวช่องท้องถิ่นมาวิ่งด้วยและทักทายแฟนรายการตลอดทาง",
+   "en": "A local channel news anchor ran too and greeted fans of the show all along the way.",
+   "ko": "지역 방송 뉴스 앵커도 함께 뛰며 내내 시청자들에게 인사했어요.",
+   "blank": "ผู้ประกาศข่าว",
+   "src": "made"
+  }
+ ],
  "w|ผู้ป่วย": [
   {
    "text": "ผู้ป่วยต้องพักผ่อนมากๆ",
@@ -40082,6 +40450,22 @@
    "en": "One runner in Porn's group is a cancer survivor.",
    "ko": "폰의 그룹에 있는 한 러너는 암 생존자예요.",
    "blank": "ผู้รอดชีวิต",
+   "src": "made"
+  }
+ ],
+ "w|ผู้รับผิดชอบ": [
+  {
+   "text": "ชัยโทรหาผู้รับผิดชอบโครงการเพื่อขอข้อมูลเพิ่ม",
+   "en": "Chai called the person in charge of the project to ask for more information.",
+   "ko": "차이는 더 많은 정보를 얻으려고 사업 담당자에게 전화했어요.",
+   "blank": "ผู้รับผิดชอบ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ถามผู้รับผิดชอบจุดรับของว่ากระเป๋าหายไปไหน",
+   "en": "Somsak asked the person in charge of the bag check where his bag had gone.",
+   "ko": "솜삭은 짐 보관소 담당자에게 가방이 어디 갔는지 물었어요.",
+   "blank": "ผู้รับผิดชอบ",
    "src": "made"
   }
  ],
@@ -40558,6 +40942,22 @@
    "en": "Wanna recalled the beach trip plan she had made with Malee back in high school.",
    "ko": "완나는 고등학교 때 말리와 세웠던 바다 여행 계획을 이야기했어요.",
    "blank": "แผนการ",
+   "src": "made"
+  }
+ ],
+ "w|แผนงาน": [
+  {
+   "text": "หัวหน้าข่าวแจกแผนงานของสัปดาห์หน้าให้ทุกคนตอนเช้า",
+   "en": "The news chief handed out next week's work plan to everyone in the morning.",
+   "ko": "보도 팀장이 아침에 다음 주 업무 계획을 모두에게 나눠 줬어요.",
+   "blank": "แผนงาน",
+   "src": "made"
+  },
+  {
+   "text": "โค้ชเขียนแผนงานการซ้อมให้สมศักดิ์ทีละสัปดาห์",
+   "en": "The coach wrote out Somsak's training plan week by week.",
+   "ko": "코치는 솜삭의 훈련 계획을 한 주씩 짜 줬어요.",
+   "blank": "แผนงาน",
    "src": "made"
   }
  ],
@@ -44671,6 +45071,22 @@
    "blank": "ภาษี"
   }
  ],
+ "w|ภาษีเงินได้": [
+  {
+   "text": "ผู้ฟังโทรมาถามชัยว่าต้องยื่นภาษีเงินได้ภายในวันไหน",
+   "en": "A listener called to ask Chai by what date they had to file their income tax.",
+   "ko": "청취자가 차이에게 소득세를 언제까지 신고해야 하는지 전화로 물었어요.",
+   "blank": "ภาษีเงินได้",
+   "src": "made"
+  },
+  {
+   "text": "ใบเสร็จค่าสมัครวิ่งการกุศลใช้ลดหย่อนภาษีเงินได้ได้",
+   "en": "The receipt for the charity run entry fee can be used to reduce income tax.",
+   "ko": "자선 달리기 참가비 영수증으로 소득세 공제를 받을 수 있어요.",
+   "blank": "ภาษีเงินได้",
+   "src": "made"
+  }
+ ],
  "w|ภูเขา": [
   {
    "text": "ปีนภูเขากันไหม",
@@ -45935,6 +46351,22 @@
    "blank": "มิถุนายน"
   }
  ],
+ "w|มิน่า": [
+  {
+   "text": "พอเห็นชัยกินกาแฟแก้วที่สาม เพื่อนร่วมงานก็พูดว่ามิน่าถึงนอนไม่หลับ",
+   "en": "Seeing Chai on his third coffee, a colleague said no wonder he can't sleep.",
+   "ko": "차이가 세 번째 커피를 마시는 걸 보고 동료가 어쩐지 잠을 못 자더라 했어요.",
+   "blank": "มิน่า",
+   "src": "made"
+  },
+  {
+   "text": "เห็นรองเท้าคู่ใหม่ของสมศักดิ์แล้วเพื่อนก็ร้องว่ามิน่าวิ่งเร็วขึ้น",
+   "en": "Seeing Somsak's new pair of shoes, his friend exclaimed no wonder he'd got faster.",
+   "ko": "솜삭의 새 운동화를 보고 친구가 어쩐지 빨라졌더라고 외쳤어요.",
+   "blank": "มิน่า",
+   "src": "made"
+  }
+ ],
  "w|มี": [
   {
    "text": "มีคนมา",
@@ -45961,6 +46393,22 @@
    "en": "I hope you'll be happy.",
    "ko": "행복하길 바라.",
    "blank": "มีความสุข"
+  }
+ ],
+ "w|มีความหมาย": [
+  {
+   "text": "จดหมายจากผู้ชมฉบับนั้นมีความหมายกับทีมข่าวมาก",
+   "en": "That letter from a viewer meant a lot to the news team.",
+   "ko": "시청자가 보낸 그 편지는 보도팀에게 큰 의미가 있었어요.",
+   "blank": "มีความหมาย",
+   "src": "made"
+  },
+  {
+   "text": "มาราธอนครั้งนี้มีความหมายกับสมศักดิ์เพราะวิ่งเพื่อแม่ที่ป่วย",
+   "en": "This marathon means a lot to Somsak because he is running for his sick mother.",
+   "ko": "이번 마라톤은 아픈 어머니를 위해 뛰는 거라 솜삭에게 의미가 커요.",
+   "blank": "มีความหมาย",
+   "src": "made"
   }
  ],
  "w|มีค่า": [
@@ -46196,6 +46644,22 @@
    "en": "Suda isn't fluent in the local dialect yet, so she didn't get the neighbor's joke.",
    "ko": "수다는 아직 사투리를 잘 못 알아들어서 옆집 아저씨 농담을 이해 못 했어요.",
    "blank": "มุก",
+   "src": "made"
+  }
+ ],
+ "w|มุง": [
+  {
+   "text": "ชาวบ้านมุงดูรถถ่ายทอดสดที่จอดอยู่หน้าตลาด",
+   "en": "Villagers crowded around to look at the live broadcast van parked in front of the market.",
+   "ko": "주민들이 시장 앞에 선 중계차를 둘러싸고 구경했어요.",
+   "blank": "มุง",
+   "src": "made"
+  },
+  {
+   "text": "คนมุงดูนักวิ่งที่แต่งชุดซูเปอร์ฮีโร่มาวิ่ง",
+   "en": "People crowded around to watch a runner dressed as a superhero.",
+   "ko": "사람들이 슈퍼히어로 옷을 입고 뛰는 주자를 둘러싸고 구경했어요.",
+   "blank": "มุง",
    "src": "made"
   }
  ],
@@ -47751,6 +48215,22 @@
    "src": "made"
   }
  ],
+ "w|ยากลำบาก": [
+  {
+   "text": "การทำข่าวในพื้นที่น้ำท่วมเป็นงานที่ยากลำบากมาก",
+   "en": "Covering news in flooded areas is very hard work.",
+   "ko": "홍수 지역에서 취재하는 건 아주 고된 일이에요.",
+   "blank": "ยากลำบาก",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงกิโลเมตรท้ายๆ เป็นทางขึ้นเนินที่ยากลำบากที่สุด",
+   "en": "The last few kilometers are the toughest uphill stretch.",
+   "ko": "마지막 몇 킬로미터가 가장 힘든 오르막이에요.",
+   "blank": "ยากลำบาก",
+   "src": "made"
+  }
+ ],
  "w|ยาแก้ปวด": [
   {
    "text": "หลังถอนฟัน ธนากินยาแก้ปวดก่อนนอน",
@@ -48807,6 +49287,22 @@
    "src": "made"
   }
  ],
+ "w|โยกย้าย": [
+  {
+   "text": "ชัยถูกโยกย้ายไปประจำโต๊ะข่าวเศรษฐกิจตั้งแต่ต้นปี",
+   "en": "Chai was transferred to the business desk at the start of the year.",
+   "ko": "차이는 연초부터 경제부로 자리를 옮겼어요.",
+   "blank": "โยกย้าย",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์เพิ่งถูกโยกย้ายมาทำงานที่จังหวัดนี้จึงยังไม่รู้จักเส้นทาง",
+   "en": "Somsak was only recently transferred to this province, so he didn't know the route yet.",
+   "ko": "솜삭은 이 도로 막 전근 와서 아직 코스를 몰라요.",
+   "blank": "โยกย้าย",
+   "src": "made"
+  }
+ ],
  "w|โยน": [
   {
    "text": "โยนลูกให้หน่อย",
@@ -49515,6 +50011,22 @@
    "en": "Everyone on the boat miraculously survived.",
    "ko": "배 안의 모두가 기적처럼 살아남았어.",
    "blank": "รอดชีวิต"
+  }
+ ],
+ "w|ร่อน": [
+  {
+   "text": "โดรนของสถานีร่อนอยู่เหนือที่เกิดเหตุเพื่อส่งภาพสด",
+   "en": "The station's drone glided above the scene to send live footage.",
+   "ko": "방송국 드론이 생방송 화면을 보내려고 현장 위를 날았어요.",
+   "blank": "ร่อน",
+   "src": "made"
+  },
+  {
+   "text": "นกเหยี่ยวตัวหนึ่งร่อนวนอยู่เหนือทุ่งนาข้างเส้นทางวิ่ง",
+   "en": "A hawk circled and glided over the rice fields beside the running route.",
+   "ko": "매 한 마리가 달리기 코스 옆 논 위를 빙빙 날았어요.",
+   "blank": "ร่อน",
+   "src": "made"
   }
  ],
  "w|ร้อน": [
@@ -50909,6 +51421,22 @@
    "blank": "ราว"
   }
  ],
+ "w|ราวๆ": [
+  {
+   "text": "ข่าวภาคค่ำต้องส่งต้นฉบับราวๆ ห้าโมงเย็น",
+   "en": "The evening news copy has to be in at around five p.m.",
+   "ko": "저녁 뉴스 원고는 다섯 시쯤까지 넘겨야 해요.",
+   "blank": "ราวๆ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์คาดว่าจะเข้าเส้นชัยราวๆ สี่ชั่วโมงครึ่ง",
+   "en": "Somsak expects to finish in roughly four and a half hours.",
+   "ko": "솜삭은 네 시간 반쯤에 결승선을 통과할 거라고 예상해요.",
+   "blank": "ราวๆ",
+   "src": "made"
+  }
+ ],
  "w|ราวกับ": [
   {
    "text": "ชิมแกงของแม่แล้ววิชัยรู้สึกราวกับได้กลับไปกินข้าวที่บ้านยายตอนเด็ก",
@@ -51231,6 +51759,22 @@
    "en": "Don't use harsh words with friends.",
    "ko": "친구에게 거친 말을 쓰지 마.",
    "blank": "รุนแรง"
+  }
+ ],
+ "w|รุม": [
+  {
+   "text": "นักข่าวหลายสำนักรุมถามคำถามรัฐมนตรีหน้าทำเนียบ",
+   "en": "Reporters from many outlets crowded the minister with questions outside the government house.",
+   "ko": "여러 언론사 기자들이 청사 앞에서 장관에게 질문을 퍼부었어요.",
+   "blank": "รุม",
+   "src": "made"
+  },
+  {
+   "text": "ยุงรุมกัดขาสมศักดิ์ตอนยืนรอปล่อยตัวตอนตีสี่",
+   "en": "Mosquitoes swarmed and bit Somsak's legs while he waited for the start at four a.m.",
+   "ko": "새벽 네 시에 출발을 기다리는 동안 모기들이 솜삭의 다리를 마구 물었어요.",
+   "blank": "รุม",
+   "src": "made"
   }
  ],
  "w|รู้": [
@@ -59773,6 +60317,22 @@
    "blank": "สันติภาพ"
   }
  ],
+ "w|สันนิษฐาน": [
+  {
+   "text": "ตำรวจสันนิษฐานว่าไฟไหม้โกดังเกิดจากไฟฟ้าลัดวงจร",
+   "en": "Police presume the warehouse fire was caused by a short circuit.",
+   "ko": "경찰은 창고 화재가 누전 때문이라고 추정해요.",
+   "blank": "สันนิษฐาน",
+   "src": "made"
+  },
+  {
+   "text": "หมอสันนิษฐานว่านักวิ่งที่ล้มลงขาดน้ำอย่างหนัก",
+   "en": "The doctor presumed the runner who collapsed was severely dehydrated.",
+   "ko": "의사는 쓰러진 주자가 심한 탈수 상태라고 추정했어요.",
+   "blank": "สันนิษฐาน",
+   "src": "made"
+  }
+ ],
  "w|สับปะรด": [
   {
    "text": "หั่นสับปะรดใส่ในผลไม้รวม",
@@ -63301,6 +63861,22 @@
    "blank": "หมี"
   }
  ],
+ "w|หมึก": [
+  {
+   "text": "เครื่องพิมพ์ในห้องข่าวหมึกหมดอีกแล้ว",
+   "en": "The printer in the newsroom is out of ink again.",
+   "ko": "보도국 프린터 잉크가 또 떨어졌어요.",
+   "blank": "หมึก",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าหน้าที่เขียนเวลาด้วยหมึกกันน้ำลงบนแขนนักวิ่ง",
+   "en": "Staff wrote the times on the runners' arms in waterproof ink.",
+   "ko": "진행 요원이 방수 잉크로 주자들 팔에 기록을 적었어요.",
+   "blank": "หมึก",
+   "src": "made"
+  }
+ ],
  "w|หมื่น": [
   {
    "text": "เงินเดือนหมื่นกว่า",
@@ -64761,6 +65337,22 @@
    "blank": "หอย"
   }
  ],
+ "w|ห้อย": [
+  {
+   "text": "ชัยห้อยบัตรนักข่าวไว้ที่คอทุกครั้งที่ลงพื้นที่",
+   "en": "Chai hangs his press card around his neck whenever he goes into the field.",
+   "ko": "차이는 현장에 나갈 때마다 기자증을 목에 걸어요.",
+   "blank": "ห้อย",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ห้อยเหรียญไว้ที่คอแล้วยิ้มให้กล้อง",
+   "en": "Somsak hung the medal around his neck and smiled for the camera.",
+   "ko": "솜삭은 메달을 목에 걸고 카메라를 보며 웃었어요.",
+   "blank": "ห้อย",
+   "src": "made"
+  }
+ ],
  "w|หอยทาก": [
   {
    "text": "หอยทากเดินช้ามาก",
@@ -65140,6 +65732,22 @@
    "en": "The man whose bag was stolen said he was job hunting and all his money was in it.",
    "ko": "가방을 도둑맞은 남자는 일자리를 찾는 중인데 돈이 전부 그 안에 있었다고 했어요.",
    "blank": "หางาน",
+   "src": "made"
+  }
+ ],
+ "w|หาเงิน": [
+  {
+   "text": "ข่าวเด่นวันนี้คือแม่ค้าที่ต้องหาเงินเลี้ยงลูกสี่คนคนเดียว",
+   "en": "Today's top story is a vendor who has to earn money to raise four children alone.",
+   "ko": "오늘의 주요 뉴스는 혼자서 아이 넷을 키우려고 돈을 버는 상인 이야기예요.",
+   "blank": "หาเงิน",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งบางคนวิ่งเพื่อหาเงินบริจาคให้โรงพยาบาลชุมชน",
+   "en": "Some runners run to raise donations for the community hospital.",
+   "ko": "어떤 주자들은 지역 병원에 기부할 돈을 모으려고 뛰어요.",
+   "blank": "หาเงิน",
    "src": "made"
   }
  ],
@@ -68191,6 +68799,22 @@
    "blank": "อาจารย์"
   }
  ],
+ "w|อาจารย์ใหญ่": [
+  {
+   "text": "ชัยไปสัมภาษณ์อาจารย์ใหญ่โรงเรียนที่ถูกน้ำท่วม",
+   "en": "Chai went to interview the principal of the flooded school.",
+   "ko": "차이는 물에 잠긴 학교의 교장을 인터뷰하러 갔어요.",
+   "blank": "อาจารย์ใหญ่",
+   "src": "made"
+  },
+  {
+   "text": "อาจารย์ใหญ่โรงเรียนประจำตำบลพานักเรียนมาวิ่งระยะสั้น",
+   "en": "The principal of the local school brought students to run the short course.",
+   "ko": "동네 학교 교장 선생님이 학생들을 데리고 단축 코스를 뛰러 왔어요.",
+   "blank": "อาจารย์ใหญ่",
+   "src": "made"
+  }
+ ],
  "w|อาเจียน": [
   {
    "text": "กินของเสียแล้วอาเจียน",
@@ -69040,6 +69664,22 @@
    "en": "Before boarding, staff measured every passenger's body temperature.",
    "ko": "탑승 전에 직원이 모든 승객의 체온을 쟀어요.",
    "blank": "อุณหภูมิร่างกาย",
+   "src": "made"
+  }
+ ],
+ "w|อุด": [
+  {
+   "text": "ชัยเอาสำลีอุดหูเพราะห้องข้างๆ กำลังเจาะผนัง",
+   "en": "Chai stuffed cotton in his ears because the next room was drilling into the wall.",
+   "ko": "옆방에서 벽을 뚫고 있어서 차이는 솜으로 귀를 막았어요.",
+   "blank": "อุด",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ใช้เทปอุดรอยรั่วที่ขวดน้ำก่อนออกวิ่ง",
+   "en": "Somsak used tape to plug the leak in his water bottle before setting off.",
+   "ko": "솜삭은 출발 전에 물병 새는 곳을 테이프로 막았어요.",
+   "blank": "อุด",
    "src": "made"
   }
  ],

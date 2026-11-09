@@ -255,6 +255,22 @@
    "src": "made"
   }
  ],
+ "w|一无所知": [
+  {
+   "text": "黄涛对古董一无所知，所以只买自己看着喜欢的东西。",
+   "en": "Huang Tao knows nothing about antiques, so he only buys things he likes the look of.",
+   "ko": "황타오는 골동품을 전혀 몰라서 보기에 마음에 드는 것만 사요.",
+   "blank": "一无所知",
+   "src": "made"
+  },
+  {
+   "text": "刚来时，杨洋对种地一无所知，现在已经会插秧了。",
+   "en": "When she first came, Yang Yang knew nothing about farming, but now she can transplant rice seedlings.",
+   "ko": "처음 왔을 때 양양은 농사를 전혀 몰랐는데 지금은 모내기도 할 줄 알아요.",
+   "blank": "一无所知",
+   "src": "made"
+  }
+ ],
  "w|一旦": [
   {
    "text": "一旦开始就别停。",
@@ -845,6 +861,22 @@
    "en": "Please get on first.",
    "ko": "먼저 타세요.",
    "blank": "上车"
+  }
+ ],
+ "w|上述": [
+  {
+   "text": "妈妈列了一张购物单，上述东西都要在过节前买齐。",
+   "en": "Mom made a shopping list, and all the items above must be bought before the holiday.",
+   "ko": "엄마가 장보기 목록을 만들었는데 위의 물건들을 명절 전에 다 사야 해요.",
+   "blank": "上述",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在信末写道，上述地址只用到年底，之后会再告诉朋友新的。",
+   "en": "At the end of the letter, Sun Yue wrote that the address above is only good until the end of the year, and she'll send the new one later.",
+   "ko": "쑨웨는 편지 끝에 위 주소는 연말까지만 쓰고 그 뒤엔 새 주소를 알려 주겠다고 썼어요.",
+   "blank": "上述",
+   "src": "made"
   }
  ],
  "w|上面": [
@@ -2111,6 +2143,22 @@
    "blank": "两"
   }
  ],
+ "w|两侧": [
+  {
+   "text": "门口两侧贴着爸爸写的春联。",
+   "en": "Spring couplets written by Dad are pasted on both sides of the door.",
+   "ko": "문 양쪽에 아빠가 쓴 춘련이 붙어 있어요.",
+   "blank": "两侧",
+   "src": "made"
+  },
+  {
+   "text": "孙悦描述，她家门前的小路两侧种满了樱花。",
+   "en": "Sun Yue described cherry trees planted all along both sides of the path in front of her house.",
+   "ko": "쑨웨는 집 앞 오솔길 양쪽에 벚나무가 가득 심겨 있다고 묘사했어요.",
+   "blank": "两侧",
+   "src": "made"
+  }
+ ],
  "w|两者": [
   {
    "text": "买房子还是租房子，黄涛觉得两者各有好处。",
@@ -2140,6 +2188,22 @@
    "en": "Both sides of the road were lined with residents cheering on the runners.",
    "ko": "길 양쪽에 선수들을 응원하는 시민들이 가득 서 있었어요.",
    "blank": "两边",
+   "src": "made"
+  }
+ ],
+ "w|严厉": [
+  {
+   "text": "马林的爷爷以前对孩子很严厉，现在却特别宠孙子。",
+   "en": "Ma Lin's grandpa used to be very strict with his kids, but now he really spoils his grandchildren.",
+   "ko": "마린의 할아버지는 예전엔 자식들에게 엄했는데 지금은 손주들을 아주 예뻐해요.",
+   "blank": "严厉",
+   "src": "made"
+  },
+  {
+   "text": "孙悦提起，高中那位严厉的数学老师已经退休了。",
+   "en": "Sun Yue mentioned that their strict high school math teacher has retired.",
+   "ko": "쑨웨는 고등학교 때 그 엄한 수학 선생님이 은퇴하셨다고 했어요.",
+   "blank": "严厉",
    "src": "made"
   }
  ],
@@ -3283,6 +3347,22 @@
    "en": "I'm off to buy groceries.",
    "ko": "나 장 보러 간다.",
    "blank": "买"
+  }
+ ],
+ "w|买下": [
+  {
+   "text": "黄涛最后买下了那把旧吉他，高兴得一路哼着歌。",
+   "en": "Huang Tao finally bought that old guitar and hummed all the way home happily.",
+   "ko": "황타오는 결국 그 낡은 기타를 사서 신나게 콧노래를 부르며 갔어요.",
+   "blank": "买下",
+   "src": "made"
+  },
+  {
+   "text": "杨洋买下了村民亲手编的竹篮，准备带回城里送人。",
+   "en": "Yang Yang bought bamboo baskets woven by the villagers to take back to the city as gifts.",
+   "ko": "양양은 마을 사람들이 직접 엮은 대바구니를 사서 도시에 가져가 선물하려고 해요.",
+   "blank": "买下",
+   "src": "made"
   }
  ],
  "w|买卖": [
@@ -4649,6 +4729,22 @@
    "blank": "仍"
   }
  ],
+ "w|仍旧": [
+  {
+   "text": "虽然下着小雨，来逛市场的人仍旧很多。",
+   "en": "Even though it was drizzling, there were still lots of people browsing the market.",
+   "ko": "이슬비가 내렸지만 시장 구경하러 온 사람은 여전히 많았어요.",
+   "blank": "仍旧",
+   "src": "made"
+  },
+  {
+   "text": "过了这么多年，村口那棵老槐树仍旧枝叶茂盛。",
+   "en": "After all these years, the old locust tree at the village entrance is still lush.",
+   "ko": "이렇게 오랜 세월이 지나도 마을 입구 회화나무는 여전히 무성해요.",
+   "blank": "仍旧",
+   "src": "made"
+  }
+ ],
  "w|仍然": [
   {
    "text": "我仍然相信你。",
@@ -5973,6 +6069,22 @@
    "src": "made"
   }
  ],
+ "w|伸": [
+  {
+   "text": "一个小孩把手伸到箱子里，摸出了一个铁皮青蛙。",
+   "en": "A little kid reached into the box and pulled out a tin frog.",
+   "ko": "한 아이가 상자 안에 손을 넣어 양철 개구리를 꺼냈어요.",
+   "blank": "伸",
+   "src": "made"
+  },
+  {
+   "text": "早上醒来，杨洋伸了个懒腰，推开窗看云海。",
+   "en": "Waking up in the morning, Yang Yang stretched and opened the window to look at the sea of clouds.",
+   "ko": "아침에 깨어난 양양은 기지개를 켜고 창문을 열어 운해를 봤어요.",
+   "blank": "伸",
+   "src": "made"
+  }
+ ],
  "w|伸手": [
   {
    "text": "陈杰伸手接过证人递来的照片，仔细看了看。",
@@ -6605,6 +6717,22 @@
    "en": "This will make things worse.",
    "ko": "이러면 일이 더 나빠질 거야.",
    "blank": "使"
+  }
+ ],
+ "w|使劲": [
+  {
+   "text": "箱子卡住了，黄涛使劲一拉，才把它拖出来。",
+   "en": "The box got stuck, and Huang Tao had to pull hard to drag it out.",
+   "ko": "상자가 끼어서 황타오가 힘껏 당겨서야 끌어냈어요.",
+   "blank": "使劲",
+   "src": "made"
+  },
+  {
+   "text": "杨洋使劲推了推那扇木门，门却纹丝不动。",
+   "en": "Yang Yang pushed hard on the wooden door, but it didn't budge.",
+   "ko": "양양이 나무 문을 힘껏 밀었지만 꿈쩍도 안 했어요.",
+   "blank": "使劲",
+   "src": "made"
   }
  ],
  "w|使命": [
@@ -7313,6 +7441,22 @@
    "blank": "信息"
   }
  ],
+ "w|信用": [
+  {
+   "text": "在跳蚤市场，摊主之间做生意全靠信用。",
+   "en": "At the flea market, business between stallholders relies entirely on trust.",
+   "ko": "벼룩시장에서 상인들 사이의 거래는 전적으로 신용에 달려 있어요.",
+   "blank": "信用",
+   "src": "made"
+  },
+  {
+   "text": "村里人做买卖讲信用，借了东西一定按时还。",
+   "en": "The villagers keep their word in business: whatever they borrow, they always return on time.",
+   "ko": "마을 사람들은 신용을 지켜서 빌린 건 꼭 제때 돌려줘요.",
+   "blank": "信用",
+   "src": "made"
+  }
+ ],
  "w|信用卡": [
   {
    "text": "这里的小摊大多不能刷信用卡，黄涛出门前取了些现金。",
@@ -7540,6 +7684,22 @@
    "en": "A friend promised to help with the move but then made an excuse and didn't come.",
    "ko": "친구가 이사를 도와주기로 해 놓고 또 핑계를 대고 안 왔어요.",
    "blank": "借口",
+   "src": "made"
+  }
+ ],
+ "w|债务": [
+  {
+   "text": "一位摊主说，他卖掉家里的旧家具，是为了还清债务。",
+   "en": "One stallholder said he was selling his old furniture to pay off his debts.",
+   "ko": "한 가게 주인은 빚을 갚으려고 집의 낡은 가구를 판다고 했어요.",
+   "blank": "债务",
+   "src": "made"
+  },
+  {
+   "text": "为了修新房，杨洋的表叔背上了不少债务。",
+   "en": "To build a new house, Yang Yang's uncle took on quite a lot of debt.",
+   "ko": "새집을 짓느라 양양의 아저씨는 빚을 꽤 졌어요.",
+   "blank": "债务",
    "src": "made"
   }
  ],
@@ -9853,6 +10013,22 @@
    "blank": "写"
   }
  ],
+ "w|写下": [
+  {
+   "text": "每个人都在红纸上写下了新年的愿望。",
+   "en": "Everyone wrote down their New Year's wishes on red paper.",
+   "ko": "모두 빨간 종이에 새해 소원을 적었어요.",
+   "blank": "写下",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在信封背面写下了一句只有两人懂的暗号。",
+   "en": "On the back of the envelope, Sun Yue wrote a code phrase only the two of them would understand.",
+   "ko": "쑨웨는 봉투 뒷면에 둘만 아는 암호 한 마디를 적었어요.",
+   "blank": "写下",
+   "src": "made"
+  }
+ ],
  "w|写作": [
   {
    "text": "张伟下班后喜欢写作，常把做菜的心得记在本子上。",
@@ -10347,6 +10523,22 @@
    "src": "made"
   }
  ],
+ "w|减轻": [
+  {
+   "text": "大家一起包饺子，大大减轻了妈妈一个人的负担。",
+   "en": "Everyone made dumplings together, which greatly lightened Mom's load.",
+   "ko": "다 같이 만두를 빚어서 엄마 혼자의 부담이 크게 줄었어요.",
+   "blank": "减轻",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，每次给老朋友写信，心里的压力都会减轻不少。",
+   "en": "Sun Yue said that every time she writes to her old friend, her stress eases quite a bit.",
+   "ko": "쑨웨는 옛 친구에게 편지를 쓸 때마다 마음의 스트레스가 많이 줄어든다고 했어요.",
+   "blank": "减轻",
+   "src": "made"
+  }
+ ],
  "w|几乎": [
   {
    "text": "几乎忘了。",
@@ -10785,6 +10977,22 @@
    "en": "Cut the fruit with a knife.",
    "ko": "칼로 과일을 잘라.",
    "blank": "刀"
+  }
+ ],
+ "w|刀子": [
+  {
+   "text": "妈妈让马林把刀子放远一点，别让小侄子碰到。",
+   "en": "Mom told Ma Lin to put the knife farther away so his little nephew couldn't reach it.",
+   "ko": "엄마는 어린 조카가 만지지 않게 칼을 멀리 두라고 마린에게 말했어요.",
+   "blank": "刀子",
+   "src": "made"
+  },
+  {
+   "text": "孙悦写道，她现在学会了做菜，切菜的刀子也换了好几把。",
+   "en": "Sun Yue wrote that she's learned to cook now and has gone through several kitchen knives.",
+   "ko": "쑨웨는 이제 요리를 배워서 칼도 여러 번 바꿨다고 썼어요.",
+   "blank": "刀子",
+   "src": "made"
   }
  ],
  "w|分": [
@@ -11338,6 +11546,22 @@
    "en": "Lili finds it hard to decide which old things to throw out and which to keep.",
    "ko": "리리는 어떤 물건을 버리고 어떤 걸 남길지 판단하기 어려웠어요.",
    "blank": "判断",
+   "src": "made"
+  }
+ ],
+ "w|利息": [
+  {
+   "text": "摊主笑着说，把钱放在银行吃利息，还不如买点老物件。",
+   "en": "The stallholder laughed and said that rather than earning interest at the bank, you might as well buy some old things.",
+   "ko": "가게 주인은 은행에 넣어 이자를 받느니 옛날 물건을 사는 게 낫다며 웃었어요.",
+   "blank": "利息",
+   "src": "made"
+  },
+  {
+   "text": "村里的合作社帮村民贷款，利息比银行低一点。",
+   "en": "The village cooperative helps villagers get loans with interest a bit lower than the bank's.",
+   "ko": "마을 협동조합은 은행보다 이자가 조금 낮게 대출을 도와줘요.",
+   "blank": "利息",
    "src": "made"
   }
  ],
@@ -11940,6 +12164,22 @@
    "en": "Afraid of damaging what was inside, Yang Yang carefully cut the tape on the package.",
    "ko": "양양은 안의 물건이 상할까 봐 택배 상자 테이프를 조심스럽게 잘랐어요.",
    "blank": "剪",
+   "src": "made"
+  }
+ ],
+ "w|剪刀": [
+  {
+   "text": "奶奶用剪刀剪了好几张窗花，贴在玻璃上。",
+   "en": "Grandma cut several paper window decorations with scissors and stuck them on the glass.",
+   "ko": "할머니는 가위로 창문 장식 종이를 여러 장 오려서 유리에 붙였어요.",
+   "blank": "剪刀",
+   "src": "made"
+  },
+  {
+   "text": "孙悦用剪刀把报纸上的旧照片剪下来，夹在信里寄出。",
+   "en": "Sun Yue cut an old photo out of the newspaper with scissors and tucked it into the letter.",
+   "ko": "쑨웨는 가위로 신문에서 옛 사진을 오려 편지에 끼워 보냈어요.",
+   "blank": "剪刀",
    "src": "made"
   }
  ],
@@ -15577,6 +15817,22 @@
    "src": "made"
   }
  ],
+ "w|可见": [
+  {
+   "text": "饺子一会儿就被抢光了，可见爸爸的手艺真不错。",
+   "en": "The dumplings were snapped up in no time, which shows Dad's cooking really is good.",
+   "ko": "만두가 금세 동나는 걸 보면 아빠 솜씨가 정말 좋은 거예요.",
+   "blank": "可见",
+   "src": "made"
+  },
+  {
+   "text": "隔了这么多年还记得对方的生日，可见两人的友情有多深。",
+   "en": "Remembering each other's birthday after so many years shows how deep their friendship is.",
+   "ko": "이렇게 오랜 세월이 지나도 서로 생일을 기억하는 걸 보면 둘의 우정이 얼마나 깊은지 알 수 있어요.",
+   "blank": "可见",
+   "src": "made"
+  }
+ ],
  "w|可靠": [
   {
    "text": "马林觉得手机上的天气预报不太可靠，出门前总要看看天。",
@@ -16254,6 +16510,22 @@
    "en": "Xiaoxue entered the city competition under the name of her swimming club.",
    "ko": "샤오쉐는 수영 클럽 이름으로 시 대회에 신청했어요.",
    "blank": "名义",
+   "src": "made"
+  }
+ ],
+ "w|名为": [
+  {
+   "text": "马林一家看了一部名为《回家》的老电影。",
+   "en": "Ma Lin's family watched an old film called \"Going Home.\"",
+   "ko": "마린네 가족은 《귀가》라는 옛날 영화를 봤어요.",
+   "blank": "名为",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，她加入了一个名为“慢邮”的写信俱乐部。",
+   "en": "Sun Yue said she joined a letter-writing club called \"Slow Mail.\"",
+   "ko": "쑨웨는 \"느린 우편\"이라는 편지 쓰기 모임에 들어갔다고 했어요.",
+   "blank": "名为",
    "src": "made"
   }
  ],
@@ -16939,6 +17211,22 @@
    "blank": "吸引"
   }
  ],
+ "w|吸引力": [
+  {
+   "text": "对孩子们来说，过年最大的吸引力就是压岁钱。",
+   "en": "For the kids, the biggest attraction of New Year is the red-envelope money.",
+   "ko": "아이들에게 설날의 가장 큰 매력은 세뱃돈이에요.",
+   "blank": "吸引力",
+   "src": "made"
+  },
+  {
+   "text": "孙悦觉得，手写的信有一种电子邮件没有的吸引力。",
+   "en": "Sun Yue feels handwritten letters have an appeal that emails don't.",
+   "ko": "쑨웨는 손편지에는 이메일에 없는 매력이 있다고 생각해요.",
+   "blank": "吸引力",
+   "src": "made"
+  }
+ ],
  "w|吸收": [
   {
    "text": "教练说，运动后半小时内身体吸收蛋白质最快。",
@@ -17577,6 +17865,22 @@
    "src": "made"
   }
  ],
+ "w|品牌": [
+  {
+   "text": "这件夹克虽然没有品牌，但是做工很好。",
+   "en": "This jacket has no brand, but it's very well made.",
+   "ko": "이 재킷은 브랜드는 없지만 만듦새가 아주 좋아요.",
+   "blank": "品牌",
+   "src": "made"
+  },
+  {
+   "text": "村里的蜂蜜做出了自己的品牌，在网上卖得很好。",
+   "en": "The village's honey has built its own brand and sells well online.",
+   "ko": "마을 꿀은 자체 브랜드를 만들어서 온라인에서 잘 팔려요.",
+   "blank": "品牌",
+   "src": "made"
+  }
+ ],
  "w|品种": [
   {
    "text": "剧场门口摆了好几个品种的鲜花，是观众送给周强的。",
@@ -18153,6 +18457,22 @@
    "blank": "喂"
   }
  ],
+ "w|善于": [
+  {
+   "text": "黄涛很善于砍价，总能用一半的价钱买到东西。",
+   "en": "Huang Tao is very good at haggling and can always get things for half price.",
+   "ko": "황타오는 흥정을 아주 잘해서 늘 반값에 물건을 사요.",
+   "blank": "善于",
+   "src": "made"
+  },
+  {
+   "text": "村里的老猎人善于辨认各种动物的脚印。",
+   "en": "The village's old hunter is good at identifying all kinds of animal tracks.",
+   "ko": "마을의 늙은 사냥꾼은 여러 동물의 발자국을 잘 알아봐요.",
+   "blank": "善于",
+   "src": "made"
+  }
+ ],
  "w|善良": [
   {
    "text": "窗口的小周很善良，总是耐心地帮老人填表。",
@@ -18227,6 +18547,22 @@
    "en": "Oh, I get it.",
    "ko": "아, 이제 알겠어.",
    "blank": "喔"
+  }
+ ],
+ "w|喘": [
+  {
+   "text": "黄涛扛着一台旧缝纫机走了半条街，累得直喘。",
+   "en": "Huang Tao carried an old sewing machine halfway down the street and was panting with exhaustion.",
+   "ko": "황타오는 낡은 재봉틀을 메고 반 블록을 걸어서 숨을 헐떡였어요.",
+   "blank": "喘",
+   "src": "made"
+  },
+  {
+   "text": "爬到山顶时，杨洋喘得说不出话来。",
+   "en": "By the time she climbed to the summit, Yang Yang was panting too hard to speak.",
+   "ko": "산꼭대기에 올라갔을 때 양양은 숨이 차서 말도 못 했어요.",
+   "blank": "喘",
+   "src": "made"
   }
  ],
  "w|喜剧": [
@@ -18779,6 +19115,22 @@
    "en": "He hasn't answered yet.",
    "ko": "아직 대답 안 했어.",
    "blank": "回答"
+  }
+ ],
+ "w|回顾": [
+  {
+   "text": "除夕晚上，爸爸带着大家回顾了这一年的大事。",
+   "en": "On New Year's Eve, Dad led everyone in looking back on the big events of the year.",
+   "ko": "섣달그믐 밤에 아빠는 모두와 함께 올해의 큰일들을 돌아봤어요.",
+   "blank": "回顾",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在信的开头回顾了两人认识的第一天。",
+   "en": "At the start of the letter, Sun Yue looked back on the day the two of them met.",
+   "ko": "쑨웨는 편지 첫머리에서 둘이 처음 만난 날을 돌아봤어요.",
+   "blank": "回顾",
+   "src": "made"
   }
  ],
  "w|因": [
@@ -19621,6 +19973,22 @@
    "src": "made"
   }
  ],
+ "w|地毯": [
+  {
+   "text": "马林的弟弟把果汁洒在了新地毯上，被妈妈说了一顿。",
+   "en": "Ma Lin's younger brother spilled juice on the new rug and got scolded by Mom.",
+   "ko": "마린의 남동생이 새 카펫에 주스를 쏟아서 엄마한테 한소리 들었어요.",
+   "blank": "地毯",
+   "src": "made"
+  },
+  {
+   "text": "孙悦告诉老朋友，她终于买了一块梦想中的波斯地毯。",
+   "en": "Sun Yue told her old friend she had finally bought the Persian rug of her dreams.",
+   "ko": "쑨웨는 옛 친구에게 꿈꾸던 페르시아 카펫을 드디어 샀다고 말했어요.",
+   "blank": "地毯",
+   "src": "made"
+  }
+ ],
  "w|地点": [
   {
    "text": "换个地点见面。",
@@ -20400,6 +20768,22 @@
    "en": "The walls of the children's ward are covered with little animals, which Sun Yue finds adorable.",
    "ko": "소아 병동 벽에는 작은 동물들이 가득 그려져 있어서 쑨웨는 아주 귀엽다고 생각해요.",
    "blank": "墙",
+   "src": "made"
+  }
+ ],
+ "w|墙壁": [
+  {
+   "text": "马林和弟弟一起把客厅的墙壁刷成了淡黄色。",
+   "en": "Ma Lin and his brother painted the living room walls pale yellow together.",
+   "ko": "마린과 남동생은 같이 거실 벽을 연노란색으로 칠했어요.",
+   "blank": "墙壁",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，女儿在房间的墙壁上画满了小动物。",
+   "en": "Sun Yue said her daughter had drawn little animals all over the bedroom walls.",
+   "ko": "쑨웨는 딸이 방 벽에 작은 동물을 가득 그렸다고 했어요.",
+   "blank": "墙壁",
    "src": "made"
   }
  ],
@@ -22347,6 +22731,22 @@
    "src": "made"
   }
  ],
+ "w|奖金": [
+  {
+   "text": "黄涛拿到年终奖金后，第一件事就是来跳蚤市场逛逛。",
+   "en": "After getting his year-end bonus, the first thing Huang Tao did was come browse the flea market.",
+   "ko": "황타오는 연말 보너스를 받고 제일 먼저 벼룩시장에 구경하러 왔어요.",
+   "blank": "奖金",
+   "src": "made"
+  },
+  {
+   "text": "杨洋把公司发的奖金拿出一部分，给村小学买了图书。",
+   "en": "Yang Yang took part of her company bonus and bought books for the village primary school.",
+   "ko": "양양은 회사에서 받은 보너스 일부로 마을 초등학교에 책을 사 줬어요.",
+   "blank": "奖金",
+   "src": "made"
+  }
+ ],
  "w|套": [
   {
    "text": "为了见外宾，陈杰特意穿了一套深灰色西装。",
@@ -23607,6 +24007,22 @@
    "src": "made"
   }
  ],
+ "w|存": [
+  {
+   "text": "黄涛把卖旧书赚的钱都存了起来，打算买一台相机。",
+   "en": "Huang Tao saved all the money he made selling old books, planning to buy a camera.",
+   "ko": "황타오는 헌책을 팔아 번 돈을 모두 모아 두고 카메라를 살 생각이에요.",
+   "blank": "存",
+   "src": "made"
+  },
+  {
+   "text": "村民把粮食存在地窖里，可以吃过整个冬天。",
+   "en": "The villagers store grain in the cellar, enough to last the whole winter.",
+   "ko": "마을 사람들은 곡식을 지하 저장고에 보관해서 겨울 내내 먹어요.",
+   "blank": "存",
+   "src": "made"
+  }
+ ],
  "w|存在": [
   {
    "text": "问题依然存在。",
@@ -24507,6 +24923,22 @@
    "blank": "实验室"
   }
  ],
+ "w|宠物": [
+  {
+   "text": "马林家的宠物狗也穿上了红色的新衣服。",
+   "en": "Ma Lin's family's pet dog also wore new red clothes.",
+   "ko": "마린네 반려견도 빨간 새 옷을 입었어요.",
+   "blank": "宠物",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，她搬到新家以后终于能养宠物了。",
+   "en": "Sun Yue said that after moving to her new home she can finally keep a pet.",
+   "ko": "쑨웨는 새집으로 이사한 뒤 드디어 반려동물을 키울 수 있게 됐다고 했어요.",
+   "blank": "宠物",
+   "src": "made"
+  }
+ ],
  "w|审判": [
   {
    "text": "审判明天开始。",
@@ -24823,6 +25255,38 @@
    "blank": "家伙"
   }
  ],
+ "w|家具": [
+  {
+   "text": "为了过节，全家把客厅的家具重新摆了一遍。",
+   "en": "For the holiday, the whole family rearranged the living room furniture.",
+   "ko": "명절을 맞아 온 가족이 거실 가구를 다시 배치했어요.",
+   "blank": "家具",
+   "src": "made"
+  },
+  {
+   "text": "孙悦写道，新家的家具都是她和丈夫自己组装的。",
+   "en": "Sun Yue wrote that she and her husband assembled all the furniture in their new home themselves.",
+   "ko": "쑨웨는 새집 가구를 남편과 직접 조립했다고 썼어요.",
+   "blank": "家具",
+   "src": "made"
+  }
+ ],
+ "w|家园": [
+  {
+   "text": "爷爷常说，不管走多远，这里永远是我们的家园。",
+   "en": "Grandpa often says that no matter how far we go, this will always be our homeland.",
+   "ko": "할아버지는 아무리 멀리 가도 여기가 언제나 우리의 터전이라고 자주 말해요.",
+   "blank": "家园",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，那场洪水过后，很多人失去了家园。",
+   "en": "Sun Yue said that after the flood, many people lost their homes.",
+   "ko": "쑨웨는 그 홍수 뒤 많은 사람이 삶의 터전을 잃었다고 했어요.",
+   "blank": "家园",
+   "src": "made"
+  }
+ ],
  "w|家乡": [
   {
    "text": "马林的家乡在山里，离酒店很远。",
@@ -24942,6 +25406,22 @@
    "en": "On a business trip, Lin Jing stayed at a cheap guesthouse next to the factory there.",
    "ko": "린징은 다른 지역으로 출장 가서 그곳 공장 옆 싸구려 여관에 묵었어요.",
    "blank": "宾馆",
+   "src": "made"
+  }
+ ],
+ "w|宿舍": [
+  {
+   "text": "放假了，马林终于离开学校宿舍，回家住几天。",
+   "en": "The holiday arrived, and Ma Lin finally left the school dorm to stay at home for a few days.",
+   "ko": "방학이 돼서 마린은 드디어 학교 기숙사를 떠나 며칠 집에서 지내요.",
+   "blank": "宿舍",
+   "src": "made"
+  },
+  {
+   "text": "孙悦一直记得，大学时她们住在同一间宿舍。",
+   "en": "Sun Yue always remembers that they lived in the same dorm room in college.",
+   "ko": "쑨웨는 대학 때 둘이 같은 기숙사 방에서 지낸 걸 늘 기억해요.",
+   "blank": "宿舍",
    "src": "made"
   }
  ],
@@ -26089,6 +26569,22 @@
    "src": "made"
   }
  ],
+ "w|尺寸": [
+  {
+   "text": "这双皮鞋款式不错，可惜尺寸小了一点。",
+   "en": "These leather shoes are a nice style, but unfortunately they're a little too small.",
+   "ko": "이 가죽 구두는 디자인은 좋은데 아쉽게도 사이즈가 좀 작아요.",
+   "blank": "尺寸",
+   "src": "made"
+  },
+  {
+   "text": "木匠量好门框的尺寸，第二天就做好了新门。",
+   "en": "The carpenter measured the door frame and had the new door made by the next day.",
+   "ko": "목수는 문틀 치수를 재고 다음 날 새 문을 만들었어요.",
+   "blank": "尺寸",
+   "src": "made"
+  }
+ ],
  "w|尽": [
   {
    "text": "周强说，记者要尽自己的责任，把真相告诉读者。",
@@ -26471,6 +26967,22 @@
    "en": "The museum is displaying artifacts.",
    "ko": "박물관이 유물을 전시하고 있어.",
    "blank": "展示"
+  }
+ ],
+ "w|展览": [
+  {
+   "text": "市场角落里在展览一批上世纪的老海报。",
+   "en": "A collection of old posters from the last century was on display in a corner of the market.",
+   "ko": "시장 한구석에서 지난 세기의 옛날 포스터들을 전시하고 있었어요.",
+   "blank": "展览",
+   "src": "made"
+  },
+  {
+   "text": "村委会在祠堂里展览了村民们的老照片。",
+   "en": "The village committee exhibited the villagers' old photos in the ancestral hall.",
+   "ko": "마을 위원회는 사당에서 마을 사람들의 옛 사진을 전시했어요.",
+   "blank": "展览",
+   "src": "made"
   }
  ],
  "w|属": [
@@ -29751,6 +30263,22 @@
    "src": "made"
   }
  ],
+ "w|待遇": [
+  {
+   "text": "黄涛听旁边的摊主抱怨，现在的工厂待遇太差，才出来摆摊。",
+   "en": "Huang Tao heard the stallholder next to him complain that factory pay was too poor, which is why he started a stall.",
+   "ko": "황타오는 옆 상인이 요즘 공장 대우가 너무 나빠서 노점을 시작했다고 투덜대는 걸 들었어요.",
+   "blank": "待遇",
+   "src": "made"
+  },
+  {
+   "text": "山区老师的待遇越来越好，愿意来的年轻人也多了。",
+   "en": "Pay and conditions for mountain-area teachers keep improving, and more young people are willing to come.",
+   "ko": "산간 지역 교사 대우가 점점 좋아져서 오려는 젊은이도 많아졌어요.",
+   "blank": "待遇",
+   "src": "made"
+  }
+ ],
  "w|很": [
   {
    "text": "水很烫。",
@@ -30442,6 +30970,22 @@
    "en": "Busy preparing for the wedding, Yang Yang nearly overlooked her grandma's birthday.",
    "ko": "결혼 준비에 바빠서 양양은 하마터면 할머니 생신을 잊을 뻔했어요.",
    "blank": "忽略",
+   "src": "made"
+  }
+ ],
+ "w|忽视": [
+  {
+   "text": "大家忙着做饭，忽视了在角落里一个人玩的小表妹。",
+   "en": "Everyone was so busy cooking that they overlooked the little cousin playing alone in the corner.",
+   "ko": "다들 요리하느라 바빠서 구석에서 혼자 노는 어린 사촌 동생을 신경 쓰지 못했어요.",
+   "blank": "忽视",
+   "src": "made"
+  },
+  {
+   "text": "孙悦承认，工作太忙时，她忽视了很多老朋友。",
+   "en": "Sun Yue admitted that when work got too busy, she neglected many old friends.",
+   "ko": "쑨웨는 일이 너무 바쁠 때 옛 친구들을 많이 소홀히 했다고 인정했어요.",
+   "blank": "忽视",
    "src": "made"
   }
  ],
@@ -32617,6 +33161,22 @@
    "src": "made"
   }
  ],
+ "w|房地产": [
+  {
+   "text": "吃饭时，叔叔一直在聊房地产，大家都听烦了。",
+   "en": "At dinner, Ma Lin's uncle kept talking about real estate until everyone got tired of it.",
+   "ko": "밥 먹을 때 삼촌이 계속 부동산 이야기를 해서 다들 지겨워했어요.",
+   "blank": "房地产",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在信中提到，她现在在一家房地产公司做设计。",
+   "en": "Sun Yue mentioned in her letter that she now does design work at a real estate company.",
+   "ko": "쑨웨는 편지에서 지금 부동산 회사에서 디자인 일을 한다고 했어요.",
+   "blank": "房地产",
+   "src": "made"
+  }
+ ],
  "w|房子": [
   {
    "text": "这房子太旧了。",
@@ -32629,6 +33189,22 @@
    "en": "Let's go look at a house.",
    "ko": "우리 집 보러 가자.",
    "blank": "房子"
+  }
+ ],
+ "w|房屋": [
+  {
+   "text": "这栋老房屋是爷爷年轻时亲手盖的。",
+   "en": "This old house was built by Grandpa with his own hands when he was young.",
+   "ko": "이 오래된 집은 할아버지가 젊었을 때 손수 지은 거예요.",
+   "blank": "房屋",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，她老家那一片房屋都拆了，盖成了新的小区。",
+   "en": "Sun Yue said all the houses in her hometown neighborhood had been torn down for a new housing complex.",
+   "ko": "쑨웨는 고향 그 동네 집들이 다 헐리고 새 아파트 단지가 들어섰다고 했어요.",
+   "blank": "房屋",
+   "src": "made"
   }
  ],
  "w|房间": [
@@ -32745,6 +33321,22 @@
    "en": "This is so-called freedom.",
    "ko": "이게 바로 소위 자유야.",
    "blank": "所谓"
+  }
+ ],
+ "w|扇": [
+  {
+   "text": "马林推开那扇旧木门，一股饭菜香飘了出来。",
+   "en": "Ma Lin pushed open the old wooden door, and the smell of cooking drifted out.",
+   "ko": "마린이 낡은 나무 문을 밀자 음식 냄새가 풍겨 나왔어요.",
+   "blank": "扇",
+   "src": "made"
+  },
+  {
+   "text": "孙悦写道，她每天早上都会打开那扇朝东的窗，看日出。",
+   "en": "Sun Yue wrote that every morning she opens the east-facing window to watch the sunrise.",
+   "ko": "쑨웨는 매일 아침 동쪽으로 난 창문을 열고 해돋이를 본다고 썼어요.",
+   "blank": "扇",
+   "src": "made"
   }
  ],
  "w|手": [
@@ -33414,6 +34006,22 @@
    "en": "At checkout, Yang Yang scanned the QR code with his phone.",
    "ko": "결제할 때 양양은 휴대폰으로 QR코드를 한 번 찍었어요.",
    "blank": "扫",
+   "src": "made"
+  }
+ ],
+ "w|扫描": [
+  {
+   "text": "马林把全家的老照片扫描进电脑，做成了一本相册。",
+   "en": "Ma Lin scanned all the family's old photos into the computer and made an album.",
+   "ko": "마린은 가족의 옛날 사진을 컴퓨터로 스캔해서 앨범을 만들었어요.",
+   "blank": "扫描",
+   "src": "made"
+  },
+  {
+   "text": "孙悦把朋友的旧信扫描下来，怕纸张越来越黄。",
+   "en": "Sun Yue scanned her friend's old letters, worried the paper would keep yellowing.",
+   "ko": "쑨웨는 종이가 점점 누레질까 봐 친구의 옛 편지를 스캔해 뒀어요.",
+   "blank": "扫描",
    "src": "made"
   }
  ],
@@ -34127,6 +34735,22 @@
    "blank": "报道"
   }
  ],
+ "w|报酬": [
+  {
+   "text": "黄涛帮邻摊的老人搬了半天箱子，老人给他一本旧书当报酬。",
+   "en": "Huang Tao spent ages helping the old man at the next stall move boxes, and the man gave him an old book as payment.",
+   "ko": "황타오가 옆 가게 할아버지 상자를 한참 옮겨 주자 할아버지가 헌책 한 권을 보수로 줬어요.",
+   "blank": "报酬",
+   "src": "made"
+  },
+  {
+   "text": "杨洋帮村民拍宣传视频，一分报酬也没要。",
+   "en": "Yang Yang made promotional videos for the villagers without taking a cent in payment.",
+   "ko": "양양은 마을 사람들 홍보 영상을 찍어 주고 보수를 한 푼도 받지 않았어요.",
+   "blank": "报酬",
+   "src": "made"
+  }
+ ],
  "w|抬": [
   {
    "text": "赵磊和邻居一起把坏掉的水泵抬到了车上。",
@@ -34247,6 +34871,22 @@
    "blank": "抽"
   }
  ],
+ "w|抽屉": [
+  {
+   "text": "马林在书桌的抽屉里找到了小时候写的日记。",
+   "en": "Ma Lin found a diary he wrote as a child in his desk drawer.",
+   "ko": "마린은 책상 서랍에서 어릴 때 쓴 일기를 찾았어요.",
+   "blank": "抽屉",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，那张毕业合影至今还放在她的抽屉里。",
+   "en": "Sun Yue said that graduation photo is still in her drawer.",
+   "ko": "쑨웨는 그 졸업 사진이 지금도 서랍에 있다고 했어요.",
+   "blank": "抽屉",
+   "src": "made"
+  }
+ ],
  "w|抽烟": [
   {
    "text": "这里禁止抽烟。",
@@ -34333,6 +34973,22 @@
    "en": "Don't slam the table.",
    "ko": "탁자 치지 마.",
    "blank": "拍"
+  }
+ ],
+ "w|拍卖": [
+  {
+   "text": "傍晚，市场管理员拍卖了一批没人认领的旧自行车。",
+   "en": "In the evening, the market manager auctioned off a batch of unclaimed old bicycles.",
+   "ko": "저녁에 시장 관리인이 주인 없는 낡은 자전거들을 경매에 부쳤어요.",
+   "blank": "拍卖",
+   "src": "made"
+  },
+  {
+   "text": "村里打算拍卖几间空置的老屋，改建成民宿。",
+   "en": "The village plans to auction off a few empty old houses to convert into guesthouses.",
+   "ko": "마을은 비어 있는 옛집 몇 채를 경매로 팔아 민박으로 바꿀 계획이에요.",
+   "blank": "拍卖",
+   "src": "made"
   }
  ],
  "w|拍摄": [
@@ -35042,6 +35698,22 @@
    "en": "Li Na hopes to uncover new needs from user data.",
    "ko": "리나는 사용자 데이터에서 새로운 수요를 찾아내고 싶어요.",
    "blank": "挖掘",
+   "src": "made"
+  }
+ ],
+ "w|挡住": [
+  {
+   "text": "院子里的大树挡住了阳光，客厅白天也有点暗。",
+   "en": "The big tree in the yard blocks the sunlight, so the living room is a bit dark even in the daytime.",
+   "ko": "마당 큰 나무가 햇빛을 가려서 거실은 낮에도 좀 어두워요.",
+   "blank": "挡住",
+   "src": "made"
+  },
+  {
+   "text": "孙悦写道，对面新盖的大楼挡住了她最爱的山景。",
+   "en": "Sun Yue wrote that the new building across the street blocks her favorite mountain view.",
+   "ko": "쑨웨는 맞은편에 새로 지은 건물이 제일 좋아하던 산 풍경을 가렸다고 썼어요.",
+   "blank": "挡住",
    "src": "made"
   }
  ],
@@ -36227,6 +36899,22 @@
    "blank": "搬"
   }
  ],
+ "w|搬家": [
+  {
+   "text": "马林的姐姐下个月要搬家，这是她在老房子过的最后一个节。",
+   "en": "Ma Lin's older sister is moving next month, so this is her last holiday in the old house.",
+   "ko": "마린의 언니는 다음 달에 이사해서 이번이 옛집에서 보내는 마지막 명절이에요.",
+   "blank": "搬家",
+   "src": "made"
+  },
+  {
+   "text": "孙悦提醒朋友，自己搬家了，以后的信要寄到新地址。",
+   "en": "Sun Yue reminded her friend that she had moved, so future letters should go to her new address.",
+   "ko": "쑨웨는 이사했으니 앞으로 편지는 새 주소로 보내 달라고 친구에게 알렸어요.",
+   "blank": "搬家",
+   "src": "made"
+  }
+ ],
  "w|搭": [
   {
    "text": "我们搭同一班车。",
@@ -36852,6 +37540,38 @@
    "en": "Wang Fang loves collecting bookmarks and has filled a whole box.",
    "ko": "왕팡은 책갈피 모으기를 좋아해서 벌써 한 상자 가득 모았어요.",
    "blank": "收藏",
+   "src": "made"
+  }
+ ],
+ "w|收购": [
+  {
+   "text": "有个老板专门来收购旧邮票，出价还挺高。",
+   "en": "One dealer came specifically to buy up old stamps and offered pretty good prices.",
+   "ko": "한 사장님은 옛날 우표를 사들이러 일부러 왔는데 값도 꽤 쳐 줬어요.",
+   "blank": "收购",
+   "src": "made"
+  },
+  {
+   "text": "每年秋天，都有商人上山来收购村民种的板栗。",
+   "en": "Every autumn, traders come up the mountain to buy the chestnuts the villagers grow.",
+   "ko": "해마다 가을이면 상인들이 산에 올라와 마을 사람들이 기른 밤을 사 가요.",
+   "blank": "收购",
+   "src": "made"
+  }
+ ],
+ "w|收费": [
+  {
+   "text": "跳蚤市场的停车场收费不贵，一个小时才两块钱。",
+   "en": "The flea market's parking fee isn't expensive, only two yuan an hour.",
+   "ko": "벼룩시장 주차장 요금은 비싸지 않아서 한 시간에 2위안이에요.",
+   "blank": "收费",
+   "src": "made"
+  },
+  {
+   "text": "村里的民宿收费很合理，住一晚还包三顿饭。",
+   "en": "The village guesthouse charges a reasonable rate, and a night includes three meals.",
+   "ko": "마을 민박은 요금이 적당하고 하룻밤에 세 끼가 포함돼요.",
+   "blank": "收费",
    "src": "made"
   }
  ],
@@ -38427,6 +39147,22 @@
    "blank": "无聊"
   }
  ],
+ "w|无能为力": [
+  {
+   "text": "停电了，大家都无能为力，只好点起蜡烛聊天。",
+   "en": "The power went out, and with nothing anyone could do, everyone lit candles and chatted.",
+   "ko": "정전이 돼서 다들 어쩔 수 없이 촛불을 켜고 이야기를 나눴어요.",
+   "blank": "无能为力",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，奶奶病重时她远在外地，感到无能为力。",
+   "en": "Sun Yue said that when her grandma was seriously ill, she was far away and felt helpless.",
+   "ko": "쑨웨는 할머니가 위독하실 때 멀리 있어서 아무것도 할 수 없었다고 했어요.",
+   "blank": "无能为力",
+   "src": "made"
+  }
+ ],
  "w|无论": [
   {
    "text": "无论怎样都行。",
@@ -39785,6 +40521,22 @@
    "en": "Who spoke for him?",
    "ko": "누가 대신 말한 거야?",
    "blank": "替"
+  }
+ ],
+ "w|替代": [
+  {
+   "text": "有人说手机已经替代了相机，可黄涛还是喜欢收集老相机。",
+   "en": "People say phones have replaced cameras, but Huang Tao still loves collecting old ones.",
+   "ko": "휴대폰이 카메라를 대신했다고들 하지만 황타오는 여전히 옛날 카메라 모으는 걸 좋아해요.",
+   "blank": "替代",
+   "src": "made"
+  },
+  {
+   "text": "现在电磁炉已经替代了不少人家的柴火灶。",
+   "en": "Induction cookers have now replaced wood-burning stoves in many homes.",
+   "ko": "이제 인덕션이 많은 집의 장작 아궁이를 대신했어요.",
+   "blank": "替代",
+   "src": "made"
   }
  ],
  "w|月": [
@@ -41302,6 +42054,22 @@
    "en": "Liu Fang says a cat's skeleton is made up of over two hundred bones.",
    "ko": "류팡은 고양이 골격이 이백 개가 넘는 뼈로 이루어져 있다고 해요.",
    "blank": "构成",
+   "src": "made"
+  }
+ ],
+ "w|枕头": [
+  {
+   "text": "妈妈给马林的床换了一个新枕头，又软又香。",
+   "en": "Mom put a new pillow on Ma Lin's bed, soft and fragrant.",
+   "ko": "엄마가 마린 침대에 새 베개를 놓아 줬는데 푹신하고 향긋해요.",
+   "blank": "枕头",
+   "src": "made"
+  },
+  {
+   "text": "孙悦写道，她还留着朋友送的那个绣花枕头。",
+   "en": "Sun Yue wrote that she still has the embroidered pillow her friend gave her.",
+   "ko": "쑨웨는 친구가 준 그 자수 베개를 아직 갖고 있다고 썼어요.",
+   "blank": "枕头",
    "src": "made"
   }
  ],
@@ -44435,6 +45203,22 @@
    "src": "made"
   }
  ],
+ "w|注重": [
+  {
+   "text": "黄涛买旧衣服时特别注重面料，不太在乎款式。",
+   "en": "When buying used clothes, Huang Tao pays special attention to the fabric and doesn't care much about style.",
+   "ko": "황타오는 헌 옷을 살 때 디자인보다 옷감을 특히 중요하게 봐요.",
+   "blank": "注重",
+   "src": "made"
+  },
+  {
+   "text": "山里人很注重礼节，客人来了一定要先倒茶。",
+   "en": "Mountain folk value etiquette; when a guest arrives, they always pour tea first.",
+   "ko": "산골 사람들은 예절을 중시해서 손님이 오면 꼭 먼저 차를 따라요.",
+   "blank": "注重",
+   "src": "made"
+  }
+ ],
  "w|洗": [
   {
    "text": "去洗手。",
@@ -44704,6 +45488,38 @@
    "en": "Midday naps are popular at the company, and the office goes quiet at one o'clock.",
    "ko": "회사에서는 낮잠이 유행이라 한 시가 되면 사무실이 조용해져요.",
    "blank": "流行",
+   "src": "made"
+  }
+ ],
+ "w|流通": [
+  {
+   "text": "有个大爷在卖早已不再流通的旧硬币。",
+   "en": "An old man was selling old coins that have long gone out of circulation.",
+   "ko": "한 할아버지가 이미 유통되지 않는 옛날 동전을 팔고 있었어요.",
+   "blank": "流通",
+   "src": "made"
+  },
+  {
+   "text": "老房子窗户小，空气不太流通，杨洋常开门透气。",
+   "en": "The old house has small windows and poor air circulation, so Yang Yang often opens the door to let air in.",
+   "ko": "옛집은 창이 작아서 공기가 잘 안 통해 양양은 자주 문을 열어 환기해요.",
+   "blank": "流通",
+   "src": "made"
+  }
+ ],
+ "w|浅": [
+  {
+   "text": "马林选了一件颜色很浅的毛衣，说过年穿着显得精神。",
+   "en": "Ma Lin picked a light-colored sweater, saying it looks fresh for the New Year.",
+   "ko": "마린은 설에 입으면 산뜻해 보인다며 색이 아주 연한 스웨터를 골랐어요.",
+   "blank": "浅",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，那条小河的水很浅，夏天可以光着脚走过去。",
+   "en": "Sun Yue said the stream is very shallow, and you can walk across barefoot in summer.",
+   "ko": "쑨웨는 그 개울물이 아주 얕아서 여름엔 맨발로 건널 수 있다고 했어요.",
+   "blank": "浅",
    "src": "made"
   }
  ],
@@ -45024,6 +45840,22 @@
    "en": "Liu Fang put mousetraps in the storeroom to wipe out all the mice.",
    "ko": "류팡은 창고에 쥐덫을 놓아 쥐를 다 없애 버리려고 해요.",
    "blank": "消灭",
+   "src": "made"
+  }
+ ],
+ "w|消费": [
+  {
+   "text": "黄涛觉得，买二手货是一种更环保的消费方式。",
+   "en": "Huang Tao thinks buying secondhand is a more eco-friendly way to consume.",
+   "ko": "황타오는 중고 물건을 사는 게 더 환경을 생각하는 소비 방식이라고 생각해요.",
+   "blank": "消费",
+   "src": "made"
+  },
+  {
+   "text": "村长说，游客来了以后，村里的消费水平提高了不少。",
+   "en": "The village head said that since tourists started coming, spending in the village has gone up a lot.",
+   "ko": "촌장은 관광객이 오면서 마을 소비 수준이 꽤 올라갔다고 했어요.",
+   "blank": "消费",
    "src": "made"
   }
  ],
@@ -46001,6 +46833,22 @@
    "blank": "火车"
   }
  ],
+ "w|灭亡": [
+  {
+   "text": "黄涛淘到一本讲古代王朝怎样灭亡的历史书。",
+   "en": "Huang Tao found a history book about how ancient dynasties fell.",
+   "ko": "황타오는 옛 왕조가 어떻게 멸망했는지 다룬 역사책을 찾아냈어요.",
+   "blank": "灭亡",
+   "src": "made"
+  },
+  {
+   "text": "博物馆里写着，这一带的古国两千年前就灭亡了。",
+   "en": "The museum says the ancient kingdom in this area fell two thousand years ago.",
+   "ko": "박물관 설명에 이 일대의 고대 국가는 이천 년 전에 멸망했다고 적혀 있어요.",
+   "blank": "灭亡",
+   "src": "made"
+  }
+ ],
  "w|灯": [
   {
    "text": "请把灯关上。",
@@ -46384,6 +47232,22 @@
    "en": "When they first started the business, Liu Fang and her team were full of enthusiasm.",
    "ko": "처음 창업했을 때 류팡과 팀원들은 모두 열정이 넘쳤어요.",
    "blank": "热情",
+   "src": "made"
+  }
+ ],
+ "w|热烈": [
+  {
+   "text": "表演完节目，弟弟得到了全家热烈的掌声。",
+   "en": "After his performance, the little brother got warm applause from the whole family.",
+   "ko": "공연을 마치자 남동생은 온 가족의 뜨거운 박수를 받았어요.",
+   "blank": "热烈",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，同学会上大家讨论得很热烈，可惜朋友没来。",
+   "en": "Sun Yue said everyone had a lively discussion at the class reunion; what a pity her friend didn't come.",
+   "ko": "쑨웨는 동창회에서 다들 열띠게 이야기했는데 친구가 못 와서 아쉬웠다고 했어요.",
+   "blank": "热烈",
    "src": "made"
   }
  ],
@@ -46874,6 +47738,22 @@
    "en": "Lili hung a small wooden sign by her new front door with her name on it.",
    "ko": "리리는 새집 문 앞에 자기 이름을 쓴 작은 나무 팻말을 걸었어요.",
    "blank": "牌",
+   "src": "made"
+  }
+ ],
+ "w|牌子": [
+  {
+   "text": "这台旧收音机是个老牌子，现在已经停产了。",
+   "en": "This old radio is from an old brand that has stopped production.",
+   "ko": "이 낡은 라디오는 오래된 상표인데 지금은 생산이 끊겼어요.",
+   "blank": "牌子",
+   "src": "made"
+  },
+  {
+   "text": "村口立着一块木头牌子，上面写着村子的名字。",
+   "en": "A wooden sign stands at the village entrance with the village's name on it.",
+   "ko": "마을 입구에 마을 이름이 적힌 나무 팻말이 서 있어요.",
+   "blank": "牌子",
    "src": "made"
   }
  ],
@@ -47925,6 +48805,22 @@
    "src": "made"
   }
  ],
+ "w|珍珠": [
+  {
+   "text": "一位老太太在卖一条珍珠项链，说是她母亲留下的。",
+   "en": "An old lady was selling a pearl necklace that she said her mother had left her.",
+   "ko": "한 할머니가 어머니가 남긴 거라며 진주 목걸이를 팔고 있었어요.",
+   "blank": "珍珠",
+   "src": "made"
+  },
+  {
+   "text": "杨洋在山溪边捡到一颗小石头，白得像珍珠一样。",
+   "en": "Yang Yang picked up a small stone by the mountain stream, as white as a pearl.",
+   "ko": "양양은 산 개울가에서 진주처럼 하얀 작은 돌을 주웠어요.",
+   "blank": "珍珠",
+   "src": "made"
+  }
+ ],
  "w|珍贵": [
   {
    "text": "那块旧手表是爷爷留下的，对张伟来说特别珍贵。",
@@ -48120,6 +49016,22 @@
    "en": "Yang Yang ordered six bottles of shampoo at once, enough for half a year.",
    "ko": "양양은 샴푸를 한 번에 여섯 병 주문해서 반년은 쓸 수 있어요.",
    "blank": "瓶",
+   "src": "made"
+  }
+ ],
+ "w|瓶子": [
+  {
+   "text": "妈妈把自己泡的梅子酒装进漂亮的瓶子，送给邻居。",
+   "en": "Mom put her homemade plum wine into pretty bottles and gave them to the neighbors.",
+   "ko": "엄마는 직접 담근 매실주를 예쁜 병에 담아 이웃에게 줬어요.",
+   "blank": "瓶子",
+   "src": "made"
+  },
+  {
+   "text": "孙悦把海边捡的贝壳装进小瓶子，随信寄了过去。",
+   "en": "Sun Yue put shells she'd collected at the beach into a little bottle and sent it with the letter.",
+   "ko": "쑨웨는 바닷가에서 주운 조개껍데기를 작은 병에 담아 편지와 함께 보냈어요.",
+   "blank": "瓶子",
    "src": "made"
   }
  ],
@@ -48463,6 +49375,22 @@
    "blank": "用力"
   }
  ],
+ "w|用心": [
+  {
+   "text": "这位摊主很用心，每本旧书都擦得干干净净。",
+   "en": "This stallholder is very conscientious and wipes every old book spotless.",
+   "ko": "이 가게 주인은 아주 정성스러워서 헌책을 한 권 한 권 깨끗이 닦아 놔요.",
+   "blank": "用心",
+   "src": "made"
+  },
+  {
+   "text": "村里的孩子们学习很用心，晚上也在油灯下看书。",
+   "en": "The village kids study very diligently, even reading under oil lamps at night.",
+   "ko": "마을 아이들은 아주 열심히 공부해서 밤에도 등잔불 아래서 책을 봐요.",
+   "blank": "用心",
+   "src": "made"
+  }
+ ],
  "w|用户": [
   {
    "text": "餐馆的点餐软件更新以后，很多用户说用起来更方便了。",
@@ -48708,6 +49636,22 @@
    "en": "I ran into my neighbor in the elevator.",
    "ko": "엘리베이터에서 이웃을 만났어요.",
    "blank": "电梯",
+   "src": "made"
+  }
+ ],
+ "w|电池": [
+  {
+   "text": "遥控器没反应了，马林翻遍客厅也没找到新电池。",
+   "en": "The remote stopped working, and Ma Lin searched the whole living room without finding new batteries.",
+   "ko": "리모컨이 안 돼서 마린은 거실을 다 뒤졌지만 새 건전지를 못 찾았어요.",
+   "blank": "电池",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在信里说，她的手表电池没电了，好几天都不知道时间。",
+   "en": "Sun Yue wrote in her letter that her watch battery had died and she didn't know the time for days.",
+   "ko": "쑨웨는 편지에 시계 배터리가 다 돼서 며칠 동안 시간을 몰랐다고 썼어요.",
+   "blank": "电池",
    "src": "made"
   }
  ],
@@ -49691,6 +50635,22 @@
    "src": "made"
   }
  ],
+ "w|盒": [
+  {
+   "text": "马林给奶奶买了一盒她最爱吃的桂花糕。",
+   "en": "Ma Lin bought Grandma a box of her favorite osmanthus cakes.",
+   "ko": "마린은 할머니께 제일 좋아하시는 계화떡 한 상자를 사 드렸어요.",
+   "blank": "盒",
+   "src": "made"
+  },
+  {
+   "text": "孙悦把这些年收到的信都放在一个铁盒里。",
+   "en": "Sun Yue keeps all the letters she's received over the years in a tin box.",
+   "ko": "쑨웨는 그동안 받은 편지를 모두 철제 상자 하나에 넣어 둬요.",
+   "blank": "盒",
+   "src": "made"
+  }
+ ],
  "w|盒子": [
   {
    "text": "礼物在盒子里。",
@@ -49717,6 +50677,22 @@
    "en": "Snow covered the road.",
    "ko": "눈이 길을 덮었어.",
    "blank": "盖"
+  }
+ ],
+ "w|盘": [
+  {
+   "text": "爸爸端出一盘刚炸好的春卷，大家马上围了过来。",
+   "en": "Dad brought out a plate of freshly fried spring rolls, and everyone gathered round at once.",
+   "ko": "아빠가 막 튀긴 춘권 한 접시를 내오자 모두 바로 모여들었어요.",
+   "blank": "盘",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在信里回忆，两人当年常常分吃一盘炒面。",
+   "en": "In her letter, Sun Yue recalled that the two of them often shared a plate of fried noodles back then.",
+   "ko": "쑨웨는 편지에서 그때 둘이 자주 볶음면 한 접시를 나눠 먹었다고 회상했어요.",
+   "blank": "盘",
+   "src": "made"
   }
  ],
  "w|盘子": [
@@ -49822,6 +50798,22 @@
    "en": "Sun Yue treats each aid station as a small destination.",
    "ko": "쑨웨는 급수대 하나하나를 작은 목적지로 삼아요.",
    "blank": "目的地",
+   "src": "made"
+  }
+ ],
+ "w|目睹": [
+  {
+   "text": "奶奶说她小时候亲眼目睹过村里第一次通电。",
+   "en": "Grandma said she witnessed the village getting electricity for the first time when she was little.",
+   "ko": "할머니는 어릴 때 마을에 처음 전기가 들어오는 걸 직접 봤다고 했어요.",
+   "blank": "目睹",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在信中描述，她在火车上目睹了一场美丽的日落。",
+   "en": "In her letter, Sun Yue described witnessing a beautiful sunset from the train.",
+   "ko": "쑨웨는 편지에서 기차에서 아름다운 노을을 봤다고 묘사했어요.",
+   "blank": "目睹",
    "src": "made"
   }
  ],
@@ -52335,6 +53327,22 @@
    "blank": "稍微"
   }
  ],
+ "w|税": [
+  {
+   "text": "一个摊主抱怨说，开店的税太重，他只好来这里摆摊。",
+   "en": "A stallholder complained that taxes on a shop were too heavy, so he had to set up here instead.",
+   "ko": "한 상인은 가게를 내면 세금이 너무 많아서 여기서 노점을 한다고 투덜댔어요.",
+   "blank": "税",
+   "src": "made"
+  },
+  {
+   "text": "村里的小卖部老板说，开网店也要按规定交税。",
+   "en": "The village shopkeeper said that even an online shop has to pay taxes by the rules.",
+   "ko": "마을 구멍가게 주인은 온라인 가게도 규정대로 세금을 내야 한다고 했어요.",
+   "blank": "税",
+   "src": "made"
+  }
+ ],
  "w|稳": [
   {
    "text": "过河的木桥有点晃，陈杰扶着栏杆，走得很稳。",
@@ -52574,6 +53582,22 @@
    "en": "Li Na heard this mall's sales broke the all-time record this year and wasn't surprised at all.",
    "ko": "리나는 이 백화점 올해 매출이 역대 최고를 돌파했다는 말을 듣고 전혀 놀라지 않았어요.",
    "blank": "突破",
+   "src": "made"
+  }
+ ],
+ "w|窗口": [
+  {
+   "text": "奶奶坐在厨房的窗口，看孩子们在院子里放鞭炮。",
+   "en": "Grandma sat by the kitchen window watching the kids set off firecrackers in the yard.",
+   "ko": "할머니는 부엌 창가에 앉아 아이들이 마당에서 폭죽 터뜨리는 걸 봤어요.",
+   "blank": "窗口",
+   "src": "made"
+  },
+  {
+   "text": "为了寄这封信，孙悦在邮局的窗口排了半小时队。",
+   "en": "To send this letter, Sun Yue waited in line at the post office counter for half an hour.",
+   "ko": "이 편지를 부치려고 쑨웨는 우체국 창구에서 삼십 분 동안 줄을 섰어요.",
+   "blank": "窗口",
    "src": "made"
   }
  ],
@@ -53243,6 +54267,22 @@
    "blank": "简直"
   }
  ],
+ "w|简称": [
+  {
+   "text": "马林告诉奶奶，自己的大学简称“北师大”。",
+   "en": "Ma Lin told Grandma his university is called \"Beishida\" for short.",
+   "ko": "마린은 할머니께 자기 대학을 줄여서 \"베이스다\"라고 한다고 말했어요.",
+   "blank": "简称",
+   "src": "made"
+  },
+  {
+   "text": "孙悦解释说，她们公司的名字太长，大家都简称“星光”。",
+   "en": "Sun Yue explained that her company's name is too long, so everyone just calls it \"Starlight\" for short.",
+   "ko": "쑨웨는 회사 이름이 너무 길어서 다들 줄여서 \"별빛\"이라고 부른다고 설명했어요.",
+   "blank": "简称",
+   "src": "made"
+  }
+ ],
  "w|算": [
   {
    "text": "算我一个。",
@@ -53342,6 +54382,22 @@
    "en": "Xiaoxue felt the anesthetic needle go into her gums like an arrow.",
    "ko": "샤오쉐는 마취 주사가 화살처럼 잇몸에 꽂히는 느낌이었어요.",
    "blank": "箭",
+   "src": "made"
+  }
+ ],
+ "w|箱": [
+  {
+   "text": "表哥扛着一箱苹果走进门，累得满头大汗。",
+   "en": "Ma Lin's cousin came in carrying a crate of apples and was dripping with sweat.",
+   "ko": "사촌 형이 사과 한 상자를 메고 들어오느라 땀범벅이 됐어요.",
+   "blank": "箱",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，搬走那天，她光书就装了满满一箱。",
+   "en": "Sun Yue said that on moving day, her books alone filled a whole box.",
+   "ko": "쑨웨는 이사하던 날 책만으로 한 상자가 가득 찼다고 했어요.",
+   "blank": "箱",
    "src": "made"
   }
  ],
@@ -56045,6 +57101,22 @@
    "blank": "耳朵"
   }
  ],
+ "w|耽误": [
+  {
+   "text": "为了不耽误下午上班，黄涛中午就收摊了。",
+   "en": "So as not to be late for work in the afternoon, Huang Tao packed up his stall at noon.",
+   "ko": "오후 출근에 늦지 않으려고 황타오는 점심때 가게를 접었어요.",
+   "blank": "耽误",
+   "src": "made"
+  },
+  {
+   "text": "山路被大雪封住，耽误了杨洋好几天的行程。",
+   "en": "Heavy snow blocked the mountain road and delayed Yang Yang's trip by several days.",
+   "ko": "산길이 폭설로 막혀서 양양의 일정이 며칠 늦어졌어요.",
+   "blank": "耽误",
+   "src": "made"
+  }
+ ],
  "w|聊": [
   {
    "text": "我们聊一会儿吧。",
@@ -57925,6 +58997,38 @@
    "src": "made"
   }
  ],
+ "w|花费": [
+  {
+   "text": "黄涛花费了整整一个上午，才找到那张想要的老唱片。",
+   "en": "Huang Tao spent the whole morning before he found the old record he wanted.",
+   "ko": "황타오는 오전 내내 걸려서야 원하던 옛날 레코드판을 찾았어요.",
+   "blank": "花费",
+   "src": "made"
+  },
+  {
+   "text": "修这条盘山公路花费了好几年的时间。",
+   "en": "Building this winding mountain road took several years.",
+   "ko": "이 산길 도로를 닦는 데 몇 년이 걸렸어요.",
+   "blank": "花费",
+   "src": "made"
+  }
+ ],
+ "w|花钱": [
+  {
+   "text": "黄涛的女朋友说他很会花钱，几块钱也能买到宝贝。",
+   "en": "Huang Tao's girlfriend says he knows how to spend money: even a few yuan buys him treasures.",
+   "ko": "황타오의 여자 친구는 그가 돈을 잘 써서 몇 위안으로도 보물을 산다고 해요.",
+   "blank": "花钱",
+   "src": "made"
+  },
+  {
+   "text": "在山村里几乎没地方花钱，杨洋一个月只用了一点生活费。",
+   "en": "There's almost nowhere to spend money in the mountain village, so Yang Yang used only a little of her living allowance in a month.",
+   "ko": "산골 마을엔 돈 쓸 데가 거의 없어서 양양은 한 달에 생활비를 조금밖에 안 썼어요.",
+   "blank": "花钱",
+   "src": "made"
+  }
+ ],
  "w|苍蝇": [
   {
    "text": "午饭刚拿出来，就招来了几只苍蝇。",
@@ -59179,6 +60283,22 @@
    "src": "made"
   }
  ],
+ "w|袋": [
+  {
+   "text": "姑姑从老家带来一袋自己种的花生。",
+   "en": "Ma Lin's aunt brought a bag of peanuts she grew herself from the countryside.",
+   "ko": "고모가 고향에서 직접 키운 땅콩 한 봉지를 가져왔어요.",
+   "blank": "袋",
+   "src": "made"
+  },
+  {
+   "text": "孙悦随信寄去一袋家乡的茶叶。",
+   "en": "Sun Yue sent a bag of tea from her hometown along with the letter.",
+   "ko": "쑨웨는 편지와 함께 고향 찻잎 한 봉지를 보냈어요.",
+   "blank": "袋",
+   "src": "made"
+  }
+ ],
  "w|袋子": [
   {
    "text": "黄涛买了一堆旧书，摊主给了他一个大袋子装。",
@@ -59192,6 +60312,22 @@
    "en": "Yang Yang noticed the bag by the door was gone and asked if his sister had thrown it out.",
    "ko": "양양은 문 앞에 있던 봉지가 없어진 걸 보고 누나가 버렸냐고 물었어요.",
    "blank": "袋子",
+   "src": "made"
+  }
+ ],
+ "w|袜子": [
+  {
+   "text": "黄涛花五块钱买了三双手织的毛线袜子。",
+   "en": "Huang Tao paid five yuan for three pairs of hand-knitted wool socks.",
+   "ko": "황타오는 5위안에 손으로 뜬 털양말 세 켤레를 샀어요.",
+   "blank": "袜子",
+   "src": "made"
+  },
+  {
+   "text": "山里晚上很冷，杨洋睡觉时要穿两双袜子。",
+   "en": "It's cold in the mountains at night, so Yang Yang wears two pairs of socks to bed.",
+   "ko": "산속은 밤에 추워서 양양은 잘 때 양말을 두 켤레 신어요.",
+   "blank": "袜子",
    "src": "made"
   }
  ],
@@ -60120,6 +61256,38 @@
    "en": "Wang Fang's computer broke, and the college student upstairs came over and fixed it.",
    "ko": "왕팡네 컴퓨터가 고장 나서 위층 대학생이 와서 고쳐 줬어요.",
    "blank": "计算机",
+   "src": "made"
+  }
+ ],
+ "w|订": [
+  {
+   "text": "黄涛提前在网上订了一个摊位，每周六都来跳蚤市场卖旧书。",
+   "en": "Huang Tao booked a stall online in advance and comes to sell old books at the flea market every Saturday.",
+   "ko": "황타오는 미리 온라인으로 자리를 예약해서 매주 토요일 벼룩시장에 헌책을 팔러 와요.",
+   "blank": "订",
+   "src": "made"
+  },
+  {
+   "text": "山里信号不好，杨洋去镇上才订到了回城的车票。",
+   "en": "The signal in the mountains was poor, so Yang Yang only managed to book a ticket back to the city in town.",
+   "ko": "산속은 신호가 안 좋아서 양양은 읍내에 가서야 도시로 돌아가는 표를 예매했어요.",
+   "blank": "订",
+   "src": "made"
+  }
+ ],
+ "w|订婚": [
+  {
+   "text": "卖首饰的女孩说，她下个月就要订婚了。",
+   "en": "The girl selling jewelry said she's getting engaged next month.",
+   "ko": "액세서리를 파는 아가씨는 다음 달에 약혼한다고 했어요.",
+   "blank": "订婚",
+   "src": "made"
+  },
+  {
+   "text": "村长的儿子和邻村的姑娘订婚了，全村都去喝喜酒。",
+   "en": "The village head's son got engaged to a girl from the next village, and the whole village went to celebrate.",
+   "ko": "촌장 아들이 이웃 마을 아가씨와 약혼해서 온 마을이 잔치에 갔어요.",
+   "blank": "订婚",
    "src": "made"
   }
  ],
@@ -62081,6 +63249,22 @@
    "src": "made"
   }
  ],
+ "w|货物": [
+  {
+   "text": "天快下雨了，摊主们赶紧用塑料布盖住货物。",
+   "en": "It was about to rain, so the stallholders hurried to cover their goods with plastic sheets.",
+   "ko": "곧 비가 올 것 같아서 상인들이 서둘러 비닐로 물건을 덮었어요.",
+   "blank": "货物",
+   "src": "made"
+  },
+  {
+   "text": "以前山里的货物全靠骡子驮下山。",
+   "en": "In the past, goods from the mountains were all carried down by mules.",
+   "ko": "예전엔 산의 물건을 모두 노새가 실어 날랐어요.",
+   "blank": "货物",
+   "src": "made"
+  }
+ ],
  "w|质疑": [
   {
    "text": "哥哥质疑张伟拿了家里的钱，张伟气得说不出话。",
@@ -62126,6 +63310,22 @@
    "en": "The lab plans to buy a new centrifuge.",
    "ko": "실험실은 새 원심분리기를 한 대 구입할 계획이에요.",
    "blank": "购买",
+   "src": "made"
+  }
+ ],
+ "w|购物": [
+  {
+   "text": "比起去商场购物，黄涛更喜欢在跳蚤市场慢慢淘东西。",
+   "en": "Rather than shopping at the mall, Huang Tao prefers browsing slowly at the flea market.",
+   "ko": "황타오는 쇼핑몰에서 쇼핑하기보다 벼룩시장에서 천천히 물건 고르는 걸 더 좋아해요.",
+   "blank": "购物",
+   "src": "made"
+  },
+  {
+   "text": "村里没有超市，大家购物都要走一个小时山路去镇上。",
+   "en": "There's no supermarket in the village, so everyone walks an hour of mountain road to town to shop.",
+   "ko": "마을에 슈퍼가 없어서 다들 장 보려면 산길을 한 시간 걸어 읍내에 가요.",
+   "blank": "购物",
    "src": "made"
   }
  ],
@@ -65043,6 +66243,22 @@
    "blank": "迟到"
   }
  ],
+ "w|迫使": [
+  {
+   "text": "房租越来越贵，迫使很多小店老板来这里摆摊。",
+   "en": "Rising rents have forced many small shop owners to set up stalls here.",
+   "ko": "집세가 점점 올라서 많은 작은 가게 주인들이 여기서 노점을 하게 됐어요.",
+   "blank": "迫使",
+   "src": "made"
+  },
+  {
+   "text": "连续的暴雨迫使村里的小学停课了三天。",
+   "en": "Days of heavy rain forced the village school to close for three days.",
+   "ko": "계속된 폭우 때문에 마을 초등학교가 사흘 동안 휴교했어요.",
+   "blank": "迫使",
+   "src": "made"
+  }
+ ],
  "w|迷人": [
   {
    "text": "这里的风景很迷人。",
@@ -65121,6 +66337,22 @@
    "blank": "追"
   }
  ],
+ "w|追捕": [
+  {
+   "text": "黄涛买的那本旧小说，讲的是警察追捕一个大盗的故事。",
+   "en": "The old novel Huang Tao bought is about the police hunting down a master thief.",
+   "ko": "황타오가 산 헌 소설은 경찰이 큰 도둑을 쫓는 이야기예요.",
+   "blank": "追捕",
+   "src": "made"
+  },
+  {
+   "text": "村里老人讲过，几十年前警察曾在这片山里追捕过逃犯。",
+   "en": "Village elders say that decades ago the police once hunted a fugitive in these mountains.",
+   "ko": "마을 노인들은 수십 년 전 경찰이 이 산에서 도망자를 쫓은 적이 있다고 해요.",
+   "blank": "追捕",
+   "src": "made"
+  }
+ ],
  "w|追求": [
   {
    "text": "他一直在追求自己的梦想。",
@@ -65149,6 +66381,22 @@
    "en": "Stop tracking me.",
    "ko": "더 이상 날 쫓지 마.",
    "blank": "追踪"
+  }
+ ],
+ "w|追逐": [
+  {
+   "text": "两只小猫在客厅里互相追逐，把纸箱都撞翻了。",
+   "en": "Two kittens chased each other around the living room and knocked over the cardboard box.",
+   "ko": "고양이 두 마리가 거실에서 서로 쫓아다니다가 종이 상자를 넘어뜨렸어요.",
+   "blank": "追逐",
+   "src": "made"
+  },
+  {
+   "text": "孙悦写道，她常想起两人在海滩上追逐海浪的样子。",
+   "en": "Sun Yue wrote that she often thinks of the two of them chasing waves on the beach.",
+   "ko": "쑨웨는 둘이 바닷가에서 파도를 쫓아다니던 모습이 자주 떠오른다고 썼어요.",
+   "blank": "追逐",
+   "src": "made"
   }
  ],
  "w|退": [
@@ -65508,6 +66756,22 @@
    "en": "The clerk quietly let Li Na know that this coat will be half price next week.",
    "ko": "직원이 리나에게 다음 주에 이 코트가 반값이 된다고 살짝 귀띔했어요.",
    "blank": "透露",
+   "src": "made"
+  }
+ ],
+ "w|逐步": [
+  {
+   "text": "跳蚤市场的人气逐步回升，周末又热闹起来了。",
+   "en": "The flea market's popularity is gradually recovering, and weekends are lively again.",
+   "ko": "벼룩시장 인기가 점점 회복돼서 주말이 다시 북적이기 시작했어요.",
+   "blank": "逐步",
+   "src": "made"
+  },
+  {
+   "text": "这些年，村里的道路和学校都在逐步改善。",
+   "en": "In recent years, the village's roads and school have been gradually improving.",
+   "ko": "요 몇 년 마을 길과 학교가 점차 나아지고 있어요.",
+   "blank": "逐步",
    "src": "made"
   }
  ],
@@ -67282,6 +68546,22 @@
    "en": "Sun Yue locked in her tickets early to see the autumn leaves in the mountains over the National Day holiday.",
    "ko": "쑨웨는 국경절 연휴에 산에 단풍 보러 갈 차표를 일찌감치 확보했어요.",
    "blank": "锁定",
+   "src": "made"
+  }
+ ],
+ "w|锅": [
+  {
+   "text": "奶奶一早就炖了一锅鸡汤，满屋都是香味。",
+   "en": "Grandma stewed a pot of chicken soup first thing in the morning, and the whole house smelled great.",
+   "ko": "할머니가 아침 일찍 닭고기 수프를 한 솥 끓여서 온 집 안에 냄새가 가득했어요.",
+   "blank": "锅",
+   "src": "made"
+  },
+  {
+   "text": "孙悦写道，她第一次煮粥就烧糊了一锅，全家笑了好久。",
+   "en": "Sun Yue wrote that the first time she made porridge she burned the whole pot, and the family laughed for ages.",
+   "ko": "쑨웨는 처음 죽을 끓였을 때 한 솥을 다 태워서 온 가족이 한참 웃었다고 썼어요.",
+   "blank": "锅",
    "src": "made"
   }
  ],

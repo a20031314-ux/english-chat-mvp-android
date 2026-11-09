@@ -909,6 +909,22 @@
    "src": "made"
   }
  ],
+ "w|أحادي": [
+  {
+   "text": "كتب عمر لصديقه أن الحياة ليست طريقا أحادي الاتجاه.",
+   "en": "Omar wrote to his friend that life is not a one-way road.",
+   "ko": "오마르는 친구에게 인생은 일방통행 길이 아니라고 썼어요.",
+   "blank": "أحادي",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت فاطمة أن الشارع صار باتجاه أحادي بعد الخريف.",
+   "en": "Fatima noticed the street became one-way after autumn.",
+   "ko": "파티마는 가을이 지나 그 길이 일방통행이 된 걸 알아챘어요.",
+   "blank": "أحادي",
+   "src": "made"
+  }
+ ],
  "w|أحاط": [
   {
    "text": "أحاط كريم المدير علما بتأخر الشحنة.",
@@ -1201,6 +1217,22 @@
    "en": "Everyone has a brother or sister.",
    "ko": "모든 사람은 형제나 자매가 있어.",
    "blank": "أخ"
+  }
+ ],
+ "w|أخاذ": [
+  {
+   "text": "وصف عمر في رسالته منظر الجبل الأخاذ من نافذة بيته الجديد.",
+   "en": "In his letter Omar described the breathtaking view of the mountain from his new house's window.",
+   "ko": "오마르는 편지에 새집 창문으로 보이는 넋을 빼앗는 산 풍경을 적었어요.",
+   "blank": "الأخاذ",
+   "src": "made"
+  },
+  {
+   "text": "وقفت فاطمة أمام لون الأشجار الأخاذ في أول الخريف.",
+   "en": "Fatima stood before the breathtaking color of the trees at the start of autumn.",
+   "ko": "파티마는 초가을 나무들의 황홀한 빛깔 앞에 멈춰 섰어요.",
+   "blank": "الأخاذ",
+   "src": "made"
   }
  ],
  "w|أخاف": [
@@ -2950,6 +2982,22 @@
    "en": "Layla kept the new workers busy arranging materials until the cement arrived.",
    "ko": "라일라는 시멘트가 올 때까지 새 인부들에게 자재 정리를 시켰어요.",
    "blank": "أشغلت",
+   "src": "made"
+  }
+ ],
+ "w|أشفق": [
+  {
+   "text": "أشفق عمر على صديقه حين عرف كم يعمل كل يوم.",
+   "en": "Omar felt sorry for his friend when he learned how much he works each day.",
+   "ko": "오마르는 친구가 매일 얼마나 일하는지 알고 안쓰러워했어요.",
+   "blank": "أشفق",
+   "src": "made"
+  },
+  {
+   "text": "أشفقت فاطمة على الطيور الصغيرة في البرد، فوضعت لها الحبوب.",
+   "en": "Fatima took pity on the little birds in the cold and put out grain for them.",
+   "ko": "파티마는 추위에 떠는 작은 새들이 안쓰러워 곡식을 놓아 줬어요.",
+   "blank": "أشفقت",
    "src": "made"
   }
  ],
@@ -4875,6 +4923,22 @@
    "src": "made"
   }
  ],
+ "w|أليف": [
+  {
+   "text": "أخبر عمر صديقه أن عنده الآن قطا أليفا ينام على رسائله.",
+   "en": "Omar told his friend he now has a tame cat that sleeps on his letters.",
+   "ko": "오마르는 친구에게 이제 자기 편지 위에서 자는 순한 고양이가 있다고 알렸어요.",
+   "blank": "أليفا",
+   "src": "made"
+  },
+  {
+   "text": "يجلس كلب فاطمة الأليف قرب المدفأة طوال الشتاء.",
+   "en": "Fatima's tame dog sits near the heater all winter.",
+   "ko": "파티마의 순한 개는 겨울 내내 난로 옆에 앉아 있어요.",
+   "blank": "الأليف",
+   "src": "made"
+  }
+ ],
  "w|أم": [
   {
    "text": "أمي تطبخ طعاماً لذيذاً كل يوم.",
@@ -5485,6 +5549,22 @@
    "en": "You two went to the market.",
    "ko": "너희 둘은 시장에 갔어.",
    "blank": "أنتما"
+  }
+ ],
+ "w|أنثوي": [
+  {
+   "text": "أرسل عمر لصديقه ديوانا لشاعرة بصوت أنثوي رقيق.",
+   "en": "Omar sent his friend a poetry collection by a poet with a delicate feminine voice.",
+   "ko": "오마르는 친구에게 섬세한 여성적 목소리를 지닌 시인의 시집을 보냈어요.",
+   "blank": "أنثوي",
+   "src": "made"
+  },
+  {
+   "text": "تحب فاطمة عطر الياسمين لأنه أنثوي وخفيف في الربيع.",
+   "en": "Fatima loves jasmine perfume because it's feminine and light in spring.",
+   "ko": "파티마는 봄에 어울리는 여성스럽고 가벼운 재스민 향수를 좋아해요.",
+   "blank": "أنثوي",
+   "src": "made"
   }
  ],
  "w|أنجب": [
@@ -7144,6 +7224,22 @@
    "en": "The race route passed the Museum of Islamic Art in the old city.",
    "ko": "경기 코스는 구시가지의 이슬람 미술관 앞을 지나갔어요.",
    "blank": "الإسلامي",
+   "src": "made"
+  }
+ ],
+ "w|إسمنت": [
+  {
+   "text": "خلط أحمد الإسمنت والرمل ليسد الشقوق في الجدار.",
+   "en": "Ahmed mixed cement and sand to fill the cracks in the wall.",
+   "ko": "아흐마드는 벽의 금을 메우려고 시멘트와 모래를 섞었어요.",
+   "blank": "الإسمنت",
+   "src": "made"
+  },
+  {
+   "text": "مر عامل يحمل كيس إسمنت ثقيلا بين البسطات.",
+   "en": "A worker carrying a heavy bag of cement passed between the stalls.",
+   "ko": "한 일꾼이 무거운 시멘트 포대를 지고 가판대 사이를 지나갔어요.",
+   "blank": "إسمنت",
    "src": "made"
   }
  ],
@@ -10553,6 +10649,22 @@
    "blank": "تستبدل"
   }
  ],
+ "w|استبشر": [
+  {
+   "text": "استبشر عمر بخبر عودة صديقه إلى المدينة في الصيف.",
+   "en": "Omar was cheered by the news of his friend's return to the city in summer.",
+   "ko": "오마르는 친구가 여름에 도시로 돌아온다는 소식에 기뻐했어요.",
+   "blank": "استبشر",
+   "src": "made"
+  },
+  {
+   "text": "استبشر الفلاحون بالغيوم السوداء فوق الوادي.",
+   "en": "The farmers took the dark clouds over the valley as a good sign.",
+   "ko": "농부들은 골짜기 위 먹구름을 좋은 징조로 반겼어요.",
+   "blank": "استبشر",
+   "src": "made"
+  }
+ ],
  "w|استبعد": [
   {
    "text": "استبعد خالد فكرة رفع رسوم موقف السيارات هذا العام.",
@@ -12530,6 +12642,22 @@
    "en": "Mariam explained that her family having to move was why her letters stopped.",
    "ko": "마리암은 가족이 이사를 가야 했던 탓에 편지가 끊겼다고 설명했어요.",
    "blank": "اضطرار",
+   "src": "made"
+  }
+ ],
+ "w|اضطرب": [
+  {
+   "text": "اضطرب عمر حين تأخرت الرسالة شهرين كاملين.",
+   "en": "Omar grew anxious when the letter was delayed two whole months.",
+   "ko": "편지가 꼬박 두 달 늦어지자 오마르는 불안해졌어요.",
+   "blank": "اضطرب",
+   "src": "made"
+  },
+  {
+   "text": "اضطربت فاطمة حين هبت عاصفة قوية في منتصف الليل.",
+   "en": "Fatima became uneasy when a strong storm blew in the middle of the night.",
+   "ko": "한밤중에 거센 폭풍이 불자 파티마는 불안해졌어요.",
+   "blank": "اضطربت",
    "src": "made"
   }
  ],
@@ -15071,6 +15199,38 @@
    "src": "made"
   }
  ],
+ "w|انشرح": [
+  {
+   "text": "انشرح صدر عمر حين وصلته رسالة طويلة بعد صمت طويل.",
+   "en": "Omar's heart was gladdened when a long letter reached him after a long silence.",
+   "ko": "오랜 침묵 끝에 긴 편지가 오자 오마르는 마음이 확 풀렸어요.",
+   "blank": "انشرح",
+   "src": "made"
+  },
+  {
+   "text": "انشرحت فاطمة حين رأت أول زهرة في الحديقة بعد الشتاء.",
+   "en": "Fatima's heart lifted when she saw the first flower in the garden after winter.",
+   "ko": "겨울이 지나고 정원에 첫 꽃이 핀 걸 보자 파티마는 마음이 환해졌어요.",
+   "blank": "انشرحت",
+   "src": "made"
+  }
+ ],
+ "w|انشغال": [
+  {
+   "text": "اعتذر عمر عن التأخير بسبب انشغاله بالبيت الجديد.",
+   "en": "Omar apologized for the delay because of being busy with the new house.",
+   "ko": "오마르는 새집 일로 바빠서 늦었다고 사과했어요.",
+   "blank": "انشغاله",
+   "src": "made"
+  },
+  {
+   "text": "رغم انشغال فاطمة بالعمل، تزرع الورد في حديقتها كل ربيع.",
+   "en": "Despite Fatima's busyness with work, she plants roses in her garden every spring.",
+   "ko": "파티마는 일로 바빠도 봄마다 정원에 장미를 심어요.",
+   "blank": "انشغال",
+   "src": "made"
+  }
+ ],
  "w|انشغل": [
   {
    "text": "انشغل أبي في العمل طوال النهار.",
@@ -15772,6 +15932,22 @@
    "en": "Sara's pupils widened when her colleague turned off the lights in the presentation hall.",
    "ko": "동료가 발표장 불을 끄자 사라의 동공이 커졌어요.",
    "blank": "بؤبؤ",
+   "src": "made"
+  }
+ ],
+ "w|بؤس": [
+  {
+   "text": "تذكر عمر سنوات البؤس في السكن الجامعي، وكيف كانا يتقاسمان الخبز.",
+   "en": "Omar remembered the years of misery in the student dorm and how they shared bread.",
+   "ko": "오마르는 대학 기숙사에서의 궁핍한 시절과 둘이 빵을 나눠 먹던 일을 떠올렸어요.",
+   "blank": "البؤس",
+   "src": "made"
+  },
+  {
+   "text": "قرأت فاطمة رواية عن بؤس الفلاحين في سنة الجفاف.",
+   "en": "Fatima read a novel about the misery of peasants in a year of drought.",
+   "ko": "파티마는 가뭄 든 해 농민들의 비참함을 다룬 소설을 읽었어요.",
+   "blank": "بؤس",
    "src": "made"
   }
  ],
@@ -17327,6 +17503,22 @@
    "src": "made"
   }
  ],
+ "w|برغي": [
+  {
+   "text": "سقط برغي صغير تحت الخزانة، فبحث عنه أحمد طويلا.",
+   "en": "A small screw fell under the wardrobe, and Ahmed searched for it for a long time.",
+   "ko": "작은 나사가 옷장 밑으로 떨어져서 아흐마드는 한참 찾았어요.",
+   "blank": "برغي",
+   "src": "made"
+  },
+  {
+   "text": "طلبت مريم برغيا واحدا فقط، فأعطاها البائع إياه مجانا.",
+   "en": "Mariam asked for just one screw, and the seller gave it to her for free.",
+   "ko": "마리암이 나사 하나만 달라고 하자 상인은 그냥 줬어요.",
+   "blank": "برغيا",
+   "src": "made"
+  }
+ ],
  "w|برق": [
   {
    "text": "رأيت وميض البرق في السماء.",
@@ -17505,6 +17697,22 @@
    "blank": "برهان"
   }
  ],
+ "w|برواز": [
+  {
+   "text": "علق أحمد صورة جده في برواز خشبي فوق المدفأة.",
+   "en": "Ahmed hung his grandfather's photo in a wooden frame above the fireplace.",
+   "ko": "아흐마드는 할아버지 사진을 나무 액자에 넣어 벽난로 위에 걸었어요.",
+   "blank": "برواز",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم بروازا ذهبيا لصورة تخرج أختها.",
+   "en": "Mariam bought a golden frame for her sister's graduation photo.",
+   "ko": "마리암은 동생 졸업 사진을 넣을 금빛 액자를 샀어요.",
+   "blank": "بروازا",
+   "src": "made"
+  }
+ ],
  "w|بروتوكول": [
   {
    "text": "راجع خالد بروتوكول استقبال الضيوف الرسميين قبل زيارة الوزير.",
@@ -17534,6 +17742,22 @@
    "en": "Layla eats lentils in winter because they are rich in protein.",
    "ko": "레일라는 단백질이 많아서 겨울에 렌틸콩을 먹어요.",
    "blank": "بالبروتين",
+   "src": "made"
+  }
+ ],
+ "w|برود": [
+  {
+   "text": "لاحظ عمر برودا في رسالة صديقه الأخيرة، فسأله عن السبب.",
+   "en": "Omar noticed a coldness in his friend's last letter and asked him why.",
+   "ko": "오마르는 친구의 마지막 편지에서 냉담함을 느끼고 이유를 물었어요.",
+   "blank": "برودا",
+   "src": "made"
+  },
+  {
+   "text": "شعرت فاطمة ببرود الهواء حين فتحت النافذة في تشرين.",
+   "en": "Fatima felt the chill of the air when she opened the window in October.",
+   "ko": "시월에 창문을 열자 파티마는 공기의 싸늘함을 느꼈어요.",
+   "blank": "ببرود",
    "src": "made"
   }
  ],
@@ -18931,6 +19155,22 @@
    "blank": "بلى"
   }
  ],
+ "w|بليغ": [
+  {
+   "text": "يحب عمر أسلوب صديقه البليغ في الكتابة.",
+   "en": "Omar loves his friend's eloquent style of writing.",
+   "ko": "오마르는 친구의 유려한 글솜씨를 좋아해요.",
+   "blank": "البليغ",
+   "src": "made"
+  },
+  {
+   "text": "كتبت فاطمة وصفا بليغا للمطر الأول في دفترها.",
+   "en": "Fatima wrote an eloquent description of the first rain in her notebook.",
+   "ko": "파티마는 공책에 첫비를 유려하게 묘사했어요.",
+   "blank": "بليغا",
+   "src": "made"
+  }
+ ],
  "w|بما": [
   {
    "text": "أخبرني بما حدث.",
@@ -19344,6 +19584,22 @@
    "en": "The speed of the new crane impressed Layla and her team.",
    "ko": "새 크레인의 속도에 라일라와 팀은 감탄했어요.",
    "blank": "بهرت",
+   "src": "made"
+  }
+ ],
+ "w|بهيج": [
+  {
+   "text": "بدأ عمر رسالته بخبر بهيج: ولدت ابنته الأولى.",
+   "en": "Omar began his letter with joyful news: his first daughter was born.",
+   "ko": "오마르는 첫딸이 태어났다는 기쁜 소식으로 편지를 시작했어요.",
+   "blank": "بهيج",
+   "src": "made"
+  },
+  {
+   "text": "يأتي الربيع إلى حديقة فاطمة بألوان بهيجة.",
+   "en": "Spring comes to Fatima's garden with cheerful colors.",
+   "ko": "파티마의 정원에 봄이 화사한 빛깔로 찾아와요.",
+   "blank": "بهيجة",
    "src": "made"
   }
  ],
@@ -22423,6 +22679,22 @@
    "src": "made"
   }
  ],
+ "w|تسريحة": [
+  {
+   "text": "وجد أحمد تسريحة جدته في العلية ونظف مرآتها.",
+   "en": "Ahmed found his grandmother's dressing table in the attic and cleaned its mirror.",
+   "ko": "아흐마드는 다락에서 할머니의 화장대를 찾아 거울을 닦았어요.",
+   "blank": "تسريحة",
+   "src": "made"
+  },
+  {
+   "text": "وجدت مريم تسريحة خشبية جميلة عند بائع الأثاث المستعمل.",
+   "en": "Mariam found a beautiful wooden dressing table at the used furniture seller's.",
+   "ko": "마리암은 중고 가구점에서 예쁜 나무 화장대를 찾았어요.",
+   "blank": "تسريحة",
+   "src": "made"
+  }
+ ],
  "w|تسع": [
   {
    "text": "ابنة جار حسن عمرها تسع سنوات وتعزف البيانو بمهارة.",
@@ -23818,6 +24090,22 @@
    "en": "Sara asked the municipality to improve the lighting in the market in the evening.",
    "ko": "사라는 시청에 저녁 시장 조명을 늘려 달라고 했어요.",
    "blank": "تعزيز",
+   "src": "made"
+  }
+ ],
+ "w|تعس": [
+  {
+   "text": "اعترف عمر أنه كان تعسا في المدينة الكبيرة في سنته الأولى.",
+   "en": "Omar admitted he was miserable in the big city in his first year.",
+   "ko": "오마르는 큰 도시에서 첫해에 불행했다고 털어놓았어요.",
+   "blank": "تعسا",
+   "src": "made"
+  },
+  {
+   "text": "بدا العصفور تعسا تحت المطر البارد على حافة النافذة.",
+   "en": "The sparrow looked miserable under the cold rain on the windowsill.",
+   "ko": "창틀 위 참새는 차가운 비를 맞으며 처량해 보였어요.",
+   "blank": "تعسا",
    "src": "made"
   }
  ],
@@ -25889,6 +26177,22 @@
    "src": "made"
   }
  ],
+ "w|تنفيس": [
+  {
+   "text": "قال عمر إن كتابة الرسائل نوع من التنفيس بعد يوم طويل.",
+   "en": "Omar said writing letters is a kind of venting after a long day.",
+   "ko": "오마르는 긴 하루 끝에 편지를 쓰는 건 일종의 속풀이라고 했어요.",
+   "blank": "التنفيس",
+   "src": "made"
+  },
+  {
+   "text": "تجد فاطمة في المشي تحت المطر تنفيسا عن تعب الأسبوع.",
+   "en": "Fatima finds walking in the rain a release from the week's fatigue.",
+   "ko": "파티마는 빗속을 걸으며 한 주의 피로를 풀어요.",
+   "blank": "تنفيسا",
+   "src": "made"
+  }
+ ],
  "w|تنقل": [
   {
    "text": "يتنقل زميل أحمد بين الفرعين بالدراجة كل يوم.",
@@ -26132,6 +26436,22 @@
    "en": "Mariam read in the news about counterfeit medicines being smuggled across the border.",
    "ko": "마리암은 국경을 넘어 가짜 약이 밀수된다는 뉴스를 읽었어요.",
    "blank": "تهريب",
+   "src": "made"
+  }
+ ],
+ "w|تهلل": [
+  {
+   "text": "تهلل وجه عمر حين رأى خط صديقه على الظرف.",
+   "en": "Omar's face lit up when he saw his friend's handwriting on the envelope.",
+   "ko": "봉투에 적힌 친구 글씨를 보자 오마르의 얼굴이 환해졌어요.",
+   "blank": "تهلل",
+   "src": "made"
+  },
+  {
+   "text": "تهللت فاطمة حين سمعت صوت المطر بعد صيف طويل.",
+   "en": "Fatima rejoiced when she heard the sound of rain after a long summer.",
+   "ko": "긴 여름 끝에 빗소리가 들리자 파티마는 기뻐했어요.",
+   "blank": "تهللت",
    "src": "made"
   }
  ],
@@ -27849,6 +28169,22 @@
    "blank": "جالس"
   }
  ],
+ "w|جامد": [
+  {
+   "text": "كتب عمر أن مديره رجل جامد لا يضحك أبدا.",
+   "en": "Omar wrote that his boss is a stiff man who never laughs.",
+   "ko": "오마르는 상사가 절대 웃지 않는 딱딱한 사람이라고 썼어요.",
+   "blank": "جامد",
+   "src": "made"
+  },
+  {
+   "text": "صار ماء البركة جامدا في أبرد ليلة من الشتاء.",
+   "en": "The pond water became solid on the coldest night of winter.",
+   "ko": "가장 추운 겨울밤에 연못물이 꽁꽁 얼었어요.",
+   "blank": "جامدا",
+   "src": "made"
+  }
+ ],
  "w|جامع": [
   {
    "text": "يصلي الناس في جامع كل يوم جمعة.",
@@ -28426,6 +28762,22 @@
    "en": "Maryam proposed a radical solution to the problem of late invoices.",
    "ko": "마리암은 늦어지는 청구서 문제에 근본적인 해결책을 내놓았어요.",
    "blank": "جذريا",
+   "src": "made"
+  }
+ ],
+ "w|جذل": [
+  {
+   "text": "كتب عمر رسالته وهو جذل بعد أن نجح ابنه في الامتحان.",
+   "en": "Omar wrote his letter overjoyed after his son passed the exam.",
+   "ko": "아들이 시험에 붙어 오마르는 신이 나서 편지를 썼어요.",
+   "blank": "جذل",
+   "src": "made"
+  },
+  {
+   "text": "ركض الأطفال جذلين في أول ثلج نزل على الحي.",
+   "en": "The children ran gleefully in the first snow that fell on the neighborhood.",
+   "ko": "동네에 첫눈이 내리자 아이들이 신나서 뛰어다녔어요.",
+   "blank": "جذلين",
    "src": "made"
   }
  ],
@@ -30300,6 +30652,22 @@
    "en": "Rana finished in eleventh place, her best ranking ever.",
    "ko": "라나는 열한 번째로 들어왔는데, 지금까지 중 최고 순위였어요.",
    "blank": "الحادي",
+   "src": "made"
+  }
+ ],
+ "w|حاذق": [
+  {
+   "text": "مدح عمر صديقه بأنه طباخ حاذق يعرف أسرار التوابل.",
+   "en": "Omar praised his friend as a skilled cook who knows the secrets of spices.",
+   "ko": "오마르는 친구가 향신료의 비밀을 아는 솜씨 좋은 요리사라고 칭찬했어요.",
+   "blank": "حاذق",
+   "src": "made"
+  },
+  {
+   "text": "تقول فاطمة إن جدها كان مزارعا حاذقا يعرف المطر من رائحة الهواء.",
+   "en": "Fatima says her grandfather was a skilled farmer who knew rain from the smell of the air.",
+   "ko": "파티마는 할아버지가 공기 냄새로 비를 아는 노련한 농부였다고 해요.",
+   "blank": "حاذقا",
    "src": "made"
   }
  ],
@@ -33725,6 +34093,22 @@
    "src": "made"
   }
  ],
+ "w|خائب": [
+  {
+   "text": "كتب عمر أنه عاد خائبا من المقابلة، لكنه لم يفقد الأمل.",
+   "en": "Omar wrote that he came back disappointed from the interview, but didn't lose hope.",
+   "ko": "오마르는 면접에서 실망하고 돌아왔지만 희망은 잃지 않았다고 썼어요.",
+   "blank": "خائبا",
+   "src": "made"
+  },
+  {
+   "text": "عاد الصيادون خائبين لأن البحر كان هائجا طوال الشتاء.",
+   "en": "The fishermen came back disappointed because the sea was rough all winter.",
+   "ko": "겨울 내내 바다가 거칠어서 어부들은 허탕 치고 돌아왔어요.",
+   "blank": "خائبين",
+   "src": "made"
+  }
+ ],
  "w|خائف": [
   {
    "text": "هو خائف من الظلام.",
@@ -34105,6 +34489,22 @@
    "blank": "خان"
   }
  ],
+ "w|خانق": [
+  {
+   "text": "وصف عمر زحام المدينة الخانق في ساعات الصباح.",
+   "en": "Omar described the city's stifling crowds in the morning hours.",
+   "ko": "오마르는 아침 시간 도시의 숨 막히는 혼잡을 묘사했어요.",
+   "blank": "الخانق",
+   "src": "made"
+  },
+  {
+   "text": "لا تحب فاطمة حر آب الخانق، وتنتظر أول نسمة باردة.",
+   "en": "Fatima doesn't like the stifling heat of August and waits for the first cool breeze.",
+   "ko": "파티마는 숨 막히는 팔월 더위를 싫어해서 첫 선선한 바람을 기다려요.",
+   "blank": "الخانق",
+   "src": "made"
+  }
+ ],
  "w|خبأ": [
   {
    "text": "خبأ التلميذ النقود في حقيبته.",
@@ -34442,6 +34842,22 @@
    "en": "The students fell suddenly silent when they saw Sara's huge cake.",
    "ko": "사라의 커다란 케이크를 보자 학생들이 갑자기 말을 잃었어요.",
    "blank": "خرس",
+   "src": "made"
+  }
+ ],
+ "w|خرسانة": [
+  {
+   "text": "صب العمال أرضية من الخرسانة في المطبخ الجديد.",
+   "en": "The workers poured a concrete floor in the new kitchen.",
+   "ko": "일꾼들이 새 부엌에 콘크리트 바닥을 부었어요.",
+   "blank": "الخرسانة",
+   "src": "made"
+  },
+  {
+   "text": "تقول مريم إن السوق الجديد كتلة من الخرسانة بلا روح.",
+   "en": "Mariam says the new market is a block of concrete without soul.",
+   "ko": "마리암은 새 시장이 영혼 없는 콘크리트 덩어리라고 해요.",
+   "blank": "الخرسانة",
    "src": "made"
   }
  ],
@@ -35275,6 +35691,22 @@
    "en": "This dish needs a little vinegar.",
    "ko": "이 요리는 식초가 조금 필요해.",
    "blank": "خل"
+  }
+ ],
+ "w|خلاب": [
+  {
+   "text": "أرفق عمر صورة لشاطئ خلاب زاره في الصيف.",
+   "en": "Omar attached a photo of a stunning beach he visited in the summer.",
+   "ko": "오마르는 여름에 다녀온 그림 같은 해변 사진을 동봉했어요.",
+   "blank": "خلاب",
+   "src": "made"
+  },
+  {
+   "text": "صعدت فاطمة إلى التلة لترى منظر الثلج الخلاب.",
+   "en": "Fatima climbed the hill to see the stunning view of the snow.",
+   "ko": "파티마는 눈 덮인 멋진 풍경을 보려고 언덕에 올랐어요.",
+   "blank": "الخلاب",
+   "src": "made"
   }
  ],
  "w|خلاص": [
@@ -36203,6 +36635,22 @@
    "blank": "داكن"
   }
  ],
+ "w|دامس": [
+  {
+   "text": "تذكر عمر ليلة انقطع فيها الكهرباء وصار الحي في ظلام دامس.",
+   "en": "Omar remembered a night when the power went out and the neighborhood was in pitch darkness.",
+   "ko": "오마르는 정전으로 동네가 칠흑같이 어두웠던 밤을 떠올렸어요.",
+   "blank": "دامس",
+   "src": "made"
+  },
+  {
+   "text": "في ليالي الشتاء الطويلة يغطي الحي ظلام دامس قبل العشاء.",
+   "en": "On long winter nights, pitch darkness covers the neighborhood before dinner.",
+   "ko": "긴 겨울밤이면 저녁 먹기 전부터 동네가 칠흑같이 어두워요.",
+   "blank": "دامس",
+   "src": "made"
+  }
+ ],
  "w|داهم": [
   {
    "text": "داهم الجوع حسن قبل نهاية الحصة بساعة.",
@@ -36429,6 +36877,22 @@
    "en": "I will pay the entrance fee for the museum.",
    "ko": "박물관 입장료를 낼 거예요.",
    "blank": "دخول"
+  }
+ ],
+ "w|درابزين": [
+  {
+   "text": "صبغ أحمد الدرابزين الحديدي باللون الأسود.",
+   "en": "Ahmed painted the iron banister black.",
+   "ko": "아흐마드는 쇠 난간을 검은색으로 칠했어요.",
+   "blank": "الدرابزين",
+   "src": "made"
+  },
+  {
+   "text": "أمسكت مريم الدرابزين وهي تنزل درج السوق المزدحم.",
+   "en": "Mariam held the railing as she went down the crowded market stairs.",
+   "ko": "마리암은 붐비는 시장 계단을 내려가며 난간을 잡았어요.",
+   "blank": "الدرابزين",
+   "src": "made"
   }
  ],
  "w|دراجة": [
@@ -37577,6 +38041,22 @@
    "src": "made"
   }
  ],
+ "w|ديكور": [
+  {
+   "text": "أراد أحمد ديكورا بسيطا يحفظ روح البيت القديم.",
+   "en": "Ahmed wanted simple decor that keeps the spirit of the old house.",
+   "ko": "아흐마드는 옛집의 분위기를 살린 소박한 인테리어를 원했어요.",
+   "blank": "ديكورا",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت مريم أن محل التوابل غير الديكور بألوان دافئة.",
+   "en": "Mariam noticed the spice shop changed its decor with warm colors.",
+   "ko": "마리암은 향신료 가게가 따뜻한 색으로 인테리어를 바꾼 걸 봤어요.",
+   "blank": "الديكور",
+   "src": "made"
+  }
+ ],
  "w|ديمقراطي": [
   {
    "text": "تدار عيادة الأسنان بأسلوب ديمقراطي، فكل موظف يبدي رأيه.",
@@ -37971,6 +38451,22 @@
    "en": "This is a beautiful memory I will never forget.",
    "ko": "이것은 절대 잊지 못할 아름다운 추억이야.",
    "blank": "ذكرى"
+  }
+ ],
+ "w|ذكوري": [
+  {
+   "text": "ضحك عمر في رسالته من مكتبه القديم الذي كان عالما ذكوريا بالكامل.",
+   "en": "In his letter Omar laughed about his old office, which was an entirely male world.",
+   "ko": "오마르는 편지에서 완전히 남자들만의 세계였던 옛 사무실 이야기를 하며 웃었어요.",
+   "blank": "ذكوريا",
+   "src": "made"
+  },
+  {
+   "text": "قالت فاطمة إن معطف أخيها الشتوي ذكوري جدا بلونه الرمادي.",
+   "en": "Fatima said her brother's winter coat is very masculine with its gray color.",
+   "ko": "파티마는 오빠의 회색 겨울 외투가 아주 남성적이라고 했어요.",
+   "blank": "ذكوري",
+   "src": "made"
   }
  ],
  "w|ذكي": [
@@ -38377,6 +38873,22 @@
    "src": "made"
   }
  ],
+ "w|رائج": [
+  {
+   "text": "سأل عمر صديقه عن الكتاب الرائج الذي يقرؤه الجميع في بلده.",
+   "en": "Omar asked his friend about the popular book everyone is reading in his town.",
+   "ko": "오마르는 친구에게 그곳에서 다들 읽는다는 인기 책에 대해 물었어요.",
+   "blank": "الرائج",
+   "src": "made"
+  },
+  {
+   "text": "اشترت فاطمة الوشاح الرائج هذا الشتاء بلونه الأخضر.",
+   "en": "Fatima bought this winter's trendy scarf in its green color.",
+   "ko": "파티마는 이번 겨울에 유행하는 초록색 목도리를 샀어요.",
+   "blank": "الرائج",
+   "src": "made"
+  }
+ ],
  "w|رائحة": [
   {
    "text": "رائحة القهوة هنا ممتازة.",
@@ -38533,6 +39045,22 @@
    "en": "The radio broadcasts news every hour.",
    "ko": "라디오는 매시간 뉴스를 방송해.",
    "blank": "الراديو"
+  }
+ ],
+ "w|راسخ": [
+  {
+   "text": "كتب عمر أن إيمانه بصداقتهما راسخ رغم المسافة.",
+   "en": "Omar wrote that his faith in their friendship is firm despite the distance.",
+   "ko": "오마르는 멀리 떨어져 있어도 둘의 우정에 대한 믿음은 굳건하다고 썼어요.",
+   "blank": "راسخ",
+   "src": "made"
+  },
+  {
+   "text": "عند فاطمة عادة راسخة: تشرب الشاي على الشرفة كل خريف.",
+   "en": "Fatima has a firm habit: she drinks tea on the balcony every autumn.",
+   "ko": "파티마에게는 가을마다 발코니에서 차를 마시는 굳은 습관이 있어요.",
+   "blank": "راسخة",
+   "src": "made"
   }
  ],
  "w|راسل": [
@@ -38917,6 +39445,22 @@
    "blank": "رتب"
   }
  ],
+ "w|رتيب": [
+  {
+   "text": "صار عمل أحمد في البيت القديم رتيبا: كشط ودهان كل يوم.",
+   "en": "Ahmed's work on the old house became monotonous: scraping and painting every day.",
+   "ko": "오래된 집에서 아흐마드의 일은 매일 긁고 칠하는 단조로운 일이 됐어요.",
+   "blank": "رتيبا",
+   "src": "made"
+  },
+  {
+   "text": "تقول مريم إن السوق يكسر يومها الرتيب في المكتب.",
+   "en": "Mariam says the market breaks her monotonous day at the office.",
+   "ko": "마리암은 시장에 가면 사무실의 단조로운 하루가 깨진다고 해요.",
+   "blank": "الرتيب",
+   "src": "made"
+  }
+ ],
  "w|رجا": [
   {
    "text": "رجا الطفل أمه أن تشتري له لعبة.",
@@ -39164,6 +39708,22 @@
    "en": "The coach was gentle with Layla when she got a cramp in her leg.",
    "ko": "라일라가 다리에 쥐가 났을 때 코치는 너그럽게 대해 줬어요.",
    "blank": "رحيما",
+   "src": "made"
+  }
+ ],
+ "w|رخام": [
+  {
+   "text": "اكتشف أحمد تحت السجادة أرضية من الرخام الأبيض.",
+   "en": "Ahmed discovered a white marble floor under the carpet.",
+   "ko": "아흐마드는 카펫 밑에서 흰 대리석 바닥을 발견했어요.",
+   "blank": "الرخام",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم لوحا صغيرا من الرخام لتقطع عليه العجين.",
+   "en": "Mariam bought a small marble slab to cut dough on.",
+   "ko": "마리암은 반죽을 자를 작은 대리석 판을 샀어요.",
+   "blank": "الرخام",
    "src": "made"
   }
  ],
@@ -40265,6 +40825,22 @@
    "src": "made"
   }
  ],
+ "w|ركيك": [
+  {
+   "text": "وجد أحمد رسالة قديمة بخط ركيك مخبأة في الجدار.",
+   "en": "Ahmed found an old letter in clumsy writing hidden in the wall.",
+   "ko": "아흐마드는 벽 속에 숨겨진, 서툰 글씨로 쓴 옛 편지를 발견했어요.",
+   "blank": "ركيك",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت مريم من لافتة كتبت بعربية ركيكة عند بائع الأحذية.",
+   "en": "Mariam laughed at a sign written in clumsy Arabic at the shoe seller's.",
+   "ko": "마리암은 신발 가게의 서툰 아랍어 간판을 보고 웃었어요.",
+   "blank": "ركيكة",
+   "src": "made"
+  }
+ ],
  "w|رماد": [
   {
    "text": "أشعل عمر نارا على الرمال، ثم غطى الرماد بالرمل قبل أن يغادر.",
@@ -40473,6 +41049,22 @@
    "src": "made"
   }
  ],
+ "w|رهاب": [
+  {
+   "text": "كتب عمر أنه تغلب أخيرا على رهاب الطيران.",
+   "en": "Omar wrote that he finally overcame his fear of flying.",
+   "ko": "오마르는 마침내 비행 공포증을 이겨 냈다고 썼어요.",
+   "blank": "رهاب",
+   "src": "made"
+  },
+  {
+   "text": "قرأت فاطمة مقالا عن رهاب الأماكن المغلقة في الشتاء.",
+   "en": "Fatima read an article about claustrophobia in winter.",
+   "ko": "파티마는 겨울철 폐쇄 공포증에 관한 기사를 읽었어요.",
+   "blank": "رهاب",
+   "src": "made"
+  }
+ ],
  "w|رهان": [
   {
    "text": "دخلت في رهان مع صديقي حول المباراة.",
@@ -40485,6 +41077,22 @@
    "en": "I don't like the idea of betting on important things.",
    "ko": "나는 중요한 일에 내기하는 생각이 싫다.",
    "blank": "الرهان"
+  }
+ ],
+ "w|رهب": [
+  {
+   "text": "كتب عمر أنه كان يرهب الامتحانات أكثر من أي شيء آخر.",
+   "en": "Omar wrote that he used to dread exams more than anything else.",
+   "ko": "오마르는 무엇보다 시험이 두려웠다고 썼어요.",
+   "blank": "يرهب",
+   "src": "made"
+  },
+  {
+   "text": "كانت فاطمة في صغرها ترهب صوت الرعد في الشتاء.",
+   "en": "As a child, Fatima used to dread the sound of thunder in winter.",
+   "ko": "파티마는 어릴 때 겨울 천둥소리를 무서워했어요.",
+   "blank": "ترهب",
+   "src": "made"
   }
  ],
  "w|رهبة": [
@@ -40986,6 +41594,22 @@
    "en": "Huda squeezed past the camera operators to see the shot on the monitor.",
    "ko": "후다는 모니터로 장면을 보려고 촬영기사들 틈을 비집고 들어갔어요.",
    "blank": "زاحمت",
+   "src": "made"
+  }
+ ],
+ "w|زاخر": [
+  {
+   "text": "كانت العلية زاخرة بالكتب والصناديق القديمة.",
+   "en": "The attic was full of old books and boxes.",
+   "ko": "다락은 옛 책과 상자로 가득했어요.",
+   "blank": "زاخرة",
+   "src": "made"
+  },
+  {
+   "text": "كان سوق الجمعة زاخرا بالفواكه والألوان.",
+   "en": "The Friday market was full of fruit and colors.",
+   "ko": "금요 시장은 과일과 색깔로 가득했어요.",
+   "blank": "زاخرا",
    "src": "made"
   }
  ],
@@ -41853,6 +42477,22 @@
    "blank": "سائح"
   }
  ],
+ "w|سائد": [
+  {
+   "text": "اختار أحمد الطراز السائد في الحي حتى لا يختلف بيته عن الجيران.",
+   "en": "Ahmed chose the prevailing style in the neighborhood so his house wouldn't differ from the neighbors'.",
+   "ko": "아흐마드는 집이 이웃과 튀지 않게 동네에서 흔한 양식을 골랐어요.",
+   "blank": "السائد",
+   "src": "made"
+  },
+  {
+   "text": "تعرف مريم أن السعر السائد للطماطم ارتفع هذا الأسبوع.",
+   "en": "Mariam knows the going price of tomatoes went up this week.",
+   "ko": "마리암은 이번 주 토마토 시세가 올랐다는 걸 알아요.",
+   "blank": "السائد",
+   "src": "made"
+  }
+ ],
  "w|سائق": [
   {
    "text": "السائق يقود الحافلة.",
@@ -42101,6 +42741,22 @@
    "blank": "سارق"
   }
  ],
+ "w|ساطع": [
+  {
+   "text": "دخل ضوء ساطع إلى الصالة بعد أن فتح أحمد النافذة المسدودة.",
+   "en": "Bright light entered the hall after Ahmed opened the blocked window.",
+   "ko": "아흐마드가 막혀 있던 창을 트자 거실에 환한 빛이 들어왔어요.",
+   "blank": "ساطع",
+   "src": "made"
+  },
+  {
+   "text": "لبست مريم قبعة كبيرة لأن شمس الظهر كانت ساطعة.",
+   "en": "Mariam wore a big hat because the noon sun was bright.",
+   "ko": "한낮 햇살이 강해서 마리암은 큰 모자를 썼어요.",
+   "blank": "ساطعة",
+   "src": "made"
+  }
+ ],
  "w|ساطور": [
   {
    "text": "استعار خالد ساطور الطباخ ليقطع حبلا غليظا.",
@@ -42290,6 +42946,22 @@
    "en": "Huda bargained with the producer over her fee before signing the contract.",
    "ko": "후다는 계약서에 서명하기 전에 제작자와 출연료를 흥정했어요.",
    "blank": "ساومت",
+   "src": "made"
+  }
+ ],
+ "w|ساونا": [
+  {
+   "text": "حول أحمد الغرفة الصغيرة قرب الحمام إلى ساونا.",
+   "en": "Ahmed turned the small room near the bathroom into a sauna.",
+   "ko": "아흐마드는 욕실 옆 작은 방을 사우나로 바꿨어요.",
+   "blank": "ساونا",
+   "src": "made"
+  },
+  {
+   "text": "قالت البائعة لمريم إن حر السوق في آب يشبه الساونا.",
+   "en": "The saleswoman told Mariam the market's heat in August is like a sauna.",
+   "ko": "상인은 마리암에게 팔월 시장 더위는 사우나 같다고 했어요.",
+   "blank": "الساونا",
    "src": "made"
   }
  ],
@@ -42895,6 +43567,22 @@
    "src": "made"
   }
  ],
+ "w|سحيق": [
+  {
+   "text": "يطل البيت القديم على واد سحيق خلف الحديقة.",
+   "en": "The old house overlooks a deep valley behind the garden.",
+   "ko": "오래된 집은 정원 뒤 깊은 골짜기를 내려다봐요.",
+   "blank": "سحيق",
+   "src": "made"
+  },
+  {
+   "text": "يقول بائع التمر لمريم إن هذا السوق موجود منذ زمن سحيق.",
+   "en": "The date seller tells Mariam this market has existed since ancient times.",
+   "ko": "대추야자 상인은 마리암에게 이 시장이 아주 먼 옛날부터 있었다고 해요.",
+   "blank": "سحيق",
+   "src": "made"
+  }
+ ],
  "w|سخاء": [
   {
    "text": "تحدث الجيران عن سخاء حسن حين وزع خضار حديقته عليهم.",
@@ -43042,6 +43730,22 @@
    "en": "Mona divided the canvas so the sky takes only a sixth of the space.",
    "ko": "모나는 하늘이 화면의 육분의 일만 차지하도록 그림을 나눴어요.",
    "blank": "سدس",
+   "src": "made"
+  }
+ ],
+ "w|سديد": [
+  {
+   "text": "أعطى المهندس أحمد رأيا سديدا: ابدأ بالسقف قبل الجدران.",
+   "en": "The engineer gave Ahmed sound advice: start with the roof before the walls.",
+   "ko": "엔지니어는 아흐마드에게 벽보다 지붕부터 하라는 옳은 조언을 했어요.",
+   "blank": "سديدا",
+   "src": "made"
+  },
+  {
+   "text": "أعطت مريم صديقتها نصيحة سديدة: لا تشتري من أول بسطة.",
+   "en": "Mariam gave her friend sound advice: don't buy from the first stall.",
+   "ko": "마리암은 친구에게 첫 가판대에서는 사지 말라는 옳은 조언을 했어요.",
+   "blank": "سديدة",
    "src": "made"
   }
  ],
@@ -44159,6 +44863,22 @@
    "en": "The student's behavior was respectful in class.",
    "ko": "학생의 태도는 교실에서 예의 바랐다.",
    "blank": "سلوك"
+  }
+ ],
+ "w|سلوى": [
+  {
+   "text": "وجد عمر سلوى في رسائل صديقه حين كان بعيدا عن أهله.",
+   "en": "Omar found comfort in his friend's letters when he was far from his family.",
+   "ko": "오마르는 가족과 떨어져 있을 때 친구의 편지에서 위안을 얻었어요.",
+   "blank": "سلوى",
+   "src": "made"
+  },
+  {
+   "text": "كانت أصوات المطر سلوى لفاطمة في ليالي الأرق.",
+   "en": "The sounds of rain were a comfort to Fatima on sleepless nights.",
+   "ko": "잠 못 드는 밤에 빗소리는 파티마에게 위안이 됐어요.",
+   "blank": "سلوى",
+   "src": "made"
   }
  ],
  "w|سليم": [
@@ -45425,6 +46145,22 @@
    "en": "He watched the match with his friends.",
    "ko": "그는 친구들과 경기를 봤다.",
    "blank": "شاهد"
+  }
+ ],
+ "w|شاهق": [
+  {
+   "text": "يرى أحمد من السطح برجا شاهقا بني حديثا في وسط المدينة.",
+   "en": "From the roof Ahmed sees a towering building recently built in the city center.",
+   "ko": "아흐마드는 옥상에서 시내 한가운데 새로 지은 높은 탑을 봐요.",
+   "blank": "شاهقا",
+   "src": "made"
+  },
+  {
+   "text": "يقع السوق القديم في ظل جدار شاهق من الحجر.",
+   "en": "The old market lies in the shadow of a towering stone wall.",
+   "ko": "옛 시장은 높이 솟은 돌담 그늘 아래 있어요.",
+   "blank": "شاهق",
+   "src": "made"
   }
  ],
  "w|شاور": [
@@ -47439,7 +48175,7 @@
   {
    "text": "في الطابق الثاني ملصقات قديمة لحزب شيوعي صغير.",
    "en": "On the second floor there are old posters of a small communist party.",
-   "ko": "이 층에는 작은 공산당의 오래된 포스터들이 있어요.",
+   "ko": "두 번째 층에는 작은 공산당의 오래된 포스터들이 있어요.",
    "blank": "شيوعي",
    "src": "made"
   },
@@ -47647,6 +48383,22 @@
    "src": "made"
   }
  ],
+ "w|صاف": [
+  {
+   "text": "بعد التنظيف صار ماء البئر صافيا من جديد.",
+   "en": "After the cleaning, the well water became clear again.",
+   "ko": "청소하고 나니 우물물이 다시 맑아졌어요.",
+   "blank": "صافيا",
+   "src": "made"
+  },
+  {
+   "text": "اختارت مريم عسلا صافيا لونه كالذهب.",
+   "en": "Mariam chose a clear honey whose color is like gold.",
+   "ko": "마리암은 금빛처럼 맑은 꿀을 골랐어요.",
+   "blank": "صافيا",
+   "src": "made"
+  }
+ ],
  "w|صافح": [
   {
    "text": "صافح صديقه عند اللقاء.",
@@ -47746,6 +48498,38 @@
    "en": "Rana's son stayed silent throughout the checkup out of fear.",
    "ko": "라나의 아들은 너무 무서워서 검진 내내 아무 말도 못 했어요.",
    "blank": "صامتا",
+   "src": "made"
+  }
+ ],
+ "w|صامد": [
+  {
+   "text": "بقي الجدار الحجري صامدا رغم مرور مئة سنة عليه.",
+   "en": "The stone wall remained standing despite a hundred years passing.",
+   "ko": "돌벽은 백 년이 지나도 굳건히 버티고 있었어요.",
+   "blank": "صامدا",
+   "src": "made"
+  },
+  {
+   "text": "بقي محل الحلويات القديم صامدا رغم المتاجر الكبيرة الجديدة.",
+   "en": "The old sweet shop has held out despite the big new stores.",
+   "ko": "오래된 과자 가게는 새로 생긴 큰 매장들 사이에서도 꿋꿋이 버텼어요.",
+   "blank": "صامدا",
+   "src": "made"
+  }
+ ],
+ "w|صامولة": [
+  {
+   "text": "شد أحمد الصامولة جيدا حتى لا يتحرك الأنبوب.",
+   "en": "Ahmed tightened the nut well so the pipe wouldn't move.",
+   "ko": "아흐마드는 관이 움직이지 않게 너트를 꽉 조였어요.",
+   "blank": "الصامولة",
+   "src": "made"
+  },
+  {
+   "text": "بحثت مريم عن صامولة بنفس حجم البرغي القديم.",
+   "en": "Mariam looked for a nut the same size as the old bolt.",
+   "ko": "마리암은 옛 볼트와 크기가 같은 너트를 찾았어요.",
+   "blank": "صامولة",
    "src": "made"
   }
  ],
@@ -48521,6 +49305,22 @@
    "en": "My teacher just entered the classroom.",
    "ko": "선생님이 방금 교실에 들어오셨어.",
    "blank": "صف"
+  }
+ ],
+ "w|صفاء": [
+  {
+   "text": "كتب عمر عن صفاء السماء في قريته بعد المطر.",
+   "en": "Omar wrote about the clarity of the sky in his village after the rain.",
+   "ko": "오마르는 비 온 뒤 마을 하늘의 맑음에 대해 썼어요.",
+   "blank": "صفاء",
+   "src": "made"
+  },
+  {
+   "text": "تحب فاطمة صفاء الصباح في أول أيام الخريف.",
+   "en": "Fatima loves the clearness of the morning in the first days of autumn.",
+   "ko": "파티마는 초가을 아침의 맑음을 좋아해요.",
+   "blank": "صفاء",
+   "src": "made"
   }
  ],
  "w|صفة": [
@@ -50217,6 +51017,22 @@
    "blank": "طازج"
   }
  ],
+ "w|طاغ": [
+  {
+   "text": "كان في البيت حزن طاغ حين وصله أحمد أول مرة.",
+   "en": "There was an overwhelming sadness in the house when Ahmed first arrived.",
+   "ko": "아흐마드가 처음 왔을 때 집에는 압도적인 슬픔이 감돌았어요.",
+   "blank": "طاغ",
+   "src": "made"
+  },
+  {
+   "text": "كانت رائحة البهارات طاغية في زقاق العطارين.",
+   "en": "The smell of spices was overpowering in the spice sellers' alley.",
+   "ko": "향신료 상인 골목에는 향신료 냄새가 진동했어요.",
+   "blank": "طاغية",
+   "src": "made"
+  }
+ ],
  "w|طاقة": [
   {
    "text": "الأطفال لديهم طاقة لا تنتهي.",
@@ -51205,6 +52021,22 @@
    "blank": "طوال"
   }
  ],
+ "w|طوب": [
+  {
+   "text": "بنى أحمد سورا صغيرا من الطوب الأحمر حول الحديقة.",
+   "en": "Ahmed built a small wall of red bricks around the garden.",
+   "ko": "아흐마드는 정원에 붉은 벽돌로 낮은 담을 쌓았어요.",
+   "blank": "الطوب",
+   "src": "made"
+  },
+  {
+   "text": "بني السوق المسقوف من الطوب قبل مئتي سنة.",
+   "en": "The covered market was built of brick two hundred years ago.",
+   "ko": "지붕 덮인 시장은 이백 년 전에 벽돌로 지어졌어요.",
+   "blank": "الطوب",
+   "src": "made"
+  }
+ ],
  "w|طور": [
   {
    "text": "طور فريقنا فكرة جديدة.",
@@ -51851,6 +52683,22 @@
    "src": "made"
   }
  ],
+ "w|عارم": [
+  {
+   "text": "شعر أحمد بفرح عارم حين اشتغلت المدفأة القديمة.",
+   "en": "Ahmed felt overwhelming joy when the old heater started working.",
+   "ko": "오래된 난로가 켜지자 아흐마드는 벅찬 기쁨을 느꼈어요.",
+   "blank": "عارم",
+   "src": "made"
+  },
+  {
+   "text": "ركض الأطفال بفرح عارم نحو بائع البالونات.",
+   "en": "The children ran with overwhelming joy toward the balloon seller.",
+   "ko": "아이들이 신이 나서 풍선 장수에게 달려갔어요.",
+   "blank": "عارم",
+   "src": "made"
+  }
+ ],
  "w|عازب": [
   {
    "text": "ما زلت عازب وأستمتع بحياتي.",
@@ -52410,6 +53258,22 @@
    "en": "The plate seller sat on the threshold of his shop waiting for customers.",
    "ko": "접시 장수는 가게 문턱에 앉아 손님을 기다렸어요.",
    "blank": "عتبة",
+   "src": "made"
+  }
+ ],
+ "w|عتيد": [
+  {
+   "text": "استعان أحمد بنجار عتيد في ترميم الأبواب الخشبية.",
+   "en": "Ahmed sought the help of a seasoned carpenter in restoring the wooden doors.",
+   "ko": "아흐마드는 나무 문을 복원하는 데 노련한 목수의 도움을 받았어요.",
+   "blank": "عتيد",
+   "src": "made"
+  },
+  {
+   "text": "تشتري مريم القهوة دائما من تاجر عتيد يعرف كل أنواع البن.",
+   "en": "Mariam always buys coffee from a seasoned trader who knows every kind of bean.",
+   "ko": "마리암은 늘 원두라면 모르는 게 없는 노련한 상인에게서 커피를 사요.",
+   "blank": "عتيد",
    "src": "made"
   }
  ],
@@ -53267,6 +54131,38 @@
    "en": "I like honey with bread in the morning.",
    "ko": "나는 아침에 빵과 꿀을 좋아해.",
    "blank": "عسل"
+  }
+ ],
+ "w|عسى": [
+  {
+   "text": "قال أحمد وهو ينظر إلى السقف: عسى أن ننتهي قبل المطر.",
+   "en": "Ahmed said, looking at the ceiling: hopefully we'll finish before the rain.",
+   "ko": "아흐마드는 천장을 보며 비 오기 전에 끝내면 좋겠다고 말했어요.",
+   "blank": "عسى",
+   "src": "made"
+  },
+  {
+   "text": "قالت مريم للبائع: عسى أن يكون السمك طازجا اليوم.",
+   "en": "Mariam said to the seller: I hope the fish is fresh today.",
+   "ko": "마리암은 상인에게 오늘 생선이 싱싱하길 바란다고 말했어요.",
+   "blank": "عسى",
+   "src": "made"
+  }
+ ],
+ "w|عسير": [
+  {
+   "text": "كان نقل الخزانة الثقيلة إلى الطابق الثاني أمرا عسيرا.",
+   "en": "Moving the heavy wardrobe to the second floor was a difficult task.",
+   "ko": "무거운 옷장을 이 층으로 옮기는 건 힘든 일이었어요.",
+   "blank": "عسيرا",
+   "src": "made"
+  },
+  {
+   "text": "كان العثور على موقف للسيارة قرب السوق أمرا عسيرا.",
+   "en": "Finding a parking spot near the market was a difficult matter.",
+   "ko": "시장 근처에 주차 자리를 찾는 건 힘든 일이었어요.",
+   "blank": "عسيرا",
+   "src": "made"
   }
  ],
  "w|عش": [
@@ -58605,6 +59501,22 @@
    "blank": "فهم"
   }
  ],
+ "w|فوبيا": [
+  {
+   "text": "ضحك عمر من فوبيا صديقه القديمة من القطط.",
+   "en": "Omar laughed at his friend's old phobia of cats.",
+   "ko": "오마르는 친구의 오래된 고양이 공포증을 놀렸어요.",
+   "blank": "فوبيا",
+   "src": "made"
+  },
+  {
+   "text": "لدى أخت فاطمة فوبيا من النحل، فلا تخرج إلى الحديقة في الربيع.",
+   "en": "Fatima's sister has a phobia of bees, so she doesn't go out to the garden in spring.",
+   "ko": "파티마의 언니는 벌 공포증이 있어서 봄에는 정원에 나가지 않아요.",
+   "blank": "فوبيا",
+   "src": "made"
+  }
+ ],
  "w|فور": [
   {
    "text": "فور ما وصل رن علي.",
@@ -59175,6 +60087,22 @@
    "blank": "قاس"
   }
  ],
+ "w|قاصر": [
+  {
+   "text": "لا يستطيع ابن أحمد القاصر أن يوقع عقد شراء البيت.",
+   "en": "Ahmed's underage son cannot sign the house purchase contract.",
+   "ko": "아흐마드의 미성년 아들은 집 매매 계약서에 서명할 수 없어요.",
+   "blank": "القاصر",
+   "src": "made"
+  },
+  {
+   "text": "رفض البائع أن يبيع السجائر لولد قاصر أمام مريم.",
+   "en": "The seller refused to sell cigarettes to an underage boy in front of Mariam.",
+   "ko": "상인은 마리암 앞에서 미성년 소년에게 담배를 팔지 않았어요.",
+   "blank": "قاصر",
+   "src": "made"
+  }
+ ],
  "w|قاض": [
   {
    "text": "جلس القاض في المحكمة.",
@@ -59321,6 +60249,22 @@
    "en": "I bought a new dictionary to learn the language.",
    "ko": "나는 언어를 배우기 위해 새 사전을 샀다.",
    "blank": "قاموس"
+  }
+ ],
+ "w|قانط": [
+  {
+   "text": "كتب عمر لصديقه القانط: لا تيأس، فالباب لم يغلق بعد.",
+   "en": "Omar wrote to his despairing friend: don't give up, the door isn't closed yet.",
+   "ko": "오마르는 절망한 친구에게 아직 문이 닫히지 않았으니 포기하지 말라고 썼어요.",
+   "blank": "القانط",
+   "src": "made"
+  },
+  {
+   "text": "كان الفلاح قانطا من المطر حتى جاءت الغيوم فجأة.",
+   "en": "The farmer had despaired of rain until the clouds suddenly came.",
+   "ko": "농부는 비를 포기하고 있었는데 갑자기 구름이 몰려왔어요.",
+   "blank": "قانطا",
+   "src": "made"
   }
  ],
  "w|قانون": [
@@ -59935,6 +60879,22 @@
    "blank": "قرب"
   }
  ],
+ "w|قربة": [
+  {
+   "text": "وجد أحمد قربة جلدية قديمة كان جده يحمل فيها الماء.",
+   "en": "Ahmed found an old leather waterskin his grandfather used to carry water in.",
+   "ko": "아흐마드는 할아버지가 물을 담아 다니던 낡은 가죽 물주머니를 찾았어요.",
+   "blank": "قربة",
+   "src": "made"
+  },
+  {
+   "text": "يبيع رجل عجوز في السوق الماء البارد من قربة على ظهره.",
+   "en": "An old man in the market sells cold water from a waterskin on his back.",
+   "ko": "시장에서 한 노인이 등에 멘 물주머니로 시원한 물을 팔아요.",
+   "blank": "قربة",
+   "src": "made"
+  }
+ ],
  "w|قرحة": [
   {
    "text": "أصيب يوسف بقرحة صغيرة في فمه بسبب أكل حار.",
@@ -60079,6 +61039,22 @@
    "en": "My mom puts cinnamon on rice pudding.",
    "ko": "우리 엄마는 쌀 푸딩에 계피를 뿌려.",
    "blank": "قرفة"
+  }
+ ],
+ "w|قرميد": [
+  {
+   "text": "غير أحمد القرميد المكسور على السطح قبل الشتاء.",
+   "en": "Ahmed replaced the broken roof tiles before winter.",
+   "ko": "아흐마드는 겨울 전에 지붕의 깨진 기와를 갈았어요.",
+   "blank": "القرميد",
+   "src": "made"
+  },
+  {
+   "text": "تبيع بسطة صغيرة قطعا من القرميد القديم للزينة.",
+   "en": "A small stall sells pieces of old roof tile for decoration.",
+   "ko": "작은 가판대에서 장식용 옛 기와 조각을 팔아요.",
+   "blank": "القرميد",
+   "src": "made"
   }
  ],
  "w|قرن": [
@@ -62985,6 +63961,22 @@
    "blank": "كسول"
   }
  ],
+ "w|كشاف": [
+  {
+   "text": "نزل أحمد إلى القبو ومعه كشاف قوي.",
+   "en": "Ahmed went down to the basement with a strong flashlight.",
+   "ko": "아흐마드는 밝은 손전등을 들고 지하실로 내려갔어요.",
+   "blank": "كشاف",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم كشافا صغيرا للرحلة القادمة.",
+   "en": "Mariam bought a small flashlight for the upcoming trip.",
+   "ko": "마리암은 다음 여행에 쓸 작은 손전등을 샀어요.",
+   "blank": "كشافا",
+   "src": "made"
+  }
+ ],
  "w|كشر": [
   {
    "text": "كشر الكلب عن أنيابه حين اقترب غريب من البوابة.",
@@ -63435,6 +64427,22 @@
    "en": "I like coffee as you do.",
    "ko": "나는 너처럼 커피를 좋아해.",
    "blank": "كما"
+  }
+ ],
+ "w|كماشة": [
+  {
+   "text": "سحب أحمد المسامير القديمة بالكماشة واحدا بعد الآخر.",
+   "en": "Ahmed pulled out the old nails with the pliers one after another.",
+   "ko": "아흐마드는 펜치로 낡은 못을 하나씩 뽑았어요.",
+   "blank": "بالكماشة",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم كماشة صغيرة لأخيها من بسطة العدد.",
+   "en": "Mariam bought a small pair of pliers for her brother from the tool stall.",
+   "ko": "마리암은 공구 가판대에서 오빠에게 줄 작은 펜치를 샀어요.",
+   "blank": "كماشة",
+   "src": "made"
   }
  ],
  "w|كمال": [
@@ -67175,6 +68183,22 @@
    "src": "made"
   }
  ],
+ "w|مبيد": [
+  {
+   "text": "استعمل أحمد مبيدا للنمل الأبيض قبل تركيب الأرضية.",
+   "en": "Ahmed used a termite pesticide before installing the floor.",
+   "ko": "아흐마드는 바닥을 깔기 전에 흰개미 살충제를 썼어요.",
+   "blank": "مبيدا",
+   "src": "made"
+  },
+  {
+   "text": "سألت مريم عن مبيد آمن للحشرات في المطبخ.",
+   "en": "Mariam asked about a safe insecticide for the kitchen.",
+   "ko": "마리암은 부엌에 써도 안전한 살충제가 있는지 물었어요.",
+   "blank": "مبيد",
+   "src": "made"
+  }
+ ],
  "w|مبيض": [
   {
    "text": "قرأ يوسف في مجلة العيادة مقالا عن أمراض المبيض عند النساء.",
@@ -68231,6 +69255,22 @@
    "src": "made"
   }
  ],
+ "w|متنفس": [
+  {
+   "text": "كتب عمر أن الرسم صار متنفسه الوحيد في عطلة الأسبوع.",
+   "en": "Omar wrote that drawing has become his only outlet on weekends.",
+   "ko": "오마르는 주말에는 그림 그리기가 유일한 숨구멍이 됐다고 썼어요.",
+   "blank": "متنفسه",
+   "src": "made"
+  },
+  {
+   "text": "الحديقة العامة متنفس الحي الوحيد في الصيف.",
+   "en": "The public park is the neighborhood's only breathing space in summer.",
+   "ko": "공원은 여름에 동네의 유일한 숨 쉴 곳이에요.",
+   "blank": "متنفس",
+   "src": "made"
+  }
+ ],
  "w|متنوع": [
   {
    "text": "للإخوة في عائلة خالد اهتمامات متنوعة لا تلتقي كثيرا.",
@@ -68484,6 +69524,22 @@
    "en": "Sara drinks a lot of water because her doctor said it's good for the bladder.",
    "ko": "사라는 의사가 방광에 좋다고 해서 물을 많이 마셔요.",
    "blank": "للمثانة",
+   "src": "made"
+  }
+ ],
+ "w|مثقاب": [
+  {
+   "text": "استعار أحمد مثقابا من جاره ليعلق الرفوف.",
+   "en": "Ahmed borrowed a drill from his neighbor to hang the shelves.",
+   "ko": "아흐마드는 선반을 달려고 이웃에게 드릴을 빌렸어요.",
+   "blank": "مثقابا",
+   "src": "made"
+  },
+  {
+   "text": "سألت مريم بائع العدد عن سعر المثقاب الكهربائي.",
+   "en": "Mariam asked the tool seller about the price of the electric drill.",
+   "ko": "마리암은 공구 상인에게 전동 드릴 값을 물었어요.",
+   "blank": "المثقاب",
    "src": "made"
   }
  ],
@@ -70608,6 +71664,22 @@
    "en": "Sara passed an old church and through its open door saw the candlelit altar.",
    "ko": "사라는 오래된 성당을 지나며 열린 문 너머로 촛불 켜진 제단을 봤어요.",
    "blank": "المذبح",
+   "src": "made"
+  }
+ ],
+ "w|مذبذب": [
+  {
+   "text": "قال عمر إنه ما زال مذبذبا بين البقاء في المدينة والعودة إلى القرية.",
+   "en": "Omar said he is still torn between staying in the city and returning to the village.",
+   "ko": "오마르는 아직 도시에 남을지 시골로 돌아갈지 갈팡질팡한다고 했어요.",
+   "blank": "مذبذبا",
+   "src": "made"
+  },
+  {
+   "text": "كان الطقس في آذار مذبذبا بين الشمس والمطر.",
+   "en": "The weather in March wavered between sun and rain.",
+   "ko": "삼월 날씨는 해와 비 사이를 오락가락했어요.",
+   "blank": "مذبذبا",
    "src": "made"
   }
  ],
@@ -73087,6 +74159,22 @@
    "src": "made"
   }
  ],
+ "w|مشجب": [
+  {
+   "text": "ثبت أحمد مشجبا قرب الباب لمعاطف الضيوف.",
+   "en": "Ahmed fixed a coat rack near the door for guests' coats.",
+   "ko": "아흐마드는 손님 외투를 걸 옷걸이를 문 옆에 달았어요.",
+   "blank": "مشجبا",
+   "src": "made"
+  },
+  {
+   "text": "عرض البائع على مريم مشجبا خشبيا منحوتا باليد.",
+   "en": "The seller offered Mariam a hand-carved wooden coat rack.",
+   "ko": "상인은 마리암에게 손으로 깎은 나무 옷걸이를 권했어요.",
+   "blank": "مشجبا",
+   "src": "made"
+  }
+ ],
  "w|مشجع": [
   {
    "text": "كان هناك مشجع يهتف بقوة في المدرجات.",
@@ -74637,6 +75725,22 @@
    "blank": "معصم"
   }
  ],
+ "w|معطر": [
+  {
+   "text": "رش أحمد معطرا في الغرف لأن رائحة الرطوبة كانت قوية.",
+   "en": "Ahmed sprayed air freshener in the rooms because the damp smell was strong.",
+   "ko": "눅눅한 냄새가 심해서 아흐마드는 방마다 방향제를 뿌렸어요.",
+   "blank": "معطرا",
+   "src": "made"
+  },
+  {
+   "text": "اختارت مريم معطر سيارة برائحة الليمون.",
+   "en": "Mariam chose a lemon-scented car air freshener.",
+   "ko": "마리암은 레몬 향 차량용 방향제를 골랐어요.",
+   "blank": "معطر",
+   "src": "made"
+  }
+ ],
  "w|معطف": [
   {
    "text": "لبست معطف في الشتاء.",
@@ -74886,6 +75990,22 @@
    "en": "Huda's daughter is studying nursing at a health institute in the city.",
    "ko": "후다의 딸은 도시의 보건 전문학교에서 간호를 공부해요.",
    "blank": "معهد",
+   "src": "made"
+  }
+ ],
+ "w|معول": [
+  {
+   "text": "حفر أحمد الأرض الصلبة بمعول قديم وجده في المخزن.",
+   "en": "Ahmed dug the hard ground with an old pickaxe he found in the storeroom.",
+   "ko": "아흐마드는 창고에서 찾은 낡은 곡괭이로 단단한 땅을 팠어요.",
+   "blank": "بمعول",
+   "src": "made"
+  },
+  {
+   "text": "رأت مريم فلاحا يشتري معولا جديدا من سوق الحديد.",
+   "en": "Mariam saw a farmer buying a new pickaxe from the iron market.",
+   "ko": "마리암은 철물 시장에서 농부가 새 곡괭이를 사는 걸 봤어요.",
+   "blank": "معولا",
    "src": "made"
   }
  ],
@@ -75755,6 +76875,22 @@
    "en": "Your exam result is acceptable this time.",
    "ko": "이번 시험 결과는 받아들일 만해.",
    "blank": "مقبول"
+  }
+ ],
+ "w|مقت": [
+  {
+   "text": "اعترف عمر بأنه يمقت الرسائل القصيرة على الهاتف.",
+   "en": "Omar confessed that he detests short messages on the phone.",
+   "ko": "오마르는 휴대폰 짧은 메시지를 질색한다고 털어놓았어요.",
+   "blank": "يمقت",
+   "src": "made"
+  },
+  {
+   "text": "تمقت فاطمة الوحل الذي يملأ الشوارع بعد المطر.",
+   "en": "Fatima hates the mud that fills the streets after the rain.",
+   "ko": "파티마는 비 온 뒤 거리를 뒤덮는 진흙을 질색해요.",
+   "blank": "تمقت",
+   "src": "made"
   }
  ],
  "w|مقتصد": [
@@ -77079,6 +78215,22 @@
    "src": "made"
   }
  ],
+ "w|ملمع": [
+  {
+   "text": "مسح أحمد الأرض الخشبية بملمع خاص حتى عادت تلمع.",
+   "en": "Ahmed wiped the wooden floor with a special polish until it shone again.",
+   "ko": "아흐마드는 나무 바닥을 전용 광택제로 닦아 다시 반짝이게 했어요.",
+   "blank": "بملمع",
+   "src": "made"
+  },
+  {
+   "text": "نسيت مريم أن تشتري ملمع الأحذية لأبيها.",
+   "en": "Mariam forgot to buy shoe polish for her father.",
+   "ko": "마리암은 아버지께 드릴 구두약 사는 걸 깜빡했어요.",
+   "blank": "ملمع",
+   "src": "made"
+  }
+ ],
  "w|ملهى": [
   {
    "text": "أغلق كريم ملهى ليليا خالف قوانين السلامة.",
@@ -78055,6 +79207,38 @@
    "src": "made"
   }
  ],
+ "w|منشر": [
+  {
+   "text": "ركب أحمد منشرا للغسيل على السطح.",
+   "en": "Ahmed installed a clothes-drying line on the roof.",
+   "ko": "아흐마드는 옥상에 빨래 건조대를 설치했어요.",
+   "blank": "منشرا",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم منشرا قابلا للطي لشرفتها الصغيرة.",
+   "en": "Mariam bought a folding drying rack for her small balcony.",
+   "ko": "마리암은 작은 발코니에 둘 접이식 빨래 건조대를 샀어요.",
+   "blank": "منشرا",
+   "src": "made"
+  }
+ ],
+ "w|منشرح": [
+  {
+   "text": "أنهى عمر الرسالة وهو منشرح الصدر لأول مرة منذ شهور.",
+   "en": "Omar finished the letter with a light heart for the first time in months.",
+   "ko": "오마르는 몇 달 만에 처음으로 홀가분한 마음으로 편지를 마쳤어요.",
+   "blank": "منشرح",
+   "src": "made"
+  },
+  {
+   "text": "خرجت فاطمة إلى السوق منشرحة في أول يوم دافئ.",
+   "en": "Fatima went out to the market cheerful on the first warm day.",
+   "ko": "첫 따뜻한 날 파티마는 들뜬 마음으로 시장에 나갔어요.",
+   "blank": "منشرحة",
+   "src": "made"
+  }
+ ],
  "w|منشفة": [
   {
    "text": "أحتاج إلى منشفة بعد الاستحمام.",
@@ -78326,6 +79510,22 @@
    "en": "At the last turn, Sara heard the crowd cheering.",
    "ko": "마지막 모퉁이에서 사라는 관중의 환호를 들었어요.",
    "blank": "المنعطف",
+   "src": "made"
+  }
+ ],
+ "w|منعم": [
+  {
+   "text": "غسلت زوجة أحمد الستائر القديمة بمنعم برائحة اللافندر.",
+   "en": "Ahmed's wife washed the old curtains with lavender-scented fabric softener.",
+   "ko": "아흐마드의 아내는 낡은 커튼을 라벤더 향 섬유 유연제로 빨았어요.",
+   "blank": "بمنعم",
+   "src": "made"
+  },
+  {
+   "text": "وضعت مريم في السلة منعما للملابس وصابونا للأطباق.",
+   "en": "Mariam put fabric softener and dish soap in the basket.",
+   "ko": "마리암은 바구니에 섬유 유연제와 주방 세제를 담았어요.",
+   "blank": "منعما",
    "src": "made"
   }
  ],
@@ -78840,6 +80040,22 @@
    "en": "Mona reviews the marketing budget with the accountant every week.",
    "ko": "모나는 매주 회계사와 마케팅 예산을 검토해요.",
    "blank": "موازنة",
+   "src": "made"
+  }
+ ],
+ "w|مواساة": [
+  {
+   "text": "أرسل عمر كلمات مواساة لصديقه بعد وفاة والده.",
+   "en": "Omar sent words of consolation to his friend after his father's death.",
+   "ko": "오마르는 아버지를 여읜 친구에게 위로의 말을 보냈어요.",
+   "blank": "مواساة",
+   "src": "made"
+  },
+  {
+   "text": "زارت فاطمة جارتها في الشتاء لتقدم لها المواساة بعد مرضها.",
+   "en": "Fatima visited her neighbor in winter to offer her consolation after her illness.",
+   "ko": "파티마는 겨울에 아팠던 이웃을 위로하러 찾아갔어요.",
+   "blank": "المواساة",
    "src": "made"
   }
  ],
@@ -79807,6 +81023,22 @@
    "blank": "ناجح"
   }
  ],
+ "w|ناح": [
+  {
+   "text": "تذكر عمر الحمامة التي كانت تنوح على سطح المدرسة كل صباح.",
+   "en": "Omar remembered the dove that used to coo mournfully on the school roof every morning.",
+   "ko": "오마르는 매일 아침 학교 지붕에서 구슬피 울던 비둘기를 떠올렸어요.",
+   "blank": "تنوح",
+   "src": "made"
+  },
+  {
+   "text": "ناحت الريح بين الأشجار طوال ليلة الخريف الباردة.",
+   "en": "The wind wailed among the trees all through the cold autumn night.",
+   "ko": "추운 가을밤 내내 바람이 나무 사이로 울부짖었어요.",
+   "blank": "ناحت",
+   "src": "made"
+  }
+ ],
  "w|ناحية": [
   {
    "text": "انظر إلى ناحية الباب لترى الضيف.",
@@ -80279,6 +81511,22 @@
    "en": "I sleep early on holidays.",
    "ko": "나는 휴일에 일찍 자.",
    "blank": "أنام"
+  }
+ ],
+ "w|ناموسية": [
+  {
+   "text": "علق أحمد ناموسية فوق سرير ابنته في الغرفة المطلة على الحديقة.",
+   "en": "Ahmed hung a mosquito net over his daughter's bed in the room overlooking the garden.",
+   "ko": "아흐마드는 정원 쪽 방 딸의 침대 위에 모기장을 쳤어요.",
+   "blank": "ناموسية",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم ناموسية بيضاء لسرير الطفل.",
+   "en": "Mariam bought a white mosquito net for the baby's bed.",
+   "ko": "마리암은 아기 침대에 칠 하얀 모기장을 샀어요.",
+   "blank": "ناموسية",
+   "src": "made"
   }
  ],
  "w|نامي": [
@@ -83089,6 +84337,22 @@
    "src": "made"
   }
  ],
+ "w|هائم": [
+  {
+   "text": "وصف عمر نفسه في الصبا شابا هائما بين الكتب والمقاهي.",
+   "en": "Omar described himself as a youth wandering between books and cafés.",
+   "ko": "오마르는 젊은 시절의 자신을 책과 카페 사이를 떠돌던 청년으로 묘사했어요.",
+   "blank": "هائما",
+   "src": "made"
+  },
+  {
+   "text": "مشت فاطمة هائمة بين أوراق الخريف المتساقطة.",
+   "en": "Fatima walked dreamily among the falling autumn leaves.",
+   "ko": "파티마는 떨어지는 가을 낙엽 사이를 정처 없이 걸었어요.",
+   "blank": "هائمة",
+   "src": "made"
+  }
+ ],
  "w|هاتان": [
   {
    "text": "هاتان هما الطفلتان اللتان رأيتهما أمس.",
@@ -83202,6 +84466,22 @@
    "en": "Nour felt that their old disagreement had been trivial.",
    "ko": "누르는 둘 사이의 옛 다툼이 사소한 일이었다고 생각했어요.",
    "blank": "هامشيا",
+   "src": "made"
+  }
+ ],
+ "w|هانئ": [
+  {
+   "text": "تمنى عمر لصديقه عيشا هانئا مع عائلته الجديدة.",
+   "en": "Omar wished his friend a peaceful life with his new family.",
+   "ko": "오마르는 친구가 새 가족과 평온하게 살기를 바랐어요.",
+   "blank": "هانئا",
+   "src": "made"
+  },
+  {
+   "text": "قضت فاطمة مساء شتويا هانئا مع كتاب وكوب شاي.",
+   "en": "Fatima spent a peaceful winter evening with a book and a cup of tea.",
+   "ko": "파티마는 책 한 권과 차 한 잔으로 평온한 겨울 저녁을 보냈어요.",
+   "blank": "هانئا",
    "src": "made"
   }
  ],

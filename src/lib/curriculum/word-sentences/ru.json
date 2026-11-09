@@ -787,6 +787,22 @@
    "src": "made"
   }
  ],
+ "w|аномалия": [
+  {
+   "text": "Эксперт назвал скачок цифр в отчёте аномалией, и это помогло Алексею.",
+   "en": "The expert called the jump in the report's figures an anomaly, and that helped Alexei.",
+   "ko": "감정인이 보고서 수치가 갑자기 튄 것을 이상 현상이라고 해서 알렉세이에게 도움이 됐어요.",
+   "blank": "аномалией",
+   "src": "made"
+  },
+  {
+   "text": "Наталья решила, что жара в октябре — настоящая аномалия, и вынесла столы на улицу.",
+   "en": "Natalia decided that heat in October was a real anomaly and took the tables outside.",
+   "ko": "나탈리야는 시월 더위가 정말 이례적이라며 테이블을 밖에 내놨어요.",
+   "blank": "аномалия",
+   "src": "made"
+  }
+ ],
  "w|анонимный": [
   {
    "text": "Кто-то написал Дмитрию анонимную записку с жалобой на шум.",
@@ -1679,6 +1695,22 @@
    "src": "made"
   }
  ],
+ "w|барьер": [
+  {
+   "text": "Алексей впервые увидел, как подсудимый стоит за деревянным барьером.",
+   "en": "For the first time Alexei saw a defendant standing behind a wooden barrier.",
+   "ko": "알렉세이는 피고인이 나무 칸막이 뒤에 서 있는 걸 처음 봤어요.",
+   "blank": "барьером",
+   "src": "made"
+  },
+  {
+   "text": "Для иностранных туристов языковой барьер не проблема: у Натальи меню с картинками.",
+   "en": "For foreign tourists the language barrier is no problem: Natalia has a menu with pictures.",
+   "ko": "나탈리야네는 그림 메뉴가 있어서 외국인 관광객에게 언어 장벽이 문제 되지 않아요.",
+   "blank": "барьер",
+   "src": "made"
+  }
+ ],
  "w|баскетбол": [
   {
    "text": "Андрей сломал палец, играя в баскетбол, и пришёл за шиной.",
@@ -1709,6 +1741,22 @@
    "ko": "저는 매일 시립 수영장에 가요.",
    "blank": "бассейн",
    "src": "tatoeba:1370094/Biga en:322429/Swift"
+  }
+ ],
+ "w|батальон": [
+  {
+   "text": "Бывший командир батальона выступил в суде свидетелем в пользу Алексея.",
+   "en": "A former battalion commander testified in court on Alexei's behalf.",
+   "ko": "전직 대대장이 법정에서 알렉세이에게 유리한 증언을 했어요.",
+   "blank": "батальона",
+   "src": "made"
+  },
+  {
+   "text": "К вечеру на кухню вошёл целый батальон родственников Натальи с подарками.",
+   "en": "By evening a whole battalion of Natalia's relatives came into the kitchen with presents.",
+   "ko": "저녁 무렵 나탈리야의 친척들이 한 부대처럼 선물을 들고 주방에 들이닥쳤어요.",
+   "blank": "батальон",
+   "src": "made"
   }
  ],
  "w|батарейка": [
@@ -5755,6 +5803,22 @@
    "src": "tatoeba:2582128/Balamax en:2582124/Balamax"
   }
  ],
+ "w|видеонаблюдение": [
+  {
+   "text": "Запись видеонаблюдения показала, что Алексей в тот вечер был дома.",
+   "en": "The CCTV footage showed that Alexei was at home that evening.",
+   "ko": "CCTV 영상은 그날 저녁 알렉세이가 집에 있었다는 걸 보여 줬어요.",
+   "blank": "видеонаблюдения",
+   "src": "made"
+  },
+  {
+   "text": "Наталья установила видеонаблюдение над кассой после пропажи денег.",
+   "en": "Natalia installed video surveillance over the till after some money went missing.",
+   "ko": "돈이 없어진 뒤 나탈리야는 계산대 위에 CCTV를 달았어요.",
+   "blank": "видеонаблюдение",
+   "src": "made"
+  }
+ ],
  "w|видеть": [
   {
    "text": "Я тебя вижу.",
@@ -8503,6 +8567,22 @@
    "src": "made"
   }
  ],
+ "w|всеобщий": [
+  {
+   "text": "Решение суда вызвало всеобщее удивление, а Алексей просто улыбнулся.",
+   "en": "The court's decision surprised everyone, and Alexei simply smiled.",
+   "ko": "판결에 모두가 놀랐지만 알렉세이는 그냥 웃었어요.",
+   "blank": "всеобщее",
+   "src": "made"
+  },
+  {
+   "text": "Новый суп Натальи быстро стал всеобщим любимцем.",
+   "en": "Natalia's new soup quickly became everyone's favourite.",
+   "ko": "나탈리야의 새 수프는 금세 모두가 좋아하는 메뉴가 됐어요.",
+   "blank": "всеобщим",
+   "src": "made"
+  }
+ ],
  "w|всерьёз": [
   {
    "text": "Вы говорите это в шутку или всерьёз?",
@@ -9294,6 +9374,22 @@
    "en": "The club put Irina forward as team captain for the relay.",
    "ko": "클럽은 이리나를 계주 팀 주장으로 내세웠어요.",
    "blank": "выдвинул",
+   "src": "made"
+  }
+ ],
+ "w|выделить": [
+  {
+   "text": "Суд согласился выделить Алексею бесплатного адвоката.",
+   "en": "The court agreed to assign Alexei a free lawyer.",
+   "ko": "법원은 알렉세이에게 무료 변호사를 배정해 주기로 했어요.",
+   "blank": "выделить",
+   "src": "made"
+  },
+  {
+   "text": "Наталья решила выделить для детей отдельный уголок с игрушками.",
+   "en": "Natalia decided to set aside a separate corner with toys for children.",
+   "ko": "나탈리야는 아이들을 위해 장난감이 있는 구석 자리를 따로 마련하기로 했어요.",
+   "blank": "выделить",
    "src": "made"
   }
  ],
@@ -10893,6 +10989,22 @@
    "blank": "глаза"
   }
  ],
+ "w|гласить": [
+  {
+   "text": "Закон гласит, что каждый имеет право на защиту, напомнил Алексею адвокат.",
+   "en": "The law says everyone has the right to a defence, the lawyer reminded Alexei.",
+   "ko": "법은 누구나 변호받을 권리가 있다고 정하고 있다고 변호사가 알렉세이에게 상기시켰어요.",
+   "blank": "гласит",
+   "src": "made"
+  },
+  {
+   "text": "Табличка у входа гласит: «С собаками можно», и Наталья этим гордится.",
+   "en": "The sign at the entrance reads \"Dogs welcome,\" and Natalia is proud of it.",
+   "ko": "입구 팻말에는 \"반려견 동반 가능\"이라고 쓰여 있고 나탈리야는 그걸 자랑스러워해요.",
+   "blank": "гласит",
+   "src": "made"
+  }
+ ],
  "w|глотка": [
   {
    "text": "Перед праздником у Никиты заболела глотка, и он пил чай с мёдом.",
@@ -11064,6 +11176,22 @@
    "en": "The roommate kept sending Tatiana to check the drip all night.",
    "ko": "옆 침대 환자는 밤새 타티야나를 링거 확인하러 보냈어요.",
    "blank": "гнал",
+   "src": "made"
+  }
+ ],
+ "w|гнаться": [
+  {
+   "text": "Судья напомнил Алексею, что не стоит гнаться за громкими заявлениями.",
+   "en": "The judge reminded Alexei that there was no point chasing loud statements.",
+   "ko": "판사는 알렉세이에게 요란한 발언을 좇을 필요가 없다고 일러 줬어요.",
+   "blank": "гнаться",
+   "src": "made"
+  },
+  {
+   "text": "Наш ресторан не пытается гнаться за модой, говорит Наталья.",
+   "en": "Our restaurant doesn't try to chase trends, says Natalia.",
+   "ko": "우리 식당은 유행을 좇으려 하지 않는다고 나탈리야가 말해요.",
+   "blank": "гнаться",
    "src": "made"
   }
  ],
@@ -13022,6 +13150,22 @@
    "en": "The debate about the new road went on in the village club until midnight, and Tatiana stayed to the end.",
    "ko": "새 길에 관한 토론이 마을 회관에서 자정까지 이어졌고, 타티야나는 끝까지 남았어요.",
    "blank": "дебаты",
+   "src": "made"
+  }
+ ],
+ "w|девиз": [
+  {
+   "text": "Над креслом судьи висел девиз о справедливости, и Алексей долго его разглядывал.",
+   "en": "A motto about justice hung above the judge's chair, and Alexei studied it for a long time.",
+   "ko": "판사석 위에 정의에 관한 표어가 걸려 있었고 알렉세이는 그걸 한참 바라봤어요.",
+   "blank": "девиз",
+   "src": "made"
+  },
+  {
+   "text": "«Как дома у бабушки» — такой девиз Наталья написала на вывеске.",
+   "en": "\"Just like at Grandma's\" is the motto Natalia wrote on the sign.",
+   "ko": "나탈리야는 간판에 \"할머니 집처럼\"이라는 문구를 적었어요.",
+   "blank": "девиз",
    "src": "made"
   }
  ],
@@ -23177,6 +23321,22 @@
    "src": "made"
   }
  ],
+ "w|караоке": [
+  {
+   "text": "Свидетель утверждал, что в тот вечер видел Алексея в караоке.",
+   "en": "The witness claimed he had seen Alexei at a karaoke bar that evening.",
+   "ko": "증인은 그날 저녁 노래방에서 알렉세이를 봤다고 주장했어요.",
+   "blank": "караоке",
+   "src": "made"
+  },
+  {
+   "text": "По пятницам у Натальи в ресторане включают караоке.",
+   "en": "On Fridays they put on karaoke at Natalia's restaurant.",
+   "ko": "금요일마다 나탈리야네 식당에서는 노래방 기계를 틀어요.",
+   "blank": "караоке",
+   "src": "made"
+  }
+ ],
  "w|кардинал": [
   {
    "text": "В красной мантии судья показался Алексею похожим на кардинала из старого фильма.",
@@ -23554,6 +23714,22 @@
    "en": "Olga sent Natasha a recipe for lemon cake.",
    "ko": "올가는 나타샤에게 레몬 파운드케이크 레시피를 보냈어요.",
    "blank": "кекса",
+   "src": "made"
+  }
+ ],
+ "w|киллер": [
+  {
+   "text": "На соседнем заседании судили киллера, и у зала толпились журналисты, заметил Алексей.",
+   "en": "A hitman was on trial in the next hearing, and journalists crowded outside the room, Alexei noticed.",
+   "ko": "옆 법정에서 청부 살인범 재판이 열려 기자들이 몰려 있는 걸 알렉세이가 봤어요.",
+   "blank": "киллера",
+   "src": "made"
+  },
+  {
+   "text": "За ужином дети Натальи спорили о фильме, где киллер оказался добрым.",
+   "en": "Over dinner Natalia's children argued about a film in which the hitman turned out to be kind.",
+   "ko": "저녁을 먹으며 나탈리야의 아이들은 킬러가 착한 사람으로 밝혀지는 영화를 두고 말다툼했어요.",
+   "blank": "киллер",
    "src": "made"
   }
  ],
@@ -25033,6 +25209,22 @@
    "src": "tatoeba:4716214/marafon en:4546359/CK"
   }
  ],
+ "w|конституция": [
+  {
+   "text": "Адвокат Алексея сослался на конституцию, говоря о праве на защиту.",
+   "en": "Alexei's lawyer referred to the constitution when speaking about the right to a defence.",
+   "ko": "알렉세이의 변호사는 변호받을 권리를 말하며 헌법을 근거로 들었어요.",
+   "blank": "конституцию",
+   "src": "made"
+  },
+  {
+   "text": "Студенты за угловым столиком готовились к экзамену по конституции.",
+   "en": "The students at the corner table were preparing for an exam on the constitution.",
+   "ko": "구석 자리 대학생들은 헌법 시험을 준비하고 있었어요.",
+   "blank": "конституции",
+   "src": "made"
+  }
+ ],
  "w|консультант": [
   {
    "text": "Сергей посоветовался с юридическим консультантом, прежде чем печатать расследование.",
@@ -25573,6 +25765,22 @@
    "blank": "король"
   }
  ],
+ "w|коронер": [
+  {
+   "text": "На заседании зачитали заключение коронера, и Алексей внимательно слушал.",
+   "en": "The coroner's report was read out at the hearing, and Alexei listened carefully.",
+   "ko": "재판에서 검시관 소견서가 낭독됐고 알렉세이는 귀 기울여 들었어요.",
+   "blank": "коронера",
+   "src": "made"
+  },
+  {
+   "text": "Наталья смотрит английский сериал, где главная героиня работает коронером.",
+   "en": "Natalia watches an English series in which the heroine works as a coroner.",
+   "ko": "나탈리야는 여주인공이 검시관으로 일하는 영국 드라마를 봐요.",
+   "blank": "коронером",
+   "src": "made"
+  }
+ ],
  "w|короткий": [
   {
    "text": "Мы можем сделать короткий перерыв?",
@@ -25618,6 +25826,22 @@
    "en": "Svetlana's shop stands between the first and second buildings of the dormitory.",
    "ko": "스베틀라나의 가게는 기숙사 일동과 이동 사이에 있어요.",
    "blank": "корпусом",
+   "src": "made"
+  }
+ ],
+ "w|коррупция": [
+  {
+   "text": "Алексей пришёл на процесс о коррупции в городской администрации как журналист.",
+   "en": "Alexei came to the corruption trial in the city administration as a journalist.",
+   "ko": "알렉세이는 기자로서 시청 부패 재판에 왔어요.",
+   "blank": "коррупции",
+   "src": "made"
+  },
+  {
+   "text": "Гости за соседним столом громко спорили о коррупции, и Наталья принесла им чай.",
+   "en": "The guests at the next table were arguing loudly about corruption, and Natalia brought them tea.",
+   "ko": "옆 테이블 손님들이 부패 문제로 큰 소리로 다투자 나탈리야가 차를 갖다 줬어요.",
+   "blank": "коррупции",
    "src": "made"
   }
  ],
@@ -32661,6 +32885,22 @@
    "src": "made"
   }
  ],
+ "w|наладиться": [
+  {
+   "text": "После суда отношения Алексея с бывшим партнёром понемногу наладились.",
+   "en": "After the trial, Alexei's relationship with his former partner gradually got back on track.",
+   "ko": "재판이 끝나고 알렉세이와 전 동업자의 관계는 조금씩 회복됐어요.",
+   "blank": "наладились",
+   "src": "made"
+  },
+  {
+   "text": "Через год дела в ресторане наладились, и Наталья наняла ещё двух официантов.",
+   "en": "A year later business at the restaurant picked up, and Natalia hired two more waiters.",
+   "ko": "일 년 뒤 식당 사정이 나아져서 나탈리야는 종업원을 두 명 더 뽑았어요.",
+   "blank": "наладились",
+   "src": "made"
+  }
+ ],
  "w|налево": [
   {
    "text": "Мне повернуть налево, направо или ехать прямо?",
@@ -34755,6 +34995,22 @@
    "src": "made"
   }
  ],
+ "w|неизбежно": [
+  {
+   "text": "Перерыв в заседании неизбежно затянулся, и Алексей пошёл за кофе.",
+   "en": "The break in the hearing inevitably dragged on, and Alexei went for coffee.",
+   "ko": "재판 휴정이 어쩔 수 없이 길어져서 알렉세이는 커피를 사러 갔어요.",
+   "blank": "неизбежно",
+   "src": "made"
+  },
+  {
+   "text": "В пятницу вечером в зале неизбежно становится шумно, и Наталья делает музыку тише.",
+   "en": "On Friday evenings the dining room inevitably gets noisy, and Natalia turns the music down.",
+   "ko": "금요일 저녁이면 홀이 어김없이 시끄러워져서 나탈리야는 음악 소리를 줄여요.",
+   "blank": "неизбежно",
+   "src": "made"
+  }
+ ],
  "w|неизвестный": [
   {
    "text": "«Известный» — это антоним слова «неизвестный».",
@@ -35521,6 +35777,22 @@
    "ko": "그는 더는 조바심을 감출 수 없었어요.",
    "blank": "нетерпение",
    "src": "tatoeba:4981962/Karok en:2564722/Hybrid"
+  }
+ ],
+ "w|неуважение": [
+  {
+   "text": "Судья назвал опоздание Алексея проявлением неуважения к суду.",
+   "en": "The judge called Alexei's lateness a sign of disrespect for the court.",
+   "ko": "판사는 알렉세이의 지각을 법정을 무시하는 태도라고 했어요.",
+   "blank": "неуважения",
+   "src": "made"
+  },
+  {
+   "text": "Наталья считает, что опаздывать на семейный ужин — неуважение к маме.",
+   "en": "Natalia believes that being late for family dinner is disrespectful to Mum.",
+   "ko": "나탈리야는 가족 저녁 식사에 늦는 건 엄마를 존중하지 않는 거라고 생각해요.",
+   "blank": "неуважение",
+   "src": "made"
   }
  ],
  "w|неудача": [
@@ -36950,6 +37222,22 @@
    "en": "Tatiana made the cover of a business magazine.",
    "ko": "타티야나가 경제 잡지 표지에 실렸어요.",
    "blank": "обложку",
+   "src": "made"
+  }
+ ],
+ "w|обломок": [
+  {
+   "text": "Эксперт показал суду обломок фары с места аварии, и Алексей узнал свою машину.",
+   "en": "The expert showed the court a piece of headlight from the accident scene, and Alexei recognized his car.",
+   "ko": "감정인이 사고 현장의 전조등 조각을 보여 주자 알렉세이는 자기 차라는 걸 알아봤어요.",
+   "blank": "обломок",
+   "src": "made"
+  },
+  {
+   "text": "Наталья нашла в салате обломок скорлупы и извинилась перед гостем.",
+   "en": "Natalia found a piece of shell in the salad and apologized to the guest.",
+   "ko": "나탈리야는 샐러드에서 껍데기 조각을 발견하고 손님에게 사과했어요.",
+   "blank": "обломок",
    "src": "made"
   }
  ],
@@ -38577,6 +38865,22 @@
    "src": "tatoeba:1673409/fanty en:9972004/ddnktr"
   }
  ],
+ "w|ожидаться": [
+  {
+   "text": "Решение по делу Алексея ожидается к концу месяца.",
+   "en": "The decision in Alexei's case is expected by the end of the month.",
+   "ko": "알렉세이 사건의 판결은 이달 말쯤 나올 예정이에요.",
+   "blank": "ожидается",
+   "src": "made"
+  },
+  {
+   "text": "На выходных ожидается наплыв гостей, поэтому Наталья позвала ещё одного повара.",
+   "en": "A rush of guests is expected at the weekend, so Natalia called in another cook.",
+   "ko": "주말에 손님이 몰릴 것 같아서 나탈리야는 요리사를 한 명 더 불렀어요.",
+   "blank": "ожидается",
+   "src": "made"
+  }
+ ],
  "w|ожог": [
   {
    "text": "Медсестра аккуратно обработала ожог на руке Никиты.",
@@ -39597,6 +39901,22 @@
    "src": "made"
   }
  ],
+ "w|оригинальный": [
+  {
+   "text": "Алексей принёс в суд оригинальный договор, а не копию.",
+   "en": "Alexei brought the original contract to court, not a copy.",
+   "ko": "알렉세이는 사본이 아니라 계약서 원본을 법원에 가져왔어요.",
+   "blank": "оригинальный",
+   "src": "made"
+  },
+  {
+   "text": "Наталья придумала оригинальный десерт из тыквы и мёда.",
+   "en": "Natalia came up with an original dessert made of pumpkin and honey.",
+   "ko": "나탈리야는 호박과 꿀로 독창적인 디저트를 만들어 냈어요.",
+   "blank": "оригинальный",
+   "src": "made"
+  }
+ ],
  "w|оркестр": [
   {
    "text": "В школьном оркестре Андрей играет на трубе.",
@@ -39768,6 +40088,22 @@
    "en": "The organisers asked spectators not to insult the runners, even as a joke, and Anna appreciated that.",
    "ko": "주최 측이 관중들에게 장난이라도 선수들을 모욕하지 말라고 부탁했고, 안나는 그게 고마웠어요.",
    "blank": "оскорблять",
+   "src": "made"
+  }
+ ],
+ "w|осмелиться": [
+  {
+   "text": "Свидетель долго молчал, но всё же осмелился посмотреть Алексею в глаза.",
+   "en": "The witness was silent for a long time but finally dared to look Alexei in the eye.",
+   "ko": "증인은 오래 말이 없다가 결국 용기를 내 알렉세이의 눈을 봤어요.",
+   "blank": "осмелился",
+   "src": "made"
+  },
+  {
+   "text": "Только к вечеру маленький Петя осмелился попросить у Натальи добавки.",
+   "en": "Only by evening did little Petya dare to ask Natalia for seconds.",
+   "ko": "꼬마 페탸는 저녁이 되어서야 용기를 내 나탈리야에게 더 달라고 했어요.",
+   "blank": "осмелился",
    "src": "made"
   }
  ],
@@ -41337,6 +41673,22 @@
    "src": "tatoeba:1444380/Inego en:46610"
   }
  ],
+ "w|отпор": [
+  {
+   "text": "Адвокат Алексея дал решительный отпор обвинению.",
+   "en": "Alexei's lawyer firmly pushed back against the prosecution.",
+   "ko": "알렉세이의 변호사는 검찰 측에 단호하게 맞섰어요.",
+   "blank": "отпор",
+   "src": "made"
+  },
+  {
+   "text": "Когда гость начал хамить официантке, Наталья дала ему спокойный, но твёрдый отпор.",
+   "en": "When a guest started being rude to the waitress, Natalia stood up to him calmly but firmly.",
+   "ko": "손님이 종업원에게 무례하게 굴자 나탈리야는 차분하지만 단호하게 맞섰어요.",
+   "blank": "отпор",
+   "src": "made"
+  }
+ ],
  "w|отправить": [
   {
    "text": "Отправь это сегодня.",
@@ -41698,6 +42050,22 @@
    "en": "Natalia's assistant is absent today, so appointments are going more slowly.",
    "ko": "오늘 나탈리야의 조수가 없어서 진료가 느리게 진행돼요.",
    "blank": "отсутствует",
+   "src": "made"
+  }
+ ],
+ "w|отсчёт": [
+  {
+   "text": "Адвокат объяснил Алексею, что отсчёт срока на апелляцию идёт со дня решения.",
+   "en": "The lawyer explained to Alexei that the appeal deadline is counted from the day of the decision.",
+   "ko": "변호사는 알렉세이에게 항소 기한은 판결일부터 센다고 설명했어요.",
+   "blank": "отсчёт",
+   "src": "made"
+  },
+  {
+   "text": "Перед Новым годом Наталья ведёт отсчёт дней до большого банкета.",
+   "en": "Before New Year Natalia counts down the days to the big banquet.",
+   "ko": "새해를 앞두고 나탈리야는 큰 연회까지 남은 날을 세고 있어요.",
+   "blank": "отсчёт",
    "src": "made"
   }
  ],
@@ -47173,6 +47541,22 @@
    "src": "made"
   }
  ],
+ "w|пожелание": [
+  {
+   "text": "Алексей выслушал пожелание судьи, чтобы стороны договорились миром.",
+   "en": "Alexei heard out the judge's wish that the parties settle peacefully.",
+   "ko": "알렉세이는 양측이 원만히 합의하길 바란다는 판사의 말을 들었어요.",
+   "blank": "пожелание",
+   "src": "made"
+  },
+  {
+   "text": "Наталья всегда записывает пожелания гостей в маленький блокнот.",
+   "en": "Natalia always writes down guests' requests in a small notebook.",
+   "ko": "나탈리야는 손님들의 바람을 늘 작은 수첩에 적어 둬요.",
+   "blank": "пожелания",
+   "src": "made"
+  }
+ ],
  "w|пожелать": [
   {
    "text": "Бабушка подняла бокал, чтобы пожелать Михаилу и Анне долгих лет вместе.",
@@ -47363,6 +47747,22 @@
    "ko": "그냥 그녀를 불러 보지 그래?",
    "blank": "позвать",
    "src": "tatoeba:5945659/odexed en:3919096/CH"
+  }
+ ],
+ "w|позволение": [
+  {
+   "text": "Алексей попросил у судьи позволения сказать последнее слово.",
+   "en": "Alexei asked the judge for permission to make a final statement.",
+   "ko": "알렉세이는 판사에게 최후 진술을 해도 되는지 허락을 구했어요.",
+   "blank": "позволения",
+   "src": "made"
+  },
+  {
+   "text": "Сын Натальи без позволения взял с витрины пирожное.",
+   "en": "Natalia's son took a pastry from the display case without permission.",
+   "ko": "나탈리야의 아들이 허락도 없이 진열장에서 케이크를 집었어요.",
+   "blank": "позволения",
+   "src": "made"
   }
  ],
  "w|позволить": [
@@ -47954,6 +48354,22 @@
    "en": "Let's finish the homework first and then go for a walk.",
    "ko": "숙제부터 끝내고 산책하러 가자.",
    "blank": "покончим",
+   "src": "made"
+  }
+ ],
+ "w|покрывать": [
+  {
+   "text": "Алексей не собирался покрывать брата и рассказал суду правду.",
+   "en": "Alexei had no intention of covering for his brother and told the court the truth.",
+   "ko": "알렉세이는 형을 감싸 줄 생각이 없었고 법정에서 사실대로 말했어요.",
+   "blank": "покрывать",
+   "src": "made"
+  },
+  {
+   "text": "Каждое утро Наталья покрывает столы свежими скатертями.",
+   "en": "Every morning Natalia covers the tables with fresh tablecloths.",
+   "ko": "나탈리야는 매일 아침 식탁에 깨끗한 식탁보를 깔아요.",
+   "blank": "покрывает",
    "src": "made"
   }
  ],
@@ -49603,6 +50019,22 @@
    "src": "made"
   }
  ],
+ "w|поругаться": [
+  {
+   "text": "В коридоре суда Алексей чуть не поругался с адвокатом другой стороны.",
+   "en": "In the court corridor Alexei nearly got into a fight with the other side's lawyer.",
+   "ko": "법원 복도에서 알렉세이는 상대편 변호사와 하마터면 말다툼할 뻔했어요.",
+   "blank": "поругался",
+   "src": "made"
+  },
+  {
+   "text": "Наталья поругалась с поставщиком из-за несвежей рыбы.",
+   "en": "Natalia quarrelled with the supplier over stale fish.",
+   "ko": "나탈리야는 신선하지 않은 생선 때문에 납품업자와 다퉜어요.",
+   "blank": "поругалась",
+   "src": "made"
+  }
+ ],
  "w|поручение": [
   {
    "text": "Прораб дал Сергею срочное поручение проверить леса.",
@@ -49883,6 +50315,22 @@
    "en": "I made it at the last second.",
    "ko": "마지막 순간에 간신히 됐어.",
    "blank": "последнюю"
+  }
+ ],
+ "w|последовательность": [
+  {
+   "text": "Судья попросил Алексея восстановить последовательность событий того вечера.",
+   "en": "The judge asked Alexei to reconstruct the sequence of events that evening.",
+   "ko": "판사는 알렉세이에게 그날 저녁 일어난 일의 순서를 되짚어 보라고 했어요.",
+   "blank": "последовательность",
+   "src": "made"
+  },
+  {
+   "text": "Новый повар перепутал последовательность блюд, и Наталья подала суп после второго.",
+   "en": "The new cook mixed up the order of courses, and Natalia served the soup after the main dish.",
+   "ko": "새 요리사가 음식 순서를 헷갈려서 나탈리야는 메인 요리 다음에 수프를 냈어요.",
+   "blank": "последовательность",
+   "src": "made"
   }
  ],
  "w|последовать": [
@@ -56007,6 +56455,22 @@
    "src": "tatoeba:12291747/marafon en:4736734/paper1n0"
   }
  ],
+ "w|пророк": [
+  {
+   "text": "«Я не пророк, но шансы у нас хорошие», — сказал адвокат Алексею.",
+   "en": "\"I'm no prophet, but our chances are good,\" the lawyer told Alexei.",
+   "ko": "\"제가 예언자는 아니지만 승산이 커요.\" 변호사가 알렉세이에게 말했어요.",
+   "blank": "пророк",
+   "src": "made"
+  },
+  {
+   "text": "Свекровь Натальи, словно пророк, предсказала, что ресторан станет популярным.",
+   "en": "Natalia's mother-in-law, like a prophet, predicted that the restaurant would become popular.",
+   "ko": "나탈리야의 시어머니는 예언자처럼 식당이 잘될 거라고 내다봤어요.",
+   "blank": "пророк",
+   "src": "made"
+  }
+ ],
  "w|пророчество": [
   {
    "text": "Никита написал колонку о том, почему люди верят в старинные пророчества.",
@@ -56635,6 +57099,22 @@
    "src": "tatoeba:3710043/odexed en:3620184/CK"
   }
  ],
+ "w|прошение": [
+  {
+   "text": "Алексей подал прошение об отсрочке заседания.",
+   "en": "Alexei filed a petition to postpone the hearing.",
+   "ko": "알렉세이는 재판 연기 신청서를 냈어요.",
+   "blank": "прошение",
+   "src": "made"
+  },
+  {
+   "text": "Внук Натальи написал шуточное прошение о второй порции мороженого.",
+   "en": "Natalia's grandson wrote a joking petition for a second helping of ice cream.",
+   "ko": "나탈리야의 손자는 아이스크림을 한 번 더 달라는 장난 청원서를 썼어요.",
+   "blank": "прошение",
+   "src": "made"
+  }
+ ],
  "w|прошлое": [
   {
    "text": "Забудь прошлое.",
@@ -56722,6 +57202,22 @@
    "en": "During the thunderstorm Natalia tried not to show fear in front of the children.",
    "ko": "천둥 번개가 칠 때 나탈리야는 아이들 앞에서 무서운 티를 내지 않으려 했어요.",
    "blank": "проявить",
+   "src": "made"
+  }
+ ],
+ "w|проявление": [
+  {
+   "text": "Судья назвал опоздание Алексея проявлением неуважения к суду.",
+   "en": "The judge called Alexei's lateness a sign of disrespect for the court.",
+   "ko": "판사는 알렉세이의 지각을 법정을 무시하는 태도라고 했어요.",
+   "blank": "проявлением",
+   "src": "made"
+  },
+  {
+   "text": "Бесплатный компот для детей Наталья считает проявлением заботы о гостях.",
+   "en": "Natalia sees free fruit drink for children as a sign of care for her guests.",
+   "ko": "나탈리야는 아이들에게 주는 무료 과일 음료를 손님을 아끼는 마음의 표현이라고 생각해요.",
+   "blank": "проявлением",
    "src": "made"
   }
  ],
@@ -57855,6 +58351,22 @@
    "src": "made"
   }
  ],
+ "w|разбитый": [
+  {
+   "text": "В качестве улики суду показали разбитый телефон Алексея.",
+   "en": "Alexei's broken phone was shown to the court as evidence.",
+   "ko": "증거로 알렉세이의 깨진 휴대폰이 법정에 제시됐어요.",
+   "blank": "разбитый",
+   "src": "made"
+  },
+  {
+   "text": "Официант убрал разбитую тарелку, и Наталья махнула рукой: бывает.",
+   "en": "The waiter cleared away the broken plate, and Natalia waved it off: it happens.",
+   "ko": "종업원이 깨진 접시를 치우자 나탈리야는 그럴 수도 있다며 손을 내저었어요.",
+   "blank": "разбитую",
+   "src": "made"
+  }
+ ],
  "w|разбить": [
   {
    "text": "Ты действительно хочешь разбить мне сердце?",
@@ -58976,6 +59488,22 @@
    "en": "Maria read an article saying that dividing people by race is unscientific.",
    "ko": "마리아는 사람을 인종으로 나누는 건 과학적이지 않다는 기사를 읽었어요.",
    "blank": "расе",
+   "src": "made"
+  }
+ ],
+ "w|раскрывать": [
+  {
+   "text": "Адвокат не спешил раскрывать все карты перед присяжными, и Алексей нервничал.",
+   "en": "The lawyer was in no hurry to show all his cards to the jury, and Alexei was nervous.",
+   "ko": "변호사가 배심원 앞에서 패를 다 보여 주려고 서두르지 않아서 알렉세이는 초조했어요.",
+   "blank": "раскрывать",
+   "src": "made"
+  },
+  {
+   "text": "Наталья не любит раскрывать секрет фирменного соуса даже родным.",
+   "en": "Natalia doesn't like revealing the secret of her signature sauce, even to family.",
+   "ko": "나탈리야는 가족에게도 시그니처 소스 비법을 알려 주는 걸 좋아하지 않아요.",
+   "blank": "раскрывать",
    "src": "made"
   }
  ],
@@ -60281,6 +60809,22 @@
    "src": "made"
   }
  ],
+ "w|республиканец": [
+  {
+   "text": "В романе, который Алексей читал в перерыве, главный герой — старый республиканец.",
+   "en": "In the novel Alexei was reading during the break, the main character is an old republican.",
+   "ko": "알렉세이가 휴정 시간에 읽던 소설의 주인공은 나이 든 공화주의자예요.",
+   "blank": "республиканец",
+   "src": "made"
+  },
+  {
+   "text": "Дедушка Натальи любил рассказывать о республиканцах из старых фильмов.",
+   "en": "Natalia's grandfather loved talking about the republicans in old films.",
+   "ko": "나탈리야의 할아버지는 옛날 영화 속 공화파 이야기를 즐겨 했어요.",
+   "blank": "республиканцах",
+   "src": "made"
+  }
+ ],
  "w|ресторан": [
   {
    "text": "Вы когда-нибудь ходили в тот ресторан?",
@@ -60432,6 +60976,22 @@
    "en": "Natalia finally made up her mind to sign up for the synchronised swimming group.",
    "ko": "나탈리야는 마침내 싱크로나이즈드 수영반에 등록하기로 마음먹었어요.",
    "blank": "решилась",
+   "src": "made"
+  }
+ ],
+ "w|римлянин": [
+  {
+   "text": "Адвокат напомнил, что ещё древние римляне ставили закон выше всего, и Алексей кивнул.",
+   "en": "The lawyer pointed out that even the ancient Romans placed the law above everything, and Alexei nodded.",
+   "ko": "변호사가 고대 로마인들도 법을 가장 위에 두었다고 말하자 알렉세이는 고개를 끄덕였어요.",
+   "blank": "римляне",
+   "src": "made"
+  },
+  {
+   "text": "На детский праздник у Натальи один мальчик пришёл в костюме римлянина.",
+   "en": "At the children's party at Natalia's, one boy came dressed as a Roman.",
+   "ko": "나탈리야네 어린이 파티에 한 남자아이가 로마인 옷을 입고 왔어요.",
+   "blank": "римлянина",
    "src": "made"
   }
  ],
@@ -61570,6 +62130,22 @@
    "en": "Olga put into the envelope a napkin from the café where she and Natasha met.",
    "ko": "올가는 나타샤와 처음 만난 카페의 냅킨을 봉투에 넣었어요.",
    "blank": "салфетку",
+   "src": "made"
+  }
+ ],
+ "w|салют": [
+  {
+   "text": "Вечером после оправдательного приговора Алексей смотрел из окна праздничный салют.",
+   "en": "In the evening after his acquittal Alexei watched the festive fireworks from his window.",
+   "ko": "무죄 판결이 난 그날 저녁 알렉세이는 창밖으로 축하 불꽃놀이를 봤어요.",
+   "blank": "салют",
+   "src": "made"
+  },
+  {
+   "text": "С веранды ресторана Натальи хорошо видно новогодний салют.",
+   "en": "From the veranda of Natalia's restaurant you can see the New Year fireworks well.",
+   "ko": "나탈리야네 식당 테라스에서는 새해 불꽃놀이가 잘 보여요.",
+   "blank": "салют",
    "src": "made"
   }
  ],
@@ -66883,6 +67459,22 @@
    "src": "made"
   }
  ],
+ "w|сочетание": [
+  {
+   "text": "Судья учёл сочетание смягчающих обстоятельств и отпустил Алексея со штрафом.",
+   "en": "The judge took into account the combination of mitigating circumstances and let Alexei go with a fine.",
+   "ko": "판사는 여러 정상 참작 사유가 겹친 점을 고려해 알렉세이를 벌금형으로 풀어 줬어요.",
+   "blank": "сочетание",
+   "src": "made"
+  },
+  {
+   "text": "Гостям нравится сочетание солёного и сладкого в салате Натальи.",
+   "en": "Guests love the combination of salty and sweet in Natalia's salad.",
+   "ko": "손님들은 나탈리야의 샐러드에서 짠맛과 단맛이 어우러지는 걸 좋아해요.",
+   "blank": "сочетание",
+   "src": "made"
+  }
+ ],
  "w|сочувствие": [
   {
    "text": "Коллеги с сочувствием слушали, как Павел заблудился по дороге.",
@@ -68172,6 +68764,22 @@
    "en": "In the narrow hallway Irina kept bumping into the movers.",
    "ko": "좁은 복도에서 이리나는 이삿짐 나르는 사람들과 자꾸 부딪쳤어요.",
    "blank": "сталкивалась",
+   "src": "made"
+  }
+ ],
+ "w|стальной": [
+  {
+   "text": "У входа в зал суда стояла стальная рамка металлоискателя.",
+   "en": "A steel metal-detector frame stood at the entrance to the courtroom.",
+   "ko": "법정 입구에는 강철로 된 금속 탐지기 문이 서 있었어요.",
+   "blank": "стальная",
+   "src": "made"
+  },
+  {
+   "text": "На кухне у Натальи всё блестит: стальные кастрюли, ножи, раковина.",
+   "en": "Everything in Natalia's kitchen shines: the steel pots, the knives, the sink.",
+   "ko": "나탈리야의 주방은 스테인리스 냄비며 칼이며 개수대까지 모두 반짝여요.",
+   "blank": "стальные",
    "src": "made"
   }
  ],
@@ -71249,6 +71857,22 @@
    "src": "tatoeba:11103057/Ooneykcall en:3725566/CM"
   }
  ],
+ "w|тесно": [
+  {
+   "text": "В маленьком зале суда было так тесно, что Алексей стоял у стены.",
+   "en": "The small courtroom was so crowded that Alexei stood by the wall.",
+   "ko": "작은 법정이 너무 비좁아서 알렉세이는 벽에 붙어 서 있었어요.",
+   "blank": "тесно",
+   "src": "made"
+  },
+  {
+   "text": "Наталья тесно дружит с соседней пекарней и берёт у них хлеб.",
+   "en": "Natalia is on close terms with the bakery next door and gets her bread from them.",
+   "ko": "나탈리야는 옆 빵집과 가깝게 지내서 빵을 거기서 받아요.",
+   "blank": "тесно",
+   "src": "made"
+  }
+ ],
  "w|тест": [
   {
    "text": "Увидишь, я обязательно сдам этот тест!",
@@ -72888,6 +73512,22 @@
    "en": "Tatiana's groom met her at a tennis tournament.",
    "ko": "타티야나의 신랑은 테니스 대회에서 그녀를 만났어요.",
    "blank": "турнире",
+   "src": "made"
+  }
+ ],
+ "w|тусоваться": [
+  {
+   "text": "Свидетель сказал, что в ту ночь тусовался в клубе и Алексея не видел.",
+   "en": "The witness said he had been hanging out at a club that night and hadn't seen Alexei.",
+   "ko": "증인은 그날 밤 클럽에서 놀고 있었고 알렉세이를 못 봤다고 말했어요.",
+   "blank": "тусовался",
+   "src": "made"
+  },
+  {
+   "text": "Подростки любят тусоваться в ресторане Натальи после школы.",
+   "en": "Teenagers like to hang out at Natalia's restaurant after school.",
+   "ko": "십 대들은 방과 후에 나탈리야네 식당에서 어울려 노는 걸 좋아해요.",
+   "blank": "тусоваться",
    "src": "made"
   }
  ],
