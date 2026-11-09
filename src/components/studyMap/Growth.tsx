@@ -294,7 +294,7 @@ export function CardProgressDots({ ui, events, locale, bankKey, mode, correct }:
   const changed = before !== after;
   return (
     <span data-card-progress={after} className="inline-flex items-center gap-2">
-      <span className={`inline-block rounded-full border border-line px-2 py-0.5 text-caption text-slate-200 transition-transform duration-300 ${changed && phase === 1 ? "scale-125 border-good text-good" : "scale-100"}`}>
+      <span className={`inline-block whitespace-nowrap rounded-full border border-line px-2 py-0.5 text-caption text-slate-200 transition-transform duration-300 ${changed && phase === 1 ? "scale-125 border-good text-good" : "scale-100"}`}>
         {phase === 0 && before ? before : after}
       </span>
       {progress.recoveredFrom !== null ? (

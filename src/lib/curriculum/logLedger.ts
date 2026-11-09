@@ -8,8 +8,8 @@
 
 /** judge = 맞나 틀리나에서 판단(2026-11-08 사용자 "이쪽은 활용점수에" — 틀린 곳을 짚으면 활용, ⭕ 맞는 문장은 quiz 고르기). */
 export type LogSource = "quiz" | "exam" | "call" | "people" | "dict" | "script" | "chat" | "judge";
-/** ok 맞음 · miss 틀림 · used 통화·대화에서 씀 · look 찾아봄 */
-export type LogResult = "ok" | "miss" | "used" | "look";
+/** ok 맞음 · miss 틀림 · used 통화·대화에서 씀 · look 찾아봄 · again 맞힌 뒤 학습자가 [다시]를 누름(다음 날 다시 볼 것에, checkState.ts) */
+export type LogResult = "ok" | "miss" | "used" | "look" | "again";
 /** write 빈칸 쓰기 · pick 고르기(퀴즈만) */
 /** sure = 어림이 높은 처음 본 말을 예문 없이 써서 맞힘(quizTier.ts) — 체크 셋 바로 알아요. */
 export type LogMode = "write" | "pick" | "sure";
@@ -27,7 +27,7 @@ export const MAX_ROWS = 40000;
 const SAME_SECONDS = 2;
 
 const SOURCES: readonly LogSource[] = ["quiz", "exam", "call", "people", "dict", "script", "chat", "judge"];
-const RESULTS: readonly LogResult[] = ["ok", "miss", "used", "look"];
+const RESULTS: readonly LogResult[] = ["ok", "miss", "used", "look", "again"];
 
 function storageKey(language: string): string {
   return `${KEY}.${language}`;

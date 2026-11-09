@@ -32,21 +32,12 @@ test("표현 어림: 아래 단계 높음, 같은 단계 중간, 위 단계 낮�
 
 const day = (t: number) => new Date(t * 1000).toISOString().slice(0, 10);
 
-test("체크 셋: 처음 본 말을 sure로 맞히면 바로 알아요(3일 뒤 확인), 그때 틀리면 적용이 힘듦", () => {
+test("체크 셋: 예문 없이 써서 맞히면 앎, 그 뒤 틀리면 다시 볼 것 · 고르기로 맞힌 것은 다시 볼 것에 안 감", () => {
   const t = 1_800_000_000;
-  const state = stateOf([{ k: "w|x", src: "quiz", r: "ok", m: "sure", t }], day);
-  assert.equal(state.level, "known");
-  assert.equal(state.due, t + 3 * 86400);
-  const missed = stateOf([{ k: "w|x", src: "quiz", r: "ok", m: "sure", t }, { k: "w|x", src: "quiz", r: "miss", m: "write", t: t + 3 * 86400 }], day);
-  assert.equal(missed.level, "hard");
-  // 그냥 쓰기 맞음은 예전처럼 적용이 힘듦.
-  assert.equal(stateOf([{ k: "w|y", src: "quiz", r: "ok", m: "write", t }], day).level, "hard");
-});
-
-test("고르기로만 맞힌 New는 다음 날 복습에", () => {
-  const t = 1_800_000_000;
+  assert.equal(stateOf([{ k: "w|x", src: "quiz", r: "ok", m: "sure", t }]).level, "known");
+  assert.equal(stateOf([{ k: "w|x", src: "quiz", r: "ok", m: "sure", t }, { k: "w|x", src: "quiz", r: "miss", m: "write", t: t + 3 * 86400 }]).level, "hard");
   const events: LogEvent[] = [{ k: "w|p", src: "quiz", r: "ok", m: "pick", t }];
-  const states = checkStates(events, day);
-  assert.ok(!reviewKeys({ events, states, now: t + 60, today: day }).includes("w|p"));
-  assert.ok(reviewKeys({ events, states, now: t + 86400, today: day }).includes("w|p"));
+  const states = checkStates(events);
+  assert.ok(!reviewKeys({ events, states, now: t + 86400, today: day }).includes("w|p"));
+  assert.ok(!reviewKeys({ events, states, now: t + 30 * 86400, today: day }).includes("w|p"));
 });

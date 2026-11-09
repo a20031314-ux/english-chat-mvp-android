@@ -3,7 +3,7 @@
 import { DictNotes } from "@/components/studyMap/DictNotes";
 import { CardProgressDots, ladderName } from "@/components/studyMap/Growth";
 import { quizShapeOf } from "@/lib/curriculum/missKind";
-import { readLedger } from "@/lib/curriculum/logLedger";
+import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { maybeShowInterstitial } from "@/lib/ads";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
@@ -267,6 +267,8 @@ export function QuestionView({
   dictDoor?: boolean;
 }) {
   const [dictWord, setDictWord] = useState<string | null>(null);
+  // 맞힌 뒤 [다시]를 눌렀나 — 맞힌 것은 저절로 다시 안 나오고, 누른 것만 다음 날 다시 볼 것에(checkState.ts again).
+  const [again, setAgain] = useState(false);
   // 답하기 전 그 열쇠의 장부(답하면 부르는 쪽이 곧바로 장부에 씀) — 점 셋의 "전"(개편만, 2026-11-08).
   // 맞나 틀리나는 문법을 물어서 점 셋도 그 문법 열쇠(2026-11-08).
   const dotKey = given.kind === "judge" ? given.slip.key : bankKey;
@@ -338,8 +340,8 @@ export function QuestionView({
       {/* Key prefix: DictNotes below also keyed on the sentence, so sibling keys collided and the example list rendered twice (ux check 2026-11-09 easy-repeat). */}
       {answered && examples && bankKey && "text" in question ? <MoreExamples key={`more|${question.text}`} locale={locale} language={language} bankKey={bankKey} current={question.text} tag={tag} /> : null}
       {answered ? (
-        <div className="flex items-center justify-between gap-2">
-          <span className={`text-note font-semibold ${answered.correct ? "text-good" : "text-bad"}`}>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <span className={`whitespace-nowrap text-note font-semibold ${answered.correct ? "text-good" : "text-bad"}`}>
             {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : answered.assisted ? "💡" : ui.quizWrong}
           </span>
           {/* 개편: 답한 순간 그 소재의 점 셋이 바뀜(studyMap/Growth CardProgressDots, 2026-11-08). 문제마다 새로 그려 답하기 전 장부를 잡는다. */}
@@ -353,6 +355,22 @@ export function QuestionView({
               mode={quizShapeOf(question as never, { correct: answered.correct, ...(answered.typed ? { typed: true } : {}) }, (text) => text.split(" ")).shape === "t" ? (question.kind === "type" && question.bare && answered.correct ? "sure" : "write") : "pick"}
               correct={answered.correct && !answered.assisted}
             />
+          ) : null}
+          {dictDoor && dotKey && /^[wefg]\|/.test(dotKey) && answered.correct && !answered.skipped && !answered.assisted ? (
+            <button
+              type="button"
+              data-quiz-again
+              aria-pressed={again}
+              disabled={again}
+              onClick={() => {
+                noteLedger(language, [{ k: dotKey, src: "quiz", r: "again" }]);
+                setAgain(true);
+              }}
+              className={`shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-caption ${again ? "border-good text-good" : "border-line text-slate-400 hover:bg-white/10"}`}
+            >
+              {again ? "✓ " : ""}
+              {ui.flipAgainBtn}
+            </button>
           ) : null}
           {dictDoor && bankKey && /^[wefg]\|/.test(bankKey) ? (
             <button
@@ -370,7 +388,7 @@ export function QuestionView({
               {ui.explanation}
             </button>
           ) : null}
-          <button type="button" onClick={onNext} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
+          <button type="button" onClick={onNext} className="ms-auto shrink-0 whitespace-nowrap rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
             {ui.scriptNext}
           </button>
         </div>

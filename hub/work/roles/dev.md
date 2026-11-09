@@ -43,3 +43,4 @@
 - 로컬 확인: `npm run build:capacitor` 후 www를 띄우고 /api는 운영 서버로 프록시(`scripts/browser-language-pass.mjs`가 같은 방식).
 - 웹에서는 YouTube 음성 추출이 막혀 영상 준비가 NO_AUDIO로 실패한다. 영상은 기기에서만 확인 가능.
 - 화면 흐름 `hub/app/STRUCTURE.md`, 기능 장부 `hub/app/FEATURES.md`, 퀴즈 `hub/app/QUIZ.md`, 광고 `hub/app/ADS.md`, 비용 `hub/app/costs.md`, 저장 `hub/app/data-map.md`.
+- **Quizbank 고급자 아래쪽 공백:** 경계 한참 아래 낱말은 `presumedWords`가 새 낱말 묶음에 하나씩만 끼워서, 경계 위 낱말이 떨어지면 끝까지 안 나옴(시뮬레이션 고급자 약 2,550개) — 새 낱말이 떨어지면 아래쪽 확인을 묶음으로 낼지 사용자 방향 대기(log 2026-11-09 "맞힌 것 저절로 다시 안 냄").

@@ -1053,6 +1053,147 @@
       "note": "Quizbank 새 묶음(head)·다시 볼 것(askKeys → turnedGrammar) 둘 다 turnPrepared(그 칸 퀴즈 답 수 차례). es-gv g|3:1·g|3:4 데이터 있음, preparedQuiz.test 8 통과. FirstCheck는 prepared 안 씀",
       "until": "",
       "answeredAt": "2026-11-09 19:26"
+    },
+    {
+      "id": "a261109-2-7",
+      "at": "2026-11-09 23:51",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "Quizbank 맞힌 것 저절로 다시 안 냄 — 체크 셋: 퀴즈에서 맞히면 앎(확인 날짜 1·3·7·30 없앰), 앎에서 틀림·답 뒤 [다시](장부 r again) → 다시 볼 것. 고르기 맞힘 쓰기로 다시(pickedNew) 지움. 점 셋·배운 것 표·사전 주석(앎 낱말 숨김)·넘겨 보기 순서가 바뀐 상태 계산을 씀",
+      "files": [
+        "src/components/FindInMy.tsx",
+        "src/components/account/AccountCard.tsx",
+        "src/components/account/ProfileFacts.tsx",
+        "src/app/dev/call-preview/page.tsx",
+        "src/lib/server/feedbackFixStore.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "1:1 메시지",
+        "단체방",
+        "사람",
+        "게시판",
+        "Room",
+        "방 게임",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "My에서 찾기"
+      ],
+      "base": "HEAD",
+      "head": "1f2ff41",
+      "status": "open"
+    },
+    {
+      "id": "a261109-2-8",
+      "at": "2026-11-09 23:51",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "Quizbank 맞힌 것 저절로 다시 안 냄 — 체크 셋: 퀴즈에서 맞히면 앎(확인 날짜 1·3·7·30 없앰), 앎에서 틀림·답 뒤 [다시](장부 r again) → 다시 볼 것. 고르기 맞힘 쓰기로 다시(pickedNew) 지움. 점 셋·배운 것 표·사전 주석(앎 낱말 숨김)·넘겨 보기 순서가 바뀐 상태 계산을 씀",
+      "files": [
+        "src/components/RoleplayScreen.tsx",
+        "src/components/roleplay/CallReplay.tsx",
+        "src/components/ChatWindow.tsx",
+        "src/components/roleplay/callHooks.ts",
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx",
+        "src/components/ExpressionPeek.tsx",
+        "src/components/roleplay/CallRecap.tsx",
+        "src/components/roleplay/CallParts.tsx",
+        "src/lib/server/ledgerStore.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "1:1 메시지",
+        "단체방",
+        "사람",
+        "게시판",
+        "Room",
+        "방 게임",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "My에서 찾기"
+      ],
+      "base": "HEAD",
+      "head": "1f2ff41",
+      "status": "open"
+    },
+    {
+      "id": "a261109-2-9",
+      "at": "2026-11-09 23:51",
+      "kind": "apply",
+      "from": "2",
+      "to": "4",
+      "what": "Quizbank 맞힌 것 저절로 다시 안 냄 — 체크 셋: 퀴즈에서 맞히면 앎(확인 날짜 1·3·7·30 없앰), 앎에서 틀림·답 뒤 [다시](장부 r again) → 다시 볼 것. 고르기 맞힘 쓰기로 다시(pickedNew) 지움. 점 셋·배운 것 표·사전 주석(앎 낱말 숨김)·넘겨 보기 순서가 바뀐 상태 계산을 씀",
+      "files": [
+        "src/components/rooms/BoardView.tsx",
+        "src/components/rooms/MateAsk.tsx",
+        "src/components/rooms/MessagesTab.tsx",
+        "src/components/rooms/RoomDm.tsx",
+        "src/components/rooms/RoomGroups.tsx",
+        "src/components/rooms/RoomParts.tsx",
+        "src/components/rooms/RoomPeople.tsx",
+        "src/components/rooms/RoomView.tsx",
+        "src/components/rooms/RoomsScreen.tsx",
+        "src/components/rooms/TeamSpace.tsx",
+        "src/components/invite/InviteWelcome.tsx",
+        "src/components/rooms/PeopleTab.tsx",
+        "src/components/rooms/RandomScreen.tsx",
+        "src/components/rooms/RoomCall.tsx",
+        "src/components/rooms/RoomGame.tsx",
+        "src/components/rooms/VideoStage.tsx",
+        "src/lib/server/boardStore.ts",
+        "src/lib/server/iconStore.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "1:1 메시지",
+        "단체방",
+        "사람",
+        "게시판",
+        "Room",
+        "방 게임",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "My에서 찾기"
+      ],
+      "base": "HEAD",
+      "head": "1f2ff41",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -1221,11 +1362,29 @@
       "asks": [
         "a261109-3-1"
       ]
+    },
+    {
+      "at": "2026-11-09 23:51",
+      "from": "2",
+      "base": "HEAD",
+      "head": "1f2ff41",
+      "what": "Quizbank 맞힌 것 저절로 다시 안 냄 — 체크 셋: 퀴즈에서 맞히면 앎(확인 날짜 1·3·7·30 없앰), 앎에서 틀림·답 뒤 [다시](장부 r again) → 다시 볼 것. 고르기 맞힘 쓰기로 다시(pickedNew) 지움. 점 셋·배운 것 표·사전 주석(앎 낱말 숨김)·넘겨 보기 순서가 바뀐 상태 계산을 씀",
+      "tabs": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "asks": [
+        "a261109-2-7",
+        "a261109-2-8",
+        "a261109-2-9"
+      ]
     }
   ],
   "seq": {
     "261109": 9,
-    "261109-2": 6,
+    "261109-2": 9,
     "261109-6": 4,
     "261109-5": 4,
     "261109-3": 1

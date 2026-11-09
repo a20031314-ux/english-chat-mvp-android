@@ -5,7 +5,6 @@
  */
 import type { LogEvent } from "./logLedger.ts";
 import type { CheckState } from "./checkState.ts";
-import { dueKeys } from "./checkState.ts";
 
 export type CardPart = "word" | "expression" | "grammar" | "frame";
 
@@ -46,8 +45,8 @@ export function stuckKeys(events: readonly LogEvent[], now: number): string[] {
 }
 
 /**
- * Quizbank의 다시 볼 것(장부·체크 셋에서): 대화에서 막힌 것 → 확인할 때 된 앎 → 적용이 힘듦(오늘 아직 안 푼 것)
- * → 마지막 답이 틀린 처음 봄 → 고르기로만 맞힌 처음 봄(다음 날부터).
+ * Quizbank의 다시 볼 것(장부·체크 셋에서): 대화에서 막힌 것 → 다시 볼 것(앎에서 틀림·[다시] — 오늘 아직 안 푼 것, 그래서 다음 날부터)
+ * → 마지막 답이 틀린 처음 봄. 맞힌 것은 저절로 다시 내지 않는다(확인 날짜 없음).
  */
 export function reviewKeys(input: { events: readonly LogEvent[]; states: ReadonlyMap<string, CheckState>; now: number; today: (t: number) => string }): string[] {
   const { events, states, now } = input;
@@ -56,7 +55,6 @@ export function reviewKeys(input: { events: readonly LogEvent[]; states: Readonl
     if (partOf(key) && !out.includes(key)) out.push(key);
   };
   for (const key of stuckKeys(events, now)) add(key);
-  for (const key of dueKeys(states, now)) add(key);
   const lastQuiz = new Map<string, LogEvent>();
   for (const event of events) if (quizLike(event) && (lastQuiz.get(event.k)?.t ?? -1) <= event.t) lastQuiz.set(event.k, event);
   const today = input.today(now);
@@ -67,10 +65,5 @@ export function reviewKeys(input: { events: readonly LogEvent[]; states: Readonl
     if (!last || input.today(last.t) !== today) add(key);
   }
   for (const [key, state] of byLast) if (state.level === "new" && lastQuiz.get(key)?.r === "miss") add(key);
-  // 고르기로만 맞힌 New(그날 쓰기까지 못 감)는 다음 날부터 — 쓰기로 나온다(카드 face show, 2026-11-08).
-  for (const [key, state] of byLast) {
-    const last = lastQuiz.get(key);
-    if (state.level === "new" && last?.r === "ok" && last.m === "pick" && input.today(last.t) !== today) add(key);
-  }
   return out;
 }

@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { cardFaces, checkStates, dueKeys, stateOf } from "./checkState.ts";
+import { cardFaces, checkStates, stateOf } from "./checkState.ts";
 import { answeredToday, reviewKeys, stuckKeys, TODAY_GOAL } from "./todayCards.ts";
 import { ledgerFillEvents } from "./fillInputs.ts";
 import type { LogEvent } from "./logLedger.ts";
@@ -10,34 +10,23 @@ const T0 = Date.UTC(2026, 10, 2, 3) / 1000; // 11-02 정오(한국)
 const utcDay = (t: number) => new Date(t * 1000).toISOString().slice(0, 10);
 const ev = (k: string, r: LogEvent["r"], t: number, extra: Partial<LogEvent> = {}): LogEvent => ({ k, src: "quiz", r, t, ...extra });
 
-test("체크 셋: 고르기 맞음은 처음 봄, 쓰기 맞음은 적용이 힘듦, 다른 날 쓰기 맞음이면 앎 (ja)", () => {
-  const key = "w|食べる";
-  assert.equal(stateOf([ev(key, "ok", T0, { m: "pick" })], utcDay).level, "new");
-  assert.equal(stateOf([ev(key, "ok", T0, { m: "write" })], utcDay).level, "hard");
-  // 같은 날 두 번은 앎으로 안 감.
-  assert.equal(stateOf([ev(key, "ok", T0, { m: "write" }), ev(key, "ok", T0 + 600, { m: "write" })], utcDay).level, "hard");
-  const known = stateOf([ev(key, "ok", T0, { m: "write" }), ev(key, "ok", T0 + DAY, { m: "write" })], utcDay);
-  assert.equal(known.level, "known");
-  assert.equal(known.due, T0 + DAY + DAY);
+test("체크 셋: 퀴즈에서 맞히면 모양과 상관없이 앎, 처음 봄에서 틀리면 그대로 (ja·es)", () => {
+  assert.equal(stateOf([ev("w|食べる", "ok", T0, { m: "pick" })]).level, "known");
+  assert.equal(stateOf([ev("w|食べる", "ok", T0, { m: "write" })]).level, "known");
+  assert.equal(stateOf([{ k: "g|1:4", src: "judge", r: "ok", m: "write", t: T0 }]).level, "known", "맞나 틀리나에서 짚음");
+  assert.equal(stateOf([{ k: "w|casa", src: "exam", r: "ok", m: "pick", t: T0 }]).level, "known", "첫 측정 뜻 고르기");
+  assert.equal(stateOf([ev("w|casa", "miss", T0, { m: "pick" })]).level, "new");
+  assert.equal(stateOf([ev("w|casa", "miss", T0, { m: "pick" }), ev("w|casa", "ok", T0 + 60, { m: "write" })]).level, "known");
 });
 
-test("체크 셋: 대화(통화·사람)는 안 움직임 — 앎은 퀴즈로만, 앎에서 퀴즈 틀리면 적용이 힘듦 (th)", () => {
+test("체크 셋: 앎에서 퀴즈 틀림·[다시] → 다시 볼 것, 대화는 안 움직임 (th)", () => {
   const key = "e|ขอบคุณครับ";
-  const hard = stateOf([ev(key, "ok", T0, { m: "write" }), { k: key, src: "call", r: "used", t: T0 + DAY }], utcDay);
-  assert.equal(hard.level, "hard", "대화에서 써도 앎으로 안 올림");
-  const known = [ev(key, "ok", T0, { m: "write" }), ev(key, "ok", T0 + DAY, { m: "write" })];
-  assert.equal(stateOf([...known, { k: key, src: "people", r: "miss", t: T0 + 2 * DAY }], utcDay).level, "known", "대화 틀림은 안 내림");
-  assert.equal(stateOf([...known, ev(key, "miss", T0 + 2 * DAY)], utcDay).level, "hard");
-});
-
-test("체크 셋: 확인 때가 지나 맞히면 다음 확인(1→3일) (es)", () => {
-  const key = "w|casa";
-  const events = [ev(key, "ok", T0, { m: "write" }), ev(key, "ok", T0 + DAY, { m: "write" }), ev(key, "ok", T0 + 2 * DAY + 10, { m: "pick" })];
-  const state = stateOf(events, utcDay);
-  assert.equal(state.step, 1);
-  assert.equal(state.due, T0 + 2 * DAY + 10 + 3 * DAY);
-  assert.deepEqual(dueKeys(checkStates(events, utcDay), T0 + 4 * DAY), []);
-  assert.deepEqual(dueKeys(checkStates(events, utcDay), T0 + 6 * DAY), [key]);
+  const known = [ev(key, "ok", T0, { m: "write" })];
+  assert.equal(stateOf([...known, { k: key, src: "call", r: "used", t: T0 + DAY }]).level, "known", "대화에서 써도 그대로");
+  assert.equal(stateOf([...known, { k: key, src: "people", r: "miss", t: T0 + 2 * DAY }]).level, "known", "대화 틀림은 안 내림");
+  assert.equal(stateOf([...known, ev(key, "miss", T0 + 2 * DAY)]).level, "hard");
+  assert.equal(stateOf([...known, ev(key, "again", T0 + 30)]).level, "hard", "맞힌 뒤 [다시]");
+  assert.equal(stateOf([...known, ev(key, "again", T0 + 30), ev(key, "ok", T0 + DAY)]).level, "known", "다시 맞히면 앎");
 });
 
 test("오늘 끝: 오늘 퀴즈로 답한 서로 다른 열쇠가 TODAY_GOAL 이상 — 대화·찾아봄·어제 답은 안 셈 (ja·es)", () => {
@@ -78,23 +67,27 @@ test("카드 가릴 칸: 맞힌 적 있거나 사전에서 찾아본 뒤 안 풀
   assert.equal(face("w|空"), "hide");
 });
 
-test("다시 볼 것: 대화에서 막힌 것 → 확인할 때 된 앎 → 적용이 힘듦(오늘 안 푼 것) → 틀린 처음 봄, 장부만 (ja·es)", () => {
-  const due = "w|食べる";
+test("다시 볼 것: 대화에서 막힌 것 → 다시 볼 것(오늘 안 푼 것) → 틀린 처음 봄 — 맞힌 것은 저절로 안 나옴 (ja·es)", () => {
+  const again = "w|食べる";
   const hardOld = "e|por favor";
-  const hardToday = "g|1:0";
+  const againToday = "g|1:0";
   const missed = "w|tamaño";
   const fine = "w|casa";
+  const fineWrite = "w|perro";
   const now = T0 + 5 * DAY;
   const events = [
-    ev(due, "ok", T0, { m: "write" }), ev(due, "ok", T0 + DAY, { m: "write" }), // 앎, 확인 날 = T0+2일
-    ev(hardOld, "ok", T0 + 3 * DAY, { m: "write" }),
-    ev(hardToday, "ok", now - 60, { m: "write" }),
+    ev(again, "ok", T0, { m: "pick" }), ev(again, "again", T0 + 10),
+    ev(hardOld, "ok", T0 + DAY, { m: "write" }), ev(hardOld, "miss", T0 + 3 * DAY, { m: "write" }),
+    ev(againToday, "ok", now - 60, { m: "write" }), ev(againToday, "again", now - 50),
     ev(missed, "miss", now - 120, { m: "pick" }),
     ev(fine, "ok", now - 100, { m: "pick" }),
+    ev(fineWrite, "ok", T0, { m: "write" }),
     { k: "w|帰る", src: "call", r: "miss", t: now - DAY },
   ];
-  const keys = reviewKeys({ events, states: checkStates(events, utcDay), now, today: utcDay });
-  assert.deepEqual(keys, ["w|帰る", due, hardOld, missed]);
+  const keys = reviewKeys({ events, states: checkStates(events), now, today: utcDay });
+  assert.deepEqual(keys, ["w|帰る", again, hardOld, missed]);
+  // 오늘 [다시]를 누른 것은 다음 날부터.
+  assert.ok(reviewKeys({ events, states: checkStates(events), now: now + DAY, today: utcDay }).includes(againToday));
 });
 
 test("개편 띠 재료 = 장부: 쓰기는 활용·고르기는 이해·통화에서 씀은 스스로, 찾아봄은 뺌 (th·it)", () => {

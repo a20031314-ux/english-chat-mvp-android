@@ -38,7 +38,7 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
   const known: [string, number][] = [];
   for (const [key, list] of byKey) {
     list.sort((a, b) => a.t - b.t);
-    let state: CheckState = { level: "new", step: 0, last: 0 };
+    let state: CheckState = { level: "new", last: 0 };
     let wasKnown = false;
     let firstAnswer = true;
     let missDay: string | null = null;
@@ -54,7 +54,7 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
         missDay = null;
       }
       if (applied(event) && inDay(event.t)) at.used.set(key, event.t);
-      state = stepState(state, event, dayOf);
+      state = stepState(state, event);
       if (state.level === "known" && !wasKnown) {
         wasKnown = true;
         if (inDay(event.t)) at.learned.set(key, event.t);
