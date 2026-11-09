@@ -6993,6 +6993,22 @@
    "blank": "arroz"
   }
  ],
+ "w|arruga": [
+  {
+   "text": "Javier se fijó en una arruga nueva al mirarse en el espejo de la clínica.",
+   "en": "Javier noticed a new wrinkle when he looked at himself in the clinic mirror.",
+   "ko": "하비에르는 병원 거울을 보다가 새로 생긴 주름을 발견했어요.",
+   "blank": "arruga",
+   "src": "made"
+  },
+  {
+   "text": "Marta se pone crema porque el sol de la obra le está dejando alguna arruga.",
+   "en": "Marta puts on cream because the sun at the site is giving her a few wrinkles.",
+   "ko": "공사장 햇볕 때문에 주름이 생겨서 마르타는 크림을 발라요.",
+   "blank": "arruga",
+   "src": "made"
+  }
+ ],
  "w|arruinar": [
   {
    "text": "No quiero arruinar la fiesta.",
@@ -7066,6 +7082,22 @@
    "en": "A friend of Paula's who is a surgeon told how she operated on a heart artery.",
    "ko": "외과 의사인 파울라의 친구가 심장 동맥 수술을 한 이야기를 했어요.",
    "blank": "arteria",
+   "src": "made"
+  }
+ ],
+ "w|arterial": [
+  {
+   "text": "Antes de la extracción, la enfermera le tomó a Javier la presión arterial.",
+   "en": "Before the extraction, the nurse took Javier's blood pressure.",
+   "ko": "이를 뽑기 전에 간호사가 하비에르의 혈압을 쟀어요.",
+   "blank": "arterial",
+   "src": "made"
+  },
+  {
+   "text": "El médico de la empresa le midió a Marta la tensión arterial en el reconocimiento anual.",
+   "en": "The company doctor measured Marta's blood pressure at the annual check-up.",
+   "ko": "회사 의사가 연례 검진에서 마르타의 혈압을 쟀어요.",
+   "blank": "arterial",
    "src": "made"
   }
  ],
@@ -7539,6 +7571,22 @@
    "en": "She wants to attend the cooking course.",
    "ko": "요리 수업에 참석하고 싶어 해.",
    "blank": "asistir"
+  }
+ ],
+ "w|asma": [
+  {
+   "text": "Javier avisó a la dentista de que tiene asma por si usaba algún producto con olor fuerte.",
+   "en": "Javier warned the dentist that he has asthma in case she used any strong-smelling product.",
+   "ko": "하비에르는 냄새가 강한 약품을 쓸 경우를 대비해 천식이 있다고 치과 의사에게 알렸어요.",
+   "blank": "asma",
+   "src": "made"
+  },
+  {
+   "text": "Con tanto polvo, Marta lleva siempre el inhalador para el asma en el bolsillo.",
+   "en": "With so much dust, Marta always carries her asthma inhaler in her pocket.",
+   "ko": "먼지가 너무 많아서 마르타는 천식 흡입기를 늘 주머니에 넣고 다녀요.",
+   "blank": "asma",
+   "src": "made"
   }
  ],
  "w|asociación": [
@@ -11601,6 +11649,22 @@
    "src": "made"
   }
  ],
+ "w|bronceado": [
+  {
+   "text": "Javier llegó a la clínica muy bronceado después de las vacaciones.",
+   "en": "Javier arrived at the clinic very tanned after the holidays.",
+   "ko": "하비에르는 휴가를 다녀와서 아주 까맣게 탄 채로 병원에 왔어요.",
+   "blank": "bronceado",
+   "src": "made"
+  },
+  {
+   "text": "Marta acabó el verano muy bronceada, con la marca del casco en la frente.",
+   "en": "Marta finished the summer very tanned, with the mark of her helmet on her forehead.",
+   "ko": "마르타는 여름 끝에 이마에 헬멧 자국이 남을 만큼 까맣게 탔어요.",
+   "blank": "bronceada",
+   "src": "made"
+  }
+ ],
  "w|brote": [
   {
    "text": "En primavera, Mateo encontró un brote verde en un tronco quemado.",
@@ -12129,6 +12193,22 @@
    "blank": "cabeza"
   }
  ],
+ "w|cabezota": [
+  {
+   "text": "La dentista dice que Javier es muy cabezota porque nunca usa el hilo dental.",
+   "en": "The dentist says Javier is very stubborn because he never uses dental floss.",
+   "ko": "치과 의사는 하비에르가 치실을 절대 안 써서 아주 고집이 세다고 말해요.",
+   "blank": "cabezota",
+   "src": "made"
+  },
+  {
+   "text": "El arquitecto es tan cabezota que Marta tuvo que enseñarle tres veces el problema del techo.",
+   "en": "The architect is so stubborn that Marta had to show him the roof problem three times.",
+   "ko": "건축가가 너무 고집이 세서 마르타는 지붕 문제를 세 번이나 보여 줘야 했어요.",
+   "blank": "cabezota",
+   "src": "made"
+  }
+ ],
  "w|cabina": [
   {
    "text": "Llamó desde una cabina telefónica.",
@@ -12463,6 +12543,22 @@
    "src": "made"
   }
  ],
+ "w|calavera": [
+  {
+   "text": "En la consulta había una calavera de plástico para enseñar cómo encajan los dientes, y Javier la miró con curiosidad.",
+   "en": "In the surgery there was a plastic skull to show how the teeth fit together, and Javier looked at it with curiosity.",
+   "ko": "진료실에 이가 어떻게 맞물리는지 보여 주는 플라스틱 해골이 있어서 하비에르는 신기하게 쳐다봤어요.",
+   "blank": "calavera",
+   "src": "made"
+  },
+  {
+   "text": "Marta lleva en el casco una pegatina de una calavera con flores.",
+   "en": "Marta has a sticker of a skull with flowers on her helmet.",
+   "ko": "마르타의 헬멧에는 꽃 장식이 있는 해골 스티커가 붙어 있어요.",
+   "blank": "calavera",
+   "src": "made"
+  }
+ ],
  "w|calcetín": [
   {
    "text": "Se me perdió un calcetín en la lavadora.",
@@ -12713,6 +12809,22 @@
    "en": "They escaped through a back alley.",
    "ko": "뒷골목으로 도망쳤어.",
    "blank": "callejón"
+  }
+ ],
+ "w|callo": [
+  {
+   "text": "Javier fue andando a la clínica dental y llegó con un callo nuevo en el pie.",
+   "en": "Javier walked to the dental clinic and arrived with a new corn on his foot.",
+   "ko": "하비에르는 치과까지 걸어갔더니 발에 굳은살이 새로 생겼어요.",
+   "blank": "callo",
+   "src": "made"
+  },
+  {
+   "text": "Marta tiene un callo en la mano de tanto usar el martillo.",
+   "en": "Marta has a callus on her hand from using the hammer so much.",
+   "ko": "마르타는 망치를 너무 많이 써서 손에 굳은살이 박였어요.",
+   "blank": "callo",
+   "src": "made"
   }
  ],
  "w|calma": [
@@ -15849,6 +15961,22 @@
    "en": "That crazy plan is not going to work.",
    "ko": "그 미친 계획은 안 통할 거야.",
    "blank": "chiflado"
+  }
+ ],
+ "w|chillar": [
+  {
+   "text": "Un niño empezó a chillar en el sillón de al lado, y Javier le sonrió para tranquilizarlo.",
+   "en": "A child started to shriek in the chair next door, and Javier smiled at him to calm him down.",
+   "ko": "옆 의자에서 아이가 소리를 지르기 시작해서 하비에르가 웃어 주며 달랬어요.",
+   "blank": "chillar",
+   "src": "made"
+  },
+  {
+   "text": "Marta tuvo que chillar para que el conductor de la grúa la oyera.",
+   "en": "Marta had to shout for the crane driver to hear her.",
+   "ko": "마르타는 크레인 기사가 들을 수 있도록 소리를 질러야 했어요.",
+   "blank": "chillar",
+   "src": "made"
   }
  ],
  "w|chimenea": [
@@ -20701,6 +20829,22 @@
    "src": "made"
   }
  ],
+ "w|contracción": [
+  {
+   "text": "Javier sintió una contracción en la mandíbula después de tener la boca abierta tanto tiempo.",
+   "en": "Javier felt a cramp in his jaw after keeping his mouth open for so long.",
+   "ko": "입을 오래 벌리고 있었더니 하비에르는 턱이 뻣뻣하게 당기는 걸 느꼈어요.",
+   "blank": "contracción",
+   "src": "made"
+  },
+  {
+   "text": "El ingeniero le explicó a Marta que el hormigón sufre una pequeña contracción al secarse.",
+   "en": "The engineer explained to Marta that concrete undergoes a slight contraction as it dries.",
+   "ko": "엔지니어는 마르타에게 콘크리트가 마르면서 조금 수축한다고 설명했어요.",
+   "blank": "contracción",
+   "src": "made"
+  }
+ ],
  "w|contrario": [
   {
    "text": "Al contrario, me parece bien.",
@@ -24471,6 +24615,22 @@
    "blank": "delincuente"
   }
  ],
+ "w|delirar": [
+  {
+   "text": "Con la anestesia, Javier empezó a delirar un poco y a hablar de su perro.",
+   "en": "With the anaesthetic, Javier began to ramble a bit and talk about his dog.",
+   "ko": "마취 때문에 하비에르는 조금 횡설수설하며 자기 개 이야기를 하기 시작했어요.",
+   "blank": "delirar",
+   "src": "made"
+  },
+  {
+   "text": "Con aquel calor, un peón empezó a delirar y Marta llamó a una ambulancia.",
+   "en": "In that heat, a labourer began to become delirious and Marta called an ambulance.",
+   "ko": "그 더위에 인부 한 명이 헛소리를 하기 시작해서 마르타가 구급차를 불렀어요.",
+   "blank": "delirar",
+   "src": "made"
+  }
+ ],
  "w|delirio": [
   {
    "text": "El médico explicó a Sergio que el delirio de su abuelo se debía a la infección.",
@@ -24646,6 +24806,22 @@
    "en": "Nuria covered the debate on the country's democratic future.",
    "ko": "누리아는 나라의 민주적 미래에 관한 토론을 취재했어요.",
    "blank": "democrático",
+   "src": "made"
+  }
+ ],
+ "w|demoníaco": [
+  {
+   "text": "El ruido del torno le parecía casi demoníaco a Javier cuando era niño.",
+   "en": "The sound of the drill seemed almost demonic to Javier when he was a child.",
+   "ko": "하비에르는 어릴 때 치과 드릴 소리가 거의 악마 같다고 느꼈어요.",
+   "blank": "demoníaco",
+   "src": "made"
+  },
+  {
+   "text": "El ruido de la taladradora a las siete de la mañana era demoníaco, según los vecinos de Marta.",
+   "en": "The noise of the drill at seven in the morning was diabolical, according to Marta's neighbours.",
+   "ko": "마르타의 이웃들 말로는 아침 일곱 시의 드릴 소리가 악마 같았대요.",
+   "blank": "demoníaco",
    "src": "made"
   }
  ],
@@ -25209,6 +25385,22 @@
    "src": "made"
   }
  ],
+ "w|desamparado": [
+  {
+   "text": "En la puerta de la clínica había un gatito desamparado, y Javier le dio agua.",
+   "en": "At the clinic door there was a helpless little kitten, and Javier gave it water.",
+   "ko": "치과 문 앞에 버려진 새끼 고양이가 있어서 하비에르가 물을 줬어요.",
+   "blank": "desamparado",
+   "src": "made"
+  },
+  {
+   "text": "Tras la tormenta, la obra parecía desamparada, y Marta tardó un día en ordenarla.",
+   "en": "After the storm, the site looked abandoned, and Marta took a day to tidy it up.",
+   "ko": "폭풍 뒤 공사장은 버려진 것 같았고 마르타는 정리하는 데 하루가 걸렸어요.",
+   "blank": "desamparada",
+   "src": "made"
+  }
+ ],
  "w|desangrarse": [
   {
    "text": "La dentista tranquilizó a Javier: nadie va a desangrarse por sacarse una muela.",
@@ -25599,6 +25791,22 @@
    "blank": "desconocido"
   }
  ],
+ "w|descortés": [
+  {
+   "text": "Javier pensó que el recepcionista había sido un poco descortés al no saludarlo.",
+   "en": "Javier thought the receptionist had been a bit rude for not greeting him.",
+   "ko": "하비에르는 접수 직원이 인사도 안 해서 좀 무례했다고 생각했어요.",
+   "blank": "descortés",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente fue descortés con Marta, pero ella le respondió con calma.",
+   "en": "A client was rude to Marta, but she answered him calmly.",
+   "ko": "한 고객이 마르타에게 무례하게 굴었지만 마르타는 침착하게 대답했어요.",
+   "blank": "descortés",
+   "src": "made"
+  }
+ ],
  "w|describir": [
   {
    "text": "¿Puedes describir la casa con más detalle?",
@@ -25772,6 +25980,22 @@
    "en": "Sofía was unemployed for half a year before founding her company.",
    "ko": "소피아는 회사를 세우기 전에 반년 동안 실업 상태였어요.",
    "blank": "desempleada",
+   "src": "made"
+  }
+ ],
+ "w|desencadenar": [
+  {
+   "text": "La dentista le dijo a Javier que una infección pequeña puede desencadenar problemas mayores.",
+   "en": "The dentist told Javier that a small infection can trigger bigger problems.",
+   "ko": "치과 의사는 하비에르에게 작은 염증이 더 큰 문제를 일으킬 수 있다고 말했어요.",
+   "blank": "desencadenar",
+   "src": "made"
+  },
+  {
+   "text": "Un cable mal conectado puede desencadenar un incendio, le recordó Marta al electricista.",
+   "en": "A badly connected cable can trigger a fire, Marta reminded the electrician.",
+   "ko": "전선 하나가 잘못 연결돼도 불이 날 수 있다고 마르타가 전기 기사에게 다시 말했어요.",
+   "blank": "desencadenar",
    "src": "made"
   }
  ],
@@ -26477,6 +26701,22 @@
    "blank": "destrucción"
   }
  ],
+ "w|destructivo": [
+  {
+   "text": "La dentista le explicó a Javier que el azúcar tiene un efecto destructivo en el esmalte.",
+   "en": "The dentist explained to Javier that sugar has a destructive effect on the enamel.",
+   "ko": "치과 의사는 하비에르에게 설탕이 법랑질을 망가뜨린다고 설명했어요.",
+   "blank": "destructivo",
+   "src": "made"
+  },
+  {
+   "text": "Las raíces del árbol tenían un efecto destructivo en los cimientos, así que Marta las cortó.",
+   "en": "The tree roots were having a destructive effect on the foundations, so Marta cut them.",
+   "ko": "나무뿌리가 기초를 망가뜨리고 있어서 마르타는 뿌리를 잘라 냈어요.",
+   "blank": "destructivo",
+   "src": "made"
+  }
+ ],
  "w|destructor": [
   {
    "text": "Raúl leyó una historia naval sobre un destructor de la Segunda Guerra Mundial.",
@@ -26849,6 +27089,22 @@
    "blank": "día"
   }
  ],
+ "w|diabetes": [
+  {
+   "text": "La dentista le preguntó a Javier si tenía diabetes, porque las encías le sangraban mucho.",
+   "en": "The dentist asked Javier if he had diabetes, because his gums were bleeding a lot.",
+   "ko": "잇몸에서 피가 많이 나서 치과 의사는 하비에르에게 당뇨가 있는지 물었어요.",
+   "blank": "diabetes",
+   "src": "made"
+  },
+  {
+   "text": "Un albañil del equipo de Marta tiene diabetes y siempre lleva algo dulce en la mochila.",
+   "en": "A bricklayer on Marta's team has diabetes and always carries something sweet in his backpack.",
+   "ko": "마르타 팀의 벽돌공 한 명은 당뇨가 있어서 늘 가방에 단것을 챙겨 다녀요.",
+   "blank": "diabetes",
+   "src": "made"
+  }
+ ],
  "w|diablo": [
   {
    "text": "¿Qué diablo haces aquí?",
@@ -26953,6 +27209,22 @@
    "en": "I read the newspaper on the subway.",
    "ko": "지하철에서 신문을 읽어.",
    "blank": "diario"
+  }
+ ],
+ "w|diarrea": [
+  {
+   "text": "Javier canceló su primera cita porque tenía diarrea desde la noche anterior.",
+   "en": "Javier cancelled his first appointment because he'd had diarrhoea since the night before.",
+   "ko": "하비에르는 전날 밤부터 설사를 해서 첫 예약을 취소했어요.",
+   "blank": "diarrea",
+   "src": "made"
+  },
+  {
+   "text": "Medio equipo de Marta faltó a la obra por una diarrea después de la comida de empresa.",
+   "en": "Half of Marta's team missed work at the site because of diarrhoea after the company lunch.",
+   "ko": "회사 회식 뒤 설사 때문에 마르타의 팀 절반이 현장에 못 나왔어요.",
+   "blank": "diarrea",
+   "src": "made"
   }
  ],
  "w|dibujar": [
@@ -27595,6 +27867,22 @@
    "src": "made"
   }
  ],
+ "w|discapacitado": [
+  {
+   "text": "La clínica dental tiene una rampa para personas discapacitadas, y Javier ayudó a un señor a subirla.",
+   "en": "The dental clinic has a ramp for disabled people, and Javier helped a man go up it.",
+   "ko": "치과에 장애인용 경사로가 있어서 하비에르는 한 아저씨가 올라가는 걸 도왔어요.",
+   "blank": "discapacitadas",
+   "src": "made"
+  },
+  {
+   "text": "Marta diseñó la entrada del edificio pensando en los usuarios discapacitados.",
+   "en": "Marta designed the building's entrance with disabled users in mind.",
+   "ko": "마르타는 장애가 있는 이용자들을 생각해서 건물 입구를 설계했어요.",
+   "blank": "discapacitados",
+   "src": "made"
+  }
+ ],
  "w|disciplina": [
   {
    "text": "Para trabajar desde casa hace falta mucha disciplina.",
@@ -27654,6 +27942,22 @@
    "en": "Elena handles her customers' data with total discretion.",
    "ko": "엘레나는 손님들의 정보를 철저히 비밀로 다뤄요.",
    "blank": "discreción",
+   "src": "made"
+  }
+ ],
+ "w|discretamente": [
+  {
+   "text": "Javier se limpió discretamente la boca con la manga al levantarse del sillón.",
+   "en": "Javier discreetly wiped his mouth with his sleeve as he got up from the chair.",
+   "ko": "하비에르는 의자에서 일어나며 소매로 입을 슬쩍 닦았어요.",
+   "blank": "discretamente",
+   "src": "made"
+  },
+  {
+   "text": "Marta le avisó discretamente al jefe de que faltaba material.",
+   "en": "Marta discreetly told the boss that some materials were missing.",
+   "ko": "마르타는 자재가 모자란다고 상사에게 조용히 알렸어요.",
+   "blank": "discretamente",
    "src": "made"
   }
  ],
@@ -31215,6 +31519,22 @@
    "blank": "enloquecer"
   }
  ],
+ "w|enmascarar": [
+  {
+   "text": "Javier masca chicle de menta para enmascarar el olor del café antes de la cita.",
+   "en": "Javier chews mint gum to mask the smell of coffee before the appointment.",
+   "ko": "하비에르는 예약 전에 커피 냄새를 감추려고 민트 껌을 씹어요.",
+   "blank": "enmascarar",
+   "src": "made"
+  },
+  {
+   "text": "Marta pintó la pared dos veces para enmascarar una grieta.",
+   "en": "Marta painted the wall twice to cover up a crack.",
+   "ko": "마르타는 금 간 곳을 감추려고 벽을 두 번 칠했어요.",
+   "blank": "enmascarar",
+   "src": "made"
+  }
+ ],
  "w|enmienda": [
   {
    "text": "El parlamento aprobó una enmienda y Sergio tuvo que cambiar la noticia a última hora.",
@@ -33771,6 +34091,22 @@
    "blank": "estallar"
   }
  ],
+ "w|estancar": [
+  {
+   "text": "Si no se limpia bien, el agua puede estancarse en el aparato, le explicó la higienista a Javier.",
+   "en": "If it isn't cleaned well, water can stagnate in the brace, the hygienist explained to Javier.",
+   "ko": "잘 닦지 않으면 교정기에 물이 고일 수 있다고 치위생사가 하비에르에게 설명했어요.",
+   "blank": "estancarse",
+   "src": "made"
+  },
+  {
+   "text": "La falta de permisos hizo estancar la obra de Marta durante dos meses.",
+   "en": "The lack of permits caused Marta's project to stall for two months.",
+   "ko": "허가가 나지 않아 마르타의 공사가 두 달 동안 멈춰 있었어요.",
+   "blank": "estancar",
+   "src": "made"
+  }
+ ],
  "w|estancia": [
   {
    "text": "Raúl pidió una guía para planear su estancia en Lisboa.",
@@ -33949,6 +34285,22 @@
    "en": "The stellar cast filled the theater.",
    "ko": "화려한 출연진이 극장을 채웠어.",
    "blank": "estelar"
+  }
+ ],
+ "w|estéril": [
+  {
+   "text": "La dentista le enseñó a Javier que todo el instrumental sale estéril de la máquina.",
+   "en": "The dentist showed Javier that all the instruments come out sterile from the machine.",
+   "ko": "치과 의사는 하비에르에게 모든 기구가 소독기에서 멸균된 상태로 나온다는 걸 보여 줬어요.",
+   "blank": "estéril",
+   "src": "made"
+  },
+  {
+   "text": "El terreno era tan estéril que Marta tuvo que traer tierra nueva para el jardín.",
+   "en": "The ground was so barren that Marta had to bring new soil for the garden.",
+   "ko": "땅이 너무 척박해서 마르타는 정원에 쓸 새 흙을 가져와야 했어요.",
+   "blank": "estéril",
+   "src": "made"
   }
  ],
  "w|esteroide": [
@@ -36935,6 +37287,22 @@
    "blank": "festival"
   }
  ],
+ "w|feto": [
+  {
+   "text": "La mujer de Javier le enseñó en el móvil la ecografía del feto mientras él esperaba su turno.",
+   "en": "Javier's wife showed him the ultrasound of the foetus on her phone while he waited his turn.",
+   "ko": "하비에르가 차례를 기다리는 동안 아내가 휴대폰으로 태아 초음파 사진을 보여 줬어요.",
+   "blank": "feto",
+   "src": "made"
+  },
+  {
+   "text": "Marta trabaja en un hospital nuevo donde habrá una unidad para el cuidado del feto y la madre.",
+   "en": "Marta works on a new hospital where there will be a unit for foetal and maternal care.",
+   "ko": "마르타는 태아와 산모를 돌보는 병동이 들어설 새 병원 공사를 하고 있어요.",
+   "blank": "feto",
+   "src": "made"
+  }
+ ],
  "w|fiable": [
   {
    "text": "La profesora pidió a Diego que usara fuentes fiables para su trabajo de historia.",
@@ -38829,6 +39197,22 @@
    "blank": "fugitivo"
   }
  ],
+ "w|fumador": [
+  {
+   "text": "La dentista le preguntó a Javier si era fumador, porque tenía los dientes un poco amarillos.",
+   "en": "The dentist asked Javier if he was a smoker, because his teeth were a bit yellow.",
+   "ko": "치과 의사는 하비에르의 이가 좀 누래서 담배를 피우는지 물었어요.",
+   "blank": "fumador",
+   "src": "made"
+  },
+  {
+   "text": "El encargado de la obra le pidió a Marta que vigilara que ningún fumador encendiera un cigarro cerca de la pintura.",
+   "en": "The site foreman asked Marta to make sure no smoker lit a cigarette near the paint.",
+   "ko": "현장 소장은 마르타에게 페인트 근처에서 담배 피우는 사람이 없도록 지켜보라고 했어요.",
+   "blank": "fumador",
+   "src": "made"
+  }
+ ],
  "w|fumar": [
   {
    "text": "Dejó de fumar el año pasado.",
@@ -39613,6 +39997,38 @@
    "en": "I never met my biological twin.",
    "ko": "난 생물학적 쌍둥이를 만난 적이 없어.",
    "blank": "gemelo"
+  }
+ ],
+ "w|gemido": [
+  {
+   "text": "Desde la consulta de al lado se oyó un gemido, y Javier se puso aún más nervioso.",
+   "en": "A groan was heard from the room next door, and Javier got even more nervous.",
+   "ko": "옆 진료실에서 신음 소리가 들려서 하비에르는 더 긴장했어요.",
+   "blank": "gemido",
+   "src": "made"
+  },
+  {
+   "text": "Marta oyó un gemido debajo de los andamios y encontró a un perro atrapado.",
+   "en": "Marta heard a whimper under the scaffolding and found a trapped dog.",
+   "ko": "마르타는 비계 아래에서 끙끙대는 소리를 듣고 갇혀 있던 개를 발견했어요.",
+   "blank": "gemido",
+   "src": "made"
+  }
+ ],
+ "w|gemir": [
+  {
+   "text": "Javier intentó no gemir cuando la dentista le tocó la muela.",
+   "en": "Javier tried not to groan when the dentist touched his molar.",
+   "ko": "치과 의사가 어금니를 건드렸을 때 하비에르는 신음하지 않으려고 애썼어요.",
+   "blank": "gemir",
+   "src": "made"
+  },
+  {
+   "text": "El viento hacía gemir las vigas de metal, y a Marta le daba un poco de miedo.",
+   "en": "The wind made the metal beams groan, and it scared Marta a little.",
+   "ko": "바람에 철골이 삐걱거려서 마르타는 조금 무서웠어요.",
+   "blank": "gemir",
+   "src": "made"
   }
  ],
  "w|generación": [
@@ -43539,6 +43955,22 @@
    "en": "It was just a brief optical illusion.",
    "ko": "잠깐의 착시일 뿐이었어.",
    "blank": "ilusión"
+  }
+ ],
+ "w|ilustre": [
+  {
+   "text": "La clínica lleva el nombre de un ilustre médico del pueblo, y Javier leyó su historia en la pared.",
+   "en": "The clinic is named after an illustrious doctor from the town, and Javier read his story on the wall.",
+   "ko": "그 치과는 마을의 저명한 의사 이름을 따서 하비에르는 벽에 걸린 그의 이야기를 읽었어요.",
+   "blank": "ilustre",
+   "src": "made"
+  },
+  {
+   "text": "Marta restauró la casa natal de un ilustre poeta.",
+   "en": "Marta restored the birthplace of an illustrious poet.",
+   "ko": "마르타는 한 저명한 시인의 생가를 복원했어요.",
+   "blank": "ilustre",
+   "src": "made"
   }
  ],
  "w|imagen": [
@@ -47535,6 +47967,22 @@
    "blank": "italiano"
   }
  ],
+ "w|izar": [
+  {
+   "text": "Desde la ventana de la clínica, Javier vio a unos operarios izar una bandera en el ayuntamiento.",
+   "en": "From the clinic window, Javier saw some workers raise a flag on the town hall.",
+   "ko": "하비에르는 병원 창문으로 인부들이 시청에 깃발을 올리는 걸 봤어요.",
+   "blank": "izar",
+   "src": "made"
+  },
+  {
+   "text": "El equipo de Marta usó la grúa para izar las vigas hasta el quinto piso.",
+   "en": "Marta's team used the crane to hoist the beams up to the fifth floor.",
+   "ko": "마르타의 팀은 크레인으로 철골을 오 층까지 끌어올렸어요.",
+   "blank": "izar",
+   "src": "made"
+  }
+ ],
  "w|izquierda": [
   {
    "text": "Gira a la izquierda en la esquina.",
@@ -50123,6 +50571,22 @@
    "en": "The liquid soap smells like lemon.",
    "ko": "그 액체 비누는 레몬 향이 나.",
    "blank": "líquido"
+  }
+ ],
+ "w|lisiado": [
+  {
+   "text": "En la novela que leía Javier, un soldado lisiado volvía a casa después de la guerra.",
+   "en": "In the novel Javier was reading, a crippled soldier returned home after the war.",
+   "ko": "하비에르가 읽던 소설에서 다리를 다친 군인이 전쟁 뒤 집으로 돌아왔어요.",
+   "blank": "lisiado",
+   "src": "made"
+  },
+  {
+   "text": "En la obra apareció la estatua de un mendigo lisiado del siglo pasado, y Marta avisó al arqueólogo.",
+   "en": "A statue of a crippled beggar from the last century turned up at the site, and Marta told the archaeologist.",
+   "ko": "공사장에서 지난 세기의 다리 저는 거지 조각상이 나와서 마르타가 고고학자에게 알렸어요.",
+   "blank": "lisiado",
+   "src": "made"
   }
  ],
  "w|lista": [
@@ -53811,6 +54275,22 @@
    "src": "made"
   }
  ],
+ "w|metanfetamina": [
+  {
+   "text": "En la tele de la sala de espera daban una noticia sobre una red de metanfetamina desmantelada, y Javier cambió de canal.",
+   "en": "The waiting room TV was showing a news story about a methamphetamine ring being broken up, and Javier changed the channel.",
+   "ko": "대기실 텔레비전에서 필로폰 조직 검거 뉴스가 나와서 하비에르는 채널을 돌렸어요.",
+   "blank": "metanfetamina",
+   "src": "made"
+  },
+  {
+   "text": "La policía encontró restos de metanfetamina en el edificio abandonado que Marta iba a derribar.",
+   "en": "The police found traces of methamphetamine in the abandoned building Marta was going to demolish.",
+   "ko": "마르타가 철거하려던 폐건물에서 경찰이 필로폰 흔적을 발견했어요.",
+   "blank": "metanfetamina",
+   "src": "made"
+  }
+ ],
  "w|meteorito": [
   {
    "text": "Tumbado en la hierba, Mateo vio pasar un meteorito brillante.",
@@ -55961,6 +56441,22 @@
    "blank": "muro"
   }
  ],
+ "w|muscular": [
+  {
+   "text": "La dentista le explicó a Javier que el dolor de mandíbula era muscular, por apretar los dientes.",
+   "en": "The dentist explained to Javier that the jaw pain was muscular, from clenching his teeth.",
+   "ko": "치과 의사는 하비에르에게 턱 통증이 이를 꽉 물어서 생긴 근육통이라고 설명했어요.",
+   "blank": "muscular",
+   "src": "made"
+  },
+  {
+   "text": "Después de cargar sacos de cemento todo el día, Marta tenía dolor muscular en los brazos.",
+   "en": "After carrying sacks of cement all day, Marta had muscle pain in her arms.",
+   "ko": "하루 종일 시멘트 포대를 날랐더니 마르타는 팔에 근육통이 생겼어요.",
+   "blank": "muscular",
+   "src": "made"
+  }
+ ],
  "w|músculo": [
   {
    "text": "Se lastimó un músculo de la pierna.",
@@ -56308,6 +56804,22 @@
    "en": "In the comic Elena is drawing, the narrator is a talking cat.",
    "ko": "엘레나가 그리는 만화에서 해설자는 말하는 고양이예요.",
    "blank": "narrador",
+   "src": "made"
+  }
+ ],
+ "w|natación": [
+  {
+   "text": "Javier le contó a la dentista que va a natación tres veces por semana.",
+   "en": "Javier told the dentist that he goes swimming three times a week.",
+   "ko": "하비에르는 치과 의사에게 일주일에 세 번 수영하러 간다고 말했어요.",
+   "blank": "natación",
+   "src": "made"
+  },
+  {
+   "text": "Marta está construyendo un centro de natación nuevo para el barrio.",
+   "en": "Marta is building a new swimming centre for the neighbourhood.",
+   "ko": "마르타는 동네에 새 수영장을 짓고 있어요.",
+   "blank": "natación",
    "src": "made"
   }
  ],
@@ -58565,6 +59077,22 @@
    "blank": "Ojalá"
   }
  ],
+ "w|ojeada": [
+  {
+   "text": "Javier le echó una ojeada a la factura antes de pagar.",
+   "en": "Javier glanced at the bill before paying.",
+   "ko": "하비에르는 계산하기 전에 청구서를 한번 훑어봤어요.",
+   "blank": "ojeada",
+   "src": "made"
+  },
+  {
+   "text": "Marta echó una ojeada a los planos antes de empezar a levantar el muro.",
+   "en": "Marta had a quick look at the plans before starting to build the wall.",
+   "ko": "마르타는 벽을 쌓기 전에 도면을 한번 훑어봤어요.",
+   "blank": "ojeada",
+   "src": "made"
+  }
+ ],
  "w|ojo": [
   {
    "text": "Me arde el ojo derecho.",
@@ -58837,6 +59365,22 @@
    "en": "In my opinion, you should rest.",
    "ko": "내 생각엔 네가 쉬어야 해.",
    "blank": "opinión"
+  }
+ ],
+ "w|opio": [
+  {
+   "text": "En la sala de espera, Javier leyó un artículo sobre la historia del opio en la medicina antigua.",
+   "en": "In the waiting room, Javier read an article about the history of opium in ancient medicine.",
+   "ko": "하비에르는 대기실에서 옛 의학에서 아편이 쓰인 역사에 관한 기사를 읽었어요.",
+   "blank": "opio",
+   "src": "made"
+  },
+  {
+   "text": "Durante la excavación, Marta encontró una pipa antigua de opio que fue enviada al museo.",
+   "en": "During the excavation, Marta found an old opium pipe that was sent to the museum.",
+   "ko": "마르타는 터파기 중에 오래된 아편 파이프를 발견했고 그건 박물관으로 보내졌어요.",
+   "blank": "opio",
+   "src": "made"
   }
  ],
  "w|oponente": [
@@ -63306,6 +63850,22 @@
    "en": "Paula used a clip to hold the curtain in front of the spotlight.",
    "ko": "파울라는 조명 앞 커튼을 집게로 고정했어요.",
    "blank": "pinza",
+   "src": "made"
+  }
+ ],
+ "w|piojo": [
+  {
+   "text": "Mientras esperaba, Javier recibió un mensaje del colegio: había piojos en la clase de su hijo.",
+   "en": "While he was waiting, Javier got a message from the school: there were lice in his son's class.",
+   "ko": "기다리는 동안 하비에르는 아들 반에 머릿니가 돌고 있다는 학교 문자를 받았어요.",
+   "blank": "piojos",
+   "src": "made"
+  },
+  {
+   "text": "Marta tuvo que lavar el casco de su hijo porque había piojos en el colegio.",
+   "en": "Marta had to wash her son's helmet because there were lice at the school.",
+   "ko": "학교에 머릿니가 돌아서 마르타는 아들의 헬멧을 빨아야 했어요.",
+   "blank": "piojos",
    "src": "made"
   }
  ],
@@ -69551,6 +70111,22 @@
    "src": "made"
   }
  ],
+ "w|recostarse": [
+  {
+   "text": "La dentista le pidió a Javier recostarse un poco más en el sillón.",
+   "en": "The dentist asked Javier to lean back a bit further in the chair.",
+   "ko": "치과 의사는 하비에르에게 의자에 좀 더 기대 누우라고 했어요.",
+   "blank": "recostarse",
+   "src": "made"
+  },
+  {
+   "text": "A la hora del almuerzo, Marta suele recostarse a la sombra de la furgoneta.",
+   "en": "At lunchtime, Marta usually lies back in the shade of the van.",
+   "ko": "점심시간이면 마르타는 보통 승합차 그늘에 기대 누워요.",
+   "blank": "recostarse",
+   "src": "made"
+  }
+ ],
  "w|recrear": [
   {
    "text": "El fisioterapeuta intentó recrear el movimiento con el que Sergio se había lesionado el hombro.",
@@ -75775,6 +76351,22 @@
    "blank": "sexual"
   }
  ],
+ "w|sexualidad": [
+  {
+   "text": "En la sala de espera había folletos sobre salud, incluso uno sobre sexualidad y adolescencia, y Javier cogió uno para su hijo.",
+   "en": "In the waiting room there were health leaflets, even one about sexuality and adolescence, and Javier took one for his son.",
+   "ko": "대기실에 건강 안내지가 있었는데 성과 청소년기에 관한 것도 있어서 하비에르는 아들에게 줄 것을 하나 챙겼어요.",
+   "blank": "sexualidad",
+   "src": "made"
+  },
+  {
+   "text": "El centro de salud que construye Marta tendrá un despacho para charlas sobre sexualidad y salud.",
+   "en": "The health centre Marta is building will have an office for talks on sexuality and health.",
+   "ko": "마르타가 짓는 보건소에는 성과 건강에 관한 상담실이 생길 거예요.",
+   "blank": "sexualidad",
+   "src": "made"
+  }
+ ],
  "w|sexualmente": [
   {
    "text": "En una charla de salud del gimnasio, explicaron a Hugo qué infecciones se transmiten sexualmente.",
@@ -77358,6 +77950,22 @@
    "en": "Lola bought a stand for the front desk tablet.",
    "ko": "롤라는 프런트 태블릿 거치대를 샀어요.",
    "blank": "soporte",
+   "src": "made"
+  }
+ ],
+ "w|sórdido": [
+  {
+   "text": "Javier recordó la sórdida consulta de su infancia, con las paredes llenas de humedad.",
+   "en": "Javier remembered the squalid surgery of his childhood, with walls full of damp.",
+   "ko": "하비에르는 벽에 곰팡이가 가득했던 어린 시절의 허름한 치과를 떠올렸어요.",
+   "blank": "sórdida",
+   "src": "made"
+  },
+  {
+   "text": "Marta reformó un piso sórdido y lo convirtió en una casa luminosa.",
+   "en": "Marta renovated a squalid flat and turned it into a bright home.",
+   "ko": "마르타는 허름한 아파트를 고쳐서 밝은 집으로 바꿨어요.",
+   "blank": "sórdido",
    "src": "made"
   }
  ],
@@ -81721,6 +82329,22 @@
    "blank": "traicionar"
   }
  ],
+ "w|traicionero": [
+  {
+   "text": "Según la dentista, la caries es traicionera porque no duele hasta que es tarde, y Javier se asustó.",
+   "en": "According to the dentist, tooth decay is treacherous because it doesn't hurt until it's too late, and Javier got scared.",
+   "ko": "치과 의사 말로는 충치는 늦을 때까지 아프지 않아서 위험하다고 해서 하비에르는 겁이 났어요.",
+   "blank": "traicionera",
+   "src": "made"
+  },
+  {
+   "text": "El suelo de la obra es traicionero después de la lluvia, y Marta pidió a todos que fueran con cuidado.",
+   "en": "The site ground is treacherous after the rain, and Marta asked everyone to be careful.",
+   "ko": "비가 온 뒤엔 공사장 바닥이 미끄러워서 마르타는 모두에게 조심하라고 했어요.",
+   "blank": "traicionero",
+   "src": "made"
+  }
+ ],
  "w|traidor": [
   {
    "text": "Lo llamaron traidor después de esa decisión.",
@@ -81840,6 +82464,22 @@
    "en": "What everyone liked most was the calm of the night.",
    "ko": "다들 가장 좋아한 건 밤의 고요함이었어요.",
    "blank": "tranquilidad",
+   "src": "made"
+  }
+ ],
+ "w|tranquilizante": [
+  {
+   "text": "A Javier le dan tanto miedo los dentistas que el médico le recetó un tranquilizante suave.",
+   "en": "Javier is so afraid of dentists that the doctor prescribed him a mild tranquilliser.",
+   "ko": "하비에르가 치과를 너무 무서워해서 의사가 순한 신경 안정제를 처방해 줬어요.",
+   "blank": "tranquilizante",
+   "src": "made"
+  },
+  {
+   "text": "El veterinario le dio un tranquilizante al caballo que se asustó con el ruido de la obra, y Marta paró las máquinas.",
+   "en": "The vet gave a tranquilliser to the horse that got scared by the noise of the works, and Marta stopped the machines.",
+   "ko": "공사 소음에 놀란 말에게 수의사가 진정제를 놓았고 마르타는 기계를 멈췄어요.",
+   "blank": "tranquilizante",
    "src": "made"
   }
  ],
