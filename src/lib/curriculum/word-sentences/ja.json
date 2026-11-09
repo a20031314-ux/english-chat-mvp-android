@@ -2605,6 +2605,22 @@
    "blank": "きっかけ"
   }
  ],
+ "w|キッチン": [
+  {
+   "text": "家庭科室のキッチンは、放課後に料理部が使っている。",
+   "en": "The kitchen in the home economics room is used by the cooking club after school.",
+   "ko": "가정과실 주방은 방과 후에 요리부가 써요.",
+   "blank": "キッチン",
+   "src": "made"
+  },
+  {
+   "text": "葵は、料理教室の広いキッチンでパンを焼いた。",
+   "en": "Aoi baked bread in the cooking class's spacious kitchen.",
+   "ko": "아오이는 요리 교실의 넓은 주방에서 빵을 구웠어요.",
+   "blank": "キッチン",
+   "src": "made"
+  }
+ ],
  "w|きっと": [
   {
    "text": "きっと来るよ。",
@@ -4724,6 +4740,22 @@
    "en": "As soon as she crossed the finish line, Mayu gulped down some water.",
    "ko": "결승선을 통과한 마유는 바로 물을 단숨에 들이켰어요.",
    "blank": "すぐに",
+   "src": "made"
+  }
+ ],
+ "w|スケジュール": [
+  {
+   "text": "文化祭の前は、直樹のスケジュールが練習でいっぱいになる。",
+   "en": "Before the school festival, Naoki's schedule fills up with practice.",
+   "ko": "축제 전에는 나오키의 일정이 연습으로 꽉 차요.",
+   "blank": "スケジュール",
+   "src": "made"
+  },
+  {
+   "text": "葵は、仕事のスケジュールに合わせて土曜日のクラスを選んだ。",
+   "en": "Aoi chose the Saturday class to fit her work schedule.",
+   "ko": "아오이는 업무 일정에 맞춰 토요일 반을 골랐어요.",
+   "blank": "スケジュール",
    "src": "made"
   }
  ],
@@ -7805,6 +7837,22 @@
    "blank": "バー"
   }
  ],
+ "w|パーカー": [
+  {
+   "text": "寒い朝、直樹は制服の上にパーカーを着て登校した。",
+   "en": "On a cold morning, Naoki went to school wearing a hoodie over his uniform.",
+   "ko": "추운 아침, 나오키는 교복 위에 후드티를 입고 등교했어요.",
+   "blank": "パーカー",
+   "src": "made"
+  },
+  {
+   "text": "葵は、パーカーの袖をまくってから野菜を洗った。",
+   "en": "Aoi rolled up the sleeves of her hoodie before washing the vegetables.",
+   "ko": "아오이는 후드티 소매를 걷고 나서 채소를 씻었어요.",
+   "blank": "パーカー",
+   "src": "made"
+  }
+ ],
  "w|バージョン": [
   {
    "text": "新しいバージョンだよ。",
@@ -8111,6 +8159,22 @@
    "blank": "パターン"
   }
  ],
+ "w|パチンコ": [
+  {
+   "text": "学校の近くには大きなパチンコ店があり、夜まで明るい。",
+   "en": "There's a big pachinko parlor near the school, lit up until late at night.",
+   "ko": "학교 근처에는 큰 파친코 가게가 있어서 밤까지 환해요.",
+   "blank": "パチンコ",
+   "src": "made"
+  },
+  {
+   "text": "料理教室の隣は、昔パチンコ屋だった建物だ。",
+   "en": "The building next to the cooking class used to be a pachinko parlor.",
+   "ko": "요리 교실 옆은 예전에 파친코 가게였던 건물이에요.",
+   "blank": "パチンコ",
+   "src": "made"
+  }
+ ],
  "w|はっきり": [
   {
    "text": "はっきり言ってほしい。",
@@ -8314,6 +8378,22 @@
    "en": "Outside the window, rice fields stretched far into the distance.",
    "ko": "창밖에는 저 멀리까지 논이 펼쳐져 있었어요.",
    "blank": "はるか",
+   "src": "made"
+  }
+ ],
+ "w|ハロウィン": [
+  {
+   "text": "英語の授業で、直樹はハロウィンの起源について学んだ。",
+   "en": "In English class, Naoki learned about the origins of Halloween.",
+   "ko": "영어 수업에서 나오키는 핼러윈의 기원에 대해 배웠어요.",
+   "blank": "ハロウィン",
+   "src": "made"
+  },
+  {
+   "text": "十月の料理教室では、かぼちゃを使ったハロウィンのお菓子を作った。",
+   "en": "At the October cooking class, they made Halloween sweets with pumpkin.",
+   "ko": "10월 요리 교실에서는 호박으로 핼러윈 과자를 만들었어요.",
+   "blank": "ハロウィン",
    "src": "made"
   }
  ],
@@ -10047,6 +10127,22 @@
    "en": "The mini bag is cute.",
    "ko": "미니 백이 귀여워.",
    "blank": "ミニ"
+  }
+ ],
+ "w|ミュージック": [
+  {
+   "text": "直樹は、昼休みに音楽室でジャズミュージックを聴いた。",
+   "en": "At lunch break, Naoki listened to jazz music in the music room.",
+   "ko": "나오키는 점심시간에 음악실에서 재즈 음악을 들었어요.",
+   "blank": "ミュージック",
+   "src": "made"
+  },
+  {
+   "text": "料理教室の最後に、先生はお気に入りのミュージックをかけた。",
+   "en": "At the end of cooking class, the teacher put on her favorite music.",
+   "ko": "요리 교실 끝에 선생님은 좋아하는 음악을 틀었어요.",
+   "blank": "ミュージック",
+   "src": "made"
   }
  ],
  "w|ミルク": [
@@ -15041,6 +15137,22 @@
    "blank": "何か"
   }
  ],
+ "w|何事": [
+  {
+   "text": "廊下が騒がしくて、直樹は何事かと教室を出た。",
+   "en": "The hallway was noisy, so Naoki left the classroom to see what was going on.",
+   "ko": "복도가 시끄러워서 나오키는 무슨 일인가 하고 교실을 나왔어요.",
+   "blank": "何事",
+   "src": "made"
+  },
+  {
+   "text": "オーブンから煙が出て、生徒たちは何事かと集まった。",
+   "en": "Smoke came from the oven, and the students gathered to see what had happened.",
+   "ko": "오븐에서 연기가 나서 수강생들은 무슨 일인가 하고 모였어요.",
+   "blank": "何事",
+   "src": "made"
+  }
+ ],
  "w|余る": [
   {
    "text": "仕事が忙しすぎるのも考えものだけど、時間が余るのもなぁ。",
@@ -17879,6 +17991,22 @@
    "blank": "分けて"
   }
  ],
+ "w|分割": [
+  {
+   "text": "直樹は、修学旅行の費用を分割で払うことにした。",
+   "en": "Naoki decided to pay for the school trip in installments.",
+   "ko": "나오키는 수학여행 비용을 할부로 내기로 했어요.",
+   "blank": "分割",
+   "src": "made"
+  },
+  {
+   "text": "葵は、大きなケーキを八つに分割して、みんなに配った。",
+   "en": "Aoi divided the big cake into eight pieces and handed them out to everyone.",
+   "ko": "아오이는 큰 케이크를 여덟 조각으로 나눠 모두에게 나눠 줬어요.",
+   "blank": "分割",
+   "src": "made"
+  }
+ ],
  "w|分析": [
   {
    "text": "データを分析する。",
@@ -18159,6 +18287,22 @@
    "en": "It's a course for beginners.",
    "ko": "초보자용 강좌야.",
    "blank": "初心者"
+  }
+ ],
+ "w|初日": [
+  {
+   "text": "新学期の初日、直樹は早めに教室に着いた。",
+   "en": "On the first day of the new term, Naoki arrived at the classroom early.",
+   "ko": "새 학기 첫날 나오키는 일찍 교실에 도착했어요.",
+   "blank": "初日",
+   "src": "made"
+  },
+  {
+   "text": "料理教室の初日、葵は包丁の持ち方から習った。",
+   "en": "On the first day of cooking class, Aoi started by learning how to hold a knife.",
+   "ko": "요리 교실 첫날, 아오이는 칼 잡는 법부터 배웠어요.",
+   "blank": "初日",
+   "src": "made"
   }
  ],
  "w|初期": [
@@ -21155,6 +21299,22 @@
    "src": "tatoeba:74429/fcbond en:329291/fcbond"
   }
  ],
+ "w|告発": [
+  {
+   "text": "社会の授業で、会社の不正を告発した人のニュースを読んだ。",
+   "en": "In social studies class, the students read news about a person who exposed a company's wrongdoing.",
+   "ko": "사회 수업에서 회사의 부정을 고발한 사람의 뉴스를 읽었어요.",
+   "blank": "告発",
+   "src": "made"
+  },
+  {
+   "text": "ニュースでは、産地をごまかした食品会社が告発されていた。",
+   "en": "On the news, a food company that faked its products' origin had been accused.",
+   "ko": "뉴스에서는 원산지를 속인 식품 회사가 고발당했어요.",
+   "blank": "告発",
+   "src": "made"
+  }
+ ],
  "w|告白": [
   {
    "text": "私はその内気な青年にその美しい少女への愛を告白するように勧めた。",
@@ -21360,6 +21520,22 @@
    "en": "The flowers Chihiro had carefully grown finally bloomed.",
    "ko": "지히로가 소중히 키운 꽃이 드디어 피었어요.",
    "blank": "咲いた",
+   "src": "made"
+  }
+ ],
+ "w|品質": [
+  {
+   "text": "調理実習で、直樹たちは野菜の品質を見分ける方法を習った。",
+   "en": "In cooking practice at school, Naoki and his classmates learned how to judge the quality of vegetables.",
+   "ko": "조리 실습에서 나오키네 반은 채소 품질을 가려내는 방법을 배웠어요.",
+   "blank": "品質",
+   "src": "made"
+  },
+  {
+   "text": "先生は、品質のいい油を使うと味が変わると言った。",
+   "en": "The teacher said using good-quality oil changes the taste.",
+   "ko": "선생님은 품질 좋은 기름을 쓰면 맛이 달라진다고 했어요.",
+   "blank": "品質",
    "src": "made"
   }
  ],
@@ -22050,6 +22226,22 @@
    "en": "Every Saturday, Mayu runs twenty kilometers along the river.",
    "ko": "마유는 매주 토요일에 강변을 이십 킬로미터 달려요.",
    "blank": "土曜日",
+   "src": "made"
+  }
+ ],
+ "w|土産": [
+  {
+   "text": "直樹は、修学旅行のお土産に地元のお菓子を買った。",
+   "en": "Naoki bought local sweets as a souvenir from the school trip.",
+   "ko": "나오키는 수학여행 기념품으로 그 지역 과자를 샀어요.",
+   "blank": "土産",
+   "src": "made"
+  },
+  {
+   "text": "旅行から戻った生徒が、教室にお土産のお茶を持ってきた。",
+   "en": "A student back from a trip brought tea as a souvenir to the class.",
+   "ko": "여행에서 돌아온 수강생이 교실에 기념품으로 차를 가져왔어요.",
+   "blank": "土産",
    "src": "made"
   }
  ],
@@ -23151,6 +23343,22 @@
    "blank": "夜"
   }
  ],
+ "w|夜中": [
+  {
+   "text": "試験の前の晩、直樹は夜中まで数学の問題を解いた。",
+   "en": "The night before the exam, Naoki worked on math problems until the middle of the night.",
+   "ko": "시험 전날 밤 나오키는 한밤중까지 수학 문제를 풀었어요.",
+   "blank": "夜中",
+   "src": "made"
+  },
+  {
+   "text": "葵は、夜中にお腹がすいて、習ったスープを作ってみた。",
+   "en": "Aoi got hungry in the middle of the night and tried making the soup she'd learned.",
+   "ko": "아오이는 한밤중에 배가 고파서 배운 수프를 만들어 봤어요.",
+   "blank": "夜中",
+   "src": "made"
+  }
+ ],
  "w|夢": [
   {
    "text": "変な夢見たよ。",
@@ -23517,6 +23725,22 @@
    "en": "A huge pile of packages arrived.",
    "ko": "대량의 짐이 왔어.",
    "blank": "大量"
+  }
+ ],
+ "w|大陸": [
+  {
+   "text": "地理の先生は、昔の大陸がどう動いたかを図で見せた。",
+   "en": "The geography teacher showed with a diagram how the continents moved long ago.",
+   "ko": "지리 선생님은 옛날 대륙이 어떻게 움직였는지 그림으로 보여 줬어요.",
+   "blank": "大陸",
+   "src": "made"
+  },
+  {
+   "text": "今日の料理教室では、アフリカ大陸の家庭料理を作った。",
+   "en": "At today's cooking class, they made home cooking from the African continent.",
+   "ko": "오늘 요리 교실에서는 아프리카 대륙의 가정 요리를 만들었어요.",
+   "blank": "大陸",
+   "src": "made"
   }
  ],
  "w|天": [
@@ -25644,6 +25868,22 @@
    "en": "A period drama starring a shogun was playing on the waiting room TV.",
    "ko": "대기실 텔레비전에서는 쇼군이 주인공인 사극이 나오고 있었어요.",
    "blank": "将軍",
+   "src": "made"
+  }
+ ],
+ "w|射撃": [
+  {
+   "text": "直樹の兄は、大学で射撃の部活に入っている。",
+   "en": "Naoki's older brother is in the shooting club at university.",
+   "ko": "나오키의 형은 대학에서 사격부에 들어가 있어요.",
+   "blank": "射撃",
+   "src": "made"
+  },
+  {
+   "text": "隣の生徒は、趣味でクレー射撃をしていると話した。",
+   "en": "The student next to Aoi said she does clay shooting as a hobby.",
+   "ko": "옆 수강생은 취미로 클레이 사격을 한다고 말했어요.",
+   "blank": "射撃",
    "src": "made"
   }
  ],
@@ -29899,6 +30139,22 @@
    "blank": "抑える"
   }
  ],
+ "w|抑制": [
+  {
+   "text": "保健の先生は、食欲を抑制するには早く寝るのがいいと言った。",
+   "en": "The school nurse said going to bed early helps control appetite.",
+   "ko": "보건 선생님은 식욕을 억제하려면 일찍 자는 게 좋다고 했어요.",
+   "blank": "抑制",
+   "src": "made"
+  },
+  {
+   "text": "先生は、塩分を抑制しても味をおいしくするこつを教えた。",
+   "en": "The teacher taught tricks for keeping food tasty while cutting back on salt.",
+   "ko": "선생님은 염분을 억제해도 맛있게 만드는 요령을 가르쳐 줬어요.",
+   "blank": "抑制",
+   "src": "made"
+  }
+ ],
  "w|投げる": [
   {
    "text": "ボール、投げて。",
@@ -30906,6 +31162,22 @@
    "en": "When Yoko opened her shop, she received a bit of assistance from the town's chamber of commerce.",
    "ko": "요코는 가게를 열 때 마을 상공회에서 약간의 지원을 받았어요.",
    "blank": "援助",
+   "src": "made"
+  }
+ ],
+ "w|揺れ": [
+  {
+   "text": "授業中に小さな揺れを感じて、直樹たちは机の下に入った。",
+   "en": "Feeling a small tremor during class, Naoki and his classmates got under their desks.",
+   "ko": "수업 중에 작은 흔들림을 느끼고 나오키네는 책상 밑으로 들어갔어요.",
+   "blank": "揺れ",
+   "src": "made"
+  },
+  {
+   "text": "地震の揺れで、棚の鍋が大きな音を立てた。",
+   "en": "The shaking of the earthquake made the pots on the shelf clatter loudly.",
+   "ko": "지진 흔들림에 선반 위 냄비가 큰 소리를 냈어요.",
+   "blank": "揺れ",
    "src": "made"
   }
  ],
@@ -32995,6 +33267,22 @@
    "src": "made"
   }
  ],
+ "w|暗黒": [
+  {
+   "text": "世界史の先生は、その時代を暗黒の時代と呼んだ。",
+   "en": "The world history teacher called that period a dark age.",
+   "ko": "세계사 선생님은 그 시대를 암흑의 시대라고 불렀어요.",
+   "blank": "暗黒",
+   "src": "made"
+  },
+  {
+   "text": "葵が焦がしたクッキーは、暗黒の物体と呼ばれて笑われた。",
+   "en": "The cookies Aoi burned were jokingly called \"dark matter.\"",
+   "ko": "아오이가 태운 쿠키는 암흑 물체라고 불리며 웃음을 샀어요.",
+   "blank": "暗黒",
+   "src": "made"
+  }
+ ],
  "w|暮らし": [
   {
    "text": "田舎の暮らしが好き。",
@@ -33377,6 +33665,22 @@
    "en": "I haven't had breakfast yet.",
    "ko": "아침은 아직이야.",
    "blank": "朝ご飯"
+  }
+ ],
+ "w|朝食": [
+  {
+   "text": "直樹は寝坊して、朝食を食べずに家を出た。",
+   "en": "Naoki overslept and left home without eating breakfast.",
+   "ko": "나오키는 늦잠을 자서 아침을 안 먹고 집을 나섰어요.",
+   "blank": "朝食",
+   "src": "made"
+  },
+  {
+   "text": "今日のテーマは、忙しい朝でも作れる朝食だった。",
+   "en": "Today's theme was a breakfast you can make even on busy mornings.",
+   "ko": "오늘 주제는 바쁜 아침에도 만들 수 있는 아침 식사였어요.",
+   "blank": "朝食",
+   "src": "made"
   }
  ],
  "w|期待": [
@@ -34061,6 +34365,22 @@
    "ko": "이런 차림이면 운동 좀 하는 사람 같지만 전혀 안 해.",
    "blank": "格好",
    "src": "tatoeba:217381 en:54690/CM"
+  }
+ ],
+ "w|栽培": [
+  {
+   "text": "直樹のクラスは、学校の畑でさつまいもの栽培をしている。",
+   "en": "Naoki's class grows sweet potatoes in the school garden.",
+   "ko": "나오키네 반은 학교 밭에서 고구마를 재배하고 있어요.",
+   "blank": "栽培",
+   "src": "made"
+  },
+  {
+   "text": "先生は、ハーブを自宅で栽培する方法も教えてくれた。",
+   "en": "The teacher also taught how to grow herbs at home.",
+   "ko": "선생님은 허브를 집에서 재배하는 방법도 알려 줬어요.",
+   "blank": "栽培",
+   "src": "made"
   }
  ],
  "w|桁": [
@@ -35837,6 +36157,22 @@
    "blank": "水着"
   }
  ],
+ "w|水素": [
+  {
+   "text": "理科の実験で、直樹は水素が燃える様子を観察した。",
+   "en": "In a science experiment, Naoki observed hydrogen burning.",
+   "ko": "과학 실험에서 나오키는 수소가 타는 모습을 관찰했어요.",
+   "blank": "水素",
+   "src": "made"
+  },
+  {
+   "text": "料理教室の新しいオーブンは、水素で動く珍しいものだ。",
+   "en": "The cooking class's new oven is a rare one that runs on hydrogen.",
+   "ko": "요리 교실의 새 오븐은 수소로 움직이는 특이한 거예요.",
+   "blank": "水素",
+   "src": "made"
+  }
+ ],
  "w|水道": [
   {
    "text": "給湯室の水道から、変な音がしている。",
@@ -37307,6 +37643,22 @@
    "blank": "炎"
   }
  ],
+ "w|炎上": [
+  {
+   "text": "情報の授業で、直樹はネットでの炎上の例を学んだ。",
+   "en": "In IT class, Naoki learned about examples of online backlash online.",
+   "ko": "정보 수업에서 나오키는 SNS 논란이 번진 사례를 배웠어요.",
+   "blank": "炎上",
+   "src": "made"
+  },
+  {
+   "text": "料理教室の先生は、昔ブログが炎上して困ったことがあるらしい。",
+   "en": "The cooking teacher apparently once had trouble when her blog got flamed.",
+   "ko": "요리 교실 선생님은 예전에 블로그가 악플로 난리가 나서 곤란했던 적이 있대요.",
+   "blank": "炎上",
+   "src": "made"
+  }
+ ],
  "w|点": [
   {
    "text": "点が惜しいね。",
@@ -37587,6 +37939,22 @@
    "blank": "爆弾"
   }
  ],
+ "w|爆撃": [
+  {
+   "text": "歴史の授業で、直樹は戦争中の空からの爆撃について学んだ。",
+   "en": "In history class, Naoki learned about aerial bombing during the war.",
+   "ko": "역사 수업에서 나오키는 전쟁 중 공중 폭격에 대해 배웠어요.",
+   "blank": "爆撃",
+   "src": "made"
+  },
+  {
+   "text": "先生の祖母は、戦争中の爆撃で家を失ったそうだ。",
+   "en": "The teacher's grandmother apparently lost her home in a bombing during the war.",
+   "ko": "선생님의 할머니는 전쟁 중 폭격으로 집을 잃었대요.",
+   "blank": "爆撃",
+   "src": "made"
+  }
+ ],
  "w|爆発": [
   {
    "text": "工場で爆発があった。",
@@ -37843,6 +38211,22 @@
    "en": "You need a special skill.",
    "ko": "특수한 기능이 필요해.",
    "blank": "特殊"
+  }
+ ],
+ "w|特許": [
+  {
+   "text": "直樹は、発明で特許を取った高校生の話に驚いた。",
+   "en": "Naoki was amazed by the story of a high schooler who got a patent for an invention.",
+   "ko": "나오키는 발명으로 특허를 딴 고등학생 이야기에 놀랐어요.",
+   "blank": "特許",
+   "src": "made"
+  },
+  {
+   "text": "先生が考えたフライパンは、特許を取っているそうだ。",
+   "en": "The frying pan the teacher designed apparently has a patent.",
+   "ko": "선생님이 고안한 프라이팬은 특허를 받았대요.",
+   "blank": "特許",
+   "src": "made"
   }
  ],
  "w|特集": [
@@ -40083,6 +40467,22 @@
    "blank": "相手"
   }
  ],
+ "w|相撲": [
+  {
+   "text": "体育祭の余興で、直樹は友達と相撲をとった。",
+   "en": "As a sideshow at the sports festival, Naoki did sumo with a friend.",
+   "ko": "체육대회 여흥으로 나오키는 친구와 스모를 했어요.",
+   "blank": "相撲",
+   "src": "made"
+  },
+  {
+   "text": "先生は、相撲部屋で食べるちゃんこ鍋の作り方を教えた。",
+   "en": "The teacher taught how to make chanko stew, the hot pot eaten at sumo stables.",
+   "ko": "선생님은 스모 도장에서 먹는 찬코나베 만드는 법을 가르쳐 줬어요.",
+   "blank": "相撲",
+   "src": "made"
+  }
+ ],
  "w|相続": [
   {
    "text": "この美術品の多くは、創設者の孫が相続したコレクションだ。",
@@ -40839,6 +41239,22 @@
    "en": "I fuss over small details.",
    "ko": "사소한 일에 신경을 써.",
    "blank": "神経"
+  }
+ ],
+ "w|神話": [
+  {
+   "text": "国語の授業で、直樹はギリシャの神話を読んだ。",
+   "en": "In Japanese class, Naoki read Greek myths.",
+   "ko": "국어 수업에서 나오키는 그리스 신화를 읽었어요.",
+   "blank": "神話",
+   "src": "made"
+  },
+  {
+   "text": "このお菓子は、神話に出てくる果物をイメージして作られた。",
+   "en": "This sweet was made with a fruit from a myth in mind.",
+   "ko": "이 과자는 신화에 나오는 과일을 떠올리며 만들어졌어요.",
+   "blank": "神話",
+   "src": "made"
   }
  ],
  "w|祭り": [
@@ -41719,6 +42135,22 @@
    "blank": "精神"
   }
  ],
+ "w|系列": [
+  {
+   "text": "直樹の高校は、大学の系列校なので受験がない。",
+   "en": "Naoki's high school is affiliated with a university, so there's no entrance exam.",
+   "ko": "나오키의 고등학교는 대학 계열 학교라서 입시가 없어요.",
+   "blank": "系列",
+   "src": "made"
+  },
+  {
+   "text": "葵が通う料理教室は、有名なホテルの系列だ。",
+   "en": "The cooking class Aoi attends is affiliated with a famous hotel.",
+   "ko": "아오이가 다니는 요리 교실은 유명한 호텔 계열이에요.",
+   "blank": "系列",
+   "src": "made"
+  }
+ ],
  "w|約束": [
   {
    "text": "約束を守ってね。",
@@ -42359,6 +42791,22 @@
    "en": "I recovered from despair.",
    "ko": "절망에서 일어섰어.",
    "blank": "絶望"
+  }
+ ],
+ "w|絶滅": [
+  {
+   "text": "図書室で、直樹は恐竜の絶滅についての本を借りた。",
+   "en": "At the library, Naoki borrowed a book about the extinction of the dinosaurs.",
+   "ko": "도서실에서 나오키는 공룡 멸종에 관한 책을 빌렸어요.",
+   "blank": "絶滅",
+   "src": "made"
+  },
+  {
+   "text": "先生は、絶滅しかけた古い品種の豆を使って煮物を作った。",
+   "en": "The teacher made a simmered dish with an old variety of bean that nearly went extinct.",
+   "ko": "선생님은 멸종할 뻔한 오래된 품종의 콩으로 조림을 만들었어요.",
+   "blank": "絶滅",
+   "src": "made"
   }
  ],
  "w|継続": [
@@ -43021,6 +43469,22 @@
    "en": "Keep that in mind.",
    "ko": "귀에 담아 둬.",
    "blank": "耳"
+  }
+ ],
+ "w|聖書": [
+  {
+   "text": "美術の時間に、聖書の場面を描いた有名な絵を見た。",
+   "en": "In art class, the students looked at a famous painting depicting a scene from the Bible.",
+   "ko": "미술 시간에 성경의 한 장면을 그린 유명한 그림을 봤어요.",
+   "blank": "聖書",
+   "src": "made"
+  },
+  {
+   "text": "先生は、聖書にも出てくる古いパンの作り方を紹介した。",
+   "en": "The teacher introduced an old way of making bread that also appears in the Bible.",
+   "ko": "선생님은 성경에도 나오는 오래된 빵 만드는 법을 소개했어요.",
+   "blank": "聖書",
+   "src": "made"
   }
  ],
  "w|聞く": [
@@ -44221,6 +44685,22 @@
    "en": "Mind the copyright.",
    "ko": "저작권에 주의해.",
    "blank": "著作"
+  }
+ ],
+ "w|著者": [
+  {
+   "text": "国語の時間に、直樹は物語の著者について調べて発表した。",
+   "en": "In Japanese class, Naoki researched the story's author and gave a presentation.",
+   "ko": "국어 시간에 나오키는 이야기의 저자에 대해 조사해서 발표했어요.",
+   "blank": "著者",
+   "src": "made"
+  },
+  {
+   "text": "教室で使うレシピ本の著者は、葵の先生本人だ。",
+   "en": "The author of the recipe book used in class is Aoi's teacher herself.",
+   "ko": "교실에서 쓰는 레시피 책의 저자는 아오이의 선생님 본인이에요.",
+   "blank": "著者",
+   "src": "made"
   }
  ],
  "w|落ちる": [
@@ -47099,6 +47579,22 @@
    "blank": "警察"
   }
  ],
+ "w|警察官": [
+  {
+   "text": "学校に警察官が来て、自転車の交通安全教室を開いた。",
+   "en": "A police officer came to the school and held a bicycle safety class.",
+   "ko": "학교에 경찰관이 와서 자전거 교통안전 교실을 열었어요.",
+   "blank": "警察官",
+   "src": "made"
+  },
+  {
+   "text": "料理教室には、非番の日に来る警察官の生徒もいる。",
+   "en": "Among the cooking class students is a police officer who comes on days off.",
+   "ko": "요리 교실에는 비번 날에 오는 경찰관 수강생도 있어요.",
+   "blank": "警察官",
+   "src": "made"
+  }
+ ],
  "w|警戒": [
   {
    "text": "人気俳優の出演で、劇場は入り口の警戒を強めた。",
@@ -47562,6 +48058,22 @@
    "en": "Yumi posted the new shift schedule on the nurses' station wall.",
    "ko": "유미는 간호사실 벽에 새 근무표를 붙였어요.",
    "blank": "貼っ",
+   "src": "made"
+  }
+ ],
+ "w|貿易": [
+  {
+   "text": "社会の時間に、直樹は日本と各国の貿易について調べた。",
+   "en": "In social studies, Naoki researched trade between Japan and other countries.",
+   "ko": "사회 시간에 나오키는 일본과 여러 나라의 무역에 대해 조사했어요.",
+   "blank": "貿易",
+   "src": "made"
+  },
+  {
+   "text": "スパイスは、昔から貿易で世界中に広まった。",
+   "en": "Spices spread around the world through trade long ago.",
+   "ko": "향신료는 옛날부터 무역으로 전 세계에 퍼졌어요.",
+   "blank": "貿易",
    "src": "made"
   }
  ],
@@ -48707,6 +49219,22 @@
    "en": "Are you planning to flee?",
    "ko": "도망칠 생각이야?",
    "blank": "逃げる"
+  }
+ ],
+ "w|逃亡": [
+  {
+   "text": "直樹が読んだ小説は、少年の逃亡と成長を描いた話だった。",
+   "en": "The novel Naoki read was about a boy's escape and growth.",
+   "ko": "나오키가 읽은 소설은 소년의 도망과 성장을 그린 이야기였어요.",
+   "blank": "逃亡",
+   "src": "made"
+  },
+  {
+   "text": "葵たちは、昨日のドラマに出てきた逃亡犯の話をしながら野菜を切った。",
+   "en": "Aoi and the others chopped vegetables while talking about the fugitive in yesterday's drama.",
+   "ko": "아오이네는 어제 드라마에 나온 도망자 이야기를 하며 채소를 썰었어요.",
+   "blank": "逃亡",
+   "src": "made"
   }
  ],
  "w|逆": [
@@ -51335,6 +51863,22 @@
    "src": "made"
   }
  ],
+ "w|陰謀": [
+  {
+   "text": "直樹が読んでいる歴史の本には、昔の城での陰謀が描かれている。",
+   "en": "The history book Naoki is reading depicts a plot in an old castle.",
+   "ko": "나오키가 읽고 있는 역사책에는 옛 성에서의 음모가 그려져 있어요.",
+   "blank": "陰謀",
+   "src": "made"
+  },
+  {
+   "text": "休憩中、葵たちは昨日見た陰謀もののドラマの話で盛り上がった。",
+   "en": "During the break, Aoi and the others got excited talking about a conspiracy drama they'd watched yesterday.",
+   "ko": "쉬는 시간에 아오이네는 어제 본 음모 드라마 이야기로 신이 났어요.",
+   "blank": "陰謀",
+   "src": "made"
+  }
+ ],
  "w|陸上": [
   {
    "text": "途中の町では、高校の陸上の大会が開かれていた。",
@@ -51380,6 +51924,22 @@
    "en": "For a customer with knee pain, Mayu pointed out the entrance with a handrail on the stairs.",
    "ko": "무릎이 아픈 손님을 위해 마유는 계단 난간이 있는 입구를 안내했어요.",
    "blank": "階段",
+   "src": "made"
+  }
+ ],
+ "w|階級": [
+  {
+   "text": "歴史の授業で、直樹は江戸時代の身分や階級について学んだ。",
+   "en": "In history class, Naoki learned about social status and class in the Edo period.",
+   "ko": "역사 수업에서 나오키는 에도 시대의 신분과 계급에 대해 배웠어요.",
+   "blank": "階級",
+   "src": "made"
+  },
+  {
+   "text": "昔のヨーロッパでは、食べる物で階級がわかったと先生が話した。",
+   "en": "The teacher said that in old Europe, you could tell someone's class by what they ate.",
+   "ko": "옛날 유럽에서는 먹는 것으로 계급을 알 수 있었다고 선생님이 말했어요.",
+   "blank": "階級",
    "src": "made"
   }
  ],
@@ -51585,6 +52145,22 @@
    "en": "I borrowed a magazine.",
    "ko": "잡지를 빌렸어.",
    "blank": "雑誌"
+  }
+ ],
+ "w|雑談": [
+  {
+   "text": "休み時間、直樹は友達と雑談をして笑っていた。",
+   "en": "During the break, Naoki was chatting and laughing with friends.",
+   "ko": "쉬는 시간에 나오키는 친구들과 잡담하며 웃고 있었어요.",
+   "blank": "雑談",
+   "src": "made"
+  },
+  {
+   "text": "料理が焼けるのを待つ間、葵は隣の人と雑談した。",
+   "en": "While waiting for the dish to bake, Aoi chatted with the person next to her.",
+   "ko": "요리가 구워지는 동안 아오이는 옆 사람과 수다를 떨었어요.",
+   "blank": "雑談",
+   "src": "made"
   }
  ],
  "w|離れる": [
@@ -52213,6 +52789,22 @@
    "blank": "音楽"
   }
  ],
+ "w|音源": [
+  {
+   "text": "放送部の直樹は、昼の放送で流す音源を準備した。",
+   "en": "Naoki, in the broadcasting club, prepared the audio to play during the lunchtime broadcast.",
+   "ko": "방송부인 나오키는 점심 방송에 틀 음원을 준비했어요.",
+   "blank": "音源",
+   "src": "made"
+  },
+  {
+   "text": "料理教室では、先生の好きな音源が小さな音で流れている。",
+   "en": "At the cooking class, the teacher's favorite recordings play quietly.",
+   "ko": "요리 교실에서는 선생님이 좋아하는 음원이 작게 흘러나와요.",
+   "blank": "音源",
+   "src": "made"
+  }
+ ],
  "w|章": [
   {
    "text": "次の章に進もう。",
@@ -52633,6 +53225,22 @@
    "src": "made"
   }
  ],
+ "w|食料": [
+  {
+   "text": "社会の授業で、直樹たちは世界の食料問題について話し合った。",
+   "en": "In social studies class, Naoki and his classmates discussed world food problems.",
+   "ko": "사회 수업에서 나오키네 반은 세계 식량 문제에 대해 토론했어요.",
+   "blank": "食料",
+   "src": "made"
+  },
+  {
+   "text": "料理教室の先生は、食料をむだにしない工夫を教えてくれた。",
+   "en": "The cooking class teacher taught ways not to waste food.",
+   "ko": "요리 교실 선생님은 식재료를 낭비하지 않는 요령을 알려 줬어요.",
+   "blank": "食料",
+   "src": "made"
+  }
+ ],
  "w|飯": [
   {
    "text": "飯食いに行こう。",
@@ -52808,6 +53416,22 @@
    "en": "The company moved into a new building in front of the station last month.",
    "ko": "회사는 지난달 역 앞 새 건물로 이사했어요.",
    "blank": "駅前",
+   "src": "made"
+  }
+ ],
+ "w|駆逐": [
+  {
+   "text": "理科の先生は、外来種が在来の魚を駆逐していると説明した。",
+   "en": "The science teacher explained that invasive species are driving out native fish.",
+   "ko": "과학 선생님은 외래종이 토종 물고기를 몰아내고 있다고 설명했어요.",
+   "blank": "駆逐",
+   "src": "made"
+  },
+  {
+   "text": "先生は、台所からゴキブリを駆逐する方法も笑いながら話した。",
+   "en": "The teacher also laughingly talked about how to get rid of cockroaches in the kitchen.",
+   "ko": "선생님은 부엌에서 바퀴벌레를 퇴치하는 방법도 웃으며 이야기했어요.",
+   "blank": "駆逐",
    "src": "made"
   }
  ],
@@ -53161,6 +53785,22 @@
    "en": "I can't use magic.",
    "ko": "마법은 못 써.",
    "blank": "魔法"
+  }
+ ],
+ "w|魔術": [
+  {
+   "text": "文化祭で、直樹のクラスは魔術をテーマにした劇をした。",
+   "en": "At the school festival, Naoki's class put on a play themed on magic.",
+   "ko": "축제에서 나오키네 반은 마술을 주제로 한 연극을 했어요.",
+   "blank": "魔術",
+   "src": "made"
+  },
+  {
+   "text": "先生の手つきは、まるで魔術のように速かった。",
+   "en": "The teacher's hands moved as fast as if by magic.",
+   "ko": "선생님 손놀림은 마치 마술처럼 빨랐어요.",
+   "blank": "魔術",
+   "src": "made"
   }
  ],
  "w|魚": [

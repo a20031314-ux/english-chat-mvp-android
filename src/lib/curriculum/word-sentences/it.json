@@ -1101,6 +1101,22 @@
    "blank": "agenzia"
   }
  ],
+ "w|aggiornamento": [
+  {
+   "text": "I professori di Luca hanno un corso di aggiornamento ogni venerdì pomeriggio.",
+   "en": "Luca's teachers have a training course every Friday afternoon.",
+   "ko": "루카의 선생님들은 금요일 오후마다 연수를 받아요.",
+   "blank": "aggiornamento",
+   "src": "made"
+  },
+  {
+   "text": "Chiara aspetta l'aggiornamento delle previsioni per sapere se nevicherà nel weekend.",
+   "en": "Chiara is waiting for the forecast update to know if it will snow at the weekend.",
+   "ko": "키아라는 주말에 눈이 올지 알려고 일기 예보 업데이트를 기다려요.",
+   "blank": "aggiornamento",
+   "src": "made"
+  }
+ ],
  "w|aggiornare": [
   {
    "text": "Ogni lunedì Stefano deve aggiornare i prezzi sulla lavagna.",
@@ -1915,6 +1931,22 @@
    "en": "The work environment is calm.",
    "ko": "직장 분위기가 평온해.",
    "blank": "ambiente"
+  }
+ ],
+ "w|ambizione": [
+  {
+   "text": "L'ambizione di Luca è diventare ingegnere e costruire ponti.",
+   "en": "Luca's ambition is to become an engineer and build bridges.",
+   "ko": "루카의 꿈은 엔지니어가 되어 다리를 놓는 거예요.",
+   "blank": "ambizione",
+   "src": "made"
+  },
+  {
+   "text": "Quest'anno l'ambizione di Chiara per l'estate è imparare a fare surf.",
+   "en": "This year Chiara's ambition for the summer is to learn to surf.",
+   "ko": "올해 키아라의 여름 목표는 서핑을 배우는 거예요.",
+   "blank": "ambizione",
+   "src": "made"
   }
  ],
  "w|ambulanza": [
@@ -3219,6 +3251,22 @@
    "en": "As a child she wanted to become an artist.",
    "ko": "어릴 때 그녀는 예술가가 되고 싶었어.",
    "blank": "artista"
+  }
+ ],
+ "w|artistico": [
+  {
+   "text": "Luca ama il laboratorio artistico perché lì può dipingere con le mani.",
+   "en": "Luca loves the art workshop because there he can paint with his hands.",
+   "ko": "루카는 손으로 그림을 그릴 수 있어서 미술 실습실을 좋아해요.",
+   "blank": "artistico",
+   "src": "made"
+  },
+  {
+   "text": "In autunno Chiara porta il nipote a un laboratorio artistico con foglie e castagne.",
+   "en": "In autumn Chiara takes her nephew to an art workshop with leaves and chestnuts.",
+   "ko": "가을에 키아라는 조카를 데리고 나뭇잎과 밤으로 하는 미술 체험에 가요.",
+   "blank": "artistico",
+   "src": "made"
   }
  ],
  "w|ascensore": [
@@ -5763,6 +5811,22 @@
    "blank": "bocca"
   }
  ],
+ "w|bolla": [
+  {
+   "text": "Nell'ora di scienze Luca soffia dentro una cannuccia e fa una bolla di sapone enorme.",
+   "en": "In science class Luca blows through a straw and makes a huge soap bubble.",
+   "ko": "과학 시간에 루카는 빨대로 불어서 커다란 비눗방울을 만들어요.",
+   "blank": "bolla",
+   "src": "made"
+  },
+  {
+   "text": "Al primo freddo, Chiara trova una sottile bolla di ghiaccio sulla fontana del giardino.",
+   "en": "With the first cold, Chiara finds a thin bubble of ice on the garden fountain.",
+   "ko": "첫 추위가 오자 키아라는 정원 분수에 얇게 얼음 방울이 생긴 걸 봐요.",
+   "blank": "bolla",
+   "src": "made"
+  }
+ ],
  "w|bollente": [
   {
    "text": "La caldaia si è rotta, e Marco ha dovuto scaldare l'acqua bollente sul fornello per lavarsi.",
@@ -6365,6 +6429,22 @@
    "en": "Shall we go to the café for a coffee?",
    "ko": "카페에 커피 마시러 갈까?",
    "blank": "caffè"
+  }
+ ],
+ "w|calare": [
+  {
+   "text": "Alla fine dello spettacolo scolastico è calato il sipario e Luca ha fatto un inchino.",
+   "en": "At the end of the school show the curtain came down and Luca took a bow.",
+   "ko": "학교 공연이 끝나자 막이 내려가고 루카가 인사를 했어요.",
+   "blank": "calato",
+   "src": "made"
+  },
+  {
+   "text": "In ottobre la temperatura comincia a calare e Chiara tira fuori il piumone.",
+   "en": "In October the temperature starts to drop and Chiara gets out the duvet.",
+   "ko": "시월이 되면 기온이 내려가기 시작해서 키아라는 이불을 꺼내요.",
+   "blank": "calare",
+   "src": "made"
   }
  ],
  "w|calcio": [
@@ -9697,6 +9777,22 @@
    "blank": "come"
   }
  ],
+ "w|comico": [
+  {
+   "text": "Luca ha un talento comico e fa ridere tutta la classe con le sue imitazioni.",
+   "en": "Luca has a comic talent and makes the whole class laugh with his impressions.",
+   "ko": "루카는 개그 재능이 있어서 흉내로 반 전체를 웃겨요.",
+   "blank": "comico",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ride del suo aspetto comico con tre maglioni e la sciarpa fino al naso.",
+   "en": "Chiara laughs at how comic she looks in three jumpers with her scarf up to her nose.",
+   "ko": "키아라는 스웨터 세 겹에 목도리를 코까지 두른 우스운 자기 모습에 웃어요.",
+   "blank": "comico",
+   "src": "made"
+  }
+ ],
  "w|cominciare": [
   {
    "text": "Comincia tu, che mi vergogno.",
@@ -10407,6 +10503,22 @@
    "src": "made"
   }
  ],
+ "w|concreto": [
+  {
+   "text": "La maestra chiede a Luca un esempio concreto per spiegare la frazione.",
+   "en": "The teacher asks Luca for a concrete example to explain the fraction.",
+   "ko": "선생님은 분수를 설명할 구체적인 예를 루카에게 물어요.",
+   "blank": "concreto",
+   "src": "made"
+  },
+  {
+   "text": "Il rischio concreto di gelate spinge Chiara a coprire le piante del balcone.",
+   "en": "The real risk of frost pushes Chiara to cover the plants on her balcony.",
+   "ko": "서리가 내릴 실제 위험이 있어서 키아라는 발코니 화분들을 덮어 줘요.",
+   "blank": "concreto",
+   "src": "made"
+  }
+ ],
  "w|condanna": [
   {
    "text": "La condanna è stata ridotta in appello.",
@@ -10636,6 +10748,22 @@
    "en": "After a take that went badly, the director's words were a comfort to Giulia.",
    "ko": "촬영을 망친 뒤 감독의 말이 줄리아에게 위로가 됐어요.",
    "blank": "conforto",
+   "src": "made"
+  }
+ ],
+ "w|confraternita": [
+  {
+   "text": "Il professore di storia spiega a Luca cos'era una confraternita nel Medioevo.",
+   "en": "The history teacher explains to Luca what a confraternity was in the Middle Ages.",
+   "ko": "역사 선생님은 루카에게 중세의 신도회가 무엇이었는지 설명해요.",
+   "blank": "confraternita",
+   "src": "made"
+  },
+  {
+   "text": "A Pasqua la confraternita del paese sfila per le strade e Chiara va a vederla.",
+   "en": "At Easter the village brotherhood parades through the streets and Chiara goes to watch.",
+   "ko": "부활절이면 마을 신도회가 거리를 행진하고 키아라는 그걸 보러 가요.",
+   "blank": "confraternita",
    "src": "made"
   }
  ],
@@ -11005,6 +11133,38 @@
    "en": "I spoke with an expert consultant.",
    "ko": "전문 컨설턴트와 이야기했어.",
    "blank": "consulente"
+  }
+ ],
+ "w|consultare": [
+  {
+   "text": "Per la ricerca Luca deve consultare almeno tre libri della biblioteca.",
+   "en": "For his project Luca has to consult at least three library books.",
+   "ko": "조사 과제를 위해 루카는 도서관 책을 적어도 세 권은 참고해야 해요.",
+   "blank": "consultare",
+   "src": "made"
+  },
+  {
+   "text": "Prima di stendere il bucato, Chiara ama consultare il cielo più delle app.",
+   "en": "Before hanging out the washing, Chiara likes to consult the sky more than apps.",
+   "ko": "빨래를 널기 전에 키아라는 앱보다 하늘을 보고 판단하는 걸 좋아해요.",
+   "blank": "consultare",
+   "src": "made"
+  }
+ ],
+ "w|consumare": [
+  {
+   "text": "A ricreazione Luca può consumare la merenda solo in cortile, non in aula.",
+   "en": "At break Luca may only eat his snack in the courtyard, not in the classroom.",
+   "ko": "쉬는 시간에 루카는 간식을 교실이 아니라 마당에서만 먹을 수 있어요.",
+   "blank": "consumare",
+   "src": "made"
+  },
+  {
+   "text": "D'inverno Chiara cerca di consumare meno gas abbassando il riscaldamento di notte.",
+   "en": "In winter Chiara tries to use less gas by turning the heating down at night.",
+   "ko": "겨울에 키아라는 밤에 난방을 낮춰서 가스를 덜 쓰려고 해요.",
+   "blank": "consumare",
+   "src": "made"
   }
  ],
  "w|contadino": [
@@ -14039,6 +14199,22 @@
    "src": "made"
   }
  ],
+ "w|diplomatico": [
+  {
+   "text": "Un diplomatico in pensione è venuto in classe a parlare a Luca e ai compagni del suo lavoro.",
+   "en": "A retired diplomat came to class to tell Luca and his classmates about his work.",
+   "ko": "은퇴한 외교관이 교실에 와서 루카와 친구들에게 자기 일 이야기를 해 줬어요.",
+   "blank": "diplomatico",
+   "src": "made"
+  },
+  {
+   "text": "Ogni estate un diplomatico affitta la villa accanto a quella di Chiara.",
+   "en": "Every summer a diplomat rents the villa next to Chiara's.",
+   "ko": "여름마다 외교관 한 명이 키아라의 집 옆 별장을 빌려요.",
+   "blank": "diplomatico",
+   "src": "made"
+  }
+ ],
  "w|dire": [
   {
    "text": "Ti voglio dire una cosa.",
@@ -15877,6 +16053,22 @@
    "blank": "elegante"
   }
  ],
+ "w|eleggere": [
+  {
+   "text": "Oggi la classe di Luca deve eleggere il rappresentante per il consiglio d'istituto.",
+   "en": "Today Luca's class has to elect its representative for the school council.",
+   "ko": "오늘 루카네 반은 학교 운영 위원회에 나갈 대표를 뽑아야 해요.",
+   "blank": "eleggere",
+   "src": "made"
+  },
+  {
+   "text": "In primavera il condominio di Chiara deve eleggere un nuovo amministratore.",
+   "en": "In spring Chiara's building has to elect a new manager.",
+   "ko": "봄에 키아라네 아파트는 새 관리인을 뽑아야 해요.",
+   "blank": "eleggere",
+   "src": "made"
+  }
+ ],
  "w|elementare": [
   {
    "text": "Paolo ha commesso un errore elementare e ha scritto male il nome del sindaco.",
@@ -15920,6 +16112,22 @@
    "en": "Laura has put together a list of recommended novels for the summer.",
    "ko": "라우라는 여름에 읽을 추천 소설 목록을 만들었어요.",
    "blank": "elenco",
+   "src": "made"
+  }
+ ],
+ "w|elettorale": [
+  {
+   "text": "Per imparare come funziona il voto, la classe di Luca simula una campagna elettorale.",
+   "en": "To learn how voting works, Luca's class holds a mock election campaign.",
+   "ko": "투표가 어떻게 이루어지는지 배우려고 루카네 반은 모의 선거 운동을 해요.",
+   "blank": "elettorale",
+   "src": "made"
+  },
+  {
+   "text": "Con la primavera arrivano anche i manifesti elettorali, e Chiara li trova sui muri ogni mattina.",
+   "en": "With spring come the election posters too, and Chiara finds new ones on the walls every morning.",
+   "ko": "봄이 오면 선거 포스터도 함께 와서 키아라는 아침마다 벽에서 새 포스터를 봐요.",
+   "blank": "elettorali",
    "src": "made"
   }
  ],
@@ -16021,6 +16229,22 @@
    "en": "There is an emergency exit at the back.",
    "ko": "뒤에 비상구가 있어.",
    "blank": "emergenza"
+  }
+ ],
+ "w|emettere": [
+  {
+   "text": "Durante l'esperimento, il tubo di Luca ha cominciato a emettere un fumo bianco.",
+   "en": "During the experiment, Luca's tube started to give off white smoke.",
+   "ko": "실험 중에 루카의 시험관에서 흰 연기가 나오기 시작했어요.",
+   "blank": "emettere",
+   "src": "made"
+  },
+  {
+   "text": "Il primo giorno di freddo, il vecchio termosifone di Chiara emette un rumore strano.",
+   "en": "On the first cold day, Chiara's old radiator makes a strange noise.",
+   "ko": "추운 첫날 키아라의 낡은 라디에이터에서 이상한 소리가 나요.",
+   "blank": "emette",
+   "src": "made"
   }
  ],
  "w|emorragia": [
@@ -17525,6 +17749,22 @@
    "blank": "fatto"
   }
  ],
+ "w|fattore": [
+  {
+   "text": "Secondo la professoressa, il sonno è un fattore importante per i voti di Luca.",
+   "en": "According to the teacher, sleep is an important factor in Luca's grades.",
+   "ko": "선생님 말로는 잠이 루카의 성적에 중요한 요인이래요.",
+   "blank": "fattore",
+   "src": "made"
+  },
+  {
+   "text": "Per Chiara la luce è un fattore decisivo per l'umore: d'inverno si sente più stanca.",
+   "en": "For Chiara light is a deciding factor in her mood: in winter she feels more tired.",
+   "ko": "키아라에게 햇빛은 기분을 좌우하는 요인이라 겨울엔 더 피곤해요.",
+   "blank": "fattore",
+   "src": "made"
+  }
+ ],
  "w|fattoria": [
   {
    "text": "Siamo cresciuti in una fattoria.",
@@ -18937,6 +19177,22 @@
    "blank": "forza"
   }
  ],
+ "w|forzare": [
+  {
+   "text": "L'armadietto di Luca si era bloccato e il bidello ha dovuto forzare la serratura.",
+   "en": "Luca's locker was jammed and the caretaker had to force the lock.",
+   "ko": "루카의 사물함이 꽉 끼어서 관리인이 자물쇠를 억지로 열어야 했어요.",
+   "blank": "forzare",
+   "src": "made"
+  },
+  {
+   "text": "Con l'umidità di novembre la finestra si incastra e Chiara deve forzarla per aprirla.",
+   "en": "With November's damp the window sticks and Chiara has to force it to open it.",
+   "ko": "십일월 습기 때문에 창문이 끼어서 키아라는 힘을 줘서 열어야 해요.",
+   "blank": "forzarla",
+   "src": "made"
+  }
+ ],
  "w|fossa": [
   {
    "text": "I bambini hanno scavato una fossa nella sabbia, e Davide ci è caduto dentro.",
@@ -19349,6 +19605,22 @@
    "blank": "fronte"
   }
  ],
+ "w|frontiera": [
+  {
+   "text": "A geografia Luca impara dove passa la frontiera tra Italia e Svizzera.",
+   "en": "In geography Luca learns where the border between Italy and Switzerland runs.",
+   "ko": "지리 시간에 루카는 이탈리아와 스위스의 국경이 어디를 지나는지 배워요.",
+   "blank": "frontiera",
+   "src": "made"
+  },
+  {
+   "text": "Le rondini passano la frontiera ogni primavera, e Chiara le aspetta sul balcone.",
+   "en": "Swallows cross the border every spring, and Chiara waits for them on the balcony.",
+   "ko": "제비는 봄마다 국경을 넘어오고 키아라는 발코니에서 그들을 기다려요.",
+   "blank": "frontiera",
+   "src": "made"
+  }
+ ],
  "w|frutta": [
   {
    "text": "Compro frutta fresca al mercato ogni sabato.",
@@ -19461,6 +19733,22 @@
    "en": "The smoke from the fireplace fills the air.",
    "ko": "벽난로 연기가 공기를 채운다.",
    "blank": "fumo"
+  }
+ ],
+ "w|funebre": [
+  {
+   "text": "Nel libro di storia Luca vede la foto di un antico corteo funebre egizio.",
+   "en": "In his history book Luca sees a picture of an ancient Egyptian funeral procession.",
+   "ko": "역사책에서 루카는 고대 이집트 장례 행렬 사진을 봐요.",
+   "blank": "funebre",
+   "src": "made"
+  },
+  {
+   "text": "A novembre Chiara sente le campane funebri del paese e pensa ai nonni.",
+   "en": "In November Chiara hears the village funeral bells and thinks of her grandparents.",
+   "ko": "십일월에 키아라는 마을의 조종 소리를 듣고 조부모님을 생각해요.",
+   "blank": "funebri",
+   "src": "made"
   }
  ],
  "w|funerale": [
@@ -22409,6 +22697,22 @@
    "en": "I got the wrong address and got lost.",
    "ko": "주소를 잘못 알아듣고 길을 잃었어.",
    "blank": "indirizzo"
+  }
+ ],
+ "w|individuare": [
+  {
+   "text": "Sulla cartina muta, Luca deve individuare i fiumi principali d'Italia.",
+   "en": "On the blank map, Luca has to find the main rivers of Italy.",
+   "ko": "백지도에서 루카는 이탈리아의 주요 강들을 찾아내야 해요.",
+   "blank": "individuare",
+   "src": "made"
+  },
+  {
+   "text": "Chiara riesce a individuare il primo merlo della primavera dal suo canto.",
+   "en": "Chiara manages to spot the first blackbird of spring by its song.",
+   "ko": "키아라는 노랫소리로 봄의 첫 지빠귀를 알아봐요.",
+   "blank": "individuare",
+   "src": "made"
   }
  ],
  "w|individuo": [
@@ -25795,6 +26099,22 @@
    "blank": "maglione"
   }
  ],
+ "w|magnetico": [
+  {
+   "text": "Luca mostra ai compagni che l'ago della bussola è magnetico e punta sempre a nord.",
+   "en": "Luca shows his classmates that the compass needle is magnetic and always points north.",
+   "ko": "루카는 친구들에게 나침반 바늘이 자석이라 늘 북쪽을 가리킨다고 보여 줘요.",
+   "blank": "magnetico",
+   "src": "made"
+  },
+  {
+   "text": "Il calendario magnetico sul frigo ricorda a Chiara quando cambiare le gomme della macchina.",
+   "en": "The magnetic calendar on the fridge reminds Chiara when to change the car tyres.",
+   "ko": "냉장고에 붙은 자석 달력이 키아라에게 자동차 타이어 바꿀 때를 알려 줘요.",
+   "blank": "magnetico",
+   "src": "made"
+  }
+ ],
  "w|magnifico": [
   {
    "text": "Il panorama è davvero magnifico.",
@@ -26173,6 +26493,22 @@
    "src": "made"
   }
  ],
+ "w|manicomio": [
+  {
+   "text": "In classe Luca ha visto un documentario sulla chiusura dei manicomi in Italia.",
+   "en": "In class Luca watched a documentary about the closing of psychiatric hospitals in Italy.",
+   "ko": "수업 시간에 루카는 이탈리아 정신 병원 폐쇄에 관한 다큐멘터리를 봤어요.",
+   "blank": "manicomi",
+   "src": "made"
+  },
+  {
+   "text": "In primavera Chiara visita il parco nato dove una volta c'era il manicomio della città.",
+   "en": "In spring Chiara visits the park created where the city's asylum used to be.",
+   "ko": "봄에 키아라는 예전에 도시 정신 병원이 있던 자리에 생긴 공원을 찾아가요.",
+   "blank": "manicomio",
+   "src": "made"
+  }
+ ],
  "w|maniera": [
   {
    "text": "Non mi piace la sua maniera di parlare.",
@@ -26440,6 +26776,22 @@
    "en": "During the evening Giulia found out that Luca is a carpenter and always carries a hammer.",
    "ko": "그날 저녁 줄리아는 루카가 목수라서 늘 망치를 들고 다닌다는 걸 알았어요.",
    "blank": "martello",
+   "src": "made"
+  }
+ ],
+ "w|marziale": [
+  {
+   "text": "Dopo le lezioni Luca frequenta un corso di arti marziali nella palestra della scuola.",
+   "en": "After classes Luca goes to a martial arts course in the school gym.",
+   "ko": "수업이 끝나면 루카는 학교 체육관에서 무술 강좌를 들어요.",
+   "blank": "marziali",
+   "src": "made"
+  },
+  {
+   "text": "Quando fa troppo freddo per correre, Chiara si allena con un video di arti marziali in salotto.",
+   "en": "When it's too cold to run, Chiara trains with a martial arts video in the living room.",
+   "ko": "너무 추워서 달리기를 못 할 때 키아라는 거실에서 무술 영상을 보며 운동해요.",
+   "blank": "marziali",
    "src": "made"
   }
  ],
@@ -29469,6 +29821,22 @@
    "blank": "numero"
   }
  ],
+ "w|numeroso": [
+  {
+   "text": "Quest'anno gli iscritti sono così numerosi che la scuola di Luca ha aperto una nuova sezione.",
+   "en": "This year so many have enrolled that Luca's school has opened a new class.",
+   "ko": "올해는 입학생이 너무 많아서 루카의 학교에 반이 하나 더 생겼어요.",
+   "blank": "numerosi",
+   "src": "made"
+  },
+  {
+   "text": "In autunno nel parco ci sono numerosi funghi, e Chiara li fotografa tutti.",
+   "en": "In autumn there are lots of mushrooms in the park, and Chiara photographs them all.",
+   "ko": "가을이면 공원에 버섯이 많이 나서 키아라는 모두 사진으로 찍어요.",
+   "blank": "numerosi",
+   "src": "made"
+  }
+ ],
  "w|nuotare": [
   {
    "text": "Mi piace nuotare in mare aperto.",
@@ -31435,6 +31803,22 @@
    "src": "made"
   }
  ],
+ "w|paramedico": [
+  {
+   "text": "Quando Luca è svenuto in palestra, è arrivato subito un paramedico con l'ambulanza.",
+   "en": "When Luca fainted in the gym, a paramedic arrived straight away with the ambulance.",
+   "ko": "루카가 체육관에서 기절하자 구급대원이 구급차를 타고 바로 왔어요.",
+   "blank": "paramedico",
+   "src": "made"
+  },
+  {
+   "text": "Dopo una caduta sul ghiaccio, un paramedico ha controllato la caviglia di Chiara.",
+   "en": "After a fall on the ice, a paramedic checked Chiara's ankle.",
+   "ko": "빙판에서 넘어진 뒤 구급대원이 키아라의 발목을 살펴봤어요.",
+   "blank": "paramedico",
+   "src": "made"
+  }
+ ],
  "w|parcheggiare": [
   {
    "text": "Il sabato è difficile parcheggiare vicino al mercato, così Simone arriva all'alba.",
@@ -32635,6 +33019,22 @@
    "blank": "però"
   }
  ],
+ "w|perquisire": [
+  {
+   "text": "Nel romanzo che Luca legge per scuola, la polizia arriva a perquisire la casa del sospettato.",
+   "en": "In the novel Luca is reading for school, the police come to search the suspect's house.",
+   "ko": "루카가 학교 과제로 읽는 소설에서 경찰이 용의자의 집을 수색하러 와요.",
+   "blank": "perquisire",
+   "src": "made"
+  },
+  {
+   "text": "Al telegiornale Chiara sente che la polizia ha fatto perquisire un capannone dopo l'alluvione d'autunno.",
+   "en": "On the news Chiara hears that police had a warehouse searched after the autumn flood.",
+   "ko": "뉴스에서 키아라는 가을 홍수 뒤 경찰이 창고를 수색했다는 소식을 들어요.",
+   "blank": "perquisire",
+   "src": "made"
+  }
+ ],
  "w|persino": [
   {
    "text": "Persino lui ha detto di sì.",
@@ -32821,6 +33221,22 @@
    "en": "He did a terrible job on the project.",
    "ko": "그 프로젝트에서 정말 형편없는 일을 했어.",
    "blank": "pessimo"
+  }
+ ],
+ "w|pestare": [
+  {
+   "text": "In fila per la mensa, un compagno ha pestato il piede a Luca senza volerlo.",
+   "en": "In the canteen queue, a classmate stepped on Luca's foot by accident.",
+   "ko": "급식 줄에서 친구가 실수로 루카의 발을 밟았어요.",
+   "blank": "pestato",
+   "src": "made"
+  },
+  {
+   "text": "A fine estate Chiara pesta il basilico nel mortaio per fare il pesto da congelare.",
+   "en": "At the end of summer Chiara pounds basil in the mortar to make pesto to freeze.",
+   "ko": "여름이 끝날 무렵 키아라는 절구에 바질을 빻아 얼려 둘 페스토를 만들어요.",
+   "blank": "pesta",
+   "src": "made"
   }
  ],
  "w|petrolio": [
@@ -33425,6 +33841,22 @@
    "en": "At school we study Dante's poetry.",
    "ko": "학교에서 단테의 시를 공부해.",
    "blank": "poesia"
+  }
+ ],
+ "w|poeta": [
+  {
+   "text": "Per la recita, Luca deve imparare a memoria una poesia di un poeta dell'Ottocento.",
+   "en": "For the school play, Luca has to learn by heart a poem by a nineteenth-century poet.",
+   "ko": "학예회를 위해 루카는 십구 세기 시인의 시를 외워야 해요.",
+   "blank": "poeta",
+   "src": "made"
+  },
+  {
+   "text": "Chiara rilegge i versi di un poeta che descrive le foglie d'autunno.",
+   "en": "Chiara rereads the lines of a poet who describes autumn leaves.",
+   "ko": "키아라는 가을 낙엽을 묘사한 시인의 시구를 다시 읽어요.",
+   "blank": "poeta",
+   "src": "made"
   }
  ],
  "w|poi": [
@@ -34243,6 +34675,22 @@
    "en": "The evening prayer calms the mind.",
    "ko": "저녁 기도는 마음을 가라앉혀.",
    "blank": "preghiera"
+  }
+ ],
+ "w|preliminare": [
+  {
+   "text": "Prima della gara di matematica c'è una prova preliminare, e Luca l'ha superata.",
+   "en": "Before the maths competition there is a preliminary test, and Luca passed it.",
+   "ko": "수학 대회 전에 예선 시험이 있는데 루카가 통과했어요.",
+   "blank": "preliminare",
+   "src": "made"
+  },
+  {
+   "text": "Prima di cambiare l'armadio, Chiara fa una scelta preliminare dei vestiti da regalare.",
+   "en": "Before swapping her wardrobe over, Chiara makes a first selection of clothes to give away.",
+   "ko": "옷장 정리를 하기 전에 키아라는 남에게 줄 옷부터 먼저 골라 놓아요.",
+   "blank": "preliminare",
+   "src": "made"
   }
  ],
  "w|premere": [
@@ -35567,6 +36015,22 @@
    "blank": "protegge"
   }
  ],
+ "w|protesta": [
+  {
+   "text": "Gli studenti più grandi hanno organizzato una protesta pacifica contro la chiusura della biblioteca, e Luca li ha seguiti.",
+   "en": "The older students organised a peaceful protest against the library closing, and Luca joined them.",
+   "ko": "고학년 학생들이 도서관 폐쇄에 반대하는 평화 시위를 열었고 루카도 따라갔어요.",
+   "blank": "protesta",
+   "src": "made"
+  },
+  {
+   "text": "Sotto casa di Chiara c'è una protesta dei residenti contro il taglio degli alberi del viale.",
+   "en": "Below Chiara's flat residents are protesting against the felling of the avenue trees.",
+   "ko": "키아라의 집 아래에서 주민들이 가로수 벌목에 반대하는 시위를 하고 있어요.",
+   "blank": "protesta",
+   "src": "made"
+  }
+ ],
  "w|protetto": [
   {
    "text": "Gli uccelli fanno il nido sul balcone di Paolo, in un angolo protetto dal vento.",
@@ -35937,6 +36401,22 @@
    "en": "He pointed toward the door.",
    "ko": "그는 문을 가리켰어.",
    "blank": "puntato"
+  }
+ ],
+ "w|punteggio": [
+  {
+   "text": "Nel quiz di inglese Luca ha ottenuto il punteggio più alto della classe.",
+   "en": "In the English quiz Luca got the highest score in the class.",
+   "ko": "영어 퀴즈에서 루카가 반에서 가장 높은 점수를 받았어요.",
+   "blank": "punteggio",
+   "src": "made"
+  },
+  {
+   "text": "Nella gara di torte d'autunno, la crostata di mele di Chiara ha preso un punteggio altissimo.",
+   "en": "In the autumn cake contest, Chiara's apple tart got a very high score.",
+   "ko": "가을 케이크 대회에서 키아라의 사과 타르트가 아주 높은 점수를 받았어요.",
+   "blank": "punteggio",
+   "src": "made"
   }
  ],
  "w|punto": [
@@ -36439,6 +36919,22 @@
    "src": "made"
   }
  ],
+ "w|quotidiano": [
+  {
+   "text": "Ogni lunedì la classe di Luca legge in aula un articolo del quotidiano locale.",
+   "en": "Every Monday Luca's class reads an article from the local daily paper in class.",
+   "ko": "매주 월요일 루카네 반은 교실에서 지역 일간지 기사를 하나 읽어요.",
+   "blank": "quotidiano",
+   "src": "made"
+  },
+  {
+   "text": "Sul quotidiano di oggi Chiara legge che l'inverno sarà più mite del solito.",
+   "en": "In today's paper Chiara reads that the winter will be milder than usual.",
+   "ko": "오늘 신문에서 키아라는 이번 겨울이 평소보다 따뜻할 거라는 기사를 읽어요.",
+   "blank": "quotidiano",
+   "src": "made"
+  }
+ ],
  "w|rabbia": [
   {
    "text": "La sua rabbia era difficile da controllare.",
@@ -36862,6 +37358,22 @@
    "en": "Sara was captivated by the smell of freshly baked bread.",
    "ko": "사라는 갓 구운 빵 냄새에 홀딱 반했어요.",
    "blank": "rapita",
+   "src": "made"
+  }
+ ],
+ "w|rapitore": [
+  {
+   "text": "Nel giallo che Luca legge, il rapitore chiede un riscatto con una lettera anonima.",
+   "en": "In the mystery Luca is reading, the kidnapper demands a ransom in an anonymous letter.",
+   "ko": "루카가 읽는 추리 소설에서 납치범은 익명 편지로 몸값을 요구해요.",
+   "blank": "rapitore",
+   "src": "made"
+  },
+  {
+   "text": "Nelle sere d'inverno Chiara guarda una serie in cui la polizia dà la caccia a un rapitore.",
+   "en": "On winter evenings Chiara watches a series in which the police hunt a kidnapper.",
+   "ko": "겨울 저녁이면 키아라는 경찰이 납치범을 쫓는 드라마를 봐요.",
+   "blank": "rapitore",
    "src": "made"
   }
  ],
@@ -37494,6 +38006,22 @@
    "en": "Chiara's team will play the final on Republic Day.",
    "ko": "키아라의 팀은 공화국 기념일에 결승을 치러요.",
    "blank": "Repubblica",
+   "src": "made"
+  }
+ ],
+ "w|repubblicano": [
+  {
+   "text": "A storia Luca studia le guerre di Roma nel periodo repubblicano.",
+   "en": "In history Luca is studying Rome's wars in the Republican period.",
+   "ko": "역사 시간에 루카는 공화정 시대 로마의 전쟁을 공부해요.",
+   "blank": "repubblicano",
+   "src": "made"
+  },
+  {
+   "text": "Il due giugno Chiara guarda la parata per la festa repubblicana in televisione.",
+   "en": "On the second of June Chiara watches the parade for Republic Day on television.",
+   "ko": "유월 이일에 키아라는 공화국 기념일 퍼레이드를 텔레비전으로 봐요.",
+   "blank": "repubblicana",
    "src": "made"
   }
  ],
@@ -40495,6 +41023,22 @@
    "en": "We have to get off at the next stop.",
    "ko": "다음 정류장에서 내려야 해.",
    "blank": "scendere"
+  }
+ ],
+ "w|sceneggiatura": [
+  {
+   "text": "Luca e due compagni scrivono la sceneggiatura di un cortometraggio per il concorso della scuola.",
+   "en": "Luca and two classmates are writing the script of a short film for the school contest.",
+   "ko": "루카와 친구 둘은 학교 공모전에 낼 단편 영화 시나리오를 써요.",
+   "blank": "sceneggiatura",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ha scritto la sceneggiatura di un breve video sulle quattro stagioni del suo giardino.",
+   "en": "Chiara wrote the script of a short video about the four seasons in her garden.",
+   "ko": "키아라는 자기 정원의 사계절을 담은 짧은 영상의 대본을 썼어요.",
+   "blank": "sceneggiatura",
+   "src": "made"
   }
  ],
  "w|sceriffo": [
@@ -46109,6 +46653,22 @@
    "src": "made"
   }
  ],
+ "w|svanire": [
+  {
+   "text": "Appena suona la campanella, la timidezza di Luca sembra svanire e diventa chiacchierone.",
+   "en": "As soon as the bell rings, Luca's shyness seems to vanish and he becomes chatty.",
+   "ko": "종이 울리자마자 루카의 수줍음은 사라지는 듯하고 수다쟁이가 돼요.",
+   "blank": "svanire",
+   "src": "made"
+  },
+  {
+   "text": "A marzo Chiara vede svanire la neve dai tetti in pochi giorni.",
+   "en": "In March Chiara watches the snow vanish from the roofs in a few days.",
+   "ko": "삼월에 키아라는 며칠 만에 지붕의 눈이 사라지는 걸 봐요.",
+   "blank": "svanire",
+   "src": "made"
+  }
+ ],
  "w|sveglia": [
   {
    "text": "Ho impostato la sveglia alle sette.",
@@ -47977,6 +48537,22 @@
    "blank": "traditore"
   }
  ],
+ "w|tradizionale": [
+  {
+   "text": "Per Carnevale la scuola di Luca prepara un costume tradizionale per ogni classe.",
+   "en": "For Carnival Luca's school makes a traditional costume for each class.",
+   "ko": "카니발을 맞아 루카의 학교는 반마다 전통 의상을 준비해요.",
+   "blank": "tradizionale",
+   "src": "made"
+  },
+  {
+   "text": "A novembre Chiara prepara le caldarroste, un dolce tradizionale della sua zona.",
+   "en": "In November Chiara makes roast chestnuts, a traditional treat in her area.",
+   "ko": "십일월에 키아라는 자기 동네 전통 간식인 군밤을 만들어요.",
+   "blank": "tradizionale",
+   "src": "made"
+  }
+ ],
  "w|tradizione": [
   {
    "text": "Questa tradizione dura da secoli.",
@@ -49171,6 +49747,22 @@
    "blank": "università"
   }
  ],
+ "w|universitario": [
+  {
+   "text": "Il fratello di Luca viene a scuola a raccontare la sua vita universitaria.",
+   "en": "Luca's brother comes to school to talk about his university life.",
+   "ko": "루카의 형이 학교에 와서 대학 생활 이야기를 해 줘요.",
+   "blank": "universitaria",
+   "src": "made"
+  },
+  {
+   "text": "A settembre la città di Chiara si riempie di nuovo di studenti universitari.",
+   "en": "In September Chiara's city fills up with university students again.",
+   "ko": "구월이 되면 키아라의 도시는 다시 대학생들로 가득해요.",
+   "blank": "universitari",
+   "src": "made"
+  }
+ ],
  "w|universo": [
   {
    "text": "L'universo è pieno di misteri.",
@@ -50095,6 +50687,22 @@
    "blank": "vestito"
   }
  ],
+ "w|veterano": [
+  {
+   "text": "Il professore di ginnastica di Luca è un veterano della pallavolo, con trent'anni di campionato.",
+   "en": "Luca's PE teacher is a volleyball veteran with thirty years in the league.",
+   "ko": "루카의 체육 선생님은 삼십 년 동안 리그에서 뛴 배구 베테랑이에요.",
+   "blank": "veterano",
+   "src": "made"
+  },
+  {
+   "text": "Il vicino di Chiara, un veterano dell'orto, le insegna quando seminare i piselli.",
+   "en": "Chiara's neighbour, a veteran vegetable gardener, teaches her when to sow peas.",
+   "ko": "채소밭 베테랑인 키아라의 이웃이 완두콩 씨 뿌릴 때를 가르쳐 줘요.",
+   "blank": "veterano",
+   "src": "made"
+  }
+ ],
  "w|vetro": [
   {
    "text": "Il vetro della finestra è incrinato.",
@@ -50535,6 +51143,22 @@
    "src": "made"
   }
  ],
+ "w|visitatore": [
+  {
+   "text": "All'ingresso della scuola ogni visitatore deve firmare il registro e lasciare un documento.",
+   "en": "At the school entrance every visitor must sign the register and leave an ID.",
+   "ko": "학교 입구에서 방문객은 모두 명부에 서명하고 신분증을 맡겨야 해요.",
+   "blank": "visitatore",
+   "src": "made"
+  },
+  {
+   "text": "In primavera l'orto botanico si riempie di visitatori, e Chiara preferisce andarci di mattina presto.",
+   "en": "In spring the botanical garden fills with visitors, and Chiara prefers to go early in the morning.",
+   "ko": "봄이면 식물원이 방문객으로 가득 차서 키아라는 이른 아침에 가는 걸 좋아해요.",
+   "blank": "visitatori",
+   "src": "made"
+  }
+ ],
  "w|viso": [
   {
    "text": "Ha un viso molto espressivo.",
@@ -50759,6 +51383,22 @@
    "en": "You can't want everything right away.",
    "ko": "한꺼번에 다 가질 수는 없어.",
    "blank": "volere"
+  }
+ ],
+ "w|volgare": [
+  {
+   "text": "La maestra ha rimproverato Luca per una parola volgare scritta sul banco.",
+   "en": "The teacher told Luca off for a rude word written on the desk.",
+   "ko": "선생님은 책상에 쓴 상스러운 말 때문에 루카를 꾸짖었어요.",
+   "blank": "volgare",
+   "src": "made"
+  },
+  {
+   "text": "Chiara trova volgare il cartellone pubblicitario dei saldi estivi davanti alla fermata.",
+   "en": "Chiara finds the summer sales billboard in front of the bus stop vulgar.",
+   "ko": "키아라는 정류장 앞 여름 세일 광고판이 저속하다고 생각해요.",
+   "blank": "volgare",
+   "src": "made"
   }
  ],
  "w|volo": [
