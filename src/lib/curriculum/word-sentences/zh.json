@@ -1313,6 +1313,22 @@
    "blank": "不必"
   }
  ],
+ "w|不怎么": [
+  {
+   "text": "小明不怎么喜欢英语，可是成绩一直不错。",
+   "en": "Xiaoming doesn't much like English, but his grades have always been good.",
+   "ko": "샤오밍은 영어를 별로 안 좋아하지만 성적은 늘 괜찮아요.",
+   "blank": "不怎么",
+   "src": "made"
+  },
+  {
+   "text": "丽丽以前不怎么运动，三年前才开始跑步。",
+   "en": "Lili didn't exercise much before; she only started running three years ago.",
+   "ko": "리리는 예전엔 운동을 별로 안 하다가 삼 년 전에야 달리기를 시작했어요.",
+   "blank": "不怎么",
+   "src": "made"
+  }
+ ],
  "w|不断": [
   {
    "text": "他不断练习。",
@@ -1575,6 +1591,22 @@
    "en": "He's an expert in this field.",
    "ko": "그는 이 분야의 전문가야.",
    "blank": "专家"
+  }
+ ],
+ "w|专心": [
+  {
+   "text": "小明上课很专心，老师提问他总能答出来。",
+   "en": "Xiaoming is very focused in class and can always answer the teacher's questions.",
+   "ko": "샤오밍은 수업에 집중을 잘해서 선생님 질문에 늘 대답해요.",
+   "blank": "专心",
+   "src": "made"
+  },
+  {
+   "text": "丽丽跑步时很专心，连路边有人喊她都没听见。",
+   "en": "Lili concentrates so hard when running that she didn't even hear someone calling her from the roadside.",
+   "ko": "리리는 달릴 때 너무 집중해서 길가에서 누가 불러도 못 들었어요.",
+   "blank": "专心",
+   "src": "made"
   }
  ],
  "w|专门": [
@@ -5659,6 +5691,22 @@
    "src": "made"
   }
  ],
+ "w|侵略": [
+  {
+   "text": "历史课讲到了近代列强侵略中国的经过。",
+   "en": "History class covered how the foreign powers invaded China in modern times.",
+   "ko": "역사 시간에 근대 열강이 중국을 침략한 과정을 배웠어요.",
+   "blank": "侵略",
+   "src": "made"
+  },
+  {
+   "text": "赛道经过一座纪念馆，讲的是当年抵抗侵略的历史。",
+   "en": "The course passes a memorial hall that tells the history of resisting invasion in those years.",
+   "ko": "코스는 그 시절 침략에 맞선 역사를 다룬 기념관을 지나가요.",
+   "blank": "侵略",
+   "src": "made"
+  }
+ ],
  "w|便": [
   {
    "text": "说完便走了。",
@@ -8987,6 +9035,22 @@
    "blank": "分手"
   }
  ],
+ "w|分散": [
+  {
+   "text": "窗外的施工声分散了小明的注意力。",
+   "en": "The construction noise outside the window distracted Xiaoming.",
+   "ko": "창밖 공사 소리가 샤오밍의 주의를 흩뜨렸어요.",
+   "blank": "分散",
+   "src": "made"
+  },
+  {
+   "text": "过了终点，参赛者们慢慢分散到各个休息区。",
+   "en": "After crossing the finish line, the runners gradually spread out to the rest areas.",
+   "ko": "결승선을 지나자 참가자들은 여러 휴게 구역으로 흩어졌어요.",
+   "blank": "分散",
+   "src": "made"
+  }
+ ],
  "w|分析": [
   {
    "text": "请分析这些结果。",
@@ -9014,6 +9078,22 @@
    "en": "Lili used the centrifuge to separate the components in the blood.",
    "ko": "리리는 원심분리기로 혈액 속 성분을 분리했어요.",
    "blank": "分离",
+   "src": "made"
+  }
+ ],
+ "w|分类": [
+  {
+   "text": "图书馆的书按照分类摆放，找起来很方便。",
+   "en": "Library books are arranged by category, so they're easy to find.",
+   "ko": "도서관 책은 분류별로 꽂혀 있어서 찾기 쉬워요.",
+   "blank": "分类",
+   "src": "made"
+  },
+  {
+   "text": "比赛按年龄分类，丽丽参加的是三十岁组。",
+   "en": "The race is categorized by age, and Lili is in the thirties group.",
+   "ko": "대회는 나이별로 분류되는데 리리는 삼십 대 부문에 나가요.",
+   "blank": "分类",
    "src": "made"
   }
  ],
@@ -12381,6 +12461,22 @@
    "blank": "另"
   }
  ],
+ "w|另一方面": [
+  {
+   "text": "住校能锻炼独立能力，另一方面也会想家。",
+   "en": "Boarding at school builds independence, but on the other hand you get homesick.",
+   "ko": "기숙사 생활은 독립심을 길러 주지만 다른 한편으로는 집이 그리워져요.",
+   "blank": "另一方面",
+   "src": "made"
+  },
+  {
+   "text": "参加马拉松能锻炼身体，另一方面也容易受伤。",
+   "en": "Running marathons builds fitness, but on the other hand injuries are easy to get.",
+   "ko": "마라톤에 나가면 몸이 단련되지만 다른 한편으로는 다치기도 쉬워요.",
+   "blank": "另一方面",
+   "src": "made"
+  }
+ ],
  "w|另外": [
   {
    "text": "另外还有一事。",
@@ -12861,6 +12957,22 @@
    "en": "Please tell the driver to stop.",
    "ko": "기사한테 세워 달라고 해.",
    "blank": "司机"
+  }
+ ],
+ "w|司法": [
+  {
+   "text": "法律课上，老师给大家介绍了司法独立的意义。",
+   "en": "In law class, the teacher explained the significance of judicial independence.",
+   "ko": "법 수업에서 선생님은 사법 독립의 의미를 소개했어요.",
+   "blank": "司法",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在司法局上班，同事们都来给她加油。",
+   "en": "Lili works at the justice bureau, and her colleagues all came to cheer her on.",
+   "ko": "리리는 사법국에서 일해서 동료들이 다 응원하러 왔어요.",
+   "blank": "司法",
+   "src": "made"
   }
  ],
  "w|吃": [
@@ -16627,6 +16739,22 @@
    "src": "made"
   }
  ],
+ "w|墓地": [
+  {
+   "text": "清明节，学校组织学生去烈士墓地献花。",
+   "en": "At Qingming, the school took students to lay flowers at the martyrs' cemetery.",
+   "ko": "청명절에 학교는 학생들을 데리고 열사 묘지에 꽃을 바치러 갔어요.",
+   "blank": "墓地",
+   "src": "made"
+  },
+  {
+   "text": "这次赛道经过城郊一片安静的墓地。",
+   "en": "This year's course passes a quiet cemetery on the edge of town.",
+   "ko": "이번 코스는 교외의 조용한 묘지를 지나가요.",
+   "blank": "墓地",
+   "src": "made"
+  }
+ ],
  "w|墙": [
   {
    "text": "马林和妹妹一起把新年画贴在客厅的墙上。",
@@ -20009,6 +20137,22 @@
    "src": "made"
   }
  ],
+ "w|审讯": [
+  {
+   "text": "小明演话剧时扮演一个被审讯的间谍。",
+   "en": "In the school play, Xiaoming plays a spy being interrogated.",
+   "ko": "샤오밍은 연극에서 심문을 받는 스파이 역을 맡았어요.",
+   "blank": "审讯",
+   "src": "made"
+  },
+  {
+   "text": "丽丽看的推理小说里，警察正在审讯嫌疑人。",
+   "en": "In the mystery novel Lili is reading, the police are interrogating a suspect.",
+   "ko": "리리가 읽는 추리 소설에서 경찰이 용의자를 심문하고 있어요.",
+   "blank": "审讯",
+   "src": "made"
+  }
+ ],
  "w|客人": [
   {
    "text": "客人来了。",
@@ -21643,6 +21787,22 @@
    "src": "made"
   }
  ],
+ "w|展现": [
+  {
+   "text": "在文艺汇演上，小明展现了自己的表演天赋。",
+   "en": "At the school performance, Xiaoming showed off his talent for acting.",
+   "ko": "학예회에서 샤오밍은 자기 연기 재능을 보여 줬어요.",
+   "blank": "展现",
+   "src": "made"
+  },
+  {
+   "text": "冲过终点时，丽丽脸上展现出灿烂的笑容。",
+   "en": "As she dashed across the finish line, a brilliant smile spread across Lili's face.",
+   "ko": "결승선을 통과할 때 리리의 얼굴에 환한 미소가 피어났어요.",
+   "blank": "展现",
+   "src": "made"
+  }
+ ],
  "w|展示": [
   {
    "text": "请展示你的作品。",
@@ -21835,6 +21995,22 @@
    "en": "He is a worker.",
    "ko": "그는 노동자야.",
    "blank": "工人"
+  }
+ ],
+ "w|工会": [
+  {
+   "text": "学校食堂的员工成立了自己的工会。",
+   "en": "The school cafeteria staff set up their own union.",
+   "ko": "학교 식당 직원들은 자체 노조를 만들었어요.",
+   "blank": "工会",
+   "src": "made"
+  },
+  {
+   "text": "丽丽所在公司的工会给每个参赛员工发了跑鞋。",
+   "en": "The union at Lili's company gave running shoes to every employee taking part.",
+   "ko": "리리 회사 노조는 참가하는 직원마다 운동화를 나눠 줬어요.",
+   "blank": "工会",
+   "src": "made"
   }
  ],
  "w|工作": [
@@ -23169,6 +23345,22 @@
    "blank": "废话"
   }
  ],
+ "w|废除": [
+  {
+   "text": "学生会投票决定废除周六补课的规定。",
+   "en": "The student council voted to abolish the rule about Saturday make-up classes.",
+   "ko": "학생회는 투표로 토요일 보충 수업 규정을 폐지하기로 했어요.",
+   "blank": "废除",
+   "src": "made"
+  },
+  {
+   "text": "组委会今年废除了限制报名年龄的规定。",
+   "en": "The organizing committee abolished the rule limiting entrants' age this year.",
+   "ko": "조직위원회는 올해 참가 나이 제한 규정을 없앴어요.",
+   "blank": "废除",
+   "src": "made"
+  }
+ ],
  "w|度": [
   {
    "text": "把握好这个度。",
@@ -24393,6 +24585,22 @@
    "src": "made"
   }
  ],
+ "w|得罪": [
+  {
+   "text": "小明怕得罪同桌，没说出抄作业的事。",
+   "en": "Xiaoming was afraid of offending his deskmate and didn't mention the copied homework.",
+   "ko": "샤오밍은 짝꿍 기분을 상하게 할까 봐 숙제 베낀 일을 말하지 않았어요.",
+   "blank": "得罪",
+   "src": "made"
+  },
+  {
+   "text": "丽丽不小心撞了别人一下，赶紧道歉，怕得罪人。",
+   "en": "Lili bumped into someone by accident and quickly apologized, afraid of offending them.",
+   "ko": "리리는 실수로 다른 사람과 부딪쳐서 기분 상하게 할까 봐 얼른 사과했어요.",
+   "blank": "得罪",
+   "src": "made"
+  }
+ ],
  "w|微笑": [
   {
    "text": "她给了我一个微笑。",
@@ -25499,6 +25707,22 @@
    "blank": "情报"
   }
  ],
+ "w|情景": [
+  {
+   "text": "小明还记得第一天上学时哭着不肯进教室的情景。",
+   "en": "Xiaoming still remembers the scene of crying and refusing to enter the classroom on his first day.",
+   "ko": "샤오밍은 첫 등교 날 울면서 교실에 안 들어가려던 장면을 아직 기억해요.",
+   "blank": "情景",
+   "src": "made"
+  },
+  {
+   "text": "几千人一起起跑的情景让丽丽很激动。",
+   "en": "The sight of thousands of people starting together thrilled Lili.",
+   "ko": "수천 명이 함께 출발하는 광경에 리리는 무척 설렜어요.",
+   "blank": "情景",
+   "src": "made"
+  }
+ ],
  "w|情绪": [
   {
    "text": "他今天情绪不太好。",
@@ -25757,6 +25981,22 @@
    "en": "Being late means disrespect.",
    "ko": "지각은 무례를 의미해.",
    "blank": "意味着"
+  }
+ ],
+ "w|意图": [
+  {
+   "text": "老师看出了小明装病的意图，笑着让他坐下。",
+   "en": "The teacher saw through Xiaoming's intention to fake being sick and smiled as she told him to sit down.",
+   "ko": "선생님은 샤오밍이 꾀병을 부리려는 의도를 알아채고 웃으며 앉으라고 했어요.",
+   "blank": "意图",
+   "src": "made"
+  },
+  {
+   "text": "教练看出了对手想在最后加速的意图。",
+   "en": "The coach saw through the rival's intention to speed up at the end.",
+   "ko": "코치는 상대가 마지막에 속도를 올리려는 의도를 알아챘어요.",
+   "blank": "意图",
+   "src": "made"
   }
  ],
  "w|意外": [
@@ -26552,6 +26792,22 @@
    "en": "The dentist has her own tactics for coaxing kids to open their mouths.",
    "ko": "아이가 입을 벌리게 하려고 치과 의사는 나름의 전술이 있어요.",
    "blank": "战术",
+   "src": "made"
+  }
+ ],
+ "w|战机": [
+  {
+   "text": "小明的房间里挂满了各种战机模型。",
+   "en": "Xiaoming's room is full of all kinds of fighter plane models.",
+   "ko": "샤오밍의 방에는 온갖 전투기 모형이 걸려 있어요.",
+   "blank": "战机",
+   "src": "made"
+  },
+  {
+   "text": "开赛前，两架战机从赛道上空飞过。",
+   "en": "Before the start, two fighter jets flew over the course.",
+   "ko": "경기 시작 전에 전투기 두 대가 코스 위를 날아갔어요.",
+   "blank": "战机",
    "src": "made"
   }
  ],
@@ -28765,6 +29021,22 @@
    "src": "made"
   }
  ],
+ "w|排除": [
+  {
+   "text": "老师查了监控，排除了小明偷拿橡皮的可能。",
+   "en": "The teacher checked the camera footage and ruled out the possibility that Xiaoming took the eraser.",
+   "ko": "선생님은 CCTV를 확인하고 샤오밍이 지우개를 가져갔을 가능성을 배제했어요.",
+   "blank": "排除",
+   "src": "made"
+  },
+  {
+   "text": "医生检查后排除了丽丽骨折的可能。",
+   "en": "After an examination, the doctor ruled out a fracture for Lili.",
+   "ko": "의사는 검사한 뒤 리리가 골절됐을 가능성을 배제했어요.",
+   "blank": "排除",
+   "src": "made"
+  }
+ ],
  "w|探员": [
   {
    "text": "探员已经到了。",
@@ -29699,6 +29971,22 @@
    "src": "made"
   }
  ],
+ "w|操纵": [
+  {
+   "text": "科技课上，小明学会了用遥控器操纵小飞机。",
+   "en": "In tech class, Xiaoming learned to fly a small plane with a remote control.",
+   "ko": "과학 기술 시간에 샤오밍은 리모컨으로 작은 비행기를 조종하는 법을 배웠어요.",
+   "blank": "操纵",
+   "src": "made"
+  },
+  {
+   "text": "摄影师在空中操纵无人机，拍下了整条赛道。",
+   "en": "The photographer flew a drone overhead and filmed the entire course.",
+   "ko": "촬영 기사가 하늘에 드론을 조종해서 코스 전체를 찍었어요.",
+   "blank": "操纵",
+   "src": "made"
+  }
+ ],
  "w|擦": [
   {
    "text": "请擦干净桌子。",
@@ -29845,6 +30133,22 @@
    "en": "Hurry and pack up.",
    "ko": "빨리 챙겨.",
    "blank": "收拾"
+  }
+ ],
+ "w|收获": [
+  {
+   "text": "这次夏令营，小明收获了很多新朋友。",
+   "en": "At this summer camp, Xiaoming gained a lot of new friends.",
+   "ko": "이번 여름 캠프에서 샤오밍은 새 친구를 많이 얻었어요.",
+   "blank": "收获",
+   "src": "made"
+  },
+  {
+   "text": "丽丽说，跑马拉松让她收获了耐心和自信。",
+   "en": "Lili says running marathons has given her patience and confidence.",
+   "ko": "리리는 마라톤으로 인내심과 자신감을 얻었다고 말해요.",
+   "blank": "收获",
+   "src": "made"
   }
  ],
  "w|收集": [
@@ -32024,6 +32328,22 @@
    "en": "The old captain passed on all the wisdom from years of playing to Li Na.",
    "ko": "노장 주장은 오랜 선수 생활에서 쌓은 지혜를 리나에게 다 가르쳐 줬어요.",
    "blank": "智慧",
+   "src": "made"
+  }
+ ],
+ "w|暂停": [
+  {
+   "text": "因为下大雪，学校暂停了今天的体育课。",
+   "en": "Because of heavy snow, the school suspended today's PE class.",
+   "ko": "폭설 때문에 학교는 오늘 체육 수업을 잠시 중단했어요.",
+   "blank": "暂停",
+   "src": "made"
+  },
+  {
+   "text": "因为雷雨，马拉松比赛暂停了二十分钟。",
+   "en": "The marathon was paused for twenty minutes because of a thunderstorm.",
+   "ko": "뇌우 때문에 마라톤 경기가 이십 분 동안 중단됐어요.",
+   "blank": "暂停",
    "src": "made"
   }
  ],
@@ -34239,6 +34559,38 @@
    "blank": "歌"
   }
  ],
+ "w|歌唱": [
+  {
+   "text": "全校师生在操场上一起歌唱祖国。",
+   "en": "All the teachers and students sang praises of the motherland together on the sports field.",
+   "ko": "전교 교사와 학생이 운동장에서 함께 조국을 노래했어요.",
+   "blank": "歌唱",
+   "src": "made"
+  },
+  {
+   "text": "路边的阿姨们穿着红衣服，一边挥手一边歌唱。",
+   "en": "The aunties by the road, dressed in red, waved and sang.",
+   "ko": "길가의 아주머니들이 빨간 옷을 입고 손을 흔들며 노래했어요.",
+   "blank": "歌唱",
+   "src": "made"
+  }
+ ],
+ "w|歌声": [
+  {
+   "text": "音乐教室里传出一阵阵清脆的歌声。",
+   "en": "Clear singing drifted out of the music room again and again.",
+   "ko": "음악실에서 맑은 노랫소리가 연달아 흘러나왔어요.",
+   "blank": "歌声",
+   "src": "made"
+  },
+  {
+   "text": "听到路边合唱团的歌声，丽丽又有了力气。",
+   "en": "Hearing the roadside choir sing, Lili found her strength again.",
+   "ko": "길가 합창단의 노랫소리를 듣자 리리는 다시 힘이 났어요.",
+   "blank": "歌声",
+   "src": "made"
+  }
+ ],
  "w|歌手": [
   {
    "text": "她是一位有名的歌手。",
@@ -34397,6 +34749,22 @@
    "en": "Your choice is right.",
    "ko": "네 선택이 맞아.",
    "blank": "正确"
+  }
+ ],
+ "w|正面": [
+  {
+   "text": "班主任说，要多给孩子正面的鼓励。",
+   "en": "The homeroom teacher says children should get more positive encouragement.",
+   "ko": "담임 선생님은 아이에게 긍정적인 격려를 더 많이 해 줘야 한다고 말해요.",
+   "blank": "正面",
+   "src": "made"
+  },
+  {
+   "text": "丽丽说，跑步对她的心情有很正面的影响。",
+   "en": "Lili says running has a very positive effect on her mood.",
+   "ko": "리리는 달리기가 기분에 아주 긍정적인 영향을 준다고 말해요.",
+   "blank": "正面",
+   "src": "made"
   }
  ],
  "w|此": [
@@ -35323,6 +35691,22 @@
    "en": "This car is fast.",
    "ko": "이 자동차는 빨라.",
    "blank": "汽车"
+  }
+ ],
+ "w|沉重": [
+  {
+   "text": "期末考试前，小明的书包显得格外沉重。",
+   "en": "Before final exams, Xiaoming's schoolbag feels especially heavy.",
+   "ko": "기말고사 전이라 샤오밍의 책가방이 유난히 무거워요.",
+   "blank": "沉重",
+   "src": "made"
+  },
+  {
+   "text": "最后五公里，丽丽觉得两条腿越来越沉重。",
+   "en": "In the last five kilometers, Lili felt her legs getting heavier and heavier.",
+   "ko": "마지막 오 킬로미터에서 리리는 두 다리가 점점 무거워지는 걸 느꼈어요.",
+   "blank": "沉重",
+   "src": "made"
   }
  ],
  "w|沉默": [
@@ -36351,6 +36735,22 @@
    "blank": "清楚"
   }
  ],
+ "w|清洁": [
+  {
+   "text": "值日生把教室打扫得很清洁，连窗台都擦了。",
+   "en": "The students on duty cleaned the classroom spotless, even wiping the windowsills.",
+   "ko": "당번 학생들이 교실을 깨끗이 청소해서 창틀까지 닦았어요.",
+   "blank": "清洁",
+   "src": "made"
+  },
+  {
+   "text": "赛后志愿者把路上的瓶子都捡走了，街道又恢复了清洁。",
+   "en": "After the race, volunteers picked up all the bottles, and the streets were clean again.",
+   "ko": "경기가 끝나고 자원봉사자들이 병을 다 주워서 거리가 다시 깨끗해졌어요.",
+   "blank": "清洁",
+   "src": "made"
+  }
+ ],
  "w|清理": [
   {
    "text": "请清理桌子。",
@@ -36740,6 +37140,22 @@
    "en": "Li Na was invited to give a speech in the county about young people starting businesses back home.",
    "ko": "리나는 현에 초청받아 젊은이들이 고향에 돌아와 창업한 이야기로 강연했어요.",
    "blank": "演讲",
+   "src": "made"
+  }
+ ],
+ "w|漫画": [
+  {
+   "text": "小明上课偷偷看漫画，被老师没收了。",
+   "en": "Xiaoming was secretly reading comics in class, and the teacher confiscated them.",
+   "ko": "샤오밍은 수업 중에 몰래 만화책을 보다가 선생님께 압수당했어요.",
+   "blank": "漫画",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的朋友把她跑步的样子画成了一幅漫画。",
+   "en": "Lili's friend drew her running as a cartoon.",
+   "ko": "리리의 친구가 리리가 달리는 모습을 만화로 그렸어요.",
+   "blank": "漫画",
    "src": "made"
   }
  ],
@@ -38953,6 +39369,22 @@
    "en": "He was late because of work.",
    "ko": "일 때문에 그는 늦었어.",
    "blank": "由于"
+  }
+ ],
+ "w|甲板": [
+  {
+   "text": "参观军舰时，小明在甲板上拍了好多照片。",
+   "en": "Visiting the warship, Xiaoming took lots of photos on the deck.",
+   "ko": "군함을 견학할 때 샤오밍은 갑판에서 사진을 많이 찍었어요.",
+   "blank": "甲板",
+   "src": "made"
+  },
+  {
+   "text": "这场海滨马拉松的终点设在一艘大船的甲板上。",
+   "en": "The finish of this seaside marathon is on the deck of a big ship.",
+   "ko": "이 해변 마라톤의 결승점은 큰 배 갑판 위에 있어요.",
+   "blank": "甲板",
+   "src": "made"
   }
  ],
  "w|申请": [
@@ -41325,6 +41757,22 @@
    "blank": "祈祷"
   }
  ],
+ "w|视线": [
+  {
+   "text": "前排同学太高，挡住了小明看黑板的视线。",
+   "en": "The classmate in front is too tall and blocks Xiaoming's view of the blackboard.",
+   "ko": "앞자리 친구 키가 너무 커서 샤오밍의 칠판 시야를 가려요.",
+   "blank": "视线",
+   "src": "made"
+  },
+  {
+   "text": "汗水流进眼睛，丽丽的视线一下子模糊了。",
+   "en": "Sweat ran into her eyes, and Lili's vision suddenly blurred.",
+   "ko": "땀이 눈에 들어가서 리리의 시야가 갑자기 흐려졌어요.",
+   "blank": "视线",
+   "src": "made"
+  }
+ ],
  "w|视频": [
   {
    "text": "请发一个视频给我。",
@@ -42179,6 +42627,22 @@
    "blank": "穿过"
   }
  ],
+ "w|突出": [
+  {
+   "text": "老师说，小明的作文要更突出自己的真实感受。",
+   "en": "The teacher said Xiaoming's essay should highlight his real feelings more.",
+   "ko": "선생님은 샤오밍의 작문이 자기 진짜 느낌을 더 부각해야 한다고 했어요.",
+   "blank": "突出",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在这次比赛中成绩突出，跑进了前十。",
+   "en": "Lili's result stood out in this race; she finished in the top ten.",
+   "ko": "리리는 이번 대회에서 기록이 두드러져서 십 위 안에 들었어요.",
+   "blank": "突出",
+   "src": "made"
+  }
+ ],
  "w|突然": [
   {
    "text": "天突然黑了。",
@@ -42387,6 +42851,22 @@
    "src": "made"
   }
  ],
+ "w|符号": [
+  {
+   "text": "小明在地图上用红色符号标出了学校的位置。",
+   "en": "Xiaoming marked the school's location on the map with a red symbol.",
+   "ko": "샤오밍은 지도에 빨간 기호로 학교 위치를 표시했어요.",
+   "blank": "符号",
+   "src": "made"
+  },
+  {
+   "text": "赛道上每隔一段就有一个医疗符号，告诉大家哪里有急救站。",
+   "en": "Every so often along the course there's a medical symbol showing where the first-aid stations are.",
+   "ko": "코스에는 일정 간격으로 구급소 위치를 알려 주는 의료 기호가 있어요.",
+   "blank": "符号",
+   "src": "made"
+  }
+ ],
  "w|符合": [
   {
    "text": "新来的检查员说，后厨的卫生完全符合标准。",
@@ -42547,6 +43027,22 @@
    "en": "Hold on, I wasn't finished.",
    "ko": "잠깐, 아직 말 안 끝났어.",
    "blank": "等等"
+  }
+ ],
+ "w|等级": [
+  {
+   "text": "钢琴考级一共有十个等级，小明刚考过第四级。",
+   "en": "The piano grading exam has ten levels in all, and Xiaoming just passed the fourth.",
+   "ko": "피아노 급수 시험은 모두 열 등급인데 샤오밍은 막 사 급을 땄어요.",
+   "blank": "等级",
+   "src": "made"
+  },
+  {
+   "text": "这场马拉松被评为国内最高等级的赛事。",
+   "en": "This marathon has been rated a top-tier event in the country.",
+   "ko": "이 마라톤은 국내 최고 등급 대회로 평가받았어요.",
+   "blank": "等级",
+   "src": "made"
   }
  ],
  "w|答应": [
@@ -42783,6 +43279,22 @@
    "en": "Management needs experience.",
    "ko": "관리는 경험이 필요해.",
    "blank": "管理"
+  }
+ ],
+ "w|管道": [
+  {
+   "text": "学校暑假要更换老化的暖气管道。",
+   "en": "Over summer break the school will replace the old heating pipes.",
+   "ko": "학교는 여름 방학에 낡은 난방 배관을 교체해요.",
+   "blank": "管道",
+   "src": "made"
+  },
+  {
+   "text": "赛道中段有一段路在修地下管道，只能绕行。",
+   "en": "Part of the middle of the course is closed for underground pipe work, so runners have to detour.",
+   "ko": "코스 중간에 지하 배관 공사 구간이 있어서 돌아가야 해요.",
+   "blank": "管道",
+   "src": "made"
   }
  ],
  "w|箭": [
@@ -46997,6 +47509,22 @@
    "blank": "衣服"
   }
  ],
+ "w|补": [
+  {
+   "text": "小明病了一周，回来以后得补好几次课。",
+   "en": "Xiaoming was sick for a week and has to make up several lessons after coming back.",
+   "ko": "샤오밍은 일주일 아파서 돌아온 뒤 수업 몇 번을 보충해야 해요.",
+   "blank": "补",
+   "src": "made"
+  },
+  {
+   "text": "跑到半程，丽丽停下来喝水补了一点盐。",
+   "en": "At the halfway point, Lili stopped to drink water and topped up on a little salt.",
+   "ko": "반쯤 달렸을 때 리리는 멈춰서 물을 마시고 소금을 조금 보충했어요.",
+   "blank": "补",
+   "src": "made"
+  }
+ ],
  "w|补偿": [
   {
    "text": "空调坏了，酒店给客人补偿了一顿免费早餐。",
@@ -48423,6 +48951,22 @@
    "blank": "证人"
   }
  ],
+ "w|证件": [
+  {
+   "text": "考试那天，小明忘了带证件，只好跑回家拿。",
+   "en": "On exam day Xiaoming forgot his ID and had to run home to get it.",
+   "ko": "시험 날 샤오밍은 신분증을 깜빡해서 집에 뛰어가 가져와야 했어요.",
+   "blank": "证件",
+   "src": "made"
+  },
+  {
+   "text": "领号码布时，工作人员要求丽丽出示身份证件。",
+   "en": "When picking up her race bib, the staff asked Lili to show her ID.",
+   "ko": "번호표를 받을 때 직원은 리리에게 신분증을 보여 달라고 했어요.",
+   "blank": "证件",
+   "src": "made"
+  }
+ ],
  "w|证实": [
   {
    "text": "指纹比对证实了王刚的猜测，小偷就是那个保安。",
@@ -48635,6 +49179,22 @@
    "src": "made"
   }
  ],
+ "w|诗歌": [
+  {
+   "text": "语文课上，小明背了一首关于秋天的诗歌。",
+   "en": "In Chinese class, Xiaoming recited a poem about autumn.",
+   "ko": "국어 시간에 샤오밍은 가을에 관한 시를 외웠어요.",
+   "blank": "诗歌",
+   "src": "made"
+  },
+  {
+   "text": "终点旁的墙上写满了跑者们留下的诗歌。",
+   "en": "The wall by the finish line is covered in poems left by runners.",
+   "ko": "결승점 옆 벽에는 주자들이 남긴 시가 가득 적혀 있어요.",
+   "blank": "诗歌",
+   "src": "made"
+  }
+ ],
  "w|诚实": [
   {
    "text": "陈杰觉得，当公务员最要紧的就是诚实。",
@@ -48769,6 +49329,22 @@
    "en": "Please don't misunderstand me.",
    "ko": "날 오해하지 말아 줘.",
    "blank": "误会"
+  }
+ ],
+ "w|诱惑": [
+  {
+   "text": "校门口小卖部的零食一直在诱惑着小明。",
+   "en": "The snacks at the shop by the school gate keep tempting Xiaoming.",
+   "ko": "교문 앞 매점 과자가 계속 샤오밍을 유혹해요.",
+   "blank": "诱惑",
+   "src": "made"
+  },
+  {
+   "text": "路边摊的烤肠香味诱惑着每一个跑过的人。",
+   "en": "The smell of grilled sausages at the roadside stall tempts every runner who passes.",
+   "ko": "길가 노점의 구운 소시지 냄새가 지나가는 모든 주자를 유혹해요.",
+   "blank": "诱惑",
+   "src": "made"
   }
  ],
  "w|说": [
@@ -49161,6 +49737,22 @@
    "blank": "谎言"
   }
  ],
+ "w|谜": [
+  {
+   "text": "教室的钥匙怎么不见了，到现在还是个谜。",
+   "en": "How the classroom key went missing is still a mystery.",
+   "ko": "교실 열쇠가 어떻게 없어졌는지는 아직도 수수께끼예요.",
+   "blank": "谜",
+   "src": "made"
+  },
+  {
+   "text": "那位老人七十岁还能跑完全程，对丽丽来说是个谜。",
+   "en": "How that old man can still run the full distance at seventy is a mystery to Lili.",
+   "ko": "그 노인이 일흔에도 완주할 수 있는 게 리리에겐 수수께끼예요.",
+   "blank": "谜",
+   "src": "made"
+  }
+ ],
  "w|谢": [
   {
    "text": "谢谢你。",
@@ -49187,6 +49779,22 @@
    "en": "Thanks so much.",
    "ko": "정말 고마워.",
    "blank": "谢谢"
+  }
+ ],
+ "w|谣言": [
+  {
+   "text": "有人传谣言说要放三天假，结果是假的。",
+   "en": "Someone spread a rumor about three days off, but it turned out to be false.",
+   "ko": "누군가 사흘 쉰다는 헛소문을 퍼뜨렸는데 결국 거짓이었어요.",
+   "blank": "谣言",
+   "src": "made"
+  },
+  {
+   "text": "网上有谣言说比赛取消了，丽丽打电话问了才放心。",
+   "en": "There was a rumor online that the race was canceled, and Lili only relaxed after calling to check.",
+   "ko": "인터넷에 대회가 취소됐다는 헛소문이 돌아서 리리는 전화로 확인하고서야 안심했어요.",
+   "blank": "谣言",
+   "src": "made"
   }
  ],
  "w|谨慎": [
@@ -50830,6 +51438,22 @@
    "en": "After a few days in the hospital, this dog's attitude toward people changed a lot, and it stopped biting.",
    "ko": "며칠 입원한 뒤 이 개는 사람을 대하는 태도가 많이 바뀌어서 더는 물지 않아요.",
    "blank": "转变",
+   "src": "made"
+  }
+ ],
+ "w|转向": [
+  {
+   "text": "讲完数学题，老师把话题转向了下周的春游。",
+   "en": "After going over the math problem, the teacher turned the topic to next week's spring outing.",
+   "ko": "수학 문제를 다 설명한 뒤 선생님은 화제를 다음 주 봄 소풍으로 돌렸어요.",
+   "blank": "转向",
+   "src": "made"
+  },
+  {
+   "text": "过了大桥，赛道转向东边的河滨公园。",
+   "en": "After the big bridge, the course turns east toward the riverside park.",
+   "ko": "큰 다리를 지나면 코스가 동쪽 강변 공원으로 꺾여요.",
+   "blank": "转向",
    "src": "made"
   }
  ],
@@ -55555,6 +56179,22 @@
    "en": "I wish you success.",
    "ko": "잘 되길 바랄게.",
    "blank": "顺利"
+  }
+ ],
+ "w|顺序": [
+  {
+   "text": "老师让大家按学号的顺序排队交作业。",
+   "en": "The teacher had everyone line up in order of student number to hand in homework.",
+   "ko": "선생님은 모두 학번 순서대로 줄을 서서 숙제를 내라고 했어요.",
+   "blank": "顺序",
+   "src": "made"
+  },
+  {
+   "text": "运动员按照号码布的顺序分批出发。",
+   "en": "The runners start in waves in order of their bib numbers.",
+   "ko": "선수들은 번호표 순서대로 나눠서 출발해요.",
+   "blank": "顺序",
+   "src": "made"
   }
  ],
  "w|顾客": [

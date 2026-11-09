@@ -1535,6 +1535,22 @@
    "src": "made"
   }
  ],
+ "w|えらい": [
+  {
+   "text": "毎朝早く来て窓口を開ける亮を、課長は「えらいね」とほめた。",
+   "en": "The section chief praised Ryo, who comes early every morning to open the counter, saying \"Good for you.\"",
+   "ko": "매일 아침 일찍 와서 창구를 여는 료를 과장은 \"대단하네\"라며 칭찬했어요.",
+   "blank": "えらい",
+   "src": "made"
+  },
+  {
+   "text": "編集部のえらい人たちが、朝から会議室にこもっている。",
+   "en": "The bigwigs in the editorial department have been shut in the meeting room since morning.",
+   "ko": "편집부 높은 분들이 아침부터 회의실에 틀어박혀 있어요.",
+   "blank": "えらい",
+   "src": "made"
+  }
+ ],
  "w|エリア": [
   {
    "text": "このエリア、詳しい？",
@@ -12865,6 +12881,22 @@
    "blank": "一番"
   }
  ],
+ "w|一目": [
+  {
+   "text": "新しい案内板は、どこに行けばいいか一目でわかる。",
+   "en": "With the new information board, you can tell at a glance where to go.",
+   "ko": "새 안내판은 어디로 가면 되는지 한눈에 알 수 있어요.",
+   "blank": "一目",
+   "src": "made"
+  },
+  {
+   "text": "真由の書く見出しは、内容が一目で伝わると評判だ。",
+   "en": "Mayu's headlines are known for getting the content across at a glance.",
+   "ko": "마유가 쓰는 제목은 내용이 한눈에 전해진다고 평판이 좋아요.",
+   "blank": "一目",
+   "src": "made"
+  }
+ ],
  "w|一瞬": [
   {
    "text": "一瞬で消えてしまった。",
@@ -18571,6 +18603,22 @@
    "blank": "先生"
   }
  ],
+ "w|先端": [
+  {
+   "text": "市役所は、最先端の技術を使った防災システムを導入した。",
+   "en": "City hall introduced a disaster prevention system using cutting-edge technology.",
+   "ko": "시청은 최첨단 기술을 쓴 방재 시스템을 도입했어요.",
+   "blank": "先端",
+   "src": "made"
+  },
+  {
+   "text": "真由は、医療の最先端を取材するシリーズを担当している。",
+   "en": "Mayu is in charge of a series covering the cutting edge of medicine.",
+   "ko": "마유는 의료 최첨단을 취재하는 시리즈를 맡고 있어요.",
+   "blank": "先端",
+   "src": "made"
+  }
+ ],
  "w|先行": [
   {
    "text": "稲光は雷の音に先行する。",
@@ -19909,6 +19957,22 @@
    "src": "made"
   }
  ],
+ "w|冷却": [
+  {
+   "text": "サーバー室の冷却装置が故障して、市役所のシステムが一時止まった。",
+   "en": "The cooling system in the server room broke down, and city hall's systems stopped for a while.",
+   "ko": "서버실 냉각 장치가 고장 나서 시청 시스템이 잠시 멈췄어요.",
+   "blank": "冷却",
+   "src": "made"
+  },
+  {
+   "text": "両国の関係は、ここ数年で冷却している。",
+   "en": "Relations between the two countries have cooled in recent years.",
+   "ko": "두 나라의 관계는 최근 몇 년 사이에 냉각돼 있어요.",
+   "blank": "冷却",
+   "src": "made"
+  }
+ ],
  "w|冷蔵庫": [
   {
    "text": "冷蔵庫に牛乳がある。",
@@ -20991,6 +21055,22 @@
    "en": "I produced it myself.",
    "ko": "직접 제작했어.",
    "blank": "制作"
+  }
+ ],
+ "w|制定": [
+  {
+   "text": "市の新しい条例の制定に向けて、住民説明会が開かれた。",
+   "en": "A residents' briefing was held ahead of the enactment of the city's new ordinance.",
+   "ko": "시의 새 조례 제정을 앞두고 주민 설명회가 열렸어요.",
+   "blank": "制定",
+   "src": "made"
+  },
+  {
+   "text": "真由は、新しい祝日の制定をめぐる議論を記事にまとめた。",
+   "en": "Mayu wrote up the debate over establishing a new national holiday.",
+   "ko": "마유는 새 공휴일 제정을 둘러싼 논의를 기사로 정리했어요.",
+   "blank": "制定",
+   "src": "made"
   }
  ],
  "w|制度": [
@@ -22120,6 +22200,22 @@
    "en": "Keiko asked the shop if they could wrap it in nice paper as a gift.",
    "ko": "게이코는 선물용으로 예쁜 종이로 포장해 줄 수 있는지 가게에 물었어요.",
    "blank": "包ん",
+   "src": "made"
+  }
+ ],
+ "w|包囲": [
+  {
+   "text": "亮は、昔この城が敵に包囲された話を観光パンフレットに書いた。",
+   "en": "Ryo wrote in the tourist pamphlet about how this castle was once surrounded by enemies.",
+   "ko": "료는 옛날 이 성이 적에게 포위됐던 이야기를 관광 팸플릿에 썼어요.",
+   "blank": "包囲",
+   "src": "made"
+  },
+  {
+   "text": "真由は、事件の家を包囲した警察の様子を現場から伝えた。",
+   "en": "Mayu reported from the scene on the police who had surrounded the house in the case.",
+   "ko": "마유는 사건 현장의 집을 포위한 경찰의 모습을 현장에서 전했어요.",
+   "blank": "包囲",
    "src": "made"
   }
  ],
@@ -24359,6 +24455,22 @@
    "blank": "名前"
   }
  ],
+ "w|名曲": [
+  {
+   "text": "市役所の昼の放送では、昔の名曲が静かに流れている。",
+   "en": "Old classic songs play quietly over city hall's lunchtime broadcast.",
+   "ko": "시청 점심 방송에서는 옛 명곡이 조용히 흘러나와요.",
+   "blank": "名曲",
+   "src": "made"
+  },
+  {
+   "text": "作曲家の訃報を受けて、真由は数々の名曲を振り返る記事を書いた。",
+   "en": "On hearing of the composer's death, Mayu wrote an article looking back on many of his famous songs.",
+   "ko": "작곡가의 부고를 듣고 마유는 수많은 명곡을 돌아보는 기사를 썼어요.",
+   "blank": "名曲",
+   "src": "made"
+  }
+ ],
  "w|名物": [
   {
    "text": "健太の学校の名物は、全校生徒で作る巨大な貼り絵だ。",
@@ -24714,6 +24826,22 @@
    "en": "Aoi watched a horror movie about a cursed doll and couldn't sleep.",
    "ko": "아오이는 저주받은 인형이 나오는 공포 영화를 보고 잠을 못 잤어요.",
    "blank": "呪い",
+   "src": "made"
+  }
+ ],
+ "w|呪文": [
+  {
+   "text": "役所の書類の言葉は、市民には呪文のように聞こえるとよく言われる。",
+   "en": "People often say the language in government documents sounds like a magic spell to ordinary citizens.",
+   "ko": "관청 서류의 말은 시민에게 주문처럼 들린다는 말을 자주 들어요.",
+   "blank": "呪文",
+   "src": "made"
+  },
+  {
+   "text": "締め切りが近づくと、真由は「間に合え」と呪文のようにつぶやく。",
+   "en": "As the deadline nears, Mayu mutters \"make it in time\" like a magic spell.",
+   "ko": "마감이 다가오면 마유는 \"늦지 마라\"를 주문처럼 중얼거려요.",
+   "blank": "呪文",
    "src": "made"
   }
  ],
@@ -25501,6 +25629,22 @@
    "blank": "国家"
   }
  ],
+ "w|国有": [
+  {
+   "text": "駅の裏の広い空き地は、国有の土地だ。",
+   "en": "The large vacant lot behind the station is state-owned land.",
+   "ko": "역 뒤의 넓은 공터는 국유지예요.",
+   "blank": "国有",
+   "src": "made"
+  },
+  {
+   "text": "国有の鉄道が民営化された歴史を、真由は特集で取り上げた。",
+   "en": "Mayu covered the history of the privatization of the state-owned railway in a feature.",
+   "ko": "마유는 국유 철도가 민영화된 역사를 특집으로 다뤘어요.",
+   "blank": "国有",
+   "src": "made"
+  }
+ ],
  "w|国民": [
   {
    "text": "国民の声だよ。",
@@ -25712,6 +25856,22 @@
    "en": "Late in the game, Yumi withstood the opponent's intense pressure and kept the ball.",
    "ko": "경기 막판에 유미는 상대의 거센 압박을 견디며 공을 지켰어요.",
    "blank": "圧力",
+   "src": "made"
+  }
+ ],
+ "w|圧縮": [
+  {
+   "text": "住民の情報は、圧縮したファイルで安全に保存されている。",
+   "en": "Residents' information is stored securely in compressed files.",
+   "ko": "주민 정보는 압축한 파일로 안전하게 보관돼요.",
+   "blank": "圧縮",
+   "src": "made"
+  },
+  {
+   "text": "長いインタビューを、真由は四百字に圧縮した。",
+   "en": "Mayu condensed a long interview into four hundred characters.",
+   "ko": "마유는 긴 인터뷰를 사백 자로 압축했어요.",
+   "blank": "圧縮",
    "src": "made"
   }
  ],
@@ -27695,6 +27855,22 @@
    "src": "made"
   }
  ],
+ "w|大麻": [
+  {
+   "text": "市役所では、大麻の害を伝える講演会が開かれた。",
+   "en": "City hall held a lecture about the harm caused by cannabis.",
+   "ko": "시청에서는 대마의 해를 알리는 강연회가 열렸어요.",
+   "blank": "大麻",
+   "src": "made"
+  },
+  {
+   "text": "大麻の所持で逮捕されたというニュースが、夜遅くに入ってきた。",
+   "en": "News came in late at night that someone had been arrested for possessing cannabis.",
+   "ko": "대마 소지로 체포됐다는 뉴스가 밤늦게 들어왔어요.",
+   "blank": "大麻",
+   "src": "made"
+  }
+ ],
  "w|天": [
   {
    "text": "天を仰いだよ。",
@@ -28005,6 +28181,22 @@
    "en": "That's a rude way to put it.",
    "ko": "실례되는 말투네.",
    "blank": "失礼"
+  }
+ ],
+ "w|失踪": [
+  {
+   "text": "市役所には、家族の失踪について相談に来る人もいる。",
+   "en": "Some people come to city hall for advice about a family member who has gone missing.",
+   "ko": "시청에는 가족의 실종에 대해 상담하러 오는 사람도 있어요.",
+   "blank": "失踪",
+   "src": "made"
+  },
+  {
+   "text": "登山者の失踪事件について、真由は山小屋の人に話を聞いた。",
+   "en": "Mayu spoke with people at a mountain hut about a climber's disappearance.",
+   "ko": "마유는 등산객 실종 사건에 대해 산장 사람들에게 이야기를 들었어요.",
+   "blank": "失踪",
+   "src": "made"
   }
  ],
  "w|奇妙": [
@@ -28707,6 +28899,22 @@
    "blank": "嫌い"
   }
  ],
+ "w|嫌がらせ": [
+  {
+   "text": "職員への嫌がらせの電話について、市は対策を話し合った。",
+   "en": "The city discussed measures against harassing phone calls to its staff.",
+   "ko": "시는 직원을 향한 괴롭힘 전화에 대해 대책을 논의했어요.",
+   "blank": "嫌がらせ",
+   "src": "made"
+  },
+  {
+   "text": "ネット上の嫌がらせの書き込みについて、真由は特集記事を書いた。",
+   "en": "Mayu wrote a feature on harassing posts online.",
+   "ko": "마유는 인터넷 괴롭힘 글에 대해 특집 기사를 썼어요.",
+   "blank": "嫌がらせ",
+   "src": "made"
+  }
+ ],
  "w|嬉しい": [
   {
    "text": "めっちゃ嬉しい。",
@@ -29282,6 +29490,22 @@
    "en": "Misaki's older brother works at the Cabinet Secretariat and apparently comes home late every night.",
    "ko": "미사키의 오빠는 내각 관방에서 일해서 매일 밤 늦게 들어온다고 해요.",
    "blank": "官房",
+   "src": "made"
+  }
+ ],
+ "w|定める": [
+  {
+   "text": "市は、ごみの出し方を新しいルールとして定めた。",
+   "en": "The city set out new rules on how to put out trash.",
+   "ko": "시는 쓰레기 버리는 법을 새 규칙으로 정했어요.",
+   "blank": "定め",
+   "src": "made"
+  },
+  {
+   "text": "新聞社は、記事の書き方の基準を細かく定めている。",
+   "en": "The newspaper has detailed standards for how articles should be written.",
+   "ko": "신문사는 기사 쓰는 법의 기준을 꼼꼼히 정해 두었어요.",
+   "blank": "定め",
    "src": "made"
   }
  ],
@@ -29962,6 +30186,22 @@
    "en": "There is a quiet temple behind the office where you can take a walk at lunch.",
    "ko": "사무실 뒤에는 조용한 절이 있어서 점심시간에 산책할 수 있어요.",
    "blank": "寺",
+   "src": "made"
+  }
+ ],
+ "w|寺院": [
+  {
+   "text": "亮は、町の古い寺院を案内する地図を作った。",
+   "en": "Ryo made a map guiding visitors to the town's old temples.",
+   "ko": "료는 마을의 오래된 사원을 안내하는 지도를 만들었어요.",
+   "blank": "寺院",
+   "src": "made"
+  },
+  {
+   "text": "真由は、古い寺院の修理を記録する連載を始めた。",
+   "en": "Mayu started a series documenting the repair of an old temple.",
+   "ko": "마유는 오래된 사원 수리를 기록하는 연재를 시작했어요.",
+   "blank": "寺院",
    "src": "made"
   }
  ],
@@ -32583,6 +32823,22 @@
    "src": "made"
   }
  ],
+ "w|彫刻": [
+  {
+   "text": "市役所の前に、地元の作家が作った彫刻が置かれた。",
+   "en": "A sculpture made by a local artist was placed in front of city hall.",
+   "ko": "시청 앞에 지역 작가가 만든 조각이 놓였어요.",
+   "blank": "彫刻",
+   "src": "made"
+  },
+  {
+   "text": "真由は、駅前に新しくできた彫刻の作者にインタビューした。",
+   "en": "Mayu interviewed the creator of the new sculpture in front of the station.",
+   "ko": "마유는 역 앞에 새로 생긴 조각의 작가를 인터뷰했어요.",
+   "blank": "彫刻",
+   "src": "made"
+  }
+ ],
  "w|影": [
   {
    "text": "壁に影が映っている。",
@@ -34193,6 +34449,22 @@
    "en": "I completely zoned out.",
    "ko": "나 정신 놓고 있었어.",
    "blank": "意識"
+  }
+ ],
+ "w|愚か": [
+  {
+   "text": "亮は、確認せずに書類を出したのは愚かだったと反省した。",
+   "en": "Ryo regretted that it had been foolish to submit the documents without checking.",
+   "ko": "료는 확인하지 않고 서류를 낸 건 어리석었다고 반성했어요.",
+   "blank": "愚か",
+   "src": "made"
+  },
+  {
+   "text": "確かめずに噂を記事にするのは愚かなことだと、真由は先輩に教わった。",
+   "en": "A senior reporter taught Mayu that it's foolish to write up a rumor without checking it.",
+   "ko": "마유는 확인하지 않고 소문을 기사로 쓰는 건 어리석은 일이라고 선배에게 배웠어요.",
+   "blank": "愚か",
+   "src": "made"
   }
  ],
  "w|愛": [
@@ -36235,6 +36507,22 @@
    "src": "made"
   }
  ],
+ "w|捏造": [
+  {
+   "text": "アンケートの捏造が見つかり、担当者は処分を受けた。",
+   "en": "A fabricated survey was discovered, and the person in charge was disciplined.",
+   "ko": "설문 조사 조작이 발견돼서 담당자는 징계를 받았어요.",
+   "blank": "捏造",
+   "src": "made"
+  },
+  {
+   "text": "データの捏造を防ぐため、編集部は二重のチェックを行っている。",
+   "en": "To prevent fabricated data, the newsroom does double checks.",
+   "ko": "데이터 조작을 막기 위해 편집부는 이중 확인을 해요.",
+   "blank": "捏造",
+   "src": "made"
+  }
+ ],
  "w|捕まえる": [
   {
    "text": "理科の授業で、健太は池のカエルを捕まえた。",
@@ -36458,6 +36746,22 @@
    "en": "Keiko explored deep into the site in search of the book she wanted.",
    "ko": "게이코는 원하는 책을 찾아 사이트 구석구석을 탐색했어요.",
    "blank": "探索",
+   "src": "made"
+  }
+ ],
+ "w|接する": [
+  {
+   "text": "亮は、どんな市民にも丁寧に接するよう心がけている。",
+   "en": "Ryo tries to treat every citizen courteously.",
+   "ko": "료는 어떤 시민에게도 정중하게 대하려고 신경 써요.",
+   "blank": "接する",
+   "src": "made"
+  },
+  {
+   "text": "取材で多くの人に接するうちに、真由は聞き上手になった。",
+   "en": "By dealing with many people on assignments, Mayu became a good listener.",
+   "ko": "취재로 많은 사람을 대하는 사이에 마유는 남의 말을 잘 듣게 됐어요.",
+   "blank": "接する",
    "src": "made"
   }
  ],
@@ -36969,6 +37273,22 @@
    "src": "made"
   }
  ],
+ "w|撤回": [
+  {
+   "text": "住民の反対を受けて、市はごみ処理場の計画を撤回した。",
+   "en": "Facing residents' opposition, the city withdrew its plan for a waste treatment plant.",
+   "ko": "주민 반대에 부딪혀 시는 쓰레기 처리장 계획을 철회했어요.",
+   "blank": "撤回",
+   "src": "made"
+  },
+  {
+   "text": "取材相手が発言を撤回したので、真由は記事を書き直した。",
+   "en": "The interviewee retracted his statement, so Mayu rewrote the article.",
+   "ko": "취재 상대가 발언을 철회해서 마유는 기사를 다시 썼어요.",
+   "blank": "撤回",
+   "src": "made"
+  }
+ ],
  "w|撤退": [
   {
    "text": "その航空会社は、この空港からの撤退を決めたそうだ。",
@@ -37011,6 +37331,22 @@
    "en": "We're shooting right now.",
    "ko": "지금 촬영 중이야.",
    "blank": "撮影"
+  }
+ ],
+ "w|擁護": [
+  {
+   "text": "亮は、ミスをした後輩を会議で擁護した。",
+   "en": "Ryo defended the junior colleague who had made a mistake at the meeting.",
+   "ko": "료는 실수한 후배를 회의에서 옹호했어요.",
+   "blank": "擁護",
+   "src": "made"
+  },
+  {
+   "text": "真由は、報道の自由を擁護するコラムを書いた。",
+   "en": "Mayu wrote a column defending press freedom.",
+   "ko": "마유는 보도의 자유를 옹호하는 칼럼을 썼어요.",
+   "blank": "擁護",
+   "src": "made"
   }
  ],
  "w|操作": [
@@ -37947,6 +38283,22 @@
    "blank": "敵"
   }
  ],
+ "w|敵対": [
+  {
+   "text": "二つの町は昔は敵対していたが、今は姉妹都市になっている。",
+   "en": "The two towns used to be rivals, but now they're sister cities.",
+   "ko": "두 마을은 옛날에는 적대했지만 지금은 자매도시예요.",
+   "blank": "敵対",
+   "src": "made"
+  },
+  {
+   "text": "敵対する二つのチームの監督が、珍しく並んで会見に出た。",
+   "en": "The managers of the two rival teams unusually appeared side by side at the press conference.",
+   "ko": "적대하는 두 팀의 감독이 이례적으로 나란히 회견에 나왔어요.",
+   "blank": "敵対",
+   "src": "made"
+  }
+ ],
  "w|文": [
   {
    "text": "この文、長いね。",
@@ -38315,6 +38667,22 @@
    "en": "It was in the newspaper.",
    "ko": "신문에 실렸어.",
    "blank": "新聞"
+  }
+ ],
+ "w|新興": [
+  {
+   "text": "亮は、新興の住宅地に作る公園の計画を担当している。",
+   "en": "Ryo is in charge of planning a park for a newly developed residential area.",
+   "ko": "료는 신흥 주택지에 만들 공원 계획을 맡고 있어요.",
+   "blank": "新興",
+   "src": "made"
+  },
+  {
+   "text": "真由は、新興の企業が集まる地区を取材して回った。",
+   "en": "Mayu went around reporting on a district where up-and-coming companies are clustered.",
+   "ko": "마유는 신흥 기업이 모이는 지구를 취재하며 돌아다녔어요.",
+   "blank": "新興",
+   "src": "made"
   }
  ],
  "w|新規": [
@@ -40097,6 +40465,22 @@
    "src": "made"
   }
  ],
+ "w|本土": [
+  {
+   "text": "島に住む人が本土の病院に通うための補助金を、市は用意した。",
+   "en": "The city prepared a subsidy for island residents to go to hospitals on the mainland.",
+   "ko": "시는 섬 주민이 본토 병원에 다니기 위한 보조금을 마련했어요.",
+   "blank": "本土",
+   "src": "made"
+  },
+  {
+   "text": "台風が本土に近づいているというニュースで、編集部は慌ただしくなった。",
+   "en": "The newsroom got hectic with news that a typhoon was approaching the mainland.",
+   "ko": "태풍이 본토에 다가오고 있다는 뉴스에 편집부는 분주해졌어요.",
+   "blank": "本土",
+   "src": "made"
+  }
+ ],
  "w|本屋": [
   {
    "text": "悠斗は、七階の本屋で旅行のガイドブックを買った。",
@@ -40719,6 +41103,22 @@
    "src": "made"
   }
  ],
+ "w|核兵器": [
+  {
+   "text": "市役所の前には、核兵器のない世界を願う碑が立っている。",
+   "en": "In front of city hall stands a monument wishing for a world without nuclear weapons.",
+   "ko": "시청 앞에는 핵무기 없는 세상을 바라는 비석이 서 있어요.",
+   "blank": "核兵器",
+   "src": "made"
+  },
+  {
+   "text": "核兵器をめぐる国際会議の記事が、一面に載った。",
+   "en": "An article about the international conference on nuclear weapons ran on the front page.",
+   "ko": "핵무기를 둘러싼 국제회의 기사가 일면에 실렸어요.",
+   "blank": "核兵器",
+   "src": "made"
+  }
+ ],
  "w|根": [
   {
    "text": "歯医者は、翔太の奥歯の根が少し弱っていると言った。",
@@ -40981,6 +41381,22 @@
    "en": "I found a rare plant.",
    "ko": "희귀한 식물을 찾았어.",
    "blank": "植物"
+  }
+ ],
+ "w|検事": [
+  {
+   "text": "市の職員が関わった事件で、検事が市役所に話を聞きに来た。",
+   "en": "In a case involving a city employee, a prosecutor came to city hall to ask questions.",
+   "ko": "시 직원이 관련된 사건으로 검사가 시청에 이야기를 들으러 왔어요.",
+   "blank": "検事",
+   "src": "made"
+  },
+  {
+   "text": "裁判の取材で、真由は検事の冷静な話し方に感心した。",
+   "en": "Covering the trial, Mayu was impressed by the prosecutor's calm way of speaking.",
+   "ko": "재판 취재에서 마유는 검사의 침착한 말투에 감탄했어요.",
+   "blank": "検事",
+   "src": "made"
   }
  ],
  "w|検出": [
@@ -41683,6 +42099,22 @@
    "en": "It's a public institution.",
    "ko": "공적 기관이야.",
    "blank": "機関"
+  }
+ ],
+ "w|欠ける": [
+  {
+   "text": "申請書に必要な印鑑が欠けていて、亮は受け付けられなかった。",
+   "en": "The application was missing a required seal, so Ryo couldn't accept it.",
+   "ko": "신청서에 필요한 도장이 빠져 있어서 료는 접수할 수 없었어요.",
+   "blank": "欠け",
+   "src": "made"
+  },
+  {
+   "text": "その記事には、反対する側の意見が欠けていると指摘された。",
+   "en": "It was pointed out that the article lacked the views of the opposing side.",
+   "ko": "그 기사에는 반대하는 쪽 의견이 빠져 있다는 지적을 받았어요.",
+   "blank": "欠け",
+   "src": "made"
   }
  ],
  "w|欠陥": [
@@ -43353,6 +43785,22 @@
    "blank": "治療"
   }
  ],
+ "w|法令": [
+  {
+   "text": "亮は、新しい法令が窓口の手続きにどう影響するか調べた。",
+   "en": "Ryo looked into how the new law would affect procedures at the counter.",
+   "ko": "료는 새 법령이 창구 절차에 어떤 영향을 줄지 조사했어요.",
+   "blank": "法令",
+   "src": "made"
+  },
+  {
+   "text": "新聞社の記者は、取材に関わる法令をよく知っておく必要がある。",
+   "en": "Newspaper reporters need to know the laws related to news gathering well.",
+   "ko": "신문사 기자는 취재와 관련된 법령을 잘 알아 둬야 해요.",
+   "blank": "法令",
+   "src": "made"
+  }
+ ],
  "w|法則": [
   {
    "text": "「忙しい日ほど電話が多い」という法則が、窓口にはあるらしい。",
@@ -43754,6 +44202,22 @@
    "en": "Book distribution was delayed, so it wasn't on store shelves on the release date.",
    "ko": "책 유통이 늦어져서 발매일에 가게에 깔리지 않았어요.",
    "blank": "流通",
+   "src": "made"
+  }
+ ],
+ "w|浮かぶ": [
+  {
+   "text": "会議の途中で、亮の頭に新しい案が浮かんだ。",
+   "en": "In the middle of the meeting, a new idea came to Ryo.",
+   "ko": "회의 도중에 료의 머릿속에 새 안이 떠올랐어요.",
+   "blank": "浮かん",
+   "src": "made"
+  },
+  {
+   "text": "締め切り直前に、真由の頭にいい見出しが浮かんだ。",
+   "en": "Just before the deadline, a good headline came to Mayu.",
+   "ko": "마감 직전에 마유의 머릿속에 좋은 제목이 떠올랐어요.",
+   "blank": "浮かん",
    "src": "made"
   }
  ],
@@ -44314,6 +44778,22 @@
    "en": "The village hot spring has soft water that warms you up well.",
    "ko": "마을 온천은 물이 부드러워서 몸이 잘 데워져요.",
    "blank": "湯",
+   "src": "made"
+  }
+ ],
+ "w|満たす": [
+  {
+   "text": "子育て手当をもらうには、いくつかの条件を満たす必要がある。",
+   "en": "To receive child-rearing benefits, you need to meet several conditions.",
+   "ko": "육아 수당을 받으려면 몇 가지 조건을 충족해야 해요.",
+   "blank": "満たす",
+   "src": "made"
+  },
+  {
+   "text": "読者の知りたいことを満たす記事を書くのは簡単ではない。",
+   "en": "Writing articles that satisfy what readers want to know isn't easy.",
+   "ko": "독자가 알고 싶은 것을 채워 주는 기사를 쓰기는 쉽지 않아요.",
+   "blank": "満たす",
    "src": "made"
   }
  ],
@@ -48029,6 +48509,22 @@
    "src": "tatoeba:197006/Scott en:34186/Scott"
   }
  ],
+ "w|直径": [
+  {
+   "text": "駅前の広場には、直径が十メートル近い噴水がある。",
+   "en": "The plaza in front of the station has a fountain nearly ten meters in diameter.",
+   "ko": "역 앞 광장에는 지름이 십 미터 가까운 분수가 있어요.",
+   "blank": "直径",
+   "src": "made"
+  },
+  {
+   "text": "真由は、直径の大きな新しい望遠鏡について記事を書いた。",
+   "en": "Mayu wrote an article about a new telescope with a large diameter.",
+   "ko": "마유는 지름이 큰 새 망원경에 대한 기사를 썼어요.",
+   "blank": "直径",
+   "src": "made"
+  }
+ ],
  "w|直後": [
   {
    "text": "試合の直後に話した。",
@@ -48343,6 +48839,22 @@
    "blank": "真実"
   }
  ],
+ "w|真理": [
+  {
+   "text": "「現場にこそ答えがある」というのが、亮の上司の口癖だ。それは一つの真理だと亮は思う。",
+   "en": "Ryo's boss always says the answers are on the ground, and Ryo thinks that's a truth.",
+   "ko": "\"현장에 답이 있다\"는 게 료 상사의 입버릇이에요. 료는 그게 하나의 진리라고 생각해요.",
+   "blank": "真理",
+   "src": "made"
+  },
+  {
+   "text": "真由は、哲学者が真理について語る連載を担当している。",
+   "en": "Mayu is in charge of a series in which a philosopher talks about truth.",
+   "ko": "마유는 철학자가 진리에 대해 이야기하는 연재를 맡고 있어요.",
+   "blank": "真理",
+   "src": "made"
+  }
+ ],
  "w|真相": [
   {
    "text": "翔太は、古い事件の真相を追ったノンフィクションを借りた。",
@@ -48550,6 +49062,22 @@
    "en": "While getting ready for the move, time flew by like an arrow.",
    "ko": "이사 준비를 하다 보니 시간이 쏜살같이 지나갔어요.",
    "blank": "矢",
+   "src": "made"
+  }
+ ],
+ "w|知らせ": [
+  {
+   "text": "大雪の知らせを受けて、市役所は除雪車を準備した。",
+   "en": "On receiving word of heavy snow, city hall got the snowplows ready.",
+   "ko": "폭설 소식을 받고 시청은 제설차를 준비했어요.",
+   "blank": "知らせ",
+   "src": "made"
+  },
+  {
+   "text": "入社試験に合格したという知らせを、真由は今でも覚えている。",
+   "en": "Mayu still remembers the news that she had passed the company's entrance exam.",
+   "ko": "마유는 입사 시험에 합격했다는 소식을 지금도 기억해요.",
+   "blank": "知らせ",
    "src": "made"
   }
  ],
@@ -51819,6 +52347,22 @@
    "en": "I studied English.",
    "ko": "영어 배웠어.",
    "blank": "習った"
+  }
+ ],
+ "w|習得": [
+  {
+   "text": "亮は、外国から来た住民のために手話と英語の習得に励んでいる。",
+   "en": "Ryo is working hard to learn sign language and English for residents who've come from abroad.",
+   "ko": "료는 외국에서 온 주민들을 위해 수화와 영어 습득에 힘쓰고 있어요.",
+   "blank": "習得",
+   "src": "made"
+  },
+  {
+   "text": "真由は、外国語の習得に役立つアプリを特集で紹介した。",
+   "en": "Mayu introduced apps that help with learning foreign languages in a feature.",
+   "ko": "마유는 외국어 습득에 도움이 되는 앱을 특집으로 소개했어요.",
+   "blank": "習得",
+   "src": "made"
   }
  ],
  "w|習慣": [
@@ -55899,6 +56443,22 @@
    "blank": "診断"
   }
  ],
+ "w|証人": [
+  {
+   "text": "亮は、隣人どうしのもめごとで証人として話を聞かれた。",
+   "en": "Ryo was questioned as a witness in a dispute between neighbors.",
+   "ko": "료는 이웃끼리의 다툼에서 증인으로 질문을 받았어요.",
+   "blank": "証人",
+   "src": "made"
+  },
+  {
+   "text": "事故を見た証人の話を聞くために、真由は朝から現場にいた。",
+   "en": "Mayu had been at the scene since morning to hear from witnesses of the accident.",
+   "ko": "마유는 사고를 본 증인의 이야기를 들으려고 아침부터 현장에 있었어요.",
+   "blank": "証人",
+   "src": "made"
+  }
+ ],
  "w|証券": [
   {
    "text": "亮の父は、退職金の一部で証券を買ったらしい。",
@@ -59697,6 +60257,22 @@
    "src": "made"
   }
  ],
+ "w|連想": [
+  {
+   "text": "「市役所」と聞くと、長い待ち時間を連想する人が多い。",
+   "en": "When people hear \"city hall,\" many associate it with long waits.",
+   "ko": "\"시청\"이라고 하면 긴 대기 시간을 연상하는 사람이 많아요.",
+   "blank": "連想",
+   "src": "made"
+  },
+  {
+   "text": "「新聞」という言葉から、紙のにおいを連想する人は多い。",
+   "en": "Many people associate the word \"newspaper\" with the smell of paper.",
+   "ko": "\"신문\"이라는 말에서 종이 냄새를 연상하는 사람이 많아요.",
+   "blank": "連想",
+   "src": "made"
+  }
+ ],
  "w|連携": [
   {
    "text": "サッカーは連携が大切だ。",
@@ -61063,6 +61639,22 @@
    "en": "It's a big city.",
    "ko": "큰 도시네.",
    "blank": "都市"
+  }
+ ],
+ "w|都知事": [
+  {
+   "text": "都知事の会見のニュースを、亮は昼休みに見た。",
+   "en": "Ryo watched the news of the Tokyo governor's press conference during his lunch break.",
+   "ko": "료는 점심시간에 도지사 기자 회견 뉴스를 봤어요.",
+   "blank": "都知事",
+   "src": "made"
+  },
+  {
+   "text": "真由は、都知事の選挙の候補者に一人ずつ取材した。",
+   "en": "Mayu interviewed each candidate in the Tokyo governor election one by one.",
+   "ko": "마유는 도지사 선거 후보자를 한 명씩 취재했어요.",
+   "blank": "都知事",
+   "src": "made"
   }
  ],
  "w|配信": [
@@ -62437,6 +63029,22 @@
    "en": "This might be my limit.",
    "ko": "이제 한계일지도 몰라.",
    "blank": "限界"
+  }
+ ],
+ "w|陛下": [
+  {
+   "text": "外国の国王陛下が市を訪れ、亮たちは歓迎の準備に追われた。",
+   "en": "A foreign king visited the city, and Ryo and his colleagues were busy preparing the welcome.",
+   "ko": "외국 국왕 폐하가 시를 방문해서 료와 동료들은 환영 준비에 바빴어요.",
+   "blank": "陛下",
+   "src": "made"
+  },
+  {
+   "text": "新聞では、外国の国王陛下の来日が大きく報じられた。",
+   "en": "The visit of a foreign king to Japan was widely reported in the newspapers.",
+   "ko": "신문에서는 외국 국왕 폐하의 일본 방문이 크게 보도됐어요.",
+   "blank": "陛下",
+   "src": "made"
   }
  ],
  "w|除く": [
@@ -64163,6 +64771,22 @@
    "blank": "飽きる"
   }
  ],
+ "w|飾る": [
+  {
+   "text": "市役所のロビーには、地元の小学生が描いた絵が飾られている。",
+   "en": "Pictures drawn by local elementary school students are displayed in the city hall lobby.",
+   "ko": "시청 로비에는 지역 초등학생들이 그린 그림이 걸려 있어요.",
+   "blank": "飾ら",
+   "src": "made"
+  },
+  {
+   "text": "真由の机には、初めて書いた記事の切り抜きが飾ってある。",
+   "en": "A clipping of the first article Mayu wrote is displayed on her desk.",
+   "ko": "마유의 책상에는 처음 쓴 기사 스크랩이 장식돼 있어요.",
+   "blank": "飾っ",
+   "src": "made"
+  }
+ ],
  "w|首": [
   {
    "text": "首が痛いよ。",
@@ -64446,6 +65070,22 @@
    "en": "Apparently the repair costs tend to be higher if you hire a craftsman.",
    "ko": "장인에게 맡기면 수리비가 좀 비싸진대요.",
    "blank": "高め",
+   "src": "made"
+  }
+ ],
+ "w|高める": [
+  {
+   "text": "亮は、窓口の対応の質を高めるための研修を企画した。",
+   "en": "Ryo planned a training session to improve the quality of service at the counters.",
+   "ko": "료는 창구 응대의 질을 높이기 위한 연수를 기획했어요.",
+   "blank": "高める",
+   "src": "made"
+  },
+  {
+   "text": "真由は、記事の信頼性を高めるために必ず二人以上に取材する。",
+   "en": "To make her articles more reliable, Mayu always interviews at least two people.",
+   "ko": "마유는 기사의 신뢰성을 높이려고 꼭 두 명 이상을 취재해요.",
+   "blank": "高める",
    "src": "made"
   }
  ],

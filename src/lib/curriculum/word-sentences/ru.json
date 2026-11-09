@@ -6465,6 +6465,22 @@
    "src": "tatoeba:8737831/marafon en:3911631/CH"
   }
  ],
+ "w|впечатлить": [
+  {
+   "text": "Новые рисунки друга впечатлили Алексея больше, чем он ожидал.",
+   "en": "His friend's new drawings impressed Alexey more than he had expected.",
+   "ko": "친구의 새 그림은 알렉세이가 생각한 것보다 훨씬 인상 깊었어요.",
+   "blank": "впечатлили",
+   "src": "made"
+  },
+  {
+   "text": "Наталью впечатлил вид на горы из окна номера.",
+   "en": "Natalya was impressed by the mountain view from the room window.",
+   "ko": "나탈리야는 객실 창으로 보이는 산 풍경에 감탄했어요.",
+   "blank": "впечатлил",
+   "src": "made"
+  }
+ ],
  "w|впечатлять": [
   {
    "text": "Вы не перестаёте меня впечатлять.",
@@ -7408,6 +7424,22 @@
    "en": "Irina asked the pupils to write down the conclusion at the end of the lab work.",
    "ko": "이리나는 학생들에게 실험 끝에 결론을 적으라고 했어요.",
    "blank": "вывод",
+   "src": "made"
+  }
+ ],
+ "w|выводить": [
+  {
+   "text": "Алексей старательно выводит каждую букву, как в школе.",
+   "en": "Alexey carefully traces out every letter, just like at school.",
+   "ko": "알렉세이는 학교 다닐 때처럼 글자 하나하나를 정성껏 써 내려가요.",
+   "blank": "выводит",
+   "src": "made"
+  },
+  {
+   "text": "Каждое утро Наталья выводит собаку на прогулку вокруг отеля.",
+   "en": "Every morning Natalya takes the dog out for a walk around the hotel.",
+   "ko": "나탈리야는 아침마다 개를 데리고 호텔 주변을 산책해요.",
+   "blank": "выводит",
    "src": "made"
   }
  ],
@@ -8389,6 +8421,22 @@
    "ko": "마지막으로 쉰 게 언제야?",
    "blank": "выходной",
    "src": "tatoeba:2915425/astyng en:2915149/Hybrid"
+  }
+ ],
+ "w|вычислить": [
+  {
+   "text": "Алексей вычислил, что они не виделись почти двадцать лет.",
+   "en": "Alexey worked out that they hadn't seen each other for almost twenty years.",
+   "ko": "알렉세이는 둘이 거의 이십 년 동안 못 만났다는 걸 계산해 냈어요.",
+   "blank": "вычислил",
+   "src": "made"
+  },
+  {
+   "text": "Наталья вычислила, сколько стоит одна ночь со скидкой.",
+   "en": "Natalya worked out how much one night costs with the discount.",
+   "ko": "나탈리야는 할인을 받으면 하룻밤에 얼마인지 계산했어요.",
+   "blank": "вычислила",
+   "src": "made"
   }
  ],
  "w|выше": [
@@ -11371,6 +11419,22 @@
    "src": "made"
   }
  ],
+ "w|дистанция": [
+  {
+   "text": "Несмотря на дистанцию, Алексей чувствует, что друг рядом.",
+   "en": "Despite the distance, Alexey feels that his friend is close by.",
+   "ko": "멀리 떨어져 있어도 알렉세이는 친구가 곁에 있는 것 같아요.",
+   "blank": "дистанцию",
+   "src": "made"
+  },
+  {
+   "text": "Наталья каждое утро бегает по набережной, и её любимая дистанция заканчивается у отеля.",
+   "en": "Natalya runs along the embankment every morning, and her favorite distance ends at the hotel.",
+   "ko": "나탈리야는 아침마다 강변을 달리는데, 좋아하는 코스는 호텔 앞에서 끝나요.",
+   "blank": "дистанция",
+   "src": "made"
+  }
+ ],
  "w|дитя": [
   {
    "text": "Подойди сюда, дитя моё, и дай мне взглянуть на тебя.",
@@ -12925,6 +12989,22 @@
    "ko": "양말에 큰 구멍 났어.",
    "blank": "дыра",
    "src": "tatoeba:618607/Tonari en:606880/baisong"
+  }
+ ],
+ "w|дырка": [
+  {
+   "text": "Алексей хранит письма в старой коробке с дыркой в крышке.",
+   "en": "Alexey keeps the letters in an old box with a hole in the lid.",
+   "ko": "알렉세이는 뚜껑에 구멍 난 낡은 상자에 편지를 보관해요.",
+   "blank": "дыркой",
+   "src": "made"
+  },
+  {
+   "text": "Наталья нашла дырку в гостиничном полотенце.",
+   "en": "Natalya found a hole in the hotel towel.",
+   "ko": "나탈리야는 호텔 수건에서 구멍을 발견했어요.",
+   "blank": "дырку",
+   "src": "made"
   }
  ],
  "w|дыхание": [
@@ -17419,6 +17499,22 @@
    "src": "tatoeba:4975893/Karok en:2471085/Hybrid"
   }
  ],
+ "w|измена": [
+  {
+   "text": "В письме Алексей признался, что тяжело пережил измену невесты.",
+   "en": "In the letter Alexey admitted that his fiancée's betrayal had been hard on him.",
+   "ko": "알렉세이는 편지에서 약혼녀의 배신을 힘들게 견뎠다고 털어놓았어요.",
+   "blank": "измену",
+   "src": "made"
+  },
+  {
+   "text": "Соседи Натальи по номеру громко смотрели сериал про измену.",
+   "en": "Natalya's room neighbors were loudly watching a series about infidelity.",
+   "ko": "나탈리야의 옆방 사람들은 외도에 관한 드라마를 크게 틀어 놓고 봤어요.",
+   "blank": "измену",
+   "src": "made"
+  }
+ ],
  "w|изменение": [
   {
    "text": "Я бы предложил следующее изменение.",
@@ -17619,6 +17715,22 @@
    "en": "Now or later?",
    "ko": "지금 할래, 나중에 할래?",
    "blank": "или"
+  }
+ ],
+ "w|иллюзия": [
+  {
+   "text": "Алексей не строит иллюзий, что их дружба станет прежней.",
+   "en": "Alexey has no illusions that their friendship will be the same as before.",
+   "ko": "알렉세이는 둘의 우정이 예전 같아질 거라는 환상은 품지 않아요.",
+   "blank": "иллюзий",
+   "src": "made"
+  },
+  {
+   "text": "Зеркала в холле создают иллюзию огромного пространства, и Наталье это нравится.",
+   "en": "The mirrors in the lobby create the illusion of a huge space, and Natalya likes it.",
+   "ko": "로비의 거울 덕분에 공간이 아주 넓어 보여서 나탈리야는 마음에 들어요.",
+   "blank": "иллюзию",
+   "src": "made"
   }
  ],
  "w|именно": [
@@ -19175,6 +19287,22 @@
    "src": "made"
   }
  ],
+ "w|катиться": [
+  {
+   "text": "Алексей пишет, что жизнь катится своим чередом.",
+   "en": "Alexey writes that life is rolling along as usual.",
+   "ko": "알렉세이는 삶이 늘 그렇듯 흘러간다고 써요.",
+   "blank": "катится",
+   "src": "made"
+  },
+  {
+   "text": "Чемодан Натальи громко катился по мраморному полу холла.",
+   "en": "Natalya's suitcase rolled noisily across the marble floor of the lobby.",
+   "ko": "나탈리야의 여행 가방이 로비 대리석 바닥 위를 요란하게 굴러갔어요.",
+   "blank": "катился",
+   "src": "made"
+  }
+ ],
  "w|кафе": [
   {
    "text": "Каждый день я хожу в кафе и пью кофе.",
@@ -19638,6 +19766,22 @@
    "en": "Elena writes all her results in a blue notebook.",
    "ko": "옐레나는 모든 결과를 파란 수첩에 적어요.",
    "blank": "книжку",
+   "src": "made"
+  }
+ ],
+ "w|книжный": [
+  {
+   "text": "Алексей нашёл старые письма за книжным шкафом.",
+   "en": "Alexey found the old letters behind the bookcase.",
+   "ko": "알렉세이는 책장 뒤에서 옛 편지를 찾았어요.",
+   "blank": "книжным",
+   "src": "made"
+  },
+  {
+   "text": "В холле отеля есть книжная полка, и Наталья взяла оттуда детектив.",
+   "en": "There is a bookshelf in the hotel lobby, and Natalya took a detective novel from it.",
+   "ko": "호텔 로비에 책꽂이가 있어서 나탈리야는 거기서 추리 소설을 한 권 꺼냈어요.",
+   "blank": "книжная",
    "src": "made"
   }
  ],
@@ -23121,6 +23265,22 @@
    "src": "made"
   }
  ],
+ "w|любовный": [
+  {
+   "text": "Дима когда-то помогал Алексею писать любовные записки однокласснице.",
+   "en": "Dima once helped Alexey write love notes to a classmate.",
+   "ko": "디마는 예전에 알렉세이가 반 친구에게 연애편지 쪽지를 쓰는 걸 도와줬어요.",
+   "blank": "любовные",
+   "src": "made"
+  },
+  {
+   "text": "Наталья читала любовный роман у бассейна.",
+   "en": "Natalya was reading a romance novel by the pool.",
+   "ko": "나탈리야는 수영장 옆에서 연애 소설을 읽었어요.",
+   "blank": "любовный",
+   "src": "made"
+  }
+ ],
  "w|любовь": [
   {
    "text": "Не путай жалость с любовью.",
@@ -25617,6 +25777,22 @@
    "blank": "мужа"
   }
  ],
+ "w|мужество": [
+  {
+   "text": "Алексею понадобилось мужество, чтобы написать первым после ссоры.",
+   "en": "Alexey needed courage to be the first to write after their quarrel.",
+   "ko": "다툰 뒤 먼저 편지를 쓰는 데 알렉세이는 용기가 필요했어요.",
+   "blank": "мужество",
+   "src": "made"
+  },
+  {
+   "text": "Наталья набралась мужества и пожаловалась управляющему.",
+   "en": "Natalya plucked up her courage and complained to the manager.",
+   "ko": "나탈리야는 용기를 내서 지배인에게 불만을 말했어요.",
+   "blank": "мужества",
+   "src": "made"
+  }
+ ],
  "w|мужик": [
   {
    "text": "Какой-то незнакомый мужик весь вечер сидел за столом Михаила.",
@@ -28069,6 +28245,22 @@
    "blank": "невозможно"
   }
  ],
+ "w|невыносимый": [
+  {
+   "text": "Ожидание ответа казалось Алексею невыносимым.",
+   "en": "Waiting for a reply seemed unbearable to Alexey.",
+   "ko": "알렉세이에게 답장을 기다리는 일은 견딜 수 없을 만큼 괴로웠어요.",
+   "blank": "невыносимым",
+   "src": "made"
+  },
+  {
+   "text": "Шум с дискотеки под окном был невыносимым, и Наталья попросила другой номер.",
+   "en": "The noise from the disco under the window was unbearable, and Natalya asked for another room.",
+   "ko": "창 아래 디스코 소음을 견딜 수 없어서 나탈리야는 방을 바꿔 달라고 했어요.",
+   "blank": "невыносимым",
+   "src": "made"
+  }
+ ],
  "w|негодяй": [
   {
    "text": "Ведущий свадьбы назвал Михаила счастливым негодяем, который украл сердце невесты.",
@@ -28208,6 +28400,22 @@
    "en": "That's not a good enough reason to quit your job.",
    "ko": "그건 회사를 그만둘 만한 이유가 못 돼요.",
    "blank": "недостаточный",
+   "src": "made"
+  }
+ ],
+ "w|нежный": [
+  {
+   "text": "Алексей с нежной грустью перечитывает старые письма друга.",
+   "en": "Alexey rereads his friend's old letters with tender sadness.",
+   "ko": "알렉세이는 다정한 그리움을 안고 친구의 옛 편지를 다시 읽어요.",
+   "blank": "нежной",
+   "src": "made"
+  },
+  {
+   "text": "Наталья выбрала отель с нежным песком на пляже.",
+   "en": "Natalya chose a hotel with soft sand on the beach.",
+   "ko": "나탈리야는 해변 모래가 부드러운 호텔을 골랐어요.",
+   "blank": "нежным",
    "src": "made"
   }
  ],
@@ -28871,6 +29079,22 @@
    "src": "tatoeba:9235063/prokofyev en:4491751/fekundulo"
   }
  ],
+ "w|нервный": [
+  {
+   "text": "Последнее письмо Алексея вышло каким-то нервным и сбивчивым.",
+   "en": "Alexey's last letter came out somewhat nervous and muddled.",
+   "ko": "알렉세이의 지난 편지는 왠지 초조하고 두서없이 써졌어요.",
+   "blank": "нервным",
+   "src": "made"
+  },
+  {
+   "text": "После долгой дороги Наталья была нервной и уставшей.",
+   "en": "After the long journey Natalya was nervous and tired.",
+   "ko": "긴 여행 끝에 나탈리야는 예민하고 지쳐 있었어요.",
+   "blank": "нервной",
+   "src": "made"
+  }
+ ],
  "w|несколько": [
   {
    "text": "Дай несколько минут.",
@@ -29009,6 +29233,22 @@
    "ko": "그는 더는 조바심을 감출 수 없었어요.",
    "blank": "нетерпение",
    "src": "tatoeba:4981962/Karok en:2564722/Hybrid"
+  }
+ ],
+ "w|неудача": [
+  {
+   "text": "В письме Алексей честно рассказал другу о своей неудаче на экзамене.",
+   "en": "In his letter Alexey honestly told his friend about his failure on the exam.",
+   "ko": "알렉세이는 편지에서 시험에 떨어진 일을 친구에게 솔직히 털어놓았어요.",
+   "blank": "неудаче",
+   "src": "made"
+  },
+  {
+   "text": "Наталья считает дождливый отпуск в отеле полной неудачей.",
+   "en": "Natalya considers the rainy vacation at the hotel a complete failure.",
+   "ko": "나탈리야는 비만 온 호텔 휴가를 완전한 실패라고 생각해요.",
+   "blank": "неудачей",
+   "src": "made"
   }
  ],
  "w|неудачник": [
@@ -30011,6 +30251,22 @@
    "src": "tatoeba:9793718/Svetislava en:256523/CK"
   }
  ],
+ "w|обеспокоить": [
+  {
+   "text": "Короткая приписка в конце письма обеспокоила Алексея.",
+   "en": "A short postscript at the end of the letter worried Alexey.",
+   "ko": "편지 끝의 짧은 추신이 알렉세이를 걱정스럽게 했어요.",
+   "blank": "обеспокоила",
+   "src": "made"
+  },
+  {
+   "text": "Наталью обеспокоил странный запах в коридоре отеля.",
+   "en": "A strange smell in the hotel corridor worried Natalya.",
+   "ko": "호텔 복도의 이상한 냄새가 나탈리야는 걱정스러웠어요.",
+   "blank": "обеспокоил",
+   "src": "made"
+  }
+ ],
  "w|обещание": [
   {
    "text": "Откуда мне знать, что ты сдержишь своё обещание?",
@@ -30879,6 +31135,22 @@
    "ko": "다 설명할 필요는 없어.",
    "blank": "объяснять",
    "src": "tatoeba:11047722/lurking_plant en:11045255/Amastan"
+  }
+ ],
+ "w|объятие": [
+  {
+   "text": "Алексей пишет, что ждёт встречи и крепких объятий на вокзале.",
+   "en": "Alexey writes that he is looking forward to meeting and big hugs at the station.",
+   "ko": "알렉세이는 역에서 만나 꼭 안아 줄 날을 기다린다고 써요.",
+   "blank": "объятий",
+   "src": "made"
+  },
+  {
+   "text": "У входа в отель Наталья попала в объятия старой подруги.",
+   "en": "At the hotel entrance Natalya was swept into the arms of an old friend.",
+   "ko": "호텔 입구에서 나탈리야는 오랜 친구에게 와락 안겼어요.",
+   "blank": "объятия",
+   "src": "made"
   }
  ],
  "w|обыск": [
@@ -34681,6 +34953,22 @@
    "blank": "ошибку"
   }
  ],
+ "w|ощущать": [
+  {
+   "text": "Перечитывая письма, Алексей ощущает тепло прежней дружбы.",
+   "en": "Rereading the letters, Alexey feels the warmth of their old friendship.",
+   "ko": "편지를 다시 읽으며 알렉세이는 예전 우정의 따뜻함을 느껴요.",
+   "blank": "ощущает",
+   "src": "made"
+  },
+  {
+   "text": "Наталья ощущала лёгкое головокружение после перелёта.",
+   "en": "Natalya felt slightly dizzy after the flight.",
+   "ko": "나탈리야는 비행기에서 내린 뒤 살짝 어지러웠어요.",
+   "blank": "ощущала",
+   "src": "made"
+  }
+ ],
  "w|ощущение": [
   {
    "text": "Такое ощущение, что мы кого-то забыли.",
@@ -35745,6 +36033,22 @@
    "ko": "제발 그 노래 좀 그만 불러!",
    "blank": "петь",
    "src": "tatoeba:3111758/marafon en:1883027/Spamster"
+  }
+ ],
+ "w|печаль": [
+  {
+   "text": "В каждом письме Алексея чувствуется лёгкая печаль.",
+   "en": "A light sadness can be felt in every letter Alexey writes.",
+   "ko": "알렉세이의 편지마다 옅은 슬픔이 묻어나요.",
+   "blank": "печаль",
+   "src": "made"
+  },
+  {
+   "text": "Наталья с печалью покидала отель в последний день отпуска.",
+   "en": "Natalya left the hotel with sadness on the last day of her vacation.",
+   "ko": "휴가 마지막 날 나탈리야는 서운한 마음으로 호텔을 나섰어요.",
+   "blank": "печалью",
+   "src": "made"
   }
  ],
  "w|печальный": [
@@ -40451,6 +40755,22 @@
    "src": "made"
   }
  ],
+ "w|поразить": [
+  {
+   "text": "Алексея поразило, что друг помнит все их детские шутки.",
+   "en": "Alexey was struck that his friend remembers all their childhood jokes.",
+   "ko": "친구가 어릴 적 농담을 다 기억한다는 게 알렉세이에게는 놀라웠어요.",
+   "blank": "поразило",
+   "src": "made"
+  },
+  {
+   "text": "Наталью поразила чистота в номере.",
+   "en": "Natalya was struck by how clean the room was.",
+   "ko": "나탈리야는 객실이 너무 깨끗해서 깜짝 놀랐어요.",
+   "blank": "поразила",
+   "src": "made"
+  }
+ ],
  "w|порвать": [
   {
    "text": "Никита нечаянно порвал подарочную бумагу на самом красивом подарке.",
@@ -41437,6 +41757,22 @@
    "src": "tatoeba:10352360/Ooneykcall en:10352324/shekitten"
   }
  ],
+ "w|потрогать": [
+  {
+   "text": "Алексей потрогал пожелтевшую бумагу и тихо вздохнул.",
+   "en": "Alexey touched the yellowed paper and sighed quietly.",
+   "ko": "알렉세이는 누렇게 바랜 종이를 만져 보고 조용히 한숨을 쉬었어요.",
+   "blank": "потрогал",
+   "src": "made"
+  },
+  {
+   "text": "Наталья потрогала воду в бассейне и решила не купаться.",
+   "en": "Natalya touched the water in the pool and decided not to swim.",
+   "ko": "나탈리야는 수영장 물을 만져 보고 들어가지 않기로 했어요.",
+   "blank": "потрогала",
+   "src": "made"
+  }
+ ],
  "w|потрясать": [
   {
    "text": "Каждый год Никиту потрясает, сколько людей стоит в очереди за икрой.",
@@ -42187,6 +42523,22 @@
    "src": "made"
   }
  ],
+ "w|превращать": [
+  {
+   "text": "Алексей шутит, что время превращает их в ворчливых стариков.",
+   "en": "Alexey jokes that time is turning them into grumpy old men.",
+   "ko": "알렉세이는 세월이 둘을 투덜이 노인으로 만든다고 농담해요.",
+   "blank": "превращает",
+   "src": "made"
+  },
+  {
+   "text": "Вечером официанты превращают террасу отеля в танцпол, и Наталья идёт танцевать.",
+   "en": "In the evening the waiters turn the hotel terrace into a dance floor, and Natalya goes dancing.",
+   "ko": "저녁이면 웨이터들이 호텔 테라스를 무대로 바꾸고, 나탈리야는 춤추러 가요.",
+   "blank": "превращают",
+   "src": "made"
+  }
+ ],
  "w|превращаться": [
   {
    "text": "На уроке химии Алексей смотрел, как лёд превращается в воду.",
@@ -42265,6 +42617,22 @@
    "ko": "톰은 나를 배신하려고 했어요.",
    "blank": "предать",
    "src": "tatoeba:8523575/marafon en:3722832/CM"
+  }
+ ],
+ "w|предварительный": [
+  {
+   "text": "Алексей предлагает предварительную дату встречи — конец июля.",
+   "en": "Alexey suggests a tentative date for meeting — the end of July.",
+   "ko": "알렉세이는 잠정적인 만남 날짜로 칠월 말을 제안해요.",
+   "blank": "предварительную",
+   "src": "made"
+  },
+  {
+   "text": "Наталья оформила предварительное бронирование на сайте отеля.",
+   "en": "Natalya made a preliminary booking on the hotel website.",
+   "ko": "나탈리야는 호텔 웹사이트에서 가예약을 해 뒀어요.",
+   "blank": "предварительное",
+   "src": "made"
   }
  ],
  "w|предел": [
@@ -44419,6 +44787,22 @@
    "src": "made"
   }
  ],
+ "w|присниться": [
+  {
+   "text": "Сегодня Алексею приснился старый друг, и утром он сел за письмо.",
+   "en": "Today Alexey dreamed of his old friend, and in the morning he sat down to write a letter.",
+   "ko": "오늘 알렉세이는 오랜 친구 꿈을 꾸고 아침에 편지를 쓰기 시작했어요.",
+   "blank": "приснился",
+   "src": "made"
+  },
+  {
+   "text": "В первую ночь в отеле Наталье приснилось море.",
+   "en": "On her first night at the hotel Natalya dreamed of the sea.",
+   "ko": "호텔에서의 첫날 밤 나탈리야는 바다 꿈을 꿨어요.",
+   "blank": "приснилось",
+   "src": "made"
+  }
+ ],
  "w|присоединиться": [
   {
    "text": "Почему бы тебе не присоединиться к нам?",
@@ -45686,6 +46070,22 @@
    "en": "The prosecutor asked for ten years in prison.",
    "ko": "검사가 징역 십 년을 구형했어요.",
    "blank": "Прокурор",
+   "src": "made"
+  }
+ ],
+ "w|проникновение": [
+  {
+   "text": "В письме Алексей рассказал о попытке проникновения в его гараж.",
+   "en": "In the letter Alexey told about an attempted break-in into his garage.",
+   "ko": "알렉세이는 편지에서 누가 차고에 침입하려 했던 일을 이야기했어요.",
+   "blank": "проникновения",
+   "src": "made"
+  },
+  {
+   "text": "Наталья спросила, как отель защищает номера от проникновения посторонних.",
+   "en": "Natalya asked how the hotel protects rooms from intrusion by outsiders.",
+   "ko": "나탈리야는 호텔이 외부인 침입을 어떻게 막는지 물었어요.",
+   "blank": "проникновения",
    "src": "made"
   }
  ],
@@ -47437,6 +47837,22 @@
    "src": "made"
   }
  ],
+ "w|развиваться": [
+  {
+   "text": "Алексей рад, что дела у друга развиваются хорошо.",
+   "en": "Alexey is glad that things are going well for his friend.",
+   "ko": "알렉세이는 친구 일이 잘 풀리고 있어서 기뻐요.",
+   "blank": "развиваются",
+   "src": "made"
+  },
+  {
+   "text": "Наталья заметила, что туризм в этом городе быстро развивается.",
+   "en": "Natalya noticed that tourism in this town is developing quickly.",
+   "ko": "나탈리야는 이 도시의 관광업이 빠르게 성장하고 있다는 걸 알아챘어요.",
+   "blank": "развивается",
+   "src": "made"
+  }
+ ],
  "w|развитие": [
   {
    "text": "Павел читает книгу о развитии письменности.",
@@ -47450,6 +47866,22 @@
    "en": "A fellow passenger told Elena about the development of the railways in their region.",
    "ko": "동행 승객이 그 지역 철도 발전에 대해 옐레나에게 이야기해 줬어요.",
    "blank": "развитии",
+   "src": "made"
+  }
+ ],
+ "w|развлекаться": [
+  {
+   "text": "Алексей вспоминает, как они с Димой развлекались в летнем лагере.",
+   "en": "Alexey remembers how he and Dima had fun at summer camp.",
+   "ko": "알렉세이는 디마와 여름 캠프에서 놀던 때를 떠올려요.",
+   "blank": "развлекались",
+   "src": "made"
+  },
+  {
+   "text": "Дети Натальи весь вечер развлекаются в игровой комнате отеля.",
+   "en": "Natalya's children spend the whole evening having fun in the hotel playroom.",
+   "ko": "나탈리야의 아이들은 저녁 내내 호텔 놀이방에서 놀아요.",
+   "blank": "развлекаются",
    "src": "made"
   }
  ],
@@ -47483,6 +47915,22 @@
    "ko": "드디어 이혼했어요.",
    "blank": "развод",
    "src": "tatoeba:2550019/sharptoothed en:2550018/sharptoothed"
+  }
+ ],
+ "w|разглядеть": [
+  {
+   "text": "Алексей с трудом разглядел дату на выцветшем конверте.",
+   "en": "Alexey could barely make out the date on the faded envelope.",
+   "ko": "알렉세이는 바랜 봉투에 적힌 날짜를 겨우 알아봤어요.",
+   "blank": "разглядел",
+   "src": "made"
+  },
+  {
+   "text": "С балкона Наталья разглядела маяк на мысе.",
+   "en": "From the balcony Natalya made out a lighthouse on the cape.",
+   "ko": "나탈리야는 발코니에서 곶 위의 등대를 알아봤어요.",
+   "blank": "разглядела",
+   "src": "made"
   }
  ],
  "w|разговаривать": [
@@ -47558,6 +48006,22 @@
    "en": "Anna's coach divides the course into segments and gives a pace for each one.",
    "ko": "안나의 코치는 코스를 구간으로 나눠서 구간마다 속도를 정해 줘요.",
    "blank": "разделяет",
+   "src": "made"
+  }
+ ],
+ "w|раздобыть": [
+  {
+   "text": "Алексей сумел раздобыть новый адрес друга через бывших одноклассников.",
+   "en": "Alexey managed to get hold of his friend's new address through former classmates.",
+   "ko": "알렉세이는 옛 반 친구들을 통해 친구의 새 주소를 겨우 구했어요.",
+   "blank": "раздобыть",
+   "src": "made"
+  },
+  {
+   "text": "Наталья раздобыла у портье лишнюю подушку.",
+   "en": "Natalya managed to get an extra pillow from the porter.",
+   "ko": "나탈리야는 안내 직원에게서 베개 하나를 더 얻어 냈어요.",
+   "blank": "раздобыла",
    "src": "made"
   }
  ],
@@ -47669,6 +48133,22 @@
    "en": "I'll figure this out.",
    "ko": "이건 내가 파악할게.",
    "blank": "разберусь"
+  }
+ ],
+ "w|разозлиться": [
+  {
+   "text": "Алексей боялся, что друг разозлится из-за долгого молчания.",
+   "en": "Alexey was afraid his friend would get angry about his long silence.",
+   "ko": "알렉세이는 오래 연락하지 않아서 친구가 화낼까 봐 걱정했어요.",
+   "blank": "разозлится",
+   "src": "made"
+  },
+  {
+   "text": "Наталья разозлилась, когда номер оказался не готов к заселению.",
+   "en": "Natalya got angry when the room turned out not to be ready for check-in.",
+   "ko": "객실이 입실 준비가 안 돼 있자 나탈리야는 화가 났어요.",
+   "blank": "разозлилась",
+   "src": "made"
   }
  ],
  "w|разойтись": [
@@ -48460,6 +48940,22 @@
    "en": "The bad mark for the dictation really upset Irina's pupil.",
    "ko": "받아쓰기 점수가 나빠서 이리나의 학생은 크게 속상해했어요.",
    "blank": "расстроила",
+   "src": "made"
+  }
+ ],
+ "w|расстроиться": [
+  {
+   "text": "Алексей расстроился, когда письмо вернулось с пометкой «адресат выбыл».",
+   "en": "Alexey got upset when the letter came back marked \"addressee has moved\".",
+   "ko": "편지가 \"수취인 이사\"라는 표시와 함께 돌아오자 알렉세이는 속상했어요.",
+   "blank": "расстроился",
+   "src": "made"
+  },
+  {
+   "text": "Наталья расстроилась, узнав, что бассейн закрыт на ремонт.",
+   "en": "Natalya was upset to learn that the pool was closed for repairs.",
+   "ko": "수영장이 수리 중이라는 걸 알고 나탈리야는 실망했어요.",
+   "blank": "расстроилась",
    "src": "made"
   }
  ],
@@ -51927,6 +52423,22 @@
    "ko": "그 창고는 마약상들의 위장 장소였어요.",
    "blank": "Склад",
    "src": "tatoeba:4754189/odexed en:45617/CM"
+  }
+ ],
+ "w|склонный": [
+  {
+   "text": "Алексей склонен всё преувеличивать в письмах.",
+   "en": "Alexey tends to exaggerate everything in his letters.",
+   "ko": "알렉세이는 편지에서 뭐든 부풀리는 편이에요.",
+   "blank": "склонен",
+   "src": "made"
+  },
+  {
+   "text": "Наталья не склонна жаловаться, но на этот раз позвонила на ресепшен.",
+   "en": "Natalya isn't one to complain, but this time she called the front desk.",
+   "ko": "나탈리야는 불평하는 편이 아니지만 이번에는 프런트에 전화했어요.",
+   "blank": "склонна",
+   "src": "made"
   }
  ],
  "w|сколько": [
@@ -55817,6 +56329,22 @@
    "src": "tatoeba:8456462/marafon en:8424705/CK"
   }
  ],
+ "w|стащить": [
+  {
+   "text": "Алексей напомнил другу, как они стащили яблоки из соседского сада.",
+   "en": "Alexey reminded his friend how they swiped apples from the neighbor's garden.",
+   "ko": "알렉세이는 둘이 이웃집 과수원에서 사과를 슬쩍했던 일을 친구에게 상기시켰어요.",
+   "blank": "стащили",
+   "src": "made"
+  },
+  {
+   "text": "Чайка стащила круассан прямо с тарелки Натальи на террасе.",
+   "en": "A seagull snatched a croissant right off Natalya's plate on the terrace.",
+   "ko": "갈매기가 테라스에서 나탈리야의 접시에 있던 크루아상을 낚아채 갔어요.",
+   "blank": "стащила",
+   "src": "made"
+  }
+ ],
  "w|ствол": [
   {
    "text": "В центре зала стоял срез огромного ствола дуба, и Сергей пересчитал кольца.",
@@ -57987,6 +58515,22 @@
    "src": "tatoeba:3317038/Selena777 en:3317035/Vanilla"
   }
  ],
+ "w|темп": [
+  {
+   "text": "Алексей не выдерживает темп городской жизни и пишет другу о деревне.",
+   "en": "Alexey can't keep up with the pace of city life and writes to his friend about the countryside.",
+   "ko": "알렉세이는 도시 생활의 속도를 못 견디겠다며 친구에게 시골 이야기를 써요.",
+   "blank": "темп",
+   "src": "made"
+  },
+  {
+   "text": "Наталья поднималась к отелю по склону в медленном темпе.",
+   "en": "Natalya walked up the slope to the hotel at a slow pace.",
+   "ko": "나탈리야는 언덕길을 천천히 올라 호텔로 갔어요.",
+   "blank": "темпе",
+   "src": "made"
+  }
+ ],
  "w|температура": [
   {
    "text": "Давно у тебя эта температура?",
@@ -59231,6 +59775,22 @@
    "src": "made"
   }
  ],
+ "w|тронуть": [
+  {
+   "text": "Алексея до слёз тронуло короткое письмо от старого друга.",
+   "en": "A short letter from an old friend moved Alexey to tears.",
+   "ko": "오랜 친구가 보낸 짧은 편지에 알렉세이는 눈물이 날 만큼 감동했어요.",
+   "blank": "тронуло",
+   "src": "made"
+  },
+  {
+   "text": "Наталью тронула записка от горничной с пожеланием хорошего отдыха.",
+   "en": "Natalya was touched by a note from the maid wishing her a good rest.",
+   "ko": "좋은 휴식 되라는 객실 청소 직원의 쪽지에 나탈리야는 마음이 뭉클했어요.",
+   "blank": "тронула",
+   "src": "made"
+  }
+ ],
  "w|труба": [
   {
    "text": "В музыкальном зале Сергей увидел медную трубу девятнадцатого века.",
@@ -60457,6 +61017,22 @@
    "src": "made"
   }
  ],
+ "w|удивиться": [
+  {
+   "text": "Алексей очень удивился, получив ответ уже через неделю.",
+   "en": "Alexey was very surprised to get a reply within a week.",
+   "ko": "알렉세이는 일주일 만에 답장을 받고 무척 놀랐어요.",
+   "blank": "удивился",
+   "src": "made"
+  },
+  {
+   "text": "Наталья удивилась, что завтрак в отеле подают до полудня.",
+   "en": "Natalya was surprised that the hotel serves breakfast until noon.",
+   "ko": "나탈리야는 호텔 아침 식사가 정오까지라는 데 놀랐어요.",
+   "blank": "удивилась",
+   "src": "made"
+  }
+ ],
  "w|удивлённый": [
   {
    "text": "Удивлённый, я не знал, что ответить.",
@@ -60946,6 +61522,22 @@
    "en": "The guesthouse owner greeted Natalia with a kind smile and hot tea.",
    "ko": "게스트하우스 주인은 따뜻한 미소와 뜨거운 차로 나탈리야를 맞았어요.",
    "blank": "улыбкой",
+   "src": "made"
+  }
+ ],
+ "w|улыбнуться": [
+  {
+   "text": "Алексей улыбнулся, когда нашёл в ящике первое письмо Димы.",
+   "en": "Alexey smiled when he found Dima's first letter in the drawer.",
+   "ko": "알렉세이는 서랍에서 디마의 첫 편지를 찾고 미소 지었어요.",
+   "blank": "улыбнулся",
+   "src": "made"
+  },
+  {
+   "text": "Администратор приветливо улыбнулась Наталье и выдала ключ.",
+   "en": "The receptionist smiled warmly at Natalya and handed her the key.",
+   "ko": "프런트 직원이 나탈리야에게 상냥하게 웃으며 열쇠를 건넸어요.",
+   "blank": "улыбнулась",
    "src": "made"
   }
  ],
@@ -63243,6 +63835,22 @@
    "blank": "Хотя"
   }
  ],
+ "w|храбрый": [
+  {
+   "text": "В детстве Дима казался Алексею самым храбрым мальчиком во дворе.",
+   "en": "As a child, Alexey thought Dima was the bravest boy in the yard.",
+   "ko": "어릴 때 알렉세이에게 디마는 동네에서 가장 용감한 아이였어요.",
+   "blank": "храбрым",
+   "src": "made"
+  },
+  {
+   "text": "Самые храбрые гости отеля купались в холодном море рядом с Натальей.",
+   "en": "The bravest hotel guests swam in the cold sea next to Natalya.",
+   "ko": "가장 용감한 호텔 손님들은 나탈리야 옆에서 차가운 바다에 들어갔어요.",
+   "blank": "храбрые",
+   "src": "made"
+  }
+ ],
  "w|храм": [
   {
    "text": "Кражу свечей из старого храма расследовал Дмитрий.",
@@ -65359,6 +65967,22 @@
    "src": "made"
   }
  ],
+ "w|экстренный": [
+  {
+   "text": "Алексей пообещал другу звонить только в экстренном случае.",
+   "en": "Alexey promised his friend to call only in an emergency.",
+   "ko": "알렉세이는 급한 일이 있을 때만 전화하겠다고 친구에게 약속했어요.",
+   "blank": "экстренном",
+   "src": "made"
+  },
+  {
+   "text": "В номере Натальи висит схема экстренной эвакуации.",
+   "en": "There is an emergency evacuation plan hanging in Natalya's room.",
+   "ko": "나탈리야의 객실에는 비상 대피도가 걸려 있어요.",
+   "blank": "экстренной",
+   "src": "made"
+  }
+ ],
  "w|электричество": [
   {
    "text": "Сколько вы платите за электричество?",
@@ -65404,6 +66028,22 @@
    "en": "Irina lost one part of the wardrobe and now can't put it together.",
    "ko": "이리나는 옷장 부품 하나를 잃어버려서 이제 조립을 못 해요.",
    "blank": "элемент",
+   "src": "made"
+  }
+ ],
+ "w|эмоциональный": [
+  {
+   "text": "Ответ друга получился очень эмоциональным, и Алексей перечитал его дважды.",
+   "en": "His friend's reply turned out very emotional, and Alexey read it twice.",
+   "ko": "친구의 답장은 무척 감정이 북받친 글이라 알렉세이는 두 번 읽었어요.",
+   "blank": "эмоциональным",
+   "src": "made"
+  },
+  {
+   "text": "Наталья написала эмоциональный отзыв об отеле.",
+   "en": "Natalya wrote an emotional review of the hotel.",
+   "ko": "나탈리야는 호텔에 대해 감정이 듬뿍 담긴 후기를 썼어요.",
+   "blank": "эмоциональный",
    "src": "made"
   }
  ],
