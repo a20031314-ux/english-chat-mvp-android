@@ -115,6 +115,22 @@
    "blank": "آنذاك"
   }
  ],
+ "w|آنس": [
+  {
+   "text": "قال علي لصديقه في نهاية السهرة: آنستنا الليلة.",
+   "en": "At the end of the evening, Ali told his friend: your company was a pleasure tonight.",
+   "ko": "알리는 모임이 끝날 때 친구에게 \"오늘 함께해서 즐거웠어\"라고 했어요.",
+   "blank": "آنستنا",
+   "src": "made"
+  },
+  {
+   "text": "آنست القطة نور في ليالي العمل الطويلة في المكتب.",
+   "en": "The cat kept Nour company on long work nights at the office.",
+   "ko": "고양이가 사무실에서 긴 야근 밤마다 누르의 곁을 지켜 줬어요.",
+   "blank": "آنست",
+   "src": "made"
+  }
+ ],
  "w|آنسة": [
   {
    "text": "آنسة، هل تحتاجين إلى مساعدة؟",
@@ -379,6 +395,38 @@
    "src": "made"
   }
  ],
+ "w|أبهج": [
+  {
+   "text": "أبهج علي الجميع حين أخرج دفتر الصف القديم.",
+   "en": "Ali delighted everyone when he took out the old class notebook.",
+   "ko": "알리가 옛 반 공책을 꺼내자 모두 즐거워했어요.",
+   "blank": "أبهج",
+   "src": "made"
+  },
+  {
+   "text": "أبهجت رسالة شكر من مستخدمة صغيرة قلب نور.",
+   "en": "A thank-you message from a young user delighted Nour's heart.",
+   "ko": "어린 사용자가 보낸 감사 메시지가 누르의 마음을 기쁘게 했어요.",
+   "blank": "أبهجت",
+   "src": "made"
+  }
+ ],
+ "w|أبوة": [
+  {
+   "text": "تحدث صديق علي عن الأبوة وكيف غيرت حياته.",
+   "en": "Ali's friend talked about fatherhood and how it changed his life.",
+   "ko": "알리의 친구는 아빠가 된 일과 그게 삶을 어떻게 바꿨는지 이야기했어요.",
+   "blank": "الأبوة",
+   "src": "made"
+  },
+  {
+   "text": "أضافت نور إلى التطبيق قسما عن الأبوة لمساعدة الآباء الجدد.",
+   "en": "Nour added a section on parenthood to the app to help new parents.",
+   "ko": "누르는 새내기 부모를 돕는 육아 코너를 앱에 넣었어요.",
+   "blank": "الأبوة",
+   "src": "made"
+  }
+ ],
  "w|أبيض": [
   {
    "text": "الثلج أبيض ونظيف.",
@@ -585,6 +633,22 @@
    "en": "The light went out during the storm.",
    "ko": "폭풍우 중에 불이 꺼졌어.",
    "blank": "أثناء"
+  }
+ ],
+ "w|أثنى": [
+  {
+   "text": "أثنى علي على صديقه الذي صار طبيبا في قريته.",
+   "en": "Ali praised his friend who became a doctor in his village.",
+   "ko": "알리는 고향 마을의 의사가 된 친구를 칭찬했어요.",
+   "blank": "أثنى",
+   "src": "made"
+  },
+  {
+   "text": "أثنت نور على المصمم أمام الفريق كله.",
+   "en": "Nour praised the designer in front of the whole team.",
+   "ko": "누르는 팀 전체 앞에서 디자이너를 칭찬했어요.",
+   "blank": "أثنت",
+   "src": "made"
   }
  ],
  "w|أجاب": [
@@ -850,6 +914,22 @@
    "en": "Maryam's shop is between a shoe shop and a small bakery.",
    "ko": "마리암의 가게는 신발 가게와 작은 빵집 사이에 있어요.",
    "blank": "أحذية",
+   "src": "made"
+  }
+ ],
+ "w|أحرج": [
+  {
+   "text": "أحرج علي صديقه حين قرأ رسالة حب كتبها في المدرسة.",
+   "en": "Ali embarrassed his friend when he read a love letter he had written at school.",
+   "ko": "알리는 친구가 학창 시절 쓴 연애편지를 읽어서 친구를 민망하게 했어요.",
+   "blank": "أحرج",
+   "src": "made"
+  },
+  {
+   "text": "أحرجت نور المستثمر بسؤال لم يتوقعه.",
+   "en": "Nour embarrassed the investor with a question he didn't expect.",
+   "ko": "누르는 예상 못 한 질문으로 투자자를 당황하게 했어요.",
+   "blank": "أحرجت",
    "src": "made"
   }
  ],
@@ -1504,6 +1584,22 @@
    "en": "A small error in the spreadsheet led to a delay in Mona's project.",
    "ko": "표의 작은 실수 때문에 모나의 프로젝트가 늦어졌어요.",
    "blank": "أدى",
+   "src": "made"
+  }
+ ],
+ "w|أديب": [
+  {
+   "text": "صار أحد أصدقاء علي أديبا معروفا ينشر رواية كل سنة.",
+   "en": "One of Ali's friends became a well-known writer who publishes a novel every year.",
+   "ko": "알리의 친구 하나는 해마다 소설을 내는 유명한 작가가 됐어요.",
+   "blank": "أديبا",
+   "src": "made"
+  },
+  {
+   "text": "طلب أديب شاب من نور تطبيقا يساعده على تنظيم رواياته.",
+   "en": "A young writer asked Nour for an app to help him organize his novels.",
+   "ko": "젊은 작가가 누르에게 소설 정리를 도와줄 앱을 부탁했어요.",
+   "blank": "أديب",
    "src": "made"
   }
  ],
@@ -5549,6 +5645,22 @@
    "blank": "أينما"
   }
  ],
+ "w|إبادة": [
+  {
+   "text": "صار صديق علي يعمل في شركة لإبادة الحشرات.",
+   "en": "Ali's friend now works at a pest extermination company.",
+   "ko": "알리의 친구는 지금 해충 방제 회사에서 일해요.",
+   "blank": "لإبادة",
+   "src": "made"
+  },
+  {
+   "text": "قرأت نور في التاريخ عن إبادة غابات كاملة لبناء المدن.",
+   "en": "Nour read in history about whole forests being wiped out to build cities.",
+   "ko": "누르는 역사책에서 도시를 지으려고 숲 전체를 없앤 이야기를 읽었어요.",
+   "blank": "إبادة",
+   "src": "made"
+  }
+ ],
  "w|إبداع": [
   {
    "text": "إبداع الطلاب في المشروع رائع.",
@@ -7961,6 +8073,22 @@
    "blank": "احتفل"
   }
  ],
+ "w|احتفى": [
+  {
+   "text": "احتفى علي بأصدقائه وطلب لهم أفضل الأطباق.",
+   "en": "Ali welcomed his friends warmly and ordered them the best dishes.",
+   "ko": "알리는 친구들을 반갑게 맞으며 제일 좋은 요리를 시켜 줬어요.",
+   "blank": "احتفى",
+   "src": "made"
+  },
+  {
+   "text": "احتفت نور بفريقها بعد وصول التطبيق إلى ألف مستخدم.",
+   "en": "Nour celebrated her team after the app reached a thousand users.",
+   "ko": "누르는 앱 사용자가 천 명이 되자 팀을 축하해 줬어요.",
+   "blank": "احتفت",
+   "src": "made"
+  }
+ ],
  "w|احتقن": [
   {
    "text": "احتقن حلق علي بعد السباحة في الماء البارد.",
@@ -8867,6 +8995,22 @@
    "en": "I want to invest my money wisely.",
    "ko": "나는 내 돈을 현명하게 투자하고 싶어.",
    "blank": "استثمر"
+  }
+ ],
+ "w|استثنائي": [
+  {
+   "text": "قال علي إن لقاء الليلة كان استثنائيا لأن الجميع حضروا.",
+   "en": "Ali said tonight's gathering was exceptional because everyone came.",
+   "ko": "알리는 모두가 와서 오늘 밤 모임이 특별했다고 말했어요.",
+   "blank": "استثنائيا",
+   "src": "made"
+  },
+  {
+   "text": "وصف المستثمر فريق نور بأنه استثنائي.",
+   "en": "The investor described Nour's team as exceptional.",
+   "ko": "투자자는 누르의 팀을 특출하다고 평했어요.",
+   "blank": "استثنائي",
+   "src": "made"
   }
  ],
  "w|استجاب": [
@@ -9918,6 +10062,22 @@
    "en": "Sara's course is aimed at beginners who have never cooked before.",
    "ko": "사라의 강좌는 요리를 해 본 적 없는 초보자를 대상으로 해요.",
    "blank": "تستهدف",
+   "src": "made"
+  }
+ ],
+ "w|استهزأ": [
+  {
+   "text": "اعتذر صديق قديم لعلي لأنه استهزأ بلهجته في أول يوم دراسي.",
+   "en": "An old friend apologized to Ali for mocking his accent on the first school day.",
+   "ko": "옛 친구가 입학 첫날 알리의 말투를 놀렸던 걸 사과했어요.",
+   "blank": "استهزأ",
+   "src": "made"
+  },
+  {
+   "text": "استهزأ بعض الناس بفكرة نور في البداية، ثم صاروا من مستخدميها.",
+   "en": "Some people mocked Nour's idea at first, then became its users.",
+   "ko": "처음엔 누르의 아이디어를 비웃던 사람들이 나중엔 사용자가 됐어요.",
+   "blank": "استهزأ",
    "src": "made"
   }
  ],
@@ -13173,6 +13333,22 @@
    "blank": "الباحث"
   }
  ],
+ "w|باختصار": [
+  {
+   "text": "سأله الأصدقاء عن أخباره، فقال علي باختصار إنه سعيد.",
+   "en": "His friends asked for his news, and Ali said briefly that he was happy.",
+   "ko": "친구들이 근황을 묻자 알리는 짧게 행복하다고 했어요.",
+   "blank": "باختصار",
+   "src": "made"
+  },
+  {
+   "text": "شرحت نور فكرة الشركة باختصار في دقيقة واحدة.",
+   "en": "Nour explained the company's idea briefly in one minute.",
+   "ko": "누르는 회사 아이디어를 일 분 만에 짧게 설명했어요.",
+   "blank": "باختصار",
+   "src": "made"
+  }
+ ],
  "w|بادر": [
   {
    "text": "بادر صديقي بالاعتذار بسرعة.",
@@ -13439,6 +13615,22 @@
    "en": "Despite the rain, we went to the park.",
    "ko": "비가 왔지만 우리는 공원에 갔어.",
    "blank": "بالرغم"
+  }
+ ],
+ "w|بالسلامة": [
+  {
+   "text": "ودع علي صديقه المسافر عند الباب وقال له: ترجع بالسلامة.",
+   "en": "Ali said goodbye to his traveling friend at the door and told him: come back safely.",
+   "ko": "알리는 떠나는 친구를 문 앞에서 배웅하며 \"잘 다녀와\"라고 했어요.",
+   "blank": "بالسلامة",
+   "src": "made"
+  },
+  {
+   "text": "سافر المبرمج إلى مؤتمر، فقالت له نور: تروح وترجع بالسلامة.",
+   "en": "The programmer traveled to a conference, and Nour told him: go and come back safely.",
+   "ko": "프로그래머가 학회에 가자 누르는 \"잘 다녀와요\"라고 했어요.",
+   "blank": "بالسلامة",
+   "src": "made"
   }
  ],
  "w|بالضبط": [
@@ -16767,6 +16959,22 @@
    "blank": "تاه"
   }
  ],
+ "w|تايكوندو": [
+  {
+   "text": "ما زال صديق علي يدرب الأطفال على التايكوندو كل مساء.",
+   "en": "Ali's friend still coaches children in taekwondo every evening.",
+   "ko": "알리의 친구는 아직도 저녁마다 아이들에게 태권도를 가르쳐요.",
+   "blank": "التايكوندو",
+   "src": "made"
+  },
+  {
+   "text": "نظم الفريق رحلة لمشاهدة بطولة التايكوندو في المدينة.",
+   "en": "The team organized a trip to watch the taekwondo championship in the city.",
+   "ko": "팀은 시내 태권도 대회를 보러 가는 나들이를 계획했어요.",
+   "blank": "التايكوندو",
+   "src": "made"
+  }
+ ],
  "w|تبادل": [
   {
    "text": "أحببت تبادل الأفكار معك.",
@@ -17136,6 +17344,22 @@
    "en": "Dust built up inside the charging port until the phone stopped charging.",
    "ko": "충전 단자 안에 먼지가 쌓여서 휴대폰이 충전되지 않았어요.",
    "blank": "تجمع",
+   "src": "made"
+  }
+ ],
+ "w|تجميد": [
+  {
+   "text": "حكى صديق علي عن تجميد مشروعه بسبب نقص المال.",
+   "en": "Ali's friend told how his project was frozen due to a lack of money.",
+   "ko": "알리의 친구는 돈이 모자라서 사업이 중단된 이야기를 했어요.",
+   "blank": "تجميد",
+   "src": "made"
+  },
+  {
+   "text": "أعلنت نور تجميد التوظيف حتى نهاية السنة.",
+   "en": "Nour announced a hiring freeze until the end of the year.",
+   "ko": "누르는 연말까지 채용을 동결한다고 발표했어요.",
+   "blank": "تجميد",
    "src": "made"
   }
  ],
@@ -18643,6 +18867,22 @@
    "src": "made"
   }
  ],
+ "w|تسلسل": [
+  {
+   "text": "عرض علي الصور القديمة على الشاشة حسب تسلسل السنوات.",
+   "en": "Ali showed the old photos on the screen in order of the years.",
+   "ko": "알리는 옛 사진을 해마다 순서대로 화면에 띄웠어요.",
+   "blank": "تسلسل",
+   "src": "made"
+  },
+  {
+   "text": "رسمت نور على اللوح تسلسل الخطوات من التسجيل إلى الدفع.",
+   "en": "Nour drew on the board the sequence of steps from signing up to paying.",
+   "ko": "누르는 가입부터 결제까지 단계 순서를 칠판에 그렸어요.",
+   "blank": "تسلسل",
+   "src": "made"
+  }
+ ],
  "w|تسلق": [
   {
    "text": "تسلق الطفل الشجرة بسهولة.",
@@ -18683,6 +18923,22 @@
    "en": "He received the award from the manager.",
    "ko": "상장을 매니저에게 받았다.",
    "blank": "تسلم"
+  }
+ ],
+ "w|تسلية": [
+  {
+   "text": "كانت ألعاب الورق أكبر تسلية لعلي وأصدقائه في السكن الجامعي.",
+   "en": "Card games were the biggest pastime for Ali and his friends in the dorm.",
+   "ko": "카드 게임은 기숙사 시절 알리와 친구들의 가장 큰 놀이였어요.",
+   "blank": "تسلية",
+   "src": "made"
+  },
+  {
+   "text": "وضعت نور في المكتب طاولة تنس للتسلية في وقت الراحة.",
+   "en": "Nour put a ping-pong table in the office for fun during breaks.",
+   "ko": "누르는 쉬는 시간에 즐기라고 사무실에 탁구대를 들였어요.",
+   "blank": "للتسلية",
+   "src": "made"
   }
  ],
  "w|تسليم": [
@@ -18990,6 +19246,22 @@
    "en": "Fatima looked forward to the end-of-year concert all month.",
    "ko": "파티마는 한 달 내내 연말 공연을 손꼽아 기다렸어요.",
    "blank": "تشوقت",
+   "src": "made"
+  }
+ ],
+ "w|تشويش": [
+  {
+   "text": "كان في المكالمة تشويش، فلم يسمع علي اسم المطعم جيدا.",
+   "en": "There was interference on the call, so Ali didn't hear the restaurant's name well.",
+   "ko": "통화에 잡음이 있어서 알리는 식당 이름을 잘 못 들었어요.",
+   "blank": "تشويش",
+   "src": "made"
+  },
+  {
+   "text": "سبب تشويش الشبكة توقف الاجتماع عن بعد مرتين.",
+   "en": "Network interference made the remote meeting stop twice.",
+   "ko": "네트워크 장애 때문에 원격 회의가 두 번 끊겼어요.",
+   "blank": "تشويش",
    "src": "made"
   }
  ],
@@ -22119,6 +22391,22 @@
    "src": "made"
   }
  ],
+ "w|توصية": [
+  {
+   "text": "اختار علي المطعم بناء على توصية من صديقه الطباخ.",
+   "en": "Ali chose the restaurant on the recommendation of his chef friend.",
+   "ko": "알리는 요리사 친구의 추천으로 식당을 골랐어요.",
+   "blank": "توصية",
+   "src": "made"
+  },
+  {
+   "text": "كتب مدير نور القديم رسالة توصية ساعدتها في الحصول على التمويل.",
+   "en": "Nour's former manager wrote a recommendation letter that helped her get funding.",
+   "ko": "누르의 예전 상사가 써 준 추천서 덕분에 누르는 투자를 받았어요.",
+   "blank": "توصية",
+   "src": "made"
+  }
+ ],
  "w|توصيل": [
   {
    "text": "خدمة توصيل الطعام سريعة جداً هنا.",
@@ -24241,6 +24529,22 @@
    "blank": "الجسم"
   }
  ],
+ "w|جشع": [
+  {
+   "text": "قال علي مازحا إن صاحب المطعم جشع لأنه رفع الأسعار.",
+   "en": "Ali joked that the restaurant owner is greedy because he raised the prices.",
+   "ko": "알리는 식당 주인이 값을 올렸으니 욕심쟁이라고 농담했어요.",
+   "blank": "جشع",
+   "src": "made"
+  },
+  {
+   "text": "رفضت نور عرض مستثمر جشع طلب نصف الشركة.",
+   "en": "Nour rejected the offer of a greedy investor who wanted half the company.",
+   "ko": "누르는 회사 절반을 달라는 욕심 많은 투자자의 제안을 거절했어요.",
+   "blank": "جشع",
+   "src": "made"
+  }
+ ],
  "w|جعل": [
   {
    "text": "جعل الطفل يضحك الجميع.",
@@ -25077,6 +25381,22 @@
    "en": "I noticed the quality of the cinematography in the new movie.",
    "ko": "새 영화의 촬영 품질이 눈에 띄었어.",
    "blank": "جودة"
+  }
+ ],
+ "w|جودو": [
+  {
+   "text": "تذكر علي أيام تدريب الجودو في نادي الحي.",
+   "en": "Ali remembered the days of judo training at the neighborhood club.",
+   "ko": "알리는 동네 체육관에서 유도를 배우던 날들을 떠올렸어요.",
+   "blank": "الجودو",
+   "src": "made"
+  },
+  {
+   "text": "تذهب نور إلى تدريب الجودو مرتين في الأسبوع لتنسى ضغط العمل.",
+   "en": "Nour goes to judo training twice a week to forget work stress.",
+   "ko": "누르는 일 스트레스를 잊으려고 일주일에 두 번 유도를 하러 가요.",
+   "blank": "الجودو",
+   "src": "made"
   }
  ],
  "w|جورب": [
@@ -31943,6 +32263,22 @@
    "src": "made"
   }
  ],
+ "w|ديوان": [
+  {
+   "text": "أهدى علي صديقته القديمة ديوانا من الشعر كانت تحبه.",
+   "en": "Ali gave his old friend a poetry collection she used to love.",
+   "ko": "알리는 옛 친구에게 그녀가 좋아하던 시집을 선물했어요.",
+   "blank": "ديوانا",
+   "src": "made"
+  },
+  {
+   "text": "يحفظ المبرمج أبياتا من ديوان قديم ويكتبها على اللوح.",
+   "en": "The programmer memorizes verses from an old poetry collection and writes them on the board.",
+   "ko": "프로그래머는 옛 시집의 구절을 외워서 칠판에 적어요.",
+   "blank": "ديوان",
+   "src": "made"
+  }
+ ],
  "w|ذئب": [
   {
    "text": "ذئب يعوي تحت ضوء القمر.",
@@ -32255,6 +32591,22 @@
    "en": "That child is very smart.",
    "ko": "그 아이는 정말 똑똑해.",
    "blank": "ذلك"
+  }
+ ],
+ "w|ذم": [
+  {
+   "text": "لم يذم علي أحدا طوال السهرة، حتى من تأخر ساعتين.",
+   "en": "Ali didn't criticize anyone all evening, not even the one who was two hours late.",
+   "ko": "알리는 두 시간 늦은 친구까지 포함해 밤새 아무도 탓하지 않았어요.",
+   "blank": "يذم",
+   "src": "made"
+  },
+  {
+   "text": "ذمت مدونة تقنية تصميم التطبيق، فقررت نور تحسينه.",
+   "en": "A tech blog criticized the app's design, so Nour decided to improve it.",
+   "ko": "한 기술 블로그가 앱 디자인을 혹평해서 누르는 손보기로 했어요.",
+   "blank": "ذمت",
+   "src": "made"
   }
  ],
  "w|ذنب": [
@@ -40107,6 +40459,22 @@
    "blank": "شوربة"
   }
  ],
+ "w|شوط": [
+  {
+   "text": "لعب علي وأصدقاؤه مباراة كرة قديمة، وتعادلوا في الشوط الأول.",
+   "en": "Ali and his friends played a game of football like old times and were tied in the first half.",
+   "ko": "알리와 친구들은 옛날처럼 공을 찼는데, 전반전은 비겼어요.",
+   "blank": "الشوط",
+   "src": "made"
+  },
+  {
+   "text": "قطعت شركة نور شوطا طويلا منذ أن بدأت في غرفة صغيرة.",
+   "en": "Nour's company has come a long way since it started in a small room.",
+   "ko": "누르의 회사는 작은 방에서 시작한 뒤로 먼 길을 왔어요.",
+   "blank": "شوطا",
+   "src": "made"
+  }
+ ],
  "w|شوق": [
   {
    "text": "شعرتُ شوق كبير لرؤية أصدقائي.",
@@ -41235,6 +41603,22 @@
    "en": "There is nothing, just zero.",
    "ko": "아무것도 없어, 그냥 영이야.",
    "blank": "صفر"
+  }
+ ],
+ "w|صفعة": [
+  {
+   "text": "تذكر علي الصفعة التي تلقاها من المعلم حين ضحك في الصف.",
+   "en": "Ali remembered the slap he got from the teacher when he laughed in class.",
+   "ko": "알리는 수업 중에 웃었다가 선생님한테 뺨을 맞았던 일을 떠올렸어요.",
+   "blank": "الصفعة",
+   "src": "made"
+  },
+  {
+   "text": "كان انسحاب المستثمر صفعة قوية لنور وفريقها.",
+   "en": "The investor's withdrawal was a hard blow for Nour and her team.",
+   "ko": "투자자가 빠진 일은 누르와 팀에게 뼈아픈 타격이었어요.",
+   "blank": "صفعة",
+   "src": "made"
   }
  ],
  "w|صفقة": [
@@ -43292,6 +43676,22 @@
    "en": "Mariam spent her childhood in a small hotel her grandfather owned.",
    "ko": "마리암은 할아버지가 운영하던 작은 호텔에서 어린 시절을 보냈어요.",
    "blank": "طفولتها",
+   "src": "made"
+  }
+ ],
+ "w|طفيف": [
+  {
+   "text": "وصل علي متأخرا بسبب حادث طفيف في الطريق.",
+   "en": "Ali arrived late because of a minor accident on the road.",
+   "ko": "알리는 길에서 난 가벼운 사고 때문에 늦게 도착했어요.",
+   "blank": "طفيف",
+   "src": "made"
+  },
+  {
+   "text": "وجدت نور خطأ طفيفا في الكود قبل الإطلاق بساعة.",
+   "en": "Nour found a slight error in the code an hour before launch.",
+   "ko": "누르는 출시 한 시간 전에 코드에서 작은 오류를 찾았어요.",
+   "blank": "طفيفا",
    "src": "made"
   }
  ],
@@ -45655,6 +46055,22 @@
    "src": "made"
   }
  ],
+ "w|عشيق": [
+  {
+   "text": "كتب علي في شبابه رواية عن عشيق ينتظر حبيبته على الجسر.",
+   "en": "In his youth, Ali wrote a novel about a lover waiting for his beloved on the bridge.",
+   "ko": "알리는 젊을 때 다리 위에서 연인을 기다리는 남자에 관한 소설을 썼어요.",
+   "blank": "عشيق",
+   "src": "made"
+  },
+  {
+   "text": "تقرأ نور في القطار رواية عن عشيق يكتب الرسائل لحبيبته.",
+   "en": "On the train, Nour reads a novel about a lover who writes letters to his beloved.",
+   "ko": "누르는 기차에서 연인에게 편지를 쓰는 남자에 관한 소설을 읽어요.",
+   "blank": "عشيق",
+   "src": "made"
+  }
+ ],
  "w|عصا": [
   {
    "text": "يستعمل الحارس العجوز عصا خشبية عندما يمشي في الساحة.",
@@ -45785,6 +46201,22 @@
    "en": "You shouldn't bite your nails.",
    "ko": "손톱을 물면 안 돼.",
    "blank": "عض"
+  }
+ ],
+ "w|عضة": [
+  {
+   "text": "أرى علي أصدقاءه أثر عضة كلب في ساقه من أيام الطفولة.",
+   "en": "Ali showed his friends the mark of a dog bite on his leg from childhood.",
+   "ko": "알리는 친구들에게 어릴 때 개한테 물린 다리 자국을 보여 줬어요.",
+   "blank": "عضة",
+   "src": "made"
+  },
+  {
+   "text": "غاب المصمم يومين بسبب عضة قطة التهبت في يده.",
+   "en": "The designer was absent for two days because of a cat bite that got infected on his hand.",
+   "ko": "디자이너는 고양이에게 물린 손이 곪아서 이틀을 쉬었어요.",
+   "blank": "عضة",
+   "src": "made"
   }
  ],
  "w|عضلة": [
@@ -48029,6 +48461,22 @@
    "blank": "غفر"
   }
  ],
+ "w|غفران": [
+  {
+   "text": "طلب علي الغفران من صديق قديم أساء إليه في الجامعة.",
+   "en": "Ali asked forgiveness from an old friend he had wronged at university.",
+   "ko": "알리는 대학 때 상처를 줬던 옛 친구에게 용서를 구했어요.",
+   "blank": "الغفران",
+   "src": "made"
+  },
+  {
+   "text": "طلب المبرمج غفران نور بعد أن حذف ملفا مهما بالخطأ.",
+   "en": "The programmer asked Nour's forgiveness after deleting an important file by mistake.",
+   "ko": "프로그래머는 중요한 파일을 실수로 지운 뒤 누르에게 용서를 빌었어요.",
+   "blank": "غفران",
+   "src": "made"
+  }
+ ],
  "w|غلاف": [
   {
    "text": "الغلاف الخارجي للكتاب جميل.",
@@ -49315,6 +49763,22 @@
    "blank": "الفرن"
   }
  ],
+ "w|فروسية": [
+  {
+   "text": "فاز صديق علي ببطولة في الفروسية، وأرى الجميع صورة حصانه.",
+   "en": "Ali's friend won a horse riding championship and showed everyone a photo of his horse.",
+   "ko": "알리의 친구는 승마 대회에서 우승해서 모두에게 자기 말 사진을 보여 줬어요.",
+   "blank": "الفروسية",
+   "src": "made"
+  },
+  {
+   "text": "صممت نور تطبيقا لحجز دروس الفروسية في الإسطبلات القريبة.",
+   "en": "Nour designed an app for booking horse riding lessons at nearby stables.",
+   "ko": "누르는 근처 마구간 승마 수업 예약 앱을 만들었어요.",
+   "blank": "الفروسية",
+   "src": "made"
+  }
+ ],
  "w|فريد": [
   {
    "text": "هالشخص فريد من نوعه.",
@@ -49625,6 +50089,22 @@
    "blank": "الفطر"
   }
  ],
+ "w|فطرة": [
+  {
+   "text": "قال علي إن صديقه يعرف بالفطرة متى يحتاج الآخرون إلى المساعدة.",
+   "en": "Ali said his friend knows by instinct when others need help.",
+   "ko": "알리는 친구가 남들이 도움이 필요할 때를 본능적으로 안다고 했어요.",
+   "blank": "بالفطرة",
+   "src": "made"
+  },
+  {
+   "text": "تؤمن نور أن الأطفال يتعلمون التكنولوجيا بفطرتهم.",
+   "en": "Nour believes children learn technology by instinct.",
+   "ko": "누르는 아이들이 기술을 타고난 감으로 배운다고 믿어요.",
+   "blank": "بفطرتهم",
+   "src": "made"
+  }
+ ],
  "w|فطنة": [
   {
    "text": "أنهى حسن الخلاف على الموقف بفطنة دون أن يغضب أحدا.",
@@ -49667,6 +50147,22 @@
    "en": "Do you prefer cheese or meat pie?",
    "ko": "치즈 파이와 고기 파이 중 어느 것을 더 좋아해?",
    "blank": "فطيرة"
+  }
+ ],
+ "w|فظ": [
+  {
+   "text": "كان النادل فظا مع علي، لكنه اعتذر في آخر السهرة.",
+   "en": "The waiter was rude to Ali, but he apologized at the end of the evening.",
+   "ko": "종업원이 알리에게 무례했지만 모임이 끝날 때 사과했어요.",
+   "blank": "فظا",
+   "src": "made"
+  },
+  {
+   "text": "رد المستثمر على نور بأسلوب فظ، فأنهت الاجتماع بهدوء.",
+   "en": "The investor replied to Nour in a rude way, so she calmly ended the meeting.",
+   "ko": "투자자가 누르에게 무례하게 대답해서 누르는 조용히 회의를 끝냈어요.",
+   "blank": "فظ",
+   "src": "made"
   }
  ],
  "w|فظيع": [
@@ -52807,6 +53303,22 @@
    "blank": "كاذب"
   }
  ],
+ "w|كاراتيه": [
+  {
+   "text": "ضحك علي حين تذكر أنه ترك الكاراتيه بعد درسين فقط.",
+   "en": "Ali laughed when he remembered quitting karate after only two lessons.",
+   "ko": "알리는 가라테를 두 번 배우고 그만둔 일이 생각나 웃었어요.",
+   "blank": "الكاراتيه",
+   "src": "made"
+  },
+  {
+   "text": "يتدرب المصمم على الكاراتيه، ويقول إنها تعلمه الصبر.",
+   "en": "The designer trains in karate and says it teaches him patience.",
+   "ko": "디자이너는 가라테를 배우는데, 그게 인내심을 길러 준다고 해요.",
+   "blank": "الكاراتيه",
+   "src": "made"
+  }
+ ],
  "w|كارثة": [
   {
    "text": "كانت الفيضانات كارثة حقيقية للمدينة.",
@@ -53504,6 +54016,22 @@
    "en": "Huda covered her face with cream in a comedy scene.",
    "ko": "후다는 코미디 장면에서 얼굴에 크림을 뒤집어썼어요.",
    "blank": "بالكريمة",
+   "src": "made"
+  }
+ ],
+ "w|كريه": [
+  {
+   "text": "ما زال علي يتذكر الرائحة الكريهة في مختبر الكيمياء.",
+   "en": "Ali still remembers the foul smell in the chemistry lab.",
+   "ko": "알리는 화학 실험실의 고약한 냄새를 아직도 기억해요.",
+   "blank": "الكريهة",
+   "src": "made"
+  },
+  {
+   "text": "تخلصت نور من الكرسي القديم ذي الرائحة الكريهة في المكتب.",
+   "en": "Nour got rid of the old chair with the nasty smell in the office.",
+   "ko": "누르는 사무실의 고약한 냄새가 나는 낡은 의자를 버렸어요.",
+   "blank": "الكريهة",
    "src": "made"
   }
  ],
@@ -58459,6 +58987,22 @@
    "en": "I read exciting news this morning.",
    "ko": "오늘 아침에 흥미로운 소식을 읽었어.",
    "blank": "مثير"
+  }
+ ],
+ "w|مجازفة": [
+  {
+   "text": "ضحك علي حين تذكر مجازفة صديقه بالقفز من سور المدرسة.",
+   "en": "Ali laughed remembering his friend's risky jump off the school wall.",
+   "ko": "알리는 친구가 학교 담을 넘어 뛰어내렸던 무모한 일을 떠올리며 웃었어요.",
+   "blank": "مجازفة",
+   "src": "made"
+  },
+  {
+   "text": "تركت نور وظيفتها الثابتة، وكانت تلك مجازفة كبيرة.",
+   "en": "Nour left her stable job, and that was a big risk.",
+   "ko": "누르는 안정된 직장을 그만뒀는데, 그건 큰 모험이었어요.",
+   "blank": "مجازفة",
+   "src": "made"
   }
  ],
  "w|مجال": [
@@ -65147,6 +65691,22 @@
    "src": "made"
   }
  ],
+ "w|مقيم": [
+  {
+   "text": "جاء إلى اللقاء صديق صار مقيما في الخارج منذ سنوات.",
+   "en": "A friend who has been living abroad for years came to the gathering.",
+   "ko": "몇 년째 외국에 사는 친구도 모임에 왔어요.",
+   "blank": "مقيما",
+   "src": "made"
+  },
+  {
+   "text": "وظفت نور مبرمجا مقيما في مدينة أخرى يعمل من بيته.",
+   "en": "Nour hired a programmer living in another city who works from home.",
+   "ko": "누르는 다른 도시에 살며 재택으로 일하는 프로그래머를 뽑았어요.",
+   "blank": "مقيما",
+   "src": "made"
+  }
+ ],
  "w|مكابح": [
   {
    "text": "أصلح أحمد مكابح دراجته قبل أن يذهب بها إلى المدرسة.",
@@ -65657,6 +66217,22 @@
    "en": "The city's butcher shop offers the best quality meats.",
    "ko": "도시의 정육점은 최고 품질의 고기를 제공해.",
    "blank": "ملحمة"
+  }
+ ],
+ "w|ملحوظ": [
+  {
+   "text": "لاحظ علي تغيرا ملحوظا في أصدقائه بعد عشرين سنة من التخرج.",
+   "en": "Ali noticed a marked change in his friends twenty years after graduation.",
+   "ko": "알리는 졸업 이십 년 만에 친구들이 눈에 띄게 달라진 걸 알아챘어요.",
+   "blank": "ملحوظا",
+   "src": "made"
+  },
+  {
+   "text": "حققت شركة نور تقدما ملحوظا في عدد المستخدمين هذا الشهر.",
+   "en": "Nour's company made noticeable progress in user numbers this month.",
+   "ko": "누르의 회사는 이번 달 사용자 수가 눈에 띄게 늘었어요.",
+   "blank": "ملحوظا",
+   "src": "made"
   }
  ],
  "w|ملصق": [
@@ -66275,6 +66851,22 @@
    "en": "We celebrate every important occasion in our lives.",
    "ko": "우리는 인생의 중요한 행사마다 축하한다.",
    "blank": "مناسبة"
+  }
+ ],
+ "w|مناعة": [
+  {
+   "text": "قال صديق علي الطبيب إن النوم الجيد يقوي المناعة.",
+   "en": "Ali's doctor friend said good sleep strengthens immunity.",
+   "ko": "의사인 알리의 친구는 잘 자면 면역력이 강해진다고 했어요.",
+   "blank": "المناعة",
+   "src": "made"
+  },
+  {
+   "text": "أخذت نور لقاح الإنفلونزا لتحافظ على مناعتها في موسم العمل الضاغط.",
+   "en": "Nour got a flu shot to keep up her immunity during the busy work season.",
+   "ko": "누르는 바쁜 시기에 면역력을 지키려고 독감 주사를 맞았어요.",
+   "blank": "مناعتها",
+   "src": "made"
   }
  ],
  "w|منافس": [
@@ -68301,6 +68893,22 @@
    "src": "made"
   }
  ],
+ "w|ناشر": [
+  {
+   "text": "يبحث صديق علي الأديب عن ناشر لكتابه الجديد.",
+   "en": "Ali's writer friend is looking for a publisher for his new book.",
+   "ko": "알리의 작가 친구는 새 책을 낼 출판사를 찾고 있어요.",
+   "blank": "ناشر",
+   "src": "made"
+  },
+  {
+   "text": "وقعت نور عقدا مع ناشر لتحويل الكتب إلى نسخ صوتية.",
+   "en": "Nour signed a contract with a publisher to turn books into audio versions.",
+   "ko": "누르는 책을 오디오북으로 만드는 계약을 출판사와 맺었어요.",
+   "blank": "ناشر",
+   "src": "made"
+  }
+ ],
  "w|ناصر": [
   {
    "text": "ناصر يوسف فكرة فتح المتحف مجانا يوم الجمعة.",
@@ -69926,6 +70534,22 @@
    "en": "Maryam laughed and said a workday with no meetings is bliss.",
    "ko": "마리암은 회의 없는 근무일은 천국이라며 웃었어요.",
    "blank": "نعيم",
+   "src": "made"
+  }
+ ],
+ "w|نغم": [
+  {
+   "text": "عزف صديق علي نغما قديما على العود، فسكت الجميع.",
+   "en": "Ali's friend played an old tune on the oud, and everyone fell silent.",
+   "ko": "알리의 친구가 우드로 옛 가락을 켜자 모두 조용해졌어요.",
+   "blank": "نغما",
+   "src": "made"
+  },
+  {
+   "text": "اختارت نور نغما قصيرا يسمعه المستخدم عند وصول رسالة.",
+   "en": "Nour chose a short tone the user hears when a message arrives.",
+   "ko": "누르는 메시지가 오면 사용자에게 들리는 짧은 알림음을 골랐어요.",
+   "blank": "نغما",
    "src": "made"
   }
  ],
@@ -71891,6 +72515,22 @@
    "en": "His room is wide and has many windows.",
    "ko": "그의 방은 넓고 창문이 많아요.",
    "blank": "واسع"
+  }
+ ],
+ "w|واسى": [
+  {
+   "text": "واسى علي صديقه الذي فقد عمله هذا العام.",
+   "en": "Ali comforted his friend who lost his job this year.",
+   "ko": "알리는 올해 일자리를 잃은 친구를 위로했어요.",
+   "blank": "واسى",
+   "src": "made"
+  },
+  {
+   "text": "واست نور المبرمجة التي رفض المستثمر فكرتها.",
+   "en": "Nour consoled the programmer whose idea the investor rejected.",
+   "ko": "누르는 투자자에게 아이디어를 거절당한 프로그래머를 위로했어요.",
+   "blank": "واست",
+   "src": "made"
   }
  ],
  "w|واصل": [

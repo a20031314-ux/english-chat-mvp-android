@@ -275,6 +275,22 @@
    "blank": "ahli"
   }
  ],
+ "w|aib": [
+  {
+   "text": "Dalam drama itu, sang putri dianggap membawa aib karena menikah tanpa izin ayahnya.",
+   "en": "In the play, the princess is seen as bringing shame because she married without her father's permission.",
+   "ko": "그 연극에서 공주는 아버지 허락 없이 결혼해서 수치를 안겼다고 여겨져요.",
+   "blank": "aib",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Ayu, menjual barang kedaluwarsa adalah aib bagi pedagang.",
+   "en": "For Ayu, selling expired goods is a disgrace for a trader.",
+   "ko": "아유에게 유통기한 지난 물건을 파는 건 장사꾼의 수치예요.",
+   "blank": "aib",
+   "src": "made"
+  }
+ ],
  "w|air": [
   {
    "text": "Tolong ambilkan air.",
@@ -1397,6 +1413,22 @@
    "src": "made"
   }
  ],
+ "w|artefak": [
+  {
+   "text": "Properti panggung yang dipakai Eko adalah tiruan artefak dari zaman kerajaan.",
+   "en": "The stage prop Eko uses is a replica of an artifact from the royal era.",
+   "ko": "에코가 쓰는 소품은 왕조 시대 유물의 모조품이에요.",
+   "blank": "artefak",
+   "src": "made"
+  },
+  {
+   "text": "Lemari kayu di toko Ayu sudah sangat tua, hampir seperti artefak.",
+   "en": "The wooden cupboard in Ayu's shop is so old it's almost like an artifact.",
+   "ko": "아유 가게의 나무 찬장은 너무 오래돼서 거의 유물 같아요.",
+   "blank": "artefak",
+   "src": "made"
+  }
+ ],
  "w|arti": [
   {
    "text": "Apa arti kata itu dalam bahasa asing?",
@@ -1423,6 +1455,22 @@
    "en": "She wrote an article for a science magazine.",
    "ko": "그는 과학 잡지용 기사를 썼어.",
    "blank": "artikel"
+  }
+ ],
+ "w|artileri": [
+  {
+   "text": "Bunyi artileri dalam adegan perang dibuat dari rekaman yang diputar keras.",
+   "en": "The artillery sounds in the war scene come from a recording played loudly.",
+   "ko": "전쟁 장면의 포성은 녹음을 크게 틀어서 만든 거예요.",
+   "blank": "artileri",
+   "src": "made"
+  },
+  {
+   "text": "Di toko Ayu ada televisi tua yang sedang menayangkan film perang dengan suara artileri.",
+   "en": "In Ayu's shop there's an old TV showing a war film with the sound of artillery.",
+   "ko": "아유 가게의 낡은 TV에서 포성이 울리는 전쟁 영화가 나오고 있었어요.",
+   "blank": "artileri",
+   "src": "made"
   }
  ],
  "w|artinya": [
@@ -4923,6 +4971,22 @@
    "blank": "bergaul"
   }
  ],
+ "w|bergaya": [
+  {
+   "text": "Di atas panggung, Eko bergaya seperti bangsawan tua yang sombong.",
+   "en": "On stage, Eko acted like an arrogant old nobleman.",
+   "ko": "무대 위에서 에코는 거만한 늙은 귀족처럼 굴었어요.",
+   "blank": "bergaya",
+   "src": "made"
+  },
+  {
+   "text": "Anak SMA itu suka bergaya di depan cermin kecil di toko Ayu.",
+   "en": "That high school kid likes to pose in front of the little mirror in Ayu's shop.",
+   "ko": "그 고등학생은 아유 가게의 작은 거울 앞에서 폼 잡는 걸 좋아해요.",
+   "blank": "bergaya",
+   "src": "made"
+  }
+ ],
  "w|bergegas": [
   {
    "text": "Mereka bergegas menuju stasiun kereta.",
@@ -7975,6 +8039,22 @@
    "en": "This problem is huge.",
    "ko": "이 문제는 정말 커.",
    "blank": "besar"
+  }
+ ],
+ "w|besar-besaran": [
+  {
+   "text": "Teater Eko sedang mengadakan promosi besar-besaran untuk drama musikal barunya.",
+   "en": "Eko's theater is running a massive promotion for its new musical.",
+   "ko": "에코의 극단은 새 뮤지컬을 위해 대대적인 홍보를 하고 있어요.",
+   "blank": "besar-besaran",
+   "src": "made"
+  },
+  {
+   "text": "Minimarket di ujung jalan sedang mengadakan diskon besar-besaran, jadi toko Ayu sepi.",
+   "en": "The minimarket at the end of the street is having a huge sale, so Ayu's shop is quiet.",
+   "ko": "길 끝 편의점이 대대적인 할인을 해서 아유의 가게가 한산해요.",
+   "blank": "besar-besaran",
+   "src": "made"
   }
  ],
  "w|beserta": [
@@ -12065,6 +12145,22 @@
    "src": "made"
   }
  ],
+ "w|elegan": [
+  {
+   "text": "Kostum ratu dalam drama itu terlihat sangat elegan di bawah lampu panggung.",
+   "en": "The queen's costume in the play looked very elegant under the stage lights.",
+   "ko": "그 연극의 여왕 의상은 무대 조명 아래에서 아주 우아해 보였어요.",
+   "blank": "elegan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu menata etalase dengan rapi agar tokonya terlihat sedikit lebih elegan.",
+   "en": "Ayu arranges the display case neatly so her shop looks a bit more elegant.",
+   "ko": "아유는 가게가 조금 더 고급스러워 보이도록 진열장을 깔끔하게 정리해요.",
+   "blank": "elegan",
+   "src": "made"
+  }
+ ],
  "w|elektronik": [
   {
    "text": "Musik pengiring drama itu dimainkan dengan alat musik elektronik.",
@@ -13272,6 +13368,22 @@
    "en": "Putri took off her bracelet and ring before putting on gloves.",
    "ko": "푸트리는 장갑을 끼기 전에 팔찌와 반지를 뺐어요.",
    "blank": "gelang",
+   "src": "made"
+  }
+ ],
+ "w|gelanggang": [
+  {
+   "text": "Tahun depan, teater Eko akan pentas di gelanggang olahraga yang lebih besar.",
+   "en": "Next year, Eko's theater will perform in a bigger sports arena.",
+   "ko": "내년에 에코의 극단은 더 큰 체육관에서 공연할 거예요.",
+   "blank": "gelanggang",
+   "src": "made"
+  },
+  {
+   "text": "Toko Ayu ramai setiap ada pertandingan di gelanggang olahraga sebelah.",
+   "en": "Ayu's shop gets busy whenever there's a match at the sports arena next door.",
+   "ko": "옆 체육관에서 경기가 있을 때마다 아유의 가게는 붐벼요.",
+   "blank": "gelanggang",
    "src": "made"
   }
  ],
@@ -15175,6 +15287,22 @@
    "en": "She came along to the market earlier.",
    "ko": "걔가 아까 시장에 같이 갔어.",
    "blank": "ikut"
+  }
+ ],
+ "w|ilahi": [
+  {
+   "text": "Lagu penutup drama itu dinyanyikan dengan suasana yang hampir ilahi.",
+   "en": "The closing song of the play was sung in an almost divine atmosphere.",
+   "ko": "그 연극의 마지막 노래는 거의 신성한 분위기 속에서 불렸어요.",
+   "blank": "ilahi",
+   "src": "made"
+  },
+  {
+   "text": "Nenek pelanggan Ayu percaya rezeki adalah pemberian ilahi.",
+   "en": "An elderly customer of Ayu's believes that one's fortune is a divine gift.",
+   "ko": "아유 가게 단골 할머니는 생계가 신이 주신 선물이라고 믿어요.",
+   "blank": "ilahi",
+   "src": "made"
   }
  ],
  "w|ilegal": [
@@ -17889,6 +18017,22 @@
    "blank": "kapan"
   }
  ],
+ "w|kapasitas": [
+  {
+   "text": "Gedung teater kota itu punya kapasitas sekitar lima ratus penonton.",
+   "en": "The city theater has a capacity of about five hundred spectators.",
+   "ko": "그 시립 극장은 관객을 오백 명쯤 수용할 수 있어요.",
+   "blank": "kapasitas",
+   "src": "made"
+  },
+  {
+   "text": "Kulkas di toko Ayu sudah penuh dan tidak ada kapasitas lagi untuk minuman baru.",
+   "en": "The fridge in Ayu's shop is full and has no more capacity for new drinks.",
+   "ko": "아유 가게의 냉장고는 꽉 차서 새 음료를 넣을 자리가 없어요.",
+   "blank": "kapasitas",
+   "src": "made"
+  }
+ ],
  "w|kapten": [
   {
    "text": "Kapten sudah siap.",
@@ -19191,6 +19335,22 @@
    "en": "The second child has been born.",
    "ko": "둘째가 태어났어.",
    "blank": "kedua"
+  }
+ ],
+ "w|kedudukan": [
+  {
+   "text": "Dalam drama itu, Eko memerankan menteri yang takut kehilangan kedudukan.",
+   "en": "In the play, Eko plays a minister who is afraid of losing his position.",
+   "ko": "그 연극에서 에코는 자리를 잃을까 봐 두려워하는 장관 역을 맡았어요.",
+   "blank": "kedudukan",
+   "src": "made"
+  },
+  {
+   "text": "Toko Ayu punya kedudukan penting bagi warga karena buka sampai tengah malam.",
+   "en": "Ayu's shop has an important place for residents because it's open until midnight.",
+   "ko": "아유의 가게는 자정까지 열어서 주민들에게 중요한 자리를 차지해요.",
+   "blank": "kedudukan",
+   "src": "made"
   }
  ],
  "w|kedutaan": [
@@ -21747,6 +21907,22 @@
    "blank": "ketua"
   }
  ],
+ "w|ketujuh": [
+  {
+   "text": "Malam ini adalah pertunjukan ketujuh Eko sebagai pemeran utama.",
+   "en": "Tonight is Eko's seventh performance as the lead actor.",
+   "ko": "오늘 밤은 에코가 주연으로 서는 일곱 번째 공연이에요.",
+   "blank": "ketujuh",
+   "src": "made"
+  },
+  {
+   "text": "Hari ini adalah hari ketujuh Ayu berjualan tanpa libur.",
+   "en": "Today is Ayu's seventh day selling without a day off.",
+   "ko": "오늘은 아유가 쉬지 않고 장사한 지 일곱째 날이에요.",
+   "blank": "ketujuh",
+   "src": "made"
+  }
+ ],
  "w|keturunan": [
   {
    "text": "Dia adalah keturunan keluarga seniman.",
@@ -22272,6 +22448,22 @@
    "en": "That evening's menu was a combination of Sundanese and Javanese dishes.",
    "ko": "그날 저녁 메뉴는 순다 음식과 자와 음식을 섞은 것이었어요.",
    "blank": "kombinasi",
+   "src": "made"
+  }
+ ],
+ "w|komedi": [
+  {
+   "text": "Eko lebih suka memerankan komedi daripada drama yang serius.",
+   "en": "Eko prefers acting in comedies over serious dramas.",
+   "ko": "에코는 진지한 드라마보다 코미디 연기를 더 좋아해요.",
+   "blank": "komedi",
+   "src": "made"
+  },
+  {
+   "text": "Sambil menjaga toko, Ayu menonton komedi lama di ponselnya.",
+   "en": "While minding the shop, Ayu watches old comedies on her phone.",
+   "ko": "가게를 보면서 아유는 휴대폰으로 옛날 코미디를 봐요.",
+   "blank": "komedi",
    "src": "made"
   }
  ],
@@ -24233,6 +24425,22 @@
    "src": "made"
   }
  ],
+ "w|larangan": [
+  {
+   "text": "Di pintu masuk teater ada larangan memotret selama pertunjukan.",
+   "en": "At the theater entrance there's a ban on taking photos during the show.",
+   "ko": "극장 입구에 공연 중 사진 촬영 금지 안내가 있어요.",
+   "blank": "larangan",
+   "src": "made"
+  },
+  {
+   "text": "Sejak ada larangan kantong plastik, Ayu menjual tas belanja kain.",
+   "en": "Since the plastic bag ban, Ayu has been selling cloth shopping bags.",
+   "ko": "비닐봉지 금지 이후로 아유는 천 장바구니를 팔아요.",
+   "blank": "larangan",
+   "src": "made"
+  }
+ ],
  "w|lari": [
   {
    "text": "Ayo lari ke stasiun.",
@@ -24455,6 +24663,22 @@
    "en": "He became a legend in the sports world.",
    "ko": "그는 스포츠계의 전설이 됐어.",
    "blank": "legenda"
+  }
+ ],
+ "w|legendaris": [
+  {
+   "text": "Eko bangga bisa tampil di panggung legendaris tempat para aktor besar memulai karier.",
+   "en": "Eko is proud to perform on the legendary stage where great actors began their careers.",
+   "ko": "에코는 위대한 배우들이 경력을 시작한 전설적인 무대에 서게 돼서 뿌듯해요.",
+   "blank": "legendaris",
+   "src": "made"
+  },
+  {
+   "text": "Toko Ayu menjual kerupuk dari pabrik legendaris yang sudah berdiri sejak zaman kakeknya.",
+   "en": "Ayu's shop sells crackers from a legendary factory that has been around since her grandfather's time.",
+   "ko": "아유의 가게는 할아버지 시절부터 있던 전설적인 공장의 크루푹을 팔아요.",
+   "blank": "legendaris",
+   "src": "made"
   }
  ],
  "w|leher": [
@@ -25955,6 +26179,22 @@
    "blank": "malang"
   }
  ],
+ "w|malapetaka": [
+  {
+   "text": "Kisah drama itu dimulai dengan malapetaka banjir besar yang menenggelamkan desa.",
+   "en": "The play's story begins with the catastrophe of a great flood that drowned a village.",
+   "ko": "그 연극은 마을을 삼킨 큰 홍수라는 재앙으로 시작해요.",
+   "blank": "malapetaka",
+   "src": "made"
+  },
+  {
+   "text": "Kebakaran pasar tahun lalu menjadi malapetaka bagi banyak pedagang, termasuk Ayu.",
+   "en": "Last year's market fire was a disaster for many traders, including Ayu.",
+   "ko": "작년 시장 화재는 아유를 포함한 많은 상인들에게 재앙이었어요.",
+   "blank": "malapetaka",
+   "src": "made"
+  }
+ ],
  "w|malas": [
   {
    "text": "Poster di dinding klinik menjelaskan bahwa depresi juga bisa membuat orang malas merawat gigi.",
@@ -26203,6 +26443,22 @@
    "en": "He's still just an ordinary person.",
    "ko": "그는 여전히 평범한 사람이야.",
    "blank": "manusia"
+  }
+ ],
+ "w|manusiawi": [
+  {
+   "text": "Penonton terharu melihat sisi manusiawi tokoh raja yang kejam itu.",
+   "en": "The audience was moved to see the human side of the cruel king character.",
+   "ko": "관객들은 잔인한 왕 캐릭터의 인간적인 면을 보고 감동했어요.",
+   "blank": "manusiawi",
+   "src": "made"
+  },
+  {
+   "text": "Ayu selalu memberi utang kepada tetangga yang kesusahan karena menurutnya itu manusiawi.",
+   "en": "Ayu always gives credit to neighbors in need because she thinks it's the humane thing to do.",
+   "ko": "아유는 형편이 어려운 이웃에게 늘 외상을 줘요. 그게 사람다운 일이라고 생각하거든요.",
+   "blank": "manusiawi",
+   "src": "made"
   }
  ],
  "w|marah": [
@@ -28847,6 +29103,22 @@
    "blank": "membiarkan"
   }
  ],
+ "w|membiasakan": [
+  {
+   "text": "Eko membiasakan diri pemanasan suara selama setengah jam sebelum naik panggung.",
+   "en": "Eko has made a habit of warming up his voice for half an hour before going on stage.",
+   "ko": "에코는 무대에 오르기 전에 30분 동안 발성 연습을 하는 습관을 들였어요.",
+   "blank": "membiasakan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu ingin membiasakan anaknya membantu menghitung uang kembalian.",
+   "en": "Ayu wants to get her child used to helping count the change.",
+   "ko": "아유는 아이가 거스름돈 세는 걸 돕는 데 익숙해지게 하고 싶어요.",
+   "blank": "membiasakan",
+   "src": "made"
+  }
+ ],
  "w|membicarakan": [
   {
    "text": "Kami membicarakan rencana itu.",
@@ -29032,6 +29304,22 @@
    "en": "Early in the morning Lestari unpacked a new box of laundry soap.",
    "ko": "레스타리는 아침 일찍 세탁 비누가 든 새 상자를 풀었어요.",
    "blank": "membongkar",
+   "src": "made"
+  }
+ ],
+ "w|memborgol": [
+  {
+   "text": "Dalam adegan penangkapan, polisi memborgol tokoh yang diperankan Eko.",
+   "en": "In the arrest scene, the police handcuff the character Eko plays.",
+   "ko": "체포 장면에서 경찰이 에코가 맡은 인물에게 수갑을 채워요.",
+   "blank": "memborgol",
+   "src": "made"
+  },
+  {
+   "text": "Di berita, Ayu melihat polisi memborgol pencuri yang membobol toko di kampung sebelah.",
+   "en": "On the news, Ayu saw police handcuff the thief who broke into a shop in the next village.",
+   "ko": "뉴스에서 아유는 옆 마을 가게를 턴 도둑에게 경찰이 수갑을 채우는 걸 봤어요.",
+   "blank": "memborgol",
    "src": "made"
   }
  ],
@@ -30928,6 +31216,22 @@
    "en": "This Sunday, Putri wants to plant chilies in pots.",
    "ko": "이번 일요일에 푸트리는 화분에 고추를 심고 싶어 해요.",
    "blank": "menanam",
+   "src": "made"
+  }
+ ],
+ "w|menanamkan": [
+  {
+   "text": "Guru teater Eko berusaha menanamkan disiplin sejak latihan pertama.",
+   "en": "Eko's drama teacher tries to instill discipline from the very first rehearsal.",
+   "ko": "에코의 연극 선생님은 첫 연습부터 규율을 심어 주려고 애써요.",
+   "blank": "menanamkan",
+   "src": "made"
+  },
+  {
+   "text": "Ayah Ayu menanamkan kejujuran dalam berdagang sejak ia masih kecil.",
+   "en": "Ayu's father instilled honesty in trading in her from when she was little.",
+   "ko": "아유의 아버지는 어릴 때부터 장사에서의 정직함을 심어 주셨어요.",
+   "blank": "menanamkan",
    "src": "made"
   }
  ],
@@ -33535,6 +33839,22 @@
    "blank": "mengapa"
   }
  ],
+ "w|mengapung": [
+  {
+   "text": "Dalam adegan laut, perahu kertas dibuat seolah-olah mengapung di atas panggung.",
+   "en": "In the sea scene, a paper boat was made to look as if it were floating on stage.",
+   "ko": "바다 장면에서 종이배가 무대 위에 떠 있는 것처럼 연출됐어요.",
+   "blank": "mengapung",
+   "src": "made"
+  },
+  {
+   "text": "Waktu banjir datang, kardus mi instan di toko Ayu sampai mengapung di lantai.",
+   "en": "When the flood came, the boxes of instant noodles in Ayu's shop were floating on the floor.",
+   "ko": "홍수가 났을 때 아유 가게의 라면 상자들이 바닥에 둥둥 떴어요.",
+   "blank": "mengapung",
+   "src": "made"
+  }
+ ],
  "w|mengarah": [
   {
    "text": "Kapal mengarah ke pelabuhan utara.",
@@ -34905,6 +35225,22 @@
    "en": "Don't delete that important file.",
    "ko": "그 중요한 파일을 지우지 마.",
    "blank": "menghapus"
+  }
+ ],
+ "w|menghapuskan": [
+  {
+   "text": "Sutradara memutuskan untuk menghapuskan satu adegan agar pertunjukan tidak terlalu panjang.",
+   "en": "The director decided to cut one scene so the show wouldn't be too long.",
+   "ko": "감독은 공연이 너무 길지 않도록 장면 하나를 없애기로 했어요.",
+   "blank": "menghapuskan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu berencana menghapuskan sistem utang karena banyak pelanggan lupa membayar.",
+   "en": "Ayu plans to do away with the credit system because many customers forget to pay.",
+   "ko": "손님들이 자꾸 갚는 걸 잊어서 아유는 외상 제도를 없앨 생각이에요.",
+   "blank": "menghapuskan",
+   "src": "made"
   }
  ],
  "w|mengharap": [
@@ -39661,6 +39997,22 @@
    "src": "made"
   }
  ],
+ "w|mikrofon": [
+  {
+   "text": "Sebelum tirai dibuka, kru memasang mikrofon kecil di kerah baju Eko.",
+   "en": "Before the curtain opened, the crew attached a small microphone to Eko's collar.",
+   "ko": "막이 오르기 전에 스태프가 에코의 옷깃에 작은 마이크를 달았어요.",
+   "blank": "mikrofon",
+   "src": "made"
+  },
+  {
+   "text": "Anak-anak suka meminjam mikrofon mainan yang dijual di toko Ayu.",
+   "en": "The kids like to borrow the toy microphone sold in Ayu's shop.",
+   "ko": "아이들은 아유 가게에서 파는 장난감 마이크를 빌려 놀기 좋아해요.",
+   "blank": "mikrofon",
+   "src": "made"
+  }
+ ],
  "w|mil": [
   {
    "text": "Jaraknya dua mil.",
@@ -39687,6 +40039,22 @@
    "en": "Billions of people watched that live broadcast.",
    "ko": "수십억 명이 그 생중계를 봤어.",
    "blank": "Miliar"
+  }
+ ],
+ "w|miliaran": [
+  {
+   "text": "Dalam drama itu, si pedagang serakah bermimpi punya harta miliaran rupiah.",
+   "en": "In the play, the greedy merchant dreams of having billions of rupiah.",
+   "ko": "그 연극에서 욕심 많은 상인은 수십억 루피아의 재산을 꿈꿔요.",
+   "blank": "miliaran",
+   "src": "made"
+  },
+  {
+   "text": "Ayu heran ada orang yang mau menghabiskan miliaran rupiah hanya untuk membangun minimarket.",
+   "en": "Ayu is amazed that people would spend billions of rupiah just to build a minimarket.",
+   "ko": "아유는 편의점 하나 짓는 데 수십억 루피아를 쓰는 사람들이 신기해요.",
+   "blank": "miliaran",
+   "src": "made"
   }
  ],
  "w|milik": [
@@ -40209,6 +40577,22 @@
    "en": "She washed her face before sleeping.",
    "ko": "그는 잠들기 전에 얼굴을 씻었어.",
    "blank": "muka"
+  }
+ ],
+ "w|mukjizat": [
+  {
+   "text": "Kata sutradara, pertunjukan bisa selesai tepat waktu itu sudah mukjizat.",
+   "en": "The director said it was a miracle the show finished on time.",
+   "ko": "감독은 공연이 제시간에 끝난 것만 해도 기적이라고 말했어요.",
+   "blank": "mukjizat",
+   "src": "made"
+  },
+  {
+   "text": "Bisa bertahan di dekat minimarket besar terasa seperti mukjizat bagi toko Ayu.",
+   "en": "Surviving near a big minimarket feels like a miracle for Ayu's shop.",
+   "ko": "큰 편의점 근처에서 버티는 게 아유의 가게에는 기적처럼 느껴져요.",
+   "blank": "mukjizat",
+   "src": "made"
   }
  ],
  "w|mulai": [
@@ -44323,6 +44707,22 @@
    "blank": "pemerintahan"
   }
  ],
+ "w|pemerkosa": [
+  {
+   "text": "Di akhir drama ruang sidang itu, hakim menjatuhkan hukuman berat kepada pemerkosa yang diadili.",
+   "en": "At the end of the courtroom drama, the judge hands a heavy sentence to the rapist on trial.",
+   "ko": "그 법정극 마지막에 판사는 재판받는 강간범에게 중형을 선고해요.",
+   "blank": "pemerkosa",
+   "src": "made"
+  },
+  {
+   "text": "Koran di toko Ayu memberitakan bahwa pemerkosa yang buron itu akhirnya ditangkap polisi.",
+   "en": "The newspaper at Ayu's shop reported that the fugitive rapist was finally caught by police.",
+   "ko": "아유 가게의 신문에 도주 중이던 강간범이 마침내 경찰에 잡혔다는 기사가 났어요.",
+   "blank": "pemerkosa",
+   "src": "made"
+  }
+ ],
  "w|pemicu": [
   {
    "text": "Kata Bu Guru, ejekan kecil bisa jadi pemicu perkelahian antarmurid.",
@@ -44351,6 +44751,22 @@
    "en": "We value every different way of thinking.",
    "ko": "우리는 서로 다른 생각을 모두 존중해.",
    "blank": "pemikiran"
+  }
+ ],
+ "w|pemilih": [
+  {
+   "text": "Drama satire itu menyindir politikus yang hanya mendekati pemilih menjelang pemilu.",
+   "en": "The satirical play mocks politicians who only approach voters right before elections.",
+   "ko": "그 풍자극은 선거 직전에만 유권자에게 다가가는 정치인을 비꼬아요.",
+   "blank": "pemilih",
+   "src": "made"
+  },
+  {
+   "text": "Menjelang pemilu, para pemilih sering membicarakan calon kepala desa di toko Ayu.",
+   "en": "Before the election, voters often discuss the village head candidates in Ayu's shop.",
+   "ko": "선거를 앞두고 유권자들은 아유의 가게에서 이장 후보들 이야기를 자주 해요.",
+   "blank": "pemilih",
+   "src": "made"
   }
  ],
  "w|pemilihan": [
@@ -44409,6 +44825,22 @@
    "en": "We need a new leader.",
    "ko": "새 리더가 필요해.",
    "blank": "pemimpin"
+  }
+ ],
+ "w|pemindahan": [
+  {
+   "text": "Pergantian babak membutuhkan pemindahan dekorasi yang cepat oleh kru panggung.",
+   "en": "Changing acts requires the stage crew to move the sets quickly.",
+   "ko": "막이 바뀔 때는 무대 스태프가 세트를 빨리 옮겨야 해요.",
+   "blank": "pemindahan",
+   "src": "made"
+  },
+  {
+   "text": "Penjualan Ayu naik setelah pemindahan rak minuman ke dekat pintu.",
+   "en": "Ayu's sales went up after the drinks shelf was moved near the door.",
+   "ko": "음료 진열대를 문 가까이 옮긴 뒤 아유의 매출이 올랐어요.",
+   "blank": "pemindahan",
+   "src": "made"
   }
  ],
  "w|pemotongan": [
@@ -45347,6 +45779,22 @@
    "blank": "Pengaman"
   }
  ],
+ "w|pengamanan": [
+  {
+   "text": "Untuk pentas besar itu, teater menambah pengamanan di setiap pintu masuk.",
+   "en": "For that big show, the theater increased security at every entrance.",
+   "ko": "그 큰 공연을 위해 극장은 출입구마다 경비를 늘렸어요.",
+   "blank": "pengamanan",
+   "src": "made"
+  },
+  {
+   "text": "Sejak ada kamera, toko Ayu tidak perlu pengamanan tambahan di malam hari.",
+   "en": "Since the cameras were installed, Ayu's shop doesn't need extra security at night.",
+   "ko": "카메라를 단 뒤로 아유의 가게는 밤에 경비를 더 둘 필요가 없어요.",
+   "blank": "pengamanan",
+   "src": "made"
+  }
+ ],
  "w|pengamatan": [
   {
    "text": "Menurut pengamatan Budi, pembaca lebih suka berita pendek di ponsel.",
@@ -45527,6 +45975,22 @@
    "en": "Small children need adult supervision.",
    "ko": "어린아이는 어른의 감독이 필요해.",
    "blank": "pengawasan"
+  }
+ ],
+ "w|pengeboman": [
+  {
+   "text": "Drama sejarah itu menceritakan kehidupan warga kota setelah pengeboman saat perang.",
+   "en": "The historical play tells of the townspeople's lives after the bombing during the war.",
+   "ko": "그 역사극은 전쟁 중 폭격 이후 마을 사람들의 삶을 이야기해요.",
+   "blank": "pengeboman",
+   "src": "made"
+  },
+  {
+   "text": "Ayu masih ingat cerita kakeknya tentang pengeboman kota pada masa perang.",
+   "en": "Ayu still remembers her grandfather's stories about the bombing of the city during the war.",
+   "ko": "아유는 전쟁 때 도시가 폭격당했다는 할아버지 이야기를 아직 기억해요.",
+   "blank": "pengeboman",
+   "src": "made"
   }
  ],
  "w|pengecualian": [
@@ -46795,6 +47259,22 @@
    "blank": "penyelidikan"
   }
  ],
+ "w|penyelundup": [
+  {
+   "text": "Dalam drama itu, Eko berperan sebagai penyelundup yang membawa barang lewat pelabuhan.",
+   "en": "In the play, Eko plays a smuggler who brings goods through the port.",
+   "ko": "그 연극에서 에코는 항구로 물건을 몰래 들여오는 밀수꾼 역을 해요.",
+   "blank": "penyelundup",
+   "src": "made"
+  },
+  {
+   "text": "Berita di televisi toko Ayu melaporkan penyelundup narkoba yang tertangkap di pelabuhan.",
+   "en": "The news on the TV in Ayu's shop reported a drug smuggler caught at the port.",
+   "ko": "아유 가게 TV 뉴스에서 항구에서 붙잡힌 마약 밀수범 소식을 전했어요.",
+   "blank": "penyelundup",
+   "src": "made"
+  }
+ ],
  "w|penyembuhan": [
   {
    "text": "Setelah cedera, Bayu menjalani proses penyembuhan selama dua bulan.",
@@ -46870,6 +47350,22 @@
    "en": "Rina didn't want any regrets, so she tested the feature once more.",
    "ko": "리나는 후회하고 싶지 않아서 그 기능을 한 번 더 시험했어요.",
    "blank": "penyesalan",
+   "src": "made"
+  }
+ ],
+ "w|penyidik": [
+  {
+   "text": "Eko memerankan seorang penyidik yang sabar dalam drama detektif itu.",
+   "en": "Eko plays a patient investigator in the detective play.",
+   "ko": "에코는 그 탐정극에서 침착한 수사관 역을 맡았어요.",
+   "blank": "penyidik",
+   "src": "made"
+  },
+  {
+   "text": "Seorang penyidik datang ke toko Ayu untuk melihat rekaman kamera.",
+   "en": "An investigator came to Ayu's shop to look at the camera footage.",
+   "ko": "수사관 한 명이 카메라 영상을 보러 아유의 가게에 왔어요.",
+   "blank": "penyidik",
    "src": "made"
   }
  ],
@@ -48947,6 +49443,22 @@
    "en": "She works at a new company.",
    "ko": "새 회사에서 일해.",
    "blank": "perusahaan"
+  }
+ ],
+ "w|perusak": [
+  {
+   "text": "Satpam teater menangkap perusak kursi penonton setelah pertunjukan malam.",
+   "en": "The theater security guard caught the person who vandalized the audience seats after the evening show.",
+   "ko": "극장 경비원이 저녁 공연 뒤 관객석을 망가뜨린 사람을 붙잡았어요.",
+   "blank": "perusak",
+   "src": "made"
+  },
+  {
+   "text": "Kamera toko merekam perusak spanduk di depan warung Ayu.",
+   "en": "The shop camera recorded the person who damaged the banner in front of Ayu's store.",
+   "ko": "가게 카메라에 아유네 가게 앞 현수막을 망가뜨린 사람이 찍혔어요.",
+   "blank": "perusak",
+   "src": "made"
   }
  ],
  "w|perut": [
@@ -51861,6 +52373,22 @@
    "blank": "Restoran"
   }
  ],
+ "w|restu": [
+  {
+   "text": "Sebelum pentas perdana, Eko meminta restu orang tuanya.",
+   "en": "Before the premiere, Eko asked for his parents' blessing.",
+   "ko": "첫 공연 전에 에코는 부모님께 축복을 청했어요.",
+   "blank": "restu",
+   "src": "made"
+  },
+  {
+   "text": "Ayu membuka toko kecil itu dengan restu ibunya.",
+   "en": "Ayu opened the little shop with her mother's blessing.",
+   "ko": "아유는 엄마의 허락과 응원 속에 그 작은 가게를 열었어요.",
+   "blank": "restu",
+   "src": "made"
+  }
+ ],
  "w|retak": [
   {
    "text": "Kaca jendela kelas Budi retak terkena bola kemarin sore.",
@@ -51906,6 +52434,22 @@
    "en": "Paying by QR code brought a small revolution to Rina's market.",
    "ko": "QR 결제가 리나네 시장에 작은 혁명을 가져왔어요.",
    "blank": "revolusi",
+   "src": "made"
+  }
+ ],
+ "w|revolusioner": [
+  {
+   "text": "Para kritikus menyebut tata panggung drama itu revolusioner.",
+   "en": "Critics called the play's stage design revolutionary.",
+   "ko": "비평가들은 그 연극의 무대 연출을 혁명적이라고 했어요.",
+   "blank": "revolusioner",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Ayu, sistem bayar lewat ponsel adalah perubahan revolusioner untuk toko kecil.",
+   "en": "For Ayu, paying by phone is a revolutionary change for small shops.",
+   "ko": "아유에게 휴대폰 결제는 작은 가게에 혁명적인 변화예요.",
+   "blank": "revolusioner",
    "src": "made"
   }
  ],
@@ -52847,6 +53391,22 @@
    "blank": "sama-sama"
   }
  ],
+ "w|samaran": [
+  {
+   "text": "Di babak kedua, Eko muncul dengan nama samaran sebagai pedagang kain.",
+   "en": "In the second act, Eko appears under an assumed name as a cloth merchant.",
+   "ko": "2막에서 에코는 가명을 쓴 옷감 장수로 등장해요.",
+   "blank": "samaran",
+   "src": "made"
+  },
+  {
+   "text": "Pelanggan setia Ayu memakai nama samaran saat memesan lewat grup chat.",
+   "en": "Ayu's loyal customer uses a nickname when ordering through the group chat.",
+   "ko": "아유의 단골손님은 단톡방에서 주문할 때 별명을 써요.",
+   "blank": "samaran",
+   "src": "made"
+  }
+ ],
  "w|sambil": [
   {
    "text": "Dia belajar sambil mendengarkan musik.",
@@ -53589,6 +54149,22 @@
    "en": "On the right side there's an exit.",
    "ko": "오른쪽에 출구가 있어.",
    "blank": "Sebelah"
+  }
+ ],
+ "w|sebelas": [
+  {
+   "text": "Latihan malam itu baru selesai pukul sebelas.",
+   "en": "That night's rehearsal didn't finish until eleven.",
+   "ko": "그날 밤 연습은 열한 시가 되어서야 끝났어요.",
+   "blank": "sebelas",
+   "src": "made"
+  },
+  {
+   "text": "Toko Ayu tutup setiap malam pukul sebelas.",
+   "en": "Ayu's shop closes every night at eleven.",
+   "ko": "아유의 가게는 매일 밤 열한 시에 문을 닫아요.",
+   "blank": "sebelas",
+   "src": "made"
   }
  ],
  "w|sebelum": [
@@ -55618,6 +56194,22 @@
    "en": "Dewi and her friend argued over something trivial: who would sit by the window.",
    "ko": "데위와 친구는 누가 창가에 앉을지 같은 사소한 일로 다퉜어요.",
    "blank": "sepele",
+   "src": "made"
+  }
+ ],
+ "w|sependapat": [
+  {
+   "text": "Eko tidak sependapat dengan sutradara soal cara menutup babak terakhir.",
+   "en": "Eko doesn't agree with the director on how to end the final act.",
+   "ko": "에코는 마지막 막을 끝내는 방식에 대해 감독과 생각이 달라요.",
+   "blank": "sependapat",
+   "src": "made"
+  },
+  {
+   "text": "Ayu sependapat dengan suaminya bahwa harga beras tidak boleh dinaikkan dulu.",
+   "en": "Ayu agrees with her husband that the price of rice shouldn't be raised yet.",
+   "ko": "아유는 아직 쌀값을 올리면 안 된다는 남편 생각에 동의해요.",
+   "blank": "sependapat",
    "src": "made"
   }
  ],
@@ -61089,6 +61681,22 @@
    "src": "made"
   }
  ],
+ "w|terpikirkan": [
+  {
+   "text": "Akhir cerita yang mengejutkan itu tidak pernah terpikirkan oleh Eko sebelumnya.",
+   "en": "Eko had never thought of that surprising ending before.",
+   "ko": "그 놀라운 결말은 에코가 전에는 생각도 못 했던 거예요.",
+   "blank": "terpikirkan",
+   "src": "made"
+  },
+  {
+   "text": "Ide berjualan es kopi tidak pernah terpikirkan oleh Ayu sebelum anaknya mengusulkan.",
+   "en": "The idea of selling iced coffee never occurred to Ayu until her child suggested it.",
+   "ko": "아이스커피를 팔 생각은 아이가 제안하기 전까지 아유는 해 본 적이 없어요.",
+   "blank": "terpikirkan",
+   "src": "made"
+  }
+ ],
  "w|terpilih": [
   {
    "text": "Dia terpilih sebagai ketua kelas.",
@@ -61951,6 +62559,22 @@
    "blank": "Tingkat"
   }
  ],
+ "w|tingkatan": [
+  {
+   "text": "Drama itu menggambarkan tingkatan sosial di sebuah kerajaan kuno.",
+   "en": "The play depicts the social hierarchy in an ancient kingdom.",
+   "ko": "그 연극은 고대 왕국의 사회 계층을 그려요.",
+   "blank": "tingkatan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu menyusun beras di rak berdasarkan tingkatan harga, dari yang termurah.",
+   "en": "Ayu arranges the rice on the shelf by price level, starting with the cheapest.",
+   "ko": "아유는 선반에 쌀을 가장 싼 것부터 가격대별로 정리해요.",
+   "blank": "tingkatan",
+   "src": "made"
+  }
+ ],
  "w|tinju": [
   {
    "text": "Tinju adalah olahraga yang butuh latihan keras.",
@@ -62263,6 +62887,22 @@
    "en": "He held a stick while climbing the hill.",
    "ko": "그는 언덕을 오를 때 막대를 잡았어.",
    "blank": "tongkat"
+  }
+ ],
+ "w|tontonan": [
+  {
+   "text": "Drama itu menjadi tontonan favorit keluarga selama libur sekolah.",
+   "en": "The play became the family's favorite show during the school holidays.",
+   "ko": "그 연극은 방학 동안 가족들이 가장 즐겨 보는 공연이 됐어요.",
+   "blank": "tontonan",
+   "src": "made"
+  },
+  {
+   "text": "Pertengkaran dua pelanggan di depan toko Ayu jadi tontonan warga sekitar.",
+   "en": "An argument between two customers in front of Ayu's shop became a spectacle for the neighbors.",
+   "ko": "아유 가게 앞에서 손님 둘이 다툰 게 동네 사람들의 구경거리가 됐어요.",
+   "blank": "tontonan",
+   "src": "made"
   }
  ],
  "w|topeng": [

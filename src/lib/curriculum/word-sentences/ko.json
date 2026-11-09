@@ -183,6 +183,22 @@
    "blank": "가능한"
   }
  ],
+ "w|가능하면": [
+  {
+   "text": "과일 가게 아주머니는 민수에게 가능하면 복숭아를 오늘 안에 먹으라고 했어요.",
+   "en": "The woman at the fruit stand told Minsu to eat the peaches today if possible.",
+   "ko": "과일 가게 아주머니는 민수에게 가능하면 복숭아를 오늘 안에 먹으라고 했어요.",
+   "blank": "가능하면",
+   "src": "made"
+  },
+  {
+   "text": "트레이너는 지영에게 가능하면 운동 전에 스트레칭을 꼭 하라고 했어요.",
+   "en": "The trainer told Jiyoung to be sure to stretch before working out if possible.",
+   "ko": "트레이너는 지영에게 가능하면 운동 전에 스트레칭을 꼭 하라고 했어요.",
+   "blank": "가능하면",
+   "src": "made"
+  }
+ ],
  "w|가다": [
   {
    "text": "지하철로 갈게.",
@@ -1665,6 +1681,22 @@
    "en": "Don't conceal the truth.",
    "ko": "진실을 감추지 마.",
    "blank": "감추지"
+  }
+ ],
+ "w|감칠맛": [
+  {
+   "text": "건어물 가게 주인은 이 멸치로 국물을 내면 감칠맛이 난다고 민수에게 말했어요.",
+   "en": "The dried fish shop owner told Minsu that broth made with these anchovies has a rich savory taste.",
+   "ko": "건어물 가게 주인은 이 멸치로 국물을 내면 감칠맛이 난다고 민수에게 말했어요.",
+   "blank": "감칠맛이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 삶은 닭가슴살에 간장을 살짝 뿌리면 감칠맛이 산다는 걸 알았어요.",
+   "en": "Jiyoung learned that a little soy sauce on boiled chicken breast brings out a rich savory taste.",
+   "ko": "지영은 삶은 닭가슴살에 간장을 살짝 뿌리면 감칠맛이 산다는 걸 알았어요.",
+   "blank": "감칠맛이",
+   "src": "made"
   }
  ],
  "w|감히": [
@@ -4749,6 +4781,22 @@
    "en": "I couldn't keep talking, so I left.",
    "ko": "대화를 계속하다 못해 자리를 떴어.",
    "blank": "계속하다"
+  }
+ ],
+ "w|계속해서": [
+  {
+   "text": "채소값이 계속해서 올라서 민수의 장바구니가 점점 가벼워졌어요.",
+   "en": "Vegetable prices kept rising, so Minsu's shopping basket got lighter and lighter.",
+   "ko": "채소값이 계속해서 올라서 민수의 장바구니가 점점 가벼워졌어요.",
+   "blank": "계속해서",
+   "src": "made"
+  },
+  {
+   "text": "지영은 숨이 차도 계속해서 러닝머신 위를 달렸어요.",
+   "en": "Even though she was out of breath, Jiyoung kept running on the treadmill.",
+   "ko": "지영은 숨이 차도 계속해서 러닝머신 위를 달렸어요.",
+   "blank": "계속해서",
+   "src": "made"
   }
  ],
  "w|계시다": [
@@ -9357,6 +9405,22 @@
    "blank": "그러면"
   }
  ],
+ "w|그러면서": [
+  {
+   "text": "떡집 사장님은 웃으며 떡을 하나 더 얹어 주셨고, 그러면서 민수에게 단골이 되라고 하셨어요.",
+   "en": "The rice cake shop owner smiled and added an extra rice cake, telling Minsu at the same time to become a regular.",
+   "ko": "떡집 사장님은 웃으며 떡을 하나 더 얹어 주셨고, 그러면서 민수에게 단골이 되라고 하셨어요.",
+   "blank": "그러면서",
+   "src": "made"
+  },
+  {
+   "text": "트레이너는 지영의 자세를 고쳐 주었고, 그러면서 무게를 조금 줄이라고 했어요.",
+   "en": "The trainer corrected Jiyoung's form and, while doing so, told her to reduce the weight a little.",
+   "ko": "트레이너는 지영의 자세를 고쳐 주었고, 그러면서 무게를 조금 줄이라고 했어요.",
+   "blank": "그러면서",
+   "src": "made"
+  }
+ ],
  "w|그러므로": [
   {
    "text": "비가 와. 그러므로 우산 챙겨.",
@@ -11217,6 +11281,22 @@
    "en": "I checked the morning temperature and picked clothes.",
    "ko": "아침 기온을 확인하고 옷을 골랐어.",
    "blank": "기온을"
+  }
+ ],
+ "w|기왕": [
+  {
+   "text": "민수는 기왕 시장에 나온 김에 반찬거리도 넉넉히 샀어요.",
+   "en": "Since he was already out at the market, Minsu bought plenty of ingredients for side dishes too.",
+   "ko": "민수는 기왕 시장에 나온 김에 반찬거리도 넉넉히 샀어요.",
+   "blank": "기왕",
+   "src": "made"
+  },
+  {
+   "text": "지영은 기왕 헬스장에 등록한 이상 일 년은 꾸준히 다니기로 했어요.",
+   "en": "Since she had signed up for the gym anyway, Jiyoung decided to go regularly for a year.",
+   "ko": "지영은 기왕 헬스장에 등록한 이상 일 년은 꾸준히 다니기로 했어요.",
+   "blank": "기왕",
+   "src": "made"
   }
  ],
  "w|기운": [
@@ -14173,6 +14253,22 @@
    "src": "made"
   }
  ],
+ "w|냉동식품": [
+  {
+   "text": "민수는 오늘만큼은 냉동식품 대신 시장에서 손으로 빚은 만두를 샀어요.",
+   "en": "Just for today, Minsu bought handmade dumplings at the market instead of frozen food.",
+   "ko": "민수는 오늘만큼은 냉동식품 대신 시장에서 손으로 빚은 만두를 샀어요.",
+   "blank": "냉동식품",
+   "src": "made"
+  },
+  {
+   "text": "지영은 바쁜 날엔 냉동식품을 데워 먹고 헬스장에 가요.",
+   "en": "On busy days, Jiyoung heats up frozen food, eats, and then goes to the gym.",
+   "ko": "지영은 바쁜 날엔 냉동식품을 데워 먹고 헬스장에 가요.",
+   "blank": "냉동식품을",
+   "src": "made"
+  }
+ ],
  "w|냉동실": [
   {
    "text": "공사 중에는 요리를 못 해서 냉동실이 냉동식품으로 가득 찼어요.",
@@ -16329,6 +16425,22 @@
    "blank": "다시"
   }
  ],
+ "w|다시금": [
+  {
+   "text": "할머니가 직접 담근 김치를 맛보고 민수는 엄마 손맛을 다시금 떠올렸어요.",
+   "en": "Tasting the kimchi the grandmother had made herself, Minsu was once again reminded of his mother's cooking.",
+   "ko": "할머니가 직접 담근 김치를 맛보고 민수는 엄마 손맛을 다시금 떠올렸어요.",
+   "blank": "다시금",
+   "src": "made"
+  },
+  {
+   "text": "거울 속 달라진 몸을 보고 지영은 운동할 의욕이 다시금 생겼어요.",
+   "en": "Seeing her changed body in the mirror, Jiyoung felt motivated to work out once again.",
+   "ko": "거울 속 달라진 몸을 보고 지영은 운동할 의욕이 다시금 생겼어요.",
+   "blank": "다시금",
+   "src": "made"
+  }
+ ],
  "w|다시마": [
   {
    "text": "현우는 빵에 감칠맛을 더하려고 다시마로 우린 물을 써 봤어요.",
@@ -16618,6 +16730,38 @@
    "en": "Jiyoung loves the neighborhood library made by renovating an old detached house.",
    "ko": "지영은 오래된 단독주택을 고쳐서 만든 동네 도서관을 좋아해요.",
    "blank": "단독주택을",
+   "src": "made"
+  }
+ ],
+ "w|단맛": [
+  {
+   "text": "과일 가게 아저씨는 민수에게 이 참외가 단맛이 강하다고 자랑했어요.",
+   "en": "The man at the fruit stand boasted to Minsu that this melon is very sweet.",
+   "ko": "과일 가게 아저씨는 민수에게 이 참외가 단맛이 강하다고 자랑했어요.",
+   "blank": "단맛이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 단맛이 당길 때 과자 대신 바나나를 먹어요.",
+   "en": "When Jiyoung craves something sweet, she eats a banana instead of snacks.",
+   "ko": "지영은 단맛이 당길 때 과자 대신 바나나를 먹어요.",
+   "blank": "단맛이",
+   "src": "made"
+  }
+ ],
+ "w|단백질": [
+  {
+   "text": "민수는 단백질이 풍부한 두부를 두 모 샀어요.",
+   "en": "Minsu bought two blocks of protein-rich tofu.",
+   "ko": "민수는 단백질이 풍부한 두부를 두 모 샀어요.",
+   "blank": "단백질이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 근육을 키우려고 끼니마다 단백질을 챙겨 먹어요.",
+   "en": "To build muscle, Jiyoung makes sure to eat protein at every meal.",
+   "ko": "지영은 근육을 키우려고 끼니마다 단백질을 챙겨 먹어요.",
+   "blank": "단백질을",
    "src": "made"
   }
  ],
@@ -20475,6 +20619,22 @@
    "blank": "두부가"
   }
  ],
+ "w|두유": [
+  {
+   "text": "민수는 아침 대신 마실 두유를 한 상자 샀어요.",
+   "en": "Minsu bought a box of soy milk to drink instead of breakfast.",
+   "ko": "민수는 아침 대신 마실 두유를 한 상자 샀어요.",
+   "blank": "두유를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 우유를 마시면 배가 아파서 두유로 바꿨어요.",
+   "en": "Milk upsets Jiyoung's stomach, so she switched to soy milk.",
+   "ko": "지영은 우유를 마시면 배가 아파서 두유로 바꿨어요.",
+   "blank": "두유로",
+   "src": "made"
+  }
+ ],
  "w|두통": [
   {
    "text": "두통이 심해.",
@@ -24119,6 +24279,22 @@
    "blank": "매우"
   }
  ],
+ "w|매운맛": [
+  {
+   "text": "떡볶이 가게에서 민수는 매운맛을 한 단계 낮춰 달라고 했어요.",
+   "en": "At the tteokbokki stall, Minsu asked them to make it one level less spicy.",
+   "ko": "떡볶이 가게에서 민수는 매운맛을 한 단계 낮춰 달라고 했어요.",
+   "blank": "매운맛을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 운동을 마치고 매운맛 닭가슴살을 데워 먹었어요.",
+   "en": "After finishing her workout, Jiyoung heated up some spicy chicken breast and ate it.",
+   "ko": "지영은 운동을 마치고 매운맛 닭가슴살을 데워 먹었어요.",
+   "blank": "매운맛",
+   "src": "made"
+  }
+ ],
  "w|매일": [
   {
    "text": "저는 매일 운동해요.",
@@ -24338,6 +24514,22 @@
    "en": "At the music school, Seoyeon formed a close friendship with a friend who plays violin.",
    "ko": "서연은 학원에서 바이올린 하는 친구와 깊은 우정을 맺었어요.",
    "blank": "맺었어요",
+   "src": "made"
+  }
+ ],
+ "w|머그잔": [
+  {
+   "text": "민수는 그릇 가게에서 어머니께 드릴 머그잔을 하나 골랐어요.",
+   "en": "At the dishware shop, Minsu picked out a mug for his mother.",
+   "ko": "민수는 그릇 가게에서 어머니께 드릴 머그잔을 하나 골랐어요.",
+   "blank": "머그잔을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 커다란 머그잔에 물을 담아 와서 운동하는 틈틈이 마셔요.",
+   "en": "Jiyoung brings water in a big mug and sips it between exercises.",
+   "ko": "지영은 커다란 머그잔에 물을 담아 와서 운동하는 틈틈이 마셔요.",
+   "blank": "머그잔에",
    "src": "made"
   }
  ],
@@ -35418,6 +35610,22 @@
    "blank": "사이에"
   }
  ],
+ "w|사이다": [
+  {
+   "text": "순대를 급하게 먹던 민수는 목이 막혀서 사이다를 한 병 시켰어요.",
+   "en": "Eating sundae too fast, Minsu got food stuck in his throat and ordered a bottle of lemon-lime soda.",
+   "ko": "순대를 급하게 먹던 민수는 목이 막혀서 사이다를 한 병 시켰어요.",
+   "blank": "사이다를",
+   "src": "made"
+  },
+  {
+   "text": "운동하고 나니 시원한 사이다가 당겼지만 지영은 꾹 참았어요.",
+   "en": "After working out, Jiyoung craved a cold lemon-lime soda, but she held back.",
+   "ko": "운동하고 나니 시원한 사이다가 당겼지만 지영은 꾹 참았어요.",
+   "blank": "사이다가",
+   "src": "made"
+  }
+ ],
  "w|사이즈": [
   {
    "text": "옷 사이즈를 한 치수 크게 골랐어.",
@@ -36941,6 +37149,38 @@
    "en": "From around the first light of dawn, a line formed in front of the store for the limited edition.",
    "ko": "새벽빛이 밝아 올 무렵부터 백화점 앞에 한정판을 사려는 줄이 생겼어요.",
    "blank": "새벽빛이",
+   "src": "made"
+  }
+ ],
+ "w|새삼": [
+  {
+   "text": "민수는 새벽부터 일하는 시장 사람들의 부지런함에 새삼 놀랐어요.",
+   "en": "Minsu was struck anew by how hardworking the market people are, starting work before dawn.",
+   "ko": "민수는 새벽부터 일하는 시장 사람들의 부지런함에 새삼 놀랐어요.",
+   "blank": "새삼",
+   "src": "made"
+  },
+  {
+   "text": "지영은 한 달 만에 체력이 이렇게 좋아진 게 새삼 신기했어요.",
+   "en": "Jiyoung found it amazing all over again that her stamina had improved so much in just a month.",
+   "ko": "지영은 한 달 만에 체력이 이렇게 좋아진 게 새삼 신기했어요.",
+   "blank": "새삼",
+   "src": "made"
+  }
+ ],
+ "w|새삼스럽게": [
+  {
+   "text": "오랜만에 찾은 시장이 민수에게는 새삼스럽게 정겹게 느껴졌어요.",
+   "en": "The market he hadn't visited in a long time felt unexpectedly warm and familiar to Minsu.",
+   "ko": "오랜만에 찾은 시장이 민수에게는 새삼스럽게 정겹게 느껴졌어요.",
+   "blank": "새삼스럽게",
+   "src": "made"
+  },
+  {
+   "text": "늘 같이 운동해 주는 친구가 지영은 새삼스럽게 고마웠어요.",
+   "en": "Jiyoung felt newly grateful to the friend who always works out with her.",
+   "ko": "늘 같이 운동해 주는 친구가 지영은 새삼스럽게 고마웠어요.",
+   "blank": "새삼스럽게",
    "src": "made"
   }
  ],
@@ -38479,6 +38719,22 @@
    "en": "The director praised the actor's subtle facial acting.",
    "ko": "감독은 배우의 섬세한 표정 연기를 칭찬했어요.",
    "blank": "섬세한",
+   "src": "made"
+  }
+ ],
+ "w|섬유질": [
+  {
+   "text": "민수는 섬유질이 많은 고구마를 한 봉지 담았어요.",
+   "en": "Minsu put a bag of fiber-rich sweet potatoes in his basket.",
+   "ko": "민수는 섬유질이 많은 고구마를 한 봉지 담았어요.",
+   "blank": "섬유질이",
+   "src": "made"
+  },
+  {
+   "text": "섬유질이 많은 채소를 챙겨 먹으니 지영은 속이 한결 편해졌어요.",
+   "en": "Since she started eating fiber-rich vegetables, Jiyoung's stomach has felt much better.",
+   "ko": "섬유질이 많은 채소를 챙겨 먹으니 지영은 속이 한결 편해졌어요.",
+   "blank": "섬유질이",
    "src": "made"
   }
  ],
@@ -41396,6 +41652,22 @@
    "blank": "술을"
   }
  ],
+ "w|술자리": [
+  {
+   "text": "민수는 시장 골목 포장마차에서 오랜만에 친구들과 술자리를 가졌어요.",
+   "en": "Minsu had drinks with his friends for the first time in a while at a street stall in the market alley.",
+   "ko": "민수는 시장 골목 포장마차에서 오랜만에 친구들과 술자리를 가졌어요.",
+   "blank": "술자리를",
+   "src": "made"
+  },
+  {
+   "text": "다음 날 아침 운동이 있어서 지영은 술자리에서 일찍 일어났어요.",
+   "en": "Jiyoung had a workout the next morning, so she left the drinking party early.",
+   "ko": "다음 날 아침 운동이 있어서 지영은 술자리에서 일찍 일어났어요.",
+   "blank": "술자리에서",
+   "src": "made"
+  }
+ ],
  "w|술집": [
   {
    "text": "골목에 작은 술집이 있어.",
@@ -42658,6 +42930,22 @@
    "blank": "시험하는"
   }
  ],
+ "w|식감": [
+  {
+   "text": "민수는 갓 튀긴 어묵의 쫄깃한 식감이 마음에 들었어요.",
+   "en": "Minsu liked the chewy texture of the freshly fried fish cake.",
+   "ko": "민수는 갓 튀긴 어묵의 쫄깃한 식감이 마음에 들었어요.",
+   "blank": "식감이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 퍽퍽한 식감 때문에 원래 닭가슴살을 싫어했어요.",
+   "en": "Jiyoung originally disliked chicken breast because of its dry texture.",
+   "ko": "지영은 퍽퍽한 식감 때문에 원래 닭가슴살을 싫어했어요.",
+   "blank": "식감",
+   "src": "made"
+  }
+ ],
  "w|식구": [
   {
    "text": "식구가 모두 건강해.",
@@ -43059,6 +43347,22 @@
    "en": "Daeun trusts her high school friends more than anyone.",
    "ko": "다은은 고등학교 친구들을 누구보다 신뢰해요.",
    "blank": "신뢰해요",
+   "src": "made"
+  }
+ ],
+ "w|신맛": [
+  {
+   "text": "민수는 신맛이 덜한 귤로 골라 달라고 부탁했어요.",
+   "en": "Minsu asked them to pick out tangerines that were less sour.",
+   "ko": "민수는 신맛이 덜한 귤로 골라 달라고 부탁했어요.",
+   "blank": "신맛이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 레몬의 신맛을 좋아해서 물에 레몬 조각을 띄워 마셔요.",
+   "en": "Jiyoung likes the sourness of lemon, so she drinks water with lemon slices floating in it.",
+   "ko": "지영은 레몬의 신맛을 좋아해서 물에 레몬 조각을 띄워 마셔요.",
+   "blank": "신맛을",
    "src": "made"
   }
  ],
@@ -44620,6 +44924,22 @@
    "src": "krdict"
   }
  ],
+ "w|쓴맛": [
+  {
+   "text": "민수는 도라지의 쓴맛을 빼는 방법을 상인에게 물어봤어요.",
+   "en": "Minsu asked the vendor how to get rid of the bitterness of bellflower root.",
+   "ko": "민수는 도라지의 쓴맛을 빼는 방법을 상인에게 물어봤어요.",
+   "blank": "쓴맛을",
+   "src": "made"
+  },
+  {
+   "text": "처음 먹어 본 보충제는 쓴맛이 강해서 지영이 얼굴을 찡그렸어요.",
+   "en": "The supplement Jiyoung tried for the first time was so bitter that she grimaced.",
+   "ko": "처음 먹어 본 보충제는 쓴맛이 강해서 지영이 얼굴을 찡그렸어요.",
+   "blank": "쓴맛이",
+   "src": "made"
+  }
+ ],
  "w|쓸데없다": [
   {
    "text": "쓸데없는 걱정은 그만해.",
@@ -45142,6 +45462,22 @@
    "en": "That's probably right.",
    "ko": "아마도 그게 맞을 거야.",
    "blank": "아마도"
+  }
+ ],
+ "w|아몬드": [
+  {
+   "text": "민수는 견과류 가게에서 구운 아몬드를 한 봉지 샀어요.",
+   "en": "Minsu bought a bag of roasted almonds at the nut shop.",
+   "ko": "민수는 견과류 가게에서 구운 아몬드를 한 봉지 샀어요.",
+   "blank": "아몬드를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 운동 전에 배가 고프면 아몬드를 한 줌 먹어요.",
+   "en": "When Jiyoung is hungry before a workout, she eats a handful of almonds.",
+   "ko": "지영은 운동 전에 배가 고프면 아몬드를 한 줌 먹어요.",
+   "blank": "아몬드를",
+   "src": "made"
   }
  ],
  "w|아무": [
@@ -45983,6 +46319,22 @@
    "en": "This hotel's Wi-Fi was stable, so it was good for Yuna to work.",
    "ko": "이 호텔은 와이파이가 안정적이어서 유나가 일하기 좋았어요.",
    "blank": "안정적이어서",
+   "src": "made"
+  }
+ ],
+ "w|안주": [
+  {
+   "text": "민수는 저녁에 친구들과 먹을 안주로 족발을 샀어요.",
+   "en": "Minsu bought jokbal as a snack to go with drinks with his friends that evening.",
+   "ko": "민수는 저녁에 친구들과 먹을 안주로 족발을 샀어요.",
+   "blank": "안주로",
+   "src": "made"
+  },
+  {
+   "text": "회식 자리에서 지영은 튀김 안주를 피하고 샐러드만 먹었어요.",
+   "en": "At the company dinner, Jiyoung avoided the fried snacks and ate only salad.",
+   "ko": "회식 자리에서 지영은 튀김 안주를 피하고 샐러드만 먹었어요.",
+   "blank": "안주를",
    "src": "made"
   }
  ],
@@ -48012,6 +48364,22 @@
    "blank": "언제나처럼"
   }
  ],
+ "w|언제든": [
+  {
+   "text": "반찬 가게 사장님은 민수에게 반찬이 모자라면 언제든 들르라고 했어요.",
+   "en": "The side dish shop owner told Minsu to drop by anytime if he ran short of side dishes.",
+   "ko": "반찬 가게 사장님은 민수에게 반찬이 모자라면 언제든 들르라고 했어요.",
+   "blank": "언제든",
+   "src": "made"
+  },
+  {
+   "text": "이 헬스장은 하루 종일 열려 있어서 지영은 언제든 운동하러 갈 수 있어요.",
+   "en": "This gym is open all day, so Jiyoung can go work out anytime.",
+   "ko": "이 헬스장은 하루 종일 열려 있어서 지영은 언제든 운동하러 갈 수 있어요.",
+   "blank": "언제든",
+   "src": "made"
+  }
+ ],
  "w|언제든지": [
   {
    "text": "언제든지 불러.",
@@ -49538,6 +49906,22 @@
    "blank": "연기할게"
   }
  ],
+ "w|연달아": [
+  {
+   "text": "민수는 시식 코너에서 만두를 연달아 세 개나 집어 먹었어요.",
+   "en": "At the tasting stand, Minsu picked up and ate three dumplings in a row.",
+   "ko": "민수는 시식 코너에서 만두를 연달아 세 개나 집어 먹었어요.",
+   "blank": "연달아",
+   "src": "made"
+  },
+  {
+   "text": "지영은 오늘 처음으로 턱걸이를 다섯 번 연달아 해냈어요.",
+   "en": "Today, for the first time, Jiyoung managed five pull-ups in a row.",
+   "ko": "지영은 오늘 처음으로 턱걸이를 다섯 번 연달아 해냈어요.",
+   "blank": "연달아",
+   "src": "made"
+  }
+ ],
  "w|연대": [
   {
    "text": "그 건물은 지난 연대에 지어졌어.",
@@ -50168,6 +50552,22 @@
    "en": "This food is rich in nutrition.",
    "ko": "이 음식은 영양이 풍부해.",
    "blank": "영양이"
+  }
+ ],
+ "w|영양소": [
+  {
+   "text": "채소 가게 아주머니는 민수에게 제철 채소에 영양소가 더 많다고 했어요.",
+   "en": "The woman at the vegetable stand told Minsu that seasonal vegetables have more nutrients.",
+   "ko": "채소 가게 아주머니는 민수에게 제철 채소에 영양소가 더 많다고 했어요.",
+   "blank": "영양소가",
+   "src": "made"
+  },
+  {
+   "text": "트레이너는 지영에게 운동만큼 영양소를 골고루 먹는 게 중요하다고 했어요.",
+   "en": "The trainer told Jiyoung that eating a balance of nutrients is as important as exercise.",
+   "ko": "트레이너는 지영에게 운동만큼 영양소를 골고루 먹는 게 중요하다고 했어요.",
+   "blank": "영양소를",
+   "src": "made"
   }
  ],
  "w|영어": [
@@ -53670,6 +54070,22 @@
    "blank": "웬일로"
   }
  ],
+ "w|웬만하면": [
+  {
+   "text": "민수는 웬만하면 마트 대신 전통 시장에서 장을 봐요.",
+   "en": "Minsu shops at the traditional market instead of the supermarket whenever he can.",
+   "ko": "민수는 웬만하면 마트 대신 전통 시장에서 장을 봐요.",
+   "blank": "웬만하면",
+   "src": "made"
+  },
+  {
+   "text": "지영은 웬만하면 엘리베이터 대신 계단으로 헬스장에 올라가요.",
+   "en": "Jiyoung takes the stairs up to the gym instead of the elevator whenever she can.",
+   "ko": "지영은 웬만하면 엘리베이터 대신 계단으로 헬스장에 올라가요.",
+   "blank": "웬만하면",
+   "src": "made"
+  }
+ ],
  "w|웹사이트": [
   {
    "text": "경민은 시청 웹사이트에서 지난 오 년 치 예산 자료를 찾아냈어요.",
@@ -54359,6 +54775,22 @@
    "en": "This film is a cheerful comedy that's good for families to watch together.",
    "ko": "이번 영화는 가족이 함께 보기 좋은 유쾌한 코미디예요.",
    "blank": "유쾌한",
+   "src": "made"
+  }
+ ],
+ "w|유통기한": [
+  {
+   "text": "민수는 반값에 파는 우유를 보고 유통기한부터 확인했어요.",
+   "en": "When Minsu saw milk being sold at half price, he checked the expiration date first.",
+   "ko": "민수는 반값에 파는 우유를 보고 유통기한부터 확인했어요.",
+   "blank": "유통기한부터",
+   "src": "made"
+  },
+  {
+   "text": "지영은 사물함에 넣어 둔 에너지 바의 유통기한이 지난 걸 발견했어요.",
+   "en": "Jiyoung discovered that the energy bar she'd left in her locker was past its expiration date.",
+   "ko": "지영은 사물함에 넣어 둔 에너지 바의 유통기한이 지난 걸 발견했어요.",
+   "blank": "유통기한이",
    "src": "made"
   }
  ],
@@ -56246,6 +56678,22 @@
    "src": "made"
   }
  ],
+ "w|이왕이면": [
+  {
+   "text": "민수는 생선 가게 주인에게 이왕이면 제일 싱싱한 걸로 달라고 했어요.",
+   "en": "Minsu asked the fishmonger for the freshest one, if possible.",
+   "ko": "민수는 생선 가게 주인에게 이왕이면 제일 싱싱한 걸로 달라고 했어요.",
+   "blank": "이왕이면",
+   "src": "made"
+  },
+  {
+   "text": "트레이너는 지영에게 이왕이면 아침에 운동해 보라고 권했어요.",
+   "en": "The trainer suggested that Jiyoung try working out in the morning, if she could.",
+   "ko": "트레이너는 지영에게 이왕이면 아침에 운동해 보라고 권했어요.",
+   "blank": "이왕이면",
+   "src": "made"
+  }
+ ],
  "w|이용": [
   {
    "text": "도서관 이용 시간은 오후 다섯 시까지예요.",
@@ -56431,6 +56879,22 @@
    "en": "Haeun finally started work at the company she had dreamed of all this time.",
    "ko": "하은은 이제껏 꿈꿔 온 회사에 드디어 출근했어요.",
    "blank": "이제껏",
+   "src": "made"
+  }
+ ],
+ "w|이제는": [
+  {
+   "text": "어릴 때 엄마 손을 잡고 오던 시장에 이제는 민수 혼자 장을 보러 와요.",
+   "en": "Minsu now comes alone to shop at the market he used to visit holding his mother's hand as a child.",
+   "ko": "어릴 때 엄마 손을 잡고 오던 시장에 이제는 민수 혼자 장을 보러 와요.",
+   "blank": "이제는",
+   "src": "made"
+  },
+  {
+   "text": "처음엔 빈 봉도 무거웠는데 이제는 지영이 원판을 끼우고 스쿼트를 해요.",
+   "en": "At first even the empty bar felt heavy, but now Jiyoung squats with plates on it.",
+   "ko": "처음엔 빈 봉도 무거웠는데 이제는 지영이 원판을 끼우고 스쿼트를 해요.",
+   "blank": "이제는",
    "src": "made"
   }
  ],
@@ -56877,6 +57341,22 @@
    "en": "The department store printed new floor guides and put one in every elevator.",
    "ko": "백화점은 새로운 층별 안내도를 인쇄해서 엘리베이터마다 붙였어요.",
    "blank": "인쇄해서",
+   "src": "made"
+  }
+ ],
+ "w|인스턴트": [
+  {
+   "text": "혼자 살면서 인스턴트 음식만 먹던 민수가 오랜만에 시장에서 장을 봤어요.",
+   "en": "Minsu, who had been living alone on nothing but instant food, went grocery shopping at the market for the first time in a while.",
+   "ko": "혼자 살면서 인스턴트 음식만 먹던 민수가 오랜만에 시장에서 장을 봤어요.",
+   "blank": "인스턴트",
+   "src": "made"
+  },
+  {
+   "text": "운동을 시작하고 나서 지영은 인스턴트 라면을 끊었어요.",
+   "en": "After she started working out, Jiyoung quit instant ramen.",
+   "ko": "운동을 시작하고 나서 지영은 인스턴트 라면을 끊었어요.",
+   "blank": "인스턴트",
    "src": "made"
   }
  ],
@@ -57409,6 +57889,22 @@
    "en": "Seeing the travel itinerary Sujin sent, Yuna really wanted to go along.",
    "ko": "유나는 수진이 보낸 여행 일정표를 보고 꼭 같이 가고 싶어졌어요.",
    "blank": "일정표를",
+   "src": "made"
+  }
+ ],
+ "w|일제히": [
+  {
+   "text": "아침 아홉 시가 되자 시장 상인들이 일제히 가게 문을 열었어요.",
+   "en": "At nine in the morning, the market vendors all opened their shops at once.",
+   "ko": "아침 아홉 시가 되자 시장 상인들이 일제히 가게 문을 열었어요.",
+   "blank": "일제히",
+   "src": "made"
+  },
+  {
+   "text": "음악이 바뀌자 지영과 에어로빅 반 회원들이 일제히 팔을 들어 올렸어요.",
+   "en": "When the music changed, Jiyoung and the aerobics class members all raised their arms at once.",
+   "ko": "음악이 바뀌자 지영과 에어로빅 반 회원들이 일제히 팔을 들어 올렸어요.",
+   "blank": "일제히",
    "src": "made"
   }
  ],
@@ -57964,6 +58460,22 @@
    "ko": "야구장 앞에는 표를 구하기 위한 사람들이 줄을 잇고 있었다.",
    "blank": "잇고",
    "src": "krdict"
+  }
+ ],
+ "w|잇달아": [
+  {
+   "text": "시장 입구에 새 가게들이 잇달아 문을 열면서 민수가 구경할 곳이 많아졌어요.",
+   "en": "As new shops opened one after another at the market entrance, Minsu had more places to look around.",
+   "ko": "시장 입구에 새 가게들이 잇달아 문을 열면서 민수가 구경할 곳이 많아졌어요.",
+   "blank": "잇달아",
+   "src": "made"
+  },
+  {
+   "text": "근처에 새 헬스장이 잇달아 생기자 지영이 다니는 곳도 회원권 가격을 내렸어요.",
+   "en": "As new gyms opened nearby one after another, the gym Jiyoung goes to also lowered its membership price.",
+   "ko": "근처에 새 헬스장이 잇달아 생기자 지영이 다니는 곳도 회원권 가격을 내렸어요.",
+   "blank": "잇달아",
+   "src": "made"
   }
  ],
  "w|있다": [
@@ -65184,6 +65696,22 @@
    "src": "made"
   }
  ],
+ "w|즉석식품": [
+  {
+   "text": "시장 한쪽에 즉석식품을 파는 가게가 새로 생겨서 민수가 들어가 봤어요.",
+   "en": "A new shop selling ready-to-eat food opened in a corner of the market, so Minsu went in to look.",
+   "ko": "시장 한쪽에 즉석식품을 파는 가게가 새로 생겨서 민수가 들어가 봤어요.",
+   "blank": "즉석식품을",
+   "src": "made"
+  },
+  {
+   "text": "지영이 다니는 헬스장 매점에서는 운동하는 사람을 위한 즉석식품도 팔아요.",
+   "en": "The snack bar at Jiyoung's gym also sells ready-to-eat food for people who work out.",
+   "ko": "지영이 다니는 헬스장 매점에서는 운동하는 사람을 위한 즉석식품도 팔아요.",
+   "blank": "즉석식품도",
+   "src": "made"
+  }
+ ],
  "w|즉시": [
   {
    "text": "즉시 연락해.",
@@ -67448,6 +67976,22 @@
    "en": "Because it was one-sided love, confessing was harder.",
    "ko": "짝사랑이라 고백이 더 어려웠어.",
    "blank": "짝사랑이라"
+  }
+ ],
+ "w|짠맛": [
+  {
+   "text": "젓갈의 짠맛이 너무 세서 민수는 물을 벌컥벌컥 마셨어요.",
+   "en": "The salted seafood was so salty that Minsu gulped down water.",
+   "ko": "젓갈의 짠맛이 너무 세서 민수는 물을 벌컥벌컥 마셨어요.",
+   "blank": "짠맛이",
+   "src": "made"
+  },
+  {
+   "text": "트레이너는 지영에게 짠맛이 강한 음식을 줄이면 몸이 덜 붓는다고 했어요.",
+   "en": "The trainer told Jiyoung that cutting back on salty food would make her body less puffy.",
+   "ko": "트레이너는 지영에게 짠맛이 강한 음식을 줄이면 몸이 덜 붓는다고 했어요.",
+   "blank": "짠맛이",
+   "src": "made"
   }
  ],
  "w|짧게": [
@@ -70042,6 +70586,22 @@
    "blank": "최근"
   }
  ],
+ "w|최근에": [
+  {
+   "text": "시장 안에 최근에 주차장이 생겨서 민수는 차를 가지고 와요.",
+   "en": "A parking lot was recently built inside the market, so Minsu comes by car.",
+   "ko": "시장 안에 최근에 주차장이 생겨서 민수는 차를 가지고 와요.",
+   "blank": "최근에",
+   "src": "made"
+  },
+  {
+   "text": "지영은 최근에 필라테스 수업도 같이 듣기 시작했어요.",
+   "en": "Jiyoung recently started taking a Pilates class as well.",
+   "ko": "지영은 최근에 필라테스 수업도 같이 듣기 시작했어요.",
+   "blank": "최근에",
+   "src": "made"
+  }
+ ],
  "w|최대": [
   {
    "text": "최대 인원이 벌써 찼어.",
@@ -71742,6 +72302,22 @@
    "src": "made"
   }
  ],
+ "w|칼로리": [
+  {
+   "text": "민수는 호떡이 칼로리가 높은 걸 알면서도 또 사 먹었어요.",
+   "en": "Even though Minsu knew hotteok is high in calories, he bought another one.",
+   "ko": "민수는 호떡이 칼로리가 높은 걸 알면서도 또 사 먹었어요.",
+   "blank": "칼로리가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 실내 자전거를 타고 나서 소모한 칼로리를 확인했어요.",
+   "en": "After riding the stationary bike, Jiyoung checked how many calories she had burned.",
+   "ko": "지영은 실내 자전거를 타고 나서 소모한 칼로리를 확인했어요.",
+   "blank": "칼로리를",
+   "src": "made"
+  }
+ ],
  "w|캠퍼스": [
   {
    "text": "봄이면 캠퍼스가 예뻐져.",
@@ -72530,6 +73106,22 @@
    "blank": "탁자"
   }
  ],
+ "w|탄산수": [
+  {
+   "text": "목이 마른 민수는 시장 입구 가게에서 탄산수를 하나 사 마셨어요.",
+   "en": "Feeling thirsty, Minsu bought a sparkling water at a shop by the market entrance.",
+   "ko": "목이 마른 민수는 시장 입구 가게에서 탄산수를 하나 사 마셨어요.",
+   "blank": "탄산수를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 운동이 끝나면 콜라 대신 탄산수를 마셔요.",
+   "en": "After working out, Jiyoung drinks sparkling water instead of cola.",
+   "ko": "지영은 운동이 끝나면 콜라 대신 탄산수를 마셔요.",
+   "blank": "탄산수를",
+   "src": "made"
+  }
+ ],
  "w|탄산음료": [
   {
    "text": "탄산음료를 많이 마시면 안 좋아.",
@@ -72557,6 +73149,22 @@
    "en": "A baby was born in the village for the first time in ten years, and everyone celebrated the birth.",
    "ko": "마을에 십 년 만에 아기가 태어나서 다들 그 탄생을 축하했어요.",
    "blank": "탄생을",
+   "src": "made"
+  }
+ ],
+ "w|탄수화물": [
+  {
+   "text": "요즘 탄수화물을 줄이고 있는 민수는 떡 가게를 그냥 지나쳤어요.",
+   "en": "Minsu, who has been cutting down on carbs lately, walked right past the rice cake shop.",
+   "ko": "요즘 탄수화물을 줄이고 있는 민수는 떡 가게를 그냥 지나쳤어요.",
+   "blank": "탄수화물을",
+   "src": "made"
+  },
+  {
+   "text": "트레이너는 지영에게 탄수화물을 무조건 끊지는 말라고 했어요.",
+   "en": "The trainer told Jiyoung not to cut out carbohydrates completely.",
+   "ko": "트레이너는 지영에게 탄수화물을 무조건 끊지는 말라고 했어요.",
+   "blank": "탄수화물을",
    "src": "made"
   }
  ],
@@ -73318,6 +73926,22 @@
    "blank": "통제했어"
   }
  ],
+ "w|통조림": [
+  {
+   "text": "민수는 캠핑 가서 먹을 참치 통조림을 몇 개 샀어요.",
+   "en": "Minsu bought a few cans of tuna to eat on his camping trip.",
+   "ko": "민수는 캠핑 가서 먹을 참치 통조림을 몇 개 샀어요.",
+   "blank": "통조림을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 닭가슴살 통조림을 상자째 사 두었어요.",
+   "en": "Jiyoung bought canned chicken breast by the box.",
+   "ko": "지영은 닭가슴살 통조림을 상자째 사 두었어요.",
+   "blank": "통조림을",
+   "src": "made"
+  }
+ ],
  "w|통증": [
   {
    "text": "통증이 심해졌어.",
@@ -73806,6 +74430,22 @@
    "en": "I'm especially busy today.",
    "ko": "오늘은 특히 바빠.",
    "blank": "특히"
+  }
+ ],
+ "w|특히나": [
+  {
+   "text": "민수는 오늘따라 특히나 시장 골목이 붐빈다고 느꼈어요.",
+   "en": "Minsu felt that the market alleys were especially crowded today.",
+   "ko": "민수는 오늘따라 특히나 시장 골목이 붐빈다고 느꼈어요.",
+   "blank": "특히나",
+   "src": "made"
+  },
+  {
+   "text": "하체 운동을 한 다음 날이면 지영은 특히나 계단 오르기가 힘들어요.",
+   "en": "The day after a leg workout, climbing stairs is especially hard for Jiyoung.",
+   "ko": "하체 운동을 한 다음 날이면 지영은 특히나 계단 오르기가 힘들어요.",
+   "blank": "특히나",
+   "src": "made"
   }
  ],
  "w|튼튼하다": [
