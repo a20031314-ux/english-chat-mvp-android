@@ -283,6 +283,38 @@
    "blank": "一样"
   }
  ],
+ "w|一模一样": [
+  {
+   "text": "赵磊发现，老同学的双胞胎儿子长得一模一样。",
+   "en": "Zhao Lei noticed that his old classmate's twin sons look exactly alike.",
+   "ko": "자오레이는 옛 친구의 쌍둥이 아들이 똑같이 생긴 걸 봤어요.",
+   "blank": "一模一样",
+   "src": "made"
+  },
+  {
+   "text": "林静发现，对手的产品和自己的几乎一模一样。",
+   "en": "Lin Jing found that a competitor's product is almost identical to hers.",
+   "ko": "린징은 경쟁사 제품이 자기 것과 거의 똑같다는 걸 알았어요.",
+   "blank": "一模一样",
+   "src": "made"
+  }
+ ],
+ "w|一流": [
+  {
+   "text": "这家饭店的菜是一流的，大家吃得特别满意。",
+   "en": "This restaurant's food is first-rate, and everyone ate very happily.",
+   "ko": "이 식당 음식이 일류라서 다들 아주 만족스럽게 먹었어요.",
+   "blank": "一流",
+   "src": "made"
+  },
+  {
+   "text": "林静的目标是做出一流的产品，而不是最便宜的。",
+   "en": "Lin Jing's goal is to make a first-class product, not the cheapest one.",
+   "ko": "린징의 목표는 가장 싼 제품이 아니라 일류 제품을 만드는 거예요.",
+   "blank": "一流",
+   "src": "made"
+  }
+ ],
  "w|一点": [
   {
    "text": "慢一点。",
@@ -3683,6 +3715,22 @@
    "src": "made"
   }
  ],
+ "w|人性": [
+  {
+   "text": "赵磊说，这些年在社会上闯荡，看到了人性的好和坏。",
+   "en": "Zhao Lei says that knocking about in the world these years, he has seen the good and bad of human nature.",
+   "ko": "자오레이는 그동안 사회에서 부딪히며 인간 본성의 좋은 면과 나쁜 면을 봤다고 해요.",
+   "blank": "人性",
+   "src": "made"
+  },
+  {
+   "text": "林静说，做产品要懂人性，知道用户真正怕麻烦的地方。",
+   "en": "Lin Jing says making products requires understanding human nature and knowing what users really find bothersome.",
+   "ko": "린징은 제품을 만들려면 인간 본성을 알아야 사용자가 정말 귀찮아하는 걸 안다고 해요.",
+   "blank": "人性",
+   "src": "made"
+  }
+ ],
  "w|人才": [
   {
    "text": "新娘的老板在致辞里说，她是公司难得的人才。",
@@ -3800,6 +3848,38 @@
    "en": "The hostages all got home safely.",
    "ko": "인질들은 모두 무사히 집에 돌아갔어요.",
    "blank": "人质",
+   "src": "made"
+  }
+ ],
+ "w|人选": [
+  {
+   "text": "大家讨论下次聚会谁来组织，最后觉得赵磊是最合适的人选。",
+   "en": "Everyone discussed who should organize the next reunion and decided Zhao Lei was the best candidate.",
+   "ko": "다음 모임을 누가 맡을지 이야기하다가 모두 자오레이가 가장 알맞은 사람이라고 했어요.",
+   "blank": "人选",
+   "src": "made"
+  },
+  {
+   "text": "新的技术总监还没有合适的人选，林静只好先兼着。",
+   "en": "There's no suitable candidate yet for the new tech director, so Lin Jing is covering it for now.",
+   "ko": "새 기술 이사 자리에 알맞은 사람이 아직 없어서 린징이 당분간 맡고 있어요.",
+   "blank": "人选",
+   "src": "made"
+  }
+ ],
+ "w|人间": [
+  {
+   "text": "一位老同学去年去世了，大家说他是去了更好的地方，不在人间了。",
+   "en": "An old classmate passed away last year; everyone said he was no longer of this world but in a better place.",
+   "ko": "옛 친구 한 명이 작년에 세상을 떠났는데, 다들 그가 더 좋은 곳으로 갔다고 말했어요.",
+   "blank": "人间",
+   "src": "made"
+  },
+  {
+   "text": "林静说，第一个用户的好评让她觉得人间还是温暖的。",
+   "en": "Lin Jing says the first user's good review made her feel the world is still a warm place.",
+   "ko": "린징은 첫 사용자의 칭찬을 받고 세상은 아직 따뜻하다고 느꼈대요.",
+   "blank": "人间",
    "src": "made"
   }
  ],
@@ -7227,6 +7307,22 @@
    "src": "made"
   }
  ],
+ "w|全家": [
+  {
+   "text": "有位同学带着全家来参加聚会，孩子都上中学了。",
+   "en": "One classmate brought the whole family to the reunion; the kids are already in middle school.",
+   "ko": "한 친구는 온 가족을 데리고 모임에 왔는데 아이들이 벌써 중학생이에요.",
+   "blank": "全家",
+   "src": "made"
+  },
+  {
+   "text": "公司拿到投资那天，林静全家都来办公室为她庆祝。",
+   "en": "The day the company got its investment, Lin Jing's whole family came to the office to celebrate.",
+   "ko": "회사가 투자를 받던 날 린징네 온 가족이 사무실에 와서 축하해 줬어요.",
+   "blank": "全家",
+   "src": "made"
+  }
+ ],
  "w|全新": [
   {
    "text": "学校新盖的图书馆全新开放，陈杰第一个去借书。",
@@ -7898,6 +7994,22 @@
    "en": "The county sent someone to look into things, and Li Na laid out the specific difficulties one by one.",
    "ko": "현에서 사람을 보내 상황을 알아보자 리나는 구체적인 어려움을 하나하나 말했어요.",
    "blank": "具体",
+   "src": "made"
+  }
+ ],
+ "w|具备": [
+  {
+   "text": "赵磊觉得，当老师的同学具备一种特别的耐心。",
+   "en": "Zhao Lei feels the classmate who became a teacher has a special kind of patience.",
+   "ko": "자오레이는 선생님이 된 친구가 남다른 인내심을 갖췄다고 생각해요.",
+   "blank": "具备",
+   "src": "made"
+  },
+  {
+   "text": "林静觉得，程序员除了技术，还要具备沟通能力。",
+   "en": "Lin Jing thinks programmers need communication skills as well as technical ones.",
+   "ko": "린징은 프로그래머가 기술뿐 아니라 소통 능력도 갖춰야 한다고 생각해요.",
+   "blank": "具备",
    "src": "made"
   }
  ],
@@ -9074,6 +9186,22 @@
    "en": "Xiaoxue's cousin couldn't find a way forward after dental school and eventually opened a clinic back home.",
    "ko": "샤오쉐의 사촌 오빠는 치대를 졸업하고 길을 못 찾다가 결국 고향에 가서 치과를 열었어요.",
    "blank": "出路",
+   "src": "made"
+  }
+ ],
+ "w|出身": [
+  {
+   "text": "赵磊农村出身，靠自己努力考上了城里的大学。",
+   "en": "Zhao Lei comes from a rural background and got into a city university through his own effort.",
+   "ko": "자오레이는 시골 출신인데 스스로 노력해서 도시 대학에 들어갔어요.",
+   "blank": "出身",
+   "src": "made"
+  },
+  {
+   "text": "林静招人不看出身，只看能力。",
+   "en": "Lin Jing doesn't care about background when hiring, only ability.",
+   "ko": "린징은 사람을 뽑을 때 출신은 보지 않고 실력만 봐요.",
+   "blank": "出身",
    "src": "made"
   }
  ],
@@ -11981,6 +12109,22 @@
    "src": "made"
   }
  ],
+ "w|反复": [
+  {
+   "text": "赵磊把那段老录像反复看了好几遍，笑得停不下来。",
+   "en": "Zhao Lei watched that old video over and over and couldn't stop laughing.",
+   "ko": "자오레이는 그 옛날 영상을 몇 번이고 되풀이해 보며 웃음을 멈추지 못했어요.",
+   "blank": "反复",
+   "src": "made"
+  },
+  {
+   "text": "这个按钮的颜色团队反复讨论了一个星期。",
+   "en": "The team discussed this button's color back and forth for a whole week.",
+   "ko": "팀은 이 버튼 색을 두고 일주일 내내 거듭 논의했어요.",
+   "blank": "反复",
+   "src": "made"
+  }
+ ],
  "w|反对": [
   {
    "text": "我反对。",
@@ -12331,6 +12475,22 @@
    "src": "made"
   }
  ],
+ "w|发言人": [
+  {
+   "text": "当年的班长如今是市政府的发言人，常在电视上露面。",
+   "en": "The former class monitor is now a spokesperson for the city government and often appears on TV.",
+   "ko": "그때 반장은 지금 시청 대변인이라 텔레비전에 자주 나와요.",
+   "blank": "发言人",
+   "src": "made"
+  },
+  {
+   "text": "公司没有专门的发言人，记者来了都由林静接待。",
+   "en": "The company has no dedicated spokesperson, so Lin Jing handles reporters when they come.",
+   "ko": "회사에 따로 대변인이 없어서 기자가 오면 린징이 맞이해요.",
+   "blank": "发言人",
+   "src": "made"
+  }
+ ],
  "w|发誓": [
   {
    "text": "我发誓没骗你。",
@@ -12343,6 +12503,22 @@
    "en": "Don't swear casually.",
    "ko": "함부로 맹세하지 마.",
    "blank": "发誓"
+  }
+ ],
+ "w|发达": [
+  {
+   "text": "赵磊的老家以前很落后，现在交通已经很发达了。",
+   "en": "Zhao Lei's hometown used to be backward, but now its transport is well developed.",
+   "ko": "자오레이의 고향은 예전엔 낙후됐지만 지금은 교통이 아주 발달했어요.",
+   "blank": "发达",
+   "src": "made"
+  },
+  {
+   "text": "林静说，网络这么发达，小公司也能把产品卖到很远的地方。",
+   "en": "Lin Jing says with the internet so developed, even small companies can sell products far away.",
+   "ko": "린징은 인터넷이 이렇게 발달해서 작은 회사도 멀리까지 제품을 팔 수 있다고 해요.",
+   "blank": "发达",
+   "src": "made"
   }
  ],
  "w|叔叔": [
@@ -13249,6 +13425,22 @@
    "blank": "号码"
   }
  ],
+ "w|司令": [
+  {
+   "text": "老同学们开玩笑，叫班长“司令”，因为他总是安排一切。",
+   "en": "The old classmates jokingly call the class monitor \"commander\" because he always arranges everything.",
+   "ko": "옛 친구들은 반장이 늘 모든 걸 챙긴다고 '사령관'이라고 놀려요.",
+   "blank": "司令",
+   "src": "made"
+  },
+  {
+   "text": "林静在做一款游戏，玩家要扮演军队的司令指挥作战。",
+   "en": "Lin Jing is making a game where players act as an army commander directing battles.",
+   "ko": "린징은 플레이어가 군 사령관이 되어 전투를 지휘하는 게임을 만들고 있어요.",
+   "blank": "司令",
+   "src": "made"
+  }
+ ],
  "w|司机": [
   {
    "text": "司机在等我们。",
@@ -13694,6 +13886,22 @@
    "en": "Xiaoxue entered the city competition under the name of her swimming club.",
    "ko": "샤오쉐는 수영 클럽 이름으로 시 대회에 신청했어요.",
    "blank": "名义",
+   "src": "made"
+  }
+ ],
+ "w|名人": [
+  {
+   "text": "当年最安静的女同学，现在成了网上的小名人。",
+   "en": "The quietest girl in class back then is now a minor celebrity online.",
+   "ko": "그때 제일 조용하던 여학생이 지금은 인터넷에서 꽤 유명한 사람이 됐어요.",
+   "blank": "名人",
+   "src": "made"
+  },
+  {
+   "text": "一位网络名人推荐了林静的应用，下载量一夜之间翻了一番。",
+   "en": "An internet celebrity recommended Lin Jing's app, and downloads doubled overnight.",
+   "ko": "한 인터넷 유명인이 린징의 앱을 추천하자 다운로드가 하룻밤 새 두 배로 늘었어요.",
+   "blank": "名人",
    "src": "made"
   }
  ],
@@ -17891,6 +18099,22 @@
    "blank": "大学"
   }
  ],
+ "w|大学生": [
+  {
+   "text": "看着当年的合影，赵磊想起了大家还是大学生时的样子。",
+   "en": "Looking at the old group photo, Zhao Lei remembered what everyone was like as college students.",
+   "ko": "옛 단체 사진을 보며 자오레이는 다들 대학생이던 시절을 떠올렸어요.",
+   "blank": "大学生",
+   "src": "made"
+  },
+  {
+   "text": "公司暑假招了几个大学生来实习。",
+   "en": "The company took on a few college students as interns over the summer.",
+   "ko": "회사는 여름방학에 대학생 몇 명을 인턴으로 뽑았어요.",
+   "blank": "大学生",
+   "src": "made"
+  }
+ ],
  "w|大家": [
   {
    "text": "大家都到了。",
@@ -19423,6 +19647,22 @@
    "blank": "姐姐"
   }
  ],
+ "w|姑姑": [
+  {
+   "text": "赵磊的姑姑就住在饭店附近，聚会结束后他顺路去看她。",
+   "en": "Zhao Lei's aunt lives near the restaurant, so he dropped by to see her after the reunion.",
+   "ko": "자오레이의 고모가 식당 근처에 살아서 모임이 끝난 뒤 들러서 뵈었어요.",
+   "blank": "姑姑",
+   "src": "made"
+  },
+  {
+   "text": "林静的姑姑是会计，每个月来帮公司看一次账。",
+   "en": "Lin Jing's aunt is an accountant who comes once a month to check the company's books.",
+   "ko": "린징의 고모는 회계사라서 한 달에 한 번 회사 장부를 봐 줘요.",
+   "blank": "姑姑",
+   "src": "made"
+  }
+ ],
  "w|姑娘": [
   {
    "text": "那位姑娘是谁？",
@@ -19959,6 +20199,22 @@
    "en": "The students are all here.",
    "ko": "학생들 다 왔어.",
    "blank": "学生"
+  }
+ ],
+ "w|学者": [
+  {
+   "text": "班上最爱看书的那位同学，现在成了有名的历史学者。",
+   "en": "The classmate who loved reading most is now a well-known historian.",
+   "ko": "반에서 책을 제일 좋아하던 친구는 지금 이름난 역사학자가 됐어요.",
+   "blank": "学者",
+   "src": "made"
+  },
+  {
+   "text": "一位研究人工智能的学者来公司做了一次讲座。",
+   "en": "A scholar who researches artificial intelligence came to give a talk at the company.",
+   "ko": "인공지능을 연구하는 학자 한 분이 회사에 와서 강연을 했어요.",
+   "blank": "学者",
+   "src": "made"
   }
  ],
  "w|学院": [
@@ -22539,6 +22795,22 @@
    "blank": "工作"
   }
  ],
+ "w|工作人员": [
+  {
+   "text": "饭店的工作人员帮他们拍了一张大合影。",
+   "en": "The restaurant staff took a big group photo for them.",
+   "ko": "식당 직원이 그들에게 큰 단체 사진을 찍어 줬어요.",
+   "blank": "工作人员",
+   "src": "made"
+  },
+  {
+   "text": "展会上，林静的公司只派了三名工作人员。",
+   "en": "At the trade fair, Lin Jing's company sent only three staff members.",
+   "ko": "박람회에 린징 회사는 직원을 세 명만 보냈어요.",
+   "blank": "工作人员",
+   "src": "made"
+  }
+ ],
  "w|工具": [
   {
    "text": "这个工具很好用。",
@@ -22747,6 +23019,22 @@
    "en": "We're about the same height.",
    "ko": "우리 키가 비슷해.",
    "blank": "差不多"
+  }
+ ],
+ "w|差别": [
+  {
+   "text": "赵磊说，工作十年和工作二十年，差别其实没那么大。",
+   "en": "Zhao Lei says the difference between working ten years and twenty isn't actually that big.",
+   "ko": "자오레이는 일한 지 십 년이든 이십 년이든 사실 차이가 그리 크지 않다고 해요.",
+   "blank": "差别",
+   "src": "made"
+  },
+  {
+   "text": "林静说，两个版本看起来没有差别，其实速度快了很多。",
+   "en": "Lin Jing says the two versions look no different, but one is actually much faster.",
+   "ko": "린징은 두 버전이 겉보기엔 차이가 없지만 실제로는 속도가 훨씬 빨라졌다고 해요.",
+   "blank": "差别",
+   "src": "made"
   }
  ],
  "w|差异": [
@@ -23296,6 +23584,22 @@
    "en": "Sun Yue's shoelace kept coming loose, so she just stopped and tied a tight knot.",
    "ko": "쑨웨는 신발 끈이 자꾸 풀려서 아예 멈춰서 꽉 묶었어요.",
    "blank": "干脆",
+   "src": "made"
+  }
+ ],
+ "w|干部": [
+  {
+   "text": "赵磊的老班长现在是县里的干部，工作很忙。",
+   "en": "Zhao Lei's former class monitor is now a county official and very busy.",
+   "ko": "자오레이의 옛 반장은 지금 현의 간부라 일이 무척 바빠요.",
+   "blank": "干部",
+   "src": "made"
+  },
+  {
+   "text": "街道干部来公司参观，想请林静帮社区做个小程序。",
+   "en": "Neighborhood officials visited the company and asked Lin Jing to build a mini-app for the community.",
+   "ko": "동네 간부들이 회사를 둘러보고 린징에게 마을용 작은 앱을 만들어 달라고 부탁했어요.",
+   "blank": "干部",
    "src": "made"
   }
  ],
@@ -24679,6 +24983,22 @@
    "src": "made"
   }
  ],
+ "w|当事人": [
+  {
+   "text": "当年那场打架的事，两个当事人今天笑着碰了杯。",
+   "en": "The two people involved in that old fight clinked glasses with a laugh today.",
+   "ko": "그때 그 싸움의 당사자 두 사람이 오늘 웃으며 건배했어요.",
+   "blank": "当事人",
+   "src": "made"
+  },
+  {
+   "text": "两位合伙人闹了矛盾，林静把当事人叫到一起谈。",
+   "en": "Two partners had a falling-out, so Lin Jing called the parties involved together to talk.",
+   "ko": "동업자 두 사람이 갈등을 빚자 린징이 당사자들을 한자리에 불러 이야기했어요.",
+   "blank": "当事人",
+   "src": "made"
+  }
+ ],
  "w|当作": [
   {
    "text": "赵磊把图书馆当作自己的第二个家。",
@@ -25923,6 +26243,22 @@
    "src": "made"
   }
  ],
+ "w|怪异": [
+  {
+   "text": "饭店的装修风格有点怪异，墙上挂满了旧闹钟。",
+   "en": "The restaurant's decor is a little bizarre, with old alarm clocks covering the walls.",
+   "ko": "식당 인테리어가 좀 괴상해서 벽에 낡은 자명종이 가득 걸려 있어요.",
+   "blank": "怪异",
+   "src": "made"
+  },
+  {
+   "text": "测试时，屏幕上突然出现了怪异的符号，大家都愣住了。",
+   "en": "During testing, strange symbols suddenly appeared on the screen and everyone froze.",
+   "ko": "테스트 중에 화면에 이상한 기호가 갑자기 나타나서 다들 멍해졌어요.",
+   "blank": "怪异",
+   "src": "made"
+  }
+ ],
  "w|怪物": [
   {
    "text": "有个怪物。",
@@ -27120,6 +27456,22 @@
    "en": "Sun Yue sold an old down jacket online, and after haggling with the buyer the deal finally went through.",
    "ko": "쑨웨는 인터넷에서 낡은 패딩을 팔았는데 구매자와 흥정한 끝에 거래가 성사됐어요.",
    "blank": "成交",
+   "src": "made"
+  }
+ ],
+ "w|成人": [
+  {
+   "text": "赵磊感慨，当年的毛头小子现在都是成人了，有的已经当了爸爸。",
+   "en": "Zhao Lei reflected that the young lads of back then are all adults now, some already fathers.",
+   "ko": "자오레이는 그때 철없던 녀석들이 이제 다 어른이 되어 누구는 벌써 아빠가 됐다며 감회에 젖었어요.",
+   "blank": "成人",
+   "src": "made"
+  },
+  {
+   "text": "这款学习软件既适合孩子，也适合想补课的成人。",
+   "en": "This learning software suits both children and adults who want to catch up.",
+   "ko": "이 학습 프로그램은 아이에게도, 공부를 다시 하려는 어른에게도 알맞아요.",
+   "blank": "成人",
    "src": "made"
   }
  ],
@@ -29275,6 +29627,22 @@
    "blank": "拿走"
   }
  ],
+ "w|持有": [
+  {
+   "text": "听说那位同学持有一家连锁饭店的股票，赚了不少钱。",
+   "en": "They heard that classmate holds shares in a restaurant chain and has made a lot of money.",
+   "ko": "그 친구가 한 체인 식당 주식을 갖고 있어서 돈을 꽤 벌었다고 들었어요.",
+   "blank": "持有",
+   "src": "made"
+  },
+  {
+   "text": "林静持有公司一半以上的股份。",
+   "en": "Lin Jing holds more than half of the company's shares.",
+   "ko": "린징은 회사 지분의 절반 이상을 갖고 있어요.",
+   "blank": "持有",
+   "src": "made"
+  }
+ ],
  "w|持续": [
   {
    "text": "雨还在持续。",
@@ -30509,6 +30877,22 @@
    "en": "We need a new partner.",
    "ko": "우리에겐 새 짝이 필요해.",
    "blank": "搭档"
+  }
+ ],
+ "w|携带": [
+  {
+   "text": "饭店规定不能携带宠物，有位同学只好把狗留在车里。",
+   "en": "The restaurant doesn't allow pets, so one classmate had to leave his dog in the car.",
+   "ko": "식당이 반려동물 동반을 금지해서 한 친구는 개를 차에 두고 와야 했어요.",
+   "blank": "携带",
+   "src": "made"
+  },
+  {
+   "text": "员工出差时不能携带公司的服务器密码。",
+   "en": "Employees may not carry the company's server passwords when traveling for work.",
+   "ko": "직원은 출장 때 회사 서버 비밀번호를 지니고 다니면 안 돼요.",
+   "blank": "携带",
+   "src": "made"
   }
  ],
  "w|摄像头": [
@@ -31959,6 +32343,22 @@
    "src": "made"
   }
  ],
+ "w|新生": [
+  {
+   "text": "赵磊记得刚入学时，他们这群新生连食堂都找不到。",
+   "en": "Zhao Lei remembers that when they first started, the group of freshmen couldn't even find the cafeteria.",
+   "ko": "자오레이는 처음 입학했을 때 신입생들이 식당도 못 찾았던 걸 기억해요.",
+   "blank": "新生",
+   "src": "made"
+  },
+  {
+   "text": "林静的软件很受欢迎，很多学校用它给新生办入学手续。",
+   "en": "Lin Jing's software is popular; many schools use it to register incoming students.",
+   "ko": "린징의 프로그램이 인기가 많아서 여러 학교가 신입생 입학 절차에 써요.",
+   "blank": "新生",
+   "src": "made"
+  }
+ ],
  "w|新闻": [
   {
    "text": "看新闻了吗？",
@@ -33161,6 +33561,22 @@
    "en": "Today is very ordinary.",
    "ko": "오늘은 아주 평범해.",
    "blank": "普通"
+  }
+ ],
+ "w|普遍": [
+  {
+   "text": "大家普遍觉得，赵磊这些年一点都没变。",
+   "en": "Everyone generally felt Zhao Lei hadn't changed a bit over the years.",
+   "ko": "다들 자오레이가 그동안 하나도 안 변했다고 입을 모았어요.",
+   "blank": "普遍",
+   "src": "made"
+  },
+  {
+   "text": "在创业公司，加班是很普遍的事。",
+   "en": "At startups, working overtime is very common.",
+   "ko": "스타트업에서 야근은 아주 흔한 일이에요.",
+   "blank": "普遍",
+   "src": "made"
   }
  ],
  "w|晴天": [
@@ -35795,6 +36211,22 @@
    "blank": "正式"
   }
  ],
+ "w|正当": [
+  {
+   "text": "赵磊说，只要钱来得正当，赚多少都不丢人。",
+   "en": "Zhao Lei says as long as money is earned honestly, there's no shame in earning a lot.",
+   "ko": "자오레이는 돈이 정당하게 들어온다면 얼마를 벌든 부끄러울 게 없다고 해요.",
+   "blank": "正当",
+   "src": "made"
+  },
+  {
+   "text": "林静拒绝了那笔投资，因为对方的要求不够正当。",
+   "en": "Lin Jing turned down the investment because the other side's demands weren't legitimate.",
+   "ko": "린징은 상대의 요구가 정당하지 않아서 그 투자를 거절했어요.",
+   "blank": "正当",
+   "src": "made"
+  }
+ ],
  "w|正是": [
   {
    "text": "正是我想要的。",
@@ -36502,6 +36934,22 @@
    "en": "Yang Yang's team discusses things democratically; anyone can make a suggestion.",
    "ko": "양양의 팀은 문제를 민주적으로 토론해서 누구든 의견을 낼 수 있어요.",
    "blank": "民主",
+   "src": "made"
+  }
+ ],
+ "w|民众": [
+  {
+   "text": "赵磊在聚会上说，新修的公园很受附近民众欢迎。",
+   "en": "At the reunion Zhao Lei said the newly built park is very popular with local residents.",
+   "ko": "자오레이는 모임에서 새로 생긴 공원이 근처 주민들에게 인기가 많다고 했어요.",
+   "blank": "民众",
+   "src": "made"
+  },
+  {
+   "text": "林静开发的这款应用，目的是让普通民众更方便地办手续。",
+   "en": "The app Lin Jing is developing aims to make paperwork easier for ordinary citizens.",
+   "ko": "린징이 개발하는 이 앱은 일반 시민이 서류 일을 더 쉽게 처리하도록 하는 게 목적이에요.",
+   "blank": "民众",
    "src": "made"
   }
  ],
@@ -37472,6 +37920,22 @@
    "en": "As soon as Lili turned on the tap, yellow rusty water flowed out.",
    "ko": "리리가 수도꼭지를 틀자마자 누런 녹물이 흘러나왔어요.",
    "blank": "流",
+   "src": "made"
+  }
+ ],
+ "w|流氓": [
+  {
+   "text": "赵磊想起中学时，有几个小流氓常在校门口拦人要钱。",
+   "en": "Zhao Lei recalled that in middle school, a few young hoodlums used to stop people at the school gate for money.",
+   "ko": "자오레이는 중학교 때 건달 몇 명이 교문 앞에서 사람을 막고 돈을 뜯던 게 떠올랐어요.",
+   "blank": "流氓",
+   "src": "made"
+  },
+  {
+   "text": "有个流氓软件冒充林静的产品，骗了不少人下载。",
+   "en": "A piece of rogue software impersonated Lin Jing's product and tricked many people into downloading it.",
+   "ko": "악성 프로그램 하나가 린징의 제품을 사칭해서 많은 사람을 속여 내려받게 했어요.",
+   "blank": "流氓",
    "src": "made"
   }
  ],
@@ -41057,6 +41521,22 @@
    "blank": "留下"
   }
  ],
+ "w|留意": [
+  {
+   "text": "赵磊留意到，有位同学整晚都没怎么说话。",
+   "en": "Zhao Lei noticed that one classmate barely spoke all evening.",
+   "ko": "자오레이는 한 친구가 저녁 내내 말이 별로 없다는 걸 눈여겨봤어요.",
+   "blank": "留意",
+   "src": "made"
+  },
+  {
+   "text": "林静提醒新人留意用户的每一条反馈。",
+   "en": "Lin Jing reminds newcomers to pay attention to every piece of user feedback.",
+   "ko": "린징은 신입에게 사용자 의견 하나하나를 눈여겨보라고 일러요.",
+   "blank": "留意",
+   "src": "made"
+  }
+ ],
  "w|留言": [
   {
    "text": "请给我留言。",
@@ -41413,6 +41893,22 @@
    "en": "The walls were painted white.",
    "ko": "벽을 흰색으로 칠했어.",
    "blank": "白色"
+  }
+ ],
+ "w|百姓": [
+  {
+   "text": "老同学感叹，现在物价这么高，普通百姓过日子真不容易。",
+   "en": "An old classmate sighed that with prices so high, life isn't easy for ordinary people.",
+   "ko": "옛 친구는 요즘 물가가 너무 올라서 서민들 살기가 정말 힘들다고 한숨을 쉬었어요.",
+   "blank": "百姓",
+   "src": "made"
+  },
+  {
+   "text": "林静希望老百姓不懂电脑也能轻松用这个软件。",
+   "en": "Lin Jing hopes ordinary folks can use the software easily even if they don't know computers.",
+   "ko": "린징은 컴퓨터를 모르는 보통 사람들도 이 프로그램을 쉽게 쓰길 바라요.",
+   "blank": "百姓",
+   "src": "made"
   }
  ],
  "w|的": [
@@ -43085,6 +43581,22 @@
    "blank": "祈祷"
   }
  ],
+ "w|视为": [
+  {
+   "text": "同学们一直把赵磊视为最可靠的朋友。",
+   "en": "The classmates have always regarded Zhao Lei as the most reliable friend.",
+   "ko": "친구들은 늘 자오레이를 가장 믿음직한 친구로 여겨 왔어요.",
+   "blank": "视为",
+   "src": "made"
+  },
+  {
+   "text": "投资人把林静的团队视为这个领域最有潜力的公司之一。",
+   "en": "Investors regard Lin Jing's team as one of the most promising companies in the field.",
+   "ko": "투자자들은 린징의 팀을 이 분야에서 가장 잠재력 있는 회사 중 하나로 봐요.",
+   "blank": "视为",
+   "src": "made"
+  }
+ ],
  "w|视线": [
   {
    "text": "前排同学太高，挡住了小明看黑板的视线。",
@@ -43144,6 +43656,22 @@
    "en": "Yang Yang's grandmother says the flavor here is exactly the same as what she ate as a child.",
    "ko": "양양의 할머니는 여기 맛이 어릴 때 먹던 맛과 똑같다고 하세요.",
    "blank": "祖母",
+   "src": "made"
+  }
+ ],
+ "w|祖父": [
+  {
+   "text": "赵磊的祖父今年九十岁了，身体还很硬朗。",
+   "en": "Zhao Lei's grandfather turns ninety this year and is still in good health.",
+   "ko": "자오레이의 할아버지는 올해 아흔이신데 아직 정정하세요.",
+   "blank": "祖父",
+   "src": "made"
+  },
+  {
+   "text": "林静的祖父是个木匠，她说自己做事认真是跟他学的。",
+   "en": "Lin Jing's grandfather was a carpenter, and she says she learned to be meticulous from him.",
+   "ko": "린징의 할아버지는 목수였는데, 꼼꼼한 성격은 할아버지에게 배웠대요.",
+   "blank": "祖父",
    "src": "made"
   }
  ],
@@ -43850,6 +44378,22 @@
    "en": "Li Na says that no matter how poor they are, her child must eat fresh fruit.",
    "ko": "리나는 아무리 가난해도 아이에게 신선한 과일을 먹여야 한다고 말해요.",
    "blank": "穷",
+   "src": "made"
+  }
+ ],
+ "w|穷人": [
+  {
+   "text": "一位同学开了基金会，专门帮助山区的穷人看病。",
+   "en": "One classmate started a foundation that helps poor people in the mountains get medical care.",
+   "ko": "한 친구는 재단을 세워 산골의 가난한 사람들이 치료받도록 돕고 있어요.",
+   "blank": "穷人",
+   "src": "made"
+  },
+  {
+   "text": "林静想做一个平台，让穷人家的孩子也能免费上网课。",
+   "en": "Lin Jing wants to build a platform so children from poor families can take online classes for free.",
+   "ko": "린징은 가난한 집 아이들도 무료로 온라인 수업을 듣는 플랫폼을 만들고 싶어 해요.",
+   "blank": "穷人",
    "src": "made"
   }
  ],
@@ -52079,6 +52623,22 @@
    "src": "made"
   }
  ],
+ "w|赋予": [
+  {
+   "text": "赵磊觉得，是这些老朋友赋予了他的青春意义。",
+   "en": "Zhao Lei feels it was these old friends who gave meaning to his youth.",
+   "ko": "자오레이는 이 옛 친구들이 자기 젊은 시절에 의미를 더해 줬다고 느껴요.",
+   "blank": "赋予",
+   "src": "made"
+  },
+  {
+   "text": "林静给每个员工都赋予了很大的自由。",
+   "en": "Lin Jing gives every employee a great deal of freedom.",
+   "ko": "린징은 직원 모두에게 큰 자유를 줘요.",
+   "blank": "赋予",
+   "src": "made"
+  }
+ ],
  "w|赌": [
   {
    "text": "别再赌了。",
@@ -55077,6 +55637,22 @@
    "blank": "遇见"
   }
  ],
+ "w|遍": [
+  {
+   "text": "赵磊把聚会的地址在群里发了一遍，怕有人找不到。",
+   "en": "Zhao Lei posted the reunion address in the group chat once more in case anyone couldn't find it.",
+   "ko": "자오레이는 누가 못 찾을까 봐 단톡방에 모임 주소를 한 번 더 올렸어요.",
+   "blank": "遍",
+   "src": "made"
+  },
+  {
+   "text": "上线前，林静把所有功能又测了一遍。",
+   "en": "Before launch, Lin Jing tested every feature once more.",
+   "ko": "출시 전에 린징은 모든 기능을 한 번 더 테스트했어요.",
+   "blank": "遍",
+   "src": "made"
+  }
+ ],
  "w|道": [
   {
    "text": "编辑给周强出了一道难题：两个小时写完一篇长稿。",
@@ -56969,6 +57545,22 @@
    "blank": "陌生人"
   }
  ],
+ "w|降临": [
+  {
+   "text": "聚会散场时，夜色已经降临，街上的灯都亮了。",
+   "en": "When the reunion broke up, night had already fallen and the street lights were on.",
+   "ko": "모임이 끝날 무렵 이미 밤이 내려앉아 거리의 등이 다 켜졌어요.",
+   "blank": "降临",
+   "src": "made"
+  },
+  {
+   "text": "林静一直等着好运降临，没想到投资人主动找上门来。",
+   "en": "Lin Jing had been waiting for luck to arrive, and an investor unexpectedly came knocking.",
+   "ko": "린징은 행운이 찾아오길 기다렸는데 뜻밖에 투자자가 먼저 찾아왔어요.",
+   "blank": "降临",
+   "src": "made"
+  }
+ ],
  "w|降低": [
   {
    "text": "周强学会了降低声音说话，妹妹也就愿意听了。",
@@ -57494,6 +58086,22 @@
    "en": "The market office rules that no gatherings may be held at the entrance on Sunday mornings.",
    "ko": "시장 관리소는 일요일 오전엔 입구에서 집회를 못 하게 했어요.",
    "blank": "集会",
+   "src": "made"
+  }
+ ],
+ "w|集体": [
+  {
+   "text": "赵磊说，毕业这么多年，他最怀念的还是班集体的那种感觉。",
+   "en": "Zhao Lei says that after all these years, what he misses most is that feeling of the class as a group.",
+   "ko": "자오레이는 졸업하고 이렇게 오래 지났어도 반 친구들이 한데 뭉쳤던 그 느낌이 가장 그립다고 해요.",
+   "blank": "集体",
+   "src": "made"
+  },
+  {
+   "text": "产品上线那天，全公司集体加班到深夜。",
+   "en": "On launch day, the whole company worked overtime together until late at night.",
+   "ko": "제품 출시 날 회사 전체가 다 같이 밤늦게까지 야근했어요.",
+   "blank": "集体",
    "src": "made"
   }
  ],
@@ -58261,6 +58869,22 @@
    "src": "made"
   }
  ],
+ "w|领导人": [
+  {
+   "text": "赵磊的同桌现在在一家大公司当领导人，说话还是老样子。",
+   "en": "Zhao Lei's old deskmate is now a leader at a big company but still talks the same way.",
+   "ko": "자오레이의 옛 짝꿍은 지금 큰 회사 리더인데 말투는 여전해요.",
+   "blank": "领导人",
+   "src": "made"
+  },
+  {
+   "text": "林静觉得，一个好的团队领导人要先学会听别人说话。",
+   "en": "Lin Jing believes a good team leader must first learn to listen to others.",
+   "ko": "린징은 좋은 팀 리더라면 먼저 남의 말을 듣는 법을 배워야 한다고 생각해요.",
+   "blank": "领导人",
+   "src": "made"
+  }
+ ],
  "w|领袖": [
   {
    "text": "周强采访过好几位商界领袖，最佩服的是一位女企业家。",
@@ -58766,6 +59390,22 @@
    "en": "Next year Sun Yue plans to run a full marathon in the capital.",
    "ko": "내년에 쑨웨는 수도에 가서 풀코스 마라톤을 뛸 생각이에요.",
    "blank": "首都",
+   "src": "made"
+  }
+ ],
+ "w|首领": [
+  {
+   "text": "大家笑着说，赵磊是当年宿舍里的首领，什么事都他说了算。",
+   "en": "Everyone laughed and said Zhao Lei was the leader of their dorm back then, and his word was final.",
+   "ko": "다들 자오레이가 그때 기숙사 우두머리라 무슨 일이든 그가 정했다고 웃었어요.",
+   "blank": "首领",
+   "src": "made"
+  },
+  {
+   "text": "在团队里，林静不像首领，更像大家的姐姐。",
+   "en": "In the team, Lin Jing is less like a chief and more like everyone's big sister.",
+   "ko": "팀에서 린징은 우두머리라기보다 다들 언니처럼 여겨요.",
+   "blank": "首领",
    "src": "made"
   }
  ],

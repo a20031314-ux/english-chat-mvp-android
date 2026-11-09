@@ -1179,6 +1179,22 @@
    "blank": "aéroport"
   }
  ],
+ "w|affaiblir": [
+  {
+   "text": "Les contradictions du suspect ont fini par affaiblir sa version des faits.",
+   "en": "The suspect's contradictions ended up weakening his version of events.",
+   "ko": "용의자의 앞뒤 안 맞는 말 때문에 결국 그의 진술이 힘을 잃었어요.",
+   "blank": "affaiblir",
+   "src": "made"
+  },
+  {
+   "text": "Le soleil trop fort a fini par affaiblir la vieille tante de Chloé.",
+   "en": "The overly strong sun ended up wearing out Chloé's old aunt.",
+   "ko": "너무 강한 햇볕에 클로에의 나이 든 이모가 결국 기운이 빠졌어요.",
+   "blank": "affaiblir",
+   "src": "made"
+  }
+ ],
  "w|affaire": [
   {
    "text": "Ce n'est pas ton affaire.",
@@ -1505,6 +1521,22 @@
    "en": "We're having lamb this Sunday.",
    "ko": "이번 일요일에 양고기를 내.",
    "blank": "agneau"
+  }
+ ],
+ "w|agrandir": [
+  {
+   "text": "Thomas a fait agrandir la photo de la caméra de surveillance.",
+   "en": "Thomas had the security camera photo enlarged.",
+   "ko": "토마는 감시 카메라 사진을 확대하게 했어요.",
+   "blank": "agrandir",
+   "src": "made"
+  },
+  {
+   "text": "Les propriétaires veulent agrandir la terrasse du café de la plage.",
+   "en": "The owners want to enlarge the beach café's terrace.",
+   "ko": "주인들은 해변 카페 테라스를 넓히고 싶어 해요.",
+   "blank": "agrandir",
+   "src": "made"
   }
  ],
  "w|agréable": [
@@ -1884,6 +1916,22 @@
    "en": "Inès refuses to sell alcohol to an alcoholic customer well known in the neighbourhood.",
    "ko": "이네스는 동네에서 잘 알려진 알코올 의존 손님에게 술을 팔지 않아요.",
    "blank": "alcoolique",
+   "src": "made"
+  }
+ ],
+ "w|aléatoire": [
+  {
+   "text": "Les contrôles routiers se font à des heures aléatoires pour surprendre les chauffards.",
+   "en": "Road checks are carried out at random times to catch reckless drivers off guard.",
+   "ko": "음주·난폭 운전자를 잡으려고 도로 검문은 무작위 시간에 해요.",
+   "blank": "aléatoires",
+   "src": "made"
+  },
+  {
+   "text": "Les horaires du petit bateau pour l'île sont assez aléatoires.",
+   "en": "The timetable for the little boat to the island is rather unpredictable.",
+   "ko": "섬으로 가는 작은 배 시간은 꽤 들쭉날쭉해요.",
+   "blank": "aléatoires",
    "src": "made"
   }
  ],
@@ -2593,6 +2641,22 @@
    "en": "She has a loving look.",
    "ko": "그녀는 사랑스러운 눈빛을 가지고 있다.",
    "blank": "amoureux"
+  }
+ ],
+ "w|ampleur": [
+  {
+   "text": "Personne au commissariat n'avait mesuré l'ampleur de la fraude.",
+   "en": "No one at the station had grasped the scale of the fraud.",
+   "ko": "경찰서에서 아무도 사기의 규모를 가늠하지 못했어요.",
+   "blank": "ampleur",
+   "src": "made"
+  },
+  {
+   "text": "Chloé n'avait pas imaginé l'ampleur de la marée d'équinoxe.",
+   "en": "Chloé hadn't imagined how big the equinox tide would be.",
+   "ko": "클로에는 춘분 사리가 그렇게 클 줄 몰랐어요.",
+   "blank": "ampleur",
+   "src": "made"
   }
  ],
  "w|ampoule": [
@@ -3721,6 +3785,22 @@
    "blank": "archive"
   }
  ],
+ "w|arène": [
+  {
+   "text": "Le soir du match, Thomas était en service devant l'arène.",
+   "en": "On the evening of the match, Thomas was on duty outside the arena.",
+   "ko": "경기 날 저녁 토마는 경기장 앞에서 근무했어요.",
+   "blank": "arène",
+   "src": "made"
+  },
+  {
+   "text": "Chloé a visité les ruines d'une arène romaine près de la côte.",
+   "en": "Chloé visited the ruins of a Roman arena near the coast.",
+   "ko": "클로에는 해안 근처 로마 원형 경기장 유적을 둘러봤어요.",
+   "blank": "arène",
+   "src": "made"
+  }
+ ],
  "w|argent": [
   {
    "text": "Il me faut plus d'argent.",
@@ -3995,6 +4075,22 @@
    "en": "I love visiting art museums while traveling.",
    "ko": "여행 중에 미술관 방문하는 걸 좋아해.",
    "blank": "art"
+  }
+ ],
+ "w|artefact": [
+  {
+   "text": "Un artefact romain volé au musée a été retrouvé dans un garage.",
+   "en": "A Roman artifact stolen from the museum was found in a garage.",
+   "ko": "박물관에서 도난당한 로마 유물이 한 차고에서 발견됐어요.",
+   "blank": "artefact",
+   "src": "made"
+  },
+  {
+   "text": "Le petit musée de la côte expose un artefact trouvé dans une épave.",
+   "en": "The little coastal museum displays an artifact found in a shipwreck.",
+   "ko": "해안의 작은 박물관에는 난파선에서 나온 유물이 전시돼 있어요.",
+   "blank": "artefact",
+   "src": "made"
   }
  ],
  "w|article": [
@@ -16607,6 +16703,22 @@
    "blank": "conversation"
   }
  ],
+ "w|converti": [
+  {
+   "text": "Le hangar converti en bureaux abrite maintenant la brigade financière.",
+   "en": "The hangar converted into offices now houses the financial crimes unit.",
+   "ko": "사무실로 개조된 창고에는 이제 금융 범죄 수사대가 있어요.",
+   "blank": "converti",
+   "src": "made"
+  },
+  {
+   "text": "Chloé et Paul dorment dans un ancien bateau de pêche converti en chambre d'hôtes.",
+   "en": "Chloé and Paul sleep in an old fishing boat converted into a guesthouse.",
+   "ko": "클로에와 폴은 민박으로 개조한 옛 고깃배에서 자요.",
+   "blank": "converti",
+   "src": "made"
+  }
+ ],
  "w|conviction": [
   {
    "text": "Antoine parle avec conviction pour prouver qu'il n'a rien dit de méchant.",
@@ -17078,6 +17190,22 @@
    "en": "The make-up artist has to fix Camille's lipstick between takes.",
    "ko": "분장사가 테이크 사이에 카미유의 립스틱을 고쳐야 해요.",
    "blank": "corriger",
+   "src": "made"
+  }
+ ],
+ "w|corrompre": [
+  {
+   "text": "Le dossier montre qu'un homme d'affaires avait tenté de corrompre un fonctionnaire.",
+   "en": "The file shows that a businessman had tried to bribe an official.",
+   "ko": "서류를 보면 한 사업가가 공무원을 매수하려 했어요.",
+   "blank": "corrompre",
+   "src": "made"
+  },
+  {
+   "text": "Dans le roman de plage de Chloé, un maire se laisse corrompre par un promoteur.",
+   "en": "In Chloé's beach novel, a mayor lets himself be bribed by a developer.",
+   "ko": "클로에가 해변에서 읽는 소설에서는 시장이 개발업자에게 매수돼요.",
+   "blank": "corrompre",
    "src": "made"
   }
  ],
@@ -18007,6 +18135,22 @@
    "blank": "créature"
   }
  ],
+ "w|crédibilité": [
+  {
+   "text": "Les nombreux mensonges ont détruit la crédibilité du témoin.",
+   "en": "The many lies destroyed the witness's credibility.",
+   "ko": "거듭된 거짓말 때문에 증인의 신뢰성이 무너졌어요.",
+   "blank": "crédibilité",
+   "src": "made"
+  },
+  {
+   "text": "La météo locale a perdu toute crédibilité après trois jours de pluie imprévus.",
+   "en": "The local weather forecast lost all credibility after three days of unforeseen rain.",
+   "ko": "예보에 없던 비가 사흘 내리자 지역 일기 예보는 신뢰를 다 잃었어요.",
+   "blank": "crédibilité",
+   "src": "made"
+  }
+ ],
  "w|crédible": [
   {
    "text": "L'excuse de Lucas pour son retard n'était pas très crédible.",
@@ -18839,6 +18983,22 @@
    "src": "made"
   }
  ],
+ "w|cynique": [
+  {
+   "text": "Après vingt ans de métier, le commissaire est devenu un peu cynique.",
+   "en": "After twenty years on the job, the superintendent has become a bit cynical.",
+   "ko": "이십 년을 일하고 나니 경찰서장은 좀 냉소적이 됐어요.",
+   "blank": "cynique",
+   "src": "made"
+  },
+  {
+   "text": "Le vieux pêcheur a un humour cynique qui fait rire Chloé.",
+   "en": "The old fisherman has a cynical sense of humor that makes Chloé laugh.",
+   "ko": "늙은 어부의 냉소적인 유머에 클로에가 웃어요.",
+   "blank": "cynique",
+   "src": "made"
+  }
+ ],
  "w|d'accord": [
   {
    "text": "D’accord, je viens avec toi.",
@@ -19084,6 +19244,22 @@
    "en": "According to the local paper, the police arrested a dealer near Camille's place.",
    "ko": "지역 신문에 따르면 경찰이 카미유의 집 근처에서 마약상을 체포했대요.",
    "blank": "dealer",
+   "src": "made"
+  }
+ ],
+ "w|déballer": [
+  {
+   "text": "Les agents ont dû déballer tous les cartons saisis au port.",
+   "en": "The officers had to unpack all the boxes seized at the port.",
+   "ko": "경찰관들은 항구에서 압수한 상자를 전부 풀어 봐야 했어요.",
+   "blank": "déballer",
+   "src": "made"
+  },
+  {
+   "text": "En arrivant à la location, Chloé commence à déballer les serviettes et les maillots.",
+   "en": "When she arrives at the rental, Chloé starts unpacking the towels and swimsuits.",
+   "ko": "숙소에 도착하자 클로에는 수건과 수영복부터 꺼내요.",
+   "blank": "déballer",
    "src": "made"
   }
  ],
@@ -19419,6 +19595,22 @@
    "blank": "déchet"
   }
  ],
+ "w|déchiffrer": [
+  {
+   "text": "Thomas a passé la nuit à déchiffrer l'écriture du témoin sur sa déposition.",
+   "en": "Thomas spent the night deciphering the witness's handwriting on his statement.",
+   "ko": "토마는 증인 진술서의 글씨를 해독하느라 밤을 새웠어요.",
+   "blank": "déchiffrer",
+   "src": "made"
+  },
+  {
+   "text": "Sur la plage, Chloé essaie de déchiffrer le message écrit dans le sable.",
+   "en": "On the beach, Chloé tries to decipher the message written in the sand.",
+   "ko": "해변에서 클로에는 모래에 적힌 메시지를 읽어 내려고 해요.",
+   "blank": "déchiffrer",
+   "src": "made"
+  }
+ ],
  "w|déchirer": [
   {
    "text": "Attention à ne pas déchirer ce papier.",
@@ -19694,6 +19886,22 @@
    "en": "Léa wants to devote her sketchbook to the colours of autumn.",
    "ko": "레아는 스케치북을 가을 색깔로만 채우고 싶어 해요.",
    "blank": "dédier",
+   "src": "made"
+  }
+ ],
+ "w|déduire": [
+  {
+   "text": "À partir des traces de boue, Thomas a pu déduire l'heure du passage.",
+   "en": "From the mud tracks, Thomas was able to work out the time the person passed by.",
+   "ko": "진흙 자국을 보고 토마는 지나간 시간을 추론할 수 있었어요.",
+   "blank": "déduire",
+   "src": "made"
+  },
+  {
+   "text": "En voyant les nuages noirs, Chloé en déduit que la baignade est finie.",
+   "en": "Seeing the dark clouds, Chloé concludes that swimming is over.",
+   "ko": "먹구름을 보고 클로에는 물놀이가 끝났다고 판단해요.",
+   "blank": "déduit",
    "src": "made"
   }
  ],
@@ -23945,6 +24153,22 @@
    "blank": "durer"
   }
  ],
+ "w|dynamique": [
+  {
+   "text": "La nouvelle commissaire a apporté une équipe jeune et dynamique.",
+   "en": "The new superintendent brought in a young and dynamic team.",
+   "ko": "새 서장은 젊고 활기찬 팀을 데려왔어요.",
+   "blank": "dynamique",
+   "src": "made"
+  },
+  {
+   "text": "La petite station balnéaire est plus dynamique qu'on ne le pense.",
+   "en": "The small seaside resort is livelier than you'd think.",
+   "ko": "작은 해변 휴양지가 생각보다 활기차요.",
+   "blank": "dynamique",
+   "src": "made"
+  }
+ ],
  "w|e-mail": [
   {
    "text": "J'ai reçu un e-mail important ce matin.",
@@ -27387,6 +27611,22 @@
    "src": "made"
   }
  ],
+ "w|escalader": [
+  {
+   "text": "Le voleur a dû escalader le mur du jardin pour entrer.",
+   "en": "The burglar must have climbed over the garden wall to get in.",
+   "ko": "도둑은 정원 담을 타고 넘어 들어왔을 거예요.",
+   "blank": "escalader",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants de Chloé adorent escalader les rochers à marée basse.",
+   "en": "Chloé's children love climbing the rocks at low tide.",
+   "ko": "클로에의 아이들은 썰물 때 바위 오르기를 아주 좋아해요.",
+   "blank": "escalader",
+   "src": "made"
+  }
+ ],
  "w|escalier": [
   {
    "text": "L'escalier mène au grenier.",
@@ -29219,6 +29459,22 @@
    "src": "made"
   }
  ],
+ "w|extension": [
+  {
+   "text": "Le commissariat attend l'extension du parking depuis des années.",
+   "en": "The station has been waiting for the car park extension for years.",
+   "ko": "경찰서는 몇 년째 주차장 확장을 기다리고 있어요.",
+   "blank": "extension",
+   "src": "made"
+  },
+  {
+   "text": "Chloé a acheté une extension pour charger son téléphone sur la terrasse.",
+   "en": "Chloé bought an extension cord to charge her phone on the terrace.",
+   "ko": "클로에는 테라스에서 휴대폰을 충전하려고 연장선을 샀어요.",
+   "blank": "extension",
+   "src": "made"
+  }
+ ],
  "w|extérieur": [
   {
    "text": "Il fait froid à l'extérieur aujourd'hui.",
@@ -29495,6 +29751,22 @@
    "en": "The solution can be found easily.",
    "ko": "해결책을 쉽게 찾을 수 있어.",
    "blank": "facilement"
+  }
+ ],
+ "w|facilité": [
+  {
+   "text": "Thomas a rempli le formulaire avec une facilité qui a surpris son chef.",
+   "en": "Thomas filled in the form with an ease that surprised his boss.",
+   "ko": "토마가 서류를 너무 쉽게 작성해서 상사가 놀랐어요.",
+   "blank": "facilité",
+   "src": "made"
+  },
+  {
+   "text": "Chloé apprécie la facilité d'accès à la plage depuis la gare.",
+   "en": "Chloé likes how easy it is to reach the beach from the station.",
+   "ko": "클로에는 역에서 해변까지 가기 쉬운 게 좋아요.",
+   "blank": "facilité",
+   "src": "made"
   }
  ],
  "w|faciliter": [
@@ -30057,6 +30329,22 @@
    "en": "He got this job thanks to the director's favor.",
    "ko": "그는 이사님의 도움으로 그 자리를 얻었어.",
    "blank": "faveur"
+  }
+ ],
+ "w|favorable": [
+  {
+   "text": "Thomas a reçu un avis favorable pour sa demande de mutation.",
+   "en": "Thomas got a favorable opinion on his transfer request.",
+   "ko": "토마는 전근 신청에 긍정적인 답을 받았어요.",
+   "blank": "favorable",
+   "src": "made"
+  },
+  {
+   "text": "Le vent est favorable pour une sortie en voilier cet après-midi.",
+   "en": "The wind is favorable for a sailing trip this afternoon.",
+   "ko": "오늘 오후는 요트 타기 좋은 바람이에요.",
+   "blank": "favorable",
+   "src": "made"
   }
  ],
  "w|favori": [
@@ -43239,6 +43527,22 @@
    "blank": "mandat"
   }
  ],
+ "w|manège": [
+  {
+   "text": "Thomas a vite compris le manège des deux faux agents immobiliers.",
+   "en": "Thomas quickly saw through the two fake estate agents' little game.",
+   "ko": "토마는 가짜 부동산 중개인 둘의 수작을 금방 알아챘어요.",
+   "blank": "manège",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants de Chloé ont fait trois tours de manège sur la promenade.",
+   "en": "Chloé's children had three rides on the merry-go-round on the promenade.",
+   "ko": "클로에의 아이들은 산책로 회전목마를 세 번 탔어요.",
+   "blank": "manège",
+   "src": "made"
+  }
+ ],
  "w|manger": [
   {
    "text": "Je vais manger maintenant.",
@@ -44127,6 +44431,22 @@
    "blank": "matinée"
   }
  ],
+ "w|mature": [
+  {
+   "text": "Pour son âge, la jeune témoin s'est montrée très mature.",
+   "en": "For her age, the young witness was very mature.",
+   "ko": "어린 증인은 나이에 비해 아주 성숙했어요.",
+   "blank": "mature",
+   "src": "made"
+  },
+  {
+   "text": "Chloé trouve que son fils est devenu plus mature pendant ces vacances.",
+   "en": "Chloé thinks her son has become more mature during this holiday.",
+   "ko": "클로에는 이번 휴가 동안 아들이 더 성숙해졌다고 생각해요.",
+   "blank": "mature",
+   "src": "made"
+  }
+ ],
  "w|maudire": [
   {
    "text": "Antoine maudit le message mal écrit qui a vexé sa sœur.",
@@ -44359,6 +44679,22 @@
    "en": "This medicine is sold without a prescription.",
    "ko": "이 약은 처방전 없이 판매된다.",
    "blank": "médicament"
+  }
+ ],
+ "w|médiocre": [
+  {
+   "text": "La qualité médiocre de l'enregistrement rend le visage impossible à reconnaître.",
+   "en": "The poor quality of the recording makes the face impossible to recognize.",
+   "ko": "녹화 화질이 형편없어서 얼굴을 알아볼 수가 없어요.",
+   "blank": "médiocre",
+   "src": "made"
+  },
+  {
+   "text": "La pizza du kiosque était médiocre, mais la vue était superbe.",
+   "en": "The kiosk pizza was mediocre, but the view was superb.",
+   "ko": "매점 피자는 그저 그랬지만 경치는 끝내줬어요.",
+   "blank": "médiocre",
+   "src": "made"
   }
  ],
  "w|médium": [
@@ -47467,6 +47803,22 @@
    "src": "made"
   }
  ],
+ "w|négligence": [
+  {
+   "text": "Selon Thomas, l'accident est dû à une simple négligence du chauffeur.",
+   "en": "According to Thomas, the accident was caused by simple negligence on the driver's part.",
+   "ko": "토마 말로는 그 사고는 운전사의 단순한 부주의 때문이에요.",
+   "blank": "négligence",
+   "src": "made"
+  },
+  {
+   "text": "Le maître-nageur a reproché aux parents leur négligence.",
+   "en": "The lifeguard criticized the parents for their carelessness.",
+   "ko": "안전 요원은 부모들의 부주의를 나무랐어요.",
+   "blank": "négligence",
+   "src": "made"
+  }
+ ],
  "w|négociation": [
   {
    "text": "Après des mois de négociation, Lucas a obtenu le prêt de la sculpture.",
@@ -47739,6 +48091,22 @@
    "en": "This family is of noble origin.",
    "ko": "이 가족은 귀족 출신이야.",
    "blank": "noble"
+  }
+ ],
+ "w|noblesse": [
+  {
+   "text": "Le vieux château volé appartenait autrefois à une famille de la noblesse.",
+   "en": "The burgled old château once belonged to a noble family.",
+   "ko": "도둑이 든 오래된 성은 예전에 귀족 가문의 것이었어요.",
+   "blank": "noblesse",
+   "src": "made"
+  },
+  {
+   "text": "La villa au bout de la plage était la résidence d'été de la noblesse.",
+   "en": "The villa at the end of the beach was the nobility's summer residence.",
+   "ko": "해변 끝 빌라는 귀족들의 여름 별장이었어요.",
+   "blank": "noblesse",
+   "src": "made"
   }
  ],
  "w|noce": [
@@ -48147,6 +48515,22 @@
    "blank": "nouveau"
   }
  ],
+ "w|nouveauté": [
+  {
+   "text": "La nouveauté de cette année, c'est la plainte en ligne.",
+   "en": "This year's new feature is filing a complaint online.",
+   "ko": "올해 새로 생긴 건 온라인 신고예요.",
+   "blank": "nouveauté",
+   "src": "made"
+  },
+  {
+   "text": "Le glacier propose une nouveauté chaque semaine, cette fois au caramel salé.",
+   "en": "The ice-cream shop offers something new every week, this time salted caramel.",
+   "ko": "아이스크림 가게는 매주 새 맛을 내놓는데 이번엔 솔티드 캐러멜이에요.",
+   "blank": "nouveauté",
+   "src": "made"
+  }
+ ],
  "w|nouvelle": [
   {
    "text": "J'ai une bonne nouvelle pour toi.",
@@ -48463,6 +48847,22 @@
    "en": "He has been afraid of darkness since childhood.",
    "ko": "그는 어렸을 때부터 어둠을 무서워해.",
    "blank": "obscurité"
+  }
+ ],
+ "w|obsèques": [
+  {
+   "text": "Thomas a pris un jour de congé pour assister aux obsèques de son ancien chef.",
+   "en": "Thomas took a day off to attend his former boss's funeral.",
+   "ko": "토마는 옛 상사의 장례식에 가려고 하루 휴가를 냈어요.",
+   "blank": "obsèques",
+   "src": "made"
+  },
+  {
+   "text": "Toute la ville est venue aux obsèques du vieux gardien du phare.",
+   "en": "The whole town came to the old lighthouse keeper's funeral.",
+   "ko": "온 마을이 늙은 등대지기의 장례식에 왔어요.",
+   "blank": "obsèques",
+   "src": "made"
   }
  ],
  "w|observateur": [
@@ -49507,6 +49907,22 @@
    "src": "made"
   }
  ],
+ "w|orgie": [
+  {
+   "text": "Au pot de départ du capitaine, il y avait une véritable orgie de gâteaux.",
+   "en": "At the captain's farewell drinks, there was a real feast of cakes.",
+   "ko": "대장의 송별회에는 케이크가 그야말로 잔뜩 있었어요.",
+   "blank": "orgie",
+   "src": "made"
+  },
+  {
+   "text": "Le marché du port offre une orgie de couleurs et d'odeurs.",
+   "en": "The harbor market offers a riot of colors and smells.",
+   "ko": "항구 시장에는 색과 냄새가 넘쳐나요.",
+   "blank": "orgie",
+   "src": "made"
+  }
+ ],
  "w|orgueil": [
   {
    "text": "Par orgueil, Hugo refuse d'appeler sa sœur le premier.",
@@ -49799,6 +50215,22 @@
    "en": "Do you have a tool to open this box?",
    "ko": "이 상자를 열 도구 있어?",
    "blank": "outil"
+  }
+ ],
+ "w|outrage": [
+  {
+   "text": "Le conducteur a été arrêté pour outrage à agent.",
+   "en": "The driver was arrested for insulting an officer.",
+   "ko": "그 운전자는 경찰관 모욕죄로 체포됐어요.",
+   "blank": "outrage",
+   "src": "made"
+  },
+  {
+   "text": "Chloé trouve que ces immeubles en béton sont un outrage à la beauté de la baie.",
+   "en": "Chloé thinks these concrete buildings are an insult to the beauty of the bay.",
+   "ko": "클로에는 이 콘크리트 건물들이 만의 아름다움을 모욕한다고 생각해요.",
+   "blank": "outrage",
+   "src": "made"
   }
  ],
  "w|outre": [
@@ -50837,6 +51269,22 @@
    "blank": "Parmi"
   }
  ],
+ "w|paroisse": [
+  {
+   "text": "Le curé de la paroisse est venu signaler la disparition d'une statue.",
+   "en": "The parish priest came to report a missing statue.",
+   "ko": "본당 신부가 조각상이 없어졌다고 신고하러 왔어요.",
+   "blank": "paroisse",
+   "src": "made"
+  },
+  {
+   "text": "La petite paroisse du village organise une kermesse sur le port.",
+   "en": "The village's small parish is holding a fête on the harbor.",
+   "ko": "마을의 작은 본당이 항구에서 바자회를 열어요.",
+   "blank": "paroisse",
+   "src": "made"
+  }
+ ],
  "w|parole": [
   {
    "text": "Tu as ma parole, je reviendrai.",
@@ -51863,6 +52311,22 @@
    "src": "made"
   }
  ],
+ "w|pénal": [
+  {
+   "text": "Thomas révise le code pénal avant son examen de promotion.",
+   "en": "Thomas is studying the criminal code before his promotion exam.",
+   "ko": "토마는 승진 시험을 앞두고 형법을 복습해요.",
+   "blank": "pénal",
+   "src": "made"
+  },
+  {
+   "text": "Le voisin de plage de Chloé est avocat en droit pénal.",
+   "en": "Chloé's beach neighbor is a criminal lawyer.",
+   "ko": "클로에 옆자리 사람은 형사 전문 변호사예요.",
+   "blank": "pénal",
+   "src": "made"
+  }
+ ],
  "w|pencher": [
   {
    "text": "Hugo doit pencher la tête pour voir le tableau derrière son grand voisin.",
@@ -52250,6 +52714,22 @@
    "en": "Camille had to ask the landlord's permission to repaint the walls.",
    "ko": "카미유는 벽을 다시 칠하려고 집주인에게 허락을 받아야 했어요.",
    "blank": "permission",
+   "src": "made"
+  }
+ ],
+ "w|perpétuité": [
+  {
+   "text": "L'auteur de l'affaire de l'an dernier a été condamné à la perpétuité.",
+   "en": "The perpetrator in last year's case was sentenced to life.",
+   "ko": "작년 사건의 범인은 무기징역을 선고받았어요.",
+   "blank": "perpétuité",
+   "src": "made"
+  },
+  {
+   "text": "La famille de Chloé loue cette maison depuis toujours, comme si c'était à perpétuité.",
+   "en": "Chloé's family has always rented this house, as if forever.",
+   "ko": "클로에 가족은 이 집을 평생 빌린 것처럼 늘 빌려 써요.",
+   "blank": "perpétuité",
    "src": "made"
   }
  ],
@@ -53011,6 +53491,22 @@
    "en": "The remote's battery needs to be changed.",
    "ko": "리모컨의 배터리를 교체해야 한다.",
    "blank": "pile"
+  }
+ ],
+ "w|piller": [
+  {
+   "text": "Des inconnus ont tenté de piller la boutique pendant la panne d'électricité.",
+   "en": "Unknown people tried to loot the shop during the power cut.",
+   "ko": "정전 중에 정체 모를 사람들이 가게를 약탈하려 했어요.",
+   "blank": "piller",
+   "src": "made"
+  },
+  {
+   "text": "Les mouettes viennent piller le pique-nique dès que Chloé tourne le dos.",
+   "en": "The gulls come and raid the picnic as soon as Chloé turns her back.",
+   "ko": "클로에가 등을 돌리기만 하면 갈매기들이 소풍 도시락을 털어 가요.",
+   "blank": "piller",
+   "src": "made"
   }
  ],
  "w|pilote": [
@@ -56263,6 +56759,22 @@
    "src": "made"
   }
  ],
+ "w|privilégié": [
+  {
+   "text": "Thomas a grandi dans un quartier privilégié, loin des affaires qu'il traite aujourd'hui.",
+   "en": "Thomas grew up in a privileged neighborhood, far from the cases he handles today.",
+   "ko": "토마는 지금 맡는 사건들과는 먼 부유한 동네에서 자랐어요.",
+   "blank": "privilégié",
+   "src": "made"
+  },
+  {
+   "text": "Chloé se sent privilégiée de pouvoir passer tout le mois d'août au bord de la mer.",
+   "en": "Chloé feels privileged to be able to spend all of August by the sea.",
+   "ko": "클로에는 팔월 내내 바닷가에서 지낼 수 있어서 행운이라고 느껴요.",
+   "blank": "privilégiée",
+   "src": "made"
+  }
+ ],
  "w|prix": [
   {
    "text": "Le prix de cette robe est élevé.",
@@ -56920,6 +57432,22 @@
    "en": "Émilie can't pronounce the name of this Basque cheese.",
    "ko": "에밀리는 이 바스크 치즈 이름을 발음하지 못해요.",
    "blank": "prononcer",
+   "src": "made"
+  }
+ ],
+ "w|propagande": [
+  {
+   "text": "Les affiches de propagande trouvées dans la cave datent de la guerre.",
+   "en": "The propaganda posters found in the cellar date from the war.",
+   "ko": "지하실에서 나온 선전 포스터는 전쟁 때 것이에요.",
+   "blank": "propagande",
+   "src": "made"
+  },
+  {
+   "text": "Chloé dit en riant que les dépliants de l'office du tourisme, c'est de la propagande.",
+   "en": "Chloé says, laughing, that the tourist office leaflets are pure propaganda.",
+   "ko": "클로에는 관광 안내소 전단지가 순 선전이라고 웃으며 말해요.",
+   "blank": "propagande",
    "src": "made"
   }
  ],
@@ -58891,6 +59419,22 @@
    "en": "We must not miss this opportunity.",
    "ko": "이 기회를 놓치면 안 돼.",
    "blank": "rater"
+  }
+ ],
+ "w|rationnel": [
+  {
+   "text": "Thomas essaie de garder un esprit rationnel même quand les plaintes paraissent absurdes.",
+   "en": "Thomas tries to keep a rational mind even when the complaints seem absurd.",
+   "ko": "토마는 신고가 터무니없어 보여도 이성적인 태도를 지키려고 해요.",
+   "blank": "rationnel",
+   "src": "made"
+  },
+  {
+   "text": "Chloé sait que sa peur des méduses n'a rien de rationnel.",
+   "en": "Chloé knows her fear of jellyfish is not rational at all.",
+   "ko": "클로에는 해파리 공포가 전혀 이성적이지 않다는 걸 알아요.",
+   "blank": "rationnel",
+   "src": "made"
   }
  ],
  "w|rattraper": [
@@ -61991,6 +62535,22 @@
    "blank": "resto"
   }
  ],
+ "w|restriction": [
+  {
+   "text": "La préfecture a annoncé une restriction de circulation pour le week-end.",
+   "en": "The prefecture announced a traffic restriction for the weekend.",
+   "ko": "도청이 주말 통행 제한을 발표했어요.",
+   "blank": "restriction",
+   "src": "made"
+  },
+  {
+   "text": "Une restriction d'eau empêche Chloé d'arroser le jardin de la location.",
+   "en": "A water restriction prevents Chloé from watering the rental's garden.",
+   "ko": "물 사용 제한 때문에 클로에는 숙소 정원에 물을 줄 수 없어요.",
+   "blank": "restriction",
+   "src": "made"
+  }
+ ],
  "w|résultat": [
   {
    "text": "Le résultat du match était surprenant.",
@@ -62034,6 +62594,22 @@
    "en": "For the hurried customer, Chloé sums up the problem simply.",
    "ko": "바쁜 손님에게 클로에는 문제를 간단히 요약해 줘요.",
    "blank": "résume",
+   "src": "made"
+  }
+ ],
+ "w|résurrection": [
+  {
+   "text": "Le commissariat a été rénové et les collègues parlent d'une vraie résurrection.",
+   "en": "The police station was renovated and colleagues talk of a real resurrection.",
+   "ko": "경찰서가 새로 단장해서 동료들은 완전히 부활했다고 해요.",
+   "blank": "résurrection",
+   "src": "made"
+  },
+  {
+   "text": "Pour les habitants, le retour des phoques dans la baie tient de la résurrection.",
+   "en": "For the locals, the return of the seals to the bay is something of a resurrection.",
+   "ko": "주민들에게 물범이 만으로 돌아온 건 거의 부활이나 다름없어요.",
+   "blank": "résurrection",
    "src": "made"
   }
  ],
@@ -67051,6 +67627,22 @@
    "blank": "sorcière"
   }
  ],
+ "w|sordide": [
+  {
+   "text": "Le journal local parle d'une histoire sordide d'héritage entre deux frères.",
+   "en": "The local paper covers a sordid inheritance story between two brothers.",
+   "ko": "지역 신문은 두 형제 사이의 지저분한 유산 다툼을 다뤄요.",
+   "blank": "sordide",
+   "src": "made"
+  },
+  {
+   "text": "L'hôtel du port, autrefois charmant, est devenu un endroit sordide.",
+   "en": "The harbor hotel, once charming, has become a seedy place.",
+   "ko": "예전엔 멋졌던 항구 호텔이 지금은 지저분한 곳이 됐어요.",
+   "blank": "sordide",
+   "src": "made"
+  }
+ ],
  "w|sort": [
   {
    "text": "Le sort semble jouer contre moi ce soir.",
@@ -67878,6 +68470,22 @@
    "en": "A passer-by stops with Émilie to watch the juggler.",
    "ko": "구경꾼 하나가 에밀리와 함께 멈춰 서서 저글러를 봐요.",
    "blank": "spectateur",
+   "src": "made"
+  }
+ ],
+ "w|sphère": [
+  {
+   "text": "Thomas évite de mélanger le travail et la sphère privée.",
+   "en": "Thomas avoids mixing work and his private life.",
+   "ko": "토마는 일과 사생활을 섞지 않으려고 해요.",
+   "blank": "sphère",
+   "src": "made"
+  },
+  {
+   "text": "Le phare ressemble à une grosse sphère posée sur une tour.",
+   "en": "The lighthouse looks like a big sphere sitting on a tower.",
+   "ko": "등대는 탑 위에 큰 구를 얹어 놓은 것 같아요.",
+   "blank": "sphère",
    "src": "made"
   }
  ],
@@ -71509,6 +72117,22 @@
    "blank": "totalement"
   }
  ],
+ "w|totalité": [
+  {
+   "text": "La police a retrouvé la totalité des bijoux volés.",
+   "en": "The police recovered all of the stolen jewelry.",
+   "ko": "경찰이 도난당한 보석을 전부 되찾았어요.",
+   "blank": "totalité",
+   "src": "made"
+  },
+  {
+   "text": "Chloé a dépensé la totalité de son budget glaces dès le premier jour.",
+   "en": "Chloé spent her entire ice-cream budget on the very first day.",
+   "ko": "클로에는 첫날에 아이스크림 예산을 몽땅 써 버렸어요.",
+   "blank": "totalité",
+   "src": "made"
+  }
+ ],
  "w|toucher": [
   {
    "text": "Ne pas toucher à ça, c’est fragile.",
@@ -74470,6 +75094,22 @@
    "en": "Camille's watch gives a vibration every kilometer.",
    "ko": "카미유의 시계는 일 킬로미터마다 진동해요.",
    "blank": "vibration",
+   "src": "made"
+  }
+ ],
+ "w|vibrer": [
+  {
+   "text": "Le téléphone de Thomas n'a pas arrêté de vibrer pendant l'interrogatoire.",
+   "en": "Thomas's phone kept vibrating during the questioning.",
+   "ko": "신문하는 동안 토마의 휴대폰이 계속 진동했어요.",
+   "blank": "vibrer",
+   "src": "made"
+  },
+  {
+   "text": "Chloé sent le ponton vibrer à chaque vague.",
+   "en": "Chloé feels the pontoon vibrate with every wave.",
+   "ko": "클로에는 파도가 칠 때마다 부두가 떨리는 걸 느껴요.",
+   "blank": "vibrer",
    "src": "made"
   }
  ],

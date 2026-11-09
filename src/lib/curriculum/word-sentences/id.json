@@ -749,6 +749,22 @@
    "blank": "Alkohol"
   }
  ],
+ "w|almarhum": [
+  {
+   "text": "Sebelum acara dimulai, keluarga Fajar berdoa untuk almarhum kakeknya.",
+   "en": "Before the event started, Fajar's family prayed for his late grandfather.",
+   "ko": "행사를 시작하기 전에 파자르의 가족은 돌아가신 할아버지를 위해 기도했어요.",
+   "blank": "almarhum",
+   "src": "made"
+  },
+  {
+   "text": "Redaksi menerbitkan obituari untuk almarhum pendiri surat kabar itu.",
+   "en": "The editorial team published an obituary for the newspaper's late founder.",
+   "ko": "편집국은 신문사의 고(故) 창립자를 위한 부고 기사를 실었어요.",
+   "blank": "almarhum",
+   "src": "made"
+  }
+ ],
  "w|alternatif": [
   {
    "text": "Kalau lift penuh, tangga adalah alternatif yang lebih cepat bagi Bayu.",
@@ -854,6 +870,22 @@
    "en": "Rina has the ambition of taking her app all over Southeast Asia.",
    "ko": "리나는 자기 앱을 동남아시아 전역에 퍼뜨리겠다는 포부가 있어요.",
    "blank": "ambisi",
+   "src": "made"
+  }
+ ],
+ "w|ambisius": [
+  {
+   "text": "Istri Fajar sangat ambisius dan berencana membuka usaha katering sendiri.",
+   "en": "Fajar's wife is very ambitious and plans to open her own catering business.",
+   "ko": "파자르의 아내는 아주 야심 차서 자기 케이터링 사업을 열 계획이에요.",
+   "blank": "ambisius",
+   "src": "made"
+  },
+  {
+   "text": "Sebagai wartawan muda yang ambisius, Lestari ingin meliput berita besar.",
+   "en": "As an ambitious young reporter, Lestari wants to cover big stories.",
+   "ko": "야심 찬 젊은 기자로서 레스타리는 큰 사건을 취재하고 싶어 해요.",
+   "blank": "ambisius",
    "src": "made"
   }
  ],
@@ -3471,6 +3503,22 @@
    "blank": "belajar"
   }
  ],
+ "w|belaka": [
+  {
+   "text": "Fajar bilang janjinya kepada calon mertua bukan omong kosong belaka.",
+   "en": "Fajar said his promise to his future in-laws was not mere empty talk.",
+   "ko": "파자르는 예비 처가에 한 약속이 그냥 빈말이 아니라고 했어요.",
+   "blank": "belaka",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menegaskan bahwa berita itu fakta, bukan gosip belaka.",
+   "en": "Lestari stressed that the story was fact, not mere gossip.",
+   "ko": "레스타리는 그 기사가 단순한 소문이 아니라 사실이라고 강조했어요.",
+   "blank": "belaka",
+   "src": "made"
+  }
+ ],
  "w|belakang": [
   {
    "text": "Dia duduk di belakang.",
@@ -3924,6 +3972,22 @@
    "en": "Wati's violin teacher is a curly-haired woman who is very patient.",
    "ko": "와티의 바이올린 선생님은 곱슬머리에 아주 참을성 있는 분이에요.",
    "blank": "berambut",
+   "src": "made"
+  }
+ ],
+ "w|berandalan": [
+  {
+   "text": "Dulu Fajar dianggap berandalan di kampungnya, tapi sekarang ia guru yang dihormati.",
+   "en": "Fajar used to be considered a delinquent in his village, but now he's a respected teacher.",
+   "ko": "예전에 파자르는 동네에서 불량배로 여겨졌지만 지금은 존경받는 선생님이에요.",
+   "blank": "berandalan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menulis laporan tentang anak-anak berandalan yang kini aktif di sanggar musik.",
+   "en": "Lestari wrote a report about former delinquent kids who are now active in a music studio.",
+   "ko": "레스타리는 한때 불량했던 아이들이 이제 음악 교실에서 활동하는 이야기를 기사로 썼어요.",
+   "blank": "berandalan",
    "src": "made"
   }
  ],
@@ -5857,6 +5921,22 @@
    "src": "made"
   }
  ],
+ "w|berkhianat": [
+  {
+   "text": "Dalam pidatonya, Fajar berjanji tidak akan pernah berkhianat kepada istrinya.",
+   "en": "In his speech, Fajar promised never to betray his wife.",
+   "ko": "연설에서 파자르는 아내를 절대 배신하지 않겠다고 약속했어요.",
+   "blank": "berkhianat",
+   "src": "made"
+  },
+  {
+   "text": "Dalam wawancaranya, mantan pejabat itu mengaku tidak pernah berkhianat kepada negara.",
+   "en": "In his interview, the former official claimed he had never betrayed the country.",
+   "ko": "인터뷰에서 그 전직 공무원은 나라를 배신한 적이 없다고 주장했어요.",
+   "blank": "berkhianat",
+   "src": "made"
+  }
+ ],
  "w|berkilau": [
   {
    "text": "Kostum sang ratu berkilau di bawah lampu sorot.",
@@ -7169,6 +7249,22 @@
    "src": "made"
   }
  ],
+ "w|bersekongkol": [
+  {
+   "text": "Teman-teman Fajar bersekongkol menyembunyikan sepatu pengantin pria sebagai lelucon.",
+   "en": "Fajar's friends conspired to hide the groom's shoes as a joke.",
+   "ko": "파자르의 친구들은 장난으로 신랑 신발을 숨기려고 짰어요.",
+   "blank": "bersekongkol",
+   "src": "made"
+  },
+  {
+   "text": "Laporan Lestari membongkar pejabat yang bersekongkol dengan kontraktor untuk menaikkan harga proyek.",
+   "en": "Lestari's report exposed officials who conspired with contractors to inflate project prices.",
+   "ko": "레스타리의 기사는 공사비를 부풀리려고 업자와 공모한 공무원들을 폭로했어요.",
+   "blank": "bersekongkol",
+   "src": "made"
+  }
+ ],
  "w|berselancar": [
   {
    "text": "Malam-malam Andi berselancar di internet mencari ide desain dapur.",
@@ -8172,6 +8268,22 @@
    "en": "Dewi's aunt lives in a convent and always sends cookies at the end of every year.",
    "ko": "데위의 이모는 수녀원에 살고 해마다 연말이면 쿠키를 보내 줘요.",
    "blank": "biara",
+   "src": "made"
+  }
+ ],
+ "w|biarawan": [
+  {
+   "text": "Fajar mengundang seorang biarawan tua, guru bahasa Inggrisnya waktu SMA.",
+   "en": "Fajar invited an old monk who had been his English teacher in high school.",
+   "ko": "파자르는 고등학교 때 영어 선생님이었던 나이 든 수도사를 초대했어요.",
+   "blank": "biarawan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari meliput seorang biarawan yang mengajar anak-anak di daerah perbatasan.",
+   "en": "Lestari covered a monk who teaches children in the border area.",
+   "ko": "레스타리는 국경 지역에서 아이들을 가르치는 수도사를 취재했어요.",
+   "blank": "biarawan",
    "src": "made"
   }
  ],
@@ -9793,6 +9905,22 @@
    "src": "made"
   }
  ],
+ "w|cengeng": [
+  {
+   "text": "Fajar bilang dirinya bukan cengeng, tapi ia tetap menangis saat ayahnya memberi restu.",
+   "en": "Fajar said he's not a crybaby, but he still cried when his father gave his blessing.",
+   "ko": "파자르는 자기가 울보는 아니라고 했지만 아버지가 축복해 줄 때 결국 울었어요.",
+   "blank": "cengeng",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bukan wartawan cengeng, tapi kritik tajam dari pembaca kadang membuatnya sedih.",
+   "en": "Lestari isn't a thin-skinned reporter, but sharp criticism from readers sometimes makes her sad.",
+   "ko": "레스타리는 여린 기자는 아니지만 독자의 날카로운 비판에 가끔 속상해요.",
+   "blank": "cengeng",
+   "src": "made"
+  }
+ ],
  "w|cepat": [
   {
    "text": "Ayo cepat!",
@@ -9848,6 +9976,22 @@
    "en": "Rina has to be clever in finding sources who will speak frankly.",
    "ko": "리나는 솔직하게 말해 줄 취재원을 영리하게 찾아야 해요.",
    "blank": "cerdik",
+   "src": "made"
+  }
+ ],
+ "w|cerewet": [
+  {
+   "text": "Tante Fajar yang cerewet terus mengomentari warna baju para tamu.",
+   "en": "Fajar's chatty aunt kept commenting on the colors of the guests' clothes.",
+   "ko": "말 많은 파자르의 이모는 손님들 옷 색깔에 대해 계속 한마디씩 했어요.",
+   "blank": "cerewet",
+   "src": "made"
+  },
+  {
+   "text": "Redaktur Lestari memang cerewet, tapi tulisannya jadi jauh lebih rapi.",
+   "en": "Lestari's editor is certainly fussy, but her writing has become much tidier.",
+   "ko": "레스타리의 편집장은 잔소리가 많지만 덕분에 글이 훨씬 깔끔해졌어요.",
+   "blank": "cerewet",
    "src": "made"
   }
  ],
@@ -15809,6 +15953,22 @@
    "en": "Explain the gist of the story.",
    "ko": "이야기의 핵심을 설명해.",
    "blank": "inti"
+  }
+ ],
+ "w|intim": [
+  {
+   "text": "Pesta kecil itu terasa intim karena hanya keluarga dekat yang diundang.",
+   "en": "The small party felt intimate because only close family were invited.",
+   "ko": "가까운 가족만 초대해서 그 작은 잔치는 아늑하게 느껴졌어요.",
+   "blank": "intim",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menolak menulis tentang kehidupan intim artis itu.",
+   "en": "Lestari refused to write about that celebrity's intimate life.",
+   "ko": "레스타리는 그 연예인의 사생활에 대해 쓰는 걸 거절했어요.",
+   "blank": "intim",
+   "src": "made"
   }
  ],
  "w|invasi": [
@@ -22361,6 +22521,38 @@
    "src": "made"
   }
  ],
+ "w|kolektor": [
+  {
+   "text": "Paman Fajar, seorang kolektor keris, memberikan hadiah keris tua kepada pengantin.",
+   "en": "Fajar's uncle, a kris collector, gave the couple an old kris as a gift.",
+   "ko": "크리스 단검 수집가인 파자르의 삼촌은 신랑 신부에게 오래된 크리스를 선물했어요.",
+   "blank": "kolektor",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mewawancarai kolektor perangko yang punya ribuan koleksi dari seluruh dunia.",
+   "en": "Lestari interviewed a stamp collector who has thousands of stamps from around the world.",
+   "ko": "레스타리는 전 세계 우표 수천 장을 가진 우표 수집가를 인터뷰했어요.",
+   "blank": "kolektor",
+   "src": "made"
+  }
+ ],
+ "w|kolom": [
+  {
+   "text": "Di buku tamu pernikahan Fajar, setiap tamu menulis nama di kolom yang sudah disediakan.",
+   "en": "In Fajar's wedding guest book, each guest wrote their name in the column provided.",
+   "ko": "파자르 결혼식 방명록에 손님들은 마련된 칸에 이름을 적었어요.",
+   "blank": "kolom",
+   "src": "made"
+  },
+  {
+   "text": "Setiap Minggu, Lestari mengisi kolom opini di halaman belakang koran.",
+   "en": "Every Sunday, Lestari writes the opinion column on the back page of the paper.",
+   "ko": "매주 일요일 레스타리는 신문 뒷면 오피니언 칼럼을 맡아 써요.",
+   "blank": "kolom",
+   "src": "made"
+  }
+ ],
  "w|kolonel": [
   {
    "text": "Kolonel memberi briefing singkat.",
@@ -24235,6 +24427,22 @@
    "blank": "Lampu"
   }
  ],
+ "w|lancang": [
+  {
+   "text": "Ada tamu lancang yang naik ke pelaminan tanpa diundang untuk berfoto.",
+   "en": "There was a rude guest who climbed onto the dais uninvited to take photos.",
+   "ko": "초대받지도 않았는데 단상에 올라가 사진을 찍은 무례한 손님이 있었어요.",
+   "blank": "lancang",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menganggap pertanyaan wartawan lain kepada korban itu terlalu lancang.",
+   "en": "Lestari thought the other reporter's question to the victim was too impertinent.",
+   "ko": "레스타리는 다른 기자가 피해자에게 한 질문이 너무 무례하다고 생각했어요.",
+   "blank": "lancang",
+   "src": "made"
+  }
+ ],
  "w|lancar": [
   {
    "text": "Perjalanan kami berjalan lancar hari ini.",
@@ -24856,6 +25064,22 @@
    "en": "Siti found two old photos tucked inside an atlas.",
    "ko": "시티는 지도책 속에 끼어 있던 옛날 사진 두 장을 찾았어요.",
    "blank": "lembar",
+   "src": "made"
+  }
+ ],
+ "w|lembaran": [
+  {
+   "text": "Ibu Fajar menyelipkan lembaran uang baru ke dalam amplop untuk para penari.",
+   "en": "Fajar's mother slipped crisp banknotes into envelopes for the dancers.",
+   "ko": "파자르의 어머니는 무용수들에게 줄 봉투에 새 지폐를 넣었어요.",
+   "blank": "lembaran",
+   "src": "made"
+  },
+  {
+   "text": "Di meja Lestari ada lembaran koran lama yang ia simpan sebagai kenang-kenangan.",
+   "en": "On Lestari's desk are old newspaper pages she keeps as mementos.",
+   "ko": "레스타리의 책상에는 기념으로 간직한 옛 신문 지면이 있어요.",
+   "blank": "lembaran",
    "src": "made"
   }
  ],
@@ -25713,6 +25937,22 @@
    "blank": "lurus"
   }
  ],
+ "w|lusin": [
+  {
+   "text": "Fajar memesan dua lusin kue lapis untuk dibawa pulang keluarganya.",
+   "en": "Fajar ordered two dozen layer cakes for his family to take home.",
+   "ko": "파자르는 가족들이 가져갈 층층 케이크를 두 다스 주문했어요.",
+   "blank": "lusin",
+   "src": "made"
+  },
+  {
+   "text": "Untuk rapat pagi, redaktur membeli selusin donat untuk seluruh tim.",
+   "en": "For the morning meeting, the editor bought a dozen doughnuts for the whole team.",
+   "ko": "아침 회의를 위해 편집장은 팀 전체에 도넛 한 다스를 샀어요.",
+   "blank": "selusin",
+   "src": "made"
+  }
+ ],
  "w|lutut": [
   {
    "text": "Anak kecil di ruang tunggu duduk memeluk lutut sambil menangis.",
@@ -26323,6 +26563,38 @@
    "en": "That child is taking a bath.",
    "ko": "그 아이가 목욕 중이야.",
    "blank": "mandi"
+  }
+ ],
+ "w|mandiri": [
+  {
+   "text": "Fajar dan istrinya ingin hidup mandiri dan tidak tinggal bersama orang tua.",
+   "en": "Fajar and his wife want to live independently and not with their parents.",
+   "ko": "파자르 부부는 부모님과 함께 살지 않고 독립해서 살고 싶어 해요.",
+   "blank": "mandiri",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menulis artikel tentang koperasi desa yang membuat warga lebih mandiri.",
+   "en": "Lestari wrote an article about a village cooperative that made residents more self-reliant.",
+   "ko": "레스타리는 주민들을 더 자립적으로 만든 마을 협동조합에 대한 기사를 썼어요.",
+   "blank": "mandiri",
+   "src": "made"
+  }
+ ],
+ "w|maniak": [
+  {
+   "text": "Sepupu Fajar adalah maniak fotografi yang memotret setiap detail dekorasi pernikahan.",
+   "en": "Fajar's cousin is a photography maniac who photographed every detail of the wedding decorations.",
+   "ko": "파자르의 사촌은 결혼식 장식을 하나하나 다 찍는 사진광이에요.",
+   "blank": "maniak",
+   "src": "made"
+  },
+  {
+   "text": "Rekan Lestari adalah maniak sepak bola yang hafal skor pertandingan sejak puluhan tahun lalu.",
+   "en": "Lestari's coworker is a football maniac who remembers match scores from decades ago.",
+   "ko": "레스타리의 동료는 수십 년 전 경기 점수까지 외우는 축구광이에요.",
+   "blank": "maniak",
+   "src": "made"
   }
  ],
  "w|manis": [
@@ -27109,6 +27381,22 @@
    "src": "made"
   }
  ],
+ "w|melambat": [
+  {
+   "text": "Mobil pengantin melambat saat melewati rumah-rumah tetangga yang melambaikan tangan.",
+   "en": "The bridal car slowed down as it passed the neighbors' houses, where people were waving.",
+   "ko": "웨딩카는 손을 흔드는 이웃집들을 지나며 속도를 줄였어요.",
+   "blank": "melambat",
+   "src": "made"
+  },
+  {
+   "text": "Menjelang tengah malam, pekerjaan di ruang redaksi mulai melambat.",
+   "en": "Toward midnight, work in the newsroom began to slow down.",
+   "ko": "자정이 다가오자 편집국 업무가 느려지기 시작했어요.",
+   "blank": "melambat",
+   "src": "made"
+  }
+ ],
  "w|melambung": [
   {
    "text": "Biaya renovasi melambung karena harga semen naik tiba-tiba.",
@@ -27402,6 +27690,22 @@
    "en": "The scented candles at Lestari's stall started melting in the midday sun.",
    "ko": "레스타리 노점의 향초가 한낮 햇볕에 녹기 시작했어요.",
    "blank": "meleleh",
+   "src": "made"
+  }
+ ],
+ "w|melemah": [
+  {
+   "text": "Menjelang tengah malam, suara musik mulai melemah karena pemainnya kelelahan.",
+   "en": "Toward midnight, the music started to fade because the players were exhausted.",
+   "ko": "자정이 가까워지자 연주자들이 지쳐서 음악 소리가 약해졌어요.",
+   "blank": "melemah",
+   "src": "made"
+  },
+  {
+   "text": "Sinyal internet di kantor redaksi melemah setiap kali hujan deras.",
+   "en": "The internet signal at the newsroom weakens every time it rains hard.",
+   "ko": "폭우가 올 때마다 편집국 인터넷 신호가 약해져요.",
+   "blank": "melemah",
    "src": "made"
   }
  ],
@@ -29211,6 +29515,22 @@
    "src": "made"
   }
  ],
+ "w|membobol": [
+  {
+   "text": "Seminggu sebelum pesta, pencuri sempat membobol rumah Fajar dan mengambil cincin kawin.",
+   "en": "A week before the party, a thief broke into Fajar's house and took the wedding ring.",
+   "ko": "잔치 일주일 전에 도둑이 파자르의 집을 털어 결혼반지를 가져갔어요.",
+   "blank": "membobol",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menulis berita tentang peretas yang membobol data ribuan pelanggan bank.",
+   "en": "Lestari wrote a story about hackers who breached the data of thousands of bank customers.",
+   "ko": "레스타리는 수천 명의 은행 고객 정보를 턴 해커들에 대한 기사를 썼어요.",
+   "blank": "membobol",
+   "src": "made"
+  }
+ ],
  "w|membocorkan": [
   {
    "text": "Rina marah karena mengira Budi membocorkan rahasianya kepada Ayah.",
@@ -29471,6 +29791,22 @@
    "blank": "membuktikan"
   }
  ],
+ "w|membungkam": [
+  {
+   "text": "Suara gamelan yang keras berhasil membungkam obrolan para tamu.",
+   "en": "The loud gamelan music managed to silence the guests' chatter.",
+   "ko": "커다란 가믈란 소리에 손님들의 수다가 뚝 그쳤어요.",
+   "blank": "membungkam",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menolak upaya pejabat itu untuk membungkam media dengan ancaman.",
+   "en": "Lestari refused that official's attempt to silence the media with threats.",
+   "ko": "레스타리는 협박으로 언론의 입을 막으려는 그 공무원의 시도를 거부했어요.",
+   "blank": "membungkam",
+   "src": "made"
+  }
+ ],
  "w|membungkuk": [
   {
    "text": "Rudi membungkuk untuk mengangkat karung semen dengan hati-hati.",
@@ -29647,6 +29983,22 @@
    "en": "Please hold this for a moment.",
    "ko": "잠깐 이것 좀 들어 줘.",
    "blank": "memegang"
+  }
+ ],
+ "w|memegangi": [
+  {
+   "text": "Adik Fajar memegangi ekor kebaya pengantin agar tidak terinjak tamu.",
+   "en": "Fajar's younger sibling held the train of the bride's kebaya so guests wouldn't step on it.",
+   "ko": "파자르의 동생은 손님들이 밟지 않도록 신부 크바야 자락을 잡아 줬어요.",
+   "blank": "memegangi",
+   "src": "made"
+  },
+  {
+   "text": "Sambil memegangi kopi panas, Lestari membaca ulang naskah sebelum dicetak.",
+   "en": "Holding a hot coffee, Lestari reread the draft before it went to print.",
+   "ko": "뜨거운 커피를 손에 든 채 레스타리는 인쇄 전에 원고를 다시 읽었어요.",
+   "blank": "memegangi",
+   "src": "made"
   }
  ],
  "w|memelihara": [
@@ -36037,6 +36389,22 @@
    "src": "made"
   }
  ],
+ "w|mengonsumsi": [
+  {
+   "text": "Nenek Fajar tidak boleh mengonsumsi makanan manis, jadi disiapkan menu khusus.",
+   "en": "Fajar's grandmother can't eat sweet food, so a special menu was prepared.",
+   "ko": "파자르의 할머니는 단 음식을 드시면 안 돼서 특별 메뉴를 준비했어요.",
+   "blank": "mengonsumsi",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menulis tentang bahaya mengonsumsi minuman berenergi secara berlebihan.",
+   "en": "Lestari wrote about the dangers of consuming too many energy drinks.",
+   "ko": "레스타리는 에너지 음료를 지나치게 마시는 위험에 대해 썼어요.",
+   "blank": "mengonsumsi",
+   "src": "made"
+  }
+ ],
  "w|mengontrol": [
   {
    "text": "Dia belajar mengontrol emosi saat stres.",
@@ -37574,6 +37942,22 @@
    "en": "For a year, Putri's company squatted in a coworking space owned by her friend.",
    "ko": "1년 동안 푸트리의 회사는 친구가 운영하는 공유 오피스에 얹혀 지냈어요.",
    "blank": "menumpang",
+   "src": "made"
+  }
+ ],
+ "w|menumpuk": [
+  {
+   "text": "Kado-kado dari tamu menumpuk di meja dekat pelaminan.",
+   "en": "Gifts from the guests piled up on the table near the wedding dais.",
+   "ko": "손님들 선물이 신랑 신부 단상 옆 탁자에 수북이 쌓였어요.",
+   "blank": "menumpuk",
+   "src": "made"
+  },
+  {
+   "text": "Email dari pembaca menumpuk di kotak masuk Lestari setelah artikelnya terbit.",
+   "en": "Emails from readers piled up in Lestari's inbox after her article came out.",
+   "ko": "기사가 나간 뒤 레스타리의 받은편지함에 독자 메일이 쌓였어요.",
+   "blank": "menumpuk",
    "src": "made"
   }
  ],
@@ -43863,6 +44247,22 @@
    "blank": "pelukan"
   }
  ],
+ "w|pelukis": [
+  {
+   "text": "Seorang pelukis jalanan membuat lukisan wajah pengantin dalam waktu satu jam.",
+   "en": "A street painter made a portrait of the bride and groom in an hour.",
+   "ko": "거리 화가 한 명이 한 시간 만에 신랑 신부 얼굴을 그렸어요.",
+   "blank": "pelukis",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mewawancarai seorang pelukis tua yang masih berkarya di usia delapan puluh.",
+   "en": "Lestari interviewed an old painter who is still working at eighty.",
+   "ko": "레스타리는 여든에도 여전히 작품 활동을 하는 노화가를 인터뷰했어요.",
+   "blank": "pelukis",
+   "src": "made"
+  }
+ ],
  "w|peluncuran": [
   {
    "text": "Rudi datang untuk melihat peluncuran buku tentang sejarah kota.",
@@ -43980,6 +44380,22 @@
    "en": "Between songs, the vocalist said their drummer eats everything, from chili sauce to durian.",
    "ko": "노래 사이에 보컬은 자기네 드러머가 삼발부터 두리안까지 뭐든 먹는다고 이야기했어요.",
    "blank": "pemakan",
+   "src": "made"
+  }
+ ],
+ "w|pemalas": [
+  {
+   "text": "Waktu kecil, Fajar sering disebut pemalas karena susah bangun pagi.",
+   "en": "As a kid, Fajar was often called lazy because he had trouble waking up early.",
+   "ko": "어릴 때 파자르는 아침에 잘 못 일어나서 게으름뱅이라는 소리를 자주 들었어요.",
+   "blank": "pemalas",
+   "src": "made"
+  },
+  {
+   "text": "Redaktur Lestari tidak suka pemalas yang selalu menyerahkan tulisan terlambat.",
+   "en": "Lestari's editor doesn't like lazy people who always hand in their stories late.",
+   "ko": "레스타리의 편집장은 늘 기사를 늦게 내는 게으른 사람을 싫어해요.",
+   "blank": "pemalas",
    "src": "made"
   }
  ],
@@ -44649,6 +45065,22 @@
    "blank": "pemenang"
   }
  ],
+ "w|pemeran": [
+  {
+   "text": "Fajar menyewa pemeran badut untuk menghibur anak-anak di pesta pernikahannya.",
+   "en": "Fajar hired a clown performer to entertain the children at his wedding party.",
+   "ko": "파자르는 결혼식 파티에서 아이들을 즐겁게 해 줄 광대 공연자를 불렀어요.",
+   "blank": "pemeran",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mewawancarai pemeran utama film yang sedang ramai dibicarakan.",
+   "en": "Lestari interviewed the lead actor of the film everyone is talking about.",
+   "ko": "레스타리는 요즘 화제인 영화의 주연 배우를 인터뷰했어요.",
+   "blank": "pemeran",
+   "src": "made"
+  }
+ ],
  "w|pemerasan": [
   {
    "text": "Guru BK menjelaskan bahwa meminta uang dengan ancaman termasuk pemerasan.",
@@ -44840,6 +45272,22 @@
    "en": "Ayu's sales went up after the drinks shelf was moved near the door.",
    "ko": "음료 진열대를 문 가까이 옮긴 뒤 아유의 매출이 올랐어요.",
    "blank": "pemindahan",
+   "src": "made"
+  }
+ ],
+ "w|pemirsa": [
+  {
+   "text": "Pernikahan Fajar disiarkan langsung lewat internet untuk kerabat yang tidak bisa datang, dan pemirsa terus mengirim ucapan selamat.",
+   "en": "Fajar's wedding was streamed live online for relatives who couldn't come, and viewers kept sending congratulations.",
+   "ko": "파자르의 결혼식은 오지 못한 친척들을 위해 인터넷으로 생중계됐고, 시청자들이 계속 축하 메시지를 보냈어요.",
+   "blank": "pemirsa",
+   "src": "made"
+  },
+  {
+   "text": "Penyiar berita malam itu menyapa pemirsa dengan senyum lebar.",
+   "en": "The evening news anchor greeted viewers with a big smile.",
+   "ko": "저녁 뉴스 앵커가 환한 미소로 시청자들에게 인사했어요.",
+   "blank": "pemirsa",
    "src": "made"
   }
  ],
@@ -45419,6 +45867,22 @@
    "blank": "pendeta"
   }
  ],
+ "w|pendiam": [
+  {
+   "text": "Fajar yang biasanya pendiam ternyata bisa berpidato dengan lancar.",
+   "en": "Fajar, who is usually quiet, turned out to give a speech smoothly.",
+   "ko": "평소 말수가 적은 파자르가 알고 보니 연설을 술술 잘했어요.",
+   "blank": "pendiam",
+   "src": "made"
+  },
+  {
+   "text": "Narasumber Lestari adalah pria pendiam yang hanya mau bicara lewat pesan singkat.",
+   "en": "Lestari's source is a quiet man who will only talk by text message.",
+   "ko": "레스타리의 취재원은 문자로만 이야기하려는 말수 적은 남자예요.",
+   "blank": "pendiam",
+   "src": "made"
+  }
+ ],
  "w|pendidikan": [
   {
    "text": "Pendidikan anak adalah prioritas keluarganya.",
@@ -45705,6 +46169,22 @@
    "en": "He needs a good lawyer.",
    "ko": "그는 좋은 변호사가 필요해.",
    "blank": "pengacara"
+  }
+ ],
+ "w|pengacau": [
+  {
+   "text": "Satpam gedung mengusir seorang pengacau yang mabuk dari ruang resepsi.",
+   "en": "The building security guard threw a drunk troublemaker out of the reception hall.",
+   "ko": "건물 경비원이 술에 취한 난동꾼을 피로연장에서 내쫓았어요.",
+   "blank": "pengacau",
+   "src": "made"
+  },
+  {
+   "text": "Beberapa pengacau menyusup ke demo damai itu, menurut laporan Lestari.",
+   "en": "According to Lestari's report, several troublemakers infiltrated the peaceful protest.",
+   "ko": "레스타리의 기사에 따르면 몇몇 난동꾼이 평화 시위에 섞여 들었어요.",
+   "blank": "pengacau",
+   "src": "made"
   }
  ],
  "w|pengadilan": [
@@ -46673,6 +47153,22 @@
    "en": "The number of visitors rose during the holiday.",
    "ko": "휴가 기간에 방문객 수가 늘었어.",
    "blank": "pengunjung"
+  }
+ ],
+ "w|penguntit": [
+  {
+   "text": "Sepupu Fajar bercanda bahwa fotografer itu mengikuti pengantin seperti penguntit.",
+   "en": "Fajar's cousin joked that the photographer followed the couple around like a stalker.",
+   "ko": "파자르의 사촌은 그 사진사가 스토커처럼 신랑 신부를 따라다닌다고 농담했어요.",
+   "blank": "penguntit",
+   "src": "made"
+  },
+  {
+   "text": "Lestari pernah melaporkan seorang penguntit yang terus mengirim pesan ancaman kepadanya.",
+   "en": "Lestari once reported a stalker who kept sending her threatening messages.",
+   "ko": "레스타리는 계속 협박 메시지를 보내던 스토커를 신고한 적이 있어요.",
+   "blank": "penguntit",
+   "src": "made"
   }
  ],
  "w|pengusaha": [
@@ -48579,6 +49075,22 @@
    "blank": "permainan"
   }
  ],
+ "w|permaisuri": [
+  {
+   "text": "Dengan baju adat yang megah, istri Fajar terlihat seperti permaisuri kerajaan.",
+   "en": "In her grand traditional dress, Fajar's wife looked like a royal queen.",
+   "ko": "화려한 전통 의상을 입은 파자르의 아내는 왕비처럼 보였어요.",
+   "blank": "permaisuri",
+   "src": "made"
+  },
+  {
+   "text": "Lestari sedang menulis artikel tentang permaisuri raja yang dikenal sebagai pelindung seni.",
+   "en": "Lestari is writing an article about a king's consort known as a patron of the arts.",
+   "ko": "레스타리는 예술 후원자로 알려진 왕비에 대한 기사를 쓰고 있어요.",
+   "blank": "permaisuri",
+   "src": "made"
+  }
+ ],
  "w|permanen": [
   {
    "text": "Kelompok teater Bayu akhirnya punya gedung latihan yang permanen.",
@@ -49233,6 +49745,22 @@
    "en": "He won in the last fight.",
    "ko": "그는 마지막 싸움에서 이겼어.",
    "blank": "pertarungan"
+  }
+ ],
+ "w|pertemanan": [
+  {
+   "text": "Fajar dan istrinya berawal dari pertemanan di klub lari.",
+   "en": "Fajar and his wife started out as friends at a running club.",
+   "ko": "파자르와 아내는 달리기 동호회 친구 사이로 시작했어요.",
+   "blank": "pertemanan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menjaga pertemanan dengan narasumber itu sejak mereka kuliah.",
+   "en": "Lestari has kept up her friendship with that source since their college days.",
+   "ko": "레스타리와 그 취재원의 우정은 대학 때부터 이어져 왔어요.",
+   "blank": "pertemanan",
+   "src": "made"
   }
  ],
  "w|pertempuran": [
@@ -55477,6 +56005,22 @@
    "blank": "Sembilan"
   }
  ],
+ "w|sembrono": [
+  {
+   "text": "Salah satu tamu yang sembrono menumpahkan sirup ke gaun pengantin.",
+   "en": "One careless guest spilled syrup on the wedding dress.",
+   "ko": "덤벙대는 손님 한 명이 웨딩드레스에 시럽을 쏟았어요.",
+   "blank": "sembrono",
+   "src": "made"
+  },
+  {
+   "text": "Redaktur menegur Lestari karena menulis judul berita yang sembrono.",
+   "en": "The editor scolded Lestari for writing a careless headline.",
+   "ko": "편집장은 기사 제목을 경솔하게 지었다고 레스타리를 꾸짖었어요.",
+   "blank": "sembrono",
+   "src": "made"
+  }
+ ],
  "w|sembuh": [
   {
    "text": "Dia akhirnya sembuh setelah istirahat panjang.",
@@ -56917,6 +57461,38 @@
    "en": "In his whole life he has never gone far.",
    "ko": "평생 그는 멀리 가 본 적이 없어.",
    "blank": "Seumur"
+  }
+ ],
+ "w|seumuran": [
+  {
+   "text": "Pengiring pengantin Fajar semuanya sepupu yang seumuran.",
+   "en": "Fajar's groomsmen are all cousins of the same age.",
+   "ko": "파자르의 들러리는 모두 동갑내기 사촌들이에요.",
+   "blank": "seumuran",
+   "src": "made"
+  },
+  {
+   "text": "Lestari dan rekan kerjanya seumuran, jadi mereka cepat akrab.",
+   "en": "Lestari and her coworker are the same age, so they quickly became close.",
+   "ko": "레스타리와 동료는 동갑이라서 금방 친해졌어요.",
+   "blank": "seumuran",
+   "src": "made"
+  }
+ ],
+ "w|seusia": [
+  {
+   "text": "Kebanyakan tamu di pesta itu seusia dengan Fajar, teman-teman sekolahnya dulu.",
+   "en": "Most of the guests at the party were Fajar's age, his old school friends.",
+   "ko": "잔치 손님 대부분은 파자르 또래인 옛 학교 친구들이었어요.",
+   "blank": "seusia",
+   "src": "made"
+  },
+  {
+   "text": "Pemimpin redaksi itu bangga karena banyak wartawannya seusia dengan anaknya.",
+   "en": "The editor-in-chief is proud that many of his reporters are his children's age.",
+   "ko": "그 편집국장은 기자 중 많은 수가 자기 자녀 또래라는 게 뿌듯해요.",
+   "blank": "seusia",
+   "src": "made"
   }
  ],
  "w|sewaktu": [
@@ -58400,6 +58976,22 @@
    "en": "The researchers gave the second group of mice a protein injection.",
    "ko": "연구자들은 두 번째 쥐 무리에게 단백질 주사를 놓았어요.",
    "blank": "suntikan",
+   "src": "made"
+  }
+ ],
+ "w|sunyi": [
+  {
+   "text": "Setelah semua tamu pulang, gedung pernikahan itu terasa sunyi.",
+   "en": "After all the guests went home, the wedding hall felt silent.",
+   "ko": "손님들이 모두 돌아가자 결혼식장은 고요하게 느껴졌어요.",
+   "blank": "sunyi",
+   "src": "made"
+  },
+  {
+   "text": "Pada hari libur, ruang redaksi yang biasanya ramai jadi sunyi.",
+   "en": "On holidays, the usually busy newsroom becomes silent.",
+   "ko": "휴일이면 평소 북적이던 편집국이 조용해져요.",
+   "blank": "sunyi",
    "src": "made"
   }
  ],
@@ -60745,6 +61337,22 @@
    "src": "made"
   }
  ],
+ "w|tergesa-gesa": [
+  {
+   "text": "Karena bangun kesiangan, Fajar berangkat dengan tergesa-gesa ke tempat akad.",
+   "en": "Because he overslept, Fajar rushed off to the place of the marriage ceremony.",
+   "ko": "늦잠을 자서 파자르는 서둘러 혼인 서약 장소로 갔어요.",
+   "blank": "tergesa-gesa",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menulis artikel itu dengan tergesa-gesa karena tenggatnya tinggal satu jam.",
+   "en": "Lestari wrote the article in a hurry because the deadline was only an hour away.",
+   "ko": "마감이 한 시간밖에 안 남아서 레스타리는 기사를 급하게 썼어요.",
+   "blank": "tergesa-gesa",
+   "src": "made"
+  }
+ ],
  "w|tergila-gila": [
   {
    "text": "Dalam suratnya, Budi mengaku dulu tergila-gila pada kakak kelas mereka.",
@@ -61967,6 +62575,22 @@
    "en": "That child got lost in the shopping mall.",
    "ko": "그 아이가 쇼핑몰에서 길을 잃었어.",
    "blank": "tersesat"
+  }
+ ],
+ "w|tersimpan": [
+  {
+   "text": "Foto pernikahan orang tua Fajar masih tersimpan rapi di album keluarga.",
+   "en": "Fajar's parents' wedding photos are still neatly kept in the family album.",
+   "ko": "파자르 부모님의 결혼사진은 아직도 가족 앨범에 잘 보관돼 있어요.",
+   "blank": "tersimpan",
+   "src": "made"
+  },
+  {
+   "text": "Semua rekaman wawancara Lestari tersimpan di hard disk kantor.",
+   "en": "All of Lestari's interview recordings are stored on the office hard drive.",
+   "ko": "레스타리의 인터뷰 녹음은 모두 사무실 하드 디스크에 저장돼 있어요.",
+   "blank": "tersimpan",
+   "src": "made"
   }
  ],
  "w|tersinggung": [
@@ -63389,6 +64013,22 @@
    "en": "She introduced her fiancé to her family.",
    "ko": "그는 약혼자를 가족에게 소개했어.",
    "blank": "tunangan"
+  }
+ ],
+ "w|tunawisma": [
+  {
+   "text": "Sisa makanan pesta dibagikan kepada para tunawisma di dekat masjid.",
+   "en": "The leftover party food was given to homeless people near the mosque.",
+   "ko": "잔치 음식 남은 것은 모스크 근처 노숙인들에게 나눠 줬어요.",
+   "blank": "tunawisma",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menulis kisah para tunawisma yang tidur di bawah jembatan saat musim hujan.",
+   "en": "Lestari wrote about the homeless people who sleep under bridges during the rainy season.",
+   "ko": "레스타리는 우기에 다리 밑에서 자는 노숙인들의 이야기를 썼어요.",
+   "blank": "tunawisma",
+   "src": "made"
   }
  ],
  "w|tunggal": [
