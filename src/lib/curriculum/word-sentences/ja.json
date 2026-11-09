@@ -2331,6 +2331,22 @@
    "blank": "お土産"
   }
  ],
+ "w|お好み焼き": [
+  {
+   "text": "亮は、お好み焼きを焼くための鉄板もネットで買った。",
+   "en": "Ryo also bought a griddle for making okonomiyaki online.",
+   "ko": "료는 오코노미야키를 굽기 위한 철판도 인터넷으로 샀어요.",
+   "blank": "お好み焼き",
+   "src": "made"
+  },
+  {
+   "text": "真由は、お好み焼きの店が多い町を特集した。",
+   "en": "Mayu did a feature on a town with lots of okonomiyaki restaurants.",
+   "ko": "마유는 오코노미야키 가게가 많은 동네를 특집으로 다뤘어요.",
+   "blank": "お好み焼き",
+   "src": "made"
+  }
+ ],
  "w|お姉さん": [
   {
    "text": "お姉さんが手伝ってくれた。",
@@ -16311,6 +16327,22 @@
    "src": "made"
   }
  ],
+ "w|中高生": [
+  {
+   "text": "そのリュックは中高生に人気だと、亮の姪が教えてくれた。",
+   "en": "Ryo's niece told him that backpack is popular with middle and high school students.",
+   "ko": "그 배낭은 중고생에게 인기라고 료의 조카가 알려 줬어요.",
+   "blank": "中高生",
+   "src": "made"
+  },
+  {
+   "text": "真由は、中高生のスマホの使い方について特集を組んだ。",
+   "en": "Mayu put together a feature on how middle and high school students use smartphones.",
+   "ko": "마유는 중고생의 스마트폰 사용법에 관한 특집을 꾸몄어요.",
+   "blank": "中高生",
+   "src": "made"
+  }
+ ],
  "w|丸": [
   {
    "text": "丸をつけて。",
@@ -18181,6 +18213,22 @@
    "blank": "仕事"
   }
  ],
+ "w|仕入れ": [
+  {
+   "text": "亮は副業で、雑貨の仕入れをネットで行っている。",
+   "en": "As a side job, Ryo buys stock for a general goods shop online.",
+   "ko": "료는 부업으로 잡화 물건을 인터넷으로 떼어 와요.",
+   "blank": "仕入れ",
+   "src": "made"
+  },
+  {
+   "text": "真由は、野菜の仕入れ値が上がって困っている八百屋を取材した。",
+   "en": "Mayu interviewed a greengrocer struggling with rising wholesale prices for vegetables.",
+   "ko": "마유는 채소 매입가가 올라 곤란한 채소 가게를 취재했어요.",
+   "blank": "仕入れ",
+   "src": "made"
+  }
+ ],
  "w|仕掛け": [
   {
    "text": "この機械には、蓋が開くと自動で止まる仕掛けがある。",
@@ -19443,6 +19491,22 @@
    "en": "I'm worried about my drop in focus.",
    "ko": "집중력 저하가 걱정이야.",
    "blank": "低下"
+  }
+ ],
+ "w|住まい": [
+  {
+   "text": "亮の住まいは駅から遠いので、日用品はほとんど通販で買う。",
+   "en": "Ryo's home is far from the station, so he buys most daily goods by mail order.",
+   "ko": "료의 집은 역에서 멀어서 생활용품은 거의 통신 판매로 사요.",
+   "blank": "住まい",
+   "src": "made"
+  },
+  {
+   "text": "真由は、災害で住まいを失った人々の暮らしを取材している。",
+   "en": "Mayu is reporting on the lives of people who lost their homes in a disaster.",
+   "ko": "마유는 재해로 집을 잃은 사람들의 생활을 취재하고 있어요.",
+   "blank": "住まい",
+   "src": "made"
   }
  ],
  "w|住む": [
@@ -21226,6 +21290,22 @@
    "en": "The dried-goods shopkeeper says he worked desperately when he was young to pay off his debts.",
    "ko": "건어물 가게 주인은 젊었을 때 빚을 갚으려고 필사적으로 일했대요.",
    "blank": "借金",
+   "src": "made"
+  }
+ ],
+ "w|値上げ": [
+  {
+   "text": "送料の値上げが決まり、亮はまとめ買いをすることにした。",
+   "en": "With shipping fees set to rise, Ryo decided to buy in bulk.",
+   "ko": "배송비 인상이 정해져서 료는 몰아서 사기로 했어요.",
+   "blank": "値上げ",
+   "src": "made"
+  },
+  {
+   "text": "電気料金の値上げについて、真由は街の人に話を聞いた。",
+   "en": "Mayu asked people on the street about the rise in electricity rates.",
+   "ko": "전기 요금 인상에 대해 마유는 거리의 사람들에게 이야기를 들었어요.",
+   "blank": "値上げ",
    "src": "made"
   }
  ],
@@ -23421,6 +23501,22 @@
    "src": "made"
   }
  ],
+ "w|内装": [
+  {
+   "text": "亮は、部屋の内装に合うカーテンを探して何時間もサイトを見た。",
+   "en": "Ryo spent hours browsing sites looking for curtains to match his room's interior.",
+   "ko": "료는 방 인테리어에 맞는 커튼을 찾느라 몇 시간이나 사이트를 봤어요.",
+   "blank": "内装",
+   "src": "made"
+  },
+  {
+   "text": "編集部の内装が新しくなり、真由の机も窓際に移った。",
+   "en": "The newsroom's interior was redone, and Mayu's desk moved to the window.",
+   "ko": "편집부 인테리어가 새로워지면서 마유의 책상도 창가로 옮겨졌어요.",
+   "blank": "内装",
+   "src": "made"
+  }
+ ],
  "w|内部": [
   {
    "text": "内部を見せて。",
@@ -25038,6 +25134,22 @@
    "en": "Let's charge it before the battery dies.",
    "ko": "배터리가 다 떨어지기 전에 충전하자.",
    "blank": "切れる",
+   "src": "made"
+  }
+ ],
+ "w|切手": [
+  {
+   "text": "亮は、昔の記念切手をネットのオークションで買った。",
+   "en": "Ryo bought old commemorative stamps at an online auction.",
+   "ko": "료는 옛날 기념우표를 인터넷 경매에서 샀어요.",
+   "blank": "切手",
+   "src": "made"
+  },
+  {
+   "text": "真由は、新しい記念切手の発売について短い記事を書いた。",
+   "en": "Mayu wrote a short article about the release of new commemorative stamps.",
+   "ko": "마유는 새 기념우표 발매에 관한 짧은 기사를 썼어요.",
+   "blank": "切手",
    "src": "made"
   }
  ],
@@ -29371,6 +29483,22 @@
    "blank": "口"
   }
  ],
+ "w|口コミ": [
+  {
+   "text": "亮は、口コミの評価が高いフライパンをネットで注文した。",
+   "en": "Ryo ordered a frying pan with high reviews online.",
+   "ko": "료는 후기 평이 좋은 프라이팬을 인터넷으로 주문했어요.",
+   "blank": "口コミ",
+   "src": "made"
+  },
+  {
+   "text": "真由は、駅前にできた店の口コミを集めて記事にまとめた。",
+   "en": "Mayu gathered word-of-mouth about the new shop by the station and wrote it up as an article.",
+   "ko": "마유는 역 앞에 생긴 가게의 입소문을 모아 기사로 정리했어요.",
+   "blank": "口コミ",
+   "src": "made"
+  }
+ ],
  "w|口座": [
   {
    "text": "売上は、帰りに銀行の口座に入れておいた。",
@@ -31727,6 +31855,22 @@
    "src": "made"
   }
  ],
+ "w|囚人": [
+  {
+   "text": "亮は、囚人が主人公の小説を電子書籍で買った。",
+   "en": "Ryo bought an e-book of a novel whose main character is a prisoner.",
+   "ko": "료는 죄수가 주인공인 소설을 전자책으로 샀어요.",
+   "blank": "囚人",
+   "src": "made"
+  },
+  {
+   "text": "真由は、囚人の社会復帰を支える団体を取材した。",
+   "en": "Mayu reported on a group that helps prisoners return to society.",
+   "ko": "마유는 죄수의 사회 복귀를 돕는 단체를 취재했어요.",
+   "blank": "囚人",
+   "src": "made"
+  }
+ ],
  "w|四季": [
   {
    "text": "翔太の家の玄関には、四季の花を描いた掛け軸が飾ってある。",
@@ -32608,6 +32752,22 @@
    "en": "Many foreign residents live in the new apartment building too.",
    "ko": "새 아파트에는 외국인 거주자도 많아요.",
    "blank": "在住",
+   "src": "made"
+  }
+ ],
+ "w|在宅": [
+  {
+   "text": "亮は在宅の仕事なので、平日でも荷物を受け取れる。",
+   "en": "Ryo works from home, so he can receive packages even on weekdays.",
+   "ko": "료는 재택근무라서 평일에도 택배를 받을 수 있어요.",
+   "blank": "在宅",
+   "src": "made"
+  },
+  {
+   "text": "真由の編集部では、記者の半分が在宅で働いている。",
+   "en": "In Mayu's newsroom, half the reporters work from home.",
+   "ko": "마유의 편집부에서는 기자 절반이 재택으로 일해요.",
+   "blank": "在宅",
    "src": "made"
   }
  ],
@@ -35231,6 +35391,22 @@
    "blank": "大量"
   }
  ],
+ "w|大金": [
+  {
+   "text": "亮は、セールの勢いで大金を使ってしまったことを後悔した。",
+   "en": "Ryo regretted spending a fortune on impulse during the sale.",
+   "ko": "료는 세일 분위기에 휩쓸려 큰돈을 써 버린 걸 후회했어요.",
+   "blank": "大金",
+   "src": "made"
+  },
+  {
+   "text": "駅で大金の入った財布が届けられた話を、真由は温かいニュースとして紹介した。",
+   "en": "Mayu introduced the story of a wallet full of money turned in at the station as a heartwarming piece of news.",
+   "ko": "역에서 큰돈이 든 지갑이 신고된 이야기를 마유는 훈훈한 뉴스로 소개했어요.",
+   "blank": "大金",
+   "src": "made"
+  }
+ ],
  "w|大陸": [
   {
    "text": "地理の先生は、昔の大陸がどう動いたかを図で見せた。",
@@ -35931,6 +36107,22 @@
    "blank": "女優"
   }
  ],
+ "w|女児": [
+  {
+   "text": "亮は、親戚の子の誕生日に女児向けの人形を注文した。",
+   "en": "Ryo ordered a doll for girls for a relative's child's birthday.",
+   "ko": "료는 친척 아이 생일에 여자아이용 인형을 주문했어요.",
+   "blank": "女児",
+   "src": "made"
+  },
+  {
+   "text": "行方不明だった女児が無事に保護されたと、真由が速報を出した。",
+   "en": "Mayu put out a news flash that a missing girl had been found safe.",
+   "ko": "실종됐던 여아가 무사히 보호됐다고 마유가 속보를 냈어요.",
+   "blank": "女児",
+   "src": "made"
+  }
+ ],
  "w|女子": [
   {
    "text": "女子会なんだ。",
@@ -36080,6 +36272,22 @@
    "en": "A regular elderly customer kindly brings homemade jam.",
    "ko": "단골 할머니는 호의로 손수 만든 잼을 가져다줘요.",
    "blank": "好意",
+   "src": "made"
+  }
+ ],
+ "w|好感": [
+  {
+   "text": "梱包がとても丁寧で、亮はその店に好感を持った。",
+   "en": "The packing was very careful, and Ryo took a liking to the shop.",
+   "ko": "포장이 아주 꼼꼼해서 료는 그 가게에 호감을 가졌어요.",
+   "blank": "好感",
+   "src": "made"
+  },
+  {
+   "text": "真由の丁寧な記事は、多くの読者に好感を持たれた。",
+   "en": "Mayu's careful article was well received by many readers.",
+   "ko": "마유의 꼼꼼한 기사는 많은 독자에게 호감을 샀어요.",
+   "blank": "好感",
    "src": "made"
   }
  ],
@@ -36534,6 +36742,22 @@
    "en": "With no phone signal, playing cards became the only entertainment.",
    "ko": "스마트폰이 안 터져서 트럼프가 유일한 오락이 됐어요.",
    "blank": "娯楽",
+   "src": "made"
+  }
+ ],
+ "w|婚姻": [
+  {
+   "text": "亮は、役所に出す婚姻の書類と一緒に、記念の写真立てを注文した。",
+   "en": "Along with the marriage papers for city hall, Ryo ordered a commemorative photo frame.",
+   "ko": "료는 관청에 낼 혼인 서류와 함께 기념 액자를 주문했어요.",
+   "blank": "婚姻",
+   "src": "made"
+  },
+  {
+   "text": "真由は、婚姻の件数が年々減っているという統計を記事にした。",
+   "en": "Mayu wrote an article on statistics showing that the number of marriages is falling year by year.",
+   "ko": "마유는 혼인 건수가 해마다 줄고 있다는 통계를 기사로 썼어요.",
+   "blank": "婚姻",
    "src": "made"
   }
  ],
@@ -38293,6 +38517,38 @@
    "src": "made"
   }
  ],
+ "w|家系": [
+  {
+   "text": "亮は、自分の家系をたどれるという検査キットを取り寄せた。",
+   "en": "Ryo ordered a test kit that says it can trace your family line.",
+   "ko": "료는 자기 가계를 거슬러 올라갈 수 있다는 검사 키트를 주문했어요.",
+   "blank": "家系",
+   "src": "made"
+  },
+  {
+   "text": "真由は、代々医者の家系に生まれた人物にインタビューした。",
+   "en": "Mayu interviewed a person born into a family line of doctors.",
+   "ko": "마유는 대대로 의사 집안에서 태어난 인물을 인터뷰했어요.",
+   "blank": "家系",
+   "src": "made"
+  }
+ ],
+ "w|家計": [
+  {
+   "text": "亮の妻は、ネットの買い物が家計を圧迫していると文句を言った。",
+   "en": "Ryo's wife complained that online shopping was squeezing the household budget.",
+   "ko": "료의 아내는 인터넷 쇼핑이 가계를 압박한다고 불평했어요.",
+   "blank": "家計",
+   "src": "made"
+  },
+  {
+   "text": "物価高で家計が苦しいという声が、真由のもとに多く寄せられた。",
+   "en": "Mayu received many voices saying their household budgets were strained by high prices.",
+   "ko": "물가가 올라 가계가 힘들다는 목소리가 마유에게 많이 들어왔어요.",
+   "blank": "家計",
+   "src": "made"
+  }
+ ],
  "w|家賃": [
   {
    "text": "前の部屋より家賃は少し高いが、駅に近い。",
@@ -38547,6 +38803,22 @@
    "src": "made"
   }
  ],
+ "w|富豪": [
+  {
+   "text": "亮は、富豪でもないのに高級な腕時計をカートに入れてしまった。",
+   "en": "Even though he's no millionaire, Ryo put a luxury watch in his cart.",
+   "ko": "료는 부자도 아니면서 고급 손목시계를 장바구니에 넣어 버렸어요.",
+   "blank": "富豪",
+   "src": "made"
+  },
+  {
+   "text": "真由は、ある富豪が母校に寄付をしたという記事を書いた。",
+   "en": "Mayu wrote an article about a wealthy man who donated to his old school.",
+   "ko": "마유는 한 부호가 모교에 기부했다는 기사를 썼어요.",
+   "blank": "富豪",
+   "src": "made"
+  }
+ ],
  "w|寒い": [
   {
    "text": "今日はとても寒いね。",
@@ -38573,6 +38845,22 @@
    "en": "You haven't slept yet?",
    "ko": "아직 안 잤어?",
    "blank": "寝てない"
+  }
+ ],
+ "w|寝室": [
+  {
+   "text": "新婚の亮は、寝室に置く新しいベッドを妻と選んだ。",
+   "en": "Newly married Ryo picked out a new bed for the bedroom with his wife.",
+   "ko": "신혼인 료는 침실에 둘 새 침대를 아내와 골랐어요.",
+   "blank": "寝室",
+   "src": "made"
+  },
+  {
+   "text": "真由は、夜中の連絡に備えて寝室にも仕事用の携帯を置いている。",
+   "en": "Mayu keeps her work phone in the bedroom too, in case of calls in the middle of the night.",
+   "ko": "마유는 한밤중 연락에 대비해 침실에도 업무용 휴대폰을 두고 있어요.",
+   "blank": "寝室",
+   "src": "made"
   }
  ],
  "w|審判": [
@@ -38882,6 +39170,22 @@
    "en": "The bottles of dangerous chemicals have sealing tape on them.",
    "ko": "위험한 약품 병에는 봉인 테이프가 붙어 있어요.",
    "blank": "封印",
+   "src": "made"
+  }
+ ],
+ "w|封筒": [
+  {
+   "text": "亮が注文したカードは、小さな封筒に入ってポストに届いた。",
+   "en": "The card Ryo ordered arrived in his mailbox in a small envelope.",
+   "ko": "료가 주문한 카드는 작은 봉투에 담겨 우편함에 왔어요.",
+   "blank": "封筒",
+   "src": "made"
+  },
+  {
+   "text": "読者から届いた封筒を開けると、真由あての手紙が入っていた。",
+   "en": "When she opened the envelope from a reader, there was a letter addressed to Mayu.",
+   "ko": "독자가 보낸 봉투를 열어 보니 마유 앞으로 온 편지가 들어 있었어요.",
+   "blank": "封筒",
    "src": "made"
   }
  ],
@@ -43870,6 +44174,22 @@
    "en": "Chihiro thought up a new drink bar combination and told her friends about it.",
    "ko": "지히로는 드링크바의 새로운 조합을 생각해 내서 친구에게 알려 줬어요.",
    "blank": "思いついて",
+   "src": "made"
+  }
+ ],
+ "w|思いやり": [
+  {
+   "text": "箱に手書きのメモが入っていて、亮は店の人の思いやりを感じた。",
+   "en": "There was a handwritten note in the box, and Ryo felt the shopkeeper's thoughtfulness.",
+   "ko": "상자에 손으로 쓴 메모가 들어 있어서 료는 가게 사람의 배려를 느꼈어요.",
+   "blank": "思いやり",
+   "src": "made"
+  },
+  {
+   "text": "真由は、子どもたちの思いやりが伝わる小さな出来事を記事にした。",
+   "en": "Mayu wrote about a small incident that showed the children's kindness.",
+   "ko": "마유는 아이들의 배려가 느껴지는 작은 일을 기사로 썼어요.",
+   "blank": "思いやり",
    "src": "made"
   }
  ],
@@ -51041,6 +51361,22 @@
    "src": "made"
   }
  ],
+ "w|新婚": [
+  {
+   "text": "新婚の亮は、寝室に置く新しいベッドを妻と選んだ。",
+   "en": "Newly married Ryo picked out a new bed for the bedroom with his wife.",
+   "ko": "신혼인 료는 침실에 둘 새 침대를 아내와 골랐어요.",
+   "blank": "新婚",
+   "src": "made"
+  },
+  {
+   "text": "新婚の後輩のために、真由は年末の夜勤を引き受けた。",
+   "en": "Mayu took the year-end night shift for the sake of a newly married junior colleague.",
+   "ko": "신혼인 후배를 위해 마유는 연말 야근을 맡았어요.",
+   "blank": "新婚",
+   "src": "made"
+  }
+ ],
  "w|新年": [
   {
    "text": "新年を迎えたら、直樹はジムに通うつもりでいる。",
@@ -51416,6 +51752,22 @@
    "en": "Yoko's dentist told her about the inn he'd stayed at during a conference.",
    "ko": "요코의 담당 선생님은 학회 때 묵은 료칸 이야기를 해 줬어요.",
    "blank": "旅館",
+   "src": "made"
+  }
+ ],
+ "w|既婚": [
+  {
+   "text": "亮の同僚は既婚で、高い買い物はいつも奥さんに相談するそうだ。",
+   "en": "Ryo's coworker is married and always consults his wife before big purchases.",
+   "ko": "료의 동료는 기혼이라서 비싼 물건은 늘 아내와 상의한대요.",
+   "blank": "既婚",
+   "src": "made"
+  },
+  {
+   "text": "真由の編集部では、既婚の記者も独身の記者も遅くまで働いている。",
+   "en": "In Mayu's newsroom, married and single reporters alike work late.",
+   "ko": "마유의 편집부에서는 기혼 기자도 미혼 기자도 늦게까지 일해요.",
+   "blank": "既婚",
    "src": "made"
   }
  ],
@@ -56859,6 +57211,22 @@
    "src": "made"
   }
  ],
+ "w|死去": [
+  {
+   "text": "有名なデザイナーの死去が伝えられると、亮の好きな服はすぐ品切れになった。",
+   "en": "When the famous designer's death was reported, the clothes Ryo liked sold out right away.",
+   "ko": "유명 디자이너의 별세가 전해지자 료가 좋아하는 옷은 바로 품절됐어요.",
+   "blank": "死去",
+   "src": "made"
+  },
+  {
+   "text": "有名な作家の死去を受けて、真由は急いで追悼記事を書いた。",
+   "en": "Following the death of a famous writer, Mayu hurriedly wrote a memorial article.",
+   "ko": "유명 작가의 별세 소식을 듣고 마유는 서둘러 추모 기사를 썼어요.",
+   "blank": "死去",
+   "src": "made"
+  }
+ ],
  "w|死後": [
   {
    "text": "翔太は、祖父の死後に受け継いだ古い鏡を丁寧に磨いた。",
@@ -59833,6 +60201,22 @@
    "src": "made"
   }
  ],
+ "w|混同": [
+  {
+   "text": "亮は、似た名前の商品を混同して違うものを注文してしまった。",
+   "en": "Ryo mixed up products with similar names and ordered the wrong thing.",
+   "ko": "료는 이름이 비슷한 상품을 혼동해서 다른 걸 주문해 버렸어요.",
+   "blank": "混同",
+   "src": "made"
+  },
+  {
+   "text": "真由は、似た名前の二つの会社を混同しないよう何度も確認した。",
+   "en": "Mayu checked several times so as not to confuse two companies with similar names.",
+   "ko": "마유는 이름이 비슷한 두 회사를 혼동하지 않도록 몇 번이나 확인했어요.",
+   "blank": "混同",
+   "src": "made"
+  }
+ ],
  "w|混雑": [
   {
    "text": "連休のキャンプ場は混雑していて、駐車場もいっぱいだった。",
@@ -61035,6 +61419,22 @@
    "src": "made"
   }
  ],
+ "w|炭水化物": [
+  {
+   "text": "ダイエット中の亮は、炭水化物を控えた弁当を定期購入している。",
+   "en": "Ryo, who's on a diet, has a subscription to low-carb boxed meals.",
+   "ko": "다이어트 중인 료는 탄수화물을 줄인 도시락을 정기 구매하고 있어요.",
+   "blank": "炭水化物",
+   "src": "made"
+  },
+  {
+   "text": "夜勤明けの真由は、炭水化物ばかりの食事を反省した。",
+   "en": "After a night shift, Mayu regretted eating nothing but carbs.",
+   "ko": "야근을 마친 마유는 탄수화물만 먹은 식사를 반성했어요.",
+   "blank": "炭水化物",
+   "src": "made"
+  }
+ ],
  "w|炭酸": [
   {
    "text": "大輔は、通販で炭酸水を箱ごとまとめて注文した。",
@@ -61533,6 +61933,22 @@
    "src": "made"
   }
  ],
+ "w|焼きそば": [
+  {
+   "text": "亮は、届いたばかりの鉄板で焼きそばを作ってみた。",
+   "en": "Ryo tried making yakisoba on the griddle that had just arrived.",
+   "ko": "료는 막 도착한 철판으로 야키소바를 만들어 봤어요.",
+   "blank": "焼きそば",
+   "src": "made"
+  },
+  {
+   "text": "締め切りの直前、真由は机で冷めた焼きそばを急いで食べた。",
+   "en": "Just before the deadline, Mayu hurriedly ate cold yakisoba at her desk.",
+   "ko": "마감 직전에 마유는 책상에서 식은 야키소바를 급히 먹었어요.",
+   "blank": "焼きそば",
+   "src": "made"
+  }
+ ],
  "w|焼く": [
   {
    "text": "パンを焼くにおいがする。",
@@ -61700,6 +62116,22 @@
    "en": "Chihiro eagerly wrote down what she was taught in her notebook.",
    "ko": "치히로는 배운 것을 열심히 노트에 적었어요.",
    "blank": "熱心",
+   "src": "made"
+  }
+ ],
+ "w|熱狂": [
+  {
+   "text": "限定スニーカーの発売日、亮は熱狂するファンに混じって画面を更新し続けた。",
+   "en": "On the release day of the limited sneakers, Ryo kept refreshing the page along with frenzied fans.",
+   "ko": "한정판 운동화 발매일에 료는 열광하는 팬들 틈에서 계속 화면을 새로 고쳤어요.",
+   "blank": "熱狂",
+   "src": "made"
+  },
+  {
+   "text": "優勝が決まった瞬間、スタジアムは熱狂に包まれたと真由は書いた。",
+   "en": "Mayu wrote that the stadium erupted in a frenzy the moment the championship was decided.",
+   "ko": "우승이 확정된 순간 경기장은 열광에 휩싸였다고 마유는 썼어요.",
+   "blank": "熱狂",
    "src": "made"
   }
  ],
@@ -62021,6 +62453,22 @@
    "en": "Want milk?",
    "ko": "우유로 할래?",
    "blank": "牛乳"
+  }
+ ],
+ "w|牛肉": [
+  {
+   "text": "亮は、産地直送の牛肉を通販で注文した。",
+   "en": "Ryo ordered beef shipped straight from the farm by mail order.",
+   "ko": "료는 산지 직송 소고기를 통신 판매로 주문했어요.",
+   "blank": "牛肉",
+   "src": "made"
+  },
+  {
+   "text": "真由は、牛肉の値段が下がった理由を専門家に聞いた。",
+   "en": "Mayu asked an expert why beef prices had fallen.",
+   "ko": "마유는 소고기 값이 내린 이유를 전문가에게 물었어요.",
+   "blank": "牛肉",
+   "src": "made"
   }
  ],
  "w|牧場": [
@@ -65192,6 +65640,22 @@
    "en": "With the development of railways, a trip that once took a day can now be made in three hours.",
    "ko": "철도의 발달로 옛날에는 하루 걸리던 길을 세 시간이면 갈 수 있게 됐어요.",
    "blank": "発達",
+   "src": "made"
+  }
+ ],
+ "w|発酵": [
+  {
+   "text": "亮が取り寄せたキムチは、発酵が進んで少し酸っぱかった。",
+   "en": "The kimchi Ryo ordered had fermented further and was a little sour.",
+   "ko": "료가 주문한 김치는 발효가 진행돼서 조금 시었어요.",
+   "blank": "発酵",
+   "src": "made"
+  },
+  {
+   "text": "真由は、発酵食品のブームについて記事を書いた。",
+   "en": "Mayu wrote an article about the boom in fermented foods.",
+   "ko": "마유는 발효 식품 열풍에 관한 기사를 썼어요.",
+   "blank": "発酵",
    "src": "made"
   }
  ],
@@ -70713,6 +71177,22 @@
    "src": "made"
   }
  ],
+ "w|絶頂": [
+  {
+   "text": "亮の買い物熱は、年末のセールで絶頂に達した。",
+   "en": "Ryo's shopping fever reached its peak at the year-end sale.",
+   "ko": "료의 쇼핑 열기는 연말 세일 때 절정에 달했어요.",
+   "blank": "絶頂",
+   "src": "made"
+  },
+  {
+   "text": "人気の絶頂で引退した歌手について、真由はコラムを書いた。",
+   "en": "Mayu wrote a column about a singer who retired at the height of her popularity.",
+   "ko": "마유는 인기 절정에서 은퇴한 가수에 대해 칼럼을 썼어요.",
+   "blank": "絶頂",
+   "src": "made"
+  }
+ ],
  "w|継承": [
   {
    "text": "悠斗は、伝統工芸の技の継承に悩む職人を取材した。",
@@ -72603,6 +73083,22 @@
    "src": "made"
   }
  ],
+ "w|腎臓": [
+  {
+   "text": "亮の父は腎臓が弱いので、塩分の少ない食品を通販で選んでいる。",
+   "en": "Ryo's father has weak kidneys, so he picks low-salt foods by mail order.",
+   "ko": "료의 아버지는 신장이 약해서 염분이 적은 식품을 통신 판매로 골라요.",
+   "blank": "腎臓",
+   "src": "made"
+  },
+  {
+   "text": "真由は、腎臓の病気の新しい治療法について医師に話を聞いた。",
+   "en": "Mayu talked with a doctor about a new treatment for kidney disease.",
+   "ko": "마유는 신장병의 새 치료법에 대해 의사에게 이야기를 들었어요.",
+   "blank": "腎臓",
+   "src": "made"
+  }
+ ],
  "w|腐る": [
   {
    "text": "市役所の冷蔵庫に置き忘れた弁当が、休み明けには腐っていた。",
@@ -73677,6 +74173,22 @@
    "en": "I'm going to an art exhibition.",
    "ko": "예술 전시회에 갈 거야.",
    "blank": "芸術"
+  }
+ ],
+ "w|苗字": [
+  {
+   "text": "結婚して苗字が変わった亮の妻は、通販サイトの登録名を変えた。",
+   "en": "Ryo's wife, whose surname changed when they married, updated her name on the shopping site.",
+   "ko": "결혼해서 성이 바뀐 료의 아내는 쇼핑 사이트 등록 이름을 바꿨어요.",
+   "blank": "苗字",
+   "src": "made"
+  },
+  {
+   "text": "真由は、取材相手の苗字の漢字を間違えて、デスクに注意された。",
+   "en": "Mayu got the kanji of an interviewee's surname wrong and was scolded by her editor.",
+   "ko": "마유는 취재 상대의 성 한자를 틀려서 데스크에게 주의를 받았어요.",
+   "blank": "苗字",
+   "src": "made"
   }
  ],
  "w|若い": [
@@ -78507,6 +79019,22 @@
    "blank": "調べる"
   }
  ],
+ "w|調味": [
+  {
+   "text": "亮は、海外の調味料をまとめて取り寄せた。",
+   "en": "Ryo ordered a bunch of foreign seasonings at once.",
+   "ko": "료는 해외 조미료를 한꺼번에 주문했어요.",
+   "blank": "調味",
+   "src": "made"
+  },
+  {
+   "text": "真由は、地元の醤油屋が作る新しい調味料を紹介した。",
+   "en": "Mayu introduced a new seasoning made by a local soy sauce maker.",
+   "ko": "마유는 지역 간장 가게가 만드는 새 조미료를 소개했어요.",
+   "blank": "調味",
+   "src": "made"
+  }
+ ],
  "w|調和": [
   {
    "text": "新しい署の建物は、周りの古い町並みとよく調和している。",
@@ -79281,6 +79809,22 @@
    "blank": "負ける"
   }
  ],
+ "w|負債": [
+  {
+   "text": "亮の友人は、通販の分割払いが重なって大きな負債を抱えた。",
+   "en": "Ryo's friend piled up installment payments for online shopping and ended up with a big debt.",
+   "ko": "료의 친구는 통신 판매 할부가 쌓여서 큰 빚을 졌어요.",
+   "blank": "負債",
+   "src": "made"
+  },
+  {
+   "text": "真由は、老舗の工場が多額の負債を抱えて倒産したと伝えた。",
+   "en": "Mayu reported that a long-established factory went bankrupt with heavy debts.",
+   "ko": "마유는 오래된 공장이 많은 부채를 안고 파산했다고 전했어요.",
+   "blank": "負債",
+   "src": "made"
+  }
+ ],
  "w|負傷": [
   {
    "text": "サッカーの試合で歯を負傷した少年が、翔太の次に呼ばれた。",
@@ -79905,6 +80449,22 @@
    "en": "I'm aiming for the prize.",
    "ko": "상 노리고 있어.",
    "blank": "賞"
+  }
+ ],
+ "w|賞味": [
+  {
+   "text": "亮は、届いた缶詰の賞味期限を一つずつ確かめた。",
+   "en": "Ryo checked the best-before dates on the canned goods one by one.",
+   "ko": "료는 도착한 통조림의 유통기한을 하나씩 확인했어요.",
+   "blank": "賞味",
+   "src": "made"
+  },
+  {
+   "text": "賞味期限の切れた食品が売られていた問題を、真由が報じた。",
+   "en": "Mayu reported on the problem of food being sold past its best-before date.",
+   "ko": "유통기한이 지난 식품이 팔리고 있던 문제를 마유가 보도했어요.",
+   "blank": "賞味",
+   "src": "made"
   }
  ],
  "w|賞賛": [
@@ -82074,6 +82634,22 @@
    "en": "Sakura is heading to her hometown to see a former colleague who has retired.",
    "ko": "사쿠라는 퇴직한 선배를 만나러 고향 마을로 가고 있어요.",
    "blank": "退職",
+   "src": "made"
+  }
+ ],
+ "w|退院": [
+  {
+   "text": "亮は、母の退院祝いに花を配送で贈った。",
+   "en": "Ryo had flowers delivered to celebrate his mother leaving the hospital.",
+   "ko": "료는 어머니 퇴원 축하로 꽃을 배송으로 보냈어요.",
+   "blank": "退院",
+   "src": "made"
+  },
+  {
+   "text": "けがをしていた選手が退院したと、真由はスポーツ面で伝えた。",
+   "en": "Mayu reported in the sports section that the injured player had left the hospital.",
+   "ko": "다쳤던 선수가 퇴원했다고 마유는 스포츠면에서 전했어요.",
+   "blank": "退院",
    "src": "made"
   }
  ],
@@ -84805,6 +85381,22 @@
    "src": "made"
   }
  ],
+ "w|配線": [
+  {
+   "text": "亮が買った照明は配線が複雑で、取り付けに苦労した。",
+   "en": "The light Ryo bought had complicated wiring, so installing it was a struggle.",
+   "ko": "료가 산 조명은 배선이 복잡해서 다는 데 고생했어요.",
+   "blank": "配線",
+   "src": "made"
+  },
+  {
+   "text": "真由の机の下は、パソコンの配線でごちゃごちゃだ。",
+   "en": "Under Mayu's desk is a mess of computer cables.",
+   "ko": "마유의 책상 밑은 컴퓨터 배선으로 엉망이에요.",
+   "blank": "配線",
+   "src": "made"
+  }
+ ],
  "w|配置": [
   {
    "text": "机の配置を変える。",
@@ -85801,6 +86393,22 @@
    "src": "made"
   }
  ],
+ "w|長生き": [
+  {
+   "text": "亮の祖母は長生きで、今もネットで買い物を楽しんでいる。",
+   "en": "Ryo's grandmother has lived a long life and still enjoys shopping online.",
+   "ko": "료의 할머니는 장수하셔서 지금도 인터넷 쇼핑을 즐기세요.",
+   "blank": "長生き",
+   "src": "made"
+  },
+  {
+   "text": "真由は、長生きの秘訣を百歳の女性に尋ねた。",
+   "en": "Mayu asked a hundred-year-old woman her secret to a long life.",
+   "ko": "마유는 장수 비결을 백 살 된 여성에게 물었어요.",
+   "blank": "長生き",
+   "src": "made"
+  }
+ ],
  "w|長男": [
   {
    "text": "新郎は三人兄弟の長男なので、挨拶はとても緊張していた。",
@@ -86360,6 +86968,22 @@
    "en": "Yumi enjoyed treating the calculation of arrival times from the timetable like a function.",
    "ko": "유미는 시간표로 도착 시간을 구하는 식을 함수처럼 생각하며 즐겼어요.",
    "blank": "関数",
+   "src": "made"
+  }
+ ],
+ "w|関税": [
+  {
+   "text": "海外から届いた荷物に関税がかかっていて、亮は驚いた。",
+   "en": "Ryo was surprised that customs duty had been charged on the package from overseas.",
+   "ko": "해외에서 온 짐에 관세가 붙어 있어서 료는 놀랐어요.",
+   "blank": "関税",
+   "src": "made"
+  },
+  {
+   "text": "真由は、輸入品の関税が上がるというニュースを担当した。",
+   "en": "Mayu covered the news that tariffs on imports would go up.",
+   "ko": "마유는 수입품 관세가 오른다는 뉴스를 맡았어요.",
+   "blank": "関税",
    "src": "made"
   }
  ],
@@ -89792,6 +90416,22 @@
    "en": "At the morning meeting, Keiko told the story of a worker who fell from the scaffolding and broke a bone.",
    "ko": "비계에서 떨어져 골절된 작업자 이야기를 게이코는 조례에서 전했어요.",
    "blank": "骨折",
+   "src": "made"
+  }
+ ],
+ "w|骨格": [
+  {
+   "text": "亮は、骨格に合わせて服を選べるというサイトでシャツを買った。",
+   "en": "Ryo bought a shirt on a site that claims to pick clothes to suit your build.",
+   "ko": "료는 골격에 맞춰 옷을 고를 수 있다는 사이트에서 셔츠를 샀어요.",
+   "blank": "骨格",
+   "src": "made"
+  },
+  {
+   "text": "博物館で恐竜の骨格の標本が公開され、真由が取材に行った。",
+   "en": "A dinosaur skeleton went on display at the museum, and Mayu went to cover it.",
+   "ko": "박물관에서 공룡 골격 표본이 공개되어 마유가 취재하러 갔어요.",
+   "blank": "骨格",
    "src": "made"
   }
  ],

@@ -281,6 +281,22 @@
    "blank": "أبانت"
   }
  ],
+ "w|أبجدية": [
+  {
+   "text": "تعلم ابن كريم الأبجدية من عناوين الصحيفة.",
+   "en": "Karim's son learned the alphabet from the newspaper headlines.",
+   "ko": "카림의 아들은 신문 제목을 보며 알파벳을 익혔어요.",
+   "blank": "الأبجدية",
+   "src": "made"
+  },
+  {
+   "text": "رتب المنظمون أسماء العدائين حسب الأبجدية فوجدت منى اسمها بسرعة.",
+   "en": "The organizers listed the runners' names alphabetically, so Mona found hers quickly.",
+   "ko": "주최 측이 주자 이름을 가나다순으로 정리해서 모나는 자기 이름을 금방 찾았어요.",
+   "blank": "الأبجدية",
+   "src": "made"
+  }
+ ],
  "w|أبدا": [
   {
    "text": "أنا لم أزر هذه المدينة أبدا.",
@@ -1079,6 +1095,22 @@
    "en": "I tried to succeed, but I was frustrated in the end.",
    "ko": "성공하려고 했지만 결국에는 좌절했어.",
    "blank": "أحبط"
+  }
+ ],
+ "w|أحجية": [
+  {
+   "text": "تنشر الصحيفة أحجية جديدة كل يوم، ويحلها كريم في الاستراحة.",
+   "en": "The newspaper publishes a new puzzle every day, and Karim solves it on his break.",
+   "ko": "신문에는 매일 새 퍼즐이 실리고, 카림은 쉬는 시간에 그걸 풀어요.",
+   "blank": "أحجية",
+   "src": "made"
+  },
+  {
+   "text": "حلت منى أحجية في الحافلة وهي في طريقها إلى السباق.",
+   "en": "Mona solved a puzzle on the bus on her way to the race.",
+   "ko": "모나는 경기장으로 가는 버스에서 퍼즐을 풀었어요.",
+   "blank": "أحجية",
+   "src": "made"
   }
  ],
  "w|أحد": [
@@ -1952,6 +1984,22 @@
    "en": "The radio played an old song while Fatima was painting the walls.",
    "ko": "파티마가 벽을 칠하는 동안 라디오에서 옛 노래가 흘러나왔어요.",
    "blank": "أذاع",
+   "src": "made"
+  }
+ ],
+ "w|أذعن": [
+  {
+   "text": "أذعن رئيس التحرير لطلب القراء ونشر تصحيحا لمقال كريم.",
+   "en": "The editor-in-chief gave in to readers' demands and published a correction to Karim's article.",
+   "ko": "편집장은 독자들의 요구를 받아들여 카림의 기사에 정정문을 실었어요.",
+   "blank": "أذعن",
+   "src": "made"
+  },
+  {
+   "text": "أذعنت منى لنصيحة الطبيب وانسحبت من السباق.",
+   "en": "Mona gave in to the doctor's advice and withdrew from the race.",
+   "ko": "모나는 의사의 조언을 따라 경기에서 빠졌어요.",
+   "blank": "أذعنت",
    "src": "made"
   }
  ],
@@ -8187,6 +8235,22 @@
    "blank": "الإعلام"
   }
  ],
+ "w|إعلامي": [
+  {
+   "text": "حضر كريم مؤتمرا إعلاميا في وزارة الصحة.",
+   "en": "Karim attended a press conference at the Ministry of Health.",
+   "ko": "카림은 보건부 기자 회견에 참석했어요.",
+   "blank": "إعلاميا",
+   "src": "made"
+  },
+  {
+   "text": "حظي ماراثون منى باهتمام إعلامي كبير هذا العام.",
+   "en": "Mona's marathon received great media attention this year.",
+   "ko": "올해 모나가 뛴 마라톤은 언론의 큰 관심을 받았어요.",
+   "blank": "إعلامي",
+   "src": "made"
+  }
+ ],
  "w|إعلان": [
   {
    "text": "رأيت إعلان عن هاتف جديد في التلفزيون.",
@@ -12753,6 +12817,22 @@
    "src": "made"
   }
  ],
+ "w|استقلال": [
+  {
+   "text": "نشرت صحيفة كريم ملحقا خاصا بذكرى الاستقلال.",
+   "en": "Karim's newspaper published a special supplement for Independence Day.",
+   "ko": "카림의 신문은 독립 기념일 특별 부록을 냈어요.",
+   "blank": "الاستقلال",
+   "src": "made"
+  },
+  {
+   "text": "أقيم الماراثون في عيد الاستقلال، فشاركت منى مع عائلتها.",
+   "en": "The marathon was held on Independence Day, so Mona took part with her family.",
+   "ko": "마라톤이 독립 기념일에 열려서 모나는 가족과 함께 참가했어요.",
+   "blank": "الاستقلال",
+   "src": "made"
+  }
+ ],
  "w|استقلالية": [
   {
    "text": "يحب يوسف استقلالية الحياة في الجبل بعيدا عن المدينة.",
@@ -14601,6 +14681,22 @@
    "src": "made"
   }
  ],
+ "w|اقتتل": [
+  {
+   "text": "نشر كريم تقريرا عن قبيلتين اقتتلتا على الماء قبل قرن.",
+   "en": "Karim published a report about two tribes that fought over water a century ago.",
+   "ko": "카림은 백 년 전 물을 두고 싸운 두 부족에 대한 기사를 냈어요.",
+   "blank": "اقتتلتا",
+   "src": "made"
+  },
+  {
+   "text": "قرأت منى عن قريتين اقتتلتا قديما ثم صارتا تنظمان ماراثونا مشتركا.",
+   "en": "Mona read about two villages that once fought and now organize a joint marathon.",
+   "ko": "모나는 옛날에 싸웠던 두 마을이 이제는 함께 마라톤을 연다는 글을 읽었어요.",
+   "blank": "اقتتلتا",
+   "src": "made"
+  }
+ ],
  "w|اقتحام": [
   {
    "text": "قرأ سامي للأطفال فصلا من رواية فيها اقتحام قلعة قديمة.",
@@ -14659,6 +14755,22 @@
    "en": "I have a new suggestion for this project.",
    "ko": "이 프로젝트에 대한 새로운 제안이 있어요.",
    "blank": "اقتراح"
+  }
+ ],
+ "w|اقتراع": [
+  {
+   "text": "قضى كريم الليل في مركز الاقتراع يتابع فرز الأصوات.",
+   "en": "Karim spent the night at the polling station following the vote count.",
+   "ko": "카림은 투표소에서 밤새 개표를 지켜봤어요.",
+   "blank": "الاقتراع",
+   "src": "made"
+  },
+  {
+   "text": "اختير شعار الماراثون الجديد عبر اقتراع بين العدائين.",
+   "en": "The marathon's new logo was chosen through a vote among the runners.",
+   "ko": "마라톤의 새 로고는 주자들의 투표로 정해졌어요.",
+   "blank": "اقتراع",
+   "src": "made"
   }
  ],
  "w|اقترب": [
@@ -15348,6 +15460,22 @@
    "en": "Mona's company stood out for its quick replies to users.",
    "ko": "모나의 회사는 사용자 문의에 빨리 답하는 것으로 돋보였어요.",
    "blank": "امتازت",
+   "src": "made"
+  }
+ ],
+ "w|امتثل": [
+  {
+   "text": "امتثل كريم لقواعد الصحيفة ولم يذكر اسم المصدر.",
+   "en": "Karim complied with the newspaper's rules and didn't name the source.",
+   "ko": "카림은 신문사 규칙에 따라 취재원 이름을 밝히지 않았어요.",
+   "blank": "امتثل",
+   "src": "made"
+  },
+  {
+   "text": "امتثلت منى لتعليمات المنظمين ووقفت خلف الخط.",
+   "en": "Mona followed the organizers' instructions and stood behind the line.",
+   "ko": "모나는 주최 측 지시에 따라 선 뒤에 섰어요.",
+   "blank": "امتثلت",
    "src": "made"
   }
  ],
@@ -22657,6 +22785,22 @@
    "blank": "تجنبت"
   }
  ],
+ "w|تجنيد": [
+  {
+   "text": "كتب كريم عن قانون التجنيد الجديد للشباب.",
+   "en": "Karim wrote about the new conscription law for young men.",
+   "ko": "카림은 청년들을 위한 새 징병법에 대해 썼어요.",
+   "blank": "التجنيد",
+   "src": "made"
+  },
+  {
+   "text": "تعلم أخو منى الجري الطويل أثناء خدمة التجنيد.",
+   "en": "Mona's brother learned long-distance running during his military service.",
+   "ko": "모나의 오빠는 군 복무 중에 장거리 달리기를 배웠어요.",
+   "blank": "التجنيد",
+   "src": "made"
+  }
+ ],
  "w|تجول": [
   {
    "text": "تجول علي في السوق القديم ساعتين قبل أن يكمل الطريق.",
@@ -23951,6 +24095,22 @@
    "en": "When he sensed danger, he stepped back.",
    "ko": "위험을 느끼자 그는 뒤로 한 걸음 물러섰어.",
    "blank": "تراجع"
+  }
+ ],
+ "w|تراضى": [
+  {
+   "text": "تراضى كريم والمصور على تقاسم الجائزة بينهما.",
+   "en": "Karim and the photographer agreed to split the prize between them.",
+   "ko": "카림과 사진기자는 상을 나눠 갖기로 합의했어요.",
+   "blank": "تراضى",
+   "src": "made"
+  },
+  {
+   "text": "تراضت منى وصديقتها على أن تركضا معا حتى النهاية.",
+   "en": "Mona and her friend agreed to run together until the end.",
+   "ko": "모나와 친구는 끝까지 함께 달리기로 했어요.",
+   "blank": "تراضت",
+   "src": "made"
   }
  ],
  "w|ترافع": [
@@ -25503,6 +25663,22 @@
    "src": "made"
   }
  ],
+ "w|تضخم": [
+  {
+   "text": "كتب كريم مقالا عن أثر التضخم على أسعار الخبز.",
+   "en": "Karim wrote an article about the effect of inflation on bread prices.",
+   "ko": "카림은 물가 상승이 빵값에 미치는 영향에 대해 글을 썼어요.",
+   "blank": "التضخم",
+   "src": "made"
+  },
+  {
+   "text": "ارتفعت رسوم التسجيل في الماراثون بسبب التضخم.",
+   "en": "The marathon registration fee went up because of inflation.",
+   "ko": "물가가 올라서 마라톤 참가비도 올랐어요.",
+   "blank": "التضخم",
+   "src": "made"
+  }
+ ],
  "w|تضرر": [
   {
    "text": "أنقذ المرممون المخطوطات من الهلاك بعد أن تضررت في فيضان قديم.",
@@ -25767,6 +25943,22 @@
    "blank": "تعادل"
   }
  ],
+ "w|تعارض": [
+  {
+   "text": "لاحظ كريم تعارضا بين الأرقام في التقريرين.",
+   "en": "Karim noticed a contradiction between the figures in the two reports.",
+   "ko": "카림은 두 보고서의 수치가 서로 어긋난다는 걸 알아챘어요.",
+   "blank": "تعارضا",
+   "src": "made"
+  },
+  {
+   "text": "اعتذرت أخت منى عن الحضور بسبب تعارض الموعد مع عملها.",
+   "en": "Mona's sister couldn't come because the time clashed with her work.",
+   "ko": "모나의 언니는 일정이 일과 겹쳐서 오지 못한다고 했어요.",
+   "blank": "تعارض",
+   "src": "made"
+  }
+ ],
  "w|تعارف": [
   {
    "text": "تعارف الزملاء في أول يوم عمل.",
@@ -25779,6 +25971,22 @@
    "en": "The students got acquainted at the new school.",
    "ko": "학생들이 새 학교에서 서로를 알게 되었어.",
    "blank": "تعارف"
+  }
+ ],
+ "w|تعارك": [
+  {
+   "text": "تعارك صحفيان على عنوان الصفحة الأولى فتدخل كريم بينهما.",
+   "en": "Two journalists quarreled over the front-page headline, so Karim stepped in between them.",
+   "ko": "기자 둘이 일면 제목을 두고 다투자 카림이 사이에 끼어들었어요.",
+   "blank": "تعارك",
+   "src": "made"
+  },
+  {
+   "text": "تعارك مشجعان على مكان قرب خط النهاية فتدخل الحراس.",
+   "en": "Two fans fought over a spot near the finish line, so the guards stepped in.",
+   "ko": "관중 둘이 결승선 근처 자리를 두고 싸워서 경비원들이 말렸어요.",
+   "blank": "تعارك",
+   "src": "made"
   }
  ],
  "w|تعاسة": [
@@ -25989,6 +26197,22 @@
    "en": "Why were you amazed by this news?",
    "ko": "왜 이 소식에 놀랐니?",
    "blank": "تعجب"
+  }
+ ],
+ "w|تعداد": [
+  {
+   "text": "نشر كريم نتائج تعداد السكان الجديد في الصفحة الأولى.",
+   "en": "Karim published the results of the new population census on the front page.",
+   "ko": "카림은 새 인구 조사 결과를 일면에 실었어요.",
+   "blank": "تعداد",
+   "src": "made"
+  },
+  {
+   "text": "بلغ تعداد المشاركين في ماراثون منى آلافا هذا العام.",
+   "en": "The number of participants in Mona's marathon reached thousands this year.",
+   "ko": "올해 모나가 뛴 마라톤 참가자 수는 수천 명에 이르렀어요.",
+   "blank": "تعداد",
+   "src": "made"
   }
  ],
  "w|تعدد": [
@@ -31127,6 +31351,22 @@
    "src": "made"
   }
  ],
+ "w|جدف": [
+  {
+   "text": "كتب كريم تقريرا عن فريق يجدف في النهر كل صباح.",
+   "en": "Karim wrote a report about a team that rows on the river every morning.",
+   "ko": "카림은 매일 아침 강에서 노를 젓는 팀에 대해 기사를 썼어요.",
+   "blank": "يجدف",
+   "src": "made"
+  },
+  {
+   "text": "جدفت منى في البحيرة يوم الراحة قبل السباق.",
+   "en": "Mona rowed on the lake on the rest day before the race.",
+   "ko": "모나는 경기 전 쉬는 날에 호수에서 노를 저었어요.",
+   "blank": "جدفت",
+   "src": "made"
+  }
+ ],
  "w|جدل": [
   {
    "text": "دار جدل طويل في عائلة يوسف حول مكان عشاء رأس السنة.",
@@ -34476,6 +34716,22 @@
    "en": "The company hired a security firm after two computers were stolen from the office.",
    "ko": "회사는 사무실에서 컴퓨터 두 대를 도둑맞은 뒤 경비 업체와 계약했어요.",
    "blank": "حراسة",
+   "src": "made"
+  }
+ ],
+ "w|حراك": [
+  {
+   "text": "غطى كريم حراك الطلاب المطالبين بمكتبة أكبر.",
+   "en": "Karim covered the students' movement demanding a bigger library.",
+   "ko": "카림은 더 큰 도서관을 요구하는 학생들의 움직임을 취재했어요.",
+   "blank": "حراك",
+   "src": "made"
+  },
+  {
+   "text": "أحدث الماراثون حراكا رياضيا في المدينة كلها، كما تقول منى.",
+   "en": "The marathon created a sports movement in the whole city, as Mona says.",
+   "ko": "모나 말로는 마라톤 덕분에 도시 전체에 운동 바람이 불었대요.",
+   "blank": "حراكا",
    "src": "made"
   }
  ],
@@ -38139,6 +38395,22 @@
    "blank": "خشب"
   }
  ],
+ "w|خشبي": [
+  {
+   "text": "جلس كريم إلى مكتب خشبي قديم في غرفة الأخبار.",
+   "en": "Karim sat at an old wooden desk in the newsroom.",
+   "ko": "카림은 편집실의 낡은 나무 책상에 앉았어요.",
+   "blank": "خشبي",
+   "src": "made"
+  },
+  {
+   "text": "صعدت منى إلى منصة خشبية لتتسلم الميدالية.",
+   "en": "Mona climbed onto a wooden stage to receive the medal.",
+   "ko": "모나는 메달을 받으려고 나무 단상에 올라갔어요.",
+   "blank": "خشبية",
+   "src": "made"
+  }
+ ],
  "w|خشبية": [
   {
    "text": "أصلح كريم النوافذ الخشبية القديمة بدل أن يغيرها.",
@@ -40937,6 +41209,22 @@
    "src": "made"
   }
  ],
+ "w|دهس": [
+  {
+   "text": "كتب كريم خبرا عن سيارة دهست دراجة متوقفة في الشارع.",
+   "en": "Karim wrote a story about a car that ran over a parked bicycle in the street.",
+   "ko": "카림은 길에 세워 둔 자전거를 차가 깔고 지나간 일을 기사로 썼어요.",
+   "blank": "دهست",
+   "src": "made"
+  },
+  {
+   "text": "كاد عداء أن يدهس قدم منى في زحام البداية.",
+   "en": "A runner almost trampled Mona's foot in the crowd at the start.",
+   "ko": "출발할 때 붐비는 틈에 한 주자가 모나의 발을 밟을 뻔했어요.",
+   "blank": "يدهس",
+   "src": "made"
+  }
+ ],
  "w|دهشة": [
   {
    "text": "دهشة الأطفال عند رؤية الثلج جميلة.",
@@ -42853,6 +43141,22 @@
    "src": "made"
   }
  ],
+ "w|رج": [
+  {
+   "text": "رج كريم قلم الحبر لأنه توقف فجأة عن الكتابة.",
+   "en": "Karim shook the ink pen because it suddenly stopped writing.",
+   "ko": "카림은 잉크 펜이 갑자기 안 나와서 흔들었어요.",
+   "blank": "رج",
+   "src": "made"
+  },
+  {
+   "text": "رجت منى قارورة الماء قبل أن تشرب منها.",
+   "en": "Mona shook the water bottle before drinking from it.",
+   "ko": "모나는 물병을 흔든 뒤에 마셨어요.",
+   "blank": "رجت",
+   "src": "made"
+  }
+ ],
  "w|رجا": [
   {
    "text": "رجا الطفل أمه أن تشتري له لعبة.",
@@ -43677,6 +43981,22 @@
    "src": "made"
   }
  ],
+ "w|رضخ": [
+  {
+   "text": "رضخت إدارة الصحيفة لمطالب الموظفين ورفعت الرواتب.",
+   "en": "The newspaper's management gave in to the staff's demands and raised salaries.",
+   "ko": "신문사 경영진은 직원들 요구에 굴복해 월급을 올렸어요.",
+   "blank": "رضخت",
+   "src": "made"
+  },
+  {
+   "text": "رضخ المنظمون لطلب العدائين وأجلوا السباق ساعة بسبب الحر.",
+   "en": "The organizers gave in to the runners' request and postponed the race an hour because of the heat.",
+   "ko": "주최 측은 주자들의 요청을 받아들여 더위 때문에 경기를 한 시간 미뤘어요.",
+   "blank": "رضخ",
+   "src": "made"
+  }
+ ],
  "w|رضع": [
   {
    "text": "رضع الطفل الحليب من أمه.",
@@ -43965,6 +44285,22 @@
    "en": "I need a companion to go with me.",
    "ko": "함께 갈 친구가 필요해.",
    "blank": "رفيق"
+  }
+ ],
+ "w|رقابة": [
+  {
+   "text": "لا تفرض الصحيفة رقابة على آراء كريم في عموده الأسبوعي.",
+   "en": "The newspaper doesn't censor Karim's opinions in his weekly column.",
+   "ko": "신문사는 카림의 주간 칼럼 의견을 검열하지 않아요.",
+   "blank": "رقابة",
+   "src": "made"
+  },
+  {
+   "text": "فرض المنظمون رقابة صارمة على المنشطات قبل السباق.",
+   "en": "The organizers imposed strict controls on doping before the race.",
+   "ko": "주최 측은 경기 전에 약물 검사를 엄격하게 했어요.",
+   "blank": "رقابة",
+   "src": "made"
   }
  ],
  "w|رقاقة": [
@@ -52323,6 +52659,22 @@
    "blank": "صاخب"
   }
  ],
+ "w|صادر": [
+  {
+   "text": "كتب كريم أن الجمارك صادرت شحنة كبيرة من البضائع المقلدة.",
+   "en": "Karim wrote that customs had seized a large shipment of counterfeit goods.",
+   "ko": "카림은 세관이 대량의 가짜 상품을 압수했다고 썼어요.",
+   "blank": "صادرت",
+   "src": "made"
+  },
+  {
+   "text": "صادر المنظمون الزجاجات الزجاجية عند مدخل منطقة السباق.",
+   "en": "The organizers confiscated glass bottles at the entrance to the race area.",
+   "ko": "주최 측은 경기장 입구에서 유리병을 압수했어요.",
+   "blank": "صادر",
+   "src": "made"
+  }
+ ],
  "w|صادرات": [
   {
    "text": "تمثل قطع الغيار نصف صادرات المصنع تقريبا.",
@@ -57541,6 +57893,22 @@
    "src": "made"
   }
  ],
+ "w|عبادة": [
+  {
+   "text": "كتب كريم عن ترميم دور العبادة القديمة في المدينة.",
+   "en": "Karim wrote about the restoration of the city's old places of worship.",
+   "ko": "카림은 도시의 오래된 예배 장소들을 복원하는 일에 대해 썼어요.",
+   "blank": "العبادة",
+   "src": "made"
+  },
+  {
+   "text": "مر مسار السباق أمام دور العبادة في البلدة القديمة.",
+   "en": "The race route passed in front of the places of worship in the old town.",
+   "ko": "경기 코스는 구시가지의 예배 장소들 앞을 지나갔어요.",
+   "blank": "العبادة",
+   "src": "made"
+  }
+ ],
  "w|عبارة": [
   {
    "text": "سنركب عبارة لعبور النهر اليوم.",
@@ -58975,6 +59343,38 @@
    "blank": "عصفور"
   }
  ],
+ "w|عصى": [
+  {
+   "text": "عصى كريم أوامر الطبيب وعاد إلى العمل مبكرا.",
+   "en": "Karim disobeyed the doctor's orders and went back to work early.",
+   "ko": "카림은 의사 말을 듣지 않고 일찍 일터로 돌아갔어요.",
+   "blank": "عصى",
+   "src": "made"
+  },
+  {
+   "text": "عصت منى نصيحة مدربها وركضت بسرعة من البداية.",
+   "en": "Mona ignored her coach's advice and ran fast from the start.",
+   "ko": "모나는 코치의 조언을 듣지 않고 처음부터 빨리 달렸어요.",
+   "blank": "عصت",
+   "src": "made"
+  }
+ ],
+ "w|عصيان": [
+  {
+   "text": "كتب كريم عن عصيان مدني في بلدة صغيرة احتجاجا على إغلاق المستشفى.",
+   "en": "Karim wrote about civil disobedience in a small town protesting the closure of the hospital.",
+   "ko": "카림은 병원 폐쇄에 항의하는 작은 마을의 시민 불복종에 대해 썼어요.",
+   "blank": "عصيان",
+   "src": "made"
+  },
+  {
+   "text": "أعلنت ساقا منى عصيانا كاملا قبل خط النهاية بقليل.",
+   "en": "Mona's legs went on a complete strike just before the finish line.",
+   "ko": "결승선을 조금 앞두고 모나의 다리가 완전히 말을 듣지 않았어요.",
+   "blank": "عصيانا",
+   "src": "made"
+  }
+ ],
  "w|عصير": [
   {
    "text": "أريد عصير برتقال بارد.",
@@ -60189,6 +60589,22 @@
    "en": "Generally, I like spicy food.",
    "ko": "나는 대체로 매운 음식을 좋아해.",
    "blank": "عموما"
+  }
+ ],
+ "w|عمومي": [
+  {
+   "text": "اتصل كريم بالصحيفة من هاتف عمومي بعد أن نفدت بطارية هاتفه.",
+   "en": "Karim called the newspaper from a public phone after his phone battery died.",
+   "ko": "카림은 휴대폰 배터리가 다 되자 공중전화로 신문사에 전화했어요.",
+   "blank": "عمومي",
+   "src": "made"
+  },
+  {
+   "text": "انطلق السباق من الحديقة العمومية وسط المدينة.",
+   "en": "The race started from the public park in the city center.",
+   "ko": "경기는 시내 한가운데 있는 공원에서 출발했어요.",
+   "blank": "العمومية",
+   "src": "made"
   }
  ],
  "w|عمى": [
@@ -65673,6 +66089,22 @@
    "blank": "قتل"
   }
  ],
+ "w|قتيل": [
+  {
+   "text": "ذكر كريم في خبره أن الحادث لم يسفر عن أي قتيل.",
+   "en": "Karim mentioned in his report that the accident did not result in any deaths.",
+   "ko": "카림은 기사에서 그 사고로 사망자는 없었다고 밝혔어요.",
+   "blank": "قتيل",
+   "src": "made"
+  },
+  {
+   "text": "قرأت منى خبرا عن حادث سير قرب مسار السباق لم يسقط فيه أي قتيل.",
+   "en": "Mona read news of a traffic accident near the race route in which no one was killed.",
+   "ko": "모나는 경기 코스 근처에서 교통사고가 났지만 사망자는 없었다는 기사를 읽었어요.",
+   "blank": "قتيل",
+   "src": "made"
+  }
+ ],
  "w|قد": [
   {
    "text": "قد أعود متأخراً.",
@@ -67405,6 +67837,22 @@
    "src": "made"
   }
  ],
+ "w|قنص": [
+  {
+   "text": "قنص كريم سبقا صحفيا عن افتتاح الجسر الجديد.",
+   "en": "Karim snatched a scoop about the opening of the new bridge.",
+   "ko": "카림은 새 다리 개통에 대한 특종을 잡았어요.",
+   "blank": "قنص",
+   "src": "made"
+  },
+  {
+   "text": "قنص مصور صورة رائعة لمنى وهي تعبر خط النهاية.",
+   "en": "A photographer captured a great picture of Mona crossing the finish line.",
+   "ko": "사진가가 결승선을 통과하는 모나의 멋진 모습을 포착했어요.",
+   "blank": "قنص",
+   "src": "made"
+  }
+ ],
  "w|قنصل": [
   {
    "text": "زار قنصل دولة صديقة مدرسة خالد في يوم الثقافات.",
@@ -67663,6 +68111,22 @@
    "en": "This is a big national festival.",
    "ko": "이건 큰 국가 축제야.",
    "blank": "قومي"
+  }
+ ],
+ "w|قومية": [
+  {
+   "text": "يقرأ كريم كتابا عن تاريخ الحركات القومية في القرن الماضي.",
+   "en": "Karim is reading a book about the history of nationalist movements in the last century.",
+   "ko": "카림은 지난 세기 민족주의 운동의 역사에 관한 책을 읽고 있어요.",
+   "blank": "القومية",
+   "src": "made"
+  },
+  {
+   "text": "ارتدى بعض العدائين أزياء قومية ملونة في الماراثون.",
+   "en": "Some runners wore colorful national costumes in the marathon.",
+   "ko": "몇몇 주자는 마라톤에서 화려한 전통 의상을 입었어요.",
+   "blank": "قومية",
+   "src": "made"
   }
  ],
  "w|قوي": [
@@ -71744,6 +72208,22 @@
    "en": "The cause of the app's slowness remained a mystery until Huda discovered a huge image on the home page.",
    "ko": "앱이 느린 이유는 수수께끼였는데, 후다가 홈 화면에서 아주 큰 이미지를 찾아냈어요.",
    "blank": "لغزا",
+   "src": "made"
+  }
+ ],
+ "w|لغم": [
+  {
+   "text": "كتب كريم عن مزارع عثر على لغم قديم في حقله وأبلغ الجيش.",
+   "en": "Karim wrote about a farmer who found an old landmine in his field and reported it to the army.",
+   "ko": "카림은 밭에서 오래된 지뢰를 발견해 군에 신고한 농부에 대해 썼어요.",
+   "blank": "لغم",
+   "src": "made"
+  },
+  {
+   "text": "تركض منى لدعم جمعية تعالج من أصابهم انفجار لغم في الحرب.",
+   "en": "Mona runs to support a charity that treats people injured by landmine explosions in the war.",
+   "ko": "모나는 전쟁 중 지뢰 폭발로 다친 사람들을 돕는 단체를 위해 달려요.",
+   "blank": "لغم",
    "src": "made"
   }
  ],
@@ -76721,6 +77201,22 @@
    "blank": "محرج"
   }
  ],
+ "w|محرر": [
+  {
+   "text": "يعمل كريم محررا في القسم الثقافي منذ سنوات.",
+   "en": "Karim has worked as an editor in the culture section for years.",
+   "ko": "카림은 몇 년째 문화부 편집자로 일해요.",
+   "blank": "محررا",
+   "src": "made"
+  },
+  {
+   "text": "أجرى محرر رياضي مقابلة مع منى بعد السباق.",
+   "en": "A sports editor interviewed Mona after the race.",
+   "ko": "스포츠 편집자가 경기 후에 모나를 인터뷰했어요.",
+   "blank": "محرر",
+   "src": "made"
+  }
+ ],
  "w|محرك": [
   {
    "text": "سيارتي تحتاج إلى محرك جديد.",
@@ -78754,6 +79250,22 @@
    "en": "Huda's shop is licensed to sell simple medicines like headache painkillers.",
    "ko": "후다의 가게는 두통약 같은 간단한 약을 팔 허가를 받았어요.",
    "blank": "مرخص",
+   "src": "made"
+  }
+ ],
+ "w|مرسوم": [
+  {
+   "text": "نشرت صحيفة كريم نص المرسوم الجديد حول ساعات العمل.",
+   "en": "Karim's newspaper published the text of the new decree on working hours.",
+   "ko": "카림의 신문은 근무 시간에 관한 새 법령 전문을 실었어요.",
+   "blank": "المرسوم",
+   "src": "made"
+  },
+  {
+   "text": "صدر مرسوم بلدي بإغلاق الطرق صباح ماراثون منى.",
+   "en": "A municipal decree was issued to close the roads on the morning of Mona's marathon.",
+   "ko": "모나가 뛰는 마라톤 날 아침에 도로를 막는다는 시 법령이 나왔어요.",
+   "blank": "مرسوم",
    "src": "made"
   }
  ],
@@ -82253,6 +82765,22 @@
    "src": "made"
   }
  ],
+ "w|معارض": [
+  {
+   "text": "كتب كريم مقالا معارضا لبناء المصنع قرب النهر.",
+   "en": "Karim wrote an article opposing the construction of the factory near the river.",
+   "ko": "카림은 강가에 공장을 짓는 데 반대하는 글을 썼어요.",
+   "blank": "معارضا",
+   "src": "made"
+  },
+  {
+   "text": "كان بعض السكان معارضين لإغلاق الشوارع يوم الماراثون.",
+   "en": "Some residents were opposed to closing the streets on marathon day.",
+   "ko": "일부 주민은 마라톤 날 도로를 막는 데 반대했어요.",
+   "blank": "معارضين",
+   "src": "made"
+  }
+ ],
  "w|معارضة": [
   {
    "text": "لقيت مسرحية حسن معارضة من بعض المحافظين قبل عرضها.",
@@ -82439,6 +82967,22 @@
    "blank": "معتاد"
   }
  ],
+ "w|معتدل": [
+  {
+   "text": "يكتب كريم مقالاته بأسلوب معتدل يرضي أغلب القراء.",
+   "en": "Karim writes his articles in a moderate style that pleases most readers.",
+   "ko": "카림은 대부분의 독자가 만족하는 온건한 문체로 글을 써요.",
+   "blank": "معتدل",
+   "src": "made"
+  },
+  {
+   "text": "كان الطقس معتدلا صباح الماراثون، ففرحت منى.",
+   "en": "The weather was mild on the morning of the marathon, so Mona was happy.",
+   "ko": "마라톤 날 아침 날씨가 온화해서 모나는 기뻤어요.",
+   "blank": "معتدلا",
+   "src": "made"
+  }
+ ],
  "w|معتصم": [
   {
    "text": "ترك معتصم مجهول خيمته الصغيرة، وهي اليوم في المتحف.",
@@ -82452,6 +82996,22 @@
    "en": "Nour brought tea to her neighbor who was staging a sit-in at the town hall with his colleagues.",
    "ko": "누르는 동료들과 시청 앞에서 농성 중인 이웃에게 차를 갖다줬어요.",
    "blank": "المعتصم",
+   "src": "made"
+  }
+ ],
+ "w|معتقل": [
+  {
+   "text": "أجرى كريم مقابلة مع معتقل سابق كتب مذكراته.",
+   "en": "Karim interviewed a former detainee who had written his memoirs.",
+   "ko": "카림은 회고록을 쓴 전직 수감자를 인터뷰했어요.",
+   "blank": "معتقل",
+   "src": "made"
+  },
+  {
+   "text": "ركضت منى بجانب رجل كان معتقلا سابقا وأصبح مدربا.",
+   "en": "Mona ran beside a man who was a former detainee and became a coach.",
+   "ko": "모나는 예전에 수감됐다가 코치가 된 남자 옆에서 달렸어요.",
+   "blank": "معتقلا",
    "src": "made"
   }
  ],
@@ -87657,6 +88217,22 @@
    "blank": "مواطن"
   }
  ],
+ "w|مواطنة": [
+  {
+   "text": "نظمت صحيفة كريم ندوة عن المواطنة ودور الشباب.",
+   "en": "Karim's newspaper organized a seminar on citizenship and the role of young people.",
+   "ko": "카림의 신문사는 시민 의식과 청년의 역할에 대한 토론회를 열었어요.",
+   "blank": "المواطنة",
+   "src": "made"
+  },
+  {
+   "text": "تقول منى إن الماراثون يعلم الأطفال روح المواطنة والتعاون.",
+   "en": "Mona says the marathon teaches children the spirit of citizenship and cooperation.",
+   "ko": "모나는 마라톤이 아이들에게 시민 의식과 협동심을 가르친다고 말해요.",
+   "blank": "المواطنة",
+   "src": "made"
+  }
+ ],
  "w|موافقة": [
   {
    "text": "استنيت موافقة المدير.",
@@ -88352,6 +88928,22 @@
    "en": "Mona makes field visits to farms to vaccinate the cows.",
    "ko": "모나는 소 예방접종을 하러 농장에 현장 방문을 가요.",
    "blank": "ميدانية",
+   "src": "made"
+  }
+ ],
+ "w|ميراث": [
+  {
+   "text": "كتب كريم عن خلاف عائلي على ميراث بيت قديم وصل إلى المحكمة.",
+   "en": "Karim wrote about a family dispute over the inheritance of an old house that reached the court.",
+   "ko": "카림은 오래된 집 상속을 두고 법정까지 간 집안 다툼에 대해 썼어요.",
+   "blank": "ميراث",
+   "src": "made"
+  },
+  {
+   "text": "تعتبر منى حب الجري ميراثا من أبيها.",
+   "en": "Mona considers her love of running an inheritance from her father.",
+   "ko": "모나는 달리기를 좋아하는 마음을 아버지에게서 물려받았다고 생각해요.",
+   "blank": "ميراثا",
    "src": "made"
   }
  ],
@@ -91231,6 +91823,22 @@
    "src": "made"
   }
  ],
+ "w|نفض": [
+  {
+   "text": "نفض كريم الغبار عن أرشيف الصحيفة القديم.",
+   "en": "Karim shook the dust off the newspaper's old archive.",
+   "ko": "카림은 신문사 옛 자료실의 먼지를 털었어요.",
+   "blank": "نفض",
+   "src": "made"
+  },
+  {
+   "text": "نفضت منى الرمل عن حذائها قبل خط البداية.",
+   "en": "Mona shook the sand off her shoes before the starting line.",
+   "ko": "모나는 출발선에 서기 전에 신발에 묻은 모래를 털었어요.",
+   "blank": "نفضت",
+   "src": "made"
+  }
+ ],
  "w|نفط": [
   {
    "text": "ارتفع سعر نفط اليوم.",
@@ -92559,6 +93167,22 @@
    "src": "made"
   }
  ],
+ "w|هجر": [
+  {
+   "text": "كتب كريم أن كثيرا من السكان هجروا القرية بعد سنوات الجفاف.",
+   "en": "Karim wrote that many residents abandoned the village after years of drought.",
+   "ko": "카림은 가뭄이 몇 해 이어지자 많은 주민이 마을을 떠났다고 썼어요.",
+   "blank": "هجروا",
+   "src": "made"
+  },
+  {
+   "text": "هجرت منى التدخين قبل أن تبدأ الجري بسنة.",
+   "en": "Mona gave up smoking a year before she started running.",
+   "ko": "모나는 달리기를 시작하기 일 년 전에 담배를 끊었어요.",
+   "blank": "هجرت",
+   "src": "made"
+  }
+ ],
  "w|هجرة": [
   {
    "text": "هجرة العقول تؤثر على التنمية.",
@@ -92831,6 +93455,22 @@
    "en": "He planned an escape but failed.",
    "ko": "그는 탈출을 계획했지만 실패했다.",
    "blank": "هروب"
+  }
+ ],
+ "w|هرول": [
+  {
+   "text": "هرول كريم إلى المطبعة قبل أن تغلق أبوابها.",
+   "en": "Karim hurried to the printing house before it closed its doors.",
+   "ko": "카림은 인쇄소가 문을 닫기 전에 종종걸음으로 달려갔어요.",
+   "blank": "هرول",
+   "src": "made"
+  },
+  {
+   "text": "هرولت منى في الكيلومتر الأخير لأن ساقيها تعبتا.",
+   "en": "Mona jogged slowly in the last kilometer because her legs were tired.",
+   "ko": "모나는 다리가 지쳐서 마지막 킬로미터는 천천히 뛰었어요.",
+   "blank": "هرولت",
+   "src": "made"
   }
  ],
  "w|هريرة": [

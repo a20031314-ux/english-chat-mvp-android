@@ -205,6 +205,22 @@
    "src": "made"
   }
  ],
+ "w|abdômen": [
+  {
+   "text": "O Rafael fez um ultrassom do abdômen do cachorro.",
+   "en": "Rafael did an ultrasound of the dog's abdomen.",
+   "ko": "하파엘은 개의 복부 초음파를 찍었어요.",
+   "blank": "abdômen",
+   "src": "made"
+  },
+  {
+   "text": "O personal da startup passa exercícios para o abdômen na hora do almoço.",
+   "en": "The startup's personal trainer leads ab exercises at lunchtime.",
+   "ko": "스타트업 개인 트레이너는 점심시간에 복근 운동을 시켜요.",
+   "blank": "abdômen",
+   "src": "made"
+  }
+ ],
  "w|abelha": [
   {
    "text": "O Miguel ficou parado quando uma abelha pousou no braço dele.",
@@ -1455,6 +1471,22 @@
    "src": "made"
   }
  ],
+ "w|adequadamente": [
+  {
+   "text": "O Rafael ensinou o dono a alimentar o filhote adequadamente.",
+   "en": "Rafael taught the owner how to feed the puppy properly.",
+   "ko": "하파엘은 주인에게 강아지 밥을 제대로 주는 법을 알려 줬어요.",
+   "blank": "adequadamente",
+   "src": "made"
+  },
+  {
+   "text": "A Carla reclamou que o código antigo não estava documentado adequadamente.",
+   "en": "Carla complained that the old code wasn't documented properly.",
+   "ko": "카를라는 예전 코드에 문서가 제대로 안 되어 있다고 불평했어요.",
+   "blank": "adequadamente",
+   "src": "made"
+  }
+ ],
  "w|adequado": [
   {
    "text": "O Miguel não sabia qual era o formulário adequado para o pedido.",
@@ -2332,6 +2364,22 @@
    "en": "Carla started shaking a bell to call the customers.",
    "ko": "카를라는 손님을 부르려고 종을 흔들기 시작했어요.",
    "blank": "agitar",
+   "src": "made"
+  }
+ ],
+ "w|agonia": [
+  {
+   "text": "O Rafael não deixa nenhum animal em agonia sem tratamento, nem de madrugada.",
+   "en": "Rafael never leaves an animal in agony without treatment, not even in the middle of the night.",
+   "ko": "하파엘은 한밤중이라도 고통스러워하는 동물을 그냥 두지 않아요.",
+   "blank": "agonia",
+   "src": "made"
+  },
+  {
+   "text": "Esperar a resposta dos investidores foi uma agonia para a Carla.",
+   "en": "Waiting for the investors' answer was agony for Carla.",
+   "ko": "투자자들의 답을 기다리는 건 카를라에게 고문이었어요.",
+   "blank": "agonia",
    "src": "made"
   }
  ],
@@ -9971,6 +10019,22 @@
    "src": "made"
   }
  ],
+ "w|baleado": [
+  {
+   "text": "Um cachorro baleado chegou à clínica, e o Rafael passou horas operando.",
+   "en": "A dog that had been shot arrived at the clinic, and Rafael spent hours operating.",
+   "ko": "총에 맞은 개가 병원에 실려 와서 하파엘은 몇 시간 동안 수술했어요.",
+   "blank": "baleado",
+   "src": "made"
+  },
+  {
+   "text": "No noticiário da TV do escritório, falavam de um segurança baleado num assalto.",
+   "en": "On the office TV news, they were talking about a security guard shot in a robbery.",
+   "ko": "사무실 TV 뉴스에서 강도 사건 중에 총에 맞은 경비원 이야기가 나왔어요.",
+   "blank": "baleado",
+   "src": "made"
+  }
+ ],
  "w|balear": [
   {
    "text": "Segundo a notícia, um homem foi baleado num assalto na noite mais fria do ano.",
@@ -12662,6 +12726,22 @@
    "en": "On the clinic wall, a painting showed a buffalo grazing in a field.",
    "ko": "치과 벽에는 들판에서 풀을 뜯는 물소 그림이 걸려 있었어요.",
    "blank": "búfalo",
+   "src": "made"
+  }
+ ],
+ "w|bumbum": [
+  {
+   "text": "O Rafael deu a injeção no bumbum do cachorrinho, que nem chorou.",
+   "en": "Rafael gave the injection in the little dog's bottom, and it didn't even cry.",
+   "ko": "하파엘이 강아지 엉덩이에 주사를 놓았는데 낑 소리도 안 냈어요.",
+   "blank": "bumbum",
+   "src": "made"
+  },
+  {
+   "text": "A Carla passou tanto tempo sentada que ficou com o bumbum dormente.",
+   "en": "Carla sat for so long that her bum went numb.",
+   "ko": "카를라는 너무 오래 앉아 있어서 엉덩이가 저렸어요.",
+   "blank": "bumbum",
    "src": "made"
   }
  ],
@@ -15471,6 +15551,22 @@
    "blank": "causar"
   }
  ],
+ "w|cautela": [
+  {
+   "text": "O Rafael se aproximou do cão bravo com muita cautela.",
+   "en": "Rafael approached the angry dog with great caution.",
+   "ko": "하파엘은 사나운 개에게 아주 조심스럽게 다가갔어요.",
+   "blank": "cautela",
+   "src": "made"
+  },
+  {
+   "text": "Os investidores pediram à Carla mais cautela com os gastos.",
+   "en": "The investors asked Carla to be more cautious with spending.",
+   "ko": "투자자들은 카를라에게 지출을 더 신중하게 하라고 했어요.",
+   "blank": "cautela",
+   "src": "made"
+  }
+ ],
  "w|cauteloso": [
   {
    "text": "O João ficou cauteloso depois de errar a mesma questão duas vezes.",
@@ -18091,6 +18187,22 @@
    "src": "made"
   }
  ],
+ "w|cochilo": [
+  {
+   "text": "Depois do plantão, o Rafael tirou um cochilo no sofá da clínica.",
+   "en": "After his shift, Rafael took a nap on the clinic sofa.",
+   "ko": "하파엘은 당직이 끝난 뒤 병원 소파에서 낮잠을 잤어요.",
+   "blank": "cochilo",
+   "src": "made"
+  },
+  {
+   "text": "A startup da Carla tem uma sala só para o cochilo depois do almoço.",
+   "en": "Carla's startup has a room just for an after-lunch nap.",
+   "ko": "카를라네 스타트업에는 점심 뒤 낮잠 전용 방이 있어요.",
+   "blank": "cochilo",
+   "src": "made"
+  }
+ ],
  "w|coco": [
   {
    "text": "O Tiago sempre toma um gole de água de coco antes de começar as compras.",
@@ -19984,6 +20096,22 @@
    "en": "The boss decided to grant Beatriz extra time off between Christmas and New Year's.",
    "ko": "상사는 베아트리스에게 크리스마스와 새해 사이에 휴가를 더 주기로 했어요.",
    "blank": "conceder",
+   "src": "made"
+  }
+ ],
+ "w|concedido": [
+  {
+   "text": "O empréstimo concedido pelo banco ajudou o Rafael a comprar um aparelho de raio X.",
+   "en": "The loan granted by the bank helped Rafael buy an X-ray machine.",
+   "ko": "은행에서 받은 대출 덕분에 하파엘은 엑스레이 기계를 살 수 있었어요.",
+   "blank": "concedido",
+   "src": "made"
+  },
+  {
+   "text": "O prazo extra concedido pelo cliente salvou a equipe da Carla.",
+   "en": "The extra time granted by the client saved Carla's team.",
+   "ko": "고객이 마감을 늘려 준 덕분에 카를라 팀이 살았어요.",
+   "blank": "concedido",
    "src": "made"
   }
  ],
@@ -24323,6 +24451,22 @@
    "src": "tatoeba:13982032/Castro5432 en:12851006/Ussis"
   }
  ],
+ "w|curado": [
+  {
+   "text": "O Rafael deu alta ao cavalo, já curado da infecção.",
+   "en": "Rafael discharged the horse, now cured of the infection.",
+   "ko": "하파엘은 감염이 다 나은 말을 퇴원시켰어요.",
+   "blank": "curado",
+   "src": "made"
+  },
+  {
+   "text": "Depois de uma semana de repouso, o resfriado da Carla está curado.",
+   "en": "After a week of rest, Carla's cold is cured.",
+   "ko": "일주일 쉬고 나서 카를라의 감기가 다 나았어요.",
+   "blank": "curado",
+   "src": "made"
+  }
+ ],
  "w|curar": [
   {
    "text": "O médico pode curar seu filho da doença.",
@@ -25225,6 +25369,22 @@
    "blank": "defesa"
   }
  ],
+ "w|deficiência": [
+  {
+   "text": "O Rafael diagnosticou uma deficiência de cálcio na tartaruga.",
+   "en": "Rafael diagnosed a calcium deficiency in the turtle.",
+   "ko": "하파엘은 거북이에게 칼슘 결핍이 있다고 진단했어요.",
+   "blank": "deficiência",
+   "src": "made"
+  },
+  {
+   "text": "A Carla quer que o aplicativo funcione bem para pessoas com deficiência visual.",
+   "en": "Carla wants the app to work well for people with visual impairments.",
+   "ko": "카를라는 시각 장애가 있는 사람도 앱을 잘 쓸 수 있으면 해요.",
+   "blank": "deficiência",
+   "src": "made"
+  }
+ ],
  "w|deficiente": [
   {
    "text": "O Lucas adaptou uma cadeirinha de rodas para um cachorro deficiente das patas traseiras.",
@@ -25565,6 +25725,22 @@
    "src": "made"
   }
  ],
+ "w|delirar": [
+  {
+   "text": "A dona do gato começou a delirar de alegria quando o Rafael disse que não era grave.",
+   "en": "The cat's owner went wild with joy when Rafael said it wasn't serious.",
+   "ko": "하파엘이 심각하지 않다고 하자 고양이 주인은 기뻐서 어쩔 줄 몰랐어요.",
+   "blank": "delirar",
+   "src": "made"
+  },
+  {
+   "text": "Com a febre alta, a Carla chegou a delirar e mandou mensagens sem sentido para a equipe.",
+   "en": "With a high fever, Carla became delirious and sent nonsense messages to the team.",
+   "ko": "카를라는 고열로 헛소리를 하듯 팀에게 말도 안 되는 메시지를 보냈어요.",
+   "blank": "delirar",
+   "src": "made"
+  }
+ ],
  "w|delito": [
   {
    "text": "O Rafael explicou ao cliente que o delito prescreveu há anos.",
@@ -25812,6 +25988,22 @@
    "en": "Luísa chose a thick blanket to face the winter.",
    "ko": "루이자는 겨울을 나려고 두툼한 담요를 골랐어요.",
    "blank": "denso",
+   "src": "made"
+  }
+ ],
+ "w|dental": [
+  {
+   "text": "Uma vez por semana, o Rafael faz limpeza dental em cães e gatos.",
+   "en": "Once a week, Rafael does dental cleanings on dogs and cats.",
+   "ko": "하파엘은 일주일에 한 번 개와 고양이 스케일링을 해요.",
+   "blank": "dental",
+   "src": "made"
+  },
+  {
+   "text": "A Carla esqueceu o fio dental em cima da mesa de reunião.",
+   "en": "Carla left her dental floss on the meeting table.",
+   "ko": "카를라는 회의 테이블 위에 치실을 두고 왔어요.",
+   "blank": "dental",
    "src": "made"
   }
  ],
@@ -26339,6 +26531,22 @@
    "ko": "빗속을 걷는 거 싫지 않아?",
    "blank": "desagradável",
    "src": "tatoeba:2977570/carlosalberto en:26722/CK"
+  }
+ ],
+ "w|desajeitado": [
+  {
+   "text": "O filhote de dogue alemão é tão desajeitado que derrubou a balança.",
+   "en": "The Great Dane puppy is so clumsy that it knocked over the scale.",
+   "ko": "그레이트데인 강아지는 너무 덤벙대서 체중계를 넘어뜨렸어요.",
+   "blank": "desajeitado",
+   "src": "made"
+  },
+  {
+   "text": "O estagiário desajeitado derrubou café no teclado da Carla.",
+   "en": "The clumsy intern spilled coffee on Carla's keyboard.",
+   "ko": "덤벙대는 인턴이 카를라의 키보드에 커피를 쏟았어요.",
+   "blank": "desajeitado",
+   "src": "made"
   }
  ],
  "w|desaparecer": [
@@ -30823,6 +31031,22 @@
    "src": "made"
   }
  ],
+ "w|egoísmo": [
+  {
+   "text": "Para o Rafael, abandonar um animal velho é puro egoísmo.",
+   "en": "For Rafael, abandoning an old animal is pure selfishness.",
+   "ko": "하파엘에게 늙은 동물을 버리는 건 순전히 이기심이에요.",
+   "blank": "egoísmo",
+   "src": "made"
+  },
+  {
+   "text": "A Carla não tolera egoísmo na equipe, ainda mais em semana de entrega.",
+   "en": "Carla doesn't tolerate selfishness on the team, especially in delivery week.",
+   "ko": "카를라는 팀 안의 이기적인 태도를 못 참아요, 특히 납품 주간에는요.",
+   "blank": "egoísmo",
+   "src": "made"
+  }
+ ],
  "w|egoísta": [
   {
    "text": "Vocês realmente acham que sou egoísta?",
@@ -30928,6 +31152,22 @@
    "en": "The elephant sprayed water on the kids.",
    "ko": "코끼리가 아이들한테 물을 뿌렸어요.",
    "blank": "elefante",
+   "src": "made"
+  }
+ ],
+ "w|elegância": [
+  {
+   "text": "O galgo entrou no consultório com uma elegância impressionante.",
+   "en": "The greyhound walked into the exam room with impressive elegance.",
+   "ko": "그레이하운드는 놀랄 만큼 우아하게 진료실에 들어왔어요.",
+   "blank": "elegância",
+   "src": "made"
+  },
+  {
+   "text": "A Carla resolveu a briga entre os sócios com muita elegância.",
+   "en": "Carla resolved the fight between the partners with great elegance.",
+   "ko": "카를라는 공동 창업자들 사이의 다툼을 아주 매끄럽게 해결했어요.",
+   "blank": "elegância",
    "src": "made"
   }
  ],
@@ -35611,6 +35851,22 @@
    "src": "made"
   }
  ],
+ "w|estimular": [
+  {
+   "text": "O Rafael recomendou brinquedos para estimular o gato que vive em apartamento.",
+   "en": "Rafael recommended toys to stimulate the cat that lives in an apartment.",
+   "ko": "하파엘은 아파트에 사는 고양이에게 자극을 줄 장난감을 추천했어요.",
+   "blank": "estimular",
+   "src": "made"
+  },
+  {
+   "text": "A Carla quer estimular a equipe a propor ideias sem medo de errar.",
+   "en": "Carla wants to encourage the team to suggest ideas without fear of being wrong.",
+   "ko": "카를라는 팀이 틀릴까 겁내지 않고 아이디어를 내도록 북돋우고 싶어 해요.",
+   "blank": "estimular",
+   "src": "made"
+  }
+ ],
  "w|estímulo": [
   {
    "text": "O elogio do delegado foi um estímulo para o Lucas continuar estudando.",
@@ -40243,6 +40499,22 @@
    "src": "made"
   }
  ],
+ "w|flutuante": [
+  {
+   "text": "O Rafael recomendou um colete flutuante para o cachorro que vai à praia.",
+   "en": "Rafael recommended a flotation vest for the dog that goes to the beach.",
+   "ko": "하파엘은 바다에 가는 개에게 구명조끼를 권했어요.",
+   "blank": "flutuante",
+   "src": "made"
+  },
+  {
+   "text": "A Carla paga os servidores em dólar e sofre com o câmbio flutuante.",
+   "en": "Carla pays for the servers in dollars and suffers from the floating exchange rate.",
+   "ko": "카를라는 서버 비용을 달러로 내서 변동 환율 때문에 골치를 앓아요.",
+   "blank": "flutuante",
+   "src": "made"
+  }
+ ],
  "w|flutuar": [
   {
    "text": "Na aula de ciências, o Lucas viu um ovo flutuar na água com sal.",
@@ -41671,6 +41943,22 @@
    "src": "tatoeba:5297292/ToinhoAlam en:1096358/CK"
   }
  ],
+ "w|funcional": [
+  {
+   "text": "A sala de cirurgia da clínica é pequena, mas muito funcional.",
+   "en": "The clinic's operating room is small but very functional.",
+   "ko": "동물병원 수술실은 작지만 아주 실용적이에요.",
+   "blank": "funcional",
+   "src": "made"
+  },
+  {
+   "text": "A Carla quer uma versão funcional do aplicativo até o fim do mês.",
+   "en": "Carla wants a working version of the app by the end of the month.",
+   "ko": "카를라는 이달 말까지 앱의 작동하는 버전을 원해요.",
+   "blank": "funcional",
+   "src": "made"
+  }
+ ],
  "w|funcionamento": [
   {
    "text": "O João fez uma maquete para mostrar o funcionamento de uma usina.",
@@ -42688,6 +42976,22 @@
    "en": "The twin sons of Carla's neighbor always wear the same swim trunks.",
    "ko": "카를라의 이웃집 쌍둥이 아들들은 늘 똑같은 수영복을 입어요.",
    "blank": "gêmeos",
+   "src": "made"
+  }
+ ],
+ "w|gemer": [
+  {
+   "text": "O cachorro começou a gemer quando o Rafael tocou na pata dele.",
+   "en": "The dog started whimpering when Rafael touched its paw.",
+   "ko": "하파엘이 발을 만지자 개가 낑낑거리기 시작했어요.",
+   "blank": "gemer",
+   "src": "made"
+  },
+  {
+   "text": "A Carla ouviu o colega gemer de frustração quando o código quebrou.",
+   "en": "Carla heard her coworker groan in frustration when the code broke.",
+   "ko": "코드가 깨지자 동료가 답답해서 끙 하고 앓는 소리를 냈어요.",
+   "blank": "gemer",
    "src": "made"
   }
  ],
@@ -44388,6 +44692,22 @@
    "en": "The cousin joked that a hacker could change the party menu.",
    "ko": "사촌은 해커가 피로연 메뉴를 바꿀 수도 있다고 농담했어요.",
    "blank": "hacker",
+   "src": "made"
+  }
+ ],
+ "w|hálito": [
+  {
+   "text": "O cachorro tinha um hálito tão forte que o Rafael examinou os dentes dele.",
+   "en": "The dog had such strong breath that Rafael examined its teeth.",
+   "ko": "개 입 냄새가 너무 심해서 하파엘은 이를 살펴봤어요.",
+   "blank": "hálito",
+   "src": "made"
+  },
+  {
+   "text": "A Carla masca chiclete para manter o hálito fresco antes das reuniões.",
+   "en": "Carla chews gum to keep her breath fresh before meetings.",
+   "ko": "카를라는 회의 전에 입 냄새가 안 나게 껌을 씹어요.",
+   "blank": "hálito",
    "src": "made"
   }
  ],
@@ -46645,6 +46965,22 @@
    "src": "made"
   }
  ],
+ "w|imune": [
+  {
+   "text": "O Rafael explicou que o filhote fica imune depois da segunda dose da vacina.",
+   "en": "Rafael explained that the puppy becomes immune after the second vaccine dose.",
+   "ko": "하파엘은 강아지가 두 번째 접종을 맞으면 면역이 생긴다고 설명했어요.",
+   "blank": "imune",
+   "src": "made"
+  },
+  {
+   "text": "A Carla parece imune ao estresse dos prazos apertados.",
+   "en": "Carla seems immune to the stress of tight deadlines.",
+   "ko": "카를라는 빠듯한 마감 스트레스에도 끄떡없어 보여요.",
+   "blank": "imune",
+   "src": "made"
+  }
+ ],
  "w|imunidade": [
   {
    "text": "Eu tenho imunidade.",
@@ -46802,6 +47138,22 @@
    "en": "A customer's compliment was the encouragement Rita needed to open a second shop.",
    "ko": "손님의 칭찬 한마디가 리타가 두 번째 가게를 여는 데 필요한 힘이 됐어요.",
    "blank": "incentivo",
+   "src": "made"
+  }
+ ],
+ "w|incerto": [
+  {
+   "text": "Segundo o Rafael, o futuro do cavalo ferido ainda é incerto.",
+   "en": "According to Rafael, the injured horse's future is still uncertain.",
+   "ko": "하파엘 말로는 다친 말이 어떻게 될지 아직 알 수 없대요.",
+   "blank": "incerto",
+   "src": "made"
+  },
+  {
+   "text": "O futuro da startup era incerto até chegar o primeiro investimento.",
+   "en": "The startup's future was uncertain until the first investment came in.",
+   "ko": "첫 투자를 받기 전까지 스타트업의 앞날은 불투명했어요.",
+   "blank": "incerto",
    "src": "made"
   }
  ],
@@ -47405,6 +47757,22 @@
    "ko": "그의 아이 같은 웃음이 매력적이에요.",
    "blank": "infantil",
    "src": "tatoeba:3428192/piterkeo en:286453/CM"
+  }
+ ],
+ "w|infarto": [
+  {
+   "text": "O dono do cão quase teve um infarto quando viu o animal mancando.",
+   "en": "The dog's owner nearly had a heart attack when he saw it limping.",
+   "ko": "개 주인은 개가 절뚝거리는 걸 보고 심장이 멎는 줄 알았어요.",
+   "blank": "infarto",
+   "src": "made"
+  },
+  {
+   "text": "A Carla criou um aplicativo que alerta sinais de infarto pelo relógio inteligente.",
+   "en": "Carla created an app that flags signs of a heart attack through a smartwatch.",
+   "ko": "카를라는 스마트워치로 심근경색 징후를 알려 주는 앱을 만들었어요.",
+   "blank": "infarto",
+   "src": "made"
   }
  ],
  "w|infecção": [
@@ -49538,6 +49906,22 @@
    "en": "In the ritual scene, the actress had to invoke the spirits in a low voice.",
    "ko": "의식 장면에서 그 배우는 낮은 목소리로 영혼을 불러내야 했어요.",
    "blank": "invocar",
+   "src": "made"
+  }
+ ],
+ "w|ioga": [
+  {
+   "text": "A recepcionista da clínica faz ioga todos os dias antes do expediente.",
+   "en": "The clinic receptionist does yoga every day before work.",
+   "ko": "동물병원 접수 직원은 매일 출근 전에 요가를 해요.",
+   "blank": "ioga",
+   "src": "made"
+  },
+  {
+   "text": "A empresa da Carla oferece aulas de ioga às sextas.",
+   "en": "Carla's company offers yoga classes on Fridays.",
+   "ko": "카를라의 회사는 금요일마다 요가 수업을 열어요.",
+   "blank": "ioga",
    "src": "made"
   }
  ],
@@ -55641,6 +56025,22 @@
    "src": "made"
   }
  ],
+ "w|medula": [
+  {
+   "text": "Depois do atropelamento, o Rafael verificou se a medula do cão tinha sido atingida.",
+   "en": "After the dog was hit by a car, Rafael checked whether its spinal cord had been affected.",
+   "ko": "차에 치인 개를 보고 하파엘은 척수가 다쳤는지 확인했어요.",
+   "blank": "medula",
+   "src": "made"
+  },
+  {
+   "text": "A Carla doou medula para um primo e tirou alguns dias de folga.",
+   "en": "Carla donated bone marrow to a cousin and took a few days off.",
+   "ko": "카를라는 사촌에게 골수를 기증하고 며칠 쉬었어요.",
+   "blank": "medula",
+   "src": "made"
+  }
+ ],
  "w|meia": [
   {
    "text": "Cadê a outra meia?",
@@ -57683,6 +58083,22 @@
    "blank": "monstro"
   }
  ],
+ "w|monstruoso": [
+  {
+   "text": "O Rafael atendeu hoje um gato monstruoso de tão gordo.",
+   "en": "Rafael treated a monstrously fat cat today.",
+   "ko": "하파엘은 오늘 엄청나게 뚱뚱한 고양이를 진료했어요.",
+   "blank": "monstruoso",
+   "src": "made"
+  },
+  {
+   "text": "A equipe da Carla achou um bug monstruoso um dia antes do lançamento.",
+   "en": "Carla's team found a monstrous bug the day before launch.",
+   "ko": "카를라 팀은 출시 하루 전에 어마어마한 버그를 찾았어요.",
+   "blank": "monstruoso",
+   "src": "made"
+  }
+ ],
  "w|montagem": [
   {
    "text": "O Pedro trabalha na montagem de motores elétricos.",
@@ -58563,6 +58979,22 @@
    "src": "tatoeba:1779539/alexmarcelo en:1776740/Amastan"
   }
  ],
+ "w|muscular": [
+  {
+   "text": "O cavalo sofreu uma lesão muscular durante a corrida.",
+   "en": "The horse suffered a muscle injury during the race.",
+   "ko": "말이 경주 중에 근육을 다쳤어요.",
+   "blank": "muscular",
+   "src": "made"
+  },
+  {
+   "text": "A Carla sente dor muscular sempre que volta à academia depois de um tempo.",
+   "en": "Carla gets muscle pain whenever she goes back to the gym after a break.",
+   "ko": "카를라는 오랜만에 헬스장에 가면 늘 근육통이 와요.",
+   "blank": "muscular",
+   "src": "made"
+  }
+ ],
  "w|músculo": [
   {
    "text": "O Lucas sentiu cada músculo das pernas no dia seguinte ao treino.",
@@ -59003,6 +59435,22 @@
    "en": "Don't mess with nature for no reason.",
    "ko": "자연을 괜히 건드리지 마.",
    "blank": "natureza"
+  }
+ ],
+ "w|náusea": [
+  {
+   "text": "A cadela teve náusea depois da longa viagem de carro até a clínica.",
+   "en": "The dog felt nauseous after the long car ride to the clinic.",
+   "ko": "개는 병원까지 오래 차를 타고 와서 속이 메스꺼웠어요.",
+   "blank": "náusea",
+   "src": "made"
+  },
+  {
+   "text": "A Carla sentiu náusea quando viu o valor da conta do servidor.",
+   "en": "Carla felt nauseous when she saw the server bill.",
+   "ko": "카를라는 서버 요금 청구서를 보고 속이 울렁거렸어요.",
+   "blank": "náusea",
+   "src": "made"
   }
  ],
  "w|naval": [
@@ -60214,6 +60662,22 @@
    "en": "On a cloudy day, Sofia turns on all the lights at her workbench.",
    "ko": "흐린 날이면 소피아는 작업대 조명을 전부 켜요.",
    "blank": "nublado",
+   "src": "made"
+  }
+ ],
+ "w|nuca": [
+  {
+   "text": "O Rafael aplicou a vacina na nuca do gato sem que ele percebesse.",
+   "en": "Rafael gave the vaccine in the cat's scruff without it noticing.",
+   "ko": "하파엘은 고양이가 눈치채지 못하게 목덜미에 백신을 놓았어요.",
+   "blank": "nuca",
+   "src": "made"
+  },
+  {
+   "text": "A Carla sente uma dor na nuca depois de horas no computador.",
+   "en": "Carla gets a pain in the back of her neck after hours at the computer.",
+   "ko": "카를라는 컴퓨터 앞에 몇 시간 앉아 있으면 뒷목이 아파요.",
+   "blank": "nuca",
    "src": "made"
   }
  ],
@@ -63313,6 +63777,22 @@
    "src": "made"
   }
  ],
+ "w|parcialmente": [
+  {
+   "text": "O cachorro recuperou parcialmente o movimento da pata traseira.",
+   "en": "The dog partially recovered movement in its hind leg.",
+   "ko": "개는 뒷다리 움직임을 일부 되찾았어요.",
+   "blank": "parcialmente",
+   "src": "made"
+  },
+  {
+   "text": "O site da startup ficou parcialmente fora do ar durante a manhã.",
+   "en": "The startup's website was partially down during the morning.",
+   "ko": "스타트업 웹사이트가 오전 내내 일부 접속이 안 됐어요.",
+   "blank": "parcialmente",
+   "src": "made"
+  }
+ ],
  "w|parecer": [
   {
    "text": "Não quero parecer chato.",
@@ -64333,6 +64813,22 @@
    "en": "I'm going to catch the bus.",
    "ko": "버스를 탈게.",
    "blank": "pegar"
+  }
+ ],
+ "w|peido": [
+  {
+   "text": "O Rafael explicou que o peido constante do cachorro vinha da ração errada.",
+   "en": "Rafael explained that the dog's constant farting came from the wrong food.",
+   "ko": "하파엘은 개가 방귀를 자주 뀌는 건 사료가 안 맞아서라고 설명했어요.",
+   "blank": "peido",
+   "src": "made"
+  },
+  {
+   "text": "Na reunião, alguém soltou um peido e a Carla teve que segurar o riso.",
+   "en": "In the meeting, someone farted and Carla had to hold back her laughter.",
+   "ko": "회의 중에 누가 방귀를 뀌어서 카를라는 웃음을 참아야 했어요.",
+   "blank": "peido",
+   "src": "made"
   }
  ],
  "w|peito": [
@@ -69468,6 +69964,22 @@
    "en": "The payments module is the most problematic part of the system.",
    "ko": "결제 모듈이 시스템에서 가장 말썽이에요.",
    "blank": "problemático",
+   "src": "made"
+  }
+ ],
+ "w|proceder": [
+  {
+   "text": "Antes de proceder com a cirurgia, o Rafael pediu a autorização do dono.",
+   "en": "Before proceeding with the surgery, Rafael asked for the owner's consent.",
+   "ko": "하파엘은 수술을 진행하기 전에 주인의 동의를 받았어요.",
+   "blank": "proceder",
+   "src": "made"
+  },
+  {
+   "text": "A Carla perguntou à advogada como proceder com o registro da marca.",
+   "en": "Carla asked the lawyer how to proceed with registering the trademark.",
+   "ko": "카를라는 변호사에게 상표 등록을 어떻게 진행할지 물었어요.",
+   "blank": "proceder",
    "src": "made"
   }
  ],
@@ -75277,6 +75789,22 @@
    "src": "made"
   }
  ],
+ "w|ressonância": [
+  {
+   "text": "O Rafael pediu uma ressonância da coluna do cachorro idoso.",
+   "en": "Rafael ordered an MRI of the old dog's spine.",
+   "ko": "하파엘은 늙은 개의 척추 MRI를 찍자고 했어요.",
+   "blank": "ressonância",
+   "src": "made"
+  },
+  {
+   "text": "A ideia da Carla teve grande ressonância entre os investidores.",
+   "en": "Carla's idea had great resonance with the investors.",
+   "ko": "카를라의 아이디어는 투자자들 사이에서 큰 반향을 일으켰어요.",
+   "blank": "ressonância",
+   "src": "made"
+  }
+ ],
  "w|ressurreição": [
   {
    "text": "O caderno de cultura falou de uma peça sobre a ressurreição de um velho cinema.",
@@ -75746,6 +76274,22 @@
    "en": "The big revelation of the night was that Mariana is getting married.",
    "ko": "그날 밤 가장 큰 소식은 마리아나가 결혼한다는 거였어요.",
    "blank": "revelação",
+   "src": "made"
+  }
+ ],
+ "w|revelado": [
+  {
+   "text": "O resultado da biópsia só foi revelado ao dono no dia seguinte.",
+   "en": "The biopsy result was only revealed to the owner the next day.",
+   "ko": "조직 검사 결과는 다음 날에야 주인에게 알려졌어요.",
+   "blank": "revelado",
+   "src": "made"
+  },
+  {
+   "text": "O nome do novo aplicativo foi revelado no evento de lançamento.",
+   "en": "The name of the new app was revealed at the launch event.",
+   "ko": "새 앱 이름은 출시 행사에서 공개됐어요.",
+   "blank": "revelado",
    "src": "made"
   }
  ],
@@ -77608,6 +78152,22 @@
    "en": "Carla ordered a device to measure her grandmother's blood sugar.",
    "ko": "카를라는 할머니의 혈당을 잴 기기를 주문했어요.",
    "blank": "sanguíneo",
+   "src": "made"
+  }
+ ],
+ "w|sanitário": [
+  {
+   "text": "A clínica do Rafael segue um controle sanitário muito rígido.",
+   "en": "Rafael's clinic follows very strict sanitary control.",
+   "ko": "하파엘의 동물병원은 위생 관리를 아주 엄격하게 해요.",
+   "blank": "sanitário",
+   "src": "made"
+  },
+  {
+   "text": "O vaso sanitário do escritório entupiu de novo na segunda-feira.",
+   "en": "The office toilet clogged again on Monday.",
+   "ko": "월요일에 사무실 변기가 또 막혔어요.",
+   "blank": "sanitário",
    "src": "made"
   }
  ],
@@ -80215,6 +80775,22 @@
    "en": "Let's talk about that.",
    "ko": "그 얘기 하자.",
    "blank": "sobre"
+  }
+ ],
+ "w|sobrecarregar": [
+  {
+   "text": "O Rafael não quer sobrecarregar a única assistente da clínica.",
+   "en": "Rafael doesn't want to overload the clinic's only assistant.",
+   "ko": "하파엘은 병원에 하나뿐인 보조원에게 일을 너무 많이 주고 싶지 않아요.",
+   "blank": "sobrecarregar",
+   "src": "made"
+  },
+  {
+   "text": "Um pico de acessos pode sobrecarregar o servidor da startup.",
+   "en": "A spike in traffic can overload the startup's server.",
+   "ko": "접속이 몰리면 스타트업 서버가 과부하될 수 있어요.",
+   "blank": "sobrecarregar",
+   "src": "made"
   }
  ],
  "w|sobremesa": [
@@ -87447,6 +88023,22 @@
    "src": "made"
   }
  ],
+ "w|urinar": [
+  {
+   "text": "O gato não conseguia urinar, e o Rafael desconfiou de pedra nos rins.",
+   "en": "The cat couldn't urinate, and Rafael suspected kidney stones.",
+   "ko": "고양이가 소변을 못 봐서 하파엘은 신장 결석을 의심했어요.",
+   "blank": "urinar",
+   "src": "made"
+  },
+  {
+   "text": "O aplicativo ajuda pacientes a registrar quantas vezes precisam urinar por dia.",
+   "en": "The app helps patients log how many times they need to urinate a day.",
+   "ko": "그 앱은 환자들이 하루에 소변을 몇 번 보는지 기록하게 도와줘요.",
+   "blank": "urinar",
+   "src": "made"
+  }
+ ],
  "w|urna": [
   {
    "text": "Na entrada, há uma urna para os visitantes deixarem sugestões.",
@@ -87682,6 +88274,22 @@
    "en": "After the race, Rita just wants to stroll along the beach with her friends.",
    "ko": "경주가 끝나면 리타는 친구들과 해변을 한가롭게 거닐고만 싶어요.",
    "blank": "vadiar",
+   "src": "made"
+  }
+ ],
+ "w|vadio": [
+  {
+   "text": "O Rafael atende de graça um cão vadio que vive na praça.",
+   "en": "Rafael treats a stray dog that lives in the square for free.",
+   "ko": "하파엘은 광장에 사는 떠돌이 개를 무료로 돌봐요.",
+   "blank": "vadio",
+   "src": "made"
+  },
+  {
+   "text": "Um gato vadio que dorme na porta do escritório virou o mascote da Carla.",
+   "en": "A stray cat that sleeps at the office door became Carla's mascot.",
+   "ko": "사무실 문 앞에서 자는 길고양이가 카를라의 마스코트가 됐어요.",
+   "blank": "vadio",
    "src": "made"
   }
  ],
@@ -88611,6 +89219,22 @@
    "en": "Wind comes in under the door.",
    "ko": "문 아래로 바람이 들어와.",
    "blank": "vento"
+  }
+ ],
+ "w|ventre": [
+  {
+   "text": "O Rafael apalpou o ventre da gata para ver se ela estava prenha.",
+   "en": "Rafael felt the cat's belly to see if she was pregnant.",
+   "ko": "하파엘은 고양이가 새끼를 뱄는지 보려고 배를 만져 봤어요.",
+   "blank": "ventre",
+   "src": "made"
+  },
+  {
+   "text": "Uma dor forte no ventre fez a Carla sair mais cedo do trabalho.",
+   "en": "A sharp pain in her abdomen made Carla leave work early.",
+   "ko": "아랫배가 심하게 아파서 카를라는 일찍 퇴근했어요.",
+   "blank": "ventre",
+   "src": "made"
   }
  ],
  "w|ver": [
@@ -89861,6 +90485,22 @@
    "ko": "물은 아주 중요한 천연자원이에요.",
    "blank": "vital",
    "src": "tatoeba:904155/alexmarcelo en:270791/al_ex_an_der"
+  }
+ ],
+ "w|vitamina": [
+  {
+   "text": "O Rafael receitou uma vitamina para o filhote que estava fraquinho.",
+   "en": "Rafael prescribed a vitamin for the puppy that was weak.",
+   "ko": "하파엘은 기운 없는 강아지에게 비타민을 처방했어요.",
+   "blank": "vitamina",
+   "src": "made"
+  },
+  {
+   "text": "A Carla toma uma vitamina de banana com aveia no café da manhã.",
+   "en": "Carla has a banana and oat smoothie for breakfast.",
+   "ko": "카를라는 아침으로 귀리 넣은 바나나 스무디를 마셔요.",
+   "blank": "vitamina",
+   "src": "made"
   }
  ],
  "w|vítima": [
