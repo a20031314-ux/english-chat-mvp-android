@@ -5091,6 +5091,22 @@
    "src": "made"
   }
  ],
+ "w|appaltatore": [
+  {
+   "text": "Stefano controlla che l'appaltatore finisca i lavori della piazza in tempo.",
+   "en": "Stefano checks that the contractor finishes the work on the square on time.",
+   "ko": "스테파노는 시공업자가 광장 공사를 제때 끝내는지 확인해요.",
+   "blank": "appaltatore",
+   "src": "made"
+  },
+  {
+   "text": "L'appaltatore del palco ha lavorato tutta la notte, spiega il tecnico a Laura.",
+   "en": "The stage contractor worked all night, the technician explains to Laura.",
+   "ko": "기술자는 라우라에게 무대 시공업자가 밤새 일했다고 설명해요.",
+   "blank": "appaltatore",
+   "src": "made"
+  }
+ ],
  "w|apparecchiare": [
   {
    "text": "Stasera tocca a Matteo apparecchiare la tavola per tutta la famiglia.",
@@ -7317,6 +7333,22 @@
    "blank": "assoluto"
   }
  ],
+ "w|assoluzione": [
+  {
+   "text": "Stefano legge in municipio la notizia dell'assoluzione dell'ex assessore.",
+   "en": "At city hall Stefano reads the news of the former councillor's acquittal.",
+   "ko": "스테파노는 시청에서 전직 시의원이 무죄 판결을 받았다는 소식을 읽어요.",
+   "blank": "assoluzione",
+   "src": "made"
+  },
+  {
+   "text": "La band canta un pezzo sull'assoluzione di un innocente e Laura si commuove.",
+   "en": "The band sings a song about an innocent man's acquittal and Laura is moved.",
+   "ko": "밴드가 무고한 사람의 무죄 판결에 관한 노래를 부르자 라우라는 뭉클해져요.",
+   "blank": "assoluzione",
+   "src": "made"
+  }
+ ],
  "w|assolvere": [
   {
    "text": "Marco riesce ad assolvere tutti i compiti prima del fine settimana.",
@@ -8405,6 +8437,22 @@
    "blank": "autorità"
   }
  ],
+ "w|autoritario": [
+  {
+   "text": "Il nuovo dirigente ha uno stile autoritario e Stefano fatica ad abituarsi.",
+   "en": "The new manager has an authoritarian style and Stefano struggles to get used to it.",
+   "ko": "새 책임자는 권위적이라서 스테파노는 적응하기 힘들어해요.",
+   "blank": "autoritario",
+   "src": "made"
+  },
+  {
+   "text": "Il direttore d'orchestra ha un modo autoritario di guidare i musicisti, nota Laura.",
+   "en": "The conductor has an authoritarian way of leading the musicians, Laura notices.",
+   "ko": "라우라는 지휘자가 연주자들을 권위적으로 이끈다는 걸 알아차려요.",
+   "blank": "autoritario",
+   "src": "made"
+  }
+ ],
  "w|autorizzare": [
   {
    "text": "Il caporedattore deve autorizzare ogni viaggio di Paolo all'estero.",
@@ -8464,6 +8512,22 @@
    "en": "In autumn Martina's pupils collect leaves for a poster.",
    "ko": "가을에 마르티나네 반 아이들은 게시판을 꾸밀 나뭇잎을 모아요.",
    "blank": "autunno",
+   "src": "made"
+  }
+ ],
+ "w|avamposto": [
+  {
+   "text": "Nell'archivio Stefano trova la mappa di un antico avamposto romano sotto la città.",
+   "en": "In the archive Stefano finds the map of an ancient Roman outpost under the city.",
+   "ko": "스테파노는 기록 보관소에서 도시 아래에 있던 옛 로마 전초 기지 지도를 찾아내요.",
+   "blank": "avamposto",
+   "src": "made"
+  },
+  {
+   "text": "Laura arriva presto e conquista un avamposto in prima fila con le amiche.",
+   "en": "Laura arrives early and claims an outpost in the front row with her friends.",
+   "ko": "라우라는 일찍 와서 친구들과 맨 앞줄에 자리를 잡아요.",
+   "blank": "avamposto",
    "src": "made"
   }
  ],
@@ -13431,6 +13495,22 @@
    "src": "made"
   }
  ],
+ "w|capitano": [
+  {
+   "text": "Il capitano dei vigili del fuoco chiede a Stefano di controllare le uscite di sicurezza.",
+   "en": "The fire captain asks Stefano to check the emergency exits.",
+   "ko": "소방대장이 스테파노에게 비상구를 점검해 달라고 해요.",
+   "blank": "capitano",
+   "src": "made"
+  },
+  {
+   "text": "Il cantante si presenta vestito da capitano di nave e Laura ride.",
+   "en": "The singer shows up dressed as a ship's captain and Laura laughs.",
+   "ko": "가수가 선장 차림으로 나타나자 라우라가 웃어요.",
+   "blank": "capitano",
+   "src": "made"
+  }
+ ],
  "w|capitare": [
   {
    "text": "Capita anche ai migliori.",
@@ -13658,6 +13738,22 @@
    "en": "Laura buys a new capsule for the midnight coffee machine.",
    "ko": "라우라는 자정에 마실 커피 머신용 캡슐을 새로 사요.",
    "blank": "capsula",
+   "src": "made"
+  }
+ ],
+ "w|carabiniere": [
+  {
+   "text": "Un carabiniere entra in municipio per consegnare a Stefano un documento urgente.",
+   "en": "A carabiniere comes into city hall to deliver an urgent document to Stefano.",
+   "ko": "카라비니에레 한 명이 급한 서류를 전하러 시청에 들어와 스테파노에게 건네요.",
+   "blank": "carabiniere",
+   "src": "made"
+  },
+  {
+   "text": "All'ingresso un carabiniere controlla lo zaino di Laura.",
+   "en": "At the entrance a carabiniere checks Laura's backpack.",
+   "ko": "입구에서 카라비니에레가 라우라의 배낭을 검사해요.",
+   "blank": "carabiniere",
    "src": "made"
   }
  ],
@@ -15221,6 +15317,22 @@
    "blank": "cerimonia"
   }
  ],
+ "w|cerniera": [
+  {
+   "text": "La cerniera della borsa di Stefano si rompe proprio prima della riunione.",
+   "en": "The zipper on Stefano's bag breaks right before the meeting.",
+   "ko": "회의 직전에 스테파노의 가방 지퍼가 고장 나요.",
+   "blank": "cerniera",
+   "src": "made"
+  },
+  {
+   "text": "Laura chiude la cerniera del giubbotto perché la sera fa fresco.",
+   "en": "Laura zips up her jacket because the evening is cool.",
+   "ko": "저녁이 쌀쌀해서 라우라는 점퍼 지퍼를 올려요.",
+   "blank": "cerniera",
+   "src": "made"
+  }
+ ],
  "w|cerotto": [
   {
    "text": "Dopo il prelievo l'infermiera mette un cerotto sul braccio di Simone.",
@@ -15887,6 +15999,22 @@
    "en": "Bye, see you tomorrow then.",
    "ko": "안녕, 그럼 내일 보자.",
    "blank": "Ciao"
+  }
+ ],
+ "w|ciarlatano": [
+  {
+   "text": "Stefano avverte gli anziani di non fidarsi di un ciarlatano che vende cure miracolose porta a porta.",
+   "en": "Stefano warns the elderly not to trust a charlatan selling miracle cures door to door.",
+   "ko": "스테파노는 어르신들에게 집집마다 다니며 기적의 약을 파는 사기꾼을 믿지 말라고 당부해요.",
+   "blank": "ciarlatano",
+   "src": "made"
+  },
+  {
+   "text": "Laura dice che quel cantante è un ciarlatano che canta in playback.",
+   "en": "Laura says that singer is a fraud who lip-syncs.",
+   "ko": "라우라는 그 가수가 립싱크나 하는 사기꾼이라고 말해요.",
+   "blank": "ciarlatano",
+   "src": "made"
   }
  ],
  "w|ciascun": [
@@ -16587,6 +16715,22 @@
    "src": "made"
   }
  ],
+ "w|civico": [
+  {
+   "text": "Stefano tiene un corso di educazione civica per i ragazzi delle medie.",
+   "en": "Stefano teaches a civic education course for middle school kids.",
+   "ko": "스테파노는 중학생들에게 시민 교육 강좌를 열어요.",
+   "blank": "civica",
+   "src": "made"
+  },
+  {
+   "text": "Il concerto si tiene nel teatro civico, a pochi passi dalla casa di Laura.",
+   "en": "The concert is held in the civic theater, a few steps from Laura's house.",
+   "ko": "콘서트는 라우라네 집에서 몇 걸음 거리인 시립 극장에서 열려요.",
+   "blank": "civico",
+   "src": "made"
+  }
+ ],
  "w|civile": [
   {
    "text": "È una questione di diritto civile.",
@@ -16829,6 +16973,22 @@
    "en": "The club opens at nine in the evening.",
    "ko": "클럽은 저녁 아홉 시에 열어.",
    "blank": "club"
+  }
+ ],
+ "w|coalizione": [
+  {
+   "text": "Il sindaco governa con una coalizione di tre liste locali, spiega Stefano.",
+   "en": "The mayor governs with a coalition of three local lists, Stefano explains.",
+   "ko": "스테파노는 시장이 지역 정당 세 곳의 연합으로 시를 이끈다고 설명해요.",
+   "blank": "coalizione",
+   "src": "made"
+  },
+  {
+   "text": "Per il festival si è formata una coalizione di associazioni culturali, legge Laura.",
+   "en": "A coalition of cultural associations was formed for the festival, Laura reads.",
+   "ko": "라우라는 축제를 위해 문화 단체들이 연합을 만들었다는 글을 읽어요.",
+   "blank": "coalizione",
+   "src": "made"
   }
  ],
  "w|cocaina": [
@@ -23895,6 +24055,22 @@
    "src": "made"
   }
  ],
+ "w|decima": [
+  {
+   "text": "Stefano organizza in municipio la decima edizione della festa del libro.",
+   "en": "Stefano is organizing the tenth edition of the book fair at city hall.",
+   "ko": "스테파노는 시청에서 열 번째 책 축제를 준비해요.",
+   "blank": "decima",
+   "src": "made"
+  },
+  {
+   "text": "Laura va al festival di musica per la decima volta di fila.",
+   "en": "Laura goes to the music festival for the tenth time in a row.",
+   "ko": "라우라는 그 음악 축제에 열 번 연속으로 가요.",
+   "blank": "decima",
+   "src": "made"
+  }
+ ],
  "w|decina": [
   {
    "text": "Questa sera in platea ci sono solo una decina di spettatori.",
@@ -26603,6 +26779,22 @@
    "src": "made"
   }
  ],
+ "w|disdire": [
+  {
+   "text": "Per lo sciopero dei treni Stefano deve disdire la trasferta a Roma.",
+   "en": "Because of the train strike Stefano has to cancel the work trip to Rome.",
+   "ko": "기차 파업 때문에 스테파노는 로마 출장을 취소해야 해요.",
+   "blank": "disdire",
+   "src": "made"
+  },
+  {
+   "text": "Laura deve disdire la cena con la nonna per andare al concerto.",
+   "en": "Laura has to cancel dinner with her grandmother to go to the concert.",
+   "ko": "라우라는 콘서트에 가려고 할머니와의 저녁 약속을 취소해야 해요.",
+   "blank": "disdire",
+   "src": "made"
+  }
+ ],
  "w|disegnare": [
   {
    "text": "Mi piace disegnare paesaggi a matita.",
@@ -27412,6 +27604,22 @@
    "en": "A removals firm helps Giulia move the shelves.",
    "ko": "이삿짐 회사가 줄리아가 책장을 옮기는 걸 도와줘요.",
    "blank": "ditta",
+   "src": "made"
+  }
+ ],
+ "w|dittatura": [
+  {
+   "text": "Stefano prepara una mostra di fotografie sugli anni della dittatura.",
+   "en": "Stefano is preparing a photo exhibition on the years of the dictatorship.",
+   "ko": "스테파노는 독재 시절에 관한 사진전을 준비해요.",
+   "blank": "dittatura",
+   "src": "made"
+  },
+  {
+   "text": "Il cantautore ricorda la sua infanzia sotto la dittatura e Laura ascolta in silenzio.",
+   "en": "The singer-songwriter recalls his childhood under the dictatorship and Laura listens in silence.",
+   "ko": "싱어송라이터가 독재 시절의 어린 시절을 이야기하자 라우라는 조용히 들어요.",
+   "blank": "dittatura",
    "src": "made"
   }
  ],
@@ -29812,6 +30020,22 @@
    "en": "Francesca chooses quiet generators with low gas emissions.",
    "ko": "프란체스카는 가스 배출이 적은 조용한 발전기를 골라요.",
    "blank": "emissione",
+   "src": "made"
+  }
+ ],
+ "w|emittente": [
+  {
+   "text": "Un'emittente locale intervista Stefano sulla nuova raccolta differenziata.",
+   "en": "A local broadcaster interviews Stefano about the new recycling system.",
+   "ko": "지역 방송국이 새 분리수거에 대해 스테파노를 인터뷰해요.",
+   "blank": "emittente",
+   "src": "made"
+  },
+  {
+   "text": "Il concerto è trasmesso in diretta da un'emittente nazionale e la mamma di Laura lo guarda in tv.",
+   "en": "The concert is broadcast live by a national broadcaster and Laura's mum watches it on TV.",
+   "ko": "콘서트가 전국 방송으로 생중계되어 라우라의 엄마는 텔레비전으로 봐요.",
+   "blank": "emittente",
    "src": "made"
   }
  ],
@@ -37671,6 +37895,22 @@
    "src": "made"
   }
  ],
+ "w|gilet": [
+  {
+   "text": "D'inverno Stefano indossa un gilet di lana sotto la giacca, perché in municipio fa freddo.",
+   "en": "In winter Stefano wears a wool vest under his jacket because city hall is cold.",
+   "ko": "겨울이면 시청이 추워서 스테파노는 재킷 안에 털 조끼를 입어요.",
+   "blank": "gilet",
+   "src": "made"
+  },
+  {
+   "text": "Il batterista porta un gilet di pelle che piace molto a Laura.",
+   "en": "The drummer wears a leather vest that Laura really likes.",
+   "ko": "드러머가 입은 가죽 조끼가 라우라 마음에 쏙 들어요.",
+   "blank": "gilet",
+   "src": "made"
+  }
+ ],
  "w|ginecologo": [
   {
    "text": "Lo studio del dentista di Paolo è allo stesso piano di quello di un ginecologo.",
@@ -39429,6 +39669,22 @@
    "en": "The right glove is more worn than the left.",
    "ko": "오른쪽 장갑이 왼쪽보다 더 닳았어.",
    "blank": "guanto"
+  }
+ ],
+ "w|guantone": [
+  {
+   "text": "La palestra comunale ha bisogno di un guantone nuovo e Stefano firma l'ordine.",
+   "en": "The municipal gym needs a new boxing glove and Stefano signs the order.",
+   "ko": "시립 체육관에 새 권투 장갑이 필요해서 스테파노가 주문서에 서명해요.",
+   "blank": "guantone",
+   "src": "made"
+  },
+  {
+   "text": "Il cantante sale sul palco con un guantone da boxe e Laura scoppia a ridere.",
+   "en": "The singer comes on stage wearing a boxing glove and Laura bursts out laughing.",
+   "ko": "가수가 권투 장갑을 끼고 무대에 오르자 라우라는 웃음을 터뜨려요.",
+   "blank": "guantone",
+   "src": "made"
   }
  ],
  "w|guardare": [
@@ -43867,6 +44123,22 @@
    "src": "made"
   }
  ],
+ "w|inquinamento": [
+  {
+   "text": "Stefano presenta un piano per ridurre l'inquinamento nelle strade intorno alle scuole.",
+   "en": "Stefano presents a plan to reduce pollution in the streets around the schools.",
+   "ko": "스테파노는 학교 주변 거리의 오염을 줄이는 계획을 발표해요.",
+   "blank": "inquinamento",
+   "src": "made"
+  },
+  {
+   "text": "Il festival usa bicchieri riutilizzabili per ridurre l'inquinamento, nota Laura con piacere.",
+   "en": "The festival uses reusable cups to reduce pollution, Laura notes with pleasure.",
+   "ko": "라우라는 축제가 오염을 줄이려고 다회용 컵을 쓰는 걸 보고 기뻐해요.",
+   "blank": "inquinamento",
+   "src": "made"
+  }
+ ],
  "w|insabbiare": [
   {
    "text": "Qualcuno voleva insabbiare l'indagine, ma Matteo ha continuato a cercare.",
@@ -44392,6 +44664,22 @@
    "en": "For dinner Chiara buys a wholemeal loaf at the bakery downstairs.",
    "ko": "키아라는 저녁에 먹으려고 집 아래 빵집에서 통밀빵을 사요.",
    "blank": "integrale",
+   "src": "made"
+  }
+ ],
+ "w|integrazione": [
+  {
+   "text": "Stefano coordina un progetto per l'integrazione delle famiglie appena arrivate.",
+   "en": "Stefano coordinates a project for the integration of newly arrived families.",
+   "ko": "스테파노는 새로 이주한 가족들의 정착을 돕는 사업을 맡고 있어요.",
+   "blank": "integrazione",
+   "src": "made"
+  },
+  {
+   "text": "Il concerto celebra l'integrazione tra musicisti di culture diverse e Laura ne è felice.",
+   "en": "The concert celebrates integration between musicians of different cultures and Laura is happy about it.",
+   "ko": "콘서트가 여러 문화권 음악가들의 어울림을 기념해서 라우라는 기뻐해요.",
+   "blank": "integrazione",
    "src": "made"
   }
  ],
@@ -48079,6 +48367,38 @@
    "blank": "linguaggio"
   }
  ],
+ "w|lino": [
+  {
+   "text": "Le tende della sala del consiglio sono di lino e Stefano le porta in lavanderia.",
+   "en": "The curtains in the council chamber are made of linen and Stefano takes them to the laundry.",
+   "ko": "시의회 회의실 커튼은 리넨이라서 스테파노가 세탁소에 맡겨요.",
+   "blank": "lino",
+   "src": "made"
+  },
+  {
+   "text": "Per il concerto all'aperto Laura indossa una camicia di lino.",
+   "en": "For the open-air concert Laura wears a linen shirt.",
+   "ko": "야외 콘서트에 라우라는 리넨 셔츠를 입어요.",
+   "blank": "lino",
+   "src": "made"
+  }
+ ],
+ "w|liquidazione": [
+  {
+   "text": "Un collega di Stefano va in pensione e aspetta la liquidazione.",
+   "en": "A colleague of Stefano's is retiring and waiting for his severance pay.",
+   "ko": "스테파노의 동료 하나가 은퇴하면서 퇴직금을 기다리고 있어요.",
+   "blank": "liquidazione",
+   "src": "made"
+  },
+  {
+   "text": "Laura trova il vestito per il concerto in un negozio in liquidazione.",
+   "en": "Laura finds her dress for the concert in a shop having a clearance sale.",
+   "ko": "라우라는 재고 정리 중인 가게에서 콘서트에 입을 옷을 찾아요.",
+   "blank": "liquidazione",
+   "src": "made"
+  }
+ ],
  "w|liquido": [
   {
    "text": "Il perito ha mostrato ad Andrea la bottiglietta con il liquido trovato sulla scena.",
@@ -48732,6 +49052,22 @@
    "en": "Chiara treated herself to the luxury of travelling first class.",
    "ko": "키아라는 일등석을 타는 사치를 누렸어요.",
    "blank": "lusso",
+   "src": "made"
+  }
+ ],
+ "w|lussuoso": [
+  {
+   "text": "Il sindaco vuole una sala riunioni lussuosa, ma Stefano propone di spendere meno.",
+   "en": "The mayor wants a luxurious meeting room, but Stefano suggests spending less.",
+   "ko": "시장은 호화로운 회의실을 원하지만 스테파노는 돈을 덜 쓰자고 해요.",
+   "blank": "lussuosa",
+   "src": "made"
+  },
+  {
+   "text": "Il concerto si tiene in un teatro lussuoso con le poltrone rosse.",
+   "en": "The concert is held in a luxurious theater with red seats.",
+   "ko": "콘서트는 빨간 좌석이 있는 호화로운 극장에서 열려요.",
+   "blank": "lussuoso",
    "src": "made"
   }
  ],
@@ -49897,6 +50233,22 @@
    "en": "Somehow we'll manage.",
    "ko": "어떻게든 해낼 거야.",
    "blank": "maniera"
+  }
+ ],
+ "w|manifestante": [
+  {
+   "text": "Davanti al municipio un manifestante chiede a Stefano più piste ciclabili.",
+   "en": "In front of city hall a protester asks Stefano for more cycle lanes.",
+   "ko": "시청 앞에서 시위대 한 명이 스테파노에게 자전거 도로를 늘려 달라고 해요.",
+   "blank": "manifestante",
+   "src": "made"
+  },
+  {
+   "text": "Fuori dal teatro un manifestante distribuisce volantini e Laura ne prende uno.",
+   "en": "Outside the theater a protester hands out flyers and Laura takes one.",
+   "ko": "극장 밖에서 시위하는 사람이 전단지를 나눠 주자 라우라가 한 장 받아요.",
+   "blank": "manifestante",
+   "src": "made"
   }
  ],
  "w|manifestare": [
@@ -51168,6 +51520,22 @@
    "en": "In Francesca's play the ghost appears by means of a trick with lights and mirrors.",
    "ko": "프란체스카의 연극에서 유령은 조명과 거울을 이용한 장치로 나타나요.",
    "blank": "mediante",
+   "src": "made"
+  }
+ ],
+ "w|mediatico": [
+  {
+   "text": "Dopo il caso mediatico del ponte, Stefano risponde alle telefonate dei giornalisti.",
+   "en": "After the media case of the bridge, Stefano answers calls from journalists.",
+   "ko": "다리 문제가 언론에 크게 보도된 뒤 스테파노는 기자들의 전화를 받아요.",
+   "blank": "mediatico",
+   "src": "made"
+  },
+  {
+   "text": "Il ritorno del gruppo è stato un evento mediatico, dice Laura alle amiche.",
+   "en": "The band's comeback was a media event, Laura tells her friends.",
+   "ko": "라우라는 친구들에게 그 밴드의 복귀가 언론의 큰 화제였다고 말해요.",
+   "blank": "mediatico",
    "src": "made"
   }
  ],
@@ -53071,6 +53439,22 @@
    "src": "made"
   }
  ],
+ "w|mitologia": [
+  {
+   "text": "Il comune organizza un ciclo di incontri sulla mitologia greca e Stefano prepara i manifesti.",
+   "en": "The town is organizing a series of talks on Greek mythology and Stefano prepares the posters.",
+   "ko": "시에서 그리스 신화 강연회를 열고, 스테파노는 포스터를 만들어요.",
+   "blank": "mitologia",
+   "src": "made"
+  },
+  {
+   "text": "L'opera che Laura ascolta stasera è ispirata alla mitologia nordica.",
+   "en": "The opera Laura is listening to tonight is inspired by Norse mythology.",
+   "ko": "오늘 밤 라우라가 듣는 오페라는 북유럽 신화에서 영감을 받았어요.",
+   "blank": "mitologia",
+   "src": "made"
+  }
+ ],
  "w|mitragliatore": [
   {
    "text": "Al museo civico Stefano mostra ai ragazzi un mitragliatore della guerra mondiale.",
@@ -53496,6 +53880,22 @@
    "en": "Elena sells scarves at the department store, and today a customer asks her for a gift for an uncle who is a monk.",
    "ko": "엘레나는 백화점에서 스카프를 파는데, 오늘 한 손님이 수도사인 삼촌에게 줄 선물을 찾아요.",
    "blank": "monaco",
+   "src": "made"
+  }
+ ],
+ "w|monarchia": [
+  {
+   "text": "Nel museo del comune Stefano spiega ai turisti come finì la monarchia in Italia.",
+   "en": "In the town museum Stefano explains to tourists how the monarchy ended in Italy.",
+   "ko": "시립 박물관에서 스테파노는 관광객들에게 이탈리아 군주제가 어떻게 끝났는지 설명해요.",
+   "blank": "monarchia",
+   "src": "made"
+  },
+  {
+   "text": "L'opera della serata è ambientata alla corte di una monarchia immaginaria, legge Laura.",
+   "en": "The evening's opera is set in the court of an imaginary monarchy, Laura reads.",
+   "ko": "라우라는 오늘 밤 오페라가 가상의 왕국 궁정을 배경으로 한다는 걸 읽어요.",
+   "blank": "monarchia",
    "src": "made"
   }
  ],
@@ -54031,6 +54431,22 @@
    "en": "I hear a strange noise from the engine.",
    "ko": "엔진에서 이상한 소리가 나.",
    "blank": "motore"
+  }
+ ],
+ "w|motorino": [
+  {
+   "text": "Stefano va al lavoro in motorino per evitare il traffico del centro.",
+   "en": "Stefano goes to work on his moped to avoid the downtown traffic.",
+   "ko": "스테파노는 시내 교통 체증을 피하려고 스쿠터를 타고 출근해요.",
+   "blank": "motorino",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il concerto Laura torna a casa in motorino con l'amica.",
+   "en": "After the concert Laura goes home on the moped with her friend.",
+   "ko": "콘서트가 끝나고 라우라는 친구와 스쿠터를 타고 집에 가요.",
+   "blank": "motorino",
+   "src": "made"
   }
  ],
  "w|movente": [
@@ -59083,6 +59499,22 @@
    "blank": "palla"
   }
  ],
+ "w|pallacanestro": [
+  {
+   "text": "Il comune sponsorizza la squadra di pallacanestro del quartiere e Stefano va alle partite.",
+   "en": "The town sponsors the neighborhood basketball team and Stefano goes to the games.",
+   "ko": "시가 동네 농구팀을 후원해서 스테파노는 경기를 보러 가요.",
+   "blank": "pallacanestro",
+   "src": "made"
+  },
+  {
+   "text": "Il concerto si tiene nel palazzetto della pallacanestro e Laura cerca il suo posto in tribuna.",
+   "en": "The concert is held in the basketball arena and Laura looks for her seat in the stands.",
+   "ko": "콘서트는 농구 경기장에서 열리고, 라우라는 관중석에서 자기 자리를 찾아요.",
+   "blank": "pallacanestro",
+   "src": "made"
+  }
+ ],
  "w|pallido": [
   {
    "text": "Quando vede l'ago, Paolo diventa pallido come un lenzuolo.",
@@ -59436,6 +59868,22 @@
    "en": "There's a black panther on Laura's T-shirt.",
    "ko": "라우라의 티셔츠에는 검은 표범이 있어요.",
    "blank": "pantera",
+   "src": "made"
+  }
+ ],
+ "w|pantofola": [
+  {
+   "text": "Il custode del municipio gira per gli uffici in pantofola dopo le sei, ride Stefano.",
+   "en": "The city hall caretaker walks around the offices in his slippers after six, Stefano laughs.",
+   "ko": "스테파노는 시청 관리인이 여섯 시가 넘으면 슬리퍼를 신고 사무실을 돌아다닌다며 웃어요.",
+   "blank": "pantofola",
+   "src": "made"
+  },
+  {
+   "text": "Il chitarrista suona sempre con una pantofola al piede destro, racconta Laura divertita.",
+   "en": "The guitarist always plays with a slipper on his right foot, Laura says, amused.",
+   "ko": "라우라는 기타리스트가 늘 오른발에 슬리퍼를 신고 연주한다며 재미있어해요.",
+   "blank": "pantofola",
    "src": "made"
   }
  ],
@@ -59819,6 +60267,22 @@
    "en": "Pick an even number this time.",
    "ko": "이번엔 짝수를 골라.",
    "blank": "pari"
+  }
+ ],
+ "w|parlamentare": [
+  {
+   "text": "Un parlamentare visita il municipio e Stefano gli mostra la sala storica.",
+   "en": "A member of parliament visits city hall and Stefano shows him the historic hall.",
+   "ko": "국회의원 한 명이 시청을 방문하자 스테파노가 역사 깊은 홀을 보여 줘요.",
+   "blank": "parlamentare",
+   "src": "made"
+  },
+  {
+   "text": "Nel palco accanto a Laura siede un parlamentare con la moglie.",
+   "en": "In the box next to Laura sits a member of parliament with his wife.",
+   "ko": "라우라 옆 칸막이 좌석에는 국회의원 한 명이 부인과 앉아 있어요.",
+   "blank": "parlamentare",
+   "src": "made"
   }
  ],
  "w|parlamento": [
@@ -64623,6 +65087,22 @@
    "blank": "precedente"
   }
  ],
+ "w|precedentemente": [
+  {
+   "text": "Stefano aveva precedentemente lavorato all'ufficio anagrafe di un altro comune.",
+   "en": "Stefano had previously worked at the registry office of another town.",
+   "ko": "스테파노는 전에 다른 시의 주민센터에서 일했어요.",
+   "blank": "precedentemente",
+   "src": "made"
+  },
+  {
+   "text": "Laura aveva precedentemente visto la band in un piccolo locale.",
+   "en": "Laura had previously seen the band in a small club.",
+   "ko": "라우라는 전에 작은 클럽에서 그 밴드를 본 적이 있어요.",
+   "blank": "precedentemente",
+   "src": "made"
+  }
+ ],
  "w|precedere": [
   {
    "text": "Ricorda che l'antipasto deve precedere il primo, dice Marco al nuovo cameriere.",
@@ -64731,6 +65211,22 @@
    "en": "His calculation is always very precise.",
    "ko": "그의 계산은 항상 매우 정확해.",
    "blank": "preciso"
+  }
+ ],
+ "w|precoce": [
+  {
+   "text": "Quest'anno l'inverno è precoce e Stefano deve anticipare l'accensione del riscaldamento.",
+   "en": "This year winter has come early and Stefano has to turn the heating on sooner.",
+   "ko": "올해는 겨울이 일찍 와서 스테파노는 난방을 앞당겨 켜야 해요.",
+   "blank": "precoce",
+   "src": "made"
+  },
+  {
+   "text": "Il pianista ha mostrato un talento precoce, legge Laura nella sua biografia.",
+   "en": "The pianist showed early talent, Laura reads in his biography.",
+   "ko": "라우라는 그 피아니스트가 어릴 때부터 재능을 보였다는 걸 전기에서 읽어요.",
+   "blank": "precoce",
+   "src": "made"
   }
  ],
  "w|preda": [
@@ -66509,6 +67005,22 @@
    "en": "He has deep respect for her.",
    "ko": "그는 그녀를 깊이 존경해.",
    "blank": "profondo"
+  }
+ ],
+ "w|profugo": [
+  {
+   "text": "Stefano aiuta un profugo appena arrivato a compilare i moduli per la residenza.",
+   "en": "Stefano helps a newly arrived refugee fill in the residence forms.",
+   "ko": "스테파노는 막 도착한 난민이 주민 등록 서류를 채우도록 도와요.",
+   "blank": "profugo",
+   "src": "made"
+  },
+  {
+   "text": "La canzone più bella della serata racconta la storia di un profugo, pensa Laura.",
+   "en": "The most beautiful song of the evening tells the story of a refugee, Laura thinks.",
+   "ko": "라우라는 그날 밤 가장 아름다운 노래가 한 난민의 이야기라고 생각해요.",
+   "blank": "profugo",
+   "src": "made"
   }
  ],
  "w|profumare": [
@@ -73799,6 +74311,22 @@
    "blank": "ritirare"
   }
  ],
+ "w|ritiro": [
+  {
+   "text": "Stefano lavora allo sportello per il ritiro delle carte d'identità.",
+   "en": "Stefano works at the counter for picking up identity cards.",
+   "ko": "스테파노는 신분증 수령 창구에서 일해요.",
+   "blank": "ritiro",
+   "src": "made"
+  },
+  {
+   "text": "Laura fa la fila per il ritiro dei biglietti alla cassa del teatro.",
+   "en": "Laura queues to pick up the tickets at the theater box office.",
+   "ko": "라우라는 극장 매표소에서 표를 받으려고 줄을 서요.",
+   "blank": "ritiro",
+   "src": "made"
+  }
+ ],
  "w|ritmo": [
   {
    "text": "Balla seguendo il ritmo della musica.",
@@ -75402,6 +75930,22 @@
    "en": "A metal splinter made Francesca's hand bleed.",
    "ko": "쇳조각 때문에 프란체스카의 손에서 피가 났어요.",
    "blank": "sanguinare",
+   "src": "made"
+  }
+ ],
+ "w|sanità": [
+  {
+   "text": "Stefano partecipa a una riunione sulla sanità pubblica del quartiere.",
+   "en": "Stefano attends a meeting on public health in the neighborhood.",
+   "ko": "스테파노는 동네 공공 의료에 관한 회의에 참석해요.",
+   "blank": "sanità",
+   "src": "made"
+  },
+  {
+   "text": "L'incasso del concerto va alla sanità del territorio, legge Laura sul programma.",
+   "en": "The concert proceeds go to local healthcare, Laura reads in the program.",
+   "ko": "라우라는 공연 수익이 지역 의료에 쓰인다고 프로그램에서 읽어요.",
+   "blank": "sanità",
    "src": "made"
   }
  ],
@@ -77091,6 +77635,22 @@
    "en": "They defeated the opponent in the last minute.",
    "ko": "마지막 순간에 상대를 이겼어.",
    "blank": "sconfitto"
+  }
+ ],
+ "w|sconfitta": [
+  {
+   "text": "Dopo la sconfitta alle elezioni, l'assessore saluta Stefano e svuota la scrivania.",
+   "en": "After the election defeat, the councillor says goodbye to Stefano and clears his desk.",
+   "ko": "선거에서 진 뒤 시의원은 스테파노에게 인사하고 책상을 비워요.",
+   "blank": "sconfitta",
+   "src": "made"
+  },
+  {
+   "text": "Il cantante parla della sua prima sconfitta a un concorso e Laura si sente meno sola.",
+   "en": "The singer talks about his first defeat in a competition and Laura feels less alone.",
+   "ko": "가수가 대회에서 처음 떨어졌던 이야기를 하자 라우라는 덜 외롭게 느껴요.",
+   "blank": "sconfitta",
+   "src": "made"
   }
  ],
  "w|scongiurare": [
@@ -85645,6 +86205,22 @@
    "src": "made"
   }
  ],
+ "w|successivamente": [
+  {
+   "text": "Stefano riceve la domanda e la passa successivamente all'ufficio tecnico.",
+   "en": "Stefano receives the application and then passes it on to the technical office.",
+   "ko": "스테파노는 신청서를 받아서 그 다음에 기술과로 넘겨요.",
+   "blank": "successivamente",
+   "src": "made"
+  },
+  {
+   "text": "Laura ascolta il primo gruppo e successivamente si sposta vicino al palco.",
+   "en": "Laura listens to the first band and then moves closer to the stage.",
+   "ko": "라우라는 첫 밴드 공연을 듣고 그 다음에 무대 가까이로 옮겨 가요.",
+   "blank": "successivamente",
+   "src": "made"
+  }
+ ],
  "w|successivo": [
   {
    "text": "Il treno successivo parte tra poco.",
@@ -91137,6 +91713,22 @@
    "blank": "Tutto"
   }
  ],
+ "w|tuttora": [
+  {
+   "text": "Il vecchio orologio della torre funziona tuttora e Stefano lo carica ogni lunedì.",
+   "en": "The old tower clock still works and Stefano winds it every Monday.",
+   "ko": "탑의 옛 시계는 지금도 돌아가고, 스테파노는 월요일마다 태엽을 감아요.",
+   "blank": "tuttora",
+   "src": "made"
+  },
+  {
+   "text": "Laura conserva tuttora il biglietto del suo primo concerto.",
+   "en": "Laura still keeps the ticket from her first concert.",
+   "ko": "라우라는 첫 콘서트 표를 지금도 간직하고 있어요.",
+   "blank": "tuttora",
+   "src": "made"
+  }
+ ],
  "w|tv": [
   {
    "text": "Stasera guardiamo la tv insieme.",
@@ -91311,6 +91903,22 @@
    "en": "The office is closed today.",
    "ko": "사무실은 오늘 쉬어.",
    "blank": "ufficio"
+  }
+ ],
+ "w|uguaglianza": [
+  {
+   "text": "Sul muro del municipio Stefano appende un cartello sull'uguaglianza tra uomini e donne.",
+   "en": "On the city hall wall Stefano hangs a sign about equality between men and women.",
+   "ko": "스테파노는 시청 벽에 남녀 평등에 관한 안내판을 걸어요.",
+   "blank": "uguaglianza",
+   "src": "made"
+  },
+  {
+   "text": "Il cantante dedica una canzone all'uguaglianza e Laura applaude forte.",
+   "en": "The singer dedicates a song to equality and Laura applauds loudly.",
+   "ko": "가수가 평등에 노래를 바치자 라우라는 크게 박수를 쳐요.",
+   "blank": "uguaglianza",
+   "src": "made"
   }
  ],
  "w|uguale": [
@@ -92397,6 +93005,22 @@
    "src": "made"
   }
  ],
+ "w|vangelo": [
+  {
+   "text": "Stefano sa che il sindaco non prende per vangelo i sondaggi.",
+   "en": "Stefano knows the mayor doesn't take the polls as gospel.",
+   "ko": "스테파노는 시장이 여론 조사를 곧이곧대로 믿지 않는다는 걸 알아요.",
+   "blank": "vangelo",
+   "src": "made"
+  },
+  {
+   "text": "Per i fan come Laura ogni parola della cantante è vangelo.",
+   "en": "For fans like Laura every word the singer says is gospel.",
+   "ko": "라우라 같은 팬들에게는 그 가수의 말 한마디 한마디가 진리예요.",
+   "blank": "vangelo",
+   "src": "made"
+  }
+ ],
  "w|vanità": [
   {
    "text": "Paolo scherza sulla vanità di Roberto, che si guarda in ogni specchio del locale.",
@@ -93423,6 +94047,22 @@
    "en": "She always dresses elegantly.",
    "ko": "그녀는 항상 우아하게 차려입어.",
    "blank": "veste"
+  }
+ ],
+ "w|vestitino": [
+  {
+   "text": "Per la festa dei bambini Stefano compra un vestitino da fata per la figlia.",
+   "en": "For the children's party Stefano buys a little fairy dress for his daughter.",
+   "ko": "어린이 축제를 위해 스테파노는 딸에게 요정 원피스를 사 줘요.",
+   "blank": "vestitino",
+   "src": "made"
+  },
+  {
+   "text": "La figlia di Laura balla davanti al palco con un vestitino giallo.",
+   "en": "Laura's daughter dances in front of the stage in a little yellow dress.",
+   "ko": "라우라의 딸은 노란 원피스를 입고 무대 앞에서 춤을 춰요.",
+   "blank": "vestitino",
+   "src": "made"
   }
  ],
  "w|vestito": [
