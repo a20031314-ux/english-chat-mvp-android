@@ -973,6 +973,22 @@
    "src": "made"
   }
  ],
+ "w|अधिग्रहण": [
+  {
+   "text": "एक बड़ी कंपनी ने पिछले साल इस फ़ैक्टरी का अधिग्रहण कर लिया।",
+   "en": "A large company acquired this factory last year.",
+   "ko": "큰 회사가 작년에 이 공장을 인수했어요.",
+   "blank": "अधिग्रहण",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने लिखा कि पति के पुराने बैंक का दूसरे बैंक ने अधिग्रहण कर लिया है।",
+   "en": "Kavita wrote that her husband's old bank has been taken over by another bank.",
+   "ko": "카비타는 남편이 다니던 은행이 다른 은행에 인수됐다고 썼어요.",
+   "blank": "अधिग्रहण",
+   "src": "made"
+  }
+ ],
  "w|अधिनियम": [
   {
    "text": "नए यातायात अधिनियम के तहत जुर्माना बढ़ा दिया गया है।",
@@ -1323,6 +1339,22 @@
    "src": "made"
   }
  ],
+ "w|अनुपात": [
+  {
+   "text": "मिश्रण में सीमेंट और रेत का अनुपात बिल्कुल सही होना चाहिए।",
+   "en": "The ratio of cement to sand in the mix must be exactly right.",
+   "ko": "혼합물에서 시멘트와 모래 비율이 딱 맞아야 해요.",
+   "blank": "अनुपात",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने आम के अचार का नुस्ख़ा भेजा, जिसमें नमक और तेल का अनुपात साफ़ लिखा था।",
+   "en": "Meena sent a mango pickle recipe with the ratio of salt to oil clearly written.",
+   "ko": "미나는 소금과 기름 비율까지 분명히 적은 망고 피클 만드는 법을 보냈어요.",
+   "blank": "अनुपात",
+   "src": "made"
+  }
+ ],
  "w|अनुबंध": [
   {
    "text": "कंपनी ने नया अनुबंध साइन किया।",
@@ -1521,6 +1553,22 @@
    "src": "made"
   }
  ],
+ "w|अनुसरण": [
+  {
+   "text": "हर ऑपरेटर को सुरक्षा नियमों का अनुसरण करना पड़ता है।",
+   "en": "Every operator has to follow the safety rules.",
+   "ko": "모든 작업자는 안전 규칙을 따라야 해요.",
+   "blank": "अनुसरण",
+   "src": "made"
+  },
+  {
+   "text": "मीना की सलाह का अनुसरण करके कविता ने रोज़ सुबह टहलना शुरू किया।",
+   "en": "Following Meena's advice, Kavita started taking a walk every morning.",
+   "ko": "미나의 조언대로 카비타는 매일 아침 산책을 시작했어요.",
+   "blank": "अनुसरण",
+   "src": "made"
+  }
+ ],
  "w|अनेक": [
   {
    "text": "अनेक लोग कतार में खड़े थे।",
@@ -1533,6 +1581,22 @@
    "en": "This book has many stories.",
    "ko": "이 책에는 이야기가 많아.",
    "blank": "अनेक"
+  }
+ ],
+ "w|अनेकों": [
+  {
+   "text": "सुनील ने अनेकों बार मैनेजर को टूटी सीढ़ी के बारे में बताया।",
+   "en": "Sunil told the manager about the broken ladder many times.",
+   "ko": "수닐은 부서진 사다리에 대해 관리자에게 여러 번 말했어요.",
+   "blank": "अनेकों",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने मीना के अनेकों पुराने ख़त आज भी सँभालकर रखे हैं।",
+   "en": "Kavita still keeps many of Meena's old letters safely.",
+   "ko": "카비타는 미나의 옛 편지 여러 통을 아직도 잘 간직하고 있어요.",
+   "blank": "अनेकों",
+   "src": "made"
   }
  ],
  "w|अनोखा": [
@@ -4027,6 +4091,22 @@
    "blank": "आवाज़"
   }
  ],
+ "w|आवारा": [
+  {
+   "text": "फ़ैक्टरी के गेट पर एक आवारा कुत्ता रोज़ सुनील का इंतज़ार करता है।",
+   "en": "A stray dog waits for Sunil at the factory gate every day.",
+   "ko": "떠돌이 개 한 마리가 매일 공장 정문에서 수닐을 기다려요.",
+   "blank": "आवारा",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने लिखा कि घर में अब एक आवारा बिल्ली ने डेरा डाल लिया है।",
+   "en": "Kavita wrote that a stray cat has now made itself at home in the house.",
+   "ko": "카비타는 길고양이 한 마리가 집에 눌러앉았다고 썼어요.",
+   "blank": "आवारा",
+   "src": "made"
+  }
+ ],
  "w|आवास": [
   {
    "text": "सरकार ने भूकंप में घर खोने वालों के लिए नए आवास बनवाए।",
@@ -5651,6 +5731,22 @@
    "src": "made"
   }
  ],
+ "w|उन्नति": [
+  {
+   "text": "फ़ैक्टरी में दस साल काम करने के बाद सुनील की उन्नति सुपरवाइज़र के पद पर हुई।",
+   "en": "After ten years at the factory, Sunil was promoted to supervisor.",
+   "ko": "공장에서 십 년 일한 뒤 수닐은 감독으로 승진했어요.",
+   "blank": "उन्नति",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने ख़त में मीना की उन्नति पर ढेर सारी बधाई भेजी।",
+   "en": "In her letter, Kavita sent lots of congratulations on Meena's promotion.",
+   "ko": "카비타는 편지에 미나의 승진을 축하하는 말을 가득 담았어요.",
+   "blank": "उन्नति",
+   "src": "made"
+  }
+ ],
  "w|उन्नीस": [
   {
    "text": "परीक्षा में उन्नीस नंबर मिले।",
@@ -5906,6 +6002,22 @@
    "en": "Meena was delighted by her old friends' presence at the housewarming.",
    "ko": "집들이에 옛 친구들이 와 줘서 미나는 무척 기뻤어요.",
    "blank": "उपस्थिति",
+   "src": "made"
+  }
+ ],
+ "w|उपाधि": [
+  {
+   "text": "सुनील ने रात की कक्षाओं से इंजीनियरिंग की उपाधि हासिल की।",
+   "en": "Sunil earned an engineering degree through night classes.",
+   "ko": "수닐은 야간 수업으로 공학 학위를 땄어요.",
+   "blank": "उपाधि",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने ख़ुशी से लिखा कि आख़िरकार हिंदी साहित्य में उपाधि मिल ही गई।",
+   "en": "Kavita happily wrote that she had finally got her degree in Hindi literature.",
+   "ko": "카비타는 마침내 힌디 문학 학위를 받았다고 기쁘게 썼어요.",
+   "blank": "उपाधि",
    "src": "made"
   }
  ],
@@ -6202,6 +6314,22 @@
    "en": "The registry papers made no mention of the balcony.",
    "ko": "등기 서류에는 발코니에 대한 언급이 없었어요.",
    "blank": "उल्लेख",
+   "src": "made"
+  }
+ ],
+ "w|उल्लेख करना": [
+  {
+   "text": "रिपोर्ट में सुनील ने मशीन की ख़राबी का उल्लेख किया।",
+   "en": "Sunil mentioned the machine fault in his report.",
+   "ko": "수닐은 보고서에 기계 고장을 언급했어요.",
+   "blank": "उल्लेख किया",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने ख़त में कॉलेज की पुरानी सहेलियों का भी उल्लेख किया।",
+   "en": "Kavita also mentioned their old college friends in the letter.",
+   "ko": "카비타는 편지에서 대학 시절 옛 친구들 이야기도 꺼냈어요.",
+   "blank": "उल्लेख किया",
    "src": "made"
   }
  ],
@@ -7927,6 +8055,22 @@
    "src": "made"
   }
  ],
+ "w|कमीशन": [
+  {
+   "text": "सेल्स टीम को हर बड़े ऑर्डर पर कमीशन मिलता है।",
+   "en": "The sales team gets a commission on every big order.",
+   "ko": "영업팀은 큰 주문마다 수수료를 받아요.",
+   "blank": "कमीशन",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने लिखा कि बेटा अब बीमा बेचता है और कमीशन पर गुज़ारा करता है।",
+   "en": "Kavita wrote that her son now sells insurance and lives on commission.",
+   "ko": "카비타는 아들이 이제 보험을 팔며 수수료로 먹고산다고 썼어요.",
+   "blank": "कमीशन",
+   "src": "made"
+  }
+ ],
  "w|कर": [
   {
    "text": "आय पर कर काफ़ी बढ़ गया है।",
@@ -8685,6 +8829,22 @@
    "en": "Quite some time has passed.",
    "ko": "꽤 시간이 지났어.",
    "blank": "काफ़ी"
+  }
+ ],
+ "w|क़ाबू": [
+  {
+   "text": "गोदाम में लगी आग पर कुछ ही मिनटों में क़ाबू पा लिया गया।",
+   "en": "The fire in the warehouse was brought under control within minutes.",
+   "ko": "창고에 난 불은 몇 분 만에 잡혔어요.",
+   "blank": "क़ाबू",
+   "src": "made"
+  },
+  {
+   "text": "मीना का ख़त पढ़कर कविता अपने आँसुओं पर क़ाबू नहीं रख पाई।",
+   "en": "Reading Meena's letter, Kavita could not hold back her tears.",
+   "ko": "미나의 편지를 읽고 카비타는 눈물을 참지 못했어요.",
+   "blank": "क़ाबू",
+   "src": "made"
   }
  ],
  "w|काम": [
@@ -11493,6 +11653,22 @@
    "src": "made"
   }
  ],
+ "w|खनन": [
+  {
+   "text": "फ़ैक्टरी का कच्चा लोहा पास के खनन क्षेत्र से आता है।",
+   "en": "The factory's iron ore comes from the nearby mining area.",
+   "ko": "공장의 철광석은 근처 광산 지역에서 와요.",
+   "blank": "खनन",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने बताया कि गाँव के पास खनन शुरू होने से पहाड़ी का रूप ही बदल गया है।",
+   "en": "Kavita said that since mining began near the village, the hill looks completely different.",
+   "ko": "카비타는 마을 근처에서 채굴이 시작돼 언덕 모습이 아예 바뀌었다고 했어요.",
+   "blank": "खनन",
+   "src": "made"
+  }
+ ],
  "w|ख़बर": [
   {
    "text": "ख़बर सुनकर माँ चुप हो गई।",
@@ -11709,6 +11885,22 @@
    "en": "Remember your account number.",
    "ko": "네 계좌 번호를 기억해.",
    "blank": "खाता"
+  }
+ ],
+ "w|ख़ातिर": [
+  {
+   "text": "परिवार की ख़ातिर सुनील हर हफ़्ते ओवरटाइम करता है।",
+   "en": "Sunil works overtime every week for the sake of his family.",
+   "ko": "수닐은 가족을 위해 매주 초과 근무를 해요.",
+   "blank": "ख़ातिर",
+   "src": "made"
+  },
+  {
+   "text": "पुरानी दोस्ती की ख़ातिर कविता ने इस बार हाथ से ख़त लिखा।",
+   "en": "For the sake of their old friendship, Kavita wrote the letter by hand this time.",
+   "ko": "오랜 우정을 생각해서 카비타는 이번엔 손으로 편지를 썼어요.",
+   "blank": "ख़ातिर",
+   "src": "made"
   }
  ],
  "w|खाद्य": [
@@ -12401,6 +12593,22 @@
    "src": "made"
   }
  ],
+ "w|ग़ज़ब": [
+  {
+   "text": "नई मशीन की रफ़्तार सच में ग़ज़ब की है।",
+   "en": "The new machine's speed is truly amazing.",
+   "ko": "새 기계 속도는 정말 놀라워요.",
+   "blank": "ग़ज़ब",
+   "src": "made"
+  },
+  {
+   "text": "मीना की लिखावट आज भी ग़ज़ब की सुंदर है।",
+   "en": "Meena's handwriting is still amazingly beautiful.",
+   "ko": "미나의 글씨는 지금도 놀랄 만큼 예뻐요.",
+   "blank": "ग़ज़ब",
+   "src": "made"
+  }
+ ],
  "w|ग़ज़ल": [
   {
    "text": "लंबी सुनवाई के बाद रवि घर पर पुरानी ग़ज़ल सुनकर थकान उतारता है।",
@@ -12555,6 +12763,22 @@
    "en": "The race speed was very fast.",
    "ko": "경주 속도가 아주 빨랐어.",
    "blank": "गति"
+  }
+ ],
+ "w|गतिविधि": [
+  {
+   "text": "रात की शिफ़्ट में फ़ैक्टरी के अंदर ज़्यादा गतिविधि नहीं होती।",
+   "en": "There isn't much activity inside the factory during the night shift.",
+   "ko": "야간 교대 때는 공장 안이 그리 분주하지 않아요.",
+   "blank": "गतिविधि",
+   "src": "made"
+  },
+  {
+   "text": "मोहल्ले की हर छोटी-बड़ी गतिविधि की ख़बर कविता के ख़त में होती है।",
+   "en": "Kavita's letters carry news of every little thing happening in the neighbourhood.",
+   "ko": "카비타의 편지에는 동네의 크고 작은 일 소식이 다 들어 있어요.",
+   "blank": "गतिविधि",
+   "src": "made"
   }
  ],
  "w|गंदा": [
@@ -12955,6 +13179,22 @@
    "en": "True testimony brings justice.",
    "ko": "진실한 증언으로 정의가 이뤄져.",
    "blank": "गवाही"
+  }
+ ],
+ "w|गहन": [
+  {
+   "text": "हादसे के बाद कंपनी ने गहन जाँच करवाई।",
+   "en": "After the accident, the company ordered a thorough investigation.",
+   "ko": "사고 뒤에 회사는 철저한 조사를 했어요.",
+   "blank": "गहन",
+   "src": "made"
+  },
+  {
+   "text": "मीना के ख़तों में ज़िंदगी पर गहन विचार भी होते हैं।",
+   "en": "Meena's letters also contain deep thoughts on life.",
+   "ko": "미나의 편지에는 삶에 대한 깊은 생각도 담겨 있어요.",
+   "blank": "गहन",
+   "src": "made"
   }
  ],
  "w|गहना": [
@@ -14171,6 +14411,22 @@
    "blank": "ग्राहक"
   }
  ],
+ "w|ग्रेड": [
+  {
+   "text": "स्टील की हर खेप पर उसका ग्रेड साफ़ लिखा होता है।",
+   "en": "Every batch of steel has its grade clearly marked on it.",
+   "ko": "철강 한 묶음마다 등급이 분명히 적혀 있어요.",
+   "blank": "ग्रेड",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने हँसकर लिखा कि नाती गणित में हमेशा अच्छा ग्रेड लाता है।",
+   "en": "Kavita laughingly wrote that her grandson always gets good grades in maths.",
+   "ko": "카비타는 손자가 수학에서 늘 좋은 성적을 받는다고 웃으며 썼어요.",
+   "blank": "ग्रेड",
+   "src": "made"
+  }
+ ],
  "w|ग्वाला": [
   {
    "text": "नए सहकर्मी ने कहा कि उसके घर रोज़ सुबह ग्वाला ताज़ा दूध दे जाता है।",
@@ -15171,6 +15427,22 @@
    "blank": "चयन"
   }
  ],
+ "w|चयनित": [
+  {
+   "text": "चयनित कर्मचारियों को नई मशीनों की ट्रेनिंग के लिए बाहर भेजा जाएगा।",
+   "en": "Selected employees will be sent away for training on the new machines.",
+   "ko": "선발된 직원들은 새 기계 교육을 받으러 외부로 가게 돼요.",
+   "blank": "चयनित",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने गर्व से लिखा कि बेटे का नाम चयनित खिलाड़ियों की सूची में आया है।",
+   "en": "Kavita proudly wrote that her son's name is on the list of selected players.",
+   "ko": "카비타는 아들 이름이 선발 선수 명단에 올랐다고 자랑스럽게 썼어요.",
+   "blank": "चयनित",
+   "src": "made"
+  }
+ ],
  "w|चरण": [
   {
    "text": "काम का पहला चरण पूरा हो गया।",
@@ -15915,6 +16187,22 @@
    "en": "There was the owner's mark on the old book.",
    "ko": "옛 책에 주인의 표시가 있었어.",
    "blank": "चिह्न"
+  }
+ ],
+ "w|चिह्नित": [
+  {
+   "text": "फ़र्श पर ख़तरनाक जगहों को पीले रंग से चिह्नित किया गया है।",
+   "en": "Dangerous spots on the floor have been marked in yellow.",
+   "ko": "바닥의 위험한 곳은 노란색으로 표시돼 있어요.",
+   "blank": "चिह्नित",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने कैलेंडर पर मीना के आने की तारीख़ चिह्नित कर दी है।",
+   "en": "Kavita has marked the date of Meena's visit on the calendar.",
+   "ko": "카비타는 달력에 미나가 오는 날을 표시해 뒀어요.",
+   "blank": "चिह्नित",
+   "src": "made"
   }
  ],
  "w|चीख़": [
@@ -24021,6 +24309,22 @@
    "src": "made"
   }
  ],
+ "w|दायित्व": [
+  {
+   "text": "मशीन को ठीक हालत में रखना हर ऑपरेटर का दायित्व है।",
+   "en": "Keeping the machine in good shape is every operator's responsibility.",
+   "ko": "기계를 좋은 상태로 두는 건 모든 작업자의 책임이에요.",
+   "blank": "दायित्व",
+   "src": "made"
+  },
+  {
+   "text": "मीना के लिए अब बूढ़ी माँ की देखभाल ही सबसे बड़ा दायित्व है।",
+   "en": "For Meena, looking after her elderly mother is now the biggest responsibility.",
+   "ko": "미나에게는 이제 연로한 어머니를 돌보는 게 가장 큰 책임이에요.",
+   "blank": "दायित्व",
+   "src": "made"
+  }
+ ],
  "w|दार्शनिक": [
   {
    "text": "राहुल के सवाल इतने दार्शनिक होते हैं कि अध्यापक भी सोच में पड़ जाते हैं।",
@@ -26785,6 +27089,22 @@
    "blank": "नाक"
   }
  ],
+ "w|नाकाम": [
+  {
+   "text": "नई मशीन चलाने की पहली कोशिश नाकाम रही।",
+   "en": "The first attempt to run the new machine failed.",
+   "ko": "새 기계를 돌리려던 첫 시도는 실패했어요.",
+   "blank": "नाकाम",
+   "src": "made"
+  },
+  {
+   "text": "फ़ोन पर बात करने की कविता की हर कोशिश नाकाम रही, इसलिए ख़त लिखना पड़ा।",
+   "en": "Every attempt Kavita made to talk on the phone failed, so she had to write a letter.",
+   "ko": "카비타가 전화로 통화하려던 시도가 다 실패해서 편지를 써야 했어요.",
+   "blank": "नाकाम",
+   "src": "made"
+  }
+ ],
  "w|नाखून": [
   {
    "text": "अपने नाखून साफ़ रखो।",
@@ -27020,6 +27340,22 @@
    "en": "A new shop called 'Apna Bazaar' has opened in Kavita's neighbourhood.",
    "ko": "카비타네 동네에 '압나 바자르'라는 새 가게가 문을 열었어요.",
    "blank": "नामक",
+   "src": "made"
+  }
+ ],
+ "w|नामांकन": [
+  {
+   "text": "सुनील ने सुरक्षा प्रशिक्षण के लिए अपना नामांकन करवा लिया।",
+   "en": "Sunil enrolled himself for the safety training.",
+   "ko": "수닐은 안전 교육에 등록했어요.",
+   "blank": "नामांकन",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने बताया कि बेटी का नामांकन शहर के अच्छे स्कूल में हो गया है।",
+   "en": "Kavita said her daughter has been enrolled in a good school in the city.",
+   "ko": "카비타는 딸이 시내 좋은 학교에 입학했다고 알렸어요.",
+   "blank": "नामांकन",
    "src": "made"
   }
  ],
@@ -27649,6 +27985,22 @@
    "blank": "निराशा"
   }
  ],
+ "w|निरीक्षण": [
+  {
+   "text": "सोमवार को सरकारी अफ़सर मशीनों का निरीक्षण करने आए।",
+   "en": "On Monday, government officials came to inspect the machines.",
+   "ko": "월요일에 정부 관리들이 기계를 점검하러 왔어요.",
+   "blank": "निरीक्षण",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने पुराने ख़त में उस दिन का क़िस्सा लिखा था जब स्कूल में निरीक्षण हुआ था।",
+   "en": "In an old letter, Meena had told the story of the day the school was inspected.",
+   "ko": "미나는 옛 편지에 학교 감사가 있던 날 이야기를 썼었어요.",
+   "blank": "निरीक्षण",
+   "src": "made"
+  }
+ ],
  "w|निर्णय": [
   {
    "text": "अंतिम निर्णय अदालत का होगा।",
@@ -27738,6 +28090,22 @@
    "en": "The village bus has a fixed schedule, but it's often late in the snow.",
    "ko": "마을 버스 시간은 정해져 있지만 눈이 오면 자주 늦어요.",
    "blank": "निर्धारित",
+   "src": "made"
+  }
+ ],
+ "w|निर्धारित करना": [
+  {
+   "text": "मैनेजर ने हर शिफ़्ट का लक्ष्य पहले से निर्धारित किया।",
+   "en": "The manager set each shift's target in advance.",
+   "ko": "관리자는 교대마다 목표를 미리 정했어요.",
+   "blank": "निर्धारित किया",
+   "src": "made"
+  },
+  {
+   "text": "दोनों सहेलियों ने हर महीने एक ख़त लिखने का नियम निर्धारित किया था।",
+   "en": "The two friends had set a rule of writing one letter every month.",
+   "ko": "두 친구는 매달 편지 한 통씩 쓰기로 규칙을 정했었어요.",
+   "blank": "निर्धारित किया",
    "src": "made"
   }
  ],
@@ -31647,6 +32015,22 @@
    "blank": "पूजा पाठ"
   }
  ],
+ "w|पूँजी": [
+  {
+   "text": "मालिक ने नई उत्पादन लाइन लगाने के लिए और पूँजी जुटाई।",
+   "en": "The owner raised more capital to set up a new production line.",
+   "ko": "사장은 새 생산 라인을 놓으려고 자본을 더 모았어요.",
+   "blank": "पूँजी",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने अपनी जमा पूँजी से एक छोटी सिलाई की दुकान खोली है।",
+   "en": "Meena has opened a small tailoring shop with her savings.",
+   "ko": "미나는 모아 둔 돈으로 작은 바느질 가게를 열었어요.",
+   "blank": "पूँजी",
+   "src": "made"
+  }
+ ],
  "w|पूरा": [
   {
    "text": "पूरा गिलास पानी पी लो।",
@@ -31875,6 +32259,22 @@
    "en": "Learn to introduce the guest at the right time.",
    "ko": "손님을 제때에 소개하는 법을 배워.",
    "blank": "पेश करना"
+  }
+ ],
+ "w|पेशकश": [
+  {
+   "text": "एक दूसरी कंपनी ने सुनील को ज़्यादा तनख़्वाह की पेशकश की।",
+   "en": "Another company offered Sunil a higher salary.",
+   "ko": "다른 회사가 수닐에게 더 많은 월급을 제안했어요.",
+   "blank": "पेशकश",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने मीना को गर्मियों में अपने घर आकर रहने की पेशकश की।",
+   "en": "Kavita offered to have Meena come and stay at her house in the summer.",
+   "ko": "카비타는 미나에게 여름에 집에 와서 지내라고 제안했어요.",
+   "blank": "पेशकश",
+   "src": "made"
   }
  ],
  "w|पेंशन": [
@@ -33175,6 +33575,22 @@
    "blank": "प्रमाणपत्र"
   }
  ],
+ "w|प्रमाणित": [
+  {
+   "text": "इस फ़ैक्टरी के सारे उत्पाद गुणवत्ता के लिए प्रमाणित हैं।",
+   "en": "All of this factory's products are certified for quality.",
+   "ko": "이 공장 제품은 모두 품질 인증을 받았어요.",
+   "blank": "प्रमाणित",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने बताया कि बेटा अब प्रमाणित योग शिक्षक बन गया है।",
+   "en": "Meena said her son has now become a certified yoga teacher.",
+   "ko": "미나는 아들이 이제 자격증 있는 요가 강사가 됐다고 알렸어요.",
+   "blank": "प्रमाणित",
+   "src": "made"
+  }
+ ],
  "w|प्रमुख": [
   {
    "text": "गाँव के प्रमुख आज शहर गए हैं।",
@@ -33742,6 +34158,22 @@
    "en": "First-aid tents were set up at every turn along the route.",
    "ko": "코스 굽이마다 응급 처치 천막이 쳐져 있었어요.",
    "blank": "प्राथमिक",
+   "src": "made"
+  }
+ ],
+ "w|प्राथमिकता": [
+  {
+   "text": "इस फ़ैक्टरी में मज़दूरों की सुरक्षा सबसे बड़ी प्राथमिकता है।",
+   "en": "At this factory, workers' safety is the top priority.",
+   "ko": "이 공장에서는 노동자 안전이 가장 큰 우선순위예요.",
+   "blank": "प्राथमिकता",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने लिखा कि इस उम्र में सेहत ही सबसे बड़ी प्राथमिकता है।",
+   "en": "Meena wrote that at this age, health is the top priority.",
+   "ko": "미나는 이 나이에는 건강이 제일 우선이라고 썼어요.",
+   "blank": "प्राथमिकता",
    "src": "made"
   }
  ],
@@ -35531,6 +35963,22 @@
    "blank": "बढ़िया"
   }
  ],
+ "w|बढ़ोतरी": [
+  {
+   "text": "इस साल मज़दूरों की मज़दूरी में अच्छी बढ़ोतरी हुई।",
+   "en": "This year the workers' wages went up nicely.",
+   "ko": "올해 노동자 임금이 꽤 올랐어요.",
+   "blank": "बढ़ोतरी",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने शिकायत की कि शहर में किराए में भारी बढ़ोतरी हुई है।",
+   "en": "Meena complained that rents in the city have gone up sharply.",
+   "ko": "미나는 도시 집세가 많이 올랐다고 불평했어요.",
+   "blank": "बढ़ोतरी",
+   "src": "made"
+  }
+ ],
  "w|बताना": [
   {
    "text": "रास्ता ठीक से बताओ।",
@@ -35543,6 +35991,22 @@
    "en": "He told me the whole story.",
    "ko": "그가 나한테 자초지종을 말했어.",
    "blank": "बताया"
+  }
+ ],
+ "w|बतौर": [
+  {
+   "text": "सुनील बीस साल पहले यहाँ बतौर हेल्पर आया था।",
+   "en": "Sunil came here twenty years ago as a helper.",
+   "ko": "수닐은 이십 년 전에 보조로 여기 왔어요.",
+   "blank": "बतौर",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने लिखा कि आजकल वह एक स्कूल में बतौर लाइब्रेरियन काम कर रही है।",
+   "en": "Kavita wrote that these days she is working as a librarian at a school.",
+   "ko": "카비타는 요즘 학교에서 사서로 일하고 있다고 썼어요.",
+   "blank": "बतौर",
+   "src": "made"
   }
  ],
  "w|बत्तख़": [
@@ -40313,6 +40777,22 @@
    "blank": "मदद करोगे"
   }
  ],
+ "w|मदद माँगना": [
+  {
+   "text": "बेल्ट अटकने पर सुनील ने तुरंत साथियों से मदद माँगी।",
+   "en": "When the belt got stuck, Sunil immediately asked his coworkers for help.",
+   "ko": "벨트가 걸리자 수닐은 바로 동료들에게 도움을 청했어요.",
+   "blank": "मदद माँगी",
+   "src": "made"
+  },
+  {
+   "text": "बेटी की शादी की तैयारी के लिए कविता ने ख़त में मीना से मदद माँगी।",
+   "en": "In her letter, Kavita asked Meena for help preparing for her daughter's wedding.",
+   "ko": "카비타는 편지에서 딸 결혼 준비를 도와 달라고 미나에게 부탁했어요.",
+   "blank": "मदद माँगी",
+   "src": "made"
+  }
+ ],
  "w|मंदिर": [
   {
    "text": "मंदिर की घंटी बज रही है।",
@@ -41055,6 +41535,22 @@
    "blank": "महारानी"
   }
  ],
+ "w|महाविद्यालय": [
+  {
+   "text": "पास के महाविद्यालय के छात्र फ़ैक्टरी देखने आए।",
+   "en": "Students from the nearby college came to see the factory.",
+   "ko": "근처 대학 학생들이 공장을 견학하러 왔어요.",
+   "blank": "महाविद्यालय",
+   "src": "made"
+  },
+  {
+   "text": "कविता और मीना पहली बार महाविद्यालय के पुस्तकालय में मिली थीं।",
+   "en": "Kavita and Meena first met in the college library.",
+   "ko": "카비타와 미나는 대학 도서관에서 처음 만났어요.",
+   "blank": "महाविद्यालय",
+   "src": "made"
+  }
+ ],
  "w|महासचिव": [
   {
    "text": "शिक्षक संघ के महासचिव ने वेतन के मुद्दे पर बैठक बुलाई।",
@@ -41365,6 +41861,22 @@
    "en": "Society changes through education.",
    "ko": "교육을 통해 사회가 바뀌어.",
    "blank": "माध्यम"
+  }
+ ],
+ "w|माध्यमिक": [
+  {
+   "text": "सुनील ने माध्यमिक शिक्षा पूरी करते ही फ़ैक्टरी में काम शुरू कर दिया था।",
+   "en": "Sunil started working at the factory as soon as he finished secondary school.",
+   "ko": "수닐은 중등 교육을 마치자마자 공장에서 일하기 시작했어요.",
+   "blank": "माध्यमिक",
+   "src": "made"
+  },
+  {
+   "text": "माध्यमिक स्कूल के दिनों से कविता और मीना एक-दूसरे को ख़त लिखती आई हैं।",
+   "en": "Kavita and Meena have been writing to each other since their secondary school days.",
+   "ko": "카비타와 미나는 중학교 시절부터 서로 편지를 써 왔어요.",
+   "blank": "माध्यमिक",
+   "src": "made"
   }
  ],
  "w|मान": [
@@ -43601,6 +44113,22 @@
    "src": "made"
   }
  ],
+ "w|यथार्थ": [
+  {
+   "text": "कागज़ पर योजना अच्छी थी, पर फ़ैक्टरी का यथार्थ कुछ और ही था।",
+   "en": "The plan looked good on paper, but the reality of the factory was something else.",
+   "ko": "계획은 서류상으로 좋았지만 공장의 현실은 전혀 달랐어요.",
+   "blank": "यथार्थ",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने लिखा कि बड़े शहर का यथार्थ सपनों से बहुत अलग निकला।",
+   "en": "Meena wrote that the reality of the big city turned out very different from her dreams.",
+   "ko": "미나는 대도시의 현실이 꿈과 많이 달랐다고 썼어요.",
+   "blank": "यथार्थ",
+   "src": "made"
+  }
+ ],
  "w|यदि": [
   {
    "text": "यदि भूख लगे तो फल खा लेना।",
@@ -44263,6 +44791,22 @@
    "en": "This poem is her own creation.",
    "ko": "이 시는 그 사람 자신의 작품이야.",
    "blank": "रचना"
+  }
+ ],
+ "w|रचनात्मक": [
+  {
+   "text": "सुनील ने कचरा घटाने का एक रचनात्मक तरीका सुझाया।",
+   "en": "Sunil suggested a creative way to cut down on waste.",
+   "ko": "수닐은 폐기물을 줄이는 창의적인 방법을 제안했어요.",
+   "blank": "रचनात्मक",
+   "src": "made"
+  },
+  {
+   "text": "मीना हमेशा से रचनात्मक रही है और लिफ़ाफ़े पर भी चित्र बनाती है।",
+   "en": "Meena has always been creative and even draws pictures on the envelopes.",
+   "ko": "미나는 늘 창의적이어서 봉투에도 그림을 그려요.",
+   "blank": "रचनात्मक",
+   "src": "made"
   }
  ],
  "w|रज़ाई": [
@@ -49841,6 +50385,22 @@
    "blank": "शिक्षक"
   }
  ],
+ "w|शिक्षण": [
+  {
+   "text": "नए मज़दूरों के शिक्षण का ज़िम्मा सुनील को सौंपा गया।",
+   "en": "Sunil was put in charge of teaching the new workers.",
+   "ko": "새 노동자들을 가르치는 일이 수닐에게 맡겨졌어요.",
+   "blank": "शिक्षण",
+   "src": "made"
+  },
+  {
+   "text": "रिटायर होकर भी मीना गाँव के बच्चों के शिक्षण में लगी रहती है।",
+   "en": "Even after retiring, Meena keeps busy teaching the village children.",
+   "ko": "미나는 은퇴하고도 마을 아이들 가르치는 일을 계속해요.",
+   "blank": "शिक्षण",
+   "src": "made"
+  }
+ ],
  "w|शिक्षा": [
   {
    "text": "शिक्षा हर बच्चे का हक़ है।",
@@ -50236,6 +50796,22 @@
    "en": "Neha's brother, who works in the city, has bought some shares.",
    "ko": "도시에서 일하는 네하의 오빠는 주식을 좀 샀어요.",
    "blank": "शेयर",
+   "src": "made"
+  }
+ ],
+ "w|शेयर बाज़ार": [
+  {
+   "text": "कंपनी के शेयर बाज़ार में उतरने की ख़बर से मज़दूर भी उत्साहित थे।",
+   "en": "Even the workers were excited by the news that the company was going on the stock market.",
+   "ko": "회사가 주식시장에 상장한다는 소식에 노동자들도 들떴어요.",
+   "blank": "शेयर बाज़ार",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने लिखा कि आजकल पति दिन भर शेयर बाज़ार की ख़बरें देखते रहते हैं।",
+   "en": "Kavita wrote that these days her husband watches stock market news all day.",
+   "ko": "카비타는 요즘 남편이 하루 종일 주식시장 뉴스만 본다고 썼어요.",
+   "blank": "शेयर बाज़ार",
    "src": "made"
   }
  ],
@@ -53269,6 +53845,22 @@
    "blank": "संस्थान"
   }
  ],
+ "w|संस्थापक": [
+  {
+   "text": "फ़ैक्टरी के संस्थापक की तस्वीर आज भी गेट के पास टँगी है।",
+   "en": "A picture of the factory's founder still hangs near the gate.",
+   "ko": "공장 설립자의 사진이 아직도 정문 옆에 걸려 있어요.",
+   "blank": "संस्थापक",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने याद दिलाया कि कॉलेज की नाटक मंडली की संस्थापक मीना ही थी।",
+   "en": "Kavita reminded her that Meena herself had founded the college drama group.",
+   "ko": "카비타는 대학 연극 동아리를 만든 사람이 바로 미나였다고 상기시켰어요.",
+   "blank": "संस्थापक",
+   "src": "made"
+  }
+ ],
  "w|सहकर्मी": [
   {
    "text": "न्यूज़रूम में सुनील का एक सहकर्मी हर ख़बर के आँकड़े दो बार जाँचता है।",
@@ -53998,6 +54590,22 @@
    "en": "One child said the colours in his notebook make up their own empire, where the cat is queen.",
    "ko": "한 아이는 자기 공책 속 색깔들이 고양이가 여왕인 제국이라고 말했어요.",
    "blank": "साम्राज्य",
+   "src": "made"
+  }
+ ],
+ "w|सार": [
+  {
+   "text": "लंबी मीटिंग का सार यह था कि उत्पादन बढ़ाना है।",
+   "en": "The gist of the long meeting was that production must go up.",
+   "ko": "긴 회의의 요지는 생산을 늘려야 한다는 거였어요.",
+   "blank": "सार",
+   "src": "made"
+  },
+  {
+   "text": "लंबे ख़त का सार बस इतना था कि कविता मीना को बहुत याद करती है।",
+   "en": "The gist of the long letter was simply that Kavita misses Meena a lot.",
+   "ko": "긴 편지의 요지는 카비타가 미나를 많이 그리워한다는 것뿐이었어요.",
+   "blank": "सार",
    "src": "made"
   }
  ],
@@ -57205,6 +57813,22 @@
    "blank": "हल"
   }
  ],
+ "w|हल चलाना": [
+  {
+   "text": "फ़ैक्टरी आने से पहले सुनील गाँव में खेतों पर हल चलाता था।",
+   "en": "Before coming to the factory, Sunil used to plough fields in the village.",
+   "ko": "공장에 오기 전에 수닐은 마을에서 밭을 갈았어요.",
+   "blank": "हल चलाता",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने याद किया कि बचपन में दोनों सहेलियाँ खेत में बापू को हल चलाते देखती थीं।",
+   "en": "Kavita recalled how, as children, the two friends used to watch Father plough the field.",
+   "ko": "카비타는 어릴 때 둘이 밭에서 아버지가 쟁기질하는 걸 보곤 했던 걸 떠올렸어요.",
+   "blank": "हल चलाते",
+   "src": "made"
+  }
+ ],
  "w|हलवा": [
   {
    "text": "राहुल की दादी ने खाने के बाद गाजर का हलवा मँगवाया।",
@@ -57479,6 +58103,22 @@
    "en": "Even a small accident scares you.",
    "ko": "작은 사고도 무섭게 해.",
    "blank": "हादसा"
+  }
+ ],
+ "w|हानि": [
+  {
+   "text": "बिजली जाने से कंपनी को लाखों की हानि हुई।",
+   "en": "The power cut caused the company a loss of lakhs.",
+   "ko": "정전 때문에 회사는 큰 손해를 봤어요.",
+   "blank": "हानि",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने लिखा कि पिछली बाढ़ में दुकान को भारी हानि हुई थी।",
+   "en": "Meena wrote that the shop had suffered heavy losses in the last flood.",
+   "ko": "미나는 지난 홍수 때 가게가 큰 피해를 입었다고 썼어요.",
+   "blank": "हानि",
+   "src": "made"
   }
  ],
  "w|हाँफना": [
