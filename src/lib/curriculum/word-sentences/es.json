@@ -709,6 +709,22 @@
    "blank": "acción"
   }
  ],
+ "w|accionista": [
+  {
+   "text": "Un accionista del grupo de restaurantes vino a probar el nuevo menú de Diego.",
+   "en": "A shareholder of the restaurant group came to try Diego's new menu.",
+   "ko": "레스토랑 그룹의 주주 한 명이 디에고의 새 메뉴를 맛보러 왔어요.",
+   "blank": "accionista",
+   "src": "made"
+  },
+  {
+   "text": "Cada accionista recibió un informe de Sofía con los resultados del trimestre.",
+   "en": "Each shareholder received a report from Sofía with the quarter's results.",
+   "ko": "주주들은 각자 소피아에게서 분기 실적 보고서를 받았어요.",
+   "blank": "accionista",
+   "src": "made"
+  }
+ ],
  "w|acechar": [
   {
    "text": "En el documental de biología, Raúl vio a un león acechar a una cebra entre la hierba.",
@@ -1280,6 +1296,22 @@
    "en": "Paula says that nowadays many customers order meat-free dishes.",
    "ko": "파울라 말로는 요즘 고기 없는 요리를 찾는 손님이 많대요.",
    "blank": "actualidad",
+   "src": "made"
+  }
+ ],
+ "w|actualización": [
+  {
+   "text": "La caja registradora necesitaba una actualización, y Diego no pudo cobrar durante media hora.",
+   "en": "The till needed an update, and Diego couldn't take payments for half an hour.",
+   "ko": "계산대 기계가 업데이트를 해야 해서 디에고는 삼십 분 동안 계산을 못 했어요.",
+   "blank": "actualización",
+   "src": "made"
+  },
+  {
+   "text": "La última actualización de la aplicación tenía un fallo, y Sofía pasó la noche arreglándolo.",
+   "en": "The app's latest update had a bug, and Sofía spent the night fixing it.",
+   "ko": "앱의 최신 업데이트에 오류가 있어서 소피아는 밤새 고쳤어요.",
+   "blank": "actualización",
    "src": "made"
   }
  ],
@@ -2117,6 +2149,22 @@
    "src": "made"
   }
  ],
+ "w|aflojar": [
+  {
+   "text": "Después del servicio, Diego suele aflojar el delantal y sentarse un rato.",
+   "en": "After service, Diego usually loosens his apron and sits down for a while.",
+   "ko": "영업이 끝나면 디에고는 보통 앞치마를 느슨하게 풀고 잠깐 앉아요.",
+   "blank": "aflojar",
+   "src": "made"
+  },
+  {
+   "text": "Tras el lanzamiento, Sofía decidió aflojar el ritmo y dar un día libre a todos.",
+   "en": "After the launch, Sofía decided to ease off the pace and give everyone a day off.",
+   "ko": "출시 후 소피아는 속도를 늦추고 모두에게 하루 휴가를 주기로 했어요.",
+   "blank": "aflojar",
+   "src": "made"
+  }
+ ],
  "w|afortunadamente": [
   {
    "text": "Afortunadamente nadie resultó herido.",
@@ -2538,6 +2586,22 @@
    "en": "According to the newspaper Nuria was reading, the attacker was arrested thanks to the footprints in the snow.",
    "ko": "누리아가 읽던 신문에 따르면 가해자는 눈 위 발자국 덕분에 붙잡혔어요.",
    "blank": "agresor",
+   "src": "made"
+  }
+ ],
+ "w|agricultor": [
+  {
+   "text": "Diego compra las verduras directamente a un agricultor del valle.",
+   "en": "Diego buys the vegetables directly from a farmer in the valley.",
+   "ko": "디에고는 계곡에 사는 농부에게서 채소를 직접 사요.",
+   "blank": "agricultor",
+   "src": "made"
+  },
+  {
+   "text": "Un agricultor le escribió a Sofía para dar las gracias por la aplicación del tiempo.",
+   "en": "A farmer wrote to Sofía to thank her for the weather app.",
+   "ko": "한 농부가 날씨 앱이 고맙다며 소피아에게 편지를 보냈어요.",
+   "blank": "agricultor",
    "src": "made"
   }
  ],
@@ -5858,6 +5922,22 @@
    "en": "Paula started in film as an apprentice to a cinematographer.",
    "ko": "파울라는 촬영감독의 견습생으로 영화 일을 시작했어요.",
    "blank": "aprendiz",
+   "src": "made"
+  }
+ ],
+ "w|aprendizaje": [
+  {
+   "text": "Según Diego, el aprendizaje en una cocina profesional nunca termina.",
+   "en": "According to Diego, learning in a professional kitchen never ends.",
+   "ko": "디에고 말로는 전문 주방에서의 배움은 끝이 없대요.",
+   "blank": "aprendizaje",
+   "src": "made"
+  },
+  {
+   "text": "La aplicación de Sofía usa aprendizaje automático para recomendar productos.",
+   "en": "Sofía's app uses machine learning to recommend products.",
+   "ko": "소피아의 앱은 머신러닝으로 상품을 추천해요.",
+   "blank": "aprendizaje",
    "src": "made"
   }
  ],
@@ -13755,6 +13835,22 @@
    "blank": "carga"
   }
  ],
+ "w|cargador": [
+  {
+   "text": "Diego olvidó el cargador del móvil en la cocina y se quedó sin batería.",
+   "en": "Diego forgot his phone charger in the kitchen and ran out of battery.",
+   "ko": "디에고는 휴대폰 충전기를 주방에 두고 와서 배터리가 다 떨어졌어요.",
+   "blank": "cargador",
+   "src": "made"
+  },
+  {
+   "text": "En la oficina de Sofía siempre falta un cargador para el portátil.",
+   "en": "In Sofía's office there's always a laptop charger missing.",
+   "ko": "소피아의 사무실에는 늘 노트북 충전기가 하나 모자라요.",
+   "blank": "cargador",
+   "src": "made"
+  }
+ ],
  "w|cargamento": [
   {
    "text": "Andrés le contó a Pablo que su barco llevaba un cargamento de naranjas.",
@@ -14563,6 +14659,22 @@
    "en": "The noise caused the complaint.",
    "ko": "소음 때문에 민원이 생겼어.",
    "blank": "causó"
+  }
+ ],
+ "w|cauteloso": [
+  {
+   "text": "Diego es muy cauteloso con los alérgenos y revisa cada plato dos veces.",
+   "en": "Diego is very careful with allergens and checks every dish twice.",
+   "ko": "디에고는 알레르기 유발 성분에 아주 신중해서 요리마다 두 번씩 확인해요.",
+   "blank": "cauteloso",
+   "src": "made"
+  },
+  {
+   "text": "Sofía es cautelosa con el dinero de la empresa y revisa cada gasto.",
+   "en": "Sofía is careful with the company's money and checks every expense.",
+   "ko": "소피아는 회사 돈에 신중해서 지출을 하나하나 확인해요.",
+   "blank": "cautelosa",
+   "src": "made"
   }
  ],
  "w|cavar": [
@@ -16539,6 +16651,22 @@
    "src": "made"
   }
  ],
+ "w|clic": [
+  {
+   "text": "Con un solo clic en la tableta, Diego ve todos los pedidos de las mesas.",
+   "en": "With a single click on the tablet, Diego sees all the table orders.",
+   "ko": "디에고는 태블릿에서 한 번만 누르면 모든 테이블 주문을 볼 수 있어요.",
+   "blank": "clic",
+   "src": "made"
+  },
+  {
+   "text": "Sofía quiere que los usuarios puedan pagar con un solo clic.",
+   "en": "Sofía wants users to be able to pay with a single click.",
+   "ko": "소피아는 사용자들이 한 번의 클릭으로 결제할 수 있기를 바라요.",
+   "blank": "clic",
+   "src": "made"
+  }
+ ],
  "w|cliché": [
   {
    "text": "La profesora le dijo a Javier que el final de su cuento era un cliché.",
@@ -16711,6 +16839,22 @@
    "en": "I left the car on the corner.",
    "ko": "차를 모퉁이에 세워 뒀어.",
    "blank": "coche"
+  }
+ ],
+ "w|cochino": [
+  {
+   "text": "Diego no soporta trabajar en una cocina cochina, así que todos limpian al cerrar.",
+   "en": "Diego can't stand working in a filthy kitchen, so everyone cleans up at closing.",
+   "ko": "디에고는 지저분한 주방에서 일하는 걸 못 참아서 문 닫을 때 모두 청소해요.",
+   "blank": "cochina",
+   "src": "made"
+  },
+  {
+   "text": "Sofía se quejó de que la cocina de la oficina estaba cochina otra vez.",
+   "en": "Sofía complained that the office kitchen was filthy again.",
+   "ko": "소피아는 사무실 탕비실이 또 지저분하다고 불평했어요.",
+   "blank": "cochina",
+   "src": "made"
   }
  ],
  "w|cocina": [
@@ -17373,6 +17517,22 @@
    "en": "That comedy mixes humor and social critique.",
    "ko": "그 코미디는 유머와 사회 비판을 섞어.",
    "blank": "comedia"
+  }
+ ],
+ "w|comediante": [
+  {
+   "text": "Esa noche cenó en el restaurante un comediante famoso, y Diego salió a saludarlo.",
+   "en": "That night a famous comedian had dinner at the restaurant, and Diego came out to greet him.",
+   "ko": "그날 밤 유명한 코미디언이 레스토랑에서 저녁을 먹어서 디에고가 인사하러 나갔어요.",
+   "blank": "comediante",
+   "src": "made"
+  },
+  {
+   "text": "Para la fiesta de la empresa, Sofía contrató a una comediante que imitaba a los programadores.",
+   "en": "For the company party, Sofía hired a comedian who imitated programmers.",
+   "ko": "소피아는 회사 파티에 프로그래머 흉내를 내는 코미디언을 불렀어요.",
+   "blank": "comediante",
+   "src": "made"
   }
  ],
  "w|comedor": [
@@ -19861,6 +20021,22 @@
    "en": "I'm going to check the schedule on the web.",
    "ko": "웹에서 시간표를 확인해 볼게.",
    "blank": "consultar"
+  }
+ ],
+ "w|consultor": [
+  {
+   "text": "Un consultor de hostelería le aconsejó a Diego reducir la carta.",
+   "en": "A hospitality consultant advised Diego to shorten the menu.",
+   "ko": "외식업 컨설턴트가 디에고에게 메뉴를 줄이라고 조언했어요.",
+   "blank": "consultor",
+   "src": "made"
+  },
+  {
+   "text": "Sofía contrató a un consultor para preparar la ronda de inversión.",
+   "en": "Sofía hired a consultant to prepare the funding round.",
+   "ko": "소피아는 투자 유치를 준비하려고 컨설턴트를 고용했어요.",
+   "blank": "consultor",
+   "src": "made"
   }
  ],
  "w|consultorio": [
@@ -24809,6 +24985,22 @@
    "blank": "desagradable"
   }
  ],
+ "w|desagradecido": [
+  {
+   "text": "Diego se sintió desagradecido por no haber llamado a su antiguo maestro en años.",
+   "en": "Diego felt ungrateful for not having called his old mentor in years.",
+   "ko": "디에고는 몇 년 동안 옛 스승에게 연락하지 않은 게 배은망덕하게 느껴졌어요.",
+   "blank": "desagradecido",
+   "src": "made"
+  },
+  {
+   "text": "Sofía no quiso parecer desagradecida y escribió a cada persona que la había ayudado.",
+   "en": "Sofía didn't want to seem ungrateful and wrote to each person who had helped her.",
+   "ko": "소피아는 배은망덕해 보이고 싶지 않아서 도와준 사람 모두에게 편지를 썼어요.",
+   "blank": "desagradecida",
+   "src": "made"
+  }
+ ],
  "w|desangrarse": [
   {
    "text": "La dentista tranquilizó a Javier: nadie va a desangrarse por sacarse una muela.",
@@ -25359,6 +25551,22 @@
    "src": "made"
   }
  ],
+ "w|desempleado": [
+  {
+   "text": "Diego contrató a un chico desempleado del barrio como friegaplatos.",
+   "en": "Diego hired an unemployed young man from the neighbourhood as a dishwasher.",
+   "ko": "디에고는 동네의 실직한 청년을 설거지 담당으로 고용했어요.",
+   "blank": "desempleado",
+   "src": "made"
+  },
+  {
+   "text": "Sofía estuvo desempleada medio año antes de fundar su empresa.",
+   "en": "Sofía was unemployed for half a year before founding her company.",
+   "ko": "소피아는 회사를 세우기 전에 반년 동안 실업 상태였어요.",
+   "blank": "desempleada",
+   "src": "made"
+  }
+ ],
  "w|desenterrar": [
   {
    "text": "Mientras araba, Andrés logró desenterrar una vieja herradura oxidada.",
@@ -25551,6 +25759,22 @@
    "en": "The town feels deserted at that hour.",
    "ko": "그 시간엔 마을이 텅 빈 느낌이야.",
    "blank": "desierto"
+  }
+ ],
+ "w|designar": [
+  {
+   "text": "La dueña del restaurante decidió designar a Diego como jefe de cocina.",
+   "en": "The restaurant owner decided to appoint Diego as head chef.",
+   "ko": "레스토랑 주인은 디에고를 주방장으로 임명하기로 했어요.",
+   "blank": "designar",
+   "src": "made"
+  },
+  {
+   "text": "El equipo decidió designar a Sofía como responsable del nuevo producto.",
+   "en": "The team decided to appoint Sofía as head of the new product.",
+   "ko": "팀은 소피아를 새 제품 책임자로 지명하기로 했어요.",
+   "blank": "designar",
+   "src": "made"
   }
  ],
  "w|deslizar": [
@@ -26595,6 +26819,22 @@
    "src": "made"
   }
  ],
+ "w|dictar": [
+  {
+   "text": "Diego suele dictar las recetas mientras su ayudante las apunta en una libreta.",
+   "en": "Diego usually dictates the recipes while his assistant writes them down in a notebook.",
+   "ko": "디에고는 보통 레시피를 불러 주고 조수가 공책에 받아 적어요.",
+   "blank": "dictar",
+   "src": "made"
+  },
+  {
+   "text": "Sofía prefiere dictar los correos al móvil mientras camina al trabajo.",
+   "en": "Sofía prefers to dictate her emails to her phone while walking to work.",
+   "ko": "소피아는 출근길에 걸으면서 휴대폰에 이메일을 받아쓰게 하는 걸 좋아해요.",
+   "blank": "dictar",
+   "src": "made"
+  }
+ ],
  "w|dieciocho": [
   {
    "text": "En la clase de Javier hay dieciocho alumnos este año.",
@@ -26981,6 +27221,22 @@
    "blank": "Dios"
   }
  ],
+ "w|diploma": [
+  {
+   "text": "Diego tiene colgado su diploma de cocinero junto a la puerta de la cocina.",
+   "en": "Diego has his cooking diploma hanging next to the kitchen door.",
+   "ko": "디에고는 요리사 자격증을 주방 문 옆에 걸어 두었어요.",
+   "blank": "diploma",
+   "src": "made"
+  },
+  {
+   "text": "Sofía nunca terminó la carrera, pero dice que el diploma no le hace falta para programar.",
+   "en": "Sofía never finished her degree, but she says she doesn't need the diploma to program.",
+   "ko": "소피아는 대학을 끝까지 다니지 않았지만 프로그래밍하는 데 졸업장은 필요 없다고 말해요.",
+   "blank": "diploma",
+   "src": "made"
+  }
+ ],
  "w|diplomático": [
   {
    "text": "Un diplomático visitó la exposición con su familia.",
@@ -27039,6 +27295,22 @@
    "en": "He told it to me straight to my face.",
    "ko": "그걸 내 얼굴에 대고 바로 말했어.",
    "blank": "directamente"
+  }
+ ],
+ "w|directiva": [
+  {
+   "text": "La directiva del restaurante aprobó la idea de Diego de abrir los domingos.",
+   "en": "The restaurant's board approved Diego's idea of opening on Sundays.",
+   "ko": "레스토랑 이사회가 일요일에도 문을 열자는 디에고의 의견을 승인했어요.",
+   "blank": "directiva",
+   "src": "made"
+  },
+  {
+   "text": "La directiva aprobó el presupuesto que Sofía había preparado para el próximo año.",
+   "en": "The board approved the budget Sofía had prepared for next year.",
+   "ko": "이사회는 소피아가 준비한 내년 예산을 승인했어요.",
+   "blank": "directiva",
+   "src": "made"
   }
  ],
  "w|directo": [
@@ -27690,6 +27962,22 @@
    "en": "A distribution company brings medicines to Sofía's pharmacy every Tuesday.",
    "ko": "유통 회사가 화요일마다 소피아의 약국에 약을 가져와요.",
    "blank": "distribución",
+   "src": "made"
+  }
+ ],
+ "w|distribuidor": [
+  {
+   "text": "El distribuidor de pescado llegó tarde, y Diego tuvo que cambiar el menú del día.",
+   "en": "The fish supplier arrived late, and Diego had to change the set menu.",
+   "ko": "생선 납품업자가 늦게 와서 디에고는 오늘의 메뉴를 바꿔야 했어요.",
+   "blank": "distribuidor",
+   "src": "made"
+  },
+  {
+   "text": "Sofía firmó un acuerdo con un distribuidor para vender su aplicación en otros países.",
+   "en": "Sofía signed an agreement with a distributor to sell her app in other countries.",
+   "ko": "소피아는 다른 나라에 앱을 팔려고 유통업체와 계약을 맺었어요.",
+   "blank": "distribuidor",
    "src": "made"
   }
  ],
@@ -28645,6 +28933,22 @@
    "src": "made"
   }
  ],
+ "w|duramente": [
+  {
+   "text": "La crítica gastronómica juzgó duramente el postre, pero Diego no se desanimó.",
+   "en": "The food critic judged the dessert harshly, but Diego didn't lose heart.",
+   "ko": "음식 평론가가 디저트를 혹평했지만 디에고는 낙담하지 않았어요.",
+   "blank": "duramente",
+   "src": "made"
+  },
+  {
+   "text": "Sofía trabajó duramente durante dos años antes de tener los primeros clientes.",
+   "en": "Sofía worked hard for two years before getting her first clients.",
+   "ko": "소피아는 첫 고객이 생기기 전까지 이 년 동안 힘들게 일했어요.",
+   "blank": "duramente",
+   "src": "made"
+  }
+ ],
  "w|durante": [
   {
    "text": "No hables durante la película.",
@@ -29343,6 +29647,22 @@
    "en": "He chose the shortest path.",
    "ko": "그는 가장 짧은 길을 골랐어.",
    "blank": "Eligió"
+  }
+ ],
+ "w|elemental": [
+  {
+   "text": "Para Diego, lavarse las manos antes de cocinar es una regla elemental.",
+   "en": "For Diego, washing your hands before cooking is a basic rule.",
+   "ko": "디에고에게 요리 전에 손을 씻는 건 기본 중의 기본이에요.",
+   "blank": "elemental",
+   "src": "made"
+  },
+  {
+   "text": "Sofía explicó a los inversores algo tan elemental como cómo gana dinero la empresa.",
+   "en": "Sofía explained to the investors something as basic as how the company makes money.",
+   "ko": "소피아는 투자자들에게 회사가 어떻게 돈을 버는지 같은 아주 기본적인 것부터 설명했어요.",
+   "blank": "elemental",
+   "src": "made"
   }
  ],
  "w|elemento": [
@@ -30561,6 +30881,22 @@
    "en": "That ad is a total scam.",
    "ko": "그 광고는 완전 사기야.",
    "blank": "engaño"
+  }
+ ],
+ "w|engañoso": [
+  {
+   "text": "Diego dice que el nombre de ese plato es engañoso, porque no lleva nada de queso.",
+   "en": "Diego says the name of that dish is misleading, because it has no cheese at all.",
+   "ko": "디에고는 그 요리 이름이 오해를 부른다고 말해요, 치즈가 전혀 안 들어가거든요.",
+   "blank": "engañoso",
+   "src": "made"
+  },
+  {
+   "text": "Sofía retiró un anuncio engañoso que prometía resultados en una semana.",
+   "en": "Sofía withdrew a misleading advert that promised results in a week.",
+   "ko": "소피아는 일주일 만에 효과가 난다고 약속하는 과장 광고를 내렸어요.",
+   "blank": "engañoso",
+   "src": "made"
   }
  ],
  "w|engordar": [
@@ -32985,6 +33321,22 @@
    "blank": "establecer"
   }
  ],
+ "w|establecimiento": [
+  {
+   "text": "Diego quiere abrir su propio establecimiento en el centro dentro de unos años.",
+   "en": "Diego wants to open his own establishment in the centre in a few years.",
+   "ko": "디에고는 몇 년 안에 시내에 자기 가게를 열고 싶어 해요.",
+   "blank": "establecimiento",
+   "src": "made"
+  },
+  {
+   "text": "La aplicación de Sofía ayuda a cada establecimiento a gestionar sus reservas.",
+   "en": "Sofía's app helps each establishment manage its bookings.",
+   "ko": "소피아의 앱은 가게마다 예약을 관리하도록 도와줘요.",
+   "blank": "establecimiento",
+   "src": "made"
+  }
+ ],
  "w|establo": [
   {
    "text": "Los caballos dormían en un establo limpio y tranquilo.",
@@ -33667,6 +34019,22 @@
    "en": "Every student turned in the work on time.",
    "ko": "학생마다 제시간에 과제를 냈어.",
    "blank": "estudiante"
+  }
+ ],
+ "w|estudiantil": [
+  {
+   "text": "Diego aprendió a cocinar en un comedor estudiantil cuando tenía dieciocho años.",
+   "en": "Diego learned to cook in a student canteen when he was eighteen.",
+   "ko": "디에고는 열여덟 살 때 학생 식당에서 요리를 배웠어요.",
+   "blank": "estudiantil",
+   "src": "made"
+  },
+  {
+   "text": "La idea de la empresa de Sofía nació en un proyecto estudiantil de la universidad.",
+   "en": "The idea for Sofía's company was born in a university student project.",
+   "ko": "소피아 회사의 아이디어는 대학의 학생 프로젝트에서 시작됐어요.",
+   "blank": "estudiantil",
+   "src": "made"
   }
  ],
  "w|estudiar": [
@@ -38365,6 +38733,22 @@
    "en": "A furious customer walked into the shop.",
    "ko": "화가 난 손님이 가게로 들어왔어.",
    "blank": "furioso"
+  }
+ ],
+ "w|furtivo": [
+  {
+   "text": "Diego pilló al camarero con una mirada furtiva hacia el pastel de chocolate.",
+   "en": "Diego caught the waiter with a furtive glance at the chocolate cake.",
+   "ko": "디에고는 웨이터가 초콜릿 케이크를 몰래 힐끔거리는 걸 봤어요.",
+   "blank": "furtiva",
+   "src": "made"
+  },
+  {
+   "text": "Sofía notó un movimiento furtivo cuando un becario cerró el juego en su pantalla.",
+   "en": "Sofía noticed a furtive movement when an intern closed the game on his screen.",
+   "ko": "소피아는 인턴이 화면의 게임을 슬쩍 끄는 걸 눈치챘어요.",
+   "blank": "furtivo",
+   "src": "made"
   }
  ],
  "w|fusil": [
@@ -44980,6 +45364,22 @@
    "en": "The landlord called Sofía to tell her about the new tenant on the second floor.",
    "ko": "집주인이 소피아에게 전화해서 이 층에 새로 온 세입자 이야기를 했어요.",
    "blank": "inquilino",
+   "src": "made"
+  }
+ ],
+ "w|inscribir": [
+  {
+   "text": "Diego quiere inscribir a su ayudante en un curso de repostería.",
+   "en": "Diego wants to sign his assistant up for a pastry course.",
+   "ko": "디에고는 조수를 제과 과정에 등록시키고 싶어 해요.",
+   "blank": "inscribir",
+   "src": "made"
+  },
+  {
+   "text": "Sofía tuvo que inscribir la empresa en el registro antes de buscar inversores.",
+   "en": "Sofía had to register the company before looking for investors.",
+   "ko": "소피아는 투자자를 찾기 전에 회사를 등기해야 했어요.",
+   "blank": "inscribir",
    "src": "made"
   }
  ],
@@ -55003,6 +55403,22 @@
    "src": "made"
   }
  ],
+ "w|murmullo": [
+  {
+   "text": "Desde la cocina, Diego oía el murmullo de los clientes en el comedor.",
+   "en": "From the kitchen, Diego could hear the murmur of the customers in the dining room.",
+   "ko": "디에고는 주방에서 홀에 있는 손님들의 웅성거림을 들을 수 있었어요.",
+   "blank": "murmullo",
+   "src": "made"
+  },
+  {
+   "text": "Cuando Sofía anunció las cifras, se oyó un murmullo de sorpresa en la sala.",
+   "en": "When Sofía announced the figures, a murmur of surprise was heard in the room.",
+   "ko": "소피아가 수치를 발표하자 회의실에 놀라는 웅성거림이 일었어요.",
+   "blank": "murmullo",
+   "src": "made"
+  }
+ ],
  "w|murmurar": [
   {
    "text": "Mientras hablaba Raúl, varios concejales empezaron a murmurar al fondo.",
@@ -56783,6 +57199,22 @@
    "en": "It is important to obey traffic signs.",
    "ko": "교통 신호를 지키는 게 중요해.",
    "blank": "obedecer"
+  }
+ ],
+ "w|obediente": [
+  {
+   "text": "El perro del restaurante es tan obediente que espera en la puerta sin entrar a la cocina.",
+   "en": "The restaurant's dog is so obedient that it waits at the door without going into the kitchen.",
+   "ko": "레스토랑 개는 아주 말을 잘 들어서 주방에 들어가지 않고 문 앞에서 기다려요.",
+   "blank": "obediente",
+   "src": "made"
+  },
+  {
+   "text": "Sofía no quiere un equipo obediente, sino gente que proponga ideas.",
+   "en": "Sofía doesn't want an obedient team, but people who propose ideas.",
+   "ko": "소피아는 말 잘 듣는 팀이 아니라 아이디어를 내는 사람들을 원해요.",
+   "blank": "obediente",
+   "src": "made"
   }
  ],
  "w|obispo": [
@@ -61843,6 +62275,22 @@
    "blank": "petróleo"
   }
  ],
+ "w|petrolero": [
+  {
+   "text": "Antes de ser cocinero, Diego trabajaba en un barco petrolero y cocinaba para la tripulación.",
+   "en": "Before becoming a cook, Diego worked on an oil tanker and cooked for the crew.",
+   "ko": "디에고는 요리사가 되기 전에 유조선에서 일하며 선원들에게 밥을 해 줬어요.",
+   "blank": "petrolero",
+   "src": "made"
+  },
+  {
+   "text": "Sofía rechazó un cliente del sector petrolero porque no encajaba con la empresa.",
+   "en": "Sofía turned down a client from the oil sector because it didn't fit the company.",
+   "ko": "소피아는 회사와 맞지 않아서 석유 업계 고객을 거절했어요.",
+   "blank": "petrolero",
+   "src": "made"
+  }
+ ],
  "w|pez": [
   {
    "text": "El pez naranja nada en la pecera.",
@@ -61916,6 +62364,22 @@
    "en": "The mosquitoes keep biting Lucía when she works in the garden at dusk.",
    "ko": "해 질 녘 텃밭에서 일하면 모기가 루시아를 계속 물어요.",
    "blank": "picar",
+   "src": "made"
+  }
+ ],
+ "w|pícaro": [
+  {
+   "text": "El ayudante de Diego tiene una sonrisa pícara cuando prueba la salsa a escondidas.",
+   "en": "Diego's assistant has a cheeky smile when he tastes the sauce on the sly.",
+   "ko": "디에고의 조수는 몰래 소스를 맛볼 때 장난스러운 미소를 지어요.",
+   "blank": "pícara",
+   "src": "made"
+  },
+  {
+   "text": "El becario más pícaro de la oficina escondió el ratón de Sofía como broma.",
+   "en": "The cheekiest intern in the office hid Sofía's mouse as a joke.",
+   "ko": "사무실에서 제일 장난꾸러기인 인턴이 장난으로 소피아의 마우스를 숨겼어요.",
+   "blank": "pícaro",
    "src": "made"
   }
  ],
@@ -62446,6 +62910,22 @@
    "en": "The thermometer's beep warned Nuria that the fridge had been left open in midsummer.",
    "ko": "한여름에 온도계가 삐 소리를 내서 누리아는 냉장고 문이 열려 있는 걸 알았어요.",
    "blank": "pitido",
+   "src": "made"
+  }
+ ],
+ "w|pizarra": [
+  {
+   "text": "Diego escribe los platos del día con tiza en una pizarra junto a la barra.",
+   "en": "Diego writes the dishes of the day in chalk on a blackboard next to the bar.",
+   "ko": "디에고는 바 옆 칠판에 분필로 오늘의 요리를 적어요.",
+   "blank": "pizarra",
+   "src": "made"
+  },
+  {
+   "text": "Sofía dibujó el esquema de la aplicación en la pizarra de la sala de reuniones.",
+   "en": "Sofía drew the app diagram on the whiteboard in the meeting room.",
+   "ko": "소피아는 회의실 화이트보드에 앱 구조도를 그렸어요.",
+   "blank": "pizarra",
    "src": "made"
   }
  ],
@@ -64283,6 +64763,22 @@
    "blank": "presentación"
   }
  ],
+ "w|presentador": [
+  {
+   "text": "El presentador del programa de cocina le hizo a Diego muchas preguntas sobre la salsa.",
+   "en": "The cooking show host asked Diego a lot of questions about the sauce.",
+   "ko": "요리 프로그램 진행자가 디에고에게 소스에 대해 질문을 많이 했어요.",
+   "blank": "presentador",
+   "src": "made"
+  },
+  {
+   "text": "Sofía fue entrevistada por el presentador de un pódcast de tecnología.",
+   "en": "Sofía was interviewed by the host of a technology podcast.",
+   "ko": "소피아는 기술 팟캐스트 진행자와 인터뷰를 했어요.",
+   "blank": "presentador",
+   "src": "made"
+  }
+ ],
  "w|presentar": [
   {
    "text": "Te voy a presentar a mi jefe.",
@@ -65225,6 +65721,22 @@
    "en": "The program starts soon.",
    "ko": "프로그램이 곧 시작해.",
    "blank": "programa"
+  }
+ ],
+ "w|programación": [
+  {
+   "text": "En la cocina de Diego, la programación de los turnos se hace cada lunes.",
+   "en": "In Diego's kitchen, the shift schedule is planned every Monday.",
+   "ko": "디에고의 주방에서는 매주 월요일에 근무 일정을 짜요.",
+   "blank": "programación",
+   "src": "made"
+  },
+  {
+   "text": "Sofía estudió programación por su cuenta antes de fundar la empresa.",
+   "en": "Sofía studied programming on her own before founding the company.",
+   "ko": "소피아는 회사를 세우기 전에 프로그래밍을 독학했어요.",
+   "blank": "programación",
+   "src": "made"
   }
  ],
  "w|programar": [
@@ -70141,6 +70653,22 @@
    "blank": "repugnante"
   }
  ],
+ "w|repulsivo": [
+  {
+   "text": "El olor de la grasa quemada era repulsivo, y Diego abrió todas las ventanas.",
+   "en": "The smell of burnt grease was repulsive, and Diego opened all the windows.",
+   "ko": "탄 기름 냄새가 역겨워서 디에고는 창문을 전부 열었어요.",
+   "blank": "repulsivo",
+   "src": "made"
+  },
+  {
+   "text": "Sofía borró un comentario repulsivo que alguien había dejado en el foro de la aplicación.",
+   "en": "Sofía deleted a repulsive comment someone had left on the app's forum.",
+   "ko": "소피아는 누군가 앱 게시판에 남긴 역겨운 댓글을 지웠어요.",
+   "blank": "repulsivo",
+   "src": "made"
+  }
+ ],
  "w|reputación": [
   {
    "text": "Cuidó su reputación durante toda la carrera.",
@@ -72509,6 +73037,22 @@
    "blank": "sacrificio"
   }
  ],
+ "w|sacudida": [
+  {
+   "text": "Al abrir el horno, Diego sintió una sacudida eléctrica y llamó al técnico.",
+   "en": "When he opened the oven, Diego felt an electric shock and called the technician.",
+   "ko": "오븐을 열다가 디에고는 전기 충격을 느끼고 기사를 불렀어요.",
+   "blank": "sacudida",
+   "src": "made"
+  },
+  {
+   "text": "La noticia de la inversión fue una sacudida para Sofía, que no se lo esperaba.",
+   "en": "The news of the investment was a jolt for Sofía, who wasn't expecting it.",
+   "ko": "투자 소식은 예상하지 못했던 소피아에게 큰 충격이었어요.",
+   "blank": "sacudida",
+   "src": "made"
+  }
+ ],
  "w|sacudir": [
   {
    "text": "Hay que sacudir la alfombra en el patio.",
@@ -73153,6 +73697,22 @@
    "en": "Talk to the sergeant first.",
    "ko": "먼저 병장과 말해 봐.",
    "blank": "sargento"
+  }
+ ],
+ "w|sastre": [
+  {
+   "text": "Diego llevó su chaqueta de cocinero al sastre para que le arreglara las mangas.",
+   "en": "Diego took his chef's jacket to the tailor to have the sleeves fixed.",
+   "ko": "디에고는 소매를 고치려고 요리사 재킷을 재단사에게 맡겼어요.",
+   "blank": "sastre",
+   "src": "made"
+  },
+  {
+   "text": "Sofía diseñó una aplicación para que un sastre pudiera tomar medidas desde el móvil.",
+   "en": "Sofía designed an app so that a tailor could take measurements from a phone.",
+   "ko": "소피아는 재단사가 휴대폰으로 치수를 잴 수 있는 앱을 만들었어요.",
+   "blank": "sastre",
+   "src": "made"
   }
  ],
  "w|satélite": [
@@ -77341,6 +77901,22 @@
    "blank": "surgir"
   }
  ],
+ "w|susceptible": [
+  {
+   "text": "El nuevo cocinero es muy susceptible, y Diego tiene cuidado al corregirlo.",
+   "en": "The new cook is very touchy, and Diego is careful when correcting him.",
+   "ko": "새 요리사가 아주 예민해서 디에고는 고쳐 줄 때 조심해요.",
+   "blank": "susceptible",
+   "src": "made"
+  },
+  {
+   "text": "Sofía sabe que el jefe de diseño es algo susceptible con las críticas.",
+   "en": "Sofía knows the head of design is somewhat sensitive to criticism.",
+   "ko": "소피아는 디자인 팀장이 비판에 좀 예민하다는 걸 알아요.",
+   "blank": "susceptible",
+   "src": "made"
+  }
+ ],
  "w|sushi": [
   {
    "text": "La última noche, Mateo sorprendió a todos con sushi casero hecho con pescado del río.",
@@ -78775,6 +79351,22 @@
    "en": "He explained a new theory in class.",
    "ko": "수업에서 새 이론을 설명했어.",
    "blank": "teoría"
+  }
+ ],
+ "w|teórico": [
+  {
+   "text": "El curso de Diego tenía una parte teórica muy aburrida antes de entrar en la cocina.",
+   "en": "Diego's course had a very boring theoretical part before going into the kitchen.",
+   "ko": "디에고의 과정에는 주방에 들어가기 전에 아주 지루한 이론 수업이 있었어요.",
+   "blank": "teórica",
+   "src": "made"
+  },
+  {
+   "text": "El nuevo programador sabía mucho a nivel teórico, pero Sofía le pidió más práctica.",
+   "en": "The new programmer knew a lot on a theoretical level, but Sofía asked him for more practice.",
+   "ko": "새 프로그래머는 이론적으로는 많이 알았지만 소피아는 실전을 더 요구했어요.",
+   "blank": "teórico",
+   "src": "made"
   }
  ],
  "w|tequila": [
@@ -81099,6 +81691,22 @@
    "en": "There are thirty minutes left until the start.",
    "ko": "시작까지 삼십 분이 남았어.",
    "blank": "treinta"
+  }
+ ],
+ "w|tremendamente": [
+  {
+   "text": "El servicio del sábado fue tremendamente duro, y Diego terminó agotado.",
+   "en": "Saturday's service was tremendously hard, and Diego ended up exhausted.",
+   "ko": "토요일 영업은 엄청나게 힘들어서 디에고는 녹초가 됐어요.",
+   "blank": "tremendamente",
+   "src": "made"
+  },
+  {
+   "text": "El lanzamiento fue tremendamente estresante para Sofía y su equipo.",
+   "en": "The launch was tremendously stressful for Sofía and her team.",
+   "ko": "출시는 소피아와 팀에게 엄청나게 스트레스가 많았어요.",
+   "blank": "tremendamente",
+   "src": "made"
   }
  ],
  "w|tremendo": [
@@ -83713,6 +84321,22 @@
    "blank": "victoria"
   }
  ],
+ "w|victorioso": [
+  {
+   "text": "El equipo de Diego salió victorioso del concurso de paellas del pueblo.",
+   "en": "Diego's team came out victorious in the town paella contest.",
+   "ko": "디에고의 팀은 마을 파에야 대회에서 우승했어요.",
+   "blank": "victorioso",
+   "src": "made"
+  },
+  {
+   "text": "Sofía salió victoriosa de la competición de empresas emergentes de la ciudad.",
+   "en": "Sofía came out victorious in the city's start-up competition.",
+   "ko": "소피아는 도시 스타트업 대회에서 우승했어요.",
+   "blank": "victoriosa",
+   "src": "made"
+  }
+ ],
  "w|vida": [
   {
    "text": "Así es la vida.",
@@ -84138,6 +84762,22 @@
    "en": "At the village museum, Marta explains that the bride's virginity used to be a matter for the whole family.",
    "ko": "마을 박물관에서 마르타는 예전에는 신부의 순결이 온 집안의 문제였다고 설명해요.",
    "blank": "virginidad",
+   "src": "made"
+  }
+ ],
+ "w|virtual": [
+  {
+   "text": "Diego hizo un recorrido virtual por la cocina para un programa de televisión.",
+   "en": "Diego gave a virtual tour of the kitchen for a television programme.",
+   "ko": "디에고는 텔레비전 프로그램을 위해 주방을 가상으로 둘러보게 해 줬어요.",
+   "blank": "virtual",
+   "src": "made"
+  },
+  {
+   "text": "La empresa de Sofía organiza una reunión virtual cada mañana a las nueve.",
+   "en": "Sofía's company holds a virtual meeting every morning at nine.",
+   "ko": "소피아의 회사는 매일 아침 아홉 시에 화상 회의를 해요.",
+   "blank": "virtual",
    "src": "made"
   }
  ],

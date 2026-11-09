@@ -551,6 +551,22 @@
    "blank": "กระเทียม"
   }
  ],
+ "w|กระบวน": [
+  {
+   "text": "อนันต์อธิบายกระบวนการยุติธรรมให้ญาติผู้ต้องหาเข้าใจทีละขั้น",
+   "en": "Anan explained the justice process step by step to the suspect's relatives.",
+   "ko": "아난은 피의자 가족에게 사법 절차를 한 단계씩 설명했어요.",
+   "blank": "กระบวน",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีสอนนักศึกษาพยาบาลถึงกระบวนการล้างมือที่ถูกต้อง",
+   "en": "Pranee teaches nursing students the correct handwashing procedure.",
+   "ko": "쁘라니는 간호학과 학생들에게 올바른 손 씻기 절차를 가르쳐요.",
+   "blank": "กระบวน",
+   "src": "made"
+  }
+ ],
  "w|กระบวนการ": [
   {
    "text": "กระบวนการผลิตใช้เวลานาน",
@@ -963,6 +979,22 @@
    "en": "Work by day, sleep at night.",
    "ko": "낮에 일하고 밤에 자.",
    "blank": "กลางวัน"
+  }
+ ],
+ "w|กลาย": [
+  {
+   "text": "คดีพิพาทที่ดินเล็กๆ กลายเป็นข่าวใหญ่เมื่อมีคนดังเข้ามาเกี่ยวข้อง",
+   "en": "A small land dispute became big news when a celebrity got involved.",
+   "ko": "작은 토지 분쟁이 유명인이 얽히면서 큰 뉴스가 됐어요.",
+   "blank": "กลาย",
+   "src": "made"
+  },
+  {
+   "text": "ไข้หวัดธรรมดาของคุณลุงกลายเป็นปอดอักเสบเพราะไม่ยอมมาหาหมอ",
+   "en": "The old man's common cold turned into pneumonia because he wouldn't see a doctor.",
+   "ko": "할아버지의 감기가 병원에 안 와서 폐렴이 됐어요.",
+   "blank": "กลาย",
+   "src": "made"
   }
  ],
  "w|กลายเป็น": [
@@ -7479,6 +7511,22 @@
    "blank": "ความเครียด"
   }
  ],
+ "w|ความเคลื่อนไหว": [
+  {
+   "text": "อนันต์ติดตามความเคลื่อนไหวของคดีผ่านระบบออนไลน์ของศาลทุกวัน",
+   "en": "Anan follows the developments of the case through the court's online system every day.",
+   "ko": "아난은 매일 법원 온라인 시스템으로 사건의 진행 상황을 확인해요.",
+   "blank": "ความเคลื่อนไหว",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีคอยดูความเคลื่อนไหวของผู้ป่วยหลังผ่าตัดผ่านกล้องในห้องพักพยาบาล",
+   "en": "Pranee watches post-surgery patients' movements via camera from the nurses' room.",
+   "ko": "쁘라니는 간호사실에서 카메라로 수술 후 환자의 움직임을 지켜봐요.",
+   "blank": "ความเคลื่อนไหว",
+   "src": "made"
+  }
+ ],
  "w|ความเคารพ": [
   {
    "text": "แสดงความเคารพต่อครู",
@@ -9092,6 +9140,22 @@
    "en": "Napha got the most votes in the election for new-employee representative.",
    "ko": "나파는 신입 사원 대표 선거에서 가장 많은 표를 받았어요.",
    "blank": "คะแนนเสียง",
+   "src": "made"
+  }
+ ],
+ "w|คัด": [
+  {
+   "text": "อนันต์คัดเอกสารที่เกี่ยวข้องออกจากกองแฟ้มก่อนขึ้นศาล",
+   "en": "Anan picked out the relevant documents from the pile of files before going to court.",
+   "ko": "아난은 법정에 가기 전에 서류 더미에서 관련 문서를 골라냈어요.",
+   "blank": "คัด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีช่วยคัดแยกผู้ป่วยตามความเร่งด่วนที่ห้องฉุกเฉิน",
+   "en": "Pranee helps sort patients by urgency in the emergency room.",
+   "ko": "쁘라니는 응급실에서 환자를 긴급도에 따라 분류하는 일을 도와요.",
+   "blank": "คัด",
    "src": "made"
   }
  ],
@@ -11115,6 +11179,22 @@
    "blank": "ง่วง"
   }
  ],
+ "w|งวด": [
+  {
+   "text": "จำเลยตกลงจ่ายค่าเสียหายเป็นงวดทุกเดือนตามที่ศาลไกล่เกลี่ย",
+   "en": "The defendant agreed to pay damages in monthly installments as mediated by the court.",
+   "ko": "피고는 법원 조정에 따라 손해배상금을 매달 할부로 내기로 했어요.",
+   "blank": "งวด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีผ่อนรถเป็นงวดทุกเดือนด้วยเงินค่าเวรดึก",
+   "en": "Pranee pays off her car in monthly installments with her night-shift pay.",
+   "ko": "쁘라니는 야간 근무 수당으로 매달 차 할부금을 내요.",
+   "blank": "งวด",
+   "src": "made"
+  }
+ ],
  "w|งอ": [
   {
    "text": "ขาโต๊ะงอเพราะของหนัก",
@@ -12213,6 +12293,22 @@
    "src": "made"
   }
  ],
+ "w|จากไป": [
+  {
+   "text": "คดีมรดกนี้เริ่มขึ้นหลังจากคุณยายของโจทก์จากไปเมื่อปีก่อน",
+   "en": "This inheritance case began after the plaintiff's grandmother passed away last year.",
+   "ko": "이 상속 소송은 원고의 할머니가 작년에 세상을 떠난 뒤 시작됐어요.",
+   "blank": "จากไป",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีนั่งอยู่ข้างเตียงคุณยายจนคุณยายจากไปอย่างสงบ",
+   "en": "Pranee sat by the grandmother's bed until she passed away peacefully.",
+   "ko": "쁘라니는 할머니가 평온하게 떠날 때까지 침대 곁을 지켰어요.",
+   "blank": "จากไป",
+   "src": "made"
+  }
+ ],
  "w|จาง": [
   {
    "text": "สีเสื้อจางลงหลังจากซัก",
@@ -12572,6 +12668,22 @@
    "en": "Two painters argued in court about who painted this picture first.",
    "ko": "두 화가는 누가 이 그림을 먼저 그렸는지 법정에서 다퉜어요.",
    "blank": "จิตรกร",
+   "src": "made"
+  }
+ ],
+ "w|จิตรกรรม": [
+  {
+   "text": "คดีนี้เป็นการฟ้องเรื่องลิขสิทธิ์จิตรกรรมฝาผนังในวัดเก่า",
+   "en": "This case is a copyright suit over a mural painting in an old temple.",
+   "ko": "이 사건은 옛 절 벽화의 저작권을 둘러싼 소송이에요.",
+   "blank": "จิตรกรรม",
+   "src": "made"
+  },
+  {
+   "text": "โถงโรงพยาบาลประดับด้วยจิตรกรรมรูปทุ่งนาที่ผู้ป่วยช่วยกันวาด",
+   "en": "The hospital lobby is decorated with a painting of rice fields that patients made together.",
+   "ko": "병원 로비는 환자들이 함께 그린 논 풍경화로 꾸며져 있어요.",
+   "blank": "จิตรกรรม",
    "src": "made"
   }
  ],
@@ -14515,6 +14627,22 @@
    "blank": "ชาติ"
   }
  ],
+ "w|ชาตินิยม": [
+  {
+   "text": "อนันต์เคยเขียนบทความวิจารณ์แนวคิดชาตินิยมสุดโต่งในวารสารกฎหมาย",
+   "en": "Anan once wrote an article critiquing extreme nationalism in a law journal.",
+   "ko": "아난은 법률 학술지에 극단적 민족주의를 비판하는 글을 쓴 적이 있어요.",
+   "blank": "ชาตินิยม",
+   "src": "made"
+  },
+  {
+   "text": "คนไข้สูงอายุเล่าให้ปราณีฟังถึงเพลงชาตินิยมที่ร้องกันสมัยเด็ก",
+   "en": "An elderly patient told Pranee about the nationalist songs they sang in childhood.",
+   "ko": "나이 든 환자는 어릴 때 부르던 애국 노래 이야기를 쁘라니에게 들려줬어요.",
+   "blank": "ชาตินิยม",
+   "src": "made"
+  }
+ ],
  "w|ชานชาลา": [
   {
    "text": "พนักงานโรงแรมบอกวิชัยว่ารถไฟไปเชียงใหม่ออกจากชานชาลาที่ห้า",
@@ -14817,6 +14945,22 @@
    "src": "made"
   }
  ],
+ "w|ชิด": [
+  {
+   "text": "เจ้าหน้าที่ขอให้ผู้ฟังนั่งชิดกันเพราะห้องพิจารณาคดีคนแน่น",
+   "en": "Staff asked the audience to sit close together because the courtroom was packed.",
+   "ko": "법정이 꽉 차서 직원이 방청객들에게 붙어 앉아 달라고 했어요.",
+   "blank": "ชิด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีจัดเตียงผู้ป่วยให้ชิดผนังเพื่อให้รถเข็นผ่านได้สะดวก",
+   "en": "Pranee pushed the patient's bed against the wall so wheelchairs could pass easily.",
+   "ko": "쁘라니는 휠체어가 잘 지나가도록 환자 침대를 벽에 붙였어요.",
+   "blank": "ชิด",
+   "src": "made"
+  }
+ ],
  "w|ชิน": [
   {
    "text": "ทำงานที่นี่มาครึ่งปี สมชายก็ชินกับการประชุมตอนเช้าแล้ว",
@@ -14845,6 +14989,22 @@
    "en": "Only one piece left.",
    "ko": "한 조각만 남았어.",
    "blank": "ชิ้น"
+  }
+ ],
+ "w|ชิ้นส่วน": [
+  {
+   "text": "ศาลรับชิ้นส่วนรถจักรยานยนต์ที่พังเป็นวัตถุพยาน",
+   "en": "The court accepted the broken motorcycle parts as physical evidence.",
+   "ko": "법원은 부서진 오토바이 부품을 증거물로 받았어요.",
+   "blank": "ชิ้นส่วน",
+   "src": "made"
+  },
+  {
+   "text": "หมอนำชิ้นส่วนแก้วออกจากเท้าของเด็กที่เหยียบขวดแตก",
+   "en": "The doctor removed pieces of glass from the foot of a child who stepped on a broken bottle.",
+   "ko": "의사는 깨진 병을 밟은 아이 발에서 유리 조각을 빼냈어요.",
+   "blank": "ชิ้นส่วน",
+   "src": "made"
   }
  ],
  "w|ชิม": [
@@ -15533,6 +15693,22 @@
    "src": "made"
   }
  ],
+ "w|โชคชะตา": [
+  {
+   "text": "ลูกความบอกอนันต์ว่าแพ้หรือชนะก็แล้วแต่โชคชะตา",
+   "en": "The client told Anan that winning or losing is up to fate.",
+   "ko": "의뢰인은 이기든 지든 운명에 달렸다고 아난에게 말했어요.",
+   "blank": "โชคชะตา",
+   "src": "made"
+  },
+  {
+   "text": "ญาติผู้ป่วยบอกปราณีว่าทำใจไว้แล้ว เพราะเชื่อในโชคชะตา",
+   "en": "A patient's relative told Pranee they've accepted it because they believe in fate.",
+   "ko": "환자 가족은 운명을 믿기에 마음의 준비를 했다고 쁘라니에게 말했어요.",
+   "blank": "โชคชะตา",
+   "src": "made"
+  }
+ ],
  "w|โชคดี": [
   {
    "text": "วันนี้ฉันโชคดีมาก",
@@ -16033,6 +16209,22 @@
    "en": "The shop which is on the corner sells good coffee.",
    "ko": "모퉁이에 있는 가게는 커피가 좋아.",
    "blank": "ซึ่ง"
+  }
+ ],
+ "w|ซึม": [
+  {
+   "text": "หลังฟังคำพิพากษา จำเลยนั่งซึมอยู่นานโดยไม่พูดอะไร",
+   "en": "After hearing the verdict, the defendant sat gloomily for a long time without saying anything.",
+   "ko": "판결을 들은 뒤 피고인은 한참 동안 아무 말 없이 풀이 죽어 앉아 있었어요.",
+   "blank": "ซึม",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเห็นเลือดซึมออกมาจากผ้าพันแผลจึงรีบเปลี่ยนให้ใหม่",
+   "en": "Pranee saw blood seeping through the bandage and quickly changed it.",
+   "ko": "쁘라니는 붕대에 피가 배어 나오는 걸 보고 얼른 새로 갈아 줬어요.",
+   "blank": "ซึม",
+   "src": "made"
   }
  ],
  "w|ซื้อ": [
@@ -16623,6 +16815,22 @@
    "src": "made"
   }
  ],
+ "w|ดังเช่น": [
+  {
+   "text": "อนันต์บอกลูกความว่าหลักฐานบางอย่าง ดังเช่นข้อความในโทรศัพท์ ต้องยื่นก่อนวันนัด",
+   "en": "Anan told his client that some evidence, such as phone messages, must be submitted before the hearing date.",
+   "ko": "아난은 휴대폰 메시지 같은 일부 증거는 기일 전에 내야 한다고 의뢰인에게 말했어요.",
+   "blank": "ดังเช่น",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีแนะนำให้ผู้ป่วยเบาหวานกินอาหารที่มีกากใย ดังเช่นผักใบเขียวและข้าวกล้อง",
+   "en": "Pranee advises diabetic patients to eat high-fiber foods, such as leafy greens and brown rice.",
+   "ko": "쁘라니는 당뇨 환자들에게 녹색 채소와 현미 같은 섬유질 음식을 권해요.",
+   "blank": "ดังเช่น",
+   "src": "made"
+  }
+ ],
  "w|ดั้งเดิม": [
   {
    "text": "อนันต์ชอบศาลจังหวัดที่ยังรักษาสถาปัตยกรรมแบบดั้งเดิมไว้",
@@ -17115,6 +17323,22 @@
    "blank": "ดีใจ"
   }
  ],
+ "w|ดีไซน์": [
+  {
+   "text": "อนันต์ว่าความให้บริษัทเสื้อผ้าที่ถูกลอกดีไซน์กระเป๋า",
+   "en": "Anan represents a clothing company whose bag design was copied.",
+   "ko": "아난은 가방 디자인을 도용당한 의류 회사를 변호해요.",
+   "blank": "ดีไซน์",
+   "src": "made"
+  },
+  {
+   "text": "ชุดพยาบาลดีไซน์ใหม่ใส่สบายและมีกระเป๋าเยอะกว่าเดิม",
+   "en": "The newly designed nurse uniform is comfortable and has more pockets than before.",
+   "ko": "새 디자인 간호복은 편하고 주머니가 전보다 많아요.",
+   "blank": "ดีไซน์",
+   "src": "made"
+  }
+ ],
  "w|ดีด": [
   {
    "text": "เขาดีดกีตาร์เบา ๆ",
@@ -17211,6 +17435,22 @@
    "en": "Let me see it.",
    "ko": "잠깐 보여 줘.",
    "blank": "ดู"
+  }
+ ],
+ "w|ดูด": [
+  {
+   "text": "ระหว่างพักศาล อนันต์นั่งดูดกาแฟเย็นอยู่ที่ม้านั่งหน้าอาคาร",
+   "en": "During the recess, Anan sat sipping iced coffee on a bench outside the building.",
+   "ko": "휴정 중에 아난은 건물 앞 벤치에 앉아 아이스커피를 빨대로 마셨어요.",
+   "blank": "ดูด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีใช้เครื่องดูดเสมหะช่วยให้ผู้ป่วยหายใจสะดวกขึ้น",
+   "en": "Pranee used a suction machine to help the patient breathe more easily.",
+   "ko": "쁘라니는 흡인기로 가래를 빼서 환자가 숨쉬기 편하게 해 줬어요.",
+   "blank": "ดูด",
+   "src": "made"
   }
  ],
  "w|ดูถูก": [
@@ -18981,6 +19221,22 @@
    "en": "Try bargaining before you buy.",
    "ko": "사기 전에 한번 깎아 봐.",
    "blank": "ต่อราคา"
+  }
+ ],
+ "w|ต่อว่า": [
+  {
+   "text": "ผู้พิพากษาต่อว่าทนายฝ่ายตรงข้ามที่มาศาลสายเป็นครั้งที่สาม",
+   "en": "The judge scolded the opposing lawyer for coming to court late for the third time.",
+   "ko": "판사는 세 번째로 지각한 상대측 변호사를 나무랐어요.",
+   "blank": "ต่อว่า",
+   "src": "made"
+  },
+  {
+   "text": "ญาติผู้ป่วยต่อว่าปราณีเรื่องรอนาน แต่ปราณีก็ยังพูดจาสุภาพ",
+   "en": "A patient's relative complained to Pranee about the long wait, but Pranee stayed polite.",
+   "ko": "환자 가족이 오래 기다린다고 쁘라니에게 따졌지만 쁘라니는 공손하게 대했어요.",
+   "blank": "ต่อว่า",
+   "src": "made"
   }
  ],
  "w|ต่อสู้": [
@@ -23321,6 +23577,22 @@
    "blank": "ที่"
   }
  ],
+ "w|ที่เกิดเหตุ": [
+  {
+   "text": "อนันต์ขอดูภาพถ่ายจากที่เกิดเหตุอีกครั้งก่อนซักค้านพยาน",
+   "en": "Anan asked to see the crime scene photos again before cross-examining the witness.",
+   "ko": "아난은 증인을 반대신문하기 전에 사건 현장 사진을 다시 보자고 했어요.",
+   "blank": "ที่เกิดเหตุ",
+   "src": "made"
+  },
+  {
+   "text": "รถพยาบาลไปถึงที่เกิดเหตุภายในสิบนาทีหลังได้รับแจ้ง",
+   "en": "The ambulance reached the scene of the incident within ten minutes of the call.",
+   "ko": "구급차는 신고를 받고 십 분 안에 사고 현장에 도착했어요.",
+   "blank": "ที่เกิดเหตุ",
+   "src": "made"
+  }
+ ],
  "w|ที่เขี่ยบุหรี่": [
   {
    "text": "ธนาเอาที่เขี่ยบุหรี่เก่าของพ่อมาใส่คลิปหนีบกระดาษ",
@@ -23853,6 +24125,22 @@
    "en": "Run and play on the grassy field.",
    "ko": "풀밭에서 뛰어놀아.",
    "blank": "ทุ่ง"
+  }
+ ],
+ "w|ทุจริต": [
+  {
+   "text": "อดีตเจ้าหน้าที่ถูกกล่าวหาว่าทุจริตงบซ่อมถนน",
+   "en": "A former official was accused of embezzling the road repair budget.",
+   "ko": "전직 공무원이 도로 보수 예산을 횡령한 혐의를 받았어요.",
+   "blank": "ทุจริต",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีอ่านข่าวว่าผู้บริหารโรงพยาบาลแห่งหนึ่งทุจริตการจัดซื้อยา",
+   "en": "Pranee read that an administrator at one hospital was corrupt in buying medicine.",
+   "ko": "쁘라니는 어느 병원 간부가 약품 구매 비리를 저질렀다는 기사를 읽었어요.",
+   "blank": "ทุจริต",
+   "src": "made"
   }
  ],
  "w|ทุน": [
@@ -24498,6 +24786,22 @@
    "en": "Suda uses a tablet to see which items are running low.",
    "ko": "수다는 태블릿으로 어떤 물건이 곧 떨어지는지 봐요.",
    "blank": "แท็บเล็ต",
+   "src": "made"
+  }
+ ],
+ "w|แทรก": [
+  {
+   "text": "อนันต์ขอแทรกคำถามสั้นๆ ก่อนที่พยานจะลงจากคอก",
+   "en": "Anan asked to slip in a short question before the witness stepped down.",
+   "ko": "아난은 증인이 증인석에서 내려가기 전에 짧은 질문을 끼워 넣게 해 달라고 했어요.",
+   "blank": "แทรก",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ป่วยบางคนพยายามแทรกคิวที่ห้องจ่ายยา ปราณีจึงต้องไปช่วยจัดแถว",
+   "en": "Some patients tried to cut in line at the pharmacy, so Pranee had to help organize the queue.",
+   "ko": "몇몇 환자가 약제실 줄에 끼어들려고 해서 쁘라니가 줄을 정리해야 했어요.",
+   "blank": "แทรก",
    "src": "made"
   }
  ],
@@ -25861,6 +26165,22 @@
    "blank": "น่าประทับใจ"
   }
  ],
+ "w|นามธรรม": [
+  {
+   "text": "อนันต์บอกว่าความยุติธรรมเป็นสิ่งนามธรรมที่ต้องทำให้จับต้องได้ในศาล",
+   "en": "Anan says justice is an abstract thing that has to be made tangible in court.",
+   "ko": "아난은 정의는 추상적인 것이라 법정에서 손에 잡히게 만들어야 한다고 말해요.",
+   "blank": "นามธรรม",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบอกว่าความเจ็บปวดเป็นเรื่องนามธรรม จึงให้ผู้ป่วยบอกเป็นคะแนน",
+   "en": "Pranee says pain is abstract, so she has patients rate it on a scale.",
+   "ko": "쁘라니는 통증은 추상적이라서 환자에게 점수로 말해 달라고 해요.",
+   "blank": "นามธรรม",
+   "src": "made"
+  }
+ ],
  "w|นาย": [
   {
    "text": "นายไปไหนมา",
@@ -25887,6 +26207,22 @@
    "en": "The PM spoke on TV this morning.",
    "ko": "총리가 아침에 TV에서 말했어.",
    "blank": "นายก"
+  }
+ ],
+ "w|นายกเทศมนตรี": [
+  {
+   "text": "นายกเทศมนตรีมาเป็นพยานในคดีจัดซื้อรถขยะ",
+   "en": "The mayor came as a witness in the garbage truck procurement case.",
+   "ko": "시장이 쓰레기차 구매 사건에 증인으로 나왔어요.",
+   "blank": "นายกเทศมนตรี",
+   "src": "made"
+  },
+  {
+   "text": "นายกเทศมนตรีมาเยี่ยมผู้ป่วยน้ำท่วมที่ปราณีดูแล",
+   "en": "The mayor visited the flood patients Pranee looks after.",
+   "ko": "시장이 쁘라니가 돌보는 수해 환자들을 방문했어요.",
+   "blank": "นายกเทศมนตรี",
+   "src": "made"
   }
  ],
  "w|นายกรัฐมนตรี": [
@@ -27203,6 +27539,22 @@
    "src": "made"
   }
  ],
+ "w|โน้น": [
+  {
+   "text": "อนันต์ชี้ไปที่อาคารโน้นแล้วบอกว่าศาลอุทธรณ์อยู่ฝั่งตรงข้ามคลอง",
+   "en": "Anan pointed at that building way over there and said the appeals court is across the canal.",
+   "ko": "아난은 저기 저 멀리 건물을 가리키며 항소법원은 운하 건너편에 있다고 했어요.",
+   "blank": "โน้น",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบอกญาติว่าห้องเอกซเรย์อยู่ตึกโน้น เลยลานจอดรถไปอีก",
+   "en": "Pranee told the relatives the X-ray room is in that building way over there, past the parking lot.",
+   "ko": "쁘라니는 엑스레이실이 주차장 지나 저 멀리 저 건물에 있다고 가족에게 알려 줬어요.",
+   "blank": "โน้น",
+   "src": "made"
+  }
+ ],
  "w|โน้มน้าว": [
   {
    "text": "เขาพยายามโน้มน้าวให้ฉันไป",
@@ -27569,6 +27921,22 @@
    "src": "made"
   }
  ],
+ "w|บริวาร": [
+  {
+   "text": "นักการเมืองคนนั้นมาศาลพร้อมบริวารนับสิบคน",
+   "en": "That politician came to court with a dozen or so followers.",
+   "ko": "그 정치인은 수행원 십여 명을 데리고 법원에 왔어요.",
+   "blank": "บริวาร",
+   "src": "made"
+  },
+  {
+   "text": "เศรษฐีคนหนึ่งมาตรวจสุขภาพพร้อมบริวารจนห้องรอเต็ม",
+   "en": "A wealthy man came for a checkup with his entourage, filling the waiting room.",
+   "ko": "한 부자가 수행원들을 데리고 건강 검진을 받으러 와서 대기실이 꽉 찼어요.",
+   "blank": "บริวาร",
+   "src": "made"
+  }
+ ],
  "w|บริเวณ": [
   {
    "text": "กิตติรอเพื่อนอยู่บริเวณหน้าโรงเรียนเก่าก่อนไปร้านด้วยกัน",
@@ -27703,6 +28071,22 @@
    "en": "Tell me straight.",
    "ko": "솔직하게 말해.",
    "blank": "บอก"
+  }
+ ],
+ "w|บ่อน": [
+  {
+   "text": "ตำรวจบุกจับบ่อนการพนันเถื่อน และเจ้าของถูกฟ้องต่อศาลนี้",
+   "en": "Police raided an illegal gambling den, and its owner was prosecuted in this court.",
+   "ko": "경찰이 불법 도박장을 급습했고 주인은 이 법원에 기소됐어요.",
+   "blank": "บ่อน",
+   "src": "made"
+  },
+  {
+   "text": "ชายที่ถูกแทงเล่าว่ามีเรื่องทะเลาะกันในบ่อนไก่ชนก่อนมาโรงพยาบาล",
+   "en": "The man who was stabbed said there'd been a fight at a cockfighting den before he came to the hospital.",
+   "ko": "칼에 찔린 남자는 병원에 오기 전 닭싸움 도박장에서 싸움이 있었다고 했어요.",
+   "blank": "บ่อน",
+   "src": "made"
   }
  ],
  "w|บ่อน้ำ": [
@@ -28424,6 +28808,22 @@
    "en": "Suda doesn't sell cigarettes to anyone under twenty.",
    "ko": "수다는 스무 살이 안 된 사람에게는 담배를 팔지 않아요.",
    "blank": "บุหรี่",
+   "src": "made"
+  }
+ ],
+ "w|บูชา": [
+  {
+   "text": "ทุกเช้าก่อนขึ้นศาล อนันต์จุดธูปบูชาพระที่หิ้งในสำนักงาน",
+   "en": "Every morning before court, Anan lights incense to worship the Buddha image on the office shelf.",
+   "ko": "매일 아침 재판에 가기 전 아난은 사무실 선반의 불상에 향을 피워 예를 올려요.",
+   "blank": "บูชา",
+   "src": "made"
+  },
+  {
+   "text": "ญาติผู้ป่วยนำพวงมาลัยไปบูชาศาลพระภูมิหน้าโรงพยาบาล",
+   "en": "A patient's relatives brought garlands to offer at the spirit house in front of the hospital.",
+   "ko": "환자 가족이 병원 앞 수호신 사당에 꽃목걸이를 바쳤어요.",
+   "blank": "บูชา",
    "src": "made"
   }
  ],
@@ -29265,6 +29665,22 @@
    "en": "Everyone applauded the winning team.",
    "ko": "모두가 이긴 팀에 박수를 쳤어.",
    "blank": "ปรบมือ"
+  }
+ ],
+ "w|ประกวด": [
+  {
+   "text": "ก่อนเป็นทนาย อนันต์เคยประกวดโต้วาทีระดับมหาวิทยาลัยหลายครั้ง",
+   "en": "Before becoming a lawyer, Anan competed in university debate contests many times.",
+   "ko": "변호사가 되기 전 아난은 대학 토론 대회에 여러 번 나갔어요.",
+   "blank": "ประกวด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีส่งรูปเข้าประกวดภาพถ่ายของโรงพยาบาลในหัวข้อรอยยิ้มผู้ป่วย",
+   "en": "Pranee entered a photo in the hospital's photography contest on the theme of patients' smiles.",
+   "ko": "쁘라니는 환자의 미소를 주제로 한 병원 사진 공모전에 사진을 냈어요.",
+   "blank": "ประกวด",
+   "src": "made"
   }
  ],
  "w|ประกอบ": [
@@ -32873,6 +33289,22 @@
    "src": "made"
   }
  ],
+ "w|ผู้บุกรุก": [
+  {
+   "text": "เจ้าของบ้านฟ้องผู้บุกรุกที่เข้ามาปลูกเพิงบนที่ดินของตน",
+   "en": "The homeowner sued the trespasser who built a shack on his land.",
+   "ko": "집주인은 자기 땅에 판잣집을 지은 무단 침입자를 고소했어요.",
+   "blank": "ผู้บุกรุก",
+   "src": "made"
+  },
+  {
+   "text": "ยามจับผู้บุกรุกที่แอบเข้าไปในห้องเก็บยากลางดึก",
+   "en": "The guard caught an intruder who sneaked into the medicine storeroom at night.",
+   "ko": "경비원이 한밤중 약품 창고에 몰래 들어간 침입자를 잡았어요.",
+   "blank": "ผู้บุกรุก",
+   "src": "made"
+  }
+ ],
  "w|ผู้ปกครอง": [
   {
    "text": "ผู้ปกครองของแพรนั่งโต๊ะหน้าสุดข้างเวที",
@@ -35813,6 +36245,22 @@
    "en": "He plans to sue over the contract.",
    "ko": "그는 계약 문제로 고소할 계획이야.",
    "blank": "ฟ้อง"
+  }
+ ],
+ "w|ฟอร์ม": [
+  {
+   "text": "อนันต์ช่วยยายกรอกฟอร์มขอรับเงินชดเชยที่เคาน์เตอร์ศาล",
+   "en": "Anan helped an old woman fill out the compensation form at the court counter.",
+   "ko": "아난은 법원 창구에서 할머니가 보상금 신청서를 쓰는 걸 도왔어요.",
+   "blank": "ฟอร์ม",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ป่วยใหม่ต้องกรอกฟอร์มประวัติสุขภาพที่จุดคัดกรอง",
+   "en": "New patients have to fill out a health history form at the screening point.",
+   "ko": "새 환자는 선별 진료소에서 건강 이력 양식을 작성해야 해요.",
+   "blank": "ฟอร์ม",
+   "src": "made"
   }
  ],
  "w|ฟัง": [
@@ -39121,6 +39569,22 @@
    "blank": "ยกเว้น"
   }
  ],
+ "w|ย่อ": [
+  {
+   "text": "อนันต์ย่อคำให้การยาวสิบหน้าให้เหลือหน้าเดียว",
+   "en": "Anan condensed the ten-page testimony into a single page.",
+   "ko": "아난은 열 쪽짜리 진술을 한 쪽으로 줄였어요.",
+   "blank": "ย่อ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีย่อตัวลงคุยกับเด็กป่วยให้อยู่ระดับสายตาเดียวกัน",
+   "en": "Pranee crouched down to talk with the sick child at eye level.",
+   "ko": "쁘라니는 아픈 아이와 눈높이를 맞추려고 몸을 낮춰 이야기했어요.",
+   "blank": "ย่อ",
+   "src": "made"
+  }
+ ],
  "w|ยอด": [
   {
    "text": "เขาเป็นนักฟุตบอลฝีมือยอด",
@@ -41581,6 +42045,22 @@
    "blank": "รั้ว"
   }
  ],
+ "w|รัศมี": [
+  {
+   "text": "ศาลสั่งห้ามจำเลยเข้าใกล้บ้านผู้เสียหายในรัศมีห้าร้อยเมตร",
+   "en": "The court banned the defendant from coming within a five-hundred-meter radius of the victim's home.",
+   "ko": "법원은 피고인이 피해자 집 반경 오백 미터 안에 접근하지 못하게 했어요.",
+   "blank": "รัศมี",
+   "src": "made"
+  },
+  {
+   "text": "โรงพยาบาลนี้รับผู้ป่วยจากหมู่บ้านในรัศมีห้าสิบกิโลเมตร",
+   "en": "This hospital takes patients from villages within a fifty-kilometer radius.",
+   "ko": "이 병원은 반경 오십 킬로미터 안의 마을 환자들을 받아요.",
+   "blank": "รัศมี",
+   "src": "made"
+  }
+ ],
  "w|ราก": [
   {
    "text": "รากต้นไม้แผ่ใต้ดิน",
@@ -41623,6 +42103,22 @@
    "en": "Can I see the price?",
    "ko": "가격 좀 볼 수 있어요?",
    "blank": "ราคา"
+  }
+ ],
+ "w|ราง": [
+  {
+   "text": "คดีนี้เกี่ยวกับรถบรรทุกที่จอดขวางรางรถไฟจนเกิดอุบัติเหตุ",
+   "en": "This case concerns a truck parked across the railway track that caused an accident.",
+   "ko": "이 사건은 선로를 가로막고 서 있던 트럭 때문에 일어난 사고예요.",
+   "blank": "ราง",
+   "src": "made"
+  },
+  {
+   "text": "ม่านรอบเตียงผู้ป่วยเลื่อนไปตามรางบนเพดานได้อย่างเงียบเชียบ",
+   "en": "The curtain around the patient's bed slides quietly along a track on the ceiling.",
+   "ko": "환자 침대 주변 커튼은 천장 레일을 따라 조용히 움직여요.",
+   "blank": "ราง",
+   "src": "made"
   }
  ],
  "w|ร่าง": [
@@ -41698,6 +42194,22 @@
    "en": "A customer told Wanna that this egg cake recipe was once made for the royal family.",
    "ko": "한 손님이 이 계란빵 레시피가 예전에 왕실에 바쳐졌다고 완나에게 이야기했어요.",
    "blank": "ราชวงศ์",
+   "src": "made"
+  }
+ ],
+ "w|ราชสำนัก": [
+  {
+   "text": "อนันต์ค้นคดีเก่าสมัยที่ราชสำนักยังเป็นผู้ตัดสินข้อพิพาท",
+   "en": "Anan looked up old cases from the era when the royal court still decided disputes.",
+   "ko": "아난은 왕실이 분쟁을 판결하던 시절의 옛 사건을 찾아봤어요.",
+   "blank": "ราชสำนัก",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเล่าว่าโรงพยาบาลแห่งนี้เดิมทีราชสำนักสร้างไว้รักษาคนยากจน",
+   "en": "Pranee says this hospital was originally built by the royal court to treat the poor.",
+   "ko": "쁘라니는 이 병원이 원래 가난한 사람들을 치료하려고 왕실이 지은 곳이라고 말해요.",
+   "blank": "ราชสำนัก",
    "src": "made"
   }
  ],
@@ -42026,6 +42538,22 @@
    "en": "Suda read that the district held a meeting for residents to give their views on the new road.",
    "ko": "수다는 구청이 새 도로에 대해 주민 의견을 듣는 모임을 열었다는 기사를 읽었어요.",
    "blank": "ราษฎร",
+   "src": "made"
+  }
+ ],
+ "w|รำ": [
+  {
+   "text": "ลูกสาวของอนันต์ไปรำในงานวัดหลังศาลเลิกเย็นวันศุกร์",
+   "en": "Anan's daughter performed a Thai dance at the temple fair after court let out on Friday evening.",
+   "ko": "금요일 저녁 재판이 끝난 뒤 아난의 딸은 절 축제에서 태국 춤을 췄어요.",
+   "blank": "รำ",
+   "src": "made"
+  },
+  {
+   "text": "ในงานวันพยาบาล ปราณีกับเพื่อนรำไทยบนเวทีหน้าตึกผู้ป่วยนอก",
+   "en": "On Nurses' Day, Pranee and her friends did a Thai dance on the stage in front of the outpatient building.",
+   "ko": "간호사의 날에 쁘라니와 친구들은 외래 건물 앞 무대에서 태국 춤을 췄어요.",
+   "blank": "รำ",
    "src": "made"
   }
  ],
@@ -42731,6 +43259,22 @@
    "en": "I want to hear your story.",
    "ko": "네 이야기를 듣고 싶어.",
    "blank": "เรื่องราว"
+  }
+ ],
+ "w|เรื่องสั้น": [
+  {
+   "text": "ยามว่าง อนันต์ชอบเขียนเรื่องสั้นเกี่ยวกับชีวิตคนในศาล",
+   "en": "In his free time, Anan likes writing short stories about life in the courts.",
+   "ko": "한가할 때 아난은 법정 사람들의 삶에 관한 단편 소설을 즐겨 써요.",
+   "blank": "เรื่องสั้น",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีอ่านเรื่องสั้นให้เด็กในหอผู้ป่วยฟังก่อนนอน",
+   "en": "Pranee reads short stories to the children in the ward before bed.",
+   "ko": "쁘라니는 잠들기 전 병동 아이들에게 단편 이야기를 읽어 줘요.",
+   "blank": "เรื่องสั้น",
+   "src": "made"
   }
  ],
  "w|เรื่องใหญ่": [
@@ -47663,6 +48207,22 @@
    "src": "made"
   }
  ],
+ "w|สนธิสัญญา": [
+  {
+   "text": "อนันต์อ้างสนธิสัญญาระหว่างประเทศในคดีส่งตัวผู้ร้ายข้ามแดน",
+   "en": "Anan cited an international treaty in the extradition case.",
+   "ko": "아난은 범죄인 인도 사건에서 국제 조약을 근거로 들었어요.",
+   "blank": "สนธิสัญญา",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีอ่านบทความว่าหลายประเทศลงนามสนธิสัญญาควบคุมยาสูบ",
+   "en": "Pranee read an article that many countries signed a tobacco control treaty.",
+   "ko": "쁘라니는 여러 나라가 담배 규제 조약에 서명했다는 기사를 읽었어요.",
+   "blank": "สนธิสัญญา",
+   "src": "made"
+  }
+ ],
  "w|สนอง": [
   {
    "text": "ชัยบอกว่าบริการออนไลน์ใหม่สนองความต้องการของคนทำงานได้ดี",
@@ -49417,6 +49977,22 @@
    "src": "made"
   }
  ],
+ "w|สัมพันธภาพ": [
+  {
+   "text": "อนันต์พยายามรักษาสัมพันธภาพที่ดีกับอัยการแม้จะอยู่คนละฝ่าย",
+   "en": "Anan tries to keep a good relationship with the prosecutor even though they're on opposite sides.",
+   "ko": "아난은 반대편이어도 검사와 좋은 관계를 유지하려고 해요.",
+   "blank": "สัมพันธภาพ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเชื่อว่าสัมพันธภาพที่ดีระหว่างพยาบาลกับผู้ป่วยช่วยให้หายเร็วขึ้น",
+   "en": "Pranee believes a good relationship between nurses and patients helps recovery.",
+   "ko": "쁘라니는 간호사와 환자의 좋은 관계가 회복을 빠르게 한다고 믿어요.",
+   "blank": "สัมพันธภาพ",
+   "src": "made"
+  }
+ ],
  "w|สัมภาษณ์": [
   {
    "text": "พรุ่งนี้ฉันต้องไปสัมภาษณ์งาน",
@@ -49546,6 +50122,22 @@
    "en": "A yellow triangular sign warns that the floor here is slippery.",
    "ko": "노란 삼각형 표지판이 여기 바닥이 미끄럽다고 경고해요.",
    "blank": "สามเหลี่ยม",
+   "src": "made"
+  }
+ ],
+ "w|สามัญ": [
+  {
+   "text": "อนันต์อธิบายเรื่องกฎหมายด้วยภาษาสามัญเพื่อให้ลูกความเข้าใจง่าย",
+   "en": "Anan explains legal matters in plain language so his clients can understand easily.",
+   "ko": "아난은 의뢰인이 쉽게 이해하도록 법률 문제를 평이한 말로 설명해요.",
+   "blank": "สามัญ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบอกว่าโรคนี้พบได้สามัญในคนสูงอายุ ไม่ต้องตกใจ",
+   "en": "Pranee says this condition is common in older people, so there's no need to panic.",
+   "ko": "쁘라니는 이 병이 노인에게 흔하니 놀랄 필요 없다고 말해요.",
+   "blank": "สามัญ",
    "src": "made"
   }
  ],
@@ -55287,6 +55879,22 @@
    "blank": "อนุญาต"
   }
  ],
+ "w|อนุบาล": [
+  {
+   "text": "หลังเลิกศาล อนันต์รีบไปรับลูกชายที่โรงเรียนอนุบาล",
+   "en": "After court, Anan hurried to pick up his son from kindergarten.",
+   "ko": "재판이 끝나자 아난은 서둘러 유치원에 아들을 데리러 갔어요.",
+   "blank": "อนุบาล",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีให้วัคซีนเด็กนักเรียนอนุบาลที่มาจากโรงเรียนใกล้ๆ",
+   "en": "Pranee gave vaccines to kindergarteners from a nearby school.",
+   "ko": "쁘라니는 근처 유치원생들에게 백신을 놓았어요.",
+   "blank": "อนุบาล",
+   "src": "made"
+  }
+ ],
  "w|อนุมัติ": [
   {
    "text": "หัวหน้าจะอนุมัติคำขอวันนี้",
@@ -56899,6 +57507,22 @@
    "src": "made"
   }
  ],
+ "w|อิสรภาพ": [
+  {
+   "text": "ชายที่ถูกขังผิดตัวได้รับอิสรภาพหลังอนันต์พิสูจน์ความจริงได้",
+   "en": "The wrongly jailed man regained his freedom after Anan proved the truth.",
+   "ko": "억울하게 갇혔던 남자는 아난이 진실을 밝혀 자유를 되찾았어요.",
+   "blank": "อิสรภาพ",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ป่วยอัมพาตบอกปราณีว่าการได้เดินอีกครั้งคืออิสรภาพที่ยิ่งใหญ่ที่สุด",
+   "en": "A paralyzed patient told Pranee that walking again would be the greatest freedom.",
+   "ko": "마비 환자는 다시 걷는 게 가장 큰 자유라고 쁘라니에게 말했어요.",
+   "blank": "อิสรภาพ",
+   "src": "made"
+  }
+ ],
  "w|อิสระ": [
   {
    "text": "ฉันอยากมีชีวิตที่เป็นอิสระ",
@@ -57332,6 +57956,22 @@
    "en": "Fon put her chest X-ray film in an envelope on the luggage rack.",
    "ko": "폰은 폐 엑스레이 필름을 봉투에 넣어 짐칸에 올려 두었어요.",
    "blank": "เอกซเรย์",
+   "src": "made"
+  }
+ ],
+ "w|เอกราช": [
+  {
+   "text": "อนันต์สอนนักศึกษาฝึกงานเรื่องรัฐธรรมนูญฉบับแรกหลังประเทศได้เอกราช",
+   "en": "Anan taught interns about the first constitution after the country gained independence.",
+   "ko": "아난은 실습생들에게 나라가 독립한 뒤 첫 헌법에 대해 가르쳤어요.",
+   "blank": "เอกราช",
+   "src": "made"
+  },
+  {
+   "text": "ในวันชาติ คนไข้ชาวเมียนมาร์เล่าให้ปราณีฟังว่าประเทศของเขาได้เอกราชเมื่อไร",
+   "en": "On National Day, a patient from Myanmar told Pranee when his country gained independence.",
+   "ko": "국경일에 미얀마 출신 환자가 자기 나라가 언제 독립했는지 쁘라니에게 이야기해 줬어요.",
+   "blank": "เอกราช",
    "src": "made"
   }
  ],

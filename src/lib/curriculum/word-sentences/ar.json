@@ -4107,6 +4107,22 @@
    "blank": "ألم"
   }
  ],
+ "w|ألماس": [
+  {
+   "text": "قال أحمد مازحا إن النجوم فوق المخيم تلمع كالألماس.",
+   "en": "Ahmed joked that the stars over the campsite shine like diamonds.",
+   "ko": "아흐마드는 야영지 위 별들이 다이아몬드처럼 빛난다고 농담했어요.",
+   "blank": "كالألماس",
+   "src": "made"
+  },
+  {
+   "text": "سألت مريم بائع الحلي إن كان الحجر ألماسا حقيقيا.",
+   "en": "Mariam asked the jewelry seller if the stone was a real diamond.",
+   "ko": "마리암은 장신구 상인에게 그 돌이 진짜 다이아몬드냐고 물었어요.",
+   "blank": "ألماسا",
+   "src": "made"
+  }
+ ],
  "w|ألهم": [
   {
    "text": "ألهم منظر الأمواج عمر أن يرسم لوحة جديدة.",
@@ -5495,6 +5511,22 @@
    "blank": "إبريق"
   }
  ],
+ "w|إبلاغ": [
+  {
+   "text": "اتصل أحمد بحارس الغابة من أجل إبلاغ عن دخان قرب الوادي.",
+   "en": "Ahmed called the forest ranger to report smoke near the valley.",
+   "ko": "아흐마드는 골짜기 근처 연기를 신고하려고 산림 감시원에게 전화했어요.",
+   "blank": "إبلاغ",
+   "src": "made"
+  },
+  {
+   "text": "تعاونت مريم مع الشرطة في إبلاغ عن محفظة ضائعة.",
+   "en": "Mariam cooperated with the police in reporting a lost wallet.",
+   "ko": "마리암은 잃어버린 지갑 신고를 하며 경찰을 도왔어요.",
+   "blank": "إبلاغ",
+   "src": "made"
+  }
+ ],
  "w|إثارة": [
   {
    "text": "بلا إثارة، احكي بهدوء.",
@@ -6214,6 +6246,22 @@
    "en": "Before bed, Nour makes sure all the lights are off.",
    "ko": "자기 전에 누르는 불을 다 껐는지 확인해요.",
    "blank": "إطفاء",
+   "src": "made"
+  }
+ ],
+ "w|إطفائي": [
+  {
+   "text": "التقى أحمد في المخيم بإطفائي يعمل في حماية الغابات.",
+   "en": "At the campsite, Ahmed met a firefighter who works protecting the forests.",
+   "ko": "아흐마드는 야영지에서 산림 보호 일을 하는 소방관을 만났어요.",
+   "blank": "بإطفائي",
+   "src": "made"
+  },
+  {
+   "text": "وقف إطفائي في السوق يتأكد من أن قوارير الغاز آمنة، وسألته مريم عن السبب.",
+   "en": "A firefighter stood in the market checking that gas bottles were safe, and Mariam asked him why.",
+   "ko": "소방관이 시장에서 가스통이 안전한지 살피고 있어서 마리암이 이유를 물었어요.",
+   "blank": "إطفائي",
    "src": "made"
   }
  ],
@@ -9729,6 +9777,22 @@
    "src": "made"
   }
  ],
+ "w|استهلاك": [
+  {
+   "text": "قلل أحمد استهلاك الماء لأن النبع بعيد عن المخيم.",
+   "en": "Ahmed cut down his water consumption because the spring is far from the campsite.",
+   "ko": "샘이 야영지에서 멀어서 아흐마드는 물 쓰는 양을 줄였어요.",
+   "blank": "استهلاك",
+   "src": "made"
+  },
+  {
+   "text": "قالت مريم إن استهلاك الناس للحلوى يرتفع في الأعياد.",
+   "en": "Mariam said people's consumption of sweets goes up during holidays.",
+   "ko": "마리암은 명절이면 사람들이 과자를 더 많이 산다고 했어요.",
+   "blank": "استهلاك",
+   "src": "made"
+  }
+ ],
  "w|استهلك": [
   {
    "text": "استهلك الكثير من الطاقة اليوم.",
@@ -12651,6 +12715,22 @@
    "blank": "انكسر"
   }
  ],
+ "w|انكماش": [
+  {
+   "text": "تحدث أحمد ورفاقه حول النار عن انكماش الاقتصاد هذا العام.",
+   "en": "Ahmed and his companions talked around the fire about the economy shrinking this year.",
+   "ko": "아흐마드 일행은 모닥불 가에서 올해 경기 위축에 대해 이야기했어요.",
+   "blank": "انكماش",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت مريم انكماش عدد الزبائن في آخر الشهر.",
+   "en": "Mariam noticed the number of customers shrinking at the end of the month.",
+   "ko": "마리암은 월말에 손님 수가 줄어드는 걸 알아챘어요.",
+   "blank": "انكماش",
+   "src": "made"
+  }
+ ],
  "w|انكمش": [
   {
    "text": "انكمش عمر تحت معطفه حين هبت ريح باردة من الجبل.",
@@ -13605,6 +13685,22 @@
    "blank": "بحر"
   }
  ],
+ "w|بحرص": [
+  {
+   "text": "أطفأ أحمد النار بحرص قبل أن ينام.",
+   "en": "Ahmed carefully put out the fire before going to sleep.",
+   "ko": "아흐마드는 자기 전에 불을 조심스럽게 껐어요.",
+   "blank": "بحرص",
+   "src": "made"
+  },
+  {
+   "text": "لفت مريم الأكواب الزجاجية بالورق بحرص.",
+   "en": "Mariam carefully wrapped the glass cups in paper.",
+   "ko": "마리암은 유리컵을 종이로 조심스럽게 쌌어요.",
+   "blank": "بحرص",
+   "src": "made"
+  }
+ ],
  "w|بحري": [
   {
    "text": "زار عمر المتحف البحري الصغير في آخر الكورنيش.",
@@ -14121,6 +14217,22 @@
    "en": "We climbed an extinct volcano.",
    "ko": "우리는 잠든 화산을 올랐어.",
    "blank": "بركان"
+  }
+ ],
+ "w|بركاني": [
+  {
+   "text": "مشى أحمد على صخور سوداء من أصل بركاني.",
+   "en": "Ahmed walked on black rocks of volcanic origin.",
+   "ko": "아흐마드는 화산에서 생긴 검은 바위 위를 걸었어요.",
+   "blank": "بركاني",
+   "src": "made"
+  },
+  {
+   "text": "وجدت مريم في السوق حجرا بركانيا يستعمل لتنظيف الأقدام.",
+   "en": "Mariam found a volcanic stone in the market used for cleaning feet.",
+   "ko": "마리암은 시장에서 발 각질 미는 데 쓰는 화산석을 찾았어요.",
+   "blank": "بركانيا",
+   "src": "made"
   }
  ],
  "w|بركة": [
@@ -16351,6 +16463,22 @@
    "en": "I need the next page.",
    "ko": "나는 다음 페이지가 필요해.",
    "blank": "التال"
+  }
+ ],
+ "w|تاليا": [
+  {
+   "text": "نصب أحمد الخيمة أولا، ثم جمع الحطب تاليا.",
+   "en": "Ahmed pitched the tent first, then gathered firewood next.",
+   "ko": "아흐마드는 먼저 텐트를 치고 그다음 장작을 모았어요.",
+   "blank": "تاليا",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم الخضار أولا، ثم مرت تاليا على بائع الأقمشة.",
+   "en": "Mariam bought the vegetables first, and next stopped by the fabric seller.",
+   "ko": "마리암은 먼저 채소를 사고 다음으로 옷감 가게에 들렀어요.",
+   "blank": "تاليا",
+   "src": "made"
   }
  ],
  "w|تام": [
@@ -20581,6 +20709,22 @@
    "src": "made"
   }
  ],
+ "w|تلميح": [
+  {
+   "text": "فهم أحمد تلميح صديقه بأن دوره في غسل الصحون قد جاء.",
+   "en": "Ahmed got his friend's hint that it was his turn to wash the dishes.",
+   "ko": "아흐마드는 이제 설거지할 차례라는 친구의 눈치를 알아챘어요.",
+   "blank": "تلميح",
+   "src": "made"
+  },
+  {
+   "text": "أعطت مريم جارتها في السوق تلميحا عن زبون لا يدفع.",
+   "en": "Mariam gave her market neighbor a hint about a customer who doesn't pay.",
+   "ko": "마리암은 옆 노점 이웃에게 돈을 안 내는 손님에 대해 귀띔했어요.",
+   "blank": "تلميحا",
+   "src": "made"
+  }
+ ],
  "w|تلميذ": [
   {
    "text": "أنا تلميذ في المدرسة الابتدائية.",
@@ -22983,6 +23127,22 @@
    "blank": "جبل"
   }
  ],
+ "w|جبلي": [
+  {
+   "text": "نصب أحمد خيمته في واد جبلي بعيد عن الطريق.",
+   "en": "Ahmed pitched his tent in a mountain valley far from the road.",
+   "ko": "아흐마드는 길에서 먼 산골짜기에 텐트를 쳤어요.",
+   "blank": "جبلي",
+   "src": "made"
+  },
+  {
+   "text": "تشتري مريم العسل الجبلي من رجل ينزل من القرية كل خميس.",
+   "en": "Mariam buys mountain honey from a man who comes down from the village every Thursday.",
+   "ko": "마리암은 목요일마다 마을에서 내려오는 아저씨에게 산꿀을 사요.",
+   "blank": "الجبلي",
+   "src": "made"
+  }
+ ],
  "w|جبن": [
   {
    "text": "وضعت جبن على الخبز.",
@@ -24861,6 +25021,22 @@
    "blank": "جيل"
   }
  ],
+ "w|جينز": [
+  {
+   "text": "تمزق جينز أحمد حين علق بشجيرة شوك.",
+   "en": "Ahmed's jeans tore when they caught on a thorny bush.",
+   "ko": "아흐마드의 청바지가 가시덤불에 걸려 찢어졌어요.",
+   "blank": "جينز",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم سروال جينز أزرق من بسطة صغيرة.",
+   "en": "Mariam bought a pair of blue jeans from a small stall.",
+   "ko": "마리암은 작은 노점에서 파란 청바지를 샀어요.",
+   "blank": "جينز",
+   "src": "made"
+  }
+ ],
  "w|حائر": [
   {
    "text": "الطالب حائر في الاختيار.",
@@ -26659,6 +26835,22 @@
    "en": "Everyone attended the meeting.",
    "ko": "모두가 회의에 참석했어.",
    "blank": "حضر"
+  }
+ ],
+ "w|حضري": [
+  {
+   "text": "هرب أحمد من ضجيج الحياة الحضرية إلى الجبال يومين.",
+   "en": "Ahmed escaped the noise of urban life to the mountains for two days.",
+   "ko": "아흐마드는 이틀 동안 도시 생활의 소음을 피해 산으로 갔어요.",
+   "blank": "الحضرية",
+   "src": "made"
+  },
+  {
+   "text": "يقع السوق الذي تحبه مريم في قلب منطقة حضرية مزدحمة.",
+   "en": "The market Mariam loves is in the heart of a crowded urban area.",
+   "ko": "마리암이 좋아하는 시장은 붐비는 도심 한가운데 있어요.",
+   "blank": "حضرية",
+   "src": "made"
   }
  ],
  "w|حضور": [
@@ -28935,6 +29127,22 @@
    "src": "made"
   }
  ],
+ "w|خصب": [
+  {
+   "text": "قال دليل الرحلة لأحمد إن تراب الوادي خصب لأن النهر يفيض عليه.",
+   "en": "The trip guide told Ahmed the valley soil is fertile because the river floods it.",
+   "ko": "여행 안내인은 아흐마드에게 강이 넘쳐서 골짜기 흙이 기름지다고 했어요.",
+   "blank": "خصب",
+   "src": "made"
+  },
+  {
+   "text": "قال البائع لمريم إن البطاطا جاءت من سهل خصب في الشمال.",
+   "en": "The seller told Mariam the potatoes came from a fertile plain in the north.",
+   "ko": "상인은 마리암에게 감자가 북쪽의 기름진 들판에서 왔다고 했어요.",
+   "blank": "خصب",
+   "src": "made"
+  }
+ ],
  "w|خصر": [
   {
    "text": "ارتديت حزاماً حول خصر.",
@@ -31035,6 +31243,22 @@
    "en": "The dizziness comes and goes sometimes.",
    "ko": "어지러움이 가끔 왔다가 가.",
    "blank": "الدوخة"
+  }
+ ],
+ "w|دودة": [
+  {
+   "text": "وضع أحمد دودة في الصنارة وانتظر السمك عند البحيرة.",
+   "en": "Ahmed put a worm on the hook and waited for fish at the lake.",
+   "ko": "아흐마드는 낚싯바늘에 지렁이를 끼우고 호숫가에서 고기를 기다렸어요.",
+   "blank": "دودة",
+   "src": "made"
+  },
+  {
+   "text": "أرجعت مريم التفاحة للبائع لأنها وجدت فيها دودة.",
+   "en": "Mariam returned the apple to the seller because she found a worm in it.",
+   "ko": "마리암은 사과에서 벌레를 발견하고 상인에게 돌려줬어요.",
+   "blank": "دودة",
+   "src": "made"
   }
  ],
  "w|دور": [
@@ -33983,6 +34207,22 @@
    "blank": "ريف"
   }
  ],
+ "w|ريفي": [
+  {
+   "text": "نام أحمد في بيت ريفي قديم حين اشتد المطر.",
+   "en": "Ahmed slept in an old country house when the rain got heavy.",
+   "ko": "비가 거세지자 아흐마드는 오래된 시골집에서 잤어요.",
+   "blank": "ريفي",
+   "src": "made"
+  },
+  {
+   "text": "تبيع مريم الخبز الريفي الذي تخبزه أمها في الفرن الطيني.",
+   "en": "Mariam sells the country bread her mother bakes in the clay oven.",
+   "ko": "마리암은 어머니가 흙 화덕에서 구운 시골 빵을 팔아요.",
+   "blank": "الريفي",
+   "src": "made"
+  }
+ ],
  "w|زائد": [
   {
    "text": "هذا الوزن زائد عن الحد المطلوب.",
@@ -34227,6 +34467,22 @@
    "en": "Planting trees helps the environment.",
    "ko": "나무 심기는 환경에 도움이 된다.",
    "blank": "زراعة"
+  }
+ ],
+ "w|زراعي": [
+  {
+   "text": "مر أحمد في طريقه بأراض زراعية واسعة مزروعة بالقمح.",
+   "en": "On his way, Ahmed passed wide farmland planted with wheat.",
+   "ko": "아흐마드는 가는 길에 밀이 심긴 넓은 농지를 지났어요.",
+   "blank": "زراعية",
+   "src": "made"
+  },
+  {
+   "text": "تشتري مريم الخضار من تعاونية زراعية تبيع بأسعار عادلة.",
+   "en": "Mariam buys vegetables from an agricultural cooperative that sells at fair prices.",
+   "ko": "마리암은 정직한 값에 파는 농업 협동조합에서 채소를 사요.",
+   "blank": "زراعية",
+   "src": "made"
   }
  ],
  "w|زرافة": [
@@ -34485,6 +34741,22 @@
    "en": "Every flower has a unique scent.",
    "ko": "모든 꽃마다 독특한 향이 있어.",
    "blank": "زهرة"
+  }
+ ],
+ "w|زهيد": [
+  {
+   "text": "استأجر أحمد الخيمة الثانية بمبلغ زهيد من نادي المشي.",
+   "en": "Ahmed rented the second tent for a small sum from the hiking club.",
+   "ko": "아흐마드는 등산 동호회에서 두 번째 텐트를 싼값에 빌렸어요.",
+   "blank": "زهيد",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم سلة كاملة من البرتقال بثمن زهيد قبل إغلاق السوق.",
+   "en": "Mariam bought a whole basket of oranges for a trifling price before the market closed.",
+   "ko": "마리암은 시장이 닫기 전에 오렌지 한 바구니를 헐값에 샀어요.",
+   "blank": "زهيد",
+   "src": "made"
   }
  ],
  "w|زواج": [
@@ -34811,6 +35083,22 @@
    "en": "The house overlooks the sea coast.",
    "ko": "집이 해안가를 내려다봐.",
    "blank": "ساحل"
+  }
+ ],
+ "w|ساحلي": [
+  {
+   "text": "قضى أحمد الليلة الأولى في مخيم ساحلي قرب الصخور.",
+   "en": "Ahmed spent the first night at a coastal campsite near the rocks.",
+   "ko": "아흐마드는 첫날 밤을 바위 근처 해안 야영지에서 보냈어요.",
+   "blank": "ساحلي",
+   "src": "made"
+  },
+  {
+   "text": "تبيع امرأة في السوق ملحا من بلدة ساحلية وتشتري منها مريم.",
+   "en": "A woman in the market sells salt from a coastal town and Mariam buys from her.",
+   "ko": "시장에서 한 여자가 해안 마을 소금을 파는데 마리암이 거기서 사요.",
+   "blank": "ساحلية",
+   "src": "made"
   }
  ],
  "w|ساخط": [
@@ -38337,6 +38625,22 @@
    "blank": "الشرق"
   }
  ],
+ "w|شرقا": [
+  {
+   "text": "سار أحمد شرقا ليرى شروق الشمس من فوق التل.",
+   "en": "Ahmed walked east to see the sunrise from the hilltop.",
+   "ko": "아흐마드는 언덕 위에서 해돋이를 보려고 동쪽으로 걸었어요.",
+   "blank": "شرقا",
+   "src": "made"
+  },
+  {
+   "text": "انتقل سوق الجمعة شرقا إلى ساحة أوسع، وتبعته مريم.",
+   "en": "The Friday market moved east to a wider square, and Mariam followed it.",
+   "ko": "금요 시장이 동쪽의 더 넓은 광장으로 옮겨 가자 마리암도 따라갔어요.",
+   "blank": "شرقا",
+   "src": "made"
+  }
+ ],
  "w|شركة": [
   {
    "text": "أعمل في شركة برمجة صغيرة.",
@@ -41081,6 +41385,22 @@
    "en": "We should drive carefully when there is fog.",
    "ko": "안개가 있을 때는 조심히 운전해야 해.",
    "blank": "الضباب"
+  }
+ ],
+ "w|ضبابي": [
+  {
+   "text": "استيقظ أحمد على صباح ضبابي لا يرى فيه الجبل المقابل.",
+   "en": "Ahmed woke to a foggy morning in which he couldn't see the mountain opposite.",
+   "ko": "아흐마드는 맞은편 산이 안 보일 만큼 안개 낀 아침에 깼어요.",
+   "blank": "ضبابي",
+   "src": "made"
+  },
+  {
+   "text": "خرجت مريم إلى السوق في يوم ضبابي ولم ترفع البائعات المظلات بعد.",
+   "en": "Mariam went to the market on a foggy day before the women sellers had put up their umbrellas.",
+   "ko": "마리암은 안개 낀 날 상인들이 아직 차양을 펴기 전에 시장에 나갔어요.",
+   "blank": "ضبابي",
+   "src": "made"
   }
  ],
  "w|ضبط": [
@@ -48127,6 +48447,22 @@
    "blank": "فرز"
   }
  ],
+ "w|فرس": [
+  {
+   "text": "رأى أحمد فرسا بيضاء ترعى قرب المخيم.",
+   "en": "Ahmed saw a white mare grazing near the campsite.",
+   "ko": "아흐마드는 야영지 근처에서 풀을 뜯는 흰 암말을 봤어요.",
+   "blank": "فرسا",
+   "src": "made"
+  },
+  {
+   "text": "يجر عربة بائع البطيخ فرس عجوز تعرفها مريم منذ طفولتها.",
+   "en": "The watermelon seller's cart is pulled by an old mare Mariam has known since childhood.",
+   "ko": "수박 장수의 수레는 마리암이 어릴 때부터 알던 늙은 암말이 끌어요.",
+   "blank": "فرس",
+   "src": "made"
+  }
+ ],
  "w|فرش": [
   {
    "text": "فرشت أم سامي السجادة الجديدة في غرفة الجلوس.",
@@ -49363,6 +49699,22 @@
    "blank": "قاتل"
   }
  ],
+ "w|قاحل": [
+  {
+   "text": "بعد ساعة من المشي وجد أحمد نفسه في أرض قاحلة لا شجر فيها.",
+   "en": "After an hour of walking, Ahmed found himself in barren land with no trees.",
+   "ko": "한 시간을 걷자 아흐마드는 나무 하나 없는 메마른 땅에 와 있었어요.",
+   "blank": "قاحلة",
+   "src": "made"
+  },
+  {
+   "text": "حكى بائع التمر لمريم أن نخيله ينمو في أرض قاحلة قرب الصحراء.",
+   "en": "The date seller told Mariam his palms grow in barren land near the desert.",
+   "ko": "대추야자 상인은 마리암에게 자기 야자나무가 사막 근처 메마른 땅에서 자란다고 했어요.",
+   "blank": "قاحلة",
+   "src": "made"
+  }
+ ],
  "w|قاد": [
   {
    "text": "قاد أبي السيارة بسرعة.",
@@ -49417,6 +49769,38 @@
    "en": "The fishing boat returned early today.",
    "ko": "어선이 오늘 일찍 돌아왔어.",
    "blank": "قارب"
+  }
+ ],
+ "w|قارة": [
+  {
+   "text": "يحلم أحمد بأن يخيم يوما في كل قارة من قارات العالم.",
+   "en": "Ahmed dreams of camping one day on every continent in the world.",
+   "ko": "아흐마드는 언젠가 세계 모든 대륙에서 야영해 보는 게 꿈이에요.",
+   "blank": "قارة",
+   "src": "made"
+  },
+  {
+   "text": "تبيع مريم توابل جاءت من قارة بعيدة عبر البحر.",
+   "en": "Mariam sells spices that came from a distant continent across the sea.",
+   "ko": "마리암은 바다 건너 먼 대륙에서 온 향신료를 팔아요.",
+   "blank": "قارة",
+   "src": "made"
+  }
+ ],
+ "w|قارس": [
+  {
+   "text": "لم يتوقع أحمد بردا قارسا كهذا في الليل.",
+   "en": "Ahmed didn't expect such bitter cold at night.",
+   "ko": "아흐마드는 밤에 이렇게 매서운 추위가 올 줄 몰랐어요.",
+   "blank": "قارسا",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم قفازات صوفية بسبب البرد القارس في السوق المفتوح.",
+   "en": "Mariam bought woolen gloves because of the biting cold in the open market.",
+   "ko": "마리암은 노천 시장의 매서운 추위 때문에 털장갑을 샀어요.",
+   "blank": "القارس",
+   "src": "made"
   }
  ],
  "w|قارن": [
@@ -53625,6 +54009,22 @@
    "blank": "لامع"
   }
  ],
+ "w|لاهب": [
+  {
+   "text": "احتمى أحمد بظل صخرة من شمس الظهيرة اللاهبة.",
+   "en": "Ahmed sheltered in a rock's shade from the scorching midday sun.",
+   "ko": "아흐마드는 바위 그늘에서 이글거리는 한낮 해를 피했어요.",
+   "blank": "اللاهبة",
+   "src": "made"
+  },
+  {
+   "text": "تتسوق مريم في الصباح الباكر قبل أن يصير الحر لاهبا.",
+   "en": "Mariam shops early in the morning before the heat gets scorching.",
+   "ko": "마리암은 더위가 이글거리기 전 이른 아침에 장을 봐요.",
+   "blank": "لاهبا",
+   "src": "made"
+  }
+ ],
  "w|لباس": [
   {
    "text": "اختار عمر لباسا تقليديا لكل الممثلين في المشهد الأخير.",
@@ -57071,6 +57471,22 @@
    "blank": "مثلما"
   }
  ],
+ "w|مثمر": [
+  {
+   "text": "وجد أحمد شجرة تين مثمرة قرب النبع.",
+   "en": "Ahmed found a fruit-bearing fig tree near the spring.",
+   "ko": "아흐마드는 샘 근처에서 열매 맺은 무화과나무를 찾았어요.",
+   "blank": "مثمرة",
+   "src": "made"
+  },
+  {
+   "text": "باع الرجل لمريم شتلة ليمون مثمرة بسعر معقول.",
+   "en": "The man sold Mariam a fruit-bearing lemon sapling at a reasonable price.",
+   "ko": "그 남자는 마리암에게 열매가 달린 레몬 묘목을 적당한 값에 팔았어요.",
+   "blank": "مثمرة",
+   "src": "made"
+  }
+ ],
  "w|مثير": [
   {
    "text": "كان الفيلم مثير جداً وممتع.",
@@ -58359,6 +58775,22 @@
    "src": "made"
   }
  ],
+ "w|مخفض": [
+  {
+   "text": "اشترى أحمد كيس النوم بسعر مخفض في نهاية الموسم.",
+   "en": "Ahmed bought the sleeping bag at a reduced price at the end of the season.",
+   "ko": "아흐마드는 시즌 말에 침낭을 할인가로 샀어요.",
+   "blank": "مخفض",
+   "src": "made"
+  },
+  {
+   "text": "علقت مريم على بسطتها لافتة بالأسعار المخفضة.",
+   "en": "Mariam hung a sign with the reduced prices on her stall.",
+   "ko": "마리암은 자기 노점에 할인 가격표를 걸었어요.",
+   "blank": "المخفضة",
+   "src": "made"
+  }
+ ],
  "w|مخفي": [
   {
    "text": "وجد سامي باب قبو مخفيا خلف رفوف المطبخ القديمة.",
@@ -58595,6 +59027,22 @@
    "src": "made"
   }
  ],
+ "w|مدع": [
+  {
+   "text": "كان بين رفاق أحمد في الرحلة مدع عام يحب الصيد.",
+   "en": "Among Ahmed's companions on the trip was a public prosecutor who loves fishing.",
+   "ko": "아흐마드의 여행 일행 중에는 낚시를 좋아하는 검사가 있었어요.",
+   "blank": "مدع",
+   "src": "made"
+  },
+  {
+   "text": "اشترى رجل يقول إنه مدع في المحكمة كيلو زيتون من مريم.",
+   "en": "A man who said he was a prosecutor at the court bought a kilo of olives from Mariam.",
+   "ko": "법원 검사라는 남자가 마리암에게서 올리브 일 킬로를 샀어요.",
+   "blank": "مدع",
+   "src": "made"
+  }
+ ],
  "w|مدعي": [
   {
    "text": "المدعي شرح قصته للقاضي.",
@@ -58636,6 +59084,22 @@
    "en": "Sara wrote that she hears the iftar cannon every evening in Ramadan.",
    "ko": "사라는 라마단 동안 매일 저녁 이프타르 대포 소리를 듣는다고 썼어요.",
    "blank": "مدفع",
+   "src": "made"
+  }
+ ],
+ "w|مدقق": [
+  {
+   "text": "يعمل أحمد مدققا في شركة حسابات، ويهرب إلى الطبيعة في إجازاته.",
+   "en": "Ahmed works as an auditor in an accounting firm and escapes to nature on his holidays.",
+   "ko": "아흐마드는 회계 회사 감사원으로 일하고 휴가 때면 자연으로 떠나요.",
+   "blank": "مدققا",
+   "src": "made"
+  },
+  {
+   "text": "مر مدقق من البلدية على بسطة مريم ليفحص الموازين.",
+   "en": "A municipal inspector stopped at Mariam's stall to check the scales.",
+   "ko": "시청 검사원이 저울을 확인하러 마리암의 노점에 들렀어요.",
+   "blank": "مدقق",
    "src": "made"
   }
  ],
@@ -59787,6 +60251,22 @@
    "src": "made"
   }
  ],
+ "w|مزهر": [
+  {
+   "text": "صور أحمد شجرة لوز مزهرة على حافة الطريق.",
+   "en": "Ahmed photographed a flowering almond tree at the edge of the road.",
+   "ko": "아흐마드는 길가에 꽃이 핀 아몬드 나무를 찍었어요.",
+   "blank": "مزهرة",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم أصيصا مزهرا لتضعه على نافذة المطبخ.",
+   "en": "Mariam bought a flowering pot to put on the kitchen window.",
+   "ko": "마리암은 부엌 창가에 둘 꽃 핀 화분을 샀어요.",
+   "blank": "مزهرا",
+   "src": "made"
+  }
+ ],
  "w|مزيج": [
   {
    "text": "يحضر كريم مزيجا من الأعشاب للسعال يحبه كبار السن.",
@@ -60539,6 +61019,22 @@
    "en": "The school is happy with the students' results.",
    "ko": "학교가 학생들의 결과에 만족해.",
    "blank": "مسرور"
+  }
+ ],
+ "w|مسعف": [
+  {
+   "text": "ضمد مسعف من الفريق كاحل أحمد بعد أن التوى.",
+   "en": "A paramedic from the team bandaged Ahmed's ankle after he twisted it.",
+   "ko": "아흐마드가 발목을 삐자 일행 중 응급구조사가 붕대를 감아 줬어요.",
+   "blank": "مسعف",
+   "src": "made"
+  },
+  {
+   "text": "ساعد مسعف امرأة دار رأسها من الحر بجانب بسطة مريم.",
+   "en": "A paramedic helped a woman who felt dizzy from the heat beside Mariam's stall.",
+   "ko": "응급구조사가 마리암의 노점 옆에서 더위에 어지러워진 여자를 도왔어요.",
+   "blank": "مسعف",
+   "src": "made"
   }
  ],
  "w|مسكر": [
@@ -62027,6 +62523,22 @@
    "blank": "معدن"
   }
  ],
+ "w|معدني": [
+  {
+   "text": "ملأ أحمد قارورته من نبع ماء معدني بارد.",
+   "en": "Ahmed filled his bottle from a cold mineral spring.",
+   "ko": "아흐마드는 차가운 광천수 샘에서 물병을 채웠어요.",
+   "blank": "معدني",
+   "src": "made"
+  },
+  {
+   "text": "اشترت مريم صندوقا معدنيا قديما لتضع فيه نقودها.",
+   "en": "Mariam bought an old metal box to keep her money in.",
+   "ko": "마리암은 돈을 넣어 둘 낡은 철제 상자를 샀어요.",
+   "blank": "معدنيا",
+   "src": "made"
+  }
+ ],
  "w|معذرة": [
   {
    "text": "معذرة، هل يمكنك مساعدتي؟",
@@ -62254,6 +62766,22 @@
    "en": "Rana submitted an invoice for a shipment of canned food as evidence in the case.",
    "ko": "라나는 통조림 식품 화물 송장을 증거로 냈어요.",
    "blank": "معلب",
+   "src": "made"
+  }
+ ],
+ "w|معلق": [
+  {
+   "text": "عبر أحمد جسرا معلقا فوق الوادي وهو يمسك الحبل بقوة.",
+   "en": "Ahmed crossed a suspension bridge over the valley, holding the rope tightly.",
+   "ko": "아흐마드는 밧줄을 꽉 잡고 골짜기 위 출렁다리를 건넜어요.",
+   "blank": "معلقا",
+   "src": "made"
+  },
+  {
+   "text": "رأت مريم فانوسا معلقا فوق باب العطار.",
+   "en": "Mariam saw a lantern hanging over the spice seller's door.",
+   "ko": "마리암은 향신료 가게 문 위에 매달린 등을 봤어요.",
+   "blank": "معلقا",
    "src": "made"
   }
  ],
@@ -62978,6 +63506,22 @@
    "en": "The director said Sarah had raised the department's standing with her careful work.",
    "ko": "부장님은 사라가 꼼꼼한 일 처리로 부서의 위상을 높였다고 말했어요.",
    "blank": "مقام",
+   "src": "made"
+  }
+ ],
+ "w|مقامرة": [
+  {
+   "text": "قال أحمد إن عبور النهر في الليل مقامرة لا داعي لها.",
+   "en": "Ahmed said crossing the river at night was an unnecessary gamble.",
+   "ko": "아흐마드는 밤에 강을 건너는 건 쓸데없는 모험이라고 했어요.",
+   "blank": "مقامرة",
+   "src": "made"
+  },
+  {
+   "text": "ترى مريم أن شراء كمية كبيرة من الفاكهة قبل المطر مقامرة.",
+   "en": "Mariam thinks buying a large amount of fruit before the rain is a gamble.",
+   "ko": "마리암은 비 오기 전에 과일을 많이 사 두는 게 도박 같다고 생각해요.",
+   "blank": "مقامرة",
    "src": "made"
   }
  ],
@@ -63887,6 +64431,22 @@
    "blank": "ملايين"
   }
  ],
+ "w|ملتو": [
+  {
+   "text": "صعد أحمد إلى القمة في درب ملتو بين الصخور.",
+   "en": "Ahmed climbed to the summit on a winding path between the rocks.",
+   "ko": "아흐마드는 바위 사이 구불구불한 길로 정상에 올랐어요.",
+   "blank": "ملتو",
+   "src": "made"
+  },
+  {
+   "text": "ضاعت مريم في زقاق ملتو بين محلات التوابل.",
+   "en": "Mariam got lost in a winding alley among the spice shops.",
+   "ko": "마리암은 향신료 가게들 사이 구불구불한 골목에서 길을 잃었어요.",
+   "blank": "ملتو",
+   "src": "made"
+  }
+ ],
  "w|ملجأ": [
   {
    "text": "كتب سامي تقريرا مؤثرا عن ملجأ للقطط والكلاب المشردة.",
@@ -64445,6 +65005,22 @@
    "en": "She is grateful for your kind words.",
    "ko": "그녀는 너의 친절한 말에 감사해.",
    "blank": "ممنون"
+  }
+ ],
+ "w|ممهد": [
+  {
+   "text": "ترك أحمد الطريق الممهد ومشى في درب ترابي.",
+   "en": "Ahmed left the paved road and walked on a dirt path.",
+   "ko": "아흐마드는 포장도로를 벗어나 흙길을 걸었어요.",
+   "blank": "الممهد",
+   "src": "made"
+  },
+  {
+   "text": "وصل السوق الجديد إلى طريق ممهد فصار الوصول إليه أسهل لمريم.",
+   "en": "The new market got a paved road, so it became easier for Mariam to reach.",
+   "ko": "새 시장까지 길이 포장돼서 마리암이 가기 쉬워졌어요.",
+   "blank": "ممهد",
+   "src": "made"
   }
  ],
  "w|مميت": [
@@ -65711,6 +66287,22 @@
    "blank": "مودة"
   }
  ],
+ "w|موديل": [
+  {
+   "text": "اشترى أحمد خيمة من موديل جديد تنصب في دقيقة.",
+   "en": "Ahmed bought a tent of a new model that goes up in a minute.",
+   "ko": "아흐마드는 일 분 만에 세워지는 신형 텐트를 샀어요.",
+   "blank": "موديل",
+   "src": "made"
+  },
+  {
+   "text": "بحثت مريم في السوق عن حذاء من موديل قديم أعجبها.",
+   "en": "Mariam looked in the market for a shoe of an old model she liked.",
+   "ko": "마리암은 시장에서 마음에 들었던 옛날 모델 신발을 찾았어요.",
+   "blank": "موديل",
+   "src": "made"
+  }
+ ],
  "w|مورد": [
   {
    "text": "تأخر المورد في تسليم المواد الخام هذا الأسبوع.",
@@ -66955,6 +67547,22 @@
    "en": "Every child wishes to become a star someday.",
    "ko": "모든 아이는 언젠가 스타가 되고 싶어 해.",
    "blank": "نجمة"
+  }
+ ],
+ "w|نحات": [
+  {
+   "text": "صنع صديق أحمد النحات تمثالا صغيرا من حجر وجده على الشاطئ.",
+   "en": "Ahmed's sculptor friend made a small statue from a stone he found on the beach.",
+   "ko": "조각가인 아흐마드의 친구는 해변에서 주운 돌로 작은 조각상을 만들었어요.",
+   "blank": "النحات",
+   "src": "made"
+  },
+  {
+   "text": "تشتري مريم الطين من نحات يبيع أدواته في آخر السوق.",
+   "en": "Mariam buys clay from a sculptor who sells his tools at the end of the market.",
+   "ko": "마리암은 시장 끝에서 도구를 파는 조각가에게 점토를 사요.",
+   "blank": "نحات",
+   "src": "made"
   }
  ],
  "w|نحاس": [
@@ -68249,6 +68857,22 @@
    "blank": "نفى"
   }
  ],
+ "w|نفيس": [
+  {
+   "text": "يرى أحمد أن الهدوء في الجبال شيء نفيس لا يشترى.",
+   "en": "Ahmed believes the calm in the mountains is a priceless thing money can't buy.",
+   "ko": "아흐마드는 산속의 고요함이 돈으로 살 수 없는 귀한 것이라고 생각해요.",
+   "blank": "نفيس",
+   "src": "made"
+  },
+  {
+   "text": "عرض تاجر على مريم سجادا نفيسا من الحرير.",
+   "en": "A merchant showed Mariam precious silk carpets.",
+   "ko": "한 상인이 마리암에게 값진 비단 양탄자를 보여 줬어요.",
+   "blank": "نفيسا",
+   "src": "made"
+  }
+ ],
  "w|نقابة": [
   {
    "text": "النقابة تدافع عن حقوق العمال.",
@@ -68695,6 +69319,22 @@
    "en": "The Nile River is famous in the world.",
    "ko": "나일강은 세계적으로 유명해.",
    "blank": "نهر"
+  }
+ ],
+ "w|نهري": [
+  {
+   "text": "عبر أحمد ورفاقه المجرى النهري على جسر خشبي ضيق.",
+   "en": "Ahmed and his companions crossed the riverbed on a narrow wooden bridge.",
+   "ko": "아흐마드 일행은 좁은 나무다리로 강줄기를 건넜어요.",
+   "blank": "النهري",
+   "src": "made"
+  },
+  {
+   "text": "اختارت مريم سمكا نهريا طازجا للغداء.",
+   "en": "Mariam chose fresh river fish for lunch.",
+   "ko": "마리암은 점심거리로 싱싱한 민물고기를 골랐어요.",
+   "blank": "نهريا",
+   "src": "made"
   }
  ],
  "w|نهض": [
