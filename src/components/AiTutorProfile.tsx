@@ -147,9 +147,11 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UIC
             <button
               type="button"
               onClick={() => chatWithTutor(targetLanguage, gender)}
-              className="rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100"
+              aria-label={roomCopy(appLocale()).message}
+              title={roomCopy(appLocale()).message}
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-title hover:bg-white/10"
             >
-              💬 {roomCopy(appLocale()).message}
+              <span aria-hidden>💬</span>
             </button>
             {canCall ? <CallDoors ui={ui} look="icons" onPick={(kind) => callTutor(targetLanguage, gender, kind)} /> : null}
           </div>
@@ -229,28 +231,17 @@ function shortDay(at: number, locale: string): string {
 }
 
 /**
- * 통화 문 — 자유대화 · 수업 · 게임을 같은 층으로(사용자 2026-11-09 "자유대화, 수업, 게임.. 이런 옵션들은 같은 층위로 나열해줘"):
- * 셋 다 같은 크기·같은 모양, 게임을 누르면 그 아래 줄에 스무고개 · 가르치기. "wide"는 프로필·고른 튜터 줄(이름 붙은 버튼), "icons"는 다른 튜터 줄(아이콘만).
+ * 통화 문 넷 — 자유대화 · 수업 · 게임 · 가르치기를 같은 층으로(사용자 2026-11-09 "같은 층위로 나열" → "가르치기는 문 하나로 꺼내줘"):
+ * 같은 크기·같은 모양, 누르면 바로 그 통화. 게임 = 스무고개(게임에 하나만 남아 고르기 없음), 가르치기는 고급 표시만(잠그지 않음).
+ * "wide"는 프로필·고른 튜터 줄(이름 버튼 2×2), "icons"는 다른 튜터 줄·사람 탭 줄(아이콘만).
  */
 export function CallDoors({ ui, onPick, look = "wide", className = "" }: { ui: UICopy; onPick: (kind: CallKind) => void; look?: "wide" | "icons"; className?: string }) {
-  const [games, setGames] = useState(false);
-  const doors: { kind: "talk" | "lesson" | "game"; icon: string; label: string }[] = [
+  const doors: { kind: CallKind; icon: string; label: string; advanced?: boolean }[] = [
     { kind: "talk", icon: "📞", label: ui.callModeTalk },
     { kind: "lesson", icon: "🎓", label: ui.callModeStudy },
-    { kind: "game", icon: "🎲", label: ui.callModeGame },
+    { kind: "twenty", icon: "🎲", label: ui.callModeGame },
+    { kind: "teach", icon: "🧑‍🏫", label: ui.gameTeach, advanced: true },
   ];
-  const tap = (kind: "talk" | "lesson" | "game") => (kind === "game" ? setGames((open) => !open) : onPick(kind));
-  const on = "border-white/60 bg-white/15";
-  const sub = (
-    <div className="grid grid-cols-2 gap-2">
-      <button type="button" data-call-choice="twenty" onClick={() => onPick("twenty")} className="min-h-11 rounded-xl border border-white/20 px-2 text-note text-slate-100 hover:bg-white/10">
-        {ui.gameTwenty}
-      </button>
-      <button type="button" data-call-choice="teach" onClick={() => onPick("teach")} className="min-h-11 rounded-xl border border-white/20 px-2 text-note text-slate-100 hover:bg-white/10">
-        {ui.gameTeach} <span className="ms-1 rounded-full bg-warn/20 px-1.5 text-caption text-warn">{ui.mapLevelAdvanced}</span>
-      </button>
-    </div>
-  );
   if (look === "icons") {
     return (
       <>
@@ -259,43 +250,39 @@ export function CallDoors({ ui, onPick, look = "wide", className = "" }: { ui: U
             key={door.kind}
             type="button"
             data-call-choice={door.kind}
-            onClick={() => tap(door.kind)}
+            onClick={() => onPick(door.kind)}
             aria-label={door.label}
             title={door.label}
-            {...(door.kind === "game" ? { "aria-expanded": games } : {})}
-            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border text-title hover:bg-white/10 ${door.kind === "game" && games ? on : "border-line"}`}
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-title hover:bg-white/10"
           >
             <span aria-hidden>{door.icon}</span>
           </button>
         ))}
-        {games ? <div className="basis-full px-1 pt-1">{sub}</div> : null}
       </>
     );
   }
   return (
-    <div data-call-doors className={`flex flex-col gap-2 ${className}`}>
-      <div className="grid grid-cols-3 gap-2">
-        {doors.map((door) => (
-          <button
-            key={door.kind}
-            type="button"
-            data-call-choice={door.kind}
-            onClick={() => tap(door.kind)}
-            {...(door.kind === "game" ? { "aria-expanded": games } : {})}
-            className={`min-h-11 rounded-xl border px-2 text-note font-medium text-ink hover:bg-white/10 ${door.kind === "game" && games ? on : "border-white/20"}`}
-          >
-            {door.icon} {door.label}
-          </button>
-        ))}
-      </div>
-      {games ? sub : null}
+    <div data-call-doors className={`grid grid-cols-2 gap-2 ${className}`}>
+      {doors.map((door) => (
+        <button
+          key={door.kind}
+          type="button"
+          data-call-choice={door.kind}
+          onClick={() => onPick(door.kind)}
+          className="flex min-h-11 items-center justify-center gap-1.5 rounded-xl border border-white/20 px-2 text-note font-medium text-ink hover:bg-white/10"
+        >
+          <span aria-hidden>{door.icon}</span>
+          <span className="truncate">{door.label}</span>
+          {door.advanced ? <span className="shrink-0 rounded-full bg-warn/20 px-1.5 text-caption text-warn">{ui.mapLevelAdvanced}</span> : null}
+        </button>
+      ))}
     </div>
   );
 }
 
 /**
  * AI 튜터 프로필 시트 — 사람 프로필과 같은 틀(ProfileFrame, 2026-11-02 사용자 "프로필 구조 통일").
- * 2026-11-09 "이 튜터와의 공부"(시안): 문 자유대화 · 수업 · 게임(같은 층) → 숙제 → 튜터 메모 → 아래 팔로우 · 메시지 · 통화 기록.
+ * 2026-11-09 "이 튜터와의 공부"(시안): 문 자유대화 · 수업 · 게임 · 가르치기(같은 층) → 숙제 → 튜터 메모 → 아래 팔로우 · 메시지 · 통화 기록.
  */
 export function AiTutorSheet({
   ui,

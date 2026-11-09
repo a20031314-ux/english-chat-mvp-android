@@ -61,7 +61,7 @@ export function AiTutorRows({
  * 대화 목록의 AI 튜터 한 줄(2026-10-20, `hub/drafts/one-list-tabs.md`).
  * 2026-10-27 사용자 "AI 튜터를 아예 사람들과 통합": 사람 탭에 프로필(AiTutorProfile)이 있고, 대화 목록에는 다른 대화처럼
  * 그 사람(이름·국기)과의 대화 한 줄 — 줄을 누르면 채팅. 통화 기록 목록은 사람 탭 프로필 시트(CallList). 사람 탭이 없을 때만 채팅 ⋮.
- * 2026-11-09(시안 "튜터 화면"): 문 셋 📞 자유대화 · 🎓 수업 · 🎲 게임(같은 층, CallDoors) — 지금 고른 튜터(main)는 이름 붙은 같은 크기 버튼 + 그 튜터 숙제 줄, 다른 튜터는 아이콘 셋.
+ * 2026-11-09(시안 "튜터 화면"): 문 넷 📞 자유대화 · 🎓 수업 · 🎲 게임 · 🧑‍🏫 가르치기(같은 층, CallDoors) — 지금 고른 튜터(main)는 이름 버튼 2×2 + 그 튜터 숙제 줄, 다른 튜터는 아이콘 넷.
  * 숙제가 남았으면 얼굴 모서리에 점. 숫자(통화 수·고친 말)는 Logbank 몫이라 없다.
  */
 export function AiTutorRow({
@@ -114,7 +114,11 @@ export function AiTutorRow({
             )}
           </span>
         </button>
-        {canCall && !main ? <CallDoors ui={ui} look="icons" onPick={onCall} /> : null}
+        {canCall && !main ? (
+          <div className="flex basis-full justify-end gap-2 px-1">
+            <CallDoors ui={ui} look="icons" onPick={onCall} />
+          </div>
+        ) : null}
       </div>
       {canCall && main ? <CallDoors ui={ui} className="mt-2 px-1" onPick={onCall} /> : null}
       {main && homework ? <TutorHomework ui={ui} homework={homework} className="mt-2" /> : null}

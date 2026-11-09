@@ -1086,7 +1086,9 @@ export function RoleplayScreen({
   // 그냥 대화는 머리에 고른 모드 이름(앱 언어) — 예전엔 학습 언어 장면 이름 "Just talk"가 늘 떴음(점검 2026-11-07).
   const headTitle = scenario?.openEnded
     ? game
-      ? `${ui.callModeGame} · ${game === "teach" ? ui.gameTeach : ui.gameTwenty}`
+      ? game === "teach"
+        ? ui.gameTeach
+        : `${ui.callModeGame} · ${ui.gameTwenty}`
       : coachOn
         ? ui.callModeStudy
         : ui.callModeTalk

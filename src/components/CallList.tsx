@@ -29,13 +29,14 @@ export function CallList({
   const all = useSyncExternalStore(subscribeCalls, readCalls, readCallsOnServer).filter((call) => call.language === language);
   // 자유대화 / 수업 기록을 따로(2026-11-07 사용자 "통화기록도 구분해서"). mode 없는 예전 기록은 자유대화.
   // 게임 통화도 따로(2026-11-08 사용자 "자유대화, 수업, 게임으로 나눠줘").
-  const [kind, setKind] = useState<"talk" | "lesson" | "game">("talk");
-  const kindOf = (call: { mode?: string }): "talk" | "lesson" | "game" => (call.mode === "lesson" ? "lesson" : call.mode === "game" ? "game" : "talk");
-  const counts = { talk: 0, lesson: 0, game: 0 };
+  // 가르치기는 2026-11-09부터 게임 밖 문 하나(사용자 "문 하나로 꺼내줘") — 기록은 mode "game"·game "teach" 그대로, 칩만 따로.
+  const [kind, setKind] = useState<"talk" | "lesson" | "game" | "teach">("talk");
+  const kindOf = (call: { mode?: string; game?: string }): "talk" | "lesson" | "game" | "teach" =>
+    call.mode === "lesson" ? "lesson" : call.mode === "game" ? (call.game === "teach" ? "teach" : "game") : "talk";
+  const counts = { talk: 0, lesson: 0, game: 0, teach: 0 };
   for (const call of all) counts[kindOf(call)] += 1;
   const calls = all.filter((call) => kindOf(call) === kind);
   // 게임 칸의 📞는 마지막에 한 게임으로.
-  const lastGame = all.find((call) => call.mode === "game")?.game ?? "twenty";
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-3">
@@ -46,7 +47,7 @@ export function CallList({
               type="button"
               onClick={() => {
                 onClose();
-                sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : kind === "game" ? { game: lastGame } : {});
+                sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : kind === "game" ? { game: "twenty" } : kind === "teach" ? { game: "teach" } : {});
               }}
               aria-label={ui.talkAiCall}
               title={ui.talkAiCall}
@@ -64,8 +65,8 @@ export function CallList({
           </button>
         </div>
       </header>
-      <div role="tablist" className="flex shrink-0 gap-2 px-3 pt-3" data-call-kinds>
-        {(["talk", "lesson", "game"] as const).map((one) => (
+      <div role="tablist" className="flex shrink-0 flex-wrap gap-2 px-3 pt-3" data-call-kinds>
+        {(["talk", "lesson", "game", "teach"] as const).map((one) => (
           <button
             key={one}
             type="button"
@@ -75,7 +76,7 @@ export function CallList({
             onClick={() => setKind(one)}
             className={`rounded-full border px-3 py-1 text-meta ${kind === one ? "border-white/50 bg-white/15 text-white" : "border-white/15 text-slate-400"}`}
           >
-            {one === "talk" ? ui.callModeTalk : one === "lesson" ? ui.callModeStudy : ui.callModeGame} <span className="tabular-nums opacity-70">{counts[one]}</span>
+            {one === "talk" ? ui.callModeTalk : one === "lesson" ? ui.callModeStudy : one === "game" ? ui.callModeGame : ui.gameTeach} <span className="tabular-nums opacity-70">{counts[one]}</span>
           </button>
         ))}
       </div>
