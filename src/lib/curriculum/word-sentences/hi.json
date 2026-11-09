@@ -2321,6 +2321,22 @@
    "src": "made"
   }
  ],
+ "w|अनुशासित": [
+  {
+   "text": "सुनील की बहन बहुत अनुशासित है और रोज़ सुबह पाँच बजे उठती है।",
+   "en": "Sunil's sister is very disciplined and gets up at five every morning.",
+   "ko": "수닐 누나는 아주 규칙적이라 매일 새벽 다섯 시에 일어나요.",
+   "blank": "अनुशासित",
+   "src": "made"
+  },
+  {
+   "text": "कविता की टीम इतनी अनुशासित है कि शूट कभी देर से शुरू नहीं होता।",
+   "en": "Kavita's team is so disciplined that the shoot never starts late.",
+   "ko": "카비타 팀은 아주 규율이 잡혀 있어서 촬영이 늦게 시작하는 법이 없어요.",
+   "blank": "अनुशासित",
+   "src": "made"
+  }
+ ],
  "w|अनुष्ठान": [
   {
    "text": "करण ने मंदिर के सालाना अनुष्ठान की तस्वीरें खुद खींचीं।",
@@ -2621,6 +2637,22 @@
    "en": "Seeing unfamiliar faces, he stopped.",
    "ko": "낯선 얼굴을 보고 그는 멈췄어.",
    "blank": "अपरिचित"
+  }
+ ],
+ "w|अपरिपक्व": [
+  {
+   "text": "बहन ने कहा कि सुनील का ऐसे रूठ जाना अपरिपक्व था।",
+   "en": "His sister said that Sunil sulking like that was immature.",
+   "ko": "누나는 수닐이 그렇게 토라진 게 철없었다고 했어요.",
+   "blank": "अपरिपक्व",
+   "src": "made"
+  },
+  {
+   "text": "कविता को लगा कि नए लेखक की पटकथा अभी थोड़ी अपरिपक्व है।",
+   "en": "Kavita felt the new writer's screenplay was still a bit immature.",
+   "ko": "카비타는 신인 작가의 대본이 아직 좀 덜 다듬어졌다고 느꼈어요.",
+   "blank": "अपरिपक्व",
+   "src": "made"
   }
  ],
  "w|अपवित्र": [
@@ -2972,6 +3004,22 @@
    "en": "Anjali advised the young patient's parent to give fewer sweets.",
    "ko": "안잘리는 어린 환자의 보호자에게 단 걸 줄이라고 조언했어요.",
    "blank": "अभिभावक",
+   "src": "made"
+  }
+ ],
+ "w|अभिभूत": [
+  {
+   "text": "बहन ने जब पुरानी तस्वीरों का एल्बम भेजा, तो सुनील अभिभूत हो गया।",
+   "en": "When his sister sent an album of old photos, Sunil was overwhelmed.",
+   "ko": "누나가 옛 사진 앨범을 보내자 수닐은 벅차올랐어요.",
+   "blank": "अभिभूत",
+   "src": "made"
+  },
+  {
+   "text": "गाँव वालों का प्यार देखकर कविता अभिभूत हो गई।",
+   "en": "Seeing the villagers' love, Kavita was overwhelmed.",
+   "ko": "마을 사람들의 정을 보고 카비타는 가슴이 벅찼어요.",
+   "blank": "अभिभूत",
    "src": "made"
   }
  ],
@@ -3928,6 +3976,22 @@
    "en": "Someone wrote obscene words on the site wall, so Kavita had them painted over at once.",
    "ko": "누가 현장 벽에 음란한 낙서를 하자 카비타가 바로 페인트로 덮었어요.",
    "blank": "अश्लील",
+   "src": "made"
+  }
+ ],
+ "w|असंतुलन": [
+  {
+   "text": "घर के कामों के बँटवारे में असंतुलन ही दोनों के झगड़े की जड़ था।",
+   "en": "An imbalance in sharing the household chores was the root of their quarrel.",
+   "ko": "집안일을 나누는 데 생긴 불균형이 둘이 싸운 원인이었어요.",
+   "blank": "असंतुलन",
+   "src": "made"
+  },
+  {
+   "text": "एडिटर ने बताया कि आवाज़ और संगीत में असंतुलन है।",
+   "en": "The editor pointed out that there is an imbalance between the voice and the music.",
+   "ko": "편집자는 목소리와 음악 사이에 균형이 안 맞는다고 했어요.",
+   "blank": "असंतुलन",
    "src": "made"
   }
  ],
@@ -5213,6 +5277,22 @@
    "src": "made"
   }
  ],
+ "w|आतुर": [
+  {
+   "text": "सुनील अपनी बात समझाने के लिए आतुर था, पर बहन फ़ोन ही नहीं उठा रही थी।",
+   "en": "Sunil was eager to explain himself, but his sister wasn't picking up the phone.",
+   "ko": "수닐은 해명하고 싶어 안달이었지만 누나가 전화를 받지 않았어요.",
+   "blank": "आतुर",
+   "src": "made"
+  },
+  {
+   "text": "नया अभिनेता अपना पहला सीन करने के लिए आतुर था।",
+   "en": "The new actor was eager to do his first scene.",
+   "ko": "신인 배우는 첫 장면을 찍고 싶어 안달이었어요.",
+   "blank": "आतुर",
+   "src": "made"
+  }
+ ],
  "w|आत्मकथा": [
   {
    "text": "रिटायर्ड कमिश्नर की आत्मकथा विकास की मेज़ पर रखी है।",
@@ -5274,6 +5354,22 @@
    "en": "The exhibition on the beach had photos of the surrender in an old war.",
    "ko": "해변 전시회에는 옛 전쟁의 항복 장면 사진이 있었어요.",
    "blank": "आत्मसमर्पण",
+   "src": "made"
+  }
+ ],
+ "w|आत्मसात": [
+  {
+   "text": "पिता की सीख सुनील ने बचपन में ही आत्मसात कर ली थी कि परिवार पहले आता है।",
+   "en": "Sunil had absorbed his father's lesson in childhood that family comes first.",
+   "ko": "수닐은 가족이 먼저라는 아버지의 가르침을 어릴 때 이미 몸에 익혔어요.",
+   "blank": "आत्मसात",
+   "src": "made"
+  },
+  {
+   "text": "अभिनेत्री ने किरदार को इतना आत्मसात कर लिया कि सेट पर भी गाँव की बोली बोलती रही।",
+   "en": "The actress absorbed the character so much that she kept speaking the village dialect even on set.",
+   "ko": "여배우는 배역에 푹 빠져서 세트장에서도 시골 사투리를 썼어요.",
+   "blank": "आत्मसात",
    "src": "made"
   }
  ],
@@ -6591,6 +6687,22 @@
    "en": "It is a wonder that he arrived on time.",
    "ko": "그가 제시간에 도착한 건 놀라운 일이야.",
    "blank": "आश्चर्य"
+  }
+ ],
+ "w|आश्चर्यचकित": [
+  {
+   "text": "बहन का लंबा माफ़ीनामा पढ़कर सुनील आश्चर्यचकित रह गया।",
+   "en": "Sunil was astonished after reading his sister's long apology.",
+   "ko": "누나의 긴 사과 편지를 읽고 수닐은 깜짝 놀랐어요.",
+   "blank": "आश्चर्यचकित",
+   "src": "made"
+  },
+  {
+   "text": "एक ही टेक में सीन पूरा होने पर कविता आश्चर्यचकित थी।",
+   "en": "Kavita was astonished when the scene was finished in a single take.",
+   "ko": "장면이 한 번에 끝나자 카비타는 깜짝 놀랐어요.",
+   "blank": "आश्चर्यचकित",
+   "src": "made"
   }
  ],
  "w|आश्चर्यजनक": [
@@ -8929,6 +9041,22 @@
    "blank": "उन्नीस"
   }
  ],
+ "w|उन्माद": [
+  {
+   "text": "भारत की जीत पर सुनील और उसकी बहन उन्माद में सड़क पर नाचने लगे।",
+   "en": "At India's victory, Sunil and his sister began dancing in the street in a frenzy.",
+   "ko": "인도가 이기자 수닐과 누나는 흥분해서 길에서 춤을 췄어요.",
+   "blank": "उन्माद",
+   "src": "made"
+  },
+  {
+   "text": "सेट पर स्टार के आते ही प्रशंसकों में उन्माद फैल गया।",
+   "en": "As soon as the star arrived on set, frenzy spread among the fans.",
+   "ko": "스타가 세트장에 오자마자 팬들이 열광했어요.",
+   "blank": "उन्माद",
+   "src": "made"
+  }
+ ],
  "w|उपकरण": [
   {
    "text": "नया उपकरण काम आसान बनाता है।",
@@ -9938,6 +10066,22 @@
    "en": "Before adding fertiliser, Seema removes the topsoil to check.",
    "ko": "거름을 주기 전에 시마는 겉흙을 걷어 살펴봐요.",
    "blank": "ऊपरी",
+   "src": "made"
+  }
+ ],
+ "w|ऊब": [
+  {
+   "text": "बहन से बात बंद होने के बाद रविवार की ऊब सुनील को और भारी लगने लगी।",
+   "en": "After he stopped talking to his sister, Sunday's boredom started to feel even heavier to Sunil.",
+   "ko": "누나와 말을 안 하게 된 뒤로 수닐에게 일요일의 지루함이 더 무겁게 느껴졌어요.",
+   "blank": "ऊब",
+   "src": "made"
+  },
+  {
+   "text": "लाइट ठीक होने के लंबे इंतज़ार में कलाकारों के चेहरे पर ऊब साफ़ दिख रही थी।",
+   "en": "During the long wait for the lights to be fixed, boredom was clearly visible on the actors' faces.",
+   "ko": "조명 고치는 걸 오래 기다리느라 배우들 얼굴에 지루함이 역력했어요.",
+   "blank": "ऊब",
    "src": "made"
   }
  ],
@@ -16611,6 +16755,22 @@
    "src": "made"
   }
  ],
+ "w|ख़याल आना": [
+  {
+   "text": "रात को सुनील को ख़याल आया कि बहन का जन्मदिन तो कल ही था।",
+   "en": "At night, Sunil realised that his sister's birthday had been just yesterday.",
+   "ko": "밤에 수닐은 누나 생일이 바로 어제였다는 게 생각났어요.",
+   "blank": "ख़याल आया",
+   "src": "made"
+  },
+  {
+   "text": "शूटिंग के बीच कविता को ख़याल आया कि इस सीन में बारिश और अच्छी लगेगी।",
+   "en": "In the middle of shooting, it occurred to Kavita that rain would look better in this scene.",
+   "ko": "촬영 도중 카비타는 이 장면에 비가 오면 더 좋겠다는 생각이 들었어요.",
+   "blank": "ख़याल आया",
+   "src": "made"
+  }
+ ],
  "w|ख़याल रखना": [
   {
    "text": "बच्चों का ख़याल रखना माता-पिता का काम है।",
@@ -19388,6 +19548,22 @@
    "en": "A wrong map misled the tourists and they ended up at another hotel.",
    "ko": "잘못된 지도 때문에 관광객들이 헷갈려서 다른 호텔로 가 버렸어요.",
    "blank": "गुमराह",
+   "src": "made"
+  }
+ ],
+ "w|गुमान": [
+  {
+   "text": "सुनील को गुमान था कि वह अपनी बहन को सबसे अच्छी तरह जानता है।",
+   "en": "Sunil was proud in thinking he knew his sister best.",
+   "ko": "수닐은 누나를 자기가 제일 잘 안다고 자부했어요.",
+   "blank": "गुमान",
+   "src": "made"
+  },
+  {
+   "text": "कविता को अपनी टीम की मेहनत पर बड़ा गुमान है।",
+   "en": "Kavita takes great pride in her team's hard work.",
+   "ko": "카비타는 팀의 노력을 크게 자랑스러워해요.",
+   "blank": "गुमान",
    "src": "made"
   }
  ],
@@ -31023,6 +31199,22 @@
    "src": "made"
   }
  ],
+ "w|तृप्त": [
+  {
+   "text": "बहन के हाथ की दाल खाकर सुनील पूरी तरह तृप्त हो गया।",
+   "en": "After eating dal made by his sister, Sunil was completely satisfied.",
+   "ko": "누나가 만든 달을 먹고 수닐은 배도 마음도 든든해졌어요.",
+   "blank": "तृप्त",
+   "src": "made"
+  },
+  {
+   "text": "दिनभर की मेहनत के बाद अच्छा शॉट मिलने से कविता का मन तृप्त हो गया।",
+   "en": "After a full day's hard work, getting a good shot left Kavita's heart content.",
+   "ko": "하루 종일 고생한 끝에 좋은 장면을 건지자 카비타는 마음이 흡족했어요.",
+   "blank": "तृप्त",
+   "src": "made"
+  }
+ ],
  "w|तेईस": [
   {
    "text": "इस महीने तेईस छुट्टियाँ नहीं हैं।",
@@ -33618,6 +33810,22 @@
    "en": "Neha's team had a team outing at a fort in Rajasthan.",
    "ko": "네하의 팀은 라자스탄의 한 성채로 단체 나들이를 갔어요.",
    "blank": "दुर्ग",
+   "src": "made"
+  }
+ ],
+ "w|दुर्गंध": [
+  {
+   "text": "बहन के कमरे में बासी खाने की दुर्गंध फैली थी, तो सुनील ने खिड़कियाँ खोल दीं।",
+   "en": "There was a stench of stale food in his sister's room, so Sunil opened the windows.",
+   "ko": "누나 방에 상한 음식 냄새가 퍼져 있어서 수닐이 창문을 열었어요.",
+   "blank": "दुर्गंध",
+   "src": "made"
+  },
+  {
+   "text": "पुराने गोदाम में इतनी दुर्गंध थी कि टीम को मास्क पहनकर काम करना पड़ा।",
+   "en": "There was such a stench in the old warehouse that the team had to work wearing masks.",
+   "ko": "옛 창고에 악취가 너무 심해 팀은 마스크를 쓰고 일해야 했어요.",
+   "blank": "दुर्गंध",
    "src": "made"
   }
  ],
@@ -37381,6 +37589,22 @@
    "src": "made"
   }
  ],
+ "w|नितांत": [
+  {
+   "text": "सुनील ने माना कि उसका शक नितांत बेबुनियाद था।",
+   "en": "Sunil admitted that his suspicion was utterly baseless.",
+   "ko": "수닐은 자기 의심이 전혀 근거 없었다고 인정했어요.",
+   "blank": "नितांत",
+   "src": "made"
+  },
+  {
+   "text": "कविता के लिए यह शूटिंग नितांत नया अनुभव था, क्योंकि पहली बार पानी के अंदर फ़िल्माना था।",
+   "en": "For Kavita this shoot was an entirely new experience, as it was her first time filming underwater.",
+   "ko": "카비타에게 이번 촬영은 완전히 새로운 경험이었어요. 처음으로 물속에서 찍어야 했거든요.",
+   "blank": "नितांत",
+   "src": "made"
+  }
+ ],
  "w|नित्य": [
   {
    "text": "करण नित्य सुबह चाय के साथ सारे अख़बार पलटता है।",
@@ -37458,6 +37682,22 @@
    "en": "The neighbourhood collected a small fund for flood victims.",
    "ko": "동네 사람들이 홍수 피해자를 위해 작은 기금을 모았어요.",
    "blank": "निधि",
+   "src": "made"
+  }
+ ],
+ "w|निपट": [
+  {
+   "text": "झगड़े के बाद सुनील नए शहर में ख़ुद को निपट अकेला महसूस कर रहा था।",
+   "en": "After the quarrel, Sunil felt utterly alone in the new city.",
+   "ko": "싸운 뒤 수닐은 낯선 도시에서 완전히 외톨이가 된 기분이었어요.",
+   "blank": "निपट",
+   "src": "made"
+  },
+  {
+   "text": "फ़िल्म में हीरो एक निपट गँवार किसान का किरदार निभा रहा है।",
+   "en": "In the film, the hero is playing the role of a thoroughly rustic farmer.",
+   "ko": "영화에서 주인공은 순박하기 그지없는 시골 농부를 연기해요.",
+   "blank": "निपट",
    "src": "made"
   }
  ],
@@ -37997,6 +38237,22 @@
    "src": "made"
   }
  ],
+ "w|निर्भय": [
+  {
+   "text": "सुनील की बहन बचपन से निर्भय है और अँधेरे से बिल्कुल नहीं डरती।",
+   "en": "Sunil's sister has been fearless since childhood and isn't scared of the dark at all.",
+   "ko": "수닐 누나는 어릴 때부터 겁이 없어서 어둠도 전혀 안 무서워해요.",
+   "blank": "निर्भय",
+   "src": "made"
+  },
+  {
+   "text": "स्टंट वुमन निर्भय होकर चलती ट्रेन की छत पर दौड़ी।",
+   "en": "The stuntwoman ran fearlessly on the roof of the moving train.",
+   "ko": "스턴트우먼은 겁 없이 달리는 기차 지붕 위를 뛰었어요.",
+   "blank": "निर्भय",
+   "src": "made"
+  }
+ ],
  "w|निर्भर": [
   {
    "text": "रेस्तराँ की कमाई काफ़ी हद तक शाम के ग्राहकों पर निर्भर है।",
@@ -38026,6 +38282,22 @@
    "en": "The village's fearless women came together and stopped the forest from being cut.",
    "ko": "마을의 용감한 여성들이 힘을 모아 숲이 베이는 걸 막았어요.",
    "blank": "निर्भीक",
+   "src": "made"
+  }
+ ],
+ "w|निर्मम": [
+  {
+   "text": "बहन ने कहा कि सुनील की चुप्पी उसे किसी निर्मम सज़ा जैसी लगी।",
+   "en": "His sister said Sunil's silence felt like a merciless punishment to her.",
+   "ko": "누나는 수닐의 침묵이 가혹한 벌처럼 느껴졌다고 했어요.",
+   "blank": "निर्मम",
+   "src": "made"
+  },
+  {
+   "text": "फ़िल्म का खलनायक एक निर्मम ज़मींदार है।",
+   "en": "The film's villain is a merciless landlord.",
+   "ko": "영화의 악역은 무자비한 지주예요.",
+   "blank": "निर्मम",
    "src": "made"
   }
  ],
@@ -42807,6 +43079,22 @@
    "src": "made"
   }
  ],
+ "w|पुनरावृत्ति": [
+  {
+   "text": "माँ नहीं चाहतीं कि पिछले साल के झगड़े की पुनरावृत्ति हो।",
+   "en": "Mother doesn't want a repetition of last year's quarrel.",
+   "ko": "엄마는 작년 같은 싸움이 되풀이되지 않기를 바라요.",
+   "blank": "पुनरावृत्ति",
+   "src": "made"
+  },
+  {
+   "text": "एक ही ग़लती की पुनरावृत्ति से निर्देशक कविता थोड़ी परेशान हो गई।",
+   "en": "Director Kavita got a little upset by the repetition of the same mistake.",
+   "ko": "같은 실수가 되풀이되자 감독 카비타는 조금 짜증이 났어요.",
+   "blank": "पुनरावृत्ति",
+   "src": "made"
+  }
+ ],
  "w|पुनर्जन्म": [
   {
    "text": "रात की ड्यूटी में सिपाही पुनर्जन्म पर बनी एक फ़िल्म की बातें कर रहे थे।",
@@ -44390,6 +44678,22 @@
    "en": "Kavita had them taste the heat of each species of chilli separately.",
    "ko": "카비타는 고추 종류마다 매운맛을 따로따로 맛보게 했어요.",
    "blank": "प्रजाति",
+   "src": "made"
+  }
+ ],
+ "w|प्रण": [
+  {
+   "text": "सुनील ने प्रण लिया कि अब वह गुस्से में कभी फ़ोन नहीं काटेगा।",
+   "en": "Sunil vowed that he would never hang up in anger again.",
+   "ko": "수닐은 이제 화가 나도 절대 전화를 끊지 않겠다고 다짐했어요.",
+   "blank": "प्रण",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने प्रण किया कि यह फ़िल्म तय बजट में ही पूरी होगी।",
+   "en": "Kavita vowed that this film would be completed within the fixed budget.",
+   "ko": "카비타는 이 영화를 정해진 예산 안에서 끝내겠다고 다짐했어요.",
+   "blank": "प्रण",
    "src": "made"
   }
  ],
@@ -51315,6 +51619,22 @@
    "src": "made"
   }
  ],
+ "w|बेसब्री": [
+  {
+   "text": "सुनील बड़ी बेसब्री से अपनी बहन के फ़ोन का इंतज़ार कर रहा था।",
+   "en": "Sunil was waiting very impatiently for his sister's call.",
+   "ko": "수닐은 누나의 전화를 애타게 기다리고 있었어요.",
+   "blank": "बेसब्री",
+   "src": "made"
+  },
+  {
+   "text": "कविता और पूरी टीम बेसब्री से सूरज ढलने का इंतज़ार कर रहे थे।",
+   "en": "Kavita and the whole team were impatiently waiting for the sun to set.",
+   "ko": "카비타와 팀 전체가 해가 지기를 애타게 기다렸어요.",
+   "blank": "बेसब्री",
+   "src": "made"
+  }
+ ],
  "w|बेसुरा": [
   {
    "text": "विकास का क्लर्क बेसुरा गाता है, पर रोज़ गुनगुनाता ज़रूर है।",
@@ -54265,6 +54585,22 @@
    "src": "made"
   }
  ],
+ "w|मदहोश": [
+  {
+   "text": "शादी के गानों में मदहोश सुनील को बहन का संदेश दिखा ही नहीं।",
+   "en": "Lost in the wedding songs, Sunil didn't even see his sister's message.",
+   "ko": "결혼식 노래에 취해 있던 수닐은 누나의 메시지를 보지도 못했어요.",
+   "blank": "मदहोश",
+   "src": "made"
+  },
+  {
+   "text": "गाने के सीन में हीरो को चाँदनी रात में मदहोश दिखना था।",
+   "en": "In the song scene, the hero had to look intoxicated on a moonlit night.",
+   "ko": "노래 장면에서 주인공은 달밤에 취한 듯 보여야 했어요.",
+   "blank": "मदहोश",
+   "src": "made"
+  }
+ ],
  "w|मंदिर": [
   {
    "text": "मंदिर की घंटी बज रही है।",
@@ -54721,6 +55057,22 @@
    "src": "made"
   }
  ],
+ "w|मर्म": [
+  {
+   "text": "माँ ने सुनील को बहन की बात का असली मर्म समझाया।",
+   "en": "Mother explained to Sunil the real heart of his sister's words.",
+   "ko": "엄마는 수닐에게 누나 말의 진짜 속뜻을 설명해 줬어요.",
+   "blank": "मर्म",
+   "src": "made"
+  },
+  {
+   "text": "कविता चाहती है कि दर्शक इस कहानी का मर्म समझें, सिर्फ़ गाने नहीं।",
+   "en": "Kavita wants the audience to understand the heart of this story, not just the songs.",
+   "ko": "카비타는 관객이 노래만이 아니라 이 이야기의 핵심을 이해하길 바라요.",
+   "blank": "मर्म",
+   "src": "made"
+  }
+ ],
  "w|मर्यादा": [
   {
    "text": "अध्यापक ने समझाया कि बहस में भी मर्यादा का ध्यान रखना चाहिए।",
@@ -54781,6 +55133,22 @@
    "en": "The top cream of the yogurt was very tasty.",
    "ko": "요거트 위 크림이 아주 맛있었어.",
    "blank": "मलाई"
+  }
+ ],
+ "w|मलाल": [
+  {
+   "text": "सुनील को मलाल है कि उसने बहन की बात पूरी सुने बिना जवाब दे दिया।",
+   "en": "Sunil regrets that he replied without hearing his sister out.",
+   "ko": "수닐은 누나 말을 끝까지 듣지 않고 대꾸한 게 마음에 걸려요.",
+   "blank": "मलाल",
+   "src": "made"
+  },
+  {
+   "text": "कविता को मलाल रहा कि बारिश के कारण आख़िरी सीन ठीक से नहीं फ़िल्माया जा सका।",
+   "en": "Kavita regretted that the last scene couldn't be filmed properly because of rain.",
+   "ko": "카비타는 비 때문에 마지막 장면을 제대로 못 찍은 게 아쉬웠어요.",
+   "blank": "मलाल",
+   "src": "made"
   }
  ],
  "w|मलेरिया": [
@@ -55249,6 +55617,22 @@
    "en": "This great work belongs to no one alone.",
    "ko": "이 위대한 일은 한 사람 것만은 아니야.",
    "blank": "महान"
+  }
+ ],
+ "w|महानतम": [
+  {
+   "text": "सुनील कहता है कि बहन का दिया तोहफ़ा उसकी ज़िंदगी का महानतम तोहफ़ा है।",
+   "en": "Sunil says the gift his sister gave is the greatest gift of his life.",
+   "ko": "수닐은 누나가 준 선물이 인생 최고의 선물이라고 해요.",
+   "blank": "महानतम",
+   "src": "made"
+  },
+  {
+   "text": "बूढ़े अभिनेता ने कहा कि यह उनके करियर का महानतम किरदार है।",
+   "en": "The old actor said this is the greatest role of his career.",
+   "ko": "노배우는 이게 자기 경력 최고의 배역이라고 했어요.",
+   "blank": "महानतम",
+   "src": "made"
   }
  ],
  "w|महामारी": [
@@ -56384,6 +56768,22 @@
    "en": "There's also a mixer in the pantry for grinding chutney.",
    "ko": "탕비실에는 처트니를 갈 믹서도 있어요.",
    "blank": "मिक्सी",
+   "src": "made"
+  }
+ ],
+ "w|मिज़ाज": [
+  {
+   "text": "सुनील की बहन का मिज़ाज सुबह-सुबह थोड़ा चिड़चिड़ा रहता है।",
+   "en": "Sunil's sister's mood is a bit irritable early in the morning.",
+   "ko": "수닐 누나는 아침 일찍엔 기분이 좀 까칠해요.",
+   "blank": "मिज़ाज",
+   "src": "made"
+  },
+  {
+   "text": "हीरो का मिज़ाज ठीक नहीं था, इसलिए कविता ने पहले दूसरा सीन फ़िल्माया।",
+   "en": "The hero wasn't in a good mood, so Kavita filmed another scene first.",
+   "ko": "주인공 배우의 기분이 안 좋아서 카비타는 다른 장면부터 찍었어요.",
+   "blank": "मिज़ाज",
    "src": "made"
   }
  ],
@@ -61241,6 +61641,22 @@
    "src": "made"
   }
  ],
+ "w|रोमांच": [
+  {
+   "text": "बचपन में सुनील और उसकी बहन रात को भूतों की कहानियाँ सुनकर रोमांच से भर जाते थे।",
+   "en": "As children, Sunil and his sister would be thrilled hearing ghost stories at night.",
+   "ko": "어릴 때 수닐과 누나는 밤에 귀신 이야기를 들으며 짜릿해하곤 했어요.",
+   "blank": "रोमांच",
+   "src": "made"
+  },
+  {
+   "text": "कविता को पहाड़ों पर एक्शन सीन फ़िल्माने में बड़ा रोमांच मिलता है।",
+   "en": "Kavita gets a big thrill filming action scenes in the mountains.",
+   "ko": "카비타는 산에서 액션 장면을 찍을 때 정말 짜릿해요.",
+   "blank": "रोमांच",
+   "src": "made"
+  }
+ ],
  "w|रोमांचक": [
   {
    "text": "बड़े क्लाइंट से मिलना रवि के लिए बहुत रोमांचक अनुभव था।",
@@ -61478,6 +61894,22 @@
    "en": "The bride smiled shyly.",
    "ko": "신부가 웃으며 수줍어했어요.",
    "blank": "लजाने",
+   "src": "made"
+  }
+ ],
+ "w|लज्जा": [
+  {
+   "text": "अपने कड़वे शब्द याद करके सुनील को लज्जा आई।",
+   "en": "Sunil felt ashamed remembering his harsh words.",
+   "ko": "자기가 한 모진 말이 떠올라 수닐은 부끄러웠어요.",
+   "blank": "लज्जा",
+   "src": "made"
+  },
+  {
+   "text": "संवाद भूल जाने पर नई अभिनेत्री लज्जा से लाल हो गई।",
+   "en": "When she forgot her lines, the new actress turned red with embarrassment.",
+   "ko": "대사를 잊어버리자 신인 여배우는 부끄러워 얼굴이 빨개졌어요.",
+   "blank": "लज्जा",
    "src": "made"
   }
  ],
@@ -61854,6 +62286,22 @@
    "en": "Deepa has never overstepped the limits of her position.",
    "ko": "디파는 한 번도 자기 직책의 선을 넘은 적이 없어요.",
    "blank": "लाँघी",
+   "src": "made"
+  }
+ ],
+ "w|लाचार": [
+  {
+   "text": "बहन रो रही थी और सुनील ख़ुद को बिल्कुल लाचार महसूस कर रहा था।",
+   "en": "His sister was crying, and Sunil felt completely helpless.",
+   "ko": "누나는 울고 있었고 수닐은 아무것도 할 수 없는 기분이었어요.",
+   "blank": "लाचार",
+   "src": "made"
+  },
+  {
+   "text": "तेज़ हवा के आगे पूरी टीम लाचार थी और सेट उड़ने लगा।",
+   "en": "The whole team was helpless against the strong wind, and the set began to blow away.",
+   "ko": "거센 바람 앞에 팀 전체가 속수무책이었고 세트가 날아가기 시작했어요.",
+   "blank": "लाचार",
    "src": "made"
   }
  ],
@@ -62336,6 +62784,22 @@
    "en": "A rock came rolling down the hill.",
    "ko": "돌이 산에서 굴러 내려왔어요.",
    "blank": "लुढ़कता",
+   "src": "made"
+  }
+ ],
+ "w|लुत्फ़": [
+  {
+   "text": "सुलह के बाद सुनील और उसकी बहन ने गोलगप्पों का भरपूर लुत्फ़ उठाया।",
+   "en": "After making up, Sunil and his sister thoroughly enjoyed golgappas.",
+   "ko": "화해한 뒤 수닐과 누나는 골가파를 실컷 즐겼어요.",
+   "blank": "लुत्फ़",
+   "src": "made"
+  },
+  {
+   "text": "शूट के बाद पूरी टीम ने समुद्र किनारे चाय और पकौड़ों का लुत्फ़ लिया।",
+   "en": "After the shoot, the whole team enjoyed tea and pakoras by the sea.",
+   "ko": "촬영 후 팀 전체가 바닷가에서 차와 파코라를 즐겼어요.",
+   "blank": "लुत्फ़",
    "src": "made"
   }
  ],
@@ -63038,6 +63502,22 @@
    "en": "Dr Seema explained that most adults have thirty-two teeth.",
    "ko": "시마 선생님은 대부분의 성인은 이가 서른두 개라고 설명했어요.",
    "blank": "वयस्क",
+   "src": "made"
+  }
+ ],
+ "w|वरन": [
+  {
+   "text": "सुनील की बहन नाराज़ नहीं थी, वरन वह बस थकी हुई थी।",
+   "en": "Sunil's sister wasn't angry; rather, she was just tired.",
+   "ko": "수닐 누나는 화난 게 아니라 그냥 피곤했던 거예요.",
+   "blank": "वरन",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने कहा कि यह फ़िल्म सिर्फ़ मनोरंजन नहीं, वरन एक संदेश भी है।",
+   "en": "Kavita said this film is not just entertainment but also a message.",
+   "ko": "카비타는 이 영화가 오락일 뿐 아니라 메시지이기도 하다고 했어요.",
+   "blank": "वरन",
    "src": "made"
   }
  ],
@@ -64760,6 +65240,22 @@
    "en": "At the confluence, Neha watched two rivers merge.",
    "ko": "합류점에서 네하는 두 강이 하나로 합쳐지는 걸 봤어요.",
    "blank": "विलय",
+   "src": "made"
+  }
+ ],
+ "w|विलाप": [
+  {
+   "text": "दादी के गुज़रने पर सुनील और उसकी बहन का विलाप सुनकर सब रो पड़े।",
+   "en": "When grandmother passed away, everyone wept hearing the lament of Sunil and his sister.",
+   "ko": "할머니가 돌아가셨을 때 수닐과 누나가 통곡하는 소리에 모두 울었어요.",
+   "blank": "विलाप",
+   "src": "made"
+  },
+  {
+   "text": "इस सीन में माँ को बेटे की विदाई पर विलाप करते हुए दिखाना था।",
+   "en": "In this scene, the mother had to be shown lamenting her son's departure.",
+   "ko": "이 장면에서 어머니는 아들을 떠나보내며 통곡해야 했어요.",
+   "blank": "विलाप",
    "src": "made"
   }
  ],
@@ -67771,6 +68267,22 @@
    "src": "made"
   }
  ],
+ "w|शैतानी": [
+  {
+   "text": "बचपन की शैतानी याद करके सुनील और उसकी बहन ख़ूब हँसे।",
+   "en": "Remembering their childhood mischief, Sunil and his sister laughed a lot.",
+   "ko": "어린 시절 장난을 떠올리며 수닐과 누나는 한참 웃었어요.",
+   "blank": "शैतानी",
+   "src": "made"
+  },
+  {
+   "text": "बाल कलाकार की शैतानी से पूरा सेट हँसी से गूँज उठा।",
+   "en": "The child actor's mischief made the whole set ring with laughter.",
+   "ko": "아역 배우의 장난에 세트장 전체가 웃음바다가 됐어요.",
+   "blank": "शैतानी",
+   "src": "made"
+  }
+ ],
  "w|शैम्पू": [
   {
    "text": "पानी चला गया और अजय के बालों में शैम्पू लगा रह गया।",
@@ -69409,6 +69921,22 @@
    "en": "This building is a century old.",
    "ko": "이 건물은 한 세기나 됐어.",
    "blank": "सदी"
+  }
+ ],
+ "w|सदुपयोग": [
+  {
+   "text": "बहन ने सुनील को समझाया कि छुट्टियों का सदुपयोग परिवार के साथ करना चाहिए।",
+   "en": "His sister explained to Sunil that holidays should be put to good use with family.",
+   "ko": "누나는 수닐에게 휴가를 가족과 알차게 보내야 한다고 말했어요.",
+   "blank": "सदुपयोग",
+   "src": "made"
+  },
+  {
+   "text": "कविता बचे हुए सेट का सदुपयोग अगली फ़िल्म में करेगी।",
+   "en": "Kavita will make good use of the leftover set in her next film.",
+   "ko": "카비타는 남은 세트를 다음 영화에 알뜰하게 쓸 거예요.",
+   "blank": "सदुपयोग",
+   "src": "made"
   }
  ],
  "w|संदूक": [
@@ -71813,6 +72341,22 @@
    "src": "made"
   }
  ],
+ "w|संशय": [
+  {
+   "text": "सुनील के मन में संशय था कि बहन ने जानबूझकर उसे पार्टी में नहीं बुलाया।",
+   "en": "Sunil had a doubt that his sister had deliberately not invited him to the party.",
+   "ko": "수닐은 누나가 일부러 자기를 파티에 안 불렀다고 의심했어요.",
+   "blank": "संशय",
+   "src": "made"
+  },
+  {
+   "text": "मौसम को लेकर संशय था, फिर भी कविता ने शूटिंग जारी रखने का फ़ैसला किया।",
+   "en": "There was doubt about the weather, yet Kavita decided to continue the shoot.",
+   "ko": "날씨가 불확실했지만 카비타는 촬영을 계속하기로 했어요.",
+   "blank": "संशय",
+   "src": "made"
+  }
+ ],
  "w|सशस्त्र": [
   {
    "text": "इतिहास की किताब में आज़ादी के लिए हुए सशस्त्र विद्रोह पर एक अध्याय है।",
@@ -74176,6 +74720,22 @@
    "en": "The money from this marathon will go to help marginal farmers.",
    "ko": "이번 마라톤 수익금은 영세 농민을 돕는 데 쓰여요.",
    "blank": "सीमांत",
+   "src": "made"
+  }
+ ],
+ "w|सीमावर्ती": [
+  {
+   "text": "सुनील की बहन की शादी एक सीमावर्ती क़स्बे में हुई है, इसलिए मिलना कम होता है।",
+   "en": "Sunil's sister is married in a border town, so they meet rarely.",
+   "ko": "수닐 누나는 국경 근처 소도시로 시집가서 자주 못 만나요.",
+   "blank": "सीमावर्ती",
+   "src": "made"
+  },
+  {
+   "text": "अगले हफ़्ते टीम एक सीमावर्ती गाँव में रेगिस्तान वाले सीन फ़िल्माएगी।",
+   "en": "Next week the team will film the desert scenes in a border village.",
+   "ko": "다음 주에 팀은 국경 마을에서 사막 장면을 찍을 거예요.",
+   "blank": "सीमावर्ती",
    "src": "made"
   }
  ],
@@ -76719,6 +77279,22 @@
    "src": "made"
   }
  ],
+ "w|स्वेच्छा": [
+  {
+   "text": "सुनील ने स्वेच्छा से बहन के घर की मरम्मत में हाथ बँटाया।",
+   "en": "Sunil voluntarily helped with the repairs at his sister's house.",
+   "ko": "수닐은 자진해서 누나 집 수리를 거들었어요.",
+   "blank": "स्वेच्छा",
+   "src": "made"
+  },
+  {
+   "text": "गाँव के कई लोग स्वेच्छा से भीड़ वाले सीन में शामिल हुए।",
+   "en": "Many villagers joined the crowd scene voluntarily.",
+   "ko": "마을 사람들 여럿이 자원해서 군중 장면에 참여했어요.",
+   "blank": "स्वेच्छा",
+   "src": "made"
+  }
+ ],
  "w|स्वेटर": [
   {
    "text": "ठंडी सुबह विकास ऊन का मोटा स्वेटर पहनकर खेत की ओर निकल पड़ा।",
@@ -76913,6 +77489,22 @@
    "en": "The doctor looked at the bone X-ray.",
    "ko": "의사가 뼈 엑스레이를 봤어.",
    "blank": "हड्डी"
+  }
+ ],
+ "w|हताशा": [
+  {
+   "text": "बहन के न मानने पर सुनील की हताशा बढ़ती जा रही थी।",
+   "en": "Sunil's frustration kept growing as his sister would not agree.",
+   "ko": "누나가 말을 듣지 않자 수닐의 답답함은 점점 커졌어요.",
+   "blank": "हताशा",
+   "src": "made"
+  },
+  {
+   "text": "बार-बार कैमरा ख़राब होने से कविता की हताशा बढ़ गई।",
+   "en": "Kavita's frustration grew as the camera kept breaking down.",
+   "ko": "카메라가 자꾸 고장 나자 카비타는 점점 지쳐 갔어요.",
+   "blank": "हताशा",
+   "src": "made"
   }
  ],
  "w|हताहत": [
@@ -77899,6 +78491,22 @@
    "src": "made"
   }
  ],
+ "w|हास्यास्पद": [
+  {
+   "text": "बाद में सुनील को अपना पूरा गुस्सा हास्यास्पद लगा।",
+   "en": "Later, Sunil found his whole anger ridiculous.",
+   "ko": "나중에 수닐은 자기가 화낸 게 다 우스웠어요.",
+   "blank": "हास्यास्पद",
+   "src": "made"
+  },
+  {
+   "text": "नक़ली मूँछ बार-बार गिरने से सीन हास्यास्पद लगने लगा।",
+   "en": "With the fake moustache falling off again and again, the scene started to look ridiculous.",
+   "ko": "가짜 콧수염이 자꾸 떨어져서 장면이 우스꽝스러워졌어요.",
+   "blank": "हास्यास्पद",
+   "src": "made"
+  }
+ ],
  "w|हाहाकार": [
   {
    "text": "पुल टूटने की ख़बर से शहर में हाहाकार मच गया और थाने में भीड़ लग गई।",
@@ -78473,6 +79081,22 @@
    "src": "made"
   }
  ],
+ "w|हैरत": [
+  {
+   "text": "सुनील को हैरत हुई कि छोटी-सी बात पर इतना बड़ा झगड़ा कैसे हो गया।",
+   "en": "Sunil was amazed at how such a big fight had come from such a small thing.",
+   "ko": "수닐은 사소한 일로 어떻게 이렇게 크게 싸웠는지 어이가 없었어요.",
+   "blank": "हैरत",
+   "src": "made"
+  },
+  {
+   "text": "सेट पर असली हाथी देखकर बच्चों की आँखों में हैरत थी।",
+   "en": "There was wonder in the children's eyes seeing a real elephant on the set.",
+   "ko": "세트장에서 진짜 코끼리를 본 아이들 눈이 휘둥그레졌어요.",
+   "blank": "हैरत",
+   "src": "made"
+  }
+ ],
  "w|हैरान": [
   {
    "text": "परिणाम देखकर सब हैरान रह गए।",
@@ -78676,6 +79300,22 @@
    "en": "When her first story was rejected, the editor encouraged Meena.",
    "ko": "첫 기사가 퇴짜를 맞자 편집장은 미나에게 용기를 북돋아 줬어요.",
    "blank": "हौसला",
+   "src": "made"
+  }
+ ],
+ "w|हौसला बढ़ाना": [
+  {
+   "text": "नौकरी छूटने पर सुनील की बहन ने ही सबसे पहले उसका हौसला बढ़ाया था।",
+   "en": "When Sunil lost his job, it was his sister who first encouraged him.",
+   "ko": "수닐이 직장을 잃었을 때 제일 먼저 힘을 북돋아 준 건 누나였어요.",
+   "blank": "हौसला बढ़ाया",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने घबराए हुए नए कलाकार का हौसला बढ़ाते हुए कहा कि वह अच्छा कर रहा है।",
+   "en": "Encouraging the nervous new actor, Kavita told him he was doing well.",
+   "ko": "카비타는 긴장한 신인 배우에게 잘하고 있다며 힘을 북돋아 줬어요.",
+   "blank": "हौसला बढ़ाते",
    "src": "made"
   }
  ]

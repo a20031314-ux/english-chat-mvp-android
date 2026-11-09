@@ -2655,6 +2655,22 @@
    "src": "made"
   }
  ],
+ "w|allevare": [
+  {
+   "text": "Tommaso racconta a Davide che i suoi genitori volevano allevare capre in campagna.",
+   "en": "Tommaso tells Davide that his parents wanted to raise goats in the countryside.",
+   "ko": "토마소는 부모님이 시골에서 염소를 키우고 싶어했다고 다비데에게 이야기해요.",
+   "blank": "allevare",
+   "src": "made"
+  },
+  {
+   "text": "Elena racconta all'amica com'è stato allevare tre figli da sola.",
+   "en": "Elena tells her friend what it was like to raise three children on her own.",
+   "ko": "엘레나는 친구에게 혼자 아이 셋을 키운 이야기를 해요.",
+   "blank": "allevare",
+   "src": "made"
+  }
+ ],
  "w|alleviare": [
   {
    "text": "Un bagno caldo aiuta ad alleviare il mal di schiena di Luca dopo la legna.",
@@ -5272,6 +5288,22 @@
    "en": "An arrogant client treated Anna badly on the phone.",
    "ko": "거만한 고객이 전화로 안나에게 함부로 대했어요.",
    "blank": "arrogante",
+   "src": "made"
+  }
+ ],
+ "w|arroganza": [
+  {
+   "text": "Davide si aspettava arroganza, ma il nuovo arrivato è molto modesto.",
+   "en": "Davide expected arrogance, but the newcomer is very modest.",
+   "ko": "다비데는 거만할 줄 알았는데 새로 온 사람은 아주 겸손해요.",
+   "blank": "arroganza",
+   "src": "made"
+  },
+  {
+   "text": "Elena chiede scusa per l'arroganza che aveva da ragazza.",
+   "en": "Elena apologizes for the arrogance she had as a girl.",
+   "ko": "엘레나는 어릴 적 자기가 거만했던 걸 사과해요.",
+   "blank": "arroganza",
    "src": "made"
   }
  ],
@@ -8741,6 +8773,22 @@
    "en": "How lovely to see you again!",
    "ko": "다시 보니까 너무 좋다!",
    "blank": "bello"
+  }
+ ],
+ "w|benché": [
+  {
+   "text": "Davide aiuta volentieri il nuovo collega, benché abbia poco tempo.",
+   "en": "Davide gladly helps the new colleague, even though he has little time.",
+   "ko": "다비데는 시간이 별로 없는데도 새 동료를 기꺼이 도와줘요.",
+   "blank": "benché",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive ancora a mano, benché tutti usino il telefono.",
+   "en": "Elena still writes by hand, even though everyone uses their phone.",
+   "ko": "다들 휴대폰을 쓰는데도 엘레나는 여전히 손으로 편지를 써요.",
+   "blank": "benché",
+   "src": "made"
   }
  ],
  "w|benda": [
@@ -15581,6 +15629,22 @@
    "src": "made"
   }
  ],
+ "w|commentare": [
+  {
+   "text": "Davide preferisce non commentare le scelte del capo davanti al nuovo collega.",
+   "en": "Davide prefers not to comment on the boss's decisions in front of the new colleague.",
+   "ko": "다비데는 새 동료 앞에서 상사의 결정에 대해 말하지 않으려 해요.",
+   "blank": "commentare",
+   "src": "made"
+  },
+  {
+   "text": "Elena chiede all'amica di commentare le foto del vecchio liceo.",
+   "en": "Elena asks her friend to comment on the photos from their old high school.",
+   "ko": "엘레나는 친구에게 옛 고등학교 사진에 한마디 해 달라고 해요.",
+   "blank": "commentare",
+   "src": "made"
+  }
+ ],
  "w|commento": [
   {
    "text": "Il suo commento era breve ma utile.",
@@ -17007,6 +17071,22 @@
    "blank": "confondere"
   }
  ],
+ "w|confortante": [
+  {
+   "text": "Per Davide è confortante avere finalmente qualcuno con cui pranzare.",
+   "en": "For Davide it's comforting to finally have someone to have lunch with.",
+   "ko": "다비데에게는 드디어 같이 점심 먹을 사람이 생겨서 마음이 놓여요.",
+   "blank": "confortante",
+   "src": "made"
+  },
+  {
+   "text": "Per Elena è confortante sapere che l'amica sta bene.",
+   "en": "For Elena it's comforting to know her friend is well.",
+   "ko": "엘레나는 친구가 잘 지낸다는 걸 알아서 마음이 놓여요.",
+   "blank": "confortante",
+   "src": "made"
+  }
+ ],
  "w|conforto": [
   {
    "text": "Dopo la lite, una telefonata della nonna è stata di grande conforto per Marco.",
@@ -17218,6 +17298,22 @@
    "en": "Without a connection the card reader didn't work, so Francesca only took cash.",
    "ko": "인터넷이 끊겨 카드 단말기가 안 돼서 프란체스카는 현금만 받았어요.",
    "blank": "connessione",
+   "src": "made"
+  }
+ ],
+ "w|conoscente": [
+  {
+   "text": "Per Davide, Tommaso è ancora solo un conoscente, non un amico.",
+   "en": "For Davide, Tommaso is still just an acquaintance, not a friend.",
+   "ko": "다비데에게 토마소는 아직 친구가 아니라 그냥 아는 사람이에요.",
+   "blank": "conoscente",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha avuto l'indirizzo dell'amica da una conoscente comune.",
+   "en": "Elena got her friend's address from a mutual acquaintance.",
+   "ko": "엘레나는 둘이 같이 아는 사람에게서 친구 주소를 받았어요.",
+   "blank": "conoscente",
    "src": "made"
   }
  ],
@@ -17443,6 +17539,22 @@
    "en": "She deserves more consideration from you.",
    "ko": "그녀는 너에게서 더 배려받을 자격이 있어.",
    "blank": "considerazione"
+  }
+ ],
+ "w|considerevole": [
+  {
+   "text": "Il nuovo collega ha portato un numero considerevole di clienti, nota Davide.",
+   "en": "The new colleague has brought in a considerable number of clients, Davide notes.",
+   "ko": "새 동료가 상당한 수의 고객을 데려왔다고 다비데가 말해요.",
+   "blank": "considerevole",
+   "src": "made"
+  },
+  {
+   "text": "Tra una lettera e l'altra passa un tempo considerevole, ma Elena non si arrende.",
+   "en": "A considerable time passes between one letter and the next, but Elena doesn't give up.",
+   "ko": "편지와 편지 사이에 꽤 긴 시간이 흐르지만 엘레나는 포기하지 않아요.",
+   "blank": "considerevole",
+   "src": "made"
   }
  ],
  "w|consigliare": [
@@ -18786,6 +18898,22 @@
    "en": "Chiara buys cinnamon bark instead of the ground kind.",
    "ko": "키아라는 가루 대신 껍질 그대로인 계피를 사요.",
    "blank": "corteccia",
+   "src": "made"
+  }
+ ],
+ "w|cortese": [
+  {
+   "text": "Davide apprezza quanto Tommaso sia cortese con i clienti al telefono.",
+   "en": "Davide appreciates how polite Tommaso is with customers on the phone.",
+   "ko": "다비데는 토마소가 전화로 고객에게 얼마나 공손한지 높이 사요.",
+   "blank": "cortese",
+   "src": "made"
+  },
+  {
+   "text": "La risposta dell'amica è cortese ma un po' fredda, pensa Elena.",
+   "en": "Her friend's reply is polite but a bit cold, Elena thinks.",
+   "ko": "친구의 답장은 정중하지만 좀 차갑다고 엘레나는 생각해요.",
+   "blank": "cortese",
    "src": "made"
   }
  ],
@@ -22899,6 +23027,22 @@
    "src": "made"
   }
  ],
+ "w|discepolo": [
+  {
+   "text": "Davide prende il nuovo arrivato come discepolo e gli insegna il gestionale.",
+   "en": "Davide takes the newcomer under his wing and teaches him the management software.",
+   "ko": "다비데는 새로 온 사람을 제자처럼 삼아 관리 프로그램을 가르쳐요.",
+   "blank": "discepolo",
+   "src": "made"
+  },
+  {
+   "text": "Elena racconta che un suo discepolo di pianoforte ora suona in orchestra.",
+   "en": "Elena relates that one of her piano pupils now plays in an orchestra.",
+   "ko": "엘레나는 자기 피아노 제자 한 명이 지금 오케스트라에서 연주한다고 이야기해요.",
+   "blank": "discepolo",
+   "src": "made"
+  }
+ ],
  "w|disciplina": [
   {
    "text": "Il preside dice che nella classe di Paolo manca un po' di disciplina.",
@@ -23489,6 +23633,22 @@
    "en": "He has a distinctive accent from the region.",
    "ko": "그는 그 지역 특유의 억양이 있어.",
    "blank": "distintivo"
+  }
+ ],
+ "w|distinto": [
+  {
+   "text": "Tommaso arriva il primo giorno con un abito grigio molto distinto.",
+   "en": "Tommaso arrives on the first day in a very distinguished grey suit.",
+   "ko": "토마소는 첫날 아주 점잖은 회색 정장을 입고 와요.",
+   "blank": "distinto",
+   "src": "made"
+  },
+  {
+   "text": "Elena chiude la lettera con distinti saluti, poi ride e lo cancella.",
+   "en": "Elena closes the letter with \"kind regards\", then laughs and crosses it out.",
+   "ko": "엘레나는 편지를 \"삼가 인사드립니다\"로 끝냈다가 웃으며 지워요.",
+   "blank": "distinti",
+   "src": "made"
   }
  ],
  "w|distrarre": [
@@ -29385,6 +29545,22 @@
    "src": "made"
   }
  ],
+ "w|filosofo": [
+  {
+   "text": "Davide scherza che Tommaso parla come un filosofo davanti alla macchinetta del caffè.",
+   "en": "Davide jokes that Tommaso talks like a philosopher in front of the coffee machine.",
+   "ko": "다비데는 토마소가 커피 자판기 앞에서 철학자처럼 말한다고 농담해요.",
+   "blank": "filosofo",
+   "src": "made"
+  },
+  {
+   "text": "L'amica di Elena ha sposato un professore che si crede un filosofo.",
+   "en": "Elena's friend married a professor who thinks he's a philosopher.",
+   "ko": "엘레나의 친구는 자기가 철학자인 줄 아는 교수와 결혼했어요.",
+   "blank": "filosofo",
+   "src": "made"
+  }
+ ],
  "w|filtrare": [
   {
    "text": "Stefano usa un panno pulito per filtrare il brodo.",
@@ -29830,6 +30006,22 @@
    "en": "Laura's dog puts its nose out of the window to sniff the air.",
    "ko": "라우라의 개가 창밖으로 코를 내밀어 공기 냄새를 맡아요.",
    "blank": "fiutare",
+   "src": "made"
+  }
+ ],
+ "w|flessibile": [
+  {
+   "text": "Tommaso ha un orario flessibile e Davide lo invidia un po'.",
+   "en": "Tommaso has flexible hours and Davide envies him a little.",
+   "ko": "토마소는 근무 시간이 유연해서 다비데는 조금 부러워요.",
+   "blank": "flessibile",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive di essere diventata più flessibile con gli anni.",
+   "en": "Elena writes that she has become more flexible over the years.",
+   "ko": "엘레나는 나이가 들면서 더 유연해졌다고 편지에 써요.",
+   "blank": "flessibile",
    "src": "made"
   }
  ],
@@ -30779,6 +30971,38 @@
    "en": "Repeat the sentence after me.",
    "ko": "나 따라 그 문장을 반복해.",
    "blank": "frase"
+  }
+ ],
+ "w|frate": [
+  {
+   "text": "Il nuovo collega di Davide ha uno zio frate in un convento di montagna.",
+   "en": "Davide's new colleague has an uncle who is a friar in a mountain monastery.",
+   "ko": "다비데의 새 동료에게는 산속 수도원에서 수사로 지내는 삼촌이 있어요.",
+   "blank": "frate",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive all'amica che suo fratello è diventato frate.",
+   "en": "Elena writes to her friend that her brother has become a friar.",
+   "ko": "엘레나는 친구에게 오빠가 수사가 됐다고 편지에 써요.",
+   "blank": "frate",
+   "src": "made"
+  }
+ ],
+ "w|fratellastro": [
+  {
+   "text": "Il nuovo collega si rivela il fratellastro di un vecchio amico di Davide.",
+   "en": "The new colleague turns out to be the half-brother of an old friend of Davide's.",
+   "ko": "새 동료는 알고 보니 다비데의 오랜 친구의 이복형제예요.",
+   "blank": "fratellastro",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive che il suo fratellastro si è trasferito vicino all'amica.",
+   "en": "Elena writes that her half-brother has moved near her friend.",
+   "ko": "엘레나는 이복동생이 친구 근처로 이사했다고 편지에 써요.",
+   "blank": "fratellastro",
+   "src": "made"
   }
  ],
  "w|fratellino": [
@@ -33453,6 +33677,22 @@
    "src": "made"
   }
  ],
+ "w|governante": [
+  {
+   "text": "Da bambino Tommaso era cresciuto con una governante, scopre Davide.",
+   "en": "As a child Tommaso had been raised by a housekeeper, Davide finds out.",
+   "ko": "토마소가 어릴 때 가정부 손에 컸다는 걸 다비데가 알게 돼요.",
+   "blank": "governante",
+   "src": "made"
+  },
+  {
+   "text": "Elena ricorda la severa governante della villa dove giocavano da bambine.",
+   "en": "Elena remembers the strict housekeeper at the villa where they played as little girls.",
+   "ko": "엘레나는 어릴 적 같이 놀던 별장의 엄격한 가정부를 떠올려요.",
+   "blank": "governante",
+   "src": "made"
+  }
+ ],
  "w|governare": [
   {
    "text": "A storia Davide studia come i Romani riuscivano a governare territori così vasti.",
@@ -34550,6 +34790,22 @@
    "en": "For Elena going out in a T-shirt in January is stupid.",
    "ko": "엘레나에게 일월에 반팔로 나가는 건 바보짓이에요.",
    "blank": "idiozia",
+   "src": "made"
+  }
+ ],
+ "w|idolo": [
+  {
+   "text": "Il nuovo collega confessa a Davide che il suo idolo da ragazzo era un astronauta.",
+   "en": "The new colleague confesses to Davide that his childhood idol was an astronaut.",
+   "ko": "새 동료는 어릴 적 우상이 우주비행사였다고 다비데에게 털어놓아요.",
+   "blank": "idolo",
+   "src": "made"
+  },
+  {
+   "text": "Elena ricorda il poster del loro idolo appeso in camera.",
+   "en": "Elena remembers the poster of their idol hanging in the bedroom.",
+   "ko": "엘레나는 방에 걸려 있던 둘의 우상 포스터를 떠올려요.",
+   "blank": "idolo",
    "src": "made"
   }
  ],
@@ -35809,6 +36065,22 @@
    "blank": "improvviso"
   }
  ],
+ "w|impulsivo": [
+  {
+   "text": "Davide è un po' impulsivo e risponde alle email troppo in fretta.",
+   "en": "Davide is a bit impulsive and answers emails too quickly.",
+   "ko": "다비데는 좀 충동적이라서 이메일에 너무 서둘러 답해요.",
+   "blank": "impulsivo",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive che da giovane era troppo impulsiva per ascoltare i consigli.",
+   "en": "Elena writes that when she was young she was too impulsive to listen to advice.",
+   "ko": "엘레나는 젊을 때 너무 충동적이라 조언을 듣지 않았다고 편지에 써요.",
+   "blank": "impulsiva",
+   "src": "made"
+  }
+ ],
  "w|impulso": [
   {
    "text": "Simone ha seguito l'impulso di prendere la penna e scrivere a Marco dopo tanti anni.",
@@ -36287,6 +36559,22 @@
    "blank": "incontro"
   }
  ],
+ "w|inconveniente": [
+  {
+   "text": "L'unico inconveniente del nuovo collega, per Davide, è che fischietta sempre.",
+   "en": "The only drawback of the new colleague, for Davide, is that he always whistles.",
+   "ko": "다비데가 보기에 새 동료의 유일한 단점은 늘 휘파람을 분다는 거예요.",
+   "blank": "inconveniente",
+   "src": "made"
+  },
+  {
+   "text": "Elena racconta un piccolo inconveniente: la posta ha perso la sua lettera precedente.",
+   "en": "Elena tells of a small mishap: the post office lost her previous letter.",
+   "ko": "엘레나는 우체국이 지난 편지를 잃어버린 작은 사고를 이야기해요.",
+   "blank": "inconveniente",
+   "src": "made"
+  }
+ ],
  "w|incoraggiamento": [
   {
    "text": "Con una parola di incoraggiamento, il padre convince Simone a chiamare la sorella.",
@@ -36493,6 +36781,22 @@
    "en": "He pointed out the correct door to me.",
    "ko": "그가 내게 맞는 문을 가리켜 줬어.",
    "blank": "indicato"
+  }
+ ],
+ "w|indicatore": [
+  {
+   "text": "Davide spiega a Tommaso quale indicatore guardare nel rapporto mensile.",
+   "en": "Davide explains to Tommaso which indicator to look at in the monthly report.",
+   "ko": "다비데는 토마소에게 월간 보고서에서 어떤 지표를 봐야 하는지 설명해요.",
+   "blank": "indicatore",
+   "src": "made"
+  },
+  {
+   "text": "Per Elena una lettera lunga è un indicatore di vera amicizia.",
+   "en": "For Elena a long letter is an indicator of true friendship.",
+   "ko": "엘레나에게 긴 편지는 진짜 우정의 지표예요.",
+   "blank": "indicatore",
+   "src": "made"
   }
  ],
  "w|indicazione": [
@@ -37922,6 +38226,22 @@
    "en": "Martina chased an idea for years: making bread with sourdough starter.",
    "ko": "마르티나는 몇 년 동안 천연 효모로 빵을 만드는 꿈을 좇았어요.",
    "blank": "inseguito",
+   "src": "made"
+  }
+ ],
+ "w|insensato": [
+  {
+   "text": "Davide trova insensato fare tre riunioni sullo stesso argomento.",
+   "en": "Davide finds it pointless to hold three meetings on the same topic.",
+   "ko": "다비데는 같은 주제로 회의를 세 번 하는 게 말이 안 된다고 생각해요.",
+   "blank": "insensato",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive che il loro vecchio litigio le sembra ormai insensato.",
+   "en": "Elena writes that their old quarrel now seems senseless to her.",
+   "ko": "엘레나는 둘의 옛 다툼이 이제는 부질없어 보인다고 편지에 써요.",
+   "blank": "insensato",
    "src": "made"
   }
  ],
@@ -39490,6 +39810,22 @@
    "en": "The mystery of the bell that rings at night is still unsolved, Giulia says.",
    "ko": "밤에 울리는 종의 수수께끼는 아직 풀리지 않았다고 줄리아가 말해요.",
    "blank": "irrisolto",
+   "src": "made"
+  }
+ ],
+ "w|irritabile": [
+  {
+   "text": "Quando il computer si blocca, Davide diventa irritabile.",
+   "en": "When the computer freezes, Davide gets irritable.",
+   "ko": "컴퓨터가 멈추면 다비데는 짜증이 나요.",
+   "blank": "irritabile",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive che il marito, in pensione, è diventato irritabile.",
+   "en": "Elena writes that her husband, now retired, has become irritable.",
+   "ko": "엘레나는 은퇴한 남편이 예민해졌다고 편지에 써요.",
+   "blank": "irritabile",
    "src": "made"
   }
  ],
@@ -45871,6 +46207,22 @@
    "src": "made"
   }
  ],
+ "w|mitico": [
+  {
+   "text": "Davide ha portato a Tommaso il mitico panino della mensa.",
+   "en": "Davide brought Tommaso the legendary canteen sandwich.",
+   "ko": "다비데는 토마소에게 구내식당의 전설적인 파니니를 가져다줬어요.",
+   "blank": "mitico",
+   "src": "made"
+  },
+  {
+   "text": "Elena ricorda il mitico viaggio in treno fino a Parigi.",
+   "en": "Elena remembers the legendary train trip to Paris.",
+   "ko": "엘레나는 파리까지 갔던 전설적인 기차 여행을 떠올려요.",
+   "blank": "mitico",
+   "src": "made"
+  }
+ ],
  "w|mito": [
   {
    "text": "Andrea vuole sfatare il mito che i processi in televisione siano come quelli veri.",
@@ -47795,6 +48147,22 @@
    "blank": "nipote"
   }
  ],
+ "w|nipotino": [
+  {
+   "text": "Sulla scrivania di Tommaso c'è la foto del nipotino, e Davide gli chiede quanti anni ha.",
+   "en": "On Tommaso's desk there's a photo of his little grandson, and Davide asks him how old he is.",
+   "ko": "토마소의 책상에 어린 손자 사진이 있어서 다비데가 몇 살이냐고 물어요.",
+   "blank": "nipotino",
+   "src": "made"
+  },
+  {
+   "text": "Nella busta Elena mette una foto del suo nipotino al mare.",
+   "en": "In the envelope Elena puts a photo of her little grandson at the seaside.",
+   "ko": "엘레나는 봉투에 바닷가에서 찍은 어린 손자 사진을 넣어요.",
+   "blank": "nipotino",
+   "src": "made"
+  }
+ ],
  "w|no": [
   {
    "text": "La risposta è no.",
@@ -48033,6 +48401,22 @@
    "en": "I'm visiting grandma on Sunday.",
    "ko": "일요일에 할머니를 뵈러 가.",
    "blank": "nonna"
+  }
+ ],
+ "w|nonnina": [
+  {
+   "text": "Tommaso chiama la sua nonnina ogni giorno in pausa pranzo, nota Davide.",
+   "en": "Tommaso calls his granny every day on his lunch break, Davide notices.",
+   "ko": "토마소가 점심시간마다 할머니께 전화한다는 걸 다비데가 알아채요.",
+   "blank": "nonnina",
+   "src": "made"
+  },
+  {
+   "text": "Elena chiede notizie della nonnina che faceva i biscotti per tutte e due.",
+   "en": "Elena asks for news of the granny who used to make biscuits for both of them.",
+   "ko": "엘레나는 둘에게 과자를 구워 주던 할머니의 안부를 물어요.",
+   "blank": "nonnina",
+   "src": "made"
   }
  ],
  "w|nonno": [
@@ -49872,6 +50256,22 @@
    "en": "For Chiara the Saturday market isn't an ordinary thing, but a little celebration.",
    "ko": "키아라에게 토요 시장은 평범한 일이 아니라 작은 축제예요.",
    "blank": "ordinaria",
+   "src": "made"
+  }
+ ],
+ "w|ordinato": [
+  {
+   "text": "La scrivania di Tommaso è molto più ordinata di quella di Davide.",
+   "en": "Tommaso's desk is much tidier than Davide's.",
+   "ko": "토마소의 책상은 다비데의 책상보다 훨씬 깔끔해요.",
+   "blank": "ordinata",
+   "src": "made"
+  },
+  {
+   "text": "La calligrafia di Elena è rimasta ordinata come a scuola.",
+   "en": "Elena's handwriting has stayed as neat as it was at school.",
+   "ko": "엘레나의 글씨는 학교 다닐 때처럼 여전히 반듯해요.",
+   "blank": "ordinata",
    "src": "made"
   }
  ],
@@ -62139,6 +62539,22 @@
    "blank": "ricco"
   }
  ],
+ "w|riccone": [
+  {
+   "text": "Con quella macchina, Davide pensava che Tommaso fosse un riccone.",
+   "en": "With that car, Davide thought Tommaso was a rich guy.",
+   "ko": "그 차를 보고 다비데는 토마소가 부자인 줄 알았어요.",
+   "blank": "riccone",
+   "src": "made"
+  },
+  {
+   "text": "Elena ride ricordando il riccone che voleva sposare l'amica.",
+   "en": "Elena laughs remembering the rich guy who wanted to marry her friend.",
+   "ko": "엘레나는 친구와 결혼하고 싶어하던 부자를 떠올리며 웃어요.",
+   "blank": "riccone",
+   "src": "made"
+  }
+ ],
  "w|ricerca": [
   {
    "text": "La ricerca richiede molto tempo.",
@@ -62516,6 +62932,22 @@
    "en": "After her father's hospital stay, Martina runs the shop by herself.",
    "ko": "아버지가 입원한 뒤로 마르티나가 혼자 가게를 꾸려요.",
    "blank": "ricovero",
+   "src": "made"
+  }
+ ],
+ "w|ridacchiare": [
+  {
+   "text": "Durante la riunione Davide e Tommaso non riescono a smettere di ridacchiare.",
+   "en": "During the meeting Davide and Tommaso can't stop giggling.",
+   "ko": "회의 중에 다비데와 토마소는 킥킥 웃음을 멈추지 못해요.",
+   "blank": "ridacchiare",
+   "src": "made"
+  },
+  {
+   "text": "Leggendo la risposta, Elena comincia a ridacchiare da sola.",
+   "en": "Reading the reply, Elena starts giggling to herself.",
+   "ko": "답장을 읽으며 엘레나는 혼자 킥킥 웃기 시작해요.",
+   "blank": "ridacchiare",
    "src": "made"
   }
  ],
@@ -64346,6 +64778,22 @@
    "en": "In spring Martina takes the class for a picnic on the lake shore.",
    "ko": "봄에 마르티나는 반 아이들을 데리고 호숫가로 소풍을 가요.",
    "blank": "riva",
+   "src": "made"
+  }
+ ],
+ "w|rivale": [
+  {
+   "text": "All'inizio Davide vedeva Tommaso come un rivale per la promozione.",
+   "en": "At first Davide saw Tommaso as a rival for the promotion.",
+   "ko": "처음에 다비데는 토마소를 승진 경쟁자로 봤어요.",
+   "blank": "rivale",
+   "src": "made"
+  },
+  {
+   "text": "Elena e l'amica erano rivali nella gara di corsa a scuola.",
+   "en": "Elena and her friend were rivals in the school running race.",
+   "ko": "엘레나와 친구는 학교 달리기 대회에서 라이벌이었어요.",
+   "blank": "rivali",
    "src": "made"
   }
  ],
@@ -67009,6 +67457,22 @@
    "blank": "sciocchezza"
   }
  ],
+ "w|sciocco": [
+  {
+   "text": "Davide si sente sciocco per aver sbagliato il nome del nuovo collega.",
+   "en": "Davide feels silly for getting the new colleague's name wrong.",
+   "ko": "다비데는 새 동료 이름을 잘못 불러서 바보가 된 기분이에요.",
+   "blank": "sciocco",
+   "src": "made"
+  },
+  {
+   "text": "Nella lettera Elena ricorda un litigio sciocco di quando avevano quindici anni.",
+   "en": "In the letter Elena recalls a silly quarrel from when they were fifteen.",
+   "ko": "엘레나는 편지에서 열다섯 살 때의 바보 같은 다툼을 떠올려요.",
+   "blank": "sciocco",
+   "src": "made"
+  }
+ ],
  "w|sciopero": [
   {
    "text": "Per lo sciopero dei trasporti metà della squadra di Andrea è arrivata tardi.",
@@ -67145,6 +67609,22 @@
    "en": "I'd bet he arrives late.",
    "ko": "그가 늦을 거라고 장담하겠어.",
    "blank": "Scommetterei"
+  }
+ ],
+ "w|scomodare": [
+  {
+   "text": "Per una semplice stampante, Davide non vuole scomodare il tecnico.",
+   "en": "For a simple printer, Davide doesn't want to bother the technician.",
+   "ko": "다비데는 프린터 하나 때문에 기술자를 번거롭게 하고 싶지 않아요.",
+   "blank": "scomodare",
+   "src": "made"
+  },
+  {
+   "text": "Elena non vuole scomodare l'amica, ma le chiede di ospitarla per un weekend.",
+   "en": "Elena doesn't want to put her friend out, but asks her to host her for a weekend.",
+   "ko": "엘레나는 친구를 번거롭게 하고 싶지 않지만 주말 동안 재워 달라고 부탁해요.",
+   "blank": "scomodare",
+   "src": "made"
   }
  ],
  "w|scomparire": [
@@ -67294,6 +67774,22 @@
    "en": "During a clash under the basket, Chiara fell but got straight back up.",
    "ko": "골밑 몸싸움 중에 키아라는 넘어졌지만 바로 일어났어요.",
    "blank": "scontro",
+   "src": "made"
+  }
+ ],
+ "w|scontroso": [
+  {
+   "text": "Il lunedì mattina Davide è scontroso finché non beve il caffè.",
+   "en": "On Monday mornings Davide is grumpy until he has his coffee.",
+   "ko": "월요일 아침 다비데는 커피를 마시기 전까지 퉁명스러워요.",
+   "blank": "scontroso",
+   "src": "made"
+  },
+  {
+   "text": "Elena ammette che dopo il divorzio era diventata scontrosa con tutti.",
+   "en": "Elena admits that after the divorce she had become grumpy with everyone.",
+   "ko": "엘레나는 이혼 뒤 모두에게 퉁명스러워졌었다고 인정해요.",
+   "blank": "scontrosa",
    "src": "made"
   }
  ],
@@ -70033,6 +70529,22 @@
    "en": "I'll tell you sincerely what I think.",
    "ko": "내가 진짜 생각하는 걸 솔직히 말해 줄게.",
    "blank": "sinceramente"
+  }
+ ],
+ "w|sincerità": [
+  {
+   "text": "Davide apprezza la sincerità con cui Tommaso ammette i suoi errori.",
+   "en": "Davide appreciates the honesty with which Tommaso admits his mistakes.",
+   "ko": "다비데는 토마소가 자기 실수를 솔직하게 인정하는 점을 높이 사요.",
+   "blank": "sincerità",
+   "src": "made"
+  },
+  {
+   "text": "Elena apprezza la sincerità della lettera dell'amica.",
+   "en": "Elena appreciates the sincerity of her friend's letter.",
+   "ko": "엘레나는 친구 편지의 진솔함을 고맙게 여겨요.",
+   "blank": "sincerità",
+   "src": "made"
   }
  ],
  "w|sincero": [
@@ -73027,6 +73539,22 @@
    "src": "made"
   }
  ],
+ "w|sposa": [
+  {
+   "text": "Tommaso mostra a Davide la foto della sua futura sposa.",
+   "en": "Tommaso shows Davide a photo of his bride-to-be.",
+   "ko": "토마소는 다비데에게 예비 신부 사진을 보여 줘요.",
+   "blank": "sposa",
+   "src": "made"
+  },
+  {
+   "text": "Elena allega la foto dell'amica vestita da sposa, trovata in un cassetto.",
+   "en": "Elena encloses the photo of her friend dressed as a bride, found in a drawer.",
+   "ko": "엘레나는 서랍에서 찾은 친구의 신부 사진을 동봉해요.",
+   "blank": "sposa",
+   "src": "made"
+  }
+ ],
  "w|sposare": [
   {
    "text": "Si sposano in chiesa.",
@@ -73039,6 +73567,22 @@
    "en": "I'm not getting married, it's too soon.",
    "ko": "아직은 결혼 안 해, 일러.",
    "blank": "sposo"
+  }
+ ],
+ "w|sposarsi": [
+  {
+   "text": "Tommaso racconta a Davide che sta per sposarsi a giugno.",
+   "en": "Tommaso tells Davide that he is getting married in June.",
+   "ko": "토마소는 다비데에게 유월에 결혼한다고 말해요.",
+   "blank": "sposarsi",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive che sua figlia vuole sposarsi in un piccolo paese.",
+   "en": "Elena writes that her daughter wants to get married in a small village.",
+   "ko": "엘레나는 딸이 작은 마을에서 결혼하고 싶어한다고 편지에 써요.",
+   "blank": "sposarsi",
+   "src": "made"
   }
  ],
  "w|sposato": [
@@ -73418,6 +73962,22 @@
    "en": "Martina's new house used to be a stable and was then renovated.",
    "ko": "마르티나의 새집은 원래 마구간이었는데 나중에 개조됐어요.",
    "blank": "stalla",
+   "src": "made"
+  }
+ ],
+ "w|stallo": [
+  {
+   "text": "Con l'aiuto di Tommaso, Davide sblocca un progetto fermo in una situazione di stallo.",
+   "en": "With Tommaso's help, Davide unblocks a project stuck at a standstill.",
+   "ko": "토마소의 도움으로 다비데는 교착 상태였던 프로젝트를 풀어 가요.",
+   "blank": "stallo",
+   "src": "made"
+  },
+  {
+   "text": "Dopo anni di stallo, Elena decide di scrivere per prima.",
+   "en": "After years of stalemate, Elena decides to write first.",
+   "ko": "몇 년 동안 연락이 끊겼다가 엘레나가 먼저 편지를 쓰기로 해요.",
+   "blank": "stallo",
    "src": "made"
   }
  ],
@@ -73991,6 +74551,22 @@
    "blank": "stomaco"
   }
  ],
+ "w|stordire": [
+  {
+   "text": "Tutte quelle informazioni rischiano di stordire il nuovo collega, pensa Davide.",
+   "en": "All that information could leave the new colleague dazed, Davide thinks.",
+   "ko": "그 많은 정보에 새 동료가 정신이 없을 거라고 다비데는 생각해요.",
+   "blank": "stordire",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive che il caldo di agosto sembra stordire tutto il paese.",
+   "en": "Elena writes that the August heat seems to stun the whole village.",
+   "ko": "엘레나는 팔월 더위에 마을 전체가 멍해진 것 같다고 편지에 써요.",
+   "blank": "stordire",
+   "src": "made"
+  }
+ ],
  "w|storia": [
   {
    "text": "È una lunga storia.",
@@ -74324,6 +74900,22 @@
    "en": "At the pool party, an entertainer dressed as a wizard plays games with Elena's children.",
    "ko": "수영장 파티에서 마법사 복장을 한 진행자가 엘레나의 아이들과 놀아 줘요.",
    "blank": "stregone",
+   "src": "made"
+  }
+ ],
+ "w|strepitoso": [
+  {
+   "text": "La presentazione di Tommaso è stata strepitosa, ammette Davide.",
+   "en": "Tommaso's presentation was terrific, Davide admits.",
+   "ko": "토마소의 발표는 굉장했다고 다비데가 인정해요.",
+   "blank": "strepitosa",
+   "src": "made"
+  },
+  {
+   "text": "Elena ricorda la festa strepitosa per i loro diciotto anni.",
+   "en": "Elena remembers the fantastic party for their eighteenth birthday.",
+   "ko": "엘레나는 둘의 열여덟 살 생일에 했던 굉장한 파티를 떠올려요.",
+   "blank": "strepitosa",
    "src": "made"
   }
  ],
@@ -77625,6 +78217,22 @@
    "blank": "topo"
   }
  ],
+ "w|topolino": [
+  {
+   "text": "Davide trova un topolino di peluche nel cassetto del nuovo collega.",
+   "en": "Davide finds a little stuffed mouse in the new colleague's drawer.",
+   "ko": "다비데는 새 동료 서랍에서 생쥐 인형을 발견해요.",
+   "blank": "topolino",
+   "src": "made"
+  },
+  {
+   "text": "Elena ricorda che l'amica la chiamava sempre topolino.",
+   "en": "Elena remembers that her friend always called her \"little mouse\".",
+   "ko": "엘레나는 친구가 자기를 늘 생쥐라고 불렀던 걸 기억해요.",
+   "blank": "topolino",
+   "src": "made"
+  }
+ ],
  "w|torace": [
   {
    "text": "Per la tosse forte Stefano suggerisce un balsamo da spalmare sul torace.",
@@ -78424,6 +79032,22 @@
    "en": "The bank blocked a strange transaction on Francesca's account.",
    "ko": "은행이 프란체스카 계좌의 이상한 거래를 막았어요.",
    "blank": "transazione",
+   "src": "made"
+  }
+ ],
+ "w|trapelare": [
+  {
+   "text": "Davide promette a Tommaso di non far trapelare la notizia del suo matrimonio.",
+   "en": "Davide promises Tommaso not to let the news of his wedding leak out.",
+   "ko": "다비데는 토마소의 결혼 소식이 새어 나가지 않게 하겠다고 약속해요.",
+   "blank": "trapelare",
+   "src": "made"
+  },
+  {
+   "text": "Dalle parole dell'amica sembra trapelare un po' di nostalgia, pensa Elena.",
+   "en": "A little nostalgia seems to come through in her friend's words, Elena thinks.",
+   "ko": "친구의 글에서 그리움이 조금 묻어나는 것 같다고 엘레나는 생각해요.",
+   "blank": "trapelare",
    "src": "made"
   }
  ],
@@ -80740,6 +81364,22 @@
    "en": "Sara is impressed by the new colleague's broad experience.",
    "ko": "사라는 새 동료의 폭넓은 경험에 감탄해요.",
    "blank": "vasta",
+   "src": "made"
+  }
+ ],
+ "w|vecchiaia": [
+  {
+   "text": "Tommaso dice a Davide che vuole passare la vecchiaia al mare.",
+   "en": "Tommaso tells Davide he wants to spend his old age by the sea.",
+   "ko": "토마소는 노년을 바닷가에서 보내고 싶다고 다비데에게 말해요.",
+   "blank": "vecchiaia",
+   "src": "made"
+  },
+  {
+   "text": "Elena scrive che la vecchiaia le ha portato più calma.",
+   "en": "Elena writes that old age has brought her more calm.",
+   "ko": "엘레나는 노년이 자기에게 더 평온함을 가져다줬다고 편지에 써요.",
+   "blank": "vecchiaia",
    "src": "made"
   }
  ],
