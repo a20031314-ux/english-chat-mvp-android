@@ -1,7 +1,10 @@
 ## 재구성 제안 (변경 감시, 자동)
 
-> 2026-11-09 개편(My = Logbank·Quizbank·Languagebank, 통화 문 넷·숙제)에 맞춰 광고 구조를 다시 짰다(사용자 "개편내용 확인하고 광고삽입구조 다시 짜줘") — 지난 안 다섯 개(통화 끝 전면 정리·손익 계산 맞추기·My 바닥 네이티브+배너 없앰·실력 확인 결과·My 읽기·끝 화면 묶음)를 모두 코드와 `economics.json`에 넣음. 넣지 않는 자리는 `hub/app/ADS.md` "넣지 않는 곳"으로 옮김. 다음 변경 감시가 새 화면부터 다시 본다.
+> 기능이 바뀐 범위 f3d12a5db02c06c9dd2ba846489a4279dd510baa..2e6b75cd27a1fd0a3c7ca6f6fda76fcc252deba7를 보고 광고 자리를 원칙(위쪽)과 다시 맞춘 안. 2026-11-09 · `scripts/watch/ads.mjs` + 검토 에이전트(`scripts/watch/ADS-REVIEW.md`). 바꾸는 것은 사용자가 "바꿔줘" 한 뒤 — 설정은 Vercel `ADS_*`(바로), 자리는 앱 빌드.
 
-- **손익(`hub/app/economics.md`, 가입자 1,000명당 월 · 단가 중간 · 전환 3%):** 지금 코드 그대로 셈하면 +284,748원(무료 한 사람 +241원) → 다시 짠 구조 **+496,363원**(무료 한 사람 +459원). 예전 표의 +780,982원은 지워진 옛 My 자리(오늘 할 것 끝·단계 시험·대본 끝 등)를 세던 값.
+- **손익(`hub/app/economics.md` 계산, 가입자 1,000명당 월 · 단가 중간 · 전환 3%):** 지금 +496,363원(무료 한 사람 +459원) → 아래 안 중 0개(원칙 위반 고침 + 수입이 느는 것, 바꿔 끼우는 안은 좋은 쪽 하나)를 넣으면 **+496,363원**(무료 한 사람 +459원).
 
-이번 범위에서 바꿀 안 없음.
+| 무엇 | 어디 | 왜(원칙) | 1,000명당 월(중간) | 무료 한 사람 | 바로/빌드 | 근거 |
+|---|---|---|---|---|---|---|
+| remove: 대화·통화 위(above)에서 연 소재 수업(FrameLesson)의 네이티브 두 자리(수업 퀴즈 아래 quiz-inline·끝 화면 lesson-end)를 빼기 — 표현 카드·사전 시트처럼 above면 없음 | My 탭 `my` · studyMap/FrameLesson.tsx (LessonHost가 LayerAboveContext를 주지만 FrameLesson은 읽지 않음) | 넣지 않는 곳 '대화·통화 위에서 연 사전·표현 카드(above)'와 어긋남 — 이번 범위에 생긴 채팅 표현 보기 → 같이 배우기 칩(ExpressionPeek StudyChips above)이 채팅 층 위에 수업을 띄우고, 같은 💬 칩이 isFrameExpression이면 FrameLesson(광고 있음), 아니면 ExpressionCard(광고 없음)로 갈려 같은 버튼에 광고가 있다 없다 함 — 독립 확인: ADS.md 넣지 않는 곳에 소재 수업은 없음(끝 화면 네이티브는 허용), 통화 정리는 above 아님. 실제 따질 것은 채팅 위 수업의 quiz-inline 하나 — 사용자 결정 거리. | −9,283원 | −9원 | 앱 빌드 | 코드: StudyChips.tsx openLesson({…above:true}) · LessonHost.tsx LayerAboveContext.Provider · ExpressionCard.tsx `above ? null : <NativeAdSlot sheets expression-card>` · Dictionary.tsx 같은 규칙 · FrameLesson.tsx 529·683줄 NativeAdSlot은 above를 보지 않음. above로 여는 곳은 채팅 표현 보기 칩·사전 주석 📕(DictNotes — 대화 줄·자막·Quizbank 답 뒤 모두 above:true)이라, 고치면 Quizbank 답 뒤 📕에서 연 수업의 네이티브도 빠짐. 무료는 채팅 평생 10통·통화 시간 없음이라 대부분 Quizbank 📕 경로 — 무료 한 사람 쓰는 날 0.2번 노출 감소로 어림(수업 퀴즈 아래 + 끝 화면). 빈 공간 캡처(tmp/ads-blank·tmp/sim-users)는 없어 코드로만 봄. |
+| add: (넣지 않음 — 기록) 채팅 표현 보기·통화 정리의 같이 배우기 칩에서 연 수업을 닫을 때 전면 | AI 채팅 `chat` · ExpressionPeek.tsx ／ AI 통화 `call` · roleplay/CallRecap.tsx → studyMap/LessonHost | 새 UI 검토(0번·0-1번): 칩 줄은 누르는 버튼 줄(잘못 누름), 채팅 표현 보기는 대화 도중, 수업 닫기는 채팅·통화 끝 화면으로 돌아가는 도중 — ADS.md '소재 수업을 닫을 때 전면'·'같이 배우기 칩 줄' 넣지 않는 곳. 통화 정리는 이미 끝 화면 네이티브 call-end가 있어 한 화면 하나 규칙으로 더 넣을 자리 없음 | +6,033원 (권하지 않음 — 합계 제외) | +6원 | 앱 빌드 | AdMob: 과제 도중·핵심 콘텐츠 이동 막음 금지. 숫자는 기록용 — 무료는 채팅 평생 10통·통화 시간 없음이라 이 길을 지나는 날이 드묾, 쓰는 날 0.05번으로 어림. |
