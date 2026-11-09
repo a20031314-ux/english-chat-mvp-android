@@ -165,6 +165,22 @@
    "src": "made"
   }
  ],
+ "w|abisso": [
+  {
+   "text": "Dal finestrino Luca guarda l'abisso blu dell'oceano sotto l'aereo.",
+   "en": "From the window Luca looks at the blue abyss of the ocean below the plane.",
+   "ko": "루카는 창밖으로 비행기 아래 바다의 파란 심연을 내려다봐요.",
+   "blank": "abisso",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che tra lei e sua sorella ormai c'è un abisso.",
+   "en": "Chiara writes that there is now a gulf between her and her sister.",
+   "ko": "키아라는 이제 언니와 자기 사이에 깊은 골이 생겼다고 써요.",
+   "blank": "abisso",
+   "src": "made"
+  }
+ ],
  "w|abitante": [
   {
    "text": "Paolo conosce quasi ogni abitante del palazzo per nome.",
@@ -207,6 +223,22 @@
    "en": "This dress really suits you.",
    "ko": "이 옷이 너한테 정말 잘 어울려.",
    "blank": "abito"
+  }
+ ],
+ "w|abituale": [
+  {
+   "text": "Il volo delle sette è il mezzo abituale di Luca per andare a Milano.",
+   "en": "The seven o'clock flight is Luca's usual way to get to Milan.",
+   "ko": "일곱 시 비행기는 루카가 밀라노에 갈 때 늘 타는 편이에요.",
+   "blank": "abituale",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che la domenica fa ancora la sua passeggiata abituale fino al lago.",
+   "en": "Chiara writes that on Sundays she still takes her usual walk to the lake.",
+   "ko": "키아라는 일요일마다 여전히 호수까지 늘 하던 산책을 한다고 써요.",
+   "blank": "abituale",
+   "src": "made"
   }
  ],
  "w|abituare": [
@@ -253,6 +285,22 @@
    "en": "I got into the habit of running in the morning.",
    "ko": "아침에 뛰는 습관을 들였어.",
    "blank": "abitudine"
+  }
+ ],
+ "w|abortire": [
+  {
+   "text": "Per un problema al motore il pilota ha abortito il decollo, e Luca ha dovuto aspettare un altro aereo.",
+   "en": "Because of an engine problem the pilot aborted the takeoff, and Luca had to wait for another plane.",
+   "ko": "엔진 문제로 조종사가 이륙을 중단해서 루카는 다른 비행기를 기다려야 했어요.",
+   "blank": "abortito",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta che la cugina ha abortito spontaneamente in primavera, ma ora aspetta di nuovo un bambino.",
+   "en": "Chiara says her cousin had a miscarriage in the spring, but now she is expecting a baby again.",
+   "ko": "키아라는 사촌이 봄에 유산했지만 지금 다시 아기를 가졌다고 이야기해요.",
+   "blank": "abortito",
+   "src": "made"
   }
  ],
  "w|aborto": [
@@ -2735,6 +2783,22 @@
    "blank": "amore"
   }
  ],
+ "w|amorevole": [
+  {
+   "text": "Agli arrivi la madre di Luca lo accoglie con un abbraccio amorevole.",
+   "en": "At arrivals Luca's mother greets him with a loving hug.",
+   "ko": "도착 층에서 루카의 어머니가 다정하게 안아 주며 맞아 줘요.",
+   "blank": "amorevole",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ringrazia Anna per le sue parole amorevoli dopo la morte del nonno.",
+   "en": "Chiara thanks Anna for her loving words after her grandfather's death.",
+   "ko": "키아라는 할아버지가 돌아가신 뒤 다정한 말을 건네준 안나에게 고마워해요.",
+   "blank": "amorevoli",
+   "src": "made"
+  }
+ ],
  "w|ampio": [
   {
    "text": "L'appartamento di Simone ha un balcone ampio dove mette le piante.",
@@ -5163,6 +5227,22 @@
    "blank": "attraverso"
   }
  ],
+ "w|attrazione": [
+  {
+   "text": "Il giardino di farfalle dell'aeroporto è un'attrazione che piace molto a Luca.",
+   "en": "The airport's butterfly garden is an attraction Luca really likes.",
+   "ko": "공항의 나비 정원은 루카가 아주 좋아하는 볼거리예요.",
+   "blank": "attrazione",
+   "src": "made"
+  },
+  {
+   "text": "Chiara confessa ad Anna di provare ancora una forte attrazione per il mare.",
+   "en": "Chiara confesses to Anna that she still feels a strong attraction to the sea.",
+   "ko": "키아라는 안나에게 아직도 바다에 강하게 끌린다고 털어놓아요.",
+   "blank": "attrazione",
+   "src": "made"
+  }
+ ],
  "w|attrezzatura": [
   {
    "text": "Il giornale ha comprato un'attrezzatura nuova per i video, e Paolo la sta provando.",
@@ -5414,6 +5494,22 @@
    "en": "Giulia uses the automatic lending system near the entrance.",
    "ko": "줄리아는 입구 근처 자동 대출기를 이용해요.",
    "blank": "automatico",
+   "src": "made"
+  }
+ ],
+ "w|automobile": [
+  {
+   "text": "Luca lascia la sua automobile nel parcheggio a lunga sosta.",
+   "en": "Luca leaves his car in the long-stay car park.",
+   "ko": "루카는 자기 자동차를 장기 주차장에 세워 둬요.",
+   "blank": "automobile",
+   "src": "made"
+  },
+  {
+   "text": "Il padre di Chiara colleziona ancora modellini di automobile d'epoca.",
+   "en": "Chiara's father still collects models of vintage cars.",
+   "ko": "키아라의 아버지는 아직도 옛날 자동차 모형을 모아요.",
+   "blank": "automobile",
    "src": "made"
   }
  ],
@@ -7711,6 +7807,22 @@
    "blank": "breve"
   }
  ],
+ "w|briciola": [
+  {
+   "text": "Sul sedile dell'aereo Luca trova le briciole del passeggero di prima.",
+   "en": "On the plane seat Luca finds the crumbs of the previous passenger.",
+   "ko": "루카는 비행기 좌석에서 앞 승객이 흘린 부스러기를 발견해요.",
+   "blank": "briciole",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta che i passeri vengono sul balcone a mangiare le briciole del pane.",
+   "en": "Chiara says the sparrows come to the balcony to eat the bread crumbs.",
+   "ko": "키아라는 참새들이 발코니에 와서 빵 부스러기를 먹는다고 이야기해요.",
+   "blank": "briciole",
+   "src": "made"
+  }
+ ],
  "w|brillante": [
   {
    "text": "Ha avuto un'idea brillante stamattina.",
@@ -9375,6 +9487,22 @@
    "en": "They put a sign on the closed gate.",
    "ko": "닫힌 대문에 표지판을 붙였어.",
    "blank": "cartello"
+  }
+ ],
+ "w|cartolina": [
+  {
+   "text": "Al duty free Luca compra una cartolina per la nonna.",
+   "en": "At the duty free Luca buys a postcard for his grandmother.",
+   "ko": "면세점에서 루카는 할머니께 보낼 엽서를 사요.",
+   "blank": "cartolina",
+   "src": "made"
+  },
+  {
+   "text": "Insieme alla lettera Chiara manda una cartolina del paese dove sono cresciute.",
+   "en": "Along with the letter Chiara sends a postcard of the village where they grew up.",
+   "ko": "키아라는 편지와 함께 둘이 자란 마을의 엽서를 보내요.",
+   "blank": "cartolina",
+   "src": "made"
   }
  ],
  "w|cartone": [
@@ -11351,6 +11479,22 @@
    "en": "The civil wedding is held at city hall.",
    "ko": "민사 결혼식은 시청에서 해.",
    "blank": "civile"
+  }
+ ],
+ "w|clacson": [
+  {
+   "text": "Davanti alle partenze un tassista suona il clacson e Luca si gira di scatto.",
+   "en": "Outside departures a taxi driver honks the horn and Luca spins round.",
+   "ko": "출발 층 앞에서 택시 기사가 경적을 울리자 루카가 홱 돌아봐요.",
+   "blank": "clacson",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che in città il suono continuo del clacson le impedisce di dormire.",
+   "en": "Chiara writes that in the city the constant sound of horns keeps her from sleeping.",
+   "ko": "키아라는 도시에서는 끊이지 않는 경적 소리 때문에 잠을 못 잔다고 써요.",
+   "blank": "clacson",
+   "src": "made"
   }
  ],
  "w|clandestino": [
@@ -14159,6 +14303,22 @@
    "src": "made"
   }
  ],
+ "w|continente": [
+  {
+   "text": "Luca vola per la prima volta verso un altro continente.",
+   "en": "Luca is flying to another continent for the first time.",
+   "ko": "루카는 처음으로 다른 대륙으로 날아가요.",
+   "blank": "continente",
+   "src": "made"
+  },
+  {
+   "text": "Chiara chiede ad Anna com'è la vita in un altro continente.",
+   "en": "Chiara asks Anna what life is like on another continent.",
+   "ko": "키아라는 안나에게 다른 대륙에서의 삶은 어떤지 물어요.",
+   "blank": "continente",
+   "src": "made"
+  }
+ ],
  "w|continuamente": [
   {
    "text": "Parla continuamente al telefono.",
@@ -15661,6 +15821,22 @@
    "en": "She wears a silver cross around her neck.",
    "ko": "목에 은 십자가를 걸고 있어.",
    "blank": "croce"
+  }
+ ],
+ "w|crociera": [
+  {
+   "text": "I genitori di Luca partono per una crociera e lui li accompagna in aeroporto.",
+   "en": "Luca's parents are leaving on a cruise and he takes them to the airport.",
+   "ko": "루카의 부모님이 크루즈 여행을 떠나서 루카가 공항까지 모셔다드려요.",
+   "blank": "crociera",
+   "src": "made"
+  },
+  {
+   "text": "Per i quarant'anni il marito di Chiara le ha regalato una crociera nel Mediterraneo.",
+   "en": "For her fortieth birthday Chiara's husband gave her a Mediterranean cruise.",
+   "ko": "마흔 살 생일에 키아라의 남편이 지중해 크루즈 여행을 선물했어요.",
+   "blank": "crociera",
+   "src": "made"
   }
  ],
  "w|crollare": [
@@ -17307,6 +17483,22 @@
    "src": "made"
   }
  ],
+ "w|devoto": [
+  {
+   "text": "Luca è un tifoso devoto e vola ovunque per seguire la sua squadra.",
+   "en": "Luca is a devoted fan and flies everywhere to follow his team.",
+   "ko": "루카는 열성 팬이라 자기 팀을 따라 어디든 비행기를 타고 가요.",
+   "blank": "devoto",
+   "src": "made"
+  },
+  {
+   "text": "Chiara firma la lettera con «la tua devota amica di sempre».",
+   "en": "Chiara signs the letter \"your ever devoted friend\".",
+   "ko": "키아라는 편지에 \"언제나 너의 충실한 친구\"라고 서명해요.",
+   "blank": "devota",
+   "src": "made"
+  }
+ ],
  "w|di": [
   {
    "text": "È pieno di gente.",
@@ -18654,6 +18846,22 @@
    "en": "Sara and her colleague have to hand out flyers at the trade fair.",
    "ko": "사라와 동료는 박람회에서 전단지를 나눠 줘야 해요.",
    "blank": "distribuire",
+   "src": "made"
+  }
+ ],
+ "w|distributore": [
+  {
+   "text": "Luca prende una bottiglietta d'acqua dal distributore vicino al gate.",
+   "en": "Luca gets a small bottle of water from the vending machine near the gate.",
+   "ko": "루카는 탑승구 근처 자판기에서 작은 물병을 뽑아요.",
+   "blank": "distributore",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che il marito ora lavora a un distributore di benzina sulla statale.",
+   "en": "Chiara writes that her husband now works at a petrol station on the main road.",
+   "ko": "키아라는 남편이 이제 국도 주유소에서 일한다고 써요.",
+   "blank": "distributore",
    "src": "made"
   }
  ],
@@ -21271,6 +21479,22 @@
    "src": "made"
   }
  ],
+ "w|esigere": [
+  {
+   "text": "Dopo sei ore di ritardo, Luca esige un rimborso dalla compagnia aerea.",
+   "en": "After a six-hour delay, Luca demands a refund from the airline.",
+   "ko": "여섯 시간 지연된 뒤 루카는 항공사에 환불을 요구해요.",
+   "blank": "esige",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che il suo capo esige sempre la perfezione.",
+   "en": "Chiara writes that her boss always demands perfection.",
+   "ko": "키아라는 상사가 늘 완벽을 요구한다고 써요.",
+   "blank": "esige",
+   "src": "made"
+  }
+ ],
  "w|esistenza": [
   {
    "text": "L'esistenza di vita su altri pianeti è un mistero.",
@@ -21312,6 +21536,22 @@
    "en": "Faced with the two tablecloths, Laura hesitates a long time before choosing.",
    "ko": "식탁보 두 장 앞에서 라우라는 한참 망설이다 골라요.",
    "blank": "esita",
+   "src": "made"
+  }
+ ],
+ "w|esotico": [
+  {
+   "text": "Luca sogna una vacanza in un'isola esotica lontano dall'ufficio.",
+   "en": "Luca dreams of a holiday on an exotic island far from the office.",
+   "ko": "루카는 사무실에서 멀리 떨어진 이국적인 섬에서의 휴가를 꿈꿔요.",
+   "blank": "esotica",
+   "src": "made"
+  },
+  {
+   "text": "Anna ha mandato a Chiara un pacco di spezie esotiche.",
+   "en": "Anna has sent Chiara a package of exotic spices.",
+   "ko": "안나가 키아라에게 이국적인 향신료 한 꾸러미를 보냈어요.",
+   "blank": "esotiche",
    "src": "made"
   }
  ],
@@ -21385,6 +21625,22 @@
    "en": "The balloon suddenly exploded.",
    "ko": "풍선이 갑자기 터졌어.",
    "blank": "esploso"
+  }
+ ],
+ "w|esplorare": [
+  {
+   "text": "Durante lo scalo Luca ha tre ore per esplorare l'aeroporto.",
+   "en": "During the layover Luca has three hours to explore the airport.",
+   "ko": "경유하는 동안 루카는 공항을 둘러볼 시간이 세 시간 있어요.",
+   "blank": "esplorare",
+   "src": "made"
+  },
+  {
+   "text": "Chiara propone ad Anna di esplorare insieme la Sicilia il prossimo autunno.",
+   "en": "Chiara suggests to Anna that they explore Sicily together next autumn.",
+   "ko": "키아라는 안나에게 내년 가을에 시칠리아를 함께 둘러보자고 해요.",
+   "blank": "esplorare",
+   "src": "made"
   }
  ],
  "w|esplosione": [
@@ -22991,6 +23247,22 @@
    "en": "You need a piece of iron to fix it.",
    "ko": "그걸 고치려면 철 조각이 필요해.",
    "blank": "ferro"
+  }
+ ],
+ "w|ferrovia": [
+  {
+   "text": "Dall'aeroporto Luca prende la ferrovia che porta in centro.",
+   "en": "From the airport Luca takes the railway into the city centre.",
+   "ko": "공항에서 루카는 시내로 가는 철도를 타요.",
+   "blank": "ferrovia",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ricorda le passeggiate con Anna lungo la vecchia ferrovia abbandonata.",
+   "en": "Chiara remembers the walks with Anna along the old abandoned railway.",
+   "ko": "키아라는 안나와 버려진 옛 철길을 따라 걷던 일을 떠올려요.",
+   "blank": "ferrovia",
+   "src": "made"
   }
  ],
  "w|festa": [
@@ -24739,6 +25011,22 @@
    "blank": "frega"
   }
  ],
+ "w|frenare": [
+  {
+   "text": "Il tassista deve frenare di colpo davanti all'ingresso del terminal, e Luca quasi perde la valigia.",
+   "en": "The taxi driver has to brake suddenly in front of the terminal entrance, and Luca almost loses his suitcase.",
+   "ko": "택시 기사가 터미널 입구 앞에서 급정거해서 루카는 가방을 놓칠 뻔해요.",
+   "blank": "frenare",
+   "src": "made"
+  },
+  {
+   "text": "Nella lettera Chiara scrive che il nuovo lavoro la costringe a frenare i suoi sogni.",
+   "en": "In the letter Chiara writes that the new job forces her to hold back her dreams.",
+   "ko": "편지에서 키아라는 새 직장 때문에 꿈을 미뤄야 한다고 써요.",
+   "blank": "frenare",
+   "src": "made"
+  }
+ ],
  "w|freno": [
   {
    "text": "Il freno della bicicletta non funziona bene.",
@@ -25109,6 +25397,22 @@
    "src": "made"
   }
  ],
+ "w|funzionante": [
+  {
+   "text": "In tutto il terminal c'è un solo bagno funzionante, e Luca fa la fila.",
+   "en": "In the whole terminal there is only one working toilet, and Luca queues.",
+   "ko": "터미널 전체에 쓸 수 있는 화장실이 하나뿐이라 루카는 줄을 서요.",
+   "blank": "funzionante",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che ha finalmente una lavatrice funzionante dopo un mese.",
+   "en": "Chiara writes that she finally has a working washing machine after a month.",
+   "ko": "키아라는 한 달 만에 드디어 제대로 돌아가는 세탁기가 생겼다고 써요.",
+   "blank": "funzionante",
+   "src": "made"
+  }
+ ],
  "w|funzionare": [
   {
    "text": "Qui non funziona niente.",
@@ -25195,6 +25499,22 @@
    "blank": "furbo"
   }
  ],
+ "w|furgoncino": [
+  {
+   "text": "Un furgoncino bianco porta i bagagli di Luca fino all'aereo.",
+   "en": "A small white van carries Luca's bags to the plane.",
+   "ko": "하얀 소형 밴이 루카의 짐을 비행기까지 실어 가요.",
+   "blank": "furgoncino",
+   "src": "made"
+  },
+  {
+   "text": "Il fratello di Chiara ha comprato un furgoncino per consegnare il pane.",
+   "en": "Chiara's brother has bought a small van to deliver bread.",
+   "ko": "키아라의 오빠는 빵을 배달하려고 소형 밴을 샀어요.",
+   "blank": "furgoncino",
+   "src": "made"
+  }
+ ],
  "w|furgone": [
   {
    "text": "Il furgone è parcheggiato fuori.",
@@ -25268,6 +25588,22 @@
    "en": "Sara's new colleague arrived after the merger with the Turin company.",
    "ko": "사라의 새 동료는 토리노 회사와 합병한 뒤에 왔어요.",
    "blank": "fusione",
+   "src": "made"
+  }
+ ],
+ "w|fuso": [
+  {
+   "text": "Dopo il volo Luca soffre per il cambio di fuso orario.",
+   "en": "After the flight Luca suffers from the change of time zone.",
+   "ko": "비행 뒤에 루카는 시차 때문에 힘들어해요.",
+   "blank": "fuso",
+   "src": "made"
+  },
+  {
+   "text": "Con otto ore di fuso tra di loro, Chiara e Anna si scrivono quando l'altra dorme.",
+   "en": "With an eight-hour time difference between them, Chiara and Anna write when the other one is asleep.",
+   "ko": "여덟 시간의 시차 때문에 키아라와 안나는 상대가 자고 있을 때 편지를 써요.",
+   "blank": "fuso",
    "src": "made"
   }
  ],
@@ -29167,6 +29503,22 @@
    "blank": "indicato"
   }
  ],
+ "w|indicazione": [
+  {
+   "text": "Luca segue le indicazioni per il gate dei voli internazionali.",
+   "en": "Luca follows the signs for the international flights gate.",
+   "ko": "루카는 국제선 탑승구 안내 표지를 따라가요.",
+   "blank": "indicazioni",
+   "src": "made"
+  },
+  {
+   "text": "In fondo alla lettera Chiara aggiunge un'indicazione per trovare la sua nuova casa.",
+   "en": "At the end of the letter Chiara adds directions to find her new house.",
+   "ko": "편지 끝에 키아라는 새집을 찾아오는 길 안내를 덧붙여요.",
+   "blank": "indicazione",
+   "src": "made"
+  }
+ ],
  "w|indietro": [
   {
    "text": "Torna indietro, hai dimenticato la borsa.",
@@ -30613,6 +30965,22 @@
    "blank": "intenzione"
   }
  ],
+ "w|interamente": [
+  {
+   "text": "Il volo di ritorno di Luca è interamente pieno.",
+   "en": "Luca's return flight is completely full.",
+   "ko": "루카의 돌아오는 비행기는 완전히 꽉 찼어요.",
+   "blank": "interamente",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ha letto la lettera di Anna interamente due volte prima di rispondere.",
+   "en": "Chiara read Anna's letter all the way through twice before replying.",
+   "ko": "키아라는 답장을 쓰기 전에 안나의 편지를 처음부터 끝까지 두 번 읽었어요.",
+   "blank": "interamente",
+   "src": "made"
+  }
+ ],
  "w|intercettare": [
   {
    "text": "Simone riesce a intercettare il ministro all'uscita della conferenza.",
@@ -30966,6 +31334,22 @@
    "en": "Traffic trapped Francesca on the ring road for half an hour.",
    "ko": "프란체스카는 순환도로에서 삼십 분 동안 차에 갇혀 있었어요.",
    "blank": "intrappolato",
+   "src": "made"
+  }
+ ],
+ "w|intraprendere": [
+  {
+   "text": "Con questo volo Luca intraprende un lungo viaggio in Asia.",
+   "en": "With this flight Luca sets out on a long journey through Asia.",
+   "ko": "이번 비행으로 루카는 아시아로 긴 여행을 떠나요.",
+   "blank": "intraprende",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta ad Anna che vuole intraprendere gli studi di architettura.",
+   "en": "Chiara tells Anna that she wants to take up architecture studies.",
+   "ko": "키아라는 안나에게 건축 공부를 시작하고 싶다고 이야기해요.",
+   "blank": "intraprendere",
    "src": "made"
   }
  ],
@@ -34593,6 +34977,22 @@
    "blank": "marcia"
   }
  ],
+ "w|marciapiede": [
+  {
+   "text": "Luca aspetta il taxi sul marciapiede davanti agli arrivi.",
+   "en": "Luca waits for the taxi on the pavement outside arrivals.",
+   "ko": "루카는 도착 층 앞 인도에서 택시를 기다려요.",
+   "blank": "marciapiede",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta che ha trovato un portafoglio sul marciapiede e l'ha portato alla polizia.",
+   "en": "Chiara says she found a wallet on the pavement and took it to the police.",
+   "ko": "키아라는 인도에서 지갑을 주워 경찰에 갖다줬다고 이야기해요.",
+   "blank": "marciapiede",
+   "src": "made"
+  }
+ ],
  "w|marciare": [
   {
    "text": "Nel finale, tutti gli attori devono marciare a tempo di tamburo.",
@@ -35324,6 +35724,22 @@
    "en": "Elena teaches the intermediate-level students on Tuesday afternoons.",
    "ko": "엘레나는 화요일 오후마다 중급 학생들을 가르쳐요.",
    "blank": "medio",
+   "src": "made"
+  }
+ ],
+ "w|mediocre": [
+  {
+   "text": "Il panino dell'aeroporto è mediocre, ma Luca ha troppa fame per lamentarsi.",
+   "en": "The airport sandwich is mediocre, but Luca is too hungry to complain.",
+   "ko": "공항 샌드위치는 그저 그렇지만 루카는 너무 배고파서 불평할 겨를이 없어요.",
+   "blank": "mediocre",
+   "src": "made"
+  },
+  {
+   "text": "Chiara confessa che il suo romanzo è mediocre e non lo manderà a nessun editore.",
+   "en": "Chiara confesses that her novel is mediocre and she won't send it to any publisher.",
+   "ko": "키아라는 자기 소설이 그저 그래서 어느 출판사에도 보내지 않겠다고 털어놓아요.",
+   "blank": "mediocre",
    "src": "made"
   }
  ],
@@ -37705,6 +38121,22 @@
    "blank": "nave"
   }
  ],
+ "w|navetta": [
+  {
+   "text": "Una navetta gratuita porta Luca dal terminal all'albergo.",
+   "en": "A free shuttle takes Luca from the terminal to the hotel.",
+   "ko": "무료 셔틀이 루카를 터미널에서 호텔까지 데려다줘요.",
+   "blank": "navetta",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta che va in ufficio con la navetta aziendale.",
+   "en": "Chiara says she goes to the office on the company shuttle.",
+   "ko": "키아라는 회사 셔틀을 타고 출근한다고 이야기해요.",
+   "blank": "navetta",
+   "src": "made"
+  }
+ ],
  "w|nazionale": [
   {
    "text": "La squadra nazionale ha vinto la partita.",
@@ -38217,6 +38649,22 @@
    "en": "The speech was long and boring.",
    "ko": "연설이 길고 지루했어.",
    "blank": "noioso"
+  }
+ ],
+ "w|noleggiare": [
+  {
+   "text": "Appena atterrato, Luca va al banco per noleggiare una macchina.",
+   "en": "As soon as he lands, Luca goes to the desk to rent a car.",
+   "ko": "착륙하자마자 루카는 차를 빌리러 카운터로 가요.",
+   "blank": "noleggiare",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta all'amica che ha deciso di noleggiare una barca per l'estate.",
+   "en": "Chiara tells her friend that she has decided to rent a boat for the summer.",
+   "ko": "키아라는 친구에게 여름 동안 배를 빌리기로 했다고 이야기해요.",
+   "blank": "noleggiare",
+   "src": "made"
   }
  ],
  "w|nome": [
@@ -41307,6 +41755,22 @@
    "src": "made"
   }
  ],
+ "w|paragonare": [
+  {
+   "text": "Luca paragona i prezzi dei voli su tre siti diversi.",
+   "en": "Luca compares flight prices on three different websites.",
+   "ko": "루카는 세 군데 사이트에서 항공권 가격을 비교해요.",
+   "blank": "paragona",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che non si può paragonare la vita di città a quella del paese.",
+   "en": "Chiara writes that you can't compare city life with village life.",
+   "ko": "키아라는 도시 생활과 시골 생활은 비교할 수 없다고 써요.",
+   "blank": "paragonare",
+   "src": "made"
+  }
+ ],
  "w|paramedico": [
   {
    "text": "Quando Luca è svenuto in palestra, è arrivato subito un paramedico con l'ambulanza.",
@@ -41411,6 +41875,22 @@
    "en": "That restaurant costs quite a bit.",
    "ko": "그 식당은 꽤 비싸.",
    "blank": "parecchio"
+  }
+ ],
+ "w|pareggiare": [
+  {
+   "text": "In sala d'attesa Luca guarda la partita e la sua squadra riesce a pareggiare.",
+   "en": "In the waiting lounge Luca watches the match and his team manages to draw.",
+   "ko": "대기실에서 루카가 경기를 보는데 응원하는 팀이 동점을 만들어요.",
+   "blank": "pareggiare",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che la squadra del paese è riuscita a pareggiare all'ultimo minuto.",
+   "en": "Chiara writes that the village team managed to equalise in the last minute.",
+   "ko": "키아라는 마을 팀이 마지막 순간에 동점을 만들었다고 써요.",
+   "blank": "pareggiare",
+   "src": "made"
   }
  ],
  "w|parente": [
@@ -43976,6 +44456,22 @@
    "en": "A platoon of new interns walks into Anna's office on Monday.",
    "ko": "월요일에 새 인턴 한 무리가 안나의 사무실로 들어와요.",
    "blank": "plotone",
+   "src": "made"
+  }
+ ],
+ "w|pneumatico": [
+  {
+   "text": "La macchina a noleggio di Luca ha uno pneumatico sgonfio.",
+   "en": "Luca's rental car has a flat tyre.",
+   "ko": "루카가 빌린 차는 타이어 하나에 바람이 빠져 있어요.",
+   "blank": "pneumatico",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta che ha bucato uno pneumatico in mezzo alla campagna.",
+   "en": "Chiara says she got a flat tyre in the middle of the countryside.",
+   "ko": "키아라는 시골 한가운데서 타이어가 펑크 났다고 이야기해요.",
+   "blank": "pneumatico",
    "src": "made"
   }
  ],
@@ -47065,6 +47561,22 @@
    "blank": "pulizia"
   }
  ],
+ "w|pullman": [
+  {
+   "text": "Il volo è cancellato, così la compagnia mette un pullman per Luca e gli altri passeggeri.",
+   "en": "The flight is cancelled, so the airline puts on a coach for Luca and the other passengers.",
+   "ko": "비행기가 결항돼서 항공사가 루카와 다른 승객들을 위해 버스를 마련해요.",
+   "blank": "pullman",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ricorda la gita scolastica in pullman, quando Anna cantava tutto il tempo.",
+   "en": "Chiara remembers the school trip by coach, when Anna sang the whole time.",
+   "ko": "키아라는 안나가 내내 노래하던 학교 버스 소풍을 떠올려요.",
+   "blank": "pullman",
+   "src": "made"
+  }
+ ],
  "w|pulsante": [
   {
    "text": "Per accendere la cappa Stefano preme il pulsante rosso vicino al forno.",
@@ -49509,6 +50021,22 @@
    "src": "made"
   }
  ],
+ "w|restrittivo": [
+  {
+   "text": "Luca trova restrittivo il limite dei liquidi nel bagaglio a mano.",
+   "en": "Luca finds the liquids limit in hand luggage restrictive.",
+   "ko": "루카는 기내 반입 액체 제한이 너무 까다롭다고 생각해요.",
+   "blank": "restrittivo",
+   "src": "made"
+  },
+  {
+   "text": "Secondo Chiara le regole del nuovo condominio sono troppo restrittive.",
+   "en": "According to Chiara the rules of the new apartment block are too restrictive.",
+   "ko": "키아라는 새 아파트 규칙이 너무 엄하다고 생각해요.",
+   "blank": "restrittive",
+   "src": "made"
+  }
+ ],
  "w|rete": [
   {
    "text": "La rete internet non funziona oggi.",
@@ -50747,6 +51275,22 @@
    "blank": "ripresa"
   }
  ],
+ "w|ripristinare": [
+  {
+   "text": "Dopo il guasto, i tecnici riescono a ripristinare il sistema e Luca può imbarcarsi.",
+   "en": "After the fault, the technicians manage to restore the system and Luca can board.",
+   "ko": "고장 뒤 기술자들이 시스템을 복구해서 루카는 탑승할 수 있어요.",
+   "blank": "ripristinare",
+   "src": "made"
+  },
+  {
+   "text": "Chiara spera di ripristinare l'amicizia con Anna dopo anni di silenzio.",
+   "en": "Chiara hopes to restore her friendship with Anna after years of silence.",
+   "ko": "키아라는 몇 년의 침묵 끝에 안나와의 우정을 되살리고 싶어 해요.",
+   "blank": "ripristinare",
+   "src": "made"
+  }
+ ],
  "w|riprovare": [
   {
    "text": "La crema è impazzita, ma Stefano ha voluto riprovare con uova più fresche.",
@@ -51743,6 +52287,22 @@
    "en": "After the breakup they stayed friends.",
    "ko": "헤어진 뒤에도 그들은 친구로 남았어.",
    "blank": "rottura"
+  }
+ ],
+ "w|roulotte": [
+  {
+   "text": "Nel parcheggio dell'aeroporto Luca vede una roulotte con le targhe straniere.",
+   "en": "In the airport car park Luca sees a caravan with foreign number plates.",
+   "ko": "공항 주차장에서 루카는 외국 번호판을 단 캠핑 트레일러를 봐요.",
+   "blank": "roulotte",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che ha passato le vacanze in roulotte con i suoi figli.",
+   "en": "Chiara writes that she spent the holidays in a caravan with her children.",
+   "ko": "키아라는 아이들과 캠핑 트레일러에서 휴가를 보냈다고 써요.",
+   "blank": "roulotte",
+   "src": "made"
   }
  ],
  "w|routine": [
@@ -53801,6 +54361,22 @@
    "en": "Don't give the game away.",
    "ko": "비밀을 미리 말하지 마.",
    "blank": "scoprire"
+  }
+ ],
+ "w|scorciatoia": [
+  {
+   "text": "Un addetto mostra a Luca una scorciatoia per arrivare prima al controllo passaporti.",
+   "en": "A staff member shows Luca a shortcut to reach passport control sooner.",
+   "ko": "직원이 루카에게 여권 심사대로 더 빨리 가는 지름길을 알려 줘요.",
+   "blank": "scorciatoia",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ricorda la scorciatoia nei campi che prendevano per tornare da scuola.",
+   "en": "Chiara remembers the shortcut through the fields they took to come home from school.",
+   "ko": "키아라는 학교에서 돌아올 때 지나던 들판 지름길을 떠올려요.",
+   "blank": "scorciatoia",
+   "src": "made"
   }
  ],
  "w|scordare": [
@@ -59903,6 +60479,22 @@
    "blank": "suicidio"
   }
  ],
+ "w|suite": [
+  {
+   "text": "Per il viaggio di nozze, Luca ha prenotato una suite vicino all'aeroporto.",
+   "en": "For the honeymoon, Luca has booked a suite near the airport.",
+   "ko": "신혼여행을 위해 루카는 공항 근처 스위트룸을 예약했어요.",
+   "blank": "suite",
+   "src": "made"
+  },
+  {
+   "text": "Cara Anna, ti scrive Chiara da una suite d'albergo con vista sul lago.",
+   "en": "Dear Anna, Chiara is writing to you from a hotel suite overlooking the lake.",
+   "ko": "안나에게, 호수가 보이는 호텔 스위트룸에서 키아라가 편지를 써.",
+   "blank": "suite",
+   "src": "made"
+  }
+ ],
  "w|suo": [
   {
    "text": "È il suo turno.",
@@ -60323,6 +60915,22 @@
    "src": "made"
   }
  ],
+ "w|svoltare": [
+  {
+   "text": "All'uscita dell'aeroporto Luca deve svoltare a destra per l'autostrada.",
+   "en": "At the airport exit Luca has to turn right for the motorway.",
+   "ko": "공항 출구에서 루카는 고속도로로 가려면 오른쪽으로 꺾어야 해요.",
+   "blank": "svoltare",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che per arrivare a casa sua bisogna svoltare dopo la chiesa.",
+   "en": "Chiara writes that to get to her house you have to turn after the church.",
+   "ko": "키아라는 자기 집에 오려면 성당을 지나서 꺾어야 한다고 써요.",
+   "blank": "svoltare",
+   "src": "made"
+  }
+ ],
  "w|svuotare": [
   {
    "text": "Mentre Stefano aspetta, un operaio comincia a svuotare i cestini nel corridoio.",
@@ -60644,6 +61252,22 @@
    "en": "Elena took out a mortgage, and the interest rate was lower than expected.",
    "ko": "엘레나는 대출을 받았는데 금리가 예상보다 낮았어요.",
    "blank": "tasso",
+   "src": "made"
+  }
+ ],
+ "w|tastare": [
+  {
+   "text": "Al controllo un agente tasta le tasche della giacca di Luca.",
+   "en": "At security an officer pats the pockets of Luca's jacket.",
+   "ko": "보안 검색대에서 직원이 루카의 재킷 주머니를 더듬어 봐요.",
+   "blank": "tasta",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta che il medico le ha tastato il polso e le ha detto di riposare.",
+   "en": "Chiara says the doctor felt her pulse and told her to rest.",
+   "ko": "키아라는 의사가 맥을 짚어 보고 쉬라고 했다고 이야기해요.",
+   "blank": "tastato",
    "src": "made"
   }
  ],
@@ -65269,6 +65893,22 @@
    "en": "I'd like to travel in Asia this year.",
    "ko": "올해 아시아로 여행하고 싶어.",
    "blank": "viaggiare"
+  }
+ ],
+ "w|viaggiatore": [
+  {
+   "text": "In sala d'attesa Luca chiacchiera con un viaggiatore che torna dal Perù.",
+   "en": "In the waiting room Luca chats with a traveller coming back from Peru.",
+   "ko": "대기실에서 루카는 페루에서 돌아오는 여행자와 수다를 떨어요.",
+   "blank": "viaggiatore",
+   "src": "made"
+  },
+  {
+   "text": "Chiara scrive che da ragazza voleva diventare una grande viaggiatrice, come Anna.",
+   "en": "Chiara writes that as a girl she wanted to become a great traveller, like Anna.",
+   "ko": "키아라는 어릴 때 안나처럼 대단한 여행가가 되고 싶었다고 써요.",
+   "blank": "viaggiatrice",
+   "src": "made"
   }
  ],
  "w|viaggio": [

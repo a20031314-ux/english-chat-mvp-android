@@ -10,7 +10,7 @@ A	Ao lado do Pedro estava um piloto que já tinha aprendido a pilotar helicópte
 A	O piloto contou ao Pedro que veio de uma família de tradição naval.	The pilot told Pedro he came from a family with a naval tradition.	조종사는 페드루에게 자기가 해군 집안 출신이라고 말했어요.	naval=naval
 A	A principal atração da cidade de destino é um farol antigo na beira do mar.	The main attraction in the destination city is an old lighthouse by the sea.	도착할 도시의 가장 큰 볼거리는 바닷가의 오래된 등대예요.	atração=atração;farol=farol
 A	A irmã do Pedro prometeu levá-lo para fazer mergulho na primeira manhã.	Pedro's sister promised to take him diving on the first morning.	페드루 누나는 첫날 아침에 다이빙을 하러 데려가겠다고 약속했어요.	mergulho=mergulho
-A	Ela também quer passear de bote pelo rio que corta a cidade.	She also wants to go out on a small boat along the river through the city.	누나는 도시를 가로지르는 강에서 작은 보트도 타고 싶어 해요.	bote=bote
+A	A irmã do Pedro também quer passear de bote pelo rio que corta a cidade.	Pedro's sister also wants to go out on a small boat along the river through the city.	누나는 도시를 가로지르는 강에서 작은 보트도 타고 싶어 해요.	bote=bote
 A	A ideia do Pedro é navegar até uma ilha e acampar numa barraca na praia.	Pedro's idea is to sail to an island and camp in a tent on the beach.	페드루는 섬까지 배를 타고 가서 해변에 텐트를 치고 싶어요.	navegar=navegar;barraca=barraca
 A	O trem do aeroporto saiu do trilho e a linha ficou parada por uma hora.	The airport train came off the rail and the line was stopped for an hour.	공항 열차가 선로를 벗어나 한 시간 동안 운행이 멈췄어요.	trilho=trilho
 A	Um comboio de caminhões de bagagem atravessou a pista devagar.	A convoy of baggage trucks slowly crossed the runway.	수하물 차량 행렬이 활주로를 천천히 건너갔어요.	comboio=comboio
@@ -33,21 +33,21 @@ A	O primo do Pedro trabalha num restaurante já estabelecido perto do aeroporto.
 A	O novo terminal parece promissor, mas o Pedro ainda prefere o antigo.	The new terminal looks promising, but Pedro still prefers the old one.	새 터미널이 괜찮아 보이지만 페드루는 아직 옛 터미널이 더 좋아요.	promissor=promissor
 A	Na revista do avião, o Pedro viu como as empresas conseguem extrair sal do mar.	In the plane magazine, Pedro saw how companies manage to extract salt from the sea.	페드루는 기내 잡지에서 바다에서 소금을 얻어 내는 방법을 봤어요.	extrair=extrair
 A	O Pedro mal pode esperar para remar no lago perto da casa da irmã.	Pedro can hardly wait to row on the lake near his sister's house.	페드루는 누나 집 근처 호수에서 노를 저을 날이 기다려져요.	remar=remar
-B	Querido Tiago, a Beatriz escreve depois de anos sem notícias, com saudade da nossa viagem ao litoral.	Dear Tiago, Beatriz writes after years without news, missing our trip to the coast.	사랑하는 치아구, 베아트리스가 몇 년 만에 소식을 전해요. 우리 바닷가 여행이 그리워요.	viajante=viajante
-B	Lembra quando dormimos numa barraca furada e acordamos encharcados?	Remember when we slept in a leaky tent and woke up soaked?	구멍 난 텐트에서 자고 흠뻑 젖어서 깼던 거 기억나?	barraca=barraca
+B	Na carta, a Beatriz chama o Tiago de eterno viajante, porque ele nunca para em casa.	In the letter, Beatriz calls Tiago an eternal traveler, because he's never at home.	베아트리스는 편지에서 치아구를 영원한 여행자라고 불러요. 집에 붙어 있질 않거든요.	viajante=viajante
+B	A Beatriz lembra a noite em que os dois dormiram numa barraca furada e acordaram encharcados.	Beatriz recalls the night the two of them slept in a leaky tent and woke up soaked.	베아트리스는 둘이 구멍 난 텐트에서 자고 흠뻑 젖어 깼던 밤을 떠올려요.	barraca=barraca
 B	A Beatriz ainda guarda a foto do farol onde vimos o pôr do sol.	Beatriz still keeps the photo of the lighthouse where we watched the sunset.	베아트리스는 우리가 노을을 본 등대 사진을 아직 갖고 있어.	farol=farol
 B	Naquele verão, o Tiago insistiu em remar até a outra margem do rio.	That summer, Tiago insisted on rowing to the other bank of the river.	그 여름에 치아구는 강 건너편까지 노를 젓겠다고 고집했지.	remar=remar
 B	O bote virou no meio do caminho, e a Beatriz ri disso até hoje.	The boat capsized halfway, and Beatriz still laughs about it today.	보트가 중간에 뒤집혔고, 베아트리스는 지금도 그 얘기에 웃어.	bote=bote
 B	A Beatriz conta na carta que aprendeu a navegar com o tio no último inverno.	Beatriz says in the letter that she learned to sail with her uncle last winter.	베아트리스는 지난겨울 삼촌에게 배 모는 법을 배웠다고 편지에 써요.	navegar=navegar
 B	O tio da Beatriz é um oficial naval aposentado que adora contar histórias.	Beatriz's uncle is a retired naval officer who loves to tell stories.	베아트리스의 삼촌은 이야기하기를 좋아하는 퇴역 해군 장교예요.	naval=naval
-B	Ele ensinou a Beatriz a pilotar um veleiro pequeno pela baía.	He taught Beatriz to sail a small sailboat around the bay.	삼촌은 베아트리스에게 작은 요트를 몰고 만을 도는 법을 가르쳤어요.	pilotar=pilotar
+B	O tio ensinou a Beatriz a pilotar um veleiro pequeno pela baía.	He taught Beatriz to sail a small sailboat around the bay.	삼촌은 베아트리스에게 작은 요트를 몰고 만을 도는 법을 가르쳤어요.	pilotar=pilotar
 B	A Beatriz escreve que fez um mergulho com tartarugas e pensou no Tiago.	Beatriz writes that she went diving with turtles and thought of Tiago.	베아트리스는 거북이와 다이빙하면서 치아구 생각이 났다고 써요.	mergulho=mergulho
 B	Na carta, a Beatriz descreve uma viagem de carroça pelo interior de Minas.	In the letter, Beatriz describes a cart ride through the countryside of Minas.	베아트리스는 편지에 미나스 시골길을 짐수레로 다닌 이야기를 써요.	carroça=carroça
 B	Numa festa da cidade, ela andou de carruagem como uma princesa de novela.	At a town festival, she rode in a carriage like a soap opera princess.	마을 축제에서 베아트리스는 드라마 속 공주처럼 마차를 탔어요.	carruagem=carruagem
 B	A Beatriz pergunta se o Tiago ainda tem vontade de percorrer a América do Sul de ônibus.	Beatriz asks whether Tiago still wants to travel across South America by bus.	베아트리스는 치아구에게 아직도 버스로 남미를 돌고 싶은지 물어요.	percorrer=percorrer
 B	O sonho antigo dos dois era conhecer cada continente juntos.	The two friends' old dream was to visit every continent together.	둘의 오래된 꿈은 함께 모든 대륙에 가 보는 거였어요.	continente=continente
 B	A Beatriz lembra que o Tiago lia tudo sobre o Oriente quando era adolescente.	Beatriz remembers that Tiago read everything about the East as a teenager.	베아트리스는 치아구가 십 대 때 동양에 관한 건 다 읽었던 걸 기억해요.	oriente=Oriente
-B	Ele queria ver as pirâmides antes de qualquer outra coisa, escreve a Beatriz.	He wanted to see the pyramids before anything else, Beatriz writes.	치아구는 무엇보다 피라미드를 먼저 보고 싶어 했다고 베아트리스는 써요.	pirâmide=pirâmides
+B	O Tiago queria ver as pirâmides antes de qualquer outra coisa, escreve a Beatriz.	Tiago wanted to see the pyramids before anything else, Beatriz writes.	치아구는 무엇보다 피라미드를 먼저 보고 싶어 했다고 베아트리스는 써요.	pirâmide=pirâmides
 B	A Beatriz agora trabalha numa expedição que estuda aves no Pantanal.	Beatriz now works on an expedition studying birds in the Pantanal.	베아트리스는 지금 판타나우에서 새를 연구하는 탐사대에서 일해요.	expedição=expedição
 B	Para chegar ao acampamento, a equipe da Beatriz viaja num comboio de jipes.	To reach the camp, Beatriz's team travels in a convoy of jeeps.	캠프까지 가려고 베아트리스 팀은 지프 행렬로 이동해요.	comboio=comboio
 B	A estrada de terra perto da rodovia fica cheia de lama na época das chuvas.	The dirt road near the highway gets full of mud in the rainy season.	고속도로 근처 흙길은 우기에 진흙투성이가 돼요.	rodovia=rodovia
@@ -56,7 +56,7 @@ B	Ainda bem que no Pantanal quase não há tráfego, brinca a Beatriz.	Good thin
 B	A maior atração da região são as onças que aparecem perto do rio.	The region's biggest attraction is the jaguars that appear near the river.	그 지역 최고의 볼거리는 강가에 나타나는 재규어예요.	atração=atração
 B	Os trens antigos já não passam por lá, mas o trilho ainda corta a fazenda.	The old trains no longer pass through, but the rail track still cuts across the farm.	옛 기차는 더 이상 안 다니지만 선로는 아직 농장을 가로질러요.	trilho=trilho
 B	A Beatriz promete que a próxima carta vai contar a ida dela a Lisboa.	Beatriz promises that the next letter will tell about her trip to Lisbon.	베아트리스는 다음 편지에 리스본에 간 이야기를 쓰겠다고 약속해요.	ida=ida
-B	Ela também quer saber quando será a vinda do Tiago ao Brasil.	She also wants to know when Tiago will be coming to Brazil.	베아트리스는 치아구가 언제 브라질에 오는지도 알고 싶어 해요.	vinda=vinda
+B	A Beatriz também quer saber quando será a vinda do Tiago ao Brasil.	Beatriz also wants to know when Tiago will be coming to Brazil.	베아트리스는 치아구가 언제 브라질에 오는지도 알고 싶어 해요.	vinda=vinda
 B	A Beatriz confessa que ainda erra ao soletrar o nome da cidade onde o Tiago mora.	Beatriz confesses she still gets it wrong when spelling the name of the city where Tiago lives.	베아트리스는 치아구가 사는 도시 이름 철자를 아직도 틀린다고 고백해요.	soletrar=soletrar
 B	A Beatriz acha que o novo emprego do Tiago parece muito promissor.	Beatriz thinks Tiago's new job looks very promising.	베아트리스는 치아구의 새 직장이 아주 전망 있어 보인다고 생각해요.	promissor=promissor
 B	Agora que o Tiago está estabelecido em outra cidade, a Beatriz quer visitá-lo.	Now that Tiago is settled in another city, Beatriz wants to visit him.	치아구가 다른 도시에 자리를 잡았으니 베아트리스는 찾아가고 싶어요.	estabelecido=estabelecido

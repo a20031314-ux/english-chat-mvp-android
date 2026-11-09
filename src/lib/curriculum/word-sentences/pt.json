@@ -2015,6 +2015,22 @@
    "blank": "ainda que"
   }
  ],
+ "w|ajeitar": [
+  {
+   "text": "O Pedro precisou ajeitar as roupas na mala para fechar o zíper.",
+   "en": "Pedro had to rearrange the clothes in his suitcase to close the zipper.",
+   "ko": "페드루는 지퍼를 닫으려고 가방 속 옷을 다시 정리해야 했어요.",
+   "blank": "ajeitar",
+   "src": "made"
+  },
+  {
+   "text": "Antes de fechar o envelope, a Beatriz parou para ajeitar a foto dentro da carta.",
+   "en": "Before sealing the envelope, Beatriz stopped to straighten the photo inside the letter.",
+   "ko": "봉투를 붙이기 전에 베아트리스는 편지 속 사진을 반듯하게 놓았어요.",
+   "blank": "ajeitar",
+   "src": "made"
+  }
+ ],
  "w|ajudante": [
   {
    "text": "O Rafael ganhou um ajudante para organizar os arquivos.",
@@ -4489,6 +4505,22 @@
    "src": "tatoeba:8877140/victorromero85 en:3734964/CK"
   }
  ],
+ "w|apresentado": [
+  {
+   "text": "O Pedro foi apresentado ao novo chefe da irmã ainda no saguão de chegada.",
+   "en": "Pedro was introduced to his sister's new boss right in the arrivals hall.",
+   "ko": "페드루는 도착 홀에서 바로 누나의 새 상사를 소개받았어요.",
+   "blank": "apresentado",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz foi apresentada ao marido numa festa organizada pelo Tiago.",
+   "en": "Beatriz was introduced to her husband at a party organized by Tiago.",
+   "ko": "베아트리스는 치아구가 연 파티에서 남편을 소개받았어요.",
+   "blank": "apresentada",
+   "src": "made"
+  }
+ ],
  "w|apresentar": [
   {
    "text": "Posso te apresentar minha sócia?",
@@ -5333,6 +5365,22 @@
    "ko": "쌀 충분히 있어?",
    "blank": "arroz",
    "src": "tatoeba:11133267/MrJuice en:9752307/megamanenm"
+  }
+ ],
+ "w|arruinado": [
+  {
+   "text": "A mala do Pedro chegou com a alça arruinada pela esteira.",
+   "en": "Pedro's suitcase arrived with its handle ruined by the conveyor belt.",
+   "ko": "페드루의 가방은 컨베이어 벨트 때문에 손잡이가 망가진 채 나왔어요.",
+   "blank": "arruinada",
+   "src": "made"
+  },
+  {
+   "text": "Uma das cartas antigas ficou arruinada pela umidade, lamenta a Beatriz.",
+   "en": "One of the old letters was ruined by humidity, Beatriz laments.",
+   "ko": "옛 편지 한 장이 습기에 망가졌다고 베아트리스가 아쉬워해요.",
+   "blank": "arruinada",
+   "src": "made"
   }
  ],
  "w|arruinar": [
@@ -6297,6 +6345,22 @@
    "ko": "제가 배우처럼 보여요?",
    "blank": "ator",
    "src": "tatoeba:5127044/bill en:3826957/CK"
+  }
+ ],
+ "w|atração": [
+  {
+   "text": "A principal atração da cidade de destino é um farol antigo na beira do mar.",
+   "en": "The main attraction in the destination city is an old lighthouse by the sea.",
+   "ko": "도착할 도시의 가장 큰 볼거리는 바닷가의 오래된 등대예요.",
+   "blank": "atração",
+   "src": "made"
+  },
+  {
+   "text": "A maior atração da região são as onças que aparecem perto do rio.",
+   "en": "The region's biggest attraction is the jaguars that appear near the river.",
+   "ko": "그 지역 최고의 볼거리는 강가에 나타나는 재규어예요.",
+   "blank": "atração",
+   "src": "made"
   }
  ],
  "w|atraente": [
@@ -7719,6 +7783,22 @@
    "src": "made"
   }
  ],
+ "w|barraca": [
+  {
+   "text": "A ideia do Pedro é navegar até uma ilha e acampar numa barraca na praia.",
+   "en": "Pedro's idea is to sail to an island and camp in a tent on the beach.",
+   "ko": "페드루는 섬까지 배를 타고 가서 해변에 텐트를 치고 싶어요.",
+   "blank": "barraca",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz lembra a noite em que os dois dormiram numa barraca furada e acordaram encharcados.",
+   "en": "Beatriz recalls the night the two of them slept in a leaky tent and woke up soaked.",
+   "ko": "베아트리스는 둘이 구멍 난 텐트에서 자고 흠뻑 젖어 깼던 밤을 떠올려요.",
+   "blank": "barraca",
+   "src": "made"
+  }
+ ],
  "w|barreira": [
   {
    "text": "Uma barreira de segurança separava o João da área de desembarque.",
@@ -8557,6 +8637,22 @@
    "src": "made"
   }
  ],
+ "w|bloqueio": [
+  {
+   "text": "Um bloqueio na rodovia deixou muitos passageiros presos no caminho.",
+   "en": "A roadblock on the highway left many passengers stuck on the way.",
+   "ko": "고속도로가 막혀서 많은 승객이 길에 갇혔어요.",
+   "blank": "bloqueio",
+   "src": "made"
+  },
+  {
+   "text": "Um bloqueio dos moradores fechou a estrada por dois dias, conta a Beatriz.",
+   "en": "A blockade by local residents closed the road for two days, Beatriz says.",
+   "ko": "주민들이 길을 막아서 이틀 동안 도로가 닫혔다고 베아트리스가 전해요.",
+   "blank": "bloqueio",
+   "src": "made"
+  }
+ ],
  "w|blusa": [
   {
    "text": "Para a mãe, o Tiago escolheu uma blusa azul de seda.",
@@ -9095,6 +9191,22 @@
    "ko": "후추 뿌릴래?",
    "blank": "botar",
    "src": "tatoeba:1077195/alexmarcelo en:426440/CM"
+  }
+ ],
+ "w|bote": [
+  {
+   "text": "A irmã do Pedro também quer passear de bote pelo rio que corta a cidade.",
+   "en": "Pedro's sister also wants to go out on a small boat along the river through the city.",
+   "ko": "누나는 도시를 가로지르는 강에서 작은 보트도 타고 싶어 해요.",
+   "blank": "bote",
+   "src": "made"
+  },
+  {
+   "text": "O bote virou no meio do caminho, e a Beatriz ri disso até hoje.",
+   "en": "The boat capsized halfway, and Beatriz still laughs about it today.",
+   "ko": "보트가 중간에 뒤집혔고, 베아트리스는 지금도 그 얘기에 웃어.",
+   "blank": "bote",
+   "src": "made"
   }
  ],
  "w|boxe": [
@@ -11215,6 +11327,38 @@
    "en": "My car is out on the street.",
    "ko": "내 차 밖에 있어.",
    "blank": "carro"
+  }
+ ],
+ "w|carroça": [
+  {
+   "text": "No museu do aeroporto há uma carroça antiga e uma carruagem de madeira.",
+   "en": "In the airport museum there is an old cart and a wooden carriage.",
+   "ko": "공항 박물관에는 오래된 짐수레와 나무 마차가 있어요.",
+   "blank": "carroça",
+   "src": "made"
+  },
+  {
+   "text": "Na carta, a Beatriz descreve uma viagem de carroça pelo interior de Minas.",
+   "en": "In the letter, Beatriz describes a cart ride through the countryside of Minas.",
+   "ko": "베아트리스는 편지에 미나스 시골길을 짐수레로 다닌 이야기를 써요.",
+   "blank": "carroça",
+   "src": "made"
+  }
+ ],
+ "w|carruagem": [
+  {
+   "text": "No museu do aeroporto há uma carroça antiga e uma carruagem de madeira.",
+   "en": "In the airport museum there is an old cart and a wooden carriage.",
+   "ko": "공항 박물관에는 오래된 짐수레와 나무 마차가 있어요.",
+   "blank": "carruagem",
+   "src": "made"
+  },
+  {
+   "text": "Numa festa da cidade, ela andou de carruagem como uma princesa de novela.",
+   "en": "At a town festival, she rode in a carriage like a soap opera princess.",
+   "ko": "마을 축제에서 베아트리스는 드라마 속 공주처럼 마차를 탔어요.",
+   "blank": "carruagem",
+   "src": "made"
   }
  ],
  "w|carta": [
@@ -14203,6 +14347,22 @@
    "src": "tatoeba:9935495/carlosalberto en:9935136/DJ_Saidez"
   }
  ],
+ "w|comboio": [
+  {
+   "text": "Um comboio de caminhões de bagagem atravessou a pista devagar.",
+   "en": "A convoy of baggage trucks slowly crossed the runway.",
+   "ko": "수하물 차량 행렬이 활주로를 천천히 건너갔어요.",
+   "blank": "comboio",
+   "src": "made"
+  },
+  {
+   "text": "Para chegar ao acampamento, a equipe da Beatriz viaja num comboio de jipes.",
+   "en": "To reach the camp, Beatriz's team travels in a convoy of jeeps.",
+   "ko": "캠프까지 가려고 베아트리스 팀은 지프 행렬로 이동해요.",
+   "blank": "comboio",
+   "src": "made"
+  }
+ ],
  "w|combustível": [
   {
    "text": "Eu trabalho em um posto de combustível.",
@@ -16369,6 +16529,22 @@
    "en": "I'm counting on you tomorrow.",
    "ko": "내일 너한테 기댈게.",
    "blank": "contigo"
+  }
+ ],
+ "w|continente": [
+  {
+   "text": "O Pedro sonha em visitar outro continente antes dos trinta anos.",
+   "en": "Pedro dreams of visiting another continent before he turns thirty.",
+   "ko": "페드루는 서른 살 전에 다른 대륙에 가 보는 게 꿈이에요.",
+   "blank": "continente",
+   "src": "made"
+  },
+  {
+   "text": "O sonho antigo dos dois era conhecer cada continente juntos.",
+   "en": "The two friends' old dream was to visit every continent together.",
+   "ko": "둘의 오래된 꿈은 함께 모든 대륙에 가 보는 거였어요.",
+   "blank": "continente",
+   "src": "made"
   }
  ],
  "w|continuar": [
@@ -20462,6 +20638,22 @@
    "en": "Beatriz liked the modern design of the new carriages.",
    "ko": "베아트리스는 새 객차의 현대적인 디자인이 마음에 들었어요.",
    "blank": "design",
+   "src": "made"
+  }
+ ],
+ "w|designar": [
+  {
+   "text": "O aeroporto vai designar um portão só para voos internacionais.",
+   "en": "The airport is going to designate a gate just for international flights.",
+   "ko": "공항은 국제선 전용 탑승구를 하나 지정할 거예요.",
+   "blank": "designar",
+   "src": "made"
+  },
+  {
+   "text": "A empresa da Beatriz vai designar uma equipe para trabalhar no exterior.",
+   "en": "Beatriz's company is going to assign a team to work abroad.",
+   "ko": "베아트리스 회사는 해외에서 일할 팀을 정할 거예요.",
+   "blank": "designar",
    "src": "made"
   }
  ],
@@ -26549,6 +26741,22 @@
    "src": "made"
   }
  ],
+ "w|estabelecido": [
+  {
+   "text": "O primo do Pedro trabalha num restaurante já estabelecido perto do aeroporto.",
+   "en": "Pedro's cousin works at a well-established restaurant near the airport.",
+   "ko": "페드루의 사촌은 공항 근처 자리 잡은 식당에서 일해요.",
+   "blank": "estabelecido",
+   "src": "made"
+  },
+  {
+   "text": "Agora que o Tiago está estabelecido em outra cidade, a Beatriz quer visitá-lo.",
+   "en": "Now that Tiago is settled in another city, Beatriz wants to visit him.",
+   "ko": "치아구가 다른 도시에 자리를 잡았으니 베아트리스는 찾아가고 싶어요.",
+   "blank": "estabelecido",
+   "src": "made"
+  }
+ ],
  "w|estábulo": [
   {
    "text": "O dono da pousada tem um estábulo com dois cavalos atrás da casa.",
@@ -26794,6 +27002,22 @@
    "en": "Rita decided to extend the trip by three more days.",
    "ko": "히타는 여행을 사흘 더 늘리기로 했어요.",
    "blank": "estender",
+   "src": "made"
+  }
+ ],
+ "w|esticar": [
+  {
+   "text": "Depois de dez horas sentado, o Pedro só queria esticar as pernas.",
+   "en": "After ten hours of sitting, Pedro just wanted to stretch his legs.",
+   "ko": "열 시간을 앉아 있었더니 페드루는 다리만 쭉 펴고 싶었어요.",
+   "blank": "esticar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz quer esticar a viagem até o fim do mês se o Tiago tiver tempo.",
+   "en": "Beatriz wants to extend the trip until the end of the month if Tiago has time.",
+   "ko": "치아구가 시간이 되면 베아트리스는 여행을 월말까지 늘리고 싶어요.",
+   "blank": "esticar",
    "src": "made"
   }
  ],
@@ -27947,6 +28171,22 @@
    "src": "made"
   }
  ],
+ "w|expedição": [
+  {
+   "text": "Na revista de bordo, o Pedro leu sobre uma expedição às pirâmides do deserto.",
+   "en": "In the in-flight magazine, Pedro read about an expedition to the desert pyramids.",
+   "ko": "페드루는 기내 잡지에서 사막 피라미드 탐험 기사를 읽었어요.",
+   "blank": "expedição",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz agora trabalha numa expedição que estuda aves no Pantanal.",
+   "en": "Beatriz now works on an expedition studying birds in the Pantanal.",
+   "ko": "베아트리스는 지금 판타나우에서 새를 연구하는 탐사대에서 일해요.",
+   "blank": "expedição",
+   "src": "made"
+  }
+ ],
  "w|experiência": [
   {
    "text": "A experiência valeu a pena.",
@@ -28274,6 +28514,22 @@
    "en": "Rita won an extra medal for being the youngest in the group.",
    "ko": "리타는 그룹에서 가장 어려서 메달을 하나 더 받았어요.",
    "blank": "extra",
+   "src": "made"
+  }
+ ],
+ "w|extrair": [
+  {
+   "text": "Na revista do avião, o Pedro viu como as empresas conseguem extrair sal do mar.",
+   "en": "In the plane magazine, Pedro saw how companies manage to extract salt from the sea.",
+   "ko": "페드루는 기내 잡지에서 바다에서 소금을 얻어 내는 방법을 봤어요.",
+   "blank": "extrair",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz explica que o laboratório consegue extrair óleo das sementes da região.",
+   "en": "Beatriz explains that the lab can extract oil from the region's seeds.",
+   "ko": "베아트리스는 연구소가 그 지역 씨앗에서 기름을 뽑아낼 수 있다고 설명해요.",
+   "blank": "extrair",
    "src": "made"
   }
  ],
@@ -28906,6 +29162,22 @@
    "en": "Mariana bought a headache medicine at the corner pharmacy.",
    "ko": "마리아나는 길모퉁이 약국에서 두통약을 샀어요.",
    "blank": "farmácia",
+   "src": "made"
+  }
+ ],
+ "w|farol": [
+  {
+   "text": "A principal atração da cidade de destino é um farol antigo na beira do mar.",
+   "en": "The main attraction in the destination city is an old lighthouse by the sea.",
+   "ko": "도착할 도시의 가장 큰 볼거리는 바닷가의 오래된 등대예요.",
+   "blank": "farol",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz ainda guarda a foto do farol onde vimos o pôr do sol.",
+   "en": "Beatriz still keeps the photo of the lighthouse where we watched the sunset.",
+   "ko": "베아트리스는 우리가 노을을 본 등대 사진을 아직 갖고 있어.",
+   "blank": "farol",
    "src": "made"
   }
  ],
@@ -34255,6 +34527,22 @@
    "src": "tatoeba:6484298/bill en:318718/CK"
   }
  ],
+ "w|ida": [
+  {
+   "text": "O Pedro comprou passagem de ida e volta para visitar a irmã.",
+   "en": "Pedro bought a round-trip ticket to visit his sister.",
+   "ko": "페드루는 누나를 보러 가려고 왕복표를 샀어요.",
+   "blank": "ida",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz promete que a próxima carta vai contar a ida dela a Lisboa.",
+   "en": "Beatriz promises that the next letter will tell about her trip to Lisbon.",
+   "ko": "베아트리스는 다음 편지에 리스본에 간 이야기를 쓰겠다고 약속해요.",
+   "blank": "ida",
+   "src": "made"
+  }
+ ],
  "w|idade": [
   {
    "text": "Não pergunta a idade dele.",
@@ -34856,6 +35144,22 @@
    "en": "The Roman Empire lasted for many centuries.",
    "ko": "로마 제국은 수 세기 동안 이어졌어요.",
    "blank": "Império",
+   "src": "made"
+  }
+ ],
+ "w|implicar": [
+  {
+   "text": "Trocar a passagem agora vai implicar pagar uma taxa alta, avisou a atendente ao Pedro.",
+   "en": "Changing the ticket now will mean paying a high fee, the agent warned Pedro.",
+   "ko": "지금 표를 바꾸면 수수료를 많이 내야 한다고 직원이 페드루에게 알려 줬어요.",
+   "blank": "implicar",
+   "src": "made"
+  },
+  {
+   "text": "Pedir desculpas não precisa implicar quem estava certo, diz a Beatriz.",
+   "en": "Apologizing doesn't have to imply who was right, Beatriz says.",
+   "ko": "사과한다고 누가 옳았는지 따질 필요는 없다고 베아트리스가 말해요.",
+   "blank": "implicar",
    "src": "made"
   }
  ],
@@ -42219,6 +42523,22 @@
    "src": "made"
   }
  ],
+ "w|mergulho": [
+  {
+   "text": "A irmã do Pedro prometeu levá-lo para fazer mergulho na primeira manhã.",
+   "en": "Pedro's sister promised to take him diving on the first morning.",
+   "ko": "페드루 누나는 첫날 아침에 다이빙을 하러 데려가겠다고 약속했어요.",
+   "blank": "mergulho",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz escreve que fez um mergulho com tartarugas e pensou no Tiago.",
+   "en": "Beatriz writes that she went diving with turtles and thought of Tiago.",
+   "ko": "베아트리스는 거북이와 다이빙하면서 치아구 생각이 났다고 써요.",
+   "blank": "mergulho",
+   "src": "made"
+  }
+ ],
  "w|meritíssimo": [
   {
    "text": "Sim, meritíssimo, eu entendo.",
@@ -44333,6 +44653,22 @@
    "blank": "natureza"
   }
  ],
+ "w|naval": [
+  {
+   "text": "O piloto contou ao Pedro que veio de uma família de tradição naval.",
+   "en": "The pilot told Pedro he came from a family with a naval tradition.",
+   "ko": "조종사는 페드루에게 자기가 해군 집안 출신이라고 말했어요.",
+   "blank": "naval",
+   "src": "made"
+  },
+  {
+   "text": "O tio da Beatriz é um oficial naval aposentado que adora contar histórias.",
+   "en": "Beatriz's uncle is a retired naval officer who loves to tell stories.",
+   "ko": "베아트리스의 삼촌은 이야기하기를 좋아하는 퇴역 해군 장교예요.",
+   "blank": "naval",
+   "src": "made"
+  }
+ ],
  "w|nave": [
   {
    "text": "Que nave linda na garagem.",
@@ -44345,6 +44681,22 @@
    "en": "The craft landed slowly in the field.",
    "ko": "우주선이 들판에 천천히 내렸어.",
    "blank": "nave"
+  }
+ ],
+ "w|navegar": [
+  {
+   "text": "A ideia do Pedro é navegar até uma ilha e acampar numa barraca na praia.",
+   "en": "Pedro's idea is to sail to an island and camp in a tent on the beach.",
+   "ko": "페드루는 섬까지 배를 타고 가서 해변에 텐트를 치고 싶어요.",
+   "blank": "navegar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz conta na carta que aprendeu a navegar com o tio no último inverno.",
+   "en": "Beatriz says in the letter that she learned to sail with her uncle last winter.",
+   "ko": "베아트리스는 지난겨울 삼촌에게 배 모는 법을 배웠다고 편지에 써요.",
+   "blank": "navegar",
+   "src": "made"
   }
  ],
  "w|navio": [
@@ -44723,6 +45075,22 @@
    "ko": "우리 손자는 하얀 아기 고양이를 키워요.",
    "blank": "neto",
    "src": "tatoeba:9551324/carlosalberto en:9551364/carlosalberto"
+  }
+ ],
+ "w|neutro": [
+  {
+   "text": "A cor da sala de espera é um cinza neutro que dá sono no Pedro.",
+   "en": "The waiting room is a neutral gray that makes Pedro sleepy.",
+   "ko": "대기실은 페드루를 졸리게 하는 무난한 회색이에요.",
+   "blank": "neutro",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz escreve num tom neutro sobre a briga que afastou os dois.",
+   "en": "Beatriz writes in a neutral tone about the fight that drove them apart.",
+   "ko": "베아트리스는 둘을 멀어지게 한 다툼에 대해 담담하게 써요.",
+   "blank": "neutro",
+   "src": "made"
   }
  ],
  "w|nevar": [
@@ -46627,6 +46995,22 @@
    "src": "tatoeba:11639956/carlosalberto en:11639949/carlosalberto"
   }
  ],
+ "w|organizado": [
+  {
+   "text": "A fila do controle de passaportes estava bem organizada, para alívio do Pedro.",
+   "en": "The passport control line was well organized, to Pedro's relief.",
+   "ko": "여권 심사 줄이 잘 정리돼 있어서 페드루는 안심했어요.",
+   "blank": "organizada",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz sempre foi a mais organizada da turma e guardou todas as cartas numa caixa.",
+   "en": "Beatriz was always the most organized in the group and kept every letter in a box.",
+   "ko": "베아트리스는 늘 무리에서 제일 꼼꼼해서 편지를 전부 상자에 모아 뒀어요.",
+   "blank": "organizada",
+   "src": "made"
+  }
+ ],
  "w|organizar": [
   {
    "text": "Nós temos que organizar as coisas aqui.",
@@ -46718,6 +47102,22 @@
    "en": "Inês signed up for an Asian cooking course on Thursdays.",
    "ko": "이네스는 목요일마다 하는 동양 요리 강좌에 등록했어요.",
    "blank": "oriental",
+   "src": "made"
+  }
+ ],
+ "w|oriente": [
+  {
+   "text": "A loja do aeroporto vendia livros sobre viagens ao Oriente.",
+   "en": "The airport shop sold books about travels to the East.",
+   "ko": "공항 서점에서는 동양 여행에 관한 책을 팔았어요.",
+   "blank": "Oriente",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz lembra que o Tiago lia tudo sobre o Oriente quando era adolescente.",
+   "en": "Beatriz remembers that Tiago read everything about the East as a teenager.",
+   "ko": "베아트리스는 치아구가 십 대 때 동양에 관한 건 다 읽었던 걸 기억해요.",
+   "blank": "Oriente",
    "src": "made"
   }
  ],
@@ -48893,6 +49293,22 @@
    "blank": "perceber"
   }
  ],
+ "w|percorrer": [
+  {
+   "text": "O Pedro levou meia hora para percorrer o terminal inteiro procurando a irmã.",
+   "en": "It took Pedro half an hour to walk the whole terminal looking for his sister.",
+   "ko": "페드루는 누나를 찾느라 터미널 전체를 도는 데 삼십 분이 걸렸어요.",
+   "blank": "percorrer",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz pergunta se o Tiago ainda tem vontade de percorrer a América do Sul de ônibus.",
+   "en": "Beatriz asks whether Tiago still wants to travel across South America by bus.",
+   "ko": "베아트리스는 치아구에게 아직도 버스로 남미를 돌고 싶은지 물어요.",
+   "blank": "percorrer",
+   "src": "made"
+  }
+ ],
  "w|perda": [
   {
    "text": "Aquela reunião foi uma perda de tempo.",
@@ -49833,6 +50249,22 @@
    "src": "made"
   }
  ],
+ "w|pilotar": [
+  {
+   "text": "Ao lado do Pedro estava um piloto que já tinha aprendido a pilotar helicópteros na Marinha.",
+   "en": "Next to Pedro sat a pilot who had learned to fly helicopters in the Navy.",
+   "ko": "페드루 옆에는 해군에서 헬리콥터 조종을 배운 조종사가 앉아 있었어요.",
+   "blank": "pilotar",
+   "src": "made"
+  },
+  {
+   "text": "O tio ensinou a Beatriz a pilotar um veleiro pequeno pela baía.",
+   "en": "He taught Beatriz to sail a small sailboat around the bay.",
+   "ko": "삼촌은 베아트리스에게 작은 요트를 몰고 만을 도는 법을 가르쳤어요.",
+   "blank": "pilotar",
+   "src": "made"
+  }
+ ],
  "w|piloto": [
   {
    "text": "Eu quero ser piloto quando crescer.",
@@ -49957,6 +50389,22 @@
    "ko": "길을 잃었는데 설상가상으로 비까지 왔어요.",
    "blank": "piorar",
    "src": "tatoeba:4670253/Ricardo14 en:259724/CM"
+  }
+ ],
+ "w|pirâmide": [
+  {
+   "text": "Na revista de bordo, o Pedro leu sobre uma expedição às pirâmides do deserto.",
+   "en": "In the in-flight magazine, Pedro read about an expedition to the desert pyramids.",
+   "ko": "페드루는 기내 잡지에서 사막 피라미드 탐험 기사를 읽었어요.",
+   "blank": "pirâmides",
+   "src": "made"
+  },
+  {
+   "text": "O Tiago queria ver as pirâmides antes de qualquer outra coisa, escreve a Beatriz.",
+   "en": "Tiago wanted to see the pyramids before anything else, Beatriz writes.",
+   "ko": "치아구는 무엇보다 피라미드를 먼저 보고 싶어 했다고 베아트리스는 써요.",
+   "blank": "pirâmides",
+   "src": "made"
   }
  ],
  "w|piranha": [
@@ -53038,6 +53486,22 @@
    "en": "The discount promised in the ad didn't show up at the register, and Ana complained.",
    "ko": "광고에서 약속한 할인이 계산대에서 적용되지 않아서 아나는 항의했어요.",
    "blank": "prometido",
+   "src": "made"
+  }
+ ],
+ "w|promissor": [
+  {
+   "text": "O novo terminal parece promissor, mas o Pedro ainda prefere o antigo.",
+   "en": "The new terminal looks promising, but Pedro still prefers the old one.",
+   "ko": "새 터미널이 괜찮아 보이지만 페드루는 아직 옛 터미널이 더 좋아요.",
+   "blank": "promissor",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz acha que o novo emprego do Tiago parece muito promissor.",
+   "en": "Beatriz thinks Tiago's new job looks very promising.",
+   "ko": "베아트리스는 치아구의 새 직장이 아주 전망 있어 보인다고 생각해요.",
+   "blank": "promissor",
    "src": "made"
   }
  ],
@@ -56269,6 +56733,22 @@
    "blank": "relógio"
   }
  ],
+ "w|remar": [
+  {
+   "text": "O Pedro mal pode esperar para remar no lago perto da casa da irmã.",
+   "en": "Pedro can hardly wait to row on the lake near his sister's house.",
+   "ko": "페드루는 누나 집 근처 호수에서 노를 저을 날이 기다려져요.",
+   "blank": "remar",
+   "src": "made"
+  },
+  {
+   "text": "Naquele verão, o Tiago insistiu em remar até a outra margem do rio.",
+   "en": "That summer, Tiago insisted on rowing to the other bank of the river.",
+   "ko": "그 여름에 치아구는 강 건너편까지 노를 젓겠다고 고집했지.",
+   "blank": "remar",
+   "src": "made"
+  }
+ ],
  "w|remédio": [
   {
    "text": "Preciso tomar meu remédio agora.",
@@ -57718,6 +58198,22 @@
    "en": "Inês's partner spent the weekend at a rodeo in the countryside.",
    "ko": "이네스의 동업자는 주말을 시골 로데오 대회에서 보냈어요.",
    "blank": "rodeio",
+   "src": "made"
+  }
+ ],
+ "w|rodovia": [
+  {
+   "text": "Um bloqueio na rodovia deixou muitos passageiros presos no caminho.",
+   "en": "A roadblock on the highway left many passengers stuck on the way.",
+   "ko": "고속도로가 막혀서 많은 승객이 길에 갇혔어요.",
+   "blank": "rodovia",
+   "src": "made"
+  },
+  {
+   "text": "A estrada de terra perto da rodovia fica cheia de lama na época das chuvas.",
+   "en": "The dirt road near the highway gets full of mud in the rainy season.",
+   "ko": "고속도로 근처 흙길은 우기에 진흙투성이가 돼요.",
+   "blank": "rodovia",
    "src": "made"
   }
  ],
@@ -61119,6 +61615,22 @@
    "blank": "soldado"
   }
  ],
+ "w|soletrar": [
+  {
+   "text": "A atendente pediu ao Pedro para soletrar o sobrenome devagar.",
+   "en": "The agent asked Pedro to spell his surname slowly.",
+   "ko": "직원은 페드루에게 성을 천천히 철자로 불러 달라고 했어요.",
+   "blank": "soletrar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz confessa que ainda erra ao soletrar o nome da cidade onde o Tiago mora.",
+   "en": "Beatriz confesses she still gets it wrong when spelling the name of the city where Tiago lives.",
+   "ko": "베아트리스는 치아구가 사는 도시 이름 철자를 아직도 틀린다고 고백해요.",
+   "blank": "soletrar",
+   "src": "made"
+  }
+ ],
  "w|solicitar": [
   {
    "text": "O Miguel foi solicitar ao dono que trouxesse um café mais barato.",
@@ -62415,6 +62927,22 @@
    "blank": "suspeito"
   }
  ],
+ "w|suspender": [
+  {
+   "text": "A companhia aérea decidiu suspender os voos noturnos por causa da neblina.",
+   "en": "The airline decided to suspend the night flights because of the fog.",
+   "ko": "항공사는 안개 때문에 야간 비행을 중단하기로 했어요.",
+   "blank": "suspender",
+   "src": "made"
+  },
+  {
+   "text": "O projeto quase teve que suspender as atividades por falta de verba.",
+   "en": "The project almost had to suspend its activities for lack of funds.",
+   "ko": "프로젝트는 예산이 모자라 활동을 거의 중단할 뻔했어요.",
+   "blank": "suspender",
+   "src": "made"
+  }
+ ],
  "w|suspensão": [
   {
    "text": "O Tiago mostra jornais da época com a suspensão de direitos políticos na capa.",
@@ -63191,6 +63719,22 @@
    "en": "There's no reason to be afraid.",
    "ko": "두려워할 이유가 없어.",
    "blank": "temer"
+  }
+ ],
+ "w|temperamento": [
+  {
+   "text": "O Pedro tem um temperamento calmo e nem reclamou do atraso.",
+   "en": "Pedro has a calm temperament and didn't even complain about the delay.",
+   "ko": "페드루는 성격이 차분해서 지연에도 불평하지 않았어요.",
+   "blank": "temperamento",
+   "src": "made"
+  },
+  {
+   "text": "O velho temperamento explosivo do Tiago virou piada entre os amigos, lembra a Beatriz.",
+   "en": "Tiago's old explosive temper became a joke among friends, Beatriz recalls.",
+   "ko": "치아구의 욱하는 성격은 친구들 사이에서 농담거리가 됐다고 베아트리스가 떠올려요.",
+   "blank": "temperamento",
+   "src": "made"
   }
  ],
  "w|temperatura": [
@@ -64871,6 +65415,22 @@
    "src": "made"
   }
  ],
+ "w|tráfego": [
+  {
+   "text": "O Pedro chegou ao aeroporto três horas antes, com medo do tráfego na marginal.",
+   "en": "Pedro got to the airport three hours early, afraid of the traffic on the expressway.",
+   "ko": "페드루는 강변 도로 교통 체증이 걱정돼서 공항에 세 시간 일찍 왔어요.",
+   "blank": "tráfego",
+   "src": "made"
+  },
+  {
+   "text": "Ainda bem que no Pantanal quase não há tráfego, brinca a Beatriz.",
+   "en": "Good thing there's almost no traffic in the Pantanal, Beatriz jokes.",
+   "ko": "판타나우엔 차가 거의 없어서 다행이라고 베아트리스가 농담해요.",
+   "blank": "tráfego",
+   "src": "made"
+  }
+ ],
  "w|traficante": [
   {
    "text": "Dan tornou-se traficante de drogas.",
@@ -65691,6 +66251,22 @@
    "src": "made"
   }
  ],
+ "w|trilho": [
+  {
+   "text": "O trem do aeroporto saiu do trilho e a linha ficou parada por uma hora.",
+   "en": "The airport train came off the rail and the line was stopped for an hour.",
+   "ko": "공항 열차가 선로를 벗어나 한 시간 동안 운행이 멈췄어요.",
+   "blank": "trilho",
+   "src": "made"
+  },
+  {
+   "text": "Os trens antigos já não passam por lá, mas o trilho ainda corta a fazenda.",
+   "en": "The old trains no longer pass through, but the rail track still cuts across the farm.",
+   "ko": "옛 기차는 더 이상 안 다니지만 선로는 아직 농장을 가로질러요.",
+   "blank": "trilho",
+   "src": "made"
+  }
+ ],
  "w|trinta": [
   {
    "text": "Eu posso fazer isso em trinta minutos.",
@@ -66253,6 +66829,22 @@
    "blank": "último"
   }
  ],
+ "w|ultrapassar": [
+  {
+   "text": "O avião não pode ultrapassar o limite de peso, explicou a atendente.",
+   "en": "The plane can't exceed the weight limit, the agent explained.",
+   "ko": "비행기가 무게 제한을 넘을 수 없다고 직원이 설명했어요.",
+   "blank": "ultrapassar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz já conseguiu ultrapassar o medo de avião e quer voar até a casa do Tiago.",
+   "en": "Beatriz has managed to overcome her fear of flying and wants to fly to Tiago's house.",
+   "ko": "베아트리스는 비행 공포증을 이겨 내서 치아구 집까지 비행기로 가고 싶어 해요.",
+   "blank": "ultrapassar",
+   "src": "made"
+  }
+ ],
  "w|um": [
   {
    "text": "Me dá um café.",
@@ -66767,6 +67359,22 @@
    "en": "Thanks for the ride.",
    "ko": "태워 줘서 고마워.",
    "blank": "Valeu"
+  }
+ ],
+ "w|válido": [
+  {
+   "text": "O passaporte do Pedro ainda é válido por mais dois anos.",
+   "en": "Pedro's passport is still valid for two more years.",
+   "ko": "페드루의 여권은 아직 이 년 더 유효해요.",
+   "blank": "válido",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz pergunta se o visto do Tiago continua válido para viajar.",
+   "en": "Beatriz asks if Tiago's visa is still valid for travel.",
+   "ko": "베아트리스는 치아구의 비자가 여행하기에 아직 유효한지 물어요.",
+   "blank": "válido",
+   "src": "made"
   }
  ],
  "w|valioso": [
@@ -67677,6 +68285,22 @@
    "blank": "viagem"
   }
  ],
+ "w|viajante": [
+  {
+   "text": "No portão de embarque, um viajante cansado dormia em cima da mochila.",
+   "en": "At the boarding gate, a tired traveler was sleeping on top of his backpack.",
+   "ko": "탑승구에서 지친 여행자가 배낭 위에서 자고 있었어요.",
+   "blank": "viajante",
+   "src": "made"
+  },
+  {
+   "text": "Na carta, a Beatriz chama o Tiago de eterno viajante, porque ele nunca para em casa.",
+   "en": "In the letter, Beatriz calls Tiago an eternal traveler, because he's never at home.",
+   "ko": "베아트리스는 편지에서 치아구를 영원한 여행자라고 불러요. 집에 붙어 있질 않거든요.",
+   "blank": "viajante",
+   "src": "made"
+  }
+ ],
  "w|viajar": [
   {
    "text": "Quero viajar de trem.",
@@ -67892,6 +68516,22 @@
    "en": "A bottle of vinegar fell and Inês spent the afternoon cleaning the floor.",
    "ko": "식초 병이 떨어져서 이네스는 오후 내내 바닥을 닦았어요.",
    "blank": "vinagre",
+   "src": "made"
+  }
+ ],
+ "w|vinda": [
+  {
+   "text": "A vinda do Pedro foi uma surpresa para a família da irmã.",
+   "en": "Pedro's coming was a surprise for his sister's family.",
+   "ko": "페드루가 온다는 건 누나 가족에게 깜짝 소식이었어요.",
+   "blank": "vinda",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz também quer saber quando será a vinda do Tiago ao Brasil.",
+   "en": "Beatriz also wants to know when Tiago will be coming to Brazil.",
+   "ko": "베아트리스는 치아구가 언제 브라질에 오는지도 알고 싶어 해요.",
+   "blank": "vinda",
    "src": "made"
   }
  ],

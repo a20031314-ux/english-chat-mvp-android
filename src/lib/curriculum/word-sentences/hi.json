@@ -387,6 +387,22 @@
    "blank": "अंग्रेज़ी"
   }
  ],
+ "w|अचल": [
+  {
+   "text": "करण की अचल संपत्ति में बस यह खेत और एक छोटा घर है।",
+   "en": "Karan's immovable property consists of just this field and a small house.",
+   "ko": "카란의 부동산은 이 밭과 작은 집 한 채뿐이에요.",
+   "blank": "अचल",
+   "src": "made"
+  },
+  {
+   "text": "शादी के बाद दीपा का इरादा अचल रहा कि वह नौकरी नहीं छोड़ेगी।",
+   "en": "After the wedding, Deepa's resolve that she wouldn't quit her job remained unshaken.",
+   "ko": "결혼 뒤에도 일을 그만두지 않겠다는 디파의 결심은 흔들림이 없었어요.",
+   "blank": "अचल",
+   "src": "made"
+  }
+ ],
  "w|अचानक": [
   {
    "text": "अचानक बारिश शुरू हो गई।",
@@ -577,6 +593,22 @@
    "en": "Eighteen guests came to the party.",
    "ko": "파티에 손님이 열여덟 명 왔어.",
    "blank": "अठारह"
+  }
+ ],
+ "w|अड़ना": [
+  {
+   "text": "बैल बीच खेत में अड़ गया और आगे नहीं बढ़ा।",
+   "en": "The bullock dug in its heels in the middle of the field and wouldn't move.",
+   "ko": "황소가 밭 한가운데서 버티고 서서 꿈쩍도 안 했어요.",
+   "blank": "अड़",
+   "src": "made"
+  },
+  {
+   "text": "दीपा का छोटा भाई जूते छिपाने की रस्म में ज़्यादा पैसे पर अड़ा रहा।",
+   "en": "Deepa's younger brother stuck out for more money in the shoe-hiding ritual.",
+   "ko": "디파의 남동생은 신발 숨기기 놀이에서 돈을 더 달라고 버텼어요.",
+   "blank": "अड़ा",
+   "src": "made"
   }
  ],
  "w|अंडा": [
@@ -2095,6 +2127,22 @@
    "blank": "अपरिचित"
   }
  ],
+ "w|अपवित्र": [
+  {
+   "text": "करण की दादी मानती हैं कि जूते पहनकर रसोई में जाना अपवित्र है।",
+   "en": "Karan's grandmother believes it is impure to go into the kitchen wearing shoes.",
+   "ko": "카란의 할머니는 신발 신고 부엌에 들어가면 부정 탄다고 여겨요.",
+   "blank": "अपवित्र",
+   "src": "made"
+  },
+  {
+   "text": "पंडित जी ने कहा कि मंडप में जूते ले जाना अपवित्र माना जाता है।",
+   "en": "The priest said that taking shoes into the wedding canopy is considered impure.",
+   "ko": "사제는 혼례 차일 안에 신발을 들이면 부정하다고 여긴다고 말했어요.",
+   "blank": "अपवित्र",
+   "src": "made"
+  }
+ ],
  "w|अपहरण": [
   {
    "text": "अख़बार ने लिखा कि अपहरण के पुराने मामले की फ़ाइल फिर से खोली गई है।",
@@ -2972,6 +3020,22 @@
    "en": "Seeing the dilapidated condition of the old bridge, Deepa got a little scared.",
    "ko": "낡은 다리의 허름한 상태를 보고 디파는 조금 겁이 났어요.",
    "blank": "अवस्था",
+   "src": "made"
+  }
+ ],
+ "w|अविश्वसनीय": [
+  {
+   "text": "इस बार करण के खेत में अविश्वसनीय रूप से बड़े कद्दू उगे।",
+   "en": "This time unbelievably large pumpkins grew in Karan's field.",
+   "ko": "이번에 카란의 밭에는 믿기지 않을 만큼 큰 호박이 열렸어요.",
+   "blank": "अविश्वसनीय",
+   "src": "made"
+  },
+  {
+   "text": "इतनी बड़ी शादी का इंतज़ाम एक हफ़्ते में होना अविश्वसनीय था।",
+   "en": "Arranging such a big wedding in one week was unbelievable.",
+   "ko": "그렇게 큰 결혼식을 일주일 만에 준비했다는 게 믿기지 않았어요.",
+   "blank": "अविश्वसनीय",
    "src": "made"
   }
  ],
@@ -4472,6 +4536,22 @@
    "en": "Some spectators shouted offensive slogans, so the guards threw them out.",
    "ko": "몇몇 관객이 불쾌한 구호를 외쳐서 경비원들이 그들을 내보냈어요.",
    "blank": "आपत्तिजनक",
+   "src": "made"
+  }
+ ],
+ "w|आपदा": [
+  {
+   "text": "पिछले साल की बाढ़ गाँव के लिए बड़ी आपदा थी।",
+   "en": "Last year's flood was a big disaster for the village.",
+   "ko": "작년 홍수는 마을에 큰 재해였어요.",
+   "blank": "आपदा",
+   "src": "made"
+  },
+  {
+   "text": "बाढ़ की आपदा के कारण दीपा की शादी दो महीने टालनी पड़ी।",
+   "en": "Because of the flood disaster, Deepa's wedding had to be postponed by two months.",
+   "ko": "홍수 재해 때문에 디파의 결혼식은 두 달 미뤄졌어요.",
+   "blank": "आपदा",
    "src": "made"
   }
  ],
@@ -6293,6 +6373,22 @@
    "src": "made"
   }
  ],
+ "w|उजाला": [
+  {
+   "text": "करण सुबह उजाला होने से पहले ही खेत पहुँच जाता है।",
+   "en": "Karan reaches the field even before it gets light in the morning.",
+   "ko": "카란은 아침에 날이 밝기도 전에 밭에 나가요.",
+   "blank": "उजाला",
+   "src": "made"
+  },
+  {
+   "text": "शादी की रात पूरे मोहल्ले में दीयों का उजाला था।",
+   "en": "On the wedding night the whole neighbourhood was lit up with lamps.",
+   "ko": "결혼식 날 밤 온 동네가 등불로 환했어요.",
+   "blank": "उजाला",
+   "src": "made"
+  }
+ ],
  "w|उठना": [
   {
    "text": "सुबह जल्दी उठ जाओ।",
@@ -6526,6 +6622,22 @@
    "en": "The hotel spends part of its earnings on the upliftment of village women.",
    "ko": "호텔은 수익 일부를 마을 여성들의 자립을 돕는 데 써요.",
    "blank": "उत्थान",
+   "src": "made"
+  }
+ ],
+ "w|उत्पत्ति": [
+  {
+   "text": "करण के बेटे ने पूछा कि बारिश की उत्पत्ति कैसे होती है।",
+   "en": "Karan's son asked how rain comes about.",
+   "ko": "카란의 아들은 비가 어떻게 생기는지 물었어요.",
+   "blank": "उत्पत्ति",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के दादा ने मेहमानों को अपने परिवार की उत्पत्ति की कहानी सुनाई।",
+   "en": "Deepa's grandfather told the guests the story of his family's origins.",
+   "ko": "디파의 할아버지는 하객들에게 집안의 내력을 들려줬어요.",
+   "blank": "उत्पत्ति",
    "src": "made"
   }
  ],
@@ -7459,6 +7571,22 @@
    "blank": "उलझना"
   }
  ],
+ "w|उलटना": [
+  {
+   "text": "करण ने हल से खेत की मिट्टी उलट दी।",
+   "en": "Karan turned over the soil of the field with the plough.",
+   "ko": "카란은 쟁기로 밭흙을 뒤집었어요.",
+   "blank": "उलट",
+   "src": "made"
+  },
+  {
+   "text": "बच्चों की भागदौड़ में मिठाई की थाली उलट गई।",
+   "en": "In the children's running around, the plate of sweets got knocked over.",
+   "ko": "아이들이 뛰어다니다가 과자 쟁반이 엎어졌어요.",
+   "blank": "उलट",
+   "src": "made"
+  }
+ ],
  "w|उल्टा": [
   {
    "text": "नक्शा उल्टा पकड़ लेने से रास्ता गलत हो गया।",
@@ -8099,6 +8227,22 @@
    "en": "It will go on like this, don't worry.",
    "ko": "이대로 이어질 테니 걱정하지 마.",
    "blank": "ऐसे"
+  }
+ ],
+ "w|ऑक्सीजन": [
+  {
+   "text": "करण कहता है कि पेड़ हमें मुफ़्त में ऑक्सीजन देते हैं।",
+   "en": "Karan says trees give us oxygen for free.",
+   "ko": "카란은 나무가 우리에게 공짜로 산소를 준다고 말해요.",
+   "blank": "ऑक्सीजन",
+   "src": "made"
+  },
+  {
+   "text": "भीड़ में दादी की तबीयत बिगड़ी तो डॉक्टर ने उन्हें ऑक्सीजन दी।",
+   "en": "When grandmother felt unwell in the crowd, the doctor gave her oxygen.",
+   "ko": "붐비는 곳에서 할머니가 몸이 안 좋아지자 의사가 산소를 드렸어요.",
+   "blank": "ऑक्सीजन",
+   "src": "made"
   }
  ],
  "w|ऑटो": [
@@ -8772,6 +8916,22 @@
    "en": "In return Seema sent over some kadhi she'd made herself.",
    "ko": "답례로 시마는 직접 만든 카디를 보냈어요.",
    "blank": "कढ़ी",
+   "src": "made"
+  }
+ ],
+ "w|कण": [
+  {
+   "text": "हवा में उड़ते भूसे के कण करण की आँखों में चले गए।",
+   "en": "Particles of chaff flying in the air got into Karan's eyes.",
+   "ko": "바람에 날린 겨 부스러기가 카란의 눈에 들어갔어요.",
+   "blank": "कण",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के लहँगे पर लगे सितारों के कण पूरे फ़र्श पर बिखर गए।",
+   "en": "Bits of sequins from Deepa's lehenga were scattered all over the floor.",
+   "ko": "디파 레헹가에 달린 반짝이 조각들이 바닥에 흩어졌어요.",
+   "blank": "कण",
    "src": "made"
   }
  ],
@@ -17337,6 +17497,22 @@
    "blank": "चमक"
   }
  ],
+ "w|चमकदार": [
+  {
+   "text": "धूप में करण के खेत की सरसों के चमकदार पीले फूल दूर से दिखते हैं।",
+   "en": "In the sunshine, the bright yellow mustard flowers in Karan's field can be seen from afar.",
+   "ko": "햇살 아래 카란네 밭 겨자꽃의 샛노란 빛이 멀리서도 보여요.",
+   "blank": "चमकदार",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने लाल रंग का चमकदार लहँगा पहना था।",
+   "en": "Deepa wore a shiny red lehenga.",
+   "ko": "디파는 반짝이는 빨간 레헹가를 입었어요.",
+   "blank": "चमकदार",
+   "src": "made"
+  }
+ ],
  "w|चमकना": [
   {
    "text": "रात में तारे आसमान में चमकना शुरू करते हैं।",
@@ -17834,6 +18010,22 @@
    "en": "During the break Priya lay on the cot in the courtyard, memorising her lines.",
    "ko": "쉬는 시간에 프리야는 마당 노끈 침상에 누워 대사를 외웠어요.",
    "blank": "चारपाई",
+   "src": "made"
+  }
+ ],
+ "w|चारा": [
+  {
+   "text": "करण ने भैंसों के लिए हरा चारा काटकर रखा।",
+   "en": "Karan cut green fodder and kept it for the buffaloes.",
+   "ko": "카란은 물소들 먹일 푸른 꼴을 베어 두었어요.",
+   "blank": "चारा",
+   "src": "made"
+  },
+  {
+   "text": "बारात के घोड़े के लिए अलग से चारा मँगवाया गया।",
+   "en": "Fodder was ordered separately for the procession's horse.",
+   "ko": "신랑 행렬의 말 먹이는 따로 주문했어요.",
+   "blank": "चारा",
    "src": "made"
   }
  ],
@@ -18475,6 +18667,22 @@
    "en": "She accepted the challenge.",
    "ko": "그녀는 도전을 받아들였어.",
    "blank": "चुनौती"
+  }
+ ],
+ "w|चुनौतीपूर्ण": [
+  {
+   "text": "कम बारिश वाले साल में खेती करना बहुत चुनौतीपूर्ण होता है।",
+   "en": "Farming in a year with little rain is very challenging.",
+   "ko": "비가 적은 해에는 농사가 무척 힘들어요.",
+   "blank": "चुनौतीपूर्ण",
+   "src": "made"
+  },
+  {
+   "text": "बारिश में पाँच सौ मेहमानों का खाना परोसना चुनौतीपूर्ण काम था।",
+   "en": "Serving food to five hundred guests in the rain was a challenging job.",
+   "ko": "빗속에서 하객 오백 명에게 음식을 내는 건 힘든 일이었어요.",
+   "blank": "चुनौतीपूर्ण",
+   "src": "made"
   }
  ],
  "w|चुप": [
@@ -20987,6 +21195,22 @@
    "src": "made"
   }
  ],
+ "w|जायज़": [
+  {
+   "text": "करण कहता है कि फ़सल का सही दाम माँगना किसान का जायज़ हक़ है।",
+   "en": "Karan says asking for a fair price for the crop is a farmer's legitimate right.",
+   "ko": "카란은 작물값을 제대로 받는 건 농부의 정당한 권리라고 말해요.",
+   "blank": "जायज़",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की माँ ने कहा कि बेटी की पढ़ाई जारी रखने की माँग पूरी तरह जायज़ है।",
+   "en": "Deepa's mother said her daughter's demand to continue studying was entirely fair.",
+   "ko": "디파의 어머니는 딸이 공부를 계속하겠다는 건 지극히 당연하다고 했어요.",
+   "blank": "जायज़",
+   "src": "made"
+  }
+ ],
  "w|जायदाद": [
   {
    "text": "इतिहास के पाठ में राहुल ने पढ़ा कि राजा ने अपनी जायदाद बेटों में बाँट दी।",
@@ -21000,6 +21224,22 @@
    "en": "Priya kept the papers for her grandmother's property in a separate box.",
    "ko": "프리야는 할머니 재산 서류를 따로 상자에 넣어 두었어요.",
    "blank": "जायदाद",
+   "src": "made"
+  }
+ ],
+ "w|जाल": [
+  {
+   "text": "करण ने तालाब से मछलियाँ पकड़ने के लिए जाल डाला।",
+   "en": "Karan cast a net to catch fish from the pond.",
+   "ko": "카란은 연못에서 물고기를 잡으려고 그물을 던졌어요.",
+   "blank": "जाल",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के दुपट्टे पर सुनहरे धागों का महीन जाल बना था।",
+   "en": "Deepa's dupatta had a fine net of golden threads on it.",
+   "ko": "디파의 두파타에는 금실로 섬세한 그물 무늬가 놓여 있었어요.",
+   "blank": "जाल",
    "src": "made"
   }
  ],
@@ -21030,6 +21270,22 @@
    "en": "It was obvious from the customer's red eyes that he had an allergy.",
    "ko": "손님 눈이 빨간 걸 보니 알레르기가 있는 게 분명했어요.",
    "blank": "ज़ाहिर",
+   "src": "made"
+  }
+ ],
+ "w|ज़ाहिर करना": [
+  {
+   "text": "करण ने पंचायत में नहर की मरम्मत को लेकर अपनी चिंता ज़ाहिर की।",
+   "en": "Karan expressed his concern at the panchayat about repairing the canal.",
+   "ko": "카란은 마을 회의에서 수로 수리 문제로 걱정을 드러냈어요.",
+   "blank": "ज़ाहिर की",
+   "src": "made"
+  },
+  {
+   "text": "विदाई के समय दीपा ने अपनी भावनाएँ ज़ाहिर नहीं कीं, पर आँखें सब कह रही थीं।",
+   "en": "At the farewell, Deepa didn't express her feelings, but her eyes said it all.",
+   "ko": "떠나는 순간 디파는 감정을 드러내지 않았지만 눈빛이 모든 걸 말해 줬어요.",
+   "blank": "ज़ाहिर नहीं कीं",
    "src": "made"
   }
  ],
@@ -21403,6 +21659,22 @@
    "en": "Every living being has a right to live.",
    "ko": "모든 생명에게 살아갈 권리가 있어.",
    "blank": "जीव"
+  }
+ ],
+ "w|जीव जगत": [
+  {
+   "text": "करण मानता है कि खेत में कीड़े भी जीव जगत का ज़रूरी हिस्सा हैं।",
+   "en": "Karan believes that insects in the field are also a necessary part of the living world.",
+   "ko": "카란은 밭의 벌레도 생물계의 꼭 필요한 일부라고 생각해요.",
+   "blank": "जीव जगत",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के दूल्हे ने जीव जगत पर शोध किया है और वह जंगलों में काम करता है।",
+   "en": "Deepa's groom has done research on the living world and works in forests.",
+   "ko": "디파의 신랑은 생물계를 연구했고 숲에서 일해요.",
+   "blank": "जीव जगत",
+   "src": "made"
   }
  ],
  "w|जीव जंतु": [
@@ -24165,6 +24437,22 @@
    "blank": "तंग"
   }
  ],
+ "w|तगड़ा": [
+  {
+   "text": "करण का बैल इतना तगड़ा है कि अकेले भारी गाड़ी खींच लेता है।",
+   "en": "Karan's bullock is so strong that it pulls a heavy cart on its own.",
+   "ko": "카란의 황소는 아주 힘이 세서 무거운 수레도 혼자 끌어요.",
+   "blank": "तगड़ा",
+   "src": "made"
+  },
+  {
+   "text": "दूल्हे का तगड़ा दोस्त ढोल बजाते-बजाते भी नहीं थका।",
+   "en": "The groom's burly friend didn't tire even after drumming for hours.",
+   "ko": "신랑의 덩치 큰 친구는 북을 계속 쳐도 지치지 않았어요.",
+   "blank": "तगड़ा",
+   "src": "made"
+  }
+ ],
  "w|तंज़": [
   {
    "text": "एक अख़बार ने नाटक पर तंज़ कसा कि इसमें सिर्फ़ भाषण है।",
@@ -24208,6 +24496,22 @@
    "en": "In the two brothers' dispute over the field, Seema stayed neutral.",
    "ko": "두 형제의 밭 다툼에서 시마는 중립을 지켰어요.",
    "blank": "तटस्थ",
+   "src": "made"
+  }
+ ],
+ "w|तटीय": [
+  {
+   "text": "करण का भाई एक तटीय गाँव में नारियल की खेती करता है।",
+   "en": "Karan's brother grows coconuts in a coastal village.",
+   "ko": "카란의 형은 바닷가 마을에서 코코넛 농사를 지어요.",
+   "blank": "तटीय",
+   "src": "made"
+  },
+  {
+   "text": "दीपा का ससुराल एक तटीय शहर में है जहाँ से समुद्र दिखता है।",
+   "en": "Deepa's in-laws' home is in a coastal city with a view of the sea.",
+   "ko": "디파의 시댁은 바다가 보이는 해안 도시에 있어요.",
+   "blank": "तटीय",
    "src": "made"
   }
  ],
@@ -24571,6 +24875,22 @@
    "en": "The company's progress makes everyone happy.",
    "ko": "회사의 발전이 모두를 기쁘게 해.",
    "blank": "तरक्की"
+  }
+ ],
+ "w|तरंग": [
+  {
+   "text": "हवा चलने पर गेहूँ के खेत में हरी तरंगें उठती हैं।",
+   "en": "When the wind blows, green waves rise across the wheat field.",
+   "ko": "바람이 불면 밀밭에 초록 물결이 일어요.",
+   "blank": "तरंगें",
+   "src": "made"
+  },
+  {
+   "text": "ढोल की थाप से मेहमानों में ख़ुशी की तरंग दौड़ गई।",
+   "en": "The beat of the dhol sent a wave of joy through the guests.",
+   "ko": "북소리에 하객들 사이로 기쁨의 물결이 퍼졌어요.",
+   "blank": "तरंग",
+   "src": "made"
   }
  ],
  "w|तरफ़": [
@@ -25536,6 +25856,22 @@
    "en": "People often compare Priya to the actresses of the old days.",
    "ko": "사람들은 프리야를 옛날 여배우들과 자주 비교해요.",
    "blank": "तुलना करते",
+   "src": "made"
+  }
+ ],
+ "w|तुलसी": [
+  {
+   "text": "करण की माँ हर सुबह आँगन की तुलसी को पानी देती हैं।",
+   "en": "Every morning Karan's mother waters the tulsi plant in the courtyard.",
+   "ko": "카란의 어머니는 아침마다 마당의 툴시에 물을 줘요.",
+   "blank": "तुलसी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की शादी तुलसी विवाह के ठीक बाद वाले शुभ दिन रखी गई।",
+   "en": "Deepa's wedding was set for the auspicious day right after the tulsi wedding festival.",
+   "ko": "디파의 결혼식은 툴시 혼례 축제 바로 다음 길일로 잡혔어요.",
+   "blank": "तुलसी",
    "src": "made"
   }
  ],
@@ -28919,6 +29255,22 @@
    "blank": "धागा"
   }
  ],
+ "w|धातु": [
+  {
+   "text": "करण के पुराने हल का फाल किसी मज़बूत धातु से बना है।",
+   "en": "The blade of Karan's old plough is made of some strong metal.",
+   "ko": "카란의 낡은 쟁기 날은 단단한 금속으로 만들어졌어요.",
+   "blank": "धातु",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की चूड़ियाँ काँच की नहीं, किसी हल्की धातु की बनी थीं।",
+   "en": "Deepa's bangles were not made of glass but of some light metal.",
+   "ko": "디파의 팔찌는 유리가 아니라 가벼운 금속으로 만든 거였어요.",
+   "blank": "धातु",
+   "src": "made"
+  }
+ ],
  "w|धान": [
   {
    "text": "खेत में हरा धान लहलहा रहा है।",
@@ -29145,6 +29497,22 @@
    "src": "made"
   }
  ],
+ "w|धूल": [
+  {
+   "text": "ट्रैक्टर चलते ही खेत में धूल का बादल उठ गया।",
+   "en": "As soon as the tractor started, a cloud of dust rose over the field.",
+   "ko": "트랙터가 움직이자 밭에 먼지구름이 일었어요.",
+   "blank": "धूल",
+   "src": "made"
+  },
+  {
+   "text": "बारात आने से पहले आँगन की धूल हटाने के लिए पानी छिड़का गया।",
+   "en": "Before the wedding procession arrived, water was sprinkled to settle the dust in the courtyard.",
+   "ko": "신랑 행렬이 오기 전에 마당 먼지를 가라앉히려고 물을 뿌렸어요.",
+   "blank": "धूल",
+   "src": "made"
+  }
+ ],
  "w|धैर्य": [
   {
    "text": "मुश्किल समय में धैर्य रखना ज़रूरी है।",
@@ -29311,6 +29679,22 @@
    "blank": "ध्यान से"
   }
  ],
+ "w|ध्रुव": [
+  {
+   "text": "करण के दादा रात में ध्रुव तारा देखकर दिशा बताते थे।",
+   "en": "Karan's grandfather used to tell directions at night by looking at the pole star.",
+   "ko": "카란의 할아버지는 밤에 북극성을 보고 방향을 알려 주곤 했어요.",
+   "blank": "ध्रुव",
+   "src": "made"
+  },
+  {
+   "text": "फेरों के बाद पंडित जी ने दीपा और उसके पति को ध्रुव तारा दिखाया।",
+   "en": "After the wedding rounds, the priest showed Deepa and her husband the pole star.",
+   "ko": "혼례 의식 뒤 사제는 디파 부부에게 북극성을 보여 줬어요.",
+   "blank": "ध्रुव",
+   "src": "made"
+  }
+ ],
  "w|ध्वज": [
   {
    "text": "पहले पन्ने पर राष्ट्रीय ध्वज के साथ खिलाड़ियों की बड़ी तस्वीर छपी।",
@@ -29324,6 +29708,22 @@
    "en": "The research team that reached the mountain peak planted their institute's flag there.",
    "ko": "산꼭대기에 오른 연구팀은 거기에 연구소 깃발을 꽂았어요.",
    "blank": "ध्वज",
+   "src": "made"
+  }
+ ],
+ "w|ध्वनि": [
+  {
+   "text": "सुबह करण को खेत में मोर की ध्वनि सुनाई दी।",
+   "en": "In the morning Karan heard the sound of a peacock in the field.",
+   "ko": "아침에 카란은 밭에서 공작새 소리를 들었어요.",
+   "blank": "ध्वनि",
+   "src": "made"
+  },
+  {
+   "text": "शहनाई की मधुर ध्वनि से शादी का पंडाल गूँज उठा।",
+   "en": "The wedding marquee resounded with the sweet sound of the shehnai.",
+   "ko": "셰나이의 고운 소리가 결혼식 천막에 울려 퍼졌어요.",
+   "blank": "ध्वनि",
    "src": "made"
   }
  ],
@@ -29474,6 +29874,22 @@
    "en": "A big map of the country hangs on the office wall, with customers' cities marked on it.",
    "ko": "사무실 벽에 큰 나라 지도가 걸려 있고, 고객이 있는 도시가 표시돼 있어요.",
    "blank": "नक्शा",
+   "src": "made"
+  }
+ ],
+ "w|नक्षत्र": [
+  {
+   "text": "गाँव के पंडित नक्षत्र देखकर बुआई का दिन तय करते हैं।",
+   "en": "The village priest fixes the sowing day by looking at the lunar mansions.",
+   "ko": "마을 사제는 별자리를 보고 씨 뿌릴 날을 정해요.",
+   "blank": "नक्षत्र",
+   "src": "made"
+  },
+  {
+   "text": "पंडित जी ने दीपा और वर के नक्षत्र मिलाकर मुहूर्त निकाला।",
+   "en": "The priest matched the stars of Deepa and the groom and fixed the auspicious time.",
+   "ko": "사제는 디파와 신랑의 별자리를 맞춰 보고 길한 시각을 정했어요.",
+   "blank": "नक्षत्र",
    "src": "made"
   }
  ],
@@ -30241,6 +30657,22 @@
    "src": "made"
   }
  ],
+ "w|नाग": [
+  {
+   "text": "नाग पंचमी पर करण की दादी साँप की बाँबी पर दूध चढ़ाती हैं।",
+   "en": "On Nag Panchami, Karan's grandmother offers milk at a snake's anthill.",
+   "ko": "나그 판차미 날에 카란의 할머니는 뱀 굴에 우유를 바쳐요.",
+   "blank": "नाग",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के गले के हार पर दो नाग आपस में लिपटे हुए बने थे।",
+   "en": "Deepa's necklace had two cobras entwined with each other on it.",
+   "ko": "디파의 목걸이에는 코브라 두 마리가 서로 감긴 모양이 새겨져 있었어요.",
+   "blank": "नाग",
+   "src": "made"
+  }
+ ],
  "w|नागरिक": [
   {
    "text": "हर नागरिक को वोट का अधिकार है।",
@@ -30492,6 +30924,22 @@
    "en": "Kavita said her daughter has been enrolled in a good school in the city.",
    "ko": "카비타는 딸이 시내 좋은 학교에 입학했다고 알렸어요.",
    "blank": "नामांकन",
+   "src": "made"
+  }
+ ],
+ "w|नामी": [
+  {
+   "text": "करण ने एक नामी कृषि वैज्ञानिक से मिट्टी की जाँच करवाई।",
+   "en": "Karan had his soil tested by a well-known agricultural scientist.",
+   "ko": "카란은 이름난 농업 학자에게 흙을 검사받았어요.",
+   "blank": "नामी",
+   "src": "made"
+  },
+  {
+   "text": "शादी का खाना शहर के एक नामी हलवाई ने बनाया।",
+   "en": "The wedding food was made by a well-known sweet-maker of the city.",
+   "ko": "결혼식 음식은 시내의 이름난 과자 장인이 만들었어요.",
+   "blank": "नामी",
    "src": "made"
   }
  ],
@@ -37517,6 +37965,22 @@
    "src": "made"
   }
  ],
+ "w|प्रवाह": [
+  {
+   "text": "करण ने नहर का प्रवाह मोड़कर सूखे खेत तक पानी पहुँचाया।",
+   "en": "Karan diverted the flow of the canal and brought water to the dry field.",
+   "ko": "카란은 수로 물길을 돌려 마른 밭까지 물을 댔어요.",
+   "blank": "प्रवाह",
+   "src": "made"
+  },
+  {
+   "text": "शादी में मेहमानों का प्रवाह आधी रात तक थमा नहीं।",
+   "en": "The flow of guests at the wedding didn't stop until midnight.",
+   "ko": "결혼식 하객 행렬은 자정까지 끊이지 않았어요.",
+   "blank": "प्रवाह",
+   "src": "made"
+  }
+ ],
  "w|प्रवीण": [
   {
    "text": "विकास पुराने रिकॉर्ड कंप्यूटर पर खोजने में प्रवीण है।",
@@ -37955,6 +38419,22 @@
    "en": "We painted the wall with natural colors.",
    "ko": "우리는 천연 물감으로 벽을 칠했어.",
    "blank": "प्राकृतिक"
+  }
+ ],
+ "w|प्राकृतिक गैस": [
+  {
+   "text": "गाँव में अब खाना पकाने के लिए पाइप से प्राकृतिक गैस आने लगी है।",
+   "en": "Natural gas has now started coming by pipe to the village for cooking.",
+   "ko": "이제 마을에 요리용 천연가스가 관으로 들어와요.",
+   "blank": "प्राकृतिक गैस",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के पिता प्राकृतिक गैस की एक कंपनी में इंजीनियर हैं।",
+   "en": "Deepa's father is an engineer at a natural gas company.",
+   "ko": "디파의 아버지는 천연가스 회사 엔지니어예요.",
+   "blank": "प्राकृतिक गैस",
+   "src": "made"
   }
  ],
  "w|प्राचीन": [
@@ -41475,6 +41955,22 @@
    "src": "made"
   }
  ],
+ "w|बारीक": [
+  {
+   "text": "करण ने बीज बोने से पहले मिट्टी को बारीक करके भुरभुरा बनाया।",
+   "en": "Before sowing seeds, Karan broke the soil fine and made it crumbly.",
+   "ko": "카란은 씨를 뿌리기 전에 흙을 곱게 부숴 부슬부슬하게 만들었어요.",
+   "blank": "बारीक",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के हाथों पर बहुत बारीक मेहँदी लगाई गई थी।",
+   "en": "Very fine henna designs had been applied to Deepa's hands.",
+   "ko": "디파의 손에는 아주 섬세한 헤나가 그려져 있었어요.",
+   "blank": "बारीक",
+   "src": "made"
+  }
+ ],
  "w|बाल": [
   {
    "text": "बारिश में बाल भीग गए।",
@@ -43953,6 +44449,22 @@
    "src": "made"
   }
  ],
+ "w|भुलाना": [
+  {
+   "text": "पिछली सूखी गर्मी को करण आज तक भुला नहीं पाया।",
+   "en": "Karan has never been able to forget last year's dry summer.",
+   "ko": "카란은 지난 가뭄 든 여름을 아직도 잊지 못해요.",
+   "blank": "भुला",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की सहेलियाँ उस रात की मस्ती कभी नहीं भुलाएँगी।",
+   "en": "Deepa's friends will never forget the fun of that night.",
+   "ko": "디파의 친구들은 그날 밤의 신나는 시간을 절대 잊지 못할 거예요.",
+   "blank": "भुलाएँगी",
+   "src": "made"
+  }
+ ],
  "w|भूकंप": [
   {
    "text": "रात को अचानक भूकंप आ गया।",
@@ -45906,6 +46418,22 @@
    "en": "Priya found an old illustrated copy of an epic.",
    "ko": "프리야는 그림이 든 서사시 옛 판본을 찾았어요.",
    "blank": "महाकाव्य",
+   "src": "made"
+  }
+ ],
+ "w|महाद्वीप": [
+  {
+   "text": "करण के बेटे ने स्कूल में पढ़ा कि दुनिया में सात महाद्वीप हैं।",
+   "en": "Karan's son learned at school that there are seven continents in the world.",
+   "ko": "카란의 아들은 학교에서 세상에 대륙이 일곱 개 있다고 배웠어요.",
+   "blank": "महाद्वीप",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की शादी में तीन महाद्वीपों से रिश्तेदार आए थे।",
+   "en": "Relatives had come from three continents to Deepa's wedding.",
+   "ko": "디파의 결혼식에는 세 대륙에서 친척들이 왔어요.",
+   "blank": "महाद्वीपों",
    "src": "made"
   }
  ],
@@ -51211,6 +51739,22 @@
    "blank": "लड्डू"
   }
  ],
+ "w|लता": [
+  {
+   "text": "करण के घर की दीवार पर लौकी की लता फैल गई है।",
+   "en": "A bottle-gourd vine has spread over the wall of Karan's house.",
+   "ko": "카란네 집 담에 박 덩굴이 뻗어 올랐어요.",
+   "blank": "लता",
+   "src": "made"
+  },
+  {
+   "text": "मंडप को फूलों की लता से सजाया गया था।",
+   "en": "The wedding canopy had been decorated with a flowering vine.",
+   "ko": "혼례 차일은 꽃 덩굴로 꾸며져 있었어요.",
+   "blank": "लता",
+   "src": "made"
+  }
+ ],
  "w|लपेटना": [
   {
    "text": "उपहार को कागज़ में लपेटना सिखाओ।",
@@ -53497,6 +54041,22 @@
    "blank": "विनम्र"
   }
  ],
+ "w|विनम्रता": [
+  {
+   "text": "करण ने बड़ी विनम्रता से पड़ोसी से ट्रैक्टर उधार माँगा।",
+   "en": "Karan very politely asked his neighbour to lend him the tractor.",
+   "ko": "카란은 아주 공손하게 이웃에게 트랙터를 빌려 달라고 했어요.",
+   "blank": "विनम्रता",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने हर बुज़ुर्ग मेहमान का विनम्रता से पैर छूकर स्वागत किया।",
+   "en": "Deepa humbly welcomed every elderly guest by touching their feet.",
+   "ko": "디파는 어르신 하객마다 공손히 발을 만져 인사했어요.",
+   "blank": "विनम्रता",
+   "src": "made"
+  }
+ ],
  "w|विनाश": [
   {
    "text": "भूगोल की किताब में भूकंप से होने वाले विनाश पर एक पूरा अध्याय है।",
@@ -55058,6 +55618,22 @@
    "en": "The boy who works at Seema's shop grew up in a refugee camp.",
    "ko": "시마네 가게에서 일하는 소년은 난민촌에서 자랐어요.",
    "blank": "शरणार्थी",
+   "src": "made"
+  }
+ ],
+ "w|शरद": [
+  {
+   "text": "शरद आते ही करण के खेतों में धान पकने लगता है।",
+   "en": "As soon as autumn comes, the rice in Karan's fields starts to ripen.",
+   "ko": "가을이 오면 카란의 밭에서 벼가 익기 시작해요.",
+   "blank": "शरद",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की शादी शरद की एक ठंडी चाँदनी रात में हुई।",
+   "en": "Deepa's wedding took place on a cool moonlit autumn night.",
+   "ko": "디파의 결혼식은 서늘한 가을 달밤에 열렸어요.",
+   "blank": "शरद",
    "src": "made"
   }
  ],
@@ -56802,6 +57378,22 @@
    "en": "Meena's team is so organised that nothing goes wrong even at a big wedding.",
    "ko": "미나의 팀은 손발이 잘 맞아서 큰 결혼식에서도 실수가 없어요.",
    "blank": "संगठित",
+   "src": "made"
+  }
+ ],
+ "w|संगम": [
+  {
+   "text": "करण का खेत दो नदियों के संगम के पास है, इसलिए मिट्टी बहुत उपजाऊ है।",
+   "en": "Karan's farm is near the confluence of two rivers, so the soil is very fertile.",
+   "ko": "카란의 밭은 두 강이 만나는 곳 근처라서 흙이 아주 기름져요.",
+   "blank": "संगम",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की शादी के बाद दोनों परिवार नदी के संगम पर स्नान करने गए।",
+   "en": "After Deepa's wedding, both families went to bathe at the confluence of the rivers.",
+   "ko": "디파의 결혼식 뒤 두 집안은 강이 만나는 곳에 목욕하러 갔어요.",
+   "blank": "संगम",
    "src": "made"
   }
  ],
@@ -58961,6 +59553,22 @@
    "src": "made"
   }
  ],
+ "w|संरक्षित": [
+  {
+   "text": "करण के खेत के पास एक संरक्षित जंगल है जहाँ हिरन घूमते हैं।",
+   "en": "Near Karan's farm there is a protected forest where deer roam.",
+   "ko": "카란의 농장 근처에는 사슴이 돌아다니는 보호림이 있어요.",
+   "blank": "संरक्षित",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की नानी का शादी वाला जोड़ा आज भी संदूक में संरक्षित है।",
+   "en": "Deepa's grandmother's wedding outfit is still preserved in a trunk.",
+   "ko": "디파 외할머니의 혼례복은 지금도 궤짝에 잘 보관돼 있어요.",
+   "blank": "संरक्षित",
+   "src": "made"
+  }
+ ],
  "w|संरचना": [
   {
    "text": "करण ने लेख की संरचना बदली, ताकि सबसे ज़रूरी बात पहले आए।",
@@ -60471,6 +61079,22 @@
    "blank": "सामना करना"
   }
  ],
+ "w|सामरिक": [
+  {
+   "text": "करण के गाँव के पास सेना का एक सामरिक अड्डा है।",
+   "en": "There is a strategic army base near Karan's village.",
+   "ko": "카란네 마을 근처에는 군의 전략 기지가 있어요.",
+   "blank": "सामरिक",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के ताऊ सेना में सामरिक मामलों के जानकार हैं।",
+   "en": "Deepa's uncle is an expert on strategic affairs in the army.",
+   "ko": "디파의 큰아버지는 군에서 전략 문제 전문가예요.",
+   "blank": "सामरिक",
+   "src": "made"
+  }
+ ],
  "w|सामर्थ्य": [
   {
    "text": "इस मशीन में दिन में दस हज़ार पुर्ज़े बनाने का सामर्थ्य है।",
@@ -60739,6 +61363,22 @@
    "en": "Walk carefully when crossing the road.",
    "ko": "길을 건널 때 조심히 걸어.",
    "blank": "सावधानी से"
+  }
+ ],
+ "w|सावन": [
+  {
+   "text": "सावन की पहली बारिश के बाद करण ने धान की रोपाई शुरू की।",
+   "en": "After the first rain of the monsoon month, Karan started transplanting rice.",
+   "ko": "사완 달 첫 비가 내린 뒤 카란은 모내기를 시작했어요.",
+   "blank": "सावन",
+   "src": "made"
+  },
+  {
+   "text": "मेहँदी की रस्म में औरतों ने सावन के पुराने गीत गाए।",
+   "en": "At the mehndi ceremony, the women sang old songs of the monsoon season.",
+   "ko": "헤나 의식에서 여자들은 사완 철 옛 노래를 불렀어요.",
+   "blank": "सावन",
+   "src": "made"
   }
  ],
  "w|साँवला": [
