@@ -25,7 +25,9 @@ const conf = JSON.parse(fs.readFileSync(path.join(root, "scripts/story/settings.
   topicSetting: Record<string, string>;
   names: Record<string, string[]>;
   rules: Record<string, string>;
+  skip?: Record<string, string[]>;
 };
+for (const w of conf.skip?.[lang] ?? []) skip.add(w.normalize("NFC"));
 const NEUTRAL = new Set(["actions", "describing", "function"]);
 
 const bank = await loadBank(lang);
