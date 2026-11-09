@@ -831,6 +831,22 @@
    "src": "made"
   }
  ],
+ "w|adequado": [
+  {
+   "text": "O Miguel não sabia qual era o formulário adequado para o pedido.",
+   "en": "Miguel didn't know which form was the right one for the request.",
+   "ko": "미겔은 그 신청에 맞는 서류가 어떤 건지 몰랐어요.",
+   "blank": "adequado",
+   "src": "made"
+  },
+  {
+   "text": "A Rita procurou um lugar adequado para estacionar o carro à noite.",
+   "en": "Rita looked for a suitable place to park the car at night.",
+   "ko": "히타는 밤에 차를 세워 둘 적당한 곳을 찾았어요.",
+   "blank": "adequado",
+   "src": "made"
+  }
+ ],
  "w|adequar": [
   {
    "text": "A professora pediu ao Rafael para adequar a redação ao número de linhas da prova.",
@@ -1200,6 +1216,22 @@
    "en": "In Ana's film, the character almost drowns in a frozen lake.",
    "ko": "아나의 영화에서 주인공은 얼어붙은 호수에서 거의 물에 빠져 죽을 뻔해요.",
    "blank": "afoga",
+   "src": "made"
+  }
+ ],
+ "w|africano": [
+  {
+   "text": "Havia uma exposição de arte africana no saguão da prefeitura, e o Miguel adorou.",
+   "en": "There was an African art exhibition in the city hall lobby, and Miguel loved it.",
+   "ko": "시청 로비에서 아프리카 미술 전시가 열렸는데 미겔은 아주 좋아했어요.",
+   "blank": "africana",
+   "src": "made"
+  },
+  {
+   "text": "A Rita comprou um tecido africano numa feira de artesanato.",
+   "en": "Rita bought an African fabric at a craft fair.",
+   "ko": "히타는 공예 시장에서 아프리카 천을 샀어요.",
+   "blank": "africano",
    "src": "made"
   }
  ],
@@ -4413,6 +4445,38 @@
    "src": "tatoeba:6464716/heo598 en:3891111/Amastan"
   }
  ],
+ "w|asiático": [
+  {
+   "text": "O Miguel conheceu uma delegação asiática que visitava a prefeitura.",
+   "en": "Miguel met an Asian delegation that was visiting city hall.",
+   "ko": "미겔은 시청을 방문한 아시아 대표단을 만났어요.",
+   "blank": "asiática",
+   "src": "made"
+  },
+  {
+   "text": "A Rita parou num restaurante de comida asiática no meio da estrada.",
+   "en": "Rita stopped at an Asian restaurant in the middle of the highway.",
+   "ko": "히타는 길 한복판에 있는 아시아 음식점에 들렀어요.",
+   "blank": "asiática",
+   "src": "made"
+  }
+ ],
+ "w|asilo": [
+  {
+   "text": "A prefeitura mantém um asilo para idosos, e o Miguel foi conhecer o lugar.",
+   "en": "City hall runs a home for the elderly, and Miguel went to see the place.",
+   "ko": "시청이 양로원을 운영해서 미겔이 그곳을 둘러보러 갔어요.",
+   "blank": "asilo",
+   "src": "made"
+  },
+  {
+   "text": "A Rita visitou um antigo asilo que virou museu.",
+   "en": "Rita visited an old asylum that became a museum.",
+   "ko": "히타는 박물관이 된 옛 보호 시설을 둘러봤어요.",
+   "blank": "asilo",
+   "src": "made"
+  }
+ ],
  "w|aspecto": [
   {
    "text": "Nós devemos levar em conta cada aspecto do problema.",
@@ -4641,6 +4705,22 @@
    "ko": "구독을 갱신해야 해요.",
    "blank": "assinatura",
    "src": "tatoeba:10784152/bill en:436899/lukaszpp"
+  }
+ ],
+ "w|assistência": [
+  {
+   "text": "A prefeitura oferece assistência jurídica gratuita, e o Miguel marcou um horário.",
+   "en": "City hall offers free legal assistance, and Miguel booked an appointment.",
+   "ko": "시청이 무료 법률 지원을 해 줘서 미겔은 예약을 했어요.",
+   "blank": "assistência",
+   "src": "made"
+  },
+  {
+   "text": "O pneu furou, e a Rita chamou a assistência da seguradora.",
+   "en": "The tire went flat, and Rita called the insurance company's roadside assistance.",
+   "ko": "타이어가 펑크 나서 히타는 보험사 긴급 출동을 불렀어요.",
+   "blank": "assistência",
+   "src": "made"
   }
  ],
  "w|assistente": [
@@ -5436,6 +5516,22 @@
    "en": "The coach's absence left Carla in charge of the team's warm-up.",
    "ko": "코치가 없어서 카를라가 팀 준비 운동을 맡았어요.",
    "blank": "ausência",
+   "src": "made"
+  }
+ ],
+ "w|autógrafo": [
+  {
+   "text": "O Miguel pegou o autógrafo de um ex-jogador que estava na prefeitura.",
+   "en": "Miguel got an autograph from a former player who was at city hall.",
+   "ko": "미겔은 시청에 와 있던 전직 선수에게 사인을 받았어요.",
+   "blank": "autógrafo",
+   "src": "made"
+  },
+  {
+   "text": "A Rita guardou o autógrafo de um cantor que encontrou num posto.",
+   "en": "Rita kept the autograph of a singer she ran into at a gas station.",
+   "ko": "히타는 주유소에서 만난 가수의 사인을 간직했어요.",
+   "blank": "autógrafo",
    "src": "made"
   }
  ],
@@ -6495,6 +6591,22 @@
    "en": "The battle ended in the morning.",
    "ko": "전투는 아침에 끝났어.",
    "blank": "batalha"
+  }
+ ],
+ "w|batalhão": [
+  {
+   "text": "Um batalhão da polícia desfilou em frente à prefeitura, e o Miguel parou para ver.",
+   "en": "A police battalion paraded in front of city hall, and Miguel stopped to watch.",
+   "ko": "경찰 대대가 시청 앞에서 행진해서 미겔은 멈춰 서서 구경했어요.",
+   "blank": "batalhão",
+   "src": "made"
+  },
+  {
+   "text": "A Rita passou por um quartel onde treinava um batalhão do exército.",
+   "en": "Rita drove past a barracks where an army battalion was training.",
+   "ko": "히타는 육군 대대가 훈련하는 부대 옆을 지나갔어요.",
+   "blank": "batalhão",
+   "src": "made"
   }
  ],
  "w|batata": [
@@ -7735,6 +7847,22 @@
    "ko": "왜 영국 차를 샀어요?",
    "blank": "britânico",
    "src": "tatoeba:2634559/alexmarcelo en:2631684/CN"
+  }
+ ],
+ "w|brutal": [
+  {
+   "text": "O calor na fila da prefeitura estava brutal, reclamou o Miguel.",
+   "en": "The heat in the city hall line was brutal, Miguel complained.",
+   "ko": "시청 줄에서 더위가 너무 심했다고 미겔이 불평했어요.",
+   "blank": "brutal",
+   "src": "made"
+  },
+  {
+   "text": "O trânsito na saída da capital estava brutal, e a Rita perdeu duas horas.",
+   "en": "The traffic leaving the capital was brutal, and Rita lost two hours.",
+   "ko": "수도를 빠져나가는 길이 엄청 막혀서 히타는 두 시간을 버렸어요.",
+   "blank": "brutal",
+   "src": "made"
   }
  ],
  "w|bruto": [
@@ -12847,6 +12975,22 @@
    "src": "made"
   }
  ],
+ "w|conduta": [
+  {
+   "text": "O código de conduta dos servidores estava pendurado na parede, e o Miguel leu tudo.",
+   "en": "The staff code of conduct was hanging on the wall, and Miguel read all of it.",
+   "ko": "공무원 행동 강령이 벽에 걸려 있어서 미겔은 끝까지 읽었어요.",
+   "blank": "conduta",
+   "src": "made"
+  },
+  {
+   "text": "O guarda rodoviário elogiou a conduta da Rita ao volante.",
+   "en": "The highway officer praised Rita's conduct behind the wheel.",
+   "ko": "고속도로 경찰은 히타의 운전 태도를 칭찬했어요.",
+   "blank": "conduta",
+   "src": "made"
+  }
+ ],
  "w|conduzir": [
   {
    "text": "O Gabriel vai conduzir a entrevista ao vivo hoje à noite.",
@@ -13685,6 +13829,22 @@
    "src": "tatoeba:13979808/Castro5432 en:295379/Dejo"
   }
  ],
+ "w|conteúdo": [
+  {
+   "text": "O Miguel não entendeu o conteúdo da carta que recebeu da prefeitura.",
+   "en": "Miguel didn't understand the content of the letter he got from city hall.",
+   "ko": "미겔은 시청에서 받은 편지 내용을 이해하지 못했어요.",
+   "blank": "conteúdo",
+   "src": "made"
+  },
+  {
+   "text": "A Rita postava todo o conteúdo da viagem nas redes sociais.",
+   "en": "Rita posted all the content from the trip on social media.",
+   "ko": "히타는 여행 콘텐츠를 전부 SNS에 올렸어요.",
+   "blank": "conteúdo",
+   "src": "made"
+  }
+ ],
  "w|contigo": [
   {
    "text": "Saio contigo agora.",
@@ -13876,6 +14036,22 @@
    "en": "Inês's son is convinced he can run the shop better than she does.",
    "ko": "이네스의 아들은 자기가 엄마보다 가게를 잘 꾸릴 수 있다고 확신해요.",
    "blank": "convencido",
+   "src": "made"
+  }
+ ],
+ "w|conveniente": [
+  {
+   "text": "O Miguel achou mais conveniente resolver tudo na prefeitura num só dia.",
+   "en": "Miguel found it more convenient to sort everything out at city hall in a single day.",
+   "ko": "미겔은 시청 일을 하루에 다 처리하는 게 더 편하다고 생각했어요.",
+   "blank": "conveniente",
+   "src": "made"
+  },
+  {
+   "text": "O posto ficava num lugar conveniente, logo antes da serra, e a Rita abasteceu lá.",
+   "en": "The gas station was in a convenient spot, right before the mountains, and Rita filled up there.",
+   "ko": "주유소가 산길 바로 앞 편한 곳에 있어서 히타는 거기서 기름을 넣었어요.",
+   "blank": "conveniente",
    "src": "made"
   }
  ],
@@ -17223,6 +17399,22 @@
    "src": "made"
   }
  ],
+ "w|detenção": [
+  {
+   "text": "O guia contou ao Miguel que o porão já foi usado como centro de detenção.",
+   "en": "The guide told Miguel that the basement was once used as a detention center.",
+   "ko": "가이드는 미겔에게 그 지하실이 한때 구금 시설로 쓰였다고 말했어요.",
+   "blank": "detenção",
+   "src": "made"
+  },
+  {
+   "text": "O caminhoneiro contou à Rita que já passou uma noite em detenção por engano.",
+   "en": "The truck driver told Rita he once spent a night in detention by mistake.",
+   "ko": "트럭 기사는 히타에게 실수로 하룻밤 구금된 적이 있다고 말했어요.",
+   "blank": "detenção",
+   "src": "made"
+  }
+ ],
  "w|deter": [
   {
    "text": "O Rafael deteve o cachorro pela coleira antes que ele fugisse pela porta.",
@@ -18218,6 +18410,22 @@
    "en": "Beatriz's nephew wore a toy sheriff's badge all night.",
    "ko": "베아트리스의 조카는 밤새 장난감 보안관 배지를 달고 있었어요.",
    "blank": "distintivo",
+   "src": "made"
+  }
+ ],
+ "w|distinto": [
+  {
+   "text": "O Miguel percebeu que cada secretaria tem um horário distinto de atendimento.",
+   "en": "Miguel noticed that each department has different opening hours.",
+   "ko": "미겔은 부서마다 업무 시간이 다르다는 걸 알게 됐어요.",
+   "blank": "distinto",
+   "src": "made"
+  },
+  {
+   "text": "Cada cidade da viagem tinha um sotaque distinto, e a Rita adorava ouvir.",
+   "en": "Each town on the trip had a distinct accent, and Rita loved listening to them.",
+   "ko": "여행지마다 억양이 달라서 히타는 듣는 걸 아주 좋아했어요.",
+   "blank": "distinto",
    "src": "made"
   }
  ],
@@ -20667,6 +20875,22 @@
    "src": "tatoeba:2064317/alexmarcelo en:1951374/CK"
   }
  ],
+ "w|enterro": [
+  {
+   "text": "O Miguel foi à prefeitura pedir a certidão necessária para o enterro do avô.",
+   "en": "Miguel went to city hall to get the certificate needed for his grandfather's burial.",
+   "ko": "미겔은 할아버지 장례에 필요한 증명서를 받으러 시청에 갔어요.",
+   "blank": "enterro",
+   "src": "made"
+  },
+  {
+   "text": "Numa cidadezinha, a Rita viu passar um enterro com uma banda tocando.",
+   "en": "In a small town, Rita saw a funeral procession go by with a band playing.",
+   "ko": "작은 마을에서 히타는 악단이 연주하며 지나가는 장례 행렬을 봤어요.",
+   "blank": "enterro",
+   "src": "made"
+  }
+ ],
  "w|entrada": [
   {
    "text": "A entrada é pelos fundos.",
@@ -21711,6 +21935,22 @@
    "blank": "esperta"
   }
  ],
+ "w|espetacular": [
+  {
+   "text": "A vista do terraço da prefeitura é espetacular, segundo o Miguel.",
+   "en": "The view from the city hall terrace is spectacular, according to Miguel.",
+   "ko": "미겔 말로는 시청 테라스에서 보는 경치가 정말 멋져요.",
+   "blank": "espetacular",
+   "src": "made"
+  },
+  {
+   "text": "O pôr do sol na serra foi espetacular, disse a Rita.",
+   "en": "The sunset in the mountains was spectacular, Rita said.",
+   "ko": "산에서 본 해 질 녘이 정말 멋졌다고 히타가 말했어요.",
+   "blank": "espetacular",
+   "src": "made"
+  }
+ ],
  "w|espetáculo": [
   {
    "text": "Eu fui ver um espetáculo hoje.",
@@ -21803,6 +22043,22 @@
    "ko": "축구는 제가 제일 좋아하는 운동이에요.",
    "blank": "esporte",
    "src": "tatoeba:405205/brauliobezerra en:1481754/weihaiping"
+  }
+ ],
+ "w|esportivo": [
+  {
+   "text": "O Miguel pediu verba para um projeto esportivo no bairro.",
+   "en": "Miguel asked for funding for a sports project in the neighborhood.",
+   "ko": "미겔은 동네 스포츠 사업을 위해 예산을 신청했어요.",
+   "blank": "esportivo",
+   "src": "made"
+  },
+  {
+   "text": "A Rita alugou um carro esportivo para a viagem pelo litoral.",
+   "en": "Rita rented a sports car for the coastal trip.",
+   "ko": "히타는 해안 여행을 위해 스포츠카를 빌렸어요.",
+   "blank": "esportivo",
+   "src": "made"
   }
  ],
  "w|esposa": [
@@ -21973,6 +22229,22 @@
    "blank": "esse"
   }
  ],
+ "w|essência": [
+  {
+   "text": "Para o Miguel, a essência do serviço público é atender bem as pessoas.",
+   "en": "For Miguel, the essence of public service is treating people well.",
+   "ko": "미겔에게 공공 서비스의 본질은 사람들을 잘 응대하는 거예요.",
+   "blank": "essência",
+   "src": "made"
+  },
+  {
+   "text": "Para a Rita, a essência de uma boa viagem é não ter pressa.",
+   "en": "For Rita, the essence of a good trip is not being in a hurry.",
+   "ko": "히타에게 좋은 여행의 핵심은 서두르지 않는 거예요.",
+   "blank": "essência",
+   "src": "made"
+  }
+ ],
  "w|essencial": [
   {
    "text": "Segundo o professor do Lucas, saber ler bem é essencial em todas as matérias.",
@@ -22048,6 +22320,22 @@
    "en": "Ana's crew couldn't find anywhere to park the lighting truck.",
    "ko": "아나의 팀은 조명 트럭을 주차할 곳을 찾지 못했어요.",
    "blank": "estacionar",
+   "src": "made"
+  }
+ ],
+ "w|estádio": [
+  {
+   "text": "A prefeitura anunciou a reforma do estádio municipal, e o Miguel comemorou.",
+   "en": "City hall announced the renovation of the municipal stadium, and Miguel celebrated.",
+   "ko": "시청이 시립 경기장 보수를 발표해서 미겔은 기뻐했어요.",
+   "blank": "estádio",
+   "src": "made"
+  },
+  {
+   "text": "A Rita parou para conhecer o estádio de uma cidade famosa pelo futebol.",
+   "en": "Rita stopped to see the stadium of a town famous for its soccer.",
+   "ko": "히타는 축구로 유명한 도시의 경기장을 구경하러 들렀어요.",
+   "blank": "estádio",
    "src": "made"
   }
  ],
@@ -22186,6 +22474,22 @@
    "en": "The customer had a starry wallpaper with galaxies and planets.",
    "ko": "손님의 배경 화면은 은하와 행성이 가득한 별 그림이었어요.",
    "blank": "estelar",
+   "src": "made"
+  }
+ ],
+ "w|estender": [
+  {
+   "text": "A prefeitura resolveu estender o prazo do imposto, e o Miguel ficou aliviado.",
+   "en": "City hall decided to extend the tax deadline, and Miguel was relieved.",
+   "ko": "시청이 세금 기한을 연장하기로 해서 미겔은 안심했어요.",
+   "blank": "estender",
+   "src": "made"
+  },
+  {
+   "text": "A Rita decidiu estender a viagem por mais três dias.",
+   "en": "Rita decided to extend the trip by three more days.",
+   "ko": "히타는 여행을 사흘 더 늘리기로 했어요.",
+   "blank": "estender",
    "src": "made"
   }
  ],
@@ -22662,6 +22966,22 @@
    "en": "The teacher praised the progress of Inês's son in reading.",
    "ko": "선생님은 이네스 아들의 읽기 실력이 늘었다고 칭찬했어요.",
    "blank": "evolução",
+   "src": "made"
+  }
+ ],
+ "w|evoluir": [
+  {
+   "text": "Segundo o Miguel, o sistema de agendamento da prefeitura ainda precisa evoluir muito.",
+   "en": "According to Miguel, the city hall booking system still needs to improve a lot.",
+   "ko": "미겔 말로는 시청 예약 시스템이 아직 많이 발전해야 해요.",
+   "blank": "evoluir",
+   "src": "made"
+  },
+  {
+   "text": "A Rita sentiu a própria direção evoluir depois de tantos quilômetros de estrada.",
+   "en": "Rita felt her driving improve after so many kilometers on the road.",
+   "ko": "히타는 그렇게 많은 길을 달리고 나서 운전 실력이 늘었다고 느꼈어요.",
+   "blank": "evoluir",
    "src": "made"
   }
  ],
@@ -25549,6 +25869,22 @@
    "src": "tatoeba:1673089/alexmarcelo en:1673024/Amastan"
   }
  ],
+ "w|fraternidade": [
+  {
+   "text": "O Miguel gostou do clima de fraternidade entre os funcionários.",
+   "en": "Miguel liked the spirit of fellowship among the staff.",
+   "ko": "미겔은 직원들 사이의 형제 같은 분위기가 좋았어요.",
+   "blank": "fraternidade",
+   "src": "made"
+  },
+  {
+   "text": "Os motoqueiros que a Rita conheceu falavam muito em fraternidade entre viajantes.",
+   "en": "The bikers Rita met talked a lot about brotherhood among travelers.",
+   "ko": "히타가 만난 오토바이 여행자들은 여행자끼리의 우애를 자주 이야기했어요.",
+   "blank": "fraternidade",
+   "src": "made"
+  }
+ ],
  "w|fraude": [
   {
    "text": "Meu avô acredita que a alunissagem foi uma fraude.",
@@ -26561,6 +26897,22 @@
    "blank": "general"
   }
  ],
+ "w|gênero": [
+  {
+   "text": "No formulário, o Miguel teve que preencher o campo de gênero.",
+   "en": "On the form, Miguel had to fill in the gender field.",
+   "ko": "미겔은 서류에서 성별 칸을 채워야 했어요.",
+   "blank": "gênero",
+   "src": "made"
+  },
+  {
+   "text": "O gênero musical favorito da Rita na estrada é o forró.",
+   "en": "Rita's favorite music genre on the road is forró.",
+   "ko": "히타가 길에서 제일 좋아하는 음악 장르는 포호예요.",
+   "blank": "gênero",
+   "src": "made"
+  }
+ ],
  "w|generoso": [
   {
    "text": "Por que você está sendo tão generoso?",
@@ -26810,6 +27162,22 @@
    "en": "I bought a giant pizza for everyone.",
    "ko": "다 같이 먹으려고 엄청 큰 피자를 샀어요.",
    "blank": "gigante",
+   "src": "made"
+  }
+ ],
+ "w|ginásio": [
+  {
+   "text": "A cerimônia de posse aconteceu no ginásio, e o Miguel chegou cedo.",
+   "en": "The swearing-in ceremony took place in the gym, and Miguel arrived early.",
+   "ko": "취임식이 체육관에서 열렸고 미겔은 일찍 도착했어요.",
+   "blank": "ginásio",
+   "src": "made"
+  },
+  {
+   "text": "Na cidadezinha, a feira acontecia no ginásio, e a Rita foi dar uma volta lá.",
+   "en": "In the small town, the fair was held in the gym, and Rita went to take a look.",
+   "ko": "작은 마을에서 장터가 체육관에서 열려서 히타는 구경하러 갔어요.",
+   "blank": "ginásio",
    "src": "made"
   }
  ],
@@ -27801,6 +28169,22 @@
    "en": "I saw a man at the door.",
    "ko": "문 앞에 남자가 있었어.",
    "blank": "homem"
+  }
+ ],
+ "w|homenagem": [
+  {
+   "text": "A prefeitura fez uma homenagem aos professores, e o Miguel foi convidado.",
+   "en": "City hall held a tribute to teachers, and Miguel was invited.",
+   "ko": "시청이 선생님들을 기리는 행사를 열었고 미겔도 초대받았어요.",
+   "blank": "homenagem",
+   "src": "made"
+  },
+  {
+   "text": "A cidade fazia uma homenagem ao seu fundador quando a Rita chegou.",
+   "en": "The town was holding a tribute to its founder when Rita arrived.",
+   "ko": "히타가 도착했을 때 그 도시는 설립자를 기리는 행사를 하고 있었어요.",
+   "blank": "homenagem",
+   "src": "made"
   }
  ],
  "w|homicídio": [
@@ -29007,6 +29391,22 @@
    "src": "made"
   }
  ],
+ "w|inevitável": [
+  {
+   "text": "Com tanta gente na fila, o atraso do Miguel era inevitável.",
+   "en": "With so many people in line, Miguel's delay was inevitable.",
+   "ko": "줄에 사람이 너무 많아서 미겔이 늦는 건 피할 수 없었어요.",
+   "blank": "inevitável",
+   "src": "made"
+  },
+  {
+   "text": "Com tanta curva na serra, o enjoo da Rita foi inevitável.",
+   "en": "With so many bends in the mountains, Rita's carsickness was inevitable.",
+   "ko": "산길에 커브가 너무 많아서 히타가 멀미하는 건 피할 수 없었어요.",
+   "blank": "inevitável",
+   "src": "made"
+  }
+ ],
  "w|infância": [
   {
    "text": "Nós nos conhecemos desde a infância.",
@@ -29535,6 +29935,22 @@
    "ko": "저는 악기를 하나도 못 다뤄요.",
    "blank": "instrumento",
    "src": "tatoeba:5073515/bill en:5070039/jhomel"
+  }
+ ],
+ "w|insubstituível": [
+  {
+   "text": "A Dona Lúcia, do protocolo, é insubstituível para o Miguel.",
+   "en": "Ms. Lúcia, from the front desk, is irreplaceable to Miguel.",
+   "ko": "미겔에게 접수처의 루시아 씨는 대체할 수 없는 사람이에요.",
+   "blank": "insubstituível",
+   "src": "made"
+  },
+  {
+   "text": "Para a Rita, o mapa de papel virou um companheiro insubstituível na estrada.",
+   "en": "For Rita, the paper map became an irreplaceable companion on the road.",
+   "ko": "히타에게 종이 지도는 길 위에서 대체할 수 없는 동반자가 됐어요.",
+   "blank": "insubstituível",
+   "src": "made"
   }
  ],
  "w|insultar": [
@@ -30649,6 +31065,22 @@
    "src": "made"
   }
  ],
+ "w|judicial": [
+  {
+   "text": "O Miguel recebeu uma notificação judicial e correu à prefeitura para entender.",
+   "en": "Miguel received a court notice and rushed to city hall to understand it.",
+   "ko": "미겔은 법원 통지서를 받고 이해하려고 시청으로 달려갔어요.",
+   "blank": "judicial",
+   "src": "made"
+  },
+  {
+   "text": "A Rita teve que adiar a viagem por causa de uma audiência judicial.",
+   "en": "Rita had to postpone the trip because of a court hearing.",
+   "ko": "히타는 법원 심리 때문에 여행을 미뤄야 했어요.",
+   "blank": "judicial",
+   "src": "made"
+  }
+ ],
  "w|juiz": [
   {
    "text": "O juiz apitou falta.",
@@ -31401,6 +31833,22 @@
    "en": "The party was fun.",
    "ko": "파티가 재미있었어.",
    "blank": "legal"
+  }
+ ],
+ "w|legalmente": [
+  {
+   "text": "O Miguel queria saber se podia legalmente abrir uma barraca na praça.",
+   "en": "Miguel wanted to know if he could legally set up a stall in the square.",
+   "ko": "미겔은 광장에 노점을 합법적으로 열 수 있는지 알고 싶었어요.",
+   "blank": "legalmente",
+   "src": "made"
+  },
+  {
+   "text": "A Rita checou se podia legalmente acampar na beira do rio.",
+   "en": "Rita checked whether she could legally camp by the river.",
+   "ko": "히타는 강가에서 합법적으로 캠핑할 수 있는지 확인했어요.",
+   "blank": "legalmente",
+   "src": "made"
   }
  ],
  "w|legenda": [
@@ -33699,6 +34147,22 @@
    "ko": "반죽을 튀겼어요.",
    "blank": "massa",
    "src": "tatoeba:6365738/mervert1 en:6365727/mervert1"
+  }
+ ],
+ "w|massacre": [
+  {
+   "text": "Uma placa na prefeitura lembra as vítimas de um massacre antigo, explicou o guia ao Miguel.",
+   "en": "A plaque at city hall remembers the victims of an old massacre, the guide explained to Miguel.",
+   "ko": "가이드는 미겔에게 시청의 명판이 옛 학살의 희생자를 기린다고 설명했어요.",
+   "blank": "massacre",
+   "src": "made"
+  },
+  {
+   "text": "Num museu da região, a Rita leu sobre o massacre de um povoado no período colonial.",
+   "en": "At a museum in the region, Rita read about the massacre of a village in colonial times.",
+   "ko": "그 지역 박물관에서 히타는 식민지 시대 한 마을의 학살에 대해 읽었어요.",
+   "blank": "massacre",
+   "src": "made"
   }
  ],
  "w|massagem": [
@@ -37055,6 +37519,22 @@
    "blank": "notar"
   }
  ],
+ "w|notável": [
+  {
+   "text": "O prefeito fez um discurso notável na inauguração, segundo o Miguel.",
+   "en": "The mayor gave a remarkable speech at the opening, according to Miguel.",
+   "ko": "미겔 말로는 시장이 개관식에서 인상적인 연설을 했어요.",
+   "blank": "notável",
+   "src": "made"
+  },
+  {
+   "text": "A Rita achou notável a quantidade de estrelas no céu do sertão.",
+   "en": "Rita found the number of stars in the backcountry sky remarkable.",
+   "ko": "히타는 오지 하늘의 별이 놀라울 만큼 많다고 느꼈어요.",
+   "blank": "notável",
+   "src": "made"
+  }
+ ],
  "w|notícia": [
   {
    "text": "Você viu a notícia?",
@@ -38353,6 +38833,22 @@
    "blank": "orgulhosa"
   }
  ],
+ "w|orientação": [
+  {
+   "text": "O Miguel pediu orientação no balcão de informações.",
+   "en": "Miguel asked for guidance at the information desk.",
+   "ko": "미겔은 안내 데스크에서 안내를 받았어요.",
+   "blank": "orientação",
+   "src": "made"
+  },
+  {
+   "text": "A Rita perdeu a orientação nas estradas de terra e pediu ajuda.",
+   "en": "Rita lost her bearings on the dirt roads and asked for help.",
+   "ko": "히타는 비포장도로에서 방향을 잃고 도움을 청했어요.",
+   "blank": "orientação",
+   "src": "made"
+  }
+ ],
  "w|oriental": [
   {
    "text": "Na aula de artes, o Tiago estudou a pintura oriental feita com tinta nanquim.",
@@ -39351,6 +39847,22 @@
    "en": "He sees patients at a private practice.",
    "ko": "그 사람은 개인 병원에서 진료해.",
    "blank": "particular"
+  }
+ ],
+ "w|particularmente": [
+  {
+   "text": "O Miguel estava particularmente nervoso com a reunião do conselho.",
+   "en": "Miguel was particularly nervous about the council meeting.",
+   "ko": "미겔은 의회 회의 때문에 특히 긴장했어요.",
+   "blank": "particularmente",
+   "src": "made"
+  },
+  {
+   "text": "A Rita gostou particularmente das cachoeiras do interior.",
+   "en": "Rita particularly liked the waterfalls in the countryside.",
+   "ko": "히타는 시골의 폭포들이 특히 좋았어요.",
+   "blank": "particularmente",
+   "src": "made"
   }
  ],
  "w|partida": [
@@ -41711,6 +42223,22 @@
    "src": "tatoeba:7705829/Ricardo14 en:4471293/Hybrid"
   }
  ],
+ "w|pôquer": [
+  {
+   "text": "Os funcionários jogam pôquer na sexta à noite, mas o Miguel nunca participa.",
+   "en": "The staff play poker on Friday nights, but Miguel never joins in.",
+   "ko": "직원들은 금요일 밤에 포커를 치지만 미겔은 한 번도 끼지 않아요.",
+   "blank": "pôquer",
+   "src": "made"
+  },
+  {
+   "text": "Na pousada, a Rita aprendeu a jogar pôquer com outros hóspedes.",
+   "en": "At the inn, Rita learned to play poker with other guests.",
+   "ko": "민박에서 히타는 다른 손님들과 포커를 배웠어요.",
+   "blank": "pôquer",
+   "src": "made"
+  }
+ ],
  "w|por": [
   {
    "text": "Obrigado por vir.",
@@ -42569,6 +43097,22 @@
    "blank": "preferir"
   }
  ],
+ "w|pregar": [
+  {
+   "text": "O Miguel ajudou a pregar os avisos no mural da prefeitura.",
+   "en": "Miguel helped pin the notices on the city hall bulletin board.",
+   "ko": "미겔은 시청 게시판에 공지를 붙이는 걸 도왔어요.",
+   "blank": "pregar",
+   "src": "made"
+  },
+  {
+   "text": "Na pousada, a Rita ajudou o dono a pregar uma placa na porteira.",
+   "en": "At the inn, Rita helped the owner nail a sign to the gate.",
+   "ko": "민박에서 히타는 주인이 대문에 간판을 못 박는 걸 도왔어요.",
+   "blank": "pregar",
+   "src": "made"
+  }
+ ],
  "w|preguiçoso": [
   {
    "text": "O gato preguiçoso do Bruno passa o dia dormindo perto do forno.",
@@ -43259,6 +43803,22 @@
    "en": "My lawsuit is moving slowly.",
    "ko": "내 소송은 천천히 가.",
    "blank": "processo"
+  }
+ ],
+ "w|procurador": [
+  {
+   "text": "O Miguel conversou com o procurador do município sobre a multa.",
+   "en": "Miguel talked to the city attorney about the fine.",
+   "ko": "미겔은 벌금 문제로 시 법무관과 이야기했어요.",
+   "blank": "procurador",
+   "src": "made"
+  },
+  {
+   "text": "Numa parada, a Rita conheceu um procurador aposentado que viajava de moto.",
+   "en": "At a stop, Rita met a retired prosecutor who was traveling by motorcycle.",
+   "ko": "휴게소에서 히타는 오토바이로 여행하는 은퇴한 검사를 만났어요.",
+   "blank": "procurador",
+   "src": "made"
   }
  ],
  "w|procurar": [
@@ -46903,6 +47463,22 @@
    "blank": "resultado"
   }
  ],
+ "w|resumir": [
+  {
+   "text": "A atendente pediu para o Miguel resumir o problema em poucas linhas.",
+   "en": "The clerk asked Miguel to sum up the problem in a few lines.",
+   "ko": "직원은 미겔에게 문제를 몇 줄로 요약해 달라고 했어요.",
+   "blank": "resumir",
+   "src": "made"
+  },
+  {
+   "text": "No fim do dia, a Rita gosta de resumir a viagem no diário.",
+   "en": "At the end of the day, Rita likes to sum up the trip in her journal.",
+   "ko": "히타는 하루가 끝나면 일기에 여행을 요약하는 걸 좋아해요.",
+   "blank": "resumir",
+   "src": "made"
+  }
+ ],
  "w|reta": [
   {
    "text": "O Rafael usou a régua para traçar uma reta no caderno de geometria.",
@@ -46916,6 +47492,22 @@
    "en": "In the final stretch of the race, Carla overtook her opponent.",
    "ko": "카를라는 경기 막판에 상대를 앞질렀어요.",
    "blank": "reta",
+   "src": "made"
+  }
+ ],
+ "w|retirado": [
+  {
+   "text": "O arquivo antigo fica num prédio retirado, longe do centro, e o Miguel teve que ir até lá.",
+   "en": "The old archive is in a remote building far from downtown, and Miguel had to go there.",
+   "ko": "옛 문서 보관소가 시내에서 먼 외딴 건물에 있어서 미겔은 거기까지 가야 했어요.",
+   "blank": "retirado",
+   "src": "made"
+  },
+  {
+   "text": "A Rita dormiu numa pousada retirada, no meio das montanhas.",
+   "en": "Rita slept at a secluded inn in the middle of the mountains.",
+   "ko": "히타는 산속 외딴 민박에서 잤어요.",
+   "blank": "retirada",
    "src": "made"
   }
  ],
@@ -47105,6 +47697,22 @@
    "ko": "기차에서 읽으려고 잡지를 샀어요.",
    "blank": "revista",
    "src": "tatoeba:8288557/JGEN en:8282060/CK"
+  }
+ ],
+ "w|revistar": [
+  {
+   "text": "Na entrada da prefeitura, o segurança precisou revistar a mochila do Miguel.",
+   "en": "At the city hall entrance, the guard had to search Miguel's backpack.",
+   "ko": "시청 입구에서 경비원이 미겔의 배낭을 검사해야 했어요.",
+   "blank": "revistar",
+   "src": "made"
+  },
+  {
+   "text": "Na divisa do estado, a polícia parou o carro para revistar o porta-malas da Rita.",
+   "en": "At the state border, the police stopped the car to search Rita's trunk.",
+   "ko": "주 경계에서 경찰이 차를 세우고 히타의 트렁크를 검사했어요.",
+   "blank": "revistar",
+   "src": "made"
   }
  ],
  "w|revolução": [
@@ -48251,6 +48859,22 @@
    "ko": "엄지발가락에서 피가 나기 시작했어요.",
    "blank": "sangrar",
    "src": "tatoeba:1321141/alexmarcelo en:1190449/Anon"
+  }
+ ],
+ "w|sangrento": [
+  {
+   "text": "No museu da prefeitura, o Miguel leu sobre uma revolta sangrenta de séculos atrás.",
+   "en": "At the city hall museum, Miguel read about a bloody revolt from centuries ago.",
+   "ko": "시청 박물관에서 미겔은 몇 세기 전의 피비린내 나는 반란에 대해 읽었어요.",
+   "blank": "sangrenta",
+   "src": "made"
+  },
+  {
+   "text": "O guia da cidade histórica contou à Rita sobre uma batalha sangrenta na região.",
+   "en": "The guide in the historic town told Rita about a bloody battle in the region.",
+   "ko": "역사 도시의 가이드가 히타에게 그 지역의 피비린내 나는 전투 이야기를 해 줬어요.",
+   "blank": "sangrenta",
+   "src": "made"
   }
  ],
  "w|sangue": [
@@ -52034,6 +52658,22 @@
    "en": "The lab hired a temporary technician to help Inês.",
    "ko": "실험실은 이네스를 도울 임시 기술자를 뽑았어요.",
    "blank": "temporário",
+   "src": "made"
+  }
+ ],
+ "w|tendência": [
+  {
+   "text": "O Miguel notou uma tendência: as filas são menores de manhã cedo.",
+   "en": "Miguel noticed a trend: the lines are shorter early in the morning.",
+   "ko": "미겔은 이른 아침에 줄이 더 짧다는 경향을 알아챘어요.",
+   "blank": "tendência",
+   "src": "made"
+  },
+  {
+   "text": "A Rita tem a tendência de parar em todo mirante da estrada.",
+   "en": "Rita has a tendency to stop at every lookout on the road.",
+   "ko": "히타는 길가 전망대마다 멈추는 경향이 있어요.",
+   "blank": "tendência",
    "src": "made"
   }
  ],
