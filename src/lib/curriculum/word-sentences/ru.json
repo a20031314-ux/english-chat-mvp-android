@@ -1127,6 +1127,22 @@
    "src": "made"
   }
  ],
+ "w|бесить": [
+  {
+   "text": "Алексея всегда бесило, что сестра читает его сообщения через плечо.",
+   "en": "It always drove Alexei mad that his sister read his messages over his shoulder.",
+   "ko": "누나가 어깨 너머로 메시지를 읽는 게 알렉세이는 늘 화가 났어요.",
+   "blank": "бесило",
+   "src": "made"
+  },
+  {
+   "text": "Наталью бесит, что в деревне связь пропадает каждые пять минут.",
+   "en": "It drives Natalia mad that the signal in the village drops every few minutes.",
+   "ko": "나탈리야는 마을에서 신호가 수시로 끊기는 게 화가 나요.",
+   "blank": "бесит",
+   "src": "made"
+  }
+ ],
  "w|бесплатный": [
   {
    "text": "Не хотели бы вы бесплатный пробник?",
@@ -1546,6 +1562,22 @@
    "en": "This region is rich in mushrooms and berries.",
    "ko": "이 지역은 버섯과 산딸기가 많이 나요.",
    "blank": "богатый",
+   "src": "made"
+  }
+ ],
+ "w|боевой": [
+  {
+   "text": "У Кати боевой характер, и спорить с ней Алексей не любит.",
+   "en": "Katya has a fighting spirit, and Alexei doesn't like arguing with her.",
+   "ko": "카탸는 성격이 드세서 알렉세이는 누나와 다투는 걸 싫어해요.",
+   "blank": "боевой",
+   "src": "made"
+  },
+  {
+   "text": "Наталья видела в местном музее старый боевой топор горцев.",
+   "en": "Natalia saw an old highlanders' battle axe in the local museum.",
+   "ko": "나탈리야는 마을 박물관에서 산악 부족의 옛 전투 도끼를 봤어요.",
+   "blank": "боевой",
    "src": "made"
   }
  ],
@@ -2543,6 +2575,22 @@
    "blank": "верно"
   }
  ],
+ "w|верность": [
+  {
+   "text": "Мама учила детей, что верность семье важнее любой обиды.",
+   "en": "Their mother taught the children that loyalty to family matters more than any grievance.",
+   "ko": "엄마는 가족에 대한 신의가 어떤 서운함보다 중요하다고 가르쳤어요.",
+   "blank": "верность",
+   "src": "made"
+  },
+  {
+   "text": "В деревне до сих пор рассказывают легенду о верности пастуха и его невесты.",
+   "en": "In the village they still tell the legend of the faithfulness of a shepherd and his bride.",
+   "ko": "마을에서는 지금도 목동과 신부의 정절에 관한 전설을 이야기해요.",
+   "blank": "верности",
+   "src": "made"
+  }
+ ],
  "w|вернуть": [
   {
    "text": "Верни мне ручку.",
@@ -2681,6 +2729,22 @@
    "ko": "몸무게가 어떻게 되는지 물어봐도 될까?",
    "blank": "вес",
    "src": "tatoeba:7832364/marafon en:275259/jakov"
+  }
+ ],
+ "w|веселиться": [
+  {
+   "text": "На дне рождения мамы Алексей старался веселиться, хотя на сестру был обижен.",
+   "en": "At their mom's birthday Alexei tried to have fun, though he was upset with his sister.",
+   "ko": "엄마 생신에 알렉세이는 누나에게 서운했지만 즐거운 척하려 했어요.",
+   "blank": "веселиться",
+   "src": "made"
+  },
+  {
+   "text": "На сельском празднике все танцевали и веселились до утра.",
+   "en": "At the village festival everyone danced and had fun until morning.",
+   "ko": "마을 잔치에서 모두가 아침까지 춤추며 즐겼어요.",
+   "blank": "веселились",
+   "src": "made"
   }
  ],
  "w|весёлый": [
@@ -4182,6 +4246,22 @@
    "en": "The trash will stink, take it out.",
    "ko": "쓰레기 냄새 날 거야, 내다 버려.",
    "blank": "вонять",
+   "src": "made"
+  }
+ ],
+ "w|воображение": [
+  {
+   "text": "Катя признала, что её воображение дорисовало то, чего брат не говорил.",
+   "en": "Katya admitted that her imagination had filled in things her brother never said.",
+   "ko": "카탸는 동생이 하지 않은 말을 자기 상상력이 덧붙였다고 인정했어요.",
+   "blank": "воображение",
+   "src": "made"
+  },
+  {
+   "text": "Туманные вершины будили воображение Натальи.",
+   "en": "The misty peaks stirred Natalia's imagination.",
+   "ko": "안개 낀 봉우리가 나탈리야의 상상력을 자극했어요.",
+   "blank": "воображение",
    "src": "made"
   }
  ],
@@ -6307,6 +6387,22 @@
    "src": "made"
   }
  ],
+ "w|голосовать": [
+  {
+   "text": "В детстве брат с сестрой всегда голосовали за разные мультфильмы.",
+   "en": "As kids the brother and sister always voted for different cartoons.",
+   "ko": "어릴 때 남매는 늘 서로 다른 만화를 골랐어요.",
+   "blank": "голосовали",
+   "src": "made"
+  },
+  {
+   "text": "Жители деревни ходят голосовать в школу на соседнем холме.",
+   "en": "The villagers go to vote at the school on the next hill.",
+   "ko": "마을 사람들은 옆 언덕 학교에 투표하러 가요.",
+   "blank": "голосовать",
+   "src": "made"
+  }
+ ],
  "w|голубой": [
   {
    "text": "Какой цвет вы предпочитаете, голубой или зелёный?",
@@ -6619,6 +6715,22 @@
    "ko": "일본 요리 하는 거 좋아해?",
    "blank": "готовить",
    "src": "tatoeba:3365763/odexed en:281806"
+  }
+ ],
+ "w|готовиться": [
+  {
+   "text": "Алексей долго готовился к разговору и даже записал, что скажет.",
+   "en": "Alexei prepared for the conversation for a long time and even wrote down what he'd say.",
+   "ko": "알렉세이는 대화를 오래 준비했고 할 말을 적어 두기까지 했어요.",
+   "blank": "готовился",
+   "src": "made"
+  },
+  {
+   "text": "Вся деревня готовится к празднику урожая.",
+   "en": "The whole village is getting ready for the harvest festival.",
+   "ko": "온 마을이 추수 잔치를 준비하고 있어요.",
+   "blank": "готовится",
+   "src": "made"
   }
  ],
  "w|готовый": [
@@ -8151,6 +8263,22 @@
    "src": "made"
   }
  ],
+ "w|добровольно": [
+  {
+   "text": "Катя добровольно взяла на себя заботу о больной бабушке.",
+   "en": "Katya voluntarily took on looking after their sick grandmother.",
+   "ko": "카탸는 아픈 할머니를 돌보는 일을 자청했어요.",
+   "blank": "добровольно",
+   "src": "made"
+  },
+  {
+   "text": "Наталья добровольно помогла соседям собирать сено.",
+   "en": "Natalia volunteered to help the neighbors gather hay.",
+   "ko": "나탈리야는 자청해서 이웃의 건초 거두기를 도왔어요.",
+   "blank": "добровольно",
+   "src": "made"
+  }
+ ],
  "w|добрый": [
   {
    "text": "Он добрый человек.",
@@ -9265,6 +9393,38 @@
    "src": "made"
   }
  ],
+ "w|жаловаться": [
+  {
+   "text": "Алексей перестал жаловаться маме на сестру и просто поговорил с Катей.",
+   "en": "Alexei stopped complaining to his mother about his sister and just talked to Katya.",
+   "ko": "알렉세이는 엄마에게 누나 흉을 그만 보고 카탸와 직접 이야기했어요.",
+   "blank": "жаловаться",
+   "src": "made"
+  },
+  {
+   "text": "Старики в деревне никогда не жалуются на погоду.",
+   "en": "The old people in the village never complain about the weather.",
+   "ko": "마을 노인들은 날씨 탓을 하지 않아요.",
+   "blank": "жалуются",
+   "src": "made"
+  }
+ ],
+ "w|жалость": [
+  {
+   "text": "Алексей не хотел, чтобы сестра помогала ему из жалости.",
+   "en": "Alexei didn't want his sister to help him out of pity.",
+   "ko": "알렉세이는 누나가 동정심으로 자기를 돕는 걸 원하지 않았어요.",
+   "blank": "жалости",
+   "src": "made"
+  },
+  {
+   "text": "Наталья с жалостью смотрела на промокшую собаку у ворот.",
+   "en": "Natalia looked with pity at the soaked dog by the gate.",
+   "ko": "나탈리야는 대문 앞에 흠뻑 젖은 개를 안쓰럽게 바라봤어요.",
+   "blank": "жалостью",
+   "src": "made"
+  }
+ ],
  "w|жаль": [
   {
    "text": "Жаль, что ты уходишь.",
@@ -9849,6 +10009,22 @@
    "src": "made"
   }
  ],
+ "w|завидовать": [
+  {
+   "text": "В детстве Алексей завидовал сестре, потому что ей разрешали гулять допоздна.",
+   "en": "As a child Alexei envied his sister because she was allowed to stay out late.",
+   "ko": "어릴 때 알렉세이는 늦게까지 놀아도 되는 누나가 부러웠어요.",
+   "blank": "завидовал",
+   "src": "made"
+  },
+  {
+   "text": "Наталья немного завидует жителям деревни, у которых такой чистый воздух.",
+   "en": "Natalia is a little envious of the villagers who have such clean air.",
+   "ko": "나탈리야는 공기가 이렇게 맑은 곳에 사는 마을 사람들이 조금 부러워요.",
+   "blank": "завидует",
+   "src": "made"
+  }
+ ],
  "w|зависеть": [
   {
    "text": "Вы не должны зависеть от своих родителей.",
@@ -10100,6 +10276,22 @@
    "en": "The customer wondered whether he needed a second tube of cream.",
    "ko": "손님은 크림이 하나 더 필요한지 잠시 고민했어요.",
    "blank": "задумался",
+   "src": "made"
+  }
+ ],
+ "w|заинтересованный": [
+  {
+   "text": "Катя слушала брата с заинтересованным видом, но ничего не говорила.",
+   "en": "Katya listened to her brother with an interested look but said nothing.",
+   "ko": "카탸는 관심 있는 표정으로 동생 말을 들었지만 아무 말도 하지 않았어요.",
+   "blank": "заинтересованным",
+   "src": "made"
+  },
+  {
+   "text": "Старый пасечник заметил заинтересованный взгляд Натальи и показал ей ульи.",
+   "en": "The old beekeeper noticed Natalia's interested look and showed her the hives.",
+   "ko": "늙은 양봉가는 나탈리야의 호기심 어린 눈빛을 보고 벌통을 보여 줬어요.",
+   "blank": "заинтересованный",
    "src": "made"
   }
  ],
@@ -11617,6 +11809,22 @@
    "src": "tatoeba:468245/Jamez_Bender en:57970/CK"
   }
  ],
+ "w|значительно": [
+  {
+   "text": "После разговора отношения Алексея с сестрой стали значительно теплее.",
+   "en": "After the talk Alexei's relationship with his sister became much warmer.",
+   "ko": "대화 후 알렉세이와 누나의 사이가 훨씬 따뜻해졌어요.",
+   "blank": "значительно",
+   "src": "made"
+  },
+  {
+   "text": "Ночью в горах значительно холоднее, чем в долине.",
+   "en": "At night in the mountains it's much colder than in the valley.",
+   "ko": "밤에 산은 골짜기보다 훨씬 추워요.",
+   "blank": "значительно",
+   "src": "made"
+  }
+ ],
  "w|значить": [
   {
    "text": "Что это значит?",
@@ -12281,6 +12489,22 @@
    "en": "I sometimes forget my keys.",
    "ko": "나는 가끔 열쇠를 잊어버려.",
    "blank": "иногда"
+  }
+ ],
+ "w|иной": [
+  {
+   "text": "Катя посмотрела на ссору иными глазами, когда узнала всю историю.",
+   "en": "Katya saw the quarrel with different eyes once she heard the whole story.",
+   "ko": "카탸는 사정을 다 듣고 나서 다툼을 다르게 보게 됐어요.",
+   "blank": "иными",
+   "src": "made"
+  },
+  {
+   "text": "Жизнь в горах течёт в ином ритме, и Наталья быстро это почувствовала.",
+   "en": "Life in the mountains flows at a different pace, and Natalia quickly sensed it.",
+   "ko": "산에서는 삶이 다른 속도로 흘러서 나탈리야는 금세 그걸 느꼈어요.",
+   "blank": "ином",
+   "src": "made"
   }
  ],
  "w|инспектор": [
@@ -19411,6 +19635,22 @@
    "src": "made"
   }
  ],
+ "w|незачем": [
+  {
+   "text": "Мама сказала Алексею, что ссориться из-за наследства им незачем.",
+   "en": "Their mother told Alexei there was no reason for them to quarrel over the inheritance.",
+   "ko": "엄마는 알렉세이에게 유산 때문에 다툴 이유가 없다고 했어요.",
+   "blank": "незачем",
+   "src": "made"
+  },
+  {
+   "text": "Проводник сказал Наталье, что брать с собой много вещей незачем.",
+   "en": "The guide told Natalia there was no need to bring a lot of things.",
+   "ko": "안내인은 나탈리야에게 짐을 많이 챙길 필요가 없다고 했어요.",
+   "blank": "незачем",
+   "src": "made"
+  }
+ ],
  "w|неизвестный": [
   {
    "text": "«Известный» — это антоним слова «неизвестный».",
@@ -20873,6 +21113,22 @@
    "src": "tatoeba:12114661/marafon en:12114633/sundown"
   }
  ],
+ "w|облегчение": [
+  {
+   "text": "Когда недоразумение выяснилось, Алексей почувствовал огромное облегчение.",
+   "en": "When the misunderstanding was cleared up, Alexei felt huge relief.",
+   "ko": "오해가 풀리자 알렉세이는 크게 안도했어요.",
+   "blank": "облегчение",
+   "src": "made"
+  },
+  {
+   "text": "Когда автобус наконец показался на серпантине, Наталья вздохнула с облегчением.",
+   "en": "When the bus finally appeared on the winding road, Natalia sighed with relief.",
+   "ko": "버스가 마침내 굽은 길에 나타나자 나탈리야는 안도의 한숨을 쉬었어요.",
+   "blank": "облегчением",
+   "src": "made"
+  }
+ ],
  "w|обман": [
   {
    "text": "Учитель назвал списывание обманом, и Иван покраснел.",
@@ -21539,6 +21795,22 @@
    "en": "Get the clothes off the chair.",
    "ko": "의자 위에 있는 옷 치워.",
    "blank": "одежду"
+  }
+ ],
+ "w|одержимый": [
+  {
+   "text": "Катя считает брата одержимым работой и обижается, что он редко приезжает.",
+   "en": "Katya thinks her brother is obsessed with work and is hurt that he rarely visits.",
+   "ko": "카탸는 동생이 일에 빠져 산다고 생각해서 잘 오지 않는 게 서운해요.",
+   "blank": "одержимым",
+   "src": "made"
+  },
+  {
+   "text": "Сосед Натальи — одержимый рыбак, который встаёт в четыре утра.",
+   "en": "Natalia's neighbor is an obsessive fisherman who gets up at four in the morning.",
+   "ko": "나탈리야의 이웃은 새벽 네 시에 일어나는 낚시광이에요.",
+   "blank": "одержимый",
+   "src": "made"
   }
  ],
  "w|одетый": [
@@ -23635,6 +23907,22 @@
    "src": "made"
   }
  ],
+ "w|отчаяние": [
+  {
+   "text": "В письме Катя писала, что была почти в отчаянии от его молчания.",
+   "en": "In the letter Katya wrote that his silence had driven her almost to despair.",
+   "ko": "카탸는 편지에 동생이 연락이 없어서 거의 절망했다고 썼어요.",
+   "blank": "отчаянии",
+   "src": "made"
+  },
+  {
+   "text": "В старой книге Наталья читала о том, как деревня пережила голод и отчаяние.",
+   "en": "In an old book Natalia read about how the village survived famine and despair.",
+   "ko": "나탈리야는 오래된 책에서 마을이 굶주림과 절망을 견딘 이야기를 읽었어요.",
+   "blank": "отчаяние",
+   "src": "made"
+  }
+ ],
  "w|отчаянно": [
   {
    "text": "Котёнок отчаянно мяукал на дереве, пока Андрей не снял его.",
@@ -24647,10 +24935,10 @@
  ],
  "w|персонаж": [
   {
-   "text": "Ольга напоминает Ивану любимый персонаж из старого сериала.",
-   "en": "Olga reminds Ivan of a favorite character from an old TV series.",
-   "ko": "올가를 보면 이반은 옛 드라마 속 좋아하던 인물이 떠올라요.",
-   "blank": "персонаж",
+   "text": "Ольга похожа на любимого персонажа Ивана из старого сериала.",
+   "en": "Olga looks like Ivan's favorite character from an old TV series.",
+   "ko": "올가는 이반이 좋아하는 옛 드라마 속 인물을 닮았어요.",
+   "blank": "персонажа",
    "src": "made"
   },
   {
@@ -25629,6 +25917,22 @@
    "ko": "죽은 물고기가 물 위로 떠올랐어요.",
    "blank": "поверхность",
    "src": "tatoeba:9615406/Selena777 en:9506996/AlanF_US"
+  }
+ ],
+ "w|повеселиться": [
+  {
+   "text": "После примирения брат с сестрой решили повеселиться и пошли в боулинг.",
+   "en": "After making up, the brother and sister decided to have some fun and went bowling.",
+   "ko": "화해한 뒤 남매는 기분 전환하러 볼링장에 갔어요.",
+   "blank": "повеселиться",
+   "src": "made"
+  },
+  {
+   "text": "Дети в деревне позвали Наталью повеселиться на горке.",
+   "en": "The village kids invited Natalia to have some fun on the slide.",
+   "ko": "마을 아이들이 나탈리야에게 썰매 언덕에서 놀자고 했어요.",
+   "blank": "повеселиться",
+   "src": "made"
   }
  ],
  "w|повесить": [
@@ -27429,6 +27733,22 @@
    "blank": "положить"
   }
  ],
+ "w|положиться": [
+  {
+   "text": "Катя призналась, что всегда могла положиться на брата в трудную минуту.",
+   "en": "Katya admitted she could always rely on her brother in hard times.",
+   "ko": "카탸는 힘들 때 늘 동생에게 기댈 수 있었다고 털어놨어요.",
+   "blank": "положиться",
+   "src": "made"
+  },
+  {
+   "text": "Наталья знала, что может положиться на опытного проводника.",
+   "en": "Natalia knew she could rely on the experienced guide.",
+   "ko": "나탈리야는 노련한 안내인을 믿을 수 있다는 걸 알았어요.",
+   "blank": "положиться",
+   "src": "made"
+  }
+ ],
  "w|полтора": [
   {
    "text": "Через полтора часа мы наконец доехали.",
@@ -29163,6 +29483,22 @@
    "src": "made"
   }
  ],
+ "w|преданность": [
+  {
+   "text": "Алексей всегда ценил преданность сестры, даже когда они ссорились.",
+   "en": "Alexei always valued his sister's devotion, even when they quarreled.",
+   "ko": "알렉세이는 다툴 때에도 누나의 헌신을 늘 고맙게 여겼어요.",
+   "blank": "преданность",
+   "src": "made"
+  },
+  {
+   "text": "Наталью растрогала преданность старой собаки своему хозяину.",
+   "en": "Natalia was moved by the old dog's devotion to its owner.",
+   "ko": "나탈리야는 늙은 개가 주인에게 보이는 충성심에 감동했어요.",
+   "blank": "преданность",
+   "src": "made"
+  }
+ ],
  "w|предатель": [
   {
    "text": "Ты знаешь, кто предатель?",
@@ -29521,6 +29857,22 @@
    "ko": "이게 마지막 경고야.",
    "blank": "предупреждение",
    "src": "tatoeba:10805624/marafon en:2138233/Hybrid"
+  }
+ ],
+ "w|предчувствие": [
+  {
+   "text": "У Алексея было нехорошее предчувствие, когда сестра не ответила на звонок.",
+   "en": "Alexei had a bad feeling when his sister didn't answer the call.",
+   "ko": "누나가 전화를 받지 않자 알렉세이는 불길한 예감이 들었어요.",
+   "blank": "предчувствие",
+   "src": "made"
+  },
+  {
+   "text": "Наталья ехала в горы с радостным предчувствием.",
+   "en": "Natalia was heading to the mountains with a joyful feeling of anticipation.",
+   "ko": "나탈리야는 설레는 마음으로 산에 갔어요.",
+   "blank": "предчувствием",
+   "src": "made"
   }
  ],
  "w|предыдущий": [
@@ -30123,6 +30475,22 @@
    "ko": "고백할 게 있어요.",
    "blank": "признание",
    "src": "tatoeba:4483234/odexed en:2280328/CK"
+  }
+ ],
+ "w|признательный": [
+  {
+   "text": "Алексей сказал, что очень признателен сестре за помощь с переездом.",
+   "en": "Alexei said he was very grateful to his sister for helping with the move.",
+   "ko": "알렉세이는 이사를 도와준 누나에게 정말 고맙다고 했어요.",
+   "blank": "признателен",
+   "src": "made"
+  },
+  {
+   "text": "Наталья была очень признательна водителю, который подвёз её до деревни.",
+   "en": "Natalia was very grateful to the driver who gave her a lift to the village.",
+   "ko": "나탈리야는 마을까지 태워 준 운전사에게 무척 고마웠어요.",
+   "blank": "признательна",
+   "src": "made"
   }
  ],
  "w|признать": [
@@ -31517,6 +31885,22 @@
    "src": "made"
   }
  ],
+ "w|противостоять": [
+  {
+   "text": "Вместе брат с сестрой могли противостоять любым трудностям.",
+   "en": "Together the brother and sister could stand up to any hardship.",
+   "ko": "남매는 함께라면 어떤 어려움에도 맞설 수 있었어요.",
+   "blank": "противостоять",
+   "src": "made"
+  },
+  {
+   "text": "Деревне трудно противостоять оттоку молодёжи в города.",
+   "en": "It's hard for the village to resist young people leaving for the cities.",
+   "ko": "마을은 젊은이들이 도시로 떠나는 걸 막기 어려워요.",
+   "blank": "противостоять",
+   "src": "made"
+  }
+ ],
  "w|протокол": [
   {
    "text": "Секретарь школьного совета вела протокол собрания, а Иван сидел рядом.",
@@ -31763,6 +32147,22 @@
    "en": "Forgiveness won't come right away.",
    "ko": "용서는 당장 되지 않아.",
    "blank": "Прощение"
+  }
+ ],
+ "w|проявить": [
+  {
+   "text": "Алексей решил проявить терпение и выслушать сестру до конца.",
+   "en": "Alexei decided to show patience and hear his sister out.",
+   "ko": "알렉세이는 참을성을 갖고 누나 말을 끝까지 듣기로 했어요.",
+   "blank": "проявить",
+   "src": "made"
+  },
+  {
+   "text": "Во время грозы Наталья старалась не проявить страха перед детьми.",
+   "en": "During the thunderstorm Natalia tried not to show fear in front of the children.",
+   "ko": "천둥 번개가 칠 때 나탈리야는 아이들 앞에서 무서운 티를 내지 않으려 했어요.",
+   "blank": "проявить",
+   "src": "made"
   }
  ],
  "w|прояснить": [
@@ -32305,6 +32705,22 @@
    "src": "tatoeba:3474492/Inego en:51432/CK"
   }
  ],
+ "w|радоваться": [
+  {
+   "text": "Алексей искренне радуется успехам сестры, хоть и редко говорит об этом.",
+   "en": "Alexei is sincerely happy about his sister's successes, though he rarely says so.",
+   "ko": "알렉세이는 잘 말하지는 않지만 누나가 잘되는 걸 진심으로 기뻐해요.",
+   "blank": "радуется",
+   "src": "made"
+  },
+  {
+   "text": "Наталья радовалась каждому солнечному утру в горах.",
+   "en": "Natalia was glad of every sunny morning in the mountains.",
+   "ko": "나탈리야는 산에서 맞는 맑은 아침마다 기뻤어요.",
+   "blank": "радовалась",
+   "src": "made"
+  }
+ ],
  "w|радость": [
   {
    "text": "Что приносит тебе радость?",
@@ -32473,6 +32889,22 @@
    "src": "tatoeba:13702555/gregoryguy en:837029/nthkmf"
   }
  ],
+ "w|раздражать": [
+  {
+   "text": "Катю раздражает, что брат никогда не перезванивает.",
+   "en": "It annoys Katya that her brother never calls back.",
+   "ko": "카탸는 동생이 한 번도 다시 전화하지 않는 게 짜증 나요.",
+   "blank": "раздражает",
+   "src": "made"
+  },
+  {
+   "text": "Наталью немного раздражал петух, который кричал ещё до рассвета.",
+   "en": "Natalia was a bit annoyed by the rooster that crowed before dawn.",
+   "ko": "나탈리야는 동트기 전부터 우는 수탉이 조금 거슬렸어요.",
+   "blank": "раздражал",
+   "src": "made"
+  }
+ ],
  "w|размер": [
   {
    "text": "Как ты думаешь, какой у меня размер?",
@@ -32581,6 +33013,22 @@
    "ko": "한 번 더 해 볼 만해요.",
    "blank": "разок",
    "src": "tatoeba:4206593/odexed en:10177303/AlanF_US"
+  }
+ ],
+ "w|разочарованный": [
+  {
+   "text": "Катя выглядела разочарованной, когда брат не пришёл на её выступление.",
+   "en": "Katya looked disappointed when her brother didn't come to her performance.",
+   "ko": "동생이 공연에 오지 않자 카탸는 실망한 모습이었어요.",
+   "blank": "разочарованной",
+   "src": "made"
+  },
+  {
+   "text": "Наталья вернулась с вершины разочарованной: всё скрыл туман.",
+   "en": "Natalia came back from the summit disappointed: the fog had hidden everything.",
+   "ko": "나탈리야는 정상에서 실망해서 돌아왔어요. 안개가 다 가렸거든요.",
+   "blank": "разочарованной",
+   "src": "made"
   }
  ],
  "w|разрешение": [
@@ -35705,6 +36153,22 @@
    "blank": "следующей"
   }
  ],
+ "w|слеза": [
+  {
+   "text": "У Кати на глазах выступили слёзы, когда брат наконец извинился.",
+   "en": "Tears came to Katya's eyes when her brother finally apologized.",
+   "ko": "동생이 마침내 사과하자 카탸의 눈에 눈물이 맺혔어요.",
+   "blank": "слёзы",
+   "src": "made"
+  },
+  {
+   "text": "От холодного горного ветра у Натальи выступила слеза.",
+   "en": "The cold mountain wind brought a tear to Natalia's eye.",
+   "ko": "차가운 산바람에 나탈리야의 눈에 눈물이 맺혔어요.",
+   "blank": "слеза",
+   "src": "made"
+  }
+ ],
  "w|слишком": [
   {
    "text": "Слишком жарко.",
@@ -35993,6 +36457,22 @@
    "ko": "그 사람들이 하는 말이 안 들렸어요.",
    "blank": "слышно",
    "src": "tatoeba:5199446/marafon en:4013444/CK"
+  }
+ ],
+ "w|смелость": [
+  {
+   "text": "Алексею понадобилась вся его смелость, чтобы первым позвонить сестре.",
+   "en": "It took all of Alexei's courage to be the first to call his sister.",
+   "ko": "알렉세이는 누나에게 먼저 전화하는 데 용기를 다 끌어모아야 했어요.",
+   "blank": "смелость",
+   "src": "made"
+  },
+  {
+   "text": "Наталья набралась смелости и перешла через подвесной мост.",
+   "en": "Natalia plucked up courage and crossed the suspension bridge.",
+   "ko": "나탈리야는 용기를 내어 출렁다리를 건넜어요.",
+   "blank": "смелости",
+   "src": "made"
   }
  ],
  "w|смена": [
@@ -36343,6 +36823,22 @@
    "blank": "собираюсь"
   }
  ],
+ "w|соболезнование": [
+  {
+   "text": "Алексей узнал, что Катя отправила соболезнования его другу, и был тронут.",
+   "en": "Alexei learned that Katya had sent condolences to his friend, and he was touched.",
+   "ko": "알렉세이는 카탸가 자기 친구에게 조의를 전했다는 걸 알고 감동했어요.",
+   "blank": "соболезнования",
+   "src": "made"
+  },
+  {
+   "text": "Наталья передала соболезнования соседке, у которой недавно умер муж.",
+   "en": "Natalia offered her condolences to a neighbor whose husband had recently died.",
+   "ko": "나탈리야는 얼마 전 남편을 잃은 이웃에게 조의를 전했어요.",
+   "blank": "соболезнования",
+   "src": "made"
+  }
+ ],
  "w|собрание": [
   {
    "text": "Почему мы должны идти на это собрание?",
@@ -36683,6 +37179,22 @@
    "src": "tatoeba:1779340/soweli_Elepanto en:1688750/Amastan"
   }
  ],
+ "w|соединить": [
+  {
+   "text": "Мама давно мечтала соединить детей за одним столом.",
+   "en": "Their mother had long dreamed of bringing her children together at one table.",
+   "ko": "엄마는 아이들을 한 식탁에 모으는 게 오랜 소원이었어요.",
+   "blank": "соединить",
+   "src": "made"
+  },
+  {
+   "text": "Новый мост должен соединить деревню с соседней долиной.",
+   "en": "The new bridge is supposed to connect the village with the neighboring valley.",
+   "ko": "새 다리는 마을과 옆 골짜기를 이을 예정이에요.",
+   "blank": "соединить",
+   "src": "made"
+  }
+ ],
  "w|сожаление": [
   {
    "text": "Я выказал ему своё глубокое сожаление.",
@@ -37010,6 +37522,22 @@
    "en": "Maria met resistance when she tried to bargain down the price of meat.",
    "ko": "마리야가 고기 값을 깎으려 하자 상인이 버텼어요.",
    "blank": "сопротивление",
+   "src": "made"
+  }
+ ],
+ "w|сопротивляться": [
+  {
+   "text": "Катя пыталась сопротивляться, но всё-таки рассмеялась над шуткой брата.",
+   "en": "Katya tried to resist but still laughed at her brother's joke.",
+   "ko": "카탸는 참으려 했지만 결국 동생 농담에 웃음이 터졌어요.",
+   "blank": "сопротивляться",
+   "src": "made"
+  },
+  {
+   "text": "Старый дом на склоне много лет сопротивляется ветрам и снегу.",
+   "en": "The old house on the slope has withstood wind and snow for many years.",
+   "ko": "비탈의 낡은 집은 오랜 세월 바람과 눈을 견뎌 왔어요.",
+   "blank": "сопротивляется",
    "src": "made"
   }
  ],
@@ -39287,6 +39815,22 @@
    "src": "tatoeba:9022731/marafon en:8989050/CK"
   }
  ],
+ "w|сырой": [
+  {
+   "text": "Алексей принёс сестре пирог в знак примирения, но он оказался сырым внутри.",
+   "en": "Alexei brought his sister a peace-offering pie, but it turned out to be raw inside.",
+   "ko": "알렉세이는 화해하려고 누나에게 파이를 가져갔지만 속이 덜 익었어요.",
+   "blank": "сырым",
+   "src": "made"
+  },
+  {
+   "text": "В горах воздух сырой даже летом, и Наталья взяла тёплую кофту.",
+   "en": "In the mountains the air is damp even in summer, so Natalia took a warm sweater.",
+   "ko": "산 공기는 여름에도 눅눅해서 나탈리야는 따뜻한 스웨터를 챙겼어요.",
+   "blank": "сырой",
+   "src": "made"
+  }
+ ],
  "w|сэндвич": [
   {
    "text": "Ты бы хотел, чтобы я сделал тебе сэндвич?",
@@ -41221,6 +41765,22 @@
    "src": "made"
   }
  ],
+ "w|уверенность": [
+  {
+   "text": "Алексей не был уверен, но говорил с сестрой с напускной уверенностью.",
+   "en": "Alexei wasn't sure, but he spoke to his sister with feigned confidence.",
+   "ko": "알렉세이는 확신이 없었지만 누나에게 자신 있는 척 말했어요.",
+   "blank": "уверенностью",
+   "src": "made"
+  },
+  {
+   "text": "Местные пастухи ходят по крутым тропам с удивительной уверенностью.",
+   "en": "The local shepherds walk the steep paths with amazing confidence.",
+   "ko": "마을 목동들은 가파른 길을 놀라울 만큼 자신 있게 걸어요.",
+   "blank": "уверенностью",
+   "src": "made"
+  }
+ ],
  "w|уверенный": [
   {
    "text": "Я уверен, он дома.",
@@ -41248,6 +41808,22 @@
    "en": "I assure you, everything will be fine.",
    "ko": "장담하는데 다 잘될 거예요.",
    "blank": "Уверяю",
+   "src": "made"
+  }
+ ],
+ "w|увести": [
+  {
+   "text": "Катя решила увести брата на кухню, чтобы поговорить без гостей.",
+   "en": "Katya decided to take her brother off to the kitchen to talk away from the guests.",
+   "ko": "카탸는 손님들 없이 이야기하려고 동생을 부엌으로 데려갔어요.",
+   "blank": "увести",
+   "src": "made"
+  },
+  {
+   "text": "Пастух пришёл, чтобы увести коз с пастбища до темноты.",
+   "en": "The shepherd came to lead the goats off the pasture before dark.",
+   "ko": "목동은 어두워지기 전에 염소를 목장에서 데려가려고 왔어요.",
+   "blank": "увести",
    "src": "made"
   }
  ],
@@ -41859,6 +42435,38 @@
    "en": "Cross the street carefully.",
    "ko": "길 건널 때 조심해.",
    "blank": "улицу"
+  }
+ ],
+ "w|улыбаться": [
+  {
+   "text": "Алексей не мог перестать улыбаться, когда сестра обняла его на вокзале.",
+   "en": "Alexei couldn't stop smiling when his sister hugged him at the station.",
+   "ko": "누나가 역에서 안아 주자 알렉세이는 웃음을 멈출 수 없었어요.",
+   "blank": "улыбаться",
+   "src": "made"
+  },
+  {
+   "text": "Местные жители часто улыбаются незнакомцам на тропе.",
+   "en": "The locals often smile at strangers on the trail.",
+   "ko": "마을 사람들은 길에서 낯선 사람에게도 자주 웃어 줘요.",
+   "blank": "улыбаются",
+   "src": "made"
+  }
+ ],
+ "w|улыбка": [
+  {
+   "text": "Сестра встретила Алексея с натянутой улыбкой, и он сразу понял, что она обижена.",
+   "en": "His sister greeted Alexei with a forced smile, and he immediately realized she was hurt.",
+   "ko": "누나가 억지 미소로 알렉세이를 맞자 그는 누나가 서운해한다는 걸 바로 알았어요.",
+   "blank": "улыбкой",
+   "src": "made"
+  },
+  {
+   "text": "Хозяйка гостевого дома встретила Наталью доброй улыбкой и горячим чаем.",
+   "en": "The guesthouse owner greeted Natalia with a kind smile and hot tea.",
+   "ko": "게스트하우스 주인은 따뜻한 미소와 뜨거운 차로 나탈리야를 맞았어요.",
+   "blank": "улыбкой",
+   "src": "made"
   }
  ],
  "w|ум": [
@@ -42735,6 +43343,22 @@
    "ko": "저는 농구를 그렇게 좋아하진 않아요.",
    "blank": "фанат",
    "src": "tatoeba:6377903/marafon en:6377899/CK"
+  }
+ ],
+ "w|фантазия": [
+  {
+   "text": "Алексей сказал, что обида сестры — просто её фантазия.",
+   "en": "Alexei said that his sister's grievance was just her imagination.",
+   "ko": "알렉세이는 누나의 서운함이 그냥 상상일 뿐이라고 했어요.",
+   "blank": "фантазия",
+   "src": "made"
+  },
+  {
+   "text": "Хозяйка гостевого дома рассказывает сказки, и фантазия у неё безграничная.",
+   "en": "The guesthouse owner tells fairy tales, and her imagination knows no bounds.",
+   "ko": "게스트하우스 주인은 옛이야기를 들려주는데 상상력이 끝이 없어요.",
+   "blank": "фантазия",
+   "src": "made"
   }
  ],
  "w|фантастика": [
@@ -45303,6 +45927,22 @@
    "en": "I'm paying for dinner today.",
    "ko": "오늘 저녁은 내가 낼게.",
    "blank": "я"
+  }
+ ],
+ "w|явиться": [
+  {
+   "text": "Алексей явился к сестре без предупреждения с букетом её любимых тюльпанов.",
+   "en": "Alexei showed up at his sister's unannounced with a bunch of her favorite tulips.",
+   "ko": "알렉세이는 누나가 좋아하는 튤립을 들고 예고 없이 찾아갔어요.",
+   "blank": "явился",
+   "src": "made"
+  },
+  {
+   "text": "Наталья явилась на завтрак последней и получила остывшие блины.",
+   "en": "Natalia showed up last for breakfast and got cold pancakes.",
+   "ko": "나탈리야는 아침에 제일 늦게 나와서 식은 블린을 받았어요.",
+   "blank": "явилась",
+   "src": "made"
   }
  ],
  "w|являться": [
