@@ -2151,6 +2151,22 @@
    "blank": "Algo"
   }
  ],
+ "w|algodón": [
+  {
+   "text": "La madre de Mateo le compró una camiseta de algodón.",
+   "en": "Mateo's mother bought him a cotton T-shirt.",
+   "ko": "마테오의 엄마가 면 티셔츠를 사 주었어요.",
+   "blank": "algodón",
+   "src": "made"
+  },
+  {
+   "text": "La inspectora Carmen tomó una muestra con un poco de algodón.",
+   "en": "Inspector Carmen took a sample with a bit of cotton.",
+   "ko": "카르멘 경감은 솜으로 증거 표본을 조금 떴어요.",
+   "blank": "algodón",
+   "src": "made"
+  }
+ ],
  "w|alguacil": [
   {
    "text": "El alguacil entregó la citación.",
@@ -3077,6 +3093,22 @@
    "blank": "anotar"
   }
  ],
+ "w|ansiedad": [
+  {
+   "text": "Antes del examen de matemáticas, Mateo sintió mucha ansiedad.",
+   "en": "Before the math exam, Mateo felt a lot of anxiety.",
+   "ko": "수학 시험 전에 마테오는 몹시 불안했어요.",
+   "blank": "ansiedad",
+   "src": "made"
+  },
+  {
+   "text": "Antes de declarar, la testigo temblaba de ansiedad.",
+   "en": "Before testifying, the witness was trembling with anxiety.",
+   "ko": "증언하기 전에 그 여자 목격자는 불안해서 떨고 있었어요.",
+   "blank": "ansiedad",
+   "src": "made"
+  }
+ ],
  "w|ansioso": [
   {
    "text": "Estoy ansioso por ver el resultado.",
@@ -3377,6 +3409,22 @@
    "blank": "aparte"
   }
  ],
+ "w|apasionar": [
+  {
+   "text": "A Mateo le apasionan los volcanes y la lava.",
+   "en": "Mateo is passionate about volcanoes and lava.",
+   "ko": "마테오는 화산과 용암에 푹 빠져 있어요.",
+   "blank": "apasionan",
+   "src": "made"
+  },
+  {
+   "text": "A la inspectora Carmen le apasiona su trabajo, aunque es muy duro.",
+   "en": "Inspector Carmen loves her job, even though it is very hard.",
+   "ko": "카르멘 경감은 일이 아주 힘들어도 그 일을 무척 좋아해요.",
+   "blank": "apasiona",
+   "src": "made"
+  }
+ ],
  "w|apellido": [
   {
    "text": "Escribió su apellido con letra clara.",
@@ -3519,6 +3567,22 @@
    "en": "She is going to apply to several universities.",
    "ko": "그녀는 여러 대학에 지원할 거야.",
    "blank": "aplicar"
+  }
+ ],
+ "w|apodo": [
+  {
+   "text": "En el equipo, todos llaman a Mateo por su apodo, «el Rayo».",
+   "en": "On the team, everyone calls Mateo by his nickname, \"Lightning.\"",
+   "ko": "팀에서는 모두 마테오를 '번개'라는 별명으로 불러요.",
+   "blank": "apodo",
+   "src": "made"
+  },
+  {
+   "text": "En la comisaría, todos conocen a Carmen por su apodo, «la Loba».",
+   "en": "At the police station, everyone knows Carmen by her nickname, \"the She-Wolf.\"",
+   "ko": "경찰서에서는 모두 카르멘을 '암늑대'라는 별명으로 알아요.",
+   "blank": "apodo",
+   "src": "made"
   }
  ],
  "w|apostar": [
@@ -3703,6 +3767,22 @@
    "en": "It costs approximately the same as before.",
    "ko": "예전과 대략 같은 가격이야.",
    "blank": "aproximadamente"
+  }
+ ],
+ "w|aproximar": [
+  {
+   "text": "Mateo se aproximó despacio al perro desconocido.",
+   "en": "Mateo slowly approached the unfamiliar dog.",
+   "ko": "마테오는 낯선 개에게 천천히 다가갔어요.",
+   "blank": "aproximó",
+   "src": "made"
+  },
+  {
+   "text": "Una patrulla se aproximó en silencio a la casa abandonada.",
+   "en": "A patrol quietly approached the abandoned house.",
+   "ko": "순찰대가 버려진 집에 조용히 다가갔어요.",
+   "blank": "aproximó",
+   "src": "made"
   }
  ],
  "w|apuesta": [
@@ -5733,6 +5813,22 @@
    "blank": "balón"
   }
  ],
+ "w|baloncesto": [
+  {
+   "text": "Mateo juega al baloncesto con sus amigos cada tarde en el parque.",
+   "en": "Mateo plays basketball with his friends every afternoon in the park.",
+   "ko": "마테오는 매일 오후 공원에서 친구들과 농구를 해요.",
+   "blank": "baloncesto",
+   "src": "made"
+  },
+  {
+   "text": "La inspectora Carmen jugaba al baloncesto en la universidad.",
+   "en": "Inspector Carmen used to play basketball in college.",
+   "ko": "카르멘 경감은 대학 시절 농구를 했어요.",
+   "blank": "baloncesto",
+   "src": "made"
+  }
+ ],
  "w|bañarse": [
   {
    "text": "Quiere bañarse en el río al amanecer.",
@@ -6393,6 +6489,22 @@
    "en": "That bug doesn't bite; it only scares.",
    "ko": "그 벌레는 물지 않고 놀라게만 해.",
    "blank": "bicho"
+  }
+ ],
+ "w|bici": [
+  {
+   "text": "Mateo va al colegio en bici cuando hace buen tiempo.",
+   "en": "Mateo rides his bike to school when the weather is nice.",
+   "ko": "마테오는 날씨가 좋으면 자전거로 학교에 가요.",
+   "blank": "bici",
+   "src": "made"
+  },
+  {
+   "text": "El ladrón huyó en bici por las calles estrechas del centro.",
+   "en": "The thief fled by bike through the narrow downtown streets.",
+   "ko": "도둑은 시내 좁은 골목으로 자전거를 타고 달아났어요.",
+   "blank": "bici",
+   "src": "made"
   }
  ],
  "w|bicicleta": [
@@ -9439,6 +9551,22 @@
    "en": "We ordered two beers at the bar.",
    "ko": "바에서 맥주 두 잔을 시켰어.",
    "blank": "cervezas"
+  }
+ ],
+ "w|césped": [
+  {
+   "text": "El abuelo de Mateo corta el césped del jardín los sábados.",
+   "en": "Mateo's grandfather mows the garden lawn on Saturdays.",
+   "ko": "마테오의 할아버지는 토요일마다 정원 잔디를 깎아요.",
+   "blank": "césped",
+   "src": "made"
+  },
+  {
+   "text": "Las huellas del sospechoso quedaron marcadas en el césped del parque.",
+   "en": "The suspect's footprints were left on the park lawn.",
+   "ko": "용의자의 발자국이 공원 잔디에 남아 있었어요.",
+   "blank": "césped",
+   "src": "made"
   }
  ],
  "w|chaleco": [
@@ -13431,6 +13559,22 @@
    "blank": "creación"
   }
  ],
+ "w|creador": [
+  {
+   "text": "El creador del videojuego favorito de Mateo vive en su ciudad.",
+   "en": "The creator of Mateo's favorite video game lives in his city.",
+   "ko": "마테오가 가장 좋아하는 게임을 만든 사람이 마테오네 도시에 살아요.",
+   "blank": "creador",
+   "src": "made"
+  },
+  {
+   "text": "La inspectora Carmen buscaba al creador de una página web falsa.",
+   "en": "Inspector Carmen was looking for the creator of a fake website.",
+   "ko": "카르멘 경감은 가짜 웹사이트를 만든 사람을 찾고 있었어요.",
+   "blank": "creador",
+   "src": "made"
+  }
+ ],
  "w|crear": [
   {
    "text": "Voy a crear una cuenta nueva.",
@@ -14447,6 +14591,22 @@
    "blank": "cumplo"
   }
  ],
+ "w|cuna": [
+  {
+   "text": "La hermanita de Mateo duerme en una cuna blanca.",
+   "en": "Mateo's little sister sleeps in a white crib.",
+   "ko": "마테오의 여동생은 하얀 아기 침대에서 자요.",
+   "blank": "cuna",
+   "src": "made"
+  },
+  {
+   "text": "La policía encontró al bebé perdido dormido en una cuna, sano y salvo.",
+   "en": "The police found the missing baby asleep in a crib, safe and sound.",
+   "ko": "경찰은 실종된 아기를 아기 침대에서 잠든 채 무사히 찾았어요.",
+   "blank": "cuna",
+   "src": "made"
+  }
+ ],
  "w|cuñado": [
   {
    "text": "Mi cuñado llegó temprano a la cena.",
@@ -15039,6 +15199,22 @@
    "blank": "delante"
   }
  ],
+ "w|delatar": [
+  {
+   "text": "La hermana de Mateo no lo delató cuando rompió el jarrón.",
+   "en": "Mateo's sister didn't tell on him when he broke the vase.",
+   "ko": "마테오가 꽃병을 깼을 때 누나는 고자질하지 않았어요.",
+   "blank": "delató",
+   "src": "made"
+  },
+  {
+   "text": "Un informante delató a los jefes de la banda.",
+   "en": "An informant gave away the gang's leaders.",
+   "ko": "한 정보원이 조직 두목들을 밀고했어요.",
+   "blank": "delató",
+   "src": "made"
+  }
+ ],
  "w|delgado": [
   {
    "text": "Está muy delgado después del viaje.",
@@ -15165,6 +15341,22 @@
    "blank": "demasiada"
   }
  ],
+ "w|demente": [
+  {
+   "text": "La hermana de Mateo pensó que su plan era demente, pero funcionó.",
+   "en": "Mateo's sister thought his plan was crazy, but it worked.",
+   "ko": "마테오의 누나는 그 계획이 미쳤다고 생각했지만, 계획은 통했어요.",
+   "blank": "demente",
+   "src": "made"
+  },
+  {
+   "text": "El sospechoso se reía como un demente durante el interrogatorio.",
+   "en": "The suspect laughed like a madman during the interrogation.",
+   "ko": "용의자는 심문 내내 미친 사람처럼 웃었어요.",
+   "blank": "demente",
+   "src": "made"
+  }
+ ],
  "w|demo": [
   {
    "text": "Probé la demo del nuevo juego.",
@@ -15205,6 +15397,22 @@
    "en": "He runs like a demon.",
    "ko": "귀신같이 뛰어.",
    "blank": "demonio"
+  }
+ ],
+ "w|demorar": [
+  {
+   "text": "El autobús escolar se demoró por la lluvia, y Mateo llegó tarde.",
+   "en": "The school bus was delayed by the rain, and Mateo arrived late.",
+   "ko": "비 때문에 통학 버스가 늦어져서 마테오는 지각했어요.",
+   "blank": "demoró",
+   "src": "made"
+  },
+  {
+   "text": "El juicio se demoró varios meses por falta de pruebas.",
+   "en": "The trial was delayed for several months due to lack of evidence.",
+   "ko": "증거가 모자라 재판이 몇 달 미뤄졌어요.",
+   "blank": "demoró",
+   "src": "made"
   }
  ],
  "w|demostrar": [
@@ -19599,6 +19807,22 @@
    "blank": "entusiasmar"
   }
  ],
+ "w|entusiasmo": [
+  {
+   "text": "Mateo habló con entusiasmo de su nuevo equipo.",
+   "en": "Mateo talked enthusiastically about his new team.",
+   "ko": "마테오는 새 팀 이야기를 신이 나서 했어요.",
+   "blank": "entusiasmo",
+   "src": "made"
+  },
+  {
+   "text": "El agente nuevo trabajaba con mucho entusiasmo.",
+   "en": "The new officer worked with great enthusiasm.",
+   "ko": "새로 온 경찰관은 아주 열정적으로 일했어요.",
+   "blank": "entusiasmo",
+   "src": "made"
+  }
+ ],
  "w|envejecer": [
   {
    "text": "Tomás dice que envejecer en el campo es más tranquilo.",
@@ -19967,6 +20191,22 @@
    "blank": "escondite"
   }
  ],
+ "w|escopeta": [
+  {
+   "text": "El abuelo de Mateo guarda una vieja escopeta de caza en el desván.",
+   "en": "Mateo's grandfather keeps an old hunting shotgun in the attic.",
+   "ko": "마테오의 할아버지는 다락에 낡은 사냥총을 보관해요.",
+   "blank": "escopeta",
+   "src": "made"
+  },
+  {
+   "text": "En la casa del sospechoso encontraron una escopeta sin licencia.",
+   "en": "They found an unlicensed shotgun in the suspect's house.",
+   "ko": "용의자의 집에서 허가 없는 산탄총이 나왔어요.",
+   "blank": "escopeta",
+   "src": "made"
+  }
+ ],
  "w|escribir": [
   {
    "text": "Escríbeme cuando llegues.",
@@ -20119,6 +20359,22 @@
    "en": "That man is my uncle.",
    "ko": "저분은 내 삼촌이야.",
    "blank": "Ese"
+  }
+ ],
+ "w|esencia": [
+  {
+   "text": "La abuela de Mateo dice que la esencia de una familia es estar juntos.",
+   "en": "Mateo's grandmother says the essence of a family is being together.",
+   "ko": "마테오의 할머니는 가족의 본질은 함께 있는 거라고 해요.",
+   "blank": "esencia",
+   "src": "made"
+  },
+  {
+   "text": "La inspectora Carmen dice que la esencia del trabajo policial es la paciencia.",
+   "en": "Inspector Carmen says the essence of police work is patience.",
+   "ko": "카르멘 경감은 경찰 일의 핵심은 인내라고 말해요.",
+   "blank": "esencia",
+   "src": "made"
   }
  ],
  "w|esencial": [
@@ -21487,6 +21743,22 @@
    "en": "He became a successful writer.",
    "ko": "그는 성공한 작가가 됐어.",
    "blank": "exitoso"
+  }
+ ],
+ "w|expectativa": [
+  {
+   "text": "Las expectativas del entrenador de Mateo eran muy altas.",
+   "en": "Mateo's coach had very high expectations.",
+   "ko": "마테오 코치의 기대는 아주 높았어요.",
+   "blank": "expectativas",
+   "src": "made"
+  },
+  {
+   "text": "El resultado del caso no cumplió las expectativas de la prensa.",
+   "en": "The outcome of the case did not meet the press's expectations.",
+   "ko": "사건 결과는 언론의 기대에 미치지 못했어요.",
+   "blank": "expectativas",
+   "src": "made"
   }
  ],
  "w|expediente": [
@@ -23773,6 +24045,22 @@
    "en": "A furious customer walked into the shop.",
    "ko": "화가 난 손님이 가게로 들어왔어.",
    "blank": "furioso"
+  }
+ ],
+ "w|fusión": [
+  {
+   "text": "En la clase de ciencias, Mateo aprendió el punto de fusión del hielo.",
+   "en": "In science class, Mateo learned the melting point of ice.",
+   "ko": "과학 시간에 마테오는 얼음의 녹는점을 배웠어요.",
+   "blank": "fusión",
+   "src": "made"
+  },
+  {
+   "text": "La fusión de las dos empresas ocultaba un gran fraude.",
+   "en": "The merger of the two companies hid a big fraud.",
+   "ko": "두 회사의 합병 뒤에는 큰 사기가 숨어 있었어요.",
+   "blank": "fusión",
+   "src": "made"
   }
  ],
  "w|fútbol": [
@@ -28105,6 +28393,22 @@
    "blank": "interno"
   }
  ],
+ "w|interponer": [
+  {
+   "text": "Cuando sus amigos discutieron, Mateo se interpuso entre ellos.",
+   "en": "When his friends argued, Mateo stepped in between them.",
+   "ko": "친구들이 다투자 마테오가 둘 사이에 끼어들었어요.",
+   "blank": "interpuso",
+   "src": "made"
+  },
+  {
+   "text": "La inspectora Carmen se interpuso entre los dos hombres que peleaban.",
+   "en": "Inspector Carmen stepped between the two men who were fighting.",
+   "ko": "카르멘 경감은 싸우던 두 남자 사이를 막아섰어요.",
+   "blank": "interpuso",
+   "src": "made"
+  }
+ ],
  "w|interpretar": [
   {
    "text": "Es difícil interpretar su silencio.",
@@ -29421,6 +29725,22 @@
    "blank": "largo"
   }
  ],
+ "w|láser": [
+  {
+   "text": "Mateo usó un puntero láser para jugar con el gato.",
+   "en": "Mateo used a laser pointer to play with the cat.",
+   "ko": "마테오는 레이저 포인터로 고양이와 놀았어요.",
+   "blank": "láser",
+   "src": "made"
+  },
+  {
+   "text": "La alarma del museo usa rayos láser invisibles.",
+   "en": "The museum's alarm uses invisible laser beams.",
+   "ko": "박물관 경보 장치는 눈에 안 보이는 레이저 광선을 써요.",
+   "blank": "láser",
+   "src": "made"
+  }
+ ],
  "w|lástima": [
   {
    "text": "Qué lástima que no pudieras venir.",
@@ -29475,6 +29795,22 @@
    "en": "The drum seems to beat to the march's rhythm.",
    "ko": "북이 행진 리듬에 맞춰 뛰는 것 같아.",
    "blank": "latir"
+  }
+ ],
+ "w|lava": [
+  {
+   "text": "A Mateo le apasionan los volcanes y la lava.",
+   "en": "Mateo is passionate about volcanoes and lava.",
+   "ko": "마테오는 화산과 용암에 푹 빠져 있어요.",
+   "blank": "lava",
+   "src": "made"
+  },
+  {
+   "text": "Cuando el volcán expulsó lava, la inspectora Carmen ayudó a evacuar el pueblo.",
+   "en": "When the volcano spewed lava, Inspector Carmen helped evacuate the town.",
+   "ko": "화산이 용암을 내뿜자 카르멘 경감은 마을 주민 대피를 도왔어요.",
+   "blank": "lava",
+   "src": "made"
   }
  ],
  "w|lavado": [
@@ -31163,6 +31499,22 @@
    "en": "Drive carefully tonight.",
    "ko": "오늘 밤 조심해서 운전해.",
    "blank": "Maneja"
+  }
+ ],
+ "w|manejo": [
+  {
+   "text": "El entrenador alabó el manejo del balón de Mateo.",
+   "en": "The coach praised Mateo's ball handling.",
+   "ko": "코치는 마테오의 공 다루는 솜씨를 칭찬했어요.",
+   "blank": "manejo",
+   "src": "made"
+  },
+  {
+   "text": "La inspectora Carmen es experta en el manejo de situaciones difíciles.",
+   "en": "Inspector Carmen is an expert at handling difficult situations.",
+   "ko": "카르멘 경감은 어려운 상황을 다루는 데 전문가예요.",
+   "blank": "manejo",
+   "src": "made"
   }
  ],
  "w|manera": [
@@ -34127,6 +34479,22 @@
    "en": "He speaks naturally when he's among friends.",
    "ko": "친구들 사이에 있으면 자연스럽게 말해.",
    "blank": "naturalmente"
+  }
+ ],
+ "w|navaja": [
+  {
+   "text": "El abuelo le enseñó a Mateo a usar una navaja con cuidado.",
+   "en": "His grandfather taught Mateo to use a pocketknife carefully.",
+   "ko": "할아버지는 마테오에게 주머니칼을 조심히 쓰는 법을 가르쳐 주었어요.",
+   "blank": "navaja",
+   "src": "made"
+  },
+  {
+   "text": "El atracador amenazó al cajero con una navaja.",
+   "en": "The robber threatened the cashier with a knife.",
+   "ko": "강도는 칼로 은행 창구 직원을 위협했어요.",
+   "blank": "navaja",
+   "src": "made"
   }
  ],
  "w|nave": [
@@ -37605,6 +37973,22 @@
    "blank": "peligroso"
   }
  ],
+ "w|pelirrojo": [
+  {
+   "text": "El mejor amigo de Mateo es pelirrojo y tiene pecas.",
+   "en": "Mateo's best friend has red hair and freckles.",
+   "ko": "마테오의 가장 친한 친구는 빨간 머리에 주근깨가 있어요.",
+   "blank": "pelirrojo",
+   "src": "made"
+  },
+  {
+   "text": "La testigo vio a un hombre pelirrojo salir del banco.",
+   "en": "The witness saw a red-haired man leave the bank.",
+   "ko": "목격자는 빨간 머리 남자가 은행에서 나오는 걸 봤어요.",
+   "blank": "pelirrojo",
+   "src": "made"
+  }
+ ],
  "w|pelo": [
   {
    "text": "Se cortó el pelo ayer.",
@@ -37631,6 +38015,22 @@
    "en": "Throw the ball over here, please.",
    "ko": "공을 이쪽으로 던져 줘.",
    "blank": "pelota"
+  }
+ ],
+ "w|peluca": [
+  {
+   "text": "Para la fiesta de disfraces, Mateo se puso una peluca verde.",
+   "en": "For the costume party, Mateo put on a green wig.",
+   "ko": "분장 파티에 마테오는 초록색 가발을 썼어요.",
+   "blank": "peluca",
+   "src": "made"
+  },
+  {
+   "text": "El ladrón llevaba una peluca rubia para que nadie lo reconociera.",
+   "en": "The thief wore a blond wig so nobody would recognize him.",
+   "ko": "도둑은 아무도 못 알아보게 금발 가발을 쓰고 있었어요.",
+   "blank": "peluca",
+   "src": "made"
   }
  ],
  "w|pena": [
@@ -38053,6 +38453,22 @@
    "en": "Take the dog out, please.",
    "ko": "강아지 좀 데리고 나가.",
    "blank": "perro"
+  }
+ ],
+ "w|persecución": [
+  {
+   "text": "En la película que vio Mateo había una persecución de coches muy larga.",
+   "en": "In the movie Mateo watched, there was a very long car chase.",
+   "ko": "마테오가 본 영화에는 아주 긴 자동차 추격 장면이 있었어요.",
+   "blank": "persecución",
+   "src": "made"
+  },
+  {
+   "text": "La persecución terminó cuando el coche del ladrón se quedó sin gasolina.",
+   "en": "The chase ended when the thief's car ran out of gas.",
+   "ko": "도둑의 차가 기름이 떨어지면서 추격이 끝났어요.",
+   "blank": "persecución",
+   "src": "made"
   }
  ],
  "w|perseguir": [
@@ -39435,6 +39851,22 @@
    "blank": "postre"
   }
  ],
+ "w|postura": [
+  {
+   "text": "El médico le dijo a Mateo que corrigiera su postura al sentarse.",
+   "en": "The doctor told Mateo to correct his posture when sitting.",
+   "ko": "의사는 마테오에게 앉을 때 자세를 바로 하라고 했어요.",
+   "blank": "postura",
+   "src": "made"
+  },
+  {
+   "text": "El sospechoso cambió de postura muchas veces durante el interrogatorio.",
+   "en": "The suspect shifted his posture many times during the interrogation.",
+   "ko": "용의자는 심문 중에 자세를 여러 번 바꿨어요.",
+   "blank": "postura",
+   "src": "made"
+  }
+ ],
  "w|potencia": [
   {
    "text": "El motor nuevo tiene mucha más potencia.",
@@ -40291,6 +40723,22 @@
    "blank": "procedimiento"
   }
  ],
+ "w|procesar": [
+  {
+   "text": "A Mateo le costó procesar la noticia de la mudanza.",
+   "en": "It was hard for Mateo to process the news about the move.",
+   "ko": "마테오는 이사 소식을 받아들이기 힘들었어요.",
+   "blank": "procesar",
+   "src": "made"
+  },
+  {
+   "text": "El laboratorio tardó una semana en procesar las pruebas.",
+   "en": "The lab took a week to process the evidence.",
+   "ko": "연구소가 증거를 분석하는 데 일주일이 걸렸어요.",
+   "blank": "procesar",
+   "src": "made"
+  }
+ ],
  "w|proceso": [
   {
    "text": "El proceso de selección dura semanas.",
@@ -40897,6 +41345,22 @@
    "blank": "psiquiatra"
   }
  ],
+ "w|psíquico": [
+  {
+   "text": "La tía de Mateo dice que tiene poderes psíquicos, pero nadie la cree.",
+   "en": "Mateo's aunt says she has psychic powers, but nobody believes her.",
+   "ko": "마테오의 이모는 초능력이 있다고 하지만 아무도 안 믿어요.",
+   "blank": "psíquicos",
+   "src": "made"
+  },
+  {
+   "text": "Un hombre que decía tener poderes psíquicos le ofreció ayuda a la policía.",
+   "en": "A man who claimed to have psychic powers offered to help the police.",
+   "ko": "초능력이 있다는 한 남자가 경찰에 도움을 주겠다고 나섰어요.",
+   "blank": "psíquicos",
+   "src": "made"
+  }
+ ],
  "w|publicar": [
   {
    "text": "Va a publicar su novela pronto.",
@@ -41049,6 +41513,22 @@
    "en": "The fruit stall opens early.",
    "ko": "과일 가판대가 일찍 열어.",
    "blank": "puesto"
+  }
+ ],
+ "w|pulgada": [
+  {
+   "text": "El abuelo de Mateo todavía mide las cosas en pulgadas.",
+   "en": "Mateo's grandfather still measures things in inches.",
+   "ko": "마테오의 할아버지는 아직도 물건을 인치로 재요.",
+   "blank": "pulgadas",
+   "src": "made"
+  },
+  {
+   "text": "La caja fuerte del banco tenía una puerta de acero de varias pulgadas.",
+   "en": "The bank's safe had a steel door several inches thick.",
+   "ko": "은행 금고에는 몇 인치 두께의 강철 문이 달려 있었어요.",
+   "blank": "pulgadas",
+   "src": "made"
   }
  ],
  "w|pulgar": [
@@ -43487,6 +43967,22 @@
    "blank": "reto"
   }
  ],
+ "w|retorcer": [
+  {
+   "text": "Mateo se retorció de risa con el chiste de su primo.",
+   "en": "Mateo doubled over with laughter at his cousin's joke.",
+   "ko": "마테오는 사촌의 농담에 배를 잡고 웃었어요.",
+   "blank": "retorció",
+   "src": "made"
+  },
+  {
+   "text": "El ladrón le retorció el brazo a un guardia y escapó.",
+   "en": "The thief twisted a guard's arm and escaped.",
+   "ko": "도둑은 경비원의 팔을 비틀고 달아났어요.",
+   "blank": "retorció",
+   "src": "made"
+  }
+ ],
  "w|retrasado": [
   {
    "text": "El vuelo llegó retrasado por la niebla.",
@@ -43697,6 +44193,22 @@
    "en": "They study the revolution in history class.",
    "ko": "역사 수업에서 그 혁명을 배워.",
    "blank": "revolución"
+  }
+ ],
+ "w|revolucionario": [
+  {
+   "text": "La profesora de Mateo explicó una idea revolucionaria de la ciencia.",
+   "en": "Mateo's teacher explained a revolutionary idea in science.",
+   "ko": "마테오의 선생님은 과학의 혁명적인 생각 하나를 설명했어요.",
+   "blank": "revolucionaria",
+   "src": "made"
+  },
+  {
+   "text": "Un grupo revolucionario pintó mensajes en los muros de la ciudad.",
+   "en": "A revolutionary group painted messages on the city walls.",
+   "ko": "한 혁명 단체가 도시 벽에 구호를 그렸어요.",
+   "blank": "revolucionario",
+   "src": "made"
   }
  ],
  "w|rey": [
@@ -46475,6 +46987,22 @@
    "blank": "situación"
   }
  ],
+ "w|soborno": [
+  {
+   "text": "La madre de Mateo le ofreció un helado como soborno para que ordenara su cuarto.",
+   "en": "Mateo's mother offered him an ice cream as a bribe to tidy his room.",
+   "ko": "마테오의 엄마는 방을 치우라고 아이스크림을 미끼로 내밀었어요.",
+   "blank": "soborno",
+   "src": "made"
+  },
+  {
+   "text": "Un concejal aceptó un soborno, y la inspectora Carmen lo descubrió.",
+   "en": "A city councilor took a bribe, and Inspector Carmen found out.",
+   "ko": "한 시의원이 뇌물을 받았고, 카르멘 경감이 그것을 밝혀냈어요.",
+   "blank": "soborno",
+   "src": "made"
+  }
+ ],
  "w|sobra": [
   {
    "text": "No sobra nada después de la cena.",
@@ -47091,6 +47619,22 @@
    "blank": "sospechoso"
   }
  ],
+ "w|sostén": [
+  {
+   "text": "Desde que el padre perdió el trabajo, la madre de Mateo es el sostén de la casa.",
+   "en": "Since his father lost his job, Mateo's mother has been the family's breadwinner.",
+   "ko": "아빠가 일자리를 잃은 뒤로 마테오의 엄마가 집안 살림을 책임져요.",
+   "blank": "sostén",
+   "src": "made"
+  },
+  {
+   "text": "El detenido era el único sostén de su familia.",
+   "en": "The detainee was his family's only breadwinner.",
+   "ko": "붙잡힌 남자는 가족을 먹여 살리는 유일한 사람이었어요.",
+   "blank": "sostén",
+   "src": "made"
+  }
+ ],
  "w|sostener": [
   {
    "text": "Ayúdame a sostener esta caja pesada.",
@@ -47457,6 +48001,22 @@
    "en": "She suggested a different plan.",
    "ko": "다른 계획을 제안했어.",
    "blank": "Sugirió"
+  }
+ ],
+ "w|suicida": [
+  {
+   "text": "Saltar desde ese muro sería una idea suicida, le dijo su madre a Mateo.",
+   "en": "Jumping from that wall would be a suicidal idea, his mother told Mateo.",
+   "ko": "저 담에서 뛰어내리는 건 목숨을 건 짓이라고 엄마가 마테오에게 말했어요.",
+   "blank": "suicida",
+   "src": "made"
+  },
+  {
+   "text": "Entrar sola en ese edificio habría sido suicida, así que Carmen pidió refuerzos.",
+   "en": "Going into that building alone would have been suicidal, so Carmen called for backup.",
+   "ko": "그 건물에 혼자 들어가는 건 무모한 짓이었기에 카르멘은 지원을 요청했어요.",
+   "blank": "suicida",
+   "src": "made"
   }
  ],
  "w|suicidarse": [
@@ -51121,6 +51681,22 @@
    "blank": "Venció"
   }
  ],
+ "w|vendar": [
+  {
+   "text": "La enfermera del colegio le vendó el tobillo a Mateo.",
+   "en": "The school nurse bandaged Mateo's ankle.",
+   "ko": "학교 보건 선생님이 마테오의 발목에 붕대를 감아 주었어요.",
+   "blank": "vendó",
+   "src": "made"
+  },
+  {
+   "text": "Un médico vendó la mano herida del agente.",
+   "en": "A doctor bandaged the officer's injured hand.",
+   "ko": "의사가 경찰관의 다친 손에 붕대를 감았어요.",
+   "blank": "vendó",
+   "src": "made"
+  }
+ ],
  "w|vendedor": [
   {
    "text": "El vendedor nos explicó todas las opciones.",
@@ -51669,6 +52245,22 @@
    "en": "There's a lot of wind at the beach today.",
    "ko": "오늘 해변에 바람이 많이 불어.",
    "blank": "viento"
+  }
+ ],
+ "w|vientre": [
+  {
+   "text": "Después de cenar tanto, a Mateo le dolía el vientre.",
+   "en": "After eating so much dinner, Mateo's belly hurt.",
+   "ko": "저녁을 너무 많이 먹어서 마테오는 배가 아팠어요.",
+   "blank": "vientre",
+   "src": "made"
+  },
+  {
+   "text": "El testigo dijo que el ladrón tenía un tatuaje en el vientre.",
+   "en": "The witness said the thief had a tattoo on his belly.",
+   "ko": "목격자는 도둑의 배에 문신이 있었다고 했어요.",
+   "blank": "vientre",
+   "src": "made"
   }
  ],
  "w|viernes": [
@@ -52417,6 +53009,22 @@
    "en": "Have you eaten yet?",
    "ko": "밥 먹었어?",
    "blank": "Ya"
+  }
+ ],
+ "w|yacer": [
+  {
+   "text": "Mateo encontró una pelota que yacía olvidada bajo el sofá.",
+   "en": "Mateo found a ball that lay forgotten under the sofa.",
+   "ko": "마테오는 소파 밑에 잊힌 채 놓여 있던 공을 찾았어요.",
+   "blank": "yacía",
+   "src": "made"
+  },
+  {
+   "text": "En ese cementerio yace el antiguo compañero de la inspectora Carmen.",
+   "en": "Inspector Carmen's former partner lies in that cemetery.",
+   "ko": "그 묘지에 카르멘 경감의 옛 동료가 잠들어 있어요.",
+   "blank": "yace",
+   "src": "made"
   }
  ],
  "w|yate": [
