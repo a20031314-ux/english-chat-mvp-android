@@ -4923,6 +4923,22 @@
    "src": "made"
   }
  ],
+ "w|arsenale": [
+  {
+   "text": "Nella cantina del sospettato Matteo ha trovato un arsenale di petardi illegali.",
+   "en": "In the suspect's cellar Matteo found an arsenal of illegal firecrackers.",
+   "ko": "마테오는 용의자의 지하실에서 불법 폭죽을 잔뜩 찾아냈어요.",
+   "blank": "arsenale",
+   "src": "made"
+  },
+  {
+   "text": "Nello zaino Sara ha un arsenale di gel, cerotti e barrette.",
+   "en": "In her backpack Sara has an arsenal of gels, bandages and bars.",
+   "ko": "사라의 배낭에는 젤, 반창고, 바가 잔뜩 들어 있어요.",
+   "blank": "arsenale",
+   "src": "made"
+  }
+ ],
  "w|arte": [
   {
    "text": "L'arte mi aiuta a rilassarmi.",
@@ -8021,6 +8037,22 @@
    "src": "made"
   }
  ],
+ "w|battezzare": [
+  {
+   "text": "I colleghi di Matteo hanno battezzato Fulmine il nuovo cane antidroga.",
+   "en": "Matteo's colleagues named the new drug-sniffing dog Fulmine.",
+   "ko": "마테오의 동료들은 새 마약 탐지견에게 풀미네라는 이름을 붙였어요.",
+   "blank": "battezzato",
+   "src": "made"
+  },
+  {
+   "text": "Sara ha battezzato le scarpe nuove proprio nella maratona di oggi.",
+   "en": "Sara broke in her new shoes right at today's marathon.",
+   "ko": "사라는 새 신발을 바로 오늘 마라톤에서 처음 신었어요.",
+   "blank": "battezzato",
+   "src": "made"
+  }
+ ],
  "w|battito": [
   {
    "text": "Il battito del cuore accelerava.",
@@ -8763,6 +8795,22 @@
    "src": "made"
   }
  ],
+ "w|blaterare": [
+  {
+   "text": "Il testimone continua a blaterare di dischi volanti, e Matteo sospira.",
+   "en": "The witness keeps babbling about flying saucers, and Matteo sighs.",
+   "ko": "목격자가 계속 비행접시 얘기를 늘어놓자 마테오는 한숨을 쉬어요.",
+   "blank": "blaterare",
+   "src": "made"
+  },
+  {
+   "text": "Al chilometro trenta, un corridore accanto a Sara non smette di blaterare.",
+   "en": "At kilometer thirty, a runner next to Sara won't stop blabbering.",
+   "ko": "삼십 킬로미터 지점에서 사라 옆 주자가 쉬지 않고 떠들어 대요.",
+   "blank": "blaterare",
+   "src": "made"
+  }
+ ],
  "w|bloccare": [
   {
    "text": "La neve potrebbe bloccare la strada.",
@@ -9169,6 +9217,22 @@
    "en": "The pack of dogs was playing in the park.",
    "ko": "개 무리가 공원에서 놀고 있었어.",
    "blank": "branco"
+  }
+ ],
+ "w|brasiliano": [
+  {
+   "text": "Una turista brasiliana viene da Matteo perché ha perso il passaporto.",
+   "en": "A Brazilian tourist comes to Matteo because she has lost her passport.",
+   "ko": "브라질 관광객이 여권을 잃어버려서 마테오를 찾아와요.",
+   "blank": "brasiliana",
+   "src": "made"
+  },
+  {
+   "text": "Per un tratto Sara corre accanto a un atleta brasiliano molto simpatico.",
+   "en": "For a stretch Sara runs alongside a very friendly Brazilian athlete.",
+   "ko": "사라는 한동안 아주 친절한 브라질 선수와 나란히 달려요.",
+   "blank": "brasiliano",
+   "src": "made"
   }
  ],
  "w|bravissimo": [
@@ -9806,6 +9870,22 @@
    "en": "A group of cadets in uniform applauds Laura along the route.",
    "ko": "제복을 입은 생도들이 코스를 따라 라우라에게 박수를 쳐요.",
    "blank": "cadetti",
+   "src": "made"
+  }
+ ],
+ "w|caduta": [
+  {
+   "text": "Matteo scrive un verbale sulla caduta di un ciclista davanti alla stazione.",
+   "en": "Matteo writes a report on a cyclist's fall in front of the station.",
+   "ko": "마테오는 역 앞에서 자전거 탄 사람이 넘어진 일에 대한 조서를 써요.",
+   "blank": "caduta",
+   "src": "made"
+  },
+  {
+   "text": "Sara si rialza subito dopo una brutta caduta sull'asfalto bagnato.",
+   "en": "Sara gets right back up after a bad fall on the wet asphalt.",
+   "ko": "사라는 젖은 아스팔트에서 심하게 넘어진 뒤 바로 일어나요.",
+   "blank": "caduta",
    "src": "made"
   }
  ],
@@ -14875,6 +14955,22 @@
    "src": "made"
   }
  ],
+ "w|compensare": [
+  {
+   "text": "Matteo resta in ufficio fino a tardi per compensare le ore perse ieri.",
+   "en": "Matteo stays at the office until late to make up for the hours lost yesterday.",
+   "ko": "마테오는 어제 못 채운 시간을 메우려고 늦게까지 사무실에 남아요.",
+   "blank": "compensare",
+   "src": "made"
+  },
+  {
+   "text": "Per compensare le calorie bruciate, Sara mangia un piatto enorme di pasta.",
+   "en": "To make up for the calories she burned, Sara eats a huge plate of pasta.",
+   "ko": "사라는 태운 칼로리를 보충하려고 파스타를 한가득 먹어요.",
+   "blank": "compensare",
+   "src": "made"
+  }
+ ],
  "w|competenza": [
   {
    "text": "Marco ha la competenza giusta per gestire la cucina quando lo chef è assente.",
@@ -16345,6 +16441,22 @@
    "src": "made"
   }
  ],
+ "w|conservatore": [
+  {
+   "text": "Il vecchio commissario ha idee molto conservatrici, e Matteo spesso non è d'accordo.",
+   "en": "The old commissioner has very conservative ideas, and Matteo often disagrees.",
+   "ko": "나이 든 서장은 생각이 아주 보수적이라 마테오는 자주 동의하지 않아요.",
+   "blank": "conservatrici",
+   "src": "made"
+  },
+  {
+   "text": "Sara sceglie una strategia conservatrice per la prima metà della gara.",
+   "en": "Sara picks a conservative strategy for the first half of the race.",
+   "ko": "사라는 경기 전반에 보수적인 전략을 골라요.",
+   "blank": "conservatrice",
+   "src": "made"
+  }
+ ],
  "w|considerare": [
   {
    "text": "Dobbiamo considerare tutte le opzioni.",
@@ -16508,6 +16620,22 @@
    "en": "In winter Chiara tries to use less gas by turning the heating down at night.",
    "ko": "겨울에 키아라는 밤에 난방을 낮춰서 가스를 덜 쓰려고 해요.",
    "blank": "consumare",
+   "src": "made"
+  }
+ ],
+ "w|consumatore": [
+  {
+   "text": "Un consumatore truffato da un sito online viene a denunciare tutto a Matteo.",
+   "en": "A consumer cheated by a website comes to report everything to Matteo.",
+   "ko": "온라인 사이트에서 사기당한 소비자가 마테오에게 모든 걸 신고하러 와요.",
+   "blank": "consumatore",
+   "src": "made"
+  },
+  {
+   "text": "Secondo Sara, il consumatore medio spende troppo per le scarpe da corsa.",
+   "en": "According to Sara, the average consumer spends too much on running shoes.",
+   "ko": "사라는 보통 소비자가 러닝화에 돈을 너무 많이 쓴다고 생각해요.",
+   "blank": "consumatore",
    "src": "made"
   }
  ],
@@ -20441,6 +20569,22 @@
    "src": "made"
   }
  ],
+ "w|dialetto": [
+  {
+   "text": "Il contadino parla in dialetto stretto, e Matteo chiama un collega che lo capisce.",
+   "en": "The farmer speaks in thick dialect, and Matteo calls a colleague who understands it.",
+   "ko": "농부가 진한 사투리로 말해서 마테오는 알아듣는 동료를 불러요.",
+   "blank": "dialetto",
+   "src": "made"
+  },
+  {
+   "text": "Un anziano sul marciapiede incita Sara in dialetto, e Sara non capisce niente.",
+   "en": "An old man on the sidewalk cheers Sara on in dialect, and Sara doesn't understand a thing.",
+   "ko": "길가의 할아버지가 사투리로 사라를 응원하는데 사라는 하나도 못 알아들어요.",
+   "blank": "dialetto",
+   "src": "made"
+  }
+ ],
  "w|diamante": [
   {
    "text": "L'anello ha un diamante al centro.",
@@ -21009,6 +21153,22 @@
    "src": "made"
   }
  ],
+ "w|dinastia": [
+  {
+   "text": "Il gioielliere derubato appartiene a una dinastia di orafi, spiega Matteo al commissario.",
+   "en": "The robbed jeweler belongs to a dynasty of goldsmiths, Matteo explains to the commissioner.",
+   "ko": "털린 보석상은 금세공 명가 출신이라고 마테오가 서장에게 설명해요.",
+   "blank": "dinastia",
+   "src": "made"
+  },
+  {
+   "text": "La famiglia di Sara è una vera dinastia di maratoneti, dal nonno alla zia.",
+   "en": "Sara's family is a real dynasty of marathon runners, from her grandfather to her aunt.",
+   "ko": "사라네 가족은 할아버지부터 이모까지 진짜 마라토너 집안이에요.",
+   "blank": "dinastia",
+   "src": "made"
+  }
+ ],
  "w|dio": [
   {
    "text": "Dio mio, che fame!",
@@ -21253,6 +21413,22 @@
    "en": "Turn right, then go straight.",
    "ko": "오른쪽으로 돈 다음 직진해.",
    "blank": "diritto"
+  }
+ ],
+ "w|dirottare": [
+  {
+   "text": "Per il corteo di domenica, Matteo deve dirottare il traffico su un'altra strada.",
+   "en": "For Sunday's parade, Matteo has to divert traffic onto another road.",
+   "ko": "일요일 행진 때문에 마테오는 차량을 다른 길로 돌려야 해요.",
+   "blank": "dirottare",
+   "src": "made"
+  },
+  {
+   "text": "Un incidente costringe gli organizzatori a dirottare i corridori su una strada laterale, e Sara si confonde.",
+   "en": "An accident forces the organizers to divert the runners onto a side street, and Sara gets confused.",
+   "ko": "사고 때문에 주최 측이 주자들을 옆길로 돌리자 사라는 헷갈려요.",
+   "blank": "dirottare",
+   "src": "made"
   }
  ],
  "w|disabile": [
@@ -21783,6 +21959,22 @@
    "src": "made"
   }
  ],
+ "w|disputa": [
+  {
+   "text": "Due vicini arrivano in commissariato per una disputa su un parcheggio, e Matteo li ascolta con pazienza.",
+   "en": "Two neighbors come to the station over a dispute about a parking space, and Matteo listens patiently.",
+   "ko": "두 이웃이 주차 자리 다툼으로 경찰서에 오자 마테오가 참을성 있게 들어 줘요.",
+   "blank": "disputa",
+   "src": "made"
+  },
+  {
+   "text": "Tra Sara e un'altra atleta nasce una disputa su chi è arrivata prima.",
+   "en": "A dispute breaks out between Sara and another athlete over who finished first.",
+   "ko": "사라와 다른 선수 사이에 누가 먼저 들어왔는지를 두고 다툼이 생겨요.",
+   "blank": "disputa",
+   "src": "made"
+  }
+ ],
  "w|dissanguare": [
   {
    "text": "Stefano guarda un film storico in cui un soldato rischia di dissanguarsi sul campo.",
@@ -22129,6 +22321,22 @@
    "blank": "diversamente"
   }
  ],
+ "w|diversi": [
+  {
+   "text": "Matteo ha interrogato diversi testimoni, ma nessuno ha visto la targa.",
+   "en": "Matteo questioned several witnesses, but nobody saw the license plate.",
+   "ko": "마테오는 여러 목격자를 조사했지만 아무도 번호판을 보지 못했어요.",
+   "blank": "diversi",
+   "src": "made"
+  },
+  {
+   "text": "Sara ha corso diversi chilometri sotto la pioggia senza fermarsi.",
+   "en": "Sara ran several kilometers in the rain without stopping.",
+   "ko": "사라는 빗속에서 여러 킬로미터를 쉬지 않고 달렸어요.",
+   "blank": "diversi",
+   "src": "made"
+  }
+ ],
  "w|diverso": [
   {
    "text": "Oggi ti vedo diverso.",
@@ -22287,6 +22495,22 @@
    "en": "She wants to divorce as soon as possible.",
    "ko": "그녀는 되도록 빨리 이혼하고 싶어해.",
    "blank": "divorziare"
+  }
+ ],
+ "w|dizionario": [
+  {
+   "text": "Matteo usa un dizionario per capire la lettera scritta in tedesco.",
+   "en": "Matteo uses a dictionary to understand the letter written in German.",
+   "ko": "마테오는 독일어로 쓴 편지를 이해하려고 사전을 써요.",
+   "blank": "dizionario",
+   "src": "made"
+  },
+  {
+   "text": "Sara cerca sul dizionario il nome del muscolo che le fa male.",
+   "en": "Sara looks up in the dictionary the name of the muscle that hurts.",
+   "ko": "사라는 아픈 근육의 이름을 사전에서 찾아봐요.",
+   "blank": "dizionario",
+   "src": "made"
   }
  ],
  "w|doccia": [
@@ -25205,6 +25429,22 @@
    "src": "made"
   }
  ],
+ "w|espulsione": [
+  {
+   "text": "Matteo spiega al ragazzo che, con altri graffiti, rischia l'espulsione dalla scuola.",
+   "en": "Matteo explains to the boy that with more graffiti he risks expulsion from school.",
+   "ko": "마테오는 소년에게 낙서를 더 하면 퇴학당할 수 있다고 설명해요.",
+   "blank": "espulsione",
+   "src": "made"
+  },
+  {
+   "text": "Sara legge il regolamento: chi riceve aiuto esterno rischia l'espulsione dalla gara.",
+   "en": "Sara reads the rules: anyone who gets outside help risks being thrown out of the race.",
+   "ko": "사라가 규정을 읽어 보니 외부 도움을 받으면 경기에서 실격될 수 있어요.",
+   "blank": "espulsione",
+   "src": "made"
+  }
+ ],
  "w|essenza": [
   {
    "text": "Secondo Marco, l'essenza di un buon capo è saper ascoltare.",
@@ -25431,6 +25671,22 @@
    "en": "I am extremely grateful for your help.",
    "ko": "네 도움에 정말 고마워.",
    "blank": "estremamente"
+  }
+ ],
+ "w|estremista": [
+  {
+   "text": "Matteo legge un rapporto su un gruppo estremista che scrive slogan sui muri.",
+   "en": "Matteo reads a report on an extremist group that writes slogans on walls.",
+   "ko": "마테오는 벽에 구호를 쓰는 극단주의 단체에 대한 보고서를 읽어요.",
+   "blank": "estremista",
+   "src": "made"
+  },
+  {
+   "text": "Prima della gara Sara segue una dieta quasi estremista, senza zucchero né pane.",
+   "en": "Before the race Sara follows an almost extremist diet, with no sugar or bread.",
+   "ko": "사라는 경기 전에 설탕도 빵도 먹지 않는 거의 극단적인 식단을 지켜요.",
+   "blank": "estremista",
+   "src": "made"
   }
  ],
  "w|estremo": [
@@ -26938,6 +27194,22 @@
    "en": "At the refreshment point Laura grabbed a slice of orange on the run.",
    "ko": "급수대에서 라우라는 오렌지 한 조각을 재빨리 집었어요.",
    "blank": "fetta",
+   "src": "made"
+  }
+ ],
+ "w|fiaba": [
+  {
+   "text": "La bambina smarrita si calma quando Matteo le racconta una fiaba.",
+   "en": "The lost little girl calms down when Matteo tells her a fairy tale.",
+   "ko": "길 잃은 여자아이는 마테오가 동화를 들려주자 진정해요.",
+   "blank": "fiaba",
+   "src": "made"
+  },
+  {
+   "text": "Per Sara finire la prima maratona è stato come vivere una fiaba.",
+   "en": "For Sara, finishing her first marathon was like living a fairy tale.",
+   "ko": "사라에게 첫 마라톤 완주는 동화 속에 사는 것 같았어요.",
+   "blank": "fiaba",
    "src": "made"
   }
  ],
@@ -33345,6 +33617,22 @@
    "src": "made"
   }
  ],
+ "w|imputato": [
+  {
+   "text": "Matteo accompagna l'imputato in tribunale per l'udienza.",
+   "en": "Matteo escorts the defendant to court for the hearing.",
+   "ko": "마테오는 피고인을 재판정의 심리에 데려가요.",
+   "blank": "imputato",
+   "src": "made"
+  },
+  {
+   "text": "Nella disputa sull'arrivo, Sara si sente come un imputato davanti ai giudici di gara.",
+   "en": "In the dispute over the finish, Sara feels like a defendant in front of the race officials.",
+   "ko": "결승 다툼에서 사라는 심판들 앞에 선 피고인 같은 기분이 들어요.",
+   "blank": "imputato",
+   "src": "made"
+  }
+ ],
  "w|in": [
   {
    "text": "Sono in cucina.",
@@ -33633,6 +33921,22 @@
    "en": "She found out she was pregnant yesterday.",
    "ko": "어제 임신한 걸 알았어.",
    "blank": "incinta"
+  }
+ ],
+ "w|incline": [
+  {
+   "text": "Matteo non è incline a credere alle scuse dei ladri di biciclette.",
+   "en": "Matteo isn't inclined to believe bicycle thieves' excuses.",
+   "ko": "마테오는 자전거 도둑들의 변명을 믿는 편이 아니에요.",
+   "blank": "incline",
+   "src": "made"
+  },
+  {
+   "text": "Sara è incline a partire troppo veloce, quindi l'allenatore la frena.",
+   "en": "Sara tends to start too fast, so her coach holds her back.",
+   "ko": "사라는 너무 빨리 출발하는 편이라 코치가 말려요.",
+   "blank": "incline",
+   "src": "made"
   }
  ],
  "w|includere": [
@@ -35112,6 +35416,22 @@
    "en": "The tenant of the house next to Sara plays the guitar on the terrace.",
    "ko": "사라네 옆집 세입자는 테라스에서 기타를 쳐요.",
    "blank": "inquilino",
+   "src": "made"
+  }
+ ],
+ "w|insabbiare": [
+  {
+   "text": "Qualcuno voleva insabbiare l'indagine, ma Matteo ha continuato a cercare.",
+   "en": "Someone wanted to cover up the investigation, but Matteo kept digging.",
+   "ko": "누군가 수사를 덮으려 했지만 마테오는 계속 파고들었어요.",
+   "blank": "insabbiare",
+   "src": "made"
+  },
+  {
+   "text": "Il vento del mare rischia di insabbiare il tratto di percorso vicino alla spiaggia dove corre Sara.",
+   "en": "The sea wind threatens to cover the stretch of the course by the beach where Sara runs with sand.",
+   "ko": "바닷바람 때문에 사라가 달리는 해변 근처 코스가 모래에 덮일 수도 있어요.",
+   "blank": "insabbiare",
    "src": "made"
   }
  ],
@@ -38327,6 +38647,22 @@
    "src": "made"
   }
  ],
+ "w|limare": [
+  {
+   "text": "Il commissario chiede a Matteo di limare il rapporto prima di consegnarlo.",
+   "en": "The commissioner asks Matteo to polish the report before handing it in.",
+   "ko": "서장은 마테오에게 보고서를 제출하기 전에 다듬으라고 해요.",
+   "blank": "limare",
+   "src": "made"
+  },
+  {
+   "text": "Quest'anno Sara spera di limare qualche secondo dal suo record personale.",
+   "en": "This year Sara hopes to shave a few seconds off her personal best.",
+   "ko": "올해 사라는 개인 기록을 몇 초라도 줄이고 싶어 해요.",
+   "blank": "limare",
+   "src": "made"
+  }
+ ],
  "w|limitare": [
   {
    "text": "Simone cerca di limitare le spese mangiando panini a pranzo.",
@@ -38402,6 +38738,22 @@
    "en": "To explain acidity to the students, Anna uses lemon juice.",
    "ko": "학생들에게 산성을 설명하려고 안나는 레몬즙을 써요.",
    "blank": "limone",
+   "src": "made"
+  }
+ ],
+ "w|lindo": [
+  {
+   "text": "Dopo le pulizie del venerdì, l'ufficio di Matteo è lindo come non mai.",
+   "en": "After the Friday cleaning, Matteo's office is spotless as never before.",
+   "ko": "금요일 청소가 끝나면 마테오의 사무실은 어느 때보다 깔끔해요.",
+   "blank": "lindo",
+   "src": "made"
+  },
+  {
+   "text": "La mattina della gara Sara indossa una maglietta linda e profumata.",
+   "en": "On race morning Sara puts on a clean, fresh-smelling shirt.",
+   "ko": "경기 날 아침 사라는 깨끗하고 향긋한 셔츠를 입어요.",
+   "blank": "linda",
    "src": "made"
   }
  ],
@@ -39963,6 +40315,22 @@
    "blank": "maniera"
   }
  ],
+ "w|manifestare": [
+  {
+   "text": "Gli studenti chiedono a Matteo il permesso di manifestare in piazza sabato.",
+   "en": "The students ask Matteo for permission to demonstrate in the square on Saturday.",
+   "ko": "학생들이 마테오에게 토요일에 광장에서 시위해도 되는지 허가를 물어요.",
+   "blank": "manifestare",
+   "src": "made"
+  },
+  {
+   "text": "Verso metà gara Sara comincia a manifestare i primi segni di stanchezza.",
+   "en": "Around the middle of the race Sara starts to show the first signs of fatigue.",
+   "ko": "경기 중반쯤 사라는 피로한 기색을 보이기 시작해요.",
+   "blank": "manifestare",
+   "src": "made"
+  }
+ ],
  "w|manifestazione": [
   {
    "text": "Stefano chiede l'autorizzazione per una manifestazione sportiva in piazza.",
@@ -40039,6 +40407,22 @@
    "en": "Wash your hands before dinner.",
    "ko": "저녁 먹기 전에 손 씻어.",
    "blank": "mani"
+  }
+ ],
+ "w|manomettere": [
+  {
+   "text": "Secondo Matteo, qualcuno ha cercato di manomettere la serratura della porta sul retro.",
+   "en": "According to Matteo, someone tried to tamper with the lock on the back door.",
+   "ko": "마테오는 누군가 뒷문 자물쇠를 건드리려 했다고 봐요.",
+   "blank": "manomettere",
+   "src": "made"
+  },
+  {
+   "text": "Gli organizzatori scoprono che qualcuno ha manomesso il cronometro, e Sara deve aspettare il tempo ufficiale.",
+   "en": "The organizers find out someone tampered with the timer, and Sara has to wait for the official time.",
+   "ko": "주최 측이 누군가 시계를 조작한 걸 알게 돼서 사라는 공식 기록을 기다려야 해요.",
+   "blank": "manomesso",
+   "src": "made"
   }
  ],
  "w|manoscritto": [
@@ -42411,6 +42795,22 @@
    "src": "made"
   }
  ],
+ "w|mischiare": [
+  {
+   "text": "Il ladro ha provato a mischiare i documenti falsi con quelli veri, ma Matteo se n'è accorto.",
+   "en": "The thief tried to mix the fake documents with the real ones, but Matteo noticed.",
+   "ko": "도둑은 가짜 서류를 진짜 서류와 섞으려 했지만 마테오가 알아챘어요.",
+   "blank": "mischiare",
+   "src": "made"
+  },
+  {
+   "text": "Sara ama mischiare sali minerali e succo d'arancia nella borraccia.",
+   "en": "Sara likes to mix mineral salts and orange juice in her water bottle.",
+   "ko": "사라는 물병에 미네랄 소금과 오렌지 주스를 섞는 걸 좋아해요.",
+   "blank": "mischiare",
+   "src": "made"
+  }
+ ],
  "w|miserabile": [
   {
    "text": "In classe Paolo legge un romanzo sulla vita miserabile dei bambini nelle miniere.",
@@ -43271,6 +43671,22 @@
    "en": "That monster lives only in fairy tales.",
    "ko": "그 괴물은 동화 속에만 살아.",
    "blank": "mostro"
+  }
+ ],
+ "w|mostruoso": [
+  {
+   "text": "Stamattina il traffico era mostruoso, e Matteo è arrivato tardi al commissariato.",
+   "en": "This morning the traffic was monstrous, and Matteo got to the police station late.",
+   "ko": "오늘 아침 교통이 끔찍해서 마테오는 경찰서에 늦게 도착했어요.",
+   "blank": "mostruoso",
+   "src": "made"
+  },
+  {
+   "text": "L'ultima salita è mostruosa, ma Sara non si mette mai a camminare.",
+   "en": "The last climb is monstrous, but Sara never starts walking.",
+   "ko": "마지막 오르막은 엄청나지만 사라는 절대 걷지 않아요.",
+   "blank": "mostruosa",
+   "src": "made"
   }
  ],
  "w|motel": [
@@ -45429,6 +45845,22 @@
    "en": "This seat is taken.",
    "ko": "이 자리는 사람이 있어.",
    "blank": "occupato"
+  }
+ ],
+ "w|occuparsi": [
+  {
+   "text": "Oggi Matteo deve occuparsi di una denuncia per il furto di una bicicletta.",
+   "en": "Today Matteo has to deal with a report about a stolen bicycle.",
+   "ko": "오늘 마테오는 자전거 도난 신고를 처리해야 해요.",
+   "blank": "occuparsi",
+   "src": "made"
+  },
+  {
+   "text": "Il fratello di Sara deve occuparsi dell'acqua al decimo chilometro.",
+   "en": "Sara's brother has to take care of the water at the tenth kilometer.",
+   "ko": "사라의 오빠는 십 킬로미터 지점에서 물을 맡아야 해요.",
+   "blank": "occuparsi",
+   "src": "made"
   }
  ],
  "w|occupato": [
@@ -53149,6 +53581,22 @@
    "blank": "primavera"
   }
  ],
+ "w|primitivo": [
+  {
+   "text": "Il computer del commissariato è così primitivo che Matteo usa ancora carta e penna.",
+   "en": "The station's computer is so primitive that Matteo still uses pen and paper.",
+   "ko": "경찰서 컴퓨터가 너무 원시적이라 마테오는 아직도 종이와 펜을 써요.",
+   "blank": "primitivo",
+   "src": "made"
+  },
+  {
+   "text": "Sara dice che correre è il gesto più primitivo dell'essere umano.",
+   "en": "Sara says that running is the most primitive human act.",
+   "ko": "사라는 달리기가 인간의 가장 원초적인 동작이라고 말해요.",
+   "blank": "primitivo",
+   "src": "made"
+  }
+ ],
  "w|primo": [
   {
    "text": "Prendo il primo treno.",
@@ -54009,6 +54457,22 @@
    "en": "Can I suggest another place for dinner?",
    "ko": "저녁 먹을 다른 곳을 제안해도 될까?",
    "blank": "proporre"
+  }
+ ],
+ "w|proporzione": [
+  {
+   "text": "Matteo nota che i furti in centro crescono in proporzione al numero di turisti.",
+   "en": "Matteo notices that thefts downtown grow in proportion to the number of tourists.",
+   "ko": "마테오는 시내 도난이 관광객 수에 비례해서 늘어난다는 걸 알아차려요.",
+   "blank": "proporzione",
+   "src": "made"
+  },
+  {
+   "text": "Nelle giornate calde Sara beve acqua in proporzione al sudore che perde.",
+   "en": "On hot days Sara drinks water in proportion to the sweat she loses.",
+   "ko": "더운 날이면 사라는 흘린 땀에 비례해서 물을 마셔요.",
+   "blank": "proporzione",
+   "src": "made"
   }
  ],
  "w|proposito": [
@@ -57555,6 +58019,22 @@
    "blank": "rete"
   }
  ],
+ "w|retro": [
+  {
+   "text": "Secondo Matteo, qualcuno ha cercato di manomettere la serratura della porta sul retro.",
+   "en": "According to Matteo, someone tried to tamper with the lock on the back door.",
+   "ko": "마테오는 누군가 뒷문 자물쇠를 건드리려 했다고 봐요.",
+   "blank": "retro",
+   "src": "made"
+  },
+  {
+   "text": "Sara attacca il pettorale sul davanti della maglietta, non sul retro.",
+   "en": "Sara pins her race bib on the front of her shirt, not on the back.",
+   "ko": "사라는 번호표를 셔츠 뒤가 아니라 앞에 달아요.",
+   "blank": "retro",
+   "src": "made"
+  }
+ ],
  "w|reverendo": [
   {
    "text": "Il reverendo ha parlato con voce calma.",
@@ -57582,6 +58062,22 @@
    "en": "Anna's article is still under review at a scientific journal.",
    "ko": "안나의 논문은 아직 한 과학 저널에서 심사 중이에요.",
    "blank": "revisione",
+   "src": "made"
+  }
+ ],
+ "w|revocare": [
+  {
+   "text": "Il giudice potrebbe revocare la patente all'automobilista fermato da Matteo.",
+   "en": "The judge could revoke the license of the driver Matteo pulled over.",
+   "ko": "판사는 마테오가 세운 운전자의 면허를 취소할 수도 있어요.",
+   "blank": "revocare",
+   "src": "made"
+  },
+  {
+   "text": "Gli organizzatori possono revocare la medaglia a chi taglia il percorso, ricorda Sara.",
+   "en": "The organizers can revoke the medal of anyone who cuts the course, Sara points out.",
+   "ko": "코스를 가로지른 사람은 주최 측이 메달을 박탈할 수 있다고 사라가 말해요.",
+   "blank": "revocare",
    "src": "made"
   }
  ],
@@ -59863,6 +60359,22 @@
    "src": "made"
   }
  ],
+ "w|rivolta": [
+  {
+   "text": "Per un esame, Matteo studia la storia di una rivolta contadina dell'Ottocento.",
+   "en": "For an exam, Matteo is studying the history of a nineteenth-century peasant revolt.",
+   "ko": "마테오는 시험 때문에 십구 세기 농민 봉기의 역사를 공부해요.",
+   "blank": "rivolta",
+   "src": "made"
+  },
+  {
+   "text": "Dopo l'ultima salita le gambe di Sara sono in piena rivolta.",
+   "en": "After the last climb Sara's legs are in full revolt.",
+   "ko": "마지막 오르막을 지나자 사라의 다리가 완전히 반란을 일으켜요.",
+   "blank": "rivolta",
+   "src": "made"
+  }
+ ],
  "w|rivoltare": [
   {
    "text": "L'inizio non funziona, così Simone decide di rivoltare l'articolo come un calzino.",
@@ -60412,6 +60924,22 @@
    "en": "At school Francesca used to try to sabotage the plays so she wouldn't have to sing.",
    "ko": "학교 다닐 때 프란체스카는 노래 안 하려고 학예회를 망치려 했어요.",
    "blank": "sabotare",
+   "src": "made"
+  }
+ ],
+ "w|saccheggiare": [
+  {
+   "text": "Alcuni vandali hanno saccheggiato il chiosco del parco, e Matteo raccoglie le prove.",
+   "en": "Some vandals ransacked the kiosk in the park, and Matteo gathers the evidence.",
+   "ko": "몇몇 불량배가 공원 매점을 털어 가서 마테오가 증거를 모아요.",
+   "blank": "saccheggiato",
+   "src": "made"
+  },
+  {
+   "text": "All'arrivo i corridori affamati sembrano saccheggiare il tavolo della frutta, e Sara ride.",
+   "en": "At the finish the hungry runners seem to raid the fruit table, and Sara laughs.",
+   "ko": "결승점에서 배고픈 주자들이 과일 테이블을 털어 가는 것 같아서 사라가 웃어요.",
+   "blank": "saccheggiare",
    "src": "made"
   }
  ],
@@ -65219,6 +65747,22 @@
    "blank": "sintomo"
   }
  ],
+ "w|sipario": [
+  {
+   "text": "Al teatro comunale qualcuno ha rubato il sipario, e Matteo non riesce a crederci.",
+   "en": "Someone stole the curtain at the town theater, and Matteo can't believe it.",
+   "ko": "시립 극장에서 누군가 무대 막을 훔쳐 가서 마테오는 믿을 수가 없어요.",
+   "blank": "sipario",
+   "src": "made"
+  },
+  {
+   "text": "Quando Sara taglia il traguardo, cala il sipario su mesi di allenamento.",
+   "en": "When Sara crosses the finish line, the curtain falls on months of training.",
+   "ko": "사라가 결승선을 통과하면 몇 달간의 훈련에 막이 내려요.",
+   "blank": "sipario",
+   "src": "made"
+  }
+ ],
  "w|sirena": [
   {
    "text": "La sirena dell'ambulanza si sente da lontano.",
@@ -65318,6 +65862,22 @@
    "en": "In the crush Sara nearly loses her scarf.",
    "ko": "사람들 틈에서 사라는 목도리를 잃어버릴 뻔해요.",
    "blank": "smarrire",
+   "src": "made"
+  }
+ ],
+ "w|smascherare": [
+  {
+   "text": "Con un semplice controllo Matteo riesce a smascherare il falso tecnico del gas.",
+   "en": "With a simple check Matteo manages to unmask the fake gas technician.",
+   "ko": "마테오는 간단한 확인으로 가짜 가스 기사의 정체를 밝혀내요.",
+   "blank": "smascherare",
+   "src": "made"
+  },
+  {
+   "text": "Le foto del percorso hanno smascherato un corridore che aveva preso il tram, racconta Sara.",
+   "en": "The course photos exposed a runner who had taken the tram, Sara says.",
+   "ko": "코스 사진 덕분에 전차를 탄 주자가 들통났다고 사라가 이야기해요.",
+   "blank": "smascherato",
    "src": "made"
   }
  ],
@@ -68597,6 +69157,22 @@
    "src": "made"
   }
  ],
+ "w|stereotipo": [
+  {
+   "text": "Matteo è stanco dello stereotipo del poliziotto che mangia solo ciambelle.",
+   "en": "Matteo is tired of the stereotype of the police officer who only eats doughnuts.",
+   "ko": "마테오는 도넛만 먹는 경찰이라는 고정관념에 지쳤어요.",
+   "blank": "stereotipo",
+   "src": "made"
+  },
+  {
+   "text": "Sara smentisce lo stereotipo secondo cui la maratona è solo per i giovani.",
+   "en": "Sara disproves the stereotype that the marathon is only for young people.",
+   "ko": "사라는 마라톤이 젊은이들만의 것이라는 고정관념을 깨요.",
+   "blank": "stereotipo",
+   "src": "made"
+  }
+ ],
  "w|sterile": [
   {
    "text": "L'infermiera apre una garza sterile davanti a Paolo.",
@@ -70421,6 +70997,22 @@
    "src": "made"
   }
  ],
+ "w|tangente": [
+  {
+   "text": "Il costruttore ha offerto una tangente a un funzionario, e Matteo ha raccolto le prove.",
+   "en": "The builder offered a bribe to an official, and Matteo collected the evidence.",
+   "ko": "건설업자가 공무원에게 뇌물을 건넸고 마테오가 증거를 모았어요.",
+   "blank": "tangente",
+   "src": "made"
+  },
+  {
+   "text": "Quando parla di corsa, Sara parte per la tangente e non si ferma più.",
+   "en": "When she talks about running, Sara goes off on a tangent and never stops.",
+   "ko": "달리기 얘기만 나오면 사라는 옆길로 새서 멈추질 않아요.",
+   "blank": "tangente",
+   "src": "made"
+  }
+ ],
  "w|tantissimo": [
   {
    "text": "Ti voglio tantissimo bene.",
@@ -71006,6 +71598,22 @@
    "en": "For her first race, Elena's grandmother sent her a good-luck telegram.",
    "ko": "첫 대회를 앞둔 엘레나에게 할머니가 응원 전보를 보냈어요.",
    "blank": "telegramma",
+   "src": "made"
+  }
+ ],
+ "w|telescopio": [
+  {
+   "text": "Un vicino denuncia il furto di un telescopio dal balcone, e Matteo compila il verbale.",
+   "en": "A neighbor reports a telescope stolen from his balcony, and Matteo fills out the report.",
+   "ko": "한 이웃이 발코니에서 망원경을 도둑맞았다고 신고하자 마테오가 조서를 작성해요.",
+   "blank": "telescopio",
+   "src": "made"
+  },
+  {
+   "text": "Dal balcone, il padre di Sara cerca la figlia col telescopio tra migliaia di corridori.",
+   "en": "From the balcony, Sara's father looks for his daughter with a telescope among thousands of runners.",
+   "ko": "사라의 아버지는 발코니에서 망원경으로 수천 명의 주자 사이에서 딸을 찾아요.",
+   "blank": "telescopio",
    "src": "made"
   }
  ],
@@ -75115,6 +75723,22 @@
    "src": "made"
   }
  ],
+ "w|variabile": [
+  {
+   "text": "In commissariato l'orario di Matteo è variabile: a volte lavora di notte, a volte di giorno.",
+   "en": "At the police station Matteo's hours vary: sometimes he works nights, sometimes days.",
+   "ko": "경찰서에서 마테오의 근무 시간은 들쭉날쭉해서 밤에 일할 때도 낮에 일할 때도 있어요.",
+   "blank": "variabile",
+   "src": "made"
+  },
+  {
+   "text": "Il meteo per la maratona di Sara è variabile, con possibili piogge nel pomeriggio.",
+   "en": "The weather for Sara's marathon is changeable, with possible rain in the afternoon.",
+   "ko": "사라가 뛰는 마라톤 날 날씨는 변덕스러워서 오후에 비가 올 수도 있어요.",
+   "blank": "variabile",
+   "src": "made"
+  }
+ ],
  "w|vario": [
   {
    "text": "Abbiamo un menu vario oggi.",
@@ -76168,6 +76792,22 @@
    "en": "The council has decided to ban plastic bags at the market, and Sara is pleased.",
    "ko": "시에서 시장 비닐봉지를 금지하기로 해서 사라는 기뻐요.",
    "blank": "vietare",
+   "src": "made"
+  }
+ ],
+ "w|vigilanza": [
+  {
+   "text": "Matteo chiede più vigilanza davanti alla scuola all'uscita dei bambini.",
+   "en": "Matteo asks for more surveillance in front of the school when the children come out.",
+   "ko": "마테오는 아이들 하교 시간에 학교 앞 경계를 더 강화해 달라고 해요.",
+   "blank": "vigilanza",
+   "src": "made"
+  },
+  {
+   "text": "Lungo il percorso di Sara c'è una vigilanza continua di volontari e medici.",
+   "en": "Along Sara's route there's constant watch by volunteers and doctors.",
+   "ko": "사라가 달리는 코스에는 자원봉사자와 의사들이 계속 지켜보고 있어요.",
+   "blank": "vigilanza",
    "src": "made"
   }
  ],
