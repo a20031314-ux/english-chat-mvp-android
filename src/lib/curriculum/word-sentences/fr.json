@@ -7025,6 +7025,22 @@
    "blank": "bonjour"
   }
  ],
+ "w|bonnet": [
+  {
+   "text": "La sœur de Julien lui a tricoté un bonnet, et il n'a même pas dit merci.",
+   "en": "Julien's sister knitted him a beanie, and he didn't even say thank you.",
+   "ko": "누나가 쥘리앵에게 털모자를 떠 줬는데 그는 고맙다는 말도 안 했어요.",
+   "blank": "bonnet",
+   "src": "made"
+  },
+  {
+   "text": "Manon garde son bonnet de bain dans son sac de sport.",
+   "en": "Manon keeps her swimming cap in her gym bag.",
+   "ko": "마농은 수영모를 운동 가방에 넣어 다녀요.",
+   "blank": "bonnet",
+   "src": "made"
+  }
+ ],
  "w|bonsoir": [
   {
    "text": "Je vous souhaite un bonsoir chaleureux.",
@@ -8388,6 +8404,22 @@
    "en": "Camille helps the director of photography calculate the distance between camera and actor.",
    "ko": "카미유는 촬영 감독을 도와 카메라와 배우 사이 거리를 계산해요.",
    "blank": "calculer",
+   "src": "made"
+  }
+ ],
+ "w|calendrier": [
+  {
+   "text": "Julien a oublié de noter l'anniversaire de sa sœur sur le calendrier.",
+   "en": "Julien forgot to write his sister's birthday on the calendar.",
+   "ko": "쥘리앵은 달력에 누나 생일을 적는 걸 잊었어요.",
+   "blank": "calendrier",
+   "src": "made"
+  },
+  {
+   "text": "Manon colle le calendrier des cours sur la porte de son frigo.",
+   "en": "Manon sticks the class timetable on her fridge door.",
+   "ko": "마농은 수업 일정표를 냉장고 문에 붙여요.",
+   "blank": "calendrier",
    "src": "made"
   }
  ],
@@ -16817,6 +16849,22 @@
    "src": "made"
   }
  ],
+ "w|déception": [
+  {
+   "text": "Julien voit la déception dans les yeux de sa sœur quand il annule le dîner.",
+   "en": "Julien sees the disappointment in his sister's eyes when he cancels dinner.",
+   "ko": "저녁 약속을 취소하자 쥘리앵은 누나의 눈에서 실망을 봐요.",
+   "blank": "déception",
+   "src": "made"
+  },
+  {
+   "text": "Manon cache sa déception après avoir raté la compétition de crossfit.",
+   "en": "Manon hides her disappointment after missing the CrossFit competition.",
+   "ko": "크로스핏 대회를 놓친 뒤 마농은 실망을 감춰요.",
+   "blank": "déception",
+   "src": "made"
+  }
+ ],
  "w|décès": [
   {
    "text": "Son décès a été un choc pour toute la famille.",
@@ -17351,6 +17399,22 @@
    "blank": "définitivement"
   }
  ],
+ "w|défunt": [
+  {
+   "text": "Julien et sa sœur se disputent pour la montre de leur défunt grand-père.",
+   "en": "Julien and his sister are arguing over their late grandfather's watch.",
+   "ko": "쥘리앵과 누나는 돌아가신 할아버지의 시계를 두고 다퉈요.",
+   "blank": "défunt",
+   "src": "made"
+  },
+  {
+   "text": "La salle de sport porte le nom du défunt champion de la ville, et Manon s'y entraîne chaque jour.",
+   "en": "The gym bears the name of the town's late champion, and Manon trains there every day.",
+   "ko": "헬스장에는 세상을 떠난 그 도시 챔피언의 이름이 붙어 있고, 마농은 거기서 매일 운동해요.",
+   "blank": "défunt",
+   "src": "made"
+  }
+ ],
  "w|dégager": [
   {
    "text": "Peux-tu dégager la table après le dîner ?",
@@ -17409,6 +17473,22 @@
    "en": "The smell here is disgusting.",
    "ko": "여기 냄새가 역겨워.",
    "blank": "dégoûtante"
+  }
+ ],
+ "w|dégoûter": [
+  {
+   "text": "Le désordre dans la chambre de son frère finit par dégoûter la sœur de Julien.",
+   "en": "The mess in his room ends up disgusting Julien's sister.",
+   "ko": "동생 방의 난장판에 결국 쥘리앵의 누나는 질려 버려요.",
+   "blank": "dégoûter",
+   "src": "made"
+  },
+  {
+   "text": "L'odeur de transpiration dans le vestiaire pourrait dégoûter Manon du sport.",
+   "en": "The smell of sweat in the changing room could put Manon off sport.",
+   "ko": "탈의실의 땀 냄새 때문에 마농은 운동이 싫어질 지경이에요.",
+   "blank": "dégoûter",
+   "src": "made"
   }
  ],
  "w|degré": [
@@ -18053,6 +18133,22 @@
    "en": "I like to spend to travel.",
    "ko": "여행하는 데 돈 쓰는 걸 좋아해.",
    "blank": "dépenser"
+  }
+ ],
+ "w|dépit": [
+  {
+   "text": "Par dépit, la sœur de Julien est partie sans dire au revoir.",
+   "en": "Out of spite, Julien's sister left without saying goodbye.",
+   "ko": "홧김에 쥘리앵의 누나는 작별 인사도 없이 가 버렸어요.",
+   "blank": "dépit",
+   "src": "made"
+  },
+  {
+   "text": "Malgré son dépit d'avoir perdu, Manon serre la main de son adversaire.",
+   "en": "Despite her frustration at losing, Manon shakes her opponent's hand.",
+   "ko": "진 게 속상했지만 마농은 상대와 악수해요.",
+   "blank": "dépit",
+   "src": "made"
   }
  ],
  "w|déplacer": [
@@ -21963,6 +22059,22 @@
    "blank": "embrasser"
   }
  ],
+ "w|embrouille": [
+  {
+   "text": "Toute cette embrouille a commencé à cause d'un message mal lu par Julien.",
+   "en": "This whole mix-up started because of a message Julien misread.",
+   "ko": "이 모든 소동은 쥘리앵이 메시지를 잘못 읽어서 시작됐어요.",
+   "blank": "embrouille",
+   "src": "made"
+  },
+  {
+   "text": "Il y a eu une embrouille pour une machine entre Manon et un autre client.",
+   "en": "There was a squabble over a machine between Manon and another member.",
+   "ko": "기구 하나 때문에 마농과 다른 회원 사이에 실랑이가 있었어요.",
+   "blank": "embrouille",
+   "src": "made"
+  }
+ ],
  "w|émettre": [
   {
    "text": "Le vieux scanner commence à émettre un sifflement, et Nicolas le débranche.",
@@ -23063,6 +23175,38 @@
    "en": "They will bury the treasure in the garden tonight.",
    "ko": "그들은 오늘 밤 정원에 보물을 enterrer 할 거야.",
    "blank": "enterrer"
+  }
+ ],
+ "w|enthousiasme": [
+  {
+   "text": "La sœur de Julien n'a montré aucun enthousiasme pour son idée de vacances.",
+   "en": "Julien's sister showed no enthusiasm for his holiday idea.",
+   "ko": "누나는 쥘리앵의 휴가 계획에 전혀 반가워하지 않았어요.",
+   "blank": "enthousiasme",
+   "src": "made"
+  },
+  {
+   "text": "Manon commence chaque séance avec beaucoup d'enthousiasme.",
+   "en": "Manon starts every session with lots of enthusiasm.",
+   "ko": "마농은 운동을 시작할 때마다 의욕이 넘쳐요.",
+   "blank": "enthousiasme",
+   "src": "made"
+  }
+ ],
+ "w|enthousiaste": [
+  {
+   "text": "La sœur de Julien n'est pas très enthousiaste à l'idée de déménager chez lui.",
+   "en": "Julien's sister isn't very keen on the idea of moving in with him.",
+   "ko": "쥘리앵의 누나는 동생 집으로 이사하는 데 그리 내켜 하지 않아요.",
+   "blank": "enthousiaste",
+   "src": "made"
+  },
+  {
+   "text": "Le nouveau coach est si enthousiaste que Manon a envie de tout essayer.",
+   "en": "The new coach is so enthusiastic that Manon wants to try everything.",
+   "ko": "새 코치가 워낙 열정적이라 마농은 뭐든 해 보고 싶어져요.",
+   "blank": "enthousiaste",
+   "src": "made"
   }
  ],
  "w|entier": [
@@ -26685,6 +26829,22 @@
    "blank": "fidèle"
   }
  ],
+ "w|fidélité": [
+  {
+   "text": "La sœur de Julien admire sa fidélité à ses amis d'enfance.",
+   "en": "Julien's sister admires his loyalty to his childhood friends.",
+   "ko": "누나는 어린 시절 친구들에게 변함없는 쥘리앵의 의리를 높이 사요.",
+   "blank": "fidélité",
+   "src": "made"
+  },
+  {
+   "text": "La salle offre un mois gratuit à Manon pour la remercier de sa fidélité.",
+   "en": "The gym gives Manon a free month to thank her for her loyalty.",
+   "ko": "헬스장은 꾸준히 다녀 준 마농에게 감사의 뜻으로 한 달을 무료로 줘요.",
+   "blank": "fidélité",
+   "src": "made"
+  }
+ ],
  "w|fier": [
   {
    "text": "Je suis fier de toi.",
@@ -28139,6 +28299,22 @@
    "en": "Your clothes are really stylish today!",
    "ko": "오늘 옷 진짜 멋진데!",
    "blank": "fringues"
+  }
+ ],
+ "w|frisson": [
+  {
+   "text": "Julien a eu un frisson en lisant le message très froid de sa sœur.",
+   "en": "Julien shuddered when he read his sister's very cold message.",
+   "ko": "누나의 아주 차가운 메시지를 읽고 쥘리앵은 오싹했어요.",
+   "blank": "frisson",
+   "src": "made"
+  },
+  {
+   "text": "La douche froide après le sport donne un frisson à Manon.",
+   "en": "The cold shower after exercise gives Manon a shiver.",
+   "ko": "운동 후 찬물 샤워에 마농은 몸을 부르르 떨어요.",
+   "blank": "frisson",
+   "src": "made"
   }
  ],
  "w|frite": [
@@ -31015,6 +31191,22 @@
    "blank": "homme"
   }
  ],
+ "w|homosexuel": [
+  {
+   "text": "Julien a mal compris quand sa sœur lui a présenté son meilleur ami homosexuel, et il s'en excuse.",
+   "en": "Julien misunderstood when his sister introduced her gay best friend, and he apologizes.",
+   "ko": "누나가 동성애자인 가장 친한 친구를 소개했을 때 쥘리앵은 오해했고, 그 일에 대해 사과해요.",
+   "blank": "homosexuel",
+   "src": "made"
+  },
+  {
+   "text": "Le coach préféré de Manon est ouvertement homosexuel et anime aussi un club de course.",
+   "en": "Manon's favourite coach is openly gay and also runs a running club.",
+   "ko": "마농이 가장 좋아하는 코치는 동성애자임을 숨기지 않고 러닝 클럽도 이끌어요.",
+   "blank": "homosexuel",
+   "src": "made"
+  }
+ ],
  "w|honnête": [
   {
    "text": "Il faut toujours être honnête.",
@@ -31411,6 +31603,22 @@
    "src": "made"
   }
  ],
+ "w|humiliation": [
+  {
+   "text": "La sœur de Julien a vécu le fou rire de la famille comme une humiliation.",
+   "en": "Julien's sister felt the family's laughter as a humiliation.",
+   "ko": "쥘리앵의 누나는 가족들이 웃음을 터뜨린 걸 굴욕으로 느꼈어요.",
+   "blank": "humiliation",
+   "src": "made"
+  },
+  {
+   "text": "Tomber du tapis devant tout le monde a été une petite humiliation pour Manon.",
+   "en": "Falling off the treadmill in front of everyone was a small humiliation for Manon.",
+   "ko": "모두가 보는 앞에서 러닝머신에서 넘어진 건 마농에게 작은 망신이었어요.",
+   "blank": "humiliation",
+   "src": "made"
+  }
+ ],
  "w|humilié": [
   {
    "text": "Nicolas raconte à Paul qu'il s'était senti humilié devant toute la classe.",
@@ -31424,6 +31632,22 @@
    "en": "The councillor said he felt humiliated by the cartoon, but Inès defends the cartoonist.",
    "ko": "그 의원은 풍자화에 모욕을 느꼈다고 했지만 이네스는 만화가를 옹호해요.",
    "blank": "humilié",
+   "src": "made"
+  }
+ ],
+ "w|humilier": [
+  {
+   "text": "Julien n'a jamais voulu humilier sa sœur devant ses amis.",
+   "en": "Julien never meant to humiliate his sister in front of her friends.",
+   "ko": "쥘리앵은 친구들 앞에서 누나를 망신 줄 생각이 전혀 없었어요.",
+   "blank": "humilier",
+   "src": "made"
+  },
+  {
+   "text": "Le coach ne cherche jamais à humilier Manon, même quand elle rate un exercice.",
+   "en": "The coach never tries to humiliate Manon, even when she gets an exercise wrong.",
+   "ko": "코치는 마농이 동작을 틀려도 절대 망신을 주지 않아요.",
+   "blank": "humilier",
    "src": "made"
   }
  ],
@@ -33491,6 +33715,22 @@
    "blank": "insulte"
   }
  ],
+ "w|insulter": [
+  {
+   "text": "Julien n'a jamais voulu insulter sa sœur, mais elle a mal compris sa blague.",
+   "en": "Julien never meant to insult his sister, but she misunderstood his joke.",
+   "ko": "쥘리앵은 누나를 모욕할 생각이 전혀 없었는데 누나가 농담을 오해했어요.",
+   "blank": "insulter",
+   "src": "made"
+  },
+  {
+   "text": "Un client s'est mis à insulter le coach, et Manon a appelé le gérant.",
+   "en": "A customer started insulting the coach, and Manon called the manager.",
+   "ko": "한 회원이 코치에게 욕을 하기 시작하자 마농이 매니저를 불렀어요.",
+   "blank": "insulter",
+   "src": "made"
+  }
+ ],
  "w|insupportable": [
   {
    "text": "Le bruit des chaises dans la salle est insupportable pour Paul.",
@@ -33956,6 +34196,22 @@
    "en": "The book reserved by the mayor can't be found, and Camille looks everywhere.",
    "ko": "시장이 예약한 책이 보이지 않아 카미유는 사방을 찾아요.",
    "blank": "introuvable",
+   "src": "made"
+  }
+ ],
+ "w|intrus": [
+  {
+   "text": "Le soir de Noël, Julien se sent comme un intrus dans la famille de son beau-frère.",
+   "en": "On Christmas Eve, Julien feels like an intruder in his brother-in-law's family.",
+   "ko": "크리스마스이브에 쥘리앵은 매형 가족 사이에서 불청객처럼 느껴져요.",
+   "blank": "intrus",
+   "src": "made"
+  },
+  {
+   "text": "Un intrus s'est glissé dans la salle sans badge, et Manon a prévenu l'accueil.",
+   "en": "An intruder slipped into the gym without a badge, and Manon alerted reception.",
+   "ko": "출입증 없이 한 사람이 몰래 들어오자 마농이 안내 데스크에 알렸어요.",
+   "blank": "intrus",
    "src": "made"
   }
  ],
@@ -35665,6 +35921,22 @@
    "en": "Today's lesson was complicated.",
    "ko": "오늘 수업은 복잡했어.",
    "blank": "leçon"
+  }
+ ],
+ "w|lecteur": [
+  {
+   "text": "La sœur de Julien est une grande lectrice, alors il lui offre un roman pour se faire pardonner.",
+   "en": "Julien's sister is a big reader, so he gives her a novel to make amends.",
+   "ko": "쥘리앵의 누나는 책을 아주 좋아해서 그는 사과의 뜻으로 소설을 선물해요.",
+   "blank": "lectrice",
+   "src": "made"
+  },
+  {
+   "text": "Manon passe son badge devant le lecteur à l'entrée de la salle.",
+   "en": "Manon swipes her badge at the reader at the gym entrance.",
+   "ko": "마농은 헬스장 입구 리더기에 출입증을 대요.",
+   "blank": "lecteur",
+   "src": "made"
   }
  ],
  "w|lecture": [
@@ -38147,6 +38419,22 @@
    "blank": "marteau"
   }
  ],
+ "w|masculin": [
+  {
+   "text": "Julien se moque du prénom trop masculin que sa sœur a choisi pour son chat.",
+   "en": "Julien teases his sister about the very masculine name she chose for her cat.",
+   "ko": "쥘리앵은 누나가 고양이에게 지어 준 너무 남자다운 이름을 놀려요.",
+   "blank": "masculin",
+   "src": "made"
+  },
+  {
+   "text": "Le vestiaire masculin de la salle de Manon est en travaux cette semaine.",
+   "en": "The men's changing room at Manon's gym is being renovated this week.",
+   "ko": "마농이 다니는 헬스장의 남자 탈의실이 이번 주에 공사 중이에요.",
+   "blank": "masculin",
+   "src": "made"
+  }
+ ],
  "w|masque": [
   {
    "text": "Mets un masque avant d'entrer.",
@@ -39029,6 +39317,22 @@
    "en": "The message is hard to understand.",
    "ko": "그 메시지는 이해하기 어려워.",
    "blank": "message"
+  }
+ ],
+ "w|messager": [
+  {
+   "text": "Le petit frère de Julien joue le messager entre lui et leur sœur fâchée.",
+   "en": "Julien's little brother acts as messenger between him and their angry sister.",
+   "ko": "쥘리앵의 막냇동생이 쥘리앵과 화난 누나 사이에서 말을 전해 줘요.",
+   "blank": "messager",
+   "src": "made"
+  },
+  {
+   "text": "Manon a reçu le message d'un coach, mais c'est la réceptionniste qui a joué le messager.",
+   "en": "Manon got a coach's message, but it was the receptionist who acted as messenger.",
+   "ko": "마농은 코치의 메시지를 받았는데 전달한 건 안내 직원이었어요.",
+   "blank": "messager",
+   "src": "made"
   }
  ],
  "w|messe": [
@@ -40394,6 +40698,22 @@
    "en": "After twenty boxes, Chloé has no motivation left to keep going.",
    "ko": "상자 스무 개를 싸고 나니 클로에는 더 할 의욕이 하나도 없어요.",
    "blank": "motivation",
+   "src": "made"
+  }
+ ],
+ "w|motivé": [
+  {
+   "text": "Après la dispute, Julien est motivé pour organiser un week-end en famille.",
+   "en": "After the argument, Julien is motivated to organize a family weekend.",
+   "ko": "다툼이 끝나고 쥘리앵은 가족 주말여행을 계획할 마음이 생겨요.",
+   "blank": "motivé",
+   "src": "made"
+  },
+  {
+   "text": "Manon est motivée à l'idée de courir son premier semi-marathon.",
+   "en": "Manon is motivated at the thought of running her first half-marathon.",
+   "ko": "첫 하프 마라톤을 뛸 생각에 마농은 의욕이 넘쳐요.",
+   "blank": "motivée",
    "src": "made"
   }
  ],
@@ -43747,6 +44067,22 @@
    "src": "made"
   }
  ],
+ "w|papi": [
+  {
+   "text": "C'est papi qui a fini par réconcilier Julien et sa sœur.",
+   "en": "It was Grandpa who ended up reconciling Julien and his sister.",
+   "ko": "결국 쥘리앵과 누나를 화해시킨 건 할아버지였어요.",
+   "blank": "papi",
+   "src": "made"
+  },
+  {
+   "text": "Le papi qui fait de l'aquagym avec Manon a quatre-vingts ans.",
+   "en": "The grandad who does aqua aerobics with Manon is eighty.",
+   "ko": "마농과 아쿠아로빅을 하는 할아버지는 여든 살이에요.",
+   "blank": "papi",
+   "src": "made"
+  }
+ ],
  "w|papier": [
   {
    "text": "Peux-tu me donner un papier ?",
@@ -43906,6 +44242,22 @@
    "en": "The watch seller froze in surprise when Claire offered to buy everything.",
    "ko": "클레르가 전부 사겠다고 하자 시계 판매자는 놀라서 얼어붙었어요.",
    "blank": "paralysé",
+   "src": "made"
+  }
+ ],
+ "w|parano": [
+  {
+   "text": "La sœur de Julien le trouve un peu parano quand il pense que tout le monde parle de lui.",
+   "en": "Julien's sister finds him a bit paranoid when he thinks everyone is talking about him.",
+   "ko": "모두가 자기 얘기를 한다고 생각하는 쥘리앵을 누나는 좀 피해망상이라고 봐요.",
+   "blank": "parano",
+   "src": "made"
+  },
+  {
+   "text": "Manon se moque d'elle-même en disant qu'elle est parano avec les microbes des machines.",
+   "en": "Manon laughs at herself, saying she's paranoid about germs on the machines.",
+   "ko": "마농은 기구에 묻은 세균에 집착한다며 스스로를 놀려요.",
+   "blank": "parano",
    "src": "made"
   }
  ],
@@ -45418,6 +45770,22 @@
    "en": "Camille had to ask the landlord's permission to repaint the walls.",
    "ko": "카미유는 벽을 다시 칠하려고 집주인에게 허락을 받아야 했어요.",
    "blank": "permission",
+   "src": "made"
+  }
+ ],
+ "w|perruque": [
+  {
+   "text": "Pour faire rire sa sœur, Julien arrive à la maison avec une perruque rose.",
+   "en": "To make his sister laugh, Julien comes home in a pink wig.",
+   "ko": "누나를 웃기려고 쥘리앵은 분홍 가발을 쓰고 집에 와요.",
+   "blank": "perruque",
+   "src": "made"
+  },
+  {
+   "text": "Pour le cours de zumba spécial années quatre-vingt, Manon a mis une perruque frisée.",
+   "en": "For the eighties-themed Zumba class, Manon put on a curly wig.",
+   "ko": "팔십 년대 콘셉트 줌바 수업을 위해 마농은 곱슬 가발을 썼어요.",
+   "blank": "perruque",
    "src": "made"
   }
  ],
@@ -47527,6 +47895,22 @@
    "en": "She likes to wear colorful clothes.",
    "ko": "그녀는 화려한 옷 입는 걸 좋아해요.",
    "blank": "porter"
+  }
+ ],
+ "w|porteur": [
+  {
+   "text": "Julien croit que sa sœur est porteuse d'une mauvaise nouvelle, mais elle veut juste parler.",
+   "en": "Julien thinks his sister is bringing bad news, but she just wants to talk.",
+   "ko": "쥘리앵은 누나가 나쁜 소식을 가져온 줄 알았는데 그냥 이야기하고 싶었던 거예요.",
+   "blank": "porteuse",
+   "src": "made"
+  },
+  {
+   "text": "Dans la salle de Manon s'entraîne un ancien porteur de bagages qui soulève tout sans effort.",
+   "en": "A former baggage porter who lifts everything effortlessly trains at Manon's gym.",
+   "ko": "마농의 헬스장에는 뭐든 거뜬히 드는 전직 짐꾼이 운동해요.",
+   "blank": "porteur",
+   "src": "made"
   }
  ],
  "w|portrait": [
@@ -49855,6 +50239,22 @@
    "src": "made"
   }
  ],
+ "w|protecteur": [
+  {
+   "text": "Depuis l'enfance, Julien joue le rôle de protecteur de sa petite sœur.",
+   "en": "Since childhood, Julien has played the role of his little sister's protector.",
+   "ko": "어릴 때부터 쥘리앵은 여동생을 지켜 주는 역할을 해 왔어요.",
+   "blank": "protecteur",
+   "src": "made"
+  },
+  {
+   "text": "Manon porte un protecteur de dents pendant ses cours de boxe.",
+   "en": "Manon wears a mouth guard during her boxing classes.",
+   "ko": "마농은 복싱 수업 때 마우스피스를 껴요.",
+   "blank": "protecteur",
+   "src": "made"
+  }
+ ],
  "w|protection": [
   {
    "text": "Il porte un casque de protection.",
@@ -49983,6 +50383,22 @@
    "en": "That noise can provoke arguments.",
    "ko": "그 소음이 다툼을 유발할 수 있어.",
    "blank": "provoquer"
+  }
+ ],
+ "w|prudence": [
+  {
+   "text": "Julien choisit ses mots avec prudence pour ne pas relancer la dispute.",
+   "en": "Julien chooses his words with care so as not to restart the argument.",
+   "ko": "쥘리앵은 다툼이 다시 시작되지 않게 조심스럽게 말을 골라요.",
+   "blank": "prudence",
+   "src": "made"
+  },
+  {
+   "text": "Manon reprend la course avec prudence après sa blessure.",
+   "en": "Manon goes back to running carefully after her injury.",
+   "ko": "부상 후 마농은 조심스럽게 달리기를 다시 시작해요.",
+   "blank": "prudence",
+   "src": "made"
   }
  ],
  "w|prudent": [
@@ -51147,6 +51563,22 @@
    "blank": "rançon"
   }
  ],
+ "w|rancune": [
+  {
+   "text": "Julien espère que sa sœur ne lui gardera pas rancune.",
+   "en": "Julien hopes his sister won't hold a grudge against him.",
+   "ko": "쥘리앵은 누나가 자기에게 앙금을 품지 않길 바라요.",
+   "blank": "rancune",
+   "src": "made"
+  },
+  {
+   "text": "Manon ne garde aucune rancune contre le client qui lui a pris sa place.",
+   "en": "Manon bears no grudge against the member who took her spot.",
+   "ko": "마농은 자기 자리를 차지한 회원에게 앙금이 전혀 없어요.",
+   "blank": "rancune",
+   "src": "made"
+  }
+ ],
  "w|rang": [
   {
    "text": "Nous sommes assis au premier rang.",
@@ -51835,6 +52267,38 @@
    "src": "made"
   }
  ],
+ "w|réconfort": [
+  {
+   "text": "Un message gentil de sa sœur apporte beaucoup de réconfort à Julien.",
+   "en": "A kind message from his sister brings Julien a lot of comfort.",
+   "ko": "누나의 다정한 메시지가 쥘리앵에게 큰 위로가 돼요.",
+   "blank": "réconfort",
+   "src": "made"
+  },
+  {
+   "text": "Après l'entraînement, un bain chaud est un vrai réconfort pour Manon.",
+   "en": "After training, a hot bath is a real comfort for Manon.",
+   "ko": "운동 후 따뜻한 목욕은 마농에게 진짜 위안이에요.",
+   "blank": "réconfort",
+   "src": "made"
+  }
+ ],
+ "w|réconforter": [
+  {
+   "text": "Julien prend sa sœur dans ses bras pour la réconforter après sa journée difficile.",
+   "en": "Julien hugs his sister to comfort her after her hard day.",
+   "ko": "힘든 하루를 보낸 누나를 위로하려고 쥘리앵이 꼭 안아 줘요.",
+   "blank": "réconforter",
+   "src": "made"
+  },
+  {
+   "text": "Manon sait trouver les mots pour réconforter une débutante découragée.",
+   "en": "Manon knows how to find the words to comfort a discouraged beginner.",
+   "ko": "마농은 의기소침한 초보 회원을 위로할 말을 잘 찾아요.",
+   "blank": "réconforter",
+   "src": "made"
+  }
+ ],
  "w|reconnaissance": [
   {
    "text": "Elle a exprimé sa reconnaissance pour l'aide reçue.",
@@ -52044,6 +52508,22 @@
    "en": "Chloé forgot a lamp upstairs and has to go back down to the truck for the tenth time.",
    "ko": "클로에는 위층에 전등을 두고 와서 열 번째로 트럭까지 다시 내려가야 해요.",
    "blank": "redescendre",
+   "src": "made"
+  }
+ ],
+ "w|redevable": [
+  {
+   "text": "Julien se sent redevable envers sa sœur, qui l'a aidé à payer son loyer.",
+   "en": "Julien feels indebted to his sister, who helped him pay his rent.",
+   "ko": "쥘리앵은 월세 내는 걸 도와준 누나에게 빚진 기분이에요.",
+   "blank": "redevable",
+   "src": "made"
+  },
+  {
+   "text": "Manon est redevable à son amie qui lui a offert son premier abonnement.",
+   "en": "Manon is indebted to her friend who gave her her first membership.",
+   "ko": "마농은 첫 회원권을 선물해 준 친구에게 신세를 졌어요.",
+   "blank": "redevable",
    "src": "made"
   }
  ],
@@ -52629,6 +53109,22 @@
    "blank": "rejoindre"
   }
  ],
+ "w|réjouir": [
+  {
+   "text": "La réconciliation de ses deux enfants ne peut que réjouir la mère de Julien.",
+   "en": "Her two children making up can only delight Julien's mother.",
+   "ko": "두 자녀가 화해하니 쥘리앵의 어머니는 기쁠 수밖에 없어요.",
+   "blank": "réjouir",
+   "src": "made"
+  },
+  {
+   "text": "Le nouveau cours de danse va réjouir Manon et ses amies.",
+   "en": "The new dance class is going to delight Manon and her friends.",
+   "ko": "새 댄스 수업에 마농과 친구들은 신이 날 거예요.",
+   "blank": "réjouir",
+   "src": "made"
+  }
+ ],
  "w|relâcher": [
   {
    "text": "Après la générale, Thomas peut enfin relâcher la pression.",
@@ -52787,6 +53283,22 @@
    "en": "This remedy is very effective against the flu.",
    "ko": "이 치료법은 독감에 매우 효과적이야.",
    "blank": "remède"
+  }
+ ],
+ "w|remerciement": [
+  {
+   "text": "Julien envoie un petit mot de remerciement à sa sœur pour son aide.",
+   "en": "Julien sends his sister a little thank-you note for her help.",
+   "ko": "쥘리앵은 도와준 누나에게 짧은 감사 쪽지를 보내요.",
+   "blank": "remerciement",
+   "src": "made"
+  },
+  {
+   "text": "Manon offre des chocolats au coach en remerciement de ses conseils.",
+   "en": "Manon gives the coach chocolates as thanks for his advice.",
+   "ko": "마농은 조언해 준 코치에게 감사의 뜻으로 초콜릿을 줘요.",
+   "blank": "remerciement",
+   "src": "made"
   }
  ],
  "w|remercier": [
@@ -55185,6 +55697,22 @@
    "blank": "royaume"
   }
  ],
+ "w|ruban": [
+  {
+   "text": "Julien emballe le cadeau d'excuse avec un ruban doré.",
+   "en": "Julien wraps the apology present with a gold ribbon.",
+   "ko": "쥘리앵은 사과 선물을 금색 리본으로 포장해요.",
+   "blank": "ruban",
+   "src": "made"
+  },
+  {
+   "text": "Manon attache ses cheveux avec un ruban avant de courir sur le tapis.",
+   "en": "Manon ties her hair back with a ribbon before running on the treadmill.",
+   "ko": "마농은 러닝머신을 뛰기 전에 리본으로 머리를 묶어요.",
+   "blank": "ruban",
+   "src": "made"
+  }
+ ],
  "w|rude": [
   {
    "text": "L'hiver est rude sur le chantier, et Louis porte trois couches de vêtements.",
@@ -55907,6 +56435,22 @@
    "blank": "satellite"
   }
  ],
+ "w|satisfaction": [
+  {
+   "text": "Julien a souri avec satisfaction quand sa sœur l'a enfin rappelé.",
+   "en": "Julien smiled with satisfaction when his sister finally called him back.",
+   "ko": "누나가 마침내 다시 전화하자 쥘리앵은 흐뭇하게 웃었어요.",
+   "blank": "satisfaction",
+   "src": "made"
+  },
+  {
+   "text": "Manon a ressenti une grande satisfaction en soulevant sa première barre de soixante kilos.",
+   "en": "Manon felt great satisfaction lifting her first sixty-kilo bar.",
+   "ko": "마농은 처음으로 육십 킬로 바벨을 들고 큰 뿌듯함을 느꼈어요.",
+   "blank": "satisfaction",
+   "src": "made"
+  }
+ ],
  "w|satisfaire": [
   {
    "text": "Rien ne semble satisfaire la sœur d'Antoine ce soir.",
@@ -56283,6 +56827,22 @@
    "en": "I fixed the cable with tape.",
    "ko": "나는 테이프로 케이블을 고쳤어.",
    "blank": "scotch"
+  }
+ ],
+ "w|scout": [
+  {
+   "text": "Julien retrouve une photo de lui et sa sœur en uniforme de scout.",
+   "en": "Julien finds a photo of himself and his sister in scout uniforms.",
+   "ko": "쥘리앵은 누나와 함께 스카우트 단복을 입은 사진을 찾아요.",
+   "blank": "scout",
+   "src": "made"
+  },
+  {
+   "text": "Manon a appris à faire des nœuds solides chez les scouts, et ça l'aide pour l'escalade.",
+   "en": "Manon learned to tie strong knots in the scouts, and it helps her with climbing.",
+   "ko": "마농은 스카우트에서 튼튼한 매듭 묶는 법을 배워서 클라이밍에 도움이 돼요.",
+   "blank": "scouts",
+   "src": "made"
   }
  ],
  "w|script": [
@@ -58037,6 +58597,22 @@
    "src": "made"
   }
  ],
+ "w|slip": [
+  {
+   "text": "La sœur de Julien rit en voyant son slip à fleurs sur le séchoir.",
+   "en": "Julien's sister laughs when she sees his flowery briefs on the drying rack.",
+   "ko": "누나는 빨래 건조대에 걸린 쥘리앵의 꽃무늬 팬티를 보고 웃어요.",
+   "blank": "slip",
+   "src": "made"
+  },
+  {
+   "text": "Manon a oublié son slip de bain et doit renoncer à la piscine.",
+   "en": "Manon forgot her swimsuit bottoms and has to skip the pool.",
+   "ko": "마농은 수영복 하의를 잊어서 수영장을 포기해야 해요.",
+   "blank": "slip",
+   "src": "made"
+  }
+ ],
  "w|sms": [
   {
    "text": "Envoie-moi un sms quand tu arrives.",
@@ -58966,6 +59542,22 @@
    "en": "When she reached the summit, Sarah let out a sigh of happiness.",
    "ko": "정상에 오르자 사라는 행복한 한숨을 내쉬었어요.",
    "blank": "soupir",
+   "src": "made"
+  }
+ ],
+ "w|soupirer": [
+  {
+   "text": "En voyant sa sœur bouder encore, Julien se met à soupirer.",
+   "en": "Seeing his sister sulking again, Julien starts to sigh.",
+   "ko": "누나가 또 토라진 걸 보고 쥘리앵은 한숨을 쉬어요.",
+   "blank": "soupirer",
+   "src": "made"
+  },
+  {
+   "text": "Le coach entend Manon soupirer à chaque série de squats.",
+   "en": "The coach hears Manon sigh at every set of squats.",
+   "ko": "코치는 스쿼트 세트마다 마농이 한숨 쉬는 걸 들어요.",
+   "blank": "soupirer",
    "src": "made"
   }
  ],
@@ -62725,6 +63317,22 @@
    "src": "made"
   }
  ],
+ "w|tracasser": [
+  {
+   "text": "Cette dispute avec sa sœur continue de tracasser Julien toute la semaine.",
+   "en": "That argument with his sister keeps bothering Julien all week.",
+   "ko": "누나와의 그 다툼이 일주일 내내 쥘리앵의 마음을 괴롭혀요.",
+   "blank": "tracasser",
+   "src": "made"
+  },
+  {
+   "text": "Une douleur au genou commence à tracasser Manon.",
+   "en": "A pain in her knee is starting to worry Manon.",
+   "ko": "무릎 통증이 마농을 신경 쓰이게 하기 시작해요.",
+   "blank": "tracasser",
+   "src": "made"
+  }
+ ],
  "w|trace": [
   {
    "text": "Je n’ai trouvé aucune trace de lui.",
@@ -63491,6 +64099,22 @@
    "src": "made"
   }
  ],
+ "w|triomphe": [
+  {
+   "text": "Pour la sœur de Julien, avoir le dernier mot est toujours un petit triomphe.",
+   "en": "For Julien's sister, having the last word is always a small triumph.",
+   "ko": "쥘리앵의 누나에게 마지막 말을 하는 건 언제나 작은 승리예요.",
+   "blank": "triomphe",
+   "src": "made"
+  },
+  {
+   "text": "Le jour de la course, Manon a franchi la ligne d'arrivée en triomphe.",
+   "en": "On race day, Manon crossed the finish line in triumph.",
+   "ko": "경주 날 마농은 의기양양하게 결승선을 통과했어요.",
+   "blank": "triomphe",
+   "src": "made"
+  }
+ ],
  "w|tripes": [
   {
    "text": "Selon Paul, il faut avoir les tripes solides pour faire de la chirurgie animale.",
@@ -63677,6 +64301,22 @@
    "en": "The cat caused trouble in the house.",
    "ko": "고양이가 집에서 문제를 일으켰어.",
    "blank": "trouble"
+  }
+ ],
+ "w|troubler": [
+  {
+   "text": "Le silence de sa sœur commence à troubler Julien.",
+   "en": "His sister's silence is starting to unsettle Julien.",
+   "ko": "누나의 침묵이 쥘리앵을 불안하게 하기 시작해요.",
+   "blank": "troubler",
+   "src": "made"
+  },
+  {
+   "text": "La musique trop forte finit par troubler la concentration de Manon.",
+   "en": "The loud music ends up disturbing Manon's concentration.",
+   "ko": "너무 큰 음악이 결국 마농의 집중을 흐트러뜨려요.",
+   "blank": "troubler",
+   "src": "made"
   }
  ],
  "w|trouille": [

@@ -1195,6 +1195,22 @@
    "blank": "अनुच्छेद"
   }
  ],
+ "w|अनुदान": [
+  {
+   "text": "करण ने लिखा कि गाँव के स्कूल को सरकार से नया अनुदान मिला है।",
+   "en": "Karan wrote that the village school has received a new grant from the government.",
+   "ko": "카란은 마을 학교가 정부에서 새 보조금을 받았다고 썼어요.",
+   "blank": "अनुदान",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की टीम को नई मशीन के लिए सरकारी अनुदान मिल गया।",
+   "en": "Deepa's team got a government grant for a new machine.",
+   "ko": "디파 팀은 새 장비를 살 정부 보조금을 받았어요.",
+   "blank": "अनुदान",
+   "src": "made"
+  }
+ ],
  "w|अनुपस्थित": [
   {
    "text": "मुख्य गवाह आज भी अनुपस्थित था, इसलिए सुनवाई टल गई।",
@@ -1285,6 +1301,22 @@
    "src": "made"
   }
  ],
+ "w|अनुमानित": [
+  {
+   "text": "करण ने लिखा कि नए पुल की अनुमानित लागत दोगुनी हो गई है।",
+   "en": "Karan wrote that the estimated cost of the new bridge has doubled.",
+   "ko": "카란은 새 다리의 예상 비용이 두 배가 됐다고 썼어요.",
+   "blank": "अनुमानित",
+   "src": "made"
+  },
+  {
+   "text": "प्रयोग का अनुमानित समय तीन घंटे था, पर वह पाँच घंटे चला।",
+   "en": "The estimated time for the experiment was three hours, but it ran for five.",
+   "ko": "실험 예상 시간은 세 시간이었는데 다섯 시간이 걸렸어요.",
+   "blank": "अनुमानित",
+   "src": "made"
+  }
+ ],
  "w|अनुरूप": [
   {
    "text": "स्कूल की नई किताबें राष्ट्रीय पाठ्यक्रम के अनुरूप तैयार की गई हैं।",
@@ -1342,6 +1374,22 @@
    "en": "The store has hired an interpreter for foreign tourists.",
    "ko": "백화점은 외국인 관광객을 위해 통역사를 두었어요.",
    "blank": "अनुवादक",
+   "src": "made"
+  }
+ ],
+ "w|अनुष्ठान": [
+  {
+   "text": "करण ने मंदिर के सालाना अनुष्ठान की तस्वीरें खुद खींचीं।",
+   "en": "Karan took the pictures of the temple's annual ritual himself.",
+   "ko": "카란은 사원의 연례 의식 사진을 직접 찍었어요.",
+   "blank": "अनुष्ठान",
+   "src": "made"
+  },
+  {
+   "text": "दीपा मज़ाक में कहती है कि सुबह की चाय उसका रोज़ का अनुष्ठान है।",
+   "en": "Deepa jokes that her morning tea is her daily ritual.",
+   "ko": "디파는 아침 차가 매일 치르는 의식이라고 농담해요.",
+   "blank": "अनुष्ठान",
    "src": "made"
   }
  ],
@@ -2623,6 +2671,22 @@
    "blank": "आग्रह"
   }
  ],
+ "w|आचरण": [
+  {
+   "text": "अख़बार ने एक अफ़सर के अजीब आचरण पर लंबी रिपोर्ट छापी।",
+   "en": "The newspaper printed a long report on an officer's strange conduct.",
+   "ko": "신문은 한 공무원의 이상한 처신에 대해 긴 기사를 실었어요.",
+   "blank": "आचरण",
+   "src": "made"
+  },
+  {
+   "text": "प्रयोगशाला में सबका आचरण नियमों के मुताबिक़ होना चाहिए।",
+   "en": "Everyone's conduct in the laboratory must follow the rules.",
+   "ko": "실험실에서는 모두가 규칙에 맞게 행동해야 해요.",
+   "blank": "आचरण",
+   "src": "made"
+  }
+ ],
  "w|आचार्य": [
   {
    "text": "गाँव के संस्कृत विद्यालय के आचार्य बच्चों को सुबह योग भी सिखाते हैं।",
@@ -3877,6 +3941,22 @@
    "src": "made"
   }
  ],
+ "w|इकट्ठा": [
+  {
+   "text": "चुनाव की रात सारे रिपोर्टर दफ़्तर में इकट्ठा थे।",
+   "en": "On election night all the reporters were gathered in the office.",
+   "ko": "선거 날 밤 기자들이 모두 사무실에 모여 있었어요.",
+   "blank": "इकट्ठा",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने एक हफ़्ते में इकट्ठा आँकड़ों का ग्राफ़ बनाया।",
+   "en": "Deepa made a graph of the data gathered over a week.",
+   "ko": "디파는 일주일 동안 모은 데이터로 그래프를 그렸어요.",
+   "blank": "इकट्ठा",
+   "src": "made"
+  }
+ ],
  "w|इक्कीस": [
   {
    "text": "कल इक्कीस तारीख है।",
@@ -4439,6 +4519,22 @@
    "en": "Staying honest in business is essential.",
    "ko": "사업에서 정직해야 해.",
    "blank": "ईमानदार"
+  }
+ ],
+ "w|ईमानदारी": [
+  {
+   "text": "पुराने संपादक कहते हैं कि पत्रकारिता में ईमानदारी सबसे बड़ी पूँजी है।",
+   "en": "The old editor says honesty is the greatest asset in journalism.",
+   "ko": "나이 든 편집장은 기자 일에서는 정직이 가장 큰 밑천이라고 말해요.",
+   "blank": "ईमानदारी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा मानती है कि आँकड़ों के साथ ईमानदारी विज्ञान की नींव है।",
+   "en": "Deepa believes honesty with data is the foundation of science.",
+   "ko": "디파는 데이터를 정직하게 다루는 게 과학의 기본이라고 생각해요.",
+   "blank": "ईमानदारी",
+   "src": "made"
   }
  ],
  "w|ईमेल": [
@@ -9531,6 +9627,22 @@
    "blank": "केंद्र"
   }
  ],
+ "w|केंद्रित": [
+  {
+   "text": "इस हफ़्ते का विशेष अंक पूरी तरह शहर के पानी संकट पर केंद्रित है।",
+   "en": "This week's special issue is entirely focused on the city's water crisis.",
+   "ko": "이번 주 특집호는 온통 도시의 물 부족 문제에 맞춰져 있어요.",
+   "blank": "केंद्रित",
+   "src": "made"
+  },
+  {
+   "text": "दीपा का शोध पौधों की जड़ों पर केंद्रित है।",
+   "en": "Deepa's research is focused on the roots of plants.",
+   "ko": "디파의 연구는 식물 뿌리에 집중돼 있어요.",
+   "blank": "केंद्रित",
+   "src": "made"
+  }
+ ],
  "w|केंद्रीय": [
   {
    "text": "केंद्रीय पुस्तकालय शहर के बीच में है।",
@@ -9954,6 +10066,22 @@
    "en": "Seema's bottle gourd kofta is famous in the whole lane.",
    "ko": "시마의 조롱박 코프타는 골목 전체에서 유명해요.",
    "blank": "कोफ़्ता",
+   "src": "made"
+  }
+ ],
+ "w|कोमल": [
+  {
+   "text": "बच्चों के पन्ने के लिए करण ने बहुत कोमल भाषा में एक कहानी लिखी।",
+   "en": "For the children's page, Karan wrote a story in very gentle language.",
+   "ko": "카란은 어린이 지면에 실을 이야기를 아주 부드러운 말로 썼어요.",
+   "blank": "कोमल",
+   "src": "made"
+  },
+  {
+   "text": "नन्हे पौधों की कोमल पत्तियाँ दीपा बहुत ध्यान से छूती है।",
+   "en": "Deepa touches the tender leaves of the little plants very carefully.",
+   "ko": "디파는 어린 식물의 여린 잎을 아주 조심스럽게 만져요.",
+   "blank": "कोमल",
    "src": "made"
   }
  ],
@@ -10423,6 +10551,22 @@
    "en": "For a moment everyone fell silent.",
    "ko": "잠깐 모두가 조용해졌어.",
    "blank": "क्षण"
+  }
+ ],
+ "w|क्षति": [
+  {
+   "text": "करण ने तूफ़ान से फ़सलों को हुई क्षति का पूरा ब्योरा दिया।",
+   "en": "Karan gave a full account of the damage the storm did to the crops.",
+   "ko": "카란은 태풍이 농작물에 입힌 피해를 낱낱이 전했어요.",
+   "blank": "क्षति",
+   "src": "made"
+  },
+  {
+   "text": "आग से लैब के कुछ उपकरणों को भारी क्षति पहुँची।",
+   "en": "The fire caused heavy damage to some of the lab's equipment.",
+   "ko": "불이 나서 실험실 장비 몇 대가 크게 망가졌어요.",
+   "blank": "क्षति",
+   "src": "made"
   }
  ],
  "w|क्षमता": [
@@ -13201,6 +13345,22 @@
    "blank": "ग्यारह"
   }
  ],
+ "w|ग्रंथ": [
+  {
+   "text": "संस्कृति पन्ने के लिए करण ने एक पुराने ग्रंथ के बारे में लिखा।",
+   "en": "For the culture page, Karan wrote about an old classical text.",
+   "ko": "카란은 문화면에 오래된 고전 문헌에 관한 글을 썼어요.",
+   "blank": "ग्रंथ",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की मेज़ पर रसायन विज्ञान का एक मोटा ग्रंथ हमेशा खुला रहता है।",
+   "en": "A thick tome on chemistry always lies open on Deepa's desk.",
+   "ko": "디파 책상에는 두꺼운 화학 책 한 권이 늘 펼쳐져 있어요.",
+   "blank": "ग्रंथ",
+   "src": "made"
+  }
+ ],
  "w|ग्रस्त": [
   {
    "text": "रोहन के मोहल्ले की सड़कें बरसों से जलभराव की समस्या से ग्रस्त हैं।",
@@ -13748,6 +13908,22 @@
    "en": "After the rain a snail was slowly climbing the wall.",
    "ko": "비가 그친 뒤 달팽이 한 마리가 벽을 천천히 오르고 있었어요.",
    "blank": "घोंघा",
+   "src": "made"
+  }
+ ],
+ "w|घोटाला": [
+  {
+   "text": "करण की एक रिपोर्ट से राशन विभाग का बड़ा घोटाला सामने आया।",
+   "en": "One of Karan's reports exposed a big scam in the ration department.",
+   "ko": "카란의 기사 하나로 배급 부서의 큰 비리가 드러났어요.",
+   "blank": "घोटाला",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने टीवी पर दवाओं की जाँच से जुड़े एक घोटाले की ख़बर देखी।",
+   "en": "Deepa saw news on TV about a scam related to drug testing.",
+   "ko": "디파는 텔레비전에서 약품 검사와 관련된 비리 뉴스를 봤어요.",
+   "blank": "घोटाले",
    "src": "made"
   }
  ],
@@ -16481,6 +16657,22 @@
    "blank": "जन"
   }
  ],
+ "w|जनजाति": [
+  {
+   "text": "करण ने पहाड़ों में रहने वाली एक जनजाति के मेलों पर रिपोर्ट लिखी।",
+   "en": "Karan wrote a report on the fairs of a tribe living in the mountains.",
+   "ko": "카란은 산에 사는 한 부족의 축제에 대해 기사를 썼어요.",
+   "blank": "जनजाति",
+   "src": "made"
+  },
+  {
+   "text": "दीपा एक जनजाति की पारंपरिक जड़ी-बूटियों पर शोध कर रही है।",
+   "en": "Deepa is researching the traditional herbs of a tribe.",
+   "ko": "디파는 한 부족의 전통 약초를 연구하고 있어요.",
+   "blank": "जनजाति",
+   "src": "made"
+  }
+ ],
  "w|जनता": [
   {
    "text": "जनता मैदान में जमा हो गई।",
@@ -16670,6 +16862,22 @@
    "en": "There was a tremendous crowd at the market before Diwali.",
    "ko": "디왈리 전이라 시장이 엄청나게 붐볐어요.",
    "blank": "ज़बरदस्त",
+   "src": "made"
+  }
+ ],
+ "w|ज़बरन": [
+  {
+   "text": "ख़बर के मुताबिक़ दुकानदारों से ज़बरन चंदा वसूला जा रहा था।",
+   "en": "According to the report, donations were being forcibly collected from shopkeepers.",
+   "ko": "기사에 따르면 가게 주인들에게서 기부금을 억지로 걷고 있었어요.",
+   "blank": "ज़बरन",
+   "src": "made"
+  },
+  {
+   "text": "फँसा हुआ ढक्कन ज़बरन खोलने से काँच की बोतल टूट गई।",
+   "en": "Forcing open the stuck lid broke the glass bottle.",
+   "ko": "꽉 낀 뚜껑을 억지로 열다가 유리병이 깨졌어요.",
+   "blank": "ज़बरन",
    "src": "made"
   }
  ],
@@ -18370,6 +18578,22 @@
    "en": "Coming out of the water, Anjali shook her head to get the water out of her ears.",
    "ko": "물에서 나온 안잘리는 머리를 흔들어 귀의 물을 뺐어요.",
    "blank": "झटककर",
+   "src": "made"
+  }
+ ],
+ "w|झंडा": [
+  {
+   "text": "अख़बार के दफ़्तर पर स्वतंत्रता दिवस के दिन झंडा लहराया गया।",
+   "en": "A flag was flown over the newspaper office on Independence Day.",
+   "ko": "독립기념일에 신문사 건물에 깃발이 휘날렸어요.",
+   "blank": "झंडा",
+   "src": "made"
+  },
+  {
+   "text": "विज्ञान मेले में दीपा की टीम ने अपनी मेज़ पर कॉलेज का झंडा लगाया।",
+   "en": "At the science fair, Deepa's team put up the college flag on their table.",
+   "ko": "과학 박람회에서 디파 팀은 테이블에 학교 깃발을 꽂았어요.",
+   "blank": "झंडा",
    "src": "made"
   }
  ],
@@ -20731,6 +20955,22 @@
    "en": "After the divorce both kept their friendship.",
    "ko": "이혼 후에도 둘은 우정을 지켰어.",
    "blank": "तलाक़"
+  }
+ ],
+ "w|तलाश करना": [
+  {
+   "text": "संपादक एक ऐसे फ़ोटोग्राफ़र की तलाश कर रहे हैं जो रात में भी काम कर सके।",
+   "en": "The editor is looking for a photographer who can also work at night.",
+   "ko": "편집장은 밤에도 일할 수 있는 사진기자를 찾고 있어요.",
+   "blank": "तलाश कर",
+   "src": "made"
+  },
+  {
+   "text": "दीपा कई दिनों से एक ख़ास बैक्टीरिया की तलाश कर रही है।",
+   "en": "Deepa has been searching for a particular bacterium for several days.",
+   "ko": "디파는 며칠째 특정 세균을 찾고 있어요.",
+   "blank": "तलाश कर",
+   "src": "made"
   }
  ],
  "w|तवा": [
@@ -23389,6 +23629,22 @@
    "src": "made"
   }
  ],
+ "w|दूतावास": [
+  {
+   "text": "करण को वीज़ा नियमों पर एक इंटरव्यू के लिए दूतावास जाना पड़ा।",
+   "en": "Karan had to go to the embassy for an interview on visa rules.",
+   "ko": "카란은 비자 규정에 관한 인터뷰를 하러 대사관에 가야 했어요.",
+   "blank": "दूतावास",
+   "src": "made"
+  },
+  {
+   "text": "विदेश में सम्मेलन के लिए दीपा का वीज़ा दूतावास से कल आया।",
+   "en": "Deepa's visa for the conference abroad came from the embassy yesterday.",
+   "ko": "해외 학회에 갈 디파의 비자가 어제 대사관에서 나왔어요.",
+   "blank": "दूतावास",
+   "src": "made"
+  }
+ ],
  "w|दूध": [
   {
    "text": "सुबह गरम दूध पियो।",
@@ -24181,6 +24437,22 @@
    "src": "made"
   }
  ],
+ "w|धार": [
+  {
+   "text": "करण की क़लम की धार से कई अफ़सर डरते हैं।",
+   "en": "Many officials fear the sharpness of Karan's pen.",
+   "ko": "많은 공무원이 카란의 날카로운 필력을 두려워해요.",
+   "blank": "धार",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने कहा कि ब्लेड की धार बहुत तेज़ है, इसे दस्ताने पहनकर पकड़ो।",
+   "en": "Deepa said the blade's edge is very sharp, so hold it with gloves on.",
+   "ko": "디파는 칼날이 아주 날카로우니 장갑을 끼고 잡으라고 했어요.",
+   "blank": "धार",
+   "src": "made"
+  }
+ ],
  "w|धारा": [
   {
    "text": "नदी की धारा तेज़ बह रही है।",
@@ -24311,6 +24583,22 @@
    "en": "Wear a hat in strong sunlight.",
    "ko": "강한 햇볕에선 모자를 써.",
    "blank": "धूप"
+  }
+ ],
+ "w|धूम": [
+  {
+   "text": "अख़बार की पचासवीं सालगिरह पूरे शहर में धूम से मनाई गई।",
+   "en": "The newspaper's fiftieth anniversary was celebrated with great fanfare across the city.",
+   "ko": "신문 창간 오십 주년은 온 도시에서 떠들썩하게 축하됐어요.",
+   "blank": "धूम",
+   "src": "made"
+  },
+  {
+   "text": "दीपा का पेपर छपने पर लैब में मिठाइयों की धूम मच गई।",
+   "en": "When Deepa's paper was published, the lab was abuzz with sweets.",
+   "ko": "디파의 논문이 실리자 실험실은 단것 잔치로 떠들썩해졌어요.",
+   "blank": "धूम",
+   "src": "made"
   }
  ],
  "w|धैर्य": [
@@ -24461,6 +24749,22 @@
    "en": "If you listen carefully, you'll understand.",
    "ko": "잘 들으면 이해가 될 거야.",
    "blank": "ध्यान से"
+  }
+ ],
+ "w|ध्वज": [
+  {
+   "text": "पहले पन्ने पर राष्ट्रीय ध्वज के साथ खिलाड़ियों की बड़ी तस्वीर छपी।",
+   "en": "A big picture of the players with the national flag was printed on the front page.",
+   "ko": "일면에 국기를 든 선수들의 큰 사진이 실렸어요.",
+   "blank": "ध्वज",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ की चोटी पर पहुँचे शोध दल ने वहाँ अपने संस्थान का ध्वज गाड़ा।",
+   "en": "The research team that reached the mountain peak planted their institute's flag there.",
+   "ko": "산꼭대기에 오른 연구팀은 거기에 연구소 깃발을 꽂았어요.",
+   "blank": "ध्वज",
+   "src": "made"
   }
  ],
  "w|न": [
@@ -26249,6 +26553,22 @@
    "src": "made"
   }
  ],
+ "w|निवारण": [
+  {
+   "text": "अख़बार ने पाठकों की शिकायतों के निवारण के लिए एक नया कॉलम शुरू किया।",
+   "en": "The newspaper started a new column to resolve readers' complaints.",
+   "ko": "신문은 독자 불만을 해결하려고 새 칼럼을 시작했어요.",
+   "blank": "निवारण",
+   "src": "made"
+  },
+  {
+   "text": "दीपा का शोध गाँवों में पानी की बीमारियों के निवारण से जुड़ा है।",
+   "en": "Deepa's research is linked to preventing water-borne diseases in villages.",
+   "ko": "디파의 연구는 마을의 수인성 질병 예방과 관련돼 있어요.",
+   "blank": "निवारण",
+   "src": "made"
+  }
+ ],
  "w|निवास": [
   {
    "text": "लिफ़ाफ़े पर अमित के नए निवास का पता साफ़ अक्षरों में लिखा था।",
@@ -26686,6 +27006,22 @@
    "en": "Priya felt it was her moral duty to return the extra items sent by mistake.",
    "ko": "프리야는 실수로 더 온 물건을 돌려보내는 게 도덕적 의무라고 느꼈어요.",
    "blank": "नैतिक",
+   "src": "made"
+  }
+ ],
+ "w|नैतिकता": [
+  {
+   "text": "ट्रेनिंग में नए रिपोर्टरों को पत्रकारिता की नैतिकता सिखाई जाती है।",
+   "en": "In training, new reporters are taught the ethics of journalism.",
+   "ko": "교육에서 신입 기자들은 언론 윤리를 배워요.",
+   "blank": "नैतिकता",
+   "src": "made"
+  },
+  {
+   "text": "जानवरों पर प्रयोग से पहले दीपा की समिति नैतिकता के सवालों पर चर्चा करती है।",
+   "en": "Before experiments on animals, Deepa's committee discusses questions of ethics.",
+   "ko": "동물 실험 전에 디파의 위원회는 윤리 문제를 논의해요.",
+   "blank": "नैतिकता",
    "src": "made"
   }
  ],
@@ -29181,6 +29517,22 @@
    "src": "made"
   }
  ],
+ "w|पावन": [
+  {
+   "text": "गंगा के घाट पर करण ने एक पावन पर्व की रिपोर्टिंग की।",
+   "en": "Karan reported on a holy festival at the ghats of the Ganga.",
+   "ko": "카란은 갠지스 강가에서 열린 성스러운 축제를 취재했어요.",
+   "blank": "पावन",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने नदी के पावन जल का नमूना लेकर उसकी जाँच की।",
+   "en": "Deepa took a sample of the river's sacred water and tested it.",
+   "ko": "디파는 강의 성스러운 물을 떠다 검사했어요.",
+   "blank": "पावन",
+   "src": "made"
+  }
+ ],
  "w|पास": [
   {
    "text": "दवाई हाथ के पास ही रखो।",
@@ -29815,6 +30167,22 @@
    "blank": "पूँछ"
   }
  ],
+ "w|पूछताछ": [
+  {
+   "text": "करण ने बताया कि पुलिस ने चोरी के मामले में दो लोगों से पूछताछ की है।",
+   "en": "Karan reported that the police have questioned two people in the theft case.",
+   "ko": "카란은 경찰이 도난 사건과 관련해 두 사람을 조사했다고 보도했어요.",
+   "blank": "पूछताछ",
+   "src": "made"
+  },
+  {
+   "text": "एक केमिकल ग़ायब होने पर सुरक्षा अधिकारी ने लैब के सब लोगों से पूछताछ की।",
+   "en": "When a chemical went missing, the safety officer questioned everyone in the lab.",
+   "ko": "약품 하나가 없어지자 안전 담당자가 실험실 사람들 모두에게 물어봤어요.",
+   "blank": "पूछताछ",
+   "src": "made"
+  }
+ ],
  "w|पूछना": [
   {
    "text": "उसने मेरा नाम पूछा।",
@@ -29983,6 +30351,22 @@
    "en": "Write notes on the blank page.",
    "ko": "빈 페이지에 메모를 써.",
    "blank": "पृष्ठ"
+  }
+ ],
+ "w|पृष्ठभूमि": [
+  {
+   "text": "करण ने ख़बर से पहले विवाद की पूरी पृष्ठभूमि समझाई।",
+   "en": "Before the news, Karan explained the full background of the dispute.",
+   "ko": "카란은 기사에 앞서 분쟁의 배경을 자세히 설명했어요.",
+   "blank": "पृष्ठभूमि",
+   "src": "made"
+  },
+  {
+   "text": "तस्वीर साफ़ आए, इसलिए दीपा ने नमूने के पीछे सफ़ेद पृष्ठभूमि रखी।",
+   "en": "To get a clear picture, Deepa put a white background behind the sample.",
+   "ko": "사진이 깨끗하게 나오도록 디파는 시료 뒤에 흰 배경을 댔어요.",
+   "blank": "पृष्ठभूमि",
+   "src": "made"
   }
  ],
  "w|पेट": [
@@ -30954,6 +31338,22 @@
    "en": "The tree in the company logo is a symbol of growth.",
    "ko": "회사 로고 속 나무는 성장을 상징해요.",
    "blank": "प्रतीक",
+   "src": "made"
+  }
+ ],
+ "w|प्रत्यक्ष": [
+  {
+   "text": "करण ने बाढ़ की ख़बर किसी से सुनकर नहीं, प्रत्यक्ष देखकर लिखी।",
+   "en": "Karan wrote the flood story not from hearsay but from seeing it first-hand.",
+   "ko": "카란은 홍수 기사를 누구에게 들은 게 아니라 직접 보고 썼어요.",
+   "blank": "प्रत्यक्ष",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने बीज को पानी में फूटते हुए माइक्रोस्कोप से प्रत्यक्ष देखा।",
+   "en": "Deepa directly watched the seed sprouting in water through the microscope.",
+   "ko": "디파는 현미경으로 씨앗이 물속에서 싹트는 걸 직접 봤어요.",
+   "blank": "प्रत्यक्ष",
    "src": "made"
   }
  ],
@@ -32135,6 +32535,22 @@
    "en": "Our wedding is in February.",
    "ko": "우리 결혼식이 이월이야.",
    "blank": "फ़रवरी"
+  }
+ ],
+ "w|फ़रार": [
+  {
+   "text": "करण ने लिखा कि बैंक से पैसे लेकर भागा व्यापारी अब भी फ़रार है।",
+   "en": "Karan wrote that the trader who ran off with the bank's money is still absconding.",
+   "ko": "카란은 은행 돈을 들고 달아난 상인이 아직도 도주 중이라고 썼어요.",
+   "blank": "फ़रार",
+   "src": "made"
+  },
+  {
+   "text": "चूहा पिंजरे से निकलकर फ़रार हो गया, और दीपा उसे घंटे भर ढूँढती रही।",
+   "en": "The mouse escaped from its cage and ran off, and Deepa searched for it for an hour.",
+   "ko": "쥐가 우리를 빠져나가 달아나서 디파는 한 시간 내내 찾아다녔어요.",
+   "blank": "फ़रार",
+   "src": "made"
   }
  ],
  "w|फ़र्क़": [
@@ -33963,6 +34379,22 @@
    "en": "Don't waste time.",
    "ko": "시간을 낭비하지 마.",
    "blank": "बर्बाद"
+  }
+ ],
+ "w|बर्बादी": [
+  {
+   "text": "अख़बार ने मंडी में सब्ज़ियों की बर्बादी पर एक फ़ोटो कहानी छापी।",
+   "en": "The newspaper ran a photo story on the waste of vegetables at the market.",
+   "ko": "신문은 시장에서 버려지는 채소에 관한 사진 기사를 실었어요.",
+   "blank": "बर्बादी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा रसायनों की बर्बादी रोकने के लिए हर चीज़ नापकर डालती है।",
+   "en": "Deepa measures everything she pours to prevent waste of chemicals.",
+   "ko": "디파는 약품 낭비를 막으려고 모든 걸 재서 넣어요.",
+   "blank": "बर्बादी",
+   "src": "made"
   }
  ],
  "w|बल": [
@@ -36231,6 +36663,22 @@
    "blank": "भक्ति"
   }
  ],
+ "w|भंग": [
+  {
+   "text": "करण ने बताया कि पुरानी नगर समिति भंग कर दी गई है।",
+   "en": "Karan reported that the old city committee has been dissolved.",
+   "ko": "카란은 옛 시 위원회가 해산됐다고 보도했어요.",
+   "blank": "भंग",
+   "src": "made"
+  },
+  {
+   "text": "फ़ोन बजने से दीपा का ध्यान भंग हुआ और घोल गिर गया।",
+   "en": "The phone ringing broke Deepa's concentration and the solution spilled.",
+   "ko": "전화가 울려 디파의 집중이 깨지는 바람에 용액이 쏟아졌어요.",
+   "blank": "भंग",
+   "src": "made"
+  }
+ ],
  "w|भगवान": [
   {
    "text": "भगवान तुम्हारा भला करे।",
@@ -37699,6 +38147,22 @@
    "en": "Forced by circumstances, he left the city.",
    "ko": "그는 형편상 어쩔 수 없이 도시를 떠났어.",
    "blank": "मजबूर"
+  }
+ ],
+ "w|मज़बूर करना": [
+  {
+   "text": "ख़राब सड़क ने लोगों को घंटों जाम में फँसे रहने पर मज़बूर कर दिया।",
+   "en": "The bad road forced people to stay stuck in traffic for hours.",
+   "ko": "엉망인 도로 때문에 사람들은 몇 시간씩 꼼짝없이 차 안에 갇혀 있어야 했어요.",
+   "blank": "मज़बूर कर",
+   "src": "made"
+  },
+  {
+   "text": "बिजली जाने ने दीपा को पूरा प्रयोग फिर से करने पर मज़बूर कर दिया।",
+   "en": "The power cut forced Deepa to redo the whole experiment.",
+   "ko": "정전 때문에 디파는 실험을 처음부터 다시 해야 했어요.",
+   "blank": "मज़बूर कर",
+   "src": "made"
   }
  ],
  "w|मज़हब": [
@@ -39834,6 +40298,22 @@
    "en": "Meena's bank's headquarters sent a team of employees to the marathon.",
    "ko": "미나네 은행 본사에서 직원 팀을 마라톤에 보냈어요.",
    "blank": "मुख्यालय",
+   "src": "made"
+  }
+ ],
+ "w|मुठभेड़": [
+  {
+   "text": "अख़बार के मुताबिक़ जंगल में पुलिस और तस्करों के बीच मुठभेड़ हुई।",
+   "en": "According to the newspaper, there was a clash between police and smugglers in the forest.",
+   "ko": "신문에 따르면 숲에서 경찰과 밀수꾼들 사이에 충돌이 있었어요.",
+   "blank": "मुठभेड़",
+   "src": "made"
+  },
+  {
+   "text": "दीपा कहती है कि पहले प्रयोग में उसकी मुठभेड़ असफलता से हुई थी।",
+   "en": "Deepa says that in her first experiment she came face to face with failure.",
+   "ko": "디파는 첫 실험에서 실패와 맞닥뜨렸다고 말해요.",
+   "blank": "मुठभेड़",
    "src": "made"
   }
  ],
@@ -42606,6 +43086,22 @@
    "en": "The neighbor lady spent two days at a resort for her anniversary.",
    "ko": "이웃 아주머니는 결혼기념일에 리조트에서 이틀을 보냈어요.",
    "blank": "रिसॉर्ट",
+   "src": "made"
+  }
+ ],
+ "w|रिहा": [
+  {
+   "text": "अदालत के आदेश के बाद पत्रकार को उसी शाम रिहा कर दिया गया।",
+   "en": "After the court's order, the journalist was released that same evening.",
+   "ko": "법원 명령이 나오자 그 기자는 그날 저녁 바로 풀려났어요.",
+   "blank": "रिहा",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने बचाई गई तितलियों को बग़ीचे में रिहा कर दिया।",
+   "en": "Deepa released the rescued butterflies in the garden.",
+   "ko": "디파는 구조한 나비들을 정원에 놓아줬어요.",
+   "blank": "रिहा",
    "src": "made"
   }
  ],
@@ -45531,6 +46027,22 @@
    "src": "made"
   }
  ],
+ "w|विवादित": [
+  {
+   "text": "संपादक ने विवादित ज़मीन की ख़बर छापने से पहले दोनों पक्षों से बात की।",
+   "en": "The editor spoke to both sides before printing the story about the disputed land.",
+   "ko": "편집장은 분쟁 중인 땅에 관한 기사를 싣기 전에 양쪽 이야기를 다 들었어요.",
+   "blank": "विवादित",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने कहा कि यह विवादित नतीजा दोबारा जाँचा जाना चाहिए।",
+   "en": "Deepa said this disputed result should be checked again.",
+   "ko": "디파는 이 논란이 있는 결과를 다시 검증해야 한다고 했어요.",
+   "blank": "विवादित",
+   "src": "made"
+  }
+ ],
  "w|विवाह": [
   {
    "text": "उनका विवाह अगले महीने है।",
@@ -47081,6 +47593,22 @@
    "src": "made"
   }
  ],
+ "w|शाही": [
+  {
+   "text": "करण ने एक पुराने शाही महल के होटल बनने पर लेख लिखा।",
+   "en": "Karan wrote an article about an old royal palace becoming a hotel.",
+   "ko": "카란은 옛 왕궁이 호텔로 바뀐 이야기를 기사로 썼어요.",
+   "blank": "शाही",
+   "src": "made"
+  },
+  {
+   "text": "लैब के संग्रह में एक पुरानी शाही दूरबीन भी रखी है।",
+   "en": "The lab's collection also holds an old royal telescope.",
+   "ko": "실험실 소장품에는 옛 왕실 망원경도 있어요.",
+   "blank": "शाही",
+   "src": "made"
+  }
+ ],
  "w|शिकायत": [
   {
    "text": "पड़ोसी ने शोर की शिकायत की।",
@@ -47401,6 +47929,22 @@
    "en": "I received his good wish for the exam.",
    "ko": "시험을 위한 그의 축하를 받았어.",
    "blank": "शुभकामना"
+  }
+ ],
+ "w|शुभारंभ": [
+  {
+   "text": "अख़बार के नए ऐप का शुभारंभ शहर के महापौर ने किया।",
+   "en": "The newspaper's new app was launched by the city's mayor.",
+   "ko": "신문의 새 앱은 시장이 첫 테이프를 끊었어요.",
+   "blank": "शुभारंभ",
+   "src": "made"
+  },
+  {
+   "text": "नई प्रयोगशाला का शुभारंभ दीपा की गुरु ने फ़ीता काटकर किया।",
+   "en": "Deepa's mentor inaugurated the new laboratory by cutting the ribbon.",
+   "ko": "디파의 스승이 테이프를 끊어 새 실험실을 열었어요.",
+   "blank": "शुभारंभ",
+   "src": "made"
   }
  ],
  "w|शुरुआत": [
@@ -49111,6 +49655,22 @@
    "blank": "सभी"
   }
  ],
+ "w|समक्ष": [
+  {
+   "text": "करण ने अपनी रिपोर्ट के सारे काग़ज़ संपादक के समक्ष रख दिए।",
+   "en": "Karan placed all the papers of his report before the editor.",
+   "ko": "카란은 기사 자료를 모두 편집장 앞에 내놓았어요.",
+   "blank": "समक्ष",
+   "src": "made"
+  },
+  {
+   "text": "दीपा को अगले महीने वैज्ञानिकों के समक्ष अपना शोध पेश करना है।",
+   "en": "Next month Deepa has to present her research before scientists.",
+   "ko": "디파는 다음 달 과학자들 앞에서 연구를 발표해야 해요.",
+   "blank": "समक्ष",
+   "src": "made"
+  }
+ ],
  "w|समझ": [
   {
    "text": "अब बात समझ में आ गई।",
@@ -49774,6 +50334,22 @@
    "en": "Dipa is with an organization that works on bird conservation.",
    "ko": "디파는 조류 보호 단체에서 일해요.",
    "blank": "संरक्षण",
+   "src": "made"
+  }
+ ],
+ "w|संरचना": [
+  {
+   "text": "करण ने लेख की संरचना बदली, ताकि सबसे ज़रूरी बात पहले आए।",
+   "en": "Karan changed the structure of the article so the most important point came first.",
+   "ko": "카란은 가장 중요한 내용이 먼저 나오도록 기사 구성을 바꿨어요.",
+   "blank": "संरचना",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने छात्रों को स्क्रीन पर नमक के क्रिस्टल की संरचना दिखाई।",
+   "en": "Deepa showed the students the structure of a salt crystal on the screen.",
+   "ko": "디파는 학생들에게 화면으로 소금 결정의 구조를 보여 줬어요.",
+   "blank": "संरचना",
    "src": "made"
   }
  ],
@@ -50851,6 +51427,22 @@
    "blank": "साँप"
   }
  ],
+ "w|सांप्रदायिक": [
+  {
+   "text": "अख़बार ने त्योहार पर दो मोहल्लों के सांप्रदायिक सद्भाव की तारीफ़ की।",
+   "en": "The newspaper praised the communal harmony of two neighbourhoods during the festival.",
+   "ko": "신문은 명절에 두 동네가 보여 준 종교 간 화합을 칭찬했어요.",
+   "blank": "सांप्रदायिक",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के लिए विज्ञान सांप्रदायिक बँटवारे से ऊपर उठकर सबको जोड़ने वाली चीज़ है।",
+   "en": "For Deepa, science is something that rises above communal divisions and unites everyone.",
+   "ko": "디파에게 과학은 종교로 갈린 벽을 넘어 모두를 잇는 것이에요.",
+   "blank": "सांप्रदायिक",
+   "src": "made"
+  }
+ ],
  "w|साफ़": [
   {
    "text": "मेज़ साफ़ कर दो, मेहमान आ रहे हैं।",
@@ -51481,6 +52073,22 @@
    "en": "The policeman showed the way.",
    "ko": "경찰이 길을 알려 줬어.",
    "blank": "सिपाही"
+  }
+ ],
+ "w|सियासत": [
+  {
+   "text": "करण कहता है कि ख़बर लिखते समय सियासत से दूर रहना चाहिए।",
+   "en": "Karan says one should stay away from politics while writing the news.",
+   "ko": "카란은 기사를 쓸 때는 정치 놀음과 거리를 둬야 한다고 말해요.",
+   "blank": "सियासत",
+   "src": "made"
+  },
+  {
+   "text": "दीपा को लगता है कि विज्ञान के पैसों पर सियासत नहीं होनी चाहिए।",
+   "en": "Deepa feels there should be no politicking over science funding.",
+   "ko": "디파는 과학 예산을 두고 정치 싸움을 해서는 안 된다고 생각해요.",
+   "blank": "सियासत",
+   "src": "made"
   }
  ],
  "w|सिर": [
@@ -52137,6 +52745,22 @@
    "en": "She makes tea early in the morning and serves it.",
    "ko": "그녀는 아침 일찍 차를 끓여 줘.",
    "blank": "सुबह सुबह"
+  }
+ ],
+ "w|सुर": [
+  {
+   "text": "संपादक को लेख का सुर बहुत कड़वा लगा, तो करण ने उसे नरम किया।",
+   "en": "The editor found the article's tone too bitter, so Karan softened it.",
+   "ko": "편집장이 기사 어조가 너무 날 서 있다고 해서 카란은 부드럽게 고쳤어요.",
+   "blank": "सुर",
+   "src": "made"
+  },
+  {
+   "text": "ध्वनि के प्रयोग में दीपा ने अलग-अलग सुर वाले काँटे बजाए।",
+   "en": "In the sound experiment, Deepa struck tuning forks of different pitches.",
+   "ko": "소리 실험에서 디파는 음이 서로 다른 소리굽쇠를 울렸어요.",
+   "blank": "सुर",
+   "src": "made"
   }
  ],
  "w|सुरक्षा": [
@@ -53345,6 +53969,22 @@
    "en": "Understand the value of freedom.",
    "ko": "자유의 가치를 알아.",
    "blank": "स्वतंत्रता"
+  }
+ ],
+ "w|स्वदेशी": [
+  {
+   "text": "करण ने स्वदेशी खिलौने बनाने वाले कारीगरों पर एक कहानी लिखी।",
+   "en": "Karan wrote a story on artisans who make home-grown toys.",
+   "ko": "카란은 국산 장난감을 만드는 장인들에 관한 기사를 썼어요.",
+   "blank": "स्वदेशी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की लैब में ज़्यादातर मशीनें अब स्वदेशी हैं।",
+   "en": "Most of the machines in Deepa's lab are now made in the country.",
+   "ko": "디파 실험실의 기계는 이제 대부분 국산이에요.",
+   "blank": "स्वदेशी",
+   "src": "made"
   }
  ],
  "w|स्वभाव": [

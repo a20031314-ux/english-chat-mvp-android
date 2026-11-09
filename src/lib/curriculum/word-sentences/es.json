@@ -2571,6 +2571,22 @@
    "blank": "ahora"
   }
  ],
+ "w|ahorcado": [
+  {
+   "text": "En la página de pasatiempos, Sergio añadió un juego del ahorcado para los niños.",
+   "en": "On the puzzles page, Sergio added a hangman game for the children.",
+   "ko": "세르히오는 퍼즐 면에 아이들을 위한 행맨 게임을 넣었어요.",
+   "blank": "ahorcado",
+   "src": "made"
+  },
+  {
+   "text": "En la mesa de los niños, Lola jugó al ahorcado en una servilleta para que no se aburrieran.",
+   "en": "At the children's table, Lola played hangman on a napkin so they wouldn't get bored.",
+   "ko": "롤라는 아이들 테이블에서 아이들이 심심하지 않게 냅킨에 행맨 게임을 했어요.",
+   "blank": "ahorcado",
+   "src": "made"
+  }
+ ],
  "w|ahorrar": [
   {
    "text": "Quiero ahorrar para un viaje largo.",
@@ -5517,6 +5533,22 @@
    "en": "The council must approve the budget.",
    "ko": "의회가 예산을 승인해야 해.",
    "blank": "aprobar"
+  }
+ ],
+ "w|apropiadamente": [
+  {
+   "text": "Sergio revisa que cada cita esté apropiadamente atribuida antes de publicar.",
+   "en": "Sergio checks that every quote is properly attributed before publishing.",
+   "ko": "세르히오는 기사를 내기 전에 인용마다 출처가 제대로 달렸는지 확인해요.",
+   "blank": "apropiadamente",
+   "src": "made"
+  },
+  {
+   "text": "Lola no sabía si iba vestida apropiadamente para una boda en la playa.",
+   "en": "Lola didn't know if she was dressed appropriately for a beach wedding.",
+   "ko": "롤라는 해변 결혼식에 맞게 옷을 입었는지 몰랐어요.",
+   "blank": "apropiadamente",
+   "src": "made"
   }
  ],
  "w|apropiado": [
@@ -13219,6 +13251,22 @@
    "blank": "caso"
   }
  ],
+ "w|castaño": [
+  {
+   "text": "La testigo describió a un hombre de pelo castaño, anotó Sergio.",
+   "en": "The witness described a man with brown hair, Sergio noted.",
+   "ko": "목격자는 갈색 머리 남자를 묘사했다고 세르히오가 적었어요.",
+   "blank": "castaño",
+   "src": "made"
+  },
+  {
+   "text": "Lola llevaba el pelo castaño recogido en un moño.",
+   "en": "Lola wore her brown hair up in a bun.",
+   "ko": "롤라는 갈색 머리를 틀어 올려 묶었어요.",
+   "blank": "castaño",
+   "src": "made"
+  }
+ ],
  "w|castigar": [
   {
    "text": "No voy a castigar a nadie por eso.",
@@ -14767,6 +14815,22 @@
    "en": "Nobody lit a cigar on the terrace.",
    "ko": "테라스에서는 아무도 시가를 피우지 않았어.",
    "blank": "cigarro"
+  }
+ ],
+ "w|cilindro": [
+  {
+   "text": "En la imprenta, Sergio vio cómo un enorme cilindro de metal imprimía las páginas.",
+   "en": "At the printing press, Sergio watched a huge metal cylinder print the pages.",
+   "ko": "세르히오는 인쇄소에서 거대한 금속 원통이 지면을 찍어 내는 걸 봤어요.",
+   "blank": "cilindro",
+   "src": "made"
+  },
+  {
+   "text": "Lola decoró las mesas con velas dentro de un cilindro de cristal.",
+   "en": "Lola decorated the tables with candles inside glass cylinders.",
+   "ko": "롤라는 유리 원통 안에 초를 넣어 테이블을 꾸몄어요.",
+   "blank": "cilindro",
+   "src": "made"
   }
  ],
  "w|cima": [
@@ -18543,6 +18607,22 @@
    "src": "made"
   }
  ],
+ "w|contención": [
+  {
+   "text": "Sergio habló con los ingenieros del muro de contención que protege el paseo marítimo.",
+   "en": "Sergio spoke to the engineers of the retaining wall that protects the seafront.",
+   "ko": "세르히오는 해안 산책로를 지키는 옹벽을 맡은 기술자들과 이야기했어요.",
+   "blank": "contención",
+   "src": "made"
+  },
+  {
+   "text": "Lola lloró sin contención cuando su mejor amiga dijo «sí, quiero».",
+   "en": "Lola cried without restraint when her best friend said \"I do\".",
+   "ko": "롤라는 가장 친한 친구가 \"네, 원해요\"라고 하자 참지 못하고 울었어요.",
+   "blank": "contención",
+   "src": "made"
+  }
+ ],
  "w|contenedor": [
   {
    "text": "El contenedor llegó tarde al puerto.",
@@ -21803,6 +21883,22 @@
    "blank": "Decidimos"
   }
  ],
+ "w|décimo": [
+  {
+   "text": "Este es el décimo aniversario de la columna semanal de Sergio.",
+   "en": "This is the tenth anniversary of Sergio's weekly column.",
+   "ko": "이번이 세르히오의 주간 칼럼 십 주년이에요.",
+   "blank": "décimo",
+   "src": "made"
+  },
+  {
+   "text": "Esta es la décima boda a la que va Lola este año.",
+   "en": "This is the tenth wedding Lola has been to this year.",
+   "ko": "롤라가 올해 가는 결혼식이 이번이 열 번째예요.",
+   "blank": "décima",
+   "src": "made"
+  }
+ ],
  "w|decir": [
   {
    "text": "Te voy a decir algo.",
@@ -23679,6 +23775,22 @@
    "blank": "desmayarse"
   }
  ],
+ "w|desmoronarse": [
+  {
+   "text": "Sergio escribió sobre el viejo edificio que empezó a desmoronarse tras las lluvias.",
+   "en": "Sergio wrote about the old building that began to crumble after the rains.",
+   "ko": "세르히오는 비가 온 뒤 무너지기 시작한 낡은 건물에 대해 기사를 썼어요.",
+   "blank": "desmoronarse",
+   "src": "made"
+  },
+  {
+   "text": "Lola vio desmoronarse la tarta de tres pisos justo antes de servirla.",
+   "en": "Lola watched the three-tier cake collapse just before it was served.",
+   "ko": "롤라는 삼단 케이크가 내놓기 직전에 무너지는 걸 봤어요.",
+   "blank": "desmoronarse",
+   "src": "made"
+  }
+ ],
  "w|desnudar": [
   {
    "text": "Hay que desnudar el cable con cuidado.",
@@ -23705,6 +23817,22 @@
    "en": "He was left exposed before the truth.",
    "ko": "진실 앞에서 그는 벗겨진 기분이었어.",
    "blank": "desnudo"
+  }
+ ],
+ "w|desobedecer": [
+  {
+   "text": "Sergio decidió desobedecer a su jefe y publicar la entrevista completa.",
+   "en": "Sergio decided to disobey his boss and publish the full interview.",
+   "ko": "세르히오는 상사 말을 어기고 인터뷰 전문을 싣기로 했어요.",
+   "blank": "desobedecer",
+   "src": "made"
+  },
+  {
+   "text": "Lola le pidió a su hijo que no se atreviera a desobedecer al fotógrafo.",
+   "en": "Lola told her son not to dare disobey the photographer.",
+   "ko": "롤라는 아들에게 사진사 말을 절대 어기지 말라고 했어요.",
+   "blank": "desobedecer",
+   "src": "made"
   }
  ],
  "w|desorden": [
@@ -24281,6 +24409,22 @@
    "src": "made"
   }
  ],
+ "w|detonar": [
+  {
+   "text": "Sergio informó de que los artificieros iban a detonar una bomba antigua encontrada en la obra.",
+   "en": "Sergio reported that bomb disposal experts were going to detonate an old bomb found on the building site.",
+   "ko": "세르히오는 폭발물 처리반이 공사장에서 발견된 옛 폭탄을 터뜨릴 거라고 보도했어요.",
+   "blank": "detonar",
+   "src": "made"
+  },
+  {
+   "text": "Los novios querían detonar un cañón de confeti, pero Lola los convenció de no hacerlo.",
+   "en": "The couple wanted to set off a confetti cannon, but Lola convinced them not to.",
+   "ko": "신랑 신부는 꽃가루 대포를 터뜨리고 싶어 했지만 롤라가 말렸어요.",
+   "blank": "detonar",
+   "src": "made"
+  }
+ ],
  "w|detrás": [
   {
    "text": "Mira detrás de la puerta.",
@@ -24592,6 +24736,22 @@
    "en": "Lucía started swimming seriously when she was sixteen.",
    "ko": "루시아는 열여섯 살 때 본격적으로 수영을 시작했어요.",
    "blank": "dieciséis",
+   "src": "made"
+  }
+ ],
+ "w|diecisiete": [
+  {
+   "text": "Sergio empezó a trabajar en el periódico con diecisiete años, repartiendo ejemplares.",
+   "en": "Sergio started working at the newspaper at seventeen, delivering copies.",
+   "ko": "세르히오는 열일곱 살에 신문 배달로 신문사 일을 시작했어요.",
+   "blank": "diecisiete",
+   "src": "made"
+  },
+  {
+   "text": "Lola conoció a su marido cuando ambos tenían diecisiete años.",
+   "en": "Lola met her husband when they were both seventeen.",
+   "ko": "롤라는 남편과 둘 다 열일곱 살 때 만났어요.",
+   "blank": "diecisiete",
    "src": "made"
   }
  ],
@@ -33823,6 +33983,22 @@
    "blank": "filosofía"
   }
  ],
+ "w|filtración": [
+  {
+   "text": "Sergio recibió una filtración sobre el nuevo plan de urbanismo.",
+   "en": "Sergio received a leak about the new urban development plan.",
+   "ko": "세르히오는 새 도시 계획에 관한 내부 정보를 입수했어요.",
+   "blank": "filtración",
+   "src": "made"
+  },
+  {
+   "text": "Por una filtración en el techo, Lola tuvo que mover dos mesas del salón.",
+   "en": "Because of a leak in the ceiling, Lola had to move two tables in the hall.",
+   "ko": "천장에서 물이 새서 롤라는 연회장 테이블 두 개를 옮겨야 했어요.",
+   "blank": "filtración",
+   "src": "made"
+  }
+ ],
  "w|filtrar": [
   {
    "text": "Alguien llegó a filtrar las preguntas del examen y Mateo tuvo que repetirlo.",
@@ -34061,6 +34237,22 @@
    "en": "The ground still isn't firm.",
    "ko": "땅이 아직 단단하지 않아.",
    "blank": "firme"
+  }
+ ],
+ "w|firmemente": [
+  {
+   "text": "Sergio cree firmemente que un periódico local es necesario para la democracia.",
+   "en": "Sergio firmly believes that a local paper is necessary for democracy.",
+   "ko": "세르히오는 지역 신문이 민주주의에 꼭 필요하다고 굳게 믿어요.",
+   "blank": "firmemente",
+   "src": "made"
+  },
+  {
+   "text": "Lola sujetó firmemente el ramo para que no se lo quitara nadie.",
+   "en": "Lola held the bouquet firmly so nobody would take it from her.",
+   "ko": "롤라는 아무도 못 가져가게 부케를 꽉 잡았어요.",
+   "blank": "firmemente",
+   "src": "made"
   }
  ],
  "w|fiscal": [
@@ -35351,6 +35543,22 @@
    "src": "made"
   }
  ],
+ "w|fundamento": [
+  {
+   "text": "La directora dijo que la acusación no tenía fundamento y Sergio retiró el artículo.",
+   "en": "The editor said the accusation had no basis and Sergio withdrew the article.",
+   "ko": "편집장이 그 의혹에 근거가 없다고 해서 세르히오는 기사를 내렸어요.",
+   "blank": "fundamento",
+   "src": "made"
+  },
+  {
+   "text": "Lola cree que la confianza es el fundamento de cualquier matrimonio.",
+   "en": "Lola believes trust is the foundation of any marriage.",
+   "ko": "롤라는 신뢰가 모든 결혼의 기초라고 믿어요.",
+   "blank": "fundamento",
+   "src": "made"
+  }
+ ],
  "w|fundar": [
   {
    "text": "Hace años, Hugo decidió fundar una pequeña compañía de teatro con sus amigos.",
@@ -35630,6 +35838,22 @@
    "en": "Carmen ordered a gallon of alcohol to clean the equipment.",
    "ko": "카르멘은 기구 청소용 알코올 한 갤런을 주문했어요.",
    "blank": "galón",
+   "src": "made"
+  }
+ ],
+ "w|gama": [
+  {
+   "text": "El periódico de Sergio ofrece una amplia gama de suscripciones digitales.",
+   "en": "Sergio's paper offers a wide range of digital subscriptions.",
+   "ko": "세르히오의 신문은 다양한 디지털 구독 상품을 내놓고 있어요.",
+   "blank": "gama",
+   "src": "made"
+  },
+  {
+   "text": "En la tienda de novias, Lola vio una gama de blancos que no sabía que existía.",
+   "en": "At the bridal shop, Lola saw a range of whites she didn't know existed.",
+   "ko": "롤라는 웨딩숍에서 있는지도 몰랐던 여러 가지 흰색을 봤어요.",
+   "blank": "gama",
    "src": "made"
   }
  ],
@@ -37795,6 +38019,22 @@
    "src": "made"
   }
  ],
+ "w|hebreo": [
+  {
+   "text": "Sergio entrevistó a una profesora que enseña poesía hebrea en la universidad.",
+   "en": "Sergio interviewed a lecturer who teaches Hebrew poetry at the university.",
+   "ko": "세르히오는 대학에서 히브리 시를 가르치는 교수를 인터뷰했어요.",
+   "blank": "hebrea",
+   "src": "made"
+  },
+  {
+   "text": "Lola asistió por primera vez a una boda hebrea y le encantó romper la copa.",
+   "en": "Lola went to a Hebrew wedding for the first time and loved the breaking of the glass.",
+   "ko": "롤라는 처음으로 유대식 결혼식에 갔는데 잔을 깨는 의식이 정말 좋았어요.",
+   "blank": "hebrea",
+   "src": "made"
+  }
+ ],
  "w|hechicero": [
   {
    "text": "En el desfile de carnaval, Javier se disfrazó de hechicero con una capa morada.",
@@ -38395,6 +38635,22 @@
    "blank": "histórico"
   }
  ],
+ "w|historieta": [
+  {
+   "text": "Los domingos, el periódico de Sergio incluye una historieta para niños.",
+   "en": "On Sundays, Sergio's paper includes a comic strip for children.",
+   "ko": "일요일마다 세르히오의 신문에는 어린이용 만화가 실려요.",
+   "blank": "historieta",
+   "src": "made"
+  },
+  {
+   "text": "Las invitaciones de Lola tenían forma de historieta, con dibujos de los novios.",
+   "en": "Lola's invitations were in the form of a comic strip, with drawings of the couple.",
+   "ko": "롤라의 청첩장은 신랑 신부 그림이 들어간 만화 모양이었어요.",
+   "blank": "historieta",
+   "src": "made"
+  }
+ ],
  "w|hockey": [
   {
    "text": "Después del museo, Inés fue a ver un partido de hockey.",
@@ -38811,6 +39067,22 @@
    "en": "The bread came out of the oven nicely golden.",
    "ko": "빵이 오븐에서 고르게 갈색으로 나왔어.",
    "blank": "horno"
+  }
+ ],
+ "w|horrendo": [
+  {
+   "text": "La primera maqueta del suplemento era horrenda, y Sergio la rehízo entera.",
+   "en": "The supplement's first layout was hideous, and Sergio redid it entirely.",
+   "ko": "부록의 첫 시안이 끔찍해서 세르히오가 처음부터 다시 만들었어요.",
+   "blank": "horrenda",
+   "src": "made"
+  },
+  {
+   "text": "A Lola le pareció horrendo el sombrero de la madrina, pero no dijo nada.",
+   "en": "Lola thought the godmother's hat was hideous, but she said nothing.",
+   "ko": "롤라는 대모의 모자가 끔찍하다고 생각했지만 아무 말도 안 했어요.",
+   "blank": "horrendo",
+   "src": "made"
   }
  ],
  "w|horrible": [
@@ -39709,6 +39981,22 @@
    "src": "made"
   }
  ],
+ "w|impactante": [
+  {
+   "text": "La portada que eligió Sergio tenía una imagen muy impactante del incendio.",
+   "en": "The front page Sergio chose had a very striking image of the fire.",
+   "ko": "세르히오가 고른 일면에는 화재를 담은 아주 강렬한 사진이 실렸어요.",
+   "blank": "impactante",
+   "src": "made"
+  },
+  {
+   "text": "El discurso del padre de la novia fue tan impactante que Lola acabó llorando.",
+   "en": "The bride's father's speech was so moving that Lola ended up crying.",
+   "ko": "신부 아버지의 축사가 너무 감동적이어서 롤라는 결국 울었어요.",
+   "blank": "impactante",
+   "src": "made"
+  }
+ ],
  "w|impactar": [
   {
    "text": "La charla de la exalumna llegó a impactar tanto a Pablo que decidió estudiar medicina.",
@@ -40115,6 +40403,22 @@
    "src": "made"
   }
  ],
+ "w|impulsivo": [
+  {
+   "text": "Sergio es un poco impulsivo y a veces envía los artículos sin releerlos.",
+   "en": "Sergio is a bit impulsive and sometimes sends articles without rereading them.",
+   "ko": "세르히오는 좀 충동적이라 가끔 기사를 다시 읽지 않고 보내요.",
+   "blank": "impulsivo",
+   "src": "made"
+  },
+  {
+   "text": "El primo de Lola, siempre tan impulsivo, se tiró a la piscina con el traje puesto.",
+   "en": "Lola's cousin, as impulsive as ever, jumped into the pool in his suit.",
+   "ko": "늘 충동적인 롤라의 사촌은 정장을 입은 채 수영장에 뛰어들었어요.",
+   "blank": "impulsivo",
+   "src": "made"
+  }
+ ],
  "w|impulso": [
   {
    "text": "Actuó por impulso y se arrepintió.",
@@ -40392,6 +40696,22 @@
    "en": "With the cold coming, Nuria wanted to raise the house temperature a couple of degrees.",
    "ko": "추위가 오자 누리아는 집 온도를 두어 도 올리고 싶었어요.",
    "blank": "incrementar",
+   "src": "made"
+  }
+ ],
+ "w|incriminar": [
+  {
+   "text": "En la novela negra que lee Sergio, alguien intenta incriminar a un periodista inocente.",
+   "en": "In the crime novel Sergio is reading, someone tries to frame an innocent journalist.",
+   "ko": "세르히오가 읽는 추리 소설에서는 누군가 무고한 기자에게 누명을 씌우려 해요.",
+   "blank": "incriminar",
+   "src": "made"
+  },
+  {
+   "text": "En la película que vio Lola la noche antes de la boda, un mayordomo intenta incriminar a la novia.",
+   "en": "In the film Lola watched the night before the wedding, a butler tries to frame the bride.",
+   "ko": "롤라가 결혼식 전날 본 영화에서 집사가 신부에게 누명을 씌우려 해요.",
+   "blank": "incriminar",
    "src": "made"
   }
  ],
@@ -41127,6 +41447,22 @@
    "en": "Museum entry is free today.",
    "ko": "오늘 박물관 입장은 무료야.",
    "blank": "ingreso"
+  }
+ ],
+ "w|inhumano": [
+  {
+   "text": "Sergio denunció en su columna las condiciones inhumanas de una fábrica.",
+   "en": "In his column, Sergio denounced the inhumane conditions at a factory.",
+   "ko": "세르히오는 칼럼에서 한 공장의 비인간적인 근무 환경을 고발했어요.",
+   "blank": "inhumanas",
+   "src": "made"
+  },
+  {
+   "text": "Lola dijo que esperar tres horas al sol sin agua era casi inhumano.",
+   "en": "Lola said that waiting three hours in the sun without water was almost inhumane.",
+   "ko": "롤라는 물도 없이 햇볕 아래 세 시간을 기다리는 건 거의 비인간적이라고 했어요.",
+   "blank": "inhumano",
+   "src": "made"
   }
  ],
  "w|inicial": [
@@ -43389,6 +43725,22 @@
    "en": "Quit the game and come eat.",
    "ko": "게임 끄고 밥 먹으러 와.",
    "blank": "juego"
+  }
+ ],
+ "w|juerga": [
+  {
+   "text": "Después de cerrar la edición especial, Sergio y sus compañeros se fueron de juerga.",
+   "en": "After closing the special edition, Sergio and his colleagues went out partying.",
+   "ko": "특별판을 마감하고 세르히오와 동료들은 신나게 놀러 나갔어요.",
+   "blank": "juerga",
+   "src": "made"
+  },
+  {
+   "text": "La boda acabó en una juerga que duró hasta el amanecer, y Lola llegó a casa sin voz.",
+   "en": "The wedding ended in a party that lasted till dawn, and Lola got home with no voice.",
+   "ko": "결혼식은 새벽까지 이어진 파티로 끝났고 롤라는 목이 쉰 채 집에 왔어요.",
+   "blank": "juerga",
+   "src": "made"
   }
  ],
  "w|jueves": [
@@ -47033,6 +47385,22 @@
    "src": "made"
   }
  ],
+ "w|manipulación": [
+  {
+   "text": "Sergio escribió sobre la manipulación de fotos en las redes sociales.",
+   "en": "Sergio wrote about photo manipulation on social media.",
+   "ko": "세르히오는 소셜 미디어의 사진 조작에 대해 썼어요.",
+   "blank": "manipulación",
+   "src": "made"
+  },
+  {
+   "text": "Lola notó cierta manipulación en las fotos: todos salían más delgados.",
+   "en": "Lola noticed some manipulation in the photos: everyone looked thinner.",
+   "ko": "롤라는 사진이 좀 보정된 걸 알아챘어요. 다들 더 날씬하게 나왔거든요.",
+   "blank": "manipulación",
+   "src": "made"
+  }
+ ],
  "w|manipular": [
   {
    "text": "No debes manipular los datos del informe.",
@@ -49165,6 +49533,22 @@
    "blank": "milagro"
   }
  ],
+ "w|milagroso": [
+  {
+   "text": "Sergio contó la historia de un rescate casi milagroso en la montaña.",
+   "en": "Sergio told the story of an almost miraculous rescue in the mountains.",
+   "ko": "세르히오는 산에서 일어난 기적 같은 구조 이야기를 썼어요.",
+   "blank": "milagroso",
+   "src": "made"
+  },
+  {
+   "text": "Que no lloviera aquel día fue casi milagroso, según Lola.",
+   "en": "That it didn't rain that day was almost miraculous, according to Lola.",
+   "ko": "롤라 말로는 그날 비가 오지 않은 건 거의 기적이었어요.",
+   "blank": "milagroso",
+   "src": "made"
+  }
+ ],
  "w|milicia": [
   {
    "text": "En historia, Sergio aprendió que una milicia de campesinos defendió el pueblo durante la revolución.",
@@ -49357,6 +49741,22 @@
    "en": "They appointed a new minister yesterday.",
    "ko": "어제 새 장관을 임명했어.",
    "blank": "ministra"
+  }
+ ],
+ "w|minoría": [
+  {
+   "text": "Solo una minoría de lectores compra ya el periódico en papel, admite Sergio.",
+   "en": "Only a minority of readers still buy the paper in print, Sergio admits.",
+   "ko": "세르히오는 이제 종이 신문을 사는 독자는 소수뿐이라고 인정해요.",
+   "blank": "minoría",
+   "src": "made"
+  },
+  {
+   "text": "Solo una minoría de invitados se quedó a bailar hasta el final, y Lola fue una de ellos.",
+   "en": "Only a minority of guests stayed to dance until the end, and Lola was one of them.",
+   "ko": "끝까지 남아 춤춘 하객은 소수였는데 롤라도 그중 하나였어요.",
+   "blank": "minoría",
+   "src": "made"
   }
  ],
  "w|minuto": [
@@ -54743,6 +55143,22 @@
    "blank": "pánico"
   }
  ],
+ "w|panorama": [
+  {
+   "text": "Sergio escribe cada lunes un análisis del panorama político.",
+   "en": "Sergio writes an analysis of the political landscape every Monday.",
+   "ko": "세르히오는 월요일마다 정치 상황 분석을 써요.",
+   "blank": "panorama",
+   "src": "made"
+  },
+  {
+   "text": "Desde la terraza, Lola contempló el panorama del valle al atardecer.",
+   "en": "From the terrace, Lola gazed at the view of the valley at sunset.",
+   "ko": "롤라는 테라스에서 해 질 녘 계곡 풍경을 바라봤어요.",
+   "blank": "panorama",
+   "src": "made"
+  }
+ ],
  "w|panqueque": [
   {
    "text": "Los viernes, la cafetería de la fábrica sirve panqueques con miel.",
@@ -55875,6 +56291,22 @@
    "blank": "patrulla"
   }
  ],
+ "w|patrullar": [
+  {
+   "text": "Sergio acompañó a dos policías mientras salían a patrullar el barrio de noche.",
+   "en": "Sergio went along with two police officers as they went out to patrol the neighbourhood at night.",
+   "ko": "세르히오는 밤에 동네를 순찰하러 나가는 경찰관 둘과 동행했어요.",
+   "blank": "patrullar",
+   "src": "made"
+  },
+  {
+   "text": "Lola contrató a dos vigilantes para patrullar el aparcamiento del salón.",
+   "en": "Lola hired two guards to patrol the venue's car park.",
+   "ko": "롤라는 예식장 주차장을 순찰할 경비원 둘을 고용했어요.",
+   "blank": "patrullar",
+   "src": "made"
+  }
+ ],
  "w|pausa": [
   {
    "text": "Lucía hizo una pausa para tomarse la medicina.",
@@ -56967,6 +57399,22 @@
    "en": "From that perspective the plan fails.",
    "ko": "그 관점에선 계획이 실패야.",
    "blank": "perspectiva"
+  }
+ ],
+ "w|persuadir": [
+  {
+   "text": "Sergio intentó persuadir a la directora para dedicar una página entera al barrio.",
+   "en": "Sergio tried to persuade the editor to devote a whole page to the neighbourhood.",
+   "ko": "세르히오는 편집장을 설득해 동네 이야기에 한 면을 통째로 쓰려 했어요.",
+   "blank": "persuadir",
+   "src": "made"
+  },
+  {
+   "text": "Lola consiguió persuadir a su abuela para que bailara con ella.",
+   "en": "Lola managed to persuade her grandmother to dance with her.",
+   "ko": "롤라는 할머니를 설득해 같이 춤을 췄어요.",
+   "blank": "persuadir",
+   "src": "made"
   }
  ],
  "w|pertenecer": [
@@ -58443,6 +58891,22 @@
    "blank": "popular"
   }
  ],
+ "w|popularidad": [
+  {
+   "text": "La popularidad de la columna de Sergio creció mucho el último año.",
+   "en": "The popularity of Sergio's column grew a lot last year.",
+   "ko": "세르히오 칼럼의 인기는 작년에 크게 올랐어요.",
+   "blank": "popularidad",
+   "src": "made"
+  },
+  {
+   "text": "Lola no esperaba la popularidad de su receta de sangría entre los invitados.",
+   "en": "Lola didn't expect her sangria recipe to be so popular with the guests.",
+   "ko": "롤라는 자기 상그리아가 하객들한테 그렇게 인기 있을 줄 몰랐어요.",
+   "blank": "popularidad",
+   "src": "made"
+  }
+ ],
  "w|póquer": [
   {
    "text": "El cliente de Diego perdió mucho dinero jugando al póquer en internet.",
@@ -58682,6 +59146,22 @@
    "en": "Carmen saw a butterfly land on the greenhouse glass.",
    "ko": "카르멘은 나비가 온실 유리에 내려앉는 걸 봤어요.",
    "blank": "posar",
+   "src": "made"
+  }
+ ],
+ "w|pose": [
+  {
+   "text": "Para la foto de la entrevista, el actor adoptó una pose muy seria, y Sergio se rio por dentro.",
+   "en": "For the interview photo, the actor struck a very serious pose, and Sergio laughed inwardly.",
+   "ko": "인터뷰 사진을 찍을 때 배우가 아주 진지한 포즈를 잡아서 세르히오는 속으로 웃었어요.",
+   "blank": "pose",
+   "src": "made"
+  },
+  {
+   "text": "El fotógrafo de la boda le pidió a Lola una pose más natural.",
+   "en": "The wedding photographer asked Lola for a more natural pose.",
+   "ko": "결혼식 사진사는 롤라에게 좀 더 자연스러운 포즈를 부탁했어요.",
+   "blank": "pose",
    "src": "made"
   }
  ],
@@ -60987,6 +61467,22 @@
    "blank": "provocó"
   }
  ],
+ "w|proxeneta": [
+  {
+   "text": "Sergio cubrió el juicio contra un proxeneta que explotaba a varias mujeres.",
+   "en": "Sergio covered the trial of a pimp who exploited several women.",
+   "ko": "세르히오는 여러 여성을 착취한 포주의 재판을 취재했어요.",
+   "blank": "proxeneta",
+   "src": "made"
+  },
+  {
+   "text": "En la novela que Lola leyó en el viaje de vuelta, la protagonista huye de un proxeneta.",
+   "en": "In the novel Lola read on the journey home, the heroine flees from a pimp.",
+   "ko": "롤라가 돌아오는 길에 읽은 소설에서 주인공은 포주에게서 도망쳐요.",
+   "blank": "proxeneta",
+   "src": "made"
+  }
+ ],
  "w|próximo": [
   {
    "text": "Nos vemos el próximo lunes.",
@@ -61030,6 +61526,22 @@
    "en": "At the end of the day, Paula usually screens the good takes for the crew.",
    "ko": "파울라는 하루 촬영이 끝나면 잘 나온 장면을 팀에게 틀어 줘요.",
    "blank": "proyectar",
+   "src": "made"
+  }
+ ],
+ "w|proyectil": [
+  {
+   "text": "En la playa encontraron un proyectil de la guerra, según la noticia de Sergio.",
+   "en": "A wartime shell was found on the beach, according to Sergio's story.",
+   "ko": "세르히오의 기사에 따르면 해변에서 전쟁 때 포탄이 발견됐어요.",
+   "blank": "proyectil",
+   "src": "made"
+  },
+  {
+   "text": "Un corcho de cava salió disparado como un proyectil y casi le da a Lola.",
+   "en": "A cava cork shot out like a projectile and nearly hit Lola.",
+   "ko": "카바 코르크 마개가 총알처럼 튀어 나와 롤라를 맞힐 뻔했어요.",
+   "blank": "proyectil",
    "src": "made"
   }
  ],
@@ -62609,6 +63121,22 @@
    "blank": "razonable"
   }
  ],
+ "w|razonar": [
+  {
+   "text": "Con la directora es inútil razonar cuando hay prisa por cerrar la edición, dice Sergio.",
+   "en": "It's pointless reasoning with the editor when there's a rush to close the edition, Sergio says.",
+   "ko": "마감에 쫓길 때는 편집장과 따져 봐야 소용없다고 세르히오가 말해요.",
+   "blank": "razonar",
+   "src": "made"
+  },
+  {
+   "text": "Lola intentó razonar con su hermano para que no hablara en el banquete.",
+   "en": "Lola tried to reason with her brother so he wouldn't make a speech at the reception.",
+   "ko": "롤라는 남동생이 피로연에서 연설하지 않도록 설득해 보려 했어요.",
+   "blank": "razonar",
+   "src": "made"
+  }
+ ],
  "w|reacción": [
   {
    "text": "Su reacción me sorprendió mucho.",
@@ -63426,6 +63954,22 @@
    "en": "Lucía stores the straw in round bales behind the stable.",
    "ko": "루시아는 마구간 뒤에 짚을 둥근 뭉치로 쌓아 둬요.",
    "blank": "redondas",
+   "src": "made"
+  }
+ ],
+ "w|reducción": [
+  {
+   "text": "La reducción de la plantilla obligó a Sergio a escribir también de deportes.",
+   "en": "The staff cuts forced Sergio to write about sport too.",
+   "ko": "인원 감축 때문에 세르히오는 스포츠 기사까지 써야 했어요.",
+   "blank": "reducción",
+   "src": "made"
+  },
+  {
+   "text": "Lola pidió una reducción del precio del menú porque eran menos invitados.",
+   "en": "Lola asked for a reduction in the menu price because there were fewer guests.",
+   "ko": "롤라는 하객이 줄어서 코스 요리 가격을 깎아 달라고 했어요.",
+   "blank": "reducción",
    "src": "made"
   }
  ],
@@ -64489,6 +65033,22 @@
    "en": "I don't want to repeat the same mistake.",
    "ko": "같은 실수를 반복하고 싶지 않아.",
    "blank": "repetir"
+  }
+ ],
+ "w|réplica": [
+  {
+   "text": "El alcalde envió una réplica furiosa a la columna de Sergio.",
+   "en": "The mayor sent a furious reply to Sergio's column.",
+   "ko": "시장은 세르히오의 칼럼에 화가 잔뜩 난 반론을 보냈어요.",
+   "blank": "réplica",
+   "src": "made"
+  },
+  {
+   "text": "En la entrada de la boda había una réplica en miniatura de la iglesia, y a Lola le encantó.",
+   "en": "At the wedding entrance there was a miniature replica of the church, and Lola loved it.",
+   "ko": "결혼식 입구에 교회 미니어처 모형이 있었는데 롤라는 그게 정말 마음에 들었어요.",
+   "blank": "réplica",
+   "src": "made"
   }
  ],
  "w|reportaje": [
@@ -66339,6 +66899,22 @@
    "blank": "ronda"
   }
  ],
+ "w|rondar": [
+  {
+   "text": "Las ventas del periódico suelen rondar los mil ejemplares diarios, calcula Sergio.",
+   "en": "The paper's sales usually hover around a thousand copies a day, Sergio reckons.",
+   "ko": "세르히오 계산으로는 신문이 하루 천 부 안팎 팔려요.",
+   "blank": "rondar",
+   "src": "made"
+  },
+  {
+   "text": "Durante la cena, un camarero no paraba de rondar la mesa de Lola con el vino.",
+   "en": "During dinner, a waiter kept hovering around Lola's table with the wine.",
+   "ko": "저녁 식사 동안 웨이터가 와인을 들고 롤라의 테이블 주위를 계속 맴돌았어요.",
+   "blank": "rondar",
+   "src": "made"
+  }
+ ],
  "w|ropa": [
   {
    "text": "Doblé la ropa limpia en el sofá.",
@@ -67379,6 +67955,22 @@
    "en": "He practices his serve on the court every day.",
    "ko": "매일 코트에서 서브를 연습해.",
    "blank": "saque"
+  }
+ ],
+ "w|saquear": [
+  {
+   "text": "Sergio escribió una crónica sobre los piratas que solían saquear la costa en el siglo dieciséis.",
+   "en": "Sergio wrote a piece about the pirates who used to plunder the coast in the sixteenth century.",
+   "ko": "세르히오는 십육 세기에 해안을 약탈하던 해적들에 관한 기사를 썼어요.",
+   "blank": "saquear",
+   "src": "made"
+  },
+  {
+   "text": "Los niños empezaron a saquear la mesa de los postres antes de que Lola pudiera evitarlo.",
+   "en": "The children started raiding the dessert table before Lola could stop them.",
+   "ko": "아이들이 디저트 테이블을 털기 시작했는데 롤라가 막을 틈도 없었어요.",
+   "blank": "saquear",
+   "src": "made"
   }
  ],
  "w|sargento": [
@@ -70521,6 +71113,22 @@
    "src": "made"
   }
  ],
+ "w|súbdito": [
+  {
+   "text": "En su artículo de historia, Sergio cita la carta de un súbdito al rey.",
+   "en": "In his history article, Sergio quotes a subject's letter to the king.",
+   "ko": "세르히오는 역사 기사에서 한 백성이 왕에게 쓴 편지를 인용해요.",
+   "blank": "súbdito",
+   "src": "made"
+  },
+  {
+   "text": "El novio de Lola hizo de rey y su hermano de súbdito fiel en un sketch del banquete.",
+   "en": "In a sketch at the reception, Lola's boyfriend played the king and his brother a loyal subject.",
+   "ko": "피로연 콩트에서 롤라의 남자 친구는 왕을, 그 동생은 충성스러운 신하를 연기했어요.",
+   "blank": "súbdito",
+   "src": "made"
+  }
+ ],
  "w|subestimar": [
   {
    "text": "El cliente subestimó el problema, pero Lucas sabía que era grave.",
@@ -72161,6 +72769,22 @@
    "en": "I make green tea every morning.",
    "ko": "아침마다 녹차를 끓여.",
    "blank": "té"
+  }
+ ],
+ "w|teatral": [
+  {
+   "text": "Sergio describió la rueda de prensa del político como un número teatral.",
+   "en": "Sergio described the politician's press conference as a theatrical act.",
+   "ko": "세르히오는 그 정치인의 기자회견을 연극 같은 쇼라고 표현했어요.",
+   "blank": "teatral",
+   "src": "made"
+  },
+  {
+   "text": "La tía de Lola siempre hace una entrada teatral en las fiestas familiares.",
+   "en": "Lola's aunt always makes a theatrical entrance at family parties.",
+   "ko": "롤라의 이모는 가족 모임마다 극적으로 등장해요.",
+   "blank": "teatral",
+   "src": "made"
   }
  ],
  "w|teatro": [
@@ -74951,6 +75575,22 @@
    "en": "I missed the train by five minutes.",
    "ko": "오 분 차이로 기차를 놓쳤어.",
    "blank": "tren"
+  }
+ ],
+ "w|trepar": [
+  {
+   "text": "El fotógrafo del periódico tuvo que trepar a un árbol para sacar la foto que pidió Sergio.",
+   "en": "The newspaper photographer had to climb a tree to take the photo Sergio asked for.",
+   "ko": "신문사 사진기자는 세르히오가 부탁한 사진을 찍으려고 나무에 올라가야 했어요.",
+   "blank": "trepar",
+   "src": "made"
+  },
+  {
+   "text": "Los sobrinos de Lola intentaron trepar por la valla del jardín durante el banquete.",
+   "en": "Lola's nephews tried to climb the garden fence during the reception.",
+   "ko": "피로연 중에 롤라의 조카들이 정원 울타리를 타고 올라가려 했어요.",
+   "blank": "trepar",
+   "src": "made"
   }
  ],
  "w|tres": [
