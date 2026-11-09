@@ -285,6 +285,22 @@
    "src": "made"
   }
  ],
+ "w|가래": [
+  {
+   "text": "민수는 가래가 자꾸 끓는 환자에게 이비인후과에도 가 보라고 했어요.",
+   "en": "Minsu told a patient who kept getting phlegm to also see an ear, nose and throat doctor.",
+   "ko": "민수는 가래가 자꾸 끓는 환자에게 이비인후과에도 가 보라고 했어요.",
+   "blank": "가래가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 날이 건조해지면 목에 가래가 껴서 따뜻한 차를 자주 마셔요.",
+   "en": "When the air gets dry, Jiyoung gets phlegm in her throat, so she often drinks warm tea.",
+   "ko": "지영은 날이 건조해지면 목에 가래가 껴서 따뜻한 차를 자주 마셔요.",
+   "blank": "가래가",
+   "src": "made"
+  }
+ ],
  "w|가렵다": [
   {
    "text": "모기에 물려서 가려워.",
@@ -6143,6 +6159,22 @@
    "blank": "고양이가"
   }
  ],
+ "w|고열": [
+  {
+   "text": "사랑니 수술 뒤에 고열이 나면 바로 연락하라고 민수가 당부했어요.",
+   "en": "Minsu urged the patient to call right away if a high fever came on after wisdom tooth surgery.",
+   "ko": "사랑니 수술 뒤에 고열이 나면 바로 연락하라고 민수가 당부했어요.",
+   "blank": "고열이",
+   "src": "made"
+  },
+  {
+   "text": "지영의 아이가 가을 독감으로 고열에 시달려서 지영은 밤새 곁을 지켰어요.",
+   "en": "Jiyoung's child suffered a high fever from autumn flu, so Jiyoung stayed by the bedside all night.",
+   "ko": "지영의 아이가 가을 독감으로 고열에 시달려서 지영은 밤새 곁을 지켰어요.",
+   "blank": "고열에",
+   "src": "made"
+  }
+ ],
  "w|고요하다": [
   {
    "text": "밤바다가 참 고요해.",
@@ -9175,6 +9207,22 @@
    "src": "made"
   }
  ],
+ "w|구토": [
+  {
+   "text": "민수는 본을 뜨다가 구토 반응을 보이는 환자를 위해 재료를 바꿨어요.",
+   "en": "Minsu changed the material for a patient who gagged while having a dental impression taken.",
+   "ko": "민수는 본을 뜨다가 구토 반응을 보이는 환자를 위해 재료를 바꿨어요.",
+   "blank": "구토",
+   "src": "made"
+  },
+  {
+   "text": "지영은 한여름 더위에 지쳐서 구토를 할 뻔했어요.",
+   "en": "Jiyoung was so worn out by the midsummer heat that she nearly threw up.",
+   "ko": "지영은 한여름 더위에 지쳐서 구토를 할 뻔했어요.",
+   "blank": "구토를",
+   "src": "made"
+  }
+ ],
  "w|구하다": [
   {
    "text": "도움이 필요해서 구했어.",
@@ -11411,6 +11459,22 @@
    "en": "I loosened my muscles with stretching.",
    "ko": "스트레칭으로 근육을 풀었어.",
    "blank": "근육을"
+  }
+ ],
+ "w|근육통": [
+  {
+   "text": "민수는 입을 너무 오래 벌리고 있던 환자가 턱 근육통을 호소해서 찜질을 권했어요.",
+   "en": "When a patient complained of jaw muscle pain after keeping their mouth open too long, Minsu suggested a warm compress.",
+   "ko": "민수는 입을 너무 오래 벌리고 있던 환자가 턱 근육통을 호소해서 찜질을 권했어요.",
+   "blank": "근육통을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 봄맞이 대청소를 하고 온몸에 근육통이 생겼어요.",
+   "en": "Jiyoung got muscle aches all over after her big spring cleaning.",
+   "ko": "지영은 봄맞이 대청소를 하고 온몸에 근육통이 생겼어요.",
+   "blank": "근육통이",
+   "src": "made"
   }
  ],
  "w|근처": [
@@ -27585,6 +27649,22 @@
    "src": "made"
   }
  ],
+ "w|메스꺼움": [
+  {
+   "text": "마취 뒤에 메스꺼움을 느낀다는 환자에게 민수는 물을 조금 마시게 했어요.",
+   "en": "Minsu had a patient who felt nauseous after anesthesia sip a little water.",
+   "ko": "마취 뒤에 메스꺼움을 느낀다는 환자에게 민수는 물을 조금 마시게 했어요.",
+   "blank": "메스꺼움을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 장마철 습한 버스 안에서 메스꺼움을 참느라 혼났어요.",
+   "en": "Jiyoung had a hard time holding back nausea on a humid bus in the rainy season.",
+   "ko": "지영은 장마철 습한 버스 안에서 메스꺼움을 참느라 혼났어요.",
+   "blank": "메스꺼움을",
+   "src": "made"
+  }
+ ],
  "w|메시지": [
   {
    "text": "메시지 확인하면 답장해 줘.",
@@ -28699,6 +28779,22 @@
    "en": "I manage by logging my weight.",
    "ko": "몸무게를 기록하며 관리해.",
    "blank": "몸무게를"
+  }
+ ],
+ "w|몸살": [
+  {
+   "text": "민수는 몸살이 나서 오늘 오후 진료를 동료에게 맡겼어요.",
+   "en": "Minsu came down with body aches, so he left this afternoon's appointments to a colleague.",
+   "ko": "민수는 몸살이 나서 오늘 오후 진료를 동료에게 맡겼어요.",
+   "blank": "몸살이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 환절기마다 몸살을 앓아서 미리 비타민을 챙겨 먹어요.",
+   "en": "Jiyoung gets body aches every change of season, so she takes vitamins in advance.",
+   "ko": "지영은 환절기마다 몸살을 앓아서 미리 비타민을 챙겨 먹어요.",
+   "blank": "몸살을",
+   "src": "made"
   }
  ],
  "w|몸소": [
@@ -30525,6 +30621,22 @@
    "src": "made"
   }
  ],
+ "w|미열": [
+  {
+   "text": "민수는 아이에게 미열이 있어서 발치를 다음 주로 미뤘어요.",
+   "en": "The child had a slight fever, so Minsu postponed the tooth extraction to next week.",
+   "ko": "민수는 아이에게 미열이 있어서 발치를 다음 주로 미뤘어요.",
+   "blank": "미열이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 미열이 있었지만 첫눈 오는 날 산책을 포기하지 않았어요.",
+   "en": "Jiyoung had a slight fever but didn't give up her walk on the day of the first snow.",
+   "ko": "지영은 미열이 있었지만 첫눈 오는 날 산책을 포기하지 않았어요.",
+   "blank": "미열이",
+   "src": "made"
+  }
+ ],
  "w|미용사": [
   {
    "text": "신부는 아침 일찍 미용사에게 머리를 맡기고 화장을 받았어요.",
@@ -32033,6 +32145,22 @@
    "en": "Worried an error might occur, I made a backup.",
    "ko": "오류가 발생하다 싶어 백업을 해 뒀어.",
    "blank": "발생하다"
+  }
+ ],
+ "w|발열": [
+  {
+   "text": "민수는 염증이 심해지면 발열이 따라올 수 있다고 설명했어요.",
+   "en": "Minsu explained that a fever can follow if the inflammation gets worse.",
+   "ko": "민수는 염증이 심해지면 발열이 따라올 수 있다고 설명했어요.",
+   "blank": "발열이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 아이가 발열 증상을 보이자 해열제를 먹이고 병원에 데려갔어요.",
+   "en": "When her child showed signs of fever, Jiyoung gave fever medicine and took the child to the doctor.",
+   "ko": "지영은 아이가 발열 증상을 보이자 해열제를 먹이고 병원에 데려갔어요.",
+   "blank": "발열",
+   "src": "made"
   }
  ],
  "w|발음": [
@@ -37799,6 +37927,22 @@
    "src": "made"
   }
  ],
+ "w|비염": [
+  {
+   "text": "민수는 비염 때문에 입으로 숨 쉬는 아이는 충치가 생기기 쉽다고 설명했어요.",
+   "en": "Minsu explained that kids who breathe through their mouths because of rhinitis get cavities more easily.",
+   "ko": "민수는 비염 때문에 입으로 숨 쉬는 아이는 충치가 생기기 쉽다고 설명했어요.",
+   "blank": "비염",
+   "src": "made"
+  },
+  {
+   "text": "지영은 봄마다 비염이 심해져서 코를 풀며 출근해요.",
+   "en": "Jiyoung's rhinitis gets worse every spring, so she blows her nose on the way to work.",
+   "ko": "지영은 봄마다 비염이 심해져서 코를 풀며 출근해요.",
+   "blank": "비염이",
+   "src": "made"
+  }
+ ],
  "w|비용": [
   {
    "text": "이사 비용이 생각보다 커.",
@@ -38084,6 +38228,22 @@
    "en": "Jiyoung's grandfather reportedly worked day and night in his youth to escape poverty.",
    "ko": "지영의 할아버지는 젊은 시절 빈곤에서 벗어나려고 밤낮없이 일하셨대요.",
    "blank": "빈곤에서",
+   "src": "made"
+  }
+ ],
+ "w|빈혈": [
+  {
+   "text": "민수는 빈혈이 있는 환자는 수술 전에 꼭 밥을 먹고 오라고 해요.",
+   "en": "Minsu tells patients with anemia to be sure to eat before surgery.",
+   "ko": "민수는 빈혈이 있는 환자는 수술 전에 꼭 밥을 먹고 오라고 해요.",
+   "blank": "빈혈이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 빈혈 때문에 겨울이면 손발이 더 차가워져요.",
+   "en": "Because of anemia, Jiyoung's hands and feet get even colder in winter.",
+   "ko": "지영은 빈혈 때문에 겨울이면 손발이 더 차가워져요.",
+   "blank": "빈혈",
    "src": "made"
   }
  ],
@@ -41657,6 +41817,22 @@
    "blank": "생리가"
   }
  ],
+ "w|생리통": [
+  {
+   "text": "생리통 때문에 진통제를 먹었다는 환자에게 민수는 약 이름을 물어봤어요.",
+   "en": "Minsu asked a patient who had taken painkillers for menstrual cramps what the medicine was called.",
+   "ko": "생리통 때문에 진통제를 먹었다는 환자에게 민수는 약 이름을 물어봤어요.",
+   "blank": "생리통",
+   "src": "made"
+  },
+  {
+   "text": "지영은 날이 추워지면 생리통이 더 심해져서 배에 핫팩을 붙여요.",
+   "en": "When it gets cold, Jiyoung's period cramps get worse, so she puts a heat pack on her stomach.",
+   "ko": "지영은 날이 추워지면 생리통이 더 심해져서 배에 핫팩을 붙여요.",
+   "blank": "생리통이",
+   "src": "made"
+  }
+ ],
  "w|생명": [
   {
    "text": "생명이 소중해.",
@@ -43035,6 +43211,22 @@
    "text": "수진은 수액이 끝나면 알람이 울리도록 기계를 설정했어요.",
    "en": "Sujin set the machine so an alarm would go off when the IV ran out.",
    "ko": "수진은 수액이 끝나면 알람이 울리도록 기계를 설정했어요.",
+   "blank": "설정했어요",
+   "src": "made"
+  }
+ ],
+ "w|설정하다": [
+  {
+   "text": "민수는 진료 예약 알림을 하루 전에 가도록 설정했어요.",
+   "en": "Minsu set appointment reminders to go out a day in advance.",
+   "ko": "민수는 진료 예약 알림을 하루 전에 가도록 설정했어요.",
+   "blank": "설정했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 가을이 되자 보일러 온도를 조금 높게 설정했어요.",
+   "en": "When autumn came, Jiyoung set the boiler temperature a little higher.",
+   "ko": "지영은 가을이 되자 보일러 온도를 조금 높게 설정했어요.",
    "blank": "설정했어요",
    "src": "made"
   }
@@ -44717,6 +44909,22 @@
    "blank": "소통을"
   }
  ],
+ "w|소통하다": [
+  {
+   "text": "민수는 말이 서툰 어르신과 그림을 보여 주며 소통했어요.",
+   "en": "Minsu communicated with an elderly patient who had trouble speaking by showing pictures.",
+   "ko": "민수는 말이 서툰 어르신과 그림을 보여 주며 소통했어요.",
+   "blank": "소통했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 계절이 바뀔 때마다 멀리 사는 부모님과 영상 통화로 소통해요.",
+   "en": "Every time the season changes, Jiyoung keeps in touch with her faraway parents by video call.",
+   "ko": "지영은 계절이 바뀔 때마다 멀리 사는 부모님과 영상 통화로 소통해요.",
+   "blank": "소통해요",
+   "src": "made"
+  }
+ ],
  "w|소파": [
   {
    "text": "소파에 누워서 쉬었어.",
@@ -44774,6 +44982,22 @@
    "en": "The kitchen was small, so Migyeong brought in a compact refrigerator.",
    "ko": "부엌이 좁아서 미경은 소형 냉장고를 들여놓았어요.",
    "blank": "소형",
+   "src": "made"
+  }
+ ],
+ "w|소화불량": [
+  {
+   "text": "민수는 이가 아파서 제대로 씹지 못하면 소화불량이 올 수 있다고 말했어요.",
+   "en": "Minsu said indigestion can follow if you can't chew properly because of a toothache.",
+   "ko": "민수는 이가 아파서 제대로 씹지 못하면 소화불량이 올 수 있다고 말했어요.",
+   "blank": "소화불량이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 추석에 기름진 음식을 많이 먹고 소화불량에 시달렸어요.",
+   "en": "Jiyoung ate a lot of greasy food over Chuseok and suffered from indigestion.",
+   "ko": "지영은 추석에 기름진 음식을 많이 먹고 소화불량에 시달렸어요.",
+   "blank": "소화불량에",
    "src": "made"
   }
  ],
@@ -45547,6 +45771,22 @@
    "blank": "수리해"
   }
  ],
+ "w|수립하다": [
+  {
+   "text": "민수는 환자와 함께 일 년짜리 교정 계획을 수립했어요.",
+   "en": "Minsu drew up a one-year orthodontic plan together with the patient.",
+   "ko": "민수는 환자와 함께 일 년짜리 교정 계획을 수립했어요.",
+   "blank": "수립했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 봄이 오기 전에 텃밭에 무엇을 심을지 계획을 수립했어요.",
+   "en": "Before spring came, Jiyoung made a plan for what to plant in her vegetable garden.",
+   "ko": "지영은 봄이 오기 전에 텃밭에 무엇을 심을지 계획을 수립했어요.",
+   "blank": "수립했어요",
+   "src": "made"
+  }
+ ],
  "w|수많다": [
   {
    "text": "선택지가 수많다 보니 고민됐어.",
@@ -45882,6 +46122,22 @@
    "en": "The hospitalized grandfather told stories about living in a refugee camp as a child.",
    "ko": "입원한 할아버지는 어릴 적 난민 수용소에서 지낸 이야기를 들려주셨어요.",
    "blank": "수용소에서",
+   "src": "made"
+  }
+ ],
+ "w|수용하다": [
+  {
+   "text": "민수는 환자들의 불만을 수용해서 대기 시간을 줄였어요.",
+   "en": "Minsu took patients' complaints on board and cut the waiting time.",
+   "ko": "민수는 환자들의 불만을 수용해서 대기 시간을 줄였어요.",
+   "blank": "수용해서",
+   "src": "made"
+  },
+  {
+   "text": "지영은 나이가 들수록 추위를 더 타는 몸의 변화를 담담히 수용했어요.",
+   "en": "Jiyoung calmly accepted the change in her body that makes her feel the cold more with age.",
+   "ko": "지영은 나이가 들수록 추위를 더 타는 몸의 변화를 담담히 수용했어요.",
+   "blank": "수용했어요",
    "src": "made"
   }
  ],
@@ -47039,6 +47295,22 @@
    "blank": "습도를"
   }
  ],
+ "w|습득하다": [
+  {
+   "text": "민수는 새 임플란트 기술을 습득하려고 주말마다 연수를 받아요.",
+   "en": "Minsu takes training every weekend to learn a new implant technique.",
+   "ko": "민수는 새 임플란트 기술을 습득하려고 주말마다 연수를 받아요.",
+   "blank": "습득하려고",
+   "src": "made"
+  },
+  {
+   "text": "지영은 할머니에게서 계절마다 장 담그는 법을 습득했어요.",
+   "en": "Jiyoung learned from her grandmother how to make sauces for each season.",
+   "ko": "지영은 할머니에게서 계절마다 장 담그는 법을 습득했어요.",
+   "blank": "습득했어요",
+   "src": "made"
+  }
+ ],
  "w|습하다": [
   {
    "text": "장마철이라 방이 습해.",
@@ -47869,6 +48141,22 @@
    "blank": "시합이"
   }
  ],
+ "w|시행하다": [
+  {
+   "text": "민수의 치과는 다음 달부터 저녁 진료를 시행해요.",
+   "en": "Minsu's dental clinic will offer evening appointments starting next month.",
+   "ko": "민수의 치과는 다음 달부터 저녁 진료를 시행해요.",
+   "blank": "시행해요",
+   "src": "made"
+  },
+  {
+   "text": "지영의 회사는 여름마다 반바지 출근 제도를 시행해요.",
+   "en": "Jiyoung's company allows shorts at work every summer.",
+   "ko": "지영의 회사는 여름마다 반바지 출근 제도를 시행해요.",
+   "blank": "시행해요",
+   "src": "made"
+  }
+ ],
  "w|시험": [
   {
    "text": "다음 주에 시험이 있어.",
@@ -48094,6 +48382,22 @@
    "en": "When signing with the catering company, Sujin carefully checked where the ingredients came from.",
    "ko": "수진은 급식 업체와 계약하면서 식재료 원산지를 꼼꼼히 확인했어요.",
    "blank": "식재료",
+   "src": "made"
+  }
+ ],
+ "w|식중독": [
+  {
+   "text": "민수는 여름철 식중독을 조심하라는 안내문을 대기실에 붙였어요.",
+   "en": "Minsu put up a notice in the waiting room warning about food poisoning in summer.",
+   "ko": "민수는 여름철 식중독을 조심하라는 안내문을 대기실에 붙였어요.",
+   "blank": "식중독을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 더운 날 소풍 도시락이 상할까 봐 식중독 걱정에 아이스팩을 넣었어요.",
+   "en": "Worried about food poisoning, Jiyoung put an ice pack in the picnic lunch so it wouldn't spoil on a hot day.",
+   "ko": "지영은 더운 날 소풍 도시락이 상할까 봐 식중독 걱정에 아이스팩을 넣었어요.",
+   "blank": "식중독",
    "src": "made"
   }
  ],
@@ -49113,6 +49417,22 @@
    "src": "made"
   }
  ],
+ "w|실시하다": [
+  {
+   "text": "민수는 근처 초등학교에서 무료 구강 검진을 실시했어요.",
+   "en": "Minsu carried out free oral checkups at a nearby elementary school.",
+   "ko": "민수는 근처 초등학교에서 무료 구강 검진을 실시했어요.",
+   "blank": "실시했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영의 아파트는 겨울이 오기 전에 난방 점검을 실시해요.",
+   "en": "Jiyoung's apartment complex carries out heating inspections before winter comes.",
+   "ko": "지영의 아파트는 겨울이 오기 전에 난방 점검을 실시해요.",
+   "blank": "실시해요",
+   "src": "made"
+  }
+ ],
  "w|실업": [
   {
    "text": "실업 상태가 길어졌어.",
@@ -49267,6 +49587,22 @@
    "src": "made"
   }
  ],
+ "w|실천하다": [
+  {
+   "text": "민수는 환자들에게 권하는 대로 자기도 하루 세 번 양치를 실천해요.",
+   "en": "Minsu himself practices brushing three times a day, just as he recommends to patients.",
+   "ko": "민수는 환자들에게 권하는 대로 자기도 하루 세 번 양치를 실천해요.",
+   "blank": "실천해요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 여름에 에어컨 온도를 높이는 작은 절약을 실천하고 있어요.",
+   "en": "Jiyoung is practicing a small saving in summer by setting the air conditioner temperature higher.",
+   "ko": "지영은 여름에 에어컨 온도를 높이는 작은 절약을 실천하고 있어요.",
+   "blank": "실천하고",
+   "src": "made"
+  }
+ ],
  "w|실컷": [
   {
    "text": "실컷 자고 일어났어.",
@@ -49367,6 +49703,22 @@
    "en": "The laboratory door was locked.",
    "ko": "실험실 문이 잠겨 있었어.",
    "blank": "실험실"
+  }
+ ],
+ "w|실현하다": [
+  {
+   "text": "민수는 시골에 작은 치과를 여는 꿈을 마침내 실현했어요.",
+   "en": "Minsu finally realized his dream of opening a small dental clinic in the countryside.",
+   "ko": "민수는 시골에 작은 치과를 여는 꿈을 마침내 실현했어요.",
+   "blank": "실현했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 벚꽃 아래에서 결혼식을 올리고 싶던 꿈을 올봄에 실현했어요.",
+   "en": "This spring Jiyoung realized her dream of holding her wedding under the cherry blossoms.",
+   "ko": "지영은 벚꽃 아래에서 결혼식을 올리고 싶던 꿈을 올봄에 실현했어요.",
+   "blank": "실현했어요",
+   "src": "made"
   }
  ],
  "w|싫다": [
@@ -51195,6 +51547,22 @@
    "blank": "아침저녁이"
   }
  ],
+ "w|아토피": [
+  {
+   "text": "민수는 아토피가 있는 아이를 위해 장갑을 다른 재질로 바꿔 꼈어요.",
+   "en": "Minsu switched to gloves made of a different material for a child with atopic dermatitis.",
+   "ko": "민수는 아토피가 있는 아이를 위해 장갑을 다른 재질로 바꿔 꼈어요.",
+   "blank": "아토피가",
+   "src": "made"
+  },
+  {
+   "text": "지영의 딸은 겨울에 아토피가 심해져서 보습제를 하루에 몇 번씩 발라요.",
+   "en": "Jiyoung's daughter's eczema gets worse in winter, so she applies moisturizer several times a day.",
+   "ko": "지영의 딸은 겨울에 아토피가 심해져서 보습제를 하루에 몇 번씩 발라요.",
+   "blank": "아토피가",
+   "src": "made"
+  }
+ ],
  "w|아파트": [
   {
    "text": "새 아파트로 이사 갈 거야.",
@@ -51339,6 +51707,22 @@
    "ko": "승규는 말투가 무뚝뚝해서 가끔 악의로 보일 때가 있다.",
    "blank": "악의로",
    "src": "krdict"
+  }
+ ],
+ "w|악화하다": [
+  {
+   "text": "치료를 미루는 사이에 충치가 악화해서 민수는 결국 신경 치료를 했어요.",
+   "en": "The cavity got worse while the treatment was put off, so Minsu ended up doing a root canal.",
+   "ko": "치료를 미루는 사이에 충치가 악화해서 민수는 결국 신경 치료를 했어요.",
+   "blank": "악화해서",
+   "src": "made"
+  },
+  {
+   "text": "지영은 찬 바람을 맞고 나서 기침이 더 악화했어요.",
+   "en": "Jiyoung's cough got worse after she was out in the cold wind.",
+   "ko": "지영은 찬 바람을 맞고 나서 기침이 더 악화했어요.",
+   "blank": "악화했어요",
+   "src": "made"
   }
  ],
  "w|안": [
@@ -52463,6 +52847,22 @@
    "blank": "야근하고"
   }
  ],
+ "w|야기하다": [
+  {
+   "text": "민수는 단 음료를 자주 마시는 습관이 충치를 야기한다고 설명했어요.",
+   "en": "Minsu explained that a habit of frequently drinking sugary drinks causes cavities.",
+   "ko": "민수는 단 음료를 자주 마시는 습관이 충치를 야기한다고 설명했어요.",
+   "blank": "야기한다고",
+   "src": "made"
+  },
+  {
+   "text": "지영은 갑작스러운 폭우가 동네 하천 범람을 야기할까 봐 걱정했어요.",
+   "en": "Jiyoung worried that the sudden downpour would cause the local stream to overflow.",
+   "ko": "지영은 갑작스러운 폭우가 동네 하천 범람을 야기할까 봐 걱정했어요.",
+   "blank": "야기할까",
+   "src": "made"
+  }
+ ],
  "w|야망": [
   {
    "text": "민수는 언젠가 학생회장이 되겠다는 야망을 품고 있어요.",
@@ -53575,6 +53975,22 @@
    "blank": "어젯밤"
   }
  ],
+ "w|어지러움": [
+  {
+   "text": "민수는 진료 의자에서 일어날 때 어지러움이 오지 않게 천천히 일어나라고 해요.",
+   "en": "Minsu tells patients to get up slowly from the dental chair so they don't feel dizzy.",
+   "ko": "민수는 진료 의자에서 일어날 때 어지러움이 오지 않게 천천히 일어나라고 해요.",
+   "blank": "어지러움이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 갑자기 더워진 날 운동장에 오래 서 있다가 어지러움을 느꼈어요.",
+   "en": "Jiyoung felt dizzy after standing in the field for a long time on a suddenly hot day.",
+   "ko": "지영은 갑자기 더워진 날 운동장에 오래 서 있다가 어지러움을 느꼈어요.",
+   "blank": "어지러움을",
+   "src": "made"
+  }
+ ],
  "w|어지럽다": [
   {
    "text": "일어서니 머리가 어지러워.",
@@ -53818,6 +54234,22 @@
    "en": "The cooking teacher made a special mention of Daeun's kimchi pancake.",
    "ko": "요리 선생님은 다은의 김치전에 대해 특별한 언급을 하셨어요.",
    "blank": "언급을",
+   "src": "made"
+  }
+ ],
+ "w|언급되다": [
+  {
+   "text": "민수의 치과가 동네 맛집 블로그에 친절한 병원으로 언급되었어요.",
+   "en": "Minsu's clinic was mentioned as a friendly practice on a local food blog.",
+   "ko": "민수의 치과가 동네 맛집 블로그에 친절한 병원으로 언급되었어요.",
+   "blank": "언급되었어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 뉴스에서 올겨울이 유난히 추울 거라고 언급된 걸 보고 패딩을 꺼냈어요.",
+   "en": "Seeing it mentioned on the news that this winter would be unusually cold, Jiyoung took out her padded coat.",
+   "ko": "지영은 뉴스에서 올겨울이 유난히 추울 거라고 언급된 걸 보고 패딩을 꺼냈어요.",
+   "blank": "언급된",
    "src": "made"
   }
  ],
@@ -54773,6 +55205,22 @@
    "en": "I'll pick up my younger sister on the weekend.",
    "ko": "주말에 여동생을 데리러 갈게.",
    "blank": "여동생을"
+  }
+ ],
+ "w|여드름": [
+  {
+   "text": "교정기를 낀 고등학생이 여드름 고민까지 털어놓자 민수는 웃으며 들어 줬어요.",
+   "en": "When a high schooler with braces also opened up about acne, Minsu listened with a smile.",
+   "ko": "교정기를 낀 고등학생이 여드름 고민까지 털어놓자 민수는 웃으며 들어 줬어요.",
+   "blank": "여드름",
+   "src": "made"
+  },
+  {
+   "text": "지영은 습한 여름이면 이마에 여드름이 나서 앞머리를 올려요.",
+   "en": "When summer gets humid, Jiyoung gets acne on her forehead, so she pushes her bangs up.",
+   "ko": "지영은 습한 여름이면 이마에 여드름이 나서 앞머리를 올려요.",
+   "blank": "여드름이",
+   "src": "made"
   }
  ],
  "w|여러": [
@@ -56583,6 +57031,22 @@
    "blank": "영원히"
   }
  ],
+ "w|영위하다": [
+  {
+   "text": "민수는 치아가 건강해야 노년에도 즐거운 삶을 영위할 수 있다고 믿어요.",
+   "en": "Minsu believes healthy teeth let you lead an enjoyable life even in old age.",
+   "ko": "민수는 치아가 건강해야 노년에도 즐거운 삶을 영위할 수 있다고 믿어요.",
+   "blank": "영위할",
+   "src": "made"
+  },
+  {
+   "text": "지영은 계절에 맞춰 사는 시골 생활을 영위하려고 귀농을 준비하고 있어요.",
+   "en": "Jiyoung is preparing to move to the countryside to lead a rural life in tune with the seasons.",
+   "ko": "지영은 계절에 맞춰 사는 시골 생활을 영위하려고 귀농을 준비하고 있어요.",
+   "blank": "영위하려고",
+   "src": "made"
+  }
+ ],
  "w|영장": [
   {
    "text": "오빠는 영장을 받은 후 학교를 휴학하고 바로 입대를 했다.",
@@ -57045,6 +57509,22 @@
    "en": "I like people with good manners.",
    "ko": "예절이 바른 사람이 좋아.",
    "blank": "예절이"
+  }
+ ],
+ "w|예정하다": [
+  {
+   "text": "민수는 예정한 수술 시간보다 일찍 끝나서 점심을 여유 있게 먹었어요.",
+   "en": "The surgery finished earlier than Minsu had scheduled, so he had a relaxed lunch.",
+   "ko": "민수는 예정한 수술 시간보다 일찍 끝나서 점심을 여유 있게 먹었어요.",
+   "blank": "예정한",
+   "src": "made"
+  },
+  {
+   "text": "지영은 단풍 구경을 예정한 날에 비가 와서 실망했어요.",
+   "en": "Jiyoung was disappointed when it rained on the day she had planned to go see the autumn leaves.",
+   "ko": "지영은 단풍 구경을 예정한 날에 비가 와서 실망했어요.",
+   "blank": "예정한",
+   "src": "made"
   }
  ],
  "w|예측": [
@@ -57524,6 +58004,22 @@
    "en": "Jiyoung studied how to write an officetel lease using library books.",
    "ko": "지영은 오피스텔 계약서 쓰는 법을 도서관 책으로 공부했어요.",
    "blank": "오피스텔",
+   "src": "made"
+  }
+ ],
+ "w|오한": [
+  {
+   "text": "잇몸이 붓고 오한까지 든다는 환자를 민수는 서둘러 진료했어요.",
+   "en": "Minsu quickly saw a patient whose gums were swollen and who even had chills.",
+   "ko": "잇몸이 붓고 오한까지 든다는 환자를 민수는 서둘러 진료했어요.",
+   "blank": "오한까지",
+   "src": "made"
+  },
+  {
+   "text": "지영은 늦가을 비를 맞고 집에 와서 오한에 떨었어요.",
+   "en": "Jiyoung came home after getting caught in a late-autumn rain and shivered with chills.",
+   "ko": "지영은 늦가을 비를 맞고 집에 와서 오한에 떨었어요.",
+   "blank": "오한에",
    "src": "made"
   }
  ],
@@ -58119,6 +58615,22 @@
    "blank": "완전히"
   }
  ],
+ "w|완화하다": [
+  {
+   "text": "민수는 이가 시린 증상을 완화하는 치약을 환자에게 추천했어요.",
+   "en": "Minsu recommended a toothpaste that relieves sensitive teeth to the patient.",
+   "ko": "민수는 이가 시린 증상을 완화하는 치약을 환자에게 추천했어요.",
+   "blank": "완화하는",
+   "src": "made"
+  },
+  {
+   "text": "지영은 건조한 겨울 공기를 완화하려고 방에 빨래를 널어요.",
+   "en": "Jiyoung hangs laundry in her room to ease the dry winter air.",
+   "ko": "지영은 건조한 겨울 공기를 완화하려고 방에 빨래를 널어요.",
+   "blank": "완화하려고",
+   "src": "made"
+  }
+ ],
  "w|왕": [
   {
    "text": "동화 속 왕이 신하들과 회의를 해.",
@@ -58223,6 +58735,22 @@
    "en": "Why aren't you coming?",
    "ko": "왜 안 와?",
    "blank": "왜"
+  }
+ ],
+ "w|왜곡하다": [
+  {
+   "text": "민수는 치과 치료를 무섭게 왜곡한 영상 때문에 아이들이 겁을 먹는다고 아쉬워했어요.",
+   "en": "Minsu regretted that kids get scared because of videos that distort dental treatment as frightening.",
+   "ko": "민수는 치과 치료를 무섭게 왜곡한 영상 때문에 아이들이 겁을 먹는다고 아쉬워했어요.",
+   "blank": "왜곡한",
+   "src": "made"
+  },
+  {
+   "text": "지영은 어릴 적 여름이 훨씬 길었다는 기억이 사실을 왜곡한 것 같다고 말해요.",
+   "en": "Jiyoung says her memory that childhood summers were much longer probably distorts the facts.",
+   "ko": "지영은 어릴 적 여름이 훨씬 길었다는 기억이 사실을 왜곡한 것 같다고 말해요.",
+   "blank": "왜곡한",
+   "src": "made"
   }
  ],
  "w|왜냐하면": [
@@ -58782,6 +59310,22 @@
    "en": "In short, her father's speech was telling them to cherish each other.",
    "ko": "아버지의 축사는 요컨대 서로 아끼며 살라는 말이었어요.",
    "blank": "요컨대",
+   "src": "made"
+  }
+ ],
+ "w|요통": [
+  {
+   "text": "민수는 하루 종일 허리를 숙이고 진료하다 보니 요통이 생겼어요.",
+   "en": "Minsu developed lower back pain from bending over to treat patients all day.",
+   "ko": "민수는 하루 종일 허리를 숙이고 진료하다 보니 요통이 생겼어요.",
+   "blank": "요통이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 겨울에 눈을 치우고 나서 요통으로 며칠을 고생했어요.",
+   "en": "After shoveling snow in winter, Jiyoung suffered from lower back pain for days.",
+   "ko": "지영은 겨울에 눈을 치우고 나서 요통으로 며칠을 고생했어요.",
+   "blank": "요통으로",
    "src": "made"
   }
  ],
@@ -60430,6 +60974,22 @@
    "en": "Chatting with her friends is a great comfort to Daeun.",
    "ko": "다은에게 친구들과의 수다는 큰 위안이 돼요.",
    "blank": "위안이",
+   "src": "made"
+  }
+ ],
+ "w|위염": [
+  {
+   "text": "위염이 있는 환자에게 민수는 위에 덜 부담되는 진통제를 처방했어요.",
+   "en": "Minsu prescribed a painkiller that's easier on the stomach for a patient with gastritis.",
+   "ko": "위염이 있는 환자에게 민수는 위에 덜 부담되는 진통제를 처방했어요.",
+   "blank": "위염이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 여름에 찬 음료를 너무 많이 마셔서 위염이 도졌어요.",
+   "en": "Jiyoung drank too many cold drinks in summer and her gastritis flared up.",
+   "ko": "지영은 여름에 찬 음료를 너무 많이 마셔서 위염이 도졌어요.",
+   "blank": "위염이",
    "src": "made"
   }
  ],
@@ -67129,6 +67689,22 @@
    "blank": "장애인"
   }
  ],
+ "w|장염": [
+  {
+   "text": "민수의 치과 간호사가 장염으로 사흘 동안 출근하지 못했어요.",
+   "en": "Minsu's dental nurse couldn't come to work for three days because of gastroenteritis.",
+   "ko": "민수의 치과 간호사가 장염으로 사흘 동안 출근하지 못했어요.",
+   "blank": "장염으로",
+   "src": "made"
+  },
+  {
+   "text": "지영은 장마철에 덜 익은 해산물을 먹고 장염에 걸렸어요.",
+   "en": "Jiyoung got gastroenteritis from eating undercooked seafood in the rainy season.",
+   "ko": "지영은 장마철에 덜 익은 해산물을 먹고 장염에 걸렸어요.",
+   "blank": "장염에",
+   "src": "made"
+  }
+ ],
  "w|장인": [
   {
    "text": "장인어른이 건강하셔.",
@@ -67516,6 +68092,22 @@
    "en": "Seoyeon's elderly neighbor is very skilled at weaving baskets from bamboo.",
    "ko": "서연의 이웃 할아버지는 대나무로 바구니를 짜는 재주가 뛰어나세요.",
    "blank": "재주가",
+   "src": "made"
+  }
+ ],
+ "w|재채기": [
+  {
+   "text": "치료 중에 환자가 재채기를 해서 민수는 잠깐 손을 멈췄어요.",
+   "en": "The patient sneezed during treatment, so Minsu paused for a moment.",
+   "ko": "치료 중에 환자가 재채기를 해서 민수는 잠깐 손을 멈췄어요.",
+   "blank": "재채기를",
+   "src": "made"
+  },
+  {
+   "text": "봄꽃이 피기 시작하자 지영은 하루 종일 재채기를 했어요.",
+   "en": "When spring flowers started blooming, Jiyoung sneezed all day.",
+   "ko": "봄꽃이 피기 시작하자 지영은 하루 종일 재채기를 했어요.",
+   "blank": "재채기를",
    "src": "made"
   }
  ],
@@ -77693,6 +78285,22 @@
    "blank": "천사처럼"
   }
  ],
+ "w|천식": [
+  {
+   "text": "천식이 있는 환자를 위해 민수는 진료실에 흡입기를 늘 준비해 둬요.",
+   "en": "Minsu always keeps an inhaler ready in the treatment room for patients with asthma.",
+   "ko": "천식이 있는 환자를 위해 민수는 진료실에 흡입기를 늘 준비해 둬요.",
+   "blank": "천식이",
+   "src": "made"
+  },
+  {
+   "text": "찬 바람이 불기 시작하면 지영의 아버지는 천식 때문에 외출을 줄이세요.",
+   "en": "When cold winds start to blow, Jiyoung's father goes out less because of his asthma.",
+   "ko": "찬 바람이 불기 시작하면 지영의 아버지는 천식 때문에 외출을 줄이세요.",
+   "blank": "천식",
+   "src": "made"
+  }
+ ],
  "w|천연가스": [
   {
    "text": "숲 아래에 천연가스 관을 묻는다는 소식에 동민은 걱정이 많아요.",
@@ -85471,6 +86079,22 @@
    "src": "made"
   }
  ],
+ "w|피부염": [
+  {
+   "text": "민수는 마스크를 오래 써서 생긴 피부염 때문에 연고를 발라요.",
+   "en": "Minsu puts ointment on the dermatitis he got from wearing a mask for long hours.",
+   "ko": "민수는 마스크를 오래 써서 생긴 피부염 때문에 연고를 발라요.",
+   "blank": "피부염",
+   "src": "made"
+  },
+  {
+   "text": "지영은 한여름 땀띠가 피부염으로 번져서 피부과에 갔어요.",
+   "en": "Jiyoung's midsummer heat rash spread into dermatitis, so she went to a dermatologist.",
+   "ko": "지영은 한여름 땀띠가 피부염으로 번져서 피부과에 갔어요.",
+   "blank": "피부염으로",
+   "src": "made"
+  }
+ ],
  "w|피우다": [
   {
    "text": "담배를 피우다 보니 기침이 났어.",
@@ -88201,6 +88825,22 @@
    "en": "Cash is more convenient at the market.",
    "ko": "시장에서는 현금이 더 편해.",
    "blank": "현금이"
+  }
+ ],
+ "w|현기증": [
+  {
+   "text": "주사를 무서워하던 환자가 현기증을 느끼자 민수는 의자를 뒤로 젖혔어요.",
+   "en": "When a patient afraid of needles felt faint, Minsu tilted the chair back.",
+   "ko": "주사를 무서워하던 환자가 현기증을 느끼자 민수는 의자를 뒤로 젖혔어요.",
+   "blank": "현기증을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 뜨거운 탕에서 나오다가 현기증이 나서 잠시 앉았어요.",
+   "en": "Jiyoung got lightheaded coming out of the hot bath and sat down for a while.",
+   "ko": "지영은 뜨거운 탕에서 나오다가 현기증이 나서 잠시 앉았어요.",
+   "blank": "현기증이",
+   "src": "made"
   }
  ],
  "w|현대적": [

@@ -1859,6 +1859,22 @@
    "blank": "Asli"
   }
  ],
+ "w|asmara": [
+  {
+   "text": "Rekan-rekan Dimas diam-diam bergosip soal kisah asmara di lantai tiga.",
+   "en": "Dimas's coworkers quietly gossiped about a romance on the third floor.",
+   "ko": "디마스의 동료들은 삼 층의 연애 이야기를 몰래 수군거렸어요.",
+   "blank": "asmara",
+   "src": "made"
+  },
+  {
+   "text": "Sambil menunggu, Putri membaca novel asmara yang dibelinya di toko buku bandara.",
+   "en": "While waiting, Putri read a romance novel she had bought at the airport bookshop.",
+   "ko": "기다리는 동안 푸트리는 공항 서점에서 산 연애 소설을 읽었어요.",
+   "blank": "asmara",
+   "src": "made"
+  }
+ ],
  "w|asosiasi": [
   {
    "text": "Sekolah Dimas bergabung dengan asosiasi sekolah penggerak lingkungan.",
@@ -10497,6 +10513,22 @@
    "blank": "bulu"
   }
  ],
+ "w|bumbu": [
+  {
+   "text": "Di pantri kantor, Dimas melihat rak penuh bumbu milik para karyawan.",
+   "en": "In the office pantry, Dimas saw a shelf full of the employees' spices.",
+   "ko": "사무실 탕비실에서 디마스는 직원들의 양념으로 가득한 선반을 봤어요.",
+   "blank": "bumbu",
+   "src": "made"
+  },
+  {
+   "text": "Petugas bea cukai memeriksa bumbu rendang yang dibawa Putri.",
+   "en": "The customs officer checked the rendang spice paste Putri had brought.",
+   "ko": "세관 직원이 푸트리가 가져온 른당 양념을 검사했어요.",
+   "blank": "bumbu",
+   "src": "made"
+  }
+ ],
  "w|bumi": [
   {
    "text": "Bumi ini semakin panas.",
@@ -13399,6 +13431,22 @@
    "src": "made"
   }
  ],
+ "w|drastis": [
+  {
+   "text": "Kebiasaan tidur Dimas berubah drastis sejak ia mulai kerja kantoran.",
+   "en": "Dimas's sleeping habits changed drastically once he started an office job.",
+   "ko": "디마스의 잠버릇은 회사에 다니기 시작하면서 확 바뀌었어요.",
+   "blank": "drastis",
+   "src": "made"
+  },
+  {
+   "text": "Harga tiket Putri naik drastis karena ia memesan di menit terakhir.",
+   "en": "Putri's ticket price rose drastically because she booked at the last minute.",
+   "ko": "푸트리는 막판에 예약해서 표값이 크게 올랐어요.",
+   "blank": "drastis",
+   "src": "made"
+  }
+ ],
  "w|drum": [
   {
    "text": "Andi menabuh drum di band sekolah saat pentas seni.",
@@ -15927,6 +15975,22 @@
    "blank": "gubernur"
   }
  ],
+ "w|gubuk": [
+  {
+   "text": "Di belakang gedung ada gubuk kecil tempat satpam beristirahat, kata Pak Budi kepada Dimas.",
+   "en": "Behind the building there's a small hut where the guards rest, Mr. Budi told Dimas.",
+   "ko": "건물 뒤에 경비원들이 쉬는 작은 오두막이 있다고 부디 씨가 디마스에게 말했어요.",
+   "blank": "gubuk",
+   "src": "made"
+  },
+  {
+   "text": "Dari jendela pesawat, Putri melihat sebuah gubuk petani di pinggir sawah.",
+   "en": "From the plane window, Putri saw a farmer's hut at the edge of a rice field.",
+   "ko": "비행기 창문으로 푸트리는 논 가장자리의 농부 오두막을 봤어요.",
+   "blank": "gubuk",
+   "src": "made"
+  }
+ ],
  "w|gudang": [
   {
    "text": "Gudang itu penuh dengan kotak kayu.",
@@ -16815,6 +16879,22 @@
    "en": "That animal is really cute.",
    "ko": "그 동물이 진짜 귀여워.",
    "blank": "Hewan"
+  }
+ ],
+ "w|hiasan": [
+  {
+   "text": "Meja Dimas masih kosong tanpa hiasan apa pun.",
+   "en": "Dimas's desk was still bare, without any decorations.",
+   "ko": "디마스의 책상은 아직 장식 하나 없이 텅 비어 있었어요.",
+   "blank": "hiasan",
+   "src": "made"
+  },
+  {
+   "text": "Putri membeli hiasan dinding kecil sebagai oleh-oleh untuk ibunya.",
+   "en": "Putri bought a small wall decoration as a souvenir for her mother.",
+   "ko": "푸트리는 엄마에게 줄 선물로 작은 벽 장식을 샀어요.",
+   "blank": "hiasan",
+   "src": "made"
   }
  ],
  "w|hiburan": [
@@ -17958,6 +18038,22 @@
    "en": "Wati respects the integrity of farmers who don't raise rice prices during lean times.",
    "ko": "와티는 흉년에도 쌀값을 올리지 않는 농부들의 정직함을 존중해요.",
    "blank": "integritas",
+   "src": "made"
+  }
+ ],
+ "w|intelektual": [
+  {
+   "text": "Rapat pertama Dimas terasa sangat intelektual dan penuh istilah asing.",
+   "en": "Dimas's first meeting felt very intellectual and full of foreign terms.",
+   "ko": "디마스의 첫 회의는 아주 지적이고 낯선 용어로 가득했어요.",
+   "blank": "intelektual",
+   "src": "made"
+  },
+  {
+   "text": "Pria di sebelah Putri tampak sangat intelektual dengan kacamata dan buku filsafatnya.",
+   "en": "The man next to Putri looked very intellectual with his glasses and philosophy book.",
+   "ko": "푸트리 옆의 남자는 안경과 철학책 때문에 아주 지적으로 보였어요.",
+   "blank": "intelektual",
    "src": "made"
   }
  ],
@@ -22707,6 +22803,22 @@
    "src": "made"
   }
  ],
+ "w|kekecewaan": [
+  {
+   "text": "Dimas menyembunyikan kekecewaan saat tahu gajinya baru cair bulan depan.",
+   "en": "Dimas hid his disappointment when he found out his salary wouldn't be paid until next month.",
+   "ko": "월급이 다음 달에야 나온다는 걸 알고 디마스는 실망을 감췄어요.",
+   "blank": "kekecewaan",
+   "src": "made"
+  },
+  {
+   "text": "Putri tidak bisa menutupi kekecewaan saat penerbangannya dibatalkan.",
+   "en": "Putri couldn't hide her disappointment when her flight was cancelled.",
+   "ko": "항공편이 취소되자 푸트리는 실망을 감추지 못했어요.",
+   "blank": "kekecewaan",
+   "src": "made"
+  }
+ ],
  "w|kekejaman": [
   {
    "text": "Agus membaca buku sejarah tentang kekejaman penjajahan di masa lalu.",
@@ -23727,6 +23839,22 @@
    "src": "made"
   }
  ],
+ "w|kepanikan": [
+  {
+   "text": "Dimas sempat dilanda kepanikan saat kartu aksesnya tidak bisa dipakai.",
+   "en": "Dimas briefly panicked when his access card didn't work.",
+   "ko": "출입 카드가 안 돼서 디마스는 잠깐 당황했어요.",
+   "blank": "kepanikan",
+   "src": "made"
+  },
+  {
+   "text": "Terjadi kepanikan kecil ketika paspor Putri tidak ada di tasnya.",
+   "en": "There was a small panic when Putri's passport wasn't in her bag.",
+   "ko": "푸트리의 여권이 가방에 없자 작은 소동이 일어났어요.",
+   "blank": "kepanikan",
+   "src": "made"
+  }
+ ],
  "w|kepemilikan": [
   {
    "text": "Andi menulis nama di bukunya supaya kepemilikan buku itu jelas.",
@@ -23816,6 +23944,22 @@
    "en": "Intan brings a bag of baby supplies to the restaurant.",
    "ko": "인탄은 식당에 아기 용품을 담은 가방을 가져와요.",
    "blank": "keperluan",
+   "src": "made"
+  }
+ ],
+ "w|keping": [
+  {
+   "text": "Rekan kerja Dimas menyodorkan beberapa keping biskuit sebagai ucapan selamat datang.",
+   "en": "Dimas's coworker held out a few biscuits as a welcome.",
+   "ko": "디마스의 동료가 환영 인사로 비스킷 몇 조각을 내밀었어요.",
+   "blank": "keping",
+   "src": "made"
+  },
+  {
+   "text": "Putri menemukan beberapa keping uang logam asing di saku jaketnya.",
+   "en": "Putri found a few foreign coins in her jacket pocket.",
+   "ko": "푸트리는 재킷 주머니에서 외국 동전 몇 개를 찾았어요.",
+   "blank": "keping",
    "src": "made"
   }
  ],
@@ -24545,6 +24689,22 @@
    "blank": "kesempatan"
   }
  ],
+ "w|kesempurnaan": [
+  {
+   "text": "Bu Ratna, atasan Dimas, terkenal menuntut kesempurnaan dalam setiap laporan.",
+   "en": "Ms. Ratna, Dimas's boss, is known for demanding perfection in every report.",
+   "ko": "디마스의 상사 라트나 씨는 모든 보고서에 완벽함을 요구하기로 유명해요.",
+   "blank": "kesempurnaan",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengagumi kesempurnaan desain atap terminal yang baru.",
+   "en": "Putri admired the perfection of the new terminal's roof design.",
+   "ko": "푸트리는 새 터미널 지붕 디자인의 완벽함에 감탄했어요.",
+   "blank": "kesempurnaan",
+   "src": "made"
+  }
+ ],
  "w|kesenangan": [
   {
    "text": "Kesenangan kecil bisa menghibur hati.",
@@ -24557,6 +24717,22 @@
    "en": "Reading is her favorite pleasure.",
    "ko": "독서는 그녀가 가장 좋아하는 즐거움이야.",
    "blank": "kesenangan"
+  }
+ ],
+ "w|kesengsaraan": [
+  {
+   "text": "Rekan kerja Dimas bercerita tentang kesengsaraan naik kereta yang penuh setiap pagi.",
+   "en": "Dimas's coworker talked about the misery of riding a packed train every morning.",
+   "ko": "디마스의 동료는 매일 아침 꽉 찬 기차를 타는 고생을 이야기했어요.",
+   "blank": "kesengsaraan",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Putri, menunggu delapan jam di bandara terasa seperti kesengsaraan.",
+   "en": "For Putri, waiting eight hours at the airport felt like misery.",
+   "ko": "푸트리에게 공항에서 여덟 시간을 기다리는 건 고역 같았어요.",
+   "blank": "kesengsaraan",
+   "src": "made"
   }
  ],
  "w|kesepakatan": [
@@ -24616,6 +24792,22 @@
    "en": "Loyal customers of this train earn points as a loyalty reward.",
    "ko": "이 기차 단골은 충성 보상으로 포인트를 받아요.",
    "blank": "kesetiaan",
+   "src": "made"
+  }
+ ],
+ "w|kesialan": [
+  {
+   "text": "Pagi pertama kerja, Dimas sudah mengalami kesialan kecil: kopinya tumpah ke kemeja.",
+   "en": "On his first morning at work, Dimas already had a bit of bad luck: his coffee spilled on his shirt.",
+   "ko": "출근 첫날 아침부터 디마스는 작은 불운을 겪었어요. 커피가 셔츠에 쏟아졌거든요.",
+   "blank": "kesialan",
+   "src": "made"
+  },
+  {
+   "text": "Koper rusak dan penerbangan tertunda, kesialan Putri hari itu seperti tidak ada habisnya.",
+   "en": "A broken suitcase and a delayed flight: Putri's bad luck that day seemed endless.",
+   "ko": "가방은 망가지고 비행기는 늦어지고, 그날 푸트리의 불운은 끝이 없는 것 같았어요.",
+   "blank": "kesialan",
    "src": "made"
   }
  ],
@@ -31525,6 +31717,22 @@
    "blank": "Melompat"
   }
  ],
+ "w|melompati": [
+  {
+   "text": "Pagi itu Dimas melompati genangan air di depan gedung kantor.",
+   "en": "That morning Dimas jumped over a puddle in front of the office building.",
+   "ko": "그날 아침 디마스는 회사 건물 앞 물웅덩이를 뛰어넘었어요.",
+   "blank": "melompati",
+   "src": "made"
+  },
+  {
+   "text": "Seorang anak melompati tali pembatas antrean di depan Putri.",
+   "en": "A child jumped over the queue rope in front of Putri.",
+   "ko": "한 아이가 푸트리 앞의 줄 서기용 줄을 뛰어넘었어요.",
+   "blank": "melompati",
+   "src": "made"
+  }
+ ],
  "w|meloncat": [
   {
    "text": "Seekor kucing meloncat ke atas tumpukan kardus di gudang pabrik.",
@@ -36485,6 +36693,22 @@
    "src": "made"
   }
  ],
+ "w|mencopot": [
+  {
+   "text": "Dimas mencopot label harga yang masih menempel di kursi barunya.",
+   "en": "Dimas peeled off the price tag still stuck to his new chair.",
+   "ko": "디마스는 새 의자에 아직 붙어 있던 가격표를 떼어 냈어요.",
+   "blank": "mencopot",
+   "src": "made"
+  },
+  {
+   "text": "Di pemeriksaan keamanan, Putri harus mencopot ikat pinggang dan jam tangannya.",
+   "en": "At the security check, Putri had to take off her belt and watch.",
+   "ko": "보안 검색대에서 푸트리는 벨트와 손목시계를 풀어야 했어요.",
+   "blank": "mencopot",
+   "src": "made"
+  }
+ ],
  "w|mencuci": [
   {
    "text": "Dia sedang mencuci piring di dapur.",
@@ -39071,6 +39295,22 @@
    "src": "made"
   }
  ],
+ "w|mengekspresikan": [
+  {
+   "text": "Di rapat pertama, Dimas belum berani mengekspresikan pendapatnya.",
+   "en": "At his first meeting, Dimas didn't yet dare to express his opinion.",
+   "ko": "첫 회의에서 디마스는 아직 자기 의견을 말할 용기가 없었어요.",
+   "blank": "mengekspresikan",
+   "src": "made"
+  },
+  {
+   "text": "Putri sulit mengekspresikan rasa lega setelah pesawatnya mendarat dengan selamat.",
+   "en": "Putri found it hard to express her relief after her plane landed safely.",
+   "ko": "비행기가 무사히 착륙하자 푸트리는 안도감을 말로 표현하기 어려웠어요.",
+   "blank": "mengekspresikan",
+   "src": "made"
+  }
+ ],
  "w|mengelak": [
   {
    "text": "Kucing itu terus mengelak setiap kali Rudi mencoba memberinya obat.",
@@ -39839,6 +40079,22 @@
    "src": "made"
   }
  ],
+ "w|menggema": [
+  {
+   "text": "Suara Dimas menggema di ruang rapat yang masih kosong.",
+   "en": "Dimas's voice echoed in the still-empty meeting room.",
+   "ko": "아직 텅 빈 회의실에 디마스의 목소리가 울렸어요.",
+   "blank": "menggema",
+   "src": "made"
+  },
+  {
+   "text": "Pengumuman keberangkatan menggema di seluruh terminal saat Putri tiba.",
+   "en": "The departure announcement echoed through the whole terminal as Putri arrived.",
+   "ko": "푸트리가 도착했을 때 출발 안내 방송이 터미널 전체에 울려 퍼졌어요.",
+   "blank": "menggema",
+   "src": "made"
+  }
+ ],
  "w|menggemaskan": [
   {
    "text": "Rudi mengirim foto anak kucing yang menggemaskan untuk mencairkan suasana dengan kakaknya.",
@@ -39995,6 +40251,22 @@
    "src": "made"
   }
  ],
+ "w|menggoreng": [
+  {
+   "text": "Ibu kantin sedang menggoreng tempe ketika Dimas datang untuk makan siang.",
+   "en": "The canteen lady was frying tempeh when Dimas came for lunch.",
+   "ko": "디마스가 점심을 먹으러 왔을 때 식당 아주머니는 템페를 튀기고 있었어요.",
+   "blank": "menggoreng",
+   "src": "made"
+  },
+  {
+   "text": "Bau orang menggoreng kentang di restoran cepat saji tercium sampai ke kursi Putri.",
+   "en": "The smell of fries being cooked at the fast-food restaurant reached Putri's seat.",
+   "ko": "패스트푸드점에서 감자 튀기는 냄새가 푸트리의 자리까지 풍겼어요.",
+   "blank": "menggoreng",
+   "src": "made"
+  }
+ ],
  "w|menggosok": [
   {
    "text": "Rudi teringat Bayu yang dulu suka menggosok sepatu sekolah sampai mengilap.",
@@ -40024,6 +40296,22 @@
    "en": "Ayu rolled her ankles to warm up before the start.",
    "ko": "아유는 출발 전에 몸을 풀려고 발목을 돌렸어요.",
    "blank": "menggoyangkan",
+   "src": "made"
+  }
+ ],
+ "w|menggugat": [
+  {
+   "text": "Di kantor hukum itu, Dimas ikut menyiapkan berkas untuk warga yang ingin menggugat sebuah pabrik.",
+   "en": "At the law firm, Dimas helped prepare files for residents who wanted to sue a factory.",
+   "ko": "그 법률 사무소에서 디마스는 공장을 고소하려는 주민들의 서류 준비를 도왔어요.",
+   "blank": "menggugat",
+   "src": "made"
+  },
+  {
+   "text": "Putri mendengar seorang penumpang mengancam akan menggugat maskapai karena bagasinya hilang.",
+   "en": "Putri heard a passenger threaten to sue the airline because his luggage was lost.",
+   "ko": "푸트리는 한 승객이 짐을 잃어버렸다며 항공사를 고소하겠다고 하는 걸 들었어요.",
+   "blank": "menggugat",
    "src": "made"
   }
  ],
@@ -40497,6 +40785,22 @@
    "en": "He tried to stop the fight.",
    "ko": "그는 싸움을 말리려고 했어.",
    "blank": "menghentikan"
+  }
+ ],
+ "w|mengherankan": [
+  {
+   "text": "Yang mengherankan bagi Dimas, hampir semua orang di kantor itu memakai sandal.",
+   "en": "What surprised Dimas was that almost everyone in that office wore sandals.",
+   "ko": "디마스가 놀란 건 그 사무실 사람들이 거의 다 샌들을 신는다는 거였어요.",
+   "blank": "mengherankan",
+   "src": "made"
+  },
+  {
+   "text": "Antrean imigrasi kosong pagi itu, hal yang cukup mengherankan bagi Putri.",
+   "en": "The immigration queue was empty that morning, which Putri found rather surprising.",
+   "ko": "그날 아침 출입국 심사 줄이 텅 비어 있어서 푸트리는 꽤 놀랐어요.",
+   "blank": "mengherankan",
+   "src": "made"
   }
  ],
  "w|menghibur": [
@@ -41019,6 +41323,22 @@
    "en": "The office will send official invitations.",
    "ko": "사무실이 공식 초청장을 보낼 거야.",
    "blank": "mengirimkan"
+  }
+ ],
+ "w|mengiris": [
+  {
+   "text": "Ibu kantin mengiris semangka untuk Dimas dan teman-teman barunya.",
+   "en": "The canteen lady sliced a watermelon for Dimas and his new friends.",
+   "ko": "식당 아주머니가 디마스와 새 동료들을 위해 수박을 썰어 줬어요.",
+   "blank": "mengiris",
+   "src": "made"
+  },
+  {
+   "text": "Di lounge bandara, seorang koki mengiris daging panggang untuk Putri.",
+   "en": "In the airport lounge, a chef sliced roast meat for Putri.",
+   "ko": "공항 라운지에서 요리사가 푸트리에게 구운 고기를 썰어 줬어요.",
+   "blank": "mengiris",
+   "src": "made"
   }
  ],
  "w|mengisap": [
@@ -41677,6 +41997,22 @@
    "blank": "Mengundang"
   }
  ],
+ "w|mengunduh": [
+  {
+   "text": "Dimas harus mengunduh banyak aplikasi kantor di laptop barunya.",
+   "en": "Dimas had to download a lot of work apps onto his new laptop.",
+   "ko": "디마스는 새 노트북에 회사 앱을 잔뜩 내려받아야 했어요.",
+   "blank": "mengunduh",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengunduh pas naik pesawat ke ponselnya sebelum berangkat ke bandara.",
+   "en": "Putri downloaded her boarding pass to her phone before leaving for the airport.",
+   "ko": "푸트리는 공항에 가기 전에 탑승권을 휴대폰에 내려받았어요.",
+   "blank": "mengunduh",
+   "src": "made"
+  }
+ ],
  "w|mengundurkan": [
   {
    "text": "Pemimpin redaksi memutuskan mengundurkan diri setelah dua puluh tahun bekerja di koran itu.",
@@ -41981,6 +42317,22 @@
    "en": "Marrying the person he loves is his dream.",
    "ko": "사랑하는 사람과 결혼하는 게 그의 꿈이야.",
    "blank": "Menikahi"
+  }
+ ],
+ "w|menikahkan": [
+  {
+   "text": "Atasan Dimas bilang ia akan cuti seminggu untuk menikahkan anak sulungnya.",
+   "en": "Dimas's boss said she would take a week off to marry off her eldest child.",
+   "ko": "디마스의 상사는 큰아이를 결혼시키려고 일주일 휴가를 낸다고 했어요.",
+   "blank": "menikahkan",
+   "src": "made"
+  },
+  {
+   "text": "Putri terbang pulang karena orang tuanya akan menikahkan kakaknya.",
+   "en": "Putri flew home because her parents were marrying off her older sister.",
+   "ko": "부모님이 언니를 결혼시키셔서 푸트리는 비행기를 타고 집에 갔어요.",
+   "blank": "menikahkan",
+   "src": "made"
   }
  ],
  "w|menikam": [
@@ -44971,6 +45323,22 @@
    "src": "made"
   }
  ],
+ "w|merangkul": [
+  {
+   "text": "Pak Budi merangkul Dimas dan mengenalkannya kepada seluruh tim.",
+   "en": "Mr. Budi put his arm around Dimas and introduced him to the whole team.",
+   "ko": "부디 씨는 디마스의 어깨를 감싸며 팀 전체에 소개했어요.",
+   "blank": "merangkul",
+   "src": "made"
+  },
+  {
+   "text": "Di pintu kedatangan, ayah Putri langsung merangkul putrinya erat-erat.",
+   "en": "At the arrivals door, Putri's father immediately hugged his daughter tight.",
+   "ko": "입국장 문에서 푸트리의 아빠는 딸을 바로 꼭 끌어안았어요.",
+   "blank": "merangkul",
+   "src": "made"
+  }
+ ],
  "w|merapikan": [
   {
    "text": "Sebelum tirai dibuka, Eko merapikan kostum para pemain.",
@@ -46667,6 +47035,22 @@
    "en": "His intention is purely to help a friend.",
    "ko": "그의 의도는 순전히 친구를 돕는 거야.",
    "blank": "murni"
+  }
+ ],
+ "w|murung": [
+  {
+   "text": "Wajah Dimas tidak lagi murung setelah rekan-rekannya mengajaknya makan siang bersama.",
+   "en": "Dimas no longer looked gloomy after his coworkers invited him to lunch.",
+   "ko": "동료들이 점심을 같이 먹자고 하자 디마스의 얼굴은 더 이상 우울하지 않았어요.",
+   "blank": "murung",
+   "src": "made"
+  },
+  {
+   "text": "Putri melihat seorang anak kecil murung di ruang tunggu karena pesawatnya terlambat.",
+   "en": "Putri saw a little child sulking in the waiting room because the plane was late.",
+   "ko": "푸트리는 비행기가 늦어서 대기실에서 시무룩한 어린아이를 봤어요.",
+   "blank": "murung",
+   "src": "made"
   }
  ],
  "w|musang": [
@@ -53767,6 +54151,22 @@
    "blank": "Penumpang"
   }
  ],
+ "w|penundaan": [
+  {
+   "text": "Ada penundaan rapat perkenalan karena atasan Dimas terjebak macet.",
+   "en": "The introduction meeting was postponed because Dimas's boss was stuck in traffic.",
+   "ko": "디마스의 상사가 차가 막혀서 소개 회의가 미뤄졌어요.",
+   "blank": "penundaan",
+   "src": "made"
+  },
+  {
+   "text": "Maskapai meminta maaf kepada Putri dan penumpang lain atas penundaan dua jam.",
+   "en": "The airline apologized to Putri and the other passengers for the two-hour delay.",
+   "ko": "항공사는 두 시간 지연에 대해 푸트리와 다른 승객들에게 사과했어요.",
+   "blank": "penundaan",
+   "src": "made"
+  }
+ ],
  "w|penunggang": [
   {
    "text": "Pengantin pria tiba bersama penunggang kuda yang memakai baju adat.",
@@ -54271,6 +54671,22 @@
    "en": "Per day he drinks a lot of water.",
    "ko": "하루에 그는 물을 많이 마셔.",
    "blank": "Per"
+  }
+ ],
+ "w|perabotan": [
+  {
+   "text": "Semua perabotan di kantor baru Dimas masih terbungkus plastik.",
+   "en": "All the furniture in Dimas's new office was still wrapped in plastic.",
+   "ko": "디마스의 새 사무실 가구는 전부 아직 비닐에 싸여 있었어요.",
+   "blank": "perabotan",
+   "src": "made"
+  },
+  {
+   "text": "Ruang tunggu itu baru direnovasi, dan Putri suka perabotan kayunya yang empuk.",
+   "en": "That waiting room had just been renovated, and Putri liked its comfy wooden furniture.",
+   "ko": "그 대기실은 새로 고쳐서 푸트리는 푹신한 나무 가구가 마음에 들었어요.",
+   "blank": "perabotan",
+   "src": "made"
   }
  ],
  "w|peradaban": [
@@ -54842,6 +55258,22 @@
    "en": "Wati's monthly shopping has become more economical thanks to neat planning.",
    "ko": "와티의 월간 장보기는 꼼꼼한 계획 덕분에 더 알뜰해졌어요.",
    "blank": "perencanaan",
+   "src": "made"
+  }
+ ],
+ "w|pergantian": [
+  {
+   "text": "Dimas tiba di lobi tepat saat pergantian sif satpam.",
+   "en": "Dimas arrived in the lobby just as the security guards were changing shifts.",
+   "ko": "디마스는 경비원 교대 시간에 딱 맞춰 로비에 도착했어요.",
+   "blank": "pergantian",
+   "src": "made"
+  },
+  {
+   "text": "Putri terbang menjelang pergantian tahun, saat bandara sedang ramai sekali.",
+   "en": "Putri flew just before the turn of the year, when the airport was extremely busy.",
+   "ko": "푸트리는 공항이 몹시 붐비는 연말연시 직전에 비행기를 탔어요.",
+   "blank": "pergantian",
    "src": "made"
   }
  ],
@@ -56967,6 +57399,22 @@
    "blank": "Pindah"
   }
  ],
+ "w|pindahan": [
+  {
+   "text": "Dimas baru selesai pindahan ke kos dekat kantor seminggu sebelumnya.",
+   "en": "Dimas had only finished moving into a boarding room near the office the week before.",
+   "ko": "디마스는 일주일 전에야 회사 근처 하숙방으로 이사를 마쳤어요.",
+   "blank": "pindahan",
+   "src": "made"
+  },
+  {
+   "text": "Koper Putri berat sekali karena ia sedang pindahan ke kota lain.",
+   "en": "Putri's suitcase was very heavy because she was moving to another city.",
+   "ko": "다른 도시로 이사하는 중이라 푸트리의 가방은 아주 무거웠어요.",
+   "blank": "pindahan",
+   "src": "made"
+  }
+ ],
  "w|pinggang": [
   {
    "text": "Setelah mengangkat anjing besar, Dimas mengeluh pinggang terasa pegal.",
@@ -58166,6 +58614,22 @@
    "en": "Intan saw that her child was pale and immediately ordered warm sweet tea.",
    "ko": "인탄은 아이가 창백한 걸 보고 바로 따뜻한 단 차를 시켰어요.",
    "blank": "pucat",
+   "src": "made"
+  }
+ ],
+ "w|puding": [
+  {
+   "text": "Ibu kantin menyiapkan puding cokelat untuk menyambut Dimas di hari pertamanya.",
+   "en": "The canteen lady made a chocolate pudding to welcome Dimas on his first day.",
+   "ko": "구내식당 아주머니가 첫날 디마스를 맞이하려고 초콜릿 푸딩을 준비했어요.",
+   "blank": "puding",
+   "src": "made"
+  },
+  {
+   "text": "Putri membeli puding mangga di kafe dekat gerbang keberangkatan.",
+   "en": "Putri bought a mango pudding at a café near the departure gate.",
+   "ko": "푸트리는 출국 게이트 근처 카페에서 망고 푸딩을 샀어요.",
+   "blank": "puding",
    "src": "made"
   }
  ],
@@ -62527,6 +62991,22 @@
    "blank": "sekretaris"
   }
  ],
+ "w|sekrup": [
+  {
+   "text": "Dimas mengencangkan sekrup monitornya yang goyang.",
+   "en": "Dimas tightened the screw on his wobbly monitor.",
+   "ko": "디마스는 흔들리는 모니터의 나사를 조였어요.",
+   "blank": "sekrup",
+   "src": "made"
+  },
+  {
+   "text": "Roda koper Putri hampir lepas karena satu sekrup kendur.",
+   "en": "A wheel on Putri's suitcase almost came off because one screw was loose.",
+   "ko": "나사 하나가 헐거워져서 푸트리의 가방 바퀴가 빠질 뻔했어요.",
+   "blank": "sekrup",
+   "src": "made"
+  }
+ ],
  "w|seksi": [
   {
    "text": "Gaun itu membuatnya terlihat seksi.",
@@ -64315,6 +64795,22 @@
    "blank": "sering"
   }
  ],
+ "w|seringkali": [
+  {
+   "text": "Kata Pak Budi, lift kantor seringkali macet pada jam sibuk.",
+   "en": "According to Mr. Budi, the office lift often gets stuck at rush hour.",
+   "ko": "부디 씨 말로는 회사 엘리베이터가 붐비는 시간에 자주 멈춘대요.",
+   "blank": "seringkali",
+   "src": "made"
+  },
+  {
+   "text": "Putri seringkali lupa mengosongkan botol minumnya sebelum pemeriksaan keamanan.",
+   "en": "Putri often forgets to empty her water bottle before the security check.",
+   "ko": "푸트리는 보안 검색 전에 물병 비우는 걸 자주 잊어요.",
+   "blank": "seringkali",
+   "src": "made"
+  }
+ ],
  "w|serius": [
   {
    "text": "Kamu serius soal ini?",
@@ -65847,6 +66343,22 @@
    "src": "made"
   }
  ],
+ "w|spontan": [
+  {
+   "text": "Dimas spontan tertawa saat atasannya melucu di tengah rapat.",
+   "en": "Dimas laughed spontaneously when his boss cracked a joke in the middle of the meeting.",
+   "ko": "상사가 회의 중에 농담을 하자 디마스는 저도 모르게 웃었어요.",
+   "blank": "spontan",
+   "src": "made"
+  },
+  {
+   "text": "Perjalanan Putri kali ini sangat spontan karena tiketnya baru dibeli tadi malam.",
+   "en": "Putri's trip this time was very spontaneous, since she only bought the ticket last night.",
+   "ko": "이번 푸트리의 여행은 표를 어젯밤에야 사서 아주 즉흥적이었어요.",
+   "blank": "spontan",
+   "src": "made"
+  }
+ ],
  "w|stabil": [
   {
    "text": "Kondisi pasien sudah cukup stabil.",
@@ -66451,6 +66963,22 @@
    "blank": "sungguhan"
   }
  ],
+ "w|sungkan": [
+  {
+   "text": "Dimas masih sungkan bertanya kepada atasannya soal jam istirahat.",
+   "en": "Dimas still felt too shy to ask his boss about break times.",
+   "ko": "디마스는 아직 상사에게 쉬는 시간을 묻기가 어색했어요.",
+   "blank": "sungkan",
+   "src": "made"
+  },
+  {
+   "text": "Putri sungkan membangunkan penumpang di sebelahnya untuk pergi ke toilet.",
+   "en": "Putri felt awkward waking the passenger next to her to go to the toilet.",
+   "ko": "푸트리는 화장실에 가려고 옆 승객을 깨우기가 미안했어요.",
+   "blank": "sungkan",
+   "src": "made"
+  }
+ ],
  "w|suntikan": [
   {
    "text": "Anak anjing itu menangis waktu mendapat suntikan pertamanya.",
@@ -66968,6 +67496,22 @@
    "en": "Dewi has her own tactic for calming children who are afraid of injections.",
    "ko": "데위는 주사를 무서워하는 아이를 달래는 자기만의 요령이 있어요.",
    "blank": "taktik",
+   "src": "made"
+  }
+ ],
+ "w|taktis": [
+  {
+   "text": "Pak Budi memberi Dimas beberapa saran taktis untuk menghadapi klien yang cerewet.",
+   "en": "Mr. Budi gave Dimas some tactical advice for dealing with fussy clients.",
+   "ko": "부디 씨는 까다로운 고객을 상대하는 요령을 디마스에게 몇 가지 알려 줬어요.",
+   "blank": "taktis",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengambil langkah taktis dengan check-in daring supaya tidak perlu antre.",
+   "en": "Putri made a tactical move by checking in online so she wouldn't have to queue.",
+   "ko": "푸트리는 줄을 서지 않으려고 온라인 체크인을 하는 요령을 부렸어요.",
+   "blank": "taktis",
    "src": "made"
   }
  ],
@@ -67695,6 +68239,22 @@
    "blank": "Tegang"
   }
  ],
+ "w|tegar": [
+  {
+   "text": "Ibu Dimas menelepon dan berpesan agar Dimas tetap tegar kalau hari pertamanya berat.",
+   "en": "Dimas's mother called and told him to stay strong if his first day was hard.",
+   "ko": "디마스의 엄마는 전화해서 첫날이 힘들어도 꿋꿋하게 버티라고 했어요.",
+   "blank": "tegar",
+   "src": "made"
+  },
+  {
+   "text": "Putri berusaha tegar saat melambaikan tangan kepada orang tuanya di pintu keberangkatan.",
+   "en": "Putri tried to stay strong as she waved to her parents at the departure door.",
+   "ko": "출국장 문에서 부모님께 손을 흔들며 푸트리는 꿋꿋하려고 애썼어요.",
+   "blank": "tegar",
+   "src": "made"
+  }
+ ],
  "w|tegas": [
   {
    "text": "Dokter gigi itu ramah tapi tegas soal larangan merokok setelah cabut gigi.",
@@ -68357,6 +68917,22 @@
    "en": "The child gave his friend an encouraging clap.",
    "ko": "그 아이가 친구에게 응원 박수를 보냈어.",
    "blank": "tepuk"
+  }
+ ],
+ "w|tepung": [
+  {
+   "text": "Kantor baru Dimas ada di pabrik roti, jadi sore itu bajunya penuh tepung.",
+   "en": "Dimas's new office is in a bread factory, so that afternoon his clothes were covered in flour.",
+   "ko": "디마스의 새 사무실은 빵 공장에 있어서 그날 오후 옷이 밀가루투성이였어요.",
+   "blank": "tepung",
+   "src": "made"
+  },
+  {
+   "text": "Petugas bertanya tentang bubuk putih di koper Putri, yang ternyata hanya tepung kue.",
+   "en": "The officer asked about the white powder in Putri's suitcase, which turned out to be just cake flour.",
+   "ko": "직원이 푸트리 가방 속 흰 가루를 물었는데, 알고 보니 케이크용 밀가루였어요.",
+   "blank": "tepung",
+   "src": "made"
   }
  ],
  "w|terakhir": [
@@ -69145,6 +69721,22 @@
    "src": "made"
   }
  ],
+ "w|tergores": [
+  {
+   "text": "Tangan Dimas tergores ujung lemari arsip yang tajam.",
+   "en": "Dimas's hand got scratched on the sharp corner of the filing cabinet.",
+   "ko": "디마스의 손이 서류함의 날카로운 모서리에 긁혔어요.",
+   "blank": "tergores",
+   "src": "made"
+  },
+  {
+   "text": "Koper baru Putri tergores saat keluar dari ban bagasi.",
+   "en": "Putri's new suitcase got scratched as it came off the baggage belt.",
+   "ko": "푸트리의 새 가방이 수하물 벨트에서 나오다가 긁혔어요.",
+   "blank": "tergores",
+   "src": "made"
+  }
+ ],
  "w|terguncang": [
   {
    "text": "Gedung apartemen itu sempat terguncang saat gempa kecil kemarin.",
@@ -69531,6 +70123,22 @@
    "en": "The related documents have been sent to the office.",
    "ko": "관련 서류는 이미 사무실로 보냈어.",
    "blank": "terkait"
+  }
+ ],
+ "w|terkecil": [
+  {
+   "text": "Sebagai karyawan baru, Dimas mendapat meja terkecil di pojok ruangan.",
+   "en": "As the new employee, Dimas got the smallest desk in the corner of the room.",
+   "ko": "신입이라 디마스는 방구석의 가장 작은 책상을 받았어요.",
+   "blank": "terkecil",
+   "src": "made"
+  },
+  {
+   "text": "Putri memilih koper terkecil yang masih muat di kabin.",
+   "en": "Putri chose the smallest suitcase that would still fit in the cabin.",
+   "ko": "푸트리는 기내에 들어가는 가장 작은 가방을 골랐어요.",
+   "blank": "terkecil",
+   "src": "made"
   }
  ],
  "w|terkejut": [
@@ -70871,6 +71479,22 @@
    "src": "made"
   }
  ],
+ "w|terus-terusan": [
+  {
+   "text": "Telepon di meja Dimas berdering terus-terusan sepanjang pagi.",
+   "en": "The phone on Dimas's desk kept ringing all morning.",
+   "ko": "디마스 책상의 전화가 아침 내내 계속 울렸어요.",
+   "blank": "terus-terusan",
+   "src": "made"
+  },
+  {
+   "text": "Pengeras suara terus-terusan memanggil penumpang yang belum naik, dan Putri mulai cemas.",
+   "en": "The loudspeaker kept calling passengers who hadn't boarded, and Putri started to worry.",
+   "ko": "스피커가 아직 탑승하지 않은 승객을 계속 불러서 푸트리는 불안해지기 시작했어요.",
+   "blank": "terus-terusan",
+   "src": "made"
+  }
+ ],
  "w|terutama": [
   {
    "text": "Aku suka buah, terutama mangga.",
@@ -71943,6 +72567,22 @@
    "en": "That gentleman's house is big.",
    "ko": "저 나리의 집은 커.",
    "blank": "tuan"
+  }
+ ],
+ "w|tuas": [
+  {
+   "text": "Dimas menarik tuas di bawah kursi supaya posisi duduknya lebih tinggi.",
+   "en": "Dimas pulled the lever under the chair to raise his seat.",
+   "ko": "디마스는 의자 아래 레버를 당겨 앉는 높이를 올렸어요.",
+   "blank": "tuas",
+   "src": "made"
+  },
+  {
+   "text": "Putri menekan tuas troli supaya rodanya bisa bergerak.",
+   "en": "Putri pressed the trolley's lever so the wheels could move.",
+   "ko": "푸트리는 바퀴가 움직이도록 카트의 레버를 눌렀어요.",
+   "blank": "tuas",
+   "src": "made"
   }
  ],
  "w|tubuh": [
