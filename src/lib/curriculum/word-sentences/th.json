@@ -263,6 +263,22 @@
    "src": "made"
   }
  ],
+ "w|กระจาย": [
+  {
+   "text": "เจ้าหน้าที่เดินกระจายกันไปตรวจตั๋วทุกตู้",
+   "en": "The staff spread out to check tickets in every carriage.",
+   "ko": "직원들은 흩어져서 칸마다 표를 검사했어요.",
+   "blank": "กระจาย",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานกระจายกันไปปิดถนนทุกทางเข้ากองถ่าย",
+   "en": "The crew spread out to block every road leading into the set.",
+   "ko": "스태프들이 흩어져서 촬영장으로 들어오는 길을 모두 막았어요.",
+   "blank": "กระจาย",
+   "src": "made"
+  }
+ ],
  "w|กระซิบ": [
   {
    "text": "เธอกระซิบอะไรกับฉันหน่อย",
@@ -347,6 +363,38 @@
    "en": "Feed the rabbit with carrots.",
    "ko": "토끼에게 당근을 줘.",
    "blank": "กระต่าย"
+  }
+ ],
+ "w|กระติก": [
+  {
+   "text": "สมชายเติมน้ำร้อนใส่กระติกจากตู้เสบียงเพื่อชงกาแฟ",
+   "en": "Somchai filled his flask with hot water from the dining car to make coffee.",
+   "ko": "솜차이는 커피를 타려고 식당칸에서 보온병에 뜨거운 물을 채웠어요.",
+   "blank": "กระติก",
+   "src": "made"
+  },
+  {
+   "text": "ฝ่ายอาหารเตรียมกระติกน้ำแข็งไว้ให้นักแสดงทุกคน",
+   "en": "The catering team prepared an ice cooler for every actor.",
+   "ko": "케이터링팀은 배우들에게 줄 아이스박스를 준비했어요.",
+   "blank": "กระติก",
+   "src": "made"
+  }
+ ],
+ "w|กระทบ": [
+  {
+   "text": "การซ่อมรางรถไฟกระทบแผนเที่ยวของสมชายไปหนึ่งวัน",
+   "en": "The track repairs set Somchai's travel plans back a day.",
+   "ko": "철로 보수 공사 때문에 솜차이의 여행 계획이 하루 밀렸어요.",
+   "blank": "กระทบ",
+   "src": "made"
+  },
+  {
+   "text": "พายุเข้ากระทบตารางถ่ายทำจนต้องเลื่อนไปหนึ่งสัปดาห์",
+   "en": "A storm hit the filming schedule, pushing it back a week.",
+   "ko": "폭풍 때문에 촬영 일정이 일주일 밀렸어요.",
+   "blank": "กระทบ",
+   "src": "made"
   }
  ],
  "w|กระทรวง": [
@@ -1027,6 +1075,22 @@
    "en": "We already made a plan previously.",
    "ko": "우리는 이전에 이미 계획을 세워 뒀어.",
    "blank": "ก่อนหน้านี้"
+  }
+ ],
+ "w|ก่อให้เกิด": [
+  {
+   "text": "ฝนตกหนักจนก่อให้เกิดดินถล่มทับรางรถไฟ",
+   "en": "Heavy rain caused a landslide onto the railway track.",
+   "ko": "폭우로 산사태가 일어나 철로를 덮쳤어요.",
+   "blank": "ก่อให้เกิด",
+   "src": "made"
+  },
+  {
+   "text": "เสียงเครื่องปั่นไฟก่อให้เกิดปัญหากับการอัดเสียง",
+   "en": "The generator's noise caused problems with the sound recording.",
+   "ko": "발전기 소리 때문에 녹음에 문제가 생겼어요.",
+   "blank": "ก่อให้เกิด",
+   "src": "made"
   }
  ],
  "w|กะ": [
@@ -4187,6 +4251,22 @@
    "blank": "ขึ้น"
   }
  ],
+ "w|ขึ้นบิน": [
+  {
+   "text": "สมชายเลือกนั่งรถไฟแทนเครื่องบิน เพราะไม่ชอบตอนขึ้นบิน",
+   "en": "Somchai chose the train over a plane because he doesn't like takeoff.",
+   "ko": "솜차이는 이륙할 때가 싫어서 비행기 대신 기차를 골랐어요.",
+   "blank": "ขึ้นบิน",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเก็บภาพเครื่องบินขึ้นบินตอนพระอาทิตย์ตกไว้ใช้ฉากจบ",
+   "en": "Malee captured a plane taking off at sunset to use in the final scene.",
+   "ko": "말리는 마지막 장면에 쓰려고 해 질 녘 이륙하는 비행기를 찍었어요.",
+   "blank": "ขึ้นบิน",
+   "src": "made"
+  }
+ ],
  "w|ขึ้นไป": [
   {
    "text": "ชัยปีนบันไดขึ้นไปดูพัดลมบนหลังคาโรงงาน",
@@ -4447,6 +4527,22 @@
    "en": "You're invited to join the party.",
    "ko": "파티에 참석하도록 초대할게.",
    "blank": "เข้าร่วม"
+  }
+ ],
+ "w|เข้าสู่": [
+  {
+   "text": "หลังเที่ยงคืน รถไฟก็เข้าสู่เขตภาคเหนือ",
+   "en": "After midnight, the train entered the northern region.",
+   "ko": "자정이 지나자 기차는 북부 지역으로 들어섰어요.",
+   "blank": "เข้าสู่",
+   "src": "made"
+  },
+  {
+   "text": "หนังเข้าสู่ช่วงตัดต่อหลังถ่ายทำมาสามเดือน",
+   "en": "After three months of shooting, the film moved into editing.",
+   "ko": "석 달 촬영 끝에 영화는 편집 단계에 들어갔어요.",
+   "blank": "เข้าสู่",
+   "src": "made"
   }
  ],
  "w|เขียน": [
@@ -7503,6 +7599,22 @@
    "blank": "ค่าไฟ"
   }
  ],
+ "w|ค่ายพัก": [
+  {
+   "text": "สมชายลงรถไฟแล้วต่อรถสองแถวไปค่ายพักริมเขื่อน",
+   "en": "Somchai got off the train and took a songthaew to a camp by the dam.",
+   "ko": "솜차이는 기차에서 내려 썽태우를 타고 댐 옆 캠프장으로 갔어요.",
+   "blank": "ค่ายพัก",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานทั้งหมดนอนที่ค่ายพักในอุทยานระหว่างถ่ายทำ",
+   "en": "The whole crew slept at a camp in the national park during the shoot.",
+   "ko": "촬영 기간 동안 스태프 모두 국립공원 안 캠프장에서 잤어요.",
+   "blank": "ค่ายพัก",
+   "src": "made"
+  }
+ ],
  "w|ค่าแรง": [
   {
    "text": "ค่าแรงขั้นต่ำปรับขึ้นปีนี้",
@@ -9763,6 +9875,22 @@
    "en": "I walked over from home.",
    "ko": "집에서 걸어왔어.",
    "blank": "จาก"
+  }
+ ],
+ "w|จากนั้น": [
+  {
+   "text": "สมชายกินข้าวที่ตู้เสบียง จากนั้นก็กลับไปนอนต่อ",
+   "en": "Somchai ate in the dining car, and after that went back to sleep.",
+   "ko": "솜차이는 식당칸에서 밥을 먹고 나서 다시 자러 갔어요.",
+   "blank": "จากนั้น",
+   "src": "made"
+  },
+  {
+   "text": "ทีมถ่ายฉากกลางวันให้เสร็จก่อน จากนั้นค่อยจัดไฟฉากกลางคืน",
+   "en": "The team finished the day scenes first, then set up lighting for the night scenes.",
+   "ko": "팀은 낮 장면을 먼저 끝내고 그다음에 밤 장면 조명을 설치했어요.",
+   "blank": "จากนั้น",
+   "src": "made"
   }
  ],
  "w|จาง": [
@@ -13291,6 +13419,22 @@
    "blank": "ดำ"
   }
  ],
+ "w|ดำน้ำ": [
+  {
+   "text": "รถไฟสายใต้พาสมชายไปถึงเมืองชายทะเลที่คนนิยมไปดำน้ำ",
+   "en": "The southern line took Somchai to a seaside town popular for diving.",
+   "ko": "남부선 기차는 솜차이를 다이빙하러 많이 가는 바닷가 마을까지 데려다줬어요.",
+   "blank": "ดำน้ำ",
+   "src": "made"
+  },
+  {
+   "text": "ฉากใต้ทะเลใช้นักแสดงแทนที่ดำน้ำเก่งมาก",
+   "en": "The underwater scene used a stunt double who is very good at diving.",
+   "ko": "바닷속 장면에는 다이빙을 아주 잘하는 대역 배우를 썼어요.",
+   "blank": "ดำน้ำ",
+   "src": "made"
+  }
+ ],
  "w|ดำเนิน": [
   {
    "text": "บริษัทจะดำเนินโครงการนี้ต่อ",
@@ -13683,6 +13827,22 @@
    "en": "How many hours to travel to Chiang Mai?",
    "ko": "치앙마이까지 몇 시간 걸려?",
    "blank": "เดินทาง"
+  }
+ ],
+ "w|เดินป่า": [
+  {
+   "text": "หลังลงรถไฟ สมชายเดินป่าตามเส้นทางศึกษาธรรมชาติสามชั่วโมง",
+   "en": "After getting off the train, Somchai hiked a nature trail for three hours.",
+   "ko": "기차에서 내린 뒤 솜차이는 자연 탐방로를 세 시간 동안 걸었어요.",
+   "blank": "เดินป่า",
+   "src": "made"
+  },
+  {
+   "text": "มาลีให้ทีมกล้องเดินป่าไปหาน้ำตกที่ไม่มีใครเคยถ่าย",
+   "en": "Malee had the camera team hike into the forest to find a waterfall no one had filmed.",
+   "ko": "말리는 카메라팀에게 아무도 찍은 적 없는 폭포를 찾으러 숲길을 걷게 했어요.",
+   "blank": "เดินป่า",
+   "src": "made"
   }
  ],
  "w|เดิม": [
@@ -14521,6 +14681,22 @@
    "blank": "ตลอด"
   }
  ],
+ "w|ตลอดจน": [
+  {
+   "text": "ตั๋วรถไฟนี้รวมที่นอนตลอดจนอาหารเช้าหนึ่งมื้อ",
+   "en": "This train ticket includes a berth as well as one breakfast.",
+   "ko": "이 기차표에는 침대는 물론 아침 식사 한 끼도 포함돼요.",
+   "blank": "ตลอดจน",
+   "src": "made"
+  },
+  {
+   "text": "มาลีดูแลเรื่องกล้อง ไฟ ตลอดจนเสื้อผ้านักแสดง",
+   "en": "Malee takes care of the cameras, lighting and even the actors' costumes.",
+   "ko": "말리는 카메라와 조명은 물론 배우 의상까지 챙겨요.",
+   "blank": "ตลอดจน",
+   "src": "made"
+  }
+ ],
  "w|ตลอดไป": [
   {
    "text": "ฉันจะจำวันนี้ตลอดไป",
@@ -14693,6 +14869,22 @@
    "en": "Don't add on without permission.",
    "ko": "허가 없이 증축하지 마.",
    "blank": "ต่อเติม"
+  }
+ ],
+ "w|ต่อแถว": [
+  {
+   "text": "ช่วงปีใหม่ สมชายต้องต่อแถวซื้อตั๋วรถไฟนานเป็นชั่วโมง",
+   "en": "Over New Year, Somchai had to queue for an hour to buy a train ticket.",
+   "ko": "새해 연휴에 솜차이는 기차표를 사려고 한 시간이나 줄을 서야 했어요.",
+   "blank": "ต่อแถว",
+   "src": "made"
+  },
+  {
+   "text": "ตัวประกอบหลายร้อยคนต่อแถวรับข้าวกล่องตอนเที่ยง",
+   "en": "Hundreds of extras queued for boxed lunches at noon.",
+   "ko": "수백 명의 엑스트라가 점심에 도시락을 받으려고 줄을 섰어요.",
+   "blank": "ต่อแถว",
+   "src": "made"
   }
  ],
  "w|ตอน": [
@@ -14877,6 +15069,22 @@
    "en": "What should we do next?",
    "ko": "다음에 뭐 하지?",
    "blank": "ต่อไป"
+  }
+ ],
+ "w|ต่อไปนี้": [
+  {
+   "text": "พนักงานประกาศว่าสถานีต่อไปนี้จะจอดเพียงหนึ่งนาที",
+   "en": "The staff announced that the following station would be a one-minute stop only.",
+   "ko": "직원은 다음 역에서는 일 분만 정차한다고 안내했어요.",
+   "blank": "ต่อไปนี้",
+   "src": "made"
+  },
+  {
+   "text": "มาลีบอกทีมว่าฉากต่อไปนี้ต้องเงียบที่สุด",
+   "en": "Malee told the team that the next scene must be as quiet as possible.",
+   "ko": "말리는 팀에게 이어지는 장면은 최대한 조용해야 한다고 했어요.",
+   "blank": "ต่อไปนี้",
+   "src": "made"
   }
  ],
  "w|ต่อมา": [
@@ -15108,6 +15316,22 @@
    "en": "Pregnant women should rest a lot.",
    "ko": "임신부는 충분히 쉬어야 해.",
    "blank": "ตั้งครรภ์",
+   "src": "made"
+  }
+ ],
+ "w|ตั้งแคมป์": [
+  {
+   "text": "สมชายอยากตั้งแคมป์ริมน้ำตกที่อยู่ไม่ไกลจากสถานีสุดท้าย",
+   "en": "Somchai wants to camp by a waterfall not far from the last station.",
+   "ko": "솜차이는 종착역에서 멀지 않은 폭포 옆에서 캠핑을 하고 싶어요.",
+   "blank": "ตั้งแคมป์",
+   "src": "made"
+  },
+  {
+   "text": "ในฉากสำคัญ ตัวละครสองคนตั้งแคมป์ริมทะเลสาบแล้วทะเลาะกัน",
+   "en": "In a key scene, the two characters camp by a lake and argue.",
+   "ko": "중요한 장면에서 두 인물은 호숫가에서 캠핑하다가 다퉈요.",
+   "blank": "ตั้งแคมป์",
    "src": "made"
   }
  ],
@@ -15983,6 +16207,22 @@
    "en": "I take dance class every Saturday.",
    "ko": "나는 매주 토요일에 춤을 배워.",
    "blank": "เต้น"
+  }
+ ],
+ "w|เต็นท์": [
+  {
+   "text": "สมชายพับเต็นท์ใส่กระเป๋าใบใหญ่แล้วยัดไว้ใต้เบาะรถไฟ",
+   "en": "Somchai folded his tent into a big bag and stuffed it under the train seat.",
+   "ko": "솜차이는 텐트를 접어 큰 가방에 넣고 기차 좌석 밑에 밀어 넣었어요.",
+   "blank": "เต็นท์",
+   "src": "made"
+  },
+  {
+   "text": "ลมแรงพัดเต็นท์ของฝ่ายแต่งหน้าล้มลงกลางกองถ่าย",
+   "en": "A strong wind blew over the makeup team's tent in the middle of the set.",
+   "ko": "강한 바람에 촬영장 한가운데 있던 분장팀 텐트가 쓰러졌어요.",
+   "blank": "เต็นท์",
+   "src": "made"
   }
  ],
  "w|เต็ม": [
@@ -16895,6 +17135,22 @@
    "blank": "ถุงเท้า"
   }
  ],
+ "w|ถุงนอน": [
+  {
+   "text": "รถไฟตู้นอนมีผ้าห่มให้ สมชายเลยไม่ต้องใช้ถุงนอนของตัวเอง",
+   "en": "The sleeper car provides blankets, so Somchai didn't need his own sleeping bag.",
+   "ko": "침대칸에서 담요를 줘서 솜차이는 자기 침낭을 쓸 필요가 없었어요.",
+   "blank": "ถุงนอน",
+   "src": "made"
+  },
+  {
+   "text": "มาลีนอนในถุงนอนบนพื้นห้องเก็บของเพราะถ่ายถึงตีสาม",
+   "en": "Malee slept in a sleeping bag on the storeroom floor because filming ran until three a.m.",
+   "ko": "촬영이 새벽 세 시까지 이어져서 말리는 창고 바닥에서 침낭 속에 잤어요.",
+   "blank": "ถุงนอน",
+   "src": "made"
+  }
+ ],
  "w|ถู": [
   {
    "text": "ฉันถูพื้นหลังกวาดเสร็จ",
@@ -17392,6 +17648,22 @@
    "en": "The field is full of flowers.",
    "ko": "들판이 꽃으로 가득해.",
    "blank": "ท้องทุ่ง",
+   "src": "made"
+  }
+ ],
+ "w|ท่องเที่ยว": [
+  {
+   "text": "สมชายชอบท่องเที่ยวด้วยรถไฟ เพราะได้เห็นชีวิตคนต่างจังหวัด",
+   "en": "Somchai likes travelling by train because he gets to see provincial life.",
+   "ko": "솜차이는 지방 사람들의 삶을 볼 수 있어서 기차 여행을 좋아해요.",
+   "blank": "ท่องเที่ยว",
+   "src": "made"
+  },
+  {
+   "text": "หนังเรื่องนี้เล่าถึงสองพี่น้องที่ท่องเที่ยวทั่วประเทศด้วยมอเตอร์ไซค์",
+   "en": "This film is about two siblings who travel around the country by motorbike.",
+   "ko": "이 영화는 오토바이로 전국을 여행하는 두 남매 이야기예요.",
+   "blank": "ท่องเที่ยว",
    "src": "made"
   }
  ],
@@ -19151,6 +19423,22 @@
    "blank": "เที่ยว"
   }
  ],
+ "w|เที่ยวชม": [
+  {
+   "text": "สมชายใช้เวลาหนึ่งวันเที่ยวชมเมืองเก่าก่อนขึ้นรถไฟต่อ",
+   "en": "Somchai spent a day touring the old town before getting back on the train.",
+   "ko": "솜차이는 다시 기차를 타기 전에 하루 동안 옛 도시를 구경했어요.",
+   "blank": "เที่ยวชม",
+   "src": "made"
+  },
+  {
+   "text": "วันหยุดถ่ายทำ มาลีพาลูกไปเที่ยวชมตลาดน้ำ",
+   "en": "On a day off from filming, Malee took her child to see the floating market.",
+   "ko": "촬영 쉬는 날 말리는 아이를 데리고 수상 시장을 구경하러 갔어요.",
+   "blank": "เที่ยวชม",
+   "src": "made"
+  }
+ ],
  "w|เที่ยวบิน": [
   {
    "text": "เพื่อนคนหนึ่งเปลี่ยนใจไม่ขับรถไปด้วย แต่จองเที่ยวบินไปเจอกันที่เชียงราย",
@@ -20843,6 +21131,22 @@
    "blank": "น้ำผลไม้"
   }
  ],
+ "w|น้ำพุ": [
+  {
+   "text": "ลานหน้าสถานีมีน้ำพุที่เด็กๆ ชอบไปเล่นน้ำ",
+   "en": "The square in front of the station has a fountain that kids love to play in.",
+   "ko": "역 앞 광장에는 아이들이 물놀이하기 좋아하는 분수가 있어요.",
+   "blank": "น้ำพุ",
+   "src": "made"
+  },
+  {
+   "text": "ในฉากนี้นางเอกต้องเดินผ่านน้ำพุแล้วหันมายิ้ม",
+   "en": "In this scene the heroine has to walk past the fountain and turn to smile.",
+   "ko": "이 장면에서 여주인공은 분수를 지나며 돌아서서 웃어야 해요.",
+   "blank": "น้ำพุ",
+   "src": "made"
+  }
+ ],
  "w|น้ำมะพร้าว": [
   {
    "text": "แกงสูตรนี้ใช้น้ำมะพร้าวแทนน้ำเปล่า รสจึงหวานกลมกล่อม",
@@ -21699,6 +22003,22 @@
    "en": "He often complains that the food is salty.",
    "ko": "그는 음식이 짜다고 자주 투덜대.",
    "blank": "บ่น"
+  }
+ ],
+ "w|บรรดา": [
+  {
+   "text": "บรรดาแม่ค้าที่สถานีวิ่งมาขายของที่หน้าต่างรถไฟ",
+   "en": "All the vendors at the station ran to sell things at the train windows.",
+   "ko": "역의 상인들이 모두 기차 창문으로 달려와 물건을 팔았어요.",
+   "blank": "บรรดา",
+   "src": "made"
+  },
+  {
+   "text": "มาลีส่งข้อความขอบคุณบรรดาตัวประกอบหลังปิดกล้อง",
+   "en": "Malee sent a thank-you message to all the extras after wrapping.",
+   "ko": "말리는 촬영이 끝난 뒤 엑스트라들에게 모두 감사 메시지를 보냈어요.",
+   "blank": "บรรดา",
+   "src": "made"
   }
  ],
  "w|บรรยากาศ": [
@@ -22657,6 +22977,22 @@
    "blank": "โบกมือ"
   }
  ],
+ "w|โบกรถ": [
+  {
+   "text": "รถไฟจอดกลางทาง สมชายเลยต้องโบกรถกระบะไปเมืองถัดไป",
+   "en": "The train stopped midway, so Somchai had to hitch a ride on a pickup to the next town.",
+   "ko": "기차가 중간에 서서 솜차이는 픽업트럭을 얻어 타고 다음 도시까지 가야 했어요.",
+   "blank": "โบกรถ",
+   "src": "made"
+  },
+  {
+   "text": "ในหนัง ตัวเอกโบกรถบรรทุกกลางทางเปลี่ยวตอนกลางคืน",
+   "en": "In the film, the protagonist flags down a truck on a deserted road at night.",
+   "ko": "영화에서 주인공은 밤에 외딴 길에서 트럭을 얻어 타요.",
+   "blank": "โบกรถ",
+   "src": "made"
+  }
+ ],
  "w|โบนัส": [
   {
    "text": "ปีนี้บริษัทจ่ายโบนัสพิเศษ",
@@ -22683,6 +23019,22 @@
    "en": "This ancient coin is beautiful.",
    "ko": "이 고대 동전은 아름다워.",
    "blank": "โบราณ"
+  }
+ ],
+ "w|โบราณสถาน": [
+  {
+   "text": "รถไฟสายนี้ผ่านโบราณสถานหลายแห่งในอยุธยา",
+   "en": "This train line passes many historic sites in Ayutthaya.",
+   "ko": "이 기차 노선은 아유타야의 여러 유적지를 지나가요.",
+   "blank": "โบราณสถาน",
+   "src": "made"
+  },
+  {
+   "text": "มาลีต้องขออนุญาตกรมศิลปากรก่อนถ่ายทำในโบราณสถาน",
+   "en": "Malee had to get permission from the Fine Arts Department before filming at the historic site.",
+   "ko": "말리는 유적지에서 촬영하기 전에 문화재청 허가를 받아야 했어요.",
+   "blank": "โบราณสถาน",
+   "src": "made"
   }
  ],
  "w|โบสถ์": [
@@ -23577,6 +23929,22 @@
    "src": "made"
   }
  ],
+ "w|ปราสาท": [
+  {
+   "text": "สมชายนั่งรถไฟไปบุรีรัมย์เพื่อชมปราสาทหินพนมรุ้ง",
+   "en": "Somchai took the train to Buriram to see the Phanom Rung stone sanctuary.",
+   "ko": "솜차이는 파놈룽 석조 사원을 보러 기차를 타고 부리람에 갔어요.",
+   "blank": "ปราสาท",
+   "src": "made"
+  },
+  {
+   "text": "กองถ่ายของมาลีเช่าปราสาทเก่าทั้งหลังเพื่อถ่ายหนังย้อนยุค",
+   "en": "Malee's film crew rented an entire old castle to shoot a period film.",
+   "ko": "말리의 촬영팀은 시대극을 찍으려고 오래된 성 전체를 빌렸어요.",
+   "blank": "ปราสาท",
+   "src": "made"
+  }
+ ],
  "w|ปริญญา": [
   {
    "text": "พี่สาวเพิ่งเรียนจบและได้ปริญญา",
@@ -24367,6 +24735,22 @@
    "blank": "ปีน"
   }
  ],
+ "w|ปีนเขา": [
+  {
+   "text": "ผู้โดยสารหลายคนลงสถานีนี้เพื่อไปปีนเขาดูทะเลหมอก",
+   "en": "Many passengers get off at this station to climb the mountain and see the sea of mist.",
+   "ko": "많은 승객이 운해를 보러 산에 오르려고 이 역에서 내려요.",
+   "blank": "ปีนเขา",
+   "src": "made"
+  },
+  {
+   "text": "นักแสดงนำต้องฝึกปีนเขาจริงก่อนเข้าฉากหน้าผา",
+   "en": "The lead actor had to practise real mountain climbing before the cliff scene.",
+   "ko": "주연 배우는 절벽 장면 전에 실제로 등산 연습을 해야 했어요.",
+   "blank": "ปีนเขา",
+   "src": "made"
+  }
+ ],
  "w|ปีศาจ": [
   {
    "text": "ในหนังมีปีศาจน่ากลัวมาก",
@@ -24463,6 +24847,22 @@
    "en": "There is a party on grandparents birthday.",
    "ko": "조부모님 생일에 파티가 있어.",
    "blank": "ปู่ย่าตายาย"
+  }
+ ],
+ "w|เป้": [
+  {
+   "text": "สมชายวางเป้ไว้บนชั้นเหนือหัวแล้วหลับไปทันที",
+   "en": "Somchai put his backpack on the rack overhead and fell asleep at once.",
+   "ko": "솜차이는 배낭을 머리 위 선반에 올리고 바로 잠들었어요.",
+   "blank": "เป้",
+   "src": "made"
+  },
+  {
+   "text": "ในเป้ของมาลีมีบทหนัง ไฟฉาย และแบตเตอรี่สำรอง",
+   "en": "Malee's backpack holds the script, a flashlight and spare batteries.",
+   "ko": "말리의 배낭에는 대본, 손전등, 보조 배터리가 들어 있어요.",
+   "blank": "เป้",
+   "src": "made"
   }
  ],
  "w|เป็ด": [
@@ -27203,6 +27603,22 @@
    "blank": "พ่อแม่"
   }
  ],
+ "w|พอแล้ว": [
+  {
+   "text": "แม่ค้าบนรถไฟยื่นข้าวเหนียวให้อีกห่อ แต่สมชายบอกว่าพอแล้ว",
+   "en": "The vendor on the train offered another pack of sticky rice, but Somchai said that's enough.",
+   "ko": "기차 안 상인이 찹쌀밥을 하나 더 내밀었지만 솜차이는 이제 됐다고 했어요.",
+   "blank": "พอแล้ว",
+   "src": "made"
+  },
+  {
+   "text": "ถ่ายไปสิบเทค ผู้กำกับก็ตะโกนว่าพอแล้ว ใช้ได้",
+   "en": "After ten takes, the director shouted, that's enough, it's good.",
+   "ko": "열 번을 찍고 나서 감독이 이제 됐어, 좋아 하고 외쳤어요.",
+   "blank": "พอแล้ว",
+   "src": "made"
+  }
+ ],
  "w|พอสมควร": [
   {
    "text": "อากาศร้อนพอสมควร",
@@ -27271,6 +27687,22 @@
    "en": "Recovery is going much better.",
    "ko": "요양이 많이 나아졌어.",
    "blank": "พักฟื้น"
+  }
+ ],
+ "w|พักแรม": [
+  {
+   "text": "สมชายพักแรมที่หมู่บ้านใกล้สถานีหนึ่งคืนก่อนเดินทางต่อ",
+   "en": "Somchai stayed overnight in a village near the station before travelling on.",
+   "ko": "솜차이는 계속 떠나기 전에 역 근처 마을에서 하룻밤 묵었어요.",
+   "blank": "พักแรม",
+   "src": "made"
+  },
+  {
+   "text": "นักแสดงต้องพักแรมในป่าสามคืนเพื่อเข้าถึงบทบาท",
+   "en": "The actors had to spend three nights in the forest to get into their roles.",
+   "ko": "배우들은 배역에 몰입하려고 숲에서 사흘 밤을 묵어야 했어요.",
+   "blank": "พักแรม",
+   "src": "made"
   }
  ],
  "w|พัง": [
@@ -27403,6 +27835,22 @@
    "en": "I'll take you there.",
    "ko": "내가 데려갈게.",
    "blank": "พา"
+  }
+ ],
+ "w|พายเรือ": [
+  {
+   "text": "สมชายพายเรือคายัคข้ามแม่น้ำไปดูวัดฝั่งตรงข้าม",
+   "en": "Somchai paddled a kayak across the river to see the temple on the other side.",
+   "ko": "솜차이는 카약을 저어 강 건너 맞은편 절을 보러 갔어요.",
+   "blank": "พายเรือ",
+   "src": "made"
+  },
+  {
+   "text": "นางเอกพายเรือไม่เป็น มาลีเลยต้องหาครูมาสอนก่อนถ่าย",
+   "en": "The lead actress couldn't row a boat, so Malee had to find a teacher before filming.",
+   "ko": "여주인공이 노를 저을 줄 몰라서 말리는 촬영 전에 가르칠 사람을 구해야 했어요.",
+   "blank": "พายเรือ",
+   "src": "made"
   }
  ],
  "w|พายุ": [
@@ -27795,6 +28243,22 @@
    "blank": "เพิ่ม"
   }
  ],
+ "w|เพิ่มเติม": [
+  {
+   "text": "สมชายจ่ายเงินเพิ่มเติมเพื่ออัปเกรดเป็นตู้นอนชั้นหนึ่ง",
+   "en": "Somchai paid extra to upgrade to a first-class sleeper.",
+   "ko": "솜차이는 일등 침대칸으로 바꾸려고 돈을 더 냈어요.",
+   "blank": "เพิ่มเติม",
+   "src": "made"
+  },
+  {
+   "text": "ผู้อำนวยการสร้างขอถ่ายฉากเพิ่มเติมอีกสองวัน",
+   "en": "The producer asked for two more days of additional scenes.",
+   "ko": "제작자는 이틀 더 추가 장면을 찍자고 했어요.",
+   "blank": "เพิ่มเติม",
+   "src": "made"
+  }
+ ],
  "w|เพียง": [
   {
    "text": "ฉันต้องการเพียงความสงบ",
@@ -27807,6 +28271,22 @@
    "en": "There is only a little time left.",
    "ko": "시간이 조금만 남았어.",
    "blank": "เพียง"
+  }
+ ],
+ "w|เพียงแต่": [
+  {
+   "text": "สมชายไม่ได้เบื่อรถไฟช้า เพียงแต่อยากถึงก่อนมืด",
+   "en": "Somchai doesn't mind the slow train; he just wants to arrive before dark.",
+   "ko": "솜차이는 느린 기차가 싫은 게 아니라 단지 어두워지기 전에 도착하고 싶을 뿐이에요.",
+   "blank": "เพียงแต่",
+   "src": "made"
+  },
+  {
+   "text": "นักแสดงจำบทได้หมด เพียงแต่ยังพูดเร็วเกินไป",
+   "en": "The actor has memorised all the lines; it's just that he still speaks too fast.",
+   "ko": "배우는 대사를 다 외웠는데 다만 아직 말이 너무 빨라요.",
+   "blank": "เพียงแต่",
+   "src": "made"
   }
  ],
  "w|เพียงพอ": [
@@ -32625,6 +33105,22 @@
    "src": "made"
   }
  ],
+ "w|รับรู้": [
+  {
+   "text": "สมชายเพิ่งรับรู้ว่ารถไฟขบวนนี้ไม่จอดสถานีเล็ก",
+   "en": "Somchai only just realised this train doesn't stop at small stations.",
+   "ko": "솜차이는 이 열차가 작은 역에는 서지 않는다는 걸 이제야 알았어요.",
+   "blank": "รับรู้",
+   "src": "made"
+  },
+  {
+   "text": "มาลีรับรู้ได้ทันทีว่านักแสดงคนนี้เหนื่อยเกินจะถ่ายต่อ",
+   "en": "Malee could sense at once that this actor was too tired to keep filming.",
+   "ko": "말리는 이 배우가 너무 지쳐서 더 찍을 수 없다는 걸 바로 알아챘어요.",
+   "blank": "รับรู้",
+   "src": "made"
+  }
+ ],
  "w|รับสาย": [
   {
    "text": "โปรดรับสายเมื่อมีเบอร์ไม่คุ้น",
@@ -33341,6 +33837,22 @@
    "src": "made"
   }
  ],
+ "w|เรียกรถ": [
+  {
+   "text": "พอถึงสถานีปลายทาง สมชายเรียกรถผ่านแอปไปโรงแรม",
+   "en": "When he reached the final station, Somchai called a car through an app to the hotel.",
+   "ko": "종착역에 도착하자 솜차이는 앱으로 차를 불러 호텔로 갔어요.",
+   "blank": "เรียกรถ",
+   "src": "made"
+  },
+  {
+   "text": "ถ่ายเสร็จตีสอง มาลีเรียกรถให้นักแสดงทุกคนกลับโรงแรม",
+   "en": "Filming ended at two a.m., and Malee called cars to take all the actors back to the hotel.",
+   "ko": "새벽 두 시에 촬영이 끝나자 말리는 배우들이 호텔로 돌아갈 차를 불렀어요.",
+   "blank": "เรียกรถ",
+   "src": "made"
+  }
+ ],
  "w|เรียกร้อง": [
   {
    "text": "คนงานเรียกร้องค่าจ้างที่เป็นธรรม",
@@ -33875,6 +34387,22 @@
    "blank": "ลง"
   }
  ],
+ "w|ลงจอด": [
+  {
+   "text": "จากหน้าต่างรถไฟ สมชายเห็นเครื่องบินกำลังลงจอดที่สนามบินดอนเมือง",
+   "en": "From the train window, Somchai saw a plane landing at Don Mueang airport.",
+   "ko": "솜차이는 기차 창문으로 돈므앙 공항에 착륙하는 비행기를 봤어요.",
+   "blank": "ลงจอด",
+   "src": "made"
+  },
+  {
+   "text": "ทีมต้องหยุดถ่ายทุกครั้งที่มีเครื่องบินบินต่ำลงจอดใกล้ๆ",
+   "en": "The team had to stop filming every time a plane flew low to land nearby.",
+   "ko": "근처에 착륙하려고 비행기가 낮게 날 때마다 팀은 촬영을 멈춰야 했어요.",
+   "blank": "ลงจอด",
+   "src": "made"
+  }
+ ],
  "w|ลงทุน": [
   {
    "text": "เขาตัดสินใจลงทุนในธุรกิจเล็ก",
@@ -34093,6 +34621,22 @@
    "src": "made"
   }
  ],
+ "w|ล้วน": [
+  {
+   "text": "ผู้โดยสารในตู้นี้ล้วนเป็นนักท่องเที่ยวที่จะไปเชียงใหม่",
+   "en": "The passengers in this carriage are all tourists heading to Chiang Mai.",
+   "ko": "이 칸 승객은 모두 치앙마이로 가는 관광객이에요.",
+   "blank": "ล้วน",
+   "src": "made"
+  },
+  {
+   "text": "ตัวประกอบในฉากงานแต่งล้วนเป็นคนในหมู่บ้าน",
+   "en": "The extras in the wedding scene are all people from the village.",
+   "ko": "결혼식 장면의 엑스트라는 모두 마을 사람들이에요.",
+   "blank": "ล้วน",
+   "src": "made"
+  }
+ ],
  "w|ลอก": [
   {
    "text": "หัวหน้าเตือนว่าห้ามลอกข้อความจากเว็บไซต์อื่นมาใส่ในรายงาน",
@@ -34135,6 +34679,22 @@
    "en": "You can try it again.",
    "ko": "다시 해 봐도 돼.",
    "blank": "ลอง"
+  }
+ ],
+ "w|ล่องเรือ": [
+  {
+   "text": "จากสถานีกาญจนบุรี สมชายไปล่องเรือชมแม่น้ำแคว",
+   "en": "From Kanchanaburi station, Somchai went on a boat cruise along the River Kwai.",
+   "ko": "깐짜나부리역에서 솜차이는 콰이강 유람선을 타러 갔어요.",
+   "blank": "ล่องเรือ",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานล่องเรือไปตามแม่น้ำเพื่อหาสถานที่ถ่ายทำ",
+   "en": "The crew took a boat down the river to scout filming locations.",
+   "ko": "스태프들은 촬영 장소를 찾으려고 배를 타고 강을 따라 내려갔어요.",
+   "blank": "ล่องเรือ",
+   "src": "made"
   }
  ],
  "w|ลอตเตอรี่": [
@@ -34825,6 +35385,22 @@
    "en": "I still don't want to get up.",
    "ko": "아직 일어나기 싫어.",
    "blank": "ลุก"
+  }
+ ],
+ "w|ลุกขึ้น": [
+  {
+   "text": "สมชายลุกขึ้นให้พระนั่งตอนรถไฟจอดที่สถานีลพบุรี",
+   "en": "Somchai stood up to give a monk his seat when the train stopped at Lopburi.",
+   "ko": "롭부리역에 기차가 섰을 때 솜차이는 일어나서 스님께 자리를 양보했어요.",
+   "blank": "ลุกขึ้น",
+   "src": "made"
+  },
+  {
+   "text": "มาลีลุกขึ้นปรบมือเมื่อนักแสดงเล่นฉากร้องไห้ได้ในเทคเดียว",
+   "en": "Malee stood up and clapped when the actor nailed the crying scene in one take.",
+   "ko": "배우가 우는 장면을 한 번에 해내자 말리는 일어나서 박수를 쳤어요.",
+   "blank": "ลุกขึ้น",
+   "src": "made"
   }
  ],
  "w|ลุง": [
@@ -37487,6 +38063,22 @@
    "blank": "ส้ม"
   }
  ],
+ "w|สมควร": [
+  {
+   "text": "สมชายคิดว่าค่าตั๋วรถไฟราคานี้สมควรกับความสะดวกที่ได้",
+   "en": "Somchai thinks this ticket price is fair for the comfort he gets.",
+   "ko": "솜차이는 이 기차표 값이 받는 편의에 비해 적당하다고 생각해요.",
+   "blank": "สมควร",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเห็นว่าตัวประกอบที่ยืนกลางแดดทั้งวันสมควรได้ค่าแรงเพิ่ม",
+   "en": "Malee thinks the extras who stood in the sun all day deserve extra pay.",
+   "ko": "말리는 하루 종일 땡볕에 서 있던 엑스트라들이 수당을 더 받아야 마땅하다고 봐요.",
+   "blank": "สมควร",
+   "src": "made"
+  }
+ ],
  "w|ส้มตำ": [
   {
    "text": "สั่งส้มตำไทยไม่เผ็ด",
@@ -38567,6 +39159,22 @@
    "en": "I worked hard all week.",
    "ko": "일주일 내내 열심히 일했어.",
    "blank": "สัปดาห์"
+  }
+ ],
+ "w|สัมผัส": [
+  {
+   "text": "สมชายเปิดหน้าต่างให้ได้สัมผัสลมเย็นยามเช้า",
+   "en": "Somchai opened the window to feel the cool morning breeze.",
+   "ko": "솜차이는 시원한 아침 바람을 느끼려고 창문을 열었어요.",
+   "blank": "สัมผัส",
+   "src": "made"
+  },
+  {
+   "text": "ผู้กำกับห้ามทีมงานสัมผัสของประกอบฉากที่เป็นของเก่าจริง",
+   "en": "The director forbade the crew from touching props that are real antiques.",
+   "ko": "감독은 진짜 골동품인 소품을 스태프가 만지지 못하게 했어요.",
+   "blank": "สัมผัส",
+   "src": "made"
   }
  ],
  "w|สัมพันธ์": [
@@ -43541,6 +44149,22 @@
    "blank": "อนุมัติ"
   }
  ],
+ "w|อนุสาวรีย์": [
+  {
+   "text": "สมชายนัดเพื่อนเจอกันที่อนุสาวรีย์หน้าสถานีรถไฟ",
+   "en": "Somchai arranged to meet a friend at the monument in front of the train station.",
+   "ko": "솜차이는 기차역 앞 기념비에서 친구를 만나기로 했어요.",
+   "blank": "อนุสาวรีย์",
+   "src": "made"
+  },
+  {
+   "text": "ฉากเปิดเรื่องถ่ายที่อนุสาวรีย์กลางวงเวียนตอนตีห้า",
+   "en": "The opening scene was shot at the monument in the roundabout at five a.m.",
+   "ko": "첫 장면은 새벽 다섯 시에 로터리 한가운데 기념비에서 찍었어요.",
+   "blank": "อนุสาวรีย์",
+   "src": "made"
+  }
+ ],
  "w|อบ": [
   {
    "text": "อบเค้กไว้ในเตา",
@@ -43951,6 +44575,22 @@
    "en": "Go on a date at a cafe near home.",
    "ko": "집 근처 카페에서 데이트해.",
    "blank": "ออกเดท"
+  }
+ ],
+ "w|ออกเดินทาง": [
+  {
+   "text": "รถไฟออกเดินทางจากหัวลำโพงตอนสองทุ่มตรง",
+   "en": "The train set off from Hua Lamphong at exactly eight p.m.",
+   "ko": "기차는 저녁 여덟 시 정각에 후알람퐁에서 출발했어요.",
+   "blank": "ออกเดินทาง",
+   "src": "made"
+  },
+  {
+   "text": "กองถ่ายออกเดินทางไปกาญจนบุรีตั้งแต่ก่อนฟ้าสาง",
+   "en": "The film crew set off for Kanchanaburi before dawn.",
+   "ko": "촬영팀은 동트기 전에 깐짜나부리로 출발했어요.",
+   "blank": "ออกเดินทาง",
+   "src": "made"
   }
  ],
  "w|ออกแบบ": [
