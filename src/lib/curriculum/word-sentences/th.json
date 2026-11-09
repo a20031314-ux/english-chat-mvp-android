@@ -503,6 +503,22 @@
    "src": "made"
   }
  ],
+ "w|กระจอก": [
+  {
+   "text": "นักเรียนแซวว่าห้องแล็บของโรงเรียนกระจอกจนไม่มีกล้องจุลทรรศน์",
+   "en": "Students joke that the school lab is so shabby it doesn't even have a microscope.",
+   "ko": "학생들은 학교 실험실이 너무 허술해서 현미경도 없다고 놀려요.",
+   "blank": "กระจอก",
+   "src": "made"
+  },
+  {
+   "text": "ลูกมือบ่นว่าเตาในครัวเก่ากระจอกจนไฟไม่แรง",
+   "en": "The kitchen hand complained the old stove is so lousy the flame is weak.",
+   "ko": "보조 요리사는 주방 화덕이 낡고 형편없어서 불이 약하다고 투덜댔어요.",
+   "blank": "กระจอก",
+   "src": "made"
+  }
+ ],
  "w|กระจ่าง": [
   {
    "text": "หลังโทรถามตำรวจอีกรอบ เรื่องนี้ก็กระจ่างสำหรับกิตติ",
@@ -1033,6 +1049,22 @@
    "blank": "กระเพาะ"
   }
  ],
+ "w|กระสอบ": [
+  {
+   "text": "งานกีฬาสีปีนี้มีการแข่งวิ่งกระสอบ",
+   "en": "This year's sports day has a sack race.",
+   "ko": "올해 운동회에는 자루 달리기가 있어요.",
+   "blank": "กระสอบ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกมือแบกข้าวสารกระสอบใหญ่เข้าห้องเก็บของ",
+   "en": "The kitchen hand carried a big sack of rice into the storeroom.",
+   "ko": "보조 요리사가 큰 쌀 포대를 메고 창고로 들어갔어요.",
+   "blank": "กระสอบ",
+   "src": "made"
+  }
+ ],
  "w|กระสุน": [
   {
    "text": "พิพิธภัณฑ์เมืองชั้นสองจัดแสดงกระสุนปืนใหญ่จากสงครามครั้งก่อน",
@@ -1407,6 +1439,22 @@
    "src": "made"
   }
  ],
+ "w|กลั่น": [
+  {
+   "text": "สมชายสาธิตวิธีกลั่นน้ำทะเลให้เป็นน้ำจืดในคาบวิทยาศาสตร์",
+   "en": "Somchai demonstrated how to distill seawater into fresh water in science class.",
+   "ko": "솜차이는 과학 시간에 바닷물을 증류해 민물로 만드는 법을 보여 줬어요.",
+   "blank": "กลั่น",
+   "src": "made"
+  },
+  {
+   "text": "มาลีใช้น้ำกลั่นทำน้ำแข็งเพื่อให้ใสไม่ขุ่น",
+   "en": "Malee uses distilled water to make ice so it comes out clear, not cloudy.",
+   "ko": "말리는 얼음이 탁하지 않고 맑게 나오도록 증류수로 얼음을 만들어요.",
+   "blank": "กลั่น",
+   "src": "made"
+  }
+ ],
  "w|กลั้น": [
   {
    "text": "กิตติกลั้นหัวเราะไม่ไหวเมื่อเห็นรูปตัวเองสมัยมัธยม",
@@ -1741,6 +1789,22 @@
    "en": "I smell coffee from the shop next door.",
    "ko": "옆 가게에서 커피 냄새가 나.",
    "blank": "กลิ่น"
+  }
+ ],
+ "w|กลิ่นหอม": [
+  {
+   "text": "กลิ่นหอมของขนมจากโรงอาหารลอยมาถึงห้องเรียน",
+   "en": "The sweet smell of snacks from the cafeteria drifted into the classroom.",
+   "ko": "매점 간식의 달콤한 냄새가 교실까지 풍겨 왔어요.",
+   "blank": "กลิ่นหอม",
+   "src": "made"
+  },
+  {
+   "text": "กลิ่นหอมของกระเทียมเจียวลอยไปทั่วครัว",
+   "en": "The fragrance of fried garlic spread through the whole kitchen.",
+   "ko": "마늘 튀기는 고소한 냄새가 주방 전체에 퍼졌어요.",
+   "blank": "กลิ่นหอม",
+   "src": "made"
   }
  ],
  "w|กลีบ": [
@@ -2822,6 +2886,22 @@
    "en": "Wanna attended training on managing remote teams.",
    "ko": "완나는 재택근무 팀 관리에 관한 교육을 받았어요.",
    "blank": "การจัดการ",
+   "src": "made"
+  }
+ ],
+ "w|การจับกุม": [
+  {
+   "text": "นักเรียนวิเคราะห์ข่าวการจับกุมแก๊งขโมยรถในชั่วโมงภาษาไทย",
+   "en": "In Thai class, students analyzed a news report on the arrest of a car-theft gang.",
+   "ko": "학생들은 국어 시간에 자동차 절도단 검거 기사를 분석했어요.",
+   "blank": "การจับกุม",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานในครัวคุยกันเรื่องข่าวการจับกุมร้านที่ใช้เนื้อปลอม",
+   "en": "The kitchen staff were talking about the news of an arrest at a shop using fake meat.",
+   "ko": "주방 직원들은 가짜 고기를 쓴 가게 단속 뉴스에 대해 이야기했어요.",
+   "blank": "การจับกุม",
    "src": "made"
   }
  ],
@@ -4129,6 +4209,22 @@
    "src": "made"
   }
  ],
+ "w|กึ่งหนึ่ง": [
+  {
+   "text": "นักเรียนกึ่งหนึ่งในห้องยังไม่ได้ส่งรายงาน",
+   "en": "Half the students in the class haven't turned in their reports yet.",
+   "ko": "반 학생의 절반이 아직 보고서를 안 냈어요.",
+   "blank": "กึ่งหนึ่ง",
+   "src": "made"
+  },
+  {
+   "text": "มาลีลดน้ำตาลในสูตรเหลือกึ่งหนึ่ง",
+   "en": "Malee cut the sugar in the recipe by half.",
+   "ko": "말리는 레시피의 설탕을 절반으로 줄였어요.",
+   "blank": "กึ่งหนึ่ง",
+   "src": "made"
+  }
+ ],
  "w|กุ้ง": [
   {
    "text": "กุ้งตัวใหญ่จัง",
@@ -4473,6 +4569,22 @@
    "en": "I want to raise my grades this term.",
    "ko": "이번 학기에 성적을 올리고 싶어.",
    "blank": "เกรด"
+  }
+ ],
+ "w|เกราะ": [
+  {
+   "text": "เด็ก ๆ ทำชุดเกราะจากกล่องกระดาษสำหรับงานวันเด็ก",
+   "en": "The kids made suits of armor from cardboard boxes for Children's Day.",
+   "ko": "아이들은 어린이날 행사에 쓰려고 종이 상자로 갑옷을 만들었어요.",
+   "blank": "เกราะ",
+   "src": "made"
+  },
+  {
+   "text": "ผ้ากันเปื้อนหนา ๆ เป็นเหมือนเกราะกันน้ำมันกระเด็นของมาลี",
+   "en": "A thick apron is like Malee's armor against spattering oil.",
+   "ko": "두꺼운 앞치마는 튀는 기름을 막아 주는 말리의 갑옷 같아요.",
+   "blank": "เกราะ",
+   "src": "made"
   }
  ],
  "w|เกลียด": [
@@ -6358,6 +6470,22 @@
    "en": "Napa read the employment agreement carefully before signing.",
    "ko": "나파는 서명하기 전에 고용 계약 조항을 꼼꼼히 읽었어요.",
    "blank": "ข้อตกลง",
+   "src": "made"
+  }
+ ],
+ "w|ข้อโต้แย้ง": [
+  {
+   "text": "นักเรียนต้องเขียนข้อโต้แย้งอย่างมีเหตุผลก่อนขึ้นโต้วาที",
+   "en": "Students have to write reasoned arguments before they debate.",
+   "ko": "학생들은 토론에 나가기 전에 논리적인 반론을 써야 해요.",
+   "blank": "ข้อโต้แย้ง",
+   "src": "made"
+  },
+  {
+   "text": "มาลีฟังข้อโต้แย้งของลูกมือก่อนตัดสินใจเปลี่ยนสูตร",
+   "en": "Malee listens to her kitchen hands' objections before deciding to change a recipe.",
+   "ko": "말리는 레시피를 바꾸기 전에 보조 요리사들의 반론을 들어요.",
+   "blank": "ข้อโต้แย้ง",
    "src": "made"
   }
  ],
@@ -12999,6 +13127,22 @@
    "src": "made"
   }
  ],
+ "w|คาดหมาย": [
+  {
+   "text": "ผลเลือกตั้งประธานนักเรียนออกมาอย่างที่ทุกคนคาดหมาย",
+   "en": "The student council election turned out just as everyone expected.",
+   "ko": "학생회장 선거 결과는 모두가 예상한 대로 나왔어요.",
+   "blank": "คาดหมาย",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้ามามากกว่าที่มาลีคาดหมายไว้เกือบเท่าตัว",
+   "en": "Almost twice as many customers came as Malee had expected.",
+   "ko": "손님이 말리가 예상한 것보다 거의 두 배나 왔어요.",
+   "blank": "คาดหมาย",
+   "src": "made"
+  }
+ ],
  "w|คาดหวัง": [
   {
    "text": "ฉันคาดหวังผลลัพธ์ที่ดี",
@@ -16923,6 +17067,22 @@
    "blank": "จับกุม"
   }
  ],
+ "w|จับตา": [
+  {
+   "text": "ครูสมชายจับตาดูนักเรียนแถวหลังตลอดการสอบ",
+   "en": "Teacher Somchai kept a close eye on the back row throughout the exam.",
+   "ko": "솜차이 선생님은 시험 내내 뒷줄 학생들을 예의 주시했어요.",
+   "blank": "จับตา",
+   "src": "made"
+  },
+  {
+   "text": "มาลีจับตาหม้อซุปไม่ให้เดือดล้น",
+   "en": "Malee keeps an eye on the soup pot so it doesn't boil over.",
+   "ko": "말리는 수프 냄비가 끓어 넘치지 않게 지켜봐요.",
+   "blank": "จับตา",
+   "src": "made"
+  }
+ ],
  "w|จับมือ": [
   {
    "text": "จับมือกันไว้แน่น",
@@ -17127,6 +17287,22 @@
    "en": "He forgot to pay for the meal.",
    "ko": "그는 밥값을 내는 걸 잊었어.",
    "blank": "จ่ายเงิน"
+  }
+ ],
+ "w|จารีต": [
+  {
+   "text": "นักเรียนเรียนรู้จารีตการไหว้ครูที่สืบต่อกันมา",
+   "en": "Students learn the long-held custom of paying respect to teachers.",
+   "ko": "학생들은 대대로 이어져 온 스승 공경 의식을 배워요.",
+   "blank": "จารีต",
+   "src": "made"
+  },
+  {
+   "text": "ในครัวนี้มีจารีตว่าทุกคนต้องชิมอาหารก่อนส่งออกไป",
+   "en": "This kitchen has a custom that everyone tastes the food before it goes out.",
+   "ko": "이 주방에는 음식을 내보내기 전에 모두가 맛을 보는 관례가 있어요.",
+   "blank": "จารีต",
+   "src": "made"
   }
  ],
  "w|จารึก": [
@@ -18985,6 +19161,22 @@
    "src": "made"
   }
  ],
+ "w|เฉพาะหน้า": [
+  {
+   "text": "สมชายแก้ปัญหาเฉพาะหน้าเมื่อไฟดับกลางคาบ",
+   "en": "Somchai handled the immediate problem when the power went out mid-class.",
+   "ko": "수업 중에 정전이 되자 솜차이는 그 자리에서 문제를 해결했어요.",
+   "blank": "เฉพาะหน้า",
+   "src": "made"
+  },
+  {
+   "text": "เมื่อแก๊สหมดกลางคืน มาลีต้องแก้ปัญหาเฉพาะหน้าด้วยเตาถ่าน",
+   "en": "When the gas ran out at night, Malee had to improvise with a charcoal stove.",
+   "ko": "밤에 가스가 떨어지자 말리는 숯불 화로로 급한 불을 껐어요.",
+   "blank": "เฉพาะหน้า",
+   "src": "made"
+  }
+ ],
  "w|เฉย": [
   {
    "text": "ทำไมเธอเฉยไม่ตอบ",
@@ -19913,6 +20105,22 @@
    "en": "Come back in an hour.",
    "ko": "한 시간 있다가 와.",
    "blank": "ชั่วโมง"
+  }
+ ],
+ "w|ชั่วร้าย": [
+  {
+   "text": "ในละครโรงเรียน สมชายรับบทพ่อมดชั่วร้าย",
+   "en": "In the school play, Somchai played an evil wizard.",
+   "ko": "학교 연극에서 솜차이는 사악한 마법사 역을 맡았어요.",
+   "blank": "ชั่วร้าย",
+   "src": "made"
+  },
+  {
+   "text": "มาลีหัวเราะว่าการกินขนมตอนดึกเป็นนิสัยชั่วร้ายของคนทำครัว",
+   "en": "Malee laughs that late-night snacking is a cook's wicked habit.",
+   "ko": "말리는 밤늦게 간식 먹는 게 요리사들의 나쁜 버릇이라며 웃어요.",
+   "blank": "ชั่วร้าย",
+   "src": "made"
   }
  ],
  "w|ชา": [
@@ -23349,6 +23557,22 @@
    "src": "made"
   }
  ],
+ "w|ด้าม": [
+  {
+   "text": "ปากกาด้ามโปรดของสมชายหายไปจากโต๊ะครู",
+   "en": "Somchai's favorite pen disappeared from the teacher's desk.",
+   "ko": "솜차이가 아끼는 펜 한 자루가 교탁에서 사라졌어요.",
+   "blank": "ด้าม",
+   "src": "made"
+  },
+  {
+   "text": "มีดด้ามไม้ของมาลีเป็นของขวัญจากครูสอนทำอาหาร",
+   "en": "Malee's wooden-handled knife was a gift from her cooking teacher.",
+   "ko": "말리의 나무 손잡이 칼은 요리 선생님이 준 선물이에요.",
+   "blank": "ด้าม",
+   "src": "made"
+  }
+ ],
  "w|ดารา": [
   {
    "text": "ดาราคนโปรดขึ้นโฆษณาใหม่",
@@ -23852,6 +24076,22 @@
    "en": "Napha crossed the finish line with a smile like a champion's.",
    "ko": "나파는 우승자 같은 미소를 지으며 결승선에 들어왔어요.",
    "blank": "ดุจ",
+   "src": "made"
+  }
+ ],
+ "w|ดุลพินิจ": [
+  {
+   "text": "การให้คะแนนพิเศษขึ้นอยู่กับดุลพินิจของครู",
+   "en": "Giving bonus points is up to the teacher's discretion.",
+   "ko": "가산점을 주는 건 선생님 재량이에요.",
+   "blank": "ดุลพินิจ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีให้ลูกมือใช้ดุลพินิจเติมพริกตามที่ลูกค้าสั่ง",
+   "en": "Malee lets her kitchen hands use their judgment in adding chili as customers request.",
+   "ko": "말리는 손님 주문에 맞춰 고추를 넣는 건 보조 요리사 재량에 맡겨요.",
+   "blank": "ดุลพินิจ",
    "src": "made"
   }
  ],
@@ -25723,6 +25963,22 @@
    "en": "Wait a bit longer.",
    "ko": "조금만 더 기다려.",
    "blank": "ต่อ"
+  }
+ ],
+ "w|ตอกย้ำ": [
+  {
+   "text": "ผลสอบครั้งนี้ตอกย้ำว่าเด็ก ๆ ต้องฝึกอ่านมากขึ้น",
+   "en": "These test results reinforce that the kids need more reading practice.",
+   "ko": "이번 시험 결과는 아이들이 독서 연습을 더 해야 한다는 걸 다시 확인시켜 줬어요.",
+   "blank": "ตอกย้ำ",
+   "src": "made"
+  },
+  {
+   "text": "รีวิวดีจากนักชิมตอกย้ำว่าสูตรของมาลีมาถูกทาง",
+   "en": "A good review from a food critic confirms Malee's recipe is on the right track.",
+   "ko": "미식가의 호평은 말리의 레시피가 옳은 방향이라는 걸 다시 확인시켜 줬어요.",
+   "blank": "ตอกย้ำ",
+   "src": "made"
   }
  ],
  "w|ต่อกัน": [
@@ -28691,6 +28947,22 @@
    "en": "The kidneys aren't working properly.",
    "ko": "신장이 제대로 기능하지 않아.",
    "blank": "ไต"
+  }
+ ],
+ "w|ไต่": [
+  {
+   "text": "เด็ก ๆ ไต่เชือกในชั่วโมงพละ",
+   "en": "The kids climb ropes in PE class.",
+   "ko": "아이들은 체육 시간에 밧줄을 타고 올라가요.",
+   "blank": "ไต่",
+   "src": "made"
+  },
+  {
+   "text": "มดไต่ขึ้นไปบนโถน้ำตาล มาลีจึงย้ายโถไปไว้ในตู้",
+   "en": "Ants climbed up the sugar jar, so Malee moved it into the cupboard.",
+   "ko": "개미가 설탕 통 위로 기어 올라가서 말리는 통을 찬장으로 옮겼어요.",
+   "blank": "ไต่",
+   "src": "made"
   }
  ],
  "w|ไตรมาส": [
@@ -32407,6 +32679,22 @@
    "src": "made"
   }
  ],
+ "w|ที่สาม": [
+  {
+   "text": "ห้องของสมชายได้รางวัลที่สามในการประกวดร้องเพลง",
+   "en": "Somchai's class won third prize in the singing contest.",
+   "ko": "솜차이네 반은 노래 대회에서 삼 등을 했어요.",
+   "blank": "ที่สาม",
+   "src": "made"
+  },
+  {
+   "text": "มาลีชิมซอสเป็นครั้งที่สามก่อนจะพอใจ",
+   "en": "Malee tasted the sauce a third time before she was satisfied.",
+   "ko": "말리는 소스를 세 번째 맛보고 나서야 만족했어요.",
+   "blank": "ที่สาม",
+   "src": "made"
+  }
+ ],
  "w|ที่สุด": [
   {
    "text": "อร่อยที่สุดเลย",
@@ -32433,6 +32721,22 @@
    "en": "This one is the best.",
    "ko": "이게 제일이야.",
    "blank": "ที่หนึ่ง"
+  }
+ ],
+ "w|ที่หลบภัย": [
+  {
+   "text": "โรงเรียนซ้อมพาเด็กไปที่หลบภัยเมื่อมีสัญญาณเตือน",
+   "en": "The school practices taking the kids to the shelter when the alarm sounds.",
+   "ko": "학교는 경보가 울리면 아이들을 대피소로 데려가는 훈련을 해요.",
+   "blank": "ที่หลบภัย",
+   "src": "made"
+  },
+  {
+   "text": "สำหรับลูกมือหลายคน ห้องเก็บของเย็น ๆ คือที่หลบภัยจากความร้อนในครัว",
+   "en": "For many kitchen hands, the cool storeroom is a refuge from the kitchen heat.",
+   "ko": "많은 보조 요리사에게 시원한 창고는 주방 열기를 피하는 피난처예요.",
+   "blank": "ที่หลบภัย",
+   "src": "made"
   }
  ],
  "w|ทีหลัง": [
@@ -35283,6 +35587,22 @@
    "src": "made"
   }
  ],
+ "w|นาฏศิลป์": [
+  {
+   "text": "ครูนาฏศิลป์ซ้อมรำให้นักเรียนหญิงทุกเย็น",
+   "en": "The Thai dance teacher rehearses dances with the girls every evening.",
+   "ko": "태국 무용 선생님은 매일 저녁 여학생들과 춤 연습을 해요.",
+   "blank": "นาฏศิลป์",
+   "src": "made"
+  },
+  {
+   "text": "ลูกสาวของมาลีเรียนนาฏศิลป์และมารำโชว์ในงานครบรอบร้าน",
+   "en": "Malee's daughter studies Thai dance and performed at the restaurant's anniversary.",
+   "ko": "말리의 딸은 태국 무용을 배우는데 가게 기념일에 와서 춤을 선보였어요.",
+   "blank": "นาฏศิลป์",
+   "src": "made"
+  }
+ ],
  "w|น่าตื่นเต้น": [
   {
    "text": "ทริปนี้น่าตื่นเต้นมาก",
@@ -37500,6 +37820,22 @@
    "en": "Online news is fast; on the other hand, newspaper stories go deeper.",
    "ko": "온라인 뉴스는 빠르지만 반대로 신문 기사는 더 깊이가 있어요.",
    "blank": "ในทางกลับกัน",
+   "src": "made"
+  }
+ ],
+ "w|ในทางตรงกันข้าม": [
+  {
+   "text": "ห้องเอเรียนเลขเก่ง ในทางตรงกันข้าม ห้องบีเก่งภาษามากกว่า",
+   "en": "Class A is good at math; class B, on the other hand, is better at languages.",
+   "ko": "에이 반은 수학을 잘하고, 반대로 비 반은 언어를 더 잘해요.",
+   "blank": "ในทางตรงกันข้าม",
+   "src": "made"
+  },
+  {
+   "text": "ครัวร้อนอบอ้าวตลอดวัน ในทางตรงกันข้าม ห้องเย็นหลังร้านหนาวจนต้องใส่เสื้อแขนยาว",
+   "en": "The kitchen is stifling all day; the walk-in fridge, on the other hand, is so cold you need long sleeves.",
+   "ko": "주방은 하루 종일 찌는 듯 덥지만 반대로 가게 뒤 냉장실은 긴소매를 입어야 할 만큼 추워요.",
+   "blank": "ในทางตรงกันข้าม",
    "src": "made"
   }
  ],
@@ -40563,6 +40899,22 @@
    "blank": "ปรบมือ"
   }
  ],
+ "w|ปรอท": [
+  {
+   "text": "เทอร์โมมิเตอร์ปรอทในห้องแล็บแตก ครูจึงรีบให้เด็กออกจากห้อง",
+   "en": "A mercury thermometer broke in the lab, so the teacher quickly got the kids out.",
+   "ko": "실험실에서 수은 온도계가 깨져서 선생님이 서둘러 아이들을 내보냈어요.",
+   "blank": "ปรอท",
+   "src": "made"
+  },
+  {
+   "text": "มาลีวัดอุณหภูมิน้ำมันด้วยเทอร์โมมิเตอร์แบบปรอท",
+   "en": "Malee measures the oil temperature with a mercury thermometer.",
+   "ko": "말리는 수은 온도계로 기름 온도를 재요.",
+   "blank": "ปรอท",
+   "src": "made"
+  }
+ ],
  "w|ประกวด": [
   {
    "text": "ก่อนเป็นทนาย อนันต์เคยประกวดโต้วาทีระดับมหาวิทยาลัยหลายครั้ง",
@@ -43607,6 +43959,22 @@
    "blank": "เป็นไปได้"
   }
  ],
+ "w|เป็นไปตาม": [
+  {
+   "text": "การสอบปลายภาคเป็นไปตามตารางที่โรงเรียนประกาศ",
+   "en": "The final exams went according to the schedule the school announced.",
+   "ko": "기말고사는 학교가 발표한 일정대로 진행됐어요.",
+   "blank": "เป็นไปตาม",
+   "src": "made"
+  },
+  {
+   "text": "งานเลี้ยงคืนนี้ทุกอย่างเป็นไปตามแผนของมาลี",
+   "en": "Everything at tonight's banquet went according to Malee's plan.",
+   "ko": "오늘 밤 연회는 모든 게 말리의 계획대로 됐어요.",
+   "blank": "เป็นไปตาม",
+   "src": "made"
+  }
+ ],
  "w|เป็นไปไม่ได้": [
   {
    "text": "เรื่องนั้นเป็นไปไม่ได้เลย",
@@ -45042,6 +45410,22 @@
    "en": "Wanna used to be a teacher before turning to stage acting.",
    "ko": "완나는 교사였다가 연극배우로 진로를 바꿨어요.",
    "blank": "ผัน",
+   "src": "made"
+  }
+ ],
+ "w|ผันผวน": [
+  {
+   "text": "สมชายสอนเรื่องราคาข้าวที่ผันผวนในวิชาเศรษฐศาสตร์",
+   "en": "Somchai teaches about fluctuating rice prices in economics class.",
+   "ko": "솜차이는 경제 시간에 오르내리는 쌀값에 대해 가르쳐요.",
+   "blank": "ผันผวน",
+   "src": "made"
+  },
+  {
+   "text": "ราคาผักผันผวนทุกสัปดาห์ มาลีจึงต้องปรับเมนู",
+   "en": "Vegetable prices fluctuate every week, so Malee has to adjust the menu.",
+   "ko": "채소 가격이 매주 오르내려서 말리는 메뉴를 바꿔야 해요.",
+   "blank": "ผันผวน",
    "src": "made"
   }
  ],
@@ -49985,6 +50369,22 @@
    "src": "made"
   }
  ],
+ "w|เพียงแต่ว่า": [
+  {
+   "text": "สมชายไม่ได้โกรธ เพียงแต่ว่าอยากให้นักเรียนส่งการบ้านตรงเวลา",
+   "en": "Somchai isn't angry; it's just that he wants students to hand in homework on time.",
+   "ko": "솜차이는 화난 게 아니라 그저 학생들이 숙제를 제때 냈으면 하는 거예요.",
+   "blank": "เพียงแต่ว่า",
+   "src": "made"
+  },
+  {
+   "text": "แกงนี้อร่อยแล้ว เพียงแต่ว่ายังเค็มไปนิด",
+   "en": "This curry is already tasty; it's just that it's still a little too salty.",
+   "ko": "이 커리는 맛있긴 한데 아직 조금 짜요.",
+   "blank": "เพียงแต่ว่า",
+   "src": "made"
+  }
+ ],
  "w|เพียงพอ": [
   {
    "text": "เงินเดือนนี้เพียงพอแล้ว",
@@ -52073,6 +52473,22 @@
    "src": "made"
   }
  ],
+ "w|มหกรรม": [
+  {
+   "text": "โรงเรียนจัดมหกรรมวิชาการทุกปลายปี",
+   "en": "The school holds an academic fair at the end of every year.",
+   "ko": "학교는 해마다 연말에 학술 축제를 열어요.",
+   "blank": "มหกรรม",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของมาลีไปออกบูธในมหกรรมอาหารประจำปี",
+   "en": "Malee's restaurant set up a booth at the annual food festival.",
+   "ko": "말리의 가게는 연례 음식 박람회에 부스를 냈어요.",
+   "blank": "มหกรรม",
+   "src": "made"
+  }
+ ],
  "w|มหรสพ": [
   {
    "text": "เทศบาลจัดงานมหรสพกลางแจ้งในวันสงกรานต์",
@@ -53925,6 +54341,22 @@
    "blank": "เมือง"
   }
  ],
+ "w|เมืองขึ้น": [
+  {
+   "text": "ในคาบประวัติศาสตร์ สมชายอธิบายว่าประเทศเพื่อนบ้านบางประเทศเคยเป็นเมืองขึ้น",
+   "en": "In history class, Somchai explained that some neighboring countries were once colonies.",
+   "ko": "역사 시간에 솜차이는 이웃 나라 몇 곳이 한때 식민지였다고 설명했어요.",
+   "blank": "เมืองขึ้น",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเล่าว่าอาหารบางจานได้อิทธิพลจากยุคที่ประเทศแถบนี้เป็นเมืองขึ้น",
+   "en": "Malee explains that some dishes were influenced by the era when countries in this region were colonies.",
+   "ko": "말리는 어떤 음식은 이 지역 나라들이 식민지였던 시절의 영향을 받았다고 설명해요.",
+   "blank": "เมืองขึ้น",
+   "src": "made"
+  }
+ ],
  "w|เมืองหลวง": [
   {
    "text": "โรงแรมเก่าแห่งนี้เป็นโรงแรมแรกๆ ของเมืองหลวง",
@@ -55195,6 +55627,22 @@
    "en": "Regardless, try one more time.",
    "ko": "어쨌든 한 번 더 해 봐.",
    "blank": "ยังไงก็ตาม"
+  }
+ ],
+ "w|ยังชีพ": [
+  {
+   "text": "สมชายสอนว่าคนสมัยก่อนทำนาเพื่อยังชีพ ไม่ใช่เพื่อขาย",
+   "en": "Somchai teaches that people long ago farmed rice to survive, not to sell.",
+   "ko": "솜차이는 옛날 사람들이 팔려고가 아니라 먹고살려고 농사를 지었다고 가르쳐요.",
+   "blank": "ยังชีพ",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนเป็นเชฟ มาลีรับจ้างล้างจานเพื่อยังชีพ",
+   "en": "Before becoming a chef, Malee washed dishes to make a living.",
+   "ko": "셰프가 되기 전에 말리는 먹고살려고 설거지 일을 했어요.",
+   "blank": "ยังชีพ",
+   "src": "made"
   }
  ],
  "w|ยั่งยืน": [
@@ -57767,6 +58215,22 @@
    "src": "made"
   }
  ],
+ "w|ระลอก": [
+  {
+   "text": "นักเรียนโยนหินลงสระแล้วดูระลอกน้ำในวิชาฟิสิกส์",
+   "en": "In physics, students threw stones into the pond and watched the ripples.",
+   "ko": "물리 시간에 학생들은 연못에 돌을 던지고 물결을 관찰했어요.",
+   "blank": "ระลอก",
+   "src": "made"
+  },
+  {
+   "text": "ออร์เดอร์เข้ามาเป็นระลอกตั้งแต่หกโมงเย็น",
+   "en": "Orders came in waves from six in the evening.",
+   "ko": "저녁 여섯 시부터 주문이 몇 차례 몰려 들어왔어요.",
+   "blank": "ระลอก",
+   "src": "made"
+  }
+ ],
  "w|ระลึก": [
   {
    "text": "ชัยระลึกถึงคุณตาที่จากไปก่อนจะได้เห็นงานแต่งของหลาน",
@@ -58223,6 +58687,22 @@
    "en": "Take this medicine after meals.",
    "ko": "이 약은 식후에 드세요.",
    "blank": "รับประทาน"
+  }
+ ],
+ "w|รับปาก": [
+  {
+   "text": "สมชายรับปากผู้ปกครองว่าจะช่วยติวลูกให้",
+   "en": "Somchai promised the parents he would help tutor their child.",
+   "ko": "솜차이는 학부모에게 아이 공부를 봐 주겠다고 약속했어요.",
+   "blank": "รับปาก",
+   "src": "made"
+  },
+  {
+   "text": "มาลีรับปากลูกค้าว่าจะทำเค้กวันเกิดให้ทันพรุ่งนี้",
+   "en": "Malee promised the customer she'd have the birthday cake ready by tomorrow.",
+   "ko": "말리는 손님에게 생일 케이크를 내일까지 만들어 주겠다고 약속했어요.",
+   "blank": "รับปาก",
+   "src": "made"
   }
  ],
  "w|รับผิด": [
@@ -59639,6 +60119,22 @@
    "src": "made"
   }
  ],
+ "w|เรดาร์": [
+  {
+   "text": "สมชายพานักเรียนไปดูจานเรดาร์ที่สถานีตรวจอากาศ",
+   "en": "Somchai took students to see the radar dish at the weather station.",
+   "ko": "솜차이는 학생들을 데리고 기상 관측소의 레이더 안테나를 보러 갔어요.",
+   "blank": "เรดาร์",
+   "src": "made"
+  },
+  {
+   "text": "ไม่มีอะไรรอดพ้นเรดาร์ของมาลีในครัว แม้แต่ช้อนที่ล้างไม่สะอาด",
+   "en": "Nothing in the kitchen escapes Malee's radar, not even a poorly washed spoon.",
+   "ko": "주방에서는 덜 씻은 숟가락 하나도 말리의 레이더를 피하지 못해요.",
+   "blank": "เรดาร์",
+   "src": "made"
+  }
+ ],
  "w|เร็ว": [
   {
    "text": "เร็วเข้า",
@@ -60010,6 +60506,22 @@
    "en": "Two passengers argued about nonsense all night.",
    "ko": "승객 두 명이 밤새 쓸데없는 일로 말다툼했어요.",
    "blank": "เรื่องไร้สาระ",
+   "src": "made"
+  }
+ ],
+ "w|เรื่องเล็ก": [
+  {
+   "text": "สมชายบอกนักเรียนว่าการทำผิดครั้งเดียวเป็นเรื่องเล็ก",
+   "en": "Somchai told the students that making one mistake is no big deal.",
+   "ko": "솜차이는 학생들에게 한 번 실수하는 건 별일 아니라고 했어요.",
+   "blank": "เรื่องเล็ก",
+   "src": "made"
+  },
+  {
+   "text": "มาลีบอกว่าจานแตกใบเดียวเป็นเรื่องเล็ก อย่าตกใจ",
+   "en": "Malee said one broken plate is no big deal, so don't panic.",
+   "ko": "말리는 접시 하나 깨진 건 별일 아니니 놀라지 말라고 했어요.",
+   "blank": "เรื่องเล็ก",
    "src": "made"
   }
  ],
@@ -65263,6 +65775,22 @@
    "src": "made"
   }
  ],
+ "w|วิสัยทัศน์": [
+  {
+   "text": "ผู้อำนวยการเล่าวิสัยทัศน์ของโรงเรียนในวันประชุมครู",
+   "en": "The principal shared the school's vision at the teachers' meeting.",
+   "ko": "교장 선생님은 교사 회의 날에 학교의 비전을 밝혔어요.",
+   "blank": "วิสัยทัศน์",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าของร้านชมว่ามาลีมีวิสัยทัศน์เรื่องเมนูสุขภาพ",
+   "en": "The owner praised Malee for her vision for healthy menus.",
+   "ko": "가게 주인은 말리가 건강 메뉴에 대한 안목이 있다고 칭찬했어요.",
+   "blank": "วิสัยทัศน์",
+   "src": "made"
+  }
+ ],
  "w|วิหาร": [
   {
    "text": "ชัยกับเจ้าสาวไปไหว้พระในวิหารก่อนวันแต่งงาน",
@@ -69213,6 +69741,22 @@
    "src": "made"
   }
  ],
+ "w|สังคมวิทยา": [
+  {
+   "text": "สมชายจบปริญญาโทด้านสังคมวิทยาก่อนมาเป็นครู",
+   "en": "Somchai earned a master's in sociology before becoming a teacher.",
+   "ko": "솜차이는 교사가 되기 전에 사회학 석사를 마쳤어요.",
+   "blank": "สังคมวิทยา",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเคยเรียนสังคมวิทยาก่อนจะหันมาทำอาหาร",
+   "en": "Malee studied sociology before turning to cooking.",
+   "ko": "말리는 요리로 방향을 바꾸기 전에 사회학을 공부했어요.",
+   "blank": "สังคมวิทยา",
+   "src": "made"
+  }
+ ],
  "w|สังคมศาสตร์": [
   {
    "text": "สมชายอยากเรียนต่อคณะสังคมศาสตร์",
@@ -69288,6 +69832,38 @@
    "en": "In the final scene, the villain is killed in the middle of the stage.",
    "ko": "마지막 장면에서 악당은 무대 한가운데에서 살해당해요.",
    "blank": "สังหาร",
+   "src": "made"
+  }
+ ],
+ "w|สัจจะ": [
+  {
+   "text": "สมชายสอนให้นักเรียนรักษาสัจจะที่ให้ไว้กับเพื่อน",
+   "en": "Somchai teaches students to keep the promises they make to friends.",
+   "ko": "솜차이는 학생들에게 친구와 한 약속을 지키라고 가르쳐요.",
+   "blank": "สัจจะ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีรักษาสัจจะกับคนส่งผัก ไม่เคยจ่ายเงินช้า",
+   "en": "Malee keeps her word with the vegetable supplier and has never paid late.",
+   "ko": "말리는 채소 납품업자와의 약속을 지켜서 돈을 늦게 준 적이 없어요.",
+   "blank": "สัจจะ",
+   "src": "made"
+  }
+ ],
+ "w|สัจธรรม": [
+  {
+   "text": "สมชายสอนว่าการเปลี่ยนแปลงเป็นสัจธรรมของชีวิต",
+   "en": "Somchai teaches that change is a universal truth of life.",
+   "ko": "솜차이는 변화가 삶의 진리라고 가르쳐요.",
+   "blank": "สัจธรรม",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเชื่อในสัจธรรมที่ว่าอาหารดีเริ่มจากวัตถุดิบดี",
+   "en": "Malee believes in the truth that good food starts with good ingredients.",
+   "ko": "말리는 좋은 음식은 좋은 재료에서 시작된다는 진리를 믿어요.",
+   "blank": "สัจธรรม",
    "src": "made"
   }
  ],
@@ -71561,6 +72137,22 @@
    "en": "Care for your hair with mild shampoo.",
    "ko": "순한 샴푸로 모발을 관리해.",
    "blank": "เส้นผม"
+  }
+ ],
+ "w|เส้นใย": [
+  {
+   "text": "นักเรียนทำโครงงานเปรียบเทียบเส้นใยจากกล้วยกับสับปะรด",
+   "en": "Students did a project comparing fibers from banana and pineapple plants.",
+   "ko": "학생들은 바나나와 파인애플 섬유를 비교하는 과제를 했어요.",
+   "blank": "เส้นใย",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเลือกผักที่มีเส้นใยสูงมาทำสลัด",
+   "en": "Malee picks high-fiber vegetables for the salad.",
+   "ko": "말리는 섬유질이 많은 채소를 골라 샐러드를 만들어요.",
+   "blank": "เส้นใย",
+   "src": "made"
   }
  ],
  "w|เสน่ห์": [
@@ -73926,6 +74518,22 @@
    "en": "Somsak refused to write the rumor that the celebrity couple will divorce.",
    "ko": "솜삭은 그 연예인 부부가 이혼한다는 소문을 기사로 쓰지 않겠다고 했어요.",
    "blank": "หย่า",
+   "src": "made"
+  }
+ ],
+ "w|หยาด": [
+  {
+   "text": "หยาดเหงื่อของนักกีฬาโรงเรียนไหลไม่หยุดหลังวิ่งรอบสนาม",
+   "en": "Beads of sweat kept running down the school athletes after their laps.",
+   "ko": "운동장을 돈 뒤 학교 선수들의 땀방울이 멈추지 않고 흘렀어요.",
+   "blank": "หยาด",
+   "src": "made"
+  },
+  {
+   "text": "หยาดเหงื่อไหลจากหน้าผากมาลีขณะยืนหน้าเตา",
+   "en": "Beads of sweat ran down Malee's forehead as she stood at the stove.",
+   "ko": "화덕 앞에 서 있는 말리의 이마에서 땀방울이 흘러내렸어요.",
+   "blank": "หยาด",
    "src": "made"
   }
  ],
@@ -76673,6 +77281,22 @@
    "blank": "เหม็น"
   }
  ],
+ "w|เหม่อ": [
+  {
+   "text": "เด็กชายนั่งเหม่อมองนอกหน้าต่างจนไม่ได้ยินครูเรียก",
+   "en": "The boy sat staring blankly out the window and didn't hear the teacher call him.",
+   "ko": "남자아이는 멍하니 창밖을 보다가 선생님이 부르는 소리도 못 들었어요.",
+   "blank": "เหม่อ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกมือคนใหม่ยืนเหม่อจนข้าวไหม้ก้นหม้อ",
+   "en": "The new kitchen hand stood daydreaming until the rice burned on the bottom of the pot.",
+   "ko": "새 보조 요리사가 멍하니 서 있다가 냄비 바닥 밥을 태웠어요.",
+   "blank": "เหม่อ",
+   "src": "made"
+  }
+ ],
  "w|เหมา": [
   {
    "text": "ตอนตลาดใกล้วาย กิตติเหมาหนังสือการ์ตูนเก่าทั้งลังไปในราคาเดียว",
@@ -77618,6 +78242,22 @@
    "en": "The chef taught Fon that the elements of a good curry are fresh curry paste and coconut milk.",
    "ko": "셰프는 폰에게 좋은 카레의 요소는 신선한 커리 페이스트와 코코넛 밀크라고 가르쳤어요.",
    "blank": "องค์ประกอบ",
+   "src": "made"
+  }
+ ],
+ "w|องครักษ์": [
+  {
+   "text": "เด็กชายตัวสูงที่สุดได้เล่นเป็นองครักษ์ในละครของโรงเรียน",
+   "en": "The tallest boy got to play the royal bodyguard in the school play.",
+   "ko": "키가 가장 큰 남자아이가 학교 연극에서 호위 무사 역을 맡았어요.",
+   "blank": "องครักษ์",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ช่วยตัวใหญ่ยืนเฝ้าประตูครัวเหมือนองครักษ์ของมาลี",
+   "en": "The big assistant stands guard at the kitchen door like Malee's bodyguard.",
+   "ko": "덩치 큰 보조가 말리의 호위 무사처럼 주방 문을 지키고 서 있어요.",
+   "blank": "องครักษ์",
    "src": "made"
   }
  ],
