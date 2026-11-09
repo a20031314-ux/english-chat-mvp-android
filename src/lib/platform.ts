@@ -42,15 +42,6 @@ export function socialFeaturesEnabled(): boolean {
 }
 
 /**
- * AI 음성 통화. iOS 1차 심사(2026-10-25 사용자 결정): 아이폰에서 통화를 열면 마이크가 열리는 순간 폰 소리 전체가
- * 막히는 일이 기기에서만 나서(재현 못 함, hub/work/drafts/ios-launch.md) 고칠 때까지 통화 탭·📞·"말로"를 숨긴다.
- */
-export function voiceCallAvailable(): boolean {
-  // 진단 빌드(TestFlight diag)에서는 켠다 — 아이폰 통화를 고치며 확인하는 빌드.
-  return !isIosApp() || turnDiagnosticsEnabled();
-}
-
-/**
  * 영상 플레이어를 잠깐 음소거해도 되는지(문장 다시 듣기의 앞부분을 소리 없이 넘길 때).
  * iOS 웹뷰는 사용자가 누르지 않은 때(타이머)에 보낸 unMute를 무시해서, 문장을 한 번 눌러 들은 뒤부터
  * 영상이 끝까지 소리 없이 재생됐다(2026-10-25 사용자: "특정 부분부터 화면은 나오는데 소리가 안 나"). iOS는 음소거하지 않는다.

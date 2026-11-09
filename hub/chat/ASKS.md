@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (7)
+## 탭이 확인할 것 (11)
 
 ### 탭 1 메인
 
@@ -19,6 +19,17 @@
 - **a261109-2-5** (2026-11-09 17:23, 탭 2 · f1be0fa) 같이 배우기 칩(StudyChips)을 채팅 표현 보기 아래·통화 정리 줄에 붙임, 표현 보기 열면 장부 chat miss
   - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · My에서 찾기
   - 볼 곳: `components/FindInMy.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261109-6-1** (2026-11-09 17:34, 탭 6 · f8e65b7) iOS에서도 AI 통화·포인트를 켬(platform.ts voiceCallAvailable 지움) — 통화 탭·📞·다음 걸음 통화·결제 화면 통화 시간 줄·포인트 가게가 iOS에 나옴. 웹·안드로이드는 원래 켜져 있어 그대로
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · Logbank · 오늘 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/AppHome.tsx` · `components/BillingScreen.tsx` · `components/NextStepCard.tsx` · `components/AiConsentGate.tsx` · `components/EnglishAnalysisProvider.tsx` · `components/NativeAdSlot.tsx` · `components/ShellUpdate.tsx` · `components/account/AccountCard.tsx` · `app/learning/LearningClient.tsx` · `components/GuideSheet.tsx` … 14개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+
+### 탭 2 My
+
+- **a261109-6-2** (2026-11-09 17:34, 탭 6 · f8e65b7) iOS에서도 AI 통화·포인트를 켬(platform.ts voiceCallAvailable 지움) — 통화 탭·📞·다음 걸음 통화·결제 화면 통화 시간 줄·포인트 가게가 iOS에 나옴. 웹·안드로이드는 원래 켜져 있어 그대로
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · Logbank · 오늘 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/studyMap/BankHelp.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/Quizbank.tsx` · `components/studyMap/ScriptPractice.tsx` · `components/studyMap/BankFlip.tsx` … 5개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
@@ -39,12 +50,20 @@
   - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · My에서 찾기
   - 볼 곳: `components/ChatWindow.tsx` · `components/ExpressionPeek.tsx` · `components/roleplay/CallRecap.tsx` · `components/RoleplayPast.tsx` · `components/RoleplayScreen.tsx` · `components/CallHost.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `components/roleplay/CallReplay.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261109-6-3** (2026-11-09 17:34, 탭 6 · f8e65b7) iOS에서도 AI 통화·포인트를 켬(platform.ts voiceCallAvailable 지움) — 통화 탭·📞·다음 걸음 통화·결제 화면 통화 시간 줄·포인트 가게가 iOS에 나옴. 웹·안드로이드는 원래 켜져 있어 그대로
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · Logbank · 오늘 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/ChatWindow.tsx` · `components/videoLearning/VideoLearningTab.tsx` · `components/RoleplayScreen.tsx` · `components/videoLearning/VideoPlayer.tsx` · `components/videoLearning/relayPlayer.ts` · `components/roleplay/CallParts.tsx` · `components/videoLearning/CatalogLibrary.tsx` · `components/roleplay/CallReplay.tsx` · `components/roleplay/callHooks.ts` · `components/roleplay/TurnDiagBox.tsx` … 4개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
 
 - **a261109-3** (2026-11-09 14:35, 탭 2 · 1b63757) 실력 확인: firstCheck.ts startClimb에 시작 단계 인자(선택)를 더함 — studyPicture가 읽는 readFirstCheck·firstCheck.v1은 그대로. 통화 감독이 첫 측정 값만 보는데, 이제 실력 확인(skillCheck.v1)이 더 새 값을 가지니 그걸 쓸지 확인
   - 기능: 처음 언어·튜터 고르기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 사람 · Room · 첫 측정 · 실력 확인 · Logbank · 오늘 카드 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 문장분석 · My에서 찾기
   - 볼 곳: `components/AiTutorProfile.tsx` · `components/rooms/RoomView.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/RoomsScreen.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261109-6-4** (2026-11-09 17:34, 탭 6 · f8e65b7) iOS에서도 AI 통화·포인트를 켬(platform.ts voiceCallAvailable 지움) — 통화 탭·📞·다음 걸음 통화·결제 화면 통화 시간 줄·포인트 가게가 iOS에 나옴. 웹·안드로이드는 원래 켜져 있어 그대로
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · Logbank · 오늘 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/rooms/IconPacks.tsx` · `components/rooms/BoardView.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/RoomPeople.tsx` · `components/rooms/RoomsScreen.tsx` · `components/invite/InviteWelcome.tsx` · `components/rooms/RandomScreen.tsx` · `components/rooms/RoomCall.tsx` · `components/rooms/RoomDm.tsx` … 10개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (8, 14일 뒤 저절로 빠짐 — 경위는 git 기록)

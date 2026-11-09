@@ -43,7 +43,7 @@ import { useInbox } from "@/components/rooms/RoomDm";
 import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
-import { isIosApp, socialFeaturesEnabled, voiceCallAvailable } from "@/lib/platform";
+import { isIosApp, socialFeaturesEnabled } from "@/lib/platform";
 import { onMorningTap } from "@/lib/morningNotify";
 import { bottomTabs, featureOfTab, isFeatureOn, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
@@ -125,8 +125,7 @@ function AppHomeInner({
   const { targetLanguage } = useLearningLanguage();
   // Hidden rather than shown empty: only English has scenarios written, so a
   // learner of anything else would get a tab with nothing behind it.
-  const callBuilt = useSyncExternalStore(noSubscribe, voiceCallAvailable, () => true);
-  const roleplayAvailable = callBuilt && hasRoleplay(targetLanguage);
+  const roleplayAvailable = hasRoleplay(targetLanguage);
   // 쓸 기능 고르기(lib/features.ts): 숨긴 기능은 탭·버튼에서 빠진다. 창구 모드는 창구 탭 그대로(고르기 없음).
   const door = useSyncExternalStore(noSubscribe, readEntryDoor, () => null);
   const features = useSyncExternalStore(subscribeFeatures, readFeatures, readFeaturesOnServer);
