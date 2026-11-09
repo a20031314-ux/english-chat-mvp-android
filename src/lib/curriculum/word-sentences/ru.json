@@ -1107,6 +1107,22 @@
    "src": "made"
   }
  ],
+ "w|апельсиновый": [
+  {
+   "text": "Павел взял стакан свежего апельсинового сока.",
+   "en": "Pavel got a glass of fresh orange juice.",
+   "ko": "파벨은 갓 짠 오렌지 주스 한 잔을 샀어요.",
+   "blank": "апельсинового",
+   "src": "made"
+  },
+  {
+   "text": "Дети любят у Елены апельсиновые витамины в форме зверей.",
+   "en": "Children love the orange-flavoured animal-shaped vitamins at Elena's.",
+   "ko": "아이들은 옐레나네 동물 모양 오렌지 맛 비타민을 좋아해요.",
+   "blank": "апельсиновые",
+   "src": "made"
+  }
+ ],
  "w|аплодисменты": [
   {
    "text": "После выступления Ивана зал взорвался аплодисментами.",
@@ -1216,6 +1232,22 @@
    "en": "Anna told her that an elderly Arab man at the market taught her how to choose dates.",
    "ko": "안나는 시장의 나이 든 아랍 사람에게서 대추야자 고르는 법을 배웠다고 했어요.",
    "blank": "араб",
+   "src": "made"
+  }
+ ],
+ "w|арахисовый": [
+  {
+   "text": "На рынке Павел нашёл домашнюю арахисовую пасту без сахара.",
+   "en": "At the market Pavel found homemade peanut butter without sugar.",
+   "ko": "파벨은 시장에서 설탕 없는 수제 땅콩버터를 찾았어요.",
+   "blank": "арахисовую",
+   "src": "made"
+  },
+  {
+   "text": "Елена спросила покупателя, нет ли у него аллергии на арахисовое масло.",
+   "en": "Elena asked the customer whether he was allergic to peanut butter.",
+   "ko": "옐레나는 손님에게 땅콩버터 알레르기가 있는지 물었어요.",
+   "blank": "арахисовое",
    "src": "made"
   }
  ],
@@ -2236,6 +2268,22 @@
    "en": "Svetlana built a real tower out of profiteroles.",
    "ko": "스베틀라나는 프로피테롤로 진짜 탑을 쌓았어요.",
    "blank": "башню",
+   "src": "made"
+  }
+ ],
+ "w|бдительность": [
+  {
+   "text": "Судья похвалил Алексея за бдительность при проверке подписей.",
+   "en": "The judge praised Alexei for his vigilance in checking the signatures.",
+   "ko": "판사는 서명을 확인할 때 꼼꼼했던 알렉세이를 칭찬했어요.",
+   "blank": "бдительность",
+   "src": "made"
+  },
+  {
+   "text": "Наталья не теряла бдительности и следила, чтобы дети не трогали торт.",
+   "en": "Natalya stayed on the alert and made sure the children didn't touch the cake.",
+   "ko": "나탈리야는 긴장을 늦추지 않고 아이들이 케이크에 손대지 않게 지켜봤어요.",
+   "blank": "бдительности",
    "src": "made"
   }
  ],
@@ -4667,6 +4715,22 @@
    "src": "made"
   }
  ],
+ "w|брехня": [
+  {
+   "text": "Алексей спокойно доказал, что вся история свидетеля — брехня.",
+   "en": "Alexei calmly proved that the witness's whole story was nonsense.",
+   "ko": "알렉세이는 증인의 이야기가 다 헛소리라는 걸 차분하게 증명했어요.",
+   "blank": "брехня",
+   "src": "made"
+  },
+  {
+   "text": "Жених назвал брехнёй слухи о том, что Наталья сбежит со свадьбы.",
+   "en": "The groom called the rumours that Natalya would run away from the wedding rubbish.",
+   "ko": "신랑은 나탈리야가 결혼식에서 도망칠 거라는 소문을 헛소리라고 했어요.",
+   "blank": "брехнёй",
+   "src": "made"
+  }
+ ],
  "w|бригада": [
   {
    "text": "Алексей руководит бригадой из восьми сварщиков.",
@@ -5223,6 +5287,38 @@
    "src": "tatoeba:11897671/Wezel en:11897308/CK"
   }
  ],
+ "w|бутылочка": [
+  {
+   "text": "Торговка дала Павлу на пробу бутылочку домашнего кваса.",
+   "en": "The stallholder gave Pavel a little bottle of homemade kvass to try.",
+   "ko": "상인은 파벨에게 맛보라고 집에서 만든 크바스 한 병을 줬어요.",
+   "blank": "бутылочку",
+   "src": "made"
+  },
+  {
+   "text": "Молодая мама купила у Елены новую бутылочку для малыша.",
+   "en": "A young mother bought a new baby bottle from Elena.",
+   "ko": "젊은 엄마가 옐레나에게서 아기 젖병을 새로 샀어요.",
+   "blank": "бутылочку",
+   "src": "made"
+  }
+ ],
+ "w|буфет": [
+  {
+   "text": "Павел перекусил в маленьком буфете при рынке.",
+   "en": "Pavel had a snack in the little buffet at the market.",
+   "ko": "파벨은 시장 안 작은 매점에서 간단히 요기했어요.",
+   "blank": "буфете",
+   "src": "made"
+  },
+  {
+   "text": "Аптека, где работает Елена, находится рядом с вокзальным буфетом.",
+   "en": "The pharmacy where Elena works is next to the station buffet.",
+   "ko": "옐레나가 일하는 약국은 역 매점 옆에 있어요.",
+   "blank": "буфетом",
+   "src": "made"
+  }
+ ],
  "w|бухгалтер": [
   {
    "text": "Дмитрий пошёл к бухгалтеру уточнить, почему зарплата пришла меньше.",
@@ -5593,6 +5689,22 @@
    "src": "tatoeba:7937539/Wezzel en:3680892/CK"
   }
  ],
+ "w|вафля": [
+  {
+   "text": "У входа на рынок Павел купил горячую вафлю со сгущёнкой.",
+   "en": "At the market entrance Pavel bought a hot waffle with condensed milk.",
+   "ko": "파벨은 시장 입구에서 연유를 바른 따끈한 와플을 샀어요.",
+   "blank": "вафлю",
+   "src": "made"
+  },
+  {
+   "text": "В перерыве Елена съела вафлю и выпила чаю.",
+   "en": "During her break Elena ate a wafer and had some tea.",
+   "ko": "쉬는 시간에 옐레나는 웨하스를 먹고 차를 마셨어요.",
+   "blank": "вафлю",
+   "src": "made"
+  }
+ ],
  "w|ваш": [
   {
    "text": "Ваш паспорт, пожалуйста.",
@@ -5717,6 +5829,22 @@
    "ko": "우리는 둘이서 저녁을 먹어요.",
    "blank": "вдвоем",
    "src": "tatoeba:12123703/carlosalberto en:12123698/carlosalberto"
+  }
+ ],
+ "w|вдвойне": [
+  {
+   "text": "Павел рад вдвойне: и мёд вкусный, и цена низкая.",
+   "en": "Pavel is doubly pleased: the honey is tasty and the price is low.",
+   "ko": "파벨은 꿀도 맛있고 값도 싸서 두 배로 기뻐요.",
+   "blank": "вдвойне",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Елена работает вдвойне больше из-за гриппа.",
+   "en": "In winter Elena works twice as hard because of the flu.",
+   "ko": "겨울이면 옐레나는 독감 때문에 일을 두 배로 해요.",
+   "blank": "вдвойне",
+   "src": "made"
   }
  ],
  "w|вдобавок": [
@@ -6249,6 +6377,22 @@
    "ko": "이 곡 전체 버전 어디 있어요?",
    "blank": "версия",
    "src": "tatoeba:13597607/ZegPhig en:13597616/Ooneykcall"
+  }
+ ],
+ "w|вертеться": [
+  {
+   "text": "Подсудимый весь день вертелся на скамье, и Алексей попросил его успокоиться.",
+   "en": "The defendant fidgeted on the bench all day, and Alexei asked him to calm down.",
+   "ko": "피고인이 하루 종일 자리에서 몸을 뒤척여서 알렉세이는 진정하라고 했어요.",
+   "blank": "вертелся",
+   "src": "made"
+  },
+  {
+   "text": "Племянник Натальи весь обряд вертелся у неё под ногами.",
+   "en": "Natalya's nephew kept getting under her feet throughout the ceremony.",
+   "ko": "나탈리야의 조카는 예식 내내 발밑에서 맴돌았어요.",
+   "blank": "вертелся",
+   "src": "made"
   }
  ],
  "w|вертолет": [
@@ -7112,6 +7256,22 @@
    "en": "Irina made a video recording of the first snowfall from the window.",
    "ko": "이리나는 창밖으로 첫눈 내리는 모습을 동영상으로 찍었어요.",
    "blank": "видеозапись",
+   "src": "made"
+  }
+ ],
+ "w|видеоигра": [
+  {
+   "text": "Адвокат Алексей защищает студию, которую обвиняют в краже идеи для видеоигры.",
+   "en": "Lawyer Alexei is defending a studio accused of stealing an idea for a video game.",
+   "ko": "변호사 알렉세이는 비디오 게임 아이디어를 훔쳤다는 혐의를 받는 스튜디오를 변호해요.",
+   "blank": "видеоигры",
+   "src": "made"
+  },
+  {
+   "text": "Дети гостей весь вечер играли в видеоигры, пока Наталья танцевала.",
+   "en": "The guests' children played video games all evening while Natalya danced.",
+   "ko": "나탈리야가 춤추는 동안 하객 아이들은 저녁 내내 비디오 게임을 했어요.",
+   "blank": "видеоигры",
    "src": "made"
   }
  ],
@@ -10791,6 +10951,22 @@
    "src": "made"
   }
  ],
+ "w|вспять": [
+  {
+   "text": "Павлу кажется, что цены на рынке никогда не идут вспять.",
+   "en": "It seems to Pavel that market prices never go back down.",
+   "ko": "파벨은 시장 물가가 절대 되돌아가지 않는 것 같아요.",
+   "blank": "вспять",
+   "src": "made"
+  },
+  {
+   "text": "Елена шутит, что крем не повернёт годы вспять.",
+   "en": "Elena jokes that the cream won't turn back the years.",
+   "ko": "옐레나는 크림이 세월을 되돌리진 못한다고 농담해요.",
+   "blank": "вспять",
+   "src": "made"
+  }
+ ],
  "w|вставать": [
   {
    "text": "Тебе не кажется, что пора вставать?",
@@ -11177,6 +11353,22 @@
    "src": "tatoeba:3552393/odexed en:3552391/CK"
   }
  ],
+ "w|вчетвером": [
+  {
+   "text": "Алексей работает над делом вчетвером с помощниками.",
+   "en": "Alexei is working on the case as a team of four with his assistants.",
+   "ko": "알렉세이는 조수들과 넷이서 사건을 맡고 있어요.",
+   "blank": "вчетвером",
+   "src": "made"
+  },
+  {
+   "text": "Наталья с подругами вчетвером выбирали свадебный торт.",
+   "en": "Natalya and her friends, four of them in all, chose the wedding cake.",
+   "ko": "나탈리야는 친구들과 넷이서 웨딩 케이크를 골랐어요.",
+   "blank": "вчетвером",
+   "src": "made"
+  }
+ ],
  "w|въехать": [
   {
    "text": "Жильцы смогут въехать в дом, который строит Сергей, только весной.",
@@ -11534,6 +11726,22 @@
    "en": "This year Natalya had an outstanding apple harvest.",
    "ko": "올해 나탈리야네 사과 농사는 아주 대풍이었어요.",
    "blank": "выдающийся",
+   "src": "made"
+  }
+ ],
+ "w|выдвигать": [
+  {
+   "text": "Алексей не спешит выдвигать громкие обвинения без доказательств.",
+   "en": "Alexei is in no hurry to make loud accusations without evidence.",
+   "ko": "알렉세이는 증거 없이 요란한 고발을 서두르지 않아요.",
+   "blank": "выдвигать",
+   "src": "made"
+  },
+  {
+   "text": "Гости по очереди выдвигали смешные идеи для свадебного путешествия Натальи.",
+   "en": "The guests took turns putting forward funny ideas for Natalya's honeymoon.",
+   "ko": "하객들은 돌아가며 나탈리야의 신혼여행에 대한 우스운 아이디어를 내놓았어요.",
+   "blank": "выдвигали",
    "src": "made"
   }
  ],
@@ -13773,6 +13981,22 @@
    "src": "made"
   }
  ],
+ "w|глотать": [
+  {
+   "text": "Павел не стал глотать горячий чай и подул на него.",
+   "en": "Pavel didn't gulp the hot tea and blew on it.",
+   "ko": "파벨은 뜨거운 차를 바로 삼키지 않고 후후 불었어요.",
+   "blank": "глотать",
+   "src": "made"
+  },
+  {
+   "text": "Покупателю было больно глотать, и Елена предложила спрей для горла.",
+   "en": "It hurt the customer to swallow, and Elena offered a throat spray.",
+   "ko": "손님이 삼키기가 아프다고 해서 옐레나는 목 스프레이를 권했어요.",
+   "blank": "глотать",
+   "src": "made"
+  }
+ ],
  "w|глотка": [
   {
    "text": "Перед праздником у Никиты заболела глотка, и он пил чай с мёдом.",
@@ -15115,6 +15339,22 @@
    "src": "made"
   }
  ],
+ "w|граффити": [
+  {
+   "text": "Клиента Алексея обвиняют в том, что он нарисовал граффити на стене вокзала.",
+   "en": "Alexei's client is accused of painting graffiti on the station wall.",
+   "ko": "알렉세이의 의뢰인은 역 벽에 그라피티를 그린 혐의를 받고 있어요.",
+   "blank": "граффити",
+   "src": "made"
+  },
+  {
+   "text": "Наталья и жених сделали фото на фоне яркого граффити.",
+   "en": "Natalya and the groom took photos against a bright graffiti wall.",
+   "ko": "나탈리야와 신랑은 화려한 그라피티를 배경으로 사진을 찍었어요.",
+   "blank": "граффити",
+   "src": "made"
+  }
+ ],
  "w|греть": [
   {
    "text": "Есть хочется, но лень греть обед.",
@@ -15192,6 +15432,22 @@
    "en": "For the still life Tatyana put a basket of mushrooms on the table.",
    "ko": "타티야나는 정물화를 위해 버섯 바구니를 탁자에 올려놓았어요.",
    "blank": "грибами",
+   "src": "made"
+  }
+ ],
+ "w|гриль": [
+  {
+   "text": "Павел остановился у палатки, где на гриле жарили колбаски.",
+   "en": "Pavel stopped at a stall where sausages were being cooked on a grill.",
+   "ko": "파벨은 그릴에 소시지를 굽는 천막 앞에 멈춰 섰어요.",
+   "blank": "гриле",
+   "src": "made"
+  },
+  {
+   "text": "Мужчина обжёг руку о гриль и пришёл к Елене за мазью.",
+   "en": "A man burned his hand on a grill and came to Elena for ointment.",
+   "ko": "한 남자가 그릴에 손을 데어 연고를 사러 옐레나에게 왔어요.",
+   "blank": "гриль",
    "src": "made"
   }
  ],
@@ -16587,6 +16843,22 @@
    "src": "made"
   }
  ],
+ "w|декорация": [
+  {
+   "text": "Алексей ведёт дело о краже театральных декораций.",
+   "en": "Alexei is handling a case about the theft of theatre scenery.",
+   "ko": "알렉세이는 연극 무대 장치 도난 사건을 맡고 있어요.",
+   "blank": "декораций",
+   "src": "made"
+  },
+  {
+   "text": "Наталья сама сделала декорации для свадебного зала.",
+   "en": "Natalya made the decorations for the wedding hall herself.",
+   "ko": "나탈리야는 결혼식장 장식을 직접 만들었어요.",
+   "blank": "декорации",
+   "src": "made"
+  }
+ ],
  "w|делать": [
   {
    "text": "Что ты делаешь?",
@@ -17637,6 +17909,22 @@
    "ko": "스파게티에 바질 넣어 줄까?",
    "blank": "добавить",
    "src": "tatoeba:11838123/marafon en:6601904/Eccles17"
+  }
+ ],
+ "w|добавка": [
+  {
+   "text": "Торговка положила Павлу в пакет пару яблок в добавку.",
+   "en": "The stallholder put a couple of extra apples into Pavel's bag.",
+   "ko": "상인은 덤으로 사과 두 개를 파벨의 봉지에 넣어 줬어요.",
+   "blank": "добавку",
+   "src": "made"
+  },
+  {
+   "text": "Елена не советует покупать пищевую добавку без совета врача.",
+   "en": "Elena advises against buying a dietary supplement without a doctor's advice.",
+   "ko": "옐레나는 의사와 상의 없이 건강 보조제를 사지 말라고 해요.",
+   "blank": "добавку",
+   "src": "made"
   }
  ],
  "w|добавлять": [
@@ -20057,6 +20345,22 @@
    "src": "made"
   }
  ],
+ "w|ей-богу": [
+  {
+   "text": "Свидетель сказал Алексею: «Я, ей-богу, ничего не видел».",
+   "en": "The witness told Alexei: “I swear to God, I didn't see anything.”",
+   "ko": "증인은 알렉세이에게 \"맹세코 아무것도 못 봤어요\"라고 말했어요.",
+   "blank": "ей-богу",
+   "src": "made"
+  },
+  {
+   "text": "Бабушка Натальи повторяла: «Красивее невесты я, ей-богу, не видела».",
+   "en": "Natalya's grandmother kept saying: “I swear I've never seen a more beautiful bride.”",
+   "ko": "나탈리야의 할머니는 \"정말이지 이렇게 예쁜 신부는 처음 봐\"라고 되뇌었어요.",
+   "blank": "ей-богу",
+   "src": "made"
+  }
+ ],
  "w|еле": [
   {
    "text": "Дмитрий еле успел сдать статью до полуночи.",
@@ -20473,6 +20777,22 @@
    "en": "Come on, let's go.",
    "ko": "자, 가자.",
    "blank": "же"
+  }
+ ],
+ "w|жевать": [
+  {
+   "text": "Павел медленно жевал ржаной хлеб и слушал торговцев.",
+   "en": "Pavel slowly chewed rye bread and listened to the traders.",
+   "ko": "파벨은 호밀빵을 천천히 씹으며 상인들 이야기를 들었어요.",
+   "blank": "жевал",
+   "src": "made"
+  },
+  {
+   "text": "Елена напомнила мальчику, что эти таблетки нужно тщательно жевать.",
+   "en": "Elena reminded the boy that these tablets need to be chewed thoroughly.",
+   "ko": "옐레나는 남자아이에게 이 알약은 꼭꼭 씹어 먹어야 한다고 일러 줬어요.",
+   "blank": "жевать",
+   "src": "made"
   }
  ],
  "w|желаемый": [
@@ -23034,6 +23354,22 @@
    "en": "The neighbours' cat managed to climb into Elena's bakery through the window.",
    "ko": "이웃집 고양이가 창문으로 엘레나의 빵집에 기어들어 왔어요.",
    "blank": "залезть",
+   "src": "made"
+  }
+ ],
+ "w|залечь": [
+  {
+   "text": "Кот торговца залёг под прилавком и наблюдал за Павлом.",
+   "en": "The trader's cat lay low under the counter and watched Pavel.",
+   "ko": "상인의 고양이가 가판대 아래 엎드려 파벨을 지켜봤어요.",
+   "blank": "залёг",
+   "src": "made"
+  },
+  {
+   "text": "При простуде Елена советует залечь в постель на пару дней.",
+   "en": "With a cold Elena advises taking to bed for a couple of days.",
+   "ko": "옐레나는 감기에 걸리면 이틀쯤 침대에 누워 있으라고 해요.",
+   "blank": "залечь",
    "src": "made"
   }
  ],
@@ -27277,6 +27613,22 @@
    "src": "made"
   }
  ],
+ "w|ингредиент": [
+  {
+   "text": "Павел ищет на рынке все ингредиенты для бабушкиного борща.",
+   "en": "Pavel is looking at the market for all the ingredients for his grandmother's borscht.",
+   "ko": "파벨은 할머니표 보르시에 들어갈 재료를 전부 시장에서 찾고 있어요.",
+   "blank": "ингредиенты",
+   "src": "made"
+  },
+  {
+   "text": "Елена внимательно читает каждый ингредиент в составе крема.",
+   "en": "Elena carefully reads every ingredient in the cream's list.",
+   "ko": "옐레나는 크림 성분을 하나하나 꼼꼼히 읽어요.",
+   "blank": "ингредиент",
+   "src": "made"
+  }
+ ],
  "w|индейка": [
   {
    "text": "Шеф объяснил Дмитрию, как не пересушить индейку в духовке.",
@@ -27783,6 +28135,22 @@
    "src": "made"
   }
  ],
+ "w|иронично": [
+  {
+   "text": "Павел иронично заметил, что огурцы дороже мяса.",
+   "en": "Pavel remarked ironically that cucumbers cost more than meat.",
+   "ko": "파벨은 오이가 고기보다 비싸다고 비꼬듯 말했어요.",
+   "blank": "иронично",
+   "src": "made"
+  },
+  {
+   "text": "Елена иронично ответила, что таблеток от лени пока не придумали.",
+   "en": "Elena replied ironically that no one has invented pills for laziness yet.",
+   "ko": "옐레나는 게으름에 듣는 약은 아직 없다고 비꼬듯 대답했어요.",
+   "blank": "иронично",
+   "src": "made"
+  }
+ ],
  "w|ирония": [
   {
    "text": "В фельетонах Никиты много тонкой иронии.",
@@ -28066,6 +28434,22 @@
    "en": "In the dining car Svetlana listened to a violinist, and his playing moved her to tears.",
    "ko": "식당칸에서 스베틀라나는 바이올린 연주를 들었는데 그 연주에 눈물이 날 만큼 감동했어요.",
    "blank": "исполнение",
+   "src": "made"
+  }
+ ],
+ "w|исполнитель": [
+  {
+   "text": "Судебный исполнитель передал Алексею копию решения.",
+   "en": "The bailiff handed Alexei a copy of the ruling.",
+   "ko": "집행관이 알렉세이에게 판결문 사본을 건넸어요.",
+   "blank": "исполнитель",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пригласила на свадьбу исполнителя старых романсов.",
+   "en": "Natalya invited a singer of old romances to the wedding.",
+   "ko": "나탈리야는 옛 로망스를 부르는 가수를 결혼식에 초대했어요.",
+   "blank": "исполнителя",
    "src": "made"
   }
  ],
@@ -28621,6 +29005,22 @@
    "src": "made"
   }
  ],
+ "w|йогурт": [
+  {
+   "text": "Павел берёт фермерский йогурт в стеклянных банках.",
+   "en": "Pavel buys farm yogurt in glass jars.",
+   "ko": "파벨은 유리병에 담긴 농장 요구르트를 사요.",
+   "blank": "йогурт",
+   "src": "made"
+  },
+  {
+   "text": "Елена посоветовала после антибиотиков пить йогурт с живыми бактериями.",
+   "en": "Elena advised drinking yogurt with live bacteria after antibiotics.",
+   "ko": "옐레나는 항생제를 먹은 뒤에는 유산균 요구르트를 마시라고 권했어요.",
+   "blank": "йогурт",
+   "src": "made"
+  }
+ ],
  "w|к": [
   {
    "text": "Подойди к окну.",
@@ -28833,6 +29233,22 @@
    "en": "He's gone oddly quiet.",
    "ko": "그 사람은 왠지 이상하게 입을 다물고 있어.",
    "blank": "как-то"
+  }
+ ],
+ "w|какао": [
+  {
+   "text": "Павел купил дочке плитку горячего какао в подарочной коробке.",
+   "en": "Pavel bought his daughter a block of hot cocoa mix in a gift box.",
+   "ko": "파벨은 딸에게 선물 상자에 든 핫코코아 덩어리를 사 줬어요.",
+   "blank": "какао",
+   "src": "made"
+  },
+  {
+   "text": "Для сухих губ Елена советует бальзам с маслом какао.",
+   "en": "For dry lips Elena recommends a balm with cocoa butter.",
+   "ko": "옐레나는 입술이 마를 때 코코아 버터가 든 립밤을 권해요.",
+   "blank": "какао",
+   "src": "made"
   }
  ],
  "w|каков": [
@@ -29396,6 +29812,22 @@
    "en": "Under the microscope Elena saw an image that looked like a snowflake.",
    "ko": "옐레나는 현미경으로 눈송이 같은 모양을 봤어요.",
    "blank": "картинку",
+   "src": "made"
+  }
+ ],
+ "w|картофель": [
+  {
+   "text": "Павел выбирает молодой картофель только у одного фермера.",
+   "en": "Pavel buys new potatoes from only one farmer.",
+   "ko": "파벨은 햇감자를 꼭 한 농부에게서만 사요.",
+   "blank": "картофель",
+   "src": "made"
+  },
+  {
+   "text": "Пожилая покупательница рассказала Елене, что лечит кашель тёртым картофелем.",
+   "en": "An elderly customer told Elena she treats her cough with grated potato.",
+   "ko": "나이 든 손님은 옐레나에게 간 감자로 기침을 다스린다고 말했어요.",
+   "blank": "картофелем",
    "src": "made"
   }
  ],
@@ -32533,6 +32965,22 @@
    "src": "made"
   }
  ],
+ "w|коррекция": [
+  {
+   "text": "Алексей потребовал коррекции протокола, где перепутали даты.",
+   "en": "Alexei demanded a correction to the record where the dates had been mixed up.",
+   "ko": "알렉세이는 날짜가 뒤바뀐 기록을 바로잡아 달라고 요구했어요.",
+   "blank": "коррекции",
+   "src": "made"
+  },
+  {
+   "text": "За месяц до свадьбы Наталья сделала лазерную коррекцию зрения.",
+   "en": "A month before the wedding Natalya had laser eye surgery.",
+   "ko": "결혼식 한 달 전에 나탈리야는 레이저 시력 교정을 받았어요.",
+   "blank": "коррекцию",
+   "src": "made"
+  }
+ ],
  "w|коррупция": [
   {
    "text": "Алексей пришёл на процесс о коррупции в городской администрации как журналист.",
@@ -33005,6 +33453,22 @@
    "src": "made"
   }
  ],
+ "w|крах": [
+  {
+   "text": "Клиент Алексея винит партнёров в крахе своего бизнеса.",
+   "en": "Alexei's client blames his partners for the collapse of his business.",
+   "ko": "알렉세이의 의뢰인은 사업이 망한 걸 동업자 탓으로 돌려요.",
+   "blank": "крахе",
+   "src": "made"
+  },
+  {
+   "text": "Ливень грозил полным крахом свадьбы на природе, но Наталья не расстроилась.",
+   "en": "The downpour threatened total ruin for the outdoor wedding, but Natalya didn't get upset.",
+   "ko": "소나기 때문에 야외 결혼식이 완전히 망할 뻔했지만 나탈리야는 속상해하지 않았어요.",
+   "blank": "крахом",
+   "src": "made"
+  }
+ ],
  "w|креветка": [
   {
    "text": "Друг привёз Алексею к костру замороженные креветки.",
@@ -33274,6 +33738,22 @@
    "en": "In her review Anna wrote sharp criticism of how the airport is run.",
    "ko": "안나는 후기에 공항 운영을 날카롭게 비판하는 글을 썼어요.",
    "blank": "критику",
+   "src": "made"
+  }
+ ],
+ "w|критиковать": [
+  {
+   "text": "Алексей вежливо, но твёрдо критиковал доводы обвинения.",
+   "en": "Alexei politely but firmly criticised the prosecution's arguments.",
+   "ko": "알렉세이는 정중하지만 단호하게 검찰의 논거를 비판했어요.",
+   "blank": "критиковал",
+   "src": "made"
+  },
+  {
+   "text": "Наталья попросила тётю не критиковать меню при гостях.",
+   "en": "Natalya asked her aunt not to criticise the menu in front of the guests.",
+   "ko": "나탈리야는 이모에게 하객들 앞에서 메뉴를 흉보지 말라고 부탁했어요.",
+   "blank": "критиковать",
    "src": "made"
   }
  ],
@@ -33669,6 +34149,22 @@
    "ko": "그 쥐 살아 있어, 죽었어?",
    "blank": "Крыса",
    "src": "tatoeba:2917154/Lenin_1917 en:625907/rpglover64"
+  }
+ ],
+ "w|крыться": [
+  {
+   "text": "Секрет вкусных помидоров, по словам фермера, кроется в почве, и Павел ему верит.",
+   "en": "The secret of tasty tomatoes, according to the farmer, lies in the soil, and Pavel believes him.",
+   "ko": "농부 말로는 맛있는 토마토의 비결이 흙에 있다고 하고 파벨은 그 말을 믿어요.",
+   "blank": "кроется",
+   "src": "made"
+  },
+  {
+   "text": "Елена думает, что причина головной боли кроется в недосыпе.",
+   "en": "Elena thinks the cause of the headaches lies in lack of sleep.",
+   "ko": "옐레나는 두통의 원인이 잠이 모자란 데 있다고 생각해요.",
+   "blank": "кроется",
+   "src": "made"
   }
  ],
  "w|крыша": [
@@ -34673,6 +35169,22 @@
    "en": "The bag is really light.",
    "ko": "가방이 아주 가벼워.",
    "blank": "лёгкая"
+  }
+ ],
+ "w|лёгкость": [
+  {
+   "text": "Павел с лёгкостью торгуется с продавцами.",
+   "en": "Pavel haggles with the sellers with ease.",
+   "ko": "파벨은 상인들과 쉽게 흥정해요.",
+   "blank": "лёгкостью",
+   "src": "made"
+  },
+  {
+   "text": "Елена с лёгкостью находит нужное лекарство среди сотни коробок.",
+   "en": "Elena easily finds the right medicine among a hundred boxes.",
+   "ko": "옐레나는 상자 백 개 사이에서도 필요한 약을 쉽게 찾아요.",
+   "blank": "лёгкостью",
+   "src": "made"
   }
  ],
  "w|легче": [
@@ -35783,6 +36295,22 @@
    "src": "made"
   }
  ],
+ "w|лосось": [
+  {
+   "text": "Рыбник отрезал Павлу кусок свежего лосося.",
+   "en": "The fishmonger cut Pavel a piece of fresh salmon.",
+   "ko": "생선 장수가 파벨에게 싱싱한 연어 한 토막을 잘라 줬어요.",
+   "blank": "лосося",
+   "src": "made"
+  },
+  {
+   "text": "Елена продаёт рыбий жир из дикого лосося.",
+   "en": "Elena sells fish oil from wild salmon.",
+   "ko": "옐레나는 자연산 연어로 만든 어유를 팔아요.",
+   "blank": "лосося",
+   "src": "made"
+  }
+ ],
  "w|лотерея": [
   {
    "text": "Сосед Дмитрия каждую неделю покупает билет лотереи и верит в удачу.",
@@ -36294,6 +36822,22 @@
    "en": "The major came in and everyone stood up.",
    "ko": "소령이 들어오자 모두 일어섰어요.",
    "blank": "Майор",
+   "src": "made"
+  }
+ ],
+ "w|макароны": [
+  {
+   "text": "Павел нашёл на рынке итальянские макароны ручной работы.",
+   "en": "Pavel found handmade Italian pasta at the market.",
+   "ko": "파벨은 시장에서 손으로 만든 이탈리아 파스타를 찾았어요.",
+   "blank": "макароны",
+   "src": "made"
+  },
+  {
+   "text": "Елена советует после отравления есть отварные макароны без соуса.",
+   "en": "After food poisoning Elena advises eating plain boiled pasta without sauce.",
+   "ko": "옐레나는 식중독 뒤에는 소스 없이 삶은 파스타를 먹으라고 권해요.",
+   "blank": "макароны",
    "src": "made"
   }
  ],
@@ -39063,6 +39607,22 @@
    "src": "made"
   }
  ],
+ "w|молочный": [
+  {
+   "text": "В молочном ряду Павел попробовал три вида творога.",
+   "en": "In the dairy row Pavel tasted three kinds of cottage cheese.",
+   "ko": "유제품 코너에서 파벨은 코티지치즈 세 가지를 맛봤어요.",
+   "blank": "молочном",
+   "src": "made"
+  },
+  {
+   "text": "Елена подобрала для малыша молочную смесь без лактозы.",
+   "en": "Elena picked out a lactose-free milk formula for the baby.",
+   "ko": "옐레나는 아기에게 맞는 유당 없는 분유를 골라 줬어요.",
+   "blank": "молочную",
+   "src": "made"
+  }
+ ],
  "w|молчание": [
   {
    "text": "Сколько они заплатили тебе за молчание?",
@@ -40137,6 +40697,22 @@
    "src": "tatoeba:10264466/odexed en:1488141/arnxy20"
   }
  ],
+ "w|мятеж": [
+  {
+   "text": "Алексей изучал старое дело о мятеже на корабле.",
+   "en": "Alexei studied an old case about a mutiny on a ship.",
+   "ko": "알렉세이는 배에서 일어난 반란에 관한 옛 사건을 살펴봤어요.",
+   "blank": "мятеже",
+   "src": "made"
+  },
+  {
+   "text": "Когда музыку выключили, дети устроили маленький мятеж, и Наталья попросила сыграть ещё одну песню.",
+   "en": "When the music was switched off, the children staged a little mutiny, and Natalya asked for one more song.",
+   "ko": "음악이 꺼지자 아이들이 작은 반란을 일으켜서 나탈리야는 한 곡만 더 틀어 달라고 했어요.",
+   "blank": "мятеж",
+   "src": "made"
+  }
+ ],
  "w|мятежник": [
   {
    "text": "На площади перед мэрией стоит памятник мятежнику, о котором Михаил знает со школы.",
@@ -40485,6 +41061,22 @@
    "src": "made"
   }
  ],
+ "w|наводить": [
+  {
+   "text": "Павел любит наводить порядок в сумке после рынка.",
+   "en": "Pavel likes to tidy up his bag after the market.",
+   "ko": "파벨은 시장에 다녀오면 장바구니를 정리하는 걸 좋아해요.",
+   "blank": "наводить",
+   "src": "made"
+  },
+  {
+   "text": "Каждое утро Елена начинает с того, что наводит порядок на полках.",
+   "en": "Every morning Elena starts by tidying the shelves.",
+   "ko": "옐레나는 매일 아침 선반 정리부터 해요.",
+   "blank": "наводит",
+   "src": "made"
+  }
+ ],
  "w|наводка": [
   {
    "text": "Следователь признался Сергею, что вора нашли по наводке соседки.",
@@ -40767,6 +41359,22 @@
    "en": "Don't count on luck.",
    "ko": "운에 기대지 마.",
    "blank": "надейся"
+  }
+ ],
+ "w|надзиратель": [
+  {
+   "text": "Бывший тюремный надзиратель дал показания в пользу клиента Алексея.",
+   "en": "A former prison guard testified in favour of Alexei's client.",
+   "ko": "전직 교도관이 알렉세이 의뢰인에게 유리한 증언을 했어요.",
+   "blank": "надзиратель",
+   "src": "made"
+  },
+  {
+   "text": "Отец Натальи когда-то служил надзирателем, но на свадьбе он плясал как мальчишка.",
+   "en": "Natalya's father once worked as a prison guard, but at the wedding he danced like a boy.",
+   "ko": "나탈리야의 아버지는 예전에 교도관이었지만 결혼식에서는 소년처럼 춤을 췄어요.",
+   "blank": "надзирателем",
+   "src": "made"
   }
  ],
  "w|надзор": [
@@ -41234,6 +41842,22 @@
    "en": "After a month of failures Elena's experiment finally worked.",
    "ko": "한 달 동안 실패한 끝에 옐레나의 실험이 드디어 성공했어요.",
    "blank": "наконец-то",
+   "src": "made"
+  }
+ ],
+ "w|накормить": [
+  {
+   "text": "Павел спешит домой, чтобы накормить семью ужином из свежих продуктов.",
+   "en": "Pavel hurries home to feed his family a dinner made from fresh produce.",
+   "ko": "파벨은 싱싱한 재료로 가족에게 저녁을 먹이려고 서둘러 집에 가요.",
+   "blank": "накормить",
+   "src": "made"
+  },
+  {
+   "text": "Елена объяснила маме, чем лучше накормить ребёнка при температуре.",
+   "en": "Elena explained to a mother what best to feed a child with a fever.",
+   "ko": "옐레나는 아이가 열이 날 때 무엇을 먹이면 좋은지 엄마에게 설명했어요.",
+   "blank": "накормить",
    "src": "made"
   }
  ],
@@ -41745,6 +42369,22 @@
    "ko": "내가 신경 안 쓰는 줄 알아?",
    "blank": "наплевать",
    "src": "tatoeba:2557104/paul_lingvo en:2395967/CK"
+  }
+ ],
+ "w|наподобие": [
+  {
+   "text": "Павел купил сыр наподобие пармезана, но местный.",
+   "en": "Pavel bought a cheese similar to parmesan, but local.",
+   "ko": "파벨은 파르메산 비슷한 지역 치즈를 샀어요.",
+   "blank": "наподобие",
+   "src": "made"
+  },
+  {
+   "text": "Елена продала покупателю повязку наподобие шарфа для больного горла.",
+   "en": "Elena sold the customer a scarf-like bandage for a sore throat.",
+   "ko": "옐레나는 손님에게 목 아플 때 두르는 목도리 같은 붕대를 팔았어요.",
+   "blank": "наподобие",
+   "src": "made"
   }
  ],
  "w|наполнить": [
@@ -44185,6 +44825,22 @@
    "src": "made"
   }
  ],
+ "w|необычайно": [
+  {
+   "text": "Клубника в этом году необычайно сладкая, сказала торговка Павлу.",
+   "en": "The strawberries are unusually sweet this year, the stallholder told Pavel.",
+   "ko": "올해 딸기가 유난히 달다고 상인이 파벨에게 말했어요.",
+   "blank": "необычайно",
+   "src": "made"
+  },
+  {
+   "text": "Сегодня в аптеке у Елены необычайно много покупателей.",
+   "en": "Today there are unusually many customers at Elena's pharmacy.",
+   "ko": "오늘 옐레나의 약국에는 손님이 유난히 많아요.",
+   "blank": "необычайно",
+   "src": "made"
+  }
+ ],
  "w|необычный": [
   {
    "text": "Я услышал необычный звук.",
@@ -46200,6 +46856,22 @@
    "en": "The boy in the next compartment didn't let go of his toy monkey the whole way.",
    "ko": "옆 칸 남자아이는 가는 내내 장난감 원숭이를 손에서 놓지 않았어요.",
    "blank": "обезьянку",
+   "src": "made"
+  }
+ ],
+ "w|оберегать": [
+  {
+   "text": "Алексей старается оберегать клиента от внимания прессы.",
+   "en": "Alexei tries to shield his client from press attention.",
+   "ko": "알렉세이는 의뢰인을 언론의 관심에서 지키려고 애써요.",
+   "blank": "оберегать",
+   "src": "made"
+  },
+  {
+   "text": "Мама Натальи всю жизнь старалась оберегать дочь от трудностей.",
+   "en": "Natalya's mother has tried all her life to protect her daughter from hardship.",
+   "ko": "나탈리야의 엄마는 평생 딸을 어려움에서 지키려고 애썼어요.",
+   "blank": "оберегать",
    "src": "made"
   }
  ],
@@ -50059,6 +50731,22 @@
    "src": "made"
   }
  ],
+ "w|ослабить": [
+  {
+   "text": "Алексей просит суд ослабить меру пресечения для клиента.",
+   "en": "Alexei is asking the court to ease the restrictions on his client.",
+   "ko": "알렉세이는 의뢰인의 구속 조치를 완화해 달라고 법원에 요청해요.",
+   "blank": "ослабить",
+   "src": "made"
+  },
+  {
+   "text": "К вечеру Наталья решила ослабить корсет платья.",
+   "en": "By evening Natalya decided to loosen the corset of her dress.",
+   "ko": "저녁이 되자 나탈리야는 드레스 코르셋을 조금 풀기로 했어요.",
+   "blank": "ослабить",
+   "src": "made"
+  }
+ ],
  "w|осложнение": [
   {
    "text": "Хирург предупредил Никиту, что после удаления зуба мудрости возможны осложнения.",
@@ -50760,6 +51448,22 @@
    "en": "For the mountain hike Maria held a selection: only those who could handle the long climb.",
    "ko": "마리아는 산행에 앞서 긴 오르막을 견딜 사람만 뽑았어요.",
    "blank": "отбор",
+   "src": "made"
+  }
+ ],
+ "w|отбросить": [
+  {
+   "text": "Алексей попросил присяжных отбросить слухи и смотреть только на факты.",
+   "en": "Alexei asked the jury to set aside rumours and look only at the facts.",
+   "ko": "알렉세이는 배심원들에게 소문은 접어 두고 사실만 보라고 했어요.",
+   "blank": "отбросить",
+   "src": "made"
+  },
+  {
+   "text": "Наталья решила отбросить сомнения и надеть мамино платье.",
+   "en": "Natalya decided to cast aside her doubts and wear her mother's dress.",
+   "ko": "나탈리야는 망설임을 떨치고 엄마의 드레스를 입기로 했어요.",
+   "blank": "отбросить",
    "src": "made"
   }
  ],
@@ -51803,6 +52507,22 @@
    "src": "made"
   }
  ],
+ "w|отметина": [
+  {
+   "text": "Алексей показал суду фото отметины на двери гаража.",
+   "en": "Alexei showed the court a photo of the mark on the garage door.",
+   "ko": "알렉세이는 법정에 차고 문에 난 자국 사진을 보여 줬어요.",
+   "blank": "отметины",
+   "src": "made"
+  },
+  {
+   "text": "После поцелуя на щеке жениха осталась отметина от помады Натальи.",
+   "en": "After the kiss a mark from Natalya's lipstick was left on the groom's cheek.",
+   "ko": "입맞춤 뒤 신랑 뺨에 나탈리야의 립스틱 자국이 남았어요.",
+   "blank": "отметина",
+   "src": "made"
+  }
+ ],
  "w|отметить": [
   {
    "text": "Мэр попросил Алексея отметить на плане все сломанные фонари.",
@@ -52403,6 +53123,22 @@
    "ko": "톰은 분명 그걸 부인할 거예요.",
    "blank": "отрицать",
    "src": "tatoeba:7579986/marafon en:7542825/CK"
+  }
+ ],
+ "w|отрывок": [
+  {
+   "text": "Алексей зачитал суду отрывок из письма подсудимого.",
+   "en": "Alexei read the court an extract from the defendant's letter.",
+   "ko": "알렉세이는 법정에서 피고인 편지의 한 대목을 읽었어요.",
+   "blank": "отрывок",
+   "src": "made"
+  },
+  {
+   "text": "Подруга Натальи прочитала отрывок из любимого романа.",
+   "en": "Natalya's friend read an excerpt from her favourite novel.",
+   "ko": "나탈리야의 친구가 좋아하는 소설의 한 대목을 낭독했어요.",
+   "blank": "отрывок",
+   "src": "made"
   }
  ],
  "w|отряд": [
@@ -55333,6 +56069,22 @@
    "src": "made"
   }
  ],
+ "w|персик": [
+  {
+   "text": "Павел выбрал самый спелый персик и сразу его съел.",
+   "en": "Pavel picked the ripest peach and ate it straight away.",
+   "ko": "파벨은 제일 잘 익은 복숭아를 골라 바로 먹었어요.",
+   "blank": "персик",
+   "src": "made"
+  },
+  {
+   "text": "Детский сироп от кашля у Елены пахнет персиком.",
+   "en": "The children's cough syrup at Elena's smells of peach.",
+   "ko": "옐레나네 어린이 기침 시럽에서는 복숭아 냄새가 나요.",
+   "blank": "персиком",
+   "src": "made"
+  }
+ ],
  "w|персона": [
   {
    "text": "Бывший староста теперь важная персона в министерстве, но с Иваном обнялся как раньше.",
@@ -56803,6 +57555,22 @@
    "src": "made"
   }
  ],
+ "w|по-человечески": [
+  {
+   "text": "Алексей всегда говорит с клиентами по-человечески, без сухих терминов.",
+   "en": "Alexei always talks to clients like a human being, without dry jargon.",
+   "ko": "알렉세이는 의뢰인과 딱딱한 용어 없이 늘 사람 냄새 나게 이야기해요.",
+   "blank": "по-человечески",
+   "src": "made"
+  },
+  {
+   "text": "Наталья хотела, чтобы свадьба прошла просто и по-человечески, без лишней роскоши.",
+   "en": "Natalya wanted the wedding to be simple and down-to-earth, without excess luxury.",
+   "ko": "나탈리야는 결혼식을 사치 없이 소박하고 따뜻하게 치르고 싶었어요.",
+   "blank": "по-человечески",
+   "src": "made"
+  }
+ ],
  "w|по-честному": [
   {
    "text": "Сергей предложил гостям по-честному разделить последний кусок торта.",
@@ -57769,6 +58537,22 @@
    "en": "We'll talk this evening.",
    "ko": "저녁에 얘기하자.",
    "blank": "Поговорим"
+  }
+ ],
+ "w|поговорка": [
+  {
+   "text": "Алексей закончил речь старой поговоркой о правде.",
+   "en": "Alexei ended his speech with an old saying about truth.",
+   "ko": "알렉세이는 진실에 관한 옛 속담으로 변론을 마쳤어요.",
+   "blank": "поговоркой",
+   "src": "made"
+  },
+  {
+   "text": "Дедушка Натальи пожелал молодым счастья любимой поговоркой.",
+   "en": "Natalya's grandfather wished the newlyweds happiness with his favourite saying.",
+   "ko": "나탈리야의 할아버지는 좋아하는 속담으로 신혼부부의 행복을 빌었어요.",
+   "blank": "поговоркой",
+   "src": "made"
   }
  ],
  "w|погода": [
@@ -60517,6 +61301,22 @@
    "src": "made"
   }
  ],
+ "w|покормить": [
+  {
+   "text": "Павел остановился покормить кошку, которая живёт у рыбного ряда.",
+   "en": "Pavel stopped to feed the cat that lives by the fish row.",
+   "ko": "파벨은 생선 코너 옆에 사는 고양이에게 먹이를 주려고 멈췄어요.",
+   "blank": "покормить",
+   "src": "made"
+  },
+  {
+   "text": "Мама спросила Елену, когда можно покормить малыша после прививки.",
+   "en": "A mother asked Elena when she could feed the baby after the vaccination.",
+   "ko": "엄마가 예방접종 뒤 언제 아기에게 젖을 먹여도 되는지 옐레나에게 물었어요.",
+   "blank": "покормить",
+   "src": "made"
+  }
+ ],
  "w|покрывать": [
   {
    "text": "Алексей не собирался покрывать брата и рассказал суду правду.",
@@ -63129,6 +63929,22 @@
    "src": "made"
   }
  ],
+ "w|посоветоваться": [
+  {
+   "text": "Перед заседанием Алексей решил посоветоваться с опытным коллегой.",
+   "en": "Before the hearing Alexei decided to consult an experienced colleague.",
+   "ko": "공판 전에 알렉세이는 경험 많은 동료와 상의하기로 했어요.",
+   "blank": "посоветоваться",
+   "src": "made"
+  },
+  {
+   "text": "Наталья хотела посоветоваться с мамой насчёт причёски.",
+   "en": "Natalya wanted to ask her mother's advice about her hairstyle.",
+   "ko": "나탈리야는 머리 모양을 두고 엄마와 상의하고 싶었어요.",
+   "blank": "посоветоваться",
+   "src": "made"
+  }
+ ],
  "w|посол": [
   {
    "text": "Андрей с удивлением узнал, что его сосед когда-то был послом.",
@@ -65032,6 +65848,22 @@
    "en": "The surgeon Anna works with is an excellent specialist.",
    "ko": "안나와 함께 일하는 외과 의사는 뛰어난 전문가예요.",
    "blank": "превосходный",
+   "src": "made"
+  }
+ ],
+ "w|превосходство": [
+  {
+   "text": "У обвинения было явное превосходство в документах, но Алексей не сдался.",
+   "en": "The prosecution had a clear advantage in documents, but Alexei didn't give up.",
+   "ko": "검찰이 서류에서 분명히 앞섰지만 알렉세이는 포기하지 않았어요.",
+   "blank": "превосходство",
+   "src": "made"
+  },
+  {
+   "text": "В конкурсе танцев у Натальи было явное превосходство над женихом.",
+   "en": "In the dance contest Natalya had a clear edge over the groom.",
+   "ko": "춤 대결에서 나탈리야는 신랑보다 확실히 한 수 위였어요.",
+   "blank": "превосходство",
    "src": "made"
   }
  ],
@@ -67961,6 +68793,22 @@
    "src": "made"
   }
  ],
+ "w|принадлежность": [
+  {
+   "text": "Суд долго выяснял принадлежность участка, о котором спорил клиент Алексея.",
+   "en": "The court spent a long time establishing who owned the plot Alexei's client was disputing.",
+   "ko": "법원은 알렉세이의 의뢰인이 다투던 땅이 누구 것인지 오래 따졌어요.",
+   "blank": "принадлежность",
+   "src": "made"
+  },
+  {
+   "text": "Гостям раздали ленты, чтобы показать принадлежность к стороне жениха или Натальи.",
+   "en": "Guests were handed ribbons to show whether they belonged to the groom's side or Natalya's.",
+   "ko": "하객들은 신랑 쪽인지 나탈리야 쪽인지 표시하는 리본을 받았어요.",
+   "blank": "принадлежность",
+   "src": "made"
+  }
+ ],
  "w|принести": [
   {
    "text": "Принеси, пожалуйста, плед.",
@@ -70215,6 +71063,22 @@
    "blank": "пропала"
   }
  ],
+ "w|проповедник": [
+  {
+   "text": "Свидетелем по делу Алексея стал уличный проповедник.",
+   "en": "A street preacher became a witness in Alexei's case.",
+   "ko": "알렉세이 사건의 증인은 거리 설교자였어요.",
+   "blank": "проповедник",
+   "src": "made"
+  },
+  {
+   "text": "Церемонию у Натальи провёл старый проповедник из её деревни.",
+   "en": "Natalya's ceremony was led by an old preacher from her village.",
+   "ko": "나탈리야의 예식은 고향 마을의 나이 든 설교자가 진행했어요.",
+   "blank": "проповедник",
+   "src": "made"
+  }
+ ],
  "w|проповедь": [
   {
    "text": "Пожилой читатель попросил у Дмитрия сборник проповедей девятнадцатого века.",
@@ -71715,6 +72579,22 @@
    "src": "made"
   }
  ],
+ "w|пудинг": [
+  {
+   "text": "На рынке Павел купил домашний рисовый пудинг у знакомой торговки.",
+   "en": "At the market Pavel bought homemade rice pudding from a stallholder he knows.",
+   "ko": "파벨은 시장에서 아는 상인에게 집에서 만든 쌀 푸딩을 샀어요.",
+   "blank": "пудинг",
+   "src": "made"
+  },
+  {
+   "text": "После операции Елена советует пациентам есть мягкий пудинг.",
+   "en": "After surgery Elena advises patients to eat soft pudding.",
+   "ko": "옐레나는 수술 뒤 환자들에게 부드러운 푸딩을 먹으라고 권해요.",
+   "blank": "пудинг",
+   "src": "made"
+  }
+ ],
  "w|пузырь": [
   {
    "text": "Пока шло заседание, маленький сын Алексея пускал в коридоре мыльный пузырь.",
@@ -72123,6 +73003,22 @@
    "ko": "너 취했구나?",
    "blank": "пьяный",
    "src": "tatoeba:13788842/marafon en:6893337/CK"
+  }
+ ],
+ "w|пюре": [
+  {
+   "text": "Павел купил тыкву, чтобы сварить сыну пюре.",
+   "en": "Pavel bought a pumpkin to make his son a purée.",
+   "ko": "파벨은 아들에게 퓌레를 만들어 주려고 호박을 샀어요.",
+   "blank": "пюре",
+   "src": "made"
+  },
+  {
+   "text": "В аптеке у Елены продаётся детское пюре из груши.",
+   "en": "Elena's pharmacy sells pear purée for babies.",
+   "ko": "옐레나의 약국에서는 아기용 배 퓌레를 팔아요.",
+   "blank": "пюре",
+   "src": "made"
   }
  ],
  "w|пялиться": [
@@ -73783,6 +74679,22 @@
    "src": "made"
   }
  ],
+ "w|разыграть": [
+  {
+   "text": "Торговцы решили разыграть Павла и продали ему тыкву-гиганта за копейку.",
+   "en": "The traders decided to play a joke on Pavel and sold him a giant pumpkin for a kopeck.",
+   "ko": "상인들은 파벨에게 장난을 치려고 거대한 호박을 동전 한 닢에 팔았어요.",
+   "blank": "разыграть",
+   "src": "made"
+  },
+  {
+   "text": "Коллеги решили разыграть Елену и спрятали её очки в коробку с бинтами.",
+   "en": "Colleagues decided to play a joke on Elena and hid her glasses in a box of bandages.",
+   "ko": "동료들은 옐레나에게 장난을 치려고 그녀의 안경을 붕대 상자에 숨겼어요.",
+   "blank": "разыграть",
+   "src": "made"
+  }
+ ],
  "w|разыгрывать": [
   {
    "text": "По субботам дети разыгрывают в библиотеке сценки из сказок, а Дмитрий им помогает.",
@@ -73828,6 +74740,22 @@
    "en": "Svetlana's startup has long been looking for an experienced designer.",
    "ko": "스베틀라나의 스타트업은 오래전부터 경력 있는 디자이너를 찾고 있어요.",
    "blank": "разыскивает",
+   "src": "made"
+  }
+ ],
+ "w|разыскиваться": [
+  {
+   "text": "Второй обвиняемый до сих пор разыскивается, сказал Алексею следователь.",
+   "en": "The investigator told Alexei that the second defendant is still wanted.",
+   "ko": "수사관은 알렉세이에게 두 번째 피고인이 아직 수배 중이라고 했어요.",
+   "blank": "разыскивается",
+   "src": "made"
+  },
+  {
+   "text": "Пропавшие кольца разыскивались целый час, а Наталья нашла их в своей сумочке.",
+   "en": "The missing rings were searched for for a whole hour, and Natalya found them in her handbag.",
+   "ko": "잃어버린 반지를 한 시간이나 찾았는데 나탈리야가 자기 핸드백에서 찾아냈어요.",
+   "blank": "разыскивались",
    "src": "made"
   }
  ],
@@ -74240,6 +75168,22 @@
    "en": "Tatyana paid for the canvases for the whole class out of her own pocket.",
    "ko": "타티야나는 반 전체의 캔버스 값을 자기 돈으로 치렀어요.",
    "blank": "расплатилась",
+   "src": "made"
+  }
+ ],
+ "w|распознать": [
+  {
+   "text": "Павел легко может распознать хороший мёд по запаху.",
+   "en": "Pavel can easily tell good honey by its smell.",
+   "ko": "파벨은 냄새로 좋은 꿀을 쉽게 가려낼 수 있어요.",
+   "blank": "распознать",
+   "src": "made"
+  },
+  {
+   "text": "Елена помогает пожилым людям распознать поддельные лекарства.",
+   "en": "Elena helps elderly people recognise counterfeit medicines.",
+   "ko": "옐레나는 어르신들이 가짜 약을 알아보도록 도와요.",
+   "blank": "распознать",
    "src": "made"
   }
  ],
@@ -77211,6 +78155,22 @@
    "src": "made"
   }
  ],
+ "w|рэп": [
+  {
+   "text": "В деле, которое ведёт Алексей, спор идёт о словах одного рэпа.",
+   "en": "In the case Alexei is handling, the dispute is over the lyrics of a rap.",
+   "ko": "알렉세이가 맡은 사건은 한 랩 가사를 둘러싼 다툼이에요.",
+   "blank": "рэпа",
+   "src": "made"
+  },
+  {
+   "text": "Младший брат Натальи прочитал рэп в честь молодых.",
+   "en": "Natalya's younger brother performed a rap in honour of the newlyweds.",
+   "ko": "나탈리야의 남동생이 신혼부부를 위해 랩을 했어요.",
+   "blank": "рэп",
+   "src": "made"
+  }
+ ],
  "w|рюкзак": [
   {
    "text": "Все находки Дмитрий сложил в большой рюкзак.",
@@ -77759,6 +78719,22 @@
    "src": "made"
   }
  ],
+ "w|сбоку": [
+  {
+   "text": "Павел нашёл удобную парковку сбоку от рынка.",
+   "en": "Pavel found a convenient car park at the side of the market.",
+   "ko": "파벨은 시장 옆쪽에서 편한 주차장을 찾았어요.",
+   "blank": "сбоку",
+   "src": "made"
+  },
+  {
+   "text": "Новые витрины у Елены стоят сбоку от кассы.",
+   "en": "Elena's new display cases stand to the side of the till.",
+   "ko": "옐레나네 새 진열장은 계산대 옆쪽에 있어요.",
+   "blank": "сбоку",
+   "src": "made"
+  }
+ ],
  "w|сбор": [
   {
    "text": "Класс Алексея объявил сбор старых книг для сельской библиотеки.",
@@ -77772,6 +78748,22 @@
    "en": "Natalia found out that passengers for the excursion would gather by the first carriage.",
    "ko": "나탈리야는 관광에 갈 승객들이 첫 번째 객차 앞에 모인다는 걸 알았어요.",
    "blank": "сбор",
+   "src": "made"
+  }
+ ],
+ "w|сборище": [
+  {
+   "text": "У здания суда собралось шумное сборище, и Алексей вошёл через боковую дверь.",
+   "en": "A noisy crowd gathered outside the court, and Alexei went in through a side door.",
+   "ko": "법원 건물 앞에 시끄러운 무리가 모여서 알렉세이는 옆문으로 들어갔어요.",
+   "blank": "сборище",
+   "src": "made"
+  },
+  {
+   "text": "Жених в шутку назвал друзей Натальи весёлым сборищем.",
+   "en": "The groom jokingly called Natalya's friends a merry gang.",
+   "ko": "신랑은 나탈리야 친구들을 농담 삼아 유쾌한 패거리라고 불렀어요.",
+   "blank": "сборищем",
    "src": "made"
   }
  ],
@@ -78024,6 +79016,22 @@
    "en": "The old lamp Maria bought glows with a warm yellow light.",
    "ko": "마리야가 산 옛 램프는 따뜻한 노란빛으로 빛나요.",
    "blank": "светится",
+   "src": "made"
+  }
+ ],
+ "w|светло": [
+  {
+   "text": "В новом зале суда светло и просторно, и Алексею там легче работать.",
+   "en": "The new courtroom is bright and spacious, and Alexei finds it easier to work there.",
+   "ko": "새 법정은 밝고 넓어서 알렉세이는 거기서 일하기가 더 편해요.",
+   "blank": "светло",
+   "src": "made"
+  },
+  {
+   "text": "В зале, где Наталья выходила замуж, было светло от сотни свечей.",
+   "en": "The hall where Natalya got married was bright with a hundred candles.",
+   "ko": "나탈리야가 결혼한 식장은 촛불 백 개로 환했어요.",
+   "blank": "светло",
    "src": "made"
   }
  ],
@@ -80246,6 +81254,22 @@
    "en": "Natalya isn't one to complain, but this time she called the front desk.",
    "ko": "나탈리야는 불평하는 편이 아니지만 이번에는 프런트에 전화했어요.",
    "blank": "склонна",
+   "src": "made"
+  }
+ ],
+ "w|сколь": [
+  {
+   "text": "Павел не знал, сколь дорогими окажутся первые черешни.",
+   "en": "Pavel didn't know how expensive the first cherries would turn out to be.",
+   "ko": "파벨은 첫 체리가 얼마나 비쌀지 몰랐어요.",
+   "blank": "сколь",
+   "src": "made"
+  },
+  {
+   "text": "Елена объяснила, сколь важно допить курс антибиотиков.",
+   "en": "Elena explained how important it is to finish the course of antibiotics.",
+   "ko": "옐레나는 항생제를 끝까지 먹는 게 얼마나 중요한지 설명했어요.",
+   "blank": "сколь",
    "src": "made"
   }
  ],
@@ -82683,6 +83707,22 @@
    "src": "made"
   }
  ],
+ "w|содержаться": [
+  {
+   "text": "В папке Алексея содержатся все письма клиента.",
+   "en": "Alexei's folder contains all the client's letters.",
+   "ko": "알렉세이의 서류철에는 의뢰인의 편지가 전부 들어 있어요.",
+   "blank": "содержатся",
+   "src": "made"
+  },
+  {
+   "text": "Наталья предупредила гостей, что в торте содержится ром.",
+   "en": "Natalya warned the guests that the cake contains rum.",
+   "ko": "나탈리야는 하객들에게 케이크에 럼이 들어 있다고 알려 줬어요.",
+   "blank": "содержится",
+   "src": "made"
+  }
+ ],
  "w|соединение": [
   {
    "text": "На химии Иван получил новое соединение меди.",
@@ -82745,6 +83785,22 @@
    "ko": "내가 뭘 후회해야 하는데?",
    "blank": "сожалеть",
    "src": "tatoeba:8563156/marafon en:7927810/AlanF_US"
+  }
+ ],
+ "w|сожрать": [
+  {
+   "text": "Голуби сожрали крошки, которые Павел уронил у прилавка.",
+   "en": "The pigeons gobbled up the crumbs Pavel dropped by the stall.",
+   "ko": "비둘기들이 파벨이 가판대 옆에 흘린 부스러기를 먹어 치웠어요.",
+   "blank": "сожрали",
+   "src": "made"
+  },
+  {
+   "text": "Покупательница пожаловалась Елене, что собака сожрала её таблетки.",
+   "en": "A customer complained to Elena that her dog had wolfed down her tablets.",
+   "ko": "손님이 개가 자기 약을 먹어 치웠다고 옐레나에게 하소연했어요.",
+   "blank": "сожрала",
+   "src": "made"
   }
  ],
  "w|создавать": [
@@ -83110,6 +84166,22 @@
    "en": "For reasons of economy Tatiana chose to pick it up herself.",
    "ko": "타티야나는 돈을 아끼려고 직접 찾으러 가기로 했어요.",
    "blank": "соображений",
+   "src": "made"
+  }
+ ],
+ "w|сообща": [
+  {
+   "text": "Торговцы сообща помогли Павлу донести ящик до машины.",
+   "en": "The traders together helped Pavel carry the crate to his car.",
+   "ko": "상인들이 함께 파벨의 상자를 차까지 옮겨 줬어요.",
+   "blank": "сообща",
+   "src": "made"
+  },
+  {
+   "text": "Сотрудники аптеки сообща решили работать по воскресеньям, и Елена согласилась.",
+   "en": "The pharmacy staff jointly decided to work on Sundays, and Elena agreed.",
+   "ko": "약국 직원들이 함께 일요일에도 문을 열기로 했고 옐레나도 찬성했어요.",
+   "blank": "сообща",
    "src": "made"
   }
  ],
@@ -87363,6 +88435,22 @@
    "src": "made"
   }
  ],
+ "w|супергерой": [
+  {
+   "text": "Сын Алексея говорит, что папа в суде — как супергерой из комикса.",
+   "en": "Alexei's son says that in court his dad is like a comic-book superhero.",
+   "ko": "알렉세이의 아들은 법정에 선 아빠가 만화 속 슈퍼히어로 같다고 해요.",
+   "blank": "супергерой",
+   "src": "made"
+  },
+  {
+   "text": "Маленькие гости пришли на свадьбу Натальи в костюмах супергероев.",
+   "en": "The young guests came to Natalya's wedding in superhero costumes.",
+   "ko": "어린 하객들이 슈퍼히어로 옷을 입고 나탈리야의 결혼식에 왔어요.",
+   "blank": "супергероев",
+   "src": "made"
+  }
+ ],
  "w|супермаркет": [
   {
    "text": "Мама Никиты купила ему фрукты в супермаркете возле больницы.",
@@ -88836,6 +89924,22 @@
    "en": "Maria asked the farmer for his phone number so she could order honey.",
    "ko": "마리야는 꿀을 주문하려고 농부에게 전화번호를 물었어요.",
    "blank": "телефонный",
+   "src": "made"
+  }
+ ],
+ "w|телешоу": [
+  {
+   "text": "Процесс, где выступает Алексей, обсуждают даже в вечернем телешоу.",
+   "en": "The trial where Alexei is speaking is being discussed even on an evening TV show.",
+   "ko": "알렉세이가 변론하는 재판은 저녁 텔레비전 쇼에서도 다뤄져요.",
+   "blank": "телешоу",
+   "src": "made"
+  },
+  {
+   "text": "Наталья с женихом познакомились на съёмках одного телешоу.",
+   "en": "Natalya and the groom met during the filming of a TV show.",
+   "ko": "나탈리야와 신랑은 어느 텔레비전 쇼 촬영장에서 만났어요.",
+   "blank": "телешоу",
    "src": "made"
   }
  ],
@@ -90687,6 +91791,22 @@
    "src": "made"
   }
  ],
+ "w|триумф": [
+  {
+   "text": "Оправдательный приговор стал для Алексея настоящим триумфом.",
+   "en": "The acquittal was a real triumph for Alexei.",
+   "ko": "무죄 판결은 알렉세이에게 진정한 승리였어요.",
+   "blank": "триумфом",
+   "src": "made"
+  },
+  {
+   "text": "Первый танец Натальи прошёл с триумфом.",
+   "en": "Natalya's first dance was a triumph.",
+   "ko": "나탈리야의 첫 춤은 대성공이었어요.",
+   "blank": "триумфом",
+   "src": "made"
+  }
+ ],
  "w|трогательно": [
   {
    "text": "Вера трогательно извинилась перед Алексеем и принесла его любимый пирог.",
@@ -91064,6 +92184,22 @@
    "en": "The wind blew dry leaves back and forth across Natalya's yard.",
    "ko": "바람이 나탈리야네 마당에서 마른 잎을 이리저리 몰고 다녔어요.",
    "blank": "туда-сюда",
+   "src": "made"
+  }
+ ],
+ "w|туз": [
+  {
+   "text": "Новый свидетель оказался для Алексея тузом в рукаве.",
+   "en": "The new witness turned out to be Alexei's ace up his sleeve.",
+   "ko": "새 증인은 알렉세이의 비장의 카드였어요.",
+   "blank": "тузом",
+   "src": "made"
+  },
+  {
+   "text": "За карточным столом дедушка Натальи выложил козырного туза.",
+   "en": "At the card table Natalya's grandfather laid down the trump ace.",
+   "ko": "카드 탁자에서 나탈리야의 할아버지가 으뜸패 에이스를 내려놓았어요.",
+   "blank": "туза",
    "src": "made"
   }
  ],
@@ -93159,6 +94295,22 @@
    "src": "made"
   }
  ],
+ "w|укрепить": [
+  {
+   "text": "Павел помог фермеру укрепить навес над прилавком.",
+   "en": "Pavel helped the farmer reinforce the awning over the stall.",
+   "ko": "파벨은 농부가 가판대 차양을 튼튼하게 고치는 걸 도왔어요.",
+   "blank": "укрепить",
+   "src": "made"
+  },
+  {
+   "text": "Елена советует витамины, чтобы укрепить иммунитет.",
+   "en": "Elena recommends vitamins to strengthen immunity.",
+   "ko": "옐레나는 면역력을 키우려면 비타민을 먹으라고 권해요.",
+   "blank": "укрепить",
+   "src": "made"
+  }
+ ],
  "w|укрытие": [
   {
    "text": "Во время ливня Павел нашёл укрытие в городской библиотеке.",
@@ -94679,6 +95831,22 @@
    "src": "made"
   }
  ],
+ "w|устрица": [
+  {
+   "text": "Павел впервые попробовал свежую устрицу прямо у прилавка.",
+   "en": "Pavel tried a fresh oyster for the first time right at the stall.",
+   "ko": "파벨은 가판대 앞에서 싱싱한 굴을 처음 먹어 봤어요.",
+   "blank": "устрицу",
+   "src": "made"
+  },
+  {
+   "text": "Покупатель пришёл к Елене с сыпью после того, как съел устрицу.",
+   "en": "A customer came to Elena with a rash after eating an oyster.",
+   "ko": "손님이 굴을 먹고 두드러기가 나서 옐레나를 찾아왔어요.",
+   "blank": "устрицу",
+   "src": "made"
+  }
+ ],
  "w|устроить": [
   {
    "text": "Я всё устрою.",
@@ -94723,6 +95891,22 @@
    "ko": "언제 기기를 꺼야 하는지 모르겠어요.",
    "blank": "устройство",
    "src": "tatoeba:4792435/odexed en:1082445/Eldad"
+  }
+ ],
+ "w|уступить": [
+  {
+   "text": "Алексей не собирается уступить ни в одном пункте договора.",
+   "en": "Alexei has no intention of giving way on a single point of the contract.",
+   "ko": "알렉세이는 계약서 어느 조항에서도 물러설 생각이 없어요.",
+   "blank": "уступить",
+   "src": "made"
+  },
+  {
+   "text": "Сестра уговорила Наталью уступить ей букет.",
+   "en": "Natalya's sister talked her into giving her the bouquet.",
+   "ko": "언니가 나탈리야를 졸라서 부케를 받아 냈어요.",
+   "blank": "уступить",
+   "src": "made"
   }
  ],
  "w|усыновить": [
@@ -94850,6 +96034,22 @@
    "en": "Under the windows of Irina's new building a duck with ducklings swims in the pond.",
    "ko": "이리나의 새 집 창문 아래 연못에서 오리가 새끼들과 헤엄쳐요.",
    "blank": "утка",
+   "src": "made"
+  }
+ ],
+ "w|утомительно": [
+  {
+   "text": "Слушать многочасовые показания было утомительно даже для Алексея.",
+   "en": "Listening to hours of testimony was tiring even for Alexei.",
+   "ko": "몇 시간짜리 진술을 듣는 건 알렉세이에게도 지치는 일이었어요.",
+   "blank": "утомительно",
+   "src": "made"
+  },
+  {
+   "text": "Фотосессия оказалась утомительно долгой, и Наталья сняла туфли.",
+   "en": "The photo shoot turned out to be tiringly long, and Natalya took off her shoes.",
+   "ko": "사진 촬영이 지칠 만큼 길어서 나탈리야는 구두를 벗었어요.",
+   "blank": "утомительно",
    "src": "made"
   }
  ],
@@ -97156,6 +98356,22 @@
    "en": "The schoolchildren answered the guide's question in chorus, and Olga smiled.",
    "ko": "학생들이 해설사의 질문에 입을 모아 대답하자 올가는 미소 지었어요.",
    "blank": "хором",
+   "src": "made"
+  }
+ ],
+ "w|хоронить": [
+  {
+   "text": "Свидетель объяснил Алексею, что в тот день хоронил отца и не мог быть на месте.",
+   "en": "The witness told Alexei that on that day he was burying his father and couldn't have been at the scene.",
+   "ko": "증인은 그날 아버지 장례를 치르느라 현장에 있을 수 없었다고 알렉세이에게 말했어요.",
+   "blank": "хоронил",
+   "src": "made"
+  },
+  {
+   "text": "Друзья жениха в шутку хоронили его холостую жизнь, а Наталья смеялась.",
+   "en": "The groom's friends jokingly buried his bachelor life, and Natalya laughed.",
+   "ko": "신랑 친구들이 장난으로 그의 총각 시절 장례식을 치르자 나탈리야는 웃었어요.",
+   "blank": "хоронили",
    "src": "made"
   }
  ],
@@ -100465,6 +101681,22 @@
    "src": "made"
   }
  ],
+ "w|щекотно": [
+  {
+   "text": "Сын Павла засмеялся, потому что ему стало щекотно от пера на прилавке.",
+   "en": "Pavel's son laughed because the feather on the stall tickled him.",
+   "ko": "파벨의 아들은 가판대 위 깃털이 간지러워서 웃음을 터뜨렸어요.",
+   "blank": "щекотно",
+   "src": "made"
+  },
+  {
+   "text": "Малыш хихикал, потому что ему было щекотно, когда Елена мерила ему температуру.",
+   "en": "The toddler giggled because it tickled when Elena took his temperature.",
+   "ko": "옐레나가 체온을 재자 아기는 간지러워서 키득거렸어요.",
+   "blank": "щекотно",
+   "src": "made"
+  }
+ ],
  "w|щенок": [
   {
    "text": "Павел взял к морю щенка, и тот весь день гонялся за чайками.",
@@ -100764,6 +101996,22 @@
    "en": "A fellow passenger told Olga he was going to Moscow to have an old icon appraised.",
    "ko": "같은 칸 승객은 오래된 성화를 감정받으러 모스크바에 간다고 올가에게 말했어요.",
    "blank": "экспертизу",
+   "src": "made"
+  }
+ ],
+ "w|экстрасенс": [
+  {
+   "text": "Суд не принял во внимание слова экстрасенса, на которые ссылалась другая сторона.",
+   "en": "The court disregarded the words of a psychic that the other side cited.",
+   "ko": "법원은 상대편이 내세운 심령술사의 말을 받아들이지 않았어요.",
+   "blank": "экстрасенса",
+   "src": "made"
+  },
+  {
+   "text": "Тётя Натальи перед свадьбой зачем-то ходила к экстрасенсу.",
+   "en": "Before the wedding Natalya's aunt for some reason went to a psychic.",
+   "ko": "나탈리야의 이모는 결혼식 전에 왠지 심령술사를 찾아갔어요.",
+   "blank": "экстрасенсу",
    "src": "made"
   }
  ],
@@ -101291,6 +102539,22 @@
    "src": "made"
   }
  ],
+ "w|юрисдикция": [
+  {
+   "text": "Алексей доказал, что дело не входит в юрисдикцию этого суда.",
+   "en": "Alexei proved that the case doesn't fall under this court's jurisdiction.",
+   "ko": "알렉세이는 이 사건이 이 법원 관할이 아니라는 걸 증명했어요.",
+   "blank": "юрисдикцию",
+   "src": "made"
+  },
+  {
+   "text": "Наталья узнала, что брак за границей регистрируют по юрисдикции той страны.",
+   "en": "Natalya found out that a marriage abroad is registered under that country's jurisdiction.",
+   "ko": "나탈리야는 외국에서 하는 결혼은 그 나라 법에 따라 등록한다는 걸 알게 됐어요.",
+   "blank": "юрисдикции",
+   "src": "made"
+  }
+ ],
  "w|юрист": [
   {
    "text": "Сосед-юрист бесплатно объяснил Андрею договор аренды.",
@@ -101366,6 +102630,22 @@
    "en": "At the end of September Maria picked the last little apple from the branch.",
    "ko": "구월 말에 마리아는 가지에 남은 마지막 사과를 땄어요.",
    "blank": "яблочко",
+   "src": "made"
+  }
+ ],
+ "w|яблочный": [
+  {
+   "text": "Павел купил банку яблочного варенья у пожилой женщины.",
+   "en": "Pavel bought a jar of apple jam from an elderly woman.",
+   "ko": "파벨은 나이 든 여자에게서 사과잼 한 병을 샀어요.",
+   "blank": "яблочного",
+   "src": "made"
+  },
+  {
+   "text": "Елена объяснила, как пить яблочный уксус и не навредить желудку.",
+   "en": "Elena explained how to drink apple cider vinegar without harming the stomach.",
+   "ko": "옐레나는 위를 상하게 하지 않고 사과 식초를 마시는 법을 설명했어요.",
+   "blank": "яблочный",
    "src": "made"
   }
  ],

@@ -309,6 +309,22 @@
    "src": "made"
   }
  ],
+ "w|abitabile": [
+  {
+   "text": "Il geometra conferma a Paolo che la soffitta è abitabile.",
+   "en": "The surveyor confirms to Paolo that the attic is habitable.",
+   "ko": "측량사는 파올로에게 다락이 사람이 살 수 있는 곳이라고 확인해 줘요.",
+   "blank": "abitabile",
+   "src": "made"
+  },
+  {
+   "text": "Il retro della farmacia di Francesca è piccolo, ma abitabile in caso di turno di notte.",
+   "en": "The back room of Francesca's pharmacy is small, but livable for a night shift.",
+   "ko": "프란체스카 약국의 뒷방은 작지만 야간 근무 때 지낼 만해요.",
+   "blank": "abitabile",
+   "src": "made"
+  }
+ ],
  "w|abitante": [
   {
    "text": "Paolo conosce quasi ogni abitante del palazzo per nome.",
@@ -1475,6 +1491,22 @@
    "blank": "adatto"
   }
  ],
+ "w|addebitare": [
+  {
+   "text": "Il fratello ha fatto addebitare la cena sul conto di Andrea, e da lì nasce la lite.",
+   "en": "His brother had the dinner charged to Andrea's account, and that's where the quarrel starts.",
+   "ko": "형이 저녁값을 안드레아 계좌로 달아 놓으면서 다툼이 시작돼요.",
+   "blank": "addebitare",
+   "src": "made"
+  },
+  {
+   "text": "Il ristorante vuole addebitare un supplemento per la torta portata da Martina.",
+   "en": "The restaurant wants to charge a surcharge for the cake Martina brought.",
+   "ko": "식당은 마르티나가 가져온 케이크에 추가 요금을 물리려고 해요.",
+   "blank": "addebitare",
+   "src": "made"
+  }
+ ],
  "w|addestramento": [
   {
    "text": "L'addestramento dei cani richiede pazienza.",
@@ -2243,6 +2275,22 @@
    "blank": "affitto"
   }
  ],
+ "w|affittuario": [
+  {
+   "text": "Paolo conosce l'affittuario del piano di sotto, un ragazzo molto gentile.",
+   "en": "Paolo meets the tenant downstairs, a very kind young man.",
+   "ko": "파올로는 아래층 세입자를 만나는데, 아주 친절한 청년이에요.",
+   "blank": "affittuario",
+   "src": "made"
+  },
+  {
+   "text": "L'affittuario del locale accanto chiede a Francesca un consiglio per l'allergia.",
+   "en": "The tenant of the shop next door asks Francesca for advice about his allergy.",
+   "ko": "옆 가게 세입자가 프란체스카에게 알레르기 상담을 해요.",
+   "blank": "affittuario",
+   "src": "made"
+  }
+ ],
  "w|affliggere": [
   {
    "text": "Dopo otto ore alla scrivania, il solito mal di schiena affligge Marco.",
@@ -2256,6 +2304,22 @@
    "en": "After every long trip jet lag plagues Giulia for days.",
    "ko": "긴 여행을 하고 나면 줄리아는 며칠씩 시차 때문에 힘들어해요.",
    "blank": "affligge",
+   "src": "made"
+  }
+ ],
+ "w|afflitto": [
+  {
+   "text": "La sorella di Andrea è afflitta perché pensa di averlo perso per sempre.",
+   "en": "Andrea's sister is distressed because she thinks she has lost him forever.",
+   "ko": "안드레아의 누나는 동생을 영영 잃은 줄 알고 괴로워해요.",
+   "blank": "afflitta",
+   "src": "made"
+  },
+  {
+   "text": "Un amico di Martina è afflitto per la chiusura della sua libreria.",
+   "en": "A friend of Martina's is distressed over the closing of his bookshop.",
+   "ko": "마르티나의 친구 하나는 서점 문을 닫게 되어 괴로워해요.",
+   "blank": "afflitto",
    "src": "made"
   }
  ],
@@ -2640,6 +2704,22 @@
    "en": "A child was waving from the platform, and Chiara waved back.",
    "ko": "아이가 승강장에서 손을 흔들자 키아라도 손을 흔들어 줬어요.",
    "blank": "agitava",
+   "src": "made"
+  }
+ ],
+ "w|agitarsi": [
+  {
+   "text": "La madre dice ad Andrea di non agitarsi e di ascoltare prima la sorella.",
+   "en": "His mother tells Andrea not to get worked up and to listen to his sister first.",
+   "ko": "엄마는 안드레아에게 흥분하지 말고 먼저 누나 말을 들어 보라고 해요.",
+   "blank": "agitarsi",
+   "src": "made"
+  },
+  {
+   "text": "Martina vede l'amica agitarsi perché il marito non è ancora arrivato.",
+   "en": "Martina sees her friend getting anxious because her husband hasn't arrived yet.",
+   "ko": "마르티나는 남편이 아직 안 와서 안절부절못하는 친구를 봐요.",
+   "blank": "agitarsi",
    "src": "made"
   }
  ],
@@ -3829,6 +3909,22 @@
    "src": "made"
   }
  ],
+ "w|amareggiato": [
+  {
+   "text": "Andrea è amareggiato perché il fratello non gli ha creduto.",
+   "en": "Andrea is embittered because his brother didn't believe him.",
+   "ko": "형이 자기 말을 믿어 주지 않아서 안드레아는 씁쓸해해요.",
+   "blank": "amareggiato",
+   "src": "made"
+  },
+  {
+   "text": "Martina consola un compagno amareggiato dopo la fine del suo matrimonio.",
+   "en": "Martina comforts a classmate who is bitter after the end of his marriage.",
+   "ko": "마르티나는 결혼 생활이 끝나 씁쓸해하는 동창을 위로해요.",
+   "blank": "amareggiato",
+   "src": "made"
+  }
+ ],
  "w|amarezza": [
   {
    "text": "Marco parla senza amarezza del licenziamento che lo ha portato qui.",
@@ -4581,6 +4677,22 @@
    "src": "made"
   }
  ],
+ "w|androne": [
+  {
+   "text": "Gli scatoloni restano per un giorno intero nell'androne del palazzo, aspettando Paolo.",
+   "en": "The boxes stay a whole day in the building's entrance hall, waiting for Paolo.",
+   "ko": "상자들이 하루 종일 건물 현관 홀에서 파올로를 기다려요.",
+   "blank": "androne",
+   "src": "made"
+  },
+  {
+   "text": "La farmacia di Francesca è al piano terra e si entra dall'androne del palazzo.",
+   "en": "Francesca's pharmacy is on the ground floor and you enter from the building's hall.",
+   "ko": "프란체스카의 약국은 일 층이라 건물 현관 홀로 들어가요.",
+   "blank": "androne",
+   "src": "made"
+  }
+ ],
  "w|aneddoto": [
   {
    "text": "Alla cena di fine anno Stefano racconta un aneddoto sul vecchio sindaco.",
@@ -5195,6 +5307,22 @@
    "src": "made"
   }
  ],
+ "w|antipatia": [
+  {
+   "text": "La vecchia antipatia tra Andrea e il cognato torna fuori durante il pranzo.",
+   "en": "The old dislike between Andrea and his brother-in-law resurfaces during lunch.",
+   "ko": "점심을 먹다가 안드레아와 매형 사이의 오랜 반감이 다시 드러나요.",
+   "blank": "antipatia",
+   "src": "made"
+  },
+  {
+   "text": "Martina confessa ridendo l'antipatia che aveva per la professoressa di latino.",
+   "en": "Martina laughingly confesses the dislike she had for the Latin teacher.",
+   "ko": "마르티나는 라틴어 선생님을 싫어했다고 웃으며 털어놓아요.",
+   "blank": "antipatia",
+   "src": "made"
+  }
+ ],
  "w|antipatico": [
   {
    "text": "Quel ragazzo è davvero antipatico.",
@@ -5251,6 +5379,22 @@
    "en": "My grandfather is elderly but still active.",
    "ko": "할아버지는 연세가 있어도 여전히 활발하셔.",
    "blank": "anziano"
+  }
+ ],
+ "w|apatia": [
+  {
+   "text": "Dopo il litigio Andrea cade in una specie di apatia e non esce di casa.",
+   "en": "After the quarrel Andrea falls into a kind of apathy and doesn't leave the house.",
+   "ko": "다툼 뒤 안드레아는 무기력해져서 집 밖에 나가지 않아요.",
+   "blank": "apatia",
+   "src": "made"
+  },
+  {
+   "text": "L'apatia di Paolo alla festa preoccupa Martina, che gli chiede se sta bene.",
+   "en": "Paolo's apathy at the party worries Martina, who asks him if he's okay.",
+   "ko": "파티에서 파올로가 시큰둥한 게 걱정돼서 마르티나는 괜찮냐고 물어요.",
+   "blank": "apatia",
+   "src": "made"
   }
  ],
  "w|ape": [
@@ -5733,6 +5877,22 @@
    "src": "made"
   }
  ],
+ "w|apprensione": [
+  {
+   "text": "La madre segue con apprensione la telefonata tra Andrea e il fratello.",
+   "en": "Their mother follows the phone call between Andrea and his brother with apprehension.",
+   "ko": "엄마는 안드레아와 형의 통화를 조마조마하게 지켜봐요.",
+   "blank": "apprensione",
+   "src": "made"
+  },
+  {
+   "text": "Martina aspetta con apprensione la risposta dell'amica malata all'invito.",
+   "en": "Martina waits anxiously for her sick friend's reply to the invitation.",
+   "ko": "마르티나는 아픈 친구가 초대에 답하기를 조마조마하게 기다려요.",
+   "blank": "apprensione",
+   "src": "made"
+  }
+ ],
  "w|apprezzare": [
   {
    "text": "Apprezzo molto il tuo aiuto.",
@@ -6054,6 +6214,22 @@
    "en": "Sara waters a small potted shrub next to the printer.",
    "ko": "사라는 프린터 옆 화분에 심은 작은 관목에 물을 줘요.",
    "blank": "arbusto",
+   "src": "made"
+  }
+ ],
+ "w|archeologia": [
+  {
+   "text": "Andrea e il fratello hanno studiato entrambi archeologia, ma non si parlano più di scavi.",
+   "en": "Andrea and his brother both studied archaeology, but they no longer talk about digs.",
+   "ko": "안드레아와 형은 둘 다 고고학을 전공했지만 이제는 발굴 이야기를 하지 않아요.",
+   "blank": "archeologia",
+   "src": "made"
+  },
+  {
+   "text": "Un vecchio compagno racconta a Martina che ora lavora nell'archeologia subacquea.",
+   "en": "An old classmate tells Martina that he now works in underwater archaeology.",
+   "ko": "옛 동창 하나가 마르티나에게 지금 수중 고고학 일을 한다고 이야기해요.",
+   "blank": "archeologia",
    "src": "made"
   }
  ],
@@ -6423,6 +6599,22 @@
    "blank": "arrabbia"
   }
  ],
+ "w|arrabbiarsi": [
+  {
+   "text": "Andrea promette a se stesso di non arrabbiarsi quando vedrà la sorella.",
+   "en": "Andrea promises himself not to get angry when he sees his sister.",
+   "ko": "안드레아는 누나를 만나면 화내지 않겠다고 다짐해요.",
+   "blank": "arrabbiarsi",
+   "src": "made"
+  },
+  {
+   "text": "Martina dice a Giorgio di non arrabbiarsi per una vecchia battuta.",
+   "en": "Martina tells Giorgio not to get angry over an old joke.",
+   "ko": "마르티나는 조르조에게 옛날 농담 하나로 화내지 말라고 해요.",
+   "blank": "arrabbiarsi",
+   "src": "made"
+  }
+ ],
  "w|arrabbiato": [
   {
    "text": "È arrabbiato perché ho dimenticato.",
@@ -6482,6 +6674,38 @@
    "en": "Every autumn Martina changes the living room furnishings a little.",
    "ko": "가을마다 마르티나는 거실 가구 배치를 조금 바꿔요.",
    "blank": "arredamento",
+   "src": "made"
+  }
+ ],
+ "w|arredare": [
+  {
+   "text": "Paolo vuole arredare il soggiorno con pochi mobili semplici.",
+   "en": "Paolo wants to furnish the living room with a few simple pieces.",
+   "ko": "파올로는 거실을 간단한 가구 몇 개로만 꾸미고 싶어 해요.",
+   "blank": "arredare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca chiede all'architetto di arredare la farmacia in stile moderno.",
+   "en": "Francesca asks the architect to furnish the pharmacy in a modern style.",
+   "ko": "프란체스카는 건축가에게 약국을 현대식으로 꾸며 달라고 해요.",
+   "blank": "arredare",
+   "src": "made"
+  }
+ ],
+ "w|arredato": [
+  {
+   "text": "Paolo preferisce un appartamento già arredato per non comprare mobili.",
+   "en": "Paolo prefers an already furnished apartment so he doesn't have to buy furniture.",
+   "ko": "파올로는 가구를 사지 않으려고 가구가 갖춰진 집을 더 좋아해요.",
+   "blank": "arredato",
+   "src": "made"
+  },
+  {
+   "text": "Francesca affitta alla nuova collega un monolocale arredato vicino alla piazza.",
+   "en": "Francesca rents her new colleague a furnished studio near the square.",
+   "ko": "프란체스카는 새 동료에게 광장 근처의 가구 딸린 원룸을 세 줘요.",
+   "blank": "arredato",
    "src": "made"
   }
  ],
@@ -6884,6 +7108,22 @@
    "en": "In the museum shop Chiara sells handmade ceramics.",
    "ko": "키아라는 박물관 기념품점에서 수공예 도자기를 팔아요.",
    "blank": "artigianale",
+   "src": "made"
+  }
+ ],
+ "w|artigiano": [
+  {
+   "text": "Un artigiano del paese ha forgiato a mano i coltelli di Stefano.",
+   "en": "A local craftsman hand-forged Stefano's knives.",
+   "ko": "동네 장인이 스테파노의 칼을 손으로 벼려 만들었어요.",
+   "blank": "artigiano",
+   "src": "made"
+  },
+  {
+   "text": "Un artigiano restaura il vecchio portone di legno del palazzo di Laura.",
+   "en": "A craftsman restores the old wooden front door of Laura's building.",
+   "ko": "장인 한 명이 라우라네 건물의 낡은 나무 대문을 복원해요.",
+   "blank": "artigiano",
    "src": "made"
   }
  ],
@@ -9813,6 +10053,22 @@
    "blank": "banca"
   }
  ],
+ "w|bancarella": [
+  {
+   "text": "Paolo vende i mobili che non gli servono a una bancarella del mercato dell'usato.",
+   "en": "Paolo sells the furniture he doesn't need to a stall at the second-hand market.",
+   "ko": "파올로는 필요 없는 가구를 중고 시장 노점에 팔아요.",
+   "blank": "bancarella",
+   "src": "made"
+  },
+  {
+   "text": "Il sabato Francesca compra le erbe aromatiche da una bancarella del mercato.",
+   "en": "On Saturdays Francesca buys herbs from a market stall.",
+   "ko": "토요일마다 프란체스카는 시장 노점에서 허브를 사요.",
+   "blank": "bancarella",
+   "src": "made"
+  }
+ ],
  "w|bancario": [
   {
    "text": "Per il pezzo sulle banche, Matteo parla con un bancario in pensione.",
@@ -11110,6 +11366,22 @@
    "en": "The mayor presents the town budget to Giulia and the other residents.",
    "ko": "시장이 줄리아와 다른 주민들에게 마을 예산을 발표해요.",
    "blank": "bilancio",
+   "src": "made"
+  }
+ ],
+ "w|bilocale": [
+  {
+   "text": "Paolo lascia il suo bilocale in città per una casa con giardino.",
+   "en": "Paolo leaves his two-room flat in the city for a house with a garden.",
+   "ko": "파올로는 시내 투룸을 떠나 정원 있는 집으로 가요.",
+   "blank": "bilocale",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha comprato un bilocale per la figlia che studia a Pavia.",
+   "en": "Francesca bought a two-room flat for her daughter who studies in Pavia.",
+   "ko": "프란체스카는 파비아에서 공부하는 딸을 위해 투룸을 샀어요.",
+   "blank": "bilocale",
    "src": "made"
   }
  ],
@@ -13741,6 +14013,22 @@
    "src": "made"
   }
  ],
+ "w|candidarsi": [
+  {
+   "text": "Stefano pensa di candidarsi per un posto da capocuoco a Milano.",
+   "en": "Stefano is thinking of applying for a head chef job in Milan.",
+   "ko": "스테파노는 밀라노의 주방장 자리에 지원할까 생각해요.",
+   "blank": "candidarsi",
+   "src": "made"
+  },
+  {
+   "text": "Laura decide di candidarsi come amministratrice del condominio.",
+   "en": "Laura decides to put herself forward as the building's manager.",
+   "ko": "라우라는 아파트 관리인으로 나서기로 해요.",
+   "blank": "candidarsi",
+   "src": "made"
+  }
+ ],
  "w|candidato": [
   {
    "text": "Un candidato al consiglio comunale è venuto in aula a sentire la sentenza, ha notato Andrea.",
@@ -14365,6 +14653,22 @@
    "src": "made"
   }
  ],
+ "w|caraffa": [
+  {
+   "text": "La prima sera Paolo beve una caraffa di vino con i nuovi vicini.",
+   "en": "On the first evening Paolo drinks a carafe of wine with the new neighbors.",
+   "ko": "첫날 저녁 파올로는 새 이웃들과 와인 한 병을 나눠 마셔요.",
+   "blank": "caraffa",
+   "src": "made"
+  },
+  {
+   "text": "Sul bancone Francesca tiene sempre una caraffa d'acqua per chi deve prendere una pastiglia.",
+   "en": "On the counter Francesca always keeps a jug of water for anyone who needs to take a pill.",
+   "ko": "프란체스카는 알약을 먹어야 하는 손님을 위해 계산대에 늘 물 주전자를 둬요.",
+   "blank": "caraffa",
+   "src": "made"
+  }
+ ],
  "w|caramella": [
   {
    "text": "Il bambino chiede una caramella dopo pranzo.",
@@ -14484,6 +14788,22 @@
    "en": "At the entrance Sara noticed a defibrillator for cardiac emergencies.",
    "ko": "사라는 입구에서 심장 응급 상황용 제세동기를 봤어요.",
    "blank": "cardiache",
+   "src": "made"
+  }
+ ],
+ "w|cardigan": [
+  {
+   "text": "Tra gli scatoloni Paolo ritrova il cardigan che gli aveva fatto la nonna.",
+   "en": "Among the boxes Paolo finds the cardigan his grandmother made him.",
+   "ko": "파올로는 상자들 사이에서 할머니가 떠 주신 카디건을 찾아내요.",
+   "blank": "cardigan",
+   "src": "made"
+  },
+  {
+   "text": "Sotto il camice Francesca porta un cardigan grigio perché la farmacia è fredda.",
+   "en": "Under her white coat Francesca wears a grey cardigan because the pharmacy is cold.",
+   "ko": "약국이 추워서 프란체스카는 가운 안에 회색 카디건을 입어요.",
+   "blank": "cardigan",
    "src": "made"
   }
  ],
@@ -14617,6 +14937,22 @@
    "en": "Grate the carrot for the soup.",
    "ko": "수프용으로 당근을 갈아.",
    "blank": "carota"
+  }
+ ],
+ "w|carrello": [
+  {
+   "text": "Stefano spinge il carrello dei piatti sporchi verso la lavastoviglie.",
+   "en": "Stefano pushes the trolley of dirty dishes towards the dishwasher.",
+   "ko": "스테파노는 더러운 접시가 담긴 카트를 식기세척기 쪽으로 밀어요.",
+   "blank": "carrello",
+   "src": "made"
+  },
+  {
+   "text": "Laura porta la spesa su per le scale con un carrello a rotelle.",
+   "en": "Laura carries the shopping up the stairs with a wheeled trolley.",
+   "ko": "라우라는 바퀴 달린 장바구니 카트로 계단 위까지 장 본 걸 옮겨요.",
+   "blank": "carrello",
+   "src": "made"
   }
  ],
  "w|carretto": [
@@ -14828,6 +15164,22 @@
    "en": "Under the beach umbrella a retired housewife tells Sara the history of the town.",
    "ko": "파라솔 아래에서 은퇴한 주부가 사라에게 마을 이야기를 들려줘요.",
    "blank": "casalinga",
+   "src": "made"
+  }
+ ],
+ "w|casalingo": [
+  {
+   "text": "Paolo trova in cantina tanti attrezzi per il fai da te casalingo.",
+   "en": "Paolo finds lots of tools for home DIY in the cellar.",
+   "ko": "파올로는 지하실에서 집안일용 공구를 잔뜩 발견해요.",
+   "blank": "casalingo",
+   "src": "made"
+  },
+  {
+   "text": "Francesca consiglia un rimedio casalingo con miele e limone per il mal di gola.",
+   "en": "Francesca recommends a home remedy with honey and lemon for a sore throat.",
+   "ko": "프란체스카는 목감기에 꿀과 레몬을 쓰는 민간요법을 권해요.",
+   "blank": "casalingo",
    "src": "made"
   }
  ],
@@ -15453,6 +15805,22 @@
    "en": "Try to get something useful out of this lesson.",
    "ko": "이 수업에서 뭔가 건져 보려고 해.",
    "blank": "cavare"
+  }
+ ],
+ "w|cavatappi": [
+  {
+   "text": "La prima cosa che Paolo cerca negli scatoloni è il cavatappi.",
+   "en": "The first thing Paolo looks for in the boxes is the corkscrew.",
+   "ko": "파올로가 상자에서 제일 먼저 찾는 건 와인 따개예요.",
+   "blank": "cavatappi",
+   "src": "made"
+  },
+  {
+   "text": "Per la cena di Natale Francesca regala ai colleghi un cavatappi d'argento.",
+   "en": "For the Christmas dinner Francesca gives her colleagues a silver corkscrew.",
+   "ko": "크리스마스 저녁 모임에 프란체스카는 동료들에게 은색 와인 따개를 선물해요.",
+   "blank": "cavatappi",
+   "src": "made"
   }
  ],
  "w|caverna": [
@@ -16143,6 +16511,22 @@
    "src": "made"
   }
  ],
+ "w|cestino": [
+  {
+   "text": "Paolo butta le vecchie bollette nel cestino prima di partire.",
+   "en": "Paolo throws the old bills in the wastebasket before leaving.",
+   "ko": "떠나기 전에 파올로는 옛 고지서들을 휴지통에 버려요.",
+   "blank": "cestino",
+   "src": "made"
+  },
+  {
+   "text": "Francesca svuota il cestino dei medicinali scaduti in un contenitore apposito.",
+   "en": "Francesca empties the basket of expired medicines into a special container.",
+   "ko": "프란체스카는 유통기한 지난 약을 모은 바구니를 전용 수거함에 비워요.",
+   "blank": "cestino",
+   "src": "made"
+  }
+ ],
  "w|cetriolo": [
   {
    "text": "Il panino preferito di Davide è con tonno, pomodoro e cetriolo.",
@@ -16627,6 +17011,22 @@
    "blank": "Ci"
   }
  ],
+ "w|ciabatta": [
+  {
+   "text": "Paolo cerca la ciabatta che ha perso tra le scatole.",
+   "en": "Paolo looks for the slipper he lost among the boxes.",
+   "ko": "파올로는 상자들 사이에서 잃어버린 슬리퍼 한 짝을 찾아요.",
+   "blank": "ciabatta",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente entra in farmacia con una ciabatta sola e Francesca trattiene un sorriso.",
+   "en": "A customer comes into the pharmacy wearing only one slipper and Francesca holds back a smile.",
+   "ko": "한 손님이 슬리퍼 한 짝만 신고 약국에 들어오자 프란체스카는 웃음을 참아요.",
+   "blank": "ciabatta",
+   "src": "made"
+  }
+ ],
  "w|ciambella": [
   {
    "text": "La mattina presto Simone fa colazione con una ciambella e un cappuccino.",
@@ -16746,6 +17146,22 @@
    "en": "In the children's book in Elena's window, the hero is a chubby, greedy bear.",
    "ko": "엘레나 약국 진열창의 동화책 주인공은 먹보 뚱보 곰이에요.",
    "blank": "ciccione",
+   "src": "made"
+  }
+ ],
+ "w|ciclista": [
+  {
+   "text": "Un ciclista si ferma ad aiutare Paolo a portare il divano.",
+   "en": "A cyclist stops to help Paolo carry the sofa.",
+   "ko": "지나가던 자전거 탄 사람이 멈춰서 파올로가 소파 옮기는 걸 도와요.",
+   "blank": "ciclista",
+   "src": "made"
+  },
+  {
+   "text": "Un ciclista caduto entra in farmacia e Francesca gli disinfetta il ginocchio.",
+   "en": "A cyclist who fell comes into the pharmacy and Francesca disinfects his knee.",
+   "ko": "넘어진 자전거 선수가 약국에 들어오자 프란체스카가 무릎을 소독해 줘요.",
+   "blank": "ciclista",
    "src": "made"
   }
  ],
@@ -17311,6 +17727,22 @@
    "src": "made"
   }
  ],
+ "w|citofono": [
+  {
+   "text": "Il citofono suona e Paolo apre ai traslocatori.",
+   "en": "The intercom rings and Paolo lets the movers in.",
+   "ko": "인터폰이 울리자 파올로가 이삿짐센터 사람들에게 문을 열어 줘요.",
+   "blank": "citofono",
+   "src": "made"
+  },
+  {
+   "text": "Di notte i clienti suonano il citofono della farmacia di turno e Francesca scende.",
+   "en": "At night customers ring the intercom of the on-duty pharmacy and Francesca goes down.",
+   "ko": "밤이면 손님들이 당번 약국 인터폰을 누르고, 프란체스카가 내려가요.",
+   "blank": "citofono",
+   "src": "made"
+  }
+ ],
  "w|città": [
   {
    "text": "In questa città si vive bene.",
@@ -17557,6 +17989,22 @@
    "src": "made"
   }
  ],
+ "w|clessidra": [
+  {
+   "text": "Andrea trova la vecchia clessidra con cui giocava da bambino insieme al fratello.",
+   "en": "Andrea finds the old hourglass he used to play with as a child with his brother.",
+   "ko": "안드레아는 어릴 때 형과 함께 갖고 놀던 낡은 모래시계를 찾아내요.",
+   "blank": "clessidra",
+   "src": "made"
+  },
+  {
+   "text": "Martina regala alla padrona di casa una clessidra di vetro soffiato.",
+   "en": "Martina gives the hostess an hourglass of blown glass.",
+   "ko": "마르티나는 집주인에게 입으로 불어 만든 유리 모래시계를 선물해요.",
+   "blank": "clessidra",
+   "src": "made"
+  }
+ ],
  "w|cliente": [
   {
    "text": "Il cliente ha cambiato idea.",
@@ -17771,6 +18219,22 @@
    "en": "There was a long queue at the ticket office.",
    "ko": "매표소에 긴 줄이 있었어.",
    "blank": "coda"
+  }
+ ],
+ "w|codardia": [
+  {
+   "text": "Stefano ammette che è stata codardia non dire allo chef che il pesce non era fresco.",
+   "en": "Stefano admits it was cowardice not to tell the chef the fish wasn't fresh.",
+   "ko": "스테파노는 생선이 신선하지 않다고 셰프에게 말하지 않은 건 비겁했다고 인정해요.",
+   "blank": "codardia",
+   "src": "made"
+  },
+  {
+   "text": "Laura accusa di codardia l'amministratore che non risponde mai alle lamentele.",
+   "en": "Laura accuses the building manager of cowardice for never replying to complaints.",
+   "ko": "라우라는 민원에 답하지 않는 관리인을 비겁하다고 비난해요.",
+   "blank": "codardia",
+   "src": "made"
   }
  ],
  "w|codardo": [
@@ -19195,6 +19659,22 @@
    "src": "made"
   }
  ],
+ "w|comparto": [
+  {
+   "text": "Il comparto della ristorazione cerca cuochi, e Stefano riceve molte offerte.",
+   "en": "The catering sector is looking for cooks, and Stefano receives many offers.",
+   "ko": "외식 업계가 요리사를 구하고 있어서 스테파노는 제안을 많이 받아요.",
+   "blank": "comparto",
+   "src": "made"
+  },
+  {
+   "text": "Il marito della vicina lavora nel comparto edile e ripara il muro del cortile.",
+   "en": "The neighbor's husband works in the construction sector and repairs the courtyard wall.",
+   "ko": "이웃 아주머니 남편은 건설 업계에서 일해서 마당 담을 고쳐요.",
+   "blank": "comparto",
+   "src": "made"
+  }
+ ],
  "w|compassione": [
   {
    "text": "Simone ammira la compassione con cui Marco si prende cura del padre anziano.",
@@ -19511,6 +19991,22 @@
    "en": "He revealed the accomplice's name.",
    "ko": "그는 공범의 이름을 털어놨어.",
    "blank": "complice"
+  }
+ ],
+ "w|complicità": [
+  {
+   "text": "Tra Paolo e il fratello c'è una complicità che rende il trasloco quasi divertente.",
+   "en": "There's a bond between Paolo and his brother that makes the move almost fun.",
+   "ko": "파올로와 동생은 손발이 잘 맞아서 이사가 거의 즐거울 정도예요.",
+   "blank": "complicità",
+   "src": "made"
+  },
+  {
+   "text": "Tra Francesca e la sua collega c'è una grande complicità dopo tanti anni insieme.",
+   "en": "There's a strong bond between Francesca and her colleague after so many years together.",
+   "ko": "프란체스카와 동료는 오랜 세월 함께해서 손발이 척척 맞아요.",
+   "blank": "complicità",
+   "src": "made"
   }
  ],
  "w|complimento": [
@@ -21601,6 +22097,22 @@
    "src": "made"
   }
  ],
+ "w|contentezza": [
+  {
+   "text": "Quando la sorella lo abbraccia, Andrea sente una contentezza che non provava da mesi.",
+   "en": "When his sister hugs him, Andrea feels a happiness he hadn't felt for months.",
+   "ko": "누나가 안아 주자 안드레아는 몇 달 만에 기쁨을 느껴요.",
+   "blank": "contentezza",
+   "src": "made"
+  },
+  {
+   "text": "La contentezza di Martina si vede da come ride per tutta la sera.",
+   "en": "Martina's happiness shows in the way she laughs all evening.",
+   "ko": "저녁 내내 웃는 걸 보면 마르티나가 얼마나 기쁜지 알 수 있어요.",
+   "blank": "contentezza",
+   "src": "made"
+  }
+ ],
  "w|contento": [
   {
    "text": "Sono contento di rivederti.",
@@ -22231,6 +22743,22 @@
    "src": "made"
   }
  ],
+ "w|coordinamento": [
+  {
+   "text": "Stefano si occupa del coordinamento tra la cucina e la sala.",
+   "en": "Stefano handles the coordination between the kitchen and the dining room.",
+   "ko": "스테파노는 주방과 홀 사이의 조율을 맡아요.",
+   "blank": "coordinamento",
+   "src": "made"
+  },
+  {
+   "text": "Laura si occupa del coordinamento dei turni per pulire le scale.",
+   "en": "Laura handles the coordination of the stair-cleaning rota.",
+   "ko": "라우라는 계단 청소 순번 조율을 맡아요.",
+   "blank": "coordinamento",
+   "src": "made"
+  }
+ ],
  "w|coordinare": [
   {
    "text": "Questa settimana tocca a Paolo coordinare i giornalisti della cronaca.",
@@ -22665,6 +23193,22 @@
    "blank": "corridoio"
   }
  ],
+ "w|corriera": [
+  {
+   "text": "Andrea prende la corriera per andare a parlare con la sorella di persona.",
+   "en": "Andrea takes the coach to go talk to his sister in person.",
+   "ko": "안드레아는 누나와 직접 이야기하려고 시외버스를 타요.",
+   "blank": "corriera",
+   "src": "made"
+  },
+  {
+   "text": "Martina arriva alla festa con la corriera del sabato, come ai tempi della scuola.",
+   "en": "Martina arrives at the party on the Saturday coach, just like in their school days.",
+   "ko": "마르티나는 학창 시절처럼 토요일 시외버스를 타고 파티에 와요.",
+   "blank": "corriera",
+   "src": "made"
+  }
+ ],
  "w|corriere": [
   {
    "text": "Il corriere consegna a Marco una scatola di tartufi freschi.",
@@ -22850,6 +23394,22 @@
    "en": "The painting depicts the courtship between two young nobles, Chiara explains.",
    "ko": "키아라는 그 그림이 두 젊은 귀족의 구애를 담았다고 설명해요.",
    "blank": "corteggiamento",
+   "src": "made"
+  }
+ ],
+ "w|corteggiare": [
+  {
+   "text": "Il pasticcere cerca di corteggiare la cameriera con dolci sempre nuovi, e Stefano ride.",
+   "en": "The pastry chef tries to woo the waitress with ever-new desserts, and Stefano laughs.",
+   "ko": "제과사가 새 디저트로 종업원에게 구애하는 걸 보고 스테파노가 웃어요.",
+   "blank": "corteggiare",
+   "src": "made"
+  },
+  {
+   "text": "Il ragazzo del terzo piano prova a corteggiare Laura lasciandole fiori sullo zerbino.",
+   "en": "The young man on the third floor tries to court Laura by leaving flowers on her doormat.",
+   "ko": "삼 층 청년이 라우라 현관 매트에 꽃을 놓고 가며 구애해요.",
+   "blank": "corteggiare",
    "src": "made"
   }
  ],
@@ -23170,6 +23730,22 @@
    "en": "Elena chooses a hotel on the coastal path so she can walk every morning.",
    "ko": "엘레나는 매일 아침 걷기 위해 해안 길에 있는 호텔을 골라요.",
    "blank": "costiero",
+   "src": "made"
+  }
+ ],
+ "w|costituzionale": [
+  {
+   "text": "Il cuoco anziano racconta a Stefano di aver cucinato per un giudice della Corte costituzionale.",
+   "en": "The old cook tells Stefano he once cooked for a judge of the Constitutional Court.",
+   "ko": "나이 든 요리사는 스테파노에게 헌법재판소 재판관에게 요리를 해 준 적이 있다고 이야기해요.",
+   "blank": "costituzionale",
+   "src": "made"
+  },
+  {
+   "text": "Il vicino di Laura insegna diritto costituzionale all'università.",
+   "en": "Laura's neighbor teaches constitutional law at the university.",
+   "ko": "라우라의 이웃은 대학에서 헌법을 가르쳐요.",
+   "blank": "costituzionale",
    "src": "made"
   }
  ],
@@ -26809,6 +27385,22 @@
    "blank": "difficoltà"
   }
  ],
+ "w|diffidente": [
+  {
+   "text": "Dopo il malinteso Andrea è diffidente anche quando la sorella gli chiede scusa.",
+   "en": "After the misunderstanding Andrea is wary even when his sister apologizes.",
+   "ko": "오해가 생긴 뒤로 안드레아는 누나가 사과해도 경계해요.",
+   "blank": "diffidente",
+   "src": "made"
+  },
+  {
+   "text": "All'inizio Martina è diffidente verso il nuovo marito della sua amica.",
+   "en": "At first Martina is wary of her friend's new husband.",
+   "ko": "처음에 마르티나는 친구의 새 남편을 경계해요.",
+   "blank": "diffidente",
+   "src": "made"
+  }
+ ],
  "w|diffondere": [
   {
    "text": "La radio locale ha diffuso un avviso di neve, così Simone ha montato le catene.",
@@ -26991,6 +27583,22 @@
    "text": "Il fratello di Laura vuole dimettersi dal lavoro col nuovo anno.",
    "en": "Laura's brother wants to resign from his job with the new year.",
    "ko": "라우라의 동생은 새해에 회사를 그만두고 싶어 해요.",
+   "blank": "dimettersi",
+   "src": "made"
+  }
+ ],
+ "w|dimettersi": [
+  {
+   "text": "Dopo l'ennesima lite con lo chef, il sous-chef minaccia di dimettersi e Stefano lo calma.",
+   "en": "After yet another fight with the chef, the sous-chef threatens to resign and Stefano calms him down.",
+   "ko": "셰프와 또 다툰 부주방장이 그만두겠다고 하자 스테파노가 달래요.",
+   "blank": "dimettersi",
+   "src": "made"
+  },
+  {
+   "text": "L'amministratore annuncia che vuole dimettersi, e Laura organizza un'assemblea.",
+   "en": "The building manager announces he wants to resign, and Laura organizes a meeting.",
+   "ko": "관리인이 그만두겠다고 하자 라우라가 주민 회의를 열어요.",
    "blank": "dimettersi",
    "src": "made"
   }
@@ -27345,6 +27953,22 @@
    "src": "made"
   }
  ],
+ "w|direttivo": [
+  {
+   "text": "Il direttivo dell'associazione cuochi invita Stefano a una cena di gala.",
+   "en": "The board of the cooks' association invites Stefano to a gala dinner.",
+   "ko": "요리사 협회 이사회가 스테파노를 갈라 만찬에 초대해요.",
+   "blank": "direttivo",
+   "src": "made"
+  },
+  {
+   "text": "Laura entra nel direttivo del comitato degli inquilini.",
+   "en": "Laura joins the board of the tenants' committee.",
+   "ko": "라우라는 세입자 위원회 운영진에 들어가요.",
+   "blank": "direttivo",
+   "src": "made"
+  }
+ ],
  "w|diretto": [
   {
    "text": "Prendi il treno diretto per Firenze.",
@@ -27647,6 +28271,22 @@
    "src": "made"
   }
  ],
+ "w|discount": [
+  {
+   "text": "Quando manca l'olio, Stefano corre al discount dietro l'angolo.",
+   "en": "When they run out of oil, Stefano runs to the discount store around the corner.",
+   "ko": "기름이 떨어지면 스테파노는 모퉁이 할인 마트로 뛰어가요.",
+   "blank": "discount",
+   "src": "made"
+  },
+  {
+   "text": "Laura fa la spesa al discount perché costa meno.",
+   "en": "Laura does her shopping at the discount store because it costs less.",
+   "ko": "라우라는 값이 싸서 할인 마트에서 장을 봐요.",
+   "blank": "discount",
+   "src": "made"
+  }
+ ],
  "w|discreto": [
   {
    "text": "Marco ha un discreto talento per il disegno tecnico.",
@@ -27844,6 +28484,38 @@
    "en": "The smell of wet leaves doesn't disgust Elena; in fact she likes it.",
    "ko": "엘레나는 젖은 낙엽 냄새가 싫지 않고 오히려 좋아요.",
    "blank": "disgusta",
+   "src": "made"
+  }
+ ],
+ "w|disgustato": [
+  {
+   "text": "Andrea è disgustato dai pettegolezzi dei parenti sul malinteso.",
+   "en": "Andrea is disgusted by the relatives' gossip about the misunderstanding.",
+   "ko": "안드레아는 그 오해를 두고 친척들이 수군대는 게 역겨워요.",
+   "blank": "disgustato",
+   "src": "made"
+  },
+  {
+   "text": "Martina è disgustata dal comportamento di un compagno che deride il cameriere.",
+   "en": "Martina is disgusted by the behavior of a classmate who mocks the waiter.",
+   "ko": "마르티나는 종업원을 비웃는 동창의 행동에 역겨움을 느껴요.",
+   "blank": "disgustata",
+   "src": "made"
+  }
+ ],
+ "w|disgusto": [
+  {
+   "text": "Andrea prova disgusto per le bugie che qualcuno ha raccontato alla sorella.",
+   "en": "Andrea feels disgust at the lies someone told his sister.",
+   "ko": "안드레아는 누군가 누나에게 한 거짓말에 혐오감을 느껴요.",
+   "blank": "disgusto",
+   "src": "made"
+  },
+  {
+   "text": "Martina guarda con disgusto il piatto di trippa che le passa l'amico.",
+   "en": "Martina looks with disgust at the plate of tripe her friend passes her.",
+   "ko": "마르티나는 친구가 건넨 곱창 요리 접시를 질색하며 쳐다봐요.",
+   "blank": "disgusto",
    "src": "made"
   }
  ],
@@ -30277,6 +30949,22 @@
    "blank": "economico"
   }
  ],
+ "w|economista": [
+  {
+   "text": "Un economista mangia ogni venerdì nel ristorante e lascia sempre i complimenti a Stefano.",
+   "en": "An economist eats at the restaurant every Friday and always leaves compliments for Stefano.",
+   "ko": "한 경제학자가 금요일마다 식당에 와서 늘 스테파노에게 칭찬을 남겨요.",
+   "blank": "economista",
+   "src": "made"
+  },
+  {
+   "text": "Il marito di Laura è un economista e spiega ai vicini l'aumento delle bollette.",
+   "en": "Laura's husband is an economist and explains the rise in bills to the neighbors.",
+   "ko": "라우라의 남편은 경제학자라서 이웃들에게 공과금이 오른 이유를 설명해요.",
+   "blank": "economista",
+   "src": "made"
+  }
+ ],
  "w|ecosistema": [
   {
    "text": "La guida del parco spiega a Matteo quanto è fragile l'ecosistema dei laghi alpini.",
@@ -30290,6 +30978,22 @@
    "en": "Sara studies how each season changes the ecosystem of the pond near home.",
    "ko": "사라는 계절마다 집 근처 연못의 생태계가 어떻게 바뀌는지 공부해요.",
    "blank": "ecosistema",
+   "src": "made"
+  }
+ ],
+ "w|edicola": [
+  {
+   "text": "Prima del turno Stefano compra il giornale all'edicola davanti al ristorante.",
+   "en": "Before his shift Stefano buys the paper at the newsstand in front of the restaurant.",
+   "ko": "근무 전에 스테파노는 식당 앞 가판대에서 신문을 사요.",
+   "blank": "edicola",
+   "src": "made"
+  },
+  {
+   "text": "Laura compra le riviste all'edicola sotto il suo palazzo.",
+   "en": "Laura buys magazines at the newsstand below her building.",
+   "ko": "라우라는 건물 아래 가판대에서 잡지를 사요.",
+   "blank": "edicola",
    "src": "made"
   }
  ],
@@ -30785,6 +31489,22 @@
    "blank": "elettrico"
   }
  ],
+ "w|elettrodomestico": [
+  {
+   "text": "Paolo decide di non portare via nessun elettrodomestico vecchio.",
+   "en": "Paolo decides not to take any old appliance with him.",
+   "ko": "파올로는 낡은 가전제품은 하나도 가져가지 않기로 해요.",
+   "blank": "elettrodomestico",
+   "src": "made"
+  },
+  {
+   "text": "Francesca compra per la farmacia un piccolo elettrodomestico per sterilizzare gli strumenti.",
+   "en": "Francesca buys a small appliance for the pharmacy to sterilize the instruments.",
+   "ko": "프란체스카는 약국에서 기구를 소독할 작은 가전제품을 사요.",
+   "blank": "elettrodomestico",
+   "src": "made"
+  }
+ ],
  "w|elettronica": [
   {
    "text": "Simone lavora nell'elettronica e aggiusta spesso i telecomandi dei vicini.",
@@ -31109,6 +31829,22 @@
    "src": "made"
   }
  ],
+ "w|emozionarsi": [
+  {
+   "text": "Andrea non vuole emozionarsi davanti alla sorella, ma gli scendono le lacrime.",
+   "en": "Andrea doesn't want to get emotional in front of his sister, but tears come down.",
+   "ko": "안드레아는 누나 앞에서 울컥하고 싶지 않지만 눈물이 흘러요.",
+   "blank": "emozionarsi",
+   "src": "made"
+  },
+  {
+   "text": "Martina comincia a emozionarsi quando tutti alzano i bicchieri per lei.",
+   "en": "Martina starts to get emotional when everyone raises their glasses to her.",
+   "ko": "모두가 자기를 위해 잔을 들자 마르티나는 울컥하기 시작해요.",
+   "blank": "emozionarsi",
+   "src": "made"
+  }
+ ],
  "w|emozionato": [
   {
    "text": "Simone è così emozionato che arriva mezz'ora in anticipo.",
@@ -31319,6 +32055,22 @@
    "en": "I'll be back within an hour.",
    "ko": "한 시간 안에 돌아올게.",
    "blank": "entro"
+  }
+ ],
+ "w|entusiasmante": [
+  {
+   "text": "Da piccoli, per Andrea e il fratello ogni estate al mare era entusiasmante.",
+   "en": "As kids, every summer at the sea was exciting for Andrea and his brother.",
+   "ko": "어릴 때 안드레아와 형에게는 바닷가에서 보내는 여름이 늘 신났어요.",
+   "blank": "entusiasmante",
+   "src": "made"
+  },
+  {
+   "text": "Per Martina rivedere tutti dopo tanto tempo è entusiasmante.",
+   "en": "For Martina seeing everyone again after so long is thrilling.",
+   "ko": "마르티나에게는 오랜만에 모두를 다시 보는 게 아주 신나요.",
+   "blank": "entusiasmante",
+   "src": "made"
   }
  ],
  "w|entusiasmare": [
@@ -32781,6 +33533,22 @@
    "src": "made"
   }
  ],
+ "w|estetista": [
+  {
+   "text": "La sorella di Andrea fa l'estetista e lui ha dimenticato di andare all'inaugurazione del suo centro.",
+   "en": "Andrea's sister is a beautician and he forgot to go to the opening of her salon.",
+   "ko": "안드레아의 누나는 피부 관리사인데, 그는 누나 가게 개업식에 가는 걸 깜빡했어요.",
+   "blank": "estetista",
+   "src": "made"
+  },
+  {
+   "text": "Prima della festa Martina va dall'estetista per sistemarsi le sopracciglia.",
+   "en": "Before the party Martina goes to the beautician to have her eyebrows done.",
+   "ko": "파티 전에 마르티나는 눈썹을 다듬으러 피부 관리실에 가요.",
+   "blank": "estetista",
+   "src": "made"
+  }
+ ],
  "w|estinzione": [
   {
    "text": "Stefano non usa più un pesce a rischio di estinzione.",
@@ -34179,6 +34947,22 @@
    "src": "made"
   }
  ],
+ "w|fatturato": [
+  {
+   "text": "Con il nuovo menù il fatturato del ristorante di Stefano è raddoppiato.",
+   "en": "With the new menu the turnover of Stefano's restaurant has doubled.",
+   "ko": "새 메뉴 덕분에 스테파노네 식당 매출이 두 배로 늘었어요.",
+   "blank": "fatturato",
+   "src": "made"
+  },
+  {
+   "text": "Il negozio sotto casa di Laura ha visto calare il fatturato dopo i lavori stradali.",
+   "en": "The shop below Laura's house saw its turnover drop after the roadworks.",
+   "ko": "라우라 집 아래 가게는 도로 공사 뒤 매출이 줄었어요.",
+   "blank": "fatturato",
+   "src": "made"
+  }
+ ],
  "w|fava": [
   {
    "text": "In primavera la chef prepara con Luca un'insalata di fave e pecorino.",
@@ -35131,6 +35915,22 @@
    "blank": "fiera"
   }
  ],
+ "w|fierezza": [
+  {
+   "text": "Andrea guarda con fierezza il fratello che riceve il premio.",
+   "en": "Andrea looks with pride at his brother receiving the award.",
+   "ko": "안드레아는 상을 받는 형을 자랑스럽게 바라봐요.",
+   "blank": "fierezza",
+   "src": "made"
+  },
+  {
+   "text": "Martina mostra con fierezza le foto della figlia appena laureata.",
+   "en": "Martina proudly shows photos of her newly graduated daughter.",
+   "ko": "마르티나는 막 졸업한 딸 사진을 자랑스럽게 보여 줘요.",
+   "blank": "fierezza",
+   "src": "made"
+  }
+ ],
  "w|fiero": [
   {
    "text": "Sono fiero di mio figlio.",
@@ -35157,6 +35957,22 @@
    "en": "Where has your daughter got to?",
    "ko": "네 딸은 어디에 있니?",
    "blank": "figlia"
+  }
+ ],
+ "w|figliastro": [
+  {
+   "text": "Il figliastro di Andrea cerca di fare da paciere tra lui e la sorella.",
+   "en": "Andrea's stepson tries to act as peacemaker between him and his sister.",
+   "ko": "안드레아의 의붓아들은 그와 고모 사이를 중재하려고 애써요.",
+   "blank": "figliastro",
+   "src": "made"
+  },
+  {
+   "text": "Una vecchia amica arriva con il figliastro adolescente e Martina lo trova simpatico.",
+   "en": "An old friend arrives with her teenage stepson and Martina finds him nice.",
+   "ko": "옛 친구가 십 대 의붓아들을 데려오는데, 마르티나는 그 아이가 마음에 들어요.",
+   "blank": "figliastro",
+   "src": "made"
   }
  ],
  "w|figlio": [
@@ -38779,6 +39595,22 @@
    "src": "made"
   }
  ],
+ "w|geometra": [
+  {
+   "text": "Il geometra viene a misurare la cucina per l'ampliamento, e Stefano gli offre un caffè.",
+   "en": "The surveyor comes to measure the kitchen for the extension, and Stefano offers him a coffee.",
+   "ko": "측량 기사가 증축 때문에 주방을 재러 오자 스테파노가 커피를 대접해요.",
+   "blank": "geometra",
+   "src": "made"
+  },
+  {
+   "text": "Il geometra controlla le crepe nel muro della cucina di Laura.",
+   "en": "The surveyor checks the cracks in Laura's kitchen wall.",
+   "ko": "측량 기사가 라우라네 부엌 벽의 금을 살펴봐요.",
+   "blank": "geometra",
+   "src": "made"
+  }
+ ],
  "w|gergo": [
   {
    "text": "Quando scrive ai cittadini, Stefano cerca di evitare il gergo burocratico.",
@@ -39577,6 +40409,22 @@
    "blank": "giro"
   }
  ],
+ "w|girovagare": [
+  {
+   "text": "Nel giorno libero Stefano ama girovagare per i mercati in cerca di spezie.",
+   "en": "On his day off Stefano loves wandering around the markets looking for spices.",
+   "ko": "쉬는 날 스테파노는 향신료를 찾아 시장을 돌아다니는 걸 좋아해요.",
+   "blank": "girovagare",
+   "src": "made"
+  },
+  {
+   "text": "La domenica Laura ama girovagare per il quartiere senza meta.",
+   "en": "On Sundays Laura loves wandering around the neighborhood with no destination.",
+   "ko": "일요일이면 라우라는 목적지 없이 동네를 돌아다니는 걸 좋아해요.",
+   "blank": "girovagare",
+   "src": "made"
+  }
+ ],
  "w|gita": [
   {
    "text": "Simone ha fatto una gita in barca al lago mentre la macchina era dal meccanico.",
@@ -39816,6 +40664,22 @@
    "en": "The new colleague Laura studied law, but she prefers marketing.",
    "ko": "새로 온 동료 라우라는 법학을 공부했지만 마케팅을 더 좋아해요.",
    "blank": "giurisprudenza",
+   "src": "made"
+  }
+ ],
+ "w|giurista": [
+  {
+   "text": "Una giurista del ristorante spiega a Stefano i suoi diritti sul contratto.",
+   "en": "A legal expert at the restaurant explains Stefano's rights under the contract.",
+   "ko": "식당의 법률 담당자가 스테파노에게 계약상 권리를 설명해요.",
+   "blank": "giurista",
+   "src": "made"
+  },
+  {
+   "text": "Una giurista dell'ultimo piano aiuta Laura a leggere il regolamento condominiale.",
+   "en": "A legal expert on the top floor helps Laura read the building rules.",
+   "ko": "꼭대기 층에 사는 법률가가 라우라가 아파트 규약을 읽는 걸 도와줘요.",
+   "blank": "giurista",
    "src": "made"
   }
  ],
@@ -41805,6 +42669,22 @@
    "blank": "imbarazzo"
   }
  ],
+ "w|imbarco": [
+  {
+   "text": "Stefano prepara in fretta i panini per una coppia che ha l'imbarco tra un'ora.",
+   "en": "Stefano hurriedly makes sandwiches for a couple whose boarding is in an hour.",
+   "ko": "스테파노는 한 시간 뒤에 탑승하는 커플을 위해 서둘러 샌드위치를 만들어요.",
+   "blank": "imbarco",
+   "src": "made"
+  },
+  {
+   "text": "La vicina di Laura lavora all'imbarco dell'aeroporto e fa turni di notte.",
+   "en": "Laura's neighbor works at the airport boarding gate and does night shifts.",
+   "ko": "라우라의 이웃은 공항 탑승구에서 일하며 야간 근무를 해요.",
+   "blank": "imbarco",
+   "src": "made"
+  }
+ ],
  "w|imbecille": [
   {
    "text": "Non chiamare imbecille il tuo collega.",
@@ -41817,6 +42697,22 @@
    "en": "That comment was truly idiotic.",
    "ko": "그 말은 정말 멍청했어.",
    "blank": "imbecille"
+  }
+ ],
+ "w|imbianchino": [
+  {
+   "text": "Un imbianchino ridipinge la cucina mentre Stefano è in ferie.",
+   "en": "A painter repaints the kitchen while Stefano is on holiday.",
+   "ko": "스테파노가 휴가 간 사이 도배공이 주방을 다시 칠해요.",
+   "blank": "imbianchino",
+   "src": "made"
+  },
+  {
+   "text": "Laura chiama un imbianchino per ridipingere le scale del palazzo.",
+   "en": "Laura calls a painter to repaint the building's stairs.",
+   "ko": "라우라는 건물 계단을 다시 칠하려고 도장공을 불러요.",
+   "blank": "imbianchino",
+   "src": "made"
   }
  ],
  "w|imbranato": [
@@ -42332,6 +43228,22 @@
    "en": "The sound of the drill is enough to frighten Martina.",
    "ko": "드릴 소리만으로도 마르티나는 겁이 나요.",
    "blank": "impaurire",
+   "src": "made"
+  }
+ ],
+ "w|impaurito": [
+  {
+   "text": "Da bambino Andrea si nascondeva impaurito sotto il letto quando i genitori litigavano.",
+   "en": "As a child Andrea hid frightened under the bed when his parents argued.",
+   "ko": "어릴 때 안드레아는 부모님이 다투면 겁에 질려 침대 밑에 숨었어요.",
+   "blank": "impaurito",
+   "src": "made"
+  },
+  {
+   "text": "Il cagnolino della padrona di casa si nasconde impaurito sotto il tavolo, e Martina lo coccola.",
+   "en": "The hostess's little dog hides frightened under the table, and Martina cuddles it.",
+   "ko": "집주인의 작은 개가 겁에 질려 식탁 밑에 숨자 마르티나가 쓰다듬어 줘요.",
+   "blank": "impaurito",
    "src": "made"
   }
  ],
@@ -42856,6 +43768,22 @@
    "en": "A businessman from the city wants to buy Giulia's old barn.",
    "ko": "도시에서 온 사업가가 줄리아의 낡은 외양간을 사고 싶어 해요.",
    "blank": "imprenditore",
+   "src": "made"
+  }
+ ],
+ "w|imprenditoria": [
+  {
+   "text": "Stefano frequenta un corso serale di imprenditoria per aprire un locale suo.",
+   "en": "Stefano attends an evening course in entrepreneurship to open his own place.",
+   "ko": "스테파노는 자기 가게를 열려고 창업 야간 강좌를 들어요.",
+   "blank": "imprenditoria",
+   "src": "made"
+  },
+  {
+   "text": "La figlia di Laura studia imprenditoria e vuole aprire un bar nel cortile.",
+   "en": "Laura's daughter is studying entrepreneurship and wants to open a café in the courtyard.",
+   "ko": "라우라의 딸은 창업을 공부하고 있는데, 마당에 카페를 열고 싶어 해요.",
+   "blank": "imprenditoria",
    "src": "made"
   }
  ],
@@ -44481,6 +45409,22 @@
    "src": "made"
   }
  ],
+ "w|infastidito": [
+  {
+   "text": "Andrea è infastidito dal tono con cui la sorella gli parla al telefono.",
+   "en": "Andrea is annoyed by the tone his sister uses on the phone with him.",
+   "ko": "안드레아는 누나가 전화로 말하는 말투에 기분이 상해요.",
+   "blank": "infastidito",
+   "src": "made"
+  },
+  {
+   "text": "Martina è un po' infastidita perché qualcuno parla solo di lavoro.",
+   "en": "Martina is a bit annoyed because someone talks only about work.",
+   "ko": "누군가 일 얘기만 해서 마르티나는 좀 짜증이 나요.",
+   "blank": "infastidita",
+   "src": "made"
+  }
+ ],
  "w|infatti": [
   {
    "text": "Infatti, avevo già pensato la stessa cosa.",
@@ -44707,6 +45651,22 @@
    "en": "This desert looks almost infinite.",
    "ko": "이 사막이 거의 무한해 보여.",
    "blank": "infinito"
+  }
+ ],
+ "w|inflazione": [
+  {
+   "text": "Il fratello spiega ad Andrea che con l'inflazione non riesce a restituirgli subito i soldi.",
+   "en": "His brother explains to Andrea that with inflation he can't pay him back right away.",
+   "ko": "형은 안드레아에게 물가가 올라서 돈을 바로 갚을 수 없다고 설명해요.",
+   "blank": "inflazione",
+   "src": "made"
+  },
+  {
+   "text": "A tavola gli amici di Martina si lamentano dell'inflazione e dei prezzi degli affitti.",
+   "en": "At the table Martina's friends complain about inflation and rent prices.",
+   "ko": "식탁에서 마르티나의 친구들은 물가 상승과 집세를 두고 투덜대요.",
+   "blank": "inflazione",
+   "src": "made"
   }
  ],
  "w|infliggere": [
@@ -45439,6 +46399,22 @@
    "src": "made"
   }
  ],
+ "w|innovazione": [
+  {
+   "text": "Il proprietario mostra a Paolo l'ultima innovazione della casa: il riscaldamento a pavimento.",
+   "en": "The owner shows Paolo the house's latest innovation: underfloor heating.",
+   "ko": "집주인은 파올로에게 집의 최신 설비인 바닥 난방을 보여 줘요.",
+   "blank": "innovazione",
+   "src": "made"
+  },
+  {
+   "text": "Il nuovo sistema per le ricette elettroniche è un'innovazione utile, dice Francesca.",
+   "en": "The new e-prescription system is a useful innovation, says Francesca.",
+   "ko": "프란체스카는 새 전자 처방 시스템이 유용한 혁신이라고 말해요.",
+   "blank": "innovazione",
+   "src": "made"
+  }
+ ],
  "w|innumerevole": [
   {
    "text": "Marco ha fatto innumerevoli errori nel compito di latino.",
@@ -45544,6 +46520,22 @@
    "en": "If she misses a workout, Anna gets restless and on edge.",
    "ko": "운동을 한 번 빼먹으면 안나는 안절부절못해요.",
    "blank": "inquieta",
+   "src": "made"
+  }
+ ],
+ "w|inquietudine": [
+  {
+   "text": "Un'inquietudine strana prende Andrea quando la sorella non risponde al telefono.",
+   "en": "A strange unease takes hold of Andrea when his sister doesn't answer the phone.",
+   "ko": "누나가 전화를 받지 않자 안드레아는 묘하게 불안해져요.",
+   "blank": "inquietudine",
+   "src": "made"
+  },
+  {
+   "text": "Prima della festa Martina prova una certa inquietudine all'idea di rivedere il suo ex.",
+   "en": "Before the party Martina feels a certain unease at the idea of seeing her ex again.",
+   "ko": "파티 전에 마르티나는 옛 애인을 다시 볼 생각에 좀 불안해요.",
+   "blank": "inquietudine",
    "src": "made"
   }
  ],
@@ -46120,6 +47112,22 @@
    "en": "For dinner Chiara buys a wholemeal loaf at the bakery downstairs.",
    "ko": "키아라는 저녁에 먹으려고 집 아래 빵집에서 통밀빵을 사요.",
    "blank": "integrale",
+   "src": "made"
+  }
+ ],
+ "w|integrare": [
+  {
+   "text": "La sorella non riesce a integrare il nuovo compagno nella famiglia, e Andrea si sente in colpa.",
+   "en": "His sister can't fit her new partner into the family, and Andrea feels guilty.",
+   "ko": "누나가 새 애인을 가족에 잘 어울리게 하지 못하자 안드레아는 죄책감을 느껴요.",
+   "blank": "integrare",
+   "src": "made"
+  },
+  {
+   "text": "Martina cerca di integrare nel gruppo una compagna che era sempre rimasta in disparte.",
+   "en": "Martina tries to bring into the group a classmate who had always stayed on the sidelines.",
+   "ko": "마르티나는 늘 겉돌던 동창을 무리에 끼워 주려고 애써요.",
+   "blank": "integrare",
    "src": "made"
   }
  ],
@@ -46715,6 +47723,22 @@
    "src": "made"
   }
  ],
+ "w|intesa": [
+  {
+   "text": "Tra Stefano e il pasticcere c'è un'intesa perfetta durante il servizio.",
+   "en": "There's a perfect understanding between Stefano and the pastry chef during service.",
+   "ko": "영업 중에 스테파노와 제과사는 호흡이 척척 맞아요.",
+   "blank": "intesa",
+   "src": "made"
+  },
+  {
+   "text": "Laura e la vicina hanno trovato un'intesa sugli orari della musica.",
+   "en": "Laura and her neighbor have reached an agreement on music hours.",
+   "ko": "라우라와 이웃은 음악 트는 시간에 합의했어요.",
+   "blank": "intesa",
+   "src": "made"
+  }
+ ],
  "w|intestino": [
   {
    "text": "Dopo gli antibiotici Stefano consiglia fermenti lattici per l'intestino.",
@@ -46744,6 +47768,22 @@
    "en": "In a six-person startup there is a closeness Elena had never found in a big company.",
    "ko": "여섯 명뿐인 스타트업에는 엘레나가 대기업에서 느껴 본 적 없는 친밀함이 있어요.",
    "blank": "intimità",
+   "src": "made"
+  }
+ ],
+ "w|intollerante": [
+  {
+   "text": "Andrea diventa intollerante quando la sorella prende le sue cose senza chiedere.",
+   "en": "Andrea becomes intolerant when his sister takes his things without asking.",
+   "ko": "안드레아는 누나가 묻지도 않고 자기 물건을 가져가면 참지 못해요.",
+   "blank": "intollerante",
+   "src": "made"
+  },
+  {
+   "text": "Martina è intollerante al lattosio e alla rimpatriata ordina il gelato vegano.",
+   "en": "Martina is lactose intolerant and at the reunion orders vegan ice cream.",
+   "ko": "마르티나는 유당 불내증이 있어서 동창 모임에서 비건 젤라토를 시켜요.",
+   "blank": "intollerante",
    "src": "made"
   }
  ],
@@ -47714,6 +48754,22 @@
    "en": "The seams of her T-shirt start to irritate Laura's skin.",
    "ko": "티셔츠 솔기 때문에 라우라의 피부가 쓸리기 시작해요.",
    "blank": "irritare",
+   "src": "made"
+  }
+ ],
+ "w|irritato": [
+  {
+   "text": "Andrea è irritato perché il fratello ha raccontato tutto alla madre.",
+   "en": "Andrea is irritated because his brother told their mother everything.",
+   "ko": "형이 엄마에게 다 일러바쳐서 안드레아는 짜증이 나요.",
+   "blank": "irritato",
+   "src": "made"
+  },
+  {
+   "text": "Martina è irritata perché il ristorante ha perso la prenotazione.",
+   "en": "Martina is irritated because the restaurant lost the booking.",
+   "ko": "식당이 예약을 빠뜨려서 마르티나는 짜증이 나요.",
+   "blank": "irritata",
    "src": "made"
   }
  ],
@@ -48845,6 +49901,22 @@
    "en": "The washing machine is making a strange noise.",
    "ko": "세탁기가 이상한 소리를 내.",
    "blank": "lavatrice"
+  }
+ ],
+ "w|lavello": [
+  {
+   "text": "Il lavello della nuova cucina perde e Paolo chiama l'idraulico.",
+   "en": "The sink in the new kitchen leaks and Paolo calls the plumber.",
+   "ko": "새 부엌 개수대에서 물이 새서 파올로는 배관공을 불러요.",
+   "blank": "lavello",
+   "src": "made"
+  },
+  {
+   "text": "Nel retro della farmacia Francesca lava le provette nel lavello.",
+   "en": "In the back of the pharmacy Francesca washes the test tubes in the sink.",
+   "ko": "약국 뒷방에서 프란체스카는 개수대에서 시험관을 씻어요.",
+   "blank": "lavello",
+   "src": "made"
   }
  ],
  "w|lavorare": [
@@ -50163,6 +51235,22 @@
    "en": "This venue closes at midnight.",
    "ko": "이 가게는 자정에 닫아.",
    "blank": "locale"
+  }
+ ],
+ "w|località": [
+  {
+   "text": "Paolo si trasferisce in una località di montagna per lavorare da remoto.",
+   "en": "Paolo moves to a mountain resort town to work remotely.",
+   "ko": "파올로는 원격으로 일하려고 산간 마을로 이사해요.",
+   "blank": "località",
+   "src": "made"
+  },
+  {
+   "text": "La farmacia di Francesca è l'unica della località e d'estate è sempre piena di turisti.",
+   "en": "Francesca's pharmacy is the only one in the resort and in summer it's always full of tourists.",
+   "ko": "프란체스카의 약국은 그 휴양지에 하나뿐이라 여름이면 늘 관광객으로 붐벼요.",
+   "blank": "località",
+   "src": "made"
   }
  ],
  "w|localizzare": [
@@ -51535,6 +52623,22 @@
    "src": "made"
   }
  ],
+ "w|malinconico": [
+  {
+   "text": "Guardando le foto d'infanzia, Andrea diventa malinconico.",
+   "en": "Looking at the childhood photos, Andrea grows melancholy.",
+   "ko": "어린 시절 사진을 보며 안드레아는 울적해져요.",
+   "blank": "malinconico",
+   "src": "made"
+  },
+  {
+   "text": "Una canzone del liceo rende Martina malinconica per qualche minuto.",
+   "en": "A song from high school makes Martina melancholy for a few minutes.",
+   "ko": "고등학교 때 노래를 듣자 마르티나는 잠깐 울적해져요.",
+   "blank": "malinconica",
+   "src": "made"
+  }
+ ],
  "w|malinteso": [
   {
    "text": "C'è stato un malinteso: Matteo pensava di cominciare alle nove.",
@@ -52086,6 +53190,22 @@
    "en": "The car park is tight, and Sara guides her colleague through the manoeuvre.",
    "ko": "주차장이 좁아서 사라가 동료의 주차를 봐 줘요.",
    "blank": "manovra",
+   "src": "made"
+  }
+ ],
+ "w|mansarda": [
+  {
+   "text": "Paolo trasforma la mansarda in uno studio pieno di luce.",
+   "en": "Paolo turns the attic room into a bright study.",
+   "ko": "파올로는 다락방을 햇살 가득한 서재로 바꿔요.",
+   "blank": "mansarda",
+   "src": "made"
+  },
+  {
+   "text": "Francesca vive in una mansarda proprio sopra la farmacia.",
+   "en": "Francesca lives in an attic flat right above the pharmacy.",
+   "ko": "프란체스카는 약국 바로 위 다락방 집에 살아요.",
+   "blank": "mansarda",
    "src": "made"
   }
  ],
@@ -56687,6 +57807,22 @@
    "src": "made"
   }
  ],
+ "w|narrativa": [
+  {
+   "text": "Paolo impacchetta in tre scatoloni tutti i suoi libri di narrativa.",
+   "en": "Paolo packs all his fiction books into three big boxes.",
+   "ko": "파올로는 소설책을 전부 큰 상자 세 개에 담아요.",
+   "blank": "narrativa",
+   "src": "made"
+  },
+  {
+   "text": "Nelle pause Francesca legge narrativa straniera nel retro della farmacia.",
+   "en": "During breaks Francesca reads foreign fiction in the back of the pharmacy.",
+   "ko": "쉬는 시간이면 프란체스카는 약국 뒷방에서 외국 소설을 읽어요.",
+   "blank": "narrativa",
+   "src": "made"
+  }
+ ],
  "w|nascere": [
   {
    "text": "Vuole nascere un'idea nuova.",
@@ -57142,6 +58278,22 @@
    "en": "Martina's cavity came from years of neglect.",
    "ko": "마르티나의 충치는 몇 년 동안의 소홀함에서 생겼어요.",
    "blank": "negligenza",
+   "src": "made"
+  }
+ ],
+ "w|negoziante": [
+  {
+   "text": "Un negoziante del mercato porta ogni mattina a Stefano le verdure fresche.",
+   "en": "A market shopkeeper brings Stefano fresh vegetables every morning.",
+   "ko": "시장 상인 하나가 아침마다 스테파노에게 신선한 채소를 가져와요.",
+   "blank": "negoziante",
+   "src": "made"
+  },
+  {
+   "text": "Il negoziante al pianterreno tiene le chiavi di riserva di Laura.",
+   "en": "The shopkeeper on the ground floor keeps Laura's spare keys.",
+   "ko": "일 층 가게 주인이 라우라의 여분 열쇠를 맡아 둬요.",
+   "blank": "negoziante",
    "src": "made"
   }
  ],
@@ -60227,6 +61379,22 @@
    "blank": "originale"
   }
  ],
+ "w|originariamente": [
+  {
+   "text": "La casa nuova di Paolo era originariamente una stalla.",
+   "en": "Paolo's new house was originally a stable.",
+   "ko": "파올로의 새집은 원래 외양간이었어요.",
+   "blank": "originariamente",
+   "src": "made"
+  },
+  {
+   "text": "La farmacia di Francesca era originariamente una drogheria.",
+   "en": "Francesca's pharmacy was originally a grocer's shop.",
+   "ko": "프란체스카의 약국은 원래 식료품점이었어요.",
+   "blank": "originariamente",
+   "src": "made"
+  }
+ ],
  "w|originario": [
   {
    "text": "Il pavimento originario del palazzo è di marmo, nota Simone con piacere.",
@@ -62259,6 +63427,22 @@
    "blank": "parente"
   }
  ],
+ "w|parentela": [
+  {
+   "text": "Il vicino scopre di avere una lontana parentela con la famiglia di Paolo.",
+   "en": "The neighbor discovers he has a distant family connection with Paolo's family.",
+   "ko": "이웃은 파올로네 가족과 먼 친척 관계라는 걸 알게 돼요.",
+   "blank": "parentela",
+   "src": "made"
+  },
+  {
+   "text": "In farmacia tutti sanno della parentela tra Francesca e il medico del paese.",
+   "en": "Everyone at the pharmacy knows about the family tie between Francesca and the village doctor.",
+   "ko": "약국 사람들은 모두 프란체스카와 마을 의사가 친척이라는 걸 알아요.",
+   "blank": "parentela",
+   "src": "made"
+  }
+ ],
  "w|parere": [
   {
    "text": "Mi pare una sciocchezza.",
@@ -62391,6 +63575,22 @@
    "en": "Don't say a word.",
    "ko": "한마디도 하지 마.",
    "blank": "parola"
+  }
+ ],
+ "w|parquet": [
+  {
+   "text": "Paolo stende una coperta sul parquet per non graffiarlo con i mobili.",
+   "en": "Paolo spreads a blanket on the parquet so the furniture won't scratch it.",
+   "ko": "파올로는 가구에 긁히지 않게 원목 마루에 담요를 깔아요.",
+   "blank": "parquet",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha scelto un parquet chiaro per rendere la farmacia più accogliente.",
+   "en": "Francesca chose light parquet to make the pharmacy more welcoming.",
+   "ko": "프란체스카는 약국을 더 아늑하게 하려고 밝은 색 마루를 골랐어요.",
+   "blank": "parquet",
+   "src": "made"
   }
  ],
  "w|parrocchia": [
@@ -63193,6 +64393,22 @@
    "src": "made"
   }
  ],
+ "w|pattumiera": [
+  {
+   "text": "Nella casa nuova Paolo non sa ancora dove svuotare la pattumiera.",
+   "en": "In the new house Paolo doesn't know yet where to empty the bin.",
+   "ko": "새집에서 파올로는 쓰레기통을 어디에 비워야 할지 아직 몰라요.",
+   "blank": "pattumiera",
+   "src": "made"
+  },
+  {
+   "text": "Francesca butta le scatole vuote nella pattumiera della carta.",
+   "en": "Francesca throws the empty boxes in the paper bin.",
+   "ko": "프란체스카는 빈 상자를 종이 쓰레기통에 버려요.",
+   "blank": "pattumiera",
+   "src": "made"
+  }
+ ],
  "w|paura": [
   {
    "text": "Ho paura del buio.",
@@ -63380,6 +64596,22 @@
    "en": "Autumn has a peculiar scent that Sara associates with the start of school.",
    "ko": "가을에는 사라가 개학을 떠올리게 되는 특유의 냄새가 있어요.",
    "blank": "peculiare",
+   "src": "made"
+  }
+ ],
+ "w|pedalare": [
+  {
+   "text": "Stefano deve pedalare sotto la pioggia per arrivare al ristorante, perché non ha la macchina.",
+   "en": "Stefano has to pedal in the rain to get to the restaurant, because he doesn't have a car.",
+   "ko": "스테파노는 차가 없어서 빗속에 자전거 페달을 밟아 식당까지 가야 해요.",
+   "blank": "pedalare",
+   "src": "made"
+  },
+  {
+   "text": "Laura vede il vicino pedalare sulla cyclette davanti alla finestra.",
+   "en": "Laura sees her neighbor pedaling on the exercise bike in front of the window.",
+   "ko": "라우라는 이웃이 창가에서 실내 자전거 페달을 밟는 걸 봐요.",
+   "blank": "pedalare",
    "src": "made"
   }
  ],
@@ -63689,6 +64921,22 @@
    "blank": "penna"
   }
  ],
+ "w|pennello": [
+  {
+   "text": "Paolo ridipinge la cucina con un pennello largo e tanta pazienza.",
+   "en": "Paolo repaints the kitchen with a wide brush and lots of patience.",
+   "ko": "파올로는 넓은 붓으로 인내심 있게 부엌을 다시 칠해요.",
+   "blank": "pennello",
+   "src": "made"
+  },
+  {
+   "text": "Con un piccolo pennello Francesca scrive a mano i prezzi delle tisane.",
+   "en": "With a small brush Francesca writes the herbal tea prices by hand.",
+   "ko": "프란체스카는 작은 붓으로 허브차 가격을 손글씨로 써요.",
+   "blank": "pennello",
+   "src": "made"
+  }
+ ],
  "w|penoso": [
   {
    "text": "Il primo tentativo di soufflé di Luca è stato penoso.",
@@ -63749,6 +64997,22 @@
    "src": "made"
   }
  ],
+ "w|pensionato": [
+  {
+   "text": "Ogni giorno un pensionato del quartiere pranza al bancone e chiacchiera con Stefano.",
+   "en": "Every day a retiree from the neighborhood has lunch at the counter and chats with Stefano.",
+   "ko": "동네 은퇴자 한 분이 날마다 카운터에서 점심을 먹으며 스테파노와 수다를 떨어요.",
+   "blank": "pensionato",
+   "src": "made"
+  },
+  {
+   "text": "Un pensionato del primo piano annaffia tutte le piante del cortile, anche quelle di Laura.",
+   "en": "A retiree on the first floor waters all the plants in the courtyard, including Laura's.",
+   "ko": "이 층에 사는 은퇴한 분이 라우라 것까지 마당 화분에 다 물을 줘요.",
+   "blank": "pensionato",
+   "src": "made"
+  }
+ ],
  "w|pensione": [
   {
    "text": "Mio nonno vive di pensione ormai.",
@@ -63792,6 +65056,22 @@
    "en": "Giulia has never regretted leaving her office job for the cinema.",
    "ko": "줄리아는 영화를 하려고 회사를 그만둔 걸 한 번도 후회하지 않았어요.",
    "blank": "pentita",
+   "src": "made"
+  }
+ ],
+ "w|pentirsi": [
+  {
+   "text": "Andrea teme di pentirsi se non chiarisce il malinteso adesso.",
+   "en": "Andrea is afraid he'll regret it if he doesn't clear up the misunderstanding now.",
+   "ko": "안드레아는 지금 오해를 풀지 않으면 후회할까 봐 걱정해요.",
+   "blank": "pentirsi",
+   "src": "made"
+  },
+  {
+   "text": "Martina dice che non bisogna pentirsi delle scelte fatte da giovani.",
+   "en": "Martina says you shouldn't regret the choices you made when you were young.",
+   "ko": "마르티나는 젊을 때 한 선택을 후회할 필요는 없다고 말해요.",
+   "blank": "pentirsi",
    "src": "made"
   }
  ],
@@ -64427,6 +65707,22 @@
    "src": "made"
   }
  ],
+ "w|persiana": [
+  {
+   "text": "Paolo apre la persiana e vede per la prima volta il lago dalla camera.",
+   "en": "Paolo opens the shutter and sees the lake from the bedroom for the first time.",
+   "ko": "파올로는 덧창을 열고 처음으로 침실에서 호수를 봐요.",
+   "blank": "persiana",
+   "src": "made"
+  },
+  {
+   "text": "A mezzogiorno Francesca abbassa la persiana e va a pranzo.",
+   "en": "At noon Francesca lowers the shutter and goes to lunch.",
+   "ko": "정오가 되면 프란체스카는 덧창을 내리고 점심을 먹으러 가요.",
+   "blank": "persiana",
+   "src": "made"
+  }
+ ],
  "w|persino": [
   {
    "text": "Persino lui ha detto di sì.",
@@ -64941,6 +66237,22 @@
    "src": "made"
   }
  ],
+ "w|pianerottolo": [
+  {
+   "text": "Paolo lascia gli scatoloni sul pianerottolo perché l'ascensore è rotto.",
+   "en": "Paolo leaves the boxes on the landing because the lift is broken.",
+   "ko": "엘리베이터가 고장 나서 파올로는 상자를 계단참에 둬요.",
+   "blank": "pianerottolo",
+   "src": "made"
+  },
+  {
+   "text": "Francesca abita sopra la farmacia e saluta i vicini sul pianerottolo ogni mattina.",
+   "en": "Francesca lives above the pharmacy and greets the neighbors on the landing every morning.",
+   "ko": "프란체스카는 약국 위층에 살아서 아침마다 계단참에서 이웃들과 인사해요.",
+   "blank": "pianerottolo",
+   "src": "made"
+  }
+ ],
  "w|pianeta": [
   {
    "text": "La Terra è il nostro pianeta.",
@@ -65438,6 +66750,22 @@
    "en": "Giulia's friends organised a pyjama night like in the old days.",
    "ko": "줄리아의 친구들은 옛날처럼 잠옷 파티를 열었어요.",
    "blank": "pigiama",
+   "src": "made"
+  }
+ ],
+ "w|pignolo": [
+  {
+   "text": "Andrea è pignolo e ricorda ogni parola sbagliata detta dal fratello.",
+   "en": "Andrea is fussy and remembers every wrong word his brother said.",
+   "ko": "안드레아는 꼼꼼한 성격이라 형이 잘못한 말을 하나하나 다 기억해요.",
+   "blank": "pignolo",
+   "src": "made"
+  },
+  {
+   "text": "Martina scherza sul suo vecchio professore, che era pignolo anche con le virgole.",
+   "en": "Martina jokes about her old teacher, who was fussy even about commas.",
+   "ko": "마르티나는 쉼표 하나에도 깐깐하던 옛 선생님 이야기로 농담해요.",
+   "blank": "pignolo",
    "src": "made"
   }
  ],
@@ -65945,6 +67273,22 @@
    "en": "We try to use less plastic at home.",
    "ko": "집에서는 플라스틱을 덜 쓰려고 해.",
    "blank": "plastica"
+  }
+ ],
+ "w|platea": [
+  {
+   "text": "Il ristorante di Stefano prepara la cena per la platea di un festival di cinema.",
+   "en": "Stefano's restaurant prepares dinner for the audience of a film festival.",
+   "ko": "스테파노의 식당은 영화제 관객들을 위한 저녁을 준비해요.",
+   "blank": "platea",
+   "src": "made"
+  },
+  {
+   "text": "Laura ha un abbonamento in platea al teatro di fronte al suo palazzo.",
+   "en": "Laura has a stalls subscription at the theater opposite her building.",
+   "ko": "라우라는 건물 맞은편 극장 일 층 객석 정기권이 있어요.",
+   "blank": "platea",
+   "src": "made"
   }
  ],
  "w|plausibile": [
@@ -66462,6 +67806,22 @@
    "en": "Martina puts ointment on the mosquito bite she got at the station.",
    "ko": "마르티나는 역에서 물린 모기 자국에 연고를 발라요.",
    "blank": "pomata",
+   "src": "made"
+  }
+ ],
+ "w|pomeridiano": [
+  {
+   "text": "Il fratello aspettava Andrea al treno pomeridiano, ma lui aveva capito quello serale.",
+   "en": "His brother was waiting for Andrea at the afternoon train, but he had understood the evening one.",
+   "ko": "형은 오후 기차에서 안드레아를 기다렸는데, 그는 저녁 기차로 알아들었어요.",
+   "blank": "pomeridiano",
+   "src": "made"
+  },
+  {
+   "text": "La rimpatriata comincia con un aperitivo pomeridiano in giardino, organizzato da Martina.",
+   "en": "The reunion begins with an afternoon aperitif in the garden, organized by Martina.",
+   "ko": "동창 모임은 마르티나가 준비한 정원에서의 오후 아페리티보로 시작해요.",
+   "blank": "pomeridiano",
    "src": "made"
   }
  ],
@@ -67201,6 +68561,22 @@
    "blank": "Praticamente"
   }
  ],
+ "w|praticante": [
+  {
+   "text": "Stefano insegna al praticante a sfilettare il pesce.",
+   "en": "Stefano teaches the trainee to fillet fish.",
+   "ko": "스테파노는 수습생에게 생선 포 뜨는 법을 가르쳐요.",
+   "blank": "praticante",
+   "src": "made"
+  },
+  {
+   "text": "Il figlio della vicina fa il praticante in uno studio di avvocati, racconta lei a Laura.",
+   "en": "The neighbor's son is a trainee at a law firm, she tells Laura.",
+   "ko": "이웃 아주머니는 아들이 법률 사무소 수습생이라고 라우라에게 이야기해요.",
+   "blank": "praticante",
+   "src": "made"
+  }
+ ],
  "w|praticare": [
   {
    "text": "Nel cortile Simone vede la vicina praticare yoga ogni mattina.",
@@ -67246,6 +68622,22 @@
    "en": "During break Martina's pupils play football on the school lawn.",
    "ko": "쉬는 시간에 마르티나네 반 아이들은 학교 잔디밭에서 축구를 해요.",
    "blank": "prato",
+   "src": "made"
+  }
+ ],
+ "w|precario": [
+  {
+   "text": "Stefano è stato per anni un precario delle cucine d'estate.",
+   "en": "For years Stefano was a temporary worker in summer kitchens.",
+   "ko": "스테파노는 몇 년 동안 여름철 주방을 떠도는 비정규직이었어요.",
+   "blank": "precario",
+   "src": "made"
+  },
+  {
+   "text": "Il ragazzo che vive sopra Laura è un precario della scuola e cambia città ogni anno.",
+   "en": "The young man who lives above Laura is a temporary school worker and changes city every year.",
+   "ko": "라우라 윗집 청년은 학교 계약직이라 해마다 사는 도시가 바뀌어요.",
+   "blank": "precario",
    "src": "made"
   }
  ],
@@ -67526,6 +68918,22 @@
    "en": "At lunch Laura mentions that her father was a prefect in a southern city.",
    "ko": "점심때 라우라는 아버지가 남부 도시의 도지사였다고 이야기해요.",
    "blank": "prefetto",
+   "src": "made"
+  }
+ ],
+ "w|prefettura": [
+  {
+   "text": "Stefano consegna il catering in prefettura per una cena ufficiale.",
+   "en": "Stefano delivers the catering to the prefecture for an official dinner.",
+   "ko": "스테파노는 공식 만찬을 위해 도청에 케이터링 음식을 배달해요.",
+   "blank": "prefettura",
+   "src": "made"
+  },
+  {
+   "text": "Laura lavora in prefettura e torna a casa ogni giorno a piedi.",
+   "en": "Laura works at the prefecture and walks home every day.",
+   "ko": "라우라는 도청에서 일하고 날마다 걸어서 집에 가요.",
+   "blank": "prefettura",
    "src": "made"
   }
  ],
@@ -68993,6 +70401,22 @@
    "src": "made"
   }
  ],
+ "w|produttività": [
+  {
+   "text": "Lo chef vuole aumentare la produttività della cucina senza far lavorare di più Stefano.",
+   "en": "The chef wants to raise the kitchen's productivity without making Stefano work more.",
+   "ko": "셰프는 스테파노를 더 일하게 하지 않고 주방 생산성을 높이고 싶어 해요.",
+   "blank": "produttività",
+   "src": "made"
+  },
+  {
+   "text": "Laura lavora da casa e la sua produttività sale quando i vicini sono in vacanza.",
+   "en": "Laura works from home and her productivity goes up when the neighbors are on holiday.",
+   "ko": "라우라는 재택근무를 하는데, 이웃들이 휴가를 가면 일이 훨씬 잘돼요.",
+   "blank": "produttività",
+   "src": "made"
+  }
+ ],
  "w|produttivo": [
   {
    "text": "Marco è più produttivo la mattina presto, quando l'ufficio è vuoto.",
@@ -69401,6 +70825,22 @@
    "src": "made"
   }
  ],
+ "w|progressista": [
+  {
+   "text": "La sorella di Andrea ha idee più progressiste, e a cena discutono sempre.",
+   "en": "Andrea's sister has more progressive ideas, and they always argue at dinner.",
+   "ko": "안드레아의 누나는 생각이 더 진보적이라서 저녁마다 둘이 논쟁해요.",
+   "blank": "progressiste",
+   "src": "made"
+  },
+  {
+   "text": "Martina ricorda che al liceo era la più progressista del gruppo.",
+   "en": "Martina remembers that in high school she was the most progressive in the group.",
+   "ko": "마르티나는 고등학교 때 자기가 무리에서 가장 진보적이었다고 떠올려요.",
+   "blank": "progressista",
+   "src": "made"
+  }
+ ],
  "w|progresso": [
   {
    "text": "Sto facendo buoni progressi in italiano.",
@@ -69490,6 +70930,22 @@
    "en": "Chiara's friends would like to stretch the evening out until dawn.",
    "ko": "키아라의 친구들은 저녁 모임을 새벽까지 이어 가고 싶어해요.",
    "blank": "prolungare",
+   "src": "made"
+  }
+ ],
+ "w|prolungato": [
+  {
+   "text": "Dopo un silenzio prolungato, Andrea decide di chiamare il fratello.",
+   "en": "After a prolonged silence, Andrea decides to call his brother.",
+   "ko": "오랜 침묵 끝에 안드레아는 형에게 전화하기로 해요.",
+   "blank": "prolungato",
+   "src": "made"
+  },
+  {
+   "text": "L'applauso prolungato degli amici fa arrossire Martina.",
+   "en": "Her friends' prolonged applause makes Martina blush.",
+   "ko": "친구들의 긴 박수에 마르티나는 얼굴이 빨개져요.",
+   "blank": "prolungato",
    "src": "made"
   }
  ],
@@ -71341,6 +72797,22 @@
    "blank": "questo"
   }
  ],
+ "w|questura": [
+  {
+   "text": "Dopo il trasloco Paolo va in questura per rinnovare il passaporto con il nuovo indirizzo.",
+   "en": "After the move Paolo goes to the police headquarters to renew his passport with the new address.",
+   "ko": "이사 후 파올로는 새 주소로 여권을 갱신하러 경찰청에 가요.",
+   "blank": "questura",
+   "src": "made"
+  },
+  {
+   "text": "Francesca chiama la questura quando qualcuno tenta di usare una ricetta falsa.",
+   "en": "Francesca calls the police headquarters when someone tries to use a fake prescription.",
+   "ko": "누군가 가짜 처방전을 쓰려 하자 프란체스카는 경찰청에 신고해요.",
+   "blank": "questura",
+   "src": "made"
+  }
+ ],
  "w|qui": [
   {
    "text": "Vieni qui, presto.",
@@ -71428,6 +72900,22 @@
    "en": "Martina has just reached the mark of a hundred repairs a month.",
    "ko": "마르티나는 방금 한 달 수리 백 건을 달성했어요.",
    "blank": "quota",
+   "src": "made"
+  }
+ ],
+ "w|quotazione": [
+  {
+   "text": "Stefano controlla la quotazione del tartufo bianco prima di comprarlo.",
+   "en": "Stefano checks the market price of white truffle before buying it.",
+   "ko": "스테파노는 사기 전에 흰 송로버섯 시세를 확인해요.",
+   "blank": "quotazione",
+   "src": "made"
+  },
+  {
+   "text": "Un vicino di Laura passa le serate a controllare la quotazione delle sue azioni.",
+   "en": "One of Laura's neighbors spends his evenings checking the price of his shares.",
+   "ko": "라우라의 이웃 하나는 저녁마다 주가를 확인하며 보내요.",
+   "blank": "quotazione",
    "src": "made"
   }
  ],
@@ -71960,6 +73448,22 @@
    "en": "A girl screams because there's a spider on the desk, and Martina takes it outside.",
    "ko": "책상에 거미가 있어서 한 여자아이가 소리치자 마르티나가 밖으로 내보내요.",
    "blank": "ragno",
+   "src": "made"
+  }
+ ],
+ "w|rallegrare": [
+  {
+   "text": "Il messaggio della nipote riesce a rallegrare Andrea dopo la discussione.",
+   "en": "His niece's message manages to cheer Andrea up after the argument.",
+   "ko": "조카가 보낸 메시지에 안드레아는 말다툼 뒤에도 기분이 좋아져요.",
+   "blank": "rallegrare",
+   "src": "made"
+  },
+  {
+   "text": "Le vecchie barzellette di Luca riescono ancora a rallegrare Martina.",
+   "en": "Luca's old jokes still manage to cheer Martina up.",
+   "ko": "루카의 옛날 농담은 여전히 마르티나를 즐겁게 해요.",
+   "blank": "rallegrare",
    "src": "made"
   }
  ],
@@ -73939,6 +75443,22 @@
    "blank": "rete"
   }
  ],
+ "w|retribuzione": [
+  {
+   "text": "Stefano chiede una retribuzione più alta per i turni del fine settimana.",
+   "en": "Stefano asks for higher pay for weekend shifts.",
+   "ko": "스테파노는 주말 근무에 급여를 더 올려 달라고 해요.",
+   "blank": "retribuzione",
+   "src": "made"
+  },
+  {
+   "text": "La portinaia confida a Laura che la sua retribuzione non aumenta da anni.",
+   "en": "The concierge confides to Laura that her pay hasn't gone up in years.",
+   "ko": "관리실 아주머니는 라우라에게 몇 년째 월급이 오르지 않았다고 털어놓아요.",
+   "blank": "retribuzione",
+   "src": "made"
+  }
+ ],
  "w|retro": [
   {
    "text": "Secondo Matteo, qualcuno ha cercato di manomettere la serratura della porta sul retro.",
@@ -74189,6 +75709,22 @@
    "src": "made"
   }
  ],
+ "w|ribrezzo": [
+  {
+   "text": "Andrea ha ribrezzo dei ragni, e la sorella ne mette uno finto nel suo letto per fare pace ridendo.",
+   "en": "Andrea has a horror of spiders, and his sister puts a fake one in his bed to make peace with a laugh.",
+   "ko": "안드레아가 거미를 질색하는데, 누나는 화해하려고 장난감 거미를 침대에 넣고 웃어요.",
+   "blank": "ribrezzo",
+   "src": "made"
+  },
+  {
+   "text": "Martina racconta il ribrezzo che provava per la mensa della scuola.",
+   "en": "Martina describes the revulsion she used to feel for the school canteen.",
+   "ko": "마르티나는 학교 급식이 얼마나 싫었는지 이야기해요.",
+   "blank": "ribrezzo",
+   "src": "made"
+  }
+ ],
  "w|ricadere": [
   {
    "text": "La colpa del ritardo non deve ricadere su Matteo, dice la collega.",
@@ -74237,6 +75773,22 @@
    "src": "made"
   }
  ],
+ "w|ricatto": [
+  {
+   "text": "Il nuovo vicino di Paolo è un giornalista che scrive di ricatto e corruzione.",
+   "en": "Paolo's new neighbor is a journalist who writes about blackmail and corruption.",
+   "ko": "파올로의 새 이웃은 협박과 부패에 관한 기사를 쓰는 기자예요.",
+   "blank": "ricatto",
+   "src": "made"
+  },
+  {
+   "text": "Al telegiornale Francesca sente di un ricatto ai danni di un'azienda farmaceutica.",
+   "en": "On the news Francesca hears about blackmail against a pharmaceutical company.",
+   "ko": "프란체스카는 뉴스에서 한 제약 회사가 협박을 당했다는 소식을 들어요.",
+   "blank": "ricatto",
+   "src": "made"
+  }
+ ],
  "w|ricavare": [
   {
    "text": "Da una lunga intervista, Matteo riesce a ricavare solo due frasi utili.",
@@ -74250,6 +75802,22 @@
    "en": "From her talk with the new colleague, Sara comes away with an excellent impression.",
    "ko": "새 동료와 이야기해 보고 사라는 아주 좋은 인상을 받아요.",
    "blank": "ricava",
+   "src": "made"
+  }
+ ],
+ "w|ricavo": [
+  {
+   "text": "Con il ricavo della vendita della vecchia casa Paolo paga il mutuo nuovo.",
+   "en": "With the proceeds from selling the old house Paolo pays the new mortgage.",
+   "ko": "파올로는 옛집을 판 돈으로 새 대출금을 갚아요.",
+   "blank": "ricavo",
+   "src": "made"
+  },
+  {
+   "text": "Il ricavo di dicembre è alto perché tutti comprano medicine per l'influenza, nota Francesca.",
+   "en": "December's revenue is high because everyone buys flu medicine, Francesca notes.",
+   "ko": "프란체스카는 모두 독감약을 사서 십이월 매출이 높다는 걸 알아요.",
+   "blank": "ricavo",
    "src": "made"
   }
  ],
@@ -75319,6 +76887,22 @@
    "src": "made"
   }
  ],
+ "w|rimborsare": [
+  {
+   "text": "Il proprietario promette di rimborsare a Stefano le spese per il corso di pasticceria.",
+   "en": "The owner promises to reimburse Stefano for the pastry course.",
+   "ko": "주인은 스테파노에게 제과 강좌 비용을 돌려주겠다고 약속해요.",
+   "blank": "rimborsare",
+   "src": "made"
+  },
+  {
+   "text": "L'amministratore deve rimborsare a Laura la riparazione del tubo.",
+   "en": "The building manager has to reimburse Laura for the pipe repair.",
+   "ko": "관리인은 라우라에게 수도관 수리비를 돌려줘야 해요.",
+   "blank": "rimborsare",
+   "src": "made"
+  }
+ ],
  "w|rimborso": [
   {
    "text": "Luca chiede il rimborso delle scarpe antiscivolo che ha comprato per il lavoro.",
@@ -76304,6 +77888,22 @@
    "en": "Anna feels no resentment toward the courier, who got the address wrong.",
    "ko": "안나는 주소를 잘못 찾은 택배 기사를 원망하지 않아요.",
    "blank": "risentimento",
+   "src": "made"
+  }
+ ],
+ "w|risentito": [
+  {
+   "text": "Il fratello è ancora risentito perché Andrea non era al suo matrimonio.",
+   "en": "His brother is still resentful because Andrea wasn't at his wedding.",
+   "ko": "형은 안드레아가 자기 결혼식에 오지 않아서 아직도 서운해해요.",
+   "blank": "risentito",
+   "src": "made"
+  },
+  {
+   "text": "Martina scopre che Elisa è ancora risentita per uno scherzo di quinta elementare.",
+   "en": "Martina finds out that Elisa still resents a prank from fifth grade.",
+   "ko": "마르티나는 엘리자가 초등학교 오 학년 때 장난을 아직도 서운해한다는 걸 알아요.",
+   "blank": "risentita",
    "src": "made"
   }
  ],
@@ -77685,6 +79285,22 @@
    "blank": "ruota"
   }
  ],
+ "w|rurale": [
+  {
+   "text": "Andrea e il fratello sono cresciuti in un paese rurale dove tutti si conoscevano.",
+   "en": "Andrea and his brother grew up in a rural village where everyone knew each other.",
+   "ko": "안드레아와 형은 모두가 서로 아는 시골 마을에서 자랐어요.",
+   "blank": "rurale",
+   "src": "made"
+  },
+  {
+   "text": "La rimpatriata si tiene in un agriturismo in una zona rurale vicino al paese di Martina.",
+   "en": "The reunion is held at a farm stay in a rural area near Martina's village.",
+   "ko": "동창 모임은 마르티나네 마을 근처 시골 농가 민박에서 열려요.",
+   "blank": "rurale",
+   "src": "made"
+  }
+ ],
  "w|ruscello": [
   {
    "text": "Paolo riempie la pentola con l'acqua fresca del ruscello.",
@@ -79049,6 +80665,22 @@
    "src": "made"
   }
  ],
+ "w|scalinata": [
+  {
+   "text": "Per arrivare alla nuova casa Paolo deve salire una lunga scalinata di pietra.",
+   "en": "To reach the new house Paolo has to climb a long stone staircase.",
+   "ko": "새집에 가려면 파올로는 긴 돌계단을 올라가야 해요.",
+   "blank": "scalinata",
+   "src": "made"
+  },
+  {
+   "text": "La farmacia di Francesca si trova in cima a una scalinata del centro storico.",
+   "en": "Francesca's pharmacy is at the top of a flight of steps in the old town.",
+   "ko": "프란체스카의 약국은 구시가지 계단 꼭대기에 있어요.",
+   "blank": "scalinata",
+   "src": "made"
+  }
+ ],
  "w|scalo": [
   {
    "text": "Marco ha cominciato il nuovo lavoro nell'ufficio merci dello scalo aereo.",
@@ -79228,6 +80860,22 @@
    "en": "In a shoe factory Martina sews ballet slippers for a dance school.",
    "ko": "마르티나는 신발 공장에서 무용 학원에 보낼 발레 슈즈를 바느질해요.",
    "blank": "scarpette",
+   "src": "made"
+  }
+ ],
+ "w|scarpone": [
+  {
+   "text": "In cucina Stefano indossa uno scarpone antiscivolo con la punta rinforzata.",
+   "en": "In the kitchen Stefano wears a non-slip boot with a reinforced toe.",
+   "ko": "주방에서 스테파노는 앞코가 단단한 미끄럼 방지 작업화를 신어요.",
+   "blank": "scarpone",
+   "src": "made"
+  },
+  {
+   "text": "Laura trova sul pianerottolo uno scarpone da montagna pieno di fango.",
+   "en": "Laura finds a mud-covered hiking boot on the landing.",
+   "ko": "라우라는 계단참에서 진흙투성이 등산화 한 짝을 발견해요.",
+   "blank": "scarpone",
    "src": "made"
   }
  ],
@@ -80274,6 +81922,22 @@
    "en": "The singer talks about his first defeat in a competition and Laura feels less alone.",
    "ko": "가수가 대회에서 처음 떨어졌던 이야기를 하자 라우라는 덜 외롭게 느껴요.",
    "blank": "sconfitta",
+   "src": "made"
+  }
+ ],
+ "w|sconforto": [
+  {
+   "text": "Dopo la lite Andrea passa una settimana di sconforto.",
+   "en": "After the quarrel Andrea spends a week feeling dejected.",
+   "ko": "다툼 뒤 안드레아는 일주일 내내 낙심해 지내요.",
+   "blank": "sconforto",
+   "src": "made"
+  },
+  {
+   "text": "Martina ascolta l'amica che parla del suo sconforto dopo il licenziamento.",
+   "en": "Martina listens to her friend talk about her despondency after being laid off.",
+   "ko": "마르티나는 해고된 뒤 낙담한 친구의 이야기를 들어 줘요.",
+   "blank": "sconforto",
    "src": "made"
   }
  ],
@@ -82639,6 +84303,22 @@
    "src": "made"
   }
  ],
+ "w|sfiducia": [
+  {
+   "text": "Dopo l'ultimo errore, Stefano sente la sfiducia dello chef nei suoi confronti.",
+   "en": "After the last mistake, Stefano feels the chef's distrust of him.",
+   "ko": "지난번 실수 이후 스테파노는 셰프가 자기를 믿지 않는다는 걸 느껴요.",
+   "blank": "sfiducia",
+   "src": "made"
+  },
+  {
+   "text": "Nel condominio c'è molta sfiducia verso la nuova ditta delle pulizie, racconta Laura.",
+   "en": "There's a lot of distrust in the building toward the new cleaning company, Laura says.",
+   "ko": "라우라는 아파트 주민들이 새 청소 업체를 많이 불신한다고 이야기해요.",
+   "blank": "sfiducia",
+   "src": "made"
+  }
+ ],
  "w|sfigato": [
   {
    "text": "Si sente sfigato dopo quella sconfitta.",
@@ -82651,6 +84331,38 @@
    "en": "Today I feel really unlucky.",
    "ko": "오늘 정말 재수 없다고 느껴.",
    "blank": "sfigato"
+  }
+ ],
+ "w|sfilare": [
+  {
+   "text": "Paolo deve sfilare il letto dalla porta stretta della camera.",
+   "en": "Paolo has to slide the bed out through the narrow bedroom door.",
+   "ko": "파올로는 좁은 침실 문으로 침대를 빼내야 해요.",
+   "blank": "sfilare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca aiuta una signora anziana a sfilare il guanto per misurarle la pressione.",
+   "en": "Francesca helps an elderly lady take off her glove to measure her blood pressure.",
+   "ko": "프란체스카는 혈압을 재려고 할머니의 장갑 벗는 걸 도와드려요.",
+   "blank": "sfilare",
+   "src": "made"
+  }
+ ],
+ "w|sfinito": [
+  {
+   "text": "Dopo ore di discussione Andrea è sfinito e va a dormire.",
+   "en": "After hours of arguing Andrea is exhausted and goes to bed.",
+   "ko": "몇 시간 동안 말다툼한 안드레아는 녹초가 되어 잠자리에 들어요.",
+   "blank": "sfinito",
+   "src": "made"
+  },
+  {
+   "text": "Alle due di notte Martina è sfinita, ma non vuole andare via.",
+   "en": "At two in the morning Martina is worn out, but she doesn't want to leave.",
+   "ko": "새벽 두 시가 되자 마르티나는 녹초가 되었지만 가고 싶지 않아요.",
+   "blank": "sfinita",
+   "src": "made"
   }
  ],
  "w|sfiorare": [
@@ -83379,6 +85091,38 @@
    "en": "I find his sense of humor very likable.",
    "ko": "그의 유머가 아주 마음에 들어.",
    "blank": "simpatico"
+  }
+ ],
+ "w|simultaneamente": [
+  {
+   "text": "Durante il servizio Stefano controlla simultaneamente tre padelle sul fuoco.",
+   "en": "During service Stefano keeps an eye on three pans on the stove simultaneously.",
+   "ko": "영업 중에 스테파노는 불 위의 프라이팬 세 개를 동시에 지켜봐요.",
+   "blank": "simultaneamente",
+   "src": "made"
+  },
+  {
+   "text": "Nel palazzo di Laura si sono rotti simultaneamente l'ascensore e il citofono.",
+   "en": "In Laura's building the lift and the intercom broke at the same time.",
+   "ko": "라우라의 건물에서 엘리베이터와 인터폰이 동시에 고장 났어요.",
+   "blank": "simultaneamente",
+   "src": "made"
+  }
+ ],
+ "w|sinagoga": [
+  {
+   "text": "Il ristorante di Stefano si trova nel vecchio ghetto, proprio accanto alla sinagoga.",
+   "en": "Stefano's restaurant is in the old ghetto, right next to the synagogue.",
+   "ko": "스테파노의 식당은 옛 게토 지역의 유대교 회당 바로 옆에 있어요.",
+   "blank": "sinagoga",
+   "src": "made"
+  },
+  {
+   "text": "Dal balcone di Laura si vede la cupola della sinagoga.",
+   "en": "From Laura's balcony you can see the dome of the synagogue.",
+   "ko": "라우라의 발코니에서는 유대교 회당의 돔이 보여요.",
+   "blank": "sinagoga",
+   "src": "made"
   }
  ],
  "w|sinceramente": [
@@ -88077,6 +89821,22 @@
    "blank": "stipendio"
   }
  ],
+ "w|stipulare": [
+  {
+   "text": "Il proprietario vuole stipulare un nuovo contratto con Stefano per tutta la stagione.",
+   "en": "The owner wants to sign a new contract with Stefano for the whole season.",
+   "ko": "주인은 스테파노와 시즌 전체 계약을 새로 맺고 싶어 해요.",
+   "blank": "stipulare",
+   "src": "made"
+  },
+  {
+   "text": "I condomini devono stipulare una nuova assicurazione e Laura legge le offerte.",
+   "en": "The residents have to take out a new insurance policy and Laura reads the offers.",
+   "ko": "주민들이 새 보험에 가입해야 해서 라우라가 견적서를 읽어요.",
+   "blank": "stipulare",
+   "src": "made"
+  }
+ ],
  "w|stirare": [
   {
    "text": "Devo stirare questa camicia bianca.",
@@ -89127,6 +90887,22 @@
    "blank": "succo"
   }
  ],
+ "w|succursale": [
+  {
+   "text": "Il ristorante apre una succursale al mare e Stefano ne diventa responsabile.",
+   "en": "The restaurant opens a branch by the sea and Stefano becomes its manager.",
+   "ko": "식당이 바닷가에 분점을 내고, 스테파노가 그곳 책임자가 돼요.",
+   "blank": "succursale",
+   "src": "made"
+  },
+  {
+   "text": "Laura lavora nella succursale della banca all'angolo del suo palazzo.",
+   "en": "Laura works at the bank branch on the corner of her building.",
+   "ko": "라우라는 건물 모퉁이의 은행 지점에서 일해요.",
+   "blank": "succursale",
+   "src": "made"
+  }
+ ],
  "w|sud": [
   {
    "text": "Il vento arriva dal sud.",
@@ -89352,6 +91128,22 @@
    "en": "Sara's father-in-law makes the fish barbecue for the whole family.",
    "ko": "사라의 시아버지가 온 가족을 위해 생선 바비큐를 준비해요.",
    "blank": "suocero",
+   "src": "made"
+  }
+ ],
+ "w|suola": [
+  {
+   "text": "Durante il trasloco a Paolo si stacca la suola di una scarpa.",
+   "en": "During the move the sole of one of Paolo's shoes comes off.",
+   "ko": "이사하는 도중에 파올로의 신발 밑창 하나가 떨어져요.",
+   "blank": "suola",
+   "src": "made"
+  },
+  {
+   "text": "Francesca vende un plantare da mettere sotto la suola per il mal di schiena.",
+   "en": "Francesca sells an insole to put under the sole for back pain.",
+   "ko": "프란체스카는 허리 통증에 좋은 신발 깔창을 팔아요.",
+   "blank": "suola",
    "src": "made"
   }
  ],
@@ -90366,6 +92158,22 @@
    "en": "For Sara the first-floor café is a regular stop before her shift.",
    "ko": "사라에게 1층 카페는 근무 전에 꼭 들르는 곳이에요.",
    "blank": "tappa",
+   "src": "made"
+  }
+ ],
+ "w|tapparella": [
+  {
+   "text": "Nella camera di Paolo la tapparella è bloccata e la stanza resta al buio.",
+   "en": "In Paolo's bedroom the roller shutter is stuck and the room stays dark.",
+   "ko": "파올로의 침실 블라인드 셔터가 걸려서 방이 어두워요.",
+   "blank": "tapparella",
+   "src": "made"
+  },
+  {
+   "text": "Ogni sera Francesca abbassa la tapparella della vetrina e chiude a chiave.",
+   "en": "Every evening Francesca lowers the roller shutter on the shop window and locks up.",
+   "ko": "저녁마다 프란체스카는 진열창 셔터를 내리고 문을 잠가요.",
+   "blank": "tapparella",
    "src": "made"
   }
  ],
@@ -91583,6 +93391,22 @@
    "src": "made"
   }
  ],
+ "w|termosifone": [
+  {
+   "text": "Il primo inverno Paolo scopre che un termosifone non scalda.",
+   "en": "The first winter Paolo finds out that one radiator doesn't heat.",
+   "ko": "첫 겨울에 파올로는 라디에이터 하나가 안 데워진다는 걸 알아요.",
+   "blank": "termosifone",
+   "src": "made"
+  },
+  {
+   "text": "Francesca appoggia le mani sul termosifone per scaldarle dopo la consegna.",
+   "en": "Francesca puts her hands on the radiator to warm them after the delivery.",
+   "ko": "배달을 다녀온 프란체스카는 손을 녹이려고 라디에이터에 대요.",
+   "blank": "termosifone",
+   "src": "made"
+  }
+ ],
  "w|terra": [
   {
    "text": "Il vaso è caduto per terra.",
@@ -91610,6 +93434,22 @@
    "en": "As soon as the warm weather returns, Martina has breakfast on the terrace.",
    "ko": "날이 다시 따뜻해지자 마르티나는 테라스에서 아침을 먹어요.",
    "blank": "terrazza",
+   "src": "made"
+  }
+ ],
+ "w|terrazzo": [
+  {
+   "text": "Sul terrazzo Paolo mette due sedie e un tavolino per le sere d'estate.",
+   "en": "On the terrace Paolo puts two chairs and a small table for summer evenings.",
+   "ko": "파올로는 여름 저녁을 위해 테라스에 의자 두 개와 작은 탁자를 놓아요.",
+   "blank": "terrazzo",
+   "src": "made"
+  },
+  {
+   "text": "La sera Francesca innaffia i gerani sul terrazzo sopra la farmacia.",
+   "en": "In the evening Francesca waters the geraniums on the terrace above the pharmacy.",
+   "ko": "저녁이면 프란체스카는 약국 위 테라스의 제라늄에 물을 줘요.",
+   "blank": "terrazzo",
    "src": "made"
   }
  ],
@@ -93013,6 +94853,22 @@
    "blank": "tour"
   }
  ],
+ "w|tovaglia": [
+  {
+   "text": "Paolo avvolge i bicchieri in una vecchia tovaglia per non romperli.",
+   "en": "Paolo wraps the glasses in an old tablecloth so they don't break.",
+   "ko": "파올로는 컵이 깨지지 않게 낡은 식탁보로 싸요.",
+   "blank": "tovaglia",
+   "src": "made"
+  },
+  {
+   "text": "Francesca macchia di sciroppo la tovaglia della cucina mentre cena.",
+   "en": "Francesca stains the kitchen tablecloth with syrup while having dinner.",
+   "ko": "프란체스카는 저녁을 먹다가 부엌 식탁보에 시럽을 흘려요.",
+   "blank": "tovaglia",
+   "src": "made"
+  }
+ ],
  "w|tovagliolo": [
   {
    "text": "Passami un tovagliolo, per favore.",
@@ -93496,6 +95352,22 @@
    "en": "Sara monitors the transit of goods through the port on her computer.",
    "ko": "사라는 컴퓨터로 항구를 거쳐 가는 화물 흐름을 확인해요.",
    "blank": "transito",
+   "src": "made"
+  }
+ ],
+ "w|trapano": [
+  {
+   "text": "Il vicino presta a Paolo un trapano per montare le mensole.",
+   "en": "The neighbor lends Paolo a drill to put up the shelves.",
+   "ko": "이웃이 파올로에게 선반을 달라고 전동 드릴을 빌려줘요.",
+   "blank": "trapano",
+   "src": "made"
+  },
+  {
+   "text": "Il rumore di un trapano nel palazzo accanto disturba Francesca tutto il giorno.",
+   "en": "The noise of a drill in the building next door bothers Francesca all day.",
+   "ko": "옆 건물의 드릴 소리가 하루 종일 프란체스카를 괴롭혀요.",
+   "blank": "trapano",
    "src": "made"
   }
  ],
@@ -96141,6 +98013,22 @@
    "src": "made"
   }
  ],
+ "w|vanitoso": [
+  {
+   "text": "Il nuovo chef è vanitoso e si fa fotografare con ogni piatto, sbuffa Stefano.",
+   "en": "The new chef is vain and has his photo taken with every dish, Stefano grumbles.",
+   "ko": "스테파노는 새 셰프가 허영심이 강해서 요리마다 사진을 찍는다고 투덜대요.",
+   "blank": "vanitoso",
+   "src": "made"
+  },
+  {
+   "text": "Il vicino del quinto piano è vanitoso e lucida la sua auto ogni domenica, nota Laura.",
+   "en": "The neighbor on the fifth floor is vain and polishes his car every Sunday, Laura notes.",
+   "ko": "라우라는 오 층 이웃이 허영심이 많아 일요일마다 차를 닦는다는 걸 알아요.",
+   "blank": "vanitoso",
+   "src": "made"
+  }
+ ],
  "w|vantaggio": [
   {
    "text": "Avere esperienza è un grande vantaggio.",
@@ -97091,6 +98979,22 @@
    "src": "made"
   }
  ],
+ "w|vertenza": [
+  {
+   "text": "Il sindacato apre una vertenza per gli straordinari non pagati di Stefano e dei colleghi.",
+   "en": "The union opens a dispute over the unpaid overtime of Stefano and his colleagues.",
+   "ko": "노조가 스테파노와 동료들의 미지급 초과 근무 수당 문제로 분쟁을 제기해요.",
+   "blank": "vertenza",
+   "src": "made"
+  },
+  {
+   "text": "Tra i condomini e la ditta del riscaldamento c'è una vertenza che dura da mesi, spiega Laura.",
+   "en": "There's been a dispute between the residents and the heating company for months, Laura explains.",
+   "ko": "라우라는 주민들과 난방 업체 사이의 분쟁이 몇 달째 이어지고 있다고 설명해요.",
+   "blank": "vertenza",
+   "src": "made"
+  }
+ ],
  "w|verticale": [
   {
    "text": "Stefano disegna un giardino verticale per la facciata del municipio.",
@@ -97199,6 +99103,22 @@
    "en": "She always dresses elegantly.",
    "ko": "그녀는 항상 우아하게 차려입어.",
    "blank": "veste"
+  }
+ ],
+ "w|vestirsi": [
+  {
+   "text": "Andrea ci mette un'ora a vestirsi perché non sa se andare o no alla cena di famiglia.",
+   "en": "Andrea takes an hour to get dressed because he doesn't know whether to go to the family dinner.",
+   "ko": "안드레아는 가족 저녁 모임에 갈지 말지 몰라서 옷을 입는 데 한 시간이 걸려요.",
+   "blank": "vestirsi",
+   "src": "made"
+  },
+  {
+   "text": "Martina non sa come vestirsi per una cena con gli amici di vent'anni fa.",
+   "en": "Martina doesn't know how to dress for a dinner with friends from twenty years ago.",
+   "ko": "마르티나는 이십 년 전 친구들과의 저녁에 뭘 입어야 할지 몰라요.",
+   "blank": "vestirsi",
+   "src": "made"
   }
  ],
  "w|vestitino": [

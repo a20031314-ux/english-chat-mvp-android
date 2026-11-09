@@ -2333,6 +2333,22 @@
    "src": "made"
   }
  ],
+ "w|अनिच्छा": [
+  {
+   "text": "अमित ने पहले अनिच्छा से माफ़ी माँगी, पर बाद में उसे सच में बुरा लगा।",
+   "en": "At first Amit apologised reluctantly, but later he truly felt bad.",
+   "ko": "아밋은 처음엔 마지못해 사과했지만 나중엔 정말 미안했어요.",
+   "blank": "अनिच्छा",
+   "src": "made"
+  },
+  {
+   "text": "नेहा अनिच्छा से झरने के ठंडे पानी में उतरी।",
+   "en": "Neha reluctantly stepped into the cold water of the waterfall.",
+   "ko": "네하는 마지못해 폭포의 차가운 물에 들어갔어요.",
+   "blank": "अनिच्छा",
+   "src": "made"
+  }
+ ],
  "w|अनिवार्य": [
   {
    "text": "रसोई में टोपी और एप्रन पहनना सबके लिए अनिवार्य है।",
@@ -3032,6 +3048,22 @@
    "en": "Shalini loves exploring new trails.",
    "ko": "샬리니는 새로운 오솔길을 탐험하는 걸 아주 좋아해요.",
    "blank": "अन्वेषण",
+   "src": "made"
+  }
+ ],
+ "w|अपनत्व": [
+  {
+   "text": "पूजा के हाथ की चाय में वही पुराना अपनत्व था, और अमित की नाराज़गी पिघल गई।",
+   "en": "Pooja's tea had the same old warmth, and Amit's anger melted away.",
+   "ko": "푸자가 끓인 차에는 예전 같은 정이 담겨 있어서 아밋의 서운함이 녹았어요.",
+   "blank": "अपनत्व",
+   "src": "made"
+  },
+  {
+   "text": "गाँव वालों ने नेहा को इतने अपनत्व से खाना खिलाया कि उसे घर याद आ गया।",
+   "en": "The villagers fed Neha with such warmth that it reminded her of home.",
+   "ko": "마을 사람들이 너무 정겹게 밥을 차려 줘서 네하는 집 생각이 났어요.",
+   "blank": "अपनत्व",
    "src": "made"
   }
  ],
@@ -4808,6 +4840,22 @@
    "en": "Small children often get restless when they hear the drill.",
    "ko": "어린아이들은 드릴 소리를 들으면 자주 불안해해요.",
    "blank": "अशांत",
+   "src": "made"
+  }
+ ],
+ "w|अशिष्ट": [
+  {
+   "text": "अमित को बाद में एहसास हुआ कि उसका जवाब अशिष्ट था।",
+   "en": "Later Amit realised his reply had been rude.",
+   "ko": "아밋은 나중에야 자기 대답이 무례했다는 걸 깨달았어요.",
+   "blank": "अशिष्ट",
+   "src": "made"
+  },
+  {
+   "text": "पास के कैंप के अशिष्ट लड़के देर रात तक शोर मचाते रहे और नेहा सो न सकी।",
+   "en": "The rude boys at the next camp made noise till late, and Neha couldn't sleep.",
+   "ko": "옆 캠프의 무례한 남자애들이 밤늦게까지 떠들어서 네하는 잠을 못 잤어요.",
+   "blank": "अशिष्ट",
    "src": "made"
   }
  ],
@@ -8039,6 +8087,22 @@
    "src": "made"
   }
  ],
+ "w|आशंकित": [
+  {
+   "text": "अमित आशंकित था कि पूजा उसकी बात सुनेगी भी या नहीं।",
+   "en": "Amit was anxious about whether Pooja would even listen to him.",
+   "ko": "아밋은 푸자가 자기 말을 들어 주기나 할지 걱정했어요.",
+   "blank": "आशंकित",
+   "src": "made"
+  },
+  {
+   "text": "रात को जंगल से अजीब आवाज़ें आईं, तो नेहा आशंकित हो उठी।",
+   "en": "When strange sounds came from the forest at night, Neha grew uneasy.",
+   "ko": "밤에 숲에서 이상한 소리가 나자 네하는 불안해졌어요.",
+   "blank": "आशंकित",
+   "src": "made"
+  }
+ ],
  "w|आशा": [
   {
    "text": "मुझे सफलता की आशा है।",
@@ -9395,6 +9459,22 @@
    "blank": "ईश्वर"
   }
  ],
+ "w|उकताना": [
+  {
+   "text": "अमित की लंबी सफ़ाई सुनते-सुनते पूजा उकता गई।",
+   "en": "Pooja grew weary of listening to Amit's long explanation.",
+   "ko": "아밋의 긴 변명을 듣다가 푸자는 지쳐 버렸어요.",
+   "blank": "उकता",
+   "src": "made"
+  },
+  {
+   "text": "लंबे रास्ते से उकताकर नेहा ने ज़ोर-ज़ोर से गाना शुरू कर दिया।",
+   "en": "Bored of the long trail, Neha started singing loudly.",
+   "ko": "긴 길에 지친 네하는 큰 소리로 노래를 부르기 시작했어요.",
+   "blank": "उकताकर",
+   "src": "made"
+  }
+ ],
  "w|उकसाना": [
   {
    "text": "संपादक ने चेताया कि सुर्ख़ियाँ ऐसी न हों जो लोगों को दंगे के लिए उकसाएँ।",
@@ -10479,6 +10559,22 @@
    "src": "made"
   }
  ],
+ "w|उद्दंड": [
+  {
+   "text": "माँ बताती हैं कि बचपन में अमित बड़ा उद्दंड था, पर पूजा हमेशा उसे डाँट से बचाती थी।",
+   "en": "Mum says Amit was very unruly as a child, but Pooja always saved him from a scolding.",
+   "ko": "엄마 말로는 어릴 적 아밋이 아주 말썽꾸러기였지만 푸자가 늘 꾸중을 막아 줬대요.",
+   "blank": "उद्दंड",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने उद्दंड बंदरों से खाने का थैला किसी तरह बचाया।",
+   "en": "Neha somehow saved the food bag from the unruly monkeys.",
+   "ko": "네하는 막무가내 원숭이들에게서 음식 가방을 겨우 지켜 냈어요.",
+   "blank": "उद्दंड",
+   "src": "made"
+  }
+ ],
  "w|उद्देश्य": [
   {
    "text": "यात्रा का उद्देश्य विश्राम था।",
@@ -10938,6 +11034,22 @@
    "en": "Kavita teaches that a smart consumer always reads the ingredients on the packet.",
    "ko": "카비타는 현명한 소비자는 포장지 성분표를 꼭 읽는다고 가르쳐요.",
    "blank": "उपभोक्ता",
+   "src": "made"
+  }
+ ],
+ "w|उपभोक्तावाद": [
+  {
+   "text": "वाद-विवाद प्रतियोगिता में राहुल ने उपभोक्तावाद के ख़िलाफ़ ज़ोरदार भाषण दिया।",
+   "en": "In the debate competition Rahul gave a strong speech against consumerism.",
+   "ko": "토론 대회에서 라훌은 소비주의를 반대하는 열띤 연설을 했어요.",
+   "blank": "उपभोक्तावाद",
+   "src": "made"
+  },
+  {
+   "text": "शहर के उपभोक्तावाद से थककर प्रिया अब कम चीज़ों में जीना सीख रही है।",
+   "en": "Tired of the city's consumerism, Priya is now learning to live with fewer things.",
+   "ko": "도시의 소비주의에 지친 프리야는 이제 적게 가지고 사는 법을 배우고 있어요.",
+   "blank": "उपभोक्तावाद",
    "src": "made"
   }
  ],
@@ -11851,6 +11963,22 @@
    "src": "made"
   }
  ],
+ "w|ऊँचनीच": [
+  {
+   "text": "राहुल के स्कूल में सब बच्चे साथ बैठकर खाना खाते हैं, वहाँ कोई ऊँचनीच नहीं मानी जाती।",
+   "en": "At Rahul's school all the children eat together; no one is treated as higher or lower.",
+   "ko": "라훌 학교에선 모든 아이가 함께 밥을 먹고 누구도 차별하지 않아요.",
+   "blank": "ऊँचनीच",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने याद किया कि दोनों की दोस्ती में कभी अमीर-ग़रीब की ऊँचनीच नहीं आई।",
+   "en": "Priya recalled that differences of rich and poor never came between their friendship.",
+   "ko": "프리야는 둘의 우정에 빈부 차이가 끼어든 적이 없었다고 떠올렸어요.",
+   "blank": "ऊँचनीच",
+   "src": "made"
+  }
+ ],
  "w|ऊँचा": [
   {
    "text": "पहाड़ बहुत ऊँचा लगता है।",
@@ -11954,6 +12082,22 @@
    "en": "During the long wait for the lights to be fixed, boredom was clearly visible on the actors' faces.",
    "ko": "조명 고치는 걸 오래 기다리느라 배우들 얼굴에 지루함이 역력했어요.",
    "blank": "ऊब",
+   "src": "made"
+  }
+ ],
+ "w|ऊब जाना": [
+  {
+   "text": "रोज़-रोज़ की बहस से अमित पूरी तरह ऊब गया था।",
+   "en": "Amit was completely fed up with the daily arguments.",
+   "ko": "매일 이어지는 말다툼에 아밋은 완전히 지쳐 있었어요.",
+   "blank": "ऊब गया",
+   "src": "made"
+  },
+  {
+   "text": "बारिश में टेंट के अंदर बैठे-बैठे नेहा ऊब गई।",
+   "en": "Sitting inside the tent in the rain, Neha got bored.",
+   "ko": "비 오는 날 텐트 안에만 있다 보니 네하는 지루해졌어요.",
+   "blank": "ऊब गई",
    "src": "made"
   }
  ],
@@ -12491,6 +12635,22 @@
    "en": "The feeling of joy reached the heart.",
    "ko": "기쁨의 느낌이 마음까지 닿았어.",
    "blank": "एहसास"
+  }
+ ],
+ "w|ऐच्छिक": [
+  {
+   "text": "पूजा ने साफ़ कहा कि परिवार की पार्टी में आना ऐच्छिक नहीं है, अमित को आना ही होगा।",
+   "en": "Pooja said clearly that coming to the family party isn't optional; Amit has to come.",
+   "ko": "푸자는 가족 모임은 선택이 아니라며 아밋이 꼭 와야 한다고 분명히 말했어요.",
+   "blank": "ऐच्छिक",
+   "src": "made"
+  },
+  {
+   "text": "सुबह की ट्रेकिंग ऐच्छिक थी, फिर भी नेहा सबसे पहले तैयार हो गई।",
+   "en": "The morning trek was optional, yet Neha was the first one ready.",
+   "ko": "아침 트레킹은 선택이었는데도 네하가 제일 먼저 준비를 마쳤어요.",
+   "blank": "ऐच्छिक",
+   "src": "made"
   }
  ],
  "w|ऐंठना": [
@@ -14809,6 +14969,22 @@
    "src": "made"
   }
  ],
+ "w|कर्कश": [
+  {
+   "text": "अमित के कर्कश स्वर से पूजा सहम गई।",
+   "en": "Pooja flinched at Amit's harsh tone.",
+   "ko": "아밋의 거친 목소리에 푸자는 움찔했어요.",
+   "blank": "कर्कश",
+   "src": "made"
+  },
+  {
+   "text": "पेड़ पर बैठे कौवे की कर्कश आवाज़ से नेहा की नींद खुली।",
+   "en": "Neha was woken by the harsh cawing of a crow in the tree.",
+   "ko": "나무에 앉은 까마귀의 거친 울음소리에 네하가 잠에서 깼어요.",
+   "blank": "कर्कश",
+   "src": "made"
+  }
+ ],
  "w|कर्ज़": [
   {
    "text": "छोटा कर्ज़ भी समय पर चुकाना चाहिए।",
@@ -14910,6 +15086,22 @@
    "en": "Anjali wrote that she has never seen a woman as hardworking as Meera's mother.",
    "ko": "안잘리는 미라의 어머니처럼 부지런한 분은 아직 못 봤다고 썼어요.",
    "blank": "कर्मठ",
+   "src": "made"
+  }
+ ],
+ "w|कर्मफल": [
+  {
+   "text": "नैतिक शिक्षा की किताब में राहुल ने कर्मफल पर एक कहानी पढ़ी।",
+   "en": "In his moral science book Rahul read a story about reaping what you sow.",
+   "ko": "도덕 교과서에서 라훌은 업보에 관한 이야기를 읽었어요.",
+   "blank": "कर्मफल",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने लिखा कि दादी हमेशा कहती थीं कि कर्मफल से कोई नहीं बचता।",
+   "en": "Priya wrote that Grandma always said no one escapes the fruits of their deeds.",
+   "ko": "프리야는 할머니가 늘 업보는 아무도 피할 수 없다고 하셨다고 썼어요.",
+   "blank": "कर्मफल",
    "src": "made"
   }
  ],
@@ -15165,6 +15357,22 @@
    "en": "Everyone fell silent after hearing the poem.",
    "ko": "시를 듣고 모두 조용해졌어.",
    "blank": "कविता"
+  }
+ ],
+ "w|कशिश": [
+  {
+   "text": "बचपन की यादों में एक कशिश थी, जो अमित को बार-बार बहन के पास खींच लाती थी।",
+   "en": "Childhood memories had a pull that kept drawing Amit back to his sister.",
+   "ko": "어린 시절 추억에는 끌림이 있어서 아밋을 자꾸 누나 곁으로 이끌었어요.",
+   "blank": "कशिश",
+   "src": "made"
+  },
+  {
+   "text": "झील किनारे की शांति में अजीब-सी कशिश थी, और नेहा वहाँ घंटों बैठी रही।",
+   "en": "The quiet by the lake had a strange pull, and Neha sat there for hours.",
+   "ko": "호숫가의 고요함엔 묘한 끌림이 있어서 네하는 몇 시간이고 거기 앉아 있었어요.",
+   "blank": "कशिश",
+   "src": "made"
   }
  ],
  "w|कष्ट": [
@@ -15766,6 +15974,22 @@
    "en": "A worker repairing the mountain road showed Shalini the right direction.",
    "ko": "산길을 고치던 일꾼 한 명이 샬리니에게 올바른 방향을 알려 줬어요.",
    "blank": "कामगार",
+   "src": "made"
+  }
+ ],
+ "w|कामचलाऊ": [
+  {
+   "text": "अमित ने कामचलाऊ सफ़ाई दी, जिससे बात और बिगड़ गई।",
+   "en": "Amit gave a half-hearted explanation, which only made things worse.",
+   "ko": "아밋이 대충 변명을 하는 바람에 일이 더 꼬였어요.",
+   "blank": "कामचलाऊ",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने दो डंडों और एक चादर से कामचलाऊ छप्पर बना लिया।",
+   "en": "Neha rigged up a makeshift shelter with two sticks and a sheet.",
+   "ko": "네하는 막대기 두 개와 천 한 장으로 임시 지붕을 만들었어요.",
+   "blank": "कामचलाऊ",
    "src": "made"
   }
  ],
@@ -17203,6 +17427,22 @@
    "src": "made"
   }
  ],
+ "w|कुढ़ना": [
+  {
+   "text": "अमित मन ही मन कुढ़ता रहा, पर उसने मुँह से कुछ नहीं कहा।",
+   "en": "Amit kept fuming inwardly, but said nothing out loud.",
+   "ko": "아밋은 속으로 부글부글했지만 입 밖으로는 아무 말도 안 했어요.",
+   "blank": "कुढ़ता",
+   "src": "made"
+  },
+  {
+   "text": "नेहा मन ही मन कुढ़ रही थी कि दोस्त ने टॉर्च क्यों नहीं रखी।",
+   "en": "Neha was silently stewing over why her friend hadn't packed a torch.",
+   "ko": "네하는 친구가 왜 손전등을 안 챙겼는지 속으로 부글거렸어요.",
+   "blank": "कुढ़",
+   "src": "made"
+  }
+ ],
  "w|कुतरना": [
   {
    "text": "सुनील तनाव में पेंसिल कुतरता है, और इसी आदत से उसका दाँत चटक गया।",
@@ -17294,6 +17534,22 @@
    "en": "Seema's daughter had hidden a packet of kurkure among the boxes.",
    "ko": "시마의 딸은 상자들 사이에 쿠르쿠레 한 봉지를 숨겨 두었어요.",
    "blank": "कुरकुरे",
+   "src": "made"
+  }
+ ],
+ "w|कुरीति": [
+  {
+   "text": "स्कूल के नाटक में राहुल ने दहेज जैसी कुरीति के ख़िलाफ़ बोलने वाले लड़के का रोल किया।",
+   "en": "In the school play Rahul played a boy who speaks out against an evil custom like dowry.",
+   "ko": "학교 연극에서 라훌은 지참금 같은 악습에 맞서는 소년 역을 맡았어요.",
+   "blank": "कुरीति",
+   "src": "made"
+  },
+  {
+   "text": "अनु के गाँव में घूँघट की कुरीति लगभग ख़त्म हो गई है, यह जानकर प्रिया को ख़ुशी हुई।",
+   "en": "Priya was glad to learn that the harmful custom of the veil has nearly ended in Anu's village.",
+   "ko": "아누네 마을에서 얼굴 가리개 악습이 거의 사라졌다는 소식에 프리야는 기뻤어요.",
+   "blank": "कुरीति",
    "src": "made"
   }
  ],
@@ -20321,6 +20577,22 @@
    "blank": "खिड़की"
   }
  ],
+ "w|खिन्न": [
+  {
+   "text": "पूजा के फ़ोन न उठाने से अमित पूरे दिन खिन्न रहा।",
+   "en": "Amit stayed glum all day because Pooja wouldn't pick up the phone.",
+   "ko": "푸자가 전화를 안 받아서 아밋은 하루 종일 언짢았어요.",
+   "blank": "खिन्न",
+   "src": "made"
+  },
+  {
+   "text": "बारिश ने सारा प्लान बिगाड़ दिया, तो नेहा खिन्न होकर टेंट में बैठ गई।",
+   "en": "The rain spoiled all the plans, so Neha sat in the tent feeling glum.",
+   "ko": "비 때문에 계획이 다 틀어지자 네하는 시무룩하게 텐트에 앉아 있었어요.",
+   "blank": "खिन्न",
+   "src": "made"
+  }
+ ],
  "w|खिलखिलाना": [
   {
    "text": "अपनी पुरानी ग़लती वाली हेडलाइन देखकर पूरा न्यूज़रूम खिलखिलाने लगा।",
@@ -20393,6 +20665,22 @@
    "blank": "खिसकना"
   }
  ],
+ "w|खिसियाना": [
+  {
+   "text": "ग़लतफ़हमी दूर होते ही अमित खिसियाकर हँस पड़ा।",
+   "en": "As soon as the misunderstanding cleared, Amit laughed sheepishly.",
+   "ko": "오해가 풀리자 아밋은 멋쩍게 웃었어요.",
+   "blank": "खिसियाकर",
+   "src": "made"
+  },
+  {
+   "text": "नदी पार करते हुए नेहा फिसलकर पानी में गिरी, तो खिसियाकर हँसने लगी।",
+   "en": "Slipping into the water while crossing the stream, Neha laughed in embarrassment.",
+   "ko": "개울을 건너다 미끄러져 물에 빠진 네하는 민망해서 웃었어요.",
+   "blank": "खिसियाकर",
+   "src": "made"
+  }
+ ],
  "w|खींचना": [
   {
    "text": "दरवाज़ा खींचना मत, धक्का दो।",
@@ -20405,6 +20693,22 @@
    "en": "Learn to pull the rope gently.",
    "ko": "줄을 천천히 당기는 법을 배워.",
    "blank": "खींचना"
+  }
+ ],
+ "w|खीझना": [
+  {
+   "text": "बार-बार टोके जाने पर अमित पूजा पर खीझ उठा।",
+   "en": "Being interrupted again and again, Amit snapped at Pooja.",
+   "ko": "자꾸 말이 끊기자 아밋은 푸자에게 버럭 짜증을 냈어요.",
+   "blank": "खीझ",
+   "src": "made"
+  },
+  {
+   "text": "माचिस गीली निकली तो नेहा खीझ गई।",
+   "en": "When the matches turned out to be damp, Neha got irritated.",
+   "ko": "성냥이 젖어 있어서 네하는 짜증이 났어요.",
+   "blank": "खीझ",
+   "src": "made"
   }
  ],
  "w|खीर": [
@@ -21262,6 +21566,22 @@
    "en": "Neha wrote that the children shaped an idol of Ganesh out of clay.",
    "ko": "네하는 아이들이 흙으로 가네샤 상을 빚었다고 썼어요.",
    "blank": "गढ़ी",
+   "src": "made"
+  }
+ ],
+ "w|गणगौर": [
+  {
+   "text": "राहुल के स्कूल में गणगौर पर लड़कियों ने लोकगीत गाए।",
+   "en": "At Rahul's school the girls sang folk songs for Gangaur.",
+   "ko": "라훌 학교에서는 강가우르 때 여학생들이 민요를 불렀어요.",
+   "blank": "गणगौर",
+   "src": "made"
+  },
+  {
+   "text": "बचपन में प्रिया और अनु गणगौर पर साथ बैठकर मेहँदी लगाती थीं।",
+   "en": "As children, Priya and Anu used to sit together and put on henna for Gangaur.",
+   "ko": "어릴 적 프리야와 아누는 강가우르 때 함께 앉아 헤나를 그렸어요.",
+   "blank": "गणगौर",
    "src": "made"
   }
  ],
@@ -22939,6 +23259,22 @@
    "blank": "गुरुद्वारा"
   }
  ],
+ "w|गुरुपर्व": [
+  {
+   "text": "गुरुपर्व की छुट्टी में राहुल अपने दोस्त के साथ लंगर में सेवा करने गया।",
+   "en": "On the Gurpurab holiday, Rahul went with his friend to help serve at the langar.",
+   "ko": "구루푸랍 휴일에 라훌은 친구와 함께 랑가르 봉사를 하러 갔어요.",
+   "blank": "गुरुपर्व",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने लिखा कि गुरुपर्व पर उसके मोहल्ले में दीये जलते हैं और सब मिलकर प्रसाद बाँटते हैं।",
+   "en": "Priya wrote that on Gurpurab lamps are lit in her neighbourhood and everyone shares the offering together.",
+   "ko": "프리야는 구루푸랍이면 동네에 등불이 켜지고 다 같이 음식을 나눈다고 썼어요.",
+   "blank": "गुरुपर्व",
+   "src": "made"
+  }
+ ],
  "w|गुरुवार": [
   {
    "text": "गुरुवार को बाज़ार छुट्टी रहती है।",
@@ -23603,6 +23939,22 @@
    "blank": "गोली"
   }
  ],
+ "w|गौना": [
+  {
+   "text": "राहुल के निबंध का विषय था कि पुराने समय में गौना क्यों होता था।",
+   "en": "The topic of Rahul's essay was why the gauna ceremony used to take place in the old days.",
+   "ko": "라훌의 작문 주제는 옛날에 왜 신부를 늦게 데려오는 가우나 의식이 있었는지였어요.",
+   "blank": "गौना",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की चचेरी बहन का गौना अगले महीने है, और वह चाहती है कि अनु भी आए।",
+   "en": "Priya's cousin's gauna is next month, and she wants Anu to come too.",
+   "ko": "다음 달에 프리야 사촌 동생의 가우나가 있는데 프리야는 아누도 오길 바라요.",
+   "blank": "गौना",
+   "src": "made"
+  }
+ ],
  "w|गौर करना": [
   {
    "text": "मैनेजर ने अमित के सुझाव पर गौर किया और उसे लागू कर दिया।",
@@ -23864,6 +24216,22 @@
    "en": "Kavita laughingly wrote that her grandson always gets good grades in maths.",
    "ko": "카비타는 손자가 수학에서 늘 좋은 성적을 받는다고 웃으며 썼어요.",
    "blank": "ग्रेड",
+   "src": "made"
+  }
+ ],
+ "w|ग्लानि": [
+  {
+   "text": "सच पता चलने पर अमित को अपने ग़ुस्से पर ग्लानि हुई।",
+   "en": "When he learned the truth, Amit felt remorse for his anger.",
+   "ko": "진실을 알고 나서 아밋은 화낸 게 부끄러웠어요.",
+   "blank": "ग्लानि",
+   "src": "made"
+  },
+  {
+   "text": "कूड़े का थैला पीछे छूट गया देखकर नेहा को ग्लानि हुई और वह उसे उठाने लौटी।",
+   "en": "Seeing she'd left the rubbish bag behind, Neha felt guilty and went back for it.",
+   "ko": "쓰레기봉투를 두고 온 걸 보고 네하는 부끄러워서 가지러 돌아갔어요.",
+   "blank": "ग्लानि",
    "src": "made"
   }
  ],
@@ -24750,6 +25118,22 @@
    "en": "A hacker tried to dodge the security check, but Anjali's team caught him.",
    "ko": "해커가 보안 검사를 속이려 했지만 안잘리 팀이 잡아냈어요.",
    "blank": "चकमा देने",
+   "src": "made"
+  }
+ ],
+ "w|चकराना": [
+  {
+   "text": "पूजा का इल्ज़ाम सुनकर अमित का सिर चकरा गया।",
+   "en": "Hearing Pooja's accusation, Amit's head spun.",
+   "ko": "푸자의 비난을 듣고 아밋은 머리가 어지러웠어요.",
+   "blank": "चकरा",
+   "src": "made"
+  },
+  {
+   "text": "ऊँचाई पर पहुँचते ही नेहा का सिर चकराने लगा।",
+   "en": "As soon as she reached the heights, Neha began to feel dizzy.",
+   "ko": "높은 곳에 오르자마자 네하는 머리가 핑 돌기 시작했어요.",
+   "blank": "चकराने",
    "src": "made"
   }
  ],
@@ -26153,6 +26537,22 @@
    "blank": "चिट्ठी"
   }
  ],
+ "w|चिड़चिड़ापन": [
+  {
+   "text": "अमित की बहन पूजा ने कहा कि आजकल उसका चिड़चिड़ापन बहुत बढ़ गया है।",
+   "en": "Amit's sister Pooja said his irritability has really grown these days.",
+   "ko": "아밋의 누나 푸자는 요즘 아밋이 너무 짜증이 늘었다고 했어요.",
+   "blank": "चिड़चिड़ापन",
+   "src": "made"
+  },
+  {
+   "text": "भूख और थकान से नेहा का चिड़चिड़ापन बढ़ता जा रहा था।",
+   "en": "Hunger and tiredness were making Neha more and more irritable.",
+   "ko": "배고프고 지쳐서 네하는 점점 짜증이 늘었어요.",
+   "blank": "चिड़चिड़ापन",
+   "src": "made"
+  }
+ ],
  "w|चिड़िया": [
   {
    "text": "खिड़की पर छोटी चिड़िया बैठी है।",
@@ -27293,6 +27693,38 @@
    "blank": "चौक"
   }
  ],
+ "w|चौंकना": [
+  {
+   "text": "अमित यह सुनकर चौंक गया कि पूजा उससे नाराज़ है।",
+   "en": "Amit was startled to hear that Pooja was upset with him.",
+   "ko": "푸자가 자기한테 화났다는 말에 아밋은 깜짝 놀랐어요.",
+   "blank": "चौंक",
+   "src": "made"
+  },
+  {
+   "text": "टेंट के बाहर सरसराहट सुनकर नेहा चौंकी।",
+   "en": "Neha started at a rustling sound outside the tent.",
+   "ko": "텐트 밖에서 바스락 소리가 나자 네하는 흠칫 놀랐어요.",
+   "blank": "चौंकी",
+   "src": "made"
+  }
+ ],
+ "w|चौकन्ना": [
+  {
+   "text": "पूजा के कमरे से सिसकने की आवाज़ आई तो अमित चौकन्ना हो गया।",
+   "en": "When he heard sobbing from Pooja's room, Amit was instantly alert.",
+   "ko": "푸자 방에서 흐느끼는 소리가 들리자 아밋은 귀를 곤두세웠어요.",
+   "blank": "चौकन्ना",
+   "src": "made"
+  },
+  {
+   "text": "गाइड ने नेहा से कहा कि जंगल में हर पल चौकन्ना रहना ज़रूरी है।",
+   "en": "The guide told Neha it's important to stay alert every moment in the forest.",
+   "ko": "가이드는 네하에게 숲에서는 늘 경계해야 한다고 했어요.",
+   "blank": "चौकन्ना",
+   "src": "made"
+  }
+ ],
  "w|चौंकाना": [
   {
    "text": "टीम ने अमित के लिए केक मँगवाकर उसे चौंका दिया।",
@@ -27502,6 +27934,22 @@
    "en": "When the nearby company had layoffs, the shop's sales fell too.",
    "ko": "근처 회사에서 감원이 있자 가게 매출도 줄었어요.",
    "blank": "छँटनी",
+   "src": "made"
+  }
+ ],
+ "w|छटपटाना": [
+  {
+   "text": "झगड़े के बाद अमित रात भर बिस्तर पर छटपटाता रहा।",
+   "en": "After the quarrel Amit tossed and turned in bed all night.",
+   "ko": "다투고 나서 아밋은 밤새 잠자리에서 뒤척였어요.",
+   "blank": "छटपटाता",
+   "src": "made"
+  },
+  {
+   "text": "स्लीपिंग बैग की ज़िप अटकी तो नेहा बाहर निकलने के लिए छटपटा रही थी।",
+   "en": "When the sleeping bag zip jammed, Neha was struggling to get out.",
+   "ko": "침낭 지퍼가 걸려서 네하는 빠져나오려고 버둥거렸어요.",
+   "blank": "छटपटा",
    "src": "made"
   }
  ],
@@ -30985,6 +31433,22 @@
    "src": "made"
   }
  ],
+ "w|जीहुज़ूरी": [
+  {
+   "text": "राहुल को कक्षा के मॉनिटर की टीचर के आगे जीहुज़ूरी बिल्कुल नहीं सुहाती।",
+   "en": "Rahul can't stand the class monitor's bootlicking in front of the teacher.",
+   "ko": "라훌은 반장이 선생님 앞에서 굽실거리는 게 정말 못마땅해요.",
+   "blank": "जीहुज़ूरी",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने लिखा कि उसे जीहुज़ूरी करना नहीं आता, शायद इसीलिए बॉस उससे चिढ़ती हैं।",
+   "en": "Priya wrote that she doesn't know how to flatter, which is perhaps why her boss is annoyed with her.",
+   "ko": "프리야는 아부를 할 줄 몰라서 상사가 자기를 못마땅해하는 것 같다고 썼어요.",
+   "blank": "जीहुज़ूरी",
+   "src": "made"
+  }
+ ],
  "w|ज़ुकाम": [
   {
    "text": "उसे ज़ुकाम बहुत आसानी से हो जाता है।",
@@ -32191,6 +32655,22 @@
    "src": "made"
   }
  ],
+ "w|झिझक": [
+  {
+   "text": "झिझक छोड़कर अमित ने पूजा से पूछ ही लिया कि वह क्यों नाराज़ है।",
+   "en": "Setting aside his hesitation, Amit finally asked Pooja why she was upset.",
+   "ko": "아밋은 망설임을 접고 푸자에게 왜 화났는지 물어봤어요.",
+   "blank": "झिझक",
+   "src": "made"
+  },
+  {
+   "text": "पहली बार अजनबियों के साथ कैंप करने में नेहा को थोड़ी झिझक थी।",
+   "en": "Neha felt a little hesitant about camping with strangers for the first time.",
+   "ko": "처음으로 낯선 사람들과 캠핑하려니 네하는 조금 망설여졌어요.",
+   "blank": "झिझक",
+   "src": "made"
+  }
+ ],
  "w|झिड़कना": [
   {
    "text": "बॉस ने देर से आने पर अजय को सबके सामने झिड़क दिया।",
@@ -32249,6 +32729,22 @@
    "blank": "झुकाना"
   }
  ],
+ "w|झुंझलाहट": [
+  {
+   "text": "अमित की आवाज़ में झुंझलाहट साफ़ सुनाई दे रही थी।",
+   "en": "The annoyance in Amit's voice was plain to hear.",
+   "ko": "아밋 목소리에서 짜증이 또렷이 들렸어요.",
+   "blank": "झुंझलाहट",
+   "src": "made"
+  },
+  {
+   "text": "टेंट का खूँटा बार-बार उखड़ने से नेहा की झुंझलाहट बढ़ गई।",
+   "en": "The tent peg kept pulling out, and Neha's frustration grew.",
+   "ko": "텐트 말뚝이 자꾸 빠져서 네하는 짜증이 났어요.",
+   "blank": "झुंझलाहट",
+   "src": "made"
+  }
+ ],
  "w|झुंड": [
   {
    "text": "सुबह विकास ने झील के किनारे हिरणों का झुंड देखा।",
@@ -32293,6 +32789,22 @@
    "en": "His lie was caught quickly.",
    "ko": "그 사람 거짓말이 금방 들통났어.",
    "blank": "झूठ"
+  }
+ ],
+ "w|झूठमूठ": [
+  {
+   "text": "अमित ने झूठमूठ का ग़ुस्सा दिखाया, पर पूजा समझ गई कि वह मज़ाक कर रहा है।",
+   "en": "Amit put on a show of anger, but Pooja knew he was joking.",
+   "ko": "아밋이 일부러 화난 척했지만 푸자는 농담이란 걸 알았어요.",
+   "blank": "झूठमूठ",
+   "src": "made"
+  },
+  {
+   "text": "अलाव के पास नेहा ने दोस्तों को झूठमूठ डराने के लिए भूत की कहानी सुनाई।",
+   "en": "By the campfire Neha told a ghost story just to pretend-scare her friends.",
+   "ko": "모닥불 옆에서 네하는 친구들을 장난으로 겁주려고 귀신 이야기를 했어요.",
+   "blank": "झूठमूठ",
+   "src": "made"
   }
  ],
  "w|झूठा": [
@@ -33300,6 +33812,22 @@
    "en": "At the fifteenth kilometre Shalini's pace stalled a little, then she recovered.",
    "ko": "십오 킬로미터 지점에서 샬리니의 속도가 잠시 멈칫했지만 곧 회복했어요.",
    "blank": "ठहराव",
+   "src": "made"
+  }
+ ],
+ "w|ठान लेना": [
+  {
+   "text": "अमित ने ठान लिया कि आज वह पूजा से खुलकर बात करेगा।",
+   "en": "Amit made up his mind to talk openly with Pooja today.",
+   "ko": "아밋은 오늘 푸자와 터놓고 이야기하기로 마음먹었어요.",
+   "blank": "ठान लिया",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने ठान ली थी कि इस बार वह चोटी तक ज़रूर पहुँचेगी।",
+   "en": "Neha had resolved that this time she would definitely reach the summit.",
+   "ko": "네하는 이번엔 꼭 정상까지 가겠다고 마음먹었어요.",
+   "blank": "ठान ली",
    "src": "made"
   }
  ],
@@ -35741,6 +36269,22 @@
    "src": "made"
   }
  ],
+ "w|तसल्ली देना": [
+  {
+   "text": "पापा ने अमित को तसल्ली दी कि भाई-बहन में ऐसे झगड़े होते रहते हैं।",
+   "en": "Dad reassured Amit that brothers and sisters have fights like this all the time.",
+   "ko": "아빠는 남매끼리 이런 싸움은 흔하다며 아밋을 안심시켰어요.",
+   "blank": "तसल्ली दी",
+   "src": "made"
+  },
+  {
+   "text": "गाइड ने नेहा को तसल्ली दी कि इस इलाक़े में जंगली जानवर नहीं आते।",
+   "en": "The guide reassured Neha that wild animals don't come into this area.",
+   "ko": "가이드는 이 지역엔 야생 동물이 안 온다며 네하를 안심시켰어요.",
+   "blank": "तसल्ली दी",
+   "src": "made"
+  }
+ ],
  "w|तस्करी": [
   {
    "text": "एक पत्रकार पुरानी मूर्तियों की तस्करी पर किताब लिखने के लिए यहाँ शोध करता है।",
@@ -37449,6 +37993,22 @@
    "src": "made"
   }
  ],
+ "w|थलसेना": [
+  {
+   "text": "राहुल बड़ा होकर थलसेना में अफ़सर बनना चाहता है।",
+   "en": "Rahul wants to be an officer in the army when he grows up.",
+   "ko": "라훌은 커서 육군 장교가 되고 싶어 해요.",
+   "blank": "थलसेना",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने बताया कि उसका छोटा भाई अब थलसेना में कैप्टन है।",
+   "en": "Priya said her younger brother is now a captain in the army.",
+   "ko": "프리야는 남동생이 이제 육군 대위라고 전했어요.",
+   "blank": "थलसेना",
+   "src": "made"
+  }
+ ],
  "w|थाना": [
   {
    "text": "चोरी की शिकायत थाना में दर्ज हुई।",
@@ -37750,6 +38310,22 @@
    "en": "Seema won't tolerate anyone meddling in her business.",
    "ko": "시마는 누가 자기 장사에 간섭하는 걸 못 참아요.",
    "blank": "दख़ल",
+   "src": "made"
+  }
+ ],
+ "w|दख़लअंदाज़ी": [
+  {
+   "text": "राहुल को अपनी पढ़ाई में बड़ी बहन की दख़लअंदाज़ी बिल्कुल पसंद नहीं।",
+   "en": "Rahul doesn't like his elder sister interfering in his studies at all.",
+   "ko": "라훌은 누나가 공부에 참견하는 걸 전혀 좋아하지 않아요.",
+   "blank": "दख़लअंदाज़ी",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने लिखा कि ससुराल में किसी की दख़लअंदाज़ी नहीं है, सब अपनी दुनिया में मस्त हैं।",
+   "en": "Priya wrote that nobody interferes at her in-laws'; everyone is happy in their own world.",
+   "ko": "프리야는 시댁에서 아무도 참견하지 않고 다들 각자 잘 지낸다고 썼어요.",
+   "blank": "दख़लअंदाज़ी",
    "src": "made"
   }
  ],
@@ -39379,6 +39955,38 @@
    "blank": "दिला"
   }
  ],
+ "w|दिलासा": [
+  {
+   "text": "माँ की बातों से अमित को थोड़ा दिलासा मिला।",
+   "en": "Mum's words gave Amit a little comfort.",
+   "ko": "엄마 말씀에 아밋은 조금 위로가 됐어요.",
+   "blank": "दिलासा",
+   "src": "made"
+  },
+  {
+   "text": "दोस्तों के साथ होने से अँधेरे जंगल में भी नेहा को दिलासा था।",
+   "en": "Being with friends was a comfort to Neha even in the dark forest.",
+   "ko": "친구들과 함께라서 네하는 어두운 숲에서도 마음이 놓였어요.",
+   "blank": "दिलासा",
+   "src": "made"
+  }
+ ],
+ "w|दिलासा देना": [
+  {
+   "text": "रोती हुई पूजा को अमित ने गले लगाकर दिलासा दिया।",
+   "en": "Amit hugged the crying Pooja and comforted her.",
+   "ko": "아밋은 울고 있는 푸자를 안아 주며 달랬어요.",
+   "blank": "दिलासा दिया",
+   "src": "made"
+  },
+  {
+   "text": "पैर में मोच आई सहेली को नेहा ने दिलासा दिया कि वह उसे नीचे तक सहारा देकर ले जाएगी।",
+   "en": "Neha comforted her friend with the sprained ankle, promising to help her all the way down.",
+   "ko": "네하는 발목을 삔 친구를 달래며 아래까지 부축해 주겠다고 했어요.",
+   "blank": "दिलासा दिया",
+   "src": "made"
+  }
+ ],
  "w|दिवस": [
   {
    "text": "कंपनी के स्थापना दिवस पर रोहन की टीम ने पूरे दफ़्तर को सजाया।",
@@ -40466,6 +41074,22 @@
    "en": "My sister-in-law is very fond of her husband's younger brother.",
    "ko": "형수님은 시동생을 무척 아끼세요.",
    "blank": "देवर",
+   "src": "made"
+  }
+ ],
+ "w|देवालय": [
+  {
+   "text": "इतिहास के प्रोजेक्ट में राहुल ने पुराने देवालयों की बनावट पर चार्ट बनाया।",
+   "en": "For his history project Rahul made a chart on the architecture of old temples.",
+   "ko": "역사 과제로 라훌은 옛 사원 건축에 대한 도표를 만들었어요.",
+   "blank": "देवालयों",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ी पर एक पुराना देवालय है, जहाँ प्रिया अनु को ले जाना चाहती है।",
+   "en": "There's an old temple on the hill where Priya wants to take Anu.",
+   "ko": "언덕 위에 오래된 사원이 있는데 프리야는 아누를 거기 데려가고 싶어 해요.",
+   "blank": "देवालय",
    "src": "made"
   }
  ],
@@ -44443,6 +45067,22 @@
    "blank": "नियम"
   }
  ],
+ "w|नियमबद्ध": [
+  {
+   "text": "अमित की बहन बहुत नियमबद्ध है, उसे हर काम समय पर चाहिए।",
+   "en": "Amit's sister is very disciplined; she wants everything done on time.",
+   "ko": "아밋 누나는 아주 규칙적이라 모든 일을 제때 해야 해요.",
+   "blank": "नियमबद्ध",
+   "src": "made"
+  },
+  {
+   "text": "कैंप की नियमबद्ध दिनचर्या नेहा को अच्छी लगी, सुबह जल्दी उठना और रात जल्दी सोना।",
+   "en": "Neha liked the camp's regular routine: up early, to bed early.",
+   "ko": "네하는 일찍 자고 일찍 일어나는 캠프의 규칙적인 일과가 마음에 들었어요.",
+   "blank": "नियमबद्ध",
+   "src": "made"
+  }
+ ],
  "w|नियमित": [
   {
    "text": "नियमित व्यायाम से शरीर स्वस्थ रहता है।",
@@ -44532,6 +45172,22 @@
    "en": "Kavita jokingly says that in the kitchen she is an absolute queen.",
    "ko": "카비타는 부엌에서는 자기가 절대 군주라고 농담해요.",
    "blank": "निरंकुश",
+   "src": "made"
+  }
+ ],
+ "w|निरक्षर": [
+  {
+   "text": "समाज सेवा के दिन राहुल ने गाँव के निरक्षर बुज़ुर्गों को अक्षर पहचानना सिखाया।",
+   "en": "On community service day, Rahul taught illiterate elders in the village to recognise letters.",
+   "ko": "봉사의 날에 라훌은 글을 모르는 마을 어르신들께 글자를 가르쳐 드렸어요.",
+   "blank": "निरक्षर",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया अब शाम को गाँव की निरक्षर औरतों को पढ़ना-लिखना सिखाती है।",
+   "en": "These days Priya teaches illiterate village women to read and write in the evenings.",
+   "ko": "프리야는 요즘 저녁마다 글을 모르는 마을 여자들에게 읽고 쓰기를 가르쳐요.",
+   "blank": "निरक्षर",
    "src": "made"
   }
  ],
@@ -45771,6 +46427,22 @@
    "en": "Delaying causes losses.",
    "ko": "늦추면 손해가 나.",
    "blank": "नुकसान"
+  }
+ ],
+ "w|नुक्ताचीनी": [
+  {
+   "text": "राहुल की कॉपी में मास्टरजी हर छोटी ग़लती पर नुक्ताचीनी करते हैं।",
+   "en": "The teacher nitpicks every little mistake in Rahul's notebook.",
+   "ko": "선생님은 라훌 공책의 작은 실수 하나하나에 트집을 잡아요.",
+   "blank": "नुक्ताचीनी",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की बॉस उसकी हर रिपोर्ट में नुक्ताचीनी करती है, यह भी उसने चिट्ठी में लिखा।",
+   "en": "Priya also wrote in the letter that her boss finds fault with every report she writes.",
+   "ko": "프리야는 상사가 보고서마다 트집을 잡는다는 것도 편지에 썼어요.",
+   "blank": "नुक्ताचीनी",
+   "src": "made"
   }
  ],
  "w|नुस्ख़ा": [
@@ -51617,6 +52289,22 @@
    "src": "made"
   }
  ],
+ "w|पोंगल": [
+  {
+   "text": "पोंगल के दिन राहुल की कक्षा ने स्कूल के आँगन में रंगोली बनाई।",
+   "en": "On Pongal, Rahul's class made a rangoli in the school courtyard.",
+   "ko": "퐁갈 날 라훌 반은 학교 마당에 랑골리를 그렸어요.",
+   "blank": "पोंगल",
+   "src": "made"
+  },
+  {
+   "text": "इस बार पोंगल पर प्रिया ने अनु की माँ वाली मीठी खिचड़ी बनाने की कोशिश की।",
+   "en": "This Pongal, Priya tried making the sweet rice dish the way Anu's mother did.",
+   "ko": "이번 퐁갈에 프리야는 아누 어머니 식으로 달콤한 쌀 요리를 만들어 봤어요.",
+   "blank": "पोंगल",
+   "src": "made"
+  }
+ ],
  "w|पोंछना": [
   {
    "text": "मेज़ को कपड़े से पोंछ दो।",
@@ -53068,6 +53756,22 @@
    "en": "Meena filled out a long form for her food licence.",
    "ko": "미나는 식품 허가를 받으려고 긴 서식을 작성했어요.",
    "blank": "प्रपत्र",
+   "src": "made"
+  }
+ ],
+ "w|प्रफुल्लित": [
+  {
+   "text": "सुलह होने के बाद अमित का मन प्रफुल्लित हो उठा।",
+   "en": "After they made up, Amit felt light and happy.",
+   "ko": "화해하고 나니 아밋은 마음이 환해졌어요.",
+   "blank": "प्रफुल्लित",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ों के पीछे से सूरज उगते देखकर नेहा प्रफुल्लित हो गई।",
+   "en": "Watching the sun rise behind the mountains, Neha was filled with joy.",
+   "ko": "산 너머로 해가 뜨는 걸 보고 네하는 기분이 날아갈 듯했어요.",
+   "blank": "प्रफुल्लित",
    "src": "made"
   }
  ],
@@ -56233,6 +56937,22 @@
    "src": "made"
   }
  ],
+ "w|बखेरना": [
+  {
+   "text": "हवा के एक झोंके ने राहुल की मेज़ पर रखे सारे पन्ने बखेर दिए।",
+   "en": "A gust of wind scattered all the pages on Rahul's desk.",
+   "ko": "바람 한 줄기에 라훌 책상 위 종이가 다 흩어졌어요.",
+   "blank": "बखेर",
+   "src": "made"
+  },
+  {
+   "text": "अनु को लिखी चिट्ठी में प्रिया ने बताया कि पुरानी चिट्ठियाँ ढूँढते हुए उसने पूरे कमरे में काग़ज़ बखेर दिए।",
+   "en": "In her letter to Anu, Priya said she'd scattered papers all over the room looking for old letters.",
+   "ko": "아누에게 쓴 편지에서 프리야는 옛 편지를 찾다가 방 안에 종이를 온통 흩어 놓았다고 했어요.",
+   "blank": "बखेर",
+   "src": "made"
+  }
+ ],
  "w|बग़ल": [
   {
    "text": "मंच की बग़ल में एक छोटा कमरा है जहाँ कलाकार कपड़े बदलते हैं।",
@@ -57905,6 +58625,22 @@
    "src": "made"
   }
  ],
+ "w|बहकाना": [
+  {
+   "text": "पिछली बेंच के लड़कों ने राहुल को क्लास छोड़कर मैच देखने के लिए बहकाया।",
+   "en": "The boys on the back bench tempted Rahul to skip class and watch the match.",
+   "ko": "뒷자리 남자애들이 라훌을 꼬드겨 수업을 빼먹고 경기를 보러 가게 했어요.",
+   "blank": "बहकाया",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने चिट्ठी में याद किया कि अनु ही उसे स्कूल से भागकर मेला देखने को बहकाती थी।",
+   "en": "In the letter Priya recalled that it was Anu who used to tempt her to sneak off from school to the fair.",
+   "ko": "프리야는 편지에서 학교를 빠져나가 장 구경 가자고 꼬드기던 게 늘 아누였다고 떠올렸어요.",
+   "blank": "बहकाती",
+   "src": "made"
+  }
+ ],
  "w|बहन": [
   {
    "text": "मेरी बहन दिल्ली में पढ़ती है।",
@@ -58847,6 +59583,22 @@
    "src": "made"
   }
  ],
+ "w|बालविवाह": [
+  {
+   "text": "राहुल ने पढ़ा कि बालविवाह रोकने के लिए बहुत पहले क़ानून बनाया गया था।",
+   "en": "Rahul read that a law to stop child marriage was made long ago.",
+   "ko": "라훌은 조혼을 막는 법이 오래전에 만들어졌다는 걸 읽었어요.",
+   "blank": "बालविवाह",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की संस्था गाँवों में बालविवाह के ख़िलाफ़ जागरूकता फैलाती है।",
+   "en": "Priya's organisation raises awareness against child marriage in villages.",
+   "ko": "프리야가 일하는 단체는 마을마다 조혼 반대 인식을 알려요.",
+   "blank": "बालविवाह",
+   "src": "made"
+  }
+ ],
  "w|बालिका": [
   {
    "text": "स्कूल में एक छोटी बालिका रो रही थी।",
@@ -59275,6 +60027,22 @@
    "en": "The alley cat drinks milk every day.",
    "ko": "골목 고양이가 매일 우유를 마셔.",
    "blank": "बिल्ली"
+  }
+ ],
+ "w|बिसरना": [
+  {
+   "text": "राहुल ने कविता इतनी बार दोहराई कि अब उसे एक भी पंक्ति नहीं बिसरती।",
+   "en": "Rahul repeated the poem so many times that now he never forgets a single line.",
+   "ko": "라훌은 시를 하도 많이 외워서 이제 한 줄도 잊지 않아요.",
+   "blank": "बिसरती",
+   "src": "made"
+  },
+  {
+   "text": "\"इतने बरस बाद भी तुम्हारी हँसी नहीं बिसरी,\" प्रिया ने लिखा।",
+   "en": "\"Even after so many years I haven't forgotten your laugh,\" Priya wrote.",
+   "ko": "\"이렇게 오랜 세월이 지나도 네 웃음소리를 잊지 못했어,\" 프리야가 썼어요.",
+   "blank": "बिसरी",
+   "src": "made"
   }
  ],
  "w|बिस्कुट": [
@@ -60158,6 +60926,22 @@
    "en": "Seema says the big malls have brought ruthless competition for small shops.",
    "ko": "시마는 대형 쇼핑몰이 작은 가게들에 가혹한 경쟁을 몰고 왔다고 해요.",
    "blank": "बेरहम",
+   "src": "made"
+  }
+ ],
+ "w|बेरुख़ी": [
+  {
+   "text": "पूजा की अचानक बेरुख़ी अमित की समझ में नहीं आ रही थी।",
+   "en": "Amit couldn't understand Pooja's sudden coldness.",
+   "ko": "아밋은 푸자가 갑자기 쌀쌀맞아진 이유를 몰랐어요.",
+   "blank": "बेरुख़ी",
+   "src": "made"
+  },
+  {
+   "text": "कैंप वाले की बेरुख़ी से नेहा हैरान थी, पर अगली सुबह वह ख़ुद चाय लेकर आया।",
+   "en": "Neha was surprised at the campsite man's coldness, but the next morning he brought tea himself.",
+   "ko": "캠프 관리인의 퉁명스러움에 네하는 놀랐지만 다음 날 아침 그가 직접 차를 가져왔어요.",
+   "blank": "बेरुख़ी",
    "src": "made"
   }
  ],
@@ -61095,6 +61879,22 @@
    "blank": "भक्ति"
   }
  ],
+ "w|भक्तिभाव": [
+  {
+   "text": "वार्षिक उत्सव में राहुल ने भक्तिभाव से एक भजन गाया।",
+   "en": "At the annual function Rahul sang a hymn with devotion.",
+   "ko": "연례 행사에서 라훌은 경건하게 찬가를 불렀어요.",
+   "blank": "भक्तिभाव",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की सास बड़े भक्तिभाव से रोज़ सुबह पूजा करती हैं।",
+   "en": "Priya's mother-in-law does her prayers every morning with great devotion.",
+   "ko": "프리야 시어머니는 매일 아침 아주 경건하게 기도를 드리세요.",
+   "blank": "भक्तिभाव",
+   "src": "made"
+  }
+ ],
  "w|भंग": [
   {
    "text": "करण ने बताया कि पुरानी नगर समिति भंग कर दी गई है।",
@@ -61449,6 +62249,22 @@
    "src": "made"
   }
  ],
+ "w|भरमाना": [
+  {
+   "text": "पहेली वाले सवाल ने पूरी कक्षा को भरमा दिया, पर राहुल ने हल निकाल लिया।",
+   "en": "The riddle-like question baffled the whole class, but Rahul worked it out.",
+   "ko": "수수께끼 같은 문제에 반 전체가 헷갈렸지만 라훌은 풀어냈어요.",
+   "blank": "भरमा",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने माना कि शहर की चमक-दमक ने उसे कुछ समय के लिए भरमाया था।",
+   "en": "Priya admitted that the city's glitter had led her astray for a while.",
+   "ko": "프리야는 도시의 화려함에 한동안 홀렸었다고 털어놨어요.",
+   "blank": "भरमाया",
+   "src": "made"
+  }
+ ],
  "w|भरसक": [
   {
    "text": "अमित ने भरसक कोशिश की कि पढ़ने वाले कमरे में कोई फ़ोन पर बात न करे।",
@@ -61659,6 +62475,22 @@
    "src": "made"
   }
  ],
+ "w|भाईभतीजावाद": [
+  {
+   "text": "राहुल ने कोच से शिकायत की कि क्रिकेट टीम चुनने में भाईभतीजावाद हुआ है।",
+   "en": "Rahul complained to the coach that there was favouritism in picking the cricket team.",
+   "ko": "라훌은 코치에게 크리켓 팀을 뽑을 때 연줄이 작용했다고 항의했어요.",
+   "blank": "भाईभतीजावाद",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया के दफ़्तर में तरक्की भाईभतीजावाद से मिलती है, इसलिए वह नौकरी बदलने की सोच रही है।",
+   "en": "At Priya's office promotions go by nepotism, so she's thinking of changing jobs.",
+   "ko": "프리야 회사는 승진이 연줄로 정해져서 그녀는 이직을 고민하고 있어요.",
+   "blank": "भाईभतीजावाद",
+   "src": "made"
+  }
+ ],
  "w|भाग": [
   {
    "text": "कहानी का अगला भाग कल आएगा।",
@@ -61808,6 +62640,22 @@
    "en": "When the office rent went up, the team started working from home two days a week.",
    "ko": "사무실 임대료가 오르자 팀은 일주일에 이틀은 재택근무를 시작했어요.",
    "blank": "भाड़ा",
+   "src": "made"
+  }
+ ],
+ "w|भाँपना": [
+  {
+   "text": "राहुल ने टीचर का चेहरा देखकर भाँप लिया कि आज टेस्ट होगा।",
+   "en": "Seeing the teacher's face, Rahul sensed there would be a test today.",
+   "ko": "선생님 얼굴을 보고 라훌은 오늘 시험이 있겠다고 눈치챘어요.",
+   "blank": "भाँप",
+   "src": "made"
+  },
+  {
+   "text": "अनु की पिछली चिट्ठी पढ़कर प्रिया ने भाँप लिया था कि वह उदास है।",
+   "en": "Reading Anu's last letter, Priya had sensed that she was sad.",
+   "ko": "아누의 지난 편지를 읽고 프리야는 아누가 우울하다는 걸 알아챘어요.",
+   "blank": "भाँप",
    "src": "made"
   }
  ],
@@ -63595,6 +64443,22 @@
    "src": "made"
   }
  ],
+ "w|मढ़ना": [
+  {
+   "text": "टूटी खिड़की का दोष राहुल पर मढ़ दिया गया, जबकि वह उस दिन स्कूल आया ही नहीं था।",
+   "en": "The broken window was pinned on Rahul, though he hadn't even come to school that day.",
+   "ko": "깨진 창문 탓이 라훌에게 돌아갔지만, 그는 그날 학교에 오지도 않았어요.",
+   "blank": "मढ़",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने लिखा कि उसने दोनों की पुरानी तस्वीर ख़ुद लकड़ी के फ़्रेम में मढ़ी है।",
+   "en": "Priya wrote that she had framed their old photo in wood herself.",
+   "ko": "프리야는 둘의 옛 사진을 직접 나무 액자에 끼웠다고 썼어요.",
+   "blank": "मढ़ी",
+   "src": "made"
+  }
+ ],
  "w|मत": [
   {
    "text": "इतना ज़ोर से मत बोलो।",
@@ -63739,6 +64603,22 @@
    "en": "The education minister called a meeting.",
    "ko": "교육 장관이 회의를 소집했어.",
    "blank": "मंत्री"
+  }
+ ],
+ "w|मंत्रोच्चार": [
+  {
+   "text": "स्कूल की सुबह की सभा मंत्रोच्चार से शुरू होती है, और राहुल सबसे आगे खड़ा होता है।",
+   "en": "The school's morning assembly begins with chanting, and Rahul stands at the very front.",
+   "ko": "학교 아침 조회는 만트라 낭송으로 시작하고 라훌은 맨 앞에 서요.",
+   "blank": "मंत्रोच्चार",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया के घर के पास वाले मंदिर से सुबह-सुबह मंत्रोच्चार की आवाज़ आती है।",
+   "en": "Early each morning the sound of chanting comes from the temple near Priya's house.",
+   "ko": "프리야 집 근처 사원에서 이른 아침마다 만트라 소리가 들려요.",
+   "blank": "मंत्रोच्चार",
+   "src": "made"
   }
  ],
  "w|मदद": [
@@ -66193,6 +67073,22 @@
    "blank": "मिटतीं"
   }
  ],
+ "w|मिटवाना": [
+  {
+   "text": "क्लास ख़त्म होने पर टीचर ने राहुल से बोर्ड मिटवाया।",
+   "en": "When class ended, the teacher had Rahul wipe the board.",
+   "ko": "수업이 끝나자 선생님은 라훌에게 칠판을 지우게 했어요.",
+   "blank": "मिटवाया",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने याद दिलाया कि मास्टरजी ने एक बार दोनों से दीवार पर लिखे नाम मिटवाए थे।",
+   "en": "Priya reminded her that the teacher once made the two of them rub their names off the wall.",
+   "ko": "프리야는 선생님이 한번 둘에게 벽에 쓴 이름을 지우게 했던 일을 떠올리게 했어요.",
+   "blank": "मिटवाए",
+   "src": "made"
+  }
+ ],
  "w|मिटाना": [
   {
    "text": "बोर्ड से लिखावट मिटाना आसान है।",
@@ -66579,6 +67475,22 @@
    "en": "The lawyer fought the case well.",
    "ko": "변호사가 소송을 잘 싸웠어.",
    "blank": "मुकदमा"
+  }
+ ],
+ "w|मुकरना": [
+  {
+   "text": "राहुल का दोस्त प्रोजेक्ट में मदद का वादा करके ऐन वक़्त पर मुकर गया।",
+   "en": "Rahul's friend promised to help with the project but backed out at the last minute.",
+   "ko": "라훌 친구는 프로젝트를 돕겠다고 해 놓고 막판에 발뺌했어요.",
+   "blank": "मुकर",
+   "src": "made"
+  },
+  {
+   "text": "पिछली बार अनु आने का वादा करके मुकर गई थी, इसलिए प्रिया ने इस बार तारीख़ पक्की करने को कहा।",
+   "en": "Last time Anu went back on her promise to visit, so this time Priya asked her to fix a date.",
+   "ko": "지난번에 아누가 온다고 해 놓고 말을 바꿔서 이번엔 프리야가 날짜를 확실히 정하자고 했어요.",
+   "blank": "मुकर",
+   "src": "made"
   }
  ],
  "w|मुक़ाबला": [
@@ -68413,6 +69325,22 @@
    "en": "Their love feels like something from stories.",
    "ko": "그들의 사랑이 이야기 속 같아.",
    "blank": "मोहब्बत"
+  }
+ ],
+ "w|मोहमाया": [
+  {
+   "text": "कविता में मोहमाया छोड़ने की बात पढ़कर राहुल हँसा कि वह अपना फ़ोन तो नहीं छोड़ सकता।",
+   "en": "Reading the line in the poem about giving up worldly attachments, Rahul laughed that he couldn't give up his phone.",
+   "ko": "세속의 집착을 버리라는 시 구절을 읽고 라훌은 휴대폰만큼은 못 버린다며 웃었어요.",
+   "blank": "मोहमाया",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने मज़ाक में लिखा कि उसके पति अब मोहमाया छोड़कर पहाड़ों पर बसने की बात करते हैं।",
+   "en": "Priya joked that her husband now talks of renouncing the world and settling in the mountains.",
+   "ko": "프리야는 남편이 요즘 속세를 떠나 산에 살겠다고 한다며 농담했어요.",
+   "blank": "मोहमाया",
+   "src": "made"
   }
  ],
  "w|मोहल्ला": [
@@ -70453,6 +71381,22 @@
    "src": "made"
   }
  ],
+ "w|राजपत्र": [
+  {
+   "text": "नागरिक शास्त्र की कक्षा में राहुल ने जाना कि नए क़ानून राजपत्र में छपते हैं।",
+   "en": "In civics class Rahul learned that new laws are published in the gazette.",
+   "ko": "사회 시간에 라훌은 새 법이 관보에 실린다는 걸 배웠어요.",
+   "blank": "राजपत्र",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने ख़बर दी कि उसके नाम बदलने की सूचना राजपत्र में छप गई है।",
+   "en": "Priya shared the news that the notice of her name change has appeared in the gazette.",
+   "ko": "프리야는 개명 공고가 관보에 실렸다고 알려 왔어요.",
+   "blank": "राजपत्र",
+   "src": "made"
+  }
+ ],
  "w|राजमा": [
   {
    "text": "राहुल के चाचा ने चावल के साथ राजमा मँगवाया।",
@@ -71057,6 +72001,22 @@
    "blank": "रिश्वत"
   }
  ],
+ "w|रिसना": [
+  {
+   "text": "बारिश में कक्षा की छत से पानी रिसने लगा, तो राहुल ने अपनी बेंच खिसका ली।",
+   "en": "In the rain, water began seeping through the classroom ceiling, so Rahul moved his bench.",
+   "ko": "비가 오자 교실 천장에서 물이 스며 나와 라훌은 의자를 옮겼어요.",
+   "blank": "रिसने",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने शिकायत की कि बरसात में उसके नए घर की छत से पानी रिसता है।",
+   "en": "Priya complained that water seeps through the roof of her new house in the rains.",
+   "ko": "프리야는 장마철에 새집 천장에서 물이 샌다고 불평했어요.",
+   "blank": "रिसता",
+   "src": "made"
+  }
+ ],
  "w|रिसाव": [
   {
    "text": "रसोई की छत से रिसाव हो रहा था, तो करण ने ऊपर वाले पड़ोसी का दरवाज़ा खटखटाया।",
@@ -71131,6 +72091,22 @@
    "en": "The old custom is seen less often now.",
    "ko": "옛 관습은 이제 잘 안 보여.",
    "blank": "रीति"
+  }
+ ],
+ "w|रीतिरिवाज": [
+  {
+   "text": "राहुल ने अपने परिवार की शादी के रीतिरिवाज पर एक प्रोजेक्ट बनाया।",
+   "en": "Rahul made a project on his family's wedding customs.",
+   "ko": "라훌은 자기 집안 결혼 풍습에 대한 과제를 만들었어요.",
+   "blank": "रीतिरिवाज",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने लिखा कि ससुराल के रीतिरिवाज उसे अब बहुत अपने लगते हैं।",
+   "en": "Priya wrote that her in-laws' customs now feel very much her own.",
+   "ko": "프리야는 이제 시댁 풍습이 아주 친숙하게 느껴진다고 썼어요.",
+   "blank": "रीतिरिवाज",
+   "src": "made"
   }
  ],
  "w|रुकना": [
@@ -72129,6 +73105,22 @@
    "blank": "लड़की"
   }
  ],
+ "w|लड़खड़ाना": [
+  {
+   "text": "खेल के मैदान में राहुल का पैर मुड़ा और वह लड़खड़ा गया।",
+   "en": "On the playground Rahul twisted his foot and staggered.",
+   "ko": "운동장에서 라훌은 발을 접질려 비틀거렸어요.",
+   "blank": "लड़खड़ा",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की बेटी ने चलना सीख लिया है, पर अभी भी थोड़ा लड़खड़ाती है।",
+   "en": "Priya's daughter has learned to walk, but she still totters a little.",
+   "ko": "프리야의 딸은 걸음마를 뗐지만 아직 조금 비틀거려요.",
+   "blank": "लड़खड़ाती",
+   "src": "made"
+  }
+ ],
  "w|लड़ना": [
   {
    "text": "दोनों भाई छोटी बात पर लड़ पड़े।",
@@ -72184,6 +73176,38 @@
    "en": "The wedding canopy had been decorated with a flowering vine.",
    "ko": "혼례 차일은 꽃 덩굴로 꾸며져 있었어요.",
    "blank": "लता",
+   "src": "made"
+  }
+ ],
+ "w|लताड़ना": [
+  {
+   "text": "होमवर्क न करने पर प्रिंसिपल ने राहुल को ख़ूब लताड़ा।",
+   "en": "The principal gave Rahul a real dressing-down for not doing his homework.",
+   "ko": "숙제를 안 해서 교장 선생님이 라훌을 호되게 나무랐어요.",
+   "blank": "लताड़ा",
+   "src": "made"
+  },
+  {
+   "text": "चिट्ठी में प्रिया ने याद किया कि हॉस्टल की वार्डन ने देर से लौटने पर दोनों को कैसे लताड़ा था।",
+   "en": "In the letter Priya recalled how the hostel warden had told them both off for coming back late.",
+   "ko": "편지에서 프리야는 늦게 들어왔다고 기숙사 사감이 둘을 얼마나 혼냈는지 떠올렸어요.",
+   "blank": "लताड़ा",
+   "src": "made"
+  }
+ ],
+ "w|लपकना": [
+  {
+   "text": "घंटी बजते ही राहुल कैंटीन की ओर लपका।",
+   "en": "The moment the bell rang, Rahul dashed towards the canteen.",
+   "ko": "종이 울리자마자 라훌은 매점으로 달려갔어요.",
+   "blank": "लपका",
+   "src": "made"
+  },
+  {
+   "text": "डाकिए की साइकिल की घंटी सुनते ही प्रिया दरवाज़े की ओर लपकती है।",
+   "en": "As soon as she hears the postman's bicycle bell, Priya rushes to the door.",
+   "ko": "집배원 자전거 벨 소리만 들리면 프리야는 문으로 달려가요.",
+   "blank": "लपकती",
    "src": "made"
   }
  ],
@@ -73497,6 +74521,22 @@
    "src": "made"
   }
  ],
+ "w|लोकाचार": [
+  {
+   "text": "टीचर ने राहुल को समझाया कि हर इलाक़े का लोकाचार अलग होता है।",
+   "en": "The teacher explained to Rahul that every region has its own social customs.",
+   "ko": "선생님은 라훌에게 지역마다 풍습이 다르다고 설명했어요.",
+   "blank": "लोकाचार",
+   "src": "made"
+  },
+  {
+   "text": "नए शहर का लोकाचार समझने में प्रिया को काफ़ी समय लगा।",
+   "en": "It took Priya quite a while to understand the social customs of the new city.",
+   "ko": "프리야는 새 도시의 풍습을 이해하는 데 꽤 오래 걸렸어요.",
+   "blank": "लोकाचार",
+   "src": "made"
+  }
+ ],
  "w|लोग": [
   {
    "text": "लोग अभी भी बाहर खड़े हैं।",
@@ -74072,6 +75112,22 @@
    "en": "Meena made alphabet-letter biscuits for the children.",
    "ko": "미나는 아이들을 위해 글자 모양 비스킷을 만들었어요.",
    "blank": "वर्णमाला",
+   "src": "made"
+  }
+ ],
+ "w|वर्णव्यवस्था": [
+  {
+   "text": "इतिहास के पाठ में राहुल ने प्राचीन वर्णव्यवस्था के बारे में पढ़ा।",
+   "en": "In the history lesson Rahul read about the ancient varna system.",
+   "ko": "역사 수업에서 라훌은 고대 바르나 제도에 대해 배웠어요.",
+   "blank": "वर्णव्यवस्था",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया आजकल वर्णव्यवस्था के इतिहास पर एक मोटी किताब पढ़ रही है।",
+   "en": "These days Priya is reading a thick book on the history of the varna system.",
+   "ko": "프리야는 요즘 바르나 제도의 역사에 관한 두꺼운 책을 읽고 있어요.",
+   "blank": "वर्णव्यवस्था",
    "src": "made"
   }
  ],
@@ -76023,6 +77079,22 @@
    "src": "made"
   }
  ],
+ "w|विवेकशील": [
+  {
+   "text": "अमित भी मानता है कि घर में सबसे विवेकशील पूजा ही है।",
+   "en": "Even Amit admits that Pooja is the most sensible one in the house.",
+   "ko": "아밋도 집에서 제일 분별 있는 사람은 푸자라고 인정해요.",
+   "blank": "विवेकशील",
+   "src": "made"
+  },
+  {
+   "text": "अँधेरे में रास्ता खोजने के बजाय वहीं रुकना नेहा का विवेकशील फ़ैसला था।",
+   "en": "Staying put instead of searching for the path in the dark was Neha's sensible decision.",
+   "ko": "어둠 속에서 길을 찾지 않고 그 자리에 머문 건 네하의 현명한 판단이었어요.",
+   "blank": "विवेकशील",
+   "src": "made"
+  }
+ ],
  "w|विशाल": [
   {
    "text": "विशाल मैदान में मेला लगा है।",
@@ -77956,6 +79028,22 @@
    "en": "The new player was shy, so Neha introduced her to everyone.",
    "ko": "새 선수가 수줍음이 많아서 네하가 모두에게 소개해 줬어요.",
    "blank": "शर्मीली",
+   "src": "made"
+  }
+ ],
+ "w|शवयात्रा": [
+  {
+   "text": "इतिहास की किताब में राहुल ने पढ़ा कि एक बड़े नेता की शवयात्रा में लाखों लोग उमड़े थे।",
+   "en": "In his history book Rahul read that lakhs of people turned out for a great leader's funeral procession.",
+   "ko": "역사책에서 라훌은 한 위대한 지도자의 장례 행렬에 수십만 명이 모였다는 걸 읽었어요.",
+   "blank": "शवयात्रा",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने दुख के साथ लिखा कि मास्टरजी की शवयात्रा में पूरा गाँव शामिल हुआ था।",
+   "en": "Priya wrote sadly that the whole village joined their old teacher's funeral procession.",
+   "ko": "프리야는 슬프게도 선생님 장례 행렬에 온 마을이 함께했다고 썼어요.",
+   "blank": "शवयात्रा",
    "src": "made"
   }
  ],
@@ -80493,6 +81581,22 @@
    "src": "made"
   }
  ],
+ "w|सटाना": [
+  {
+   "text": "ग्रुप वर्क के लिए टीचर ने राहुल से कहा कि दोनों बेंचें आपस में सटा दो।",
+   "en": "For group work, the teacher told Rahul to push the two benches together.",
+   "ko": "모둠 활동을 하려고 선생님이 라훌에게 책상 두 개를 붙이라고 했어요.",
+   "blank": "सटा",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने अनु की सारी चिट्ठियाँ एक-दूसरे से सटाकर एक बक्से में रखी हैं।",
+   "en": "Priya has kept all of Anu's letters pressed together in a box.",
+   "ko": "프리야는 아누의 편지를 전부 차곡차곡 붙여 상자에 넣어 두었어요.",
+   "blank": "सटाकर",
+   "src": "made"
+  }
+ ],
  "w|सटीक": [
   {
    "text": "राहुल ने नए कमरे की सटीक नाप लेकर ही पलंग ख़रीदा।",
@@ -80551,6 +81655,22 @@
    "en": "Everyone heard the saint's words.",
    "ko": "성인의 말을 모두 들었어.",
    "blank": "संत"
+  }
+ ],
+ "w|संतप्त": [
+  {
+   "text": "अमित की कड़वी बात से पूजा का मन संतप्त हो गया।",
+   "en": "Amit's bitter words left Pooja deeply hurt.",
+   "ko": "아밋의 모진 말에 푸자는 마음이 몹시 아팠어요.",
+   "blank": "संतप्त",
+   "src": "made"
+  },
+  {
+   "text": "गाइड ने नेहा को बताया कि पिछले साल यहाँ बाढ़ से संतप्त परिवारों के लिए राहत शिविर लगा था।",
+   "en": "The guide told Neha that last year a relief camp was set up here for families afflicted by floods.",
+   "ko": "가이드는 네하에게 작년 이곳에 홍수 피해 가족들을 위한 구호 캠프가 섰다고 말했어요.",
+   "blank": "संतप्त",
+   "src": "made"
   }
  ],
  "w|संतरा": [
@@ -81071,6 +82191,22 @@
    "src": "made"
   }
  ],
+ "w|सधना": [
+  {
+   "text": "रोज़ अभ्यास से राहुल का हाथ सुलेख में सध गया है।",
+   "en": "With daily practice, Rahul's hand has become skilled at calligraphy.",
+   "ko": "매일 연습해서 라훌은 손글씨가 몸에 익었어요.",
+   "blank": "सध",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने लिखा कि बरसों के रियाज़ से अब सितार पर उसका हाथ सध गया है।",
+   "en": "Priya wrote that after years of practice her hand is now sure on the sitar.",
+   "ko": "프리야는 몇 년 연습한 끝에 이제 시타르 손놀림이 익숙해졌다고 썼어요.",
+   "blank": "सध",
+   "src": "made"
+  }
+ ],
  "w|संध्या": [
   {
    "text": "संध्या के समय अजय और पड़ोसी छत पर बैठकर गपशप करते हैं।",
@@ -81100,6 +82236,22 @@
    "en": "One of Deepa's eccentric neighbours makes every delivery person write down their name.",
    "ko": "디파의 괴짜 이웃 한 명은 배달원마다 이름을 적게 해요.",
    "blank": "सनकी",
+   "src": "made"
+  }
+ ],
+ "w|सनसनाना": [
+  {
+   "text": "खुली खिड़की से ठंडी हवा सनसनाती हुई अंदर आई और राहुल काँप गया।",
+   "en": "Cold wind whistled in through the open window and Rahul shivered.",
+   "ko": "열린 창으로 찬 바람이 쌩 들어와 라훌이 몸을 떨었어요.",
+   "blank": "सनसनाती",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया के पहाड़ी कस्बे में रात भर हवा सनसनाती रहती है, उसने अनु को लिखा।",
+   "en": "In Priya's hill town the wind whistles all night long, she wrote to Anu.",
+   "ko": "프리야가 사는 산골 마을엔 밤새 바람이 쌩쌩 분다고 아누에게 썼어요.",
+   "blank": "सनसनाती",
    "src": "made"
   }
  ],
@@ -84583,6 +85735,22 @@
    "blank": "साधारण"
   }
  ],
+ "w|साधारणतः": [
+  {
+   "text": "अमित और पूजा की लड़ाई साधारणतः शाम तक ख़त्म हो जाती है।",
+   "en": "Amit and Pooja's fights usually end by evening.",
+   "ko": "아밋과 푸자의 싸움은 대개 저녁이면 끝나요.",
+   "blank": "साधारणतः",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने बताया कि वह साधारणतः गर्मियों में ही कैंपिंग पर जाती है।",
+   "en": "Neha said she usually goes camping only in summer.",
+   "ko": "네하는 보통 여름에만 캠핑을 간다고 했어요.",
+   "blank": "साधारणतः",
+   "src": "made"
+  }
+ ],
  "w|साधु": [
   {
    "text": "मंदिर के बाहर एक साधु बैठा था।",
@@ -85383,6 +86551,22 @@
    "src": "made"
   }
  ],
+ "w|सिकोड़ना": [
+  {
+   "text": "गणित का नया अध्याय देखकर राहुल ने नाक-भौं सिकोड़ी।",
+   "en": "Seeing the new maths chapter, Rahul wrinkled his nose.",
+   "ko": "새 수학 단원을 보고 라훌은 얼굴을 찡그렸어요.",
+   "blank": "सिकोड़ी",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ठंड में रज़ाई के अंदर ख़ुद को सिकोड़कर यह चिट्ठी लिख रही थी।",
+   "en": "Priya was writing this letter curled up under the quilt in the cold.",
+   "ko": "프리야는 추위에 이불 속에서 몸을 웅크린 채 이 편지를 쓰고 있었어요.",
+   "blank": "सिकोड़कर",
+   "src": "made"
+  }
+ ],
  "w|सिक्का": [
   {
    "text": "जेब में एक पुराना सिक्का मिला।",
@@ -85640,6 +86824,22 @@
    "en": "Since there was no network in the hills, Meena got a new local SIM card.",
    "ko": "산에서 신호가 안 잡혀서 미나는 그곳 심카드를 새로 샀어요.",
    "blank": "सिम कार्ड",
+   "src": "made"
+  }
+ ],
+ "w|सिमटना": [
+  {
+   "text": "अमित की डाँट सुनकर पूजा सोफ़े के कोने में सिमट गई।",
+   "en": "Hearing Amit shout, Pooja shrank into the corner of the sofa.",
+   "ko": "아밋의 고함에 푸자는 소파 구석에 몸을 움츠렸어요.",
+   "blank": "सिमट",
+   "src": "made"
+  },
+  {
+   "text": "ठंडी रात में नेहा कंबल में सिमटकर सो गई।",
+   "en": "On the cold night Neha curled up in her blanket and fell asleep.",
+   "ko": "추운 밤 네하는 담요 속에 몸을 웅크리고 잠들었어요.",
+   "blank": "सिमटकर",
    "src": "made"
   }
  ],
@@ -86443,6 +87643,22 @@
    "blank": "सुझाव"
   }
  ],
+ "w|सुडौल": [
+  {
+   "text": "मनाने के लिए पूजा ने अमित को अपने हाथ से बने मिट्टी के सुडौल कप दिखाए।",
+   "en": "To win him over, Pooja showed Amit the shapely clay cups she had made.",
+   "ko": "화해하려고 푸자는 직접 빚은 모양 좋은 흙 컵을 아밋에게 보여 줬어요.",
+   "blank": "सुडौल",
+   "src": "made"
+  },
+  {
+   "text": "झील किनारे नेहा को एक सुडौल चिकना पत्थर मिला, जिसे उसने याद के लिए रख लिया।",
+   "en": "By the lake Neha found a smooth, well-shaped stone and kept it as a keepsake.",
+   "ko": "호숫가에서 네하는 매끈하고 모양 좋은 돌을 주워 기념으로 간직했어요.",
+   "blank": "सुडौल",
+   "src": "made"
+  }
+ ],
  "w|सुंदर": [
   {
    "text": "आज का सूर्यास्त बहुत सुंदर है।",
@@ -86972,6 +88188,22 @@
    "en": "On humid afternoons, even the street dog lies around sluggishly.",
    "ko": "후텁지근한 오후에는 골목 개도 축 늘어져 있어요.",
    "blank": "सुस्त",
+   "src": "made"
+  }
+ ],
+ "w|सुस्ताना": [
+  {
+   "text": "बहस के बाद अमित थोड़ी देर बालकनी में सुस्ताने बैठ गया।",
+   "en": "After the argument Amit sat on the balcony for a while to catch his breath.",
+   "ko": "말다툼 뒤에 아밋은 잠시 쉬려고 발코니에 앉았어요.",
+   "blank": "सुस्ताने",
+   "src": "made"
+  },
+  {
+   "text": "चढ़ाई के बीच नेहा एक बड़े पत्थर पर बैठकर सुस्ताई।",
+   "en": "Halfway up the climb, Neha sat on a big rock and rested.",
+   "ko": "오르막 중간에 네하는 큰 바위에 앉아 쉬었어요.",
+   "blank": "सुस्ताई",
    "src": "made"
   }
  ],
@@ -88521,6 +89753,22 @@
    "blank": "स्पष्ट"
   }
  ],
+ "w|स्पष्टवादी": [
+  {
+   "text": "पूजा स्पष्टवादी है, इसलिए उसने अमित से सीधे कहा कि उसकी बात से उसे चोट पहुँची।",
+   "en": "Pooja is outspoken, so she told Amit straight out that his words hurt her.",
+   "ko": "푸자는 직설적이라 아밋에게 그 말에 상처받았다고 대놓고 말했어요.",
+   "blank": "स्पष्टवादी",
+   "src": "made"
+  },
+  {
+   "text": "स्पष्टवादी नेहा ने गाइड से साफ़ कह दिया कि वह रात में नदी पार नहीं करेगी।",
+   "en": "Outspoken Neha told the guide flatly that she would not cross the river at night.",
+   "ko": "직설적인 네하는 밤에는 강을 건너지 않겠다고 가이드에게 딱 잘라 말했어요.",
+   "blank": "स्पष्टवादी",
+   "src": "made"
+  }
+ ],
  "w|स्फूर्ति": [
   {
    "text": "दाँत का दर्द ठीक होते ही सुनील में फिर से स्फूर्ति लौट आई।",
@@ -89258,6 +90506,22 @@
    "en": "The audience said Shalini fully deserved this applause.",
    "ko": "관객들은 샬리니가 이 박수를 받을 자격이 충분하다고 했어요.",
    "blank": "हक़दार",
+   "src": "made"
+  }
+ ],
+ "w|हकलाना": [
+  {
+   "text": "घबराहट में माफ़ी माँगते हुए अमित हकलाने लगा।",
+   "en": "Nervous, Amit began to stammer as he apologised.",
+   "ko": "긴장한 아밋은 사과하다가 말을 더듬기 시작했어요.",
+   "blank": "हकलाने",
+   "src": "made"
+  },
+  {
+   "text": "ठंड से काँपते हुए नेहा हकलाकर बोली कि उसे गरम चाय चाहिए।",
+   "en": "Shivering with cold, Neha stammered that she needed hot tea.",
+   "ko": "추위에 떨던 네하는 더듬거리며 뜨거운 차가 필요하다고 했어요.",
+   "blank": "हकलाकर",
    "src": "made"
   }
  ],
@@ -90973,6 +92237,22 @@
    "en": "Diamond is counted among the hardest stones.",
    "ko": "다이아몬드는 가장 단단한 돌로 쳐.",
    "blank": "हीरा"
+  }
+ ],
+ "w|हुंकारना": [
+  {
+   "text": "दादाजी ने हुंकारकर अमित और पूजा दोनों को चुप करा दिया।",
+   "en": "Grandpa gave a gruff growl and silenced both Amit and Pooja.",
+   "ko": "할아버지가 \"흠!\" 하고 호통쳐서 아밋과 푸자 둘 다 조용해졌어요.",
+   "blank": "हुंकारकर",
+   "src": "made"
+  },
+  {
+   "text": "रात को दूर से किसी जानवर के हुंकारने की आवाज़ आई, तो नेहा जाग गई।",
+   "en": "Neha woke up at night to the sound of some animal snorting in the distance.",
+   "ko": "밤에 멀리서 어떤 짐승이 씩씩대는 소리가 들려 네하가 깼어요.",
+   "blank": "हुंकारने",
+   "src": "made"
   }
  ],
  "w|हुकूमत": [

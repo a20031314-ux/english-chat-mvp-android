@@ -9369,6 +9369,22 @@
    "src": "made"
   }
  ],
+ "w|ならびに": [
+  {
+   "text": "拓也の記事には、市長ならびに副市長のコメントが載った。",
+   "en": "Takuya's article included comments from the mayor and the deputy mayor.",
+   "ko": "다쿠야의 기사에는 시장 및 부시장의 코멘트가 실렸어요.",
+   "blank": "ならびに",
+   "src": "made"
+  },
+  {
+   "text": "恵子の招待状は、新郎新婦ならびに両家の親の連名で送られた。",
+   "en": "Keiko's invitations were sent in the joint names of the bride and groom and both sets of parents.",
+   "ko": "게이코의 청첩장은 신랑 신부 및 양가 부모의 연명으로 보내졌어요.",
+   "blank": "ならびに",
+   "src": "made"
+  }
+ ],
  "w|なる": [
   {
    "text": "静かになるよ。",
@@ -11764,6 +11780,22 @@
    "en": "Once a month, Yoko volunteers teaching elderly people how to use their phones.",
    "ko": "요코는 한 달에 한 번 어르신들에게 휴대폰 사용법을 가르치는 봉사 활동을 해요.",
    "blank": "ボランティア",
+   "src": "made"
+  }
+ ],
+ "w|ぼんやり": [
+  {
+   "text": "徹夜明けの拓也は、ぼんやりと画面を眺めていた。",
+   "en": "After staying up all night, Takuya was staring blankly at the screen.",
+   "ko": "밤을 새운 다쿠야는 멍하니 화면을 바라보고 있었어요.",
+   "blank": "ぼんやり",
+   "src": "made"
+  },
+  {
+   "text": "式の前夜、恵子は窓の外をぼんやり眺めていた。",
+   "en": "The night before the wedding, Keiko was gazing absently out the window.",
+   "ko": "결혼식 전날 밤, 게이코는 창밖을 멍하니 바라보고 있었어요.",
+   "blank": "ぼんやり",
    "src": "made"
   }
  ],
@@ -14505,6 +14537,22 @@
    "src": "made"
   }
  ],
+ "w|一掃": [
+  {
+   "text": "新しい市長は古い慣習の一掃を掲げていると、拓也は書いた。",
+   "en": "Takuya wrote that the new mayor has pledged to sweep away old customs.",
+   "ko": "새 시장은 낡은 관습의 일소를 내걸고 있다고 다쿠야는 썼어요.",
+   "blank": "一掃",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、引っ越しの前に部屋の不用品を一掃した。",
+   "en": "Keiko cleared out all the unwanted things in her room before moving.",
+   "ko": "게이코는 이사 전에 방의 안 쓰는 물건을 싹 정리했어요.",
+   "blank": "一掃",
+   "src": "made"
+  }
+ ],
  "w|一撃": [
   {
    "text": "剣道の試合で、健太は最後に面の一撃を決めた。",
@@ -14900,6 +14948,22 @@
    "en": "At Yoko's farm, the family handles everything consistently, from sowing to sales.",
    "ko": "요코의 농장은 씨 뿌리기부터 판매까지 가족이 일관되게 하고 있어요.",
    "blank": "一貫",
+   "src": "made"
+  }
+ ],
+ "w|一途": [
+  {
+   "text": "町の人口が減少の一途をたどっていることを、拓也は記事にした。",
+   "en": "Takuya wrote an article about the town's population steadily declining.",
+   "ko": "마을 인구가 계속 줄어들기만 하는 것을 다쿠야는 기사로 썼어요.",
+   "blank": "一途",
+   "src": "made"
+  },
+  {
+   "text": "結婚式の費用は増加の一途をたどっていると、恵子は雑誌で読んだ。",
+   "en": "Keiko read in a magazine that wedding costs keep on rising.",
+   "ko": "결혼식 비용이 계속 늘어나기만 한다고 게이코는 잡지에서 읽었어요.",
+   "blank": "一途",
    "src": "made"
   }
  ],
@@ -17273,6 +17337,22 @@
    "src": "tatoeba:116160 en:287509/CK"
   }
  ],
+ "w|乗っ取る": [
+  {
+   "text": "拓也の新聞社のSNSアカウントが、何者かに乗っ取られた。",
+   "en": "Takuya's newspaper's social media account was hijacked by someone.",
+   "ko": "다쿠야 신문사의 SNS 계정이 누군가에게 해킹당했어요.",
+   "blank": "乗っ取られた",
+   "src": "made"
+  },
+  {
+   "text": "恵子の叔父が披露宴のマイクを乗っ取り、長い話を始めた。",
+   "en": "Keiko's uncle took over the microphone at the reception and started a long speech.",
+   "ko": "게이코의 삼촌이 피로연 마이크를 가로채서 긴 이야기를 시작했어요.",
+   "blank": "乗っ取り",
+   "src": "made"
+  }
+ ],
  "w|乗り換え": [
   {
    "text": "誠の便は、北海道で乗り換えがある。",
@@ -17378,6 +17458,22 @@
    "en": "The snow melted, and Sakura could finally ride her bicycle again.",
    "ko": "눈이 녹아서 사쿠라는 드디어 자전거를 탈 수 있게 됐어요.",
    "blank": "乗れる",
+   "src": "made"
+  }
+ ],
+ "w|乗務": [
+  {
+   "text": "拓也は、乗務を終えたばかりのバスの運転手に話を聞いた。",
+   "en": "Takuya interviewed a bus driver who had just finished his shift.",
+   "ko": "다쿠야는 승무를 막 마친 버스 기사에게 이야기를 들었어요.",
+   "blank": "乗務",
+   "src": "made"
+  },
+  {
+   "text": "恵子の兄はパイロットで、乗務を終えてすぐ式に駆けつけた。",
+   "en": "Keiko's brother is a pilot, and he rushed to the wedding right after finishing his flight.",
+   "ko": "게이코의 오빠는 조종사라서 비행 근무를 마치자마자 결혼식에 달려왔어요.",
+   "blank": "乗務",
    "src": "made"
   }
  ],
@@ -17883,6 +17979,22 @@
    "en": "Sounds like it was an accident.",
    "ko": "사고였나 봐.",
    "blank": "事故"
+  }
+ ],
+ "w|事柄": [
+  {
+   "text": "拓也は、確認できた事柄だけを記事にする。",
+   "en": "Takuya only writes about matters he has been able to confirm.",
+   "ko": "다쿠야는 확인된 사항만 기사로 써요.",
+   "blank": "事柄",
+   "src": "made"
+  },
+  {
+   "text": "式の準備で決める事柄が多すぎて、恵子は表にまとめた。",
+   "en": "There were so many things to decide for the wedding that Keiko organized them in a chart.",
+   "ko": "결혼식 준비로 정할 사항이 너무 많아서 게이코는 표로 정리했어요.",
+   "blank": "事柄",
+   "src": "made"
   }
  ],
  "w|事案": [
@@ -21515,6 +21627,22 @@
    "src": "made"
   }
  ],
+ "w|係数": [
+  {
+   "text": "拓也は、経済記事の中で「ジニ係数」という言葉を説明した。",
+   "en": "Takuya explained the term \"Gini coefficient\" in his economics article.",
+   "ko": "다쿠야는 경제 기사에서 '지니 계수'라는 말을 설명했어요.",
+   "blank": "係数",
+   "src": "made"
+  },
+  {
+   "text": "恵子の夫は統計の仕事で、毎日係数の計算をしている。",
+   "en": "Keiko's husband works in statistics and calculates coefficients every day.",
+   "ko": "게이코의 남편은 통계 일을 해서 매일 계수를 계산해요.",
+   "blank": "係数",
+   "src": "made"
+  }
+ ],
  "w|促す": [
   {
    "text": "翔太は、こたつで寝そうな弟を早く風呂に入るよう促した。",
@@ -23575,6 +23703,22 @@
    "src": "made"
   }
  ],
+ "w|免れる": [
+  {
+   "text": "大雨の被害を免れた地区を、拓也は取材した。",
+   "en": "Takuya reported on a district that escaped damage from the heavy rain.",
+   "ko": "다쿠야는 큰비 피해를 면한 지역을 취재했어요.",
+   "blank": "免れた",
+   "src": "made"
+  },
+  {
+   "text": "式の当日は台風の直撃を免れ、恵子はほっとした。",
+   "en": "The typhoon missed them on the wedding day, and Keiko was relieved.",
+   "ko": "결혼식 당일에 태풍의 직격을 면해서 게이코는 안도했어요.",
+   "blank": "免れ",
+   "src": "made"
+  }
+ ],
  "w|免疫": [
   {
    "text": "歯ぐきの炎症は、免疫が落ちているときに起こりやすいそうだ。",
@@ -24887,6 +25031,22 @@
    "en": "I listen to the cabinet's policy.",
    "ko": "내각의 방침을 들어.",
    "blank": "内閣"
+  }
+ ],
+ "w|冊子": [
+  {
+   "text": "拓也の新聞社は、創刊百年を記念した冊子を作った。",
+   "en": "Takuya's newspaper made a booklet commemorating its hundredth anniversary.",
+   "ko": "다쿠야의 신문사는 창간 백 주년을 기념하는 책자를 만들었어요.",
+   "blank": "冊子",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、二人のなれそめを書いた小さな冊子を招待客に配った。",
+   "en": "Keiko handed out a small booklet to guests about how she and her husband met.",
+   "ko": "게이코는 두 사람이 만난 이야기를 쓴 작은 책자를 하객들에게 나눠 줬어요.",
+   "blank": "冊子",
+   "src": "made"
   }
  ],
  "w|再び": [
@@ -29223,6 +29383,38 @@
    "blank": "北"
   }
  ],
+ "w|北側": [
+  {
+   "text": "直樹は、山がよく見える北側の窓際の席を選んだ。",
+   "en": "Naoki chose a window seat on the north side with a good view of the mountains.",
+   "ko": "나오키는 산이 잘 보이는 북쪽 창가 자리를 골랐어요.",
+   "blank": "北側",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局の北側には、大きな病院がある。",
+   "en": "There is a large hospital on the north side of Aoi's pharmacy.",
+   "ko": "아오이의 약국 북쪽에는 큰 병원이 있어요.",
+   "blank": "北側",
+   "src": "made"
+  }
+ ],
+ "w|北東": [
+  {
+   "text": "直樹の乗った列車は、町を出て北東へ向かった。",
+   "en": "The train Naoki was on left the town and headed northeast.",
+   "ko": "나오키가 탄 열차는 마을을 떠나 북동쪽으로 향했어요.",
+   "blank": "北東",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局は、駅の北東の出口を出てすぐの所にある。",
+   "en": "Aoi's pharmacy is right outside the northeast exit of the station.",
+   "ko": "아오이의 약국은 역 북동쪽 출구를 나오면 바로 있어요.",
+   "blank": "北東",
+   "src": "made"
+  }
+ ],
  "w|北西": [
   {
    "text": "北西の空に広がる黒い雲を見て、拓也は先を急いだ。",
@@ -29733,6 +29925,22 @@
    "src": "made"
   }
  ],
+ "w|協調": [
+  {
+   "text": "拓也の新聞社は、他社と協調して災害の情報を伝えた。",
+   "en": "Takuya's newspaper cooperated with other companies to report information about the disaster.",
+   "ko": "다쿠야의 신문사는 다른 회사와 협조해서 재해 정보를 전했어요.",
+   "blank": "協調",
+   "src": "made"
+  },
+  {
+   "text": "恵子の両家は協調して、式の準備を進めた。",
+   "en": "Keiko's family and her fiancé's family worked together on the wedding preparations.",
+   "ko": "게이코의 양가는 협조하며 결혼식 준비를 진행했어요.",
+   "blank": "協調",
+   "src": "made"
+  }
+ ],
  "w|協議": [
   {
    "text": "席順は、両家の協議で何度も変わったらしい。",
@@ -29776,6 +29984,22 @@
    "en": "Keiko's town is divided into east and west by a river that flows north to south.",
    "ko": "게이코네 동네는 남북으로 흐르는 강으로 동서로 나뉘어 있어요.",
    "blank": "南北",
+   "src": "made"
+  }
+ ],
+ "w|南西": [
+  {
+   "text": "直樹の旅は、南西の港町で終わった。",
+   "en": "Naoki's journey ended in a port town to the southwest.",
+   "ko": "나오키의 여행은 남서쪽 항구 마을에서 끝났어요.",
+   "blank": "南西",
+   "src": "made"
+  },
+  {
+   "text": "葵は、町の南西にある老人ホームに薬を届けた。",
+   "en": "Aoi delivered medicine to a nursing home in the southwest of town.",
+   "ko": "아오이는 마을 남서쪽에 있는 양로원에 약을 배달했어요.",
+   "blank": "南西",
    "src": "made"
   }
  ],
@@ -31475,6 +31699,22 @@
    "src": "made"
   }
  ],
+ "w|受け継ぐ": [
+  {
+   "text": "拓也は、定年を迎えた先輩記者の取材ノートを受け継いだ。",
+   "en": "Takuya inherited the reporting notes of a senior reporter who had retired.",
+   "ko": "다쿠야는 정년을 맞은 선배 기자의 취재 노트를 물려받았어요.",
+   "blank": "受け継いだ",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、祖母から受け継いだ着物を式で着た。",
+   "en": "Keiko wore a kimono she had inherited from her grandmother at the ceremony.",
+   "ko": "게이코는 할머니에게 물려받은 기모노를 결혼식에서 입었어요.",
+   "blank": "受け継いだ",
+   "src": "made"
+  }
+ ],
  "w|受付": [
   {
    "text": "受付で名前を書いて。",
@@ -31563,6 +31803,22 @@
    "en": "Studying for exams keeps me busy.",
    "ko": "입시 공부가 바빠.",
    "blank": "受験"
+  }
+ ],
+ "w|受験生": [
+  {
+   "text": "大雪の日、拓也は試験会場に向かう受験生を取材した。",
+   "en": "On the day of heavy snow, Takuya interviewed students heading to the exam site.",
+   "ko": "폭설이 내린 날 다쿠야는 시험장으로 가는 수험생을 취재했어요.",
+   "blank": "受験生",
+   "src": "made"
+  },
+  {
+   "text": "恵子の弟は受験生なので、式の翌日も塾に行った。",
+   "en": "Keiko's younger brother is studying for entrance exams, so he went to cram school the day after the wedding too.",
+   "ko": "게이코의 남동생은 수험생이라서 결혼식 다음 날에도 학원에 갔어요.",
+   "blank": "受験生",
+   "src": "made"
   }
  ],
  "w|口": [
@@ -31982,6 +32238,22 @@
    "en": "Keiko held the drawing in her right hand and pointed at the pillar with her left.",
    "ko": "게이코는 오른손에 도면을 들고 왼손으로 기둥을 가리켰어요.",
    "blank": "右手",
+   "src": "made"
+  }
+ ],
+ "w|叶う": [
+  {
+   "text": "海外特派員になるという拓也の夢が叶った。",
+   "en": "Takuya's dream of becoming a foreign correspondent came true.",
+   "ko": "해외 특파원이 되겠다는 다쿠야의 꿈이 이루어졌어요.",
+   "blank": "叶った",
+   "src": "made"
+  },
+  {
+   "text": "海辺で式を挙げたいという恵子の夢が叶った。",
+   "en": "Keiko's dream of having a wedding by the sea came true.",
+   "ko": "바닷가에서 결혼식을 올리고 싶다는 게이코의 꿈이 이루어졌어요.",
+   "blank": "叶った",
    "src": "made"
   }
  ],
@@ -32745,6 +33017,22 @@
    "src": "made"
   }
  ],
+ "w|同調": [
+  {
+   "text": "拓也は、編集長の意見に安易に同調しなかった。",
+   "en": "Takuya did not simply go along with the editor-in-chief's opinion.",
+   "ko": "다쿠야는 편집장의 의견에 쉽게 동조하지 않았어요.",
+   "blank": "同調",
+   "src": "made"
+  },
+  {
+   "text": "派手な式にしようという姉の意見に、恵子は同調しなかった。",
+   "en": "Keiko did not go along with her sister's idea of having a flashy wedding.",
+   "ko": "화려한 결혼식을 하자는 언니의 의견에 게이코는 동조하지 않았어요.",
+   "blank": "同調",
+   "src": "made"
+  }
+ ],
  "w|名乗る": [
   {
    "text": "向かいの店主は、自分を「骨董の鬼」と名乗っていた。",
@@ -33185,6 +33473,22 @@
    "ko": "스펀지는 물을 흡수해서 수채 물감을 번지게 할 때 편해요.",
    "blank": "吸収",
    "src": "tatoeba:74775/fcbond en:328944/fcbond"
+  }
+ ],
+ "w|吸引": [
+  {
+   "text": "拓也は、掃除機の吸引力を比べる記事を書いた。",
+   "en": "Takuya wrote an article comparing the suction power of vacuum cleaners.",
+   "ko": "다쿠야는 청소기 흡입력을 비교하는 기사를 썼어요.",
+   "blank": "吸引",
+   "src": "made"
+  },
+  {
+   "text": "式場の掃除機は吸引力が強く、恵子が落とした花びらもすぐ片付いた。",
+   "en": "The venue's vacuum cleaner had strong suction, so even the petals Keiko dropped were cleaned up quickly.",
+   "ko": "식장 청소기는 흡입력이 세서 게이코가 떨어뜨린 꽃잎도 금방 치워졌어요.",
+   "blank": "吸引",
+   "src": "made"
   }
  ],
  "w|吸血鬼": [
@@ -34271,6 +34575,22 @@
    "src": "made"
   }
  ],
+ "w|器用": [
+  {
+   "text": "拓也は器用で、写真の撮影も動画の編集もこなす。",
+   "en": "Takuya is handy and can do both photography and video editing.",
+   "ko": "다쿠야는 손재주가 좋아서 사진 촬영도 영상 편집도 해내요.",
+   "blank": "器用",
+   "src": "made"
+  },
+  {
+   "text": "器用な恵子の母は、ウェディングベールを手作りした。",
+   "en": "Keiko's handy mother made the wedding veil by hand.",
+   "ko": "손재주 좋은 게이코의 어머니는 웨딩 베일을 손수 만들었어요.",
+   "blank": "器用",
+   "src": "made"
+  }
+ ],
  "w|囚人": [
   {
    "text": "亮は、囚人が主人公の小説を電子書籍で買った。",
@@ -34813,6 +35133,22 @@
    "en": "In-country feels safer.",
    "ko": "국내면 안심이네.",
    "blank": "国内"
+  }
+ ],
+ "w|国内外": [
+  {
+   "text": "この路線には国内外から鉄道ファンが集まると、直樹は聞いた。",
+   "en": "Naoki heard that railway fans from home and abroad gather on this line.",
+   "ko": "이 노선에는 국내외에서 철도 팬이 모여든다고 나오키는 들었어요.",
+   "blank": "国内外",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局には、国内外の旅行者が胃薬を買いに来る。",
+   "en": "Travelers from home and abroad come to Aoi's pharmacy to buy stomach medicine.",
+   "ko": "아오이의 약국에는 국내외 여행객이 위장약을 사러 와요.",
+   "blank": "国内外",
+   "src": "made"
   }
  ],
  "w|国営": [
@@ -36697,6 +37033,22 @@
    "blank": "変換"
   }
  ],
+ "w|変数": [
+  {
+   "text": "データ記事を書くため、拓也は統計の変数の意味を学んだ。",
+   "en": "To write data articles, Takuya learned what variables mean in statistics.",
+   "ko": "데이터 기사를 쓰려고 다쿠야는 통계 변수의 의미를 공부했어요.",
+   "blank": "変数",
+   "src": "made"
+  },
+  {
+   "text": "恵子の夫はスピーチでつい「変数」などの仕事の言葉を使い、会場を笑わせた。",
+   "en": "Keiko's husband slipped work terms like \"variable\" into his speech and made the guests laugh.",
+   "ko": "게이코의 남편은 스피치에서 그만 '변수' 같은 업무 용어를 써서 하객들을 웃겼어요.",
+   "blank": "変数",
+   "src": "made"
+  }
+ ],
  "w|変更": [
   {
    "text": "予定、変更になった。",
@@ -37032,6 +37384,22 @@
    "en": "Chihiro fell in love at first sight with the white exterior of the church.",
    "ko": "지히로는 교회의 하얀 외관에 첫눈에 마음을 빼앗겼어요.",
    "blank": "外観",
+   "src": "made"
+  }
+ ],
+ "w|外資": [
+  {
+   "text": "拓也は、外資の企業が町に工場を建てるというニュースを追った。",
+   "en": "Takuya followed the news that a foreign company would build a factory in the town.",
+   "ko": "다쿠야는 외국계 기업이 마을에 공장을 짓는다는 뉴스를 쫓았어요.",
+   "blank": "外資",
+   "src": "made"
+  },
+  {
+   "text": "恵子の夫は外資の会社に勤めている。",
+   "en": "Keiko's husband works for a foreign company.",
+   "ko": "게이코의 남편은 외국계 회사에 다녀요.",
+   "blank": "外資",
    "src": "made"
   }
  ],
@@ -37925,6 +38293,22 @@
    "src": "made"
   }
  ],
+ "w|大概": [
+  {
+   "text": "拓也は、大概の夜は終電で帰る。",
+   "en": "Takuya catches the last train home on most nights.",
+   "ko": "다쿠야는 대개 밤에 막차로 집에 가요.",
+   "blank": "大概",
+   "src": "made"
+  },
+  {
+   "text": "大概の招待客は、恵子の式に着物かドレスで来た。",
+   "en": "Most of the guests came to Keiko's wedding in kimonos or dresses.",
+   "ko": "대부분의 하객은 게이코의 결혼식에 기모노나 드레스를 입고 왔어요.",
+   "blank": "大概",
+   "src": "made"
+  }
+ ],
  "w|大気": [
   {
    "text": "山の上は、大気が澄んでいて遠くの峰まで見えた。",
@@ -38046,6 +38430,22 @@
    "en": "The rice balls from Misaki's shop were chosen for the grand prize at a local food contest.",
    "ko": "미사키 가게의 주먹밥이 동네 먹거리 대회에서 대상으로 뽑혔어요.",
    "blank": "大賞",
+   "src": "made"
+  }
+ ],
+ "w|大都市": [
+  {
+   "text": "直樹の乗った列車は大都市を抜け、のどかな田園地帯に入った。",
+   "en": "Naoki's train passed through the big city and entered peaceful farmland.",
+   "ko": "나오키가 탄 열차는 대도시를 빠져나와 한적한 전원 지대로 들어갔어요.",
+   "blank": "大都市",
+   "src": "made"
+  },
+  {
+   "text": "葵は、大都市の薬局から地元の小さな薬局へ移った。",
+   "en": "Aoi moved from a pharmacy in a big city to a small local one.",
+   "ko": "아오이는 대도시 약국에서 고향의 작은 약국으로 옮겼어요.",
+   "blank": "大都市",
    "src": "made"
   }
  ],
@@ -42391,6 +42791,22 @@
    "src": "made"
   }
  ],
+ "w|小声": [
+  {
+   "text": "記者会見の最中、拓也は隣の記者に小声で質問した。",
+   "en": "During the press conference, Takuya asked the reporter next to him a question in a low voice.",
+   "ko": "기자회견 도중에 다쿠야는 옆 기자에게 작은 소리로 질문했어요.",
+   "blank": "小声",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、緊張している新郎に小声で「大丈夫」とささやいた。",
+   "en": "Keiko whispered \"It's okay\" in a low voice to the nervous groom.",
+   "ko": "게이코는 긴장한 신랑에게 작은 소리로 \"괜찮아\"라고 속삭였어요.",
+   "blank": "小声",
+   "src": "made"
+  }
+ ],
  "w|小売": [
   {
    "text": "同じ商品でも、小売の店よりネットのほうが安いことが多い。",
@@ -42662,6 +43078,22 @@
    "en": "When they surveyed club preferences, only a few students chose the tea ceremony club.",
    "ko": "동아리 희망을 받아 보니 다도부를 고른 학생은 소수였어요.",
    "blank": "少数",
+   "src": "made"
+  }
+ ],
+ "w|就く": [
+  {
+   "text": "拓也は、大学を出てすぐ記者の仕事に就いた。",
+   "en": "Takuya started working as a reporter right after graduating from university.",
+   "ko": "다쿠야는 대학을 나오자마자 기자 일을 시작했어요.",
+   "blank": "就いた",
+   "src": "made"
+  },
+  {
+   "text": "結婚を機に、恵子は地元で教師の職に就いた。",
+   "en": "With her marriage, Keiko took a teaching job in her hometown.",
+   "ko": "결혼을 계기로 게이코는 고향에서 교사 일을 맡았어요.",
+   "blank": "就いた",
    "src": "made"
   }
  ],
@@ -43663,6 +44095,22 @@
    "src": "made"
   }
  ],
+ "w|市議会": [
+  {
+   "text": "拓也は、毎月市議会の傍聴に通っている。",
+   "en": "Takuya attends city council meetings every month as an observer.",
+   "ko": "다쿠야는 매달 시의회를 방청하러 다녀요.",
+   "blank": "市議会",
+   "src": "made"
+  },
+  {
+   "text": "恵子の父は市議会の議員で、式にはたくさんの来賓が来た。",
+   "en": "Keiko's father is a city council member, so many dignitaries came to the wedding.",
+   "ko": "게이코의 아버지는 시의회 의원이라서 결혼식에 내빈이 많이 왔어요.",
+   "blank": "市議会",
+   "src": "made"
+  }
+ ],
  "w|市販": [
   {
    "text": "この洗剤は市販されていないので、ネットでしか買えない。",
@@ -43886,6 +44334,22 @@
    "en": "When Misaki came home from the field, vegetables had been left at her door.",
    "ko": "미사키가 밭에서 돌아오니 현관에 채소가 놓여 있었어요.",
    "blank": "帰宅",
+   "src": "made"
+  }
+ ],
+ "w|帰省": [
+  {
+   "text": "年末の列車は、帰省する人で混んでいた。",
+   "en": "The trains at the end of the year were crowded with people going home.",
+   "ko": "연말 열차는 귀성하는 사람들로 붐볐어요.",
+   "blank": "帰省",
+   "src": "made"
+  },
+  {
+   "text": "お盆に帰省した客が、葵の薬局で酔い止めを買っていった。",
+   "en": "A customer who came home for Obon bought motion sickness medicine at Aoi's pharmacy.",
+   "ko": "오봉에 귀성한 손님이 아오이의 약국에서 멀미약을 사 갔어요.",
+   "blank": "帰省",
    "src": "made"
   }
  ],
@@ -44164,6 +44628,22 @@
    "en": "The shelves on the bookcase Chihiro ordered weren't parallel, so she struggled to assemble it.",
    "ko": "치히로가 주문한 책장은 판이 평행하지 않아서 조립하느라 애를 먹었어요.",
    "blank": "平行",
+   "src": "made"
+  }
+ ],
+ "w|平面": [
+  {
+   "text": "拓也は、新しい駅の平面図をもとに記事のイラストを頼んだ。",
+   "en": "Takuya ordered an illustration for his article based on the floor plan of the new station.",
+   "ko": "다쿠야는 새 역의 평면도를 바탕으로 기사 일러스트를 부탁했어요.",
+   "blank": "平面",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、披露宴会場の平面図を見ながら席を決めた。",
+   "en": "Keiko decided the seating while looking at the floor plan of the reception hall.",
+   "ko": "게이코는 피로연장 평면도를 보면서 자리를 정했어요.",
+   "blank": "平面",
    "src": "made"
   }
  ],
@@ -45595,6 +46075,22 @@
    "blank": "強化"
   }
  ],
+ "w|強大": [
+  {
+   "text": "駅の資料館で、直樹はかつて強大な力を持った領主の話を知った。",
+   "en": "At the station's small museum, Naoki learned about a lord who once held great power.",
+   "ko": "역 자료관에서 나오키는 한때 강대한 힘을 가졌던 영주 이야기를 알게 됐어요.",
+   "blank": "強大",
+   "src": "made"
+  },
+  {
+   "text": "葵は、強大な台風が近づく前に薬の在庫を確かめた。",
+   "en": "Aoi checked her medicine stock before the powerful typhoon approached.",
+   "ko": "아오이는 강력한 태풍이 다가오기 전에 약 재고를 확인했어요.",
+   "blank": "強大",
+   "src": "made"
+  }
+ ],
  "w|強度": [
   {
    "text": "鍋の取っ手は、強度を確かめてから使うことにしている。",
@@ -45779,6 +46275,22 @@
    "en": "The ball will hit you.",
    "ko": "공이 맞아.",
    "blank": "当たる"
+  }
+ ],
+ "w|当てはまる": [
+  {
+   "text": "「急がば回れ」という言葉は、直樹の今回の旅にぴったり当てはまる。",
+   "en": "The saying \"more haste, less speed\" fits Naoki's trip this time perfectly.",
+   "ko": "'급할수록 돌아가라'라는 말은 나오키의 이번 여행에 딱 들어맞아요.",
+   "blank": "当てはまる",
+   "src": "made"
+  },
+  {
+   "text": "葵は、薬の注意書きに当てはまる症状がないか客に尋ねた。",
+   "en": "Aoi asked the customer whether they had any symptoms that matched the warnings on the medicine.",
+   "ko": "아오이는 약 주의 사항에 해당하는 증상이 없는지 손님에게 물었어요.",
+   "blank": "当てはまる",
+   "src": "made"
   }
  ],
  "w|当てる": [
@@ -46477,6 +46989,22 @@
    "src": "made"
   }
  ],
+ "w|後援": [
+  {
+   "text": "拓也の新聞社は、地元のマラソン大会を後援している。",
+   "en": "Takuya's newspaper sponsors the local marathon.",
+   "ko": "다쿠야의 신문사는 지역 마라톤 대회를 후원해요.",
+   "blank": "後援",
+   "src": "made"
+  },
+  {
+   "text": "恵子の式場は、町の観光協会が後援するイベントにも使われる。",
+   "en": "Keiko's wedding venue is also used for events sponsored by the town's tourism association.",
+   "ko": "게이코네 식장은 마을 관광협회가 후원하는 행사에도 쓰여요.",
+   "blank": "後援",
+   "src": "made"
+  }
+ ],
  "w|後方": [
   {
    "text": "誠の座席は、飛行機の後方の窓側だった。",
@@ -46602,6 +47130,22 @@
    "en": "As the truck backed up, the mover called out loudly to guide it in reverse.",
    "ko": "트럭을 뒤로 뺄 때 업체 직원이 큰 소리로 후진 신호를 했어요.",
    "blank": "後退",
+   "src": "made"
+  }
+ ],
+ "w|後部": [
+  {
+   "text": "直樹は、最後尾の後部車両から遠ざかる線路を眺めた。",
+   "en": "From the rear car at the very end, Naoki watched the tracks recede.",
+   "ko": "나오키는 맨 끝 후부 차량에서 멀어지는 선로를 바라봤어요.",
+   "blank": "後部",
+   "src": "made"
+  },
+  {
+   "text": "葵は、配達用の車の後部座席に薬の箱を積んだ。",
+   "en": "Aoi loaded boxes of medicine onto the back seat of the delivery car.",
+   "ko": "아오이는 배달 차 뒷좌석에 약 상자를 실었어요.",
+   "blank": "後部",
    "src": "made"
   }
  ],
@@ -47337,6 +47881,22 @@
    "src": "made"
   }
  ],
+ "w|快速": [
+  {
+   "text": "直樹は、各駅停車ではなく快速に乗った。",
+   "en": "Naoki took the rapid train instead of the local.",
+   "ko": "나오키는 완행이 아니라 쾌속을 탔어요.",
+   "blank": "快速",
+   "src": "made"
+  },
+  {
+   "text": "葵は、毎朝快速電車で薬局に通っている。",
+   "en": "Aoi commutes to the pharmacy on the rapid train every morning.",
+   "ko": "아오이는 매일 아침 쾌속 전철로 약국에 출근해요.",
+   "blank": "快速",
+   "src": "made"
+  }
+ ],
  "w|快適": [
   {
    "text": "新しい椅子のおかげで、長時間の作業も快適になった。",
@@ -47602,6 +48162,22 @@
    "en": "It started raining, so Aoi hurried to bring the goods outside the shop indoors.",
    "ko": "비가 내리기 시작해서 아오이는 서둘러 가게 밖 물건을 안으로 들였어요.",
    "blank": "急い",
+   "src": "made"
+  }
+ ],
+ "w|急上昇": [
+  {
+   "text": "直樹が乗った観光列車は、最近人気が急上昇している。",
+   "en": "The sightseeing train Naoki rode has recently been soaring in popularity.",
+   "ko": "나오키가 탄 관광 열차는 요즘 인기가 급상승하고 있어요.",
+   "blank": "急上昇",
+   "src": "made"
+  },
+  {
+   "text": "冬になると、葵の薬局で風邪薬の売り上げが急上昇する。",
+   "en": "In winter, sales of cold medicine at Aoi's pharmacy shoot up.",
+   "ko": "겨울이 되면 아오이의 약국에서 감기약 매출이 급상승해요.",
+   "blank": "急上昇",
    "src": "made"
   }
  ],
@@ -55073,6 +55649,22 @@
    "src": "made"
   }
  ],
+ "w|文脈": [
+  {
+   "text": "発言を文脈から切り取らないよう、拓也は気をつけている。",
+   "en": "Takuya is careful not to take people's remarks out of context.",
+   "ko": "다쿠야는 발언을 문맥에서 잘라 내지 않도록 조심해요.",
+   "blank": "文脈",
+   "src": "made"
+  },
+  {
+   "text": "スピーチの冗談は文脈を知らない人には通じず、恵子は苦笑した。",
+   "en": "The joke in the speech didn't land with people who didn't know the context, and Keiko smiled wryly.",
+   "ko": "스피치 농담이 맥락을 모르는 사람에게는 통하지 않아서 게이코는 쓴웃음을 지었어요.",
+   "blank": "文脈",
+   "src": "made"
+  }
+ ],
  "w|文章": [
   {
    "text": "文章を短く直した。",
@@ -57019,6 +57611,22 @@
    "src": "made"
   }
  ],
+ "w|景観": [
+  {
+   "text": "窓から見える海岸の景観に、直樹は思わず息をのんだ。",
+   "en": "Naoki caught his breath at the coastal scenery outside the window.",
+   "ko": "창밖으로 보이는 해안 경관에 나오키는 저도 모르게 숨을 삼켰어요.",
+   "blank": "景観",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局は、町の景観に合わせて木の看板を使っている。",
+   "en": "Aoi's pharmacy uses a wooden sign to match the townscape.",
+   "ko": "아오이의 약국은 마을 경관에 맞춰 나무 간판을 써요.",
+   "blank": "景観",
+   "src": "made"
+  }
+ ],
  "w|晴れ": [
   {
    "text": "晴れの日には、ホテルの屋上から富士山が見える。",
@@ -57136,6 +57744,22 @@
    "en": "The king feared assassination.",
    "ko": "왕은 암살을 두려워했어요.",
    "blank": "暗殺",
+   "src": "made"
+  }
+ ],
+ "w|暗示": [
+  {
+   "text": "どんよりした曇り空は、旅の終わりを暗示しているようだと直樹は思った。",
+   "en": "Naoki thought the gloomy, overcast sky seemed to hint at the end of his trip.",
+   "ko": "잔뜩 흐린 하늘은 여행의 끝을 암시하는 것 같다고 나오키는 생각했어요.",
+   "blank": "暗示",
+   "src": "made"
+  },
+  {
+   "text": "効くと信じると本当に楽になるのは暗示の力もある、と葵は言う。",
+   "en": "Aoi says that feeling better just from believing a medicine works is partly the power of suggestion.",
+   "ko": "효과가 있다고 믿으면 정말 나아지는 건 암시의 힘도 있다고 아오이는 말해요.",
+   "blank": "暗示",
    "src": "made"
   }
  ],
@@ -57449,6 +58073,22 @@
    "en": "The wire will bend.",
    "ko": "철사가 휘어져.",
    "blank": "曲がる"
+  }
+ ],
+ "w|曲線": [
+  {
+   "text": "直樹は、線路が描く美しい曲線をカメラに収めた。",
+   "en": "Naoki captured the beautiful curve of the railway tracks with his camera.",
+   "ko": "나오키는 선로가 그리는 아름다운 곡선을 카메라에 담았어요.",
+   "blank": "曲線",
+   "src": "made"
+  },
+  {
+   "text": "葵は、薬の効き目が時間とともに変わる様子を曲線のグラフで説明した。",
+   "en": "Aoi explained how the effect of the medicine changes over time using a curved graph.",
+   "ko": "아오이는 약효가 시간에 따라 변하는 모습을 곡선 그래프로 설명했어요.",
+   "blank": "曲線",
+   "src": "made"
   }
  ],
  "w|更新": [
@@ -58605,6 +59245,22 @@
    "blank": "本日"
   }
  ],
+ "w|本書": [
+  {
+   "text": "拓也は書評欄で、「本書は若い記者にぜひ読んでほしい」と書いた。",
+   "en": "In the book review column, Takuya wrote, \"I really want young reporters to read this book.\"",
+   "ko": "다쿠야는 서평란에 \"이 책은 젊은 기자들이 꼭 읽었으면 한다\"라고 썼어요.",
+   "blank": "本書",
+   "src": "made"
+  },
+  {
+   "text": "恵子が読んだ結婚準備の本には、「本書を手に取ったあなたへ」と書かれていた。",
+   "en": "The wedding planning book Keiko read began with \"To you who picked up this book.\"",
+   "ko": "게이코가 읽은 결혼 준비 책에는 \"이 책을 손에 든 당신에게\"라고 쓰여 있었어요.",
+   "blank": "本書",
+   "src": "made"
+  }
+ ],
  "w|本来": [
   {
    "text": "本来はもっと早い。",
@@ -59583,6 +60239,22 @@
    "src": "made"
   }
  ],
+ "w|格納": [
+  {
+   "text": "拓也が撮った取材の写真は、すべて社内のサーバーに格納されている。",
+   "en": "All the photos Takuya took on assignment are stored on the company server.",
+   "ko": "다쿠야가 찍은 취재 사진은 모두 사내 서버에 저장되어 있어요.",
+   "blank": "格納",
+   "src": "made"
+  },
+  {
+   "text": "恵子の式場では、天井から格納式のスクリーンが下りてくる。",
+   "en": "At Keiko's wedding venue, a retractable screen comes down from the ceiling.",
+   "ko": "게이코의 결혼식장에서는 천장에서 접이식 스크린이 내려와요.",
+   "blank": "格納",
+   "src": "made"
+  }
+ ],
  "w|格闘": [
   {
    "text": "翔太は、難しい数学の問題と一時間も格闘した。",
@@ -59659,6 +60331,22 @@
    "en": "Let's think of a plan.",
    "ko": "안을 생각해 보자.",
    "blank": "案"
+  }
+ ],
+ "w|案の定": [
+  {
+   "text": "案の定、直樹の乗った列車は大雪で遅れた。",
+   "en": "Sure enough, Naoki's train was delayed by heavy snow.",
+   "ko": "아니나 다를까, 나오키가 탄 열차는 폭설로 늦어졌어요.",
+   "blank": "案の定",
+   "src": "made"
+  },
+  {
+   "text": "案の定、花粉の季節になると葵の薬局で目薬を買う人が増えた。",
+   "en": "Sure enough, when pollen season came, more people bought eye drops at Aoi's pharmacy.",
+   "ko": "아니나 다를까, 꽃가루 철이 되자 아오이의 약국에서 안약을 사는 사람이 늘었어요.",
+   "blank": "案の定",
+   "src": "made"
   }
  ],
  "w|案件": [
@@ -59997,6 +60685,22 @@
    "blank": "業界"
   }
  ],
+ "w|業種": [
+  {
+   "text": "拓也は、人手不足に悩む業種を調べて特集を組んだ。",
+   "en": "Takuya researched industries struggling with labor shortages and put together a feature.",
+   "ko": "다쿠야는 일손 부족에 시달리는 업종을 조사해서 특집을 꾸몄어요.",
+   "blank": "業種",
+   "src": "made"
+  },
+  {
+   "text": "恵子の夫は、恵子とはまったく違う業種で働いている。",
+   "en": "Keiko's husband works in a completely different industry from Keiko.",
+   "ko": "게이코의 남편은 게이코와는 전혀 다른 업종에서 일해요.",
+   "blank": "業種",
+   "src": "made"
+  }
+ ],
  "w|業績": [
   {
    "text": "翔太は、就職活動のために企業の業績をまとめた資料を読んだ。",
@@ -60056,6 +60760,22 @@
    "en": "Yoko's mother was someone who had mastered the art of making pickles.",
    "ko": "요코의 어머니는 장아찌 담그기 솜씨를 경지에 올린 분이었어요.",
    "blank": "極め",
+   "src": "made"
+  }
+ ],
+ "w|極力": [
+  {
+   "text": "直樹は、旅の荷物を極力少なくしている。",
+   "en": "Naoki keeps his luggage for trips to an absolute minimum.",
+   "ko": "나오키는 여행 짐을 되도록 적게 꾸려요.",
+   "blank": "極力",
+   "src": "made"
+  },
+  {
+   "text": "葵は、子どもに出す薬は極力少なくするよう心がけている。",
+   "en": "Aoi tries to keep the medicine she gives children to a minimum.",
+   "ko": "아오이는 아이에게 주는 약은 되도록 적게 하려고 신경 써요.",
+   "blank": "極力",
    "src": "made"
   }
  ],
@@ -63469,6 +64189,22 @@
    "src": "made"
   }
  ],
+ "w|沈める": [
+  {
+   "text": "直樹は、座席に深く体を沈めて眠った。",
+   "en": "Naoki sank deep into his seat and fell asleep.",
+   "ko": "나오키는 좌석에 몸을 깊이 파묻고 잠들었어요.",
+   "blank": "沈めて",
+   "src": "made"
+  },
+  {
+   "text": "仕事のあと、葵は疲れた体を湯船に沈めてほっとした。",
+   "en": "After work, Aoi sank her tired body into the bathtub and relaxed.",
+   "ko": "퇴근 후 아오이는 지친 몸을 욕조에 담그고 한숨 돌렸어요.",
+   "blank": "沈めて",
+   "src": "made"
+  }
+ ],
  "w|沈黙": [
   {
    "text": "取り調べの間、男はずっと沈黙を続けた。",
@@ -63638,6 +64374,22 @@
    "en": "The shop's new item is bread kneaded with seaweed harvested in a coastal town.",
    "ko": "연안 마을에서 난 해초를 넣어 반죽한 빵이 가게의 신상품이에요.",
    "blank": "沿岸",
+   "src": "made"
+  }
+ ],
+ "w|沿線": [
+  {
+   "text": "直樹は、沿線に咲く桜を車窓から楽しんだ。",
+   "en": "Naoki enjoyed the cherry blossoms blooming along the railway line from the train window.",
+   "ko": "나오키는 철로변에 핀 벚꽃을 차창 밖으로 즐겼어요.",
+   "blank": "沿線",
+   "src": "made"
+  },
+  {
+   "text": "葵が勤める薬局のチェーン店は、私鉄の沿線に多い。",
+   "en": "The pharmacy chain Aoi works for has many stores along private railway lines.",
+   "ko": "아오이가 일하는 약국 체인점은 사철 노선을 따라 많이 있어요.",
+   "blank": "沿線",
    "src": "made"
   }
  ],
@@ -65315,6 +66067,22 @@
    "en": "The population decline continues.",
    "ko": "인구 감소가 이어져.",
    "blank": "減少"
+  }
+ ],
+ "w|減速": [
+  {
+   "text": "カーブに差しかかると、直樹の乗った列車はゆっくり減速した。",
+   "en": "As it approached a curve, Naoki's train slowly decelerated.",
+   "ko": "커브에 접어들자 나오키가 탄 열차는 천천히 감속했어요.",
+   "blank": "減速",
+   "src": "made"
+  },
+  {
+   "text": "薬局の前の道は車が減速しないので危ないと、葵は感じている。",
+   "en": "Aoi feels the road in front of the pharmacy is dangerous because cars don't slow down.",
+   "ko": "약국 앞 도로는 차들이 속도를 줄이지 않아서 위험하다고 아오이는 느껴요.",
+   "blank": "減速",
+   "src": "made"
   }
  ],
  "w|渡す": [
@@ -67147,6 +67915,22 @@
    "src": "made"
   }
  ],
+ "w|熟練": [
+  {
+   "text": "熟練のカメラマンが、拓也の取材に同行した。",
+   "en": "A skilled photographer accompanied Takuya on his assignment.",
+   "ko": "숙련된 카메라맨이 다쿠야의 취재에 동행했어요.",
+   "blank": "熟練",
+   "src": "made"
+  },
+  {
+   "text": "熟練の美容師が、恵子の髪をきれいに結い上げた。",
+   "en": "A skilled hairdresser put Keiko's hair up beautifully.",
+   "ko": "숙련된 미용사가 게이코의 머리를 예쁘게 올려 묶었어요.",
+   "blank": "熟練",
+   "src": "made"
+  }
+ ],
  "w|熱": [
   {
    "text": "熱が下がらない。",
@@ -67512,6 +68296,22 @@
    "en": "Of the two proposals, Yumi had to choose one.",
    "ko": "두 안 중에서 유미는 한쪽을 골라야 했어요.",
    "blank": "片方",
+   "src": "made"
+  }
+ ],
+ "w|片道": [
+  {
+   "text": "直樹は、片道の切符だけを買って旅に出た。",
+   "en": "Naoki set off on his trip with only a one-way ticket.",
+   "ko": "나오키는 편도 표만 사서 여행을 떠났어요.",
+   "blank": "片道",
+   "src": "made"
+  },
+  {
+   "text": "葵の家から薬局までは、電車で片道三十分かかる。",
+   "en": "It takes Aoi thirty minutes one way by train from her home to the pharmacy.",
+   "ko": "아오이의 집에서 약국까지는 전철로 편도 삼십 분 걸려요.",
+   "blank": "片道",
    "src": "made"
   }
  ],
@@ -68751,6 +69551,22 @@
    "blank": "現状"
   }
  ],
+ "w|現職": [
+  {
+   "text": "選挙で現職の町長が再選されたと、拓也は速報で伝えた。",
+   "en": "Takuya reported in a news flash that the incumbent town mayor had been reelected.",
+   "ko": "선거에서 현직 읍장이 재선됐다고 다쿠야는 속보로 전했어요.",
+   "blank": "現職",
+   "src": "made"
+  },
+  {
+   "text": "恵子の式には、現職の町長も来賓として出席した。",
+   "en": "The incumbent town mayor also attended Keiko's wedding as a guest of honor.",
+   "ko": "게이코의 결혼식에는 현직 읍장도 내빈으로 참석했어요.",
+   "blank": "現職",
+   "src": "made"
+  }
+ ],
  "w|現行": [
   {
    "text": "亮は、ごみの出し方の現行のルールを確認した。",
@@ -69865,6 +70681,22 @@
    "blank": "町"
   }
  ],
+ "w|町内": [
+  {
+   "text": "駅に着くと、直樹は町内の地図を手に取った。",
+   "en": "When he arrived at the station, Naoki picked up a map of the neighborhood.",
+   "ko": "역에 도착하자 나오키는 동네 지도를 집어 들었어요.",
+   "blank": "町内",
+   "src": "made"
+  },
+  {
+   "text": "葵は、町内のお年寄りに薬を届けている。",
+   "en": "Aoi delivers medicine to elderly people in the neighborhood.",
+   "ko": "아오이는 동네 어르신들에게 약을 배달해요.",
+   "blank": "町内",
+   "src": "made"
+  }
+ ],
  "w|画像": [
   {
    "text": "画像、送って。",
@@ -69892,6 +70724,22 @@
    "en": "By the roadside, a painter was sketching the runners.",
    "ko": "길가에서는 한 화가가 달리는 사람들을 스케치하고 있었어요.",
    "blank": "画家",
+   "src": "made"
+  }
+ ],
+ "w|画期的": [
+  {
+   "text": "直樹は、その鉄道が昔画期的な技術で造られたことを知った。",
+   "en": "Naoki learned that the railway had been built long ago with groundbreaking technology.",
+   "ko": "나오키는 그 철도가 옛날에 획기적인 기술로 만들어졌다는 걸 알았어요.",
+   "blank": "画期的",
+   "src": "made"
+  },
+  {
+   "text": "葵は、飲みやすい画期的な新薬の話を客にした。",
+   "en": "Aoi told a customer about a groundbreaking new medicine that is easy to take.",
+   "ko": "아오이는 먹기 쉬운 획기적인 신약 이야기를 손님에게 했어요.",
+   "blank": "画期的",
    "src": "made"
   }
  ],
@@ -71215,6 +72063,22 @@
    "src": "made"
   }
  ],
+ "w|百科": [
+  {
+   "text": "拓也の机の上には、古い百科事典が並んでいる。",
+   "en": "Old encyclopedias are lined up on Takuya's desk.",
+   "ko": "다쿠야의 책상 위에는 오래된 백과사전이 꽂혀 있어요.",
+   "blank": "百科",
+   "src": "made"
+  },
+  {
+   "text": "恵子は「結婚式マナー百科」という本を買って読んだ。",
+   "en": "Keiko bought and read a book called \"Encyclopedia of Wedding Etiquette.\"",
+   "ko": "게이코는 '결혼식 매너 백과'라는 책을 사서 읽었어요.",
+   "blank": "百科",
+   "src": "made"
+  }
+ ],
  "w|百貨店": [
   {
    "text": "昼休みに直樹は、改装したばかりの百貨店の食品売り場をのぞいた。",
@@ -71637,6 +72501,22 @@
    "blank": "目"
   }
  ],
+ "w|目安": [
+  {
+   "text": "拓也は、記事の長さの目安を新人に教えた。",
+   "en": "Takuya taught the new reporter a rough guideline for article length.",
+   "ko": "다쿠야는 기사 길이의 기준을 신입에게 가르쳐 줬어요.",
+   "blank": "目安",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、引き出物の予算の目安を式場の人に聞いた。",
+   "en": "Keiko asked the venue staff about a rough budget for the wedding favors.",
+   "ko": "게이코는 답례품 예산의 기준을 식장 직원에게 물었어요.",
+   "blank": "目安",
+   "src": "made"
+  }
+ ],
  "w|目指す": [
   {
    "text": "優勝を目指すよ。",
@@ -71926,6 +72806,22 @@
    "en": "Rabbit tracks ran in a straight line across the snow-covered field.",
    "ko": "눈 쌓인 밭에 토끼 발자국이 직선으로 이어져 있었어요.",
    "blank": "直線",
+   "src": "made"
+  }
+ ],
+ "w|直行": [
+  {
+   "text": "直樹は、空港へ直行する特急に乗り換えた。",
+   "en": "Naoki transferred to a limited express that goes straight to the airport.",
+   "ko": "나오키는 공항으로 직행하는 특급으로 갈아탔어요.",
+   "blank": "直行",
+   "src": "made"
+  },
+  {
+   "text": "熱が高いなら病院へ直行してください、と葵は客に伝えた。",
+   "en": "Aoi told the customer to go straight to the hospital if the fever was high.",
+   "ko": "열이 높으면 병원으로 바로 가세요, 라고 아오이는 손님에게 말했어요.",
+   "blank": "直行",
    "src": "made"
   }
  ],
@@ -74515,6 +75411,22 @@
    "blank": "移行"
   }
  ],
+ "w|移設": [
+  {
+   "text": "直樹の降りた駅は、去年少し離れた場所に移設されたそうだ。",
+   "en": "The station where Naoki got off was apparently moved to a slightly different location last year.",
+   "ko": "나오키가 내린 역은 작년에 조금 떨어진 곳으로 옮겨졌대요.",
+   "blank": "移設",
+   "src": "made"
+  },
+  {
+   "text": "薬局の前のバス停が移設されて、葵の店に来る客が少し減った。",
+   "en": "The bus stop in front of the pharmacy was moved, and fewer customers came to Aoi's shop.",
+   "ko": "약국 앞 버스 정류장이 옮겨져서 아오이의 가게에 오는 손님이 조금 줄었어요.",
+   "blank": "移設",
+   "src": "made"
+  }
+ ],
  "w|移転": [
   {
    "text": "大輔が行こうとしたラーメン屋は、隣の町に移転していた。",
@@ -74730,6 +75642,22 @@
    "en": "Ryosuke's factory is apparently running at night now too.",
    "ko": "료스케의 공장은 요즘 밤에도 가동한대요.",
    "blank": "稼働",
+   "src": "made"
+  }
+ ],
+ "w|稼動": [
+  {
+   "text": "新しい印刷機が稼動し始め、拓也の新聞の印刷が速くなった。",
+   "en": "The new printing press started running, and printing of Takuya's newspaper got faster.",
+   "ko": "새 인쇄기가 가동되기 시작해서 다쿠야네 신문 인쇄가 빨라졌어요.",
+   "blank": "稼動",
+   "src": "made"
+  },
+  {
+   "text": "恵子の式場の大きな噴水は、夜まで稼動していた。",
+   "en": "The large fountain at Keiko's venue kept running until night.",
+   "ko": "게이코네 식장의 큰 분수는 밤까지 가동되고 있었어요.",
+   "blank": "稼動",
    "src": "made"
   }
  ],
@@ -75129,6 +76057,22 @@
    "en": "The counter is crowded.",
    "ko": "창구가 붐비네.",
    "blank": "窓口"
+  }
+ ],
+ "w|立ち上がる": [
+  {
+   "text": "列車が止まると、直樹は棚の荷物を取ろうと立ち上がった。",
+   "en": "When the train stopped, Naoki stood up to get his bag from the rack.",
+   "ko": "열차가 멈추자 나오키는 선반의 짐을 꺼내려고 일어섰어요.",
+   "blank": "立ち上がった",
+   "src": "made"
+  },
+  {
+   "text": "待合の椅子から立ち上がったお年寄りを、葵はそっと支えた。",
+   "en": "Aoi gently steadied an elderly person who had stood up from a waiting-room chair.",
+   "ko": "대기석 의자에서 일어선 어르신을 아오이는 살며시 부축했어요.",
+   "blank": "立ち上がった",
+   "src": "made"
   }
  ],
  "w|立つ": [
@@ -76897,6 +77841,22 @@
    "blank": "給料"
   }
  ],
+ "w|給油": [
+  {
+   "text": "直樹の乗るディーゼル列車は、途中の駅で給油のために長く止まった。",
+   "en": "Naoki's diesel train stopped for a long time at a station along the way to refuel.",
+   "ko": "나오키가 탄 디젤 열차는 중간역에서 급유하느라 오래 멈췄어요.",
+   "blank": "給油",
+   "src": "made"
+  },
+  {
+   "text": "葵は、配達に出る前にガソリンスタンドで給油した。",
+   "en": "Aoi filled up at a gas station before going out on deliveries.",
+   "ko": "아오이는 배달 나가기 전에 주유소에서 기름을 넣었어요.",
+   "blank": "給油",
+   "src": "made"
+  }
+ ],
  "w|給食": [
   {
    "text": "小学校の給食で出たカレーのルーが、ネットで売られていた。",
@@ -77511,6 +78471,22 @@
    "src": "made"
   }
  ],
+ "w|締め切り": [
+  {
+   "text": "締め切りの直前、拓也は原稿を必死で仕上げた。",
+   "en": "Right before the deadline, Takuya desperately finished his manuscript.",
+   "ko": "마감 직전에 다쿠야는 원고를 필사적으로 마무리했어요.",
+   "blank": "締め切り",
+   "src": "made"
+  },
+  {
+   "text": "恵子の式の招待状は、返事の締め切りが一か月前だ。",
+   "en": "For Keiko's wedding invitations, the reply deadline is one month before.",
+   "ko": "게이코의 결혼식 청첩장은 답장 마감이 한 달 전이에요.",
+   "blank": "締め切り",
+   "src": "made"
+  }
+ ],
  "w|締結": [
   {
    "text": "施主との契約が締結され、来月から工事が始まる。",
@@ -77881,6 +78857,22 @@
    "en": "I'll set the bags down.",
    "ko": "짐 내려놓을게.",
    "blank": "置く"
+  }
+ ],
+ "w|署長": [
+  {
+   "text": "拓也は、警察署長の記者会見に出席した。",
+   "en": "Takuya attended the police chief's press conference.",
+   "ko": "다쿠야는 경찰서장의 기자회견에 참석했어요.",
+   "blank": "署長",
+   "src": "made"
+  },
+  {
+   "text": "恵子の祖父は、昔この町の消防署長だった。",
+   "en": "Keiko's grandfather was once the fire chief of this town.",
+   "ko": "게이코의 할아버지는 옛날에 이 마을의 소방서장이었어요.",
+   "blank": "署長",
+   "src": "made"
   }
  ],
  "w|罰金": [
@@ -78444,6 +79436,22 @@
    "en": "The teacher introduced an old way of making bread that also appears in the Bible.",
    "ko": "선생님은 성경에도 나오는 오래된 빵 만드는 법을 소개했어요.",
    "blank": "聖書",
+   "src": "made"
+  }
+ ],
+ "w|聖職": [
+  {
+   "text": "拓也は、教師がかつて聖職と呼ばれていたことを記事で紹介した。",
+   "en": "In his article, Takuya mentioned that teaching was once called a sacred profession.",
+   "ko": "다쿠야는 교사가 예전에 성직이라고 불렸다는 것을 기사에서 소개했어요.",
+   "blank": "聖職",
+   "src": "made"
+  },
+  {
+   "text": "恵子の式を挙げた教会の牧師は、長く聖職を務めてきた人だ。",
+   "en": "The pastor of the church where Keiko married has served in the clergy for many years.",
+   "ko": "게이코가 결혼식을 올린 교회의 목사님은 오랫동안 성직을 맡아 온 분이에요.",
+   "blank": "聖職",
    "src": "made"
   }
  ],
@@ -79529,6 +80537,22 @@
    "src": "made"
   }
  ],
+ "w|自在": [
+  {
+   "text": "直樹は、旅先で何か国語も自由自在に話す人に出会った。",
+   "en": "On his trip, Naoki met a person who could speak several languages with complete ease.",
+   "ko": "나오키는 여행지에서 여러 나라 말을 자유자재로 하는 사람을 만났어요.",
+   "blank": "自在",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局のロボットは、棚から薬を自在に取り出せる。",
+   "en": "The robot at Aoi's pharmacy can freely take medicine off the shelves.",
+   "ko": "아오이네 약국 로봇은 선반에서 약을 자유롭게 꺼낼 수 있어요.",
+   "blank": "自在",
+   "src": "made"
+  }
+ ],
  "w|自宅": [
   {
    "text": "今日は自宅で働く。",
@@ -80427,6 +81451,22 @@
    "src": "made"
   }
  ],
+ "w|苦しめる": [
+  {
+   "text": "夏の暑さが、冷房のない古い列車で直樹たち乗客を苦しめた。",
+   "en": "The summer heat tormented Naoki and the other passengers on the old train without air conditioning.",
+   "ko": "여름 더위가 냉방도 없는 낡은 열차에서 나오키와 승객들을 괴롭혔어요.",
+   "blank": "苦しめた",
+   "src": "made"
+  },
+  {
+   "text": "長年あの客を苦しめてきた肌荒れに、葵は新しい塗り薬を勧めた。",
+   "en": "Aoi recommended a new ointment for the rough skin that had troubled that customer for years.",
+   "ko": "오랫동안 그 손님을 괴롭혀 온 피부 트러블에 아오이는 새 연고를 권했어요.",
+   "blank": "苦しめて",
+   "src": "made"
+  }
+ ],
  "w|苦労": [
   {
    "text": "苦労が報われた気がする。",
@@ -80857,6 +81897,22 @@
    "en": "This is a calming place.",
    "ko": "마음이 가라앉는 곳이네.",
    "blank": "落ち着く"
+  }
+ ],
+ "w|落ち着ける": [
+  {
+   "text": "乗り遅れそうになって慌てた直樹は、座席で深呼吸して気持ちを落ち着けた。",
+   "en": "Flustered at almost missing the train, Naoki took a deep breath in his seat and calmed himself down.",
+   "ko": "열차를 놓칠 뻔해서 당황한 나오키는 자리에서 심호흡을 하며 마음을 가라앉혔어요.",
+   "blank": "落ち着けた",
+   "src": "made"
+  },
+  {
+   "text": "葵は、慌てて駆け込んできた母親を椅子に座らせ、気持ちを落ち着けてもらった。",
+   "en": "Aoi had a mother who rushed in in a panic sit down on a chair so she could calm down.",
+   "ko": "아오이는 허둥지둥 뛰어 들어온 엄마를 의자에 앉혀 마음을 가라앉히게 했어요.",
+   "blank": "落ち着けて",
+   "src": "made"
   }
  ],
  "w|落ち込む": [
@@ -81505,6 +82561,22 @@
    "blank": "街"
   }
  ],
+ "w|街道": [
+  {
+   "text": "直樹は、途中の駅で降りて昔の街道を歩いた。",
+   "en": "Naoki got off at a station along the way and walked an old highway.",
+   "ko": "나오키는 중간역에서 내려 옛 가도를 걸었어요.",
+   "blank": "街道",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局は、昔から旧街道沿いで営業している。",
+   "en": "Aoi's pharmacy has been doing business along the old highway for a long time.",
+   "ko": "아오이의 약국은 옛날부터 옛 가도변에서 영업해 왔어요.",
+   "blank": "街道",
+   "src": "made"
+  }
+ ],
  "w|街頭": [
   {
    "text": "生徒会のみんなは、駅前の街頭で募金を呼びかけた。",
@@ -81916,6 +82988,22 @@
    "en": "Yumi's team's gym is right next to the courthouse.",
    "ko": "유미네 팀 체육관은 법원 바로 옆에 있어요.",
    "blank": "裁判所",
+   "src": "made"
+  }
+ ],
+ "w|装う": [
+  {
+   "text": "直樹は平静を装ったが、乗り換えに間に合うか内心ひやひやしていた。",
+   "en": "Naoki pretended to be calm, but inside he was nervous about making his connection.",
+   "ko": "나오키는 태연한 척했지만 환승 시간에 맞출 수 있을지 속으로 조마조마했어요.",
+   "blank": "装った",
+   "src": "made"
+  },
+  {
+   "text": "葵は疲れていても、客の前では元気を装っている。",
+   "en": "Even when she's tired, Aoi puts on a cheerful face in front of customers.",
+   "ko": "아오이는 피곤해도 손님 앞에서는 기운찬 척해요.",
+   "blank": "装って",
    "src": "made"
   }
  ],
@@ -83513,6 +84601,22 @@
    "src": "made"
   }
  ],
+ "w|観覧": [
+  {
+   "text": "終点の駅前には大きな観覧車があり、直樹も乗ってみた。",
+   "en": "There was a big Ferris wheel in front of the last station, and Naoki rode it.",
+   "ko": "종점 역 앞에는 큰 관람차가 있어서 나오키도 타 봤어요.",
+   "blank": "観覧",
+   "src": "made"
+  },
+  {
+   "text": "葵は、休みの日に花火大会を有料の観覧席から見た。",
+   "en": "On her day off, Aoi watched the fireworks from a paid viewing seat.",
+   "ko": "아오이는 쉬는 날 불꽃놀이를 유료 관람석에서 봤어요.",
+   "blank": "観覧",
+   "src": "made"
+  }
+ ],
  "w|角": [
   {
    "text": "角を曲がって。",
@@ -83879,6 +84983,22 @@
    "en": "It was a touching story.",
    "ko": "마음에 와닿는 이야기였어.",
    "blank": "触れる"
+  }
+ ],
+ "w|言い分": [
+  {
+   "text": "拓也は、対立する双方の言い分をしっかり聞いた。",
+   "en": "Takuya listened carefully to what both opposing sides had to say.",
+   "ko": "다쿠야는 대립하는 양쪽의 주장을 꼼꼼히 들었어요.",
+   "blank": "言い分",
+   "src": "made"
+  },
+  {
+   "text": "式の日取りで両家がもめたが、恵子は両方の言い分を聞いた。",
+   "en": "The two families argued over the wedding date, but Keiko listened to both sides.",
+   "ko": "결혼식 날짜로 양가가 다퉜지만 게이코는 양쪽의 말을 들었어요.",
+   "blank": "言い分",
+   "src": "made"
   }
  ],
  "w|言い方": [
@@ -86911,6 +88031,22 @@
    "src": "tatoeba:9667195/bunbuku en:6678664/CK"
   }
  ],
+ "w|貸切": [
+  {
+   "text": "平日の朝、直樹の乗った車両はほとんど貸切状態だった。",
+   "en": "On a weekday morning, Naoki practically had the train car all to himself.",
+   "ko": "평일 아침, 나오키가 탄 칸은 거의 전세 낸 것 같았어요.",
+   "blank": "貸切",
+   "src": "made"
+  },
+  {
+   "text": "葵は、薬局の慰労会のために貸切の小さな店を予約した。",
+   "en": "Aoi booked a small restaurant exclusively for the pharmacy's staff party.",
+   "ko": "아오이는 약국 회식을 위해 작은 가게를 통째로 예약했어요.",
+   "blank": "貸切",
+   "src": "made"
+  }
+ ],
  "w|費やす": [
   {
    "text": "拓也は、一つの事件に一年以上を費やした。",
@@ -87839,6 +88975,22 @@
    "blank": "路線"
   }
  ],
+ "w|路面": [
+  {
+   "text": "直樹は、路面電車に乗り換えて旧市街へ向かった。",
+   "en": "Naoki transferred to a streetcar and headed to the old town.",
+   "ko": "나오키는 노면 전차로 갈아타고 구시가지로 향했어요.",
+   "blank": "路面",
+   "src": "made"
+  },
+  {
+   "text": "雪の日は路面が凍るので、葵は転ばないよう客に声をかける。",
+   "en": "On snowy days the road surface freezes, so Aoi tells customers to be careful not to fall.",
+   "ko": "눈 오는 날은 노면이 얼어서 아오이는 넘어지지 않게 조심하라고 손님에게 말해요.",
+   "blank": "路面",
+   "src": "made"
+  }
+ ],
  "w|踊り": [
   {
    "text": "夏祭りでは、市長も一緒に盆踊りの輪に入った。",
@@ -88053,6 +89205,22 @@
    "blank": "車両"
   }
  ],
+ "w|車体": [
+  {
+   "text": "直樹は、赤い車体の観光列車を写真に撮った。",
+   "en": "Naoki took a photo of the sightseeing train with its red body.",
+   "ko": "나오키는 차체가 빨간 관광 열차를 사진으로 찍었어요.",
+   "blank": "車体",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局の配達用の車は、車体に店の名前が書いてある。",
+   "en": "The delivery car of Aoi's pharmacy has the shop's name on its body.",
+   "ko": "아오이네 약국 배달 차에는 차체에 가게 이름이 쓰여 있어요.",
+   "blank": "車体",
+   "src": "made"
+  }
+ ],
  "w|車内": [
   {
    "text": "帰りの電車の車内は、いつもより静かだった。",
@@ -88114,6 +89282,22 @@
    "en": "The road in front of Keiko's house was widened, and now it has two lanes.",
    "ko": "게이코네 집 앞 도로가 넓어져서 차선이 두 개로 늘었어요.",
    "blank": "車線",
+   "src": "made"
+  }
+ ],
+ "w|車輪": [
+  {
+   "text": "古い列車の車輪がきしむ音を、直樹は懐かしく聞いた。",
+   "en": "Naoki listened fondly to the creaking of the old train's wheels.",
+   "ko": "오래된 열차 바퀴가 삐걱거리는 소리를 나오키는 그리운 마음으로 들었어요.",
+   "blank": "車輪",
+   "src": "made"
+  },
+  {
+   "text": "薬局の車いすの車輪がきしむので、葵は油をさした。",
+   "en": "The wheels of the pharmacy's wheelchair were squeaking, so Aoi oiled them.",
+   "ko": "약국 휠체어 바퀴가 삐걱거려서 아오이는 기름을 쳤어요.",
+   "blank": "車輪",
    "src": "made"
   }
  ],
@@ -89030,6 +90214,22 @@
    "en": "Keiko wrote that a new coffee shop had opened near the station.",
    "ko": "게이코는 역 근처에 새 찻집이 생겼다고 썼어요.",
    "blank": "近辺",
+   "src": "made"
+  }
+ ],
+ "w|近郊": [
+  {
+   "text": "直樹は、港町の近郊にある温泉宿に泊まった。",
+   "en": "Naoki stayed at a hot spring inn on the outskirts of the port town.",
+   "ko": "나오키는 항구 마을 근교에 있는 온천 여관에 묵었어요.",
+   "blank": "近郊",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局には、近郊の農家の人もよく来る。",
+   "en": "Farmers from the surrounding area often come to Aoi's pharmacy too.",
+   "ko": "아오이의 약국에는 근교 농가 사람들도 자주 와요.",
+   "blank": "近郊",
    "src": "made"
   }
  ],
@@ -91201,6 +92401,22 @@
    "blank": "過ごす"
   }
  ],
+ "w|過ごせる": [
+  {
+   "text": "個室の寝台なら夜も快適に過ごせると、直樹は思った。",
+   "en": "Naoki thought he could spend the night comfortably in a private sleeper compartment.",
+   "ko": "개인실 침대칸이라면 밤에도 편하게 지낼 수 있겠다고 나오키는 생각했어요.",
+   "blank": "過ごせる",
+   "src": "made"
+  },
+  {
+   "text": "この薬を飲めば今夜は楽に過ごせますよ、と葵は客に言った。",
+   "en": "Aoi told the customer, \"If you take this medicine, you'll get through tonight more comfortably.\"",
+   "ko": "이 약을 먹으면 오늘 밤은 편하게 지내실 거예요, 라고 아오이는 손님에게 말했어요.",
+   "blank": "過ごせ",
+   "src": "made"
+  }
+ ],
  "w|過剰": [
   {
    "text": "悠斗は、店員の過剰なサービスに少し疲れてしまった。",
@@ -92938,6 +94154,22 @@
    "en": "A serious bug was found the day before release.",
    "ko": "공개 전날에 중대한 버그가 발견됐어요.",
    "blank": "重大",
+   "src": "made"
+  }
+ ],
+ "w|重宝": [
+  {
+   "text": "直樹は、乗り換え案内のアプリを旅のあいだ重宝した。",
+   "en": "Naoki found the transit app very handy throughout his trip.",
+   "ko": "나오키는 환승 안내 앱을 여행 내내 요긴하게 썼어요.",
+   "blank": "重宝",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局の虫眼鏡は、細かい字を読むお年寄りに重宝されている。",
+   "en": "The magnifying glass at Aoi's pharmacy comes in handy for elderly people reading small print.",
+   "ko": "아오이네 약국의 돋보기는 작은 글씨를 읽는 어르신들에게 요긴하게 쓰여요.",
+   "blank": "重宝",
    "src": "made"
   }
  ],
@@ -96603,6 +97835,22 @@
    "src": "made"
   }
  ],
+ "w|頑固": [
+  {
+   "text": "拓也の上司は頑固で、一度決めた見出しを変えない。",
+   "en": "Takuya's boss is stubborn and never changes a headline once he's decided on it.",
+   "ko": "다쿠야의 상사는 고집이 세서 한번 정한 제목을 바꾸지 않아요.",
+   "blank": "頑固",
+   "src": "made"
+  },
+  {
+   "text": "頑固な恵子の父も、結婚の挨拶では涙を見せた。",
+   "en": "Even Keiko's stubborn father shed tears when her fiancé came to ask for her hand.",
+   "ko": "고집 센 게이코의 아버지도 결혼 인사 때는 눈물을 보였어요.",
+   "blank": "頑固",
+   "src": "made"
+  }
+ ],
  "w|頑張る": [
   {
    "text": "頑張ってね。",
@@ -97709,6 +98957,22 @@
    "blank": "馬"
   }
  ],
+ "w|馬車": [
+  {
+   "text": "終点の町では観光客向けの馬車が走っていて、直樹も乗ってみた。",
+   "en": "In the town at the end of the line, there were horse-drawn carriages for tourists, and Naoki tried one.",
+   "ko": "종점 마을에서는 관광객용 마차가 다니고 있어서 나오키도 타 봤어요.",
+   "blank": "馬車",
+   "src": "made"
+  },
+  {
+   "text": "葵の薬局には、馬車の絵が描かれた昔の薬の広告が飾ってある。",
+   "en": "An old medicine advertisement with a picture of a horse-drawn carriage hangs in Aoi's pharmacy.",
+   "ko": "아오이의 약국에는 마차 그림이 그려진 옛날 약 광고가 걸려 있어요.",
+   "blank": "馬車",
+   "src": "made"
+  }
+ ],
  "w|駅": [
   {
    "text": "駅で待ってて。",
@@ -98470,6 +99734,22 @@
    "en": "Aoi ran the race in bright orange shoes.",
    "ko": "아오이는 선명한 주황색 운동화를 신고 대회에 나갔어요.",
    "blank": "鮮やか",
+   "src": "made"
+  }
+ ],
+ "w|鮮明": [
+  {
+   "text": "事故の瞬間を写した鮮明な写真が、拓也のもとに届いた。",
+   "en": "A sharp photo capturing the moment of the accident reached Takuya.",
+   "ko": "사고 순간을 찍은 선명한 사진이 다쿠야에게 도착했어요.",
+   "blank": "鮮明",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、プロポーズの日のことを今でも鮮明に覚えている。",
+   "en": "Keiko still vividly remembers the day of the proposal.",
+   "ko": "게이코는 프러포즈 받은 날을 지금도 선명하게 기억해요.",
+   "blank": "鮮明",
    "src": "made"
   }
  ],

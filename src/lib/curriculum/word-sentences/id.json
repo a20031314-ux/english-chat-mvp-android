@@ -3399,6 +3399,22 @@
    "blank": "bakat"
   }
  ],
+ "w|bakso": [
+  {
+   "text": "Gerobak bakso di depan pasar selalu ramai saat jam makan siang.",
+   "en": "The meatball cart in front of the market is always busy at lunchtime.",
+   "ko": "시장 앞 박소 수레는 점심때면 늘 붐벼요.",
+   "blank": "bakso",
+   "src": "made"
+  },
+  {
+   "text": "Setelah finis, Putri merayakan dengan semangkuk bakso hangat.",
+   "en": "After finishing, Putri celebrated with a bowl of warm meatball soup.",
+   "ko": "결승선을 통과한 뒤 푸트리는 따뜻한 박소 한 그릇으로 자축했어요.",
+   "blank": "bakso",
+   "src": "made"
+  }
+ ],
  "w|bakteri": [
   {
    "text": "Luka yang tidak dibersihkan bisa terinfeksi bakteri, kata Budi.",
@@ -4743,6 +4759,22 @@
    "blank": "begitu"
   }
  ],
+ "w|bekal": [
+  {
+   "text": "Dimas membawa bekal nasi dan sambal dari rumah supaya hemat.",
+   "en": "Dimas brings a packed lunch of rice and sambal from home to save money.",
+   "ko": "디마스는 돈을 아끼려고 집에서 밥과 삼발을 도시락으로 싸 와요.",
+   "blank": "bekal",
+   "src": "made"
+  },
+  {
+   "text": "Putri menyiapkan bekal roti isi untuk dimakan sebelum start.",
+   "en": "Putri packed a sandwich to eat before the start.",
+   "ko": "푸트리는 출발 전에 먹을 샌드위치를 챙겼어요.",
+   "blank": "bekal",
+   "src": "made"
+  }
+ ],
  "w|bekas": [
   {
    "text": "Bekas luka itu masih terlihat di lengannya.",
@@ -4814,6 +4846,22 @@
    "en": "Siti stood up for her younger sibling, who was blamed for breaking the vase.",
    "ko": "꽃병을 깼다고 혼나는 동생을 시티가 감싸 줬어요.",
    "blank": "membela",
+   "src": "made"
+  }
+ ],
+ "w|bela diri": [
+  {
+   "text": "Eko berlatih bela diri selama sebulan untuk adegan perkelahian.",
+   "en": "Eko trained in martial arts for a month for the fight scene.",
+   "ko": "에코는 격투 장면을 위해 한 달 동안 무술을 연습했어요.",
+   "blank": "bela diri",
+   "src": "made"
+  },
+  {
+   "text": "Anak Ayu ikut kelas bela diri di gedung serbaguna dekat pasar.",
+   "en": "Ayu's child takes martial arts classes at the community hall near the market.",
+   "ko": "아유의 아이는 시장 근처 다목적 회관에서 무술 수업을 들어요.",
+   "blank": "bela diri",
    "src": "made"
   }
  ],
@@ -4948,6 +4996,22 @@
    "en": "The art teacher who attended once taught them to carve a wooden dagger handle.",
    "ko": "참석한 미술 선생님은 예전에 그들에게 나무로 단검 손잡이 깎는 법을 가르쳤어요.",
    "blank": "belati",
+   "src": "made"
+  }
+ ],
+ "w|belenggu": [
+  {
+   "text": "Di akhir pertunjukan, tokoh Eko melepaskan belenggu dari tangannya.",
+   "en": "At the end of the show, Eko's character frees his hands from the shackles.",
+   "ko": "공연 마지막에 에코가 맡은 인물이 손에서 족쇄를 풀어요.",
+   "blank": "belenggu",
+   "src": "made"
+  },
+  {
+   "text": "Ayu akhirnya lepas dari belenggu utang setelah dagangan laris.",
+   "en": "Ayu finally broke free of the shackles of debt after her goods sold well.",
+   "ko": "장사가 잘되자 아유는 마침내 빚의 굴레에서 벗어났어요.",
+   "blank": "belenggu",
    "src": "made"
   }
  ],
@@ -7987,6 +8051,22 @@
    "src": "made"
   }
  ],
+ "w|berjiwa": [
+  {
+   "text": "Eko memerankan seorang kepala desa yang berjiwa besar.",
+   "en": "Eko plays a village head with a big heart.",
+   "ko": "에코는 도량이 넓은 촌장 역을 맡았어요.",
+   "blank": "berjiwa",
+   "src": "made"
+  },
+  {
+   "text": "Ayu dikenal sebagai pedagang yang berjiwa sosial.",
+   "en": "Ayu is known as a trader with a generous, community-minded spirit.",
+   "ko": "아유는 남을 잘 돕는 상인으로 알려져 있어요.",
+   "blank": "berjiwa",
+   "src": "made"
+  }
+ ],
  "w|berjodoh": [
   {
    "text": "Rekan kerja Rudi bercanda bahwa Rudi dan petugas arsip itu berjodoh.",
@@ -10515,6 +10595,22 @@
    "blank": "bersaudara"
   }
  ],
+ "w|bersayap": [
+  {
+   "text": "Saat lampu pasar menyala, semut bersayap beterbangan di sekitar lapak Dimas.",
+   "en": "When the market lights come on, winged ants fly around Dimas's stall.",
+   "ko": "시장에 불이 켜지면 날개 달린 개미들이 디마스의 가게 주위를 날아다녀요.",
+   "blank": "bersayap",
+   "src": "made"
+  },
+  {
+   "text": "Di dekat garis finis berdiri patung kuda bersayap yang jadi tempat berfoto.",
+   "en": "Near the finish line stands a winged horse statue that's a photo spot.",
+   "ko": "결승선 근처에는 사진 명소인 날개 달린 말 동상이 서 있어요.",
+   "blank": "bersayap",
+   "src": "made"
+  }
+ ],
  "w|bersedia": [
   {
    "text": "Apa kamu bersedia membantu?",
@@ -12693,6 +12789,22 @@
    "src": "made"
   }
  ],
+ "w|birokrat": [
+  {
+   "text": "Eko memerankan birokrat yang selalu menunda pekerjaan dengan cara yang lucu.",
+   "en": "Eko plays a bureaucrat who always puts off his work in funny ways.",
+   "ko": "에코는 늘 우스꽝스럽게 일을 미루는 관료 역을 해요.",
+   "blank": "birokrat",
+   "src": "made"
+  },
+  {
+   "text": "Ayu kesal karena para birokrat di kantor dinas lambat mengurus izin lapak.",
+   "en": "Ayu is annoyed because the bureaucrats at the agency office are slow to process her stall permit.",
+   "ko": "관청 관료들이 가게 허가를 늦게 처리해서 아유는 짜증이 났어요.",
+   "blank": "birokrat",
+   "src": "made"
+  }
+ ],
  "w|biru": [
   {
    "text": "Langit hari ini biru cerah.",
@@ -12857,6 +12969,22 @@
    "en": "He lives in the next block.",
    "ko": "그는 옆 블록에 살아.",
    "blank": "blok"
+  }
+ ],
+ "w|blokade": [
+  {
+   "text": "Babak kedua menggambarkan blokade pelabuhan oleh pasukan musuh.",
+   "en": "The second act depicts an enemy blockade of the harbor.",
+   "ko": "이 막은 적군의 항구 봉쇄를 그려요.",
+   "blank": "blokade",
+   "src": "made"
+  },
+  {
+   "text": "Truk sayur terlambat masuk pasar karena ada blokade jalan oleh pengunjuk rasa.",
+   "en": "The vegetable truck was late getting to the market because protesters had blockaded the road.",
+   "ko": "시위대가 도로를 봉쇄해서 채소 트럭이 시장에 늦게 들어왔어요.",
+   "blank": "blokade",
+   "src": "made"
   }
  ],
  "w|bocah": [
@@ -13189,6 +13317,22 @@
    "blank": "Buah"
   }
  ],
+ "w|buah-buahan": [
+  {
+   "text": "Dimas berjualan buah-buahan segar di pasar pagi.",
+   "en": "Dimas sells fresh fruit at the morning market.",
+   "ko": "디마스는 아침 시장에서 싱싱한 과일을 팔아요.",
+   "blank": "buah-buahan",
+   "src": "made"
+  },
+  {
+   "text": "Di pos istirahat, relawan menyediakan buah-buahan untuk para pelari.",
+   "en": "At the rest stops, volunteers provide fruit for the runners.",
+   "ko": "휴식 지점에서 자원봉사자들이 주자들에게 과일을 나눠 줘요.",
+   "blank": "buah-buahan",
+   "src": "made"
+  }
+ ],
  "w|bualan": [
   {
    "text": "Bayu memeriksa ulang klaim pejabat itu dan menemukan bahwa semuanya hanya bualan.",
@@ -13518,6 +13662,22 @@
    "en": "The customs officer checked the rendang spice paste Putri had brought.",
    "ko": "세관 직원이 푸트리가 가져온 른당 양념을 검사했어요.",
    "blank": "bumbu",
+   "src": "made"
+  }
+ ],
+ "w|bumerang": [
+  {
+   "text": "Dalam cerita itu, kebohongan sang menteri akhirnya menjadi bumerang.",
+   "en": "In the story, the minister's lie eventually backfires.",
+   "ko": "그 이야기에서 장관의 거짓말은 결국 부메랑이 되어 돌아와요.",
+   "blank": "bumerang",
+   "src": "made"
+  },
+  {
+   "text": "Menaikkan harga terlalu tinggi bisa menjadi bumerang bagi pedagang.",
+   "en": "Raising prices too much can backfire on traders.",
+   "ko": "값을 너무 올리면 상인에게 역효과가 날 수 있어요.",
+   "blank": "bumerang",
    "src": "made"
   }
  ],
@@ -14214,6 +14374,22 @@
    "en": "The men play chess on the bench in front of Lestari's shop.",
    "ko": "아저씨들이 레스타리 가게 앞 벤치에서 체스를 둬요.",
    "blank": "catur",
+   "src": "made"
+  }
+ ],
+ "w|cawan": [
+  {
+   "text": "Dimas menaruh contoh madu di cawan kecil agar pembeli bisa mencicipi.",
+   "en": "Dimas put honey samples in small cups so buyers could taste them.",
+   "ko": "디마스는 손님이 맛볼 수 있게 작은 잔에 꿀 견본을 담아 두었어요.",
+   "blank": "cawan",
+   "src": "made"
+  },
+  {
+   "text": "Juara pertama menerima trofi berbentuk cawan perak.",
+   "en": "The winner received a trophy shaped like a silver cup.",
+   "ko": "우승자는 은잔 모양의 트로피를 받았어요.",
+   "blank": "cawan",
    "src": "made"
   }
  ],
@@ -17385,6 +17561,22 @@
    "src": "made"
   }
  ],
+ "w|duta besar": [
+  {
+   "text": "Seorang duta besar hadir pada malam pembukaan pertunjukan Eko.",
+   "en": "An ambassador attended the opening night of Eko's show.",
+   "ko": "에코 공연의 개막 밤에 한 대사가 참석했어요.",
+   "blank": "duta besar",
+   "src": "made"
+  },
+  {
+   "text": "Seorang duta besar bersama istrinya mengunjungi pasar untuk mencicipi jajanan.",
+   "en": "An ambassador and his wife visited the market to sample the snacks.",
+   "ko": "한 대사가 부인과 함께 군것질거리를 맛보러 시장에 왔어요.",
+   "blank": "duta besar",
+   "src": "made"
+  }
+ ],
  "w|edan": [
   {
    "text": "Dimas bilang antrean pameran baru itu benar-benar edan.",
@@ -18656,6 +18848,22 @@
    "en": "Intan's old phone doesn't have a good camera feature for photographing the mountain.",
    "ko": "인탄의 오래된 휴대폰은 산을 찍을 만한 좋은 카메라 기능이 없어요.",
    "blank": "fitur",
+   "src": "made"
+  }
+ ],
+ "w|fleksibel": [
+  {
+   "text": "Jadwal latihan teater cukup fleksibel karena banyak aktor juga bekerja paruh waktu.",
+   "en": "The theater rehearsal schedule is quite flexible because many actors also work part-time.",
+   "ko": "배우들 상당수가 아르바이트도 해서 극단 연습 일정은 꽤 유연해요.",
+   "blank": "fleksibel",
+   "src": "made"
+  },
+  {
+   "text": "Ayu fleksibel soal pembayaran, jadi pembeli boleh bayar tunai atau transfer.",
+   "en": "Ayu is flexible about payment, so buyers can pay in cash or by transfer.",
+   "ko": "아유는 결제 방식에 유연해서 손님이 현금이나 이체로 낼 수 있어요.",
+   "blank": "fleksibel",
    "src": "made"
   }
  ],
@@ -20092,6 +20300,22 @@
    "en": "The concert coincided with a lunar eclipse, and the crowd cheered as the moon turned red.",
    "ko": "공연이 월식과 겹쳐서 달이 붉어지자 관객들이 환호했어요.",
    "blank": "gerhana",
+   "src": "made"
+  }
+ ],
+ "w|gerilyawan": [
+  {
+   "text": "Eko memerankan gerilyawan muda dalam drama sejarah tentang perang kemerdekaan.",
+   "en": "Eko plays a young guerrilla fighter in a historical play about the war of independence.",
+   "ko": "에코는 독립 전쟁을 다룬 사극에서 젊은 게릴라 대원 역을 맡았어요.",
+   "blank": "gerilyawan",
+   "src": "made"
+  },
+  {
+   "text": "Kakek Ayu bercerita bahwa pasar itu dulu dipakai gerilyawan untuk bertukar kabar.",
+   "en": "Ayu's grandfather says the market was once used by guerrillas to exchange news.",
+   "ko": "아유의 할아버지는 그 시장이 예전에 게릴라들이 소식을 주고받던 곳이었다고 해요.",
+   "blank": "gerilyawan",
    "src": "made"
   }
  ],
@@ -23733,6 +23957,22 @@
    "blank": "Jahat"
   }
  ],
+ "w|jahe": [
+  {
+   "text": "Menurut Dimas, harga jahe selalu naik saat musim hujan.",
+   "en": "According to Dimas, the price of ginger always rises in the rainy season.",
+   "ko": "디마스 말로는 우기마다 생강값이 오른대요.",
+   "blank": "jahe",
+   "src": "made"
+  },
+  {
+   "text": "Putri minum wedang jahe agar otot terasa hangat sebelum berlari.",
+   "en": "Putri drinks hot ginger tea so her muscles feel warm before running.",
+   "ko": "푸트리는 달리기 전에 근육이 따뜻해지도록 생강차를 마셔요.",
+   "blank": "jahe",
+   "src": "made"
+  }
+ ],
  "w|jahitan": [
   {
    "text": "Budi memeriksa jahitan di perut kucing setelah operasi steril.",
@@ -24343,6 +24583,22 @@
    "blank": "jelas"
   }
  ],
+ "w|jelata": [
+  {
+   "text": "Dalam drama itu, Eko berperan sebagai rakyat jelata yang melawan raja.",
+   "en": "In the play, Eko plays a commoner who stands up to the king.",
+   "ko": "그 연극에서 에코는 왕에게 맞서는 평민 역을 해요.",
+   "blank": "jelata",
+   "src": "made"
+  },
+  {
+   "text": "Pasar itu sejak dulu menjadi tempat belanja rakyat jelata.",
+   "en": "The market has long been where ordinary folk do their shopping.",
+   "ko": "그 시장은 예부터 서민들이 장을 보는 곳이었어요.",
+   "blank": "jelata",
+   "src": "made"
+  }
+ ],
  "w|jelek": [
   {
    "text": "Cuaca hari ini sangat jelek.",
@@ -24370,6 +24626,22 @@
    "en": "Ayu is quite good at reading the signs in the clouds before rain comes.",
    "ko": "아유는 비 오기 전 구름의 낌새를 꽤 잘 읽어요.",
    "blank": "jeli",
+   "src": "made"
+  }
+ ],
+ "w|jemaat": [
+  {
+   "text": "Eko pernah memainkan drama Natal untuk jemaat gereja di kampungnya.",
+   "en": "Eko once performed a Christmas play for the church congregation in his village.",
+   "ko": "에코는 고향 마을 교회 신도들을 위해 성탄극을 한 적이 있어요.",
+   "blank": "jemaat",
+   "src": "made"
+  },
+  {
+   "text": "Setiap Minggu pagi, jemaat gereja dekat pasar mampir membeli sarapan di lapak Ayu.",
+   "en": "Every Sunday morning, the congregation of the church near the market stops by Ayu's stall for breakfast.",
+   "ko": "매주 일요일 아침이면 시장 근처 교회 신도들이 아유네 가게에 들러 아침을 사요.",
+   "blank": "jemaat",
    "src": "made"
   }
  ],
@@ -25305,6 +25577,22 @@
    "src": "made"
   }
  ],
+ "w|kadet": [
+  {
+   "text": "Eko memerankan seorang kadet akademi militer yang ragu pada cita-citanya.",
+   "en": "Eko plays a military academy cadet who doubts his own dream.",
+   "ko": "에코는 자신의 꿈을 의심하는 사관생도 역을 맡았어요.",
+   "blank": "kadet",
+   "src": "made"
+  },
+  {
+   "text": "Rombongan kadet angkatan laut berbelanja oleh-oleh di pasar.",
+   "en": "A group of naval cadets shopped for souvenirs at the market.",
+   "ko": "해군 사관생도 한 무리가 시장에서 기념품을 샀어요.",
+   "blank": "kadet",
+   "src": "made"
+  }
+ ],
  "w|kado": [
   {
    "text": "Bayu mencari kado unik untuk ulang tahun pacarnya di antara tumpukan barang bekas.",
@@ -25334,6 +25622,22 @@
    "en": "Dewi often writes letters to Rani at a café near her office.",
    "ko": "데위는 회사 근처 카페에서 라니에게 편지를 자주 써요.",
    "blank": "kafe",
+   "src": "made"
+  }
+ ],
+ "w|kafein": [
+  {
+   "text": "Dimas minum kopi tubruk karena butuh kafein sejak subuh.",
+   "en": "Dimas drinks strong ground coffee because he needs caffeine from dawn.",
+   "ko": "디마스는 새벽부터 카페인이 필요해서 진한 커피를 마셔요.",
+   "blank": "kafein",
+   "src": "made"
+  },
+  {
+   "text": "Putri minum sedikit kopi karena kafein membantu menjaga fokus.",
+   "en": "Putri drinks a little coffee because caffeine helps her stay focused.",
+   "ko": "푸트리는 카페인이 집중에 도움이 돼서 커피를 조금 마셔요.",
+   "blank": "kafein",
    "src": "made"
   }
  ],
@@ -27725,6 +28029,22 @@
    "blank": "kecantikan"
   }
  ],
+ "w|kecap": [
+  {
+   "text": "Dimas membeli sebotol kecap manis untuk ibunya.",
+   "en": "Dimas bought a bottle of sweet soy sauce for his mother.",
+   "ko": "디마스는 어머니께 드릴 달콤한 간장 한 병을 샀어요.",
+   "blank": "kecap",
+   "src": "made"
+  },
+  {
+   "text": "Putri tidak menambahkan kecap ke nasi karena terlalu manis.",
+   "en": "Putri doesn't add soy sauce to her rice because it's too sweet.",
+   "ko": "푸트리는 너무 달아서 밥에 간장을 넣지 않아요.",
+   "blank": "kecap",
+   "src": "made"
+  }
+ ],
  "w|kecelakaan": [
   {
    "text": "Ada kecelakaan di jalan.",
@@ -27981,6 +28301,22 @@
    "en": "They waited for the night train's arrival.",
    "ko": "그들은 밤기차의 도착을 기다렸어.",
    "blank": "kedatangan"
+  }
+ ],
+ "w|kedelai": [
+  {
+   "text": "Pedagang tahu di sebelah lapak Dimas mengeluhkan harga kedelai yang naik.",
+   "en": "The tofu seller next to Dimas's stall complains about the rising price of soybeans.",
+   "ko": "디마스 가게 옆 두부 장수는 콩값이 오른다고 불평해요.",
+   "blank": "kedelai",
+   "src": "made"
+  },
+  {
+   "text": "Putri minum susu kedelai setiap pagi selama masa latihan.",
+   "en": "Putri drinks soy milk every morning during training.",
+   "ko": "푸트리는 훈련 기간에 매일 아침 두유를 마셔요.",
+   "blank": "kedelai",
+   "src": "made"
   }
  ],
  "w|kedengaran": [
@@ -28408,6 +28744,22 @@
    "en": "Dewi admires the brilliance of the engineers who built that long tunnel.",
    "ko": "데위는 그 긴 터널을 만든 기술자들의 솜씨에 감탄해요.",
    "blank": "kehebatan",
+   "src": "made"
+  }
+ ],
+ "w|kehebohan": [
+  {
+   "text": "Pengumuman pemeran utama menimbulkan kehebohan di kalangan aktor muda.",
+   "en": "The announcement of the lead role caused a stir among young actors.",
+   "ko": "주연 발표는 젊은 배우들 사이에 큰 소동을 일으켰어요.",
+   "blank": "kehebohan",
+   "src": "made"
+  },
+  {
+   "text": "Seekor kambing lepas menimbulkan kehebohan di los daging.",
+   "en": "A loose goat caused a commotion in the meat section.",
+   "ko": "풀려난 염소 한 마리가 고기 구역에서 소동을 일으켰어요.",
+   "blank": "kehebohan",
    "src": "made"
   }
  ],
@@ -29857,6 +30209,22 @@
    "src": "made"
   }
  ],
+ "w|kemurnian": [
+  {
+   "text": "Eko ingin menjaga kemurnian naskah asli tanpa banyak perubahan.",
+   "en": "Eko wants to preserve the purity of the original script without many changes.",
+   "ko": "에코는 원작 대본을 크게 바꾸지 않고 그 순수함을 지키고 싶어 해요.",
+   "blank": "kemurnian",
+   "src": "made"
+  },
+  {
+   "text": "Ayu menjamin kemurnian madu hutan yang dijualnya.",
+   "en": "Ayu guarantees the purity of the wild honey she sells.",
+   "ko": "아유는 자기가 파는 야생 꿀이 순수하다고 보장해요.",
+   "blank": "kemurnian",
+   "src": "made"
+  }
+ ],
  "w|kena": [
   {
    "text": "Dimas lebih suka bertani di daratan yang jauh dari sungai karena tidak kena banjir.",
@@ -30036,6 +30404,22 @@
    "en": "Rina savored the pleasure of iced young coconut under a shady tree.",
    "ko": "리나는 그늘진 나무 아래서 시원한 어린 코코넛 음료를 즐겼어요.",
    "blank": "kenikmatan",
+   "src": "made"
+  }
+ ],
+ "w|kental": [
+  {
+   "text": "Penjual jamu di pasar membuat beras kencur yang kental dan harum.",
+   "en": "The herbal drink seller at the market makes thick, fragrant rice-and-galangal tonic.",
+   "ko": "시장의 자무 장수는 걸쭉하고 향긋한 브라스 큰주르를 만들어요.",
+   "blank": "kental",
+   "src": "made"
+  },
+  {
+   "text": "Gel energi yang dibagikan panitia terasa kental dan manis.",
+   "en": "The energy gel handed out by the organizers is thick and sweet.",
+   "ko": "주최 측이 나눠 준 에너지 젤은 걸쭉하고 달았어요.",
+   "blank": "kental",
    "src": "made"
   }
  ],
@@ -32691,6 +33075,22 @@
    "blank": "klub"
   }
  ],
+ "w|koalisi": [
+  {
+   "text": "Tokoh yang diperankan Eko memimpin koalisi para saudagar di kerajaan rekaan.",
+   "en": "The character Eko plays leads a coalition of merchants in a fictional kingdom.",
+   "ko": "에코가 맡은 인물은 가상 왕국에서 상인 연합을 이끌어요.",
+   "blank": "koalisi",
+   "src": "made"
+  },
+  {
+   "text": "Pedagang sayur membentuk koalisi untuk menolak kenaikan sewa kios.",
+   "en": "The vegetable sellers formed a coalition to oppose the rise in stall rent.",
+   "ko": "채소 상인들은 가게 임대료 인상에 반대하려고 연합을 만들었어요.",
+   "blank": "koalisi",
+   "src": "made"
+  }
+ ],
  "w|kobra": [
   {
    "text": "Bayu selalu berhati-hati karena pernah melihat kobra di semak dekat sungai.",
@@ -33445,6 +33845,22 @@
    "src": "made"
   }
  ],
+ "w|konfrontasi": [
+  {
+   "text": "Puncak drama itu adalah konfrontasi antara Eko dan saudara kembarnya.",
+   "en": "The climax of the play is the confrontation between Eko and his twin brother.",
+   "ko": "그 연극의 절정은 에코와 쌍둥이 형제의 대결이에요.",
+   "blank": "konfrontasi",
+   "src": "made"
+  },
+  {
+   "text": "Ayu berusaha menghindari konfrontasi dengan pedagang yang merebut tempat lapaknya.",
+   "en": "Ayu tries to avoid a confrontation with the trader who took over her stall spot.",
+   "ko": "아유는 자기 자리를 차지한 상인과 맞서는 걸 피하려고 해요.",
+   "blank": "konfrontasi",
+   "src": "made"
+  }
+ ],
  "w|konglomerat": [
   {
    "text": "Andi sedang menyelidiki konglomerat yang membeli banyak lahan di pesisir.",
@@ -34180,6 +34596,22 @@
    "en": "Art class has made Ayu more creative at solving problems.",
    "ko": "미술 수업 덕분에 아유는 문제를 더 창의적으로 풀게 됐어요.",
    "blank": "kreatif",
+   "src": "made"
+  }
+ ],
+ "w|kredibilitas": [
+  {
+   "text": "Ulasan kritikus itu kehilangan kredibilitas karena tidak menonton sampai habis.",
+   "en": "The critic's review lost credibility because the critic didn't watch to the end.",
+   "ko": "그 평론가는 끝까지 보지 않아서 리뷰의 신뢰성을 잃었어요.",
+   "blank": "kredibilitas",
+   "src": "made"
+  },
+  {
+   "text": "Timbangan yang jujur menjaga kredibilitas Ayu di mata pembeli.",
+   "en": "Honest scales maintain Ayu's credibility in the eyes of buyers.",
+   "ko": "정직한 저울 덕분에 아유는 손님들에게 신뢰를 지켜요.",
+   "blank": "kredibilitas",
    "src": "made"
   }
  ],
@@ -35121,6 +35553,22 @@
    "src": "made"
   }
  ],
+ "w|lada": [
+  {
+   "text": "Dimas membeli lada hitam utuh dari kios bumbu langganan.",
+   "en": "Dimas buys whole black pepper from his regular spice kiosk.",
+   "ko": "디마스는 단골 양념 가게에서 통후추를 사요.",
+   "blank": "lada",
+   "src": "made"
+  },
+  {
+   "text": "Putri menaburkan sedikit lada di atas telur rebus.",
+   "en": "Putri sprinkles a little pepper on her boiled eggs.",
+   "ko": "푸트리는 삶은 달걀 위에 후추를 조금 뿌려요.",
+   "blank": "lada",
+   "src": "made"
+  }
+ ],
  "w|ladang": [
   {
    "text": "Musim ini Dimas mau menanam jagung di ladang sebelah rumah.",
@@ -35858,6 +36306,22 @@
    "en": "Wati tucked a wilted flower into the envelope.",
    "ko": "와티는 시든 꽃 한 송이를 봉투 안에 넣었어요.",
    "blank": "layu",
+   "src": "made"
+  }
+ ],
+ "w|lazim": [
+  {
+   "text": "Di teater kecil itu, sudah lazim aktor ikut mengangkat properti.",
+   "en": "At that small theater, it's common for actors to help carry the props.",
+   "ko": "그 작은 극장에서는 배우들이 소품을 같이 나르는 게 흔한 일이에요.",
+   "blank": "lazim",
+   "src": "made"
+  },
+  {
+   "text": "Menawar harga sudah lazim di pasar tradisional.",
+   "en": "Haggling is common practice at traditional markets.",
+   "ko": "재래시장에서 값을 깎는 건 흔한 일이에요.",
+   "blank": "lazim",
    "src": "made"
   }
  ],
@@ -36730,6 +37194,22 @@
    "en": "The pharmacy disposes of expired medicine waste through special collectors.",
    "ko": "그 약국은 유통기한 지난 약 폐기물을 전문 수거업체에 맡겨 버려요.",
    "blank": "limbah",
+   "src": "made"
+  }
+ ],
+ "w|limun": [
+  {
+   "text": "Seorang nenek menjual limun buatan sendiri di pintu masuk pasar.",
+   "en": "An old woman sells homemade lemonade at the market entrance.",
+   "ko": "한 할머니가 시장 입구에서 직접 만든 레모네이드를 팔아요.",
+   "blank": "limun",
+   "src": "made"
+  },
+  {
+   "text": "Di garis finis, panitia membagikan limun dingin.",
+   "en": "At the finish line, the organizers handed out cold lemonade.",
+   "ko": "결승선에서 주최 측이 시원한 레모네이드를 나눠 줬어요.",
+   "blank": "limun",
    "src": "made"
   }
  ],
@@ -37767,6 +38247,22 @@
    "src": "made"
   }
  ],
+ "w|mahakuasa": [
+  {
+   "text": "Dalam drama itu, sang raja merasa dirinya mahakuasa sampai rakyat bangkit.",
+   "en": "In the play, the king feels all-powerful until the people rise up.",
+   "ko": "그 연극에서 왕은 백성이 들고일어나기 전까지 자신이 전능하다고 여겨요.",
+   "blank": "mahakuasa",
+   "src": "made"
+  },
+  {
+   "text": "Mandor pasar itu bertingkah seolah-olah mahakuasa.",
+   "en": "That market foreman acts as if he were all-powerful.",
+   "ko": "그 시장 감독은 마치 전능한 사람처럼 굴어요.",
+   "blank": "mahakuasa",
+   "src": "made"
+  }
+ ],
  "w|mahal": [
   {
    "text": "Harga rumah itu terlalu mahal.",
@@ -38029,6 +38525,22 @@
    "en": "All living things need water.",
    "ko": "모든 생물은 물이 필요해.",
    "blank": "makhluk"
+  }
+ ],
+ "w|makian": [
+  {
+   "text": "Eko harus meneriakkan makian dalam adegan pertengkaran, padahal aslinya pemalu.",
+   "en": "Eko has to shout curses in the fight scene, even though he's actually shy.",
+   "ko": "에코는 실제로는 수줍음이 많은데 싸움 장면에서 욕설을 외쳐야 해요.",
+   "blank": "makian",
+   "src": "made"
+  },
+  {
+   "text": "Ayu menutup telinga anaknya saat dua sopir angkot saling melontarkan makian.",
+   "en": "Ayu covered her child's ears when two minibus drivers hurled insults at each other.",
+   "ko": "미니버스 기사 둘이 서로 욕설을 퍼붓자 아유는 아이의 귀를 막았어요.",
+   "blank": "makian",
+   "src": "made"
   }
  ],
  "w|makin": [
@@ -38386,6 +38898,22 @@
    "en": "Lestari wrote an article about a village cooperative that made residents more self-reliant.",
    "ko": "레스타리는 주민들을 더 자립적으로 만든 마을 협동조합에 대한 기사를 썼어요.",
    "blank": "mandiri",
+   "src": "made"
+  }
+ ],
+ "w|mangga": [
+  {
+   "text": "Dimas memilih mangga yang paling harum untuk dipajang di depan lapak.",
+   "en": "Dimas picks the most fragrant mangoes to display at the front of his stall.",
+   "ko": "디마스는 가장 향긋한 망고를 골라 가게 앞에 진열해요.",
+   "blank": "mangga",
+   "src": "made"
+  },
+  {
+   "text": "Putri membawa potongan mangga sebagai camilan setelah lari.",
+   "en": "Putri brings mango slices as a snack after running.",
+   "ko": "푸트리는 달리기 후 간식으로 망고 조각을 챙겨 와요.",
+   "blank": "mangga",
    "src": "made"
   }
  ],
@@ -39931,6 +40459,22 @@
    "blank": "Melempar"
   }
  ],
+ "w|melempari": [
+  {
+   "text": "Dalam satu adegan, warga desa melempari Eko dengan tomat busuk dari plastik.",
+   "en": "In one scene, the villagers pelt Eko with fake plastic rotten tomatoes.",
+   "ko": "한 장면에서 마을 사람들이 플라스틱 썩은 토마토를 에코에게 던져요.",
+   "blank": "melempari",
+   "src": "made"
+  },
+  {
+   "text": "Anak-anak nakal melempari kucing pasar dengan kulit kacang sampai Ayu menegur mereka.",
+   "en": "Naughty kids were pelting the market cat with peanut shells until Ayu told them off.",
+   "ko": "장난꾸러기 아이들이 시장 고양이에게 땅콩 껍질을 던지자 아유가 혼냈어요.",
+   "blank": "melempari",
+   "src": "made"
+  }
+ ],
  "w|melemparkan": [
   {
    "text": "Dia melemparkan bola ke arah temannya.",
@@ -40373,6 +40917,22 @@
    "src": "made"
   }
  ],
+ "w|melonggarkan": [
+  {
+   "text": "Eko melonggarkan dasi setelah lampu panggung padam.",
+   "en": "Eko loosened his tie after the stage lights went off.",
+   "ko": "무대 조명이 꺼지자 에코는 넥타이를 느슨하게 풀었어요.",
+   "blank": "melonggarkan",
+   "src": "made"
+  },
+  {
+   "text": "Pengelola pasar melonggarkan aturan jam buka selama bulan puasa.",
+   "en": "The market management relaxed the opening-hours rule during the fasting month.",
+   "ko": "시장 관리 측은 금식월 동안 영업시간 규정을 완화했어요.",
+   "blank": "melonggarkan",
+   "src": "made"
+  }
+ ],
  "w|meluangkan": [
   {
    "text": "Pak Guru selalu meluangkan waktu untuk menjawab pertanyaan Rudi sepulang sekolah.",
@@ -40386,6 +40946,22 @@
    "en": "Rina's friends set aside their Sunday to help carry boxes.",
    "ko": "리나의 친구들은 상자 나르는 걸 도우려고 일요일을 비워 줬어요.",
    "blank": "meluangkan",
+   "src": "made"
+  }
+ ],
+ "w|meluas": [
+  {
+   "text": "Kabar tentang pertunjukan Eko meluas lewat media sosial.",
+   "en": "Word about Eko's performance spread widely through social media.",
+   "ko": "에코의 공연 소식이 소셜 미디어를 타고 널리 퍼졌어요.",
+   "blank": "meluas",
+   "src": "made"
+  },
+  {
+   "text": "Kebakaran kecil di kios ujung sempat meluas ke los ikan.",
+   "en": "A small fire at the end kiosk briefly spread to the fish section.",
+   "ko": "끝 가게에서 난 작은 불이 생선 구역까지 번졌어요.",
+   "blank": "meluas",
    "src": "made"
   }
  ],
@@ -43229,6 +43805,22 @@
    "blank": "memenangkan"
   }
  ],
+ "w|memencet": [
+  {
+   "text": "Petugas lampu memencet tombol, dan panggung langsung gelap.",
+   "en": "The lighting technician pressed a button, and the stage went dark at once.",
+   "ko": "조명 담당이 버튼을 누르자 무대가 바로 깜깜해졌어요.",
+   "blank": "memencet",
+   "src": "made"
+  },
+  {
+   "text": "Ayu memencet tomat pelan-pelan untuk memastikan masih segar.",
+   "en": "Ayu gently squeezes the tomatoes to make sure they're still fresh.",
+   "ko": "아유는 토마토가 아직 싱싱한지 살살 눌러 봐요.",
+   "blank": "memencet",
+   "src": "made"
+  }
+ ],
  "w|memengaruhi": [
   {
    "text": "Cuaca mendung bisa memengaruhi suasana hati Dimas seharian.",
@@ -44466,6 +45058,22 @@
    "en": "The company agreed to extend Dewi's employment contract for two more years.",
    "ko": "회사는 디위의 근로 계약을 이 년 더 연장하기로 했어요.",
    "blank": "memperpanjang",
+   "src": "made"
+  }
+ ],
+ "w|mempersatukan": [
+  {
+   "text": "Pasar malam mingguan itu mempersatukan warga dari berbagai kampung.",
+   "en": "The weekly night market brings together residents from various villages.",
+   "ko": "매주 열리는 야시장은 여러 마을 주민을 한데 모아요.",
+   "blank": "mempersatukan",
+   "src": "made"
+  },
+  {
+   "text": "Lomba lari itu mempersatukan ribuan pelari dari berbagai kota.",
+   "en": "The race brings together thousands of runners from many cities.",
+   "ko": "그 마라톤 대회는 여러 도시에서 온 수천 명의 주자를 한데 모아요.",
+   "blank": "mempersatukan",
    "src": "made"
   }
  ],
@@ -46333,6 +46941,22 @@
    "src": "made"
   }
  ],
+ "w|mencincang": [
+  {
+   "text": "Penjual daging mencincang daging sapi untuk pesanan Dimas.",
+   "en": "The butcher minced beef for Dimas's order.",
+   "ko": "정육점 주인이 디마스가 주문한 소고기를 다져 줬어요.",
+   "blank": "mencincang",
+   "src": "made"
+  },
+  {
+   "text": "Malam sebelum lomba, ibu Putri mencincang daging ayam untuk sup.",
+   "en": "The night before the race, Putri's mother minced chicken for soup.",
+   "ko": "경기 전날 밤 푸트리의 어머니는 수프에 넣을 닭고기를 다졌어요.",
+   "blank": "mencincang",
+   "src": "made"
+  }
+ ],
  "w|mencintai": [
   {
    "text": "Aku masih mencintai dia.",
@@ -47172,6 +47796,22 @@
    "en": "A doctor from the city came to diagnose the skin disease affecting children in Rina's village.",
    "ko": "도시에서 온 의사가 리나네 마을 아이들의 피부병을 진단하러 왔어요.",
    "blank": "mendiagnosis",
+   "src": "made"
+  }
+ ],
+ "w|mendiamkan": [
+  {
+   "text": "Dimas mendiamkan saja pembeli yang menawar terlalu rendah.",
+   "en": "Dimas just ignores buyers who haggle way too low.",
+   "ko": "디마스는 값을 너무 깎는 손님은 그냥 못 본 척해요.",
+   "blank": "mendiamkan",
+   "src": "made"
+  },
+  {
+   "text": "Putri mendiamkan rasa nyeri di lutut sampai melewati garis finis.",
+   "en": "Putri kept quiet about the pain in her knee until she crossed the finish line.",
+   "ko": "푸트리는 결승선을 넘을 때까지 무릎 통증을 참고 아무 말 하지 않았어요.",
+   "blank": "mendiamkan",
    "src": "made"
   }
  ],
@@ -49274,6 +49914,22 @@
    "en": "Siti still struggles to understand the local language used by the old man from the next village.",
    "ko": "시티는 이웃 마을 할아버지가 쓰는 사투리를 아직도 알아듣기 힘들어요.",
    "blank": "mengartikan",
+   "src": "made"
+  }
+ ],
+ "w|mengarungi": [
+  {
+   "text": "Drama musikal itu bercerita tentang nelayan yang mengarungi samudra.",
+   "en": "The musical tells the story of a fisherman who sails across the ocean.",
+   "ko": "그 뮤지컬은 대양을 건너는 어부의 이야기예요.",
+   "blank": "mengarungi",
+   "src": "made"
+  },
+  {
+   "text": "Kakek Ayu dulu mengarungi sungai dengan perahu untuk membawa sayur ke pasar.",
+   "en": "Ayu's grandfather used to travel down the river by boat to bring vegetables to the market.",
+   "ko": "아유의 할아버지는 예전에 배로 강을 건너 시장에 채소를 날랐어요.",
+   "blank": "mengarungi",
    "src": "made"
   }
  ],
@@ -51477,6 +52133,22 @@
    "blank": "menghasilkan"
   }
  ],
+ "w|menghasut": [
+  {
+   "text": "Seorang preman mencoba menghasut pedagang agar menolak penataan pasar.",
+   "en": "A thug tried to stir up the traders to reject the market reorganization.",
+   "ko": "한 건달이 시장 정비를 거부하라고 상인들을 선동하려 했어요.",
+   "blank": "menghasut",
+   "src": "made"
+  },
+  {
+   "text": "Polisi menegur seorang penonton yang menghasut orang lain untuk menerobos lintasan.",
+   "en": "The police warned a spectator who was urging others to break onto the course.",
+   "ko": "경찰은 다른 사람들에게 코스로 뛰어들라고 부추긴 관중을 제지했어요.",
+   "blank": "menghasut",
+   "src": "made"
+  }
+ ],
  "w|menghela": [
   {
    "text": "Agus menghela napas panjang ketika melihat sampah plastik tersangkut di batu.",
@@ -52517,6 +53189,22 @@
    "src": "made"
   }
  ],
+ "w|mengoleskan": [
+  {
+   "text": "Penata rias mengoleskan bedak putih ke wajah Eko sebelum tampil.",
+   "en": "The makeup artist dabbed white powder on Eko's face before the show.",
+   "ko": "분장사가 공연 전에 에코의 얼굴에 하얀 분을 발랐어요.",
+   "blank": "mengoleskan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu mengoleskan mentega pada roti bakar untuk pembeli.",
+   "en": "Ayu spreads butter on toast for a customer.",
+   "ko": "아유는 손님에게 줄 토스트에 버터를 발라요.",
+   "blank": "mengoleskan",
+   "src": "made"
+  }
+ ],
  "w|mengolok-olok": [
   {
    "text": "Andi menegur pekerja yang mengolok-olok rekan barunya.",
@@ -53209,6 +53897,22 @@
    "src": "made"
   }
  ],
+ "w|mengupas": [
+  {
+   "text": "Dimas mengupas kelapa muda untuk pembeli yang kehausan.",
+   "en": "Dimas peeled a young coconut for a thirsty customer.",
+   "ko": "디마스는 목마른 손님을 위해 어린 코코넛 껍질을 깠어요.",
+   "blank": "mengupas",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengupas pisang sambil menunggu aba-aba start.",
+   "en": "Putri peeled a banana while waiting for the starting signal.",
+   "ko": "푸트리는 출발 신호를 기다리며 바나나 껍질을 깠어요.",
+   "blank": "mengupas",
+   "src": "made"
+  }
+ ],
  "w|menguping": [
   {
    "text": "Budi tertawa mengingat mereka pernah menguping rapat guru dari balik jendela.",
@@ -53424,6 +54128,22 @@
    "en": "The university sent Putri to present at a chemistry conference.",
    "ko": "대학은 화학 학회에서 발표하도록 푸트리를 보냈어요.",
    "blank": "mengutus",
+   "src": "made"
+  }
+ ],
+ "w|menidurkan": [
+  {
+   "text": "Eko berperan sebagai ayah yang menidurkan anak dengan dongeng.",
+   "en": "Eko plays a father who puts his child to sleep with a fairy tale.",
+   "ko": "에코는 동화를 들려주며 아이를 재우는 아버지 역을 맡았어요.",
+   "blank": "menidurkan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu menidurkan bayinya di ayunan kain di belakang lapak.",
+   "en": "Ayu rocks her baby to sleep in a cloth swing behind the stall.",
+   "ko": "아유는 가게 뒤 천 그네에서 아기를 재워요.",
+   "blank": "menidurkan",
    "src": "made"
   }
  ],
@@ -57629,6 +58349,22 @@
    "src": "made"
   }
  ],
+ "w|merekonstruksi": [
+  {
+   "text": "Eko merekonstruksi kostum abad lalu berdasarkan foto-foto lama.",
+   "en": "Eko reconstructed last century's costumes based on old photographs.",
+   "ko": "에코는 옛 사진을 바탕으로 지난 세기의 의상을 재현했어요.",
+   "blank": "merekonstruksi",
+   "src": "made"
+  },
+  {
+   "text": "Polisi merekonstruksi kejadian pencopetan di lorong pasar.",
+   "en": "The police reconstructed the pickpocketing incident in the market aisle.",
+   "ko": "경찰은 시장 통로에서 일어난 소매치기 사건을 재연했어요.",
+   "blank": "merekonstruksi",
+   "src": "made"
+  }
+ ],
  "w|merekrut": [
   {
    "text": "Pabrik sedang merekrut tiga puluh penjahit untuk musim ramai.",
@@ -57705,6 +58441,22 @@
    "en": "She likes to plan everything far in advance.",
    "ko": "그는 모든 걸 미리미리 계획하는 걸 좋아해.",
    "blank": "merencanakan"
+  }
+ ],
+ "w|merendah": [
+  {
+   "text": "Saat dipuji, Dimas selalu merendah dan bilang dagangannya biasa saja.",
+   "en": "When praised, Dimas always plays it down and says his goods are nothing special.",
+   "ko": "칭찬을 받으면 디마스는 늘 겸손하게 자기 물건은 별것 아니라고 해요.",
+   "blank": "merendah",
+   "src": "made"
+  },
+  {
+   "text": "Juara bertahan itu merendah saat diwawancarai sebelum lomba.",
+   "en": "The defending champion was modest when interviewed before the race.",
+   "ko": "지난 대회 우승자는 경기 전 인터뷰에서 겸손하게 말했어요.",
+   "blank": "merendah",
+   "src": "made"
   }
  ],
  "w|merendahkan": [
@@ -57784,6 +58536,22 @@
    "en": "Wati wants to renovate the roof before the next rainy season.",
    "ko": "와티는 다음 우기 전에 지붕을 고치고 싶어 해요.",
    "blank": "merenovasi",
+   "src": "made"
+  }
+ ],
+ "w|merenung": [
+  {
+   "text": "Saat pasar sepi, Dimas merenung tentang masa depan lapak kecil itu.",
+   "en": "When the market is quiet, Dimas reflects on the future of his little stall.",
+   "ko": "시장이 한산하면 디마스는 작은 가게의 앞날을 곰곰이 생각해요.",
+   "blank": "merenung",
+   "src": "made"
+  },
+  {
+   "text": "Setelah finis, Putri duduk merenung tentang latihan setahun penuh.",
+   "en": "After finishing, Putri sat reflecting on a whole year of training.",
+   "ko": "결승선을 통과한 뒤 푸트리는 앉아서 꼬박 일 년의 훈련을 돌아봤어요.",
+   "blank": "merenung",
    "src": "made"
   }
  ],
@@ -57912,6 +58680,22 @@
    "en": "Intan put on a bit of light makeup before the group photo at the finish line.",
    "ko": "인탄은 결승선에서 단체 사진을 찍기 전에 살짝 화장을 했어요.",
    "blank": "merias",
+   "src": "made"
+  }
+ ],
+ "w|merica": [
+  {
+   "text": "Penjual soto menaburkan merica di atas kuah pesanan Dimas.",
+   "en": "The soto seller sprinkled pepper over the broth Dimas ordered.",
+   "ko": "소토 장수가 디마스가 시킨 국물 위에 후추를 뿌렸어요.",
+   "blank": "merica",
+   "src": "made"
+  },
+  {
+   "text": "Sup ayam buatan ibu Putri diberi banyak merica.",
+   "en": "The chicken soup Putri's mother makes is seasoned with lots of pepper.",
+   "ko": "푸트리 어머니가 끓인 닭고기 수프에는 후추가 듬뿍 들어가요.",
+   "blank": "merica",
    "src": "made"
   }
  ],
@@ -58303,6 +59087,22 @@
    "en": "Luxurious does not always mean comfortable.",
    "ko": "고급스럽다고 늘 편한 건 아니야.",
    "blank": "Mewah"
+  }
+ ],
+ "w|mewajibkan": [
+  {
+   "text": "Pengelola pasar mewajibkan pedagang memakai kantong kertas.",
+   "en": "The market management requires traders to use paper bags.",
+   "ko": "시장 관리 측은 상인들에게 종이봉투를 쓰도록 의무화했어요.",
+   "blank": "mewajibkan",
+   "src": "made"
+  },
+  {
+   "text": "Panitia mewajibkan peserta membawa surat keterangan sehat.",
+   "en": "The organizers require participants to bring a health certificate.",
+   "ko": "주최 측은 참가자에게 건강 진단서를 꼭 가져오게 해요.",
+   "blank": "mewajibkan",
+   "src": "made"
   }
  ],
  "w|mewakili": [
@@ -58827,6 +59627,22 @@
    "en": "She received a mysterious letter last night.",
    "ko": "그는 어젯밤 수수께끼 같은 편지를 받았어.",
    "blank": "misterius"
+  }
+ ],
+ "w|mistik": [
+  {
+   "text": "Panggung dibuat gelap dan berkabut untuk menciptakan suasana mistik.",
+   "en": "The stage was made dark and foggy to create a mystical atmosphere.",
+   "ko": "신비로운 분위기를 내려고 무대를 어둡고 안개 끼게 꾸몄어요.",
+   "blank": "mistik",
+   "src": "made"
+  },
+  {
+   "text": "Penjual di ujung pasar menawarkan batu akik yang katanya punya kekuatan mistik.",
+   "en": "A seller at the end of the market offers agate stones said to have mystical powers.",
+   "ko": "시장 끝의 상인은 신비한 힘이 있다는 마노석을 팔아요.",
+   "blank": "mistik",
+   "src": "made"
   }
  ],
  "w|mistis": [
@@ -59971,6 +60787,22 @@
    "blank": "namun"
   }
  ],
+ "w|nanas": [
+  {
+   "text": "Dimas memotong nanas berbentuk spiral supaya menarik pembeli.",
+   "en": "Dimas cuts pineapples into spirals to attract buyers.",
+   "ko": "디마스는 손님 눈길을 끌려고 파인애플을 나선 모양으로 깎아요.",
+   "blank": "nanas",
+   "src": "made"
+  },
+  {
+   "text": "Relawan membagikan potongan nanas dingin kepada pelari yang kelelahan.",
+   "en": "Volunteers handed out cold pineapple pieces to exhausted runners.",
+   "ko": "자원봉사자들이 지친 주자들에게 차가운 파인애플 조각을 나눠 줬어요.",
+   "blank": "nanas",
+   "src": "made"
+  }
+ ],
  "w|nanti": [
   {
    "text": "Nanti saja, aku sibuk.",
@@ -60619,6 +61451,22 @@
    "src": "made"
   }
  ],
+ "w|nutrisi": [
+  {
+   "text": "Dimas meyakinkan pembeli bahwa daun kelor kaya nutrisi.",
+   "en": "Dimas assured the buyer that moringa leaves are rich in nutrients.",
+   "ko": "디마스는 모링가 잎에 영양이 풍부하다고 손님을 설득했어요.",
+   "blank": "nutrisi",
+   "src": "made"
+  },
+  {
+   "text": "Putri mencatat asupan nutrisi harian selama masa latihan.",
+   "en": "Putri records her daily nutrient intake during training.",
+   "ko": "푸트리는 훈련 기간 동안 매일 영양 섭취를 기록해요.",
+   "blank": "nutrisi",
+   "src": "made"
+  }
+ ],
  "w|nyali": [
   {
    "text": "Agus butuh nyali besar untuk menyampaikan kritik langsung kepada wali kota.",
@@ -61242,6 +62090,22 @@
    "en": "The new toothbrush the nurse gave Ayu was orange.",
    "ko": "간호사가 아유에게 준 새 칫솔은 주황색이었어요.",
    "blank": "oranye",
+   "src": "made"
+  }
+ ],
+ "w|orde": [
+  {
+   "text": "Pertunjukan itu menyindir orde yang terlalu lama berkuasa di sebuah negeri rekaan.",
+   "en": "The show satirizes a regime that has held power too long in a fictional country.",
+   "ko": "그 공연은 가상의 나라에서 너무 오래 집권한 체제를 풍자해요.",
+   "blank": "orde",
+   "src": "made"
+  },
+  {
+   "text": "Para pedagang tua masih ingat harga beras pada masa orde sebelumnya.",
+   "en": "The older traders still remember rice prices under the previous regime.",
+   "ko": "나이 든 상인들은 이전 정권 시절의 쌀값을 아직 기억해요.",
+   "blank": "orde",
    "src": "made"
   }
  ],
@@ -66921,6 +67785,22 @@
    "blank": "Pengadilan"
   }
  ],
+ "w|pengaduan": [
+  {
+   "text": "Pengelola teater menerima pengaduan soal pengeras suara yang terlalu keras.",
+   "en": "The theater management received a complaint about the speakers being too loud.",
+   "ko": "극장 측은 스피커 소리가 너무 크다는 민원을 받았어요.",
+   "blank": "pengaduan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu mengajukan pengaduan ke pengelola pasar soal atap los yang bocor.",
+   "en": "Ayu filed a complaint with the market management about the leaking roof.",
+   "ko": "아유는 지붕이 샌다고 시장 관리 측에 민원을 넣었어요.",
+   "blank": "pengaduan",
+   "src": "made"
+  }
+ ],
  "w|pengagum": [
   {
    "text": "Bayu adalah pengagum berat karya desainer senior di kantor itu.",
@@ -68621,6 +69501,22 @@
    "src": "made"
   }
  ],
+ "w|penjagal": [
+  {
+   "text": "Eko memerankan penjagal sapi yang jatuh cinta pada putri saudagar.",
+   "en": "Eko plays a cattle butcher who falls in love with a merchant's daughter.",
+   "ko": "에코는 상인의 딸과 사랑에 빠지는 소 도축업자 역을 해요.",
+   "blank": "penjagal",
+   "src": "made"
+  },
+  {
+   "text": "Ayu membeli daging kambing dari penjagal langganan.",
+   "en": "Ayu buys goat meat from her regular butcher.",
+   "ko": "아유는 단골 도축업자에게서 염소 고기를 사요.",
+   "blank": "penjagal",
+   "src": "made"
+  }
+ ],
  "w|penjahat": [
   {
    "text": "Penjahat itu kabur.",
@@ -69609,6 +70505,22 @@
    "src": "made"
   }
  ],
+ "w|penyidikan": [
+  {
+   "text": "Drama detektif itu mengikuti penyidikan kasus pencurian lukisan.",
+   "en": "The detective play follows the investigation into a painting theft.",
+   "ko": "그 탐정극은 그림 도난 사건의 수사 과정을 따라가요.",
+   "blank": "penyidikan",
+   "src": "made"
+  },
+  {
+   "text": "Polisi melakukan penyidikan atas peredaran beras oplosan di pasar.",
+   "en": "The police are investigating the circulation of adulterated rice at the market.",
+   "ko": "경찰은 시장에 섞음 쌀이 유통된 일을 수사하고 있어요.",
+   "blank": "penyidikan",
+   "src": "made"
+  }
+ ],
  "w|penyihir": [
   {
    "text": "Penyihir itu punya tongkat.",
@@ -69621,6 +70533,22 @@
    "en": "The children are afraid of the witch.",
    "ko": "아이들은 마녀를 두려워해.",
    "blank": "penyihir"
+  }
+ ],
+ "w|penyiksa": [
+  {
+   "text": "Aktor yang memerankan penyiksa dalam drama itu justru sangat ramah di luar panggung.",
+   "en": "The actor who plays the torturer in the play is actually very friendly offstage.",
+   "ko": "그 연극에서 고문하는 자 역을 맡은 배우는 무대 밖에서는 오히려 아주 상냥해요.",
+   "blank": "penyiksa",
+   "src": "made"
+  },
+  {
+   "text": "Petugas pasar akhirnya menangkap penyiksa kucing yang meresahkan pedagang.",
+   "en": "Market officers finally caught the cat abuser who had been troubling the traders.",
+   "ko": "시장 직원들이 상인들을 불안하게 하던 고양이 학대범을 마침내 붙잡았어요.",
+   "blank": "penyiksa",
+   "src": "made"
   }
  ],
  "w|penyiksaan": [
@@ -71691,6 +72619,22 @@
    "src": "made"
   }
  ],
+ "w|persekongkolan": [
+  {
+   "text": "Tokoh Eko berhasil membongkar persekongkolan para bangsawan.",
+   "en": "Eko's character manages to uncover the nobles' conspiracy.",
+   "ko": "에코가 맡은 인물은 귀족들의 음모를 밝혀내요.",
+   "blank": "persekongkolan",
+   "src": "made"
+  },
+  {
+   "text": "Pedagang curiga ada persekongkolan tengkulak untuk menekan harga cabai.",
+   "en": "The traders suspect a conspiracy among middlemen to push down chili prices.",
+   "ko": "상인들은 중간상들이 고춧값을 누르려고 담합했다고 의심해요.",
+   "blank": "persekongkolan",
+   "src": "made"
+  }
+ ],
  "w|persekutuan": [
   {
    "text": "Budi menjelaskan persekutuan kerajaan-kerajaan kuno dalam presentasinya.",
@@ -72308,6 +73252,22 @@
    "en": "The train passes a new housing complex on the edge of the city.",
    "ko": "열차가 도시 외곽의 새 주택 단지를 지나가요.",
    "blank": "perumahan",
+   "src": "made"
+  }
+ ],
+ "w|perundingan": [
+  {
+   "text": "Adegan perundingan damai itu membuat penonton menahan napas.",
+   "en": "The peace negotiation scene had the audience holding their breath.",
+   "ko": "평화 협상 장면에서 관객들은 숨을 죽였어요.",
+   "blank": "perundingan",
+   "src": "made"
+  },
+  {
+   "text": "Pedagang dan pengelola pasar menggelar perundingan sampai larut malam.",
+   "en": "The traders and the market management held negotiations until late at night.",
+   "ko": "상인들과 시장 관리 측은 밤늦게까지 협상을 벌였어요.",
+   "blank": "perundingan",
    "src": "made"
   }
  ],
@@ -73553,6 +74513,22 @@
    "src": "made"
   }
  ],
+ "w|polong": [
+  {
+   "text": "Dimas menimbang kacang polong segar untuk seorang ibu.",
+   "en": "Dimas weighed fresh peas for a woman.",
+   "ko": "디마스는 한 아주머니에게 줄 싱싱한 완두콩을 달았어요.",
+   "blank": "polong",
+   "src": "made"
+  },
+  {
+   "text": "Putri makan kacang polong kukus sebagai sumber protein.",
+   "en": "Putri eats steamed peas as a source of protein.",
+   "ko": "푸트리는 단백질을 얻으려고 찐 완두콩을 먹어요.",
+   "blank": "polong",
+   "src": "made"
+  }
+ ],
  "w|polos": [
   {
    "text": "Dimas memakai kaus putih polos di bawah seragam pabriknya.",
@@ -73722,6 +74698,22 @@
    "en": "Intan ordered a new bicycle wheel because the old wheel's axle was bent.",
    "ko": "인탄은 예전 바퀴 축이 휘어서 새 자전거 바퀴를 주문했어요.",
    "blank": "poros",
+   "src": "made"
+  }
+ ],
+ "w|porsi": [
+  {
+   "text": "Dimas memesan satu porsi nasi uduk di warung dekat pasar.",
+   "en": "Dimas ordered a portion of coconut rice at the stall near the market.",
+   "ko": "디마스는 시장 근처 식당에서 나시 우둑 일 인분을 시켰어요.",
+   "blank": "porsi",
+   "src": "made"
+  },
+  {
+   "text": "Malam sebelum lomba, Putri menghabiskan dua porsi pasta.",
+   "en": "The night before the race, Putri finished off two portions of pasta.",
+   "ko": "경기 전날 밤 푸트리는 파스타를 이 인분이나 먹었어요.",
+   "blank": "porsi",
    "src": "made"
   }
  ],
@@ -76163,6 +77155,22 @@
    "src": "made"
   }
  ],
+ "w|rempah": [
+  {
+   "text": "Aroma rempah dari kios bumbu tercium sampai ke lapak Dimas.",
+   "en": "The smell of spices from the seasoning kiosk reaches all the way to Dimas's stall.",
+   "ko": "양념 가게의 향신료 냄새가 디마스의 가게까지 풍겨 와요.",
+   "blank": "rempah",
+   "src": "made"
+  },
+  {
+   "text": "Ibu Putri meracik jamu dari rempah untuk memulihkan tenaga.",
+   "en": "Putri's mother blends herbal tonic from spices to restore energy.",
+   "ko": "푸트리의 어머니는 기운을 되찾게 향신료로 자무를 달여요.",
+   "blank": "rempah",
+   "src": "made"
+  }
+ ],
  "w|renang": [
   {
    "text": "Anak-anak belajar renang di kolam.",
@@ -77520,6 +78528,22 @@
    "en": "Intan wrote a poem about the mountain and the mist in her diary.",
    "ko": "인탄은 일기장에 산과 안개에 관한 시를 썼어요.",
    "blank": "sajak",
+   "src": "made"
+  }
+ ],
+ "w|saji": [
+  {
+   "text": "Pasar itu kini juga punya deretan kios makanan siap saji.",
+   "en": "The market now also has a row of fast-food kiosks.",
+   "ko": "그 시장에는 이제 즉석 음식 가판대도 줄지어 있어요.",
+   "blank": "saji",
+   "src": "made"
+  },
+  {
+   "text": "Putri menghindari makanan siap saji menjelang lomba.",
+   "en": "Putri avoids fast food in the run-up to the race.",
+   "ko": "푸트리는 경기를 앞두고 즉석 음식을 피해요.",
+   "blank": "saji",
    "src": "made"
   }
  ],
@@ -80247,6 +81271,22 @@
    "blank": "Selatan"
   }
  ],
+ "w|selayaknya": [
+  {
+   "text": "Eko berpendapat aktor muda selayaknya dibayar lebih adil.",
+   "en": "Eko believes young actors should rightly be paid more fairly.",
+   "ko": "에코는 젊은 배우들이 마땅히 더 공정하게 보수를 받아야 한다고 생각해요.",
+   "blank": "selayaknya",
+   "src": "made"
+  },
+  {
+   "text": "Pedagang selayaknya memakai timbangan yang sudah ditera.",
+   "en": "Traders ought to use scales that have been officially calibrated.",
+   "ko": "상인은 마땅히 검정받은 저울을 써야 해요.",
+   "blank": "selayaknya",
+   "src": "made"
+  }
+ ],
  "w|selebaran": [
   {
    "text": "Rudi menempelkan selebaran tentang penipuan lewat telepon di dekat loket pelayanan.",
@@ -80581,6 +81621,38 @@
    "en": "His spirit inspires us.",
    "ko": "그의 열정이 우리에게 힘이 돼.",
    "blank": "Semangat"
+  }
+ ],
+ "w|semangka": [
+  {
+   "text": "Dimas membelah semangka untuk menunjukkan daging buah yang merah.",
+   "en": "Dimas split a watermelon to show its red flesh.",
+   "ko": "디마스는 빨간 속살을 보여 주려고 수박을 갈랐어요.",
+   "blank": "semangka",
+   "src": "made"
+  },
+  {
+   "text": "Relawan memotong semangka untuk pelari di pos terakhir.",
+   "en": "Volunteers cut watermelon for the runners at the last station.",
+   "ko": "자원봉사자들이 마지막 지점에서 주자들을 위해 수박을 잘랐어요.",
+   "blank": "semangka",
+   "src": "made"
+  }
+ ],
+ "w|semangkuk": [
+  {
+   "text": "Sebelum membuka lapak, Dimas sarapan semangkuk bubur ayam.",
+   "en": "Before opening his stall, Dimas had a bowl of chicken porridge for breakfast.",
+   "ko": "디마스는 가게를 열기 전에 닭죽 한 그릇으로 아침을 먹었어요.",
+   "blank": "semangkuk",
+   "src": "made"
+  },
+  {
+   "text": "Setelah finis, Putri merayakan dengan semangkuk bakso hangat.",
+   "en": "After finishing, Putri celebrated with a bowl of warm meatball soup.",
+   "ko": "결승선을 통과한 뒤 푸트리는 따뜻한 박소 한 그릇으로 자축했어요.",
+   "blank": "semangkuk",
+   "src": "made"
   }
  ],
  "w|semasa": [
@@ -83276,6 +84348,22 @@
    "en": "A critic wrote a cynical review of the concert by Dewi's students.",
    "ko": "한 평론가가 데위 학생들의 연주회에 대해 냉소적인 평을 썼어요.",
    "blank": "sinis",
+   "src": "made"
+  }
+ ],
+ "w|sintetis": [
+  {
+   "text": "Dimas menjamin manisan buah di lapak tanpa pewarna sintetis.",
+   "en": "Dimas guarantees the candied fruit at his stall has no synthetic coloring.",
+   "ko": "디마스는 가게의 과일 절임에 합성 색소가 없다고 보장해요.",
+   "blank": "sintetis",
+   "src": "made"
+  },
+  {
+   "text": "Putri memakai kaus berbahan sintetis yang cepat kering.",
+   "en": "Putri wears a shirt made of quick-drying synthetic fabric.",
+   "ko": "푸트리는 빨리 마르는 합성 섬유 티셔츠를 입어요.",
+   "blank": "sintetis",
    "src": "made"
   }
  ],
@@ -86399,6 +87487,22 @@
    "blank": "Tegang"
   }
  ],
+ "w|tegangan": [
+  {
+   "text": "Lampu di pasar sering berkedip karena tegangan listrik tidak stabil.",
+   "en": "The lights in the market often flicker because the voltage is unstable.",
+   "ko": "전압이 불안정해서 시장 전등이 자주 깜빡여요.",
+   "blank": "tegangan",
+   "src": "made"
+  },
+  {
+   "text": "Panitia memeriksa tegangan listrik pengeras suara di garis start.",
+   "en": "The organizers checked the voltage for the loudspeakers at the start line.",
+   "ko": "주최 측은 출발선 스피커의 전압을 점검했어요.",
+   "blank": "tegangan",
+   "src": "made"
+  }
+ ],
  "w|tegar": [
   {
    "text": "Ibu Dimas menelepon dan berpesan agar Dimas tetap tegar kalau hari pertamanya berat.",
@@ -86773,6 +87877,22 @@
    "en": "That egg has already cracked.",
    "ko": "그 달걀이 이미 깨졌어.",
    "blank": "Telur"
+  }
+ ],
+ "w|telur dadar": [
+  {
+   "text": "Penjual nasi di pasar menambahkan telur dadar ke bungkusan Dimas.",
+   "en": "The rice seller at the market added an omelet to Dimas's takeaway pack.",
+   "ko": "시장의 밥집 주인이 디마스의 포장에 계란말이를 얹어 줬어요.",
+   "blank": "telur dadar",
+   "src": "made"
+  },
+  {
+   "text": "Ibu Putri menyiapkan telur dadar dan nasi untuk sarapan hari lomba.",
+   "en": "Putri's mother prepared an omelet and rice for race-day breakfast.",
+   "ko": "푸트리의 어머니는 경기 날 아침으로 계란말이와 밥을 차려 줬어요.",
+   "blank": "telur dadar",
+   "src": "made"
   }
  ],
  "w|teman": [
@@ -87436,6 +88556,22 @@
    "en": "Ayu arranges the paint tubes on her desk very neatly.",
    "ko": "아유는 책상 위 물감 튜브를 아주 가지런히 정리해요.",
    "blank": "teratur",
+   "src": "made"
+  }
+ ],
+ "w|terbagi": [
+  {
+   "text": "Pertunjukan itu terbagi menjadi tiga babak.",
+   "en": "The performance is divided into three acts.",
+   "ko": "그 공연은 삼 막으로 나뉘어 있어요.",
+   "blank": "terbagi",
+   "src": "made"
+  },
+  {
+   "text": "Pasar itu terbagi menjadi los basah dan los kering.",
+   "en": "The market is divided into a wet section and a dry section.",
+   "ko": "그 시장은 젖은 구역과 마른 구역으로 나뉘어 있어요.",
+   "blank": "terbagi",
    "src": "made"
   }
  ],
@@ -88237,6 +89373,22 @@
    "src": "made"
   }
  ],
+ "w|terfokus": [
+  {
+   "text": "Pikiran Dimas terfokus pada harga cabai yang terus naik.",
+   "en": "Dimas's mind is focused on the price of chilies, which keeps going up.",
+   "ko": "디마스의 머릿속은 계속 오르는 고춧값 생각뿐이에요.",
+   "blank": "terfokus",
+   "src": "made"
+  },
+  {
+   "text": "Mata Putri terfokus pada garis finis di kejauhan.",
+   "en": "Putri's eyes were fixed on the finish line in the distance.",
+   "ko": "푸트리의 눈은 멀리 보이는 결승선에 고정돼 있었어요.",
+   "blank": "terfokus",
+   "src": "made"
+  }
+ ],
  "w|terganggu": [
   {
    "text": "Dia terganggu oleh suara bising tetangga.",
@@ -88695,6 +89847,22 @@
    "blank": "Terjaga"
   }
  ],
+ "w|terjangkit": [
+  {
+   "text": "Ayam yang terjangkit penyakit dilarang dijual di pasar.",
+   "en": "Chickens infected with disease are banned from being sold at the market.",
+   "ko": "병에 걸린 닭은 시장에서 팔 수 없어요.",
+   "blank": "terjangkit",
+   "src": "made"
+  },
+  {
+   "text": "Putri hampir batal ikut lomba karena terjangkit flu seminggu sebelumnya.",
+   "en": "Putri almost pulled out of the race because she caught the flu a week before.",
+   "ko": "푸트리는 일주일 전에 독감에 걸려서 하마터면 경기에 못 나갈 뻔했어요.",
+   "blank": "terjangkit",
+   "src": "made"
+  }
+ ],
  "w|terjatuh": [
   {
    "text": "Dia terjatuh dari sepeda di jalan licin.",
@@ -88768,6 +89936,22 @@
    "en": "Siti's scarf got caught in her bag's zipper during the security check.",
    "ko": "보안 검색 때 시티의 스카프가 가방 지퍼에 끼었어요.",
    "blank": "terjepit",
+   "src": "made"
+  }
+ ],
+ "w|terjerat": [
+  {
+   "text": "Dimas pernah terjerat utang rentenir saat modal dagangan habis.",
+   "en": "Dimas once got trapped in debt to a loan shark when his trading capital ran out.",
+   "ko": "디마스는 장사 밑천이 떨어졌을 때 사채 빚에 묶인 적이 있어요.",
+   "blank": "terjerat",
+   "src": "made"
+  },
+  {
+   "text": "Kaki Putri sempat terjerat tali pembatas di dekat pos minum.",
+   "en": "Putri's foot got caught in the barrier rope near the water station.",
+   "ko": "푸트리의 발이 급수대 근처에서 경계 줄에 걸렸어요.",
+   "blank": "terjerat",
    "src": "made"
   }
  ],
@@ -89269,6 +90453,22 @@
    "src": "made"
   }
  ],
+ "w|terlewatkan": [
+  {
+   "text": "Dimas datang subuh agar pembeli pagi tidak terlewatkan.",
+   "en": "Dimas arrives at dawn so he doesn't miss the early buyers.",
+   "ko": "디마스는 아침 손님을 놓치지 않으려고 새벽에 나와요.",
+   "blank": "terlewatkan",
+   "src": "made"
+  },
+  {
+   "text": "Putri tidak mau momen di garis finis terlewatkan tanpa foto.",
+   "en": "Putri didn't want the moment at the finish line to pass without a photo.",
+   "ko": "푸트리는 결승선의 순간을 사진 없이 놓치고 싶지 않았어요.",
+   "blank": "terlewatkan",
+   "src": "made"
+  }
+ ],
  "w|terlibat": [
   {
    "text": "Dia terlibat dalam proyek itu.",
@@ -89619,6 +90819,22 @@
    "src": "made"
   }
  ],
+ "w|terpanjang": [
+  {
+   "text": "Monolog Eko di babak kedua adalah adegan terpanjang dalam drama itu.",
+   "en": "Eko's monologue in the second act is the longest scene in the play.",
+   "ko": "이 막에 나오는 에코의 독백은 그 연극에서 가장 긴 장면이에요.",
+   "blank": "terpanjang",
+   "src": "made"
+  },
+  {
+   "text": "Antrean terpanjang di pasar selalu ada di depan penjual serabi.",
+   "en": "The longest queue in the market is always in front of the serabi pancake seller.",
+   "ko": "시장에서 가장 긴 줄은 늘 스라비 장수 앞에 있어요.",
+   "blank": "terpanjang",
+   "src": "made"
+  }
+ ],
  "w|terpasang": [
   {
    "text": "Lampu hias sudah terpasang di sepanjang jalan menuju rumah Fajar.",
@@ -89774,6 +90990,22 @@
    "en": "Siti was mesmerized by the sunrise over the bridge.",
    "ko": "시티는 다리 위로 떠오르는 해에 넋을 잃었어요.",
    "blank": "terpesona",
+   "src": "made"
+  }
+ ],
+ "w|terpikat": [
+  {
+   "text": "Penonton terpikat oleh suara Eko di adegan pembuka.",
+   "en": "The audience was captivated by Eko's voice in the opening scene.",
+   "ko": "관객들은 첫 장면에서 에코의 목소리에 매료됐어요.",
+   "blank": "terpikat",
+   "src": "made"
+  },
+  {
+   "text": "Ayu terpikat pada kain batik di kios sebelah.",
+   "en": "Ayu was taken with the batik cloth at the next kiosk.",
+   "ko": "아유는 옆 가게의 바틱 천에 마음을 빼앗겼어요.",
+   "blank": "terpikat",
    "src": "made"
   }
  ],
@@ -90227,6 +91459,22 @@
    "src": "made"
   }
  ],
+ "w|terseret": [
+  {
+   "text": "Beberapa kios di tepi sungai terseret banjir semalam.",
+   "en": "Several kiosks on the riverbank were swept away by the flood last night.",
+   "ko": "강가의 가판대 몇 개가 어젯밤 홍수에 떠내려갔어요.",
+   "blank": "terseret",
+   "src": "made"
+  },
+  {
+   "text": "Di garis start yang padat, Putri sempat terseret arus pelari.",
+   "en": "At the crowded start line, Putri got swept along by the stream of runners.",
+   "ko": "붐비는 출발선에서 푸트리는 주자들 물결에 휩쓸렸어요.",
+   "blank": "terseret",
+   "src": "made"
+  }
+ ],
  "w|tersesat": [
   {
    "text": "Kami tersesat di hutan yang gelap.",
@@ -90362,6 +91610,22 @@
    "en": "Memories of their school days are still deeply rooted in Lestari's heart.",
    "ko": "학창 시절의 기억은 아직도 레스타리의 마음에 깊이 박혀 있어요.",
    "blank": "tertanam",
+   "src": "made"
+  }
+ ],
+ "w|tertandingi": [
+  {
+   "text": "Harga buah di lapak Dimas sulit tertandingi.",
+   "en": "The fruit prices at Dimas's stall are hard to beat.",
+   "ko": "디마스네 가게 과일값은 따라올 곳이 없어요.",
+   "blank": "tertandingi",
+   "src": "made"
+  },
+  {
+   "text": "Rekor lari Putri belum tertandingi di klub itu.",
+   "en": "Putri's running record is still unbeaten at that club.",
+   "ko": "푸트리의 기록은 그 클럽에서 아직 아무도 깨지 못했어요.",
+   "blank": "tertandingi",
    "src": "made"
   }
  ],
@@ -91822,6 +93086,22 @@
    "en": "Intan's salary comes in by transfer on the twenty-fifth of every month.",
    "ko": "인탄의 월급은 매달 이십오일에 이체로 들어와요.",
    "blank": "transfer",
+   "src": "made"
+  }
+ ],
+ "w|transformasi": [
+  {
+   "text": "Pasar tradisional itu mengalami transformasi besar setelah direnovasi.",
+   "en": "The traditional market went through a big transformation after it was renovated.",
+   "ko": "그 재래시장은 리모델링 뒤 크게 탈바꿈했어요.",
+   "blank": "transformasi",
+   "src": "made"
+  },
+  {
+   "text": "Teman-teman kagum melihat transformasi Putri dari perokok menjadi pelari maraton.",
+   "en": "Friends are amazed at Putri's transformation from smoker to marathon runner.",
+   "ko": "친구들은 흡연자에서 마라톤 선수가 된 푸트리의 변신에 놀라요.",
+   "blank": "transformasi",
    "src": "made"
   }
  ],
