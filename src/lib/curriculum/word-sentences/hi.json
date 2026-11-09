@@ -13,6 +13,22 @@
    "blank": "अंक"
   }
  ],
+ "w|अकड़": [
+  {
+   "text": "विकास ने माना कि जवानी की अकड़ में उसने कई दोस्तों को खो दिया।",
+   "en": "Vikas admitted that in the arrogance of youth he had lost many friends.",
+   "ko": "비카스는 젊은 날의 오만함 때문에 친구를 여럿 잃었다고 인정했어요.",
+   "blank": "अकड़",
+   "src": "made"
+  },
+  {
+   "text": "ढाबे वाले की अकड़ देखकर शालिनी ने वहाँ खाना न खाने का फ़ैसला किया।",
+   "en": "Seeing the dhaba owner's arrogance, Shalini decided not to eat there.",
+   "ko": "길가 식당 주인의 거만한 태도를 보고 샬리니는 거기서 먹지 않기로 했어요.",
+   "blank": "अकड़",
+   "src": "made"
+  }
+ ],
  "w|अंकल": [
   {
    "text": "अंकल ने जन्मदिन पर तोहफ़ा दिया।",
@@ -2065,6 +2081,22 @@
    "src": "made"
   }
  ],
+ "w|अनबन": [
+  {
+   "text": "कॉलेज के दिनों की एक छोटी-सी अनबन के लिए विकास ने अब जाकर माफ़ी माँगी।",
+   "en": "Only now did Vikas apologise for a small falling-out from their college days.",
+   "ko": "비카스는 대학 시절의 작은 다툼을 이제야 사과했어요.",
+   "blank": "अनबन",
+   "src": "made"
+  },
+  {
+   "text": "रास्ता चुनने को लेकर शालिनी और उसके भाई में अनबन हो गई।",
+   "en": "Shalini and her brother fell out over which route to take.",
+   "ko": "길을 고르다가 샬리니와 남동생 사이가 틀어졌어요.",
+   "blank": "अनबन",
+   "src": "made"
+  }
+ ],
  "w|अनभिज्ञ": [
   {
    "text": "नई प्रिंसिपल स्कूल के पुराने नियमों से अनभिज्ञ थीं, इसलिए राहुल ने उन्हें सब बताया।",
@@ -2949,6 +2981,22 @@
    "en": "Taking the right path is always beneficial.",
    "ko": "올바른 길을 택하는 건 언제나 이득이야.",
    "blank": "अपनाना"
+  }
+ ],
+ "w|अपनापन": [
+  {
+   "text": "विकास को दोस्त के गाँव में जो अपनापन मिला, वह शहर में कभी नहीं मिला।",
+   "en": "The sense of belonging Vikas found in his friend's village he never found in the city.",
+   "ko": "비카스가 친구네 마을에서 느낀 정겨움은 도시에서는 한 번도 느껴 보지 못한 거였어요.",
+   "blank": "अपनापन",
+   "src": "made"
+  },
+  {
+   "text": "होमस्टे की मालकिन के अपनापन भरे व्यवहार ने शालिनी का दिल जीत लिया।",
+   "en": "The homestay owner's warm, homely manner won Shalini's heart.",
+   "ko": "민박집 주인의 정겨운 대접에 샬리니는 마음을 빼앗겼어요.",
+   "blank": "अपनापन",
+   "src": "made"
   }
  ],
  "w|अपने आप": [
@@ -5727,6 +5775,22 @@
    "src": "made"
   }
  ],
+ "w|आँच आना": [
+  {
+   "text": "विकास ने लिखा कि दोस्त की इज़्ज़त पर आँच आए, ऐसा वह कभी नहीं होने देगा।",
+   "en": "Vikas wrote that he would never let any harm come to his friend's good name.",
+   "ko": "비카스는 친구의 명예에 흠이 가는 일은 절대 없게 하겠다고 썼어요.",
+   "blank": "आँच आए",
+   "src": "made"
+  },
+  {
+   "text": "तेज़ मोड़ पर शालिनी ने गाड़ी धीमी की, ताकि बच्चों पर कोई आँच आने का ख़तरा न रहे।",
+   "en": "Shalini slowed down at the sharp bend so there would be no risk of harm to the children.",
+   "ko": "급커브에서 샬리니는 아이들이 다칠 위험이 없도록 속도를 줄였어요.",
+   "blank": "आँच आने",
+   "src": "made"
+  }
+ ],
  "w|आचरण": [
   {
    "text": "अख़बार ने एक अफ़सर के अजीब आचरण पर लंबी रिपोर्ट छापी।",
@@ -6157,6 +6221,22 @@
    "src": "made"
   }
  ],
+ "w|आत्मबल": [
+  {
+   "text": "विकास ने लिखा कि बीमारी के बाद दोस्त का आत्मबल देखकर उसे भी हिम्मत मिली।",
+   "en": "Vikas wrote that seeing his friend's inner strength after the illness gave him courage too.",
+   "ko": "비카스는 병을 이겨 낸 친구의 정신력을 보고 자기도 용기를 얻었다고 썼어요.",
+   "blank": "आत्मबल",
+   "src": "made"
+  },
+  {
+   "text": "सुनसान रास्ते पर अकेले गाड़ी चलाने के लिए शालिनी ने अपना आत्मबल जुटाया।",
+   "en": "Shalini summoned her inner strength to drive alone on the deserted road.",
+   "ko": "샬리니는 인적 없는 길을 혼자 운전하려고 마음을 단단히 먹었어요.",
+   "blank": "आत्मबल",
+   "src": "made"
+  }
+ ],
  "w|आत्मरक्षा": [
   {
    "text": "रवि ने दलील दी कि उसके मुवक्किल ने आत्मरक्षा में धक्का दिया था।",
@@ -6280,6 +6360,22 @@
    "en": "All the kitchen staff have a close, warm bond with Priya.",
    "ko": "주방 직원들은 모두 프리야와 정답게 지내요.",
    "blank": "आत्मीय",
+   "src": "made"
+  }
+ ],
+ "w|आत्मीयता": [
+  {
+   "text": "विकास के पुराने दोस्त की चिट्ठियों में आज भी वही आत्मीयता है।",
+   "en": "The letters from Vikas's old friend still carry the same warmth.",
+   "ko": "비카스의 옛 친구가 보내는 편지에는 지금도 그때의 다정함이 그대로 있어요.",
+   "blank": "आत्मीयता",
+   "src": "made"
+  },
+  {
+   "text": "रास्ते के एक गाँव में लोगों ने शालिनी को ऐसी आत्मीयता से चाय पिलाई कि वह भावुक हो गई।",
+   "en": "In a village along the way people served Shalini tea with such warmth that she was moved.",
+   "ko": "길가 마을 사람들이 너무 다정하게 차를 대접해서 샬리니는 뭉클했어요.",
+   "blank": "आत्मीयता",
    "src": "made"
   }
  ],
@@ -11783,6 +11879,22 @@
    "src": "made"
   }
  ],
+ "w|एकाकी": [
+  {
+   "text": "रिटायर होने के बाद विकास का जीवन थोड़ा एकाकी हो गया है, यह उसने ख़त में लिखा।",
+   "en": "Vikas wrote in his letter that life has become a little lonely since he retired.",
+   "ko": "비카스는 은퇴하고 나서 삶이 좀 외로워졌다고 편지에 썼어요.",
+   "blank": "एकाकी",
+   "src": "made"
+  },
+  {
+   "text": "रेगिस्तान के बीच एक एकाकी पेड़ के नीचे शालिनी ने गाड़ी रोकी।",
+   "en": "In the middle of the desert Shalini stopped the car under a lone tree.",
+   "ko": "샬리니는 사막 한가운데 외로이 선 나무 아래 차를 세웠어요.",
+   "blank": "एकाकी",
+   "src": "made"
+  }
+ ],
  "w|एकांत": [
   {
    "text": "भीड़ भरे दिन के बाद अमित को छत पर कुछ पल का एकांत अच्छा लगा।",
@@ -16483,6 +16595,22 @@
    "src": "made"
   }
  ],
+ "w|कुंठा": [
+  {
+   "text": "विकास ने ख़त में अपनी कुंठा ज़ाहिर की कि दफ़्तर में उसकी मेहनत की कोई क़द्र नहीं।",
+   "en": "In the letter Vikas expressed his frustration that his hard work goes unappreciated at the office.",
+   "ko": "비카스는 회사에서 자기 노력을 아무도 알아주지 않는다는 답답함을 편지에 털어놓았어요.",
+   "blank": "कुंठा",
+   "src": "made"
+  },
+  {
+   "text": "घंटों के जाम में फँसकर शालिनी की कुंठा बढ़ती गई।",
+   "en": "Stuck in a traffic jam for hours, Shalini's frustration kept growing.",
+   "ko": "몇 시간째 정체에 갇히자 샬리니의 답답함은 점점 커졌어요.",
+   "blank": "कुंठा",
+   "src": "made"
+  }
+ ],
  "w|कुंठित": [
   {
    "text": "सुनील ने माना कि बरसों तक वह अपनी नाकामियों से कुंठित रहा।",
@@ -18533,6 +18661,22 @@
    "src": "made"
   }
  ],
+ "w|क्षुब्ध": [
+  {
+   "text": "विकास दोस्त की लंबी चुप्पी से क्षुब्ध था, फिर भी उसने एक और चिट्ठी भेजी।",
+   "en": "Vikas was upset by his friend's long silence, yet he sent another letter.",
+   "ko": "비카스는 친구가 오래 답이 없어서 속상했지만 그래도 편지를 한 통 더 보냈어요.",
+   "blank": "क्षुब्ध",
+   "src": "made"
+  },
+  {
+   "text": "टोल पर लंबी लाइन से शालिनी क्षुब्ध थी, पर उसने कुछ नहीं कहा।",
+   "en": "Shalini was annoyed by the long queue at the toll, but she said nothing.",
+   "ko": "톨게이트 줄이 길어서 샬리니는 언짢았지만 아무 말도 하지 않았어요.",
+   "blank": "क्षुब्ध",
+   "src": "made"
+  }
+ ],
  "w|क्षेत्र": [
   {
    "text": "यह क्षेत्र बाढ़ से घिर गया।",
@@ -20506,6 +20650,22 @@
    "en": "The coach said daily stretching is needed to improve ankle mobility.",
    "ko": "코치는 발목 가동성을 높이려면 매일 스트레칭을 해야 한다고 했어요.",
    "blank": "गतिशीलता",
+   "src": "made"
+  }
+ ],
+ "w|गदगद": [
+  {
+   "text": "दोस्त का लंबा जवाब पढ़कर विकास का मन गदगद हो गया।",
+   "en": "Reading his friend's long reply, Vikas was overwhelmed with joy.",
+   "ko": "친구의 긴 답장을 읽고 비카스는 감격했어요.",
+   "blank": "गदगद",
+   "src": "made"
+  },
+  {
+   "text": "रास्ते में पुरानी सहेली से अचानक मुलाक़ात होने पर शालिनी गदगद हो गई।",
+   "en": "Shalini was overjoyed to run into an old friend on the way.",
+   "ko": "가는 길에 옛 친구를 우연히 만나 샬리니는 감격했어요.",
+   "blank": "गदगद",
    "src": "made"
   }
  ],
@@ -24871,6 +25031,22 @@
    "src": "made"
   }
  ],
+ "w|चिढ़": [
+  {
+   "text": "विकास ने मज़ाक़ में लिखा कि दोस्त के देर से जवाब देने पर अब उसे चिढ़ नहीं होती।",
+   "en": "Vikas joked in his letter that his friend's late replies no longer annoy him.",
+   "ko": "비카스는 친구가 답장을 늦게 해도 이제 짜증 나지 않는다고 농담처럼 썼어요.",
+   "blank": "चिढ़",
+   "src": "made"
+  },
+  {
+   "text": "बार-बार हॉर्न बजाने वालों से शालिनी को बड़ी चिढ़ होती है।",
+   "en": "Shalini gets really irritated by people who keep honking.",
+   "ko": "샬리니는 경적을 자꾸 울리는 사람들에게 아주 짜증이 나요.",
+   "blank": "चिढ़",
+   "src": "made"
+  }
+ ],
  "w|चिढ़ना": [
   {
    "text": "ऊपर वाले फ़्लैट से रोज़ आने वाले शोर से अजय अब चिढ़ने लगा है।",
@@ -25070,6 +25246,22 @@
    "en": "Seema glued the back cover on again with a special adhesive.",
    "ko": "시마는 뒷면 덮개를 특수 접착제로 다시 붙였어요.",
    "blank": "चिपकाया",
+   "src": "made"
+  }
+ ],
+ "w|चिपचिपा": [
+  {
+   "text": "विकास ने लिखा कि बरसात में उसके शहर की हवा बहुत चिपचिपी हो जाती है।",
+   "en": "Vikas wrote that in the monsoon the air in his city becomes very sticky.",
+   "ko": "비카스는 장마철이면 자기 도시 공기가 아주 끈적끈적해진다고 썼어요.",
+   "blank": "चिपचिपी",
+   "src": "made"
+  },
+  {
+   "text": "पिघली टॉफ़ी से बच्चों के हाथ चिपचिपे हो गए, और शालिनी को गाड़ी रोकनी पड़ी।",
+   "en": "The children's hands got sticky from melted toffee, and Shalini had to stop the car.",
+   "ko": "녹은 사탕 때문에 아이들 손이 끈적끈적해져서 샬리니는 차를 세워야 했어요.",
+   "blank": "चिपचिपे",
    "src": "made"
   }
  ],
@@ -25960,6 +26152,22 @@
    "en": "In the furniture section everyone liked the teak door frame.",
    "ko": "가구 코너에서 티크 나무 문틀이 다들 마음에 들어 했어요.",
    "blank": "चौखट",
+   "src": "made"
+  }
+ ],
+ "w|चौगुना": [
+  {
+   "text": "विकास ने लिखा कि उसके मोहल्ले में ज़मीन के दाम चौगुने हो गए हैं।",
+   "en": "Vikas wrote that land prices in his neighbourhood have quadrupled.",
+   "ko": "비카스는 자기 동네 땅값이 네 배로 뛰었다고 썼어요.",
+   "blank": "चौगुने",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ की चोटी पर पानी की बोतल का दाम लगभग चौगुना था।",
+   "en": "At the top of the mountain a bottle of water cost nearly four times as much.",
+   "ko": "산꼭대기에서는 물 한 병 값이 거의 네 배였어요.",
+   "blank": "चौगुना",
    "src": "made"
   }
  ],
@@ -32489,6 +32697,22 @@
    "blank": "ढकना"
   }
  ],
+ "w|ढँकना": [
+  {
+   "text": "विकास ने लिखा कि सर्दियों में वह पौधों को रात में पुराने कपड़े से ढँक देता है।",
+   "en": "Vikas wrote that in winter he covers his plants with old cloth at night.",
+   "ko": "비카스는 겨울밤이면 화초를 헌 천으로 덮어 준다고 썼어요.",
+   "blank": "ढँक",
+   "src": "made"
+  },
+  {
+   "text": "धूल से बचने के लिए शालिनी ने चेहरा दुपट्टे से ढँक लिया।",
+   "en": "To keep the dust out, Shalini covered her face with her scarf.",
+   "ko": "샬리니는 먼지를 막으려고 스카프로 얼굴을 가렸어요.",
+   "blank": "ढँक",
+   "src": "made"
+  }
+ ],
  "w|ढक्कन": [
   {
    "text": "करण ने पानी की टंकी का ढक्कन खोला तो अंदर काई जमी मिली।",
@@ -37055,6 +37279,22 @@
    "blank": "दिखी"
   }
  ],
+ "w|दिखलाना": [
+  {
+   "text": "विकास ने ख़त के साथ तस्वीरें भेजीं ताकि दोस्त को अपना नया घर दिखला सके।",
+   "en": "Vikas sent photos with the letter so he could show his friend his new house.",
+   "ko": "비카스는 새집을 보여 주려고 편지에 사진을 함께 넣었어요.",
+   "blank": "दिखला",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बच्चों को नक़्शे पर अगला पड़ाव दिखलाया।",
+   "en": "Shalini showed the children the next stop on the map.",
+   "ko": "샬리니는 아이들에게 지도에서 다음 쉴 곳을 보여 줬어요.",
+   "blank": "दिखलाया",
+   "src": "made"
+  }
+ ],
  "w|दिखाना": [
   {
    "text": "उसने मुझे रास्ता दिखाया।",
@@ -37282,6 +37522,22 @@
    "en": "Meena is mainly interested in environment-related news.",
    "ko": "미나는 주로 환경 관련 기사에 관심이 있어요.",
    "blank": "दिलचस्पी",
+   "src": "made"
+  }
+ ],
+ "w|दिलदार": [
+  {
+   "text": "विकास ने अपने दिलदार दोस्त का शुक्रिया अदा किया, जिसने बुरे वक़्त में उधार दिया था।",
+   "en": "Vikas thanked his big-hearted friend, who had lent him money in bad times.",
+   "ko": "비카스는 어려울 때 돈을 빌려준 통 큰 친구에게 고마움을 전했어요.",
+   "blank": "दिलदार",
+   "src": "made"
+  },
+  {
+   "text": "ढाबे के दिलदार मालिक ने शालिनी से पैसे लेने से मना कर दिया।",
+   "en": "The generous owner of the dhaba refused to take money from Shalini.",
+   "ko": "통 큰 식당 주인은 샬리니에게 돈을 받지 않겠다고 했어요.",
+   "blank": "दिलदार",
    "src": "made"
   }
  ],
@@ -37872,6 +38128,22 @@
    "en": "Some rare birds can be spotted in the hotel garden early in the morning.",
    "ko": "이른 아침이면 호텔 정원에서 보기 드문 새들이 눈에 띄어요.",
    "blank": "दुर्लभ",
+   "src": "made"
+  }
+ ],
+ "w|दुलार": [
+  {
+   "text": "विकास को आज भी दोस्त की माँ का दुलार याद आता है।",
+   "en": "Vikas still remembers the affection of his friend's mother.",
+   "ko": "비카스는 지금도 친구 어머니가 베풀어 주신 사랑을 떠올려요.",
+   "blank": "दुलार",
+   "src": "made"
+  },
+  {
+   "text": "सड़क किनारे एक बूढ़ी अम्मा ने शालिनी के बेटे को इतने दुलार से खाना खिलाया कि वह सब खा गया।",
+   "en": "An old lady by the roadside fed Shalini's son so lovingly that he ate it all.",
+   "ko": "길가의 할머니가 샬리니의 아들에게 너무 다정하게 밥을 먹여서 아이가 다 먹었어요.",
+   "blank": "दुलार",
    "src": "made"
   }
  ],
@@ -42959,6 +43231,22 @@
    "en": "Arrive at the fixed time.",
    "ko": "정해진 시간에 도착해.",
    "blank": "निश्चित"
+  }
+ ],
+ "w|निश्चिंत": [
+  {
+   "text": "विकास ने दोस्त को भरोसा दिलाया कि वह बेटे की पढ़ाई को लेकर निश्चिंत रहे।",
+   "en": "Vikas assured his friend that he need not worry about his son's studies.",
+   "ko": "비카스는 친구에게 아들 공부는 걱정 말라고 안심시켰어요.",
+   "blank": "निश्चिंत",
+   "src": "made"
+  },
+  {
+   "text": "टंकी फुल करवाकर शालिनी निश्चिंत होकर आगे बढ़ी।",
+   "en": "With a full tank, Shalini drove on without a worry.",
+   "ko": "기름을 가득 넣고 나서 샬리니는 마음 편히 길을 떠났어요.",
+   "blank": "निश्चिंत",
+   "src": "made"
   }
  ],
  "w|निश्चित रूप से": [
@@ -54129,6 +54417,22 @@
    "src": "made"
   }
  ],
+ "w|बदबूदार": [
+  {
+   "text": "विकास ने हँसकर याद किया कि हॉस्टल का बदबूदार कमरा भी उन्हें तब महल लगता था।",
+   "en": "Vikas laughingly recalled that back then even their smelly hostel room had seemed like a palace.",
+   "ko": "비카스는 그땐 냄새나는 기숙사 방도 궁전 같았다며 웃었어요.",
+   "blank": "बदबूदार",
+   "src": "made"
+  },
+  {
+   "text": "पेट्रोल पंप का बदबूदार शौचालय देखकर शालिनी आगे बढ़ गई।",
+   "en": "Seeing the smelly toilet at the petrol pump, Shalini drove on.",
+   "ko": "주유소 화장실에서 악취가 나서 샬리니는 그냥 지나갔어요.",
+   "blank": "बदबूदार",
+   "src": "made"
+  }
+ ],
  "w|बदमाश": [
   {
    "text": "अजय को बदमाश लड़के का किरदार निभाने में बहुत मज़ा आया।",
@@ -56855,6 +57159,22 @@
    "src": "made"
   }
  ],
+ "w|बुलवाना": [
+  {
+   "text": "विकास ने लिखा कि पोती के जन्मदिन पर वह दोस्त को ज़रूर बुलवाएगा।",
+   "en": "Vikas wrote that he would definitely have his friend invited for his granddaughter's birthday.",
+   "ko": "비카스는 손녀 생일에 친구를 꼭 부르겠다고 썼어요.",
+   "blank": "बुलवाएगा",
+   "src": "made"
+  },
+  {
+   "text": "गाड़ी पंक्चर हुई तो शालिनी ने पास के गाँव से मिस्त्री बुलवाया।",
+   "en": "When the tyre went flat, Shalini had a mechanic called from the nearby village.",
+   "ko": "타이어가 펑크 나자 샬리니는 근처 마을에서 정비공을 불러오게 했어요.",
+   "blank": "बुलवाया",
+   "src": "made"
+  }
+ ],
  "w|बुलाना": [
   {
    "text": "माँ ने मुझे अंदर बुलाया।",
@@ -57087,6 +57407,22 @@
    "en": "Daughter made tea for her mother.",
    "ko": "딸이 엄마한테 차를 끓여 줬어.",
    "blank": "बेटी"
+  }
+ ],
+ "w|बेतुका": [
+  {
+   "text": "विकास ने दोस्त के बेतुके सवालों का जवाब हँसते हुए लिखा।",
+   "en": "Vikas laughed as he wrote answers to his friend's absurd questions.",
+   "ko": "비카스는 친구의 엉뚱한 질문에 웃으면서 답장을 썼어요.",
+   "blank": "बेतुके",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के बेटे ने रास्ते भर बेतुके चुटकुले सुनाकर सबको हँसाया।",
+   "en": "Shalini's son made everyone laugh all the way with silly jokes.",
+   "ko": "샬리니의 아들은 가는 내내 엉뚱한 농담으로 모두를 웃겼어요.",
+   "blank": "बेतुके",
+   "src": "made"
   }
  ],
  "w|बेदख़ल": [
@@ -58415,6 +58751,22 @@
    "src": "made"
   }
  ],
+ "w|भद्दा": [
+  {
+   "text": "विकास ने ख़त के आख़िर में अपनी भद्दी लिखावट के लिए माफ़ी माँगी।",
+   "en": "At the end of the letter Vikas apologised for his ugly handwriting.",
+   "ko": "비카스는 편지 끝에 글씨가 엉망이라 미안하다고 썼어요.",
+   "blank": "भद्दी",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी को हाईवे के किनारे लगे भद्दे होर्डिंग बिल्कुल पसंद नहीं।",
+   "en": "Shalini can't stand the ugly billboards along the highway.",
+   "ko": "샬리니는 고속도로 옆에 늘어선 흉한 광고판이 정말 싫어요.",
+   "blank": "भद्दे",
+   "src": "made"
+  }
+ ],
  "w|भय": [
   {
    "text": "अंधेरे का भय बचपन से था।",
@@ -58743,6 +59095,22 @@
    "blank": "भाग लेंगे"
   }
  ],
+ "w|भागदौड़": [
+  {
+   "text": "शहर की भागदौड़ में विकास को दोस्त को लिखने का समय कम ही मिलता था।",
+   "en": "In the rush of city life, Vikas rarely found time to write to his friend.",
+   "ko": "바쁜 도시 생활 속에서 비카스는 친구에게 편지 쓸 시간이 거의 없었어요.",
+   "blank": "भागदौड़",
+   "src": "made"
+  },
+  {
+   "text": "दफ़्तर की भागदौड़ से दूर शालिनी ने यह सफ़र सुकून के लिए चुना था।",
+   "en": "Shalini had chosen this trip for some peace, away from the rush of the office.",
+   "ko": "샬리니는 바쁜 회사 일에서 벗어나 쉬려고 이 여행을 택했어요.",
+   "blank": "भागदौड़",
+   "src": "made"
+  }
+ ],
  "w|भागना": [
   {
    "text": "बिल्ली कुत्ते से भाग गई।",
@@ -58979,6 +59347,22 @@
    "en": "Writing an emotional letter lightened the heart.",
    "ko": "감성적인 편지를 써서 마음이 가벼워졌어.",
    "blank": "भावुक"
+  }
+ ],
+ "w|भावुकता": [
+  {
+   "text": "विकास की चिट्ठियों में इतनी भावुकता होती है कि दोस्त उन्हें पढ़कर रो पड़ता है।",
+   "en": "Vikas's letters are so full of emotion that his friend ends up crying as he reads them.",
+   "ko": "비카스의 편지는 감정이 너무 북받쳐서 친구는 읽다가 울어 버려요.",
+   "blank": "भावुकता",
+   "src": "made"
+  },
+  {
+   "text": "विदा होते समय होमस्टे वालों की भावुकता देखकर शालिनी की आँखें भी भर आईं।",
+   "en": "Seeing how emotional the homestay family was at the farewell, Shalini's eyes filled with tears too.",
+   "ko": "작별할 때 민박집 식구들이 울컥하는 걸 보고 샬리니도 눈시울이 붉어졌어요.",
+   "blank": "भावुकता",
+   "src": "made"
   }
  ],
  "w|भाषण": [
@@ -59861,6 +60245,22 @@
    "blank": "भ्रष्टाचार"
   }
  ],
+ "w|भ्रांति": [
+  {
+   "text": "विकास ने दोस्त की यह भ्रांति दूर की कि वह उससे नाराज़ था।",
+   "en": "Vikas cleared up his friend's misconception that he had been angry with him.",
+   "ko": "비카스는 자기가 화가 나 있었다는 친구의 오해를 풀어 줬어요.",
+   "blank": "भ्रांति",
+   "src": "made"
+  },
+  {
+   "text": "इस सफ़र में शालिनी की यह भ्रांति टूटी कि पहाड़ों में हर जगह ठंड होती है।",
+   "en": "On this trip Shalini's misconception that it's cold everywhere in the mountains was shattered.",
+   "ko": "이번 여행에서 샬리니는 산은 어디나 춥다는 오해를 버렸어요.",
+   "blank": "भ्रांति",
+   "src": "made"
+  }
+ ],
  "w|भ्रामक": [
   {
    "text": "नक्शे में दिए कुछ नाप भ्रामक थे, इसलिए राहुल ने सब दोबारा नापा।",
@@ -60488,6 +60888,22 @@
    "en": "Near Seema's field is an old monastery where bells ring in the morning.",
    "ko": "시마의 밭 근처에 오래된 수도원이 있어 아침마다 종이 울려요.",
    "blank": "मठ",
+   "src": "made"
+  }
+ ],
+ "w|मँडराना": [
+  {
+   "text": "विकास ने लिखा कि उसके बगीचे में आजकल तितलियाँ फूलों पर मँडराती रहती हैं।",
+   "en": "Vikas wrote that these days butterflies keep hovering over the flowers in his garden.",
+   "ko": "비카스는 요즘 정원에 나비들이 꽃 위를 맴돈다고 썼어요.",
+   "blank": "मँडराती",
+   "src": "made"
+  },
+  {
+   "text": "चोटी के ऊपर बाज़ मँडरा रहे थे, और शालिनी ने गाड़ी रोककर उन्हें देखा।",
+   "en": "Hawks were circling above the peak, and Shalini stopped the car to watch them.",
+   "ko": "봉우리 위로 매가 맴돌고 있어서 샬리니는 차를 세우고 바라봤어요.",
+   "blank": "मँडरा",
    "src": "made"
   }
  ],
@@ -66505,6 +66921,22 @@
    "src": "made"
   }
  ],
+ "w|रंजिश": [
+  {
+   "text": "विकास ने लिखा कि अब उसके मन में किसी के लिए कोई रंजिश नहीं बची।",
+   "en": "Vikas wrote that he no longer holds a grudge against anyone.",
+   "ko": "비카스는 이제 누구에게도 원한이 남아 있지 않다고 썼어요.",
+   "blank": "रंजिश",
+   "src": "made"
+  },
+  {
+   "text": "ढाबे पर शालिनी ने देखा कि दो ट्रक ड्राइवरों में पुरानी रंजिश थी।",
+   "en": "At the dhaba Shalini noticed that two truck drivers had an old grudge between them.",
+   "ko": "길가 식당에서 샬리니는 트럭 기사 둘 사이에 묵은 원한이 있다는 걸 알아챘어요.",
+   "blank": "रंजिश",
+   "src": "made"
+  }
+ ],
  "w|रजिस्टर": [
   {
    "text": "हाज़िरी के लिए रजिस्टर साइन करो।",
@@ -67659,6 +68091,22 @@
    "src": "made"
   }
  ],
+ "w|रिझाना": [
+  {
+   "text": "विकास ने याद दिलाया कि कॉलेज में दोस्त गाने गाकर सबको रिझाने की कोशिश करता था।",
+   "en": "Vikas reminded him that in college his friend used to try to charm everyone by singing.",
+   "ko": "비카스는 대학 때 친구가 노래를 불러 모두의 마음을 끌려고 했던 걸 떠올리게 했어요.",
+   "blank": "रिझाने",
+   "src": "made"
+  },
+  {
+   "text": "सड़क किनारे बैठा एक बाँसुरीवाला राहगीरों को अपनी धुन से रिझाता था, और शालिनी भी रुक गई।",
+   "en": "A flute player by the roadside charmed passers-by with his tunes, and Shalini stopped too.",
+   "ko": "길가의 피리 연주자가 가락으로 행인들을 사로잡자 샬리니도 발길을 멈췄어요.",
+   "blank": "रिझाता",
+   "src": "made"
+  }
+ ],
  "w|रिपोर्ट": [
   {
    "text": "डॉक्टर ने रिपोर्ट कल भेज दी।",
@@ -68473,6 +68921,22 @@
    "src": "made"
   }
  ],
+ "w|रोमांचित": [
+  {
+   "text": "दोस्त की चिट्ठी में मिलने का वादा पढ़कर विकास रोमांचित हो उठा।",
+   "en": "Vikas was thrilled to read the promise of a meeting in his friend's letter.",
+   "ko": "친구 편지에 만나자는 약속이 적혀 있어서 비카스는 가슴이 설렜어요.",
+   "blank": "रोमांचित",
+   "src": "made"
+  },
+  {
+   "text": "रेगिस्तान में पहली बार ऊँट देखकर शालिनी के बच्चे रोमांचित हो गए।",
+   "en": "Shalini's children were thrilled to see camels in the desert for the first time.",
+   "ko": "사막에서 처음 낙타를 본 샬리니의 아이들은 신이 났어요.",
+   "blank": "रोमांचित",
+   "src": "made"
+  }
+ ],
  "w|रोशनी": [
   {
    "text": "कमरे में रोशनी बहुत कम थी।",
@@ -68758,6 +69222,22 @@
    "en": "When she forgot her lines, the new actress turned red with embarrassment.",
    "ko": "대사를 잊어버리자 신인 여배우는 부끄러워 얼굴이 빨개졌어요.",
    "blank": "लज्जा",
+   "src": "made"
+  }
+ ],
+ "w|लज्जित": [
+  {
+   "text": "विकास ने लिखा कि अपने पुराने कड़वे शब्दों पर वह आज भी लज्जित है।",
+   "en": "Vikas wrote that he is still ashamed of the bitter words he once said.",
+   "ko": "비카스는 예전에 한 모진 말이 지금도 부끄럽다고 썼어요.",
+   "blank": "लज्जित",
+   "src": "made"
+  },
+  {
+   "text": "ग़लत रास्ता लेने पर शालिनी बच्चों के सामने थोड़ी लज्जित हुई।",
+   "en": "Shalini felt a little embarrassed in front of the children for taking the wrong road.",
+   "ko": "길을 잘못 들어서 샬리니는 아이들 앞에서 조금 민망했어요.",
+   "blank": "लज्जित",
    "src": "made"
   }
  ],
@@ -69653,6 +70133,22 @@
    "src": "made"
   }
  ],
+ "w|लिहाज़ करना": [
+  {
+   "text": "विकास ने गर्व से लिखा कि उसके बच्चे आज भी बड़ों का लिहाज़ करते हैं।",
+   "en": "Vikas wrote proudly that his children still show respect for their elders.",
+   "ko": "비카스는 자기 아이들이 지금도 어른을 공경한다고 자랑스럽게 썼어요.",
+   "blank": "लिहाज़ करते",
+   "src": "made"
+  },
+  {
+   "text": "गाँवों से गुज़रते समय शालिनी वहाँ के रीति-रिवाजों का लिहाज़ करती है।",
+   "en": "When passing through villages, Shalini respects the local customs.",
+   "ko": "샬리니는 마을을 지날 때 그곳 풍습을 존중해요.",
+   "blank": "लिहाज़ करती",
+   "src": "made"
+  }
+ ],
  "w|लीची": [
   {
    "text": "शेफ़ ने लीची और नारियल के दूध से एक ठंडी मिठाई बनाई।",
@@ -69712,6 +70208,22 @@
    "en": "In the crowd, Shalini's friend's purse narrowly escaped being snatched.",
    "ko": "인파 속에서 샬리니 친구의 지갑이 털릴 뻔했어요.",
    "blank": "लुटने",
+   "src": "made"
+  }
+ ],
+ "w|लुटाना": [
+  {
+   "text": "विकास ने याद किया कि दोस्त अपनी पहली तनख़्वाह दोस्तों की दावत पर लुटा देता था।",
+   "en": "Vikas recalled how his friend would blow his first salary on treating his friends.",
+   "ko": "비카스는 친구가 첫 월급을 친구들 한턱내는 데 다 써 버리곤 했던 걸 떠올렸어요.",
+   "blank": "लुटा",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने रास्ते के मेलों में दिल खोलकर पैसे लुटाए।",
+   "en": "Shalini spent money freely at the fairs along the way.",
+   "ko": "샬리니는 길가 장터마다 아낌없이 돈을 썼어요.",
+   "blank": "लुटाए",
    "src": "made"
   }
  ],
@@ -73045,6 +73557,22 @@
    "src": "made"
   }
  ],
+ "w|विस्मय": [
+  {
+   "text": "विकास ने ख़त में लिखा कि पहाड़ों पर पहली बर्फ़ देखकर वह विस्मय से भर गया।",
+   "en": "Vikas wrote in his letter that he was filled with wonder on seeing the first snow in the mountains.",
+   "ko": "비카스는 산에서 첫눈을 보고 경이로움에 가득 찼다고 편지에 썼어요.",
+   "blank": "विस्मय",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ी मोड़ से नीचे घाटी देखकर शालिनी विस्मय से चुप हो गई।",
+   "en": "Looking down at the valley from the mountain bend, Shalini fell silent in wonder.",
+   "ko": "산굽이에서 골짜기를 내려다본 샬리니는 경이로움에 말을 잃었어요.",
+   "blank": "विस्मय",
+   "src": "made"
+  }
+ ],
  "w|वीज़ा": [
   {
    "text": "यात्रा से पहले वीज़ा लगवाना ज़रूरी है।",
@@ -73360,6 +73888,22 @@
    "en": "Before opening a food shop, Kavita got all the legal approvals.",
    "ko": "음식점을 열기 전에 카비타는 법적 허가를 모두 받았어요.",
    "blank": "वैधानिक",
+   "src": "made"
+  }
+ ],
+ "w|वैमनस्य": [
+  {
+   "text": "विकास चाहता है कि दोनों परिवारों के बीच का पुराना वैमनस्य अब ख़त्म हो जाए।",
+   "en": "Vikas wants the old hostility between the two families to end now.",
+   "ko": "비카스는 두 집안 사이의 오랜 반목이 이제 끝나기를 바라요.",
+   "blank": "वैमनस्य",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने रेडियो पर दो गाँवों के बीच पुराने वैमनस्य की ख़बर सुनी।",
+   "en": "Shalini heard news on the radio of an old enmity between two villages.",
+   "ko": "샬리니는 라디오에서 두 마을 사이의 오랜 반목에 관한 소식을 들었어요.",
+   "blank": "वैमनस्य",
    "src": "made"
   }
  ],
@@ -80477,6 +81021,22 @@
    "src": "made"
   }
  ],
+ "w|सहमा": [
+  {
+   "text": "विकास को याद है कि स्कूल के पहले दिन वह कितना सहमा हुआ बच्चा था।",
+   "en": "Vikas remembers how frightened a child he was on his first day of school.",
+   "ko": "비카스는 학교 첫날 자기가 얼마나 겁먹은 아이였는지 기억해요.",
+   "blank": "सहमा",
+   "src": "made"
+  },
+  {
+   "text": "बिजली कड़की तो शालिनी की भतीजी सहमी हुई सीट पर दुबक गई।",
+   "en": "When lightning cracked, Shalini's niece huddled on the seat, frightened.",
+   "ko": "번개가 치자 샬리니의 조카는 겁에 질려 좌석에 웅크렸어요.",
+   "blank": "सहमी",
+   "src": "made"
+  }
+ ],
  "w|सहयोग": [
   {
    "text": "आपके सहयोग के बिना काम नहीं होता।",
@@ -82258,6 +82818,22 @@
    "en": "As soon as winter starts, a stream of people asking for cough syrup begins.",
    "ko": "겨울이 시작되자마자 기침약을 찾는 손님이 줄을 이어요.",
    "blank": "सिलसिला",
+   "src": "made"
+  }
+ ],
+ "w|सिलसिलेवार": [
+  {
+   "text": "विकास ने पिछले साल की सारी बातें सिलसिलेवार लिखीं ताकि दोस्त से कुछ न छूटे।",
+   "en": "Vikas wrote down everything from last year in order, so his friend wouldn't miss anything.",
+   "ko": "비카스는 친구가 하나도 놓치지 않게 지난해 일을 차례대로 적었어요.",
+   "blank": "सिलसिलेवार",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने सफ़र की यादें सिलसिलेवार अपनी डायरी में लिखीं।",
+   "en": "Shalini wrote her memories of the trip in her diary in order.",
+   "ko": "샬리니는 여행의 추억을 순서대로 일기에 적었어요.",
+   "blank": "सिलसिलेवार",
    "src": "made"
   }
  ],
@@ -84967,6 +85543,22 @@
    "src": "made"
   }
  ],
+ "w|स्वच्छंद": [
+  {
+   "text": "विकास को दोस्त का स्वच्छंद स्वभाव हमेशा अच्छा लगता था।",
+   "en": "Vikas always liked his friend's free-spirited nature.",
+   "ko": "비카스는 친구의 자유분방한 성격을 늘 좋아했어요.",
+   "blank": "स्वच्छंद",
+   "src": "made"
+  },
+  {
+   "text": "खुली सड़क पर शालिनी को ऐसा स्वच्छंद महसूस होता है, जैसे कोई बंधन ही न हो।",
+   "en": "On the open road Shalini feels so free, as if there were no ties at all.",
+   "ko": "탁 트인 길에서 샬리니는 아무 얽매임 없이 자유로운 기분이 들어요.",
+   "blank": "स्वच्छंद",
+   "src": "made"
+  }
+ ],
  "w|स्वतः": [
   {
    "text": "सुमन का नाम पढ़ते ही राहुल के होंठों पर स्वतः मुस्कान आ गई।",
@@ -85439,6 +86031,22 @@
    "src": "made"
   }
  ],
+ "w|स्वेच्छा से": [
+  {
+   "text": "विकास ने लिखा कि रिटायरमेंट के बाद वह स्वेच्छा से गाँव के बच्चों को पढ़ाने लगा है।",
+   "en": "Vikas wrote that since retiring he has started teaching village children of his own accord.",
+   "ko": "비카스는 은퇴 후 자진해서 마을 아이들을 가르치기 시작했다고 썼어요.",
+   "blank": "स्वेच्छा से",
+   "src": "made"
+  },
+  {
+   "text": "एक किसान ने स्वेच्छा से शालिनी को खेतों के बीच से छोटा रास्ता दिखाया।",
+   "en": "A farmer voluntarily showed Shalini a shortcut through the fields.",
+   "ko": "한 농부가 자진해서 샬리니에게 밭 사이로 난 지름길을 알려 줬어요.",
+   "blank": "स्वेच्छा से",
+   "src": "made"
+  }
+ ],
  "w|स्वेटर": [
   {
    "text": "ठंडी सुबह विकास ऊन का मोटा स्वेटर पहनकर खेत की ओर निकल पड़ा।",
@@ -85831,6 +86439,22 @@
    "blank": "हम"
   }
  ],
+ "w|हमदर्द": [
+  {
+   "text": "विकास ने लिखा कि मुश्किल दिनों में उसका दोस्त ही उसका सच्चा हमदर्द था।",
+   "en": "Vikas wrote that in hard times his friend had been his one true sympathiser.",
+   "ko": "비카스는 힘든 시절에 친구만이 자기 마음을 진심으로 알아줬다고 썼어요.",
+   "blank": "हमदर्द",
+   "src": "made"
+  },
+  {
+   "text": "गाड़ी ख़राब होने पर एक हमदर्द राहगीर ने शालिनी की मदद की।",
+   "en": "When the car broke down, a kind-hearted passer-by helped Shalini.",
+   "ko": "차가 고장 나자 마음씨 좋은 행인이 샬리니를 도와줬어요.",
+   "blank": "हमदर्द",
+   "src": "made"
+  }
+ ],
  "w|हमदर्दी": [
   {
    "text": "रवि को अपनी बहन से हमदर्दी थी, पर वह कह नहीं पाया।",
@@ -86100,6 +86724,22 @@
    "en": "At the announcement of the award, the whole newsroom was in a mood of joy.",
    "ko": "수상 발표에 편집국 전체가 기쁨에 들떴어요.",
    "blank": "हर्ष",
+   "src": "made"
+  }
+ ],
+ "w|हर्षित": [
+  {
+   "text": "दोस्त की बेटी की शादी की ख़बर पढ़कर विकास बहुत हर्षित हुआ।",
+   "en": "Vikas was delighted to read the news of his friend's daughter's wedding.",
+   "ko": "친구 딸의 결혼 소식을 읽고 비카스는 무척 기뻤어요.",
+   "blank": "हर्षित",
+   "src": "made"
+  },
+  {
+   "text": "झील के किनारे सूर्यास्त देखकर शालिनी के बच्चे हर्षित हो उठे।",
+   "en": "Shalini's children were overjoyed watching the sunset by the lake.",
+   "ko": "호숫가에서 노을을 본 샬리니의 아이들은 기뻐했어요.",
+   "blank": "हर्षित",
    "src": "made"
   }
  ],

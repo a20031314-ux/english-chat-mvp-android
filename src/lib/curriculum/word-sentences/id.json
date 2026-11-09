@@ -807,6 +807,22 @@
    "blank": "alamat"
   }
  ],
+ "w|alamiah": [
+  {
+   "text": "Mata air di desa itu menghasilkan air yang jernih secara alamiah.",
+   "en": "The spring in that village naturally produces clear water.",
+   "ko": "그 마을 샘에서는 자연적으로 맑은 물이 솟아요.",
+   "blank": "alamiah",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik itu hanya memakai pewarna alamiah dari kunyit dan daun pandan.",
+   "en": "That factory uses only natural dyes from turmeric and pandan leaves.",
+   "ko": "그 공장은 강황과 판단 잎에서 얻은 천연 색소만 써요.",
+   "blank": "alamiah",
+   "src": "made"
+  }
+ ],
  "w|alangkah": [
   {
    "text": "Fajar berpikir alangkah enaknya kalau kantor punya ruang tidur siang.",
@@ -1379,6 +1395,22 @@
    "en": "Every member has a responsibility.",
    "ko": "모든 구성원에게 책임이 있어.",
    "blank": "anggota"
+  }
+ ],
+ "w|anggrek": [
+  {
+   "text": "Eko menemukan anggrek hutan yang tumbuh di batang pohon tua.",
+   "en": "Eko found a wild orchid growing on the trunk of an old tree.",
+   "ko": "에코는 늙은 나무 줄기에 자란 야생 난초를 발견했어요.",
+   "blank": "anggrek",
+   "src": "made"
+  },
+  {
+   "text": "Di meja kantor Ayu ada pot anggrek ungu.",
+   "en": "There's a pot of purple orchids on Ayu's office desk.",
+   "ko": "아유의 사무실 책상에는 보라색 난초 화분이 있어요.",
+   "blank": "anggrek",
+   "src": "made"
   }
  ],
  "w|anggun": [
@@ -3547,6 +3579,22 @@
    "blank": "bang"
   }
  ],
+ "w|bangau": [
+  {
+   "text": "Seekor bangau putih berdiri diam di pematang sawah.",
+   "en": "A white stork stood still on the rice-field dike.",
+   "ko": "흰 황새 한 마리가 논두렁에 가만히 서 있었어요.",
+   "blank": "bangau",
+   "src": "made"
+  },
+  {
+   "text": "Ayu melipat burung bangau dari kertas bekas saat istirahat.",
+   "en": "Ayu folds paper cranes from scrap paper during her break.",
+   "ko": "아유는 쉬는 시간에 이면지로 종이학을 접어요.",
+   "blank": "bangau",
+   "src": "made"
+  }
+ ],
  "w|banget": [
   {
    "text": "Aku senang banget bisa bertemu kamu.",
@@ -4740,6 +4788,22 @@
    "en": "The art teacher who attended once taught them to carve a wooden dagger handle.",
    "ko": "참석한 미술 선생님은 예전에 그들에게 나무로 단검 손잡이 깎는 법을 가르쳤어요.",
    "blank": "belati",
+   "src": "made"
+  }
+ ],
+ "w|belerang": [
+  {
+   "text": "Dari kawah di atas desa tercium bau belerang yang menyengat.",
+   "en": "A pungent smell of sulfur drifts from the crater above the village.",
+   "ko": "마을 위 분화구에서 코를 찌르는 유황 냄새가 나요.",
+   "blank": "belerang",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik pupuk itu membeli belerang dari tambang di daerah gunung api.",
+   "en": "That fertilizer plant buys sulfur from mines in volcanic areas.",
+   "ko": "그 비료 공장은 화산 지대 광산에서 유황을 사요.",
+   "blank": "belerang",
    "src": "made"
   }
  ],
@@ -7255,6 +7319,22 @@
    "blank": "berhenti"
   }
  ],
+ "w|berhibernasi": [
+  {
+   "text": "Eko membaca bahwa beruang di negeri dingin berhibernasi sepanjang musim salju.",
+   "en": "Eko read that bears in cold countries hibernate throughout the snowy season.",
+   "ko": "에코는 추운 나라의 곰은 눈 오는 계절 내내 겨울잠을 잔다는 걸 읽었어요.",
+   "blank": "berhibernasi",
+   "src": "made"
+  },
+  {
+   "text": "Ayu bercanda bahwa mesin lama di sudut gudang sedang berhibernasi.",
+   "en": "Ayu joked that the old machine in the corner of the warehouse was hibernating.",
+   "ko": "아유는 창고 구석의 낡은 기계가 겨울잠을 자는 중이라고 농담했어요.",
+   "blank": "berhibernasi",
+   "src": "made"
+  }
+ ],
  "w|berhubung": [
   {
    "text": "Rudi menutup dapur lebih awal berhubung tabung gas sudah habis.",
@@ -8174,6 +8254,22 @@
    "en": "Lestari, in a green headscarf, went on stage to introduce her app.",
    "ko": "초록 히잡을 쓴 레스타리가 무대에 올라 자기 앱을 소개했어요.",
    "blank": "berkerudung",
+   "src": "made"
+  }
+ ],
+ "w|berkesempatan": [
+  {
+   "text": "Tahun ini Eko berkesempatan ikut pelatihan kopi di kota.",
+   "en": "This year Eko got the chance to join a coffee training course in the city.",
+   "ko": "올해 에코는 도시에서 열리는 커피 교육에 참가할 기회를 얻었어요.",
+   "blank": "berkesempatan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu berkesempatan meninjau pabrik mitra di luar pulau.",
+   "en": "Ayu had the chance to visit a partner factory on another island.",
+   "ko": "아유는 다른 섬에 있는 협력 공장을 둘러볼 기회가 있었어요.",
+   "blank": "berkesempatan",
    "src": "made"
   }
  ],
@@ -10681,6 +10777,22 @@
    "src": "made"
   }
  ],
+ "w|bertalenta": [
+  {
+   "text": "Desa kecil itu punya banyak pemuda bertalenta dalam menganyam bambu.",
+   "en": "That small village has many young people talented at weaving bamboo.",
+   "ko": "그 작은 마을에는 대나무 공예에 재능 있는 젊은이가 많아요.",
+   "blank": "bertalenta",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik itu sedang mencari insinyur muda yang bertalenta.",
+   "en": "That factory is looking for talented young engineers.",
+   "ko": "그 공장은 재능 있는 젊은 엔지니어를 찾고 있어요.",
+   "blank": "bertalenta",
+   "src": "made"
+  }
+ ],
  "w|bertambah": [
   {
    "text": "Jumlah siswa bertambah setiap tahun.",
@@ -10798,6 +10910,22 @@
    "en": "Siti is determined to finish unpacking the boxes within a week.",
    "ko": "시티는 일주일 안에 상자를 다 풀겠다고 마음먹었어요.",
    "blank": "bertekad",
+   "src": "made"
+  }
+ ],
+ "w|bertelur": [
+  {
+   "text": "Ayam kampung milik Eko bertelur di bawah tumpukan jerami.",
+   "en": "Eko's free-range hen laid eggs under the pile of straw.",
+   "ko": "에코네 토종닭이 짚더미 밑에 알을 낳았어요.",
+   "blank": "bertelur",
+   "src": "made"
+  },
+  {
+   "text": "Burung gereja bertelur di sela atap gudang pabrik.",
+   "en": "Sparrows laid eggs in the gaps of the factory warehouse roof.",
+   "ko": "참새가 공장 창고 지붕 틈에 알을 낳았어요.",
+   "blank": "bertelur",
    "src": "made"
   }
  ],
@@ -14217,6 +14345,22 @@
    "src": "made"
   }
  ],
+ "w|curam": [
+  {
+   "text": "Jalan menuju rumah Eko sangat curam dan licin saat hujan.",
+   "en": "The road to Eko's house is very steep and slippery when it rains.",
+   "ko": "에코네 집으로 가는 길은 아주 가파르고 비가 오면 미끄러워요.",
+   "blank": "curam",
+   "src": "made"
+  },
+  {
+   "text": "Tangga menuju gudang atas terlalu curam, jadi Ayu minta dipasangi pegangan.",
+   "en": "The stairs to the upper storeroom are too steep, so Ayu asked for a handrail.",
+   "ko": "위층 창고로 가는 계단이 너무 가팔라서 아유는 손잡이를 달아 달라고 했어요.",
+   "blank": "curam",
+   "src": "made"
+  }
+ ],
  "w|curang": [
   {
    "text": "Pemain itu curang dalam pertandingan.",
@@ -14817,6 +14961,22 @@
    "en": "She cleaned the dust on the bookshelf.",
    "ko": "그녀는 책장 위의 먼지를 닦았어.",
    "blank": "debu"
+  }
+ ],
+ "w|dedaunan": [
+  {
+   "text": "Eko mengumpulkan dedaunan kering untuk dijadikan pupuk kompos.",
+   "en": "Eko gathers dry leaves to turn into compost.",
+   "ko": "에코는 마른 낙엽을 모아 퇴비로 만들어요.",
+   "blank": "dedaunan",
+   "src": "made"
+  },
+  {
+   "text": "Dari jendela pabrik, Ayu bisa melihat dedaunan yang bergoyang tertiup angin.",
+   "en": "From the factory window, Ayu can see the leaves swaying in the wind.",
+   "ko": "아유는 공장 창문으로 바람에 흔들리는 나뭇잎을 볼 수 있어요.",
+   "blank": "dedaunan",
+   "src": "made"
   }
  ],
  "w|definisi": [
@@ -17951,6 +18111,22 @@
    "src": "made"
   }
  ],
+ "w|fusi": [
+  {
+   "text": "Guru di sekolah desa menjelaskan bahwa matahari bersinar karena reaksi fusi.",
+   "en": "The teacher at the village school explained that the sun shines because of fusion reactions.",
+   "ko": "마을 학교 선생님은 태양이 핵융합 반응으로 빛난다고 설명했어요.",
+   "blank": "fusi",
+   "src": "made"
+  },
+  {
+   "text": "Ayu membaca artikel tentang energi fusi yang mungkin dipakai pabrik masa depan.",
+   "en": "Ayu read an article about fusion energy that factories might use in the future.",
+   "ko": "아유는 미래 공장이 쓸지도 모르는 핵융합 에너지에 관한 기사를 읽었어요.",
+   "blank": "fusi",
+   "src": "made"
+  }
+ ],
  "w|gabungan": [
   {
    "text": "Pabrik itu dikelola oleh gabungan beberapa perusahaan lokal.",
@@ -18811,6 +18987,22 @@
    "blank": "Gemuk"
   }
  ],
+ "w|genangan": [
+  {
+   "text": "Setelah hujan semalam, genangan air muncul di jalan desa.",
+   "en": "After last night's rain, puddles appeared on the village road.",
+   "ko": "어젯밤 비가 온 뒤 마을 길에 물웅덩이가 생겼어요.",
+   "blank": "genangan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu memasang tanda hati-hati di dekat genangan oli.",
+   "en": "Ayu put a caution sign near the puddle of oil.",
+   "ko": "아유는 기름 웅덩이 옆에 주의 표지판을 세웠어요.",
+   "blank": "genangan",
+   "src": "made"
+  }
+ ],
  "w|gencatan": [
   {
    "text": "Di pelajaran sejarah, Eko belajar bahwa gencatan senjata tidak selalu berarti perang berakhir.",
@@ -18930,6 +19122,22 @@
    "en": "Dewi remembers Rani's grip on her hand when they said goodbye at the station.",
    "ko": "데위는 역에서 헤어질 때 꼭 잡던 라니의 손을 기억해요.",
    "blank": "genggaman",
+   "src": "made"
+  }
+ ],
+ "w|geografi": [
+  {
+   "text": "Eko suka pelajaran geografi karena bisa mengenal gunung-gunung di negerinya.",
+   "en": "Eko likes geography class because he gets to know the mountains of his country.",
+   "ko": "에코는 자기 나라의 산들을 알게 돼서 지리 수업을 좋아해요.",
+   "blank": "geografi",
+   "src": "made"
+  },
+  {
+   "text": "Ayu dulu kuliah geografi sebelum bekerja di bagian logistik pabrik.",
+   "en": "Ayu studied geography before working in the factory's logistics department.",
+   "ko": "아유는 공장 물류팀에서 일하기 전에 대학에서 지리학을 공부했어요.",
+   "blank": "geografi",
    "src": "made"
   }
  ],
@@ -19613,6 +19821,22 @@
    "blank": "Gula"
   }
  ],
+ "w|gulma": [
+  {
+   "text": "Setiap pagi Eko mencabuti gulma di sela tanaman kentang.",
+   "en": "Every morning Eko pulls the weeds between the potato plants.",
+   "ko": "에코는 매일 아침 감자 사이의 잡초를 뽑아요.",
+   "blank": "gulma",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik kimia itu memproduksi obat pembasmi gulma untuk petani.",
+   "en": "That chemical plant produces weed killer for farmers.",
+   "ko": "그 화학 공장은 농부들을 위한 제초제를 만들어요.",
+   "blank": "gulma",
+   "src": "made"
+  }
+ ],
  "w|gulungan": [
   {
    "text": "Pak Guru membawa gulungan peta besar ke kelas Dimas.",
@@ -20175,6 +20399,22 @@
    "blank": "Hanya"
   }
  ],
+ "w|hanyut": [
+  {
+   "text": "Jembatan bambu sempat hanyut terbawa arus sungai setelah hujan deras.",
+   "en": "The bamboo bridge was swept away by the river current after heavy rain.",
+   "ko": "폭우가 내린 뒤 대나무 다리가 강물에 떠내려갔어요.",
+   "blank": "hanyut",
+   "src": "made"
+  },
+  {
+   "text": "Ayu hanyut dalam pekerjaan sampai lupa makan siang.",
+   "en": "Ayu got so absorbed in her work that she forgot to eat lunch.",
+   "ko": "아유는 일에 푹 빠져서 점심 먹는 것도 잊었어요.",
+   "blank": "hanyut",
+   "src": "made"
+  }
+ ],
  "w|haram": [
   {
    "text": "Andi bilang mencontek itu haram baginya, apa pun alasannya.",
@@ -20574,6 +20814,22 @@
    "en": "Putri bought a small wall decoration as a souvenir for her mother.",
    "ko": "푸트리는 엄마에게 줄 선물로 작은 벽 장식을 샀어요.",
    "blank": "hiasan",
+   "src": "made"
+  }
+ ],
+ "w|hibrida": [
+  {
+   "text": "Eko mencoba menanam jagung hibrida yang katanya lebih tahan hama.",
+   "en": "Eko is trying to grow hybrid corn that is said to resist pests better.",
+   "ko": "에코는 병충해에 더 강하다는 교잡종 옥수수를 심어 보고 있어요.",
+   "blank": "hibrida",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik itu mulai merakit mobil hibrida tahun ini.",
+   "en": "That factory started assembling hybrid cars this year.",
+   "ko": "그 공장은 올해부터 하이브리드 자동차를 조립하기 시작했어요.",
+   "blank": "hibrida",
    "src": "made"
   }
  ],
@@ -21001,6 +21257,22 @@
    "en": "The problem is the lack of communication.",
    "ko": "문제는 소통 부족이야.",
    "blank": "ialah"
+  }
+ ],
+ "w|ibarat": [
+  {
+   "text": "Kabut pagi di desa itu ibarat selimut tebal yang menutupi sawah.",
+   "en": "The morning mist in that village is like a thick blanket covering the rice fields.",
+   "ko": "그 마을의 아침 안개는 논을 덮은 두꺼운 이불 같아요.",
+   "blank": "ibarat",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Ayu, mesin tua di pabrik ibarat teman lama yang rewel.",
+   "en": "To Ayu, the old machine at the factory is like a fussy old friend.",
+   "ko": "아유에게 공장의 낡은 기계는 까다로운 오랜 친구 같아요.",
+   "blank": "ibarat",
+   "src": "made"
   }
  ],
  "w|iblis": [
@@ -29121,6 +29393,22 @@
    "src": "made"
   }
  ],
+ "w|kerak": [
+  {
+   "text": "Di dasar panci ada kerak nasi yang disukai adik Eko.",
+   "en": "At the bottom of the pot is the rice crust that Eko's little sibling loves.",
+   "ko": "냄비 바닥에 에코 동생이 좋아하는 누룽지가 있어요.",
+   "blank": "kerak",
+   "src": "made"
+  },
+  {
+   "text": "Pekerja membersihkan kerak kapur di dalam pipa ketel uap.",
+   "en": "The workers cleaned the limescale crust inside the boiler pipes.",
+   "ko": "직원들은 보일러 배관 안의 석회 찌꺼기를 청소했어요.",
+   "blank": "kerak",
+   "src": "made"
+  }
+ ],
  "w|keramahan": [
   {
    "text": "Pelanggan memuji keramahan Eko saat dia keluar menyapa mereka.",
@@ -30708,6 +30996,22 @@
    "en": "As soon as lightning struck, the pharmacy's power went out and Wati turned on a flashlight.",
    "ko": "번개가 치자마자 약국 전기가 나가서 와티는 손전등을 켰어요.",
    "blank": "kilat",
+   "src": "made"
+  }
+ ],
+ "w|kilatan": [
+  {
+   "text": "Tiba-tiba kilatan petir menerangi seluruh lembah.",
+   "en": "Suddenly a flash of lightning lit up the whole valley.",
+   "ko": "갑자기 번갯불이 골짜기 전체를 환히 비췄어요.",
+   "blank": "kilatan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu memakai kacamata pelindung karena kilatan api las bisa merusak mata.",
+   "en": "Ayu wears safety goggles because the flash from welding can damage the eyes.",
+   "ko": "용접 불꽃의 섬광이 눈을 상하게 할 수 있어서 아유는 보안경을 써요.",
+   "blank": "kilatan",
    "src": "made"
   }
  ],
@@ -32977,6 +33281,22 @@
    "en": "She wore a bright yellow shirt.",
    "ko": "그녀는 밝은 노란 옷을 입었어.",
    "blank": "kuning"
+  }
+ ],
+ "w|kuningan": [
+  {
+   "text": "Ibu Eko masih memakai panci kuningan peninggalan nenek.",
+   "en": "Eko's mother still uses the brass pot handed down from grandma.",
+   "ko": "에코 어머니는 할머니가 물려준 놋쇠 냄비를 아직도 써요.",
+   "blank": "kuningan",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik itu membuat keran dan gagang pintu dari kuningan.",
+   "en": "That factory makes faucets and door handles out of brass.",
+   "ko": "그 공장은 황동으로 수도꼭지와 문손잡이를 만들어요.",
+   "blank": "kuningan",
+   "src": "made"
   }
  ],
  "w|kunjungan": [
@@ -38867,6 +39187,22 @@
    "src": "made"
   }
  ],
+ "w|memanah": [
+  {
+   "text": "Saat festival desa, para pemuda berlomba memanah sasaran jerami.",
+   "en": "At the village festival, the young men compete shooting arrows at straw targets.",
+   "ko": "마을 축제 때 청년들은 짚 과녁에 활쏘기 시합을 해요.",
+   "blank": "memanah",
+   "src": "made"
+  },
+  {
+   "text": "Saat acara keluarga pabrik, Ayu ikut lomba memanah.",
+   "en": "At the factory family day, Ayu entered the archery contest.",
+   "ko": "공장 가족 행사 때 아유는 활쏘기 대회에 나갔어요.",
+   "blank": "memanah",
+   "src": "made"
+  }
+ ],
  "w|memanas": [
   {
    "text": "Suasana di apotek memanas ketika pelanggan menuntut obat tanpa resep, tetapi Dimas tetap sabar.",
@@ -39065,6 +39401,22 @@
    "blank": "memanggil"
   }
  ],
+ "w|memanggilkan": [
+  {
+   "text": "Eko memanggilkan mantri desa untuk nenek yang sedang demam.",
+   "en": "Eko called the village health worker for his grandmother, who had a fever.",
+   "ko": "에코는 열이 나는 할머니를 위해 마을 보건 요원을 불러 줬어요.",
+   "blank": "memanggilkan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu memanggilkan teknisi karena ban berjalan tiba-tiba berhenti.",
+   "en": "Ayu called a technician over because the conveyor belt suddenly stopped.",
+   "ko": "컨베이어 벨트가 갑자기 멈춰서 아유가 기술자를 불러 줬어요.",
+   "blank": "memanggilkan",
+   "src": "made"
+  }
+ ],
  "w|memangsa": [
   {
    "text": "Di ruang rapat, Rina menonton video tentang singa yang memangsa rusa.",
@@ -39142,6 +39494,22 @@
    "en": "Ayu asked Mrs. Sri to keep an eye on her house while she went home for the holiday.",
    "ko": "아유는 고향에 가 있는 동안 집을 봐 달라고 스리 아주머니께 부탁했어요.",
    "blank": "memantau",
+   "src": "made"
+  }
+ ],
+ "w|memantul": [
+  {
+   "text": "Teriakan Eko memantul dari tebing di seberang lembah.",
+   "en": "Eko's shout bounced off the cliff across the valley.",
+   "ko": "에코의 외침이 골짜기 건너편 절벽에 부딪혀 되돌아왔어요.",
+   "blank": "memantul",
+   "src": "made"
+  },
+  {
+   "text": "Cahaya lampu memantul dari lantai pabrik yang baru dipel.",
+   "en": "The light reflected off the freshly mopped factory floor.",
+   "ko": "막 닦은 공장 바닥에 불빛이 반사됐어요.",
+   "blank": "memantul",
    "src": "made"
   }
  ],
@@ -43937,6 +44305,22 @@
    "src": "made"
   }
  ],
+ "w|mencela": [
+  {
+   "text": "Eko tidak pernah mencela tamu dari kota yang kelelahan mendaki.",
+   "en": "Eko never mocks visitors from the city who get worn out on the climb.",
+   "ko": "에코는 산을 오르다 지친 도시 손님들을 한 번도 흉본 적이 없어요.",
+   "blank": "mencela",
+   "src": "made"
+  },
+  {
+   "text": "Mandor itu suka mencela hasil kerja orang lain tanpa memberi solusi.",
+   "en": "That foreman likes to criticize other people's work without offering solutions.",
+   "ko": "그 반장은 해결책도 없이 남의 작업을 깎아내리길 좋아해요.",
+   "blank": "mencela",
+   "src": "made"
+  }
+ ],
  "w|mencemaskan": [
   {
    "text": "Kesehatan ibunya yang menurun sangat mencemaskan Rudi akhir-akhir ini.",
@@ -44791,6 +45175,22 @@
    "en": "I don't want to suffer again.",
    "ko": "다시는 고통받고 싶지 않아.",
    "blank": "menderita"
+  }
+ ],
+ "w|menderu": [
+  {
+   "text": "Angin gunung menderu sepanjang malam di atas atap rumah Eko.",
+   "en": "The mountain wind roared all night over the roof of Eko's house.",
+   "ko": "산바람이 밤새 에코네 지붕 위에서 윙윙 몰아쳤어요.",
+   "blank": "menderu",
+   "src": "made"
+  },
+  {
+   "text": "Mesin-mesin besar menderu sejak sif pagi dimulai.",
+   "en": "The big machines have been roaring since the morning shift began.",
+   "ko": "오전 근무가 시작된 뒤로 큰 기계들이 굉음을 내고 있어요.",
+   "blank": "menderu",
+   "src": "made"
   }
  ],
  "w|mendesah": [
@@ -46008,6 +46408,22 @@
    "en": "All this time Ayu had ignored her gums, which often bled.",
    "ko": "아유는 그동안 자주 피가 나는 잇몸을 신경 쓰지 않았어요.",
    "blank": "mengacuhkan",
+   "src": "made"
+  }
+ ],
+ "w|mengada-ada": [
+  {
+   "text": "Menurut Eko, cerita tentang harimau di hutan itu cuma mengada-ada.",
+   "en": "According to Eko, the story about a tiger in that forest is just made up.",
+   "ko": "에코 말로는 그 숲에 호랑이가 있다는 얘기는 그냥 지어낸 거래요.",
+   "blank": "mengada-ada",
+   "src": "made"
+  },
+  {
+   "text": "Alasan pemasok soal keterlambatan barang terdengar mengada-ada bagi Ayu.",
+   "en": "The supplier's excuse for the late delivery sounded made up to Ayu.",
+   "ko": "납품이 늦은 데 대한 공급업체의 핑계가 아유에게는 지어낸 말처럼 들렸어요.",
+   "blank": "mengada-ada",
    "src": "made"
   }
  ],
@@ -47686,6 +48102,22 @@
    "en": "Dewi caught the smell of satay from the restaurant kitchen and instantly got hungry.",
    "ko": "데위는 식당 주방에서 나는 사테 냄새를 맡고 금세 배가 고파졌어요.",
    "blank": "mengendus",
+   "src": "made"
+  }
+ ],
+ "w|mengepak": [
+  {
+   "text": "Eko mengepak kopi hasil panen ke dalam karung goni.",
+   "en": "Eko packed the harvested coffee into burlap sacks.",
+   "ko": "에코는 수확한 커피를 마대 자루에 담았어요.",
+   "blank": "mengepak",
+   "src": "made"
+  },
+  {
+   "text": "Ayu mengepak kardus berisi sabun ke atas palet.",
+   "en": "Ayu packed boxes of soap onto the pallet.",
+   "ko": "아유는 비누가 든 상자를 팔레트 위에 포장해 쌓았어요.",
+   "blank": "mengepak",
    "src": "made"
   }
  ],
@@ -49504,6 +49936,22 @@
    "en": "Rina accidentally stepped on a cable and her colleague's laptop nearly fell.",
    "ko": "리나가 실수로 전선을 밟아서 동료의 노트북이 떨어질 뻔했어요.",
    "blank": "menginjak",
+   "src": "made"
+  }
+ ],
+ "w|menginjak-injak": [
+  {
+   "text": "Kerbau tetangga masuk ke kebun dan menginjak-injak bibit cabai Eko.",
+   "en": "The neighbor's water buffalo got into the garden and trampled Eko's chili seedlings.",
+   "ko": "이웃집 물소가 밭에 들어와 에코의 고추 모종을 마구 짓밟았어요.",
+   "blank": "menginjak-injak",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pekerja kesal sampai menginjak-injak kardus rusak di gudang.",
+   "en": "A worker got so annoyed that he stomped all over a damaged box in the warehouse.",
+   "ko": "한 직원은 화가 나서 창고에 있던 망가진 상자를 마구 밟았어요.",
+   "blank": "menginjak-injak",
    "src": "made"
   }
  ],
@@ -51763,6 +52211,22 @@
    "blank": "menonton"
   }
  ],
+ "w|menstabilkan": [
+  {
+   "text": "Eko memasang batu besar untuk menstabilkan tanah di pinggir ladang.",
+   "en": "Eko set big stones to stabilize the soil at the edge of the field.",
+   "ko": "에코는 밭 가장자리 흙이 무너지지 않게 큰 돌을 놓았어요.",
+   "blank": "menstabilkan",
+   "src": "made"
+  },
+  {
+   "text": "Teknisi menambah alat untuk menstabilkan tegangan listrik di ruang produksi.",
+   "en": "The technicians added a device to stabilize the voltage in the production room.",
+   "ko": "기술자들은 생산실 전압을 안정시키는 장치를 달았어요.",
+   "blank": "menstabilkan",
+   "src": "made"
+  }
+ ],
  "w|mental": [
   {
    "text": "Kesehatan mental sama pentingnya dengan tubuh.",
@@ -53307,6 +53771,22 @@
    "src": "made"
   }
  ],
+ "w|menyembelih": [
+  {
+   "text": "Warga menyembelih seekor kambing untuk syukuran panen.",
+   "en": "The villagers slaughtered a goat for the harvest thanksgiving.",
+   "ko": "주민들은 추수 감사 잔치를 위해 염소 한 마리를 잡았어요.",
+   "blank": "menyembelih",
+   "src": "made"
+  },
+  {
+   "text": "Ayu pernah meninjau pabrik daging yang menyembelih sapi di bawah pengawasan dokter hewan.",
+   "en": "Ayu once inspected a meat plant that slaughters cattle under a vet's supervision.",
+   "ko": "아유는 수의사 감독 아래 소를 도축하는 육가공 공장을 점검한 적이 있어요.",
+   "blank": "menyembelih",
+   "src": "made"
+  }
+ ],
  "w|menyembuhkan": [
   {
    "text": "Obat ini bisa menyembuhkan demam.",
@@ -53637,6 +54117,22 @@
    "en": "Regretting the past does not change anything.",
    "ko": "과거를 후회해도 아무것도 바뀌지 않아.",
    "blank": "Menyesali"
+  }
+ ],
+ "w|menyesalkan": [
+  {
+   "text": "Kepala desa menyesalkan penebangan pohon di lereng atas.",
+   "en": "The village head regretted the tree felling on the upper slopes.",
+   "ko": "이장은 위쪽 비탈의 벌목을 안타까워했어요.",
+   "blank": "menyesalkan",
+   "src": "made"
+  },
+  {
+   "text": "Direktur menyesalkan kecelakaan kecil di lini perakitan minggu lalu.",
+   "en": "The director expressed regret over the minor accident on the assembly line last week.",
+   "ko": "사장은 지난주 조립 라인에서 난 작은 사고를 유감스러워했어요.",
+   "blank": "menyesalkan",
+   "src": "made"
   }
  ],
  "w|menyesatkan": [
@@ -54283,6 +54779,22 @@
    "en": "That team achieved victory in the final.",
    "ko": "그 팀이 결승에서 승리를 거뒀어.",
    "blank": "meraih"
+  }
+ ],
+ "w|merak": [
+  {
+   "text": "Eko pernah melihat burung merak liar di hutan dekat desa.",
+   "en": "Eko once saw a wild peacock in the forest near the village.",
+   "ko": "에코는 마을 근처 숲에서 야생 공작새를 본 적이 있어요.",
+   "blank": "merak",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik tekstil itu terkenal dengan motif bulu merak pada kainnya.",
+   "en": "That textile factory is famous for the peacock-feather pattern on its fabric.",
+   "ko": "그 섬유 공장은 공작 깃털 무늬 천으로 유명해요.",
+   "blank": "merak",
+   "src": "made"
   }
  ],
  "w|merakit": [
@@ -55078,6 +55590,22 @@
    "en": "Intan's cat whined at the door until its food delivery arrived.",
    "ko": "인탄의 고양이는 사료 택배가 올 때까지 문 앞에서 낑낑댔어요.",
    "blank": "merintih",
+   "src": "made"
+  }
+ ],
+ "w|merkuri": [
+  {
+   "text": "Eko ikut menolak penambang emas yang memakai merkuri di sungai.",
+   "en": "Eko joined in opposing the gold miners who use mercury in the river.",
+   "ko": "에코는 강에서 수은을 쓰는 금 채굴꾼들에 반대하는 데 동참했어요.",
+   "blank": "merkuri",
+   "src": "made"
+  },
+  {
+   "text": "Lampu neon bekas yang berisi merkuri dikumpulkan Ayu di wadah khusus.",
+   "en": "Ayu collects used fluorescent tubes containing mercury in a special container.",
+   "ko": "아유는 수은이 든 다 쓴 형광등을 전용 통에 모아요.",
+   "blank": "merkuri",
    "src": "made"
   }
  ],
@@ -57338,6 +57866,22 @@
    "en": "The price labels on that shelf were all wrong, so Putri reprinted them all.",
    "ko": "그 선반의 가격표가 엉망이라 푸트리가 전부 다시 뽑았어요.",
    "blank": "ngawur",
+   "src": "made"
+  }
+ ],
+ "w|ngengat": [
+  {
+   "text": "Lampu teras rumah Eko selalu dikerubungi ngengat pada malam hari.",
+   "en": "The porch light at Eko's house is always swarmed by moths at night.",
+   "ko": "에코네 현관 불빛에는 밤마다 나방이 몰려들어요.",
+   "blank": "ngengat",
+   "src": "made"
+  },
+  {
+   "text": "Gudang kain itu disemprot rutin supaya tidak ada ngengat.",
+   "en": "The fabric warehouse is sprayed regularly so there are no moths.",
+   "ko": "그 원단 창고는 나방이 생기지 않게 정기적으로 약을 뿌려요.",
+   "blank": "ngengat",
    "src": "made"
   }
  ],
@@ -60091,6 +60635,22 @@
    "en": "An official gave a brief statement.",
    "ko": "관리가 짧은 설명을 해 줬어.",
    "blank": "pejabat"
+  }
+ ],
+ "w|pejantan": [
+  {
+   "text": "Warga desa patungan membeli sapi pejantan yang kuat.",
+   "en": "The villagers pooled money to buy a strong breeding bull.",
+   "ko": "마을 사람들은 돈을 모아 튼튼한 씨수소를 샀어요.",
+   "blank": "pejantan",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik pakan tempat Ayu bekerja membuat makanan khusus untuk ayam pejantan.",
+   "en": "The feed factory where Ayu works makes special food for roosters.",
+   "ko": "아유가 일하는 사료 공장은 수탉 전용 사료를 만들어요.",
+   "blank": "pejantan",
+   "src": "made"
   }
  ],
  "w|pejuang": [
@@ -69854,6 +70414,22 @@
    "en": "Putri writes the letter on plain paper without lines.",
    "ko": "푸트리는 줄 없는 흰 종이에 편지를 써요.",
    "blank": "polos",
+   "src": "made"
+  }
+ ],
+ "w|polusi": [
+  {
+   "text": "Udara desa itu bebas polusi, jadi banyak orang kota datang berlibur.",
+   "en": "The village air is free of pollution, so many city people come for holidays.",
+   "ko": "그 마을 공기는 오염이 없어서 도시 사람들이 많이 쉬러 와요.",
+   "blank": "polusi",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik memasang penyaring cerobong untuk mengurangi polusi udara.",
+   "en": "The factory installed chimney filters to reduce air pollution.",
+   "ko": "공장은 대기 오염을 줄이려고 굴뚝 필터를 달았어요.",
+   "blank": "polusi",
    "src": "made"
   }
  ],
@@ -81697,6 +82273,22 @@
    "src": "made"
   }
  ],
+ "w|tandus": [
+  {
+   "text": "Lereng sebelah timur gunung itu tandus karena jarang hujan.",
+   "en": "The eastern slope of that mountain is barren because it rarely rains.",
+   "ko": "그 산의 동쪽 비탈은 비가 드물어서 메말랐어요.",
+   "blank": "tandus",
+   "src": "made"
+  },
+  {
+   "text": "Pabrik itu dibangun di atas tanah tandus yang dulu tidak bisa ditanami.",
+   "en": "The factory was built on barren land that couldn't be farmed before.",
+   "ko": "그 공장은 예전에 농사를 지을 수 없던 메마른 땅 위에 지어졌어요.",
+   "blank": "tandus",
+   "src": "made"
+  }
+ ],
  "w|tangan": [
   {
    "text": "Cuci tangan dulu.",
@@ -83215,6 +83807,22 @@
    "blank": "terasa"
   }
  ],
+ "w|teratai": [
+  {
+   "text": "Kolam di depan balai desa penuh dengan bunga teratai.",
+   "en": "The pond in front of the village hall is full of lotus flowers.",
+   "ko": "마을 회관 앞 연못에는 연꽃이 가득해요.",
+   "blank": "teratai",
+   "src": "made"
+  },
+  {
+   "text": "Ayu menggambar motif teratai untuk kemasan sabun baru.",
+   "en": "Ayu drew a lotus pattern for the new soap packaging.",
+   "ko": "아유는 새 비누 포장에 넣을 연꽃 무늬를 그렸어요.",
+   "blank": "teratai",
+   "src": "made"
+  }
+ ],
  "w|teratas": [
   {
    "text": "Rudi menyimpan senter di kantong teratas ranselnya supaya mudah diambil.",
@@ -84305,6 +84913,22 @@
    "src": "made"
   }
  ],
+ "w|terik": [
+  {
+   "text": "Eko memetik kopi sebelum matahari terik.",
+   "en": "Eko picks coffee before the sun gets scorching.",
+   "ko": "에코는 햇볕이 뜨거워지기 전에 커피를 따요.",
+   "blank": "terik",
+   "src": "made"
+  },
+  {
+   "text": "Siang itu panas terik membuat gudang pabrik terasa seperti oven.",
+   "en": "That afternoon the blazing heat made the factory warehouse feel like an oven.",
+   "ko": "그날 오후 뙤약볕에 공장 창고가 오븐처럼 달아올랐어요.",
+   "blank": "terik",
+   "src": "made"
+  }
+ ],
  "w|terikat": [
   {
    "text": "Dia merasa terikat dengan janji itu.",
@@ -85098,6 +85722,22 @@
    "en": "Intan is the youngest child in her family and helps her mother in the kitchen the most.",
    "ko": "인탄은 집안의 막내라 엄마의 부엌일을 가장 자주 도와요.",
    "blank": "termuda",
+   "src": "made"
+  }
+ ],
+ "w|termudah": [
+  {
+   "text": "Jalan setapak lewat kebun teh adalah rute termudah menuju puncak.",
+   "en": "The footpath through the tea garden is the easiest route to the summit.",
+   "ko": "차밭을 지나는 오솔길이 정상으로 가는 가장 쉬운 길이에요.",
+   "blank": "termudah",
+   "src": "made"
+  },
+  {
+   "text": "Ayu mencari cara termudah untuk merapikan gudang bahan baku.",
+   "en": "Ayu is looking for the easiest way to tidy up the raw materials warehouse.",
+   "ko": "아유는 원자재 창고를 정리할 가장 쉬운 방법을 찾고 있어요.",
+   "blank": "termudah",
    "src": "made"
   }
  ],
