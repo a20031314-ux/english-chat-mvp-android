@@ -673,6 +673,22 @@
    "blank": "가을이"
   }
  ],
+ "w|가이드": [
+  {
+   "text": "단체 관광객의 가이드가 재원에게 방 배정표를 부탁했어요.",
+   "en": "The tour group's guide asked Jaewon for the room assignment list.",
+   "ko": "단체 관광객의 가이드가 재원에게 방 배정표를 부탁했어요.",
+   "blank": "가이드가",
+   "src": "made"
+  },
+  {
+   "text": "여행 가이드가 단체 손님을 데리고 소희의 빵집에 들렀어요.",
+   "en": "A tour guide stopped by Sohee's bakery with a group.",
+   "ko": "여행 가이드가 단체 손님을 데리고 소희의 빵집에 들렀어요.",
+   "blank": "가이드가",
+   "src": "made"
+  }
+ ],
  "w|가입하다": [
   {
    "text": "민수는 올해 시장 상인회에 가입했어요.",
@@ -3645,6 +3661,22 @@
    "blank": "게다가"
   }
  ],
+ "w|게스트하우스": [
+  {
+   "text": "혼자 여행하는 젊은 사람들은 호텔보다 게스트하우스를 더 찾기도 해요.",
+   "en": "Young people traveling alone sometimes look for guesthouses more than hotels.",
+   "ko": "혼자 여행하는 젊은 사람들은 호텔보다 게스트하우스를 더 찾기도 해요.",
+   "blank": "게스트하우스를",
+   "src": "made"
+  },
+  {
+   "text": "근처 게스트하우스 사장님이 아침마다 크루아상을 한 봉지씩 사 가요.",
+   "en": "The owner of a nearby guesthouse buys a bag of croissants every morning.",
+   "ko": "근처 게스트하우스 사장님이 아침마다 크루아상을 한 봉지씩 사 가요.",
+   "blank": "게스트하우스",
+   "src": "made"
+  }
+ ],
  "w|게시물": [
   {
    "text": "가짜 뉴스 게시물이 퍼지자 경민은 사실 확인 기사를 급히 썼어요.",
@@ -4123,6 +4155,22 @@
    "src": "made"
   }
  ],
+ "w|결항": [
+  {
+   "text": "태풍으로 결항 소식이 들리자 손님들이 하루 더 묵겠다고 했어요.",
+   "en": "When news of cancelled flights came because of the typhoon, guests said they would stay one more night.",
+   "ko": "태풍으로 결항 소식이 들리자 손님들이 하루 더 묵겠다고 했어요.",
+   "blank": "결항",
+   "src": "made"
+  },
+  {
+   "text": "섬에서 열리는 빵 축제에 가려던 소희는 비행기 결항으로 발이 묶였어요.",
+   "en": "Sohee, who was heading to a bread festival on an island, got stuck when her flight was cancelled.",
+   "ko": "섬에서 열리는 빵 축제에 가려던 소희는 비행기 결항으로 발이 묶였어요.",
+   "blank": "결항으로",
+   "src": "made"
+  }
+ ],
  "w|결혼": [
   {
    "text": "결혼 날짜 잡았어?",
@@ -4483,6 +4531,22 @@
    "en": "Cases like that are rare.",
    "ko": "그런 경우는 드물어.",
    "blank": "경우는"
+  }
+ ],
+ "w|경유": [
+  {
+   "text": "그 손님은 경유 항공편을 타고 오느라 꼬박 하루가 걸렸대요.",
+   "en": "That guest said it took a whole day because he came on a connecting flight.",
+   "ko": "그 손님은 경유 항공편을 타고 오느라 꼬박 하루가 걸렸대요.",
+   "blank": "경유",
+   "src": "made"
+  },
+  {
+   "text": "경유 가격이 오르자 밀가루 배달비도 덩달아 올랐어요.",
+   "en": "When diesel prices went up, the flour delivery fee went up along with them.",
+   "ko": "경유 가격이 오르자 밀가루 배달비도 덩달아 올랐어요.",
+   "blank": "경유",
+   "src": "made"
   }
  ],
  "w|경의": [
@@ -6769,6 +6833,22 @@
    "en": "The airport is really big.",
    "ko": "공항이 아주 넓어.",
    "blank": "공항이"
+  }
+ ],
+ "w|공해": [
+  {
+   "text": "공해가 심한 도시에서 온 손님들은 이 호텔의 맑은 공기를 좋아해요.",
+   "en": "Guests from cities with heavy pollution love the clean air at this hotel.",
+   "ko": "공해가 심한 도시에서 온 손님들은 이 호텔의 맑은 공기를 좋아해요.",
+   "blank": "공해가",
+   "src": "made"
+  },
+  {
+   "text": "큰길 차들이 내뿜는 공해 때문에 소희는 빵 진열대를 가게 안쪽으로 옮겼어요.",
+   "en": "Because of the pollution from cars on the main road, Sohee moved the bread display further inside.",
+   "ko": "큰길 차들이 내뿜는 공해 때문에 소희는 빵 진열대를 가게 안쪽으로 옮겼어요.",
+   "blank": "공해",
+   "src": "made"
   }
  ],
  "w|공허": [
@@ -11871,6 +11951,22 @@
    "src": "made"
   }
  ],
+ "w|기후변화": [
+  {
+   "text": "기후변화 때문인지 요즘은 가을에도 에어컨을 틀어 달라는 손님이 많아요.",
+   "en": "Maybe because of climate change, lots of guests ask for the air conditioning even in autumn these days.",
+   "ko": "기후변화 때문인지 요즘은 가을에도 에어컨을 틀어 달라는 손님이 많아요.",
+   "blank": "기후변화",
+   "src": "made"
+  },
+  {
+   "text": "소희는 기후변화로 밀 농사가 점점 어려워진다는 기사를 읽었어요.",
+   "en": "Sohee read an article saying wheat farming is getting harder because of climate change.",
+   "ko": "소희는 기후변화로 밀 농사가 점점 어려워진다는 기사를 읽었어요.",
+   "blank": "기후변화로",
+   "src": "made"
+  }
+ ],
  "w|긴급하다": [
   {
    "text": "교장 선생님은 긴급한 일로 수업 중에 방송을 하셨어요.",
@@ -11989,6 +12085,22 @@
    "en": "My hair has gotten quite long.",
    "ko": "머리가 많이 길었어요.",
    "blank": "길었어요"
+  }
+ ],
+ "w|길안내": [
+  {
+   "text": "지도 앱 길안내가 가끔 엉뚱한 골목으로 보내서 재원은 종이 지도도 챙겨 드려요.",
+   "en": "The map app's directions sometimes send people down the wrong alley, so Jaewon also gives out paper maps.",
+   "ko": "지도 앱 길안내가 가끔 엉뚱한 골목으로 보내서 재원은 종이 지도도 챙겨 드려요.",
+   "blank": "길안내가",
+   "src": "made"
+  },
+  {
+   "text": "배달 앱 길안내를 따라가던 소희는 좁은 골목에서 길을 잃었어요.",
+   "en": "Following the delivery app's directions, Sohee got lost in a narrow alley.",
+   "ko": "배달 앱 길안내를 따라가던 소희는 좁은 골목에서 길을 잃었어요.",
+   "blank": "길안내를",
+   "src": "made"
   }
  ],
  "w|길어지다": [
@@ -14505,6 +14617,22 @@
    "en": "I was rushed trying to send out the report.",
    "ko": "보고서를 내보내다 못해 급했어.",
    "blank": "내보내다"
+  }
+ ],
+ "w|내비게이션": [
+  {
+   "text": "재원은 렌터카 내비게이션에 다음 목적지 주소를 입력해 드렸어요.",
+   "en": "Jaewon entered the next destination's address into the rental car's navigation.",
+   "ko": "재원은 렌터카 내비게이션에 다음 목적지 주소를 입력해 드렸어요.",
+   "blank": "내비게이션에",
+   "src": "made"
+  },
+  {
+   "text": "소희의 배달 차는 내비게이션이 오래돼서 새로 난 길을 몰라요.",
+   "en": "The navigation in Sohee's delivery van is old, so it doesn't know the new roads.",
+   "ko": "소희의 배달 차는 내비게이션이 오래돼서 새로 난 길을 몰라요.",
+   "blank": "내비게이션이",
+   "src": "made"
   }
  ],
  "w|내성적": [
@@ -23391,6 +23519,22 @@
    "src": "made"
   }
  ],
+ "w|리조트": [
+  {
+   "text": "재원은 언젠가 남쪽 섬의 큰 리조트에서 일해 보고 싶대요.",
+   "en": "Jaewon says he wants to work at a big resort on a southern island someday.",
+   "ko": "재원은 언젠가 남쪽 섬의 큰 리조트에서 일해 보고 싶대요.",
+   "blank": "리조트에서",
+   "src": "made"
+  },
+  {
+   "text": "소희는 매주 리조트 카페에 식빵을 납품해요.",
+   "en": "Sohee supplies sandwich bread to a resort café every week.",
+   "ko": "소희는 매주 리조트 카페에 식빵을 납품해요.",
+   "blank": "리조트",
+   "src": "made"
+  }
+ ],
  "w|린스": [
   {
    "text": "샤워를 하려던 현우는 욕실에 샴푸만 있고 린스가 없는 걸 알았어요.",
@@ -25103,6 +25247,22 @@
    "src": "made"
   }
  ],
+ "w|매출": [
+  {
+   "text": "올여름 호텔 매출이 크게 늘어서 재원도 보너스를 받았어요.",
+   "en": "The hotel's sales grew a lot this summer, so Jaewon got a bonus too.",
+   "ko": "올여름 호텔 매출이 크게 늘어서 재원도 보너스를 받았어요.",
+   "blank": "매출이",
+   "src": "made"
+  },
+  {
+   "text": "크리스마스 케이크 덕분에 소희의 빵집은 십이월 매출이 가장 높아요.",
+   "en": "Thanks to Christmas cakes, Sohee's bakery has its highest sales in December.",
+   "ko": "크리스마스 케이크 덕분에 소희의 빵집은 십이월 매출이 가장 높아요.",
+   "blank": "매출이",
+   "src": "made"
+  }
+ ],
  "w|매트": [
   {
    "text": "민수는 아랫집에 소리가 덜 나도록 거실에 매트를 깔았어요.",
@@ -25132,6 +25292,22 @@
    "en": "Jiyoung wanted to learn how to choose a bed, so she borrowed a book about mattresses.",
    "ko": "지영은 침대 고르는 법을 알고 싶어서 매트리스에 관한 책을 빌렸어요.",
    "blank": "매트리스에",
+   "src": "made"
+  }
+ ],
+ "w|매표소": [
+  {
+   "text": "재원은 손님 대신 박물관 매표소에 전화해서 입장권을 예약했어요.",
+   "en": "Jaewon called the museum ticket office on the guest's behalf and reserved tickets.",
+   "ko": "재원은 손님 대신 박물관 매표소에 전화해서 입장권을 예약했어요.",
+   "blank": "매표소에",
+   "src": "made"
+  },
+  {
+   "text": "기차역 매표소 옆 편의점에서도 소희의 빵을 팔아요.",
+   "en": "The convenience store next to the train station ticket office sells Sohee's bread too.",
+   "ko": "기차역 매표소 옆 편의점에서도 소희의 빵을 팔아요.",
+   "blank": "매표소",
    "src": "made"
   }
  ],
@@ -25719,6 +25895,22 @@
    "en": "I got nervous before the interview.",
    "ko": "면담을 앞두고 긴장됐어.",
    "blank": "면담을"
+  }
+ ],
+ "w|면세점": [
+  {
+   "text": "재원은 손님에게 공항 면세점이 몇 시까지 여는지 찾아봐 줬어요.",
+   "en": "Jaewon looked up for a guest how late the airport duty-free shop is open.",
+   "ko": "재원은 손님에게 공항 면세점이 몇 시까지 여는지 찾아봐 줬어요.",
+   "blank": "면세점이",
+   "src": "made"
+  },
+  {
+   "text": "공항 면세점에 소희네 버터 쿠키가 들어가게 됐어요.",
+   "en": "Sohee's butter cookies are going to be sold at the airport duty-free shop.",
+   "ko": "공항 면세점에 소희네 버터 쿠키가 들어가게 됐어요.",
+   "blank": "면세점에",
+   "src": "made"
   }
  ],
  "w|면역": [
@@ -28597,6 +28789,22 @@
    "src": "made"
   }
  ],
+ "w|민박": [
+  {
+   "text": "재원은 호텔에 오기 전에 시골에서 부모님과 민박을 운영했어요.",
+   "en": "Before coming to the hotel, Jaewon ran a guesthouse in the countryside with his parents.",
+   "ko": "재원은 호텔에 오기 전에 시골에서 부모님과 민박을 운영했어요.",
+   "blank": "민박을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 시골 민박에서 맛본 쑥떡을 떠올리며 쑥빵을 만들어 봤어요.",
+   "en": "Remembering the mugwort rice cake she tasted at a country guesthouse, Sohee tried making mugwort bread.",
+   "ko": "소희는 시골 민박에서 맛본 쑥떡을 떠올리며 쑥빵을 만들어 봤어요.",
+   "blank": "민박에서",
+   "src": "made"
+  }
+ ],
  "w|민족": [
   {
    "text": "다양한 민족이 함께 살아.",
@@ -30607,6 +30815,22 @@
    "blank": "배추가"
   }
  ],
+ "w|배출": [
+  {
+   "text": "호텔은 탄소 배출을 줄이려고 주차장에 전기차 충전기를 설치했어요.",
+   "en": "To cut carbon emissions, the hotel installed electric car chargers in the parking lot.",
+   "ko": "호텔은 탄소 배출을 줄이려고 주차장에 전기차 충전기를 설치했어요.",
+   "blank": "배출을",
+   "src": "made"
+  },
+  {
+   "text": "환풍기가 낡아서 오븐 열기 배출이 잘 안 되니 소희네 주방은 늘 더워요.",
+   "en": "The fan is old and the oven heat doesn't vent well, so Sohee's kitchen is always hot.",
+   "ko": "환풍기가 낡아서 오븐 열기 배출이 잘 안 되니 소희네 주방은 늘 더워요.",
+   "blank": "배출이",
+   "src": "made"
+  }
+ ],
  "w|배치하다": [
   {
    "text": "경민은 동생과 같이 쓰는 방의 책상을 다시 배치했어요.",
@@ -32300,6 +32524,22 @@
    "en": "At first, Mikyung only did assistant work next to the owner.",
    "ko": "미경은 처음엔 사장님 옆에서 보조 일만 했어요.",
    "blank": "보조",
+   "src": "made"
+  }
+ ],
+ "w|보존": [
+  {
+   "text": "로비에 걸린 오래된 샹들리에는 보존 상태가 아주 좋아요.",
+   "en": "The old chandelier hanging in the lobby is very well preserved.",
+   "ko": "로비에 걸린 오래된 샹들리에는 보존 상태가 아주 좋아요.",
+   "blank": "보존",
+   "src": "made"
+  },
+  {
+   "text": "소희는 할머니에게 물려받은 천연 효모의 보존에 신경을 많이 써요.",
+   "en": "Sohee takes great care in preserving the natural yeast she inherited from her grandmother.",
+   "ko": "소희는 할머니에게 물려받은 천연 효모의 보존에 신경을 많이 써요.",
+   "blank": "보존에",
    "src": "made"
   }
  ],
@@ -42723,6 +42963,22 @@
    "blank": "수필"
   }
  ],
+ "w|수하물": [
+  {
+   "text": "재원은 무거운 수하물을 객실까지 옮겨 드렸어요.",
+   "en": "Jaewon carried the heavy luggage all the way to the room.",
+   "ko": "재원은 무거운 수하물을 객실까지 옮겨 드렸어요.",
+   "blank": "수하물을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 수하물에 밀가루 봉지를 넣었다가 공항에서 가방 검사를 받았어요.",
+   "en": "Sohee put a bag of flour in her checked luggage and had her bag inspected at the airport.",
+   "ko": "소희는 수하물에 밀가루 봉지를 넣었다가 공항에서 가방 검사를 받았어요.",
+   "blank": "수하물에",
+   "src": "made"
+  }
+ ],
  "w|수학": [
   {
    "text": "수학 시험이 어려웠어.",
@@ -42795,6 +43051,22 @@
    "en": "I thanked my aunt.",
    "ko": "숙모께 감사 인사를 했어.",
    "blank": "숙모께"
+  }
+ ],
+ "w|숙박": [
+  {
+   "text": "숙박 요금에 아침 식사가 포함되냐는 질문을 재원은 하루에도 여러 번 들어요.",
+   "en": "Jaewon hears the question of whether breakfast is included in the room rate several times a day.",
+   "ko": "숙박 요금에 아침 식사가 포함되냐는 질문을 재원은 하루에도 여러 번 들어요.",
+   "blank": "숙박",
+   "src": "made"
+  },
+  {
+   "text": "지방 박람회에 나갈 때 소희는 숙박 비용이 제일 부담스러워요.",
+   "en": "When Sohee goes to fairs in other regions, the lodging cost is the biggest burden.",
+   "ko": "지방 박람회에 나갈 때 소희는 숙박 비용이 제일 부담스러워요.",
+   "blank": "숙박",
+   "src": "made"
   }
  ],
  "w|숙소": [
@@ -43782,6 +44054,22 @@
    "en": "In social studies, Seoyeon learned about company promotion systems.",
    "ko": "서연은 사회 시간에 회사의 승진 제도에 대해 배웠어요.",
    "blank": "승진",
+   "src": "made"
+  }
+ ],
+ "w|승차": [
+  {
+   "text": "공항 셔틀 승차 위치는 호텔 정문 앞이에요.",
+   "en": "The pickup spot for the airport shuttle is in front of the hotel's main gate.",
+   "ko": "공항 셔틀 승차 위치는 호텔 정문 앞이에요.",
+   "blank": "승차",
+   "src": "made"
+  },
+  {
+   "text": "버스 승차 전에 빵을 사려는 학생들로 아침마다 줄이 길어요.",
+   "en": "Every morning there's a long line of students wanting to buy bread before getting on the bus.",
+   "ko": "버스 승차 전에 빵을 사려는 학생들로 아침마다 줄이 길어요.",
+   "blank": "승차",
    "src": "made"
   }
  ],
@@ -47792,6 +48080,22 @@
    "en": "Mikyung personally gave the visiting students a tour of the farm.",
    "ko": "미경은 체험 학생들에게 농장 안내를 직접 해 줬어요.",
    "blank": "안내를",
+   "src": "made"
+  }
+ ],
+ "w|안내소": [
+  {
+   "text": "재원은 역 앞 관광 안내소에서 시내 지도를 한 아름 받아 왔어요.",
+   "en": "Jaewon brought back an armful of city maps from the tourist information center in front of the station.",
+   "ko": "재원은 역 앞 관광 안내소에서 시내 지도를 한 아름 받아 왔어요.",
+   "blank": "안내소에서",
+   "src": "made"
+  },
+  {
+   "text": "시청 관광 안내소에서 소희네 빵집 할인 쿠폰을 나눠 줘요.",
+   "en": "The tourist information center at city hall hands out discount coupons for Sohee's bakery.",
+   "ko": "시청 관광 안내소에서 소희네 빵집 할인 쿠폰을 나눠 줘요.",
+   "blank": "안내소에서",
    "src": "made"
   }
  ],
@@ -52145,6 +52449,22 @@
    "src": "made"
   }
  ],
+ "w|연착": [
+  {
+   "text": "비행기 연착으로 손님들이 밤늦게 도착해서 재원은 야근을 했어요.",
+   "en": "Guests arrived late at night because of a delayed flight, so Jaewon worked overtime.",
+   "ko": "비행기 연착으로 손님들이 밤늦게 도착해서 재원은 야근을 했어요.",
+   "blank": "연착으로",
+   "src": "made"
+  },
+  {
+   "text": "소희는 기차 연착 때문에 제빵 대회에 늦을 뻔했어요.",
+   "en": "Sohee almost missed the baking contest because her train was late.",
+   "ko": "소희는 기차 연착 때문에 제빵 대회에 늦을 뻔했어요.",
+   "blank": "연착",
+   "src": "made"
+  }
+ ],
  "w|연초": [
   {
    "text": "연초에는 계획이 많아.",
@@ -53623,6 +53943,22 @@
    "en": "All sorts of things are mixed in the drawer.",
    "ko": "서랍에 온갖 물건이 뒤섞여 있어.",
    "blank": "온갖"
+  }
+ ],
+ "w|온난화": [
+  {
+   "text": "온난화로 눈이 덜 내려서 호텔 스키 패키지를 찾는 손님이 줄었어요.",
+   "en": "Because of global warming there is less snow, so fewer guests look for the hotel's ski package.",
+   "ko": "온난화로 눈이 덜 내려서 호텔 스키 패키지를 찾는 손님이 줄었어요.",
+   "blank": "온난화로",
+   "src": "made"
+  },
+  {
+   "text": "온난화 때문에 여름이 길어져서 생크림 케이크가 금방 녹아요.",
+   "en": "Because of global warming, summers are longer, so whipped-cream cakes melt quickly.",
+   "ko": "온난화 때문에 여름이 길어져서 생크림 케이크가 금방 녹아요.",
+   "blank": "온난화",
+   "src": "made"
   }
  ],
  "w|온도": [
@@ -55885,6 +56221,22 @@
    "blank": "원인인"
   }
  ],
+ "w|원자력": [
+  {
+   "text": "재원은 원자력 발전소를 견학하러 온 단체 손님들을 맞이했어요.",
+   "en": "Jaewon welcomed a group of guests who came to tour a nuclear power plant.",
+   "ko": "재원은 원자력 발전소를 견학하러 온 단체 손님들을 맞이했어요.",
+   "blank": "원자력",
+   "src": "made"
+  },
+  {
+   "text": "라디오에서 원자력 발전 이야기가 나오자 손님들이 빵을 고르다 말고 귀를 기울였어요.",
+   "en": "When a story about nuclear power came on the radio, the customers stopped picking bread and listened.",
+   "ko": "라디오에서 원자력 발전 이야기가 나오자 손님들이 빵을 고르다 말고 귀를 기울였어요.",
+   "blank": "원자력",
+   "src": "made"
+  }
+ ],
  "w|원작": [
   {
    "text": "동민은 영화를 본 뒤 원작 소설도 도서관에서 빌렸어요.",
@@ -56798,6 +57150,22 @@
    "en": "This film is a cheerful comedy that's good for families to watch together.",
    "ko": "이번 영화는 가족이 함께 보기 좋은 유쾌한 코미디예요.",
    "blank": "유쾌한",
+   "src": "made"
+  }
+ ],
+ "w|유통": [
+  {
+   "text": "호텔 식재료는 큰 유통 회사를 거쳐 매일 들어와요.",
+   "en": "The hotel's ingredients come in every day through a large distribution company.",
+   "ko": "호텔 식재료는 큰 유통 회사를 거쳐 매일 들어와요.",
+   "blank": "유통",
+   "src": "made"
+  },
+  {
+   "text": "소희는 밀가루 유통 과정이 복잡해서 값이 자꾸 오른다고 투덜댔어요.",
+   "en": "Sohee grumbled that flour prices keep rising because the distribution process is complicated.",
+   "ko": "소희는 밀가루 유통 과정이 복잡해서 값이 자꾸 오른다고 투덜댔어요.",
+   "blank": "유통",
    "src": "made"
   }
  ],
@@ -61117,6 +61485,22 @@
    "src": "made"
   }
  ],
+ "w|자본": [
+  {
+   "text": "새 투자자의 자본이 들어오면서 호텔 수영장을 새로 고쳤어요.",
+   "en": "With capital from a new investor, the hotel renovated its pool.",
+   "ko": "새 투자자의 자본이 들어오면서 호텔 수영장을 새로 고쳤어요.",
+   "blank": "자본이",
+   "src": "made"
+  },
+  {
+   "text": "소희는 아직 자본이 부족해서 두 번째 가게는 꿈만 꾸고 있어요.",
+   "en": "Sohee still lacks capital, so a second shop is only a dream for now.",
+   "ko": "소희는 아직 자본이 부족해서 두 번째 가게는 꿈만 꾸고 있어요.",
+   "blank": "자본이",
+   "src": "made"
+  }
+ ],
  "w|자부심": [
   {
    "text": "경민은 동생이 상을 받았을 때 형으로서 자부심을 느꼈어요.",
@@ -63640,6 +64024,22 @@
    "en": "The friend who came back from abroad is readjusting to life in Korea.",
    "ko": "외국에서 돌아온 친구는 한국 생활에 다시 적응하는 중이에요.",
    "blank": "적응하는",
+   "src": "made"
+  }
+ ],
+ "w|적자": [
+  {
+   "text": "몇 해 전 손님이 뚝 끊겨서 호텔이 적자를 봤을 때 재원은 마음고생이 심했어요.",
+   "en": "A few years ago, when guests stopped coming and the hotel ran a deficit, Jaewon went through a lot of stress.",
+   "ko": "몇 해 전 손님이 뚝 끊겨서 호텔이 적자를 봤을 때 재원은 마음고생이 심했어요.",
+   "blank": "적자를",
+   "src": "made"
+  },
+  {
+   "text": "버터값이 너무 올라서 소희의 빵집은 지난달에 적자를 냈어요.",
+   "en": "Butter prices rose so much that Sohee's bakery ran a deficit last month.",
+   "ko": "버터값이 너무 올라서 소희의 빵집은 지난달에 적자를 냈어요.",
+   "blank": "적자를",
    "src": "made"
   }
  ],
@@ -68333,6 +68733,22 @@
    "blank": "증거"
   }
  ],
+ "w|증권": [
+  {
+   "text": "재원은 아침마다 증권 뉴스를 확인하는 손님에게 신문을 가져다줘요.",
+   "en": "Every morning Jaewon brings a newspaper to the guest who checks the stock market news.",
+   "ko": "재원은 아침마다 증권 뉴스를 확인하는 손님에게 신문을 가져다줘요.",
+   "blank": "증권",
+   "src": "made"
+  },
+  {
+   "text": "소희의 빵집 단골 중에는 증권 회사에 다니는 손님이 꽤 많아요.",
+   "en": "Among the regulars at Sohee's bakery, quite a few work at securities firms.",
+   "ko": "소희의 빵집 단골 중에는 증권 회사에 다니는 손님이 꽤 많아요.",
+   "blank": "증권",
+   "src": "made"
+  }
+ ],
  "w|증명": [
   {
    "text": "신분을 증명할 서류가 필요해.",
@@ -69064,6 +69480,22 @@
    "en": "Haeun feels sorry that regional culture like dialects is disappearing.",
    "ko": "하은은 사투리 같은 지역적인 문화가 사라지는 걸 안타까워해요.",
    "blank": "지역적인",
+   "src": "made"
+  }
+ ],
+ "w|지연": [
+  {
+   "text": "셔틀버스 지연이 길어지자 재원은 기다리는 손님들에게 커피를 대접했어요.",
+   "en": "When the shuttle bus delay dragged on, Jaewon served coffee to the waiting guests.",
+   "ko": "셔틀버스 지연이 길어지자 재원은 기다리는 손님들에게 커피를 대접했어요.",
+   "blank": "지연이",
+   "src": "made"
+  },
+  {
+   "text": "택배 지연으로 새 오븐이 일주일이나 늦게 도착했어요.",
+   "en": "Because of a delivery delay, the new oven arrived a whole week late.",
+   "ko": "택배 지연으로 새 오븐이 일주일이나 늦게 도착했어요.",
+   "blank": "지연으로",
    "src": "made"
   }
  ],
@@ -72749,6 +73181,38 @@
    "blank": "체중을"
   }
  ],
+ "w|체크아웃": [
+  {
+   "text": "재원은 체크아웃은 열한 시까지라고 손님에게 다시 한번 알려 드렸어요.",
+   "en": "Jaewon reminded the guest once more that check-out is by eleven.",
+   "ko": "재원은 체크아웃은 열한 시까지라고 손님에게 다시 한번 알려 드렸어요.",
+   "blank": "체크아웃은",
+   "src": "made"
+  },
+  {
+   "text": "체크아웃을 마친 여행자들이 기차 시간까지 빵집에서 쉬어 가요.",
+   "en": "Travelers who have checked out rest at the bakery until their train.",
+   "ko": "체크아웃을 마친 여행자들이 기차 시간까지 빵집에서 쉬어 가요.",
+   "blank": "체크아웃을",
+   "src": "made"
+  }
+ ],
+ "w|체크인": [
+  {
+   "text": "오후 세 시가 되자 체크인 줄이 로비 밖까지 이어졌어요.",
+   "en": "At three in the afternoon, the check-in line stretched outside the lobby.",
+   "ko": "오후 세 시가 되자 체크인 줄이 로비 밖까지 이어졌어요.",
+   "blank": "체크인",
+   "src": "made"
+  },
+  {
+   "text": "호텔 체크인 전에 시간이 남은 관광객들이 소희네 빵을 잔뜩 사 갔어요.",
+   "en": "Tourists with time to kill before hotel check-in bought loads of Sohee's bread.",
+   "ko": "호텔 체크인 전에 시간이 남은 관광객들이 소희네 빵을 잔뜩 사 갔어요.",
+   "blank": "체크인",
+   "src": "made"
+  }
+ ],
  "w|체포": [
   {
    "text": "용의자가 새벽에 체포됐어.",
@@ -75013,6 +75477,22 @@
    "src": "made"
   }
  ],
+ "w|캐리어": [
+  {
+   "text": "손님의 캐리어 바퀴가 부서져서 재원이 근처 수선집을 알려 줬어요.",
+   "en": "A guest's suitcase wheel broke, so Jaewon told her about a repair shop nearby.",
+   "ko": "손님의 캐리어 바퀴가 부서져서 재원이 근처 수선집을 알려 줬어요.",
+   "blank": "캐리어",
+   "src": "made"
+  },
+  {
+   "text": "소희는 명절에 캐리어에 직접 구운 빵을 가득 담아 부모님 댁에 갔어요.",
+   "en": "For the holidays, Sohee filled a suitcase with bread she baked and went to her parents' house.",
+   "ko": "소희는 명절에 캐리어에 직접 구운 빵을 가득 담아 부모님 댁에 갔어요.",
+   "blank": "캐리어에",
+   "src": "made"
+  }
+ ],
  "w|캠퍼스": [
   {
    "text": "봄이면 캠퍼스가 예뻐져.",
@@ -75879,6 +76359,22 @@
    "src": "made"
   }
  ],
+ "w|탄소": [
+  {
+   "text": "호텔은 탄소 배출을 줄이려고 주차장에 전기차 충전기를 설치했어요.",
+   "en": "To cut carbon emissions, the hotel installed electric car chargers in the parking lot.",
+   "ko": "호텔은 탄소 배출을 줄이려고 주차장에 전기차 충전기를 설치했어요.",
+   "blank": "탄소",
+   "src": "made"
+  },
+  {
+   "text": "소희는 탄소를 덜 내려고 가까운 곳은 자전거로 배달해요.",
+   "en": "To produce less carbon, Sohee delivers to nearby places by bicycle.",
+   "ko": "소희는 탄소를 덜 내려고 가까운 곳은 자전거로 배달해요.",
+   "blank": "탄소를",
+   "src": "made"
+  }
+ ],
  "w|탄수화물": [
   {
    "text": "요즘 탄수화물을 줄이고 있는 민수는 떡 가게를 그냥 지나쳤어요.",
@@ -76111,6 +76607,22 @@
    "blank": "태양"
   }
  ],
+ "w|태양열": [
+  {
+   "text": "호텔 옥상에는 태양열로 물을 데우는 장치가 있어요.",
+   "en": "On the hotel roof there is a device that heats water with solar heat.",
+   "ko": "호텔 옥상에는 태양열로 물을 데우는 장치가 있어요.",
+   "blank": "태양열로",
+   "src": "made"
+  },
+  {
+   "text": "소희는 가게 지붕에 태양열 온수기를 달아서 설거지 물을 데워요.",
+   "en": "Sohee put a solar water heater on the shop roof to warm the dishwashing water.",
+   "ko": "소희는 가게 지붕에 태양열 온수기를 달아서 설거지 물을 데워요.",
+   "blank": "태양열",
+   "src": "made"
+  }
+ ],
  "w|태어나다": [
   {
    "text": "봄에 아기가 태어났어.",
@@ -76195,6 +76707,22 @@
    "en": "The taxi came quickly.",
    "ko": "택시가 빨리 왔어.",
    "blank": "택시가"
+  }
+ ],
+ "w|택시기사": [
+  {
+   "text": "재원은 손님이 택시에 두고 내린 지갑을 택시기사에게 받아서 돌려줬어요.",
+   "en": "Jaewon got the wallet a guest left in a taxi back from the driver and returned it.",
+   "ko": "재원은 손님이 택시에 두고 내린 지갑을 택시기사에게 받아서 돌려줬어요.",
+   "blank": "택시기사에게",
+   "src": "made"
+  },
+  {
+   "text": "단골 택시기사가 소희에게 새벽에 찾아갈 빵을 미리 예약했어요.",
+   "en": "A regular taxi driver reserved bread with Sohee to pick up at dawn.",
+   "ko": "단골 택시기사가 소희에게 새벽에 찾아갈 빵을 미리 예약했어요.",
+   "blank": "택시기사가",
+   "src": "made"
   }
  ],
  "w|터널": [
@@ -78065,6 +78593,22 @@
    "blank": "펜"
   }
  ],
+ "w|펜션": [
+  {
+   "text": "재원의 형은 바닷가에서 작은 펜션을 하고 있어요.",
+   "en": "Jaewon's older brother runs a small pension by the sea.",
+   "ko": "재원의 형은 바닷가에서 작은 펜션을 하고 있어요.",
+   "blank": "펜션을",
+   "src": "made"
+  },
+  {
+   "text": "계곡 펜션 사장님이 바비큐용 모닝빵을 잔뜩 주문했어요.",
+   "en": "The owner of a valley pension ordered a lot of dinner rolls for barbecues.",
+   "ko": "계곡 펜션 사장님이 바비큐용 모닝빵을 잔뜩 주문했어요.",
+   "blank": "펜션",
+   "src": "made"
+  }
+ ],
  "w|펭귄": [
   {
    "text": "태윤의 오리들이 줄지어 걷는 모습은 꼭 펭귄 같아요.",
@@ -78956,6 +79500,22 @@
    "en": "Carry-on bags must not exceed the standard size.",
    "ko": "기내 반입 가방은 표준 크기를 넘으면 안 돼요.",
    "blank": "표준",
+   "src": "made"
+  }
+ ],
+ "w|표지판": [
+  {
+   "text": "호텔 입구 표지판이 너무 작아서 손님들이 자꾸 그냥 지나쳐요.",
+   "en": "The sign at the hotel entrance is so small that guests keep walking right past.",
+   "ko": "호텔 입구 표지판이 너무 작아서 손님들이 자꾸 그냥 지나쳐요.",
+   "blank": "표지판이",
+   "src": "made"
+  },
+  {
+   "text": "소희는 가게 앞에 갓 구운 빵이 나왔다는 표지판을 세웠어요.",
+   "en": "Sohee put up a sign in front of the shop saying fresh bread is out.",
+   "ko": "소희는 가게 앞에 갓 구운 빵이 나왔다는 표지판을 세웠어요.",
+   "blank": "표지판을",
    "src": "made"
   }
  ],
@@ -79931,6 +80491,22 @@
    "en": "But I don't know.",
    "ko": "하지만 몰라.",
    "blank": "하지만"
+  }
+ ],
+ "w|하차": [
+  {
+   "text": "공항버스 하차 지점에서 호텔까지는 걸어서 오 분이면 돼요.",
+   "en": "From the airport bus drop-off point, it's just a five-minute walk to the hotel.",
+   "ko": "공항버스 하차 지점에서 호텔까지는 걸어서 오 분이면 돼요.",
+   "blank": "하차",
+   "src": "made"
+  },
+  {
+   "text": "하차 벨을 누르고 내린 할머니가 곧장 소희의 빵집으로 들어왔어요.",
+   "en": "An old woman who pressed the stop bell and got off came straight into Sohee's bakery.",
+   "ko": "하차 벨을 누르고 내린 할머니가 곧장 소희의 빵집으로 들어왔어요.",
+   "blank": "하차",
+   "src": "made"
   }
  ],
  "w|하찮다": [
@@ -82167,6 +82743,22 @@
    "src": "krdict"
   }
  ],
+ "w|현지인": [
+  {
+   "text": "재원은 현지인만 아는 국숫집을 손님에게 몰래 추천했어요.",
+   "en": "Jaewon quietly recommended a noodle place only locals know about.",
+   "ko": "재원은 현지인만 아는 국숫집을 손님에게 몰래 추천했어요.",
+   "blank": "현지인만",
+   "src": "made"
+  },
+  {
+   "text": "소희의 빵집은 현지인이 추천하는 맛집으로 잡지에 소개됐어요.",
+   "en": "Sohee's bakery was featured in a magazine as a place locals recommend.",
+   "ko": "소희의 빵집은 현지인이 추천하는 맛집으로 잡지에 소개됐어요.",
+   "blank": "현지인이",
+   "src": "made"
+  }
+ ],
  "w|혈관": [
   {
    "text": "심각한 흡연은 혈관을 손상시킨다.",
@@ -83439,6 +84031,22 @@
    "blank": "환경을"
   }
  ],
+ "w|환경오염": [
+  {
+   "text": "재원은 환경오염을 줄이려고 객실에서 일회용 칫솔을 없앴어요.",
+   "en": "To cut down on environmental pollution, Jaewon got rid of disposable toothbrushes in the rooms.",
+   "ko": "재원은 환경오염을 줄이려고 객실에서 일회용 칫솔을 없앴어요.",
+   "blank": "환경오염을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 환경오염이 걱정돼서 비닐봉지 대신 종이봉투에 빵을 담아요.",
+   "en": "Worried about environmental pollution, Sohee packs bread in paper bags instead of plastic ones.",
+   "ko": "소희는 환경오염이 걱정돼서 비닐봉지 대신 종이봉투에 빵을 담아요.",
+   "blank": "환경오염이",
+   "src": "made"
+  }
+ ],
  "w|환불": [
   {
    "text": "마음에 안 들어서 환불했어.",
@@ -84369,6 +84977,22 @@
    "blank": "휴가가"
   }
  ],
+ "w|휴게소": [
+  {
+   "text": "재원은 출근길 휴게소에서 산 호두과자를 동료들과 나눠 먹었어요.",
+   "en": "Jaewon shared the walnut cakes he bought at a rest stop on his way to work with his coworkers.",
+   "ko": "재원은 출근길 휴게소에서 산 호두과자를 동료들과 나눠 먹었어요.",
+   "blank": "휴게소에서",
+   "src": "made"
+  },
+  {
+   "text": "고속도로 휴게소에서도 소희의 호두빵을 팔기 시작했어요.",
+   "en": "The highway rest stop has started selling Sohee's walnut bread too.",
+   "ko": "고속도로 휴게소에서도 소희의 호두빵을 팔기 시작했어요.",
+   "blank": "휴게소에서도",
+   "src": "made"
+  }
+ ],
  "w|휴대폰": [
   {
    "text": "휴대폰 배터리가 다 됐어.",
@@ -84572,6 +85196,22 @@
    "en": "When her junior safely filed her first article, Sohee smiled with satisfaction.",
    "ko": "후배가 첫 기사를 무사히 마감하자 소희는 흐뭇하게 웃었어요.",
    "blank": "흐뭇하게",
+   "src": "made"
+  }
+ ],
+ "w|흑자": [
+  {
+   "text": "다행히 올해는 호텔이 흑자로 돌아섰다고 사장님이 재원에게 말했어요.",
+   "en": "Luckily, the owner told Jaewon the hotel turned a profit this year.",
+   "ko": "다행히 올해는 호텔이 흑자로 돌아섰다고 사장님이 재원에게 말했어요.",
+   "blank": "흑자로",
+   "src": "made"
+  },
+  {
+   "text": "소희는 이번 분기에 겨우 흑자를 냈다며 활짝 웃었어요.",
+   "en": "Sohee smiled broadly, saying she barely made a profit this quarter.",
+   "ko": "소희는 이번 분기에 겨우 흑자를 냈다며 활짝 웃었어요.",
+   "blank": "흑자를",
    "src": "made"
   }
  ],
