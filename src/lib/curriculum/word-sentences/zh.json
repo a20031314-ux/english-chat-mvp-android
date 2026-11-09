@@ -8173,6 +8173,22 @@
    "blank": "写"
   }
  ],
+ "w|写作": [
+  {
+   "text": "张伟下班后喜欢写作，常把做菜的心得记在本子上。",
+   "en": "Zhang Wei likes writing after work and often jots down what he's learned about cooking in a notebook.",
+   "ko": "장웨이는 퇴근 후에 글쓰기를 좋아해서 요리하며 깨달은 걸 자주 공책에 적어요.",
+   "blank": "写作",
+   "src": "made"
+  },
+  {
+   "text": "美术老师建议刘芳除了画画，也练练写作。",
+   "en": "The art teacher suggested Liu Fang practice writing as well as painting.",
+   "ko": "미술 선생님은 류팡에게 그림 말고 글쓰기도 연습해 보라고 했어요.",
+   "blank": "写作",
+   "src": "made"
+  }
+ ],
  "w|写信": [
   {
    "text": "奶奶说，以前过年不能回家，只能给家里写信。",
@@ -9801,6 +9817,22 @@
    "en": "Advance toward the goal.",
    "ko": "목표를 향해 나아가.",
    "blank": "前进"
+  }
+ ],
+ "w|前途": [
+  {
+   "text": "张伟的师傅说，年轻人肯吃苦，在厨房里也有前途。",
+   "en": "Zhang Wei's mentor says young people who work hard have a future even in a kitchen.",
+   "ko": "장웨이의 스승은 젊은 사람이 고생을 마다하지 않으면 주방에서도 앞날이 있다고 말해요.",
+   "blank": "前途",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的父母担心学画画没有前途，但她还是坚持了下来。",
+   "en": "Liu Fang's parents worried that studying painting had no future, but she stuck with it.",
+   "ko": "류팡의 부모님은 그림을 배워서는 앞날이 없을까 봐 걱정했지만 류팡은 끝까지 해냈어요.",
+   "blank": "前途",
+   "src": "made"
   }
  ],
  "w|前面": [
@@ -11923,6 +11955,22 @@
    "src": "made"
   }
  ],
+ "w|发动机": [
+  {
+   "text": "送菜的小货车发动机坏了，张伟只好自己去市场买菜。",
+   "en": "The engine of the delivery van broke down, so Zhang Wei had to go to the market himself.",
+   "ko": "배달용 작은 트럭 엔진이 고장 나서 장웨이가 직접 시장에 장을 보러 가야 했어요.",
+   "blank": "发动机",
+   "src": "made"
+  },
+  {
+   "text": "刘芳这次画了一台拆开的旧发动机，线条特别细。",
+   "en": "This time Liu Fang drew an old engine taken apart, with very fine lines.",
+   "ko": "류팡은 이번에 분해된 낡은 엔진을 그렸는데 선이 아주 섬세해요.",
+   "blank": "发动机",
+   "src": "made"
+  }
+ ],
  "w|发射": [
   {
    "text": "火箭即将发射。",
@@ -13517,6 +13565,22 @@
    "blank": "名字"
   }
  ],
+ "w|名片": [
+  {
+   "text": "一位客人吃完后留下名片，想请张伟去他的酒店工作。",
+   "en": "A guest left a business card after the meal, hoping to hire Zhang Wei at his hotel.",
+   "ko": "한 손님이 식사 후 명함을 남기며 장웨이를 자기 호텔로 데려가고 싶어 했어요.",
+   "blank": "名片",
+   "src": "made"
+  },
+  {
+   "text": "画展结束后，一位收藏家给了刘芳一张名片。",
+   "en": "After the exhibition, a collector gave Liu Fang his business card.",
+   "ko": "전시가 끝난 뒤 한 수집가가 류팡에게 명함을 건넸어요.",
+   "blank": "名片",
+   "src": "made"
+  }
+ ],
  "w|名称": [
   {
    "text": "陈杰他们给新成立的社团想了好几个名称，最后还是投票决定。",
@@ -14748,6 +14812,22 @@
    "en": "After the first funding round failed, Liu Fang hid in the stairwell and cried for a long time.",
    "ko": "첫 투자 유치에 실패한 뒤 류팡은 계단에 숨어 한참을 울었어요.",
    "blank": "哭泣",
+   "src": "made"
+  }
+ ],
+ "w|哲学": [
+  {
+   "text": "张伟的师傅有一套自己的做菜哲学：材料新鲜最重要。",
+   "en": "Zhang Wei's mentor has his own cooking philosophy: fresh ingredients matter most.",
+   "ko": "장웨이의 스승에게는 나름의 요리 철학이 있는데, 재료가 신선한 게 제일 중요하대요.",
+   "blank": "哲学",
+   "src": "made"
+  },
+  {
+   "text": "刘芳读了几本艺术哲学的书，对画画有了新的想法。",
+   "en": "Liu Fang read a few books on the philosophy of art and gained new ideas about painting.",
+   "ko": "류팡은 예술 철학 책을 몇 권 읽고 그림에 대해 새로운 생각을 갖게 됐어요.",
+   "blank": "哲学",
    "src": "made"
   }
  ],
@@ -16725,6 +16805,22 @@
    "src": "made"
   }
  ],
+ "w|培训": [
+  {
+   "text": "新来的帮厨要先培训一个星期才能上灶。",
+   "en": "New kitchen helpers have to train for a week before they can work the stove.",
+   "ko": "새로 온 주방 보조는 일주일 동안 교육을 받아야 불 앞에 설 수 있어요.",
+   "blank": "培训",
+   "src": "made"
+  },
+  {
+   "text": "暑假里，刘芳在一家画室接受了一个月的素描培训。",
+   "en": "Over the summer break, Liu Fang took a month of sketch training at a studio.",
+   "ko": "여름방학 동안 류팡은 한 화실에서 한 달간 소묘 교육을 받았어요.",
+   "blank": "培训",
+   "src": "made"
+  }
+ ],
  "w|基于": [
   {
    "text": "这次展览的说明文字是基于最新的考古发现写的。",
@@ -16895,6 +16991,22 @@
    "en": "Please add some more staff.",
    "ko": "인력을 좀 더 늘려 주세요.",
    "blank": "增加"
+  }
+ ],
+ "w|增强": [
+  {
+   "text": "加一点醋能增强这道菜的香味。",
+   "en": "Adding a little vinegar can enhance the aroma of this dish.",
+   "ko": "식초를 조금 넣으면 이 요리의 향이 더 살아나요.",
+   "blank": "增强",
+   "src": "made"
+  },
+  {
+   "text": "老师说，阴影画深一点能增强立体感。",
+   "en": "The teacher says making the shadows a bit darker strengthens the sense of depth.",
+   "ko": "선생님은 그림자를 좀 더 진하게 그리면 입체감이 강해진다고 했어요.",
+   "blank": "增强",
+   "src": "made"
   }
  ],
  "w|增长": [
@@ -19463,6 +19575,22 @@
    "blank": "字"
   }
  ],
+ "w|字母": [
+  {
+   "text": "冷库里的每个盒子上都贴着字母，方便找食材。",
+   "en": "Every box in the cold store has a letter on it to make ingredients easy to find.",
+   "ko": "냉동 창고의 상자마다 알파벳이 붙어 있어서 재료 찾기가 편해요.",
+   "blank": "字母",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在画的右下角签了两个字母。",
+   "en": "Liu Fang signed two letters in the bottom right corner of the painting.",
+   "ko": "류팡은 그림 오른쪽 아래에 알파벳 두 글자로 서명했어요.",
+   "blank": "字母",
+   "src": "made"
+  }
+ ],
  "w|存在": [
   {
    "text": "问题依然存在。",
@@ -19817,6 +19945,22 @@
    "en": "Is everything arranged?",
    "ko": "다 짜 놨어?",
    "blank": "安排"
+  }
+ ],
+ "w|安装": [
+  {
+   "text": "工人今天在厨房里安装了一台新的抽油烟机。",
+   "en": "The workers installed a new range hood in the kitchen today.",
+   "ko": "오늘 기사님들이 주방에 새 환풍기를 설치했어요.",
+   "blank": "安装",
+   "src": "made"
+  },
+  {
+   "text": "画室新安装了几盏灯，晚上画画也不伤眼睛。",
+   "en": "The studio has installed some new lamps, so painting at night doesn't strain the eyes.",
+   "ko": "화실에 조명을 몇 개 새로 달아서 밤에 그려도 눈이 덜 피곤해요.",
+   "blank": "安装",
+   "src": "made"
   }
  ],
  "w|安静": [
@@ -22517,6 +22661,22 @@
    "src": "made"
   }
  ],
+ "w|布置": [
+  {
+   "text": "为了明天的婚宴，服务员们正在大厅里布置桌子。",
+   "en": "The waiters are setting up the tables in the hall for tomorrow's wedding banquet.",
+   "ko": "내일 결혼 피로연을 위해 종업원들이 홀에서 테이블을 꾸미고 있어요.",
+   "blank": "布置",
+   "src": "made"
+  },
+  {
+   "text": "同学们一起布置教室，准备周末的小画展。",
+   "en": "The classmates are decorating the classroom together for the weekend's small exhibition.",
+   "ko": "친구들이 주말 작은 전시회를 위해 함께 교실을 꾸미고 있어요.",
+   "blank": "布置",
+   "src": "made"
+  }
+ ],
  "w|帅": [
   {
    "text": "赵磊穿上新制服，同事们都说他今天很帅。",
@@ -25037,6 +25197,22 @@
    "blank": "必须"
   }
  ],
+ "w|忍": [
+  {
+   "text": "切洋葱时，张伟忍着眼泪把一大筐都切完了。",
+   "en": "Cutting onions, Zhang Wei held back his tears and got through a whole basket.",
+   "ko": "양파를 썰 때 장웨이는 눈물을 참으며 한 바구니를 다 썰었어요.",
+   "blank": "忍",
+   "src": "made"
+  },
+  {
+   "text": "看到自己的画挂在墙上，刘芳忍不住笑了。",
+   "en": "Seeing her painting hanging on the wall, Liu Fang couldn't help smiling.",
+   "ko": "자기 그림이 벽에 걸린 걸 보고 류팡은 웃음을 참지 못했어요.",
+   "blank": "忍",
+   "src": "made"
+  }
+ ],
  "w|忍不住": [
   {
    "text": "闻到楼下烤肉的香味，黄涛忍不住下去敲了门。",
@@ -26767,6 +26943,22 @@
    "src": "made"
   }
  ],
+ "w|成本": [
+  {
+   "text": "牛肉涨价了，这道菜的成本一下子高了不少。",
+   "en": "Beef prices went up, so the cost of this dish suddenly rose a lot.",
+   "ko": "소고기 값이 올라서 이 요리의 원가가 갑자기 꽤 올랐어요.",
+   "blank": "成本",
+   "src": "made"
+  },
+  {
+   "text": "油画颜料很贵，刘芳只好用便宜的纸来降低成本。",
+   "en": "Oil paint is expensive, so Liu Fang uses cheap paper to cut costs.",
+   "ko": "유화 물감이 비싸서 류팡은 싼 종이를 써서 비용을 줄여요.",
+   "blank": "成本",
+   "src": "made"
+  }
+ ],
  "w|成果": [
   {
    "text": "期末的时候，每个小组都要上台展示一学期的成果。",
@@ -27549,6 +27741,22 @@
    "src": "made"
   }
  ],
+ "w|打工": [
+  {
+   "text": "张伟上大学时在这家餐馆打工，毕业后就留了下来。",
+   "en": "Zhang Wei worked part-time at this restaurant in college and stayed on after graduating.",
+   "ko": "장웨이는 대학 다닐 때 이 식당에서 아르바이트를 하다가 졸업 후 그대로 남았어요.",
+   "blank": "打工",
+   "src": "made"
+  },
+  {
+   "text": "刘芳周末在咖啡店打工，挣钱买颜料。",
+   "en": "Liu Fang works part-time at a café on weekends to earn money for paint.",
+   "ko": "류팡은 주말에 카페에서 아르바이트를 해서 물감 살 돈을 벌어요.",
+   "blank": "打工",
+   "src": "made"
+  }
+ ],
  "w|打开": [
   {
    "text": "把门打开。",
@@ -27736,6 +27944,22 @@
    "en": "Grandma couldn't bear to throw away the leftovers and had the server pack them to take home.",
    "ko": "할머니는 남은 음식을 버리기 아까워서 종업원에게 포장해 달라고 하셨어요.",
    "blank": "扔掉",
+   "src": "made"
+  }
+ ],
+ "w|扣": [
+  {
+   "text": "迟到了好几次，张伟这个月的奖金被扣了一半。",
+   "en": "After being late several times, Zhang Wei had half of this month's bonus docked.",
+   "ko": "여러 번 지각해서 장웨이는 이번 달 보너스가 절반 깎였어요.",
+   "blank": "扣",
+   "src": "made"
+  },
+  {
+   "text": "刘芳交作业晚了一天，被老师扣了几分。",
+   "en": "Liu Fang handed in her assignment a day late and the teacher took off a few points.",
+   "ko": "류팡은 과제를 하루 늦게 내서 선생님에게 몇 점 깎였어요.",
+   "blank": "扣",
    "src": "made"
   }
  ],
@@ -28143,6 +28367,22 @@
    "en": "We won't surrender easily.",
    "ko": "우리는 쉽게 항복하지 않아.",
    "blank": "投降"
+  }
+ ],
+ "w|折": [
+  {
+   "text": "张伟把餐巾折成扇子的形状，摆在每个盘子上。",
+   "en": "Zhang Wei folded the napkins into fan shapes and set one on each plate.",
+   "ko": "장웨이는 냅킨을 부채 모양으로 접어서 접시마다 올려 두었어요.",
+   "blank": "折",
+   "src": "made"
+  },
+  {
+   "text": "刘芳把彩纸折成一只小鸟，贴在画的一角。",
+   "en": "Liu Fang folded colored paper into a little bird and stuck it in a corner of the picture.",
+   "ko": "류팡은 색종이로 작은 새를 접어 그림 한쪽에 붙였어요.",
+   "blank": "折",
+   "src": "made"
   }
  ],
  "w|折磨": [
@@ -28835,6 +29075,22 @@
    "en": "He's pointing at the map.",
    "ko": "그는 지도를 가리키고 있어.",
    "blank": "指"
+  }
+ ],
+ "w|指令": [
+  {
+   "text": "厨师长刚下达指令，张伟马上把锅里的菜盛了出来。",
+   "en": "As soon as the head chef gave the order, Zhang Wei dished the food out of the wok.",
+   "ko": "주방장이 지시를 내리자마자 장웨이는 바로 웍에서 요리를 덜어 냈어요.",
+   "blank": "指令",
+   "src": "made"
+  },
+  {
+   "text": "老师的指令很简单：十分钟内画出对面同学的脸。",
+   "en": "The teacher's instruction was simple: draw the face of the classmate opposite you in ten minutes.",
+   "ko": "선생님의 지시는 간단했어요. 십 분 안에 맞은편 친구 얼굴을 그리는 거예요.",
+   "blank": "指令",
+   "src": "made"
   }
  ],
  "w|指出": [
@@ -30031,6 +30287,22 @@
    "src": "made"
   }
  ],
+ "w|摄影": [
+  {
+   "text": "张伟对摄影也有兴趣，常给自己做的菜拍照。",
+   "en": "Zhang Wei is also interested in photography and often takes pictures of his dishes.",
+   "ko": "장웨이는 사진에도 관심이 있어서 자기가 만든 요리를 자주 찍어요.",
+   "blank": "摄影",
+   "src": "made"
+  },
+  {
+   "text": "美术班的同学里，有人爱画画，也有人更喜欢摄影。",
+   "en": "Among the art class students, some love painting and others prefer photography.",
+   "ko": "미술반 친구들 중에는 그림을 좋아하는 사람도, 사진을 더 좋아하는 사람도 있어요.",
+   "blank": "摄影",
+   "src": "made"
+  }
+ ],
  "w|摆": [
   {
    "text": "把花摆在桌上。",
@@ -30057,6 +30329,22 @@
    "en": "He finally shook off the bad habit.",
    "ko": "그는 드디어 나쁜 습관을 벗어났어.",
    "blank": "摆脱"
+  }
+ ],
+ "w|摇": [
+  {
+   "text": "张伟用力摇着调料瓶，可一粒盐也倒不出来。",
+   "en": "Zhang Wei shook the seasoning bottle hard, but not a single grain of salt came out.",
+   "ko": "장웨이가 양념통을 힘껏 흔들었지만 소금이 한 알도 안 나왔어요.",
+   "blank": "摇",
+   "src": "made"
+  },
+  {
+   "text": "老师看了刘芳的草稿，轻轻摇头，让她再改改。",
+   "en": "The teacher looked at Liu Fang's draft, shook his head slightly, and told her to revise it.",
+   "ko": "선생님은 류팡의 초안을 보더니 고개를 살짝 젓고 다시 고쳐 보라고 했어요.",
+   "blank": "摇",
+   "src": "made"
   }
  ],
  "w|摇滚": [
@@ -31133,6 +31421,22 @@
    "en": "The whole room is a mess.",
    "ko": "방 전체가 엉망이야.",
    "blank": "整个"
+  }
+ ],
+ "w|整体": [
+  {
+   "text": "这次装修以后，厨房的整体环境好多了。",
+   "en": "After this renovation, the kitchen's overall environment is much better.",
+   "ko": "이번 수리 후 주방의 전체적인 환경이 훨씬 좋아졌어요.",
+   "blank": "整体",
+   "src": "made"
+  },
+  {
+   "text": "老师提醒刘芳先看整体，再画细节。",
+   "en": "The teacher reminded Liu Fang to look at the whole first, then draw the details.",
+   "ko": "선생님은 류팡에게 먼저 전체를 보고 나서 세부를 그리라고 일렀어요.",
+   "blank": "整体",
+   "src": "made"
   }
  ],
  "w|整天": [
@@ -32769,6 +33073,22 @@
    "blank": "更加"
   }
  ],
+ "w|更新": [
+  {
+   "text": "餐馆的点餐软件更新以后，很多用户说用起来更方便了。",
+   "en": "After the restaurant's ordering app was updated, many users said it was easier to use.",
+   "ko": "식당 주문 앱이 업데이트된 뒤 많은 사용자가 쓰기 더 편해졌다고 했어요.",
+   "blank": "更新",
+   "src": "made"
+  },
+  {
+   "text": "刘芳每周都会更新一次自己的作品主页。",
+   "en": "Liu Fang updates her portfolio page once a week.",
+   "ko": "류팡은 매주 한 번씩 자기 작품 페이지를 업데이트해요.",
+   "blank": "更新",
+   "src": "made"
+  }
+ ],
  "w|曾": [
   {
    "text": "我曾见过他。",
@@ -33241,6 +33561,22 @@
    "src": "made"
   }
  ],
+ "w|服用": [
+  {
+   "text": "张伟感冒了，饭后按时服用医生开的药。",
+   "en": "Zhang Wei has a cold and takes the medicine the doctor prescribed after meals on schedule.",
+   "ko": "장웨이는 감기에 걸려서 식후에 의사가 처방한 약을 제때 먹어요.",
+   "blank": "服用",
+   "src": "made"
+  },
+  {
+   "text": "刘芳胃不舒服，课间服用了一片胃药。",
+   "en": "Liu Fang had an upset stomach and took a stomach pill during the break.",
+   "ko": "류팡은 속이 안 좋아서 쉬는 시간에 위장약을 한 알 먹었어요.",
+   "blank": "服用",
+   "src": "made"
+  }
+ ],
  "w|服装": [
   {
    "text": "小明换上白色的工作服装，戴好帽子进了厨房。",
@@ -33343,6 +33679,22 @@
    "en": "I worry about the future.",
    "ko": "미래가 걱정돼.",
    "blank": "未来"
+  }
+ ],
+ "w|未知": [
+  {
+   "text": "第一次去国外的厨房工作，张伟对未知的生活既兴奋又紧张。",
+   "en": "Going to work in a kitchen abroad for the first time, Zhang Wei is both excited and nervous about the unknown life ahead.",
+   "ko": "처음으로 외국 주방에 일하러 가는 장웨이는 낯선 생활이 설레면서도 긴장돼요.",
+   "blank": "未知",
+   "src": "made"
+  },
+  {
+   "text": "刘芳喜欢画宇宙，觉得未知的东西最能引起想象。",
+   "en": "Liu Fang likes painting the universe and feels the unknown sparks the imagination most.",
+   "ko": "류팡은 우주를 그리기 좋아하는데, 알려지지 않은 것이 상상을 가장 자극한다고 생각해요.",
+   "blank": "未知",
+   "src": "made"
   }
  ],
  "w|本": [
@@ -33910,6 +34262,22 @@
    "en": "The freshly steamed buns are delicious, and Sun Yue sells out fast every morning.",
    "ko": "갓 쪄낸 만두가 정말 맛있어서 쑨웨는 매일 아침 금방 다 팔아요.",
    "blank": "极了",
+   "src": "made"
+  }
+ ],
+ "w|极其": [
+  {
+   "text": "厨师长对刀工的要求极其严格。",
+   "en": "The head chef is extremely strict about knife skills.",
+   "ko": "주방장은 칼질에 대한 요구가 굉장히 엄격해요.",
+   "blank": "极其",
+   "src": "made"
+  },
+  {
+   "text": "刘芳画眼睛时极其认真，一笔都不敢马虎。",
+   "en": "Liu Fang is extremely careful when drawing eyes and never makes a careless stroke.",
+   "ko": "류팡은 눈을 그릴 때 아주 신중해서 한 획도 대충 하지 않아요.",
+   "blank": "极其",
    "src": "made"
   }
  ],
@@ -35689,6 +36057,22 @@
    "src": "made"
   }
  ],
+ "w|毫不": [
+  {
+   "text": "油溅到手上，张伟毫不在意，继续翻炒。",
+   "en": "Oil splashed on his hand, but Zhang Wei paid no attention and kept stir-frying.",
+   "ko": "기름이 손에 튀었지만 장웨이는 전혀 신경 쓰지 않고 계속 볶았어요.",
+   "blank": "毫不",
+   "src": "made"
+  },
+  {
+   "text": "刘芳毫不犹豫地把那幅失败的画撕掉了。",
+   "en": "Liu Fang tore up the failed painting without the slightest hesitation.",
+   "ko": "류팡은 망친 그림을 조금도 망설이지 않고 찢어 버렸어요.",
+   "blank": "毫不",
+   "src": "made"
+  }
+ ],
  "w|毫无": [
   {
    "text": "有个年轻人拿着一台毫无用处的破电视，非要卖给黄涛。",
@@ -36059,6 +36443,22 @@
    "en": "This car is fast.",
    "ko": "이 자동차는 빨라.",
    "blank": "汽车"
+  }
+ ],
+ "w|沉": [
+  {
+   "text": "张伟把饺子下到水里，饺子先沉到锅底，过一会儿才浮起来。",
+   "en": "Zhang Wei dropped the dumplings into the water; they sank to the bottom first and floated up a while later.",
+   "ko": "장웨이가 만두를 물에 넣자 만두가 먼저 냄비 바닥에 가라앉았다가 잠시 후 떠올랐어요.",
+   "blank": "沉",
+   "src": "made"
+  },
+  {
+   "text": "刘芳洗笔的时候，颜料慢慢沉到了杯底。",
+   "en": "As Liu Fang washed her brush, the paint slowly sank to the bottom of the cup.",
+   "ko": "류팡이 붓을 씻을 때 물감이 천천히 컵 바닥으로 가라앉았어요.",
+   "blank": "沉",
+   "src": "made"
   }
  ],
  "w|沉重": [
@@ -37495,6 +37895,22 @@
    "blank": "演员"
   }
  ],
+ "w|演唱": [
+  {
+   "text": "餐馆周末请了一位歌手在大厅演唱。",
+   "en": "The restaurant hired a singer to perform in the dining hall on the weekend.",
+   "ko": "식당은 주말에 가수 한 명을 불러 홀에서 노래하게 했어요.",
+   "blank": "演唱",
+   "src": "made"
+  },
+  {
+   "text": "美术班的结课晚会上，刘芳上台演唱了一首老歌。",
+   "en": "At the art class's end-of-course party, Liu Fang went on stage and sang an old song.",
+   "ko": "미술반 종강 파티에서 류팡이 무대에 올라 옛 노래를 불렀어요.",
+   "blank": "演唱",
+   "src": "made"
+  }
+ ],
  "w|演奏": [
   {
    "text": "开幕式上，一支小乐队在大厅里演奏古典音乐。",
@@ -38583,6 +38999,22 @@
    "src": "made"
   }
  ],
+ "w|物理": [
+  {
+   "text": "张伟笑着说，掌握火候其实需要懂一点物理。",
+   "en": "Zhang Wei says with a smile that mastering the heat actually takes a bit of physics.",
+   "ko": "장웨이는 불 조절을 잘하려면 사실 물리를 좀 알아야 한다며 웃었어요.",
+   "blank": "物理",
+   "src": "made"
+  },
+  {
+   "text": "刘芳以前学物理，后来才发现自己真正喜欢的是画画。",
+   "en": "Liu Fang used to study physics and only later realized what she truly loves is painting.",
+   "ko": "류팡은 예전에 물리를 공부했는데 나중에야 자기가 정말 좋아하는 게 그림이라는 걸 알았어요.",
+   "blank": "物理",
+   "src": "made"
+  }
+ ],
  "w|物质": [
   {
    "text": "化学老师说，水是一种非常常见的物质。",
@@ -38611,6 +39043,22 @@
    "en": "I especially like this.",
    "ko": "난 이게 특히 좋아.",
    "blank": "特别"
+  }
+ ],
+ "w|特定": [
+  {
+   "text": "这道汤只在特定的季节才有，因为要用新鲜的竹笋。",
+   "en": "This soup is only available in a certain season because it needs fresh bamboo shoots.",
+   "ko": "이 수프는 신선한 죽순이 필요해서 특정한 계절에만 나와요.",
+   "blank": "特定",
+   "src": "made"
+  },
+  {
+   "text": "这幅画要在特定的光线下看，颜色才最漂亮。",
+   "en": "This painting needs to be viewed under specific lighting for its colors to look their best.",
+   "ko": "이 그림은 특정한 빛 아래에서 봐야 색이 가장 예뻐요.",
+   "blank": "特定",
+   "src": "made"
   }
  ],
  "w|特工": [
@@ -39741,6 +40189,22 @@
    "en": "He pushed the door hard.",
    "ko": "그는 문을 힘껏 밀었어.",
    "blank": "用力"
+  }
+ ],
+ "w|用户": [
+  {
+   "text": "餐馆的点餐软件更新以后，很多用户说用起来更方便了。",
+   "en": "After the restaurant's ordering app was updated, many users said it was easier to use.",
+   "ko": "식당 주문 앱이 업데이트된 뒤 많은 사용자가 쓰기 더 편해졌다고 했어요.",
+   "blank": "用户",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在一个绘画软件上分享作品，很多用户给她留言。",
+   "en": "Liu Fang shares her work on a drawing app, and many users leave her comments.",
+   "ko": "류팡이 그림 앱에 작품을 올리자 많은 사용자가 댓글을 남겼어요.",
+   "blank": "用户",
+   "src": "made"
   }
  ],
  "w|用来": [
@@ -44019,6 +44483,22 @@
    "blank": "系"
   }
  ],
+ "w|系列": [
+  {
+   "text": "张伟设计了一系列秋季新菜，每道都用了南瓜。",
+   "en": "Zhang Wei designed a series of new autumn dishes, each one using pumpkin.",
+   "ko": "장웨이는 가을 신메뉴를 여러 가지 만들었는데, 모두 호박을 썼어요.",
+   "blank": "系列",
+   "src": "made"
+  },
+  {
+   "text": "刘芳正在画一组关于老街的系列作品。",
+   "en": "Liu Fang is working on a series of paintings about old streets.",
+   "ko": "류팡은 옛 거리를 주제로 한 연작을 그리고 있어요.",
+   "blank": "系列",
+   "src": "made"
+  }
+ ],
  "w|系统": [
   {
    "text": "系统坏了。",
@@ -44808,6 +45288,22 @@
    "en": "Li Na dominated under the basket all game, grabbing over ten rebounds.",
    "ko": "리나는 골밑을 경기 내내 지배하며 리바운드를 열 개 넘게 잡았어요.",
    "blank": "统治",
+   "src": "made"
+  }
+ ],
+ "w|统计": [
+  {
+   "text": "每天打烊后，张伟要统计一下哪些菜卖得最好。",
+   "en": "Every night after closing, Zhang Wei tallies up which dishes sold best.",
+   "ko": "매일 영업이 끝나면 장웨이는 어떤 요리가 제일 잘 팔렸는지 집계해요.",
+   "blank": "统计",
+   "src": "made"
+  },
+  {
+   "text": "老师统计了一下，全班一共交了几十幅作品。",
+   "en": "The teacher counted up and found the whole class had handed in dozens of works.",
+   "ko": "선생님이 세어 보니 반 전체가 작품을 수십 점 냈어요.",
+   "blank": "统计",
    "src": "made"
   }
  ],
@@ -46023,6 +46519,38 @@
    "en": "He's holding his stomach.",
    "ko": "그는 배를 움켜쥐고 있어.",
    "blank": "肚子"
+  }
+ ],
+ "w|股东": [
+  {
+   "text": "餐馆的几位股东今晚来吃饭，张伟格外紧张。",
+   "en": "Several of the restaurant's shareholders are coming to dinner tonight, so Zhang Wei is especially nervous.",
+   "ko": "식당 주주 몇 분이 오늘 저녁 식사하러 와서 장웨이는 유난히 긴장했어요.",
+   "blank": "股东",
+   "src": "made"
+  },
+  {
+   "text": "画室的两位股东都是美术学院毕业的。",
+   "en": "Both shareholders of the studio graduated from an art academy.",
+   "ko": "화실의 두 주주는 모두 미대 출신이에요.",
+   "blank": "股东",
+   "src": "made"
+  }
+ ],
+ "w|股份": [
+  {
+   "text": "老板想让张伟占一点餐馆的股份，好让他安心留下来。",
+   "en": "The owner wants to give Zhang Wei a small share in the restaurant so he'll feel settled and stay.",
+   "ko": "사장님은 장웨이가 마음 놓고 남도록 식당 지분을 조금 주고 싶어 해요.",
+   "blank": "股份",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的朋友开了一家画室，邀请她出钱占一点股份。",
+   "en": "Liu Fang's friend opened an art studio and invited her to invest for a small share.",
+   "ko": "류팡의 친구가 화실을 열고 류팡에게 돈을 보태 지분을 조금 가지라고 권했어요.",
+   "blank": "股份",
+   "src": "made"
   }
  ],
  "w|股票": [
@@ -47539,6 +48067,22 @@
    "blank": "获得"
   }
  ],
+ "w|获胜": [
+  {
+   "text": "张伟在全市厨艺比赛中获胜，老板给他发了奖金。",
+   "en": "Zhang Wei won the citywide cooking contest, and the owner gave him a bonus.",
+   "ko": "장웨이가 시 요리 대회에서 우승해서 사장님이 보너스를 줬어요.",
+   "blank": "获胜",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的海报在学校设计比赛中获胜了。",
+   "en": "Liu Fang's poster won the school design competition.",
+   "ko": "류팡의 포스터가 학교 디자인 대회에서 우승했어요.",
+   "blank": "获胜",
+   "src": "made"
+  }
+ ],
  "w|菜": [
   {
    "text": "这道菜很好吃。",
@@ -47644,6 +48188,22 @@
    "en": "Yang Yang bought wine online, and the seller said he had to sign for it himself.",
    "ko": "양양이 인터넷으로 와인을 샀더니 가게에서 본인이 직접 받아야 한다고 했어요.",
    "blank": "葡萄酒",
+   "src": "made"
+  }
+ ],
+ "w|董事会": [
+  {
+   "text": "董事会决定把张伟所在的分店重新装修一遍。",
+   "en": "The board decided to renovate the branch where Zhang Wei works.",
+   "ko": "이사회는 장웨이가 일하는 지점을 새로 단장하기로 했어요.",
+   "blank": "董事会",
+   "src": "made"
+  },
+  {
+   "text": "美术馆的董事会同意展出班上学生的作品。",
+   "en": "The museum's board agreed to exhibit work by students in the class.",
+   "ko": "미술관 이사회가 반 학생들의 작품을 전시하기로 동의했어요.",
+   "blank": "董事会",
    "src": "made"
   }
  ],
@@ -48659,6 +49219,22 @@
    "blank": "见到"
   }
  ],
+ "w|见证": [
+  {
+   "text": "这家老店见证了这条街几十年的变化。",
+   "en": "This old restaurant has witnessed decades of change on this street.",
+   "ko": "이 오래된 가게는 이 거리의 수십 년 변화를 지켜봤어요.",
+   "blank": "见证",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的好朋友见证了她从零开始学画的全过程。",
+   "en": "Liu Fang's best friend witnessed her whole journey of learning to paint from scratch.",
+   "ko": "류팡의 친한 친구는 류팡이 그림을 처음부터 배우는 과정을 모두 지켜봤어요.",
+   "blank": "见证",
+   "src": "made"
+  }
+ ],
  "w|见识": [
   {
    "text": "外国同事说，这次总算见识了一场真正的中式婚礼。",
@@ -48762,6 +49338,22 @@
    "en": "Li Na watched a movie on her tablet, and the time flew by.",
    "ko": "리나는 태블릿으로 영화를 한 편 보니 시간이 금방 갔어요.",
    "blank": "观看",
+   "src": "made"
+  }
+ ],
+ "w|规划": [
+  {
+   "text": "老板对餐馆未来几年的规划很清楚，打算先开一家分店。",
+   "en": "The owner has a clear plan for the restaurant's next few years and intends to open a branch first.",
+   "ko": "사장님은 앞으로 몇 년간 식당 계획이 분명해서 먼저 지점을 하나 낼 생각이에요.",
+   "blank": "规划",
+   "src": "made"
+  },
+  {
+   "text": "老师让刘芳给自己的学习做一个长期规划。",
+   "en": "The teacher asked Liu Fang to make a long-term plan for her studies.",
+   "ko": "선생님은 류팡에게 자기 공부에 대한 장기 계획을 세워 보라고 했어요.",
+   "blank": "规划",
    "src": "made"
   }
  ],
@@ -49600,6 +50192,22 @@
    "en": "This seafood restaurant has great reviews online, so Xiaoxue came especially to try it.",
    "ko": "이 해산물 가게는 인터넷 평가가 좋아서 샤오쉐가 일부러 맛보러 왔어요.",
    "blank": "评价",
+   "src": "made"
+  }
+ ],
+ "w|评估": [
+  {
+   "text": "检查员花了一上午评估厨房的卫生情况。",
+   "en": "The inspector spent the whole morning assessing the kitchen's hygiene.",
+   "ko": "점검원이 오전 내내 주방 위생 상태를 평가했어요.",
+   "blank": "评估",
+   "src": "made"
+  },
+  {
+   "text": "期末时，老师会根据每个人的作品集评估成绩。",
+   "en": "At the end of the term, the teacher will assess grades based on each student's portfolio.",
+   "ko": "학기 말에 선생님은 각자의 포트폴리오를 보고 성적을 평가해요.",
+   "blank": "评估",
    "src": "made"
   }
  ],
@@ -50878,6 +51486,22 @@
    "en": "A thief once got into the shop, so Sun Yue later installed a camera.",
    "ko": "가게에 도둑이 한 번 든 뒤로 쑨웨는 카메라를 달았어요.",
    "blank": "贼",
+   "src": "made"
+  }
+ ],
+ "w|资产": [
+  {
+   "text": "对这家小餐馆来说，那几口老铁锅就是最值钱的资产。",
+   "en": "For this small restaurant, those old iron woks are its most valuable assets.",
+   "ko": "이 작은 식당에게는 그 오래된 무쇠 웍 몇 개가 가장 값진 자산이에요.",
+   "blank": "资产",
+   "src": "made"
+  },
+  {
+   "text": "对刘芳来说，这些年的画稿是她最宝贵的资产。",
+   "en": "For Liu Fang, the sketches from these years are her most precious asset.",
+   "ko": "류팡에게는 그동안 그린 그림들이 가장 소중한 자산이에요.",
+   "blank": "资产",
    "src": "made"
   }
  ],
@@ -52249,6 +52873,22 @@
    "en": "Don't be afraid of losing.",
    "ko": "지는 걸 두려워하지 마.",
    "blank": "输"
+  }
+ ],
+ "w|输入": [
+  {
+   "text": "服务员把点单输入电脑，厨房的打印机就会出单。",
+   "en": "When the waiter enters the order into the computer, the kitchen printer prints a ticket.",
+   "ko": "종업원이 주문을 컴퓨터에 입력하면 주방 프린터에서 주문서가 나와요.",
+   "blank": "输入",
+   "src": "made"
+  },
+  {
+   "text": "刘芳把颜色的数值输入软件，调出了想要的蓝色。",
+   "en": "Liu Fang entered the color values into the software and mixed the blue she wanted.",
+   "ko": "류팡은 색 값을 프로그램에 입력해서 원하는 파란색을 만들었어요.",
+   "blank": "输入",
+   "src": "made"
   }
  ],
  "w|辛苦": [
