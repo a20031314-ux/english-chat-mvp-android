@@ -1279,6 +1279,22 @@
    "src": "made"
   }
  ],
+ "w|กลั่นกรอง": [
+  {
+   "text": "คณะกรรมการนักเรียนกลั่นกรองข้อเสนอก่อนส่งให้ผู้อำนวยการ",
+   "en": "The student council screens proposals before sending them to the principal.",
+   "ko": "학생회는 교장 선생님께 올리기 전에 건의 사항을 걸러요.",
+   "blank": "กลั่นกรอง",
+   "src": "made"
+  },
+  {
+   "text": "มาลีกลั่นกรองความคิดก่อนเขียนบทกลอนเกี่ยวกับฤดูใบไม้ร่วง",
+   "en": "Malee refined her thoughts before writing a poem about autumn.",
+   "ko": "말리는 가을에 관한 시를 쓰기 전에 생각을 정리하고 다듬었어요.",
+   "blank": "กลั่นกรอง",
+   "src": "made"
+  }
+ ],
  "w|กลับ": [
   {
    "text": "กลับบ้านกัน",
@@ -3443,6 +3459,22 @@
    "src": "made"
   }
  ],
+ "w|กำบัง": [
+  {
+   "text": "ตอนเล่นปาโป่งน้ำ สมชายหลบหลังเสาเพื่อกำบังตัว",
+   "en": "During the water balloon fight, Somchai ducked behind a pillar for cover.",
+   "ko": "물풍선 놀이 때 솜차이는 기둥 뒤에 숨어 몸을 가렸어요.",
+   "blank": "กำบัง",
+   "src": "made"
+  },
+  {
+   "text": "พายุฤดูร้อนมาเร็วจนมาลีต้องวิ่งหาที่กำบัง",
+   "en": "The summer storm came so fast that Malee had to run for shelter.",
+   "ko": "여름 폭풍이 갑자기 몰아쳐서 말리는 비 피할 곳을 찾아 뛰어야 했어요.",
+   "blank": "กำบัง",
+   "src": "made"
+  }
+ ],
  "w|กำแพง": [
   {
    "text": "ธนากับเพื่อนช่วยกันวาดภาพบนกำแพงหลังโรงเรียน",
@@ -4243,6 +4275,22 @@
    "blank": "เกษียณ"
   }
  ],
+ "w|เกา": [
+  {
+   "text": "สมชายเกาหัวเมื่อทำโจทย์ข้อสุดท้ายไม่ได้",
+   "en": "Somchai scratched his head when he couldn't solve the last problem.",
+   "ko": "솜차이는 마지막 문제를 못 풀자 머리를 긁적였어요.",
+   "blank": "เกา",
+   "src": "made"
+  },
+  {
+   "text": "หน้าฝนยุงชุม มาลีเกาขาจนเป็นแผล",
+   "en": "Mosquitoes swarm in the rainy season, and Malee scratched her legs until they were sore.",
+   "ko": "우기에는 모기가 많아서 말리는 다리를 긁다가 상처가 났어요.",
+   "blank": "เกา",
+   "src": "made"
+  }
+ ],
  "w|เก่า": [
   {
    "text": "เพื่อนเก่าโทรมา",
@@ -4458,6 +4506,22 @@
    "en": "The dentist explained that gum disease is also linked to heart disease.",
    "ko": "의사는 잇몸병이 심장병과도 관련이 있다고 설명했어요.",
    "blank": "เกี่ยวพัน",
+   "src": "made"
+  }
+ ],
+ "w|เกื้อกูล": [
+  {
+   "text": "สมชายกับเพื่อนในห้องเกื้อกูลกันเรื่องการบ้านเสมอ",
+   "en": "Somchai and his classmates always help each other with homework.",
+   "ko": "솜차이와 반 친구들은 늘 숙제를 서로 도와요.",
+   "blank": "เกื้อกูล",
+   "src": "made"
+  },
+  {
+   "text": "ชาวนาในหมู่บ้านมาลีเกื้อกูลกันลงแขกเกี่ยวข้าวทุกต้นหนาว",
+   "en": "Every early cool season, the farmers in Malee's village help each other harvest rice.",
+   "ko": "해마다 초겨울이면 말리네 마을 농부들은 서로 품앗이로 벼를 베요.",
+   "blank": "เกื้อกูล",
    "src": "made"
   }
  ],
@@ -6120,6 +6184,22 @@
    "en": "Doctoral students got together to submit a demand for more research funding.",
    "ko": "박사과정 학생들이 모여 연구비를 늘려 달라는 요구서를 냈어요.",
    "blank": "ข้อเรียกร้อง",
+   "src": "made"
+  }
+ ],
+ "w|ข้อสงสัย": [
+  {
+   "text": "สมชายยกมือถามข้อสงสัยหลังครูอธิบายจบ",
+   "en": "Somchai raised his hand to ask his question after the teacher finished explaining.",
+   "ko": "솜차이는 선생님 설명이 끝나자 손을 들어 궁금한 점을 물었어요.",
+   "blank": "ข้อสงสัย",
+   "src": "made"
+  },
+  {
+   "text": "มาลีมีข้อสงสัยว่าทำไมปีนี้ฝนมาช้ากว่าทุกปี",
+   "en": "Malee wonders why the rain came later this year than usual.",
+   "ko": "말리는 올해 왜 비가 예년보다 늦게 왔는지 의문이에요.",
+   "blank": "ข้อสงสัย",
    "src": "made"
   }
  ],
@@ -13811,6 +13891,22 @@
    "src": "made"
   }
  ],
+ "w|เคราะห์": [
+  {
+   "text": "สมชายเคราะห์ร้ายลืมบัตรประจำตัวสอบในวันสอบจริง",
+   "en": "Unluckily, Somchai forgot his exam ID card on the day of the actual exam.",
+   "ko": "솜차이는 운 나쁘게도 시험 당일에 수험표를 깜빡했어요.",
+   "blank": "เคราะห์",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเคราะห์ดีที่เก็บผ้าทันก่อนฝนตกหนัก",
+   "en": "Malee was lucky to bring in the laundry just before the downpour.",
+   "ko": "말리는 운 좋게 폭우가 쏟아지기 직전에 빨래를 걷었어요.",
+   "blank": "เคราะห์",
+   "src": "made"
+  }
+ ],
  "w|เครียด": [
   {
    "text": "ช่วงสอบฉันเครียดมาก",
@@ -14221,6 +14317,22 @@
    "en": "The image on the screen moves smoothly.",
    "ko": "화면의 영상이 부드럽게 움직여.",
    "blank": "เคลื่อนไหว"
+  }
+ ],
+ "w|เคลือบ": [
+  {
+   "text": "สมชายเคลือบพลาสติกบัตรนักเรียนไว้กันน้ำ",
+   "en": "Somchai laminated his student card to protect it from water.",
+   "ko": "솜차이는 학생증이 젖지 않게 코팅했어요.",
+   "blank": "เคลือบ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีตื่นมาเห็นน้ำค้างแข็งเคลือบใบหญ้าจนขาวโพลน",
+   "en": "Malee woke up to see frost coating the grass completely white.",
+   "ko": "말리는 일어나서 서리가 풀잎을 하얗게 덮은 걸 봤어요.",
+   "blank": "เคลือบ",
+   "src": "made"
   }
  ],
  "w|เคารพ": [
@@ -16675,6 +16787,22 @@
    "src": "made"
   }
  ],
+ "w|จุดเด่น": [
+  {
+   "text": "จุดเด่นของสมชายคือการพูดหน้าชั้นได้อย่างมั่นใจ",
+   "en": "Somchai's strong point is speaking confidently in front of the class.",
+   "ko": "솜차이의 장점은 반 앞에서 자신 있게 발표하는 거예요.",
+   "blank": "จุดเด่น",
+   "src": "made"
+  },
+  {
+   "text": "จุดเด่นของหน้าฝนคือทุ่งนาเขียวขจีที่มาลีชอบถ่ายรูป",
+   "en": "The highlight of the rainy season is the lush green rice fields Malee loves to photograph.",
+   "ko": "우기의 백미는 말리가 즐겨 찍는 푸르른 논이에요.",
+   "blank": "จุดเด่น",
+   "src": "made"
+  }
+ ],
  "w|จุดประสงค์": [
   {
    "text": "วิชัยถามนักท่องเที่ยวว่าจุดประสงค์ของการเข้ามาในพื้นที่หวงห้ามคืออะไร",
@@ -16704,6 +16832,22 @@
    "en": "Somsak's goal is to reach the border before sunset.",
    "ko": "솜싹의 목표는 해가 지기 전에 국경까지 가는 거예요.",
    "blank": "จุดมุ่งหมาย",
+   "src": "made"
+  }
+ ],
+ "w|จุดยืน": [
+  {
+   "text": "สมชายแสดงจุดยืนชัดเจนในการโต้วาทีเรื่องการใส่ชุดนักเรียน",
+   "en": "Somchai made his position clear in the debate about school uniforms.",
+   "ko": "솜차이는 교복 착용 토론에서 입장을 분명히 밝혔어요.",
+   "blank": "จุดยืน",
+   "src": "made"
+  },
+  {
+   "text": "มาลีมีจุดยืนว่าจะไม่เผาตอซังข้าวเพราะทำให้เกิดฝุ่นหน้าแล้ง",
+   "en": "Malee holds firm that she won't burn rice stubble because it causes dust in the dry season.",
+   "ko": "말리는 건기 미세먼지의 원인이 되니 볏짚 그루터기를 태우지 않겠다는 입장이에요.",
+   "blank": "จุดยืน",
    "src": "made"
   }
  ],
@@ -17881,6 +18025,22 @@
    "src": "made"
   }
  ],
+ "w|เฉือน": [
+  {
+   "text": "ทีมของสมชายเฉือนชนะการแข่งขันตอบปัญหาไปแค่คะแนนเดียว",
+   "en": "Somchai's team edged out the quiz competition by just one point.",
+   "ko": "솜차이네 팀은 퀴즈 대회에서 단 일 점 차로 아슬아슬하게 이겼어요.",
+   "blank": "เฉือน",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเฉือนเนื้อมะม่วงสุกที่ออกตามฤดูให้ลูกกิน",
+   "en": "Malee sliced the flesh of a ripe seasonal mango for her child.",
+   "ko": "말리는 제철 잘 익은 망고 과육을 저며 아이에게 줬어요.",
+   "blank": "เฉือน",
+   "src": "made"
+  }
+ ],
  "w|โฉม": [
   {
    "text": "โรงพักเก่าได้รับการปรับปรุงจนเปลี่ยนโฉมไปทั้งหลัง",
@@ -17894,6 +18054,22 @@
    "en": "After Napha rearranged the desks, the office was transformed and became nicer to sit in.",
    "ko": "나파가 책상 배치를 바꾸자 사무실이 새 모습이 되어 더 앉고 싶어졌어요.",
    "blank": "โฉม",
+   "src": "made"
+  }
+ ],
+ "w|ชก": [
+  {
+   "text": "สมชายถูกเรียกพบผู้ปกครองเพราะชกเพื่อนในห้องน้ำ",
+   "en": "Somchai's parents were called in because he punched a classmate in the restroom.",
+   "ko": "솜차이는 화장실에서 친구를 때려서 부모님이 학교에 불려 왔어요.",
+   "blank": "ชก",
+   "src": "made"
+  },
+  {
+   "text": "หน้าหนาวมีงานวัด มาลีพาพ่อไปดูนักมวยชกกันบนเวที",
+   "en": "There's a temple fair in the cool season, and Malee took her father to watch boxers fight on stage.",
+   "ko": "겨울에 절 축제가 열려서 말리는 아버지를 모시고 무대 위 권투 경기를 보러 갔어요.",
+   "blank": "ชก",
    "src": "made"
   }
  ],
@@ -21175,6 +21351,22 @@
    "blank": "โซดา"
   }
  ],
+ "w|โซน": [
+  {
+   "text": "โรงเรียนแบ่งโซนให้นักเรียนแต่ละชั้นทำความสะอาด",
+   "en": "The school divides zones for each grade to clean.",
+   "ko": "학교는 학년마다 청소할 구역을 나눠 줬어요.",
+   "blank": "โซน",
+   "src": "made"
+  },
+  {
+   "text": "ตลาดนัดหน้าหนาวมีโซนขายเสื้อผ้ากันหนาวที่มาลีชอบไป",
+   "en": "The cool-season market has a winter clothing zone that Malee likes to visit.",
+   "ko": "겨울 장터에는 말리가 즐겨 가는 방한복 코너가 있어요.",
+   "blank": "โซน",
+   "src": "made"
+  }
+ ],
  "w|โซฟา": [
   {
    "text": "นั่งพักบนโซฟาหน่อย",
@@ -21786,6 +21978,22 @@
    "en": "The teacher pointed out to Chan that the index finger in her picture was too long.",
    "ko": "선생님은 짠의 그림에서 검지가 너무 길다고 짚어 줬어요.",
    "blank": "ดัชนี",
+   "src": "made"
+  }
+ ],
+ "w|ดัด": [
+  {
+   "text": "ครูภาษาไทยช่วยดัดนิสัยสมชายที่ชอบส่งงานช้า",
+   "en": "The Thai teacher helped break Somchai's habit of handing in work late.",
+   "ko": "국어 선생님은 과제를 늦게 내는 솜차이의 버릇을 고쳐 줬어요.",
+   "blank": "ดัด",
+   "src": "made"
+  },
+  {
+   "text": "มาลีดัดกิ่งบอนไซให้โค้งรับแสงหน้าหนาว",
+   "en": "Malee bent the bonsai branches to curve toward the cool-season light.",
+   "ko": "말리는 겨울 햇빛을 받도록 분재 가지를 휘어 잡았어요.",
+   "blank": "ดัด",
    "src": "made"
   }
  ],
@@ -23224,6 +23432,22 @@
    "en": "On the day the chef was off sick, Fon had to run the kitchen alone.",
    "ko": "셰프가 병가를 낸 날 폰은 혼자서 주방을 맡아야 했어요.",
    "blank": "โดยลำพัง",
+   "src": "made"
+  }
+ ],
+ "w|โดยส่วนตัว": [
+  {
+   "text": "โดยส่วนตัวแล้ว สมชายชอบวิชาศิลปะมากกว่าคณิตศาสตร์",
+   "en": "Personally, Somchai likes art more than math.",
+   "ko": "개인적으로 솜차이는 수학보다 미술을 더 좋아해요.",
+   "blank": "โดยส่วนตัว",
+   "src": "made"
+  },
+  {
+   "text": "โดยส่วนตัว มาลีชอบหน้าหนาวที่สุดเพราะอากาศเย็นสบาย",
+   "en": "Personally, Malee likes the cool season best because the weather is pleasantly cool.",
+   "ko": "개인적으로 말리는 날씨가 선선해서 겨울을 제일 좋아해요.",
+   "blank": "โดยส่วนตัว",
    "src": "made"
   }
  ],
@@ -25303,6 +25527,22 @@
    "src": "made"
   }
  ],
+ "w|ตัวต่อตัว": [
+  {
+   "text": "ครูแนะแนวคุยกับสมชายตัวต่อตัวเรื่องเลือกคณะ",
+   "en": "The guidance counselor talked with Somchai one-on-one about choosing a faculty.",
+   "ko": "진로 상담 선생님은 솜차이와 일대일로 학과 선택에 대해 이야기했어요.",
+   "blank": "ตัวต่อตัว",
+   "src": "made"
+  },
+  {
+   "text": "มาลีสอนพิเศษหลานแบบตัวต่อตัวช่วงปิดเทอมหน้าร้อน",
+   "en": "Malee tutors her niece one-on-one during the summer break.",
+   "ko": "말리는 여름방학 동안 조카를 일대일로 과외해 줘요.",
+   "blank": "ตัวต่อตัว",
+   "src": "made"
+  }
+ ],
  "w|ตัวแทน": [
   {
    "text": "หัวหน้าส่งสมชายไปเป็นตัวแทนทีมในการประชุมใหญ่",
@@ -26460,6 +26700,22 @@
    "en": "Pranee was willing to work another shift when her coworker was sick.",
    "ko": "프라니는 동료가 아프자 기꺼이 한 교대를 더 일했어요.",
    "blank": "เต็มใจ",
+   "src": "made"
+  }
+ ],
+ "w|เต็มที": [
+  {
+   "text": "หลังวิ่งรอบสนาม สมชายเหนื่อยเต็มทีจนแทบเดินไม่ไหว",
+   "en": "After running around the field, Somchai was utterly exhausted and could barely walk.",
+   "ko": "운동장을 돈 뒤 솜차이는 너무 지쳐서 걷기도 힘들었어요.",
+   "blank": "เต็มที",
+   "src": "made"
+  },
+  {
+   "text": "ปลายเดือนเมษา อากาศร้อนเต็มทีจนมาลีไม่อยากออกจากบ้าน",
+   "en": "At the end of April, it's so extremely hot that Malee doesn't want to leave the house.",
+   "ko": "사월 말이면 너무 더워서 말리는 집 밖에 나가기 싫어해요.",
+   "blank": "เต็มที",
    "src": "made"
   }
  ],
@@ -27702,6 +27958,22 @@
    "en": "The restaurant only buys vegetables from growers in this area.",
    "ko": "가게는 이 지역 농부에게서만 채소를 사요.",
    "blank": "ถิ่น",
+   "src": "made"
+  }
+ ],
+ "w|ถิ่นฐาน": [
+  {
+   "text": "ครูสังคมเล่าว่าบรรพบุรุษของคนเมืองนี้อพยพมาตั้งถิ่นฐานเมื่อหลายร้อยปีก่อน",
+   "en": "The social studies teacher said the town's ancestors migrated and settled here centuries ago.",
+   "ko": "사회 선생님은 이 고장 사람들의 조상이 수백 년 전에 이주해 와서 정착했다고 했어요.",
+   "blank": "ถิ่นฐาน",
+   "src": "made"
+  },
+  {
+   "text": "นกบางชนิดย้ายถิ่นฐานมาหลบหนาวใกล้บ้านมาลีทุกปี",
+   "en": "Some birds migrate to escape the cold near Malee's home every year.",
+   "ko": "어떤 새들은 해마다 추위를 피해 말리네 집 근처로 옮겨 와요.",
+   "blank": "ถิ่นฐาน",
    "src": "made"
   }
  ],
@@ -33817,6 +34089,22 @@
    "src": "made"
   }
  ],
+ "w|นาวิกโยธิน": [
+  {
+   "text": "พี่ชายของสมชายสอบเข้าเป็นนาวิกโยธินได้",
+   "en": "Somchai's older brother passed the exam to become a marine.",
+   "ko": "솜차이의 형은 해병대 시험에 합격했어요.",
+   "blank": "นาวิกโยธิน",
+   "src": "made"
+  },
+  {
+   "text": "หน้ามรสุม นาวิกโยธินมาช่วยอพยพชาวบ้านริมทะเลใกล้บ้านมาลี",
+   "en": "In monsoon season, marines came to help evacuate the coastal villagers near Malee's home.",
+   "ko": "몬순철에 해병대가 말리네 집 근처 해안 주민들의 대피를 도왔어요.",
+   "blank": "นาวิกโยธิน",
+   "src": "made"
+  }
+ ],
  "w|น่าเศร้า": [
   {
    "text": "ตอนจบเรื่องนี้น่าเศร้า",
@@ -34678,6 +34966,22 @@
    "en": "The bread is still soft.",
    "ko": "빵이 아직 말랑해.",
    "blank": "นิ่ม",
+   "src": "made"
+  }
+ ],
+ "w|นิมิต": [
+  {
+   "text": "ครูบอกว่าการที่สมชายตั้งใจเรียนขึ้นเป็นนิมิตหมายอันดี",
+   "en": "The teacher said Somchai studying harder is a good sign.",
+   "ko": "선생님은 솜차이가 공부에 더 열심인 게 좋은 징조라고 했어요.",
+   "blank": "นิมิต",
+   "src": "made"
+  },
+  {
+   "text": "ยายของมาลีเชื่อว่าฝนแรกของปีเป็นนิมิตที่ดีสำหรับการทำนา",
+   "en": "Malee's grandmother believes the first rain of the year is a good sign for rice farming.",
+   "ko": "말리의 할머니는 그해 첫비가 벼농사에 좋은 징조라고 믿어요.",
+   "blank": "นิมิต",
    "src": "made"
   }
  ],
@@ -37335,6 +37639,22 @@
    "src": "made"
   }
  ],
+ "w|เบสบอล": [
+  {
+   "text": "สมชายสมัครเข้าชมรมเบสบอลที่เพิ่งตั้งใหม่",
+   "en": "Somchai signed up for the newly formed baseball club.",
+   "ko": "솜차이는 새로 생긴 야구 동아리에 가입했어요.",
+   "blank": "เบสบอล",
+   "src": "made"
+  },
+  {
+   "text": "มาลีใส่หมวกเบสบอลกันแดดหน้าร้อน",
+   "en": "Malee wears a baseball cap to block the sun in the hot season.",
+   "ko": "말리는 더운 철에 햇볕을 가리려고 야구 모자를 써요.",
+   "blank": "เบสบอล",
+   "src": "made"
+  }
+ ],
  "w|เบา": [
   {
    "text": "กล่องนี้เบามากเลย",
@@ -37392,6 +37712,22 @@
    "en": "Wanna had to withdraw her savings to pay for a new roof.",
    "ko": "완나는 지붕 교체 비용을 내려고 저축을 인출해야 했어요.",
    "blank": "เบิก",
+   "src": "made"
+  }
+ ],
+ "w|เบี้ย": [
+  {
+   "text": "ครูได้เบี้ยเลี้ยงตอนพาสมชายกับเพื่อนไปเข้าค่าย",
+   "en": "The teacher got an allowance for taking Somchai and his friends to camp.",
+   "ko": "선생님은 솜차이와 친구들을 캠프에 데려가면서 출장비를 받았어요.",
+   "blank": "เบี้ย",
+   "src": "made"
+  },
+  {
+   "text": "มาลีจ่ายเบี้ยประกันพืชผลก่อนเข้าหน้าฝน",
+   "en": "Malee pays her crop insurance premium before the rainy season.",
+   "ko": "말리는 우기가 오기 전에 농작물 보험료를 내요.",
+   "blank": "เบี้ย",
    "src": "made"
   }
  ],
@@ -38853,6 +39189,22 @@
    "src": "made"
   }
  ],
+ "w|ประนอม": [
+  {
+   "text": "ครูฝ่ายปกครองเรียกสองฝ่ายมาประนอมข้อพิพาทเรื่องโต๊ะในโรงอาหาร",
+   "en": "The discipline teacher called both sides in to settle the dispute over cafeteria tables.",
+   "ko": "학생부 선생님은 식당 자리 다툼을 중재하려고 양쪽을 불렀어요.",
+   "blank": "ประนอม",
+   "src": "made"
+  },
+  {
+   "text": "มาลีกับน้องประนอมกันได้ว่าหน้าร้อนจะเปิดแอร์แค่ตอนดึก",
+   "en": "Malee and her sibling compromised on running the air conditioner only late at night in the hot season.",
+   "ko": "말리와 동생은 더운 철에는 밤늦게만 에어컨을 켜기로 타협했어요.",
+   "blank": "ประนอม",
+   "src": "made"
+  }
+ ],
  "w|ประนีประนอม": [
   {
    "text": "ทั้งสองฝ่ายยอมประนีประนอมกัน",
@@ -39524,6 +39876,22 @@
    "en": "Jan ordered secondhand master's entrance exam prep books from an online shop.",
    "ko": "짠은 온라인 가게에서 석사 입시 준비서 중고책을 주문했어요.",
    "blank": "ปริญญาโท",
+   "src": "made"
+  }
+ ],
+ "w|ปริมณฑล": [
+  {
+   "text": "สมชายนั่งรถจากปริมณฑลเข้ามาเรียนในกรุงเทพฯ ทุกเช้า",
+   "en": "Every morning Somchai commutes from the suburbs into Bangkok for school.",
+   "ko": "솜차이는 매일 아침 수도권 외곽에서 방콕으로 차를 타고 통학해요.",
+   "blank": "ปริมณฑล",
+   "src": "made"
+  },
+  {
+   "text": "มาลีดูข่าวว่าหน้าฝนปีนี้น้ำท่วมหลายจุดในกรุงเทพฯ และปริมณฑล",
+   "en": "Malee watched the news that this rainy season has flooded many spots in Bangkok and its vicinity.",
+   "ko": "말리는 올해 우기에 방콕과 수도권 곳곳이 침수됐다는 뉴스를 봤어요.",
+   "blank": "ปริมณฑล",
    "src": "made"
   }
  ],
@@ -40443,6 +40811,22 @@
    "en": "My pen is out of ink.",
    "ko": "내 펜 잉크가 다 떨어졌어.",
    "blank": "ปากกา"
+  }
+ ],
+ "w|ปาฏิหาริย์": [
+  {
+   "text": "ทีมฟุตบอลของโรงเรียนสมชายพลิกชนะได้อย่างปาฏิหาริย์ในนาทีสุดท้าย",
+   "en": "Somchai's school football team miraculously came back to win in the last minute.",
+   "ko": "솜차이네 학교 축구팀은 마지막 일 분에 기적처럼 역전승했어요.",
+   "blank": "ปาฏิหาริย์",
+   "src": "made"
+  },
+  {
+   "text": "มาลีรู้สึกว่าการได้เห็นหิมะเป็นปาฏิหาริย์สำหรับคนเมืองร้อน",
+   "en": "Malee feels that seeing snow is a miracle for someone from a hot country.",
+   "ko": "말리는 더운 나라 사람이 눈을 보는 건 기적 같다고 느껴요.",
+   "blank": "ปาฏิหาริย์",
+   "src": "made"
   }
  ],
  "w|ปาท่องโก๋": [
@@ -43663,6 +44047,22 @@
    "blank": "ผู้ใหญ่"
   }
  ],
+ "w|ผู้ใหญ่บ้าน": [
+  {
+   "text": "ผู้ใหญ่บ้านมามอบทุนการศึกษาให้สมชาย",
+   "en": "The village head came to give Somchai a scholarship.",
+   "ko": "이장님이 와서 솜차이에게 장학금을 줬어요.",
+   "blank": "ผู้ใหญ่บ้าน",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ใหญ่บ้านประกาศเตือนมาลีและเพื่อนบ้านให้เตรียมรับน้ำป่า",
+   "en": "The village head warned Malee and the neighbors to prepare for flash floods.",
+   "ko": "이장님은 말리와 이웃들에게 산에서 내려오는 급류에 대비하라고 알렸어요.",
+   "blank": "ผู้ใหญ่บ้าน",
+   "src": "made"
+  }
+ ],
  "w|ผู้อพยพ": [
   {
    "text": "ชัยบริจาคเสื้อผ้าเก่าให้ศูนย์ช่วยเหลือผู้อพยพจากน้ำท่วม",
@@ -45071,6 +45471,22 @@
    "src": "made"
   }
  ],
+ "w|พระราชพิธี": [
+  {
+   "text": "นักเรียนห้องสมชายดูถ่ายทอดพระราชพิธีในห้องประชุม",
+   "en": "Somchai's class watched the broadcast of the royal ceremony in the assembly hall.",
+   "ko": "솜차이네 반 학생들은 강당에서 왕실 의식 중계를 봤어요.",
+   "blank": "พระราชพิธี",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเล่าว่าพระราชพิธีพืชมงคลจัดขึ้นทุกปีเพื่อเริ่มฤดูทำนา",
+   "en": "Malee explained that the Royal Ploughing Ceremony is held every year to start the rice-farming season.",
+   "ko": "말리는 왕실 농경제가 해마다 벼농사철의 시작을 알리며 열린다고 설명했어요.",
+   "blank": "พระราชพิธี",
+   "src": "made"
+  }
+ ],
  "w|พระราชวัง": [
   {
    "text": "วิชัยถามพนักงานว่าต้องแต่งตัวยังไงถึงจะเข้าชมพระราชวังได้",
@@ -46180,6 +46596,22 @@
    "en": "Somsak happened to see a rain-calling ritual in a mountain village.",
    "ko": "솜싹은 우연히 산마을의 기우제를 보게 됐어요.",
    "blank": "พิธีกรรม",
+   "src": "made"
+  }
+ ],
+ "w|พิธีการ": [
+  {
+   "text": "วันรับประกาศนียบัตรมีพิธีการยาวจนสมชายง่วง",
+   "en": "The graduation ceremony had such long formalities that Somchai got sleepy.",
+   "ko": "졸업장 수여식은 의례가 너무 길어서 솜차이는 졸렸어요.",
+   "blank": "พิธีการ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีบอกว่างานทำบุญต้นฤดูของหมู่บ้านไม่มีพิธีการมากมาย",
+   "en": "Malee says the village's start-of-season merit-making has few formalities.",
+   "ko": "말리는 마을의 계절맞이 공덕 행사에는 격식이 별로 없다고 해요.",
+   "blank": "พิธีการ",
    "src": "made"
   }
  ],
@@ -48003,6 +48435,22 @@
    "src": "made"
   }
  ],
+ "w|ภักดี": [
+  {
+   "text": "สมชายเป็นแฟนบอลที่ภักดีต่อทีมโรงเรียนมาตลอด",
+   "en": "Somchai has always been a loyal fan of the school team.",
+   "ko": "솜차이는 늘 학교 팀에 충성스러운 축구 팬이었어요.",
+   "blank": "ภักดี",
+   "src": "made"
+  },
+  {
+   "text": "หมาของมาลีภักดีมาก นอนรอหน้าบ้านทั้งที่ฝนตก",
+   "en": "Malee's dog is very loyal, lying in front of the house waiting even in the rain.",
+   "ko": "말리의 개는 아주 충직해서 비가 와도 집 앞에 누워 기다려요.",
+   "blank": "ภักดี",
+   "src": "made"
+  }
+ ],
  "w|ภัย": [
   {
    "text": "อย่ามองข้ามภัยตรงหน้า",
@@ -48167,6 +48615,22 @@
    "en": "Delete the old photos.",
    "ko": "옛 사진은 지워.",
    "blank": "ภาพถ่าย"
+  }
+ ],
+ "w|ภาพพจน์": [
+  {
+   "text": "เรื่องนักเรียนทะเลาะกันทำให้ภาพพจน์ของโรงเรียนเสีย",
+   "en": "The students' fight damaged the school's image.",
+   "ko": "학생들의 싸움으로 학교 이미지가 나빠졌어요.",
+   "blank": "ภาพพจน์",
+   "src": "made"
+  },
+  {
+   "text": "มาลีใช้ภาพพจน์เปรียบสายฝนเหมือนน้ำตาของฟ้า",
+   "en": "Malee used a figure of speech comparing the rain to the sky's tears.",
+   "ko": "말리는 빗줄기를 하늘의 눈물에 빗대는 비유를 썼어요.",
+   "blank": "ภาพพจน์",
+   "src": "made"
   }
  ],
  "w|ภาพยนตร์": [
@@ -48678,6 +49142,22 @@
    "en": "The seafood of this region is famous for its freshness.",
    "ko": "이 지방의 해산물은 신선하기로 유명해요.",
    "blank": "ภูมิภาค",
+   "src": "made"
+  }
+ ],
+ "w|ภูมิลำเนา": [
+  {
+   "text": "สมชายต้องกรอกภูมิลำเนาในใบสมัครเรียนต่อ",
+   "en": "Somchai has to fill in his hometown on the further-study application.",
+   "ko": "솜차이는 진학 지원서에 본적지를 적어야 해요.",
+   "blank": "ภูมิลำเนา",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงสงกรานต์ มาลีกลับภูมิลำเนาที่อีสานทุกปี",
+   "en": "Every Songkran, Malee goes back to her hometown in the northeast.",
+   "ko": "송끄란 때마다 말리는 이산 지방의 고향에 내려가요.",
+   "blank": "ภูมิลำเนา",
    "src": "made"
   }
  ],
@@ -50244,6 +50724,22 @@
    "en": "Suda isn't fluent in the local dialect yet, so she didn't get the neighbor's joke.",
    "ko": "수다는 아직 사투리를 잘 못 알아들어서 옆집 아저씨 농담을 이해 못 했어요.",
    "blank": "มุก",
+   "src": "made"
+  }
+ ],
+ "w|มุข": [
+  {
+   "text": "สมชายเล่นมุขตลกจนเพื่อนทั้งห้องหัวเราะ",
+   "en": "Somchai cracked a joke that made the whole class laugh.",
+   "ko": "솜차이가 농담을 던지자 반 전체가 웃었어요.",
+   "blank": "มุข",
+   "src": "made"
+  },
+  {
+   "text": "ทุกฤดูหนาว พ่อของมาลีชอบเล่นมุขเดิมว่าหนาวจนฟันกระทบกัน",
+   "en": "Every cool season, Malee's father makes the same old joke about being so cold his teeth chatter.",
+   "ko": "겨울마다 말리의 아버지는 이가 딱딱 부딪칠 만큼 춥다는 똑같은 농담을 해요.",
+   "blank": "มุข",
    "src": "made"
   }
  ],
@@ -51866,6 +52362,22 @@
    "en": "Napha hopes her friendships with her new coworkers will last.",
    "ko": "나파는 새 동료들과의 우정이 오래가기를 바라요.",
    "blank": "ยั่งยืน",
+   "src": "made"
+  }
+ ],
+ "w|ยัด": [
+  {
+   "text": "สมชายยัดหนังสือทุกเล่มลงกระเป๋าจนซิปปิดไม่ได้",
+   "en": "Somchai stuffed every book into his bag until the zipper wouldn't close.",
+   "ko": "솜차이는 책을 전부 가방에 쑤셔 넣어서 지퍼가 안 잠겼어요.",
+   "blank": "ยัด",
+   "src": "made"
+  },
+  {
+   "text": "มาลียัดเสื้อกันหนาวลงกระเป๋าเดินทางเตรียมไปเที่ยวภาคเหนือ",
+   "en": "Malee stuffed sweaters into her suitcase to get ready for a trip north.",
+   "ko": "말리는 북부 여행을 준비하며 스웨터를 여행 가방에 쑤셔 넣었어요.",
+   "blank": "ยัด",
    "src": "made"
   }
  ],
@@ -56429,6 +56941,22 @@
    "src": "made"
   }
  ],
+ "w|เรื่องสำคัญ": [
+  {
+   "text": "ผู้อำนวยการเรียกประชุมผู้ปกครองด่วนเพราะมีเรื่องสำคัญ",
+   "en": "The principal called an urgent parents' meeting because there was an important matter.",
+   "ko": "교장 선생님은 중요한 일이 있어서 학부모 회의를 급히 소집했어요.",
+   "blank": "เรื่องสำคัญ",
+   "src": "made"
+  },
+  {
+   "text": "มาลีจดเรื่องสำคัญที่ต้องทำก่อนหน้าฝนไว้ในสมุด",
+   "en": "Malee wrote down the important things to do before the rainy season in her notebook.",
+   "ko": "말리는 우기 전에 해야 할 중요한 일을 공책에 적어 뒀어요.",
+   "blank": "เรื่องสำคัญ",
+   "src": "made"
+  }
+ ],
  "w|เรื่องใหญ่": [
   {
    "text": "ลืมกุญแจไว้ในรถไม่ใช่เรื่องใหญ่ วิชัยช่วยเรียกช่างมาเปิดให้",
@@ -57773,6 +58301,22 @@
    "en": "She said goodbye and smiled.",
    "ko": "그녀는 작별 인사를 하고 미소 지었어.",
    "blank": "ลาก่อน"
+  }
+ ],
+ "w|ลาง": [
+  {
+   "text": "แมวดำเดินผ่านหน้าห้องสอบ สมชายกลัวว่าจะเป็นลางร้าย",
+   "en": "A black cat walked past the exam room, and Somchai feared it was a bad omen.",
+   "ko": "검은 고양이가 시험장 앞을 지나가자 솜차이는 불길한 징조일까 봐 걱정했어요.",
+   "blank": "ลาง",
+   "src": "made"
+  },
+  {
+   "text": "คนเฒ่าบอกมาลีว่ามดขนไข่ขึ้นที่สูงเป็นลางว่าฝนจะตก",
+   "en": "The old folks told Malee that ants carrying their eggs uphill is a sign rain is coming.",
+   "ko": "어르신들은 말리에게 개미가 알을 높은 곳으로 옮기면 비가 올 징조라고 했어요.",
+   "blank": "ลาง",
+   "src": "made"
   }
  ],
  "w|ล่าง": [
@@ -59937,6 +60481,22 @@
    "src": "made"
   }
  ],
+ "w|ว่อน": [
+  {
+   "text": "ข่าวลือเรื่องข้อสอบรั่วบินว่อนในกลุ่มแชตของห้องสมชาย",
+   "en": "Rumors of a leaked exam were flying around Somchai's class chat group.",
+   "ko": "시험지 유출 소문이 솜차이네 반 단톡방에 쫙 퍼졌어요.",
+   "blank": "ว่อน",
+   "src": "made"
+  },
+  {
+   "text": "ต้นฝน แมลงเม่าบินว่อนรอบหลอดไฟหน้าบ้านมาลี",
+   "en": "At the start of the rains, termites swarm around the light bulb in front of Malee's house.",
+   "ko": "우기가 시작되면 날개미가 말리네 집 앞 전구 주위를 어지럽게 날아다녀요.",
+   "blank": "ว่อน",
+   "src": "made"
+  }
+ ],
  "w|วอร์ม": [
   {
    "text": "นักวิ่งวอร์มก่อนออกสตาร์ท",
@@ -60587,6 +61147,22 @@
    "blank": "วาด"
   }
  ],
+ "w|วาทกรรม": [
+  {
+   "text": "ครูสังคมชวนนักเรียนห้องสมชายถกเรื่องวาทกรรมในโฆษณา",
+   "en": "The social studies teacher got Somchai's class to debate the discourse in advertising.",
+   "ko": "사회 선생님은 솜차이네 반 학생들과 광고 속 담론에 대해 토론했어요.",
+   "blank": "วาทกรรม",
+   "src": "made"
+  },
+  {
+   "text": "มาลีเบื่อวาทกรรมที่ว่าหน้าหนาวของไทยมีแค่สามวัน",
+   "en": "Malee is tired of the saying that Thailand's cool season lasts only three days.",
+   "ko": "말리는 태국 겨울은 사흘뿐이라는 말이 지겨워요.",
+   "blank": "วาทกรรม",
+   "src": "made"
+  }
+ ],
  "w|ว่าที่": [
   {
    "text": "ว่าที่นายกเทศมนตรีคนใหม่มาเยี่ยมสำนักงานของชัยเมื่อบ่าย",
@@ -61086,6 +61662,22 @@
    "en": "Malee took her mother to the doctor, who diagnosed a stomach ailment.",
    "ko": "말리는 어머니를 모시고 병원에 갔고 의사는 위염이라고 진단했어요.",
    "blank": "วินิจฉัย",
+   "src": "made"
+  }
+ ],
+ "w|วิปัสสนา": [
+  {
+   "text": "โรงเรียนพาสมชายกับเพื่อนไปฝึกวิปัสสนาที่วัดสามวัน",
+   "en": "The school took Somchai and his friends to a temple for three days of insight meditation.",
+   "ko": "학교는 솜차이와 친구들을 데리고 절에서 사흘간 위빠사나 명상을 했어요.",
+   "blank": "วิปัสสนา",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงเข้าพรรษา มาลีไปปฏิบัติวิปัสสนาที่วัดใกล้บ้าน",
+   "en": "During Buddhist Lent, Malee goes to practice insight meditation at a temple near home.",
+   "ko": "안거철이면 말리는 집 근처 절에 가서 위빠사나 수행을 해요.",
+   "blank": "วิปัสสนา",
    "src": "made"
   }
  ],
@@ -64842,6 +65434,22 @@
    "en": "The teacher showed them art posters from the socialist era with red colours and thick lines.",
    "ko": "선생님은 빨간색과 굵은 선을 쓴 사회주의 시대 미술 포스터를 보여 줬어요.",
    "blank": "สังคมนิยม",
+   "src": "made"
+  }
+ ],
+ "w|สังคมศาสตร์": [
+  {
+   "text": "สมชายอยากเรียนต่อคณะสังคมศาสตร์",
+   "en": "Somchai wants to go on to study in the faculty of social sciences.",
+   "ko": "솜차이는 사회과학대학에 진학하고 싶어 해요.",
+   "blank": "สังคมศาสตร์",
+   "src": "made"
+  },
+  {
+   "text": "มาลีอ่านงานวิจัยด้านสังคมศาสตร์เรื่องผลของฤดูกาลต่ออารมณ์คน",
+   "en": "Malee read a social science study on how the seasons affect people's moods.",
+   "ko": "말리는 계절이 사람의 기분에 미치는 영향에 관한 사회과학 연구를 읽었어요.",
+   "blank": "สังคมศาสตร์",
    "src": "made"
   }
  ],
@@ -68904,6 +69512,22 @@
    "en": "Piya saw a boxer practicing punches in the gym early in the morning.",
    "ko": "피야는 새벽에 헬스장에서 권투 선수가 주먹 연습을 하는 걸 봤어요.",
    "blank": "หมัด",
+   "src": "made"
+  }
+ ],
+ "w|หมั่น": [
+  {
+   "text": "ครูบอกให้สมชายหมั่นทบทวนบทเรียนทุกวัน",
+   "en": "The teacher told Somchai to review his lessons diligently every day.",
+   "ko": "선생님은 솜차이에게 매일 부지런히 복습하라고 했어요.",
+   "blank": "หมั่น",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงหน้าร้อน มาลีหมั่นรดน้ำต้นไม้ทั้งเช้าและเย็น",
+   "en": "In the hot season, Malee diligently waters the plants morning and evening.",
+   "ko": "더운 철이면 말리는 아침저녁으로 부지런히 화초에 물을 줘요.",
+   "blank": "หมั่น",
    "src": "made"
   }
  ],

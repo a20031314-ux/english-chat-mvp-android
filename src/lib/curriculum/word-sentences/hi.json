@@ -1873,6 +1873,22 @@
    "src": "made"
   }
  ],
+ "w|अनदेखा करना": [
+  {
+   "text": "विकास ने ट्रोल्स के कमेंटों को अनदेखा किया और अपना काम करता रहा।",
+   "en": "Vikas ignored the trolls' comments and kept doing his work.",
+   "ko": "비카스는 악플을 무시하고 계속 자기 일을 했어요.",
+   "blank": "अनदेखा किया",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने पैर के दर्द को अनदेखा किया और चोटी तक चलती रही।",
+   "en": "Shalini ignored the pain in her foot and kept walking to the summit.",
+   "ko": "샬리니는 발의 통증을 무시하고 정상까지 계속 걸었어요.",
+   "blank": "अनदेखा किया",
+   "src": "made"
+  }
+ ],
  "w|अनदेखी": [
   {
    "text": "सुरक्षा नियमों की अनदेखी पर ठेकेदार पर जुर्माना लगा।",
@@ -2683,6 +2699,22 @@
    "blank": "अन्य"
   }
  ],
+ "w|अन्यत्र": [
+  {
+   "text": "संपादक ने कहा कि यह ख़बर अन्यत्र भी छप चुकी है, इसलिए विकास को नया पहलू ढूँढना होगा।",
+   "en": "The editor said the story had already appeared elsewhere, so Vikas would need to find a new angle.",
+   "ko": "편집장은 그 기사가 다른 데서도 이미 나왔으니 비카스가 새로운 각도를 찾아야 한다고 했어요.",
+   "blank": "अन्यत्र",
+   "src": "made"
+  },
+  {
+   "text": "झील के पास तंबू लगाने की इजाज़त नहीं थी, इसलिए शालिनी को अन्यत्र जगह ढूँढनी पड़ी।",
+   "en": "Tents weren't allowed near the lake, so Shalini had to find a spot elsewhere.",
+   "ko": "호수 근처에는 텐트를 칠 수 없어서 샬리니는 다른 곳을 찾아야 했어요.",
+   "blank": "अन्यत्र",
+   "src": "made"
+  }
+ ],
  "w|अन्यथा": [
   {
    "text": "रवि सर ने कहा कि कल तक प्रोजेक्ट जमा करो, अन्यथा अंक कट जाएँगे।",
@@ -2712,6 +2744,22 @@
    "en": "Priya says selling fake goods as genuine is an injustice to the customer.",
    "ko": "프리야는 가짜를 진짜라고 파는 건 손님한테 부당한 일이라고 말해요.",
    "blank": "अन्याय",
+   "src": "made"
+  }
+ ],
+ "w|अन्वेषण": [
+  {
+   "text": "विकास ने अंतरिक्ष अन्वेषण पर एक विशेष रिपोर्ट तैयार की।",
+   "en": "Vikas prepared a special report on space exploration.",
+   "ko": "비카스는 우주 탐사에 관한 특집 보도를 준비했어요.",
+   "blank": "अन्वेषण",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी को नई पगडंडियों का अन्वेषण करना बहुत पसंद है।",
+   "en": "Shalini loves exploring new trails.",
+   "ko": "샬리니는 새로운 오솔길을 탐험하는 걸 아주 좋아해요.",
+   "blank": "अन्वेषण",
    "src": "made"
   }
  ],
@@ -2844,6 +2892,22 @@
    "en": "Wearing a clean apron and cap is essential in the kitchen.",
    "ko": "주방에서는 깨끗한 앞치마와 모자 착용이 필수예요.",
    "blank": "अपरिहार्य",
+   "src": "made"
+  }
+ ],
+ "w|अपर्याप्त": [
+  {
+   "text": "विकास ने अपनी रिपोर्ट में लिखा कि ज़िले के अस्पतालों में बिस्तर अपर्याप्त हैं।",
+   "en": "Vikas wrote in his report that the district hospitals have insufficient beds.",
+   "ko": "비카스는 기사에 그 지역 병원들의 병상이 부족하다고 썼어요.",
+   "blank": "अपर्याप्त",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी का स्लीपिंग बैग उस ठंड के लिए अपर्याप्त निकला।",
+   "en": "Shalini's sleeping bag turned out to be inadequate for that cold.",
+   "ko": "샬리니의 침낭은 그 추위를 견디기에 부족했어요.",
+   "blank": "अपर्याप्त",
    "src": "made"
   }
  ],
@@ -3618,6 +3682,22 @@
    "en": "There was no wealth in the old house, but Priya holds its memories very dear.",
    "ko": "옛집은 부유하지 않았지만 프리야에게 그곳의 추억은 무척 소중해요.",
    "blank": "अमीरी",
+   "src": "made"
+  }
+ ],
+ "w|अमुक": [
+  {
+   "text": "विकास को ऐसी ख़बरें पसंद नहीं जिनमें बस लिखा हो कि अमुक अधिकारी ने कुछ कहा।",
+   "en": "Vikas doesn't like stories that just say a certain official said something.",
+   "ko": "비카스는 그냥 아무개 공무원이 뭐라고 했다고만 쓴 기사를 싫어해요.",
+   "blank": "अमुक",
+   "src": "made"
+  },
+  {
+   "text": "गाइड ने शालिनी से कहा कि वह अमुक दिन लौटेगा, पर तारीख़ बताना भूल गया।",
+   "en": "The guide told Shalini he would return on such-and-such a day, but forgot to give the date.",
+   "ko": "가이드는 샬리니에게 어느 날 돌아오겠다고 했지만 날짜를 말하는 걸 잊었어요.",
+   "blank": "अमुक",
    "src": "made"
   }
  ],
@@ -4733,6 +4813,22 @@
    "en": "Where is the nearest hospital?",
    "ko": "가까운 병원이 어디야?",
    "blank": "अस्पताल"
+  }
+ ],
+ "w|अस्पष्ट": [
+  {
+   "text": "पुलिस का बयान इतना अस्पष्ट था कि विकास को दोबारा फ़ोन करना पड़ा।",
+   "en": "The police statement was so vague that Vikas had to call again.",
+   "ko": "경찰 발표가 너무 애매해서 비카스는 다시 전화해야 했어요.",
+   "blank": "अस्पष्ट",
+   "src": "made"
+  },
+  {
+   "text": "रास्ते के निशान अस्पष्ट थे, इसलिए शालिनी बार-बार नक़्शा देखती रही।",
+   "en": "The trail markers were unclear, so Shalini kept checking the map.",
+   "ko": "길 표시가 흐릿해서 샬리니는 계속 지도를 봤어요.",
+   "blank": "अस्पष्ट",
+   "src": "made"
   }
  ],
  "w|अस्सी": [
@@ -6343,6 +6439,22 @@
    "blank": "आपूर्ति"
   }
  ],
+ "w|आपूर्तिकर्ता": [
+  {
+   "text": "विकास ने अस्पताल के दवा आपूर्तिकर्ता से बात करके कमी की असली वजह जानी।",
+   "en": "By talking to the hospital's medicine supplier, Vikas learned the real reason for the shortage.",
+   "ko": "비카스는 병원 약품 공급업체와 이야기해서 품귀의 진짜 이유를 알아냈어요.",
+   "blank": "आपूर्तिकर्ता",
+   "src": "made"
+  },
+  {
+   "text": "गाँव का एक दुकानदार ट्रेकरों के लिए गैस का आपूर्तिकर्ता था, और शालिनी ने वहीं से सिलेंडर लिया।",
+   "en": "A village shopkeeper supplied gas to trekkers, and Shalini got her cylinder from him.",
+   "ko": "마을 가게 주인이 트레커들에게 가스를 대 주고 있어서 샬리니도 거기서 통을 샀어요.",
+   "blank": "आपूर्तिकर्ता",
+   "src": "made"
+  }
+ ],
  "w|आबाद": [
   {
    "text": "पुराना गाँव फिर से आबाद हो गया।",
@@ -7747,6 +7859,22 @@
    "src": "made"
   }
  ],
+ "w|इंतज़ाम करना": [
+  {
+   "text": "विकास ने चुनाव की रात के लिए पूरी टीम के खाने का इंतज़ाम किया।",
+   "en": "Vikas arranged food for the whole team for election night.",
+   "ko": "비카스는 선거 날 밤 팀 전체가 먹을 음식을 준비했어요.",
+   "blank": "इंतज़ाम किया",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने गाँव वालों से बात करके रात रुकने का इंतज़ाम कर लिया।",
+   "en": "Shalini talked to the villagers and arranged a place to stay the night.",
+   "ko": "샬리니는 마을 사람들과 이야기해서 하룻밤 묵을 곳을 마련했어요.",
+   "blank": "इंतज़ाम कर",
+   "src": "made"
+  }
+ ],
  "w|इंतज़ार करना": [
   {
    "text": "बस स्टॉप पर थोड़ा इंतज़ार करना पड़ेगा।",
@@ -8882,6 +9010,22 @@
    "en": "Priya's stall has old sheets with excellent hand embroidery.",
    "ko": "프리야 가판대에는 손자수가 훌륭한 옛 침대보가 있어요.",
    "blank": "उत्कृष्ट",
+   "src": "made"
+  }
+ ],
+ "w|उत्खनन": [
+  {
+   "text": "पुरातत्व विभाग के उत्खनन में मिली मूर्तियों की ख़बर विकास ने लिखी।",
+   "en": "Vikas wrote the story about statues found in the archaeology department's excavation.",
+   "ko": "고고학 부서의 발굴에서 나온 조각상 기사는 비카스가 썼어요.",
+   "blank": "उत्खनन",
+   "src": "made"
+  },
+  {
+   "text": "घाटी में उत्खनन वाली जगह के पास शालिनी ने पुराने बर्तनों के टुकड़े देखे।",
+   "en": "Near the excavation site in the valley, Shalini saw fragments of old pottery.",
+   "ko": "골짜기의 발굴 현장 근처에서 샬리니는 옛 그릇 조각들을 봤어요.",
+   "blank": "उत्खनन",
    "src": "made"
   }
  ],
@@ -11357,6 +11501,22 @@
    "blank": "ऑफ़र"
   }
  ],
+ "w|ऑफ़लाइन": [
+  {
+   "text": "सर्वर ऑफ़लाइन होने से विकास की ख़बर एक घंटा देर से छपी।",
+   "en": "Because the server was offline, Vikas's story was published an hour late.",
+   "ko": "서버가 끊기는 바람에 비카스의 기사가 한 시간 늦게 나갔어요.",
+   "blank": "ऑफ़लाइन",
+   "src": "made"
+  },
+  {
+   "text": "वहाँ नेटवर्क नहीं था, इसलिए शालिनी ने ऑफ़लाइन नक़्शा पहले ही डाउनलोड कर लिया था।",
+   "en": "There was no network there, so Shalini had already downloaded an offline map.",
+   "ko": "거기는 신호가 안 잡혀서 샬리니는 오프라인 지도를 미리 받아 뒀어요.",
+   "blank": "ऑफ़लाइन",
+   "src": "made"
+  }
+ ],
  "w|ऑफ़िस": [
   {
    "text": "ऑफ़िस आज जल्दी बंद होगा।",
@@ -13741,6 +13901,22 @@
    "blank": "कागज़"
   }
  ],
+ "w|काग़ज़ात": [
+  {
+   "text": "एक सूत्र ने चुपचाप विकास को कुछ गोपनीय काग़ज़ात सौंप दिए।",
+   "en": "A source quietly handed Vikas some confidential documents.",
+   "ko": "한 제보자가 조용히 비카스에게 기밀 서류 몇 장을 건넸어요.",
+   "blank": "काग़ज़ात",
+   "src": "made"
+  },
+  {
+   "text": "जाँच चौकी पर गार्ड ने शालिनी से परमिट के काग़ज़ात माँगे।",
+   "en": "At the checkpoint, the guard asked Shalini for her permit papers.",
+   "ko": "검문소에서 경비원이 샬리니에게 허가 서류를 보여 달라고 했어요.",
+   "blank": "काग़ज़ात",
+   "src": "made"
+  }
+ ],
  "w|काँच": [
   {
    "text": "मेज़ पर काँच का गिलास रखा है।",
@@ -14039,6 +14215,22 @@
    "en": "He stays very busy with office work.",
    "ko": "그는 사무실 일에 아주 바빠.",
    "blank": "कामकाज"
+  }
+ ],
+ "w|कामगार": [
+  {
+   "text": "विकास ने फ़ैक्टरी के कामगारों से बात करके एक लंबी रिपोर्ट लिखी।",
+   "en": "Vikas wrote a long report after talking to the factory workers.",
+   "ko": "비카스는 공장 노동자들과 이야기를 나눈 뒤 긴 기사를 썼어요.",
+   "blank": "कामगारों",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ी रास्ते की मरम्मत कर रहे एक कामगार ने शालिनी को सही दिशा बताई।",
+   "en": "A worker repairing the mountain road showed Shalini the right direction.",
+   "ko": "산길을 고치던 일꾼 한 명이 샬리니에게 올바른 방향을 알려 줬어요.",
+   "blank": "कामगार",
+   "src": "made"
   }
  ],
  "w|कामना": [
@@ -14598,6 +14790,22 @@
    "en": "Anjali ran a workshop at a school on dental care.",
    "ko": "안잘리는 학교에서 치아 관리 워크숍을 열었어요.",
    "blank": "कार्यशाला",
+   "src": "made"
+  }
+ ],
+ "w|कार्यशैली": [
+  {
+   "text": "नए संपादक की कार्यशैली विकास को शुरू में बहुत सख़्त लगी।",
+   "en": "At first Vikas found the new editor's working style very strict.",
+   "ko": "비카스는 처음에 새 편집장의 일하는 방식이 무척 엄하다고 느꼈어요.",
+   "blank": "कार्यशैली",
+   "src": "made"
+  },
+  {
+   "text": "ग्रुप लीडर की ढीली कार्यशैली से शालिनी थोड़ी परेशान थी।",
+   "en": "Shalini was a bit annoyed by the group leader's lax way of working.",
+   "ko": "샬리니는 그룹 리더의 느슨한 일 처리 방식 때문에 좀 답답했어요.",
+   "blank": "कार्यशैली",
    "src": "made"
   }
  ],
@@ -22375,6 +22583,22 @@
    "blank": "चमकना"
   }
  ],
+ "w|चमकाना": [
+  {
+   "text": "बड़े इंटरव्यू से पहले विकास ने अपने जूते चमकाए और टाई ठीक की।",
+   "en": "Before the big interview, Vikas polished his shoes and straightened his tie.",
+   "ko": "중요한 인터뷰 전에 비카스는 구두를 닦고 넥타이를 고쳐 맸어요.",
+   "blank": "चमकाए",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने राख से रगड़कर काला पतीला फिर से चमका दिया।",
+   "en": "Shalini scrubbed the blackened pot with ash and made it shine again.",
+   "ko": "샬리니는 재로 문질러서 시커메진 냄비를 다시 반짝이게 했어요.",
+   "blank": "चमका",
+   "src": "made"
+  }
+ ],
  "w|चमकीला": [
   {
    "text": "नई यूनिफ़ॉर्म की कमीज़ उजली थी और बटन चमकीले थे।",
@@ -27105,6 +27329,22 @@
    "src": "made"
   }
  ],
+ "w|ज़िम्मा लेना": [
+  {
+   "text": "रात की शिफ़्ट में कोई नहीं था, तो विकास ने पहले पन्ने का ज़िम्मा लिया।",
+   "en": "No one else was on the night shift, so Vikas took charge of the front page.",
+   "ko": "야간 근무에 아무도 없어서 비카스가 1면을 맡았어요.",
+   "blank": "ज़िम्मा लिया",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने सबके लिए खाना बनाने का ज़िम्मा ले लिया।",
+   "en": "Shalini took on the job of cooking for everyone.",
+   "ko": "샬리니가 모두를 위해 밥하는 일을 맡았어요.",
+   "blank": "ज़िम्मा ले",
+   "src": "made"
+  }
+ ],
  "w|ज़िम्मेदार": [
   {
    "text": "हर नागरिक ज़िम्मेदार होना चाहिए।",
@@ -27340,6 +27580,22 @@
    "en": "Anjali's grandmother boils cumin and carom water for her throat.",
    "ko": "안잘리의 외할머니는 목에 좋다며 커민과 아즈와인 물을 끓여 주세요.",
    "blank": "जीरे",
+   "src": "made"
+  }
+ ],
+ "w|जीर्णोद्धार": [
+  {
+   "text": "विकास ने पुराने क़िले के जीर्णोद्धार पर एक ख़ास रिपोर्ट बनाई।",
+   "en": "Vikas made a special report on the restoration of the old fort.",
+   "ko": "비카스는 옛 성곽 복원에 관한 특별 보도를 만들었어요.",
+   "blank": "जीर्णोद्धार",
+   "src": "made"
+  },
+  {
+   "text": "रास्ते में एक पुरानी बावड़ी का जीर्णोद्धार चल रहा था, और शालिनी वहाँ कुछ देर रुकी।",
+   "en": "An old stepwell was being restored along the way, and Shalini stopped there for a while.",
+   "ko": "가는 길에 옛 계단식 우물을 복원하고 있어서 샬리니는 잠시 들렀어요.",
+   "blank": "जीर्णोद्धार",
    "src": "made"
   }
  ],
@@ -32931,6 +33187,22 @@
    "src": "made"
   }
  ],
+ "w|त्यागपत्र": [
+  {
+   "text": "मेयर के त्यागपत्र की ख़बर आते ही विकास का फ़ोन लगातार बजने लगा।",
+   "en": "As soon as news of the mayor's resignation came, Vikas's phone started ringing nonstop.",
+   "ko": "시장의 사직 소식이 나오자마자 비카스의 전화가 쉴 새 없이 울렸어요.",
+   "blank": "त्यागपत्र",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने नौकरी से त्यागपत्र देकर एक महीने का कैंपिंग सफ़र शुरू किया।",
+   "en": "Shalini resigned from her job and started a month-long camping journey.",
+   "ko": "샬리니는 회사에 사표를 내고 한 달짜리 캠핑 여행을 시작했어요.",
+   "blank": "त्यागपत्र",
+   "src": "made"
+  }
+ ],
  "w|त्योहार": [
   {
    "text": "दिवाली हमारा पसंदीदा त्योहार है।",
@@ -34787,6 +35059,22 @@
    "src": "made"
   }
  ],
+ "w|दिवालिया": [
+  {
+   "text": "शहर की एक बड़ी बिल्डर कंपनी दिवालिया हो गई, और यह ख़बर सबसे पहले विकास को मिली।",
+   "en": "A big construction company in the city went bankrupt, and Vikas was the first to get the news.",
+   "ko": "시내의 큰 건설사가 파산했는데 그 소식을 가장 먼저 들은 사람이 비카스였어요.",
+   "blank": "दिवालिया",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बताया कि जिस कंपनी से उसने तंबू ख़रीदा था, वह अब दिवालिया हो चुकी है।",
+   "en": "Shalini said the company she bought her tent from has now gone bankrupt.",
+   "ko": "샬리니는 텐트를 산 회사가 이제 파산했다고 말했어요.",
+   "blank": "दिवालिया",
+   "src": "made"
+  }
+ ],
  "w|दिवाली": [
   {
    "text": "दिवाली पर घर रोशनी से जगमगा उठता है।",
@@ -34829,6 +35117,22 @@
    "en": "The wind is coming from the north direction.",
    "ko": "바람이 북쪽 방향에서 불어와.",
    "blank": "दिशा"
+  }
+ ],
+ "w|दिशानिर्देश": [
+  {
+   "text": "चैनल के नए दिशानिर्देश के अनुसार विकास बिना पुष्टि के कोई ख़बर नहीं चला सकता।",
+   "en": "Under the channel's new guidelines, Vikas cannot run any story without confirmation.",
+   "ko": "방송사의 새 지침에 따라 비카스는 확인 없이 어떤 기사도 내보낼 수 없어요.",
+   "blank": "दिशानिर्देश",
+   "src": "made"
+  },
+  {
+   "text": "वन विभाग के दिशानिर्देश के मुताबिक़ शालिनी ने रात में आग नहीं जलाई।",
+   "en": "Following the forest department's guidelines, Shalini didn't light a fire at night.",
+   "ko": "산림청 지침에 따라 샬리니는 밤에 불을 피우지 않았어요.",
+   "blank": "दिशानिर्देश",
+   "src": "made"
   }
  ],
  "w|दिसंबर": [
@@ -36335,6 +36639,22 @@
    "en": "He said thank you and left.",
    "ko": "고맙다고 말하고 그는 떠났어.",
    "blank": "धन्यवाद"
+  }
+ ],
+ "w|धमकाना": [
+  {
+   "text": "एक ठेकेदार ने फ़ोन पर विकास को धमकाया, पर विकास ने ख़बर नहीं रोकी।",
+   "en": "A contractor threatened Vikas over the phone, but Vikas did not hold back the story.",
+   "ko": "한 하청업자가 전화로 비카스를 협박했지만 비카스는 기사를 막지 않았어요.",
+   "blank": "धमकाया",
+   "src": "made"
+  },
+  {
+   "text": "एक बंदर ने दाँत दिखाकर शालिनी को धमकाया और उसका बिस्किट छीन ले गया।",
+   "en": "A monkey bared its teeth to threaten Shalini and snatched her biscuit.",
+   "ko": "원숭이 한 마리가 이빨을 드러내며 샬리니를 위협하더니 비스킷을 낚아채 갔어요.",
+   "blank": "धमकाया",
+   "src": "made"
   }
  ],
  "w|धमकी": [
@@ -39615,6 +39935,22 @@
    "src": "made"
   }
  ],
+ "w|निर्दयी": [
+  {
+   "text": "विकास ने एक निर्दयी मकान-मालिक पर रिपोर्ट की, जिसने बुज़ुर्ग किराएदारों को घर से निकाल दिया।",
+   "en": "Vikas reported on a heartless landlord who threw elderly tenants out of their home.",
+   "ko": "비카스는 나이 든 세입자들을 내쫓은 무자비한 집주인에 대해 보도했어요.",
+   "blank": "निर्दयी",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ की निर्दयी ठंड ने शालिनी को पूरी रात जगाए रखा।",
+   "en": "The merciless mountain cold kept Shalini awake all night.",
+   "ko": "산의 혹독한 추위 때문에 샬리니는 밤새 잠을 못 잤어요.",
+   "blank": "निर्दयी",
+   "src": "made"
+  }
+ ],
  "w|निर्देश": [
   {
    "text": "शिक्षक के निर्देश ध्यान से सुनो।",
@@ -40238,6 +40574,22 @@
    "en": "After successfully carrying out the root canal, Anjali told the patient to rest.",
    "ko": "신경 치료를 잘 마친 뒤 안잘리는 환자에게 쉬라고 했어요.",
    "blank": "निष्पादन",
+   "src": "made"
+  }
+ ],
+ "w|निस्संदेह": [
+  {
+   "text": "सब मानते हैं कि विकास निस्संदेह इस अख़बार का सबसे तेज़ रिपोर्टर है।",
+   "en": "Everyone agrees that Vikas is undoubtedly the fastest reporter at this newspaper.",
+   "ko": "비카스가 이 신문사에서 가장 빠른 기자라는 건 모두가 인정해요.",
+   "blank": "निस्संदेह",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने कहा कि यह झील निस्संदेह सबसे सुंदर जगह है जहाँ वह कभी गई है।",
+   "en": "Shalini said this lake is undoubtedly the most beautiful place she has ever been.",
+   "ko": "샬리니는 이 호수가 틀림없이 자기가 가 본 곳 중 가장 아름답다고 했어요.",
+   "blank": "निस्संदेह",
    "src": "made"
   }
  ],
@@ -44887,6 +45239,22 @@
    "src": "made"
   }
  ],
+ "w|पुनर्गठन": [
+  {
+   "text": "अख़बार के पुनर्गठन के बाद विकास को खेल डेस्क से राजनीति डेस्क पर भेज दिया गया।",
+   "en": "After the newspaper's restructuring, Vikas was moved from the sports desk to the politics desk.",
+   "ko": "신문사 조직 개편 뒤 비카스는 스포츠부에서 정치부로 옮겨졌어요.",
+   "blank": "पुनर्गठन",
+   "src": "made"
+  },
+  {
+   "text": "कैंपिंग क्लब के पुनर्गठन के बाद शालिनी को नए सदस्यों की ज़िम्मेदारी मिली।",
+   "en": "After the camping club was reorganised, Shalini was put in charge of new members.",
+   "ko": "캠핑 동호회가 재편된 뒤 샬리니는 신입 회원 담당이 됐어요.",
+   "blank": "पुनर्गठन",
+   "src": "made"
+  }
+ ],
  "w|पुनर्जन्म": [
   {
    "text": "रात की ड्यूटी में सिपाही पुनर्जन्म पर बनी एक फ़िल्म की बातें कर रहे थे।",
@@ -46849,6 +47217,22 @@
    "src": "made"
   }
  ],
+ "w|प्रतिवेदन": [
+  {
+   "text": "समिति का प्रतिवेदन आते ही विकास ने उसकी मुख्य बातें पढ़ डालीं।",
+   "en": "As soon as the committee's report came out, Vikas read through its main points.",
+   "ko": "위원회 보고서가 나오자마자 비카스는 핵심 내용을 훑어봤어요.",
+   "blank": "प्रतिवेदन",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने ट्रेकिंग क्लब के लिए यात्रा का एक छोटा प्रतिवेदन लिखा।",
+   "en": "Shalini wrote a short trip report for the trekking club.",
+   "ko": "샬리니는 트레킹 동호회에 낼 짧은 여행 보고서를 썼어요.",
+   "blank": "प्रतिवेदन",
+   "src": "made"
+  }
+ ],
  "w|प्रतिशत": [
   {
    "text": "छूट का प्रतिशत बोर्ड पर लिखा है।",
@@ -47415,6 +47799,22 @@
    "src": "made"
   }
  ],
+ "w|प्रमाणीकरण": [
+  {
+   "text": "वायरल वीडियो के प्रमाणीकरण में विकास का पूरा दिन लग गया।",
+   "en": "Verifying the viral video took Vikas the whole day.",
+   "ko": "화제가 된 영상의 진위를 확인하느라 비카스는 하루를 다 썼어요.",
+   "blank": "प्रमाणीकरण",
+   "src": "made"
+  },
+  {
+   "text": "ऑनलाइन परमिट के लिए शालिनी को मोबाइल नंबर से प्रमाणीकरण करना पड़ा।",
+   "en": "For the online permit, Shalini had to verify her identity with her mobile number.",
+   "ko": "온라인 허가를 받으려고 샬리니는 휴대폰 번호로 인증을 해야 했어요.",
+   "blank": "प्रमाणीकरण",
+   "src": "made"
+  }
+ ],
  "w|प्रमुख": [
   {
    "text": "गाँव के प्रमुख आज शहर गए हैं।",
@@ -47767,6 +48167,22 @@
    "src": "made"
   }
  ],
+ "w|प्रशिक्षक": [
+  {
+   "text": "नए रिपोर्टरों के प्रशिक्षक ने ही विकास को कैमरे के सामने बोलना सिखाया था।",
+   "en": "It was the trainer of new reporters who taught Vikas to speak in front of the camera.",
+   "ko": "비카스에게 카메라 앞에서 말하는 법을 가르쳐 준 건 신입 기자 교육 강사였어요.",
+   "blank": "प्रशिक्षक",
+   "src": "made"
+  },
+  {
+   "text": "चट्टान चढ़ाई के प्रशिक्षक ने शालिनी की रस्सी दो बार जाँची।",
+   "en": "The rock-climbing instructor checked Shalini's rope twice.",
+   "ko": "암벽 등반 강사가 샬리니의 밧줄을 두 번 확인했어요.",
+   "blank": "प्रशिक्षक",
+   "src": "made"
+  }
+ ],
  "w|प्रशिक्षण": [
   {
    "text": "नए कर्मचारियों का प्रशिक्षण शुरू हो गया।",
@@ -48101,6 +48517,22 @@
    "src": "made"
   }
  ],
+ "w|प्राचार्य": [
+  {
+   "text": "विकास ने परीक्षा में गड़बड़ी के मामले पर कॉलेज के प्राचार्य का इंटरव्यू लिया।",
+   "en": "Vikas interviewed the college principal about the exam irregularities.",
+   "ko": "비카스는 시험 부정 사건에 대해 대학 학장을 인터뷰했어요.",
+   "blank": "प्राचार्य",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के स्कूल के प्राचार्य ने ही उसे पहली बार कैंपिंग पर भेजा था।",
+   "en": "It was the principal of Shalini's school who first sent her camping.",
+   "ko": "샬리니를 처음 캠핑에 보낸 사람은 학교 교장 선생님이었어요.",
+   "blank": "प्राचार्य",
+   "src": "made"
+  }
+ ],
  "w|प्राचीन": [
   {
    "text": "यह मंदिर बहुत प्राचीन है।",
@@ -48254,6 +48686,22 @@
    "en": "Seema got permission from the city authority to paint on the wall.",
    "ko": "벽에 그림을 그리려고 시마는 시 당국의 허가를 받았어요.",
    "blank": "प्राधिकरण",
+   "src": "made"
+  }
+ ],
+ "w|प्राध्यापक": [
+  {
+   "text": "विकास ने चुनाव के विश्लेषण के लिए राजनीति शास्त्र के एक प्राध्यापक को स्टूडियो बुलाया।",
+   "en": "Vikas invited a political science professor to the studio to analyse the election.",
+   "ko": "비카스는 선거 분석을 위해 정치학 교수 한 분을 스튜디오에 모셨어요.",
+   "blank": "प्राध्यापक",
+   "src": "made"
+  },
+  {
+   "text": "कैंप में शालिनी के साथ भूगोल के एक प्राध्यापक भी थे, जो चट्टानों के बारे में बताते रहे।",
+   "en": "A geography professor was at the camp with Shalini and kept telling her about the rocks.",
+   "ko": "캠프에는 샬리니와 함께 지리학 교수님도 계셨는데 바위에 대해 계속 설명해 주셨어요.",
+   "blank": "प्राध्यापक",
    "src": "made"
   }
  ],
@@ -49550,6 +49998,22 @@
    "en": "One of his lungs is weak.",
    "ko": "그는 폐 한쪽이 약해요.",
    "blank": "फेफड़ा",
+   "src": "made"
+  }
+ ],
+ "w|फेरबदल": [
+  {
+   "text": "संपादक ने आख़िरी समय पर पहले पन्ने में फेरबदल किया, तो विकास को अपनी ख़बर छोटी करनी पड़ी।",
+   "en": "The editor reshuffled the front page at the last minute, so Vikas had to shorten his story.",
+   "ko": "편집장이 마지막 순간에 1면을 바꾸는 바람에 비카스는 기사를 줄여야 했어요.",
+   "blank": "फेरबदल",
+   "src": "made"
+  },
+  {
+   "text": "बारिश की वजह से शालिनी को यात्रा की योजना में थोड़ा फेरबदल करना पड़ा।",
+   "en": "Because of the rain, Shalini had to make some changes to the trip plan.",
+   "ko": "비 때문에 샬리니는 여행 계획을 조금 바꿔야 했어요.",
+   "blank": "फेरबदल",
    "src": "made"
   }
  ],
@@ -53003,6 +53467,22 @@
    "blank": "बुआ"
   }
  ],
+ "w|बुआई": [
+  {
+   "text": "विकास ने गाँव जाकर देखा कि बारिश न होने से बुआई रुकी पड़ी है।",
+   "en": "Vikas went to the village and saw that sowing had stalled because there was no rain.",
+   "ko": "비카스가 마을에 가 보니 비가 안 와서 파종이 멈춰 있었어요.",
+   "blank": "बुआई",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ी गाँव में किसान धान की बुआई कर रहे थे, और शालिनी ने भी हाथ बँटाया।",
+   "en": "Farmers in the hill village were sowing rice, and Shalini lent a hand too.",
+   "ko": "산골 마을에서 농부들이 벼를 심고 있어서 샬리니도 거들었어요.",
+   "blank": "बुआई",
+   "src": "made"
+  }
+ ],
  "w|बुकिंग": [
   {
    "text": "भाई ने वापसी की ट्रेन की बुकिंग पहले ही करवा ली थी।",
@@ -55817,6 +56297,22 @@
    "src": "made"
   }
  ],
+ "w|भोगना": [
+  {
+   "text": "विकास ने उन परिवारों की कहानी लिखी जो बरसों से प्रदूषण का नतीजा भोग रहे हैं।",
+   "en": "Vikas wrote the story of families who have been suffering the consequences of pollution for years.",
+   "ko": "비카스는 몇 년째 오염의 결과를 겪고 있는 가족들의 이야기를 썼어요.",
+   "blank": "भोग",
+   "src": "made"
+  },
+  {
+   "text": "पिछली बार जल्दबाज़ी में चढ़ाई करने का नतीजा शालिनी ने बुख़ार के रूप में भोगा था।",
+   "en": "Last time Shalini paid for her hasty climb with a fever.",
+   "ko": "지난번 서둘러 오른 대가로 샬리니는 열병을 앓았어요.",
+   "blank": "भोगा",
+   "src": "made"
+  }
+ ],
  "w|भोज": [
   {
    "text": "आख़िरी रात गाँव वालों ने कैंप करने वालों के लिए भोज रखा।",
@@ -57179,6 +57675,22 @@
    "blank": "मनोरंजन"
   }
  ],
+ "w|मनोरम": [
+  {
+   "text": "बाढ़ से पहले यह घाटी कितनी मनोरम थी, यह विकास ने पुरानी तस्वीरों से दिखाया।",
+   "en": "Vikas used old photos to show how lovely this valley was before the flood.",
+   "ko": "비카스는 옛 사진으로 홍수 전에 이 골짜기가 얼마나 아름다웠는지 보여 줬어요.",
+   "blank": "मनोरम",
+   "src": "made"
+  },
+  {
+   "text": "सूर्यास्त के समय पहाड़ों का मनोरम दृश्य देखकर शालिनी चुप हो गई।",
+   "en": "Seeing the enchanting view of the mountains at sunset, Shalini fell silent.",
+   "ko": "해 질 녘 산의 아름다운 풍경을 보고 샬리니는 말을 잃었어요.",
+   "blank": "मनोरम",
+   "src": "made"
+  }
+ ],
  "w|मनोविज्ञान": [
   {
    "text": "रवि ने कॉलेज में मनोविज्ञान पढ़ा था, इसलिए वह लोगों से अच्छे से बात करता है।",
@@ -57377,6 +57889,22 @@
    "src": "made"
   }
  ],
+ "w|मर्यादित": [
+  {
+   "text": "टीवी बहस में भी विकास हमेशा मर्यादित भाषा का इस्तेमाल करता है।",
+   "en": "Even in TV debates, Vikas always uses restrained language.",
+   "ko": "TV 토론에서도 비카스는 늘 절제된 말을 써요.",
+   "blank": "मर्यादित",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने ग्रुप से कहा कि गाँव में सबका व्यवहार मर्यादित होना चाहिए।",
+   "en": "Shalini told the group that everyone should behave modestly in the village.",
+   "ko": "샬리니는 그룹에게 마을에서는 모두 예의 바르게 행동해야 한다고 했어요.",
+   "blank": "मर्यादित",
+   "src": "made"
+  }
+ ],
  "w|मल": [
   {
    "text": "कीड़ों का पता लगाने के लिए अमित ने पिल्ले के मल की जाँच करवाई।",
@@ -57451,6 +57979,22 @@
    "en": "With the fever came a suspicion of malaria.",
    "ko": "열과 함께 말라리아가 의심됐어.",
    "blank": "मलेरिया"
+  }
+ ],
+ "w|मशक़्क़त": [
+  {
+   "text": "काफ़ी मशक़्क़त के बाद विकास को मंत्री का बयान मिल पाया।",
+   "en": "After a lot of hard work, Vikas managed to get the minister's statement.",
+   "ko": "한참 애쓴 끝에 비카스는 장관의 발언을 받아 낼 수 있었어요.",
+   "blank": "मशक़्क़त",
+   "src": "made"
+  },
+  {
+   "text": "गीली लकड़ी से आग जलाने में शालिनी को बड़ी मशक़्क़त करनी पड़ी।",
+   "en": "Shalini had to work very hard to light a fire with wet wood.",
+   "ko": "젖은 나무로 불을 피우느라 샬리니는 무척 고생했어요.",
+   "blank": "मशक़्क़त",
+   "src": "made"
   }
  ],
  "w|मशरूम": [
@@ -62045,6 +62589,22 @@
    "blank": "योजना"
   }
  ],
+ "w|योजनाबद्ध": [
+  {
+   "text": "चुनाव की कवरेज योजनाबद्ध तरीक़े से हो, इसके लिए विकास ने सबको काम बाँट दिया।",
+   "en": "To keep the election coverage well planned, Vikas divided the work among everyone.",
+   "ko": "선거 보도를 계획대로 하려고 비카스는 모두에게 일을 나눠 줬어요.",
+   "blank": "योजनाबद्ध",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी हर यात्रा योजनाबद्ध ढंग से करती है, पानी से लेकर दवा तक।",
+   "en": "Shalini plans every trip carefully, from water to medicine.",
+   "ko": "샬리니는 물부터 약까지 모든 여행을 계획적으로 준비해요.",
+   "blank": "योजनाबद्ध",
+   "src": "made"
+  }
+ ],
  "w|योद्धा": [
   {
    "text": "तीसरी मंज़िल के रिटायर्ड फ़ौजी अपने साथी योद्धा की बहादुरी के क़िस्से सुनाते हैं।",
@@ -63342,6 +63902,22 @@
    "en": "Priya found an old book on nationalism whose pages had turned yellow.",
    "ko": "프리야는 종이가 누렇게 바랜 민족주의에 관한 옛 책을 찾았어요.",
    "blank": "राष्ट्रवाद",
+   "src": "made"
+  }
+ ],
+ "w|राष्ट्रव्यापी": [
+  {
+   "text": "डॉक्टरों की राष्ट्रव्यापी हड़ताल पर विकास दिन भर लाइव अपडेट देता रहा।",
+   "en": "Vikas gave live updates all day on the nationwide doctors' strike.",
+   "ko": "비카스는 전국 의사 파업 소식을 하루 종일 실시간으로 전했어요.",
+   "blank": "राष्ट्रव्यापी",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने रेडियो पर सुना कि सफ़ाई का एक राष्ट्रव्यापी अभियान शुरू हुआ है।",
+   "en": "Shalini heard on the radio that a nationwide cleanliness campaign had started.",
+   "ko": "샬리니는 라디오에서 전국적인 청소 캠페인이 시작됐다고 들었어요.",
+   "blank": "राष्ट्रव्यापी",
    "src": "made"
   }
  ],
@@ -68331,6 +68907,22 @@
    "blank": "विश्वविद्यालय"
   }
  ],
+ "w|विश्वव्यापी": [
+  {
+   "text": "इंटरनेट ठप होने की विश्वव्यापी समस्या पर विकास ने एक लेख लिखा।",
+   "en": "Vikas wrote an article on the worldwide internet outage.",
+   "ko": "비카스는 전 세계적인 인터넷 먹통 사태에 관한 글을 썼어요.",
+   "blank": "विश्वव्यापी",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी मानती है कि प्लास्टिक का कचरा एक विश्वव्यापी समस्या बन चुका है।",
+   "en": "Shalini believes plastic waste has become a worldwide problem.",
+   "ko": "샬리니는 플라스틱 쓰레기가 전 세계적인 문제가 됐다고 생각해요.",
+   "blank": "विश्वव्यापी",
+   "src": "made"
+  }
+ ],
  "w|विश्वसनीय": [
   {
    "text": "राहुल ख़त सिर्फ़ विश्वसनीय कूरियर से ही भेजता है।",
@@ -71158,6 +71750,22 @@
    "en": "Priya has come to the village to finish her thesis on Himalayan folk songs.",
    "ko": "프리야는 히말라야 민요에 관한 논문을 마치려고 마을에 왔어요.",
    "blank": "शोध प्रबंध",
+   "src": "made"
+  }
+ ],
+ "w|शोधकर्ता": [
+  {
+   "text": "विकास ने जलवायु पर काम करने वाली एक शोधकर्ता से लंबी बातचीत की।",
+   "en": "Vikas had a long conversation with a researcher who works on climate.",
+   "ko": "비카스는 기후를 연구하는 연구자와 긴 대화를 나눴어요.",
+   "blank": "शोधकर्ता",
+   "src": "made"
+  },
+  {
+   "text": "कैंप के पास तितलियों पर काम करने वाला एक शोधकर्ता शालिनी से मिला।",
+   "en": "A researcher studying butterflies met Shalini near the camp.",
+   "ko": "캠프 근처에서 나비를 연구하는 연구자가 샬리니를 만났어요.",
+   "blank": "शोधकर्ता",
    "src": "made"
   }
  ],
@@ -78399,6 +79007,22 @@
    "src": "made"
   }
  ],
+ "w|सुव्यवस्थित": [
+  {
+   "text": "विकास की मेज़ हमेशा सुव्यवस्थित रहती है, पर आज उस पर अख़बारों का ढेर लगा था।",
+   "en": "Vikas's desk is always neat, but today there was a pile of newspapers on it.",
+   "ko": "비카스의 책상은 늘 깔끔한데 오늘은 신문이 수북이 쌓여 있었어요.",
+   "blank": "सुव्यवस्थित",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी का बैग इतना सुव्यवस्थित था कि उसे टॉर्च ढूँढनी ही नहीं पड़ी।",
+   "en": "Shalini's bag was so well organised that she didn't even have to search for the torch.",
+   "ko": "샬리니의 가방이 아주 잘 정리돼 있어서 손전등을 찾을 필요도 없었어요.",
+   "blank": "सुव्यवस्थित",
+   "src": "made"
+  }
+ ],
  "w|सुशील": [
   {
    "text": "साइट का चौकीदार बड़ा सुशील आदमी है, सबसे अदब से बात करता है।",
@@ -78970,6 +79594,22 @@
    "en": "Priya's father has retired from the army and come back to the village.",
    "ko": "프리야의 아버지는 군에서 은퇴하고 마을로 돌아왔어요.",
    "blank": "सेवानिवृत्त",
+   "src": "made"
+  }
+ ],
+ "w|सेवानिवृत्ति": [
+  {
+   "text": "पुराने फ़ोटोग्राफ़र की सेवानिवृत्ति पर विकास ने एक छोटा-सा भाषण दिया।",
+   "en": "Vikas gave a short speech at the old photographer's retirement.",
+   "ko": "오랜 사진기자의 은퇴식에서 비카스는 짧은 인사말을 했어요.",
+   "blank": "सेवानिवृत्ति",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के पिता ने सेवानिवृत्ति के बाद उसके साथ पहाड़ों पर जाना शुरू किया।",
+   "en": "After retiring, Shalini's father started going to the mountains with her.",
+   "ko": "샬리니의 아버지는 은퇴 후에 샬리니와 함께 산에 다니기 시작했어요.",
+   "blank": "सेवानिवृत्ति",
    "src": "made"
   }
  ],
