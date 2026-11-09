@@ -1599,6 +1599,22 @@
    "src": "made"
   }
  ],
+ "w|administrar": [
+  {
+   "text": "A Diego le cuesta administrar su tiempo cuando hay noticias de última hora.",
+   "en": "Diego struggles to manage his time when there's breaking news.",
+   "ko": "디에고는 속보가 있을 때 시간 관리를 잘 못해요.",
+   "blank": "administrar",
+   "src": "made"
+  },
+  {
+   "text": "Sofía confesó en la carta que le costaba administrar el dinero desde que vivía sola.",
+   "en": "Sofía admitted in the letter that she found it hard to manage money since living alone.",
+   "ko": "소피아는 혼자 살면서부터 돈 관리가 어렵다고 편지에 털어놨어요.",
+   "blank": "administrar",
+   "src": "made"
+  }
+ ],
  "w|admirable": [
   {
    "text": "Sergio dice que el trabajo de los corresponsales en el extranjero es admirable.",
@@ -3529,6 +3545,22 @@
    "blank": "almacén"
   }
  ],
+ "w|almacenar": [
+  {
+   "text": "En la redacción, Diego aprendió a almacenar las fotos en el servidor y no en su portátil.",
+   "en": "In the newsroom, Diego learned to store photos on the server, not on his laptop.",
+   "ko": "디에고는 편집국에서 사진을 노트북이 아니라 서버에 저장하는 법을 배웠어요.",
+   "blank": "almacenar",
+   "src": "made"
+  },
+  {
+   "text": "Sofía ya no sabe dónde almacenar tantas cartas, postales y fotos.",
+   "en": "Sofía no longer knows where to store so many letters, postcards and photos.",
+   "ko": "소피아는 그 많은 편지와 엽서, 사진을 어디에 보관해야 할지 모르겠어요.",
+   "blank": "almacenar",
+   "src": "made"
+  }
+ ],
  "w|almirante": [
   {
    "text": "El almirante dio la orden de zarpar.",
@@ -3921,6 +3953,22 @@
    "en": "The yellow taxi stopped in front of the door.",
    "ko": "노란 택시가 문 앞에 멈췄어.",
    "blank": "amarillo"
+  }
+ ],
+ "w|amateur": [
+  {
+   "text": "Antes de entrar en el periódico, Diego era fotógrafo amateur.",
+   "en": "Before joining the newspaper, Diego was an amateur photographer.",
+   "ko": "디에고는 신문사에 들어가기 전에 아마추어 사진가였어요.",
+   "blank": "amateur",
+   "src": "made"
+  },
+  {
+   "text": "Sofía contó que ahora actuaba en un grupo de teatro amateur los fines de semana.",
+   "en": "Sofía said she now acted in an amateur theatre group at weekends.",
+   "ko": "소피아는 요즘 주말마다 아마추어 연극단에서 연기한다고 했어요.",
+   "blank": "amateur",
+   "src": "made"
   }
  ],
  "w|ambición": [
@@ -5657,6 +5705,22 @@
    "src": "made"
   }
  ],
+ "w|apto": [
+  {
+   "text": "Diego contó en la sección de deportes que el médico había declarado apto al portero.",
+   "en": "Diego reported in the sports section that the doctor had declared the goalkeeper fit.",
+   "ko": "디에고는 의사가 골키퍼에게 출전 가능 판정을 내렸다고 스포츠면에 썼어요.",
+   "blank": "apto",
+   "src": "made"
+  },
+  {
+   "text": "Sofía contó que el agua del lago todavía no era apta para bañarse.",
+   "en": "Sofía said the lake water still wasn't fit for swimming.",
+   "ko": "소피아는 호수 물이 아직 수영하기에 적합하지 않다고 했어요.",
+   "blank": "apta",
+   "src": "made"
+  }
+ ],
  "w|apuesta": [
   {
    "text": "Hicieron una apuesta amistosa sobre el partido.",
@@ -7021,6 +7085,22 @@
    "blank": "aspecto"
   }
  ],
+ "w|aspirante": [
+  {
+   "text": "Diego tuvo que entrevistar a cada aspirante a la alcaldía en una sola semana.",
+   "en": "Diego had to interview every mayoral candidate in a single week.",
+   "ko": "디에고는 시장 후보를 한 주 만에 모두 인터뷰해야 했어요.",
+   "blank": "aspirante",
+   "src": "made"
+  },
+  {
+   "text": "Sofía contó que se había presentado como aspirante a una plaza de bibliotecaria.",
+   "en": "Sofía said she had applied as a candidate for a librarian post.",
+   "ko": "소피아는 사서 자리에 지원자로 응시했다고 전했어요.",
+   "blank": "aspirante",
+   "src": "made"
+  }
+ ],
  "w|aspirar": [
   {
    "text": "El entrenador le pide a Hugo que aspire hondo antes de cada repetición.",
@@ -7775,6 +7855,22 @@
    "en": "We have a hearing with the judge tomorrow.",
    "ko": "내일 판사와 심문이 있어.",
    "blank": "audiencia"
+  }
+ ],
+ "w|audio": [
+  {
+   "text": "Diego grabó el audio de la rueda de prensa con el móvil.",
+   "en": "Diego recorded the audio of the press conference on his phone.",
+   "ko": "디에고는 휴대폰으로 기자회견 음성을 녹음했어요.",
+   "blank": "audio",
+   "src": "made"
+  },
+  {
+   "text": "Además de la carta, Sofía le mandó a Marta un audio cantando la canción del campamento.",
+   "en": "As well as the letter, Sofía sent Marta a voice message singing the camp song.",
+   "ko": "소피아는 편지와 함께 캠프 노래를 부른 음성 메시지도 마르타에게 보냈어요.",
+   "blank": "audio",
+   "src": "made"
   }
  ],
  "w|aumentar": [
@@ -8657,6 +8753,22 @@
    "en": "The kids usually bathe after sports.",
    "ko": "아이들은 보통 운동 후에 목욕해.",
    "blank": "bañarse"
+  }
+ ],
+ "w|banca": [
+  {
+   "text": "La sección de economía le encargó a Diego un análisis sobre la crisis de la banca.",
+   "en": "The business section asked Diego for an analysis of the banking crisis.",
+   "ko": "경제부는 디에고에게 은행권 위기에 관한 분석 기사를 맡겼어요.",
+   "blank": "banca",
+   "src": "made"
+  },
+  {
+   "text": "Sofía contó que se sentaba en la misma banca del parque donde jugaban de niñas.",
+   "en": "Sofía said she sat on the same park bench where they used to play as girls.",
+   "ko": "소피아는 어릴 때 같이 놀던 공원 벤치에 지금도 앉는다고 했어요.",
+   "blank": "banca",
+   "src": "made"
   }
  ],
  "w|bancario": [
@@ -13039,6 +13151,22 @@
    "src": "made"
   }
  ],
+ "w|carpeta": [
+  {
+   "text": "Diego guardó todas las notas de la entrevista en una carpeta azul.",
+   "en": "Diego kept all the interview notes in a blue folder.",
+   "ko": "디에고는 인터뷰 메모를 전부 파란 폴더에 넣어 뒀어요.",
+   "blank": "carpeta",
+   "src": "made"
+  },
+  {
+   "text": "Sofía guarda las cartas de Marta en una carpeta de cartón con su nombre.",
+   "en": "Sofía keeps Marta's letters in a cardboard folder with her name on it.",
+   "ko": "소피아는 마르타의 편지를 이름이 적힌 종이 폴더에 보관해요.",
+   "blank": "carpeta",
+   "src": "made"
+  }
+ ],
  "w|carrera": [
   {
    "text": "Corrió una carrera muy dura.",
@@ -14495,6 +14623,22 @@
    "blank": "cheque"
   }
  ],
+ "w|chequear": [
+  {
+   "text": "Antes de publicar, Diego tiene que chequear las cifras con la fuente oficial.",
+   "en": "Before publishing, Diego has to check the figures with the official source.",
+   "ko": "디에고는 기사를 내기 전에 공식 출처와 수치를 확인해야 해요.",
+   "blank": "chequear",
+   "src": "made"
+  },
+  {
+   "text": "Sofía siempre vuelve a chequear la dirección antes de echar la carta al buzón.",
+   "en": "Sofía always double-checks the address before dropping the letter in the postbox.",
+   "ko": "소피아는 편지를 우체통에 넣기 전에 늘 주소를 다시 확인해요.",
+   "blank": "chequear",
+   "src": "made"
+  }
+ ],
  "w|chicle": [
   {
    "text": "Rosa no deja que su nieto mastique chicle en la mesa.",
@@ -15859,6 +16003,22 @@
    "blank": "cola"
   }
  ],
+ "w|colaboración": [
+  {
+   "text": "El reportaje salió adelante gracias a la colaboración de Diego con una fotógrafa.",
+   "en": "The report came together thanks to Diego's collaboration with a photographer.",
+   "ko": "그 기사는 디에고가 사진기자와 협업한 덕분에 나올 수 있었어요.",
+   "blank": "colaboración",
+   "src": "made"
+  },
+  {
+   "text": "Sofía recordó la revista del instituto, fruto de la colaboración entre Marta y ella.",
+   "en": "Sofía remembered the high school magazine, the result of her collaboration with Marta.",
+   "ko": "소피아는 마르타와 함께 만들었던 고등학교 잡지를 떠올렸어요.",
+   "blank": "colaboración",
+   "src": "made"
+  }
+ ],
  "w|colaborar": [
   {
    "text": "Hugo suele colaborar con una radio local los domingos.",
@@ -16652,6 +16812,22 @@
    "en": "Sofía makes a gluten-free bread that suits her nephew's diet.",
    "ko": "소피아는 조카 식단에 맞는 글루텐 없는 빵을 만들어요.",
    "blank": "compatible",
+   "src": "made"
+  }
+ ],
+ "w|compensación": [
+  {
+   "text": "Según la crónica de Diego, los vecinos afectados por la obra todavía esperan una compensación.",
+   "en": "According to Diego's piece, the neighbours affected by the works are still waiting for compensation.",
+   "ko": "디에고의 기사에 따르면 공사 피해 주민들은 아직 보상을 기다리고 있어요.",
+   "blank": "compensación",
+   "src": "made"
+  },
+  {
+   "text": "Como compensación por tantos meses sin noticias, Sofía prometió una carta larguísima.",
+   "en": "To make up for so many months without news, Sofía promised a very long letter.",
+   "ko": "소피아는 몇 달 동안 소식이 없던 걸 보상하려고 아주 긴 편지를 약속했어요.",
+   "blank": "compensación",
    "src": "made"
   }
  ],
@@ -19757,6 +19933,22 @@
    "blank": "correr"
   }
  ],
+ "w|correspondencia": [
+  {
+   "text": "Diego revisa cada mañana la correspondencia de los lectores antes de la reunión.",
+   "en": "Every morning Diego goes through the readers' mail before the meeting.",
+   "ko": "디에고는 매일 아침 회의 전에 독자 편지를 살펴봐요.",
+   "blank": "correspondencia",
+   "src": "made"
+  },
+  {
+   "text": "Sofía y Marta mantienen su correspondencia desde que terminaron el colegio.",
+   "en": "Sofía and Marta have kept up their correspondence since they finished school.",
+   "ko": "소피아와 마르타는 학교를 졸업한 뒤로 계속 편지를 주고받아요.",
+   "blank": "correspondencia",
+   "src": "made"
+  }
+ ],
  "w|corresponder": [
   {
    "text": "Esa tarea debe corresponder al equipo de diseño.",
@@ -22431,6 +22623,22 @@
    "src": "made"
   }
  ],
+ "w|delegado": [
+  {
+   "text": "Diego entrevistó al delegado sindical antes de que empezara la huelga.",
+   "en": "Diego interviewed the union representative before the strike began.",
+   "ko": "디에고는 파업이 시작되기 전에 노조 대표를 인터뷰했어요.",
+   "blank": "delegado",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le contó a Marta que su hijo era ahora el delegado de la clase.",
+   "en": "Sofía told Marta that her son was now the class representative.",
+   "ko": "소피아는 아들이 이제 반장이 됐다고 마르타에게 전했어요.",
+   "blank": "delegado",
+   "src": "made"
+  }
+ ],
  "w|deletrear": [
   {
    "text": "En la taquilla, Hugo tuvo que deletrear su apellido dos veces.",
@@ -22786,6 +22994,22 @@
    "en": "The town went as far as denying the permit for the beach concert Nuria wanted to see.",
    "ko": "시에서는 누리아가 보고 싶어 하던 해변 콘서트 허가를 내주지 않았어요.",
    "blank": "denegar",
+   "src": "made"
+  }
+ ],
+ "w|denso": [
+  {
+   "text": "El informe era tan denso que Diego tardó una tarde entera en leerlo.",
+   "en": "The report was so dense that it took Diego a whole afternoon to read it.",
+   "ko": "보고서가 너무 빽빽해서 디에고는 읽는 데 오후 내내 걸렸어요.",
+   "blank": "denso",
+   "src": "made"
+  },
+  {
+   "text": "Sofía describió la niebla densa que cubría el pueblo cada mañana de invierno.",
+   "en": "Sofía described the thick fog that covered the village every winter morning.",
+   "ko": "소피아는 겨울 아침마다 마을을 덮는 짙은 안개를 묘사했어요.",
+   "blank": "densa",
    "src": "made"
   }
  ],
@@ -24439,6 +24663,22 @@
    "en": "Traffic had to be diverted because of construction.",
    "ko": "공사 때문에 교통을 우회시켜야 했어.",
    "blank": "desviar"
+  }
+ ],
+ "w|detallar": [
+  {
+   "text": "La jefa le pidió a Diego detallar en el artículo cómo se gastó el dinero público.",
+   "en": "The boss asked Diego to detail in the article how the public money was spent.",
+   "ko": "상사는 디에고에게 공금이 어떻게 쓰였는지 기사에 자세히 쓰라고 했어요.",
+   "blank": "detallar",
+   "src": "made"
+  },
+  {
+   "text": "Sofía prefirió no detallar en la carta sus problemas del trabajo.",
+   "en": "Sofía chose not to go into detail about her work problems in the letter.",
+   "ko": "소피아는 편지에 회사 문제를 자세히 쓰지 않기로 했어요.",
+   "blank": "detallar",
+   "src": "made"
   }
  ],
  "w|detalle": [
@@ -27527,6 +27767,22 @@
    "blank": "elefante"
   }
  ],
+ "w|elegancia": [
+  {
+   "text": "Diego escribió con mucha elegancia la crónica del desfile de moda.",
+   "en": "Diego wrote the fashion show piece with great elegance.",
+   "ko": "디에고는 패션쇼 기사를 아주 우아하게 썼어요.",
+   "blank": "elegancia",
+   "src": "made"
+  },
+  {
+   "text": "Sofía siempre admiró la elegancia con la que Marta escribía a mano.",
+   "en": "Sofía always admired the elegance of Marta's handwriting.",
+   "ko": "소피아는 마르타의 우아한 손글씨를 늘 부러워했어요.",
+   "blank": "elegancia",
+   "src": "made"
+  }
+ ],
  "w|elegante": [
   {
    "text": "Llevaba un vestido elegante a la cena.",
@@ -28029,6 +28285,22 @@
    "src": "made"
   }
  ],
+ "w|empeño": [
+  {
+   "text": "El director agradeció a Diego su empeño en confirmar cada dato.",
+   "en": "The editor thanked Diego for his determination to confirm every fact.",
+   "ko": "편집장은 디에고가 사실 하나하나를 확인하려고 애쓴 데 고마워했어요.",
+   "blank": "empeño",
+   "src": "made"
+  },
+  {
+   "text": "En su carta, Sofía admiraba el empeño de Marta por aprender a tocar el piano.",
+   "en": "In her letter, Sofía admired Marta's determination to learn the piano.",
+   "ko": "소피아는 편지에서 피아노를 배우려는 마르타의 끈기를 칭찬했어요.",
+   "blank": "empeño",
+   "src": "made"
+  }
+ ],
  "w|empeorar": [
   {
    "text": "La tormenta puede empeorar por la tarde.",
@@ -28099,6 +28371,22 @@
    "en": "I've been an employee at that store since April.",
    "ko": "난 사월부터 그 가게 직원이야.",
    "blank": "empleado"
+  }
+ ],
+ "w|emplear": [
+  {
+   "text": "Diego suele emplear frases cortas para que la noticia se lea rápido.",
+   "en": "Diego tends to use short sentences so the news reads quickly.",
+   "ko": "디에고는 기사가 빨리 읽히도록 짧은 문장을 즐겨 써요.",
+   "blank": "emplear",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le contó a Marta que su abuela solía emplear la misma tinta verde.",
+   "en": "Sofía told Marta that her grandmother used to use the same green ink.",
+   "ko": "소피아는 할머니도 같은 초록 잉크를 쓰셨다고 마르타에게 말했어요.",
+   "blank": "emplear",
+   "src": "made"
   }
  ],
  "w|empleo": [
@@ -34967,6 +35255,22 @@
    "src": "made"
   }
  ],
+ "w|formalidad": [
+  {
+   "text": "Para Diego, firmar el contrato con el periódico fue una simple formalidad.",
+   "en": "For Diego, signing the contract with the newspaper was a mere formality.",
+   "ko": "디에고에게 신문사와 계약서에 서명하는 건 그냥 형식적인 절차였어요.",
+   "blank": "formalidad",
+   "src": "made"
+  },
+  {
+   "text": "Sofía escribe sin ninguna formalidad, como si estuviera charlando con Marta en la cocina.",
+   "en": "Sofía writes without any formality, as if she were chatting with Marta in the kitchen.",
+   "ko": "소피아는 부엌에서 마르타와 수다 떨듯이 격식 없이 편지를 써요.",
+   "blank": "formalidad",
+   "src": "made"
+  }
+ ],
  "w|formar": [
   {
    "text": "Quieren formar un equipo nuevo.",
@@ -37159,6 +37463,22 @@
    "blank": "gota"
   }
  ],
+ "w|gótico": [
+  {
+   "text": "Diego hizo un reportaje sobre una catedral gótica que necesita una restauración urgente.",
+   "en": "Diego did a report on a Gothic cathedral that urgently needs restoration.",
+   "ko": "디에고는 시급히 복원이 필요한 고딕 성당에 관한 기사를 썼어요.",
+   "blank": "gótica",
+   "src": "made"
+  },
+  {
+   "text": "Para decorar los sobres, Sofía practicaba la letra gótica.",
+   "en": "To decorate the envelopes, Sofía practised Gothic lettering.",
+   "ko": "소피아는 봉투를 꾸미려고 고딕체 글씨를 연습했어요.",
+   "blank": "gótica",
+   "src": "made"
+  }
+ ],
  "w|grabación": [
   {
    "text": "La grabación del concierto salió perfecta.",
@@ -39301,6 +39621,22 @@
    "blank": "honorable"
   }
  ],
+ "w|honorarios": [
+  {
+   "text": "Diego descubrió que el abogado del ayuntamiento cobraba unos honorarios altísimos.",
+   "en": "Diego found out that the city council's lawyer charged extremely high fees.",
+   "ko": "디에고는 시청 변호사가 엄청난 수임료를 받는다는 걸 알아냈어요.",
+   "blank": "honorarios",
+   "src": "made"
+  },
+  {
+   "text": "Sofía contó que el notario le había cobrado unos honorarios razonables por la compra del piso.",
+   "en": "Sofía said the notary had charged her reasonable fees for the flat purchase.",
+   "ko": "소피아는 아파트 매매 때 공증인 수수료가 적당했다고 했어요.",
+   "blank": "honorarios",
+   "src": "made"
+  }
+ ],
  "w|honra": [
   {
    "text": "Diego defendió la honra de su hermana cuando unos chicos se burlaron de ella.",
@@ -40935,6 +41271,22 @@
    "blank": "incluye"
   }
  ],
+ "w|inclusive": [
+  {
+   "text": "En época de elecciones, Diego trabaja de lunes a sábado inclusive.",
+   "en": "During election season, Diego works Monday through Saturday inclusive.",
+   "ko": "선거철이면 디에고는 월요일부터 토요일까지 꼬박 일해요.",
+   "blank": "inclusive",
+   "src": "made"
+  },
+  {
+   "text": "Sofía estará de viaje hasta el domingo inclusive, así que Marta no debe escribirle antes.",
+   "en": "Sofía will be away until Sunday inclusive, so Marta shouldn't write before then.",
+   "ko": "소피아는 일요일까지 여행 중이라 마르타는 그 전엔 편지를 보내면 안 돼요.",
+   "blank": "inclusive",
+   "src": "made"
+  }
+ ],
  "w|incluso": [
   {
    "text": "Incluso él llegó a tiempo.",
@@ -40976,6 +41328,22 @@
    "en": "The new bakery assistant was so incompetent that Sofía had to redo everything.",
    "ko": "새로 온 빵집 보조가 너무 일을 못해서 소피아가 전부 다시 해야 했어요.",
    "blank": "incompetente",
+   "src": "made"
+  }
+ ],
+ "w|incompleto": [
+  {
+   "text": "Diego no quiso publicar un reportaje incompleto, así que esperó un día más.",
+   "en": "Diego didn't want to publish an incomplete report, so he waited one more day.",
+   "ko": "디에고는 미완성 기사를 내고 싶지 않아서 하루 더 기다렸어요.",
+   "blank": "incompleto",
+   "src": "made"
+  },
+  {
+   "text": "Sofía notó que la carta de Marta había llegado incompleta, sin la última página.",
+   "en": "Sofía noticed that Marta's letter had arrived incomplete, without the last page.",
+   "ko": "소피아는 마르타의 편지가 마지막 장이 빠진 채 왔다는 걸 알았어요.",
+   "blank": "incompleta",
    "src": "made"
   }
  ],
@@ -50395,6 +50763,22 @@
    "src": "made"
   }
  ],
+ "w|mismísimo": [
+  {
+   "text": "El mismísimo alcalde llamó a Diego para quejarse del artículo.",
+   "en": "The mayor himself called Diego to complain about the article.",
+   "ko": "다름 아닌 시장이 직접 디에고에게 전화해서 기사에 대해 항의했어요.",
+   "blank": "mismísimo",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le contó a Marta que se había encontrado al mismísimo profesor de latín en el tren.",
+   "en": "Sofía told Marta she had run into none other than their Latin teacher on the train.",
+   "ko": "소피아는 기차에서 바로 그 라틴어 선생님을 만났다고 마르타에게 말했어요.",
+   "blank": "mismísimo",
+   "src": "made"
+  }
+ ],
  "w|mismo": [
   {
    "text": "Da lo mismo, vamos.",
@@ -50918,6 +51302,22 @@
    "en": "Paula's crew shot the final scene in front of a monument at dawn.",
    "ko": "파울라의 촬영팀은 동틀 녘에 기념물 앞에서 마지막 장면을 찍었어요.",
    "blank": "monumento",
+   "src": "made"
+  }
+ ],
+ "w|morado": [
+  {
+   "text": "Diego llevaba una corbata morada el día que ganó el premio de periodismo.",
+   "en": "Diego was wearing a purple tie the day he won the journalism award.",
+   "ko": "디에고는 언론상을 받던 날 보라색 넥타이를 매고 있었어요.",
+   "blank": "morada",
+   "src": "made"
+  },
+  {
+   "text": "Sofía cerró el sobre con un sello de lacre morado.",
+   "en": "Sofía sealed the envelope with purple sealing wax.",
+   "ko": "소피아는 보라색 밀랍 도장으로 봉투를 봉했어요.",
+   "blank": "morado",
    "src": "made"
   }
  ],
@@ -54945,6 +55345,22 @@
    "blank": "os"
   }
  ],
+ "w|osar": [
+  {
+   "text": "En la redacción nadie osó contradecir a la directora, salvo Diego.",
+   "en": "In the newsroom nobody dared to contradict the editor-in-chief, except Diego.",
+   "ko": "편집국에서 디에고 말고는 아무도 편집국장에게 감히 반박하지 못했어요.",
+   "blank": "osó",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le preguntó a Marta si osaría subir otra vez aquella montaña.",
+   "en": "Sofía asked Marta whether she would dare to climb that mountain again.",
+   "ko": "소피아는 마르타에게 그 산을 다시 오를 엄두가 나는지 물었어요.",
+   "blank": "osaría",
+   "src": "made"
+  }
+ ],
  "w|oscurecer": [
   {
    "text": "Javier volvió a la tienda de campaña antes de oscurecer.",
@@ -56655,6 +57071,22 @@
    "blank": "patear"
   }
  ],
+ "w|patente": [
+  {
+   "text": "Diego investigó a una empresa que vendía un aparato sin tener la patente.",
+   "en": "Diego investigated a company that was selling a device without holding the patent.",
+   "ko": "디에고는 특허도 없이 기계를 팔던 회사를 취재했어요.",
+   "blank": "patente",
+   "src": "made"
+  },
+  {
+   "text": "Sofía escribió que el inventor del pueblo por fin había conseguido la patente de su horno.",
+   "en": "Sofía wrote that the village inventor had finally got the patent for his oven.",
+   "ko": "소피아는 동네 발명가가 드디어 자기 오븐의 특허를 받았다고 썼어요.",
+   "blank": "patente",
+   "src": "made"
+  }
+ ],
  "w|patético": [
   {
    "text": "Ese intento de excusa fue patético.",
@@ -56756,6 +57188,22 @@
    "en": "A very patriotic guest asked Nuria for a flag for his balcony.",
    "ko": "애국심이 강한 손님이 누리아에게 발코니에 걸 국기를 부탁했어요.",
    "blank": "patriota",
+   "src": "made"
+  }
+ ],
+ "w|patrocinador": [
+  {
+   "text": "Diego dio la noticia de que el festival de cine había perdido a su principal patrocinador.",
+   "en": "Diego broke the news that the film festival had lost its main sponsor.",
+   "ko": "디에고는 영화제가 주요 후원사를 잃었다는 소식을 전했어요.",
+   "blank": "patrocinador",
+   "src": "made"
+  },
+  {
+   "text": "Sofía escribió que la orquesta del barrio por fin tenía un patrocinador para el concierto.",
+   "en": "Sofía wrote that the neighbourhood orchestra finally had a sponsor for the concert.",
+   "ko": "소피아는 동네 오케스트라가 드디어 공연 후원자를 구했다고 썼어요.",
+   "blank": "patrocinador",
    "src": "made"
   }
  ],
@@ -59331,6 +59779,22 @@
    "blank": "político"
   }
  ],
+ "w|póliza": [
+  {
+   "text": "En su artículo, Diego explicó qué cubre exactamente la póliza de un seguro de hogar.",
+   "en": "In his article, Diego explained exactly what a home insurance policy covers.",
+   "ko": "디에고는 기사에서 주택 보험 증권이 정확히 무엇을 보장하는지 설명했어요.",
+   "blank": "póliza",
+   "src": "made"
+  },
+  {
+   "text": "Sofía contó que, tras la inundación, la póliza del seguro lo cubrió casi todo.",
+   "en": "Sofía said that after the flood, the insurance policy covered almost everything.",
+   "ko": "소피아는 홍수 뒤에 보험이 거의 다 보상해 줬다고 했어요.",
+   "blank": "póliza",
+   "src": "made"
+  }
+ ],
  "w|pollo": [
   {
    "text": "Cenamos pollo asado con verduras.",
@@ -61709,6 +62173,22 @@
    "blank": "propuesta"
   }
  ],
+ "w|proseguir": [
+  {
+   "text": "A pesar de las presiones, Diego decidió proseguir con la investigación.",
+   "en": "Despite the pressure, Diego decided to carry on with the investigation.",
+   "ko": "압박에도 불구하고 디에고는 취재를 계속하기로 했어요.",
+   "blank": "proseguir",
+   "src": "made"
+  },
+  {
+   "text": "Antes de proseguir con la carta, Sofía se preparó otro té.",
+   "en": "Before carrying on with the letter, Sofía made herself another tea.",
+   "ko": "소피아는 편지를 이어 쓰기 전에 차를 한 잔 더 탔어요.",
+   "blank": "proseguir",
+   "src": "made"
+  }
+ ],
  "w|prosperidad": [
   {
    "text": "Raúl cree que el nuevo puerto traerá prosperidad a la comarca.",
@@ -61901,6 +62381,22 @@
    "en": "Diplomatic protocol is quite strict.",
    "ko": "외교 의전은 꽤 엄격해.",
    "blank": "protocolo"
+  }
+ ],
+ "w|prototipo": [
+  {
+   "text": "Diego escribió un reportaje sobre el prototipo de autobús eléctrico que probaban en la ciudad.",
+   "en": "Diego wrote a report on the prototype electric bus being tested in the city.",
+   "ko": "디에고는 도시에서 시험 중인 전기 버스 시제품에 관한 기사를 썼어요.",
+   "blank": "prototipo",
+   "src": "made"
+  },
+  {
+   "text": "En la carta, Sofía describía el prototipo de huerto vertical que había montado su hermano.",
+   "en": "In the letter, Sofía described the prototype vertical garden her brother had built.",
+   "ko": "소피아는 편지에서 남동생이 만든 수직 텃밭 시제품을 묘사했어요.",
+   "blank": "prototipo",
+   "src": "made"
   }
  ],
  "w|provecho": [
@@ -62589,6 +63085,22 @@
    "en": "All right, wrap it up there.",
    "ko": "됐어, 그쯤 해.",
    "blank": "punto"
+  }
+ ],
+ "w|puntuación": [
+  {
+   "text": "Diego corrigió la puntuación del titular justo antes de mandarlo a imprenta.",
+   "en": "Diego fixed the punctuation of the headline just before sending it to print.",
+   "ko": "디에고는 인쇄로 넘기기 직전에 제목의 문장부호를 고쳤어요.",
+   "blank": "puntuación",
+   "src": "made"
+  },
+  {
+   "text": "Sofía se rió de la puntuación de Marta, llena de signos de exclamación.",
+   "en": "Sofía laughed at Marta's punctuation, full of exclamation marks.",
+   "ko": "소피아는 느낌표로 가득한 마르타의 문장부호를 보고 웃었어요.",
+   "blank": "puntuación",
+   "src": "made"
   }
  ],
  "w|puntual": [
@@ -63505,6 +64017,22 @@
    "en": "I want to trace the origin of the idea.",
    "ko": "그 아이디어의 출처를 추적하고 싶어.",
    "blank": "rastrear"
+  }
+ ],
+ "w|rastreo": [
+  {
+   "text": "Gracias al rastreo de los correos, Diego encontró el origen de la filtración.",
+   "en": "Thanks to tracing the emails, Diego found the source of the leak.",
+   "ko": "디에고는 이메일을 추적해서 유출 출처를 찾아냈어요.",
+   "blank": "rastreo",
+   "src": "made"
+  },
+  {
+   "text": "Sofía bromeó con que el rastreo del paquete decía que estaba en otro continente.",
+   "en": "Sofía joked that the parcel tracking said it was on another continent.",
+   "ko": "소피아는 택배 조회를 보니 소포가 다른 대륙에 있다고 농담했어요.",
+   "blank": "rastreo",
+   "src": "made"
   }
  ],
  "w|rastro": [
@@ -65109,6 +65637,22 @@
    "src": "made"
   }
  ],
+ "w|relativamente": [
+  {
+   "text": "La noticia de Diego era relativamente corta, pero la leyó muchísima gente.",
+   "en": "Diego's story was relatively short, but a huge number of people read it.",
+   "ko": "디에고의 기사는 비교적 짧았지만 아주 많은 사람이 읽었어요.",
+   "blank": "relativamente",
+   "src": "made"
+  },
+  {
+   "text": "Sofía escribió que la mudanza había sido relativamente fácil.",
+   "en": "Sofía wrote that the move had been relatively easy.",
+   "ko": "소피아는 이사가 비교적 수월했다고 썼어요.",
+   "blank": "relativamente",
+   "src": "made"
+  }
+ ],
  "w|relativo": [
   {
    "text": "El profesor de física le explicó a Mateo que el movimiento siempre es relativo.",
@@ -66085,6 +66629,22 @@
    "blank": "Resolvió"
   }
  ],
+ "w|respaldar": [
+  {
+   "text": "Varios testigos aceptaron respaldar la versión que publicó Diego.",
+   "en": "Several witnesses agreed to back up the version Diego published.",
+   "ko": "목격자 여러 명이 디에고가 보도한 내용을 뒷받침해 주기로 했어요.",
+   "blank": "respaldar",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le prometió a Marta respaldar su idea de abrir una librería.",
+   "en": "Sofía promised Marta she would back her idea of opening a bookshop.",
+   "ko": "소피아는 서점을 열겠다는 마르타의 생각을 응원하겠다고 약속했어요.",
+   "blank": "respaldar",
+   "src": "made"
+  }
+ ],
  "w|respaldo": [
   {
    "text": "Hugo contó con el respaldo de la directora para publicar la investigación.",
@@ -66157,6 +66717,22 @@
    "en": "Treat him with more respect, please.",
    "ko": "제발 그를 더 존중해서 대해 줘.",
    "blank": "respeto"
+  }
+ ],
+ "w|respetuoso": [
+  {
+   "text": "Diego hace preguntas duras, pero siempre con un tono respetuoso.",
+   "en": "Diego asks tough questions, but always in a respectful tone.",
+   "ko": "디에고는 날카로운 질문을 하지만 늘 정중한 말투로 해요.",
+   "blank": "respetuoso",
+   "src": "made"
+  },
+  {
+   "text": "Sofía escribió que su vecino nuevo era muy respetuoso con el silencio de la casa.",
+   "en": "Sofía wrote that her new neighbour was very respectful of the quiet in the building.",
+   "ko": "소피아는 새 이웃이 건물의 조용함을 아주 잘 지켜 준다고 썼어요.",
+   "blank": "respetuoso",
+   "src": "made"
   }
  ],
  "w|respiración": [
@@ -72443,6 +73019,22 @@
    "src": "made"
   }
  ],
+ "w|supervisión": [
+  {
+   "text": "Diego pasó sus primeros meses bajo la supervisión de una editora veterana.",
+   "en": "Diego spent his first months under the supervision of a veteran editor.",
+   "ko": "디에고는 첫 몇 달을 노련한 편집자의 지도 아래 보냈어요.",
+   "blank": "supervisión",
+   "src": "made"
+  },
+  {
+   "text": "Sofía escribió que su padre ya caminaba sin supervisión después de la operación.",
+   "en": "Sofía wrote that her father was now walking unsupervised after the operation.",
+   "ko": "소피아는 아버지가 수술 후 이제 혼자서도 걸으신다고 썼어요.",
+   "blank": "supervisión",
+   "src": "made"
+  }
+ ],
  "w|supervisor": [
   {
    "text": "El supervisor revisó nuestro informe.",
@@ -72772,6 +73364,22 @@
    "en": "At rehearsal, Ana forgot her line and someone whispered it to her.",
    "ko": "연습 때 아나가 대사를 잊자 누군가 귓속말로 알려 줬어요.",
    "blank": "susurró",
+   "src": "made"
+  }
+ ],
+ "w|susurro": [
+  {
+   "text": "Diego oyó un susurro detrás de la puerta del despacho del director.",
+   "en": "Diego heard a whisper behind the door of the editor's office.",
+   "ko": "디에고는 편집장실 문 너머에서 속삭이는 소리를 들었어요.",
+   "blank": "susurro",
+   "src": "made"
+  },
+  {
+   "text": "Sofía todavía recuerda el susurro de Marta en la biblioteca avisando de que venía la bibliotecaria.",
+   "en": "Sofía still remembers Marta's whisper in the library warning that the librarian was coming.",
+   "ko": "소피아는 사서가 온다고 도서관에서 속삭이던 마르타의 목소리를 아직 기억해요.",
+   "blank": "susurro",
    "src": "made"
   }
  ],
@@ -74255,6 +74863,22 @@
    "en": "The terrorist group was dismantled by the police.",
    "ko": "그 테러 조직은 경찰에 의해 해체됐어.",
    "blank": "terrorista"
+  }
+ ],
+ "w|tesis": [
+  {
+   "text": "Una estudiante le contó a Diego que su tesis trataba sobre la prensa local.",
+   "en": "A student told Diego that her thesis was about the local press.",
+   "ko": "한 학생이 디에고에게 자기 논문 주제가 지역 언론이라고 말했어요.",
+   "blank": "tesis",
+   "src": "made"
+  },
+  {
+   "text": "Sofía felicitó a Marta por haber defendido por fin su tesis doctoral.",
+   "en": "Sofía congratulated Marta on finally defending her doctoral thesis.",
+   "ko": "소피아는 마르타가 드디어 박사 논문 심사를 마친 걸 축하했어요.",
+   "blank": "tesis",
+   "src": "made"
   }
  ],
  "w|tesoro": [
@@ -76474,6 +77098,22 @@
    "en": "The festival award was a triumph for Javier's whole team.",
    "ko": "영화제 수상은 하비에르 팀 모두의 승리였어요.",
    "blank": "triunfo",
+   "src": "made"
+  }
+ ],
+ "w|trivial": [
+  {
+   "text": "Lo que parecía un asunto trivial acabó siendo la gran exclusiva de Diego.",
+   "en": "What seemed a trivial matter ended up being Diego's big exclusive.",
+   "ko": "사소해 보이던 일이 결국 디에고의 큰 특종이 됐어요.",
+   "blank": "trivial",
+   "src": "made"
+  },
+  {
+   "text": "Sofía pidió perdón por llenar la carta de detalles triviales sobre su gato.",
+   "en": "Sofía apologised for filling the letter with trivial details about her cat.",
+   "ko": "소피아는 고양이 얘기 같은 사소한 내용으로 편지를 채워서 미안하다고 했어요.",
+   "blank": "triviales",
    "src": "made"
   }
  ],

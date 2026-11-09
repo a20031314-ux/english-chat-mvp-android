@@ -2757,6 +2757,22 @@
    "src": "made"
   }
  ],
+ "w|batal": [
+  {
+   "text": "Pesta kembang api batal karena angin terlalu kencang.",
+   "en": "The fireworks were cancelled because the wind was too strong.",
+   "ko": "바람이 너무 세서 불꽃놀이가 취소됐어요.",
+   "blank": "batal",
+   "src": "made"
+  },
+  {
+   "text": "Wawancara Rina dengan bupati batal karena jadwalnya berubah mendadak.",
+   "en": "Rina's interview with the regent was cancelled because his schedule changed suddenly.",
+   "ko": "군수 일정이 갑자기 바뀌어 리나의 인터뷰가 취소됐어요.",
+   "blank": "batal",
+   "src": "made"
+  }
+ ],
  "w|batang": [
   {
    "text": "Saat kerja bakti, Andi memotong batang pisang di belakang sekolah.",
@@ -5430,6 +5446,22 @@
    "en": "Lestari's rice stock drops sharply towards the end of the month.",
    "ko": "월말이 다가오면 레스타리 가게의 쌀 재고가 크게 줄어요.",
    "blank": "berkurang",
+   "src": "made"
+  }
+ ],
+ "w|berlagak": [
+  {
+   "text": "Sepupu Rudi berlagak seperti pembawa acara profesional di depan kamera.",
+   "en": "Rudi's cousin acted like a professional emcee in front of the camera.",
+   "ko": "루디의 사촌은 카메라 앞에서 전문 사회자인 척했어요.",
+   "blank": "berlagak",
+   "src": "made"
+  },
+  {
+   "text": "Rina tahu narasumber itu hanya berlagak tahu soal anggaran desa.",
+   "en": "Rina knew the source was only pretending to know about the village budget.",
+   "ko": "리나는 그 취재원이 마을 예산을 아는 척만 한다는 걸 알았어요.",
+   "blank": "berlagak",
    "src": "made"
   }
  ],
@@ -8875,6 +8907,22 @@
    "blank": "Cerdas"
   }
  ],
+ "w|cerdik": [
+  {
+   "text": "Sepupu Rudi yang cerdik berhasil menyembunyikan sepatu pengantin pria.",
+   "en": "Rudi's clever cousin managed to hide the groom's shoes.",
+   "ko": "루디의 꾀 많은 사촌이 신랑 신발을 숨기는 데 성공했어요.",
+   "blank": "cerdik",
+   "src": "made"
+  },
+  {
+   "text": "Rina harus cerdik mencari narasumber yang mau bicara terus terang.",
+   "en": "Rina has to be clever in finding sources who will speak frankly.",
+   "ko": "리나는 솔직하게 말해 줄 취재원을 영리하게 찾아야 해요.",
+   "blank": "cerdik",
+   "src": "made"
+  }
+ ],
  "w|ceria": [
   {
    "text": "Rina yang biasanya ceria jadi diam seharian.",
@@ -9317,6 +9365,22 @@
    "en": "Go on inside.",
    "ko": "안으로 들어가.",
    "blank": "dalam"
+  }
+ ],
+ "w|dalang": [
+  {
+   "text": "Keluarga Rudi mengundang seorang dalang untuk pertunjukan wayang semalam suntuk.",
+   "en": "Rudi's family invited a puppet master for an all-night wayang performance.",
+   "ko": "루디네 가족은 밤새 와양 공연을 하려고 인형극 연출가를 초대했어요.",
+   "blank": "dalang",
+   "src": "made"
+  },
+  {
+   "text": "Rina menulis profil dalang muda yang memadukan wayang dengan musik rap.",
+   "en": "Rina wrote a profile of a young puppeteer who blends wayang with rap music.",
+   "ko": "리나는 와양과 랩을 섞는 젊은 인형극 연출가의 인물 기사를 썼어요.",
+   "blank": "dalang",
+   "src": "made"
   }
  ],
  "w|damai": [
@@ -11579,6 +11643,22 @@
    "en": "She is a kind girl.",
    "ko": "그녀는 착한 소녀야.",
    "blank": "gadis"
+  }
+ ],
+ "w|gagah": [
+  {
+   "text": "Dengan beskap hitam, pengantin pria tampak gagah di depan para tamu.",
+   "en": "In his black beskap jacket, the groom looked dashing in front of the guests.",
+   "ko": "검은 베스캅을 입은 신랑은 손님들 앞에서 늠름해 보였어요.",
+   "blank": "gagah",
+   "src": "made"
+  },
+  {
+   "text": "Foto Rina menampilkan prajurit yang berdiri gagah saat upacara bendera.",
+   "en": "Rina's photo shows soldiers standing proudly during the flag ceremony.",
+   "ko": "리나의 사진에는 국기 의식 때 늠름하게 선 군인들이 담겼어요.",
+   "blank": "gagah",
+   "src": "made"
   }
  ],
  "w|gagal": [
@@ -13961,6 +14041,22 @@
    "blank": "Indah"
   }
  ],
+ "w|individu": [
+  {
+   "text": "Kata penghulu, setiap individu dalam keluarga ikut menjaga rumah tangga baru itu.",
+   "en": "The officiant said every individual in the family helps look after the new household.",
+   "ko": "혼인 주례는 가족 한 사람 한 사람이 새 가정을 함께 지켜 준다고 했어요.",
+   "blank": "individu",
+   "src": "made"
+  },
+  {
+   "text": "Rina menulis bahwa setiap individu berhak tahu ke mana uang pajaknya dipakai.",
+   "en": "Rina wrote that every individual has the right to know where their tax money goes.",
+   "ko": "리나는 모든 개인이 세금이 어디에 쓰이는지 알 권리가 있다고 썼어요.",
+   "blank": "individu",
+   "src": "made"
+  }
+ ],
  "w|induk": [
   {
    "text": "Anak kucing itu terus mengeong mencari induk yang hilang di kebun sekolah.",
@@ -14581,6 +14677,22 @@
    "en": "The meeting schedule changed without notice.",
    "ko": "회의 일정이 통보 없이 바뀌었어.",
    "blank": "Jadwal"
+  }
+ ],
+ "w|jago": [
+  {
+   "text": "Rudi jago menari dangdut, jadi tamu-tamu memintanya naik panggung.",
+   "en": "Rudi is great at dancing dangdut, so the guests asked him to get on stage.",
+   "ko": "루디가 당둣 춤을 잘 춰서 손님들이 무대에 올라오라고 했어요.",
+   "blank": "jago",
+   "src": "made"
+  },
+  {
+   "text": "Fotografer koran itu jago memotret pertandingan bulu tangkis.",
+   "en": "The paper's photographer is skilled at shooting badminton matches.",
+   "ko": "그 신문사 사진기자는 배드민턴 경기를 잘 찍어요.",
+   "blank": "jago",
+   "src": "made"
   }
  ],
  "w|jagoan": [
@@ -15372,6 +15484,22 @@
    "en": "Siti's film shoot started in early July on a beach.",
    "ko": "시티의 영화 촬영은 칠월 초 한 해변에서 시작했어요.",
    "blank": "Juli",
+   "src": "made"
+  }
+ ],
+ "w|julukan": [
+  {
+   "text": "Di kampung, Rudi punya julukan si tukang foto karena selalu membawa kamera.",
+   "en": "In the village, Rudi has the nickname \"the photo guy\" because he always carries a camera.",
+   "ko": "마을에서 루디는 늘 카메라를 들고 다녀서 사진쟁이라는 별명이 있어요.",
+   "blank": "julukan",
+   "src": "made"
+  },
+  {
+   "text": "Rina menjelaskan asal julukan kota hujan dalam artikelnya.",
+   "en": "Rina explained the origin of the nickname \"city of rain\" in her article.",
+   "ko": "리나는 기사에서 비의 도시라는 별명의 유래를 설명했어요.",
+   "blank": "julukan",
    "src": "made"
   }
  ],
@@ -25571,6 +25699,22 @@
    "blank": "membaik"
   }
  ],
+ "w|membajak": [
+  {
+   "text": "Paman Rudi biasanya membajak sawah, tapi hari itu dia memakai jas rapi.",
+   "en": "Rudi's uncle usually plows the rice fields, but that day he wore a neat suit.",
+   "ko": "루디의 삼촌은 평소엔 논을 갈지만 그날은 단정한 양복을 입었어요.",
+   "blank": "membajak",
+   "src": "made"
+  },
+  {
+   "text": "Rina melaporkan bahwa peretas membajak akun media sosial pemerintah daerah.",
+   "en": "Rina reported that hackers hijacked the local government's social media account.",
+   "ko": "리나는 해커들이 지방 정부 SNS 계정을 해킹했다고 보도했어요.",
+   "blank": "membajak",
+   "src": "made"
+  }
+ ],
  "w|membakar": [
   {
    "text": "Jangan membakar sampah di sini.",
@@ -25643,6 +25787,22 @@
    "en": "Comparing prices helps save money.",
    "ko": "가격을 비교하면 돈을 아낄 수 있어.",
    "blank": "Membandingkan"
+  }
+ ],
+ "w|membanggakan": [
+  {
+   "text": "Ayah pengantin wanita membanggakan putrinya yang baru lulus jadi dokter.",
+   "en": "The bride's father proudly talked about his daughter, who just qualified as a doctor.",
+   "ko": "신부 아버지는 막 의사가 된 딸을 자랑했어요.",
+   "blank": "membanggakan",
+   "src": "made"
+  },
+  {
+   "text": "Kota itu membanggakan pasar terapungnya, dan Rina menulis liputan khusus tentangnya.",
+   "en": "The city is proud of its floating market, and Rina wrote a special report about it.",
+   "ko": "그 도시는 수상 시장을 자랑하고, 리나는 그에 대한 특집 기사를 썼어요.",
+   "blank": "membanggakan",
+   "src": "made"
   }
  ],
  "w|membangkitkan": [
@@ -26681,6 +26841,22 @@
    "en": "This product meets safety standards.",
    "ko": "이 제품은 안전 기준을 충족해.",
    "blank": "memenuhi"
+  }
+ ],
+ "w|memerangi": [
+  {
+   "text": "Kakak Rudi, seorang dokter, bercerita tentang program desa untuk memerangi demam berdarah.",
+   "en": "Rudi's older sister, a doctor, talked about the village program to fight dengue fever.",
+   "ko": "의사인 루디의 누나는 뎅기열과 싸우는 마을 사업 이야기를 했어요.",
+   "blank": "memerangi",
+   "src": "made"
+  },
+  {
+   "text": "Koran itu menjalankan kampanye untuk memerangi berita bohong.",
+   "en": "The newspaper runs a campaign to combat fake news.",
+   "ko": "그 신문사는 가짜 뉴스와 싸우는 캠페인을 벌여요.",
+   "blank": "memerangi",
+   "src": "made"
   }
  ],
  "w|memeras": [
@@ -30967,6 +31143,22 @@
    "blank": "Mengerikan"
   }
  ],
+ "w|mengerjai": [
+  {
+   "text": "Teman-teman pengantin pria mengerjai pengantin pria dengan menyembunyikan kunci mobilnya.",
+   "en": "The groom's friends pranked him by hiding his car keys.",
+   "ko": "신랑 친구들은 차 열쇠를 숨겨서 신랑을 골탕 먹였어요.",
+   "blank": "mengerjai",
+   "src": "made"
+  },
+  {
+   "text": "Rekan kerja Rina mengerjai Rina dengan mengganti foto profilnya di sistem kantor.",
+   "en": "Rina's coworker pranked Rina by changing her profile photo in the office system.",
+   "ko": "리나의 동료가 회사 시스템의 리나 프로필 사진을 바꿔서 리나를 골탕 먹였어요.",
+   "blank": "mengerjai",
+   "src": "made"
+  }
+ ],
  "w|mengerjakan": [
   {
    "text": "Dia sedang mengerjakan tugas rumah.",
@@ -31051,6 +31243,22 @@
    "en": "Don't tap the table during the meeting.",
    "ko": "회의 중에 탁자를 두드리지 마.",
    "blank": "mengetuk"
+  }
+ ],
+ "w|mengevakuasi": [
+  {
+   "text": "Saat hujan deras turun, panitia mengevakuasi tamu dari tenda ke dalam rumah.",
+   "en": "When heavy rain fell, the organizers moved the guests from the tent into the house.",
+   "ko": "폭우가 쏟아지자 진행 팀은 손님들을 천막에서 집 안으로 대피시켰어요.",
+   "blank": "mengevakuasi",
+   "src": "made"
+  },
+  {
+   "text": "Rina melaporkan bahwa tim SAR mengevakuasi warga dengan perahu karet.",
+   "en": "Rina reported that the rescue team evacuated residents by rubber boat.",
+   "ko": "리나는 구조대가 고무보트로 주민들을 대피시켰다고 보도했어요.",
+   "blank": "mengevakuasi",
+   "src": "made"
   }
  ],
  "w|mengevaluasi": [
@@ -31323,6 +31531,22 @@
    "src": "made"
   }
  ],
+ "w|menggulung": [
+  {
+   "text": "Setelah pesta, Rudi menggulung karpet merah yang dipakai di pintu masuk.",
+   "en": "After the party, Rudi rolled up the red carpet used at the entrance.",
+   "ko": "잔치가 끝나고 루디는 입구에 깔았던 빨간 카펫을 말았어요.",
+   "blank": "menggulung",
+   "src": "made"
+  },
+  {
+   "text": "Rina menggulung koran edisi pertama dan menyimpannya sebagai kenang-kenangan.",
+   "en": "Rina rolled up the first-edition paper and kept it as a souvenir.",
+   "ko": "리나는 창간호 신문을 말아서 기념으로 간직했어요.",
+   "blank": "menggulung",
+   "src": "made"
+  }
+ ],
  "w|menggunakan": [
   {
    "text": "Jangan menggunakan HP di sini.",
@@ -31453,6 +31677,22 @@
    "en": "Blocking other people is not a good attitude.",
    "ko": "다른 사람을 가로막는 건 좋은 태도가 아니야.",
    "blank": "Menghalangi"
+  }
+ ],
+ "w|menghampiri": [
+  {
+   "text": "Seorang anak kecil menghampiri Rudi dan meminta difoto bersama pengantin.",
+   "en": "A small child came up to Rudi and asked to be photographed with the bride and groom.",
+   "ko": "꼬마 하나가 루디에게 다가와 신랑 신부와 사진을 찍어 달라고 했어요.",
+   "blank": "menghampiri",
+   "src": "made"
+  },
+  {
+   "text": "Setelah konferensi pers, Rina menghampiri menteri untuk bertanya satu hal lagi.",
+   "en": "After the press conference, Rina approached the minister to ask one more question.",
+   "ko": "기자회견이 끝나고 리나는 한 가지를 더 물으려고 장관에게 다가갔어요.",
+   "blank": "menghampiri",
+   "src": "made"
   }
  ],
  "w|menghancurkan": [
@@ -34101,6 +34341,22 @@
    "blank": "Menyatakan"
   }
  ],
+ "w|menyatu": [
+  {
+   "text": "Musik gamelan dan lagu pop menyatu dengan indah di pesta itu.",
+   "en": "Gamelan music and pop songs blended beautifully at the party.",
+   "ko": "그 잔치에서 가믈란 음악과 팝송이 아름답게 어우러졌어요.",
+   "blank": "menyatu",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Rina, menulis dan memotret sudah menyatu menjadi satu pekerjaan.",
+   "en": "For Rina, writing and taking photos have merged into one job.",
+   "ko": "리나에게 글쓰기와 사진 찍기는 이미 한 가지 일이 됐어요.",
+   "blank": "menyatu",
+   "src": "made"
+  }
+ ],
  "w|menyatukan": [
   {
    "text": "Klub buku itu menyatukan pembaca dari berbagai usia.",
@@ -34363,6 +34619,22 @@
    "src": "made"
   }
  ],
+ "w|menyembah": [
+  {
+   "text": "Dalang menceritakan rakyat yang menyembah raja mereka seperti dewa.",
+   "en": "The puppet master told of people who worshipped their king like a god.",
+   "ko": "인형극 연출가는 왕을 신처럼 섬기는 백성 이야기를 들려줬어요.",
+   "blank": "menyembah",
+   "src": "made"
+  },
+  {
+   "text": "Rina menulis tentang situs kuno tempat orang dulu menyembah matahari.",
+   "en": "Rina wrote about an ancient site where people once worshipped the sun.",
+   "ko": "리나는 옛사람들이 해를 숭배하던 고대 유적에 대해 썼어요.",
+   "blank": "menyembah",
+   "src": "made"
+  }
+ ],
  "w|menyembuhkan": [
   {
    "text": "Obat ini bisa menyembuhkan demam.",
@@ -34403,6 +34675,22 @@
    "en": "His friend is really pleasant.",
    "ko": "그 친구가 정말 유쾌해.",
    "blank": "menyenangkan"
+  }
+ ],
+ "w|menyengat": [
+  {
+   "text": "Seekor tawon menyengat tangan Rudi saat dia mengangkat tumpeng.",
+   "en": "A wasp stung Rudi's hand when he lifted the tumpeng rice cone.",
+   "ko": "루디가 뚬뻥을 들어 올릴 때 말벌이 손을 쏘았어요.",
+   "blank": "menyengat",
+   "src": "made"
+  },
+  {
+   "text": "Bau sampah yang menyengat membuat Rina menulis berita tentang tempat pembuangan liar.",
+   "en": "The pungent smell of garbage led Rina to write a story about an illegal dump.",
+   "ko": "코를 찌르는 쓰레기 냄새 때문에 리나는 불법 쓰레기장 기사를 썼어요.",
+   "blank": "menyengat",
+   "src": "made"
   }
  ],
  "w|menyentuh": [
@@ -34987,6 +35275,22 @@
    "en": "That team achieved victory in the final.",
    "ko": "그 팀이 결승에서 승리를 거뒀어.",
    "blank": "meraih"
+  }
+ ],
+ "w|merakit": [
+  {
+   "text": "Rudi semalaman merakit lampu hias untuk gerbang rumah pengantin.",
+   "en": "Rudi spent all night assembling decorative lights for the bride's house gate.",
+   "ko": "루디는 밤새 신부 집 대문에 달 장식 조명을 조립했어요.",
+   "blank": "merakit",
+   "src": "made"
+  },
+  {
+   "text": "Rina meliput bengkel kecil yang merakit sepeda listrik dari barang bekas.",
+   "en": "Rina covered a small workshop that assembles electric bikes from used parts.",
+   "ko": "리나는 중고 부품으로 전기 자전거를 조립하는 작은 공방을 취재했어요.",
+   "blank": "merakit",
+   "src": "made"
   }
  ],
  "w|merampas": [
@@ -36491,6 +36795,22 @@
    "en": "Alright, just start.",
    "ko": "자, 그냥 시작해.",
    "blank": "Nah"
+  }
+ ],
+ "w|naif": [
+  {
+   "text": "Rudi agak naif karena mengira semua tamu datang tanpa diundang.",
+   "en": "Rudi is a bit naive for thinking all the guests came without being invited.",
+   "ko": "루디는 손님들이 다 초대 없이 온 줄 알 만큼 좀 순진해요.",
+   "blank": "naif",
+   "src": "made"
+  },
+  {
+   "text": "Redaktur menganggap judul Rina terlalu naif untuk berita politik.",
+   "en": "The editor thought Rina's headline was too naive for a political story.",
+   "ko": "편집자는 리나의 제목이 정치 기사로는 너무 순진하다고 봤어요.",
+   "blank": "naif",
+   "src": "made"
   }
  ],
  "w|naik": [
@@ -38557,6 +38877,22 @@
    "blank": "pecandu"
   }
  ],
+ "w|pecinta": [
+  {
+   "text": "Pengantin wanita adalah pecinta kucing, jadi kue pernikahannya berbentuk kucing.",
+   "en": "The bride is a cat lover, so the wedding cake was shaped like a cat.",
+   "ko": "신부가 고양이를 좋아해서 웨딩 케이크가 고양이 모양이었어요.",
+   "blank": "pecinta",
+   "src": "made"
+  },
+  {
+   "text": "Komunitas pecinta buku mengundang Rina untuk menulis tentang kegiatan mereka.",
+   "en": "A community of book lovers invited Rina to write about their activities.",
+   "ko": "책 애호가 모임이 리나에게 자기들 활동에 대한 기사를 써 달라고 했어요.",
+   "blank": "pecinta",
+   "src": "made"
+  }
+ ],
  "w|pecundang": [
   {
    "text": "Pecundang itu menolak bersalaman setelah kalah.",
@@ -39691,6 +40027,22 @@
    "blank": "pemburu"
   }
  ],
+ "w|pemegang": [
+  {
+   "text": "Rudi bertugas sebagai pemegang cincin selama akad nikah.",
+   "en": "Rudi had the job of ring bearer during the marriage ceremony.",
+   "ko": "루디는 혼인 서약 동안 반지를 들고 있는 역할을 맡았어요.",
+   "blank": "pemegang",
+   "src": "made"
+  },
+  {
+   "text": "Rina mewawancarai pemegang saham terbesar pabrik gula itu.",
+   "en": "Rina interviewed the largest shareholder of the sugar factory.",
+   "ko": "리나는 그 설탕 공장의 최대 주주를 인터뷰했어요.",
+   "blank": "pemegang",
+   "src": "made"
+  }
+ ],
  "w|pemenang": [
   {
    "text": "Pemenang akan mendapat hadiah besar.",
@@ -39927,6 +40279,22 @@
    "src": "made"
   }
  ],
+ "w|penakut": [
+  {
+   "text": "Rudi dicap penakut oleh sepupunya karena tidak berani berpidato di depan tamu.",
+   "en": "Rudi was called a coward by his cousins because he didn't dare give a speech in front of the guests.",
+   "ko": "루디는 손님들 앞에서 연설할 엄두를 못 내서 사촌들에게 겁쟁이 소리를 들었어요.",
+   "blank": "penakut",
+   "src": "made"
+  },
+  {
+   "text": "Dulu Rina penakut, tetapi sekarang dia berani meliput di daerah banjir.",
+   "en": "Rina used to be a scaredy-cat, but now she dares to report from flooded areas.",
+   "ko": "리나는 예전엔 겁쟁이였지만 이제는 홍수 지역 취재도 해요.",
+   "blank": "penakut",
+   "src": "made"
+  }
+ ],
  "w|penampakan": [
   {
    "text": "Ada cerita tentang penampakan hantu di toilet lama sekolah Dimas.",
@@ -40089,6 +40457,22 @@
    "blank": "pencarian"
   }
  ],
+ "w|pencipta": [
+  {
+   "text": "Lagu yang dinyanyikan di pelaminan itu ternyata karya pencipta lagu dari desa Rudi.",
+   "en": "The song sung at the wedding dais turned out to be by a songwriter from Rudi's village.",
+   "ko": "신랑 신부 단상에서 부른 노래는 알고 보니 루디네 마을 작곡가의 곡이었어요.",
+   "blank": "pencipta",
+   "src": "made"
+  },
+  {
+   "text": "Rina mewawancarai pencipta aplikasi belajar mengaji yang sedang naik daun.",
+   "en": "Rina interviewed the creator of a Quran-reading app that's growing in popularity.",
+   "ko": "리나는 요즘 뜨는 꾸란 읽기 앱의 개발자를 인터뷰했어요.",
+   "blank": "pencipta",
+   "src": "made"
+  }
+ ],
  "w|penculik": [
   {
    "text": "Fajar baru saja membeli film detektif tentang polisi yang mengejar penculik anak.",
@@ -40221,6 +40605,22 @@
    "en": "His hair is short after being cut yesterday.",
    "ko": "어제 자른 뒤 머리가 짧아졌어.",
    "blank": "pendek"
+  }
+ ],
+ "w|pendekar": [
+  {
+   "text": "Penari silat di pernikahan itu berdandan seperti pendekar dari cerita lama.",
+   "en": "The silat dancer at the wedding was dressed like a warrior from an old tale.",
+   "ko": "결혼식의 실랏 무용수는 옛이야기 속 무사처럼 차려입었어요.",
+   "blank": "pendekar",
+   "src": "made"
+  },
+  {
+   "text": "Rina meliput festival film tentang pendekar silat dari Sumatra.",
+   "en": "Rina covered a film festival about silat warriors from Sumatra.",
+   "ko": "리나는 수마트라 실랏 무사들을 다룬 영화제를 취재했어요.",
+   "blank": "pendekar",
+   "src": "made"
   }
  ],
  "w|pendekatan": [
@@ -40788,6 +41188,22 @@
    "en": "Siti proposed developing a computer room on the second floor.",
    "ko": "시티는 이 층에 컴퓨터실을 만들자고 제안했어요.",
    "blank": "pengembangan",
+   "src": "made"
+  }
+ ],
+ "w|pengemis": [
+  {
+   "text": "Sisa makanan pesta dibagikan Rudi kepada pengemis di dekat masjid.",
+   "en": "Rudi gave the leftover party food to a beggar near the mosque.",
+   "ko": "루디는 잔치에서 남은 음식을 모스크 근처 걸인에게 나눠 줬어요.",
+   "blank": "pengemis",
+   "src": "made"
+  },
+  {
+   "text": "Rina meliput program pemerintah yang melatih pengemis menjadi tukang jahit.",
+   "en": "Rina covered a government program that trains beggars to become tailors.",
+   "ko": "리나는 걸인들을 재봉사로 훈련시키는 정부 사업을 취재했어요.",
+   "blank": "pengemis",
    "src": "made"
   }
  ],
@@ -41369,6 +41785,22 @@
    "blank": "Penjara"
   }
  ],
+ "w|penjelajah": [
+  {
+   "text": "Paman Rudi, seorang penjelajah gunung, datang langsung dari pendakian.",
+   "en": "Rudi's uncle, a mountain explorer, came straight from a climb.",
+   "ko": "산악 탐험가인 루디의 삼촌은 등산을 마치고 바로 왔어요.",
+   "blank": "penjelajah",
+   "src": "made"
+  },
+  {
+   "text": "Rina menulis kisah penjelajah yang menyusuri sungai Kalimantan dengan perahu.",
+   "en": "Rina wrote the story of an explorer who traveled the rivers of Kalimantan by boat.",
+   "ko": "리나는 배로 칼리만탄 강을 따라간 탐험가 이야기를 썼어요.",
+   "blank": "penjelajah",
+   "src": "made"
+  }
+ ],
  "w|penjelasan": [
   {
    "text": "Penjelasan guru sangat mudah dipahami.",
@@ -41525,6 +41957,22 @@
    "en": "The passenger got off at the next stop.",
    "ko": "승객이 다음 정류장에서 내렸어.",
    "blank": "Penumpang"
+  }
+ ],
+ "w|penunggang": [
+  {
+   "text": "Pengantin pria tiba bersama penunggang kuda yang memakai baju adat.",
+   "en": "The groom arrived with horse riders wearing traditional dress.",
+   "ko": "신랑은 전통 옷을 입은 기마꾼들과 함께 도착했어요.",
+   "blank": "penunggang",
+   "src": "made"
+  },
+  {
+   "text": "Rina meliput pacuan kuda dan mewawancarai penunggang termuda.",
+   "en": "Rina covered the horse race and interviewed the youngest rider.",
+   "ko": "리나는 경마를 취재하고 가장 어린 기수를 인터뷰했어요.",
+   "blank": "penunggang",
+   "src": "made"
   }
  ],
  "w|penuntut": [
@@ -41879,6 +42327,22 @@
    "en": "Bring all the hiking equipment tomorrow.",
    "ko": "내일 등산 장비를 전부 가져와.",
    "blank": "peralatan"
+  }
+ ],
+ "w|peramal": [
+  {
+   "text": "Bibi Rudi bercanda bahwa seorang peramal sudah menebak jodoh pengantin wanita.",
+   "en": "Rudi's aunt joked that a fortune-teller had already guessed the bride's match.",
+   "ko": "루디의 이모는 점쟁이가 신부의 짝을 벌써 맞혔다고 농담했어요.",
+   "blank": "peramal",
+   "src": "made"
+  },
+  {
+   "text": "Rina menulis artikel ringan tentang peramal cuaca tradisional di desa nelayan.",
+   "en": "Rina wrote a light article about traditional weather forecasters in a fishing village.",
+   "ko": "리나는 어촌의 전통 날씨 점쟁이에 대한 가벼운 기사를 썼어요.",
+   "blank": "peramal",
+   "src": "made"
   }
  ],
  "w|perampok": [
@@ -42579,6 +43043,22 @@
    "blank": "perkataan"
   }
  ],
+ "w|perkawinan": [
+  {
+   "text": "Paman Rudi bercerita bahwa perkawinan kakek dan neneknya dulu hanya dihadiri sepuluh orang.",
+   "en": "Rudi's uncle said his grandparents' wedding was attended by only ten people.",
+   "ko": "루디의 삼촌은 할아버지 할머니 결혼식에 겨우 열 명이 왔었다고 했어요.",
+   "blank": "perkawinan",
+   "src": "made"
+  },
+  {
+   "text": "Rina menulis tentang aturan baru soal usia minimal perkawinan.",
+   "en": "Rina wrote about the new rule on the minimum age of marriage.",
+   "ko": "리나는 혼인 최소 연령에 관한 새 규정에 대해 썼어요.",
+   "blank": "perkawinan",
+   "src": "made"
+  }
+ ],
  "w|perkelahian": [
   {
    "text": "Perkelahian di jalan cepat diredakan.",
@@ -43066,6 +43546,22 @@
    "en": "Dewi took her team out to eat together to keep them united after a heated meeting.",
    "ko": "디위는 뜨거웠던 회의 뒤 팀의 단합을 위해 함께 밥을 먹자고 했어요.",
    "blank": "persatuan",
+   "src": "made"
+  }
+ ],
+ "w|persaudaraan": [
+  {
+   "text": "Pesta itu terasa seperti perayaan persaudaraan dua keluarga besar.",
+   "en": "The party felt like a celebration of brotherhood between two big families.",
+   "ko": "그 잔치는 두 대가족의 우애를 기리는 자리 같았어요.",
+   "blank": "persaudaraan",
+   "src": "made"
+  },
+  {
+   "text": "Liputan Rina menunjukkan persaudaraan warga yang saling membantu setelah gempa.",
+   "en": "Rina's coverage showed the solidarity of residents helping each other after the earthquake.",
+   "ko": "리나의 기사는 지진 뒤 서로 돕는 주민들의 우애를 보여 줬어요.",
+   "blank": "persaudaraan",
    "src": "made"
   }
  ],
@@ -43609,6 +44105,22 @@
    "en": "We're taking the morning flight.",
    "ko": "아침 비행기를 타.",
    "blank": "pesawat"
+  }
+ ],
+ "w|peserta": [
+  {
+   "text": "Rudi menjadi salah satu peserta lomba makan kerupuk di acara pernikahan itu.",
+   "en": "Rudi was one of the contestants in the cracker-eating contest at the wedding.",
+   "ko": "루디는 결혼식 행사의 끄루뿍 먹기 대회 참가자 중 한 명이었어요.",
+   "blank": "peserta",
+   "src": "made"
+  },
+  {
+   "text": "Rina mencatat nama-nama peserta lomba lari anak untuk halaman olahraga.",
+   "en": "Rina wrote down the names of the children's race participants for the sports page.",
+   "ko": "리나는 스포츠면에 실을 어린이 달리기 대회 참가자 이름을 적었어요.",
+   "blank": "peserta",
+   "src": "made"
   }
  ],
  "w|pesta": [
@@ -45757,6 +46269,22 @@
    "src": "made"
   }
  ],
+ "w|realitas": [
+  {
+   "text": "Setelah pesta, realitas datang: Rudi harus mencuci ratusan piring.",
+   "en": "After the party, reality set in: Rudi had to wash hundreds of plates.",
+   "ko": "잔치가 끝나자 현실이 닥쳤어요. 루디는 접시 수백 개를 닦아야 했어요.",
+   "blank": "realitas",
+   "src": "made"
+  },
+  {
+   "text": "Rina ingin pembaca melihat realitas hidup buruh pelabuhan.",
+   "en": "Rina wants readers to see the reality of dockworkers' lives.",
+   "ko": "리나는 독자들이 항만 노동자의 현실을 보길 바라요.",
+   "blank": "realitas",
+   "src": "made"
+  }
+ ],
  "w|regu": [
   {
    "text": "Eko masuk regu pramuka bersama tiga teman sekelasnya.",
@@ -46771,6 +47299,22 @@
    "en": "He sold the shares before the price fell.",
    "ko": "그는 가격이 떨어지기 전에 주식을 팔았어.",
    "blank": "saham"
+  }
+ ],
+ "w|saingan": [
+  {
+   "text": "Rudi baru tahu bahwa pengantin pria dulu saingan kakaknya dalam lomba lari.",
+   "en": "Rudi just found out the groom used to be his brother's rival in running races.",
+   "ko": "루디는 신랑이 예전에 형의 달리기 경쟁자였다는 걸 이제야 알았어요.",
+   "blank": "saingan",
+   "src": "made"
+  },
+  {
+   "text": "Koran tempat Rina bekerja bersaing ketat dengan saingan dari kota sebelah.",
+   "en": "The paper where Rina works competes fiercely with a rival from the neighboring city.",
+   "ko": "리나가 일하는 신문사는 옆 도시 경쟁지와 치열하게 겨뤄요.",
+   "blank": "saingan",
+   "src": "made"
   }
  ],
  "w|sains": [
@@ -49625,6 +50169,22 @@
    "blank": "seragam"
   }
  ],
+ "w|serakah": [
+  {
+   "text": "Rudi menegur adiknya yang serakah karena mengambil lima potong kue sekaligus.",
+   "en": "Rudi scolded his greedy younger brother for taking five pieces of cake at once.",
+   "ko": "루디는 케이크를 다섯 조각이나 한꺼번에 집은 욕심 많은 동생을 나무랐어요.",
+   "blank": "serakah",
+   "src": "made"
+  },
+  {
+   "text": "Dalam tajuk rencana, Rina mengkritik pengembang serakah yang menimbun lahan.",
+   "en": "In the editorial, Rina criticized greedy developers who hoard land.",
+   "ko": "리나는 사설에서 땅을 사재기하는 욕심 많은 개발업자를 비판했어요.",
+   "blank": "serakah",
+   "src": "made"
+  }
+ ],
  "w|serangan": [
   {
    "text": "Serangan itu datang tiba-tiba.",
@@ -50905,6 +51465,22 @@
    "blank": "sosial"
   }
  ],
+ "w|sosok": [
+  {
+   "text": "Rudi melihat sosok neneknya duduk tenang di barisan depan.",
+   "en": "Rudi saw the figure of his grandmother sitting calmly in the front row.",
+   "ko": "루디는 앞줄에 조용히 앉아 있는 할머니의 모습을 봤어요.",
+   "blank": "sosok",
+   "src": "made"
+  },
+  {
+   "text": "Kepala desa itu sosok sederhana yang masih naik sepeda ke kantor.",
+   "en": "The village head is a modest figure who still rides a bicycle to the office.",
+   "ko": "그 이장은 아직도 자전거로 출근하는 소박한 사람이에요.",
+   "blank": "sosok",
+   "src": "made"
+  }
+ ],
  "w|spesial": [
   {
    "text": "Hari ini ada menu spesial di restoran.",
@@ -51282,6 +51858,22 @@
    "en": "Young men from the neighborhood came voluntarily to help Rina unload the wardrobe.",
    "ko": "동네 청년들이 자진해서 리나가 옷장 내리는 걸 도와주러 왔어요.",
    "blank": "sukarela",
+   "src": "made"
+  }
+ ],
+ "w|sukarelawan": [
+  {
+   "text": "Para sukarelawan dari karang taruna membantu menata kursi tamu.",
+   "en": "Volunteers from the youth group helped arrange the guests' chairs.",
+   "ko": "청년회 자원봉사자들이 손님 의자를 정리하는 걸 도왔어요.",
+   "blank": "sukarelawan",
+   "src": "made"
+  },
+  {
+   "text": "Rina menulis tentang sukarelawan yang mengajar anak jalanan membaca.",
+   "en": "Rina wrote about volunteers who teach street children to read.",
+   "ko": "리나는 거리 아이들에게 읽기를 가르치는 자원봉사자들에 대해 썼어요.",
+   "blank": "sukarelawan",
    "src": "made"
   }
  ],
@@ -54443,6 +55035,22 @@
    "blank": "tersangka"
   }
  ],
+ "w|tersangkut": [
+  {
+   "text": "Kerudung pengantin wanita tersangkut di hiasan bunga pelaminan.",
+   "en": "The bride's veil got caught on the flower decorations of the wedding dais.",
+   "ko": "신부의 베일이 단상의 꽃 장식에 걸렸어요.",
+   "blank": "tersangkut",
+   "src": "made"
+  },
+  {
+   "text": "Mobil Rina tersangkut lumpur dalam perjalanan ke lokasi longsor.",
+   "en": "Rina's car got stuck in the mud on the way to the landslide site.",
+   "ko": "리나의 차가 산사태 현장으로 가는 길에 진흙에 빠졌어요.",
+   "blank": "tersangkut",
+   "src": "made"
+  }
+ ],
  "w|tersayang": [
   {
    "text": "Rudi menitipkan salam untuk istri Bayu dan anak-anak tersayang.",
@@ -55313,6 +55921,22 @@
    "en": "I bought bread at the shop.",
    "ko": "가게에서 빵을 샀어.",
    "blank": "toko"
+  }
+ ],
+ "w|tokoh": [
+  {
+   "text": "Di pernikahan sepupunya, Rudi bertemu tokoh kampung yang dulu mengajarinya mengaji.",
+   "en": "At his cousin's wedding, Rudi met a village figure who used to teach him to recite the Quran.",
+   "ko": "사촌의 결혼식에서 루디는 어릴 때 꾸란 낭송을 가르쳐 준 마을 어른을 만났어요.",
+   "blank": "tokoh",
+   "src": "made"
+  },
+  {
+   "text": "Rina menulis profil tokoh perempuan yang mendirikan sekolah di desanya.",
+   "en": "Rina wrote a profile of a female figure who founded a school in her village.",
+   "ko": "리나는 마을에 학교를 세운 여성 인물의 소개 기사를 썼어요.",
+   "blank": "tokoh",
+   "src": "made"
   }
  ],
  "w|tolol": [
@@ -56259,6 +56883,22 @@
    "en": "My younger sibling entered university this year.",
    "ko": "동생이 올해 대학교에 들어갔어.",
    "blank": "universitas"
+  }
+ ],
+ "w|unsur": [
+  {
+   "text": "Kain songket pengantin memadukan unsur Melayu dan Jawa.",
+   "en": "The bride's songket cloth combines Malay and Javanese elements.",
+   "ko": "신부의 송껫 천은 말레이와 자바 요소를 섞었어요.",
+   "blank": "unsur",
+   "src": "made"
+  },
+  {
+   "text": "Redaktur bilang tulisan Rina perlu unsur manusia, bukan hanya angka.",
+   "en": "The editor said Rina's piece needs a human element, not just numbers.",
+   "ko": "편집자는 리나의 글에 숫자만이 아니라 사람 이야기가 필요하다고 했어요.",
+   "blank": "unsur",
+   "src": "made"
   }
  ],
  "w|untuk": [
