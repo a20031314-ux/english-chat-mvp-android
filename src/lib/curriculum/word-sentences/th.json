@@ -785,6 +785,22 @@
    "blank": "กระดูก"
   }
  ],
+ "w|กระดูกสันหลัง": [
+  {
+   "text": "หมาพันธุ์ขาสั้นมักมีปัญหากระดูกสันหลังเมื่ออายุมากขึ้น",
+   "en": "Short-legged breeds often develop spine problems as they get older.",
+   "ko": "다리 짧은 견종은 나이가 들면 척추 문제가 생기기 쉬워요.",
+   "blank": "กระดูกสันหลัง",
+   "src": "made"
+  },
+  {
+   "text": "หมอบอกนภาว่านั่งหลังค่อมทำให้กระดูกสันหลังผิดรูป",
+   "en": "The doctor told Napha that hunching over is deforming her spine.",
+   "ko": "의사는 나파에게 구부정하게 앉으면 척추가 휜다고 했어요.",
+   "blank": "กระดูกสันหลัง",
+   "src": "made"
+  }
+ ],
  "w|กระเด็น": [
   {
    "text": "เด็กชายวิ่งชนตู้จนป้ายชื่อกระเด็นตกพื้น",
@@ -1366,6 +1382,22 @@
    "en": "The generator supplies electric current to every light on set.",
    "ko": "발전기가 촬영장의 모든 조명에 전기를 공급해요.",
    "blank": "กระแสไฟฟ้า",
+   "src": "made"
+  }
+ ],
+ "w|กระหน่ำ": [
+  {
+   "text": "ธนาทุบกระเทียมกระหน่ำจนเศษกระเด็นไปทั่วโต๊ะ",
+   "en": "Thana pounded the garlic so furiously that bits flew all over the table.",
+   "ko": "타나가 마늘을 마구 내리치는 바람에 조각이 탁자 여기저기로 튀었어요.",
+   "blank": "กระหน่ำ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนตกกระหน่ำจนพิพิธภัณฑ์ต้องปิดห้องชั้นใต้ดิน",
+   "en": "It poured so hard that the museum had to close the basement rooms.",
+   "ko": "비가 억수같이 쏟아져서 박물관은 지하 전시실을 닫아야 했어요.",
+   "blank": "กระหน่ำ",
    "src": "made"
   }
  ],
@@ -1987,6 +2019,22 @@
    "en": "Work by day, sleep at night.",
    "ko": "낮에 일하고 밤에 자.",
    "blank": "กลางวัน"
+  }
+ ],
+ "w|กล้าม": [
+  {
+   "text": "หมาพันธุ์นี้มีกล้ามแน่นเพราะวิ่งทุกวัน",
+   "en": "This breed of dog is very muscular because it runs every day.",
+   "ko": "이 견종은 매일 뛰어서 근육이 단단해요.",
+   "blank": "กล้าม",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมงานผู้ชายชอบอวดกล้ามแขนหลังกลับจากฟิตเนส",
+   "en": "A male coworker likes showing off his arm muscles after the gym.",
+   "ko": "한 남자 동료는 헬스장에 다녀오면 팔 근육을 자랑해요.",
+   "blank": "กล้าม",
+   "src": "made"
   }
  ],
  "w|กล้ามเนื้อ": [
@@ -2830,6 +2878,22 @@
    "en": "Napha is cutting down on coconut-milk desserts because she's watching her weight.",
    "ko": "나파는 체중 관리 중이라 코코넛 밀크가 든 디저트를 줄이고 있어요.",
    "blank": "กะทิ",
+   "src": "made"
+  }
+ ],
+ "w|กะปิ": [
+  {
+   "text": "ธนาตำกะปิกับพริกทำน้ำพริกตามสูตรของครู",
+   "en": "Thana pounded shrimp paste with chillies to make chilli dip from the teacher's recipe.",
+   "ko": "타나는 선생님 레시피대로 새우 페이스트와 고추를 빻아 남프릭을 만들었어요.",
+   "blank": "กะปิ",
+   "src": "made"
+  },
+  {
+   "text": "ป้ายบรรยายเล่าว่าชาวบ้านริมทะเลทำกะปิจากเคยมาหลายร้อยปี",
+   "en": "The caption says coastal villagers have made shrimp paste from krill for centuries.",
+   "ko": "설명판에는 해안 주민들이 수백 년 동안 크릴로 새우 페이스트를 만들어 왔다고 적혀 있어요.",
+   "blank": "กะปิ",
    "src": "made"
   }
  ],
@@ -4819,6 +4883,22 @@
    "blank": "กิน"
   }
  ],
+ "w|กิมจิ": [
+  {
+   "text": "เพื่อนร่วมคลาสชาวเกาหลีสอนธนาทำกิมจิผักกาดขาว",
+   "en": "A Korean classmate taught Thana to make napa cabbage kimchi.",
+   "ko": "한국인 수강생이 타나에게 배추김치 담그는 법을 가르쳐 줬어요.",
+   "blank": "กิมจิ",
+   "src": "made"
+  },
+  {
+   "text": "นิทรรศการอาหารเอเชียมีโหลดินเผาสำหรับหมักกิมจิ",
+   "en": "The Asian food exhibition has an earthenware jar for fermenting kimchi.",
+   "ko": "아시아 음식 전시에는 김치를 숙성하는 옹기가 있어요.",
+   "blank": "กิมจิ",
+   "src": "made"
+  }
+ ],
  "w|กิริยา": [
   {
    "text": "ผู้อ่านหลายคนชมกิริยาสุภาพของเอกตอนไปสัมภาษณ์ผู้สูงอายุ",
@@ -5263,6 +5343,22 @@
    "en": "The shop collects payment from customers every evening.",
    "ko": "가게는 매일 저녁 손님에게서 돈을 받아.",
    "blank": "เก็บเงิน"
+  }
+ ],
+ "w|เก็บตัว": [
+  {
+   "text": "กระต่ายที่ป่วยมักเก็บตัวอยู่มุมกรง ไม่ยอมออกมากิน",
+   "en": "Sick rabbits often keep to a corner of the cage and won't come out to eat.",
+   "ko": "아픈 토끼는 흔히 우리 구석에 틀어박혀 먹으러 나오지 않아요.",
+   "blank": "เก็บตัว",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงปิดงบ นภาเก็บตัวทำงานในห้องประชุมเล็กทั้งสัปดาห์",
+   "en": "During the year-end close, Napha shut herself away in the small meeting room all week.",
+   "ko": "결산 기간에 나파는 일주일 내내 작은 회의실에 틀어박혀 일했어요.",
+   "blank": "เก็บตัว",
+   "src": "made"
   }
  ],
  "w|เก็บรักษา": [
@@ -6393,6 +6489,22 @@
    "en": "Chicken soup helps when you have a cold.",
    "ko": "감기 걸리면 닭고기 수프가 도움돼.",
    "blank": "ไก่"
+  }
+ ],
+ "w|ไก่งวง": [
+  {
+   "text": "คลาสพิเศษช่วงปลายปีสอนอบไก่งวงสำหรับงานเลี้ยง",
+   "en": "The special end-of-year class teaches roasting a turkey for parties.",
+   "ko": "연말 특강에서는 파티용 칠면조 굽는 법을 가르쳐요.",
+   "blank": "ไก่งวง",
+   "src": "made"
+  },
+  {
+   "text": "ภาพวาดสีน้ำมันเป็นรูปงานเลี้ยงที่มีไก่งวงตัวโตกลางโต๊ะ",
+   "en": "An oil painting shows a feast with a big turkey in the middle of the table.",
+   "ko": "유화에는 식탁 한가운데 큰 칠면조가 놓인 잔치가 그려져 있어요.",
+   "blank": "ไก่งวง",
+   "src": "made"
   }
  ],
  "w|ไกด์": [
@@ -8515,6 +8627,22 @@
    "src": "made"
   }
  ],
+ "w|ขับถ่าย": [
+  {
+   "text": "หมอวิชัยถามว่าแมวขับถ่ายปกติดีหรือเปล่า",
+   "en": "Dr Wichai asked whether the cat was going to the toilet normally.",
+   "ko": "위차이 수의사는 고양이가 배변을 잘하는지 물었어요.",
+   "blank": "ขับถ่าย",
+   "src": "made"
+  },
+  {
+   "text": "หมอแนะนำนภาให้ดื่มน้ำมากๆ จะได้ขับถ่ายง่ายขึ้น",
+   "en": "The doctor advised Napha to drink lots of water so that going to the toilet would be easier.",
+   "ko": "의사는 배변이 쉬워지게 물을 많이 마시라고 나파에게 권했어요.",
+   "blank": "ขับถ่าย",
+   "src": "made"
+  }
+ ],
  "w|ขับรถ": [
   {
    "text": "พ่อขับรถพาเราไปเที่ยวทะเล",
@@ -8527,6 +8655,22 @@
    "en": "She just started learning to drive last month.",
    "ko": "그녀는 지난달에야 운전을 배우기 시작했어.",
    "blank": "ขับรถ"
+  }
+ ],
+ "w|ขับร้อง": [
+  {
+   "text": "ระหว่างรอขนมสุก นักเรียนผลัดกันขับร้องเพลงไทยเดิม",
+   "en": "While waiting for the dessert to cook, the students took turns singing old Thai songs.",
+   "ko": "디저트가 익기를 기다리며 학생들은 번갈아 옛 태국 노래를 불렀어요.",
+   "blank": "ขับร้อง",
+   "src": "made"
+  },
+  {
+   "text": "ในห้องดนตรีไทย มีวิดีโอนักร้องขับร้องเพลงเห่เรือ",
+   "en": "In the Thai music room, there's a video of a singer performing a royal barge song.",
+   "ko": "태국 음악 전시실에는 가수가 뱃노래를 부르는 영상이 있어요.",
+   "blank": "ขับร้อง",
+   "src": "made"
   }
  ],
  "w|ขับไล่": [
@@ -9034,6 +9178,22 @@
    "en": "On Monday morning Wanna made fish rice soup for her family.",
    "ko": "월요일 아침 완나는 가족을 위해 생선 카오똠을 끓였어요.",
    "blank": "ข้าวต้ม",
+   "src": "made"
+  }
+ ],
+ "w|ข้าวเปลือก": [
+  {
+   "text": "ครูเล่าว่าข้าวสารทุกเม็ดเริ่มจากข้าวเปลือกที่ชาวนาตากแดด",
+   "en": "The teacher explained that every grain of rice begins as paddy that farmers dry in the sun.",
+   "ko": "선생님은 쌀 한 톨 한 톨이 농부가 햇볕에 말린 벼에서 시작된다고 했어요.",
+   "blank": "ข้าวเปลือก",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเห็นยุ้งเก็บข้าวเปลือกจำลองในห้องวิถีชาวนา",
+   "en": "Suda saw a model paddy barn in the farming-life room.",
+   "ko": "수다는 농민 생활 전시실에서 벼 곳간 모형을 봤어요.",
+   "blank": "ข้าวเปลือก",
    "src": "made"
   }
  ],
@@ -15027,6 +15187,22 @@
    "src": "made"
   }
  ],
+ "w|คั้น": [
+  {
+   "text": "ธนาคั้นกะทิสดจากมะพร้าวขูดด้วยมือ",
+   "en": "Thana squeezed fresh coconut milk from grated coconut by hand.",
+   "ko": "타나는 간 코코넛을 손으로 짜서 생코코넛 밀크를 만들었어요.",
+   "blank": "คั้น",
+   "src": "made"
+  },
+  {
+   "text": "เครื่องมือทองเหลืองโบราณชิ้นนี้ใช้คั้นน้ำมันจากเมล็ดงา",
+   "en": "This ancient brass tool was used to press oil from sesame seeds.",
+   "ko": "이 옛 놋쇠 도구는 참깨에서 기름을 짜는 데 썼어요.",
+   "blank": "คั้น",
+   "src": "made"
+  }
+ ],
  "w|คับ": [
   {
    "text": "รองเท้าคู่นี้คับเท้า",
@@ -15054,6 +15230,22 @@
    "en": "The boss calls the thick sales manual the sales team's bible.",
    "ko": "상사는 두꺼운 영업 매뉴얼을 영업팀의 경전이라고 불러요.",
    "blank": "คัมภีร์",
+   "src": "made"
+  }
+ ],
+ "w|คั่ว": [
+  {
+   "text": "ธนาคั่วข้าวสารจนเหลืองหอมแล้วโขลกให้ละเอียดไว้ใส่ลาบ",
+   "en": "Thana toasted rice until golden and fragrant, then ground it fine for the larb.",
+   "ko": "타나는 쌀을 노릇하고 고소하게 볶은 다음 곱게 빻아 랍에 넣으려고 했어요.",
+   "blank": "คั่ว",
+   "src": "made"
+  },
+  {
+   "text": "กลิ่นกาแฟคั่วจากคาเฟ่ชั้นล่างลอยขึ้นมาถึงห้องจัดแสดง",
+   "en": "The smell of roasted coffee from the café downstairs drifted up into the gallery.",
+   "ko": "아래층 카페에서 볶은 커피 향이 전시실까지 올라왔어요.",
+   "blank": "คั่ว",
    "src": "made"
   }
  ],
@@ -15611,6 +15803,22 @@
    "en": "This project controls labor costs tightly.",
    "ko": "이 사업은 인건비를 빡빡하게 관리해.",
    "blank": "ค่าแรง"
+  }
+ ],
+ "w|คาว": [
+  {
+   "text": "ครูสอนให้ธนาบีบมะนาวใส่ปลาเพื่อดับกลิ่นคาว",
+   "en": "The teacher showed Thana how to squeeze lime over the fish to get rid of the fishy smell.",
+   "ko": "선생님은 생선 비린내를 없애려면 라임즙을 뿌리라고 타나에게 가르쳤어요.",
+   "blank": "คาว",
+   "src": "made"
+  },
+  {
+   "text": "ห้องจัดแสดงชีวิตชาวประมงยังมีกลิ่นคาวทะเลจางๆ",
+   "en": "The room showing fishermen's lives still has a faint fishy smell of the sea.",
+   "ko": "어부의 삶을 보여 주는 전시실에는 아직 바다 비린내가 희미하게 나요.",
+   "blank": "คาว",
+   "src": "made"
   }
  ],
  "w|คาสิโน": [
@@ -16567,6 +16775,22 @@
    "blank": "คุกกี้"
   }
  ],
+ "w|คุ้กกี้": [
+  {
+   "text": "ลูกสาวธนามารับพ่อพร้อมขอชิมคุ้กกี้ที่พ่ออบ",
+   "en": "Thana's daughter came to pick him up and asked to taste the cookies he baked.",
+   "ko": "타나의 딸은 아빠를 데리러 와서 아빠가 구운 쿠키를 맛보게 해 달라고 했어요.",
+   "blank": "คุ้กกี้",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของที่ระลึกขายคุ้กกี้รูปช้างลายผ้าไทย",
+   "en": "The gift shop sells elephant-shaped cookies with Thai fabric patterns.",
+   "ko": "기념품점에서는 태국 천 무늬 코끼리 모양 쿠키를 팔아요.",
+   "blank": "คุ้กกี้",
+   "src": "made"
+  }
+ ],
  "w|คุกเข่า": [
   {
    "text": "เขคุกเข่าเก็บของที่ตกพื้น",
@@ -17251,6 +17475,22 @@
    "src": "made"
   }
  ],
+ "w|เครา": [
+  {
+   "text": "หมอวิชัยตัดขนรอบปากแพะที่ยาวเหมือนเครา",
+   "en": "Dr Wichai trimmed the long fur around the goat's mouth that looked like a beard.",
+   "ko": "위차이 수의사는 수염처럼 긴 염소 입가 털을 다듬었어요.",
+   "blank": "เครา",
+   "src": "made"
+  },
+  {
+   "text": "หัวหน้าใหม่ของนภาไว้เคราแพะและชอบใส่เสื้อลายสก็อต",
+   "en": "Napha's new boss has a goatee and likes wearing plaid shirts.",
+   "ko": "나파의 새 상사는 염소수염을 기르고 체크무늬 셔츠를 즐겨 입어요.",
+   "blank": "เครา",
+   "src": "made"
+  }
+ ],
  "w|เคราะห์": [
   {
    "text": "สมชายเคราะห์ร้ายลืมบัตรประจำตัวสอบในวันสอบจริง",
@@ -17667,6 +17907,22 @@
    "src": "made"
   }
  ],
+ "w|เคล็ด": [
+  {
+   "text": "หมอวิชัยบอกว่าหมาไม่ได้ขาหัก แค่ข้อเท้าเคล็ด",
+   "en": "Dr Wichai said the dog's leg wasn't broken, just a sprained ankle.",
+   "ko": "위차이 수의사는 개 다리가 부러진 게 아니라 발목을 삐었을 뿐이라고 했어요.",
+   "blank": "เคล็ด",
+   "src": "made"
+  },
+  {
+   "text": "นภานั่งผิดท่านานจนคอเคล็ด",
+   "en": "Napha sat in a bad posture for so long that she cricked her neck.",
+   "ko": "나파는 오래 잘못된 자세로 앉아 있다가 목을 삐끗했어요.",
+   "blank": "เคล็ด",
+   "src": "made"
+  }
+ ],
  "w|เคล็ดลับ": [
   {
    "text": "หมอฟันบอกเคล็ดลับให้ธนาแปรงฟันเป็นวงกลมเบาๆ",
@@ -17967,6 +18223,22 @@
    "en": "Raw carrot is crisp and sweet.",
    "ko": "생당근이 아삭하고 달아.",
    "blank": "แครอท"
+  }
+ ],
+ "w|แคลเซียม": [
+  {
+   "text": "หมอวิชัยให้แคลเซียมเสริมแก่แม่หมาที่เพิ่งคลอดลูก",
+   "en": "Dr Wichai gave calcium supplements to the dog that had just given birth.",
+   "ko": "위차이 수의사는 막 새끼를 낳은 어미 개에게 칼슘 보충제를 줬어요.",
+   "blank": "แคลเซียม",
+   "src": "made"
+  },
+  {
+   "text": "นภากินนมทุกเช้าเพราะหมอบอกว่าขาดแคลเซียม",
+   "en": "Napha drinks milk every morning because the doctor said she lacks calcium.",
+   "ko": "의사가 칼슘이 부족하다고 해서 나파는 매일 아침 우유를 마셔요.",
+   "blank": "แคลเซียม",
+   "src": "made"
   }
  ],
  "w|แคว": [
@@ -19661,6 +19933,22 @@
    "blank": "จ๊ะ"
   }
  ],
+ "w|จะอย่างไรก็ตาม": [
+  {
+   "text": "ค่ารักษาแพง จะอย่างไรก็ตามเจ้าของก็ยืนยันจะผ่าตัดให้หมา",
+   "en": "The treatment is expensive; nevertheless, the owner insisted on surgery for the dog.",
+   "ko": "치료비가 비싸지만 그래도 주인은 개를 수술시키겠다고 했어요.",
+   "blank": "จะอย่างไรก็ตาม",
+   "src": "made"
+  },
+  {
+   "text": "งานล้นมือ จะอย่างไรก็ตามนภาก็ส่งรายงานทันกำหนด",
+   "en": "She was swamped with work; nevertheless, Napha submitted the report on time.",
+   "ko": "일이 넘쳐 났지만 그래도 나파는 마감에 맞춰 보고서를 냈어요.",
+   "blank": "จะอย่างไรก็ตาม",
+   "src": "made"
+  }
+ ],
  "w|จักรพรรดิ": [
   {
    "text": "ธนาหาหนังสือประวัติจักรพรรดิจีนให้นักเรียนที่ทำรายงาน",
@@ -20976,6 +21264,22 @@
    "en": "The boss explained the project's purpose to Napha before she started.",
    "ko": "상사는 일을 시작하기 전에 프로젝트의 목적을 나파에게 설명했어요.",
    "blank": "จุดประสงค์",
+   "src": "made"
+  }
+ ],
+ "w|จุดไฟ": [
+  {
+   "text": "ครูราดบรั่นดีลงในกระทะแล้วจุดไฟให้เปลวลุกสวยงาม",
+   "en": "The teacher poured brandy into the pan and set it alight for a beautiful flame.",
+   "ko": "선생님은 팬에 브랜디를 붓고 불을 붙여 멋진 불꽃을 냈어요.",
+   "blank": "จุดไฟ",
+   "src": "made"
+  },
+  {
+   "text": "ในห้องประวัติศาสตร์ มีวิดีโอแสดงวิธีจุดไฟด้วยไม้สีกัน",
+   "en": "In the history room, a video shows how to make fire by rubbing sticks together.",
+   "ko": "역사 전시실에서는 나무를 비벼 불을 피우는 법을 영상으로 보여 줘요.",
+   "blank": "จุดไฟ",
    "src": "made"
   }
  ],
@@ -22646,6 +22950,22 @@
    "en": "He saw it but stayed indifferent.",
    "ko": "그는 봤지만 모른 척했어.",
    "blank": "เฉย",
+   "src": "made"
+  }
+ ],
+ "w|เฉลย": [
+  {
+   "text": "ผลเลือดเฉลยว่าแมวไม่ได้ป่วย แค่กินหญ้ามากไป",
+   "en": "The blood test revealed the cat wasn't sick; it had just eaten too much grass.",
+   "ko": "혈액 검사 결과 고양이는 아픈 게 아니라 풀을 너무 많이 먹은 거였어요.",
+   "blank": "เฉลย",
+   "src": "made"
+  },
+  {
+   "text": "ในงานเลี้ยงปีใหม่ พิธีกรเฉลยว่าใครคือเพื่อนลับของนภา",
+   "en": "At the New Year party, the host revealed who Napha's secret Santa was.",
+   "ko": "신년 파티에서 사회자는 나파의 비밀 친구가 누구였는지 밝혔어요.",
+   "blank": "เฉลย",
    "src": "made"
   }
  ],
@@ -25022,6 +25342,22 @@
    "en": "Porn didn't think she could run this far in her first year.",
    "ko": "폰은 첫해에 이렇게 멀리 달릴 수 있을 줄 몰랐어요.",
    "blank": "เช่นนี้",
+   "src": "made"
+  }
+ ],
+ "w|เช่นไร": [
+  {
+   "text": "ธนาถามครูว่าแกงจะข้นขึ้นเช่นไรถ้าไม่ใส่แป้ง",
+   "en": "Thana asked the teacher how the curry would thicken without flour.",
+   "ko": "타나는 밀가루를 안 넣으면 커리가 어떻게 걸쭉해지냐고 선생님께 물었어요.",
+   "blank": "เช่นไร",
+   "src": "made"
+  },
+  {
+   "text": "สุดาสงสัยว่าคนโบราณขนหินก้อนใหญ่ขนาดนี้มาด้วยวิธีเช่นไร",
+   "en": "Suda wondered how ancient people moved stones this big.",
+   "ko": "수다는 옛사람들이 이렇게 큰 돌을 어떻게 옮겼을지 궁금했어요.",
+   "blank": "เช่นไร",
    "src": "made"
   }
  ],
@@ -28594,6 +28930,22 @@
    "en": "It looks like the Saturday tickets have already sold out.",
    "ko": "토요일 공연 표는 이미 매진된 것 같아요.",
    "blank": "ดูเหมือนว่า",
+   "src": "made"
+  }
+ ],
+ "w|ดูออก": [
+  {
+   "text": "ครูชิมคำเดียวก็ดูออกว่าธนาใส่น้ำตาลมากเกินไป",
+   "en": "The teacher could tell from one taste that Thana had added too much sugar.",
+   "ko": "선생님은 한 입 맛보고 타나가 설탕을 너무 많이 넣은 걸 알아챘어요.",
+   "blank": "ดูออก",
+   "src": "made"
+  },
+  {
+   "text": "ผู้เชี่ยวชาญดูออกทันทีว่าแจกันใบนี้เป็นของจำลอง",
+   "en": "The expert could tell at once that this vase was a replica.",
+   "ko": "전문가는 이 꽃병이 복제품이라는 걸 단번에 알아봤어요.",
+   "blank": "ดูออก",
    "src": "made"
   }
  ],
@@ -33227,6 +33579,22 @@
    "src": "made"
   }
  ],
+ "w|ตุ๋น": [
+  {
+   "text": "ธนาตุ๋นขาหมูไฟอ่อนนานสามชั่วโมงจนเนื้อนุ่ม",
+   "en": "Thana braised the pork leg over low heat for three hours until tender.",
+   "ko": "타나는 돼지 족을 약불에서 세 시간 푹 고아 연하게 만들었어요.",
+   "blank": "ตุ๋น",
+   "src": "made"
+  },
+  {
+   "text": "ห้องครัวโบราณมีหม้อดินที่ใช้ตุ๋นยาจีนวางเรียงกัน",
+   "en": "The old kitchen room has a row of clay pots used for stewing Chinese herbal medicine.",
+   "ko": "옛 부엌 전시실에는 한약을 달이던 토기 냄비가 줄지어 있어요.",
+   "blank": "ตุ๋น",
+   "src": "made"
+  }
+ ],
  "w|ตุลาการ": [
   {
    "text": "วิชัยส่งสำนวนคดีให้อัยการเพื่อส่งต่อไปยังฝ่ายตุลาการ",
@@ -34725,6 +35093,22 @@
    "blank": "ถั่ว"
   }
  ],
+ "w|ถั่วเหลือง": [
+  {
+   "text": "วันนี้ครูสอนทำนมถั่วเหลืองจากเมล็ดที่แช่น้ำไว้ข้ามคืน",
+   "en": "Today the teacher showed how to make soy milk from beans soaked overnight.",
+   "ko": "오늘 선생님은 밤새 불린 콩으로 두유 만드는 법을 가르쳤어요.",
+   "blank": "ถั่วเหลือง",
+   "src": "made"
+  },
+  {
+   "text": "ห้องเกษตรมีแผนที่แสดงแหล่งปลูกถั่วเหลืองในอดีต",
+   "en": "The agriculture room has a map showing where soybeans used to be grown.",
+   "ko": "농업 전시실에는 예전 콩 재배지를 보여 주는 지도가 있어요.",
+   "blank": "ถั่วเหลือง",
+   "src": "made"
+  }
+ ],
  "w|ถ้า": [
   {
    "text": "ถ้าฝนตกค่อยว่ากัน",
@@ -34905,6 +35289,22 @@
    "en": "She photographs every meal.",
    "ko": "그녀는 끼니마다 음식 사진을 찍어.",
    "blank": "ถ่ายรูป"
+  }
+ ],
+ "w|ถ่ายโอน": [
+  {
+   "text": "ครูถ่ายโอนสูตรลับของยายให้นักเรียนรุ่นใหม่",
+   "en": "The teacher passed her grandmother's secret recipe on to the new students.",
+   "ko": "선생님은 할머니의 비법을 새 학생들에게 전수했어요.",
+   "blank": "ถ่ายโอน",
+   "src": "made"
+  },
+  {
+   "text": "พิพิธภัณฑ์ถ่ายโอนข้อมูลเอกสารเก่าทั้งหมดลงระบบดิจิทัล",
+   "en": "The museum transferred all its old document records into a digital system.",
+   "ko": "박물관은 옛 문서 자료를 모두 디지털 시스템으로 옮겼어요.",
+   "blank": "ถ่ายโอน",
+   "src": "made"
   }
  ],
  "w|ถาวร": [
@@ -39117,6 +39517,22 @@
    "src": "made"
   }
  ],
+ "w|ทุพพลภาพ": [
+  {
+   "text": "หมาตัวนี้ขาหลังทุพพลภาพแต่วิ่งได้ด้วยรถเข็นพิเศษ",
+   "en": "This dog's hind legs are disabled, but it can run with a special cart.",
+   "ko": "이 개는 뒷다리가 불구지만 특수 휠체어로 달릴 수 있어요.",
+   "blank": "ทุพพลภาพ",
+   "src": "made"
+  },
+  {
+   "text": "ออฟฟิศของนภาทำทางลาดให้พนักงานที่ทุพพลภาพเข้าออกสะดวก",
+   "en": "Napha's office built a ramp so disabled staff can get in and out easily.",
+   "ko": "나파의 사무실은 장애가 있는 직원이 편히 드나들도록 경사로를 만들었어요.",
+   "blank": "ทุพพลภาพ",
+   "src": "made"
+  }
+ ],
  "w|ทุ่ม": [
   {
    "text": "พ่อแม่ทุ่มเงินเก็บก้อนใหญ่ให้งานแต่งของประยุทธ",
@@ -39177,6 +39593,22 @@
    "en": "This durian is ripe and very fragrant.",
    "ko": "이 두리안이 잘 익어 향이 진해.",
    "blank": "ทุเรียน"
+  }
+ ],
+ "w|ทุเลา": [
+  {
+   "text": "หลังกินยาสองวัน อาการท้องเสียของแมวก็ทุเลาลง",
+   "en": "After two days on medicine, the cat's diarrhoea eased.",
+   "ko": "약을 이틀 먹고 나서 고양이의 설사가 누그러졌어요.",
+   "blank": "ทุเลา",
+   "src": "made"
+  },
+  {
+   "text": "พอยาแก้ปวดเริ่มออกฤทธิ์ อาการปวดหัวของนภาก็ทุเลา",
+   "en": "Once the painkiller started working, Napha's headache eased.",
+   "ko": "진통제가 듣기 시작하자 나파의 두통이 가라앉았어요.",
+   "blank": "ทุเลา",
+   "src": "made"
   }
  ],
  "w|ทูต": [
@@ -40437,6 +40869,22 @@
    "src": "made"
   }
  ],
+ "w|ธัญพืช": [
+  {
+   "text": "ธนาโรยธัญพืชอบกรอบบนโยเกิร์ตเป็นอาหารเช้า",
+   "en": "Thana sprinkled toasted grains over yoghurt for breakfast.",
+   "ko": "타나는 아침으로 요구르트 위에 구운 곡물을 뿌렸어요.",
+   "blank": "ธัญพืช",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเห็นเมล็ดธัญพืชอายุพันปีที่ขุดพบในหลุมศพโบราณ",
+   "en": "Suda saw thousand-year-old cereal grains dug up from an ancient tomb.",
+   "ko": "수다는 옛 무덤에서 발굴된 천 년 된 곡물 낟알을 봤어요.",
+   "blank": "ธัญพืช",
+   "src": "made"
+  }
+ ],
  "w|ธันวาคม": [
   {
    "text": "ธันวาคมอากาศเย็น",
@@ -40866,6 +41314,22 @@
    "en": "Besides swimming, Pranee also teaches water aerobics to older people.",
    "ko": "수영 말고도 쁘라니는 어르신들에게 아쿠아로빅도 가르쳐요.",
    "blank": "นอกเหนือ",
+   "src": "made"
+  }
+ ],
+ "w|นอกเหนือจาก": [
+  {
+   "text": "นอกเหนือจากหมาแมว คลินิกยังรักษางูและเต่าด้วย",
+   "en": "Apart from dogs and cats, the clinic also treats snakes and turtles.",
+   "ko": "개와 고양이 말고도 이 병원은 뱀과 거북이도 치료해요.",
+   "blank": "นอกเหนือจาก",
+   "src": "made"
+  },
+  {
+   "text": "นอกเหนือจากงานบัญชี นภายังดูแลงานจัดซื้อด้วย",
+   "en": "On top of the accounting work, Napha also handles purchasing.",
+   "ko": "회계 업무 말고도 나파는 구매 업무까지 맡아요.",
+   "blank": "นอกเหนือจาก",
    "src": "made"
   }
  ],
@@ -42919,6 +43383,22 @@
    "blank": "น้ำใจ"
   }
  ],
+ "w|น้ำชา": [
+  {
+   "text": "หลังเลิกคลาส ครูรินน้ำชาร้อนให้ทุกคนดื่ม",
+   "en": "After class, the teacher poured hot tea for everyone.",
+   "ko": "수업이 끝나자 선생님은 모두에게 뜨거운 차를 따라 줬어요.",
+   "blank": "น้ำชา",
+   "src": "made"
+  },
+  {
+   "text": "ชุดน้ำชาลายครามจากเมืองจีนวางอยู่ในตู้กลางห้อง",
+   "en": "A blue-and-white Chinese tea set sits in the case in the middle of the room.",
+   "ko": "방 한가운데 진열장에 중국산 청화 다기 세트가 놓여 있어요.",
+   "blank": "น้ำชา",
+   "src": "made"
+  }
+ ],
  "w|น้ำดื่ม": [
   {
    "text": "ร้านของชัยแจกน้ำดื่มเย็นๆ ให้ลูกค้าฟรี",
@@ -43006,6 +43486,22 @@
    "en": "An experienced runner led the way for Wannaa where the signs had gone missing.",
    "ko": "선배 주자가 표지판이 사라진 구간에서 완나를 이끌어 줬어요.",
    "blank": "นำทาง",
+   "src": "made"
+  }
+ ],
+ "w|น้ำนม": [
+  {
+   "text": "ครูใช้น้ำนมแพะทำชีสสดให้นักเรียนลองชิม",
+   "en": "The teacher used goat's milk to make fresh cheese for the students to taste.",
+   "ko": "선생님은 염소젖으로 생치즈를 만들어 학생들에게 맛보게 했어요.",
+   "blank": "น้ำนม",
+   "src": "made"
+  },
+  {
+   "text": "นิทรรศการวิทยาศาสตร์อธิบายว่าน้ำนมแม่มีภูมิคุ้มกันช่วยทารก",
+   "en": "The science exhibition explains that breast milk contains antibodies that help babies.",
+   "ko": "과학 전시는 모유에 아기를 돕는 면역 성분이 있다고 설명해요.",
+   "blank": "น้ำนม",
    "src": "made"
   }
  ],
@@ -43977,6 +44473,22 @@
    "src": "made"
   }
  ],
+ "w|เน้นหนัก": [
+  {
+   "text": "หมอวิชัยเน้นหนักเรื่องการฉีดวัคซีนพิษสุนัขบ้าทุกปี",
+   "en": "Dr Wichai puts heavy emphasis on yearly rabies vaccination.",
+   "ko": "위차이 수의사는 매년 광견병 예방 접종을 특히 강조해요.",
+   "blank": "เน้นหนัก",
+   "src": "made"
+  },
+  {
+   "text": "แผนปีหน้าของบริษัทเน้นหนักเรื่องลูกค้าต่างประเทศ",
+   "en": "The company's plan for next year puts heavy emphasis on overseas customers.",
+   "ko": "회사의 내년 계획은 해외 고객에 특히 무게를 둬요.",
+   "blank": "เน้นหนัก",
+   "src": "made"
+  }
+ ],
  "w|เนย": [
   {
    "text": "ทาเนยบนขนมปังอุ่นๆ",
@@ -44140,6 +44652,22 @@
    "en": "The results were off due to an uncalibrated scale.",
    "ko": "저울을 보정하지 않아서 실험 결과에 오차가 생겼어요.",
    "blank": "เนื่องมาจาก",
+   "src": "made"
+  }
+ ],
+ "w|เนื้องอก": [
+  {
+   "text": "หมอวิชัยตัดเนื้องอกก้อนเล็กออกจากท้องแมว",
+   "en": "Dr Wichai removed a small tumour from the cat's belly.",
+   "ko": "위차이 수의사는 고양이 배에서 작은 종양을 떼어 냈어요.",
+   "blank": "เนื้องอก",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมงานลาไปผ่าตัดเนื้องอกที่ไม่ร้ายแรง",
+   "en": "A coworker took leave for surgery on a benign tumour.",
+   "ko": "한 동료는 양성 종양 수술을 받으려고 휴가를 냈어요.",
+   "blank": "เนื้องอก",
    "src": "made"
   }
  ],
@@ -44845,6 +45373,22 @@
    "src": "made"
   }
  ],
+ "w|บงการ": [
+  {
+   "text": "หมอวิชัยบอกว่าลูกหมาไม่ได้ดื้อ แต่ถูกสัญชาตญาณบงการ",
+   "en": "Dr Wichai said the puppy isn't naughty; it's driven by instinct.",
+   "ko": "위차이 수의사는 강아지가 말을 안 듣는 게 아니라 본능에 따라 움직이는 거라고 했어요.",
+   "blank": "บงการ",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมงานบ่นว่าผู้จัดการชอบบงการทุกเรื่อง แม้แต่สีของสไลด์",
+   "en": "A coworker grumbled that the manager likes to control everything, even the colour of the slides.",
+   "ko": "한 동료는 매니저가 슬라이드 색깔까지 모든 걸 좌지우지하려 든다고 투덜댔어요.",
+   "blank": "บงการ",
+   "src": "made"
+  }
+ ],
  "w|บ่งชี้": [
   {
    "text": "รอยยิ้มของเจ้าสาวบ่งชี้ว่ามีความสุขมาก",
@@ -45077,6 +45621,22 @@
    "src": "made"
   }
  ],
+ "w|บรรจบ": [
+  {
+   "text": "คลินิกของวิชัยตั้งอยู่ตรงที่ถนนสองสายมาบรรจบกัน",
+   "en": "Wichai's clinic stands where two roads meet.",
+   "ko": "위차이의 동물병원은 두 길이 만나는 곳에 있어요.",
+   "blank": "บรรจบ",
+   "src": "made"
+  },
+  {
+   "text": "ออฟฟิศของนภาอยู่ใกล้จุดที่รถไฟฟ้าสองสายมาบรรจบกัน",
+   "en": "Napha's office is near where two skytrain lines meet.",
+   "ko": "나파의 사무실은 지상철 두 노선이 만나는 곳 근처에 있어요.",
+   "blank": "บรรจบ",
+   "src": "made"
+  }
+ ],
  "w|บรรจุ": [
   {
    "text": "โกดังของบริษัทบรรจุกาแฟลงถุงวันละหลายพันถุง",
@@ -45266,6 +45826,22 @@
    "en": "The restaurant Suda booked has a musician playing soft piano throughout dinner.",
    "ko": "수다가 예약한 식당에서는 저녁 내내 피아니스트가 잔잔하게 연주해요.",
    "blank": "บรรเลง",
+   "src": "made"
+  }
+ ],
+ "w|บรั่นดี": [
+  {
+   "text": "ครูราดบรั่นดีลงในกระทะแล้วจุดไฟให้เปลวลุกสวยงาม",
+   "en": "The teacher poured brandy into the pan and set it alight for a beautiful flame.",
+   "ko": "선생님은 팬에 브랜디를 붓고 불을 붙여 멋진 불꽃을 냈어요.",
+   "blank": "บรั่นดี",
+   "src": "made"
+  },
+  {
+   "text": "ตู้กระจกมีขวดบรั่นดีเก่าจากเรือสินค้าที่อับปาง",
+   "en": "A glass case holds an old brandy bottle from a shipwrecked cargo ship.",
+   "ko": "유리장 안에 난파한 화물선에서 나온 옛 브랜디 병이 있어요.",
+   "blank": "บรั่นดี",
    "src": "made"
   }
  ],
@@ -46181,6 +46757,22 @@
    "en": "He is hiding something from us.",
    "ko": "그는 우리에게 뭔가를 숨기고 있어.",
    "blank": "บางอย่าง"
+  }
+ ],
+ "w|บาด": [
+  {
+   "text": "แมวโดนกระจกแตกบาดอุ้งเท้าจนต้องเย็บสามเข็ม",
+   "en": "The cat cut its paw on broken glass and needed three stitches.",
+   "ko": "고양이가 깨진 유리에 발바닥을 베여 세 바늘 꿰매야 했어요.",
+   "blank": "บาด",
+   "src": "made"
+  },
+  {
+   "text": "นภาโดนกระดาษบาดนิ้วตอนเย็บเล่มรายงาน",
+   "en": "Napha got a paper cut on her finger while binding the report.",
+   "ko": "나파는 보고서를 철하다가 종이에 손가락을 베였어요.",
+   "blank": "บาด",
+   "src": "made"
   }
  ],
  "w|บาดเจ็บ": [
@@ -48723,6 +49315,22 @@
    "src": "made"
   }
  ],
+ "w|ประชิด": [
+  {
+   "text": "หมาสองตัวในห้องรอเริ่มขู่กันเมื่ออีกตัวเดินเข้ามาประชิด",
+   "en": "The two dogs in the waiting room started growling when one came up too close.",
+   "ko": "대기실의 개 두 마리는 한 마리가 바짝 다가오자 으르렁대기 시작했어요.",
+   "blank": "ประชิด",
+   "src": "made"
+  },
+  {
+   "text": "เส้นตายงานใหญ่ใกล้เข้ามาประชิดแล้ว ทุกคนจึงอยู่ดึก",
+   "en": "The big deadline is closing in, so everyone is staying late.",
+   "ko": "큰 마감이 코앞에 닥쳐서 모두 늦게까지 남아 있어요.",
+   "blank": "ประชิด",
+   "src": "made"
+  }
+ ],
  "w|ประชุม": [
   {
    "text": "ประชุมเริ่มเก้าโมงเช้า",
@@ -48797,6 +49405,22 @@
    "en": "Scientists invent new tools.",
    "ko": "과학자들이 새 도구를 발명해.",
    "blank": "ประดิษฐ์"
+  }
+ ],
+ "w|ประดุจ": [
+  {
+   "text": "เจ้าของรักแมวตัวนี้ประดุจลูกในไส้",
+   "en": "The owner loves this cat like her own child.",
+   "ko": "주인은 이 고양이를 친자식처럼 아껴요.",
+   "blank": "ประดุจ",
+   "src": "made"
+  },
+  {
+   "text": "ทีมของนภาทำงานกลมเกลียวประดุจพี่น้อง",
+   "en": "Napha's team works in harmony like siblings.",
+   "ko": "나파의 팀은 형제처럼 화목하게 일해요.",
+   "blank": "ประดุจ",
+   "src": "made"
   }
  ],
  "w|ประเด็น": [
@@ -50496,6 +51120,22 @@
    "en": "Jan's factory makes livestock feed for farms across the region.",
    "ko": "짠의 공장은 지역 곳곳의 농장에 보낼 가축 사료를 만들어요.",
    "blank": "ปศุสัตว์",
+   "src": "made"
+  }
+ ],
+ "w|ปอก": [
+  {
+   "text": "ธนาปอกมะม่วงช้ากว่าเพื่อนทุกคนในห้อง",
+   "en": "Thana peeled the mango more slowly than everyone else in the class.",
+   "ko": "타나는 반에서 누구보다 느리게 망고 껍질을 깎았어요.",
+   "blank": "ปอก",
+   "src": "made"
+  },
+  {
+   "text": "หุ่นจำลองแสดงหญิงชาวบ้านนั่งปอกมะพร้าวหน้าเรือน",
+   "en": "A model shows a village woman sitting and husking coconuts in front of her house.",
+   "ko": "모형은 집 앞에 앉아 코코넛 껍질을 벗기는 시골 여인을 보여 줘요.",
+   "blank": "ปอก",
    "src": "made"
   }
  ],
@@ -55447,6 +56087,22 @@
    "src": "made"
   }
  ],
+ "w|แผด": [
+  {
+   "text": "ไฟจากเตาแผดเสียงดังฟู่เมื่อธนาเปิดแก๊สแรงเกินไป",
+   "en": "The burner roared when Thana turned the gas up too high.",
+   "ko": "타나가 가스를 너무 세게 틀자 불이 화르륵 소리를 냈어요.",
+   "blank": "แผด",
+   "src": "made"
+  },
+  {
+   "text": "สัญญาณกันขโมยแผดเสียงลั่นเมื่อมีคนแตะตู้กระจก",
+   "en": "The burglar alarm blared when someone touched the glass case.",
+   "ko": "누군가 유리장을 만지자 도난 경보가 요란하게 울렸어요.",
+   "blank": "แผด",
+   "src": "made"
+  }
+ ],
  "w|แผน": [
   {
    "text": "มีแผนอะไรบ้าง",
@@ -58187,6 +58843,22 @@
    "blank": "พายุ"
   }
  ],
+ "w|พาสต้า": [
+  {
+   "text": "วันนี้ธนาเรียนทำพาสต้าซอสพริกแกงเขียวหวาน",
+   "en": "Today Thana learned to make pasta with green curry sauce.",
+   "ko": "오늘 타나는 그린 커리 소스 파스타 만드는 법을 배웠어요.",
+   "blank": "พาสต้า",
+   "src": "made"
+  },
+  {
+   "text": "ร้านอาหารในพิพิธภัณฑ์ขายพาสต้าเป็นเมนูกลางวัน",
+   "en": "The museum restaurant sells pasta as a lunch dish.",
+   "ko": "박물관 식당은 점심 메뉴로 파스타를 팔아요.",
+   "blank": "พาสต้า",
+   "src": "made"
+  }
+ ],
  "w|พาสปอร์ต": [
   {
    "text": "กิตติพกพาสปอร์ตไปด้วยเผื่อจะข้ามไปเดินตลาดฝั่งตรงข้าม",
@@ -60068,6 +60740,22 @@
    "en": "New patients have to fill out a health history form at the screening point.",
    "ko": "새 환자는 선별 진료소에서 건강 이력 양식을 작성해야 해요.",
    "blank": "ฟอร์ม",
+   "src": "made"
+  }
+ ],
+ "w|ฟักทอง": [
+  {
+   "text": "ธนานึ่งฟักทองสังขยาเป็นงานส่งครูครั้งสุดท้าย",
+   "en": "Thana steamed a custard-filled pumpkin as his final assignment.",
+   "ko": "타나는 마지막 과제로 커스터드를 채운 단호박을 쪘어요.",
+   "blank": "ฟักทอง",
+   "src": "made"
+  },
+  {
+   "text": "งานศิลปะเด็กชิ้นหนึ่งเป็นรถม้าที่ทำจากลูกฟักทอง",
+   "en": "One children's artwork is a carriage made from a pumpkin.",
+   "ko": "어린이 작품 중 하나는 호박으로 만든 마차예요.",
+   "blank": "ฟักทอง",
    "src": "made"
   }
  ],
@@ -62235,6 +62923,22 @@
    "src": "made"
   }
  ],
+ "w|มะขาม": [
+  {
+   "text": "ธนาใช้น้ำมะขามเปียกปรุงรสต้มส้มให้เปรี้ยวกำลังดี",
+   "en": "Thana used tamarind water to make the sour soup just tart enough.",
+   "ko": "타나는 타마린드 물로 똠쏨 국을 적당히 새콤하게 맞췄어요.",
+   "blank": "มะขาม",
+   "src": "made"
+  },
+  {
+   "text": "ภาพถ่ายเก่าแสดงต้นมะขามยักษ์ที่เคยอยู่หน้าวัง",
+   "en": "An old photo shows a giant tamarind tree that once stood in front of the palace.",
+   "ko": "옛 사진에는 궁 앞에 있던 거대한 타마린드 나무가 있어요.",
+   "blank": "มะขาม",
+   "src": "made"
+  }
+ ],
  "w|มะเขือเทศ": [
   {
    "text": "หั่นมะเขือเทศใส่ในสลัด",
@@ -62545,6 +63249,22 @@
    "en": "Once the potatoes are boiled, you can mash them.",
    "ko": "감자를 삶으면 으깰 수 있어.",
    "blank": "มันฝรั่ง"
+  }
+ ],
+ "w|มันสำปะหลัง": [
+  {
+   "text": "ครูสอนทำขนมมันสำปะหลังนึ่งโรยมะพร้าว",
+   "en": "The teacher taught how to make steamed cassava cake sprinkled with coconut.",
+   "ko": "선생님은 코코넛을 뿌린 카사바 찐 떡 만드는 법을 가르쳤어요.",
+   "blank": "มันสำปะหลัง",
+   "src": "made"
+  },
+  {
+   "text": "ห้องเศรษฐกิจเล่าว่ามันสำปะหลังเคยเป็นสินค้าส่งออกสำคัญ",
+   "en": "The economy room tells how cassava used to be an important export.",
+   "ko": "경제 전시실은 카사바가 한때 중요한 수출품이었다고 알려 줘요.",
+   "blank": "มันสำปะหลัง",
+   "src": "made"
   }
  ],
  "w|มั้ย": [
@@ -62961,6 +63681,22 @@
    "src": "made"
   }
  ],
+ "w|มิดชิด": [
+  {
+   "text": "หลังผ่าตัด ต้องพันแผลแมวให้มิดชิดเพื่อกันมันเลีย",
+   "en": "After surgery, the cat's wound must be bandaged securely so it can't lick it.",
+   "ko": "수술 뒤에는 고양이가 핥지 못하게 상처를 꼼꼼히 싸매야 해요.",
+   "blank": "มิดชิด",
+   "src": "made"
+  },
+  {
+   "text": "นภาเก็บเอกสารสัญญาไว้ในตู้ล็อกอย่างมิดชิด",
+   "en": "Napha keeps the contract documents securely in a locked cabinet.",
+   "ko": "나파는 계약 서류를 잠금 서랍에 단단히 보관해요.",
+   "blank": "มิดชิด",
+   "src": "made"
+  }
+ ],
  "w|มิได้": [
   {
    "text": "ประกาศของเทศบาลระบุว่าการปิดถนนครั้งนี้มิได้เกี่ยวกับงานก่อสร้าง",
@@ -63357,6 +64093,22 @@
    "en": "This skill is useful at work.",
    "ko": "이 기술은 일할 때 도움이 돼.",
    "blank": "มีประโยชน์"
+  }
+ ],
+ "w|มีผล": [
+  {
+   "text": "ครูบอกว่าอุณหภูมิเตามีผลต่อความกรอบของแป้งมาก",
+   "en": "The teacher said the oven temperature has a big effect on how crispy the pastry is.",
+   "ko": "선생님은 오븐 온도가 반죽의 바삭함에 큰 영향을 준다고 했어요.",
+   "blank": "มีผล",
+   "src": "made"
+  },
+  {
+   "text": "ราคาบัตรใหม่จะมีผลตั้งแต่เดือนหน้าเป็นต้นไป",
+   "en": "The new ticket prices take effect from next month.",
+   "ko": "새 입장료는 다음 달부터 적용돼요.",
+   "blank": "มีผล",
+   "src": "made"
   }
  ],
  "w|มีพรสวรรค์": [
@@ -63934,6 +64686,22 @@
    "en": "Wanna took one headache pill before going into the meeting.",
    "ko": "완나는 회의에 들어가기 전에 두통약을 한 알 먹었어요.",
    "blank": "เม็ด",
+   "src": "made"
+  }
+ ],
+ "w|เม็ดเลือด": [
+  {
+   "text": "ผลตรวจพบว่าแมวมีเม็ดเลือดแดงต่ำกว่าปกติ",
+   "en": "The test showed the cat's red blood cells were lower than normal.",
+   "ko": "검사 결과 고양이의 적혈구가 정상보다 적었어요.",
+   "blank": "เม็ดเลือด",
+   "src": "made"
+  },
+  {
+   "text": "ผลตรวจสุขภาพของนภาบอกว่าเม็ดเลือดขาวสูงเล็กน้อย",
+   "en": "Napha's health check showed her white blood cells were slightly high.",
+   "ko": "나파의 건강검진 결과 백혈구 수치가 조금 높았어요.",
+   "blank": "เม็ดเลือด",
    "src": "made"
   }
  ],
@@ -66693,6 +67461,22 @@
    "blank": "ยุ่ง"
   }
  ],
+ "w|ยุ่งเกี่ยว": [
+  {
+   "text": "หมอวิชัยบอกเจ้าของว่าอย่าให้หมายุ่งเกี่ยวกับคางคก เพราะมีพิษ",
+   "en": "Dr Wichai told the owner not to let the dog mess with toads because they're poisonous.",
+   "ko": "위차이 수의사는 두꺼비는 독이 있으니 개가 건드리지 않게 하라고 주인에게 말했어요.",
+   "blank": "ยุ่งเกี่ยว",
+   "src": "made"
+  },
+  {
+   "text": "นภาไม่อยากยุ่งเกี่ยวกับเรื่องซุบซิบในออฟฟิศ",
+   "en": "Napha doesn't want to get involved in office gossip.",
+   "ko": "나파는 사무실 뒷담화에 끼고 싶지 않아요.",
+   "blank": "ยุ่งเกี่ยว",
+   "src": "made"
+  }
+ ],
  "w|ยุ่งยาก": [
   {
    "text": "ขั้นตอนขอย้ายโรงเรียนยุ่งยากจนผู้ปกครองหลายคนบ่น",
@@ -68141,6 +68925,22 @@
    "blank": "รอดชีวิต"
   }
  ],
+ "w|รอดพ้น": [
+  {
+   "text": "ธนารอดพ้นจากการโดนน้ำมันกระเด็นเพราะใส่ผ้ากันเปื้อนหนา",
+   "en": "Thana escaped being splashed by hot oil because he wore a thick apron.",
+   "ko": "타나는 두꺼운 앞치마를 둘러서 기름 튀는 걸 피했어요.",
+   "blank": "รอดพ้น",
+   "src": "made"
+  },
+  {
+   "text": "ภาพเขียนชิ้นนี้รอดพ้นจากไฟไหม้วังเมื่อร้อยปีก่อน",
+   "en": "This painting escaped the palace fire a hundred years ago.",
+   "ko": "이 그림은 백 년 전 궁궐 화재에서 살아남았어요.",
+   "blank": "รอดพ้น",
+   "src": "made"
+  }
+ ],
  "w|ร่อน": [
   {
    "text": "โดรนของสถานีร่อนอยู่เหนือที่เกิดเหตุเพื่อส่งภาพสด",
@@ -68370,6 +69170,22 @@
    "en": "The man sitting across from Chan has a dragon tattoo on his arm.",
    "ko": "짠의 맞은편에 앉은 남자는 팔에 용 문신이 있어요.",
    "blank": "รอยสัก",
+   "src": "made"
+  }
+ ],
+ "w|ระคายเคือง": [
+  {
+   "text": "แชมพูยี่ห้อนี้ทำให้ผิวหนังของหมาระคายเคืองจนแดง",
+   "en": "This shampoo irritated the dog's skin until it went red.",
+   "ko": "이 샴푸 때문에 개 피부가 자극을 받아 빨개졌어요.",
+   "blank": "ระคายเคือง",
+   "src": "made"
+  },
+  {
+   "text": "นภาจ้องจอทั้งวันจนตาระคายเคือง",
+   "en": "Napha stared at the screen all day until her eyes were irritated.",
+   "ko": "나파는 하루 종일 화면을 봐서 눈이 따끔거렸어요.",
+   "blank": "ระคายเคือง",
    "src": "made"
   }
  ],
@@ -70297,6 +71113,22 @@
    "src": "made"
   }
  ],
+ "w|ริ้วรอย": [
+  {
+   "text": "หมอวิชัยดูริ้วรอยบนใบหน้าแมวแก่แล้วบอกว่าอายุน่าจะสิบห้าปี",
+   "en": "Dr Wichai looked at the wrinkles on the old cat's face and said it was probably fifteen.",
+   "ko": "위차이 수의사는 늙은 고양이 얼굴의 주름을 보고 열다섯 살쯤 됐을 거라고 했어요.",
+   "blank": "ริ้วรอย",
+   "src": "made"
+  },
+  {
+   "text": "ความเครียดจากงานทำให้ริ้วรอยรอบตาของนภาชัดขึ้น",
+   "en": "Work stress has made the lines around Napha's eyes more noticeable.",
+   "ko": "일 스트레스 때문에 나파의 눈가 주름이 더 뚜렷해졌어요.",
+   "blank": "ริ้วรอย",
+   "src": "made"
+  }
+ ],
  "w|ริษยา": [
   {
    "text": "ธนาไม่ริษยาเพื่อนที่ได้ตำแหน่งดีกว่า",
@@ -71312,6 +72144,22 @@
    "en": "Somsak spent all night reorganizing the presentation slides.",
    "ko": "솜삭은 밤새 발표 슬라이드를 다시 정리했어요.",
    "blank": "เรียบเรียง",
+   "src": "made"
+  }
+ ],
+ "w|เรี่ยวแรง": [
+  {
+   "text": "หลังได้น้ำเกลือ หมาตัวนั้นก็มีเรี่ยวแรงลุกขึ้นกินข้าว",
+   "en": "After the saline drip, the dog had the strength to get up and eat.",
+   "ko": "수액을 맞고 나서 그 개는 일어나 밥을 먹을 기운을 차렸어요.",
+   "blank": "เรี่ยวแรง",
+   "src": "made"
+  },
+  {
+   "text": "หลังประชุมยาวสามชั่วโมง นภาแทบไม่มีเรี่ยวแรงเหลือ",
+   "en": "After a three-hour meeting, Napha had barely any energy left.",
+   "ko": "세 시간짜리 회의가 끝나자 나파는 기운이 거의 남지 않았어요.",
+   "blank": "เรี่ยวแรง",
    "src": "made"
   }
  ],
@@ -72349,6 +73197,22 @@
    "blank": "ลงมือ"
   }
  ],
+ "w|ลงสมัคร": [
+  {
+   "text": "ผู้ช่วยของวิชัยลงสมัครเรียนพยาบาลสัตว์ภาคค่ำ",
+   "en": "Wichai's assistant signed up for evening veterinary nursing classes.",
+   "ko": "위차이의 조수는 야간 동물 간호 과정에 등록했어요.",
+   "blank": "ลงสมัคร",
+   "src": "made"
+  },
+  {
+   "text": "นภาตัดสินใจลงสมัครเป็นตัวแทนพนักงานในคณะกรรมการ",
+   "en": "Napha decided to run as the staff representative on the committee.",
+   "ko": "나파는 위원회 직원 대표로 출마하기로 했어요.",
+   "blank": "ลงสมัคร",
+   "src": "made"
+  }
+ ],
  "w|ลด": [
   {
    "text": "ลดราคาแล้วหรือยัง",
@@ -72636,6 +73500,22 @@
    "en": "Suda felt around in her shirt pocket for a guitar pick.",
    "ko": "수다는 셔츠 주머니에서 기타 피크를 더듬어 찾았어요.",
    "blank": "ล้วง",
+   "src": "made"
+  }
+ ],
+ "w|ล่วงรู้": [
+  {
+   "text": "ครูดูเหมือนจะล่วงรู้ว่าใครแอบชิมซอสก่อนเวลา",
+   "en": "The teacher seems to know who has been sneaking a taste of the sauce early.",
+   "ko": "선생님은 누가 미리 소스를 몰래 맛봤는지 다 아는 것 같아요.",
+   "blank": "ล่วงรู้",
+   "src": "made"
+  },
+  {
+   "text": "ไม่มีใครล่วงรู้ว่าใครเป็นคนแกะสลักพระพุทธรูปองค์นี้",
+   "en": "No one knows who carved this Buddha image.",
+   "ko": "이 불상을 누가 조각했는지는 아무도 몰라요.",
+   "blank": "ล่วงรู้",
    "src": "made"
   }
  ],
@@ -75461,6 +76341,22 @@
    "blank": "เลือกตั้ง"
   }
  ],
+ "w|เลือกสรร": [
+  {
+   "text": "ครูเลือกสรรผักจากสวนออร์แกนิกมาใช้ในคลาสทุกครั้ง",
+   "en": "The teacher always selects vegetables from an organic garden for the class.",
+   "ko": "선생님은 늘 유기농 텃밭 채소를 골라 수업에 써요.",
+   "blank": "เลือกสรร",
+   "src": "made"
+  },
+  {
+   "text": "ภัณฑารักษ์เลือกสรรภาพถ่ายเก่ากว่าห้าร้อยภาพมาจัดแสดง",
+   "en": "The curator selected over five hundred old photographs for the exhibition.",
+   "ko": "큐레이터는 오백 점이 넘는 옛 사진을 골라 전시했어요.",
+   "blank": "เลือกสรร",
+   "src": "made"
+  }
+ ],
  "w|เลือด": [
   {
    "text": "เลือดออกที่นิ้ว",
@@ -76222,6 +77118,22 @@
    "en": "He works quickly and accurately.",
    "ko": "그는 일을 빠르고 정확하게 해.",
    "blank": "ว่องไว",
+   "src": "made"
+  }
+ ],
+ "w|วอดก้า": [
+  {
+   "text": "ครูใส่วอดก้านิดหน่อยในซอสมะเขือเทศเพื่อให้กลิ่นหอมขึ้น",
+   "en": "The teacher added a little vodka to the tomato sauce to bring out the aroma.",
+   "ko": "선생님은 향을 살리려고 토마토소스에 보드카를 조금 넣었어요.",
+   "blank": "วอดก้า",
+   "src": "made"
+  },
+  {
+   "text": "นิทรรศการเรื่องการค้าโลกมีขวดวอดก้าจากรัสเซียจัดแสดง",
+   "en": "The world-trade exhibition displays a bottle of vodka from Russia.",
+   "ko": "세계 교역 전시에는 러시아산 보드카 병이 전시돼 있어요.",
+   "blank": "วอดก้า",
    "src": "made"
   }
  ],
@@ -77646,6 +78558,22 @@
    "en": "The trail up to the waterfall was so rough that Wanna had to stop and rest several times.",
    "ko": "폭포로 오르는 길이 너무 험해서 완나는 여러 번 쉬어야 했어요.",
    "blank": "วิบาก",
+   "src": "made"
+  }
+ ],
+ "w|วิปริต": [
+  {
+   "text": "ลูกแมวตัวนี้เกิดมามีขาห้าขา หมอวิชัยบอกว่าไม่ใช่เรื่องวิปริตอะไร",
+   "en": "This kitten was born with five legs; Dr Wichai said it's nothing freakish.",
+   "ko": "이 새끼 고양이는 다리 다섯 개로 태어났는데 위차이 수의사는 이상한 일이 아니라고 했어요.",
+   "blank": "วิปริต",
+   "src": "made"
+  },
+  {
+   "text": "ปีนี้อากาศวิปริต นภาเลยเก็บร่มไว้ที่โต๊ะตลอด",
+   "en": "The weather is all over the place this year, so Napha keeps an umbrella at her desk.",
+   "ko": "올해 날씨가 이상해서 나파는 책상에 늘 우산을 둬요.",
+   "blank": "วิปริต",
    "src": "made"
   }
  ],
@@ -81049,6 +81977,22 @@
    "src": "made"
   }
  ],
+ "w|สรีระ": [
+  {
+   "text": "หมอวิชัยอธิบายสรีระของนกแก้วให้นักศึกษาฝึกงานฟัง",
+   "en": "Dr Wichai explained the anatomy of parrots to the intern.",
+   "ko": "위차이 수의사는 실습생에게 앵무새의 신체 구조를 설명했어요.",
+   "blank": "สรีระ",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทซื้อเก้าอี้ใหม่ที่ออกแบบให้เข้ากับสรีระของคนนั่งนาน",
+   "en": "The company bought new chairs designed to suit the bodies of people who sit for long hours.",
+   "ko": "회사는 오래 앉아 있는 사람의 체형에 맞게 설계된 새 의자를 샀어요.",
+   "blank": "สรีระ",
+   "src": "made"
+  }
+ ],
  "w|สรุป": [
   {
    "text": "ธนาอ่านบทความเสร็จแล้วสรุปใจความสำคัญลงกระดาษแผ่นเดียว",
@@ -81094,6 +82038,22 @@
    "en": "Chan watched the news of the floods in the north with a sorrowful face.",
    "ko": "짠은 북부 홍수 소식을 침통한 얼굴로 봤어요.",
    "blank": "สลด",
+   "src": "made"
+  }
+ ],
+ "w|สลบ": [
+  {
+   "text": "หมอวิชัยฉีดยาให้หมาสลบก่อนทำฟัน",
+   "en": "Dr Wichai gave the dog an injection to put it under before the dental work.",
+   "ko": "위차이 수의사는 치과 치료 전에 개를 마취시키는 주사를 놓았어요.",
+   "blank": "สลบ",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานคนหนึ่งเป็นลมสลบในห้องประชุมเพราะไม่ได้กินข้าวเช้า",
+   "en": "An employee fainted in the meeting room because she hadn't eaten breakfast.",
+   "ko": "한 직원이 아침을 안 먹어서 회의실에서 쓰러졌어요.",
+   "blank": "สลบ",
    "src": "made"
   }
  ],
@@ -81887,6 +82847,22 @@
    "src": "made"
   }
  ],
+ "w|สอดแทรก": [
+  {
+   "text": "หมอวิชัยสอดแทรกเรื่องโภชนาการระหว่างอธิบายผลตรวจ",
+   "en": "Dr Wichai slipped in some advice on nutrition while explaining the test results.",
+   "ko": "위차이 수의사는 검사 결과를 설명하면서 영양 이야기를 슬쩍 곁들였어요.",
+   "blank": "สอดแทรก",
+   "src": "made"
+  },
+  {
+   "text": "หัวหน้าชอบสอดแทรกมุกตลกระหว่างประชุมให้บรรยากาศผ่อนคลาย",
+   "en": "The boss likes to slip jokes into meetings to lighten the mood.",
+   "ko": "상사는 회의 중간에 농담을 끼워 넣어 분위기를 풀어요.",
+   "blank": "สอดแทรก",
+   "src": "made"
+  }
+ ],
  "w|สอดแนม": [
   {
    "text": "อย่าสอดแนมชีวิตคนอื่น",
@@ -82063,6 +83039,22 @@
    "en": "This app is convenient to use.",
    "ko": "이 앱은 쓰기 편해.",
    "blank": "สะดวก"
+  }
+ ],
+ "w|สะดือ": [
+  {
+   "text": "ลูกหมาแรกเกิดยังมีสายสะดือติดอยู่",
+   "en": "The newborn puppy still has its umbilical cord attached.",
+   "ko": "갓 태어난 강아지는 아직 탯줄이 달려 있어요.",
+   "blank": "สะดือ",
+   "src": "made"
+  },
+  {
+   "text": "ในคลาสโยคะหลังเลิกงาน ครูบอกให้นภาหายใจลึกถึงสะดือ",
+   "en": "At the after-work yoga class, the teacher told Napha to breathe deep down to her navel.",
+   "ko": "퇴근 후 요가 수업에서 강사는 나파에게 배꼽까지 깊이 숨을 쉬라고 했어요.",
+   "blank": "สะดือ",
+   "src": "made"
   }
  ],
  "w|สะดุ้ง": [
@@ -82667,6 +83659,22 @@
    "src": "made"
   }
  ],
+ "w|สังสรรค์": [
+  {
+   "text": "ทีมคลินิกนัดสังสรรค์กันหลังปิดร้านวันศุกร์",
+   "en": "The clinic team arranged to get together after closing on Friday.",
+   "ko": "병원 팀은 금요일 진료 후에 모이기로 했어요.",
+   "blank": "สังสรรค์",
+   "src": "made"
+  },
+  {
+   "text": "ทีมของนภานัดสังสรรค์ที่ร้านหมูกระทะหลังปิดโปรเจกต์",
+   "en": "Napha's team got together at a Thai barbecue place after wrapping up the project.",
+   "ko": "나파의 팀은 프로젝트를 마치고 무까타 집에서 회식을 했어요.",
+   "blank": "สังสรรค์",
+   "src": "made"
+  }
+ ],
  "w|สั่งสอน": [
   {
    "text": "โค้ชรุ่นเก่ามักสั่งสอนเอกเรื่องวินัยมากกว่าเรื่องท่าทาง",
@@ -82970,6 +83978,22 @@
    "en": "The doctor presumed the runner who collapsed was severely dehydrated.",
    "ko": "의사는 쓰러진 주자가 심한 탈수 상태라고 추정했어요.",
    "blank": "สันนิษฐาน",
+   "src": "made"
+  }
+ ],
+ "w|สั่นสะเทือน": [
+  {
+   "text": "เครื่องปั่นตัวใหญ่ทำให้โต๊ะสั่นสะเทือนทุกครั้งที่เปิด",
+   "en": "The big blender makes the table shake every time it's switched on.",
+   "ko": "큰 믹서기를 켤 때마다 탁자가 덜덜 흔들려요.",
+   "blank": "สั่นสะเทือน",
+   "src": "made"
+  },
+  {
+   "text": "รถไฟใต้ดินวิ่งผ่านใต้พิพิธภัณฑ์จนตู้กระจกสั่นสะเทือนเบาๆ",
+   "en": "The subway runs under the museum, making the glass cases shake slightly.",
+   "ko": "지하철이 박물관 밑을 지나가서 유리장이 살짝 흔들려요.",
+   "blank": "สั่นสะเทือน",
    "src": "made"
   }
  ],
@@ -84027,6 +85051,22 @@
    "src": "made"
   }
  ],
+ "w|สำส่อน": [
+  {
+   "text": "ครูเตือนว่าไม่ควรใช้ผงชูรสอย่างสำส่อนกับทุกเมนู",
+   "en": "The teacher warned against using MSG indiscriminately in every dish.",
+   "ko": "선생님은 모든 요리에 조미료를 마구 쓰지 말라고 했어요.",
+   "blank": "สำส่อน",
+   "src": "made"
+  },
+  {
+   "text": "ป้ายเตือนว่าการถ่ายรูปอย่างสำส่อนด้วยแฟลชทำให้ภาพเขียนเสียหาย",
+   "en": "A sign warns that indiscriminate flash photography damages the paintings.",
+   "ko": "안내판은 플래시를 마구 터뜨리면 그림이 손상된다고 경고해요.",
+   "blank": "สำส่อน",
+   "src": "made"
+  }
+ ],
  "w|สำหรับ": [
   {
    "text": "อันนี้สำหรับเธอ",
@@ -84885,6 +85925,22 @@
    "src": "made"
   }
  ],
+ "w|สุขาภิบาล": [
+  {
+   "text": "เทศบาลส่งเจ้าหน้าที่สุขาภิบาลมาตรวจห้องเก็บซากสัตว์ของคลินิก",
+   "en": "The municipality sent sanitation officers to inspect the clinic's carcass storage room.",
+   "ko": "시청은 위생 담당 공무원을 보내 병원의 사체 보관실을 점검했어요.",
+   "blank": "สุขาภิบาล",
+   "src": "made"
+  },
+  {
+   "text": "ฝ่ายอาคารเรียกเจ้าหน้าที่สุขาภิบาลมาตรวจห้องครัวของออฟฟิศ",
+   "en": "Building management called in sanitation officers to inspect the office kitchen.",
+   "ko": "건물 관리팀은 위생 담당자를 불러 사무실 탕비실을 점검했어요.",
+   "blank": "สุขาภิบาล",
+   "src": "made"
+  }
+ ],
  "w|สุขุม": [
   {
    "text": "แม้ร้านจะวุ่นแค่ไหน แม่ของชัยก็ยังสุขุมไม่เคยตะโกน",
@@ -85605,6 +86661,22 @@
    "en": "We welcome suggestions from everyone.",
    "ko": "모두의 제안을 환영해.",
    "blank": "เสนอแนะ"
+  }
+ ],
+ "w|เสบียง": [
+  {
+   "text": "นักเรียนเตรียมเสบียงไปปิกนิกในวันสุดท้ายของคอร์ส",
+   "en": "The students prepared provisions for a picnic on the last day of the course.",
+   "ko": "학생들은 과정 마지막 날 소풍에 가져갈 음식을 준비했어요.",
+   "blank": "เสบียง",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์อธิบายว่าทหารสมัยก่อนขนเสบียงด้วยเกวียนเทียมวัว",
+   "en": "The guide explained that soldiers long ago carried supplies in ox carts.",
+   "ko": "가이드는 옛 군인들이 소달구지로 군량을 날랐다고 설명했어요.",
+   "blank": "เสบียง",
+   "src": "made"
   }
  ],
  "w|เสพ": [
@@ -86671,6 +87743,22 @@
    "blank": "หก"
   }
  ],
+ "w|หกล้ม": [
+  {
+   "text": "ผู้ช่วยหกล้มเพราะพื้นเปียกตอนอาบน้ำให้หมา",
+   "en": "The assistant slipped and fell on the wet floor while bathing a dog.",
+   "ko": "조수는 개를 씻기다가 젖은 바닥에 넘어졌어요.",
+   "blank": "หกล้ม",
+   "src": "made"
+  },
+  {
+   "text": "นภาหกล้มบนบันไดหนีไฟตอนซ้อมอพยพ",
+   "en": "Napha tripped and fell on the fire stairs during the evacuation drill.",
+   "ko": "나파는 대피 훈련 중 비상계단에서 넘어졌어요.",
+   "blank": "หกล้ม",
+   "src": "made"
+  }
+ ],
  "w|หงส์": [
   {
    "text": "มีหงส์ขาวคู่หนึ่งว่ายน้ำอยู่ในบึงท้ายหมู่บ้าน",
@@ -87141,6 +88229,22 @@
    "en": "The screen went completely dark.",
    "ko": "화면이 완전히 어두워졌어.",
    "blank": "หน้าจอ"
+  }
+ ],
+ "w|หน้าซีด": [
+  {
+   "text": "เจ้าของหน้าซีดเมื่อเห็นหมาของตัวเองเลือดออก",
+   "en": "The owner went pale when she saw her dog bleeding.",
+   "ko": "주인은 자기 개가 피 흘리는 걸 보고 얼굴이 하얘졌어요.",
+   "blank": "หน้าซีด",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมงานหน้าซีดตอนรู้ว่าไฟล์รายงานหายหมด",
+   "en": "A coworker went pale when he found out the report file was gone.",
+   "ko": "한 동료는 보고서 파일이 다 날아간 걸 알고 얼굴이 하얘졌어요.",
+   "blank": "หน้าซีด",
+   "src": "made"
   }
  ],
  "w|หน้าตา": [
@@ -87913,6 +89017,22 @@
    "src": "made"
   }
  ],
+ "w|หมากฝรั่ง": [
+  {
+   "text": "ครูห้ามเคี้ยวหมากฝรั่งระหว่างเรียนทำอาหาร",
+   "en": "The teacher doesn't allow chewing gum during cooking class.",
+   "ko": "선생님은 요리 수업 중 껌을 씹지 못하게 해요.",
+   "blank": "หมากฝรั่ง",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าหน้าที่ขอให้เด็กๆ คายหมากฝรั่งก่อนเข้าห้องนิทรรศการ",
+   "en": "The staff asked the children to spit out their gum before entering the exhibition.",
+   "ko": "직원은 아이들에게 전시실에 들어가기 전에 껌을 뱉으라고 했어요.",
+   "blank": "หมากฝรั่ง",
+   "src": "made"
+  }
+ ],
  "w|หมาป่า": [
   {
    "text": "หมาป่าหอนตอนกลางคืน",
@@ -88264,6 +89384,22 @@
    "en": "Suda put in two eye drops because she stares at the computer all day.",
    "ko": "수다는 하루 종일 컴퓨터 화면을 봐서 안약을 두 방울 넣었어요.",
    "blank": "หยด",
+   "src": "made"
+  }
+ ],
+ "w|หยอก": [
+  {
+   "text": "ครูชอบหยอกนักเรียนว่าใครทำไข่เจียวไหม้ต้องล้างจาน",
+   "en": "The teacher likes to joke that whoever burns the omelette has to do the dishes.",
+   "ko": "선생님은 달걀부침을 태우는 사람이 설거지를 해야 한다고 학생들을 놀려요.",
+   "blank": "หยอก",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์ชอบหยอกเด็กๆ ว่ามัมมี่จะลุกขึ้นมาตอนพิพิธภัณฑ์ปิด",
+   "en": "The guide likes to tease the kids that the mummy gets up when the museum closes.",
+   "ko": "가이드는 박물관이 문을 닫으면 미라가 일어난다며 아이들을 놀려요.",
+   "blank": "หยอก",
    "src": "made"
   }
  ],
@@ -88874,6 +90010,22 @@
    "en": "Malee wants to merge the two apps into a single system.",
    "ko": "말리는 두 앱을 하나의 시스템으로 합치고 싶어 해요.",
    "blank": "หลอม",
+   "src": "made"
+  }
+ ],
+ "w|หล่อเลี้ยง": [
+  {
+   "text": "ครูเชื่อว่าอาหารดีๆ หล่อเลี้ยงทั้งร่างกายและจิตใจ",
+   "en": "The teacher believes good food nourishes both body and soul.",
+   "ko": "선생님은 좋은 음식이 몸과 마음을 모두 살찌운다고 믿어요.",
+   "blank": "หล่อเลี้ยง",
+   "src": "made"
+  },
+  {
+   "text": "แม่น้ำสายนี้หล่อเลี้ยงชีวิตคนในลุ่มน้ำมาหลายพันปี",
+   "en": "This river has sustained the lives of people in the basin for thousands of years.",
+   "ko": "이 강은 수천 년 동안 유역 사람들의 삶을 먹여 살렸어요.",
+   "blank": "หล่อเลี้ยง",
    "src": "made"
   }
  ],
@@ -90043,6 +91195,22 @@
    "blank": "หอม"
   }
  ],
+ "w|หอมแดง": [
+  {
+   "text": "ธนาซอยหอมแดงบางๆ แล้วเจียวจนกรอบ",
+   "en": "Thana thinly sliced shallots and fried them until crisp.",
+   "ko": "타나는 샬롯을 얇게 썰어 바삭하게 튀겼어요.",
+   "blank": "หอมแดง",
+   "src": "made"
+  },
+  {
+   "text": "ตะกร้าหอมแดงจำลองวางอยู่ในแผงตลาดสดโบราณ",
+   "en": "A model basket of shallots sits on the old-time fresh-market stall.",
+   "ko": "옛 재래시장 좌판에 샬롯 바구니 모형이 놓여 있어요.",
+   "blank": "หอมแดง",
+   "src": "made"
+  }
+ ],
  "w|หอย": [
   {
    "text": "ลวกหอยกินกับน้ำจิ้มซีฟู้ด",
@@ -90086,6 +91254,22 @@
    "en": "After the rain the garden is full of snails.",
    "ko": "비가 온 뒤 정원에 달팽이가 가득해.",
    "blank": "หอยทาก",
+   "src": "made"
+  }
+ ],
+ "w|หอยนางรม": [
+  {
+   "text": "ครูสอนวิธีแกะหอยนางรมโดยไม่ให้มือบาด",
+   "en": "The teacher showed how to shuck oysters without cutting your hand.",
+   "ko": "선생님은 손을 베지 않고 굴 까는 법을 가르쳤어요.",
+   "blank": "หอยนางรม",
+   "src": "made"
+  },
+  {
+   "text": "พิพิธภัณฑ์ทางทะเลจัดแสดงเปลือกหอยนางรมที่ใหญ่ที่สุดในอ่าว",
+   "en": "The maritime museum displays the largest oyster shell found in the bay.",
+   "ko": "해양 박물관에는 만에서 나온 가장 큰 굴 껍데기가 전시돼 있어요.",
+   "blank": "หอยนางรม",
    "src": "made"
   }
  ],
@@ -90673,6 +91857,22 @@
    "en": "The headache is gone.",
    "ko": "두통이 사라졌어.",
    "blank": "หาย"
+  }
+ ],
+ "w|หายขาด": [
+  {
+   "text": "โรคผิวหนังของหมาตัวนี้รักษาหายขาดแล้ว",
+   "en": "This dog's skin disease has been completely cured.",
+   "ko": "이 개의 피부병은 완치됐어요.",
+   "blank": "หายขาด",
+   "src": "made"
+  },
+  {
+   "text": "ไมเกรนของนภาไม่เคยหายขาด แค่ดีขึ้นเมื่อพักผ่อนพอ",
+   "en": "Napha's migraines have never gone away completely; they just ease when she rests enough.",
+   "ko": "나파의 편두통은 완전히 낫지 않고 충분히 쉬면 좀 나아질 뿐이에요.",
+   "blank": "หายขาด",
+   "src": "made"
   }
  ],
  "w|หายใจ": [
@@ -92211,6 +93411,22 @@
    "src": "made"
   }
  ],
+ "w|แหบ": [
+  {
+   "text": "หมาเห่าทั้งคืนจนเสียงแหบ เจ้าของเลยพามาหาหมอ",
+   "en": "The dog barked all night until it went hoarse, so the owner brought it to the vet.",
+   "ko": "개가 밤새 짖어서 목이 쉬자 주인이 병원에 데려왔어요.",
+   "blank": "แหบ",
+   "src": "made"
+  },
+  {
+   "text": "นภาพรีเซนต์งานติดกันสามรอบจนเสียงแหบ",
+   "en": "Napha gave three presentations in a row and her voice went hoarse.",
+   "ko": "나파는 발표를 연달아 세 번 해서 목이 쉬었어요.",
+   "blank": "แหบ",
+   "src": "made"
+  }
+ ],
  "w|แหย่": [
   {
    "text": "หลานของเอกเอาไม้แหย่รังมดแดงเล่น",
@@ -92224,6 +93440,22 @@
    "en": "A friend teased Piya that he probably wouldn't make it halfway.",
    "ko": "친구는 피야가 반도 못 뛸 거라고 놀렸어요.",
    "blank": "แหย่",
+   "src": "made"
+  }
+ ],
+ "w|แหลก": [
+  {
+   "text": "ธนาตำพริกแหลกจนกลายเป็นผงละเอียด",
+   "en": "Thana pounded the chillies to bits until they became a fine powder.",
+   "ko": "타나는 고추를 곱게 가루가 될 때까지 짓찧었어요.",
+   "blank": "แหลก",
+   "src": "made"
+  },
+  {
+   "text": "ไหโบราณใบนี้ขุดพบในสภาพแหลกเป็นชิ้นเล็กชิ้นน้อย",
+   "en": "This ancient jar was dug up shattered into little pieces.",
+   "ko": "이 옛 항아리는 산산조각 난 채로 발굴됐어요.",
+   "blank": "แหลก",
    "src": "made"
   }
  ],
@@ -95135,6 +96367,22 @@
    "src": "made"
   }
  ],
+ "w|อายุขัย": [
+  {
+   "text": "หมอวิชัยบอกว่าอายุขัยของกระต่ายประมาณสิบปี",
+   "en": "Dr Wichai said a rabbit's lifespan is about ten years.",
+   "ko": "위차이 수의사는 토끼의 수명이 십 년쯤 된다고 했어요.",
+   "blank": "อายุขัย",
+   "src": "made"
+  },
+  {
+   "text": "สัมมนาเรื่องเกษียณบอกว่าคนไทยมีอายุขัยยืนขึ้นทุกปี",
+   "en": "The retirement seminar said Thai people's lifespan is getting longer every year.",
+   "ko": "은퇴 세미나에서는 태국인의 수명이 해마다 늘고 있다고 했어요.",
+   "blank": "อายุขัย",
+   "src": "made"
+  }
+ ],
  "w|อารมณ์": [
   {
    "text": "วันนี้มีอารมณ์ไม่ดี",
@@ -95925,6 +97173,22 @@
    "src": "made"
   }
  ],
+ "w|อุจจาระ": [
+  {
+   "text": "หมอวิชัยขอให้เจ้าของเก็บอุจจาระของหมามาตรวจหาพยาธิ",
+   "en": "Dr Wichai asked the owner to bring a sample of the dog's stool to check for worms.",
+   "ko": "위차이 수의사는 기생충 검사를 위해 개 변을 받아 오라고 주인에게 부탁했어요.",
+   "blank": "อุจจาระ",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานใหม่ต้องส่งผลตรวจอุจจาระตอนตรวจสุขภาพประจำปี",
+   "en": "New staff must submit a stool test result for the annual health check.",
+   "ko": "신입 직원은 연례 건강검진 때 대변 검사 결과를 내야 해요.",
+   "blank": "อุจจาระ",
+   "src": "made"
+  }
+ ],
  "w|อุณหภูมิ": [
   {
    "text": "อุณหภูมิวันนี้สูงมาก",
@@ -96694,6 +97958,22 @@
    "en": "This year Fon is serious about planting a vegetable garden before the rains come.",
    "ko": "올해 폰은 우기 전에 텃밭 가꾸기를 제대로 해 보려 해요.",
    "blank": "เอาจริง",
+   "src": "made"
+  }
+ ],
+ "w|เอาจริงเอาจัง": [
+  {
+   "text": "หมอวิชัยเอาจริงเอาจังกับความสะอาดของห้องผ่าตัดมาก",
+   "en": "Dr Wichai is very serious about keeping the operating room clean.",
+   "ko": "위차이 수의사는 수술실 청결에 무척 엄격해요.",
+   "blank": "เอาจริงเอาจัง",
+   "src": "made"
+  },
+  {
+   "text": "นภาทำงานเอาจริงเอาจังจนหัวหน้าไว้ใจให้ดูแลลูกค้ารายใหญ่",
+   "en": "Napha works so earnestly that her boss trusts her with a major client.",
+   "ko": "나파는 일을 진지하게 해서 상사가 큰 고객을 맡길 만큼 믿어요.",
+   "blank": "เอาจริงเอาจัง",
    "src": "made"
   }
  ],
