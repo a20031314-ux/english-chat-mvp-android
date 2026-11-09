@@ -301,6 +301,22 @@
    "src": "made"
   }
  ],
+ "w|अगणित": [
+  {
+   "text": "दफ़्तर की पुरानी अलमारियों में अगणित फ़ाइलें धूल खा रही हैं।",
+   "en": "Countless files are gathering dust in the office's old cupboards.",
+   "ko": "사무실 낡은 캐비닛 속에서 셀 수 없는 서류들이 먼지를 뒤집어쓰고 있어요.",
+   "blank": "अगणित",
+   "src": "made"
+  },
+  {
+   "text": "मीना कहती है कि शुरुआत में उसने अगणित ग़लतियाँ कीं और हर ग़लती से कुछ सीखा।",
+   "en": "Meena says she made countless mistakes at the start and learned something from each.",
+   "ko": "미나는 처음에 셀 수 없이 많은 실수를 했고 그때마다 배웠다고 해요.",
+   "blank": "अगणित",
+   "src": "made"
+  }
+ ],
  "w|अगर": [
   {
    "text": "अगर भूख लगे तो रसोई देख लेना।",
@@ -833,6 +849,22 @@
    "blank": "अंडा"
   }
  ],
+ "w|अडिग": [
+  {
+   "text": "दबाव के बावजूद रोहन अपने फ़ैसले पर अडिग रहा।",
+   "en": "Despite the pressure, Rohan stood firm on his decision.",
+   "ko": "압박에도 로한은 자기 결정을 굽히지 않았어요.",
+   "blank": "अडिग",
+   "src": "made"
+  },
+  {
+   "text": "मीना अपने इस इरादे पर अडिग है कि ऐप हमेशा मुफ़्त रहेगा।",
+   "en": "Meena is firm in her resolve that the app will always remain free.",
+   "ko": "미나는 앱을 늘 무료로 두겠다는 뜻을 굽히지 않아요.",
+   "blank": "अडिग",
+   "src": "made"
+  }
+ ],
  "w|अणु": [
   {
    "text": "अजय ने बच्चों को समझाया कि पानी का हर अणु बादल से नदी तक घूमता है।",
@@ -1131,6 +1163,22 @@
    "en": "Decide today or tomorrow.",
    "ko": "오늘 혹은 내일 결정해.",
    "blank": "अथवा"
+  }
+ ],
+ "w|अथाह": [
+  {
+   "text": "रोहन के मन में अपने पुराने गुरु के लिए अथाह सम्मान है।",
+   "en": "Rohan has boundless respect in his heart for his old mentor.",
+   "ko": "로한은 옛 스승을 한없이 존경해요.",
+   "blank": "अथाह",
+   "src": "made"
+  },
+  {
+   "text": "मीना के पास धैर्य का अथाह भंडार है, इसलिए वह मुश्किल समय में भी शांत रहती है।",
+   "en": "Meena has a boundless store of patience, so she stays calm even in hard times.",
+   "ko": "미나는 인내심이 끝이 없어서 어려울 때도 침착해요.",
+   "blank": "अथाह",
+   "src": "made"
   }
  ],
  "w|अदब": [
@@ -2735,6 +2783,22 @@
    "src": "made"
   }
  ],
+ "w|अपलोड करना": [
+  {
+   "text": "रोहन ने सारे बिल शाम तक पोर्टल पर अपलोड कर दिए।",
+   "en": "Rohan uploaded all the bills to the portal by evening.",
+   "ko": "로한은 저녁까지 모든 영수증을 포털에 올렸어요.",
+   "blank": "अपलोड कर",
+   "src": "made"
+  },
+  {
+   "text": "टीम ने रात भर जागकर ऐप का नया वर्ज़न स्टोर पर अपलोड किया।",
+   "en": "The team stayed up all night and uploaded the new version of the app to the store.",
+   "ko": "팀은 밤을 새워 앱 새 버전을 스토어에 올렸어요.",
+   "blank": "अपलोड किया",
+   "src": "made"
+  }
+ ],
  "w|अपवित्र": [
   {
    "text": "करण की दादी मानती हैं कि जूते पहनकर रसोई में जाना अपवित्र है।",
@@ -3210,6 +3274,22 @@
    "en": "Neha's wish is that her company will one day employ thousands of people.",
    "ko": "네하의 소원은 언젠가 회사가 수천 명을 고용하는 거예요.",
    "blank": "अभिलाषा",
+   "src": "made"
+  }
+ ],
+ "w|अभिलेख": [
+  {
+   "text": "पुराने अभिलेख तहख़ाने में रखे हैं, जहाँ रोहन को आज जाना पड़ा।",
+   "en": "The old records are kept in the basement, where Rohan had to go today.",
+   "ko": "옛 기록은 지하실에 보관돼 있는데 로한은 오늘 거기에 가야 했어요.",
+   "blank": "अभिलेख",
+   "src": "made"
+  },
+  {
+   "text": "मीना की टीम ने पुराने सरकारी अभिलेख डिजिटल करने का ठेका जीता।",
+   "en": "Meena's team won a contract to digitise old government records.",
+   "ko": "미나 팀은 옛 정부 기록을 디지털화하는 계약을 따냈어요.",
+   "blank": "अभिलेख",
    "src": "made"
   }
  ],
@@ -8687,6 +8767,22 @@
    "src": "made"
   }
  ],
+ "w|उत्पादकता": [
+  {
+   "text": "नई कुर्सियाँ आने के बाद दफ़्तर की उत्पादकता सच में बढ़ गई।",
+   "en": "After the new chairs arrived, the office's productivity really went up.",
+   "ko": "새 의자가 들어온 뒤 사무실 생산성이 정말 올랐어요.",
+   "blank": "उत्पादकता",
+   "src": "made"
+  },
+  {
+   "text": "मीना मानती है कि लगातार मीटिंग से टीम की उत्पादकता गिरती है।",
+   "en": "Meena believes constant meetings bring down the team's productivity.",
+   "ko": "미나는 회의가 계속되면 팀 생산성이 떨어진다고 생각해요.",
+   "blank": "उत्पादकता",
+   "src": "made"
+  }
+ ],
  "w|उत्पादन": [
   {
    "text": "फसल का उत्पादन इस साल अच्छा रहा।",
@@ -13391,6 +13487,22 @@
    "blank": "काफ़ी"
   }
  ],
+ "w|क़ाबिलियत": [
+  {
+   "text": "रोहन की क़ाबिलियत देखकर बॉस ने उसे सबसे मुश्किल ग्राहक सौंपा।",
+   "en": "Seeing Rohan's ability, the boss handed him the most difficult client.",
+   "ko": "로한의 실력을 보고 상사는 가장 까다로운 고객을 맡겼어요.",
+   "blank": "क़ाबिलियत",
+   "src": "made"
+  },
+  {
+   "text": "मीना डिग्री से ज़्यादा उम्मीदवार की क़ाबिलियत पर ध्यान देती है।",
+   "en": "Meena pays more attention to a candidate's ability than to degrees.",
+   "ko": "미나는 학위보다 지원자의 실력을 더 봐요.",
+   "blank": "क़ाबिलियत",
+   "src": "made"
+  }
+ ],
  "w|क़ाबू": [
   {
    "text": "गोदाम में लगी आग पर कुछ ही मिनटों में क़ाबू पा लिया गया।",
@@ -13649,6 +13761,22 @@
    "blank": "कारण"
   }
  ],
+ "w|कारणवश": [
+  {
+   "text": "अपरिहार्य कारणवश आज की बैठक रद्द कर दी गई है।",
+   "en": "Due to unavoidable reasons, today's meeting has been cancelled.",
+   "ko": "부득이한 사정으로 오늘 회의가 취소됐어요.",
+   "blank": "कारणवश",
+   "src": "made"
+  },
+  {
+   "text": "तकनीकी कारणवश ऐप आज रात दो घंटे बंद रहेगा।",
+   "en": "Due to technical reasons, the app will be down for two hours tonight.",
+   "ko": "기술적인 이유로 앱이 오늘 밤 두 시간 동안 멈춰요.",
+   "blank": "कारणवश",
+   "src": "made"
+  }
+ ],
  "w|कारवाँ": [
   {
    "text": "रोहन छुट्टियों में दोस्तों के कारवाँ के साथ पहाड़ों पर साइकिल चलाने जाएगा।",
@@ -13865,6 +13993,22 @@
    "blank": "कार्यक्रम"
   }
  ],
+ "w|कार्यक्षमता": [
+  {
+   "text": "नए सॉफ़्टवेयर से दफ़्तर की कार्यक्षमता काफ़ी बेहतर हुई।",
+   "en": "The new software greatly improved the office's efficiency.",
+   "ko": "새 소프트웨어 덕분에 사무실 업무 효율이 꽤 좋아졌어요.",
+   "blank": "कार्यक्षमता",
+   "src": "made"
+  },
+  {
+   "text": "नया सर्वर लगाने से ऐप की कार्यक्षमता दोगुनी हो गई।",
+   "en": "Installing the new server doubled the app's performance.",
+   "ko": "새 서버를 들이자 앱 성능이 두 배가 됐어요.",
+   "blank": "कार्यक्षमता",
+   "src": "made"
+  }
+ ],
  "w|कार्यपालिका": [
   {
    "text": "जज ने कहा कि अदालत कार्यपालिका के काम में दख़ल नहीं देगी।",
@@ -13929,6 +14073,22 @@
    "src": "made"
   }
  ],
+ "w|कार्यवाहक": [
+  {
+   "text": "मैनेजर की छुट्टी के दौरान रोहन को कार्यवाहक प्रबंधक बनाया गया।",
+   "en": "During the manager's leave, Rohan was made acting manager.",
+   "ko": "매니저가 휴가 간 동안 로한이 관리자 대행을 맡았어요.",
+   "blank": "कार्यवाहक",
+   "src": "made"
+  },
+  {
+   "text": "संस्थापक के बाहर जाने पर मीना कार्यवाहक सीईओ बनी।",
+   "en": "When the founder left, Meena became the acting CEO.",
+   "ko": "창업자가 떠나자 미나가 대표 대행이 됐어요.",
+   "blank": "कार्यवाहक",
+   "src": "made"
+  }
+ ],
  "w|कार्यवाही": [
   {
    "text": "नाटक का दूसरा अंक अदालत की कार्यवाही के दृश्य से शुरू होता है।",
@@ -13958,6 +14118,22 @@
    "en": "Anjali ran a workshop at a school on dental care.",
    "ko": "안잘리는 학교에서 치아 관리 워크숍을 열었어요.",
    "blank": "कार्यशाला",
+   "src": "made"
+  }
+ ],
+ "w|कार्यस्थल": [
+  {
+   "text": "रोहन का मानना है कि कार्यस्थल पर सबके साथ बराबरी का व्यवहार होना चाहिए।",
+   "en": "Rohan believes everyone should be treated equally at the workplace.",
+   "ko": "로한은 직장에서 모두가 평등하게 대우받아야 한다고 생각해요.",
+   "blank": "कार्यस्थल",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने कार्यस्थल को घर जैसा बनाने के लिए दफ़्तर में पौधे रखवाए।",
+   "en": "Meena had plants put in the office to make the workplace feel like home.",
+   "ko": "미나는 일터를 집처럼 만들려고 사무실에 화분을 들였어요.",
+   "blank": "कार्यस्थल",
    "src": "made"
   }
  ],
@@ -30831,6 +31007,22 @@
    "blank": "तापमान"
   }
  ],
+ "w|ताबड़तोड़": [
+  {
+   "text": "साल के आख़िर में रोहन के पास ताबड़तोड़ ईमेल आने लगे।",
+   "en": "At the end of the year, emails started pouring in to Rohan one after another.",
+   "ko": "연말이 되자 로한에게 이메일이 쉴 새 없이 쏟아졌어요.",
+   "blank": "ताबड़तोड़",
+   "src": "made"
+  },
+  {
+   "text": "लॉन्च के बाद मीना के फ़ोन पर ताबड़तोड़ बधाई संदेश आए।",
+   "en": "After the launch, congratulatory messages came pouring in on Meena's phone.",
+   "ko": "출시 후 미나 휴대폰에 축하 메시지가 쉴 새 없이 왔어요.",
+   "blank": "ताबड़तोड़",
+   "src": "made"
+  }
+ ],
  "w|तांबा": [
   {
    "text": "रोहन के दादाजी तांबे के लोटे में झरने का पानी भरकर लाए।",
@@ -38745,6 +38937,22 @@
    "src": "made"
   }
  ],
+ "w|निलंबन": [
+  {
+   "text": "हेराफेरी के आरोप में एक कर्मचारी का निलंबन हुआ, तो दफ़्तर में सन्नाटा छा गया।",
+   "en": "When an employee was suspended over embezzlement charges, silence fell over the office.",
+   "ko": "한 직원이 횡령 혐의로 정직되자 사무실에 정적이 흘렀어요.",
+   "blank": "निलंबन",
+   "src": "made"
+  },
+  {
+   "text": "नियम तोड़ने वाले डेवलपर के निलंबन पर मीना ने साफ़ बयान दिया।",
+   "en": "Meena gave a clear statement on the suspension of the developer who broke the rules.",
+   "ko": "미나는 규칙을 어긴 개발자의 정직 처분에 대해 분명히 입장을 밝혔어요.",
+   "blank": "निलंबन",
+   "src": "made"
+  }
+ ],
  "w|निवारण": [
   {
    "text": "अख़बार ने पाठकों की शिकायतों के निवारण के लिए एक नया कॉलम शुरू किया।",
@@ -40685,6 +40893,22 @@
    "src": "made"
   }
  ],
+ "w|पदभार": [
+  {
+   "text": "रोहन ने सोमवार को नए विभाग का पदभार संभाला।",
+   "en": "Rohan took charge of the new department on Monday.",
+   "ko": "로한은 월요일에 새 부서 책임을 맡았어요.",
+   "blank": "पदभार",
+   "src": "made"
+  },
+  {
+   "text": "नई टेक लीड ने पदभार संभालते ही पूरा सिस्टम समझना शुरू किया।",
+   "en": "The new tech lead began understanding the whole system as soon as she took charge.",
+   "ko": "새 기술 리더는 자리를 맡자마자 시스템 전체를 파악하기 시작했어요.",
+   "blank": "पदभार",
+   "src": "made"
+  }
+ ],
  "w|पदयात्रा": [
   {
    "text": "अमित ने गांधीजी की दांडी पदयात्रा पर एक मोटी किताब निकाली।",
@@ -41537,6 +41761,22 @@
    "blank": "पर्यटन"
   }
  ],
+ "w|पर्यवेक्षक": [
+  {
+   "text": "रोहन के पर्यवेक्षक हर शुक्रवार को काम की प्रगति देखते हैं।",
+   "en": "Rohan's supervisor reviews the progress of work every Friday.",
+   "ko": "로한의 상사는 금요일마다 업무 진행 상황을 확인해요.",
+   "blank": "पर्यवेक्षक",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने नए इंटर्न के लिए एक अनुभवी पर्यवेक्षक तय किया।",
+   "en": "Meena assigned an experienced supervisor for the new intern.",
+   "ko": "미나는 새 인턴에게 경험 많은 감독자를 붙였어요.",
+   "blank": "पर्यवेक्षक",
+   "src": "made"
+  }
+ ],
  "w|पर्याप्त": [
   {
    "text": "खाना सबके लिए पर्याप्त है।",
@@ -41549,6 +41789,22 @@
    "en": "There isn't enough time left.",
    "ko": "시간이 충분히 남지 않았어.",
    "blank": "पर्याप्त"
+  }
+ ],
+ "w|पर्यायवाची": [
+  {
+   "text": "रोहन रिपोर्ट में एक ही शब्द बार-बार न लिखकर उसका पर्यायवाची ढूँढता है।",
+   "en": "Rather than writing the same word again and again in a report, Rohan looks for its synonym.",
+   "ko": "로한은 보고서에 같은 말을 반복하지 않으려고 동의어를 찾아요.",
+   "blank": "पर्यायवाची",
+   "src": "made"
+  },
+  {
+   "text": "मीना की टीम एक ऐप बना रही है, जो हिंदी शब्दों के पर्यायवाची सुझाता है।",
+   "en": "Meena's team is building an app that suggests synonyms for Hindi words.",
+   "ko": "미나 팀은 힌디어 단어의 동의어를 추천해 주는 앱을 만들고 있어요.",
+   "blank": "पर्यायवाची",
+   "src": "made"
   }
  ],
  "w|पर्यावरण": [
@@ -43495,6 +43751,38 @@
    "src": "made"
   }
  ],
+ "w|पुनर्विचार": [
+  {
+   "text": "कर्मचारियों के विरोध के बाद प्रबंधन नई नीति पर पुनर्विचार कर रहा है।",
+   "en": "After the employees' protest, management is reconsidering the new policy.",
+   "ko": "직원들이 반발하자 경영진이 새 정책을 다시 검토하고 있어요.",
+   "blank": "पुनर्विचार",
+   "src": "made"
+  },
+  {
+   "text": "ग्राहकों की शिकायत के बाद मीना ने ऐप की क़ीमत पर पुनर्विचार किया।",
+   "en": "After customer complaints, Meena reconsidered the app's price.",
+   "ko": "고객 불만이 나오자 미나는 앱 가격을 재검토했어요.",
+   "blank": "पुनर्विचार",
+   "src": "made"
+  }
+ ],
+ "w|पुरज़ोर": [
+  {
+   "text": "रोहन ने ओवरटाइम के भुगतान की पुरज़ोर माँग उठाई।",
+   "en": "Rohan strongly raised the demand for overtime pay.",
+   "ko": "로한은 초과 근무 수당을 강력하게 요구했어요.",
+   "blank": "पुरज़ोर",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने निवेशकों के सामने अपने आइडिया का पुरज़ोर बचाव किया।",
+   "en": "Meena forcefully defended her idea in front of the investors.",
+   "ko": "미나는 투자자들 앞에서 자기 아이디어를 강하게 변호했어요.",
+   "blank": "पुरज़ोर",
+   "src": "made"
+  }
+ ],
  "w|पुरस्कार": [
   {
    "text": "उसे साहित्य का पुरस्कार मिला।",
@@ -43893,6 +44181,22 @@
    "en": "I trust them completely.",
    "ko": "나는 그 사람을 완전히 믿어.",
    "blank": "पूर्ण"
+  }
+ ],
+ "w|पूर्णकालिक": [
+  {
+   "text": "तीन महीने की इंटर्नशिप के बाद रोहन को पूर्णकालिक नौकरी मिल गई।",
+   "en": "After a three-month internship, Rohan got a full-time job.",
+   "ko": "석 달 인턴을 마치고 로한은 정규직이 됐어요.",
+   "blank": "पूर्णकालिक",
+   "src": "made"
+  },
+  {
+   "text": "स्टार्टअप में अभी सिर्फ़ छह पूर्णकालिक कर्मचारी हैं।",
+   "en": "The startup currently has only six full-time employees.",
+   "ko": "스타트업엔 아직 정직원이 여섯 명뿐이에요.",
+   "blank": "पूर्णकालिक",
+   "src": "made"
   }
  ],
  "w|पूर्णतः": [
@@ -46721,6 +47025,22 @@
    "src": "made"
   }
  ],
+ "w|प्रादेशिक": [
+  {
+   "text": "रोहन को कंपनी के प्रादेशिक कार्यालय में भेजा जा रहा है।",
+   "en": "Rohan is being sent to the company's regional office.",
+   "ko": "로한은 회사 지역 사무소로 발령이 나요.",
+   "blank": "प्रादेशिक",
+   "src": "made"
+  },
+  {
+   "text": "मीना का ऐप अब कई प्रादेशिक भाषाओं में उपलब्ध है।",
+   "en": "Meena's app is now available in several regional languages.",
+   "ko": "미나의 앱은 이제 여러 지역 언어로 나와요.",
+   "blank": "प्रादेशिक",
+   "src": "made"
+  }
+ ],
  "w|प्राधिकरण": [
   {
    "text": "थिएटर की मरम्मत के लिए शहर विकास प्राधिकरण से अनुमति लेनी पड़ी।",
@@ -47085,6 +47405,22 @@
    "en": "The press conference is in the evening.",
    "ko": "기자회견이 저녁에 있어.",
    "blank": "प्रेस"
+  }
+ ],
+ "w|प्रोग्रामिंग": [
+  {
+   "text": "रोहन शाम को प्रोग्रामिंग की ऑनलाइन क्लास लेता है ताकि रिपोर्ट अपने आप बन सकें।",
+   "en": "Rohan takes an online programming class in the evenings so that reports can be generated automatically.",
+   "ko": "로한은 보고서를 자동으로 만들려고 저녁에 온라인 프로그래밍 수업을 들어요.",
+   "blank": "प्रोग्रामिंग",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने स्कूल में ही प्रोग्रामिंग सीखनी शुरू कर दी थी।",
+   "en": "Meena had started learning programming while still in school.",
+   "ko": "미나는 학교 다닐 때부터 프로그래밍을 배우기 시작했어요.",
+   "blank": "प्रोग्रामिंग",
+   "src": "made"
   }
  ],
  "w|प्रोजेक्ट": [
@@ -48737,6 +49073,22 @@
    "en": "It was decided the land would be divided among the siblings.",
    "ko": "땅이 형제자매에게 나뉘기로 했어.",
    "blank": "बँटना"
+  }
+ ],
+ "w|बँटवारा": [
+  {
+   "text": "नए प्रोजेक्ट में काम का बँटवारा रोहन ने बहुत सोच-समझकर किया।",
+   "en": "Rohan divided the work on the new project very thoughtfully.",
+   "ko": "로한은 새 프로젝트의 업무 분담을 아주 신중하게 했어요.",
+   "blank": "बँटवारा",
+   "src": "made"
+  },
+  {
+   "text": "मीना और उसके साथी ने तय किया कि मुनाफ़े का बँटवारा आधा-आधा होगा।",
+   "en": "Meena and her partner decided that the profits would be split half and half.",
+   "ko": "미나와 동업자는 이익을 반반 나누기로 했어요.",
+   "blank": "बँटवारा",
+   "src": "made"
   }
  ],
  "w|बटुआ": [
@@ -51857,6 +52209,22 @@
    "src": "made"
   }
  ],
+ "w|बेमिसाल": [
+  {
+   "text": "रिटायर हो रहे चपरासी की ईमानदारी बेमिसाल थी, सबने यही कहा।",
+   "en": "Everyone said the honesty of the retiring peon was unmatched.",
+   "ko": "퇴직하는 직원의 정직함은 비할 데가 없었다고 모두 말했어요.",
+   "blank": "बेमिसाल",
+   "src": "made"
+  },
+  {
+   "text": "निवेशकों ने कहा कि मीना की टीम की लगन बेमिसाल है।",
+   "en": "The investors said the dedication of Meena's team is unmatched.",
+   "ko": "투자자들은 미나 팀의 열정이 비할 데 없다고 했어요.",
+   "blank": "बेमिसाल",
+   "src": "made"
+  }
+ ],
  "w|बेर": [
   {
    "text": "स्कूल के पीछे वाले पेड़ के खट्टे बेर अजय को आज भी याद आते हैं।",
@@ -54180,6 +54548,22 @@
    "en": "Priya says the memories attached to material things are more precious than the things.",
    "ko": "프리야는 물건보다 거기 얽힌 추억이 더 귀하다고 말해요.",
    "blank": "भौतिक",
+   "src": "made"
+  }
+ ],
+ "w|भौतिकी": [
+  {
+   "text": "रोहन ने कॉलेज में भौतिकी पढ़ी थी, पर अब वह बैंक में काम करता है।",
+   "en": "Rohan studied physics in college, but now he works at a bank.",
+   "ko": "로한은 대학에서 물리학을 공부했지만 지금은 은행에서 일해요.",
+   "blank": "भौतिकी",
+   "src": "made"
+  },
+  {
+   "text": "मीना की कंपनी भौतिकी के सिमुलेशन के लिए सॉफ़्टवेयर बनाती है।",
+   "en": "Meena's company makes software for physics simulations.",
+   "ko": "미나 회사는 물리 시뮬레이션용 소프트웨어를 만들어요.",
+   "blank": "भौतिकी",
    "src": "made"
   }
  ],
@@ -56677,6 +57061,22 @@
    "src": "made"
   }
  ],
+ "w|मानदंड": [
+  {
+   "text": "पदोन्नति के मानदंड इस साल बदल दिए गए हैं।",
+   "en": "The criteria for promotion have been changed this year.",
+   "ko": "올해 승진 기준이 바뀌었어요.",
+   "blank": "मानदंड",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने कोड की गुणवत्ता के लिए कड़े मानदंड बनाए हैं।",
+   "en": "Meena has set strict standards for code quality.",
+   "ko": "미나는 코드 품질에 엄격한 기준을 세웠어요.",
+   "blank": "मानदंड",
+   "src": "made"
+  }
+ ],
  "w|मानना": [
   {
    "text": "मेरी एक बात मान लो।",
@@ -59149,6 +59549,22 @@
    "blank": "मोटा"
   }
  ],
+ "w|मोटाई": [
+  {
+   "text": "फ़ाइलों के ढेर की मोटाई देखकर रोहन ने लंबी साँस ली।",
+   "en": "Seeing the thickness of the pile of files, Rohan took a long breath.",
+   "ko": "서류 더미 두께를 보고 로한은 한숨을 길게 쉬었어요.",
+   "blank": "मोटाई",
+   "src": "made"
+  },
+  {
+   "text": "नए फ़ोन की मोटाई कम होने से ऐप के डिज़ाइन में बदलाव करना पड़ा।",
+   "en": "Because the new phones are thinner, the app's design had to be changed.",
+   "ko": "새 휴대폰이 얇아져서 앱 디자인을 바꿔야 했어요.",
+   "blank": "मोटाई",
+   "src": "made"
+  }
+ ],
  "w|मोटापा": [
   {
    "text": "बच्चों में बढ़ता मोटापा इस हफ़्ते की मुख्य ख़बर बना।",
@@ -59313,6 +59729,22 @@
    "src": "made"
   }
  ],
+ "w|मोहताज": [
+  {
+   "text": "रोहन किसी की सिफ़ारिश का मोहताज नहीं है, उसका काम ख़ुद बोलता है।",
+   "en": "Rohan doesn't depend on anyone's recommendation; his work speaks for itself.",
+   "ko": "로한은 누구 추천에도 기대지 않아요. 일이 말해 주니까요.",
+   "blank": "मोहताज",
+   "src": "made"
+  },
+  {
+   "text": "मीना नहीं चाहती कि उसकी कंपनी हमेशा बाहरी पैसे की मोहताज रहे।",
+   "en": "Meena doesn't want her company to always depend on outside money.",
+   "ko": "미나는 회사가 언제까지나 외부 돈에 기대길 원하지 않아요.",
+   "blank": "मोहताज",
+   "src": "made"
+  }
+ ],
  "w|मोहब्बत": [
   {
    "text": "सच्ची मोहब्बत सब्र सिखाती है।",
@@ -59413,6 +59845,22 @@
    "en": "Death was right in front of us in that crisis.",
    "ko": "그 곤경에서 죽음이 눈앞이었어.",
    "blank": "मौत"
+  }
+ ],
+ "w|मौद्रिक": [
+  {
+   "text": "अच्छे काम के लिए रोहन को मौद्रिक इनाम के साथ प्रमाणपत्र भी मिला।",
+   "en": "For good work, Rohan received a certificate along with a monetary reward.",
+   "ko": "로한은 일을 잘해서 상금과 함께 상장도 받았어요.",
+   "blank": "मौद्रिक",
+   "src": "made"
+  },
+  {
+   "text": "मीना की कंपनी छोटे दुकानदारों के मौद्रिक लेन-देन का हिसाब रखने वाला ऐप बनाती है।",
+   "en": "Meena's company builds an app that keeps track of small shopkeepers' monetary transactions.",
+   "ko": "미나 회사는 작은 가게 주인들의 금전 거래를 기록하는 앱을 만들어요.",
+   "blank": "मौद्रिक",
+   "src": "made"
   }
  ],
  "w|मौन": [
@@ -63285,6 +63733,22 @@
    "src": "made"
   }
  ],
+ "w|लिपिक": [
+  {
+   "text": "दफ़्तर के बूढ़े लिपिक ने रोहन को पुरानी फ़ाइल ढूँढकर दी।",
+   "en": "The office's old clerk found the old file and gave it to Rohan.",
+   "ko": "사무실의 나이 든 서기가 옛 파일을 찾아 로한에게 줬어요.",
+   "blank": "लिपिक",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने बताया कि उसके दादा सरकारी दफ़्तर में लिपिक थे।",
+   "en": "Meena said her grandfather was a clerk in a government office.",
+   "ko": "미나는 할아버지가 관공서 서기였다고 했어요.",
+   "blank": "लिपिक",
+   "src": "made"
+  }
+ ],
  "w|लिफ़ाफ़ा": [
   {
    "text": "क्लास टीचर ने रिपोर्ट कार्ड एक बंद लिफ़ाफ़े में घर भेजा।",
@@ -65283,6 +65747,22 @@
    "src": "made"
   }
  ],
+ "w|विद्यापीठ": [
+  {
+   "text": "रोहन ने काशी विद्यापीठ से एमबीए किया है।",
+   "en": "Rohan did his MBA from Kashi Vidyapith.",
+   "ko": "로한은 카시 비디아피트에서 MBA를 했어요.",
+   "blank": "विद्यापीठ",
+   "src": "made"
+  },
+  {
+   "text": "मीना एक विद्यापीठ के छात्रों को हर महीने कोडिंग सिखाने जाती है।",
+   "en": "Meena goes every month to teach coding to the students of a vidyapith.",
+   "ko": "미나는 달마다 한 대학 학생들에게 코딩을 가르치러 가요.",
+   "blank": "विद्यापीठ",
+   "src": "made"
+  }
+ ],
  "w|विद्यार्थी": [
   {
    "text": "विद्यार्थी लाइब्रेरी में पढ़ रहे हैं।",
@@ -66357,6 +66837,22 @@
    "src": "made"
   }
  ],
+ "w|विस्तारित": [
+  {
+   "text": "प्रोजेक्ट की विस्तारित समय-सीमा से रोहन की टीम को राहत मिली।",
+   "en": "The extended deadline of the project gave Rohan's team relief.",
+   "ko": "프로젝트 마감이 연장돼서 로한 팀은 한숨 돌렸어요.",
+   "blank": "विस्तारित",
+   "src": "made"
+  },
+  {
+   "text": "ऐप के विस्तारित संस्करण में वॉइस सर्च भी जोड़ा गया है।",
+   "en": "Voice search has also been added in the extended version of the app.",
+   "ko": "앱 확장판에는 음성 검색도 들어갔어요.",
+   "blank": "विस्तारित",
+   "src": "made"
+  }
+ ],
  "w|विस्तृत": [
   {
    "text": "मकान मालिक ने किराये की शर्तों की एक विस्तृत सूची दी।",
@@ -66948,6 +67444,22 @@
    "en": "Meena told the cook that it isn't right to throw away so much food uselessly.",
    "ko": "미나는 요리사에게 음식을 이렇게 헛되이 버리는 건 옳지 않다고 했어요.",
    "blank": "व्यर्थ",
+   "src": "made"
+  }
+ ],
+ "w|व्यवधान": [
+  {
+   "text": "बिजली जाने से दफ़्तर के काम में घंटों का व्यवधान पड़ा।",
+   "en": "The power cut caused hours of disruption to office work.",
+   "ko": "정전 때문에 사무실 업무가 몇 시간 동안 멈췄어요.",
+   "blank": "व्यवधान",
+   "src": "made"
+  },
+  {
+   "text": "इंटरनेट में व्यवधान के कारण मीना की ऑनलाइन मीटिंग बीच में कट गई।",
+   "en": "Due to an internet disruption, Meena's online meeting got cut off midway.",
+   "ko": "인터넷이 끊겨서 미나의 온라인 회의가 중간에 끊겼어요.",
+   "blank": "व्यवधान",
    "src": "made"
   }
  ],
@@ -69747,6 +70259,22 @@
    "src": "made"
   }
  ],
+ "w|संगोष्ठी": [
+  {
+   "text": "कंपनी ने कर्मचारियों की सेहत पर एक संगोष्ठी रखी।",
+   "en": "The company held a symposium on employee health.",
+   "ko": "회사는 직원 건강에 관한 심포지엄을 열었어요.",
+   "blank": "संगोष्ठी",
+   "src": "made"
+  },
+  {
+   "text": "मीना को बेंगलुरु की एक संगोष्ठी में बोलने का न्योता मिला।",
+   "en": "Meena received an invitation to speak at a symposium in Bengaluru.",
+   "ko": "미나는 벵갈루루 심포지엄 연사로 초청받았어요.",
+   "blank": "संगोष्ठी",
+   "src": "made"
+  }
+ ],
  "w|संग्रह": [
   {
    "text": "दफ़्तर की लाइब्रेरी में पुरानी फ़ाइलों का बड़ा संग्रह है।",
@@ -70823,6 +71351,22 @@
    "src": "made"
   }
  ],
+ "w|सपाट": [
+  {
+   "text": "बॉस ने रोहन के सवाल का सपाट जवाब दिया और फ़ोन उठा लिया।",
+   "en": "The boss gave a flat reply to Rohan's question and picked up the phone.",
+   "ko": "상사는 로한의 질문에 퉁명스럽게 대답하고 전화를 받았어요.",
+   "blank": "सपाट",
+   "src": "made"
+  },
+  {
+   "text": "डिज़ाइनर ने ऐप के लिए सपाट और साफ़ आइकन बनाए।",
+   "en": "The designer made flat, clean icons for the app.",
+   "ko": "디자이너는 앱에 쓸 납작하고 깔끔한 아이콘을 만들었어요.",
+   "blank": "सपाट",
+   "src": "made"
+  }
+ ],
  "w|संपादक": [
   {
    "text": "अखबार के संपादक ने लेख छापा।",
@@ -71195,6 +71739,22 @@
    "en": "Everyone sat quietly in the meeting.",
    "ko": "모임에서 다들 조용히 앉아 있었어.",
    "blank": "सभा"
+  }
+ ],
+ "w|सभागार": [
+  {
+   "text": "सालाना बैठक दफ़्तर के बड़े सभागार में हुई।",
+   "en": "The annual meeting was held in the office's large auditorium.",
+   "ko": "연례 회의는 회사 대강당에서 열렸어요.",
+   "blank": "सभागार",
+   "src": "made"
+  },
+  {
+   "text": "ऐप के लॉन्च का कार्यक्रम शहर के एक छोटे सभागार में हुआ।",
+   "en": "The app's launch event was held in a small auditorium in the city.",
+   "ko": "앱 출시 행사는 시내 작은 강당에서 열렸어요.",
+   "blank": "सभागार",
+   "src": "made"
   }
  ],
  "w|सँभालना": [
@@ -72521,6 +73081,22 @@
    "src": "made"
   }
  ],
+ "w|सर्वस्व": [
+  {
+   "text": "रोहन के पिता ने अपना सर्वस्व लगाकर उसे पढ़ाया था।",
+   "en": "Rohan's father had put his everything into educating him.",
+   "ko": "로한의 아버지는 모든 것을 바쳐 그를 공부시켰어요.",
+   "blank": "सर्वस्व",
+   "src": "made"
+  },
+  {
+   "text": "मीना के लिए यह स्टार्टअप ही उसका सर्वस्व है।",
+   "en": "For Meena, this startup is her everything.",
+   "ko": "미나에게 이 스타트업은 전부예요.",
+   "blank": "सर्वस्व",
+   "src": "made"
+  }
+ ],
  "w|सर्वाधिक": [
   {
    "text": "शहर के इस हिस्से में सर्वाधिक किराया मेट्रो के पास वाले घरों का है।",
@@ -72613,6 +73189,22 @@
    "en": "Cucumber salad gets ready quickly.",
    "ko": "오이 샐러드는 빨리 만들어져.",
    "blank": "सलाद"
+  }
+ ],
+ "w|सलामत": [
+  {
+   "text": "आँधी में दफ़्तर की खिड़कियाँ टूटीं, पर सारे कंप्यूटर सलामत रहे।",
+   "en": "The office windows broke in the storm, but all the computers remained safe.",
+   "ko": "폭풍에 사무실 창문이 깨졌지만 컴퓨터는 다 멀쩡했어요.",
+   "blank": "सलामत",
+   "src": "made"
+  },
+  {
+   "text": "सर्वर क्रैश हुआ, पर बैकअप की वजह से ग्राहकों का सारा डेटा सलामत रहा।",
+   "en": "The server crashed, but thanks to the backup all the customers' data remained safe.",
+   "ko": "서버가 다운됐지만 백업 덕분에 고객 데이터는 전부 무사했어요.",
+   "blank": "सलामत",
+   "src": "made"
   }
  ],
  "w|सलाह": [
@@ -74237,6 +74829,22 @@
    "en": "It kept raining the whole night.",
    "ko": "밤새도록 비가 내렸어.",
    "blank": "सारी"
+  }
+ ],
+ "w|सारांश": [
+  {
+   "text": "रोहन ने लंबी बैठक का सारांश एक पन्ने में लिखकर सबको भेजा।",
+   "en": "Rohan wrote a one-page summary of the long meeting and sent it to everyone.",
+   "ko": "로한은 긴 회의 요약을 한 장으로 써서 모두에게 보냈어요.",
+   "blank": "सारांश",
+   "src": "made"
+  },
+  {
+   "text": "निवेशकों के लिए मीना ने कंपनी के काम का सारांश तीन स्लाइड में दिया।",
+   "en": "For the investors, Meena gave a summary of the company's work in three slides.",
+   "ko": "미나는 투자자들에게 회사 일을 슬라이드 세 장으로 요약해 보여 줬어요.",
+   "blank": "सारांश",
+   "src": "made"
   }
  ],
  "w|सार्थक": [
@@ -76401,6 +77009,22 @@
    "src": "made"
   }
  ],
+ "w|सेमिनार": [
+  {
+   "text": "अगले हफ़्ते रोहन को दिल्ली में एक सेमिनार में बोलना है।",
+   "en": "Next week Rohan has to speak at a seminar in Delhi.",
+   "ko": "다음 주에 로한은 델리 세미나에서 발표해야 해요.",
+   "blank": "सेमिनार",
+   "src": "made"
+  },
+  {
+   "text": "स्टार्टअप ने कॉलेज के बच्चों के लिए मुफ़्त सेमिनार आयोजित किया।",
+   "en": "The startup organised a free seminar for college students.",
+   "ko": "스타트업은 대학생들을 위한 무료 세미나를 열었어요.",
+   "blank": "सेमिनार",
+   "src": "made"
+  }
+ ],
  "w|सेमेस्टर": [
   {
    "text": "अगले सेमेस्टर में अमित मशीनों की मरम्मत पर एक कोर्स करेगा।",
@@ -77276,6 +77900,22 @@
    "en": "The new job brought financial stability to the home, and Deepa breathed a sigh of relief.",
    "ko": "새 직장 덕에 집안 살림이 안정되자 디파는 한숨 돌렸어요.",
    "blank": "स्थिरता",
+   "src": "made"
+  }
+ ],
+ "w|स्थूल": [
+  {
+   "text": "रोहन ने बताया कि यह योजना का स्थूल ख़ाका है, बारीकियाँ बाद में तय होंगी।",
+   "en": "Rohan said this is a rough outline of the plan; the details will be decided later.",
+   "ko": "로한은 이게 계획의 대략적인 윤곽이고 세부 사항은 나중에 정한다고 했어요.",
+   "blank": "स्थूल",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने कहा कि अभी बस स्थूल अनुमान चाहिए, सटीक आँकड़े बाद में।",
+   "en": "Meena said that for now they just need a rough estimate; precise figures can come later.",
+   "ko": "미나는 지금은 대략적인 추정만 있으면 되고 정확한 수치는 나중이라고 했어요.",
+   "blank": "स्थूल",
    "src": "made"
   }
  ],
