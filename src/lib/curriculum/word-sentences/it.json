@@ -10337,6 +10337,22 @@
    "blank": "burro"
   }
  ],
+ "w|burrone": [
+  {
+   "text": "Matteo si ferma sul bordo del burrone a guardare il fiume.",
+   "en": "Matteo stops at the edge of the ravine to look at the river.",
+   "ko": "마테오는 협곡 가장자리에 멈춰 서서 강을 내려다봐요.",
+   "blank": "burrone",
+   "src": "made"
+  },
+  {
+   "text": "Sara cura un cane caduto in un burrone durante una gita.",
+   "en": "Sara treats a dog that fell into a ravine during an outing.",
+   "ko": "사라는 나들이 중 협곡에 떨어진 개를 치료해요.",
+   "blank": "burrone",
+   "src": "made"
+  }
+ ],
  "w|bussare": [
   {
    "text": "Il vicino viene a bussare alla porta di Matteo per chiedere un po' di zucchero.",
@@ -10381,6 +10397,22 @@
    "en": "The pay envelope arrives at the end of the month.",
    "ko": "급여 봉투는 월말에 와.",
    "blank": "busta"
+  }
+ ],
+ "w|busto": [
+  {
+   "text": "Nel bosco Matteo trova il busto di pietra di una vecchia statua coperto di muschio.",
+   "en": "In the woods Matteo finds the stone bust of an old statue covered in moss.",
+   "ko": "숲에서 마테오는 이끼로 덮인 오래된 석상의 흉상을 발견해요.",
+   "blank": "busto",
+   "src": "made"
+  },
+  {
+   "text": "Dopo l'operazione alla schiena, Sara mette al cane un busto ortopedico.",
+   "en": "After the back surgery, Sara puts an orthopaedic brace on the dog.",
+   "ko": "등 수술 뒤 사라는 개에게 보조기를 채워요.",
+   "blank": "busto",
+   "src": "made"
   }
  ],
  "w|buttare": [
@@ -12238,6 +12270,22 @@
    "en": "Martina doesn't want to punish the boy who stole a candy, but she talks to him seriously.",
    "ko": "마르티나는 사탕을 훔친 소년을 벌주고 싶지는 않지만 진지하게 타일러요.",
    "blank": "castigare",
+   "src": "made"
+  }
+ ],
+ "w|castoro": [
+  {
+   "text": "Lungo il fiume Matteo scopre la diga costruita da un castoro.",
+   "en": "Along the river Matteo discovers the dam built by a beaver.",
+   "ko": "강을 따라가다 마테오는 비버가 지은 댐을 발견해요.",
+   "blank": "castoro",
+   "src": "made"
+  },
+  {
+   "text": "In un centro faunistico, Sara ha curato un castoro ferito.",
+   "en": "At a wildlife centre, Sara treated an injured beaver.",
+   "ko": "사라는 야생동물 센터에서 다친 비버를 치료했어요.",
+   "blank": "castoro",
    "src": "made"
   }
  ],
@@ -21091,6 +21139,22 @@
    "blank": "denaro"
   }
  ],
+ "w|denso": [
+  {
+   "text": "Una nebbia densa copre il fiume e Matteo rallenta il passo.",
+   "en": "A thick fog covers the river and Matteo slows down.",
+   "ko": "짙은 안개가 강을 덮어서 마테오는 걸음을 늦춰요.",
+   "blank": "densa",
+   "src": "made"
+  },
+  {
+   "text": "Sara prescrive uno sciroppo denso per la tosse del gatto.",
+   "en": "Sara prescribes a thick syrup for the cat's cough.",
+   "ko": "사라는 고양이 기침에 끈적한 시럽을 처방해요.",
+   "blank": "denso",
+   "src": "made"
+  }
+ ],
  "w|dente": [
   {
    "text": "Mi fa male un dente da ieri.",
@@ -23381,6 +23445,22 @@
    "blank": "distanza"
   }
  ],
+ "w|distendere": [
+  {
+   "text": "Matteo si siede sulla riva per distendere le gambe stanche.",
+   "en": "Matteo sits down on the bank to stretch his tired legs.",
+   "ko": "마테오는 지친 다리를 쭉 펴려고 강가에 앉아요.",
+   "blank": "distendere",
+   "src": "made"
+  },
+  {
+   "text": "Sara aiuta il cane a distendere la zampa sul lettino.",
+   "en": "Sara helps the dog stretch out its leg on the examination table.",
+   "ko": "사라는 개가 진료대 위에서 다리를 펴도록 도와줘요.",
+   "blank": "distendere",
+   "src": "made"
+  }
+ ],
  "w|distinguere": [
   {
    "text": "Al microscopio Davide impara a distinguere una cellula vegetale da una animale.",
@@ -25045,6 +25125,22 @@
    "en": "Does he want to come? Of course he does!",
    "ko": "오고 싶어? 당연히 오지!",
    "blank": "Eccome"
+  }
+ ],
+ "w|eclisse": [
+  {
+   "text": "Dalla radura Matteo ha visto un'eclisse di luna.",
+   "en": "From the clearing Matteo saw an eclipse of the moon.",
+   "ko": "마테오는 숲속 빈터에서 월식을 봤어요.",
+   "blank": "eclisse",
+   "src": "made"
+  },
+  {
+   "text": "Il giorno dell'eclisse molti padroni chiamano Sara perché i loro cani sono agitati.",
+   "en": "On the day of the eclipse many owners call Sara because their dogs are restless.",
+   "ko": "일식이 있던 날 많은 주인들이 개가 불안해한다며 사라에게 전화해요.",
+   "blank": "eclisse",
+   "src": "made"
   }
  ],
  "w|eco": [
@@ -28785,6 +28881,22 @@
    "src": "made"
   }
  ],
+ "w|fertile": [
+  {
+   "text": "La terra lungo il fiume è molto fertile, dice Matteo ai contadini.",
+   "en": "The land along the river is very fertile, Matteo tells the farmers.",
+   "ko": "강을 따라 있는 땅은 아주 비옥하다고 마테오가 농부들에게 말해요.",
+   "blank": "fertile",
+   "src": "made"
+  },
+  {
+   "text": "Sara spiega alla padrona in quali periodi la cagna è fertile.",
+   "en": "Sara explains to the owner during which periods the dog is fertile.",
+   "ko": "사라는 주인에게 개가 어느 시기에 임신할 수 있는지 설명해요.",
+   "blank": "fertile",
+   "src": "made"
+  }
+ ],
  "w|festa": [
   {
    "text": "Che festa, ieri sera.",
@@ -30593,6 +30705,22 @@
    "src": "made"
   }
  ],
+ "w|frana": [
+  {
+   "text": "Una frana ha bloccato il sentiero e Matteo deve tornare indietro.",
+   "en": "A landslide has blocked the path and Matteo has to turn back.",
+   "ko": "산사태로 오솔길이 막혀서 마테오는 돌아가야 해요.",
+   "blank": "frana",
+   "src": "made"
+  },
+  {
+   "text": "Una frana ha isolato il paese e Sara raggiunge la fattoria a piedi.",
+   "en": "A landslide has cut off the village and Sara reaches the farm on foot.",
+   "ko": "산사태로 마을이 고립되어 사라는 걸어서 농장에 가요.",
+   "blank": "frana",
+   "src": "made"
+  }
+ ],
  "w|francamente": [
   {
    "text": "Matteo ha confessato alla guida che, francamente, quel quadro non gli diceva niente.",
@@ -31615,6 +31743,22 @@
    "blank": "gallina"
   }
  ],
+ "w|gallo": [
+  {
+   "text": "All'alba il canto di un gallo sveglia Matteo nella tenda.",
+   "en": "At dawn a rooster's crow wakes Matteo in his tent.",
+   "ko": "새벽에 수탉 우는 소리가 텐트 속 마테오를 깨워요.",
+   "blank": "gallo",
+   "src": "made"
+  },
+  {
+   "text": "Una signora porta a Sara un gallo con una zampa ferita.",
+   "en": "A woman brings Sara a rooster with an injured leg.",
+   "ko": "한 아주머니가 다리를 다친 수탉을 사라에게 데려와요.",
+   "blank": "gallo",
+   "src": "made"
+  }
+ ],
  "w|gamba": [
   {
    "text": "Mi fa male la gamba sinistra.",
@@ -31838,6 +31982,22 @@
    "en": "At the January market Chiara drinks a hot tea to fight the icy wind.",
    "ko": "일월 시장에서 키아라는 얼음장 같은 바람을 견디려고 따뜻한 차를 마셔요.",
    "blank": "gelido",
+   "src": "made"
+  }
+ ],
+ "w|gelo": [
+  {
+   "text": "Matteo esce all'alba nonostante il gelo.",
+   "en": "Matteo goes out at dawn despite the frost.",
+   "ko": "마테오는 혹한에도 새벽에 밖으로 나가요.",
+   "blank": "gelo",
+   "src": "made"
+  },
+  {
+   "text": "Un gattino trovato nel gelo arriva da Sara quasi immobile.",
+   "en": "A kitten found in the freezing cold arrives at Sara's almost unable to move.",
+   "ko": "혹한 속에서 발견된 새끼 고양이가 거의 움직이지 못한 채 사라에게 와요.",
+   "blank": "gelo",
    "src": "made"
   }
  ],
@@ -32762,6 +32922,22 @@
    "en": "The startup's founder spent his youth programming, Chiara says.",
    "ko": "스타트업 창업자는 젊은 시절을 프로그래밍하며 보냈다고 키아라가 말해요.",
    "blank": "giovinezza",
+   "src": "made"
+  }
+ ],
+ "w|giraffa": [
+  {
+   "text": "La figlia di Matteo chiama giraffa un albero altissimo e sottile.",
+   "en": "Matteo's daughter calls a very tall, thin tree a giraffe.",
+   "ko": "마테오의 딸은 아주 높고 가는 나무를 기린이라고 불러요.",
+   "blank": "giraffa",
+   "src": "made"
+  },
+  {
+   "text": "Allo zoo, Sara doveva salire su una scala per visitare la giraffa.",
+   "en": "At the zoo, Sara had to climb a ladder to examine the giraffe.",
+   "ko": "동물원에서 사라는 기린을 진찰하려면 사다리에 올라가야 했어요.",
+   "blank": "giraffa",
    "src": "made"
   }
  ],
@@ -34180,6 +34356,22 @@
    "en": "The tiramisu Chiara brought is the tastiest dessert of the evening.",
    "ko": "키아라가 가져온 티라미수가 그날 저녁 가장 맛있는 디저트예요.",
    "blank": "gustoso",
+   "src": "made"
+  }
+ ],
+ "w|habitat": [
+  {
+   "text": "Il fiume pulito è l'habitat ideale per gli aironi, spiega Matteo.",
+   "en": "A clean river is the ideal habitat for herons, Matteo explains.",
+   "ko": "깨끗한 강은 왜가리에게 이상적인 서식지라고 마테오가 설명해요.",
+   "blank": "habitat",
+   "src": "made"
+  },
+  {
+   "text": "Sara consiglia di ricreare in gabbia l'habitat naturale del criceto.",
+   "en": "Sara recommends recreating the hamster's natural habitat in its cage.",
+   "ko": "사라는 우리 안에 햄스터의 자연 서식지를 꾸며 주라고 권해요.",
+   "blank": "habitat",
    "src": "made"
   }
  ],
@@ -40609,6 +40801,22 @@
    "blank": "leone"
   }
  ],
+ "w|leopardo": [
+  {
+   "text": "Il gatto selvatico che Matteo fotografa sembra un piccolo leopardo.",
+   "en": "The wildcat Matteo photographs looks like a little leopard.",
+   "ko": "마테오가 찍은 들고양이는 작은 표범 같아요.",
+   "blank": "leopardo",
+   "src": "made"
+  },
+  {
+   "text": "Il gatto bengala ha il pelo maculato come un leopardo, nota Sara.",
+   "en": "The Bengal cat has spotted fur like a leopard, Sara notes.",
+   "ko": "벵골 고양이는 표범처럼 얼룩무늬 털이 있다고 사라가 말해요.",
+   "blank": "leopardo",
+   "src": "made"
+  }
+ ],
  "w|lesione": [
   {
    "text": "Marco è caduto in cortile, ma il medico ha escluso lesioni gravi al polso.",
@@ -41106,6 +41314,22 @@
    "en": "To explain acidity to the students, Anna uses lemon juice.",
    "ko": "학생들에게 산성을 설명하려고 안나는 레몬즙을 써요.",
    "blank": "limone",
+   "src": "made"
+  }
+ ],
+ "w|limpido": [
+  {
+   "text": "L'acqua del torrente è così limpida che Matteo vede i pesci sul fondo.",
+   "en": "The stream's water is so clear that Matteo can see the fish on the bottom.",
+   "ko": "개울물이 너무 맑아서 마테오는 바닥의 물고기가 보여요.",
+   "blank": "limpida",
+   "src": "made"
+  },
+  {
+   "text": "Sara spiega le cure ai padroni con un linguaggio limpido.",
+   "en": "Sara explains the treatments to the owners in clear language.",
+   "ko": "사라는 주인들에게 치료법을 알기 쉬운 말로 설명해요.",
+   "blank": "limpido",
    "src": "made"
   }
  ],
@@ -41837,6 +42061,22 @@
    "blank": "ma"
   }
  ],
+ "w|macabro": [
+  {
+   "text": "Matteo racconta una leggenda macabra sul vecchio mulino abbandonato.",
+   "en": "Matteo tells a macabre legend about the old abandoned mill.",
+   "ko": "마테오는 버려진 옛 물레방아에 얽힌 섬뜩한 전설을 이야기해요.",
+   "blank": "macabra",
+   "src": "made"
+  },
+  {
+   "text": "I colleghi scherzano sull'umorismo macabro di Sara.",
+   "en": "Her colleagues joke about Sara's macabre sense of humour.",
+   "ko": "동료들은 사라의 섬뜩한 유머를 두고 농담해요.",
+   "blank": "macabro",
+   "src": "made"
+  }
+ ],
  "w|macchia": [
   {
    "text": "C'è una macchia di vino sulla tovaglia.",
@@ -42539,6 +42779,22 @@
    "blank": "mamma"
   }
  ],
+ "w|mammifero": [
+  {
+   "text": "La lontra è il mammifero che Matteo spera di vedere sul fiume.",
+   "en": "The otter is the mammal Matteo hopes to see on the river.",
+   "ko": "수달은 마테오가 강에서 보고 싶어하는 포유류예요.",
+   "blank": "mammifero",
+   "src": "made"
+  },
+  {
+   "text": "Sara spiega a un bambino che il pipistrello è un mammifero.",
+   "en": "Sara explains to a child that the bat is a mammal.",
+   "ko": "사라는 아이에게 박쥐가 포유류라고 설명해요.",
+   "blank": "mammifero",
+   "src": "made"
+  }
+ ],
  "w|mammina": [
   {
    "text": "La mammina prepara la merenda per i bambini.",
@@ -42684,6 +42940,22 @@
    "en": "Chiara has finished her term as captain and now it's another girl's turn.",
    "ko": "키아라의 주장 임기가 끝나서 이제 다른 선수 차례예요.",
    "blank": "mandato",
+   "src": "made"
+  }
+ ],
+ "w|mandria": [
+  {
+   "text": "Una mandria di mucche attraversa il ponte davanti a Matteo.",
+   "en": "A herd of cows crosses the bridge in front of Matteo.",
+   "ko": "소 떼가 마테오 앞에서 다리를 건너요.",
+   "blank": "mandria",
+   "src": "made"
+  },
+  {
+   "text": "Una volta al mese Sara visita una mandria di mucche in montagna.",
+   "en": "Once a month Sara examines a herd of cows in the mountains.",
+   "ko": "사라는 한 달에 한 번 산에 있는 소 떼를 진찰해요.",
+   "blank": "mandria",
    "src": "made"
   }
  ],
@@ -43258,6 +43530,22 @@
    "en": "The chef taught Martina the sailor's knot for tying the roast.",
    "ko": "셰프는 마르티나에게 고기를 묶는 뱃사람 매듭을 가르쳐 줬어요.",
    "blank": "marinaio",
+   "src": "made"
+  }
+ ],
+ "w|marino": [
+  {
+   "text": "Tra i sassi del fiume Matteo trova un fossile marino.",
+   "en": "Among the river stones Matteo finds a marine fossil.",
+   "ko": "마테오는 강가 돌 사이에서 바다 생물 화석을 찾아요.",
+   "blank": "marino",
+   "src": "made"
+  },
+  {
+   "text": "Sara ha curato una tartaruga marina rimasta impigliata in una rete.",
+   "en": "Sara treated a sea turtle that got tangled in a net.",
+   "ko": "사라는 그물에 걸린 바다거북을 치료했어요.",
+   "blank": "marina",
    "src": "made"
   }
  ],
@@ -50253,6 +50541,22 @@
    "src": "made"
   }
  ],
+ "w|ossessivo": [
+  {
+   "text": "Matteo controlla il livello del fiume in modo quasi ossessivo.",
+   "en": "Matteo checks the river level almost obsessively.",
+   "ko": "마테오는 거의 집착하듯이 강 수위를 확인해요.",
+   "blank": "ossessivo",
+   "src": "made"
+  },
+  {
+   "text": "Un padrone ossessivo chiama Sara tre volte al giorno.",
+   "en": "An obsessive owner calls Sara three times a day.",
+   "ko": "집착이 심한 주인이 사라에게 하루에 세 번씩 전화해요.",
+   "blank": "ossessivo",
+   "src": "made"
+  }
+ ],
  "w|ossia": [
   {
    "text": "Luca usa il lievito madre, ossia una pasta acida che si rinnova ogni giorno.",
@@ -53033,6 +53337,22 @@
    "blank": "perfetto"
   }
  ],
+ "w|perfezionare": [
+  {
+   "text": "Matteo vuole perfezionare la sua tecnica di pesca a mosca.",
+   "en": "Matteo wants to perfect his fly-fishing technique.",
+   "ko": "마테오는 플라이 낚시 기술을 다듬고 싶어해요.",
+   "blank": "perfezionare",
+   "src": "made"
+  },
+  {
+   "text": "Sara frequenta un corso per perfezionare la chirurgia dei piccoli animali.",
+   "en": "Sara is taking a course to perfect her small-animal surgery.",
+   "ko": "사라는 소동물 수술 실력을 다듬으려고 강좌를 들어요.",
+   "blank": "perfezionare",
+   "src": "made"
+  }
+ ],
  "w|perfezione": [
   {
    "text": "Il direttore non chiede a Paolo la perfezione, ma la puntualità.",
@@ -53556,6 +53876,22 @@
    "en": "At the end of summer Chiara pounds basil in the mortar to make pesto to freeze.",
    "ko": "여름이 끝날 무렵 키아라는 절구에 바질을 빻아 얼려 둘 페스토를 만들어요.",
    "blank": "pesta",
+   "src": "made"
+  }
+ ],
+ "w|petalo": [
+  {
+   "text": "Un petalo bianco galleggia sull'acqua accanto a Matteo.",
+   "en": "A white petal floats on the water next to Matteo.",
+   "ko": "하얀 꽃잎 하나가 마테오 옆 물 위에 떠 있어요.",
+   "blank": "petalo",
+   "src": "made"
+  },
+  {
+   "text": "Un gatto ha masticato un petalo di giglio e Sara lo cura subito.",
+   "en": "A cat chewed a lily petal and Sara treats it right away.",
+   "ko": "고양이가 백합 꽃잎을 씹어서 사라가 바로 치료해요.",
+   "blank": "petalo",
    "src": "made"
   }
  ],
@@ -54557,6 +54893,22 @@
    "src": "made"
   }
  ],
+ "w|placca": [
+  {
+   "text": "Una placca di ghiaccio sul sentiero fa scivolare Matteo.",
+   "en": "A patch of ice on the path makes Matteo slip.",
+   "ko": "오솔길의 얼음판에 마테오가 미끄러져요.",
+   "blank": "placca",
+   "src": "made"
+  },
+  {
+   "text": "Sara toglie la placca dai denti di un vecchio cane.",
+   "en": "Sara removes the plaque from an old dog's teeth.",
+   "ko": "사라는 늙은 개의 이에서 치석을 제거해요.",
+   "blank": "placca",
+   "src": "made"
+  }
+ ],
  "w|plasma": [
   {
    "text": "Simone vede su un manifesto che l'ospedale cerca donatori di plasma.",
@@ -54782,6 +55134,22 @@
    "en": "In January a wave of polar cold arrives, and Elena lights the fireplace.",
    "ko": "1월에 극지방 한파가 닥치자 엘레나는 벽난로에 불을 피워요.",
    "blank": "polare",
+   "src": "made"
+  }
+ ],
+ "w|poligono": [
+  {
+   "text": "Sulla mappa, la riserva naturale ha la forma di un poligono irregolare, nota Matteo.",
+   "en": "On the map, the nature reserve has the shape of an irregular polygon, Matteo notes.",
+   "ko": "지도에서 자연 보호 구역은 불규칙한 다각형 모양이라고 마테오가 말해요.",
+   "blank": "poligono",
+   "src": "made"
+  },
+  {
+   "text": "Nel disegno del bambino Sara vede un poligono colorato che dovrebbe essere un gatto.",
+   "en": "In the child's drawing Sara sees a coloured polygon that's supposed to be a cat.",
+   "ko": "사라는 아이 그림에서 고양이라는 알록달록한 다각형을 봐요.",
+   "blank": "poligono",
    "src": "made"
   }
  ],
@@ -55588,6 +55956,22 @@
    "en": "Giulia volunteers in winter, when poverty is more visible.",
    "ko": "줄리아는 가난이 더 잘 보이는 겨울에 봉사 활동을 해요.",
    "blank": "povertà",
+   "src": "made"
+  }
+ ],
+ "w|pozza": [
+  {
+   "text": "Dopo il temporale, Matteo salta dentro una pozza di fango.",
+   "en": "After the storm, Matteo jumps into a muddy puddle.",
+   "ko": "폭풍우가 지나간 뒤 마테오는 진흙 웅덩이에 뛰어들어요.",
+   "blank": "pozza",
+   "src": "made"
+  },
+  {
+   "text": "Il cane arriva da Sara tutto sporco dopo una corsa in una pozza.",
+   "en": "The dog arrives at Sara's all dirty after a run through a puddle.",
+   "ko": "개는 웅덩이를 뛰어다닌 뒤 온통 더러워진 채 사라에게 와요.",
+   "blank": "pozza",
    "src": "made"
   }
  ],
@@ -61965,6 +62349,22 @@
    "blank": "ricompensa"
   }
  ],
+ "w|ricompensare": [
+  {
+   "text": "La vista sulla cascata basta a ricompensare Matteo della lunga salita.",
+   "en": "The view of the waterfall is enough to reward Matteo for the long climb.",
+   "ko": "폭포 풍경만으로도 마테오는 긴 오르막길을 보상받아요.",
+   "blank": "ricompensare",
+   "src": "made"
+  },
+  {
+   "text": "Sara usa un biscotto per ricompensare il cane dopo l'iniezione.",
+   "en": "Sara uses a biscuit to reward the dog after the injection.",
+   "ko": "사라는 주사를 맞은 개에게 과자로 상을 줘요.",
+   "blank": "ricompensare",
+   "src": "made"
+  }
+ ],
  "w|riconoscente": [
   {
    "text": "Davide è riconoscente alla collega che gli ha mostrato la mensa.",
@@ -62008,6 +62408,22 @@
    "en": "Sara received an award from the council for her thirty years at the market.",
    "ko": "사라는 시장에서 일한 지 삼십 년이 되어 시에서 표창을 받았어요.",
    "blank": "riconoscimento",
+   "src": "made"
+  }
+ ],
+ "w|riconsiderare": [
+  {
+   "text": "Con il fiume in piena, Matteo deve riconsiderare il percorso.",
+   "en": "With the river in flood, Matteo has to rethink his route.",
+   "ko": "강물이 불어나서 마테오는 길을 다시 생각해 봐야 해요.",
+   "blank": "riconsiderare",
+   "src": "made"
+  },
+  {
+   "text": "Sara chiede alla famiglia di riconsiderare l'adozione di un cane così grande.",
+   "en": "Sara asks the family to reconsider adopting such a big dog.",
+   "ko": "사라는 그 가족에게 이렇게 큰 개를 입양하는 걸 다시 생각해 보라고 해요.",
+   "blank": "riconsiderare",
    "src": "made"
   }
  ],
@@ -62627,6 +63043,22 @@
    "blank": "rimettere"
   }
  ],
+ "w|rimozione": [
+  {
+   "text": "Matteo partecipa con i volontari alla rimozione dei rifiuti dalla riva.",
+   "en": "Matteo joins the volunteers in removing rubbish from the riverbank.",
+   "ko": "마테오는 자원봉사자들과 함께 강가 쓰레기 치우기에 참여해요.",
+   "blank": "rimozione",
+   "src": "made"
+  },
+  {
+   "text": "Oggi Sara si occupa della rimozione dei punti a un gatto operato.",
+   "en": "Today Sara is taking out the stitches of a cat that had surgery.",
+   "ko": "오늘 사라는 수술한 고양이의 실밥을 뽑아요.",
+   "blank": "rimozione",
+   "src": "made"
+  }
+ ],
  "w|rimpiangere": [
   {
    "text": "Matteo spera di non rimpiangere il vecchio ufficio vicino a casa.",
@@ -62824,6 +63256,22 @@
    "en": "Laura has to renew her medical certificate before every race.",
    "ko": "라우라는 경기 때마다 건강 진단서를 새로 받아야 해요.",
    "blank": "rinnovare",
+   "src": "made"
+  }
+ ],
+ "w|rinoceronte": [
+  {
+   "text": "Il tronco caduto ha la forma di un rinoceronte, scherza Matteo.",
+   "en": "The fallen trunk is shaped like a rhinoceros, Matteo jokes.",
+   "ko": "쓰러진 나무줄기가 코뿔소 모양이라고 마테오가 농담해요.",
+   "blank": "rinoceronte",
+   "src": "made"
+  },
+  {
+   "text": "In un documentario Sara ha visto dei veterinari curare un rinoceronte.",
+   "en": "In a documentary Sara saw some vets treating a rhinoceros.",
+   "ko": "사라는 다큐멘터리에서 수의사들이 코뿔소를 치료하는 걸 봤어요.",
+   "blank": "rinoceronte",
    "src": "made"
   }
  ],
@@ -64125,6 +64573,22 @@
    "en": "The rock overlooks the sea.",
    "ko": "바위가 바다를 내려다봐.",
    "blank": "roccia"
+  }
+ ],
+ "w|roditore": [
+  {
+   "text": "Matteo vede un piccolo roditore sparire tra le radici.",
+   "en": "Matteo sees a small rodent disappear among the roots.",
+   "ko": "마테오는 작은 설치류가 나무뿌리 사이로 사라지는 걸 봐요.",
+   "blank": "roditore",
+   "src": "made"
+  },
+  {
+   "text": "Sara spiega che ogni roditore ha denti che crescono per tutta la vita.",
+   "en": "Sara explains that every rodent has teeth that grow throughout its life.",
+   "ko": "사라는 설치류는 모두 평생 이가 자란다고 설명해요.",
+   "blank": "roditore",
+   "src": "made"
   }
  ],
  "w|romano": [
@@ -65705,6 +66169,22 @@
    "src": "made"
   }
  ],
+ "w|scaletta": [
+  {
+   "text": "Matteo scende fino all'acqua da una scaletta di legno.",
+   "en": "Matteo climbs down to the water by a small wooden ladder.",
+   "ko": "마테오는 작은 나무 사다리를 타고 물가로 내려가요.",
+   "blank": "scaletta",
+   "src": "made"
+  },
+  {
+   "text": "Per il cane anziano Sara consiglia una scaletta per salire sul divano.",
+   "en": "For the elderly dog Sara recommends a small set of steps to get onto the sofa.",
+   "ko": "사라는 늙은 개를 위해 소파에 오를 작은 계단을 권해요.",
+   "blank": "scaletta",
+   "src": "made"
+  }
+ ],
  "w|scambiare": [
   {
    "text": "Possiamo scambiare i posti a sedere?",
@@ -65777,6 +66257,22 @@
    "en": "A laugh slipped out of me.",
    "ko": "웃음이 새어 나왔어.",
    "blank": "scappata"
+  }
+ ],
+ "w|scarabeo": [
+  {
+   "text": "Matteo osserva uno scarabeo che spinge una pallina di terra.",
+   "en": "Matteo watches a beetle pushing a little ball of earth.",
+   "ko": "마테오는 흙 경단을 굴리는 풍뎅이를 지켜봐요.",
+   "blank": "scarabeo",
+   "src": "made"
+  },
+  {
+   "text": "Un cucciolo ha mangiato uno scarabeo e la padrona chiama Sara preoccupata.",
+   "en": "A puppy ate a beetle and its worried owner calls Sara.",
+   "ko": "강아지가 풍뎅이를 먹어서 주인이 걱정하며 사라에게 전화해요.",
+   "blank": "scarabeo",
+   "src": "made"
   }
  ],
  "w|scarafaggio": [
@@ -66572,6 +67068,22 @@
    "en": "The fishmonger tells Chiara the mussels come from a nearby cliff.",
    "ko": "생선 장수는 키아라에게 홍합이 근처 절벽에서 왔다고 말해요.",
    "blank": "scogliera",
+   "src": "made"
+  }
+ ],
+ "w|scoglio": [
+  {
+   "text": "Matteo pesca seduto su uno scoglio in mezzo al torrente.",
+   "en": "Matteo fishes sitting on a rock in the middle of the stream.",
+   "ko": "마테오는 개울 한가운데 바위에 앉아 낚시해요.",
+   "blank": "scoglio",
+   "src": "made"
+  },
+  {
+   "text": "Un cane si è tagliato la zampa su uno scoglio e Sara gliela medica.",
+   "en": "A dog cut its paw on a rock and Sara dresses the wound.",
+   "ko": "개가 바위에 발을 베여서 사라가 치료해 줘요.",
+   "blank": "scoglio",
    "src": "made"
   }
  ],
@@ -68875,6 +69387,22 @@
    "en": "Today I feel really unlucky.",
    "ko": "오늘 정말 재수 없다고 느껴.",
    "blank": "sfigato"
+  }
+ ],
+ "w|sfiorare": [
+  {
+   "text": "Matteo guarda una rondine sfiorare l'acqua del fiume.",
+   "en": "Matteo watches a swallow skim the river's surface.",
+   "ko": "마테오는 제비가 강물 위를 스치듯 나는 걸 바라봐요.",
+   "blank": "sfiorare",
+   "src": "made"
+  },
+  {
+   "text": "Basta sfiorare la zampa del cane perché guaisca, nota Sara.",
+   "en": "Just brushing the dog's paw makes it yelp, Sara notices.",
+   "ko": "개 발을 살짝 스치기만 해도 낑낑거린다는 걸 사라가 알아채요.",
+   "blank": "sfiorare",
+   "src": "made"
   }
  ],
  "w|sfogare": [
@@ -72359,6 +72887,22 @@
    "src": "made"
   }
  ],
+ "w|spoglia": [
+  {
+   "text": "Su un sasso caldo Matteo trova la spoglia di una vipera.",
+   "en": "On a warm rock Matteo finds the shed skin of a viper.",
+   "ko": "마테오는 따뜻한 돌 위에서 독사의 허물을 발견해요.",
+   "blank": "spoglia",
+   "src": "made"
+  },
+  {
+   "text": "Il proprietario porta a Sara la spoglia del suo serpente, rimasta a pezzi dopo la muta.",
+   "en": "The owner brings Sara his snake's shed skin, which came off in pieces after moulting.",
+   "ko": "주인이 탈피 뒤 조각조각 남은 뱀 허물을 사라에게 가져와요.",
+   "blank": "spoglia",
+   "src": "made"
+  }
+ ],
  "w|sponda": [
   {
    "text": "Luca si siede sulla sponda del lago a pescare.",
@@ -73265,6 +73809,22 @@
    "en": "A pound is worth more than a euro today.",
    "ko": "오늘은 파운드가 유로보다 비싸.",
    "blank": "sterlina"
+  }
+ ],
+ "w|sterminare": [
+  {
+   "text": "Un parassita rischia di sterminare i castagni del bosco, spiega Matteo.",
+   "en": "A parasite could wipe out the chestnut trees in the woods, Matteo explains.",
+   "ko": "기생충이 숲의 밤나무를 몰살시킬 수도 있다고 마테오가 설명해요.",
+   "blank": "sterminare",
+   "src": "made"
+  },
+  {
+   "text": "Sara usa un prodotto per sterminare le pulci del cucciolo.",
+   "en": "Sara uses a product to wipe out the puppy's fleas.",
+   "ko": "사라는 강아지 벼룩을 없애려고 약을 써요.",
+   "blank": "sterminare",
+   "src": "made"
   }
  ],
  "w|steroide": [
@@ -78711,6 +79271,22 @@
    "src": "made"
   }
  ],
+ "w|tuono": [
+  {
+   "text": "Al primo tuono Matteo ritira la canna da pesca e cerca riparo.",
+   "en": "At the first clap of thunder Matteo reels in his fishing rod and looks for shelter.",
+   "ko": "첫 천둥소리에 마테오는 낚싯대를 거두고 피할 곳을 찾아요.",
+   "blank": "tuono",
+   "src": "made"
+  },
+  {
+   "text": "Un cane arriva in clinica terrorizzato da un tuono, e Sara lo calma.",
+   "en": "A dog arrives at the clinic terrified by a clap of thunder, and Sara calms it down.",
+   "ko": "천둥소리에 겁먹은 개가 병원에 오자 사라가 진정시켜요.",
+   "blank": "tuono",
+   "src": "made"
+  }
+ ],
  "w|turbare": [
   {
    "text": "Il cellulare che squilla in sala lettura turba la concentrazione di Luca.",
@@ -79812,6 +80388,22 @@
    "en": "Giulia orders a toy train with a red carriage for her nephew.",
    "ko": "줄리아는 조카에게 줄 빨간 객차가 달린 장난감 기차를 주문해요.",
    "blank": "vagone",
+   "src": "made"
+  }
+ ],
+ "w|valanga": [
+  {
+   "text": "In inverno Matteo evita il canalone per il pericolo di valanga.",
+   "en": "In winter Matteo avoids the gully because of the avalanche risk.",
+   "ko": "겨울에 마테오는 눈사태 위험 때문에 골짜기를 피해요.",
+   "blank": "valanga",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il weekend arriva sempre una valanga di telefonate per Sara.",
+   "en": "After the weekend there's always an avalanche of phone calls for Sara.",
+   "ko": "주말이 지나면 사라에게는 늘 전화가 쏟아져요.",
+   "blank": "valanga",
    "src": "made"
   }
  ],
@@ -82337,6 +82929,22 @@
    "src": "made"
   }
  ],
+ "w|zebra": [
+  {
+   "text": "Nel bosco Matteo trova una farfalla a strisce bianche e nere come una zebra.",
+   "en": "In the woods Matteo finds a butterfly with black and white stripes like a zebra.",
+   "ko": "마테오는 숲에서 얼룩말처럼 흰색과 검은색 줄무늬가 있는 나비를 찾아요.",
+   "blank": "zebra",
+   "src": "made"
+  },
+  {
+   "text": "Durante il tirocinio allo zoo, Sara ha visitato una zebra con una zampa gonfia.",
+   "en": "During her internship at the zoo, Sara examined a zebra with a swollen leg.",
+   "ko": "사라는 동물원 실습 때 다리가 부은 얼룩말을 진찰했어요.",
+   "blank": "zebra",
+   "src": "made"
+  }
+ ],
  "w|zero": [
   {
    "text": "La temperatura è scesa sotto zero.",
@@ -82407,6 +83015,38 @@
    "en": "Please keep quiet.",
    "ko": "제발 조용히 있어.",
    "blank": "zitto"
+  }
+ ],
+ "w|zoccolo": [
+  {
+   "text": "Nel fango Matteo riconosce l'impronta dello zoccolo di un cervo.",
+   "en": "In the mud Matteo recognizes the hoof print of a deer.",
+   "ko": "마테오는 진흙에서 사슴 발굽 자국을 알아봐요.",
+   "blank": "zoccolo",
+   "src": "made"
+  },
+  {
+   "text": "Sara pulisce lo zoccolo di un cavallo che zoppica.",
+   "en": "Sara cleans the hoof of a limping horse.",
+   "ko": "사라는 다리를 저는 말의 발굽을 닦아요.",
+   "blank": "zoccolo",
+   "src": "made"
+  }
+ ],
+ "w|zolfo": [
+  {
+   "text": "Vicino alla sorgente calda, Matteo sente un forte odore di zolfo.",
+   "en": "Near the hot spring, Matteo smells a strong odour of sulphur.",
+   "ko": "온천 근처에서 마테오는 진한 유황 냄새를 맡아요.",
+   "blank": "zolfo",
+   "src": "made"
+  },
+  {
+   "text": "Sara prescrive una pomata allo zolfo per la pelle del cane.",
+   "en": "Sara prescribes a sulphur ointment for the dog's skin.",
+   "ko": "사라는 개 피부에 바를 유황 연고를 처방해요.",
+   "blank": "zolfo",
+   "src": "made"
   }
  ],
  "w|zona": [

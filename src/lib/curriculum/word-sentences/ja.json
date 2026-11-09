@@ -17051,6 +17051,22 @@
    "src": "tatoeba:11163599/small_snow en:6580418/Hybrid"
   }
  ],
+ "w|亡命": [
+  {
+   "text": "この画家は、若いころ外国に亡命して絵を描き続けた。",
+   "en": "This painter went into exile abroad in his youth and kept painting.",
+   "ko": "이 화가는 젊은 시절 외국으로 망명해서 그림을 계속 그렸어요.",
+   "blank": "亡命",
+   "src": "made"
+  },
+  {
+   "text": "森の奥の小屋には、かつて亡命してきた学者が住んでいたという。",
+   "en": "It is said that a scholar who had fled into exile once lived in the cabin deep in the forest.",
+   "ko": "숲속 오두막에는 예전에 망명해 온 학자가 살았다고 해요.",
+   "blank": "亡命",
+   "src": "made"
+  }
+ ],
  "w|交付": [
   {
    "text": "市から補助金の交付が決まり、公園の工事が始まった。",
@@ -22541,6 +22557,22 @@
    "blank": "内容"
   }
  ],
+ "w|内臓": [
+  {
+   "text": "自然史の展示室には、魚の内臓のしくみが分かる模型がある。",
+   "en": "The natural history room has a model showing how a fish's internal organs work.",
+   "ko": "자연사 전시실에는 물고기 내장 구조를 알 수 있는 모형이 있어요.",
+   "blank": "内臓",
+   "src": "made"
+  },
+  {
+   "text": "森で死んでいた鹿の内臓を、カラスがつついていた。",
+   "en": "Crows were pecking at the organs of a dead deer in the forest.",
+   "ko": "숲에서 죽어 있던 사슴의 내장을 까마귀가 쪼고 있었어요.",
+   "blank": "内臓",
+   "src": "made"
+  }
+ ],
  "w|内蔵": [
   {
    "text": "新しい舞台装置には、照明を自動で切り替える機能が内蔵されている。",
@@ -22673,6 +22705,22 @@
    "en": "I pressed the play button.",
    "ko": "재생 버튼을 눌렀어.",
    "blank": "再生"
+  }
+ ],
+ "w|再発": [
+  {
+   "text": "展示品の盗難の再発を防ぐため、警備が強化された。",
+   "en": "Security was tightened to prevent another theft of exhibits.",
+   "ko": "전시품 도난이 재발하지 않도록 경비를 강화했어요.",
+   "blank": "再発",
+   "src": "made"
+  },
+  {
+   "text": "去年の山火事の再発を防ぐため、森の入り口でたき火が禁止された。",
+   "en": "To prevent a repeat of last year's forest fire, campfires were banned at the forest entrance.",
+   "ko": "작년 산불이 재발하지 않도록 숲 입구에서 모닥불이 금지됐어요.",
+   "blank": "再発",
+   "src": "made"
   }
  ],
  "w|再開": [
@@ -23292,6 +23340,22 @@
    "en": "The calf got sick, so Yoko asked the vet to treat it.",
    "ko": "송아지 상태가 나빠져서 요코는 수의사에게 처치를 부탁했어요.",
    "blank": "処置",
+   "src": "made"
+  }
+ ],
+ "w|処罰": [
+  {
+   "text": "展示品にさわった客が処罰されることはないが、注意はされる。",
+   "en": "Visitors who touch exhibits aren't punished, but they are warned.",
+   "ko": "전시품을 만진 손님이 처벌받지는 않지만 주의는 받아요.",
+   "blank": "処罰",
+   "src": "made"
+  },
+  {
+   "text": "保護区で魚をとると、法律で処罰されることがある。",
+   "en": "Fishing in the protected area can be punished by law.",
+   "ko": "보호 구역에서 물고기를 잡으면 법으로 처벌받을 수 있어요.",
+   "blank": "処罰",
    "src": "made"
   }
  ],
@@ -28555,6 +28619,22 @@
    "src": "made"
   }
  ],
+ "w|合宿": [
+  {
+   "text": "美術部の学生たちが、合宿の一日を使って博物館に来た。",
+   "en": "Art club students spent one day of their training camp at the museum.",
+   "ko": "미술부 학생들이 합숙 중 하루를 써서 박물관에 왔어요.",
+   "blank": "合宿",
+   "src": "made"
+  },
+  {
+   "text": "葵のゼミは、毎年夏に森の中の山小屋で合宿をする。",
+   "en": "Every summer, Aoi's seminar holds a retreat at a cabin in the forest.",
+   "ko": "아오이의 세미나는 매년 여름 숲속 산장에서 합숙을 해요.",
+   "blank": "合宿",
+   "src": "made"
+  }
+ ],
  "w|合意": [
   {
    "text": "長い交渉の末、取引先と価格について合意した。",
@@ -29107,6 +29187,22 @@
    "en": "Don't damage someone's honor.",
    "ko": "명예를 훼손하지 마.",
    "blank": "名誉"
+  }
+ ],
+ "w|吐き気": [
+  {
+   "text": "ミイラの展示を見て、吐き気がすると言う子どももいた。",
+   "en": "Some children said they felt sick after seeing the mummy exhibit.",
+   "ko": "미라 전시를 보고 속이 메스껍다고 하는 아이도 있었어요.",
+   "blank": "吐き気",
+   "src": "made"
+  },
+  {
+   "text": "山道を車で長く走ったせいで、葵は吐き気がした。",
+   "en": "Aoi felt nauseous after riding in a car along the mountain road for a long time.",
+   "ko": "산길을 차로 오래 달린 탓에 아오이는 속이 메스꺼웠어요.",
+   "blank": "吐き気",
+   "src": "made"
   }
  ],
  "w|吐く": [
@@ -30159,6 +30255,22 @@
    "src": "made"
   }
  ],
+ "w|器具": [
+  {
+   "text": "昔の医療器具が、ガラスケースの中に並んでいる。",
+   "en": "Old medical instruments are lined up in a glass case.",
+   "ko": "옛날 의료 기구가 유리 진열장 안에 늘어서 있어요.",
+   "blank": "器具",
+   "src": "made"
+  },
+  {
+   "text": "葵は、川の水質を調べる器具をリュックに入れて運んだ。",
+   "en": "Aoi carried equipment for testing the river's water quality in her backpack.",
+   "ko": "아오이는 강 수질을 조사하는 기구를 배낭에 넣어 옮겼어요.",
+   "blank": "器具",
+   "src": "made"
+  }
+ ],
  "w|四季": [
   {
    "text": "翔太の家の玄関には、四季の花を描いた掛け軸が飾ってある。",
@@ -31145,6 +31257,22 @@
    "en": "I'm going to the district festival.",
    "ko": "지구 축제에 갈 거야.",
    "blank": "地区"
+  }
+ ],
+ "w|地名": [
+  {
+   "text": "古い地図には、今はもう使われない地名がたくさん書かれている。",
+   "en": "The old map has many place names that are no longer used.",
+   "ko": "옛 지도에는 지금은 쓰이지 않는 지명이 많이 적혀 있어요.",
+   "blank": "地名",
+   "src": "made"
+  },
+  {
+   "text": "この川の地名は、昔の言葉で「速い流れ」という意味らしい。",
+   "en": "The place name of this river apparently means \"swift current\" in an old language.",
+   "ko": "이 강의 지명은 옛말로 '빠른 물살'이라는 뜻이래요.",
+   "blank": "地名",
+   "src": "made"
   }
  ],
  "w|地味": [
@@ -32537,6 +32665,22 @@
    "blank": "外部"
   }
  ],
+ "w|外野": [
+  {
+   "text": "地元の野球の歴史コーナーには、名外野手のグローブが飾られている。",
+   "en": "The local baseball history corner displays the glove of a famous outfielder.",
+   "ko": "지역 야구 역사 코너에는 명외야수의 글러브가 전시돼 있어요.",
+   "blank": "外野",
+   "src": "made"
+  },
+  {
+   "text": "開発の問題に、外野があれこれ口を出すべきではないと村長は言った。",
+   "en": "The village head said outsiders shouldn't meddle in the development issue.",
+   "ko": "개발 문제에 외부 사람이 이러쿵저러쿵 참견해서는 안 된다고 촌장이 말했어요.",
+   "blank": "外野",
+   "src": "made"
+  }
+ ],
  "w|多々": [
   {
    "text": "空港では、荷物の預け忘れなどのトラブルが多々あるらしい。",
@@ -33633,6 +33777,22 @@
    "en": "Your arms are thick.",
    "ko": "팔이 굵네.",
    "blank": "太い"
+  }
+ ],
+ "w|太もも": [
+  {
+   "text": "一日中立って案内していたので、直樹は太ももがぱんぱんになった。",
+   "en": "Naoki had been standing and giving tours all day, so his thighs were completely stiff.",
+   "ko": "하루 종일 서서 안내했더니 나오키는 허벅지가 땡땡해졌어요.",
+   "blank": "太もも",
+   "src": "made"
+  },
+  {
+   "text": "急な坂を登り続けて、葵は太ももが痛くなった。",
+   "en": "After climbing the steep slope for a long time, Aoi's thighs started to ache.",
+   "ko": "가파른 비탈을 계속 오르다 보니 아오이는 허벅지가 아파졌어요.",
+   "blank": "太もも",
+   "src": "made"
   }
  ],
  "w|太る": [
@@ -38367,6 +38527,22 @@
    "src": "made"
   }
  ],
+ "w|幕府": [
+  {
+   "text": "直樹は、江戸幕府の時代の古文書を研究している。",
+   "en": "Naoki studies old documents from the era of the Edo shogunate.",
+   "ko": "나오키는 에도 막부 시대의 고문서를 연구하고 있어요.",
+   "blank": "幕府",
+   "src": "made"
+  },
+  {
+   "text": "この森の道は、幕府が整備した街道の一部だった。",
+   "en": "This forest path was once part of a highway maintained by the shogunate.",
+   "ko": "이 숲길은 막부가 정비한 가도의 일부였어요.",
+   "blank": "幕府",
+   "src": "made"
+  }
+ ],
  "w|干渉": [
   {
    "text": "ベテランの職人は、若手の仕事に必要以上の干渉をしない。",
@@ -41829,6 +42005,22 @@
    "src": "made"
   }
  ],
+ "w|恩恵": [
+  {
+   "text": "鉄道が通ったことで、この町は大きな恩恵を受けたと展示に書いてある。",
+   "en": "The exhibit says the town benefited greatly from the arrival of the railway.",
+   "ko": "철도가 놓이면서 이 마을이 큰 혜택을 받았다고 전시에 적혀 있어요.",
+   "blank": "恩恵",
+   "src": "made"
+  },
+  {
+   "text": "森の恵みは、昔から村の暮らしに大きな恩恵をもたらしてきた。",
+   "en": "The forest's bounty has long brought great benefits to village life.",
+   "ko": "숲의 혜택은 옛날부터 마을 생활에 큰 은혜를 가져다주었어요.",
+   "blank": "恩恵",
+   "src": "made"
+  }
+ ],
  "w|息": [
   {
    "text": "結局、私たちは二人共アルフレッドの音楽に合わせて息が切れるまで踊った。",
@@ -42006,6 +42198,22 @@
    "en": "Chihiro says the winter the village was cut off by heavy snow was like a nightmare.",
    "ko": "폭설로 마을이 고립됐던 그 겨울은 마치 악몽 같았다고 지히로는 말해요.",
    "blank": "悪夢",
+   "src": "made"
+  }
+ ],
+ "w|悪影響": [
+  {
+   "text": "強い照明は古い絵に悪影響を与えるので、展示室は暗めにしてある。",
+   "en": "Strong lighting harms old paintings, so the exhibition room is kept dim.",
+   "ko": "강한 조명은 오래된 그림에 악영향을 주기 때문에 전시실을 어둡게 해 두었어요.",
+   "blank": "悪影響",
+   "src": "made"
+  },
+  {
+   "text": "上流のダム工事が、川の生き物に悪影響を与えていると葵は考えている。",
+   "en": "Aoi thinks the dam construction upstream is harming the creatures in the river.",
+   "ko": "아오이는 상류 댐 공사가 강 생물에 악영향을 주고 있다고 생각해요.",
+   "blank": "悪影響",
    "src": "made"
   }
  ],
@@ -43640,6 +43848,22 @@
    "en": "Before the experiment, the teacher wrote the steps on the blackboard.",
    "ko": "실험 전에 선생님이 순서를 칠판에 썼어요.",
    "blank": "手順",
+   "src": "made"
+  }
+ ],
+ "w|手首": [
+  {
+   "text": "重い展示ケースを動かしたとき、直樹は手首を少しひねった。",
+   "en": "Naoki slightly twisted his wrist while moving a heavy display case.",
+   "ko": "무거운 전시 케이스를 옮기다가 나오키는 손목을 조금 삐었어요.",
+   "blank": "手首",
+   "src": "made"
+  },
+  {
+   "text": "岩場で転んだ葵は、とっさに手をついて手首を痛めた。",
+   "en": "Aoi fell on the rocks and hurt her wrist when she reflexively put her hand out.",
+   "ko": "바위에서 넘어진 아오이는 엉겁결에 손을 짚다가 손목을 다쳤어요.",
+   "blank": "手首",
    "src": "made"
   }
  ],
@@ -45901,6 +46125,22 @@
    "src": "made"
   }
  ],
+ "w|援護": [
+  {
+   "text": "地元の企業の援護を受けて、博物館は改装を終えた。",
+   "en": "With support from local companies, the museum finished its renovation.",
+   "ko": "지역 기업의 지원을 받아 박물관은 리모델링을 마쳤어요.",
+   "blank": "援護",
+   "src": "made"
+  },
+  {
+   "text": "けがをした仲間を援護しながら、葵たちは山を下りた。",
+   "en": "Aoi and the others came down the mountain while supporting their injured companion.",
+   "ko": "다친 동료를 부축하며 아오이 일행은 산을 내려왔어요.",
+   "blank": "援護",
+   "src": "made"
+  }
+ ],
  "w|揺れ": [
   {
    "text": "授業中に小さな揺れを感じて、直樹たちは机の下に入った。",
@@ -45994,6 +46234,22 @@
    "en": "The pianos got wet from a leak, and the school suffered heavy damage.",
    "ko": "비가 새서 피아노가 젖는 바람에 학교는 큰 손해를 입었어요.",
    "blank": "損害",
+   "src": "made"
+  }
+ ],
+ "w|搭乗": [
+  {
+   "text": "航空の展示コーナーでは、昔の搭乗券も見ることができる。",
+   "en": "In the aviation corner, you can also see old boarding passes.",
+   "ko": "항공 전시 코너에서는 옛날 탑승권도 볼 수 있어요.",
+   "blank": "搭乗",
+   "src": "made"
+  },
+  {
+   "text": "森に入る前に、葵たちは小さな飛行機に搭乗して山を見下ろした。",
+   "en": "Before entering the forest, Aoi and the others boarded a small plane and looked down on the mountains.",
+   "ko": "숲에 들어가기 전에 아오이 일행은 작은 비행기에 탑승해 산을 내려다봤어요.",
+   "blank": "搭乗",
    "src": "made"
   }
  ],
@@ -47043,6 +47299,22 @@
    "src": "made"
   }
  ],
+ "w|教団": [
+  {
+   "text": "展示の解説によると、この寺はかつてある教団の拠点だった。",
+   "en": "According to the exhibit notes, this temple was once the base of a religious order.",
+   "ko": "전시 해설에 따르면 이 절은 예전에 어느 교단의 거점이었어요.",
+   "blank": "教団",
+   "src": "made"
+  },
+  {
+   "text": "森の奥には、昔ある教団が修行に使った洞窟がある。",
+   "en": "Deep in the forest is a cave that a religious order once used for ascetic training.",
+   "ko": "숲속에는 예전에 어느 교단이 수행에 쓰던 동굴이 있어요.",
+   "blank": "教団",
+   "src": "made"
+  }
+ ],
  "w|教室": [
   {
    "text": "教室で待っているよ。",
@@ -47804,6 +48076,22 @@
    "en": "Keiko reads newly published papers on animal diseases every morning.",
    "ko": "게이코는 동물 질병에 관한 새로 나온 논문을 매일 아침 읽어요.",
    "blank": "新着",
+   "src": "made"
+  }
+ ],
+ "w|新築": [
+  {
+   "text": "博物館は来年、新築の建物に移ることが決まった。",
+   "en": "It has been decided that the museum will move to a newly built building next year.",
+   "ko": "박물관은 내년에 새로 지은 건물로 옮기기로 정해졌어요.",
+   "blank": "新築",
+   "src": "made"
+  },
+  {
+   "text": "川のそばに、木の香りがする新築のロッジが建った。",
+   "en": "A newly built lodge that smells of wood went up by the river.",
+   "ko": "강가에 나무 향이 나는 새로 지은 산장이 들어섰어요.",
+   "blank": "新築",
    "src": "made"
   }
  ],
@@ -51493,6 +51781,22 @@
    "blank": "検査"
   }
  ],
+ "w|検知": [
+  {
+   "text": "展示ケースのセンサーが振動を検知すると、警報が鳴るしくみだ。",
+   "en": "When the display case sensor detects vibration, an alarm goes off.",
+   "ko": "전시 케이스 센서가 진동을 감지하면 경보가 울리는 구조예요.",
+   "blank": "検知",
+   "src": "made"
+  },
+  {
+   "text": "川に設置されたセンサーが、水位の急な上昇を検知した。",
+   "en": "A sensor installed in the river detected a sudden rise in the water level.",
+   "ko": "강에 설치된 센서가 수위가 갑자기 오르는 것을 감지했어요.",
+   "blank": "検知",
+   "src": "made"
+  }
+ ],
  "w|検索": [
   {
    "text": "検索してみて。",
@@ -52827,6 +53131,22 @@
    "src": "made"
   }
  ],
+ "w|武力": [
+  {
+   "text": "この展示は、武力によらずに争いを終わらせた例を紹介している。",
+   "en": "This exhibit introduces examples of conflicts that ended without the use of force.",
+   "ko": "이 전시는 무력에 기대지 않고 분쟁을 끝낸 사례를 소개해요.",
+   "blank": "武力",
+   "src": "made"
+  },
+  {
+   "text": "昔、この森は二つの領主が武力で奪い合った土地だった。",
+   "en": "Long ago, this forest was land that two lords fought over by force.",
+   "ko": "옛날에 이 숲은 두 영주가 무력으로 빼앗으려 다툰 땅이었어요.",
+   "blank": "武力",
+   "src": "made"
+  }
+ ],
  "w|武器": [
   {
    "text": "武器は不要だよ。",
@@ -53570,6 +53890,22 @@
    "en": "High-definition cameras show even the actors' pores clearly.",
    "ko": "고화질 카메라는 배우의 모공까지 선명하게 비쳐 버려요.",
    "blank": "毛穴",
+   "src": "made"
+  }
+ ],
+ "w|民事": [
+  {
+   "text": "昔の民事裁判の記録から、当時の人々の暮らしが見えてくる。",
+   "en": "Records of old civil trials reveal how people lived at the time.",
+   "ko": "옛 민사 재판 기록에서 당시 사람들의 생활이 보여요.",
+   "blank": "民事",
+   "src": "made"
+  },
+  {
+   "text": "川の水の利用をめぐって、二つの村の間で民事の争いが起きた。",
+   "en": "A civil dispute arose between two villages over the use of river water.",
+   "ko": "강물 이용을 둘러싸고 두 마을 사이에 민사 분쟁이 일어났어요.",
+   "blank": "民事",
    "src": "made"
   }
  ],
@@ -54426,6 +54762,22 @@
    "en": "The year-end figures were good, so the staff got a bonus.",
    "ko": "결산 숫자가 좋아서 직원들에게 보너스가 나왔어요.",
    "blank": "決算",
+   "src": "made"
+  }
+ ],
+ "w|決議": [
+  {
+   "text": "市議会の決議を受けて、博物館の入場料が無料になった。",
+   "en": "Following a resolution by the city council, admission to the museum became free.",
+   "ko": "시의회 결의에 따라 박물관 입장료가 무료가 됐어요.",
+   "blank": "決議",
+   "src": "made"
+  },
+  {
+   "text": "村の会議で、川を守るための決議が全員一致で採択された。",
+   "en": "At the village meeting, a resolution to protect the river was adopted unanimously.",
+   "ko": "마을 회의에서 강을 지키기 위한 결의가 만장일치로 채택됐어요.",
+   "blank": "決議",
    "src": "made"
   }
  ],
@@ -55766,6 +56118,22 @@
    "en": "Aoi attached a note to the sweets for the friend who had helped her.",
    "ko": "아오이는 도와준 친구에게 줄 과자에 편지를 곁들였어요.",
    "blank": "添えた",
+   "src": "made"
+  }
+ ],
+ "w|清掃": [
+  {
+   "text": "閉館後、清掃のスタッフが展示室の床を磨いていた。",
+   "en": "After closing, the cleaning staff were polishing the floors of the exhibition rooms.",
+   "ko": "폐관 후 청소 직원들이 전시실 바닥을 닦고 있었어요.",
+   "blank": "清掃",
+   "src": "made"
+  },
+  {
+   "text": "月に一度、地元の人たちが河原の清掃をしている。",
+   "en": "Once a month, local people clean up the riverbank.",
+   "ko": "한 달에 한 번 지역 주민들이 강가를 청소해요.",
+   "blank": "清掃",
    "src": "made"
   }
  ],
@@ -57812,6 +58180,22 @@
    "en": "The milk at Yoko's shop comes from a nearby ranch every morning.",
    "ko": "요코 가게의 우유는 근처 목장에서 매일 아침 와요.",
    "blank": "牧場",
+   "src": "made"
+  }
+ ],
+ "w|牧師": [
+  {
+   "text": "展示されている古い聖書は、ある村の牧師が使っていたものだ。",
+   "en": "The old Bible on display was once used by a village pastor.",
+   "ko": "전시된 오래된 성경은 어느 마을 목사가 쓰던 거예요.",
+   "blank": "牧師",
+   "src": "made"
+  },
+  {
+   "text": "森の奥の小さな教会には、年老いた牧師が一人で住んでいる。",
+   "en": "An elderly pastor lives alone at the small church deep in the forest.",
+   "ko": "숲속 작은 교회에는 나이 든 목사가 혼자 살고 있어요.",
+   "blank": "牧師",
    "src": "made"
   }
  ],
@@ -60579,6 +60963,22 @@
    "src": "made"
   }
  ],
+ "w|発祥": [
+  {
+   "text": "この町は、ある焼き物の発祥の地として知られている。",
+   "en": "This town is known as the birthplace of a certain kind of pottery.",
+   "ko": "이 마을은 어느 도자기의 발상지로 알려져 있어요.",
+   "blank": "発祥",
+   "src": "made"
+  },
+  {
+   "text": "この川の上流は、ラフティング発祥の地として知られている。",
+   "en": "The upper reaches of this river are known as the birthplace of rafting in the area.",
+   "ko": "이 강 상류는 래프팅 발상지로 알려져 있어요.",
+   "blank": "発祥",
+   "src": "made"
+  }
+ ],
  "w|発行": [
   {
    "text": "切符の発行が完了した。",
@@ -60649,6 +61049,22 @@
    "en": "What I said earlier was rude.",
    "ko": "아까 발언이 실례였어.",
    "blank": "発言"
+  }
+ ],
+ "w|発足": [
+  {
+   "text": "博物館の友の会が発足して、今年で二十年になる。",
+   "en": "It has been twenty years this year since the museum's friends' association was founded.",
+   "ko": "박물관 후원회가 발족한 지 올해로 이십 년이 돼요.",
+   "blank": "発足",
+   "src": "made"
+  },
+  {
+   "text": "森を守るボランティア団体が、今年の春に発足した。",
+   "en": "A volunteer group to protect the forest was launched this spring.",
+   "ko": "숲을 지키는 자원봉사 단체가 올봄에 발족했어요.",
+   "blank": "発足",
+   "src": "made"
   }
  ],
  "w|発送": [
@@ -63159,6 +63575,22 @@
    "blank": "祭り"
   }
  ],
+ "w|視察": [
+  {
+   "text": "今日は市長が、新しい展示室の視察に来る予定だ。",
+   "en": "The mayor is scheduled to come inspect the new exhibition room today.",
+   "ko": "오늘은 시장이 새 전시실을 시찰하러 올 예정이에요.",
+   "blank": "視察",
+   "src": "made"
+  },
+  {
+   "text": "県の職員が、土砂崩れのあった森の視察に来た。",
+   "en": "Prefectural officials came to inspect the forest where the landslide had occurred.",
+   "ko": "현 직원이 산사태가 난 숲을 시찰하러 왔어요.",
+   "blank": "視察",
+   "src": "made"
+  }
+ ],
  "w|視点": [
   {
    "text": "組織培養の視点からは、この実験の環境はもっと厳密に規定されるべきである。",
@@ -65177,6 +65609,22 @@
    "blank": "終了"
   }
  ],
+ "w|終戦": [
+  {
+   "text": "終戦の日の新聞が、ガラスケースの中に展示されている。",
+   "en": "The newspaper from the day the war ended is displayed in a glass case.",
+   "ko": "종전일 신문이 유리 진열장 안에 전시돼 있어요.",
+   "blank": "終戦",
+   "src": "made"
+  },
+  {
+   "text": "終戦のころ、この森には多くの人が食べ物を探しに来たという。",
+   "en": "Around the end of the war, many people reportedly came to this forest looking for food.",
+   "ko": "종전 무렵 이 숲에는 많은 사람이 먹을 것을 찾으러 왔다고 해요.",
+   "blank": "終戦",
+   "src": "made"
+  }
+ ],
  "w|終盤": [
   {
    "text": "掃除も終盤に入り、翔太はやっと台所の換気扇に取りかかった。",
@@ -65971,6 +66419,22 @@
    "blank": "続けて"
   }
  ],
+ "w|続出": [
+  {
+   "text": "特別展の初日には、入れない人が続出した。",
+   "en": "On the first day of the special exhibition, one person after another couldn't get in.",
+   "ko": "특별전 첫날에는 들어가지 못하는 사람이 속출했어요.",
+   "blank": "続出",
+   "src": "made"
+  },
+  {
+   "text": "大雨の翌日、森の道で足を滑らせる登山者が続出した。",
+   "en": "The day after the heavy rain, hikers slipped on the forest trail one after another.",
+   "ko": "폭우 다음 날 숲길에서 미끄러지는 등산객이 속출했어요.",
+   "blank": "続出",
+   "src": "made"
+  }
+ ],
  "w|続編": [
   {
    "text": "亮は、昨日見た映画の続編が来月公開されると知って喜んだ。",
@@ -66104,6 +66568,22 @@
    "en": "A new prime minister was chosen.",
    "ko": "새 총리가 뽑혔어요.",
    "blank": "総理",
+   "src": "made"
+  }
+ ],
+ "w|総督": [
+  {
+   "text": "植民地時代の総督が使っていた机が、そのまま展示されている。",
+   "en": "The desk used by the colonial-era governor-general is displayed as it was.",
+   "ko": "식민지 시대 총독이 쓰던 책상이 그대로 전시돼 있어요.",
+   "blank": "総督",
+   "src": "made"
+  },
+  {
+   "text": "葵が泊まった宿は、昔の総督の別荘を改装したものだった。",
+   "en": "The inn where Aoi stayed was a renovated former villa of a colonial governor.",
+   "ko": "아오이가 묵은 숙소는 옛 총독의 별장을 고친 곳이었어요.",
+   "blank": "総督",
    "src": "made"
   }
  ],
@@ -66945,6 +67425,22 @@
    "src": "made"
   }
  ],
+ "w|耐性": [
+  {
+   "text": "薬の展示では、細菌が薬への耐性を持つしくみも説明している。",
+   "en": "The medicine exhibit also explains how bacteria develop resistance to drugs.",
+   "ko": "약 전시에서는 세균이 약에 내성을 갖게 되는 구조도 설명해요.",
+   "blank": "耐性",
+   "src": "made"
+  },
+  {
+   "text": "この地域の松は、虫への耐性が強い種類だそうだ。",
+   "en": "The pines in this area are said to be a variety highly resistant to insects.",
+   "ko": "이 지역 소나무는 벌레에 대한 내성이 강한 품종이래요.",
+   "blank": "耐性",
+   "src": "made"
+  }
+ ],
  "w|耳": [
   {
    "text": "耳、痛い？",
@@ -67305,6 +67801,22 @@
    "blank": "育てる"
   }
  ],
+ "w|育児": [
+  {
+   "text": "直樹は、昔の人々の育児の道具を集めた展示を担当している。",
+   "en": "Naoki is in charge of an exhibit collecting childcare tools people used long ago.",
+   "ko": "나오키는 옛사람들의 육아 도구를 모은 전시를 맡고 있어요.",
+   "blank": "育児",
+   "src": "made"
+  },
+  {
+   "text": "川辺でキャンプをしていた夫婦は、育児の合間に釣りを楽しんでいた。",
+   "en": "The couple camping by the river were enjoying fishing between taking care of their kids.",
+   "ko": "강가에서 캠핑하던 부부는 육아 틈틈이 낚시를 즐기고 있었어요.",
+   "blank": "育児",
+   "src": "made"
+  }
+ ],
  "w|育成": [
   {
    "text": "選手の育成に力を入れる。",
@@ -67654,6 +68166,22 @@
    "en": "The vet counted the dog's pulse while looking at his wristwatch.",
    "ko": "수의사는 손목시계를 보면서 개의 맥박을 셌어요.",
    "blank": "腕時計",
+   "src": "made"
+  }
+ ],
+ "w|腫瘍": [
+  {
+   "text": "医学の歴史の展示では、腫瘍の治療がどう進歩したかを紹介している。",
+   "en": "The history of medicine exhibit shows how the treatment of tumors has advanced.",
+   "ko": "의학 역사 전시에서는 종양 치료가 어떻게 발전했는지 소개해요.",
+   "blank": "腫瘍",
+   "src": "made"
+  },
+  {
+   "text": "研究者によると、この川の魚に腫瘍が見つかったことはないという。",
+   "en": "According to researchers, no tumors have ever been found in fish from this river.",
+   "ko": "연구자에 따르면 이 강의 물고기에서 종양이 발견된 적은 없대요.",
+   "blank": "腫瘍",
    "src": "made"
   }
  ],
@@ -78581,6 +79109,22 @@
    "src": "made"
   }
  ],
+ "w|部員": [
+  {
+   "text": "高校の歴史研究会の部員たちが、直樹の案内で博物館を回った。",
+   "en": "Members of a high school history club toured the museum with Naoki as their guide.",
+   "ko": "고등학교 역사 연구회 부원들이 나오키의 안내로 박물관을 둘러봤어요.",
+   "blank": "部員",
+   "src": "made"
+  },
+  {
+   "text": "葵は、大学の山岳部の部員と一緒に川沿いの道を歩いた。",
+   "en": "Aoi walked the riverside trail with members of her university's mountaineering club.",
+   "ko": "아오이는 대학 산악부 부원들과 함께 강변길을 걸었어요.",
+   "blank": "部員",
+   "src": "made"
+  }
+ ],
  "w|部屋": [
   {
    "text": "部屋、汚いよ。",
@@ -78823,6 +79367,22 @@
    "blank": "配信"
   }
  ],
+ "w|配備": [
+  {
+   "text": "館内のすべての部屋に、防犯カメラが配備されている。",
+   "en": "Security cameras are installed in every room of the museum.",
+   "ko": "관내 모든 방에 방범 카메라가 배치돼 있어요.",
+   "blank": "配備",
+   "src": "made"
+  },
+  {
+   "text": "川の増水に備えて、消防が河原にボートを配備した。",
+   "en": "In case the river rose, the fire department positioned boats on the riverbank.",
+   "ko": "강물이 불어날 것에 대비해 소방서가 강가에 보트를 배치했어요.",
+   "blank": "配備",
+   "src": "made"
+  }
+ ],
  "w|配布": [
   {
    "text": "チラシの配布を手伝う。",
@@ -78973,6 +79533,22 @@
    "en": "The soy sauce smells good.",
    "ko": "간장 향이 좋아.",
    "blank": "醤油"
+  }
+ ],
+ "w|釈放": [
+  {
+   "text": "この手紙は、戦後に釈放された作家が家族に書いたものだ。",
+   "en": "This letter was written to his family by a writer who was released after the war.",
+   "ko": "이 편지는 전쟁 뒤에 석방된 작가가 가족에게 쓴 거예요.",
+   "blank": "釈放",
+   "src": "made"
+  },
+  {
+   "text": "葵は、保護されていた鳥を森に釈放する手伝いをした。",
+   "en": "Aoi helped release a bird that had been under care back into the forest.",
+   "ko": "아오이는 보호받던 새를 숲에 놓아주는 일을 도왔어요.",
+   "blank": "釈放",
+   "src": "made"
   }
  ],
  "w|重い": [
@@ -79489,6 +80065,22 @@
    "en": "I heard a gunshot.",
    "ko": "총소리가 났어.",
    "blank": "銃"
+  }
+ ],
+ "w|銃撃": [
+  {
+   "text": "戦争の展示室には、銃撃の跡が残る古い扉が置かれている。",
+   "en": "In the war exhibition room stands an old door that still bears bullet marks.",
+   "ko": "전쟁 전시실에는 총격 자국이 남은 오래된 문이 놓여 있어요.",
+   "blank": "銃撃",
+   "src": "made"
+  },
+  {
+   "text": "ニュースによると、隣の県の森で猟師による銃撃事故があったそうだ。",
+   "en": "According to the news, there was an accidental shooting by a hunter in a forest in the neighboring prefecture.",
+   "ko": "뉴스에 따르면 이웃 현의 숲에서 사냥꾼의 총격 사고가 있었대요.",
+   "blank": "銃撃",
+   "src": "made"
   }
  ],
  "w|銘柄": [
@@ -80548,6 +81140,22 @@
    "en": "The director of the hospital where the groom works gave the toast.",
    "ko": "신랑이 근무하는 병원 원장이 건배사를 했어요.",
    "blank": "院長",
+   "src": "made"
+  }
+ ],
+ "w|陣営": [
+  {
+   "text": "昔の選挙ポスターを見ると、両陣営の主張の違いがよく分かる。",
+   "en": "Looking at old election posters, you can clearly see the difference between the two camps' positions.",
+   "ko": "옛 선거 포스터를 보면 양 진영의 주장 차이가 잘 보여요.",
+   "blank": "陣営",
+   "src": "made"
+  },
+  {
+   "text": "川の開発をめぐって、村は賛成と反対の二つの陣営に分かれた。",
+   "en": "Over the river development plan, the village split into two camps, for and against.",
+   "ko": "강 개발을 둘러싸고 마을은 찬성과 반대 두 진영으로 나뉘었어요.",
+   "blank": "陣営",
    "src": "made"
   }
  ],
@@ -82885,6 +83493,22 @@
    "src": "made"
   }
  ],
+ "w|飲酒": [
+  {
+   "text": "館内での飲酒は、イベントの日でも禁止されている。",
+   "en": "Drinking alcohol inside the museum is prohibited even on event days.",
+   "ko": "관내 음주는 행사 날에도 금지돼 있어요.",
+   "blank": "飲酒",
+   "src": "made"
+  },
+  {
+   "text": "川遊びの前の飲酒は危ないと、看板に書かれていた。",
+   "en": "A sign warned that drinking alcohol before playing in the river is dangerous.",
+   "ko": "물놀이 전 음주는 위험하다고 표지판에 적혀 있었어요.",
+   "blank": "飲酒",
+   "src": "made"
+  }
+ ],
  "w|飲食": [
   {
    "text": "拓也の会社は、駅ビルの飲食店の内装を手がけている。",
@@ -83439,6 +84063,22 @@
    "en": "The rent's high.",
    "ko": "월세가 비싸.",
    "blank": "高い"
+  }
+ ],
+ "w|高まり": [
+  {
+   "text": "環境への関心の高まりを受けて、博物館は新しい展示を企画した。",
+   "en": "In response to growing interest in the environment, the museum planned a new exhibit.",
+   "ko": "환경에 대한 관심이 높아지면서 박물관은 새 전시를 기획했어요.",
+   "blank": "高まり",
+   "src": "made"
+  },
+  {
+   "text": "自然保護への意識の高まりで、森を訪れる人のマナーもよくなった。",
+   "en": "With growing awareness of nature conservation, visitors to the forest have better manners.",
+   "ko": "자연 보호 의식이 높아지면서 숲을 찾는 사람들의 매너도 좋아졌어요.",
+   "blank": "高まり",
+   "src": "made"
   }
  ],
  "w|高まる": [
