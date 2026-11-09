@@ -235,6 +235,22 @@
    "src": "made"
   }
  ],
+ "w|กรรมาธิการ": [
+  {
+   "text": "ชัยเตรียมเอกสารให้คณะกรรมาธิการที่มาตรวจงบประมาณ",
+   "en": "Chai prepared documents for the committee coming to review the budget.",
+   "ko": "짜이는 예산을 점검하러 오는 위원회를 위해 서류를 준비했어요.",
+   "blank": "กรรมาธิการ",
+   "src": "made"
+  },
+  {
+   "text": "ข่าววิทยุในรถรายงานว่ากรรมาธิการด้านคมนาคมจะลงพื้นที่ดูถนนสายนี้",
+   "en": "The car radio news reported that the transport committee will inspect this road in person.",
+   "ko": "차 라디오 뉴스에서 교통 위원회가 이 도로를 현장 점검할 거라고 했어요.",
+   "blank": "กรรมาธิการ",
+   "src": "made"
+  }
+ ],
  "w|กรอบ": [
   {
    "text": "ขนมปังยังกรอบดี",
@@ -615,6 +631,22 @@
    "en": "Eating late at night hurts the stomach.",
    "ko": "늦게 먹으면 위에 안 좋아.",
    "blank": "กระเพาะ"
+  }
+ ],
+ "w|กระสุน": [
+  {
+   "text": "พิพิธภัณฑ์เมืองชั้นสองจัดแสดงกระสุนปืนใหญ่จากสงครามครั้งก่อน",
+   "en": "The town museum on the second floor displays cannonballs from the last war.",
+   "ko": "이층 시립 박물관에는 지난 전쟁 때의 대포알이 전시돼 있어요.",
+   "blank": "กระสุน",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์ชี้ให้สมศักดิ์ดูรอยกระสุนบนกำแพงเก่าจากสมัยสงคราม",
+   "en": "The guide pointed out bullet marks on the old wall from wartime to Somsak.",
+   "ko": "가이드는 솜싹에게 전쟁 때 생긴 옛 담벼락의 총알 자국을 가리켰어요.",
+   "blank": "กระสุน",
+   "src": "made"
   }
  ],
  "w|กระแส": [
@@ -1522,6 +1554,22 @@
    "en": "Wanna stopped to buy bagged dishes at the market on her way home.",
    "ko": "완나는 집에 가는 길에 시장에 들러 봉지 반찬을 샀어요.",
    "blank": "กับข้าว",
+   "src": "made"
+  }
+ ],
+ "w|กับดัก": [
+  {
+   "text": "เจ้าหน้าที่วางกับดักหนูไว้ในห้องเก็บเอกสารชั้นใต้ดิน",
+   "en": "Staff set mousetraps in the basement records room.",
+   "ko": "직원들이 지하 서류 보관실에 쥐덫을 놓았어요.",
+   "blank": "กับดัก",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์ท้องถิ่นเตือนสมศักดิ์ว่าในป่ามีกับดักสัตว์ของพรานเก่าหลงเหลืออยู่",
+   "en": "The local guide warned Somsak that old hunters' animal traps are still left in the forest.",
+   "ko": "현지 가이드는 숲속에 옛 사냥꾼들의 덫이 아직 남아 있다고 솜싹에게 주의를 줬어요.",
+   "blank": "กับดัก",
    "src": "made"
   }
  ],
@@ -2625,6 +2673,22 @@
    "en": "Have you eaten yet?",
    "ko": "밥은 먹었어?",
    "blank": "กิน"
+  }
+ ],
+ "w|กิเลส": [
+  {
+   "text": "พระที่มาเทศน์ในงานของเทศบาลสอนว่าความโลภเป็นกิเลสที่ทำให้คนไม่มีความสุข",
+   "en": "The monk who preached at the municipal event taught that greed is a defilement that makes people unhappy.",
+   "ko": "시 행사에서 설법한 스님은 탐욕이 사람을 불행하게 만드는 번뇌라고 가르쳤어요.",
+   "blank": "กิเลส",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์หัวเราะว่าการแวะซื้อของฝากทุกร้านคือกิเลสที่ห้ามใจไม่ได้",
+   "en": "Somsak laughed that stopping to buy souvenirs at every shop is a craving he can't resist.",
+   "ko": "솜싹은 가게마다 들러 기념품을 사는 건 참을 수 없는 욕심이라며 웃었어요.",
+   "blank": "กิเลส",
+   "src": "made"
   }
  ],
  "w|กี่": [
@@ -4519,6 +4583,22 @@
    "src": "made"
   }
  ],
+ "w|ขัดแย้ง": [
+  {
+   "text": "ชาวบ้านสองกลุ่มขัดแย้งกันเรื่องที่จอดรถหน้าตลาด",
+   "en": "Two groups of residents are in conflict over parking in front of the market.",
+   "ko": "주민 두 무리가 시장 앞 주차 문제로 갈등을 빚고 있어요.",
+   "blank": "ขัดแย้ง",
+   "src": "made"
+  },
+  {
+   "text": "แผนที่ในโทรศัพท์ขัดแย้งกับป้ายบอกทางจนสมศักดิ์งงไปหมด",
+   "en": "The map on the phone contradicted the road signs, leaving Somsak totally confused.",
+   "ko": "휴대폰 지도와 도로 표지판이 서로 달라서 솜싹은 완전히 헷갈렸어요.",
+   "blank": "ขัดแย้ง",
+   "src": "made"
+  }
+ ],
  "w|ขั้น": [
   {
    "text": "ผู้ชมต้องเดินลงขั้นบันไดแคบ ๆ เพื่อไปห้องใต้ดิน",
@@ -5931,6 +6011,22 @@
    "blank": "คดี"
   }
  ],
+ "w|คติ": [
+  {
+   "text": "คติประจำใจของชัยคือบริการทุกคนด้วยรอยยิ้ม",
+   "en": "Chai's personal motto is to serve everyone with a smile.",
+   "ko": "짜이의 좌우명은 모든 사람을 웃으며 대하는 거예요.",
+   "blank": "คติ",
+   "src": "made"
+  },
+  {
+   "text": "สติกเกอร์ท้ายรถคันหน้าเขียนคติว่าช้าๆ ได้พร้าเล่มงาม",
+   "en": "The sticker on the back of the car ahead had the motto \"slow and steady makes a fine blade.\"",
+   "ko": "앞차 뒤에 붙은 스티커에는 천천히 해야 좋은 칼을 얻는다는 격언이 적혀 있었어요.",
+   "blank": "คติ",
+   "src": "made"
+  }
+ ],
  "w|คน": [
   {
    "text": "คนเยอะมาก",
@@ -6626,6 +6722,22 @@
    "en": "Fon's older sister will give birth next week, so Fon is hurrying home.",
    "ko": "폰의 언니가 다음 주에 출산해서 폰은 서둘러 집에 가요.",
    "blank": "คลอด",
+   "src": "made"
+  }
+ ],
+ "w|คลับ": [
+  {
+   "text": "ทุกวันศุกร์ชัยไปตีแบดที่คลับกีฬาของพนักงานเทศบาล",
+   "en": "Every Friday Chai plays badminton at the municipal staff sports club.",
+   "ko": "매주 금요일 짜이는 시청 직원 스포츠 클럽에서 배드민턴을 쳐요.",
+   "blank": "คลับ",
+   "src": "made"
+  },
+  {
+   "text": "คืนนั้นสมศักดิ์ไปนั่งฟังดนตรีสดที่คลับแจ๊สเล็กๆ ในตัวเมือง",
+   "en": "That night Somsak went to listen to live music at a small jazz club in town.",
+   "ko": "그날 밤 솜싹은 시내 작은 재즈 클럽에 가서 라이브 음악을 들었어요.",
+   "blank": "คลับ",
    "src": "made"
   }
  ],
@@ -7509,6 +7621,22 @@
    "en": "Don't blame others' mistakes.",
    "ko": "남의 잘못을 탓하지 마.",
    "blank": "ความผิด"
+  }
+ ],
+ "w|ความผิดพลาด": [
+  {
+   "text": "ชัยรีบขอโทษเมื่อพบความผิดพลาดในชื่อบนทะเบียนบ้าน",
+   "en": "Chai quickly apologized when he found a mistake in the name on the house registration.",
+   "ko": "짜이는 주민등록부의 이름에서 실수를 발견하자 얼른 사과했어요.",
+   "blank": "ความผิดพลาด",
+   "src": "made"
+  },
+  {
+   "text": "ความผิดพลาดครั้งใหญ่ของทริปนี้คือสมศักดิ์ไม่ได้จองที่พักล่วงหน้า",
+   "en": "The big mistake of this trip was that Somsak didn't book accommodation in advance.",
+   "ko": "이번 여행의 큰 실수는 솜싹이 숙소를 미리 예약하지 않은 거예요.",
+   "blank": "ความผิดพลาด",
+   "src": "made"
   }
  ],
  "w|ความผิดหวัง": [
@@ -9100,6 +9228,22 @@
    "en": "The kids left clues on the trees for Suda to find her present.",
    "ko": "아이들은 수다가 선물을 찾도록 나무에 힌트를 남겼어요.",
    "blank": "คำใบ้",
+   "src": "made"
+  }
+ ],
+ "w|คำปรึกษา": [
+  {
+   "text": "ชัยให้คำปรึกษาเรื่องการขอใบอนุญาตก่อสร้างแก่ชาวบ้าน",
+   "en": "Chai gives residents advice on applying for building permits.",
+   "ko": "짜이는 주민들에게 건축 허가 신청에 대해 상담해 줘요.",
+   "blank": "คำปรึกษา",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนออกเดินทาง สมศักดิ์ขอคำปรึกษาจากช่างเรื่องยางรถ",
+   "en": "Before setting off, Somsak asked a mechanic for advice about his tires.",
+   "ko": "출발하기 전에 솜싹은 정비사에게 타이어에 대해 조언을 구했어요.",
+   "blank": "คำปรึกษา",
    "src": "made"
   }
  ],
@@ -11939,6 +12083,22 @@
    "src": "made"
   }
  ],
+ "w|จุดมุ่งหมาย": [
+  {
+   "text": "จุดมุ่งหมายของโครงการนี้คือลดขยะในชุมชนลงครึ่งหนึ่ง",
+   "en": "The aim of this project is to cut the community's trash by half.",
+   "ko": "이 사업의 목표는 동네 쓰레기를 절반으로 줄이는 거예요.",
+   "blank": "จุดมุ่งหมาย",
+   "src": "made"
+  },
+  {
+   "text": "จุดมุ่งหมายของสมศักดิ์คือขับไปให้ถึงชายแดนก่อนพระอาทิตย์ตก",
+   "en": "Somsak's goal is to reach the border before sunset.",
+   "ko": "솜싹의 목표는 해가 지기 전에 국경까지 가는 거예요.",
+   "blank": "จุดมุ่งหมาย",
+   "src": "made"
+  }
+ ],
  "w|จุดเริ่มต้น": [
   {
    "text": "นี่คือจุดเริ่มต้นของเรื่อง",
@@ -11966,6 +12126,22 @@
    "en": "The little shop is small and cute.",
    "ko": "자그마한 가게가 아기자기하고 귀여워.",
    "blank": "จุ๋มจิ๋ม",
+   "src": "made"
+  }
+ ],
+ "w|จูงใจ": [
+  {
+   "text": "เทศบาลแจกถุงผ้าเพื่อจูงใจให้คนเลิกใช้ถุงพลาสติก",
+   "en": "The municipality hands out cloth bags to encourage people to stop using plastic bags.",
+   "ko": "시는 사람들이 비닐봉지를 그만 쓰도록 장바구니를 나눠 줘요.",
+   "blank": "จูงใจ",
+   "src": "made"
+  },
+  {
+   "text": "วิวทะเลหมอกบนดอยคือสิ่งที่จูงใจให้สมศักดิ์ตื่นแต่เช้ามืด",
+   "en": "The view of the sea of mist on the mountain is what motivated Somsak to get up before dawn.",
+   "ko": "산 위 운해 풍경이 솜싹을 새벽같이 일어나게 만든 이유예요.",
+   "blank": "จูงใจ",
    "src": "made"
   }
  ],
@@ -14879,6 +15055,22 @@
    "blank": "ซับซ้อน"
   }
  ],
+ "w|ซาก": [
+  {
+   "text": "คนงานกำลังรื้อซากอาคารเก่าข้างศาลากลางเพื่อสร้างลานจอดรถ",
+   "en": "Workers are clearing the ruins of an old building next to city hall to build a parking lot.",
+   "ko": "인부들이 주차장을 만들려고 시청 옆 옛 건물 잔해를 치우고 있어요.",
+   "blank": "ซาก",
+   "src": "made"
+  },
+  {
+   "text": "ข้างทางมีซากรถเก่าที่ถูกทิ้งไว้จนสนิมขึ้น",
+   "en": "By the roadside is the wreck of an old car left there until it rusted.",
+   "ko": "길가에는 버려진 채 녹슨 옛 차의 잔해가 있어요.",
+   "blank": "ซาก",
+   "src": "made"
+  }
+ ],
  "w|ซาบซึ้ง": [
   {
    "text": "ฉันซาบซึ้งในน้ำใจเธอ",
@@ -15095,6 +15287,22 @@
    "en": "This chicken sandwich is nice and fresh.",
    "ko": "이 치킨 샌드위치가 신선해.",
    "blank": "แซนด์วิช"
+  }
+ ],
+ "w|โซ่": [
+  {
+   "text": "ประตูเหล็กด้านหลังอาคารถูกล็อกด้วยโซ่เส้นใหญ่ทุกคืน",
+   "en": "The iron gate behind the building is locked with a big chain every night.",
+   "ko": "건물 뒤 철문은 매일 밤 굵은 쇠사슬로 잠겨요.",
+   "blank": "โซ่",
+   "src": "made"
+  },
+  {
+   "text": "ถนนขึ้นเขาถูกปิดด้วยโซ่ สมศักดิ์จึงต้องหาทางอื่น",
+   "en": "The road up the mountain was closed off with a chain, so Somsak had to find another way.",
+   "ko": "산으로 올라가는 길이 쇠사슬로 막혀 있어서 솜싹은 다른 길을 찾아야 했어요.",
+   "blank": "โซ่",
+   "src": "made"
   }
  ],
  "w|โซเชียล": [
@@ -22215,6 +22423,22 @@
    "blank": "ทีวี"
   }
  ],
+ "w|ที่สอง": [
+  {
+   "text": "ชัยประจำอยู่ที่ช่องบริการที่สองนับจากประตู",
+   "en": "Chai is stationed at the second service counter from the door.",
+   "ko": "짜이는 문에서 두 번째 창구에서 일해요.",
+   "blank": "ที่สอง",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ตัดสินใจค้างคืนที่เมืองที่สองบนเส้นทาง",
+   "en": "Somsak decided to stay the night in the second town on the route.",
+   "ko": "솜싹은 경로상 두 번째 도시에서 하룻밤 묵기로 했어요.",
+   "blank": "ที่สอง",
+   "src": "made"
+  }
+ ],
  "w|ที่สุด": [
   {
    "text": "อร่อยที่สุดเลย",
@@ -22712,6 +22936,22 @@
    "en": "A second-class sleeper ticket costs as much as a budget flight.",
    "ko": "이등 침대칸 표값은 저가 항공권과 맞먹어요.",
    "blank": "เท่ากับ",
+   "src": "made"
+  }
+ ],
+ "w|เท่าใด": [
+  {
+   "text": "ชัยถามเจ้าหน้าที่ว่าค่าทำบัตรใหม่ต้องจ่ายเท่าใด",
+   "en": "Chai asked the officer how much he has to pay for a new card.",
+   "ko": "짜이는 새 카드를 만들려면 얼마를 내야 하는지 직원에게 물었어요.",
+   "blank": "เท่าใด",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ไม่แน่ใจว่าจากตรงนี้ไปเชียงใหม่ไกลเท่าใด",
+   "en": "Somsak isn't sure how far it is from here to Chiang Mai.",
+   "ko": "솜싹은 여기서 치앙마이까지 얼마나 먼지 잘 몰라요.",
+   "blank": "เท่าใด",
    "src": "made"
   }
  ],
@@ -23219,6 +23459,22 @@
    "en": "There aren't many people on weekdays.",
    "ko": "평일에는 사람이 적어.",
    "blank": "ธรรมดา"
+  }
+ ],
+ "w|ธรรมะ": [
+  {
+   "text": "ช่วงพักเที่ยงชัยชอบฟังธรรมะจากวิทยุเพื่อให้ใจสงบ",
+   "en": "During lunch break Chai likes listening to Dhamma talks on the radio to calm his mind.",
+   "ko": "점심시간에 짜이는 마음을 가라앉히려고 라디오로 법문 듣는 걸 좋아해요.",
+   "blank": "ธรรมะ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์แวะวัดป่าและได้ฟังพระเทศน์ธรรมะสั้นๆ ก่อนขับต่อ",
+   "en": "Somsak stopped at a forest temple and heard a short Dhamma talk before driving on.",
+   "ko": "솜싹은 숲속 절에 들러 짧은 법문을 듣고 다시 운전했어요.",
+   "blank": "ธรรมะ",
+   "src": "made"
   }
  ],
  "w|ธันวาคม": [
@@ -24035,6 +24291,22 @@
    "en": "Count from one to ten.",
    "ko": "일부터 십까지 세어 봐.",
    "blank": "นับ"
+  }
+ ],
+ "w|นับตั้งแต่": [
+  {
+   "text": "นับตั้งแต่เริ่มงานที่ศาลากลาง ชัยไม่เคยมาสายเลยสักวัน",
+   "en": "Since starting work at city hall, Chai has never been late a single day.",
+   "ko": "시청에서 일을 시작한 이후로 짜이는 하루도 지각한 적이 없어요.",
+   "blank": "นับตั้งแต่",
+   "src": "made"
+  },
+  {
+   "text": "นับตั้งแต่ออกจากกรุงเทพฯ สมศักดิ์แวะปั๊มน้ำมันไปแล้วสามครั้ง",
+   "en": "Since leaving Bangkok, Somsak has stopped at gas stations three times.",
+   "ko": "방콕을 떠난 뒤로 솜싹은 주유소에 벌써 세 번 들렀어요.",
+   "blank": "นับตั้งแต่",
+   "src": "made"
   }
  ],
  "w|นับถือ": [
@@ -25080,6 +25352,22 @@
    "en": "Chan's art class rents space from the condominium juristic person near the station.",
    "ko": "짠의 미술 교실은 역 근처 아파트 관리 법인에게서 공간을 빌려요.",
    "blank": "นิติบุคคล",
+   "src": "made"
+  }
+ ],
+ "w|นิทรรศการ": [
+  {
+   "text": "ชั้นล่างของศาลากลางมีนิทรรศการภาพถ่ายเมืองในอดีต",
+   "en": "The ground floor of city hall has an exhibition of photos of the town in the past.",
+   "ko": "시청 일층에는 옛 도시 모습을 담은 사진 전시회가 있어요.",
+   "blank": "นิทรรศการ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์แวะดูนิทรรศการผ้าทอพื้นเมืองที่ศูนย์วัฒนธรรมของอำเภอ",
+   "en": "Somsak stopped to see an exhibition of local handwoven cloth at the district cultural center.",
+   "ko": "솜싹은 군 문화센터에 들러 전통 직물 전시회를 봤어요.",
+   "blank": "นิทรรศการ",
    "src": "made"
   }
  ],
@@ -26567,6 +26855,22 @@
    "blank": "บาร์"
   }
  ],
+ "w|บารมี": [
+  {
+   "text": "ภาพผู้ว่าคนแรกซึ่งชาวเมืองเคารพในบารมีแขวนอยู่ในห้องประชุมใหญ่",
+   "en": "A portrait of the first governor, whose prestige the townspeople respected, hangs in the main meeting room.",
+   "ko": "시민들이 그 덕망을 존경했던 초대 주지사의 초상화가 대회의실에 걸려 있어요.",
+   "blank": "บารมี",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านเล่าให้สมศักดิ์ฟังว่าวัดบนเขาแห่งนี้สร้างขึ้นด้วยบารมีของหลวงพ่อรูปหนึ่ง",
+   "en": "Villagers told Somsak that this hilltop temple was built thanks to the spiritual standing of a revered monk.",
+   "ko": "마을 사람들은 이 산 위 절이 한 큰스님의 덕망으로 지어졌다고 솜싹에게 말해 줬어요.",
+   "blank": "บารมี",
+   "src": "made"
+  }
+ ],
  "w|บิดา": [
   {
    "text": "พิธีกรเชิญบิดาของเจ้าสาวขึ้นกล่าวอวยพรบนเวที",
@@ -27322,6 +27626,22 @@
    "en": "New vendors need a permit from the municipality before opening a stall.",
    "ko": "새로 온 장수는 좌판을 열기 전에 시청 허가증이 있어야 해요.",
    "blank": "ใบอนุญาต",
+   "src": "made"
+  }
+ ],
+ "w|ปก": [
+  {
+   "text": "ชัยออกแบบปกรายงานประจำปีของเทศบาลเอง",
+   "en": "Chai designed the cover of the municipality's annual report himself.",
+   "ko": "짜이는 시 연례 보고서 표지를 직접 디자인했어요.",
+   "blank": "ปก",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ซื้อหนังสือนำเที่ยวเล่มที่ปกเป็นรูปทุ่งดอกบัวตอง",
+   "en": "Somsak bought the guidebook whose cover shows a field of Mexican sunflowers.",
+   "ko": "솜싹은 표지에 멕시코 해바라기 들판이 있는 여행 안내서를 샀어요.",
+   "blank": "ปก",
    "src": "made"
   }
  ],
@@ -28281,6 +28601,22 @@
    "src": "made"
   }
  ],
+ "w|ปราบปราม": [
+  {
+   "text": "เทศบาลร่วมมือกับตำรวจปราบปรามการตั้งแผงลอยบนทางเท้า",
+   "en": "The municipality worked with the police to crack down on stalls set up on the sidewalk.",
+   "ko": "시는 경찰과 함께 인도 위 노점 단속에 나섰어요.",
+   "blank": "ปราบปราม",
+   "src": "made"
+  },
+  {
+   "text": "ระหว่างทาง สมศักดิ์เห็นด่านตรวจที่ตั้งขึ้นเพื่อปราบปรามการขนของเถื่อน",
+   "en": "On the way, Somsak saw a checkpoint set up to crack down on smuggling.",
+   "ko": "가는 길에 솜싹은 밀수를 단속하려고 세운 검문소를 봤어요.",
+   "blank": "ปราบปราม",
+   "src": "made"
+  }
+ ],
  "w|ปรารถนา": [
   {
    "text": "แม่ปรารถนาให้ลูกทั้งสองดูแลกันไปจนแก่",
@@ -28797,6 +29133,22 @@
    "en": "The doctor already checked my lungs.",
    "ko": "의사가 폐를 검사해 줬어.",
    "blank": "ปอด"
+  }
+ ],
+ "w|ป้อม": [
+  {
+   "text": "ชัยแวะคุยกับยามที่ป้อมหน้าประตูศาลากลางทุกเช้า",
+   "en": "Every morning Chai stops to chat with the guard at the booth by the city hall gate.",
+   "ko": "짜이는 매일 아침 시청 정문 초소에 들러 경비원과 이야기해요.",
+   "blank": "ป้อม",
+   "src": "made"
+  },
+  {
+   "text": "บนยอดเขามีป้อมโบราณที่สมศักดิ์อยากแวะถ่ายรูป",
+   "en": "At the top of the mountain is an ancient fort where Somsak wants to stop for photos.",
+   "ko": "산꼭대기에는 솜싹이 들러서 사진을 찍고 싶은 옛 요새가 있어요.",
+   "blank": "ป้อม",
+   "src": "made"
   }
  ],
  "w|ปะการัง": [
@@ -30155,6 +30507,22 @@
    "blank": "ผลัก"
   }
  ],
+ "w|ผลักดัน": [
+  {
+   "text": "ชัยผลักดันให้มีทางลาดสำหรับรถเข็นที่ทางเข้าอาคาร",
+   "en": "Chai pushed for a wheelchair ramp at the building entrance.",
+   "ko": "짜이는 건물 입구에 휠체어 경사로를 만들자고 밀어붙였어요.",
+   "blank": "ผลักดัน",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนผลักดันให้สมศักดิ์ลาพักร้อนไปเที่ยวทางไกลสักครั้ง",
+   "en": "A friend pushed Somsak to take vacation leave for a long trip for once.",
+   "ko": "친구가 솜싹에게 한 번쯤 휴가를 내고 장거리 여행을 가라고 등을 떠밀었어요.",
+   "blank": "ผลักดัน",
+   "src": "made"
+  }
+ ],
  "w|ผลิต": [
   {
    "text": "โรงงานผลิตสินค้าคุณภาพดี",
@@ -31061,6 +31429,22 @@
    "src": "made"
   }
  ],
+ "w|ผู้ว่า": [
+  {
+   "text": "ภาพผู้ว่าคนแรกซึ่งชาวเมืองเคารพในบารมีแขวนอยู่ในห้องประชุมใหญ่",
+   "en": "A portrait of the first governor, whose prestige the townspeople respected, hangs in the main meeting room.",
+   "ko": "시민들이 그 덕망을 존경했던 초대 주지사의 초상화가 대회의실에 걸려 있어요.",
+   "blank": "ผู้ว่า",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์เห็นขบวนรถของผู้ว่าราชการจังหวัดผ่านไปบนถนนสายหลัก",
+   "en": "Somsak saw the provincial governor's motorcade pass by on the main road.",
+   "ko": "솜싹은 도지사 차량 행렬이 큰길을 지나가는 걸 봤어요.",
+   "blank": "ผู้ว่า",
+   "src": "made"
+  }
+ ],
  "w|ผู้ว่าราชการ": [
   {
    "text": "คืนเปิดตัวมีผู้ว่าราชการจังหวัดมาชมละครด้วย ประยุทธจึงตื่นเต้นมาก",
@@ -31207,6 +31591,22 @@
    "en": "I'm not good with spicy food.",
    "ko": "나는 매운 걸 잘 못 먹어.",
    "blank": "เผ็ด"
+  }
+ ],
+ "w|เผด็จการ": [
+  {
+   "text": "ห้องสมุดเทศบาลมีหนังสือประวัติศาสตร์เรื่องยุคเผด็จการในยุโรปหลายเล่ม",
+   "en": "The municipal library has several history books about the era of dictatorship in Europe.",
+   "ko": "시립 도서관에는 유럽 독재 시대에 관한 역사책이 여러 권 있어요.",
+   "blank": "เผด็จการ",
+   "src": "made"
+  },
+  {
+   "text": "ระหว่างขับรถ สมศักดิ์ฟังพอดแคสต์เรื่องการล่มสลายของรัฐบาลเผด็จการในประวัติศาสตร์",
+   "en": "While driving, Somsak listened to a podcast about the fall of dictatorial governments in history.",
+   "ko": "운전하는 동안 솜싹은 역사 속 독재 정권의 몰락에 관한 팟캐스트를 들었어요.",
+   "blank": "เผด็จการ",
+   "src": "made"
   }
  ],
  "w|เผย": [
@@ -32901,6 +33301,22 @@
    "en": "Guests dress formally for the ceremony.",
    "ko": "손님들이 격식을 갖추고 의식에 들어와.",
    "blank": "พิธี"
+  }
+ ],
+ "w|พิธีกรรม": [
+  {
+   "text": "ทุกปีศาลากลางจัดพิธีกรรมทำบุญเมืองในเดือนเมษายน",
+   "en": "Every year city hall holds a merit-making ritual for the town in April.",
+   "ko": "매년 시청은 사월에 도시를 위한 공덕 의식을 열어요.",
+   "blank": "พิธีกรรม",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์บังเอิญได้เห็นพิธีกรรมขอฝนของหมู่บ้านบนดอย",
+   "en": "Somsak happened to see a rain-calling ritual in a mountain village.",
+   "ko": "솜싹은 우연히 산마을의 기우제를 보게 됐어요.",
+   "blank": "พิธีกรรม",
+   "src": "made"
   }
  ],
  "w|พิพากษา": [
@@ -35971,6 +36387,22 @@
    "blank": "มูลนิธิ"
   }
  ],
+ "w|มูลฝอย": [
+  {
+   "text": "ชัยชี้แจงอัตราค่าเก็บมูลฝอยใหม่ให้ชาวบ้านฟัง",
+   "en": "Chai explained the new garbage collection fees to the residents.",
+   "ko": "짜이는 새 쓰레기 수거 요금을 주민들에게 설명했어요.",
+   "blank": "มูลฝอย",
+   "src": "made"
+  },
+  {
+   "text": "ที่จุดพักรถมีป้ายขอให้ทิ้งมูลฝอยลงถังให้เรียบร้อย",
+   "en": "At the rest stop there's a sign asking people to put their garbage in the bins properly.",
+   "ko": "휴게소에는 쓰레기를 쓰레기통에 잘 버려 달라는 표지판이 있어요.",
+   "blank": "มูลฝอย",
+   "src": "made"
+  }
+ ],
  "w|เมฆ": [
   {
    "text": "มีเมฆขาวลอยอยู่",
@@ -36665,6 +37097,22 @@
    "src": "made"
   }
  ],
+ "w|ไม่ต้องสงสัย": [
+  {
+   "text": "ไม่ต้องสงสัยเลยว่าคิวยาวขนาดนี้เพราะวันนี้เป็นวันสุดท้ายของการเสียภาษี",
+   "en": "No doubt the line is this long because today is the last day to pay taxes.",
+   "ko": "오늘이 세금 납부 마지막 날이라 줄이 이렇게 긴 게 틀림없어요.",
+   "blank": "ไม่ต้องสงสัย",
+   "src": "made"
+  },
+  {
+   "text": "ไม่ต้องสงสัยเลย สมศักดิ์ลืมแว่นกันแดดไว้ที่ร้านกาแฟเมื่อเช้าแน่ๆ",
+   "en": "No doubt about it, Somsak left his sunglasses at the café this morning.",
+   "ko": "틀림없이 솜싹은 아침에 카페에 선글라스를 두고 왔어요.",
+   "blank": "ไม่ต้องสงสัย",
+   "src": "made"
+  }
+ ],
  "w|ไม้ถูพื้น": [
   {
    "text": "เอาไม้ถูพื้นมาเช็ดน้ำที่หก",
@@ -36857,6 +37305,22 @@
    "en": "The singing is outstanding.",
    "ko": "노래가 최고야.",
    "blank": "ยอดเยี่ยม"
+  }
+ ],
+ "w|ย้อน": [
+  {
+   "text": "ชัยต้องย้อนไปดูเอกสารเก่าเมื่อสิบปีก่อนเพื่อหาโฉนดที่ดิน",
+   "en": "Chai had to go back through old documents from ten years ago to find the land deed.",
+   "ko": "짜이는 토지 증서를 찾으려고 십 년 전 옛 서류까지 거슬러 올라가 봐야 했어요.",
+   "blank": "ย้อน",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ขับเลยทางแยกไป เลยต้องย้อนกลับมาเกือบสิบกิโล",
+   "en": "Somsak drove past the junction, so he had to double back almost ten kilometers.",
+   "ko": "솜싹은 갈림길을 지나쳐서 거의 십 킬로를 되돌아와야 했어요.",
+   "blank": "ย้อน",
+   "src": "made"
   }
  ],
  "w|ยอม": [
@@ -37907,6 +38371,22 @@
    "blank": "รก"
   }
  ],
+ "w|รด": [
+  {
+   "text": "ทุกเช้าชัยรดน้ำต้นไม้หน้าศาลากลางก่อนเปิดสำนักงาน",
+   "en": "Every morning Chai waters the plants in front of city hall before the office opens.",
+   "ko": "매일 아침 짜이는 사무실 문을 열기 전에 시청 앞 나무에 물을 줘요.",
+   "blank": "รด",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าของรีสอร์ตกำลังรดน้ำสนามหญ้าตอนสมศักดิ์ขับรถมาถึง",
+   "en": "The resort owner was watering the lawn when Somsak drove up.",
+   "ko": "솜싹이 차를 몰고 도착했을 때 리조트 주인은 잔디에 물을 주고 있었어요.",
+   "blank": "รด",
+   "src": "made"
+  }
+ ],
  "w|รดน้ำ": [
   {
    "text": "อย่าลืมรดน้ำต้นไม้ทุกเช้า",
@@ -38549,6 +39029,22 @@
    "src": "made"
   }
  ],
+ "w|ระงับ": [
+  {
+   "text": "ศาลากลางประกาศระงับการต่อใบอนุญาตชั่วคราวเพราะระบบคอมพิวเตอร์ล่ม",
+   "en": "City hall announced a temporary halt to license renewals because the computer system crashed.",
+   "ko": "시청은 전산 시스템이 다운돼서 허가증 갱신을 잠시 중단한다고 발표했어요.",
+   "blank": "ระงับ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์พยายามระงับอารมณ์เมื่อมีรถปาดหน้า",
+   "en": "Somsak tried to keep his temper when a car cut him off.",
+   "ko": "솜싹은 차가 끼어들었을 때 화를 참으려고 애썼어요.",
+   "blank": "ระงับ",
+   "src": "made"
+  }
+ ],
  "w|ระดับ": [
   {
    "text": "ระดับไหนถึงจะผ่าน",
@@ -38859,6 +39355,22 @@
    "blank": "รังแก"
   }
  ],
+ "w|รังสี": [
+  {
+   "text": "ห้องเอกซเรย์ของศูนย์อนามัยเทศบาลติดป้ายเตือนเรื่องรังสีไว้หน้าประตู",
+   "en": "The X-ray room at the municipal health center has a radiation warning sign on the door.",
+   "ko": "시 보건소 엑스레이실 문 앞에는 방사선 경고 표지가 붙어 있어요.",
+   "blank": "รังสี",
+   "src": "made"
+  },
+  {
+   "text": "ป้ายที่จุดชมวิวเตือนให้ทาครีมกันแดดเพราะรังสียูวีบนเขาแรงมาก",
+   "en": "A sign at the viewpoint warns visitors to put on sunscreen because UV rays on the mountain are very strong.",
+   "ko": "전망대 표지판에는 산 위 자외선이 아주 강하니 선크림을 바르라고 적혀 있어요.",
+   "blank": "รังสี",
+   "src": "made"
+  }
+ ],
  "w|รัฐ": [
   {
    "text": "ห้องสมุดประชาชนแห่งนี้ได้งบประมาณจากรัฐทุกปี",
@@ -39081,6 +39593,22 @@
    "en": "Don't cut the roots when moving the plant.",
    "ko": "옮겨 심을 때 뿌리를 자르지 마.",
    "blank": "ราก"
+  }
+ ],
+ "w|รากฐาน": [
+  {
+   "text": "ชัยเชื่อว่าการศึกษาคือรากฐานของเมืองที่เข้มแข็ง",
+   "en": "Chai believes education is the foundation of a strong town.",
+   "ko": "짜이는 교육이 튼튼한 도시의 기반이라고 믿어요.",
+   "blank": "รากฐาน",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์อธิบายว่าเมืองเก่านี้เป็นรากฐานของวัฒนธรรมล้านนา",
+   "en": "The guide explained that this old town is the foundation of Lanna culture.",
+   "ko": "가이드는 이 옛 도시가 란나 문화의 뿌리라고 설명했어요.",
+   "blank": "รากฐาน",
+   "src": "made"
   }
  ],
  "w|ราคา": [
@@ -41617,6 +42145,22 @@
    "blank": "ลึก"
   }
  ],
+ "w|ลึกซึ้ง": [
+  {
+   "text": "ชัยรู้จักประวัติของเมืองนี้อย่างลึกซึ้งเพราะเกิดและโตที่นี่",
+   "en": "Chai knows this town's history deeply because he was born and raised here.",
+   "ko": "짜이는 이곳에서 나고 자라서 이 도시의 역사를 깊이 알아요.",
+   "blank": "ลึกซึ้ง",
+   "src": "made"
+  },
+  {
+   "text": "การเดินทางครั้งนี้ทำให้สมศักดิ์กับพ่อได้คุยกันอย่างลึกซึ้งเป็นครั้งแรก",
+   "en": "This trip let Somsak and his father talk deeply for the first time.",
+   "ko": "이번 여행 덕분에 솜싹과 아버지는 처음으로 깊은 이야기를 나눴어요.",
+   "blank": "ลึกซึ้ง",
+   "src": "made"
+  }
+ ],
  "w|ลื่น": [
   {
    "text": "พื้นเปียกระวังลื่นนะ",
@@ -43259,6 +43803,22 @@
    "blank": "วาด"
   }
  ],
+ "w|ว่าที่": [
+  {
+   "text": "ว่าที่นายกเทศมนตรีคนใหม่มาเยี่ยมสำนักงานของชัยเมื่อบ่าย",
+   "en": "The mayor-elect visited Chai's office this afternoon.",
+   "ko": "차기 시장이 오늘 오후 짜이의 사무실을 방문했어요.",
+   "blank": "ว่าที่",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์พาว่าที่ภรรยาไปเที่ยวบ้านเกิดที่น่านเป็นครั้งแรก",
+   "en": "Somsak took his bride-to-be to visit his hometown in Nan for the first time.",
+   "ko": "솜싹은 예비 신부를 데리고 처음으로 고향 난에 갔어요.",
+   "blank": "ว่าที่",
+   "src": "made"
+  }
+ ],
  "w|ว่าย": [
   {
    "text": "ฉันว่ายไม่เก่ง",
@@ -44879,6 +45439,22 @@
    "src": "made"
   }
  ],
+ "w|สนอง": [
+  {
+   "text": "ชัยบอกว่าบริการออนไลน์ใหม่สนองความต้องการของคนทำงานได้ดี",
+   "en": "Chai says the new online service meets the needs of working people well.",
+   "ko": "짜이는 새 온라인 서비스가 직장인들의 필요를 잘 채워 준다고 말해요.",
+   "blank": "สนอง",
+   "src": "made"
+  },
+  {
+   "text": "ร้านอาหารริมทางร้านนี้สนองความต้องการคนขับรถทางไกลด้วยการเปิดตลอดคืน",
+   "en": "This roadside restaurant meets the needs of long-distance drivers by staying open all night.",
+   "ko": "이 길가 식당은 밤새 문을 열어 장거리 운전자들의 필요를 채워 줘요.",
+   "blank": "สนอง",
+   "src": "made"
+  }
+ ],
  "w|สนับสนุน": [
   {
    "text": "เทศบาลสนับสนุนให้ชาวบ้านปลูกต้นไม้ริมถนน",
@@ -45509,6 +46085,22 @@
    "en": "This salad has light dressing.",
    "ko": "이 샐러드는 드레싱이 적게 들어갔어.",
    "blank": "สลัด"
+  }
+ ],
+ "w|สลับ": [
+  {
+   "text": "ชัยกับเพื่อนร่วมงานสลับกันนั่งโต๊ะประชาสัมพันธ์ช่วงพักเที่ยง",
+   "en": "Chai and a coworker take turns sitting at the information desk during lunch break.",
+   "ko": "짜이와 동료는 점심시간에 번갈아 안내 데스크를 지켜요.",
+   "blank": "สลับ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์กับเพื่อนสลับกันขับคนละสองชั่วโมง",
+   "en": "Somsak and his friend take turns driving two hours each.",
+   "ko": "솜싹과 친구는 두 시간씩 번갈아 운전해요.",
+   "blank": "สลับ",
+   "src": "made"
   }
  ],
  "w|สวดมนต์": [
@@ -46413,6 +47005,22 @@
    "en": "This story is really short.",
    "ko": "이 이야기는 정말 짧아.",
    "blank": "สั้น"
+  }
+ ],
+ "w|สันติ": [
+  {
+   "text": "ชัยหวังว่าการประชุมคืนนี้จะจบลงอย่างสันติ",
+   "en": "Chai hopes tonight's meeting will end peacefully.",
+   "ko": "짜이는 오늘 밤 회의가 평화롭게 끝나기를 바라요.",
+   "blank": "สันติ",
+   "src": "made"
+  },
+  {
+   "text": "หมู่บ้านชายเขาที่สมศักดิ์แวะพักดูเงียบสงบและผู้คนอยู่กันอย่างสันติ",
+   "en": "The village at the foot of the mountain where Somsak stopped looks quiet, and people live together in peace.",
+   "ko": "솜싹이 들른 산자락 마을은 조용했고 사람들이 평화롭게 살아요.",
+   "blank": "สันติ",
+   "src": "made"
   }
  ],
  "w|สันติภาพ": [
@@ -47676,6 +48284,22 @@
    "en": "Suda asked her neighbour to stop smoking on the balcony because the smoke gets into her room.",
    "ko": "수다는 연기가 방에 들어와서 이웃에게 베란다에서 담배를 피우지 말아 달라고 했어요.",
    "blank": "สูบ",
+   "src": "made"
+  }
+ ],
+ "w|เสถียรภาพ": [
+  {
+   "text": "นักข่าวถามนายกเทศมนตรีเรื่องเสถียรภาพของสภาเมืองหลังสมาชิกลาออก",
+   "en": "A reporter asked the mayor about the city council's stability after members resigned.",
+   "ko": "기자가 의원들이 사퇴한 뒤 시의회의 안정성에 대해 시장에게 물었어요.",
+   "blank": "เสถียรภาพ",
+   "src": "made"
+  },
+  {
+   "text": "ช่างบอกสมศักดิ์ว่าบรรทุกของบนหลังคามากเกินไปจะทำให้รถเสียเสถียรภาพตอนเข้าโค้ง",
+   "en": "The mechanic told Somsak that loading too much on the roof makes the car lose stability on curves.",
+   "ko": "정비사는 지붕에 짐을 너무 많이 실으면 커브에서 차가 안정성을 잃는다고 솜싹에게 말했어요.",
+   "blank": "เสถียรภาพ",
    "src": "made"
   }
  ],
@@ -54279,6 +54903,22 @@
    "en": "I'll take this one.",
    "ko": "이걸로 할게.",
    "blank": "เอา"
+  }
+ ],
+ "w|เอาคืน": [
+  {
+   "text": "ชัยลืมบัตรประชาชนไว้ที่เคาน์เตอร์ จึงต้องเดินกลับไปเอาคืน",
+   "en": "Chai left his ID card at the counter, so he had to walk back to get it.",
+   "ko": "짜이는 신분증을 카운터에 두고 와서 다시 가지러 가야 했어요.",
+   "blank": "เอาคืน",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ให้เพื่อนในรถอีกคันยืมไฟฉายไป พอถึงที่พักก็เดินไปเอาคืน",
+   "en": "Somsak lent his flashlight to a friend in the other car and went to get it back at the lodge.",
+   "ko": "솜싹은 다른 차에 탄 친구에게 손전등을 빌려줬다가 숙소에 도착해서 돌려받으러 갔어요.",
+   "blank": "เอาคืน",
+   "src": "made"
   }
  ],
  "w|เอาจริง": [

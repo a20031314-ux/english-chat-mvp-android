@@ -2307,6 +2307,22 @@
    "blank": "amende"
   }
  ],
+ "w|amendement": [
+  {
+   "text": "Paul explique aux lecteurs ce que change l'amendement voté hier.",
+   "en": "Paul explains to readers what the amendment passed yesterday changes.",
+   "ko": "폴은 어제 통과된 수정안이 무엇을 바꾸는지 독자들에게 설명해요.",
+   "blank": "amendement",
+   "src": "made"
+  },
+  {
+   "text": "Le fils d'Émilie propose un amendement aux règles de la maison : dessert tous les soirs.",
+   "en": "Émilie's son proposes an amendment to the house rules: dessert every night.",
+   "ko": "에밀리의 아들은 집안 규칙에 수정안을 내요. 매일 저녁 디저트요.",
+   "blank": "amendement",
+   "src": "made"
+  }
+ ],
  "w|amener": [
   {
    "text": "Je vais amener mon frère à la fête.",
@@ -3432,6 +3448,22 @@
    "en": "The bay forms a perfect arc, and Manon photographs it from the cliff.",
    "ko": "만이 완벽한 활 모양이라 마농은 절벽 위에서 사진을 찍어요.",
    "blank": "arc",
+   "src": "made"
+  }
+ ],
+ "w|arche": [
+  {
+   "text": "Paul photographie la vieille arche romaine que la ville veut restaurer.",
+   "en": "Paul photographs the old Roman arch the town wants to restore.",
+   "ko": "폴은 시가 복원하려는 오래된 로마식 아치를 찍어요.",
+   "blank": "arche",
+   "src": "made"
+  },
+  {
+   "text": "Émilie fabrique une arche de ballons pour l'anniversaire de sa fille.",
+   "en": "Émilie makes a balloon arch for her daughter's birthday.",
+   "ko": "에밀리는 딸 생일에 풍선 아치를 만들어요.",
+   "blank": "arche",
    "src": "made"
   }
  ],
@@ -5637,6 +5669,22 @@
    "en": "You can toss that bag in the trunk.",
    "ko": "그 가방 트렁크에 던져 넣어.",
    "blank": "balancer"
+  }
+ ],
+ "w|balayer": [
+  {
+   "text": "Le soir, le gardien vient balayer les papiers que Paul laisse tomber par terre.",
+   "en": "In the evening, the caretaker comes to sweep up the papers Paul drops on the floor.",
+   "ko": "저녁이면 관리인이 와서 폴이 바닥에 떨어뜨린 종이를 쓸어요.",
+   "blank": "balayer",
+   "src": "made"
+  },
+  {
+   "text": "Émilie demande à son fils de balayer la terrasse avant le barbecue.",
+   "en": "Émilie asks her son to sweep the terrace before the barbecue.",
+   "ko": "에밀리는 바비큐 전에 아들에게 테라스를 쓸라고 해요.",
+   "blank": "balayer",
+   "src": "made"
   }
  ],
  "w|balcon": [
@@ -8865,6 +8913,22 @@
    "en": "The countryside is very quiet at night.",
    "ko": "시골은 밤에 매우 조용해.",
    "blank": "campagne"
+  }
+ ],
+ "w|camping": [
+  {
+   "text": "Paul enquête sur la fermeture du dernier camping de la côte.",
+   "en": "Paul is investigating the closure of the last campsite on the coast.",
+   "ko": "폴은 해안의 마지막 캠핑장이 문을 닫은 일을 취재해요.",
+   "blank": "camping",
+   "src": "made"
+  },
+  {
+   "text": "Cette année, Émilie remplace le camping par une tente plantée au fond du jardin.",
+   "en": "This year, Émilie replaces camping with a tent pitched at the bottom of the garden.",
+   "ko": "올해 에밀리는 캠핑 대신 정원 끝에 텐트를 쳐요.",
+   "blank": "camping",
+   "src": "made"
   }
  ],
  "w|campus": [
@@ -12863,6 +12927,22 @@
    "blank": "comme"
   }
  ],
+ "w|commencement": [
+  {
+   "text": "Au commencement de sa carrière, Paul couvrait les matchs de foot du dimanche.",
+   "en": "At the start of his career, Paul covered Sunday football matches.",
+   "ko": "경력 초기에 폴은 일요일 축구 경기를 취재했어요.",
+   "blank": "commencement",
+   "src": "made"
+  },
+  {
+   "text": "Ce n'est que le commencement des vacances, et Émilie a déjà tout rangé.",
+   "en": "It's only the beginning of the holidays, and Émilie has already tidied everything.",
+   "ko": "방학이 겨우 시작됐는데 에밀리는 벌써 다 정리했어요.",
+   "blank": "commencement",
+   "src": "made"
+  }
+ ],
  "w|commencer": [
   {
    "text": "On va commencer tout de suite.",
@@ -14307,6 +14387,22 @@
    "src": "made"
   }
  ],
+ "w|conquête": [
+  {
+   "text": "Dans sa chronique, Paul raconte la conquête de la montagne par les premiers alpinistes.",
+   "en": "In his column, Paul tells of the first climbers' conquest of the mountain.",
+   "ko": "폴은 칼럼에서 첫 산악인들이 산을 정복한 이야기를 해요.",
+   "blank": "conquête",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants d'Émilie jouent à la conquête du grenier avec des épées en bois.",
+   "en": "Émilie's kids play at conquering the attic with wooden swords.",
+   "ko": "에밀리의 아이들은 나무 칼을 들고 다락방 정복 놀이를 해요.",
+   "blank": "conquête",
+   "src": "made"
+  }
+ ],
  "w|consacrer": [
   {
    "text": "Cet été, Louis consacre tout son mois d'août à la toiture.",
@@ -14377,6 +14473,22 @@
    "en": "He will advise his friend for the project.",
    "ko": "그는 친구에게 프로젝트에 대해 조언할 거야.",
    "blank": "conseiller"
+  }
+ ],
+ "w|consentement": [
+  {
+   "text": "Paul ne publie jamais une photo d'enfant sans le consentement des parents.",
+   "en": "Paul never publishes a photo of a child without the parents' consent.",
+   "ko": "폴은 부모 동의 없이 아이 사진을 절대 싣지 않아요.",
+   "blank": "consentement",
+   "src": "made"
+  },
+  {
+   "text": "Émilie demande toujours le consentement de ses enfants avant de publier leurs photos.",
+   "en": "Émilie always asks her children's consent before posting their photos.",
+   "ko": "에밀리는 아이들 사진을 올리기 전에 늘 동의를 구해요.",
+   "blank": "consentement",
+   "src": "made"
   }
  ],
  "w|conséquence": [
@@ -14801,6 +14913,22 @@
    "blank": "continuer"
   }
  ],
+ "w|contourner": [
+  {
+   "text": "Le ministre essaie de contourner les questions de Paul pendant l'interview.",
+   "en": "The minister tries to dodge Paul's questions during the interview.",
+   "ko": "장관은 인터뷰 내내 폴의 질문을 피하려 해요.",
+   "blank": "contourner",
+   "src": "made"
+  },
+  {
+   "text": "Émilie trace un parcours dans le jardin où il faut contourner les pots de fleurs.",
+   "en": "Émilie lays out a course in the garden where you have to go around the flowerpots.",
+   "ko": "에밀리는 화분을 돌아서 가야 하는 코스를 정원에 만들어요.",
+   "blank": "contourner",
+   "src": "made"
+  }
+ ],
  "w|contraire": [
   {
    "text": "Le contraire de chaud, c’est froid.",
@@ -14871,6 +14999,22 @@
    "en": "Don’t lean against that wall, it’s dirty.",
    "ko": "그 벽에 기대지 마, 더러워.",
    "blank": "contre"
+  }
+ ],
+ "w|contrebande": [
+  {
+   "text": "Paul écrit un dossier historique sur la contrebande de tabac dans la région.",
+   "en": "Paul writes a historical feature on tobacco smuggling in the region.",
+   "ko": "폴은 그 지역의 담배 밀수 역사에 관한 특집을 써요.",
+   "blank": "contrebande",
+   "src": "made"
+  },
+  {
+   "text": "Le fils d'Émilie a fait entrer des bonbons en contrebande dans sa chambre.",
+   "en": "Émilie's son smuggled sweets into his room.",
+   "ko": "에밀리의 아들은 사탕을 몰래 방에 가지고 들어갔어요.",
+   "blank": "contrebande",
+   "src": "made"
   }
  ],
  "w|contribuer": [
@@ -16681,6 +16825,22 @@
    "src": "made"
   }
  ],
+ "w|cube": [
+  {
+   "text": "Le nouveau musée en forme de cube divise les lecteurs de Paul.",
+   "en": "The new cube-shaped museum divides Paul's readers.",
+   "ko": "정육면체 모양의 새 박물관을 두고 폴의 독자들 의견이 갈려요.",
+   "blank": "cube",
+   "src": "made"
+  },
+  {
+   "text": "Le fils d'Émilie passe l'après-midi à résoudre un cube coloré.",
+   "en": "Émilie's son spends the afternoon solving a colorful cube puzzle.",
+   "ko": "에밀리의 아들은 오후 내내 색깔 큐브를 맞춰요.",
+   "blank": "cube",
+   "src": "made"
+  }
+ ],
  "w|cuillère": [
   {
    "text": "Louis mélange la peinture avec une vieille cuillère en bois.",
@@ -16993,6 +17153,22 @@
    "en": "A lady helped me yesterday.",
    "ko": "어제 한 부인이 나를 도왔다.",
    "blank": "dame"
+  }
+ ],
+ "w|damné": [
+  {
+   "text": "Le vieux typographe parle encore de cette damnée machine qui tombait toujours en panne.",
+   "en": "The old typesetter still talks about that damned machine that always broke down.",
+   "ko": "늙은 식자공은 아직도 늘 고장 나던 그 망할 기계 이야기를 해요.",
+   "blank": "damnée",
+   "src": "made"
+  },
+  {
+   "text": "Émilie cherche ces damnées clés de la cabane depuis ce matin.",
+   "en": "Émilie has been looking for those damned shed keys since this morning.",
+   "ko": "에밀리는 아침부터 그 망할 창고 열쇠를 찾고 있어요.",
+   "blank": "damnées",
+   "src": "made"
   }
  ],
  "w|danger": [
@@ -19701,6 +19877,22 @@
    "blank": "deviner"
   }
  ],
+ "w|devise": [
+  {
+   "text": "Paul explique dans son article pourquoi la devise nationale a perdu de sa valeur.",
+   "en": "In his article, Paul explains why the national currency has lost value.",
+   "ko": "폴은 기사에서 자국 통화 가치가 왜 떨어졌는지 설명해요.",
+   "blank": "devise",
+   "src": "made"
+  },
+  {
+   "text": "« Pas de télé avant midi » est la devise d'Émilie pendant les vacances.",
+   "en": "\"No TV before noon\" is Émilie's motto during the holidays.",
+   "ko": "\"정오 전에는 텔레비전 금지\"가 방학 동안 에밀리의 좌우명이에요.",
+   "blank": "devise",
+   "src": "made"
+  }
+ ],
  "w|dévoiler": [
   {
    "text": "La direction va dévoiler le nouveau modèle devant Lucas et ses collègues.",
@@ -20637,6 +20829,22 @@
    "src": "made"
   }
  ],
+ "w|divertissement": [
+  {
+   "text": "Le cahier divertissement de Paul propose des mots croisés et des jeux.",
+   "en": "Paul's entertainment section offers crosswords and games.",
+   "ko": "폴이 맡은 오락면에는 십자말풀이와 게임이 실려요.",
+   "blank": "divertissement",
+   "src": "made"
+  },
+  {
+   "text": "Émilie cherche un divertissement pour les jours de pluie.",
+   "en": "Émilie is looking for something to keep everyone entertained on rainy days.",
+   "ko": "에밀리는 비 오는 날 즐길 거리를 찾아요.",
+   "blank": "divertissement",
+   "src": "made"
+  }
+ ],
  "w|divin": [
   {
    "text": "En cours d'histoire, Lucas a lu un texte sur le droit divin des rois.",
@@ -20883,6 +21091,22 @@
    "en": "This area is reserved for staff.",
    "ko": "이 구역은 직원 전용이야.",
    "blank": "domaine"
+  }
+ ],
+ "w|dôme": [
+  {
+   "text": "Le nouveau dôme de la mairie fait la une du journal de Paul.",
+   "en": "The town hall's new dome is on the front page of Paul's paper.",
+   "ko": "시청의 새 돔이 폴의 신문 1면에 실려요.",
+   "blank": "dôme",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants d'Émilie construisent un dôme de couvertures dans le salon.",
+   "en": "Émilie's kids build a blanket dome in the living room.",
+   "ko": "에밀리의 아이들은 거실에 이불로 돔을 만들어요.",
+   "blank": "dôme",
+   "src": "made"
   }
  ],
  "w|domestique": [
@@ -23069,6 +23293,22 @@
    "en": "He is late.",
    "ko": "그는 늦었어.",
    "blank": "en"
+  }
+ ],
+ "w|encaisser": [
+  {
+   "text": "Paul sait encaisser les critiques des lecteurs sans se vexer.",
+   "en": "Paul knows how to take readers' criticism without getting upset.",
+   "ko": "폴은 독자들의 비판을 기분 상하지 않고 받아들일 줄 알아요.",
+   "blank": "encaisser",
+   "src": "made"
+  },
+  {
+   "text": "Émilie vend des vieux jouets dans la rue et laisse sa fille encaisser l'argent.",
+   "en": "Émilie sells old toys in the street and lets her daughter take the money.",
+   "ko": "에밀리는 길에서 옛날 장난감을 팔고 딸에게 돈을 받게 해요.",
+   "blank": "encaisser",
+   "src": "made"
   }
  ],
  "w|enceinte": [
@@ -29351,6 +29591,22 @@
    "blank": "fun"
   }
  ],
+ "w|funèbre": [
+  {
+   "text": "Paul décrit le cortège funèbre de l'ancien maire dans les rues du village.",
+   "en": "Paul describes the former mayor's funeral procession through the village streets.",
+   "ko": "폴은 마을 거리를 지나간 전 시장의 장례 행렬을 묘사해요.",
+   "blank": "funèbre",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants d'Émilie organisent une cérémonie funèbre pour leur poisson rouge.",
+   "en": "Émilie's children hold a funeral ceremony for their goldfish.",
+   "ko": "에밀리의 아이들은 금붕어 장례식을 치러 줘요.",
+   "blank": "funèbre",
+   "src": "made"
+  }
+ ],
  "w|funérailles": [
   {
    "text": "Les funérailles auront lieu demain matin.",
@@ -32803,6 +33059,22 @@
    "src": "made"
   }
  ],
+ "w|ignorance": [
+  {
+   "text": "Paul dénonce l'ignorance des élus sur les problèmes du quartier.",
+   "en": "Paul denounces the councillors' ignorance of the neighborhood's problems.",
+   "ko": "폴은 동네 문제에 대한 의원들의 무지를 비판해요.",
+   "blank": "ignorance",
+   "src": "made"
+  },
+  {
+   "text": "Émilie rit de l'ignorance de son mari en matière de jardinage.",
+   "en": "Émilie laughs at her husband's ignorance about gardening.",
+   "ko": "에밀리는 정원 일에 무지한 남편을 보고 웃어요.",
+   "blank": "ignorance",
+   "src": "made"
+  }
+ ],
  "w|ignorer": [
   {
    "text": "Je préfère ignorer ses remarques.",
@@ -33908,6 +34180,22 @@
    "en": "The water is below twenty degrees, but Manon dives in anyway.",
    "ko": "물이 이십 도도 안 되지만 마농은 그래도 뛰어들어요.",
    "blank": "inférieure",
+   "src": "made"
+  }
+ ],
+ "w|infidèle": [
+  {
+   "text": "Le journal de Paul a publié une critique du film sur un mari infidèle.",
+   "en": "Paul's newspaper published a review of the film about an unfaithful husband.",
+   "ko": "폴의 신문은 바람피우는 남편에 관한 영화 평을 실었어요.",
+   "blank": "infidèle",
+   "src": "made"
+  },
+  {
+   "text": "Émilie regarde avec son mari une série sur un détective infidèle.",
+   "en": "Émilie watches a series about an unfaithful detective with her husband.",
+   "ko": "에밀리는 남편과 바람둥이 형사가 나오는 드라마를 봐요.",
+   "blank": "infidèle",
    "src": "made"
   }
  ],
@@ -36633,6 +36921,22 @@
    "blank": "laboratoire"
   }
  ],
+ "w|labyrinthe": [
+  {
+   "text": "Pour Paul, l'administration de la ville est un vrai labyrinthe.",
+   "en": "For Paul, the city administration is a real maze.",
+   "ko": "폴에게 시청 행정은 진짜 미로 같아요.",
+   "blank": "labyrinthe",
+   "src": "made"
+  },
+  {
+   "text": "Émilie dessine un labyrinthe à la craie sur la terrasse.",
+   "en": "Émilie draws a chalk maze on the terrace.",
+   "ko": "에밀리는 테라스에 분필로 미로를 그려요.",
+   "blank": "labyrinthe",
+   "src": "made"
+  }
+ ],
  "w|lac": [
   {
    "text": "On va nager dans le lac cet été.",
@@ -36905,6 +37209,22 @@
    "en": "The sink is full of water.",
    "ko": "세면대에 물이 가득해.",
    "blank": "lavabo"
+  }
+ ],
+ "w|lavage": [
+  {
+   "text": "Paul écrit un article sur une station de lavage de voitures qui gaspille trop d'eau.",
+   "en": "Paul writes an article about a car wash that wastes too much water.",
+   "ko": "폴은 물을 너무 많이 쓰는 세차장에 관한 기사를 써요.",
+   "blank": "lavage",
+   "src": "made"
+  },
+  {
+   "text": "Émilie organise un grand lavage de la voiture avec les enfants et le tuyau d'arrosage.",
+   "en": "Émilie organizes a big car wash with the kids and the garden hose.",
+   "ko": "에밀리는 아이들과 정원 호스로 차를 한바탕 씻어요.",
+   "blank": "lavage",
+   "src": "made"
   }
  ],
  "w|laver": [
@@ -37853,6 +38173,22 @@
    "src": "made"
   }
  ],
+ "w|loisir": [
+  {
+   "text": "Paul s'occupe aussi de la page loisirs du week-end.",
+   "en": "Paul also handles the weekend leisure page.",
+   "ko": "폴은 주말 여가 면도 맡고 있어요.",
+   "blank": "loisirs",
+   "src": "made"
+  },
+  {
+   "text": "Pour Émilie, la lecture au hamac est le meilleur loisir de l'été.",
+   "en": "For Émilie, reading in the hammock is the best pastime of the summer.",
+   "ko": "에밀리에게 해먹에서 책 읽기는 여름 최고의 여가예요.",
+   "blank": "loisir",
+   "src": "made"
+  }
+ ],
  "w|long": [
   {
    "text": "Le film était un peu long.",
@@ -38509,6 +38845,22 @@
    "blank": "maintenir"
   }
  ],
+ "w|maintien": [
+  {
+   "text": "Les habitants réclament le maintien de la petite gare, écrit Paul.",
+   "en": "Residents are demanding that the little station be kept open, Paul writes.",
+   "ko": "주민들이 작은 기차역을 그대로 두라고 요구한다고 폴은 써요.",
+   "blank": "maintien",
+   "src": "made"
+  },
+  {
+   "text": "Émilie tient au maintien des horaires de repas, même en vacances.",
+   "en": "Émilie insists on keeping regular mealtimes, even on holiday.",
+   "ko": "에밀리는 방학에도 식사 시간을 지키는 걸 중요하게 여겨요.",
+   "blank": "maintien",
+   "src": "made"
+  }
+ ],
  "w|maire": [
   {
    "text": "Le maire a visité l'école ce matin.",
@@ -38881,6 +39233,22 @@
    "src": "made"
   }
  ],
+ "w|maltraiter": [
+  {
+   "text": "Paul rapporte le procès d'un éleveur accusé de maltraiter ses chevaux.",
+   "en": "Paul reports on the trial of a breeder accused of mistreating his horses.",
+   "ko": "폴은 말을 학대한 혐의를 받는 사육자의 재판을 보도해요.",
+   "blank": "maltraiter",
+   "src": "made"
+  },
+  {
+   "text": "Émilie explique à son fils qu'on ne doit pas maltraiter les fourmis du jardin.",
+   "en": "Émilie explains to her son that he mustn't hurt the ants in the garden.",
+   "ko": "에밀리는 아들에게 정원 개미를 괴롭히면 안 된다고 설명해요.",
+   "blank": "maltraiter",
+   "src": "made"
+  }
+ ],
  "w|maman": [
   {
    "text": "Ma maman prépare un gâteau.",
@@ -39024,6 +39392,22 @@
    "en": "Claire's joy is plain to see when she finally finds the record she was looking for.",
    "ko": "찾던 음반을 마침내 발견하자 클레르의 기쁨이 얼굴에 그대로 드러나요.",
    "blank": "manifeste",
+   "src": "made"
+  }
+ ],
+ "w|manifester": [
+  {
+   "text": "Paul interroge les infirmières venues manifester devant l'hôpital.",
+   "en": "Paul interviews the nurses who came to demonstrate in front of the hospital.",
+   "ko": "폴은 병원 앞에서 시위하러 나온 간호사들을 인터뷰해요.",
+   "blank": "manifester",
+   "src": "made"
+  },
+  {
+   "text": "La fille d'Émilie commence à manifester un vrai talent pour le dessin.",
+   "en": "Émilie's daughter is starting to show real talent for drawing.",
+   "ko": "에밀리의 딸은 그림에 진짜 재능을 보이기 시작해요.",
+   "blank": "manifester",
    "src": "made"
   }
  ],
@@ -40947,6 +41331,22 @@
    "en": "A million people are watching this movie.",
    "ko": "백만 명이 이 영화를 보고 있어.",
    "blank": "million"
+  }
+ ],
+ "w|millionnaire": [
+  {
+   "text": "Paul écrit le portrait d'un millionnaire qui a donné sa fortune à la bibliothèque municipale.",
+   "en": "Paul is writing a profile of a millionaire who gave his fortune to the town library.",
+   "ko": "폴은 시립 도서관에 재산을 기부한 백만장자에 관한 기사를 써요.",
+   "blank": "millionnaire",
+   "src": "made"
+  },
+  {
+   "text": "Émilie et ses enfants jouent au millionnaire avec les faux billets du jeu de société.",
+   "en": "Émilie and her kids play millionaire with the board game's fake banknotes.",
+   "ko": "에밀리와 아이들은 보드게임 가짜 지폐로 백만장자 놀이를 해요.",
+   "blank": "millionnaire",
+   "src": "made"
   }
  ],
  "w|minable": [
@@ -45465,6 +45865,22 @@
    "blank": "par-dessus"
   }
  ],
+ "w|parachute": [
+  {
+   "text": "Pour un reportage, Paul a sauté en parachute avec des militaires.",
+   "en": "For a report, Paul went parachuting with soldiers.",
+   "ko": "취재를 위해 폴은 군인들과 낙하산을 타고 뛰어내렸어요.",
+   "blank": "parachute",
+   "src": "made"
+  },
+  {
+   "text": "Le petit dernier d'Émilie lance des soldats en parachute depuis le balcon.",
+   "en": "Émilie's youngest drops toy soldiers with parachutes from the balcony.",
+   "ko": "에밀리의 막내는 발코니에서 낙하산 단 장난감 병정을 떨어뜨려요.",
+   "blank": "parachute",
+   "src": "made"
+  }
+ ],
  "w|parade": [
   {
    "text": "Pour le carnaval, la classe de Hugo prépare une parade dans les rues du quartier.",
@@ -45554,6 +45970,22 @@
    "en": "Manon laughs at herself, saying she's paranoid about germs on the machines.",
    "ko": "마농은 기구에 묻은 세균에 집착한다며 스스로를 놀려요.",
    "blank": "parano",
+   "src": "made"
+  }
+ ],
+ "w|parapluie": [
+  {
+   "text": "Paul a oublié son parapluie à la rédaction et arrive trempé à la conférence.",
+   "en": "Paul forgot his umbrella at the newsroom and arrives soaked at the press conference.",
+   "ko": "폴은 편집국에 우산을 두고 와서 기자회견장에 흠뻑 젖은 채 도착해요.",
+   "blank": "parapluie",
+   "src": "made"
+  },
+  {
+   "text": "Quand l'orage éclate, Émilie et sa fille dansent dehors sous un grand parapluie.",
+   "en": "When the storm breaks, Émilie and her daughter dance outside under a big umbrella.",
+   "ko": "소나기가 쏟아지자 에밀리와 딸은 큰 우산 아래서 밖에서 춤을 춰요.",
+   "blank": "parapluie",
    "src": "made"
   }
  ],
@@ -46708,6 +47140,22 @@
    "en": "In October, Léa gathers the dead leaves with a shovel and a rake.",
    "ko": "시월이면 레아는 삽과 갈퀴로 낙엽을 모아요.",
    "blank": "pelle",
+   "src": "made"
+  }
+ ],
+ "w|pelouse": [
+  {
+   "text": "La photo de la une montre des manifestants assis sur la pelouse de la mairie.",
+   "en": "The front-page photo shows protesters sitting on the town hall lawn.",
+   "ko": "1면 사진에는 시청 잔디밭에 앉은 시위대가 나와요.",
+   "blank": "pelouse",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants d'Émilie installent la piscine gonflable sur la pelouse.",
+   "en": "Émilie's children set up the inflatable pool on the lawn.",
+   "ko": "에밀리의 아이들은 잔디밭에 공기 주입식 수영장을 설치해요.",
+   "blank": "pelouse",
    "src": "made"
   }
  ],
@@ -52457,6 +52905,22 @@
    "blank": "quelques-uns"
   }
  ],
+ "w|querelle": [
+  {
+   "text": "Paul refuse de prendre parti dans la querelle entre les deux maires voisins.",
+   "en": "Paul refuses to take sides in the quarrel between the two neighboring mayors.",
+   "ko": "폴은 이웃한 두 시장 사이의 다툼에서 어느 편도 들지 않아요.",
+   "blank": "querelle",
+   "src": "made"
+  },
+  {
+   "text": "Émilie arrête une querelle entre ses deux fils au sujet de la console.",
+   "en": "Émilie stops a quarrel between her two sons over the game console.",
+   "ko": "에밀리는 게임기 때문에 다투는 두 아들을 말려요.",
+   "blank": "querelle",
+   "src": "made"
+  }
+ ],
  "w|question": [
   {
    "text": "J'ai une question pour toi.",
@@ -52612,6 +53076,22 @@
    "en": "In her daily work, Camille talks to hundreds of customers.",
    "ko": "카미유는 하루하루 일하며 수백 명의 손님과 이야기해요.",
    "blank": "quotidien",
+   "src": "made"
+  }
+ ],
+ "w|rabbin": [
+  {
+   "text": "Paul interviewe un rabbin et un prêtre qui organisent ensemble une collecte pour les sans-abri.",
+   "en": "Paul interviews a rabbi and a priest who are organizing a collection for the homeless together.",
+   "ko": "폴은 노숙인을 위한 모금을 함께 여는 랍비와 신부를 인터뷰해요.",
+   "blank": "rabbin",
+   "src": "made"
+  },
+  {
+   "text": "Les voisins d'Émilie, la famille du rabbin, viennent partager le goûter.",
+   "en": "Émilie's neighbors, the rabbi's family, come over to share an afternoon snack.",
+   "ko": "에밀리의 이웃인 랍비 가족이 간식을 함께 먹으러 와요.",
+   "blank": "rabbin",
    "src": "made"
   }
  ],
@@ -52805,6 +53285,22 @@
    "en": "Rage is hard to control.",
    "ko": "분노는 통제하기 힘들어.",
    "blank": "rage"
+  }
+ ],
+ "w|raid": [
+  {
+   "text": "Paul couvre un raid de la police douanière dans le port, raconté par les autorités.",
+   "en": "Paul covers a customs police raid at the port, as described by the authorities.",
+   "ko": "폴은 당국이 발표한 항구 세관 경찰의 단속을 취재해요.",
+   "blank": "raid",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants d'Émilie lancent un raid sur le frigo à minuit.",
+   "en": "Émilie's kids launch a midnight raid on the fridge.",
+   "ko": "에밀리의 아이들은 한밤중에 냉장고를 습격해요.",
+   "blank": "raid",
+   "src": "made"
   }
  ],
  "w|raide": [
@@ -59087,6 +59583,22 @@
    "src": "made"
   }
  ],
+ "w|semestre": [
+  {
+   "text": "Ce semestre, Paul accueille deux stagiaires d'une école de journalisme.",
+   "en": "This semester, Paul is hosting two interns from a journalism school.",
+   "ko": "이번 학기에 폴은 언론학교 실습생 둘을 맡았어요.",
+   "blank": "semestre",
+   "src": "made"
+  },
+  {
+   "text": "Après un semestre chargé, Émilie a besoin de vacances tranquilles à la maison.",
+   "en": "After a busy semester, Émilie needs a quiet holiday at home.",
+   "ko": "바쁜 학기를 보낸 에밀리는 집에서 조용한 휴가가 필요해요.",
+   "blank": "semestre",
+   "src": "made"
+  }
+ ],
  "w|séminaire": [
   {
    "text": "Louis part à Bordeaux pour un séminaire sur le management.",
@@ -60274,6 +60786,22 @@
    "en": "Manon forgot her swimsuit bottoms and has to skip the pool.",
    "ko": "마농은 수영복 하의를 잊어서 수영장을 포기해야 해요.",
    "blank": "slip",
+   "src": "made"
+  }
+ ],
+ "w|slogan": [
+  {
+   "text": "Paul note le slogan que les étudiants crient devant le ministère.",
+   "en": "Paul notes down the slogan the students are shouting outside the ministry.",
+   "ko": "폴은 학생들이 교육부 앞에서 외치는 구호를 받아 적어요.",
+   "blank": "slogan",
+   "src": "made"
+  },
+  {
+   "text": "Pour la fête de famille, les enfants d'Émilie inventent un slogan sur une banderole.",
+   "en": "For the family party, Émilie's kids come up with a slogan on a banner.",
+   "ko": "가족 파티를 위해 에밀리의 아이들은 현수막에 구호를 지어 써요.",
+   "blank": "slogan",
    "src": "made"
   }
  ],
@@ -62559,6 +63087,22 @@
    "blank": "supposer"
   }
  ],
+ "w|supposition": [
+  {
+   "text": "Le rédacteur en chef demande à Paul des preuves, pas une simple supposition.",
+   "en": "The editor-in-chief asks Paul for evidence, not just an assumption.",
+   "ko": "편집장은 폴에게 짐작이 아니라 증거를 가져오라고 해요.",
+   "blank": "supposition",
+   "src": "made"
+  },
+  {
+   "text": "Émilie pense que le chat a mangé le gâteau, mais ce n'est qu'une supposition.",
+   "en": "Émilie thinks the cat ate the cake, but it's only a guess.",
+   "ko": "에밀리는 고양이가 케이크를 먹었다고 생각하지만 짐작일 뿐이에요.",
+   "blank": "supposition",
+   "src": "made"
+  }
+ ],
  "w|supprimer": [
   {
    "text": "Pour protéger ses dents, Nicolas a supprimé les sodas de son alimentation.",
@@ -63325,6 +63869,22 @@
    "en": "She was laughing while her brother was crying.",
    "ko": "그녀는 웃고 있는 반면, 그녀의 오빠는 울고 있었어.",
    "blank": "tandis que"
+  }
+ ],
+ "w|tango": [
+  {
+   "text": "Pour la rubrique culture, Paul a pris un cours de tango avec un couple de danseurs.",
+   "en": "For the culture section, Paul took a tango lesson with a pair of dancers.",
+   "ko": "문화면을 위해 폴은 무용수 부부에게 탱고 수업을 받았어요.",
+   "blank": "tango",
+   "src": "made"
+  },
+  {
+   "text": "Un soir de vacances, Émilie danse le tango avec son mari dans la cuisine.",
+   "en": "One holiday evening, Émilie dances the tango with her husband in the kitchen.",
+   "ko": "방학 어느 저녁 에밀리는 부엌에서 남편과 탱고를 춰요.",
+   "blank": "tango",
+   "src": "made"
   }
  ],
  "w|tant": [
@@ -65213,6 +65773,22 @@
    "blank": "trafic"
   }
  ],
+ "w|trafiquer": [
+  {
+   "text": "Paul découvre qu'une entreprise a voulu trafiquer les chiffres de ses ventes.",
+   "en": "Paul discovers that a company tried to fiddle its sales figures.",
+   "ko": "폴은 한 회사가 매출 수치를 조작하려 했다는 걸 알아내요.",
+   "blank": "trafiquer",
+   "src": "made"
+  },
+  {
+   "text": "Émilie surprend sa fille en train de trafiquer l'horloge pour se coucher plus tard.",
+   "en": "Émilie catches her daughter fiddling with the clock to go to bed later.",
+   "ko": "에밀리는 늦게 자려고 시계를 몰래 바꾸는 딸을 붙잡아요.",
+   "blank": "trafiquer",
+   "src": "made"
+  }
+ ],
  "w|tragédie": [
   {
    "text": "La pièce raconte une vieille tragédie grecque.",
@@ -65513,6 +66089,22 @@
    "en": "The heat will turn the ice into water.",
    "ko": "열이 얼음을 물로 바꿔줄 거야.",
    "blank": "transformer"
+  }
+ ],
+ "w|transition": [
+  {
+   "text": "Paul suit la transition du journal papier vers le site internet.",
+   "en": "Paul is following the newspaper's transition from print to the website.",
+   "ko": "폴은 신문이 종이에서 웹사이트로 넘어가는 과정을 지켜봐요.",
+   "blank": "transition",
+   "src": "made"
+  },
+  {
+   "text": "La rentrée approche, et Émilie prépare une transition douce pour les enfants.",
+   "en": "School is about to start, and Émilie is planning a gentle transition for the kids.",
+   "ko": "개학이 다가오자 에밀리는 아이들이 천천히 적응하도록 준비해요.",
+   "blank": "transition",
+   "src": "made"
   }
  ],
  "w|transmettre": [
@@ -66387,6 +66979,22 @@
    "en": "That's so typical of him.",
    "ko": "그 반응은 완전히 그 사람다워.",
    "blank": "typique"
+  }
+ ],
+ "w|tyran": [
+  {
+   "text": "Paul a lu une biographie d'un tyran du Moyen Âge pour la rubrique histoire.",
+   "en": "Paul read a biography of a medieval tyrant for the history column.",
+   "ko": "폴은 역사 칼럼을 쓰려고 중세 폭군의 전기를 읽었어요.",
+   "blank": "tyran",
+   "src": "made"
+  },
+  {
+   "text": "Le fils d'Émilie l'appelle un tyran quand elle éteint la télé.",
+   "en": "Émilie's son calls her a tyrant when she switches off the TV.",
+   "ko": "에밀리가 텔레비전을 끄면 아들은 엄마를 폭군이라고 불러요.",
+   "blank": "tyran",
+   "src": "made"
   }
  ],
  "w|ultime": [
@@ -67349,6 +67957,22 @@
    "en": "I broke a glass this morning.",
    "ko": "오늘 아침에 유리잔을 깼어.",
    "blank": "verre"
+  }
+ ],
+ "w|verrou": [
+  {
+   "text": "Paul vérifie le verrou de son bureau, car il garde des documents confidentiels.",
+   "en": "Paul checks the lock on his office, since he keeps confidential documents.",
+   "ko": "폴은 기밀 서류를 보관하고 있어서 사무실 자물쇠를 확인해요.",
+   "blank": "verrou",
+   "src": "made"
+  },
+  {
+   "text": "La fille d'Émilie ferme sa chambre avec un verrou pour écrire son journal intime.",
+   "en": "Émilie's daughter locks her room with a bolt to write in her diary.",
+   "ko": "에밀리의 딸은 일기를 쓰려고 방문 빗장을 걸어요.",
+   "blank": "verrou",
+   "src": "made"
   }
  ],
  "w|verrouiller": [
@@ -68871,6 +69495,22 @@
    "en": "There are many people here.",
    "ko": "여기 사람이 많아.",
    "blank": "y"
+  }
+ ],
+ "w|yacht": [
+  {
+   "text": "Le rédacteur en chef envoie Paul photographier le yacht amarré dans le port.",
+   "en": "The editor-in-chief sends Paul to photograph the yacht moored in the harbor.",
+   "ko": "편집장은 폴에게 항구에 정박한 요트를 찍어 오라고 해요.",
+   "blank": "yacht",
+   "src": "made"
+  },
+  {
+   "text": "Le fils d'Émilie construit un yacht en carton dans le salon.",
+   "en": "Émilie's son is building a cardboard yacht in the living room.",
+   "ko": "에밀리의 아들은 거실에서 종이 상자로 요트를 만들어요.",
+   "blank": "yacht",
+   "src": "made"
   }
  ],
  "w|yoga": [

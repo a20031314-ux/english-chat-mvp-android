@@ -73,6 +73,22 @@
    "src": "made"
   }
  ],
+ "w|abdomen": [
+  {
+   "text": "Un cliente se quejaba de un dolor en el abdomen y Javier le mandó al médico.",
+   "en": "A customer complained of pain in his abdomen and Javier sent him to the doctor.",
+   "ko": "한 손님이 배가 아프다고 해서 하비에르는 병원에 가 보라고 했어요.",
+   "blank": "abdomen",
+   "src": "made"
+  },
+  {
+   "text": "Después de tanto turrón, Marta notaba el abdomen hinchado.",
+   "en": "After so much nougat, Marta felt her stomach bloated.",
+   "ko": "투론을 너무 많이 먹어서 마르타는 배가 더부룩했어요.",
+   "blank": "abdomen",
+   "src": "made"
+  }
+ ],
  "w|abdominal": [
   {
    "text": "Cargar la mochila le provocó a Mateo un dolor abdominal leve.",
@@ -2315,6 +2331,22 @@
    "blank": "agosto"
   }
  ],
+ "w|agotador": [
+  {
+   "text": "Para Javier, la temporada de gripe es la época más agotadora del año.",
+   "en": "For Javier, flu season is the most exhausting time of the year.",
+   "ko": "하비에르에게 독감철은 일 년 중 가장 힘든 때예요.",
+   "blank": "agotadora",
+   "src": "made"
+  },
+  {
+   "text": "Preparar la cena de fin de año para toda la familia fue agotador para Marta.",
+   "en": "Making the year-end dinner for the whole family was exhausting for Marta.",
+   "ko": "온 가족의 연말 저녁을 준비하는 건 마르타에게 정말 고된 일이었어요.",
+   "blank": "agotador",
+   "src": "made"
+  }
+ ],
  "w|agotar": [
   {
    "text": "Puedes agotar las pilas si dejas la luz.",
@@ -3615,6 +3647,22 @@
    "en": "After lunch we took a walk.",
    "ko": "점심 후에 산책을 했어.",
    "blank": "almuerzo"
+  }
+ ],
+ "w|alocado": [
+  {
+   "text": "Un adolescente alocado entró corriendo en la farmacia y tiró un expositor.",
+   "en": "A wild teenager ran into the pharmacy and knocked over a display.",
+   "ko": "철없는 십대 하나가 약국에 뛰어 들어와 진열대를 넘어뜨렸어요.",
+   "blank": "alocado",
+   "src": "made"
+  },
+  {
+   "text": "Marta recordó aquella Nochevieja alocada en la que acabaron bailando en la calle.",
+   "en": "Marta remembered that crazy New Year's Eve when they ended up dancing in the street.",
+   "ko": "마르타는 다 같이 길에서 춤추게 됐던 그 정신없던 섣달그믐을 떠올렸어요.",
+   "blank": "alocada",
+   "src": "made"
   }
  ],
  "w|alojamiento": [
@@ -5585,6 +5633,22 @@
    "blank": "apretar"
   }
  ],
+ "w|apretón": [
+  {
+   "text": "El anciano se despidió de Javier con un fuerte apretón de manos.",
+   "en": "The old man said goodbye to Javier with a firm handshake.",
+   "ko": "그 할아버지는 하비에르와 힘차게 악수하며 인사했어요.",
+   "blank": "apretón",
+   "src": "made"
+  },
+  {
+   "text": "Marta le dio a su abuela un apretón cariñoso cuando sonaron las campanadas.",
+   "en": "Marta gave her grandmother an affectionate squeeze when the chimes rang.",
+   "ko": "종이 울리자 마르타는 할머니를 꼭 안아 드렸어요.",
+   "blank": "apretón",
+   "src": "made"
+  }
+ ],
  "w|aprieto": [
   {
    "text": "Pablo se metió en un aprieto al olvidar los deberes dos días seguidos.",
@@ -6602,6 +6666,22 @@
    "en": "A friend of Paula's who is a surgeon told how she operated on a heart artery.",
    "ko": "외과 의사인 파울라의 친구가 심장 동맥 수술을 한 이야기를 했어요.",
    "blank": "arteria",
+   "src": "made"
+  }
+ ],
+ "w|articular": [
+  {
+   "text": "El señor estaba tan ronco que apenas podía articular una palabra delante de Javier.",
+   "en": "The man was so hoarse he could barely get a single sound out in front of Javier.",
+   "ko": "그 남자는 목이 너무 쉬어서 하비에르 앞에서 말 한마디도 겨우 했어요.",
+   "blank": "articular",
+   "src": "made"
+  },
+  {
+   "text": "Con tanta emoción, Marta no supo articular un brindis decente.",
+   "en": "With so much emotion, Marta couldn't put together a decent toast.",
+   "ko": "마르타는 너무 벅차서 건배사를 제대로 하지 못했어요.",
+   "blank": "articular",
    "src": "made"
   }
  ],
@@ -16147,6 +16227,22 @@
    "src": "made"
   }
  ],
+ "w|colateral": [
+  {
+   "text": "Javier explicó a la señora cuál era el efecto colateral más común del jarabe.",
+   "en": "Javier explained to the lady what the most common side effect of the syrup was.",
+   "ko": "하비에르는 부인에게 그 시럽의 가장 흔한 부작용이 뭔지 설명했어요.",
+   "blank": "colateral",
+   "src": "made"
+  },
+  {
+   "text": "Un daño colateral de la fiesta fue que el gato de Marta se escondió dos días.",
+   "en": "A side effect of the party was that Marta's cat hid for two days.",
+   "ko": "파티의 부작용으로 마르타의 고양이가 이틀 동안 숨어 있었어요.",
+   "blank": "colateral",
+   "src": "made"
+  }
+ ],
  "w|colchón": [
   {
    "text": "Carlos compró un colchón nuevo porque le dolía la espalda.",
@@ -19006,6 +19102,22 @@
    "en": "Diego works as an accountant at a large corporation.",
    "ko": "디에고는 큰 기업에서 회계사로 일해요.",
    "blank": "contador",
+   "src": "made"
+  }
+ ],
+ "w|contagioso": [
+  {
+   "text": "Javier le preguntó a la madre si la erupción del niño era contagiosa.",
+   "en": "Javier asked the mother whether the child's rash was contagious.",
+   "ko": "하비에르는 아이 엄마에게 발진이 전염되는 건지 물었어요.",
+   "blank": "contagiosa",
+   "src": "made"
+  },
+  {
+   "text": "La risa de Marta es tan contagiosa que acabó haciendo reír a toda la mesa.",
+   "en": "Marta's laugh is so contagious that it ended up making the whole table laugh.",
+   "ko": "마르타의 웃음은 전염성이 강해서 결국 식탁의 모두를 웃게 했어요.",
+   "blank": "contagiosa",
    "src": "made"
   }
  ],
@@ -22257,6 +22369,22 @@
    "en": "He showed weakness by accepting the offer.",
    "ko": "제안을 받아들이며 약함을 드러냈어.",
    "blank": "debilidad"
+  }
+ ],
+ "w|debilitar": [
+  {
+   "text": "Javier advirtió que tomar antibióticos sin receta puede debilitar sus efectos con el tiempo.",
+   "en": "Javier warned that taking antibiotics without a prescription can weaken their effect over time.",
+   "ko": "하비에르는 처방 없이 항생제를 먹으면 시간이 지나며 효과가 약해질 수 있다고 경고했어요.",
+   "blank": "debilitar",
+   "src": "made"
+  },
+  {
+   "text": "Marta temía que el frío fuera a debilitar las plantas que había puesto en el balcón.",
+   "en": "Marta was afraid the cold would weaken the plants she had put on the balcony.",
+   "ko": "마르타는 추위 때문에 발코니에 둔 화분이 약해질까 걱정했어요.",
+   "blank": "debilitar",
+   "src": "made"
   }
  ],
  "w|década": [
@@ -29251,6 +29379,22 @@
    "blank": "engaño"
   }
  ],
+ "w|engordar": [
+  {
+   "text": "Javier le aclaró a una clienta que ese medicamento no hace engordar.",
+   "en": "Javier made it clear to a customer that the medicine doesn't make you put on weight.",
+   "ko": "하비에르는 손님에게 그 약은 살찌게 하지 않는다고 분명히 말했어요.",
+   "blank": "engordar",
+   "src": "made"
+  },
+  {
+   "text": "Marta dice que en estas fiestas siempre acaba por engordar un par de kilos.",
+   "en": "Marta says she always ends up putting on a couple of kilos over the holidays.",
+   "ko": "마르타는 연말이면 늘 몇 킬로씩 살이 찐다고 해요.",
+   "blank": "engordar",
+   "src": "made"
+  }
+ ],
  "w|engreído": [
   {
    "text": "Tras ganar el concurso de ortografía, Sergio se volvió un poco engreído.",
@@ -29369,6 +29513,22 @@
    "en": "The dog is enormous but very gentle.",
    "ko": "그 개는 엄청 크지만 아주 순해.",
    "blank": "enorme"
+  }
+ ],
+ "w|enredar": [
+  {
+   "text": "Al colocar el expositor, a Javier se le enredaron los cables de la luz.",
+   "en": "While setting up the display stand, Javier got the light cables tangled.",
+   "ko": "하비에르는 진열대를 설치하다가 조명 전선이 엉켜 버렸어요.",
+   "blank": "enredaron",
+   "src": "made"
+  },
+  {
+   "text": "Marta pasó media hora intentando no enredar las luces del árbol.",
+   "en": "Marta spent half an hour trying not to tangle the tree lights.",
+   "ko": "마르타는 트리 전구가 엉키지 않게 하느라 삼십 분을 보냈어요.",
+   "blank": "enredar",
+   "src": "made"
   }
  ],
  "w|ensalada": [
@@ -29617,6 +29777,22 @@
    "en": "I bought two tickets for the movie.",
    "ko": "영화 표 두 장 샀어.",
    "blank": "entradas"
+  }
+ ],
+ "w|entrañas": [
+  {
+   "text": "Una señora le dijo a Javier que la comida picante le quemaba las entrañas.",
+   "en": "A lady told Javier that spicy food burned her insides.",
+   "ko": "한 부인이 하비에르에게 매운 음식을 먹으면 속이 타는 것 같다고 했어요.",
+   "blank": "entrañas",
+   "src": "made"
+  },
+  {
+   "text": "Marta limpió las entrañas del pescado para hacerlo al horno.",
+   "en": "Marta cleaned out the fish's guts to bake it in the oven.",
+   "ko": "마르타는 생선을 오븐에 구우려고 내장을 손질했어요.",
+   "blank": "entrañas",
+   "src": "made"
   }
  ],
  "w|entrar": [
@@ -29955,6 +30131,22 @@
    "en": "She knows how to wrap the food to go.",
    "ko": "그녀는 가져갈 음식을 싸는 법을 알아.",
    "blank": "envolver"
+  }
+ ],
+ "w|epidemia": [
+  {
+   "text": "Durante la epidemia de gripe, Javier se quedaba en la farmacia hasta la noche.",
+   "en": "During the flu epidemic, Javier stayed at the pharmacy until night.",
+   "ko": "독감이 유행하던 때 하비에르는 밤까지 약국에 남아 있었어요.",
+   "blank": "epidemia",
+   "src": "made"
+  },
+  {
+   "text": "Marta bromeó con que en su familia hay una epidemia de jerséis navideños.",
+   "en": "Marta joked that her family has an epidemic of Christmas jumpers.",
+   "ko": "마르타는 자기 집에 크리스마스 스웨터가 유행병처럼 퍼졌다고 농담했어요.",
+   "blank": "epidemia",
+   "src": "made"
   }
  ],
  "w|episodio": [
@@ -31807,6 +31999,22 @@
    "blank": "estelar"
   }
  ],
+ "w|esteroide": [
+  {
+   "text": "Javier explicó que la crema llevaba un esteroide suave para calmar el picor.",
+   "en": "Javier explained that the cream contained a mild steroid to soothe the itching.",
+   "ko": "하비에르는 그 크림에 가려움을 가라앉히는 약한 스테로이드가 들어 있다고 설명했어요.",
+   "blank": "esteroide",
+   "src": "made"
+  },
+  {
+   "text": "El primo de Marta contó en la cena que su vecino se inyectaba esteroides para el gimnasio, y nadie se lo creyó.",
+   "en": "At dinner Marta's cousin said his neighbour injected steroids for the gym, and nobody believed him.",
+   "ko": "저녁 식사 때 마르타의 사촌이 이웃이 헬스 때문에 스테로이드를 맞는다고 했지만 아무도 안 믿었어요.",
+   "blank": "esteroides",
+   "src": "made"
+  }
+ ],
  "w|estilo": [
   {
    "text": "Me gusta tu estilo de vestir.",
@@ -32143,6 +32351,22 @@
    "en": "The study is at the end of the hallway.",
    "ko": "서재는 복도 끝에 있어.",
    "blank": "estudio"
+  }
+ ],
+ "w|estupendamente": [
+  {
+   "text": "Una clienta le contó a Javier que con el nuevo tratamiento dormía estupendamente.",
+   "en": "A customer told Javier that she was sleeping wonderfully with the new treatment.",
+   "ko": "한 손님이 새 약을 먹고 나서 아주 잘 잔다고 하비에르에게 말했어요.",
+   "blank": "estupendamente",
+   "src": "made"
+  },
+  {
+   "text": "El asado le salió estupendamente a Marta y no sobró nada.",
+   "en": "Marta's roast turned out brilliantly and nothing was left over.",
+   "ko": "마르타의 구이 요리가 아주 맛있게 돼서 하나도 안 남았어요.",
+   "blank": "estupendamente",
+   "src": "made"
   }
  ],
  "w|estupendo": [
@@ -33389,6 +33613,22 @@
    "src": "made"
   }
  ],
+ "w|extenso": [
+  {
+   "text": "El prospecto era tan extenso que Javier le resumió lo importante a la clienta.",
+   "en": "The leaflet was so long that Javier summarised the important points for the customer.",
+   "ko": "설명서가 너무 길어서 하비에르가 손님에게 중요한 것만 요약해 줬어요.",
+   "blank": "extenso",
+   "src": "made"
+  },
+  {
+   "text": "La lista de la compra de Marta era tan extensa que ocupaba dos páginas.",
+   "en": "Marta's shopping list was so long it took up two pages.",
+   "ko": "마르타의 장보기 목록은 너무 길어서 두 장이나 됐어요.",
+   "blank": "extensa",
+   "src": "made"
+  }
+ ],
  "w|exterior": [
   {
    "text": "Prefiero sentarme en la terraza exterior.",
@@ -33463,6 +33703,22 @@
    "en": "She worked overtime all week.",
    "ko": "일주일 내내 잔업을 했어.",
    "blank": "extra"
+  }
+ ],
+ "w|extracción": [
+  {
+   "text": "Después de una extracción de muela, la clienta le pidió a Javier algo para el dolor.",
+   "en": "After a tooth extraction, the customer asked Javier for something for the pain.",
+   "ko": "어금니를 뽑고 나서 그 손님은 하비에르에게 진통제를 달라고 했어요.",
+   "blank": "extracción",
+   "src": "made"
+  },
+  {
+   "text": "Marta pospuso la extracción de la muela hasta después de Año Nuevo.",
+   "en": "Marta put off the tooth extraction until after New Year.",
+   "ko": "마르타는 어금니 뽑는 걸 새해 이후로 미뤘어요.",
+   "blank": "extracción",
+   "src": "made"
   }
  ],
  "w|extraer": [
@@ -42827,6 +43083,22 @@
    "src": "made"
   }
  ],
+ "w|inmune": [
+  {
+   "text": "Javier bromea con que ya es inmune a todos los resfriados de los clientes.",
+   "en": "Javier jokes that he's now immune to all his customers' colds.",
+   "ko": "하비에르는 이제 손님들 감기엔 다 면역이 됐다고 농담해요.",
+   "blank": "inmune",
+   "src": "made"
+  },
+  {
+   "text": "Marta parece inmune al estrés de las fiestas; nada la pone nerviosa.",
+   "en": "Marta seems immune to holiday stress; nothing makes her nervous.",
+   "ko": "마르타는 연말 스트레스에 면역이 있는 것 같아요. 아무것도 그녀를 긴장시키지 못해요.",
+   "blank": "inmune",
+   "src": "made"
+  }
+ ],
  "w|inmunidad": [
   {
    "text": "La vacuna refuerza la inmunidad del cuerpo.",
@@ -43319,6 +43591,22 @@
    "en": "The painting remained intact after the fire.",
    "ko": "화재 뒤에도 그림은 멀쩡했어.",
    "blank": "intacto"
+  }
+ ],
+ "w|integrar": [
+  {
+   "text": "Javier quiere integrar un rincón de vacunas en su farmacia.",
+   "en": "Javier wants to set up a vaccination corner in his pharmacy.",
+   "ko": "하비에르는 약국에 예방접종 코너를 들이고 싶어 해요.",
+   "blank": "integrar",
+   "src": "made"
+  },
+  {
+   "text": "Marta intentó integrar las tradiciones de las dos familias en una sola cena.",
+   "en": "Marta tried to bring the traditions of both families together in a single dinner.",
+   "ko": "마르타는 두 집안의 전통을 한 번의 저녁 식사에 함께 담으려고 했어요.",
+   "blank": "integrar",
+   "src": "made"
   }
  ],
  "w|integridad": [
@@ -48553,6 +48841,22 @@
    "src": "made"
   }
  ],
+ "w|maníaco": [
+  {
+   "text": "Un cliente entró hablando de forma casi maníaca, y Javier llamó a su familia con calma.",
+   "en": "A customer came in talking almost manically, and Javier calmly called his family.",
+   "ko": "한 손님이 거의 들뜬 상태로 말하며 들어오자 하비에르는 침착하게 가족에게 연락했어요.",
+   "blank": "maníaca",
+   "src": "made"
+  },
+  {
+   "text": "Marta limpió la casa con un ritmo casi maníaco la mañana del último día del año.",
+   "en": "Marta cleaned the house at an almost manic pace on the morning of the last day of the year.",
+   "ko": "마르타는 한 해의 마지막 날 아침 거의 미친 듯한 속도로 집을 청소했어요.",
+   "blank": "maníaco",
+   "src": "made"
+  }
+ ],
  "w|manicomio": [
   {
    "text": "Con tantos perros ladrando a la vez, la sala de espera de Andrés parecía un manicomio.",
@@ -49038,6 +49342,22 @@
    "en": "On the boat, Pablo got a little seasick.",
    "ko": "배에서 파블로는 멀미가 조금 났어요.",
    "blank": "mareó",
+   "src": "made"
+  }
+ ],
+ "w|mareo": [
+  {
+   "text": "Antes del viaje en barco, Javier le vendió a la familia unas pastillas contra el mareo.",
+   "en": "Before the boat trip, Javier sold the family some tablets for seasickness.",
+   "ko": "배를 타기 전에 하비에르는 그 가족에게 멀미약을 팔았어요.",
+   "blank": "mareo",
+   "src": "made"
+  },
+  {
+   "text": "Marta sintió un ligero mareo después de subir y bajar la escalera para colgar las luces.",
+   "en": "Marta felt a little dizzy after going up and down the ladder to hang the lights.",
+   "ko": "마르타는 전구를 달려고 사다리를 오르내리다 살짝 어지러웠어요.",
+   "blank": "mareo",
    "src": "made"
   }
  ],
@@ -50143,6 +50463,22 @@
    "blank": "mental"
   }
  ],
+ "w|mentalmente": [
+  {
+   "text": "Al final del turno, Javier está mentalmente agotado de tantas preguntas.",
+   "en": "At the end of his shift, Javier is mentally drained from so many questions.",
+   "ko": "근무가 끝날 무렵이면 하비에르는 질문을 너무 많이 받아서 정신적으로 지쳐요.",
+   "blank": "mentalmente",
+   "src": "made"
+  },
+  {
+   "text": "Marta repasó mentalmente la lista de invitados antes de ir al mercado.",
+   "en": "Marta went over the guest list in her head before going to the market.",
+   "ko": "마르타는 시장에 가기 전에 손님 명단을 머릿속으로 다시 훑어봤어요.",
+   "blank": "mentalmente",
+   "src": "made"
+  }
+ ],
  "w|mente": [
   {
    "text": "Tenlo en mente.",
@@ -50641,6 +50977,22 @@
    "en": "You shouldn't mix those two products.",
    "ko": "그 두 제품을 섞으면 안 돼.",
    "blank": "mezclar"
+  }
+ ],
+ "w|mezquino": [
+  {
+   "text": "A Javier le pareció mezquino que el proveedor subiera los precios en plena epidemia de gripe.",
+   "en": "Javier thought it petty that the supplier raised prices in the middle of the flu outbreak.",
+   "ko": "하비에르는 독감이 한창일 때 공급업체가 값을 올린 게 치사하다고 생각했어요.",
+   "blank": "mezquino",
+   "src": "made"
+  },
+  {
+   "text": "Marta pensó que regalar algo tan barato a su hermana sería un poco mezquino.",
+   "en": "Marta thought giving her sister something so cheap would be a bit stingy.",
+   "ko": "마르타는 언니에게 그렇게 싼 선물을 주는 건 좀 인색하다고 생각했어요.",
+   "blank": "mezquino",
+   "src": "made"
   }
  ],
  "w|mi": [
@@ -51810,6 +52162,22 @@
    "en": "After a week of sun, Nuria came back very tanned.",
    "ko": "일주일 동안 햇볕을 쬐고 누리아는 까맣게 타서 돌아왔어요.",
    "blank": "morena",
+   "src": "made"
+  }
+ ],
+ "w|moretón": [
+  {
+   "text": "Un niño entró en la farmacia de Javier con un moretón enorme en la rodilla.",
+   "en": "A boy came into Javier's pharmacy with a huge bruise on his knee.",
+   "ko": "한 아이가 무릎에 커다란 멍이 든 채 하비에르의 약국에 들어왔어요.",
+   "blank": "moretón",
+   "src": "made"
+  },
+  {
+   "text": "Marta se hizo un moretón en el brazo al bajar las cajas de adornos del altillo.",
+   "en": "Marta got a bruise on her arm bringing the decoration boxes down from the loft.",
+   "ko": "마르타는 다락에서 장식 상자를 내리다가 팔에 멍이 들었어요.",
+   "blank": "moretón",
    "src": "made"
   }
  ],
@@ -55409,6 +55777,22 @@
    "blank": "oración"
   }
  ],
+ "w|oral": [
+  {
+   "text": "Javier le explicó a la clienta que el jarabe era de uso oral y no se podía inyectar.",
+   "en": "Javier explained to the customer that the syrup was for oral use and couldn't be injected.",
+   "ko": "하비에르는 손님에게 그 시럽은 먹는 약이라 주사하면 안 된다고 설명했어요.",
+   "blank": "oral",
+   "src": "made"
+  },
+  {
+   "text": "Marta hizo un examen oral de inglés justo antes de las vacaciones de Navidad.",
+   "en": "Marta had an English oral exam just before the Christmas holidays.",
+   "ko": "마르타는 크리스마스 방학 바로 전에 영어 말하기 시험을 봤어요.",
+   "blank": "oral",
+   "src": "made"
+  }
+ ],
  "w|orar": [
   {
    "text": "En una iglesia del pueblo, una mujer oraba en silencio.",
@@ -56869,6 +57253,22 @@
    "src": "made"
   }
  ],
+ "w|parche": [
+  {
+   "text": "Javier le recomendó a un señor un parche de nicotina para dejar de fumar.",
+   "en": "Javier recommended a nicotine patch to a man who wanted to quit smoking.",
+   "ko": "하비에르는 담배를 끊으려는 남자에게 니코틴 패치를 권했어요.",
+   "blank": "parche",
+   "src": "made"
+  },
+  {
+   "text": "Marta le puso un parche al mantel viejo para usarlo en la cena de Nochevieja.",
+   "en": "Marta patched the old tablecloth to use it at the New Year's Eve dinner.",
+   "ko": "마르타는 섣달그믐 저녁에 쓰려고 낡은 식탁보에 천을 덧대 기웠어요.",
+   "blank": "parche",
+   "src": "made"
+  }
+ ],
  "w|parcial": [
   {
    "text": "Nico trabaja a tiempo parcial en un refugio de animales.",
@@ -58037,6 +58437,22 @@
    "src": "made"
   }
  ],
+ "w|pellejo": [
+  {
+   "text": "Javier le dio una crema a un señor que tenía el pellejo de las manos agrietado.",
+   "en": "Javier gave a cream to a man whose skin on his hands was cracked.",
+   "ko": "하비에르는 손 피부가 갈라진 남자에게 크림을 줬어요.",
+   "blank": "pellejo",
+   "src": "made"
+  },
+  {
+   "text": "Marta le quitó el pellejo al pollo antes de meterlo en el horno.",
+   "en": "Marta took the skin off the chicken before putting it in the oven.",
+   "ko": "마르타는 닭을 오븐에 넣기 전에 껍질을 벗겼어요.",
+   "blank": "pellejo",
+   "src": "made"
+  }
+ ],
  "w|pelo": [
   {
    "text": "Se cortó el pelo ayer.",
@@ -58739,6 +59155,22 @@
    "en": "He chased his dream without giving up.",
    "ko": "포기하지 않고 꿈을 쫓았어.",
    "blank": "Persiguió"
+  }
+ ],
+ "w|persistente": [
+  {
+   "text": "Javier le aconsejó ir al médico si la tos seguía siendo persistente.",
+   "en": "Javier advised him to see a doctor if the cough stayed persistent.",
+   "ko": "하비에르는 기침이 계속되면 병원에 가 보라고 조언했어요.",
+   "blank": "persistente",
+   "src": "made"
+  },
+  {
+   "text": "El olor persistente a pólvora no dejó dormir a Marta en toda la noche.",
+   "en": "The lingering smell of gunpowder kept Marta awake all night.",
+   "ko": "화약 냄새가 계속 남아서 마르타는 밤새 잠을 못 잤어요.",
+   "blank": "persistente",
+   "src": "made"
   }
  ],
  "w|persona": [
@@ -60515,6 +60947,22 @@
    "blank": "porquería"
   }
  ],
+ "w|porro": [
+  {
+   "text": "Javier leyó un artículo médico sobre los efectos del porro en la memoria de los jóvenes.",
+   "en": "Javier read a medical article on the effects of cannabis joints on young people's memory.",
+   "ko": "하비에르는 대마초가 젊은이들의 기억력에 미치는 영향에 관한 의학 기사를 읽었어요.",
+   "blank": "porro",
+   "src": "made"
+  },
+  {
+   "text": "Marta le pidió a su primo que no se fumara un porro en el balcón durante la cena.",
+   "en": "Marta asked her cousin not to smoke a joint on the balcony during dinner.",
+   "ko": "마르타는 사촌에게 저녁 식사 중에 발코니에서 대마초를 피우지 말라고 했어요.",
+   "blank": "porro",
+   "src": "made"
+  }
+ ],
  "w|portada": [
   {
    "text": "El diseñador cambió la portada de la revista.",
@@ -61017,6 +61465,22 @@
    "en": "You have a precious baby.",
    "ko": "아기가 정말 귀엽다.",
    "blank": "precioso"
+  }
+ ],
+ "w|precipitar": [
+  {
+   "text": "Javier le dijo a un cliente que no había que precipitar la decisión de dejar el tratamiento.",
+   "en": "Javier told a customer not to rush the decision to stop the treatment.",
+   "ko": "하비에르는 손님에게 치료를 그만두는 결정을 서두르지 말라고 했어요.",
+   "blank": "precipitar",
+   "src": "made"
+  },
+  {
+   "text": "La nevada hizo precipitar los planes de Marta, que tuvo que comprar todo un día antes.",
+   "en": "The snowfall rushed Marta's plans, and she had to buy everything a day early.",
+   "ko": "눈이 와서 마르타는 계획을 앞당겨 하루 일찍 장을 다 봐야 했어요.",
+   "blank": "precipitar",
+   "src": "made"
   }
  ],
  "w|precisamente": [
@@ -63187,6 +63651,22 @@
    "blank": "psicópata"
   }
  ],
+ "w|psicótico": [
+  {
+   "text": "En la universidad, Javier estudió cómo se tratan los trastornos psicóticos.",
+   "en": "At university, Javier studied how psychotic disorders are treated.",
+   "ko": "하비에르는 대학에서 정신병적 장애를 어떻게 치료하는지 공부했어요.",
+   "blank": "psicóticos",
+   "src": "made"
+  },
+  {
+   "text": "Mientras envolvía regalos, Marta veía una película sobre un científico con un brote psicótico.",
+   "en": "While wrapping presents, Marta watched a film about a scientist having a psychotic episode.",
+   "ko": "마르타는 선물을 포장하며 정신병적 발작을 겪는 과학자에 관한 영화를 봤어요.",
+   "blank": "psicótico",
+   "src": "made"
+  }
+ ],
  "w|psiquiatra": [
   {
    "text": "Consultó a un psiquiatra por ansiedad.",
@@ -65088,6 +65568,22 @@
    "en": "Lola keeps loose screws in a plastic container.",
    "ko": "롤라는 흩어진 나사들을 플라스틱 통에 모아 둬요.",
    "blank": "recipiente",
+   "src": "made"
+  }
+ ],
+ "w|recitar": [
+  {
+   "text": "Javier puede recitar de memoria los nombres de cien medicamentos.",
+   "en": "Javier can recite the names of a hundred medicines from memory.",
+   "ko": "하비에르는 약 이름 백 개를 외워서 줄줄 말할 수 있어요.",
+   "blank": "recitar",
+   "src": "made"
+  },
+  {
+   "text": "La sobrina de Marta va a recitar un poema justo antes de las campanadas.",
+   "en": "Marta's niece is going to recite a poem just before the midnight chimes.",
+   "ko": "마르타의 조카는 자정 종소리 직전에 시를 낭송할 거예요.",
+   "blank": "recitar",
    "src": "made"
   }
  ],
@@ -67339,6 +67835,22 @@
    "blank": "Respira"
   }
  ],
+ "w|respiratorio": [
+  {
+   "text": "Javier recomienda mascarilla a quienes tienen una infección respiratoria.",
+   "en": "Javier recommends a mask to anyone with a respiratory infection.",
+   "ko": "하비에르는 호흡기 감염이 있는 사람에게 마스크를 권해요.",
+   "blank": "respiratoria",
+   "src": "made"
+  },
+  {
+   "text": "El humo de la chimenea le daba a Marta problemas respiratorios, así que abrió la ventana.",
+   "en": "The smoke from the fireplace gave Marta breathing problems, so she opened the window.",
+   "ko": "벽난로 연기 때문에 마르타는 숨쉬기가 힘들어서 창문을 열었어요.",
+   "blank": "respiratorios",
+   "src": "made"
+  }
+ ],
  "w|respiro": [
   {
    "text": "Necesito un respiro después de tanto trabajo.",
@@ -67677,6 +68189,22 @@
    "en": "He accepted the challenge without much thought.",
    "ko": "별로 생각 안 하고 도전을 받아들였어.",
    "blank": "reto"
+  }
+ ],
+ "w|retomar": [
+  {
+   "text": "Después de las vacaciones, Javier tardó un par de días en retomar el ritmo.",
+   "en": "After the holidays, Javier took a couple of days to get back into the rhythm.",
+   "ko": "하비에르는 휴가 뒤 일 리듬을 되찾는 데 이틀쯤 걸렸어요.",
+   "blank": "retomar",
+   "src": "made"
+  },
+  {
+   "text": "Marta se propuso retomar las clases de guitarra en enero.",
+   "en": "Marta resolved to take up guitar lessons again in January.",
+   "ko": "마르타는 일월에 기타 수업을 다시 시작하기로 마음먹었어요.",
+   "blank": "retomar",
+   "src": "made"
   }
  ],
  "w|retorcer": [
@@ -68323,6 +68851,22 @@
    "en": "The other store is our direct rival.",
    "ko": "그 가게가 우리의 직접 경쟁자야.",
    "blank": "rival"
+  }
+ ],
+ "w|rizado": [
+  {
+   "text": "La nueva ayudante de Javier tiene el pelo rizado y siempre lo lleva recogido.",
+   "en": "Javier's new assistant has curly hair and always wears it tied up.",
+   "ko": "하비에르의 새 조수는 곱슬머리인데 늘 묶고 다녀요.",
+   "blank": "rizado",
+   "src": "made"
+  },
+  {
+   "text": "Para la fiesta, Marta se dejó el pelo rizado en vez de alisarlo.",
+   "en": "For the party, Marta left her hair curly instead of straightening it.",
+   "ko": "마르타는 파티에 머리를 펴지 않고 곱슬머리 그대로 갔어요.",
+   "blank": "rizado",
+   "src": "made"
   }
  ],
  "w|robar": [
@@ -69307,6 +69851,22 @@
    "blank": "Sal"
   }
  ],
+ "w|saliva": [
+  {
+   "text": "Javier vende unos test que detectan el virus en una muestra de saliva.",
+   "en": "Javier sells tests that detect the virus in a saliva sample.",
+   "ko": "하비에르는 침 샘플로 바이러스를 찾아내는 검사 키트를 팔아요.",
+   "blank": "saliva",
+   "src": "made"
+  },
+  {
+   "text": "Marta usó un poco de saliva para pegar el sello del último sobre de felicitación.",
+   "en": "Marta used a bit of spit to stick the stamp on the last greeting card envelope.",
+   "ko": "마르타는 마지막 연하장 봉투에 우표를 붙이려고 침을 살짝 묻혔어요.",
+   "blank": "saliva",
+   "src": "made"
+  }
+ ],
  "w|salmón": [
   {
    "text": "Raúl buscó un libro de cocina para preparar salmón al horno.",
@@ -69565,6 +70125,22 @@
    "en": "The café sandwich is huge.",
    "ko": "카페 샌드위치가 엄청 커.",
    "blank": "sándwich"
+  }
+ ],
+ "w|sangrado": [
+  {
+   "text": "Javier le dio una gasa al chico para cortar el sangrado de la nariz.",
+   "en": "Javier gave the boy some gauze to stop his nosebleed.",
+   "ko": "하비에르는 코피를 멈추라고 소년에게 거즈를 줬어요.",
+   "blank": "sangrado",
+   "src": "made"
+  },
+  {
+   "text": "Marta se cortó con el papel de regalo, pero el sangrado paró enseguida.",
+   "en": "Marta cut herself on the wrapping paper, but the bleeding stopped straight away.",
+   "ko": "마르타는 포장지에 손을 베었지만 피는 금방 멈췄어요.",
+   "blank": "sangrado",
+   "src": "made"
   }
  ],
  "w|sangrar": [
@@ -70033,6 +70609,22 @@
    "en": "She bought a fine silk scarf.",
    "ko": "고운 실크 스카프를 샀어.",
    "blank": "seda"
+  }
+ ],
+ "w|sedante": [
+  {
+   "text": "Javier no puede vender ningún sedante sin una receta del médico.",
+   "en": "Javier can't sell any sedative without a doctor's prescription.",
+   "ko": "하비에르는 의사 처방전 없이는 진정제를 팔 수 없어요.",
+   "blank": "sedante",
+   "src": "made"
+  },
+  {
+   "text": "El veterinario le dio a Marta un sedante suave para el perro, que odia los petardos.",
+   "en": "The vet gave Marta a mild sedative for the dog, who hates firecrackers.",
+   "ko": "수의사는 폭죽을 싫어하는 개를 위해 마르타에게 약한 진정제를 줬어요.",
+   "blank": "sedante",
+   "src": "made"
   }
  ],
  "w|sede": [
@@ -74125,6 +74717,22 @@
    "blank": "táctica"
   }
  ],
+ "w|tacto": [
+  {
+   "text": "Javier tiene mucho tacto cuando un cliente le cuenta un problema delicado.",
+   "en": "Javier is very tactful when a customer tells him about a delicate problem.",
+   "ko": "하비에르는 손님이 민감한 문제를 말할 때 아주 배려 있게 대해요.",
+   "blank": "tacto",
+   "src": "made"
+  },
+  {
+   "text": "Marta tuvo que usar mucho tacto para sentar juntos a los dos tíos que no se hablan.",
+   "en": "Marta had to use a lot of tact to seat together the two uncles who don't speak to each other.",
+   "ko": "마르타는 서로 말을 안 하는 두 삼촌을 나란히 앉히느라 아주 신경을 써야 했어요.",
+   "blank": "tacto",
+   "src": "made"
+  }
+ ],
  "w|tal": [
   {
    "text": "¿Qué tal el viaje?",
@@ -75903,6 +76511,22 @@
    "en": "That shot at the hoop was perfect.",
    "ko": "그 슛은 완벽했어.",
    "blank": "tiro"
+  }
+ ],
+ "w|tirón": [
+  {
+   "text": "Javier se hizo un tirón en la espalda al levantar una caja de agua.",
+   "en": "Javier pulled a muscle in his back lifting a crate of water.",
+   "ko": "하비에르는 물 상자를 들다가 허리를 삐끗했어요.",
+   "blank": "tirón",
+   "src": "made"
+  },
+  {
+   "text": "Marta le dio un tirón al mantel y casi se caen todas las copas.",
+   "en": "Marta gave the tablecloth a tug and nearly all the glasses fell.",
+   "ko": "마르타가 식탁보를 홱 잡아당기는 바람에 잔이 다 쓰러질 뻔했어요.",
+   "blank": "tirón",
+   "src": "made"
   }
  ],
  "w|tiroteo": [
@@ -81272,6 +81896,22 @@
    "en": "Lucía sells apple juice made from the fruit on her farm.",
    "ko": "루시아는 자기 농장 과일로 만든 사과 주스를 팔아요.",
    "blank": "zumo",
+   "src": "made"
+  }
+ ],
+ "w|zurdo": [
+  {
+   "text": "Javier es zurdo y le cuesta usar las tijeras de la farmacia.",
+   "en": "Javier is left-handed and finds the pharmacy scissors hard to use.",
+   "ko": "하비에르는 왼손잡이라 약국 가위를 쓰기가 불편해요.",
+   "blank": "zurdo",
+   "src": "made"
+  },
+  {
+   "text": "El hijo de Marta es zurdo, así que le compró unas tijeras especiales para los adornos.",
+   "en": "Marta's son is left-handed, so she bought him special scissors for the decorations.",
+   "ko": "마르타의 아들은 왼손잡이라 장식 만들 때 쓸 특별한 가위를 사 줬어요.",
+   "blank": "zurdo",
    "src": "made"
   }
  ]
