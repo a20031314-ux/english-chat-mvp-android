@@ -50,7 +50,8 @@ function readInput() {
 }
 
 function git(...args) {
-  return execFileSync("git", args, { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+  // 큰 커밋(파일 옮김 등)은 diff가 1MB를 넘는다 — 기본 maxBuffer면 읽기가 실패해 기록이 "없음"으로 보임
+  return execFileSync("git", args, { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"], maxBuffer: 256 << 20 }).trim();
 }
 
 function stateFile(sessionId) {
@@ -170,7 +171,7 @@ function commitsSince(base, startedAt) {
     let oldNote = false;
     if (log) {
       try {
-        const added = git("show", "--format=", sha, "--", "hub/chat/log");
+        const added = git("show", "-U0", "--format=", sha, "--", "hub/chat/log");
         structureNote = /^\+\s*- 구조:/m.test(added);
         oldNote = /^\+\s*- 옛 것:/m.test(added);
       } catch {
