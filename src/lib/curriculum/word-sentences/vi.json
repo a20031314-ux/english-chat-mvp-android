@@ -559,6 +559,22 @@
    "blank": "Ăn trưa"
   }
  ],
+ "w|án tử hình": [
+  {
+   "text": "Long đọc rằng án tử hình đã được bãi bỏ ở nhiều nước trong thế kỷ trước.",
+   "en": "Long read that the death penalty was abolished in many countries during the last century.",
+   "ko": "롱은 지난 세기에 많은 나라가 사형 제도를 폐지했다는 글을 읽었어요.",
+   "blank": "án tử hình",
+   "src": "made"
+  },
+  {
+   "text": "Bạn học của Linh xem phim tài liệu về một tù nhân mang án tử hình mở lớp dạy nấu ăn trong trại giam.",
+   "en": "Linh's classmate watched a documentary about a death-row inmate who taught cooking in prison.",
+   "ko": "린의 반 친구는 사형수가 교도소에서 요리 교실을 연 다큐멘터리를 봤어요.",
+   "blank": "án tử hình",
+   "src": "made"
+  }
+ ],
  "w|ấn tượng": [
   {
    "text": "Ấn tượng của bạn về bức tranh này là gì?",
@@ -1795,6 +1811,22 @@
    "src": "made"
   }
  ],
+ "w|bản án": [
+  {
+   "text": "Bảo tàng giữ bản án viết tay của một vụ kiện đất đai nổi tiếng, Long đọc từng dòng.",
+   "en": "The museum keeps the handwritten verdict of a famous land dispute, and Long read every line.",
+   "ko": "박물관에는 유명한 토지 소송의 손으로 쓴 판결문이 있어서 롱은 한 줄 한 줄 읽었어요.",
+   "blank": "bản án",
+   "src": "made"
+  },
+  {
+   "text": "Linh đọc báo về một bản án nặng dành cho cơ sở làm thực phẩm bẩn.",
+   "en": "Linh read in the paper about a heavy sentence handed to a facility that made contaminated food.",
+   "ko": "린은 불량 식품을 만든 업체에 무거운 판결이 내려졌다는 기사를 읽었어요.",
+   "blank": "bản án",
+   "src": "made"
+  }
+ ],
  "w|bàn bạc": [
   {
    "text": "Trước khi quyết định, tôi muốn bàn bạc với gia đình mình.",
@@ -2839,6 +2871,22 @@
    "src": "made"
   }
  ],
+ "w|bảo dưỡng": [
+  {
+   "text": "Người phụ trách cho Long xem cách họ bảo dưỡng chiếc đồng hồ cổ.",
+   "en": "The curator showed Long how they maintain the antique clock.",
+   "ko": "학예사는 오래된 시계를 어떻게 손질하는지 롱에게 보여 줬어요.",
+   "blank": "bảo dưỡng",
+   "src": "made"
+  },
+  {
+   "text": "Linh mang con dao Nhật đi bảo dưỡng ở tiệm mài dao gần lớp học.",
+   "en": "Linh took her Japanese knife for maintenance at the sharpening shop near class.",
+   "ko": "린은 일본 칼을 수업 근처 칼 가는 가게에 손질하러 맡겼어요.",
+   "blank": "bảo dưỡng",
+   "src": "made"
+  }
+ ],
  "w|bao giờ": [
   {
    "text": "Bao giờ mình đi ăn?",
@@ -2924,6 +2972,22 @@
    "en": "Lan logs into the public services portal to pay social insurance before opening the shopping app.",
    "ko": "란은 공공 서비스 사이트에 들어가 사회보험료를 낸 뒤에야 쇼핑 앱을 열어요.",
    "blank": "bảo hiểm xã hội",
+   "src": "made"
+  }
+ ],
+ "w|bảo hiểm y tế": [
+  {
+   "text": "Bảo tàng có góc giới thiệu lịch sử bảo hiểm y tế, Long thấy rất thú vị.",
+   "en": "The museum has a corner introducing the history of health insurance, and Long found it very interesting.",
+   "ko": "박물관에 건강보험의 역사를 소개하는 코너가 있는데 롱은 아주 흥미로웠어요.",
+   "blank": "bảo hiểm y tế",
+   "src": "made"
+  },
+  {
+   "text": "Bị bỏng dầu trong lớp, Linh dùng thẻ bảo hiểm y tế để đi khám.",
+   "en": "Burned by oil in class, Linh used her health insurance card to see a doctor.",
+   "ko": "수업 중에 기름에 데어서 린은 건강보험증으로 진료를 받았어요.",
+   "blank": "bảo hiểm y tế",
    "src": "made"
   }
  ],
@@ -3048,6 +3112,22 @@
    "en": "The rare book room is kept at a low temperature to preserve the paper.",
    "ko": "고서실은 종이를 보존하려고 낮은 온도로 유지해요.",
    "blank": "bảo tồn",
+   "src": "made"
+  }
+ ],
+ "w|bảo trì": [
+  {
+   "text": "Phòng tranh tầng hai đóng cửa để bảo trì, Long phải xem tầng khác.",
+   "en": "The second-floor gallery was closed for maintenance, so Long had to see another floor.",
+   "ko": "이 층 전시실이 보수 공사로 문을 닫아서 롱은 다른 층을 봐야 했어요.",
+   "blank": "bảo trì",
+   "src": "made"
+  },
+  {
+   "text": "Cô giáo dạy Linh cách bảo trì máy xay để dùng được lâu.",
+   "en": "The teacher taught Linh how to maintain the blender so it lasts long.",
+   "ko": "선생님은 믹서기를 오래 쓰도록 관리하는 법을 린에게 가르쳐 줬어요.",
+   "blank": "bảo trì",
    "src": "made"
   }
  ],
@@ -3401,6 +3481,22 @@
    "src": "made"
   }
  ],
+ "w|bất ổn": [
+  {
+   "text": "Phòng trưng bày kể về những năm bất ổn khi giá cả tăng từng ngày, Long nghe rất kỹ.",
+   "en": "The gallery told of the unstable years when prices rose day by day, and Long listened closely.",
+   "ko": "전시실은 물가가 날마다 오르던 불안정한 시절을 들려줬고 롱은 귀 기울여 들었어요.",
+   "blank": "bất ổn",
+   "src": "made"
+  },
+  {
+   "text": "Giá thịt bất ổn suốt mấy tháng nên lớp của Linh chuyển sang dạy món chay.",
+   "en": "Meat prices were unstable for months, so Linh's class switched to teaching vegetarian dishes.",
+   "ko": "몇 달째 고기값이 불안정해서 린의 수업은 채식 요리로 바꿨어요.",
+   "blank": "bất ổn",
+   "src": "made"
+  }
+ ],
  "w|bắt tay": [
   {
    "text": "Ông quản lý cửa hàng bắt tay Phong và cảm ơn anh đã mua hàng.",
@@ -3676,6 +3772,22 @@
    "en": "Ngọc's company has just rented a swimming pool for the year-end outing.",
    "ko": "응옥네 회사가 연말 야유회를 위해 수영장을 빌렸어요.",
    "blank": "bể bơi",
+   "src": "made"
+  }
+ ],
+ "w|bề bộn": [
+  {
+   "text": "Kho của bảo tàng bề bộn đồ chưa phân loại, Long được nhờ sắp xếp.",
+   "en": "The museum's storeroom was cluttered with unsorted items, and Long was asked to organize it.",
+   "ko": "박물관 창고가 분류 안 된 물건으로 어수선해서 롱이 정리를 부탁받았어요.",
+   "blank": "bề bộn",
+   "src": "made"
+  },
+  {
+   "text": "Sau giờ học, bếp của Linh bề bộn nồi niêu chưa rửa.",
+   "en": "After class, Linh's kitchen was cluttered with unwashed pots and pans.",
+   "ko": "수업이 끝나자 린의 주방은 씻지 않은 냄비들로 어수선했어요.",
+   "blank": "bề bộn",
    "src": "made"
   }
  ],
@@ -4065,6 +4177,22 @@
    "en": "Cold weather makes it easy to catch a cold.",
    "ko": "날씨 추우면 감기 걸리기 쉬워.",
    "blank": "bị cảm"
+  }
+ ],
+ "w|bị cáo": [
+  {
+   "text": "Long xem bức ảnh cũ chụp một bị cáo đứng trước tòa năm xưa.",
+   "en": "Long looked at an old photo of a defendant standing before the court long ago.",
+   "ko": "롱은 옛날 법정에 선 피고인을 찍은 낡은 사진을 봤어요.",
+   "blank": "bị cáo",
+   "src": "made"
+  },
+  {
+   "text": "Bạn cùng lớp của Linh là luật sư, hay kể chuyện bị cáo trong các vụ án lừa đảo thực phẩm.",
+   "en": "Linh's classmate is a lawyer who often talks about defendants in food fraud cases.",
+   "ko": "린의 반 친구는 변호사인데 식품 사기 사건의 피고인 얘기를 자주 해요.",
+   "blank": "bị cáo",
+   "src": "made"
   }
  ],
  "w|bị động": [
@@ -8079,6 +8207,22 @@
    "src": "made"
   }
  ],
+ "w|cấp tính": [
+  {
+   "text": "Long đọc rằng trước khi có kháng sinh, bệnh lao cấp tính thường khiến người ta tử vong.",
+   "en": "Long read that before antibiotics, acute tuberculosis was often fatal.",
+   "ko": "롱은 항생제가 나오기 전에는 급성 결핵으로 사람들이 흔히 목숨을 잃었다는 걸 읽었어요.",
+   "blank": "cấp tính",
+   "src": "made"
+  },
+  {
+   "text": "Ăn phải hải sản lạ, Linh bị dị ứng cấp tính và phải nghỉ một buổi học.",
+   "en": "After eating unfamiliar seafood, Linh had an acute allergic reaction and had to miss a class.",
+   "ko": "낯선 해산물을 먹고 급성 알레르기가 나서 린은 수업을 한 번 빠져야 했어요.",
+   "blank": "cấp tính",
+   "src": "made"
+  }
+ ],
  "w|cấp trên": [
   {
    "text": "Sáng nay cấp trên gọi điện hỏi anh Long khi nào xong phần móng.",
@@ -9122,6 +9266,22 @@
    "en": "The company's insurance even covers injuries on business trips.",
    "ko": "회사 보험은 출장 중 부상까지 보장해 줘요.",
    "blank": "chấn thương",
+   "src": "made"
+  }
+ ],
+ "w|chân váy": [
+  {
+   "text": "Long ngạc nhiên vì chiếc chân váy thời xưa được may từ vải gai.",
+   "en": "Long was surprised that the old-time skirt was sewn from hemp cloth.",
+   "ko": "롱은 옛날 치마가 삼베로 지어졌다는 데 놀랐어요.",
+   "blank": "chân váy",
+   "src": "made"
+  },
+  {
+   "text": "Linh làm đổ nước sốt lên chiếc chân váy trắng ngay buổi học đầu tiên.",
+   "en": "Linh spilled sauce on her white skirt at the very first class.",
+   "ko": "린은 첫 수업에서 하얀 치마에 소스를 쏟았어요.",
+   "blank": "chân váy",
    "src": "made"
   }
  ],
@@ -12159,6 +12319,22 @@
    "blank": "chúng tôi"
   }
  ],
+ "w|chứng từ": [
+  {
+   "text": "Long giúp phòng kế toán bảo tàng sắp xếp chứng từ mua hiện vật.",
+   "en": "Long helped the museum's accounting office organize the receipts for purchased artifacts.",
+   "ko": "롱은 박물관 회계실이 유물 구입 증빙 서류를 정리하는 걸 도왔어요.",
+   "blank": "chứng từ",
+   "src": "made"
+  },
+  {
+   "text": "Linh giữ lại hóa đơn và chứng từ mua nguyên liệu để công ty thanh toán lại.",
+   "en": "Linh kept the invoices and receipts for ingredients so the company would reimburse her.",
+   "ko": "린은 회사에서 돌려받으려고 재료 산 영수증과 증빙 서류를 챙겨 뒀어요.",
+   "blank": "chứng từ",
+   "src": "made"
+  }
+ ],
  "w|chuối": [
   {
    "text": "Bạn đã thử ăn chuối rán bao giờ chưa?",
@@ -12433,6 +12609,22 @@
    "en": "I've already booked a flight home.",
    "ko": "고향 가는 비행기표는 이미 예약했어.",
    "blank": "chuyến bay"
+  }
+ ],
+ "w|chuyến bay thẳng": [
+  {
+   "text": "Bảo tàng có bản đồ cho Long thấy chuyến bay thẳng đầu tiên nối hai châu lục.",
+   "en": "The museum has a map showing Long the first direct flight linking two continents.",
+   "ko": "박물관에는 두 대륙을 잇던 첫 직항편을 롱에게 보여 주는 지도가 있어요.",
+   "blank": "chuyến bay thẳng",
+   "src": "made"
+  },
+  {
+   "text": "Một học viên kể anh vừa đáp chuyến bay thẳng từ Hà Nội vào để kịp buổi học của Linh.",
+   "en": "A student said he had just taken a direct flight from Hà Nội to make it to Linh's class.",
+   "ko": "한 수강생은 린의 수업에 맞추려고 하노이에서 직항편을 타고 막 도착했다고 했어요.",
+   "blank": "chuyến bay thẳng",
+   "src": "made"
   }
  ],
  "w|chuyển đến": [
@@ -13271,6 +13463,22 @@
    "en": "Listen to your body.",
    "ko": "몸 신호를 잘 들어.",
    "blank": "cơ thể"
+  }
+ ],
+ "w|cơ trưởng": [
+  {
+   "text": "Ở bảo tàng hàng không, Long được nghe một cơ trưởng về hưu kể chuyện bay đêm.",
+   "en": "At the aviation museum, Long listened to a retired captain tell stories of night flights.",
+   "ko": "항공 박물관에서 롱은 은퇴한 기장이 들려주는 야간 비행 이야기를 들었어요.",
+   "blank": "cơ trưởng",
+   "src": "made"
+  },
+  {
+   "text": "Lớp nấu ăn của Linh có một học viên là cơ trưởng, anh muốn học nấu phở cho con.",
+   "en": "Linh's cooking class has a student who's an airline captain; he wants to learn to cook phở for his kids.",
+   "ko": "린의 요리 수업에는 기장인 수강생이 있는데, 아이들에게 쌀국수를 끓여 주고 싶대요.",
+   "blank": "cơ trưởng",
+   "src": "made"
   }
  ],
  "w|có vẻ": [
@@ -14174,6 +14382,22 @@
    "en": "Linh works with a group of tour guides to recommend tours to guests.",
    "ko": "린은 손님들에게 투어를 소개하려고 가이드 팀과 함께 일해요.",
    "blank": "cộng tác",
+   "src": "made"
+  }
+ ],
+ "w|công tố viên": [
+  {
+   "text": "Long đọc về một công tố viên nổi tiếng trong phòng trưng bày lịch sử tư pháp.",
+   "en": "Long read about a famous prosecutor in the judicial history gallery.",
+   "ko": "롱은 사법 역사 전시실에서 유명한 검사에 관한 글을 읽었어요.",
+   "blank": "công tố viên",
+   "src": "made"
+  },
+  {
+   "text": "Lớp của Linh có một công tố viên học nấu ăn để giảm căng thẳng.",
+   "en": "Linh's class has a prosecutor who's learning to cook to relieve stress.",
+   "ko": "린의 반에는 스트레스를 풀려고 요리를 배우는 검사가 있어요.",
+   "blank": "công tố viên",
    "src": "made"
   }
  ],
@@ -23401,6 +23625,22 @@
    "src": "made"
   }
  ],
+ "w|gãi": [
+  {
+   "text": "Long vừa đi vừa gãi tay vì bị muỗi đốt ở vườn bảo tàng.",
+   "en": "Long walked along scratching his arm after mosquitoes bit him in the museum garden.",
+   "ko": "롱은 박물관 정원에서 모기에 물려 팔을 긁으며 걸었어요.",
+   "blank": "gãi",
+   "src": "made"
+  },
+  {
+   "text": "Cắt ớt xong, Linh lỡ tay gãi mắt và cay xè cả buổi.",
+   "en": "After chopping chili, Linh absent-mindedly scratched her eye and it stung all afternoon.",
+   "ko": "고추를 썰고 나서 린은 무심코 눈을 비볐다가 한참 동안 따가웠어요.",
+   "blank": "gãi",
+   "src": "made"
+  }
+ ],
  "w|gầm": [
   {
    "text": "Đứng trên mỏm đá, Đức nghe sóng biển gầm lên dưới chân.",
@@ -27031,6 +27271,22 @@
    "blank": "hàng năm"
   }
  ],
+ "w|hằng năm": [
+  {
+   "text": "Long đi xem triển lãm hằng năm về áo dài ở bảo tàng thành phố.",
+   "en": "Long goes to see the yearly áo dài exhibition at the city museum.",
+   "ko": "롱은 해마다 시립 박물관에서 열리는 아오자이 전시회를 보러 가요.",
+   "blank": "hằng năm",
+   "src": "made"
+  },
+  {
+   "text": "Lớp nấu ăn của Linh tổ chức cuộc thi làm bánh chưng hằng năm.",
+   "en": "Linh's cooking class holds a bánh chưng-making contest every year.",
+   "ko": "린의 요리 교실은 해마다 반쯩 만들기 대회를 열어요.",
+   "blank": "hằng năm",
+   "src": "made"
+  }
+ ],
  "w|hàng ngày": [
   {
    "text": "Mình chạy bộ hàng ngày trước khi đi làm.",
@@ -27171,6 +27427,22 @@
    "ko": "톰이 그 울타리 칠하는 걸 도와줬어요.",
    "blank": "hàng rào",
    "src": "tatoeba:9715093/dotheduyet1999 en:4665553/CK"
+  }
+ ],
+ "w|hằng tháng": [
+  {
+   "text": "Long làm tình nguyện ở bảo tàng hằng tháng, mỗi lần một buổi sáng.",
+   "en": "Long volunteers at the museum monthly, one morning each time.",
+   "ko": "롱은 매달 한 번 오전에 박물관에서 자원봉사를 해요.",
+   "blank": "hằng tháng",
+   "src": "made"
+  },
+  {
+   "text": "Linh đóng học phí lớp nấu ăn hằng tháng vào ngày mùng một.",
+   "en": "Linh pays her monthly cooking class fee on the first of the month.",
+   "ko": "린은 매달 초하루에 요리 수업료를 내요.",
+   "blank": "hằng tháng",
+   "src": "made"
   }
  ],
  "w|hàng thật": [
@@ -28393,6 +28665,22 @@
    "blank": "Hình như"
   }
  ],
+ "w|hình phạt": [
+  {
+   "text": "Long đọc về những hình phạt trong luật thời phong kiến.",
+   "en": "Long read about the punishments under feudal-era law.",
+   "ko": "롱은 봉건 시대 법의 형벌에 관한 글을 읽었어요.",
+   "blank": "hình phạt",
+   "src": "made"
+  },
+  {
+   "text": "Cô giáo đùa rằng hình phạt cho ai làm cháy bánh là rửa hết bát đĩa, Linh bật cười.",
+   "en": "The teacher joked that the punishment for burning the cake is washing all the dishes, and Linh burst out laughing.",
+   "ko": "선생님이 빵을 태운 사람은 벌로 설거지를 다 해야 한다고 농담하자 린은 웃음을 터뜨렸어요.",
+   "blank": "hình phạt",
+   "src": "made"
+  }
+ ],
  "w|hình vuông": [
   {
    "text": "Phòng ngủ của Nam là một căn hình vuông nhỏ nhưng sáng.",
@@ -28570,6 +28858,22 @@
    "en": "Ngọc is preparing a portfolio to apply to art school.",
    "ko": "응옥은 미술 학교에 지원하려고 작품 포트폴리오를 준비하고 있어요.",
    "blank": "hồ sơ",
+   "src": "made"
+  }
+ ],
+ "w|hồ sơ bệnh án": [
+  {
+   "text": "Bảo tàng y học trưng bày một hồ sơ bệnh án viết tay từ thế kỷ trước, Long đọc rất chăm chú.",
+   "en": "The medical museum displays a handwritten medical record from the last century, and Long read it intently.",
+   "ko": "의학 박물관에 지난 세기에 손으로 쓴 진료 기록이 전시돼 있어서 롱은 아주 열심히 읽었어요.",
+   "blank": "hồ sơ bệnh án",
+   "src": "made"
+  },
+  {
+   "text": "Linh mang hồ sơ bệnh án của bố đến hỏi cô giáo nên nấu món gì cho người tiểu đường.",
+   "en": "Linh brought her father's medical records to ask the teacher what to cook for a diabetic.",
+   "ko": "린은 아버지의 진료 기록을 가져와 당뇨 환자에게 무슨 요리를 해 드려야 할지 선생님께 여쭸어요.",
+   "blank": "hồ sơ bệnh án",
    "src": "made"
   }
  ],
@@ -30925,6 +31229,22 @@
    "en": "Wait a bit more for the result.",
    "ko": "결과 좀 더 기다려.",
    "blank": "kết quả"
+  }
+ ],
+ "w|kết quả xét nghiệm": [
+  {
+   "text": "Một tủ kính lưu giữ kết quả xét nghiệm máu đầu tiên của bệnh viện, Long chụp lại.",
+   "en": "A display case holds the hospital's very first blood test results, and Long took a picture.",
+   "ko": "유리 진열장에 그 병원의 첫 혈액 검사 결과가 보관돼 있어서 롱이 사진을 찍었어요.",
+   "blank": "kết quả xét nghiệm",
+   "src": "made"
+  },
+  {
+   "text": "Có kết quả xét nghiệm mỡ máu cao, Linh quyết định học nấu món ít dầu.",
+   "en": "Getting test results showing high blood fat, Linh decided to learn low-oil cooking.",
+   "ko": "혈중 지방이 높다는 검사 결과를 받고 린은 기름을 적게 쓰는 요리를 배우기로 했어요.",
+   "blank": "kết quả xét nghiệm",
+   "src": "made"
   }
  ],
  "w|kết thúc": [
@@ -36539,6 +36859,22 @@
    "src": "made"
   }
  ],
+ "w|lời khai": [
+  {
+   "text": "Long nghe đoạn ghi âm lời khai của một nhân chứng trong vụ án lịch sử.",
+   "en": "Long listened to a recording of a witness's testimony in a historic case.",
+   "ko": "롱은 역사적인 사건의 증인 진술 녹음을 들었어요.",
+   "blank": "lời khai",
+   "src": "made"
+  },
+  {
+   "text": "Bạn học của Linh làm thư ký tòa án, kể có lời khai mâu thuẫn đến mức cả phòng sững sờ.",
+   "en": "Linh's classmate, a court clerk, said one testimony was so contradictory the whole room was stunned.",
+   "ko": "법원 서기인 린의 반 친구는 진술이 너무 앞뒤가 안 맞아서 법정 전체가 어리둥절했던 일을 얘기했어요.",
+   "blank": "lời khai",
+   "src": "made"
+  }
+ ],
  "w|lời khuyên": [
   {
    "text": "Cảm ơn lời khuyên của cậu.",
@@ -38248,6 +38584,22 @@
    "en": "Hương leans back contentedly in her seat after a long week of business travel.",
    "ko": "긴 출장 일주일을 마치고 흐엉은 만족스럽게 의자에 등을 기대요.",
    "blank": "mãn nguyện",
+   "src": "made"
+  }
+ ],
+ "w|mãn tính": [
+  {
+   "text": "Bảo tàng y học kể với Long về những bệnh mãn tính phổ biến xưa nay.",
+   "en": "The medical museum told Long about chronic diseases that have long been common.",
+   "ko": "의학 박물관은 예나 지금이나 흔한 만성 질환에 대해 롱에게 알려 줬어요.",
+   "blank": "mãn tính",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ Linh bị đau dạ dày mãn tính nên cô học nấu các món cháo dễ tiêu.",
+   "en": "Linh's mother has a chronic stomach ailment, so Linh is learning to cook easy-to-digest porridges.",
+   "ko": "린의 어머니가 만성 위장병이 있어서 린은 소화가 잘되는 죽 요리를 배우고 있어요.",
+   "blank": "mãn tính",
    "src": "made"
   }
  ],
@@ -43075,6 +43427,22 @@
    "src": "tatoeba:3468107/tucm en:1806185"
   }
  ],
+ "w|nghèo nàn": [
+  {
+   "text": "Phòng trưng bày cho Long thấy làng quê ngày xưa nghèo nàn đến mức nào.",
+   "en": "The exhibition room showed Long how poor the countryside used to be.",
+   "ko": "전시실은 옛날 시골이 얼마나 가난했는지 롱에게 보여 줬어요.",
+   "blank": "nghèo nàn",
+   "src": "made"
+  },
+  {
+   "text": "Cô giáo nói bếp ăn của những gia đình nghèo nàn vẫn có thể ngon nếu biết nêm nếm, Linh rất đồng ý.",
+   "en": "The teacher said food in poor households can still be delicious with good seasoning, and Linh agrees.",
+   "ko": "선생님은 가난한 집 부엌에서도 간만 잘 맞추면 맛있게 만들 수 있다고 했고 린도 공감했어요.",
+   "blank": "nghèo nàn",
+   "src": "made"
+  }
+ ],
  "w|nghẹt mũi": [
   {
    "text": "Bệnh nhân bị nghẹt mũi thì Hùng cho nghỉ lâu hơn giữa các lần há miệng.",
@@ -43286,6 +43654,22 @@
    "en": "Last year Lan had the flu, had to take sick leave and missed the race.",
    "ko": "작년에 란은 독감에 걸려 병가를 내고 대회를 놓쳤어요.",
    "blank": "nghỉ ốm",
+   "src": "made"
+  }
+ ],
+ "w|nghi phạm": [
+  {
+   "text": "Trong phòng lịch sử cảnh sát, Long đọc hồ sơ về một nghi phạm trộm tranh nổi tiếng.",
+   "en": "In the police history room, Long read the file on a suspect in a famous painting theft.",
+   "ko": "경찰 역사 전시실에서 롱은 유명한 그림 도난 사건 용의자에 관한 기록을 읽었어요.",
+   "blank": "nghi phạm",
+   "src": "made"
+  },
+  {
+   "text": "Cô giáo nấu ăn của Linh kể chuyện xem phim trinh thám, nghi phạm là một đầu bếp.",
+   "en": "Linh's cooking teacher talked about a detective movie where the suspect was a chef.",
+   "ko": "린의 요리 선생님은 용의자가 요리사인 추리 영화 얘기를 했어요.",
+   "blank": "nghi phạm",
    "src": "made"
   }
  ],
@@ -45083,6 +45467,22 @@
    "en": "It's dangerous—don't get close.",
    "ko": "위험해, 가까이 가지 마.",
    "blank": "Nguy hiểm"
+  }
+ ],
+ "w|nguyên đơn": [
+  {
+   "text": "Một đoạn phim trong bảo tàng kể về nguyên đơn đã thắng kiện địa chủ.",
+   "en": "A film clip in the museum told of a plaintiff who won a lawsuit against a landlord.",
+   "ko": "박물관의 영상은 지주를 상대로 소송에서 이긴 원고 이야기를 들려줬어요.",
+   "blank": "nguyên đơn",
+   "src": "made"
+  },
+  {
+   "text": "Linh nghe bạn học kể vụ kiện mà nguyên đơn là một quán ăn bị đánh giá sai sự thật.",
+   "en": "Linh heard a classmate talk about a lawsuit where the plaintiff was a restaurant hit by a false review.",
+   "ko": "린은 거짓 후기를 받은 식당이 원고인 소송 이야기를 반 친구에게 들었어요.",
+   "blank": "nguyên đơn",
+   "src": "made"
   }
  ],
  "w|nguyên nhân": [
@@ -47807,6 +48207,22 @@
    "blank": "nói chuyện"
   }
  ],
+ "w|nối chuyến": [
+  {
+   "text": "Long tranh thủ giờ chờ nối chuyến để xem triển lãm nhỏ trong sân bay.",
+   "en": "Long used his wait for the connecting flight to see a small exhibition in the airport.",
+   "ko": "롱은 환승을 기다리는 동안 공항 안의 작은 전시를 봤어요.",
+   "blank": "nối chuyến",
+   "src": "made"
+  },
+  {
+   "text": "Linh đến muộn vì chuyến bay nối chuyến bị hoãn hai tiếng.",
+   "en": "Linh arrived late because her connecting flight was delayed two hours.",
+   "ko": "린은 갈아탈 비행기가 두 시간 늦어져서 수업에 늦었어요.",
+   "blank": "nối chuyến",
+   "src": "made"
+  }
+ ],
  "w|nỗi cô đơn": [
   {
    "text": "Ở thành phố lạ, Phong mong công việc mới giúp mình bớt nỗi cô đơn.",
@@ -49431,6 +49847,22 @@
    "blank": "Ồn ào"
   }
  ],
+ "w|ổn định": [
+  {
+   "text": "Long hiểu vì sao giá gạo ổn định là điều quan trọng với nông dân thời xưa.",
+   "en": "Long understood why stable rice prices mattered so much to farmers of old.",
+   "ko": "롱은 옛 농민들에게 쌀값이 안정된 게 왜 중요했는지 이해했어요.",
+   "blank": "ổn định",
+   "src": "made"
+  },
+  {
+   "text": "Khi làm bánh, Linh phải giữ nhiệt độ lò ổn định.",
+   "en": "When baking, Linh has to keep the oven temperature stable.",
+   "ko": "빵을 구울 때 린은 오븐 온도를 일정하게 유지해야 해요.",
+   "blank": "ổn định",
+   "src": "made"
+  }
+ ],
  "w|ong": [
   {
    "text": "Đàn ong bay quanh khóm hoa.",
@@ -50019,6 +50451,22 @@
    "src": "made"
   }
  ],
+ "w|phân phối": [
+  {
+   "text": "Long xem tem phiếu ngày xưa mà nhà nước dùng để phân phối gạo và vải.",
+   "en": "Long looked at the old ration coupons the state used to distribute rice and cloth.",
+   "ko": "롱은 옛날 나라가 쌀과 천을 나눠 주던 배급표를 봤어요.",
+   "blank": "phân phối",
+   "src": "made"
+  },
+  {
+   "text": "Cuối buổi, Linh phân phối số bánh còn lại cho những người hàng xóm.",
+   "en": "At the end of class, Linh distributed the leftover cakes to her neighbors.",
+   "ko": "수업이 끝나고 린은 남은 빵을 이웃들에게 나눠 줬어요.",
+   "blank": "phân phối",
+   "src": "made"
+  }
+ ],
  "w|phần thưởng": [
   {
    "text": "Có phần thưởng hay không?",
@@ -50574,6 +51022,22 @@
    "en": "A foreign runner got lost, so Lan stopped to help interpret the directions.",
    "ko": "외국인 선수가 길을 잃자 란은 멈춰서 길 안내를 통역해 줬어요.",
    "blank": "phiên dịch",
+   "src": "made"
+  }
+ ],
+ "w|phiên tòa": [
+  {
+   "text": "Long xem lại một phiên tòa nổi tiếng được dựng thành mô hình.",
+   "en": "Long viewed a famous trial recreated as a model.",
+   "ko": "롱은 모형으로 재현된 유명한 재판을 봤어요.",
+   "blank": "phiên tòa",
+   "src": "made"
+  },
+  {
+   "text": "Học viên luật sư trong lớp của Linh xin nghỉ sớm để kịp phiên tòa buổi chiều.",
+   "en": "The lawyer in Linh's class asked to leave early to make it to the afternoon trial.",
+   "ko": "린의 반 변호사 수강생은 오후 재판에 맞추려고 일찍 나가겠다고 했어요.",
+   "blank": "phiên tòa",
    "src": "made"
   }
  ],
@@ -51759,6 +52223,22 @@
    "src": "tatoeba:13340735/leucammieuvu en:6575889/Eccles17"
   }
  ],
+ "w|quá cảnh": [
+  {
+   "text": "Có sáu tiếng quá cảnh, Long ra khỏi sân bay để ghé bảo tàng gần đó.",
+   "en": "With a six-hour layover, Long left the airport to visit a nearby museum.",
+   "ko": "경유 시간이 여섯 시간이라 롱은 공항을 나와 근처 박물관에 들렀어요.",
+   "blank": "quá cảnh",
+   "src": "made"
+  },
+  {
+   "text": "Một học viên của lớp Linh từng ăn món mì ngon nhất đời trong lúc quá cảnh ở sân bay.",
+   "en": "A student in Linh's class once had the best noodles of his life during a layover at an airport.",
+   "ko": "린의 반 수강생 한 명은 공항에서 경유하던 중에 인생 최고의 국수를 먹었대요.",
+   "blank": "quá cảnh",
+   "src": "made"
+  }
+ ],
  "w|qua đời": [
   {
    "text": "Ông nội mình vừa qua đời tuần trước.",
@@ -51832,6 +52312,22 @@
    "en": "Tourists passing by all stop to watch, and some even buy souvenirs at a nearby stall.",
    "ko": "지나가던 관광객들이 모두 멈춰서 구경하고, 근처 가판대에서 기념품을 사기도 해요.",
    "blank": "quà lưu niệm",
+   "src": "made"
+  }
+ ],
+ "w|quá tải": [
+  {
+   "text": "Ngày miễn phí vé, bảo tàng quá tải nên Long phải xếp hàng hơn một tiếng.",
+   "en": "On free-admission day the museum was overcrowded, so Long had to queue for over an hour.",
+   "ko": "무료입장 날 박물관이 사람으로 넘쳐서 롱은 한 시간 넘게 줄을 서야 했어요.",
+   "blank": "quá tải",
+   "src": "made"
+  },
+  {
+   "text": "Ổ điện trong bếp bị quá tải khi Linh cắm cả lò nướng lẫn nồi chiên.",
+   "en": "The kitchen socket got overloaded when Linh plugged in both the oven and the fryer.",
+   "ko": "린이 오븐과 튀김기를 한꺼번에 꽂자 주방 콘센트가 과부하됐어요.",
+   "blank": "quá tải",
    "src": "made"
   }
  ],
@@ -55121,6 +55617,22 @@
    "src": "made"
   }
  ],
+ "w|sản xuất": [
+  {
+   "text": "Bảo tàng cho Long thấy làng gốm này từng sản xuất bát đĩa cho cả vùng.",
+   "en": "The museum showed Long that this pottery village once produced dishes for the whole region.",
+   "ko": "박물관은 이 도자기 마을이 한때 지역 전체의 그릇을 만들었다는 걸 롱에게 보여 줬어요.",
+   "blank": "sản xuất",
+   "src": "made"
+  },
+  {
+   "text": "Cô giáo dẫn Linh đến xưởng sản xuất nước mắm để học cách ủ cá.",
+   "en": "The teacher took Linh to a fish sauce factory to learn how fish are fermented.",
+   "ko": "선생님은 생선 발효법을 배우라고 린을 액젓 공장에 데려갔어요.",
+   "blank": "sản xuất",
+   "src": "made"
+  }
+ ],
  "w|sang": [
   {
    "text": "Sang bên kia đường đi.",
@@ -55804,6 +56316,22 @@
    "en": "Thảo screws the medicine bottle cap on tight so children can't open it.",
    "ko": "타오는 아이들이 혼자 열지 못하게 약병 뚜껑을 꽉 조여요.",
    "blank": "siết chặt",
+   "src": "made"
+  }
+ ],
+ "w|siêu âm": [
+  {
+   "text": "Long thấy chiếc máy siêu âm đời đầu ở bảo tàng y học to như cái tủ.",
+   "en": "At the medical museum, Long saw that the first-generation ultrasound machine was as big as a wardrobe.",
+   "ko": "롱은 의학 박물관에서 초창기 초음파 기계가 옷장만큼 크다는 걸 봤어요.",
+   "blank": "siêu âm",
+   "src": "made"
+  },
+  {
+   "text": "Chị Linh đang mang bầu, mới đi siêu âm nên Linh học nấu món canh bổ cho chị.",
+   "en": "Linh's sister is pregnant and just had an ultrasound, so Linh is learning to cook a nourishing soup for her.",
+   "ko": "린의 언니가 임신 중이라 막 초음파 검사를 받았고, 린은 언니에게 몸에 좋은 국을 끓여 주려고 배우고 있어요.",
+   "blank": "siêu âm",
    "src": "made"
   }
  ],
@@ -60217,6 +60745,22 @@
    "src": "made"
   }
  ],
+ "w|thanh toán": [
+  {
+   "text": "Long thanh toán vé vào cửa bằng điện thoại.",
+   "en": "Long paid for the admission ticket with his phone.",
+   "ko": "롱은 휴대폰으로 입장권을 결제했어요.",
+   "blank": "thanh toán",
+   "src": "made"
+  },
+  {
+   "text": "Linh thanh toán học phí cả khóa học một lần cho được giảm giá.",
+   "en": "Linh paid the full course fee at once to get a discount.",
+   "ko": "린은 할인을 받으려고 수업료 전체를 한 번에 냈어요.",
+   "blank": "thanh toán",
+   "src": "made"
+  }
+ ],
  "w|thanh tra": [
   {
    "text": "Tuần sau, đoàn cấp trên sẽ về thanh tra toàn bộ hồ sơ của đồn Tuấn.",
@@ -61521,6 +62065,22 @@
    "en": "Call home once in a while, okay?",
    "ko": "가끔 집에 전화해.",
    "blank": "thỉnh thoảng"
+  }
+ ],
+ "w|thịnh vượng": [
+  {
+   "text": "Bảo tàng kể với Long về thời kỳ thương cảng này thịnh vượng nhất.",
+   "en": "The museum told Long about the period when this trading port was most prosperous.",
+   "ko": "박물관은 이 무역항이 가장 번성했던 시기를 롱에게 들려줬어요.",
+   "blank": "thịnh vượng",
+   "src": "made"
+  },
+  {
+   "text": "Cô giáo nói bánh này ngày Tết tượng trưng cho một năm thịnh vượng, Linh ghi vào sổ.",
+   "en": "The teacher said this cake symbolizes a prosperous year at Tết, and Linh wrote it in her notebook.",
+   "ko": "선생님이 이 떡은 설에 풍요로운 한 해를 뜻한다고 해서 린은 공책에 적었어요.",
+   "blank": "thịnh vượng",
+   "src": "made"
   }
  ],
  "w|thịt": [
@@ -64754,6 +65314,22 @@
    "en": "Hương started playing basketball back in primary school.",
    "ko": "흐엉은 초등학생 때부터 농구를 시작했어요.",
    "blank": "tiểu học",
+   "src": "made"
+  }
+ ],
+ "w|tiêu thụ": [
+  {
+   "text": "Biểu đồ trong bảo tàng cho thấy người dân thành phố tiêu thụ ngày càng nhiều điện, Long ghi lại.",
+   "en": "A chart in the museum shows city residents consuming more and more electricity, and Long noted it down.",
+   "ko": "박물관의 도표는 도시 주민들이 갈수록 전기를 더 많이 쓴다는 걸 보여 줘서 롱이 적어 뒀어요.",
+   "blank": "tiêu thụ",
+   "src": "made"
+  },
+  {
+   "text": "Linh học cách nấu vừa đủ để không tiêu thụ quá nhiều thực phẩm rồi bỏ phí.",
+   "en": "Linh learned to cook just enough so as not to consume too much food and waste it.",
+   "ko": "린은 음식을 너무 많이 써서 버리지 않도록 알맞게 요리하는 법을 배웠어요.",
+   "blank": "tiêu thụ",
    "src": "made"
   }
  ],
@@ -70533,6 +71109,22 @@
    "src": "made"
   }
  ],
+ "w|vách": [
+  {
+   "text": "Long dừng lại trước một vách đá có khắc chữ cổ.",
+   "en": "Long stopped in front of a stone wall carved with ancient writing.",
+   "ko": "롱은 옛 글자가 새겨진 돌벽 앞에 멈춰 섰어요.",
+   "blank": "vách",
+   "src": "made"
+  },
+  {
+   "text": "Linh treo các loại dao lên vách bếp cho gọn.",
+   "en": "Linh hung the knives on the kitchen wall to keep things tidy.",
+   "ko": "린은 정리하려고 칼들을 주방 벽에 걸었어요.",
+   "blank": "vách",
+   "src": "made"
+  }
+ ],
  "w|vạch": [
   {
    "text": "Sàn bếp có vạch vàng đánh dấu lối đi an toàn.",
@@ -70742,6 +71334,22 @@
    "en": "Ngọc applies her mother's know-how to pick fresh fish.",
    "ko": "응옥은 어머니의 경험을 살려 싱싱한 생선을 골라요.",
    "blank": "vận dụng",
+   "src": "made"
+  }
+ ],
+ "w|vận hành": [
+  {
+   "text": "Long xem hướng dẫn viên vận hành chiếc máy dệt cổ trước mặt khách.",
+   "en": "Long watched the guide operate the antique loom in front of visitors.",
+   "ko": "롱은 안내원이 관람객 앞에서 옛 베틀을 작동하는 걸 구경했어요.",
+   "blank": "vận hành",
+   "src": "made"
+  },
+  {
+   "text": "Linh học cách vận hành lò nướng đối lưu trong lớp nấu ăn.",
+   "en": "Linh learned how to operate the convection oven in cooking class.",
+   "ko": "린은 요리 수업에서 컨벡션 오븐 작동법을 배웠어요.",
+   "blank": "vận hành",
    "src": "made"
   }
  ],
@@ -71121,6 +71729,22 @@
    "en": "Oh, so that's it.",
    "ko": "아, 그런 거였구나.",
    "blank": "vậy"
+  }
+ ],
+ "w|váy cưới": [
+  {
+   "text": "Bảo tàng trưng bày chiếc váy cưới bằng lụa của một cô dâu thời xưa, Long đứng ngắm rất lâu.",
+   "en": "The museum displays a silk wedding dress from a bride of old times, and Long stood admiring it for a long time.",
+   "ko": "박물관에 옛 신부의 실크 웨딩드레스가 전시돼 있어서 롱은 한참 서서 바라봤어요.",
+   "blank": "váy cưới",
+   "src": "made"
+  },
+  {
+   "text": "Linh muốn học làm bánh để tự làm bánh cưới hợp với chiếc váy cưới của chị.",
+   "en": "Linh wants to learn baking to make a wedding cake to match her sister's wedding dress.",
+   "ko": "린은 언니 웨딩드레스에 어울리는 웨딩 케이크를 직접 만들려고 제빵을 배우고 싶어 해요.",
+   "blank": "váy cưới",
+   "src": "made"
   }
  ],
  "w|vậy mà": [
@@ -71654,6 +72278,22 @@
    "en": "Mai sees keeping her grandparents' house as a good thing for the whole family.",
    "ko": "마이는 조부모님 집을 지키는 걸 온 집안을 위한 좋은 일로 여겨요.",
    "blank": "việc tốt",
+   "src": "made"
+  }
+ ],
+ "w|viêm": [
+  {
+   "text": "Long đọc tấm bảng giải thích vì sao vết thương thời xưa dễ bị viêm.",
+   "en": "Long read the panel explaining why wounds used to get inflamed so easily.",
+   "ko": "롱은 옛날에는 왜 상처가 쉽게 염증이 났는지 설명하는 안내판을 읽었어요.",
+   "blank": "viêm",
+   "src": "made"
+  },
+  {
+   "text": "Cô giáo dặn Linh rửa tay sạch vì vết đứt trên ngón tay có thể bị viêm.",
+   "en": "The teacher told Linh to wash her hands well because the cut on her finger could get inflamed.",
+   "ko": "선생님은 손가락에 베인 상처가 덧날 수 있으니 손을 깨끗이 씻으라고 린에게 일렀어요.",
+   "blank": "viêm",
    "src": "made"
   }
  ],

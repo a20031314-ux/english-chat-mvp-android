@@ -1605,6 +1605,22 @@
    "src": "made"
   }
  ],
+ "w|arkeologi": [
+  {
+   "text": "Sejak kecil Dimas bermimpi kuliah di jurusan arkeologi.",
+   "en": "Since childhood Dimas has dreamed of studying archaeology at university.",
+   "ko": "디마스는 어릴 때부터 고고학과에 가는 게 꿈이었어요.",
+   "blank": "arkeologi",
+   "src": "made"
+  },
+  {
+   "text": "Untuk perannya, Putri membaca banyak buku arkeologi tentang candi kuno.",
+   "en": "For her role, Putri read many archaeology books about ancient temples.",
+   "ko": "푸트리는 배역을 위해 옛 사원에 관한 고고학 책을 많이 읽었어요.",
+   "blank": "arkeologi",
+   "src": "made"
+  }
+ ],
  "w|arloji": [
   {
    "text": "Bayu membersihkan arloji tua yang ia beli dari seorang kakek di pojok pasar.",
@@ -2181,6 +2197,22 @@
    "src": "made"
   }
  ],
+ "w|atletik": [
+  {
+   "text": "Ruang olahraga museum memamerkan sepatu lari juara atletik pertama di provinsi itu.",
+   "en": "The museum's sports room displays the running shoes of the province's first athletics champion.",
+   "ko": "박물관 스포츠 전시실에는 그 주 첫 육상 챔피언의 운동화가 전시돼 있어요.",
+   "blank": "atletik",
+   "src": "made"
+  },
+  {
+   "text": "Sebelum menjadi aktris, Putri pernah ikut lomba atletik tingkat sekolah.",
+   "en": "Before becoming an actress, Putri once competed in school-level athletics.",
+   "ko": "배우가 되기 전에 푸트리는 학교 육상 대회에 나간 적이 있어요.",
+   "blank": "atletik",
+   "src": "made"
+  }
+ ],
  "w|atmosfer": [
   {
    "text": "Langit malam di sana sangat jernih karena atmosfer di pegunungan bebas polusi.",
@@ -2267,6 +2299,22 @@
    "en": "It was wrong from the start.",
    "ko": "처음부터 잘못됐어.",
    "blank": "awal"
+  }
+ ],
+ "w|awam": [
+  {
+   "text": "Penjelasan di museum itu ditulis dengan bahasa sederhana supaya mudah dipahami orang awam.",
+   "en": "The explanations in the museum are written in simple language so laypeople can understand them easily.",
+   "ko": "그 박물관 설명은 일반인도 쉽게 이해하도록 쉬운 말로 쓰여 있어요.",
+   "blank": "awam",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengakui bahwa dulu ia masih awam soal teknik akting di depan kamera.",
+   "en": "Putri admits that she used to be a novice at acting techniques in front of the camera.",
+   "ko": "푸트리는 예전엔 카메라 앞 연기 기술을 잘 몰랐다고 인정해요.",
+   "blank": "awam",
+   "src": "made"
   }
  ],
  "w|awan": [
@@ -6103,6 +6151,22 @@
    "src": "made"
   }
  ],
+ "w|bergulir": [
+  {
+   "text": "Di ruang anak-anak, sebuah bola kayu bergulir pelan di atas lintasan miring.",
+   "en": "In the children's room, a wooden ball rolls slowly along a sloping track.",
+   "ko": "어린이 전시실에서 나무 공이 비탈진 길을 따라 천천히 굴러가요.",
+   "blank": "bergulir",
+   "src": "made"
+  },
+  {
+   "text": "Setelah sutradara berteriak \"action\", kamera mulai bergulir di atas rel.",
+   "en": "After the director shouted \"action,\" the camera began rolling along the track.",
+   "ko": "감독이 \"액션\"을 외치자 카메라가 레일 위로 움직이기 시작했어요.",
+   "blank": "bergulir",
+   "src": "made"
+  }
+ ],
  "w|bergumam": [
   {
    "text": "Budi bergumam sendiri sambil menghafal rumus fisika.",
@@ -7927,6 +7991,22 @@
    "blank": "bernapas"
   }
  ],
+ "w|bernasib": [
+  {
+   "text": "Kapal kayu yang dipamerkan itu bernasib baik karena ditemukan masih utuh di dasar sungai.",
+   "en": "The wooden ship on display was fortunate, as it was found still intact on the riverbed.",
+   "ko": "전시된 나무배는 운 좋게도 강바닥에서 온전한 채로 발견됐어요.",
+   "blank": "bernasib",
+   "src": "made"
+  },
+  {
+   "text": "Tokoh yang diperankan Putri bernasib malang karena kehilangan rumahnya dalam banjir.",
+   "en": "The character Putri plays is unfortunate, losing her home in a flood.",
+   "ko": "푸트리가 맡은 인물은 홍수로 집을 잃는 딱한 처지예요.",
+   "blank": "bernasib",
+   "src": "made"
+  }
+ ],
  "w|bernegosiasi": [
   {
    "text": "Mandor harus bernegosiasi dengan pemasok soal harga besi.",
@@ -8092,6 +8172,22 @@
    "en": "Dewi packed her shoes in pairs so they wouldn't get scattered in the boxes.",
    "ko": "데위는 신발이 상자 안에서 흩어지지 않게 짝을 맞춰 쌌어요.",
    "blank": "berpasangan",
+   "src": "made"
+  }
+ ],
+ "w|berpatroli": [
+  {
+   "text": "Setiap malam dua satpam berpatroli di lorong museum yang gelap.",
+   "en": "Every night two security guards patrol the dark museum corridors.",
+   "ko": "매일 밤 경비원 두 명이 어두운 박물관 복도를 순찰해요.",
+   "blank": "berpatroli",
+   "src": "made"
+  },
+  {
+   "text": "Dua petugas keamanan berpatroli di sekitar lokasi syuting agar penonton tidak masuk.",
+   "en": "Two security officers patrolled around the film set so onlookers wouldn't get in.",
+   "ko": "경비원 두 명이 구경꾼이 들어오지 않게 촬영장 주변을 순찰했어요.",
+   "blank": "berpatroli",
    "src": "made"
   }
  ],
@@ -8312,6 +8408,22 @@
    "en": "The teacher encouraged Intan to be adventurous with colors she had never used.",
    "ko": "선생님은 인탄에게 한 번도 안 써 본 색으로 모험해 보라고 했어요.",
    "blank": "berpetualang",
+   "src": "made"
+  }
+ ],
+ "w|berpidato": [
+  {
+   "text": "Kepala museum berpidato singkat untuk membuka ruang koleksi yang baru.",
+   "en": "The museum director gave a short speech to open the new collection room.",
+   "ko": "박물관장이 새 소장품 전시실을 열며 짧게 연설했어요.",
+   "blank": "berpidato",
+   "src": "made"
+  },
+  {
+   "text": "Dalam film itu, Putri berperan sebagai kepala desa yang berpidato di depan warga.",
+   "en": "In the film, Putri plays a village head who gives a speech in front of the villagers.",
+   "ko": "그 영화에서 푸트리는 주민들 앞에서 연설하는 마을 이장 역을 맡았어요.",
+   "blank": "berpidato",
    "src": "made"
   }
  ],
@@ -12361,6 +12473,22 @@
    "blank": "Cuma"
   }
  ],
+ "w|cuplikan": [
+  {
+   "text": "Layar kecil di ruang itu memutar cuplikan film dokumenter tentang penggalian candi.",
+   "en": "The small screen in that room plays clips from a documentary about the temple excavation.",
+   "ko": "그 전시실의 작은 화면에서는 사원 발굴 다큐멘터리 일부가 나와요.",
+   "blank": "cuplikan",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengunggah cuplikan di balik layar ke akun media sosialnya.",
+   "en": "Putri uploaded a behind-the-scenes clip to her social media account.",
+   "ko": "푸트리는 촬영 뒷이야기 영상 일부를 자기 SNS 계정에 올렸어요.",
+   "blank": "cuplikan",
+   "src": "made"
+  }
+ ],
  "w|curang": [
   {
    "text": "Pemain itu curang dalam pertandingan.",
@@ -13007,6 +13135,22 @@
    "blank": "dekat"
   }
  ],
+ "w|deklarasi": [
+  {
+   "text": "Naskah deklarasi kemerdekaan desa itu disimpan dalam lemari kaca.",
+   "en": "The manuscript of the village's declaration of independence is kept in a glass cabinet.",
+   "ko": "그 마을의 독립 선언문 원본은 유리장에 보관돼 있어요.",
+   "blank": "deklarasi",
+   "src": "made"
+  },
+  {
+   "text": "Adegan pembacaan deklarasi di lapangan harus diulang karena ada pesawat lewat.",
+   "en": "The scene of reading out the declaration in the field had to be redone because a plane flew over.",
+   "ko": "들판에서 선언문을 낭독하는 장면은 비행기가 지나가서 다시 찍어야 했어요.",
+   "blank": "deklarasi",
+   "src": "made"
+  }
+ ],
  "w|delapan": [
   {
    "text": "Delapan orang datang ke pesta itu.",
@@ -13019,6 +13163,22 @@
    "en": "We waited for eight hours.",
    "ko": "우리는 여덟 시간 동안 기다렸어.",
    "blank": "delapan"
+  }
+ ],
+ "w|delegasi": [
+  {
+   "text": "Hari ini delegasi dari kota kembar datang untuk melihat koleksi museum.",
+   "en": "Today a delegation from the sister city came to see the museum's collection.",
+   "ko": "오늘 자매 도시 대표단이 박물관 소장품을 보러 왔어요.",
+   "blank": "delegasi",
+   "src": "made"
+  },
+  {
+   "text": "Kemarin delegasi dari dinas pariwisata datang melihat proses syuting di pantai.",
+   "en": "Yesterday a delegation from the tourism office came to watch the shooting at the beach.",
+   "ko": "어제 관광청 대표단이 해변 촬영 현장을 보러 왔어요.",
+   "blank": "delegasi",
+   "src": "made"
   }
  ],
  "w|demam": [
@@ -13617,6 +13777,22 @@
    "src": "made"
   }
  ],
+ "w|diktator": [
+  {
+   "text": "Ruang sejarah menampilkan surat kabar lama yang mengkritik seorang diktator.",
+   "en": "The history room displays old newspapers criticizing a dictator.",
+   "ko": "역사 전시실에는 한 독재자를 비판한 옛 신문이 전시돼 있어요.",
+   "blank": "diktator",
+   "src": "made"
+  },
+  {
+   "text": "Aktor yang memerankan diktator itu ternyata sangat ramah di luar kamera.",
+   "en": "The actor playing the dictator turned out to be very friendly off camera.",
+   "ko": "독재자 역을 맡은 배우는 카메라 밖에서는 아주 다정했어요.",
+   "blank": "diktator",
+   "src": "made"
+  }
+ ],
  "w|dilarang": [
   {
    "text": "Merokok dilarang di dalam gedung.",
@@ -14065,6 +14241,22 @@
    "blank": "domba"
   }
  ],
+ "w|domestik": [
+  {
+   "text": "Sebagian besar pengunjung museum adalah wisatawan domestik dari kota-kota sekitar.",
+   "en": "Most of the museum's visitors are domestic tourists from nearby cities.",
+   "ko": "박물관 관람객 대부분은 주변 도시에서 온 국내 관광객이에요.",
+   "blank": "domestik",
+   "src": "made"
+  },
+  {
+   "text": "Film ini akan tayang di bioskop domestik sebelum dibawa ke festival luar negeri.",
+   "en": "This film will be shown in domestic cinemas before being taken to festivals abroad.",
+   "ko": "이 영화는 해외 영화제에 가기 전에 국내 극장에서 먼저 개봉해요.",
+   "blank": "domestik",
+   "src": "made"
+  }
+ ],
  "w|dompet": [
   {
    "text": "Dia lupa membawa dompet ke kantor.",
@@ -14375,6 +14567,22 @@
    "en": "He travels around the world.",
    "ko": "그는 세계를 여행해.",
    "blank": "dunia"
+  }
+ ],
+ "w|duniawi": [
+  {
+   "text": "Lukisan itu menggambarkan seorang pertapa yang meninggalkan semua harta duniawi.",
+   "en": "The painting depicts a hermit who left behind all worldly possessions.",
+   "ko": "그 그림은 세상의 모든 재물을 버린 수도자를 그렸어요.",
+   "blank": "duniawi",
+   "src": "made"
+  },
+  {
+   "text": "Film itu bercerita tentang biksu muda yang tergoda kesenangan duniawi.",
+   "en": "The film tells the story of a young monk tempted by worldly pleasures.",
+   "ko": "그 영화는 세속의 즐거움에 끌리는 젊은 승려 이야기예요.",
+   "blank": "duniawi",
+   "src": "made"
   }
  ],
  "w|duta": [
@@ -15776,6 +15984,22 @@
    "en": "Putri's restaurant is next to an art gallery.",
    "ko": "푸트리네 식당은 미술관 옆에 있어요.",
    "blank": "galeri",
+   "src": "made"
+  }
+ ],
+ "w|galon": [
+  {
+   "text": "Di dekat pintu keluar museum ada galon air minum gratis untuk pengunjung.",
+   "en": "Near the museum exit there is a free drinking water jug for visitors.",
+   "ko": "박물관 출구 근처에는 관람객이 마실 수 있는 무료 생수통이 있어요.",
+   "blank": "galon",
+   "src": "made"
+  },
+  {
+   "text": "Kru membawa beberapa galon air ke lokasi syuting di tengah sawah.",
+   "en": "The crew brought several water jugs to the shooting location in the middle of the rice fields.",
+   "ko": "스태프들은 논 한가운데 촬영지로 물통 몇 개를 날랐어요.",
+   "blank": "galon",
    "src": "made"
   }
  ],
@@ -17406,6 +17630,22 @@
    "en": "Siti was relieved her flight took off without a hitch.",
    "ko": "시티는 비행기가 아무 문제 없이 출발해서 안심했어요.",
    "blank": "halangan",
+   "src": "made"
+  }
+ ],
+ "w|haleluya": [
+  {
+   "text": "Dari ruang musik museum terdengar paduan suara menyanyikan haleluya.",
+   "en": "From the museum's music room came the sound of a choir singing hallelujah.",
+   "ko": "박물관 음악실에서 합창단이 할렐루야를 부르는 소리가 들렸어요.",
+   "blank": "haleluya",
+   "src": "made"
+  },
+  {
+   "text": "Dalam adegan pernikahan, paduan suara gereja menyanyikan haleluya dengan lantang.",
+   "en": "In the wedding scene, the church choir sang hallelujah loudly.",
+   "ko": "결혼식 장면에서 교회 합창단이 할렐루야를 우렁차게 불렀어요.",
+   "blank": "haleluya",
    "src": "made"
   }
  ],
@@ -21675,6 +21915,22 @@
    "src": "made"
   }
  ],
+ "w|kanji": [
+  {
+   "text": "Dimas mencoba membaca huruf kanji pada gulungan kertas dari Jepang.",
+   "en": "Dimas tried to read the kanji characters on a paper scroll from Japan.",
+   "ko": "디마스는 일본에서 온 두루마리의 한자를 읽어 보려고 했어요.",
+   "blank": "kanji",
+   "src": "made"
+  },
+  {
+   "text": "Penata kostum menyemprotkan kanji supaya kerah baju Putri tetap kaku.",
+   "en": "The costume designer sprayed starch so that Putri's shirt collar would stay stiff.",
+   "ko": "의상 담당은 푸트리 셔츠 깃이 빳빳하도록 풀을 뿌렸어요.",
+   "blank": "kanji",
+   "src": "made"
+  }
+ ],
  "w|kanker": [
   {
    "text": "Dokter mendeteksi kanker sejak dini.",
@@ -23449,6 +23705,22 @@
    "en": "The cold made his hands tremble.",
    "ko": "추위 때문에 손이 떨렸어.",
    "blank": "Kedinginan"
+  }
+ ],
+ "w|kedok": [
+  {
+   "text": "Topeng kayu di ruang itu dulu dipakai penari, bukan sebagai kedok untuk menipu orang.",
+   "en": "The wooden masks in that room were once used by dancers, not as a disguise to fool people.",
+   "ko": "그 전시실의 나무 가면은 옛날 무용수들이 쓰던 것이지, 사람을 속이려는 가면이 아니었어요.",
+   "blank": "kedok",
+   "src": "made"
+  },
+  {
+   "text": "Tokoh jahat dalam film itu memakai kedok pengusaha dermawan.",
+   "en": "The villain in the film hides behind the mask of a generous businessman.",
+   "ko": "그 영화의 악당은 너그러운 사업가라는 가면을 쓰고 있어요.",
+   "blank": "kedok",
+   "src": "made"
   }
  ],
  "w|kedokteran": [
@@ -36083,6 +36355,22 @@
    "blank": "Memecat"
   }
  ],
+ "w|memedulikan": [
+  {
+   "text": "Rombongan turis itu tidak memedulikan tanda dilarang memotret dengan lampu kilat.",
+   "en": "The tour group ignored the sign forbidding flash photography.",
+   "ko": "그 관광객 무리는 플래시 촬영 금지 표지판을 신경 쓰지 않았어요.",
+   "blank": "memedulikan",
+   "src": "made"
+  },
+  {
+   "text": "Putri terlalu fokus pada dialognya sampai tidak memedulikan hujan gerimis.",
+   "en": "Putri was so focused on her lines that she didn't mind the drizzle.",
+   "ko": "푸트리는 대사에 너무 집중해서 이슬비도 신경 쓰지 않았어요.",
+   "blank": "memedulikan",
+   "src": "made"
+  }
+ ],
  "w|memegang": [
   {
    "text": "Dia memegang tas hitam.",
@@ -38659,6 +38947,22 @@
    "blank": "mencari"
   }
  ],
+ "w|mencari-cari": [
+  {
+   "text": "Dimas mencari-cari ruang keramik, tetapi malah masuk ke ruang lukisan.",
+   "en": "Dimas searched all over for the ceramics room but ended up in the painting room.",
+   "ko": "디마스는 도자기 전시실을 한참 찾다가 엉뚱하게 회화 전시실로 들어갔어요.",
+   "blank": "mencari-cari",
+   "src": "made"
+  },
+  {
+   "text": "Putri mencari-cari naskahnya yang terselip di antara tumpukan kostum.",
+   "en": "Putri hunted for her script, which had slipped in among the pile of costumes.",
+   "ko": "푸트리는 의상 더미 사이에 끼어 버린 대본을 이리저리 찾았어요.",
+   "blank": "mencari-cari",
+   "src": "made"
+  }
+ ],
  "w|mencarikan": [
   {
    "text": "Pustakawan sekolah membantu mencarikan buku sejarah untuk Eko.",
@@ -40199,6 +40503,22 @@
    "src": "made"
   }
  ],
+ "w|meneriaki": [
+  {
+   "text": "Seorang ayah meneriaki anaknya yang berlari-lari di ruang pameran.",
+   "en": "A father shouted at his child who was running around in the exhibition room.",
+   "ko": "한 아버지가 전시실에서 뛰어다니는 아이에게 소리쳤어요.",
+   "blank": "meneriaki",
+   "src": "made"
+  },
+  {
+   "text": "Dalam adegan pasar, Putri harus meneriaki pencopet yang membawa lari dompetnya.",
+   "en": "In the market scene, Putri has to shout at the pickpocket running off with her wallet.",
+   "ko": "시장 장면에서 푸트리는 지갑을 들고 달아나는 소매치기에게 소리쳐야 해요.",
+   "blank": "meneriaki",
+   "src": "made"
+  }
+ ],
  "w|menerima": [
   {
    "text": "Aku menerima tawaran itu.",
@@ -40441,6 +40761,22 @@
    "en": "Ruining the plan made everyone annoyed.",
    "ko": "계획을 망쳐서 모두가 짜증 났어.",
    "blank": "Mengacaukan"
+  }
+ ],
+ "w|mengacu": [
+  {
+   "text": "Label koleksi di museum itu mengacu pada catatan para peneliti zaman dulu.",
+   "en": "The collection labels in the museum refer to the notes of researchers from long ago.",
+   "ko": "그 박물관의 소장품 설명은 옛 연구자들의 기록을 따르고 있어요.",
+   "blank": "mengacu",
+   "src": "made"
+  },
+  {
+   "text": "Kostum para pemain mengacu pada foto-foto keluarga dari masa lalu.",
+   "en": "The actors' costumes are based on family photos from the past.",
+   "ko": "배우들의 의상은 옛날 가족사진을 참고했어요.",
+   "blank": "mengacu",
+   "src": "made"
   }
  ],
  "w|mengacuhkan": [
@@ -42365,6 +42701,22 @@
    "en": "That jacket hangs behind the door.",
    "ko": "그 재킷이 문 뒤에 걸려 있어.",
    "blank": "menggantung"
+  }
+ ],
+ "w|menggapai": [
+  {
+   "text": "Dimas berjinjit untuk menggapai brosur di rak paling atas.",
+   "en": "Dimas stood on tiptoe to reach the brochure on the top shelf.",
+   "ko": "디마스는 맨 위 칸 안내 책자를 잡으려고 발끝을 들었어요.",
+   "blank": "menggapai",
+   "src": "made"
+  },
+  {
+   "text": "Dalam adegan itu, Putri harus menggapai tangan lawan mainnya yang hampir jatuh dari tebing.",
+   "en": "In that scene, Putri has to reach for the hand of her co-star who is about to fall off a cliff.",
+   "ko": "그 장면에서 푸트리는 절벽에서 떨어지려는 상대 배우의 손을 잡아야 해요.",
+   "blank": "menggapai",
+   "src": "made"
   }
  ],
  "w|menggaruk": [
@@ -45575,6 +45927,22 @@
    "blank": "menolak"
   }
  ],
+ "w|menoleh": [
+  {
+   "text": "Dimas menoleh ketika mendengar suara langkah di belakangnya.",
+   "en": "Dimas turned his head when he heard footsteps behind him.",
+   "ko": "디마스는 뒤에서 발소리가 들리자 고개를 돌렸어요.",
+   "blank": "menoleh",
+   "src": "made"
+  },
+  {
+   "text": "Sutradara meminta Putri menoleh perlahan ke arah kamera.",
+   "en": "The director asked Putri to turn her head slowly toward the camera.",
+   "ko": "감독은 푸트리에게 카메라 쪽으로 천천히 고개를 돌리라고 했어요.",
+   "blank": "menoleh",
+   "src": "made"
+  }
+ ],
  "w|menoleransi": [
   {
    "text": "Hakim ketua tidak akan menoleransi keributan di dalam ruang sidang.",
@@ -46945,6 +47313,22 @@
    "blank": "menyelamatkan"
   }
  ],
+ "w|menyelenggarakan": [
+  {
+   "text": "Bulan depan museum kota akan menyelenggarakan pameran tentang perdagangan rempah.",
+   "en": "Next month the city museum will hold an exhibition on the spice trade.",
+   "ko": "다음 달 시립 박물관이 향신료 무역 전시회를 열어요.",
+   "blank": "menyelenggarakan",
+   "src": "made"
+  },
+  {
+   "text": "Rumah produksi itu akan menyelenggarakan audisi terbuka untuk pemain anak-anak.",
+   "en": "The production company will hold open auditions for child actors.",
+   "ko": "그 제작사는 아역 배우 공개 오디션을 열 거예요.",
+   "blank": "menyelenggarakan",
+   "src": "made"
+  }
+ ],
  "w|menyelesaikan": [
   {
    "text": "Dia berhasil menyelesaikan tugasnya.",
@@ -47048,6 +47432,22 @@
    "en": "The lab head asked for a thorough review after the samples were mixed up.",
    "ko": "시료가 뒤바뀐 뒤 연구실장은 전면 점검을 요구했어요.",
    "blank": "menyeluruh",
+   "src": "made"
+  }
+ ],
+ "w|menyemangati": [
+  {
+   "text": "Pemandu museum menyemangati anak-anak agar berani bertanya tentang benda kuno.",
+   "en": "The museum guide encouraged the children to be brave and ask about the ancient objects.",
+   "ko": "박물관 안내원은 아이들이 옛 물건에 대해 용기 내어 질문하도록 북돋아 줬어요.",
+   "blank": "menyemangati",
+   "src": "made"
+  },
+  {
+   "text": "Sutradara menyemangati Putri sebelum adegan menangis yang sulit itu.",
+   "en": "The director encouraged Putri before that difficult crying scene.",
+   "ko": "감독은 어려운 우는 장면 전에 푸트리를 격려했어요.",
+   "blank": "menyemangati",
    "src": "made"
   }
  ],
@@ -51365,6 +51765,22 @@
    "src": "made"
   }
  ],
+ "w|onar": [
+  {
+   "text": "Satpam mengeluarkan dua remaja yang membuat onar di ruang pameran.",
+   "en": "The guard removed two teenagers who were causing trouble in the exhibition room.",
+   "ko": "경비원은 전시실에서 소란을 피운 십 대 두 명을 내보냈어요.",
+   "blank": "onar",
+   "src": "made"
+  },
+  {
+   "text": "Polisi membubarkan sekelompok pemuda yang membuat onar di dekat lokasi syuting.",
+   "en": "The police broke up a group of young men causing a disturbance near the film set.",
+   "ko": "경찰이 촬영장 근처에서 소란을 피운 젊은이 무리를 해산시켰어요.",
+   "blank": "onar",
+   "src": "made"
+  }
+ ],
  "w|ongkos": [
   {
    "text": "Agus kaget karena ongkos kirim lemari tua itu lebih mahal dari harganya.",
@@ -52078,6 +52494,22 @@
    "en": "The committee set up an exhibition of school-day photos along the corridor.",
    "ko": "준비위원회는 복도를 따라 학창 시절 사진 전시를 꾸몄어요.",
    "blank": "pameran",
+   "src": "made"
+  }
+ ],
+ "w|pamrih": [
+  {
+   "text": "Para relawan museum bekerja tanpa pamrih setiap akhir pekan.",
+   "en": "The museum volunteers work selflessly every weekend.",
+   "ko": "박물관 자원봉사자들은 주말마다 대가 없이 일해요.",
+   "blank": "pamrih",
+   "src": "made"
+  },
+  {
+   "text": "Putri bermain di film kecil itu tanpa pamrih karena ceritanya bagus.",
+   "en": "Putri acted in that small film without expecting anything in return because the story was good.",
+   "ko": "푸트리는 이야기가 좋아서 그 작은 영화에 대가를 바라지 않고 출연했어요.",
+   "blank": "pamrih",
    "src": "made"
   }
  ],
@@ -53639,6 +54071,22 @@
    "src": "made"
   }
  ],
+ "w|peluncur": [
+  {
+   "text": "Di halaman belakang museum dipajang peluncur roket tua yang sudah berkarat.",
+   "en": "In the museum's backyard an old rusty rocket launcher is on display.",
+   "ko": "박물관 뒷마당에는 녹슨 낡은 로켓 발사대가 전시돼 있어요.",
+   "blank": "peluncur",
+   "src": "made"
+  },
+  {
+   "text": "Tim efek khusus membuat peluncur kembang api dari pipa paralon.",
+   "en": "The special effects team made a fireworks launcher out of PVC pipes.",
+   "ko": "특수 효과 팀이 PVC 관으로 폭죽 발사대를 만들었어요.",
+   "blank": "peluncur",
+   "src": "made"
+  }
+ ],
  "w|peluncuran": [
   {
    "text": "Rudi datang untuk melihat peluncuran buku tentang sejarah kota.",
@@ -53978,6 +54426,22 @@
    "en": "In the dry season, the distribution of clean water in Siti's village is done in turns.",
    "ko": "건기에는 시티네 마을의 깨끗한 물 배분이 순번제로 이루어져요.",
    "blank": "pembagian",
+   "src": "made"
+  }
+ ],
+ "w|pembajak": [
+  {
+   "text": "Museum bahari itu menyimpan bendera kapal pembajak yang pernah menguasai selat.",
+   "en": "The maritime museum keeps the flag of a pirate ship that once ruled the strait.",
+   "ko": "그 해양 박물관에는 한때 해협을 장악했던 해적선의 깃발이 있어요.",
+   "blank": "pembajak",
+   "src": "made"
+  },
+  {
+   "text": "Lawan main Putri berperan sebagai pembajak pesawat yang akhirnya menyerah.",
+   "en": "Putri's co-star plays an airplane hijacker who eventually surrenders.",
+   "ko": "푸트리의 상대 배우는 결국 항복하는 비행기 납치범 역을 맡았어요.",
+   "blank": "pembajak",
    "src": "made"
   }
  ],
@@ -54385,6 +54849,22 @@
    "en": "A liar will lose friends.",
    "ko": "거짓말쟁이는 친구를 잃게 돼.",
    "blank": "Pembohong"
+  }
+ ],
+ "w|pembom": [
+  {
+   "text": "Dimas berdiri lama di depan model pesawat pembom dari masa perang.",
+   "en": "Dimas stood for a long time in front of a model wartime bomber plane.",
+   "ko": "디마스는 전쟁 때 폭격기 모형 앞에 오래 서 있었어요.",
+   "blank": "pembom",
+   "src": "made"
+  },
+  {
+   "text": "Film perang itu membutuhkan suara pesawat pembom yang terbang rendah.",
+   "en": "That war film needs the sound of a bomber plane flying low.",
+   "ko": "그 전쟁 영화에는 낮게 나는 폭격기 소리가 필요해요.",
+   "blank": "pembom",
+   "src": "made"
   }
  ],
  "w|pemboman": [
@@ -54999,6 +55479,22 @@
    "blank": "Pena"
   }
  ],
+ "w|penahan": [
+  {
+   "text": "Dimas memperhatikan tali penahan yang menjaga pengunjung tetap jauh dari patung.",
+   "en": "Dimas noticed the barrier rope that keeps visitors away from the statue.",
+   "ko": "디마스는 관람객이 조각상에 가까이 가지 못하게 막는 줄을 눈여겨봤어요.",
+   "blank": "penahan",
+   "src": "made"
+  },
+  {
+   "text": "Kru memasang balok penahan supaya dinding set tidak roboh.",
+   "en": "The crew put up a support beam so the set wall wouldn't fall down.",
+   "ko": "스태프들은 세트 벽이 무너지지 않게 버팀목을 댔어요.",
+   "blank": "penahan",
+   "src": "made"
+  }
+ ],
  "w|penahanan": [
   {
    "text": "Fajar mengajukan keberatan atas penahanan kliennya yang terlalu lama.",
@@ -55012,6 +55508,22 @@
    "en": "Lestari read news about an official's detention in a newspaper she sells.",
    "ko": "레스타리는 자기가 파는 신문에서 한 공무원이 구금됐다는 기사를 읽었어요.",
    "blank": "penahanan",
+   "src": "made"
+  }
+ ],
+ "w|penakluk": [
+  {
+   "text": "Patung perunggu di tengah aula menggambarkan seorang penakluk yang menunggang kuda.",
+   "en": "The bronze statue in the middle of the hall depicts a conqueror on horseback.",
+   "ko": "홀 한가운데 청동상은 말을 탄 정복자를 나타내요.",
+   "blank": "penakluk",
+   "src": "made"
+  },
+  {
+   "text": "Putri memerankan istri seorang penakluk yang kesepian di istana.",
+   "en": "Putri plays the lonely wife of a conqueror in the palace.",
+   "ko": "푸트리는 궁전에서 외롭게 지내는 정복자의 아내 역을 맡았어요.",
+   "blank": "penakluk",
    "src": "made"
   }
  ],
@@ -55670,6 +56182,22 @@
    "en": "Putri is now one of the founders of a small book club in her village.",
    "ko": "푸트리는 이제 동네 작은 독서 모임의 창립자 중 한 명이에요.",
    "blank": "pendiri",
+   "src": "made"
+  }
+ ],
+ "w|pendirian": [
+  {
+   "text": "Di lantai dua museum ada foto-foto pendirian kota pada masa lampau.",
+   "en": "On the museum's second floor there are photos of the city's founding long ago.",
+   "ko": "박물관 이 층에는 옛날 도시가 세워질 때의 사진들이 있어요.",
+   "blank": "pendirian",
+   "src": "made"
+  },
+  {
+   "text": "Putri dikenal punya pendirian kuat dan menolak adegan yang menurutnya berlebihan.",
+   "en": "Putri is known for having firm principles and refuses scenes she thinks are excessive.",
+   "ko": "푸트리는 소신이 뚜렷해서 지나치다고 생각하는 장면은 거절하는 걸로 알려져 있어요.",
+   "blank": "pendirian",
    "src": "made"
   }
  ],
@@ -57696,6 +58224,22 @@
    "en": "One of the alumni came disguised as a waiter to surprise his friends.",
    "ko": "동문 한 명이 친구들을 놀래 주려고 웨이터로 변장하고 왔어요.",
    "blank": "penyamaran",
+   "src": "made"
+  }
+ ],
+ "w|penyambutan": [
+  {
+   "text": "Acara penyambutan tamu dari luar kota diadakan di halaman museum.",
+   "en": "The welcoming event for guests from out of town was held in the museum courtyard.",
+   "ko": "외지 손님 환영 행사가 박물관 마당에서 열렸어요.",
+   "blank": "penyambutan",
+   "src": "made"
+  },
+  {
+   "text": "Kru menyiapkan penyambutan kecil dengan kue untuk aktor senior yang baru datang.",
+   "en": "The crew prepared a small welcome with cake for the senior actor who had just arrived.",
+   "ko": "스태프들은 막 도착한 원로 배우를 위해 케이크로 작은 환영 자리를 마련했어요.",
+   "blank": "penyambutan",
    "src": "made"
   }
  ],
@@ -68789,6 +69333,22 @@
    "src": "made"
   }
  ],
+ "w|seruling": [
+  {
+   "text": "Dimas terpukau melihat seruling bambu berumur ratusan tahun di etalase.",
+   "en": "Dimas was amazed to see a centuries-old bamboo flute in the display case.",
+   "ko": "디마스는 진열장 속 수백 년 된 대나무 피리를 보고 넋을 잃었어요.",
+   "blank": "seruling",
+   "src": "made"
+  },
+  {
+   "text": "Musik latar film itu dimainkan dengan seruling dan gendang.",
+   "en": "The film's background music is played on flute and drums.",
+   "ko": "그 영화의 배경 음악은 피리와 북으로 연주돼요.",
+   "blank": "seruling",
+   "src": "made"
+  }
+ ],
  "w|serupa": [
   {
    "text": "Jawaban Dimas dan teman sebangkunya sangat serupa, jadi guru curiga.",
@@ -72543,6 +73103,22 @@
    "blank": "telat"
   }
  ],
+ "w|telepati": [
+  {
+   "text": "Dimas bercanda dengan temannya bahwa mereka bisa berkomunikasi lewat telepati di ruang yang sunyi itu.",
+   "en": "Dimas joked with his friend that they could communicate by telepathy in that silent room.",
+   "ko": "디마스는 그 조용한 전시실에서는 텔레파시로 대화하면 된다고 친구에게 농담했어요.",
+   "blank": "telepati",
+   "src": "made"
+  },
+  {
+   "text": "Dalam cerita itu, dua saudara kembar bisa saling bicara lewat telepati.",
+   "en": "In that story, two twins can talk to each other through telepathy.",
+   "ko": "그 이야기에서 쌍둥이 둘은 텔레파시로 서로 이야기할 수 있어요.",
+   "blank": "telepati",
+   "src": "made"
+  }
+ ],
  "w|telepon": [
   {
    "text": "Ada telepon masuk.",
@@ -73600,6 +74176,22 @@
    "en": "All of Wati's orders are recorded in the app's purchase history.",
    "ko": "와티의 주문은 전부 앱 구매 내역에 기록돼 있어요.",
    "blank": "tercatat",
+   "src": "made"
+  }
+ ],
+ "w|tercekik": [
+  {
+   "text": "Dimas hampir tercekik karena tersedak permen saat tertawa di depan diorama.",
+   "en": "Dimas almost choked on a candy while laughing in front of the diorama.",
+   "ko": "디마스는 디오라마 앞에서 웃다가 사탕이 걸려 숨이 막힐 뻔했어요.",
+   "blank": "tercekik",
+   "src": "made"
+  },
+  {
+   "text": "Leher Putri terasa seperti tercekik karena kerah kostumnya terlalu sempit.",
+   "en": "Putri's neck felt like it was being choked because her costume collar was too tight.",
+   "ko": "의상 깃이 너무 좁아서 푸트리는 목이 졸리는 느낌이었어요.",
+   "blank": "tercekik",
    "src": "made"
   }
  ],
@@ -75771,6 +76363,22 @@
    "src": "made"
   }
  ],
+ "w|tertusuk": [
+  {
+   "text": "Menurut catatan museum, prajurit itu gugur setelah dadanya tertusuk tombak.",
+   "en": "According to the museum's records, the soldier died after his chest was pierced by a spear.",
+   "ko": "박물관 기록에 따르면 그 병사는 가슴이 창에 찔려 전사했어요.",
+   "blank": "tertusuk",
+   "src": "made"
+  },
+  {
+   "text": "Jari Putri tertusuk jarum ketika membantu menjahit kostumnya sendiri.",
+   "en": "Putri's finger was pricked by a needle when she helped sew her own costume.",
+   "ko": "푸트리는 자기 의상 바느질을 돕다가 바늘에 손가락을 찔렸어요.",
+   "blank": "tertusuk",
+   "src": "made"
+  }
+ ],
  "w|tertutup": [
   {
    "text": "Pintu toko masih tertutup.",
@@ -76358,6 +76966,22 @@
    "en": "Intan pulled back the window curtain to see the sunrise.",
    "ko": "인탄은 해돋이를 보려고 창문 커튼을 걷었어요.",
    "blank": "tirai",
+   "src": "made"
+  }
+ ],
+ "w|tirani": [
+  {
+   "text": "Pameran itu menjelaskan bagaimana rakyat melawan tirani raja yang kejam.",
+   "en": "The exhibition explains how the people fought against a cruel king's tyranny.",
+   "ko": "그 전시는 백성들이 잔인한 왕의 폭정에 어떻게 맞섰는지 보여 줘요.",
+   "blank": "tirani",
+   "src": "made"
+  },
+  {
+   "text": "Film sejarah itu menggambarkan perlawanan rakyat terhadap tirani penguasa kolonial.",
+   "en": "The historical film depicts the people's resistance to the tyranny of colonial rulers.",
+   "ko": "그 역사 영화는 식민 통치자의 폭정에 맞선 민중의 저항을 그려요.",
+   "blank": "tirani",
    "src": "made"
   }
  ],
@@ -78002,6 +78626,22 @@
    "en": "The village head accepted Intan's suggestion to make a new hiking trail.",
    "ko": "이장은 새 등산로를 만들자는 인탄의 제안을 받아들였어요.",
    "blank": "usul",
+   "src": "made"
+  }
+ ],
+ "w|usulan": [
+  {
+   "text": "Dimas menulis usulan di buku tamu agar museum buka sampai malam.",
+   "en": "Dimas wrote a suggestion in the guest book for the museum to stay open until evening.",
+   "ko": "디마스는 박물관을 밤까지 열어 달라는 제안을 방명록에 적었어요.",
+   "blank": "usulan",
+   "src": "made"
+  },
+  {
+   "text": "Sutradara menerima usulan Putri untuk mengganti akhir cerita.",
+   "en": "The director accepted Putri's suggestion to change the ending of the story.",
+   "ko": "감독은 결말을 바꾸자는 푸트리의 제안을 받아들였어요.",
+   "blank": "usulan",
    "src": "made"
   }
  ],

@@ -533,6 +533,22 @@
    "blank": "あら"
   }
  ],
+ "w|あらかじめ": [
+  {
+   "text": "拓也は、次の日に着る服をあらかじめ選んでから寝る。",
+   "en": "Takuya picks out the clothes for the next day before going to bed.",
+   "ko": "다쿠야는 다음 날 입을 옷을 미리 골라 두고 자요.",
+   "blank": "あらかじめ",
+   "src": "made"
+  },
+  {
+   "text": "席次表は、あらかじめ両家の親に確認してもらった。",
+   "en": "The seating chart was checked by both sets of parents beforehand.",
+   "ko": "좌석 배치표는 미리 양가 부모님께 확인받았어요.",
+   "blank": "あらかじめ",
+   "src": "made"
+  }
+ ],
  "w|あらゆる": [
   {
    "text": "あらゆる手段を試した。",
@@ -1873,6 +1889,22 @@
    "blank": "おかしく"
   }
  ],
+ "w|おかず": [
+  {
+   "text": "拓也は日曜にまとめて、一週間分のおかずを作り置きする。",
+   "en": "On Sundays, Takuya makes a week's worth of side dishes in advance.",
+   "ko": "다쿠야는 일요일에 일주일 치 반찬을 한꺼번에 만들어 둬요.",
+   "blank": "おかず",
+   "src": "made"
+  },
+  {
+   "text": "恵子の母は、親戚の朝ごはん用におかずを何品も作った。",
+   "en": "Keiko's mother made several side dishes for the relatives' breakfast.",
+   "ko": "게이코의 어머니는 친척들 아침 식사용으로 반찬을 여러 가지 만들었어요.",
+   "blank": "おかず",
+   "src": "made"
+  }
+ ],
  "w|おしい": [
   {
    "text": "健太のシュートはゴールの枠に当たり、おしいところで外れた。",
@@ -2307,6 +2339,22 @@
    "en": "Check the guidance for customers.",
    "ko": "고객 안내를 확인해.",
    "blank": "お客様"
+  }
+ ],
+ "w|お家": [
+  {
+   "text": "雨の日は、拓也はお家でゆっくり映画を見て過ごす。",
+   "en": "On rainy days, Takuya stays home and relaxes watching movies.",
+   "ko": "비 오는 날 다쿠야는 집에서 느긋하게 영화를 보며 보내요.",
+   "blank": "お家",
+   "src": "made"
+  },
+  {
+   "text": "小さな姪は、恵子に「新しいお家に遊びに行ってもいい？」と聞いた。",
+   "en": "Keiko's little niece asked her, \"Can I come play at your new home?\"",
+   "ko": "어린 조카는 게이코에게 \"새집에 놀러 가도 돼?\" 하고 물었어요.",
+   "blank": "お家",
+   "src": "made"
   }
  ],
  "w|お弁当": [
@@ -7916,6 +7964,22 @@
    "en": "Yoko is thinking she wants a job related to technology in the future.",
    "ko": "요코는 장래에 기술과 관련된 일을 하고 싶다고 생각해요.",
    "blank": "テクノロジー",
+   "src": "made"
+  }
+ ],
+ "w|デザート": [
+  {
+   "text": "拓也は夕食のあと、コンビニで買ったデザートを食べるのが楽しみだ。",
+   "en": "Takuya looks forward to eating a dessert from the convenience store after dinner.",
+   "ko": "다쿠야는 저녁을 먹고 나서 편의점에서 산 디저트를 먹는 게 낙이에요.",
+   "blank": "デザート",
+   "src": "made"
+  },
+  {
+   "text": "結婚式のデザートは、新婦の恵子が選んだ苺のケーキだった。",
+   "en": "The wedding dessert was a strawberry cake chosen by Keiko, the bride.",
+   "ko": "결혼식 디저트는 신부 게이코가 고른 딸기 케이크였어요.",
+   "blank": "デザート",
    "src": "made"
   }
  ],
@@ -13777,6 +13841,22 @@
    "blank": "一人"
   }
  ],
+ "w|一人暮らし": [
+  {
+   "text": "一人暮らしを始めて三年、拓也は料理がすっかり上手になった。",
+   "en": "Three years into living alone, Takuya has become a pretty good cook.",
+   "ko": "혼자 산 지 삼 년, 다쿠야는 요리 솜씨가 꽤 늘었어요.",
+   "blank": "一人暮らし",
+   "src": "made"
+  },
+  {
+   "text": "恵子の長かった一人暮らしも、結婚で終わりを迎えた。",
+   "en": "Keiko's long stretch of living alone came to an end with her marriage.",
+   "ko": "게이코의 오랜 자취 생활도 결혼으로 끝이 났어요.",
+   "blank": "一人暮らし",
+   "src": "made"
+  }
+ ],
  "w|一体": [
   {
    "text": "一体何が起きたの？",
@@ -13818,6 +13898,22 @@
    "en": "Mayu now hikes on weekends as a member of a mountain-climbing club.",
    "ko": "마유는 지금 한 등산 클럽의 일원으로 주말마다 산을 걸어요.",
    "blank": "一員",
+   "src": "made"
+  }
+ ],
+ "w|一夜": [
+  {
+   "text": "拓也は、一夜で企画書を書き上げたこともある。",
+   "en": "Takuya once finished writing a proposal in a single night.",
+   "ko": "다쿠야는 하룻밤 만에 기획서를 다 쓴 적도 있어요.",
+   "blank": "一夜",
+   "src": "made"
+  },
+  {
+   "text": "式の思い出は、たった一夜では語り尽くせない。",
+   "en": "The memories of the wedding can't all be told in just one night.",
+   "ko": "결혼식 추억은 하룻밤으로는 다 이야기할 수 없어요.",
+   "blank": "一夜",
    "src": "made"
   }
  ],
@@ -14813,6 +14909,22 @@
    "blank": "下手"
   }
  ],
+ "w|下旬": [
+  {
+   "text": "拓也は、今月の下旬に有給休暇を取るつもりだ。",
+   "en": "Takuya plans to take paid leave toward the end of this month.",
+   "ko": "다쿠야는 이달 하순에 유급 휴가를 쓸 생각이에요.",
+   "blank": "下旬",
+   "src": "made"
+  },
+  {
+   "text": "恵子の結婚式は、十月の下旬に決まった。",
+   "en": "Keiko's wedding was set for late October.",
+   "ko": "게이코의 결혼식은 시월 하순으로 정해졌어요.",
+   "blank": "下旬",
+   "src": "made"
+  }
+ ],
  "w|下着": [
   {
    "text": "悠斗は、肌触りのいい下着をまとめて三枚買った。",
@@ -15775,6 +15887,22 @@
    "src": "made"
   }
  ],
+ "w|中年": [
+  {
+   "text": "拓也の隣の席には、無口な中年の男性が座っている。",
+   "en": "A quiet middle-aged man sits at the desk next to Takuya.",
+   "ko": "다쿠야 옆자리에는 말수가 적은 중년 남성이 앉아 있어요.",
+   "blank": "中年",
+   "src": "made"
+  },
+  {
+   "text": "受付には、新郎の上司だという中年の男性が早くから来ていた。",
+   "en": "A middle-aged man who said he was the groom's boss arrived early at the reception desk.",
+   "ko": "접수처에는 신랑의 상사라는 중년 남성이 일찍부터 와 있었어요.",
+   "blank": "中年",
+   "src": "made"
+  }
+ ],
  "w|中心": [
   {
    "text": "町の中心だよ。",
@@ -15802,6 +15930,22 @@
    "en": "Because of strong winds, train service was suspended for about thirty minutes.",
    "ko": "강풍 때문에 열차 운행이 삼십 분쯤 중단됐어요.",
    "blank": "中断",
+   "src": "made"
+  }
+ ],
+ "w|中旬": [
+  {
+   "text": "拓也は、来月の中旬に大阪へ出張する予定だ。",
+   "en": "Takuya is scheduled for a business trip to Osaka in the middle of next month.",
+   "ko": "다쿠야는 다음 달 중순에 오사카로 출장 갈 예정이에요.",
+   "blank": "中旬",
+   "src": "made"
+  },
+  {
+   "text": "招待状は、式の二か月前の中旬に発送した。",
+   "en": "The invitations were mailed in the middle of the month, two months before the wedding.",
+   "ko": "초대장은 식 두 달 전 중순에 발송했어요.",
+   "blank": "中旬",
    "src": "made"
   }
  ],
@@ -24671,6 +24815,22 @@
    "src": "made"
   }
  ],
+ "w|前期": [
+  {
+   "text": "拓也の会社は、前期の売り上げが予想より伸びた。",
+   "en": "Takuya's company's sales for the first half of the year grew more than expected.",
+   "ko": "다쿠야의 회사는 상반기 매출이 예상보다 늘었어요.",
+   "blank": "前期",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、大学の前期試験が終わった日に新郎と出会った。",
+   "en": "Keiko met the groom on the day her first-semester exams at university ended.",
+   "ko": "게이코는 대학 전기 시험이 끝난 날 신랑을 만났어요.",
+   "blank": "前期",
+   "src": "made"
+  }
+ ],
  "w|前線": [
   {
    "text": "梅雨前線の影響で、野外展示は一週間中止になった。",
@@ -26717,6 +26877,22 @@
    "src": "made"
   }
  ],
+ "w|原料": [
+  {
+   "text": "拓也の会社は、パンの原料になる小麦粉を扱っている。",
+   "en": "Takuya's company deals in flour, which is used to make bread.",
+   "ko": "다쿠야의 회사는 빵 원료가 되는 밀가루를 취급해요.",
+   "blank": "原料",
+   "src": "made"
+  },
+  {
+   "text": "恵子の引き出物は、天然の原料だけで作った石けんだった。",
+   "en": "Keiko's wedding favors were soaps made only from natural ingredients.",
+   "ko": "게이코의 답례품은 천연 원료로만 만든 비누였어요.",
+   "blank": "原料",
+   "src": "made"
+  }
+ ],
  "w|原点": [
   {
    "text": "社長は、お客さんの笑顔こそが会社の原点だと語った。",
@@ -28619,6 +28795,22 @@
    "en": "Agreement is needed.",
    "ko": "동의가 필요해.",
    "blank": "同意"
+  }
+ ],
+ "w|同日": [
+  {
+   "text": "拓也は、歯医者の予約と会議を同日に入れてしまった。",
+   "en": "Takuya ended up scheduling a dentist appointment and a meeting on the same day.",
+   "ko": "다쿠야는 치과 예약과 회의를 같은 날로 잡아 버렸어요.",
+   "blank": "同日",
+   "src": "made"
+  },
+  {
+   "text": "恵子の兄も、偶然同日に結婚式を挙げることになった。",
+   "en": "By coincidence, Keiko's older brother also ended up holding his wedding on the same day.",
+   "ko": "게이코의 오빠도 우연히 같은 날 결혼식을 올리게 됐어요.",
+   "blank": "同日",
+   "src": "made"
   }
  ],
  "w|同時": [
@@ -32527,6 +32719,22 @@
    "src": "made"
   }
  ],
+ "w|夜明け": [
+  {
+   "text": "夜明け前に目が覚めて、拓也はもう眠れなかった。",
+   "en": "Takuya woke before dawn and couldn't get back to sleep.",
+   "ko": "새벽 전에 눈이 떠져서 다쿠야는 다시 잠들 수 없었어요.",
+   "blank": "夜明け",
+   "src": "made"
+  },
+  {
+   "text": "当日、恵子は夜明けとともに起きて、着付けに向かった。",
+   "en": "On the day, Keiko got up at dawn and went to get dressed.",
+   "ko": "당일 게이코는 동틀 무렵 일어나 옷을 입으러 갔어요.",
+   "blank": "夜明け",
+   "src": "made"
+  }
+ ],
  "w|夜間": [
   {
    "text": "年末は、夜間も開いている郵便局があって助かる。",
@@ -33968,6 +34176,22 @@
    "en": "A regular elderly customer kindly brings homemade jam.",
    "ko": "단골 할머니는 호의로 손수 만든 잼을 가져다줘요.",
    "blank": "好意",
+   "src": "made"
+  }
+ ],
+ "w|好物": [
+  {
+   "text": "拓也の好物は、母が作る甘い卵焼きだ。",
+   "en": "Takuya's favorite food is the sweet rolled omelet his mother makes.",
+   "ko": "다쿠야가 제일 좋아하는 음식은 어머니가 만드는 달콤한 달걀말이예요.",
+   "blank": "好物",
+   "src": "made"
+  },
+  {
+   "text": "披露宴のメニューには、新郎の好物のエビフライが入っていた。",
+   "en": "The reception menu included fried shrimp, the groom's favorite food.",
+   "ko": "피로연 메뉴에는 신랑이 좋아하는 새우튀김이 들어 있었어요.",
+   "blank": "好物",
    "src": "made"
   }
  ],
@@ -37283,6 +37507,22 @@
    "src": "tatoeba:212173 en:49453/al_ex_an_der"
   }
  ],
+ "w|展望": [
+  {
+   "text": "会社の会議で、部長が来年の事業の展望を話した。",
+   "en": "At the company meeting, the department head talked about the business outlook for next year.",
+   "ko": "회사 회의에서 부장이 내년 사업 전망을 이야기했어요.",
+   "blank": "展望",
+   "src": "made"
+  },
+  {
+   "text": "披露宴は、街を一望できる展望レストランで開かれた。",
+   "en": "The reception was held in a restaurant with a panoramic view of the city.",
+   "ko": "피로연은 시내가 한눈에 보이는 전망 레스토랑에서 열렸어요.",
+   "blank": "展望",
+   "src": "made"
+  }
+ ],
  "w|展示": [
   {
    "text": "展示を見に行った。",
@@ -38033,6 +38273,22 @@
    "src": "made"
   }
  ],
+ "w|常時": [
+  {
+   "text": "拓也の部署では、常時三人が電話の対応をしている。",
+   "en": "In Takuya's department, three people are always handling phone calls.",
+   "ko": "다쿠야의 부서에서는 항상 세 명이 전화 응대를 해요.",
+   "blank": "常時",
+   "src": "made"
+  },
+  {
+   "text": "式場には、カメラマンが常時二人ついていた。",
+   "en": "Two photographers were present at the venue at all times.",
+   "ko": "식장에는 사진 기사가 늘 두 명 붙어 있었어요.",
+   "blank": "常時",
+   "src": "made"
+  }
+ ],
  "w|常識": [
   {
    "text": "ゴミを道に捨てないのは常識だと、警官は若者に言った。",
@@ -38226,6 +38482,22 @@
    "en": "An older woman in the next seat gave Misaki some travel advice.",
    "ko": "옆자리의 연상 여성이 미사키에게 여행 조언을 해 줬어요.",
    "blank": "年上",
+   "src": "made"
+  }
+ ],
+ "w|年下": [
+  {
+   "text": "拓也の上司は、拓也より二つ年下だ。",
+   "en": "Takuya's boss is two years younger than Takuya.",
+   "ko": "다쿠야의 상사는 다쿠야보다 두 살 어려요.",
+   "blank": "年下",
+   "src": "made"
+  },
+  {
+   "text": "新郎は恵子より三つ年下で、会社の後輩だった。",
+   "en": "The groom is three years younger than Keiko and was her junior at work.",
+   "ko": "신랑은 게이코보다 세 살 어리고 회사 후배였어요.",
+   "blank": "年下",
    "src": "made"
   }
  ],
@@ -38474,6 +38746,22 @@
    "en": "Mayu enclosed a picture book for small children with the letter.",
    "ko": "편지에는 유아용 그림책을 한 권 함께 넣었어요.",
    "blank": "幼児",
+   "src": "made"
+  }
+ ],
+ "w|幼少": [
+  {
+   "text": "拓也は幼少のころから、朝は早く目が覚める。",
+   "en": "Since early childhood, Takuya has always woken up early in the morning.",
+   "ko": "다쿠야는 어릴 적부터 아침에 일찍 눈이 떠져요.",
+   "blank": "幼少",
+   "src": "made"
+  },
+  {
+   "text": "スライドには、恵子の幼少のころの写真がたくさん映された。",
+   "en": "Lots of photos from Keiko's early childhood were shown in the slideshow.",
+   "ko": "슬라이드에는 게이코의 어린 시절 사진이 많이 나왔어요.",
+   "blank": "幼少",
    "src": "made"
   }
  ],
@@ -44979,6 +45267,22 @@
    "src": "made"
   }
  ],
+ "w|排水": [
+  {
+   "text": "台所の排水が詰まって、拓也は朝から管理会社に電話した。",
+   "en": "The kitchen drain clogged, and Takuya called the management company first thing in the morning.",
+   "ko": "부엌 배수가 막혀서 다쿠야는 아침부터 관리 회사에 전화했어요.",
+   "blank": "排水",
+   "src": "made"
+  },
+  {
+   "text": "新居は古い家で、入居前に排水管を取り替えた。",
+   "en": "Their new home was an old house, so the drainpipes were replaced before they moved in.",
+   "ko": "신혼집은 오래된 집이라 입주 전에 배수관을 교체했어요.",
+   "blank": "排水",
+   "src": "made"
+  }
+ ],
  "w|排除": [
   {
    "text": "図書館は、どんな意見も排除せずに本を集めるようにしている。",
@@ -47909,6 +48213,22 @@
    "blank": "日常"
   }
  ],
+ "w|日数": [
+  {
+   "text": "拓也は、有給休暇の残りの日数をカレンダーで確かめた。",
+   "en": "Takuya checked his calendar for how many days of paid leave he had left.",
+   "ko": "다쿠야는 남은 유급 휴가 일수를 달력에서 확인했어요.",
+   "blank": "日数",
+   "src": "made"
+  },
+  {
+   "text": "新婚旅行の日数を、二人は相談して一週間にした。",
+   "en": "The two talked it over and settled on a week for the honeymoon.",
+   "ko": "신혼여행 일수를 두 사람은 의논해서 일주일로 했어요.",
+   "blank": "日数",
+   "src": "made"
+  }
+ ],
  "w|日時": [
   {
    "text": "亮は、親戚の集まりの日時を家族のグループに送った。",
@@ -48047,6 +48367,22 @@
    "blank": "日記"
   }
  ],
+ "w|日頃": [
+  {
+   "text": "拓也は日頃から、エレベーターを使わず階段を上っている。",
+   "en": "Takuya habitually takes the stairs instead of the elevator.",
+   "ko": "다쿠야는 평소에 엘리베이터를 안 타고 계단으로 올라가요.",
+   "blank": "日頃",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、日頃お世話になっている人たちへ感謝の手紙を読んだ。",
+   "en": "Keiko read a letter of thanks to the people who had always looked after her.",
+   "ko": "게이코는 평소 신세 진 분들에게 감사 편지를 읽었어요.",
+   "blank": "日頃",
+   "src": "made"
+  }
+ ],
  "w|旦那": [
   {
    "text": "旦那が遅く帰る。",
@@ -48059,6 +48395,22 @@
    "en": "I'll talk it over with my husband.",
    "ko": "남편이랑 상의할게.",
    "blank": "旦那"
+  }
+ ],
+ "w|早々": [
+  {
+   "text": "仕事が早々に片付いたので、拓也は定時に会社を出た。",
+   "en": "Takuya's work wrapped up early, so he left the office on time.",
+   "ko": "일이 일찌감치 끝나서 다쿠야는 정시에 회사를 나왔어요.",
+   "blank": "早々",
+   "src": "made"
+  },
+  {
+   "text": "招待状の返事は、ほとんどの友人から早々に届いた。",
+   "en": "Most friends sent back their replies to the invitation early.",
+   "ko": "초대장 답장은 대부분의 친구들에게서 일찌감치 왔어요.",
+   "blank": "早々",
+   "src": "made"
   }
  ],
  "w|早い": [
@@ -48497,6 +48849,22 @@
    "src": "made"
   }
  ],
+ "w|昼食": [
+  {
+   "text": "拓也はいつも、同僚と社員食堂で昼食をとる。",
+   "en": "Takuya always eats lunch with coworkers in the company cafeteria.",
+   "ko": "다쿠야는 늘 동료와 사내 식당에서 점심을 먹어요.",
+   "blank": "昼食",
+   "src": "made"
+  },
+  {
+   "text": "式の前に、両家の家族はホテルで一緒に昼食をとった。",
+   "en": "Before the ceremony, both families had lunch together at the hotel.",
+   "ko": "식 전에 양가 가족은 호텔에서 함께 점심을 먹었어요.",
+   "blank": "昼食",
+   "src": "made"
+  }
+ ],
  "w|時": [
   {
    "text": "あの時は違った。",
@@ -48883,6 +49251,22 @@
    "src": "made"
   }
  ],
+ "w|暫く": [
+  {
+   "text": "仕事から帰ると、拓也は暫くソファでぼんやりする。",
+   "en": "When he gets home from work, Takuya spaces out on the sofa for a while.",
+   "ko": "일에서 돌아오면 다쿠야는 한동안 소파에서 멍하니 있어요.",
+   "blank": "暫く",
+   "src": "made"
+  },
+  {
+   "text": "父の手紙を聞いて、恵子は暫く涙が止まらなかった。",
+   "en": "Listening to her father's letter, Keiko couldn't stop crying for a while.",
+   "ko": "아버지의 편지를 듣고 게이코는 한동안 눈물이 멈추지 않았어요.",
+   "blank": "暫く",
+   "src": "made"
+  }
+ ],
  "w|暮らし": [
   {
    "text": "田舎の暮らしが好き。",
@@ -49071,6 +49455,22 @@
    "src": "made"
   }
  ],
+ "w|曜日": [
+  {
+   "text": "連休のあとは、拓也はよく曜日の感覚がおかしくなる。",
+   "en": "After a long weekend, Takuya often loses track of what day of the week it is.",
+   "ko": "연휴가 끝나면 다쿠야는 자주 요일 감각이 이상해져요.",
+   "blank": "曜日",
+   "src": "made"
+  },
+  {
+   "text": "式の曜日は、遠くから来る友人を考えて土曜に決めた。",
+   "en": "Thinking of friends traveling from afar, they chose Saturday as the day of the week for the wedding.",
+   "ko": "식 날짜의 요일은 멀리서 오는 친구들을 생각해 토요일로 정했어요.",
+   "blank": "曜日",
+   "src": "made"
+  }
+ ],
  "w|曲": [
   {
    "text": "この曲、好きだよ。",
@@ -49183,6 +49583,22 @@
    "en": "The moon came out.",
    "ko": "달이 나왔어.",
    "blank": "月"
+  }
+ ],
+ "w|月刊": [
+  {
+   "text": "拓也は通勤の電車で、月刊の釣り雑誌を読んでいる。",
+   "en": "Takuya reads a monthly fishing magazine on his commuter train.",
+   "ko": "다쿠야는 출근 전철에서 월간 낚시 잡지를 읽어요.",
+   "blank": "月刊",
+   "src": "made"
+  },
+  {
+   "text": "恵子は月刊のブライダル雑誌を見て、ドレスを選んだ。",
+   "en": "Keiko picked her dress by looking through a monthly bridal magazine.",
+   "ko": "게이코는 월간 웨딩 잡지를 보고 드레스를 골랐어요.",
+   "blank": "月刊",
+   "src": "made"
   }
  ],
  "w|月曜": [
@@ -49641,6 +50057,22 @@
    "en": "The tree in the yard fell over.",
    "ko": "마당 나무가 쓰러졌어.",
    "blank": "木"
+  }
+ ],
+ "w|木曜": [
+  {
+   "text": "毎週木曜の夜、拓也は近所のジムで泳いでいる。",
+   "en": "Every Thursday night, Takuya swims at the gym nearby.",
+   "ko": "매주 목요일 밤 다쿠야는 근처 헬스장에서 수영해요.",
+   "blank": "木曜",
+   "src": "made"
+  },
+  {
+   "text": "木曜に最後の打ち合わせをして、式の準備がすべて整った。",
+   "en": "After the final meeting on Thursday, all the wedding preparations were complete.",
+   "ko": "목요일에 마지막 협의를 하고 식 준비가 모두 끝났어요.",
+   "blank": "木曜",
+   "src": "made"
   }
  ],
  "w|木曜日": [
@@ -52931,6 +53363,22 @@
    "blank": "毎年"
   }
  ],
+ "w|毎度": [
+  {
+   "text": "駅前の弁当屋の主人は、拓也に毎度ありがとうと声をかける。",
+   "en": "The owner of the bento shop by the station always thanks Takuya for his business.",
+   "ko": "역 앞 도시락 가게 주인은 다쿠야에게 늘 고맙다고 인사해요.",
+   "blank": "毎度",
+   "src": "made"
+  },
+  {
+   "text": "式場の担当者は、毎度細かい質問に丁寧に答えてくれた。",
+   "en": "The venue coordinator answered detailed questions politely every time.",
+   "ko": "식장 담당자는 매번 자잘한 질문에 친절하게 답해 줬어요.",
+   "blank": "毎度",
+   "src": "made"
+  }
+ ],
  "w|毎日": [
   {
    "text": "毎日来てるよ。",
@@ -53454,6 +53902,22 @@
    "en": "Before pitching the tent, they checked whether the ground was level.",
    "ko": "텐트를 치기 전에 땅이 수평인지 확인했어요.",
    "blank": "水平",
+   "src": "made"
+  }
+ ],
+ "w|水曜": [
+  {
+   "text": "水曜は会社のノー残業デーなので、拓也は早く帰れる。",
+   "en": "Wednesday is the company's no-overtime day, so Takuya can go home early.",
+   "ko": "수요일은 회사의 야근 없는 날이라 다쿠야는 일찍 퇴근할 수 있어요.",
+   "blank": "水曜",
+   "src": "made"
+  },
+  {
+   "text": "ドレスの試着は、恵子の仕事が休みの水曜にした。",
+   "en": "Keiko scheduled the dress fitting on Wednesday, her day off.",
+   "ko": "드레스 피팅은 게이코가 쉬는 수요일로 했어요.",
+   "blank": "水曜",
    "src": "made"
   }
  ],
@@ -54375,6 +54839,22 @@
    "en": "Can I wash this?",
    "ko": "이 옷 빨 수 있어?",
    "blank": "洗える"
+  }
+ ],
+ "w|洗浄": [
+  {
+   "text": "拓也は寝る前に、コンタクトレンズを専用の液で洗浄する。",
+   "en": "Before bed, Takuya cleans his contact lenses with a special solution.",
+   "ko": "다쿠야는 자기 전에 콘택트렌즈를 전용 액으로 세척해요.",
+   "blank": "洗浄",
+   "src": "made"
+  },
+  {
+   "text": "式の前日、恵子は顔の洗浄からエステで丁寧にしてもらった。",
+   "en": "The day before the wedding, Keiko had a full facial treatment at a salon, starting with a deep cleanse.",
+   "ko": "식 전날 게이코는 피부 관리실에서 얼굴 세안부터 꼼꼼하게 관리받았어요.",
+   "blank": "洗浄",
+   "src": "made"
   }
  ],
  "w|洗濯": [
@@ -56222,6 +56702,22 @@
    "en": "Aoi's neighbor, Mr. Yamaguchi, is from a hot-spring town at the foot of a volcano.",
    "ko": "아오이의 이웃 야마구치 씨는 화산 기슭에 있는 온천 마을 출신이에요.",
    "blank": "火山",
+   "src": "made"
+  }
+ ],
+ "w|火曜": [
+  {
+   "text": "火曜の朝は、いつも燃えるごみを出す日だ。",
+   "en": "Tuesday morning is always burnable garbage day.",
+   "ko": "화요일 아침은 늘 타는 쓰레기를 내놓는 날이에요.",
+   "blank": "火曜",
+   "src": "made"
+  },
+  {
+   "text": "火曜の夜、恵子は友人たちとドレスの最終確認をした。",
+   "en": "On Tuesday night, Keiko did a final check of the dress with her friends.",
+   "ko": "화요일 밤 게이코는 친구들과 드레스를 마지막으로 확인했어요.",
+   "blank": "火曜",
    "src": "made"
   }
  ],
@@ -61337,6 +61833,22 @@
    "blank": "真剣"
   }
  ],
+ "w|真夏": [
+  {
+   "text": "真夏の通勤電車は、朝からかなり蒸し暑い。",
+   "en": "Commuter trains in midsummer are quite hot and humid even in the morning.",
+   "ko": "한여름 출근 전철은 아침부터 꽤 후텁지근해요.",
+   "blank": "真夏",
+   "src": "made"
+  },
+  {
+   "text": "恵子たちは、真夏を避けて秋に式を挙げることにした。",
+   "en": "Keiko and her fiancé decided to avoid midsummer and hold the wedding in autumn.",
+   "ko": "게이코 커플은 한여름을 피해 가을에 식을 올리기로 했어요.",
+   "blank": "真夏",
+   "src": "made"
+  }
+ ],
  "w|真実": [
   {
    "text": "真実を知りたい。",
@@ -63689,6 +64201,22 @@
    "src": "made"
   }
  ],
+ "w|立地": [
+  {
+   "text": "拓也のアパートは駅から近く、通勤には便利な立地だ。",
+   "en": "Takuya's apartment is close to the station, a convenient location for commuting.",
+   "ko": "다쿠야의 아파트는 역에서 가까워서 출퇴근하기 편한 입지예요.",
+   "blank": "立地",
+   "src": "made"
+  },
+  {
+   "text": "式場は海が見える立地で、恵子はひと目で気に入った。",
+   "en": "The venue had a location with an ocean view, and Keiko loved it at first sight.",
+   "ko": "식장은 바다가 보이는 입지라서 게이코는 한눈에 마음에 들었어요.",
+   "blank": "立地",
+   "src": "made"
+  }
+ ],
  "w|立場": [
   {
    "text": "僕の立場も考えて。",
@@ -64320,6 +64848,22 @@
    "en": "At the end of the year, Misaki's father starts sorting out his tax documents.",
    "ko": "연말이 되면 미사키의 아버지는 납세 서류를 정리하기 시작해요.",
    "blank": "納税",
+   "src": "made"
+  }
+ ],
+ "w|納豆": [
+  {
+   "text": "拓也の朝ごはんは、たいてい納豆とご飯とみそ汁だ。",
+   "en": "Takuya's breakfast is usually natto, rice and miso soup.",
+   "ko": "다쿠야의 아침밥은 대개 낫토와 밥과 된장국이에요.",
+   "blank": "納豆",
+   "src": "made"
+  },
+  {
+   "text": "新郎は納豆が大好きで、恵子は毎朝出すと約束した。",
+   "en": "The groom loves natto, and Keiko promised to serve it every morning.",
+   "ko": "신랑은 낫토를 아주 좋아해서 게이코는 매일 아침 내놓겠다고 약속했어요.",
+   "blank": "納豆",
    "src": "made"
   }
  ],
@@ -68628,6 +69172,22 @@
    "en": "The accumulation of user behavior data is this company's greatest asset.",
    "ko": "사용자 행동 데이터 축적이 이 회사의 가장 큰 재산이에요.",
    "blank": "蓄積",
+   "src": "made"
+  }
+ ],
+ "w|蕎麦": [
+  {
+   "text": "拓也は会社の近くの店で、冷たい蕎麦を急いで食べた。",
+   "en": "Takuya hurriedly ate cold soba at a shop near his office.",
+   "ko": "다쿠야는 회사 근처 가게에서 차가운 소바를 서둘러 먹었어요.",
+   "blank": "蕎麦",
+   "src": "made"
+  },
+  {
+   "text": "式の翌日、恵子は新郎の家族と手打ちの蕎麦を食べに行った。",
+   "en": "The day after the ceremony, Keiko went to eat handmade soba with the groom's family.",
+   "ko": "식 다음 날 게이코는 신랑 가족과 수타 소바를 먹으러 갔어요.",
+   "blank": "蕎麦",
    "src": "made"
   }
  ],
@@ -79975,6 +80535,22 @@
    "src": "made"
   }
  ],
+ "w|院長": [
+  {
+   "text": "拓也は昼休みに、近所の歯医者の院長に歯を診てもらった。",
+   "en": "At lunch, Takuya had his teeth checked by the head of the local dental clinic.",
+   "ko": "다쿠야는 점심시간에 근처 치과 원장에게 이를 진찰받았어요.",
+   "blank": "院長",
+   "src": "made"
+  },
+  {
+   "text": "新郎が勤める病院の院長が、乾杯のあいさつをした。",
+   "en": "The director of the hospital where the groom works gave the toast.",
+   "ko": "신랑이 근무하는 병원 원장이 건배사를 했어요.",
+   "blank": "院長",
+   "src": "made"
+  }
+ ],
  "w|除く": [
   {
    "text": "市役所は、土日と祝日を除く毎日開いている。",
@@ -80196,6 +80772,22 @@
    "en": "The teacher, seeing Keiko for the first time in a while, said she had gotten much taller.",
    "ko": "오랜만에 만난 선생님은 게이코를 보고 키가 많이 컸다고 말했어요.",
    "blank": "随分",
+   "src": "made"
+  }
+ ],
+ "w|随時": [
+  {
+   "text": "拓也の会社では、新しい社員を随時募集している。",
+   "en": "Takuya's company is always accepting applications for new employees.",
+   "ko": "다쿠야의 회사는 신입 사원을 수시로 모집하고 있어요.",
+   "blank": "随時",
+   "src": "made"
+  },
+  {
+   "text": "式場の見学は、予約なしで随時受け付けている。",
+   "en": "Venue tours are accepted at any time without a reservation.",
+   "ko": "식장 견학은 예약 없이 수시로 받고 있어요.",
+   "blank": "随時",
    "src": "made"
   }
  ],
@@ -81929,6 +82521,22 @@
    "blank": "風呂"
   }
  ],
+ "w|風味": [
+  {
+   "text": "拓也は、ほんのりゆずの風味がするお茶を毎朝いれる。",
+   "en": "Every morning Takuya brews a tea with a faint yuzu flavor.",
+   "ko": "다쿠야는 은은하게 유자 향이 나는 차를 매일 아침 우려요.",
+   "blank": "風味",
+   "src": "made"
+  },
+  {
+   "text": "ウエディングケーキには、ほんのりお酒の風味がついていた。",
+   "en": "The wedding cake had a faint flavor of liqueur.",
+   "ko": "웨딩 케이크에는 은은하게 술 풍미가 배어 있었어요.",
+   "blank": "風味",
+   "src": "made"
+  }
+ ],
  "w|風景": [
   {
    "text": "健太の席からは、ビルばかりの風景しか見えない。",
@@ -82182,6 +82790,22 @@
    "en": "For the past few days, Sakura's cat has had no appetite and barely moves.",
    "ko": "요 며칠 사쿠라의 고양이는 식욕이 없고 거의 움직이지 않아요.",
    "blank": "食欲",
+   "src": "made"
+  }
+ ],
+ "w|食物": [
+  {
+   "text": "拓也は、食物繊維が多い玄米を食べるようにしている。",
+   "en": "Takuya tries to eat brown rice, which is high in dietary fiber.",
+   "ko": "다쿠야는 식이섬유가 많은 현미를 먹으려고 해요.",
+   "blank": "食物",
+   "src": "made"
+  },
+  {
+   "text": "招待客の食物アレルギーは、事前にすべて確認しておいた。",
+   "en": "All the guests' food allergies were checked in advance.",
+   "ko": "하객의 식품 알레르기는 미리 다 확인해 두었어요.",
+   "blank": "食物",
    "src": "made"
   }
  ],
@@ -83203,6 +83827,22 @@
    "en": "I eat hot noodles.",
    "ko": "뜨거운 면을 먹어.",
    "blank": "麺"
+  }
+ ],
+ "w|麻痺": [
+  {
+   "text": "朝の事故で交通が麻痺し、拓也は会社に遅れた。",
+   "en": "An accident in the morning paralyzed traffic, and Takuya was late for work.",
+   "ko": "아침 사고로 교통이 마비돼서 다쿠야는 회사에 늦었어요.",
+   "blank": "麻痺",
+   "src": "made"
+  },
+  {
+   "text": "大雪で交通が麻痺し、遠方の親戚は式に間に合わなかった。",
+   "en": "Heavy snow paralyzed transportation, and relatives from far away didn't make it to the ceremony.",
+   "ko": "폭설로 교통이 마비돼서 멀리 사는 친척은 식에 늦었어요.",
+   "blank": "麻痺",
+   "src": "made"
   }
  ],
  "w|麻薬": [
