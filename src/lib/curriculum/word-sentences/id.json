@@ -1117,6 +1117,22 @@
    "src": "made"
   }
  ],
+ "w|aluminium": [
+  {
+   "text": "Budi membawa perahu aluminium ringan untuk menyusuri sungai.",
+   "en": "Budi brought a light aluminum boat to travel down the river.",
+   "ko": "부디는 강을 따라 내려가려고 가벼운 알루미늄 배를 가져왔어요.",
+   "blank": "aluminium",
+   "src": "made"
+  },
+  {
+   "text": "Siti membungkus ikan dengan kertas aluminium sebelum dipanggang.",
+   "en": "Siti wrapped the fish in aluminum foil before baking it.",
+   "ko": "시티는 생선을 굽기 전에 알루미늄 포일로 쌌어요.",
+   "blank": "aluminium",
+   "src": "made"
+  }
+ ],
  "w|alumni": [
   {
    "text": "Rudi mengundang teman-teman alumni sekolah kuliner untuk mencicipi menu baru.",
@@ -1495,6 +1511,22 @@
    "blank": "aneh"
   }
  ],
+ "w|anestesi": [
+  {
+   "text": "Dokter memberi anestesi lokal sebelum menjahit luka.",
+   "en": "The doctor gave a local anesthetic before stitching the wound.",
+   "ko": "의사는 상처를 꿰매기 전에 국소 마취를 했어요.",
+   "blank": "anestesi",
+   "src": "made"
+  },
+  {
+   "text": "Dewi pernah dioperasi lutut dengan anestesi total sebelum kembali berlari.",
+   "en": "Dewi once had knee surgery under general anesthesia before returning to running.",
+   "ko": "데위는 다시 달리기 전에 전신 마취로 무릎 수술을 받은 적이 있어요.",
+   "blank": "anestesi",
+   "src": "made"
+  }
+ ],
  "w|anggaran": [
   {
    "text": "Tahun ini anggaran ruang redaksi dipotong, jadi Budi jarang liputan ke luar kota.",
@@ -1794,6 +1826,22 @@
    "en": "Putri had to take antibiotics after her hand was pierced by a rusty nail.",
    "ko": "푸트리는 녹슨 못에 손이 찔려서 항생제를 먹어야 했어요.",
    "blank": "antibiotik",
+   "src": "made"
+  }
+ ],
+ "w|antibodi": [
+  {
+   "text": "Tes darah menunjukkan tubuh pasien sudah membentuk antibodi.",
+   "en": "The blood test showed the patient's body had already formed antibodies.",
+   "ko": "혈액 검사 결과 환자 몸에 이미 항체가 생겼어요.",
+   "blank": "antibodi",
+   "src": "made"
+  },
+  {
+   "text": "Dewi membaca bahwa olahraga teratur membantu tubuh membentuk antibodi.",
+   "en": "Dewi read that regular exercise helps the body form antibodies.",
+   "ko": "데위는 꾸준한 운동이 항체 형성을 돕는다는 글을 읽었어요.",
+   "blank": "antibodi",
    "src": "made"
   }
  ],
@@ -8813,6 +8861,22 @@
    "src": "made"
   }
  ],
+ "w|berkeinginan": [
+  {
+   "text": "Budi berkeinginan menanam seribu pohon di tepi sungai.",
+   "en": "Budi wishes to plant a thousand trees along the river.",
+   "ko": "부디는 강가에 나무 천 그루를 심고 싶어 해요.",
+   "blank": "berkeinginan",
+   "src": "made"
+  },
+  {
+   "text": "Siti berkeinginan membuka toko kue setelah lulus kursus.",
+   "en": "Siti wishes to open a cake shop after finishing the course.",
+   "ko": "시티는 강좌를 마치면 제과점을 열고 싶어 해요.",
+   "blank": "berkeinginan",
+   "src": "made"
+  }
+ ],
  "w|berkekuatan": [
   {
    "text": "Lampu operasi berkekuatan tinggi dipasang di ruang bedah yang baru.",
@@ -10556,6 +10620,22 @@
    "en": "Dewi attached a photo of them hugging at graduation to the letter.",
    "ko": "데위는 졸업식 때 둘이 껴안고 찍은 사진을 편지에 붙였어요.",
    "blank": "berpelukan",
+   "src": "made"
+  }
+ ],
+ "w|berpenampilan": [
+  {
+   "text": "Andi selalu berpenampilan rapi saat bertugas.",
+   "en": "Andi always looks neat when he's on duty.",
+   "ko": "안디는 근무할 때 늘 단정한 차림이에요.",
+   "blank": "berpenampilan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi berpenampilan nyentrik dengan rok tutu di lomba lari itu.",
+   "en": "Dewi showed up in a quirky outfit with a tutu skirt at the race.",
+   "ko": "데위는 그 대회에 발레 치마를 입고 별난 차림으로 나왔어요.",
+   "blank": "berpenampilan",
    "src": "made"
   }
  ],
@@ -12539,6 +12619,22 @@
    "blank": "berubah"
   }
  ],
+ "w|berubah-ubah": [
+  {
+   "text": "Tekanan darah pasien itu berubah-ubah sepanjang malam.",
+   "en": "The patient's blood pressure fluctuated all night.",
+   "ko": "그 환자의 혈압은 밤새 오르락내리락했어요.",
+   "blank": "berubah-ubah",
+   "src": "made"
+  },
+  {
+   "text": "Cuaca berubah-ubah sepanjang rute, dari panas ke gerimis.",
+   "en": "The weather kept changing along the route, from hot to drizzle.",
+   "ko": "코스 내내 날씨가 더웠다가 이슬비가 내렸다가 오락가락했어요.",
+   "blank": "berubah-ubah",
+   "src": "made"
+  }
+ ],
  "w|berujung": [
   {
    "text": "Jalan setapak yang dipilih Rudi ternyata berujung di sebuah air terjun kecil.",
@@ -13479,6 +13575,22 @@
    "src": "made"
   }
  ],
+ "w|biokimia": [
+  {
+   "text": "Andi membaca hasil tes biokimia darah pasien.",
+   "en": "Andi read the results of the patient's blood biochemistry test.",
+   "ko": "안디는 환자의 혈액 생화학 검사 결과를 읽었어요.",
+   "blank": "biokimia",
+   "src": "made"
+  },
+  {
+   "text": "Dewi, seorang dosen biokimia, menjelaskan cara tubuh memakai gula saat berlari.",
+   "en": "Dewi, a biochemistry lecturer, explained how the body uses sugar while running.",
+   "ko": "생화학 강사인 데위는 달릴 때 몸이 당을 쓰는 원리를 설명했어요.",
+   "blank": "biokimia",
+   "src": "made"
+  }
+ ],
  "w|biola": [
   {
    "text": "Setiap Sabtu sore ada pertunjukan biola kecil di aula perpustakaan.",
@@ -14346,6 +14458,22 @@
    "en": "Ayu's mother always teaches her children to repay the kindness of people who help them.",
    "ko": "아유의 어머니는 늘 아이들에게 도와준 사람의 은혜를 갚으라고 가르쳐요.",
    "blank": "budi",
+   "src": "made"
+  }
+ ],
+ "w|bugar": [
+  {
+   "text": "Setelah sebulan dirawat, pasien itu pulang dalam keadaan bugar.",
+   "en": "After a month in hospital, the patient went home fit and well.",
+   "ko": "한 달 입원한 끝에 그 환자는 건강하게 퇴원했어요.",
+   "blank": "bugar",
+   "src": "made"
+  },
+  {
+   "text": "Di usia enam puluh, ayah Dewi masih bugar dan ikut lari lima kilometer.",
+   "en": "At sixty, Dewi's father is still fit and runs five-kilometer races.",
+   "ko": "데위의 아버지는 예순인데도 정정해서 오 킬로미터 달리기에 나가요.",
+   "blank": "bugar",
    "src": "made"
   }
  ],
@@ -15305,6 +15433,22 @@
    "src": "made"
   }
  ],
+ "w|cegukan": [
+  {
+   "text": "Andi menenangkan bayi yang terkena cegukan setelah minum susu.",
+   "en": "Andi soothed a baby who got the hiccups after drinking milk.",
+   "ko": "안디는 우유를 먹고 딸꾹질하는 아기를 달랬어요.",
+   "blank": "cegukan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi kena cegukan setelah minum air terlalu cepat.",
+   "en": "Dewi got the hiccups after drinking water too fast.",
+   "ko": "데위는 물을 너무 빨리 마셔서 딸꾹질이 났어요.",
+   "blank": "cegukan",
+   "src": "made"
+  }
+ ],
  "w|cek": [
   {
    "text": "Cek lagi semua dokumen sebelum dikirim.",
@@ -15379,6 +15523,22 @@
    "en": "He bought new pants.",
    "ko": "그는 새 바지를 샀어.",
    "blank": "celana"
+  }
+ ],
+ "w|cemara": [
+  {
+   "text": "Budi berkemah di bawah pohon cemara.",
+   "en": "Budi camped under a pine tree.",
+   "ko": "부디는 소나무 아래에서 야영했어요.",
+   "blank": "cemara",
+   "src": "made"
+  },
+  {
+   "text": "Siti membuat kue kering berbentuk pohon cemara.",
+   "en": "Siti made cookies shaped like pine trees.",
+   "ko": "시티는 소나무 모양 쿠키를 만들었어요.",
+   "blank": "cemara",
+   "src": "made"
   }
  ],
  "w|cemas": [
@@ -19243,6 +19403,22 @@
    "src": "made"
   }
  ],
+ "w|epidemi": [
+  {
+   "text": "Andi ikut seminar tentang cara rumah sakit menghadapi epidemi.",
+   "en": "Andi attended a seminar on how hospitals handle epidemics.",
+   "ko": "안디는 병원의 전염병 대응에 관한 세미나에 참석했어요.",
+   "blank": "epidemi",
+   "src": "made"
+  },
+  {
+   "text": "Lomba itu sempat dibatalkan dua tahun karena epidemi.",
+   "en": "The race was cancelled for two years because of an epidemic.",
+   "ko": "그 대회는 전염병 때문에 두 해 동안 취소됐어요.",
+   "blank": "epidemi",
+   "src": "made"
+  }
+ ],
  "w|epik": [
   {
    "text": "Menurut para tamu, pesta tahun baru di atap hotel itu benar-benar epik.",
@@ -19256,6 +19432,22 @@
    "en": "The storm video Rina filmed from her balcony looks really epic.",
    "ko": "리나가 발코니에서 찍은 폭풍 영상은 정말 웅장해 보여요.",
    "blank": "epik",
+   "src": "made"
+  }
+ ],
+ "w|epilepsi": [
+  {
+   "text": "Dokter saraf menangani pasien epilepsi yang kejang di ruang tunggu.",
+   "en": "The neurologist treated an epilepsy patient who had a seizure in the waiting room.",
+   "ko": "신경과 의사가 대기실에서 발작을 일으킨 뇌전증 환자를 돌봤어요.",
+   "blank": "epilepsi",
+   "src": "made"
+  },
+  {
+   "text": "Dewi berlari untuk menggalang dana bagi penderita epilepsi.",
+   "en": "Dewi runs to raise money for people with epilepsy.",
+   "ko": "데위는 뇌전증 환자를 위한 기금을 모으려고 달려요.",
+   "blank": "epilepsi",
    "src": "made"
   }
  ],
@@ -19362,6 +19554,22 @@
    "en": "Rina found an old essay collection signed by the author.",
    "ko": "리나는 작가 서명이 있는 오래된 에세이집을 찾았어요.",
    "blank": "esai",
+   "src": "made"
+  }
+ ],
+ "w|esensi": [
+  {
+   "text": "Menurut Andi, esensi merawat adalah mendengarkan pasien.",
+   "en": "According to Andi, the essence of nursing is listening to patients.",
+   "ko": "안디는 간호의 본질이 환자의 말을 듣는 거라고 생각해요.",
+   "blank": "esensi",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Dewi, esensi maraton adalah melawan diri sendiri.",
+   "en": "For Dewi, the essence of a marathon is fighting yourself.",
+   "ko": "데위에게 마라톤의 본질은 자기 자신과의 싸움이에요.",
+   "blank": "esensi",
    "src": "made"
   }
  ],
@@ -21548,6 +21756,22 @@
    "en": "Lestari isn't scared of the bluster of the unit owner who refuses to pay dues.",
    "ko": "레스타리는 관리비를 안 내겠다는 집주인의 엄포가 무섭지 않아요.",
    "blank": "gertakan",
+   "src": "made"
+  }
+ ],
+ "w|getah": [
+  {
+   "text": "Budi melihat petani menyadap getah karet di tepi hutan.",
+   "en": "Budi watched farmers tapping rubber sap at the edge of the forest.",
+   "ko": "부디는 숲 가장자리에서 농부들이 고무 수액을 받는 걸 봤어요.",
+   "blank": "getah",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengolesi tangan dengan minyak agar getah nangka tidak lengket.",
+   "en": "Siti rubbed oil on her hands so the jackfruit sap wouldn't stick.",
+   "ko": "시티는 잭프루트 진액이 달라붙지 않게 손에 기름을 발랐어요.",
+   "blank": "getah",
    "src": "made"
   }
  ],
@@ -24571,6 +24795,22 @@
    "src": "made"
   }
  ],
+ "w|injeksi": [
+  {
+   "text": "Andi menyiapkan injeksi vitamin untuk pasien lansia.",
+   "en": "Andi prepared a vitamin injection for an elderly patient.",
+   "ko": "안디는 노인 환자에게 놓을 비타민 주사를 준비했어요.",
+   "blank": "injeksi",
+   "src": "made"
+  },
+  {
+   "text": "Dokter tim memberi injeksi pereda nyeri kepada pelari yang cedera.",
+   "en": "The team doctor gave a painkiller injection to an injured runner.",
+   "ko": "팀 의사가 다친 주자에게 진통 주사를 놓았어요.",
+   "blank": "injeksi",
+   "src": "made"
+  }
+ ],
  "w|injil": [
   {
    "text": "Di rak agama, Andi melihat injil berbahasa Jawa yang dicetak seabad lalu.",
@@ -27227,6 +27467,22 @@
    "blank": "kaki"
   }
  ],
+ "w|kaktus": [
+  {
+   "text": "Budi heran melihat kaktus liar tumbuh di tebing yang kering.",
+   "en": "Budi was surprised to see wild cactus growing on the dry cliff.",
+   "ko": "부디는 메마른 절벽에 야생 선인장이 자라는 걸 보고 놀랐어요.",
+   "blank": "kaktus",
+   "src": "made"
+  },
+  {
+   "text": "Instruktur memperkenalkan buah kaktus sebagai bahan salad.",
+   "en": "The instructor introduced cactus fruit as a salad ingredient.",
+   "ko": "강사는 선인장 열매를 샐러드 재료로 소개했어요.",
+   "blank": "kaktus",
+   "src": "made"
+  }
+ ],
  "w|kaku": [
   {
    "text": "Wawancara pertama Eko dengan menteri terasa kaku karena dia gugup.",
@@ -29523,6 +29779,22 @@
    "src": "made"
   }
  ],
+ "w|kebugaran": [
+  {
+   "text": "Rumah sakit membuka pusat kebugaran untuk pasien pascaoperasi jantung.",
+   "en": "The hospital opened a fitness center for patients recovering from heart surgery.",
+   "ko": "병원은 심장 수술 후 회복 중인 환자를 위해 체력 단련실을 열었어요.",
+   "blank": "kebugaran",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menjaga kebugaran dengan berlari setiap pagi.",
+   "en": "Dewi keeps fit by running every morning.",
+   "ko": "데위는 매일 아침 달리며 체력을 관리해요.",
+   "blank": "kebugaran",
+   "src": "made"
+  }
+ ],
  "w|kebun": [
   {
    "text": "Nenek menyiram kebun setiap sore.",
@@ -30164,6 +30436,22 @@
    "en": "Putri installed a new window, and the next morning the room felt brighter.",
    "ko": "푸트리가 새 창문을 달았더니 다음 날 아침 방이 더 환해졌어요.",
    "blank": "keesokan",
+   "src": "made"
+  }
+ ],
+ "w|kegaduhan": [
+  {
+   "text": "Suara gergaji mesin menimbulkan kegaduhan di hutan yang biasanya sunyi.",
+   "en": "The sound of a chainsaw caused a racket in the usually quiet forest.",
+   "ko": "전기톱 소리가 평소 고요하던 숲을 시끄럽게 만들었어요.",
+   "blank": "kegaduhan",
+   "src": "made"
+  },
+  {
+   "text": "Panci yang jatuh menimbulkan kegaduhan di kelas memasak.",
+   "en": "A falling pot caused a commotion in the cooking class.",
+   "ko": "냄비가 떨어져서 요리 교실이 소란스러워졌어요.",
+   "blank": "kegaduhan",
    "src": "made"
   }
  ],
@@ -30871,6 +31159,22 @@
    "src": "made"
   }
  ],
+ "w|kekar": [
+  {
+   "text": "Satpam rumah sakit yang kekar membantu mengangkat pasien ke ranjang.",
+   "en": "The burly hospital security guard helped lift the patient onto the bed.",
+   "ko": "건장한 병원 경비원이 환자를 침대로 옮기는 걸 도왔어요.",
+   "blank": "kekar",
+   "src": "made"
+  },
+  {
+   "text": "Pelari pria di depan Dewi bertubuh kekar.",
+   "en": "The male runner in front of Dewi is muscular.",
+   "ko": "데위 앞에서 달리는 남자는 몸이 다부져요.",
+   "blank": "kekar",
+   "src": "made"
+  }
+ ],
  "w|kekasih": [
   {
    "text": "Kekasihnya menunggu di taman.",
@@ -31205,6 +31509,22 @@
    "blank": "kelas"
   }
  ],
+ "w|kelautan": [
+  {
+   "text": "Budi kuliah di jurusan ilmu kelautan.",
+   "en": "Budi studies marine science at university.",
+   "ko": "부디는 대학에서 해양학을 전공해요.",
+   "blank": "kelautan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang peserta bekerja di dinas kelautan dan membawa ikan segar.",
+   "en": "One participant works at the marine affairs office and brought fresh fish.",
+   "ko": "해양 관청에서 일하는 한 수강생이 싱싱한 생선을 가져왔어요.",
+   "blank": "kelautan",
+   "src": "made"
+  }
+ ],
  "w|kelebihan": [
   {
    "text": "Salah satu kelebihan apartemen Bayu adalah dekat dengan stasiun.",
@@ -31419,6 +31739,22 @@
    "blank": "kelompok"
   }
  ],
+ "w|kelonggaran": [
+  {
+   "text": "Rumah sakit memberi kelonggaran jam besuk bagi keluarga pasien kritis.",
+   "en": "The hospital relaxes visiting hours for families of critically ill patients.",
+   "ko": "병원은 위독한 환자의 가족에게 면회 시간을 너그럽게 허용해요.",
+   "blank": "kelonggaran",
+   "src": "made"
+  },
+  {
+   "text": "Panitia memberi kelonggaran waktu bagi peserta lansia.",
+   "en": "The organizers allow extra time for elderly participants.",
+   "ko": "주최 측은 나이 든 참가자에게 시간을 더 허용해요.",
+   "blank": "kelonggaran",
+   "src": "made"
+  }
+ ],
  "w|kelopak": [
   {
    "text": "Angin kencang merontokkan kelopak bunga labu di kebun Budi.",
@@ -31494,6 +31830,22 @@
    "en": "Lestari found an old high school graduation photo album.",
    "ko": "레스타리는 옛날 어느 고등학교의 졸업 앨범을 찾았어요.",
    "blank": "kelulusan",
+   "src": "made"
+  }
+ ],
+ "w|kelumpuhan": [
+  {
+   "text": "Pasien stroke itu mengalami kelumpuhan di sisi kiri tubuh.",
+   "en": "The stroke patient has paralysis on the left side of the body.",
+   "ko": "그 뇌졸중 환자는 몸 왼쪽이 마비됐어요.",
+   "blank": "kelumpuhan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang peserta yang pernah mengalami kelumpuhan menyelesaikan lomba dengan kursi roda.",
+   "en": "A participant who had once been paralyzed finished the race in a wheelchair.",
+   "ko": "마비를 겪었던 한 참가자가 휠체어로 완주했어요.",
+   "blank": "kelumpuhan",
    "src": "made"
   }
  ],
@@ -33541,6 +33893,22 @@
    "blank": "keselamatan"
   }
  ],
+ "w|keseleo": [
+  {
+   "text": "Seorang anak datang dengan kaki keseleo setelah jatuh dari sepeda.",
+   "en": "A child came in with a sprained ankle after falling off a bike.",
+   "ko": "한 아이가 자전거에서 넘어져 발을 삔 채 왔어요.",
+   "blank": "keseleo",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pelari keseleo di jalan berlubang.",
+   "en": "A runner sprained an ankle on a potholed road.",
+   "ko": "한 주자가 움푹 팬 길에서 발목을 삐었어요.",
+   "blank": "keseleo",
+   "src": "made"
+  }
+ ],
  "w|keseluruhan": [
   {
    "text": "Keseluruhan proyek selesai lebih cepat.",
@@ -35091,6 +35459,22 @@
    "src": "made"
   }
  ],
+ "w|kobaran": [
+  {
+   "text": "Dari kejauhan, Budi melihat kobaran api di lereng bukit.",
+   "en": "From far away, Budi saw flames blazing on the hillside.",
+   "ko": "부디는 멀리 언덕 비탈에서 타오르는 불길을 봤어요.",
+   "blank": "kobaran",
+   "src": "made"
+  },
+  {
+   "text": "Siti kaget melihat kobaran api dari wajan chef saat membuat nasi goreng.",
+   "en": "Siti was startled to see flames leap from the chef's wok while making fried rice.",
+   "ko": "셰프가 볶음밥을 할 때 웍에서 불길이 치솟자 시티는 깜짝 놀랐어요.",
+   "blank": "kobaran",
+   "src": "made"
+  }
+ ],
  "w|kobra": [
   {
    "text": "Bayu selalu berhati-hati karena pernah melihat kobra di semak dekat sungai.",
@@ -36319,6 +36703,22 @@
    "blank": "kontrak"
   }
  ],
+ "w|kontraksi": [
+  {
+   "text": "Bidan mencatat kontraksi ibu hamil setiap sepuluh menit.",
+   "en": "The midwife recorded the pregnant woman's contractions every ten minutes.",
+   "ko": "조산사는 십 분마다 산모의 진통을 기록했어요.",
+   "blank": "kontraksi",
+   "src": "made"
+  },
+  {
+   "text": "Dewi merasakan kontraksi otot betis menjelang kilometer terakhir.",
+   "en": "Dewi felt her calf muscles contract as she neared the last kilometer.",
+   "ko": "데위는 마지막 일 킬로미터를 앞두고 종아리 근육이 수축하는 걸 느꼈어요.",
+   "blank": "kontraksi",
+   "src": "made"
+  }
+ ],
  "w|kontraktor": [
   {
    "text": "Sebuah kontraktor sedang memperbaiki atap gudang yang bocor.",
@@ -36906,6 +37306,22 @@
    "en": "Intan is always critical when reading proposals from vendors.",
    "ko": "인탄은 업체 제안서를 읽을 때 늘 꼼꼼하게 따져 봐요.",
    "blank": "kritis",
+   "src": "made"
+  }
+ ],
+ "w|kronis": [
+  {
+   "text": "Andi merawat pasien dengan penyakit ginjal kronis.",
+   "en": "Andi cares for a patient with chronic kidney disease.",
+   "ko": "안디는 만성 신장병 환자를 돌봐요.",
+   "blank": "kronis",
+   "src": "made"
+  },
+  {
+   "text": "Dewi dulu menderita nyeri lutut kronis.",
+   "en": "Dewi used to suffer from chronic knee pain.",
+   "ko": "데위는 예전에 만성 무릎 통증을 앓았어요.",
+   "blank": "kronis",
    "src": "made"
   }
  ],
@@ -39141,6 +39557,22 @@
    "src": "made"
   }
  ],
+ "w|lentur": [
+  {
+   "text": "Fisioterapis melatih pasien agar sendi lutut kembali lentur.",
+   "en": "The physiotherapist trains the patient so the knee joint becomes flexible again.",
+   "ko": "물리치료사는 무릎 관절이 다시 부드러워지도록 환자를 훈련해요.",
+   "blank": "lentur",
+   "src": "made"
+  },
+  {
+   "text": "Dewi melakukan peregangan agar otot tetap lentur.",
+   "en": "Dewi stretches so her muscles stay flexible.",
+   "ko": "데위는 근육이 유연하게 유지되도록 스트레칭을 해요.",
+   "blank": "lentur",
+   "src": "made"
+  }
+ ],
  "w|lenyap": [
   {
    "text": "Kabut lenyap saat matahari terbit.",
@@ -39894,6 +40326,22 @@
    "en": "Intan's rented kebaya was too loose, so the tailor had to take it in.",
    "ko": "인탄이 빌린 크바야가 너무 헐렁해서 재봉사가 줄여야 했어요.",
    "blank": "longgar",
+   "src": "made"
+  }
+ ],
+ "w|longsor": [
+  {
+   "text": "Hujan deras menyebabkan longsor di jalan menuju hutan.",
+   "en": "Heavy rain caused a landslide on the road to the forest.",
+   "ko": "폭우로 숲으로 가는 길에 산사태가 났어요.",
+   "blank": "longsor",
+   "src": "made"
+  },
+  {
+   "text": "Tumpukan tepung di meja longsor saat Siti menyenggolnya.",
+   "en": "The pile of flour on the table collapsed when Siti bumped it.",
+   "ko": "시티가 건드리자 탁자 위 밀가루 더미가 와르르 무너졌어요.",
+   "blank": "longsor",
    "src": "made"
   }
  ],
@@ -41363,6 +41811,22 @@
    "src": "made"
   }
  ],
+ "w|manjur": [
+  {
+   "text": "Obat batuk racikan apoteker rumah sakit itu terkenal manjur.",
+   "en": "The cough medicine mixed by the hospital pharmacist is known to be effective.",
+   "ko": "그 병원 약사가 조제한 기침약은 잘 듣기로 유명해요.",
+   "blank": "manjur",
+   "src": "made"
+  },
+  {
+   "text": "Menurut Dewi, minuman jahe manjur untuk meredakan pegal.",
+   "en": "According to Dewi, ginger drinks work well for easing aches.",
+   "ko": "데위 말로는 생강 음료가 근육통 푸는 데 잘 듣는대요.",
+   "blank": "manjur",
+   "src": "made"
+  }
+ ],
  "w|mantan": [
   {
    "text": "Mantan pacarnya datang lagi.",
@@ -42737,6 +43201,22 @@
    "blank": "melebihi"
   }
  ],
+ "w|melebur": [
+  {
+   "text": "Rasa takut pasien kecil itu melebur setelah Andi mengajak bercanda.",
+   "en": "The little patient's fear melted away after Andi joked around with him.",
+   "ko": "안디가 장난을 걸자 어린 환자의 두려움이 녹아내렸어요.",
+   "blank": "melebur",
+   "src": "made"
+  },
+  {
+   "text": "Rasa lelah Dewi melebur saat melihat keluarga di garis finis.",
+   "en": "Dewi's fatigue melted away when she saw her family at the finish line.",
+   "ko": "결승선에서 가족을 보자 데위의 피로가 녹아내렸어요.",
+   "blank": "melebur",
+   "src": "made"
+  }
+ ],
  "w|melecehkan": [
   {
    "text": "Lakon itu bercerita tentang pekerja yang berani melawan atasan yang melecehkan karyawan.",
@@ -43074,6 +43554,22 @@
    "en": "Ayu's screwdriver slipped and slightly scratched the phone's body.",
    "ko": "아유의 드라이버가 미끄러져서 휴대폰 몸체가 조금 긁혔어요.",
    "blank": "meleset",
+   "src": "made"
+  }
+ ],
+ "w|melestarikan": [
+  {
+   "text": "Budi ikut komunitas yang melestarikan hutan bakau.",
+   "en": "Budi joined a community that conserves the mangrove forest.",
+   "ko": "부디는 맹그로브 숲을 보존하는 모임에 들어갔어요.",
+   "blank": "melestarikan",
+   "src": "made"
+  },
+  {
+   "text": "Kelas itu bertujuan melestarikan resep tradisional nenek moyang.",
+   "en": "The class aims to preserve the traditional recipes of our ancestors.",
+   "ko": "그 수업은 조상의 전통 요리법을 지키는 게 목표예요.",
+   "blank": "melestarikan",
    "src": "made"
   }
  ],
@@ -45149,6 +45645,22 @@
    "src": "made"
   }
  ],
+ "w|membebankan": [
+  {
+   "text": "Pengelola taman nasional membebankan tiket masuk kepada setiap pendaki.",
+   "en": "The national park management charges every hiker an entrance fee.",
+   "ko": "국립공원 관리소는 등산객마다 입장료를 받아요.",
+   "blank": "membebankan",
+   "src": "made"
+  },
+  {
+   "text": "Kursus itu membebankan biaya bahan kepada peserta.",
+   "en": "The course charges participants for the ingredients.",
+   "ko": "그 강좌는 재료비를 수강생에게 받아요.",
+   "blank": "membebankan",
+   "src": "made"
+  }
+ ],
  "w|membebaskan": [
   {
    "text": "Hakim memutuskan membebaskan terdakwa.",
@@ -45438,6 +45950,22 @@
    "en": "The little kid bumped the cart into the glassware shelf, but luckily nothing broke.",
    "ko": "꼬마가 카트를 유리컵 선반에 부딪쳤는데 다행히 깨진 건 없었어요.",
    "blank": "membenturkan",
+   "src": "made"
+  }
+ ],
+ "w|memberantas": [
+  {
+   "text": "Warga desa bekerja sama memberantas penebangan liar.",
+   "en": "The villagers are working together to stamp out illegal logging.",
+   "ko": "마을 사람들은 힘을 모아 불법 벌목을 뿌리 뽑고 있어요.",
+   "blank": "memberantas",
+   "src": "made"
+  },
+  {
+   "text": "Instruktur bertekad memberantas kebiasaan mencicipi dengan sendok yang sama.",
+   "en": "The instructor is determined to stamp out the habit of tasting with the same spoon.",
+   "ko": "강사는 같은 숟가락으로 맛보는 습관을 뿌리 뽑기로 했어요.",
+   "blank": "memberantas",
    "src": "made"
   }
  ],
@@ -46157,6 +46685,22 @@
    "en": "He proved his words.",
    "ko": "걔가 자신의 말을 증명했어.",
    "blank": "membuktikan"
+  }
+ ],
+ "w|membumi": [
+  {
+   "text": "Penjelasan pemandu hutan itu membumi dan mudah dipahami.",
+   "en": "The forest guide's explanation was down-to-earth and easy to understand.",
+   "ko": "그 숲 안내인의 설명은 쉽고 와닿았어요.",
+   "blank": "membumi",
+   "src": "made"
+  },
+  {
+   "text": "Cara mengajar chef itu membumi dan tidak sok.",
+   "en": "That chef's way of teaching is down-to-earth and unpretentious.",
+   "ko": "그 셰프는 소탈하고 잘난 척 없이 가르쳐요.",
+   "blank": "membumi",
+   "src": "made"
   }
  ],
  "w|membungkam": [
@@ -48755,6 +49299,22 @@
    "blank": "menambahkan"
   }
  ],
+ "w|menambang": [
+  {
+   "text": "Perusahaan itu dilarang menambang pasir di sungai.",
+   "en": "That company is banned from mining sand from the river.",
+   "ko": "그 회사는 강에서 모래를 채취하는 게 금지됐어요.",
+   "blank": "menambang",
+   "src": "made"
+  },
+  {
+   "text": "Chef bercerita bahwa warga desa di pegunungan menambang garam batu.",
+   "en": "The chef told how villagers in the mountains mine rock salt.",
+   "ko": "셰프는 산골 마을 사람들이 암염을 캔다고 이야기했어요.",
+   "blank": "menambang",
+   "src": "made"
+  }
+ ],
  "w|menampakkan": [
   {
    "text": "Setelah seminggu dirawat, pasien itu mulai menampakkan tanda pemulihan, kata Budi.",
@@ -48927,6 +49487,22 @@
    "en": "Signing that letter is the final step.",
    "ko": "그 편지에 서명하는 게 마지막 단계야.",
    "blank": "Menandatangani"
+  }
+ ],
+ "w|menandingi": [
+  {
+   "text": "Tidak ada yang bisa menandingi kesabaran Andi merawat pasien anak.",
+   "en": "No one can match Andi's patience in caring for child patients.",
+   "ko": "어린 환자를 돌보는 안디의 인내심은 아무도 따라올 수 없어요.",
+   "blank": "menandingi",
+   "src": "made"
+  },
+  {
+   "text": "Dewi belum mampu menandingi waktu pelari profesional.",
+   "en": "Dewi can't yet match the times of professional runners.",
+   "ko": "데위는 아직 프로 선수들의 기록을 따라잡지 못해요.",
+   "blank": "menandingi",
+   "src": "made"
   }
  ],
  "w|menang": [
@@ -51009,6 +51585,22 @@
    "blank": "Mendukung"
   }
  ],
+ "w|mendung": [
+  {
+   "text": "Langit mulai mendung, jadi Budi segera keluar dari hutan.",
+   "en": "The sky was clouding over, so Budi hurried out of the forest.",
+   "ko": "하늘이 흐려지기 시작해서 부디는 서둘러 숲을 빠져나왔어요.",
+   "blank": "mendung",
+   "src": "made"
+  },
+  {
+   "text": "Hari itu mendung, jadi adonan roti lambat mengembang.",
+   "en": "It was overcast that day, so the bread dough was slow to rise.",
+   "ko": "그날은 날이 흐려서 빵 반죽이 더디게 부풀었어요.",
+   "blank": "mendung",
+   "src": "made"
+  }
+ ],
  "w|menebak": [
   {
    "text": "Coba menebak apa yang ada di dalam kotak.",
@@ -51588,6 +52180,22 @@
    "en": "The full moon lit the path to Rina's guesthouse.",
    "ko": "보름달이 리나의 숙소로 가는 오솔길을 비췄어요.",
    "blank": "menerangi",
+   "src": "made"
+  }
+ ],
+ "w|menerangkan": [
+  {
+   "text": "Andi menerangkan jadwal minum obat kepada pasien.",
+   "en": "Andi explained the medication schedule to the patient.",
+   "ko": "안디는 환자에게 약 먹는 시간을 설명했어요.",
+   "blank": "menerangkan",
+   "src": "made"
+  },
+  {
+   "text": "Panitia menerangkan rute baru kepada para peserta.",
+   "en": "The organizers explained the new route to the participants.",
+   "ko": "주최 측이 참가자들에게 새 코스를 설명했어요.",
+   "blank": "menerangkan",
    "src": "made"
   }
  ],
@@ -53407,6 +54015,22 @@
    "blank": "mengejutkan"
   }
  ],
+ "w|mengekang": [
+  {
+   "text": "Andi belajar mengekang emosi saat menghadapi keluarga pasien yang marah.",
+   "en": "Andi has learned to rein in his emotions when dealing with angry relatives.",
+   "ko": "안디는 화난 환자 가족을 대할 때 감정을 억누르는 법을 배웠어요.",
+   "blank": "mengekang",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengekang keinginan berlari kencang di awal lomba.",
+   "en": "Dewi held back the urge to sprint at the start of the race.",
+   "ko": "데위는 경기 초반에 빨리 달리고 싶은 마음을 억눌렀어요.",
+   "blank": "mengekang",
+   "src": "made"
+  }
+ ],
  "w|mengeksekusi": [
   {
    "text": "Bayu bertugas mengeksekusi rencana produksi yang dibuat manajer.",
@@ -54476,6 +55100,22 @@
    "en": "The police searched the empty house at the end of the alley after a theft report.",
    "ko": "도난 신고가 들어온 뒤 경찰이 골목 끝 빈집을 수색했어요.",
    "blank": "menggeledah",
+   "src": "made"
+  }
+ ],
+ "w|menggeliat": [
+  {
+   "text": "Seekor ulat menggeliat di daun dekat tepi sungai.",
+   "en": "A caterpillar wriggled on a leaf near the riverbank.",
+   "ko": "강가 근처 잎 위에서 애벌레 한 마리가 꿈틀거렸어요.",
+   "blank": "menggeliat",
+   "src": "made"
+  },
+  {
+   "text": "Udang hidup menggeliat di baskom sebelum dimasak.",
+   "en": "The live prawns wriggled in the basin before being cooked.",
+   "ko": "살아 있는 새우가 요리되기 전에 대야 안에서 꿈틀거렸어요.",
+   "blank": "menggeliat",
    "src": "made"
   }
  ],
@@ -56561,6 +57201,22 @@
    "blank": "mengorbankan"
   }
  ],
+ "w|mengorek": [
+  {
+   "text": "Budi mengorek lumpur dari sepatu dengan ranting.",
+   "en": "Budi scraped the mud off his shoes with a twig.",
+   "ko": "부디는 나뭇가지로 신발의 진흙을 긁어냈어요.",
+   "blank": "mengorek",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengorek kerak nasi di dasar panci.",
+   "en": "Siti scraped the crust of rice from the bottom of the pot.",
+   "ko": "시티는 냄비 바닥의 누룽지를 긁어냈어요.",
+   "blank": "mengorek",
+   "src": "made"
+  }
+ ],
  "w|mengoreksi": [
   {
    "text": "Bu Guru mengoreksi PR Agus dengan tinta hijau.",
@@ -58524,6 +59180,22 @@
    "en": "Dewi wants to keep teaching music until she grows old.",
    "ko": "데위는 늙을 때까지 계속 음악을 가르치고 싶어요.",
    "blank": "menua",
+   "src": "made"
+  }
+ ],
+ "w|menuai": [
+  {
+   "text": "Usaha warga menanam pohon kini menuai hasil, dan sungai kembali jernih.",
+   "en": "The residents' tree-planting efforts are now paying off, and the river is clear again.",
+   "ko": "주민들이 나무를 심은 노력이 결실을 맺어 강이 다시 맑아졌어요.",
+   "blank": "menuai",
+   "src": "made"
+  },
+  {
+   "text": "Latihan keras Siti menuai pujian dari chef.",
+   "en": "Siti's hard practice earned her praise from the chef.",
+   "ko": "열심히 연습한 시티는 셰프에게 칭찬을 받았어요.",
+   "blank": "menuai",
    "src": "made"
   }
  ],
@@ -60637,6 +61309,22 @@
    "blank": "menyiksa"
   }
  ],
+ "w|menyilangkan": [
+  {
+   "text": "Budi menyilangkan kaki sambil duduk di batu besar di tepi sungai.",
+   "en": "Budi crossed his legs while sitting on a big rock by the river.",
+   "ko": "부디는 강가의 큰 바위에 다리를 꼬고 앉았어요.",
+   "blank": "menyilangkan",
+   "src": "made"
+  },
+  {
+   "text": "Instruktur menyilangkan tangan sambil menilai masakan Siti.",
+   "en": "The instructor crossed her arms while judging Siti's dish.",
+   "ko": "강사는 팔짱을 끼고 시티의 요리를 평가했어요.",
+   "blank": "menyilangkan",
+   "src": "made"
+  }
+ ],
  "w|menyimak": [
   {
    "text": "Fajar menyimak suara burung dari balik semak.",
@@ -61059,6 +61747,22 @@
    "src": "made"
   }
  ],
+ "w|menyusui": [
+  {
+   "text": "Rumah sakit menyediakan ruang khusus bagi ibu yang menyusui.",
+   "en": "The hospital provides a special room for breastfeeding mothers.",
+   "ko": "병원에는 수유하는 엄마를 위한 전용실이 있어요.",
+   "blank": "menyusui",
+   "src": "made"
+  },
+  {
+   "text": "Dewi kembali berlari setelah masa menyusui anak kedua selesai.",
+   "en": "Dewi went back to running after she finished breastfeeding her second child.",
+   "ko": "데위는 둘째 수유를 마치고 다시 달리기 시작했어요.",
+   "blank": "menyusui",
+   "src": "made"
+  }
+ ],
  "w|menyusul": [
   {
    "text": "Andi datang lebih dulu, lalu istrinya menyusul membawa fotokopi KTP.",
@@ -61152,6 +61856,22 @@
    "en": "The water in the river the train passed had shrunk because of the long dry season.",
    "ko": "긴 가뭄 때문에 열차가 지나는 강의 물이 줄어 있었어요.",
    "blank": "menyusut",
+   "src": "made"
+  }
+ ],
+ "w|menyutradarai": [
+  {
+   "text": "Andi pernah menyutradarai video edukasi cuci tangan untuk rumah sakit.",
+   "en": "Andi once directed a handwashing education video for the hospital.",
+   "ko": "안디는 병원 손 씻기 교육 영상을 연출한 적이 있어요.",
+   "blank": "menyutradarai",
+   "src": "made"
+  },
+  {
+   "text": "Teman Dewi menyutradarai film dokumenter tentang lomba itu.",
+   "en": "Dewi's friend directed a documentary about the race.",
+   "ko": "데위의 친구가 그 대회에 관한 다큐멘터리를 연출했어요.",
+   "blank": "menyutradarai",
    "src": "made"
   }
  ],
@@ -61524,6 +62244,22 @@
    "en": "A child wailed in pain while waiting for his mother to buy medicine.",
    "ko": "한 아이가 엄마가 약을 사는 동안 아프다고 울부짖었어요.",
    "blank": "meratap",
+   "src": "made"
+  }
+ ],
+ "w|meratapi": [
+  {
+   "text": "Para tetua desa meratapi hilangnya hutan tempat mereka bermain dulu.",
+   "en": "The village elders mourn the loss of the forest where they used to play.",
+   "ko": "마을 어르신들은 어릴 적 놀던 숲이 사라진 걸 슬퍼해요.",
+   "blank": "meratapi",
+   "src": "made"
+  },
+  {
+   "text": "Siti meratapi kue bolu yang bantat.",
+   "en": "Siti lamented her sponge cake that came out dense.",
+   "ko": "시티는 떡처럼 꺼진 스펀지케이크를 보며 한탄했어요.",
+   "blank": "meratapi",
    "src": "made"
   }
  ],
@@ -63829,6 +64565,22 @@
    "blank": "muntah"
   }
  ],
+ "w|muntahan": [
+  {
+   "text": "Andi segera membersihkan muntahan di lantai lorong.",
+   "en": "Andi quickly cleaned up the vomit on the corridor floor.",
+   "ko": "안디는 복도 바닥의 토사물을 재빨리 치웠어요.",
+   "blank": "muntahan",
+   "src": "made"
+  },
+  {
+   "text": "Petugas kebersihan membersihkan muntahan di dekat pos minum.",
+   "en": "A cleaner cleaned up vomit near the water station.",
+   "ko": "청소 직원이 급수대 근처의 토사물을 치웠어요.",
+   "blank": "muntahan",
+   "src": "made"
+  }
+ ],
  "w|murah": [
   {
    "text": "Harga buah di pasar sangat murah.",
@@ -64733,6 +65485,22 @@
    "src": "made"
   }
  ],
+ "w|ngarai": [
+  {
+   "text": "Budi menyusuri ngarai sempit yang dialiri sungai jernih.",
+   "en": "Budi made his way along a narrow gorge with a clear river running through it.",
+   "ko": "부디는 맑은 강이 흐르는 좁은 협곡을 따라 걸었어요.",
+   "blank": "ngarai",
+   "src": "made"
+  },
+  {
+   "text": "Chef bercanda bahwa retakan di atas kue itu mirip ngarai kecil.",
+   "en": "The chef joked that the crack on top of the cake looked like a little canyon.",
+   "ko": "셰프는 케이크 위 갈라진 틈이 작은 협곡 같다고 농담했어요.",
+   "blank": "ngarai",
+   "src": "made"
+  }
+ ],
  "w|ngawur": [
   {
    "text": "Kata Dimas, tebakan pengunjung soal umur patung itu agak ngawur.",
@@ -64852,6 +65620,22 @@
    "en": "Rina's chance of winning was practically zero, but she still wanted to reach the finish line.",
    "ko": "리나가 우승할 가능성은 사실상 없었지만 그래도 결승선까지 가고 싶었어요.",
    "blank": "nihil",
+   "src": "made"
+  }
+ ],
+ "w|nikel": [
+  {
+   "text": "Tambang nikel di hulu sungai membuat air menjadi keruh.",
+   "en": "The nickel mine upstream has made the water murky.",
+   "ko": "상류의 니켈 광산 때문에 물이 탁해졌어요.",
+   "blank": "nikel",
+   "src": "made"
+  },
+  {
+   "text": "Kata instruktur, wajan berlapis nikel itu mudah dibersihkan.",
+   "en": "According to the instructor, the nickel-plated pan is easy to clean.",
+   "ko": "강사 말로는 니켈 도금 팬은 닦기 쉽대요.",
+   "blank": "nikel",
    "src": "made"
   }
  ],
@@ -66134,6 +66918,22 @@
    "en": "The road to Intan's office is always congested at rush hour.",
    "ko": "인탄 회사로 가는 길은 출근 시간마다 늘 막혀요.",
    "blank": "padat",
+   "src": "made"
+  }
+ ],
+ "w|padi": [
+  {
+   "text": "Di tepi hutan, petani menanam padi di sawah bertingkat.",
+   "en": "At the forest's edge, farmers grow rice in terraced paddies.",
+   "ko": "숲 가장자리에서 농부들은 계단식 논에 벼를 심어요.",
+   "blank": "padi",
+   "src": "made"
+  },
+  {
+   "text": "Instruktur menunjukkan beras dari padi organik yang ditanam di desa.",
+   "en": "The instructor showed rice from organic paddy grown in the village.",
+   "ko": "강사는 마을에서 키운 유기농 벼로 만든 쌀을 보여 줬어요.",
+   "blank": "padi",
    "src": "made"
   }
  ],
@@ -69149,6 +69949,22 @@
    "src": "made"
   }
  ],
+ "w|pembalut": [
+  {
+   "text": "Andi mengganti pembalut luka pasien setiap pagi.",
+   "en": "Andi changes the patient's wound dressing every morning.",
+   "ko": "안디는 매일 아침 환자의 상처 붕대를 갈아요.",
+   "blank": "pembalut",
+   "src": "made"
+  },
+  {
+   "text": "Relawan medis melilitkan pembalut di lutut Dewi yang lecet.",
+   "en": "A medical volunteer wrapped a bandage around Dewi's scraped knee.",
+   "ko": "의료 봉사자가 데위의 까진 무릎에 붕대를 감았어요.",
+   "blank": "pembalut",
+   "src": "made"
+  }
+ ],
  "w|pembangkit": [
   {
    "text": "Pabrik itu punya pembangkit listrik sendiri di belakang gedung utama.",
@@ -69464,6 +70280,22 @@
    "en": "The customer said he hates sweet coffee, so Dewi made him a bitter one.",
    "ko": "그 손님이 단 커피를 질색한다고 해서 데위는 쓴 커피를 타 줬어요.",
    "blank": "pembenci",
+   "src": "made"
+  }
+ ],
+ "w|pembengkakan": [
+  {
+   "text": "Dokter memeriksa pembengkakan di pergelangan kaki pasien.",
+   "en": "The doctor examined the swelling in the patient's ankle.",
+   "ko": "의사는 환자의 발목 부기를 살폈어요.",
+   "blank": "pembengkakan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengompres es untuk mengurangi pembengkakan di pergelangan kaki.",
+   "en": "Dewi applied an ice pack to reduce the swelling in her ankle.",
+   "ko": "데위는 발목 부기를 빼려고 얼음찜질을 했어요.",
+   "blank": "pembengkakan",
    "src": "made"
   }
  ],
@@ -71761,6 +72593,22 @@
    "src": "made"
   }
  ],
+ "w|penentuan": [
+  {
+   "text": "Dokter melakukan penentuan golongan darah sebelum operasi.",
+   "en": "The doctor determined the blood type before surgery.",
+   "ko": "의사는 수술 전에 혈액형을 판정했어요.",
+   "blank": "penentuan",
+   "src": "made"
+  },
+  {
+   "text": "Panitia melakukan penentuan pemenang dengan cip di sepatu.",
+   "en": "The winners are determined using a chip on the shoe.",
+   "ko": "우승자는 신발에 단 칩으로 가려요.",
+   "blank": "penentuan",
+   "src": "made"
+  }
+ ],
  "w|penerbangan": [
   {
    "text": "Penerbangan kami ditunda semalam.",
@@ -73086,6 +73934,22 @@
    "en": "Wati felt the judge's harsh comment was like an insult.",
    "ko": "와티는 심사위원의 거친 평이 모욕처럼 느껴졌어요.",
    "blank": "penghinaan",
+   "src": "made"
+  }
+ ],
+ "w|penghitungan": [
+  {
+   "text": "Budi ikut penghitungan populasi burung di hutan lindung.",
+   "en": "Budi took part in the bird population count in the protected forest.",
+   "ko": "부디는 보호림의 새 개체 수 조사에 참여했어요.",
+   "blank": "penghitungan",
+   "src": "made"
+  },
+  {
+   "text": "Siti salah dalam penghitungan takaran gula.",
+   "en": "Siti made a mistake in calculating the amount of sugar.",
+   "ko": "시티는 설탕 양을 계산하다가 실수했어요.",
+   "blank": "penghitungan",
    "src": "made"
   }
  ],
@@ -75624,6 +76488,22 @@
    "en": "Intan read a history book about the abolition of slavery in the nineteenth century.",
    "ko": "인탄은 십구 세기 노예제 폐지에 관한 역사책을 읽었어요.",
    "blank": "perbudakan",
+   "src": "made"
+  }
+ ],
+ "w|perbukitan": [
+  {
+   "text": "Sungai itu berkelok di antara perbukitan hijau.",
+   "en": "The river winds between green hills.",
+   "ko": "그 강은 푸른 구릉 사이를 굽이쳐 흘러요.",
+   "blank": "perbukitan",
+   "src": "made"
+  },
+  {
+   "text": "Kopi yang dipakai di kelas berasal dari perbukitan di Jawa Barat.",
+   "en": "The coffee used in class comes from the hills of West Java.",
+   "ko": "수업에서 쓰는 커피는 서자바 구릉 지대에서 왔어요.",
+   "blank": "perbukitan",
    "src": "made"
   }
  ],
@@ -78471,6 +79351,22 @@
    "blank": "piano"
   }
  ],
+ "w|piaraan": [
+  {
+   "text": "Anjing piaraan Budi ikut berenang di sungai.",
+   "en": "Budi's pet dog went swimming in the river too.",
+   "ko": "부디가 키우는 개도 강에서 같이 헤엄쳤어요.",
+   "blank": "piaraan",
+   "src": "made"
+  },
+  {
+   "text": "Siti membawa pulang sisa ayam untuk kucing piaraan.",
+   "en": "Siti took the leftover chicken home for her pet cat.",
+   "ko": "시티는 남은 닭고기를 기르는 고양이에게 주려고 싸 갔어요.",
+   "blank": "piaraan",
+   "src": "made"
+  }
+ ],
  "w|pidana": [
   {
    "text": "Kakak Andi meminjam buku hukum pidana untuk persiapan ujian kuliah.",
@@ -78528,6 +79424,22 @@
    "en": "Lestari laid stepping stones on the slippery dike between the paddies.",
    "ko": "레스타리는 미끄러운 논둑에 디딤돌을 놓았어요.",
    "blank": "pijakan",
+   "src": "made"
+  }
+ ],
+ "w|pijatan": [
+  {
+   "text": "Pasien bilang pijatan Andi membuat otot lebih rileks.",
+   "en": "The patient says Andi's massage makes the muscles more relaxed.",
+   "ko": "환자는 안디의 마사지 덕분에 근육이 풀린다고 해요.",
+   "blank": "pijatan",
+   "src": "made"
+  },
+  {
+   "text": "Setelah finis, Dewi menikmati pijatan di tenda relawan.",
+   "en": "After finishing, Dewi enjoyed a massage in the volunteers' tent.",
+   "ko": "결승선을 통과한 뒤 데위는 자원봉사자 천막에서 마사지를 받았어요.",
+   "blank": "pijatan",
    "src": "made"
   }
  ],
@@ -79724,6 +80636,22 @@
    "en": "The investors looked concerned seeing the server costs keep rising.",
    "ko": "투자자들은 서버 비용이 계속 오르는 걸 보고 걱정스러운 표정이었어요.",
    "blank": "prihatin",
+   "src": "made"
+  }
+ ],
+ "w|primata": [
+  {
+   "text": "Hutan itu menjadi rumah bagi beberapa jenis primata langka.",
+   "en": "The forest is home to several rare species of primate.",
+   "ko": "그 숲에는 희귀한 영장류 몇 종이 살아요.",
+   "blank": "primata",
+   "src": "made"
+  },
+  {
+   "text": "Chef bercanda bahwa pisang adalah makanan favorit semua primata, termasuk manusia.",
+   "en": "The chef joked that bananas are the favorite food of all primates, humans included.",
+   "ko": "셰프는 바나나가 사람을 포함한 모든 영장류가 좋아하는 음식이라고 농담했어요.",
+   "blank": "primata",
    "src": "made"
   }
  ],
@@ -81773,6 +82701,22 @@
    "src": "made"
   }
  ],
+ "w|regenerasi": [
+  {
+   "text": "Hutan bekas kebakaran itu mulai mengalami regenerasi alami.",
+   "en": "The burned forest has begun to regenerate naturally.",
+   "ko": "불탔던 그 숲이 자연적으로 되살아나기 시작했어요.",
+   "blank": "regenerasi",
+   "src": "made"
+  },
+  {
+   "text": "Chef senior senang ada regenerasi juru masak muda di kelas itu.",
+   "en": "The senior chef is glad to see a new generation of young cooks in the class.",
+   "ko": "원로 셰프는 그 수업에서 젊은 요리사들이 세대를 이어 가는 걸 반가워해요.",
+   "blank": "regenerasi",
+   "src": "made"
+  }
+ ],
  "w|regu": [
   {
    "text": "Eko masuk regu pramuka bersama tiga teman sekelasnya.",
@@ -82099,6 +83043,22 @@
    "blank": "remaja"
   }
  ],
+ "w|rembulan": [
+  {
+   "text": "Cahaya rembulan memantul di permukaan sungai.",
+   "en": "The moonlight reflected off the surface of the river.",
+   "ko": "달빛이 강물 위에 비쳤어요.",
+   "blank": "rembulan",
+   "src": "made"
+  },
+  {
+   "text": "Siti membuat kue berbentuk rembulan untuk festival kue bulan.",
+   "en": "Siti made moon-shaped cakes for the mooncake festival.",
+   "ko": "시티는 월병 축제를 위해 달 모양 과자를 만들었어요.",
+   "blank": "rembulan",
+   "src": "made"
+  }
+ ],
  "w|remeh": [
   {
    "text": "Bayu percaya tidak ada kabar yang terlalu remeh untuk diperiksa kebenarannya.",
@@ -82128,6 +83088,22 @@
    "en": "Putri's mother blends herbal tonic from spices to restore energy.",
    "ko": "푸트리의 어머니는 기운을 되찾게 향신료로 자무를 달여요.",
    "blank": "rempah",
+   "src": "made"
+  }
+ ],
+ "w|remuk": [
+  {
+   "text": "Perahu kayu tua itu remuk setelah menabrak batu besar.",
+   "en": "The old wooden boat was smashed after hitting a big rock.",
+   "ko": "낡은 나무배가 큰 바위에 부딪혀 박살 났어요.",
+   "blank": "remuk",
+   "src": "made"
+  },
+  {
+   "text": "Telur di kantong belanja Siti remuk sebelum kelas dimulai.",
+   "en": "The eggs in Siti's shopping bag got crushed before class started.",
+   "ko": "수업이 시작하기 전에 시티의 장바구니 속 달걀이 깨졌어요.",
+   "blank": "remuk",
    "src": "made"
   }
  ],
@@ -83066,6 +84042,22 @@
    "en": "Near the tracks there is a pile of scrapped carriages no longer in use.",
    "ko": "선로 근처에 더는 안 쓰는 객차 고철 더미가 있어요.",
    "blank": "rongsokan",
+   "src": "made"
+  }
+ ],
+ "w|rontok": [
+  {
+   "text": "Rambut pasien rontok selama menjalani kemoterapi.",
+   "en": "The patient's hair fell out during chemotherapy.",
+   "ko": "환자는 항암 치료를 받는 동안 머리카락이 빠졌어요.",
+   "blank": "rontok",
+   "src": "made"
+  },
+  {
+   "text": "Daun-daun kering rontok di sepanjang rute lari taman kota.",
+   "en": "Dry leaves fall all along the running route in the city park.",
+   "ko": "시립 공원 달리기 코스를 따라 마른 잎이 떨어져요.",
+   "blank": "rontok",
    "src": "made"
   }
  ],
@@ -86553,6 +87545,22 @@
    "blank": "Selasa"
   }
  ],
+ "w|selat": [
+  {
+   "text": "Sungai itu bermuara ke selat sempit di antara dua pulau.",
+   "en": "The river flows into a narrow strait between two islands.",
+   "ko": "그 강은 두 섬 사이 좁은 해협으로 흘러들어요.",
+   "blank": "selat",
+   "src": "made"
+  },
+  {
+   "text": "Instruktur memakai ikan segar dari nelayan di selat sebelah.",
+   "en": "The instructor uses fresh fish from fishermen in the nearby strait.",
+   "ko": "강사는 근처 해협 어부들이 잡은 싱싱한 생선을 써요.",
+   "blank": "selat",
+   "src": "made"
+  }
+ ],
  "w|selatan": [
   {
    "text": "Rumahnya di selatan kota.",
@@ -89499,6 +90507,22 @@
    "src": "made"
   }
  ],
+ "w|silikon": [
+  {
+   "text": "Pasir putih di sungai itu banyak mengandung silikon.",
+   "en": "The white sand in the river contains a lot of silicon.",
+   "ko": "그 강의 흰 모래에는 규소가 많이 들어 있어요.",
+   "blank": "silikon",
+   "src": "made"
+  },
+  {
+   "text": "Siti memakai cetakan silikon untuk membuat puding.",
+   "en": "Siti uses a silicone mold to make pudding.",
+   "ko": "시티는 실리콘 틀로 푸딩을 만들어요.",
+   "blank": "silikon",
+   "src": "made"
+  }
+ ],
  "w|silinder": [
   {
    "text": "Fajar menyimpan beras dalam wadah silinder besar dari baja.",
@@ -89556,6 +90580,22 @@
    "en": "Intan's father used his retirement savings to add to the party budget.",
    "ko": "인탄의 아버지는 노후 대비 저금을 헐어 잔치 비용에 보탰어요.",
    "blank": "simpanan",
+   "src": "made"
+  }
+ ],
+ "w|simpanse": [
+  {
+   "text": "Budi menonton dokumenter tentang simpanse di hutan Afrika.",
+   "en": "Budi watched a documentary about chimpanzees in the African forest.",
+   "ko": "부디는 아프리카 숲에 사는 침팬지 다큐멘터리를 봤어요.",
+   "blank": "simpanse",
+   "src": "made"
+  },
+  {
+   "text": "Siti menghias kue ulang tahun berbentuk simpanse untuk keponakan.",
+   "en": "Siti decorated a chimpanzee-shaped birthday cake for her niece.",
+   "ko": "시티는 조카에게 줄 침팬지 모양 생일 케이크를 꾸몄어요.",
+   "blank": "simpanse",
    "src": "made"
   }
  ],
@@ -89897,6 +90937,22 @@
    "src": "made"
   }
  ],
+ "w|sirkulasi": [
+  {
+   "text": "Andi membantu pasien menggerakkan kaki agar sirkulasi darah lancar.",
+   "en": "Andi helps patients move their legs so their blood circulation flows well.",
+   "ko": "안디는 혈액 순환이 잘되도록 환자가 다리를 움직이게 도와요.",
+   "blank": "sirkulasi",
+   "src": "made"
+  },
+  {
+   "text": "Dewi memakai kaus kaki kompresi untuk membantu sirkulasi darah.",
+   "en": "Dewi wears compression socks to help her blood circulation.",
+   "ko": "데위는 혈액 순환을 돕는 압박 양말을 신어요.",
+   "blank": "sirkulasi",
+   "src": "made"
+  }
+ ],
  "w|sirkus": [
   {
    "text": "Museum mainan memajang poster sirkus keliling dari zaman kakek Rudi.",
@@ -89910,6 +90966,22 @@
    "en": "The night market was as lively as a circus, full of lights and music.",
    "ko": "그 야시장은 불빛과 음악으로 서커스처럼 떠들썩했어요.",
    "blank": "sirkus",
+   "src": "made"
+  }
+ ],
+ "w|sirna": [
+  {
+   "text": "Rasa lelah Budi sirna begitu melihat air terjun di tengah hutan.",
+   "en": "Budi's tiredness vanished the moment he saw the waterfall in the middle of the forest.",
+   "ko": "숲 한가운데 폭포를 보자 부디의 피로가 싹 사라졌어요.",
+   "blank": "sirna",
+   "src": "made"
+  },
+  {
+   "text": "Rasa gugup Siti sirna setelah adonan pertama berhasil.",
+   "en": "Siti's nervousness vanished after her first batch of dough turned out well.",
+   "ko": "첫 반죽이 성공하자 시티의 긴장이 사라졌어요.",
+   "blank": "sirna",
    "src": "made"
   }
  ],
@@ -90152,6 +91224,22 @@
    "en": "A customer sketched the restaurant's atmosphere while waiting for the order.",
    "ko": "한 손님이 주문을 기다리며 식당 분위기를 스케치했어요.",
    "blank": "sketsa",
+   "src": "made"
+  }
+ ],
+ "w|skizofrenia": [
+  {
+   "text": "Psikiater rumah sakit menangani pasien skizofrenia dengan obat dan terapi.",
+   "en": "The hospital psychiatrist treats schizophrenia patients with medication and therapy.",
+   "ko": "병원 정신과 의사는 조현병 환자를 약과 상담으로 치료해요.",
+   "blank": "skizofrenia",
+   "src": "made"
+  },
+  {
+   "text": "Dewi berlari bersama komunitas yang mendukung penyintas skizofrenia.",
+   "en": "Dewi runs with a community that supports people living with schizophrenia.",
+   "ko": "데위는 조현병을 이겨 내는 사람들을 돕는 모임과 함께 달려요.",
+   "blank": "skizofrenia",
    "src": "made"
   }
  ],
@@ -90470,6 +91558,22 @@
    "en": "The lightning over the rice fields that night looked spectacular from Wati's window.",
    "ko": "그날 밤 논 위의 번개는 와티의 창에서 보기에 장관이었어요.",
    "blank": "spektakuler",
+   "src": "made"
+  }
+ ],
+ "w|spektrum": [
+  {
+   "text": "Pelangi di atas air terjun menampilkan spektrum warna yang lengkap.",
+   "en": "The rainbow over the waterfall showed the full spectrum of colors.",
+   "ko": "폭포 위 무지개가 온전한 색 스펙트럼을 보여 줬어요.",
+   "blank": "spektrum",
+   "src": "made"
+  },
+  {
+   "text": "Chef menjelaskan spektrum rasa dari asin sampai pahit.",
+   "en": "The chef explained the spectrum of flavors from salty to bitter.",
+   "ko": "셰프는 짠맛부터 쓴맛까지 맛의 스펙트럼을 설명했어요.",
+   "blank": "spektrum",
    "src": "made"
   }
  ],
@@ -92109,6 +93213,22 @@
    "en": "You don't have to drop me off.",
    "ko": "데려다주지 않아도 돼.",
    "blank": "Tak"
+  }
+ ],
+ "w|tak terhingga": [
+  {
+   "text": "Keluarga pasien mengucapkan terima kasih yang tak terhingga kepada Andi.",
+   "en": "The patient's family thanked Andi with boundless gratitude.",
+   "ko": "환자 가족은 안디에게 한없는 감사를 전했어요.",
+   "blank": "tak terhingga",
+   "src": "made"
+  },
+  {
+   "text": "Dukungan penonton memberi Dewi semangat yang tak terhingga.",
+   "en": "The crowd's support gave Dewi boundless energy.",
+   "ko": "관중의 응원이 데위에게 한없는 힘을 줬어요.",
+   "blank": "tak terhingga",
+   "src": "made"
   }
  ],
  "w|takdir": [
@@ -93977,6 +95097,22 @@
    "blank": "tepi"
   }
  ],
+ "w|tepian": [
+  {
+   "text": "Budi mendirikan tenda di tepian sungai.",
+   "en": "Budi pitched his tent on the riverbank.",
+   "ko": "부디는 강기슭에 텐트를 쳤어요.",
+   "blank": "tepian",
+   "src": "made"
+  },
+  {
+   "text": "Siti merapikan tepian kue pai dengan garpu.",
+   "en": "Siti neatened the edges of the pie with a fork.",
+   "ko": "시티는 포크로 파이 가장자리를 다듬었어요.",
+   "blank": "tepian",
+   "src": "made"
+  }
+ ],
  "w|tepuk": [
   {
    "text": "Tepuk tangan penonton menggema di aula.",
@@ -94478,6 +95614,22 @@
    "en": "It was once unimaginable that Wati's small stall would become a three-story restaurant.",
    "ko": "와티의 작은 가게가 삼층 식당이 될 줄은 예전엔 상상도 못 했어요.",
    "blank": "terbayangkan",
+   "src": "made"
+  }
+ ],
+ "w|terbayar": [
+  {
+   "text": "Kerja keras Andi terbayar saat pasien itu bisa berjalan lagi.",
+   "en": "Andi's hard work paid off when the patient could walk again.",
+   "ko": "그 환자가 다시 걷게 되자 안디의 노력이 보상받았어요.",
+   "blank": "terbayar",
+   "src": "made"
+  },
+  {
+   "text": "Latihan berbulan-bulan Dewi terbayar dengan medali.",
+   "en": "Dewi's months of training paid off with a medal.",
+   "ko": "몇 달간의 훈련이 메달로 보상받았어요.",
+   "blank": "terbayar",
    "src": "made"
   }
  ],
@@ -95259,6 +96411,22 @@
    "blank": "Terganggu"
   }
  ],
+ "w|tergantikan": [
+  {
+   "text": "Bagi Budi, suara sungai di pagi hari tidak tergantikan.",
+   "en": "For Budi, the sound of the river in the morning is irreplaceable.",
+   "ko": "부디에게 아침 강물 소리는 그 무엇과도 바꿀 수 없어요.",
+   "blank": "tergantikan",
+   "src": "made"
+  },
+  {
+   "text": "Menurut instruktur, rasa santan segar tidak tergantikan oleh santan kemasan.",
+   "en": "According to the instructor, fresh coconut milk can't be replaced by the packaged kind.",
+   "ko": "강사 말로는 신선한 코코넛 밀크 맛은 포장 제품으로 대신할 수 없대요.",
+   "blank": "tergantikan",
+   "src": "made"
+  }
+ ],
  "w|tergantung": [
   {
    "text": "Semuanya tergantung pada keputusanmu.",
@@ -95474,6 +96642,22 @@
    "en": "As soon as the rainy season arrived, the rice drying in Siti's yard came to a stop.",
    "ko": "우기가 오자마자 시티네 마당에서 벼를 말리는 일이 멈췄어요.",
    "blank": "terhenti",
+   "src": "made"
+  }
+ ],
+ "w|terhina": [
+  {
+   "text": "Andi merasa terhina saat keluarga pasien membentak di depan umum.",
+   "en": "Andi felt humiliated when a patient's relative shouted at him in public.",
+   "ko": "환자 가족이 사람들 앞에서 고함을 치자 안디는 모욕감을 느꼈어요.",
+   "blank": "terhina",
+   "src": "made"
+  },
+  {
+   "text": "Dewi tidak merasa terhina meski finis paling akhir.",
+   "en": "Dewi didn't feel humiliated even though she finished last.",
+   "ko": "데위는 꼴찌로 들어왔어도 창피해하지 않았어요.",
+   "blank": "terhina",
    "src": "made"
   }
  ],
@@ -96237,6 +97421,22 @@
    "blank": "terlahir"
   }
  ],
+ "w|terlaksana": [
+  {
+   "text": "Vaksinasi massal di rumah sakit terlaksana dengan lancar.",
+   "en": "The mass vaccination at the hospital was carried out smoothly.",
+   "ko": "병원의 집단 예방 접종은 순조롭게 진행됐어요.",
+   "blank": "terlaksana",
+   "src": "made"
+  },
+  {
+   "text": "Lomba lari amal itu terlaksana berkat ratusan relawan.",
+   "en": "The charity run went ahead thanks to hundreds of volunteers.",
+   "ko": "그 자선 달리기 대회는 수백 명의 자원봉사자 덕분에 치러졌어요.",
+   "blank": "terlaksana",
+   "src": "made"
+  }
+ ],
  "w|terlalu": [
   {
    "text": "Ini terlalu mahal.",
@@ -96931,6 +98131,22 @@
    "src": "made"
   }
  ],
+ "w|terpendam": [
+  {
+   "text": "Andi ternyata punya bakat menyanyi terpendam dan tampil di acara rumah sakit.",
+   "en": "Andi turned out to have a hidden singing talent and performed at the hospital event.",
+   "ko": "안디는 숨은 노래 실력을 드러내며 병원 행사 무대에 섰어요.",
+   "blank": "terpendam",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menemukan bakat lari yang terpendam di usia tiga puluh.",
+   "en": "Dewi discovered a hidden talent for running at the age of thirty.",
+   "ko": "데위는 서른 살에 숨어 있던 달리기 재능을 발견했어요.",
+   "blank": "terpendam",
+   "src": "made"
+  }
+ ],
  "w|terpengaruh": [
   {
    "text": "Redaktur meminta Budi tetap netral dan tidak terpengaruh oleh narasumber.",
@@ -97397,6 +98613,22 @@
    "en": "A vegetarian menu option is also available today.",
    "ko": "오늘 채식 메뉴 선택도 있어.",
    "blank": "Tersedia"
+  }
+ ],
+ "w|tersedot": [
+  {
+   "text": "Sandal Budi hampir tersedot lumpur di rawa.",
+   "en": "Budi's sandal was nearly sucked into the mud in the swamp.",
+   "ko": "부디의 샌들이 늪 진흙에 빨려 들어갈 뻔했어요.",
+   "blank": "tersedot",
+   "src": "made"
+  },
+  {
+   "text": "Banyak minyak tersedot ke dalam terong saat digoreng.",
+   "en": "A lot of oil gets soaked up by the eggplant when it's fried.",
+   "ko": "가지를 튀기면 기름이 많이 빨려 들어가요.",
+   "blank": "tersedot",
+   "src": "made"
   }
  ],
  "w|terselesaikan": [
@@ -98489,6 +99721,22 @@
    "src": "made"
   }
  ],
+ "w|timbal": [
+  {
+   "text": "Peneliti menemukan kadar timbal tinggi di air sungai dekat pabrik.",
+   "en": "Researchers found high levels of lead in the river water near the factory.",
+   "ko": "연구원들은 공장 근처 강물에서 높은 납 수치를 발견했어요.",
+   "blank": "timbal",
+   "src": "made"
+  },
+  {
+   "text": "Chef memperingatkan bahwa panci tua bisa mengandung timbal.",
+   "en": "The chef warned that old pots may contain lead.",
+   "ko": "셰프는 오래된 냄비에 납이 들어 있을 수 있다고 경고했어요.",
+   "blank": "timbal",
+   "src": "made"
+  }
+ ],
  "w|timbul": [
   {
    "text": "Bunyi aneh timbul dari mesin mobil Bayu setelah melewati jalan berbatu.",
@@ -98820,6 +100068,22 @@
    "en": "Putri left the house key with a neighbor while the workers were on the job.",
    "ko": "푸트리는 일꾼들이 일하는 동안 이웃에게 집 열쇠를 맡겼어요.",
    "blank": "titip",
+   "src": "made"
+  }
+ ],
+ "w|tiupan": [
+  {
+   "text": "Daun-daun berguguran oleh tiupan angin sore.",
+   "en": "The leaves fell in the gusts of the afternoon wind.",
+   "ko": "오후 바람이 불자 나뭇잎이 우수수 떨어졌어요.",
+   "blank": "tiupan",
+   "src": "made"
+  },
+  {
+   "text": "Siti mendinginkan sup dengan tiupan pelan sebelum mencicipi.",
+   "en": "Siti cooled the soup with a gentle blow before tasting it.",
+   "ko": "시티는 맛보기 전에 수프를 살살 불어 식혔어요.",
+   "blank": "tiupan",
    "src": "made"
   }
  ],

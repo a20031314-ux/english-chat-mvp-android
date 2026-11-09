@@ -14487,6 +14487,22 @@
    "src": "made"
   }
  ],
+ "w|わさび": [
+  {
+   "text": "悠斗は、とれたての刺身にわさびをたっぷりつけた。",
+   "en": "Yuto put plenty of wasabi on the freshly caught sashimi.",
+   "ko": "유토는 갓 잡은 회에 와사비를 듬뿍 찍었어요.",
+   "blank": "わさび",
+   "src": "made"
+  },
+  {
+   "text": "昼のお寿司のわさびが効きすぎて、千尋は涙が出た。",
+   "en": "The wasabi in the sushi at lunch was so strong that Chihiro's eyes watered.",
+   "ko": "점심 초밥의 와사비가 너무 매워서 지히로는 눈물이 났어요.",
+   "blank": "わさび",
+   "src": "made"
+  }
+ ],
  "w|わざわざ": [
   {
    "text": "わざわざ来てくれたね。",
@@ -18555,6 +18571,22 @@
    "src": "made"
   }
  ],
+ "w|二酸化炭素": [
+  {
+   "text": "海藻は二酸化炭素を吸収すると、悠斗は海の博物館で知った。",
+   "en": "At the ocean museum, Yuto learned that seaweed absorbs carbon dioxide.",
+   "ko": "해초는 이산화탄소를 흡수한다는 걸 유토는 바다 박물관에서 알게 됐어요.",
+   "blank": "二酸化炭素",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、部屋の二酸化炭素の濃度を測るセンサーを開発した。",
+   "en": "Chihiro's company developed a sensor that measures carbon dioxide levels in a room.",
+   "ko": "지히로의 회사는 방 안 이산화탄소 농도를 재는 센서를 개발했어요.",
+   "blank": "二酸化炭素",
+   "src": "made"
+  }
+ ],
  "w|云々": [
   {
    "text": "「書類の書き方云々より、まず被害者の話を聞きなさい」と先輩が大輔に言った。",
@@ -18954,6 +18986,22 @@
    "en": "Since her job puts her in front of people, Chihiro bought a new suit by mail order.",
    "ko": "사람들 앞에 서는 일이라 지히로는 통신 판매로 새 정장을 샀어요.",
    "blank": "人前",
+   "src": "made"
+  }
+ ],
+ "w|人参": [
+  {
+   "text": "悠斗は、浜辺のバーベキューで人参を焼いた。",
+   "en": "Yuto grilled carrots at a barbecue on the beach.",
+   "ko": "유토는 바닷가 바비큐에서 당근을 구웠어요.",
+   "blank": "人参",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、昼休みに人参スティックをかじりながらコードを書いた。",
+   "en": "During lunch, Chihiro wrote code while munching on carrot sticks.",
+   "ko": "지히로는 점심시간에 당근 스틱을 씹으며 코드를 짰어요.",
+   "blank": "人参",
    "src": "made"
   }
  ],
@@ -23385,6 +23433,22 @@
    "src": "made"
   }
  ],
+ "w|健在": [
+  {
+   "text": "悠斗の祖父は、九十歳を過ぎても漁師として健在だ。",
+   "en": "Yuto's grandfather is still going strong as a fisherman even past ninety.",
+   "ko": "유토의 할아버지는 아흔이 넘어서도 어부로 건재해요.",
+   "blank": "健在",
+   "src": "made"
+  },
+  {
+   "text": "創業メンバーは今も全員健在だと、千尋は笑って話した。",
+   "en": "Chihiro said with a laugh that all the founding members are still going strong.",
+   "ko": "창업 멤버는 지금도 모두 건재하다고 지히로는 웃으며 말했어요.",
+   "blank": "健在",
+   "src": "made"
+  }
+ ],
  "w|健康": [
   {
    "text": "健康に気をつけて。",
@@ -24299,6 +24363,22 @@
    "src": "made"
   }
  ],
+ "w|先着": [
+  {
+   "text": "悠斗の海の家のかき氷は、先着百名が半額だった。",
+   "en": "At Yuto's beach hut, shaved ice was half price for the first hundred customers.",
+   "ko": "유토네 해변 매점 빙수는 선착순 백 명까지 반값이었어요.",
+   "blank": "先着",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社の新しいアプリは、先着千人まで無料で使える。",
+   "en": "Chihiro's company's new app is free for the first thousand users.",
+   "ko": "지히로 회사의 새 앱은 선착순 천 명까지 무료로 쓸 수 있어요.",
+   "blank": "先着",
+   "src": "made"
+  }
+ ],
  "w|先祖": [
   {
    "text": "お盆休みには、悠斗も実家に帰って先祖の墓参りをする。",
@@ -25127,6 +25207,22 @@
    "en": "It's totally fine.",
    "ko": "전혀 괜찮아.",
    "blank": "全然"
+  }
+ ],
+ "w|全盛期": [
+  {
+   "text": "悠斗の町の漁業は、昔が全盛期だったと祖父は言う。",
+   "en": "Yuto's grandfather says the town's fishing industry was at its peak in the old days.",
+   "ko": "유토네 마을 어업은 옛날이 전성기였다고 할아버지는 말해요.",
+   "blank": "全盛期",
+   "src": "made"
+  },
+  {
+   "text": "スマホゲームの全盛期に、千尋は最初の会社を作った。",
+   "en": "Chihiro started her first company during the heyday of mobile games.",
+   "ko": "모바일 게임 전성기에 지히로는 첫 회사를 세웠어요.",
+   "blank": "全盛期",
+   "src": "made"
   }
  ],
  "w|全般": [
@@ -27496,6 +27592,22 @@
    "en": "Apparently the president of the local builder is running in the town council election.",
    "ko": "동네 건축 회사 사장이 마을 의회 선거에 출마한대요.",
    "blank": "出馬",
+   "src": "made"
+  }
+ ],
+ "w|刃物": [
+  {
+   "text": "悠斗は、浜で魚をさばくために刃物を研いだ。",
+   "en": "Yuto sharpened his knife to clean fish on the beach.",
+   "ko": "유토는 바닷가에서 생선을 손질하려고 칼을 갈았어요.",
+   "blank": "刃物",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、刃物を売る通販サイトを作った。",
+   "en": "Chihiro's company built an online shop that sells knives.",
+   "ko": "지히로의 회사는 칼을 파는 온라인 쇼핑몰을 만들었어요.",
+   "blank": "刃物",
    "src": "made"
   }
  ],
@@ -32689,6 +32801,22 @@
    "src": "made"
   }
  ],
+ "w|収支": [
+  {
+   "text": "悠斗の海の家は、今年の夏の収支がやっと黒字になった。",
+   "en": "Yuto's beach hut finally ended the summer in the black this year.",
+   "ko": "유토의 해변 매점은 올여름 수지가 겨우 흑자가 됐어요.",
+   "blank": "収支",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、会社の毎月の収支を表にまとめた。",
+   "en": "Chihiro put the company's monthly income and expenses into a table.",
+   "ko": "지히로는 회사의 매달 수지를 표로 정리했어요.",
+   "blank": "収支",
+   "src": "made"
+  }
+ ],
  "w|収束": [
   {
    "text": "感染症が収束し、亮の市役所でも窓口の仕切りが外された。",
@@ -35417,6 +35545,22 @@
    "blank": "味方"
   }
  ],
+ "w|味覚": [
+  {
+   "text": "海辺の町で、悠斗は秋の味覚の魚を楽しんだ。",
+   "en": "In the seaside town, Yuto enjoyed fish, one of the flavors of autumn.",
+   "ko": "바닷가 마을에서 유토는 가을 별미인 생선을 즐겼어요.",
+   "blank": "味覚",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、人の味覚に合わせて料理を勧めるアプリを開発した。",
+   "en": "Chihiro's company developed an app that recommends dishes to suit people's tastes.",
+   "ko": "지히로의 회사는 사람의 미각에 맞춰 요리를 추천하는 앱을 개발했어요.",
+   "blank": "味覚",
+   "src": "made"
+  }
+ ],
  "w|呼びかけ": [
   {
    "text": "館長の呼びかけで、地元の人々から古い写真が数多く寄贈された。",
@@ -37097,6 +37241,22 @@
    "src": "made"
   }
  ],
+ "w|園芸": [
+  {
+   "text": "悠斗の母は、潮風に強い花を選んで園芸を楽しんでいる。",
+   "en": "Yuto's mother enjoys gardening, choosing flowers that stand up to the sea wind.",
+   "ko": "유토의 어머니는 바닷바람에 강한 꽃을 골라 원예를 즐겨요.",
+   "blank": "園芸",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、園芸が好きな人のための写真共有アプリを作った。",
+   "en": "Chihiro's company made a photo-sharing app for people who love gardening.",
+   "ko": "지히로의 회사는 원예를 좋아하는 사람들을 위한 사진 공유 앱을 만들었어요.",
+   "blank": "園芸",
+   "src": "made"
+  }
+ ],
  "w|土": [
   {
    "text": "土がついてる。",
@@ -37109,6 +37269,22 @@
    "en": "Plant it in the soil.",
    "ko": "흙에 심어.",
    "blank": "土"
+  }
+ ],
+ "w|土台": [
+  {
+   "text": "台風で壊れた桟橋の土台を、悠斗たちは作り直した。",
+   "en": "Yuto and the others rebuilt the foundation of the pier that was destroyed by the typhoon.",
+   "ko": "태풍에 부서진 부두의 토대를 유토네는 다시 만들었어요.",
+   "blank": "土台",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、新しいサービスの土台となるシステムを設計した。",
+   "en": "Chihiro designed the system that would be the foundation of the new service.",
+   "ko": "지히로는 새 서비스의 토대가 될 시스템을 설계했어요.",
+   "blank": "土台",
+   "src": "made"
   }
  ],
  "w|土地": [
@@ -37912,6 +38088,22 @@
    "en": "Spending the student council's budget requires a teacher's approval.",
    "ko": "학생회 예산 집행에는 선생님 확인이 필요해요.",
    "blank": "執行",
+   "src": "made"
+  }
+ ],
+ "w|培養": [
+  {
+   "text": "悠斗は、海の研究所でプランクトンを培養している。",
+   "en": "Yuto cultivates plankton at a marine research center.",
+   "ko": "유토는 해양 연구소에서 플랑크톤을 배양하고 있어요.",
+   "blank": "培養",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、細胞培養の研究を助けるソフトを作っている。",
+   "en": "Chihiro's company makes software to help with cell culture research.",
+   "ko": "지히로의 회사는 세포 배양 연구를 돕는 소프트웨어를 만들어요.",
+   "blank": "培養",
    "src": "made"
   }
  ],
@@ -38977,6 +39169,22 @@
    "en": "That was a long summer break.",
    "ko": "긴 여름방학이었네.",
    "blank": "夏休み"
+  }
+ ],
+ "w|夏場": [
+  {
+   "text": "夏場の悠斗の町は、海水浴の客でにぎわう。",
+   "en": "In summer, Yuto's town is busy with beachgoers.",
+   "ko": "여름철 유토네 마을은 해수욕객으로 북적여요.",
+   "blank": "夏場",
+   "src": "made"
+  },
+  {
+   "text": "夏場はオフィスが暑くなるので、千尋は扇風機を増やした。",
+   "en": "The office gets hot in summer, so Chihiro added more fans.",
+   "ko": "여름철에는 사무실이 더워져서 지히로는 선풍기를 늘렸어요.",
+   "blank": "夏場",
+   "src": "made"
   }
  ],
  "w|夕方": [
@@ -40226,6 +40434,22 @@
    "en": "Most of the guests came to Keiko's wedding in kimonos or dresses.",
    "ko": "대부분의 하객은 게이코의 결혼식에 기모노나 드레스를 입고 왔어요.",
    "blank": "大概",
+   "src": "made"
+  }
+ ],
+ "w|大樹": [
+  {
+   "text": "悠斗の家の近くの海岸には、樹齢数百年の大樹がある。",
+   "en": "On the coast near Yuto's house, there is a great tree that is hundreds of years old.",
+   "ko": "유토네 집 근처 해안에는 수령이 수백 년 된 큰 나무가 있어요.",
+   "blank": "大樹",
+   "src": "made"
+  },
+  {
+   "text": "「寄らば大樹の陰」という考えを捨てて、千尋は会社を立ち上げた。",
+   "en": "Abandoning the idea of \"seeking shelter under a big tree,\" Chihiro started her own company.",
+   "ko": "'큰 나무 그늘에 기댄다'는 생각을 버리고 지히로는 회사를 세웠어요.",
+   "blank": "大樹",
    "src": "made"
   }
  ],
@@ -43797,6 +44021,22 @@
    "en": "It's a warm household.",
    "ko": "따뜻한 가정이네.",
    "blank": "家庭"
+  }
+ ],
+ "w|家政": [
+  {
+   "text": "悠斗の母は、昔、海辺の別荘で家政婦をしていた。",
+   "en": "Yuto's mother used to work as a housekeeper at a seaside villa.",
+   "ko": "유토의 어머니는 옛날에 바닷가 별장에서 가사 도우미로 일했어요.",
+   "blank": "家政",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社のアプリでは、家政婦さんを予約できる。",
+   "en": "With Chihiro's company's app, you can book a housekeeper.",
+   "ko": "지히로 회사의 앱으로는 가사 도우미를 예약할 수 있어요.",
+   "blank": "家政",
+   "src": "made"
   }
  ],
  "w|家族": [
@@ -53491,6 +53731,22 @@
    "src": "made"
   }
  ],
+ "w|手先": [
+  {
+   "text": "悠斗は手先が器用で、網の破れを素早く直す。",
+   "en": "Yuto is good with his hands and quickly mends tears in the nets.",
+   "ko": "유토는 손재주가 좋아서 그물 찢어진 곳을 재빨리 고쳐요.",
+   "blank": "手先",
+   "src": "made"
+  },
+  {
+   "text": "手先が冷えて、千尋はキーボードを打つ前に手を温めた。",
+   "en": "Her hands were cold, so Chihiro warmed them before typing.",
+   "ko": "손이 차가워서 지히로는 키보드를 치기 전에 손을 녹였어요.",
+   "blank": "手先",
+   "src": "made"
+  }
+ ],
  "w|手入れ": [
   {
    "text": "姉が留守の間、健太は姉の庭の手入れを任された。",
@@ -55179,6 +55435,22 @@
    "src": "made"
   }
  ],
+ "w|指先": [
+  {
+   "text": "冬の海に入ると、悠斗の指先はすぐに冷たくなった。",
+   "en": "When Yuto went into the winter sea, his fingertips quickly went cold.",
+   "ko": "겨울 바다에 들어가자 유토의 손끝은 금방 차가워졌어요.",
+   "blank": "指先",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、指先の動きだけで操作できるアプリを作った。",
+   "en": "Chihiro's company made an app that can be operated with just fingertip movements.",
+   "ko": "지히로의 회사는 손끝 움직임만으로 조작할 수 있는 앱을 만들었어요.",
+   "blank": "指先",
+   "src": "made"
+  }
+ ],
  "w|指名": [
   {
    "text": "演出家の指名で、拓也が主役に選ばれた。",
@@ -56106,6 +56378,22 @@
    "en": "Online shopping gave Chihiro a connection with farmers in the countryside.",
    "ko": "치히로는 인터넷 쇼핑을 계기로 지방 농가와 접점이 생겼어요.",
    "blank": "接点",
+   "src": "made"
+  }
+ ],
+ "w|接着": [
+  {
+   "text": "悠斗は、割れたサーフボードを接着剤で直した。",
+   "en": "Yuto fixed his cracked surfboard with glue.",
+   "ko": "유토는 금이 간 서핑보드를 접착제로 고쳤어요.",
+   "blank": "接着",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、壊れたマウスを接着剤で直して使っている。",
+   "en": "Chihiro fixed her broken mouse with glue and keeps using it.",
+   "ko": "지히로는 고장 난 마우스를 접착제로 고쳐서 쓰고 있어요.",
+   "blank": "接着",
    "src": "made"
   }
  ],
@@ -59815,6 +60103,22 @@
    "src": "made"
   }
  ],
+ "w|日報": [
+  {
+   "text": "悠斗は、漁協に出す日報に今日の漁獲量を書いた。",
+   "en": "Yuto wrote the day's catch in the daily report for the fishing co-op.",
+   "ko": "유토는 어협에 내는 일보에 오늘 어획량을 적었어요.",
+   "blank": "日報",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社では、社員が仕事の終わりに短い日報を書く。",
+   "en": "At Chihiro's company, employees write a short daily report at the end of the workday.",
+   "ko": "지히로의 회사에서는 직원들이 퇴근 전에 짧은 일보를 써요.",
+   "blank": "日報",
+   "src": "made"
+  }
+ ],
  "w|日常": [
   {
    "text": "日常が戻ってきた。",
@@ -62225,6 +62529,22 @@
    "blank": "期待"
   }
  ],
+ "w|期日": [
+  {
+   "text": "悠斗は、船の検査の期日をカレンダーに書き込んだ。",
+   "en": "Yuto wrote the due date for the boat inspection on his calendar.",
+   "ko": "유토는 배 검사 기일을 달력에 적어 넣었어요.",
+   "blank": "期日",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、投資家への報告の期日に何とか間に合わせた。",
+   "en": "Chihiro managed to meet the deadline for her report to investors.",
+   "ko": "지히로는 투자자 보고 기일에 어떻게든 맞췄어요.",
+   "blank": "期日",
+   "src": "made"
+  }
+ ],
  "w|期間": [
   {
    "text": "期間が短すぎる。",
@@ -62761,6 +63081,22 @@
    "en": "Show your true self.",
    "ko": "본래 모습을 보여줘.",
    "blank": "本来"
+  }
+ ],
+ "w|本棚": [
+  {
+   "text": "悠斗の部屋の本棚には、拾った貝殻が並んでいる。",
+   "en": "The shells Yuto has picked up are lined up on the bookshelf in his room.",
+   "ko": "유토의 방 책장에는 주워 온 조개껍데기가 늘어서 있어요.",
+   "blank": "本棚",
+   "src": "made"
+  },
+  {
+   "text": "千尋のオフィスの本棚には、プログラミングの本がぎっしり並んでいる。",
+   "en": "The bookshelf in Chihiro's office is packed with programming books.",
+   "ko": "지히로의 사무실 책장에는 프로그래밍 책이 빼곡히 꽂혀 있어요.",
+   "blank": "本棚",
+   "src": "made"
   }
  ],
  "w|本業": [
@@ -69069,6 +69405,22 @@
    "src": "made"
   }
  ],
+ "w|浪費": [
+  {
+   "text": "悠斗は、夏のアルバイト代をゲームに浪費してしまった。",
+   "en": "Yuto wasted his summer part-time job wages on games.",
+   "ko": "유토는 여름 아르바이트비를 게임에 낭비해 버렸어요.",
+   "blank": "浪費",
+   "src": "made"
+  },
+  {
+   "text": "無駄な会議は時間の浪費だと、千尋は考えている。",
+   "en": "Chihiro thinks pointless meetings are a waste of time.",
+   "ko": "쓸데없는 회의는 시간 낭비라고 지히로는 생각해요.",
+   "blank": "浪費",
+   "src": "made"
+  }
+ ],
  "w|浮かぶ": [
   {
    "text": "会議の途中で、亮の頭に新しい案が浮かんだ。",
@@ -69350,6 +69702,22 @@
    "en": "Aoi's grandfather apparently used to work in the navy.",
    "ko": "아오이의 할아버지는 옛날에 해군에서 일했대요.",
    "blank": "海軍",
+   "src": "made"
+  }
+ ],
+ "w|浸水": [
+  {
+   "text": "高潮で、悠斗の家の一階が浸水した。",
+   "en": "The storm surge flooded the first floor of Yuto's house.",
+   "ko": "해일로 유토네 집 일 층이 침수됐어요.",
+   "blank": "浸水",
+   "src": "made"
+  },
+  {
+   "text": "大雨で千尋のオフィスの地下が浸水し、サーバーを移した。",
+   "en": "Heavy rain flooded the basement of Chihiro's office, so they moved the servers.",
+   "ko": "폭우로 지히로의 사무실 지하가 침수되어 서버를 옮겼어요.",
+   "blank": "浸水",
    "src": "made"
   }
  ],
@@ -69958,6 +70326,22 @@
    "en": "Yoko got caught in a traffic jam on her way to the dentist.",
    "ko": "요코는 치과에 가는 도중에 정체에 휘말렸어요.",
    "blank": "渋滞",
+   "src": "made"
+  }
+ ],
+ "w|渓谷": [
+  {
+   "text": "悠斗の町の海に注ぐ川の上流には、美しい渓谷がある。",
+   "en": "There is a beautiful gorge upstream on the river that flows into the sea at Yuto's town.",
+   "ko": "유토네 마을 바다로 흘러드는 강 상류에는 아름다운 계곡이 있어요.",
+   "blank": "渓谷",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、社員旅行で渓谷のキャンプ場に行った。",
+   "en": "Chihiro went to a campground in a gorge on a company trip.",
+   "ko": "지히로는 회사 여행으로 계곡 캠핑장에 갔어요.",
+   "blank": "渓谷",
    "src": "made"
   }
  ],
@@ -72119,6 +72503,22 @@
    "src": "made"
   }
  ],
+ "w|熱意": [
+  {
+   "text": "海を守りたいという悠斗の熱意に、町の人たちも動かされた。",
+   "en": "The townspeople were moved by Yuto's passion for protecting the sea.",
+   "ko": "바다를 지키고 싶다는 유토의 열의에 마을 사람들도 마음이 움직였어요.",
+   "blank": "熱意",
+   "src": "made"
+  },
+  {
+   "text": "千尋の熱意が、最初の投資家の心を動かした。",
+   "en": "Chihiro's passion moved the heart of her first investor.",
+   "ko": "지히로의 열의가 첫 투자자의 마음을 움직였어요.",
+   "blank": "熱意",
+   "src": "made"
+  }
+ ],
  "w|熱狂": [
   {
    "text": "限定スニーカーの発売日、亮は熱狂するファンに混じって画面を更新し続けた。",
@@ -72532,6 +72932,22 @@
    "en": "Mayu asked an expert why beef prices had fallen.",
    "ko": "마유는 소고기 값이 내린 이유를 전문가에게 물었어요.",
    "blank": "牛肉",
+   "src": "made"
+  }
+ ],
+ "w|牡蠣": [
+  {
+   "text": "悠斗は、港の屋台で焼き牡蠣を食べた。",
+   "en": "Yuto ate grilled oysters at a stall by the harbor.",
+   "ko": "유토는 항구 포장마차에서 굴구이를 먹었어요.",
+   "blank": "牡蠣",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、社員の打ち上げに牡蠣料理の店を予約した。",
+   "en": "Chihiro booked an oyster restaurant for the staff celebration.",
+   "ko": "지히로는 직원 회식 장소로 굴 요리 가게를 예약했어요.",
+   "blank": "牡蠣",
    "src": "made"
   }
  ],
@@ -74902,6 +75318,22 @@
    "en": "Yumi was so satisfied with the exhibition that she felt it was worth coming from far away.",
    "ko": "유미는 멀리서 온 보람이 있다고 느낄 만큼 전시에 만족했어요.",
    "blank": "甲斐",
+   "src": "made"
+  }
+ ],
+ "w|甲状腺": [
+  {
+   "text": "海藻をとりすぎると甲状腺に影響することがあると、悠斗は医者に聞いた。",
+   "en": "Yuto heard from a doctor that eating too much seaweed can affect the thyroid.",
+   "ko": "해초를 너무 많이 먹으면 갑상선에 영향을 줄 수 있다고 유토는 의사에게 들었어요.",
+   "blank": "甲状腺",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、会社の健康診断で甲状腺の検査も受けた。",
+   "en": "Chihiro also had her thyroid checked at the company health checkup.",
+   "ko": "지히로는 회사 건강 검진에서 갑상선 검사도 받았어요.",
+   "blank": "甲状腺",
    "src": "made"
   }
  ],
@@ -81211,6 +81643,22 @@
    "src": "made"
   }
  ],
+ "w|筆者": [
+  {
+   "text": "悠斗は、海辺の暮らしを書いた本の筆者に会いに行った。",
+   "en": "Yuto went to meet the author of a book about life by the sea.",
+   "ko": "유토는 바닷가 생활을 쓴 책의 필자를 만나러 갔어요.",
+   "blank": "筆者",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、起業についての本の筆者に直接メールを送った。",
+   "en": "Chihiro emailed the author of a book about starting a business directly.",
+   "ko": "지히로는 창업에 관한 책의 필자에게 직접 메일을 보냈어요.",
+   "blank": "筆者",
+   "src": "made"
+  }
+ ],
  "w|筆頭": [
   {
    "text": "直樹のお気に入りの場所は、この滝を筆頭にいくつもある。",
@@ -81542,6 +81990,22 @@
    "en": "Yoko sells finely ground coffee by weight.",
    "ko": "요코는 입자가 고운 커피 가루를 달아서 팔아요.",
    "blank": "粒子",
+   "src": "made"
+  }
+ ],
+ "w|粘土": [
+  {
+   "text": "悠斗は、浜辺で見つけた粘土で小さな器を作った。",
+   "en": "Yuto made a small bowl from clay he found on the beach.",
+   "ko": "유토는 바닷가에서 찾은 점토로 작은 그릇을 만들었어요.",
+   "blank": "粘土",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、子どもが粘土で作った形を読み取るアプリを作った。",
+   "en": "Chihiro's company made an app that recognizes shapes children make with clay.",
+   "ko": "지히로의 회사는 아이들이 점토로 만든 모양을 읽어 내는 앱을 만들었어요.",
+   "blank": "粘土",
    "src": "made"
   }
  ],
@@ -82249,6 +82713,22 @@
    "src": "made"
   }
  ],
+ "w|終焉": [
+  {
+   "text": "港の古い灯台が役目の終焉を迎え、悠斗は少し寂しく思った。",
+   "en": "The old lighthouse at the harbor reached the end of its service, and Yuto felt a little sad.",
+   "ko": "항구의 오래된 등대가 역할을 마치게 되어 유토는 조금 서운했어요.",
+   "blank": "終焉",
+   "src": "made"
+  },
+  {
+   "text": "古いソフトのサポートの終焉に合わせて、千尋の会社は新製品を出した。",
+   "en": "Chihiro's company released a new product timed with the end of support for an old piece of software.",
+   "ko": "오래된 소프트웨어 지원 종료에 맞춰 지히로의 회사는 신제품을 냈어요.",
+   "blank": "終焉",
+   "src": "made"
+  }
+ ],
  "w|終盤": [
   {
    "text": "掃除も終盤に入り、翔太はやっと台所の換気扇に取りかかった。",
@@ -82262,6 +82742,22 @@
    "en": "The move is in its final stage, and only the fridge and washing machine are left.",
    "ko": "이사도 막바지라 남은 건 냉장고와 세탁기뿐이에요.",
    "blank": "終盤",
+   "src": "made"
+  }
+ ],
+ "w|終結": [
+  {
+   "text": "長く続いた漁場の争いが終結し、悠斗はほっとした。",
+   "en": "Yuto was relieved that the long-running dispute over the fishing grounds had ended.",
+   "ko": "오래 이어진 어장 분쟁이 종결되어 유토는 안도했어요.",
+   "blank": "終結",
+   "src": "made"
+  },
+  {
+   "text": "他社との特許の争いが終結し、千尋はようやく開発に集中できた。",
+   "en": "The patent dispute with another company ended, and Chihiro could finally focus on development.",
+   "ko": "다른 회사와의 특허 분쟁이 종결되어 지히로는 드디어 개발에 집중할 수 있었어요.",
+   "blank": "終結",
    "src": "made"
   }
  ],
@@ -84919,6 +85415,22 @@
    "blank": "育成"
   }
  ],
+ "w|胃腸": [
+  {
+   "text": "生の貝を食べすぎて、悠斗は胃腸の調子を崩した。",
+   "en": "Yuto upset his stomach by eating too much raw shellfish.",
+   "ko": "날조개를 너무 많이 먹어서 유토는 위장 상태가 나빠졌어요.",
+   "blank": "胃腸",
+   "src": "made"
+  },
+  {
+   "text": "締め切り前のストレスで、千尋は胃腸を壊した。",
+   "en": "The stress before the deadline wrecked Chihiro's stomach.",
+   "ko": "마감 전 스트레스로 지히로는 위장이 탈 났어요.",
+   "blank": "胃腸",
+   "src": "made"
+  }
+ ],
  "w|背": [
   {
    "text": "翔太は、背が高いのでベンチが少し短く感じる。",
@@ -85397,6 +85909,22 @@
    "en": "Stretch your lower back.",
    "ko": "허리를 펴.",
    "blank": "腰"
+  }
+ ],
+ "w|腰痛": [
+  {
+   "text": "重い網を毎日引いて、悠斗は腰痛になった。",
+   "en": "Pulling heavy nets every day gave Yuto a backache.",
+   "ko": "무거운 그물을 매일 끌어서 유토는 요통이 생겼어요.",
+   "blank": "腰痛",
+   "src": "made"
+  },
+  {
+   "text": "長時間座りっぱなしで、千尋は腰痛に悩んでいる。",
+   "en": "From sitting for long hours, Chihiro suffers from back pain.",
+   "ko": "오랜 시간 앉아만 있어서 지히로는 요통에 시달려요.",
+   "blank": "腰痛",
+   "src": "made"
   }
  ],
  "w|腹": [
@@ -86391,6 +86919,22 @@
    "src": "made"
   }
  ],
+ "w|芝生": [
+  {
+   "text": "悠斗は、海を見下ろす芝生に寝転んだ。",
+   "en": "Yuto lay down on the lawn overlooking the sea.",
+   "ko": "유토는 바다가 내려다보이는 잔디밭에 드러누웠어요.",
+   "blank": "芝生",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社の屋上には、芝生のテラスがある。",
+   "en": "There is a terrace with a lawn on the roof of Chihiro's company.",
+   "ko": "지히로 회사 옥상에는 잔디 테라스가 있어요.",
+   "blank": "芝生",
+   "src": "made"
+  }
+ ],
  "w|花": [
   {
    "text": "花、きれいだね。",
@@ -86945,6 +87489,22 @@
    "en": "I mowed the grass in the yard.",
    "ko": "마당 풀을 깎았어.",
    "blank": "草"
+  }
+ ],
+ "w|草原": [
+  {
+   "text": "悠斗の町の岬には、海風が吹き抜ける草原が広がっている。",
+   "en": "On the cape near Yuto's town, there is a meadow swept by sea breezes.",
+   "ko": "유토네 마을 곶에는 바닷바람이 부는 초원이 펼쳐져 있어요.",
+   "blank": "草原",
+   "src": "made"
+  },
+  {
+   "text": "千尋のパソコンの壁紙は、広い草原の写真だ。",
+   "en": "Chihiro's computer wallpaper is a photo of a wide meadow.",
+   "ko": "지히로의 컴퓨터 배경 화면은 넓은 초원 사진이에요.",
+   "blank": "草原",
+   "src": "made"
   }
  ],
  "w|荒い": [
@@ -95555,6 +96115,22 @@
    "src": "made"
   }
  ],
+ "w|農園": [
+  {
+   "text": "悠斗は、海の近くのみかん農園で収穫を手伝った。",
+   "en": "Yuto helped with the harvest at a mandarin orange farm near the sea.",
+   "ko": "유토는 바다 근처 귤 농원에서 수확을 도왔어요.",
+   "blank": "農園",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、農園の水やりを自動で管理するシステムを作った。",
+   "en": "Chihiro's company built a system that automatically manages watering on farms.",
+   "ko": "지히로의 회사는 농원의 물 주기를 자동으로 관리하는 시스템을 만들었어요.",
+   "blank": "農園",
+   "src": "made"
+  }
+ ],
  "w|農場": [
   {
    "text": "この住宅地は、もともと広い農場だった場所に建てられている。",
@@ -99701,6 +100277,22 @@
    "blank": "配布"
   }
  ],
+ "w|配当": [
+  {
+   "text": "悠斗は、持っている株の配当で新しい釣りざおを買った。",
+   "en": "Yuto bought a new fishing rod with the dividends from his stocks.",
+   "ko": "유토는 갖고 있는 주식 배당금으로 새 낚싯대를 샀어요.",
+   "blank": "配当",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、まだ株主に配当を出せていない。",
+   "en": "Chihiro's company hasn't been able to pay dividends to shareholders yet.",
+   "ko": "지히로의 회사는 아직 주주에게 배당을 주지 못하고 있어요.",
+   "blank": "配当",
+   "src": "made"
+  }
+ ],
  "w|配慮": [
   {
    "text": "健太は、病気の友達に配慮して、明るい話題を選んで書いた。",
@@ -99714,6 +100306,22 @@
    "en": "Out of consideration for the child actor's health, the director wrapped up filming early.",
    "ko": "감독은 아역 배우의 몸 상태를 배려해서 촬영을 일찍 끝냈어요.",
    "blank": "配慮",
+   "src": "made"
+  }
+ ],
+ "w|配管": [
+  {
+   "text": "悠斗の海の家の配管が、塩水でさびてしまった。",
+   "en": "The pipes in Yuto's beach hut rusted from the salt water.",
+   "ko": "유토네 해변 매점 배관이 소금물 때문에 녹슬어 버렸어요.",
+   "blank": "配管",
+   "src": "made"
+  },
+  {
+   "text": "千尋のオフィスが入っている古いビルは、配管からよく水が漏れる。",
+   "en": "In the old building where Chihiro's office is, water often leaks from the pipes.",
+   "ko": "지히로의 사무실이 있는 오래된 빌딩은 배관에서 물이 자주 새요.",
+   "blank": "配管",
    "src": "made"
   }
  ],
@@ -99964,6 +100572,22 @@
    "en": "Aoi helped release a bird that had been under care back into the forest.",
    "ko": "아오이는 보호받던 새를 숲에 놓아주는 일을 도왔어요.",
    "blank": "釈放",
+   "src": "made"
+  }
+ ],
+ "w|里親": [
+  {
+   "text": "悠斗は、浜で保護された子犬の里親になった。",
+   "en": "Yuto became the foster parent of a puppy rescued on the beach.",
+   "ko": "유토는 바닷가에서 구조된 강아지의 위탁 보호자가 됐어요.",
+   "blank": "里親",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社のサイトでは、保護犬の里親を探せる。",
+   "en": "On Chihiro's company's website, you can find adoptive homes for rescue dogs.",
+   "ko": "지히로 회사의 사이트에서는 구조견의 새 가족을 찾을 수 있어요.",
+   "blank": "里親",
    "src": "made"
   }
  ],
@@ -103380,6 +104004,22 @@
    "en": "To Chihiro, the autumn lake with no wind looked like a still painting.",
    "ko": "바람이 멎은 가을 호수는 지히로의 눈에는 멈춰 있는 그림처럼 보였어요.",
    "blank": "静止",
+   "src": "made"
+  }
+ ],
+ "w|静脈": [
+  {
+   "text": "健康診断で、悠斗は腕の静脈から採血された。",
+   "en": "At his health checkup, blood was drawn from a vein in Yuto's arm.",
+   "ko": "건강 검진에서 유토는 팔 정맥으로 채혈을 했어요.",
+   "blank": "静脈",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社は、手のひらの静脈で本人を確認する仕組みを入れた。",
+   "en": "Chihiro's company introduced a system that verifies identity using the veins in the palm.",
+   "ko": "지히로의 회사는 손바닥 정맥으로 본인을 확인하는 방식을 도입했어요.",
+   "blank": "静脈",
    "src": "made"
   }
  ],

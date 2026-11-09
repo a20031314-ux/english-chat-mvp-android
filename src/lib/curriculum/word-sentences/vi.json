@@ -209,6 +209,22 @@
    "src": "made"
   }
  ],
+ "w|ấm lên": [
+  {
+   "text": "Nước sông ấm lên vào mùa hè nên cá lội lên thượng nguồn.",
+   "en": "The river water warms up in summer, so the fish swim upstream.",
+   "ko": "여름에 강물이 따뜻해져서 물고기가 상류로 올라가요.",
+   "blank": "ấm lên",
+   "src": "made"
+  },
+  {
+   "text": "Bàn tay lạnh cóng của Trang ấm lên khi cả khán đài cùng vỗ tay.",
+   "en": "Trang's freezing hands warmed up as the whole stand clapped together.",
+   "ko": "관중석 모두가 박수를 치자 짱의 꽁꽁 언 손이 따뜻해졌어요.",
+   "blank": "ấm lên",
+   "src": "made"
+  }
+ ],
  "w|âm lịch": [
   {
    "text": "Phong được dặn rằng công ty cho nghỉ ngày mùng mười tháng ba âm lịch.",
@@ -7117,6 +7133,22 @@
    "src": "made"
   }
  ],
+ "w|bột giặt": [
+  {
+   "text": "Đức buồn khi thấy bao bột giặt vứt bừa bên bờ suối.",
+   "en": "Đức was sad to see a laundry detergent bag thrown carelessly by the stream.",
+   "ko": "득은 개울가에 아무렇게나 버려진 세제 봉지를 보고 속상했어요.",
+   "blank": "bột giặt",
+   "src": "made"
+  },
+  {
+   "text": "Áo trắng của Trang dính nước ngọt, về nhà phải ngâm bột giặt cả đêm.",
+   "en": "Trang's white shirt got soda on it, so at home she had to soak it in detergent all night.",
+   "ko": "짱의 흰 티에 탄산음료가 묻어서 집에 와서 밤새 세제에 담가야 했어요.",
+   "blank": "bột giặt",
+   "src": "made"
+  }
+ ],
  "w|bột mì": [
   {
    "text": "Quang rây bột mì hai lần để bánh bông lan mịn hơn.",
@@ -11909,6 +11941,22 @@
    "src": "made"
   }
  ],
+ "w|chất lỏng": [
+  {
+   "text": "Đức dùng chai nhựa đựng chất lỏng lạ lấy từ suối đem đi xét nghiệm.",
+   "en": "Đức used a plastic bottle to hold a strange liquid from the stream to have it tested.",
+   "ko": "득은 개울에서 뜬 이상한 액체를 검사받으려고 플라스틱 병에 담았어요.",
+   "blank": "chất lỏng",
+   "src": "made"
+  },
+  {
+   "text": "Ở cửa soát vé, Trang bị yêu cầu bỏ lại mọi chai chất lỏng.",
+   "en": "At the ticket check, Trang was asked to leave behind all bottles of liquid.",
+   "ko": "검표구에서 짱은 액체가 든 병을 모두 두고 가라는 말을 들었어요.",
+   "blank": "chất lỏng",
+   "src": "made"
+  }
+ ],
  "w|chất lượng": [
   {
    "text": "Chất lượng hàng này rất tốt.",
@@ -11936,6 +11984,22 @@
    "en": "On the first day of summer the beach is packed, and Hà can't find a spot for her towel.",
    "ko": "초여름 첫날 해변이 사람으로 꽉 차서 하는 수건 펼 자리도 못 찾았어요.",
    "blank": "chật ních",
+   "src": "made"
+  }
+ ],
+ "w|chất rắn": [
+  {
+   "text": "Băng trên mặt hồ là nước ở dạng chất rắn, Đức giảng cho em.",
+   "en": "The ice on the lake is water in solid form, Đức explained to his sibling.",
+   "ko": "득은 호수 위 얼음이 고체 상태의 물이라고 동생에게 설명했어요.",
+   "blank": "chất rắn",
+   "src": "made"
+  },
+  {
+   "text": "Trang thắc mắc tuyết giả trên sân khấu là chất rắn hay chỉ là bọt.",
+   "en": "Trang wondered whether the fake snow on stage was a solid or just foam.",
+   "ko": "짱은 무대 위 가짜 눈이 고체인지 그냥 거품인지 궁금했어요.",
+   "blank": "chất rắn",
    "src": "made"
   }
  ],
@@ -12373,6 +12437,22 @@
    "src": "made"
   }
  ],
+ "w|chen": [
+  {
+   "text": "Lối mòn hẹp quá, Đức phải chen qua giữa hai bụi tre.",
+   "en": "The trail was so narrow that Đức had to squeeze between two bamboo clumps.",
+   "ko": "오솔길이 너무 좁아서 득은 대나무 덤불 두 개 사이로 비집고 지나가야 했어요.",
+   "blank": "chen",
+   "src": "made"
+  },
+  {
+   "text": "Trang phải chen mãi mới lên được gần sân khấu.",
+   "en": "Trang had to squeeze through for ages to get close to the stage.",
+   "ko": "짱은 한참을 비집고 들어가서야 무대 가까이 갈 수 있었어요.",
+   "blank": "chen",
+   "src": "made"
+  }
+ ],
  "w|chén": [
   {
    "text": "Chén này dễ vỡ, cầm cẩn thận.",
@@ -12400,6 +12480,22 @@
    "en": "The ancient trees grow so close together that Linh has to squeeze her way through.",
    "ko": "고목들이 빽빽하게 들어차서 린은 비집고 지나가야 해요.",
    "blank": "chen chúc",
+   "src": "made"
+  }
+ ],
+ "w|chen lấn": [
+  {
+   "text": "Bến đò cuối tuần đông quá, Đức không muốn chen lấn với ai.",
+   "en": "The ferry landing was so crowded at the weekend that Đức didn't want to push with anyone.",
+   "ko": "주말 나루터가 너무 붐볐지만 득은 누구와도 밀치고 싶지 않았어요.",
+   "blank": "chen lấn",
+   "src": "made"
+  },
+  {
+   "text": "Nhân viên an ninh yêu cầu khán giả không chen lấn ở cửa vào.",
+   "en": "Security asked the audience not to push and shove at the entrance.",
+   "ko": "경비원은 관객들에게 입구에서 밀치지 말라고 했어요.",
+   "blank": "chen lấn",
    "src": "made"
   }
  ],
@@ -19654,6 +19750,22 @@
    "en": "Hà bought a national park ticket at the travel agency at the edge of town.",
    "ko": "하는 마을 어귀 여행사에서 국립공원 입장권을 샀어요.",
    "blank": "đại lý",
+   "src": "made"
+  }
+ ],
+ "w|dải ngân hà": [
+  {
+   "text": "Giữa rừng không có đèn, Đức thấy rõ dải ngân hà trên đầu.",
+   "en": "With no lights in the forest, Đức could clearly see the Milky Way overhead.",
+   "ko": "불빛 없는 숲 한가운데서 득은 머리 위 은하수를 똑똑히 봤어요.",
+   "blank": "dải ngân hà",
+   "src": "made"
+  },
+  {
+   "text": "Bài hát mở màn của ban nhạc có tên là dải ngân hà, Trang thuộc lòng.",
+   "en": "The band's opening song is called the Milky Way, and Trang knows it by heart.",
+   "ko": "밴드의 첫 곡 제목이 은하수인데 짱은 가사를 다 외워요.",
+   "blank": "dải ngân hà",
    "src": "made"
   }
  ],
@@ -26965,6 +27077,22 @@
    "blank": "Đóng cửa"
   }
  ],
+ "w|đông đặc": [
+  {
+   "text": "Nhựa thông chảy ra rồi đông đặc lại trên thân cây.",
+   "en": "The pine resin oozed out and then hardened on the trunk.",
+   "ko": "송진이 흘러나와 나무줄기 위에서 굳었어요.",
+   "blank": "đông đặc",
+   "src": "made"
+  },
+  {
+   "text": "Ly nước đá Trang để quên đông đặc lại thành một cục trong tủ lạnh.",
+   "en": "The glass of water Trang forgot in the freezer froze solid into a lump.",
+   "ko": "짱이 깜빡하고 냉동실에 둔 물컵이 꽁꽁 얼어 덩어리가 됐어요.",
+   "blank": "đông đặc",
+   "src": "made"
+  }
+ ],
  "w|động đất": [
   {
    "text": "Bạn đã bao giờ trải qua động đất chưa?",
@@ -30929,6 +31057,22 @@
    "src": "made"
   }
  ],
+ "w|giá lẻ": [
+  {
+   "text": "Quán nhỏ ven rừng bán nước theo giá lẻ đắt gấp đôi dưới phố.",
+   "en": "The little shop at the forest edge sells drinks at a retail price twice that in town.",
+   "ko": "숲 가장자리 작은 가게는 음료를 시내보다 두 배 비싼 소매가로 팔아요.",
+   "blank": "giá lẻ",
+   "src": "made"
+  },
+  {
+   "text": "Ở cổng sân vận động, nước suối bán theo giá lẻ đắt hơn bình thường.",
+   "en": "At the stadium gate, bottled water is sold at a retail price higher than usual.",
+   "ko": "경기장 입구에서는 생수를 평소보다 비싼 소매가로 팔아요.",
+   "blank": "giá lẻ",
+   "src": "made"
+  }
+ ],
  "w|giá mà": [
   {
    "text": "Đức thở dài: giá mà hồi trẻ anh chịu khó tập sớm hơn.",
@@ -31006,6 +31150,22 @@
    "en": "Linh had a carpenter build a big bookshelf running along the living room wall.",
    "ko": "린은 목수에게 거실 벽을 따라 긴 책꽂이를 짜 달라고 했어요.",
    "blank": "giá sách",
+   "src": "made"
+  }
+ ],
+ "w|giá sỉ": [
+  {
+   "text": "Đức mua nước uống theo giá sỉ cho cả đoàn đi rừng.",
+   "en": "Đức bought drinking water at wholesale price for the whole forest group.",
+   "ko": "득은 숲에 가는 일행 전체가 마실 물을 도매가로 샀어요.",
+   "blank": "giá sỉ",
+   "src": "made"
+  },
+  {
+   "text": "Trang mua áo cổ vũ theo giá sỉ cho cả câu lạc bộ người hâm mộ.",
+   "en": "Trang bought cheer shirts at wholesale price for the whole fan club.",
+   "ko": "짱은 팬클럽 전체가 입을 응원 티셔츠를 도매가로 샀어요.",
+   "blank": "giá sỉ",
    "src": "made"
   }
  ],
@@ -32427,6 +32587,22 @@
    "src": "made"
   }
  ],
+ "w|giờ cao điểm": [
+  {
+   "text": "Đức rời thành phố từ sớm để tránh giờ cao điểm.",
+   "en": "Đức left the city early to avoid rush hour.",
+   "ko": "득은 출퇴근 시간을 피하려고 일찍 도시를 떠났어요.",
+   "blank": "giờ cao điểm",
+   "src": "made"
+  },
+  {
+   "text": "Trang đi tàu điện cho kịp vì đường phố lúc giờ cao điểm kẹt cứng.",
+   "en": "Trang took the metro to be on time because the streets are jammed at rush hour.",
+   "ko": "러시아워에 길이 꽉 막혀서 짱은 늦지 않으려고 지하철을 탔어요.",
+   "blank": "giờ cao điểm",
+   "src": "made"
+  }
+ ],
  "w|giờ giấc": [
   {
    "text": "Giữ giờ giấc giúp công việc suôn sẻ hơn.",
@@ -33024,6 +33200,22 @@
    "en": "Hà and the volunteers removed bird-trapping nets in the forest.",
    "ko": "하는 자원봉사자들과 함께 숲속 새 덫 그물을 걷어 냈어요.",
    "blank": "gỡ bỏ",
+   "src": "made"
+  }
+ ],
+ "w|gõ cửa": [
+  {
+   "text": "Đức gõ cửa nhà kiểm lâm để xin bản đồ đường mòn.",
+   "en": "Đức knocked on the ranger's door to ask for a trail map.",
+   "ko": "득은 산림 관리원 집 문을 두드려 등산로 지도를 부탁했어요.",
+   "blank": "gõ cửa",
+   "src": "made"
+  },
+  {
+   "text": "Trang gõ cửa phòng bạn từ sáng sớm để rủ đi xếp hàng.",
+   "en": "Trang knocked on her friend's door early in the morning to go queue together.",
+   "ko": "짱은 같이 줄 서러 가자고 이른 아침부터 친구 방문을 두드렸어요.",
+   "blank": "gõ cửa",
    "src": "made"
   }
  ],
@@ -36341,6 +36533,22 @@
    "en": "Peace is more precious than anything.",
    "ko": "평화는 무엇보다 소중해.",
    "blank": "Hòa bình"
+  }
+ ],
+ "w|hóa chất": [
+  {
+   "text": "Cá chết hàng loạt vì nhà máy xả hóa chất xuống sông.",
+   "en": "Fish died in large numbers because a factory dumped chemicals into the river.",
+   "ko": "공장이 강에 화학 물질을 버려서 물고기가 떼죽음을 당했어요.",
+   "blank": "hóa chất",
+   "src": "made"
+  },
+  {
+   "text": "Khói sân khấu được tạo từ hóa chất an toàn, Trang được nhân viên giải thích.",
+   "en": "The stage smoke is made from safe chemicals, a staff member explained to Trang.",
+   "ko": "직원은 무대 연기가 안전한 화학 물질로 만든다고 짱에게 설명했어요.",
+   "blank": "hóa chất",
+   "src": "made"
   }
  ],
  "w|hóa đơn": [
@@ -44565,6 +44773,22 @@
    "src": "made"
   }
  ],
+ "w|lạnh đi": [
+  {
+   "text": "Khi mặt trời khuất núi, không khí trong rừng lạnh đi rất nhanh.",
+   "en": "When the sun dips behind the mountain, the forest air cools very quickly.",
+   "ko": "해가 산 뒤로 넘어가면 숲속 공기가 아주 빨리 차가워져요.",
+   "blank": "lạnh đi",
+   "src": "made"
+  },
+  {
+   "text": "Đến nửa đêm, gió nổi lên làm không khí lạnh đi hẳn.",
+   "en": "By midnight the wind picked up and the air turned much colder.",
+   "ko": "자정이 되자 바람이 불어 공기가 확 차가워졌어요.",
+   "blank": "lạnh đi",
+   "src": "made"
+  }
+ ],
  "w|lạnh giá": [
   {
    "text": "Mùa đông, gió biển lạnh giá thổi suốt đêm.",
@@ -47783,6 +48007,22 @@
    "blank": "lúc đó"
   }
  ],
+ "w|lực hấp dẫn": [
+  {
+   "text": "Đức kể Newton tìm ra lực hấp dẫn khi thấy quả táo rơi.",
+   "en": "Đức said Newton discovered gravity when he saw an apple fall.",
+   "ko": "득은 뉴턴이 사과가 떨어지는 걸 보고 만유인력을 발견했다고 이야기했어요.",
+   "blank": "lực hấp dẫn",
+   "src": "made"
+  },
+  {
+   "text": "Theo Trang, giọng ca ấy có một lực hấp dẫn khó cưỡng.",
+   "en": "According to Trang, that voice has an irresistible pull.",
+   "ko": "짱은 그 목소리에 거부할 수 없는 끌림이 있다고 해요.",
+   "blank": "lực hấp dẫn",
+   "src": "made"
+  }
+ ],
  "w|lúc nào": [
   {
    "text": "Lúc nào cũng được, tùy cậu.",
@@ -49557,6 +49797,38 @@
    "en": "Don't look straight at the sun.",
    "ko": "해를 똑바로 보지 마.",
    "blank": "mặt trời"
+  }
+ ],
+ "w|mặt trời lặn": [
+  {
+   "text": "Cảnh mặt trời lặn sau rặng núi làm Đức đứng lặng hồi lâu.",
+   "en": "The sunset behind the mountain range left Đức standing in silence for a long time.",
+   "ko": "산줄기 뒤로 지는 해를 보며 득은 한참을 말없이 서 있었어요.",
+   "blank": "mặt trời lặn",
+   "src": "made"
+  },
+  {
+   "text": "Buổi diễn bắt đầu đúng lúc mặt trời lặn, trời chuyển màu cam.",
+   "en": "The show started right at sunset, as the sky turned orange.",
+   "ko": "공연은 해가 질 무렵 하늘이 주황빛으로 물들 때 시작했어요.",
+   "blank": "mặt trời lặn",
+   "src": "made"
+  }
+ ],
+ "w|mặt trời mọc": [
+  {
+   "text": "Đức chèo thuyền ra giữa sông để chụp cảnh mặt trời mọc.",
+   "en": "Đức rowed to the middle of the river to photograph the sunrise.",
+   "ko": "득은 해돋이를 찍으려고 배를 저어 강 한가운데로 나갔어요.",
+   "blank": "mặt trời mọc",
+   "src": "made"
+  },
+  {
+   "text": "Bài hát về cảnh mặt trời mọc trên biển làm Trang rưng rưng.",
+   "en": "The song about sunrise over the sea brought Trang to tears.",
+   "ko": "바다 위 해돋이를 노래한 곡에 짱은 눈시울이 붉어졌어요.",
+   "blank": "mặt trời mọc",
+   "src": "made"
   }
  ],
  "w|mặt trước": [
@@ -51896,6 +52168,22 @@
    "en": "The close-up photo of a tiger's claws in Trang's article amazed readers.",
    "ko": "짱의 기사에 실린 호랑이 발톱 근접 사진에 독자들이 감탄했어요.",
    "blank": "móng vuốt",
+   "src": "made"
+  }
+ ],
+ "w|móp méo": [
+  {
+   "text": "Đức nhặt được một chiếc lon móp méo trôi dạt vào bờ sông.",
+   "en": "Đức picked up a dented can that had drifted onto the riverbank.",
+   "ko": "득은 강가로 떠밀려 온 찌그러진 캔 하나를 주웠어요.",
+   "blank": "móp méo",
+   "src": "made"
+  },
+  {
+   "text": "Chiếc đèn cổ vũ của Trang bị dẫm móp méo trong đám đông.",
+   "en": "Trang's light stick got trampled and dented in the crowd.",
+   "ko": "짱의 응원봉이 사람들 틈에서 밟혀 찌그러졌어요.",
+   "blank": "móp méo",
    "src": "made"
   }
  ],
@@ -58539,6 +58827,22 @@
    "src": "made"
   }
  ],
+ "w|nguyên tử": [
+  {
+   "text": "Thầy giáo giải thích với Đức rằng nước được tạo từ các nguyên tử hydro và oxy.",
+   "en": "The teacher explained to Đức that water is made of hydrogen and oxygen atoms.",
+   "ko": "선생님은 물이 수소와 산소 원자로 이루어진다고 득에게 설명했어요.",
+   "blank": "nguyên tử",
+   "src": "made"
+  },
+  {
+   "text": "Trên màn hình lớn hiện hình các nguyên tử xoay tròn theo nhịp nhạc.",
+   "en": "The big screen showed atoms spinning in time with the music.",
+   "ko": "대형 스크린에 원자들이 음악에 맞춰 빙글빙글 도는 영상이 나왔어요.",
+   "blank": "nguyên tử",
+   "src": "made"
+  }
+ ],
  "w|nguyên vẹn": [
   {
    "text": "Dù rơi xuống suối, chiếc máy ảnh của Đức vẫn còn nguyên vẹn.",
@@ -58568,6 +58872,22 @@
    "en": "Linh wants to keep the star fruit tree in the yard because it was her grandmother's wish before she passed away.",
    "ko": "린은 마당 스타프루트 나무를 남기고 싶어요, 할머니가 돌아가시기 전에 바라셨거든요.",
    "blank": "nguyện vọng",
+   "src": "made"
+  }
+ ],
+ "w|nguyệt thực": [
+  {
+   "text": "Đêm có nguyệt thực, cả bản kéo nhau ra bờ sông xem trăng.",
+   "en": "On the night of the lunar eclipse, the whole village went out to the riverbank to watch the moon.",
+   "ko": "월식이 있던 밤 온 마을이 강가에 나와 달을 봤어요.",
+   "blank": "nguyệt thực",
+   "src": "made"
+  },
+  {
+   "text": "Trang kể đêm hòa nhạc năm ngoái trùng với nguyệt thực, cả sân ngước nhìn trời.",
+   "en": "Trang said last year's concert coincided with a lunar eclipse, and the whole crowd looked up.",
+   "ko": "짱은 작년 콘서트가 월식과 겹쳐서 관객 모두가 하늘을 올려다봤다고 했어요.",
+   "blank": "nguyệt thực",
    "src": "made"
   }
  ],
@@ -59791,6 +60111,22 @@
    "src": "made"
   }
  ],
+ "w|nhân tạo": [
+  {
+   "text": "Ven rừng có một hồ nhân tạo do người dân đào để giữ nước.",
+   "en": "At the forest's edge there's an artificial lake dug by locals to hold water.",
+   "ko": "숲 가장자리에 주민들이 물을 모으려고 판 인공 호수가 있어요.",
+   "blank": "nhân tạo",
+   "src": "made"
+  },
+  {
+   "text": "Sân khấu có một thác nước nhân tạo chảy xuống sau lưng ca sĩ.",
+   "en": "The stage had an artificial waterfall flowing down behind the singer.",
+   "ko": "무대 뒤편에는 가수 뒤로 흘러내리는 인공 폭포가 있었어요.",
+   "blank": "nhân tạo",
+   "src": "made"
+  }
+ ],
  "w|nhận thấy": [
   {
    "text": "Tuấn nhận thấy công nhân hay mệt vào giữa ca chiều.",
@@ -60321,6 +60657,22 @@
    "src": "made"
   }
  ],
+ "w|nhật thực": [
+  {
+   "text": "Năm ngoái Đức cắm trại bên sông đúng hôm có nhật thực.",
+   "en": "Last year Đức camped by the river on the very day of a solar eclipse.",
+   "ko": "작년에 득은 마침 일식이 있던 날 강가에서 야영했어요.",
+   "blank": "nhật thực",
+   "src": "made"
+  },
+  {
+   "text": "Ban nhạc đặt tên tour diễn theo một lần nhật thực họ từng xem.",
+   "en": "The band named their tour after a solar eclipse they once watched.",
+   "ko": "밴드는 예전에 본 일식을 따서 투어 이름을 지었어요.",
+   "blank": "nhật thực",
+   "src": "made"
+  }
+ ],
  "w|nhất trí": [
   {
    "text": "Cả toa đều nhất trí tắt đèn sớm để ngủ, Minh cũng đồng ý.",
@@ -60689,6 +61041,22 @@
    "en": "The temperature in the room is quite comfortable.",
    "ko": "방 안 온도가 꽤 쾌적해.",
    "blank": "Nhiệt độ"
+  }
+ ],
+ "w|nhiệt đới": [
+  {
+   "text": "Khu rừng nhiệt đới này là nhà của hàng trăm loài chim.",
+   "en": "This tropical forest is home to hundreds of bird species.",
+   "ko": "이 열대 숲은 수백 종의 새가 사는 곳이에요.",
+   "blank": "nhiệt đới",
+   "src": "made"
+  },
+  {
+   "text": "Buổi hòa nhạc ngoài trời giữa cái nóng nhiệt đới khiến Trang ướt đẫm mồ hôi.",
+   "en": "The outdoor concert in the tropical heat left Trang drenched in sweat.",
+   "ko": "열대의 더위 속 야외 콘서트에 짱은 땀으로 흠뻑 젖었어요.",
+   "blank": "nhiệt đới",
+   "src": "made"
   }
  ],
  "w|nhiệt huyết": [
@@ -62689,6 +63057,22 @@
    "src": "made"
   }
  ],
+ "w|nóng lên": [
+  {
+   "text": "Khi khí hậu nóng lên, mực nước sông ở đây ngày càng thấp.",
+   "en": "As the climate warms, the river level here keeps dropping.",
+   "ko": "기후가 더워지면서 이곳 강 수위가 점점 낮아지고 있어요.",
+   "blank": "nóng lên",
+   "src": "made"
+  },
+  {
+   "text": "Không khí sân vận động nóng lên khi ca sĩ chính bước ra.",
+   "en": "The stadium atmosphere heated up when the lead singer stepped out.",
+   "ko": "리드 싱어가 나오자 경기장 분위기가 달아올랐어요.",
+   "blank": "nóng lên",
+   "src": "made"
+  }
+ ],
  "w|nóng lên toàn cầu": [
   {
    "text": "Hồ nước nơi Phong cắm trại hồi nhỏ giờ cạn gần hết, ai cũng nói là do nóng lên toàn cầu.",
@@ -63398,6 +63782,22 @@
    "en": "Remember to bring drinking water when you go hiking.",
    "ko": "등산 갈 때 마실 물 챙겨.",
    "blank": "nước uống",
+   "src": "made"
+  }
+ ],
+ "w|nước xả vải": [
+  {
+   "text": "Đức nhắc mọi người không dùng nước xả vải khi giặt đồ ở suối.",
+   "en": "Đức reminded everyone not to use fabric softener when washing clothes in the stream.",
+   "ko": "득은 개울에서 빨래할 때 섬유유연제를 쓰지 말라고 모두에게 일렀어요.",
+   "blank": "nước xả vải",
+   "src": "made"
+  },
+  {
+   "text": "Trang giặt chiếc áo của ban nhạc với nước xả vải cho thơm.",
+   "en": "Trang washed her band shirt with fabric softener to make it smell nice.",
+   "ko": "짱은 밴드 티셔츠를 향긋하게 하려고 섬유유연제를 넣어 빨았어요.",
+   "blank": "nước xả vải",
    "src": "made"
   }
  ],
@@ -65059,6 +65459,22 @@
    "src": "made"
   }
  ],
+ "w|phân tử": [
+  {
+   "text": "Đức tò mò không biết mùi hoa rừng do phân tử nào tạo ra.",
+   "en": "Đức wondered which molecules create the scent of the forest flowers.",
+   "ko": "득은 숲 꽃향기가 어떤 분자에서 나오는지 궁금했어요.",
+   "blank": "phân tử",
+   "src": "made"
+  },
+  {
+   "text": "Trang đùa rằng từng phân tử trong người cô đều nhảy theo điệu nhạc.",
+   "en": "Trang joked that every molecule in her body was dancing to the music.",
+   "ko": "짱은 몸속 분자 하나하나가 음악에 맞춰 춤춘다고 농담했어요.",
+   "blank": "phân tử",
+   "src": "made"
+  }
+ ],
  "w|phản ứng": [
   {
    "text": "Khi chuông báo cháy bất ngờ kêu, Hùng chưa biết phải phản ứng ra sao.",
@@ -66526,6 +66942,22 @@
    "en": "An architecture magazine reporter asks Mai if he can photograph the house.",
    "ko": "건축 잡지 기자가 마이에게 집 사진을 찍어도 되는지 물어요.",
    "blank": "phóng viên",
+   "src": "made"
+  }
+ ],
+ "w|phóng xạ": [
+  {
+   "text": "Biển báo cảnh báo khu mỏ cũ trong rừng còn nhiễm phóng xạ.",
+   "en": "A sign warns that the old mine in the forest is still contaminated with radiation.",
+   "ko": "표지판은 숲속 옛 광산이 아직 방사능에 오염돼 있다고 경고해요.",
+   "blank": "phóng xạ",
+   "src": "made"
+  },
+  {
+   "text": "Trang đọc nhạc sĩ viết bài hát mới sau khi xem phim về một tai nạn phóng xạ.",
+   "en": "Trang read that the songwriter wrote the new song after watching a film about a radiation accident.",
+   "ko": "짱은 작곡가가 방사능 사고 영화를 보고 새 곡을 썼다는 기사를 읽었어요.",
+   "blank": "phóng xạ",
    "src": "made"
   }
  ],
@@ -68482,6 +68914,22 @@
    "en": "The coach's advice was a precious lesson for Hương.",
    "ko": "감독님의 조언은 흐엉에게 소중한 교훈이었어요.",
    "blank": "quý báu",
+   "src": "made"
+  }
+ ],
+ "w|quỹ đạo": [
+  {
+   "text": "Đức giải thích cho cháu rằng Mặt Trăng quay quanh Trái Đất theo một quỹ đạo.",
+   "en": "Đức explained to his nephew that the Moon circles the Earth in an orbit.",
+   "ko": "득은 조카에게 달이 궤도를 따라 지구를 돈다고 설명했어요.",
+   "blank": "quỹ đạo",
+   "src": "made"
+  },
+  {
+   "text": "Sau buổi diễn này, sự nghiệp của ban nhạc như được đưa vào quỹ đạo mới.",
+   "en": "After this show, the band's career seemed launched into a new orbit.",
+   "ko": "이번 공연 이후 밴드의 활동은 새 궤도에 오른 것 같았어요.",
+   "blank": "quỹ đạo",
    "src": "made"
   }
  ],
@@ -71541,6 +71989,22 @@
    "src": "made"
   }
  ],
+ "w|sao chổi": [
+  {
+   "text": "Đức mang ống nhòm vào rừng hy vọng thấy được sao chổi.",
+   "en": "Đức brought binoculars into the forest hoping to see the comet.",
+   "ko": "득은 혜성을 볼 수 있을까 해서 쌍안경을 들고 숲에 갔어요.",
+   "blank": "sao chổi",
+   "src": "made"
+  },
+  {
+   "text": "Ánh đèn lướt qua khán đài như một ngôi sao chổi, Trang reo lên.",
+   "en": "The light swept across the stands like a comet, and Trang cheered.",
+   "ko": "조명이 혜성처럼 관중석을 스치자 짱은 환호했어요.",
+   "blank": "sao chổi",
+   "src": "made"
+  }
+ ],
  "w|sao lại": [
   {
    "text": "Nam hỏi cậu bé sao lại trèo cây cao thế để đến nỗi gãy tay.",
@@ -71830,6 +72294,22 @@
    "en": "Hà tells her friends about her daughter raising a caterpillar until it turns into a butterfly.",
    "ko": "하는 딸이 나비가 될 때까지 애벌레를 키운 이야기를 친구들에게 해요.",
    "blank": "sâu bướm",
+   "src": "made"
+  }
+ ],
+ "w|sau cùng": [
+  {
+   "text": "Đi bộ suốt ngày, sau cùng Đức cũng tới được thác nước.",
+   "en": "After walking all day, Đức finally reached the waterfall.",
+   "ko": "하루 종일 걸어서 득은 마침내 폭포에 도착했어요.",
+   "blank": "sau cùng",
+   "src": "made"
+  },
+  {
+   "text": "Ban nhạc chơi bảy bài, sau cùng là bài hát Trang mong nhất.",
+   "en": "The band played seven songs, and the last was the one Trang was waiting for most.",
+   "ko": "밴드가 일곱 곡을 불렀는데 마지막이 짱이 가장 기다리던 노래였어요.",
+   "blank": "sau cùng",
    "src": "made"
   }
  ],
@@ -79487,6 +79967,22 @@
    "blank": "Thiên đường"
   }
  ],
+ "w|thiên hà": [
+  {
+   "text": "Nằm trên bãi cỏ bên sông, Đức nghĩ về những thiên hà xa xôi.",
+   "en": "Lying on the grass by the river, Đức thought about distant galaxies.",
+   "ko": "강가 풀밭에 누워 득은 먼 은하들을 생각했어요.",
+   "blank": "thiên hà",
+   "src": "made"
+  },
+  {
+   "text": "Sân khấu được trang trí như một thiên hà lấp lánh ánh sao.",
+   "en": "The stage was decorated like a galaxy sparkling with stars.",
+   "ko": "무대는 별빛이 반짝이는 은하처럼 꾸며져 있었어요.",
+   "blank": "thiên hà",
+   "src": "made"
+  }
+ ],
  "w|thiên nga": [
   {
    "text": "Phong ngạc nhiên khi thấy đôi thiên nga bơi trong đầm nước lợ.",
@@ -79530,6 +80026,22 @@
    "en": "The head chef says Lan isn't a genius, just the hardest worker in the kitchen.",
    "ko": "주방장은 란이 천재가 아니라 주방에서 가장 부지런한 사람일 뿐이라고 해요.",
    "blank": "thiên tài",
+   "src": "made"
+  }
+ ],
+ "w|thiên thạch": [
+  {
+   "text": "Người trong bản tin rằng hồ nước giữa rừng do thiên thạch rơi tạo thành.",
+   "en": "The villagers believe the lake in the forest was formed by a falling meteorite.",
+   "ko": "마을 사람들은 숲속 호수가 운석이 떨어져 생겼다고 믿어요.",
+   "blank": "thiên thạch",
+   "src": "made"
+  },
+  {
+   "text": "Album mới của ban nhạc Trang thích lấy cảm hứng từ một trận mưa thiên thạch.",
+   "en": "The new album by Trang's favorite band was inspired by a meteor shower.",
+   "ko": "짱이 좋아하는 밴드의 새 앨범은 유성우에서 영감을 받았어요.",
+   "blank": "thiên thạch",
    "src": "made"
   }
  ],
@@ -83891,6 +84403,22 @@
    "blank": "tiểu thuyết"
   }
  ],
+ "w|tiêu tiền": [
+  {
+   "text": "Ở trong rừng cả tuần, Đức chẳng có chỗ nào để tiêu tiền.",
+   "en": "Staying in the forest for a week, Đức had nowhere to spend money.",
+   "ko": "숲에서 일주일 지내는 동안 득은 돈 쓸 곳이 하나도 없었어요.",
+   "blank": "tiêu tiền",
+   "src": "made"
+  },
+  {
+   "text": "Trang tiết kiệm cả tháng, không dám tiêu tiền để mua vé hàng đầu.",
+   "en": "Trang saved all month, not daring to spend money, to buy a front-row ticket.",
+   "ko": "짱은 맨 앞줄 표를 사려고 한 달 내내 돈을 안 쓰고 아꼈어요.",
+   "blank": "tiêu tiền",
+   "src": "made"
+  }
+ ],
  "w|tim": [
   {
    "text": "Tim mình đập nhanh quá.",
@@ -86081,6 +86609,22 @@
    "blank": "trạm"
   }
  ],
+ "w|trạm thu phí": [
+  {
+   "text": "Xe của Đức dừng ở trạm thu phí trước khi vào vườn quốc gia.",
+   "en": "Đức's car stopped at the toll booth before entering the national park.",
+   "ko": "득의 차는 국립공원에 들어가기 전에 요금소에서 멈췄어요.",
+   "blank": "trạm thu phí",
+   "src": "made"
+  },
+  {
+   "text": "Xe chở Trang kẹt cứng ở trạm thu phí trên đường tới buổi hòa nhạc.",
+   "en": "Trang's car was stuck at the toll booth on the way to the concert.",
+   "ko": "짱이 탄 차는 콘서트 가는 길에 요금소에서 꼼짝도 못 했어요.",
+   "blank": "trạm thu phí",
+   "src": "made"
+  }
+ ],
  "w|trầm tính": [
   {
    "text": "Tuấn vốn trầm tính nên ngày đầu chỉ ngồi lặng lẽ quan sát.",
@@ -87469,6 +88013,22 @@
    "blank": "trong lúc"
   }
  ],
+ "w|trọng lực": [
+  {
+   "text": "Thác nước đổ xuống mạnh mẽ nhờ trọng lực, Đức nói với bọn trẻ.",
+   "en": "The waterfall pours down powerfully because of gravity, Đức told the kids.",
+   "ko": "득은 폭포가 중력 때문에 세차게 떨어진다고 아이들에게 말했어요.",
+   "blank": "trọng lực",
+   "src": "made"
+  },
+  {
+   "text": "Màn nhào lộn trên không như bất chấp trọng lực khiến Trang há hốc miệng.",
+   "en": "The aerial acrobatics seemed to defy gravity, leaving Trang open-mouthed.",
+   "ko": "중력을 거스르는 듯한 공중 곡예에 짱은 입을 다물지 못했어요.",
+   "blank": "trọng lực",
+   "src": "made"
+  }
+ ],
  "w|trống rỗng": [
   {
    "text": "Căn phòng trống rỗng sau khi dọn hết đồ.",
@@ -88013,6 +88573,22 @@
    "src": "made"
   }
  ],
+ "w|trung thu": [
+  {
+   "text": "Đêm Trung thu, Đức cùng bọn trẻ trong bản thả đèn trôi sông.",
+   "en": "On Mid-Autumn night, Đức floated lanterns down the river with the village kids.",
+   "ko": "추석날 밤 득은 마을 아이들과 함께 강에 등을 띄웠어요.",
+   "blank": "Trung thu",
+   "src": "made"
+  },
+  {
+   "text": "Buổi hòa nhạc diễn ra đúng đêm Trung thu nên trăng rất sáng.",
+   "en": "The concert took place on Mid-Autumn night, so the moon was very bright.",
+   "ko": "콘서트가 추석날 밤에 열려서 달이 아주 밝았어요.",
+   "blank": "Trung thu",
+   "src": "made"
+  }
+ ],
  "w|trung thực": [
   {
    "text": "Mình thích người trung thực.",
@@ -88146,6 +88722,22 @@
    "en": "Thảo heard that this hotel used to be just a row of wooden houses for fishermen.",
    "ko": "타오는 이 호텔이 예전에는 어부들을 위한 나무집 몇 채에 불과했다고 들었어요.",
    "blank": "trước kia",
+   "src": "made"
+  }
+ ],
+ "w|trước tiên": [
+  {
+   "text": "Hướng dẫn viên bảo Đức trước tiên phải kiểm tra dây buộc thuyền.",
+   "en": "The guide told Đức that first he must check the boat's mooring rope.",
+   "ko": "가이드는 득에게 먼저 배를 묶은 줄부터 확인하라고 했어요.",
+   "blank": "trước tiên",
+   "src": "made"
+  },
+  {
+   "text": "Vào cổng, Trang trước tiên đi tìm quầy bán áo của ban nhạc.",
+   "en": "At the gate, Trang first went looking for the band's merch stand.",
+   "ko": "입구에 들어서자 짱은 먼저 밴드 굿즈 판매대를 찾았어요.",
+   "blank": "trước tiên",
    "src": "made"
   }
  ],
@@ -89031,6 +89623,22 @@
    "src": "made"
   }
  ],
+ "w|từ trường": [
+  {
+   "text": "Đức đọc rằng chim di cư dựa vào từ trường Trái Đất để tìm đường.",
+   "en": "Đức read that migratory birds rely on the Earth's magnetic field to find their way.",
+   "ko": "득은 철새들이 지구 자기장에 기대 길을 찾는다는 글을 읽었어요.",
+   "blank": "từ trường",
+   "src": "made"
+  },
+  {
+   "text": "Ban tổ chức dặn khán giả tránh để điện thoại gần nam châm loa vì từ trường mạnh.",
+   "en": "The organizers warned the audience to keep phones away from the speaker magnets because of the strong magnetic field.",
+   "ko": "주최 측은 자기장이 강하니 휴대폰을 스피커 자석 가까이 두지 말라고 관객에게 당부했어요.",
+   "blank": "từ trường",
+   "src": "made"
+  }
+ ],
  "w|từ từ": [
   {
    "text": "Từ từ đã, đừng vội.",
@@ -89797,6 +90405,22 @@
    "src": "made"
   }
  ],
+ "w|tướng quân": [
+  {
+   "text": "Người dân kể ngọn núi bên sông mang tên một tướng quân thời xưa.",
+   "en": "Locals say the mountain by the river is named after an ancient general.",
+   "ko": "주민들은 강가의 산이 옛 장군의 이름을 땄다고 해요.",
+   "blank": "tướng quân",
+   "src": "made"
+  },
+  {
+   "text": "Ca sĩ mặc bộ giáp như một tướng quân trong tiết mục mở màn.",
+   "en": "The singer wore armor like a general for the opening number.",
+   "ko": "가수는 오프닝 무대에서 장군처럼 갑옷을 입었어요.",
+   "blank": "tướng quân",
+   "src": "made"
+  }
+ ],
  "w|tương tự": [
   {
    "text": "Phong nhận ra hai bài báo có lập luận tương tự nhau đến lạ.",
@@ -90482,6 +91106,22 @@
    "en": "Hà is surprised that the garden corner behind the classroom is now overgrown with grass.",
    "ko": "하는 교실 뒤 정원 구석에 풀이 무성하게 자란 걸 보고 놀라요.",
    "blank": "um tùm",
+   "src": "made"
+  }
+ ],
+ "w|ùn tắc": [
+  {
+   "text": "Mưa lũ gây ùn tắc trên con đường duy nhất vào rừng.",
+   "en": "The floods caused congestion on the only road into the forest.",
+   "ko": "폭우로 숲으로 들어가는 유일한 길이 꽉 막혔어요.",
+   "blank": "ùn tắc",
+   "src": "made"
+  },
+  {
+   "text": "Tan buổi diễn, cả khu phố xảy ra ùn tắc gần hai tiếng.",
+   "en": "After the show, the whole area was gridlocked for nearly two hours.",
+   "ko": "공연이 끝나자 그 일대가 두 시간 가까이 꽉 막혔어요.",
+   "blank": "ùn tắc",
    "src": "made"
   }
  ],
