@@ -24,6 +24,7 @@
 │          [Logbank 하늘] studyMap/Logbank
 │              오늘 카드 최대 셋(studyMap/TodayCards — 다시 학습 n · 막힌 것 · 써 보기 · 새로 학습 n, 고르기 curriculum/todayCards.ts, 0단계면 오늘의 글자 묶음)
 │                → 누르면 Quizbank가 그 열쇠부터(curriculum/quizFocus.ts) · 써 보기 → 📞 통화(practice) · 글자 → Languagebank 글자 칸(curriculum/lettersOpen.ts)
+│              📏 실력 확인(Logbank SkillChecks — 14일마다 ▶ 밝음 → FirstCheck recheck, 표 = 확인마다 🔤·💬·📐 + 🗣 말하기, curriculum/skillCheck.ts · skillCheck.v1 이 폰)
 │              튜터 숙제 줄 · 📞 수업 줄(startCall lesson)
 │              [주 | 월] ‹기간› → 배운 것 표(Learned — 🔤 단어 · 📐 문법 · 💬 표현 · 🧩 문장구조 × 학습 · 활용, curriculum/growthView.ts)
 │                · ↺ 다시 맞힘 · ✎✓ 고쳐 씀(curriculum/growthLines.ts) · 📞 통화(CallResultCard) · 학습 곡선(curriculum/learnedView.ts) · 대화 비교(TalkCompare)

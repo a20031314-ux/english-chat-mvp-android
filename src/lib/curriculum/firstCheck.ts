@@ -268,9 +268,13 @@ export const STAGE_PASS = 2;
 export type ClimbLane = { stage: number; passed: number; right: number; wrong: number; stopped: boolean };
 export type Climb = { lanes: Record<ClimbKind, ClimbLane>; asked: number; turn: ClimbKind };
 
-export function startClimb(has: Record<ClimbKind, boolean>): Climb {
-  const lane = (on: boolean): ClimbLane => ({ stage: 1, passed: 0, right: 0, wrong: 0, stopped: !on });
-  return { lanes: { expression: lane(has.expression), grammar: lane(has.grammar) }, asked: 0, turn: has.grammar && !has.expression ? "grammar" : "expression" };
+/** start = 종류별 시작 단계(다시 측정 — skillCheck.ts climbFrom, 아래 단계는 넘은 것으로). 없으면 1단계부터. */
+export function startClimb(has: Record<ClimbKind, boolean>, start?: Partial<Record<ClimbKind, number>>): Climb {
+  const lane = (on: boolean, from = 1): ClimbLane => {
+    const stage = Math.max(1, Math.min(STAGES, Math.round(from)));
+    return { stage, passed: stage - 1, right: 0, wrong: 0, stopped: !on };
+  };
+  return { lanes: { expression: lane(has.expression, start?.expression), grammar: lane(has.grammar, start?.grammar) }, asked: 0, turn: has.grammar && !has.expression ? "grammar" : "expression" };
 }
 
 /** 다음에 물을 종류·단계(끝이면 null). */

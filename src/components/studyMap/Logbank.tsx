@@ -35,6 +35,9 @@ import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
 import { cardHistory, knowTag, knowTagLabel, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
+import { FirstCheck } from "@/components/studyMap/FirstCheck";
+import { readFirstCheck, wordsAbout } from "@/lib/curriculum/firstCheck";
+import { checkHistory, checkRows, readRechecks, recheckDue, type CheckRow } from "@/lib/curriculum/skillCheck";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
 import { quizGloss } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
@@ -321,6 +324,7 @@ export function Logbank({
   return (
     <div data-logbank className="flex flex-col gap-3">
       <TodayCards ui={ui} language={language} locale={locale} />
+      <SkillChecks ui={ui} locale={locale} language={language} ledger={ledger} />
       {head}
       <section data-log-period={kind} className="flex flex-col gap-3 rounded-xl border border-line p-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1498,5 +1502,102 @@ function LearnCurve({ ui, amounts, known, dateLabel, onDay }: { ui: UICopy; amou
         </p>
       ) : null}
     </figure>
+  );
+}
+
+/**
+ * 실력 확인(2026-11-09 — 2주마다 다시 측정, lib/curriculum/skillCheck.ts): 줄마다 그날 · 🔤 단어 어림 · 💬 표현 단계 · 📐 문법 단계 · 🗣 말하기(그 전 2주 대화에서 맞게 쓴 수).
+ * 어휘·표현·문법은 시험(FirstCheck recheck), 말하기는 장부 — 앎·말하기 분리. 때가 되면 ▶가 밝음, 언제든 누를 수 있음.
+ */
+function SkillChecks({ ui, locale, language, ledger }: { ui: UICopy; locale: string; language: string; ledger: readonly LogEvent[] }) {
+  const [tick, setTick] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [now] = useState(() => Date.now());
+  const history = useMemo(() => {
+    void tick;
+    return checkHistory(readFirstCheck(language), readRechecks(language));
+  }, [language, tick]);
+  const rows = useMemo(() => checkRows(history, ledger).slice(0, 6), [history, ledger]);
+  const due = recheckDue(history, now);
+  const date = useMemo(() => {
+    try {
+      return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" });
+    } catch {
+      return new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric" });
+    }
+  }, [locale]);
+  const tone = (row: CheckRow, i: number, pick: (one: CheckRow) => number) => {
+    const before = rows[i + 1];
+    if (!before) return "text-slate-300";
+    const delta = pick(row) - pick(before);
+    return delta > 0 ? "font-semibold text-good" : delta < 0 ? "text-bad" : "text-slate-300";
+  };
+  const cols: { icon: string; label: string; pick: (one: CheckRow) => number; text: (one: CheckRow) => string }[] = [
+    { icon: "🔤", label: ui.partVocab, pick: (one) => wordsAbout(one.b), text: (one) => `~${wordsAbout(one.b).toLocaleString(locale)}` },
+    { icon: "💬", label: ui.partExpression, pick: (one) => one.expression, text: (one) => String(one.expression) },
+    { icon: "📐", label: ui.partGrammar, pick: (one) => one.grammar, text: (one) => String(one.grammar) },
+    { icon: "🗣", label: ui.selfFocusSpeaking, pick: (one) => one.talk, text: (one) => String(one.talk) },
+  ];
+  return (
+    <section data-skill-checks={due ? "due" : "ok"} className="flex flex-col gap-2 rounded-xl border border-line p-3">
+      <div className="flex items-center justify-between gap-2">
+        <h3 className="text-note font-semibold text-ink">📏 {ui.skillCheckTitle}</h3>
+        <button
+          type="button"
+          data-skill-check-start
+          onClick={() => setOpen(true)}
+          aria-label={ui.skillCheckTitle}
+          title={ui.skillCheckTitle}
+          className={due ? "tb-btn rounded-full px-4 py-1 text-caption font-semibold" : "rounded-full border border-line px-3 py-1 text-caption text-slate-400 hover:bg-white/10"}
+        >
+          ▶
+        </button>
+      </div>
+      {rows.length ? (
+        <table data-skill-check-table className="w-full text-note tabular-nums">
+          <thead>
+            <tr className="text-caption text-slate-400">
+              <th className="py-1 text-start font-normal" />
+              {cols.map((col) => (
+                <th key={col.icon} scope="col" aria-label={col.label} title={col.label} className="py-1 text-end font-normal">
+                  {col.icon}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr key={row.at} className="border-t border-line">
+                <td className="py-1.5 text-start text-caption text-slate-400">{date.format(row.at)}</td>
+                {cols.map((col) => (
+                  <td key={col.icon} className={`py-1.5 text-end ${tone(row, i, col.pick)}`}>
+                    {col.text(row)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : null}
+      {open ? (
+        <FullScreenLayer>
+          <div className="contents" onClick={(event) => event.stopPropagation()}>
+            <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-6 pt-[max(1rem,env(safe-area-inset-top))]">
+              <FirstCheck
+                ui={ui}
+                locale={locale}
+                language={language}
+                recheck={{ last: history[history.length - 1] ?? null }}
+                onSkip={() => setOpen(false)}
+                onDone={() => {
+                  setOpen(false);
+                  setTick((n) => n + 1);
+                }}
+              />
+            </div>
+          </div>
+        </FullScreenLayer>
+      ) : null}
+    </section>
   );
 }

@@ -5,7 +5,7 @@
 > **쓰는 탭**은 코드에서 자동(`node scripts/scope.mjs <기능 id>`로 파일까지) — 둘 이상인 기능을 고치면 끝내기 훅이 그 탭들에 확인 요청을 만들게 한다(`hub/chat/ASKS.md`).
 > 기능을 빼면 줄을 지우고 코드·문구 14개 언어·사용법·문서를 같은 커밋에서 지운다. 옛 앱이 쓰는 서버만 "옛 앱 전용"으로 남기고 지울 조건을 적는다.
 
-## 지금 앱 (40)
+## 지금 앱 (41)
 
 ### 앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법
 
@@ -80,7 +80,8 @@
 
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
-| 첫 측정 | 학습 언어로 처음 My를 열면 — 글자 → 낱말 예/아니오 → 뜻 → 표현·문법 → 시작 단계(건너뛰기 = 1단계) | 2 My · 3 AI | `components/studyMap/FirstCheck.tsx` · `lib/curriculum/firstCheck.ts` | 단계 고르기(대화 예시) · 실력 확인 시험 · 초급·중급·고급 체크 |
+| 첫 측정 | 학습 언어로 처음 My를 열면 — 글자 → 낱말 예/아니오 → 뜻 → 표현·문법 → 시작 단계(건너뛰기 = 1단계) | 2 My · 3 AI | `components/studyMap/FirstCheck.tsx` · `lib/curriculum/firstCheck.ts` | 단계 고르기(대화 예시) · 단계 오르내리기 시험(PlacementPlayer) · 초급·중급·고급 체크 |
+| 실력 확인 `skillCheckTitle` | Logbank 📏 칸 — 14일마다 ▶ 밝음 → 첫 측정과 같은 시험(글자 없음, 오르기 지난번 −1단계부터) → 지난번 → 이번, 표는 확인마다 단어·표현·문법 + 말하기(그 전 2주 대화에서 맞게 쓴 수, 장부) | 2 My | `lib/curriculum/skillCheck.ts` · `components/studyMap/FirstCheck.tsx` |  |
 | Logbank `logbankTitle` | My 첫 칸 — 오늘 카드 · 배운 것 표 · 학습 곡선 · 그날 세부 = 학습 타임라인(%·띠·육각형 없음) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/studyMap/Logbank.tsx` · `lib/curriculum/logLedger.ts` | 복습 칸 · 📈 실력 기록 · 이번 주 확인 · 띠·육각형 %·부족한 점 |
 | 오늘 카드 `lbToday` (화면: 오늘) | Logbank 맨 위 최대 셋 — 다시 학습 n · 막힌 것 · 써 보기 · 새로 학습 n(0단계면 오늘의 글자 묶음) | 1 메인 · 2 My · 3 AI | `components/studyMap/TodayCards.tsx` · `lib/curriculum/todayCards.ts` | 오늘 할 것(Stagebank) · 다음 추천 |
 | 학습 타임라인 | Logbank 그날 세부 — 학습 시간(10분 쉼으로 끊음) → 요소별 카드 → 카드 지난 기록 | 1 메인 · 2 My · 3 AI | `lib/curriculum/studyTimeline.ts` |  |
