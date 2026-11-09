@@ -1207,6 +1207,22 @@
    "src": "made"
   }
  ],
+ "w|กลบ": [
+  {
+   "text": "เสียงรถบนถนนดังกลบเสียงประกาศของเจ้าหน้าที่",
+   "en": "The traffic noise drowned out the official's announcement.",
+   "ko": "도로의 차 소리가 직원의 안내 방송을 묻어 버렸어요.",
+   "blank": "กลบ",
+   "src": "made"
+  },
+  {
+   "text": "เสียงเครื่องปรับอากาศดังกลบเสียงคุยในห้องประชุม",
+   "en": "The air conditioner was loud enough to drown out the talking in the meeting room.",
+   "ko": "에어컨 소리가 회의실 대화 소리를 묻어 버렸어요.",
+   "blank": "กลบ",
+   "src": "made"
+  }
+ ],
  "w|กลม": [
   {
    "text": "ลูกบอลใบนี้กลมสวย",
@@ -2235,6 +2251,22 @@
    "en": "The outer cabbage leaves are too tough.",
    "ko": "양배추 겉잎이 너무 질겨.",
    "blank": "กะหล่ำปลี"
+  }
+ ],
+ "w|กักขัง": [
+  {
+   "text": "ชัยอ่านรายงานเรื่องสุนัขจรจัดที่ถูกกักขังในศูนย์พักพิง",
+   "en": "Chai read a report on stray dogs confined in the shelter.",
+   "ko": "차이는 보호소에 갇힌 유기견에 관한 보고서를 읽었어요.",
+   "blank": "กักขัง",
+   "src": "made"
+  },
+  {
+   "text": "เกมใหม่ของบริษัทเล่าเรื่องหุ่นยนต์ที่ถูกกักขังในห้องทดลอง",
+   "en": "The company's new game is about a robot held captive in a lab.",
+   "ko": "회사의 새 게임은 실험실에 갇힌 로봇 이야기예요.",
+   "blank": "กักขัง",
+   "src": "made"
   }
  ],
  "w|กังวล": [
@@ -6309,6 +6341,22 @@
    "src": "made"
   }
  ],
+ "w|ข้อบกพร่อง": [
+  {
+   "text": "ชัยยอมรับว่าระบบนัดหมายออนไลน์ยังมีข้อบกพร่อง",
+   "en": "Chai admits the online appointment system still has flaws.",
+   "ko": "차이는 온라인 예약 시스템에 아직 결함이 있다고 인정해요.",
+   "blank": "ข้อบกพร่อง",
+   "src": "made"
+  },
+  {
+   "text": "ทีมทดสอบเจอข้อบกพร่องในระบบจ่ายเงินก่อนวันเปิดตัว",
+   "en": "The testing team found a flaw in the payment system before launch day.",
+   "ko": "테스트팀이 출시 전날 결제 시스템의 결함을 찾아냈어요.",
+   "blank": "ข้อบกพร่อง",
+   "src": "made"
+  }
+ ],
  "w|ขอบเขต": [
   {
    "text": "เพื่อนคุยกันเรื่องงานแบบไม่มีขอบเขต จนเกือบลืมกินข้าว",
@@ -9595,6 +9643,22 @@
    "blank": "คราว"
   }
  ],
+ "w|คร่าว": [
+  {
+   "text": "ชัยอธิบายแผนสร้างสะพานใหม่ให้ชาวบ้านฟังคร่าว ๆ",
+   "en": "Chai gave the residents a rough outline of the plan for the new bridge.",
+   "ko": "차이는 주민들에게 새 다리 건설 계획을 대략 설명했어요.",
+   "blank": "คร่าว",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ร่างแผนธุรกิจคร่าว ๆ บนไวท์บอร์ด",
+   "en": "Somsak sketched a rough business plan on the whiteboard.",
+   "ko": "솜삭은 화이트보드에 사업 계획을 대략 적었어요.",
+   "blank": "คร่าว",
+   "src": "made"
+  }
+ ],
  "w|คราวที่แล้ว": [
   {
    "text": "คราวที่แล้วฝนตกตลอดทริป",
@@ -11247,6 +11311,22 @@
    "blank": "ความภูมิใจ"
   }
  ],
+ "w|ความมั่งคั่ง": [
+  {
+   "text": "การท่องเที่ยวนำความมั่งคั่งมาสู่เมืองเล็ก ๆ แห่งนี้",
+   "en": "Tourism has brought wealth to this small town.",
+   "ko": "관광이 이 작은 도시에 부를 가져다줬어요.",
+   "blank": "ความมั่งคั่ง",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์บอกว่าไม่ได้ตั้งบริษัทเพื่อความมั่งคั่ง",
+   "en": "Somsak says he didn't start the company for wealth.",
+   "ko": "솜삭은 부자가 되려고 회사를 세운 게 아니라고 말해요.",
+   "blank": "ความมั่งคั่ง",
+   "src": "made"
+  }
+ ],
  "w|ความมั่นคง": [
   {
    "text": "ประยุทธยอมทิ้งความมั่นคงของงานบริษัทมาเป็นนักแสดงเต็มตัว",
@@ -12848,6 +12928,22 @@
    "en": "The furniture shop displays a teak table with sturdy support beams.",
    "ko": "가구점에는 받침대가 튼튼한 티크 나무 탁자가 전시돼 있어요.",
    "blank": "คาน",
+   "src": "made"
+  }
+ ],
+ "w|ค้าน": [
+  {
+   "text": "ชาวบ้านหลายคนค้านโครงการตัดถนนผ่านสวน",
+   "en": "Many residents opposed the project to cut a road through the park.",
+   "ko": "많은 주민이 공원을 가로지르는 도로 공사에 반대했어요.",
+   "blank": "ค้าน",
+   "src": "made"
+  },
+  {
+   "text": "นักพัฒนารุ่นพี่ค้านไอเดียของสมศักดิ์ว่าเสี่ยงเกินไป",
+   "en": "A senior developer objected to Somsak's idea as too risky.",
+   "ko": "선배 개발자는 솜삭의 아이디어가 너무 위험하다고 반대했어요.",
+   "blank": "ค้าน",
    "src": "made"
   }
  ],
@@ -17009,6 +17105,22 @@
    "blank": "จำนวน"
   }
  ],
+ "w|จำนวนมาก": [
+  {
+   "text": "ประชาชนจำนวนมากมาต่อคิวทำบัตรใหม่",
+   "en": "A large number of people lined up to get new ID cards.",
+   "ko": "많은 시민이 새 신분증을 만들려고 줄을 섰어요.",
+   "blank": "จำนวนมาก",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ใช้จำนวนมากแจ้งว่าแอปเข้าไม่ได้",
+   "en": "Many users reported that they couldn't get into the app.",
+   "ko": "많은 사용자가 앱에 접속이 안 된다고 신고했어요.",
+   "blank": "จำนวนมาก",
+   "src": "made"
+  }
+ ],
  "w|จำนำ": [
   {
    "text": "ลุงคนหนึ่งเอานาฬิกาที่เคยจำนำไว้มาขายที่แผงของกิตติ",
@@ -17228,6 +17340,22 @@
    "en": "The hospital lobby is decorated with a painting of rice fields that patients made together.",
    "ko": "병원 로비는 환자들이 함께 그린 논 풍경화로 꾸며져 있어요.",
    "blank": "จิตรกรรม",
+   "src": "made"
+  }
+ ],
+ "w|จิตวิญญาณ": [
+  {
+   "text": "ชัยอยากให้ตลาดเก่ายังคงจิตวิญญาณของเมืองไว้",
+   "en": "Chai wants the old market to keep the spirit of the town.",
+   "ko": "차이는 옛 시장이 도시의 정신을 간직하길 바라요.",
+   "blank": "จิตวิญญาณ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์อยากรักษาจิตวิญญาณของสตาร์ทอัพไว้แม้บริษัทจะโตขึ้น",
+   "en": "Somsak wants to keep the startup spirit even as the company grows.",
+   "ko": "솜삭은 회사가 커져도 스타트업 정신을 지키고 싶어 해요.",
+   "blank": "จิตวิญญาณ",
    "src": "made"
   }
  ],
@@ -21724,6 +21852,22 @@
    "en": "By the roadside is the wreck of an old car left there until it rusted.",
    "ko": "길가에는 버려진 채 녹슨 옛 차의 잔해가 있어요.",
    "blank": "ซาก",
+   "src": "made"
+  }
+ ],
+ "w|ซาตาน": [
+  {
+   "text": "เด็ก ๆ แต่งชุดซาตานมาเดินพาเหรดวันฮาโลวีนของเมือง",
+   "en": "Kids dressed as Satan walked in the town's Halloween parade.",
+   "ko": "아이들이 사탄 복장을 하고 도시 핼러윈 퍼레이드를 걸었어요.",
+   "blank": "ซาตาน",
+   "src": "made"
+  },
+  {
+   "text": "ลูกทีมแซวว่าสมศักดิ์กลายเป็นซาตานทุกครั้งที่ใกล้เดดไลน์",
+   "en": "The team jokes that Somsak turns into Satan whenever a deadline is near.",
+   "ko": "팀원들은 마감이 다가오면 솜삭이 사탄으로 변한다고 놀려요.",
+   "blank": "ซาตาน",
    "src": "made"
   }
  ],
@@ -32023,6 +32167,22 @@
    "src": "made"
   }
  ],
+ "w|ที่สาธารณะ": [
+  {
+   "text": "ป้ายหน้าศาลาว่าการเตือนว่าห้ามสูบบุหรี่ในที่สาธารณะ",
+   "en": "A sign in front of city hall warns that smoking in public places is prohibited.",
+   "ko": "시청 앞 표지판에 공공장소 흡연 금지라고 적혀 있어요.",
+   "blank": "ที่สาธารณะ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ไม่เปิดแล็ปท็อปทำงานในที่สาธารณะเพราะกลัวข้อมูลรั่ว",
+   "en": "Somsak doesn't work on his laptop in public places for fear of data leaks.",
+   "ko": "솜삭은 정보 유출이 걱정돼서 공공장소에서는 노트북으로 일하지 않아요.",
+   "blank": "ที่สาธารณะ",
+   "src": "made"
+  }
+ ],
  "w|ที่สุด": [
   {
    "text": "อร่อยที่สุดเลย",
@@ -32776,6 +32936,22 @@
    "en": "Somsak isn't sure how far it is from here to Chiang Mai.",
    "ko": "솜싹은 여기서 치앙마이까지 얼마나 먼지 잘 몰라요.",
    "blank": "เท่าใด",
+   "src": "made"
+  }
+ ],
+ "w|เท่าตัว": [
+  {
+   "text": "ปีนี้คนมาเที่ยวงานลอยกระทงของเมืองเพิ่มขึ้นเท่าตัว",
+   "en": "This year twice as many people came to the town's Loy Krathong festival.",
+   "ko": "올해 도시의 러이끄라통 축제를 찾은 사람이 두 배로 늘었어요.",
+   "blank": "เท่าตัว",
+   "src": "made"
+  },
+  {
+   "text": "ยอดดาวน์โหลดเดือนนี้โตขึ้นเท่าตัว",
+   "en": "Downloads doubled this month.",
+   "ko": "이번 달 다운로드 수가 두 배로 늘었어요.",
+   "blank": "เท่าตัว",
    "src": "made"
   }
  ],
@@ -36137,6 +36313,22 @@
    "blank": "นิทาน"
   }
  ],
+ "w|นินทา": [
+  {
+   "text": "พนักงานบางคนชอบนินทาหัวหน้าในห้องกินข้าว",
+   "en": "Some staff like to gossip about the boss in the lunchroom.",
+   "ko": "어떤 직원들은 식당에서 상사 뒷담화를 즐겨요.",
+   "blank": "นินทา",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ไม่ชอบให้ลูกทีมนินทากันลับหลัง",
+   "en": "Somsak doesn't like his team gossiping about each other behind their backs.",
+   "ko": "솜삭은 팀원들이 뒤에서 서로 험담하는 걸 싫어해요.",
+   "blank": "นินทา",
+   "src": "made"
+  }
+ ],
  "w|นิพพาน": [
   {
    "text": "ธนาค้นหนังสือธรรมะที่อธิบายเรื่องนิพพานให้เข้าใจง่าย",
@@ -36561,6 +36753,22 @@
    "blank": "เนื้อ"
   }
  ],
+ "w|เนื้อความ": [
+  {
+   "text": "ชัยตรวจเนื้อความในประกาศทุกบรรทัดก่อนติดบอร์ด",
+   "en": "Chai checks every line of a notice's content before posting it on the board.",
+   "ko": "차이는 공고문을 게시판에 붙이기 전에 내용을 한 줄씩 확인해요.",
+   "blank": "เนื้อความ",
+   "src": "made"
+  },
+  {
+   "text": "ระบบช่วยสรุปเนื้อความในอีเมลยาว ๆ ให้อัตโนมัติ",
+   "en": "The system automatically summarizes the content of long emails.",
+   "ko": "시스템이 긴 이메일 내용을 자동으로 요약해 줘요.",
+   "blank": "เนื้อความ",
+   "src": "made"
+  }
+ ],
  "w|เนื่องจาก": [
   {
    "text": "งานเลื่อนเนื่องจากฝนตกหนัก",
@@ -36834,6 +37042,22 @@
    "en": "Wanna's report shows the trend of customers buying online is rising every year.",
    "ko": "완나의 보고서는 온라인으로 사는 고객이 해마다 늘어나는 추세를 보여 줘요.",
    "blank": "แนวโน้ม",
+   "src": "made"
+  }
+ ],
+ "w|แนวร่วม": [
+  {
+   "text": "กลุ่มรักษ์ต้นไม้หาแนวร่วมจากร้านค้าในย่าน",
+   "en": "The tree conservation group is looking for allies among local shops.",
+   "ko": "나무 보호 모임은 동네 가게들 사이에서 동조자를 찾고 있어요.",
+   "blank": "แนวร่วม",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทเล็ก ๆ หลายแห่งรวมเป็นแนวร่วมเพื่อแข่งกับรายใหญ่",
+   "en": "Several small companies formed an alliance to compete with the big players.",
+   "ko": "여러 작은 회사가 대기업과 경쟁하려고 연대했어요.",
+   "blank": "แนวร่วม",
    "src": "made"
   }
  ],
@@ -37254,6 +37478,22 @@
    "en": "Pranee overheard the movers' conversation about the very heavy fridge.",
    "ko": "쁘라니는 아주 무거운 냉장고에 대한 이삿짐 직원들의 대화를 들었어요.",
    "blank": "บทสนทนา",
+   "src": "made"
+  }
+ ],
+ "w|บทสรุป": [
+  {
+   "text": "การประชุมยาวสามชั่วโมงจบลงโดยไม่มีบทสรุป",
+   "en": "The three-hour meeting ended without any conclusion.",
+   "ko": "세 시간짜리 회의가 아무 결론 없이 끝났어요.",
+   "blank": "บทสรุป",
+   "src": "made"
+  },
+  {
+   "text": "ทุกการประชุมต้องจบด้วยบทสรุปสั้น ๆ ในแชตกลุ่ม",
+   "en": "Every meeting has to end with a short summary in the group chat.",
+   "ko": "모든 회의는 단체 채팅방에 짧은 결론을 남기고 끝내야 해요.",
+   "blank": "บทสรุป",
    "src": "made"
   }
  ],
@@ -38064,6 +38304,22 @@
    "en": "The hotel puts on live music by the pool as evening entertainment for guests.",
    "ko": "호텔은 밤에 손님들을 위한 여흥으로 수영장 옆에서 라이브 음악을 열어요.",
    "blank": "บันเทิง",
+   "src": "made"
+  }
+ ],
+ "w|บัลลังก์": [
+  {
+   "text": "ห้องโถงใหญ่มีเก้าอี้แกะสลักที่คนเรียกเล่น ๆ ว่าบัลลังก์ของนายก",
+   "en": "The main hall has a carved chair that people jokingly call the mayor's throne.",
+   "ko": "큰 홀에는 사람들이 농담 삼아 시장의 왕좌라고 부르는 조각 의자가 있어요.",
+   "blank": "บัลลังก์",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทของสมศักดิ์อยากโค่นคู่แข่งลงจากบัลลังก์ผู้นำตลาด",
+   "en": "Somsak's company wants to knock its rival off the market-leader throne.",
+   "ko": "솜삭의 회사는 경쟁사를 시장 선두 자리에서 끌어내리고 싶어 해요.",
+   "blank": "บัลลังก์",
    "src": "made"
   }
  ],
@@ -39043,6 +39299,22 @@
    "src": "made"
   }
  ],
+ "w|เบียด": [
+  {
+   "text": "คนเบียดกันแน่นหน้าห้องประชุมสภาเมือง",
+   "en": "People crowded tightly in front of the city council chamber.",
+   "ko": "시의회 회의실 앞에 사람들이 빽빽하게 몰려 있었어요.",
+   "blank": "เบียด",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานทั้งทีมต้องนั่งเบียดกันในออฟฟิศเล็ก ๆ",
+   "en": "The whole team has to sit squeezed together in a tiny office.",
+   "ko": "팀 전체가 작은 사무실에 비좁게 끼어 앉아야 해요.",
+   "blank": "เบียด",
+   "src": "made"
+  }
+ ],
  "w|เบียร์": [
   {
    "text": "ดื่มเบียร์เย็นสักแก้ว",
@@ -39250,6 +39522,22 @@
    "en": "The architect brought a model of the new pool to show Pranee and the club members.",
    "ko": "건축가가 새 수영장 모형을 가져와 쁘라니와 클럽 회원들에게 보여 줬어요.",
    "blank": "แบบจำลอง",
+   "src": "made"
+  }
+ ],
+ "w|แบบฉบับ": [
+  {
+   "text": "ชาวบ้านมองว่าชัยเป็นแบบฉบับของข้าราชการที่ซื่อตรง",
+   "en": "Residents see Chai as the model of an honest civil servant.",
+   "ko": "주민들은 차이를 정직한 공무원의 본보기로 여겨요.",
+   "blank": "แบบฉบับ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์เป็นแบบฉบับของผู้ก่อตั้งที่ทำงานหนักไม่หยุด",
+   "en": "Somsak is the very model of a founder who works nonstop.",
+   "ko": "솜삭은 쉬지 않고 일하는 창업자의 전형이에요.",
+   "blank": "แบบฉบับ",
    "src": "made"
   }
  ],
@@ -39890,6 +40178,22 @@
    "en": "Somsak recalled that university orientation day was the first day the two of them met.",
    "ko": "솜싹은 대학 오리엔테이션 날이 두 사람이 처음 만난 날이라고 회상했어요.",
    "blank": "ปฐม",
+   "src": "made"
+  }
+ ],
+ "w|ปณิธาน": [
+  {
+   "text": "นายกเทศมนตรีคนใหม่ประกาศปณิธานว่าจะทำให้เมืองสะอาด",
+   "en": "The new mayor declared her resolve to make the town clean.",
+   "ko": "새 시장은 도시를 깨끗하게 만들겠다는 다짐을 밝혔어요.",
+   "blank": "ปณิธาน",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ตั้งปณิธานว่าจะสร้างแอปที่ช่วยเกษตรกร",
+   "en": "Somsak resolved to build an app that helps farmers.",
+   "ko": "솜삭은 농민을 돕는 앱을 만들겠다고 다짐했어요.",
+   "blank": "ปณิธาน",
    "src": "made"
   }
  ],
@@ -47003,6 +47307,22 @@
    "blank": "พยายาม"
   }
  ],
+ "w|พยุง": [
+  {
+   "text": "ชัยช่วยพยุงคุณยายขึ้นบันไดศาลาว่าการ",
+   "en": "Chai helped support an elderly woman up the city hall stairs.",
+   "ko": "차이는 할머니를 부축해서 시청 계단을 올라갔어요.",
+   "blank": "พยุง",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ขอเงินจากนักลงทุนมาพยุงบริษัทให้อยู่ต่อ",
+   "en": "Somsak asked investors for money to keep the company afloat.",
+   "ko": "솜삭은 회사를 버티게 하려고 투자자들에게 돈을 요청했어요.",
+   "blank": "พยุง",
+   "src": "made"
+  }
+ ],
  "w|พรม": [
   {
    "text": "พรมผืนนี้ทำความสะอาดยาก",
@@ -49247,6 +49567,22 @@
    "blank": "เพียงพอ"
   }
  ],
+ "w|เพี้ยน": [
+  {
+   "text": "ไมโครโฟนในห้องประชุมเสียงเพี้ยนจนต้องเปลี่ยนใหม่",
+   "en": "The microphone in the meeting room sounded so distorted it had to be replaced.",
+   "ko": "회의실 마이크 소리가 너무 이상해서 새로 바꿔야 했어요.",
+   "blank": "เพี้ยน",
+   "src": "made"
+  },
+  {
+   "text": "สีบนหน้าจอเพี้ยนไปหมดหลังอัปเดตระบบ",
+   "en": "The colors on the screen went all wrong after the system update.",
+   "ko": "시스템 업데이트 후 화면 색이 다 이상해졌어요.",
+   "blank": "เพี้ยน",
+   "src": "made"
+  }
+ ],
  "w|เพียร": [
   {
    "text": "นักเรียนคนหนึ่งเพียรมาอ่านหนังสือทุกเย็นจนสอบติดหมอ",
@@ -50503,6 +50839,22 @@
    "src": "made"
   }
  ],
+ "w|ภาพวาด": [
+  {
+   "text": "บนผนังศาลาว่าการ มีภาพวาดประวัติศาสตร์ของเมือง",
+   "en": "The city hall walls have paintings of the town's history.",
+   "ko": "시청 벽에는 도시의 역사를 담은 그림이 있어요.",
+   "blank": "ภาพวาด",
+   "src": "made"
+  },
+  {
+   "text": "แอปนี้แปลงรูปถ่ายให้เป็นภาพวาดสีน้ำ",
+   "en": "This app turns photos into watercolor paintings.",
+   "ko": "이 앱은 사진을 수채화 그림으로 바꿔 줘요.",
+   "blank": "ภาพวาด",
+   "src": "made"
+  }
+ ],
  "w|ภายใต้": [
   {
    "text": "ยาตัวนี้ต้องใช้ภายใต้การดูแลของสัตวแพทย์เท่านั้น",
@@ -50999,6 +51351,22 @@
    "blank": "ภูมิศาสตร์"
   }
  ],
+ "w|ภูมิหลัง": [
+  {
+   "text": "ชัยศึกษาภูมิหลังของชุมชนก่อนวางแผนพัฒนา",
+   "en": "Chai studies a community's background before planning development.",
+   "ko": "차이는 개발 계획을 세우기 전에 그 지역의 배경을 조사해요.",
+   "blank": "ภูมิหลัง",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์มีภูมิหลังเป็นครูสอนคณิตก่อนมาเขียนโค้ด",
+   "en": "Somsak's background is as a math teacher before he started coding.",
+   "ko": "솜삭은 코딩을 하기 전에 수학 교사였던 배경이 있어요.",
+   "blank": "ภูมิหลัง",
+   "src": "made"
+  }
+ ],
  "w|เภสัชกร": [
   {
    "text": "ถามเภสัชกรก่อนกินยานะ",
@@ -51270,6 +51638,22 @@
    "en": "Suda planned the ads to reach the masses through TV and radio.",
    "ko": "수다는 텔레비전과 라디오로 대중에게 다가가는 광고를 기획했어요.",
    "blank": "มวลชน",
+   "src": "made"
+  }
+ ],
+ "w|มหรสพ": [
+  {
+   "text": "เทศบาลจัดงานมหรสพกลางแจ้งในวันสงกรานต์",
+   "en": "The municipality holds an outdoor entertainment fair on Songkran.",
+   "ko": "시청은 송끄란 날에 야외 공연 축제를 열어요.",
+   "blank": "มหรสพ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ทำแอปจองตั๋วงานมหรสพในต่างจังหวัด",
+   "en": "Somsak made an app for booking tickets to entertainment events in the provinces.",
+   "ko": "솜삭은 지방 공연 행사 표를 예매하는 앱을 만들었어요.",
+   "blank": "มหรสพ",
    "src": "made"
   }
  ],
@@ -52646,6 +53030,22 @@
    "en": "Most customers pay by mobile phone; hardly anyone uses cash.",
    "ko": "손님 대부분이 휴대폰으로 결제하고 현금을 쓰는 사람은 거의 없어요.",
    "blank": "มือถือ",
+   "src": "made"
+  }
+ ],
+ "w|มือสมัครเล่น": [
+  {
+   "text": "นักดนตรีมือสมัครเล่นมาเล่นในงานเทศกาลของเมือง",
+   "en": "Amateur musicians came to play at the town festival.",
+   "ko": "아마추어 음악가들이 도시 축제에 와서 연주했어요.",
+   "blank": "มือสมัครเล่น",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์เริ่มเขียนโค้ดแบบมือสมัครเล่นตั้งแต่เด็ก",
+   "en": "Somsak started coding as an amateur when he was a kid.",
+   "ko": "솜삭은 어릴 때부터 아마추어로 코딩을 시작했어요.",
+   "blank": "มือสมัครเล่น",
    "src": "made"
   }
  ],
@@ -55971,6 +56371,22 @@
    "src": "made"
   }
  ],
+ "w|รม": [
+  {
+   "text": "ชัยเล่าว่าตลาดริมน้ำของเมืองขึ้นชื่อเรื่องปลารมควัน",
+   "en": "Chai says the town's riverside market is famous for its smoked fish.",
+   "ko": "차이는 이 도시 수상 시장이 훈제 생선으로 유명하다고 했어요.",
+   "blank": "รม",
+   "src": "made"
+  },
+  {
+   "text": "ทุกวันศุกร์ทีมสั่งปลาแซลมอนรมควันมากินเลี้ยงกัน",
+   "en": "Every Friday the team orders smoked salmon for a little party.",
+   "ko": "매주 금요일 팀은 훈제 연어를 시켜 함께 먹어요.",
+   "blank": "รม",
+   "src": "made"
+  }
+ ],
  "w|ร่ม": [
   {
    "text": "อย่าลืมเอาร่มติดมือไป",
@@ -59011,6 +59427,22 @@
    "blank": "เรียบร้อย"
   }
  ],
+ "w|เรียบเรียง": [
+  {
+   "text": "ชัยเรียบเรียงคำกล่าวของนายกเทศมนตรีใหม่ให้อ่านง่าย",
+   "en": "Chai reorganized the mayor's speech to make it easier to read.",
+   "ko": "차이는 시장의 연설문을 읽기 쉽게 다시 정리했어요.",
+   "blank": "เรียบเรียง",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์เรียบเรียงสไลด์นำเสนอใหม่ทั้งคืน",
+   "en": "Somsak spent all night reorganizing the presentation slides.",
+   "ko": "솜삭은 밤새 발표 슬라이드를 다시 정리했어요.",
+   "blank": "เรียบเรียง",
+   "src": "made"
+  }
+ ],
  "w|เรือ": [
   {
    "text": "นั่งเรือข้ามฝั่ง",
@@ -59350,6 +59782,22 @@
    "en": "Pranee hired local workers to help carry the wooden cabinet upstairs.",
    "ko": "쁘라니는 마을 일꾼을 불러 나무 장을 이 층으로 올렸어요.",
    "blank": "แรงงาน",
+   "src": "made"
+  }
+ ],
+ "w|แรงจูงใจ": [
+  {
+   "text": "เมืองให้ส่วนลดภาษีเป็นแรงจูงใจให้คนติดแผงโซลาร์",
+   "en": "The town offers tax discounts as an incentive for people to install solar panels.",
+   "ko": "도시는 태양광 패널 설치를 장려하려고 세금을 깎아 줘요.",
+   "blank": "แรงจูงใจ",
+   "src": "made"
+  },
+  {
+   "text": "หุ้นพนักงานเป็นแรงจูงใจให้ทีมทุ่มเทเต็มที่",
+   "en": "Employee shares are an incentive for the team to give it their all.",
+   "ko": "직원 주식은 팀이 최선을 다하게 하는 동기가 돼요.",
+   "blank": "แรงจูงใจ",
    "src": "made"
   }
  ],
@@ -61919,6 +62367,22 @@
    "blank": "เล่น"
   }
  ],
+ "w|เลนส์": [
+  {
+   "text": "ช่างภาพใช้เลนส์มุมกว้างถ่ายรูปหมู่เจ้าหน้าที่",
+   "en": "The photographer used a wide-angle lens to take a group photo of the staff.",
+   "ko": "사진사는 광각 렌즈로 직원 단체 사진을 찍었어요.",
+   "blank": "เลนส์",
+   "src": "made"
+  },
+  {
+   "text": "ฝ่ายฮาร์ดแวร์ทดลองติดเลนส์พิเศษกับกล้องมือถือ",
+   "en": "The hardware team is testing a special lens on a phone camera.",
+   "ko": "하드웨어팀은 휴대폰 카메라에 특수 렌즈를 달아 시험하고 있어요.",
+   "blank": "เลนส์",
+   "src": "made"
+  }
+ ],
  "w|เล็บ": [
   {
    "text": "ตัดเล็บให้สั้นสะอาด",
@@ -64365,6 +64829,22 @@
    "blank": "วีซ่า"
   }
  ],
+ "w|วีดีโอ": [
+  {
+   "text": "ศาลาว่าการถ่ายทอดสดวีดีโอการประชุมให้คนดูที่บ้าน",
+   "en": "City hall livestreams video of its meetings for people to watch at home.",
+   "ko": "시청은 회의 영상을 생중계해서 집에서도 볼 수 있게 해요.",
+   "blank": "วีดีโอ",
+   "src": "made"
+  },
+  {
+   "text": "แอปใหม่ให้ผู้ใช้ตัดต่อวีดีโอสั้น ๆ ได้ในมือถือ",
+   "en": "The new app lets users edit short videos on their phones.",
+   "ko": "새 앱으로 휴대폰에서 짧은 영상을 편집할 수 있어요.",
+   "blank": "วีดีโอ",
+   "src": "made"
+  }
+ ],
  "w|วุฒิสภา": [
   {
    "text": "คณะสมาชิกวุฒิสภามาเยี่ยมชมพิพิธภัณฑ์ และกิตติเป็นคนนำชม",
@@ -65985,6 +66465,22 @@
    "src": "made"
   }
  ],
+ "w|ส้น": [
+  {
+   "text": "พนักงานต้อนรับเปลี่ยนรองเท้าส้นสูงเป็นรองเท้าผ้าใบตอนเย็น",
+   "en": "The receptionist switches from high heels to sneakers in the evening.",
+   "ko": "안내 직원은 저녁이 되면 하이힐을 운동화로 갈아 신어요.",
+   "blank": "ส้น",
+   "src": "made"
+  },
+  {
+   "text": "รองเท้าของสมศักดิ์ส้นสึกเพราะเดินไปหาลูกค้าทุกวัน",
+   "en": "The heels of Somsak's shoes are worn down from visiting clients every day.",
+   "ko": "솜삭의 구두는 매일 고객을 찾아다녀서 뒤축이 닳았어요.",
+   "blank": "ส้น",
+   "src": "made"
+  }
+ ],
  "w|สนใจ": [
   {
    "text": "ฉันสนใจภาษาไทย",
@@ -66858,6 +67354,22 @@
    "en": "In the film, Wanna plays a vendor bragging about the powers of a miracle cure.",
    "ko": "영화에서 완나는 만병통치약 효능을 떠벌리는 장사꾼 역을 해요.",
    "blank": "สรรพคุณ",
+   "src": "made"
+  }
+ ],
+ "w|สรรพนาม": [
+  {
+   "text": "ชัยแก้หนังสือราชการให้ใช้สรรพนามสุภาพกับประชาชน",
+   "en": "Chai revised official letters to use polite pronouns toward citizens.",
+   "ko": "차이는 공문서에 시민을 정중하게 부르는 대명사를 쓰도록 고쳤어요.",
+   "blank": "สรรพนาม",
+   "src": "made"
+  },
+  {
+   "text": "ทีมแปลถกกันว่าควรใช้สรรพนามแบบไหนในแอปภาษาไทย",
+   "en": "The translation team debated which pronouns to use in the Thai version of the app.",
+   "ko": "번역팀은 태국어 앱에 어떤 대명사를 써야 할지 토론했어요.",
+   "blank": "สรรพนาม",
    "src": "made"
   }
  ],
@@ -67777,6 +68289,22 @@
    "en": "Can you spell this word for me?",
    "ko": "이 단어 철자 좀 알려 줄래?",
    "blank": "สะกด"
+  }
+ ],
+ "w|สะกิด": [
+  {
+   "text": "เพื่อนร่วมงานสะกิดชัยเมื่อถึงคิวพูดในที่ประชุม",
+   "en": "A coworker nudged Chai when it was his turn to speak at the meeting.",
+   "ko": "회의에서 차이가 말할 차례가 되자 동료가 그를 쿡 찔렀어요.",
+   "blank": "สะกิด",
+   "src": "made"
+  },
+  {
+   "text": "นักพัฒนารุ่นน้องสะกิดสมศักดิ์ให้ดูบั๊กบนจอ",
+   "en": "A junior developer tapped Somsak to show him a bug on the screen.",
+   "ko": "후배 개발자가 솜삭을 툭 치며 화면 속 버그를 보여 줬어요.",
+   "blank": "สะกิด",
+   "src": "made"
   }
  ],
  "w|สะดวก": [
@@ -69317,6 +69845,22 @@
    "blank": "สิ่ง"
   }
  ],
+ "w|สิ่งก่อสร้าง": [
+  {
+   "text": "ห้ามตั้งสิ่งก่อสร้างบนทางเท้าโดยไม่ได้รับอนุญาต",
+   "en": "Putting up structures on the sidewalk without permission is prohibited.",
+   "ko": "허가 없이 인도에 구조물을 세우는 건 금지예요.",
+   "blank": "สิ่งก่อสร้าง",
+   "src": "made"
+  },
+  {
+   "text": "บริษัททำแอปคำนวณงบประมาณสิ่งก่อสร้าง",
+   "en": "The company makes an app that calculates construction budgets.",
+   "ko": "회사는 건축물 예산을 계산하는 앱을 만들어요.",
+   "blank": "สิ่งก่อสร้าง",
+   "src": "made"
+  }
+ ],
  "w|สิ่งของ": [
   {
    "text": "ก่อนรื้อห้องเก็บของ ประยุทธขนสิ่งของทั้งหมดไปไว้ที่โรงรถ",
@@ -70786,6 +71330,22 @@
    "en": "Kids at the window table laughed loudly all evening.",
    "ko": "창가 테이블에서 아이들이 밤새 큰 소리로 웃었어요.",
    "blank": "เสียงดัง",
+   "src": "made"
+  }
+ ],
+ "w|เสียงเพลง": [
+  {
+   "text": "ทุกเย็นวันศุกร์ ลานหน้าศาลาว่าการจะมีเสียงเพลงดังไปทั่ว",
+   "en": "Music fills the plaza in front of city hall every Friday evening.",
+   "ko": "금요일 저녁마다 시청 앞 광장에 음악 소리가 울려요.",
+   "blank": "เสียงเพลง",
+   "src": "made"
+  },
+  {
+   "text": "ห้องทำงานเงียบจนได้ยินแค่เสียงเพลงเบา ๆ จากลำโพง",
+   "en": "The office is so quiet you can only hear soft music from the speaker.",
+   "ko": "사무실이 조용해서 스피커에서 나오는 잔잔한 음악 소리만 들려요.",
+   "blank": "เสียงเพลง",
    "src": "made"
   }
  ],
@@ -77245,6 +77805,22 @@
    "blank": "อ้วน"
   }
  ],
+ "w|อวยพร": [
+  {
+   "text": "นายกเทศมนตรีอวยพรคู่บ่าวสาวที่มาจดทะเบียนสมรส",
+   "en": "The mayor gave her blessing to the couple who came to register their marriage.",
+   "ko": "시장은 혼인 신고를 하러 온 신혼부부에게 축복의 말을 건넸어요.",
+   "blank": "อวยพร",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานอวยพรวันเกิดสมศักดิ์ด้วยเค้กรูปคอมพิวเตอร์",
+   "en": "The team wished Somsak a happy birthday with a computer-shaped cake.",
+   "ko": "팀원들은 컴퓨터 모양 케이크로 솜삭의 생일을 축하해 줬어요.",
+   "blank": "อวยพร",
+   "src": "made"
+  }
+ ],
  "w|อวัยวะ": [
   {
    "text": "เทรนเนอร์อธิบายให้เอกฟังว่าการออกกำลังกายช่วยให้อวัยวะภายในทำงานดีขึ้น",
@@ -78323,6 +78899,22 @@
    "blank": "อ่าน"
   }
  ],
+ "w|อ่านหนังสือ": [
+  {
+   "text": "ชัยเสนอให้เปิดห้องสมุดเมืองให้เด็กมาอ่านหนังสือตอนเย็น",
+   "en": "Chai proposed opening the town library so kids can come read in the evenings.",
+   "ko": "차이는 아이들이 저녁에 와서 책을 읽을 수 있게 시립 도서관을 열자고 제안했어요.",
+   "blank": "อ่านหนังสือ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ชอบอ่านหนังสือเรื่องธุรกิจก่อนนอน",
+   "en": "Somsak likes to read business books before bed.",
+   "ko": "솜삭은 자기 전에 경영 서적 읽는 걸 좋아해요.",
+   "blank": "อ่านหนังสือ",
+   "src": "made"
+  }
+ ],
  "w|อาบ": [
   {
    "text": "แสงเช้าอาบชั้นหนังสือฝั่งตะวันออกจนเป็นสีทอง",
@@ -79275,6 +79867,22 @@
    "blank": "อุบัติเหตุ"
   }
  ],
+ "w|อุบาย": [
+  {
+   "text": "มิจฉาชีพใช้อุบายปลอมเป็นเจ้าหน้าที่เมืองไปเก็บเงินชาวบ้าน",
+   "en": "Scammers used the trick of posing as city officials to collect money from residents.",
+   "ko": "사기꾼들이 시청 직원인 척하는 수법으로 주민들에게 돈을 걷었어요.",
+   "blank": "อุบาย",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์คิดอุบายให้ทีมกลับบ้านตรงเวลาด้วยการปิดไฟออฟฟิศเอง",
+   "en": "Somsak came up with a ploy to get the team home on time by switching off the office lights himself.",
+   "ko": "솜삭은 팀이 제시간에 퇴근하도록 직접 사무실 불을 끄는 꾀를 냈어요.",
+   "blank": "อุบาย",
+   "src": "made"
+  }
+ ],
  "w|อุปกรณ์": [
   {
    "text": "อนันต์ยืมอุปกรณ์ฉายภาพจากห้องประชุมใหญ่มาใช้",
@@ -80074,6 +80682,22 @@
    "en": "Napha told her travel companion that this laptop's hardware is old, so programs open very slowly.",
    "ko": "나파는 동행에게 이 노트북은 하드웨어가 낡아서 프로그램이 아주 느리게 열린다고 했어요.",
    "blank": "ฮาร์ดแวร์",
+   "src": "made"
+  }
+ ],
+ "w|ฮิต": [
+  {
+   "text": "ป้ายชื่อเมืองแบบใหม่ฮิตจนคนมาถ่ายรูปกันเต็ม",
+   "en": "The new town sign is so popular that it's packed with people taking photos.",
+   "ko": "새 도시 표지판이 인기라서 사진 찍는 사람들로 붐벼요.",
+   "blank": "ฮิต",
+   "src": "made"
+  },
+  {
+   "text": "แอปของบริษัทฮิตขึ้นมาทันทีหลังมีคนดังรีวิว",
+   "en": "The company's app took off right after a celebrity reviewed it.",
+   "ko": "유명인이 리뷰한 뒤 회사 앱이 곧바로 인기를 끌었어요.",
+   "blank": "ฮิต",
    "src": "made"
   }
  ],
