@@ -7849,6 +7849,22 @@
    "src": "made"
   }
  ],
+ "w|てっきり": [
+  {
+   "text": "てっきり休みだと思っていたのに、急に厨房から呼び出された。",
+   "en": "Takuya was sure it was his day off, but he was suddenly called in to the kitchen.",
+   "ko": "당연히 쉬는 날인 줄 알았는데 갑자기 주방에서 불렀어요.",
+   "blank": "てっきり",
+   "src": "made"
+  },
+  {
+   "text": "客の老夫婦を、恵子はてっきり親子だと思っていた。",
+   "en": "Keiko had been sure the elderly couple were parent and child.",
+   "ko": "게이코는 노부부 손님을 당연히 부모와 자식인 줄 알았어요.",
+   "blank": "てっきり",
+   "src": "made"
+  }
+ ],
  "w|テニス": [
   {
    "text": "翔太は、テニスのために足腰を鍛えようとジムに通い始めた。",
@@ -11593,6 +11609,22 @@
    "src": "made"
   }
  ],
+ "w|ミーティング": [
+  {
+   "text": "開店前のミーティングで、今日のおすすめが発表された。",
+   "en": "The day's specials were announced at the meeting before opening.",
+   "ko": "개점 전 회의에서 오늘의 추천 메뉴가 발표됐어요.",
+   "blank": "ミーティング",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、会議室でのミーティングの準備に追われていた。",
+   "en": "Keiko was busy getting ready for a meeting in the conference room.",
+   "ko": "게이코는 회의실 미팅 준비에 쫓기고 있었어요.",
+   "blank": "ミーティング",
+   "src": "made"
+  }
+ ],
  "w|みかん": [
   {
    "text": "みかんが甘いね。",
@@ -14259,6 +14291,22 @@
    "blank": "上記"
   }
  ],
+ "w|上達": [
+  {
+   "text": "毎日練習した甲斐があって、新人の包丁さばきは見違えるほど上達した。",
+   "en": "Thanks to practicing every day, the new hire's knife work improved remarkably.",
+   "ko": "매일 연습한 보람이 있어서 신입의 칼질 솜씨가 몰라보게 늘었어요.",
+   "blank": "上達",
+   "src": "made"
+  },
+  {
+   "text": "外国人客と話すうちに、恵子の英語はぐんと上達した。",
+   "en": "Talking with foreign guests, Keiko's English improved a lot.",
+   "ko": "외국인 손님과 이야기하다 보니 게이코의 영어가 부쩍 늘었어요.",
+   "blank": "上達",
+   "src": "made"
+  }
+ ],
  "w|上部": [
   {
    "text": "誠は、出発ロビーの上部に掲げられた大きな電光掲示板を見上げた。",
@@ -15067,6 +15115,22 @@
    "en": "Both are correct.",
    "ko": "둘 다 정답이야.",
    "blank": "両方"
+  }
+ ],
+ "w|両立": [
+  {
+   "text": "拓也は、仕事と子育ての両立に悩んでいる。",
+   "en": "Takuya is struggling to balance work and raising his kids.",
+   "ko": "다쿠야는 일과 육아를 함께 해내는 문제로 고민하고 있어요.",
+   "blank": "両立",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、仕事と資格の勉強の両立を目指している。",
+   "en": "Keiko is aiming to balance work with studying for a qualification.",
+   "ko": "게이코는 일과 자격증 공부를 함께 해내려고 해요.",
+   "blank": "両立",
+   "src": "made"
   }
  ],
  "w|両親": [
@@ -21903,6 +21967,22 @@
    "src": "made"
   }
  ],
+ "w|最先端": [
+  {
+   "text": "店は、最先端の真空調理器を取り入れた。",
+   "en": "The restaurant brought in a state-of-the-art sous-vide cooker.",
+   "ko": "가게는 최첨단 진공 조리기를 들여왔어요.",
+   "blank": "最先端",
+   "src": "made"
+  },
+  {
+   "text": "新館の客室には、最先端の空調が入っている。",
+   "en": "The rooms in the new wing have cutting-edge air conditioning.",
+   "ko": "신관 객실에는 최첨단 냉난방이 들어가 있어요.",
+   "blank": "最先端",
+   "src": "made"
+  }
+ ],
  "w|最初": [
   {
    "text": "最初から言って。",
@@ -21945,6 +22025,22 @@
    "en": "Turn the volume all the way up.",
    "ko": "소리 최대로 해 줘.",
    "blank": "最大"
+  }
+ ],
+ "w|最大限": [
+  {
+   "text": "拓也は、旬の魚の味を最大限に引き出したいと考えている。",
+   "en": "Takuya wants to bring out the flavor of seasonal fish as much as possible.",
+   "ko": "다쿠야는 제철 생선 맛을 최대한 끌어내고 싶어 해요.",
+   "blank": "最大限",
+   "src": "made"
+  },
+  {
+   "text": "ホテルは、客の要望に最大限こたえるよう努めている。",
+   "en": "The hotel tries to meet guests' requests as fully as it can.",
+   "ko": "호텔은 손님 요청에 최대한 응하려고 노력해요.",
+   "blank": "最大限",
+   "src": "made"
   }
  ],
  "w|最強": [
@@ -22962,6 +23058,22 @@
    "en": "Her son is absorbed in taking apart the broken fan.",
    "ko": "아들은 고장 난 선풍기를 분해하는 데 푹 빠져 있어요.",
    "blank": "分解",
+   "src": "made"
+  }
+ ],
+ "w|分配": [
+  {
+   "text": "店のチップは、ホールと厨房で公平に分配されている。",
+   "en": "Tips at the restaurant are shared fairly between the floor and the kitchen.",
+   "ko": "가게 팁은 홀과 주방이 공평하게 나눠 가져요.",
+   "blank": "分配",
+   "src": "made"
+  },
+  {
+   "text": "団体客の部屋の分配は、恵子の担当だった。",
+   "en": "Assigning rooms to the tour group was Keiko's job.",
+   "ko": "단체 손님 방 배정은 게이코 담당이었어요.",
+   "blank": "分配",
    "src": "made"
   }
  ],
@@ -27783,6 +27895,22 @@
    "src": "made"
   }
  ],
+ "w|名目": [
+  {
+   "text": "研修という名目で、新人は皿洗いばかりさせられていた。",
+   "en": "Under the pretext of training, the new hire was made to do nothing but wash dishes.",
+   "ko": "연수라는 명목으로 신입은 설거지만 하고 있었어요.",
+   "blank": "名目",
+   "src": "made"
+  },
+  {
+   "text": "清掃代という名目で、宿泊料に少し上乗せされていた。",
+   "en": "A little extra had been added to the room rate under the name of a cleaning fee.",
+   "ko": "청소비라는 명목으로 숙박비가 조금 더 붙어 있었어요.",
+   "blank": "名目",
+   "src": "made"
+  }
+ ],
  "w|名称": [
   {
    "text": "来年から、市の公園の名称が新しくなる。",
@@ -29049,6 +29177,22 @@
    "src": "made"
   }
  ],
+ "w|図書": [
+  {
+   "text": "店の棚には、料理長が集めた古い料理図書が並んでいる。",
+   "en": "The restaurant shelves are lined with old cookbooks the head chef collected.",
+   "ko": "가게 선반에는 주방장이 모은 오래된 요리 도서가 늘어서 있어요.",
+   "blank": "図書",
+   "src": "made"
+  },
+  {
+   "text": "ラウンジの一角には、旅行の図書が自由に読める棚がある。",
+   "en": "In one corner of the lounge is a shelf of travel books guests can read freely.",
+   "ko": "라운지 한쪽에는 여행 도서를 자유롭게 읽을 수 있는 책장이 있어요.",
+   "blank": "図書",
+   "src": "made"
+  }
+ ],
  "w|図書館": [
   {
    "text": "図書館で本を借りた。",
@@ -30016,6 +30160,22 @@
    "en": "The app's screens have a simple design with blue as the base color.",
    "ko": "앱 화면은 파란색을 기조로 한 심플한 디자인이에요.",
    "blank": "基調",
+   "src": "made"
+  }
+ ],
+ "w|基金": [
+  {
+   "text": "拓也は、料理人を目指す若者のための基金に毎年寄付している。",
+   "en": "Takuya donates every year to a fund for young people who want to become cooks.",
+   "ko": "다쿠야는 요리사를 꿈꾸는 젊은이를 위한 기금에 해마다 기부해요.",
+   "blank": "基金",
+   "src": "made"
+  },
+  {
+   "text": "ホテルは、地元の文化を守る基金に売り上げの一部を寄付している。",
+   "en": "The hotel donates part of its sales to a fund that protects local culture.",
+   "ko": "호텔은 매출 일부를 지역 문화를 지키는 기금에 기부해요.",
+   "blank": "基金",
    "src": "made"
   }
  ],
@@ -31148,6 +31308,22 @@
    "en": "Aoi got hungry in the middle of the night and tried making the soup she'd learned.",
    "ko": "아오이는 한밤중에 배가 고파서 배운 수프를 만들어 봤어요.",
    "blank": "夜中",
+   "src": "made"
+  }
+ ],
+ "w|夜勤": [
+  {
+   "text": "仕込みのために、拓也は月に何度か夜勤に入る。",
+   "en": "Takuya works a night shift a few times a month to do prep.",
+   "ko": "밑준비를 위해 다쿠야는 한 달에 몇 번 야간 근무를 해요.",
+   "blank": "夜勤",
+   "src": "made"
+  },
+  {
+   "text": "夜勤のフロント係が、遅く着いた客を笑顔で迎えた。",
+   "en": "The night-shift front desk clerk greeted the late guest with a smile.",
+   "ko": "야간 근무 프런트 직원이 늦게 도착한 손님을 웃으며 맞았어요.",
+   "blank": "夜勤",
    "src": "made"
   }
  ],
@@ -33829,6 +34005,22 @@
    "src": "made"
   }
  ],
+ "w|定年": [
+  {
+   "text": "料理長は来年で定年だが、まだ包丁を置くつもりはないらしい。",
+   "en": "The head chef reaches retirement age next year, but apparently has no plans to put down his knife.",
+   "ko": "주방장은 내년에 정년이지만 아직 칼을 놓을 생각은 없는 것 같아요.",
+   "blank": "定年",
+   "src": "made"
+  },
+  {
+   "text": "支配人は定年を迎え、最後の日にロビーで挨拶をした。",
+   "en": "The general manager reached retirement age and gave a farewell speech in the lobby on his last day.",
+   "ko": "지배인은 정년을 맞아 마지막 날 로비에서 인사를 했어요.",
+   "blank": "定年",
+   "src": "made"
+  }
+ ],
  "w|定時": [
   {
    "text": "仕事納めの日、翔太は定時ぴったりに会社を出た。",
@@ -33966,6 +34158,22 @@
    "en": "Aoi is still young, but her business skill is a match even for her father.",
    "ko": "아오이는 아직 젊지만 장사 실력은 아버지에게도 뒤지지 않아요.",
    "blank": "実力",
+   "src": "made"
+  }
+ ],
+ "w|実務": [
+  {
+   "text": "調理学校で習ったことと店の実務は、まるで違った。",
+   "en": "What Takuya learned at cooking school was nothing like the actual work in the restaurant.",
+   "ko": "조리 학교에서 배운 것과 가게의 실무는 전혀 달랐어요.",
+   "blank": "実務",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、フロントの実務を一から新人に教えた。",
+   "en": "Keiko taught the new hire the front-desk work from scratch.",
+   "ko": "게이코는 신입에게 프런트 실무를 처음부터 가르쳤어요.",
+   "blank": "実務",
    "src": "made"
   }
  ],
@@ -34930,6 +35138,22 @@
    "en": "The forest road was closed off by a landslide, so Sakura and her friends took a detour.",
    "ko": "산사태로 임도가 봉쇄돼서 사쿠라 일행은 돌아서 갔어요.",
    "blank": "封鎖",
+   "src": "made"
+  }
+ ],
+ "w|専属": [
+  {
+   "text": "拓也は、ある旅館の専属料理人にならないかと誘われた。",
+   "en": "Takuya was asked whether he would become the exclusive cook for a certain inn.",
+   "ko": "다쿠야는 어느 료칸의 전속 요리사가 되지 않겠냐는 제안을 받았어요.",
+   "blank": "専属",
+   "src": "made"
+  },
+  {
+   "text": "スイートルームには、専属の執事が一人ついている。",
+   "en": "The suite comes with its own personal butler.",
+   "ko": "스위트룸에는 전속 집사가 한 명 붙어 있어요.",
+   "blank": "専属",
    "src": "made"
   }
  ],
@@ -41427,6 +41651,22 @@
    "blank": "承認"
   }
  ],
+ "w|承諾": [
+  {
+   "text": "料理長の承諾を得て、拓也は自分の一品を出すことになった。",
+   "en": "With the head chef's consent, Takuya got to put one of his own dishes on the menu.",
+   "ko": "주방장의 승낙을 받아 다쿠야는 자기 요리 하나를 내게 됐어요.",
+   "blank": "承諾",
+   "src": "made"
+  },
+  {
+   "text": "客の承諾を得てから、恵子は荷物を部屋に運んだ。",
+   "en": "Keiko carried the luggage to the room after getting the guest's permission.",
+   "ko": "게이코는 손님의 승낙을 받은 뒤 짐을 방으로 옮겼어요.",
+   "blank": "承諾",
+   "src": "made"
+  }
+ ],
  "w|技": [
   {
    "text": "すごい技だね。",
@@ -43267,6 +43507,22 @@
    "blank": "描こう"
   }
  ],
+ "w|描ける": [
+  {
+   "text": "拓也は、ソースで皿に花の絵を描けるようになった。",
+   "en": "Takuya has learned to draw a flower on the plate with sauce.",
+   "ko": "다쿠야는 소스로 접시에 꽃 그림을 그릴 수 있게 됐어요.",
+   "blank": "描ける",
+   "src": "made"
+  },
+  {
+   "text": "ロビーの似顔絵師は、客の顔を数分で描けるそうだ。",
+   "en": "The caricature artist in the lobby can reportedly draw a guest's face in a few minutes.",
+   "ko": "로비 초상화가는 손님 얼굴을 몇 분 만에 그릴 수 있대요.",
+   "blank": "描ける",
+   "src": "made"
+  }
+ ],
  "w|描写": [
   {
    "text": "市の広報誌に、町の昔の暮らしを描写した随筆が載った。",
@@ -43621,6 +43877,22 @@
    "src": "made"
   }
  ],
+ "w|操る": [
+  {
+   "text": "拓也は、重い中華鍋を片手で自在に操る。",
+   "en": "Takuya handles the heavy wok freely with one hand.",
+   "ko": "다쿠야는 무거운 중화 냄비를 한 손으로 자유자재로 다뤄요.",
+   "blank": "操る",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、英語と中国語を自由に操る。",
+   "en": "Keiko speaks English and Chinese freely.",
+   "ko": "게이코는 영어와 중국어를 자유롭게 구사해요.",
+   "blank": "操る",
+   "src": "made"
+  }
+ ],
  "w|操作": [
   {
    "text": "操作、簡単だよ。",
@@ -43680,6 +43952,22 @@
    "en": "Aoi poured the liquid while holding the test tube steady with both hands.",
    "ko": "아오이는 시험관을 두 손으로 받치면서 액체를 부었어요.",
    "blank": "支え",
+   "src": "made"
+  }
+ ],
+ "w|支出": [
+  {
+   "text": "ガス代が上がり、店の支出はかなり増えた。",
+   "en": "Gas prices went up, and the restaurant's spending rose quite a bit.",
+   "ko": "가스비가 올라서 가게 지출이 꽤 늘었어요.",
+   "blank": "支出",
+   "src": "made"
+  },
+  {
+   "text": "改装の支出が大きく、今年は人を増やせない。",
+   "en": "Renovation spending was so large that the hotel can't hire more people this year.",
+   "ko": "리모델링 지출이 커서 올해는 사람을 늘릴 수 없어요.",
+   "blank": "支出",
    "src": "made"
   }
  ],
@@ -46950,6 +47238,22 @@
    "en": "The neighborhood circular had useful information about how to sort garbage.",
    "ko": "회람판에는 쓰레기 분리 방법에 관한 유용한 정보가 실려 있었어요.",
    "blank": "有用",
+   "src": "made"
+  }
+ ],
+ "w|有益": [
+  {
+   "text": "常連客からの意見は、メニュー作りにとても有益だった。",
+   "en": "Feedback from regular customers was very useful in planning the menu.",
+   "ko": "단골손님 의견은 메뉴를 짜는 데 아주 유익했어요.",
+   "blank": "有益",
+   "src": "made"
+  },
+  {
+   "text": "フロントで配る観光地図は、客にとって有益な情報が多い。",
+   "en": "The sightseeing map handed out at the front desk has a lot of useful information for guests.",
+   "ko": "프런트에서 나눠 주는 관광 지도에는 손님에게 유익한 정보가 많아요.",
+   "blank": "有益",
    "src": "made"
   }
  ],
@@ -50829,6 +51133,22 @@
    "src": "made"
   }
  ],
+ "w|水色": [
+  {
+   "text": "厨房の壁は、明るい水色のタイルで覆われている。",
+   "en": "The kitchen walls are covered in bright light-blue tiles.",
+   "ko": "주방 벽은 밝은 하늘색 타일로 덮여 있어요.",
+   "blank": "水色",
+   "src": "made"
+  },
+  {
+   "text": "屋上のプールの水色が、夏の空によく映えている。",
+   "en": "The light blue of the rooftop pool stands out beautifully against the summer sky.",
+   "ko": "옥상 수영장의 하늘색이 여름 하늘에 잘 어울려요.",
+   "blank": "水色",
+   "src": "made"
+  }
+ ],
  "w|水道": [
   {
    "text": "給湯室の水道から、変な音がしている。",
@@ -51226,6 +51546,22 @@
    "en": "The tug-of-war at the autumn sports day never reached a decision and ended in a draw.",
    "ko": "가을 운동회 줄다리기는 끝까지 승부가 나지 않아 무승부가 됐어요.",
    "blank": "決着",
+   "src": "made"
+  }
+ ],
+ "w|決算": [
+  {
+   "text": "オーナーは決算の前になると、食材の値段に細かくなる。",
+   "en": "Before the books are closed, the owner gets picky about ingredient prices.",
+   "ko": "사장님은 결산 전이 되면 식재료 값에 깐깐해져요.",
+   "blank": "決算",
+   "src": "made"
+  },
+  {
+   "text": "決算の数字がよかったので、従業員にボーナスが出た。",
+   "en": "The year-end figures were good, so the staff got a bonus.",
+   "ko": "결산 숫자가 좋아서 직원들에게 보너스가 나왔어요.",
+   "blank": "決算",
    "src": "made"
   }
  ],
@@ -51775,6 +52111,22 @@
    "en": "They dispatched staff.",
    "ko": "직원을 파견했어.",
    "blank": "派遣"
+  }
+ ],
+ "w|派閥": [
+  {
+   "text": "和食と洋食の料理人で派閥ができてしまい、店長は頭を抱えた。",
+   "en": "The Japanese and Western cooks split into factions, and the manager was at a loss.",
+   "ko": "일식과 양식 요리사들 사이에 파벌이 생겨서 점장은 머리를 싸맸어요.",
+   "blank": "派閥",
+   "src": "made"
+  },
+  {
+   "text": "本社の派閥争いのせいで、新しい支配人がなかなか決まらない。",
+   "en": "Because of factional fighting at headquarters, a new manager still hasn't been chosen.",
+   "ko": "본사 파벌 싸움 때문에 새 지배인이 좀처럼 정해지지 않아요.",
+   "blank": "派閥",
+   "src": "made"
   }
  ],
  "w|流す": [
@@ -52557,6 +52909,22 @@
    "en": "That feels warm-hearted.",
    "ko": "마음이 따뜻하네.",
    "blank": "温かい"
+  }
+ ],
+ "w|温める": [
+  {
+   "text": "拓也は、冷めたスープを小鍋で温め直した。",
+   "en": "Takuya reheated the cold soup in a small pot.",
+   "ko": "다쿠야는 식은 수프를 작은 냄비로 다시 데웠어요.",
+   "blank": "温め",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、寒い中を着いた客のために部屋を温めておいた。",
+   "en": "Keiko warmed the room for the guests who arrived in the cold.",
+   "ko": "게이코는 추운 날 도착한 손님을 위해 방을 데워 두었어요.",
+   "blank": "温め",
+   "src": "made"
   }
  ],
  "w|温度": [
@@ -54359,6 +54727,22 @@
    "src": "made"
   }
  ],
+ "w|特技": [
+  {
+   "text": "拓也の特技は、大根を紙のように薄くむくことだ。",
+   "en": "Takuya's special skill is peeling daikon as thin as paper.",
+   "ko": "다쿠야의 특기는 무를 종이처럼 얇게 깎는 거예요.",
+   "blank": "特技",
+   "src": "made"
+  },
+  {
+   "text": "恵子の特技は、一度会った客の顔と名前を忘れないことだ。",
+   "en": "Keiko's special talent is never forgetting the face and name of a guest she's met once.",
+   "ko": "게이코의 특기는 한 번 만난 손님의 얼굴과 이름을 잊지 않는 거예요.",
+   "blank": "特技",
+   "src": "made"
+  }
+ ],
  "w|特有": [
   {
    "text": "古い劇場特有のほこりっぽい匂いが、誠は嫌いではない。",
@@ -55163,6 +55547,22 @@
    "src": "made"
   }
  ],
+ "w|理屈": [
+  {
+   "text": "料理長は「理屈より舌で覚えろ」が口癖だ。",
+   "en": "The head chef's favorite saying is \"Learn with your tongue, not with theory.\"",
+   "ko": "주방장의 입버릇은 \"이론보다 혀로 익혀라\"예요.",
+   "blank": "理屈",
+   "src": "made"
+  },
+  {
+   "text": "怒った客に理屈で説明しても、かえって話がこじれる。",
+   "en": "Explaining logically to an angry guest only makes things more tangled.",
+   "ko": "화난 손님에게 논리로 설명해도 오히려 일이 꼬여요.",
+   "blank": "理屈",
+   "src": "made"
+  }
+ ],
  "w|理念": [
   {
    "text": "「地元の野菜を大切に」というのが、この店の理念だ。",
@@ -55737,6 +56137,22 @@
    "blank": "用意"
   }
  ],
+ "w|用紙": [
+  {
+   "text": "注文を書く用紙が切れて、拓也は倉庫に取りに行った。",
+   "en": "The order forms ran out, so Takuya went to the storeroom to get more.",
+   "ko": "주문서 용지가 떨어져서 다쿠야는 창고에 가지러 갔어요.",
+   "blank": "用紙",
+   "src": "made"
+  },
+  {
+   "text": "チェックインのとき、客は宿泊者カードの用紙に住所を書く。",
+   "en": "At check-in, guests write their address on the registration form.",
+   "ko": "체크인할 때 손님은 숙박 카드 용지에 주소를 써요.",
+   "blank": "用紙",
+   "src": "made"
+  }
+ ],
  "w|用語": [
   {
    "text": "新人にとって、工場の専門用語は覚えるのが大変だ。",
@@ -56290,6 +56706,22 @@
    "en": "Yumi's grandfather regularly visits the hospital for a heart condition.",
    "ko": "유미 할아버지는 심장 질환으로 정기적으로 병원에 다녀요.",
    "blank": "疾患",
+   "src": "made"
+  }
+ ],
+ "w|病む": [
+  {
+   "text": "長時間労働で心を病んで、店を辞めた先輩もいる。",
+   "en": "One senior cook quit after the long hours wore down his mental health.",
+   "ko": "장시간 노동으로 마음이 병들어 가게를 그만둔 선배도 있어요.",
+   "blank": "病ん",
+   "src": "made"
+  },
+  {
+   "text": "気を病んでいた客が、温泉に浸かって元気を取り戻した。",
+   "en": "A guest who had been worrying got her spirits back after soaking in the hot spring.",
+   "ko": "걱정에 시달리던 손님이 온천에 몸을 담그고 기운을 되찾았어요.",
+   "blank": "病ん",
    "src": "made"
   }
  ],
@@ -56924,6 +57356,22 @@
    "en": "On winter mornings, the village rice fields were covered entirely in white frost.",
    "ko": "겨울 아침 마을 논은 온통 흰 서리로 덮여 있었어요.",
    "blank": "白色",
+   "src": "made"
+  }
+ ],
+ "w|白黒": [
+  {
+   "text": "厨房の壁には、創業当時の白黒写真が飾ってある。",
+   "en": "A black-and-white photo from when the restaurant opened hangs on the kitchen wall.",
+   "ko": "주방 벽에는 창업 당시 흑백 사진이 걸려 있어요.",
+   "blank": "白黒",
+   "src": "made"
+  },
+  {
+   "text": "廊下には、開業当時の白黒の写真が並んでいる。",
+   "en": "The corridor is lined with black-and-white photos from when the hotel opened.",
+   "ko": "복도에는 개업 당시의 흑백 사진이 줄지어 있어요.",
+   "blank": "白黒",
    "src": "made"
   }
  ],
@@ -58353,6 +58801,22 @@
    "src": "made"
   }
  ],
+ "w|短編": [
+  {
+   "text": "休憩中、拓也は料理人が主人公の短編を読んでいた。",
+   "en": "During his break, Takuya was reading a short story about a cook.",
+   "ko": "쉬는 시간에 다쿠야는 요리사가 주인공인 단편을 읽고 있었어요.",
+   "blank": "短編",
+   "src": "made"
+  },
+  {
+   "text": "客室には、地元の作家の短編集が一冊ずつ置いてある。",
+   "en": "Each guest room has a copy of a collection of short stories by a local writer.",
+   "ko": "객실마다 지역 작가의 단편집이 한 권씩 놓여 있어요.",
+   "blank": "短編",
+   "src": "made"
+  }
+ ],
  "w|短縮": [
   {
    "text": "年末なので、翔太の会社は営業時間を短縮している。",
@@ -58546,6 +59010,22 @@
    "en": "Old medical charts are disposed of according to the rules once the retention period is over.",
    "ko": "오래된 차트는 보존 기간이 지나면 규칙대로 폐기돼요.",
    "blank": "破棄",
+   "src": "made"
+  }
+ ],
+ "w|破滅": [
+  {
+   "text": "無理な出店を続けて破滅したチェーン店の話を、オーナーはよくする。",
+   "en": "The owner often talks about a chain that ruined itself by opening too many branches.",
+   "ko": "사장님은 무리하게 가게를 늘리다 망한 체인점 이야기를 자주 해요.",
+   "blank": "破滅",
+   "src": "made"
+  },
+  {
+   "text": "ホテルを舞台にした映画は、ある一家の破滅を描いていた。",
+   "en": "The movie set in a hotel depicted the downfall of a family.",
+   "ko": "호텔을 배경으로 한 영화는 어느 집안의 파멸을 그렸어요.",
+   "blank": "破滅",
    "src": "made"
   }
  ],
@@ -59170,6 +59650,22 @@
    "en": "That temple forbids going into the pond during winter.",
    "ko": "그 절에서는 겨울 동안 연못에 들어가는 걸 금지해요.",
    "blank": "禁じて",
+   "src": "made"
+  }
+ ],
+ "w|禁断": [
+  {
+   "text": "バターとチーズをたっぷり使った夜食は、まさに禁断の味だった。",
+   "en": "The late-night snack loaded with butter and cheese tasted truly forbidden.",
+   "ko": "버터와 치즈를 듬뿍 쓴 야식은 그야말로 금단의 맛이었어요.",
+   "blank": "禁断",
+   "src": "made"
+  },
+  {
+   "text": "夜のラウンジで出す特製パフェは、禁断のデザートと呼ばれている。",
+   "en": "The special parfait served in the lounge at night is called the forbidden dessert.",
+   "ko": "밤 라운지에서 내는 특제 파르페는 금단의 디저트라고 불려요.",
+   "blank": "禁断",
    "src": "made"
   }
  ],
@@ -60919,6 +61415,22 @@
    "blank": "組み合わせ"
   }
  ],
+ "w|組み立て": [
+  {
+   "text": "新しいオーブンの組み立てに、拓也は半日かかった。",
+   "en": "It took Takuya half a day to assemble the new oven.",
+   "ko": "새 오븐 조립에 다쿠야는 반나절이 걸렸어요.",
+   "blank": "組み立て",
+   "src": "made"
+  },
+  {
+   "text": "子ども連れの客に、恵子は家具の組み立て式のおもちゃを渡した。",
+   "en": "Keiko gave a guest's child a toy furniture set that had to be put together.",
+   "ko": "게이코는 아이를 데려온 손님에게 조립식 가구 장난감을 건넸어요.",
+   "blank": "組み立て",
+   "src": "made"
+  }
+ ],
  "w|組む": [
   {
    "text": "直樹は、隣の部署の先輩と組んで新しい企画を進めている。",
@@ -61296,6 +61808,22 @@
    "en": "Yumi planned this rail trip by saving her bonus and salary.",
    "ko": "유미는 보너스와 급여를 모아 이 철도 여행을 계획했어요.",
    "blank": "給与",
+   "src": "made"
+  }
+ ],
+ "w|給付": [
+  {
+   "text": "店が休業した間、従業員は国からの給付で生活をつないだ。",
+   "en": "While the restaurant was closed, the staff got by on payments from the government.",
+   "ko": "가게가 쉬는 동안 직원들은 나라에서 받은 지원금으로 생활을 이어 갔어요.",
+   "blank": "給付",
+   "src": "made"
+  },
+  {
+   "text": "旅行支援の給付を受けた客が、春から一気に増えた。",
+   "en": "Guests using government travel subsidies increased sharply from spring.",
+   "ko": "여행 지원금을 받은 손님이 봄부터 확 늘었어요.",
+   "blank": "給付",
    "src": "made"
   }
  ],
@@ -65353,6 +65881,22 @@
    "src": "made"
   }
  ],
+ "w|裕福": [
+  {
+   "text": "拓也の店には、裕福な家族連れがよく来る。",
+   "en": "Well-off families often come to Takuya's restaurant.",
+   "ko": "다쿠야의 가게에는 부유한 가족 손님이 자주 와요.",
+   "blank": "裕福",
+   "src": "made"
+  },
+  {
+   "text": "このホテルには、裕福な常連客が多い。",
+   "en": "This hotel has many wealthy regular guests.",
+   "ko": "이 호텔에는 부유한 단골손님이 많아요.",
+   "blank": "裕福",
+   "src": "made"
+  }
+ ],
  "w|補佐": [
   {
    "text": "大輔は、現場所長の補佐として図面の確認を任されている。",
@@ -65535,6 +66079,22 @@
    "en": "Pick more than one.",
    "ko": "여러 개 골라.",
    "blank": "複数"
+  }
+ ],
+ "w|複製": [
+  {
+   "text": "拓也の店では、レシピの無断複製を防ぐためにノートを金庫にしまっている。",
+   "en": "At Takuya's restaurant, the recipe notebooks are kept in a safe to stop them being copied without permission.",
+   "ko": "다쿠야의 가게에서는 레시피 무단 복제를 막으려고 노트를 금고에 넣어 둬요.",
+   "blank": "複製",
+   "src": "made"
+  },
+  {
+   "text": "ロビーの名画は、本物ではなく精巧な複製だ。",
+   "en": "The famous painting in the lobby is not the original but an elaborate copy.",
+   "ko": "로비의 명화는 진품이 아니라 정교한 복제품이에요.",
+   "blank": "複製",
+   "src": "made"
   }
  ],
  "w|複雑": [
@@ -66639,6 +67199,22 @@
    "src": "made"
   }
  ],
+ "w|解約": [
+  {
+   "text": "値上げが続いたので、店は野菜の仕入れ先との契約を解約した。",
+   "en": "Because prices kept rising, the restaurant canceled its contract with the vegetable supplier.",
+   "ko": "값이 계속 올라서 가게는 채소 거래처와의 계약을 해지했어요.",
+   "blank": "解約",
+   "src": "made"
+  },
+  {
+   "text": "大雪の予報で、予約の解約が相次いだ。",
+   "en": "With heavy snow forecast, one booking after another was canceled.",
+   "ko": "폭설 예보에 예약 취소가 잇따랐어요.",
+   "blank": "解約",
+   "src": "made"
+  }
+ ],
  "w|解説": [
   {
    "text": "先生の解説、分かりやすい。",
@@ -67488,6 +68064,22 @@
    "en": "Replacing the old tatami herself was a first attempt for Keiko.",
    "ko": "오래된 다다미를 직접 교체하는 건 게이코에게 첫 시도였어요.",
    "blank": "試み",
+   "src": "made"
+  }
+ ],
+ "w|試作": [
+  {
+   "text": "拓也は、秋の新メニューの試作を何度も繰り返した。",
+   "en": "Takuya made trial versions of the new autumn dish again and again.",
+   "ko": "다쿠야는 가을 신메뉴 시제품을 몇 번이나 다시 만들었어요.",
+   "blank": "試作",
+   "src": "made"
+  },
+  {
+   "text": "ホテルのパン職人が試作した朝食用のパンを、恵子も味見した。",
+   "en": "Keiko also tasted the breakfast bread the hotel baker had made as a trial.",
+   "ko": "게이코도 호텔 제빵사가 시험 삼아 만든 아침 식사용 빵을 맛봤어요.",
+   "blank": "試作",
    "src": "made"
   }
  ],
@@ -71686,6 +72278,22 @@
    "en": "Among regulars, the manager's nickname is \"Dr. Bread.\"",
    "ko": "단골손님들 사이에서 점장의 통칭은 \"빵 박사\"예요.",
    "blank": "通称",
+   "src": "made"
+  }
+ ],
+ "w|通算": [
+  {
+   "text": "拓也がこの厨房で働くのは、通算で十年になる。",
+   "en": "Takuya has worked in this kitchen for ten years in total.",
+   "ko": "다쿠야가 이 주방에서 일한 지 통산 십 년이 돼요.",
+   "blank": "通算",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、このホテルで通算二十年働いている。",
+   "en": "Keiko has worked at this hotel for twenty years in total.",
+   "ko": "게이코는 이 호텔에서 통산 이십 년 일하고 있어요.",
+   "blank": "通算",
    "src": "made"
   }
  ],
@@ -76865,6 +77473,22 @@
    "src": "made"
   }
  ],
+ "w|題材": [
+  {
+   "text": "料理番組の題材として、拓也の店のまかない飯が取り上げられた。",
+   "en": "The staff meals at Takuya's restaurant were featured as the subject of a cooking show.",
+   "ko": "다쿠야 가게의 직원 식사가 요리 프로그램 소재로 다뤄졌어요.",
+   "blank": "題材",
+   "src": "made"
+  },
+  {
+   "text": "このホテルは、昔の小説の題材になったことがある。",
+   "en": "This hotel was once the setting of an old novel.",
+   "ko": "이 호텔은 옛 소설의 소재가 된 적이 있어요.",
+   "blank": "題材",
+   "src": "made"
+  }
+ ],
  "w|顔": [
   {
    "text": "顔、洗った？",
@@ -77496,6 +78120,22 @@
    "en": "Keiko's grandchild made full use of every tool to build a snowman.",
    "ko": "게이코의 손주는 온갖 도구를 구사해서 눈사람을 만들었어요.",
    "blank": "駆使",
+   "src": "made"
+  }
+ ],
+ "w|駆動": [
+  {
+   "text": "新しいミキサーは、駆動音が静かで厨房でも話しやすい。",
+   "en": "The new mixer runs quietly, so it's easy to talk in the kitchen.",
+   "ko": "새 믹서는 작동 소리가 조용해서 주방에서도 이야기하기 편해요.",
+   "blank": "駆動",
+   "src": "made"
+  },
+  {
+   "text": "ホテルの送迎バスは、電気で駆動する新しい車に替わった。",
+   "en": "The hotel shuttle was replaced with a new electric-powered bus.",
+   "ko": "호텔 셔틀버스는 전기로 움직이는 새 차로 바뀌었어요.",
+   "blank": "駆動",
    "src": "made"
   }
  ],

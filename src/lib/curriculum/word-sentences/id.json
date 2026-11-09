@@ -4281,6 +4281,22 @@
    "blank": "berada"
   }
  ],
+ "w|beradab": [
+  {
+   "text": "Menurut Eko, turis yang beradab tidak meninggalkan sampah di pantai.",
+   "en": "According to Eko, civilized tourists don't leave rubbish on the beach.",
+   "ko": "에코는 교양 있는 관광객이라면 해변에 쓰레기를 남기지 않는다고 생각해요.",
+   "blank": "beradab",
+   "src": "made"
+  },
+  {
+   "text": "Menurut Ayu, mengantre dengan tertib adalah tanda masyarakat yang beradab.",
+   "en": "In Ayu's view, queuing in an orderly way is a sign of a civilized society.",
+   "ko": "아유는 질서 있게 줄 서는 것이 교양 있는 사회의 표시라고 생각해요.",
+   "blank": "beradab",
+   "src": "made"
+  }
+ ],
  "w|beradaptasi": [
   {
    "text": "Koki baru dari kota lain butuh waktu untuk beradaptasi dengan dapur yang sempit.",
@@ -4599,6 +4615,22 @@
    "en": "His responsibility is so heavy.",
    "ko": "그의 책임은 정말 무거워.",
    "blank": "Berat"
+  }
+ ],
+ "w|berawal": [
+  {
+   "text": "Kecintaan Eko pada laut berawal dari liburan masa kecil di desa nelayan ini.",
+   "en": "Eko's love of the sea began with childhood holidays in this fishing village.",
+   "ko": "에코의 바다 사랑은 어린 시절 이 어촌에서 보낸 방학에서 시작됐어요.",
+   "blank": "berawal",
+   "src": "made"
+  },
+  {
+   "text": "Sakit gigi Ayu berawal dari kebiasaan makan permen sebelum tidur.",
+   "en": "Ayu's toothache started from her habit of eating sweets before bed.",
+   "ko": "아유의 치통은 자기 전에 사탕을 먹는 습관에서 시작됐어요.",
+   "blank": "berawal",
+   "src": "made"
   }
  ],
  "w|berbagai": [
@@ -6555,6 +6587,22 @@
    "src": "made"
   }
  ],
+ "w|berkelanjutan": [
+  {
+   "text": "Eko ikut program wisata yang berkelanjutan agar desa pesisirnya tetap bersih.",
+   "en": "Eko joins a sustainable tourism program so that his coastal village stays clean.",
+   "ko": "에코는 해안 마을이 깨끗하게 남도록 지속 가능한 관광 프로그램에 참여해요.",
+   "blank": "berkelanjutan",
+   "src": "made"
+  },
+  {
+   "text": "Klinik gigi tempat Ayu berobat punya program pemeriksaan berkelanjutan untuk anak sekolah.",
+   "en": "The dental clinic where Ayu goes has an ongoing check-up program for schoolchildren.",
+   "ko": "아유가 다니는 치과에는 학생을 위한 지속적인 검진 프로그램이 있어요.",
+   "blank": "berkelanjutan",
+   "src": "made"
+  }
+ ],
  "w|berkelas": [
   {
    "text": "Gaun pengantin Rina sederhana tetapi terlihat berkelas.",
@@ -6643,6 +6691,22 @@
    "en": "The growth of the business keeps her busy.",
    "ko": "사업이 커지면서 그녀가 바빠졌어.",
    "blank": "Berkembangnya"
+  }
+ ],
+ "w|berkembang biak": [
+  {
+   "text": "Penyu datang ke pantai ini untuk berkembang biak, jelas Eko kepada para relawan.",
+   "en": "Turtles come to this beach to breed, Eko explained to the volunteers.",
+   "ko": "거북이 번식하러 이 해변에 온다고 에코가 자원봉사자들에게 설명했어요.",
+   "blank": "berkembang biak",
+   "src": "made"
+  },
+  {
+   "text": "Dokter menunjukkan gambar bakteri yang berkembang biak di sela gigi kepada Ayu.",
+   "en": "The dentist showed Ayu a picture of bacteria multiplying between teeth.",
+   "ko": "의사는 이 사이에서 번식하는 세균 그림을 아유에게 보여 줬어요.",
+   "blank": "berkembang biak",
+   "src": "made"
   }
  ],
  "w|berkenalan": [
@@ -7354,6 +7418,22 @@
    "en": "Lestari meditated by the lake while waiting for the sunrise.",
    "ko": "레스타리는 해돋이를 기다리며 호숫가에서 명상했어요.",
    "blank": "bermeditasi",
+   "src": "made"
+  }
+ ],
+ "w|bermigrasi": [
+  {
+   "text": "Kata nelayan tua kepada Eko, ikan tongkol bermigrasi ke perairan ini setiap musim kemarau.",
+   "en": "The old fisherman told Eko that tuna migrate to these waters every dry season.",
+   "ko": "늙은 어부는 에코에게 건기마다 다랑어가 이 바다로 이동해 온다고 했어요.",
+   "blank": "bermigrasi",
+   "src": "made"
+  },
+  {
+   "text": "Televisi di ruang tunggu menayangkan film dokumenter tentang burung yang bermigrasi, dan Ayu menontonnya sambil menunggu.",
+   "en": "The TV in the waiting room was showing a documentary about migrating birds, and Ayu watched it while waiting.",
+   "ko": "대기실 텔레비전에서 철새 다큐멘터리가 나오고 있어서 아유는 기다리며 봤어요.",
+   "blank": "bermigrasi",
    "src": "made"
   }
  ],
@@ -9213,6 +9293,22 @@
    "en": "Owing a large debt made him anxious.",
    "ko": "큰 빚을 져서 그는 불안해졌어.",
    "blank": "Berutang"
+  }
+ ],
+ "w|bervariasi": [
+  {
+   "text": "Harga ikan di pelelangan bervariasi tergantung hasil tangkapan, jelas Eko kepada turis.",
+   "en": "Fish prices at the auction vary depending on the catch, Eko explained to the tourists.",
+   "ko": "경매장 생선 값은 어획량에 따라 달라진다고 에코가 관광객에게 설명했어요.",
+   "blank": "bervariasi",
+   "src": "made"
+  },
+  {
+   "text": "Warna tambalan gigi bervariasi, jadi dokter memilih yang paling mirip dengan gigi Ayu.",
+   "en": "Filling colors vary, so the dentist chose the one closest to Ayu's teeth.",
+   "ko": "충전재 색깔이 다양해서 의사는 아유의 이와 가장 비슷한 것을 골랐어요.",
+   "blank": "bervariasi",
+   "src": "made"
   }
  ],
  "w|berwarna": [
@@ -12525,6 +12621,22 @@
    "blank": "Derajat"
   }
  ],
+ "w|deras": [
+  {
+   "text": "Hujan deras turun tiba-tiba, dan Eko meniup peluit agar semua orang keluar dari air.",
+   "en": "Heavy rain suddenly fell, and Eko blew his whistle so everyone would get out of the water.",
+   "ko": "갑자기 폭우가 쏟아지자 에코는 모두 물에서 나오라고 호루라기를 불었어요.",
+   "blank": "deras",
+   "src": "made"
+  },
+  {
+   "text": "Hujan deras membuat Ayu datang terlambat ke janji dengan dokter gigi.",
+   "en": "Heavy rain made Ayu late for her dentist appointment.",
+   "ko": "폭우 때문에 아유는 치과 예약에 늦었어요.",
+   "blank": "deras",
+   "src": "made"
+  }
+ ],
  "w|dermaga": [
   {
    "text": "Agus dan teman-temannya menunggu kapal feri di dermaga Merak.",
@@ -14419,6 +14531,22 @@
    "en": "The match final was broadcast live.",
    "ko": "결승전이 생중계됐어.",
    "blank": "Final"
+  }
+ ],
+ "w|finansial": [
+  {
+   "text": "Warung kelapa milik paman Eko sedang mengalami kesulitan finansial sejak musim hujan.",
+   "en": "The coconut stall owned by Eko's uncle has been having financial trouble since the rainy season.",
+   "ko": "에코 삼촌의 코코넛 가게는 우기 이후로 재정난을 겪고 있어요.",
+   "blank": "finansial",
+   "src": "made"
+  },
+  {
+   "text": "Ayu sempat menunda perawatan gigi karena alasan finansial.",
+   "en": "Ayu had put off dental treatment for financial reasons.",
+   "ko": "아유는 돈 문제 때문에 치과 치료를 미뤘었어요.",
+   "blank": "finansial",
+   "src": "made"
   }
  ],
  "w|firasat": [
@@ -18899,6 +19027,22 @@
    "blank": "Jasad"
   }
  ],
+ "w|jatah": [
+  {
+   "text": "Eko membagi jatah ikan hasil tangkapan dengan tetangganya.",
+   "en": "Eko shared his portion of the catch with his neighbors.",
+   "ko": "에코는 잡은 생선 몫을 이웃과 나눴어요.",
+   "blank": "jatah",
+   "src": "made"
+  },
+  {
+   "text": "Asuransi kantor memberi Ayu jatah perawatan gigi dua kali setahun.",
+   "en": "Ayu's work insurance gives her an allowance of two dental treatments a year.",
+   "ko": "회사 보험은 아유에게 일 년에 두 번 치과 치료를 지원해 줘요.",
+   "blank": "jatah",
+   "src": "made"
+  }
+ ],
  "w|jati": [
   {
    "text": "Kayu jati dari hutan rakyat itu dijual mahal ke kota.",
@@ -21793,6 +21937,22 @@
    "blank": "Kebun"
   }
  ],
+ "w|keburukan": [
+  {
+   "text": "Eko tahu keburukan pariwisata massal: sampah, macet, dan harga yang naik.",
+   "en": "Eko knows the downsides of mass tourism: litter, traffic jams, and rising prices.",
+   "ko": "에코는 대규모 관광의 나쁜 점을 알아요. 쓰레기, 교통 체증, 오르는 물가요.",
+   "blank": "keburukan",
+   "src": "made"
+  },
+  {
+   "text": "Dokter menjelaskan keburukan minuman bersoda bagi email gigi Ayu.",
+   "en": "The dentist explained the harm fizzy drinks do to Ayu's tooth enamel.",
+   "ko": "의사는 탄산음료가 아유의 치아 법랑질에 해로운 점을 설명했어요.",
+   "blank": "keburukan",
+   "src": "made"
+  }
+ ],
  "w|kebutuhan": [
   {
    "text": "Kebutuhan dasar harus dipenuhi dulu.",
@@ -24036,6 +24196,22 @@
    "en": "Rina smiled with satisfaction after managing to stand up on the surfboard.",
    "ko": "리나는 서핑보드 위에 서는 데 성공하고 만족스럽게 웃었어요.",
    "blank": "kepuasan",
+   "src": "made"
+  }
+ ],
+ "w|kepunyaan": [
+  {
+   "text": "Perahu biru di ujung dermaga itu kepunyaan kakek Eko.",
+   "en": "The blue boat at the end of the pier belongs to Eko's grandfather.",
+   "ko": "부두 끝의 파란 배는 에코 할아버지의 것이에요.",
+   "blank": "kepunyaan",
+   "src": "made"
+  },
+  {
+   "text": "Perawat bertanya apakah payung di kursi itu kepunyaan Ayu.",
+   "en": "The nurse asked whether the umbrella on the chair belonged to Ayu.",
+   "ko": "간호사는 의자 위 우산이 아유 것인지 물었어요.",
+   "blank": "kepunyaan",
    "src": "made"
   }
  ],
@@ -26323,6 +26499,22 @@
    "src": "made"
   }
  ],
+ "w|konstan": [
+  {
+   "text": "Angin laut yang konstan membuat layang-layang Eko terbang tinggi sepanjang sore.",
+   "en": "The constant sea breeze kept Eko's kite flying high all afternoon.",
+   "ko": "꾸준한 바닷바람 덕분에 에코의 연이 오후 내내 높이 날았어요.",
+   "blank": "konstan",
+   "src": "made"
+  },
+  {
+   "text": "Suara bor yang konstan membuat Ayu memejamkan mata erat-erat.",
+   "en": "The constant sound of the drill made Ayu squeeze her eyes shut.",
+   "ko": "계속되는 드릴 소리에 아유는 눈을 꼭 감았어요.",
+   "blank": "konstan",
+   "src": "made"
+  }
+ ],
  "w|konstitusi": [
   {
    "text": "Budi harus menghafal pembukaan konstitusi untuk ujian lisan.",
@@ -26474,6 +26666,22 @@
    "en": "Siti flew to the capital to attend a dentists' convention.",
    "ko": "시티는 치과의사 대회에 참석하려고 수도로 날아갔어요.",
    "blank": "konvensi",
+   "src": "made"
+  }
+ ],
+ "w|konvoi": [
+  {
+   "text": "Sebuah konvoi motor dari kota datang ke pantai tempat Eko bertugas.",
+   "en": "A convoy of motorbikes from the city came to the beach where Eko works.",
+   "ko": "도시에서 온 오토바이 행렬이 에코가 근무하는 해변에 왔어요.",
+   "blank": "konvoi",
+   "src": "made"
+  },
+  {
+   "text": "Perjalanan Ayu ke klinik tersendat karena ada konvoi pengantin di jalan.",
+   "en": "Ayu's trip to the clinic was held up by a wedding convoy on the road.",
+   "ko": "길에 결혼식 차량 행렬이 있어서 아유는 병원 가는 길이 막혔어요.",
+   "blank": "konvoi",
    "src": "made"
   }
  ],
@@ -28255,6 +28463,22 @@
    "en": "A wide smile lit up her face this morning.",
    "ko": "오늘 아침 활짝 웃는 얼굴이었어.",
    "blank": "lebar"
+  }
+ ],
+ "w|lebat": [
+  {
+   "text": "Di belakang rumah Eko, hutan bakau tumbuh lebat sampai ke muara.",
+   "en": "Behind Eko's house, the mangrove forest grows thick all the way to the estuary.",
+   "ko": "에코의 집 뒤로 맹그로브 숲이 하구까지 빽빽하게 자라요.",
+   "blank": "lebat",
+   "src": "made"
+  },
+  {
+   "text": "Dokter gigi Ayu berkumis lebat dan selalu tersenyum di balik maskernya.",
+   "en": "Ayu's dentist has a thick moustache and always smiles behind his mask.",
+   "ko": "아유의 치과 의사는 콧수염이 덥수룩하고 마스크 뒤에서 늘 웃어요.",
+   "blank": "lebat",
+   "src": "made"
   }
  ],
  "w|lebih": [
@@ -31125,6 +31349,22 @@
    "src": "made"
   }
  ],
+ "w|melampiaskan": [
+  {
+   "text": "Kalau sedang kesal, Eko melampiaskan emosinya dengan berenang jauh ke tengah.",
+   "en": "When he's upset, Eko vents his feelings by swimming far out.",
+   "ko": "속상할 때면 에코는 멀리 헤엄쳐 나가며 감정을 풀어요.",
+   "blank": "melampiaskan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu biasa melampiaskan stres dengan mengunyah es batu, kebiasaan yang dilarang dokternya.",
+   "en": "Ayu usually relieves stress by chewing ice cubes, a habit her dentist forbade.",
+   "ko": "아유는 얼음을 씹으며 스트레스를 푸는 버릇이 있는데, 의사가 하지 말라고 했어요.",
+   "blank": "melampiaskan",
+   "src": "made"
+  }
+ ],
  "w|melanda": [
   {
    "text": "Rasa gugup sempat melanda Andi saat ujian praktik dimulai.",
@@ -31685,6 +31925,22 @@
    "en": "The plane crossed the sky above the city.",
    "ko": "비행기가 도시 위 하늘을 가로질렀어.",
    "blank": "melintasi"
+  }
+ ],
+ "w|meliputi": [
+  {
+   "text": "Tugas Eko di pantai meliputi mengawasi perenang dan memasang bendera peringatan.",
+   "en": "Eko's duties on the beach include watching swimmers and putting up warning flags.",
+   "ko": "해변에서 에코가 하는 일에는 수영객을 지켜보고 경고 깃발을 다는 것이 포함돼요.",
+   "blank": "meliputi",
+   "src": "made"
+  },
+  {
+   "text": "Biaya perawatan Ayu sudah meliputi pembersihan karang gigi dan tambalan.",
+   "en": "Ayu's treatment cost already covers scaling and a filling.",
+   "ko": "아유의 치료비에는 스케일링과 충전 치료가 이미 포함돼 있어요.",
+   "blank": "meliputi",
+   "src": "made"
   }
  ],
  "w|melirik": [
@@ -35357,6 +35613,22 @@
    "src": "made"
   }
  ],
+ "w|memprovokasi": [
+  {
+   "text": "Eko menegur pemuda yang sengaja memprovokasi nelayan dengan mengebut di dekat jaring.",
+   "en": "Eko scolded a young man who was deliberately provoking the fishermen by speeding near their nets.",
+   "ko": "에코는 그물 근처에서 일부러 과속하며 어부들을 자극한 청년을 나무랐어요.",
+   "blank": "memprovokasi",
+   "src": "made"
+  },
+  {
+   "text": "Dokter berkata bahwa makanan terlalu dingin bisa memprovokasi rasa ngilu di gigi Ayu.",
+   "en": "The dentist said very cold food could trigger the aching in Ayu's teeth.",
+   "ko": "의사는 너무 찬 음식이 아유의 이 시림을 일으킬 수 있다고 했어요.",
+   "blank": "memprovokasi",
+   "src": "made"
+  }
+ ],
  "w|mempublikasikan": [
   {
    "text": "Klinik itu mempublikasikan jadwal vaksin gratis di media sosialnya.",
@@ -36329,6 +36601,22 @@
    "blank": "Menawarkan"
   }
  ],
+ "w|menayangkan": [
+  {
+   "text": "Stasiun televisi lokal menayangkan liputan tentang Eko yang menyelamatkan seorang turis.",
+   "en": "A local TV station aired a report about Eko rescuing a tourist.",
+   "ko": "지역 방송국이 관광객을 구한 에코에 대한 보도를 내보냈어요.",
+   "blank": "menayangkan",
+   "src": "made"
+  },
+  {
+   "text": "Televisi di ruang tunggu menayangkan film dokumenter tentang burung yang bermigrasi, dan Ayu menontonnya sambil menunggu.",
+   "en": "The TV in the waiting room was showing a documentary about migrating birds, and Ayu watched it while waiting.",
+   "ko": "대기실 텔레비전에서 철새 다큐멘터리가 나오고 있어서 아유는 기다리며 봤어요.",
+   "blank": "menayangkan",
+   "src": "made"
+  }
+ ],
  "w|mencabut": [
   {
    "text": "Petugas mencabut kartu anggota Dimas sementara karena denda belum dibayar.",
@@ -36675,6 +36963,22 @@
    "en": "Let's try new food.",
    "ko": "새 음식을 먹어 보자.",
    "blank": "mencoba"
+  }
+ ],
+ "w|mencocokkan": [
+  {
+   "text": "Eko mencocokkan nama di daftar dengan wajah peserta lomba renang.",
+   "en": "Eko matched the names on the list with the faces of the swimming race participants.",
+   "ko": "에코는 명단의 이름을 수영 대회 참가자들의 얼굴과 맞춰 봤어요.",
+   "blank": "mencocokkan",
+   "src": "made"
+  },
+  {
+   "text": "Petugas pendaftaran mencocokkan data kartu asuransi Ayu dengan KTP-nya.",
+   "en": "The receptionist matched the details on Ayu's insurance card with her ID card.",
+   "ko": "접수 직원이 아유의 보험 카드 정보를 신분증과 대조했어요.",
+   "blank": "mencocokkan",
+   "src": "made"
   }
  ],
  "w|mencolok": [
@@ -37517,6 +37821,22 @@
    "src": "made"
   }
  ],
+ "w|menelantarkan": [
+  {
+   "text": "Eko sedih melihat ada orang yang menelantarkan anak kucing di dekat dermaga.",
+   "en": "Eko was sad to see that someone had abandoned a kitten near the pier.",
+   "ko": "에코는 누군가 부두 근처에 새끼 고양이를 버린 걸 보고 슬펐어요.",
+   "blank": "menelantarkan",
+   "src": "made"
+  },
+  {
+   "text": "Dokter mengingatkan Ayu agar tidak menelantarkan gigi susu anaknya.",
+   "en": "The dentist reminded Ayu not to neglect her child's baby teeth.",
+   "ko": "의사는 아이의 젖니를 방치하지 말라고 아유에게 일렀어요.",
+   "blank": "menelantarkan",
+   "src": "made"
+  }
+ ],
  "w|menelepon": [
   {
    "text": "Nanti aku menelepon kamu.",
@@ -38169,6 +38489,22 @@
    "en": "Ruining the plan made everyone annoyed.",
    "ko": "계획을 망쳐서 모두가 짜증 났어.",
    "blank": "Mengacaukan"
+  }
+ ],
+ "w|mengacuhkan": [
+  {
+   "text": "Beberapa perenang tidak mengacuhkan bendera merah yang dipasang Eko.",
+   "en": "Some swimmers ignored the red flag Eko had put up.",
+   "ko": "몇몇 수영객은 에코가 꽂은 빨간 깃발을 무시했어요.",
+   "blank": "mengacuhkan",
+   "src": "made"
+  },
+  {
+   "text": "Selama ini Ayu tidak mengacuhkan gusinya yang sering berdarah.",
+   "en": "All this time Ayu had ignored her gums, which often bled.",
+   "ko": "아유는 그동안 자주 피가 나는 잇몸을 신경 쓰지 않았어요.",
+   "blank": "mengacuhkan",
+   "src": "made"
   }
  ],
  "w|mengadakan": [
@@ -39276,6 +39612,22 @@
    "en": "In the novel Intan is reading, the king orders the guards to execute the traitor.",
    "ko": "인탄이 읽는 소설에서 왕은 호위병들에게 배신자를 처형하라고 명령해요.",
    "blank": "mengeksekusi",
+   "src": "made"
+  }
+ ],
+ "w|mengeksploitasi": [
+  {
+   "text": "Eko khawatir ada pihak yang ingin mengeksploitasi terumbu karang di teluk itu.",
+   "en": "Eko worried that some parties wanted to exploit the coral reef in that bay.",
+   "ko": "에코는 누군가 그 만의 산호초를 마구 이용하려 할까 봐 걱정했어요.",
+   "blank": "mengeksploitasi",
+   "src": "made"
+  },
+  {
+   "text": "Menurut dokter, ada klinik nakal yang mengeksploitasi rasa takut pasien demi untung, dan Ayu setuju.",
+   "en": "According to the dentist, some shady clinics exploit patients' fear for profit, and Ayu agreed.",
+   "ko": "의사 말로는 환자의 두려움을 이용해 돈을 버는 질 나쁜 병원도 있다는데, 아유도 동의했어요.",
+   "blank": "mengeksploitasi",
    "src": "made"
   }
  ],
@@ -41023,6 +41375,22 @@
    "blank": "Menghukum"
   }
  ],
+ "w|menghuni": [
+  {
+   "text": "Kepiting kecil menghuni lubang-lubang di pasir dekat pos jaga Eko.",
+   "en": "Little crabs live in the holes in the sand near Eko's post.",
+   "ko": "작은 게들이 에코의 초소 근처 모래 구멍에 살아요.",
+   "blank": "menghuni",
+   "src": "made"
+  },
+  {
+   "text": "Bakteri yang menghuni mulut bisa merusak gusi, jelas dokter kepada Ayu.",
+   "en": "The bacteria that live in the mouth can damage the gums, the dentist explained to Ayu.",
+   "ko": "입안에 사는 세균이 잇몸을 상하게 할 수 있다고 의사가 아유에게 설명했어요.",
+   "blank": "menghuni",
+   "src": "made"
+  }
+ ],
  "w|mengidap": [
   {
    "text": "Anjing tua milik Pak Joko ternyata mengidap penyakit ginjal.",
@@ -41184,6 +41552,22 @@
    "en": "Rina accidentally stepped on a cable and her colleague's laptop nearly fell.",
    "ko": "리나가 실수로 전선을 밟아서 동료의 노트북이 떨어질 뻔했어요.",
    "blank": "menginjak",
+   "src": "made"
+  }
+ ],
+ "w|menginjakkan": [
+  {
+   "text": "Turis itu baru pertama kali menginjakkan kaki di pantai berpasir hitam, kata Eko.",
+   "en": "That tourist had set foot on a black-sand beach for the first time, Eko said.",
+   "ko": "그 관광객은 검은 모래 해변에 처음 발을 디뎠다고 에코가 말했어요.",
+   "blank": "menginjakkan",
+   "src": "made"
+  },
+  {
+   "text": "Sudah lima tahun Ayu tidak menginjakkan kaki di klinik gigi.",
+   "en": "Ayu hadn't set foot in a dental clinic for five years.",
+   "ko": "아유는 오 년 동안 치과에 발을 들이지 않았어요.",
+   "blank": "menginjakkan",
    "src": "made"
   }
  ],
@@ -41617,6 +42001,22 @@
    "en": "The operator must control the machine carefully.",
    "ko": "운영자는 기계를 꼼꼼히 제어해야 해.",
    "blank": "mengontrol"
+  }
+ ],
+ "w|mengoper": [
+  {
+   "text": "Anak-anak mengoper bola kepada Eko di sela-sela permainan voli pantai.",
+   "en": "The kids passed the ball to Eko during a game of beach volleyball.",
+   "ko": "아이들이 비치발리볼 경기 중에 에코에게 공을 넘겼어요.",
+   "blank": "mengoper",
+   "src": "made"
+  },
+  {
+   "text": "Dokter mengoper alat kecil kepada perawat sambil terus bicara dengan Ayu.",
+   "en": "The dentist passed a small tool to the nurse while still talking to Ayu.",
+   "ko": "의사는 아유와 계속 이야기하면서 작은 기구를 간호사에게 건넸어요.",
+   "blank": "mengoper",
+   "src": "made"
   }
  ],
  "w|mengoperasi": [
@@ -42075,6 +42475,22 @@
    "blank": "mengungkapkan"
   }
  ],
+ "w|mengungkit": [
+  {
+   "text": "Nelayan tua itu suka mengungkit badai besar yang pernah menghantam desa, kenang Eko.",
+   "en": "The old fisherman likes to bring up the big storm that once hit the village, Eko recalled.",
+   "ko": "그 늙은 어부는 예전에 마을을 덮친 큰 폭풍 이야기를 자주 꺼낸다고 에코가 떠올렸어요.",
+   "blank": "mengungkit",
+   "src": "made"
+  },
+  {
+   "text": "Ayu malu ketika ibunya mengungkit kebiasaannya makan cokelat di depan dokter.",
+   "en": "Ayu was embarrassed when her mother brought up her chocolate habit in front of the dentist.",
+   "ko": "엄마가 의사 앞에서 아유의 초콜릿 버릇을 꺼내자 아유는 창피했어요.",
+   "blank": "mengungkit",
+   "src": "made"
+  }
+ ],
  "w|mengunjungi": [
   {
    "text": "Kami akan mengunjungi nenek minggu ini.",
@@ -42240,6 +42656,22 @@
    "en": "Dewi's sister proposed grilling corn in the backyard.",
    "ko": "데위의 언니가 뒷마당에서 옥수수를 구워 먹자고 제안했어요.",
    "blank": "mengusulkan",
+   "src": "made"
+  }
+ ],
+ "w|mengutamakan": [
+  {
+   "text": "Sebagai penjaga pantai, Eko selalu mengutamakan keselamatan anak-anak.",
+   "en": "As a lifeguard, Eko always puts children's safety first.",
+   "ko": "해변 구조대원으로서 에코는 언제나 아이들의 안전을 먼저 생각해요.",
+   "blank": "mengutamakan",
+   "src": "made"
+  },
+  {
+   "text": "Klinik gigi itu mengutamakan pasien yang datang dengan rasa sakit, jadi Ayu dipanggil lebih dulu.",
+   "en": "The dental clinic gives priority to patients in pain, so Ayu was called first.",
+   "ko": "그 치과는 아픈 환자를 먼저 봐서 아유가 먼저 불렸어요.",
+   "blank": "mengutamakan",
    "src": "made"
   }
  ],
@@ -43103,6 +43535,22 @@
    "en": "A strong mind helps face pressure.",
    "ko": "강한 멘탈이 압박을 버티게 해줘.",
    "blank": "Mental"
+  }
+ ],
+ "w|mentari": [
+  {
+   "text": "Setiap pagi Eko menunggu mentari terbit dari balik pulau kecil di depan pantai.",
+   "en": "Every morning Eko waits for the sun to rise from behind the small island off the beach.",
+   "ko": "에코는 매일 아침 해변 앞 작은 섬 뒤에서 해가 뜨기를 기다려요.",
+   "blank": "mentari",
+   "src": "made"
+  },
+  {
+   "text": "Cahaya mentari pagi masuk lewat jendela ruang tunggu dokter gigi tempat Ayu duduk.",
+   "en": "The morning sunlight came through the window of the dentist's waiting room where Ayu sat.",
+   "ko": "아유가 앉아 있던 치과 대기실 창문으로 아침 햇살이 들어왔어요.",
+   "blank": "mentari",
+   "src": "made"
   }
  ],
  "w|mentega": [
@@ -44421,6 +44869,22 @@
    "en": "She's hiding something.",
    "ko": "걔가 뭔가를 숨기고 있어.",
    "blank": "menyembunyikan"
+  }
+ ],
+ "w|menyemprot": [
+  {
+   "text": "Ombak besar menyemprot wajah Eko saat ia berdiri di ujung dermaga.",
+   "en": "A big wave sprayed Eko's face as he stood at the end of the pier.",
+   "ko": "부두 끝에 서 있던 에코의 얼굴에 큰 파도가 물보라를 뿌렸어요.",
+   "blank": "menyemprot",
+   "src": "made"
+  },
+  {
+   "text": "Perawat menyemprot gigi Ayu dengan air dingin sebelum dokter mulai bekerja.",
+   "en": "The nurse sprayed Ayu's teeth with cold water before the dentist started.",
+   "ko": "의사가 치료를 시작하기 전에 간호사가 아유의 이에 찬물을 뿌렸어요.",
+   "blank": "menyemprot",
+   "src": "made"
   }
  ],
  "w|menyempurnakan": [
@@ -48507,6 +48971,22 @@
    "en": "That child is very close to their parents.",
    "ko": "그 아이는 부모와 아주 가까워.",
    "blank": "orangtua"
+  }
+ ],
+ "w|oranye": [
+  {
+   "text": "Langit berubah oranye ketika Eko menutup pos jaganya sore itu.",
+   "en": "The sky turned orange as Eko closed his lifeguard post that evening.",
+   "ko": "그날 저녁 에코가 감시 초소를 닫을 때 하늘이 주황빛으로 물들었어요.",
+   "blank": "oranye",
+   "src": "made"
+  },
+  {
+   "text": "Sikat gigi baru yang diberikan perawat kepada Ayu berwarna oranye.",
+   "en": "The new toothbrush the nurse gave Ayu was orange.",
+   "ko": "간호사가 아유에게 준 새 칫솔은 주황색이었어요.",
+   "blank": "oranye",
+   "src": "made"
   }
  ],
  "w|organ": [
@@ -54534,6 +55014,22 @@
    "en": "Rina didn't want any regrets, so she tested the feature once more.",
    "ko": "리나는 후회하고 싶지 않아서 그 기능을 한 번 더 시험했어요.",
    "blank": "penyesalan",
+   "src": "made"
+  }
+ ],
+ "w|penyesuaian": [
+  {
+   "text": "Jadwal jaga Eko perlu penyesuaian selama musim liburan sekolah.",
+   "en": "Eko's duty schedule needs adjusting during the school holidays.",
+   "ko": "학교 방학 동안에는 에코의 근무 일정을 조정해야 해요.",
+   "blank": "penyesuaian",
+   "src": "made"
+  },
+  {
+   "text": "Kawat gigi Ayu perlu penyesuaian setiap bulan.",
+   "en": "Ayu's braces need adjusting every month.",
+   "ko": "아유의 치아 교정기는 매달 조정이 필요해요.",
+   "blank": "penyesuaian",
    "src": "made"
   }
  ],
@@ -62401,6 +62897,22 @@
    "blank": "Segelas"
   }
  ],
+ "w|segenap": [
+  {
+   "text": "Kepala desa berterima kasih kepada Eko dan segenap relawan yang membersihkan pantai.",
+   "en": "The village head thanked Eko and all the volunteers who cleaned the beach.",
+   "ko": "이장은 해변을 청소한 에코와 모든 자원봉사자에게 감사했어요.",
+   "blank": "segenap",
+   "src": "made"
+  },
+  {
+   "text": "Ayu berterima kasih kepada dokter dan segenap staf klinik atas kesabaran mereka.",
+   "en": "Ayu thanked the dentist and the entire clinic staff for their patience.",
+   "ko": "아유는 의사와 병원 직원 모두에게 인내해 줘서 고맙다고 했어요.",
+   "blank": "segenap",
+   "src": "made"
+  }
+ ],
  "w|segera": [
   {
    "text": "Tolong segera datang.",
@@ -62578,6 +63090,22 @@
    "en": "Dewi's guests grew livelier as the night grew later.",
    "ko": "밤이 깊어 갈수록 데위의 손님들은 더 북적였어요.",
    "blank": "seiring",
+   "src": "made"
+  }
+ ],
+ "w|seisi": [
+  {
+   "text": "Ketika Eko menangkap ikan besar, seisi kampung datang untuk melihat.",
+   "en": "When Eko caught a big fish, the whole village came to see.",
+   "ko": "에코가 큰 물고기를 잡자 온 마을 사람들이 구경하러 왔어요.",
+   "blank": "seisi",
+   "src": "made"
+  },
+  {
+   "text": "Ayu menangis begitu keras sampai seisi ruang tunggu menoleh.",
+   "en": "Ayu cried so loudly that everyone in the waiting room turned around.",
+   "ko": "아유가 너무 크게 울어서 대기실에 있던 모두가 돌아봤어요.",
+   "blank": "seisi",
    "src": "made"
   }
  ],
@@ -63284,6 +63812,22 @@
    "en": "A celebrity joined in raising funds for this season's flood victims.",
    "ko": "한 유명인이 이번 철 홍수 피해자를 위한 모금에 나섰어요.",
    "blank": "selebriti",
+   "src": "made"
+  }
+ ],
+ "w|seleksi": [
+  {
+   "text": "Eko lolos seleksi menjadi penjaga pantai setelah tes renang yang berat.",
+   "en": "Eko passed the selection to become a lifeguard after a tough swimming test.",
+   "ko": "에코는 힘든 수영 시험을 거쳐 해변 구조대원 선발에 합격했어요.",
+   "blank": "seleksi",
+   "src": "made"
+  },
+  {
+   "text": "Dokter gigi Ayu bercerita bahwa seleksi masuk fakultas kedokteran gigi dulu sangat ketat.",
+   "en": "Ayu's dentist said the selection for dental school used to be very strict.",
+   "ko": "아유의 치과 의사는 예전에 치대 입학 선발이 아주 까다로웠다고 했어요.",
+   "blank": "seleksi",
    "src": "made"
   }
  ],
@@ -64720,6 +65264,22 @@
    "en": "The studio is all white so that Intan can see colors clearly.",
    "ko": "인탄이 색을 잘 볼 수 있게 그 작업실은 온통 하얘요.",
    "blank": "serba",
+   "src": "made"
+  }
+ ],
+ "w|serbuk": [
+  {
+   "text": "Kaki Eko penuh serbuk pasir putih setelah seharian berjaga.",
+   "en": "Eko's feet were covered in fine white sand after a full day on duty.",
+   "ko": "하루 종일 근무한 뒤 에코의 발은 하얀 모래 가루투성이였어요.",
+   "blank": "serbuk",
+   "src": "made"
+  },
+  {
+   "text": "Perawat menaburkan serbuk cetak gigi ke dalam mangkuk sebelum mencetak gigi Ayu.",
+   "en": "The nurse sprinkled the impression powder into a bowl before taking a mold of Ayu's teeth.",
+   "ko": "간호사가 아유의 이 본을 뜨기 전에 인상재 가루를 그릇에 뿌렸어요.",
+   "blank": "serbuk",
    "src": "made"
   }
  ],
@@ -69217,6 +69777,22 @@
    "src": "made"
   }
  ],
+ "w|terbelakang": [
+  {
+   "text": "Dulu desa Eko dianggap terbelakang karena belum punya listrik dan jalan aspal.",
+   "en": "Eko's village used to be considered backward because it had no electricity or paved road.",
+   "ko": "에코의 마을은 예전에 전기도 포장도로도 없어서 낙후됐다고 여겨졌어요.",
+   "blank": "terbelakang",
+   "src": "made"
+  },
+  {
+   "text": "Dokter gigi Ayu pernah bertugas di daerah terbelakang yang belum punya klinik.",
+   "en": "Ayu's dentist once worked in an underdeveloped area that had no clinic.",
+   "ko": "아유의 치과 의사는 병원이 없는 낙후된 지역에서 일한 적이 있어요.",
+   "blank": "terbelakang",
+   "src": "made"
+  }
+ ],
  "w|terbenam": [
   {
    "text": "Andi baru pulang dari kantor polisi ketika matahari sudah terbenam.",
@@ -69655,6 +70231,22 @@
    "en": "Depending on the weather, we may or may not go.",
    "ko": "날씨에 따라 갈 수도 있고 안 갈 수도 있어.",
    "blank": "Tergantung"
+  }
+ ],
+ "w|tergeletak": [
+  {
+   "text": "Eko menemukan sebuah sandal tergeletak di atas pasir setelah air surut.",
+   "en": "Eko found a sandal lying on the sand after the tide went out.",
+   "ko": "물이 빠진 뒤 에코는 모래 위에 놓인 샌들 한 짝을 발견했어요.",
+   "blank": "tergeletak",
+   "src": "made"
+  },
+  {
+   "text": "Majalah lama tergeletak di meja ruang tunggu, tapi Ayu terlalu gugup untuk membacanya.",
+   "en": "Old magazines lay on the waiting-room table, but Ayu was too nervous to read them.",
+   "ko": "대기실 탁자에 오래된 잡지가 놓여 있었지만 아유는 너무 긴장해서 읽지 못했어요.",
+   "blank": "tergeletak",
+   "src": "made"
   }
  ],
  "w|tergelincir": [
@@ -70675,6 +71267,22 @@
    "src": "made"
   }
  ],
+ "w|terpeleset": [
+  {
+   "text": "Seorang turis terpeleset di batu karang yang licin, dan Eko segera menolongnya.",
+   "en": "A tourist slipped on the slippery rocks, and Eko quickly helped.",
+   "ko": "관광객이 미끄러운 바위에서 미끄러지자 에코가 바로 도와줬어요.",
+   "blank": "terpeleset",
+   "src": "made"
+  },
+  {
+   "text": "Lantai klinik baru dipel, dan Ayu hampir terpeleset di depan meja pendaftaran.",
+   "en": "The clinic floor had just been mopped, and Ayu almost slipped in front of the reception desk.",
+   "ko": "병원 바닥을 막 닦아서 아유는 접수대 앞에서 미끄러질 뻔했어요.",
+   "blank": "terpeleset",
+   "src": "made"
+  }
+ ],
  "w|terpencil": [
   {
    "text": "Stasiun kecil itu terletak di desa terpencil yang belum ada sinyal internet.",
@@ -71031,6 +71639,22 @@
    "blank": "Tersedia"
   }
  ],
+ "w|terselesaikan": [
+  {
+   "text": "Masalah sampah plastik di pantai belum juga terselesaikan, keluh Eko.",
+   "en": "The problem of plastic waste on the beach still hasn't been solved, Eko complained.",
+   "ko": "해변의 플라스틱 쓰레기 문제는 아직도 해결되지 않았다고 에코가 투덜거렸어요.",
+   "blank": "terselesaikan",
+   "src": "made"
+  },
+  {
+   "text": "Masalah gigi berlubang Ayu akhirnya terselesaikan dalam dua kali kunjungan.",
+   "en": "Ayu's cavity problem was finally solved in two visits.",
+   "ko": "아유의 충치 문제는 두 번 방문해서 마침내 해결됐어요.",
+   "blank": "terselesaikan",
+   "src": "made"
+  }
+ ],
  "w|tersembunyi": [
   {
    "text": "Tersembunyi di balik pohon, dia mengintip.",
@@ -71210,6 +71834,22 @@
    "en": "Lestari's car was stuck for hours because of a small landslide ahead.",
    "ko": "앞에 작은 산사태가 나서 레스타리의 차는 몇 시간 동안 멈춰 있었어요.",
    "blank": "tertahan",
+   "src": "made"
+  }
+ ],
+ "w|tertahankan": [
+  {
+   "text": "Panas siang itu hampir tidak tertahankan, jadi Eko berteduh di bawah pohon kelapa.",
+   "en": "The midday heat was almost unbearable, so Eko took shelter under a coconut tree.",
+   "ko": "그날 낮 더위는 거의 견딜 수 없어서 에코는 야자나무 아래로 피했어요.",
+   "blank": "tertahankan",
+   "src": "made"
+  },
+  {
+   "text": "Rasa ngilu di gigi geraham Ayu sudah tidak tertahankan sejak semalam.",
+   "en": "The aching in Ayu's molar had been unbearable since last night.",
+   "ko": "아유의 어금니 시린 통증은 어젯밤부터 견딜 수 없었어요.",
+   "blank": "tertahankan",
    "src": "made"
   }
  ],

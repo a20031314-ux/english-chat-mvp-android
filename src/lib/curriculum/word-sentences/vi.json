@@ -285,6 +285,22 @@
    "src": "made"
   }
  ],
+ "w|âm u": [
+  {
+   "text": "Khu rừng phía sau trại âm u, Quang không cho con đi một mình.",
+   "en": "The forest behind the camp was dark and gloomy, so Quang didn't let his child go alone.",
+   "ko": "캠프 뒤 숲이 어둑어둑해서 꽝은 아이를 혼자 보내지 않았어요.",
+   "blank": "âm u",
+   "src": "made"
+  },
+  {
+   "text": "Hà chạy qua một cánh rừng âm u, chỉ nghe tiếng bước chân mình.",
+   "en": "Hà ran through a dim forest, hearing only her own footsteps.",
+   "ko": "하는 어둑한 숲을 지나며 자기 발소리만 들었어요.",
+   "blank": "âm u",
+   "src": "made"
+  }
+ ],
  "w|ấm ức": [
   {
    "text": "Hồi đó bị thầy trách oan, Quang ấm ức mãi mà không dám nói.",
@@ -909,6 +925,38 @@
    "ko": "새 바지랑 셔츠를 사고 싶어요.",
    "blank": "áo sơ mi",
    "src": "tatoeba:11276647/chaule3 en:11276644/chaule3"
+  }
+ ],
+ "w|áo thun": [
+  {
+   "text": "Ban ngày nắng nên Quang chỉ mặc áo thun, tối mới khoác thêm áo gió.",
+   "en": "It was sunny during the day, so Quang wore just a T-shirt and put on a windbreaker only at night.",
+   "ko": "낮에는 햇볕이 좋아서 꽝은 티셔츠만 입고 밤에야 바람막이를 걸쳤어요.",
+   "blank": "áo thun",
+   "src": "made"
+  },
+  {
+   "text": "Ban tổ chức tặng Hà một chiếc áo thun in logo giải chạy.",
+   "en": "The organizers gave Hà a T-shirt printed with the race logo.",
+   "ko": "주최 측은 하에게 대회 로고가 찍힌 티셔츠를 줬어요.",
+   "blank": "áo thun",
+   "src": "made"
+  }
+ ],
+ "w|ấp": [
+  {
+   "text": "Quang thấy một con chim đang ấp trứng trong tổ trên cành thấp.",
+   "en": "Quang saw a bird sitting on its eggs in a nest on a low branch.",
+   "ko": "꽝은 낮은 가지 둥지에서 알을 품고 있는 새를 봤어요.",
+   "blank": "ấp",
+   "src": "made"
+  },
+  {
+   "text": "Hà kể nhà bà ngoại có con gà mái đang ấp một ổ trứng.",
+   "en": "Hà says her grandmother has a hen sitting on a clutch of eggs.",
+   "ko": "하는 외할머니 댁 암탉이 알을 한 둥지 품고 있다고 해요.",
+   "blank": "ấp",
+   "src": "made"
   }
  ],
  "w|áp bức": [
@@ -1876,6 +1924,22 @@
    "en": "The coaching staff's room has only one desk covered in papers.",
    "ko": "코치진 방에는 서류가 가득한 책상 하나뿐이에요.",
    "blank": "bàn làm việc",
+   "src": "made"
+  }
+ ],
+ "w|bán lẻ": [
+  {
+   "text": "Cửa hàng dưới chân đèo bán lẻ từng bình ga mini cho dân cắm trại.",
+   "en": "The shop at the foot of the pass sells mini gas canisters individually to campers.",
+   "ko": "고개 아래 가게는 캠핑객에게 소형 가스통을 낱개로 팔아요.",
+   "blank": "bán lẻ",
+   "src": "made"
+  },
+  {
+   "text": "Cửa hàng thể thao của Hà vừa bán lẻ vừa nhận may áo cho các câu lạc bộ.",
+   "en": "Hà's sports shop sells retail and also takes orders to make shirts for clubs.",
+   "ko": "하의 스포츠 가게는 소매도 하고 동호회 옷 주문도 받아요.",
+   "blank": "bán lẻ",
    "src": "made"
   }
  ],
@@ -5485,6 +5549,22 @@
    "src": "made"
   }
  ],
+ "w|bùn lầy": [
+  {
+   "text": "Mưa xong, lối mòn thành bùn lầy, Quang phải cõng con ra xe.",
+   "en": "After the rain the path turned into mud, and Quang had to carry his child to the car on his back.",
+   "ko": "비가 그치자 오솔길이 진창이 돼서 꽝은 아이를 업고 차까지 갔어요.",
+   "blank": "bùn lầy",
+   "src": "made"
+  },
+  {
+   "text": "Mưa đêm trước làm đường chạy biến thành bùn lầy, giày Hà nặng trịch.",
+   "en": "The previous night's rain turned the course into mud, and Hà's shoes became heavy.",
+   "ko": "전날 밤 비로 코스가 진창이 돼서 하의 신발이 묵직해졌어요.",
+   "blank": "bùn lầy",
+   "src": "made"
+  }
+ ],
  "w|bụng": [
   {
    "text": "Bụng mình đói quá rồi.",
@@ -7427,6 +7507,22 @@
    "blank": "cao lớn"
   }
  ],
+ "w|cao nguyên": [
+  {
+   "text": "Năm nay Quang đưa gia đình lên cao nguyên cắm trại giữa rừng thông.",
+   "en": "This year Quang took his family up to the highlands to camp in the pine forest.",
+   "ko": "올해 꽝은 가족을 데리고 고원의 소나무 숲에 캠핑을 갔어요.",
+   "blank": "cao nguyên",
+   "src": "made"
+  },
+  {
+   "text": "Giải marathon năm nay của Hà tổ chức trên cao nguyên, không khí khá loãng.",
+   "en": "Hà's marathon this year was held on the highlands, where the air is rather thin.",
+   "ko": "올해 하가 뛴 마라톤은 고원에서 열려서 공기가 꽤 희박했어요.",
+   "blank": "cao nguyên",
+   "src": "made"
+  }
+ ],
  "w|cặp": [
   {
    "text": "Cặp này đi với nhau đã nhiều năm rồi.",
@@ -8514,6 +8610,22 @@
    "en": "The second flight cancellation left the whole group dejected.",
    "ko": "비행기가 두 번째로 취소되자 일행 모두 맥이 빠졌어요.",
    "blank": "chán nản",
+   "src": "made"
+  }
+ ],
+ "w|chân núi": [
+  {
+   "text": "Quang dừng chân ở một quán nước dưới chân núi trước khi lên dốc.",
+   "en": "Quang stopped at a drink stall at the foot of the mountain before heading up the slope.",
+   "ko": "꽝은 비탈을 오르기 전에 산기슭 찻집에서 잠깐 쉬었어요.",
+   "blank": "chân núi",
+   "src": "made"
+  },
+  {
+   "text": "Trạm tiếp nước đặt ở chân núi, Hà dừng lại uống vội một cốc.",
+   "en": "The water station was at the foot of the mountain, and Hà stopped to gulp down a cup.",
+   "ko": "급수대가 산기슭에 있어서 하는 멈춰 한 컵을 급히 마셨어요.",
+   "blank": "chân núi",
    "src": "made"
   }
  ],
@@ -12247,6 +12359,22 @@
    "blank": "cố gắng"
   }
  ],
+ "w|có hại": [
+  {
+   "text": "Quang dặn con không được ăn nấm lạ vì có loại rất có hại.",
+   "en": "Quang told his child not to eat unfamiliar mushrooms because some kinds are very harmful.",
+   "ko": "꽝은 어떤 버섯은 아주 해롭다며 아이에게 모르는 버섯은 먹지 말라고 했어요.",
+   "blank": "có hại",
+   "src": "made"
+  },
+  {
+   "text": "Huấn luyện viên dặn Hà chạy quá sức là rất có hại cho tim.",
+   "en": "The coach warned Hà that overexerting herself while running is very harmful to the heart.",
+   "ko": "코치는 무리해서 뛰는 건 심장에 아주 해롭다고 하에게 일렀어요.",
+   "blank": "có hại",
+   "src": "made"
+  }
+ ],
  "w|có hệ thống": [
   {
    "text": "Hùng ghi nhật ký công trình một cách có hệ thống, ngày nào cũng có ảnh kèm theo.",
@@ -15001,6 +15129,38 @@
    "src": "made"
   }
  ],
+ "w|đại sứ": [
+  {
+   "text": "Bên đống lửa, Quang kể cậu bạn thân giờ đã làm đại sứ ở châu Phi.",
+   "en": "By the campfire, Quang said his close friend is now an ambassador in Africa.",
+   "ko": "모닥불 옆에서 꽝은 친한 친구가 지금 아프리카에서 대사로 일한다고 얘기했어요.",
+   "blank": "đại sứ",
+   "src": "made"
+  },
+  {
+   "text": "Ngài đại sứ cũng tham gia chạy cự ly ngắn cùng Hà và mọi người.",
+   "en": "The ambassador also ran the short distance along with Hà and everyone else.",
+   "ko": "대사님도 하와 다른 사람들과 함께 단거리 코스를 뛰었어요.",
+   "blank": "đại sứ",
+   "src": "made"
+  }
+ ],
+ "w|đại sứ quán": [
+  {
+   "text": "Khu cắm trại của Quang có nhóm khách từ đại sứ quán Pháp cũng lên chơi.",
+   "en": "At Quang's campsite there was also a group from the French embassy.",
+   "ko": "꽝이 묵는 캠핑장에는 프랑스 대사관에서 온 일행도 있었어요.",
+   "blank": "đại sứ quán",
+   "src": "made"
+  },
+  {
+   "text": "Giải chạy năm nay do một đại sứ quán đứng ra tài trợ, Hà rất bất ngờ.",
+   "en": "This year's race was sponsored by an embassy, which surprised Hà.",
+   "ko": "올해 대회는 한 대사관이 후원해서 하는 무척 놀랐어요.",
+   "blank": "đại sứ quán",
+   "src": "made"
+  }
+ ],
  "w|đại tá": [
   {
    "text": "Ông ấy được thăng hàm đại tá năm ngoái.",
@@ -16389,6 +16549,22 @@
    "blank": "Đặt phòng"
   }
  ],
+ "w|đất sét": [
+  {
+   "text": "Bờ suối toàn đất sét, Quang và con nặn được mấy con thú nhỏ.",
+   "en": "The stream bank was all clay, and Quang and his child shaped a few little animals.",
+   "ko": "개울가가 온통 찰흙이라 꽝과 아이는 작은 동물 몇 마리를 빚었어요.",
+   "blank": "đất sét",
+   "src": "made"
+  },
+  {
+   "text": "Đoạn đường đất sét trơn trượt khiến Hà suýt ngã mấy lần.",
+   "en": "The slippery clay section made Hà nearly fall several times.",
+   "ko": "미끄러운 진흙길 구간에서 하는 몇 번이나 넘어질 뻔했어요.",
+   "blank": "đất sét",
+   "src": "made"
+  }
+ ],
  "w|đắt tiền": [
   {
    "text": "Đồng hồ đeo tay của bạn đắt tiền hơn của tôi.",
@@ -17109,6 +17285,22 @@
    "blank": "Đầy đủ"
   }
  ],
+ "w|dãy núi": [
+  {
+   "text": "Mặt trời lặn sau dãy núi, Quang vội đi nhặt thêm củi.",
+   "en": "The sun set behind the mountain range, and Quang hurried to gather more firewood.",
+   "ko": "해가 산줄기 뒤로 넘어가자 꽝은 서둘러 장작을 더 주웠어요.",
+   "blank": "dãy núi",
+   "src": "made"
+  },
+  {
+   "text": "Vạch xuất phát nằm ngay dưới một dãy núi đá vôi, Hà hồi hộp ngước nhìn.",
+   "en": "The starting line was right below a limestone mountain range, and Hà looked up nervously.",
+   "ko": "출발선이 석회암 산줄기 바로 아래라 하는 두근대며 올려다봤어요.",
+   "blank": "dãy núi",
+   "src": "made"
+  }
+ ],
  "w|dây thần kinh": [
   {
    "text": "Răng sâu đến tận dây thần kinh nên Tuấn phải chữa tủy.",
@@ -17380,6 +17572,22 @@
    "en": "Fortunately the neighbor is easygoing and doesn't complain about the noise.",
    "ko": "다행히 옆집 주인이 무던해서 소음에 불평하지 않아요.",
    "blank": "dễ tính",
+   "src": "made"
+  }
+ ],
+ "w|đẻ trứng": [
+  {
+   "text": "Ven suối, Quang chỉ cho con chỗ lũ ếch đẻ trứng trong đám rong.",
+   "en": "By the stream, Quang showed his child where the frogs lay eggs in the waterweed.",
+   "ko": "개울가에서 꽝은 아이에게 개구리들이 물풀 속에 알을 낳는 곳을 보여 줬어요.",
+   "blank": "đẻ trứng",
+   "src": "made"
+  },
+  {
+   "text": "Hà đọc trong sách rằng rùa biển bò lên bãi cát đẻ trứng vào ban đêm.",
+   "en": "Hà read in a book that sea turtles crawl onto the sand to lay eggs at night.",
+   "ko": "하는 바다거북이 밤에 모래사장으로 올라와 알을 낳는다는 걸 책에서 읽었어요.",
+   "blank": "đẻ trứng",
    "src": "made"
   }
  ],
@@ -17663,6 +17871,22 @@
    "ko": "이 손전등에는 건전지 두 개가 필요해요.",
    "blank": "đèn pin",
    "src": "tatoeba:5161351/truongap en:59985/CK"
+  }
+ ],
+ "w|đèo": [
+  {
+   "text": "Xe của Quang leo qua con đèo quanh co gần một tiếng mới tới nơi.",
+   "en": "Quang's car took nearly an hour to climb over the winding pass.",
+   "ko": "꽝의 차는 구불구불한 고개를 거의 한 시간 넘어서야 도착했어요.",
+   "blank": "đèo",
+   "src": "made"
+  },
+  {
+   "text": "Hà vượt con đèo dài nhất giải mà không dừng lại lần nào.",
+   "en": "Hà got over the longest pass of the race without stopping once.",
+   "ko": "하는 대회에서 가장 긴 고개를 한 번도 쉬지 않고 넘었어요.",
+   "blank": "đèo",
+   "src": "made"
   }
  ],
  "w|dép": [
@@ -18857,6 +19081,22 @@
    "src": "made"
   }
  ],
+ "w|đỉnh núi": [
+  {
+   "text": "Sáng hôm sau, Quang dẫn con leo lên đỉnh núi xem biển mây.",
+   "en": "The next morning, Quang took his child up to the mountain peak to see the sea of clouds.",
+   "ko": "다음 날 아침 꽝은 아이를 데리고 산꼭대기에 올라 운해를 봤어요.",
+   "blank": "đỉnh núi",
+   "src": "made"
+  },
+  {
+   "text": "Đường chạy trail của Hà vòng lên tận đỉnh núi rồi mới quay xuống.",
+   "en": "Hà's trail run looped all the way up to the mountain peak before coming down.",
+   "ko": "하의 트레일 코스는 산꼭대기까지 올라갔다가 내려와요.",
+   "blank": "đỉnh núi",
+   "src": "made"
+  }
+ ],
  "w|dịp": [
   {
    "text": "Hùng mong có dịp hai người cùng đi thăm lại ngôi trường cũ.",
@@ -18991,6 +19231,22 @@
    "en": "The food's in the fridge.",
    "ko": "음식은 냉장고에 있어.",
    "blank": "Đồ"
+  }
+ ],
+ "w|đỗ": [
+  {
+   "text": "Quang đỗ xe dưới bóng cây rồi cả nhà đi bộ vào rừng.",
+   "en": "Quang parked under the shade of a tree, and then the family walked into the forest.",
+   "ko": "꽝이 나무 그늘에 차를 세우자 가족 모두 걸어서 숲으로 들어갔어요.",
+   "blank": "đỗ",
+   "src": "made"
+  },
+  {
+   "text": "Hà nhờ chồng đỗ xe gần vạch xuất phát để sáng mai khỏi đi bộ xa.",
+   "en": "Hà asked her husband to park near the starting line so she wouldn't have to walk far in the morning.",
+   "ko": "하는 아침에 멀리 걷지 않으려고 출발선 가까이 차를 세워 달라고 남편에게 부탁했어요.",
+   "blank": "đỗ",
+   "src": "made"
   }
  ],
  "w|đổ": [
@@ -20345,6 +20601,22 @@
    "blank": "Đồng"
   }
  ],
+ "w|đồng bằng": [
+  {
+   "text": "Từ trên đồi, Quang chỉ cho con thấy cả vùng đồng bằng xanh mướt bên dưới.",
+   "en": "From the hilltop, Quang showed his child the whole lush green plain below.",
+   "ko": "꽝은 언덕 위에서 아이에게 아래 펼쳐진 푸른 평야를 보여 줬어요.",
+   "blank": "đồng bằng",
+   "src": "made"
+  },
+  {
+   "text": "Hà thích chạy ở đồng bằng hơn vì đường bằng phẳng, ít dốc.",
+   "en": "Hà prefers running on the plains because the roads are flat with few hills.",
+   "ko": "하는 길이 평평하고 오르막이 적어서 평야에서 뛰는 걸 더 좋아해요.",
+   "blank": "đồng bằng",
+   "src": "made"
+  }
+ ],
  "w|đồng cảm": [
   {
    "text": "Đồng cảm với bạn bè giúp mối quan hệ bền hơn.",
@@ -20357,6 +20629,22 @@
    "en": "I truly empathize with his situation.",
    "ko": "나는 그의 상황에 정말 공감해.",
    "blank": "đồng cảm"
+  }
+ ],
+ "w|đồng cỏ": [
+  {
+   "text": "Quang chọn dựng lều giữa đồng cỏ để buổi sáng ngắm bình minh.",
+   "en": "Quang chose to pitch the tent in the middle of the meadow to watch the sunrise in the morning.",
+   "ko": "꽝은 아침에 해돋이를 보려고 초원 한가운데에 텐트를 쳤어요.",
+   "blank": "đồng cỏ",
+   "src": "made"
+  },
+  {
+   "text": "Chặng cuối của giải chạy băng qua một đồng cỏ rộng, Hà thấy dễ thở hơn hẳn.",
+   "en": "The last stretch of the race crossed a wide meadow, and Hà found it much easier to breathe.",
+   "ko": "대회 마지막 구간은 넓은 초원을 가로질러서 하는 숨쉬기가 훨씬 편했어요.",
+   "blank": "đồng cỏ",
+   "src": "made"
   }
  ],
  "w|đóng cửa": [
@@ -20677,6 +20965,22 @@
    "en": "She suddenly changed her mind and won't go.",
    "ko": "그녀가 갑자기 마음을 바꿔서 안 간대.",
    "blank": "đột nhiên"
+  }
+ ],
+ "w|đột phá": [
+  {
+   "text": "Quang khoe chiếc lều mới có thiết kế đột phá, dựng chỉ mất hai phút.",
+   "en": "Quang showed off his new tent with a groundbreaking design that takes only two minutes to pitch.",
+   "ko": "꽝은 이 분이면 세우는 획기적인 디자인의 새 텐트를 자랑했어요.",
+   "blank": "đột phá",
+   "src": "made"
+  },
+  {
+   "text": "Năm nay Hà có một bước tiến đột phá, chạy nhanh hơn mười phút so với năm trước.",
+   "en": "This year Hà made a breakthrough, running ten minutes faster than the year before.",
+   "ko": "올해 하는 작년보다 십 분 빨리 달리며 획기적으로 기록을 줄였어요.",
+   "blank": "đột phá",
+   "src": "made"
   }
  ],
  "w|dù": [
@@ -21345,6 +21649,22 @@
    "en": "I went out right when the rain stopped.",
    "ko": "비 그칠 때 딱 나갔어.",
    "blank": "Đúng lúc"
+  }
+ ],
+ "w|dung nham": [
+  {
+   "text": "Con của Quang hỏi dung nham có nóng hơn lửa trại không.",
+   "en": "Quang's child asked whether lava is hotter than the campfire.",
+   "ko": "꽝의 아이는 용암이 모닥불보다 뜨거우냐고 물었어요.",
+   "blank": "dung nham",
+   "src": "made"
+  },
+  {
+   "text": "Giải chạy đi qua vùng dung nham cũ đã nguội từ hàng nghìn năm trước, Hà rất thích thú.",
+   "en": "The race crossed an old lava field that cooled thousands of years ago, which delighted Hà.",
+   "ko": "대회 코스가 수천 년 전에 식은 옛 용암 지대를 지나서 하는 무척 신났어요.",
+   "blank": "dung nham",
+   "src": "made"
   }
  ],
  "w|đúng rồi": [
@@ -22403,6 +22723,22 @@
    "en": "Meeting in person makes talking easier.",
    "ko": "직접 만나면 이야기하기가 더 편해.",
    "blank": "Gặp mặt"
+  }
+ ],
+ "w|gấp quần áo": [
+  {
+   "text": "Vợ Quang gấp quần áo gọn gàng xếp vào ba lô cho cả nhà.",
+   "en": "Quang's wife folded the clothes neatly and packed them in the backpacks for the whole family.",
+   "ko": "꽝의 아내는 옷을 가지런히 개어 가족 모두의 배낭에 넣었어요.",
+   "blank": "gấp quần áo",
+   "src": "made"
+  },
+  {
+   "text": "Tối trước giải, Hà gấp quần áo chạy và ghim sẵn số báo danh.",
+   "en": "The night before the race, Hà folded her running clothes and pinned on her race number.",
+   "ko": "대회 전날 밤 하는 러닝복을 개고 배번을 미리 달아 놨어요.",
+   "blank": "gấp quần áo",
+   "src": "made"
   }
  ],
  "w|gặt": [
@@ -25403,6 +25739,22 @@
    "src": "made"
   }
  ],
+ "w|hang động": [
+  {
+   "text": "Hướng dẫn viên đưa nhà Quang vào thăm một hang động có nhiều thạch nhũ.",
+   "en": "The guide took Quang's family to visit a cave full of stalactites.",
+   "ko": "가이드는 꽝네 가족을 종유석이 많은 동굴로 데려갔어요.",
+   "blank": "hang động",
+   "src": "made"
+  },
+  {
+   "text": "Đường chạy năm nay đi xuyên qua một hang động, Hà phải bật đèn đội đầu.",
+   "en": "This year's course went right through a cave, and Hà had to turn on her headlamp.",
+   "ko": "올해 코스는 동굴을 통과해서 하는 헤드랜턴을 켜야 했어요.",
+   "blank": "hang động",
+   "src": "made"
+  }
+ ],
  "w|hàng giả": [
   {
    "text": "Hùng nghi chiếc đồng hồ đeo tay kia là hàng giả vì kim chạy giật cục.",
@@ -26136,6 +26488,22 @@
    "en": "Lan chose a small alley full of power lines as the main setting.",
    "ko": "란은 전깃줄이 얽힌 작은 골목을 주요 배경으로 골랐어요.",
    "blank": "hẻm",
+   "src": "made"
+  }
+ ],
+ "w|hẻm núi": [
+  {
+   "text": "Quang chèo thuyền kayak qua một hẻm núi hẹp có vách đá dựng đứng.",
+   "en": "Quang paddled a kayak through a narrow canyon with sheer rock walls.",
+   "ko": "꽝은 깎아지른 암벽 사이 좁은 협곡을 카약으로 지나갔어요.",
+   "blank": "hẻm núi",
+   "src": "made"
+  },
+  {
+   "text": "Cuối chặng, Hà chạy xuống một hẻm núi mát lạnh có suối chảy qua.",
+   "en": "At the end of the stage, Hà ran down into a cool canyon with a stream running through it.",
+   "ko": "구간 끝에서 하는 개울이 흐르는 서늘한 협곡으로 달려 내려갔어요.",
+   "blank": "hẻm núi",
    "src": "made"
   }
  ],
@@ -32949,6 +33317,22 @@
    "src": "made"
   }
  ],
+ "w|lạnh lẽo": [
+  {
+   "text": "Đêm trên núi lạnh lẽo, Quang ủ ấm cho con trong túi ngủ.",
+   "en": "The night on the mountain was bitterly cold, and Quang kept his child warm in the sleeping bag.",
+   "ko": "산 위의 밤이 싸늘해서 꽝은 침낭 속에서 아이를 따뜻하게 감쌌어요.",
+   "blank": "lạnh lẽo",
+   "src": "made"
+  },
+  {
+   "text": "Sáng sớm trên núi lạnh lẽo, Hà phải khởi động thật kỹ.",
+   "en": "The early morning in the mountains was freezing, so Hà had to warm up thoroughly.",
+   "ko": "산의 새벽이 싸늘해서 하는 준비운동을 꼼꼼히 했어요.",
+   "blank": "lạnh lẽo",
+   "src": "made"
+  }
+ ],
  "w|lành mạnh": [
   {
    "text": "Hùng tin rằng ăn uống lành mạnh là cách giữ răng tốt nhất.",
@@ -35184,6 +35568,22 @@
    "en": "Trang had to back up nearly a hundred meters after turning into a dead end.",
    "ko": "막다른 골목으로 잘못 들어가서 짱은 백 미터 가까이 후진해야 했어요.",
    "blank": "lùi lại",
+   "src": "made"
+  }
+ ],
+ "w|lùi xe": [
+  {
+   "text": "Đến bãi cắm trại, Quang lùi xe sát gốc thông để dễ dỡ đồ.",
+   "en": "Arriving at the campsite, Quang backed the car up close to a pine tree to unload more easily.",
+   "ko": "캠핑장에 도착하자 꽝은 짐을 내리기 쉽게 소나무 가까이 차를 후진했어요.",
+   "blank": "lùi xe",
+   "src": "made"
+  },
+  {
+   "text": "Bãi gửi xe chật kín, chồng Hà phải lùi xe mấy lần mới vào được chỗ.",
+   "en": "The parking lot was packed, and Hà's husband had to back up several times to get into a spot.",
+   "ko": "주차장이 꽉 차서 하의 남편은 몇 번이나 후진하고서야 자리에 들어갔어요.",
+   "blank": "lùi xe",
    "src": "made"
   }
  ],
@@ -40161,6 +40561,22 @@
    "src": "made"
   }
  ],
+ "w|ngăn kéo": [
+  {
+   "text": "Quang tìm mãi mới thấy đèn pin nằm trong ngăn kéo dưới ghế xe.",
+   "en": "Quang searched for ages before finding the flashlight in the drawer under the car seat.",
+   "ko": "꽝은 한참 찾다가 차 의자 밑 서랍에서 손전등을 찾았어요.",
+   "blank": "ngăn kéo",
+   "src": "made"
+  },
+  {
+   "text": "Hà cất huy chương vào ngăn kéo bàn cùng những tấm khác.",
+   "en": "Hà put the medal in her desk drawer with the others.",
+   "ko": "하는 메달을 다른 메달들과 함께 책상 서랍에 넣었어요.",
+   "blank": "ngăn kéo",
+   "src": "made"
+  }
+ ],
  "w|ngăn nắp": [
   {
    "text": "Tuấn khen các hiện vật được xếp rất ngăn nắp theo từng thời kỳ.",
@@ -43077,6 +43493,22 @@
    "src": "made"
   }
  ],
+ "w|nham thạch": [
+  {
+   "text": "Quang chỉ cho con những khối nham thạch đen còn sót lại từ núi lửa cổ.",
+   "en": "Quang showed his child the blocks of black volcanic rock left from an ancient volcano.",
+   "ko": "꽝은 아이에게 옛 화산이 남긴 검은 화산암 덩어리를 보여 줬어요.",
+   "blank": "nham thạch",
+   "src": "made"
+  },
+  {
+   "text": "Mặt đường phủ nham thạch vụn sắc cạnh khiến Hà phải chạy chậm lại.",
+   "en": "The path was covered in sharp volcanic rock fragments, so Hà had to slow down.",
+   "ko": "길이 날카로운 화산암 조각으로 덮여 있어서 하는 속도를 줄여야 했어요.",
+   "blank": "nham thạch",
+   "src": "made"
+  }
+ ],
  "w|nhăn": [
   {
    "text": "Bộ áo vest của Hùng nhăn nhúm vì để trong vali cả tuần.",
@@ -45606,6 +46038,22 @@
    "en": "The boy asked Trang to borrow a book about volcanoes for his homework.",
    "ko": "남자아이가 숙제하려고 짱에게 화산에 관한 책을 빌려 달라고 했어요.",
    "blank": "núi lửa",
+   "src": "made"
+  }
+ ],
+ "w|núi non": [
+  {
+   "text": "Quang mê cắm trại vì thích không khí trong lành của núi non.",
+   "en": "Quang loves camping because he likes the fresh air of the mountains.",
+   "ko": "꽝은 산의 맑은 공기가 좋아서 캠핑에 푹 빠져 있어요.",
+   "blank": "núi non",
+   "src": "made"
+  },
+  {
+   "text": "Chạy giữa núi non hùng vĩ, Hà quên cả mệt.",
+   "en": "Running among the majestic mountains, Hà forgot how tired she was.",
+   "ko": "웅장한 산들 사이를 달리며 하는 피곤함도 잊었어요.",
+   "blank": "núi non",
    "src": "made"
   }
  ],
@@ -53039,6 +53487,22 @@
    "src": "made"
   }
  ],
+ "w|sỏi": [
+  {
+   "text": "Quang trải một lớp sỏi quanh bếp lửa cho khỏi cháy lan.",
+   "en": "Quang spread a layer of gravel around the fire so it wouldn't spread.",
+   "ko": "꽝은 불이 번지지 않게 모닥불 둘레에 자갈을 깔았어요.",
+   "blank": "sỏi",
+   "src": "made"
+  },
+  {
+   "text": "Một viên sỏi lọt vào giày, Hà phải dừng lại dốc ra.",
+   "en": "A pebble got into Hà's shoe, and she had to stop to shake it out.",
+   "ko": "자갈 하나가 신발에 들어가서 하는 멈춰 털어 내야 했어요.",
+   "blank": "sỏi",
+   "src": "made"
+  }
+ ],
  "w|sợi": [
   {
    "text": "Máy dệt bị kẹt vì một sợi chỉ quấn vào trục.",
@@ -53358,6 +53822,22 @@
    "en": "Hương's three-pointer caught the attention of the scouts.",
    "ko": "흐엉의 3점 슛이 스카우트들의 주목을 끌었어요.",
    "blank": "sự chú ý",
+   "src": "made"
+  }
+ ],
+ "w|sự cố": [
+  {
+   "text": "Nửa đêm bếp ga gặp sự cố, Quang phải nhóm lửa bằng củi.",
+   "en": "In the middle of the night the gas stove broke down, and Quang had to make a fire with firewood.",
+   "ko": "한밤중에 가스버너가 고장 나서 꽝은 장작으로 불을 피워야 했어요.",
+   "blank": "sự cố",
+   "src": "made"
+  },
+  {
+   "text": "Giữa đường, chiếc đồng hồ của Hà gặp sự cố nên cô phải chạy theo cảm giác.",
+   "en": "Halfway through, Hà's watch had a glitch, so she had to run by feel.",
+   "ko": "중간에 하의 시계가 고장 나서 감으로 달려야 했어요.",
+   "blank": "sự cố",
    "src": "made"
   }
  ],
@@ -54132,6 +54612,22 @@
    "en": "The company cafeteria has grilled ribs for lunch today.",
    "ko": "오늘 점심 회사 식당 메뉴는 돼지갈비 구이예요.",
    "blank": "sườn",
+   "src": "made"
+  }
+ ],
+ "w|sườn núi": [
+  {
+   "text": "Lều của Quang dựng trên sườn núi thoai thoải, gió thổi mát rượi.",
+   "en": "Quang's tent was pitched on a gentle mountainside with a cool breeze blowing.",
+   "ko": "꽝의 텐트는 완만한 산비탈에 있어서 바람이 시원하게 불었어요.",
+   "blank": "sườn núi",
+   "src": "made"
+  },
+  {
+   "text": "Đến sườn núi, Hà phải đi bộ vì dốc quá đứng.",
+   "en": "On the mountainside, Hà had to walk because the slope was too steep.",
+   "ko": "산비탈에 이르자 너무 가팔라서 하는 걸어야 했어요.",
+   "blank": "sườn núi",
    "src": "made"
   }
  ],
@@ -59697,6 +60193,22 @@
    "blank": "Thuốc"
   }
  ],
+ "w|thuốc bổ": [
+  {
+   "text": "Mẹ Quang gửi theo mấy hộp thuốc bổ, sợ cả nhà bị cảm lạnh trên núi.",
+   "en": "Quang's mother sent along a few boxes of tonic, worried the family would catch cold in the mountains.",
+   "ko": "꽝의 엄마는 가족이 산에서 감기에 걸릴까 봐 보약 몇 상자를 챙겨 보냈어요.",
+   "blank": "thuốc bổ",
+   "src": "made"
+  },
+  {
+   "text": "Hà không uống thuốc bổ, chỉ ăn uống đủ chất và ngủ sớm.",
+   "en": "Hà doesn't take tonics; she just eats well and goes to bed early.",
+   "ko": "하는 보약은 안 먹고 골고루 먹고 일찍 자기만 해요.",
+   "blank": "thuốc bổ",
+   "src": "made"
+  }
+ ],
  "w|thuốc men": [
   {
    "text": "Nhớ uống thuốc men đúng giờ.",
@@ -63957,6 +64469,22 @@
    "src": "made"
   }
  ],
+ "w|trườn": [
+  {
+   "text": "Thấy một con rắn trườn qua lối mòn, Quang bảo con đứng yên.",
+   "en": "Seeing a snake slither across the path, Quang told his child to stand still.",
+   "ko": "뱀이 오솔길을 기어가는 걸 보고 꽝은 아이에게 가만히 서 있으라고 했어요.",
+   "blank": "trườn",
+   "src": "made"
+  },
+  {
+   "text": "Đến đoạn dây leo thấp, Hà phải cúi người trườn qua.",
+   "en": "At the stretch with low vines, Hà had to crouch and crawl through.",
+   "ko": "낮은 덩굴 구간에서 하는 몸을 숙이고 기어서 지나가야 했어요.",
+   "blank": "trườn",
+   "src": "made"
+  }
+ ],
  "w|trường": [
   {
    "text": "Sáng mai mình đến trường sớm.",
@@ -64437,6 +64965,22 @@
    "en": "The machine will shut off automatically when done.",
    "ko": "끝나면 기계가 자동으로 꺼져.",
    "blank": "tự động"
+  }
+ ],
+ "w|tủ giày": [
+  {
+   "text": "Trước khi đi, Quang lục tủ giày tìm đôi ủng leo núi cũ.",
+   "en": "Before leaving, Quang dug through the shoe cabinet for his old hiking boots.",
+   "ko": "떠나기 전에 꽝은 신발장을 뒤져 낡은 등산화를 찾았어요.",
+   "blank": "tủ giày",
+   "src": "made"
+  },
+  {
+   "text": "Trong nhà Hà, tủ giày toàn giày chạy bộ đủ màu.",
+   "en": "In Hà's house, the shoe cabinet is full of running shoes in every color.",
+   "ko": "하네 신발장은 온갖 색깔의 러닝화로 가득해요.",
+   "blank": "tủ giày",
+   "src": "made"
   }
  ],
  "w|tự hào": [
@@ -65669,6 +66213,22 @@
    "en": "He just said yeah and then went quiet.",
    "ko": "그는 응이라고만 하고 잠잠해졌어.",
    "blank": "ừ"
+  }
+ ],
+ "w|u ám": [
+  {
+   "text": "Trời bỗng u ám, Quang vội gom đồ vào lều trước cơn mưa.",
+   "en": "The sky suddenly grew overcast, and Quang hurried to gather things into the tent before the rain.",
+   "ko": "하늘이 갑자기 잔뜩 흐려지자 꽝은 비가 오기 전에 서둘러 짐을 텐트에 넣었어요.",
+   "blank": "u ám",
+   "src": "made"
+  },
+  {
+   "text": "Sáng hôm ấy trời u ám, Hà lo sẽ mưa giữa chặng.",
+   "en": "That morning the sky was gloomy, and Hà worried it would rain mid-race.",
+   "ko": "그날 아침 하늘이 잔뜩 흐려서 하는 도중에 비가 올까 걱정했어요.",
+   "blank": "u ám",
+   "src": "made"
   }
  ],
  "w|ủ rũ": [
@@ -68089,6 +68649,38 @@
    "src": "made"
   }
  ],
+ "w|vực": [
+  {
+   "text": "Quang dặn con không được ra gần mép vực khi chụp ảnh.",
+   "en": "Quang told his child not to go near the edge of the cliff when taking photos.",
+   "ko": "꽝은 사진 찍을 때 낭떠러지 가장자리에 가까이 가지 말라고 아이에게 일렀어요.",
+   "blank": "vực",
+   "src": "made"
+  },
+  {
+   "text": "Đoạn đường mòn sát mép vực có dây chắn, Hà vẫn chạy rất cẩn thận.",
+   "en": "The trail section along the cliff edge had a rope barrier, but Hà still ran very carefully.",
+   "ko": "낭떠러지 끝 오솔길에는 줄이 쳐져 있었지만 하는 아주 조심해서 달렸어요.",
+   "blank": "vực",
+   "src": "made"
+  }
+ ],
+ "w|vực thẳm": [
+  {
+   "text": "Nhìn xuống vực thẳm dưới chân, Quang thấy hơi chóng mặt.",
+   "en": "Looking down into the abyss below, Quang felt a bit dizzy.",
+   "ko": "발아래 깊은 낭떠러지를 내려다보자 꽝은 좀 어지러웠어요.",
+   "blank": "vực thẳm",
+   "src": "made"
+  },
+  {
+   "text": "Ban tổ chức cảnh báo đoạn ven vực thẳm rất nguy hiểm khi trời mưa, Hà nhớ kỹ.",
+   "en": "The organizers warned that the stretch along the abyss is very dangerous in rain, and Hà took note.",
+   "ko": "주최 측은 깊은 낭떠러지 옆 구간이 비 오면 아주 위험하다고 경고했고 하는 잘 새겨 뒀어요.",
+   "blank": "vực thẳm",
+   "src": "made"
+  }
+ ],
  "w|vui": [
   {
    "text": "Nghe tin đó tớ vui lắm.",
@@ -68267,6 +68859,22 @@
    "en": "This square fits the photo frame perfectly.",
    "ko": "이 사각형이 액자에 딱 맞아.",
    "blank": "Vuông"
+  }
+ ],
+ "w|vướng mắc": [
+  {
+   "text": "Chuyến đi chỉ có một vướng mắc nhỏ: Quang quên mang bật lửa.",
+   "en": "The trip had just one small snag: Quang forgot to bring a lighter.",
+   "ko": "여행에 작은 문제가 하나 있었는데, 꽝이 라이터를 깜빡했어요.",
+   "blank": "vướng mắc",
+   "src": "made"
+  },
+  {
+   "text": "Với Hà, vướng mắc lớn nhất là chấn thương đầu gối từ năm ngoái.",
+   "en": "For Hà, the biggest problem is a knee injury from last year.",
+   "ko": "하의 가장 큰 걸림돌은 작년에 다친 무릎이에요.",
+   "blank": "vướng mắc",
+   "src": "made"
   }
  ],
  "w|vương quốc": [
@@ -68875,6 +69483,22 @@
    "blank": "xe buýt"
   }
  ],
+ "w|xe container": [
+  {
+   "text": "Đường cao tốc đông xe container, Quang lái chậm cho an toàn.",
+   "en": "The highway was busy with container trucks, so Quang drove slowly to be safe.",
+   "ko": "고속도로에 컨테이너 트럭이 많아서 꽝은 안전하게 천천히 몰았어요.",
+   "blank": "xe container",
+   "src": "made"
+  },
+  {
+   "text": "Đường chạy đi qua khu cảng, Hà thấy hàng dài xe container đứng chờ.",
+   "en": "The course went through the port area, and Hà saw long lines of container trucks waiting.",
+   "ko": "코스가 항구 쪽을 지나서 하는 길게 줄 선 컨테이너 트럭들을 봤어요.",
+   "blank": "xe container",
+   "src": "made"
+  }
+ ],
  "w|xe cứu thương": [
   {
    "text": "Xe cứu thương vừa lao ngang qua.",
@@ -68992,6 +69616,22 @@
    "en": "On cold rainy days, Thảo calls a motorbike taxi instead of riding herself.",
    "ko": "춥고 비 오는 날이면 타오는 직접 오토바이를 타지 않고 쎄옴을 불러요.",
    "blank": "xe ôm",
+   "src": "made"
+  }
+ ],
+ "w|xe tải": [
+  {
+   "text": "Đường lên rừng hẹp, Quang phải dừng lại nhường một chiếc xe tải chở gỗ.",
+   "en": "The road up into the forest was narrow, so Quang had to stop to let a timber truck pass.",
+   "ko": "숲으로 가는 길이 좁아서 꽝은 멈춰서 목재 실은 트럭에 길을 비켜 줘야 했어요.",
+   "blank": "xe tải",
+   "src": "made"
+  },
+  {
+   "text": "Một chiếc xe tải chở nước uống chạy theo đoàn của Hà suốt chặng đường.",
+   "en": "A truck carrying drinking water followed Hà's group along the whole route.",
+   "ko": "물을 실은 트럭이 코스 내내 하의 무리를 따라왔어요.",
+   "blank": "xe tải",
    "src": "made"
   }
  ],
