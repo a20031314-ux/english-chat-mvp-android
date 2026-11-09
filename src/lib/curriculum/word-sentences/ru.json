@@ -5959,6 +5959,38 @@
    "src": "made"
   }
  ],
+ "w|вдохновить": [
+  {
+   "text": "Рассказ коллеги о запуске продукта вдохновил Михаила.",
+   "en": "A colleague's story about the product launch inspired Mikhail.",
+   "ko": "제품 출시에 관한 동료의 이야기에 미하일은 자극을 받았어요.",
+   "blank": "вдохновил",
+   "src": "made"
+  },
+  {
+   "text": "Старая книга о сельском хозяйстве вдохновила Светлану купить ферму.",
+   "en": "An old book about farming inspired Svetlana to buy a farm.",
+   "ko": "농업에 관한 옛 책이 스베틀라나에게 농장을 살 마음을 먹게 했어요.",
+   "blank": "вдохновила",
+   "src": "made"
+  }
+ ],
+ "w|вдохновлять": [
+  {
+   "text": "Михаила вдохновляет начальница, которая сама начинала с простого стажёра.",
+   "en": "Mikhail is inspired by his boss, who herself started out as a simple intern.",
+   "ko": "미하일은 평범한 인턴으로 시작한 상사를 보며 의욕이 생겨요.",
+   "blank": "вдохновляет",
+   "src": "made"
+  },
+  {
+   "text": "Рассветы над полем вдохновляют Светлану рисовать.",
+   "en": "The sunrises over the field inspire Svetlana to paint.",
+   "ko": "들판 위 해돋이는 스베틀라나에게 그림을 그리고 싶게 해요.",
+   "blank": "вдохновляют",
+   "src": "made"
+  }
+ ],
  "w|вдохнуть": [
   {
    "text": "Андрей вдохнул аромат свежего базилика и улыбнулся.",
@@ -10101,6 +10133,22 @@
    "src": "made"
   }
  ],
+ "w|восхищение": [
+  {
+   "text": "Михаил с восхищением смотрел на огромный офис с видом на реку.",
+   "en": "Mikhail looked with admiration at the huge office with a view of the river.",
+   "ko": "미하일은 강이 내려다보이는 커다란 사무실을 감탄하며 바라봤어요.",
+   "blank": "восхищением",
+   "src": "made"
+  },
+  {
+   "text": "Гости смотрели на коров Светланы с восхищением.",
+   "en": "Visitors looked at Svetlana's cows with admiration.",
+   "ko": "손님들은 스베틀라나의 소들을 감탄하며 바라봤어요.",
+   "blank": "восхищением",
+   "src": "made"
+  }
+ ],
  "w|восход": [
   {
    "text": "Андрей встал рано, чтобы встретить восход над рекой.",
@@ -11213,6 +11261,22 @@
    "blank": "всякое"
   }
  ],
+ "w|втайне": [
+  {
+   "text": "Михаил втайне надеялся, что его посадят у окна.",
+   "en": "Mikhail secretly hoped he'd be seated by the window.",
+   "ko": "미하일은 창가 자리에 앉게 되길 몰래 바랐어요.",
+   "blank": "втайне",
+   "src": "made"
+  },
+  {
+   "text": "Светлана втайне мечтает открыть на ферме маленькую сыроварню.",
+   "en": "Svetlana secretly dreams of opening a small cheese dairy on the farm.",
+   "ko": "스베틀라나는 농장에 작은 치즈 공방을 여는 꿈을 몰래 품고 있어요.",
+   "blank": "втайне",
+   "src": "made"
+  }
+ ],
  "w|вторжение": [
   {
    "text": "Один зал посвящён вторжению кочевников, и Сергей прочитал все таблички.",
@@ -11999,6 +12063,22 @@
    "blank": "вызвали"
   }
  ],
+ "w|вызваться": [
+  {
+   "text": "Михаил вызвался подготовить презентацию к пятнице.",
+   "en": "Mikhail volunteered to prepare the presentation by Friday.",
+   "ko": "미하일은 금요일까지 발표 자료를 만들겠다고 자원했어요.",
+   "blank": "вызвался",
+   "src": "made"
+  },
+  {
+   "text": "Сосед вызвался помочь Светлане починить забор.",
+   "en": "A neighbour volunteered to help Svetlana fix the fence.",
+   "ko": "이웃이 스베틀라나의 울타리 고치는 걸 돕겠다고 나섰어요.",
+   "blank": "вызвался",
+   "src": "made"
+  }
+ ],
  "w|выздоровление": [
   {
    "text": "Михаил пожелал старушке скорейшего выздоровления.",
@@ -12774,6 +12854,22 @@
    "en": "Elena accidentally caught a cable and managed to cut the power to the whole department.",
    "ko": "옐레나는 실수로 케이블을 건드려 부서 전체의 전기를 나가게 만들었어요.",
    "blank": "вырубить",
+   "src": "made"
+  }
+ ],
+ "w|вырубиться": [
+  {
+   "text": "Вечером уставший Михаил вырубился прямо на диване.",
+   "en": "In the evening the tired Mikhail passed out right on the sofa.",
+   "ko": "저녁에 지친 미하일은 소파에서 그대로 곯아떨어졌어요.",
+   "blank": "вырубился",
+   "src": "made"
+  },
+  {
+   "text": "Во время грозы на ферме у Светланы вырубилось электричество.",
+   "en": "During the thunderstorm the electricity went out on Svetlana's farm.",
+   "ko": "뇌우가 치는 동안 스베틀라나네 농장에 전기가 나갔어요.",
+   "blank": "вырубилось",
    "src": "made"
   }
  ],
@@ -14771,6 +14867,22 @@
    "src": "tatoeba:3716548/odexed en:2954599/CK"
   }
  ],
+ "w|гордо": [
+  {
+   "text": "Михаил гордо показал жене новый пропуск.",
+   "en": "Mikhail proudly showed his wife his new pass.",
+   "ko": "미하일은 아내에게 새 출입증을 뿌듯하게 보여 줬어요.",
+   "blank": "гордо",
+   "src": "made"
+  },
+  {
+   "text": "Петух гордо расхаживает по двору Светланы.",
+   "en": "The rooster struts proudly around Svetlana's yard.",
+   "ko": "수탉이 스베틀라나네 마당을 거들먹거리며 돌아다녀요.",
+   "blank": "гордо",
+   "src": "made"
+  }
+ ],
  "w|гордость": [
   {
    "text": "Мне пришлось проглотить свою гордость.",
@@ -15782,6 +15894,22 @@
    "en": "Irina read in the newspaper that the police had detained the whole gang of pickpockets at the station.",
    "ko": "이리나는 경찰이 역에서 소매치기 일당을 모두 붙잡았다는 기사를 신문에서 읽었어요.",
    "blank": "группировку",
+   "src": "made"
+  }
+ ],
+ "w|грустить": [
+  {
+   "text": "Михаил старается не грустить о старой команде.",
+   "en": "Mikhail tries not to feel sad about his old team.",
+   "ko": "미하일은 예전 팀을 그리워하며 울적해하지 않으려고 해요.",
+   "blank": "грустить",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Светлана любит грустить у окна с чашкой чая.",
+   "en": "In autumn Svetlana likes to feel wistful by the window with a cup of tea.",
+   "ko": "가을이면 스베틀라나는 차 한 잔을 들고 창가에서 감상에 잠기는 걸 좋아해요.",
+   "blank": "грустить",
    "src": "made"
   }
  ],
@@ -21725,6 +21853,22 @@
    "src": "tatoeba:11199449/marafon en:2019192/CK"
   }
  ],
+ "w|забираться": [
+  {
+   "text": "Михаилу пришлось забираться под стол, чтобы подключить компьютер.",
+   "en": "Mikhail had to climb under the desk to plug in the computer.",
+   "ko": "미하일은 컴퓨터를 연결하려고 책상 밑으로 기어 들어가야 했어요.",
+   "blank": "забираться",
+   "src": "made"
+  },
+  {
+   "text": "Кошка Светланы любит забираться на сеновал.",
+   "en": "Svetlana's cat likes to climb up into the hayloft.",
+   "ko": "스베틀라나의 고양이는 건초 다락에 기어오르는 걸 좋아해요.",
+   "blank": "забираться",
+   "src": "made"
+  }
+ ],
  "w|забить": [
   {
    "text": "Сергей забил колышки палатки плоским камнем.",
@@ -25971,6 +26115,22 @@
    "src": "tatoeba:7074335/marafon en:7060180/Hybrid"
   }
  ],
+ "w|злоба": [
+  {
+   "text": "Михаил удивился, сколько злобы было в письме недовольного клиента.",
+   "en": "Mikhail was surprised how much spite there was in the unhappy client's email.",
+   "ko": "미하일은 불만 가득한 고객의 메일에 담긴 악의에 놀랐어요.",
+   "blank": "злобы",
+   "src": "made"
+  },
+  {
+   "text": "Светлана не держит злобы на соседа, чьи козы съели её капусту.",
+   "en": "Svetlana bears no grudge against the neighbour whose goats ate her cabbage.",
+   "ko": "스베틀라나는 자기 양배추를 먹어 치운 염소 주인인 이웃에게 앙심을 품지 않아요.",
+   "blank": "злобы",
+   "src": "made"
+  }
+ ],
  "w|злобный": [
   {
    "text": "Друзья с Иваном вспомнили злобного вахтёра, который никого не пускал в спортзал.",
@@ -27223,6 +27383,22 @@
    "src": "made"
   }
  ],
+ "w|измерить": [
+  {
+   "text": "Михаила попросили измерить комнату для новой мебели.",
+   "en": "Mikhail was asked to measure the room for the new furniture.",
+   "ko": "미하일은 새 가구를 들이려고 방 치수를 재 달라는 부탁을 받았어요.",
+   "blank": "измерить",
+   "src": "made"
+  },
+  {
+   "text": "Ветеринар помог Светлане измерить температуру у телёнка.",
+   "en": "The vet helped Svetlana take the calf's temperature.",
+   "ko": "수의사가 스베틀라나를 도와 송아지 체온을 쟀어요.",
+   "blank": "измерить",
+   "src": "made"
+  }
+ ],
  "w|изначально": [
   {
    "text": "Проект Павла изначально планировали закончить к весне.",
@@ -27582,6 +27758,22 @@
    "en": "On her new street Anna saw a mansion built back in the days of the empire.",
    "ko": "새 동네 거리에서 안나는 제국 시절에 지어진 저택을 봤어요.",
    "blank": "империи",
+   "src": "made"
+  }
+ ],
+ "w|импровизировать": [
+  {
+   "text": "Проектор сломался, и Михаилу пришлось импровизировать на встрече.",
+   "en": "The projector broke, and Mikhail had to improvise at the meeting.",
+   "ko": "프로젝터가 고장 나서 미하일은 회의에서 즉흥적으로 해야 했어요.",
+   "blank": "импровизировать",
+   "src": "made"
+  },
+  {
+   "text": "Когда сломался трактор, Светлане пришлось импровизировать с тачкой.",
+   "en": "When the tractor broke down, Svetlana had to improvise with a wheelbarrow.",
+   "ko": "트랙터가 고장 나자 스베틀라나는 수레로 어떻게든 해결해야 했어요.",
+   "blank": "импровизировать",
    "src": "made"
   }
  ],
@@ -28691,6 +28883,38 @@
    "src": "tatoeba:13700745/gregoryguy en:13700746/Babelball"
   }
  ],
+ "w|исправлять": [
+  {
+   "text": "Михаил долго исправлял опечатки в своём первом отчёте.",
+   "en": "Mikhail spent a long time correcting typos in his first report.",
+   "ko": "미하일은 첫 보고서의 오타를 한참 고쳤어요.",
+   "blank": "исправлял",
+   "src": "made"
+  },
+  {
+   "text": "Светлана сама исправляет поломки в теплице.",
+   "en": "Svetlana fixes the faults in the greenhouse herself.",
+   "ko": "스베틀라나는 온실 고장 난 곳을 직접 고쳐요.",
+   "blank": "исправляет",
+   "src": "made"
+  }
+ ],
+ "w|испугать": [
+  {
+   "text": "Громкий сигнал пожарной проверки испугал Михаила в первый же час.",
+   "en": "The loud fire-drill alarm startled Mikhail in his very first hour.",
+   "ko": "첫 시간부터 요란한 소방 점검 경보에 미하일은 깜짝 놀랐어요.",
+   "blank": "испугал",
+   "src": "made"
+  },
+  {
+   "text": "Лиса ночью испугала кур Светланы.",
+   "en": "A fox frightened Svetlana's hens at night.",
+   "ko": "밤에 여우가 스베틀라나의 닭들을 놀라게 했어요.",
+   "blank": "испугала",
+   "src": "made"
+  }
+ ],
  "w|испугаться": [
   {
    "text": "Том мог испугаться.",
@@ -28816,6 +29040,22 @@
    "en": "Svetlana's lease is running out, and she's looking for new premises.",
    "ko": "스베틀라나는 임대 기간이 끝나 가서 새 가게 자리를 찾고 있어요.",
    "blank": "истекает",
+   "src": "made"
+  }
+ ],
+ "w|истерика": [
+  {
+   "text": "У Михаила чуть не случилась истерика, когда завис компьютер с важным файлом.",
+   "en": "Mikhail nearly had a meltdown when the computer with an important file froze.",
+   "ko": "중요한 파일이 든 컴퓨터가 멈추자 미하일은 거의 울음을 터뜨릴 뻔했어요.",
+   "blank": "истерика",
+   "src": "made"
+  },
+  {
+   "text": "Внучка Светланы устроила истерику, когда гусь утащил её шапку.",
+   "en": "Svetlana's granddaughter threw a tantrum when a goose made off with her hat.",
+   "ko": "거위가 모자를 물고 가자 스베틀라나의 손녀가 떼를 쓰며 울었어요.",
+   "blank": "истерику",
    "src": "made"
   }
  ],
@@ -40573,6 +40813,22 @@
    "src": "made"
   }
  ],
+ "w|мучение": [
+  {
+   "text": "Галстук в жару стал для Михаила настоящим мучением.",
+   "en": "Wearing a tie in the heat became real torture for Mikhail.",
+   "ko": "더위에 넥타이를 매는 건 미하일에게 정말 고역이었어요.",
+   "blank": "мучением",
+   "src": "made"
+  },
+  {
+   "text": "Для Светланы вставать в пять утра зимой — сплошное мучение.",
+   "en": "For Svetlana getting up at five in the morning in winter is sheer torture.",
+   "ko": "스베틀라나에게 겨울에 새벽 다섯 시에 일어나는 건 고역이에요.",
+   "blank": "мучение",
+   "src": "made"
+  }
+ ],
  "w|мы": [
   {
    "text": "Мы уже рядом.",
@@ -44419,6 +44675,22 @@
    "src": "made"
   }
  ],
+ "w|нежность": [
+  {
+   "text": "Михаил с нежностью вспомнил, как мама провожала его утром.",
+   "en": "Mikhail tenderly remembered his mother seeing him off in the morning.",
+   "ko": "미하일은 아침에 엄마가 배웅해 주던 모습을 다정하게 떠올렸어요.",
+   "blank": "нежностью",
+   "src": "made"
+  },
+  {
+   "text": "Светлана с нежностью гладит новорождённого телёнка.",
+   "en": "Svetlana tenderly strokes the newborn calf.",
+   "ko": "스베틀라나는 갓 태어난 송아지를 다정하게 쓰다듬어요.",
+   "blank": "нежностью",
+   "src": "made"
+  }
+ ],
  "w|нежный": [
   {
    "text": "Алексей с нежной грустью перечитывает старые письма друга.",
@@ -45349,6 +45621,22 @@
    "ko": "아랍어는 배우기 쉽지 않은 언어예요.",
    "blank": "непростой",
    "src": "tatoeba:13333536/marafon en:13333525/ninefi"
+  }
+ ],
+ "w|неразумно": [
+  {
+   "text": "Михаил понял, что неразумно спорить с начальником в первый же день.",
+   "en": "Mikhail realised it was unwise to argue with the boss on his very first day.",
+   "ko": "미하일은 첫날부터 상사와 다투는 건 현명하지 않다는 걸 깨달았어요.",
+   "blank": "неразумно",
+   "src": "made"
+  },
+  {
+   "text": "Светлана считает, что неразумно держать столько кур без собаки.",
+   "en": "Svetlana thinks it's unwise to keep so many hens without a dog.",
+   "ko": "스베틀라나는 개도 없이 닭을 이렇게 많이 키우는 건 현명하지 않다고 생각해요.",
+   "blank": "неразумно",
+   "src": "made"
   }
  ],
  "w|нерв": [
@@ -47385,6 +47673,22 @@
    "src": "made"
   }
  ],
+ "w|облом": [
+  {
+   "text": "Оказалось, что в столовой в первый день не было обедов — вот облом, подумал Михаил.",
+   "en": "It turned out the canteen had no lunches on the first day — what a letdown, thought Mikhail.",
+   "ko": "첫날 구내식당에 점심이 없다는 걸 알고 미하일은 김샜다고 생각했어요.",
+   "blank": "облом",
+   "src": "made"
+  },
+  {
+   "text": "Ярмарку отменили из-за дождя, и для Светланы это был настоящий облом.",
+   "en": "The fair was cancelled because of rain, and for Svetlana it was a real letdown.",
+   "ko": "비 때문에 장터가 취소돼서 스베틀라나는 정말 김이 샜어요.",
+   "blank": "облом",
+   "src": "made"
+  }
+ ],
  "w|обломок": [
   {
    "text": "Эксперт показал суду обломок фары с места аварии, и Алексей узнал свою машину.",
@@ -48779,6 +49083,22 @@
    "src": "made"
   }
  ],
+ "w|огненный": [
+  {
+   "text": "Михаил заметил на столе у коллеги огненный кактус в горшке.",
+   "en": "Mikhail noticed a fiery red cactus in a pot on a colleague's desk.",
+   "ko": "미하일은 동료 책상 위에 불타는 듯 빨간 선인장 화분이 있는 걸 봤어요.",
+   "blank": "огненный",
+   "src": "made"
+  },
+  {
+   "text": "Над полем Светланы пылал огненный закат.",
+   "en": "A fiery sunset blazed over Svetlana's field.",
+   "ko": "스베틀라나의 들판 위로 불타는 듯한 노을이 졌어요.",
+   "blank": "огненный",
+   "src": "made"
+  }
+ ],
  "w|огонь": [
   {
    "text": "Не трогай, там огонь.",
@@ -48791,6 +49111,22 @@
    "en": "They've already put the fire out.",
    "ko": "불은 이미 껐어.",
    "blank": "Огонь"
+  }
+ ],
+ "w|огорчать": [
+  {
+   "text": "Михаила немного огорчает, что до офиса ехать целый час.",
+   "en": "It slightly upsets Mikhail that it takes a whole hour to get to the office.",
+   "ko": "미하일은 사무실까지 한 시간이나 걸리는 게 조금 속상해요.",
+   "blank": "огорчает",
+   "src": "made"
+  },
+  {
+   "text": "Светлану огорчает, что дети редко приезжают на ферму.",
+   "en": "It upsets Svetlana that her children rarely come to the farm.",
+   "ko": "스베틀라나는 자식들이 농장에 자주 오지 않아서 속상해요.",
+   "blank": "огорчает",
+   "src": "made"
   }
  ],
  "w|ограбить": [
@@ -49857,6 +50193,22 @@
    "src": "tatoeba:8928246/marafon en:5937374/CK"
   }
  ],
+ "w|опасение": [
+  {
+   "text": "У Михаила были опасения насчёт коллектива, но коллеги оказались дружелюбными.",
+   "en": "Mikhail had misgivings about the team, but his colleagues turned out to be friendly.",
+   "ko": "미하일은 팀 분위기가 걱정됐지만 동료들은 친절했어요.",
+   "blank": "опасения",
+   "src": "made"
+  },
+  {
+   "text": "У Светланы есть опасение, что дождь испортит сено.",
+   "en": "Svetlana is worried that the rain will spoil the hay.",
+   "ko": "스베틀라나는 비 때문에 건초가 상할까 봐 걱정이에요.",
+   "blank": "опасение",
+   "src": "made"
+  }
+ ],
  "w|опасность": [
   {
    "text": "Я прекрасно осознаю эту опасность.",
@@ -50285,6 +50637,22 @@
    "ko": "무슨 일이 있었는지 알아낼 수 있어요?",
    "blank": "определить",
    "src": "tatoeba:5108738/marafon en:3730330/CM"
+  }
+ ],
+ "w|определиться": [
+  {
+   "text": "Михаилу нужно до вечера определиться с графиком отпуска.",
+   "en": "Mikhail needs to settle on his holiday schedule by the evening.",
+   "ko": "미하일은 저녁까지 휴가 일정을 정해야 해요.",
+   "blank": "определиться",
+   "src": "made"
+  },
+  {
+   "text": "Светлана никак не может определиться, сажать ли картошку или кукурузу.",
+   "en": "Svetlana just can't decide whether to plant potatoes or corn.",
+   "ko": "스베틀라나는 감자를 심을지 옥수수를 심을지 도무지 정하지 못해요.",
+   "blank": "определиться",
+   "src": "made"
   }
  ],
  "w|определять": [
@@ -57589,6 +57957,22 @@
    "src": "made"
   }
  ],
+ "w|плюнуть": [
+  {
+   "text": "После третьей ошибки Михаил хотел плюнуть на всё, но собрался.",
+   "en": "After his third mistake Mikhail wanted to give up on everything, but pulled himself together.",
+   "ko": "세 번째 실수를 하고 미하일은 다 때려치우고 싶었지만 마음을 다잡았어요.",
+   "blank": "плюнуть",
+   "src": "made"
+  },
+  {
+   "text": "Лама на ферме Светланы может плюнуть в незнакомца.",
+   "en": "The llama on Svetlana's farm may spit at a stranger.",
+   "ko": "스베틀라나네 농장의 라마는 낯선 사람에게 침을 뱉을 수도 있어요.",
+   "blank": "плюнуть",
+   "src": "made"
+  }
+ ],
  "w|плюс": [
   {
    "text": "Сколько будет один плюс один?",
@@ -57665,6 +58049,22 @@
    "ko": "제가 뭘 하려는 거라고 생각하세요?",
    "blank": "по-вашему",
    "src": "tatoeba:4649416/marafon en:4016178/CK"
+  }
+ ],
+ "w|по-взрослому": [
+  {
+   "text": "Михаил постарался ответить на критику спокойно и по-взрослому.",
+   "en": "Mikhail tried to respond to the criticism calmly and maturely.",
+   "ko": "미하일은 비판에 차분하고 어른스럽게 대답하려고 애썼어요.",
+   "blank": "по-взрослому",
+   "src": "made"
+  },
+  {
+   "text": "Внук Светланы по-взрослому взялся ухаживать за кроликами.",
+   "en": "Svetlana's grandson took on caring for the rabbits in a grown-up way.",
+   "ko": "스베틀라나의 손자는 어른스럽게 토끼 돌보는 일을 맡았어요.",
+   "blank": "по-взрослому",
+   "src": "made"
   }
  ],
  "w|по-видимому": [
@@ -63459,6 +63859,22 @@
    "src": "tatoeba:7822888/odexed en:7822734/eggershead"
   }
  ],
+ "w|поражать": [
+  {
+   "text": "Михаила поражает, как быстро коллеги отвечают на письма.",
+   "en": "Mikhail is amazed at how quickly his colleagues answer emails.",
+   "ko": "미하일은 동료들이 메일에 얼마나 빨리 답하는지 놀라워요.",
+   "blank": "поражает",
+   "src": "made"
+  },
+  {
+   "text": "Гостей с города поражает, сколько работы у Светланы с утра.",
+   "en": "Visitors from the city are amazed at how much work Svetlana has in the morning.",
+   "ko": "도시에서 온 손님들은 스베틀라나가 아침부터 하는 일의 양에 놀라요.",
+   "blank": "поражает",
+   "src": "made"
+  }
+ ],
  "w|поражение": [
   {
    "text": "Школьная команда Ивана потерпела поражение в финале.",
@@ -64184,6 +64600,22 @@
    "en": "Anna put on a summer dress in May and became a laughing stock when it started snowing.",
    "ko": "안나는 오월에 여름 원피스를 입었다가 눈이 와서 웃음거리가 됐어요.",
    "blank": "посмешищем",
+   "src": "made"
+  }
+ ],
+ "w|посмеяться": [
+  {
+   "text": "За обедом коллеги дали Михаилу посмеяться над своими первыми ошибками.",
+   "en": "At lunch his colleagues gave Mikhail a laugh over their own first mistakes.",
+   "ko": "점심 때 동료들은 자기들의 첫 실수 이야기로 미하일을 웃게 해 줬어요.",
+   "blank": "посмеяться",
+   "src": "made"
+  },
+  {
+   "text": "Светлана любит посмеяться над тем, как поросята дерутся за еду.",
+   "en": "Svetlana likes to laugh at the piglets fighting over food.",
+   "ko": "스베틀라나는 새끼 돼지들이 먹이를 두고 싸우는 걸 보며 웃는 걸 좋아해요.",
+   "blank": "посмеяться",
    "src": "made"
   }
  ],
@@ -67053,6 +67485,22 @@
    "en": "I saw the president.",
    "ko": "나는 대통령을 봤어.",
    "blank": "президента"
+  }
+ ],
+ "w|презирать": [
+  {
+   "text": "Михаил презирает сплетни и не стал слушать разговоры в курилке.",
+   "en": "Mikhail despises gossip and didn't listen to the talk in the smoking area.",
+   "ko": "미하일은 뒷말을 경멸해서 흡연실 수다를 듣지 않았어요.",
+   "blank": "презирает",
+   "src": "made"
+  },
+  {
+   "text": "Светлана презирает тех, кто плохо обращается с животными.",
+   "en": "Svetlana despises those who treat animals badly.",
+   "ko": "스베틀라나는 동물을 함부로 대하는 사람을 경멸해요.",
+   "blank": "презирает",
+   "src": "made"
   }
  ],
  "w|преимущество": [
@@ -74839,6 +75287,22 @@
    "src": "made"
   }
  ],
+ "w|разочаровывать": [
+  {
+   "text": "Михаил не хочет разочаровывать того, кто взял его на работу.",
+   "en": "Mikhail doesn't want to disappoint the person who hired him.",
+   "ko": "미하일은 자기를 뽑아 준 사람을 실망시키고 싶지 않아요.",
+   "blank": "разочаровывать",
+   "src": "made"
+  },
+  {
+   "text": "Светлана не хочет разочаровывать покупателей и продаёт только свежее молоко.",
+   "en": "Svetlana doesn't want to disappoint her customers and sells only fresh milk.",
+   "ko": "스베틀라나는 손님을 실망시키고 싶지 않아서 신선한 우유만 팔아요.",
+   "blank": "разочаровывать",
+   "src": "made"
+  }
+ ],
  "w|разработать": [
   {
    "text": "Вместе с инженером Павел хочет разработать новую систему смазки.",
@@ -76060,6 +76524,22 @@
    "en": "After a ten-hour delay Anna miraculously kept her sanity.",
    "ko": "안나는 열 시간이나 지연된 끝에 간신히 정신을 붙들었어요.",
    "blank": "рассудок",
+   "src": "made"
+  }
+ ],
+ "w|рассуждать": [
+  {
+   "text": "Коллеги долго рассуждали о новых правилах, а Михаил слушал.",
+   "en": "The colleagues discussed the new rules at length, and Mikhail listened.",
+   "ko": "동료들이 새 규칙을 두고 한참 이야기하는 동안 미하일은 들었어요.",
+   "blank": "рассуждали",
+   "src": "made"
+  },
+  {
+   "text": "По вечерам Светлана с мужем любят рассуждать о будущем фермы.",
+   "en": "In the evenings Svetlana and her husband like to talk about the farm's future.",
+   "ko": "저녁이면 스베틀라나와 남편은 농장의 앞날을 두고 이야기하는 걸 좋아해요.",
+   "blank": "рассуждать",
    "src": "made"
   }
  ],
@@ -83097,6 +83577,22 @@
    "src": "tatoeba:3652069/Lenin_1917 en:2360743/CK"
   }
  ],
+ "w|смешить": [
+  {
+   "text": "Новый коллега весь обед смешил Михаила историями о клиентах.",
+   "en": "The new colleague kept Mikhail laughing all through lunch with stories about clients.",
+   "ko": "새 동료는 점심 내내 고객 이야기로 미하일을 웃겼어요.",
+   "blank": "смешил",
+   "src": "made"
+  },
+  {
+   "text": "Козлята на ферме у Светланы смешат всех гостей.",
+   "en": "The kids on Svetlana's farm make every visitor laugh.",
+   "ko": "스베틀라나네 농장의 새끼 염소들은 손님들을 다 웃게 해요.",
+   "blank": "смешат",
+   "src": "made"
+  }
+ ],
  "w|смешной": [
   {
    "text": "Ну и смешной же ты.",
@@ -83185,6 +83681,22 @@
    "en": "Can you manage on your own?",
    "ko": "혼자 할 수 있겠어?",
    "blank": "сможешь"
+  }
+ ],
+ "w|смутить": [
+  {
+   "text": "Неожиданный вопрос директора смутил Михаила.",
+   "en": "The director's unexpected question flustered Mikhail.",
+   "ko": "사장의 뜻밖의 질문에 미하일은 당황했어요.",
+   "blank": "смутил",
+   "src": "made"
+  },
+  {
+   "text": "Похвала журналиста смутила скромную Светлану.",
+   "en": "The journalist's praise embarrassed the modest Svetlana.",
+   "ko": "기자의 칭찬에 겸손한 스베틀라나는 쑥스러워했어요.",
+   "blank": "смутила",
+   "src": "made"
   }
  ],
  "w|смущать": [
@@ -83636,6 +84148,22 @@
    "en": "Natalia offered her condolences to a neighbor whose husband had recently died.",
    "ko": "나탈리야는 얼마 전 남편을 잃은 이웃에게 조의를 전했어요.",
    "blank": "соболезнования",
+   "src": "made"
+  }
+ ],
+ "w|соболезновать": [
+  {
+   "text": "Михаил узнал, что коллега недавно потеряла бабушку, и искренне соболезновал ей.",
+   "en": "Mikhail learned that a colleague had recently lost her grandmother and sincerely offered his condolences.",
+   "ko": "미하일은 동료가 얼마 전 할머니를 여의었다는 걸 알고 진심으로 위로했어요.",
+   "blank": "соболезновал",
+   "src": "made"
+  },
+  {
+   "text": "Соседи соболезновали Светлане, когда засуха погубила урожай.",
+   "en": "The neighbours sympathised with Svetlana when the drought ruined the harvest.",
+   "ko": "가뭄에 농사를 망치자 이웃들이 스베틀라나를 위로했어요.",
+   "blank": "соболезновали",
    "src": "made"
   }
  ],
@@ -88041,6 +88569,22 @@
    "src": "made"
   }
  ],
+ "w|страстный": [
+  {
+   "text": "Начальник отдела — страстный рыбак, и Михаил сразу нашёл с ним общий язык.",
+   "en": "The head of the department is a passionate angler, and Mikhail hit it off with him at once.",
+   "ko": "부서장이 열렬한 낚시광이라서 미하일은 금방 말이 통했어요.",
+   "blank": "страстный",
+   "src": "made"
+  },
+  {
+   "text": "Светлана — страстная любительница лошадей.",
+   "en": "Svetlana is a passionate horse lover.",
+   "ko": "스베틀라나는 말을 열렬히 좋아해요.",
+   "blank": "страстная",
+   "src": "made"
+  }
+ ],
  "w|страсть": [
   {
    "text": "Я с детства питаю к этому страсть.",
@@ -88229,6 +88773,22 @@
    "blank": "стреляют"
   }
  ],
+ "w|стремительно": [
+  {
+   "text": "День пролетел стремительно, и Михаил не заметил, как наступил вечер.",
+   "en": "The day flew by, and Mikhail didn't notice evening coming.",
+   "ko": "하루가 쏜살같이 지나가서 미하일은 저녁이 된 줄도 몰랐어요.",
+   "blank": "стремительно",
+   "src": "made"
+  },
+  {
+   "text": "Туча стремительно приближалась, и Светлана загнала коров в хлев.",
+   "en": "A storm cloud was approaching fast, and Svetlana drove the cows into the barn.",
+   "ko": "먹구름이 빠르게 다가오자 스베틀라나는 소들을 외양간으로 몰았어요.",
+   "blank": "стремительно",
+   "src": "made"
+  }
+ ],
  "w|стремиться": [
   {
    "text": "Дмитрий признался, что всегда стремился стать адвокатом, как его отец.",
@@ -88242,6 +88802,22 @@
    "en": "Olga strives to walk at least five kilometres every day.",
    "ko": "올가는 매일 적어도 오 킬로미터는 걸으려고 해요.",
    "blank": "стремится",
+   "src": "made"
+  }
+ ],
+ "w|стремление": [
+  {
+   "text": "Начальник оценил стремление Михаила разобраться во всём самому.",
+   "en": "The boss appreciated Mikhail's drive to figure everything out himself.",
+   "ko": "상사는 모든 걸 스스로 알아내려는 미하일의 의지를 높이 샀어요.",
+   "blank": "стремление",
+   "src": "made"
+  },
+  {
+   "text": "У Светланы есть стремление сделать ферму полностью экологичной.",
+   "en": "Svetlana has the ambition of making the farm completely eco-friendly.",
+   "ko": "스베틀라나는 농장을 완전히 친환경으로 만들고 싶어 해요.",
+   "blank": "стремление",
    "src": "made"
   }
  ],
@@ -91495,6 +92071,22 @@
    "src": "made"
   }
  ],
+ "w|тонуть": [
+  {
+   "text": "В первый день Михаил буквально тонул в инструкциях.",
+   "en": "On the first day Mikhail was literally drowning in manuals.",
+   "ko": "첫날 미하일은 말 그대로 설명서에 파묻혔어요.",
+   "blank": "тонул",
+   "src": "made"
+  },
+  {
+   "text": "Весной поле Светланы тонет в грязи.",
+   "en": "In spring Svetlana's field is drowning in mud.",
+   "ko": "봄이면 스베틀라나의 밭은 진흙에 잠겨요.",
+   "blank": "тонет",
+   "src": "made"
+  }
+ ],
  "w|топливо": [
   {
    "text": "По дороге в отель у Сергея закончилось топливо, и он вызвал эвакуатор.",
@@ -92017,6 +92609,22 @@
    "ko": "시간 뺏지 않을게요.",
    "blank": "тратить",
    "src": "tatoeba:7646974/Ooneykcall en:2276487/CK"
+  }
+ ],
+ "w|траур": [
+  {
+   "text": "В компании ещё держали траур по основателю, и Михаил говорил тихо.",
+   "en": "The company was still in mourning for its founder, and Mikhail spoke quietly.",
+   "ko": "회사는 아직 창업자를 애도하는 중이라 미하일은 조용히 말했어요.",
+   "blank": "траур",
+   "src": "made"
+  },
+  {
+   "text": "Когда умерла старая лошадь, на ферме у Светланы был настоящий траур.",
+   "en": "When the old horse died, there was real mourning on Svetlana's farm.",
+   "ko": "늙은 말이 죽었을 때 스베틀라나네 농장은 깊은 슬픔에 잠겼어요.",
+   "blank": "траур",
+   "src": "made"
   }
  ],
  "w|требование": [
@@ -93788,6 +94396,22 @@
    "en": "Running became Elena's passion after her son was born.",
    "ko": "아들을 낳은 뒤로 달리기는 옐레나의 취미가 됐어요.",
    "blank": "увлечением",
+   "src": "made"
+  }
+ ],
+ "w|увлечь": [
+  {
+   "text": "Новый проект сразу сумел увлечь Михаила.",
+   "en": "The new project managed to grab Mikhail's interest right away.",
+   "ko": "새 프로젝트는 단번에 미하일을 사로잡았어요.",
+   "blank": "увлечь",
+   "src": "made"
+  },
+  {
+   "text": "Светлана сумела увлечь внуков работой в огороде.",
+   "en": "Svetlana managed to get her grandchildren interested in working in the vegetable garden.",
+   "ko": "스베틀라나는 손주들이 텃밭 일에 재미를 붙이게 했어요.",
+   "blank": "увлечь",
    "src": "made"
   }
  ],
@@ -101277,6 +101901,22 @@
    "ko": "어두워지기 시작하자 걸음을 서둘렀어요.",
    "blank": "шаг",
    "src": "tatoeba:2796723/sharptoothed en:2796722/sharptoothed"
+  }
+ ],
+ "w|шагать": [
+  {
+   "text": "От метро до офиса Михаил решил шагать пешком.",
+   "en": "Mikhail decided to walk from the metro to the office.",
+   "ko": "미하일은 지하철역에서 사무실까지 걸어가기로 했어요.",
+   "blank": "шагать",
+   "src": "made"
+  },
+  {
+   "text": "Каждое утро Светлана шагает к коровнику по росе.",
+   "en": "Every morning Svetlana strides to the cowshed through the dew.",
+   "ko": "매일 아침 스베틀라나는 이슬을 밟으며 외양간으로 걸어가요.",
+   "blank": "шагает",
+   "src": "made"
   }
  ],
  "w|шампанское": [

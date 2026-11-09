@@ -1041,6 +1041,22 @@
    "src": "made"
   }
  ],
+ "w|अड़ियल": [
+  {
+   "text": "विकास का अड़ियल खच्चर पुल पर पहुँचकर आगे बढ़ने से इनकार कर देता है।",
+   "en": "Vikas's stubborn mule refuses to go on once it reaches the bridge.",
+   "ko": "비카스의 고집 센 노새는 다리에 이르면 꼼짝도 안 해요.",
+   "blank": "अड़ियल",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी का अड़ियल बेटा कड़ाके की ठंड में भी स्वेटर पहनने से मना कर देता है।",
+   "en": "Shalini's stubborn son refuses to wear a sweater even in bitter cold.",
+   "ko": "샬리니의 고집 센 아들은 혹한에도 스웨터를 안 입겠대요.",
+   "blank": "अड़ियल",
+   "src": "made"
+  }
+ ],
  "w|अणु": [
   {
    "text": "अजय ने बच्चों को समझाया कि पानी का हर अणु बादल से नदी तक घूमता है।",
@@ -10021,6 +10037,22 @@
    "blank": "उतारना"
   }
  ],
+ "w|उतावला": [
+  {
+   "text": "बर्फ़ देखने को उतावला विकास सुबह-सुबह छत पर दौड़ गया।",
+   "en": "Impatient to see the snow, Vikas ran up to the roof first thing in the morning.",
+   "ko": "눈이 보고 싶어 안달 난 비카스는 이른 아침 지붕으로 뛰어 올라갔어요.",
+   "blank": "उतावला",
+   "src": "made"
+  },
+  {
+   "text": "पहली बारिश में भीगने को उतावली शालिनी छतरी छोड़कर बाहर निकल गई।",
+   "en": "Eager to get soaked in the first rain, Shalini left her umbrella and went out.",
+   "ko": "첫비를 맞고 싶어 안달 난 샬리니는 우산도 없이 밖으로 나갔어요.",
+   "blank": "उतावली",
+   "src": "made"
+  }
+ ],
  "w|उत्कृष्ट": [
   {
    "text": "राहुल के उत्कृष्ट निबंध को स्कूल की पत्रिका में छापा गया।",
@@ -11565,6 +11597,22 @@
    "blank": "उबालना"
   }
  ],
+ "w|उभयचर": [
+  {
+   "text": "बरसात में विकास के घर के पास वाले तालाब में मेंढक जैसे उभयचर ख़ूब दिखते हैं।",
+   "en": "In the rains, amphibians like frogs are everywhere in the pond near Vikas's house.",
+   "ko": "장마철이면 비카스네 집 근처 연못에 개구리 같은 양서류가 많이 보여요.",
+   "blank": "उभयचर",
+   "src": "made"
+  },
+  {
+   "text": "बारिश के मौसम में शालिनी के बगीचे में मेंढक जैसे उभयचर टर्राने लगते हैं।",
+   "en": "In the rainy season amphibians like frogs start croaking in Shalini's garden.",
+   "ko": "장마철이면 샬리니네 정원에서 개구리 같은 양서류가 개굴개굴 울기 시작해요.",
+   "blank": "उभयचर",
+   "src": "made"
+  }
+ ],
  "w|उभरना": [
   {
    "text": "कोहरे में पहाड़ धीरे-धीरे उभरना शुरू हुए।",
@@ -11808,6 +11856,22 @@
    "en": "After the rain scene the stage was flooded, so Kavita started bailing out the water with a bucket.",
    "ko": "비 장면이 끝나고 무대에 물이 차자 카비타는 양동이로 물을 퍼내기 시작했어요.",
    "blank": "उलीचने",
+   "src": "made"
+  }
+ ],
+ "w|उल्का": [
+  {
+   "text": "साफ़ आसमान में विकास ने रात को एक उल्का गिरते देखा।",
+   "en": "In the clear sky Vikas saw a meteor fall at night.",
+   "ko": "맑은 밤하늘에서 비카스는 유성이 떨어지는 걸 봤어요.",
+   "blank": "उल्का",
+   "src": "made"
+  },
+  {
+   "text": "अगस्त की रात शालिनी छत पर उल्का बौछार देखने बैठी।",
+   "en": "On an August night Shalini sat on the roof to watch the meteor shower.",
+   "ko": "팔월 밤 샬리니는 유성우를 보려고 옥상에 앉았어요.",
+   "blank": "उल्का",
    "src": "made"
   }
  ],
@@ -15719,6 +15783,22 @@
    "blank": "कांटा"
   }
  ],
+ "w|काँटेदार": [
+  {
+   "text": "विकास ने खेत के चारों ओर काँटेदार झाड़ियों की बाड़ लगाई।",
+   "en": "Vikas put up a fence of thorny bushes around the field.",
+   "ko": "비카스는 밭 둘레에 가시덤불 울타리를 쳤어요.",
+   "blank": "काँटेदार",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की बालकनी में रखा काँटेदार कैक्टस भरी गर्मी में भी हरा रहता है।",
+   "en": "The prickly cactus on Shalini's balcony stays green even in the height of summer.",
+   "ko": "샬리니네 발코니의 가시 돋친 선인장은 한여름에도 푸르러요.",
+   "blank": "काँटेदार",
+   "src": "made"
+  }
+ ],
  "w|कांड": [
   {
    "text": "टूटे शीशे वाले कांड के बाद प्रिंसिपल ने पूरी कक्षा को बुलाया।",
@@ -18821,6 +18901,22 @@
    "blank": "कोने"
   }
  ],
+ "w|कोंपल": [
+  {
+   "text": "बसंत आते ही विकास के बाग़ में सेब के पेड़ों पर नई कोंपलें फूट आईं।",
+   "en": "As soon as spring came, new shoots sprouted on the apple trees in Vikas's orchard.",
+   "ko": "봄이 오자 비카스 과수원 사과나무에 새순이 돋았어요.",
+   "blank": "कोंपलें",
+   "src": "made"
+  },
+  {
+   "text": "बसंत में शालिनी के आँगन के नीम पर लाल कोंपलें निकल आती हैं।",
+   "en": "In spring red shoots appear on the neem tree in Shalini's courtyard.",
+   "ko": "봄이면 샬리니네 마당 님나무에 붉은 새순이 돋아요.",
+   "blank": "कोंपलें",
+   "src": "made"
+  }
+ ],
  "w|कोफ़्ता": [
   {
    "text": "ढाबे का मलाई कोफ़्ता अजय को सबसे ज़्यादा पसंद है।",
@@ -20606,6 +20702,22 @@
    "en": "The little girl burst into giggles on getting a free toffee.",
    "ko": "공짜 사탕을 받은 꼬마 아이가 까르르 웃었어요.",
    "blank": "खिलखिला",
+   "src": "made"
+  }
+ ],
+ "w|खिलंदड़ा": [
+  {
+   "text": "विकास का खिलंदड़ा कुत्ता बर्फ़ में लोटता रहता है।",
+   "en": "Vikas's playful dog keeps rolling in the snow.",
+   "ko": "비카스의 장난꾸러기 개는 눈밭에서 계속 뒹굴어요.",
+   "blank": "खिलंदड़ा",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी का खिलंदड़ा भतीजा बारिश के पानी में काग़ज़ की नावें चलाता है।",
+   "en": "Shalini's playful nephew sails paper boats in the rainwater.",
+   "ko": "샬리니의 장난기 많은 조카는 빗물에 종이배를 띄워요.",
+   "blank": "खिलंदड़ा",
    "src": "made"
   }
  ],
@@ -26099,6 +26211,22 @@
    "blank": "चाँदी"
   }
  ],
+ "w|चापलूस": [
+  {
+   "text": "विकास कहता है कि प्रधान के आसपास हमेशा कुछ चापलूस लोग मँडराते हैं।",
+   "en": "Vikas says a few flatterers always hover around the village head.",
+   "ko": "비카스는 이장 주변에 늘 아첨꾼 몇이 맴돈다고 해요.",
+   "blank": "चापलूस",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के दफ़्तर का एक चापलूस कर्मचारी आम के मौसम में बॉस के घर आम की पेटियाँ भिजवाता है।",
+   "en": "A sycophantic employee at Shalini's office sends boxes of mangoes to the boss's house in mango season.",
+   "ko": "샬리니 회사의 아첨꾼 직원은 망고 철이면 상사 집에 망고 상자를 보내요.",
+   "blank": "चापलूस",
+   "src": "made"
+  }
+ ],
  "w|चापलूसी": [
   {
    "text": "राहुल को टीचर की चापलूसी करने वाले बच्चे बिल्कुल पसंद नहीं।",
@@ -26833,6 +26961,22 @@
    "src": "made"
   }
  ],
+ "w|चिंपांज़ी": [
+  {
+   "text": "विकास के छोटे भाई ने जानवरों की किताब में चिंपांज़ी की तस्वीर पर उँगली रखी।",
+   "en": "Vikas's little brother put his finger on the picture of a chimpanzee in the animal book.",
+   "ko": "비카스 동생은 동물 책에서 침팬지 그림을 손가락으로 짚었어요.",
+   "blank": "चिंपांज़ी",
+   "src": "made"
+  },
+  {
+   "text": "चिड़ियाघर में शालिनी ने देखा कि ठंड में एक चिंपांज़ी बोरी ओढ़कर बैठा था।",
+   "en": "At the zoo Shalini saw a chimpanzee sitting wrapped in a sack in the cold.",
+   "ko": "동물원에서 샬리니는 추위에 침팬지가 자루를 덮고 앉아 있는 걸 봤어요.",
+   "blank": "चिंपांज़ी",
+   "src": "made"
+  }
+ ],
  "w|चिप्स": [
   {
    "text": "अजय घर पर बने आलू के चिप्स छोटे थैलों में बेचता है।",
@@ -27255,6 +27399,22 @@
    "en": "His silence surprised everyone.",
    "ko": "그의 침묵이 모두를 놀라게 했어.",
    "blank": "चुप्पी"
+  }
+ ],
+ "w|चुंबक": [
+  {
+   "text": "विकास ने चुंबक से नदी की रेत में से लोहे के कण अलग किए।",
+   "en": "Vikas used a magnet to separate iron particles from the river sand.",
+   "ko": "비카스는 자석으로 강 모래에서 쇳가루를 골라냈어요.",
+   "blank": "चुंबक",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के फ़्रिज पर चुंबक से मौसमी सब्ज़ियों की सूची लगी है।",
+   "en": "A list of seasonal vegetables is stuck to Shalini's fridge with a magnet.",
+   "ko": "샬리니 냉장고에는 제철 채소 목록이 자석으로 붙어 있어요.",
+   "blank": "चुंबक",
+   "src": "made"
   }
  ],
  "w|चुभना": [
@@ -27921,6 +28081,22 @@
    "blank": "चौराहा"
   }
  ],
+ "w|छछूंदर": [
+  {
+   "text": "विकास के आलू के खेत में एक छछूंदर ने कई सुरंगें बना दी हैं।",
+   "en": "A shrew has dug several tunnels in Vikas's potato field.",
+   "ko": "비카스 감자밭에 땃쥐 한 마리가 굴을 여러 개 파 놓았어요.",
+   "blank": "छछूंदर",
+   "src": "made"
+  },
+  {
+   "text": "पहली बारिश के बाद शालिनी के बगीचे में एक छछूंदर बिल से बाहर निकल आया।",
+   "en": "After the first rain a shrew came out of its burrow in Shalini's garden.",
+   "ko": "첫비가 내린 뒤 샬리니네 정원에서 땃쥐 한 마리가 굴 밖으로 나왔어요.",
+   "blank": "छछूंदर",
+   "src": "made"
+  }
+ ],
  "w|छँटनी": [
   {
    "text": "अख़बार में छँटनी की अफ़वाह से सुनील भी थोड़ा परेशान था।",
@@ -27995,6 +28171,22 @@
    "en": "Sleeping on the roof feels nice in summer.",
    "ko": "여름에 옥상에서 자면 좋아.",
    "blank": "छत"
+  }
+ ],
+ "w|छत्ता": [
+  {
+   "text": "विकास के घर की छत के नीचे मधुमक्खियों का बड़ा छत्ता लगा है।",
+   "en": "There's a big beehive under the eaves of Vikas's house.",
+   "ko": "비카스네 처마 밑에 큰 벌집이 붙어 있어요.",
+   "blank": "छत्ता",
+   "src": "made"
+  },
+  {
+   "text": "बसंत में मधुमक्खियों ने शालिनी की खिड़की पर छत्ता बना लिया।",
+   "en": "In spring bees built a hive at Shalini's window.",
+   "ko": "봄에 벌들이 샬리니네 창가에 벌집을 지었어요.",
+   "blank": "छत्ता",
+   "src": "made"
   }
  ],
  "w|छंद": [
@@ -28392,6 +28584,22 @@
    "en": "After practice, Neha sat in the shade of a tree and drank water.",
    "ko": "연습이 끝나고 네하는 나무 그늘에 앉아 물을 마셨어요.",
    "blank": "छाँव",
+   "src": "made"
+  }
+ ],
+ "w|छिछला": [
+  {
+   "text": "गर्मियों में नदी इतनी छिछली हो जाती है कि विकास उसे पैदल पार कर लेता है।",
+   "en": "In summer the river gets so shallow that Vikas wades across it.",
+   "ko": "여름이면 강이 아주 얕아져서 비카스는 걸어서 건너요.",
+   "blank": "छिछली",
+   "src": "made"
+  },
+  {
+   "text": "गर्मियों के आख़िर तक शालिनी के गाँव का तालाब छिछला हो जाता है।",
+   "en": "By the end of summer the pond in Shalini's village becomes shallow.",
+   "ko": "여름이 끝날 무렵이면 샬리니네 마을 연못이 얕아져요.",
+   "blank": "छिछला",
    "src": "made"
   }
  ],
@@ -32929,6 +33137,22 @@
    "src": "made"
   }
  ],
+ "w|टट्टू": [
+  {
+   "text": "विकास सैलानियों को टट्टू पर बिठाकर पहाड़ी मंदिर तक ले जाता है।",
+   "en": "Vikas takes tourists up to the hill temple on ponies.",
+   "ko": "비카스는 관광객을 조랑말에 태워 산 위 사원까지 데려가요.",
+   "blank": "टट्टू",
+   "src": "made"
+  },
+  {
+   "text": "गर्मी की छुट्टियों में शालिनी के बच्चों ने पहाड़ पर टट्टू की सवारी की।",
+   "en": "During the summer holidays Shalini's children rode ponies in the hills.",
+   "ko": "여름 방학에 샬리니 아이들은 산에서 조랑말을 탔어요.",
+   "blank": "टट्टू",
+   "src": "made"
+  }
+ ],
  "w|टपकना": [
   {
    "text": "रात भर बारिश हुई और तंबू की छत से पानी टपकता रहा।",
@@ -34279,6 +34503,22 @@
    "src": "made"
   }
  ],
+ "w|डँसना": [
+  {
+   "text": "पिछली गर्मियों में विकास के गाँव के एक चरवाहे को साँप ने डँस लिया था, पर वह समय पर अस्पताल पहुँच गया।",
+   "en": "Last summer a snake bit a shepherd in Vikas's village, but he reached hospital in time.",
+   "ko": "작년 여름 비카스네 마을 목동이 뱀에 물렸지만 제때 병원에 갔어요.",
+   "blank": "डँस",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने ख़बर में पढ़ा कि बरसात में साँप के डँसने के मामले बढ़ जाते हैं।",
+   "en": "Shalini read in the news that cases of snakebite rise during the rains.",
+   "ko": "샬리니는 장마철에 뱀에 물리는 사고가 늘어난다는 기사를 읽었어요.",
+   "blank": "डँसने",
+   "src": "made"
+  }
+ ],
  "w|डस्टबिन": [
   {
    "text": "विकास ने हर कमरे में एक छोटा डस्टबिन रखवाया।",
@@ -35043,6 +35283,22 @@
    "src": "made"
   }
  ],
+ "w|ढीठ": [
+  {
+   "text": "विकास के खेत में घुसा ढीठ बंदर भगाने पर भी नहीं भागा।",
+   "en": "The brazen monkey in Vikas's field wouldn't leave even when chased.",
+   "ko": "비카스 밭에 들어온 뻔뻔한 원숭이는 쫓아도 안 갔어요.",
+   "blank": "ढीठ",
+   "src": "made"
+  },
+  {
+   "text": "सर्दी में धूप सेंकने आई ढीठ बिल्ली शालिनी की कुर्सी से हटती ही नहीं।",
+   "en": "The cheeky cat that comes to bask in the winter sun just won't get off Shalini's chair.",
+   "ko": "겨울 햇볕을 쬐러 온 뻔뻔한 고양이가 샬리니 의자에서 비키질 않아요.",
+   "blank": "ढीठ",
+   "src": "made"
+  }
+ ],
  "w|ढीला": [
   {
    "text": "अमित ने गर्मी से बचने के लिए ढीली सूती कमीज़ पहनी।",
@@ -35266,6 +35522,22 @@
    "en": "The groom's burly friend didn't tire even after drumming for hours.",
    "ko": "신랑의 덩치 큰 친구는 북을 계속 쳐도 지치지 않았어요.",
    "blank": "तगड़ा",
+   "src": "made"
+  }
+ ],
+ "w|तंगदिल": [
+  {
+   "text": "विकास के पड़ोसी तंगदिल नहीं हैं, वे हर मुसाफ़िर को चाय पिलाते हैं।",
+   "en": "Vikas's neighbours aren't mean-spirited; they give every traveller tea.",
+   "ko": "비카스네 이웃은 인색하지 않아서 지나가는 나그네마다 차를 대접해요.",
+   "blank": "तंगदिल",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के मकान मालिक इतने तंगदिल हैं कि सर्दी में हीटर तक लगाने नहीं देते।",
+   "en": "Shalini's landlord is so mean that he won't even allow a heater in winter.",
+   "ko": "샬리니 집주인은 너무 인색해서 겨울에 난로도 못 쓰게 해요.",
+   "blank": "तंगदिल",
    "src": "made"
   }
  ],
@@ -39175,6 +39447,22 @@
    "src": "made"
   }
  ],
+ "w|दहकना": [
+  {
+   "text": "ठंडी रात में विकास के घर की अँगीठी में कोयले दहक रहे थे।",
+   "en": "On the cold night, coals were glowing in the brazier at Vikas's house.",
+   "ko": "추운 밤 비카스네 화로에서 숯이 이글거리고 있었어요.",
+   "blank": "दहक",
+   "src": "made"
+  },
+  {
+   "text": "गर्मियों में शालिनी के घर के सामने गुलमोहर के फूल आग की तरह दहकते हैं।",
+   "en": "In summer the gulmohar flowers in front of Shalini's house blaze like fire.",
+   "ko": "여름이면 샬리니네 집 앞 굴모하르 꽃이 불꽃처럼 타올라요.",
+   "blank": "दहकते",
+   "src": "made"
+  }
+ ],
  "w|दहलना": [
   {
    "text": "फ़ायर अलार्म अचानक बजा तो अमित का दिल दहल गया।",
@@ -41137,6 +41425,22 @@
    "src": "made"
   }
  ],
+ "w|देशांतर": [
+  {
+   "text": "मास्टरजी ने नक्शे पर विकास को उसके गाँव का अक्षांश और देशांतर दिखाया।",
+   "en": "The teacher showed Vikas his village's latitude and longitude on the map.",
+   "ko": "선생님은 지도에서 비카스 마을의 위도와 경도를 보여 줬어요.",
+   "blank": "देशांतर",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बेटी को समझाया कि मौसम देशांतर से नहीं, धरती के झुकाव से बदलते हैं।",
+   "en": "Shalini explained to her daughter that seasons change because of the earth's tilt, not longitude.",
+   "ko": "샬리니는 딸에게 계절은 경도가 아니라 지구 기울기 때문에 바뀐다고 설명했어요.",
+   "blank": "देशांतर",
+   "src": "made"
+  }
+ ],
  "w|देसी": [
   {
    "text": "मुझे देसी खाना ज़्यादा पसंद है।",
@@ -42697,6 +43001,22 @@
    "en": "This place is not only beautiful but also quiet.",
    "ko": "이곳은 예쁠 뿐 아니라 조용하기도 해.",
    "blank": "न केवल"
+  }
+ ],
+ "w|नकचढ़ा": [
+  {
+   "text": "शहर से आया विकास का नकचढ़ा चचेरा भाई गाँव का खाना खाने से कतराता था।",
+   "en": "Vikas's snooty cousin from the city avoided eating village food.",
+   "ko": "도시에서 온 비카스의 콧대 높은 사촌은 시골 음식을 피했어요.",
+   "blank": "नकचढ़ा",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की नकचढ़ी पड़ोसन को कोई भी मौसम पसंद नहीं आता।",
+   "en": "Shalini's snooty neighbour doesn't like any season at all.",
+   "ko": "샬리니의 까다로운 이웃은 어떤 계절도 마음에 들어 하지 않아요.",
+   "blank": "नकचढ़ी",
+   "src": "made"
   }
  ],
  "w|नकद": [
@@ -44770,6 +45090,22 @@
    "en": "At the toll booth, a driver was complaining about the privatisation of highways.",
    "ko": "요금소에서 한 운전자가 고속도로 민영화에 불만을 털어놓고 있었어요.",
    "blank": "निजीकरण",
+   "src": "made"
+  }
+ ],
+ "w|निठल्ला": [
+  {
+   "text": "विकास की दादी कहती हैं कि पहाड़ में कोई निठल्ला नहीं बैठ सकता।",
+   "en": "Vikas's grandmother says no one can sit idle in the mountains.",
+   "ko": "비카스 할머니는 산골에선 아무도 놀고 있을 수 없다고 하세요.",
+   "blank": "निठल्ला",
+   "src": "made"
+  },
+  {
+   "text": "गर्मी की लंबी दोपहरों में शालिनी निठल्ली बैठने के बजाय किताबें पढ़ती है।",
+   "en": "On long summer afternoons Shalini reads books instead of sitting idle.",
+   "ko": "긴 여름 오후에 샬리니는 빈둥거리지 않고 책을 읽어요.",
+   "blank": "निठल्ली",
    "src": "made"
   }
  ],
@@ -50645,6 +50981,22 @@
    "blank": "पिछला"
   }
  ],
+ "w|पिंजरा": [
+  {
+   "text": "विकास के दादा ने घायल तीतर को कुछ दिन पिंजरे में रखा और फिर उड़ा दिया।",
+   "en": "Vikas's grandfather kept the injured partridge in a cage for a few days and then let it fly.",
+   "ko": "비카스 할아버지는 다친 자고새를 며칠 새장에 두었다가 날려 보냈어요.",
+   "blank": "पिंजरे",
+   "src": "made"
+  },
+  {
+   "text": "ठंड बढ़ी तो शालिनी ने तोते का पिंजरा धूप में रख दिया।",
+   "en": "When the cold set in, Shalini put the parrot's cage out in the sun.",
+   "ko": "추워지자 샬리니는 앵무새 새장을 햇볕에 내놓았어요.",
+   "blank": "पिंजरा",
+   "src": "made"
+  }
+ ],
  "w|पिज़्ज़ा": [
   {
    "text": "शाम को कॉलेज के बच्चे अजय की बेकरी से पिज़्ज़ा ले जाते हैं।",
@@ -56231,6 +56583,38 @@
    "blank": "फ़ुटबॉल"
   }
  ],
+ "w|फुदकना": [
+  {
+   "text": "विकास के आँगन में गौरैयाँ दाना चुगती हुई फुदक रही थीं।",
+   "en": "Sparrows were hopping about Vikas's courtyard, pecking at grain.",
+   "ko": "비카스네 마당에서 참새들이 모이를 쪼며 깡충거리고 있었어요.",
+   "blank": "फुदक",
+   "src": "made"
+  },
+  {
+   "text": "बसंत आते ही शालिनी की बालकनी में बुलबुल फुदकने लगी।",
+   "en": "As soon as spring came, a bulbul began hopping about Shalini's balcony.",
+   "ko": "봄이 오자 샬리니네 발코니에 직박구리가 깡충거리기 시작했어요.",
+   "blank": "फुदकने",
+   "src": "made"
+  }
+ ],
+ "w|फुर्तीला": [
+  {
+   "text": "फुर्तीला विकास बकरियों के पीछे-पीछे चट्टानों पर चढ़ जाता है।",
+   "en": "Nimble Vikas scrambles up the rocks after the goats.",
+   "ko": "날쌘 비카스는 염소를 따라 바위를 타고 올라가요.",
+   "blank": "फुर्तीला",
+   "src": "made"
+  },
+  {
+   "text": "ठंड जाते ही शालिनी का बूढ़ा कुत्ता फिर से फुर्तीला हो जाता है।",
+   "en": "As soon as the cold leaves, Shalini's old dog becomes lively again.",
+   "ko": "추위가 가면 샬리니의 늙은 개가 다시 날쌔져요.",
+   "blank": "फुर्तीला",
+   "src": "made"
+  }
+ ],
  "w|फुलाना": [
   {
    "text": "करण ने बच्चों की पार्टी के लिए गुब्बारे फुलाकर बेकरी सजाई।",
@@ -57569,6 +57953,22 @@
    "en": "He closed the shop early.",
    "ko": "그는 가게를 일찍 닫았어.",
    "blank": "बंद की"
+  }
+ ],
+ "w|बदतमीज़": [
+  {
+   "text": "विकास ने ट्रेकिंग पर आए एक बदतमीज़ सैलानी को कूड़ा फैलाने पर टोका।",
+   "en": "Vikas called out a rude trekker for littering.",
+   "ko": "비카스는 쓰레기를 버린 무례한 등산객에게 한마디 했어요.",
+   "blank": "बदतमीज़",
+   "src": "made"
+  },
+  {
+   "text": "बारिश में एक बदतमीज़ कार वाले ने शालिनी पर कीचड़ उछाल दिया।",
+   "en": "In the rain a rude driver splashed mud all over Shalini.",
+   "ko": "비 오는 날 무례한 운전자가 샬리니에게 흙탕물을 튀겼어요.",
+   "blank": "बदतमीज़",
+   "src": "made"
   }
  ],
  "w|बदतमीज़ी": [
@@ -59215,6 +59615,22 @@
    "blank": "बातचीत"
   }
  ],
+ "w|बातूनी": [
+  {
+   "text": "गाँव की दुकान वाली चाची इतनी बातूनी हैं कि विकास को नमक लेने में भी आधा घंटा लग जाता है।",
+   "en": "The aunty at the village shop is so chatty that it takes Vikas half an hour just to buy salt.",
+   "ko": "마을 가게 아주머니가 워낙 수다스러워서 비카스는 소금 하나 사는 데도 삼십 분이 걸려요.",
+   "blank": "बातूनी",
+   "src": "made"
+  },
+  {
+   "text": "पहली बर्फ़ देखकर शालिनी की बातूनी बेटी घंटे भर बोलती रही।",
+   "en": "Seeing the first snow, Shalini's chatty daughter talked for a whole hour.",
+   "ko": "첫눈을 본 샬리니의 수다쟁이 딸은 한 시간 내내 떠들었어요.",
+   "blank": "बातूनी",
+   "src": "made"
+  }
+ ],
  "w|बाथरूम": [
   {
    "text": "बाथरूम की टाइल साफ़ कर दो।",
@@ -59475,6 +59891,22 @@
    "en": "Twelve students were present in class.",
    "ko": "교실에 열두 명의 학생이 있었어.",
    "blank": "बारह"
+  }
+ ],
+ "w|बारहसिंगा": [
+  {
+   "text": "राष्ट्रीय उद्यान की सैर में विकास ने पहली बार बारहसिंगा देखा।",
+   "en": "On a trip to the national park Vikas saw a swamp deer for the first time.",
+   "ko": "국립공원 나들이에서 비카스는 처음으로 바라싱가 사슴을 봤어요.",
+   "blank": "बारहसिंगा",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने डॉक्यूमेंट्री में देखा कि सर्दी आते ही बारहसिंगा झुंड बनाकर घाटी में उतर आते हैं।",
+   "en": "In a documentary Shalini saw that swamp deer come down to the valley in herds when winter arrives.",
+   "ko": "샬리니는 겨울이 오면 바라싱가 사슴이 무리 지어 계곡으로 내려온다는 다큐를 봤어요.",
+   "blank": "बारहसिंगा",
+   "src": "made"
   }
  ],
  "w|बारात": [
@@ -62159,6 +62591,22 @@
    "src": "made"
   }
  ],
+ "w|भनभनाना": [
+  {
+   "text": "सेब के बाग़ में मधुमक्खियाँ भनभना रही थीं, इसलिए विकास धीरे-धीरे आगे बढ़ा।",
+   "en": "Bees were buzzing in the apple orchard, so Vikas moved forward slowly.",
+   "ko": "사과 과수원에서 벌들이 윙윙거려서 비카스는 천천히 걸었어요.",
+   "blank": "भनभना",
+   "src": "made"
+  },
+  {
+   "text": "गर्मी की रातों में शालिनी के कान के पास मच्छर भनभनाते रहते हैं।",
+   "en": "On summer nights mosquitoes keep buzzing by Shalini's ear.",
+   "ko": "여름밤이면 샬리니 귓가에 모기가 계속 앵앵거려요.",
+   "blank": "भनभनाते",
+   "src": "made"
+  }
+ ],
  "w|भय": [
   {
    "text": "अंधेरे का भय बचपन से था।",
@@ -62627,6 +63075,22 @@
    "src": "made"
   }
  ],
+ "w|भाटा": [
+  {
+   "text": "विकास ने किताब में पढ़ा कि समुद्र में ज्वार-भाटा चाँद की वजह से आता है।",
+   "en": "Vikas read in a book that the sea's tides are caused by the moon.",
+   "ko": "비카스는 바다의 밀물과 썰물이 달 때문에 생긴다고 책에서 읽었어요.",
+   "blank": "भाटा",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी को समुद्र किनारे भाटे के समय सीपियाँ चुनना अच्छा लगता है।",
+   "en": "Shalini loves collecting shells on the beach at low tide.",
+   "ko": "샬리니는 썰물 때 바닷가에서 조개껍데기 줍는 걸 좋아해요.",
+   "blank": "भाटे",
+   "src": "made"
+  }
+ ],
  "w|भाड़ा": [
   {
    "text": "मंडी तक अनाज पहुँचाने का भाड़ा इस साल बढ़ गया है।",
@@ -62906,6 +63370,22 @@
    "en": "The tabla teacher loves okra curry.",
    "ko": "타블라 선생님은 오크라 반찬을 아주 좋아하세요.",
    "blank": "भिंडी",
+   "src": "made"
+  }
+ ],
+ "w|भिनभिनाना": [
+  {
+   "text": "विकास की गौशाला में मक्खियाँ भिनभिना रही थीं।",
+   "en": "Flies were buzzing in Vikas's cowshed.",
+   "ko": "비카스네 외양간에서 파리가 윙윙거렸어요.",
+   "blank": "भिनभिना",
+   "src": "made"
+  },
+  {
+   "text": "बरसात शुरू होते ही शालिनी की रसोई में मक्खियाँ भिनभिनाने लगती हैं।",
+   "en": "As soon as the rains start, flies begin buzzing in Shalini's kitchen.",
+   "ko": "장마가 시작되면 샬리니네 부엌에 파리가 윙윙대기 시작해요.",
+   "blank": "भिनभिनाने",
    "src": "made"
   }
  ],
@@ -63865,6 +64345,22 @@
    "en": "Corn grew well in the field this year.",
    "ko": "올해 밭에서 옥수수가 잘 자랐어.",
    "blank": "मक्का"
+  }
+ ],
+ "w|मक्कार": [
+  {
+   "text": "विकास ने सुना कि एक मक्कार व्यापारी किसानों से सेब सस्ते में ख़रीदकर उन्हें ठगता था।",
+   "en": "Vikas heard that a crafty trader used to cheat farmers by buying their apples cheap.",
+   "ko": "비카스는 교활한 상인이 사과를 헐값에 사들여 농부들을 속였다는 얘기를 들었어요.",
+   "blank": "मक्कार",
+   "src": "made"
+  },
+  {
+   "text": "आँधी से उड़ी छत ठीक करने के बहाने एक मक्कार मिस्त्री ने शालिनी से दुगने पैसे ऐंठ लिए।",
+   "en": "On the pretext of fixing the roof blown off in the storm, a crafty mason squeezed double money out of Shalini.",
+   "ko": "폭풍에 날아간 지붕을 고친다며 교활한 기술자가 샬리니에게서 두 배를 뜯어 갔어요.",
+   "blank": "मक्कार",
+   "src": "made"
   }
  ],
  "w|मक्खन": [
@@ -68315,6 +68811,22 @@
    "blank": "मूँगफली"
   }
  ],
+ "w|मूंगा": [
+  {
+   "text": "पहाड़ों में पले विकास ने टीवी पर समुद्र के नीचे मूंगे की रंगीन चट्टानें पहली बार देखीं।",
+   "en": "Raised in the mountains, Vikas saw colourful coral reefs under the sea on TV for the first time.",
+   "ko": "산골에서 자란 비카스는 바닷속 알록달록한 산호초를 텔레비전에서 처음 봤어요.",
+   "blank": "मूंगे",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने पढ़ा कि समुद्र का पानी गरम होने से मूंगा सफ़ेद पड़ने लगता है।",
+   "en": "Shalini read that coral starts turning white when sea water warms.",
+   "ko": "샬리니는 바닷물이 따뜻해지면 산호가 하얗게 변한다는 걸 읽었어요.",
+   "blank": "मूंगा",
+   "src": "made"
+  }
+ ],
  "w|मूँछ": [
   {
    "text": "उसके पास मूँछ है।",
@@ -72217,6 +72729,22 @@
    "src": "made"
   }
  ],
+ "w|रूखा": [
+  {
+   "text": "सर्दियों की सूखी हवा से विकास के हाथ रूखे हो जाते हैं।",
+   "en": "The dry winter air makes Vikas's hands rough.",
+   "ko": "겨울 건조한 바람에 비카스 손이 거칠어져요.",
+   "blank": "रूखे",
+   "src": "made"
+  },
+  {
+   "text": "सर्दियों में शालिनी के बाल बहुत रूखे हो जाते हैं।",
+   "en": "In winter Shalini's hair gets very dry.",
+   "ko": "겨울이면 샬리니 머리카락이 아주 푸석해져요.",
+   "blank": "रूखे",
+   "src": "made"
+  }
+ ],
  "w|रूढ़िवादी": [
   {
    "text": "करण ने लिखा कि गाँव के एक रूढ़िवादी ने भी बेटी को कॉलेज भेजने का समर्थन किया।",
@@ -73014,6 +73542,22 @@
    "en": "The bride smiled shyly.",
    "ko": "신부가 웃으며 수줍어했어요.",
    "blank": "लजाने",
+   "src": "made"
+  }
+ ],
+ "w|लजीला": [
+  {
+   "text": "विकास की लजीली बहन मेहमानों के आते ही रसोई में छिप जाती है।",
+   "en": "Vikas's shy sister hides in the kitchen as soon as guests arrive.",
+   "ko": "비카스의 수줍은 여동생은 손님이 오면 바로 부엌에 숨어요.",
+   "blank": "लजीली",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बेटी को दिखाया कि छुईमुई का पौधा कितना लजीला है, छूते ही पत्तियाँ मोड़ लेता है।",
+   "en": "Shalini showed her daughter how shy the touch-me-not plant is, folding its leaves at a touch.",
+   "ko": "샬리니는 미모사가 얼마나 수줍은지, 건드리면 잎을 오므린다고 딸에게 보여 줬어요.",
+   "blank": "लजीला",
    "src": "made"
   }
  ],
@@ -77474,6 +78018,22 @@
    "en": "Sanitiser was kept at the store's door for protection against viruses.",
    "ko": "바이러스 예방을 위해 매장 문 앞에 손 소독제가 있었어요.",
    "blank": "विषाणु",
+   "src": "made"
+  }
+ ],
+ "w|विषैला": [
+  {
+   "text": "विकास के दादा ने बताया कि जंगल का यह बैंगनी मशरूम विषैला है।",
+   "en": "Vikas's grandfather said this purple forest mushroom is poisonous.",
+   "ko": "비카스 할아버지는 숲의 이 보라색 버섯이 독버섯이라고 하셨어요.",
+   "blank": "विषैला",
+   "src": "made"
+  },
+  {
+   "text": "सर्दियों में शहर की हवा इतनी विषैली हो जाती है कि शालिनी मास्क पहनकर निकलती है।",
+   "en": "In winter the city air gets so toxic that Shalini goes out wearing a mask.",
+   "ko": "겨울이면 도시 공기가 너무 해로워져서 샬리니는 마스크를 쓰고 나가요.",
+   "blank": "विषैली",
    "src": "made"
   }
  ],
@@ -84045,6 +84605,22 @@
    "src": "made"
   }
  ],
+ "w|सरसराना": [
+  {
+   "text": "देवदार के पेड़ों से हवा सरसराती हुई निकली, तो विकास ने जैकेट कस ली।",
+   "en": "The wind rustled through the cedars, so Vikas pulled his jacket tight.",
+   "ko": "삼나무 사이로 바람이 쏴 지나가자 비카스는 재킷을 여몄어요.",
+   "blank": "सरसराती",
+   "src": "made"
+  },
+  {
+   "text": "पतझड़ में सूखे पत्ते शालिनी के पैरों तले सरसराते हैं।",
+   "en": "In autumn dry leaves rustle under Shalini's feet.",
+   "ko": "가을이면 샬리니 발밑에서 마른 잎이 바스락거려요.",
+   "blank": "सरसराते",
+   "src": "made"
+  }
+ ],
  "w|सरसों": [
   {
    "text": "खेत में पीली सरसों लहलहा रही है।",
@@ -84120,6 +84696,22 @@
    "en": "Priya said Neha's claim that she never skipped class is a downright lie.",
    "ko": "프리야는 네하가 수업을 한 번도 빠진 적 없다는 말은 새빨간 거짓말이라고 했어요.",
    "blank": "सरासर",
+   "src": "made"
+  }
+ ],
+ "w|सरीसृप": [
+  {
+   "text": "मास्टरजी ने विकास को बताया कि पहाड़ों की ठंड में सरीसृप कम दिखते हैं।",
+   "en": "The teacher told Vikas that reptiles are seldom seen in the mountain cold.",
+   "ko": "선생님은 비카스에게 산의 추위 속에선 파충류가 잘 안 보인다고 했어요.",
+   "blank": "सरीसृप",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बेटी को बताया कि सर्दियों में कई सरीसृप लंबी नींद में चले जाते हैं।",
+   "en": "Shalini told her daughter that many reptiles go into a long sleep in winter.",
+   "ko": "샬리니는 딸에게 많은 파충류가 겨울에 긴 잠에 든다고 알려 줬어요.",
+   "blank": "सरीसृप",
    "src": "made"
   }
  ],
@@ -89785,6 +90377,22 @@
    "src": "made"
   }
  ],
+ "w|स्फूर्तिवान": [
+  {
+   "text": "पहाड़ की ताज़ी हवा में सुबह की सैर के बाद विकास ख़ुद को स्फूर्तिवान महसूस करता है।",
+   "en": "After a morning walk in the fresh mountain air, Vikas feels full of energy.",
+   "ko": "산 공기 속에서 아침 산책을 하고 나면 비카스는 기운이 넘쳐요.",
+   "blank": "स्फूर्तिवान",
+   "src": "made"
+  },
+  {
+   "text": "बसंत की धूप में शालिनी ख़ुद को ज़्यादा स्फूर्तिवान महसूस करती है।",
+   "en": "In the spring sunshine Shalini feels more energetic.",
+   "ko": "봄 햇살 속에서 샬리니는 더 활기가 느껴져요.",
+   "blank": "स्फूर्तिवान",
+   "src": "made"
+  }
+ ],
  "w|स्मरण": [
   {
    "text": "पुरानी तस्वीर देखकर राहुल को स्कूल के दिनों का स्मरण हो आया।",
@@ -91972,6 +92580,38 @@
    "en": "Kavita wrote in her diary that forest guards protect the forest day and night.",
    "ko": "카비타는 산림 감시원들이 밤낮으로 숲을 지킨다고 일기에 썼어요.",
    "blank": "हिफ़ाज़त",
+   "src": "made"
+  }
+ ],
+ "w|हिमनद": [
+  {
+   "text": "विकास के गाँव की नदी ऊपर के हिमनद से निकलती है।",
+   "en": "The river in Vikas's village comes from the glacier up above.",
+   "ko": "비카스네 마을 강은 위쪽 빙하에서 흘러나와요.",
+   "blank": "हिमनद",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने एक लेख में पढ़ा कि गर्मी बढ़ने से हिमनद पीछे खिसक रहे हैं।",
+   "en": "Shalini read in an article that glaciers are retreating as temperatures rise.",
+   "ko": "샬리니는 기온이 오르면서 빙하가 물러나고 있다는 글을 읽었어요.",
+   "blank": "हिमनद",
+   "src": "made"
+  }
+ ],
+ "w|हिमस्खलन": [
+  {
+   "text": "पिछली सर्दी में हिमस्खलन से विकास के गाँव की सड़क बंद हो गई थी।",
+   "en": "Last winter an avalanche blocked the road to Vikas's village.",
+   "ko": "지난겨울 눈사태로 비카스네 마을 길이 막혔어요.",
+   "blank": "हिमस्खलन",
+   "src": "made"
+  },
+  {
+   "text": "सर्दियों में शालिनी पहाड़ों पर हिमस्खलन की चेतावनी वाली ख़बरें ध्यान से पढ़ती है।",
+   "en": "In winter Shalini reads the avalanche warnings for the mountains carefully.",
+   "ko": "겨울이면 샬리니는 산간 지역 눈사태 경보 기사를 꼼꼼히 읽어요.",
+   "blank": "हिमस्खलन",
    "src": "made"
   }
  ],
