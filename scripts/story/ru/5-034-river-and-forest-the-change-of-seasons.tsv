@@ -15,7 +15,7 @@ A	Алексея тревожит, что в реке стало меньше р
 A	Алексей нашёл в лесу старую землянку, но за давностью лет никто не помнит, чья она.	Alexei found an old dugout in the forest, but it's been so long that nobody remembers whose it was.	알렉세이는 숲에서 오래된 토굴을 찾았는데 너무 오래돼서 누구 것이었는지 아무도 몰라요.	давность=давностью
 A	Алексей привязал к удочке новую прочную нить.	Alexei tied a strong new line to his fishing rod.	알렉세이는 낚싯대에 튼튼한 새 줄을 맸어요.	нить=нить
 A	Алексей говорит, что неделя у реки — лучшая психологическая разгрузка.	Alexei says a week by the river is the best mental unwinding.	알렉세이는 강가에서 보내는 일주일이 최고의 마음 휴식이라고 해요.	психологический=психологическая
-A	Уборная у Алексея стоит в конце огорода.	Alexei's outhouse stands at the end of the vegetable patch.	알렉세이네 바깥 화장실은 텃밭 끝에 있어요.	уборная=Уборная
+A	У Алексея уборная стоит в самом конце огорода.	Alexei's outhouse stands at the end of the vegetable patch.	알렉세이네 바깥 화장실은 텃밭 끝에 있어요.	уборная=уборная
 A	Перед дождём Алексей быстренько собрал палатку.	Before the rain Alexei quickly packed up the tent.	비가 오기 전에 알렉세이는 얼른 텐트를 걷었어요.	быстренько=быстренько
 A	Алексей шутит, что каждое лето заново влюбляется в эту реку.	Alexei jokes that every summer he falls in love with this river all over again.	알렉세이는 여름마다 이 강에 새로 반한다고 농담해요.	влюбляться=влюбляется
 A	На завтрак в лесу Алексей ест овсяные хлопья с ягодами.	For breakfast in the forest Alexei eats oat flakes with berries.	알렉세이는 숲에서 아침으로 귀리 플레이크에 산딸기를 얹어 먹어요.	хлопья=хлопья
@@ -45,7 +45,7 @@ B	Каждый ноябрь на Наталью нападает осенняя 
 B	Весной Наталья подкармливает розы химическими удобрениями.	In spring Natalya feeds her roses with chemical fertiliser.	봄에 나탈리야는 장미에 화학 비료를 줘요.	химический=химическими
 B	Наталья прочитала, что весной в горах случилось слабое землетрясение.	Natalya read that there had been a weak earthquake in the mountains in spring.	나탈리야는 봄에 산에서 약한 지진이 났다는 기사를 읽었어요.	землетрясение=землетрясение
 B	Осенью Наталья всегда берёт с собой дорожный зонтик.	In autumn Natalya always takes a travel umbrella with her.	가을에 나탈리야는 늘 휴대용 우산을 챙겨요.	дорожный=дорожный
-B	Интуиция подсказала Наталье, что первый снег выпадет уже завтра.	Natalya's intuition told her that the first snow would fall as soon as tomorrow.	나탈리야는 내일 바로 첫눈이 올 거라는 직감이 들었어요.	интуиция=Интуиция
+B	Наталье подсказала интуиция, что первый снег выпадет уже завтра.	Natalya's intuition told her that the first snow would fall as soon as tomorrow.	나탈리야는 내일 바로 첫눈이 올 거라는 직감이 들었어요.	интуиция=интуиция
 B	Холодными вечерами Наталья варит глинтвейн на плите.	On cold evenings Natalya makes mulled wine on the stove.	추운 저녁이면 나탈리야는 레인지에 뱅쇼를 끓여요.	плита=плите
 B	Весной Наталья покрасила забор на даче в зелёный цвет.	In spring Natalya painted the fence at her dacha green.	봄에 나탈리야는 다차 울타리를 초록색으로 칠했어요.	забор=забор
 B	Перед зимой знакомый мясник советует Наталье запастись мясом.	Before winter the butcher Natalya knows advises her to stock up on meat.	겨울이 오기 전에 단골 정육점 주인은 나탈리야에게 고기를 쟁여 두라고 해요.	мясник=мясник
@@ -68,7 +68,7 @@ B	Весной на реке Наталья видела, как льдина р
 B	Осенью над горизонтом Наталья часто видит клинья улетающих птиц.	In autumn Natalya often sees wedges of departing birds above the horizon.	가을이면 나탈리야는 지평선 위로 떠나는 새 떼를 자주 봐요.	горизонт=горизонтом
 B	Весной Наталья заметила, что на лужайке снова поселился крот.	In spring Natalya noticed that a mole had moved into the lawn again.	봄에 나탈리야는 잔디밭에 두더지가 다시 자리 잡은 걸 알아챘어요.	крот=крот
 B	Наталья прочитала, что зимой атомы в воде двигаются медленнее.	Natalya read that in winter the atoms in water move more slowly.	나탈리야는 겨울에는 물속 원자가 더 느리게 움직인다는 글을 읽었어요.	атом=атомы
-B	Котёнок Натальи цеплялся когтями за первый снег.	Natalya's kitten dug its claws into the first snow.	나탈리야의 새끼 고양이는 첫눈에 발톱을 박으며 매달렸어요.	коготь=когтями
+B	Соседская кошка поцарапала Наталье руку острыми когтями.	The neighbour's cat scratched Natalya's hand with its sharp claws.	이웃집 고양이가 날카로운 발톱으로 나탈리야의 손을 할퀴었어요.	коготь=когтями
 B	Зимой Наталья насыпает голубям семечки на подоконник.	In winter Natalya scatters sunflower seeds on the windowsill for the pigeons.	겨울이면 나탈리야는 창턱에 비둘기들 먹으라고 해바라기씨를 뿌려 줘요.	голубь=голубям
 B	Весной Наталья увидела в поле стадо овец с новорождёнными ягнятами.	In spring Natalya saw a flock of sheep with newborn lambs in the field.	봄에 나탈리야는 들판에서 갓 태어난 새끼 양들과 함께 있는 양 떼를 봤어요.	стадо=стадо
 B	В марте с юга начинает дуть тёплый ветер, и Наталья открывает окна.	In March a warm wind starts to blow from the south, and Natalya opens the windows.	3월이 되면 남쪽에서 따뜻한 바람이 불기 시작해서 나탈리야는 창문을 열어요.	дуть=дуть
