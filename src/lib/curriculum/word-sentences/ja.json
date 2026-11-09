@@ -41,6 +41,22 @@
    "blank": "ああ"
   }
  ],
+ "w|アイス": [
+  {
+   "text": "昼休みに、先輩が健太にアイスをおごってくれた。",
+   "en": "At lunch break, a senior colleague treated Kenta to ice cream.",
+   "ko": "점심시간에 선배가 겐타에게 아이스크림을 사 줬어요.",
+   "blank": "アイス",
+   "src": "made"
+  },
+  {
+   "text": "村に一軒だけある店で、美咲はアイスを買って食べた。",
+   "en": "At the only shop in the village, Misaki bought an ice cream and ate it.",
+   "ko": "마을에 하나뿐인 가게에서 미사키는 아이스크림을 사 먹었어요.",
+   "blank": "アイス",
+   "src": "made"
+  }
+ ],
  "w|あいつ": [
   {
    "text": "あいつ、また遅刻だ。",
@@ -4541,6 +4557,22 @@
    "blank": "スタッフ"
   }
  ],
+ "w|スタンド": [
+  {
+   "text": "健太の机には、前の人が残したスタンドが置いてあった。",
+   "en": "On Kenta's desk was a desk lamp left by the previous person.",
+   "ko": "겐타의 책상에는 전에 쓰던 사람이 남긴 스탠드가 놓여 있었어요.",
+   "blank": "スタンド",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、机のスタンドの明かりで夜遅くまで本を読んだ。",
+   "en": "Misaki read until late at night by the light of her desk lamp.",
+   "ko": "미사키는 책상 스탠드 불빛으로 밤늦게까지 책을 읽었어요.",
+   "blank": "スタンド",
+   "src": "made"
+  }
+ ],
  "w|すっかり": [
   {
    "text": "窓口の仕事にも、悠斗はもうすっかり慣れた。",
@@ -5481,6 +5513,22 @@
    "en": "I downloaded the app.",
    "ko": "앱을 다운로드했어.",
    "blank": "ダウンロード"
+  }
+ ],
+ "w|タオル": [
+  {
+   "text": "健太は汗をかいたので、かばんから小さなタオルを出した。",
+   "en": "Kenta was sweating, so he took a small towel out of his bag.",
+   "ko": "겐타는 땀이 나서 가방에서 작은 수건을 꺼냈어요.",
+   "blank": "タオル",
+   "src": "made"
+  },
+  {
+   "text": "温泉に行くとき、美咲はいつも自分のタオルを持っていく。",
+   "en": "When she goes to the hot spring, Misaki always brings her own towel.",
+   "ko": "온천에 갈 때 미사키는 늘 자기 수건을 챙겨 가요.",
+   "blank": "タオル",
+   "src": "made"
   }
  ],
  "w|だから": [
@@ -6447,6 +6495,22 @@
    "en": "News of a terror attack came on.",
    "ko": "테러 뉴스가 나왔어.",
    "blank": "テロ"
+  }
+ ],
+ "w|テンション": [
+  {
+   "text": "歓迎会で、健太はいつもよりテンションが高かった。",
+   "en": "At the welcome party, Kenta was more hyped than usual.",
+   "ko": "환영회에서 겐타는 평소보다 텐션이 높았어요.",
+   "blank": "テンション",
+   "src": "made"
+  },
+  {
+   "text": "初雪が降った朝、美咲のテンションは一気に上がった。",
+   "en": "On the morning of the first snow, Misaki's mood shot right up.",
+   "ko": "첫눈이 내린 아침, 미사키의 텐션이 확 올라갔어요.",
+   "blank": "テンション",
+   "src": "made"
   }
  ],
  "w|トーク": [
@@ -7903,6 +7967,22 @@
    "blank": "ピアノ"
   }
  ],
+ "w|ピザ": [
+  {
+   "text": "歓迎会では、みんなでピザを分けて食べた。",
+   "en": "At the welcome party, everyone shared pizza.",
+   "ko": "환영회에서는 다 같이 피자를 나눠 먹었어요.",
+   "blank": "ピザ",
+   "src": "made"
+  },
+  {
+   "text": "村の若者が、古い窯でピザを焼くお店を始めた。",
+   "en": "A young villager started a shop that bakes pizza in an old oven.",
+   "ko": "마을 젊은이가 오래된 가마에서 피자를 굽는 가게를 열었어요.",
+   "blank": "ピザ",
+   "src": "made"
+  }
+ ],
  "w|ビジネス": [
   {
    "text": "ビジネスの話だよ。",
@@ -9337,6 +9417,22 @@
    "blank": "まるで"
   }
  ],
+ "w|マンション": [
+  {
+   "text": "健太は、会社の近くの小さなマンションに先週引っ越したばかりだ。",
+   "en": "Kenta just moved last week into a small apartment near the office.",
+   "ko": "겐타는 지난주에 회사 근처의 작은 맨션으로 막 이사했어요.",
+   "blank": "マンション",
+   "src": "made"
+  },
+  {
+   "text": "都会のマンション暮らしだった美咲は、山の村の静けさに驚いた。",
+   "en": "Misaki, who had lived in a city apartment, was surprised by the quiet of the mountain village.",
+   "ko": "도시 맨션에 살던 미사키는 산골 마을의 고요함에 놀랐어요.",
+   "blank": "マンション",
+   "src": "made"
+  }
+ ],
  "w|みかん": [
   {
    "text": "みかんが甘いね。",
@@ -10327,6 +10423,22 @@
    "src": "made"
   }
  ],
+ "w|ラップ": [
+  {
+   "text": "健太は、母が作ってくれたおにぎりをラップに包んで持ってきた。",
+   "en": "Kenta brought rice balls his mother made, wrapped in plastic wrap.",
+   "ko": "겐타는 엄마가 만들어 준 주먹밥을 랩에 싸서 가져왔어요.",
+   "blank": "ラップ",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、残ったご飯をラップで包んで冷凍した。",
+   "en": "Misaki wrapped the leftover rice in plastic wrap and froze it.",
+   "ko": "미사키는 남은 밥을 랩으로 싸서 냉동했어요.",
+   "blank": "ラップ",
+   "src": "made"
+  }
+ ],
  "w|ランキング": [
   {
    "text": "ランキング、見た？",
@@ -10759,6 +10871,22 @@
    "en": "It's a dish that goes with wine.",
    "ko": "와인에 맞는 요리야.",
    "blank": "ワイン"
+  }
+ ],
+ "w|ワクワク": [
+  {
+   "text": "健太は緊張しながらも、どこかワクワクしていた。",
+   "en": "Though nervous, Kenta was somehow excited.",
+   "ko": "겐타는 긴장하면서도 어딘가 설렜어요.",
+   "blank": "ワクワク",
+   "src": "made"
+  },
+  {
+   "text": "初めての田植えを前に、美咲はワクワクが止まらなかった。",
+   "en": "Before her first rice planting, Misaki couldn't stop feeling excited.",
+   "ko": "첫 모내기를 앞두고 미사키는 설렘이 멈추지 않았어요.",
+   "blank": "ワクワク",
+   "src": "made"
   }
  ],
  "w|わけ": [
@@ -11495,6 +11623,22 @@
    "src": "made"
   }
  ],
+ "w|不快": [
+  {
+   "text": "健太は、相手に不快な思いをさせないように言葉を選んだ。",
+   "en": "Kenta chose his words so as not to make anyone uncomfortable.",
+   "ko": "겐타는 상대가 불쾌하지 않도록 말을 골랐어요.",
+   "blank": "不快",
+   "src": "made"
+  },
+  {
+   "text": "夏の村は、湿気が多くて少し不快だ。",
+   "en": "The village in summer is humid and a little unpleasant.",
+   "ko": "여름 마을은 습기가 많아서 조금 불쾌해요.",
+   "blank": "不快",
+   "src": "made"
+  }
+ ],
  "w|不思議": [
   {
    "text": "不思議な話だね。",
@@ -12107,6 +12251,22 @@
    "src": "made"
   }
  ],
+ "w|丼": [
+  {
+   "text": "健太は社員食堂で、牛肉の丼を大盛りで頼んだ。",
+   "en": "At the staff cafeteria, Kenta ordered a large beef rice bowl.",
+   "ko": "겐타는 사원 식당에서 소고기 덮밥을 곱빼기로 시켰어요.",
+   "blank": "丼",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、山菜がたっぷり乗った丼を食堂で注文した。",
+   "en": "Misaki ordered a rice bowl piled with mountain vegetables at the diner.",
+   "ko": "미사키는 식당에서 산나물이 듬뿍 올라간 덮밥을 주문했어요.",
+   "blank": "丼",
+   "src": "made"
+  }
+ ],
  "w|久々": [
   {
    "text": "久々に晴れた冬の朝、亮は布団を干した。",
@@ -12287,6 +12447,22 @@
    "en": "It was earlier than expected.",
    "ko": "예상보다 빨랐어.",
    "blank": "予想"
+  }
+ ],
+ "w|予感": [
+  {
+   "text": "朝、健太は今日はいい一日になりそうな予感がした。",
+   "en": "In the morning, Kenta had a feeling today would be a good day.",
+   "ko": "아침에 겐타는 오늘 좋은 하루가 될 것 같은 예감이 들었어요.",
+   "blank": "予感",
+   "src": "made"
+  },
+  {
+   "text": "空が急に暗くなり、美咲は雨が降る予感がした。",
+   "en": "The sky suddenly darkened, and Misaki sensed that rain was coming.",
+   "ko": "하늘이 갑자기 어두워져서 미사키는 비가 올 것 같은 예감이 들었어요.",
+   "blank": "予感",
+   "src": "made"
   }
  ],
  "w|予測": [
@@ -16009,6 +16185,22 @@
    "blank": "共同"
   }
  ],
+ "w|共感": [
+  {
+   "text": "健太が不安を話すと、同期の美香も共感してくれた。",
+   "en": "When Kenta talked about his worries, Mika, who joined with him, sympathized too.",
+   "ko": "겐타가 불안을 이야기하자 동기 미카도 공감해 줬어요.",
+   "blank": "共感",
+   "src": "made"
+  },
+  {
+   "text": "美咲がブログに書いた村の暮らしに、多くの人が共感した。",
+   "en": "Many people related to the village life Misaki wrote about on her blog.",
+   "ko": "미사키가 블로그에 쓴 마을 생활에 많은 사람이 공감했어요.",
+   "blank": "共感",
+   "src": "made"
+  }
+ ],
  "w|共有": [
   {
    "text": "ファイルを共有した。",
@@ -17903,6 +18095,22 @@
    "blank": "動画"
   }
  ],
+ "w|勘弁": [
+  {
+   "text": "「初日から残業は勘弁してほしい」と健太は心の中で思った。",
+   "en": "\"Please, no overtime on the first day,\" Kenta thought to himself.",
+   "ko": "\"첫날부터 야근은 좀 봐줬으면\" 하고 겐타는 속으로 생각했어요.",
+   "blank": "勘弁",
+   "src": "made"
+  },
+  {
+   "text": "「毎朝五時の草取りは勘弁してよ」と美咲は笑った。",
+   "en": "\"Spare me the weeding at five every morning,\" Misaki laughed.",
+   "ko": "\"매일 아침 다섯 시 풀 뽑기는 좀 봐줘\"라며 미사키는 웃었어요.",
+   "blank": "勘弁",
+   "src": "made"
+  }
+ ],
  "w|勘違い": [
   {
    "text": "それは勘違いだった。",
@@ -18944,6 +19152,22 @@
    "en": "Apparently the new system met with pushback even from younger employees.",
    "ko": "새 제도에는 젊은 직원들의 반발도 있었대요.",
    "blank": "反発",
+   "src": "made"
+  }
+ ],
+ "w|反省": [
+  {
+   "text": "健太は、同僚の名前を一度で覚えられなかったことを反省した。",
+   "en": "Kenta reflected on not being able to remember his coworkers' names the first time.",
+   "ko": "겐타는 동료 이름을 한 번에 외우지 못한 것을 반성했어요.",
+   "blank": "反省",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、村の集まりに遅れたことを反省している。",
+   "en": "Misaki regrets being late to the village meeting.",
+   "ko": "미사키는 마을 모임에 늦은 것을 반성하고 있어요.",
+   "blank": "反省",
    "src": "made"
   }
  ],
@@ -23143,6 +23367,22 @@
    "blank": "季節"
   }
  ],
+ "w|孤独": [
+  {
+   "text": "昼ごはんを一人で食べながら、健太は少し孤独を感じた。",
+   "en": "Eating lunch alone, Kenta felt a little lonely.",
+   "ko": "점심을 혼자 먹으면서 겐타는 조금 외로움을 느꼈어요.",
+   "blank": "孤独",
+   "src": "made"
+  },
+  {
+   "text": "冬の長い夜、美咲は山の村で孤独を感じることもある。",
+   "en": "On long winter nights, Misaki sometimes feels lonely in the mountain village.",
+   "ko": "겨울의 긴 밤, 미사키는 산골 마을에서 고독을 느낄 때도 있어요.",
+   "blank": "孤独",
+   "src": "made"
+  }
+ ],
  "w|学び": [
   {
    "text": "取材の一つひとつが、健太にとって新しい学びになる。",
@@ -24533,6 +24773,22 @@
    "src": "made"
   }
  ],
+ "w|尾": [
+  {
+   "text": "会社の前の道で、健太は長い尾の白い猫に見送られた。",
+   "en": "On the road in front of the office, a white cat with a long tail watched Kenta go.",
+   "ko": "회사 앞길에서 겐타는 꼬리가 긴 흰 고양이의 배웅을 받았어요.",
+   "blank": "尾",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、畑の近くで尾の長い鳥を見かけた。",
+   "en": "Misaki saw a long-tailed bird near the field.",
+   "ko": "미사키는 밭 근처에서 꼬리가 긴 새를 봤어요.",
+   "blank": "尾",
+   "src": "made"
+  }
+ ],
  "w|届く": [
   {
    "text": "文化祭のポスターが、やっと印刷所から届いた。",
@@ -24941,6 +25197,22 @@
    "blank": "市長"
   }
  ],
+ "w|布団": [
+  {
+   "text": "初出勤の前の晩、健太は布団に入ってもなかなか眠れなかった。",
+   "en": "The night before his first day, Kenta couldn't fall asleep even after getting into his futon.",
+   "ko": "첫 출근 전날 밤, 겐타는 이불에 들어가도 좀처럼 잠들지 못했어요.",
+   "blank": "布団",
+   "src": "made"
+  },
+  {
+   "text": "晴れた朝、美咲は縁側に布団を干した。",
+   "en": "On a sunny morning, Misaki aired her futon on the veranda.",
+   "ko": "맑은 아침, 미사키는 툇마루에 이불을 널었어요.",
+   "blank": "布団",
+   "src": "made"
+  }
+ ],
  "w|希望": [
   {
    "text": "希望はあるよ。",
@@ -25039,6 +25311,22 @@
    "en": "Head back first.",
    "ko": "먼저 가 있어.",
    "blank": "帰ってて"
+  }
+ ],
+ "w|帰宅": [
+  {
+   "text": "初日は緊張で疲れて、健太は帰宅するとすぐ横になった。",
+   "en": "Worn out from nerves on the first day, Kenta lay down as soon as he got home.",
+   "ko": "첫날은 긴장해서 지쳐, 겐타는 집에 오자마자 누웠어요.",
+   "blank": "帰宅",
+   "src": "made"
+  },
+  {
+   "text": "美咲が畑から帰宅すると、玄関に野菜が置いてあった。",
+   "en": "When Misaki came home from the field, vegetables had been left at her door.",
+   "ko": "미사키가 밭에서 돌아오니 현관에 채소가 놓여 있었어요.",
+   "blank": "帰宅",
+   "src": "made"
   }
  ],
  "w|常識": [
@@ -25290,6 +25578,22 @@
    "en": "Apparently Daisuke has become an executive at city hall.",
    "ko": "다이스케는 시청 간부가 됐대요.",
    "blank": "幹部",
+   "src": "made"
+  }
+ ],
+ "w|幻想": [
+  {
+   "text": "会社に入ればすぐ活躍できるという幻想は、初日で消えた。",
+   "en": "The illusion that he'd shine as soon as he joined vanished on day one.",
+   "ko": "회사에 들어가면 바로 활약할 수 있다는 환상은 첫날에 사라졌어요.",
+   "blank": "幻想",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、田舎暮らしに対する甘い幻想を持っていなかった。",
+   "en": "Misaki had no sweet illusions about country life.",
+   "ko": "미사키는 시골 생활에 대한 달콤한 환상을 갖고 있지 않았어요.",
+   "blank": "幻想",
    "src": "made"
   }
  ],
@@ -27223,6 +27527,22 @@
    "blank": "悲しい"
   }
  ],
+ "w|悲しみ": [
+  {
+   "text": "前の職場の仲間と別れた悲しみは、まだ健太の心に残っていた。",
+   "en": "The sadness of parting from his old coworkers still lingered in Kenta's heart.",
+   "ko": "전 직장 동료들과 헤어진 슬픔은 아직 겐타의 마음에 남아 있었어요.",
+   "blank": "悲しみ",
+   "src": "made"
+  },
+  {
+   "text": "長く村を支えた老人が亡くなり、村は深い悲しみに包まれた。",
+   "en": "An old man who had long supported the village passed away, and the village was wrapped in deep sorrow.",
+   "ko": "오랫동안 마을을 지탱해 온 노인이 세상을 떠나 마을은 깊은 슬픔에 잠겼어요.",
+   "blank": "悲しみ",
+   "src": "made"
+  }
+ ],
  "w|悲しむ": [
   {
    "text": "友人の別れを悲しむ。",
@@ -27249,6 +27569,22 @@
    "en": "Is that info actually true?",
    "ko": "그 정보 진짜야?",
    "blank": "情報"
+  }
+ ],
+ "w|情熱": [
+  {
+   "text": "部長は、この仕事への情熱を新人たちに熱く語った。",
+   "en": "The department head spoke passionately to the new staff about his passion for the work.",
+   "ko": "부장님은 이 일에 대한 열정을 신입들에게 뜨겁게 이야기했어요.",
+   "blank": "情熱",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、村のお米を広めることに情熱を注いでいる。",
+   "en": "Misaki pours her passion into spreading the word about the village's rice.",
+   "ko": "미사키는 마을 쌀을 알리는 데 열정을 쏟고 있어요.",
+   "blank": "情熱",
+   "src": "made"
   }
  ],
  "w|惑星": [
@@ -27337,6 +27673,22 @@
    "blank": "意外"
   }
  ],
+ "w|意志": [
+  {
+   "text": "健太は、早く仕事を覚えたいという強い意志を課長に伝えた。",
+   "en": "Kenta told his manager of his strong will to learn the job quickly.",
+   "ko": "겐타는 빨리 일을 익히고 싶다는 강한 의지를 과장님께 전했어요.",
+   "blank": "意志",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、この村で暮らし続けるという意志を家族に話した。",
+   "en": "Misaki told her family of her intention to keep living in this village.",
+   "ko": "미사키는 이 마을에서 계속 살겠다는 의지를 가족에게 말했어요.",
+   "blank": "意志",
+   "src": "made"
+  }
+ ],
  "w|意思": [
   {
    "text": "自分の意思を伝えよう。",
@@ -27405,6 +27757,22 @@
    "en": "For the person I love.",
    "ko": "사랑하는 사람을 위해.",
    "blank": "愛する"
+  }
+ ],
+ "w|愛情": [
+  {
+   "text": "課長の厳しい言葉には、部下への愛情が込められていた。",
+   "en": "The manager's harsh words were filled with affection for his staff.",
+   "ko": "과장님의 엄한 말에는 부하에 대한 애정이 담겨 있었어요.",
+   "blank": "愛情",
+   "src": "made"
+  },
+  {
+   "text": "村のおばあさんたちは、美咲に孫のような愛情を注いでくれる。",
+   "en": "The village grandmothers shower Misaki with affection as if she were their grandchild.",
+   "ko": "마을 할머니들은 미사키에게 손주 같은 애정을 쏟아 줘요.",
+   "blank": "愛情",
+   "src": "made"
   }
  ],
  "w|感じ": [
@@ -27621,6 +27989,22 @@
    "en": "Hometown flavors feel nostalgic.",
    "ko": "고향 맛이 그립다.",
    "blank": "懐かしい"
+  }
+ ],
+ "w|懸念": [
+  {
+   "text": "健太の一番の懸念は、通勤電車の混雑だった。",
+   "en": "Kenta's biggest worry was the crowded commuter train.",
+   "ko": "겐타의 가장 큰 걱정은 출퇴근 전철의 혼잡이었어요.",
+   "blank": "懸念",
+   "src": "made"
+  },
+  {
+   "text": "村の人たちの懸念は、若い人がどんどん減っていることだ。",
+   "en": "The villagers' concern is that the number of young people keeps falling.",
+   "ko": "마을 사람들의 걱정은 젊은 사람이 점점 줄고 있다는 거예요.",
+   "blank": "懸念",
+   "src": "made"
   }
  ],
  "w|成人": [
@@ -32135,6 +32519,22 @@
    "blank": "板"
   }
  ],
+ "w|林": [
+  {
+   "text": "会社の窓から、駅の向こうの林がよく見える。",
+   "en": "From the office window, you can clearly see the woods beyond the station.",
+   "ko": "회사 창문으로 역 건너편 숲이 잘 보여요.",
+   "blank": "林",
+   "src": "made"
+  },
+  {
+   "text": "美咲の家の裏には、静かな杉の林が広がっている。",
+   "en": "Behind Misaki's house stretches a quiet cedar grove.",
+   "ko": "미사키 집 뒤에는 조용한 삼나무 숲이 펼쳐져 있어요.",
+   "blank": "林",
+   "src": "made"
+  }
+ ],
  "w|果たす": [
   {
    "text": "拓也は、リーダーとしての役目をしっかり果たした。",
@@ -33101,6 +33501,22 @@
    "blank": "欲しい"
   }
  ],
+ "w|欲求": [
+  {
+   "text": "健太は、すぐに役に立ちたいという欲求を抑えて、まず話を聞いた。",
+   "en": "Kenta held back his urge to be useful right away and listened first.",
+   "ko": "겐타는 당장 도움이 되고 싶은 욕구를 누르고 먼저 이야기를 들었어요.",
+   "blank": "欲求",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、自分で野菜を育てたいという欲求からこの村に来た。",
+   "en": "Misaki came to this village out of a desire to grow her own vegetables.",
+   "ko": "미사키는 직접 채소를 기르고 싶다는 욕구로 이 마을에 왔어요.",
+   "blank": "欲求",
+   "src": "made"
+  }
+ ],
  "w|歌": [
   {
    "text": "この歌、知ってる？",
@@ -33945,6 +34361,22 @@
    "blank": "気分"
   }
  ],
+ "w|気味": [
+  {
+   "text": "誰もいない夜のオフィスは、少し気味が悪かった。",
+   "en": "The empty office at night was a little creepy.",
+   "ko": "아무도 없는 밤 사무실은 조금 으스스했어요.",
+   "blank": "気味",
+   "src": "made"
+  },
+  {
+   "text": "廃校になった古い校舎は、夕方になるとどこか気味が悪い。",
+   "en": "The old school building that closed down feels somewhat eerie in the evening.",
+   "ko": "폐교된 오래된 교사는 저녁이 되면 어딘가 으스스해요.",
+   "blank": "気味",
+   "src": "made"
+  }
+ ],
  "w|気持ち": [
   {
    "text": "気持ちいいね。",
@@ -34283,6 +34715,38 @@
    "en": "The decision changed.",
    "ko": "결정이 바뀌었어.",
    "blank": "決定"
+  }
+ ],
+ "w|決意": [
+  {
+   "text": "健太は、一年で一人前になるという決意を日記に書いた。",
+   "en": "Kenta wrote in his diary his resolve to become fully capable within a year.",
+   "ko": "겐타는 일 년 안에 제 몫을 하겠다는 결의를 일기에 썼어요.",
+   "blank": "決意",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、古い家を自分で直すという決意を固めた。",
+   "en": "Misaki made up her mind to fix the old house herself.",
+   "ko": "미사키는 낡은 집을 직접 고치겠다는 결의를 굳혔어요.",
+   "blank": "決意",
+   "src": "made"
+  }
+ ],
+ "w|決断": [
+  {
+   "text": "この会社に入ると決めたのは、健太にとって大きな決断だった。",
+   "en": "Choosing to join this company was a big decision for Kenta.",
+   "ko": "이 회사에 들어가기로 한 건 겐타에게 큰 결단이었어요.",
+   "blank": "決断",
+   "src": "made"
+  },
+  {
+   "text": "会社を辞めて村に移ったのは、美咲にとって勇気のいる決断だった。",
+   "en": "Quitting her job and moving to the village was a decision that took courage for Misaki.",
+   "ko": "회사를 그만두고 마을로 옮긴 건 미사키에게 용기가 필요한 결단이었어요.",
+   "blank": "決断",
+   "src": "made"
   }
  ],
  "w|油": [
@@ -35069,6 +35533,22 @@
    "src": "tatoeba:183119 en:20241/fishda"
   }
  ],
+ "w|湯": [
+  {
+   "text": "健太は家に帰って、ぬるめのお湯にゆっくりつかった。",
+   "en": "Kenta went home and soaked slowly in lukewarm water.",
+   "ko": "겐타는 집에 와서 미지근한 물에 느긋하게 몸을 담갔어요.",
+   "blank": "湯",
+   "src": "made"
+  },
+  {
+   "text": "村の温泉は、湯がやわらかくて体がよく温まる。",
+   "en": "The village hot spring has soft water that warms you up well.",
+   "ko": "마을 온천은 물이 부드러워서 몸이 잘 데워져요.",
+   "blank": "湯",
+   "src": "made"
+  }
+ ],
  "w|満足": [
   {
    "text": "結果に満足してる。",
@@ -35691,6 +36171,22 @@
    "en": "It's Father's Day.",
    "ko": "아버지의 날이야.",
    "blank": "父親"
+  }
+ ],
+ "w|片付け": [
+  {
+   "text": "健太は、帰る前に机の上の片付けを済ませた。",
+   "en": "Kenta finished tidying his desk before going home.",
+   "ko": "겐타는 퇴근 전에 책상 위 정리를 마쳤어요.",
+   "blank": "片付け",
+   "src": "made"
+  },
+  {
+   "text": "祭りの後、村の人たちは総出で片付けをした。",
+   "en": "After the festival, the whole village turned out to clean up.",
+   "ko": "축제가 끝난 뒤 마을 사람들은 모두 나와 뒷정리를 했어요.",
+   "blank": "片付け",
+   "src": "made"
   }
  ],
  "w|片付ける": [
@@ -37245,6 +37741,22 @@
    "blank": "痛み"
   }
  ],
+ "w|癒し": [
+  {
+   "text": "疲れた健太にとって、先輩の笑顔は癒しだった。",
+   "en": "For the tired Kenta, his senior's smile was a comfort.",
+   "ko": "지친 겐타에게 선배의 미소는 힐링이었어요.",
+   "blank": "癒し",
+   "src": "made"
+  },
+  {
+   "text": "美咲にとって、川の音を聞く時間が一番の癒しだ。",
+   "en": "For Misaki, listening to the river is the greatest comfort.",
+   "ko": "미사키에게는 강물 소리를 듣는 시간이 가장 큰 힐링이에요.",
+   "blank": "癒し",
+   "src": "made"
+  }
+ ],
  "w|癖": [
   {
    "text": "爪を噛む癖がある。",
@@ -37788,6 +38300,22 @@
    "en": "Important warnings are written in red so they stand out.",
    "ko": "중요한 주의 사항은 눈에 띄도록 빨간 글씨로 적혀 있어요.",
    "blank": "目立つ",
+   "src": "made"
+  }
+ ],
+ "w|目線": [
+  {
+   "text": "先輩は、新人の目線で仕事の流れを説明してくれた。",
+   "en": "The senior explained the workflow from a newcomer's point of view.",
+   "ko": "선배는 신입의 눈높이에서 일의 흐름을 설명해 줬어요.",
+   "blank": "目線",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、子どもの目線で村の案内図を作った。",
+   "en": "Misaki made a village map from a child's point of view.",
+   "ko": "미사키는 아이 눈높이로 마을 안내도를 만들었어요.",
+   "blank": "目線",
    "src": "made"
   }
  ],
@@ -41501,6 +42029,22 @@
    "src": "made"
   }
  ],
+ "w|自覚": [
+  {
+   "text": "社会人になった自覚が、健太にはまだあまりない。",
+   "en": "Kenta still doesn't really feel aware that he's become a working adult.",
+   "ko": "겐타는 아직 사회인이 됐다는 자각이 별로 없어요.",
+   "blank": "自覚",
+   "src": "made"
+  },
+  {
+   "text": "村の一員としての自覚が、美咲にも少しずつ芽生えてきた。",
+   "en": "Misaki has gradually begun to feel like a member of the village.",
+   "ko": "마을의 일원이라는 자각이 미사키에게도 조금씩 생겨났어요.",
+   "blank": "自覚",
+   "src": "made"
+  }
+ ],
  "w|自身": [
   {
    "text": "自身で決めて。",
@@ -43305,6 +43849,22 @@
    "src": "made"
   }
  ],
+ "w|観測": [
+  {
+   "text": "健太の新しい職場は、天気の観測データを扱う会社だ。",
+   "en": "Kenta's new workplace is a company that handles weather observation data.",
+   "ko": "겐타의 새 직장은 날씨 관측 데이터를 다루는 회사예요.",
+   "blank": "観測",
+   "src": "made"
+  },
+  {
+   "text": "村の小学校では、子どもたちが毎日空の観測をしている。",
+   "en": "At the village elementary school, the children observe the sky every day.",
+   "ko": "마을 초등학교에서는 아이들이 매일 하늘을 관측해요.",
+   "blank": "観測",
+   "src": "made"
+  }
+ ],
  "w|角": [
   {
    "text": "角を曲がって。",
@@ -44147,6 +44707,22 @@
    "en": "Tell me the details.",
    "ko": "자세히 알려 줘.",
    "blank": "詳細"
+  }
+ ],
+ "w|誇り": [
+  {
+   "text": "健太は、この会社の名刺を持てることに誇りを感じた。",
+   "en": "Kenta felt proud to carry this company's business card.",
+   "ko": "겐타는 이 회사 명함을 가질 수 있다는 것에 자부심을 느꼈어요.",
+   "blank": "誇り",
+   "src": "made"
+  },
+  {
+   "text": "村の人たちは、昔から続く祭りに誇りを持っている。",
+   "en": "The villagers take pride in the festival that has continued since long ago.",
+   "ko": "마을 사람들은 옛날부터 이어진 축제에 자부심을 갖고 있어요.",
+   "blank": "誇り",
+   "src": "made"
   }
  ],
  "w|認める": [
@@ -47281,6 +47857,22 @@
    "blank": "違反"
   }
  ],
+ "w|違和感": [
+  {
+   "text": "新しいパソコンのキーボードに、健太はまだ違和感がある。",
+   "en": "Kenta still feels something is off about the new computer's keyboard.",
+   "ko": "겐타는 새 컴퓨터 키보드가 아직 어색해요.",
+   "blank": "違和感",
+   "src": "made"
+  },
+  {
+   "text": "都会から来たばかりの頃、美咲は夜の暗さに違和感を覚えた。",
+   "en": "When she had just come from the city, Misaki felt uneasy about how dark the nights were.",
+   "ko": "도시에서 막 왔을 때 미사키는 밤의 어둠이 낯설게 느껴졌어요.",
+   "blank": "違和感",
+   "src": "made"
+  }
+ ],
  "w|違法": [
   {
    "text": "世界で、鹿やムースやキジといった野性獣を狩ることは違法とする国が多い。",
@@ -47324,6 +47916,22 @@
    "en": "Sakura greeted even the department manager seated far away in a loud voice.",
    "ko": "사쿠라는 멀리 앉은 부장님께도 큰 소리로 인사했어요.",
    "blank": "遠く",
+   "src": "made"
+  }
+ ],
+ "w|遠慮": [
+  {
+   "text": "「わからないことは遠慮しないで聞いてね」と先輩が健太に言った。",
+   "en": "\"Don't hesitate to ask about anything you don't know,\" the senior told Kenta.",
+   "ko": "\"모르는 건 사양하지 말고 물어봐\"라고 선배가 겐타에게 말했어요.",
+   "blank": "遠慮",
+   "src": "made"
+  },
+  {
+   "text": "村の人に野菜をすすめられ、美咲は遠慮しながら受け取った。",
+   "en": "Offered vegetables by a villager, Misaki accepted them a bit hesitantly.",
+   "ko": "마을 사람이 채소를 권하자 미사키는 사양하면서도 받았어요.",
+   "blank": "遠慮",
    "src": "made"
   }
  ],
@@ -49297,6 +49905,22 @@
    "blank": "電気"
   }
  ],
+ "w|電池": [
+  {
+   "text": "健太のマウスは、電池が切れていて動かなかった。",
+   "en": "Kenta's mouse didn't work because its battery was dead.",
+   "ko": "겐타의 마우스는 건전지가 다 돼서 움직이지 않았어요.",
+   "blank": "電池",
+   "src": "made"
+  },
+  {
+   "text": "停電に備えて、美咲は懐中電灯の電池を新しくした。",
+   "en": "To be ready for a power outage, Misaki replaced the flashlight batteries.",
+   "ko": "정전에 대비해 미사키는 손전등 건전지를 새로 갈았어요.",
+   "blank": "電池",
+   "src": "made"
+  }
+ ],
  "w|電波": [
   {
    "text": "山の中は電波が弱く、翔太は無線で署と連絡を取った。",
@@ -49959,6 +50583,22 @@
    "en": "The bath is ready.",
    "ko": "목욕물이 끓었어.",
    "blank": "風呂"
+  }
+ ],
+ "w|風景": [
+  {
+   "text": "健太の席からは、ビルばかりの風景しか見えない。",
+   "en": "From Kenta's seat, all you can see is a landscape of buildings.",
+   "ko": "겐타 자리에서는 빌딩뿐인 풍경밖에 안 보여요.",
+   "blank": "風景",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、霧に包まれた朝の風景を写真に撮った。",
+   "en": "Misaki photographed the morning scenery wrapped in fog.",
+   "ko": "미사키는 안개에 싸인 아침 풍경을 사진으로 찍었어요.",
+   "blank": "風景",
+   "src": "made"
   }
  ],
  "w|風邪": [

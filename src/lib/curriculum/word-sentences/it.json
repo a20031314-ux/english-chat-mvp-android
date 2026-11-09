@@ -283,6 +283,22 @@
    "src": "made"
   }
  ],
+ "w|accelerare": [
+  {
+   "text": "A mezzogiorno Simone deve accelerare, perché arrivano tutti gli impiegati in pausa pranzo.",
+   "en": "At noon Simone has to speed up, because all the office workers arrive on their lunch break.",
+   "ko": "정오가 되면 점심시간 직장인들이 몰려와서 시모네는 손을 빨리 놀려야 해요.",
+   "blank": "accelerare",
+   "src": "made"
+  },
+  {
+   "text": "Un nuovo enzima può accelerare la reazione che Anna sta studiando.",
+   "en": "A new enzyme can speed up the reaction Anna is studying.",
+   "ko": "새 효소가 안나가 연구하는 반응을 빠르게 할 수 있어요.",
+   "blank": "accelerare",
+   "src": "made"
+  }
+ ],
  "w|accendere": [
   {
    "text": "Puoi accendere la luce per favore?",
@@ -368,6 +384,22 @@
    "en": "For the kitchen Elena chose a steel sink.",
    "ko": "엘레나는 부엌에 스테인리스 개수대를 골랐어요.",
    "blank": "acciaio",
+   "src": "made"
+  }
+ ],
+ "w|accogliere": [
+  {
+   "text": "Simone sa accogliere i clienti nuovi con un assaggio di formaggio.",
+   "en": "Simone knows how to welcome new customers with a taste of cheese.",
+   "ko": "시모네는 새 손님을 치즈 시식으로 반길 줄 알아요.",
+   "blank": "accogliere",
+   "src": "made"
+  },
+  {
+   "text": "Questo mese il laboratorio di Anna deve accogliere due ricercatori stranieri.",
+   "en": "This month Anna's lab has to host two foreign researchers.",
+   "ko": "이번 달 안나의 연구실은 외국인 연구원 두 명을 맞아야 해요.",
+   "blank": "accogliere",
    "src": "made"
   }
  ],
@@ -515,6 +547,22 @@
    "en": "The water is already cold.",
    "ko": "물은 이미 식었어.",
    "blank": "acqua"
+  }
+ ],
+ "w|acquisto": [
+  {
+   "text": "Con ogni acquisto sopra i venti euro, Simone regala una manciata di olive.",
+   "en": "With every purchase over twenty euros, Simone gives away a handful of olives.",
+   "ko": "이십 유로가 넘게 사면 시모네는 올리브 한 줌을 덤으로 줘요.",
+   "blank": "acquisto",
+   "src": "made"
+  },
+  {
+   "text": "L'acquisto del nuovo microscopio ha richiesto sei mesi di burocrazia.",
+   "en": "The purchase of the new microscope took six months of red tape.",
+   "ko": "새 현미경 구입에 서류 절차만 여섯 달이 걸렸어요.",
+   "blank": "acquisto",
+   "src": "made"
   }
  ],
  "w|adatto": [
@@ -930,6 +978,22 @@
    "en": "Elena insulated the windows so that the house stays warm in winter.",
    "ko": "엘레나는 겨울에 집이 따뜻하도록 창문에 단열 처리를 했어요.",
    "blank": "affinché",
+   "src": "made"
+  }
+ ],
+ "w|affittare": [
+  {
+   "text": "Simone vorrebbe affittare un negozietto vicino alla piazza del mercato.",
+   "en": "Simone would like to rent a little shop near the market square.",
+   "ko": "시모네는 시장 광장 근처에 작은 가게를 하나 빌리고 싶어 해요.",
+   "blank": "affittare",
+   "src": "made"
+  },
+  {
+   "text": "Anna ha dovuto affittare una stanza vicino all'istituto per gli esperimenti notturni.",
+   "en": "Anna had to rent a room near the institute for the overnight experiments.",
+   "ko": "안나는 밤샘 실험 때문에 연구소 근처에 방을 하나 빌려야 했어요.",
+   "blank": "affittare",
    "src": "made"
   }
  ],
@@ -1397,6 +1461,22 @@
    "en": "He feels like an outsider in this big city.",
    "ko": "이 큰 도시에서 그는 이방인처럼 느껴져.",
    "blank": "alieno"
+  }
+ ],
+ "w|alimentare": [
+  {
+   "text": "Un ispettore controlla che la bancarella di Simone rispetti le norme di sicurezza alimentare.",
+   "en": "An inspector checks that Simone's stall meets food safety rules.",
+   "ko": "검사관이 시모네의 노점이 식품 안전 규정을 지키는지 확인해요.",
+   "blank": "alimentare",
+   "src": "made"
+  },
+  {
+   "text": "Anna studia gli effetti di un additivo alimentare sulle cellule.",
+   "en": "Anna studies the effects of a food additive on cells.",
+   "ko": "안나는 한 식품 첨가물이 세포에 미치는 영향을 연구해요.",
+   "blank": "alimentare",
+   "src": "made"
   }
  ],
  "w|allarme": [
@@ -2167,6 +2247,22 @@
    "blank": "anno"
   }
  ],
+ "w|annoiare": [
+  {
+   "text": "Simone chiacchiera con tutti i clienti per non annoiare nessuno nella fila.",
+   "en": "Simone chats with all the customers so nobody in the queue gets bored.",
+   "ko": "시모네는 줄 선 사람이 지루하지 않게 손님 모두와 수다를 떨어요.",
+   "blank": "annoiare",
+   "src": "made"
+  },
+  {
+   "text": "Anna rende le lezioni pratiche per non annoiare gli studenti.",
+   "en": "Anna makes her lessons hands-on so as not to bore the students.",
+   "ko": "안나는 학생들이 지루하지 않게 실습 위주로 수업해요.",
+   "blank": "annoiare",
+   "src": "made"
+  }
+ ],
  "w|annoiato": [
   {
    "text": "Mi sento annoiato durante le lunghe riunioni.",
@@ -2640,6 +2736,22 @@
    "en": "Laura took advantage of the downhill to catch her breath.",
    "ko": "라우라는 내리막을 이용해 숨을 골랐어요.",
    "blank": "approfittato",
+   "src": "made"
+  }
+ ],
+ "w|approvare": [
+  {
+   "text": "Il comune deve approvare il nuovo regolamento del mercato prima dell'estate.",
+   "en": "The council has to approve the new market rules before summer.",
+   "ko": "군청은 여름 전에 새 시장 규정을 승인해야 해요.",
+   "blank": "approvare",
+   "src": "made"
+  },
+  {
+   "text": "Il comitato etico deve approvare l'esperimento prima che Anna possa cominciare.",
+   "en": "The ethics committee has to approve the experiment before Anna can begin.",
+   "ko": "안나가 시작하려면 윤리 위원회가 실험을 승인해야 해요.",
+   "blank": "approvare",
    "src": "made"
   }
  ],
@@ -5105,6 +5217,22 @@
    "blank": "beneficenza"
   }
  ],
+ "w|beneficio": [
+  {
+   "text": "Per Simone il vero beneficio del mercato è il contatto con la gente.",
+   "en": "For Simone the real benefit of the market is contact with people.",
+   "ko": "시모네에게 시장의 진짜 좋은 점은 사람들과 만나는 거예요.",
+   "blank": "beneficio",
+   "src": "made"
+  },
+  {
+   "text": "Secondo Anna, il beneficio di questa molecola potrebbe essere enorme.",
+   "en": "According to Anna, the benefit of this molecule could be enormous.",
+   "ko": "안나에 따르면 이 분자의 효용은 어마어마할 수 있어요.",
+   "blank": "beneficio",
+   "src": "made"
+  }
+ ],
  "w|benissimo": [
   {
    "text": "Mi sento benissimo oggi.",
@@ -5379,6 +5507,22 @@
    "en": "Watch the track when you get off.",
    "ko": "내릴 때 선로에 조심해.",
    "blank": "binario"
+  }
+ ],
+ "w|biologico": [
+  {
+   "text": "Tutta la verdura che vende Simone viene da agricoltura biologica.",
+   "en": "All the vegetables Simone sells come from organic farming.",
+   "ko": "시모네가 파는 채소는 모두 유기농이에요.",
+   "blank": "biologica",
+   "src": "made"
+  },
+  {
+   "text": "Anna lavora nel dipartimento di scienze biologiche da dieci anni.",
+   "en": "Anna has worked in the biological sciences department for ten years.",
+   "ko": "안나는 십 년째 생명과학과에서 일해요.",
+   "blank": "biologiche",
+   "src": "made"
   }
  ],
  "w|biondo": [
@@ -6965,6 +7109,22 @@
    "blank": "carica"
   }
  ],
+ "w|caricare": [
+  {
+   "text": "Alle cinque Simone comincia a caricare le casse sul furgone.",
+   "en": "At five Simone starts loading the crates onto the van.",
+   "ko": "다섯 시에 시모네는 상자를 승합차에 싣기 시작해요.",
+   "blank": "caricare",
+   "src": "made"
+  },
+  {
+   "text": "Anna deve caricare i dati dell'esperimento sul server prima di sera.",
+   "en": "Anna has to upload the experiment data to the server before evening.",
+   "ko": "안나는 저녁 전에 실험 데이터를 서버에 올려야 해요.",
+   "blank": "caricare",
+   "src": "made"
+  }
+ ],
  "w|carico": [
   {
    "text": "Il camion porta un carico pesante.",
@@ -7516,6 +7676,22 @@
    "en": "Giulia forgot her phone cable, and a friend lent her one.",
    "ko": "줄리아가 휴대폰 충전 케이블을 깜빡해서 친구가 빌려줬어요.",
    "blank": "cavo",
+   "src": "made"
+  }
+ ],
+ "w|cavolo": [
+  {
+   "text": "D'inverno Simone vende un cavolo nero che arriva direttamente dall'orto dello zio.",
+   "en": "In winter Simone sells black kale that comes straight from his uncle's garden.",
+   "ko": "겨울이면 시모네는 삼촌 텃밭에서 바로 온 검은 양배추를 팔아요.",
+   "blank": "cavolo",
+   "src": "made"
+  },
+  {
+   "text": "Anna usa il succo di cavolo rosso per mostrare come cambia il colore del pH.",
+   "en": "Anna uses red cabbage juice to show how pH changes colour.",
+   "ko": "안나는 적양배추즙으로 pH에 따라 색이 변하는 걸 보여 줘요.",
+   "blank": "cavolo",
    "src": "made"
   }
  ],
@@ -8289,6 +8465,22 @@
    "en": "I'll take care of it.",
    "ko": "그건 내가 알아서 할게.",
    "blank": "Ci"
+  }
+ ],
+ "w|ciambella": [
+  {
+   "text": "La mattina presto Simone fa colazione con una ciambella e un cappuccino.",
+   "en": "Early in the morning Simone has breakfast with a doughnut and a cappuccino.",
+   "ko": "이른 아침 시모네는 도넛 하나와 카푸치노로 아침을 먹어요.",
+   "blank": "ciambella",
+   "src": "made"
+  },
+  {
+   "text": "Per il compleanno di Anna, i colleghi hanno portato una ciambella al cioccolato.",
+   "en": "For Anna's birthday, her colleagues brought a chocolate ring cake.",
+   "ko": "안나의 생일에 동료들이 초콜릿 링 케이크를 가져왔어요.",
+   "blank": "ciambella",
+   "src": "made"
   }
  ],
  "w|ciao": [
@@ -10391,6 +10583,22 @@
    "en": "The message was confused and unclear.",
    "ko": "메시지가 혼란스럽고 분명하지 않았어.",
    "blank": "confuso"
+  }
+ ],
+ "w|congelare": [
+  {
+   "text": "Simone consiglia di congelare il pane avanzato invece di buttarlo.",
+   "en": "Simone recommends freezing leftover bread instead of throwing it away.",
+   "ko": "시모네는 남은 빵을 버리지 말고 얼리라고 권해요.",
+   "blank": "congelare",
+   "src": "made"
+  },
+  {
+   "text": "Anna deve congelare i campioni a ottanta gradi sotto zero.",
+   "en": "Anna has to freeze the samples at minus eighty degrees.",
+   "ko": "안나는 시료를 영하 팔십 도로 얼려야 해요.",
+   "blank": "congelare",
+   "src": "made"
   }
  ],
  "w|congratulazione": [
@@ -14505,6 +14713,22 @@
    "blank": "dolce"
   }
  ],
+ "w|dolcetto": [
+  {
+   "text": "Simone dà sempre un dolcetto ai bambini che accompagnano i genitori.",
+   "en": "Simone always gives a little sweet to the children who come with their parents.",
+   "ko": "시모네는 부모님을 따라온 아이들에게 늘 사탕을 하나씩 줘요.",
+   "blank": "dolcetto",
+   "src": "made"
+  },
+  {
+   "text": "Quando un esperimento riesce, Anna offre un dolcetto a tutti.",
+   "en": "When an experiment works, Anna treats everyone to a sweet.",
+   "ko": "실험이 성공하면 안나는 모두에게 과자를 돌려요.",
+   "blank": "dolcetto",
+   "src": "made"
+  }
+ ],
  "w|dolcezza": [
   {
    "text": "Parla con grande dolcezza.",
@@ -16325,6 +16549,22 @@
    "blank": "espressione"
   }
  ],
+ "w|espresso": [
+  {
+   "text": "A metà mattina Simone corre al bar per un espresso veloce.",
+   "en": "Mid-morning Simone runs to the café for a quick espresso.",
+   "ko": "오전 중간쯤 시모네는 에스프레소 한 잔을 급히 마시러 카페로 달려가요.",
+   "blank": "espresso",
+   "src": "made"
+  },
+  {
+   "text": "Prima di ogni lezione Anna beve un espresso alla macchinetta del corridoio.",
+   "en": "Before every lecture Anna drinks an espresso from the machine in the corridor.",
+   "ko": "수업 전마다 안나는 복도 자판기에서 에스프레소를 마셔요.",
+   "blank": "espresso",
+   "src": "made"
+  }
+ ],
  "w|esprimere": [
   {
    "text": "Nell'editoriale, Paolo ha voluto esprimere la sua opinione sulla riforma.",
@@ -17121,6 +17361,22 @@
    "blank": "favore"
   }
  ],
+ "w|febbraio": [
+  {
+   "text": "A febbraio al mercato fa così freddo che Simone indossa due maglioni.",
+   "en": "In February it's so cold at the market that Simone wears two sweaters.",
+   "ko": "이월이면 시장이 너무 추워서 시모네는 스웨터를 두 벌 입어요.",
+   "blank": "febbraio",
+   "src": "made"
+  },
+  {
+   "text": "Anna deve consegnare i risultati della ricerca entro la fine di febbraio.",
+   "en": "Anna has to hand in the research results by the end of February.",
+   "ko": "안나는 이월 말까지 연구 결과를 제출해야 해요.",
+   "blank": "febbraio",
+   "src": "made"
+  }
+ ],
  "w|febbre": [
   {
    "text": "Ha la febbre alta da ieri sera.",
@@ -17797,6 +18053,22 @@
    "blank": "finalmente"
   }
  ],
+ "w|finanziario": [
+  {
+   "text": "Simone tiene un piccolo quaderno per il resoconto finanziario della bancarella.",
+   "en": "Simone keeps a small notebook for the stall's financial accounts.",
+   "ko": "시모네는 노점의 금전 기록을 적는 작은 공책을 갖고 있어요.",
+   "blank": "finanziario",
+   "src": "made"
+  },
+  {
+   "text": "Anna deve preparare il rapporto finanziario del progetto per l'università.",
+   "en": "Anna has to prepare the project's financial report for the university.",
+   "ko": "안나는 대학에 낼 프로젝트 재무 보고서를 준비해야 해요.",
+   "blank": "finanziario",
+   "src": "made"
+  }
+ ],
  "w|finché": [
   {
    "text": "Aspetto qui finché non torni.",
@@ -17837,6 +18109,22 @@
    "en": "There's a noise outside the window.",
    "ko": "창문 밖에서 소리가 들려.",
    "blank": "finestra"
+  }
+ ],
+ "w|finestrino": [
+  {
+   "text": "Simone abbassa il finestrino del furgone per salutare il fornaio.",
+   "en": "Simone rolls down the van window to greet the baker.",
+   "ko": "시모네는 승합차 창문을 내리고 빵집 주인에게 인사해요.",
+   "blank": "finestrino",
+   "src": "made"
+  },
+  {
+   "text": "In treno verso il laboratorio, Anna guarda la campagna dal finestrino.",
+   "en": "On the train to the lab, Anna looks at the countryside out of the window.",
+   "ko": "연구실로 가는 기차에서 안나는 창밖으로 시골 풍경을 봐요.",
+   "blank": "finestrino",
+   "src": "made"
   }
  ],
  "w|fingere": [
@@ -20265,6 +20553,22 @@
    "blank": "governo"
   }
  ],
+ "w|gradire": [
+  {
+   "text": "Simone chiede alla cliente se può gradire un pezzetto di pecorino.",
+   "en": "Simone asks the customer whether she'd care for a little piece of pecorino.",
+   "ko": "시모네는 손님에게 페코리노 치즈 한 조각 드셔 보시겠냐고 물어요.",
+   "blank": "gradire",
+   "src": "made"
+  },
+  {
+   "text": "Anna ha detto ai colleghi che avrebbe gradito un preavviso prima della riunione.",
+   "en": "Anna told her colleagues she would have appreciated some notice before the meeting.",
+   "ko": "안나는 동료들에게 회의 전에 미리 알려 줬으면 좋았겠다고 말했어요.",
+   "blank": "gradito",
+   "src": "made"
+  }
+ ],
  "w|grado": [
   {
    "text": "Ha un alto grado di responsabilità.",
@@ -21025,6 +21329,22 @@
    "en": "Reply to the message immediately.",
    "ko": "메시지에 바로 답장해.",
    "blank": "immediatamente"
+  }
+ ],
+ "w|immediato": [
+  {
+   "text": "Quando arriva la pioggia, la reazione di Simone è immediata: copre tutto con il telo.",
+   "en": "When the rain comes, Simone's reaction is immediate: he covers everything with the tarp.",
+   "ko": "비가 오면 시모네는 곧바로 방수포로 모든 걸 덮어요.",
+   "blank": "immediata",
+   "src": "made"
+  },
+  {
+   "text": "In caso di incendio, Anna sa che l'evacuazione deve essere immediata.",
+   "en": "In case of fire, Anna knows the evacuation has to be immediate.",
+   "ko": "불이 나면 즉시 대피해야 한다는 걸 안나는 알아요.",
+   "blank": "immediata",
+   "src": "made"
   }
  ],
  "w|immobiliare": [
@@ -22071,6 +22391,22 @@
    "src": "made"
   }
  ],
+ "w|infilare": [
+  {
+   "text": "Simone aiuta un'anziana a infilare la frutta nella borsa della spesa.",
+   "en": "Simone helps an elderly woman put the fruit into her shopping bag.",
+   "ko": "시모네는 할머니 한 분이 장바구니에 과일 넣는 걸 도와줘요.",
+   "blank": "infilare",
+   "src": "made"
+  },
+  {
+   "text": "Anna mette i guanti prima di infilare le provette nella centrifuga.",
+   "en": "Anna puts on gloves before inserting the test tubes into the centrifuge.",
+   "ko": "안나는 장갑을 끼고 나서 시험관을 원심분리기에 넣어요.",
+   "blank": "infilare",
+   "src": "made"
+  }
+ ],
  "w|infine": [
   {
    "text": "Dopo un'ora sulla poltrona, Paolo può infine sciacquarsi la bocca.",
@@ -22325,6 +22661,22 @@
    "en": "The film is about to start.",
    "ko": "영화가 곧 시작해.",
    "blank": "iniziare"
+  }
+ ],
+ "w|iniziativa": [
+  {
+   "text": "I venditori del mercato hanno lanciato un'iniziativa per ridurre la plastica, e Simone aderisce.",
+   "en": "The market vendors have launched an initiative to cut plastic, and Simone is joining in.",
+   "ko": "시장 상인들이 플라스틱을 줄이는 운동을 시작했고 시모네도 참여해요.",
+   "blank": "iniziativa",
+   "src": "made"
+  },
+  {
+   "text": "Anna ha preso l'iniziativa di organizzare un seminario per gli studenti.",
+   "en": "Anna took the initiative to organize a seminar for the students.",
+   "ko": "안나는 학생들을 위한 세미나를 열자고 먼저 나섰어요.",
+   "blank": "iniziativa",
+   "src": "made"
   }
  ],
  "w|inizio": [
@@ -24437,6 +24789,22 @@
    "blank": "limite"
   }
  ],
+ "w|limone": [
+  {
+   "text": "Una signora chiede a Simone un limone per condire il pesce.",
+   "en": "A lady asks Simone for a lemon to dress the fish.",
+   "ko": "한 부인이 생선에 뿌릴 레몬을 시모네에게 달라고 해요.",
+   "blank": "limone",
+   "src": "made"
+  },
+  {
+   "text": "Per spiegare l'acidità agli studenti, Anna usa il succo di limone.",
+   "en": "To explain acidity to the students, Anna uses lemon juice.",
+   "ko": "학생들에게 산성을 설명하려고 안나는 레몬즙을 써요.",
+   "blank": "limone",
+   "src": "made"
+  }
+ ],
  "w|linea": [
   {
    "text": "La linea del telefono è occupata.",
@@ -24535,6 +24903,22 @@
    "en": "They always argue about the same things.",
    "ko": "항상 같은 걸로 싸워.",
    "blank": "Litigano"
+  }
+ ],
+ "w|litro": [
+  {
+   "text": "Simone vende l'olio dello zio in bottiglie da un litro.",
+   "en": "Simone sells his uncle's olive oil in one-litre bottles.",
+   "ko": "시모네는 삼촌네 올리브유를 일 리터짜리 병에 담아 팔아요.",
+   "blank": "litro",
+   "src": "made"
+  },
+  {
+   "text": "Per l'esperimento di oggi Anna ha bisogno di un litro di acqua distillata.",
+   "en": "For today's experiment Anna needs a litre of distilled water.",
+   "ko": "오늘 실험에 안나는 증류수 일 리터가 필요해요.",
+   "blank": "litro",
+   "src": "made"
   }
  ],
  "w|livello": [
@@ -25361,6 +25745,22 @@
    "en": "It needs salt.",
    "ko": "소금이 부족해.",
    "blank": "Manca"
+  }
+ ],
+ "w|mancia": [
+  {
+   "text": "Il fattorino che porta le casse a Simone riceve sempre una mancia.",
+   "en": "The delivery boy who brings Simone the crates always gets a tip.",
+   "ko": "시모네에게 상자를 가져다주는 배달원은 늘 팁을 받아요.",
+   "blank": "mancia",
+   "src": "made"
+  },
+  {
+   "text": "Al bar dell'università Anna lascia sempre una piccola mancia.",
+   "en": "At the university café Anna always leaves a small tip.",
+   "ko": "대학 카페에서 안나는 늘 팁을 조금 남겨요.",
+   "blank": "mancia",
+   "src": "made"
   }
  ],
  "w|manco": [
@@ -27235,6 +27635,22 @@
    "blank": "montagna"
   }
  ],
+ "w|montare": [
+  {
+   "text": "Ogni mattina Simone impiega mezz'ora a montare il tendone della bancarella.",
+   "en": "Every morning Simone takes half an hour to put up the stall's awning.",
+   "ko": "매일 아침 시모네는 노점 차양을 세우는 데 삼십 분이 걸려요.",
+   "blank": "montare",
+   "src": "made"
+  },
+  {
+   "text": "Anna e un tecnico devono montare il nuovo apparecchio entro venerdì.",
+   "en": "Anna and a technician have to assemble the new equipment by Friday.",
+   "ko": "안나와 기술자는 금요일까지 새 장비를 조립해야 해요.",
+   "blank": "montare",
+   "src": "made"
+  }
+ ],
  "w|monte": [
   {
    "text": "Il monte è coperto di neve fino a maggio.",
@@ -28555,6 +28971,22 @@
    "en": "It was a long night.",
    "ko": "긴 밤이었어.",
    "blank": "notte"
+  }
+ ],
+ "w|notturno": [
+  {
+   "text": "In estate Simone partecipa anche al mercato notturno sul lungomare.",
+   "en": "In summer Simone also takes part in the night market on the seafront.",
+   "ko": "여름이면 시모네는 해변 산책로의 야시장에도 나가요.",
+   "blank": "notturno",
+   "src": "made"
+  },
+  {
+   "text": "Anna studia il comportamento notturno dei pipistrelli.",
+   "en": "Anna studies the nocturnal behaviour of bats.",
+   "ko": "안나는 박쥐의 야행성 행동을 연구해요.",
+   "blank": "notturno",
+   "src": "made"
   }
  ],
  "w|novanta": [
@@ -30635,6 +31067,22 @@
    "src": "made"
   }
  ],
+ "w|parcheggiare": [
+  {
+   "text": "Il sabato è difficile parcheggiare vicino al mercato, così Simone arriva all'alba.",
+   "en": "On Saturdays it's hard to park near the market, so Simone arrives at dawn.",
+   "ko": "토요일엔 시장 근처에 주차하기 어려워서 시모네는 새벽에 와요.",
+   "blank": "parcheggiare",
+   "src": "made"
+  },
+  {
+   "text": "Anna lascia la bici davanti all'istituto, perché non trova mai dove parcheggiare la macchina.",
+   "en": "Anna leaves her bike in front of the institute, because she can never find anywhere to park the car.",
+   "ko": "안나는 차를 댈 곳을 도무지 못 찾아서 자전거를 연구소 앞에 세워요.",
+   "blank": "parcheggiare",
+   "src": "made"
+  }
+ ],
  "w|parcheggio": [
   {
    "text": "Il parcheggio sotto l'ufficio è pieno.",
@@ -32295,6 +32743,22 @@
    "blank": "piedi"
   }
  ],
+ "w|piegare": [
+  {
+   "text": "Alla fine della giornata Simone deve piegare il tendone con l'aiuto del vicino.",
+   "en": "At the end of the day Simone has to fold up the awning with his neighbor's help.",
+   "ko": "하루가 끝나면 시모네는 옆 상인의 도움을 받아 차양을 접어야 해요.",
+   "blank": "piegare",
+   "src": "made"
+  },
+  {
+   "text": "Anna insegna agli studenti a piegare il camice e riporlo nell'armadietto.",
+   "en": "Anna teaches the students to fold their lab coat and put it in the locker.",
+   "ko": "안나는 학생들에게 실험복을 개서 사물함에 넣는 법을 가르쳐요.",
+   "blank": "piegare",
+   "src": "made"
+  }
+ ],
  "w|pieno": [
   {
    "text": "Sono pieno, basta così.",
@@ -32437,6 +32901,22 @@
    "en": "The hotel has an outdoor pool.",
    "ko": "호텔에 야외 수영장이 있어.",
    "blank": "piscina"
+  }
+ ],
+ "w|pisello": [
+  {
+   "text": "A primavera Simone vende i baccelli di pisello appena raccolti.",
+   "en": "In spring Simone sells freshly picked pea pods.",
+   "ko": "봄이면 시모네는 갓 딴 완두콩 꼬투리를 팔아요.",
+   "blank": "pisello",
+   "src": "made"
+  },
+  {
+   "text": "Anna spiega le leggi di Mendel con le piante di pisello.",
+   "en": "Anna explains Mendel's laws with pea plants.",
+   "ko": "안나는 완두콩 식물로 멘델의 법칙을 설명해요.",
+   "blank": "pisello",
+   "src": "made"
   }
  ],
  "w|pista": [
@@ -34177,6 +34657,22 @@
    "blank": "prodotto"
   }
  ],
+ "w|produrre": [
+  {
+   "text": "Al mercato Simone vende il formaggio che produce la sua famiglia in collina.",
+   "en": "At the market Simone sells the cheese his family produces in the hills.",
+   "ko": "시장에서 시모네는 언덕에 사는 가족이 만드는 치즈를 팔아요.",
+   "blank": "produce",
+   "src": "made"
+  },
+  {
+   "text": "Il laboratorio di Anna cerca di produrre un vaccino più economico.",
+   "en": "Anna's lab is trying to produce a cheaper vaccine.",
+   "ko": "안나의 연구실은 더 저렴한 백신을 만들려고 해요.",
+   "blank": "produrre",
+   "src": "made"
+  }
+ ],
  "w|produttore": [
   {
    "text": "Il produttore del film è famoso.",
@@ -34593,6 +35089,22 @@
    "en": "I really don't feel like it.",
    "ko": "정말 하기 싫어.",
    "blank": "Proprio"
+  }
+ ],
+ "w|prosciutto": [
+  {
+   "text": "Simone taglia il prosciutto a fette sottilissime davanti ai clienti.",
+   "en": "Simone slices the ham very thinly in front of the customers.",
+   "ko": "시모네는 손님들 앞에서 프로슈토를 아주 얇게 썰어요.",
+   "blank": "prosciutto",
+   "src": "made"
+  },
+  {
+   "text": "A pranzo Anna mangia un panino al prosciutto davanti al computer.",
+   "en": "At lunch Anna eats a ham sandwich in front of the computer.",
+   "ko": "점심에 안나는 컴퓨터 앞에서 햄 샌드위치를 먹어요.",
+   "blank": "prosciutto",
+   "src": "made"
   }
  ],
  "w|proseguire": [
@@ -36769,6 +37281,22 @@
    "blank": "reverendo"
   }
  ],
+ "w|revisione": [
+  {
+   "text": "Il furgone di Simone deve fare la revisione entro la fine del mese.",
+   "en": "Simone's van has to have its inspection by the end of the month.",
+   "ko": "시모네의 승합차는 이달 말까지 정기 검사를 받아야 해요.",
+   "blank": "revisione",
+   "src": "made"
+  },
+  {
+   "text": "L'articolo di Anna è ancora in revisione presso una rivista scientifica.",
+   "en": "Anna's article is still under review at a scientific journal.",
+   "ko": "안나의 논문은 아직 한 과학 저널에서 심사 중이에요.",
+   "blank": "revisione",
+   "src": "made"
+  }
+ ],
  "w|riabilitazione": [
   {
    "text": "Nella sala d'attesa Paolo parla con un uomo che fa riabilitazione dopo un incidente in moto.",
@@ -38875,6 +39403,22 @@
    "blank": "salsa"
   }
  ],
+ "w|salsiccia": [
+  {
+   "text": "Accanto a Simone c'è un furgoncino che vende panini con la salsiccia.",
+   "en": "Next to Simone there's a little van selling sausage sandwiches.",
+   "ko": "시모네 옆에는 소시지 빵을 파는 작은 트럭이 있어요.",
+   "blank": "salsiccia",
+   "src": "made"
+  },
+  {
+   "text": "Alla grigliata del laboratorio, Anna porta la salsiccia e i colleghi il vino.",
+   "en": "At the lab barbecue, Anna brings the sausage and her colleagues bring the wine.",
+   "ko": "연구실 바비큐 때 안나는 소시지를, 동료들은 와인을 가져와요.",
+   "blank": "salsiccia",
+   "src": "made"
+  }
+ ],
  "w|saltare": [
   {
    "text": "Non saltare i pasti.",
@@ -40383,6 +40927,22 @@
    "blank": "sebbene"
   }
  ],
+ "w|secchio": [
+  {
+   "text": "Simone tiene i fiori freschi in un secchio d'acqua sotto il banco.",
+   "en": "Simone keeps fresh flowers in a bucket of water under the counter.",
+   "ko": "시모네는 생화를 판매대 아래 물 양동이에 담가 둬요.",
+   "blank": "secchio",
+   "src": "made"
+  },
+  {
+   "text": "Anna getta i guanti usati in un secchio speciale per i rifiuti chimici.",
+   "en": "Anna throws the used gloves into a special bin for chemical waste.",
+   "ko": "안나는 사용한 장갑을 화학 폐기물용 통에 버려요.",
+   "blank": "secchio",
+   "src": "made"
+  }
+ ],
  "w|secco": [
   {
    "text": "Il terreno è troppo secco per piantare.",
@@ -40498,6 +41058,22 @@
    "en": "Anna rests the baskets of fresh bread on the van seat.",
    "ko": "안나는 신선한 빵 바구니를 승합차 좌석에 올려놓아요.",
    "blank": "sedile",
+   "src": "made"
+  }
+ ],
+ "w|sega": [
+  {
+   "text": "Nel furgone Simone tiene una sega per tagliare le cassette di legno.",
+   "en": "In the van Simone keeps a saw for cutting the wooden crates.",
+   "ko": "시모네는 나무 상자를 자를 톱을 승합차에 두고 다녀요.",
+   "blank": "sega",
+   "src": "made"
+  },
+  {
+   "text": "Per tagliare il tubo di plastica, il tecnico di Anna usa una piccola sega.",
+   "en": "To cut the plastic tube, Anna's technician uses a small saw.",
+   "ko": "안나의 기술자는 플라스틱 관을 자르려고 작은 톱을 써요.",
+   "blank": "sega",
    "src": "made"
   }
  ],
@@ -44579,6 +45155,22 @@
    "blank": "stupido"
   }
  ],
+ "w|stupire": [
+  {
+   "text": "La varietà di formaggi della bancarella riesce sempre a stupire i turisti.",
+   "en": "The variety of cheeses at the stall always manages to amaze tourists.",
+   "ko": "노점의 다양한 치즈는 늘 관광객들을 놀라게 해요.",
+   "blank": "stupire",
+   "src": "made"
+  },
+  {
+   "text": "I risultati dell'ultimo esperimento hanno fatto stupire tutto il gruppo di Anna.",
+   "en": "The results of the last experiment amazed Anna's whole group.",
+   "ko": "마지막 실험 결과에 안나의 연구팀 모두가 놀랐어요.",
+   "blank": "stupire",
+   "src": "made"
+  }
+ ],
  "w|su": [
   {
    "text": "Pensaci su con calma.",
@@ -46461,6 +47053,22 @@
    "blank": "tomba"
   }
  ],
+ "w|tonnellata": [
+  {
+   "text": "In un anno Simone vende quasi una tonnellata di patate.",
+   "en": "In a year Simone sells almost a tonne of potatoes.",
+   "ko": "일 년 동안 시모네는 감자를 거의 일 톤이나 팔아요.",
+   "blank": "tonnellata",
+   "src": "made"
+  },
+  {
+   "text": "Il nuovo macchinario del laboratorio di Anna pesa quasi una tonnellata.",
+   "en": "The new machine in Anna's lab weighs almost a tonne.",
+   "ko": "안나 연구실의 새 기계는 무게가 거의 일 톤이에요.",
+   "blank": "tonnellata",
+   "src": "made"
+  }
+ ],
  "w|tono": [
   {
    "text": "Non mi piace il tono della sua voce.",
@@ -48269,6 +48877,22 @@
    "blank": "valore"
   }
  ],
+ "w|valutare": [
+  {
+   "text": "Simone sa valutare la qualità di un melone solo annusandolo.",
+   "en": "Simone can judge the quality of a melon just by smelling it.",
+   "ko": "시모네는 냄새만 맡고도 멜론 품질을 판단할 줄 알아요.",
+   "blank": "valutare",
+   "src": "made"
+  },
+  {
+   "text": "Anna deve valutare i progetti di tre dottorandi entro lunedì.",
+   "en": "Anna has to assess three PhD students' projects by Monday.",
+   "ko": "안나는 월요일까지 박사 과정생 세 명의 과제를 평가해야 해요.",
+   "blank": "valutare",
+   "src": "made"
+  }
+ ],
  "w|valutazione": [
   {
    "text": "L'ispettore ha dato una valutazione ottima alla cucina di Stefano.",
@@ -48611,6 +49235,22 @@
    "en": "Are you really tired?",
    "ko": "진짜 피곤해?",
    "blank": "veramente"
+  }
+ ],
+ "w|verbale": [
+  {
+   "text": "All'assemblea dei venditori, Simone scrive il verbale della riunione.",
+   "en": "At the vendors' meeting, Simone writes the minutes.",
+   "ko": "상인 회의에서 시모네가 회의록을 써요.",
+   "blank": "verbale",
+   "src": "made"
+  },
+  {
+   "text": "Dopo ogni riunione di laboratorio, Anna manda il verbale a tutto il gruppo.",
+   "en": "After every lab meeting, Anna sends the minutes to the whole group.",
+   "ko": "연구실 회의가 끝날 때마다 안나는 회의록을 팀 전체에 보내요.",
+   "blank": "verbale",
+   "src": "made"
   }
  ],
  "w|verde": [

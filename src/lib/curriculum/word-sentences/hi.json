@@ -173,6 +173,22 @@
    "src": "made"
   }
  ],
+ "w|अंग": [
+  {
+   "text": "कंपनी के हेल्थ कैंप में डॉक्टर ने शरीर के हर अंग की जाँच के बारे में बताया।",
+   "en": "At the company health camp the doctor explained checkups for every organ of the body.",
+   "ko": "회사 건강 검진에서 의사가 몸의 모든 장기 검사에 대해 설명했어요.",
+   "blank": "अंग",
+   "src": "made"
+  },
+  {
+   "text": "भारी बक्सा उठाते समय मीना के हर अंग में दर्द होने लगा।",
+   "en": "Lifting the heavy box, Meena started aching in every limb.",
+   "ko": "무거운 상자를 들다가 미나는 온몸 마디마디가 쑤셨어요.",
+   "blank": "अंग",
+   "src": "made"
+  }
+ ],
  "w|अगर": [
   {
    "text": "अगर भूख लगे तो रसोई देख लेना।",
@@ -343,6 +359,22 @@
    "en": "I asked the stranger for the address.",
    "ko": "낯선 사람에게 주소를 물었어.",
    "blank": "अजनबी"
+  }
+ ],
+ "w|अंजाम": [
+  {
+   "text": "रोहन की टीम ने मुश्किल सौदे को आख़िरकार अंजाम तक पहुँचाया।",
+   "en": "Rohan's team finally saw the difficult deal through to the end.",
+   "ko": "로한의 팀이 어려운 거래를 마침내 성사시켰어요.",
+   "blank": "अंजाम",
+   "src": "made"
+  },
+  {
+   "text": "मज़दूरों ने बड़ी सावधानी से शिफ़्टिंग को अंजाम दिया।",
+   "en": "The workers carried out the move with great care.",
+   "ko": "인부들은 아주 조심스럽게 이사를 마쳤어요.",
+   "blank": "अंजाम",
+   "src": "made"
   }
  ],
  "w|अजीब": [
@@ -1061,6 +1093,22 @@
    "blank": "अनुमति"
   }
  ],
+ "w|अनुमान": [
+  {
+   "text": "रोहन का अनुमान था कि प्रोजेक्ट दो हफ़्ते में ख़त्म हो जाएगा।",
+   "en": "Rohan's estimate was that the project would be finished in two weeks.",
+   "ko": "로한은 프로젝트가 두 주 안에 끝날 거라고 예상했어요.",
+   "blank": "अनुमान",
+   "src": "made"
+  },
+  {
+   "text": "मीना का अनुमान था कि सामान खोलने में पूरा हफ़्ता लगेगा।",
+   "en": "Meena's estimate was that unpacking would take a whole week.",
+   "ko": "미나는 짐 푸는 데 일주일은 걸릴 거라고 짐작했어요.",
+   "blank": "अनुमान",
+   "src": "made"
+  }
+ ],
  "w|अनुरोध": [
   {
    "text": "कृपया मेरा अनुरोध स्वीकार करें।",
@@ -1431,6 +1479,22 @@
    "en": "The rain has just stopped.",
    "ko": "비가 방금 그쳤어.",
    "blank": "अभी अभी"
+  }
+ ],
+ "w|अभी तक": [
+  {
+   "text": "रोहन ने तीन दिन पहले मेल भेजा था, पर क्लाइंट का जवाब अभी तक नहीं आया।",
+   "en": "Rohan sent an email three days ago, but the client still hasn't replied.",
+   "ko": "로한이 사흘 전에 메일을 보냈는데 고객은 아직까지 답이 없어요.",
+   "blank": "अभी तक",
+   "src": "made"
+  },
+  {
+   "text": "ट्रक सुबह नौ बजे आना था, पर अभी तक नहीं पहुँचा।",
+   "en": "The truck was supposed to come at nine in the morning, but it still hasn't arrived.",
+   "ko": "트럭이 아침 아홉 시에 오기로 했는데 아직까지 안 왔어요.",
+   "blank": "अभी तक",
+   "src": "made"
   }
  ],
  "w|अभ्यास": [
@@ -1975,6 +2039,22 @@
    "en": "After cleaning the mirror, she fixed her hair.",
    "ko": "거울을 닦고 머리를 정리했어.",
    "blank": "आईना"
+  }
+ ],
+ "w|आए दिन": [
+  {
+   "text": "दफ़्तर का प्रिंटर आए दिन ख़राब हो जाता है।",
+   "en": "The office printer breaks down every other day.",
+   "ko": "사무실 프린터는 툭하면 고장 나요.",
+   "blank": "आए दिन",
+   "src": "made"
+  },
+  {
+   "text": "पुराने किराए के घर में आए दिन पानी की टंकी खाली रहती थी।",
+   "en": "In the old rented house the water tank was empty every other day.",
+   "ko": "예전 셋집은 툭하면 물탱크가 비어 있었어요.",
+   "blank": "आए दिन",
+   "src": "made"
   }
  ],
  "w|आँकड़ा": [
@@ -3657,6 +3737,22 @@
    "blank": "इश्क़"
   }
  ],
+ "w|इस बीच": [
+  {
+   "text": "सर्वर ठीक होने में एक घंटा लगना था, इस बीच रोहन ने बाकी रिपोर्ट पूरी कर ली।",
+   "en": "The server was going to take an hour to fix; meanwhile Rohan finished the rest of the report.",
+   "ko": "서버 복구에 한 시간이 걸린다고 해서 그동안 로한은 남은 보고서를 끝냈어요.",
+   "blank": "इस बीच",
+   "src": "made"
+  },
+  {
+   "text": "मज़दूर अलमारी उतार रहे थे, इस बीच मीना ने रसोई का सामान खोल लिया।",
+   "en": "The workers were bringing down the cupboard; meanwhile Meena unpacked the kitchen things.",
+   "ko": "인부들이 장롱을 내리는 동안 미나는 부엌 짐을 풀었어요.",
+   "blank": "इस बीच",
+   "src": "made"
+  }
+ ],
  "w|इसका": [
   {
    "text": "इसका ढक्कन कहाँ रखा है?",
@@ -3973,6 +4069,22 @@
    "en": "There is snow on the high peak of the mountain.",
    "ko": "산의 높은 봉우리에 눈이 있어.",
    "blank": "उच्च"
+  }
+ ],
+ "w|उच्चारण": [
+  {
+   "text": "विदेशी क्लाइंट ने रोहन के नाम का उच्चारण ठीक से करने की कोशिश की।",
+   "en": "The foreign client tried to pronounce Rohan's name correctly.",
+   "ko": "외국 고객은 로한의 이름을 제대로 발음하려고 애썼어요.",
+   "blank": "उच्चारण",
+   "src": "made"
+  },
+  {
+   "text": "नए पड़ोसी दक्षिण से हैं, और उनके हिंदी उच्चारण में मीठा-सा लहजा है।",
+   "en": "The new neighbors are from the south, and their Hindi pronunciation has a sweet accent.",
+   "ko": "새 이웃은 남부 출신이라 힌디어 발음에 정겨운 억양이 있어요.",
+   "blank": "उच्चारण",
+   "src": "made"
   }
  ],
  "w|उछलना": [
@@ -4597,6 +4709,22 @@
    "blank": "उपस्थित"
   }
  ],
+ "w|उपस्थिति": [
+  {
+   "text": "सोमवार की मीटिंग में सबकी उपस्थिति ज़रूरी है।",
+   "en": "Everyone's attendance is required at the Monday meeting.",
+   "ko": "월요일 회의에는 모두 참석해야 해요.",
+   "blank": "उपस्थिति",
+   "src": "made"
+  },
+  {
+   "text": "गृहप्रवेश में पुराने दोस्तों की उपस्थिति से मीना बहुत ख़ुश हुई।",
+   "en": "Meena was delighted by her old friends' presence at the housewarming.",
+   "ko": "집들이에 옛 친구들이 와 줘서 미나는 무척 기뻤어요.",
+   "blank": "उपस्थिति",
+   "src": "made"
+  }
+ ],
  "w|उपाध्यक्ष": [
   {
    "text": "व्यापार मंडल के उपाध्यक्ष चोरी की रिपोर्ट लिखवाने ख़ुद थाने पहुँचे।",
@@ -4827,6 +4955,22 @@
    "en": "An owl can see even in the dark.",
    "ko": "올빼미는 어둠 속에서도 볼 수 있어.",
    "blank": "उल्लू"
+  }
+ ],
+ "w|उल्लेख": [
+  {
+   "text": "सालाना रिपोर्ट में रोहन की टीम के काम का ख़ास उल्लेख था।",
+   "en": "The annual report made special mention of Rohan's team's work.",
+   "ko": "연간 보고서에 로한 팀의 성과가 특별히 언급됐어요.",
+   "blank": "उल्लेख",
+   "src": "made"
+  },
+  {
+   "text": "रजिस्ट्री के काग़ज़ में बालकनी का कोई उल्लेख नहीं था।",
+   "en": "The registry papers made no mention of the balcony.",
+   "ko": "등기 서류에는 발코니에 대한 언급이 없었어요.",
+   "blank": "उल्लेख",
+   "src": "made"
   }
  ],
  "w|उसका": [
@@ -5487,6 +5631,22 @@
    "blank": "औज़ार"
   }
  ],
+ "w|औद्योगिक": [
+  {
+   "text": "कंपनी का नया गोदाम शहर के औद्योगिक इलाक़े में है।",
+   "en": "The company's new warehouse is in the city's industrial area.",
+   "ko": "회사의 새 창고는 도시 공업 지역에 있어요.",
+   "blank": "औद्योगिक",
+   "src": "made"
+  },
+  {
+   "text": "मीना का नया घर पुराने औद्योगिक इलाक़े से दूर, शांत जगह पर है।",
+   "en": "Meena's new house is in a quiet spot, far from the old industrial area.",
+   "ko": "미나의 새집은 옛 공업 지역에서 멀리 떨어진 조용한 곳에 있어요.",
+   "blank": "औद्योगिक",
+   "src": "made"
+  }
+ ],
  "w|और": [
   {
    "text": "दाल और चावल दोनों गरम हैं।",
@@ -5959,6 +6119,22 @@
    "en": "The cotton of this shirt is very soft.",
    "ko": "이 셔츠의 면이 아주 부드러워.",
    "blank": "कपास"
+  }
+ ],
+ "w|कपूर": [
+  {
+   "text": "पूजा के बाद दफ़्तर के मंदिर में कपूर की ख़ुशबू देर तक रही।",
+   "en": "After the prayer, the scent of camphor lingered in the office shrine.",
+   "ko": "기도가 끝난 뒤 사무실 제단에 장뇌 향이 오래 남아 있었어요.",
+   "blank": "कपूर",
+   "src": "made"
+  },
+  {
+   "text": "गृह प्रवेश की पूजा में मीना ने कपूर जलाकर आरती की।",
+   "en": "At the housewarming prayer Meena lit camphor and performed the aarti.",
+   "ko": "집들이 기도 때 미나는 장뇌를 태워 아르티를 올렸어요.",
+   "blank": "कपूर",
+   "src": "made"
   }
  ],
  "w|कप्तान": [
@@ -7192,6 +7368,22 @@
    "en": "Volunteers from the cleanliness drive were going shop to shop handing out cloth bags.",
    "ko": "청결 캠페인 활동가들이 가게마다 돌며 천 가방을 나눠 주고 있었어요.",
    "blank": "कार्यकर्ता",
+   "src": "made"
+  }
+ ],
+ "w|कार्यकाल": [
+  {
+   "text": "पुराने निदेशक का कार्यकाल इस महीने ख़त्म हो रहा है।",
+   "en": "The old director's term ends this month.",
+   "ko": "전임 이사의 임기가 이번 달에 끝나요.",
+   "blank": "कार्यकाल",
+   "src": "made"
+  },
+  {
+   "text": "सोसाइटी के अध्यक्ष का कार्यकाल ख़त्म होने वाला है, तो मीना से भी राय माँगी गई।",
+   "en": "The society president's term is ending, so Meena was asked for her view too.",
+   "ko": "단지 회장 임기가 끝나 가서 미나에게도 의견을 물었어요.",
+   "blank": "कार्यकाल",
    "src": "made"
   }
  ],
@@ -11577,6 +11769,22 @@
    "blank": "गूँजना"
   }
  ],
+ "w|गृह": [
+  {
+   "text": "कंपनी नए कर्मचारियों को गृह ऋण पर कम ब्याज देती है।",
+   "en": "The company gives new employees a lower interest rate on home loans.",
+   "ko": "회사는 신입 직원에게 주택 대출 이자를 낮춰 줘요.",
+   "blank": "गृह",
+   "src": "made"
+  },
+  {
+   "text": "गृह प्रवेश की पूजा में मीना ने कपूर जलाकर आरती की।",
+   "en": "At the housewarming prayer Meena lit camphor and performed the aarti.",
+   "ko": "집들이 기도 때 미나는 장뇌를 태워 아르티를 올렸어요.",
+   "blank": "गृह",
+   "src": "made"
+  }
+ ],
  "w|गृहकार्य": [
   {
    "text": "बच्चों पर बढ़ते गृहकार्य के बोझ पर सुनील ने एक लंबा लेख लिखा।",
@@ -11839,6 +12047,22 @@
    "en": "There are eleven players on the team.",
    "ko": "팀에 열한 명의 선수가 있어.",
    "blank": "ग्यारह"
+  }
+ ],
+ "w|ग्रहण": [
+  {
+   "text": "सूर्य ग्रहण देखने के लिए पूरी टीम दोपहर में छत पर इकट्ठा हुई।",
+   "en": "The whole team gathered on the roof at noon to watch the solar eclipse.",
+   "ko": "일식을 보려고 팀 전체가 한낮에 옥상에 모였어요.",
+   "blank": "ग्रहण",
+   "src": "made"
+  },
+  {
+   "text": "पंडित जी ने कहा कि ग्रहण के दिन गृहप्रवेश नहीं होता।",
+   "en": "The priest said you don't move into a new home on the day of an eclipse.",
+   "ko": "사제는 일식이나 월식 날에는 새집에 들지 않는다고 했어요.",
+   "blank": "ग्रहण",
+   "src": "made"
   }
  ],
  "w|ग्राम": [
@@ -12462,6 +12686,22 @@
    "en": "A real rolling board was brought to the set for rolling rotis.",
    "ko": "로티를 밀기 위해 진짜 반죽판을 촬영장에 가져왔어요.",
    "blank": "चकला",
+   "src": "made"
+  }
+ ],
+ "w|चक्कर": [
+  {
+   "text": "लगातार स्क्रीन देखने से रोहन को दोपहर में चक्कर आने लगा।",
+   "en": "From staring at the screen non-stop, Rohan started feeling dizzy in the afternoon.",
+   "ko": "화면을 계속 보다가 로한은 오후에 어지럼증이 났어요.",
+   "blank": "चक्कर",
+   "src": "made"
+  },
+  {
+   "text": "सामान के लिए मीना को बाज़ार के कई चक्कर लगाने पड़े।",
+   "en": "Meena had to make several trips to the market for supplies.",
+   "ko": "미나는 물건을 사러 시장을 여러 번 오가야 했어요.",
+   "blank": "चक्कर",
    "src": "made"
   }
  ],
@@ -20947,6 +21187,22 @@
    "blank": "दिला"
   }
  ],
+ "w|दिवस": [
+  {
+   "text": "कंपनी के स्थापना दिवस पर रोहन की टीम ने पूरे दफ़्तर को सजाया।",
+   "en": "On the company's foundation day Rohan's team decorated the whole office.",
+   "ko": "회사 창립 기념일에 로한의 팀이 사무실 전체를 꾸몄어요.",
+   "blank": "दिवस",
+   "src": "made"
+  },
+  {
+   "text": "मीना का परिवार गणतंत्र दिवस की छुट्टी पर नए घर में आया।",
+   "en": "Meena's family moved into the new house on the Republic Day holiday.",
+   "ko": "미나네 가족은 공화국의 날 휴일에 새집으로 이사했어요.",
+   "blank": "दिवस",
+   "src": "made"
+  }
+ ],
  "w|दिवाली": [
   {
    "text": "दिवाली पर घर रोशनी से जगमगा उठता है।",
@@ -23657,6 +23913,22 @@
    "blank": "नियमित"
   }
  ],
+ "w|नियुक्त": [
+  {
+   "text": "रोहन को नई शाखा का प्रमुख नियुक्त किया गया है।",
+   "en": "Rohan has been appointed head of the new branch.",
+   "ko": "로한은 새 지점장으로 임명됐어요.",
+   "blank": "नियुक्त",
+   "src": "made"
+  },
+  {
+   "text": "सोसाइटी ने एक नया चौकीदार नियुक्त किया है।",
+   "en": "The society has appointed a new watchman.",
+   "ko": "단지에서 새 경비원을 채용했어요.",
+   "blank": "नियुक्त",
+   "src": "made"
+  }
+ ],
  "w|नियुक्ति": [
   {
    "text": "नई नियुक्ति की खबर आज आई।",
@@ -23816,6 +24088,22 @@
    "en": "The maker of Meena's shoes made them especially light for runners.",
    "ko": "미나의 운동화 제조사는 달리기용으로 특히 가볍게 만들었어요.",
    "blank": "निर्माता",
+   "src": "made"
+  }
+ ],
+ "w|निर्मित": [
+  {
+   "text": "रोहन की कंपनी में निर्मित पुर्ज़े विदेश भी भेजे जाते हैं।",
+   "en": "Parts made at Rohan's company are also shipped abroad.",
+   "ko": "로한 회사에서 만든 부품은 외국으로도 수출돼요.",
+   "blank": "निर्मित",
+   "src": "made"
+  },
+  {
+   "text": "नया घर पुरानी ईंटों से निर्मित है, इसलिए गर्मी में भी ठंडा रहता है।",
+   "en": "The new house is built from old bricks, so it stays cool even in summer.",
+   "ko": "새집은 옛 벽돌로 지어져서 여름에도 시원해요.",
+   "blank": "निर्मित",
    "src": "made"
   }
  ],
@@ -33215,6 +33503,22 @@
    "src": "made"
   }
  ],
+ "w|भवन": [
+  {
+   "text": "रोहन का दफ़्तर शहर के सबसे ऊँचे भवन की बीसवीं मंज़िल पर है।",
+   "en": "Rohan's office is on the twentieth floor of the city's tallest building.",
+   "ko": "로한의 사무실은 도시에서 가장 높은 건물의 이십 층에 있어요.",
+   "blank": "भवन",
+   "src": "made"
+  },
+  {
+   "text": "मीना का नया फ़्लैट नदी किनारे बने एक नए भवन में है।",
+   "en": "Meena's new flat is in a new building on the riverbank.",
+   "ko": "미나의 새 아파트는 강가에 새로 지은 건물에 있어요.",
+   "blank": "भवन",
+   "src": "made"
+  }
+ ],
  "w|भविष्य": [
   {
    "text": "भविष्य की योजना अभी बना लो।",
@@ -33747,6 +34051,22 @@
    "en": "The peanuts have to be roasted on a low flame.",
    "ko": "땅콩을 약한 불에 볶아야 해.",
    "blank": "भूनना"
+  }
+ ],
+ "w|भूमि": [
+  {
+   "text": "कंपनी ने शहर के बाहर नई फ़ैक्टरी के लिए भूमि ख़रीदी है।",
+   "en": "The company has bought land outside the city for a new factory.",
+   "ko": "회사는 새 공장을 지으려고 도시 밖에 땅을 샀어요.",
+   "blank": "भूमि",
+   "src": "made"
+  },
+  {
+   "text": "नए घर में जाने से पहले मीना ने भूमि पूजन करवाया।",
+   "en": "Before moving into the new house Meena had a ground-blessing ceremony done.",
+   "ko": "새집에 들어가기 전에 미나는 터 고사를 지냈어요.",
+   "blank": "भूमि",
+   "src": "made"
   }
  ],
  "w|भूमिका": [
@@ -35619,6 +35939,22 @@
    "blank": "मारी"
   }
  ],
+ "w|मार्ग": [
+  {
+   "text": "मेट्रो का नया मार्ग खुलने से रोहन का दफ़्तर पहुँचना आसान हो गया।",
+   "en": "With the new metro route open, getting to the office became easier for Rohan.",
+   "ko": "새 지하철 노선이 열려서 로한의 출근이 편해졌어요.",
+   "blank": "मार्ग",
+   "src": "made"
+  },
+  {
+   "text": "पुल बंद था, इसलिए ट्रक को दूसरे मार्ग से आना पड़ा।",
+   "en": "The bridge was closed, so the truck had to come by another route.",
+   "ko": "다리가 막혀서 트럭은 다른 길로 와야 했어요.",
+   "blank": "मार्ग",
+   "src": "made"
+  }
+ ],
  "w|मार्गदर्शक": [
   {
    "text": "ट्रैक पर अनुभवी मार्गदर्शक साथ था।",
@@ -35777,6 +36113,22 @@
    "en": "His innocent eyes told the truth.",
    "ko": "그의 순진한 눈이 진실을 말해 줬어.",
    "blank": "मासूम"
+  }
+ ],
+ "w|माह": [
+  {
+   "text": "रोहन को इस माह का सबसे अच्छा कर्मचारी चुना गया।",
+   "en": "Rohan was chosen as this month's best employee.",
+   "ko": "로한이 이달의 최우수 직원으로 뽑혔어요.",
+   "blank": "माह",
+   "src": "made"
+  },
+  {
+   "text": "अगले माह से मीना को नए घर का किराया नहीं, किस्त भरनी है।",
+   "en": "From next month Meena has to pay a loan installment instead of rent.",
+   "ko": "다음 달부터 미나는 집세 대신 대출 할부금을 내야 해요.",
+   "blank": "माह",
+   "src": "made"
   }
  ],
  "w|माहौल": [
@@ -38247,6 +38599,22 @@
    "blank": "राजनीति"
   }
  ],
+ "w|राजनीति विज्ञान": [
+  {
+   "text": "नए इंटर्न ने बताया कि उसने कॉलेज में राजनीति विज्ञान पढ़ा है।",
+   "en": "The new intern said he studied political science in college.",
+   "ko": "새 인턴은 대학에서 정치학을 공부했다고 했어요.",
+   "blank": "राजनीति विज्ञान",
+   "src": "made"
+  },
+  {
+   "text": "बेटी की राजनीति विज्ञान की मोटी किताबें सबसे भारी डिब्बे में थीं।",
+   "en": "The daughter's thick political science books were in the heaviest box.",
+   "ko": "딸의 두꺼운 정치학 책들이 가장 무거운 상자에 들어 있었어요.",
+   "blank": "राजनीति विज्ञान",
+   "src": "made"
+  }
+ ],
  "w|राजनीतिक": [
   {
    "text": "आज राजनीतिक चर्चा गरम है।",
@@ -38459,6 +38827,22 @@
    "en": "This road goes all the way to the market.",
    "ko": "이 길은 시장까지 이어져.",
    "blank": "रास्ता"
+  }
+ ],
+ "w|राह": [
+  {
+   "text": "मैनेजर ने रोहन से कहा कि मुश्किल प्रोजेक्ट में भी कोई न कोई राह निकल आती है।",
+   "en": "The manager told Rohan that even in a tough project some way out turns up.",
+   "ko": "매니저는 로한에게 어려운 프로젝트에서도 어떻게든 길이 생긴다고 말했어요.",
+   "blank": "राह",
+   "src": "made"
+  },
+  {
+   "text": "नए मोहल्ले में मीना को बाज़ार की राह ढूँढ़ने में दो दिन लगे।",
+   "en": "In the new neighborhood it took Meena two days to find the way to the market.",
+   "ko": "새 동네에서 미나는 시장 가는 길을 찾는 데 이틀이 걸렸어요.",
+   "blank": "राह",
+   "src": "made"
   }
  ],
  "w|राहत": [
@@ -39669,6 +40053,22 @@
    "src": "made"
   }
  ],
+ "w|लिखित": [
+  {
+   "text": "छुट्टी के लिए रोहन को लिखित अर्ज़ी देनी पड़ी।",
+   "en": "Rohan had to submit a written application for leave.",
+   "ko": "로한은 휴가를 내려고 서면 신청서를 내야 했어요.",
+   "blank": "लिखित",
+   "src": "made"
+  },
+  {
+   "text": "मकान मालिक ने किराया लौटाने का लिखित वादा किया।",
+   "en": "The landlord made a written promise to return the deposit.",
+   "ko": "집주인은 보증금을 돌려주겠다고 서면으로 약속했어요.",
+   "blank": "लिखित",
+   "src": "made"
+  }
+ ],
  "w|लिंग": [
   {
    "text": "रोहन कहता है कि रसोई में काम करने के लिए लिंग नहीं, हुनर मायने रखता है।",
@@ -39845,6 +40245,22 @@
    "en": "The young writer won the award.",
    "ko": "젊은 작가가 상을 받았어.",
    "blank": "लेखक"
+  }
+ ],
+ "w|लेखन": [
+  {
+   "text": "रोहन को रिपोर्ट लेखन से ज़्यादा प्रेज़ेंटेशन देना पसंद है।",
+   "en": "Rohan likes giving presentations more than writing reports.",
+   "ko": "로한은 보고서 작성보다 발표를 더 좋아해요.",
+   "blank": "लेखन",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने नए घर की खिड़की के पास लेखन के लिए एक छोटी मेज़ लगाई।",
+   "en": "Meena set up a small desk by the window of the new house for writing.",
+   "ko": "미나는 새집 창가에 글쓰기용 작은 책상을 놓았어요.",
+   "blank": "लेखन",
+   "src": "made"
   }
  ],
  "w|लेखा": [
@@ -40453,6 +40869,22 @@
    "blank": "वापस"
   }
  ],
+ "w|वापस करना": [
+  {
+   "text": "रोहन ने ख़राब लैपटॉप आईटी विभाग को वापस कर दिया।",
+   "en": "Rohan returned the faulty laptop to the IT department.",
+   "ko": "로한은 고장 난 노트북을 IT 부서에 돌려줬어요.",
+   "blank": "वापस कर",
+   "src": "made"
+  },
+  {
+   "text": "टूटे बर्तन देखकर मीना ने पैकर्स से कहा कि नुकसान का पैसा वापस करें।",
+   "en": "Seeing the broken dishes, Meena told the packers to refund the damage.",
+   "ko": "깨진 그릇을 보고 미나는 이삿짐센터에 손해를 물어내라고 했어요.",
+   "blank": "वापस करें",
+   "src": "made"
+  }
+ ],
  "w|वापसी": [
   {
    "text": "घर की वापसी रात तक हो जाएगी।",
@@ -40785,6 +41217,22 @@
    "en": "Learning a foreign language is fun.",
    "ko": "외국어를 배우는 건 재미있어.",
    "blank": "विदेशी"
+  }
+ ],
+ "w|विद्या": [
+  {
+   "text": "रोहन के दादा कहते थे कि विद्या ऐसा धन है जिसे कोई चुरा नहीं सकता।",
+   "en": "Rohan's grandfather used to say knowledge is wealth no one can steal.",
+   "ko": "로한의 할아버지는 학문은 아무도 훔칠 수 없는 재산이라고 하셨어요.",
+   "blank": "विद्या",
+   "src": "made"
+  },
+  {
+   "text": "पूजा के कमरे में मीना ने विद्या की देवी सरस्वती की तस्वीर लगाई।",
+   "en": "In the prayer room Meena put up a picture of Saraswati, goddess of learning.",
+   "ko": "미나는 기도방에 학문의 여신 사라스와티 그림을 걸었어요.",
+   "blank": "विद्या",
+   "src": "made"
   }
  ],
  "w|विद्यार्थी": [
@@ -41227,6 +41675,22 @@
    "en": "Every city has its own specialty.",
    "ko": "도시마다 자기만의 특색이 있어.",
    "blank": "विशेषता"
+  }
+ ],
+ "w|विश्लेषण": [
+  {
+   "text": "रोहन ने बिक्री के आँकड़ों का विश्लेषण करके बोर्ड को दिखाया।",
+   "en": "Rohan analyzed the sales figures and showed them to the board.",
+   "ko": "로한은 판매 수치를 분석해서 이사회에 보여 줬어요.",
+   "blank": "विश्लेषण",
+   "src": "made"
+  },
+  {
+   "text": "मीना के बेटे ने बिजली के बिल का विश्लेषण करके सोलर पैनल लगाने की सलाह दी।",
+   "en": "Meena's son analyzed the electricity bill and suggested installing solar panels.",
+   "ko": "미나의 아들은 전기 요금을 분석해 보고 태양광 패널을 달자고 했어요.",
+   "blank": "विश्लेषण",
+   "src": "made"
   }
  ],
  "w|विश्वविद्यालय": [
@@ -43139,6 +43603,22 @@
    "blank": "संगीत"
   }
  ],
+ "w|संग्रह": [
+  {
+   "text": "दफ़्तर की लाइब्रेरी में पुरानी फ़ाइलों का बड़ा संग्रह है।",
+   "en": "The office library has a large collection of old files.",
+   "ko": "사무실 자료실에는 오래된 파일이 잔뜩 모여 있어요.",
+   "blank": "संग्रह",
+   "src": "made"
+  },
+  {
+   "text": "मीना के पति का सिक्कों का संग्रह एक अलग बक्से में रखा गया।",
+   "en": "Meena's husband's coin collection was kept in a separate box.",
+   "ko": "미나 남편의 동전 수집품은 따로 상자에 담았어요.",
+   "blank": "संग्रह",
+   "src": "made"
+  }
+ ],
  "w|संग्रहालय": [
   {
    "text": "रविवार को संग्रहालय घूमने जाएँगे।",
@@ -43207,6 +43687,54 @@
    "en": "This news is truly shocking.",
    "ko": "이 소식은 정말 놀라워.",
    "blank": "सचमुच"
+  }
+ ],
+ "w|संचार": [
+  {
+   "text": "नेटवर्क बंद होने से दफ़्तर का सारा संचार ठप हो गया।",
+   "en": "With the network down, all office communication came to a halt.",
+   "ko": "네트워크가 끊겨서 사무실 통신이 전부 멈췄어요.",
+   "blank": "संचार",
+   "src": "made"
+  },
+  {
+   "text": "नए इलाक़े में फ़ोन का सिग्नल कमज़ोर है, इसलिए संचार में दिक़्क़त होती है।",
+   "en": "The phone signal is weak in the new area, so communication is a problem.",
+   "ko": "새 동네는 휴대폰 신호가 약해서 연락이 어려워요.",
+   "blank": "संचार",
+   "src": "made"
+  }
+ ],
+ "w|संचालन": [
+  {
+   "text": "दफ़्तर के रोज़ के संचालन की ज़िम्मेदारी अब रोहन पर है।",
+   "en": "Responsibility for the office's daily operations is now Rohan's.",
+   "ko": "이제 사무실 일상 운영은 로한이 맡고 있어요.",
+   "blank": "संचालन",
+   "src": "made"
+  },
+  {
+   "text": "सोसाइटी के संचालन के लिए हर महीने निवासियों की बैठक होती है।",
+   "en": "Every month there's a residents' meeting to run the society.",
+   "ko": "단지 운영을 위해 매달 주민 회의가 열려요.",
+   "blank": "संचालन",
+   "src": "made"
+  }
+ ],
+ "w|संचालित": [
+  {
+   "text": "रोहन की कंपनी की फ़ैक्टरी पूरी तरह सौर ऊर्जा से संचालित है।",
+   "en": "Rohan's company's factory runs entirely on solar power.",
+   "ko": "로한 회사의 공장은 전부 태양광으로 돌아가요.",
+   "blank": "संचालित",
+   "src": "made"
+  },
+  {
+   "text": "नई सोसाइटी की लिफ़्ट बिजली और जनरेटर दोनों से संचालित होती है।",
+   "en": "The new society's lift runs on both mains power and a generator.",
+   "ko": "새 단지의 엘리베이터는 전기와 발전기 둘 다로 움직여요.",
+   "blank": "संचालित",
+   "src": "made"
   }
  ],
  "w|सचिव": [
@@ -43487,6 +44015,22 @@
    "blank": "सत्ताईस"
   }
  ],
+ "w|सत्तू": [
+  {
+   "text": "गर्मी में रोहन दफ़्तर के लिए टिफ़िन की जगह सत्तू का शरबत लेकर आता है।",
+   "en": "In summer Rohan brings a sattu drink to the office instead of a lunchbox.",
+   "ko": "여름이면 로한은 도시락 대신 삿뚜 음료를 사무실에 가져와요.",
+   "blank": "सत्तू",
+   "src": "made"
+  },
+  {
+   "text": "सामान बाँधते-बाँधते थकी मीना ने दोपहर में ठंडा सत्तू घोलकर पिया।",
+   "en": "Tired from packing, Meena mixed and drank cold sattu in the afternoon.",
+   "ko": "짐을 싸느라 지친 미나는 오후에 차가운 삿뚜를 타서 마셨어요.",
+   "blank": "सत्तू",
+   "src": "made"
+  }
+ ],
  "w|सत्य": [
   {
    "text": "अंत में सत्य सामने आ ही जाता है।",
@@ -43528,6 +44072,22 @@
    "en": "Kavita's team built the roof of the new assembly chamber.",
    "ko": "카비타의 팀이 새 의회 본회의장 지붕을 완성했어요.",
    "blank": "सदन",
+   "src": "made"
+  }
+ ],
+ "w|संदर्भ": [
+  {
+   "text": "रोहन ने पिछली मीटिंग के संदर्भ में एक छोटा नोट भेजा।",
+   "en": "Rohan sent a short note with reference to the last meeting.",
+   "ko": "로한은 지난 회의와 관련해 짧은 메모를 보냈어요.",
+   "blank": "संदर्भ",
+   "src": "made"
+  },
+  {
+   "text": "पुरानी चिट्ठियों के संदर्भ में मीना को पुराने घर की कई यादें आईं।",
+   "en": "Going through the old letters, many memories of the old house came back to Meena.",
+   "ko": "오래된 편지를 보며 미나는 옛집의 추억이 많이 떠올랐어요.",
+   "blank": "संदर्भ",
    "src": "made"
   }
  ],
@@ -43717,6 +44277,22 @@
    "en": "Our contact had been broken.",
    "ko": "우리 연락이 끊겼었어.",
    "blank": "संपर्क"
+  }
+ ],
+ "w|संपर्क करना": [
+  {
+   "text": "सप्लायर से माल नहीं आया, तो रोहन ने तुरंत उनसे संपर्क किया।",
+   "en": "The goods didn't arrive from the supplier, so Rohan contacted them right away.",
+   "ko": "납품업체에서 물건이 오지 않자 로한은 바로 연락했어요.",
+   "blank": "संपर्क किया",
+   "src": "made"
+  },
+  {
+   "text": "गैस कनेक्शन के लिए मीना ने एजेंसी से संपर्क किया।",
+   "en": "Meena contacted the agency for a gas connection.",
+   "ko": "미나는 가스 연결 때문에 대리점에 연락했어요.",
+   "blank": "संपर्क किया",
+   "src": "made"
   }
  ],
  "w|संपादक": [
@@ -44992,6 +45568,22 @@
    "en": "This bridge is being built with the parliamentary constituency's development fund.",
    "ko": "이 다리는 국회의원 지역구 개발 기금으로 지어지고 있어요.",
    "blank": "संसदीय",
+   "src": "made"
+  }
+ ],
+ "w|संसाधन": [
+  {
+   "text": "रोहन ने कहा कि इतने कम संसाधन में इतना बड़ा काम मुश्किल है।",
+   "en": "Rohan said such a big job is hard with so few resources.",
+   "ko": "로한은 이렇게 적은 자원으로 이렇게 큰 일을 하기는 어렵다고 했어요.",
+   "blank": "संसाधन",
+   "src": "made"
+  },
+  {
+   "text": "नई सोसाइटी में पानी जैसे संसाधन का हिसाब सबको मिलकर रखना होता है।",
+   "en": "In the new society everyone has to jointly keep track of resources like water.",
+   "ko": "새 단지에서는 물 같은 자원을 모두 함께 관리해야 해요.",
+   "blank": "संसाधन",
    "src": "made"
   }
  ],
@@ -46997,6 +47589,22 @@
    "src": "made"
   }
  ],
+ "w|सूत्र": [
+  {
+   "text": "रोहन ने हँसकर कहा कि उसकी सफलता का सूत्र है सुबह की चाय।",
+   "en": "Rohan laughed and said the formula for his success is morning tea.",
+   "ko": "로한은 자기 성공 비결이 아침 차라며 웃었어요.",
+   "blank": "सूत्र",
+   "src": "made"
+  },
+  {
+   "text": "मीना के मुताबिक़ जल्दी सामान खोलने का सूत्र है, हर डिब्बे पर कमरे का नाम लिखना।",
+   "en": "According to Meena, the trick to unpacking fast is writing the room's name on every box.",
+   "ko": "미나 말로는 짐을 빨리 푸는 비결이 상자마다 방 이름을 적는 거래요.",
+   "blank": "सूत्र",
+   "src": "made"
+  }
+ ],
  "w|सूना": [
   {
    "text": "रात को बाज़ार बिल्कुल सूना लग रहा था।",
@@ -48241,6 +48849,22 @@
    "blank": "हमेशा"
   }
  ],
+ "w|हमेशा के लिए": [
+  {
+   "text": "पुराने बॉस ने रिटायर होकर हमेशा के लिए दफ़्तर छोड़ दिया।",
+   "en": "The old boss retired and left the office for good.",
+   "ko": "옛 상사는 은퇴하고 사무실을 영영 떠났어요.",
+   "blank": "हमेशा के लिए",
+   "src": "made"
+  },
+  {
+   "text": "मीना पुराना शहर हमेशा के लिए छोड़कर बेटे के पास आ गई।",
+   "en": "Meena left her old town for good and came to live near her son.",
+   "ko": "미나는 옛 도시를 영영 떠나 아들 곁으로 왔어요.",
+   "blank": "हमेशा के लिए",
+   "src": "made"
+  }
+ ],
  "w|हर": [
   {
    "text": "हर सुबह वह मंदिर जाता है।",
@@ -48987,6 +49611,22 @@
    "en": "The artisan's skill is worth watching.",
    "ko": "장인의 솜씨는 볼 만해.",
    "blank": "हुनर"
+  }
+ ],
+ "w|हृदय": [
+  {
+   "text": "डॉक्टर ने सलाह दी कि सीढ़ियाँ चढ़ना हृदय के लिए अच्छा है।",
+   "en": "The doctor advised that climbing stairs is good for the heart.",
+   "ko": "의사는 계단을 오르는 게 심장에 좋다고 조언했어요.",
+   "blank": "हृदय",
+   "src": "made"
+  },
+  {
+   "text": "पुराने पड़ोसियों से विदा लेते हुए मीना का हृदय भर आया।",
+   "en": "Saying goodbye to her old neighbors, Meena's heart was full.",
+   "ko": "옛 이웃들과 작별하면서 미나는 가슴이 벅찼어요.",
+   "blank": "हृदय",
+   "src": "made"
   }
  ],
  "w|हे": [

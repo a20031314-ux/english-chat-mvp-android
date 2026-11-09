@@ -13,6 +13,22 @@
    "blank": "آخر"
   }
  ],
+ "w|آخى": [
+  {
+   "text": "آخى سامي بين عائلتي العروسين بدعوتهما إلى غداء قبل الزفاف.",
+   "en": "Sami brought the two families together by inviting them to lunch before the wedding.",
+   "ko": "사미는 결혼식 전에 양가를 점심에 초대해 서로 가까워지게 했어요.",
+   "blank": "آخى",
+   "src": "made"
+  },
+  {
+   "text": "آخت رنا بين ابنها وابن جارتها في غرفة الانتظار، فلعبا معا.",
+   "en": "Rana got her son and her neighbor's son to make friends in the waiting room, and they played together.",
+   "ko": "라나가 대기실에서 아들과 이웃집 아들을 친하게 만들어 줘서 둘이 같이 놀았어요.",
+   "blank": "آخت",
+   "src": "made"
+  }
+ ],
  "w|آسف": [
   {
    "text": "أنا آسف إذا أزعجتك بشيء.",
@@ -1433,6 +1449,22 @@
    "blank": "أرض"
   }
  ],
+ "w|أرضع": [
+  {
+   "text": "حضرت المرأة التي أرضعت سامي صغيرا، فقبل يدها.",
+   "en": "The woman who nursed Sami as a baby came, and he kissed her hand.",
+   "ko": "어릴 때 사미에게 젖을 먹여 준 유모가 오자 사미는 그 손에 입을 맞췄어요.",
+   "blank": "أرضعت",
+   "src": "made"
+  },
+  {
+   "text": "سألت رنا الطبيب إن كان الدواء آمنا، لأنها أرضعت طفلتها هذا الصباح.",
+   "en": "Rana asked the dentist whether the medicine was safe, because she breastfed her baby this morning.",
+   "ko": "라나는 오늘 아침에 아기에게 젖을 먹였다며 약이 괜찮은지 의사에게 물었어요.",
+   "blank": "أرضعت",
+   "src": "made"
+  }
+ ],
  "w|أرضي": [
   {
    "text": "مكتب عمر الجديد في الطابق الأرضي قرب باب الدخول.",
@@ -2757,6 +2789,22 @@
    "blank": "أغنية"
   }
  ],
+ "w|أف": [
+  {
+   "text": "انقطعت الكهرباء في منتصف الزفاف، فقال سامي: أف، ليس الآن!",
+   "en": "The power went out in the middle of the wedding, and Sami said: ugh, not now!",
+   "ko": "결혼식 도중 정전이 되자 사미는 \"아이고, 하필 지금!\" 했어요.",
+   "blank": "أف",
+   "src": "made"
+  },
+  {
+   "text": "قالت رنا: أف، صوت هذا الجهاز يخيفني.",
+   "en": "Rana said: ugh, the sound of this machine scares me.",
+   "ko": "라나는 \"아휴, 이 기계 소리 너무 무서워요\"라고 했어요.",
+   "blank": "أف",
+   "src": "made"
+  }
+ ],
  "w|أفاد": [
   {
    "text": "أفاد الطبيب المريض بالنصائح المهمة.",
@@ -3213,6 +3261,22 @@
    "en": "The doctor confirmed that treatment is necessary.",
    "ko": "의사가 치료가 필요하다고 확인했다.",
    "blank": "أكد"
+  }
+ ],
+ "w|أكرم": [
+  {
+   "text": "أكرم والد العروس سامي وأجلسه على طاولة العائلة.",
+   "en": "The bride's father honored Sami and seated him at the family table.",
+   "ko": "신부 아버지는 사미를 귀하게 대접하며 가족 테이블에 앉혔어요.",
+   "blank": "أكرم",
+   "src": "made"
+  },
+  {
+   "text": "أكرمت رنا الممرضة بعلبة حلوى، فضحك الطبيب.",
+   "en": "Rana treated the nurse to a box of sweets, and the dentist laughed.",
+   "ko": "라나가 간호사에게 과자 한 상자를 선물하자 의사가 웃었어요.",
+   "blank": "أكرمت",
+   "src": "made"
   }
  ],
  "w|أكسجين": [
@@ -3796,6 +3860,22 @@
    "en": "Nour got angry at a selfish driver who parked in front of the building entrance.",
    "ko": "누르는 건물 입구 앞에 차를 세운 이기적인 운전자에게 화가 났어요.",
    "blank": "أناني",
+   "src": "made"
+  }
+ ],
+ "w|أنانية": [
+  {
+   "text": "غضب سامي من أنانية ابن عمه الذي أخذ أفضل مقعد في حفل الزفاف.",
+   "en": "Sami was angry at the selfishness of his cousin who took the best seat at the wedding.",
+   "ko": "사미는 결혼식에서 제일 좋은 자리를 차지한 사촌의 이기심에 화가 났어요.",
+   "blank": "أنانية",
+   "src": "made"
+  },
+  {
+   "text": "قالت رنا لزميلتها إن تأجيل علاج الأسنان نوع من الأنانية تجاه الجسم.",
+   "en": "Rana told her colleague that putting off dental treatment is a kind of selfishness toward the body.",
+   "ko": "라나는 동료에게 치과 치료를 미루는 건 몸에 대한 이기심 같은 거라고 말했어요.",
+   "blank": "الأنانية",
    "src": "made"
   }
  ],
@@ -4851,6 +4931,22 @@
    "en": "So, you agree with the plan?",
    "ko": "그럼, 너도 그 계획에 동의하는 거지?",
    "blank": "إذن"
+  }
+ ],
+ "w|إرادة": [
+  {
+   "text": "قال سامي في كلمته إن العروسين تزوجا بإرادة قوية رغم كل الصعوبات.",
+   "en": "Sami said in his speech that the bride and groom married with strong will despite all the difficulties.",
+   "ko": "사미는 축사에서 신랑 신부가 온갖 어려움에도 굳은 의지로 결혼했다고 말했어요.",
+   "blank": "بإرادة",
+   "src": "made"
+  },
+  {
+   "text": "احتاجت رنا إلى كثير من الإرادة لتدخل عيادة الأسنان.",
+   "en": "Rana needed a lot of willpower to walk into the dental clinic.",
+   "ko": "라나는 치과에 들어가는 데 큰 의지가 필요했어요.",
+   "blank": "الإرادة",
+   "src": "made"
   }
  ],
  "w|إرسال": [
@@ -10399,6 +10495,22 @@
    "blank": "بالنسبة"
   }
  ],
+ "w|باليه": [
+  {
+   "text": "قدمت أخت العروس رقصة باليه قصيرة أدهشت سامي.",
+   "en": "The bride's sister performed a short ballet dance that amazed Sami.",
+   "ko": "신부 여동생이 짧은 발레를 선보여 사미가 깜짝 놀랐어요.",
+   "blank": "باليه",
+   "src": "made"
+  },
+  {
+   "text": "تدرس ابنة رنا الباليه، ولها موعد بعد الطبيب مباشرة.",
+   "en": "Rana's daughter studies ballet and has a class right after the dentist.",
+   "ko": "라나의 딸은 발레를 배우는데 치과가 끝나면 바로 수업이 있어요.",
+   "blank": "الباليه",
+   "src": "made"
+  }
+ ],
  "w|بان": [
   {
    "text": "بان الحزن في عينيه بوضوح.",
@@ -10541,6 +10653,22 @@
    "en": "I'm seriously thinking of leaving the job.",
    "ko": "일을 그만둘까 진지하게 생각하고 있어.",
    "blank": "بجدية"
+  }
+ ],
+ "w|بجل": [
+  {
+   "text": "بجل سامي معلمه القديم الذي حضر العرس وقدمه للضيوف.",
+   "en": "Sami paid great honor to his old teacher who attended the wedding and introduced him to the guests.",
+   "ko": "사미는 결혼식에 온 옛 스승을 극진히 모시며 손님들에게 소개했어요.",
+   "blank": "بجل",
+   "src": "made"
+  },
+  {
+   "text": "يبجل المرضى في الحي طبيب الأسنان العجوز، ورنا منهم.",
+   "en": "The patients in the neighborhood revere the old dentist, and Rana is one of them.",
+   "ko": "동네 환자들은 나이 지긋한 치과 의사를 깊이 존경하는데, 라나도 그래요.",
+   "blank": "يبجل",
+   "src": "made"
   }
  ],
  "w|بجوار": [
@@ -10874,6 +11002,22 @@
    "en": "When the train was cancelled, the company provided a bus as an alternative for the passengers.",
    "ko": "기차가 취소되자 회사는 승객들을 위해 대체 버스를 마련했어요.",
    "blank": "بديلا",
+   "src": "made"
+  }
+ ],
+ "w|بدين": [
+  {
+   "text": "جلس بجانب سامي رجل بدين لا يتوقف عن الضحك.",
+   "en": "A stout man who wouldn't stop laughing sat next to Sami.",
+   "ko": "사미 옆에는 웃음을 멈추지 않는 뚱뚱한 아저씨가 앉았어요.",
+   "blank": "بدين",
+   "src": "made"
+  },
+  {
+   "text": "نصح الطبيب رجلا بدينا في العيادة بتقليل السكر من أجل أسنانه وقلبه.",
+   "en": "The dentist advised an overweight man at the clinic to cut down on sugar for his teeth and his heart.",
+   "ko": "의사는 치과에 온 뚱뚱한 남자에게 이와 심장을 위해 설탕을 줄이라고 했어요.",
+   "blank": "بدينا",
    "src": "made"
   }
  ],
@@ -14421,6 +14565,22 @@
    "blank": "ترعرع"
   }
  ],
+ "w|ترفيه": [
+  {
+   "text": "كلف العريس سامي بفقرة الترفيه للأطفال في الحفل.",
+   "en": "The groom put Sami in charge of the children's entertainment at the party.",
+   "ko": "신랑은 사미에게 잔치에서 아이들 놀이 순서를 맡겼어요.",
+   "blank": "الترفيه",
+   "src": "made"
+  },
+  {
+   "text": "وضعت العيادة شاشة ترفيه للأطفال، فهدأ ابن رنا.",
+   "en": "The clinic put up an entertainment screen for children, so Rana's son calmed down.",
+   "ko": "치과에 아이용 영상 화면이 있어서 라나의 아들이 얌전해졌어요.",
+   "blank": "ترفيه",
+   "src": "made"
+  }
+ ],
  "w|ترقية": [
   {
    "text": "حصل على ترقية في عمله هذا الشهر.",
@@ -16871,6 +17031,22 @@
    "blank": "تناول"
   }
  ],
+ "w|تنبأ": [
+  {
+   "text": "تنبأ سامي منذ سنوات بأن صديقه سيتزوج جارته.",
+   "en": "Sami predicted years ago that his friend would marry his neighbor.",
+   "ko": "사미는 몇 년 전부터 친구가 이웃집 여자와 결혼할 거라고 예언했어요.",
+   "blank": "تنبأ",
+   "src": "made"
+  },
+  {
+   "text": "تنبأ الطبيب بأن رنا ستحتاج إلى تقويم إذا لم تعالج الفجوة.",
+   "en": "The dentist predicted that Rana would need braces if she didn't treat the gap.",
+   "ko": "의사는 그 틈을 치료하지 않으면 라나가 교정을 해야 할 거라고 내다봤어요.",
+   "blank": "تنبأ",
+   "src": "made"
+  }
+ ],
  "w|تنبيه": [
   {
    "text": "علق يوسف تنبيها على باب المخزن: الأرض مبللة.",
@@ -17653,6 +17829,22 @@
    "blank": "ثابت"
   }
  ],
+ "w|ثار": [
+  {
+   "text": "ثار غضب والد العروس لحظة عندما تأخر الطباخ، ثم هدأه سامي.",
+   "en": "The bride's father flared up for a moment when the cook was late, then Sami calmed him down.",
+   "ko": "요리사가 늦자 신부 아버지가 잠깐 화를 냈지만 사미가 달랬어요.",
+   "blank": "ثار",
+   "src": "made"
+  },
+  {
+   "text": "ثار ألم ضرس رنا في منتصف الليل، فحجزت موعدا عاجلا.",
+   "en": "Rana's molar pain flared up in the middle of the night, so she booked an urgent appointment.",
+   "ko": "한밤중에 라나의 어금니 통증이 도져서 급하게 진료를 예약했어요.",
+   "blank": "ثار",
+   "src": "made"
+  }
+ ],
  "w|ثالث": [
   {
    "text": "جلست في الصف الثالث.",
@@ -18337,6 +18529,22 @@
    "blank": "جار"
   }
  ],
+ "w|جارية": [
+  {
+   "text": "روت جدة سامي حكاية جارية ذكية في قصر سلطان قديم.",
+   "en": "Sami's grandmother told a tale about a clever maidservant in an old sultan's palace.",
+   "ko": "사미의 할머니는 옛 술탄 궁전의 영리한 시녀 이야기를 들려줬어요.",
+   "blank": "جارية",
+   "src": "made"
+  },
+  {
+   "text": "نصح الطبيب رنا بأن تغسل الفرشاة تحت مياه جارية.",
+   "en": "The dentist advised Rana to wash the brush under running water.",
+   "ko": "의사는 라나에게 칫솔을 흐르는 물에 헹구라고 했어요.",
+   "blank": "جارية",
+   "src": "made"
+  }
+ ],
  "w|جاسوس": [
   {
    "text": "يمزح الجيران بأن حسن جاسوس لأنه يعرف كل أخبار الحي.",
@@ -18521,6 +18729,22 @@
    "en": "Are you ready to go?",
    "ko": "갈 준비 됐어?",
    "blank": "جاهز"
+  }
+ ],
+ "w|جاور": [
+  {
+   "text": "جاور سامي العريس في الحي منذ الطفولة.",
+   "en": "Sami has been the groom's neighbor in the district since childhood.",
+   "ko": "사미는 어릴 때부터 신랑과 한동네에서 이웃으로 살았어요.",
+   "blank": "جاور",
+   "src": "made"
+  },
+  {
+   "text": "تجاور عيادة الأسنان مخبزا، وتشم رنا رائحة الخبز كلما جاءت.",
+   "en": "The dental clinic is next door to a bakery, and Rana smells bread whenever she comes.",
+   "ko": "치과가 빵집 옆에 있어서 라나는 갈 때마다 빵 냄새를 맡아요.",
+   "blank": "تجاور",
+   "src": "made"
   }
  ],
  "w|جبان": [
@@ -19401,6 +19625,22 @@
    "en": "The children played on the frozen lake ice.",
    "ko": "아이들이 얼어붙은 호수 위에서 놀았어.",
    "blank": "جليد"
+  }
+ ],
+ "w|جليسة": [
+  {
+   "text": "تركت أخت سامي طفليها مع جليسة أطفال لتحضر العرس.",
+   "en": "Sami's sister left her two children with a babysitter to attend the wedding.",
+   "ko": "사미의 누나는 결혼식에 가려고 두 아이를 보모에게 맡겼어요.",
+   "blank": "جليسة",
+   "src": "made"
+  },
+  {
+   "text": "انتظرت جليسة الأطفال مع ابن رنا في غرفة الانتظار.",
+   "en": "The babysitter waited with Rana's son in the waiting room.",
+   "ko": "보모는 대기실에서 라나의 아들과 함께 기다렸어요.",
+   "blank": "جليسة",
+   "src": "made"
   }
  ],
  "w|جمارك": [
@@ -20835,6 +21075,22 @@
    "blank": "حتى"
   }
  ],
+ "w|حث": [
+  {
+   "text": "حث سامي الضيوف على الجلوس قبل وصول العروسين.",
+   "en": "Sami urged the guests to sit down before the bride and groom arrived.",
+   "ko": "사미는 신랑 신부가 오기 전에 손님들에게 자리에 앉아 달라고 재촉했어요.",
+   "blank": "حث",
+   "src": "made"
+  },
+  {
+   "text": "حث الطبيب رنا على استعمال خيط الأسنان كل مساء.",
+   "en": "The dentist urged Rana to use dental floss every evening.",
+   "ko": "의사는 라나에게 매일 저녁 치실을 쓰라고 당부했어요.",
+   "blank": "حث",
+   "src": "made"
+  }
+ ],
  "w|حج": [
   {
    "text": "ذهب والدي إلى حج في مكة.",
@@ -21239,6 +21495,22 @@
    "en": "Who is guarding this building?",
    "ko": "이 건물을 누가 지켜?",
    "blank": "يحرس"
+  }
+ ],
+ "w|حرض": [
+  {
+   "text": "حرض سامي الأطفال مازحا على رش الورد على العريس.",
+   "en": "Sami jokingly egged on the children to throw rose petals at the groom.",
+   "ko": "사미는 장난삼아 아이들에게 신랑한테 꽃잎을 뿌리라고 부추겼어요.",
+   "blank": "حرض",
+   "src": "made"
+  },
+  {
+   "text": "قرأت رنا في الجريدة عن متهم حرض الناس على العنف.",
+   "en": "Rana read in the newspaper about a defendant who incited people to violence.",
+   "ko": "라나는 신문에서 사람들을 폭력으로 선동한 피고인에 관한 기사를 읽었어요.",
+   "blank": "حرض",
+   "src": "made"
   }
  ],
  "w|حرف": [
@@ -22361,6 +22633,22 @@
    "en": "This episode is very useful.",
    "ko": "이 에피소드는 매우 유용해요.",
    "blank": "حلقة"
+  }
+ ],
+ "w|حلل": [
+  {
+   "text": "حلل سامي مع المصور أفضل زوايا الإضاءة في القاعة.",
+   "en": "Sami analyzed with the photographer the best lighting angles in the hall.",
+   "ko": "사미는 사진사와 함께 식장의 가장 좋은 조명 각도를 따져 봤어요.",
+   "blank": "حلل",
+   "src": "made"
+  },
+  {
+   "text": "حلل المختبر عينة من لثة رنا للتأكد من عدم وجود التهاب.",
+   "en": "The lab analyzed a sample of Rana's gum to make sure there was no inflammation.",
+   "ko": "검사실에서 염증이 없는지 확인하려고 라나의 잇몸 샘플을 분석했어요.",
+   "blank": "حلل",
+   "src": "made"
   }
  ],
  "w|حلم": [
@@ -23765,6 +24053,22 @@
    "blank": "خصر"
   }
  ],
+ "w|خصص": [
+  {
+   "text": "خصص سامي طاولة كاملة لكبار السن قرب الباب.",
+   "en": "Sami set aside a whole table for the elderly near the door.",
+   "ko": "사미는 문 가까이에 어르신들을 위한 테이블 하나를 따로 잡아 두었어요.",
+   "blank": "خصص",
+   "src": "made"
+  },
+  {
+   "text": "خصص الطبيب لرنا موعدا طويلا لتنظيف الجذور.",
+   "en": "The dentist allotted Rana a long appointment for root cleaning.",
+   "ko": "의사는 라나의 치근 세척을 위해 진료 시간을 길게 잡아 줬어요.",
+   "blank": "خصص",
+   "src": "made"
+  }
+ ],
  "w|خصم": [
   {
    "text": "يوجد خصم كبير على الملابس اليوم.",
@@ -23821,6 +24125,22 @@
    "en": "I love fresh vegetables in salad.",
    "ko": "나는 샐러드에 신선한 채소를 좋아해.",
    "blank": "خضار"
+  }
+ ],
+ "w|خضع": [
+  {
+   "text": "خضع سامي لرغبة أمه ولبس البدلة الرمادية.",
+   "en": "Sami gave in to his mother's wish and wore the gray suit.",
+   "ko": "사미는 어머니 뜻에 따라 회색 정장을 입었어요.",
+   "blank": "خضع",
+   "src": "made"
+  },
+  {
+   "text": "خضعت رنا لعملية صغيرة لخلع ضرس العقل.",
+   "en": "Rana underwent a small operation to remove her wisdom tooth.",
+   "ko": "라나는 사랑니를 빼는 간단한 수술을 받았어요.",
+   "blank": "خضعت",
+   "src": "made"
   }
  ],
  "w|خط": [
@@ -24065,6 +24385,22 @@
    "blank": "تخفف"
   }
  ],
+ "w|خفق": [
+  {
+   "text": "خفق قلب سامي حين رأى صديقة العروس تبتسم له.",
+   "en": "Sami's heart pounded when he saw the bride's friend smiling at him.",
+   "ko": "신부 친구가 자기에게 웃어 주자 사미의 가슴이 두근거렸어요.",
+   "blank": "خفق",
+   "src": "made"
+  },
+  {
+   "text": "خفق قلب رنا بسرعة عندما رأت الإبرة.",
+   "en": "Rana's heart beat fast when she saw the needle.",
+   "ko": "주삿바늘을 보자 라나의 심장이 빨리 뛰었어요.",
+   "blank": "خفق",
+   "src": "made"
+  }
+ ],
  "w|خفيف": [
   {
    "text": "هذا القميص خفيف جدًا.",
@@ -24091,6 +24427,22 @@
    "en": "This dish needs a little vinegar.",
    "ko": "이 요리는 식초가 조금 필요해.",
    "blank": "خل"
+  }
+ ],
+ "w|خلاص": [
+  {
+   "text": "بعد ساعات من التحضير قال سامي: خلاص، القاعة جاهزة.",
+   "en": "After hours of preparation Sami said: that's it, the hall is ready.",
+   "ko": "몇 시간 준비한 끝에 사미가 \"됐다, 식장 준비 끝!\" 하고 말했어요.",
+   "blank": "خلاص",
+   "src": "made"
+  },
+  {
+   "text": "بعد ساعة على الكرسي قال الطبيب لرنا: خلاص، انتهينا.",
+   "en": "After an hour in the chair, the doctor told Rana: that's it, we're done.",
+   "ko": "의자에 앉은 지 한 시간 만에 의사가 라나에게 \"자, 다 끝났어요\"라고 했어요.",
+   "blank": "خلاص",
+   "src": "made"
   }
  ],
  "w|خلاف": [
@@ -24775,6 +25127,22 @@
    "blank": "دب"
   }
  ],
+ "w|دبر": [
+  {
+   "text": "دبر سامي مفاجأة للعروسين بأغنية سجلها أصدقاؤهما.",
+   "en": "Sami arranged a surprise for the couple with a song recorded by their friends.",
+   "ko": "사미는 친구들이 녹음한 노래로 신랑 신부를 위한 깜짝 선물을 준비했어요.",
+   "blank": "دبر",
+   "src": "made"
+  },
+  {
+   "text": "دبرت رنا موعدها في وقت الغداء حتى لا تتغيب عن العمل.",
+   "en": "Rana arranged her appointment at lunchtime so she wouldn't miss work.",
+   "ko": "라나는 회사를 빠지지 않으려고 점심시간에 진료 약속을 잡았어요.",
+   "blank": "دبرت",
+   "src": "made"
+  }
+ ],
  "w|دبلوماسي": [
   {
    "text": "رد سامي بأسلوب دبلوماسي على زائر غاضب من الغرامة.",
@@ -24847,6 +25215,22 @@
    "en": "He enters the classroom early every day.",
    "ko": "그는 매일 일찍 교실에 들어가.",
    "blank": "يدخل"
+  }
+ ],
+ "w|دخن": [
+  {
+   "text": "خرج عم سامي إلى الحديقة لأنه يدخن ولا يريد إزعاج أحد.",
+   "en": "Sami's uncle went out to the garden because he smokes and doesn't want to bother anyone.",
+   "ko": "사미의 삼촌은 담배를 피우는데 남에게 폐를 끼치기 싫어서 정원으로 나갔어요.",
+   "blank": "يدخن",
+   "src": "made"
+  },
+  {
+   "text": "سأل الطبيب رنا إن كانت تدخن، لأن على أسنانها بقعا.",
+   "en": "The dentist asked Rana whether she smokes, because there are stains on her teeth.",
+   "ko": "이에 얼룩이 있어서 의사는 라나에게 담배를 피우느냐고 물었어요.",
+   "blank": "تدخن",
+   "src": "made"
   }
  ],
  "w|دخول": [
@@ -27377,6 +27761,22 @@
    "blank": "رفع"
   }
  ],
+ "w|رفه": [
+  {
+   "text": "رفه سامي عن الأطفال بألعاب سحرية بسيطة.",
+   "en": "Sami entertained the children with simple magic tricks.",
+   "ko": "사미는 간단한 마술로 아이들을 즐겁게 해 줬어요.",
+   "blank": "رفه",
+   "src": "made"
+  },
+  {
+   "text": "رفهت الممرضة عن ابن رنا بقصة عن سن ضائعة.",
+   "en": "The nurse cheered up Rana's son with a story about a lost tooth.",
+   "ko": "간호사는 잃어버린 이 이야기로 라나의 아들을 즐겁게 해 줬어요.",
+   "blank": "رفهت",
+   "src": "made"
+  }
+ ],
  "w|رفيع": [
   {
    "text": "يشغل أخو علي الأكبر منصبا رفيعا في البنك.",
@@ -28085,6 +28485,22 @@
    "en": "The pain went away after taking the medicine.",
    "ko": "약을 먹고 나서 통증이 사라졌어.",
    "blank": "زال"
+  }
+ ],
+ "w|زامل": [
+  {
+   "text": "زامل سامي العريس في الجامعة أربع سنوات.",
+   "en": "Sami was the groom's classmate at university for four years.",
+   "ko": "사미는 대학에서 사 년 동안 신랑과 같이 공부했어요.",
+   "blank": "زامل",
+   "src": "made"
+  },
+  {
+   "text": "زاملت رنا طبيب الأسنان في المدرسة الثانوية قبل سنوات.",
+   "en": "Rana was the dentist's schoolmate in high school years ago.",
+   "ko": "라나는 오래전 고등학교 때 그 치과 의사와 같은 반이었어요.",
+   "blank": "زاملت",
+   "src": "made"
   }
  ],
  "w|زاوية": [
@@ -31485,6 +31901,22 @@
    "blank": "شجاعة"
   }
  ],
+ "w|شجب": [
+  {
+   "text": "شجب سامي في نفسه تصرف الضيف الذي رمى الطعام.",
+   "en": "Sami silently condemned the behavior of the guest who threw food.",
+   "ko": "사미는 음식을 던진 손님의 행동을 속으로 못마땅해했어요.",
+   "blank": "شجب",
+   "src": "made"
+  },
+  {
+   "text": "شجبت نقابة الأطباء ارتفاع أسعار مواد التخدير، كما سمعت رنا في الراديو.",
+   "en": "The doctors' union condemned the rising prices of anesthetics, as Rana heard on the radio.",
+   "ko": "라나가 라디오에서 들은 바로는 의사 협회가 마취제 가격 인상을 규탄했대요.",
+   "blank": "شجبت",
+   "src": "made"
+  }
+ ],
  "w|شجرة": [
   {
    "text": "زرعنا شجرة في الحديقة.",
@@ -31735,6 +32167,22 @@
    "en": "I saw a policeman in the street today.",
    "ko": "나는 오늘 거리에서 경찰을 봤어.",
    "blank": "شرطي"
+  }
+ ],
+ "w|شرع": [
+  {
+   "text": "شرع سامي في تزيين السيارة منذ الفجر.",
+   "en": "Sami began decorating the car at dawn.",
+   "ko": "사미는 새벽부터 차를 꾸미기 시작했어요.",
+   "blank": "شرع",
+   "src": "made"
+  },
+  {
+   "text": "شرع الطبيب في الحفر بعد أن تخدرت لثة رنا.",
+   "en": "The dentist began drilling after Rana's gum went numb.",
+   "ko": "라나의 잇몸이 마취되자 의사는 드릴을 대기 시작했어요.",
+   "blank": "شرع",
+   "src": "made"
   }
  ],
  "w|شرعي": [
@@ -32847,6 +33295,22 @@
    "src": "made"
   }
  ],
+ "w|صاغ": [
+  {
+   "text": "صاغ سامي كلمة قصيرة مؤثرة ألقاها بعد العشاء.",
+   "en": "Sami composed a short, moving speech that he gave after dinner.",
+   "ko": "사미는 저녁 식사 후에 할 짧고 감동적인 축사를 썼어요.",
+   "blank": "صاغ",
+   "src": "made"
+  },
+  {
+   "text": "صاغت رنا شكوى مهذبة إلى إدارة العيادة بسبب طول الانتظار.",
+   "en": "Rana drafted a polite complaint to the clinic's management about the long wait.",
+   "ko": "라나는 오래 기다린 일로 병원 측에 정중한 불만 글을 썼어요.",
+   "blank": "صاغت",
+   "src": "made"
+  }
+ ],
  "w|صافح": [
   {
    "text": "صافح صديقه عند اللقاء.",
@@ -32915,6 +33379,38 @@
    "en": "He fasted from food for a full day.",
    "ko": "하루 종일 음식을 금식했다.",
    "blank": "صام"
+  }
+ ],
+ "w|صامت": [
+  {
+   "text": "وقف سامي صامتا لحظة حين دخلت العروس مع والدها.",
+   "en": "Sami stood silent for a moment when the bride entered with her father.",
+   "ko": "신부가 아버지와 함께 입장하자 사미는 잠시 말없이 서 있었어요.",
+   "blank": "صامتا",
+   "src": "made"
+  },
+  {
+   "text": "بقي ابن رنا صامتا طوال الفحص من شدة الخوف.",
+   "en": "Rana's son stayed silent throughout the checkup out of fear.",
+   "ko": "라나의 아들은 너무 무서워서 검진 내내 아무 말도 못 했어요.",
+   "blank": "صامتا",
+   "src": "made"
+  }
+ ],
+ "w|صان": [
+  {
+   "text": "صان سامي سر المفاجأة حتى اللحظة الأخيرة.",
+   "en": "Sami kept the surprise secret until the last moment.",
+   "ko": "사미는 깜짝 선물 비밀을 마지막 순간까지 지켰어요.",
+   "blank": "صان",
+   "src": "made"
+  },
+  {
+   "text": "قال الطبيب لرنا إن الفرشاة الجيدة تصون الأسنان سنوات طويلة.",
+   "en": "The dentist told Rana that a good brush keeps teeth healthy for many years.",
+   "ko": "의사는 라나에게 좋은 칫솔이 이를 오래 지켜 준다고 했어요.",
+   "blank": "تصون",
+   "src": "made"
   }
  ],
  "w|صب": [
@@ -37236,6 +37732,22 @@
    "en": "Sara tries to reduce randomness in how the samples are chosen.",
    "ko": "사라는 샘플을 고를 때 무작위성을 줄이려고 해요.",
    "blank": "العشوائية",
+   "src": "made"
+  }
+ ],
+ "w|عشيرة": [
+  {
+   "text": "حضرت عشيرة العروس كلها من القرية إلى المدينة.",
+   "en": "The bride's whole clan came from the village to the city.",
+   "ko": "신부네 일가친척이 모두 시골에서 도시로 올라왔어요.",
+   "blank": "عشيرة",
+   "src": "made"
+  },
+  {
+   "text": "قرأت رنا في غرفة الانتظار مقالا عن عادات عشيرة قديمة في الصحراء.",
+   "en": "In the waiting room Rana read an article about the customs of an old desert clan.",
+   "ko": "라나는 대기실에서 사막의 옛 부족 풍습에 관한 기사를 읽었어요.",
+   "blank": "عشيرة",
    "src": "made"
   }
  ],
@@ -43627,6 +44139,22 @@
    "blank": "كحول"
   }
  ],
+ "w|كذاب": [
+  {
+   "text": "ضحك الجميع حين قال سامي إن العريس كذاب في مواعيده فقط.",
+   "en": "Everyone laughed when Sami said the groom is a liar only about his timing.",
+   "ko": "사미가 신랑은 시간 약속에서만 거짓말쟁이라고 하자 모두 웃었어요.",
+   "blank": "كذاب",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت رنا عندما قال ابنها إن معجون الأسنان كذاب لأن طعمه ليس فراولة حقيقية.",
+   "en": "Rana laughed when her son said the toothpaste is a liar because it doesn't taste like real strawberries.",
+   "ko": "아들이 치약이 진짜 딸기 맛이 아니니까 거짓말쟁이라고 하자 라나는 웃었어요.",
+   "blank": "كذاب",
+   "src": "made"
+  }
+ ],
  "w|كذب": [
   {
    "text": "كذب الطفل بشأن宿واجبه.",
@@ -46983,6 +47511,22 @@
    "blank": "متحد"
   }
  ],
+ "w|متحدث": [
+  {
+   "text": "اختار العريس سامي ليكون المتحدث باسم العائلة في الحفل.",
+   "en": "The groom chose Sami to be the family's spokesman at the party.",
+   "ko": "신랑은 사미를 잔치에서 가족 대표로 말할 사람으로 정했어요.",
+   "blank": "المتحدث",
+   "src": "made"
+  },
+  {
+   "text": "استمعت رنا في الراديو إلى متحدث باسم وزارة الصحة يتكلم عن صحة الفم.",
+   "en": "Rana listened on the radio to a Health Ministry spokesman talking about oral health.",
+   "ko": "라나는 라디오에서 구강 건강에 대해 말하는 보건부 대변인의 말을 들었어요.",
+   "blank": "متحدث",
+   "src": "made"
+  }
+ ],
  "w|متحرك": [
   {
    "text": "ركب علي على الحزام المتحرك وبدأ يركض ببطء.",
@@ -49133,6 +49677,22 @@
    "blank": "مراهق"
   }
  ],
+ "w|مراهقة": [
+  {
+   "text": "تذكر سامي أيام مراهقة العريس عندما كانا يلعبان الكرة معا.",
+   "en": "Sami remembered the groom's teenage years when they used to play football together.",
+   "ko": "사미는 신랑과 함께 축구하던 사춘기 시절을 떠올렸어요.",
+   "blank": "مراهقة",
+   "src": "made"
+  },
+  {
+   "text": "قال الطبيب لرنا إن أسنان الحكمة تظهر غالبا في نهاية المراهقة.",
+   "en": "The doctor told Rana that wisdom teeth usually appear at the end of adolescence.",
+   "ko": "의사는 라나에게 사랑니는 대개 사춘기 끝 무렵에 난다고 했어요.",
+   "blank": "المراهقة",
+   "src": "made"
+  }
+ ],
  "w|مربع": [
   {
    "text": "هذا الصندوق مربع الشكل.",
@@ -50860,6 +51420,22 @@
    "en": "Layla's win in the contest wasn't a coincidence but the fruit of long training.",
    "ko": "라일라가 대회에서 이긴 건 우연이 아니라 오랜 훈련의 결과였어요.",
    "blank": "مصادفة",
+   "src": "made"
+  }
+ ],
+ "w|مصارعة": [
+  {
+   "text": "تحدث سامي مع العريس عن مباراة مصارعة شاهداها الليلة الماضية.",
+   "en": "Sami talked with the groom about a wrestling match they watched last night.",
+   "ko": "사미는 신랑과 어젯밤 본 레슬링 경기 이야기를 했어요.",
+   "blank": "مصارعة",
+   "src": "made"
+  },
+  {
+   "text": "كسر ابن رنا سنه في تدريب المصارعة، فأخذته إلى الطبيب.",
+   "en": "Rana's son broke his tooth in wrestling practice, so she took him to the dentist.",
+   "ko": "라나의 아들이 레슬링 연습을 하다 이가 부러져서 치과에 데려갔어요.",
+   "blank": "المصارعة",
    "src": "made"
   }
  ],
@@ -56119,6 +56695,22 @@
    "blank": "نشف"
   }
  ],
+ "w|نشوة": [
+  {
+   "text": "عاش سامي نشوة الفرح وهو يرقص مع صديقه العريس.",
+   "en": "Sami felt the euphoria of joy as he danced with his friend the groom.",
+   "ko": "사미는 신랑인 친구와 춤을 추며 기쁨에 흠뻑 취했어요.",
+   "blank": "نشوة",
+   "src": "made"
+  },
+  {
+   "text": "شعرت رنا بنشوة غريبة بعد أن زال الألم أخيرا.",
+   "en": "Rana felt a strange elation once the pain finally went away.",
+   "ko": "통증이 드디어 사라지자 라나는 묘한 해방감을 느꼈어요.",
+   "blank": "بنشوة",
+   "src": "made"
+  }
+ ],
  "w|نشيط": [
   {
    "text": "ابني نشيط ويحب اللعب طوال اليوم.",
@@ -57781,6 +58373,22 @@
    "blank": "هلع"
   }
  ],
+ "w|هلم": [
+  {
+   "text": "نادى سامي أصدقاءه: هلم إلى حلبة الرقص!",
+   "en": "Sami called to his friends: come on, to the dance floor!",
+   "ko": "사미는 친구들에게 \"어서 춤추러 가자!\" 하고 외쳤어요.",
+   "blank": "هلم",
+   "src": "made"
+  },
+  {
+   "text": "قالت الممرضة لرنا: هلمي، جاء دورك.",
+   "en": "The nurse told Rana: come along, it's your turn.",
+   "ko": "간호사가 라나에게 \"자, 이제 차례예요\"라고 했어요.",
+   "blank": "هلمي",
+   "src": "made"
+  }
+ ],
  "w|هم": [
   {
    "text": "هم يحبون القراءة كثيراً.",
@@ -58309,6 +58917,22 @@
    "en": "I went to the market with Ahmed's mother.",
    "ko": "나는 아흐마드의 어머니와 시장에 갔다.",
    "blank": "والدة"
+  }
+ ],
+ "w|والله": [
+  {
+   "text": "قال سامي للعريس: والله ما رأيتك سعيدا هكذا من قبل.",
+   "en": "Sami told the groom: I swear I've never seen you this happy before.",
+   "ko": "사미는 신랑에게 \"정말이지 이렇게 행복해 보이는 건 처음 본다\"고 했어요.",
+   "blank": "والله",
+   "src": "made"
+  },
+  {
+   "text": "قالت رنا للطبيب: والله لم آكل حلوى منذ أسبوع.",
+   "en": "Rana told the doctor: I swear I haven't eaten sweets for a week.",
+   "ko": "라나는 의사에게 \"정말 일주일 동안 단 거 안 먹었어요\"라고 했어요.",
+   "blank": "والله",
+   "src": "made"
   }
  ],
  "w|والي": [
@@ -59345,6 +59969,22 @@
    "en": "The neighbor was rude when speaking to me.",
    "ko": "이웃이 나에게 말할 때 무례했어.",
    "blank": "وقح"
+  }
+ ],
+ "w|وقر": [
+  {
+   "text": "يوقر سامي جده ويقدمه على الجميع في السلام.",
+   "en": "Sami reveres his grandfather and greets him before everyone else.",
+   "ko": "사미는 할아버지를 공경해서 누구보다 먼저 인사드려요.",
+   "blank": "يوقر",
+   "src": "made"
+  },
+  {
+   "text": "تعلم رنا ابنها أن يوقر الأطباء والمعلمين.",
+   "en": "Rana teaches her son to respect doctors and teachers.",
+   "ko": "라나는 아들에게 의사와 선생님을 존경하라고 가르쳐요.",
+   "blank": "يوقر",
+   "src": "made"
   }
  ],
  "w|وقع": [
