@@ -3273,6 +3273,22 @@
    "blank": "अलग अलग"
   }
  ],
+ "w|अलगाव": [
+  {
+   "text": "इतने साल के अलगाव के बाद भी अजय को विनोद की हँसी साफ़ याद है।",
+   "en": "Even after so many years apart, Ajay clearly remembers Vinod's laugh.",
+   "ko": "그렇게 오래 떨어져 지냈는데도 아자이는 비노드의 웃음소리를 또렷이 기억해요.",
+   "blank": "अलगाव",
+   "src": "made"
+  },
+  {
+   "text": "सम्मेलन में एक हफ़्ते के अलगाव के बाद सीमा अपने बच्चों से मिलकर बहुत खुश हुई।",
+   "en": "After a week apart at a conference, Seema was very happy to see her children.",
+   "ko": "학회 때문에 일주일 떨어져 있다가 시마는 아이들을 만나서 아주 기뻤어요.",
+   "blank": "अलगाव",
+   "src": "made"
+  }
+ ],
  "w|अलगाववादी": [
   {
    "text": "टीवी पर ख़बर थी कि सीमा के पास एक अलगाववादी नेता को गिरफ़्तार किया गया है।",
@@ -3577,6 +3593,22 @@
    "en": "A portion of the profit will go to charity.",
    "ko": "이익의 일부가 기부에 쓰일 거야.",
    "blank": "अंश"
+  }
+ ],
+ "w|अशांत": [
+  {
+   "text": "पिताजी के ऑपरेशन के दिनों में अजय का मन बहुत अशांत था।",
+   "en": "Ajay's mind was very restless during the days of his father's operation.",
+   "ko": "아버지 수술 때 아자이는 마음이 많이 불안했어요.",
+   "blank": "अशांत",
+   "src": "made"
+  },
+  {
+   "text": "ड्रिल की आवाज़ सुनकर छोटे बच्चे अक्सर अशांत हो जाते हैं।",
+   "en": "Small children often get restless when they hear the drill.",
+   "ko": "어린아이들은 드릴 소리를 들으면 자주 불안해해요.",
+   "blank": "अशांत",
+   "src": "made"
   }
  ],
  "w|अश्लील": [
@@ -6401,6 +6433,22 @@
    "blank": "इच्छा"
   }
  ],
+ "w|इच्छाशक्ति": [
+  {
+   "text": "अजय ने अपनी इच्छाशक्ति के बल पर सिगरेट छोड़ दी है।",
+   "en": "Ajay has quit smoking through sheer willpower.",
+   "ko": "아자이는 의지력으로 담배를 끊었어요.",
+   "blank": "इच्छाशक्ति",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने कहा कि तंबाकू छोड़ने के लिए दवा से ज़्यादा इच्छाशक्ति चाहिए।",
+   "en": "Seema said quitting tobacco takes more willpower than medicine.",
+   "ko": "시마는 담배를 끊으려면 약보다 의지가 더 필요하다고 했어요.",
+   "blank": "इच्छाशक्ति",
+   "src": "made"
+  }
+ ],
  "w|इच्छुक": [
   {
    "text": "रवि ने कहा कि वह अगले महीने के ट्रेनिंग कैंप में जाने का इच्छुक है।",
@@ -8001,6 +8049,22 @@
    "blank": "उदासी"
   }
  ],
+ "w|उदासीन": [
+  {
+   "text": "शहर आकर अजय कई चीज़ों के प्रति उदासीन हो गया है, पर दोस्ती के प्रति नहीं।",
+   "en": "Since moving to the city, Ajay has become indifferent to many things, but not to friendship.",
+   "ko": "도시에 온 뒤 아자이는 많은 것에 무심해졌지만 우정에는 그렇지 않아요.",
+   "blank": "उदासीन",
+   "src": "made"
+  },
+  {
+   "text": "कुछ लोग दाँतों की सफ़ाई के प्रति इतने उदासीन होते हैं कि दर्द होने पर ही आते हैं।",
+   "en": "Some people are so indifferent to dental hygiene that they only come when it hurts.",
+   "ko": "어떤 사람들은 이 관리에 너무 무심해서 아플 때만 와요.",
+   "blank": "उदासीन",
+   "src": "made"
+  }
+ ],
  "w|उदाहरण": [
   {
    "text": "एक उदाहरण से बात साफ़ हो जाती है।",
@@ -8149,6 +8213,38 @@
    "en": "Borrowed money should be repaid soon.",
    "ko": "빚진 돈은 빨리 갚아야 해.",
    "blank": "उधार"
+  }
+ ],
+ "w|उधार देना": [
+  {
+   "text": "अजय ने लिखा कि मुश्किल दिनों में विनोद ने उसे बिना पूछे पैसे उधार दिए थे।",
+   "en": "Ajay wrote that in hard times Vinod had lent him money without asking anything.",
+   "ko": "아자이는 힘든 시절에 비노드가 아무것도 묻지 않고 돈을 빌려줬다고 썼어요.",
+   "blank": "उधार दिए",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने पड़ोस के डॉक्टर को अपनी एक लाइट कुछ दिन के लिए उधार दी।",
+   "en": "Seema lent one of her lights to the doctor next door for a few days.",
+   "ko": "시마는 옆 병원 의사에게 조명 하나를 며칠 빌려줬어요.",
+   "blank": "उधार दी",
+   "src": "made"
+  }
+ ],
+ "w|उधार लेना": [
+  {
+   "text": "कॉलेज में अजय ने विनोद से एक बार साइकिल उधार ली थी और लौटाना भूल गया था।",
+   "en": "In college, Ajay once borrowed a bicycle from Vinod and forgot to return it.",
+   "ko": "대학 시절 아자이는 비노드에게 자전거를 빌렸다가 돌려주는 걸 잊은 적이 있어요.",
+   "blank": "उधार ली",
+   "src": "made"
+  },
+  {
+   "text": "नई एक्स-रे मशीन खरीदने के लिए सीमा ने बैंक से पैसे उधार लिए।",
+   "en": "Seema borrowed money from the bank to buy a new X-ray machine.",
+   "ko": "시마는 새 엑스레이 기계를 사려고 은행에서 돈을 빌렸어요.",
+   "blank": "उधार लिए",
+   "src": "made"
   }
  ],
  "w|उनका": [
@@ -10350,6 +10446,22 @@
    "en": "Along the way, mustard was being harvested in the fields.",
    "ko": "가는 길 밭에서는 겨자 수확이 한창이었어요.",
    "blank": "कटाई",
+   "src": "made"
+  }
+ ],
+ "w|कटोरा": [
+  {
+   "text": "अजय के पास अब भी दादी का पीतल का कटोरा है।",
+   "en": "Ajay still has his grandmother's brass bowl.",
+   "ko": "아자이는 할머니의 놋그릇을 아직도 가지고 있어요.",
+   "blank": "कटोरा",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने मरीज़ को कुल्ला करने के लिए पानी का एक छोटा कटोरा दिया।",
+   "en": "Seema gave the patient a small bowl of water to rinse with.",
+   "ko": "시마는 환자에게 입을 헹굴 물 한 그릇을 건넸어요.",
+   "blank": "कटोरा",
    "src": "made"
   }
  ],
@@ -14115,6 +14227,22 @@
    "blank": "केस"
   }
  ],
+ "w|केसर": [
+  {
+   "text": "अजय को आज भी विनोद की दादी की केसर वाली खीर का स्वाद याद है।",
+   "en": "Ajay still remembers the taste of Vinod's grandmother's saffron kheer.",
+   "ko": "아자이는 아직도 비노드 할머니의 사프란 키르 맛을 기억해요.",
+   "blank": "केसर",
+   "src": "made"
+  },
+  {
+   "text": "एक बुज़ुर्ग मरीज़ ने डॉ. सीमा को केसर वाली मिठाई का डिब्बा भेंट किया।",
+   "en": "An elderly patient gave Dr Seema a box of saffron sweets.",
+   "ko": "한 노인 환자가 시마 선생님께 사프란 과자 한 상자를 선물했어요.",
+   "blank": "केसर",
+   "src": "made"
+  }
+ ],
  "w|कैंची": [
   {
    "text": "विकास ने कैंची से पुराने परदों के धागे काटे।",
@@ -17195,6 +17323,22 @@
    "en": "Don't go down the wrong road.",
    "ko": "잘못된 길로 가지 마.",
    "blank": "ग़लत"
+  }
+ ],
+ "w|ग़लतफ़हमी": [
+  {
+   "text": "अजय ने माना कि उनकी पुरानी लड़ाई बस एक ग़लतफ़हमी थी।",
+   "en": "Ajay admitted that their old fight was just a misunderstanding.",
+   "ko": "아자이는 둘의 옛 다툼이 그저 오해였다고 인정했어요.",
+   "blank": "ग़लतफ़हमी",
+   "src": "made"
+  },
+  {
+   "text": "एक मरीज़ को ग़लतफ़हमी थी कि दाँतों की सफ़ाई से दाँत कमज़ोर हो जाते हैं।",
+   "en": "One patient was under the misconception that cleaning teeth makes them weak.",
+   "ko": "한 환자는 스케일링을 하면 이가 약해진다고 잘못 알고 있었어요.",
+   "blank": "ग़लतफ़हमी",
+   "src": "made"
   }
  ],
  "w|ग़लती": [
@@ -20737,6 +20881,22 @@
    "blank": "चित्र"
   }
  ],
+ "w|चित्रकार": [
+  {
+   "text": "अजय ने बताया कि उसकी बेटी बड़ी होकर चित्रकार बनना चाहती है।",
+   "en": "Ajay said his daughter wants to become a painter when she grows up.",
+   "ko": "아자이는 딸이 커서 화가가 되고 싶어 한다고 전했어요.",
+   "blank": "चित्रकार",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के क्लिनिक की दीवारों पर एक स्थानीय चित्रकार ने हँसते दाँतों की तस्वीरें बनाई हैं।",
+   "en": "A local painter has drawn pictures of smiling teeth on the walls of Seema's clinic.",
+   "ko": "동네 화가가 시마 치과 벽에 웃는 이 그림을 그려 놓았어요.",
+   "blank": "चित्रकार",
+   "src": "made"
+  }
+ ],
  "w|चित्रण": [
   {
    "text": "कार्टूनिस्ट ने नेताओं का मज़ेदार चित्रण किया।",
@@ -20798,6 +20958,22 @@
    "en": "Seema gave tea and chips to the workers unloading the things.",
    "ko": "시마는 짐을 내리는 인부들에게 차와 감자칩을 내줬어요.",
    "blank": "चिप्स",
+   "src": "made"
+  }
+ ],
+ "w|चिराग़": [
+  {
+   "text": "दिवाली की रात अजय ने छत पर मिट्टी के चिराग़ जलाए और विनोद को याद किया।",
+   "en": "On Diwali night, Ajay lit clay lamps on the roof and thought of Vinod.",
+   "ko": "디왈리 밤에 아자이는 옥상에 흙 등잔을 밝히고 비노드를 떠올렸어요.",
+   "blank": "चिराग़",
+   "src": "made"
+  },
+  {
+   "text": "डॉ. सीमा की मेज़ पर पीतल का एक छोटा चिराग़ सजा है।",
+   "en": "A small brass lamp decorates Dr Seema's desk.",
+   "ko": "시마 선생님 책상에는 작은 놋 등잔이 놓여 있어요.",
+   "blank": "चिराग़",
    "src": "made"
   }
  ],
@@ -23271,6 +23447,22 @@
    "blank": "जलवायु"
   }
  ],
+ "w|जलवायु परिवर्तन": [
+  {
+   "text": "अजय ने लिखा कि जलवायु परिवर्तन की वजह से अब गाँव में पहले जैसी सर्दी नहीं पड़ती।",
+   "en": "Ajay wrote that because of climate change, winters in the village are no longer as cold as before.",
+   "ko": "아자이는 기후 변화 때문에 이제 마을에 예전 같은 추위가 없다고 썼어요.",
+   "blank": "जलवायु परिवर्तन",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के प्रतीक्षा कक्ष में रखी पत्रिका में जलवायु परिवर्तन पर एक लंबा लेख छपा था।",
+   "en": "The magazine in Seema's waiting room had a long article on climate change.",
+   "ko": "시마 치과 대기실 잡지에는 기후 변화에 관한 긴 기사가 실려 있었어요.",
+   "blank": "जलवायु परिवर्तन",
+   "src": "made"
+  }
+ ],
  "w|जलसा": [
   {
    "text": "स्कूल के सालाना जलसे में राहुल ने मंच पर कविता सुनाई।",
@@ -24582,6 +24774,22 @@
    "en": "They are twin sisters.",
    "ko": "그 둘은 쌍둥이 자매예요.",
    "blank": "जुड़वाँ",
+   "src": "made"
+  }
+ ],
+ "w|जुड़ाव": [
+  {
+   "text": "बरसों बाद भी अजय को अपने कस्बे से गहरा जुड़ाव महसूस होता है।",
+   "en": "Even after years, Ajay feels a deep attachment to his hometown.",
+   "ko": "몇 년이 지나도 아자이는 고향 마을에 깊은 애착을 느껴요.",
+   "blank": "जुड़ाव",
+   "src": "made"
+  },
+  {
+   "text": "बरसों से आने वाले मरीज़ों से सीमा का एक ख़ास जुड़ाव बन गया है।",
+   "en": "Seema has formed a special bond with patients who have come for years.",
+   "ko": "시마는 몇 년째 오는 환자들과 특별한 정이 들었어요.",
+   "blank": "जुड़ाव",
    "src": "made"
   }
  ],
@@ -28391,6 +28599,22 @@
    "blank": "ताऊ"
   }
  ],
+ "w|ताक": [
+  {
+   "text": "पुराने घर की दीवार के ताक पर विनोद की भेजी चिट्ठियाँ अब भी रखी हैं।",
+   "en": "The letters Vinod sent are still kept in the wall niche of the old house.",
+   "ko": "옛집 벽감에는 비노드가 보낸 편지들이 아직도 놓여 있어요.",
+   "blank": "ताक",
+   "src": "made"
+  },
+  {
+   "text": "डॉ. सीमा दाँतों के पुराने साँचे दीवार के ताक पर रखती हैं।",
+   "en": "Dr Seema keeps old dental moulds in the wall niche.",
+   "ko": "시마 선생님은 오래된 치아 본을 벽감에 두세요.",
+   "blank": "ताक",
+   "src": "made"
+  }
+ ],
  "w|ताकत": [
   {
    "text": "व्यायाम से ताकत बढ़ती है।",
@@ -28818,6 +29042,22 @@
    "en": "This quarter, the revenue from Neha's app doubled.",
    "ko": "이번 분기에 네하 앱의 수익이 두 배가 됐어요.",
    "blank": "तिमाही",
+   "src": "made"
+  }
+ ],
+ "w|तिरस्कार": [
+  {
+   "text": "उस दिन अजय ने विनोद की सलाह तिरस्कार से ठुकरा दी थी, और इसका उसे आज तक दुख है।",
+   "en": "That day Ajay had scornfully rejected Vinod's advice, and he still regrets it.",
+   "ko": "그날 아자이는 비노드의 조언을 깔보듯 거절했는데, 지금까지도 그게 마음 아파요.",
+   "blank": "तिरस्कार",
+   "src": "made"
+  },
+  {
+   "text": "सीमा कभी किसी मरीज़ के गंदे दाँतों को तिरस्कार की नज़र से नहीं देखती।",
+   "en": "Seema never looks at any patient's dirty teeth with contempt.",
+   "ko": "시마는 환자의 더러운 이를 결코 업신여기는 눈으로 보지 않아요.",
+   "blank": "तिरस्कार",
    "src": "made"
   }
  ],
@@ -29385,6 +29625,22 @@
    "en": "Teaching a child to swim is important.",
    "ko": "아이에게 수영을 가르치는 게 중요해.",
    "blank": "तैरना"
+  }
+ ],
+ "w|तैराकी": [
+  {
+   "text": "अजय ने याद दिलाया कि दोनों दोस्तों ने गाँव की नहर में तैराकी सीखी थी।",
+   "en": "Ajay reminded him that the two friends had learned swimming in the village canal.",
+   "ko": "아자이는 두 친구가 마을 수로에서 수영을 배웠다는 걸 떠올려 줬어요.",
+   "blank": "तैराकी",
+   "src": "made"
+  },
+  {
+   "text": "तैराकी के दौरान फिसलकर एक लड़के का आगे का दाँत टूट गया था।",
+   "en": "A boy had slipped while swimming and broken his front tooth.",
+   "ko": "한 남자아이가 수영하다 미끄러져 앞니가 부러졌어요.",
+   "blank": "तैराकी",
+   "src": "made"
   }
  ],
  "w|तो": [
@@ -31399,6 +31655,22 @@
    "en": "The oil lamp was about to go out in the wind.",
    "ko": "바람에 등잔이 꺼질 뻔했어.",
    "blank": "दीया"
+  }
+ ],
+ "w|दीवान": [
+  {
+   "text": "अजय ने बैठक के पुराने दीवान पर बैठकर कॉलेज की तस्वीरें देखीं।",
+   "en": "Ajay sat on the old divan in the sitting room and looked at college photos.",
+   "ko": "아자이는 거실의 낡은 긴 의자에 앉아 대학 시절 사진을 봤어요.",
+   "blank": "दीवान",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के क्लिनिक के प्रतीक्षा कक्ष में एक लंबा दीवान रखा है।",
+   "en": "There is a long divan in the waiting room of Seema's clinic.",
+   "ko": "시마 치과 대기실에는 긴 의자가 하나 있어요.",
+   "blank": "दीवान",
+   "src": "made"
   }
  ],
  "w|दीवाना": [
@@ -37191,6 +37463,22 @@
    "src": "made"
   }
  ],
+ "w|पंजा": [
+  {
+   "text": "आँगन की गीली मिट्टी में अजय को किसी बिल्ली के पंजे के निशान दिखे।",
+   "en": "Ajay saw a cat's paw prints in the wet soil of the courtyard.",
+   "ko": "아자이는 마당의 젖은 흙에서 고양이 발자국을 봤어요.",
+   "blank": "पंजे",
+   "src": "made"
+  },
+  {
+   "text": "एक बच्चे ने बताया कि उसकी बिल्ली ने पंजा मारकर उसके होंठ पर खरोंच कर दी।",
+   "en": "A child said his cat had swiped a paw and scratched his lip.",
+   "ko": "한 아이는 고양이가 앞발로 할퀴어서 입술에 상처가 났다고 했어요.",
+   "blank": "पंजा",
+   "src": "made"
+  }
+ ],
  "w|पजामा": [
   {
    "text": "नया सहकर्मी बोला कि घर पहुँचते ही वह सबसे पहले पजामा पहनता है।",
@@ -38751,6 +39039,22 @@
    "src": "made"
   }
  ],
+ "w|पश्चाताप": [
+  {
+   "text": "अजय के मन में उस झगड़े का पश्चाताप बरसों से था।",
+   "en": "Ajay had felt remorse about that quarrel for years.",
+   "ko": "아자이는 몇 년 동안 그 다툼을 후회하고 있었어요.",
+   "blank": "पश्चाताप",
+   "src": "made"
+  },
+  {
+   "text": "दाँत सड़ जाने के बाद उस मरीज़ को रोज़ ब्रश न करने का पश्चाताप हुआ।",
+   "en": "After his tooth decayed, that patient regretted not brushing every day.",
+   "ko": "이가 썩고 나서야 그 환자는 매일 양치하지 않은 걸 후회했어요.",
+   "blank": "पश्चाताप",
+   "src": "made"
+  }
+ ],
  "w|पश्चिम": [
   {
    "text": "सूरज पश्चिम में डूब रहा है।",
@@ -38925,6 +39229,22 @@
    "en": "She wore a red sari.",
    "ko": "그녀는 빨간 사리를 입었어.",
    "blank": "पहनी"
+  }
+ ],
+ "w|पहर": [
+  {
+   "text": "अजय रात के तीसरे पहर तक बैठकर विनोद को चिट्ठी लिखता रहा।",
+   "en": "Ajay sat writing a letter to Vinod until the third watch of the night.",
+   "ko": "아자이는 밤 삼경까지 앉아서 비노드에게 편지를 썼어요.",
+   "blank": "पहर",
+   "src": "made"
+  },
+  {
+   "text": "दाँत के दर्द से परेशान एक मरीज़ ने रात के दूसरे पहर सीमा को फ़ोन किया।",
+   "en": "A patient suffering from toothache called Seema in the second watch of the night.",
+   "ko": "치통에 시달리던 환자가 한밤중에 시마에게 전화했어요.",
+   "blank": "पहर",
+   "src": "made"
   }
  ],
  "w|पहल": [
@@ -40798,6 +41118,22 @@
    "en": "To get a clear picture, Deepa put a white background behind the sample.",
    "ko": "사진이 깨끗하게 나오도록 디파는 시료 뒤에 흰 배경을 댔어요.",
    "blank": "पृष्ठभूमि",
+   "src": "made"
+  }
+ ],
+ "w|पेंच": [
+  {
+   "text": "दरवाज़े का कब्ज़ा ढीला था, तो अजय ने खुद पेंच कस दिया।",
+   "en": "The door hinge was loose, so Ajay tightened the screw himself.",
+   "ko": "문 경첩이 헐거워서 아자이가 직접 나사를 조였어요.",
+   "blank": "पेंच",
+   "src": "made"
+  },
+  {
+   "text": "सहायक ने डेंटल कुर्सी के हत्थे का ढीला पेंच कस दिया।",
+   "en": "The assistant tightened the loose screw on the dental chair's armrest.",
+   "ko": "조수가 치과 의자 팔걸이의 헐거운 나사를 조였어요.",
+   "blank": "पेंच",
    "src": "made"
   }
  ],
@@ -43390,6 +43726,22 @@
    "en": "The store is usually very crowded before the festivals.",
    "ko": "명절 전에는 매장이 대개 무척 붐벼요.",
    "blank": "प्रायः",
+   "src": "made"
+  }
+ ],
+ "w|प्रायश्चित": [
+  {
+   "text": "अजय ने लिखा कि यह लंबी चिट्ठी उसकी पुरानी गलती का प्रायश्चित है।",
+   "en": "Ajay wrote that this long letter is his atonement for an old mistake.",
+   "ko": "아자이는 이 긴 편지가 옛 잘못에 대한 속죄라고 썼어요.",
+   "blank": "प्रायश्चित",
+   "src": "made"
+  },
+  {
+   "text": "एक मरीज़ ने हँसकर कहा कि रोज़ मिठाई खाने का प्रायश्चित वह अब दाँत के दर्द से कर रहा है।",
+   "en": "A patient joked that he is now atoning for eating sweets every day with a toothache.",
+   "ko": "한 환자는 매일 단것을 먹은 죗값을 이제 치통으로 치르고 있다며 웃었어요.",
+   "blank": "प्रायश्चित",
    "src": "made"
   }
  ],
@@ -48193,6 +48545,22 @@
    "src": "made"
   }
  ],
+ "w|बेर": [
+  {
+   "text": "स्कूल के पीछे वाले पेड़ के खट्टे बेर अजय को आज भी याद आते हैं।",
+   "en": "Ajay still remembers the sour jujubes from the tree behind the school.",
+   "ko": "아자이는 학교 뒤 나무의 새콤한 대추가 아직도 생각나요.",
+   "blank": "बेर",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने एक बच्चे को समझाया कि बेर की गुठली दाँतों से नहीं तोड़नी चाहिए।",
+   "en": "Seema explained to a child that jujube pits should not be cracked with teeth.",
+   "ko": "시마는 아이에게 대추씨를 이로 깨면 안 된다고 알려 줬어요.",
+   "blank": "बेर",
+   "src": "made"
+  }
+ ],
  "w|बेरोज़गार": [
   {
    "text": "लंबे समय तक बेरोज़गार रहना कठिन है।",
@@ -48694,6 +49062,22 @@
    "en": "Neha finds running-only practice without a ball boring.",
    "ko": "네하는 공 없이 뛰기만 하는 연습이 지루하다고 느껴요.",
    "blank": "बोरिंग",
+   "src": "made"
+  }
+ ],
+ "w|बोरी": [
+  {
+   "text": "अजय ने विनोद को लिखा कि माँ आज भी चावल की बोरी रसोई के कोने में रखती हैं।",
+   "en": "Ajay wrote to Vinod that his mother still keeps the sack of rice in the corner of the kitchen.",
+   "ko": "아자이는 비노드에게 어머니가 아직도 쌀 포대를 부엌 구석에 두신다고 썼어요.",
+   "blank": "बोरी",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के क्लिनिक के पीछे मरम्मत के लिए सीमेंट की एक बोरी पड़ी थी।",
+   "en": "A sack of cement lay behind Seema's clinic for repairs.",
+   "ko": "시마의 치과 뒤에는 수리용 시멘트 한 포대가 놓여 있었어요.",
+   "blank": "बोरी",
    "src": "made"
   }
  ],
@@ -50261,6 +50645,22 @@
    "en": "Keep the night meal light.",
    "ko": "저녁 식사는 가볍게 해.",
    "blank": "भोजन"
+  }
+ ],
+ "w|भोर": [
+  {
+   "text": "अजय आज भी भोर में उठकर छत पर टहलता है, जैसे बचपन में करता था।",
+   "en": "Ajay still gets up at dawn and walks on the roof, as he did in childhood.",
+   "ko": "아자이는 어릴 때처럼 지금도 새벽에 일어나 옥상을 거닐어요.",
+   "blank": "भोर",
+   "src": "made"
+  },
+  {
+   "text": "दाँत के दर्द से बेहाल एक आदमी भोर होते ही क्लिनिक के बाहर आ बैठा।",
+   "en": "A man in agony from toothache came and sat outside the clinic as soon as dawn broke.",
+   "ko": "치통에 시달리던 남자가 동트자마자 치과 앞에 와 앉았어요.",
+   "blank": "भोर",
+   "src": "made"
   }
  ],
  "w|भौंकना": [
@@ -51845,6 +52245,22 @@
    "blank": "मसाला"
   }
  ],
+ "w|मसालेदार": [
+  {
+   "text": "माँ के हाथ के मसालेदार आलू का स्वाद अजय को किसी होटल में नहीं मिला।",
+   "en": "Ajay has never found the taste of his mother's spicy potatoes in any restaurant.",
+   "ko": "아자이는 어머니가 만든 매콤한 감자 맛을 어느 식당에서도 찾지 못했어요.",
+   "blank": "मसालेदार",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने मरीज़ को दो दिन तक मसालेदार खाना न खाने को कहा।",
+   "en": "Seema told the patient not to eat spicy food for two days.",
+   "ko": "시마는 환자에게 이틀 동안 매운 음식을 먹지 말라고 했어요.",
+   "blank": "मसालेदार",
+   "src": "made"
+  }
+ ],
  "w|मसूड़ा": [
   {
    "text": "दंत चिकित्सक ने करण से कहा कि मसूड़ों से ख़ून आना ठीक नहीं है।",
@@ -52430,6 +52846,22 @@
    "en": "An elderly office attendant still lights incense with matches.",
    "ko": "회사의 나이 든 사환은 아직도 성냥으로 향을 피워요.",
    "blank": "माचिस",
+   "src": "made"
+  }
+ ],
+ "w|मातम": [
+  {
+   "text": "अजय ने लिखा कि नानी के गुज़रने पर पूरे मोहल्ले में मातम छा गया था।",
+   "en": "Ajay wrote that when his grandmother passed away, the whole neighbourhood went into mourning.",
+   "ko": "아자이는 외할머니가 돌아가셨을 때 온 동네가 슬픔에 잠겼다고 썼어요.",
+   "blank": "मातम",
+   "src": "made"
+  },
+  {
+   "text": "पुराने रिसेप्शनिस्ट के निधन पर सीमा के क्लिनिक में एक दिन मातम का माहौल रहा।",
+   "en": "When the old receptionist passed away, Seema's clinic was in mourning for a day.",
+   "ko": "오랜 접수 직원이 세상을 떠나자 시마 치과는 하루 동안 애도 분위기였어요.",
+   "blank": "मातम",
    "src": "made"
   }
  ],
@@ -53420,6 +53852,22 @@
    "en": "Shalini's simple wedding has now become an example in the neighbourhood.",
    "ko": "샬리니의 소박한 결혼식은 이제 동네의 본보기가 됐어요.",
    "blank": "मिसाल",
+   "src": "made"
+  }
+ ],
+ "w|मिस्त्री": [
+  {
+   "text": "बारिश से पहले अजय ने छत ठीक करवाने के लिए एक मिस्त्री बुलाया।",
+   "en": "Before the rains, Ajay called a mason to fix the roof.",
+   "ko": "장마 전에 아자이는 지붕을 고치려고 수리공을 불렀어요.",
+   "blank": "मिस्त्री",
+   "src": "made"
+  },
+  {
+   "text": "कुर्सी की लाइट खराब होने पर सीमा ने बिजली के मिस्त्री को बुलाया।",
+   "en": "When the chair's light broke, Seema called an electrician.",
+   "ko": "의자 조명이 고장 나자 시마는 전기 기사를 불렀어요.",
+   "blank": "मिस्त्री",
    "src": "made"
   }
  ],
@@ -57577,6 +58025,38 @@
    "blank": "रेलगाड़ी"
   }
  ],
+ "w|रेशम": [
+  {
+   "text": "अजय ने विनोद की बेटी के लिए बनारस से रेशम का एक दुपट्टा भेजा।",
+   "en": "Ajay sent a silk dupatta from Banaras for Vinod's daughter.",
+   "ko": "아자이는 비노드의 딸에게 바라나시에서 비단 두파타를 한 장 보냈어요.",
+   "blank": "रेशम",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने बताया कि पुराने ज़माने में दाँत साफ़ करने के लिए रेशम का धागा इस्तेमाल होता था।",
+   "en": "Seema said that in the old days silk thread was used to clean teeth.",
+   "ko": "시마는 옛날에는 이를 닦을 때 명주실을 썼다고 말했어요.",
+   "blank": "रेशम",
+   "src": "made"
+  }
+ ],
+ "w|रेशमी": [
+  {
+   "text": "अजय की माँ आज भी अपनी शादी की लाल रेशमी साड़ी सँभालकर रखती हैं।",
+   "en": "Ajay's mother still carefully keeps her red silk wedding sari.",
+   "ko": "아자이의 어머니는 결혼할 때 입은 빨간 비단 사리를 아직도 소중히 간직하세요.",
+   "blank": "रेशमी",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने आज सफ़ेद कोट के नीचे हल्के नीले रंग की रेशमी कमीज़ पहनी है।",
+   "en": "Today Seema is wearing a light blue silk shirt under her white coat.",
+   "ko": "시마는 오늘 흰 가운 안에 연한 파란색 실크 셔츠를 입었어요.",
+   "blank": "रेशमी",
+   "src": "made"
+  }
+ ],
  "w|रैली": [
   {
    "text": "कल की रैली के लिए आसपास के थानों से भी सिपाही बुलाए गए हैं।",
@@ -58757,6 +59237,22 @@
    "src": "made"
   }
  ],
+ "w|लिपस्टिक": [
+  {
+   "text": "अजय की छोटी बेटी ने माँ की लिपस्टिक से दीवार पर फूल बना दिए।",
+   "en": "Ajay's little daughter drew flowers on the wall with her mother's lipstick.",
+   "ko": "아자이의 어린 딸이 엄마 립스틱으로 벽에 꽃을 그려 놓았어요.",
+   "blank": "लिपस्टिक",
+   "src": "made"
+  },
+  {
+   "text": "दाँत दिखाने से पहले एक मरीज़ ने अपनी लिपस्टिक पोंछ ली।",
+   "en": "Before having her teeth checked, a patient wiped off her lipstick.",
+   "ko": "이를 보여 주기 전에 한 환자가 립스틱을 닦아 냈어요.",
+   "blank": "लिपस्टिक",
+   "src": "made"
+  }
+ ],
  "w|लिपि": [
   {
    "text": "विकास ने एक ऐसे गाँव पर रिपोर्ट की जहाँ बुज़ुर्ग आज भी पुरानी लिपि में लिखते हैं।",
@@ -59489,6 +59985,22 @@
    "blank": "वफ़ादार"
   }
  ],
+ "w|वयस्क": [
+  {
+   "text": "अजय ने लिखा कि अब वह और विनोद वयस्क हो गए हैं, पर बचपन की शरारतें आज भी याद आती हैं।",
+   "en": "Ajay wrote that he and Vinod are adults now, but he still remembers their childhood mischief.",
+   "ko": "아자이는 자기와 비노드가 이제 어른이 됐지만 어린 시절 장난이 아직도 생각난다고 썼어요.",
+   "blank": "वयस्क",
+   "src": "made"
+  },
+  {
+   "text": "डॉ. सीमा ने बताया कि ज़्यादातर वयस्क लोगों के बत्तीस दाँत होते हैं।",
+   "en": "Dr Seema explained that most adults have thirty-two teeth.",
+   "ko": "시마 선생님은 대부분의 성인은 이가 서른두 개라고 설명했어요.",
+   "blank": "वयस्क",
+   "src": "made"
+  }
+ ],
  "w|वरना": [
   {
    "text": "जल्दी आओ, वरना ट्रेन छूट जाएगी।",
@@ -60014,6 +60526,22 @@
    "en": "An air force plane passed very low over the field.",
    "ko": "공군 비행기 한 대가 밭 위로 아주 낮게 날아갔어요.",
    "blank": "वायुसेना",
+   "src": "made"
+  }
+ ],
+ "w|वारंटी": [
+  {
+   "text": "अजय ने शिकायत की कि नया पंखा वारंटी में था, फिर भी दुकान वाले ने उसे बदलने में हफ़्ता लगा दिया।",
+   "en": "Ajay complained that the new fan was under warranty, yet the shopkeeper took a week to replace it.",
+   "ko": "아자이는 새 선풍기가 보증 기간 안이었는데도 가게 주인이 바꿔 주는 데 일주일이나 걸렸다고 투덜댔어요.",
+   "blank": "वारंटी",
+   "src": "made"
+  },
+  {
+   "text": "नई डेंटल कुर्सी पर कंपनी ने पाँच साल की वारंटी दी है।",
+   "en": "The company has given a five-year warranty on the new dental chair.",
+   "ko": "회사는 새 치과 의자에 오 년 보증을 해 줬어요.",
+   "blank": "वारंटी",
    "src": "made"
   }
  ],
@@ -60910,6 +61438,22 @@
    "en": "Amit's hair has become a bit thin now, and everyone kept teasing him about it.",
    "ko": "아미트는 이제 머리숱이 좀 줄어서 다들 그걸로 놀렸어요.",
    "blank": "विरल",
+   "src": "made"
+  }
+ ],
+ "w|विरह": [
+  {
+   "text": "अजय ने विनोद को विरह के पुराने गीतों की एक सूची भेजी।",
+   "en": "Ajay sent Vinod a list of old songs of separation.",
+   "ko": "아자이는 비노드에게 이별을 노래한 옛 노래 목록을 보냈어요.",
+   "blank": "विरह",
+   "src": "made"
+  },
+  {
+   "text": "प्रतीक्षा कक्ष के रेडियो पर विरह का एक पुराना गीत बज रहा था।",
+   "en": "An old song of separation was playing on the waiting-room radio.",
+   "ko": "대기실 라디오에서 이별을 노래한 옛 노래가 흘러나오고 있었어요.",
+   "blank": "विरह",
    "src": "made"
   }
  ],
@@ -64023,6 +64567,22 @@
    "src": "made"
   }
  ],
+ "w|शौक़ीन": [
+  {
+   "text": "अजय आज भी पुराने फ़िल्मी गानों का उतना ही शौक़ीन है।",
+   "en": "Ajay is still just as fond of old film songs.",
+   "ko": "아자이는 지금도 옛 영화 노래를 그만큼 좋아해요.",
+   "blank": "शौक़ीन",
+   "src": "made"
+  },
+  {
+   "text": "चॉकलेट के शौक़ीन बच्चों के दाँतों में कीड़ा जल्दी लगता है।",
+   "en": "Children who love chocolate get cavities quickly.",
+   "ko": "초콜릿을 좋아하는 아이들은 충치가 빨리 생겨요.",
+   "blank": "शौक़ीन",
+   "src": "made"
+  }
+ ],
  "w|शौचालय": [
   {
    "text": "स्टेशन पर शौचालय साफ़ रखना चाहिए।",
@@ -64504,6 +65064,22 @@
    "en": "As soon as she came on stage, Shalini gave a short speech.",
    "ko": "샬리니는 무대에 오르자마자 짧게 인사말을 했어요.",
    "blank": "संक्षिप्त",
+   "src": "made"
+  }
+ ],
+ "w|सखी": [
+  {
+   "text": "अजय की पत्नी अपनी बचपन की सखी से मिलने मायके गई है।",
+   "en": "Ajay's wife has gone to her parents' home to meet her childhood friend.",
+   "ko": "아자이의 아내는 어릴 적 친구를 만나러 친정에 갔어요.",
+   "blank": "सखी",
+   "src": "made"
+  },
+  {
+   "text": "सीमा की कॉलेज की सखी भी इसी शहर में दाँतों की डॉक्टर है।",
+   "en": "Seema's college friend is also a dentist in this same city.",
+   "ko": "시마의 대학 친구도 같은 도시에서 치과 의사를 해요.",
+   "blank": "सखी",
    "src": "made"
   }
  ],
@@ -68435,6 +69011,22 @@
    "blank": "साठ"
   }
  ],
+ "w|साँड़": [
+  {
+   "text": "गाँव की गली में एक साँड़ अब भी उसी पुराने पीपल के नीचे बैठा रहता है।",
+   "en": "In the village lane, a bull still sits under the same old peepal tree.",
+   "ko": "마을 골목에는 아직도 황소 한 마리가 그 오래된 보리수 아래 앉아 있어요.",
+   "blank": "साँड़",
+   "src": "made"
+  },
+  {
+   "text": "बीच सड़क पर एक साँड़ बैठा था, इसलिए सीमा क्लिनिक देर से पहुँची।",
+   "en": "A bull was sitting in the middle of the road, so Seema reached the clinic late.",
+   "ko": "길 한가운데 황소가 앉아 있어서 시마는 치과에 늦게 도착했어요.",
+   "blank": "साँड़",
+   "src": "made"
+  }
+ ],
  "w|साड़ी": [
   {
    "text": "शादी में उसने लाल साड़ी पहनी।",
@@ -70961,6 +71553,22 @@
    "blank": "सेब"
   }
  ],
+ "w|सेम": [
+  {
+   "text": "इस बार अजय के बगीचे में सेम की बेलें खूब फैली हैं।",
+   "en": "This time the bean vines have spread all over Ajay's garden.",
+   "ko": "이번에 아자이네 마당에는 콩 덩굴이 잔뜩 뻗었어요.",
+   "blank": "सेम",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने मरीज़ को कुछ दिन उबली सेम और दाल जैसी नरम चीज़ें खाने की सलाह दी।",
+   "en": "Seema advised the patient to eat soft things like boiled beans and dal for a few days.",
+   "ko": "시마는 환자에게 며칠 동안 삶은 콩과 달 같은 부드러운 음식을 먹으라고 했어요.",
+   "blank": "सेम",
+   "src": "made"
+  }
+ ],
  "w|सेमेस्टर": [
   {
    "text": "अगले सेमेस्टर में अमित मशीनों की मरम्मत पर एक कोर्स करेगा।",
@@ -71080,6 +71688,22 @@
    "en": "At midnight, hundreds of colourful lights lit up the sky.",
    "ko": "자정이 되자 하늘에 수백 개의 형형색색 불빛이 반짝였어요.",
    "blank": "सैकड़ों",
+   "src": "made"
+  }
+ ],
+ "w|सैंडविच": [
+  {
+   "text": "ऑफ़िस में अजय दोपहर को अक्सर बस एक सैंडविच खाकर काम चला लेता है।",
+   "en": "At the office, Ajay often gets by with just a sandwich at lunch.",
+   "ko": "아자이는 회사에서 점심을 샌드위치 하나로 때울 때가 많아요.",
+   "blank": "सैंडविच",
+   "src": "made"
+  },
+  {
+   "text": "मरीज़ों के बीच समय न मिलने पर सीमा जल्दी में एक सैंडविच खा लेती है।",
+   "en": "When there is no time between patients, Seema quickly eats a sandwich.",
+   "ko": "환자 사이에 짬이 없으면 시마는 서둘러 샌드위치를 먹어요.",
+   "blank": "सैंडविच",
    "src": "made"
   }
  ],
@@ -72691,6 +73315,22 @@
    "en": "The market stayed shut after the attack.",
    "ko": "공격 뒤에 시장은 닫혀 있었어.",
    "blank": "हमले"
+  }
+ ],
+ "w|हमसफ़र": [
+  {
+   "text": "अजय ने लिखा कि ट्रेन में उसका हमसफ़र भी उसी पुराने कस्बे का निकला।",
+   "en": "Ajay wrote that his fellow traveller on the train turned out to be from the same old town.",
+   "ko": "아자이는 기차에서 만난 길동무가 같은 옛 동네 사람이었다고 썼어요.",
+   "blank": "हमसफ़र",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के जीवन के हमसफ़र राकेश भी दाँतों के डॉक्टर हैं।",
+   "en": "Seema's life partner Rakesh is also a dentist.",
+   "ko": "시마의 인생 동반자 라케시도 치과 의사예요.",
+   "blank": "हमसफ़र",
+   "src": "made"
   }
  ],
  "w|हमारा": [
