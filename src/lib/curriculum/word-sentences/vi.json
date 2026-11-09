@@ -177,6 +177,22 @@
    "src": "made"
   }
  ],
+ "w|ầm ĩ": [
+  {
+   "text": "Hùng kể nhà hàng xóm mới hát karaoke ầm ĩ đến nửa đêm.",
+   "en": "Hùng says the new neighbors sing karaoke noisily until midnight.",
+   "ko": "훙은 새 이웃이 한밤중까지 시끄럽게 노래방을 한다고 해요.",
+   "blank": "ầm ĩ",
+   "src": "made"
+  },
+  {
+   "text": "Một nhóm khách nói chuyện ầm ĩ nên Hương phải nhẹ nhàng nhắc nhở.",
+   "en": "A group of visitors was chatting loudly, so Hương had to gently remind them.",
+   "ko": "관람객 한 무리가 시끄럽게 떠들어서 흐엉이 부드럽게 주의를 줘야 했어요.",
+   "blank": "ầm ĩ",
+   "src": "made"
+  }
+ ],
  "w|âm lịch": [
   {
    "text": "Phong được dặn rằng công ty cho nghỉ ngày mùng mười tháng ba âm lịch.",
@@ -1087,6 +1103,22 @@
    "src": "made"
   }
  ],
+ "w|ao ước": [
+  {
+   "text": "Hồi bé, Hùng và Tuấn từng ao ước có một chiếc xe đạp mới.",
+   "en": "As kids, Hùng and Tuấn used to dream of having a new bicycle.",
+   "ko": "어릴 때 훙과 뚜언은 새 자전거를 갖는 게 소원이었어요.",
+   "blank": "ao ước",
+   "src": "made"
+  },
+  {
+   "text": "Từ nhỏ, Hương đã ao ước được làm việc giữa những cổ vật.",
+   "en": "Since she was little, Hương dreamed of working among antiquities.",
+   "ko": "흐엉은 어릴 때부터 유물들 사이에서 일하는 게 꿈이었어요.",
+   "blank": "ao ước",
+   "src": "made"
+  }
+ ],
  "w|áo vest": [
   {
    "text": "Hôm có đoàn khách quốc tế, Đức mặc áo vest và thắt cà vạt chỉnh tề.",
@@ -1664,6 +1696,22 @@
    "en": "Mai reads the charter carefully to see whether shareholders can remove board members.",
    "ko": "마이는 주주가 이사를 해임할 권리가 있는지 알려고 정관을 꼼꼼히 읽어요.",
    "blank": "bãi nhiệm",
+   "src": "made"
+  }
+ ],
+ "w|bài phát biểu": [
+  {
+   "text": "Hùng kể về bài phát biểu vụng về của anh trong đám cưới em gái.",
+   "en": "Hùng tells about his clumsy speech at his younger sister's wedding.",
+   "ko": "훙은 여동생 결혼식에서 했던 서툰 연설 이야기를 해요.",
+   "blank": "bài phát biểu",
+   "src": "made"
+  },
+  {
+   "text": "Hương chuẩn bị bài phát biểu ngắn cho lễ khai mạc triển lãm.",
+   "en": "Hương is preparing a short speech for the exhibition's opening ceremony.",
+   "ko": "흐엉은 전시 개막식에서 할 짧은 연설을 준비하고 있어요.",
+   "blank": "bài phát biểu",
    "src": "made"
   }
  ],
@@ -4047,6 +4095,22 @@
    "src": "made"
   }
  ],
+ "w|bế tắc": [
+  {
+   "text": "Trong thư, Hùng kể có lúc anh thấy cuộc sống bế tắc, không biết đi đâu về đâu.",
+   "en": "In the letter, Hùng says there were times life felt like a dead end and he didn't know where to go.",
+   "ko": "편지에서 훙은 삶이 막막해서 어디로 가야 할지 몰랐던 때가 있었다고 해요.",
+   "blank": "bế tắc",
+   "src": "made"
+  },
+  {
+   "text": "Hương bế tắc mãi vì chưa tìm ra cách trưng bày bộ gốm mới về.",
+   "en": "Hương was stuck for ages because she couldn't find a way to display the newly arrived ceramics.",
+   "ko": "흐엉은 새로 들어온 도자기를 어떻게 전시할지 찾지 못해 한참 막혀 있었어요.",
+   "blank": "bế tắc",
+   "src": "made"
+  }
+ ],
  "w|bên": [
   {
    "text": "Ngồi bên cửa cho mát.",
@@ -4525,6 +4589,22 @@
    "en": "I was sick for several days before recovering.",
    "ko": "며칠 아팠다가 이제야 나았어.",
    "blank": "bị ốm"
+  }
+ ],
+ "w|bi quan": [
+  {
+   "text": "Dạo này Hùng thấy mình hơi bi quan về công việc ở xưởng gỗ.",
+   "en": "Lately Hùng has been feeling a bit pessimistic about his work at the woodshop.",
+   "ko": "요즘 훙은 목공소 일에 대해 좀 비관적이라고 느껴요.",
+   "blank": "bi quan",
+   "src": "made"
+  },
+  {
+   "text": "Anh thợ phục chế tỏ ra bi quan về số phận của bức bích họa đã bong tróc.",
+   "en": "The restorer seems pessimistic about the fate of the peeling mural.",
+   "ko": "복원 기술자는 벗겨진 벽화의 운명에 대해 비관적인 모습이에요.",
+   "blank": "bi quan",
+   "src": "made"
   }
  ],
  "w|bí quyết": [
@@ -8891,6 +8971,22 @@
    "blank": "Cắt"
   }
  ],
+ "w|cất": [
+  {
+   "text": "Viết xong, Hùng cất lá thư vào ngăn kéo vì chưa dám gửi.",
+   "en": "After finishing, Hùng put the letter away in a drawer because he didn't dare send it yet.",
+   "ko": "다 쓴 뒤 훙은 아직 보낼 용기가 없어서 편지를 서랍에 넣어 두었어요.",
+   "blank": "cất",
+   "src": "made"
+  },
+  {
+   "text": "Cuối ngày, Hương cất chùm chìa khóa vào tủ sắt.",
+   "en": "At the end of the day, Hương puts the bunch of keys away in the steel cabinet.",
+   "ko": "하루가 끝나면 흐엉은 열쇠 꾸러미를 철제 금고에 넣어 둬요.",
+   "blank": "cất",
+   "src": "made"
+  }
+ ],
  "w|cất cánh": [
   {
    "text": "Máy bay phản lực lần lượt cất cánh.",
@@ -8905,6 +9001,22 @@
    "ko": "베이징행 비행기가 곧 이륙해요.",
    "blank": "cất cánh",
    "src": "tatoeba:3537930/trieuho en:3537668/trieuho"
+  }
+ ],
+ "w|cất giữ": [
+  {
+   "text": "Hùng cất giữ chiếc đồng hồ Tuấn tặng như một kỷ vật.",
+   "en": "Hùng keeps the watch Tuấn gave him as a keepsake.",
+   "ko": "훙은 뚜언이 준 시계를 기념품처럼 간직해요.",
+   "blank": "cất giữ",
+   "src": "made"
+  },
+  {
+   "text": "Kho của bảo tàng cất giữ hàng nghìn hiện vật chưa từng được trưng bày.",
+   "en": "The museum's storeroom holds thousands of artifacts that have never been displayed.",
+   "ko": "박물관 창고에는 한 번도 전시되지 않은 유물 수천 점이 보관돼 있어요.",
+   "blank": "cất giữ",
+   "src": "made"
   }
  ],
  "w|cắt tỉa": [
@@ -12253,6 +12365,22 @@
    "src": "made"
   }
  ],
+ "w|chói": [
+  {
+   "text": "Hùng tả nắng hè ở quê chói đến mức phải nheo mắt.",
+   "en": "Hùng describes the summer sun back home as so glaring you have to squint.",
+   "ko": "훙은 고향의 여름 햇볕이 눈을 찡그려야 할 만큼 눈부시다고 묘사해요.",
+   "blank": "chói",
+   "src": "made"
+  },
+  {
+   "text": "Hương kéo rèm lại vì nắng chiều chói vào tủ kính.",
+   "en": "Hương drew the curtains because the afternoon sun was glaring on the glass cases.",
+   "ko": "오후 햇살이 진열장에 눈부시게 비쳐서 흐엉은 커튼을 쳤어요.",
+   "blank": "chói",
+   "src": "made"
+  }
+ ],
  "w|chổi": [
   {
    "text": "Cô lao công cầm chổi quét cầu thang từ tầng trên xuống.",
@@ -12281,6 +12409,22 @@
    "en": "The kids are playing outside.",
    "ko": "애들이 마당에서 놀고 있어.",
    "blank": "chơi"
+  }
+ ],
+ "w|chói lóa": [
+  {
+   "text": "Trong thư, Hùng tả ánh đèn sân khấu chói lóa ở buổi biểu diễn của con trai.",
+   "en": "In the letter, Hùng describes the dazzling stage lights at his son's performance.",
+   "ko": "편지에서 훙은 아들 공연 때의 눈부신 무대 조명을 묘사해요.",
+   "blank": "chói lóa",
+   "src": "made"
+  },
+  {
+   "text": "Chiếc vương miện vàng sáng chói lóa dưới ánh đèn khiến khách trầm trồ.",
+   "en": "The golden crown dazzles under the lights, making visitors gasp in admiration.",
+   "ko": "금관이 조명 아래 눈부시게 빛나서 관람객들이 감탄해요.",
+   "blank": "chói lóa",
+   "src": "made"
   }
  ],
  "w|chôn": [
@@ -13247,6 +13391,22 @@
    "en": "We'll talk this over later.",
    "ko": "이 이야기는 나중에 하자.",
    "blank": "chúng ta"
+  }
+ ],
+ "w|chung thủy": [
+  {
+   "text": "Hùng viết rằng ông bà ngoại đã sống chung thủy với nhau đến tận cuối đời.",
+   "en": "Hùng writes that his maternal grandparents stayed faithful to each other to the very end.",
+   "ko": "훙은 외할아버지와 외할머니가 평생 서로에게 한결같았다고 썼어요.",
+   "blank": "chung thủy",
+   "src": "made"
+  },
+  {
+   "text": "Hương giải thích đôi uyên ương trên bức tranh lụa tượng trưng cho tình yêu chung thủy.",
+   "en": "Hương explains that the pair of mandarin ducks on the silk painting symbolizes faithful love.",
+   "ko": "흐엉은 비단 그림 속 원앙 한 쌍이 변치 않는 사랑을 상징한다고 설명해요.",
+   "blank": "chung thủy",
+   "src": "made"
   }
  ],
  "w|chúng tôi": [
@@ -15345,6 +15505,22 @@
    "blank": "công nhân"
   }
  ],
+ "w|công nhận": [
+  {
+   "text": "Nhìn lại ảnh cũ, Hùng thấy công nhận hồi đó hai đứa gầy thật.",
+   "en": "Looking at the old photos, Hùng has to admit the two of them were really skinny back then.",
+   "ko": "옛날 사진을 다시 보니 훙은 그때 둘이 정말 말랐다는 걸 인정할 수밖에 없어요.",
+   "blank": "công nhận",
+   "src": "made"
+  },
+  {
+   "text": "Đứng trước bức tranh khổng lồ, khách nào cũng bảo công nhận đẹp thật.",
+   "en": "Standing before the giant painting, every visitor admits it's really beautiful.",
+   "ko": "거대한 그림 앞에 서면 관람객마다 정말 예쁘다고 인정해요.",
+   "blank": "công nhận",
+   "src": "made"
+  }
+ ],
  "w|công sức": [
   {
    "text": "Bao nhiêu công sức ôn luyện của Đức cuối cùng cũng được đền đáp.",
@@ -15698,6 +15874,22 @@
    "en": "Ngọc analyzes owl calls to learn how they call to each other at night.",
    "ko": "응옥은 부엉이가 밤에 서로 부르는 방식을 알아보려고 울음소리를 분석해요.",
    "blank": "cú mèo",
+   "src": "made"
+  }
+ ],
+ "w|cứ như": [
+  {
+   "text": "Hùng bảo con đường làng giờ đổi khác cứ như một nơi xa lạ.",
+   "en": "Hùng says the village road has changed so much it's like a strange place.",
+   "ko": "훙은 마을 길이 너무 변해서 마치 낯선 곳 같다고 해요.",
+   "blank": "cứ như",
+   "src": "made"
+  },
+  {
+   "text": "Phòng tái hiện chợ quê được làm khéo cứ như đang ở một phiên chợ thật.",
+   "en": "The room recreating a country market is so well made it feels like being at a real market day.",
+   "ko": "시골 장터를 재현한 방은 진짜 장날에 와 있는 것처럼 잘 만들어졌어요.",
+   "blank": "cứ như",
    "src": "made"
   }
  ],
@@ -24969,6 +25161,22 @@
    "blank": "duy nhất"
   }
  ],
+ "w|duy trì": [
+  {
+   "text": "Hùng bảo anh vẫn duy trì thói quen viết thư tay mỗi tháng.",
+   "en": "Hùng says he still keeps up the habit of writing a handwritten letter every month.",
+   "ko": "훙은 매달 손편지를 쓰는 습관을 아직 이어 가고 있다고 해요.",
+   "blank": "duy trì",
+   "src": "made"
+  },
+  {
+   "text": "Bảo tàng phải duy trì nhiệt độ ổn định trong phòng lưu trữ giấy tờ cổ.",
+   "en": "The museum must maintain a stable temperature in the old document archive.",
+   "ko": "박물관은 옛 문서 보관실의 온도를 일정하게 유지해야 해요.",
+   "blank": "duy trì",
+   "src": "made"
+  }
+ ],
  "w|duyên dáng": [
   {
    "text": "Cô bé đi lạc có nụ cười duyên dáng khiến cả đồn của Tuấn vui lây.",
@@ -27871,6 +28079,22 @@
    "blank": "Giết người"
   }
  ],
+ "w|gìn giữ": [
+  {
+   "text": "Hùng nói tình bạn cũng cần được gìn giữ như chăm một cái cây.",
+   "en": "Hùng says a friendship needs to be cared for, just like tending a tree.",
+   "ko": "훙은 우정도 나무를 돌보듯 지켜 나가야 한다고 말해요.",
+   "blank": "gìn giữ",
+   "src": "made"
+  },
+  {
+   "text": "Hương tin rằng bảo tàng là nơi gìn giữ ký ức của cả một vùng đất.",
+   "en": "Hương believes a museum is where the memories of a whole region are preserved.",
+   "ko": "흐엉은 박물관이 한 지역 전체의 기억을 지켜 나가는 곳이라고 믿어요.",
+   "blank": "gìn giữ",
+   "src": "made"
+  }
+ ],
  "w|gió": [
   {
    "text": "Gió hôm nay thổi mạnh quá.",
@@ -28175,6 +28399,22 @@
    "en": "These shirts are all the same.",
    "ko": "이 옷들 전부 똑같아.",
    "blank": "giống nhau"
+  }
+ ],
+ "w|giống như": [
+  {
+   "text": "Hùng nói Tuấn đối với anh giống như một người anh ruột.",
+   "en": "Hùng says Tuấn is like a real older brother to him.",
+   "ko": "훙은 뚜언이 자기에게 친형 같은 존재라고 말해요.",
+   "blank": "giống như",
+   "src": "made"
+  },
+  {
+   "text": "Hương thấy làm việc ở bảo tàng giống như được du hành ngược thời gian.",
+   "en": "Hương feels that working at the museum is like traveling back in time.",
+   "ko": "흐엉은 박물관에서 일하는 게 시간을 거슬러 여행하는 것 같다고 느껴요.",
+   "blank": "giống như",
+   "src": "made"
   }
  ],
  "w|giọng nói": [
@@ -33307,6 +33547,22 @@
    "src": "made"
   }
  ],
+ "w|inh ỏi": [
+  {
+   "text": "Hùng tả tiếng còi xe inh ỏi ngoài phố làm anh nhớ con ngõ yên tĩnh ngày xưa.",
+   "en": "Hùng describes the blaring car horns on the street that make him miss the quiet alley of the old days.",
+   "ko": "훙은 거리의 요란한 경적 소리 때문에 옛날의 조용한 골목이 그립다고 묘사해요.",
+   "blank": "inh ỏi",
+   "src": "made"
+  },
+  {
+   "text": "Chuông báo cháy bỗng kêu inh ỏi, nhưng hóa ra chỉ là diễn tập.",
+   "en": "The fire alarm suddenly blared, but it turned out to be just a drill.",
+   "ko": "화재경보기가 갑자기 요란하게 울렸지만 알고 보니 훈련이었어요.",
+   "blank": "inh ỏi",
+   "src": "made"
+  }
+ ],
  "w|ít": [
   {
    "text": "Cho ít đường thôi.",
@@ -34572,6 +34828,22 @@
    "en": "Mai read in the paper that people who recover may have antibodies for a few months.",
    "ko": "마이는 신문에서 병이 나은 사람은 몇 달 동안 항체가 있을 수 있다는 기사를 읽었어요.",
    "blank": "kháng thể",
+   "src": "made"
+  }
+ ],
+ "w|khao khát": [
+  {
+   "text": "Hùng kể hồi trẻ anh từng khao khát được đi khắp đất nước bằng xe máy.",
+   "en": "Hùng says that when he was young he longed to travel the whole country by motorbike.",
+   "ko": "훙은 젊었을 때 오토바이로 전국을 돌아다니기를 갈망했다고 해요.",
+   "blank": "khao khát",
+   "src": "made"
+  },
+  {
+   "text": "Hương khao khát được tận mắt thấy chiếc trống đồng cổ nằm trong kho.",
+   "en": "Hương longs to see with her own eyes the ancient bronze drum kept in storage.",
+   "ko": "흐엉은 창고에 보관된 옛 청동북을 직접 보기를 갈망해요.",
+   "blank": "khao khát",
    "src": "made"
   }
  ],
@@ -37665,6 +37937,22 @@
    "src": "made"
   }
  ],
+ "w|lạc quan": [
+  {
+   "text": "Hùng khuyên Tuấn cứ lạc quan lên, chuyện gì rồi cũng sẽ qua.",
+   "en": "Hùng tells Tuấn to stay optimistic, because everything passes in the end.",
+   "ko": "훙은 뚜언에게 낙관적으로 생각하라고, 무슨 일이든 다 지나간다고 조언해요.",
+   "blank": "lạc quan",
+   "src": "made"
+  },
+  {
+   "text": "Giám đốc bảo tàng vẫn lạc quan dù lượng khách giảm vào mùa mưa.",
+   "en": "The museum director stays optimistic even though visitor numbers drop in the rainy season.",
+   "ko": "박물관 관장은 우기에 관람객이 줄어도 여전히 낙관적이에요.",
+   "blank": "lạc quan",
+   "src": "made"
+  }
+ ],
  "w|lái": [
   {
    "text": "Ai lái xe hôm nay?",
@@ -40111,6 +40399,22 @@
    "blank": "lợi"
   }
  ],
+ "w|lời an ủi": [
+  {
+   "text": "Hùng viết rằng anh chưa quên lời an ủi của Tuấn hôm anh thi trượt đại học.",
+   "en": "Hùng writes that he hasn't forgotten Tuấn's comforting words the day he failed the university exam.",
+   "ko": "훙은 대학 시험에 떨어진 날 뚜언이 해 준 위로의 말을 잊지 않았다고 썼어요.",
+   "blank": "lời an ủi",
+   "src": "made"
+  },
+  {
+   "text": "Hương nhận được lời an ủi của trưởng phòng sau buổi thuyết minh bị khách chê.",
+   "en": "Hương received comforting words from her manager after a tour that visitors criticized.",
+   "ko": "관람객에게 지적받은 해설 뒤에 흐엉은 팀장에게 위로의 말을 들었어요.",
+   "blank": "lời an ủi",
+   "src": "made"
+  }
+ ],
  "w|lời cảnh báo": [
   {
    "text": "Nam vẫn giữ lời cảnh báo của bạn: đừng bao giờ ký giấy khi chưa đọc kỹ.",
@@ -40189,6 +40493,22 @@
    "src": "made"
   }
  ],
+ "w|lời động viên": [
+  {
+   "text": "Cuối thư, Hùng gửi Tuấn vài lời động viên trước kỳ thi lấy bằng lái.",
+   "en": "At the end of the letter, Hùng sends Tuấn a few words of encouragement before his driving test.",
+   "ko": "편지 끝에 훙은 운전면허 시험을 앞둔 뚜언에게 격려의 말을 몇 마디 보내요.",
+   "blank": "lời động viên",
+   "src": "made"
+  },
+  {
+   "text": "Hương để lại lời động viên cho nhóm sinh viên làm mô hình nhà sàn.",
+   "en": "Hương left words of encouragement for the students building the stilt-house model.",
+   "ko": "흐엉은 수상 가옥 모형을 만드는 대학생들에게 격려의 말을 남겼어요.",
+   "blank": "lời động viên",
+   "src": "made"
+  }
+ ],
  "w|lợi dụng": [
   {
    "text": "Có người lợi dụng tên phòng khám của Đức để quảng cáo thuốc giả.",
@@ -40264,6 +40584,22 @@
    "en": "Linh's classmate, a court clerk, said one testimony was so contradictory the whole room was stunned.",
    "ko": "법원 서기인 린의 반 친구는 진술이 너무 앞뒤가 안 맞아서 법정 전체가 어리둥절했던 일을 얘기했어요.",
    "blank": "lời khai",
+   "src": "made"
+  }
+ ],
+ "w|lời khen": [
+  {
+   "text": "Hùng vẫn nhớ lời khen đầu tiên của thầy dạy văn dành cho bài viết của Tuấn.",
+   "en": "Hùng still remembers the literature teacher's first praise for Tuấn's essay.",
+   "ko": "훙은 국어 선생님이 뚜언의 글에 처음 해 준 칭찬을 아직 기억해요.",
+   "blank": "lời khen",
+   "src": "made"
+  },
+  {
+   "text": "Hương đỏ mặt khi nhận lời khen từ một vị khách lớn tuổi.",
+   "en": "Hương blushed when an elderly visitor praised her.",
+   "ko": "나이 든 관람객에게 칭찬을 듣고 흐엉은 얼굴이 빨개졌어요.",
+   "blank": "lời khen",
    "src": "made"
   }
  ],
@@ -41521,6 +41857,22 @@
    "en": "Remember to save the new address on your phone.",
    "ko": "새 주소를 휴대폰에 저장하는 거 잊지 마.",
    "blank": "lưu"
+  }
+ ],
+ "w|lưu giữ": [
+  {
+   "text": "Hùng vẫn lưu giữ tất cả thư của Tuấn trong một hộp thiếc.",
+   "en": "Hùng still keeps all of Tuấn's letters in a tin box.",
+   "ko": "훙은 뚜언의 편지를 모두 양철 상자에 아직 간직하고 있어요.",
+   "blank": "lưu giữ",
+   "src": "made"
+  },
+  {
+   "text": "Hương phụ trách lưu giữ hồ sơ của từng hiện vật trong kho.",
+   "en": "Hương is in charge of keeping the records of every artifact in storage.",
+   "ko": "흐엉은 창고 속 유물 하나하나의 기록을 보관하는 일을 맡고 있어요.",
+   "blank": "lưu giữ",
+   "src": "made"
   }
  ],
  "w|lưu manh": [
@@ -44573,6 +44925,38 @@
    "src": "made"
   }
  ],
+ "w|mong đợi": [
+  {
+   "text": "Hùng nói anh mong đợi lá thư trả lời của Tuấn từng ngày.",
+   "en": "Hùng says he looks forward to Tuấn's reply every single day.",
+   "ko": "훙은 뚜언의 답장을 하루하루 기다린다고 말해요.",
+   "blank": "mong đợi",
+   "src": "made"
+  },
+  {
+   "text": "Cả phòng trưng bày đều mong đợi triển lãm áo dài xưa sắp khai mạc.",
+   "en": "The whole exhibition department is looking forward to the upcoming exhibition of old áo dài.",
+   "ko": "전시실 사람들 모두 곧 열릴 옛 아오자이 전시를 기대하고 있어요.",
+   "blank": "mong đợi",
+   "src": "made"
+  }
+ ],
+ "w|mong mỏi": [
+  {
+   "text": "Bà nội của Hùng lúc nào cũng mong mỏi con cháu về quê ăn Tết.",
+   "en": "Hùng's grandmother always longs for her children and grandchildren to come home for Tết.",
+   "ko": "훙의 할머니는 늘 자식과 손주들이 설에 고향에 오기를 간절히 바라세요.",
+   "blank": "mong mỏi",
+   "src": "made"
+  },
+  {
+   "text": "Các nghệ nhân mong mỏi bảo tàng trưng bày thêm đồ thêu của làng.",
+   "en": "The artisans earnestly hope the museum will display more of the village's embroidery.",
+   "ko": "장인들은 박물관이 마을 자수품을 더 전시해 주기를 간절히 바라요.",
+   "blank": "mong mỏi",
+   "src": "made"
+  }
+ ],
  "w|mong muốn": [
   {
    "text": "Mong muốn lớn nhất của mình là khỏe mạnh.",
@@ -44616,6 +45000,22 @@
    "en": "She painted her nails pink.",
    "ko": "그녀는 손톱을 분홍색으로 칠했어요.",
    "blank": "móng tay",
+   "src": "made"
+  }
+ ],
+ "w|mong ước": [
+  {
+   "text": "Hùng mong ước hai đứa sẽ có dịp ngồi uống cà phê với nhau như ngày xưa.",
+   "en": "Hùng wishes the two of them could sit and have coffee together like in the old days.",
+   "ko": "훙은 둘이 옛날처럼 같이 앉아 커피를 마실 날이 오기를 바라요.",
+   "blank": "mong ước",
+   "src": "made"
+  },
+  {
+   "text": "Hương mong ước một ngày bảo tàng có phòng riêng cho trẻ khiếm thị.",
+   "en": "Hương wishes the museum will one day have a room just for visually impaired children.",
+   "ko": "흐엉은 언젠가 박물관에 시각장애 아이들을 위한 방이 생기기를 바라요.",
+   "blank": "mong ước",
    "src": "made"
   }
  ],
@@ -52519,6 +52919,22 @@
    "src": "made"
   }
  ],
+ "w|như thể": [
+  {
+   "text": "Đọc thư của Tuấn, Hùng thấy như thể bạn đang ngồi ngay bên cạnh.",
+   "en": "Reading Tuấn's letter, Hùng feels as if his friend were sitting right beside him.",
+   "ko": "뚜언의 편지를 읽으면 훙은 친구가 바로 옆에 앉아 있는 것 같아요.",
+   "blank": "như thể",
+   "src": "made"
+  },
+  {
+   "text": "Pho tượng được chạm khắc tinh xảo như thể sắp cử động.",
+   "en": "The statue is carved so finely it's as if it were about to move.",
+   "ko": "그 조각상은 금방이라도 움직일 것처럼 정교하게 새겨져 있어요.",
+   "blank": "như thể",
+   "src": "made"
+  }
+ ],
  "w|như thế nào": [
   {
    "text": "Công việc mới như thế nào?",
@@ -53678,6 +54094,22 @@
    "en": "The butcher is a bit hot-tempered, but his weights are always honest.",
    "ko": "정육점 아저씨는 좀 욱하는 성격이지만 저울은 아주 정확해요.",
    "blank": "nóng tính",
+   "src": "made"
+  }
+ ],
+ "w|nóng vội": [
+  {
+   "text": "Hùng thừa nhận ngày trước mình nóng vội nên đã nói những câu khó nghe với Tuấn.",
+   "en": "Hùng admits that back then he was hasty and said hurtful things to Tuấn.",
+   "ko": "훙은 예전에 성급해서 뚜언에게 듣기 싫은 말을 했다고 인정해요.",
+   "blank": "nóng vội",
+   "src": "made"
+  },
+  {
+   "text": "Ông trưởng phòng nhắc Hương đừng nóng vội khi lau chùi đồ gốm cổ.",
+   "en": "The manager reminds Hương not to rush when cleaning the ancient pottery.",
+   "ko": "팀장은 흐엉에게 옛 도자기를 닦을 때 서두르지 말라고 일러요.",
+   "blank": "nóng vội",
    "src": "made"
   }
  ],
@@ -57577,6 +58009,22 @@
    "en": "His past is quite unusual.",
    "ko": "그 사람 과거가 꽤 특이해요.",
    "blank": "Quá khứ"
+  }
+ ],
+ "w|quả là": [
+  {
+   "text": "Hùng viết rằng có được người bạn như Tuấn quả là một điều may mắn.",
+   "en": "Hùng writes that having a friend like Tuấn is truly a stroke of luck.",
+   "ko": "훙은 뚜언 같은 친구가 있다는 건 정말 행운이라고 썼어요.",
+   "blank": "quả là",
+   "src": "made"
+  },
+  {
+   "text": "Bộ sưu tập tiền xu cổ quả là một kho báu đối với Hương.",
+   "en": "The collection of old coins is truly a treasure to Hương.",
+   "ko": "옛 동전 수집품은 흐엉에게 정말 보물이에요.",
+   "blank": "quả là",
+   "src": "made"
   }
  ],
  "w|qua loa": [
@@ -62929,6 +63377,38 @@
    "blank": "sự"
   }
  ],
+ "w|sự ấm áp": [
+  {
+   "text": "Đọc lại thư cũ, Hùng thấy sự ấm áp của tình bạn ngày xưa vẫn còn nguyên.",
+   "en": "Rereading the old letters, Hùng feels the warmth of their old friendship is still intact.",
+   "ko": "옛 편지를 다시 읽으며 훙은 그 시절 우정의 따뜻함이 그대로 남아 있다고 느껴요.",
+   "blank": "sự ấm áp",
+   "src": "made"
+  },
+  {
+   "text": "Ánh đèn vàng mang lại sự ấm áp cho căn phòng trưng bày đồ gỗ.",
+   "en": "The yellow lighting brings warmth to the room displaying wooden objects.",
+   "ko": "노란 조명이 목공예 전시실에 따뜻함을 더해 줘요.",
+   "blank": "sự ấm áp",
+   "src": "made"
+  }
+ ],
+ "w|sự an ủi": [
+  {
+   "text": "Hồi mẹ ốm nặng, những lá thư của Tuấn là sự an ủi lớn nhất của Hùng.",
+   "en": "When his mother was seriously ill, Tuấn's letters were Hùng's greatest comfort.",
+   "ko": "어머니가 많이 아프셨을 때 뚜언의 편지는 훙에게 가장 큰 위안이었어요.",
+   "blank": "sự an ủi",
+   "src": "made"
+  },
+  {
+   "text": "Với ông cụ bảo vệ, tiếng trẻ con cười trong bảo tàng là một sự an ủi.",
+   "en": "For the old security guard, the sound of children laughing in the museum is a comfort.",
+   "ko": "나이 든 경비원 할아버지에게 박물관 안 아이들 웃음소리는 위안이에요.",
+   "blank": "sự an ủi",
+   "src": "made"
+  }
+ ],
  "w|sự bất an": [
   {
    "text": "Khi lỡ gửi nhầm email cho sếp lớn, Quang không giấu được sự bất an.",
@@ -63279,6 +63759,22 @@
    "src": "made"
   }
  ],
+ "w|sự khích lệ": [
+  {
+   "text": "Hùng nói nhờ sự khích lệ của Tuấn mà anh dám mở xưởng mộc riêng.",
+   "en": "Hùng says it was thanks to Tuấn's encouragement that he dared to open his own carpentry shop.",
+   "ko": "훙은 뚜언의 격려 덕분에 자기 목공소를 열 용기를 냈다고 말해요.",
+   "blank": "sự khích lệ",
+   "src": "made"
+  },
+  {
+   "text": "Lời cảm ơn của khách là sự khích lệ lớn đối với Hương.",
+   "en": "The visitors' thanks are a great encouragement to Hương.",
+   "ko": "관람객의 감사 인사는 흐엉에게 큰 격려가 돼요.",
+   "blank": "sự khích lệ",
+   "src": "made"
+  }
+ ],
  "w|sự khiêm tốn": [
   {
    "text": "Minh khâm phục sự khiêm tốn của bạn dù bạn đã thành bác sĩ giỏi.",
@@ -63356,6 +63852,22 @@
    "en": "Lan told her child about the arrogance of the cicada who only sang all summer.",
    "ko": "란은 여름 내내 노래만 부르던 매미의 오만함을 아이에게 들려줬어요.",
    "blank": "sự kiêu ngạo",
+   "src": "made"
+  }
+ ],
+ "w|sự lạnh lùng": [
+  {
+   "text": "Hùng vẫn nhớ sự lạnh lùng của Tuấn hôm hai đứa cãi nhau ở bến xe.",
+   "en": "Hùng still remembers Tuấn's coldness the day the two of them argued at the bus station.",
+   "ko": "훙은 버스 터미널에서 둘이 싸우던 날 뚜언의 차가움을 아직 기억해요.",
+   "blank": "sự lạnh lùng",
+   "src": "made"
+  },
+  {
+   "text": "Khách xem đều nhận ra sự lạnh lùng trong ánh mắt của bức chân dung vị quan.",
+   "en": "Visitors all notice the coldness in the eyes of the mandarin's portrait.",
+   "ko": "관람객들은 모두 관리 초상화의 눈빛에 서린 차가움을 알아채요.",
+   "blank": "sự lạnh lùng",
    "src": "made"
   }
  ],
@@ -63700,6 +64212,22 @@
    "en": "With the car behind honking nonstop, Trang had to hold back her anger.",
    "ko": "뒤차가 계속 경적을 울려서 짱은 화를 꾹 참아야 했어요.",
    "blank": "sự tức giận",
+   "src": "made"
+  }
+ ],
+ "w|sự ủng hộ": [
+  {
+   "text": "Hùng cảm ơn Tuấn vì sự ủng hộ suốt những năm anh khởi nghiệp.",
+   "en": "Hùng thanks Tuấn for his support during the years he was starting his business.",
+   "ko": "훙은 사업을 시작하던 몇 해 동안 지지해 준 뚜언에게 고마워해요.",
+   "blank": "sự ủng hộ",
+   "src": "made"
+  },
+  {
+   "text": "Nhờ sự ủng hộ của người dân, bảo tàng sưu tầm được nhiều nông cụ cũ.",
+   "en": "Thanks to local residents' support, the museum collected many old farming tools.",
+   "ko": "주민들의 지지 덕분에 박물관은 옛 농기구를 많이 모았어요.",
+   "blank": "sự ủng hộ",
    "src": "made"
   }
  ],
@@ -66873,6 +67401,22 @@
    "src": "made"
   }
  ],
+ "w|thành thật mà nói": [
+  {
+   "text": "Hùng viết: thành thật mà nói, anh đã giận Tuấn suốt mấy năm trời.",
+   "en": "Hùng writes: to be honest, he was angry with Tuấn for years.",
+   "ko": "훙은 솔직히 말하면 몇 년 동안 뚜언에게 화가 나 있었다고 썼어요.",
+   "blank": "thành thật mà nói",
+   "src": "made"
+  },
+  {
+   "text": "Một vị khách nói với Hương: thành thật mà nói, bức tranh này khó hiểu quá.",
+   "en": "A visitor said to Hương: to be honest, this painting is really hard to understand.",
+   "ko": "한 관람객이 흐엉에게 솔직히 말하면 이 그림은 너무 어렵다고 했어요.",
+   "blank": "thành thật mà nói",
+   "src": "made"
+  }
+ ],
  "w|thành thị": [
   {
    "text": "Sự dịch chuyện từ nông thôn lên thành thị đã diễn ra suốt hơn hai trăm năm.",
@@ -67679,6 +68223,22 @@
    "en": "Have more, there's plenty left.",
    "ko": "더 먹어, 아직 많이 남았어.",
    "blank": "thêm"
+  }
+ ],
+ "w|thèm khát": [
+  {
+   "text": "Xa quê lâu năm, Hùng thèm khát cảm giác được ngồi bên mâm cơm gia đình.",
+   "en": "Having been away from home for years, Hùng craves the feeling of sitting at the family dinner table.",
+   "ko": "오랫동안 고향을 떠나 있던 훙은 가족 밥상에 둘러앉는 느낌을 몹시 그리워해요.",
+   "blank": "thèm khát",
+   "src": "made"
+  },
+  {
+   "text": "Bức tranh vẽ đứa trẻ nghèo thèm khát nhìn vào hàng bánh khiến Hương lặng người.",
+   "en": "The painting of a poor child gazing hungrily at a bakery left Hương speechless.",
+   "ko": "가난한 아이가 빵집을 간절히 바라보는 그림에 흐엉은 말을 잃었어요.",
+   "blank": "thèm khát",
+   "src": "made"
   }
  ],
  "w|thêm vào đó": [
@@ -71005,6 +71565,22 @@
    "src": "made"
   }
  ],
+ "w|tích cực": [
+  {
+   "text": "Hùng kể con gái anh dạo này học hành tích cực hơn hẳn.",
+   "en": "Hùng says his daughter has been studying far more actively lately.",
+   "ko": "훙은 딸이 요즘 훨씬 적극적으로 공부한다고 해요.",
+   "blank": "tích cực",
+   "src": "made"
+  },
+  {
+   "text": "Khách để lại nhiều nhận xét tích cực về khu trưng bày mới của Hương.",
+   "en": "Visitors left many positive comments about Hương's new exhibition area.",
+   "ko": "관람객들은 흐엉의 새 전시 구역에 긍정적인 평을 많이 남겼어요.",
+   "blank": "tích cực",
+   "src": "made"
+  }
+ ],
  "w|tiếc": [
   {
    "text": "Tiếc quá, hết vé rồi.",
@@ -71796,6 +72372,22 @@
    "en": "Drinking dirty water can cause diarrhea.",
    "ko": "더러운 물을 마시면 설사할 수 있어요.",
    "blank": "tiêu chảy",
+   "src": "made"
+  }
+ ],
+ "w|tiêu cực": [
+  {
+   "text": "Hùng dặn Tuấn đừng để những suy nghĩ tiêu cực kéo mình xuống.",
+   "en": "Hùng reminds Tuấn not to let negative thoughts drag him down.",
+   "ko": "훙은 뚜언에게 부정적인 생각에 끌려가지 말라고 당부해요.",
+   "blank": "tiêu cực",
+   "src": "made"
+  },
+  {
+   "text": "Hương không để những bình luận tiêu cực trên mạng làm mình nản.",
+   "en": "Hương doesn't let negative comments online discourage her.",
+   "ko": "흐엉은 인터넷의 부정적인 댓글에 기죽지 않아요.",
+   "blank": "tiêu cực",
    "src": "made"
   }
  ],
@@ -75041,6 +75633,22 @@
    "src": "made"
   }
  ],
+ "w|trông đợi": [
+  {
+   "text": "Hùng không trông đợi Tuấn hồi âm ngay, chỉ mong bạn đọc thư là đủ.",
+   "en": "Hùng doesn't expect Tuấn to reply right away; he just hopes his friend reads the letter.",
+   "ko": "훙은 뚜언이 바로 답장하길 기대하지 않고, 편지를 읽어 주기만 해도 충분하다고 생각해요.",
+   "blank": "trông đợi",
+   "src": "made"
+  },
+  {
+   "text": "Hương trông đợi đoàn học sinh đến để giới thiệu khu đồ chơi dân gian.",
+   "en": "Hương is waiting eagerly for the school group so she can show them the folk toy section.",
+   "ko": "흐엉은 전통 장난감 구역을 소개하려고 학생 단체가 오기를 고대해요.",
+   "blank": "trông đợi",
+   "src": "made"
+  }
+ ],
  "w|trong khi": [
   {
    "text": "Anh ấy ngủ trong khi mình làm việc.",
@@ -75546,6 +76154,22 @@
    "en": "The pharmacy chain plans to open a counter in the shopping mall and asks Linh to manage it.",
    "ko": "약국 체인이 쇼핑몰에 매장을 하나 더 내고 린에게 관리를 맡기려 해요.",
    "blank": "trung tâm thương mại",
+   "src": "made"
+  }
+ ],
+ "w|trung thành": [
+  {
+   "text": "Hùng kể con chó Mực nhà anh vẫn trung thành chờ ở cổng mỗi chiều.",
+   "en": "Hùng says his dog Mực still waits loyally at the gate every afternoon.",
+   "ko": "훙은 자기 집 개 묵이 여전히 매일 오후 대문에서 충직하게 기다린다고 해요.",
+   "blank": "trung thành",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể về viên tướng trung thành có tên khắc trên tấm bia đá.",
+   "en": "Hương tells the story of the loyal general whose name is carved on the stone stele.",
+   "ko": "흐엉은 돌비석에 이름이 새겨진 충성스러운 장군 이야기를 해요.",
+   "blank": "trung thành",
    "src": "made"
   }
  ],
@@ -76422,6 +77046,22 @@
    "en": "Lan gathered the old clothes still in good shape and gave them to a charity.",
    "ko": "아직 멀쩡한 헌 옷은 란이 모아서 자선 단체에 보냈어요.",
    "blank": "từ thiện",
+   "src": "made"
+  }
+ ],
+ "w|tự ti": [
+  {
+   "text": "Hùng thừa nhận hồi đi học anh rất tự ti vì nói lắp.",
+   "en": "Hùng admits that in school he was very self-conscious because he stuttered.",
+   "ko": "훙은 학교 다닐 때 말을 더듬어서 자신감이 많이 없었다고 털어놓아요.",
+   "blank": "tự ti",
+   "src": "made"
+  },
+  {
+   "text": "Lần đầu thuyết minh, Hương hơi tự ti vì giọng còn run.",
+   "en": "Giving a tour for the first time, Hương felt a bit insecure because her voice was still shaky.",
+   "ko": "처음 해설을 할 때 흐엉은 목소리가 떨려서 좀 자신이 없었어요.",
+   "blank": "tự ti",
    "src": "made"
   }
  ],
