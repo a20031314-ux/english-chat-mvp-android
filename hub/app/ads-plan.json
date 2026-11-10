@@ -3,7 +3,7 @@
   "kind": "remove",
   "what": "대화·통화 위(above)에서 연 소재 수업(FrameLesson)의 네이티브 두 자리(수업 퀴즈 아래 quiz-inline·끝 화면 lesson-end)를 빼기 — 표현 카드·사전 시트처럼 above면 없음",
   "where": "My 탭 `my` · studyMap/FrameLesson.tsx (LessonHost가 LayerAboveContext를 주지만 FrameLesson은 읽지 않음)",
-  "why": "넣지 않는 곳 '대화·통화 위에서 연 사전·표현 카드(above)'와 어긋남 — 같은 같이 배우기 💬 칩이 isFrameExpression이면 FrameLesson(광고 있음), 아니면 ExpressionCard(광고 없음)로 갈림. 지난번 안 그대로(이번 범위 2e6b75c..40abdf5에서도 FrameLesson 529·683줄 NativeAdSlot은 above를 안 봄 — 미반영). 사용자 결정 거리.",
+  "why": "넣지 않는 곳 '대화·통화 위에서 연 사전·표현 카드(above)'와 어긋남 — 같은 같이 배우기 💬 칩이 isFrameExpression이면 FrameLesson(광고 있음), 아니면 ExpressionCard(광고 없음)로 갈림. 지난번 안 그대로(이번 범위 372bfac..06f47b8에서 FrameLesson.tsx는 안 바뀜 — 529·683줄 NativeAdSlot은 여전히 above를 안 봄, 미반영). 사용자 결정 거리.",
   "appBuild": true,
   "severity": "report",
   "basis": "코드: StudyChips.tsx openLesson({…above:true}) · LessonHost.tsx LayerAboveContext.Provider · ExpressionCard.tsx `above ? null : <NativeAdSlot sheets expression-card>` · Dictionary.tsx 같은 규칙 · FrameLesson.tsx 529·683줄 NativeAdSlot은 above를 보지 않음. above로 여는 곳은 채팅 표현 보기 칩·사전 주석 📕(대화 줄·자막·Quizbank 답 뒤 모두 above:true)이라, 고치면 Quizbank 답 뒤 📕에서 연 수업의 네이티브도 빠짐. 무료 한 사람 쓰는 날 0.2번 노출 감소로 어림. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄.",
@@ -44,10 +44,10 @@
   "kind": "model",
   "what": "skillCheckEnd 전면 횟수 어림을 오늘의 학습 📏 줄 기준으로 — 무료 한 달 1번 → 1.5번(economics.json my.skillChecksPerMonth)",
   "where": "My 탭 `my` · studyMap/TodayCards.tsx useSkillCheck(전면은 FirstCheck recheck onDone) ／ scripts/sim-users/economics.json my",
-  "why": "실력 확인 입구가 Logbank 안 ▶(칸을 열어야 보임)에서 My 맨 위 오늘의 학습 📏 줄(14일이 된 날 바닥 화면 맨 위에 뜸)로 옮김 → 끝까지 하는 사람이 늘 것. economics.json 설명은 아직 '14일마다 ▶가 밝지만'(Logbank 기준). 전면 자리 자체는 원칙에 맞음 — 아래 basis.",
+  "why": "실력 확인 입구가 My 맨 위 오늘의 학습 📏 줄(14일이 된 날 바닥 화면 맨 위에 뜸) → 끝까지 하는 사람이 늘 것. scripts/sim-users/economics.json my.skillChecksPerMonth는 아직 1, 설명도 '14일마다 ▶가 밝지만'(Logbank 기준) — 미반영. 지난번 안 그대로. 전면 자리 자체는 원칙에 맞음 — 아래 basis.",
   "appBuild": false,
   "severity": "report",
-  "basis": "코드 확인(TodayCards.tsx 150~195줄): 📏 줄 → FullScreenLayer 안 FirstCheck recheck. 전면은 onDone에서만 불림 = 결과 화면(RecheckResult)의 유일한 버튼 '닫기'(billingClose, FirstCheck.tsx 428줄) — 시험 도중·줄을 누를 때·onSkip(건너뛰기)에는 없음. 닫으면 층을 닫고 오늘의 학습 목록으로 돌아갈 뿐 다음 줄(▶ Quizbank·📞 수업)을 저절로 열지 않음 → '다음 할 것으로 이어지는 흐름 한가운데'가 아니라 14일 시험 끝(콘텐츠 사이 논리적 쉼). 결과 화면 네이티브 skill-check-end(spaced)와 같은 화면이 아니라 닫은 뒤라 한 화면 하나 규칙도 맞음. 3분 간격으로 바로 뒤 quizBreak와도 안 겹침. 횟수: 14일마다라 한 달 최대 약 2번, 무료가 그날 My를 쓰고 끝까지 하는 비율을 3/4로 어림 → 1.5. 첫 측정(처음 My)은 recheck가 아니라 전면 없음(StudyMapTab FirstCheck).",
+  "basis": "코드 확인(TodayCards.tsx 187줄 maybeShowInterstitial('skillCheckEnd'), 이번 범위에서 안 바뀜): 📏 줄 → FullScreenLayer 안 FirstCheck recheck. 전면은 onDone에서만 불림 = 결과 화면(RecheckResult)의 유일한 버튼 '닫기'(billingClose, FirstCheck.tsx 428줄) — 시험 도중·줄을 누를 때·onSkip(건너뛰기)에는 없음. 닫으면 층을 닫고 오늘의 학습 목록으로 돌아갈 뿐 다음 줄(▶ Quizbank·📞 수업)을 저절로 열지 않음 → '다음 할 것으로 이어지는 흐름 한가운데'가 아니라 14일 시험 끝(콘텐츠 사이 논리적 쉼). 결과 화면 네이티브 skill-check-end(spaced)와 같은 화면이 아니라 닫은 뒤라 한 화면 하나 규칙도 맞음. 3분 간격으로 바로 뒤 quizBreak와도 안 겹침. 횟수: 14일마다라 한 달 최대 약 2번, 무료가 그날 My를 쓰고 끝까지 하는 비율을 3/4로 어림 → 1.5. 첫 측정(처음 My)은 recheck가 아니라 전면 없음(StudyMapTab FirstCheck).",
   "econ": {
    "my": {
     "skillChecksPerMonth": 1.5
@@ -76,5 +76,26 @@
   },
   "per1000Mid": 36202,
   "freePersonMid": 38
+ },
+ {
+  "kind": "add",
+  "what": "(넣지 않음 — 기록) 퀴즈 쓰기 칸에서 💡 버튼이 빠진 자리(모르겠어요 옆)·첫 측정/실력 확인 문제 화면에 광고",
+  "where": "My 탭 `my` · studyMap/QuizPlayer.tsx TypeBox(빈칸 쓰기·틀린 곳 고치기·대화 빈칸·여러 곳 고치기) ／ studyMap/FirstCheck.tsx 문제 단계 ／ studyMap/Quizbank.tsx",
+  "why": "새 UI 검토(0번·0-1번·0-2번): 이번 화면 변경은 입력칸 줄에서 💡 버튼을 빼고 첫 글자를 입력칸 안내 글로 옮긴 것, 같은 칸이 최근 낸 문장을 다시 내지 않게 한 것(turnFresh·askedTexts·noteAsked)뿐 — 새 끝 화면·목록·전체 화면 층·넘어가는 시점이 생기지 않음. 빠진 💡 자리는 입력칸·'모르겠어요' 버튼 바로 옆이라 '푸는 중·입력칸·버튼 옆' 넣지 않는 곳(AdMob 잘못 누름), 키보드가 올라오는 화면. 첫 측정·실력 확인 문제 화면은 시험 도중(전면·네이티브 없음 — 결과 화면 skill-check-end 네이티브와 닫을 때 skillCheckEnd 전면은 그대로). Quizbank 문제 아래 quiz-inline 네이티브·10문제 경계 quizBreak·끝 화면 quiz-end·숙제 끝 homeworkEnd는 이번 diff에서 안 바뀜.",
+  "appBuild": true,
+  "severity": "report",
+  "risky": true,
+  "basis": "diff 372bfac..06f47b8(src/components 3파일 +38 −62): NativeAdSlot·maybeShowInterstitial 줄 변화 없음. 답 수·묶음 크기(QUIZ_SIZE) 그대로라 quizBreak 횟수도 그대로로 봄(💡 차례가 맞음으로 안 세던 것만 없어짐 — 묶음 경계는 답한 문제 수 기준). 숫자는 기록용 — 쓰기 칸이 무료 쓰는 날 여러 번 보이지만 같은 화면에 이미 quiz-inline 네이티브가 있어(한 화면 하나) 넣으면 겹침, 쓰는 날 0.5번으로 어림. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 화면 구성은 버튼 하나가 빠진 것뿐이라 새로 찍지 않음, 코드로만 봄.",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "native",
+     "perActiveDay": 0.5,
+     "when": "my"
+    }
+   ]
+  },
+  "per1000Mid": 23206,
+  "freePersonMid": 24
  }
 ]
