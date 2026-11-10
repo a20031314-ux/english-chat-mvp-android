@@ -1616,6 +1616,82 @@
       "base": "HEAD",
       "head": "ab2c778",
       "status": "open"
+    },
+    {
+      "id": "a261110-2-5",
+      "at": "2026-11-10 14:56",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "퀴즈 쓰기 칸 💡 버튼 뺌·첫 글자를 입력칸 안내 글로 기본(firstCue), 모르겠어요는 틀림 — 통화 숙제 퀴즈(CallReplay)도 같은 TypeBox",
+      "files": [
+        "src/components/FindInMy.tsx",
+        "src/components/EnglishAnalysisViewer.tsx",
+        "src/components/EnglishAnalysisProvider.tsx",
+        "src/app/learning/LearningClient.tsx"
+      ],
+      "features": [
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "bcf2eab",
+      "head": "6cd3ee3",
+      "status": "open"
+    },
+    {
+      "id": "a261110-2-6",
+      "at": "2026-11-10 14:56",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "퀴즈 쓰기 칸 💡 버튼 뺌·첫 글자를 입력칸 안내 글로 기본(firstCue), 모르겠어요는 틀림 — 통화 숙제 퀴즈(CallReplay)도 같은 TypeBox",
+      "files": [
+        "src/components/roleplay/CallReplay.tsx",
+        "src/components/ChatWindow.tsx",
+        "src/components/RoleplayPast.tsx",
+        "src/components/roleplay/callHooks.ts",
+        "src/components/roleplay/CallRecap.tsx",
+        "src/components/CallHost.tsx",
+        "src/components/RoleplayScreen.tsx",
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx",
+        "src/lib/pack/pack.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "bcf2eab",
+      "head": "6cd3ee3",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -1864,10 +1940,26 @@
       "asks": [
         "a261110-2-4"
       ]
+    },
+    {
+      "at": "2026-11-10 14:56",
+      "from": "2",
+      "base": "bcf2eab",
+      "head": "6cd3ee3",
+      "what": "퀴즈 쓰기 칸 💡 버튼 뺌·첫 글자를 입력칸 안내 글로 기본(firstCue), 모르겠어요는 틀림 — 통화 숙제 퀴즈(CallReplay)도 같은 TypeBox",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261110-2-5",
+        "a261110-2-6"
+      ]
     }
   ],
   "seq": {
-    "261110-2": 4,
+    "261110-2": 6,
     "261110-1": 3
   }
 }

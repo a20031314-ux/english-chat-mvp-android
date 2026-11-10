@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (23)
+## 탭이 확인할 것 (25)
 
 ### 탭 1 메인
 
@@ -35,6 +35,10 @@
 - **a261110-2-1** (2026-11-10 00:15, 탭 2 · b305d55) 값 꼬리표 정리 — 낱말마다 붙던 '학습·n번 학습' 표시(퀴즈 답 뒤 칩·사전·카드 기록·타임라인)·'새로/다시 학습'·'학습 n번'을 지움, '학습 n'은 그 기간에 퀴즈로 답한 서로 다른 것의 수 한 뜻. 사전은 마지막 틀림 ✗만. CardProgressDots·cardProgress.ts 지움. 새 규칙 RULES 4·DESIGN '값 꼬리표' — 그 탭 화면에도 값마다 붙은 글 꼬리표가 있는지 같은 기준으로 봐 주세요
   - 기능: 자유대화 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘 · 학습 타임라인 · 학습 수 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · My에서 찾기
   - 볼 곳: `components/FindInMy.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261110-2-5** (2026-11-10 14:56, 탭 2 · 6cd3ee3) 퀴즈 쓰기 칸 💡 버튼 뺌·첫 글자를 입력칸 안내 글로 기본(firstCue), 모르겠어요는 틀림 — 통화 숙제 퀴즈(CallReplay)도 같은 TypeBox
+  - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/FindInMy.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/EnglishAnalysisProvider.tsx` · `app/learning/LearningClient.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -89,6 +93,10 @@
 - **a261110-2-4** (2026-11-10 00:43, 탭 2 · ab2c778) 오늘의 학습을 Logbank에서 My 맨 위 계정 카드 아래로 옮김 — 줄: ▶ Quizbank · 숙제 · 📞 수업 · 📏 실력 확인(14일이 된 날만), ✓만·숫자 없음. Logbank는 기록만(실력 확인은 표만). 문구 lbToday 지움(제목 notebookToday). 숙제 줄·수업 문이 그 탭에서 맞게 열리는지
   - 기능: 자유대화 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 소재 수업
   - 볼 곳: `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261110-2-6** (2026-11-10 14:56, 탭 2 · 6cd3ee3) 퀴즈 쓰기 칸 💡 버튼 뺌·첫 글자를 입력칸 안내 글로 기본(firstCue), 모르겠어요는 틀림 — 통화 숙제 퀴즈(CallReplay)도 같은 TypeBox
+  - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/ChatWindow.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/callHooks.ts` · `components/roleplay/CallRecap.tsx` · `components/CallHost.tsx` · `components/RoleplayScreen.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `lib/pack/pack.ts`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
