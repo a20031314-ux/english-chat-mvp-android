@@ -19,9 +19,9 @@ import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { loadBank, stageCuts, BANK_CHUNK, type BankWord } from "@/lib/curriculum/vocabBank";
 import { fetchWordChunk } from "@/lib/curriculum/useWordBank";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
-import { chooseFromPrepared, type PreparedItem } from "@/lib/curriculum/preparedQuiz";
+import { chooseFromPrepared, turnFresh, type PreparedItem } from "@/lib/curriculum/preparedQuiz";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
-import { cardQuiz, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { askedTexts, cardQuiz, noteAsked, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { noteLedger } from "@/lib/curriculum/logLedger";
 import { emptyCircle, type Circle } from "@/lib/curriculum/circle";
 import { climbFrom, saveRecheck, type SkillCheck } from "@/lib/curriculum/skillCheck";
@@ -226,7 +226,7 @@ export function FirstCheck({
     const fromPrepared = (prepared ?? []).filter((item: PreparedItem) => item.kind === kind && item.stage === stage && !used.current.has(item.key));
     const random = seeded(`${seed}|${kind}|${stage}|${used.current.size}`);
     for (const item of [...fromPrepared].sort(() => random() - 0.5)) {
-      const question = chooseFromPrepared(item);
+      const question = chooseFromPrepared(turnFresh(item, 0, askedTexts(language, item.key)));
       if (question) return { key: item.key, question, kind };
     }
     if (kind === "expression") {
@@ -310,6 +310,12 @@ export function FirstCheck({
   const dots: Step[] = [...(letterQs.length ? (["letters"] as Step[]) : []), "words", "climb", "result"];
   const dotOn = (one: Step) => dots.indexOf(one) <= dots.indexOf(step === "meaning" ? "words" : step);
   const question = (step === "meaning" || step === "climb") && asked[at] ? asked[at] : null;
+  // 낸 문장을 그 열쇠에 남긴다 — 곧 Quizbank가 같은 칸을 같은 문장으로 내지 않게(quiz.ts noteAsked, 2026-11-10 구성 고치기).
+  const shownKey = question?.key ?? "";
+  const shownText = question && "text" in question.question ? question.question.text : "";
+  useEffect(() => {
+    if (shownKey && shownText) noteAsked(language, shownKey, shownText);
+  }, [language, shownKey, shownText]);
   const label = step === "letters" ? ui.fcLetters : step === "words" || step === "meaning" ? ui.partVocab : question?.kind === "grammar" ? ui.partGrammar : ui.partExpression;
   const count =
     step === "letters"

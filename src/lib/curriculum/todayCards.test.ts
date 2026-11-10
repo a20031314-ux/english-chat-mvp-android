@@ -79,13 +79,16 @@ test("다시 볼 것: 대화에서 막힌 것 → 다시 볼 것(오늘 안 푼 
     ev(again, "ok", T0, { m: "pick" }), ev(again, "again", T0 + 10),
     ev(hardOld, "ok", T0 + DAY, { m: "write" }), ev(hardOld, "miss", T0 + 3 * DAY, { m: "write" }),
     ev(againToday, "ok", now - 60, { m: "write" }), ev(againToday, "again", now - 50),
-    ev(missed, "miss", now - 120, { m: "pick" }),
+    ev(missed, "miss", now - 2 * 3600, { m: "pick" }),
+    ev("w|ejército", "miss", now - 120, { m: "pick" }),
     ev(fine, "ok", now - 100, { m: "pick" }),
     ev(fineWrite, "ok", T0, { m: "write" }),
     { k: "w|帰る", src: "call", r: "miss", t: now - DAY },
   ];
   const keys = reviewKeys({ events, states: checkStates(events), now, today: utcDay });
   assert.deepEqual(keys, ["w|帰る", again, hardOld, missed]);
+  // 방금(한 시간 안) 틀린 처음 봄은 아직 — 몇 분 뒤 같은 문제를 기억으로 풀지 않게.
+  assert.ok(reviewKeys({ events, states: checkStates(events), now: now + 3600, today: utcDay }).includes("w|ejército"));
   // 오늘 [다시]를 누른 것은 다음 날부터.
   assert.ok(reviewKeys({ events, states: checkStates(events), now: now + DAY, today: utcDay }).includes(againToday));
 });

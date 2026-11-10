@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { describe, it } from "node:test";
+import { describe, it, test } from "node:test";
 import fs from "node:fs";
 import { chooseFromPrepared, pickPrepared, turnPrepared, typeFromPrepared, type PreparedItem } from "./preparedQuiz.ts";
 
@@ -120,4 +120,15 @@ describe("turnPrepared — 같은 칸을 다른 문장으로", () => {
       }
     }
   });
+});
+
+test("turnFresh: 최근에 낸 문장은 건너뛰고 다음 차례, 다 냈으면 그대로 (es·ja)", async () => {
+  const { turnFresh } = await import("./preparedQuiz.ts");
+  for (const [line, v1, v2] of [["Cabe destacar que…", "Cabe destacar el…", "Cabe destacar la…"], ["駅は近いです。", "店は近いです。", "家は近いです。"]]) {
+    const item = { key: "e|x", kind: "expression" as const, stage: 1, gloss: "g", before: "", after: "", answer: "a", options: ["a", "b"], line, why: "w", variants: [v1, v2].map((one) => ({ before: "", after: "", answer: "a", options: ["a", "b"], line: one, gloss: "g", why: "w" })) };
+    assert.equal(turnFresh(item, 0, []).line, line);
+    assert.equal(turnFresh(item, 0, [line]).line, v1);
+    assert.equal(turnFresh(item, 0, [line, v1]).line, v2);
+    assert.equal(turnFresh(item, 1, [line, v1, v2]).line, v1);
+  }
 });

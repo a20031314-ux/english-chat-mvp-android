@@ -48,6 +48,9 @@ export function stuckKeys(events: readonly LogEvent[], now: number): string[] {
  * Quizbank의 다시 볼 것(장부·체크 셋에서): 대화에서 막힌 것 → 다시 볼 것(앎에서 틀림·[다시] — 오늘 아직 안 푼 것, 그래서 다음 날부터)
  * → 마지막 답이 틀린 처음 봄. 맞힌 것은 저절로 다시 내지 않는다(확인 날짜 없음).
  */
+/** 처음 본 것을 틀린 뒤 다시 낼 때까지(초). */
+export const MISS_GAP_SECONDS = 60 * 60;
+
 export function reviewKeys(input: { events: readonly LogEvent[]; states: ReadonlyMap<string, CheckState>; now: number; today: (t: number) => string }): string[] {
   const { events, states, now } = input;
   const out: string[] = [];
@@ -64,6 +67,10 @@ export function reviewKeys(input: { events: readonly LogEvent[]; states: Readonl
     const last = lastQuiz.get(key);
     if (!last || input.today(last.t) !== today) add(key);
   }
-  for (const [key, state] of byLast) if (state.level === "new" && lastQuiz.get(key)?.r === "miss") add(key);
+  // 처음 본 것을 틀림: 한 시간은 지나서(2026-11-10 구성 고치기 — 첫 측정에서 틀린 것이 몇 분 뒤 같은 문제로, 기억으로 고름).
+  for (const [key, state] of byLast) {
+    const last = lastQuiz.get(key);
+    if (state.level === "new" && last?.r === "miss" && now - last.t >= MISS_GAP_SECONDS) add(key);
+  }
   return out;
 }

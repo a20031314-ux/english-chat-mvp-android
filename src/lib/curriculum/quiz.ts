@@ -604,6 +604,24 @@ export function typeOf(language: string, source: QuizSource, key = ""): QuizQues
  *   문법이라 봐주지 않고, 띄어쓰기 없는 말·한국어(한 글자가 조사·어미)도 봐주지 않는다. near(헷갈리는 오답)와 같은 꼴도 아니다.
  * - 일본어를 로마자로 침(ga → が): 소리가 같으면(가타카나 장음 ー 포함). 한자가 든 답은 여기서 못 맞추고 서버 다시 보기(typed-check)로.
  */
+/**
+ * 쓰기 칸의 첫 글자 도움(입력칸 안내 글, 기본으로 — 사용자 2026-11-10 "답이 여럿인 빈칸은 첫 글자", "💡 빼고"): "첫 글자…".
+ * 글자는 자소 묶음 단위(Intl.Segmenter — 힌디·태국 모음 기호를 떼지 않음). 셋보다 짧은 답·한자가 든 답은 첫 글자가 답의 큰 몫이라 없음("").
+ */
+export function firstCue(answer: string): string {
+  const text = answer.trim();
+  if (!text || /\p{Script=Han}/u.test(text)) return "";
+  let parts: string[];
+  try {
+    parts = [...new Intl.Segmenter(undefined, { granularity: "grapheme" }).segment(text)].map((one) => one.segment);
+  } catch {
+    parts = [...text];
+  }
+  const letters = parts.filter((one) => /[\p{L}\p{N}]/u.test(one));
+  if (letters.length < 3) return "";
+  return `${parts[0]}…`;
+}
+
 export function typedRight(answer: string, typed: string, options: { language?: string; near?: readonly string[] } = {}): "exact" | "loose" | false {
   const norm = (text: string) => {
     const base = text.normalize("NFC").toLocaleLowerCase().replace(/[’‘`´]/g, "'").replace(/[\p{P}\p{S}]+/gu, " ").replace(/\s+/g, " ").trim();
@@ -1267,7 +1285,9 @@ export function joinWords(words: readonly string[], spaced: boolean): string {
  * 카드(뜻)가 아직 안 왔거나 오답이 모자라면 null — 부르는 쪽이 예전 모양으로.
  */
 /** 언어마다 바로 앞 뜻 가림 문제에 나온 보기(뜻) — 다음 문제 보기에서 뺀다. */
-const RECENT_OPTIONS = new Map<string, Set<string>>();
+/** 보기 뜻을 다시 안 쓰는 최근 문제 수(고르기). */
+export const RECENT_OPTION_QUESTIONS = 3;
+const RECENT_OPTIONS = new Map<string, Set<string>[]>();
 
 /** 낱말·표현 카드 앞면(Logbank "배운 것" 목록 — 2026-11-07): 퀴즈와 같은 카드(낱말·뜻·예문·예문 뜻), 첫 예문. 없으면 null. */
 export function cardFaceOf(language: string, key: string): { word: string; meaning: string; text: string; piece: string; gloss: ScriptGloss } | null {
@@ -1288,7 +1308,12 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   const pool = kind === "w" ? GAP_SOURCES.get(language) : EXPRESSION_CARDS.get(language);
   // 예문이 여럿이면 차례(seed)마다 다른 것 — 다시 볼 때 같은 문장을 기억으로 풀지 않게(2026-11-07 점검 easy-repeat).
   const usable = (pool?.get(key) ?? []).filter((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece));
-  const source = usable.length ? usable[Math.floor(rng(`${seed}|${key}|src`)() * usable.length)] : undefined;
+  // 최근에 이 열쇠로 낸 문장(noteAsked — 첫 측정·퀴즈)은 뒤로: 안 낸 예문이 있으면 그중에서, 다 냈으면 가장 오래전 것(2026-11-10 구성 고치기 —
+  // 틀린 것이 몇 분 뒤 같은 예문으로 다시 나와 기억으로 고름, 가상 사용자 11-07·11-09 easy-repeat).
+  const asked = askedTexts(language, key);
+  const unasked = usable.filter((one) => !asked.includes(one.text));
+  const oldest = [...usable].sort((a, b) => asked.indexOf(b.text) - asked.indexOf(a.text))[0];
+  const source = unasked.length ? unasked[Math.floor(rng(`${seed}|${key}|src`)() * unasked.length)] : oldest;
   if (!source?.wordGloss || !pool) return null;
   const answer = key.slice(2);
   const gloss = source.wordGloss.trim();
@@ -1321,8 +1346,10 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
     };
   }
   // 오답: 같은 품사 + 빈도 순위가 가까운 카드의 뜻 먼저(드문 낱말 뜻은 한눈에 지워짐 — 2026-11-07 점검 easy-decoy "area ↔ 바나나"),
-  // 바로 앞 문제에 보기로 나온 뜻은 빼고(같은 보기가 다음 문제 정답·오답으로 다시 — easy-repeat).
-  const recent = RECENT_OPTIONS.get(language) ?? new Set<string>();
+  // 최근 세 문제에 보기로 나온 뜻은 빼고(같은 보기가 다음 문제 정답·오답으로 다시 — easy-repeat).
+  const recent = new Set((RECENT_OPTIONS.get(language) ?? []).flatMap((one) => [...one]));
+  // 이 문제의 정답 뜻이 방금 보기로 나왔으면 고르기는 소거로 풀림 — 쓰기(낱말 가림)로(2026-11-10 구성 고치기, 11-07 "have — 앞 문제 오답이던 소유하다가 정답").
+  if (recent.has(norm(gloss))) return cardQuiz(language, key, "show", seed, { bare: how.bare });
   const seen = new Set([norm(gloss)]);
   const samePos = others.filter((other) => !source.pos || other.pos === source.pos);
   const near = samePos.filter((other) => at < 0 || Math.abs(other.at - at) <= 200);
@@ -1338,7 +1365,7 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
     wrong.push(other.gloss);
   }
   if (wrong.length < 3) return null;
-  RECENT_OPTIONS.set(language, new Set([norm(gloss), ...wrong.map(norm)]));
+  RECENT_OPTIONS.set(language, [new Set([norm(gloss), ...wrong.map(norm)]), ...(RECENT_OPTIONS.get(language) ?? [])].slice(0, RECENT_OPTION_QUESTIONS));
   const right: ScriptGloss = { en: "", raw: gloss };
   const options = shuffled([right, ...wrong.map((raw): ScriptGloss => ({ en: "", raw }))], random);
   return { kind: "meaning", text: source.text, options, answer: options.indexOf(right), gloss: source.gloss, from: key, mark: source.piece, card: face };

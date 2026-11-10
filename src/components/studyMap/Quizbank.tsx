@@ -12,14 +12,14 @@ import { ladderFor } from "@/lib/curriculum/stages";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
-import { bundleQuiz, cardQuiz, QUIZ_SIZE, registerQuizSources, registerWordGender, type QuizCard, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { askedTexts, bundleQuiz, cardQuiz, QUIZ_SIZE, registerQuizSources, registerWordGender, type QuizCard, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { confirmDue, knownState } from "@/lib/curriculum/known";
 import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
 import { latestCheck } from "@/lib/curriculum/skillCheck";
-import { chooseFromPrepared, pickPrepared, turnPrepared, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
+import { chooseFromPrepared, pickPrepared, turnFresh, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
 import { knownSlotWeight } from "@/lib/curriculum/languagePairs";
 import { loadWordTraits } from "@/lib/curriculum/wordTraits";
 import { learnerLanguages } from "@/lib/curriculum/learnerLanguages";
@@ -303,7 +303,7 @@ export function Quizbank({
   /** 같은 칸의 바꾼 문장이 있는 문법 칸(problems/<언어>-gv.json)은 다시 볼 때도 그 칸 퀴즈 답 수 차례의 다른 문장으로. 없으면 null(묶음 퀴즈). */
   const turnedGrammar = (key: string, events: readonly { k: string; src: string }[]): QuizQuestion | null => {
     const item = prepared?.find((one) => one.key === key && one.kind === "grammar");
-    return item?.variants?.length ? chooseFromPrepared(turnPrepared(item, events.filter((one) => one.k === key && one.src === "quiz").length)) : null;
+    return item?.variants?.length ? chooseFromPrepared(turnFresh(item, preparedTurn(events, key), askedTexts(language, key))) : null;
   };
   /** 열쇠마다 카드 문제, 카드가 없는 열쇠(문법·문장구조 등)는 old(묶음 퀴즈)로 — 순서는 받은 대로. */
   const askKeys = (keys: readonly string[], old: (rest: readonly string[]) => { keys: string[]; questions: QuizQuestion[] }): { keys: string[]; questions: QuizQuestion[] } => {
@@ -394,7 +394,7 @@ export function Quizbank({
     // 같은 칸은 나올 때마다 다른 문장(바꾼 사전 예문이 있는 칸만) — 이 폰 장부의 그 칸 퀴즈 답 수로 차례.
     const asked = readLedger(language);
     for (const item of head) {
-      const made = chooseFromPrepared(turnPrepared(item, asked.filter((one) => one.k === item.key && one.src === "quiz").length));
+      const made = chooseFromPrepared(turnFresh(item, preparedTurn(asked, item.key), askedTexts(language, item.key)));
       if (made) {
         questions.push(made);
         used.push(item.key);
@@ -472,4 +472,9 @@ export function Quizbank({
     review: { summary: null, body: null },
     overlays: null,
   });
+}
+
+/** 넣어 둔 칸이 나온 횟수 — 퀴즈와 첫 측정·실력 확인(exam) 답을 같이 센다(첫 측정에서 본 문장 다음 문장부터). */
+function preparedTurn(events: readonly { k: string; src: string }[], key: string): number {
+  return events.filter((one) => one.k === key && (one.src === "quiz" || one.src === "exam")).length;
 }

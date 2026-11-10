@@ -13,7 +13,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/LineParts";
 import { usePremium } from "@/contexts/PremiumContext";
 import { isLocale, type UICopy } from "@/lib/copy";
-import { KO_PARTICLE_PAIRS, slipBadIndex, buildQuiz, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
+import { KO_PARTICLE_PAIRS, slipBadIndex, buildQuiz, firstCue, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
@@ -38,8 +38,6 @@ import { useOptionNotes } from "@/lib/curriculum/optionNotes";
 
 /** skipped = 말하기 한도에 걸려 못 함 — 점수에서 뺀다. */
 export type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][]; /** 고른 보기(문제은행 셈 — 한눈에 지워지는 오답 찾기). */ picked?: string;
-  /** 💡 힌트·모르겠어요로 답을 본 차례 — 맞게 쳤어도 맞음으로 세지 않는다(correct false), 화면엔 ✓ 대신 💡. */
-  assisted?: boolean;
   /** 맞나 틀리나: 바른 꼴까지 쳐서 답함(쓰기로 셈) — 판단만이면 없음(고르기로 셈). */
   typed?: boolean;
   /** 복합 문제(multi·spots): 소재(열쇠)마다 맞음/틀림 — 부르는 쪽이 열쇠마다 따로 기록한다. */
@@ -336,9 +334,9 @@ export function QuestionView({
       {answered ? (
         <div className="flex flex-wrap items-center justify-between gap-2">
           <span className={`whitespace-nowrap text-note font-semibold ${answered.correct ? "text-good" : "text-bad"}`}>
-            {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : answered.assisted ? "💡" : ui.quizWrong}
+            {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : ui.quizWrong}
           </span>
-          {dictDoor && dotKey && /^[wefg]\|/.test(dotKey) && answered.correct && !answered.skipped && !answered.assisted ? (
+          {dictDoor && dotKey && /^[wefg]\|/.test(dotKey) && answered.correct && !answered.skipped ? (
             <button
               type="button"
               data-quiz-again
@@ -538,7 +536,10 @@ function useTypedGrade(language: string) {
   return { checking, grade };
 }
 
-/** 입력칸 + 확인 · 💡(첫 글자 → 글자 수) · 모르겠어요. 빈칸 쓰기와 틀린 곳 고치기가 같이 쓴다. */
+/**
+ * 입력칸 + 확인 · 모르겠어요. 빈칸 쓰기와 틀린 곳 고치기가 같이 쓴다.
+ * 첫 글자는 기본으로 입력칸 안내 글에(quiz.ts firstCue — 벌점 없음, 사용자 2026-11-10 "💡 빼고 첫 글자 기본"). 답이 짧거나 한자면 없음.
+ */
 function TypeBox({
   ui,
   tag,
@@ -548,8 +549,6 @@ function TypeBox({
   busy,
   onSubmit,
   onGiveUp,
-  hint,
-  onHint,
   autoFocus = true,
 }: {
   ui: UICopy;
@@ -560,8 +559,6 @@ function TypeBox({
   busy: boolean;
   onSubmit: (typed: string) => void;
   onGiveUp: () => void;
-  hint: number;
-  onHint: () => void;
   autoFocus?: boolean;
 }) {
   const tone = useBankTone();
@@ -575,9 +572,7 @@ function TypeBox({
     if (done || busy || !typed.trim()) return;
     onSubmit(typed);
   };
-  const letters = [...answer];
-  // 💡 한 번 = 첫 글자, 두 번 = 첫 글자 + 남은 글자 수만큼 밑줄(띄어쓰기는 그대로).
-  const hintText = hint >= 2 ? letters.map((ch, i) => (i === 0 || ch === " " ? ch : "＿")).join("") : hint === 1 ? `${letters[0] ?? ""}…` : "";
+  const cue = firstCue(answer);
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
@@ -591,7 +586,7 @@ function TypeBox({
           autoCorrect="off"
           autoComplete="off"
           spellCheck={false}
-          placeholder={hintText || (/\p{Script=Han}/u.test(answer) ? (tag.startsWith("zh") ? "pīnyīn" : tag.startsWith("ja") ? "ひらがな" : undefined) : undefined)}
+          placeholder={cue || (/\p{Script=Han}/u.test(answer) ? (tag.startsWith("zh") ? "pīnyīn" : tag.startsWith("ja") ? "ひらがな" : undefined) : undefined)}
           onChange={(event) => setTyped(event.target.value)}
           onKeyDown={(event) => {
             if (event.key === "Enter" && !event.nativeEvent.isComposing) submit();
@@ -614,19 +609,6 @@ function TypeBox({
         ) : null
       ) : (
         <div className="flex items-center gap-2">
-          {hint < 2 ? (
-            <button
-              type="button"
-              data-quiz-hint
-              onClick={() => {
-                // 힌트는 입력칸 안내 글로 보여서, 이미 쓴 글이 있으면 안 보였다(2026-11-07 점검 Layla "tu" + 힌트 → "tuel") — 쓴 글을 비운다.
-                setTyped("");
-                onHint();
-              }}
-              className="rounded-full border border-line px-3 py-1 text-caption text-slate-300 hover:bg-white/10">
-              💡 {ui.missionHint}
-            </button>
-          ) : null}
           <button type="button" data-quiz-giveup onClick={onGiveUp} className="rounded-full border border-line px-3 py-1 text-caption text-slate-400 hover:bg-white/10">
             {ui.markUnknown}
           </button>
@@ -639,7 +621,7 @@ function TypeBox({
 /**
  * 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑" → "그냥 타이핑해서 맞추는 식"): 뜻 · 빈칸 문장 · 입력칸 하나 · 확인.
  * 채점은 quiz.ts typedRight(악센트·한 글자 오타·일본어 로마자 봐줌), 그래도 틀림이면 서버가 같은 뜻의 맞는 꼴인지 한 번 더(typedCheck).
- * 💡·모르겠어요로 답을 본 차례는 맞음으로 세지 않는다.
+ * 모르겠어요는 틀림.
  */
 function TypeView({
   ui,
@@ -666,7 +648,6 @@ function TypeView({
 }) {
   const tone = useBankTone();
   const [result, setResult] = useState<Graded | null>(null);
-  const [hint, setHint] = useState(0);
   // 낱말 문제에 문장에 맞는 다른 낱말을 침 — 틀림도 맞음도 아니고 다시 치게(가상 사용자 2026-11-01 #9 "really도 맞는데 틀림").
   const [otherWord, setOtherWord] = useState(false);
   const { checking, grade } = useTypedGrade(language);
@@ -678,13 +659,13 @@ function TypeView({
       // 카드 낱말 가림: 예문 속 꼴 또는 사전형 — 기기에서만(모델 없음).
       const local = typedRight(question.answer, typed, { language, near: question.near }) || typedRight(card.word, typed, { language });
       setResult(local);
-      onAnswer({ correct: Boolean(local) && hint === 0, ...(hint ? { assisted: true } : {}) });
+      onAnswer({ correct: Boolean(local) });
       return;
     }
     if (wordQuiz) {
       const local = typedRight(question.answer, typed, { language, near: question.near });
       setResult(local);
-      onAnswer({ correct: Boolean(local) && hint === 0, ...(hint ? { assisted: true } : {}) });
+      onAnswer({ correct: Boolean(local) });
       return;
     }
     const local = typedRight(question.answer, typed, { language, near: question.near });
@@ -697,7 +678,7 @@ function TypeView({
       return;
     }
     setResult(final);
-    onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
+    onAnswer({ correct: Boolean(final) });
   };
   if (card) {
     return (
@@ -723,12 +704,10 @@ function TypeView({
           done={Boolean(answered)}
           result={answered ? result : null}
           busy={false}
-          hint={hint}
-          onHint={() => setHint((n) => n + 1)}
           onSubmit={(typed) => void submit(typed)}
           onGiveUp={() => {
             setResult(false);
-            onAnswer({ correct: false, assisted: true });
+            onAnswer({ correct: false });
           }}
         />
       </div>
@@ -765,15 +744,13 @@ function TypeView({
         done={Boolean(answered)}
         result={answered ? result : null}
         busy={checking}
-        hint={hint}
-        onHint={() => setHint((n) => n + 1)}
         onSubmit={(typed) => {
           setOtherWord(false);
           void submit(typed);
         }}
         onGiveUp={() => {
           setResult(false);
-          onAnswer({ correct: false, assisted: true });
+          onAnswer({ correct: false });
         }}
       />
       {otherWord && !answered ? (
@@ -813,7 +790,6 @@ function SpotView({
   const [tapped, setTapped] = useState<number | null>(null);
   const [said, setSaid] = useState<"none" | null>(null);
   const [result, setResult] = useState<Graded | null>(null);
-  const [hint, setHint] = useState(0);
   const { checking, grade } = useTypedGrade(language);
   const clean = question.bad.length === 0;
   const found = tapped !== null && question.bad.includes(tapped);
@@ -827,7 +803,7 @@ function SpotView({
     const mine = [before, typed.trim(), after].filter(Boolean).join(glue);
     const final = await grade(local, { kind: "fix", sentence: question.text, answer: question.right, typed: mine }, plainWrong);
     setResult(final);
-    onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
+    onAnswer({ correct: Boolean(final) });
   };
   const gloss = question.gloss ? quizGloss(question.gloss, locale, language) : null;
   return (
@@ -899,12 +875,10 @@ function SpotView({
           done={Boolean(answered)}
           result={answered ? result : null}
           busy={checking}
-          hint={hint}
-          onHint={() => setHint((n) => n + 1)}
           onSubmit={(typed) => void submit(typed)}
           onGiveUp={() => {
             setResult(false);
-            onAnswer({ correct: false, assisted: true });
+            onAnswer({ correct: false });
           }}
         />
       ) : null}
@@ -1061,7 +1035,6 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
   const tone = useBankTone();
   const [result, setResult] = useState<Graded | null>(null);
   const [picked, setPicked] = useState<string | null>(null);
-  const [hint, setHint] = useState(0);
   const { checking, grade } = useTypedGrade(language);
   const sentence = `${question.before}___${question.after}`;
   const submit = async (typed: string) => {
@@ -1069,7 +1042,7 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
     const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
     const final = await grade(local, { kind: "blank", sentence, answer: question.answer, typed: typed.trim() }, plainWrong);
     setResult(final);
-    onAnswer({ correct: Boolean(final) && hint === 0, ...(hint ? { assisted: true } : {}) });
+    onAnswer({ correct: Boolean(final) });
   };
   const target = question.lines[question.at];
   return (
@@ -1136,12 +1109,10 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
           done={Boolean(answered)}
           result={answered ? result : null}
           busy={checking}
-          hint={hint}
-          onHint={() => setHint((n) => n + 1)}
           onSubmit={(typed) => void submit(typed)}
           onGiveUp={() => {
             setResult(false);
-            onAnswer({ correct: false, assisted: true });
+            onAnswer({ correct: false });
           }}
         />
       )}
@@ -1283,7 +1254,6 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
   const [done, setDone] = useState<(Graded | null)[]>(() => question.errors.map(() => null));
   const [active, setActive] = useState<number | null>(null);
   const [misses, setMisses] = useState<number[]>([]);
-  const [hint, setHint] = useState(0);
   const glue = isSpaceless(question.text) ? "" : " ";
   const errorAt = (word: number) => question.errors.findIndex((error) => error.bad.includes(word));
   const finish = (graded: (Graded | null)[]) => {
@@ -1295,7 +1265,6 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
     const next = done.map((one, i) => (i === index ? result : one));
     setDone(next);
     setActive(null);
-    setHint(0);
     if (next.every((one) => one !== null)) finish(next);
   };
   const found = done.filter((one) => one !== null).length;
@@ -1342,7 +1311,6 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
               onClick={() => {
                 if (e >= 0) {
                   setActive(e);
-                  setHint(0);
                   return;
                 }
                 const next = [...misses, i];
@@ -1366,12 +1334,9 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
           done={false}
           result={null}
           busy={false}
-          hint={hint}
-          onHint={() => setHint((n) => n + 1)}
           onSubmit={(typed) => {
             const right = spotsFixRight(question.errors[active]!, typed, language);
-            // 💡로 답을 본 자리는 맞게 쳐도 맞음으로 세지 않는다.
-            resolve(active, hint ? false : right);
+            resolve(active, right);
           }}
           onGiveUp={() => resolve(active, false)}
         />

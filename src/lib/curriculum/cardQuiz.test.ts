@@ -57,11 +57,48 @@ test("카드 뜻 가림 오답: 빈도 순위가 가까운 같은 품사 먼저,
   const raws = first.options.map((o) => o.raw);
   assert.ok(raws.every((r) => /^뜻[0-4]$/.test(r!)), raws.join(","));
   registerQuizSources("it", [...many("it", ["casa", "cane", "gatto", "libro", "mare", "sole", "luna", "pane"])]);
+  const words = ["casa", "cane", "gatto", "libro", "mare", "sole", "luna", "pane"];
   const a = cardQuiz("it", "w|casa", "hide", "s1");
-  const b = cardQuiz("it", "w|libro", "hide", "s1");
-  if (a?.kind !== "meaning" || b?.kind !== "meaning") return assert.fail("meaning");
+  if (a?.kind !== "meaning") return assert.fail("meaning");
   const prev = new Set(a.options.map((o) => o.raw));
-  assert.ok(b.options.filter((o) => o.raw !== "뜻3").every((o) => !prev.has(o.raw)), "앞 문제 보기 다시");
+  // 정답 뜻이 방금 보기로 나온 낱말은 고르기 대신 쓰기(소거로 풀림, 2026-11-10 구성 고치기).
+  const shownWord = words.find((w, i) => w !== "casa" && prev.has(`뜻${i}`))!;
+  assert.equal(cardQuiz("it", `w|${shownWord}`, "hide", "s1")?.kind, "type");
+  const freshWord = words.find((w, i) => w !== "casa" && !prev.has(`뜻${i}`))!;
+  const b = cardQuiz("it", `w|${freshWord}`, "hide", "s1");
+  if (b?.kind !== "meaning") return assert.fail("meaning b");
+  assert.ok(b.options.every((o) => !prev.has(o.raw)), "앞 문제 보기 다시");
+});
+
+test("카드 예문: 최근에 이 열쇠로 낸 문장(noteAsked)은 뒤로 — 안 낸 예문부터, 다 냈으면 가장 오래전 것 (es·th)", async () => {
+  const { noteAsked } = await import("./quiz.ts");
+  for (const [lang, key, texts, piece] of [
+    ["es", "w|tamaño", ["El tamaño es grande.", "¿Qué tamaño usas?"], "tamaño"],
+    ["th", "w|ทะเลสาบ", ["ทะเลสาบสวยมาก", "เราไปทะเลสาบกัน"], "ทะเลสาบ"],
+  ] as const) {
+    registerQuizSources(lang, [
+      { key, sources: texts.map((text) => ({ text, gloss: { en: "", raw: "뜻" }, from: key, stage: 1, piece, who: "me" as const, wordGloss: "크기", pos: "noun" })) },
+      ...Array.from({ length: 6 }, (_, i) => card(`w|${lang}o${i}`, `${lang}o${i} ok.`, `${lang}o${i}`, `다른${i}`)),
+    ]);
+    for (let i = 0; i < 6; i += 1) {
+      noteAsked(lang, key, texts[0]);
+      assert.equal(cardQuiz(lang, key, "show", `seed${i}`)?.text, texts[1], `${lang} 안 낸 예문`);
+    }
+    noteAsked(lang, key, texts[1]);
+    assert.equal(cardQuiz(lang, key, "show", "x")?.text, texts[0], `${lang} 가장 오래전 것`);
+  }
+});
+
+test("첫 글자 도움: 자소 묶음 첫 글자 + …, 셋보다 짧은 답·한자는 없음 (es·th·hi·ko·zh)", async () => {
+  const { firstCue } = await import("./quiz.ts");
+  assert.equal(firstCue("quiero"), "q…");
+  assert.equal(firstCue("ทะเล"), "ท…");
+  // 힌디: 자음 + 모음 기호를 한 글자로(\p{M}를 떼지 않음).
+  assert.equal(firstCue("किताब"), "कि…");
+  assert.equal(firstCue("먹었어요"), "먹…");
+  assert.equal(firstCue("es"), "");
+  assert.equal(firstCue("我们"), "");
+  assert.equal(firstCue("食べたい"), "");
 });
 
 test("맞나 틀리나: 낱말은 그대로, 앞에 문법 실수 하나(조동사+to · be+원형 · 자음 앞 an), 맞는 문장이 섞임, 영어만 (en·es·ja)", async () => {

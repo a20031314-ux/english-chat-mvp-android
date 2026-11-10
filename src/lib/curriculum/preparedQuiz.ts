@@ -31,6 +31,19 @@ export function turnPrepared(item: PreparedItem, turn: number): PreparedItem {
   return at === 0 ? item : { ...item, ...list[at - 1]! };
 }
 
+/**
+ * turnPrepared + 최근에 낸 문장(quiz.ts askedTexts — 첫 측정·퀴즈) 건너뛰기: turn부터 차례로 돌며 안 낸 문장을 고른다.
+ * 다 냈으면 turn 그대로(2026-11-10 구성 고치기 — 첫 측정에서 틀린 칸이 몇 분 뒤 같은 문장·같은 보기로). 순수.
+ */
+export function turnFresh(item: PreparedItem, turn: number, asked: readonly string[]): PreparedItem {
+  const n = (item.variants?.length ?? 0) + 1;
+  for (let step = 0; step < n; step += 1) {
+    const one = turnPrepared(item, turn + step);
+    if (!asked.includes(one.line)) return one;
+  }
+  return turnPrepared(item, turn);
+}
+
 export function chooseFromPrepared(item: PreparedItem): QuizQuestion | null {
   if (item.kind === "word") return null;
   const options = item.options.filter((option) => option.trim());
