@@ -78,6 +78,7 @@
 | stageReadings | 21.4원 | 3 | claude-haiku-5-5 6000/9000 토큰 (기능 translate) | 가정 |
 | scriptChoices | 19.6원 | 2 | claude-sonnet-5-5 2000/300 토큰 (기능 scriptChoices) | 가정 |
 | roleplayReview | 15.4원 | 1 | claude-sonnet-5-5 1500/800 토큰 (기능 roleplayReview) | 가정 |
+| spotMake | 14.6원 | 1 | claude-sonnet-5-5 700/900 토큰 (기능 spotJudge) | 가정 |
 | wordCards | 13.3원 | 2 | claude-haiku-5-5 2500/9000 토큰 (기능 translate) | 가정 |
 | scriptRecheck | 9.8원 | 1 | claude-sonnet-5-5 2000/300 토큰 (기능 scriptRecheck) | 가정 |
 | wordSenses | 7.6원 | 1 | claude-sonnet-5-5 450/450 토큰 (기능 wordSenses) | 가정 |
@@ -188,6 +189,8 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 | chatVerify | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | fixedLesson | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | wordSenses | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
+| spotMake | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
+| spotJudge | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | 받아쓰기 — 통화·방 한 마디 | scribe_v2 | 분당 $0.0036 | hub/work/drafts/speech-models-2026-10-21.md (한 줄 6초 약 0.5원) |
 | 받아쓰기 — 방 교정 두 번째 의견 | scribe_v2 | 분당 $0.0036 | hub/work/drafts/speech-models-2026-10-21.md (한 줄 6초 약 0.5원) |
 | 받아쓰기 — 영상(자막 없을 때) | scribe_v2 | 분당 $0.0036 | hub/work/drafts/speech-models-2026-10-21.md (한 줄 6초 약 0.5원) |
@@ -204,7 +207,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 
 ## 기록 확인
 
-모델을 쓰는 서버 경로 53개 중 52개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
+모델을 쓰는 서버 경로 54개 중 53개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
 - 일부러 뺌: `src/app/api/curriculum/fixed-lesson/route.ts` — 고정 수업 읽기 전용 — 모델 호출 없음
 
 ## 가정 (믿기 어려운 숫자부터 확인)
@@ -212,7 +215,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.0131 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 70개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, wordCards, recallPrompts, frameLesson, fixedLesson, wordSenses, preparedCopy, qbankGrow, qbankSeed, qbankOffer, wordAdd, stageReadings, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, callReplay, roleplayReview, roleplayPractice, scriptJudge, scriptRecheck, quizTypedCheck, quizOptionNotes, roleplayBranch, scriptChoices, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 71개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, wordCards, recallPrompts, frameLesson, fixedLesson, wordSenses, preparedCopy, qbankGrow, qbankSeed, spotMake, qbankOffer, wordAdd, stageReadings, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, callReplay, roleplayReview, roleplayPractice, scriptJudge, scriptRecheck, quizTypedCheck, quizOptionNotes, roleplayBranch, scriptChoices, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 

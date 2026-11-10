@@ -79,6 +79,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   preparedCopy: 1,
   // 자라는 문제은행(server/qbank.ts) — 열쇠가 모자랄 때만 만들기 1 + 앱 언어 뜻 옮기기 1, 열쇠마다 하루 3번·전체 하루 400번까지.
   qbankGrow: 2,
+  // 틀린 곳 고르기 미리 만들기(server/spotMake.ts) — 사전 예문 × 종류마다 처음 한 번 바꾸기 1 + 판정 1(셈은 부를 때마다 op 하나씩), 하루 전체 300번까지.
+  spotMake: 1,
   // 출시 초반 문제은행 미리 채우기(예약 작업 /api/curriculum/qbank/seed) — 예문 없는 열쇠마다 만들기 1, 한 번에 30개·2시간마다, 다 돌면 0.
   qbankSeed: 1,
   // 대화에서 온 튜터 줄 판정(앱이 거른 줄만, 한 번에 다섯·하루 300까지, 사용자가 끄면 0).
