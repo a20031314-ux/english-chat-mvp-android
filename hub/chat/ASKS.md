@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (32)
+## 탭이 확인할 것 (34)
 
 ### 탭 1 메인
 
@@ -51,6 +51,10 @@
 - **a261111-2-3** (2026-11-11 11:48, 탭 2 · 2766924) 퀴즈 4단계: 문법·표현 사다리·종류 비율, 맞나 틀리나 지움(QuizPlayer — 통화 숙제 퀴즈도 같은 화면)
   - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · My에서 찾기
   - 볼 곳: `components/FindInMy.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261111-2-5** (2026-11-11 12:16, 탭 2 · 8a1fc7e) 퀴즈 5·6단계: 틀린 곳 번호 선지·문단·게이지(QuizPlayer·quiz.ts) — 통화 숙제 퀴즈·첫 측정에서 spot/type 화면 확인
+  - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/FindInMy.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/EnglishAnalysisProvider.tsx` · `app/learning/LearningClient.tsx` · `app/api/account/config/route.ts` · `app/api/account/delete/route.ts` · `app/api/account/email/start/route.ts` · `app/api/account/email/verify/route.ts` · `app/api/account/google/route.ts` · `app/api/account/me/route.ts` … 39개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -121,6 +125,10 @@
 - **a261111-2-4** (2026-11-11 11:48, 탭 2 · 2766924) 퀴즈 4단계: 문법·표현 사다리·종류 비율, 맞나 틀리나 지움(QuizPlayer — 통화 숙제 퀴즈도 같은 화면)
   - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · My에서 찾기
   - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `components/RoleplayScreen.tsx` · `components/ExpressionPeek.tsx` · `components/roleplay/CallRecap.tsx` · `components/ChatWindow.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/callHooks.ts` · `components/CallHost.tsx` … 3개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261111-2-6** (2026-11-11 12:16, 탭 2 · 8a1fc7e) 퀴즈 5·6단계: 틀린 곳 번호 선지·문단·게이지(QuizPlayer·quiz.ts) — 통화 숙제 퀴즈·첫 측정에서 spot/type 화면 확인
+  - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/ChatWindow.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/callHooks.ts` · `components/roleplay/CallRecap.tsx` · `components/CallHost.tsx` · `components/RoleplayScreen.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `app/api/pack/finish/route.ts` … 24개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
