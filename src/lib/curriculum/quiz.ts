@@ -64,7 +64,7 @@ export type QuizQuestion =
   /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
   | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
-  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 넣어 둔 단어 문제. 뜻만 보고 단어를 쓴다. 문장은 답한 뒤에. hint는 첫 글자, mark는 "한 글자"·"한 단어". */ prepared?: { hint?: string; mark?: string }; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 예문 없이 뜻만 보고 쓰기(어림이 높은 처음 본 말 — quizTier.ts hard). 맞히면 장부 쓰기 sure. */ bare?: true }
+  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 예문 없이 뜻만 보고 쓰기(어림이 높은 처음 본 말 — quizTier.ts hard). 맞히면 장부 쓰기 sure. */ bare?: true }
   /**
    * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
@@ -83,6 +83,8 @@ export type QuizQuestion =
   /** 복합 틀린 곳(같은 날): 한 문장에 확실히 틀린 꼴이 둘·셋 — 모두 찾아 고친다. errors마다 그 열쇠·낱말 자리·바른 말. */
   | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
+  /** 낱말 스스로 체크(그럴듯한 보기가 셋 안 모일 때): 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 → [맞았어요 | 틀렸어요]. */
+  | { kind: "know"; text: string; mark: string; gloss: ScriptGloss; from: string; card: QuizCardFace }
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string; /** 카드 모양(개편, cardQuiz) — 낱말·예문은 보이고 뜻 칸만 가림. */ card?: QuizCardFace };
 
 /**
@@ -1348,8 +1350,9 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   // 오답: 같은 품사 + 빈도 순위가 가까운 카드의 뜻 먼저(드문 낱말 뜻은 한눈에 지워짐 — 2026-11-07 점검 easy-decoy "area ↔ 바나나"),
   // 최근 세 문제에 보기로 나온 뜻은 빼고(같은 보기가 다음 문제 정답·오답으로 다시 — easy-repeat).
   const recent = new Set((RECENT_OPTIONS.get(language) ?? []).flatMap((one) => [...one]));
-  // 이 문제의 정답 뜻이 방금 보기로 나왔으면 고르기는 소거로 풀림 — 쓰기(낱말 가림)로(2026-11-10 구성 고치기, 11-07 "have — 앞 문제 오답이던 소유하다가 정답").
-  if (recent.has(norm(gloss))) return cardQuiz(language, key, "show", seed, { bare: how.bare });
+  // 이 문제의 정답 뜻이 방금 보기로 나왔으면 고르기는 소거로 풀림 — 표현은 쓰기(낱말 가림)로(2026-11-10 구성 고치기, 11-07 "have — 앞 문제 오답이던 소유하다가 정답").
+  // 낱말은 한 모양이라 쓰기 대신 스스로 체크(퀴즈 다시 짜기 3단계).
+  if (recent.has(norm(gloss))) return kind === "w" ? { kind: "know", text: source.text, mark: source.piece!, gloss: source.gloss, from: key, card: face } : cardQuiz(language, key, "show", seed, { bare: how.bare });
   const seen = new Set([norm(gloss)]);
   const samePos = others.filter((other) => !source.pos || other.pos === source.pos);
   const near = samePos.filter((other) => at < 0 || Math.abs(other.at - at) <= 200);
@@ -1357,14 +1360,17 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   // 낱말 하나짜리 뜻이 한눈에 지워짐). 띄어 쓰는 앱 언어는 낱말 수 차이 1 이하, 안 띄어 쓰는 언어(ja·zh·th)는 글자 수 두 배 안.
   const shaped = (list: typeof others) => list.filter((other) => similarShape(other.gloss, gloss));
   const wrong: string[] = [];
-  for (const other of [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random), ...shuffled(shaped(others), random), ...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)]) {
+  // 낱말(퀴즈 다시 짜기 3단계, 사용자 2026-11-10 "선지가 다수일 시 고르기"): 같은 품사·모양이 비슷한 뜻만 보기로 — 셋이 안 모이면
+  // 한눈에 지워지는 보기로 채우지 않고 스스로 체크(kind "know"). 표현은 품사가 없어 예전 차례 그대로.
+  const candidates = kind === "w" ? [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random)] : [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random), ...shuffled(shaped(others), random), ...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)];
+  for (const other of candidates) {
     if (wrong.length >= 3) break;
     const n = norm(other.gloss);
     if (seen.has(n) || recent.has(n)) continue;
     seen.add(n);
     wrong.push(other.gloss);
   }
-  if (wrong.length < 3) return null;
+  if (wrong.length < 3) return kind === "w" ? { kind: "know", text: source.text, mark: source.piece!, gloss: source.gloss, from: key, card: face } : null;
   RECENT_OPTIONS.set(language, [new Set([norm(gloss), ...wrong.map(norm)]), ...(RECENT_OPTIONS.get(language) ?? [])].slice(0, RECENT_OPTION_QUESTIONS));
   const right: ScriptGloss = { en: "", raw: gloss };
   const options = shuffled([right, ...wrong.map((raw): ScriptGloss => ({ en: "", raw }))], random);

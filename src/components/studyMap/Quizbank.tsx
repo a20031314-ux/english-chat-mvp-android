@@ -19,7 +19,7 @@ import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
 import { latestCheck } from "@/lib/curriculum/skillCheck";
-import { chooseFromPrepared, pickPrepared, turnFresh, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
+import { chooseFromPrepared, pickPrepared, turnFresh } from "@/lib/curriculum/preparedQuiz";
 import { knownSlotWeight } from "@/lib/curriculum/languagePairs";
 import { loadWordTraits } from "@/lib/curriculum/wordTraits";
 import { learnerLanguages } from "@/lib/curriculum/learnerLanguages";
@@ -27,7 +27,7 @@ import { readCachedAccount } from "@/lib/account/session";
 import { factsOf } from "@/lib/account/profileFacts";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { peekBank, stageCuts, wordKey } from "@/lib/curriculum/vocabBank";
-import { knowChance, levelOf, noteLevelBatch, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
+import { levelOf, noteLevelBatch, pickLevelWords, presumedWords, tooEarly } from "@/lib/curriculum/vocabLevel";
 import { gapSources, gapsFromCards, mergeGaps, readLocalGaps } from "@/lib/curriculum/gaps";
 import { InlineQuiz, type QuizBatch } from "@/components/studyMap/InlineQuiz";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
@@ -43,7 +43,7 @@ import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 /**
  * Quizbank — 한 흐름 퀴즈(설계 hub/app/QUIZ.md §3): Logbank 오늘 카드가 맡긴 열쇠 →
  * 다시 볼 것(장부 todayCards.ts reviewKeys)과 새 묶음(낱말 수준 어림 vocabLevel + 표현 카드 + 넣어 둔 문법·표현 문제) 번갈아.
- * 낱말·표현은 카드 한 장에서 한 칸 가림(quiz.ts cardQuiz, 모양은 quizTier.ts), 결과는 사건 장부(logLedger)·quizDays·서버 익힘(/api/curriculum/scripts check).
+ * 낱말은 예문 속 뜻만(고르기·스스로 체크), 표현은 카드 한 장에서 한 칸 가림(quiz.ts cardQuiz, 표현 모양은 quizTier.ts), 결과는 사건 장부(logLedger)·quizDays·서버 익힘(/api/curriculum/scripts check).
  * 칸 몸통(keep)과 칸 밖에 떠야 하는 것(overlays)을 children으로 넘긴다 — 칸을 그리는 쪽은 notes/NotebookSection.
  */
 
@@ -281,12 +281,8 @@ export function Quizbank({
       })
       .catch(() => undefined);
   };
-  // 아는 확률 어림: 단어 = 수준 어림 × 빈도 순위, 표현 = 그 표현 단계 vs 지금 단계(curriculum/quizTier.ts).
+  // 표현의 아는 확률 어림: 그 표현 단계 vs 지금 단계(curriculum/quizTier.ts). 낱말은 어림 없이 늘 뜻 묻기(아래 askCard).
   const estimateOf = (key: string): number | null => {
-    if (key.startsWith("w|")) {
-      const rank = rankOf.get(key);
-      return rank === undefined ? null : knowChance(levelOf(circleRef.current, stage, cuts), rank);
-    }
     if (key.startsWith("e|")) {
       const at = ladderFor(language)?.stages.find((one) => one.expressions.includes(key.slice(2)))?.order;
       return at === undefined ? null : expressionChance(at, stage);
@@ -295,6 +291,8 @@ export function Quizbank({
   };
   // 카드 문제 하나: 기록이 있으면 기록대로(맞나 틀리나 섞음), 없으면 어림으로 고르기·쓰기·예문 없이 쓰기.
   const askCard = (key: string, face: (key: string) => "hide" | "show", answered: ReadonlySet<string>, seed: string): QuizQuestion | null => {
+    // 낱말은 한 모양 — 예문 속 그 낱말의 뜻(고르기, 그럴듯한 보기가 셋 안 모이면 스스로 체크). 퀴즈 다시 짜기 3단계(사용자 2026-11-10).
+    if (key.startsWith("w|")) return cardQuiz(language, key, "hide", seed);
     const how = cardMode(face(key), answered.has(key), estimateOf(key));
     const question = cardQuiz(language, key, how.mode, seed, { judge: how.judge, bare: how.bare });
     if (question && how.bare) sureKeys.current.add(key);
@@ -311,7 +309,8 @@ export function Quizbank({
     const face = cardFaces(ledgerNow);
     const answered = answeredKeys(ledgerNow);
     const made = keys.map((key) => ({ key, question: askCard(key, face, answered, `${day}-${round}`) ?? turnedGrammar(key, ledgerNow) }));
-    const rest = made.filter((one) => !one.question).map((one) => one.key);
+    // 낱말은 카드(뜻 묻기)가 없으면 빼고 넘어간다 — 다른 모양(빈칸 쓰기)으로 대신 내지 않는다(퀴즈 다시 짜기 3단계).
+    const rest = made.filter((one) => !one.question && !one.key.startsWith("w|")).map((one) => one.key);
     const back = rest.length ? old(rest) : { keys: [], questions: [] };
     const byKey = new Map(back.keys.map((key, index) => [key, back.questions[index]!] as const));
     const out: { keys: string[]; questions: QuizQuestion[] } = { keys: [], questions: [] };
@@ -390,7 +389,6 @@ export function Quizbank({
     void growBank(language, locale, levelPick(8, { skip: new Set(keys) }).map((key) => ({ key, stage })));
     const questions: QuizQuestion[] = [];
     const used: string[] = [];
-    const writtenWord = new Map((prepared ?? []).filter((item) => item.kind === "word").map((item) => [item.key, item]));
     // 같은 칸은 나올 때마다 다른 문장(바꾼 사전 예문이 있는 칸만) — 이 폰 장부의 그 칸 퀴즈 답 수로 차례.
     const asked = readLedger(language);
     for (const item of head) {
@@ -405,8 +403,7 @@ export function Quizbank({
     const face = cardFaces(ledgerNow);
     const answered = answeredKeys(ledgerNow);
     for (const key of keys) {
-      const word = face(key) === "show" ? writtenWord.get(key) : undefined;
-      const question = askCard(key, face, answered, `${day}-${round}`) ?? (word ? typeFromPrepared(word) : null) ?? bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0];
+      const question = askCard(key, face, answered, `${day}-${round}`) ?? (key.startsWith("w|") ? undefined : bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0]);
       if (question) {
         questions.push(question);
         used.push(key);

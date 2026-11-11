@@ -6,7 +6,7 @@ import { rng, shuffled, type QuizQuestion } from "./quiz.ts";
 
 export type PreparedItem = {
   key: string;
-  kind: "expression" | "grammar" | "word";
+  kind: "expression" | "grammar";
   stage: number;
   gloss: string;
   before: string;
@@ -15,8 +15,6 @@ export type PreparedItem = {
   options: string[];
   line: string;
   why: string;
-  hint?: string;
-  mark?: string;
   /** 같은 칸의 다른 문장(규칙으로 바꾼 사전 예문, problems/<언어>-gv.json) — 나올 때마다 차례로. 앱 언어로 뜻이 있을 때만. */
   variants?: readonly PreparedVariant[];
 };
@@ -45,7 +43,6 @@ export function turnFresh(item: PreparedItem, turn: number, asked: readonly stri
 }
 
 export function chooseFromPrepared(item: PreparedItem): QuizQuestion | null {
-  if (item.kind === "word") return null;
   const options = item.options.filter((option) => option.trim());
   const at = options.findIndex((option) => option === item.answer || option.toLocaleLowerCase() === item.answer.toLocaleLowerCase());
   if (at < 0 || options.length < 2 || !item.line.trim() || !item.gloss.trim() || !item.why.trim()) return null;
@@ -61,22 +58,6 @@ export function chooseFromPrepared(item: PreparedItem): QuizQuestion | null {
     gloss: { en: "", raw: item.gloss },
     from: item.key,
     prepared: { why: item.why },
-  };
-}
-
-/** 넣어 둔 단어 문제: 뜻을 보고 그 단어를 쓴다. 문장은 답한 뒤에 보여주는 예문이다. */
-export function typeFromPrepared(item: PreparedItem): QuizQuestion | null {
-  if (item.kind !== "word" || !item.gloss.trim() || !item.answer.trim() || !item.line.trim()) return null;
-  if (item.hint && item.hint.toLocaleLowerCase() === item.answer.toLocaleLowerCase()) return null;
-  return {
-    kind: "type",
-    text: item.line,
-    before: "",
-    after: "",
-    answer: item.answer,
-    gloss: { en: "", raw: item.gloss },
-    from: item.key,
-    ...(item.hint || item.mark ? { prepared: { ...(item.hint ? { hint: item.hint } : {}), ...(item.mark ? { mark: item.mark } : {}) } } : { prepared: {} }),
   };
 }
 

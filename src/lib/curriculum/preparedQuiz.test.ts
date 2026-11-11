@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it, test } from "node:test";
 import fs from "node:fs";
-import { chooseFromPrepared, pickPrepared, turnPrepared, typeFromPrepared, type PreparedItem } from "./preparedQuiz.ts";
+import { chooseFromPrepared, pickPrepared, turnPrepared, type PreparedItem } from "./preparedQuiz.ts";
 
 const grammar: PreparedItem = {
   key: "g|1:0",
@@ -41,33 +41,6 @@ describe("prepared quiz", () => {
     assert.equal(question.prepared?.why, grammar.why);
     assert.equal(question.before, "The book ");
     assert.deepEqual([...question.options].sort(), ["am", "are", "is"]);
-  });
-
-  it("writes the word from the gloss and keeps the sentence for after", () => {
-    const word: PreparedItem = {
-      key: "w|学校",
-      kind: "word",
-      stage: 1,
-      gloss: "학교",
-      before: "",
-      after: "",
-      answer: "school",
-      options: [],
-      line: "He walks to school every day.",
-      why: "",
-      hint: "s",
-      mark: "한 단어",
-    };
-    const question = typeFromPrepared(word);
-    assert.ok(question && question.kind === "type");
-    if (question?.kind !== "type") return;
-    assert.equal(question.gloss.raw, "학교");
-    assert.equal(question.answer, "school");
-    assert.equal(question.text, word.line);
-    assert.equal(question.before, "");
-    assert.equal(question.prepared?.hint, "s");
-    assert.equal(question.prepared?.mark, "한 단어");
-    assert.equal(typeFromPrepared({ ...word, hint: "school" }), null);
   });
 
   it("drops a problem whose answer is not one of the options", () => {

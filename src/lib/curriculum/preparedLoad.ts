@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import type { PreparedItem, PreparedVariant } from "./preparedQuiz";
-import { stageOfRank } from "./vocabBank";
 import { ladderFor } from "./stages/index";
 import { apiUrl } from "../apiBase";
 
@@ -13,8 +12,6 @@ type Raw = {
   after?: string;
   answer?: string;
   options?: string[];
-  hint?: string;
-  mark?: string;
   why?: string;
   line?: string;
 };
@@ -30,11 +27,6 @@ const FILES: Record<string, (() => Promise<{ default: Record<string, Raw> }>)[]>
     () => import("./problems/en-g3.json"),
     () => import("./problems/en-g4.json"),
     () => import("./problems/en-g5.json"),
-    // en-w2 … en-w70. 없는 번호는 빈 객체로 넘어간다.
-    ...Array.from({ length: 69 }, (_, index) => {
-      const n = index + 2;
-      return () => import(`./problems/en-w${n}.json`).catch(() => ({ default: {} as Record<string, Raw> }));
-    }),
     () => import("./problems/en-g.json"),
   ],
   // 문법 고르기(앱 언어 한국어, 2026-11-06 사용자 "490문제 … 그냥 만들어줘") — 언어마다 그 학습 언어 문법 칸 하나에 한 문제.
@@ -99,35 +91,12 @@ async function build(language: string, files: (() => Promise<{ default: Record<s
   for (const stage of ladderFor(language)?.stages ?? []) {
     for (const text of stage.expressions) stageOf.set(`e|${text}`, stage.order);
   }
-  const ranks = new Map<string, number>();
-  if (language === "en") {
-    const { WORDS } = await import("./vocab/en.ts");
-    WORDS.forEach((row, index) => ranks.set(String(row[0]).toLocaleLowerCase(), index));
-  }
   const books = await Promise.all(files.map((load) => load()));
   const items: PreparedItem[] = [];
   for (const book of books) {
     for (const [key, raw] of Object.entries(book.default ?? {})) {
       if (!raw.gloss || !raw.answer || !raw.line) continue;
-      if (raw.kind === "word") {
-        const rank = ranks.get(key.slice(2).toLocaleLowerCase());
-        if (rank === undefined) continue;
-        items.push({
-          key,
-          kind: "word",
-          stage: stageOfRank(language, rank),
-          gloss: raw.gloss,
-          before: "",
-          after: "",
-          answer: raw.answer,
-          options: [],
-          line: raw.line,
-          why: "",
-          ...(raw.hint ? { hint: raw.hint } : {}),
-          ...(raw.mark ? { mark: raw.mark } : {}),
-        });
-        continue;
-      }
+      if (raw.kind === "word") continue;
       if (raw.kind !== "expression" && raw.kind !== "grammar") continue;
       if (!raw.why || !raw.options?.length) continue;
       const stage = raw.kind === "grammar" ? Number(key.split("|")[1]?.split(":")[0]) : stageOf.get(key);
@@ -175,7 +144,7 @@ async function inUi(language: string, ui: string, items: PreparedItem[]): Promis
       .catch(() => null);
     copy = body?.copy && typeof body.copy === "object" ? body.copy : {};
     // 다 옮겨졌을 때만 남긴다(일부 실패면 다음에 다시).
-    const want = items.filter((item) => item.kind !== "word").length;
+    const want = items.length;
     if (Object.keys(copy).length >= want) {
       try {
         localStorage.setItem(cacheKey, JSON.stringify({ at: Date.now(), copy }));
@@ -186,7 +155,6 @@ async function inUi(language: string, ui: string, items: PreparedItem[]): Promis
   }
   const out: PreparedItem[] = [];
   for (const item of items) {
-    if (item.kind === "word") continue;
     const one = copy[item.key];
     if (one?.gloss && one.why) out.push({ ...item, gloss: one.gloss, why: one.why });
   }

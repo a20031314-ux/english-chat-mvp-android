@@ -323,6 +323,7 @@ export function QuestionView({
       {question.kind === "multi" ? <MultiView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "spots" ? <SpotsView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "know" ? <KnowView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "meaning" ? (
         <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
       ) : null}
@@ -652,18 +653,11 @@ function TypeView({
   const [otherWord, setOtherWord] = useState(false);
   const { checking, grade } = useTypedGrade(language);
   const gloss = quizGloss(question.gloss, locale, language);
-  const wordQuiz = Boolean(question.prepared);
   const card = question.card;
   const submit = async (typed: string) => {
     if (card) {
       // 카드 낱말 가림: 예문 속 꼴 또는 사전형 — 기기에서만(모델 없음).
       const local = typedRight(question.answer, typed, { language, near: question.near }) || typedRight(card.word, typed, { language });
-      setResult(local);
-      onAnswer({ correct: Boolean(local) });
-      return;
-    }
-    if (wordQuiz) {
-      const local = typedRight(question.answer, typed, { language, near: question.near });
       setResult(local);
       onAnswer({ correct: Boolean(local) });
       return;
@@ -715,28 +709,19 @@ function TypeView({
   }
   return (
     <div className="flex flex-col gap-3">
-      {answered || (glossFirst && gloss) || wordQuiz ? (
+      {answered || (glossFirst && gloss) ? (
         <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>
       ) : null}
-      {wordQuiz && (question.prepared?.mark || question.prepared?.hint) ? (
-        <p data-quiz-cue dir="auto" className="text-meta text-slate-400">
-          {[question.prepared?.mark, question.prepared?.hint].filter(Boolean).join(" · ")}
-        </p>
-      ) : null}
-      {wordQuiz && !answered ? null : (
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
-          {wordQuiz ? question.text : question.before}
-          {wordQuiz ? null : (
+          {question.before}
           <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : "＿＿＿"}</strong>
-          )}
-          {wordQuiz ? null : question.after}
+          {question.after}
         </p>
         {answered ? <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
       </div>
-      )}
       <TypeBox
         ui={ui}
         tag={tag}
@@ -1553,6 +1538,46 @@ function JudgeView({ ui, locale, language, question, answered, onAnswer, tag }: 
           📐 {grammarName} ›
         </button>
       ) : null}
+    </div>
+  );
+}
+
+/**
+ * 낱말 스스로 체크(퀴즈 다시 짜기 3단계 — 그럴듯한 보기가 셋 안 모이는 낱말, quiz.ts cardQuiz kind "know"):
+ * 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 펼침 → (알아요였으면) [맞았어요 | 틀렸어요]. 알아요 + 맞았어요만 맞음.
+ */
+function KnowView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: Extract<QuizQuestion, { kind: "know" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+  const [said, setSaid] = useState<"know" | null>(null);
+  const open = Boolean(answered) || said === "know";
+  const pill = "rounded-full border border-line px-4 py-1.5 text-note text-slate-100 hover:bg-white/10";
+  return (
+    <div className="flex flex-col gap-3" data-know>
+      <CardFace
+        word={question.card.word}
+        meaning={open ? question.card.meaning : null}
+        line={<Marked text={question.text} mark={question.mark} />}
+        lineGloss={open ? quizGloss(question.gloss, locale, language) : null}
+        speak={{ text: question.text, tag }}
+      />
+      {answered ? null : said === "know" ? (
+        <div className="flex flex-wrap gap-2">
+          <button type="button" data-know-right onClick={() => onAnswer({ correct: true })} className={pill}>
+            {ui.quizRight}
+          </button>
+          <button type="button" data-know-wrong onClick={() => onAnswer({ correct: false })} className={pill}>
+            {ui.quizWrong}
+          </button>
+        </div>
+      ) : (
+        <div className="flex flex-wrap gap-2">
+          <button type="button" data-know-yes onClick={() => setSaid("know")} className={pill}>
+            {ui.markKnown}
+          </button>
+          <button type="button" data-quiz-giveup onClick={() => onAnswer({ correct: false })} className={pill}>
+            {ui.markUnknown}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

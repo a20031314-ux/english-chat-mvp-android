@@ -37,11 +37,16 @@ test("카드 변형: 뜻 가리기 = 밑줄 낱말 + 뜻 넷 중 하나, 뜻만 
   assert.ok(typedRight("食べる", "たべる", { language: "ja" }));
 });
 
-test("카드 변형: 낱말 가림은 예문 빈칸, 오답이 모자라면 뜻 가림은 null (es)", () => {
+test("낱말 한 모양: 그럴듯한 보기(같은 품사·비슷한 모양)가 셋 안 모이면 스스로 체크 know (es·th)", () => {
   registerQuizSources("es", [card("w|grande", "Es una casa grande.", "grande", "큰", "adj"), card("w|enorme", "Un perro enorme.", "enorme", "큰", "adj")]);
   const show = cardQuiz("es", "w|grande", "show", "s");
   assert.equal(show?.kind === "type" && show.before, "Es una casa ");
-  assert.equal(cardQuiz("es", "w|grande", "hide", "s"), null);
+  const know = cardQuiz("es", "w|grande", "hide", "s");
+  assert.equal(know?.kind, "know");
+  if (know?.kind === "know") assert.deepEqual([know.mark, know.card.meaning], ["grande", "큰"]);
+  // 다른 품사 뜻만 있으면 보기로 안 씀(한눈에 지워짐) → know.
+  registerQuizSources("th", [card("w|ใหญ่", "บ้านใหญ่มาก", "ใหญ่", "크다", "adj"), card("w|กิน", "กินข้าว", "กิน", "먹다", "verb"), card("w|นอน", "นอนเร็ว", "นอน", "자다", "verb"), card("w|ไป", "ไปบ้าน", "ไป", "가다", "verb")]);
+  assert.equal(cardQuiz("th", "w|ใหญ่", "hide", "s")?.kind, "know");
   assert.equal(cardQuiz("es", "g|1:2", "show", "s"), null);
 });
 
@@ -61,9 +66,9 @@ test("카드 뜻 가림 오답: 빈도 순위가 가까운 같은 품사 먼저,
   const a = cardQuiz("it", "w|casa", "hide", "s1");
   if (a?.kind !== "meaning") return assert.fail("meaning");
   const prev = new Set(a.options.map((o) => o.raw));
-  // 정답 뜻이 방금 보기로 나온 낱말은 고르기 대신 쓰기(소거로 풀림, 2026-11-10 구성 고치기).
+  // 정답 뜻이 방금 보기로 나온 낱말은 고르기 대신 스스로 체크(소거로 풀림 — 낱말은 한 모양, 3단계).
   const shownWord = words.find((w, i) => w !== "casa" && prev.has(`뜻${i}`))!;
-  assert.equal(cardQuiz("it", `w|${shownWord}`, "hide", "s1")?.kind, "type");
+  assert.equal(cardQuiz("it", `w|${shownWord}`, "hide", "s1")?.kind, "know");
   const freshWord = words.find((w, i) => w !== "casa" && !prev.has(`뜻${i}`))!;
   const b = cardQuiz("it", `w|${freshWord}`, "hide", "s1");
   if (b?.kind !== "meaning") return assert.fail("meaning b");

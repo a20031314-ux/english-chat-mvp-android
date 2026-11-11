@@ -22,7 +22,7 @@ import { StudyChipRow } from "@/components/studyMap/StudyChips";
 /**
  * Quizbank 어휘 탭의 단어 사전(2026-11-04). 빈도 목록을 단어·뜻으로 찾고, 항목은 품사·단계·짧은 뜻·예문 둘.
  * 예문 파일에 둘이 안 되는 낱말은 열 때 퀴즈와 같은 문제은행(lib/curriculum/qbank.ts growBank, 열쇠 w|낱말)이 만들어 채운다
- * (2026-11-06 사용자 "검색 후 열었을 때 생성하는 흐름도") — 모두가 같이 쓰고, 검토를 거쳐 사전 파일에 올린다(scripts/dict-promote.mjs).
+ * (2026-11-06 사용자 "검색 후 열었을 때 생성하는 흐름도") — 모두가 같이 쓴다.
  */
 type Shown = { text: string; gloss?: string };
 
