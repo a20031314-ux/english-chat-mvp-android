@@ -2137,6 +2137,82 @@
       "base": "6a56c8c",
       "head": "951d6b2",
       "status": "open"
+    },
+    {
+      "id": "a261111-2-3",
+      "at": "2026-11-11 11:48",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "퀴즈 4단계: 문법·표현 사다리·종류 비율, 맞나 틀리나 지움(QuizPlayer — 통화 숙제 퀴즈도 같은 화면)",
+      "files": [
+        "src/components/FindInMy.tsx"
+      ],
+      "features": [
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "칸 설명",
+        "My에서 찾기"
+      ],
+      "base": "fb78f5b",
+      "head": "2766924",
+      "status": "open"
+    },
+    {
+      "id": "a261111-2-4",
+      "at": "2026-11-11 11:48",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "퀴즈 4단계: 문법·표현 사다리·종류 비율, 맞나 틀리나 지움(QuizPlayer — 통화 숙제 퀴즈도 같은 화면)",
+      "files": [
+        "src/components/roleplay/CallReplay.tsx",
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx",
+        "src/components/RoleplayScreen.tsx",
+        "src/components/ExpressionPeek.tsx",
+        "src/components/roleplay/CallRecap.tsx",
+        "src/components/ChatWindow.tsx",
+        "src/components/RoleplayPast.tsx",
+        "src/components/roleplay/callHooks.ts",
+        "src/components/CallHost.tsx",
+        "src/components/CallList.tsx",
+        "src/lib/roleplay/talkMemory.ts",
+        "src/lib/pack/pack.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "칸 설명",
+        "My에서 찾기"
+      ],
+      "base": "fb78f5b",
+      "head": "2766924",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -2435,9 +2511,25 @@
         "a261111-2-1",
         "a261111-2-2"
       ]
+    },
+    {
+      "at": "2026-11-11 11:48",
+      "from": "2",
+      "base": "fb78f5b",
+      "head": "2766924",
+      "what": "퀴즈 4단계: 문법·표현 사다리·종류 비율, 맞나 틀리나 지움(QuizPlayer — 통화 숙제 퀴즈도 같은 화면)",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261111-2-3",
+        "a261111-2-4"
+      ]
     }
   ],
   "seq": {
-    "261111-2": 2
+    "261111-2": 4
   }
 }
