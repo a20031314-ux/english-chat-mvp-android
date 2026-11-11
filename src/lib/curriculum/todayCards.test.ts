@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { cardFaces, checkStates, stateOf } from "./checkState.ts";
+import { checkStates, stateOf } from "./checkState.ts";
 import { answeredToday, reviewKeys, stuckKeys, TODAY_GOAL } from "./todayCards.ts";
 import { ledgerFillEvents } from "./fillInputs.ts";
 import type { LogEvent } from "./logLedger.ts";
@@ -52,19 +52,6 @@ test("막힌 것: 지난 7일 대화에서 틀리고 그 뒤 퀴즈로 못 맞�
     { k: "w|viejo", src: "call", r: "miss", t: now - 8 * DAY },
   ];
   assert.deepEqual(stuckKeys(events, now), ["w|กิน", "g|ser-estar"]);
-});
-
-test("카드 가릴 칸: 맞힌 적 있거나 사전에서 찾아본 뒤 안 풀었으면 낱말 가림 (th·ja)", () => {
-  const face = cardFaces([
-    { k: "w|ข้าว", src: "dict", r: "look", t: T0 },
-    { k: "w|水", src: "quiz", r: "ok", m: "pick", t: T0 },
-    { k: "w|山", src: "dict", r: "look", t: T0 },
-    { k: "w|山", src: "quiz", r: "miss", m: "write", t: T0 + 5 },
-  ]);
-  assert.equal(face("w|ข้าว"), "show");
-  assert.equal(face("w|水"), "show");
-  assert.equal(face("w|山"), "hide");
-  assert.equal(face("w|空"), "hide");
 });
 
 test("다시 볼 것: 대화에서 막힌 것 → 다시 볼 것(오늘 안 푼 것) → 틀린 처음 봄 — 맞힌 것은 저절로 안 나옴 (ja·es)", () => {

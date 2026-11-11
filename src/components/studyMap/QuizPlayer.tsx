@@ -1,7 +1,6 @@
 "use client";
 
 import { DictNotes } from "@/components/studyMap/DictNotes";
-import { ladderName } from "@/components/studyMap/Growth";
 import { noteLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -13,7 +12,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/LineParts";
 import { usePremium } from "@/contexts/PremiumContext";
 import { isLocale, type UICopy } from "@/lib/copy";
-import { KO_PARTICLE_PAIRS, slipBadIndex, buildQuiz, firstCue, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
+import { buildQuiz, firstCue, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
@@ -42,7 +41,7 @@ export type Answer = { correct: boolean; heard?: string; practice?: Practice | n
   typed?: boolean;
   /** 복합 문제(multi·spots): 소재(열쇠)마다 맞음/틀림 — 부르는 쪽이 열쇠마다 따로 기록한다. */
   /** 소재마다 결과 — seen = 봤음만(맞나 틀리나의 카드 낱말: 문제가 그 낱말을 묻지 않음, 장부·익힘에 안 셈). */
-  parts?: { key: string; correct: boolean; seen?: boolean; shape?: "c" | "t"; src?: "judge" }[];
+  parts?: { key: string; correct: boolean; seen?: boolean; shape?: "c" | "t" }[];
 };
 
 /** 문제의 바른 문장(주석용) — 틀린 곳 문제는 고친 쪽. */
@@ -266,8 +265,7 @@ export function QuestionView({
   const [dictWord, setDictWord] = useState<string | null>(null);
   // 맞힌 뒤 [다시]를 눌렀나 — 맞힌 것은 저절로 다시 안 나오고, 누른 것만 다음 날 다시 볼 것에(checkState.ts again).
   const [again, setAgain] = useState(false);
-  // [다시]가 남길 열쇠 — 맞나 틀리나는 문법을 물어서 그 문법 열쇠.
-  const dotKey = given.kind === "judge" ? given.slip.key : bankKey;
+  const dotKey = bankKey;
   // 뜻 고르기인데 앱 언어로 보일 뜻이 없으면(앱 언어 = 학습 언어 — 보기가 곧 문장) 듣고 말하기로(2026-11-01 퀴즈 전수 점검).
   const question: QuizQuestion = useMemo(
     () =>
@@ -327,7 +325,6 @@ export function QuestionView({
       {question.kind === "meaning" ? (
         <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
       ) : null}
-      {question.kind === "judge" ? <JudgeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "say" ? <SayView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "reply" ? <ReplyView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {/* Key prefix: DictNotes below also keyed on the sentence, so sibling keys collided and the example list rendered twice (ux check 2026-11-09 easy-repeat). */}
@@ -384,7 +381,7 @@ export function QuestionView({
 /** 문제 한 줄 요약(점검용 data 속성): 모양·문장·보기·정답 자리 — 화면에 보이는 것 그대로라 새로 드러나는 것은 없다(정답 자리 빼고). */
 function quizMeta(question: QuizQuestion): string {
   const q = question as Partial<{ text: string; options: string[]; answer: number | string; right: string; shown: string; wrong: string | null; from: string }>;
-  return JSON.stringify({ kind: question.kind, ...(q.from ? { from: q.from } : {}), ...(q.text ? { text: q.text } : {}), ...(q.options ? { options: q.options } : {}), ...(q.answer !== undefined ? { answer: q.answer } : {}), ...(q.right ? { right: q.right } : {}), ...(question.kind === "judge" ? { shown: q.shown, wrong: q.wrong, bad: question.wrong ? slipBadIndex(question.slip) : -1 } : {}), ...(question.kind === "type" && question.card ? { tier: question.bare ? "hard" : "mid" } : {}), ...(question.kind === "meaning" && question.card ? { tier: "easy" } : {}) });
+  return JSON.stringify({ kind: question.kind, ...(q.from ? { from: q.from } : {}), ...(q.text ? { text: q.text } : {}), ...(q.options ? { options: q.options } : {}), ...(q.answer !== undefined ? { answer: q.answer } : {}), ...(q.right ? { right: q.right } : {}) });
 }
 
 const chip = "rounded-xl border px-3 py-2 text-chat";
@@ -633,7 +630,7 @@ function TypeView({
   onAnswer,
   tag,
   strict = false,
-  glossFirst = false,
+  glossFirst: glossFirstProp = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -653,6 +650,8 @@ function TypeView({
   const [otherWord, setOtherWord] = useState(false);
   const { checking, grade } = useTypedGrade(language);
   const gloss = quizGloss(question.gloss, locale, language);
+  // 뜻 먼저: 문장구조 수업(prop) · 문법 사다리 2칸·4칸(문제에 glossFirst).
+  const glossFirst = glossFirstProp || Boolean(question.glossFirst);
   const card = question.card;
   const submit = async (typed: string) => {
     if (card) {
@@ -689,7 +688,6 @@ function TypeView({
           }
           lineGloss={gloss}
           speak={answered ? { text: question.text, tag } : null}
-          hideLine={Boolean(question.bare) && !answered}
         />
         <TypeBox
           ui={ui}
@@ -714,6 +712,7 @@ function TypeView({
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>
       ) : null}
+      {question.whole && !answered ? null : (
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
           {question.before}
@@ -722,6 +721,7 @@ function TypeView({
         </p>
         {answered ? <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
       </div>
+      )}
       <TypeBox
         ui={ui}
         tag={tag}
@@ -796,6 +796,11 @@ function SpotView({
       {!bare && gloss ? (
         <p dir="auto" className="text-note text-slate-400">
           {gloss}
+        </p>
+      ) : null}
+      {question.lead ? (
+        <p dir="auto" data-spot-lead className="text-chat text-slate-400">
+          {question.lead}
         </p>
       ) : null}
       {/* 2026-11-02 사용자 — 순서 문제와 틀린 곳 찾기가 섞여 보임: 낱말 칸(테두리) 대신 한 줄 문장처럼 — 낱말마다 점선 밑줄만, 누르면 칠함.
@@ -1435,114 +1440,6 @@ function OrderView({
 }
 
 /**
- * 맞나 틀리나(2026-11-08 사용자 "틀린 답을 끼워 넣고 맞는지 판단" → "단어꼴을 바꾸지 말고 조동사 같은 문법 요소로"):
- * 카드(낱말 칸 가림 · 뜻 · 예문 — 카드 낱말에 밑줄 · 예문 뜻) → ⭕ / ❌(글 없이, 이름은 aria-label).
- * 맞는 문장에 ⭕ = 맞음 · 틀린 문장에 ❌ = 문장의 낱말을 눌러 끼운 말 찾기(맞으면 맞음) · 판단이 틀리면 틀림.
- * 답한 뒤: 끼운 말에 줄(바꾼 것이면 옆에 바른 말) + 까닭 한 줄(규칙마다 정한 문구). 결과는 문법 열쇠(slip.key)에, 낱말은 봤음만(parts seen).
- */
-function JudgeView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: Extract<QuizQuestion, { kind: "judge" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
-  const tone = useBankTone();
-  const [said, setSaid] = useState<"o" | "x" | null>(null);
-  const [tapped, setTapped] = useState<number | null>(null);
-  const slip = question.slip;
-  const wrong = question.wrong !== null;
-  const shownText = wrong ? `${slip.lead}${slip.bad}${slip.tail}` : question.text;
-  const words = shownText.split(" ");
-  const badAt = slipBadIndex(slip);
-  // 밑줄은 카드 낱말에만(조사는 빼고 — 한국어 조사가 붙은 빈칸 "가구를"에서 "가구"만).
-  const word = slip.attached ? question.card.word : question.shown;
-  const markAt = wrong ? (slip.attached ? slip.lead.length - word.length : slip.lead.length + slip.bad.length + 1) : question.before.length;
-  // 점수(2026-11-08 사용자 "이쪽은 활용점수에"): 틀린 곳을 짚음 = 활용(장부 judge · 쓰기와 같게 체크 셋을 올림), ⭕ 맞는 문장 = 학습(고르기), 판단·짚기가 틀림 = judge 틀림.
-  const finish = (correct: boolean, extra: Partial<Answer> = {}, how: { shape: "c" | "t"; judged: boolean } = { shape: "c", judged: true }) =>
-    onAnswer({ correct, ...extra, ...(how.shape === "t" ? { typed: true } : {}), parts: [{ key: slip.key, correct, shape: how.shape, ...(how.judged ? { src: "judge" as const } : {}) }, { key: question.from, correct: true, seen: true }] });
-  const judge = (pick: "o" | "x") => {
-    if (said || answered) return;
-    setSaid(pick);
-    if (pick === "o") finish(!wrong, { picked: "o" }, { shape: "c", judged: wrong });
-    else if (!wrong) finish(false, { picked: "x" });
-  };
-  const tap = (i: number) => {
-    if (answered || tapped !== null) return;
-    setTapped(i);
-    finish(i === badAt, { picked: "x" }, { shape: i === badAt ? "t" : "c", judged: true });
-  };
-  const finding = said === "x" && wrong && !answered;
-  const why = (() => {
-    if (slip.rule === "modalTo") return ui.judgeWhyTo.replace("{w}", slip.modal ?? "");
-    if (slip.rule === "beBase") return ui.judgeWhyBe;
-    if (slip.rule === "an") return ui.judgeWhyAn;
-    if (slip.rule === "particle") {
-      const pair = KO_PARTICLE_PAIRS.find((one) => one.includes(slip.fix)) ?? [slip.fix, slip.bad];
-      return ui.judgeWhyParticle.replace("{yes}", pair[0]!).replace("{no}", pair[1]!);
-    }
-    return ui.judgeWhyGender.replace("{w}", question.card.word).replace("{g}", slip.gender === "f" ? ui.judgeFem : ui.judgeMasc);
-  })();
-  const marked = (text: string, accent: boolean) => (
-    <>
-      {text.slice(0, markAt)}
-      <span data-judge-shown className={`font-semibold underline decoration-2 underline-offset-4 ${accent ? tone.accent : "text-ink"}`}>{text.slice(markAt, markAt + word.length)}</span>
-      {text.slice(markAt + word.length)}
-    </>
-  );
-  const grammarName = ladderName(language, locale, slip.key);
-  return (
-    <div className="flex flex-col gap-3">
-      <CardFace
-        word={answered ? question.card.word : null}
-        meaning={question.card.meaning}
-        line={
-          finding ? (
-            <span className="inline-flex flex-wrap gap-1">
-              {words.map((one, i) => (
-                <button key={i} type="button" data-judge-word={i} onClick={() => tap(i)} className="rounded-lg border border-line px-1.5 py-0.5 hover:bg-white/10">
-                  {one}
-                </button>
-              ))}
-            </span>
-          ) : answered && wrong ? (
-            <>
-              {slip.lead}
-              <s className="text-bad decoration-2">{slip.bad}</s>
-              {slip.fix ? (
-                <>
-                  {slip.attached ? null : " "}
-                  <strong className={`font-semibold ${tone.accent}`}>{slip.fix}</strong>
-                </>
-              ) : null}
-              {slip.tail}
-            </>
-          ) : (
-            marked(shownText, Boolean(answered))
-          )
-        }
-        lineGloss={quizGloss(question.gloss, locale, language)}
-        speak={answered ? { text: question.text, tag } : null}
-      />
-      {said ? null : (
-        <div className="flex items-center justify-center gap-3">
-          <button type="button" data-judge="o" aria-label={ui.quizRight} title={ui.quizRight} onClick={() => judge("o")} className="flex h-12 w-20 items-center justify-center rounded-full border border-line text-xl hover:bg-white/10">
-            ⭕
-          </button>
-          <button type="button" data-judge="x" aria-label={ui.quizWrong} title={ui.quizWrong} onClick={() => judge("x")} className="flex h-12 w-20 items-center justify-center rounded-full border border-line text-xl hover:bg-white/10">
-            ❌
-          </button>
-        </div>
-      )}
-      {answered && wrong ? (
-        <p data-judge-why dir="auto" className="text-caption text-slate-300">
-          {why}
-        </p>
-      ) : null}
-      {answered && grammarName ? (
-        <button type="button" data-judge-grammar onClick={() => openLesson({ language, key: slip.key })} className={`self-start rounded-full border border-line px-3 py-1 text-caption ${tone.accent} hover:bg-white/10`}>
-          📐 {grammarName} ›
-        </button>
-      ) : null}
-    </div>
-  );
-}
-
-/**
  * 낱말 스스로 체크(퀴즈 다시 짜기 3단계 — 그럴듯한 보기가 셋 안 모이는 낱말, quiz.ts cardQuiz kind "know"):
  * 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 펼침 → (알아요였으면) [맞았어요 | 틀렸어요]. 알아요 + 맞았어요만 맞음.
  */
@@ -1672,7 +1569,7 @@ function ModelWords({ outcomes }: { outcomes: WordOutcome[] }) {
  * 카드 한 장(개편 cardQuiz, 2026-11-06 사용자 "카드를 그대로 두고 예문에 빈칸, 단어만 가리고"): 낱말 · 뜻 · 예문 · 예문 뜻.
  * 가린 칸은 null(＿＿＿) — 뜻 가림이면 예문 뜻도 답한 뒤에(뜻이 새지 않게), 낱말 가림이면 예문에도 빈칸.
  */
-export function CardFace({ word, meaning, line, lineGloss, speak, hideLine = false }: { word: string | null; meaning: string | null; line: ReactNode; lineGloss: string | null; speak: { text: string; tag: string } | null; /** 예문 칸을 아예 숨김(어림 hard — 뜻만 보고 쓰기). */ hideLine?: boolean }) {
+export function CardFace({ word, meaning, line, lineGloss, speak }: { word: string | null; meaning: string | null; line: ReactNode; lineGloss: string | null; speak: { text: string; tag: string } | null }) {
   const tone = useBankTone();
   const hidden = <span className={`font-semibold ${tone.blank}`}>＿＿＿</span>;
   return (
@@ -1683,7 +1580,7 @@ export function CardFace({ word, meaning, line, lineGloss, speak, hideLine = fal
       <p dir="auto" data-card-meaning className="text-chat text-slate-200">
         {meaning ?? hidden}
       </p>
-      {hideLine ? null : <div className="flex items-start gap-2 border-t border-line pt-2">
+      <div className="flex items-start gap-2 border-t border-line pt-2">
         <div className="min-w-0 flex-1">
           <p dir="auto" className="text-chat text-slate-100">
             {line}
@@ -1695,7 +1592,7 @@ export function CardFace({ word, meaning, line, lineGloss, speak, hideLine = fal
           ) : null}
         </div>
         {speak ? <TTSButton text={speak.text} lang={speak.tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
-      </div>}
+      </div>
     </div>
   );
 }

@@ -54,20 +54,3 @@ export function checkStates(events: readonly LogEvent[]): Map<string, CheckState
   return out;
 }
 
-/**
- * 개편 퀴즈 카드에서 가릴 칸(quiz.ts cardQuiz, 2026-11-06): 맞힌 적 있으면 낱말 가림(쓰기),
- * 사전에서 찾아본 뒤 아직 안 풀었어도 낱말 가림 — 막 본 뜻을 고르게 하면 너무 쉬워서(사용자 "만들어줘", 찾아본 뒤 첫 퀴즈는 쓰기).
- * 그 밖(처음 봄)은 뜻 가림(고르기).
- */
-export function cardFaces(events: readonly LogEvent[]): (key: string) => "hide" | "show" {
-  const ok = new Set<string>();
-  const lastLook = new Map<string, number>();
-  const lastQuiz = new Map<string, number>();
-  for (const event of events) {
-    // 퀴즈 답만 — 대화에서 쓴 것(used)은 말하기 쪽이라 문제 모양을 안 바꿈(2026-11-09 앎·말하기 분리, 그 전엔 used도 쓰기로).
-    if (event.r === "ok") ok.add(event.k);
-    if (event.r === "look") lastLook.set(event.k, Math.max(lastLook.get(event.k) ?? 0, event.t));
-    if (event.src === "quiz" || event.src === "exam") lastQuiz.set(event.k, Math.max(lastQuiz.get(event.k) ?? 0, event.t));
-  }
-  return (key) => (ok.has(key) || (lastLook.get(key) ?? -1) > (lastQuiz.get(key) ?? -1) ? "show" : "hide");
-}

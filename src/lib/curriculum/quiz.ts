@@ -56,20 +56,15 @@ export type QuizQuestion =
   | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string; mine?: boolean; /** 넣어 둔 표현·문법 문제. 뜻을 먼저 보여주고, 보기 재채점 없이 이 정답만 맞다. 틀리면 why. */ prepared?: { why: string } }
   | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
   | { kind: "say"; text: string; gloss: ScriptGloss; from: string; mark?: string }
-  /**
-   * 맞나 틀리나(2026-11-08, quiz.ts judgeQuiz): 카드 낱말은 그대로, 그 앞에 문법 실수(slip) 하나를 넣은 문장이나 맞는 문장 → ⭕/❌,
-   * 틀린 문장이면 ❌ 뒤 틀린 말을 눌러 찾기. wrong = "grammar"(null이면 맞는 문장 — slip.bad ""). 결과는 slip.key(문법)에, 낱말은 봤음만.
-   */
-  | { kind: "judge"; text: string; before: string; after: string; shown: string; answer: string; wrong: "grammar" | null; slip: GrammarSlip; gloss: ScriptGloss; from: string; card: QuizCardFace }
   /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
   | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
-  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 예문 없이 뜻만 보고 쓰기(어림이 높은 처음 본 말 — quizTier.ts hard). 맞히면 장부 쓰기 sure. */ bare?: true }
+  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 뜻 줄을 답하기 전에도(문법 사다리 2칸 — 뜻 없이는 답이 여럿). */ glossFirst?: true; /** 문장 만들기(사다리 4칸): 뜻만 보고 문장 전체 쓰기 — 빈칸 줄 없음, 서버가 같은 뜻의 맞는 문장인지 봄. */ whole?: true }
   /**
    * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
    */
-  | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean }
+  | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean; /** 앞 문맥 한 줄(누를 수 없음, 틀린 곳 데이터 shape "l"). */ lead?: string }
   /**
    * 복합 빈칸(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개"): 한 문장에 이미 맞힌 소재 둘·셋을 동시에 비운다.
    * chunks = 빈칸 사이 글(빈칸 수 + 1개), blanks = 빈칸마다 열쇠·답·헷갈리는 오답. 결과는 빈칸마다 그 열쇠에(curriculum/multiQuiz.ts).
@@ -1299,12 +1294,17 @@ export function cardFaceOf(language: string, key: string): { word: string; meani
   return { word: key.slice(2), meaning: source.wordGloss.trim(), text: source.text, piece: source.piece, gloss: source.gloss };
 }
 
-export function cardQuiz(language: string, key: string, mode: "hide" | "show", seed: string, how: { judge?: boolean; bare?: boolean } = {}): QuizQuestion | null {
-  // 개편: 맞힌 적 있는 말(show)은 반쯤 "맞나 틀리나"로(2026-11-08 사용자 "틀린 답을 끼워 넣고 맞는지 판단 > 틀릴 시 맞는 답 타이핑").
-  if (mode === "show" && how.judge && rng(`${seed}|${key}|judge?`)() < JUDGE_SHARE) {
-    const judged = judgeQuiz(language, key, seed);
-    if (judged) return judged;
-  }
+/** 카드 예문 하나(최근에 이 열쇠로 낸 문장은 뒤로 — cardQuiz와 같은 고르기). 사다리 4칸 문장 전체 쓰기가 씀. */
+export function cardSourceOf(language: string, key: string, seed: string): QuizSource | undefined {
+  const pool = key.startsWith("w|") ? GAP_SOURCES.get(language) : key.startsWith("e|") ? EXPRESSION_CARDS.get(language) : undefined;
+  const usable = (pool?.get(key) ?? []).filter((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece));
+  const asked = askedTexts(language, key);
+  const unasked = usable.filter((one) => !asked.includes(one.text));
+  const oldest = [...usable].sort((a, b) => asked.indexOf(b.text) - asked.indexOf(a.text))[0];
+  return unasked.length ? unasked[Math.floor(rng(`${seed}|${key}|src`)() * unasked.length)] : oldest;
+}
+
+export function cardQuiz(language: string, key: string, mode: "hide" | "show", seed: string): QuizQuestion | null {
   const kind = key.startsWith("w|") ? "w" : key.startsWith("e|") ? "e" : null;
   if (!kind) return null;
   const pool = kind === "w" ? GAP_SOURCES.get(language) : EXPRESSION_CARDS.get(language);
@@ -1344,7 +1344,6 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
       gloss: source.gloss,
       from: key,
       card: face,
-      ...(how.bare ? { bare: true as const } : {}),
     };
   }
   // 오답: 같은 품사 + 빈도 순위가 가까운 카드의 뜻 먼저(드문 낱말 뜻은 한눈에 지워짐 — 2026-11-07 점검 easy-decoy "area ↔ 바나나"),
@@ -1352,7 +1351,7 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   const recent = new Set((RECENT_OPTIONS.get(language) ?? []).flatMap((one) => [...one]));
   // 이 문제의 정답 뜻이 방금 보기로 나왔으면 고르기는 소거로 풀림 — 표현은 쓰기(낱말 가림)로(2026-11-10 구성 고치기, 11-07 "have — 앞 문제 오답이던 소유하다가 정답").
   // 낱말은 한 모양이라 쓰기 대신 스스로 체크(퀴즈 다시 짜기 3단계).
-  if (recent.has(norm(gloss))) return kind === "w" ? { kind: "know", text: source.text, mark: source.piece!, gloss: source.gloss, from: key, card: face } : cardQuiz(language, key, "show", seed, { bare: how.bare });
+  if (recent.has(norm(gloss))) return kind === "w" ? { kind: "know", text: source.text, mark: source.piece!, gloss: source.gloss, from: key, card: face } : cardQuiz(language, key, "show", seed);
   const seen = new Set([norm(gloss)]);
   const samePos = others.filter((other) => !source.pos || other.pos === source.pos);
   const near = samePos.filter((other) => at < 0 || Math.abs(other.at - at) <= 200);
@@ -1375,143 +1374,4 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   const right: ScriptGloss = { en: "", raw: gloss };
   const options = shuffled([right, ...wrong.map((raw): ScriptGloss => ({ en: "", raw }))], random);
   return { kind: "meaning", text: source.text, options, answer: options.indexOf(right), gloss: source.gloss, from: key, mark: source.piece, card: face };
-}
-
-/* ───────── 맞나 틀리나(2026-11-08) ───────── */
-
-/** 맞힌 적 있는 말 가운데 이만큼을 "맞나 틀리나"로(나머지는 낱말 쓰기). */
-export const JUDGE_SHARE = 0.5;
-/** 그중 이만큼은 맞는 문장(늘 틀린 문장이면 ❌만 누르면 됨). */
-export const JUDGE_RIGHT_SHARE = 1 / 3;
-
-/**
- * 끼우는 문법 실수(2026-11-08 사용자 "단어꼴을 바꾸지 말고, 시제나 앞에 조동사 같은 걸 넣어서 문법적인 요소로"):
- * 카드 낱말은 그대로 두고 그 앞에 늘 틀리는 말 하나를 넣거나 바꾼다 — 학습자가 흔히 하는 실수 꼴이라 맞는 문장이 섞이지 않는다.
- *   modalTo  조동사 + to + 동사 원형  "I will to do"     (to를 넣음)
- *   beBase   be동사 + 동사 원형       "I am like movies" (am·are를 넣음)
- *   an       자음 앞 an               "an car"           (a·the를 an으로)
- * 다른 낱말·철자·다른 꼴 끼우기는 맞는 문장이 섞여 뺐다(운영 표본 en 45개 중 7개, 2026-11-08).
- * 같은 날 더함(사용자 "진행해줘" — 언어별 규칙):
- *   particle (ko) 받침에 맞지 않는 조사  "사과을"   (을↔를 · 은↔는 · 이↔가, 카드 낱말 바로 뒤)
- *   gender   (es·fr·it·pt) 명사 성에 맞지 않는 관사  "el casa"  (낱말 성질 word-traits — 관사가 성과 맞을 때만 바꿈, el agua 같은 것은 안 씀)
- */
-export type GrammarSlipRule = "modalTo" | "beBase" | "an" | "particle" | "gender";
-/**
- * lead + bad + tail = 보여 줄 틀린 문장, fix = bad 자리의 바른 말(""이면 지우기), key = 그 문법 열쇠(장부에 남김), modal = 까닭에 쓸 조동사.
- * attached = bad가 앞말에 붙음(한국어 조사 — 띄어 쓰지 않음). gender = 까닭에 쓸 명사 성.
- */
-export type GrammarSlip = { rule: GrammarSlipRule; lead: string; bad: string; tail: string; fix: string; key: string; modal?: string; attached?: boolean; gender?: "m" | "f" };
-
-/** 낱말 성(낱말 성질 word-traits/<언어>.json g) — 화면이 불러와 넣는다(registerWordGender). */
-const GENDER = new Map<string, Map<string, string>>();
-export function registerWordGender(language: string, book: Record<string, { g?: string }>): void {
-  GENDER.set(language, new Map(Object.entries(book).filter(([, traits]) => traits.g).map(([word, traits]) => [word, traits.g!])));
-}
-
-export const wordGenderOf = (language: string, word: string): string | undefined => GENDER.get(language)?.get(word);
-
-/** 받침이 있는 말 뒤 · 없는 말 뒤 조사와 그 문법 칸. */
-const KO_PARTICLES: [string, string, string][] = [["을", "를", "g|1:4"], ["은", "는", "g|1:2"], ["이", "가", "g|1:1"]];
-/** 관사 성 바꾸기(남성 ↔ 여성)와 그 문법 칸 — 관사가 바로 앞에 있을 때만. */
-const ARTICLE_SWAP: Record<string, { m: string[]; f: string[]; key: string }> = {
-  es: { m: ["el", "un", "los", "unos"], f: ["la", "una", "las", "unas"], key: "g|1:4" },
-  fr: { m: ["le", "un"], f: ["la", "une"], key: "g|1:2" },
-  it: { m: ["il", "un", "i"], f: ["la", "una", "le"], key: "g|1:2" },
-  pt: { m: ["o", "um", "os", "uns"], f: ["a", "uma", "as", "umas"], key: "g|1:2" },
-};
-
-/** 조사 짝(받침 있음, 없음) — 까닭 줄. */
-export const KO_PARTICLE_PAIRS: readonly (readonly [string, string])[] = KO_PARTICLES.map(([a, b]) => [a, b] as const);
-/** 틀린 문장을 띄어쓰기로 자른 낱말 가운데 끼운 말이 든 자리(누르기 찾기). 붙은 조사면 그 앞말 자리. */
-export const slipBadIndex = (slip: GrammarSlip): number => (slip.attached ? slip.lead.split(" ").length - 1 : slip.lead.split(" ").filter(Boolean).length);
-const hasBatchim = (ch: string) => {
-  const code = ch.charCodeAt(0) - 0xac00;
-  return code >= 0 && code < 11172 ? code % 28 !== 0 : null;
-};
-
-const MODAL_KEYS: Record<string, string> = { can: "g|1:6", could: "g|1:6", will: "g|2:2", would: "g|2:2", should: "g|3:3", must: "g|3:3", might: "g|3:3", may: "g|3:3" };
-const BE_OF: Record<string, string> = { i: "am", you: "are", we: "are", they: "are" };
-/** be 뒤에 와도 맞는 말(형용사·전치사·부사로도 쓰는 동사) — "I am like you", "We are live", "I'm free". */
-const BE_OK = new Set(["like", "back", "open", "close", "clean", "clear", "free", "dry", "empty", "warm", "cool", "calm", "right", "wrong", "fine", "ready", "slow", "quiet", "light", "live", "mean", "fit", "last", "still", "even", "double", "present", "separate", "perfect", "complete", "correct", "direct", "equal", "near", "round", "well", "home", "out", "over", "down", "up", "off", "on", "in", "about", "busy", "sure", "tired", "set", "used", "done", "gone", "due", "worth", "alright", "okay", "ok", "late", "early", "safe", "secure", "level", "smooth", "sound", "tie", "single", "average", "general", "national", "native", "orange", "chief"]);
-/** h가 소리 나지 않아 an이 맞는 말. */
-const SILENT_H = /^(hour|honest|honou?r|heir)/i;
-const lowerOf = (text: string) => text.toLocaleLowerCase();
-/** 카드 예문에서 끼울 실수 하나(없으면 null). 순수 — 테스트용으로 밖에 둠. */
-export function grammarSlip(language: string, text: string, piece: string, word: string, pos: string | undefined, gender?: string): GrammarSlip | null {
-  const at = pieceAt(text, piece, language);
-  if (at < 0) return null;
-  const before = text.slice(0, at);
-  const after = text.slice(at + piece.length);
-  if (language === "ko") {
-    // 카드 낱말(명사) 바로 뒤 조사를 받침에 맞지 않는 꼴로. 사전 예문 빈칸은 조사까지(가구를) — 낱말 + 조사로 나눠 본다.
-    // 조사 뒤는 띄어쓰기·문장부호·끝이어야(이에요·이다의 "이"는 안 잡힘).
-    if (pos !== "noun") return null;
-    const joined = piece.startsWith(word) && piece.length > word.length;
-    const noun = joined ? word : piece;
-    const rest = joined ? piece.slice(word.length) + after : after;
-    const batchim = hasBatchim(noun.charAt(noun.length - 1));
-    if (batchim === null) return null;
-    for (const [withB, withoutB, key] of KO_PARTICLES) {
-      const right = batchim ? withB : withoutB;
-      if (!new RegExp(`^${right}(?=[\\s.,!?]|$)`).test(rest)) continue;
-      return { rule: "particle", lead: before + noun, bad: batchim ? withoutB : withB, tail: rest.slice(right.length), fix: right, key, attached: true };
-    }
-    return null;
-  }
-  const swap = ARTICLE_SWAP[language];
-  if (swap) {
-    if (pos !== "noun" || (gender !== "m" && gender !== "f")) return null;
-    const art = before.match(/(\S+)\s+$/);
-    if (!art) return null;
-    const word0 = art[1]!;
-    const lower = lowerOf(word0);
-    const list = swap[gender as "m" | "f"];
-    const i = list.indexOf(lower);
-    // 관사가 낱말 성과 맞을 때만(el agua처럼 성과 다른 관사를 쓰는 말·전치사 a는 여기서 걸러짐).
-    if (i < 0) return null;
-    const other = swap[gender === "m" ? "f" : "m"][i]!;
-    const bad = word0.charAt(0) !== lower.charAt(0) ? other.charAt(0).toLocaleUpperCase() + other.slice(1) : other;
-    return { rule: "gender", lead: before.slice(0, before.length - art[0].length), bad, tail: ` ${piece}${after}`, fix: word0, key: swap.key, gender: gender as "m" | "f" };
-  }
-  if (language !== "en") return null;
-  const prev = before.match(/(\S+)\s+$/);
-  if (!prev) return null;
-  const prevWord = prev[1]!;
-  const prevLower = lowerOf(prevWord);
-  // 앞말에 문장부호가 붙어 있으면(", I") 자리가 애매해서 안 씀.
-  if (!/^[A-Za-z']+$/.test(prevWord)) return null;
-  const base = lowerOf(piece) === lowerOf(word);
-  if (pos === "verb" && base && MODAL_KEYS[prevLower]) {
-    return { rule: "modalTo", lead: before, bad: "to", tail: ` ${piece}${after}`, fix: "", key: MODAL_KEYS[prevLower]!, modal: prevWord };
-  }
-  if (pos === "verb" && base && BE_OF[prevLower] && !BE_OK.has(lowerOf(word)) && !MODAL_KEYS[lowerOf(word)]) {
-    return { rule: "beBase", lead: before, bad: BE_OF[prevLower]!, tail: ` ${piece}${after}`, fix: "", key: "g|1:0" };
-  }
-  if (pos === "noun" && (prevLower === "a" || prevLower === "the") && /^[bcdfghjklmnpqrstvwxyz]/i.test(piece) && !SILENT_H.test(piece) && piece !== piece.toLocaleUpperCase()) {
-    const capital = prevWord.charAt(0) !== prevLower.charAt(0);
-    return { rule: "an", lead: before.slice(0, before.length - prev[0].length), bad: capital ? "An" : "an", tail: ` ${piece}${after}`, fix: prevWord, key: "g|1:2" };
-  }
-  return null;
-}
-
-/**
- * 맞나 틀리나 한 문제: 카드 예문 그대로(맞는 문장) 또는 그 낱말 앞에 문법 실수 하나를 넣은 문장(grammarSlip).
- * 끼울 실수가 있는 예문만 쓴다 — 없으면 null(낱말 쓰기로). 맞는 문장도 실수를 끼울 수 있는 예문에서만(어디를 볼지는 같게).
- */
-export function judgeQuiz(language: string, key: string, seed: string): QuizQuestion | null {
-  const kind = key.startsWith("w|") ? "w" : key.startsWith("e|") ? "e" : null;
-  if (!kind) return null;
-  const pool = kind === "w" ? GAP_SOURCES.get(language) : EXPRESSION_CARDS.get(language);
-  const usable = (pool?.get(key) ?? [])
-    .filter((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece))
-    .map((one) => ({ one, slip: grammarSlip(language, one.text, one.piece!, key.slice(2), one.pos, wordGenderOf(language, key.slice(2))) }))
-    .filter((pair): pair is { one: QuizSource; slip: GrammarSlip } => pair.slip !== null);
-  if (!usable.length) return null;
-  const { one: source, slip } = usable[Math.floor(rng(`${seed}|${key}|src`)() * usable.length)]!;
-  const piece = source.piece!;
-  const at = pieceAt(source.text, piece, language);
-  const face: QuizCardFace = { word: key.slice(2), meaning: source.wordGloss!.trim() };
-  const base = { kind: "judge" as const, text: source.text, before: source.text.slice(0, at), after: source.text.slice(at + piece.length), answer: piece, gloss: source.gloss, from: key, card: face };
-  const rightOne = rng(`${seed}|${key}|judge`)() < JUDGE_RIGHT_SHARE;
-  return rightOne ? { ...base, shown: piece, wrong: null, slip: { ...slip, bad: "" } } : { ...base, shown: piece, wrong: "grammar", slip };
 }
