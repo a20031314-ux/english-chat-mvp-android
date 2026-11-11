@@ -632,7 +632,9 @@
     "tlBare": "例文なしで書く",
     "tlHoursMin": "{h}時間{m}分",
     "flipAgainBtn": "もう一度",
-    "flipGotBtn": "できた"
+    "flipGotBtn": "できた",
+    "gaugeEasier": "やさしく",
+    "gaugeHarder": "むずかしく"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1267,7 +1269,9 @@
     "tlBare": "不看例句写",
     "tlHoursMin": "{h}小时{m}分钟",
     "flipAgainBtn": "再来",
-    "flipGotBtn": "好了"
+    "flipGotBtn": "好了",
+    "gaugeEasier": "更简单",
+    "gaugeHarder": "更难"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1905,7 +1909,9 @@
     "tlBare": "Viết không có câu ví dụ",
     "tlHoursMin": "{h} giờ {m} phút",
     "flipAgainBtn": "Lại",
-    "flipGotBtn": "Được rồi"
+    "flipGotBtn": "Được rồi",
+    "gaugeEasier": "Dễ hơn",
+    "gaugeHarder": "Khó hơn"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2546,7 +2552,9 @@
     "tlBare": "Écrire sans exemple",
     "tlHoursMin": "{h} h {m} min",
     "flipAgainBtn": "Encore",
-    "flipGotBtn": "C’est bon"
+    "flipGotBtn": "C’est bon",
+    "gaugeEasier": "Plus facile",
+    "gaugeHarder": "Plus difficile"
   },
   "it": {
     "archive": "Report",
@@ -3380,7 +3388,9 @@
     "tlBare": "Scrivi senza esempio",
     "tlHoursMin": "{h} h {m} min",
     "flipAgainBtn": "Ancora",
-    "flipGotBtn": "Fatto"
+    "flipGotBtn": "Fatto",
+    "gaugeEasier": "Più facile",
+    "gaugeHarder": "Più difficile"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4024,7 +4034,9 @@
     "tlBare": "Escrever sem exemplo",
     "tlHoursMin": "{h} h {m} min",
     "flipAgainBtn": "De novo",
-    "flipGotBtn": "Pronto"
+    "flipGotBtn": "Pronto",
+    "gaugeEasier": "Mais fácil",
+    "gaugeHarder": "Mais difícil"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4856,7 +4868,9 @@
     "tlBare": "Написать без примера",
     "tlHoursMin": "{h} ч {m} мин",
     "flipAgainBtn": "Ещё раз",
-    "flipGotBtn": "Готово"
+    "flipGotBtn": "Готово",
+    "gaugeEasier": "Проще",
+    "gaugeHarder": "Сложнее"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5498,7 +5512,9 @@
     "tlBare": "Tulis tanpa contoh",
     "tlHoursMin": "{h} jam {m} mnt",
     "flipAgainBtn": "Lagi",
-    "flipGotBtn": "Oke"
+    "flipGotBtn": "Oke",
+    "gaugeEasier": "Lebih mudah",
+    "gaugeHarder": "Lebih sulit"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6133,7 +6149,9 @@
     "tlBare": "اكتب بلا مثال",
     "tlHoursMin": "{h} س {m} د",
     "flipAgainBtn": "مرة أخرى",
-    "flipGotBtn": "تم"
+    "flipGotBtn": "تم",
+    "gaugeEasier": "أسهل",
+    "gaugeHarder": "أصعب"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6768,7 +6786,9 @@
     "tlBare": "เขียนโดยไม่มีตัวอย่าง",
     "tlHoursMin": "{h} ชม. {m} นาที",
     "flipAgainBtn": "อีกครั้ง",
-    "flipGotBtn": "ได้แล้ว"
+    "flipGotBtn": "ได้แล้ว",
+    "gaugeEasier": "ง่ายขึ้น",
+    "gaugeHarder": "ยากขึ้น"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7403,6 +7423,8 @@
     "tlBare": "उदाहरण के बिना लिखें",
     "tlHoursMin": "{h} घंटे {m} मिनट",
     "flipAgainBtn": "फिर से",
-    "flipGotBtn": "हो गया"
+    "flipGotBtn": "हो गया",
+    "gaugeEasier": "आसान",
+    "gaugeHarder": "कठिन"
   }
 }

@@ -2,9 +2,10 @@
 
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
-import { DONE, kindCounts, kindShares, missRates, readLadder, rungOf, saveLadder, stepLadder } from "@/lib/curriculum/ladder";
-import { expressionAsk, grammarAsk } from "@/lib/curriculum/ladderQuiz";
-import { loadSpots, spotsFor } from "@/lib/curriculum/spotLoad";
+import { DONE, gaugeCue, gaugeNumbered, gaugeRung, kindCounts, kindOf, kindShares, missRates, paraDue, readGauge, readLadder, readPara, rungOf, saveGauge, saveLadder, savePara, stepLadder, stepPara, type Gauge } from "@/lib/curriculum/ladder";
+import { gaugeField, noteStat, RANDOM_SHARE, statField } from "@/lib/curriculum/quizStats";
+import { expressionAsk, grammarAsk, paragraphQuestion } from "@/lib/curriculum/ladderQuiz";
+import { loadParas, loadSpots, parasAt, spotsFor } from "@/lib/curriculum/spotLoad";
 import type { PreparedItem } from "@/lib/curriculum/preparedQuiz";
 import { reviewKeys as ledgerReview } from "@/lib/curriculum/todayCards";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
@@ -14,7 +15,7 @@ import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
-import { askedTexts, bundleQuiz, cardQuiz, registerQuizSources, type QuizCard, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { askedTexts, bundleQuiz, cardQuiz, noteAsked, registerQuizSources, type QuizCard, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
 import { confirmDue, knownState } from "@/lib/curriculum/known";
 import { useWordBank } from "@/lib/curriculum/useWordBank";
@@ -97,6 +98,14 @@ export function Quizbank({
   const day = now ? localDay(new Date(now)) : "";
   const [log, setLog] = useState<QuizLog>({});
   const [round, setRound] = useState(0);
+  // 게이지(6단계, ladder.ts — −2 쉽게 … +2 어렵게, 이 폰·언어마다): 낼 칸·쓰기 도움·번호 선지·문단 난이도를 옮긴다.
+  const [gauge, setGauge] = useState<Gauge>(() => readGauge(language));
+  useEffect(() => {
+    setGauge(readGauge(language));
+  }, [language]);
+  // 무작위 모양으로 낸 열쇠(측정 — quizStats.ts RANDOM_SHARE), 이번 묶음 문단(답이 오면 문단 난이도를 옮김).
+  const randomKeys = useRef<Set<string>>(new Set());
+  const paraAsked = useRef<{ keys: Set<string>; errors: number } | null>(null);
   // 지금 묶음이 다시 볼 것인지(번갈아 내기), Logbank 오늘 카드가 맡긴 열쇠(curriculum/quizFocus.ts).
   const reviewBatch = useRef(false);
   const focusKeys = useRef<string[]>([]);
@@ -157,6 +166,7 @@ export function Quizbank({
   // 사다리 3칸 틀린 곳 문항(spot-errors) — 묶음을 짜기 전에 미리 읽어 둔다.
   useEffect(() => {
     void loadSpots(language);
+    void loadParas(language);
   }, [language]);
   const isDeckKey = (key: string) => key.startsWith("w|") || key.startsWith("e|");
   const cuts = stageCuts(language);
@@ -254,14 +264,25 @@ export function Quizbank({
     for (const { key, correct, shape, miss } of results) {
       noteQuizDay(language, localDay(), correct, key, shape, miss);
       logged = recordQuiz(logged, key, correct);
-      // 사다리(문법·표현): 낸 칸에서 맞으면 다음 칸, 틀리면 그 칸(ladder.ts).
+      // 사다리(문법·표현): 낸 칸에서 맞으면 다음 칸, 틀리면 그 칸(ladder.ts). 무작위 모양(측정)으로 낸 것은 사다리를 안 옮김.
       const rung = askedRung.current.get(key);
+      const random = randomKeys.current.has(key);
+      const kind = kindOf(key);
+      if (kind) noteStat(language, statField(kind, rung ?? 0, stage, gauge, random, correct));
       if (rung !== undefined) {
-        ladder = stepLadder(ladder, key, rung, correct);
+        if (!random) ladder = stepLadder(ladder, key, rung, correct);
         askedRung.current.delete(key);
+        randomKeys.current.delete(key);
       }
     }
     saveLadder(language, ladder);
+    // 문단 답(묶음 퀴즈 spots — 틀린 곳마다 한 결과): 다 맞히면 문단 난이도 한 칸 위, 둘 이상 놓치면 아래(ladder.ts stepPara).
+    const para = paraAsked.current;
+    if (para && results.every((one) => para.keys.has(one.key))) {
+      const missed = results.filter((one) => !one.correct).length;
+      savePara(language, stepPara(readPara(language, stage), localDay(), para.errors, missed));
+      paraAsked.current = null;
+    }
     setLog(logged);
     saveQuizLog(language, logged, false);
     // 다시 볼 것에서 온 것은 결과 그대로, 한 번 맞히면 익힘 — 이미 익힘이고 다시 볼 것도 아니면 확인 날일 때만 서버에.
@@ -295,14 +316,18 @@ export function Quizbank({
   /** 문법·표현 열쇠 하나 → 사다리 칸 문제(ladderQuiz.ts). 낸 칸을 기억해 답이 오면 사다리를 옮긴다. */
   const ladderAsk = (key: string, events: readonly { k: string; src: string }[], ladder: ReturnType<typeof readLadder>, item?: PreparedItem): QuizQuestion | null => {
     const prep = item ?? prepared?.find((one) => one.key === key);
-    const current = Math.min(4, rungOf(ladder, key));
+    // 게이지가 낼 칸을 옮기고(gaugeRung), 열에 하나는 측정으로 칸을 무작위로(quizStats.ts — 사다리는 안 옮김).
+    const random = Math.random() < RANDOM_SHARE;
+    const current = random ? 1 + Math.floor(Math.random() * 4) : gaugeRung(Math.min(4, rungOf(ladder, key)), gauge);
+    const cue = gaugeCue(gauge);
     const made = prep
-      ? grammarAsk(turnFresh(prep, preparedTurn(events, key), askedTexts(language, key)), current, spotOf(key), language)
+      ? grammarAsk(turnFresh(prep, preparedTurn(events, key), askedTexts(language, key)), current, spotOf(key), language, { cue, numbered: gaugeNumbered(gauge) })
       : key.startsWith("e|")
-        ? expressionAsk(language, key, current, `${day}-${round}`)
+        ? expressionAsk(language, key, current, `${day}-${round}`, cue)
         : null;
     if (!made) return null;
     askedRung.current.set(key, made.rung);
+    if (random) randomKeys.current.add(key);
     return made.question;
   };
   // 카드 문제 하나: 낱말은 한 모양(뜻 묻기), 문법·표현은 사다리.
@@ -416,6 +441,21 @@ export function Quizbank({
         used.push(key);
       }
     }
+    // 문단(5단계): 단계·하루 수에 맞으면 묶음 끝에 하나(ladder.ts paraDue) — 난이도 P1~P4는 이 폰 기록 + 게이지(올리면 한 칸 위).
+    const paraState = readPara(language, stage);
+    if (paraDue(stage, round, paraState, localDay())) {
+      const level = Math.min(4, Math.max(1, paraState.lv + (gauge >= 1 ? 1 : gauge <= -2 ? -1 : 0)));
+      const seen = new Set(askedTexts(language, "para"));
+      const pool = parasAt(language, level).filter((one) => !seen.has(one.lines.join("\n")));
+      const item = pool[round % Math.max(1, pool.length)];
+      const question = item ? paragraphQuestion(item, language) : null;
+      if (item && question && question.kind === "spots") {
+        noteAsked(language, "para", item.lines.join("\n"));
+        questions.push(question);
+        used.push(question.errors[0]!.key);
+        paraAsked.current = { keys: new Set(question.errors.map((one) => one.key)), errors: question.errors.length };
+      }
+    }
     return questions.length ? takeBatch({ keys: used, questions }) : null;
   };
   const keepMake = (): QuizBatch | null => {
@@ -443,8 +483,27 @@ export function Quizbank({
     reviewBatch.current = true;
     return takeBatch(due);
   };
+  const moveGauge = (to: number) => {
+    const next = Math.max(-2, Math.min(2, to)) as Gauge;
+    if (next === gauge) return;
+    noteStat(language, gaugeField(gauge, next, stage));
+    saveGauge(language, next);
+    setGauge(next);
+  };
   const keepBody = (
     <div data-keep-learning data-focus-serial={focusSerial}>
+      {/* 게이지(6단계): 숫자 없이 점 다섯, 가운데 = 지금 단계. 다음 묶음부터 바뀐다. */}
+      <div data-quiz-gauge={gauge} className="mb-2 flex items-center justify-end gap-1.5">
+        <button type="button" aria-label={ui.gaugeEasier} title={ui.gaugeEasier} onClick={() => moveGauge(gauge - 1)} disabled={gauge <= -2} className="h-6 w-6 rounded-full border border-line text-caption text-slate-300 disabled:opacity-30">
+          −
+        </button>
+        {[-2, -1, 0, 1, 2].map((dot) => (
+          <button key={dot} type="button" aria-label={dot < gauge ? ui.gaugeEasier : ui.gaugeHarder} aria-pressed={dot === gauge} onClick={() => moveGauge(dot)} className={`h-2.5 w-2.5 rounded-full ${dot === gauge ? "bg-good" : dot === 0 ? "bg-slate-400" : "bg-slate-600"}`} />
+        ))}
+        <button type="button" aria-label={ui.gaugeHarder} title={ui.gaugeHarder} onClick={() => moveGauge(gauge + 1)} disabled={gauge >= 2} className="h-6 w-6 rounded-full border border-line text-caption text-slate-300 disabled:opacity-30">
+          +
+        </button>
+      </div>
       {/* Today line above the question — the cell that grew lights up briefly (same numbers as the Logbank today line). */}
       <InlineQuiz
         ui={ui}

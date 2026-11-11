@@ -548,6 +548,7 @@ function TypeBox({
   onSubmit,
   onGiveUp,
   autoFocus = true,
+  cueMode,
 }: {
   ui: UICopy;
   tag: string;
@@ -558,6 +559,8 @@ function TypeBox({
   onSubmit: (typed: string) => void;
   onGiveUp: () => void;
   autoFocus?: boolean;
+  /** 게이지 쓰기 도움(quiz.ts firstCue). */
+  cueMode?: "len" | "none";
 }) {
   const tone = useBankTone();
   const [typed, setTyped] = useState("");
@@ -570,7 +573,7 @@ function TypeBox({
     if (done || busy || !typed.trim()) return;
     onSubmit(typed);
   };
-  const cue = firstCue(answer);
+  const cue = firstCue(answer, cueMode);
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
@@ -690,6 +693,7 @@ function TypeView({
           speak={answered ? { text: question.text, tag } : null}
         />
         <TypeBox
+          cueMode={question.cue}
           ui={ui}
           tag={tag}
           answer={question.answer}
@@ -723,6 +727,7 @@ function TypeView({
       </div>
       )}
       <TypeBox
+        cueMode={question.cue}
         ui={ui}
         tag={tag}
         answer={question.answer}
@@ -813,6 +818,16 @@ function SpotView({
         ) : null}
         {question.words.map((word, i) => {
           const bad = question.bad.includes(i);
+          // 번호 선지(게이지 아래쪽): 번호 칸만 누를 수 있다.
+          const pick = question.picks ? question.picks.indexOf(i) : -1;
+          if (question.picks && pick < 0) {
+            return (
+              <span key={i} className={answered && bad ? "bg-bad/15 text-bad" : "text-slate-200"}>
+                {i > 0 && glue ? glue : null}
+                {word}
+              </span>
+            );
+          }
           const style = answered
             ? bad
               ? "bg-bad/15 text-bad"
@@ -837,13 +852,14 @@ function SpotView({
                 }}
                 className={`inline rounded-lg px-0.5 ${style}`}
               >
+                {pick >= 0 ? <span aria-hidden className="me-0.5 text-caption text-slate-400">{CIRCLED[pick]}</span> : null}
                 {word}
               </button>
             </span>
           );
         })}
       </p>
-      {!bare && !answered && !found ? (
+      {!bare && !question.hasError && !answered && !found ? (
         <button
           type="button"
           data-spot-none
@@ -1110,7 +1126,7 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
   );
 }
 
-const CIRCLED = ["①", "②", "③", "④"];
+const CIRCLED = ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨"];
 
 /**
  * 복합 빈칸(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개", curriculum/multiQuiz.ts): 한 문장에 이미 맞힌 소재 자리 둘·셋이 비어 있다.
@@ -1269,13 +1285,23 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
         ) : (
           <span />
         )}
-        <span aria-hidden className="shrink-0 rounded-full border border-line px-2 py-0.5 text-caption text-slate-300">
-          ✎ {found}/{question.errors.length}
-        </span>
+        {question.hideCount ? null : (
+          <span aria-hidden className="shrink-0 rounded-full border border-line px-2 py-0.5 text-caption text-slate-300">
+            ✎ {found}/{question.errors.length}
+          </span>
+        )}
       </div>
       <p dir="auto" className={`flex flex-wrap ${glue ? "gap-1.5" : "gap-0.5"}`} data-spot-words>
         {question.words.map((word, i) => {
           const e = errorAt(i);
+          const pick = question.picks ? question.picks.indexOf(i) : -1;
+          if (question.picks && pick < 0) {
+            return (
+              <span key={i} className="px-0.5 py-1 text-chat text-slate-200">
+                {word}
+              </span>
+            );
+          }
           const style = answered
             ? e >= 0
               ? done[e]
@@ -1310,6 +1336,7 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
               }}
               className={`rounded-lg border px-2 py-1 text-chat ${style}`}
             >
+              {pick >= 0 ? <span aria-hidden className="me-0.5 text-caption text-slate-400">{CIRCLED[pick]}</span> : null}
               {word}
             </button>
           );

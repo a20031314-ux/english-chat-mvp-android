@@ -21,7 +21,26 @@ const FILES: Record<string, () => Promise<{ default: SpotItem[] }>> = {
   zh: () => import("./spot-errors/zh.json") as Promise<{ default: SpotItem[] }>,
 };
 
+const PARAS: Record<string, () => Promise<{ default: SpotItem[] }>> = Object.fromEntries(
+  ["ar", "en", "es", "fr", "hi", "id", "it", "ja", "ko", "pt", "ru", "th", "vi", "zh"].map((lang) => [lang, () => import(`./story-errors/${lang}.json`) as Promise<{ default: SpotItem[] }>]),
+);
+
 const loaded = new Map<string, Map<string, SpotItem[]>>();
+const paras = new Map<string, SpotItem[]>();
+
+/** 그 언어의 문단 문항(story-errors, P1~P4) — 한 번 읽으면 기억. */
+export async function loadParas(language: string): Promise<SpotItem[]> {
+  const have = paras.get(language);
+  if (have) return have;
+  const list = (await PARAS[language]?.().then((mod) => mod.default).catch(() => [] as SpotItem[])) ?? [];
+  paras.set(language, list);
+  return list;
+}
+
+/** 이미 읽은 문단 중 그 난이도(P1~P4). */
+export function parasAt(language: string, level: number): readonly SpotItem[] {
+  return (paras.get(language) ?? []).filter((item) => item.shape === `P${level}`);
+}
 
 /** 그 언어의 꼴 틀림 한 문장 문항을 문법 칸별로(한 번 읽으면 기억). */
 export async function loadSpots(language: string): Promise<Map<string, SpotItem[]>> {

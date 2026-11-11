@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder } from "./ladder.ts";
-import { grammarAsk, spotQuestion } from "./ladderQuiz.ts";
+import { grammarAsk, pickCells, spotQuestion } from "./ladderQuiz.ts";
 import type { PreparedItem } from "./preparedQuiz.ts";
 import type { SpotItem } from "./spotErrors.ts";
 
@@ -69,4 +69,49 @@ test("부족한 것: 최근 두 번 넘게 틀리고 마지막도 틀린 것만,
     ev("g|2:0", "miss", 20 * 86400), ev("g|2:0", "miss", 20 * 86400 - 5),
   ];
   assert.deepEqual(weakKeys(events, now), ["g|1:2", "e|por favor"]);
+});
+
+test("게이지: 내리면 낮은 칸·글자 수 도움·번호 선지, 올리면 위 칸·도움 없음·표시 없음", async () => {
+  const { gaugeRung, gaugeCue, gaugeNumbered } = await import("./ladder.ts");
+  assert.deepEqual([gaugeRung(4, -2), gaugeRung(4, -1), gaugeRung(1, 0), gaugeRung(1, 1), gaugeRung(1, 2), gaugeRung(DONE, 2)], [2, 3, 1, 2, 3, DONE]);
+  assert.deepEqual([gaugeCue(-2), gaugeCue(0), gaugeCue(2)], ["len", undefined, "none"]);
+  assert.deepEqual([gaugeNumbered(0), gaugeNumbered(1)], [true, false]);
+  const { firstCue } = await import("./quiz.ts");
+  assert.equal(firstCue("hablo", "len"), "h＿＿＿＿");
+  assert.equal(firstCue("ทะเล", "none"), "");
+});
+
+test("문단: 단계별 빈도·하루 둘, 다 맞히면 위·둘 놓치면 아래 · 문단 문제(번호 P1, 틀린 곳 수 숨김 P4) (es·ja)", async () => {
+  const { paraDue, stepPara, startParaLevel } = await import("./ladder.ts");
+  const { paragraphQuestion } = await import("./ladderQuiz.ts");
+  assert.deepEqual([startParaLevel(1), startParaLevel(3), startParaLevel(5)], [1, 2, 3]);
+  const s = { lv: 2, day: "d", n: 0 };
+  assert.equal(paraDue(1, 4, s, "d"), true);
+  assert.equal(paraDue(1, 5, s, "d"), false);
+  assert.equal(paraDue(5, 5, { ...s, n: 2 }, "d"), false);
+  assert.equal(stepPara(s, "d", 2, 0).lv, 3);
+  assert.equal(stepPara(s, "d", 2, 2).lv, 1);
+  const es: SpotItem = { id: "es-p-1", stage: 1, shape: "P1", src: "new", lines: ["Hoy es lunes.", "Yo estoy profesor.", "Me gusta mi trabajo."], errors: [{ line: 1, at: 1, wrong: "estoy", right: "soy", type: "form", kind: "form", g: "g|1:0", why: { en: "x", ko: "x" } }], gloss: { en: "x", ko: "x" } };
+  const q = paragraphQuestion(es, "es");
+  assert.ok(q?.kind === "spots");
+  if (q?.kind === "spots") {
+    assert.equal(q.words[q.errors[0]!.bad[0]!], "estoy");
+    assert.equal(q.right, "Hoy es lunes. Yo soy profesor. Me gusta mi trabajo.");
+    assert.ok(q.picks?.includes(q.errors[0]!.bad[0]!) && q.picks.length === 5);
+  }
+  const ja: SpotItem = { id: "ja-p-1", stage: 4, shape: "P4", src: "new", lines: ["今日は雨です。", "傘を持って行きました。", "でも、駅で傘を忘れた。", "家に帰ると、母が笑いました。", "私も笑いました。", "楽しい一日でした。"], errors: [{ line: 0, at: 0, wrong: "今日", right: "昨日", type: "meaning", kind: "word", why: { en: "x", ko: "x" } }], gloss: { en: "x", ko: "x" } };
+  const p4 = paragraphQuestion(ja, "ja");
+  assert.ok(p4?.kind === "spots" && p4.hideCount && !p4.picks);
+});
+
+test("번호 선지: 틀린 곳의 번호가 늘 같은 자리에 오지 않는다", () => {
+  const cells = Array.from({ length: 40 }, (_, i) => `word${i}`);
+  const seen = new Set<number>();
+  for (let k = 0; k < 60; k += 1) {
+    const picks = pickCells(cells, [20], [], `seed-${k}`);
+    assert.equal(picks.length, 5);
+    assert.ok(picks.includes(20));
+    seen.add(picks.indexOf(20));
+  }
+  assert.equal(seen.size, 5);
 });

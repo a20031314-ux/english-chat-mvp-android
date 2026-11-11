@@ -137,3 +137,88 @@ export function weakKeys(events: readonly { k: string; src: string; r: string; t
     .slice(0, n)
     .map(([key]) => key);
 }
+
+/* ───────── 게이지(6단계, 설계안 §5 — 사용자 2026-11-10 "학습자가 게이지로 난이도를 조절") ───────── */
+
+/** −2(많이 쉽게) … 0(지금 단계) … +2(많이 어렵게). 이 폰, 언어마다. */
+export type Gauge = -2 | -1 | 0 | 1 | 2;
+const GAUGE_KEY = "gauge.v1";
+
+export function readGauge(language: string): Gauge {
+  try {
+    const n = Number(typeof localStorage === "undefined" ? 0 : localStorage.getItem(`${GAUGE_KEY}.${language}`) ?? 0);
+    return (Number.isInteger(n) && n >= -2 && n <= 2 ? n : 0) as Gauge;
+  } catch {
+    return 0;
+  }
+}
+
+export function saveGauge(language: string, gauge: Gauge): void {
+  try {
+    if (typeof localStorage !== "undefined") localStorage.setItem(`${GAUGE_KEY}.${language}`, String(gauge));
+  } catch {
+    // 이번에만.
+  }
+}
+
+/** 게이지로 낼 칸: 내리면 낮은 칸에 머물고(−2 → 2칸까지, −1 → 3칸까지), 올리면 위 칸부터(+1 → 2칸부터, +2 → 3칸부터). 사다리 기록은 그대로. */
+export function gaugeRung(current: number, gauge: Gauge): number {
+  if (current >= DONE) return current;
+  if (gauge <= -2) return Math.min(current, 2);
+  if (gauge === -1) return Math.min(current, 3);
+  if (gauge === 1) return Math.max(current, 2);
+  if (gauge >= 2) return Math.max(current, 3);
+  return current;
+}
+
+/** 쓰기 도움: 내리면 첫 글자 + 글자 수, 많이 올리면 없음, 그 사이 첫 글자. */
+export function gaugeCue(gauge: Gauge): "len" | "none" | undefined {
+  return gauge <= -1 ? "len" : gauge >= 2 ? "none" : undefined;
+}
+
+/** 틀린 곳 한 문장: 가운데까지 번호 선지, 올리면 표시 없음. */
+export function gaugeNumbered(gauge: Gauge): boolean {
+  return gauge <= 0;
+}
+
+/* ───────── 문단(5단계, 설계안 §4 문단 안 난이도 넷) ───────── */
+
+const PARA_KEY = "para.v1";
+export type ParaState = { lv: number; day: string; n: number };
+
+/** 단계별 기본 문단 난이도(1~2단계 P1, 3단계 P2, 4~5단계 P3) — 게이지 올리면 한 칸 위. */
+export function startParaLevel(stage: number): number {
+  return stage <= 2 ? 1 : stage === 3 ? 2 : 3;
+}
+
+export function readPara(language: string, stage: number): ParaState {
+  try {
+    const raw = typeof localStorage === "undefined" ? null : localStorage.getItem(`${PARA_KEY}.${language}`);
+    const one = raw ? (JSON.parse(raw) as ParaState) : null;
+    if (one && one.lv >= 1 && one.lv <= 4) return one;
+  } catch {
+    // 처음.
+  }
+  return { lv: startParaLevel(stage), day: "", n: 0 };
+}
+
+export function savePara(language: string, state: ParaState): void {
+  try {
+    if (typeof localStorage !== "undefined") localStorage.setItem(`${PARA_KEY}.${language}`, JSON.stringify(state));
+  } catch {
+    // 이번에만.
+  }
+}
+
+/** 이번 새 묶음에 문단을 낼까: 하루 둘까지, 1~2단계는 네 묶음에 하나, 3단계는 둘에 하나, 4~5단계는 묶음마다. */
+export function paraDue(stage: number, round: number, state: ParaState, today: string): boolean {
+  if (state.day === today && state.n >= 2) return false;
+  const every = stage <= 2 ? 4 : stage === 3 ? 2 : 1;
+  return round % every === 0;
+}
+
+/** 문단 답 → 다음 난이도: 다 맞히면 한 칸 위, 둘 이상 놓치면 한 칸 아래. */
+export function stepPara(state: ParaState, today: string, errors: number, missed: number): ParaState {
+  const lv = missed === 0 ? Math.min(4, state.lv + 1) : missed >= 2 || missed >= errors ? Math.max(1, state.lv - 1) : state.lv;
+  return { lv, day: today, n: (state.day === today ? state.n : 0) + 1 };
+}

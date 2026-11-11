@@ -59,12 +59,12 @@ export type QuizQuestion =
   /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
   | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
-  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 뜻 줄을 답하기 전에도(문법 사다리 2칸 — 뜻 없이는 답이 여럿). */ glossFirst?: true; /** 문장 만들기(사다리 4칸): 뜻만 보고 문장 전체 쓰기 — 빈칸 줄 없음, 서버가 같은 뜻의 맞는 문장인지 봄. */ whole?: true }
+  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 뜻 줄을 답하기 전에도(문법 사다리 2칸 — 뜻 없이는 답이 여럿). */ glossFirst?: true; /** 문장 만들기(사다리 4칸): 뜻만 보고 문장 전체 쓰기 — 빈칸 줄 없음, 서버가 같은 뜻의 맞는 문장인지 봄. */ whole?: true; /** 쓰기 도움(게이지): 없으면 첫 글자, "len" 첫 글자 + 글자 수, "none" 없음. */ cue?: "len" | "none" }
   /**
    * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
    */
-  | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean; /** 앞 문맥 한 줄(누를 수 없음, 틀린 곳 데이터 shape "l"). */ lead?: string }
+  | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean; /** 앞 문맥 한 줄(누를 수 없음, 틀린 곳 데이터 shape "l"). */ lead?: string; /** 늘 틀린 곳이 있음(틀린 곳 데이터) — "틀린 곳 없음" 버튼 없음. */ hasError?: true; /** 번호 선지(게이지 아래쪽): 이 칸만 누를 수 있고 ①~⑤. */ picks?: number[] }
   /**
    * 복합 빈칸(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개"): 한 문장에 이미 맞힌 소재 둘·셋을 동시에 비운다.
    * chunks = 빈칸 사이 글(빈칸 수 + 1개), blanks = 빈칸마다 열쇠·답·헷갈리는 오답. 결과는 빈칸마다 그 열쇠에(curriculum/multiQuiz.ts).
@@ -76,7 +76,7 @@ export type QuizQuestion =
    */
   | { kind: "talk"; text: string; lines: { who: "me" | "them"; text: string; gloss?: string }[]; at: number; before: string; after: string; answer: string; near?: string[]; options?: string[]; mine?: boolean; from: string }
   /** 복합 틀린 곳(같은 날): 한 문장에 확실히 틀린 꼴이 둘·셋 — 모두 찾아 고친다. errors마다 그 열쇠·낱말 자리·바른 말. */
-  | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string }
+  | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string; /** 문단(story-errors P1~P4): 번호 선지 칸 · 틀린 곳 수를 안 보임(P4·게이지 위쪽). */ picks?: number[]; hideCount?: true }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   /** 낱말 스스로 체크(그럴듯한 보기가 셋 안 모일 때): 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 → [맞았어요 | 틀렸어요]. */
   | { kind: "know"; text: string; mark: string; gloss: ScriptGloss; from: string; card: QuizCardFace }
@@ -605,7 +605,8 @@ export function typeOf(language: string, source: QuizSource, key = ""): QuizQues
  * 쓰기 칸의 첫 글자 도움(입력칸 안내 글, 기본으로 — 사용자 2026-11-10 "답이 여럿인 빈칸은 첫 글자", "💡 빼고"): "첫 글자…".
  * 글자는 자소 묶음 단위(Intl.Segmenter — 힌디·태국 모음 기호를 떼지 않음). 셋보다 짧은 답·한자가 든 답은 첫 글자가 답의 큰 몫이라 없음("").
  */
-export function firstCue(answer: string): string {
+export function firstCue(answer: string, mode?: "len" | "none"): string {
+  if (mode === "none") return "";
   const text = answer.trim();
   if (!text || /\p{Script=Han}/u.test(text)) return "";
   let parts: string[];
@@ -616,6 +617,8 @@ export function firstCue(answer: string): string {
   }
   const letters = parts.filter((one) => /[\p{L}\p{N}]/u.test(one));
   if (letters.length < 3) return "";
+  // 게이지 아래쪽: 첫 글자 + 남은 글자 수만큼 밑줄(띄어쓰기는 그대로).
+  if (mode === "len") return parts.map((one, i) => (i === 0 || /\s/.test(one) ? one : "＿")).join("");
   return `${parts[0]}…`;
 }
 
