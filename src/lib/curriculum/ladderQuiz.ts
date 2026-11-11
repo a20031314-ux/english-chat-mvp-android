@@ -24,7 +24,7 @@ export function fixedLine(line: string, cells: readonly string[], at: number, wr
   return line;
 }
 
-/** 번호 선지 칸: 틀린 칸들 + 다른 칸(단서 칸·글자 없는 칸 빼고)으로 다섯, 글 차례로. seed로 고정. */
+/** 선지(밑줄) 칸: 틀린 칸들 + 다른 칸(단서 칸·글자 없는 칸 빼고)으로 다섯, 글 차례로. seed로 고정. */
 export function pickCells(cells: readonly string[], errors: readonly number[], clue: readonly number[], seed: string, n = 5): number[] {
   const letters = (cell: string) => [...cell.replace(/[\p{P}\p{S}\s]/gu, "")].length;
   const cjk = (cell: string) => /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Thai}]/u.test(cell);
@@ -47,7 +47,7 @@ export function pickCells(cells: readonly string[], errors: readonly number[], c
   return [...errors, ...shuffled.slice(0, need)].sort((a, b) => a - b);
 }
 
-/** 틀린 곳 문항(한 문장) → 퀴즈 spot 문제. numbered = 번호 선지(게이지 아래쪽·가운데). */
+/** 틀린 곳 문항(한 문장) → 퀴즈 spot 문제. numbered = 선지(밑줄)(게이지 아래쪽·가운데). */
 export function spotQuestion(item: SpotItem, language: string, key: string, numbered = false): QuizQuestion | null {
   const err = item.errors[0];
   const line = item.lines[0];
@@ -73,7 +73,7 @@ export function spotQuestion(item: SpotItem, language: string, key: string, numb
   };
 }
 
-/** 문단 문항(story-errors P1~P4) → 퀴즈 spots 문제. P1·P2 번호 선지, P4는 틀린 곳 수를 안 보임. */
+/** 문단 문항(story-errors P1~P4) → 퀴즈 spots 문제. P1·P2 선지(밑줄), P4는 틀린 곳 수를 안 보임. */
 export function paragraphQuestion(item: SpotItem, language: string): QuizQuestion | null {
   const lineCells = item.lines.map((line) => spotCells(line, language));
   const offsets: number[] = [];

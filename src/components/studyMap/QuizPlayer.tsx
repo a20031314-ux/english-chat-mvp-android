@@ -312,7 +312,10 @@ export function QuestionView({
       data-quiz-meta={quizMeta(question)}
       className="flex flex-col gap-3"
     >
-      {/* No kind label (gap, order…) — the question's shape is the task (user, 2026-10-30); 2026-11-02 shapes made distinct + 🔍/🔀 icon (no text). Checks read data-kind. */}
+      {/* One short question line per shape (user 2026-11-11: options alone did not say what to pick) — a question, not an explanation. Checks read data-kind. */}
+      <p dir="auto" data-quiz-ask className="text-note font-semibold text-slate-300">
+        {askLine(question, ui)}
+      </p>
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} glossFirst={glossFirst} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -818,7 +821,7 @@ function SpotView({
         ) : null}
         {question.words.map((word, i) => {
           const bad = question.bad.includes(i);
-          // 번호 선지(게이지 아래쪽): 번호 칸만 누를 수 있다.
+          // 선지(게이지 아래쪽, 사용자 2026-11-11 "선지는 색이나 밑줄로"): 칸 색 밑줄 낱말만 누를 수 있다.
           const pick = question.picks ? question.picks.indexOf(i) : -1;
           if (question.picks && pick < 0) {
             return (
@@ -836,7 +839,9 @@ function SpotView({
                 : "text-slate-200"
             : tapped === i
               ? tone.pick
-              : "underline decoration-slate-500 decoration-dotted underline-offset-4 hover:bg-white/10";
+              : pick >= 0
+                ? `underline decoration-2 underline-offset-4 text-ink hover:bg-white/10 ${tone.mark}`
+                : "underline decoration-slate-500 decoration-dotted underline-offset-4 hover:bg-white/10";
           return (
             <span key={i}>
               {i > 0 && glue ? glue : null}
@@ -852,7 +857,6 @@ function SpotView({
                 }}
                 className={`inline rounded-lg px-0.5 ${style}`}
               >
-                {pick >= 0 ? <span aria-hidden className="me-0.5 text-caption text-slate-400">{CIRCLED[pick]}</span> : null}
                 {word}
               </button>
             </span>
@@ -1126,6 +1130,35 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
   );
 }
 
+/** 문제 모양마다 물음 한 줄(짧게, 설명 없이). */
+function askLine(question: QuizQuestion, ui: UICopy): string {
+  switch (question.kind) {
+    case "choose":
+      return ui.quizAskChoose;
+    case "type":
+      return question.whole ? ui.quizAskWhole : ui.quizAskBlank;
+    case "talk":
+    case "multi":
+      return ui.quizAskBlank;
+    case "spot":
+    case "spots":
+      // 문단의 틀린 곳 수는 ✎ 0/n 칸에 있어 물음엔 안 씀(같은 값 두 번 안 냄).
+      return ui.quizAskSpot;
+    case "meaning":
+      return ui.quizAskMeaning;
+    case "know":
+      return ui.quizAskKnow;
+    case "order":
+      return ui.quizAskOrder;
+    case "fix":
+      return ui.quizAskFix;
+    case "say":
+      return ui.quizAskSay;
+    case "reply":
+      return ui.quizAskReply;
+  }
+}
+
 const CIRCLED = ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨"];
 
 /**
@@ -1318,7 +1351,9 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
                 ? tone.pick
                 : misses.includes(i)
                   ? "border-line text-slate-500 line-through"
-                  : "border-line text-slate-100 hover:bg-white/10";
+                  : question.picks
+                    ? `border-transparent text-ink underline decoration-2 underline-offset-4 hover:bg-white/10 ${tone.mark}`
+                    : "border-line text-slate-100 hover:bg-white/10";
           return (
             <button
               key={i}
@@ -1336,7 +1371,6 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
               }}
               className={`rounded-lg border px-2 py-1 text-chat ${style}`}
             >
-              {pick >= 0 ? <span aria-hidden className="me-0.5 text-caption text-slate-400">{CIRCLED[pick]}</span> : null}
               {word}
             </button>
           );

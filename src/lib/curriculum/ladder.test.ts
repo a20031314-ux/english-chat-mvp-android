@@ -71,7 +71,7 @@ test("부족한 것: 최근 두 번 넘게 틀리고 마지막도 틀린 것만,
   assert.deepEqual(weakKeys(events, now), ["g|1:2", "e|por favor"]);
 });
 
-test("게이지: 내리면 낮은 칸·글자 수 도움·번호 선지, 올리면 위 칸·도움 없음·표시 없음", async () => {
+test("게이지: 내리면 낮은 칸·글자 수 도움·선지(밑줄), 올리면 위 칸·도움 없음·표시 없음", async () => {
   const { gaugeRung, gaugeCue, gaugeNumbered } = await import("./ladder.ts");
   assert.deepEqual([gaugeRung(4, -2), gaugeRung(4, -1), gaugeRung(1, 0), gaugeRung(1, 1), gaugeRung(1, 2), gaugeRung(DONE, 2)], [2, 3, 1, 2, 3, DONE]);
   assert.deepEqual([gaugeCue(-2), gaugeCue(0), gaugeCue(2)], ["len", undefined, "none"]);
@@ -104,7 +104,7 @@ test("문단: 단계별 빈도·하루 둘, 다 맞히면 위·둘 놓치면 아
   assert.ok(p4?.kind === "spots" && p4.hideCount && !p4.picks);
 });
 
-test("번호 선지: 틀린 곳의 번호가 늘 같은 자리에 오지 않는다", () => {
+test("선지(밑줄): 틀린 곳이 선지 가운데 늘 같은 자리에 오지 않는다", () => {
   const cells = Array.from({ length: 40 }, (_, i) => `word${i}`);
   const seen = new Set<number>();
   for (let k = 0; k < 60; k += 1) {

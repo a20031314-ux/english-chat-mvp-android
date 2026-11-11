@@ -98,7 +98,7 @@ export function Quizbank({
   const day = now ? localDay(new Date(now)) : "";
   const [log, setLog] = useState<QuizLog>({});
   const [round, setRound] = useState(0);
-  // 게이지(6단계, ladder.ts — −2 쉽게 … +2 어렵게, 이 폰·언어마다): 낼 칸·쓰기 도움·번호 선지·문단 난이도를 옮긴다.
+  // 게이지(6단계, ladder.ts — −2 쉽게 … +2 어렵게, 이 폰·언어마다): 낼 칸·쓰기 도움·선지(밑줄)·문단 난이도를 옮긴다.
   const [gauge, setGauge] = useState<Gauge>(() => readGauge(language));
   useEffect(() => {
     setGauge(readGauge(language));

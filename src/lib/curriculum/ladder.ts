@@ -176,7 +176,7 @@ export function gaugeCue(gauge: Gauge): "len" | "none" | undefined {
   return gauge <= -1 ? "len" : gauge >= 2 ? "none" : undefined;
 }
 
-/** 틀린 곳 한 문장: 가운데까지 번호 선지, 올리면 표시 없음. */
+/** 틀린 곳 한 문장: 가운데까지 선지(밑줄), 올리면 표시 없음. */
 export function gaugeNumbered(gauge: Gauge): boolean {
   return gauge <= 0;
 }

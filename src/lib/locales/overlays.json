@@ -634,7 +634,17 @@
     "flipAgainBtn": "もう一度",
     "flipGotBtn": "できた",
     "gaugeEasier": "やさしく",
-    "gaugeHarder": "むずかしく"
+    "gaugeHarder": "むずかしく",
+    "quizAskChoose": "合うのはどれ？",
+    "quizAskBlank": "空欄に入る言葉は？",
+    "quizAskWhole": "文で書いてみよう",
+    "quizAskSpot": "間違いはどこ？",
+    "quizAskMeaning": "この文での意味は？",
+    "quizAskKnow": "知っている言葉？",
+    "quizAskOrder": "順番に並べよう",
+    "quizAskFix": "正しく直すと？",
+    "quizAskSay": "声に出して言おう",
+    "quizAskReply": "合う返事は？"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1271,7 +1281,17 @@
     "flipAgainBtn": "再来",
     "flipGotBtn": "好了",
     "gaugeEasier": "更简单",
-    "gaugeHarder": "更难"
+    "gaugeHarder": "更难",
+    "quizAskChoose": "哪个合适？",
+    "quizAskBlank": "空里填什么？",
+    "quizAskWhole": "写出整句",
+    "quizAskSpot": "错在哪里？",
+    "quizAskMeaning": "在这句里是什么意思？",
+    "quizAskKnow": "认识这个词吗？",
+    "quizAskOrder": "按顺序排好",
+    "quizAskFix": "怎么改才对？",
+    "quizAskSay": "大声说出来",
+    "quizAskReply": "哪个回答合适？"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1911,7 +1931,17 @@
     "flipAgainBtn": "Lại",
     "flipGotBtn": "Được rồi",
     "gaugeEasier": "Dễ hơn",
-    "gaugeHarder": "Khó hơn"
+    "gaugeHarder": "Khó hơn",
+    "quizAskChoose": "Từ nào phù hợp?",
+    "quizAskBlank": "Điền gì vào chỗ trống?",
+    "quizAskWhole": "Viết cả câu",
+    "quizAskSpot": "Sai ở đâu?",
+    "quizAskMeaning": "Ở đây nghĩa là gì?",
+    "quizAskKnow": "Bạn biết từ này không?",
+    "quizAskOrder": "Sắp xếp theo thứ tự",
+    "quizAskFix": "Sửa thế nào cho đúng?",
+    "quizAskSay": "Nói thành tiếng",
+    "quizAskReply": "Câu đáp nào phù hợp?"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2554,7 +2584,17 @@
     "flipAgainBtn": "Encore",
     "flipGotBtn": "C’est bon",
     "gaugeEasier": "Plus facile",
-    "gaugeHarder": "Plus difficile"
+    "gaugeHarder": "Plus difficile",
+    "quizAskChoose": "Lequel convient ?",
+    "quizAskBlank": "Que mettre dans le blanc ?",
+    "quizAskWhole": "Écrivez la phrase entière",
+    "quizAskSpot": "Où est l'erreur ?",
+    "quizAskMeaning": "Que veut-il dire ici ?",
+    "quizAskKnow": "Connaissez-vous ce mot ?",
+    "quizAskOrder": "Remettez dans l'ordre",
+    "quizAskFix": "Comment la corriger ?",
+    "quizAskSay": "Dites-le à voix haute",
+    "quizAskReply": "Quelle réponse convient ?"
   },
   "it": {
     "archive": "Report",
@@ -3390,7 +3430,17 @@
     "flipAgainBtn": "Ancora",
     "flipGotBtn": "Fatto",
     "gaugeEasier": "Più facile",
-    "gaugeHarder": "Più difficile"
+    "gaugeHarder": "Più difficile",
+    "quizAskChoose": "Quale va bene?",
+    "quizAskBlank": "Cosa va nello spazio?",
+    "quizAskWhole": "Scrivi la frase intera",
+    "quizAskSpot": "Dov'è l'errore?",
+    "quizAskMeaning": "Cosa significa qui?",
+    "quizAskKnow": "Conosci questa parola?",
+    "quizAskOrder": "Mettilo in ordine",
+    "quizAskFix": "Come si corregge?",
+    "quizAskSay": "Dillo ad alta voce",
+    "quizAskReply": "Quale risposta va bene?"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4036,7 +4086,17 @@
     "flipAgainBtn": "De novo",
     "flipGotBtn": "Pronto",
     "gaugeEasier": "Mais fácil",
-    "gaugeHarder": "Mais difícil"
+    "gaugeHarder": "Mais difícil",
+    "quizAskChoose": "Qual se encaixa?",
+    "quizAskBlank": "O que vai na lacuna?",
+    "quizAskWhole": "Escreva a frase inteira",
+    "quizAskSpot": "Onde está o erro?",
+    "quizAskMeaning": "O que significa aqui?",
+    "quizAskKnow": "Você conhece esta palavra?",
+    "quizAskOrder": "Coloque em ordem",
+    "quizAskFix": "Como corrigir?",
+    "quizAskSay": "Diga em voz alta",
+    "quizAskReply": "Qual resposta se encaixa?"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4870,7 +4930,17 @@
     "flipAgainBtn": "Ещё раз",
     "flipGotBtn": "Готово",
     "gaugeEasier": "Проще",
-    "gaugeHarder": "Сложнее"
+    "gaugeHarder": "Сложнее",
+    "quizAskChoose": "Что подходит?",
+    "quizAskBlank": "Что вставить в пропуск?",
+    "quizAskWhole": "Напишите всё предложение",
+    "quizAskSpot": "Где ошибка?",
+    "quizAskMeaning": "Что значит здесь?",
+    "quizAskKnow": "Знаете это слово?",
+    "quizAskOrder": "Расставьте по порядку",
+    "quizAskFix": "Как исправить?",
+    "quizAskSay": "Скажите вслух",
+    "quizAskReply": "Какой ответ подходит?"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5514,7 +5584,17 @@
     "flipAgainBtn": "Lagi",
     "flipGotBtn": "Oke",
     "gaugeEasier": "Lebih mudah",
-    "gaugeHarder": "Lebih sulit"
+    "gaugeHarder": "Lebih sulit",
+    "quizAskChoose": "Mana yang cocok?",
+    "quizAskBlank": "Apa isi bagian kosong?",
+    "quizAskWhole": "Tulis kalimat lengkapnya",
+    "quizAskSpot": "Di mana yang salah?",
+    "quizAskMeaning": "Apa artinya di sini?",
+    "quizAskKnow": "Tahu kata ini?",
+    "quizAskOrder": "Susun urutannya",
+    "quizAskFix": "Bagaimana membetulkannya?",
+    "quizAskSay": "Ucapkan dengan keras",
+    "quizAskReply": "Balasan mana yang cocok?"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6151,7 +6231,17 @@
     "flipAgainBtn": "مرة أخرى",
     "flipGotBtn": "تم",
     "gaugeEasier": "أسهل",
-    "gaugeHarder": "أصعب"
+    "gaugeHarder": "أصعب",
+    "quizAskChoose": "أيّها يناسب؟",
+    "quizAskBlank": "ماذا يوضع في الفراغ؟",
+    "quizAskWhole": "اكتب الجملة كاملة",
+    "quizAskSpot": "أين الخطأ؟",
+    "quizAskMeaning": "ما معناها هنا؟",
+    "quizAskKnow": "هل تعرف هذه الكلمة؟",
+    "quizAskOrder": "رتّبها",
+    "quizAskFix": "كيف تصحّحها؟",
+    "quizAskSay": "قلها بصوت عالٍ",
+    "quizAskReply": "أيّ ردّ يناسب؟"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6788,7 +6878,17 @@
     "flipAgainBtn": "อีกครั้ง",
     "flipGotBtn": "ได้แล้ว",
     "gaugeEasier": "ง่ายขึ้น",
-    "gaugeHarder": "ยากขึ้น"
+    "gaugeHarder": "ยากขึ้น",
+    "quizAskChoose": "คำไหนเหมาะ?",
+    "quizAskBlank": "เติมคำในช่องว่าง",
+    "quizAskWhole": "เขียนเป็นประโยค",
+    "quizAskSpot": "ผิดตรงไหน?",
+    "quizAskMeaning": "ในประโยคนี้แปลว่าอะไร?",
+    "quizAskKnow": "รู้จักคำนี้ไหม?",
+    "quizAskOrder": "เรียงลำดับ",
+    "quizAskFix": "แก้ให้ถูกอย่างไร?",
+    "quizAskSay": "พูดออกเสียง",
+    "quizAskReply": "คำตอบไหนเหมาะ?"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7425,6 +7525,16 @@
     "flipAgainBtn": "फिर से",
     "flipGotBtn": "हो गया",
     "gaugeEasier": "आसान",
-    "gaugeHarder": "कठिन"
+    "gaugeHarder": "कठिन",
+    "quizAskChoose": "कौन-सा सही बैठता है?",
+    "quizAskBlank": "खाली जगह में क्या आएगा?",
+    "quizAskWhole": "पूरा वाक्य लिखिए",
+    "quizAskSpot": "गलती कहाँ है?",
+    "quizAskMeaning": "यहाँ इसका अर्थ क्या है?",
+    "quizAskKnow": "क्या आप यह शब्द जानते हैं?",
+    "quizAskOrder": "क्रम से लगाइए",
+    "quizAskFix": "इसे कैसे सुधारें?",
+    "quizAskSay": "ज़ोर से बोलिए",
+    "quizAskReply": "कौन-सा जवाब सही है?"
   }
 }
