@@ -32,6 +32,8 @@ import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type A
 import { partOf, type CardPart } from "@/lib/curriculum/todayCards";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
+import { weakKeys } from "@/lib/curriculum/ladder";
+import { focusQuiz } from "@/lib/curriculum/quizFocus";
 import { cardHistory, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { readFirstCheck, wordsAbout } from "@/lib/curriculum/firstCheck";
@@ -322,6 +324,7 @@ export function Logbank({
   return (
     <div data-logbank className="flex flex-col gap-3">
       <SkillChecks ui={ui} locale={locale} language={language} ledger={ledger} />
+      <WeakChips ui={ui} language={language} ledger={ledger} label={keyLabel} />
       {head}
       <section data-log-period={kind} className="flex flex-col gap-3 rounded-xl border border-line p-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1547,5 +1550,32 @@ function SkillChecks({ ui, locale, language, ledger }: { ui: UICopy; locale: str
         </table>
       ) : null}
     </section>
+  );
+}
+
+/**
+ * 부족한 것(진단 칩, 퀴즈 다시 짜기 4단계 — ladder.ts weakKeys): 최근 두 번 넘게 틀리고 마지막도 틀린 것 이름 셋까지, 숫자 없음.
+ * 누르면 문법·표현·문장구조는 그 소재 수업, 단어는 그 단어로 Quizbank. 없으면 줄도 없음.
+ */
+function WeakChips({ ui, language, ledger, label }: { ui: UICopy; language: string; ledger: readonly LogEvent[]; label: (key: string) => string }) {
+  const [now] = useState(() => Math.floor(Date.now() / 1000));
+  const keys = useMemo(() => weakKeys(ledger, now), [ledger, now]);
+  if (!keys.length) return null;
+  return (
+    <div data-weak-chips className="flex flex-wrap items-center gap-1.5">
+      <span className="text-caption text-slate-400">{ui.fillShort}</span>
+      {keys.map((key) => (
+        <button
+          key={key}
+          type="button"
+          dir="auto"
+          data-weak-key={key}
+          onClick={() => (key.startsWith("w|") ? focusQuiz(language, [key]) : openLesson({ language, key }))}
+          className={`rounded-full border border-line px-2.5 py-0.5 text-caption text-ink hover:bg-white/10`}
+        >
+          {label(key)}
+        </button>
+      ))}
+    </div>
   );
 }

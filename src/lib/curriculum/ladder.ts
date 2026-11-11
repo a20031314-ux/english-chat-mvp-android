@@ -117,3 +117,23 @@ export function kindCounts(size: number, shares: Record<Kind, number>): Record<K
   }
   return out;
 }
+
+/**
+ * 진단 칩(설계안 §6, 사용자 2026-11-10 "보이게 하되 학습에 방해가 되지 않게"): 최근 14일 퀴즈에서 두 번 이상 틀렸고 마지막 답도 틀린 열쇠,
+ * 틀린 수 많은 차례로 셋까지. 숫자는 화면에 안 냄(이름만, Logbank — 문제를 푸는 중엔 안 보임).
+ */
+export function weakKeys(events: readonly { k: string; src: string; r: string; t: number }[], now: number, n = 3): string[] {
+  const since = now - WEAK_DAYS * 86400;
+  const miss = new Map<string, number>();
+  const last = new Map<string, { r: string; t: number }>();
+  for (const event of events) {
+    if (event.t < since || (event.src !== "quiz" && event.src !== "exam") || (event.r !== "ok" && event.r !== "miss") || !kindOf(event.k)) continue;
+    if (event.r === "miss") miss.set(event.k, (miss.get(event.k) ?? 0) + 1);
+    if ((last.get(event.k)?.t ?? -1) <= event.t) last.set(event.k, { r: event.r, t: event.t });
+  }
+  return [...miss]
+    .filter(([key, count]) => count >= 2 && last.get(key)?.r === "miss")
+    .sort((a, b) => b[1] - a[1] || (last.get(b[0])?.t ?? 0) - (last.get(a[0])?.t ?? 0))
+    .slice(0, n)
+    .map(([key]) => key);
+}

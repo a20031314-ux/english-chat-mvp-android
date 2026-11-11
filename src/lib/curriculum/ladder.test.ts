@@ -57,3 +57,16 @@ test("사다리 문제: 문법 1 고르기 · 2 빈칸(뜻 먼저) · 3 틀린 �
   const q = spotQuestion(ko, "ko", "g|1:4");
   assert.ok(q?.kind === "spot" && q.right === "사과를 먹어요." && q.bad[0] === 0);
 });
+
+test("부족한 것: 최근 두 번 넘게 틀리고 마지막도 틀린 것만, 틀린 수 많은 차례로 셋 (es·th)", async () => {
+  const { weakKeys } = await import("./ladder.ts");
+  const now = 100 * 86400;
+  const ev = (k: string, r: string, ago: number) => ({ k, src: "quiz", r, t: now - ago });
+  const events = [
+    ev("g|1:2", "miss", 50), ev("g|1:2", "miss", 40), ev("g|1:2", "miss", 30),
+    ev("e|por favor", "miss", 50), ev("e|por favor", "miss", 40),
+    ev("w|ใหญ่", "miss", 50), ev("w|ใหญ่", "miss", 40), ev("w|ใหญ่", "ok", 10),
+    ev("g|2:0", "miss", 20 * 86400), ev("g|2:0", "miss", 20 * 86400 - 5),
+  ];
+  assert.deepEqual(weakKeys(events, now), ["g|1:2", "e|por favor"]);
+});
