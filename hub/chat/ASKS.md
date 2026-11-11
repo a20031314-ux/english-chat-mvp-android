@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (28)
+## 탭이 확인할 것 (30)
 
 ### 탭 1 메인
 
@@ -43,6 +43,10 @@
 - **a261110-2-7** (2026-11-10 17:12, 탭 2 · 26bad31) 퀴즈 2단계: 틀린 곳 재료·미리 만들기 서버(/api/curriculum/spots) — 화면 변경 없음
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `app/api/english-analysis/element/route.ts` · `app/api/english-analysis/input/route.ts` · `app/api/expression-ask/route.ts` · `app/api/expression-insight/route.ts` · `app/api/expression-units/route.ts` · `app/api/learner/ask/route.ts` · `app/api/learning-spans/route.ts` · `app/api/translate/route.ts` · `app/api/vocab/gloss/route.ts` · `app/api/vocab/route.ts` … 73개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261111-2-1** (2026-11-11 11:00, 탭 2 · 951d6b2) 퀴즈 3단계: 단어 문제는 예문 속 뜻만(고르기·스스로 체크), 넣어 둔 영어 낱말 쓰기 문제·사전 올리기 지움
+  - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `app/api/curriculum/qbank/seed/route.ts` · `components/FindInMy.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/EnglishAnalysisProvider.tsx` · `app/learning/LearningClient.tsx` · `app/api/account/config/route.ts` · `app/api/account/delete/route.ts` · `app/api/account/email/start/route.ts` · `app/api/account/email/verify/route.ts` · `app/api/account/google/route.ts` … 39개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -105,6 +109,10 @@
 - **a261110-2-8** (2026-11-10 17:12, 탭 2 · 26bad31) 퀴즈 2단계: 틀린 곳 재료·미리 만들기 서버(/api/curriculum/spots) — 화면 변경 없음
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `app/api/chat/route.ts` · `app/api/chat/verify/route.ts` · `app/api/roleplay/branch/route.ts` · `app/api/roleplay/context/route.ts` · `app/api/roleplay/practice/route.ts` · `app/api/roleplay/replay/route.ts` · `app/api/roleplay/review/route.ts` · `app/api/roleplay/turn/route.ts` · `app/api/roleplay/listen/route.ts` · `app/api/video-subtitles/transcribe-chunk/route.ts` … 33개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261111-2-2** (2026-11-11 11:00, 탭 2 · 951d6b2) 퀴즈 3단계: 단어 문제는 예문 속 뜻만(고르기·스스로 체크), 넣어 둔 영어 낱말 쓰기 문제·사전 올리기 지움
+  - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/ChatWindow.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/callHooks.ts` · `components/roleplay/CallRecap.tsx` · `components/CallHost.tsx` · `components/RoleplayScreen.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `app/api/pack/finish/route.ts` … 22개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
