@@ -118,7 +118,9 @@ export async function makeSpot(language: string, want: SpotWant, meter: () => vo
   const after = spotCells(line, language);
   const moved = after.findIndex((one) => one.includes(wrong));
   if (moved >= 0) item.errors[0]!.at = moved;
-  const problems = spotProblems(item, language);
+  // 까닭이 바른 말을 그대로 보이면 답이 샌다(RULES 11 ①) — 운영 확인 2026-11-11 ja "い형용사(遅い)에는…".
+  const leak = right.length >= 2 && [item.errors[0]!.why.en, item.errors[0]!.why.ko].some((line) => line.includes(right));
+  const problems = [...spotProblems(item, language), ...(leak ? ["why"] : [])];
   if (problems.length) {
     await kvSetJson(key, { bad: `form ${problems.join(",")}` } satisfies SpotStored, TTL_SECONDS);
     return null;
