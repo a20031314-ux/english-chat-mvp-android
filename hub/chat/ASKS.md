@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (35)
+## 탭이 확인할 것 (38)
 
 ### 탭 1 메인
 
@@ -55,6 +55,10 @@
 - **a261111-2-5** (2026-11-11 12:16, 탭 2 · 8a1fc7e) 퀴즈 5·6단계: 틀린 곳 번호 선지·문단·게이지(QuizPlayer·quiz.ts) — 통화 숙제 퀴즈·첫 측정에서 spot/type 화면 확인
   - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/FindInMy.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/EnglishAnalysisProvider.tsx` · `app/learning/LearningClient.tsx` · `app/api/account/config/route.ts` · `app/api/account/delete/route.ts` · `app/api/account/email/start/route.ts` · `app/api/account/email/verify/route.ts` · `app/api/account/google/route.ts` · `app/api/account/me/route.ts` … 39개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261112-2-1** (2026-11-12 09:07, 탭 2 · b9284a4) 실력 확인 지움·숙제 채점(typed-check 뜻 줄·shadowPasses 꼴 실수)·퀴즈 보기/뜻 줄 — 통화 숙제·따라 말하기 화면 확인
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 광고
+  - 볼 곳: `components/FullScreenLayer.tsx` · `components/NativeAdSlot.tsx` · `components/AiConsentGate.tsx` · `components/FeedbackButton.tsx` · `components/FeedbackFixedSheet.tsx` · `components/GuideSheet.tsx` · `components/LanguagePick.tsx` · `components/UpdateNotice.tsx` · `components/WhatsNewSheet.tsx` · `components/account/AccountCard.tsx` … 50개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -134,6 +138,10 @@
   - 기능: 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · 소재 수업
   - 볼 곳: `components/roleplay/CallReplay.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261112-2-2** (2026-11-12 09:07, 탭 2 · b9284a4) 실력 확인 지움·숙제 채점(typed-check 뜻 줄·shadowPasses 꼴 실수)·퀴즈 보기/뜻 줄 — 통화 숙제·따라 말하기 화면 확인
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 광고
+  - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/ChatWindow.tsx` · `components/RoleplayScreen.tsx` · `components/videoLearning/VideoLearningTab.tsx` · `app/api/roleplay/practice/route.ts` · `components/speech/Attempt.tsx` · `components/CallHost.tsx` · `components/CallList.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/CallParts.tsx` … 32개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
 
@@ -160,6 +168,10 @@
 - **a261110-2-9** (2026-11-10 17:12, 탭 2 · 26bad31) 퀴즈 2단계: 틀린 곳 재료·미리 만들기 서버(/api/curriculum/spots) — 화면 변경 없음
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · 실력 확인 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `app/api/icons/route.ts` · `app/api/media/route.ts` · `app/api/random/route.ts` · `app/api/rooms/fix/route.ts` · `app/api/rooms/game/route.ts` · `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` … 25개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261112-2-3** (2026-11-12 09:07, 탭 2 · b9284a4) 실력 확인 지움·숙제 채점(typed-check 뜻 줄·shadowPasses 꼴 실수)·퀴즈 보기/뜻 줄 — 통화 숙제·따라 말하기 화면 확인
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 광고
+  - 볼 곳: `components/rooms/RoomsScreen.tsx` · `components/ProfileFrame.tsx` · `components/invite/InviteButton.tsx` · `components/invite/InviteRewards.tsx` · `components/invite/InviteWelcome.tsx` · `components/rooms/BoardView.tsx` · `components/rooms/IconEditor.tsx` · `components/rooms/IconPacks.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MediaImage.tsx` … 21개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (11, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
