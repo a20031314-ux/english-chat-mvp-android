@@ -1608,8 +1608,10 @@ test("수업 소재 지시: 틀은 판정 없이 되받기, 큰 실수는 수업
   const show = lessonRules({ ...base, step: "show", open: true }, false);
   assert.match(show, /They have not spoken yet/);
   assert.match(show, /use it yourself twice/);
-  assert.match(show, /do not say it was wrong, do not ask them to say it again/);
-  assert.match(show, /A big mistake elsewhere in their turn is still handled/);
+  assert.match(show, /never corrected — it overrides "How you tutor"/);
+  assert.match(show, /do not point it out, do not ask them to say it again/);
+  assert.match(show, /do not praise or comment on it/);
+  assert.match(show, /Only a big mistake outside the pattern is handled/);
   assert.match(show, /"move" is true only when/);
   assert.doesNotMatch(show, /\b(example|e\.g\.)/i, "베낄 예문 없음");
   assert.match(lessonRules({ ...base, step: "draw" }, true), /^.*\n.*\nNow ask one question/s);
@@ -1635,4 +1637,22 @@ test("수업 소재: move는 수업 소재를 보냈고 학습자가 말한 차�
   assert.equal(parseDirection(raw, context({ heard: "otra cosa, por favor", lesson }))?.move, true);
   assert.equal(parseDirection(raw, context({ heard: "otra cosa, por favor" }))?.move, undefined, "소재 없으면 버림");
   assert.equal(parseDirection(raw, context({ heard: "", lesson }))?.move, undefined, "말 없는 차례는 버림");
+  assert.equal(parseDirection(raw, context({ heard: "vale", lesson: { ...lesson, step: "ask" } }))?.move, undefined, "묻는 차례에는 아직 답이 없다");
+  assert.equal(parseDirection(raw, context({ heard: "vale", lesson: { ...lesson, step: "ask", asked: true } }))?.move, true);
+});
+
+test("수업 통화 첫 마디는 침묵 차례가 아니다 — '들렸어요?'를 붙이지 않는다", () => {
+  const es = findScenario("open-talk-es")!;
+  const esBank = sentencesFor("es");
+  const context = (partial: Partial<DirectorRequest>) => ({
+    scenario: es,
+    bank: esBank,
+    recordedIds: new Set(recordedLines(es, SCENARIOS, esBank).map((line) => line.id)),
+    request: request({ scenarioId: es.id, nodeId: "talk", coach: true, heard: "", targetLanguage: "es", nativeLanguage: "ko", ...partial }),
+  });
+  const raw = JSON.stringify({ say: "¡Hola! Me llamo Mateo. ¿Cómo te llamas?", assessment: "on_track", next: "free" });
+  const first = parseDirection(raw, context({ history: [], lesson: { pattern: "Me llamo ___.", meaning: "name", words: [], step: "show", open: true } }));
+  assert.equal(first && "text" in first.say ? first.say.text : "", "¡Hola! Me llamo Mateo. ¿Cómo te llamas?");
+  const silent = parseDirection(raw, context({ history: [{ who: "tutor", text: "¿Cómo te llamas?" }, { who: "learner", text: "Ana" }, { who: "tutor", text: "¿De dónde eres?" }] }));
+  assert.match(silent && "text" in silent.say ? silent.say.text : "", /^제 말 들렸어요\?/, "말을 한 뒤의 침묵은 그대로");
 });

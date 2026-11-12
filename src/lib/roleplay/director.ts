@@ -838,6 +838,11 @@ export function redoFormSlip(redo: string, heard: string): boolean {
   return compareToTarget(redo, heard).outcomes.some((outcome) => outcome.kind === "changed" && formSlip(outcome.word, outcome.heardAs));
 }
 
+/** 통화 첫 마디(학습자가 아직 아무 말도 안 함) — 침묵 차례가 아니다(수업 첫 마디에 "들렸어요?"가 붙던 것, 2026-11-12). */
+export function openingTurn(request: Pick<DirectorRequest, "history" | "studyOpen" | "lesson">): boolean {
+  return Boolean(request.studyOpen || request.lesson?.open) || !request.history.some((line) => line.who === "learner");
+}
+
 export const CAUGHT_IT: Partial<Record<string, string>> = {
   ko: "제 말 들렸어요?",
   en: "Did you catch that?",
@@ -1048,7 +1053,7 @@ Do it inside the conversation, in your own manner. Never say this out loud, neve
       : scenario.openEnded
         ? `Leave "aim" empty.`
         : "",
-    isCoaching(request, scenario) && !request.heard.trim() && !request.missed
+    isCoaching(request, scenario) && !openingTurn(request) && !request.heard.trim() && !request.missed
       ? (request.silent ?? 1) >= 2
         ? `This turn: they have said nothing for ${request.silent} turns in a row. Do not ask whether they heard you again. Give a hint: say out loud the start of a sentence in ${target} that answers your last question, stopping where their own words would go, and invite them to finish it — in ${target}, at most a few words of ${native}. Put that same start in "note". "assessment" is "stuck".`
         : `This turn: they said nothing. Say only your last question again, in fewer and easier words of ${target} — nothing in ${native}, and do not ask whether they heard you: the app says that first, in their language. "assessment" is "stuck".`
@@ -1626,7 +1631,7 @@ export function parseDirection(
   }
 
   // 수업 통화 첫 침묵(2026-11-07): "들었어요?"는 앱 언어 고정 한 마디로 앞에 붙인다 — 모델에게 맡기면 학습 언어로 묻는 일이 잦았다(운영 ja·es).
-  if (coaching && !request.heard.trim() && !request.missed && (request.silent ?? 1) < 2) {
+  if (coaching && !openingTurn(request) && !request.heard.trim() && !request.missed && (request.silent ?? 1) < 2) {
     const caught = CAUGHT_IT[request.nativeLanguage];
     const spokenNow = "id" in say ? bank[say.id]?.text ?? "" : say.text;
     if (caught && request.nativeLanguage !== request.targetLanguage && !spokenNow.startsWith(caught)) {
@@ -1649,7 +1654,8 @@ export function parseDirection(
     ...(retry === "ask" && better && !meant && record.offer === true ? { offer: true } : {}),
     ...turnMeasure(record, request, scenario),
     ...aimMeasure(record, request, scenario),
-    ...(request.lesson && record.move === true && request.heard.trim() && !request.missed ? { move: true as const } : {}),
+    // 다음 거 할까요를 묻는 차례에는 아직 답이 없다 — move를 버린다(운영 en 2026-11-12: 묻지도 않고 move).
+    ...(request.lesson && !(request.lesson.step === "ask" && !request.lesson.asked) && record.move === true && request.heard.trim() && !request.missed ? { move: true as const } : {}),
     ...(roundOverOf(record as { round?: unknown }, scenario.openEnded ? request.game : undefined) ? { round: "over" as const } : {}),
   };
 }
@@ -1661,7 +1667,7 @@ export function parseDirection(
 export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
   const words = lesson.words.length ? ` Words that fit it: ${lesson.words.join(", ")}.` : "";
   const head = `Today's lesson point, for you only: the pattern "${lesson.pattern}" (${lesson.meaning}).${words} Never explain it, name it as grammar or show it as a rule — it lives only in the conversation.`;
-  const recast = `If their turn could have used this pattern and did not, or got the pattern part wrong: do not say it was wrong, do not ask them to say it again and leave "better", "meant" and "retry" empty for that part — in your reply, say back what they meant using the pattern, naturally, as part of the conversation (the way a friend picks up your words), then carry on. A big mistake elsewhere in their turn is still handled as "How you tutor" says.`;
+  const recast = `This point is never corrected — it overrides "How you tutor" for it. If their turn could have used this pattern and did not, or got any part of the pattern wrong (a wrong form inside it counts): do not point it out, do not ask them to say it again, and leave "note", "better", "meant" and "retry" empty for it — instead, in your reply, say back what they meant using the pattern, naturally, as part of the conversation (the way a friend picks up your words), then carry on. When they do use it, do not praise or comment on it either; just answer. Only a big mistake outside the pattern is handled as "How you tutor" says.`;
   const startNext = lesson.next
     ? `; then answer it and start the next point in the same line: move to a moment where "${lesson.next.pattern}" (${lesson.next.meaning}) fits, use it yourself twice and ask one easy question`
     : "; then answer it and simply carry on the conversation";
@@ -1673,7 +1679,7 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
       case "draw":
         return `${lesson.open || !spoke ? `They have not spoken yet. Greet them in a few words, then ask` : `Now ask`} one question that is most naturally answered with this pattern — about their own life or one of the words.`;
       case "move":
-        return `They have used it once. Now take the conversation to a different situation where the same pattern fits, and ask a question that invites it again.`;
+        return `They have used it once. Now take the conversation to a different situation where the same pattern fits, and ask a question whose natural answer uses the pattern again — not a question about something else.`;
       case "ask":
         return lesson.asked
           ? `You already asked whether to try something new. "move" is true when their turn agrees or asks for it${startNext}. Otherwise false, and keep talking about what they said.`
