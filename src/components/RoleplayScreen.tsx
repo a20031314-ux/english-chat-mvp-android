@@ -49,8 +49,8 @@ import { talkStatsOf } from "@/lib/roleplay/talkStats";
 import { OPENING_LINES } from "@/lib/roleplay/talkTags";
 import { applyTalkTags } from "@/lib/roleplay/talkMemory";
 import { loadBank, stageCuts } from "@/lib/curriculum/vocabBank";
-import { loadStudyPicture, type StudyPicture } from "@/lib/roleplay/studyPicture";
-import { cellName, SkillHexagon } from "@/components/studyMap/SkillHexagon";
+import { loadStudyCell } from "@/lib/roleplay/studyPicture";
+import { cellName } from "@/lib/curriculum/cellName";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
 import { REVIEW_LINES, type Review, type StuckTurn } from "@/lib/roleplay/review";
 import { callSeconds, resumeFrom, titleFor, type SavedConversation } from "@/lib/roleplay/saved";
@@ -258,8 +258,7 @@ export function RoleplayScreen({
   const [prior, setPrior] = useState("");
   const factsKept = useRef(false);
   const fixesKept = useRef(false);
-  /** 공부 모드에 띄우는 육각형. 부족한 칸이 없으면 null. */
-  const [picture, setPicture] = useState<StudyPicture | null>(null);
+  /** 수업 통화가 겨냥하는 부족한 칸 이름. 없으면 빈 글자. */
   const [studyName, setStudyName] = useState("");
   const [fixesText, setFixesText] = useState("");
   const [lead, setLead] = useState(0);
@@ -339,7 +338,6 @@ export function RoleplayScreen({
     setMemory(carrying ? carrying.memory : EMPTY_MEMORY);
     setPrior(lifeFactsPrompt(readLifeFacts(scenario.language), Date.now()));
     setFixesText(fixesPrompt(readFixes(scenario.language), Date.now()));
-    setPicture(null);
     setStudyName("");
     setLead(openLesson ? 1 : 0);
     setDirecting(false);
@@ -998,7 +996,7 @@ export function RoleplayScreen({
     };
   }, []);
 
-  // 수업 통화는, 부족한 칸이 있을 때만 육각형을 띄우고 그 칸으로 첫 마디를 한다. 없으면 보통 인사.
+  // 수업 통화는, 부족한 칸이 있으면 그 칸으로 첫 마디를 한다. 없으면 보통 인사.
   useEffect(() => {
     if (lead === 0 || !scenario) return;
     const session = stateRef.current;
@@ -1007,17 +1005,16 @@ export function RoleplayScreen({
     const language = scenario.language;
     setDirecting(true);
     void (async () => {
-      let shot: StudyPicture | null = null;
+      let cell: Awaited<ReturnType<typeof loadStudyCell>> = null;
       if (!game) {
         try {
-          shot = await loadStudyPicture(language);
+          cell = await loadStudyCell(language);
         } catch {
-          shot = null;
+          cell = null;
         }
       }
       if (cancel) return;
-      const name = shot ? cellName(ui, shot.cell.id, () => "") : "";
-      setPicture(shot);
+      const name = cell ? cellName(ui, cell.id, () => "") : "";
       setStudyName(name);
       if (!name && !game) {
         setDirecting(false);
@@ -1332,13 +1329,6 @@ export function RoleplayScreen({
         }
         goal={instruction?.do === "listen" && instruction.goal ? instruction.goal : undefined}
         coach={coachCard}
-        studyMap={
-          coachOn && picture ? (
-            <div data-call-study={picture.cell.id} className="pointer-events-none w-full max-w-[220px]">
-              <SkillHexagon ui={ui} result={picture.result} before={picture.before} onAxis={() => {}} />
-            </div>
-          ) : null
-        }
       />
       <CallControls
         ui={ui}

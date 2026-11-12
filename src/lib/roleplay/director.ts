@@ -130,7 +130,7 @@ export type DirectorRequest = {
    */
   prior?: string;
   /**
-   * 공부 모드에서 화면에 띄운 육각형의 부족한 칸 이름(앱 언어). 비면 그림이 없다.
+   * 수업 통화가 겨냥하는 부족한 칸 이름(앱 언어, studyPicture.ts). 비면 보통 인사.
    */
   study?: string;
   /** 그 칸을 말하는 첫 마디. 학습자는 아직 말하지 않았다. */
@@ -1011,8 +1011,8 @@ Do it inside the conversation, in your own manner. Never say this out loud, neve
       : "",
     request.study?.trim()
       ? request.studyOpen
-        ? `They have not spoken yet. They chose to study, and they can see their skill map. The marked weak point is "${request.study.trim()}". Your line names that point and says today you will work on it, in your own manner. One or two short sentences. Leave "note", "better", "meant", "smoother" and "retry" empty. Do not correct anything and do not ask them to repeat a sentence.`
-        : `They can see their skill map. The marked weak point is "${request.study.trim()}". Keep this conversation on that point.`
+        ? `They have not spoken yet. They chose to study. Their weak point from their record is "${request.study.trim()}". Your line names that point and says today you will work on it, in your own manner. One or two short sentences. Leave "note", "better", "meant", "smoother" and "retry" empty. Do not correct anything and do not ask them to repeat a sentence.`
+        : `Their weak point from their record is "${request.study.trim()}". Keep this conversation on that point.`
       : "",
   ]
     .filter(Boolean)

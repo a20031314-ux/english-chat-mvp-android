@@ -50,12 +50,9 @@ export function CallStage({
   coach,
   gender,
   onCaptionTap,
-  studyMap,
 }: {
   /** 자막 줄을 누름 — 그 줄의 해석을 펴고 접는다(2026-11-03). */
   onCaptionTap?: () => void;
-  /** 수업 통화: 로그뱅크 육각형. 부족한 칸이 있을 때만. */
-  studyMap?: ReactNode;
   language: string;
   /** 이 통화의 튜터(통화를 열 때 고정). 없으면 지금 고른 튜터. */
   gender?: TutorGender;
@@ -90,7 +87,6 @@ export function CallStage({
             <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 object-cover" />
           ) : null}
         </p>
-        {studyMap}
         <div className="flex min-h-[4.5rem] w-full max-w-md flex-col items-center justify-start gap-3" aria-live="polite">
           {speaker === "thinking" ? (
             <span aria-hidden className="composing-dots inline-flex gap-1 text-slate-400">
