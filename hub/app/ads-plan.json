@@ -1,12 +1,28 @@
 [
  {
+  "kind": "add",
+  "what": "문단 틀린 곳(P1~P4) 문제로 끝난 묶음 경계에서도 quizBreak 전면 — 10문제를 안 채웠어도(3분 간격·sinceBreak 0으로)",
+  "where": "My 탭 `my` · studyMap/InlineQuiz.tsx next()(묶음 경계) ／ studyMap/Quizbank.tsx 문단 paraDue",
+  "why": "콘텐츠 사이 논리적 쉼(AdMob 허용)에 전면이 빠져 있음 — 문단 문제는 묶음 끝 문제(Quizbank.tsx paraDue, 하루 2개까지)라 다 짚고 [다음]을 누르면 다음 묶음을 받는 순간이 쉼. 지금은 sinceBreak가 문제 수만 세어 첫 묶음(7 + 문단 1 = 8문제)에서는 전면이 없음. 문제 도중·답 보기 중·게이지를 누를 때는 아님. 지난번 안 그대로 — 이번 범위 573e621..1b96688에서 InlineQuiz.tsx는 안 바뀜(110줄 sinceBreak >= AD_ROUND(10)만, 미반영).",
+  "appBuild": true,
+  "basis": "코드(지금): Quizbank.tsx 548줄 BATCH_SIZE 7, 446~448줄 paraDue면 묶음 끝에 문단 하나. InlineQuiz.tsx 21줄 AD_ROUND 10 · 110~112줄 sinceBreak >= AD_ROUND일 때만 maybeShowInterstitial('quizBreak') · 130줄 문제 하나에 +1. 이번 범위 Quizbank.tsx는 오늘 맞힌 칸(rightToday)을 묶음에서 빼는 것만 바뀜 — 묶음 크기·문단 자리는 그대로라 횟수 어림 그대로: 무료 My 쓰는 날 quizBreaksPerDay 0.8 → 1.1. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄.",
+  "econ": {
+   "my": {
+    "quizBreaksPerDay": 1.1
+   }
+  },
+  "severity": "report",
+  "per1000Mid": 36202,
+  "freePersonMid": 37
+ },
+ {
   "kind": "remove",
   "what": "대화·통화 위(above)에서 연 소재 수업(FrameLesson)의 네이티브 두 자리(수업 퀴즈 아래 quiz-inline·끝 화면 lesson-end)를 빼기 — 표현 카드·사전 시트처럼 above면 없음",
   "where": "My 탭 `my` · studyMap/FrameLesson.tsx (LessonHost가 LayerAboveContext를 주지만 FrameLesson은 읽지 않음)",
-  "why": "넣지 않는 곳 '대화·통화 위에서 연 사전·표현 카드(above)'와 어긋남 — 같은 같이 배우기 💬 칩이 isFrameExpression이면 FrameLesson(광고 있음), 아니면 ExpressionCard(광고 없음)로 갈림. 지난번 안 그대로(이번 범위 c07aeaa..573e621에서 FrameLesson.tsx는 안 바뀜 — 529·683줄 NativeAdSlot은 여전히 above를 안 봄, 미반영). 이번에 Logbank 부족한 것 칩(WeakChips)도 openLesson을 부르지만 above 없이 My 안에서 여므로 그 길은 해당 없음. 사용자 결정 거리.",
+  "why": "넣지 않는 곳 '대화·통화 위에서 연 사전·표현 카드(above)'와 어긋남 — 같은 같이 배우기 💬 칩이 isFrameExpression이면 FrameLesson(광고 있음), 아니면 ExpressionCard(광고 없음)로 갈림. 지난번 안 그대로 — 이번 범위에서 FrameLesson.tsx는 안 바뀜(529·683줄 NativeAdSlot은 여전히 above를 안 봄, 미반영). 사용자 결정 거리.",
   "appBuild": true,
   "severity": "report",
-  "basis": "코드: StudyChips.tsx openLesson({…above:true}) · LessonHost.tsx LayerAboveContext.Provider · ExpressionCard.tsx `above ? null : <NativeAdSlot sheets expression-card>` · Dictionary.tsx 같은 규칙 · FrameLesson.tsx 529·683줄 NativeAdSlot은 above를 보지 않음. above로 여는 곳은 채팅 표현 보기 칩·사전 주석 📕(대화 줄·자막·Quizbank 답 뒤 모두 above:true)이라, 고치면 Quizbank 답 뒤 📕에서 연 수업의 네이티브도 빠짐. 무료 한 사람 쓰는 날 0.2번 노출 감소로 어림. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄.",
+  "basis": "코드(지금): ExpressionCard.tsx 78줄 useContext(LayerAboveContext) · 127줄 `above ? null : <NativeAdSlot sheets expression-card>` · Dictionary.tsx 같은 규칙 · FrameLesson.tsx 529·683줄은 above를 보지 않음. above로 여는 곳은 채팅 표현 보기 칩·사전 주석 📕(대화 줄·자막·Quizbank 답 뒤)이라, 고치면 Quizbank 답 뒤 📕에서 연 수업의 네이티브도 빠짐. 무료 한 사람 쓰는 날 0.2번 노출 감소로 어림. 빈 공간 캡처 없음 — 코드로만 봄.",
   "econ": {
    "extraAds": [
     {
@@ -16,49 +32,25 @@
     }
    ]
   },
-  "freePersonMid": -9,
-  "per1000Mid": -9283
+  "per1000Mid": -9283,
+  "freePersonMid": -9
  },
  {
-  "kind": "model",
-  "what": "skillCheckEnd 전면 횟수 어림을 오늘의 학습 📏 줄 기준으로 — 무료 한 달 1번 → 1.5번(economics.json my.skillChecksPerMonth)",
-  "where": "My 탭 `my` · studyMap/TodayCards.tsx useSkillCheck(전면은 FirstCheck recheck onDone) ／ scripts/sim-users/economics.json my",
-  "why": "실력 확인 입구가 My 맨 위 오늘의 학습 📏 줄 → 끝까지 하는 사람이 늘 것. scripts/sim-users/economics.json my.skillChecksPerMonth는 아직 1(설명도 '14일마다 ▶가 밝지만' Logbank 기준) — 이번 범위에서도 미반영. 지난번 안 그대로. 전면 자리 자체는 원칙에 맞음(결과 화면 닫기에서만, TodayCards.tsx·FirstCheck.tsx 이번 범위에서 안 바뀜).",
+  "kind": "remove",
+  "what": "📏 실력 확인 지움 정리 — 코드(skillCheckEnd 전면·skill-check-end 네이티브)와 손익 계산(my.skillChecksPerMonth·extraAds 줄)은 이미 빠짐, hub/app/ADS.md 위쪽 손글 4곳만 '실력 확인'이 남음. 지난번 'model: skillCheckEnd 전면 횟수 1 → 1.5번' 안은 대상이 없어져 닫음",
+  "where": "hub/app/ADS.md 위쪽(원칙 '지금 순간 여덟'·결과 화면 목록 ／ 넣지 않는 곳 '실력 확인 ▶'·'실력 확인 표 옆') ／ 코드는 b9284a4c에서 지움",
+  "why": "없어진 자리(보는 것 3): ads.ts InterstitialMoment에서 skillCheckEnd, FirstCheck.tsx recheck·RecheckResult·NativeAdSlot skill-check-end, TodayCards.tsx useSkillCheck(전면 부르는 곳), Logbank.tsx SkillChecks 표가 모두 지워짐 → 순간은 일곱(ads-facts moments 7 = modeled 7, unmodeled 없음). 손익 −9,801원(1,000명당 월·중간)은 이미 '지금'에 들어 있어 이 안의 숫자는 0. 남은 FirstCheck 결과 화면은 첫 측정(온보딩)뿐이라 '넣지 않는 곳 — 첫 측정' 그대로 전면·네이티브 없음 — 대신할 자리를 새로 내지 않음.",
   "appBuild": false,
   "severity": "report",
-  "basis": "코드 확인(TodayCards.tsx 187줄 maybeShowInterstitial('skillCheckEnd'), 이번 범위에서 안 바뀜): 📏 줄 → FullScreenLayer 안 FirstCheck recheck. 전면은 onDone에서만 불림 = 결과 화면(RecheckResult)의 유일한 버튼 '닫기'(billingClose, FirstCheck.tsx 428줄) — 시험 도중·줄을 누를 때·onSkip(건너뛰기)에는 없음. 닫으면 층을 닫고 오늘의 학습 목록으로 돌아갈 뿐 다음 줄(▶ Quizbank·📞 수업)을 저절로 열지 않음 → '다음 할 것으로 이어지는 흐름 한가운데'가 아니라 14일 시험 끝(콘텐츠 사이 논리적 쉼). 결과 화면 네이티브 skill-check-end(spaced)와 같은 화면이 아니라 닫은 뒤라 한 화면 하나 규칙도 맞음. 3분 간격으로 바로 뒤 quizBreak와도 안 겹침. 횟수: 14일마다라 한 달 최대 약 2번, 무료가 그날 My를 쓰고 끝까지 하는 비율을 3/4로 어림 → 1.5. 첫 측정(처음 My)은 recheck가 아니라 전면 없음(StudyMapTab FirstCheck).",
-  "econ": {
-   "my": {
-    "skillChecksPerMonth": 1.5
-   }
-  },
-  "freePersonMid": 4,
-  "per1000Mid": 3972
+  "basis": "diff 573e621..1b96688: src/lib/ads.ts −\"skillCheckEnd\" · FirstCheck.tsx −NativeAdSlot results skill-check-end · TodayCards.tsx −maybeShowInterstitial('skillCheckEnd') · scripts/sim-users/economics.json −skillChecksPerMonth·−extraAds native 0.04 · economics.mjs MODELED_MOMENTS에서 skillCheckEnd 뺌. tmp/watch/summary.md: 1,000명당 손익(중간·3%) +496,363 → +486,562원(−9,801원). 지금 hub/app/ADS.md 11·19·30·31줄에 '실력 확인'이 남음(손글이라 ads:map이 안 고침). 문서만 고치면 됨 — 손익 변화 없음."
  },
  {
   "kind": "add",
-  "what": "문단 틀린 곳(P1~P4) 문제로 끝난 묶음 경계에서도 quizBreak 전면 — 10문제를 안 채웠어도(3분 간격·sinceBreak 0으로)",
-  "where": "My 탭 `my` · studyMap/InlineQuiz.tsx next()(묶음 경계) ／ studyMap/Quizbank.tsx 문단 paraDue",
-  "why": "새 UI 검토(0번·0-1번): 문단 문제는 이번에 생긴 묶음 끝 문제(Quizbank.tsx paraDue — 단계·하루 2개까지, round 0이 걸려 그날 첫 묶음 끝에 오기 쉬움). 문단을 다 짚고 [다음]을 누르면 다음 묶음을 받는 순간 = 콘텐츠 사이 논리적 쉼(AdMob 허용). 지금은 sinceBreak가 문제 수만 세어 첫 묶음(7+문단 1 = 8문제)에서는 전면이 없음. 문제 도중·답 보기 중·게이지를 누를 때는 아님.",
+  "what": "(넣지 않음 — 기록) 바뀐 퀴즈 문제 화면 안 — 답 뒤에 나오는 뜻 줄(glossAfter) 옆·고르기 보기(formChoice) 사이·게이지 아래 네이티브, 게이지를 옮길 때 전면",
+  "where": "My 탭 `my` · studyMap/QuizPlayer.tsx QuestionView·SpotView ／ studyMap/Quizbank.tsx 게이지 ／ studyMap/InlineQuiz.tsx",
+  "why": "새 UI 검토(0번·0-1번·0-2번): 이번에 바뀐 것은 푸는 중 화면의 조작 — 뜻 줄은 답한 뒤에 그 자리에 나타남(답 바로 아래·[다음] 버튼 옆이라 잘못 누름), 보기는 누르는 버튼, 게이지 옮기기는 행동(행동마다 전면 금지). 새 끝 화면·목록·전체 화면 층은 안 생김. 문제 아래 quiz-inline 네이티브가 같은 화면에 이미 있어 한 화면 하나 규칙으로도 자리 없음. 지난번 기록을 이번 변화로 갱신.",
   "appBuild": true,
-  "basis": "diff c07aeaa..573e621 Quizbank.tsx: BATCH_SIZE 7 + paraDue면 묶음 끝에 문단 하나(questions.push), paraDue(stage, round …) round%every===0 · 하루 n<2. InlineQuiz.tsx 110줄 sinceBreak >= AD_ROUND(10)일 때만 maybeShowInterstitial('quizBreak'), 130줄 문제 하나에 +1(문단도 1). 횟수: 무료 My 쓰는 날 퀴즈 10개 남짓(오늘의 학습 ✓)에서 첫 묶음 끝 문단 경계가 더해지고, 그 뒤 경계는 리셋돼 일부 겹침 → quizBreaksPerDay 0.8 → 1.1로 어림. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄.",
-  "econ": {
-   "my": {
-    "quizBreaksPerDay": 1.1
-   }
-  },
-  "severity": "notify",
-  "per1000Mid": 36202,
-  "freePersonMid": 38
- },
- {
-  "kind": "add",
-  "what": "(넣지 않음 — 기록) 바뀐 퀴즈 문제 화면 안 — 물음 한 줄 옆·게이지(− ●●●●● +) 아래·틀린 곳 색 밑줄 선지·스스로 체크(알아요/모르겠어요)·문단 P1~P4 사이에 네이티브, 게이지를 옮길 때 전면",
-  "where": "My 탭 `my` · studyMap/QuizPlayer.tsx QuestionView askLine·SpotView·SpotsView·KnowView ／ studyMap/Quizbank.tsx 게이지 ／ studyMap/InlineQuiz.tsx",
-  "why": "새 UI 검토(0번·0-1번·0-2번): 바뀐 것은 모두 푸는 중 화면의 조작 — 물음 줄·선지 밑줄·알아요 버튼은 누르는 자리 바로 옆(잘못 누름), 게이지는 버튼 줄이고 옮기는 것은 행동(행동마다 전면 금지), 문단은 짚는 도중. 새 끝 화면·목록·전체 화면 층은 안 생김. 문제 아래 quiz-inline 네이티브가 같은 화면에 이미 있어 한 화면 하나 규칙으로도 자리 없음. 끝 화면 quiz-end·숙제 끝 homeworkEnd는 안 바뀜.",
-  "appBuild": true,
-  "risky": true,
-  "basis": "diff c07aeaa..573e621(QuizPlayer.tsx·Quizbank.tsx·InlineQuiz.tsx): NativeAdSlot·maybeShowInterstitial 줄 변화 없음. 문단 문제(SpotsView)는 여러 줄이라 문제 아래 quiz-inline 네이티브가 화면 아래로 밀림 — 짚는 낱말 줄과 띄워지는지는 캡처가 없어 확인 필요. 숫자는 기록용 — 쓰는 날 0.5번 노출로 어림.",
+  "basis": "diff 573e621..1b96688 QuizPlayer.tsx: gloss = !glossAfter || 답함 · formChoice(question.options …)로 고르기/쓰기 가름 · 채점에 meaning 넘김 — NativeAdSlot·maybeShowInterstitial 줄 변화 없음. 숫자는 기록용 — 쓰는 날 0.5번 노출로 어림.",
   "econ": {
    "extraAds": [
     {
@@ -68,18 +60,18 @@
     }
    ]
   },
+  "risky": true,
   "severity": "report",
   "per1000Mid": 23206,
   "freePersonMid": 24
  },
  {
   "kind": "add",
-  "what": "(넣지 않음 — 기록) Logbank 부족한 것 칩 줄(WeakChips) 아래 네이티브, 칩을 눌러 수업·Quizbank로 넘어갈 때 전면",
-  "where": "My 탭 `my` · studyMap/Logbank.tsx WeakChips(실력 확인 기록 표 아래, 기간 표 위)",
-  "why": "새 UI 검토(0번·0-1번): 칩 줄은 누르는 버튼 줄(같이 배우기 칩 줄과 같은 '넣지 않는 곳' — 잘못 누름), 칩 누름은 핵심 콘텐츠로 가는 행동이라 전면이 이동을 막음(AdMob 금지). Logbank는 끝에 my-full logbank-list 네이티브·그날 시트 log-sheet가 이미 있어 한 화면 하나 규칙으로 자리 없음.",
+  "what": "(넣지 않음 — 기록) Logbank 맨 위가 된 부족한 것 칩 줄(WeakChips) 아래·실력 확인 표가 빠진 자리에 네이티브, 칩을 눌러 수업·Quizbank로 넘어갈 때 전면",
+  "where": "My 탭 `my` · studyMap/Logbank.tsx WeakChips(이제 Logbank 첫 줄, 기간 표 위)",
+  "why": "새 UI 검토(0번·0-1번·0-2번): SkillChecks 표가 빠져 WeakChips가 Logbank 첫 줄이 됐지만 빈 띠가 생긴 게 아니라 기간 표가 위로 올라옴(칸 안 흐름). 칩 줄은 누르는 버튼 줄(잘못 누름), 칩 누름은 핵심 콘텐츠로 가는 행동이라 전면이 이동을 막음(AdMob 금지). Logbank는 끝에 my-full logbank-list·그날 시트 log-sheet가 이미 있어 한 화면 하나 규칙으로 자리 없음.",
   "appBuild": true,
-  "risky": true,
-  "basis": "diff Logbank.tsx +WeakChips(weakKeys 셋까지, 누르면 openLesson 또는 focusQuiz). 숫자는 기록용 — 칩이 보이는 쓰는 날(최근 두 번 넘게 틀리고 마지막도 틀린 것이 있을 때만) 0.3번으로 어림. 빈 공간 캡처 없음 — 코드로만 봄.",
+  "basis": "diff Logbank.tsx: −<SkillChecks …/> (324줄 자리) — 바로 아래 <WeakChips/>·{head}·기간 section이 이어짐. 숫자는 기록용 — 칩이 보이는 쓰는 날 0.3번으로 어림. 빈 공간 캡처 없음 — 코드로만 봄.",
   "econ": {
    "extraAds": [
     {
@@ -89,18 +81,18 @@
     }
    ]
   },
+  "risky": true,
   "severity": "report",
-  "per1000Mid": 13923,
-  "freePersonMid": 15
+  "per1000Mid": 13924,
+  "freePersonMid": 14
  },
  {
   "kind": "add",
   "what": "(넣지 않음 — 지난번 기록 그대로) 오늘의 학습 줄 사이·전부 ✓ 순간의 전면과 줄 아래 네이티브 · 같이 배우기 칩에서 연 수업을 닫을 때 전면",
   "where": "My 탭 `my` · studyMap/TodayCards.tsx ／ AI 채팅 `chat` · ExpressionPeek.tsx ／ AI 통화 `call` · roleplay/CallRecap.tsx → studyMap/LessonHost",
-  "why": "지난번 두 기록(0번·0-1번)을 합침 — 오늘의 학습 줄·같이 배우기 칩 줄은 버튼 줄(잘못 누름), 전부 ✓는 닫을 끝 화면이 없어 '갑자기', 칩 수업 닫기는 채팅·통화 끝 화면으로 돌아가는 도중. 이번 범위에서 TodayCards.tsx·ExpressionPeek.tsx·CallRecap.tsx·LessonHost.tsx 안 바뀜 — 판단 그대로.",
+  "why": "오늘의 학습에서 📏 줄이 빠져 ▶ Quizbank·숙제·📞 수업 셋이 됐을 뿐, 판단 그대로 — 줄은 버튼 줄(잘못 누름), 전부 ✓는 닫을 끝 화면이 없어 '갑자기', 칩 수업 닫기는 채팅·통화 끝 화면으로 돌아가는 도중(넣지 않는 곳 '소재 수업을 닫을 때 전면'). 실력 확인 끝(14일 쉼)이 사라져 오늘의 학습에 남은 전면 자리는 없음 — 그래도 줄 사이로 옮기지 않음.",
   "appBuild": true,
-  "risky": true,
-  "basis": "지난번 hub/app/ads-plan.json 두 기록의 econ을 합침(쓰는 날 My 0.3번 + 어디서나 0.05번). 숫자는 기록용.",
+  "basis": "diff TodayCards.tsx: −useSkillCheck·−FullScreenLayer·−maybeShowInterstitial('skillCheckEnd'), rows는 letters·quiz·homework·lesson. ExpressionPeek.tsx·CallRecap.tsx·LessonHost.tsx는 이번 범위에서 안 바뀜. 지난번 econ 그대로(쓰는 날 My 0.3번 + 어디서나 0.05번). 숫자는 기록용.",
   "econ": {
    "extraAds": [
     {
@@ -115,8 +107,9 @@
     }
    ]
   },
+  "risky": true,
   "severity": "report",
-  "per1000Mid": 42235,
+  "per1000Mid": 42236,
   "freePersonMid": 44
  }
 ]
