@@ -16,7 +16,7 @@ import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { loadBank, stageCuts, BANK_CHUNK, type BankWord } from "@/lib/curriculum/vocabBank";
 import { fetchWordChunk } from "@/lib/curriculum/useWordBank";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
-import { chooseFromPrepared, turnFresh, type PreparedItem } from "@/lib/curriculum/preparedQuiz";
+import { chooseFromPrepared, meaningFirst, turnFresh, type PreparedItem } from "@/lib/curriculum/preparedQuiz";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { askedTexts, cardQuiz, noteAsked, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { noteLedger } from "@/lib/curriculum/logLedger";
@@ -220,7 +220,9 @@ export function FirstCheck({
     const fromPrepared = (prepared ?? []).filter((item: PreparedItem) => item.kind === kind && item.stage === stage && !used.current.has(item.key));
     const random = seeded(`${seed}|${kind}|${stage}|${used.current.size}`);
     for (const item of [...fromPrepared].sort(() => random() - 0.5)) {
-      const question = chooseFromPrepared(turnFresh(item, 0, askedTexts(language, item.key)));
+      const fresh = turnFresh(item, 0, askedTexts(language, item.key));
+      // 해석: 1~2단계 칸은 늘, 3단계부터는 해석 없이 답이 갈리는 문장만 먼저(preparedQuiz.ts meaningFirst).
+      const question = chooseFromPrepared(fresh, meaningFirst(item.stage, fresh));
       if (question) return { key: item.key, question, kind };
     }
     if (kind === "expression") {

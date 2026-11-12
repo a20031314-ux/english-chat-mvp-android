@@ -5,7 +5,7 @@
  */
 import { cardQuiz, cardSourceOf, type QuizQuestion } from "./quiz.ts";
 import type { ScriptGloss } from "./stageScripts.ts";
-import { chooseFromPrepared, type PreparedItem } from "./preparedQuiz.ts";
+import { chooseFromPrepared, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import { spotCells, type SpotItem } from "./spotErrors.ts";
 import { askRung, type Rung } from "./ladder.ts";
 
@@ -48,7 +48,8 @@ export function pickCells(cells: readonly string[], errors: readonly number[], c
 }
 
 /** 틀린 곳 문항(한 문장) → 퀴즈 spot 문제. numbered = 선지(밑줄)(게이지 아래쪽·가운데). */
-export function spotQuestion(item: SpotItem, language: string, key: string, numbered = false): QuizQuestion | null {
+/** first = 해석을 먼저(preparedQuiz.ts meaningFirst — 3단계부터는 꼴 틀림도 답한 뒤에). 뜻 틀림은 늘 답한 뒤에. */
+export function spotQuestion(item: SpotItem, language: string, key: string, numbered = false, first = true): QuizQuestion | null {
   const err = item.errors[0];
   const line = item.lines[0];
   if (!err || !line || item.lines.length !== 1) return null;
@@ -68,14 +69,14 @@ export function spotQuestion(item: SpotItem, language: string, key: string, numb
     note: "",
     from: key,
     hasError: true,
-    ...(err.type === "meaning" ? { glossAfter: true as const } : {}),
+    ...(err.type === "meaning" || !first ? { glossAfter: true as const } : {}),
     ...(item.lead ? { lead: item.lead } : {}),
     ...(numbered ? { picks: pickCells(words, [err.at], item.clue ?? [], item.id) } : {}),
   };
 }
 
 /** 문단 문항(story-errors P1~P4) → 퀴즈 spots 문제. P1·P2 선지(밑줄), P4는 틀린 곳 수를 안 보임. */
-export function paragraphQuestion(item: SpotItem, language: string): QuizQuestion | null {
+export function paragraphQuestion(item: SpotItem, language: string, first = true): QuizQuestion | null {
   const lineCells = item.lines.map((line) => spotCells(line, language));
   const offsets: number[] = [];
   let total = 0;
@@ -103,7 +104,7 @@ export function paragraphQuestion(item: SpotItem, language: string): QuizQuestio
     from: errors[0]!.key,
     ...(numbered ? { picks: pickCells(words, errors.map((err) => err.bad[0]!), [], item.id) } : {}),
     ...(item.shape === "P4" ? { hideCount: true as const } : {}),
-    ...(item.errors.some((err) => err.type === "meaning") ? { glossAfter: true as const } : {}),
+    ...(!first || item.errors.some((err) => err.type === "meaning") ? { glossAfter: true as const } : {}),
   };
 }
 
@@ -112,15 +113,17 @@ function wholeOf(text: string, gloss: ScriptGloss, key: string, cue?: "len" | "n
 }
 
 /** 문법 칸 하나 → 낼 칸과 문제. spot = 그 칸의 틀린 곳 문항(최근에 안 낸 것 하나, 없으면 null). 끝났으면 null. */
-export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem | null, language: string, how: { cue?: "len" | "none"; numbered?: boolean } = {}): { rung: Rung; question: QuizQuestion } | null {
-  const spotQ = spot ? spotQuestion(spot, language, item.key, how.numbered) : null;
+export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem | null, language: string, how: { cue?: "len" | "none"; numbered?: boolean; stage?: number } = {}): { rung: Rung; question: QuizQuestion } | null {
+  // 해석: 1~2단계는 늘, 3단계부터는 해석 없이 답이 갈리는 문장만 먼저(4칸 문장 만들기는 해석이 곧 문제라 늘).
+  const first = meaningFirst(how.stage ?? 1, item);
+  const spotQ = spot ? spotQuestion(spot, language, item.key, how.numbered, first) : null;
   const rung = askRung(current, (one) => one !== 3 || Boolean(spotQ));
   if (!rung) return null;
   let question: QuizQuestion | null = null;
-  if (rung === 1) question = chooseFromPrepared(item);
+  if (rung === 1) question = chooseFromPrepared(item, first);
   if (rung === 2) {
     const near = item.options.filter((option) => option !== item.answer);
-    question = { kind: "type", text: item.line, before: item.before, after: item.after, answer: item.answer, gloss: { en: "", raw: item.gloss }, from: item.key, near, glossFirst: true, ...(how.cue ? { cue: how.cue } : {}) };
+    question = { kind: "type", text: item.line, before: item.before, after: item.after, answer: item.answer, gloss: { en: "", raw: item.gloss }, from: item.key, near, ...(first ? { glossFirst: true } : {}), ...(how.cue ? { cue: how.cue } : {}) };
   }
   if (rung === 3) question = spotQ;
   if (rung === 4) question = wholeOf(item.line, { en: "", raw: item.gloss }, item.key, how.cue);

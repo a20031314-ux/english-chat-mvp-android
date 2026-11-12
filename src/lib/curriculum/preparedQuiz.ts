@@ -17,9 +17,19 @@ export type PreparedItem = {
   why: string;
   /** 같은 칸의 다른 문장(규칙으로 바꾼 사전 예문, problems/<언어>-gv.json) — 나올 때마다 차례로. 앱 언어로 뜻이 있을 때만. */
   variants?: readonly PreparedVariant[];
+  /** 해석 없이는 다른 보기도 맞는 문장(시제·주어·조동사·말투 — problems/needs-meaning.json). 3단계부터도 해석을 먼저 보인다. */
+  needsMeaning?: true;
 };
 
-export type PreparedVariant = Pick<PreparedItem, "before" | "after" | "answer" | "options" | "line" | "gloss" | "why">;
+export type PreparedVariant = Pick<PreparedItem, "before" | "after" | "answer" | "options" | "line" | "gloss" | "why" | "needsMeaning">;
+
+/**
+ * 해석을 문제 앞에 보일까(사용자 2026-11-12 "1+2로" — 어휘가 아닌 문법·틀린 곳 문제):
+ * 1~2단계 학습자는 늘(문장 자체를 못 읽음), 3단계부터는 해석 없이는 답이 갈리는 문장만. 나머지는 답한 뒤에.
+ */
+export function meaningFirst(stage: number, item?: { needsMeaning?: true }): boolean {
+  return stage <= 2 || Boolean(item?.needsMeaning);
+}
 
 /** 그 칸이 나온 횟수(turn)로 문장을 고른다 — 0이면 원래 문장, 그다음은 바꾼 문장 차례로(같은 문장이 연달아 안 나오게). 순수. */
 export function turnPrepared(item: PreparedItem, turn: number): PreparedItem {
@@ -42,7 +52,7 @@ export function turnFresh(item: PreparedItem, turn: number, asked: readonly stri
   return turnPrepared(item, turn);
 }
 
-export function chooseFromPrepared(item: PreparedItem): QuizQuestion | null {
+export function chooseFromPrepared(item: PreparedItem, first = true): QuizQuestion | null {
   const options = item.options.filter((option) => option.trim());
   const at = options.findIndex((option) => option === item.answer || option.toLocaleLowerCase() === item.answer.toLocaleLowerCase());
   if (at < 0 || options.length < 2 || !item.line.trim() || !item.gloss.trim() || !item.why.trim()) return null;
@@ -57,7 +67,7 @@ export function chooseFromPrepared(item: PreparedItem): QuizQuestion | null {
     answer: order.indexOf(at),
     gloss: { en: "", raw: item.gloss },
     from: item.key,
-    prepared: { why: item.why },
+    prepared: { why: item.why, ...(first ? {} : { meaningLater: true as const }) },
   };
 }
 

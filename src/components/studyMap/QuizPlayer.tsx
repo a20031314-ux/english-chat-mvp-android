@@ -950,7 +950,7 @@ function ChooseView({
   const notes = useOptionNotes(answered && !question.prepared ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer, mine: question.mine } : null, language, locale);
   return (
     <div className="flex flex-col gap-3">
-      {(question.prepared && formChoice(question.options, question.answer, language)) || answered ? (
+      {(question.prepared && !question.prepared.meaningLater && formChoice(question.options, question.answer, language)) || answered ? (
         <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder } from "./ladder.ts";
 import { grammarAsk, pickCells, spotQuestion } from "./ladderQuiz.ts";
 import { formChoice } from "./quiz.ts";
-import type { PreparedItem } from "./preparedQuiz.ts";
+import { meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import type { SpotItem } from "./spotErrors.ts";
 
 test("사다리: 맞으면 다음 칸, 틀리면 그 칸, 3칸은 틀린 곳 문항이 있을 때만, 4칸 맞히면 끝", () => {
@@ -123,4 +123,27 @@ test("formChoice: 한 말의 꼴이면 뜻 줄 먼저, 서로 다른 말이면 �
   assert.equal(formChoice(["could have", "can't have", "must have", "might have"], 2, "en"), true);
   assert.equal(formChoice(["For example,", "Therefore,", "By the way,", "In contrast,"], 2, "en"), false);
   assert.equal(formChoice(["飲みます", "飲みました", "飲むます"], 0, "ja"), true);
+});
+
+test("해석 먼저: 1~2단계는 늘, 3단계부터는 해석 없이 갈리는 문장만 (ja·es)", () => {
+  const item: PreparedItem = { key: "g|3:1", kind: "grammar", stage: 3, gloss: "나는 학생이에요.", before: "私は学生", after: "。", answer: "です", options: ["です", "ます", "だ"], line: "私は学生です。", why: "명사 뒤" };
+  const spot: SpotItem = { id: "ja-s-9", stage: 3, shape: "s", src: "new", lines: ["私は学生ます。"], errors: [{ line: 0, at: 2, wrong: "ます", right: "です", type: "form", kind: "form", g: "g|3:1", why: { en: "x", ko: "x" } }], gloss: { en: "I am a student.", ko: "나는 학생이에요." } };
+  const low = grammarAsk(item, 1, null, "ja", { stage: 2 })?.question;
+  assert.ok(low?.kind === "choose" && !low.prepared?.meaningLater);
+  const high = grammarAsk(item, 1, null, "ja", { stage: 3 })?.question;
+  assert.ok(high?.kind === "choose" && high.prepared?.meaningLater);
+  const needs = grammarAsk({ ...item, needsMeaning: true }, 1, null, "ja", { stage: 4 })?.question;
+  assert.ok(needs?.kind === "choose" && !needs.prepared?.meaningLater);
+  const blank = grammarAsk(item, 2, null, "ja", { stage: 3 })?.question;
+  assert.ok(blank?.kind === "type" && !blank.glossFirst);
+  const spotHigh = grammarAsk(item, 3, spot, "ja", { stage: 3 })?.question;
+  assert.ok(spotHigh?.kind === "spot" && spotHigh.glossAfter);
+  const whole = grammarAsk(item, 4, null, "ja", { stage: 5 })?.question;
+  assert.ok(whole?.kind === "type" && whole.glossFirst, "문장 만들기는 해석이 곧 문제");
+  assert.equal(meaningFirst(2), true);
+  assert.equal(meaningFirst(3, { needsMeaning: true }), true);
+  assert.equal(meaningFirst(3, {}), false);
+  const es: PreparedItem = { key: "g|3:2", kind: "grammar", stage: 3, gloss: "x", before: "¿", after: " ayudarme?", answer: "Podrías", options: ["Podrías", "Podríais", "Puedo"], line: "¿Podrías ayudarme?", why: "x", needsMeaning: true };
+  const esQ = grammarAsk(es, 1, null, "es", { stage: 5 })?.question;
+  assert.ok(esQ?.kind === "choose" && !esQ.prepared?.meaningLater);
 });

@@ -1,0 +1,896 @@
+0	ar	___ من كوريا.	أنا أكون طالب | أنا طالب | أنا طالبة هو | أنا هو طالب	أنا طالب
+1	ar	___ مهندسة وهو طبيب.	أنتَ | أنا | هي | هو	هي
+2	ar	هو مدرس و___.	هي مدرسة | هو مدرسة | هي مدرسات | هي مدرس	هي مدرسة
+3	ar	___ سارة، وما اسمك؟	اسمك | اسمي | اسمه | أنا اسم	اسمي
+4	ar	___ محطة المترو؟	من | كم | أين | متى	أين
+5	ar	بكم ___ الحقيبة؟	هذا | هذه | ذلك | هؤلاء	هذه
+6	ar	___ حجز باسم كيم.	عندي | عندك | أنا عند | لديه	عندي
+7	ar	___ كيلو تفاح، من فضلك.	أريدُ أن | تريد | أريد | يريد	أريد
+8	ar	___ إلى السوق أمس.	سأذهب | أذهب | ذهبت | يذهب	ذهبت
+9	ar	___ القهوة كل صباح.	يشرب | نشرب | شربتُ كل | أشرب	أشرب
+10	ar	___ جدتي يوم الجمعة.	أزور سوف | سزرت | زرت | سأزور	سأزور
+11	ar	___ جيدا البارحة.	لا نمت | لم أنم | لن أنم | ما أنام	لم أنم
+12	ar	___ والسباحة.	أحب القراءة | أنا حب القراءة | أحب يقرأ | أحب أقرأ	أحب القراءة
+13	ar	___؟	ممكن ساعدتني | ممكن تساعدني | ممكن مساعدني | ممكن تساعد أنا	ممكن تساعدني
+14	ar	___ جديدة.	سيارة الأخي | أخي سيارة | السيارة أخي | سيارة أخي	سيارة أخي
+15	ar	لن أخرج ___ الجو حار جدا.	إذا | حتى لأن | لكن | لأن	لأن
+16	ar	___ في القاهرة عندما كنت صغيرا.	أسكن كنت | كنت أسكن | كنت سكنت أسكن | سكنت أكون	كنت أسكن
+17	ar	هذه الشقة ___ تلك.	الأكبر من | كبيرة من | أكبر من | أكبر على	أكبر من
+18	ar	الفيلم ___ شاهدناه كان رائعا.	ما الذي | الذي | التي | الذين	الذي
+19	ar	___ المكيف اليوم.	يجب أن أصلحنا | يجب نصلح | يجب أن نصلح | يجب أن صلحنا	يجب أن نصلح
+20	ar	___، اتصل بي.	عندما إذا | إذا تأخرت | لو تأخرت لـ | إذا سأتأخر	إذا تأخرت
+21	ar	___ زرنا البتراء، ثم ذهبنا إلى العقبة.	أخيرا | ثم | في النهاية | أولا	أولا
+22	ar	___، الحلقة الأخيرة كانت ضعيفة.	على رأيي | رأيي في | في رأيي | في رأيك	في رأيي
+23	ar	___ الاجتماع إلى الأسبوع القادم.	تم أجل | أجل تم | تم يؤجل | تم تأجيل	تم تأجيل
+24	ar	لو عرفت مبكرا ___.	لساعدتك | لن أساعدك | سأساعدك | أساعدك	لساعدتك
+25	ar	___ الفكرة جيدة، التكلفة عالية.	لكي | رغم أن | لأن | إذا	رغم أن
+26	ar	___ يوفر وقتا كثيرا.	يعمل عن بعد | عمل عن بعد أن | العمل عن بعد | اعمل عن بعد	العمل عن بعد
+27	ar	___ تأخرنا زادت المشكلة.	كلما | بينما | لما | إذا ما كلما	كلما
+28	ar	___ من الأفضل أن ننتظر قليلا.	يجب يكون | قد يكون | سيكون قد | قد كان أن	قد يكون
+29	ar	___ الميزانية فسنناقشها لاحقا.	لكن | إما | أن | أما	أما
+30	ar	___ كان لي شرف العمل معكم.	لقد | قد لا | لعل | ليت	لقد
+31	ar	لا يسعني ___ أن أشكركم.	غير أن | إلا | لكن | حتى	إلا
+32	ar	تغيرت المدينة ___.	كبيرا تغيرا | تغير كبيرا | تغيرا كبيرا | التغير كبير	تغيرا كبيرا
+33	ar	___ وأسكنه فسيح جناته.	رحمه الله | إن شاء الله | الحمد لله | بارك الله فيك	رحمه الله
+34	ar	___ الأمر أعقد مما توقعنا.	أن يبدو | يبدو أن | يبدو | بدا أن يبدو	يبدو أن
+35	ar	___ لم يخطئ في البداية؟	وما منا | ومن منا | ومنا من | ومن نحن	ومن منا
+36	ar	الموضوع، ___، أكبر من مجرد لغة.	يعني بصراحة أن | صراحة يعنيه | بصراحة إن | بصراحة يعني	بصراحة يعني
+37	en	Hi, ___?	how were your weekend | how was your weekend | how was you weekend | how did your weekend	how was your weekend
+38	en	We played outside and ___.	it were fun | it was fun | it was a fun | it is been fun	it was fun
+39	en	Your drawing is ___.	not bad in all | not bad at all | no bad at all | not badly at all	not bad at all
+40	en	Hi, ___ this weekend?	what you are up to | what are you up to | what do you up to | what are you up on	what are you up to
+41	en	Hi, ___ Friday night?	are you free in | are you free on | is you free on | are you free at	are you free on
+42	en	___, let's meet at five.	Sounds well | Sounds good | It sound good | Sounds a good	Sounds good
+43	en	___ the park after school.	Let's meeting at | Let's meet at | Let's to meet at | Let meet at	Let's meet at
+44	en	The movie starts at seven, ___.	see you after | see you then | see you that | sees you then	see you then
+45	en	Sorry, ___.	maybe in next time | maybe next time | maybe a next time | maybe next times	maybe next time
+46	en	This shirt is ___ for me.	a bit of expensive | a bit expensive | a bits expensive | an bit expensive	a bit expensive
+47	en	I wish my rent was ___.	a little more cheaper | a little cheaper | a little cheapest | a few cheaper	a little cheaper
+48	en	I have two shirts, ___?	which one is more better | which one is better | which one are better | which one is gooder	which one is better
+49	en	Hi, ___?	for here or for go | for here or to go | in here or to go | for here or going	for here or to go
+50	en	Can I get my coffee ___?	with an oat milk | with oat milk | in oat milk | by oat milk	with oat milk
+51	en	___, do you have an umbrella?	By a way | By the way | By the ways | By an way	By the way
+52	en	___ to walk to the park?	How long it takes | How long does it take | How long is it take | How long does it took	How long does it take
+53	en	The pizza is ___.	on the ways | on the way | on a way | at the way	on the way
+54	en	I saw a cat in the yard ___.	yesterday night | last night | in last night | the last night	last night
+55	en	I will see my grandma ___.	in next weekend | next weekend | at next weekend | on next weekend	next weekend
+56	en	___ to your shoe?	What did happened | What happened | What was happened | What happens did	What happened
+57	en	___ about your hat.	That's too worse | That's too bad | That's a too bad | That's too badly	That's too bad
+58	en	___ if the bus is here.	Let me to check | Let me check | Let's me check | Let my check	Let me check
+59	en	___ to a big concert?	Did you ever been | Have you ever been | Have you ever went | Have you ever be	Have you ever been
+60	en	___ she forgot her keys at home.	It turn out | It turned out | It was turned out | It turned off	It turned out
+61	en	___, I do not like cold weather.	For be honest | To be honest | To being honest | To is honest	To be honest
+62	en	___, I forgot my keys at home.	The thing are | The thing is | A thing is | The things is	The thing is
+63	en	___, we all went home together.	In the ends | In the end | In end | On the end	In the end
+64	en	___ on the weather.	It's depends | It depends | Is depends | It depending	It depends
+65	en	___ you look tired, you worked all night.	Not wonder | No wonder | No wonders | No wondering	No wonder
+66	en	Please ___ you lock the door.	do sure | make sure | makes the sure | make surely	make sure
+67	en	Let me try to ___.	figure out it | figure it out | figure it outs | figure it outed	figure it out
+68	en	We will ___ milk if we don't buy more.	run out from | run out of | run of out | run out	run out of
+69	en	The bus is never ___.	at time | on time | on the time | in the time	on time
+70	en	Please call me back ___.	as soon as possibly | as soon as possible | as soon possible | so soon as possible	as soon as possible
+71	en	If you are not sure, ___.	it's worth to try | it's worth trying | it's worthy trying | it worths trying	it's worth trying
+72	en	___ by that?	What are you mean | What do you mean | What you mean | What does you mean	What do you mean
+73	en	___ if you need more time.	Let me to know | Let me know | Let i know | Let me knew	Let me know
+74	en	Let’s ___ after the trip.	keep on touch | keep in touch | keep in the touch | keep at touch	keep in touch
+75	en	Let’s ___ after lunch.	sort out it | sort it out | sort it off | sort it outs	sort it out
+76	en	___, the weather has been nice.	Until far | So far | As far | So fars	So far
+77	en	Take an umbrella ___ it rains.	just in the case | just in case | just on case | just in a case	just in case
+78	en	Oh, ___, thanks for explaining.	that make sense | that makes sense | that does sense | that makes a sense	that makes sense
+79	en	___, we can try tomorrow.	Enough fair | Fair enough | Fairly enough | Fair enoughs	Fair enough
+80	en	If you know the answer, ___.	get back me | get back to me | get backs to me | get back for me	get back to me
+81	en	___, I never thought about it that way before.	That's good point | That's a good point | That's a well point | That's a good points	That's a good point
+82	en	I like living in the city, but ___, the countryside is much quieter.	in the other hand | on the other hand | on other hand | on the another hand	on the other hand
+83	en	___, we did get a late start this morning.	For be fair | To be fair | To being fair | To is fair	To be fair
+84	en	I’m not a big fan of spicy food; ___, I do like a little bit of chili now and then.	have said that | having said that | having saying that | having told that	having said that
+85	en	We can watch a movie or play a game, ___.	it's up on you | it's up to you | it's up for you | it's up at you	it's up to you
+86	en	It's hard to ___ when both options seem good.	do a decision | make a decision | make a decide | make decision	make a decision
+87	en	We should ___ the weather before making any plans.	take in account | take into account | take on account | take into the account	take into account
+88	en	I need to ___ a gift for my friend's birthday.	come ups with | come up with | come with up | come up by	come up with
+89	en	If you save a little money every month, it pays off ___.	on the long run | in the long run | in a long run | in the long runs	in the long run
+90	en	___ cooking, my sister is the best in our family.	When it comes for | When it comes to | When it come to | When comes to	When it comes to
+91	en	___, you finished that huge pizza by yourself?	Not way | No way | No ways | No the way	No way
+92	en	___ difficult to move to a new city alone.	It must has been | It must have been | It must been | It must had been	It must have been
+93	en	I ___ the meeting was canceled when nobody showed up.	should had known | should have known | should have knew | should has known	should have known
+94	en	___ about the weather changing soon.	You might are right | You might be right | You might to be right | You might being right	You might be right
+95	en	I wanted to argue, but honestly, ___.	it's not worthy it | it's not worth it | it doesn't worth it | it's not worth for it	it's not worth it
+96	en	You can borrow my bike ___ you bring it back by tomorrow.	as longer as | as long as | so long that | as long like	as long as
+97	en	Let me know ___ you can come to the meeting.	whether and not | whether or not | if or not | whether or nots	whether or not
+98	en	I agree with you ___, but I have a different opinion too.	to some extend | to some extent | in some extent | to some extension	to some extent
+99	en	We’re working under ___, so let’s focus and get this done.	a tightly deadline | a tight deadline | a narrow deadline | a tighten deadline	a tight deadline
+100	en	Can we ___ on the price?	meet in halfway | meet halfway | meeting halfway | meet the halfway	meet halfway
+101	en	___ if we'll finish on time.	It's hard for say | It's hard to say | It's hardly to say | It's hard to said	It's hard to say
+102	en	Going out in this storm is ___.	out the question | out of the question | out of question | out of a question	out of the question
+103	en	___ that we should leave a bit earlier to avoid traffic.	It seems for me | It seems to me | It seem to me | It seems me	It seems to me
+104	en	This is ___ the best pizza place in town.	arguable | arguably | arguablys | the arguably	arguably
+105	en	___, the weather here is pretty mild all year.	By the large | By and large | On and large | By and big	By and large
+106	en	The meeting went ___ as we expected.	more and less | more or less | more or fewer | most or less	more or less
+107	en	I’m really tired; ___, I’ll help you finish the project.	that saying | that said | that told | that is said	that said
+108	en	___, you should bring an umbrella if it looks like rain.	Needless saying | Needless to say | Needless to tell | Needlessly to say	Needless to say
+109	en	Let's keep the windows closed ___.	for the time been | for the time being | in the time being | for a time being	for the time being
+110	en	The weather was cold yesterday, ___.	to put mildly it | to put it mildly | to say it mildly | to put it in mild	to put it mildly
+111	en	___, we still have to finish the project by tomorrow.	Be it as that may | Be that as it may | Be that like it may | Being that as it may	Be that as it may
+112	en	Just ___, I never agreed to that plan.	for a record | for the record | in the record | for the records	for the record
+113	en	Whether that's allowed or not is kind of ___.	a grey place | a grey area | an grey area | a grey areas	a grey area
+114	en	___, I should have packed an umbrella today.	On hindsight | In hindsight | In the hindsight | At hindsight	In hindsight
+115	en	___, I think we should consider another option.	With all the due respect | With all due respect | By all due respect | With every due respect	With all due respect
+116	en	I'm still ___ about joining the gym this month.	in the fence | on the fence | at the fence | on a fence	on the fence
+117	en	___ is we need to finish this project by Friday.	The down line | The bottom line | The bottom lines | The bottoms line	The bottom line
+118	en	The hike was long and tiring, ___ really muddy at the end.	not mention | not to mention | no to mention | not for mention	not to mention
+119	en	Just ___ that the store closes early on Sundays.	bear on mind | bear in mind | bear in the mind | bring in mind	bear in mind
+120	en	Sometimes you have to ___ to get the full story.	read between lines | read between the lines | read among the lines | read in between line	read between the lines
+121	en	Whether it rains tomorrow is ___ right now.	beside the points | beside the point | beside a point | next to the point	beside the point
+122	en	Losing my wallet was actually ___ because someone found it and returned it with everything inside.	a bless in disguise | a blessing in disguise | a blessing on disguise | a blessing in disguising	a blessing in disguise
+123	en	Are we just going to ignore ___?	the elephant on the room | the elephant in the room | the elephant in room | the elephant of the room	the elephant in the room
+164	en	My brother ___ a nurse.	are | is | be | am	is
+165	en	She ___ near the river.	living | is live | lives | live	lives
+166	en	There is ___ on the corner.	a bank | bank | a banks | an bank	a bank
+167	en	I'd like three ___, please.	apple | apples | apple's | an apples	apples
+168	en	___ on Saturdays?	Are you work | Do you works | Do you work | You do work	Do you work
+169	en	The class starts ___ nine on Monday.	in | at | by at | on	at
+170	en	___ a little slower?	Can you speak | Can you speaking | Can you to speak | Can you spoke	Can you speak
+171	en	She ___ dinner last night.	cook | cooked | cooks | cooking	cooked
+172	en	___ a book right now.	I read | I'm reading | I reading | I'm read	I'm reading
+173	en	I'm ___ buy some bread.	go to | going to | going | will	going to
+174	en	This bag is ___ my old one.	more light than | lighter than | lightest than | lighter	lighter than
+175	en	Do you have ___ water?	many | a few | any | a	any
+176	en	Is this pen ___?	your | yours | you | you're	yours
+177	en	I took an umbrella ___ it looked cloudy.	so | because | but	because
+178	en	She ___ drinks tea in the morning.	never | always | sometimes | often	always
+179	en	___ seen snow this late in spring?	Did you ever | Have you ever | Has you ever | Do you ever	Have you ever
+180	en	We ___ dinner when the lights went out.	was eating | were eating | are eating | were eat	were eating
+181	en	___, we'll stay inside.	If it will rain | If it rained | If it rains | If it rain	If it rains
+182	en	You ___ call your mom.	should to | must | should | shouldn't	should
+183	en	I forgot ___ the door.	locking | to lock | lock | to locking	to lock
+184	en	Is this the bag ___ you lost?	who | where | which | whose	which
+185	en	My keys ___ in the kitchen.	was found | were found | are found | were find	were found
+186	en	The music was ___ I had to cover my ears.	such loud that | so loud that | so loudly that | such a loud that	so loud that
+187	en	The movie was ___, so I stopped watching.	bored | boredom | boring | boringly	boring
+188	en	Can you ___ this form and get back to me?	find out | look into | fill out | check in	fill out
+189	en	She ___ cold outside.	told it was | said it was | says it is | said it were	said it was
+190	en	___ more free time, I'd learn another language.	If I have | If I had | If I would have | If I'd had	If I had
+191	en	If ___ remembered your birthday, I would have called you.	I've | I'd | I'll | I'd have	I'd
+192	en	She ___ when I arrived.	has already left | had already left | was already leaving | had already leave	had already left
+193	en	She ___ left her keys at home.	might have | can't have | must have | could have	must have
+194	en	I ___ taken more photos during the trip.	wish I was | wish I'll | wish I'd | wish I've	wish I'd
+195	en	I ___ walk to school every day.	am used to | get used to | used to | was used to	used to
+196	en	___ did you finish your homework?	Therefore, | For example, | In contrast, | By the way,	By the way,
+197	en	Let's ___ for the project.	make a goal | do a goal | set a goal | reach a goal	set a goal
+198	en	If I ___ harder, I would have a better job now.	have studied | had studied | would have studied | had study	had studied
+199	en	___ she finish early, but she also helped everyone else.	Not only does | Not only did | Not only had | Rarely did	Not only did
+200	en	___ after work, I decided to order takeout.	Felt tired | Feeling tired | Having felt | Being felt	Feeling tired
+201	en	___ this might take a bit longer than we thought.	With all due respect, | It seems to me that | Bear in mind that | To put it mildly,	It seems to me that
+202	en	___ it rained, we still had a nice picnic.	Even so | Although | Admittedly | Despite	Although
+203	en	___ in rent has put a strain on my budget.	Increasing | The increase | To increase | The increasing	The increase
+204	en	Hello, ___.	nice to meeting you | nice to meet you | nice meet to you | nice for meet you	nice to meet you
+205	en	Hi, ___?	where you are from | where are you from | where is you from | where are you of	where are you from
+206	en	Hi, ___?	what does you do | what do you do | what you do do | what are you do	what do you do
+207	en	I like this game, ___?	how about to you | how about you | how is about you | how about your	how about you
+208	en	___, I like cats.	Me also | Me too | My too | Also me	Me too
+209	en	I have to go now, ___.	see you after | see you later | look you later | see you lately	see you later
+210	en	___ for your help.	Thank a lot | Thanks a lot | Thanks lot | Thanks a much	Thanks a lot
+211	en	___, can you help me?	Excuse my | Excuse me | Excuse to me | Excuse i	Excuse me
+212	en	___, I can help you.	Not problem | No problem | No any problem | No the problem	No problem
+213	en	___?	How much are this | How much is this | How many is this | How much this is	How much is this
+214	en	Can I have ___?	just these one | just this one | just one this | just this a one	just this one
+215	en	___, please?	What time it is | What time is it | What hour is it | What time are it	What time is it
+216	en	___ on this map?	Where is station | Where is the station | Where are the station | Where the station is	Where is the station
+217	en	The red bag is ___.	in the left | on the left | on left | at left	on the left
+218	en	The bus stop is ___.	next the bank | next to the bank | next of the bank | next to bank	next to the bank
+219	en	Sorry, please ___.	says that again | say that again | tell that again | say again that	say that again
+220	en	___.	No really | Not really | Don't really | Not so really	Not really
+221	en	___, how are you?	Goods morning | Good morning | Good the morning | Good mornings	Good morning
+222	en	___.	Have nice day | Have a nice day | Has a nice day | Have the nice day	Have a nice day
+223	en	___, I'm glad I could help.	You welcome | You're welcome | You are welcomed | You're welcoming	You're welcome
+224	en	The book ___ on the table.	am | is | are	is
+226	en	Is there ___ pen?	an | a | the	a
+227	en	I have ___.	two cat | two cats | two cat's	two cats
+228	en	I ___ like tea.	doesn't | don't | not	don't
+229	en	My bag is ___.	in the chair | on the chair | at the chair	on the chair
+230	en	I ___ read this book.	cans | can | canning | can to	can
+235	es	Hola, ___ Min-ji y vengo de Corea.	estoy | soy | eres | es	soy
+236	es	___ Jun. ¿Y tú?	Me llama | Se llamo | Me llamo | Llamo	Me llamo
+237	es	___ en una oficina y estudio español.	Trabajo | Trabajar | Trabajas | Trabaja	Trabajo
+238	es	¿___ vives?	Donde | Dónde | Qué | Cuándo	Dónde
+239	es	Quiero ___ y dos naranjas.	un manzana | uno manzana | una manzana | una manzanas	una manzana
+240	es	El metro ___ cerca de aquí.	es | está | estás | hay	está
+241	es	¿___ un supermercado por aquí?	Hay | Está | Es | Tiene	Hay
+242	es	___ veinticinco años.	Estoy | Tiene | Tengo | Soy	Tengo
+243	es	Ayer ___ con mis amigos.	cenaba | ceno | cené | cenó	cené
+244	es	El sábado ___ a la playa.	fue | iba | voy | fui	fui
+245	es	Mañana ___ a mi abuela.	voy a visito | vaya a visitar | voy visitar | voy a visitar	voy a visitar
+246	es	___ mucho las películas de miedo.	Me gusta | Me gustan | Yo gusto | Me gusto	Me gustan
+247	es	¿___ venir a las ocho?	Puedes | Puedas | Pueden | Podes	Puedes
+248	es	Hoy ___ hasta tarde.	tengo de trabajar | tengo que trabajar | tengo trabajar | tengo que trabajo	tengo que trabajar
+249	es	___ la garganta.	Me dolo | Duelo | Me duelen | Me duele	Me duele
+250	es	¿El pastel? ___ quiero sin azúcar.	Le | Los | La | Lo	Lo
+251	es	___ mucho cuando llegamos al hotel.	Llueve | Llovía | Ha llovido | Llovió	Llovía
+252	es	¿Alguna vez ___ el mole?	has probó | has probar | has probado | hayas probado	has probado
+253	es	___ temprano y me ducho rápido.	Se levanto | Me levanto | Levanto | Me levanta	Me levanto
+254	es	Creo que es una buena serie, pero no creo que ___ final feliz.	tener | tiene | tenga | tendrá	tenga
+255	es	¿___ cambiarme de habitación?	Poder | Podría | Pudo | Podría que	Podría
+256	es	Este barrio es ___ el centro.	más tranquilo como | tan tranquilo que | más tranquilo de | más tranquilo que	más tranquilo que
+257	es	La llave no funciona. ¿___ puede cambiar?	Se la | Me lo | Me la | La me	Me la
+258	es	Espero que te ___ bien en la entrevista.	va | irá | ir | vaya	vaya
+259	es	Si ___ más tiempo, aprendería a tocar la guitarra.	tuviera | tenga | tengo | tendría	tuviera
+260	es	Aunque ___, vamos a salir.	llovería | llueva | lloverá | llover	llueva
+261	es	Me dijo que ___ tarde porque había mucho tráfico.	llegue | llegando | llegaría | llegar	llegaría
+262	es	Cuando ___ el informe, mándamelo.	termines | terminarás | terminas | terminaste	termines
+263	es	___ que van a subir los precios.	Dice se | Se dice | Es dicho | Se dicen	Se dice
+264	es	Por un lado ahorras tiempo; ___, te sientes más solo.	además | por lo tanto | es decir | en cambio	en cambio
+265	es	Si me lo ___ antes, te habría ayudado.	hubieras dicho | dijiste | habías dicho | habrías dicho	hubieras dicho
+266	es	___ comentarte una cosita sobre la propuesta.	Quiero que | Quería | Quise | Querré	Quería
+267	es	___ más me preocupa es el presupuesto.	El que | Que | Lo que | Lo cual	Lo que
+268	es	Busco a alguien que ___ de diseño y hable alemán.	sepa | saber | sabía | sabe	sepa
+269	es	Le agradecería que me ___ la documentación cuanto antes.	enviará | enviara | envía | envíe a	enviara
+270	es	Espera un ___, que ya casi termino.	momentón | momentito | momentillos | momentazo	momentito
+271	es	___, que al final no vienes, ¿no?	En cambio | Sin embargo | Aunque | O sea	O sea
+272	es	___ la disculpa sin dudar.	Ha aceptado | Ha aceptido | Ha aceptó | Ha aceptar	Ha aceptado
+273	es	___ la radio en el coche.	Ha encendido | Ha encendado | Ha encendió | Ha encender	Ha encendido
+274	es	___ la droga sin dudar.	Ha rechazado | Ha rechazido | Ha rechazó | Ha rechazar	Ha rechazado
+275	es	Se ___ el café.	ha acabado | ha acabido | ha acabó | ha acabar	ha acabado
+276	es	___ contra la puerta.	Ha chocado | Ha chocido | Ha chocó | Ha chocar	Ha chocado
+277	es	La sed lo ___ a parar.	ha obligado | ha obligido | ha obligó | ha obligar	ha obligado
+278	es	Ya ___ el clima.	ha cambiado | ha cambiido | ha cambió | ha cambiar	ha cambiado
+279	es	___ un grupo para el viaje.	Han creado | Han creido | Han crearon | Han crear	Han creado
+280	es	Sus amigos lo ___ en todo.	han apoyado | han apoyido | han apoyaron | han apoyar	han apoyado
+281	es	El enemigo se ___ pronto.	ha retirado | ha retirido | ha retiró | ha retirar	ha retirado
+282	es	___ la acusación ante el juez.	Ha negado | Ha negido | Ha negó | Ha negar	Ha negado
+283	es	Se ___ debajo de la mesa.	ha escondido | ha escondado | ha escondió | ha esconder	ha escondido
+284	es	___ una piedra al río.	Ha tirado | Ha tirido | Ha tiró | Ha tirar	Ha tirado
+285	es	El caballero ___ su asiento.	ha cedido | ha cedado | ha cedió | ha ceder	ha cedido
+286	es	Ni modo, ya ___.	ha pasado | ha pasido | ha pasó | ha pasar	ha pasado
+287	es	Por mi parte, ya ___.	he terminado | he terminido | he terminé | he terminar	he terminado
+288	es	Se ___ el agua.	ha acabado | ha acabido | ha acabó | ha acabar	ha acabado
+289	es	___ su honor hasta el final.	Ha defendido | Ha defendado | Ha defendió | Ha defender	Ha defendido
+290	es	___ la lágrima con la manga.	Ha secado | Ha secido | Ha secó | Ha secar	Ha secado
+291	es	___ sin dejar rastro.	Ha desaparecido | Ha desaparecado | Ha desapareció | Ha desaparecer	Ha desaparecido
+292	es	___ a su rival en la final.	Ha vencido | Ha vencado | Ha venció | Ha vencer	Ha vencido
+293	es	___ muy tarde.	Has llegado | Has llegido | Has llegaste | Has llegar	Has llegado
+294	es	Te ___ un correo urgente.	he enviado | he enviido | he envié | he enviar	he enviado
+295	es	___ un golpe en la cabeza.	Ha recibido | Ha recibado | Ha recibió | Ha recibir	Ha recibido
+296	es	___ a mi sobrino al parque.	He llevado | He llevido | He llevé | He llevar	He llevado
+297	es	Se me ___ decírtelo.	ha olvidado | ha olvidido | ha olvidó | ha olvidar	ha olvidado
+298	es	___ a doce amigos a la cena.	He invitado | He invitido | He invité | He invitar	He invitado
+299	es	Me ___ un truco de cartas.	ha enseñado | ha enseñido | ha enseñó | ha enseñar	ha enseñado
+300	es	La cabra ___ sobre la roca.	ha saltado | ha saltido | ha saltó | ha saltar	ha saltado
+301	es	___ la amenaza por completo.	Ha ignorado | Ha ignorido | Ha ignoró | Ha ignorar	Ha ignorado
+302	es	La vela se ___ con el viento.	ha apagado | ha apagido | ha apagó | ha apagar	ha apagado
+303	es	___ una canción hermosa.	Ha cantado | Ha cantido | Ha cantó | Ha cantar	Ha cantado
+304	es	El ruido ___ la queja.	ha causado | ha causido | ha causó | ha causar	ha causado
+305	es	Esa joya ___ a mi abuela.	ha pertenecido | ha pertenecado | ha perteneció | ha pertenecer	ha pertenecido
+306	es	El juez lo ___ culpable.	ha declarado | ha declarido | ha declaró | ha declarar	ha declarado
+307	es	___ la tumba de su abuelo.	Han visitado | Han visitido | Han visitaron | Han visitar	Han visitado
+308	es	___ hasta el final.	Ha luchado | Ha luchido | Ha luchó | Ha luchar	Ha luchado
+309	es	___ amigos de toda América.	Ha conocido | Ha conocado | Ha conoció | Ha conocer	Ha conocido
+310	es	___ frente al juez.	Han hablado | Han hablido | Han hablaron | Han hablar	Han hablado
+311	es	___ el robo esta mañana.	Han denunciado | Han denunciido | Han denunciaron | Han denunciar	Han denunciado
+312	es	___ todo el sistema.	Han cambiado | Han cambiido | Han cambiaron | Han cambiar	Han cambiado
+313	es	___ el correo esta mañana.	He revisado | He revisido | He revisé | He revisar	He revisado
+314	es	¿Ya ___ la cuenta?	has pagado | has pagido | has pagaste | has pagar	has pagado
+315	es	___ el cheque con cuidado.	Ha firmado | Ha firmido | Ha firmó | Ha firmar	Ha firmado
+316	es	___ su anillo en la playa.	Ha perdido | Ha perdado | Ha perdió | Ha perder	Ha perdido
+317	es	Se ___ al club de lectura.	ha unido | ha unado | ha unió | ha unir	ha unido
+318	es	El príncipe ___ a la gente.	ha saludado | ha saludido | ha saludó | ha saludar	ha saludado
+319	es	El sistema ___ otra vez.	ha fallado | ha fallido | ha falló | ha fallar	ha fallado
+320	es	No ___ ningún crimen.	ha cometido | ha cometado | ha cometió | ha cometer	ha cometido
+321	es	El vecino de arriba se ___.	ha mudado | ha mudido | ha mudó | ha mudar	ha mudado
+322	es	___ la alfombra en el patio.	Ha sacudido | Ha sacudado | Ha sacudió | Ha sacudir	Ha sacudido
+323	es	Se lo ___ a mi mamá.	he contado | he contido | he conté | he contar	he contado
+324	es	Al menos lo ___.	he intentado | he intentido | he intenté | he intentar	he intentado
+325	es	Se me ___ una idea.	ha ocurrido | ha ocurrado | ha ocurrió | ha ocurrir	ha ocurrido
+326	es	¡Mierda, se me ___!	ha olvidado | ha olvidido | ha olvidó | ha olvidar	ha olvidado
+327	es	___ el examen a duras penas.	Ha aprobado | Ha aprobido | Ha aprobó | Ha aprobar	Ha aprobado
+328	es	___ por una tontería.	Han discutido | Han discutado | Han discutieron | Han discutir	Han discutido
+329	es	___ la carga del camión.	Han bajado | Han bajido | Han bajaron | Han bajar	Han bajado
+330	es	Me ___ la boca con el café.	he quemado | he quemido | he quemé | he quemar	he quemado
+331	es	___ el problema claramente.	Ha explicado | Ha explicido | Ha explicó | Ha explicar	Ha explicado
+332	es	El banco ___ el cheque.	ha rechazado | ha rechazido | ha rechazó | ha rechazar	ha rechazado
+333	es	Su risa ___ toda la sala.	ha llenado | ha llenido | ha llenó | ha llenar	ha llenado
+334	es	___ un personaje muy creíble.	Ha creado | Ha creido | Ha creó | Ha crear	Ha creado
+335	es	___ a un detective privado.	Ha contratado | Ha contratido | Ha contrató | Ha contratar	Ha contratado
+336	es	Le ___ la billetera.	han robado | han robido | han robaron | han robar	han robado
+337	es	¿Viste el vídeo que te ___?	he mandado | he mandido | he mandé | he mandar	he mandado
+338	es	___ poca comida.	Ha quedado | Ha quedido | Ha quedó | Ha quedar	Ha quedado
+339	es	___ un delito grave.	Ha cometido | Ha cometado | Ha cometió | Ha cometer	Ha cometido
+340	es	Me ___ arena en los zapatos.	ha entrado | ha entrido | ha entró | ha entrar	ha entrado
+341	es	De repente se ___ la luz.	ha apagado | ha apagido | ha apagó | ha apagar	ha apagado
+342	es	___ la reunión de hoy.	Han cancelado | Han cancelido | Han cancelaron | Han cancelar	Han cancelado
+343	es	Nadie me ___ con eso.	ha ayudado | ha ayudido | ha ayudó | ha ayudar	ha ayudado
+344	es	No ___ ni cinco minutos.	ha durado | ha durido | ha duró | ha durar	ha durado
+345	es	Me ___ un trago de agua.	he tomado | he tomido | he tomé | he tomar	he tomado
+346	es	___ al techo sin decir nada.	Ha mirado | Ha mirido | Ha miró | Ha mirar	Ha mirado
+347	es	No te ___ bien.	he escuchado | he escuchido | he escuché | he escuchar	he escuchado
+348	es	___ su mayor deseo.	Ha cumplido | Ha cumplado | Ha cumplió | Ha cumplir	Ha cumplido
+349	es	___ terminar a tiempo.	He logrado | He logrido | He logré | He lograr	He logrado
+350	es	___ la reserva sin avisar.	Han cancelado | Han cancelido | Han cancelaron | Han cancelar	Han cancelado
+351	es	La mayoría ___ a favor.	ha votado | ha votido | ha votó | ha votar	ha votado
+352	es	El bebé ___ a llorar.	ha empezado | ha empezido | ha empezó | ha empezar	ha empezado
+353	es	¿Acaso no me ___?	has escuchado | has escuchido | has escuchaste | has escuchar	has escuchado
+354	es	Nunca se me ___ eso.	ha ocurrido | ha ocurrado | ha ocurrió | ha ocurrir	ha ocurrido
+355	es	___ el libro a su madre.	Ha dedicado | Ha dedicido | Ha dedicó | Ha dedicar	Ha dedicado
+356	es	___ el plan con calma.	Ha explicado | Ha explicido | Ha explicó | Ha explicar	Ha explicado
+357	es	___ una lesión cerebral leve.	Ha sufrido | Ha sufrado | Ha sufrió | Ha sufrir	Ha sufrido
+358	es	___ la bandera al amanecer.	Han izado | Han izido | Han izaron | Han izar	Han izado
+359	es	Una ola grande ___ la barca.	ha empujado | ha empujido | ha empujó | ha empujar	ha empujado
+360	es	Se ___ por una tontería.	han peleado | han peleido | han pelearon | han pelear	han peleado
+361	es	El avión ___ sin problemas.	ha volado | ha volido | ha voló | ha volar	ha volado
+362	es	Me ___ muy temprano hoy.	he levantado | he levantido | he levanté | he levantar	he levantado
+363	es	___ sin pensarlo dos veces.	Ha disparado | Ha disparido | Ha disparó | Ha disparar	Ha disparado
+364	es	Al primer intento no ___.	ha funcionado | ha funcionido | ha funcionó | ha funcionar	ha funcionado
+365	es	La nave ___ al amanecer.	ha zarpado | ha zarpido | ha zarpó | ha zarpar	ha zarpado
+366	es	___ venganza tras la traición.	Ha jurado | Ha jurido | Ha juró | Ha jurar	Ha jurado
+367	es	La muerte de su padre nos ___.	ha dolido | ha dolado | ha dolió | ha doler	ha dolido
+368	es	El barco ___ al amanecer.	ha zarpado | ha zarpido | ha zarpó | ha zarpar	ha zarpado
+369	es	El plan ___ muy efectivo.	ha resultado | ha resultido | ha resultó | ha resultar	ha resultado
+370	es	___ de golpe al oír el ruido.	Ha callado | Ha callido | Ha calló | Ha callar	Ha callado
+371	es	Allí ___ el carro.	he dejado | he dejido | he dejé | he dejar	he dejado
+372	es	___ la cena con calma.	He preparado | He preparido | He preparé | He preparar	He preparado
+373	es	___ la espada en su vaina.	Ha guardado | Ha guardido | Ha guardó | Ha guardar	Ha guardado
+374	es	¿___ algo rico?	has comido | has comado | has comiste | has comer	has comido
+375	es	___ una excusa para no ir.	Ha inventado | Ha inventido | Ha inventó | Ha inventar	Ha inventado
+376	es	Se ___ de la enfermedad.	ha recuperado | ha recuperido | ha recuperó | ha recuperar	ha recuperado
+377	es	___ en casa todo el día.	Ha permanecido | Ha permanecado | Ha permaneció | Ha permanecer	Ha permanecido
+378	es	El paciente se ___ bien.	ha recuperado | ha recuperido | ha recuperó | ha recuperar	ha recuperado
+379	es	Mira quién ___.	ha llegado | ha llegido | ha llegó | ha llegar	ha llegado
+380	es	___ de pronto en la puerta.	Ha aparecido | Ha aparecado | Ha apareció | Ha aparecer	Ha aparecido
+381	es	Se me ___ el reloj.	ha parado | ha parido | ha paró | ha parar	ha parado
+382	es	___ toda la noche.	Ha caminado | Ha caminido | Ha caminó | Ha caminar	Ha caminado
+383	es	___ la verdad al final.	Ha averiguado | Ha averiguido | Ha averiguó | Ha averiguar	Ha averiguado
+384	es	El conductor ___ de golpe.	ha frenado | ha frenido | ha frenó | ha frenar	ha frenado
+385	es	___ el paquete a tiempo.	Ha entregado | Ha entregido | Ha entregó | Ha entregar	Ha entregado
+386	es	___ oponer su plan al mío.	Han decidido | Han decidado | Han decidieron | Han decidir	Han decidido
+387	es	___ algo raro en el trabajo.	Ha sucedido | Ha sucedado | Ha sucedió | Ha suceder	Ha sucedido
+388	es	___ huir de la policía.	Ha intentado | Ha intentido | Ha intentó | Ha intentar	Ha intentado
+389	es	¿Te ___ claro?	ha quedado | ha quedido | ha quedó | ha quedar	ha quedado
+390	es	El aplauso ___ toda la sala.	ha llenado | ha llenido | ha llenó | ha llenar	ha llenado
+391	es	___ sus miedos con valor.	Ha enfrentado | Ha enfrentido | Ha enfrentó | Ha enfrentar	Ha enfrentado
+392	es	Me ___ un café caliente.	ha ofrecido | ha ofrecado | ha ofreció | ha ofrecer	ha ofrecido
+393	es	___ la vista con los años.	Ha perdido | Ha perdado | Ha perdió | Ha perder	Ha perdido
+394	es	Le ___ una rosa roja.	he regalado | he regalido | he regalé | he regalar	he regalado
+395	es	___ con mi padre.	He hablado | He hablido | He hablé | He hablar	He hablado
+396	es	___ la guitarra toda la tarde.	Ha tocado | Ha tocido | Ha tocó | Ha tocar	Ha tocado
+397	es	Se ___ totalmente.	ha equivocado | ha equivocido | ha equivocó | ha equivocar	ha equivocado
+398	es	Al principio me ___.	ha costado | ha costido | ha costó | ha costar	ha costado
+399	es	El jefe ___ cerrar temprano.	ha ordenado | ha ordenido | ha ordenó | ha ordenar	ha ordenado
+400	es	___ la bici en el garaje.	Ha guardado | Ha guardido | Ha guardó | Ha guardar	Ha guardado
+401	es	___ de alegría al verla.	Ha llorado | Ha llorido | Ha lloró | Ha llorar	Ha llorado
+402	es	Un conocido me lo ___.	ha contado | ha contido | ha contó | ha contar	ha contado
+403	es	Se ___ demasiado tarde.	ha enterado | ha enterido | ha enteró | ha enterar	ha enterado
+404	es	___ un palo seco del suelo.	Ha recogido | Ha recogado | Ha recogió | Ha recoger	Ha recogido
+405	es	___ la silla de la mesa.	Ha alejado | Ha alejido | Ha alejó | Ha alejar	Ha alejado
+406	es	___ una fortuna de su abuelo.	Ha heredado | Ha heredido | Ha heredó | Ha heredar	Ha heredado
+407	es	___ el cañón al amanecer.	Han disparado | Han disparido | Han dispararon | Han disparar	Han disparado
+408	es	___ haber visto nada.	Ha negado | Ha negido | Ha negó | Ha negar	Ha negado
+409	es	No sé qué ___.	ha pasado | ha pasido | ha pasó | ha pasar	ha pasado
+410	es	Nos ___ a su boda.	han invitado | han invitido | han invitaron | han invitar	han invitado
+411	es	___ a los niños a dormir.	Ha mandado | Ha mandido | Ha mandó | Ha mandar	Ha mandado
+412	es	El combate ___ en empate.	ha terminado | ha terminido | ha terminó | ha terminar	ha terminado
+413	es	Todavía no ___ al ganador.	han anunciado | han anunciido | han anunciaron | han anunciar	han anunciado
+414	es	El detective ___ una pista.	ha hallado | ha hallido | ha halló | ha hallar	ha hallado
+415	es	Un ave pequeña ___ en la rama.	ha posado | ha posido | ha posó | ha posar	ha posado
+416	es	___ una solución sencilla.	Ha hallado | Ha hallido | Ha halló | Ha hallar	Ha hallado
+417	es	___ toda la noche.	Ha bailado | Ha bailido | Ha bailó | Ha bailar	Ha bailado
+418	es	___ la derrota con dignidad.	Ha admitido | Ha admitado | Ha admitió | Ha admitir	Ha admitido
+419	es	___ el cargo sin dudar.	Ha asumido | Ha asumado | Ha asumió | Ha asumir	Ha asumido
+420	es	Lo ___ y quizá sí.	he pensado | he pensido | he pensé | he pensar	he pensado
+421	es	Me ___ su respuesta.	ha sorprendido | ha sorprendado | ha sorprendió | ha sorprender	ha sorprendido
+422	es	___ salvar al perro.	Ha logrado | Ha logrido | Ha logró | Ha lograr	Ha logrado
+423	es	___ al rehén sin violencia.	Han liberado | Han liberido | Han liberaron | Han liberar	Han liberado
+424	es	Se ___ la rodilla al caer.	ha lastimado | ha lastimido | ha lastimó | ha lastimar	ha lastimado
+425	es	Ya ___ mi decisión.	he tomado | he tomido | he tomé | he tomar	he tomado
+426	es	___ un cuadro en la pared.	Han colgado | Han colgido | Han colgaron | Han colgar	Han colgado
+427	es	___ pasta con salsa de tomate.	He cenado | He cenido | He cené | He cenar	He cenado
+428	es	___ su promesa sin dudar.	Ha cumplido | Ha cumplado | Ha cumplió | Ha cumplir	Ha cumplido
+429	es	¿Dónde lo ___?	has encontrado | has encontrido | has encontraste | has encontrar	has encontrado
+430	es	Se ___ ante su majestad.	ha inclinado | ha inclinido | ha inclinó | ha inclinar	ha inclinado
+431	es	___ el cuadro en la pared.	Ha colgado | Ha colgido | Ha colgó | Ha colgar	Ha colgado
+432	es	Se ___ muy temprano.	ha levantado | ha levantido | ha levantó | ha levantar	ha levantado
+433	es	Se ___ porque llegué tarde.	ha enfadado | ha enfadido | ha enfadó | ha enfadar	ha enfadado
+434	es	___ en ti todo el día.	He pensado | He pensido | He pensé | He pensar	He pensado
+435	es	Se ___ el cabello corto.	ha cortado | ha cortido | ha cortó | ha cortar	ha cortado
+436	es	___ su nombre de la lista.	Han eliminado | Han eliminido | Han eliminaron | Han eliminar	Han eliminado
+437	es	Creo que el destino nos ___.	ha unido | ha unado | ha unió | ha unir	ha unido
+438	es	___ dormirse para no hablar.	Ha fingido | Ha fingado | Ha fingió | Ha fingir	Ha fingido
+439	es	Se ___ frente a la estación.	han reunido | han reunado | han reunieron | han reunir	han reunido
+440	es	Un beso de despedida ___.	ha bastado | ha bastido | ha bastó | ha bastar	ha bastado
+441	es	___ su voto en silencio.	Ha emitido | Ha emitado | Ha emitió | Ha emitir	Ha emitido
+442	es	___ decir solo la verdad.	Ha jurado | Ha jurido | Ha juró | Ha jurar	Ha jurado
+443	es	Lo ___ en la cárcel por robo.	han metido | han metado | han metieron | han meter	han metido
+444	es	___ su pecado en voz baja.	Ha confesado | Ha confesido | Ha confesó | Ha confesar	Ha confesado
+445	es	___ con una pluma de tinta.	Ha firmado | Ha firmido | Ha firmó | Ha firmar	Ha firmado
+446	es	___ el cargo sin dudar.	Ha aceptado | Ha aceptido | Ha aceptó | Ha aceptar	Ha aceptado
+447	es	La lluvia ___ toda la calle.	ha empapado | ha empapido | ha empapó | ha empapar	ha empapado
+448	es	¿Ya ___ el paquete?	has recibido | has recibado | has recibiste | has recibir	has recibido
+449	es	Se ___ una aguja en el dedo.	ha clavado | ha clavido | ha clavó | ha clavar	ha clavado
+450	es	___ al escenario con nervios.	Ha subido | Ha subado | Ha subió | Ha subir	Ha subido
+451	es	___ un cadáver en el río.	Han encontrado | Han encontrido | Han encontraron | Han encontrar	Han encontrado
+452	es	Se ___ en un lío enorme.	ha metido | ha metado | ha metió | ha meter	ha metido
+453	es	El perro ___ al ladrón.	ha atacado | ha atacido | ha atacó | ha atacar	ha atacado
+454	es	El mono ___ del árbol.	ha saltado | ha saltido | ha saltó | ha saltar	ha saltado
+455	es	Nos ___ de un gran lío.	ha salvado | ha salvido | ha salvó | ha salvar	ha salvado
+456	es	El golpe no ___ daño.	ha dejado | ha dejido | ha dejó | ha dejar	ha dejado
+457	es	Se ___ de forma rara.	ha comportado | ha comportido | ha comportó | ha comportar	ha comportado
+458	es	Esa crema ___ mi piel irritada.	ha curado | ha curido | ha curó | ha curar	ha curado
+459	es	___ la casa sin avisar.	Ha abandonado | Ha abandonido | Ha abandonó | Ha abandonar	Ha abandonado
+460	es	Alguien ___ la puerta.	ha golpeado | ha golpeido | ha golpeó | ha golpear	ha golpeado
+461	es	___ un show increíble.	Han montado | Han montido | Han montaron | Han montar	Han montado
+462	es	Lo ___ para ti.	he comprado | he comprido | he compré | he comprar	he comprado
+463	es	Se ___ la uña de color rojo.	ha pintado | ha pintido | ha pintó | ha pintar	ha pintado
+464	es	Ni siquiera me ___.	ha saludado | ha saludido | ha saludó | ha saludar	ha saludado
+465	es	___ muy bien en la obra.	Ha actuado | Ha actuido | Ha actuó | Ha actuar	Ha actuado
+466	es	De repente ___ a llover.	ha empezado | ha empezido | ha empezó | ha empezar	ha empezado
+467	es	Lo ___ cobarde por huir.	han llamado | han llamido | han llamaron | han llamar	han llamado
+468	es	___ una medalla de oro.	Ha ganado | Ha ganido | Ha ganó | Ha ganar	Ha ganado
+469	es	Me ___ tu ayuda.	ha salvado | ha salvido | ha salvó | ha salvar	ha salvado
+470	es	___ la verdad ante el juez.	Ha confesado | Ha confesido | Ha confesó | Ha confesar	Ha confesado
+471	es	Me ___ de que habría tráfico.	ha avisado | ha avisido | ha avisó | ha avisar	ha avisado
+472	es	Se ___ detrás del sofá.	ha escondido | ha escondado | ha escondió | ha esconder	ha escondido
+473	es	___ un misil en el radar.	Han detectado | Han detectido | Han detectaron | Han detectar	Han detectado
+474	es	Le ___ una flor roja.	ha regalado | ha regalido | ha regaló | ha regalar	ha regalado
+475	es	___ de alegría al verlo.	Ha gritado | Ha gritido | Ha gritó | Ha gritar	Ha gritado
+476	es	Mi abogado me ___ hoy.	ha llamado | ha llamido | ha llamó | ha llamar	ha llamado
+477	es	___ tras el autobús.	Ha corrido | Ha corrado | Ha corrió | Ha correr	Ha corrido
+478	es	___ los brazos sobre el pecho.	Ha cruzado | Ha cruzido | Ha cruzó | Ha cruzar	Ha cruzado
+479	es	El rey ___ la corona de oro.	ha llevado | ha llevido | ha llevó | ha llevar	ha llevado
+480	es	___ un método nuevo.	Han utilizado | Han utilizido | Han utilizaron | Han utilizar	Han utilizado
+481	es	El resultado me ___.	ha sorprendido | ha sorprendado | ha sorprendió | ha sorprender	ha sorprendido
+482	es	___ el anuncio en la web.	Han publicado | Han publicido | Han publicaron | Han publicar	Han publicado
+483	es	___ la demo del nuevo juego.	He probado | He probido | He probé | He probar	He probado
+484	es	El plan ___ a última hora.	ha fallado | ha fallido | ha falló | ha fallar	ha fallado
+485	es	___ agua del pozo antiguo.	Han sacado | Han sacido | Han sacaron | Han sacar	Han sacado
+486	es	___ a su amigo sin dudar.	Ha defendido | Ha defendado | Ha defendió | Ha defender	Ha defendido
+487	es	Todos ___ amén al final.	han respondido | han respondado | han respondieron | han responder	han respondido
+488	es	Nos ___ fotos del viaje.	ha mostrado | ha mostrido | ha mostró | ha mostrar	ha mostrado
+489	es	Se me ___ la sangre.	ha helado | ha helido | ha heló | ha helar	ha helado
+490	es	___ la pelota con una mano.	Ha atrapado | Ha atrapido | Ha atrapó | Ha atrapar	Ha atrapado
+491	es	___ por caridad, no por fama.	Ha actuado | Ha actuido | Ha actuó | Ha actuar	Ha actuado
+492	es	___ una carrera muy dura.	Ha corrido | Ha corrado | Ha corrió | Ha correr	Ha corrido
+493	es	___ un millón en la lotería.	Ha ganado | Ha ganido | Ha ganó | Ha ganar	Ha ganado
+494	es	¿___ el regalo?	has comprado | has comprido | has compraste | has comprar	has comprado
+495	es	___ un grado la temperatura.	Ha subido | Ha subado | Ha subió | Ha subir	Ha subido
+496	es	___ la cima al mediodía.	Han alcanzado | Han alcanzido | Han alcanzaron | Han alcanzar	Han alcanzado
+497	es	___ mucho daño al coche.	Ha causado | Ha causido | Ha causó | Ha causar	Ha causado
+498	es	___ un caballo blanco.	Ha montado | Ha montido | Ha montó | Ha montar	Ha montado
+499	es	___ el tesoro durante años.	Han buscado | Han buscido | Han buscaron | Han buscar	Han buscado
+500	es	El perro se ___ del patio.	ha escapado | ha escapido | ha escapó | ha escapar	ha escapado
+501	es	___ demasiado en responder.	Ha tardado | Ha tardido | Ha tardó | Ha tardar	Ha tardado
+502	es	Ella ___ en pagar la cuenta.	ha insistido | ha insistado | ha insistió | ha insistir	ha insistido
+503	es	Un monje budista nos ___ té.	ha ofrecido | ha ofrecado | ha ofreció | ha ofrecer	ha ofrecido
+504	es	El trueno me ___ de verdad.	ha asustado | ha asustido | ha asustó | ha asustar	ha asustado
+505	es	El público ___ fuerte.	ha aplaudido | ha aplaudado | ha aplaudió | ha aplaudir	ha aplaudido
+506	es	___ la calle sin mirar.	Ha atravesado | Ha atravesido | Ha atravesó | Ha atravesar	Ha atravesado
+507	es	El cerdo se ___ del corral.	ha escapado | ha escapido | ha escapó | ha escapar	ha escapado
+508	es	¿Se lo ___ a tu mamá?	has enviado | has enviido | has enviaste | has enviar	has enviado
+509	es	___ la pelota al jardín.	Ha tirado | Ha tirido | Ha tiró | Ha tirar	Ha tirado
+510	es	___ el origen del rumor.	Han investigado | Han investigido | Han investigaron | Han investigar	Han investigado
+511	es	Ella ya ___.	ha comido | ha comado | ha comió | ha comer	ha comido
+512	es	¿___ describir la casa con más detalle?	Podrías | Poderías | Puedrías | Podríais	Podrías
+513	es	¿___ aclarar lo que dijiste ayer?	Podrías | Poderías | Puedrías | Podríais	Podrías
+514	es	¿Me ___ prestar tu bolígrafo?	podrías | poderías | puedrías | podríais	podrías
+515	es	¿Me ___ enseñar el camino?	podrías | poderías | puedrías | podríais	podrías
+516	es	¿___ repetir eso, por favor?	Podrías | Poderías | Puedrías | Podríais	Podrías
+517	es	¿___ encender la luz, por favor?	Podrías | Poderías | Puedrías | Podríais	Podrías
+518	es	¿___ mostrarme el plano?	Podrías | Poderías | Puedrías | Podríais	Podrías
+519	es	¿Me ___ acompañar al médico?	podrías | poderías | puedrías | podríais	podrías
+520	es	¿___ apagar la luz?	Podrías | Poderías | Puedrías | Podríais	Podrías
+521	es	¿___ venir a cenar?	Podrías | Poderías | Puedrías | Podríais	Podrías
+522	es	¿Me ___ explicar la regla otra vez?	podrías | poderías | puedrías | podríais	podrías
+523	es	¿Me ___ ayudar?	podrías | poderías | puedrías | podríais	podrías
+524	fr	Je m'appelle Minji, je ___ coréenne.	es | suis | ai | est	suis
+525	fr	___ vous parlez anglais ?	Qu'est-ce que | Est que | Est-ce que | Est-ce	Est-ce que
+526	fr	Je voudrais ___ et le journal.	une baguette | la baguettes | une baguettes | un baguette	une baguette
+527	fr	Je ___ bien français.	ne pas parle | ne parle pas | pas parle ne | parle ne pas	ne parle pas
+528	fr	J'___ à Séoul et je travaille dans un bureau.	habiter | habites | habite | habitons	habite
+529	fr	___ une pharmacie près d'ici ?	Il est | Il y a | Il a | C'est	Il y a
+530	fr	___ deux croissants, s'il vous plaît.	Je voudrais | Je veux voudrais | Je voulais que | Je vouloir	Je voudrais
+531	fr	___ est la station de métro ?	Quand | Comment | Où | Combien	Où
+532	fr	Hier, j'___ un film avec ma sœur.	ai regarder | suis regardé | ai regardé | regardais été	ai regardé
+533	fr	Elle ___ à huit heures.	a partie | est parti | a parti | est partie	est partie
+534	fr	Ce week-end, je ___ le musée d'Orsay.	va visiter | vais à visiter | vais visite | vais visiter	vais visiter
+535	fr	Je ___ m'asseoir ici ?	peut | peux | pouvoir | pouvons	peux
+536	fr	Je ___ à sept heures tous les jours.	me lève | me lever | se lève | lève	me lève
+537	fr	Ce pull ? Je ___ prends.	lui | le | la | les	le
+538	fr	Je reste à la maison ___il pleut.	alors qu' | parce que  | pour qu' | parce qu'	parce qu'
+539	fr	___ se retrouve devant le cinéma ?	Ils | Vous | Nous | On	On
+540	fr	Je ___ quand le téléphone a sonné.	dors | dormais | dormirai | ai dormi	dormais
+541	fr	Des croissants ? J'___ ai acheté trois.	les | y | en | le	en
+542	fr	C'est le quartier ___ j'habitais avant.	dont | où | que | qui	où
+543	fr	Je t'___ demain matin.	ai appelé | appelais | appellerai | appeller	appellerai
+544	fr	Tu ___ m'aider avec ce dossier ?	pouvoir | pourrais | pourras que | pouvais pas	pourrais
+545	fr	J'ai ___ vu ton message.	ne | non | rien pas | pas	pas
+546	fr	Je ___ la fin était un peu rapide.	trouve qu'il | trouve de | trouve que | trouve	trouve que
+547	fr	Il faut que tu ___ le rapport avant jeudi.	finis | finiras | finir | finisses	finisses
+548	fr	Je doute qu'il ___ d'accord.	soit | être | est | sera	soit
+549	fr	Si j'étais toi, je ___ de poste.	changerai | changerais | change | changeais	changerais
+550	fr	Quand je suis arrivé, la réunion ___.	a déjà commencé | aura déjà commencé | avait déjà commencé | commençait déjà	avait déjà commencé
+551	fr	Le loyer est cher, ___ l'appartement est petit.	alors que | donc | parce que | pour que	alors que
+552	fr	Le document ? Je ___envoie ce soir.	l'te  | te l' | te le  | le te 	te l'
+553	fr	J'écoute des podcasts ___ la cuisine.	en fait | en faire | faisant en | en faisant	en faisant
+554	fr	J'___ te prévenir plus tôt.	aurais dû | avais dû | ai dû | devrais	aurais dû
+555	fr	Je suis content que tu ___.	sois venir | sois venu | es venu | viens	sois venu
+556	fr	___ me gêne, c'est le manque de transparence.	Qui | Ce que | Ce qui | Ce dont	Ce qui
+557	fr	J'___ lui expliquer, il ne veut rien entendre.	ai beau | ai belle | bien que | ai bien	ai beau
+558	fr	Il ___ de reporter le projet.	est décidé | a été décidé | a décidé été | a été décider	a été décidé
+559	fr	Il ouvrit la porte et ___ sans un mot.	sortira | sortit | sort | sortait	sortit
+560	fr	Il ___ que les chiffres soient un peu optimistes.	semblera | sembler | sembla | semblerait	semblerait
+561	hi	मैं कोरिया से ___।	है | हूँ | हो | हैं	हूँ
+562	hi	___ आप छात्र हैं?	कहाँ | कैसे | क्या | कौन	क्या
+563	hi	यह ___ किताब है।	मेरी | मेरे | मैं | मेरा	मेरी
+564	hi	___ क्या है?	यह वह | वह | वे हैं | वहाँ	वह
+565	hi	किताब मेज़ ___ है।	से | को | पर | का	पर
+566	hi	स्टेशन ___ है?	कौन | कहाँ | कब | कितना	कहाँ
+567	hi	___।	मुझे पानी चाहिए | मैं पानी चाहिए | मुझे पानी चाहता | मेरा पानी चाहिए	मुझे पानी चाहिए
+568	hi	थोड़ा धीरे ___।	बोलता | बोलना है | बोलिए | बोलो जी	बोलिए
+569	hi	मैं रोज़ सुबह सात बजे ___।	उठ रही थी | उठता हूँ | उठती हूँ | उठूँगी हूँ	उठती हूँ
+570	hi	मैं अभी खाना ___।	खाता रहा हूँ | खा रही हूँ | खा रहा है | खा रहा हूँ	खा रहा हूँ
+571	hi	कल मैं बाज़ार ___।	जाता हूँ | जाएगी | गया | जाऊँगा	जाऊँगा
+572	hi	पिछले हफ़्ते हम जयपुर ___।	गया | गए | गई | जाएँगे	गए
+573	hi	___।	मुझे चाय पसंद है | मेरा चाय पसंद है | मुझे चाय पसंद हूँ | मैं चाय पसंद है	मुझे चाय पसंद है
+574	hi	खाने ___ हम घूमने चलेंगे।	के पास | के बाद | से पहले | बाद के	के बाद
+575	hi	फ़िल्म छह ___ शुरू होगी।	समय पर बजे | बज | घंटे | बजे	बजे
+576	hi	___ कल वह फ़िल्म देखी।	मुझे | मैंने | मेरा | मैं	मैंने
+577	hi	क्या आप मेरी मदद ___?	कर सकता हूँ | करना सकते हैं | कर सकते हैं | करते सकते हैं	कर सकते हैं
+578	hi	आपको डॉक्टर से ___।	मिलना चाहता | मिलना चाहिए | मिलो चाहिए | मिलता चाहिए	मिलना चाहिए
+579	hi	जब फ़ोन आया, मैं ___।	सो रहा हूँ | सोता है | सो रहा था | सोया रहा	सो रहा था
+580	hi	___ बारिश हुई तो हम घर पर रहेंगे।	लेकिन | अगर | जब तो | क्योंकि	अगर
+581	hi	मुझे लगता है ___ यह सही नहीं है।	की | के | को | कि	कि
+582	hi	मैंने पूरा खाना ___।	खा लेता | खाया लिया | खा लिया | खा दिया	खा लिया
+583	hi	अगर मुझे पहले पता होता तो मैं ज़रूर ___।	आऊँगा | आया | आ रहा हूँ | आता	आता
+584	hi	मेरा सुझाव है कि हम यह काम अगले हफ़्ते तक पूरा ___।	करें | करेंगे कि | करते हैं | किया	करें
+585	hi	यह फ़ैसला कल की बैठक में ___।	लिया जाता था कल | लिया जाएगा | लेगा जाएगा | लेना जाएगा	लिया जाएगा
+586	hi	___ रिपोर्ट आपने भेजी थी, वह बहुत काम की थी।	जिसको | कौन | जो | वह जो	जो
+587	hi	डेटा ___ ही हम कुछ तय करेंगे।	देखकर | देखा कर | देखना | देखते कर	देखकर
+588	hi	वह अभी रास्ते में ___।	हुआ था | होगा | होना | है होगा	होगा
+589	hi	ख़र्च ज़्यादा है, ___ यह विकल्प बेहतर है।	अगर | इसलिए | क्योंकि | फिर भी	फिर भी
+590	hi	आप बैठिए, तुम पानी ___।	ले आओ | ले आते | ले आइए | ले आ	ले आओ
+591	hi	___ अपना परिचय दीजिए।	चलो | कृपया | ज़रा यार | अरे	कृपया
+592	hi	ग़ुस्से में वह कुछ ग़लत ___।	बोलकर बैठा | बोल लिया | बोल बैठा | बैठ बोला	बोल बैठा
+593	hi	शहर ___।	बदलता जा रहा है | बदलना जा रहा है | बदला जा रहा है | बदल जाता रहा है	बदलता जा रहा है
+594	hi	मैं ___ पहले ही कह रहा था।	को | तो | भी तो ही | से	तो
+595	hi	ज़रा इस पर एक बार फिर ___।	सोचता | सोचिएगा | सोचना है | सोचो	सोचिएगा
+596	hi	चलो, ___ पीते हैं।	वाय-चाय | चायवाला | चाय-चाय | चाय-वाय	चाय-वाय
+597	id	___.	Saya adalah mahasiswa saya | Saya mahasiswa | Mahasiswa saya ada | Saya ada mahasiswa	Saya mahasiswa
+598	id	___ teman saya.	Kamu | Anda | Dia | Saya	Dia
+599	id	Ini ___.	tas saya | tas punya | saya punya tasnya | saya tas	tas saya
+600	id	___ berapa?	Ini itu | Itu | Situ | Sana	Itu
+601	id	Nama kamu ___?	apa siapa | di mana | siapa | berapa	siapa
+602	id	Saya ___ orang Jepang.	tidak | bukan | jangan | belum	bukan
+603	id	Saya ___ Korea.	dari | ke | di | pada	dari
+604	id	___ air mineral?	Punya ada | Ini | Ada | Adalah	Ada
+605	id	Saya ___ makan.	sedang | akan | sudah | belum sudah	sudah
+606	id	Saya ___ buku setiap malam.	mebaca | menbaca | baca-baca membaca | membaca	membaca
+607	id	Kami ___ jam tujuh.	diangkat | terangkat | mengangkat | berangkat	berangkat
+608	id	Saya ___ ke Bali.	pernah | ingin | sudah ingin | boleh	ingin
+609	id	___ saya duduk di sini?	Boleh | Harus | Ayo | Tolong	Boleh
+610	id	___ makan siang bersama.	Tolong | Ayo | Boleh | Jangan	Ayo
+611	id	Saya tidak datang ___ hujan.	sehingga | tetapi | supaya | karena	karena
+612	id	Kamu ___ ke Yogyakarta?	akan | mau pernah | sedang | pernah	pernah
+613	id	Kamarnya sudah ___.	bersihkan di | dibersihkan | terbersih | membersihkan	dibersihkan
+614	id	Kuncinya ___ di mobil.	ditinggalkan oleh | meninggalkan | tertinggal | bertinggal	tertinggal
+615	id	Jakarta ___ Bandung.	lebih ramai dengan | lebih ramai daripada | paling ramai daripada | ramai lebih dari	lebih ramai daripada
+616	id	Tolong ___ alamatnya.	dikirimkan | mengirimi | kirimkan | kirim-kirimkan	kirimkan
+617	id	Saya mau ___ warna biru.	punya | yang | itu yang itu | dengan	yang
+618	id	___ hujan, kita di rumah saja.	Sehingga | Karena | Supaya | Kalau	Kalau
+619	id	___, filmnya agak membosankan.	Untuk saya menurut | Menurut | Menurut saya | Saya menurut	Menurut saya
+620	id	___ di kota ini makin parah.	Macetan | Permacetan | Kemacet | Kemacetan	Kemacetan
+621	id	Kita perlu ___ prosesnya.	memperbaiki | dibaik | membaiki | perbaikan	memperbaiki
+622	id	___ mahal, kualitasnya bagus.	Supaya | Meskipun | Karena | Sehingga	Meskipun
+623	id	Kita mulai lebih awal ___ tidak terlambat.	karena | tetapi | supaya | meskipun	supaya
+624	id	___ kita kabari klien lebih cepat.	Seharusnya | Harusnya akan | Sebaiknya sudah | Semestinya jangan	Seharusnya
+625	id	Dia bilang ___ datanya belum lengkap.	supaya | bahwa | karena bahwa | yang bahwa	bahwa
+626	id	Mungkin ini ___ tepat untuk sekarang.	lebih | tidak sangat | paling | kurang	kurang
+627	id	Kerja sama ini ___ langkah yang penting.	merupakan | ada merupakan | merupa | dirupakan	merupakan
+628	id	Nanti aku ___ ya.	kabar-kabar | kabarin | mengabari in | dikabarin aku	kabarin
+629	id	___ kamu nggak bilang dari tadi sih?	Deh | Dong | Kok | Kan	Kok
+630	id	Dia jalan-jalan sambil ___ ide.	cari-cari | carian | mencari-carikan | cari cari-cari	cari-cari
+631	id	___ minggu ini agak sulit, Pak.	Tentu saja | Sepertinya | Pastinya | Seperti	Sepertinya
+632	id	___, nanti kita bahas lagi.	Soalnya itu | Soal itu | Dengan soal itu kita | Itu soal	Soal itu
+633	it	___ coreana, di Seoul.	Sei | Sono | Ho | È	Sono
+634	it	___ Minji, e tu come ti chiami?	Mi chiama | Si chiamo | Mi chiamo | Chiamo	Mi chiamo
+635	it	Vorrei ___ e una bottiglia d'acqua.	un biglietto | uno biglietto | un biglietti | una biglietto	un biglietto
+636	it	___ in un ufficio e abito vicino al centro.	Lavora | Lavoro | Lavori | Lavorare	Lavoro
+637	it	Qui vicino ___ una farmacia?	ci sono | è | c'è | ha	c'è
+638	it	___ abiti adesso?	Quanto | Dove | Che cosa | Come	Dove
+639	it	___ bene l'italiano.	Non parlo | Parlo non | No parlo | Non parla	Non parlo
+640	it	___ due etti di prosciutto, per favore.	Volere | Vorresti | Vorrei | Voglio che	Vorrei
+641	it	Ieri ___ una pizza con i miei amici.	ho mangiare | sono mangiato | ho mangiato | mangiavo stato	ho mangiato
+642	it	Sabato ___ al mare.	abbiamo andati | siamo andato | abbiamo andato | siamo andati	siamo andati
+643	it	La mattina ___ alle sette.	si alzo | mi alza | alzo | mi alzo	mi alzo
+644	it	___ i film italiani.	Mi piace | Mi piacciono | Io piaccio | Mi piaccio	Mi piacciono
+645	it	___ l'autobus.	Sto aspettando | Sto aspettato | Sto aspettare | Sono aspettando	Sto aspettando
+646	it	___ sedermi qui?	Potere | Posso | Può | Possiamo	Posso
+647	it	Domani ___ a Firenze in treno.	vada | andare | va | vado	vado
+648	it	Ci vediamo ___ stazione alle otto.	a la | nella | al | alla	alla
+649	it	Da piccola ___ sempre dai nonni d'estate.	vado | andavo | andrò | sono andata	andavo
+650	it	Mentre aspettavo il treno, ___ Marco.	incontro | incontravo | ho incontrato | avevo incontrare	ho incontrato
+651	it	___ stanco, ha lavorato tutto il giorno.	Essere | Sarà | Era | Sia	Sarà
+652	it	___ ho mandato un messaggio, ma non mi ha risposto.	Le lo | Lo | Gli | Ne	Gli
+653	it	___ sono stata l'anno scorso e ne ho un bel ricordo.	Vi lo | Ci | Ne | Lo	Ci
+654	it	___ cambiarmi la camera?	Poteva | Potere | Possa | Potrebbe	Potrebbe
+655	it	Penso che ___ una buona idea.	sarà che | essere | sia | è un	sia
+656	it	___ la verità, non ti è piaciuto?	Dici mi | Dirmi | Dimmi | Mi dici che	Dimmi
+657	it	Non credo che ___ il problema.	hanno capire | avere capito | capiscono che | abbiano capito	abbiano capito
+658	it	Se ___ più tempo, imparerei a suonare il piano.	avessi | abbia | ho | avrei	avessi
+659	it	___ saperlo prima.	Preferirei stato | Avrei preferito | Ho preferito | Avevo preferire	Avrei preferito
+660	it	Mi ha detto che ___ in ritardo.	arriva | sia arrivando | sarebbe arrivato | arrivare	sarebbe arrivato
+661	it	Accetto, ___ la consegna sia entro venerdì.	purché | quindi | perché | però	purché
+662	it	Il contratto ___ domani.	ha firmato | viene firmato | firma venire | viene firmare	viene firmato
+663	it	È il collega con ___ lavoro da tre anni.	quale | che | chi | cui	cui
+664	it	Se avessi accettato quel lavoro, adesso ___ a Torino.	vivrei | vivevo | avrei vissuto | vivo	vivrei
+665	it	Cerco qualcuno che ___ davvero ascoltare, per quanto sia difficile.	sapere | sappia | sa | saprà che	sappia
+666	it	Non ___, non lo ha detto con cattiveria.	prenderla te | te la prendi | prendertela | ti prendela	prendertela
+667	it	Secondo i giornali, il ministro ___.	si sarebbe dimesso | dimettersi | si dimetteva che | si è dimettere	si sarebbe dimesso
+668	it	___ la riunione, siamo andati tutti a cena.	Finendo | Finita | Finito | Finire	Finita
+669	it	___ chiederle se fosse possibile lavorare da casa il venerdì.	Volli | Volevo | Vorrò | Voglio che	Volevo
+670	it	Il vino, ___ porto io.	la | gli | ne | lo	lo
+671	ja	わたし___キムです。	を | は | に | の	は
+672	ja	学生です___。	を | が | か | よ	か
+673	ja	毎朝コーヒーを___。	飲みます | 飲みません | 飲みました | 飲むます	飲みます
+674	ja	これはわたし___かばんです。	が | の | に | を	の
+675	ja	___はいくらですか。	どれ | その | それ | そこ	それ
+676	ja	このパン___。	がください | をください | をくださる | にください	をください
+677	ja	明日、東京___。	に行きます | を行きます | で行きます | に行きました	に行きます
+678	ja	駅の前にコンビニが___。	です | ありません | あります | います	あります
+679	ja	昨日は友だちと買い物___。	しません | します | しました | するました	しました
+680	ja	もう少しゆっくり___。	話すください | 話しください | 話してくださる | 話してください	話してください
+681	ja	今、駅で___。	待つています | 待っていました | 待ちています | 待っています	待っています
+682	ja	京都でお寺を___です。	見るたい | 見たい | 見てたい | 見ます	見たい
+683	ja	ここに___ですか。	座ってもいい | 座ったもいい | 座ってはいい | 座るもいい	座ってもいい
+684	ja	一緒に昼ご飯を___。	食べましたか | 食べませんか | 食べるませんか | 食べませんでしたか	食べませんか
+685	ja	北海道に___。	行きたことがあります | 行ったことをあります | 行くことがあります | 行ったことがあります	行ったことがあります
+686	ja	雨が降っている___、タクシーで行きます。	まで | のに | けど | から	から
+687	ja	昨日はすごく___。	疲れるた | 疲れた | 疲れだ | 疲れる	疲れた
+688	ja	実は、明日___。	引っ越すだんです | 引っ越しんです | 引っ越すんです | 引っ越すんだです	引っ越すんです
+689	ja	時間が___、一緒に行こうよ。	あったれば | あったら | あるたら | あれたら	あったら
+690	ja	明日は雨が___。	降りかもしれない | 降ったかもしれる | 降るかもしれない | 降るかもしない	降るかもしれない
+691	ja	日本語で電話___ようになった。	すれる | できる | される | しられる	できる
+692	ja	毎日少しずつ単語を___している。	覚えたように | 覚えように | 覚えてように | 覚えるように	覚えるように
+693	ja	このケーキ、___だね。	おいしかったそう | おいしくそう | おいしそう | おいしいそう	おいしそう
+694	ja	それ、すごくいいと思う___。	か | が | よ | を	よ
+695	ja	部長は何時ごろ___か。	参ります | 伺います | 来られるます | いらっしゃいます	いらっしゃいます
+696	ja	明日の午後、そちらに___。	伺います | 伺われます | いらっしゃいます | おっしゃいます	伺います
+697	ja	本日はこれで失礼___。	させてくださいます | させていただきます | していただきます | させていただけます	させていただきます
+698	ja	電車で隣の人に足を___。	踏んだ | 踏めた | 踏まれた | 踏ませた	踏まれた
+699	ja	その件は私に___。	担当させてください | 担当されてください | 担当してください | 担当させるください	担当させてください
+700	ja	来月から大阪支社で働く___。	ことがなりました | ことになりました | ことをなりました | ことにしました	ことになりました
+701	ja	反対している___。	わけをありません | わけがありません | わけにはいきません | わけではありません	わけではありません
+702	ja	考えれば___、分からなくなる。	考えてほど | 考えほど | 考えたほど | 考えるほど	考えるほど
+703	ja	せっかく誘ってもらったのに、断る___。	わけにはいかない | ことはいかない | わけではない | わけがない	わけにはいかない
+704	ja	予算が足りない以上、計画を___。	見直しざるを得ない | 見直さざるを得ない | 見直すざるを得ない | 見直さざるが得ない	見直さざるを得ない
+705	ja	春___、朝晩はまだ冷えますね。	とはいう | だから | とはいえ | ので	とはいえ
+706	ja	そんな言い方をしたら、誤解___よ。	されかねない | されかねなく | するかねない | されかねる	されかねない
+707	ja	引き受けた___、正直自信がない。	もので | ものの | ものだ | からこそ	ものの
+708	ja	大切な友だちだ___、本当のことを言いたい。	ものの | からこそ | こそから | からも	からこそ
+709	ja	準備は早い___。	に越したことがある | に越すことはない | を越したことはない | に越したことはない	に越したことはない
+710	ja	実際に会ってみない___、何とも言えない。	ことにも | ことから | ことでは | ことには	ことには
+711	ko	저는 학생___.	이에요 | 예요 | 이예요 | 에요	이에요
+712	ko	이건 제 ___ 아니에요.	가방이 | 가방가 | 가방을 | 가방에	가방이
+713	ko	___ 한국 사람이에요.	저는 | 저은 | 저를 | 저가	저는
+714	ko	매일 아침을 ___.	먹어요 | 먹아요 | 먹요 | 먹으요	먹어요
+715	ko	___ 마셔요.	커피를 | 커피을 | 커피가 | 커피에	커피를
+716	ko	오늘은 시간이 ___.	없어요 | 안 있어요 | 있어요 | 아니에요	없어요
+717	ko	커피 두 잔 ___.	주세요 | 주요 | 드려요 | 줘요세요	주세요
+718	ko	저는 고기를 ___.	안 먹어요 | 먹어요 안 | 않 먹어요 | 먹지 안아요	안 먹어요
+719	ko	어제 영화를 ___.	봤어요 | 봐요 | 볼 거예요 | 보았요	봤어요
+720	ko	내일 친구를 ___.	만날 거예요 | 만났어요 | 만나을 거예요 | 만날 거에요	만날 거예요
+721	ko	제주도에 ___.	가고 싶어요 | 가고 싶다요 | 가 싶어요 | 가고 싶었요	가고 싶어요
+722	ko	한국어를 조금 ___.	할 수 있어요 | 하을 수 있어요 | 할 수 있다요 | 할 수 이어요	할 수 있어요
+723	ko	___ 아침을 먹었어요.	씻고 | 씻어고 | 씻으고 | 씻는고	씻고
+724	ko	과일을 ___ 시장에 가요.	사러 | 사으러 | 사려 | 사고러	사러
+725	ko	같이 ___?	먹을까요 | 먹까요 | 먹을게요 | 먹으까요	먹을까요
+726	ko	___ 공부해요.	도서관에서 | 도서관에 | 도서관을 | 도서관에게	도서관에서
+727	ko	비가 ___ 택시를 타요.	오니까 | 와서 | 오으니까 | 오기 때문에	오니까
+728	ko	___ 일찍 잤어요.	피곤해서 | 피곤했어서 | 피곤하어서 | 피곤하니까서	피곤해서
+729	ko	가게에 ___ 문을 닫았어요.	갔는데 | 갔은데 | 갔데 | 가서는데	갔는데
+730	ko	시간이 ___ 전화하세요.	있으면 | 있면 | 있어면 | 있는면	있으면
+731	ko	나중에 ___.	전화할게요 | 전화할께요 | 전화하을게요 | 전화핼게요	전화할게요
+732	ko	부산에 ___ 적이 있어요.	가 본 | 가 보는 | 가 볼 | 가 봤	가 본
+733	ko	시험이 ___ 때문에 못 나가요.	있기 | 있는 | 있어서 | 있음	있기
+734	ko	어디 ___?	가 | 가요 | 가세요 | 갑니까	가
+735	ko	할머니께서 ___.	주무세요 | 자세요 | 자요 | 잡니다	주무세요
+736	ko	오늘 ___.	바쁘대요 | 바쁘데요 | 바쁘래요 | 바쁜대요	바쁘대요
+737	ko	거기 음식이 정말 ___.	맛있더라고요 | 맛있드라고요 | 맛있대라고요 | 맛있더래고요	맛있더라고요
+738	ko	오늘 ___!	일요일이잖아요 | 일요일잖아요 | 일요일이자나요 | 일요일이지않아요	일요일이잖아요
+739	ko	어제 늦게까지 ___.	일했거든요 | 일하거든요 | 일했걸든요 | 일했거던요	일했거든요
+740	ko	버스를 ___.	놓칠 뻔했어요 | 놓칠 뻔해요 | 놓친 뻔했어요 | 놓칠 번했어요	놓칠 뻔했어요
+741	ko	알람이 안 ___ 늦었어요.	울리는 바람에 | 울린 바람에 | 울려서 바람에 | 울리는 바람애	울리는 바람에
+742	ko	___ 나중에 전화하세요.	바쁠 텐데 | 바쁜 텐데 | 바쁠 탠데 | 바쁘을 텐데	바쁠 텐데
+743	ko	자주 ___ 친해졌어요.	이야기하다 보니 | 이야기했다 보니 | 이야기하다 봐서 | 이야기하는 보니	이야기하다 보니
+744	ko	거의 다 ___.	끝난 셈이에요 | 끝난 샘이에요 | 끝났 셈이에요 | 끝난 셈해요	끝난 셈이에요
+745	ko	우산을 ___.	가져올 걸 그랬어요 | 가져올 걸 그래요 | 가져온 걸 그랬어요 | 가져올 껄 그랬어요	가져올 걸 그랬어요
+746	ko	운동을 ___ 자주 안 해요.	하기는 하는데 | 하기는 한데 | 하는 하는데 | 하기는 해서	하기는 하는데
+747	ko	___.	모르는 척했어요 | 모르는 척해요 | 몰르는 척했어요 | 모르기 척했어요	모르는 척했어요
+748	ko	그 영화 ___.	볼 만해요 | 보는 만해요 | 볼 만큼해요 | 보을 만해요	볼 만해요
+749	ko	열심히 ___ 합격했어요.	공부하더니 | 공부하드니 | 공부해더니 | 공부하든이	공부하더니
+750	ko	___ 일찍 나왔어요.	늦을까 봐 | 늦는까 봐 | 늦을가 봐 | 늦을까 봤	늦을까 봐
+751	ko	물 주세요, ___.		감사합니다
+752	ko	저는 ___, 걱정하지 마세요.	괜찮해요 | 괜찮아요 | 괜찮은요 | 괜찮이에요	괜찮아요
+753	ko	___, 문 좀 열어 주세요.		잠깐만요
+754	ko	저는 한국 ___.		사람이에요
+756	ko	___ 읽어요.	책를 | 책을 | 책이	책을
+757	ko	안녕하세요. 저는 ___입니다.		민수
+759	pt	Eu ___ coreano.	estou | sou | são | é	sou
+760	pt	___ bem, obrigada.	Está | Tenho | Estou | Sou	Estou
+761	pt	___ é grande e o quarto é pequeno.	A casa | As casa | Um casa | O casa	A casa
+762	pt	Eu ___ em São Paulo.	mora | moro | moramos | morar	moro
+763	pt	___ fica o banheiro?	Quanto | Como | Onde | O que	Onde
+764	pt	Eu ___ um pão de queijo.	quer | quero | queira | querer	quero
+765	pt	Você ___ água sem gás?	tem | tenho | está | é	tem
+766	pt	Eu ___ português muito bem.	nem falo | não fala | não falo | falo não	não falo
+767	pt	Ontem eu ___ até tarde.	trabalhava | trabalho | trabalhei | trabalhou	trabalhei
+768	pt	No sábado eu ___ à praia.	foi | ia | vou | fui	fui
+769	pt	___ no feriado.	Vai viajo | Vou viajo | Vou a viajar | Vou viajar	Vou viajar
+770	pt	___ uma farmácia.	Sou procurando | Estou procurando | Estou procurar | Estou procurado	Estou procurando
+771	pt	Eu ___ cozinhar no fim de semana.	gosto de | gosta de | gosto a | gosto	gosto de
+772	pt	O Rio é ___ Curitiba.	tão quente que | mais quente do que | mais quente como | mais quente de que	mais quente do que
+773	pt	Moro aqui ___ dois anos.	por | desde | fazem | faz	faz
+774	pt	Quando eu era criança, ___ no interior.	moro | morava | morarei | morei	morava
+775	pt	Eu estava saindo de casa quando ___ a chover.	começa | começava | começou | comece	começou
+776	pt	Espero que você ___ do presente.	gostou | goste | gosta | gostar	goste
+777	pt	Você ___ me ajudar com a mala?	poder | pôde | poderia | possa	poderia
+778	pt	Eu ___ mais tarde.	te liga | te ligo | ligo te | ligo-lhe te	te ligo
+779	pt	___ sair às oito.	A gente vamos | A gente vão | A gente vou | A gente vai	A gente vai
+780	pt	É o restaurante ___ a gente se conheceu.	o qual que | cujo | onde | quem	onde
+781	pt	Se eu ___ mais tempo, faria um curso de liderança.	tenho | teria | tiver | tivesse	tivesse
+782	pt	Quando você ___, me manda o relatório.	puder | possa que | pode | poderia	puder
+783	pt	Embora ___ caro, o curso vale o investimento.	foi | seja | é | ser	seja
+784	pt	É melhor a gente conversar antes de eles ___.	decidir eles | decidissem que | decidirem | decidem	decidirem
+785	pt	___ muito nas últimas semanas.	Tenho trabalhado | Trabalhei tenho | Tenho trabalhar | Tinha trabalho	Tenho trabalhado
+786	pt	Ele disse que ___ atrasado.	chega ia | ia chegar | ir chegar | vai chegou	ia chegar
+787	pt	___ muito disso hoje em dia.	Falou-se-se | Se falam-se | Fala-lhe | Fala-se	Fala-se
+788	pt	Quando cheguei, eles já ___.	tinham saído | tinham sair | saíram tinham | têm saído	tinham saído
+789	pt	A não ser que ___, a gente faz o churrasco no sábado.	choveu | chova | chove | chover	chova
+790	pt	Dá uma ___ nisso quando tiver um minutinho.	olhadão | olhadona | olhadinha | olhadinhas	olhadinha
+791	pt	___ me incomoda é a falta de comunicação.	O que | Quem | O qual | Que	O que
+792	pt	___ e-mail solicitar a prorrogação do prazo.	Venho de meio deste | Venho por meio deste | Vou por meio desse | Estou por meio deste	Venho por meio deste
+793	pt	Tu ___ na festa amanhã?	vou | vai | vamos | vais a	vai
+794	pt	Não é caro; ___, é uma pechincha.	aliás que | inclusive que | portanto | pelo contrário	pelo contrário
+795	ru	___, а она врач.	Я есть студент | Я студент | Меня студент | Я студента	Я студент
+796	ru	___ Анна.	Мне зовут | Меня зовёт | Меня зовут | Я зовут	Меня зовут
+797	ru	___ здесь метро?	Где | Когда | Что | Куда	Где
+798	ru	Это ___, а это мой телефон.	мой сумка | моя сумка | мою сумка | моё сумка	моя сумка
+799	ru	Я ___ в банке.	работает | работать | работаю | работаешь	работаю
+800	ru	___ брат и сестра.	Я есть | У меня есть | У мне есть | Меня есть	У меня есть
+801	ru	___ воду без газа?	Можно | Могу | Нужно ли | Можешь ли	Можно
+802	ru	Вчера я ___ в кино с подругой.	хожу | ходил | ходила | ходили я	ходила
+803	ru	Завтра я ___ дома.	буду работаю | будет работать | работал буду | буду работать	буду работать
+804	ru	___, пожалуйста, где остановка?	Скажу | Сказали | Сказать | Скажите	Скажите
+805	ru	Летом я ___ на море.	хочу поеду | хочу поехать | хочет поехать | хочу поехал	хочу поехать
+806	ru	Мы встретимся ___ в центре.	на площади | на площадью | на площадь | в площади	на площади
+807	ru	Я иду ___, тебе что-нибудь купить?	на магазин | в магазин | в магазине | к магазине	в магазин
+808	ru	___ в парк после обеда.	Дай пойдём | Давайте пошли бы | Давай пойти | Давай пойдём	Давай пойдём
+809	ru	Я не пришёл, ___ был занят.	чтобы | хотя | поэтому | потому что	потому что
+810	ru	Я долго читал эту книгу и наконец ___.	читаю | прочитал | прочитаю | читал	прочитал
+811	ru	___, этот сериал слишком длинный.	Меня кажется | Я кажется | Мне кажется | Мне кажусь	Мне кажется
+812	ru	Если бы у меня было время, я ___ с вами.	буду поехал | бы поехал | поеду | бы поеду	бы поехал
+813	ru	Это друг, ___ живёт в Петербурге.	которого | которая | который | что который	который
+814	ru	Он уже ___ домой, зайди завтра.	ушли | ушёл | ушла | уходил бы	ушёл
+815	ru	___ позвонить маме вечером.	Я надо | Меня надо | Мне надобно | Мне надо	Мне надо
+816	ru	Я пришёл пораньше, ___.	чтобы помог я | потому что помочь | чтобы помочь | чтобы помогу	чтобы помочь
+817	ru	Фильм ___ в восемь.	начинает | начинается ся | начинается | начинаться	начинается
+818	ru	Человек, ___ у окна, — наш новый директор.	сидящая | сидевший бы | сидя | сидящий	сидящий
+819	ru	___ домой, я сразу лёг спать.	Вернувшись | Вернуться | Возвращаясь бы | Вернулся	Вернувшись
+820	ru	Решение ___ ещё вчера.	было принят | было принято | был принят | приняло было	было принято
+821	ru	___ дождь, мы всё-таки пошли гулять.	Хотя на | Потому что | Несмотря на | Несмотря	Несмотря на
+822	ru	Он спросил, ___ она на встречу.	придёт ли | если придёт | ли придёт | придёт что	придёт ли
+823	ru	Этот вариант ___ для клиентов.	очень удобнее | гораздо удобнее | гораздо более удобнее | гораздо удобный	гораздо удобнее
+824	ru	___ начнём, тем лучше.	Чем раньшее | Чем рано | Как раньше | Чем раньше	Чем раньше
+825	ru	___ я так и не дочитал.	Книгу эту | Книгой этой | Книга эта | Эту книга	Книгу эту
+826	ru	Я ___ тебе говорил, ведь так и вышло.	бы | же | ли | ка	же
+827	ru	___, кто к нам пришёл.	Посмотрите-ка бы | Посмотреть-ка | Посмотри-ка | Посмотрел-ка	Посмотри-ка
+828	ru	Что-то мне сегодня не ___.	работается | работать | работаюсь | работаю	работается
+829	ru	___ сейчас на море!	Вот же | Вот бы | Вот если | Вот ли	Вот бы
+830	ru	___ ремонтом офис временно закрыт.	Связи с | В связи с | В связь с | В связи	В связи с
+831	ru	___ не хочешь? Посиди минутку.	Чаёк ли | Чайка | Чаю бы | Чайку	Чайку
+832	th	ผม___นักเรียนครับ	อยู่ | เป็น | คือว่า | มี	เป็น
+833	th	ฉัน___มินจีค่ะ	เรียก | มีชื่อว่า | ชื่อ | เป็นชื่อ	ชื่อ
+834	th	อันนี้เท่าไร___	คะ | ไหม | หรือ | ค่ะ	คะ
+835	th	อาหารนี้เผ็ด___ครับ	ไม่ | ไหม | แล้ว | อะไร	ไหม
+836	th	___ค่ะ	เผ็ดไม่ | ไม่ใช่เผ็ด | ไม่เผ็ด | ไม่มีเผ็ด	ไม่เผ็ด
+837	th	ห้องน้ำอยู่___ครับ	อะไร | ที่ไหน | ไหม | เมื่อไร	ที่ไหน
+838	th	บ้านผม___ที่โซลครับ	อยู่ | เป็น | มี | คือ	อยู่
+839	th	___น้ำเปล่าหนึ่งขวดครับ	อยาก | ช่วย | ขอ | ให้	ขอ
+840	th	ผมกินข้าว___ครับ	กำลัง | จะ | แล้ว | ยัง	แล้ว
+841	th	พรุ่งนี้ฉัน___ไปเชียงใหม่ค่ะ	แล้ว | เคย | กำลังแล้ว | จะ	จะ
+842	th	ฉัน___หน้าสถานีค่ะ	อยู่กำลังรอ | กำลังรอแล้ว | รอกำลังอยู่ | กำลังรออยู่	กำลังรออยู่
+843	th	___ไปทะเลครับ	เคย | อยาก | จะอยาก | ชอบอยาก	อยาก
+844	th	___ครับ	ช่วยเปิดแอร์หน่อย | เปิดช่วยแอร์หน่อย | ช่วยหน่อยเปิดแอร์ | หน่อยเปิดแอร์ช่วย	ช่วยเปิดแอร์หน่อย
+845	th	ไปกินข้าวด้วย___	กันแล้ว | กันไหม | ไหมกัน | กันไม่	กันไหม
+846	th	___ไปภูเก็ตไหมคะ	แล้ว | กำลัง | จะ | เคย	เคย
+847	th	วันนี้ไม่ไป___ฝนตกครับ	ถ้า | จึงว่า | แต่ | เพราะ	เพราะ
+848	th	ถ้าฝนตก เรา___อยู่บ้านดูหนัง	เพราะ | ก็ | จึงแต่ | แต่	ก็
+849	th	___กินข้าวเสร็จ เราไปเดินเล่นที่ตลาดน้ำ	ระหว่างแล้ว | ก่อนที่ | หลังจากที่ | จนกว่า	หลังจากที่
+850	th	ร้าน___เราไปเมื่อวานอร่อยมาก	ใน | ที่ | ซึ่งที่ | ของ	ที่
+851	th	ผม___ภาคนี้สนุกกว่าภาคแรกครับ	คิดถึง | ว่าคิด | คิดว่า | คิดเป็น	คิดว่า
+852	th	เชียงใหม่อากาศเย็น___กรุงเทพฯ	มาก | กว่า | ที่สุด | เท่า	กว่า
+853	th	ฉันอ่านภาษาไทย___นิดหน่อยค่ะ	เป็นได้ | แล้ว | ไหม | ได้	ได้
+854	th	หัวหน้า___ผมส่งรายงานพรุ่งนี้	โดย | ได้ | ให้ | ถูก	ให้
+855	th	ฉันเรียนภาษาไทย___ค่ะ	แล้วสองปีมา | มาแล้วสองปี | มาสองปีแล้ว | สองปีมาแล้วมา	มาสองปีแล้ว
+856	th	ถึงแม้ว่าราคาจะแพง ___คุณภาพดีกว่ามากครับ	เพราะ | ก็เลย | ถ้า | แต่	แต่
+857	th	เขา___หัวหน้าตำหนิต่อหน้าทุกคน	ถูก | โดยถูก | ได้รับ | ให้	ถูก
+858	th	เราจะแก้ปัญหานี้___เพิ่มคนอีกสองคน	เพื่อโดย | โดย | ถูก | ให้	โดย
+859	th	รอ___ลูกค้าจะตอบกลับนะคะ	ถ้า | ตั้งแต่ | จนกว่า | หลังจาก	จนกว่า
+860	th	โครงการนี้___เสร็จไม่ทันสิ้นเดือน	คง | กำลัง | เคย | ได้	คง
+861	th	ไม่ว่าจะเลือกแบบไหน ___ต้องใช้เวลาอย่างน้อยหนึ่งเดือน	จึงว่า | ก็ | ถ้าก็ | แต่	ก็
+862	th	___ผมทราบ ลูกค้ายังไม่ได้ตัดสินใจครับ	จนกว่า | ถึงแม้ | เพราะว่า | เท่าที่	เท่าที่
+863	th	___เสียโอกาส	แม้รอนาน ยิ่ง | ยิ่งรอนาน แต่ | รอนานยิ่ง ยิ่ง | ยิ่งรอนาน ยิ่ง	ยิ่งรอนาน ยิ่ง
+864	th	___ขอขอบพระคุณทุกท่านที่มาร่วมงานในวันนี้	ดิฉัน | หนู | กู | เค้า	ดิฉัน
+865	th	___เป็นโอกาสที่ดีมากสำหรับทีมเรา	ว่าถือ | ถือว่า | ถือ | ถือเป็นว่า	ถือว่า
+866	th	ไอเดียนี้___เสี่ยงไปหน่อยนะครับ	มากที่สุด | ที่สุด | ออกจะ | ออกไป	ออกจะ
+867	th	เขาพูดเร็ว___ไม่มีใครตามทัน	เสียจน | แต่จน | เพราะ | จนเสีย	เสียจน
+868	th	งานนี้ต้อง___ อย่าเพิ่งใจร้อน	เป็นไปค่อยค่อย | ค่อยเป็นค่อยไป | ค่อยไปค่อยเป็น | ค่อยค่อยเป็น	ค่อยเป็นค่อยไป
+869	th	ก็บอกแล้วไง___ ว่าไม่ต้องรีบหรอก	คะ | ล่ะ | หรือเปล่า | ไหม	ล่ะ
+870	th	___ครั้งนี้ต้องอาศัยความกล้าพอสมควร	ความตัดสินใจ | การความตัดสิน | ตัดสินใจการ | การตัดสินใจ	การตัดสินใจ
+871	th	___ ขึ้นอยู่กับงบประมาณของปีหน้าด้วย	เพราะฉะนั้นว่า | ถึงแม้ว่า | ทั้งนั้นทั้งนี้ | ทั้งนี้ทั้งนั้น	ทั้งนี้ทั้งนั้น
+872	vi	Tôi ___ Kim.	có | là | thì | ở	là
+873	vi	___ tên là gì?	Nó | Em ấy | Chị | Tôi	Chị
+874	vi	Anh có khỏe ___?	không | gì | đâu | chưa	không
+875	vi	Tôi ___.	hiểu không | không hiểu | không có hiểu không | chưa không hiểu	không hiểu
+876	vi	Cái này ___ tiền?	gì | đâu | bao nhiêu | ai	bao nhiêu
+877	vi	Cho tôi hai ___ này.	con xoài | quả xoài | cái quả xoài | xoài quả	quả xoài
+878	vi	Ở đây ___ nhà vệ sinh không?	có | là | ở | được	có
+879	vi	Tôi ___ Hà Nội.	có | đến ở | ở | là	ở
+880	vi	Hôm qua tôi ___ chợ với mẹ.	đang đi | sẽ đi | đã đi | đi đã	đã đi
+881	vi	Cuối tuần này mình ___ quê.	đã về | về sẽ | vừa về | sẽ về	sẽ về
+882	vi	Em ___ ở cổng trường.	sẽ đã đợi | vừa đang đợi | đợi đang | đang đợi	đang đợi
+883	vi	Tôi ___ Hội An.	đi muốn | muốn đi | muốn là đi | thích muốn đi	muốn đi
+884	vi	___ xuống ở đây.	Làm ơn cho tôi | Làm ơn tôi cho | Tôi làm ơn cho | Cho làm ơn tôi	Làm ơn cho tôi
+885	vi	Mình đi xem phim ___.	không nhé | nhé | chưa | à chưa	nhé
+886	vi	Anh ăn cơm ___?	sẽ | đã | rồi chưa không | chưa	chưa
+887	vi	Vì trời mưa ___ tôi ở nhà.	thì nếu | mà vì | nhưng | nên	nên
+888	vi	Đà Lạt mát ___ Hà Nội nhiều.	bằng | hơn | như | nhất	hơn
+889	vi	Hôm qua tôi ___ mất ví.	có | được | bị | đã được	bị
+890	vi	Nếu mai trời đẹp ___ mình đi leo núi.	mà nếu | thì | nên | nhưng	thì
+891	vi	Tuy hơi xa ___ quán này rất ngon.	thì | nên | nhưng | vì	nhưng
+892	vi	___ ăn sáng, chúng tôi ra biển.	Sau rồi khi | Sau khi | Trước khi | Khi sau	Sau khi
+893	vi	Tôi ___ anh ấy nói đúng.	nghĩ về là | là nghĩ | nói nghĩ | nghĩ là	nghĩ là
+894	vi	Tôi ___ về đến nhà.	đang sắp | sẽ vừa | vừa | sắp	vừa
+895	vi	Kế hoạch này không những rẻ ___ nhanh.	nhưng còn | mà thôi | còn mà | mà còn	mà còn
+896	vi	Dù giá cao, nhiều người ___ mua.	vẫn | chưa | nên | thì	vẫn
+897	vi	Công ty mở lớp đào tạo ___ nâng cao chất lượng.	nên | để | vì | mà để	để
+898	vi	Thành phố ___ tắc.	đông càng, giao thông càng | rất đông, giao thông càng | càng đông, giao thông càng | càng đông, giao thông hơn	càng đông, giao thông càng
+899	vi	Ý tưởng này cũng hay, nhưng ___ khó làm.	hơi | lắm | rất quá | nhất	hơi
+900	vi	Về ngân sách ___ chúng ta cần bàn thêm.	nên | thì | mà thì | là	thì
+901	vi	___, chúng ta chưa có đủ dữ liệu.	Vì vậy | Do đó | Ngoài ra | Tuy nhiên	Tuy nhiên
+902	vi	___ anh ấy là người đề xuất ý tưởng này.	Chính | Chỉ | Ngay | Đến cả	Chính
+903	vi	Em đã bảo rồi ___.	không | mà | chưa | à	mà
+904	vi	___ lỗi của em đâu.	Sao lại có | Phải có | Có phải | Có phải không	Có phải
+905	vi	___ doanh nghiệp nhỏ, đây là một thách thức lớn.	Đối với | Trong khi | Do | Nhằm	Đối với
+906	vi	___ em không muốn, nhưng thời gian không cho phép.	Không là phải | Không phải là | Có phải là | Phải không là	Không phải là
+907	vi	Hôm nay trời lành lạnh, gió thổi ___.	nhẹ nhẹ nhàng | nhè nhẹ | nhè | nhẹ nhè	nhè nhẹ
+908	zh	我___韩国人。	在 | 是 | 很 | 有	是
+909	zh	你是学生___？	吧了 | 么呢 | 吗 | 呢	吗
+910	zh	我___老师。	不是 | 是不 | 没有是 | 没是	不是
+911	zh	你叫___名字？	哪儿 | 什么 | 多少 | 谁	什么
+912	zh	___多少钱？	这么 | 这个个 | 这个 | 那儿	这个
+913	zh	这儿___地铁站吗？	是 | 有 | 没 | 在有	有
+914	zh	今天___。	很热 | 是热 | 热很 | 很是热的	很热
+915	zh	我昨天看___一个电影。	着 | 过了了 | 了 | 的了	了
+916	zh	我___上海玩儿。	去想 | 想要了去 | 会想 | 想去	想去
+917	zh	我___起床。	七点每天起床 | 每天起床七点 | 起床每天七点 | 每天七点	每天七点
+918	zh	他___上班。	上班在公司 | 在公司 | 公司在 | 在上班公司	在公司
+919	zh	这儿___拍照吗？	可以 | 要可 | 想 | 会	可以
+920	zh	你喝茶___喝咖啡？	和 | 还是 | 或者 | 也	还是
+921	zh	我们___去吧。	骑地铁 | 地铁坐 | 开地铁 | 坐地铁	坐地铁
+922	zh	我去___西安，那儿的面特别好吃。	在 | 过 | 过了了 | 着	过
+923	zh	这个套餐___那个便宜，可是流量没有那么多。	没有比 | 跟 | 比 | 比较	比
+924	zh	我还没___今天的工作。	做好了完 | 做完 | 完做 | 做了完	做完
+925	zh	你中文说___真好。	地 | 的 | 得 | 了	得
+926	zh	我___开会呢，等会儿给你打电话。	正在了 | 正在 | 已经 | 正要了	正在
+927	zh	因为下雨，___航班推迟了。	但是 | 如果 | 虽然 | 所以	所以
+928	zh	请___房卡给我。	让 | 给把 | 把 | 被	把
+929	zh	现在出发还___。	来不及 | 来及得 | 来得及 | 得来及	来得及
+930	zh	虽然在家工作很方便，___沟通效率不一定高。	所以 | 而且 | 因为 | 但是	但是
+931	zh	这个方案不但省钱，___更容易执行。	而且 | 可是 | 但是 | 所以	而且
+932	zh	我们的提议___老板否决了。	让被 | 被 | 把 | 给把	被
+933	zh	只有大家都同意，我们___能开始。	就 | 也才 | 才 | 都	才
+934	zh	___你没看过那条新闻吗？	难道 | 怎么难 | 到底 | 是不是难道	难道
+935	zh	我突然___，合同还没签。	想下去 | 想起来 | 起来想 | 想出来	想起来
+936	zh	既然已经晚了，___别着急了。	也就是 | 才 | 但是 | 就	就
+937	zh	___目前的情况，我们建议推迟签约。	鉴于 | 鉴 | 以便 | 从而	鉴于
+938	zh	哪怕只有一点希望，我们___要试试。	才 | 也 | 就 | 都也	也
+939	zh	这件事___他自己都没想到。	被连 | 把 | 连 | 就	连
+940	zh	这个价格___有点儿难办，不妨再商量商量。	恐怕 | 怕恐 | 不妨了 | 一定	恐怕
+941	zh	他做事一向___。	而废半途 | 半途而废 | 半途废而 | 半废途而	半途而废
+942	zh	你先___，不好吃再说。	尝了尝了 | 尝尝 | 尝一尝了 | 尝尝尝	尝尝

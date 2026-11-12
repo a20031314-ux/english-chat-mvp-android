@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { PreparedItem, PreparedVariant } from "./preparedQuiz";
 import { ladderFor } from "./stages/index";
 import { apiUrl } from "../apiBase";
+import needsMeaningBook from "./problems/needs-meaning.json";
 
 type Raw = {
   kind?: string;
@@ -63,11 +64,17 @@ async function withVariants(language: string, ui: string, items: PreparedItem[])
     const variants = raw.flatMap((one): PreparedVariant[] => {
       const gloss = ui === "ko" ? one.ko : one.en;
       const why = ui === "ko" ? one.whyKo : one.whyEn;
-      return gloss && why && one.answer && one.line && one.options?.length ? [{ before: one.before ?? "", after: one.after ?? "", answer: one.answer, options: one.options, line: one.line, gloss, why }] : [];
+      return gloss && why && one.answer && one.line && one.options?.length ? [{ before: one.before ?? "", after: one.after ?? "", answer: one.answer, options: one.options, line: one.line, gloss, why, ...(NEEDS.has(`${language}|${one.line}`) ? { needsMeaning: true as const } : {}) }] : [];
     });
     return variants.length ? { ...item, variants } : item;
   });
 }
+
+/**
+ * 해석 없이는 다른 보기도 맞는 문장(problems/needs-meaning.json — 에이전트 둘이 따로 보고 하나라도 "갈린다"면 넣음, 2026-11-12).
+ * 3단계부터는 이 문장만 해석을 먼저(preparedQuiz.ts meaningFirst). 문장을 바꾸거나 더하면 scripts/needs-meaning.mjs로 다시.
+ */
+const NEEDS = new Set(Object.entries(needsMeaningBook as Record<string, string[]>).flatMap(([language, lines]) => lines.map((line) => `${language}|${line}`)));
 
 const cache = new Map<string, Promise<PreparedItem[] | null>>();
 
@@ -112,6 +119,7 @@ async function build(language: string, files: (() => Promise<{ default: Record<s
         options: raw.options,
         line: raw.line,
         why: raw.why,
+        ...(NEEDS.has(`${language}|${raw.line}`) ? { needsMeaning: true as const } : {}),
       });
     }
   }

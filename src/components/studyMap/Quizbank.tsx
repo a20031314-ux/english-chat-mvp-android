@@ -323,7 +323,7 @@ export function Quizbank({
     const current = random ? 1 + Math.floor(Math.random() * 4) : gaugeRung(Math.min(4, rungOf(ladder, key)), gauge);
     const cue = gaugeCue(gauge);
     const made = prep
-      ? grammarAsk(turnFresh(prep, preparedTurn(events, key), askedTexts(language, key)), current, spotOf(key), language, { cue, numbered: gaugeNumbered(gauge) })
+      ? grammarAsk(turnFresh(prep, preparedTurn(events, key), askedTexts(language, key)), current, spotOf(key), language, { cue, numbered: gaugeNumbered(gauge), stage })
       : key.startsWith("e|")
         ? expressionAsk(language, key, current, `${day}-${round}`, cue)
         : null;
@@ -450,7 +450,7 @@ export function Quizbank({
       const seen = new Set(askedTexts(language, "para"));
       const pool = parasAt(language, level).filter((one) => !seen.has(one.lines.join("\n")));
       const item = pool[round % Math.max(1, pool.length)];
-      const question = item ? paragraphQuestion(item, language) : null;
+      const question = item ? paragraphQuestion(item, language, stage <= 2) : null;
       if (item && question && question.kind === "spots") {
         noteAsked(language, "para", item.lines.join("\n"));
         questions.push(question);
