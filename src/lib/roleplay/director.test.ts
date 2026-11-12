@@ -20,6 +20,7 @@ import {
   tutorMessages,
   tutorSystemPrompt,
   type DirectorRequest,
+  redoFormSlip,
 } from "./director.ts";
 
 const cafe = findScenario("cafe-order")!;
@@ -1567,4 +1568,24 @@ test("수업 통화 첫 침묵: 앱 언어 '들렸어요?'를 앞에 붙이고, 
   assert.equal(second?.say && "text" in second.say ? second.say.text : "", "Hoy estoy…");
   const free = parse(raw, { heard: "", nodeId: "talk", targetLanguage: "es", nativeLanguage: "ar" }, open);
   assert.equal(free?.say && "text" in free.say ? free.say.text : "", "¿Qué tal tu día?");
+});
+
+test("튜터 수업: 다시 말해 보기에서 같은 낱말의 다른 꼴이면 pass라도 아직(miss) — 칭찬 대신 한 번 더", () => {
+  const slipped = parse(
+    { say: "Nice, you got it! What else did you do?", retry: "pass", assessment: "on_track", next: "free" },
+    { coach: true, heard: "today i had many meeting at the office", nodeId: "talk", redo: "Today I had many meetings at the office.", redoTries: 1 },
+    open,
+  );
+  assert.equal(slipped?.retry, "miss");
+  const spoken = slipped && "text" in slipped.say ? slipped.say.text : "";
+  assert.ok(spoken.includes("Today I had many meetings at the office."));
+  assert.ok(!/got it/i.test(spoken));
+  const fine = parse(
+    { say: "Nice, you got it! What else did you do?", retry: "pass", assessment: "on_track", next: "free" },
+    { coach: true, heard: "today i had many meetings at the office", nodeId: "talk", redo: "Today I had many meetings at the office.", redoTries: 1 },
+    open,
+  );
+  assert.equal(fine?.retry, "pass");
+  assert.equal(redoFormSlip("Ayer comí en casa de mi madre.", "ayer como en casa de mi madre"), true);
+  assert.equal(redoFormSlip("毎朝コーヒーを飲みます。", "毎朝コーヒーを飲みます"), false);
 });

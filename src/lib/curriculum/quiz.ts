@@ -20,6 +20,7 @@ import { plainPinyin, readingOf, tonedPinyinMatch } from "./readings/index.ts";
 import { grownDecoys, grownItems } from "./qbank.ts";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor, type ScriptGloss } from "./stageScripts.ts";
+import { soundsAlike } from "./loanword.ts";
 import { segmentWords, isSpaceless } from "../wordSegments.ts";
 import { hasLatin, romajiToHiragana, sameKana } from "../romaji.ts";
 
@@ -1322,6 +1323,8 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   if (!source?.wordGloss || !pool) return null;
   const answer = key.slice(2);
   const gloss = source.wordGloss.trim();
+  // 뜻 풀이가 그 말을 소리 나는 대로 적은 것(micrófono ↔ ميكروفون, TV ↔ テレビ)이면 뜻 고르기가 거저 — 문제로 안 낸다(사용자 2026-11-12).
+  if (soundsAlike(answer, gloss)) return null;
   const norm = (text: string) => text.normalize("NFC").toLocaleLowerCase().replace(/[\s.,;:!?。、]+/gu, " ").trim();
   const others: { key: string; gloss: string; pos?: string; topic?: string; at: number }[] = [];
   let at = -1;

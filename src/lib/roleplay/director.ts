@@ -1,6 +1,7 @@
 import { gameRules, roundOverOf, type CallGame } from "./callGames.ts";
 import { chatPartnerForLanguage, type TutorGender } from "../chatPartner.ts";
 import { quotesOwnLine } from "./noteCheck.ts";
+import { compareToTarget, formSlip } from "./practice.ts";
 import { personaBrief } from "../tutorPersona.ts";
 import {
   interfaceLanguageName,
@@ -769,6 +770,30 @@ function lastTurn(request: DirectorRequest): boolean {
  * from one turn to the next and can be served from the prompt cache.
  */
 /** 수업 통화 첫 침묵에 앞에 붙이는 "제 말 들렸어요?" — 학습자 앱 언어(앱 언어 = 감독 요청 nativeLanguage). */
+/** 다시 말해 보기에서 꼴이 아직 다를 때 앞에 붙이는 앱 언어 한 마디(뒤에 고친 문장). */
+export const ALMOST_AGAIN: Partial<Record<string, string>> = {
+  ko: "거의 됐어요. 한 번 더요.",
+  en: "Almost. One more time.",
+  es: "Casi. Otra vez.",
+  ja: "おしい。もう一度。",
+  zh: "差一点。再说一次。",
+  vi: "Gần đúng rồi. Thêm lần nữa nhé.",
+  fr: "Presque. Encore une fois.",
+  it: "Quasi. Ancora una volta.",
+  pt: "Quase. Mais uma vez.",
+  ru: "Почти. Ещё раз.",
+  id: "Hampir. Sekali lagi.",
+  ar: "تقريبًا. مرة أخرى.",
+  th: "เกือบแล้ว อีกครั้งนะ",
+  hi: "लगभग। एक बार और।",
+};
+
+/** 기다리던 문장(redo)과 들은 말 사이에 같은 낱말의 다른 꼴이 있나. */
+export function redoFormSlip(redo: string, heard: string): boolean {
+  if (!redo.trim() || !heard.trim()) return false;
+  return compareToTarget(redo, heard).outcomes.some((outcome) => outcome.kind === "changed" && formSlip(outcome.word, outcome.heardAs));
+}
+
 export const CAUGHT_IT: Partial<Record<string, string>> = {
   ko: "제 말 들렸어요?",
   en: "Did you catch that?",
@@ -1512,7 +1537,7 @@ export function parseDirection(
   // 튜터 수업: 다시 말해 보기의 어디쯤인가. ask는 다시 말할 문장(better·meant)이 있을 때만 — 없으면 앱이 보여 줄 게 없다.
   const named = typeof record.retry === "string" ? (record.retry.trim().toLowerCase() as Retry) : "";
   const waiting = Boolean(request.redo?.trim());
-  const retry: Retry | "" =
+  const named0: Retry | "" =
     !coaching || !named || !RETRIES.includes(named) || !request.heard.trim()
       ? ""
       : named === "ask" && !(better || meant)
@@ -1524,6 +1549,10 @@ export function parseDirection(
             named === "ask" && waiting && sameWords(better || meant, request.redo ?? "")
             ? "miss"
             : named;
+  // 모델이 pass라 해도 기다리던 문장의 낱말을 다른 꼴로 말했으면(meetings → meeting, trabajar → trabajo) 아직 — "Nice, you got it"이 틀린 말을 칭찬함(체감 점검 2026-11-12).
+  // 마지막 시도는 모델 말(괜찮다며 넘어감)을 그대로 둔다.
+  const slipped = named0 === "pass" && waiting && !lastRedoTry(request) && redoFormSlip(request.redo ?? "", request.heard);
+  const retry: Retry | "" = slipped ? "miss" : named0;
   const givingUp = retry === "miss" && lastRedoTry(request);
   // 튜터 수업의 note는 틀린 곳을 짚는 한 줄(앱 언어) — 카드에도 보이고, 고쳐 주는 차례에는 그 말을 먼저 소리 낸다.
   // 학습 언어로만 쓴 설명은 못 읽을 수 있어 뺀다(givesThemWords와 같은 까닭).
@@ -1534,7 +1563,10 @@ export function parseDirection(
   const offering = retry === "ask" && Boolean(better) && !meant && record.offer === true;
   // 큰 실수를 고쳐 주는 차례: 맞장구를 버리고, 짚는 말 → 고친 문장(→ 다시)만 소리 낸다.
   // 건네기(offer)·아직(miss)은 예전처럼, 문장이 빠졌을 때만 뒤에 붙인다.
-  if (retry === "ask" && !offering && (better || meant)) {
+  if (slipped) {
+    const lead = request.nativeLanguage !== request.targetLanguage ? ALMOST_AGAIN[request.nativeLanguage] ?? "" : "";
+    say = { text: [lead, request.redo?.trim() ?? ""].filter(Boolean).join(" ") };
+  } else if (retry === "ask" && !offering && (better || meant)) {
     const spoken = spokenCoachFix(text, coachNote, meant || better);
     if (spoken) say = { text: spoken };
   } else {
