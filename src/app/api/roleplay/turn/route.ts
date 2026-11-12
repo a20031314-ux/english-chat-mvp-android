@@ -18,6 +18,9 @@ import {
   parseDirection,
   AIM_MAX_CHARS,
   readLesson,
+  lessonDrilled,
+  lessonRedoPrompt,
+  undrilled,
   readSpokenLines,
   recordedLines,
   tutorMessages,
@@ -472,6 +475,26 @@ export async function POST(request: NextRequest) {
       request: turn,
     });
   /**
+   * 수업 틀을 고쳐 버린 차례는 한 번 다시 쓰게 한다(lessonDrilled — 드물 때만 한 번 더 부름). 그래도 고치면 고친 칸을 비운다.
+   * 받은 줄(lead)은 맞장구라 그대로 둔다.
+   */
+  const keepLesson = async (direction: Direction, text: string): Promise<{ direction: Direction; text: string }> => {
+    if (!turn.lesson || !lessonDrilled(turn, direction)) return { direction, text };
+    try {
+      const again = await client.chat.completions.create({
+        ...ask,
+        messages: [...ask.messages, { role: "assistant" as const, content: text }, { role: "system" as const, content: lessonRedoPrompt(turn.lesson.pattern) }],
+      });
+      void recordTokens("roleplayTurn", again.usage);
+      const redoText = again.choices[0]?.message?.content ?? "";
+      const redone = parse(redoText);
+      if (redone && !lessonDrilled(turn, redone)) return { direction: redone, text: redoText };
+    } catch (error) {
+      console.error("[roleplay/turn] lesson redo", error);
+    }
+    return { direction: undrilled(direction), text };
+  };
+  /**
    * The answer as spoken, for a pack turn: the tutor's reaction and the pack
    * question it picked (pack/turn.ts). Called after noteDirection, so what is
    * kept of the tutor's line is what it wrote.
@@ -499,11 +522,12 @@ export async function POST(request: NextRequest) {
     if (!wantsStream) {
       const completion = await client.chat.completions.create(ask);
       void recordTokens("roleplayTurn", completion.usage);
-      const content = completion.choices[0]?.message?.content ?? "";
-      const direction = parse(content);
-      if (!direction) {
+      const first = completion.choices[0]?.message?.content ?? "";
+      const parsed = parse(first);
+      if (!parsed) {
         return jsonWithCors(request, { error: "NO_DIRECTION" }, { status: 502 });
       }
+      const { direction, text: content } = await keepLesson(parsed, first);
       noteDirection(direction);
       const spoken = playPack(direction, content);
       return jsonWithCors(
@@ -556,12 +580,13 @@ export async function POST(request: NextRequest) {
               write({ lead });
             }
           }
-          const direction = parse(text);
-          if (!direction) {
+          const parsed = parse(text);
+          if (!parsed) {
             write({ error: "NO_DIRECTION" });
           } else {
-            noteDirection(direction);
-            write({ direction: forThisBuild(playPack(direction, text)) });
+            const kept = await keepLesson(parsed, text);
+            noteDirection(kept.direction);
+            write({ direction: forThisBuild(playPack(kept.direction, kept.text)) });
           }
         } catch (error) {
           console.error("[roleplay/turn] mid-answer", error);

@@ -14,6 +14,7 @@ import { languageEvidence } from "../inputLanguage.ts";
 import { explanationInLearningLanguage } from "../languageLearningAnalysis.ts";
 import { targetLanguageFocusHints, tutorSpeechRules } from "../languageFocus.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
+import { frameUsed } from "../curriculum/scriptBank.ts";
 import { FN_GROUPS, type FnGroup } from "../curriculum/fnGroups.ts";
 import { LEAD_HOW, type Heard, type Lead, type LeadHow } from "./turnTally.ts";
 import {
@@ -1692,6 +1693,36 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
     }
   })();
   return [head, recast, step, lesson.step === "ask" ? "" : move].filter(Boolean).join("\n");
+}
+
+/**
+ * 튜터가 수업 틀을 고쳐 버렸나(운영 es·en 2026-11-12 — 지시만으로는 "Me llama" → 다시 말해 보기가 남음).
+ * 학습자 말에는 틀이 없고 고친 문장에는 있으면, 그 고침은 틀에 대한 것이다. 틀 밖 큰 실수(학습자 말에 틀이 있음)는 그대로(B안).
+ */
+export function lessonDrilled(request: Pick<DirectorRequest, "lesson" | "heard" | "missed">, direction: Pick<Direction, "better" | "meant" | "retry" | "offer">): boolean {
+  const pattern = request.lesson?.pattern;
+  const heard = request.heard.trim();
+  if (!pattern || !heard || request.missed) return false;
+  const fixed = (direction.meant || direction.better || "").trim();
+  if (!fixed) return false;
+  return frameUsed(pattern, fixed) && !frameUsed(pattern, heard);
+}
+
+/** 고쳐 버린 차례를 다시 쓰게 하는 한 줄(같은 대화 뒤에 붙임). */
+export function lessonRedoPrompt(pattern: string): string {
+  return `Your answer above corrected the lesson pattern "${pattern}". That is not allowed. Write this turn again, as the same JSON: "note", "better", "meant", "smoother" and "retry" empty and "offer" false — say back what they meant using the pattern, naturally, as part of the conversation, then carry on with a question.`;
+}
+
+/** 다시 써도 고쳐 버렸으면: 고친 칸을 다 비우고 고친 문장만 말한다(대화가 끊기지 않게, 드묾). */
+export function undrilled(direction: Direction): Direction {
+  const fixed = (direction.meant || direction.better || "").trim();
+  const rest = { ...direction };
+  delete rest.better;
+  delete rest.meant;
+  delete rest.retry;
+  delete rest.offer;
+  delete rest.smoother;
+  return { ...rest, note: "", say: fixed ? { text: fixed } : direction.say };
 }
 
 /** 자유대화 채우기 측정 읽기: aimCheck를 보낸 그냥 대화 차례에서만, 학습자 말이 있을 때만. 모르는 값은 버린다. */

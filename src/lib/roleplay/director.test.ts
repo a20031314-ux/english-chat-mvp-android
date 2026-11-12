@@ -23,6 +23,8 @@ import {
   redoFormSlip,
   readLesson,
   lessonRules,
+  lessonDrilled,
+  undrilled,
 } from "./director.ts";
 
 const cafe = findScenario("cafe-order")!;
@@ -1665,4 +1667,23 @@ test("수업 통화 첫 마디는 침묵 차례가 아니다 — '들렸어요?'
   assert.equal(first && "text" in first.say ? first.say.text : "", "¡Hola! Me llamo Mateo. ¿Cómo te llamas?");
   const silent = parseDirection(raw, context({ history: [{ who: "tutor", text: "¿Cómo te llamas?" }, { who: "learner", text: "Ana" }, { who: "tutor", text: "¿De dónde eres?" }] }));
   assert.match(silent && "text" in silent.say ? silent.say.text : "", /^제 말 들렸어요\?/, "말을 한 뒤의 침묵은 그대로");
+});
+
+test("수업 틀을 고쳐 버린 차례 알아보기 — 틀 밖 큰 실수는 그대로(es·en·ja)", () => {
+  const es = { lesson: { pattern: "Me llamo ___.", meaning: "", words: [], step: "draw" as const }, missed: false };
+  assert.equal(lessonDrilled({ ...es, heard: "Me llama Ana." }, { better: "Me llamo Ana.", retry: "ask" }), true, "틀 안 꼴 실수");
+  assert.equal(lessonDrilled({ ...es, heard: "Me llamo Ana y ayer yo ir al cine." }, { better: "Me llamo Ana y ayer fui al cine.", retry: "ask" }), false, "틀은 썼고 큰 실수는 밖");
+  assert.equal(lessonDrilled({ ...es, heard: "Ayer yo ir al cine." }, { better: "Ayer fui al cine.", retry: "ask" }), false);
+  assert.equal(lessonDrilled({ ...es, heard: "Me llama Ana." }, {}), false, "고친 게 없으면");
+  const en = { lesson: { pattern: "I'm from ___.", meaning: "", words: [], step: "draw" as const }, missed: false };
+  assert.equal(lessonDrilled({ ...en, heard: "I from Osaka." }, { better: "I'm from Osaka.", retry: "ask" }), true);
+  const ja = { lesson: { pattern: "___から来ました。", meaning: "", words: [], step: "draw" as const }, missed: false };
+  assert.equal(lessonDrilled({ ...ja, heard: "韓国から来る" }, { meant: "韓国から来ました。" }), true, "띄어쓰기 없는 글자");
+  assert.equal(lessonDrilled({ lesson: undefined, missed: false, heard: "I from Osaka." }, { better: "I'm from Osaka." }), false, "수업 소재 없으면 지금 수업 교정");
+});
+
+test("다시 써도 고쳐 버렸으면 고친 칸을 비우고 고친 문장만", () => {
+  const cleared = undrilled({ assessment: "on_track", say: { text: "تصريف الفعل: Me llamo Ana. Repítelo." }, note: "تصريف الفعل", next: { free: true } as never, better: "Me llamo Ana.", retry: "ask", offer: true });
+  assert.deepEqual([cleared.better, cleared.retry, cleared.offer, cleared.note], [undefined, undefined, undefined, ""]);
+  assert.deepEqual(cleared.say, { text: "Me llamo Ana." });
 });
