@@ -157,10 +157,9 @@
     "value": 0
   },
   "my": {
-    "_설명": "My 끝 전면 광고 어림(2026-11-09 개편에 맞춤 — hub/app/ADS.md): Quizbank 10문제 묶음 경계 quizBreaksPerDay번(쓰는 날 0.8), 넘겨 보기 묶음 끝을 닫을 때 flipEndsPerDay번(0.15), 📏 실력 확인 결과를 닫을 때 한 달 skillChecksPerMonth번(14일마다 ▶가 밝지만 무료가 끝까지 하는 일은 한 달 1번 남짓). My를 안 쓰는 날(scriptLines 0)은 셈하지 않음.",
+    "_설명": "My 끝 전면 광고 어림(2026-11-09 개편에 맞춤 — hub/app/ADS.md): Quizbank 10문제 묶음 경계 quizBreaksPerDay번(쓰는 날 0.8), 넘겨 보기 묶음 끝을 닫을 때 flipEndsPerDay번(0.15). My를 안 쓰는 날(scriptLines 0)은 셈하지 않음.",
     "quizBreaksPerDay": 0.8,
-    "flipEndsPerDay": 0.15,
-    "skillChecksPerMonth": 1
+    "flipEndsPerDay": 0.15
   },
   "extraAds": [
     {
@@ -225,12 +224,6 @@
       "perActiveDay": 0.4,
       "when": "my",
       "what": "Logbank 그날·배운 것 세부 시트 끝(sheets log-sheet)"
-    },
-    {
-      "format": "native",
-      "perActiveDay": 0.04,
-      "when": "my",
-      "what": "📏 실력 확인 결과 아래(results skill-check-end) — 한 달 1번 남짓"
     },
     {
       "format": "native",

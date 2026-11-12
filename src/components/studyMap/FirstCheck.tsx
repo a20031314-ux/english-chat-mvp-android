@@ -5,12 +5,9 @@
  * ① 글자(글자가 다른 학습 언어만) → ② 낱말 예/아니오 24장 → 뜻 고르기 5 → ③ 표현·문법 오르기 → ④ 결과 한 장 [시작].
  * 어디서나 건너뛰기 = 1단계 시작(결과 장 없이). My 처음 화면(StudyMapTab) 자리.
  * 결과는 이 폰에만: 낱말 경계(quizCircle.v1 lv) · firstCheck.v1 · 장부(뜻 고르기·③ 답만, exam·pick) · 글자부터면 lettersFirst. 서버에는 부르는 쪽이 지금 단계만.
- * 다시 측정(recheck — 2026-11-09 2주마다 실력 확인, lib/curriculum/skillCheck.ts): 글자 없이 ②③, 오르기는 지난번 한 단계 아래부터,
- * 결과는 skillCheck.v1(firstCheck.v1은 그대로)과 낱말 경계, 결과 장은 지난번 → 이번. 단계(서버)는 안 바꿈.
  */
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { UICopy } from "@/lib/copy";
-import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
 import { learningLanguageSpeechTag } from "@/lib/learningLanguages";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
@@ -23,8 +20,8 @@ import { chooseFromPrepared, turnFresh, type PreparedItem } from "@/lib/curricul
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { askedTexts, cardQuiz, noteAsked, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { noteLedger } from "@/lib/curriculum/logLedger";
+import { kindOf, readLadder, saveLadder, stepLadder } from "@/lib/curriculum/ladder";
 import { emptyCircle, type Circle } from "@/lib/curriculum/circle";
-import { climbFrom, saveRecheck, type SkillCheck } from "@/lib/curriculum/skillCheck";
 import {
   climbAnswer,
   climbNext,
@@ -103,20 +100,17 @@ export function FirstCheck({
   language,
   onDone,
   onSkip,
-  recheck,
 }: {
   ui: UICopy;
   locale: string;
   language: string;
   /** 결과 장의 [시작] — 결과는 이미 이 폰에 저장됨. 부르는 쪽이 지금 단계를 서버에. */
   onDone: (result: FirstCheckResult) => void;
-  /** 건너뛰기 — 1단계에서 시작(다시 측정이면 닫기). */
+  /** 건너뛰기 — 1단계에서 시작. */
   onSkip: () => void;
-  /** 다시 측정: 지난 확인(없으면 null) — 글자 없이, 결과는 지난번과 나란히. */
-  recheck?: { last: SkillCheck | null };
 }) {
-  const seed = useMemo(() => `${language}|${recheck ? "recheck" : "first"}|${Date.now()}`, [language, recheck]);
-  const course = useMemo(() => (!recheck && needsLetters(language) ? scriptFor(language) : null), [language, recheck]);
+  const seed = useMemo(() => `${language}|first|${Date.now()}`, [language]);
+  const course = useMemo(() => (needsLetters(language) ? scriptFor(language) : null), [language]);
   const letterQs = useMemo(() => (course ? letterQuestions(course, seed) : []), [course, seed]);
   const speech = learningLanguageSpeechTag(language);
   const say = (text: string) => void playTts(text, speech).catch(() => undefined);
@@ -259,7 +253,7 @@ export function FirstCheck({
   const startClimbStep = (list: Asked[], given: Record<number, Answer>) => {
     setStep("climb");
     const has = (kind: ClimbKind) => (prepared ?? []).some((item) => item.kind === kind) || (kind === "expression" && exprCards.ready.size > 0);
-    advanceClimb(startClimb({ expression: has("expression"), grammar: has("grammar") }, recheck ? climbFrom(recheck.last ?? undefined) : undefined), list, given);
+    advanceClimb(startClimb({ expression: has("expression"), grammar: has("grammar") }), list, given);
   };
 
   const next = () => {
@@ -292,6 +286,12 @@ export function FirstCheck({
     } catch {
       // 이번에만.
     }
+    // 표현·문법 고르기를 맞힌 칸은 사다리 2칸(빈칸 쓰기)부터 — Quizbank가 같은 고르기를 또 내지 않게(체감 점검 2026-11-12 easy-repeat).
+    let ladder = readLadder(language);
+    list.forEach((one, i) => {
+      if (given[i]?.correct && !given[i]!.skipped && kindOf(one.key) && kindOf(one.key) !== "w") ladder = stepLadder(ladder, one.key, 1, true);
+    });
+    saveLadder(language, ladder);
     // 실제로 푼 문제만 장부에(예/아니오는 스스로 말한 것이라 넣지 않음).
     noteLedger(
       language,
@@ -301,8 +301,7 @@ export function FirstCheck({
   };
 
   const finish = (out: FirstCheckResult) => {
-    if (recheck) saveRecheck(language, { at: out.at, b: out.b, expression: out.expression, grammar: out.grammar });
-    else saveFirstCheck(language, out);
+    saveFirstCheck(language, out);
     setResult(out);
     setStep("result");
   };
@@ -409,11 +408,9 @@ export function FirstCheck({
 
       {step === "result" && result ? (
         <div data-first-result className="flex flex-col gap-3">
-          <h3 className="text-body font-semibold text-ink">{recheck ? ui.skillCheckTitle : ui.stageStartTitle}</h3>
+          <h3 className="text-body font-semibold text-ink">{ui.stageStartTitle}</h3>
           {help ? <p className="text-caption text-slate-400">{ui.fcHelp}</p> : null}
-          {recheck ? (
-            <RecheckResult ui={ui} locale={locale} last={recheck.last} now={result} />
-          ) : result.letters ? (
+          {result.letters ? (
             <p className="rounded-xl border border-line px-4 py-3 text-note text-slate-100">
               {ui.stageNumber.replace("{n}", "0")} · {ui.scriptEntry}
             </p>
@@ -432,40 +429,10 @@ export function FirstCheck({
             </div>
           )}
           <button type="button" data-first-start onClick={() => onDone(result)} className="tb-btn rounded-xl px-4 py-3 text-note font-semibold">
-            {recheck ? ui.billingClose : ui.fcStart}
+            {ui.fcStart}
           </button>
-          {/* 📏 실력 확인 결과(14일마다 하는 시험의 끝) 아래 네이티브 하나 — 닫기 버튼과 한 줄 넘게 띄움. 처음 측정(설치 직후 온보딩)에는 없음. */}
-          {recheck ? <NativeAdSlot feedId="results" slotKey="skill-check-end" spaced /> : null}
         </div>
       ) : null}
-    </div>
-  );
-}
-
-/** 다시 측정 결과: 줄마다 지난번 → 이번(늘면 초록). 지난번이 없으면 이번만. */
-function RecheckResult({ ui, locale, last, now }: { ui: UICopy; locale: string; last: SkillCheck | null; now: FirstCheckResult }) {
-  const words = (b: number) => ui.fcWordsAbout.replace("{n}", wordsAbout(b).toLocaleString(locale));
-  const stage = (n: number) => ui.stageNumber.replace("{n}", String(n));
-  const rows: [string, string, string | null, number][] = [
-    [ui.partVocab, words(now.b), last ? words(last.b) : null, last ? wordsAbout(now.b) - wordsAbout(last.b) : 0],
-    [ui.partExpression, stage(now.expression), last ? stage(last.expression) : null, last ? now.expression - last.expression : 0],
-    [ui.partGrammar, stage(now.grammar), last ? stage(last.grammar) : null, last ? now.grammar - last.grammar : 0],
-  ];
-  return (
-    <div data-recheck-result className="flex flex-col divide-y divide-white/10 rounded-xl border border-line px-4">
-      {rows.map(([name, value, before, delta]) => (
-        <div key={name} className="flex items-center justify-between gap-3 py-3 text-note">
-          <span className="text-slate-100">{name}</span>
-          <span className="tabular-nums text-slate-300">
-            {before ? (
-              <span className="text-slate-500">
-                {before} <span className="inline-block rtl:rotate-180">→</span>{" "}
-              </span>
-            ) : null}
-            <span className={delta > 0 ? "font-semibold text-good" : delta < 0 ? "text-bad" : ""}>{value}</span>
-          </span>
-        </div>
-      ))}
     </div>
   );
 }

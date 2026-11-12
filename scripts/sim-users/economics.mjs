@@ -39,10 +39,10 @@ const AI_HELP_OPS = ["translate", "howToSay", "howToSayCard", "analysisInput", "
  * 이 계산이 세는 전면 광고 순간(hub/app/ADS.md 표의 이름). 변경 감시(scripts/watch/ads.mjs)가 코드의 순간과 맞춰 보고,
  * 여기 없는 순간은 "손익에 안 들어간 광고"로 알린다 — 새 순간을 simulate에 넣으면 여기에도 더한다.
  * (팩 끝 전면은 2.75 이하 앱만 — 화면 코드는 2026-11-01에 지움. 새 무료·유료는 팩이 0이라 계산에 안 나옴.)
- * My 끝 순간(2026-11-09 개편에 맞춤): Quizbank 10문제 묶음 경계(quizBreak) · 📏 실력 확인 결과 닫기(skillCheckEnd) · 넘겨 보기 끝(flipEnd) — economics.json "my".
+ * My 끝 순간(2026-11-09 개편에 맞춤): Quizbank 10문제 묶음 경계(quizBreak) · 넘겨 보기 끝(flipEnd) — economics.json "my".
  * 영상 보고 나옴(videoLeave)·AI 통화 끝(callEnd)·숙제 끝(homeworkEnd)·채팅 맛보기 나옴(chatLeave 덤)은 extraAds의 interstitial 줄로 셈(쓰는 날 어림). 빈 공간 네이티브도 extraAds.
  */
-export const MODELED_MOMENTS = ["chatLeave", "roomLeave", "quizBreak", "skillCheckEnd", "flipEnd", "homeworkEnd", "videoLeave", "callEnd"];
+export const MODELED_MOMENTS = ["chatLeave", "roomLeave", "quizBreak", "flipEnd", "homeworkEnd", "videoLeave", "callEnd"];
 
 export const PLANS = [
   // 무료 = 2.76부터의 대본 앱 무료(채팅·통화·팩 없음, My 대본만 — 2026-11-01 변경 감시 광고 안 1). 2.75 이하 앱 무료는 5절 민감도 "옛 무료"로만.
@@ -124,16 +124,12 @@ export function simulate(type, terms, o) {
     const packCap = typeof terms.packDaysPerWeek === "number" ? terms.packDaysPerWeek / 7 : 1 + terms.extraPacks;
     n.packs += Math.min(type.packs, packCap);
     // My를 쓰는 날(scriptLines > 0, 하루 한도 dailyScriptLines) + My 끝 순간 전면(무료만, economics.json "my"):
-    // Quizbank 묶음 경계 · 넘겨 보기 끝 · 📏 실력 확인 결과 닫기(한 달 몇 번을 쓰는 날로 나눔).
+    // Quizbank 묶음 경계 · 넘겨 보기 끝.
     const lines = Math.min(type.scriptLines ?? 0, terms.dailyScriptLines ?? 0);
     n.scriptLines += lines;
     if (ads && lines > 0) {
       const my = o.assume.my;
-      n.interstitial +=
-        (my.quizBreaksPerDay ?? 0) +
-        (my.flipEndsPerDay ?? 0) +
-        // 한 달 n번 → 쓰는 날 하루 n / days번
-        (my.skillChecksPerMonth ?? 0) / Math.max(1, type.days);
+      n.interstitial += (my.quizBreaksPerDay ?? 0) + (my.flipEndsPerDay ?? 0);
       lastInter = d * 1440 + 9 * 60; // 그날 첫 세션 전에 My를 한 것으로 — 채팅 나갈 때 전면과 간격
     }
     // 광고 안(새 자리·옮김)으로 더하거나 빼는 노출 — 무료만, 없으면 0.

@@ -22,17 +22,15 @@
 │          오늘의 학습(계정 카드 아래, studyMap/TodayCards — 할 것만 같은 모양 줄, 끝나면 ✓·다 끝나면 제목 ✓, 숫자 없음):
 │              ▶ Quizbank(curriculum/quizFocus.ts 신호, ✓ = todayCards.ts answeredToday ≥ 10 — 0단계면 오늘의 글자 묶음 → Languagebank 글자 칸 curriculum/lettersOpen.ts)
 │              · 숙제(있을 때 → openCall replay) · 📞 수업(startCall lesson, ✓ = 오늘 수업 통화 callStore mode lesson)
-│              · 📏 실력 확인(14일이 된 날만 → FirstCheck recheck, curriculum/skillCheck.ts · skillCheck.v1 이 폰)
 │          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단어 → 뜻 → 표현·문법 → 시작 단계, curriculum/firstCheck.ts)
 │          칸 셋 = 위 칸 이름 줄이 탭(notes/NotebookSection MyLayers — 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면 FullScreenLayer, ✕로 제자리)
 │          [Logbank 하늘] studyMap/Logbank — 기록만
-│              📏 실력 확인 기록 표(Logbank SkillChecks — 확인마다 🔤·💬·📐 + 🗣 말하기, 새 확인이 남으면 SKILL_CHECK_EVENT로 다시 읽음)
 │              [주 | 월] ‹기간› → 배운 것 표(Learned — 🔤 단어 · 📐 문법 · 💬 표현 · 🧩 문장구조 × 학습 · 활용, curriculum/growthView.ts)
 │                · ↺ 다시 맞힘 · ✎✓ 고쳐 씀(curriculum/growthLines.ts) · 📞 통화(CallResultCard) · 학습 곡선(curriculum/learnedView.ts) · 대화 비교(TalkCompare)
 │              날마다 한 줄 → 그날 = 학습 타임라인(DayTimeline → 학습 시간 → 카드 CardTimeline, curriculum/studyTimeline.ts) · ⏱ 학습 시간 막대
 │              재료: 이 폰 사건 장부 logbank.v1.<언어>(curriculum/logLedger.ts) + 수업 결과 + 통화 카드 + 서버 /api/notebook logItems
 │          [Quizbank 초록] studyMap/Quizbank → InlineQuiz → QuizPlayer — 한 흐름(hub/app/QUIZ.md), 답 뒤 맞음/틀림·[다시]·📕 문
-│          [Languagebank 노랑] studyMap/LanguageBank — 찾기(Dictionary DictionaryBody) · 자주 쓴 말(대화 수) · 종류(칠하기 = 실력 확인 추정, 숫자 = 개수, skillCheck.ts estimateChance) → 묶음([퀴즈 | 대화] 순서) → 단어 화면(마지막 틀림 ✗ · 대화 수, 같이 배우기 칩 → openLesson, curriculum/wordUse.ts) · 표현·문법 → openLesson
+│          [Languagebank 노랑] studyMap/LanguageBank — 찾기(Dictionary DictionaryBody) · 자주 쓴 말(대화 수) · 종류(칠하기 = 첫 측정 추정, 숫자 = 개수, firstCheck.ts estimateChance) → 묶음([퀴즈 | 대화] 순서) → 단어 화면(마지막 틀림 ✗ · 대화 수, 같이 배우기 칩 → openLesson, curriculum/wordUse.ts) · 표현·문법 → openLesson
 │              · 묶음 ▶ 넘겨 보기(BankFlip) · 글자가 다른 언어면 첫 줄 글자·소리 칸(ScriptPractice LettersRow·LettersBank)
 │          칸 머리 ?(Logbank·Quizbank) → studyMap/BankHelp(lib/guide/banks.ts)
 │

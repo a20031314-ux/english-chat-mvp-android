@@ -4,6 +4,7 @@ import {
   compareToTarget,
   parsePractice,
   practicePrompt,
+  formSlip,
   shadowPasses,
   typedMatches,
   troubleWords,
@@ -253,4 +254,14 @@ test("채팅으로 쓴 대본 줄(2026-11-01): 낱말이 다 같으면 맞음, �
   assert.equal(typedMatches("初めまして。", "こんにちは", "はじめまして。").matched, false);
   // 영어 줄임말.
   assert.equal(typedMatches("I'm fine.", "I am fine").matched, true);
+});
+
+test("shadowPasses: a long line still forgives a misheard word, but not another form of the same word (es·en·ja)", () => {
+  assert.equal(shadowPasses("Ahora quiero trabajar en un hospital grande", "Ahora quiero trabajo en un hospital grande"), false);
+  assert.equal(shadowPasses("Today I had many meetings at the office", "Today I had many meeting at the office"), false);
+  assert.equal(shadowPasses("Today I had many meetings at the office", "Today I had many meetings at the offers"), true);
+  assert.equal(formSlip("trabajar", "trabajo"), true);
+  assert.equal(formSlip("いきます", "いきました"), true);
+  assert.equal(formSlip("office", "offers"), false);
+  assert.equal(formSlip("the", "the"), false);
 });

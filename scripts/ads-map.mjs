@@ -35,7 +35,6 @@ const MOMENTS = {
   roomLeave: "공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외",
   videoLeave: "영상을 몇 분(설정 `videoLeaveMinutes`) 넘게 보고 나올 때",
   quizBreak: "Quizbank 칸 안에서 이어 푸는 퀴즈(InlineQuiz)가 10문제를 넘긴 뒤 다음 묶음으로 넘어갈 때 — 문제 도중·답 보기 중에는 없음(2026-11-01)",
-  skillCheckEnd: "오늘의 학습 📏 실력 확인 줄(14일마다)의 결과(지난번 → 이번)를 보고 닫기를 누를 때 — 시험 도중·줄을 누를 때·처음 측정은 없음(2026-11-10)",
   flipEnd: "Languagebank 넘겨 보기 묶음을 끝까지 넘기고 끝 화면을 ✕·바깥으로 닫을 때 — ▶ Quizbank로 이어 갈 때·도중에 닫을 때는 없음(2026-11-09)",
 };
 

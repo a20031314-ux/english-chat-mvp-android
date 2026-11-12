@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder } from "./ladder.ts";
 import { grammarAsk, pickCells, spotQuestion } from "./ladderQuiz.ts";
+import { formChoice } from "./quiz.ts";
 import type { PreparedItem } from "./preparedQuiz.ts";
 import type { SpotItem } from "./spotErrors.ts";
 
@@ -114,4 +115,12 @@ test("선지(밑줄): 틀린 곳이 선지 가운데 늘 같은 자리에 오지
     seen.add(picks.indexOf(20));
   }
   assert.equal(seen.size, 5);
+});
+
+test("formChoice: 한 말의 꼴이면 뜻 줄 먼저, 서로 다른 말이면 답한 뒤에(es·ja·en)", () => {
+  assert.equal(formChoice(["Qué", "Cuándo", "Dónde", "Donde"], 2, "es"), false);
+  assert.equal(formChoice(["Dónde", "Donde"], 0, "es"), true);
+  assert.equal(formChoice(["could have", "can't have", "must have", "might have"], 2, "en"), true);
+  assert.equal(formChoice(["For example,", "Therefore,", "By the way,", "In contrast,"], 2, "en"), false);
+  assert.equal(formChoice(["飲みます", "飲みました", "飲むます"], 0, "ja"), true);
 });

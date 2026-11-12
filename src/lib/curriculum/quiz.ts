@@ -64,7 +64,7 @@ export type QuizQuestion =
    * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
    */
-  | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean; /** 앞 문맥 한 줄(누를 수 없음, 틀린 곳 데이터 shape "l"). */ lead?: string; /** 늘 틀린 곳이 있음(틀린 곳 데이터) — "틀린 곳 없음" 버튼 없음. */ hasError?: true; /** 선지(게이지 아래쪽): 이 칸만 칸 색 밑줄로, 이 칸만 누를 수 있음. */ picks?: number[] }
+  | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean; /** 앞 문맥 한 줄(누를 수 없음, 틀린 곳 데이터 shape "l"). */ lead?: string; /** 늘 틀린 곳이 있음(틀린 곳 데이터) — "틀린 곳 없음" 버튼 없음. */ hasError?: true; /** 선지(게이지 아래쪽): 이 칸만 칸 색 밑줄로, 이 칸만 누를 수 있음. */ picks?: number[]; /** 뜻이 틀린 곳(type meaning)이면 뜻 줄이 답이라 답한 뒤에만. */ glossAfter?: true }
   /**
    * 복합 빈칸(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개"): 한 문장에 이미 맞힌 소재 둘·셋을 동시에 비운다.
    * chunks = 빈칸 사이 글(빈칸 수 + 1개), blanks = 빈칸마다 열쇠·답·헷갈리는 오답. 결과는 빈칸마다 그 열쇠에(curriculum/multiQuiz.ts).
@@ -76,7 +76,7 @@ export type QuizQuestion =
    */
   | { kind: "talk"; text: string; lines: { who: "me" | "them"; text: string; gloss?: string }[]; at: number; before: string; after: string; answer: string; near?: string[]; options?: string[]; mine?: boolean; from: string }
   /** 복합 틀린 곳(같은 날): 한 문장에 확실히 틀린 꼴이 둘·셋 — 모두 찾아 고친다. errors마다 그 열쇠·낱말 자리·바른 말. */
-  | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string; /** 문단(story-errors P1~P4): 선지 칸 · 틀린 곳 수를 안 보임(P4·게이지 위쪽). */ picks?: number[]; hideCount?: true }
+  | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string; /** 문단(story-errors P1~P4): 선지 칸 · 틀린 곳 수를 안 보임(P4·게이지 위쪽). */ picks?: number[]; hideCount?: true; /** 뜻이 틀린 곳이 든 문단 — 뜻 줄은 답한 뒤에만(체감 점검 2026-11-12 "해석의 일찍과 비교만 하면 late가 보임"). */ glossAfter?: true }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   /** 낱말 스스로 체크(그럴듯한 보기가 셋 안 모일 때): 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 → [맞았어요 | 틀렸어요]. */
   | { kind: "know"; text: string; mark: string; gloss: ScriptGloss; from: string; card: QuizCardFace }
@@ -1323,7 +1323,7 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   const answer = key.slice(2);
   const gloss = source.wordGloss.trim();
   const norm = (text: string) => text.normalize("NFC").toLocaleLowerCase().replace(/[\s.,;:!?。、]+/gu, " ").trim();
-  const others: { key: string; gloss: string; pos?: string; at: number }[] = [];
+  const others: { key: string; gloss: string; pos?: string; topic?: string; at: number }[] = [];
   let at = -1;
   let index = 0;
   for (const [other, sources] of pool) {
@@ -1331,7 +1331,7 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
     if (other === key) at = index;
     if (other === key || !other.startsWith(`${kind}|`)) continue;
     const one = sources.find((item) => item.wordGloss?.trim());
-    if (one?.wordGloss) others.push({ key: other, gloss: one.wordGloss.trim(), ...(one.pos ? { pos: one.pos } : {}), at: index });
+    if (one?.wordGloss) others.push({ key: other, gloss: one.wordGloss.trim(), ...(one.pos ? { pos: one.pos } : {}), ...(one.topic ? { topic: one.topic } : {}), at: index });
   }
   const random = rng(`${seed}|${key}|${mode}`);
   const face: QuizCardFace = { word: answer, meaning: gloss };
@@ -1360,16 +1360,25 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   const near = samePos.filter((other) => at < 0 || Math.abs(other.at - at) <= 200);
   // 모양이 비슷한 뜻 먼저(가상 사용자 2026-11-09 easy-decoy: "소리 내어 말하다" 옆 "파도타기", "لا أظن ذلك" 옆 "الفاتورة" — 표현은 품사가 없어
   // 낱말 하나짜리 뜻이 한눈에 지워짐). 띄어 쓰는 앱 언어는 낱말 수 차이 1 이하, 안 띄어 쓰는 언어(ja·zh·th)는 글자 수 두 배 안.
-  const shaped = (list: typeof others) => list.filter((other) => similarShape(other.gloss, gloss));
+  // 뜻풀이 개수가 정답과 같은 것 먼저(정답만 "멈추기 어려운, 중독성 있는"처럼 길면 한눈에 — 체감 점검 2026-11-12).
+  const senses = (text: string) => text.split(/[,;，、；/]/u).map(norm).filter(Boolean);
+  const want = senses(gloss).length;
+  const shaped = (list: typeof others) => list.filter((other) => similarShape(other.gloss, gloss)).sort((a, b) => Math.abs(senses(a.gloss).length - want) - Math.abs(senses(b.gloss).length - want));
+  // 같은 주제(동물·몸·직업…) 먼저 — 문장에 넣어도 말이 되는 보기(platypus 옆 "쇠고기 조각", señal 옆 "우주선"이 문맥으로 지워짐, 체감 점검 2026-11-12).
+  const sameTopic = (list: typeof others) => (source.topic && source.topic !== "function" ? list.filter((other) => other.topic === source.topic) : []);
   const wrong: string[] = [];
   // 낱말(퀴즈 다시 짜기 3단계, 사용자 2026-11-10 "선지가 다수일 시 고르기"): 같은 품사·모양이 비슷한 뜻만 보기로 — 셋이 안 모이면
   // 한눈에 지워지는 보기로 채우지 않고 스스로 체크(kind "know"). 표현은 품사가 없어 예전 차례 그대로.
-  const candidates = kind === "w" ? [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random)] : [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random), ...shuffled(shaped(others), random), ...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)];
+  const candidates = kind === "w" ? [...shaped(shuffled(sameTopic(near), random)), ...shaped(shuffled(sameTopic(samePos), random)), ...shaped(shuffled(near, random)), ...shaped(shuffled(samePos, random))] : [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random), ...shuffled(shaped(others), random), ...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)];
+  // 뜻풀이 하나라도 겹치면 같이 지워지거나 둘 다 맞음("때, 시간"과 "시간") — 겹치는 보기는 안 냄.
+  const seenSenses = new Set(senses(gloss));
   for (const other of candidates) {
     if (wrong.length >= 3) break;
     const n = norm(other.gloss);
-    if (seen.has(n) || recent.has(n)) continue;
+    const parts = senses(other.gloss);
+    if (seen.has(n) || recent.has(n) || parts.some((part) => seenSenses.has(part))) continue;
     seen.add(n);
+    for (const part of parts) seenSenses.add(part);
     wrong.push(other.gloss);
   }
   if (wrong.length < 3) return kind === "w" ? { kind: "know", text: source.text, mark: source.piece!, gloss: source.gloss, from: key, card: face } : null;
@@ -1377,4 +1386,26 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   const right: ScriptGloss = { en: "", raw: gloss };
   const options = shuffled([right, ...wrong.map((raw): ScriptGloss => ({ en: "", raw }))], random);
   return { kind: "meaning", text: source.text, options, answer: options.indexOf(right), gloss: source.gloss, from: key, mark: source.piece, card: face };
+}
+
+/**
+ * 고르기 보기가 한 말의 여러 꼴인가(had/has already left, Dónde/Donde, must/might have) — 그렇다면 뜻 줄을 먼저 보여도 답이 안 샌다.
+ * 보기가 서로 다른 말(By the way / Therefore / For example)이면 뜻 줄이 곧 답이라 답한 뒤에만(체감 점검 2026-11-12 easy-leak).
+ * 꼴 = 정답과 낱말 하나를 같이 쓰거나, 첫 낱말이 글자 셋 넘게 같이 시작.
+ */
+export function formChoice(options: readonly string[], answer: number, language: string): boolean {
+  const tokens = (text: string) => segmentWords(text.normalize("NFC").toLocaleLowerCase(), language).map((one) => one.replace(/[^\p{L}\p{M}\p{N}']+/gu, "")).filter(Boolean);
+  const right = options[answer];
+  if (right === undefined) return true;
+  const want = tokens(right);
+  const head = [...(want[0] ?? "")];
+  return options.every((option, i) => {
+    if (i === answer) return true;
+    const mine = tokens(option);
+    if (mine.some((word) => want.includes(word))) return true;
+    const first = [...(mine[0] ?? "")];
+    let same = 0;
+    while (same < first.length && same < head.length && first[same]!.normalize("NFD")[0] === head[same]!.normalize("NFD")[0]) same += 1;
+    return same >= 3;
+  });
 }

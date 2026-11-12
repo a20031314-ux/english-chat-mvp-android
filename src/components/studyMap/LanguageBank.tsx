@@ -11,7 +11,7 @@ import { glossFor } from "@/lib/curriculum/stageScripts";
 import { openLesson } from "@/lib/appIntents";
 import { LETTERS_OPEN_EVENT, takeLettersOpen } from "@/lib/curriculum/lettersOpen";
 import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
-import { estimateChance, latestCheck } from "@/lib/curriculum/skillCheck";
+import { estimateChance, measured } from "@/lib/curriculum/firstCheck";
 import { oftenUsed, talkCounts } from "@/lib/curriculum/wordUse";
 
 /**
@@ -117,10 +117,10 @@ export function LanguageBank({
     return readLedger(language);
   }, [language, ledgerTick]);
   // 칠하기 = 추정(2026-11-09 사용자 "추정을 다시 넣고, 학습 단어는 해당 카드에만"): 가장 최근 첫 측정·실력 확인 하나로
-  // 칸마다 아는 정도(skillCheck.ts estimateChance)를 칠하기로만. 학습(퀴즈 기록)은 낱말 카드에만. 잰 적이 없으면 칠하지 않음.
+  // 칸마다 아는 정도(firstCheck.ts estimateChance)를 칠하기로만. 학습(퀴즈 기록)은 낱말 카드에만. 잰 적이 없으면 칠하지 않음.
   const check = useMemo(() => {
     void ledgerTick;
-    return latestCheck(language);
+    return measured(language);
   }, [language, ledgerTick]);
   // 대화에서 쓴 수(curriculum/wordUse.ts) — 퀴즈 칠하기와 따로, 자주 쓴 말 줄·대화 순서에만.
   const talks = useMemo(() => talkCounts(ledger), [ledger]);

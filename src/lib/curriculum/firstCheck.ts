@@ -267,13 +267,10 @@ export const STAGE_PASS = 2;
 export type ClimbLane = { stage: number; passed: number; right: number; wrong: number; stopped: boolean };
 export type Climb = { lanes: Record<ClimbKind, ClimbLane>; asked: number; turn: ClimbKind };
 
-/** start = 종류별 시작 단계(다시 측정 — skillCheck.ts climbFrom, 아래 단계는 넘은 것으로). 없으면 1단계부터. */
-export function startClimb(has: Record<ClimbKind, boolean>, start?: Partial<Record<ClimbKind, number>>): Climb {
-  const lane = (on: boolean, from = 1): ClimbLane => {
-    const stage = Math.max(1, Math.min(STAGES, Math.round(from)));
-    return { stage, passed: stage - 1, right: 0, wrong: 0, stopped: !on };
-  };
-  return { lanes: { expression: lane(has.expression, start?.expression), grammar: lane(has.grammar, start?.grammar) }, asked: 0, turn: has.grammar && !has.expression ? "grammar" : "expression" };
+/** 종류마다 1단계부터. */
+export function startClimb(has: Record<ClimbKind, boolean>): Climb {
+  const lane = (on: boolean): ClimbLane => ({ stage: 1, passed: 0, right: 0, wrong: 0, stopped: !on });
+  return { lanes: { expression: lane(has.expression), grammar: lane(has.grammar) }, asked: 0, turn: has.grammar && !has.expression ? "grammar" : "expression" };
 }
 
 /** 다음에 물을 종류·단계(끝이면 null). */
@@ -353,4 +350,23 @@ export function saveFirstCheck(language: string, result: FirstCheckResult): void
 /** 서버에 남길 지금 단계 — 문법 시작 단계(Quizbank 넣어 둔 문제·표현 카드가 이 단계까지). 글자부터면 1. */
 export function startStageOf(result: FirstCheckResult): number {
   return result.letters ? 1 : Math.max(1, Math.min(STAGES, result.grammar));
+}
+
+/** 잰 값(첫 측정) — Quizbank 표현 시작 단계·Languagebank 칠하기가 읽는다. 글자부터라 낱말을 잰 적이 없으면 null. */
+export type Measured = Pick<FirstCheckResult, "b" | "expression" | "grammar">;
+export function measured(language: string): Measured | null {
+  const first = readFirstCheck(language);
+  return first && !first.letters ? { b: first.b, expression: first.expression, grammar: first.grammar } : null;
+}
+
+/**
+ * Languagebank 추정: 첫 측정 하나로 칸마다 "아는 정도" 0~1.
+ *   낱말 = 빈도 순위가 경계 b 근처면 반쯤(vocabLevel.knowChance — 측정과 같은 곡선)
+ *   표현·문법 = 잰 단계 아래는 1, 그 단계는 0.5, 위는 0
+ * 퀴즈 기록(학습)은 섞지 않는다 — 그건 낱말 카드에만.
+ */
+export function estimateChance(check: Measured, item: { kind: "word" | "expr" | "gram"; rank: number; lv: number }): number {
+  if (item.kind === "word") return knowChance({ b: check.b, n: 0 }, item.rank);
+  const stage = item.kind === "expr" ? check.expression : check.grammar;
+  return item.lv < stage ? 1 : item.lv === stage ? 0.5 : 0;
 }

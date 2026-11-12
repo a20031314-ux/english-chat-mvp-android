@@ -105,3 +105,36 @@ test("첫 글자 도움: 자소 묶음 첫 글자 + …, 셋보다 짧은 답·�
   assert.equal(firstCue("我们"), "");
   assert.equal(firstCue("食べたい"), "");
 });
+
+test("낱말 보기: 같은 주제 먼저, 뜻풀이가 겹치는 보기는 안 냄 (es·ja)", () => {
+  const topical = (key: string, text: string, piece: string, wordGloss: string, topic: string): { key: string; sources: QuizSource[] } => ({
+    key,
+    sources: [{ text, gloss: { en: "", raw: `${text} (뜻)` }, from: key, stage: 1, piece, who: "me", wordGloss, pos: "noun", topic }],
+  });
+  registerQuizSources("es", [
+    topical("w|zzperro", "El zzperro duerme en el sofá.", "zzperro", "짐승개", "animal"),
+    topical("w|zzgato", "El zzgato come.", "zzgato", "짐승고양이", "animal"),
+    topical("w|zzvaca", "La zzvaca come.", "zzvaca", "짐승소", "animal"),
+    topical("w|zzpato", "El zzpato nada.", "zzpato", "짐승오리", "animal"),
+    topical("w|zzmesa", "La zzmesa es grande.", "zzmesa", "짐승탁자", "home"),
+    topical("w|zzsilla", "La zzsilla es nueva.", "zzsilla", "짐승의자", "home"),
+  ]);
+  const es = cardQuiz("es", "w|zzperro", "hide", "t1");
+  assert.equal(es?.kind, "meaning");
+  if (es?.kind === "meaning") assert.deepEqual(es.options.map((one) => one.raw).sort(), ["짐승개", "짐승고양이", "짐승소", "짐승오리"].sort());
+  registerQuizSources("ja", [
+    card("w|zz自分", "zz自分で作ります。", "zz自分", "자기, 자신"),
+    card("w|zz時", "zz時が来た。", "zz時", "때, 시간"),
+    card("w|zz時間", "zz時間がない。", "zz時間", "시간"),
+    card("w|zz日", "zz日が長い。", "zz日", "날, 하루"),
+    card("w|zz人", "zz人が多い。", "zz人", "사람"),
+    card("w|zz自身", "zz自身で。", "zz自身", "자신"),
+  ]);
+  for (const seed of ["a", "b", "c", "d"]) {
+    const ja = cardQuiz("ja", "w|zz自分", "hide", seed);
+    if (ja?.kind !== "meaning") continue;
+    const raws = ja.options.map((one) => one.raw);
+    assert.ok(!raws.includes("자신"), "정답 뜻풀이와 겹치는 보기 없음");
+    assert.ok(!(raws.includes("때, 시간") && raws.includes("시간")), "보기끼리 겹치지 않음");
+  }
+});

@@ -222,3 +222,15 @@ export function stepPara(state: ParaState, today: string, errors: number, missed
   const lv = missed === 0 ? Math.min(4, state.lv + 1) : missed >= 2 || missed >= errors ? Math.max(1, state.lv - 1) : state.lv;
   return { lv, day: today, n: (state.day === today ? state.n : 0) + 1 };
 }
+
+/** 지난 REST_HOURS 동안 마지막 답이 맞음이었던 열쇠(퀴즈·첫 측정) — 새 묶음에서 그날은 쉰다. 틀린 것은 다시 볼 것으로 따로 나옴. */
+export const REST_HOURS = 20;
+export function rightToday(events: readonly { k: string; src: string; r: string; t: number }[], now: number): Set<string> {
+  const since = now - REST_HOURS * 3600;
+  const last = new Map<string, { r: string; t: number }>();
+  for (const event of events) {
+    if (event.t < since || (event.src !== "quiz" && event.src !== "exam") || (event.r !== "ok" && event.r !== "miss")) continue;
+    if ((last.get(event.k)?.t ?? -1) <= event.t) last.set(event.k, { r: event.r, t: event.t });
+  }
+  return new Set([...last].filter(([, one]) => one.r === "ok").map(([key]) => key));
+}

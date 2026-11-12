@@ -61,7 +61,6 @@
 | `homeworkEnd` | 수업 통화 숙제(퀴즈·대화)의 남은 반쪽을 끝까지 하고 닫을 때(숙제를 다 끝낸 자리) — 한쪽만 했을 때·통화 끝 화면 안 장면은 없음(2026-11-09) | AI 통화 (어디서나 뜨는 층 CallHost `call` · `roleplay/CallReplay.tsx` ／ My 탭 `my` · `studyMap/QuizPlayer.tsx` |
 | `quizBreak` | Quizbank 칸 안에서 이어 푸는 퀴즈(InlineQuiz)가 10문제를 넘긴 뒤 다음 묶음으로 넘어갈 때 — 문제 도중·답 보기 중에는 없음(2026-11-01) | My 탭 `my` · `studyMap/InlineQuiz.tsx` |
 | `roomLeave` | 공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외 | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
-| `skillCheckEnd` | 오늘의 학습 📏 실력 확인 줄(14일마다)의 결과(지난번 → 이번)를 보고 닫기를 누를 때 — 시험 도중·줄을 누를 때·처음 측정은 없음(2026-11-10) | My 탭 `my` · `studyMap/TodayCards.tsx` |
 | `videoLeave` | 영상을 몇 분(설정 `videoLeaveMinutes`) 넘게 보고 나올 때 | 영상 학습 탭 `video` · `videoLearning/VideoLearningTab.tsx` |
 
 모든 전면 광고는 서로 3분(설정 `interstitialMinGapSeconds`) 안에 다시 뜨지 않고, 미리 받아 둔 광고가 있을 때만 뜬다.
@@ -85,7 +84,6 @@
 | `results` | `letters-end` | 글자 퀴즈 끝 화면 아래 네이티브 하나(버튼과 한 줄 넘게 띄움). | My 탭 `my` · `studyMap/ScriptPractice.tsx` |
 | `results` | `quiz-end-${seed}` | 끝 화면 점수 아래 네이티브 하나(숙제를 다 끝낸 퀴즈면 닫을 때 전면 homeworkEnd) — 버튼과 한 줄 넘게 띄움. | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
 | `results` | `replay-end-${scene.kind}` | — | AI 통화 (어디서나 뜨는 층 CallHost `call` · `roleplay/CallReplay.tsx` |
-| `results` | `skill-check-end` | 📏 실력 확인 결과(14일마다 하는 시험의 끝) 아래 네이티브 하나 — 닫기 버튼과 한 줄 넘게 띄움. 처음 측정(설치 직후 온보딩)에는 없음. | My 탭 `my` · `studyMap/FirstCheck.tsx` |
 | `room-lobby` | `room-lobby-after-2` | 두 번째 방 뒤에 네이티브 광고 하나(무료·안드로이드만). 방에 들어가면 방 화면이 덮어 멈춘다. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-after-5` | 다섯 번째 방 뒤에 하나 더(같은 피드 3개 한도 안, 2026-11-01). | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만, 방 밖) — 버튼과 띄움. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
@@ -101,7 +99,7 @@
 | `video-library` | `video-library-after-3` | 세 번째 영상 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 | `video-library` | `video-library-after-8` | 여덟 번째 영상 뒤에 하나 더(2026-11-01 — 같은 피드 두 번째, 한 피드 3개 한도 안, 첫 광고와 한 화면에 안 겹침). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 
-피드 10개, 자리 30개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
+피드 10개, 자리 29개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
 
 ### 배너 · 앱 오프닝 · 보상형
 
@@ -151,7 +149,7 @@
 
 출처: 한국 AdMob eCPM 대략값(보상형 $8~20, 전면 $3~10), 가정 2026-10-18. AdMob 실제 eCPM이 쌓이면 `ads.ts` `AD_REVENUE_USD`를 고친다.
 
-가상 사용자 손익(`hub/app/economics.md`, 결제 전환 3%): 가입자 1,000명당 한 달 단가 낮음 **−54,030원** · 중간 **+496,363원** · 높음 **+1,046,755원**.
-무료 한 사람 한 달: 원가 519원, 광고 978원(중간) → +459원.
+가상 사용자 손익(`hub/app/economics.md`, 결제 전환 3%): 가입자 1,000명당 한 달 단가 낮음 **−58,440원** · 중간 **+486,562원** · 높음 **+1,031,563원**.
+무료 한 사람 한 달: 원가 519원, 광고 968원(중간) → +449원.
 
 <!-- 자동 끝 -->

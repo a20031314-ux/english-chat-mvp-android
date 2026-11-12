@@ -12,7 +12,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/LineParts";
 import { usePremium } from "@/contexts/PremiumContext";
 import { isLocale, type UICopy } from "@/lib/copy";
-import { buildQuiz, firstCue, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
+import { buildQuiz, firstCue, fixedRight, formChoice, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
@@ -527,7 +527,7 @@ function useTypedGrade(language: string) {
   const { isPremium } = usePremium();
   const [checking, setChecking] = useState(false);
   // "also" = 기기 채점은 틀림인데 서버가 맞는 다른 답으로 봄 — 맞음으로 세고 원래 정답을 같이 보여 준다(사용자 2026-11-01 "일단 정답 처리, 원래 정답은 이런 것도 가능").
-  const grade = async (local: Graded, input: { kind: "blank" | "fix"; sentence: string; answer: string; typed: string; open?: boolean }, plainWrong: boolean): Promise<Graded> => {
+  const grade = async (local: Graded, input: { kind: "blank" | "fix"; sentence: string; answer: string; typed: string; open?: boolean; meaning?: string }, plainWrong: boolean): Promise<Graded> => {
     if (local || plainWrong) return local;
     setChecking(true);
     const ok = await recheckTyped({ language, ...input }, entitlementHeaders(isPremium));
@@ -671,7 +671,8 @@ function TypeView({
     const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
     const sentence = `${question.before}___${question.after}`;
     // 낱말 문제는 문장에 맞는지(open)로 물어 맞으면 "그 낱말을" 다시 치게, 뜻 줄을 먼저 보인 수업은 같은 뜻인지(Pienso que = Creo que), 그 밖은 문장에 맞으면 맞음.
-    const final = await grade(local, { kind: "blank", sentence, answer: question.answer, typed: typed.trim(), open: strict || !(glossFirst && gloss) }, plainWrong);
+    const shownMeaning = !strict && glossFirst && gloss ? gloss : undefined;
+    const final = await grade(local, { kind: "blank", sentence, answer: question.answer, typed: typed.trim(), open: strict || !shownMeaning, ...(shownMeaning ? { meaning: shownMeaning } : {}) }, plainWrong);
     if (strict && final === "also") {
       setOtherWord(true);
       return;
@@ -798,7 +799,8 @@ function SpotView({
     setResult(final);
     onAnswer({ correct: Boolean(final) });
   };
-  const gloss = question.gloss ? quizGloss(question.gloss, locale, language) : null;
+  // 뜻이 틀린 곳이면 뜻 줄이 곧 답 — 답한 뒤에만(체감 점검 2026-11-12).
+  const gloss = question.gloss && (!question.glossAfter || result !== null || said !== null) ? quizGloss(question.gloss, locale, language) : null;
   return (
     <div className="flex flex-col gap-3">
       {!bare && gloss ? (
@@ -948,7 +950,7 @@ function ChooseView({
   const notes = useOptionNotes(answered && !question.prepared ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer, mine: question.mine } : null, language, locale);
   return (
     <div className="flex flex-col gap-3">
-      {question.prepared || answered ? (
+      {(question.prepared && formChoice(question.options, question.answer, language)) || answered ? (
         <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>
@@ -1307,7 +1309,7 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
     if (next.every((one) => one !== null)) finish(next);
   };
   const found = done.filter((one) => one !== null).length;
-  const gloss = quizGloss(question.gloss, locale, language);
+  const gloss = !question.glossAfter || answered ? quizGloss(question.gloss, locale, language) : null;
   return (
     <div className="flex flex-col gap-3" data-spots>
       <div className="flex items-start justify-between gap-2">

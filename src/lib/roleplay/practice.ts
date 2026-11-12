@@ -240,8 +240,21 @@ export function shadowPasses(target: string, heard: string, compared: Comparison
   if (compared.clean) return true;
   const total = compared.outcomes.length;
   if (total < 5) return false;
+  // 같은 낱말의 다른 꼴(trabajar → trabajo, meetings → meeting)은 받아쓰기 탓이 아니라 꼴 실수 — 봐주지 않는다(체감 점검 2026-11-12).
+  if (compared.outcomes.some((outcome) => outcome.kind === "changed" && formSlip(outcome.word, outcome.heardAs))) return false;
   const kept = compared.outcomes.filter((outcome) => outcome.kind === "kept").length;
   return kept / total >= 0.8 && compared.added.length <= 1;
+}
+
+/** 같은 줄기의 다른 꼴: 글자 셋 넘게 앞이 같고 끝만 다름(대소문자·문장부호는 뺌). */
+export function formSlip(word: string, heardAs: string): boolean {
+  const bare = (text: string) => text.toLocaleLowerCase().replace(/[^\p{L}\p{M}\p{N}]+/gu, "");
+  const a = [...bare(word)];
+  const b = [...bare(heardAs)];
+  if (a.length < 3 || b.length < 3 || a.join("") === b.join("")) return false;
+  let same = 0;
+  while (same < a.length && same < b.length && a[same] === b[same]) same += 1;
+  return same >= Math.min(4, Math.min(a.length, b.length) - 1);
 }
 
 const CONTRACTED: Record<string, string[]> = {

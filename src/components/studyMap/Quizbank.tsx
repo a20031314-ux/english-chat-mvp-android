@@ -2,7 +2,8 @@
 
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
-import { DONE, gaugeCue, gaugeNumbered, gaugeRung, kindCounts, kindOf, kindShares, missRates, paraDue, readGauge, readLadder, readPara, rungOf, saveGauge, saveLadder, savePara, stepLadder, stepPara, type Gauge } from "@/lib/curriculum/ladder";
+import { DONE, gaugeCue, rightToday, gaugeNumbered, gaugeRung, kindCounts, kindOf, kindShares, missRates, paraDue, readGauge, readLadder, readPara, rungOf, saveGauge, saveLadder, savePara, stepLadder, stepPara, type Gauge } from "@/lib/curriculum/ladder";
+import { measured } from "@/lib/curriculum/firstCheck";
 import { gaugeField, noteStat, RANDOM_SHARE, statField } from "@/lib/curriculum/quizStats";
 import { expressionAsk, grammarAsk, paragraphQuestion } from "@/lib/curriculum/ladderQuiz";
 import { loadParas, loadSpots, parasAt, spotsFor } from "@/lib/curriculum/spotLoad";
@@ -21,7 +22,6 @@ import { confirmDue, knownState } from "@/lib/curriculum/known";
 import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
-import { latestCheck } from "@/lib/curriculum/skillCheck";
 import { pickPrepared, turnFresh } from "@/lib/curriculum/preparedQuiz";
 import { knownSlotWeight } from "@/lib/curriculum/languagePairs";
 import { learnerLanguages } from "@/lib/curriculum/learnerLanguages";
@@ -63,9 +63,11 @@ function announceReview(language: string, review: ReviewMap) {
 /** 넣어 둔 문제 중 맞혀서 쉬는 열쇠(장부에 ok — 맞힌 것은 새 묶음에 다시 안 냄, [다시]·틀림은 다시 볼 것이 냄). */
 function preparedRest(language: string, prepared: readonly { key: string }[] | null): string[] {
   if (!prepared?.length) return [];
-  // 사다리 끝(4칸 문장 만들기까지 맞힘)만 새 묶음에서 쉰다(퀴즈 다시 짜기 4단계, ladder.ts).
+  // 사다리 끝(4칸 문장 만들기까지 맞힘)은 새 묶음에서 쉬고(퀴즈 다시 짜기 4단계, ladder.ts),
+  // 오늘 맞힌 칸(퀴즈·첫 측정)도 오늘은 다시 안 낸다 — 맞힌 것이 같은 날 또 나옴(체감 점검 2026-11-12 easy-repeat).
   const ladder = readLadder(language);
-  return prepared.map((item) => item.key).filter((key) => rungOf(ladder, key) >= DONE);
+  const today = rightToday(readLedger(language), Math.floor(Date.now() / 1000));
+  return prepared.map((item) => item.key).filter((key) => rungOf(ladder, key) >= DONE || today.has(key));
 }
 
 export function Quizbank({
@@ -398,19 +400,19 @@ export function Quizbank({
     if (!bank || !ranked.length) return null;
     // 종류 비율(ladder.ts kindShares — 단어 40 · 문법 35 · 표현 25, 1~2단계 50 · 30 · 20, 최근 14일 틀린 비율이 높은 쪽으로).
     const counts = kindCounts(BATCH_SIZE, kindShares(stage, missRates(readLedger(language), Math.floor(Date.now() / 1000))));
-    const keys = levelPick(Math.max(0, counts.w - 1), { skip: lastCircle.current });
+    const keys = levelPick(Math.max(0, counts.w - 1), { skip: new Set([...lastCircle.current, ...rightToday(readLedger(language), Math.floor(Date.now() / 1000))]) });
     if (keys.length) {
       const low = presumedWords(circleRef.current, levelOf(circleRef.current, stage, cuts), { ranked, usable: (key) => bank.ready.has(key), known: knownWord, n: 1, seed: round });
       for (const one of low) if (!keys.includes(one) && !lastCircle.current.has(one)) keys.splice(Math.min(2, keys.length), 0, one);
     }
     // 넣어 둔 표현 문제가 없는 언어(영어 말고는 문법만 넣어 둠)는 표현 카드를 둘째 자리에.
     if (!prepared?.some((item) => item.kind === "expression")) {
-      // 가장 최근 확인(첫 측정·실력 확인, skillCheck.ts latestCheck)의 표현 단계부터 — 그 아래 단계는 본 표현 네 개에 하나만 끼워 확인(사용자 2026-11-09 "어쩌다 한 번이면 괜찮").
+      // 첫 측정(firstCheck.ts measured)의 표현 단계부터 — 그 아래 단계는 본 표현 네 개에 하나만 끼워 확인(사용자 2026-11-09 "어쩌다 한 번이면 괜찮").
       // 몇 번째인지는 본 표현 수로 센다(묶음 번호는 다시 볼 것 묶음과 번갈아 홀짝이 고정).
       const exprSeen = (key: string) => Boolean(circleRef.current.items[key]) || knownWord(key);
-      const placed = latestCheck(language);
+      const placed = measured(language);
       const exprFrom = placed && exprCards.deck.filter((one) => exprSeen(one.key)).length % 4 !== 3 ? placed.expression : undefined;
-      const more = nextExpressions(exprCards.deck, { seen: exprSeen, ready: (key) => exprCards.ready.has(key), skip: lastCircle.current, ...(exprFrom ? { from: exprFrom } : {}) }).slice(0, counts.e);
+      const more = nextExpressions(exprCards.deck, { seen: exprSeen, ready: (key) => exprCards.ready.has(key), skip: new Set([...lastCircle.current, ...rightToday(readLedger(language), Math.floor(Date.now() / 1000))]), ...(exprFrom ? { from: exprFrom } : {}) }).slice(0, counts.e);
       keys.splice(Math.min(1, keys.length), 0, ...more);
     }
     // 같은 단계 문법은 이 학습자에게 무거운 칸(모국어·아는 언어에 없는 개념)부터 — 프로필 모국어 → 국적 → 앱 언어.

@@ -5,6 +5,7 @@ import {
   climbNext,
   climbStart,
   estimateB,
+  estimateChance,
   fakeSlots,
   letterQuestions,
   lettersWeak,
@@ -149,4 +150,14 @@ test("글자: 여섯 문제, 정답이 보기에 있고 보기 넷이 다름, �
   }
   assert.equal(lettersWeak([true, true, false, false, false, true]), false);
   assert.equal(lettersWeak([false, false, false, false, true, true]), true);
+});
+
+test("estimateChance: 낱말은 경계 b 곡선, 표현·문법은 잰 단계 아래 1 · 그 단계 0.5 · 위 0", () => {
+  const check = { b: 600, expression: 2, grammar: 3 };
+  assert.ok(estimateChance(check, { kind: "word", rank: 50, lv: 1 }) > 0.8);
+  assert.ok(Math.abs(estimateChance(check, { kind: "word", rank: 600, lv: 1 }) - 0.5) < 0.01);
+  assert.ok(estimateChance(check, { kind: "word", rank: 5000, lv: 5 }) < 0.2);
+  assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 1 }), 1);
+  assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 2 }), 0.5);
+  assert.equal(estimateChance(check, { kind: "gram", rank: 0, lv: 4 }), 0);
 });

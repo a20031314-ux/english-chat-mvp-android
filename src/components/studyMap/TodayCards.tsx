@@ -5,8 +5,6 @@ import type { UICopy } from "@/lib/copy";
 import { usePremium } from "@/contexts/PremiumContext";
 import { sendAppIntent } from "@/lib/appIntents";
 import { AiAvatar } from "@/components/AiTutorProfile";
-import { FullScreenLayer } from "@/components/FullScreenLayer";
-import { FirstCheck } from "@/components/studyMap/FirstCheck";
 import { readHomework, type Homework } from "@/lib/roleplay/replay";
 import { readCalls, subscribeCalls } from "@/lib/roleplay/callStore";
 import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
@@ -16,16 +14,12 @@ import { focusQuiz } from "@/lib/curriculum/quizFocus";
 import { localDay } from "@/lib/curriculum/resume";
 import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { openLettersBank } from "@/lib/curriculum/lettersOpen";
-import { readFirstCheck } from "@/lib/curriculum/firstCheck";
-import { checkHistory, readRechecks, recheckDue, SKILL_CHECK_EVENT } from "@/lib/curriculum/skillCheck";
-import { maybeShowInterstitial } from "@/lib/ads";
 import { useScript } from "@/components/studyMap/ScriptPractice";
 
 /**
- * 오늘의 학습(My 맨 위, 프로필 카드 아래 — 사용자 2026-11-10 "데이터 기록을 제외한 학습 요소는 사용자 프로필에 통합,
- * 오늘의 학습·수업·실력 확인 다 같은 층위로" → "오늘의 학습 안에 수업·실력 확인·숙제 다 넣기" → "숫자는 필요 없으면 넣지 마").
- * 오늘 할 것만 같은 모양 줄로: ▶ 퀴즈(0단계면 오늘의 글자 묶음) · 숙제(있을 때) · 📞 수업 · 📏 실력 확인(14일이 된 날만).
- * 줄마다 끝나면 ✓, 다 끝나면 제목 옆 ✓. 숫자·설명 글 없음(DESIGN.md "값 꼬리표"). 기록(지난 확인 표·배운 것)은 Logbank.
+ * 오늘의 학습(My 맨 위, 프로필 카드 아래 — 사용자 2026-11-10 "학습 요소는 사용자 프로필에 통합, 같은 층위로" → "숫자는 필요 없으면 넣지 마").
+ * 오늘 할 것만 같은 모양 줄로: ▶ 퀴즈(0단계면 오늘의 글자 묶음) · 숙제(있을 때) · 📞 수업.
+ * 줄마다 끝나면 ✓, 다 끝나면 제목 옆 ✓. 숫자·설명 글 없음(DESIGN.md "값 꼬리표"). 기록(배운 것)은 Logbank.
  */
 export function TodayCards({ ui, language, locale }: { ui: UICopy; language: string; locale: string }) {
   const [lettersFlag] = useLettersFirst(language);
@@ -33,7 +27,6 @@ export function TodayCards({ ui, language, locale }: { ui: UICopy; language: str
   const quiz = useQuizDone(language);
   const lesson = useLessonDone(language);
   const homework = useHomework(language);
-  const check = useSkillCheck(language);
   const [lettersDone, setLettersDone] = useState(false);
   const rows: { id: string; done: boolean; node: ReactNode }[] = [];
   if (letters) rows.push({ id: "letters", done: lettersDone, node: <LettersRow ui={ui} language={language} locale={locale} onDone={setLettersDone} /> });
@@ -54,7 +47,6 @@ export function TodayCards({ ui, language, locale }: { ui: UICopy; language: str
     });
   }
   rows.push({ id: "lesson", done: lesson, node: <TodayRow kind="lesson" done={lesson} icon="📞" name={ui.callModeStudy} onClick={() => sendAppIntent("startCall", { lesson: true })} /> });
-  if (check.show) rows.push({ id: "check", done: check.doneToday, node: <TodayRow kind="check" done={check.doneToday} icon="📏" name={ui.skillCheckTitle} onClick={check.open} /> });
   const allDone = rows.every((one) => one.done);
   return (
     <section data-today-cards className="flex flex-col gap-2 rounded-xl border border-line p-3">
@@ -65,7 +57,6 @@ export function TodayCards({ ui, language, locale }: { ui: UICopy; language: str
       {rows.map((one) => (
         <div key={one.id}>{one.node}</div>
       ))}
-      {check.sheet(ui, locale)}
     </section>
   );
 }
@@ -145,53 +136,6 @@ function useHomework(language: string): Homework | null {
     };
   }, [language]);
   return homework;
-}
-
-/** 📏 실력 확인 줄: 14일이 된 날(recheckDue)과 오늘 끝낸 날만. 누르면 첫 측정과 같은 시험(FirstCheck recheck), 기록 표는 Logbank. */
-function useSkillCheck(language: string) {
-  const [tick, setTick] = useState(0);
-  const [openSheet, setOpenSheet] = useState(false);
-  useEffect(() => {
-    const on = () => setTick((n) => n + 1);
-    window.addEventListener(SKILL_CHECK_EVENT, on);
-    return () => window.removeEventListener(SKILL_CHECK_EVENT, on);
-  }, []);
-  const history = useMemo(() => {
-    void tick;
-    return checkHistory(readFirstCheck(language), readRechecks(language));
-  }, [language, tick]);
-  const last = history[history.length - 1] ?? null;
-  const rechecks = useMemo(() => {
-    void tick;
-    return readRechecks(language);
-  }, [language, tick]);
-  const lastRecheck = rechecks[rechecks.length - 1];
-  const doneToday = Boolean(lastRecheck && localDay(new Date(lastRecheck.at)) === localDay());
-  const [now] = useState(() => Date.now());
-  const show = doneToday || recheckDue(history, now);
-  const sheet = (ui: UICopy, locale: string) =>
-    openSheet ? (
-      <FullScreenLayer>
-        <div className="contents" onClick={(event) => event.stopPropagation()}>
-          <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-6 pt-[max(1rem,env(safe-area-inset-top))]">
-            <FirstCheck
-              ui={ui}
-              locale={locale}
-              language={language}
-              recheck={{ last }}
-              onSkip={() => setOpenSheet(false)}
-              onDone={() => {
-                setOpenSheet(false);
-                setTick((n) => n + 1);
-                // 결과를 보고 닫을 때 전면 한 번(시험 끝 — 콘텐츠 사이 논리적 쉼). 시험 도중·줄을 누를 때는 없음.
-                void maybeShowInterstitial("skillCheckEnd");
-              }}
-            />
-          </div>
-        </div>
-      </FullScreenLayer>
-    ) : null;
-  return { show, doneToday, open: () => setOpenSheet(true), sheet };
 }
 
 const LETTERS_KEY = "todayLetters.v1";

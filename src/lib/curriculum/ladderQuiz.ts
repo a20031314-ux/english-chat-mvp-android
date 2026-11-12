@@ -68,6 +68,7 @@ export function spotQuestion(item: SpotItem, language: string, key: string, numb
     note: "",
     from: key,
     hasError: true,
+    ...(err.type === "meaning" ? { glossAfter: true as const } : {}),
     ...(item.lead ? { lead: item.lead } : {}),
     ...(numbered ? { picks: pickCells(words, [err.at], item.clue ?? [], item.id) } : {}),
   };
@@ -102,6 +103,7 @@ export function paragraphQuestion(item: SpotItem, language: string): QuizQuestio
     from: errors[0]!.key,
     ...(numbered ? { picks: pickCells(words, errors.map((err) => err.bad[0]!), [], item.id) } : {}),
     ...(item.shape === "P4" ? { hideCount: true as const } : {}),
+    ...(item.errors.some((err) => err.type === "meaning") ? { glossAfter: true as const } : {}),
   };
 }
 

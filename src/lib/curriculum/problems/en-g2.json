@@ -61,7 +61,7 @@
     "after": " water?",
     "answer": "any",
     "why": "있는지 묻는 의문문에서 셀 수 없는 water 앞에는 any예요.",
-    "options": ["many", "much", "any", "some"],
+    "options": ["many", "a few", "any", "a"],
     "line": "Do you have any water?"
   },
   "g|2:5": {

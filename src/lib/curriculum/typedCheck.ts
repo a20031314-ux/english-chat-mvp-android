@@ -14,6 +14,8 @@ export type TypedCheck = {
   typed: string;
   /** 뜻 줄 없이 낸 빈칸(2026-10-31) — 문맥에 맞는 다른 말도 받는다. */
   open?: boolean;
+  /** 뜻 줄을 먼저 보인 빈칸(숙제·사다리) — 그 뜻을 말하면 맞음(정해진 낱말과 달라도, 체감 점검 2026-11-12). */
+  meaning?: string;
 };
 
 const asked = new Map<string, Promise<boolean>>();
