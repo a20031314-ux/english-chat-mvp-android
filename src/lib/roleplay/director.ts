@@ -571,8 +571,13 @@ export function isCoaching(request: Pick<DirectorRequest, "coach">, scenario: Pi
   return Boolean(request.coach && scenario.openEnded);
 }
 
-export function coachRules(target: string, native: string, bilingual: boolean): string {
-  return `How you tutor:
+export function coachRules(target: string, native: string, bilingual: boolean, lessonPattern = ""): string {
+  return `How you tutor:${
+    lessonPattern
+      ? `
+- First, the one exception: the lesson pattern "${lessonPattern}" (see "Today's lesson point") is never corrected, drilled or graded. A mistake in it — a wrong form inside it counts — or not using it is answered only by saying it back the right way inside your reply, as conversation. "note", "better", "meant", "retry" and "offer" stay empty for it, and you never ask them to say it again. When they use it, no word that grades it (right, correct, good) — just answer.`
+      : ""
+  }
 - They speak ${native} and you understand it completely. They may say anything in ${native}, or mix it into ${target}, at any time.
 - Pick up only big mistakes: the ones that change or blur what they mean, or that any listener would notice at once — the wrong time (tense), a word that means something else, words in an order that does not work, a missing word the sentence needs, ${native} in the middle of a ${target} sentence. Let everything else go: a small ending or article (as likely the speech recogniser's doing as theirs), informal speech, answering in a fragment, pronunciation. A turn without a big mistake is just conversation.
 - A turn with a big mistake is three spoken beats and nothing else, in this order: (1) point out what was wrong in one short phrase in ${native} — name the mistake (the time, the word, the order, the missing word), the same words as "note", said out loud; (2) their whole sentence said right, once, in ${target}, in your own manner — your rhythm and everyday wording, still at the speech level they use with you — spoken as your own line, never wrapped in quotation marks or read out as a cited example; the words stay their sentence put right, not a different story of yours; (3) ask them to say it again in a few words of ${target}, in that same manner: a short nudge rather than a polite set phrase, and not in ${native}. Ask no new question. Do not react to what they told you, and do not use a ready line. Leave "open" and "follow" empty. Put the right sentence alone in "better" ("meant" when it had to be rebuilt from what they were trying to say) and set "retry" to "ask". Change only the words that are wrong: every other word, and every sentence of their turn that was already right, stays exactly as they said it (do not drop a pronoun, swap a word for one you like better or tidy the punctuation) — leave out of "better" any sentence that had no mistake. Do not put the corrected sentence in "note".
@@ -926,7 +931,7 @@ ${scenario.openEnded && !coaching ? `- When what they just said had a mistake, l
 ${
   coaching
     ? `- One or two short sentences.
-${coachRules(target, native, Boolean(request.bilingual && request.nativeLanguage !== request.targetLanguage))}`
+${coachRules(target, native, Boolean(request.bilingual && request.nativeLanguage !== request.targetLanguage), request.lesson?.pattern)}`
     : scenario.openEnded
       ? `- One or two short sentences. They chose free conversation for this call, so what you say out loud is only the conversation. Never correct a sentence out loud, never ask them to repeat it, and never mention practice, mistakes or a lesson.
 - Corrections are written, never spoken: they appear on their screen while you keep talking. "better" is their own last sentence put right — only when it has a real mistake: grammar, a wrong form, a word that is wrong for what they meant. Change only the words that are wrong: every other word, and every sentence of their turn that was already right, stays exactly as they said it (do not drop a pronoun, swap a word for one you like better or tidy the punctuation) — leave out of "better" any sentence that had no mistake. "meant" is for a sentence too broken to just put right: write what they were trying to say, as a ${target} speaker would. Fill "better" or "meant", never both, and never refer to them in what you say.
@@ -1675,11 +1680,11 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
   const step = (() => {
     switch (lesson.step) {
       case "show":
-        return `${lesson.open || !spoke ? `They have not spoken yet. Greet them in a few words, then ` : `Now `}move the conversation to a moment from your own life where this pattern fits, use it yourself twice in your own words, and ask them one easy question.${lesson.open || !spoke ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : ""}`;
+        return `${lesson.open || !spoke ? `They have not spoken yet. Greet them in a few words, then ` : `Now `}move the conversation to a moment from your own life where this pattern fits, use it yourself twice in your own words — something different in the blank each time — and ask them one easy question.${lesson.open || !spoke ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : ""}`;
       case "draw":
         return `${lesson.open || !spoke ? `They have not spoken yet. Greet them in a few words, then ask` : `Now ask`} one question that is most naturally answered with this pattern — about their own life or one of the words.`;
       case "move":
-        return `They have used it once. Now take the conversation to a different situation where the same pattern fits, and ask a question whose natural answer uses the pattern again — not a question about something else.`;
+        return `They have used it once. Now take the conversation to a different situation where the same pattern fits — another person, place or time — and ask a question whose natural answer uses the pattern again, not a question about something else.`;
       case "ask":
         return lesson.asked
           ? `You already asked whether to try something new. "move" is true when their turn agrees or asks for it${startNext}. Otherwise false, and keep talking about what they said.`

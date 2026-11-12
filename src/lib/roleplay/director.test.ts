@@ -1641,6 +1641,16 @@ test("수업 소재: move는 수업 소재를 보냈고 학습자가 말한 차�
   assert.equal(parseDirection(raw, context({ heard: "vale", lesson: { ...lesson, step: "ask", asked: true } }))?.move, true);
 });
 
+test("수업 소재가 있으면 How you tutor 맨 앞에 예외 — 틀은 고치지도 평하지도 않는다", () => {
+  const es = findScenario("open-talk-es")!;
+  const esBank = sentencesFor("es");
+  const prompt = (lesson?: DirectorRequest["lesson"]) =>
+    tutorSystemPrompt({ scenario: es, bank: esBank, recorded: recordedLines(es, SCENARIOS, esBank), request: request({ scenarioId: es.id, nodeId: "talk", coach: true, targetLanguage: "es", nativeLanguage: "ar", ...(lesson ? { lesson } : {}) }) });
+  const withLesson = prompt({ pattern: "Me llamo ___.", meaning: "name", words: [], step: "draw" });
+  assert.match(withLesson, /How you tutor:\n- First, the one exception: the lesson pattern "Me llamo ___\."/);
+  assert.doesNotMatch(prompt(), /the one exception/);
+});
+
 test("수업 통화 첫 마디는 침묵 차례가 아니다 — '들렸어요?'를 붙이지 않는다", () => {
   const es = findScenario("open-talk-es")!;
   const esBank = sentencesFor("es");
