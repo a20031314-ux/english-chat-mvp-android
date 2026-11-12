@@ -49,8 +49,8 @@ import { talkStatsOf } from "@/lib/roleplay/talkStats";
 import { OPENING_LINES } from "@/lib/roleplay/talkTags";
 import { applyTalkTags } from "@/lib/roleplay/talkMemory";
 import { loadBank, stageCuts } from "@/lib/curriculum/vocabBank";
-import { loadStudyCell } from "@/lib/roleplay/studyPicture";
-import { cellName } from "@/lib/curriculum/cellName";
+import { lessonRequestOf, planRunFor, stepRunFor, type LessonRun } from "@/lib/roleplay/lessonPlan";
+import { allFramesFor } from "@/lib/curriculum/frames";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
 import { REVIEW_LINES, type Review, type StuckTurn } from "@/lib/roleplay/review";
 import { callSeconds, resumeFrom, titleFor, type SavedConversation } from "@/lib/roleplay/saved";
@@ -258,8 +258,8 @@ export function RoleplayScreen({
   const [prior, setPrior] = useState("");
   const factsKept = useRef(false);
   const fixesKept = useRef(false);
-  /** 수업 통화가 겨냥하는 부족한 칸 이름. 없으면 빈 글자. */
-  const [studyName, setStudyName] = useState("");
+  /** 수업 통화의 소재 진행(lessonPlan.ts) — ready 전이면 이어 받은 통화라 첫 학습자 차례에 계획을 세운다. */
+  const lessonRef = useRef<{ run: LessonRun | null; ready: boolean }>({ run: null, ready: false });
   const [fixesText, setFixesText] = useState("");
   const [lead, setLead] = useState(0);
   // 내 차례가 열리고 말이 없으면 3초 뒤 🙉·💡(앱 망설임 셈 review.ts LONG_SILENCE_MS와 같은 값).
@@ -338,7 +338,7 @@ export function RoleplayScreen({
     setMemory(carrying ? carrying.memory : EMPTY_MEMORY);
     setPrior(lifeFactsPrompt(readLifeFacts(scenario.language), Date.now()));
     setFixesText(fixesPrompt(readFixes(scenario.language), Date.now()));
-    setStudyName("");
+    lessonRef.current = { run: null, ready: false };
     setLead(openLesson ? 1 : 0);
     setDirecting(false);
     factsKept.current = false;
@@ -468,6 +468,14 @@ export function RoleplayScreen({
     if (!scenario || !state || instruction?.do !== "direct") return;
     let cancelled = false;
     setDirecting(true);
+    // 수업 통화: 이번 학습자 말로 소재 단계를 넘기고(틀이 나왔나 — 판정 아님), 지금 소재를 감독에게.
+    const lessonBox = lessonRef.current;
+    if (scenario.openEnded && coachOn && !game) {
+      if (!lessonBox.ready) lessonRef.current = { run: planRunFor(scenario.language), ready: true };
+      else if (lessonBox.run)
+        lessonRef.current = { run: stepRunFor(scenario.language, lessonBox.run, { heard: instruction.request.heard, missed: Boolean(instruction.request.missed) }), ready: true };
+    }
+    const lessonNow = scenario.openEnded && coachOn && !game ? lessonRequestOf(allFramesFor(scenario.language), lessonRef.current.run) : undefined;
     void fetchDirection({
       // Verbatim, every line the notes do not cover; the notes for the rest.
       request: {
@@ -475,7 +483,7 @@ export function RoleplayScreen({
         history: rawLines(instruction.request.history, memory),
         context: memory.text,
         ...(prior ? { prior } : {}),
-        ...(coachOn && studyName ? { study: studyName } : {}),
+        ...(lessonNow ? { lesson: lessonNow } : {}),
         ...(fixesText ? { fixes: fixesText } : {}),
         ...(tutorIsBilingual(scenario.language, nativeLanguage) ? { bilingual: true } : {}),
         ...(scenario.openEnded ? { tutorGender } : {}),
@@ -565,6 +573,10 @@ export function RoleplayScreen({
         setSaid((current) => markAboutTheirLine(current, { turn: markTurn({ ...signals, afterMissed: answeredAfterMissed(current) }) }));
       }
       if (!missedTurn) hintedRef.current = false;
+      // 수업 소재: 다른 걸 하자(또는 물어본 뒤 좋다) → 다음 소재. 튜터가 이번 줄에서 이미 시작했다.
+      const lessonRun = lessonRef.current.run;
+      if (direction?.move && lessonRun && !missedTurn)
+        lessonRef.current = { run: stepRunFor(scenario.language, lessonRun, { heard: instruction.request.heard, missed: false, move: true }), ready: true };
       // 스무고개 판이 끝남(맞힘·스무 번) → 다음 답, 다음 차례부터 새 판으로 센다.
       if (game === "twenty" && direction?.round === "over") {
         const next = pickSecret(usedSecrets.current);
@@ -996,7 +1008,7 @@ export function RoleplayScreen({
     };
   }, []);
 
-  // 수업 통화는, 부족한 칸이 있으면 그 칸으로 첫 마디를 한다. 없으면 보통 인사.
+  // 수업 통화는 수업 계획(lessonPlan.ts)의 첫 소재로 첫 마디를 한다. 소재가 없으면 보통 인사.
   useEffect(() => {
     if (lead === 0 || !scenario) return;
     const session = stateRef.current;
@@ -1005,18 +1017,11 @@ export function RoleplayScreen({
     const language = scenario.language;
     setDirecting(true);
     void (async () => {
-      let cell: Awaited<ReturnType<typeof loadStudyCell>> = null;
-      if (!game) {
-        try {
-          cell = await loadStudyCell(language);
-        } catch {
-          cell = null;
-        }
-      }
+      const run = game ? null : planRunFor(language);
+      lessonRef.current = { run, ready: true };
+      const lesson = lessonRequestOf(allFramesFor(language), run, true);
       if (cancel) return;
-      const name = cell ? cellName(ui, cell.id, () => "") : "";
-      setStudyName(name);
-      if (!name && !game) {
+      if (!lesson && !game) {
         setDirecting(false);
         setInstruction(currentInstruction(scenario, bank, session));
         return;
@@ -1031,7 +1036,7 @@ export function RoleplayScreen({
           freeTurns: session.freeTurns,
           directedTurns: session.directedTurns,
           level: session.difficulty.level,
-          ...(game ? { game, gameStart: true, gameCount: 0, ...(game === "twenty" ? { gameSecret } : {}) } : { coach: true, study: name, studyOpen: true }),
+          ...(game ? { game, gameStart: true, gameCount: 0, ...(game === "twenty" ? { gameSecret } : {}) } : { coach: true, lesson }),
           ...(fixesText ? { fixes: fixesText } : {}),
           ...(prior ? { prior } : {}),
           ...(tutorIsBilingual(language, nativeLanguage) ? { bilingual: true } : {}),

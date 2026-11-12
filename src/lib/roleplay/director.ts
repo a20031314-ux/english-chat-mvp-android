@@ -130,11 +130,16 @@ export type DirectorRequest = {
    */
   prior?: string;
   /**
-   * 수업 통화가 겨냥하는 부족한 칸 이름(앱 언어, studyPicture.ts). 비면 보통 인사.
+   * 옛 앱(2.79 이하)이 보내는 수업 통화의 부족한 칸 이름(앱 언어). 새 앱은 `lesson` — 최소 지원 2.80이면 지움.
    */
   study?: string;
-  /** 그 칸을 말하는 첫 마디. 학습자는 아직 말하지 않았다. */
+  /** 옛 앱: 그 칸을 말하는 첫 마디. */
   studyOpen?: boolean;
+  /**
+   * 수업 통화의 지금 소재(lessonPlan.ts, hub/work/drafts/lesson-plan-2026-11-12.md) — 앱이 단계를 정한다.
+   * 틀은 판정하지 않고 튜터가 그 틀로 되받는다. 예문은 싣지 않는다(베낄 문장 금지).
+   */
+  lesson?: LessonRequest;
   /**
    * 수업 통화(coach)에서 학습자가 말없이 지나간 차례가 이번까지 몇 번 이어졌나(2026-11-07) — 화면에 🙉·💡가 없어
    * 튜터가 먼저: 1이면 들었는지 묻고 질문을 쉽게 다시, 2 이상이면 이어 말할 문장 앞부분 힌트.
@@ -203,6 +208,43 @@ export type DirectorRequest = {
 /** 자유대화 채우기 측정: 앞 차례 겨냥을 이번 말에서 맞게 씀(used)·썼지만 틀림(wrong). */
 export type AimResult = "used" | "wrong";
 const AIM_RESULTS: readonly AimResult[] = ["used", "wrong"];
+/** 수업 소재(앱이 보냄): 틀·뜻(앱 언어)·넣을 낱말·단계, 물어본 뒤인가, 좋다면 이어 갈 다음 틀. */
+export type LessonRequest = {
+  pattern: string;
+  meaning: string;
+  words: string[];
+  step: "show" | "draw" | "move" | "ask";
+  asked?: boolean;
+  /** 대화 첫 마디(학습자가 아직 말하지 않음). */
+  open?: boolean;
+  next?: { pattern: string; meaning: string; words: string[] };
+};
+/** 수업 소재 글 길이 상한(서버가 자름). */
+export const LESSON_MAX_CHARS = 160;
+
+/** 서버: 앱이 보낸 수업 소재를 읽는다 — 모르는 꼴은 버린다(없는 것으로). */
+export function readLesson(raw: unknown): LessonRequest | undefined {
+  if (!raw || typeof raw !== "object") return undefined;
+  const one = raw as Record<string, unknown>;
+  const text = (value: unknown) => (typeof value === "string" ? value.trim().slice(0, LESSON_MAX_CHARS) : "");
+  const words = (value: unknown) =>
+    Array.isArray(value) ? value.map(text).filter(Boolean).slice(0, 3) : [];
+  const pattern = text(one.pattern);
+  const step = one.step;
+  if (!pattern || (step !== "show" && step !== "draw" && step !== "move" && step !== "ask")) return undefined;
+  const next = one.next && typeof one.next === "object" ? (one.next as Record<string, unknown>) : null;
+  const nextPattern = next ? text(next.pattern) : "";
+  return {
+    pattern,
+    meaning: text(one.meaning),
+    words: words(one.words),
+    step,
+    ...(one.asked === true ? { asked: true } : {}),
+    ...(one.open === true ? { open: true } : {}),
+    ...(next && nextPattern ? { next: { pattern: nextPattern, meaning: text(next.meaning), words: words(next.words) } } : {}),
+  };
+}
+
 /** aim·aimCheck 글 길이 상한(서버가 자름). */
 export const AIM_MAX_CHARS = 200;
 
@@ -306,6 +348,8 @@ export type Direction = {
   aim?: AimResult;
   /** 스무고개: 이 차례에 판이 끝남(맞힘·스무 번) — 앱이 다음 답을 고른다(callGames.ts). */
   round?: "over";
+  /** 수업 소재: 학습자가 다른 걸 하자고 함(또는 물어본 뒤 좋다고 함) — 앱이 다음 소재로(lessonPlan.ts advanceRun). */
+  move?: true;
 };
 
 export type { Heard, Lead, LeadHow };
@@ -892,7 +936,7 @@ ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bi
 `}
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", ${request.game === "teach" ? `"slip_right": "<the correct ${native} sentence you are about to break, or empty on a turn you only ask a question>", "slip": "<what you broke in it, in a few ${target} words, or empty>", ` : ""}"say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false${request.game === "twenty" ? `, "round": "over" | ""` : ""}}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", ${request.game === "teach" ? `"slip_right": "<the correct ${native} sentence you are about to break, or empty on a turn you only ask a question>", "slip": "<what you broke in it, in a few ${target} words, or empty>", ` : ""}"say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false${request.game === "twenty" ? `, "round": "over" | ""` : ""}${request.lesson ? `, "move": true | false` : ""}}
 ${MEASURE_RULES(Boolean(scenario.openEnded), target, native)}
 ${
   coaching
@@ -1009,7 +1053,8 @@ Do it inside the conversation, in your own manner. Never say this out loud, neve
         ? `This turn: they have said nothing for ${request.silent} turns in a row. Do not ask whether they heard you again. Give a hint: say out loud the start of a sentence in ${target} that answers your last question, stopping where their own words would go, and invite them to finish it — in ${target}, at most a few words of ${native}. Put that same start in "note". "assessment" is "stuck".`
         : `This turn: they said nothing. Say only your last question again, in fewer and easier words of ${target} — nothing in ${native}, and do not ask whether they heard you: the app says that first, in their language. "assessment" is "stuck".`
       : "",
-    request.study?.trim()
+    request.lesson ? lessonRules(request.lesson, request.heard.trim() !== "") : "",
+    !request.lesson && request.study?.trim()
       ? request.studyOpen
         ? `They have not spoken yet. They chose to study. Their weak point from their record is "${request.study.trim()}". Your line names that point and says today you will work on it, in your own manner. One or two short sentences. Leave "note", "better", "meant", "smoother" and "retry" empty. Do not correct anything and do not ask them to repeat a sentence.`
         : `Their weak point from their record is "${request.study.trim()}". Keep this conversation on that point.`
@@ -1184,6 +1229,7 @@ export function parseDirection(
     fn?: unknown;
     native?: unknown;
     aim?: unknown;
+    move?: unknown;
   };
 
   const assessment = ASSESSMENTS.includes(record.assessment as Assessment)
@@ -1603,8 +1649,38 @@ export function parseDirection(
     ...(retry === "ask" && better && !meant && record.offer === true ? { offer: true } : {}),
     ...turnMeasure(record, request, scenario),
     ...aimMeasure(record, request, scenario),
+    ...(request.lesson && record.move === true && request.heard.trim() && !request.missed ? { move: true as const } : {}),
     ...(roundOverOf(record as { round?: unknown }, scenario.openEnded ? request.game : undefined) ? { round: "over" as const } : {}),
   };
+}
+
+/**
+ * 수업 소재 지시(사용자 2026-11-12): 틀은 판정하지 않고 되받기, 큰 실수는 수업 교정 그대로(B안).
+ * 단계는 앱이 정한다 — 모델은 그 단계의 일만, 그리고 "move"(다른 걸 하자/좋다)만 알려 준다.
+ */
+export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
+  const words = lesson.words.length ? ` Words that fit it: ${lesson.words.join(", ")}.` : "";
+  const head = `Today's lesson point, for you only: the pattern "${lesson.pattern}" (${lesson.meaning}).${words} Never explain it, name it as grammar or show it as a rule — it lives only in the conversation.`;
+  const recast = `If their turn could have used this pattern and did not, or got the pattern part wrong: do not say it was wrong, do not ask them to say it again and leave "better", "meant" and "retry" empty for that part — in your reply, say back what they meant using the pattern, naturally, as part of the conversation (the way a friend picks up your words), then carry on. A big mistake elsewhere in their turn is still handled as "How you tutor" says.`;
+  const startNext = lesson.next
+    ? `; then answer it and start the next point in the same line: move to a moment where "${lesson.next.pattern}" (${lesson.next.meaning}) fits, use it yourself twice and ask one easy question`
+    : "; then answer it and simply carry on the conversation";
+  const move = `"move" is true only when their turn asks to stop this and do something else${startNext}. Otherwise false.`;
+  const step = (() => {
+    switch (lesson.step) {
+      case "show":
+        return `${lesson.open || !spoke ? `They have not spoken yet. Greet them in a few words, then ` : `Now `}move the conversation to a moment from your own life where this pattern fits, use it yourself twice in your own words, and ask them one easy question.${lesson.open || !spoke ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : ""}`;
+      case "draw":
+        return `${lesson.open || !spoke ? `They have not spoken yet. Greet them in a few words, then ask` : `Now ask`} one question that is most naturally answered with this pattern — about their own life or one of the words.`;
+      case "move":
+        return `They have used it once. Now take the conversation to a different situation where the same pattern fits, and ask a question that invites it again.`;
+      case "ask":
+        return lesson.asked
+          ? `You already asked whether to try something new. "move" is true when their turn agrees or asks for it${startNext}. Otherwise false, and keep talking about what they said.`
+          : `They have used it twice. Answer their turn, then ask once, in your own words, whether they want to try something new. "move" is false on this turn.`;
+    }
+  })();
+  return [head, recast, step, lesson.step === "ask" ? "" : move].filter(Boolean).join("\n");
 }
 
 /** 자유대화 채우기 측정 읽기: aimCheck를 보낸 그냥 대화 차례에서만, 학습자 말이 있을 때만. 모르는 값은 버린다. */

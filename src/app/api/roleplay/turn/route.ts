@@ -17,6 +17,7 @@ import {
   playableBy,
   parseDirection,
   AIM_MAX_CHARS,
+  readLesson,
   readSpokenLines,
   recordedLines,
   tutorMessages,
@@ -165,6 +166,7 @@ export async function POST(request: NextRequest) {
   // conversations whose first turn the script took on its own.
   if (readCount(body.directedTurns) === 0) void meterRequest(request, "roleplaySession");
 
+  const lessonOf = readLesson(body.lesson);
   const turn: DirectorRequest = {
     scenarioId: scenario.id,
     nodeId,
@@ -178,6 +180,8 @@ export async function POST(request: NextRequest) {
       : {}),
     ...(typeof body.study === "string" && body.study.trim() ? { study: body.study.trim().slice(0, 80) } : {}),
     ...(body.studyOpen === true ? { studyOpen: true } : {}),
+    // 수업 통화의 지금 소재(lessonPlan.ts) — 옛 앱은 study만 보낸다.
+    ...(lessonOf ? { lesson: lessonOf } : {}),
     // 수업 통화에서 말없이 지나간 차례가 이어진 수(2026-11-07, 화면에 🙉·💡 없음 — 튜터가 먼저 묻고 힌트).
     ...(readCount(body.silent) > 0 ? { silent: Math.min(9, readCount(body.silent)) } : {}),
     ...(typeof body.fixes === "string" && body.fixes.trim() ? { fixes: body.fixes.trim().slice(0, 800) } : {}),

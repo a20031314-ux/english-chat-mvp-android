@@ -5,12 +5,11 @@
  */
 import type { CheckResult } from "./checkup.ts";
 import type { DayResult } from "./dayLog.ts";
-import type { CallTurns, FillEvent, FillSource } from "./fill.ts";
+import type { FillEvent, FillSource } from "./fill.ts";
 import type { KnownMap } from "./known.ts";
 import { grammarKeyOfNode, expressionKeyOf } from "./lessonKey.ts";
 import { missKindOf, MISS_KINDS, type MissKind } from "./missKind.ts";
 import { dayValue, type QuizDays } from "./quizDays.ts";
-import type { CallDay } from "../roleplay/callDays.ts";
 import type { LogItem } from "../notes/stageParts.ts";
 import type { LogEvent } from "./logLedger.ts";
 
@@ -101,11 +100,6 @@ export function fillEvents(input: FillSources): FillEvent[] {
     add({ at: item.at, key, correct: true, source: item.kind === "mastered" ? "free" : "lesson", use: true });
   }
   return out;
-}
-
-/** 통화 숫자 줄 → 육각형 듣기·실전 대화 재료(차례 셈이 있는 통화만 — 2026-11-02부터). */
-export function callTurnsOf(rows: readonly CallDay[]): CallTurns[] {
-  return rows.flatMap((row) => (row.turns ? [{ at: row.at, ...row.turns }] : []));
 }
 
 /**

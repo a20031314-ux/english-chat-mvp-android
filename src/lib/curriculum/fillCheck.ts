@@ -8,16 +8,6 @@ import { CHECKS, type Check } from "./fill.ts";
 const KEY = "fillCheck.v1";
 export const FILL_CHECK_EVENT = "lb-fillcheck";
 
-export function readFillCheck(language: string): Check | null {
-  try {
-    const all = JSON.parse(globalThis.localStorage?.getItem(KEY) ?? "{}") as Record<string, unknown>;
-    const one = all[language];
-    return CHECKS.includes(one as Check) ? (one as Check) : null;
-  } catch {
-    return null;
-  }
-}
-
 export function saveFillCheck(language: string, check: Check): void {
   try {
     const all = JSON.parse(globalThis.localStorage?.getItem(KEY) ?? "{}") as Record<string, unknown>;

@@ -49,7 +49,7 @@
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
 | 자유대화 `callModeTalk` | 📞 — 고르기 없이 인사, 고친 말은 내 얼굴 아래 카드로(말로 안 짚음) | 3 AI · 4 사람 | `components/CallHost.tsx` · `components/RoleplayScreen.tsx` |  |
-| 수업 `callModeStudy` | 🎓 — 튜터가 큰 실수를 짚고 다시 말해 보기, 끝나면 숙제 | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/director.ts` |  |
+| 수업 `callModeStudy` | 🎓 — 수업 계획(틀 최대 셋: 보여 주기 → 끌어내기 → 옮겨 쓰기, 틀은 되받기만), 큰 실수는 짚고 다시 말해 보기, 끝나면 숙제 | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/director.ts` · `lib/roleplay/lessonPlan.ts` |  |
 | 게임 `callModeGame` | 🎲 — 스무고개(앱이 답을 들고 감독) — 게임 안 이름은 gameTwenty(스무고개) | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/callGames.ts` |  |
 | 가르치기 `gameTeach` | 🧑‍🏫 — 튜터가 내 모국어를 막 배우는 학습자를 연기, 나는 학습 언어로 설명 | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/callGames.ts` |  |
 | 통화 끝 화면 | 요약 한 줄 · 튜터 메모 · 이렇게도 말할 수 있었어요 · 전체 대본 · 통화 정리 · 이번 통화의 고쳐 씀 | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` · `components/roleplay/CallRecap.tsx` |  |

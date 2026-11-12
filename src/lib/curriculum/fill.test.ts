@@ -112,7 +112,7 @@ test("틀린 꼴: 어순·빠짐·기능어·꼴·철자·다른 낱말(es·ja·
 });
 
 test("지금 기록 → 증거: Quizbank 고르기/쓰기·익힘 날(겹치면 하나)·수업·튜터 고침·채팅에서 스스로 씀(es·ja)", async () => {
-  const { fillEvents, callTurnsOf } = await import("./fillInputs.ts");
+  const { fillEvents } = await import("./fillInputs.ts");
   const day = "2026-11-2";
   const utc = Math.floor(Date.UTC(2026, 10, 2) / DAY);
   const events = fillEvents({
@@ -137,7 +137,6 @@ test("지금 기록 → 증거: Quizbank 고르기/쓰기·익힘 날(겹치면 
   assert.ok(events.some((one) => one.key === "w|soy" && one.source === "fix" && one.miss === "word"));
   assert.ok(events.some((one) => one.key === "w|gracias" && one.source === "free"));
   assert.ok(!events.some((one) => one.key === "w|perro"), "복습에서 배운 것은 스스로 씀이 아님");
-  assert.equal(callTurnsOf([{ day, at: NOW, seconds: 60, fixed: 0, redone: 0 }]).length, 0);
 });
 
 test("같은 날 틀렸다가 맞힌 열쇠는 맞힘이 나중(ja)", async () => {

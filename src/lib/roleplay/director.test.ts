@@ -21,6 +21,8 @@ import {
   tutorSystemPrompt,
   type DirectorRequest,
   redoFormSlip,
+  readLesson,
+  lessonRules,
 } from "./director.ts";
 
 const cafe = findScenario("cafe-order")!;
@@ -1588,4 +1590,49 @@ test("튜터 수업: 다시 말해 보기에서 같은 낱말의 다른 꼴이�
   assert.equal(fine?.retry, "pass");
   assert.equal(redoFormSlip("Ayer comí en casa de mi madre.", "ayer como en casa de mi madre"), true);
   assert.equal(redoFormSlip("毎朝コーヒーを飲みます。", "毎朝コーヒーを飲みます"), false);
+});
+
+test("수업 소재: 서버는 모르는 꼴을 버리고 길이를 자른다", () => {
+  assert.equal(readLesson(null), undefined);
+  assert.equal(readLesson({ pattern: "Have you ever ___?", step: "teach" }), undefined);
+  assert.equal(readLesson({ pattern: " ", step: "show" }), undefined);
+  const one = readLesson({ pattern: "Have you ever ___?", meaning: "x".repeat(400), words: ["Busan", 3, "sushi", "a", "b"], step: "ask", asked: true, next: { pattern: "I want to ___.", meaning: "wanting" } });
+  assert.equal(one?.meaning.length, 160);
+  assert.deepEqual(one?.words, ["Busan", "sushi", "a"]);
+  assert.equal(one?.asked, true);
+  assert.equal(one?.next?.pattern, "I want to ___.");
+});
+
+test("수업 소재 지시: 틀은 판정 없이 되받기, 큰 실수는 수업 그대로, 단계마다 할 일", () => {
+  const base = { pattern: "わたしは___です。", meaning: "Saying who you are", words: ["学生"] };
+  const show = lessonRules({ ...base, step: "show", open: true }, false);
+  assert.match(show, /They have not spoken yet/);
+  assert.match(show, /use it yourself twice/);
+  assert.match(show, /do not say it was wrong, do not ask them to say it again/);
+  assert.match(show, /A big mistake elsewhere in their turn is still handled/);
+  assert.match(show, /"move" is true only when/);
+  assert.doesNotMatch(show, /\b(example|e\.g\.)/i, "베낄 예문 없음");
+  assert.match(lessonRules({ ...base, step: "draw" }, true), /^.*\n.*\nNow ask one question/s);
+  assert.match(lessonRules({ ...base, step: "move" }, true), /different situation/);
+  const ask = lessonRules({ ...base, step: "ask", next: { pattern: "___が好きです。", meaning: "Liking", words: [] } }, true);
+  assert.match(ask, /ask once/);
+  assert.doesNotMatch(ask, /___が好きです/, "묻는 차례엔 다음 틀을 아직 안 꺼냄");
+  const asked = lessonRules({ ...base, step: "ask", asked: true, next: { pattern: "___が好きです。", meaning: "Liking", words: [] } }, true);
+  assert.match(asked, /start the next point in the same line: move to a moment where "___が好きです。"/);
+});
+
+test("수업 소재: move는 수업 소재를 보냈고 학습자가 말한 차례에서만", () => {
+  const es = findScenario("open-talk-es")!;
+  const esBank = sentencesFor("es");
+  const context = (partial: Partial<DirectorRequest>) => ({
+    scenario: es,
+    bank: esBank,
+    recordedIds: new Set(recordedLines(es, SCENARIOS, esBank).map((line) => line.id)),
+    request: request({ scenarioId: es.id, nodeId: "talk", coach: true, targetLanguage: "es", nativeLanguage: "ko", ...partial }),
+  });
+  const raw = JSON.stringify({ say: "¡Vale! ¿Te gusta cocinar?", assessment: "on_track", next: "free", move: true });
+  const lesson = { pattern: "Me gusta ___.", meaning: "Liking", words: [], step: "draw" as const };
+  assert.equal(parseDirection(raw, context({ heard: "otra cosa, por favor", lesson }))?.move, true);
+  assert.equal(parseDirection(raw, context({ heard: "otra cosa, por favor" }))?.move, undefined, "소재 없으면 버림");
+  assert.equal(parseDirection(raw, context({ heard: "", lesson }))?.move, undefined, "말 없는 차례는 버림");
 });

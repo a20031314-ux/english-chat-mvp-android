@@ -36,7 +36,7 @@
 - **사전 예문 오류 고치기:** `hub/work/drafts/dict-errors-2026-11-10.txt`(ar 110 · fr 3) — word-sentences 고치고 `--check`.
 - **앱 언어별 짧은 뜻 미리 채우기:** 사전 예문은 14개 언어 다 채움(2026-11-10) — 짧은 뜻은 사용자 결정 대기(Haiku 묶음 API로 수십 달러 추정).
 - **같이 배우기 남은 것:** 문법 이름이 ko·en 밖 앱 언어에서 영어(stageScripts TRANSLATED에 문법 이름 옮기기 — Cursor 에이전트), 반말·구어 표현은 틀이 안 잡힘(framesInLine 넓히기), 유의어(데이터 없음 — 만들면 Cursor 에이전트로 고정 데이터), 활용형 맞추기(es comer처럼 틀 예문에 그 꼴이 없으면 칸이 안 보임), 사람 대화에서 맞게 쓴 말은 장부에 안 남아 대화 수에 안 듦(4번 탭과).
-- **수업 계획(설계만):** `hub/work/drafts/lesson-plan-2026-11-12.md` — P1 `roleplay/lessonPlan.ts`·감독 `lesson`·`frame` 칸(studyPicture 지움) → P2 칠판·⏭ → P3 숙제 몫·숙제 리뷰 → P4 단계 오르기·점검. 정할 것 넷 사용자 대기(STATE).
+- **수업 계획 남은 것:** `hub/work/drafts/lesson-plan-2026-11-12.md` — P1 끝(2026-11-12). P2 칠판 카드·⏭(앱 빌드) → P3 숙제 몫 넓히기·다음 수업 숙제 리뷰 → P4 단계 오르기 기준(사용자 대기, 코드는 `STAGE_UP_SHARE` 1)·가상 사용자 수업 통화 점검. 감독 `study`·`studyOpen`은 Play 2.79용 — 최소 지원 2.80이면 지움.
 - **섞어 말하기 통화(설계만):** `hub/work/drafts/call-mix-2026-11-08.md` — 정할 것 셋 사용자 대기.
 - **체감 점검 2026-11-09 남은 지적:** 쉬운 단어(`presumedWords` 순위 0부터·카드 없을 때 묶음 퀴즈로 빠짐), 뜻 없는 빈칸(`glossFirst`), U11 숙제 끝 화면 — 보고서 `hub/work/drafts/ux-check-2026-11-09.md`, 순서는 사용자.
 
