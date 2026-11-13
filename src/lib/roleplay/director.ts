@@ -1105,7 +1105,9 @@ export function tutorMessages(
     role: "user",
     content: request.missed
       ? "(they did not catch what you just said)"
-      : request.heard.trim() || "(silence — they have not said anything)",
+      : request.heard.trim() ||
+        // ⏭: 침묵이 아니라 다음 소재로 가자는 것 — "(silence)"로 보내면 튜터가 "들렸어요?"·같은 질문을 다시 함(운영 2026-11-13).
+        (request.lesson?.skip ? "(they tapped the button to move on to something new — not silence)" : "(silence — they have not said anything)"),
   });
   return messages;
 }
@@ -1683,7 +1685,7 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
     : "; then answer it and simply carry on the conversation";
   const move = `"move" is true only when their turn asks to stop this and do something else${startNext}. Otherwise false.`;
   // 첫 마디는 인사부터, ⏭는 인사 없이 바로, 말없는 차례(침묵)는 침묵 규칙("This turn")만 — 단계 지시를 붙이지 않는다.
-  const lead = lesson.open ? `They have not spoken yet. Greet them in a few words, then ` : lesson.skip ? `They tapped to move on to something new. No greeting and no comment on that — straight away, ` : `Now `;
+  const lead = lesson.open ? `They have not spoken yet. Greet them in a few words, then ` : lesson.skip ? `They tapped to move on to something new. Drop your last question — do not repeat it, do not ask whether they heard you, no greeting and no comment on the tap — and straight away, ` : `Now `;
   const quiet = lesson.open || lesson.skip ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : "";
   const silent = !spoke && !lesson.open && !lesson.skip;
   const step = (() => {

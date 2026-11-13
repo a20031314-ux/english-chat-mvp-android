@@ -1706,3 +1706,10 @@ test("수업 소재 지시: ⏭는 인사 없이 바로, 말없는 차례엔 단
   assert.doesNotMatch(silent, /Greet them|Now ask|"move" is true/);
   assert.match(silent, /never corrected/);
 });
+
+test("⏭ 차례는 침묵이 아니라 넘어가자는 말로 보낸다", () => {
+  const lesson = { pattern: "Soy de ___.", meaning: "", words: [], step: "show" as const, skip: true };
+  const messages = tutorMessages(request({ heard: "", lesson, history: [{ who: "tutor", text: "¿Cómo va tu día?" }] }));
+  assert.match(messages.at(-1)!.content, /tapped the button to move on/);
+  assert.doesNotMatch(messages.at(-1)!.content, /^\(silence/);
+});
