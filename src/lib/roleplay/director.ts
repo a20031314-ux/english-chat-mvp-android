@@ -1695,7 +1695,7 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
     (lesson.open || lesson.skip) && lesson.review
       ? {
           missed: `This pattern was in their homework from last time, and they got it wrong there. Do not mention the mistake, the answer or a score — just bring the pattern back. `,
-          undone: `This pattern was in their homework from last time, and they have not done it yet. You may mention the homework in a few words, with no blame, and do it with them by talking. `,
+          undone: `This pattern was in their homework from last time, and they have not done it yet. Mention the homework once, in a few words and with no blame, then do it with them by talking. `,
           right: `They did their homework on this pattern well last time — say so in a few words. `,
         }[lesson.review]
       : "";
@@ -1705,11 +1705,11 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
     if (silent) return "";
     switch (lesson.step) {
       case "show":
-        return `${review}${lead}move the conversation to a moment from your own life where this pattern fits, use it yourself twice in your own words — something different in the blank each time — and ask them one easy question.${quiet}`;
+        return `${review}${lead}move the conversation to a moment from your own life where this pattern fits and use it yourself twice — two true, natural sentences about you, with something different in the blank each time (never a word that makes the sentence odd) — then ask them one easy question that they could answer with the same pattern.${quiet}`;
       case "draw":
-        return `${review}${lead}ask one question that is most naturally answered with this pattern — about their own life or one of the words.${quiet}`;
+        return `${review}${lead}ask one question about the thing that fills the blank — about their own life or one of the words — so that the most natural short answer is this pattern with their own word in the blank. Not a question about anything else.${quiet}`;
       case "move":
-        return `${review}${opening ? lead : "They have used it once. Now "}take the conversation to a different situation where the same pattern fits — another person, place or time — and ask a question whose natural answer uses the pattern again, not a question about something else.${quiet}`;
+        return `${review}${opening ? lead : "They have used it once. Now "}take the conversation to a different situation where the same pattern fits — another place, time or occasion in their own life — and ask them about the blank again, so that their natural answer is the pattern exactly as written (same words around the blank, about themselves), only with a new word in the blank. Not a question about someone else or about anything else.${quiet}`;
       case "ask":
         return lesson.asked
           ? `You already asked whether to try something new. "move" is true when their turn agrees or asks for it${startNext}. Otherwise false, and keep talking about what they said.`

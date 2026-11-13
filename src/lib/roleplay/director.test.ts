@@ -1729,3 +1729,11 @@ test("숙제 리뷰 첫 마디: 틀림은 말하지 않고 다시 꺼냄, 안 �
   assert.equal(readLesson({ pattern: "x ___", step: "draw", review: "missed" })?.review, "missed");
   assert.equal(readLesson({ pattern: "x ___", step: "draw", review: "bad" })?.review, undefined);
 });
+
+test("수업 단계 지시: 끌어내기는 빈칸을 묻고, 옮겨 쓰기는 같은 틀 그대로(다른 사람 아님), 보여 주기는 어색한 빈칸 금지", () => {
+  const base = { pattern: "My name is ___.", meaning: "Saying your name", words: [] };
+  assert.match(lessonRules({ ...base, step: "draw" }, true), /about the thing that fills the blank/);
+  assert.match(lessonRules({ ...base, step: "move" }, true), /exactly as written[\s\S]*Not a question about someone else/);
+  assert.match(lessonRules({ ...base, step: "show" }, true), /never a word that makes the sentence odd/);
+  assert.match(lessonRules({ ...base, step: "draw", open: true, review: "undone" }, false), /Mention the homework once/);
+});
