@@ -49,7 +49,7 @@ import { talkStatsOf } from "@/lib/roleplay/talkStats";
 import { OPENING_LINES } from "@/lib/roleplay/talkTags";
 import { applyTalkTags } from "@/lib/roleplay/talkMemory";
 import { loadBank, stageCuts } from "@/lib/curriculum/vocabBank";
-import { lessonBoardOf, lessonRequestOf, planRunFor, stepRunFor, type LessonRun } from "@/lib/roleplay/lessonPlan";
+import { currentItem, lessonBoardOf, lessonRequestOf, lessonTraceOf, planRunFor, stepRunFor, type LessonItem, type LessonRun } from "@/lib/roleplay/lessonPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
 import { REVIEW_LINES, type Review, type StuckTurn } from "@/lib/roleplay/review";
@@ -265,7 +265,11 @@ export function RoleplayScreen({
   const [lessonBoard, setLessonBoard] = useState<{ pattern: string; canSkip: boolean } | null>(null);
   /** ⏭를 눌러 생긴 튜터 차례 — 진행은 이미 넘겼고, 감독에게 skip으로. */
   const skipRef = useRef(false);
+  /** 이 통화가 다룬 틀(학습자가 말한 차례가 있었던 소재)·처음 세운 계획 — 통화 기록 lesson(숙제·다음 수업 숙제 리뷰). */
+  const touchedRef = useRef<string[]>([]);
+  const plannedRef = useRef<LessonItem[]>([]);
   const keepLesson = useCallback((language: string, run: LessonRun | null) => {
+    if (!lessonRef.current.ready && run) plannedRef.current = run.items;
     lessonRef.current = { run, ready: true };
     setLessonBoard(lessonBoardOf(allFramesFor(language), run));
   }, []);
@@ -348,6 +352,8 @@ export function RoleplayScreen({
     setPrior(lifeFactsPrompt(readLifeFacts(scenario.language), Date.now()));
     setFixesText(fixesPrompt(readFixes(scenario.language), Date.now()));
     lessonRef.current = { run: null, ready: false };
+    touchedRef.current = [];
+    plannedRef.current = [];
     skipRef.current = false;
     setLessonBoard(null);
     setLead(openLesson ? 1 : 0);
@@ -397,6 +403,10 @@ export function RoleplayScreen({
       title: titleFor(said, scenario.title),
       ...(coachOn ? { mode: "lesson" as const } : {}),
       ...(game ? { mode: "game" as const, game } : {}),
+      ...(() => {
+        const trace = coachOn ? lessonTraceOf(lessonRef.current.run, touchedRef.current, plannedRef.current) : null;
+        return trace ? { lesson: trace } : {};
+      })(),
       startedAt: startedAt.current || now,
       updatedAt: now,
       ...(state.finished ? { finishedAt: now } : {}),
@@ -485,8 +495,11 @@ export function RoleplayScreen({
     skipRef.current = false;
     if (scenario.openEnded && coachOn && !game) {
       if (!lessonBox.ready) keepLesson(scenario.language, planRunFor(scenario.language));
-      else if (lessonBox.run && !skipping)
+      else if (lessonBox.run && !skipping) {
+        const item = currentItem(lessonBox.run);
+        if (item && instruction.request.heard.trim() && !instruction.request.missed && !touchedRef.current.includes(item.key)) touchedRef.current = [...touchedRef.current, item.key];
         keepLesson(scenario.language, stepRunFor(scenario.language, lessonBox.run, { heard: instruction.request.heard, missed: Boolean(instruction.request.missed) }));
+      }
     }
     const lessonNow =
       scenario.openEnded && coachOn && !game ? lessonRequestOf(allFramesFor(scenario.language), lessonRef.current.run, skipping ? "skip" : undefined) : undefined;

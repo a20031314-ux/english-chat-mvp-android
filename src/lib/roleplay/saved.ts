@@ -65,10 +65,21 @@ export type SavedConversation = {
   mode?: "lesson" | "game";
   /** 게임 통화의 게임(callGames.ts). */
   game?: CallGame;
+  /** 수업 통화가 다룬 틀(f|…)·다음 틀 — 숙제 퀴즈와 다음 수업 숙제 리뷰가 읽는다(lessonPlan.ts LessonTrace). */
+  lesson?: { covered: string[]; next?: string };
   state: SessionState;
   said: TranscriptLine[];
   memory: ConversationMemory;
 };
+
+/** 저장된 수업 기록 읽기 — 틀 열쇠(f|)만. */
+function lessonTraceRow(raw: unknown): { covered: string[]; next?: string } | null {
+  if (!raw || typeof raw !== "object") return null;
+  const one = raw as { covered?: unknown; next?: unknown };
+  const covered = Array.isArray(one.covered) ? one.covered.filter((key): key is string => typeof key === "string" && key.startsWith("f|")) : [];
+  if (!covered.length) return null;
+  return { covered, ...(typeof one.next === "string" && one.next.startsWith("f|") ? { next: one.next } : {}) };
+}
 
 /** How long the call ran: the measured time when there is one, else first start to last word. */
 export function callSeconds(saved: Pick<SavedConversation, "startedAt" | "updatedAt" | "finishedAt" | "activeSecs">): number {
@@ -134,6 +145,7 @@ export function normalizeSaved(raw: unknown): SavedConversation | null {
     ...(typeof row.activeSecs === "number" && row.activeSecs >= 0 ? { activeSecs: row.activeSecs } : {}),
     ...(row.mode === "lesson" ? { mode: "lesson" as const } : {}),
     ...(row.mode === "game" && isCallGame(row.game) ? { mode: "game" as const, game: row.game } : {}),
+    ...(lessonTraceRow(row.lesson) ? { lesson: lessonTraceRow(row.lesson)! } : {}),
     state,
     said: row.said as TranscriptLine[],
     memory:

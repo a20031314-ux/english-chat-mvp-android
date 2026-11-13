@@ -47,9 +47,9 @@
   AI 통화 CallHost(startCall · practice · openCall) → RoleplayScreen
      통화 중: roleplay/CallParts CallStage(위 튜터 얼굴·수업 칠판 카드(보여 주기 때만)·💬 자막 · 아래 내 사진) · CallControls(🙉 · 💡 — 자유대화는 막혔을 때만, 수업은 없음 · 수업 ⏭ 다음 틀이 있을 때)
        교정: 자유대화 = 내 얼굴 아래 카드(CoachCardView quiet) · 수업 = 튜터가 짚고 다시 말해 보기(director coachRules) · 게임 = 감독 규칙 roleplay/callGames.ts
-       수업 계획: lib/roleplay/lessonPlan.ts(틀 최대 셋 · show → draw → move → ask, 멈춘 자리 lessonSpot.v1 이 폰) → 감독 lesson(lessonRules — 틀은 되받기, move면 다음 틀)
+       수업 계획: lib/roleplay/lessonPlan.ts(지난 숙제 리뷰 lastHomework → 틀 최대 셋 · show → draw → move → ask, 멈춘 자리 lessonSpot.v1 이 폰, 다룬 틀은 통화 기록 lesson) → 감독 lesson(lessonRules — 틀은 되받기, move면 다음 틀, 첫 마디 review)
      끝: CallSummary · 튜터 메모 · 이렇게도 말할 수 있었어요(roleplay/CallReplay — 장면 ReplayPlayer) · 대본(CallPages) · 통화 정리(roleplay/CallRecap — 줄마다 같이 배우기 studyMap/StudyChips → openLesson · 🔎 My에서 찾기)
-         · 이번 통화의 고쳐 씀(CallGrowthPairs) · 수업이면 숙제 [퀴즈 | 대화](HomeworkSheet, roleplay/homeworkQuiz.ts) · 0단계면 📝 글자·소리 숙제(openLettersBank)
+         · 이번 통화의 고쳐 씀(CallGrowthPairs) · 수업이면 숙제 [퀴즈 | 대화](HomeworkSheet, roleplay/homeworkQuiz.ts — 다룬 틀·예습, 결과 틀마다 replay quiz.frames) · 0단계면 📝 글자·소리 숙제(openLettersBank)
      통화 기록 CallList(튜터 프로필, 칩 [자유대화 | 수업 | 게임 | 가르치기], lib/roleplay/callStore.ts 이 폰)
   소재 수업 studyMap/LessonHost(openLesson) → FrameLesson [설명 › 퀴즈 › 대화] · GrammarExplain(문법 한 장) · ExpressionCard(표현 카드) · FixedExplain(고정 수업)
   사전 시트 Dictionary DictionarySheet · 사전 주석 studyMap/DictNotes(대화 줄 LineTools · 영상 자막 · 퀴즈 답 뒤 · 예문 옆 📕)

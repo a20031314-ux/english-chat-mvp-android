@@ -135,7 +135,7 @@ lesson?: { pattern: string; meaning: string; words: string[]; step: "show"|"draw
 |---|---|---|
 | P1 ✅ 2026-11-12 | `lessonPlan.ts`(고르기·멈춘 자리·단계 넘기기) + 테스트(ja·es·en·ko), 감독 `lesson` 지시(틀 되받기) + 답 칸 `move`(말로 "다른 거 하자"·물은 뒤 좋다 — ⏭ 전에 말로 넘기기는 여기서), studyPicture·cellName 지움. 아직: fn 갈래 순서, review(숙제 — P3) | 서버 바로 + 시험 앱(웹) |
 | P2 ✅ 2026-11-13 | 칠판 카드(`lessonBoardOf` — 보여 주기 때만) · ⏭(`skippedLine` → 감독 `lesson.skip`, 인사 없이 다음 틀) · 문구 `lessonSkip` 14개 언어 | 앱 빌드 |
-| P3 | 숙제 퀴즈 몫 넓히기 · 다음 수업 숙제 리뷰 | 서버 + 앱 빌드 |
+| P3 ✅ 2026-11-13 | 통화 기록 `lesson`(다룬 틀·다음 틀) → 숙제 퀴즈에 틀마다 한 문제(쓰기 먼저)·예습 고르기 하나(`homeworkQuiz.ts`, 최대 여덟) → 틀마다 결과 `quiz.frames` + 장부 → 다음 수업 맨 앞 숙제 리뷰(`lastHomework` — 틀림 → 안 풂 → 다 맞힘, 감독 `lesson.review` 첫 마디에만). 리뷰는 소재 하나로 — 보통 소재처럼 끌어내기·옮겨 쓰기 | 서버 + 앱 빌드 |
 | P4 | 단계 오르기 · 가상 사용자 수업 통화 점검(en/ko · ja/ko · es/ar, "튜터가 틀을 두 번 보여 줬나·끌어내기 질문이 그 틀을 요구하나·답이 화면에 보였나") | 점검 |
 
 ## 11. 정할 것 (사용자)

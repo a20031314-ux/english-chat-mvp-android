@@ -13,7 +13,9 @@ import { chatPartnerForLanguage, tutorVoice, type TutorGender } from "@/lib/chat
 import type { UICopy } from "@/lib/copy";
 import { coerceLanguageCode, learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import type { QuizQuestion } from "@/lib/curriculum/quiz";
-import { homeworkQuiz } from "@/lib/roleplay/homeworkQuiz";
+import { homeworkQuiz, type HomeworkQuiz } from "@/lib/roleplay/homeworkQuiz";
+import { readCalls } from "@/lib/roleplay/callStore";
+import { noteLedger } from "@/lib/curriculum/logLedger";
 import { compareToTarget } from "@/lib/roleplay/practice";
 import {
   blanked,
@@ -117,7 +119,11 @@ export function CallReplay({
   const [sheet, setSheet] = useState(false);
   const asked = useRef(false);
   const canMake = Boolean(callId) && replayable(said);
-  const quiz = useMemo(() => (stored && lesson ? homeworkQuiz(language, said, stored.scenes) : []), [stored, lesson, language, said]);
+  // 수업 계획이 다룬 틀·다음 틀(통화 기록 lesson) — 틀 문제·예습(homeworkQuiz.ts).
+  const quiz = useMemo<HomeworkQuiz>(
+    () => (stored && lesson ? homeworkQuiz(language, said, stored.scenes, readCalls().find((call) => call.id === callId)?.lesson, callId) : { questions: [], keys: [] }),
+    [stored, lesson, language, said, callId],
+  );
 
   const make = async () => {
     if (asked.current || !canMake) return;
@@ -217,7 +223,8 @@ type Shared = {
 };
 
 /** 숙제 = [퀴즈 | 대화]. 퀴즈가 없으면(고친 말·조각이 없음) 대화만. 처음 탭은 아직 안 한 쪽. */
-function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestion[] }) {
+function HomeworkTabs({ quiz: homework, ...shared }: Shared & { quiz: HomeworkQuiz }) {
+  const quiz: readonly QuizQuestion[] = homework.questions;
   const { ui, language, locale, stored, onStored } = shared;
   const [tab, setTab] = useState<"quiz" | "talk">(() => (quiz.length && !stored.quiz ? "quiz" : "talk"));
   const [playing, setPlaying] = useState(false);
@@ -264,7 +271,20 @@ function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestio
           bundleKeys={quiz.map((_, at) => `hw|${stored.callId}|${at}`)}
           onBundle={(results) => {
             const counted = results.filter((one) => !one.skipped);
-            const next = noteHomeworkQuiz(storage(), language, stored.callId, { ok: counted.filter((one) => one.correct).length, of: results.length, at: Date.now() });
+            // 틀 문제는 틀마다 — 하나라도 틀리면 miss(다음 수업 숙제 리뷰), 그리고 퀴즈 답이라 장부에도(체크 셋).
+            const frames: Record<string, "ok" | "miss"> = {};
+            results.forEach((one, at) => {
+              const key = homework.keys[at];
+              if (!key || one.skipped) return;
+              frames[key] = frames[key] === "miss" || !one.correct ? "miss" : "ok";
+            });
+            if (Object.keys(frames).length) noteLedger(language, Object.entries(frames).map(([k, r]) => ({ k, src: "quiz" as const, r })));
+            const next = noteHomeworkQuiz(storage(), language, stored.callId, {
+              ok: counted.filter((one) => one.correct).length,
+              of: results.length,
+              at: Date.now(),
+              ...(Object.keys(frames).length ? { frames } : {}),
+            });
             if (next) onStored(next);
           }}
           onDone={() => undefined}

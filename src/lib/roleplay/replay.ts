@@ -26,7 +26,8 @@ export type ReplayScene = { kind: ReplayKind; lines: ReplayLine[] };
 export type ReplayResult = { ok: number; of: number; whole: boolean; at: number };
 
 /** 숙제 퀴즈 결과(homeworkQuiz.ts, 2026-11-08 사용자 "숙제 > 하위탭(퀴즈, 대화)"). */
-export type HomeworkQuizResult = { ok: number; of: number; at: number };
+/** frames = 숙제 퀴즈의 틀 문제(f|) 결과 — 하나라도 틀리면 miss(다음 수업 숙제 리뷰, lessonPlan.ts lastHomework). */
+export type HomeworkQuizResult = { ok: number; of: number; at: number; frames?: Record<string, "ok" | "miss"> };
 
 export type StoredReplay = { callId: string; scenes: ReplayScene[]; results: Partial<Record<ReplayKind, ReplayResult>>; quiz?: HomeworkQuizResult; at: number };
 

@@ -220,6 +220,8 @@ export type LessonRequest = {
   open?: boolean;
   /** 학습자가 ⏭를 눌러 이 소재로 넘어옴 — 인사 없이 바로 시작. */
   skip?: boolean;
+  /** 지난 숙제에서 이 틀이 어땠나(첫 소재가 숙제 리뷰일 때, 첫 마디에만). */
+  review?: "missed" | "right" | "undone";
   next?: { pattern: string; meaning: string; words: string[] };
 };
 /** 수업 소재 글 길이 상한(서버가 자름). */
@@ -245,6 +247,7 @@ export function readLesson(raw: unknown): LessonRequest | undefined {
     ...(one.asked === true ? { asked: true } : {}),
     ...(one.open === true ? { open: true } : {}),
     ...(one.skip === true ? { skip: true } : {}),
+    ...(one.review === "missed" || one.review === "right" || one.review === "undone" ? { review: one.review } : {}),
     ...(next && nextPattern ? { next: { pattern: nextPattern, meaning: text(next.meaning), words: words(next.words) } } : {}),
   };
 }
@@ -1687,16 +1690,26 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
   // 첫 마디는 인사부터, ⏭는 인사 없이 바로, 말없는 차례(침묵)는 침묵 규칙("This turn")만 — 단계 지시를 붙이지 않는다.
   const lead = lesson.open ? `They have not spoken yet. Greet them in a few words, then ` : lesson.skip ? `They tapped to move on to something new. Drop your last question — do not repeat it, do not ask whether they heard you, no greeting and no comment on the tap — and straight away, ` : `Now `;
   const quiet = lesson.open || lesson.skip ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : "";
+  // 숙제 리뷰(사용자 2026-11-12 설계 5절): 첫 마디에서 지난 숙제의 그 틀로 시작 — 틀린 것·답·점수는 말하지 않는다.
+  const review =
+    (lesson.open || lesson.skip) && lesson.review
+      ? {
+          missed: `This pattern was in their homework from last time, and they got it wrong there. Do not mention the mistake, the answer or a score — just bring the pattern back. `,
+          undone: `This pattern was in their homework from last time, and they have not done it yet. You may mention the homework in a few words, with no blame, and do it with them by talking. `,
+          right: `They did their homework on this pattern well last time — say so in a few words. `,
+        }[lesson.review]
+      : "";
+  const opening = lesson.open || lesson.skip;
   const silent = !spoke && !lesson.open && !lesson.skip;
   const step = (() => {
     if (silent) return "";
     switch (lesson.step) {
       case "show":
-        return `${lead}move the conversation to a moment from your own life where this pattern fits, use it yourself twice in your own words — something different in the blank each time — and ask them one easy question.${quiet}`;
+        return `${review}${lead}move the conversation to a moment from your own life where this pattern fits, use it yourself twice in your own words — something different in the blank each time — and ask them one easy question.${quiet}`;
       case "draw":
-        return `${lead}ask one question that is most naturally answered with this pattern — about their own life or one of the words.${quiet}`;
+        return `${review}${lead}ask one question that is most naturally answered with this pattern — about their own life or one of the words.${quiet}`;
       case "move":
-        return `They have used it once. Now take the conversation to a different situation where the same pattern fits — another person, place or time — and ask a question whose natural answer uses the pattern again, not a question about something else.`;
+        return `${review}${opening ? lead : "They have used it once. Now "}take the conversation to a different situation where the same pattern fits — another person, place or time — and ask a question whose natural answer uses the pattern again, not a question about something else.${quiet}`;
       case "ask":
         return lesson.asked
           ? `You already asked whether to try something new. "move" is true when their turn agrees or asks for it${startNext}. Otherwise false, and keep talking about what they said.`

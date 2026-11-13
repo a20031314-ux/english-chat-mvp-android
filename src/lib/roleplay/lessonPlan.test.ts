@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { allFramesFor } from "../curriculum/frames.ts";
 import type { LogEvent } from "../curriculum/logLedger.ts";
-import { advanceRun, lessonBoardOf, lessonRequestOf, lessonStage, patternIn, pickLesson, lessonSpotOf, startRun, type LessonItem } from "./lessonPlan.ts";
+import { advanceRun, lastHomework, lessonBoardOf, lessonRequestOf, lessonStage, lessonTraceOf, patternIn, pickLesson, lessonSpotOf, startRun, type LessonItem } from "./lessonPlan.ts";
 
 const quiz = (k: string, r: "ok" | "miss" | "again", t = 100): LogEvent => ({ k, src: "quiz", r, t });
 const talk = (k: string, t = 200): LogEvent => ({ k, src: "call", r: "used", t });
@@ -119,4 +119,41 @@ test("칠판 카드는 보여 주기 단계에서만 틀 한 줄, ⏭는 다음 
   assert.equal(lessonRequestOf(es, esRun, "skip")?.skip, true);
   assert.equal(lessonRequestOf(es, esRun, "open")?.open, true);
   assert.equal(lessonRequestOf(es, esRun)?.skip, undefined);
+});
+
+const call = (id: string, startedAt: number, covered: string[], extra: Record<string, unknown> = {}) =>
+  ({ id, language: "ja", mode: "lesson" as const, startedAt, finishedAt: startedAt + 60, lesson: { covered }, ...extra });
+
+test("숙제 리뷰: 가장 최근 끝난 수업 하나 — 틀린 틀 → 안 풂 → 다 맞힘", () => {
+  const calls = [call("a", 100, ["f|x", "f|y"]), call("b", 50, ["f|z"])];
+  assert.deepEqual(lastHomework(calls, [{ callId: "a", quiz: { ok: 1, of: 2, at: 1, frames: { "f|x": "ok", "f|y": "miss" } } }], "ja"), { key: "f|y", how: "missed" });
+  assert.deepEqual(lastHomework(calls, [{ callId: "a" }], "ja"), { key: "f|x", how: "undone" });
+  assert.deepEqual(lastHomework(calls, [{ callId: "a", quiz: { ok: 2, of: 2, at: 1, frames: { "f|y": "ok" } } }], "ja"), { key: "f|y", how: "right" });
+  assert.equal(lastHomework(calls, [], "ja"), null, "숙제(장면)가 안 생긴 통화");
+  assert.equal(lastHomework([call("c", 200, [])], [{ callId: "c" }], "ja"), null, "다룬 틀 없음");
+  assert.equal(lastHomework([call("d", 300, ["f|x"], { finishedAt: undefined })], [{ callId: "d" }], "ja"), null, "끝나지 않은 통화");
+  assert.equal(lastHomework(calls, [{ callId: "a" }], "es"), null, "다른 학습 언어");
+});
+
+test("숙제 리뷰는 맨 앞 — 틀림·안 풂은 끌어내기부터, 다 맞힘은 옮겨 쓰기부터(ko·es)", () => {
+  for (const language of ["ko", "es"]) {
+    const frames = allFramesFor(language);
+    const [a, b] = frames.filter((f) => f.stage === 1);
+    const missed = pickLesson({ frames, events: [], start: 1, spot: { key: `f|${b.id}`, step: "draw" }, review: { key: `f|${a.id}`, how: "missed" } });
+    assert.deepEqual(missed.items.slice(0, 2).map((i) => [i.key, i.start, i.why, i.review]), [[`f|${a.id}`, "draw", "review", "missed"], [`f|${b.id}`, "draw", "carry", undefined]]);
+    const right = pickLesson({ frames, events: [], start: 1, spot: null, review: { key: `f|${a.id}`, how: "right" } });
+    assert.equal(right.items[0].start, "move");
+    const run = startRun(missed.items)!;
+    assert.equal(lessonRequestOf(frames, run, "open")?.review, "missed", "첫 마디에만");
+    assert.equal(lessonRequestOf(frames, run)?.review, undefined);
+  }
+});
+
+test("통화 기록: 다룬 틀·다음 틀", () => {
+  const items: LessonItem[] = ["f|a", "f|b", "f|c"].map((key) => ({ key, start: "show", why: "new", words: [] }));
+  const run = { items, at: 1, step: "show" as const, asked: false };
+  assert.deepEqual(lessonTraceOf(run, ["f|a"], items), { covered: ["f|a"], next: "f|b" });
+  assert.deepEqual(lessonTraceOf(run, ["f|a", "f|b"], items), { covered: ["f|a", "f|b"], next: "f|c" });
+  assert.deepEqual(lessonTraceOf(null, ["f|a", "f|b", "f|c"], items), { covered: ["f|a", "f|b", "f|c"] });
+  assert.equal(lessonTraceOf(run, [], items), null);
 });

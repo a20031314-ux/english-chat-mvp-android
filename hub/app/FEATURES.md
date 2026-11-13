@@ -54,7 +54,7 @@
 | 가르치기 `gameTeach` | 🧑‍🏫 — 튜터가 내 모국어를 막 배우는 학습자를 연기, 나는 학습 언어로 설명 | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/callGames.ts` |  |
 | 통화 끝 화면 | 요약 한 줄 · 튜터 메모 · 이렇게도 말할 수 있었어요 · 전체 대본 · 통화 정리 · 이번 통화의 고쳐 씀 | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` · `components/roleplay/CallRecap.tsx` |  |
 | 이렇게도 말할 수 있었어요 `replayTitle` | 끝난 대본으로 장면 둘 — 바뀐 조각만 빈칸 → 말하기 → 한 줄 전체 | 3 AI | `components/roleplay/CallReplay.tsx` |  |
-| 숙제 `homeworkTag` | 수업 통화 끝 — [퀴즈 \| 대화], 숙제 줄은 튜터 줄·Logbank 오늘 카드 | 2 My · 3 AI · 4 사람 | `lib/roleplay/homeworkQuiz.ts` |  |
+| 숙제 `homeworkTag` | 수업 통화 끝 — [퀴즈 \| 대화](퀴즈에 다룬 틀·다음 틀 예습), 다음 수업은 숙제 리뷰로 시작, 숙제 줄은 튜터 줄·Logbank 오늘 카드 | 2 My · 3 AI · 4 사람 | `lib/roleplay/homeworkQuiz.ts` |  |
 | 통화 기록 `callRecordsTitle` | 튜터 프로필 — 칩 [자유대화 \| 수업 \| 게임 \| 가르치기], 이어서 하기·돌아보기(이 폰) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/CallList.tsx` · `lib/roleplay/callStore.ts` |  |
 
 ### 친구 초대·보상

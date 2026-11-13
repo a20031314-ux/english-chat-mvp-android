@@ -1715,3 +1715,17 @@ test("⏭ 차례는 침묵이 아니라 넘어가자는 말로 보낸다", () =>
   assert.match(messages.at(-1)!.content, /tapped the button to move on/);
   assert.doesNotMatch(messages.at(-1)!.content, /^\(silence/);
 });
+
+test("숙제 리뷰 첫 마디: 틀림은 말하지 않고 다시 꺼냄, 안 풂은 탓하지 않음, 다 맞힘은 짧게 말함", () => {
+  const base = { pattern: "Me gusta ___.", meaning: "Liking", words: [], open: true };
+  const missed = lessonRules({ ...base, step: "draw", review: "missed" }, false);
+  assert.match(missed, /got it wrong there\. Do not mention the mistake, the answer or a score/);
+  assert.match(missed, /Greet them in a few words, then ask one question/);
+  assert.match(lessonRules({ ...base, step: "draw", review: "undone" }, false), /no blame/);
+  const right = lessonRules({ ...base, step: "move", review: "right" }, false);
+  assert.match(right, /did their homework on this pattern well/);
+  assert.doesNotMatch(right, /They have used it once/);
+  assert.doesNotMatch(lessonRules({ ...base, open: false, step: "draw", review: "missed" }, true), /homework/, "첫 마디가 아니면 리뷰 말 없음");
+  assert.equal(readLesson({ pattern: "x ___", step: "draw", review: "missed" })?.review, "missed");
+  assert.equal(readLesson({ pattern: "x ___", step: "draw", review: "bad" })?.review, undefined);
+});

@@ -1,7 +1,9 @@
 /**
  * 수업 통화의 수업 계획(hub/work/drafts/lesson-plan-2026-11-12.md 3·4절). 순수 — 모델 없음, 이 폰의 장부(logLedger.ts)와 틀(frames.ts)만.
  *
- *   고르기  멈춘 자리(carry) → 앎인데 대화에서 안 쓴 틀(apply, 끌어내기부터) → 다시 볼 것(hard) → 지금 단계의 새 틀(new), 최대 셋.
+ *   고르기  지난 수업 숙제 리뷰(review — 틀린 틀 → 안 푼 숙제 → 다 맞힌 틀, 하나) → 멈춘 자리(carry) → 앎인데 대화에서 안 쓴 틀(apply, 끌어내기부터)
+ *           → 다시 볼 것(hard) → 지금 단계의 새 틀(new), 최대 셋.
+ *   숙제    통화가 다룬 틀(covered)·다음 틀(next)을 통화 기록에 남김(lessonTrace) → 숙제 퀴즈가 그 틀 문제·예습을 냄(homeworkQuiz.ts) → 틀마다 결과(replay.ts quiz.frames).
  *   흐름    보여 주기(show) → 끌어내기(draw) → 옮겨 쓰기(move) → 다음 거 할까요(ask, 다음 소재가 있을 때만).
  *           넘기는 것은 앱이: 학습자 말에 그 틀이 나왔나(frameUsed, 맞다/틀리다는 나누지 않음) · 학습자가 말했나 · 감독의 move(다른 걸 하자/좋다).
  *   틀은 판정하지 않는다 — 튜터가 그 틀로 되받아 줄 뿐(사용자 2026-11-12), 틀이 나온 것은 통화 끝 장부 used(recapLedgerKeys)로만 남는다.
@@ -15,10 +17,19 @@ import type { LessonRequest } from "./director.ts";
 import { allFramesFor } from "../curriculum/frames.ts";
 import { measured } from "../curriculum/firstCheck.ts";
 import { readLedger } from "../curriculum/logLedger.ts";
+import { readCalls } from "./callStore.ts";
+import { readReplays, type StoredReplay } from "./replay.ts";
+import type { SavedConversation } from "./saved.ts";
 
 export type LessonStep = "show" | "draw" | "move" | "ask";
-export type LessonWhy = "carry" | "apply" | "hard" | "new";
-export type LessonItem = { key: string; start: Exclude<LessonStep, "ask">; why: LessonWhy; words: string[] };
+export type LessonWhy = "review" | "carry" | "apply" | "hard" | "new";
+/** 지난 숙제에서 그 틀이 어땠나 — 틀림 · 다 맞힘 · 안 풂. */
+export type HomeworkHow = "missed" | "right" | "undone";
+export type LessonItem = { key: string; start: Exclude<LessonStep, "ask">; why: LessonWhy; words: string[]; review?: HomeworkHow };
+/** 통화 하나가 다룬 틀(학습자가 말한 차례가 있었던 것)과 다음 틀 — 통화 기록에 남겨 숙제·다음 수업이 읽는다. */
+export type LessonTrace = { covered: string[]; next?: string };
+/** 다음 수업 첫머리에 다시 볼 지난 숙제의 틀 하나. */
+export type HomeworkReview = { key: string; how: HomeworkHow };
 /** 멈춘 자리 — 통화를 끝내면 다음 수업이 여기서. */
 export type LessonSpot = { key: string; step: Exclude<LessonStep, "ask"> };
 /** 통화 하나 동안의 진행. */
@@ -60,6 +71,8 @@ export type PickInput = {
   /** 첫 측정 시작 단계(없으면 1). */
   start: number;
   spot: LessonSpot | null;
+  /** 지난 수업 숙제 리뷰(lastHomework) — 맨 앞에 하나. */
+  review?: HomeworkReview | null;
   max?: number;
 };
 
@@ -72,13 +85,16 @@ export function pickLesson(input: PickInput): { stage: number; items: LessonItem
   const stage = lessonStage(frames, talked, input.start);
   const known = (word: string) => states.get(`w|${word.toLocaleLowerCase()}`)?.level === "known";
   const items: LessonItem[] = [];
-  const take = (frame: Frame | undefined, start: LessonItem["start"], why: LessonWhy) => {
+  const take = (frame: Frame | undefined, start: LessonItem["start"], why: LessonWhy, review?: HomeworkHow) => {
     if (!frame || items.length >= max || items.some((item) => item.key === frameKey(frame))) return;
-    items.push({ key: frameKey(frame), start, why, words: lessonWords(frame, known) });
+    items.push({ key: frameKey(frame), start, why, words: lessonWords(frame, known), ...(review ? { review } : {}) });
   };
   // 지금 단계부터, 아래 단계는 그 뒤(틀 파일 순서).
   const ordered = [...frames.filter((frame) => frame.stage === stage), ...frames.filter((frame) => frame.stage < stage).sort((a, b) => b.stage - a.stage)];
 
+  // 숙제 리뷰: 틀렸거나 안 풀었으면 끌어내기부터, 다 맞혔으면 바로 다른 장면(옮겨 쓰기)으로.
+  const review = input.review;
+  if (review) take(frames.find((frame) => frameKey(frame) === review.key), review.how === "right" ? "move" : "draw", "review", review.how);
   if (spot) take(frames.find((frame) => frameKey(frame) === spot.key), spot.step, "carry");
   for (const frame of ordered) if (states.get(frameKey(frame))?.level === "known" && !talked.has(frameKey(frame))) take(frame, "draw", "apply");
   for (const frame of ordered) if (states.get(frameKey(frame))?.level === "hard") take(frame, "show", "hard");
@@ -156,6 +172,8 @@ export function lessonRequestOf(frames: readonly Frame[], run: LessonRun | null,
     step: run.step,
     ...(run.asked ? { asked: true } : {}),
     ...(how === "open" ? { open: true } : how === "skip" ? { skip: true } : {}),
+    // 숙제 리뷰는 그 소재의 첫 차례에만(첫 마디·⏭ — 그 뒤는 보통 소재처럼).
+    ...(item.review && how ? { review: item.review } : {}),
     ...(after && nextFrame ? { next: { pattern: nextFrame.pattern, meaning: nextFrame.meaning.en, words: after.words } } : {}),
   };
 }
@@ -169,6 +187,33 @@ export function lessonBoardOf(frames: readonly Frame[], run: LessonRun | null): 
     pattern: run.step === "show" && frame ? frame.pattern : "",
     canSkip: run.at + 1 < run.items.length,
   };
+}
+
+/** 순수: 지금까지 다룬 틀·다음 틀(통화 기록에 남김). touched = 학습자가 말한 차례가 있었던 소재(차례대로). */
+export function lessonTraceOf(run: LessonRun | null, touched: readonly string[], planned: readonly LessonItem[]): LessonTrace | null {
+  if (!touched.length) return null;
+  const current = currentItem(run);
+  const next = current && !touched.includes(current.key) ? current.key : planned.find((item) => !touched.includes(item.key))?.key;
+  return { covered: [...touched], ...(next ? { next } : {}) };
+}
+
+/**
+ * 순수: 지난 수업 숙제에서 다시 볼 틀 하나. 가장 최근의 끝난 수업 통화(다룬 틀이 있는 것) 하나만 보고,
+ * 숙제가 생긴 통화(장면 있음)만 — 틀린 틀 → 숙제를 안 풀었으면 다룬 첫 틀 → 다 맞혔으면 다룬 첫 틀. 이미 리뷰한 통화 뒤엔 없음.
+ */
+export function lastHomework(calls: readonly Pick<SavedConversation, "id" | "language" | "mode" | "finishedAt" | "startedAt" | "lesson">[], replays: readonly Pick<StoredReplay, "callId" | "quiz">[], language: string): HomeworkReview | null {
+  const last = calls
+    .filter((call) => call.language === language && call.mode === "lesson" && call.finishedAt)
+    .sort((a, b) => b.startedAt - a.startedAt)[0];
+  const covered = last?.lesson?.covered ?? [];
+  if (!last || !covered.length) return null;
+  const replay = replays.find((row) => row.callId === last.id);
+  if (!replay) return null;
+  const frames = replay.quiz?.frames ?? {};
+  const missed = covered.find((key) => frames[key] === "miss");
+  if (missed) return { key: missed, how: "missed" };
+  if (!replay.quiz) return { key: covered[0]!, how: "undone" };
+  return { key: covered.find((key) => frames[key] === "ok") ?? covered[0]!, how: "right" };
 }
 
 /** 이 폰 저장소(사생활 모드·막힌 저장소에서 읽기만으로도 던질 수 있음). */
@@ -208,6 +253,7 @@ export function planRunFor(language: string): LessonRun | null {
     events: readLedger(language),
     start: first ? Math.min(first.expression, first.grammar) : 1,
     spot: readSpot(phoneStore(), language),
+    review: lastHomework(readCalls(), readReplays(phoneStore(), language), language),
   });
   return startRun(plan.items);
 }
