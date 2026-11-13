@@ -3,9 +3,9 @@
   "kind": "add",
   "what": "문단 틀린 곳(P1~P4) 문제로 끝난 묶음 경계에서도 quizBreak 전면 — 10문제를 안 채웠어도(3분 간격·sinceBreak 0으로)",
   "where": "My 탭 `my` · studyMap/InlineQuiz.tsx next()(묶음 경계) ／ studyMap/Quizbank.tsx 문단 paraDue",
-  "why": "콘텐츠 사이 논리적 쉼(AdMob 허용)에 전면이 빠져 있음 — 문단 문제는 묶음 끝 문제(Quizbank.tsx paraDue, 하루 2개까지)라 다 짚고 [다음]을 누르면 다음 묶음을 받는 순간이 쉼. 지금은 sinceBreak가 문제 수만 세어 첫 묶음(7 + 문단 1 = 8문제)에서는 전면이 없음. 문제 도중·답 보기 중·게이지를 누를 때는 아님. 지난번 안 그대로 — 이번 범위 1b96688..6f32a50에서 InlineQuiz.tsx는 안 바뀜(110줄 sinceBreak >= AD_ROUND(10)만, 미반영).",
+  "why": "콘텐츠 사이 논리적 쉼(AdMob 허용)에 전면이 빠져 있음 — 문단 문제는 묶음 끝 문제(Quizbank.tsx paraDue, 하루 2개까지)라 다 짚고 [다음]을 누르면 다음 묶음을 받는 순간이 쉼. 지금은 sinceBreak가 문제 수만 세어 첫 묶음(7 + 문단 1 = 8문제)에서는 전면이 없음. 문제 도중·답 보기 중·게이지를 누를 때는 아님. 지난번 안 그대로 — 이번 범위 6f32a50..014361d에서도 InlineQuiz.tsx·Quizbank.tsx는 안 바뀜(110줄 sinceBreak >= AD_ROUND(10)만, 미반영).",
   "appBuild": true,
-  "basis": "코드(6f32a50): Quizbank.tsx 548줄 BATCH_SIZE 7, 446~448줄 paraDue면 묶음 끝에 문단 하나. InlineQuiz.tsx 21줄 AD_ROUND 10 · 110~112줄 sinceBreak >= AD_ROUND일 때만 maybeShowInterstitial('quizBreak') · 130줄 문제 하나에 +1. 이번 범위 Quizbank.tsx(7824168)는 grammarAsk·paragraphQuestion에 단계(stage<=2면 해석)를 넘기는 것만 바뀜 — 묶음 크기·문단 자리는 그대로라 횟수 어림 그대로: 무료 My 쓰는 날 quizBreaksPerDay 0.8 → 1.1. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄.",
+  "basis": "코드(014361d): InlineQuiz.tsx 21줄 AD_ROUND 10 · 110~112줄 sinceBreak >= AD_ROUND일 때만 maybeShowInterstitial('quizBreak') · 130줄 문제 하나에 +1. Quizbank.tsx 묶음 7 + 문단 1 그대로라 횟수 어림 그대로: 무료 My 쓰는 날 quizBreaksPerDay 0.8 → 1.1. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄.",
   "econ": {
    "my": {
     "quizBreaksPerDay": 1.1
@@ -19,7 +19,7 @@
   "kind": "remove",
   "what": "대화·통화 위(above)에서 연 소재 수업(FrameLesson)의 네이티브 두 자리(수업 퀴즈 아래 quiz-inline·끝 화면 lesson-end)를 빼기 — 표현 카드·사전 시트처럼 above면 없음",
   "where": "My 탭 `my` · studyMap/FrameLesson.tsx (LessonHost가 LayerAboveContext를 주지만 FrameLesson은 읽지 않음)",
-  "why": "넣지 않는 곳 '대화·통화 위에서 연 사전·표현 카드(above)'와 어긋남 — 같은 같이 배우기 💬 칩이 isFrameExpression이면 FrameLesson(광고 있음), 아니면 ExpressionCard(광고 없음)로 갈림. 지난번 안 그대로 — 이번 범위에서 FrameLesson.tsx는 안 바뀜(529·683줄 NativeAdSlot은 여전히 above를 안 봄, 미반영). 사용자 결정 거리.",
+  "why": "넣지 않는 곳 '대화·통화 위에서 연 사전·표현 카드(above)'와 어긋남 — 같은 같이 배우기 💬 칩이 isFrameExpression이면 FrameLesson(광고 있음), 아니면 ExpressionCard(광고 없음)로 갈림. 지난번 안 그대로 — 이번 범위 6f32a50..014361d에서도 FrameLesson.tsx는 안 바뀜(529·683줄 NativeAdSlot은 여전히 above를 안 봄, 미반영). 사용자 결정 거리.",
   "appBuild": true,
   "severity": "report",
   "basis": "코드(6f32a50): ExpressionCard.tsx useContext(LayerAboveContext) · `above ? null : <NativeAdSlot sheets expression-card>` · Dictionary.tsx 같은 규칙 · FrameLesson.tsx 529·683줄은 above를 보지 않음(LayerAbove grep 없음). above로 여는 곳은 채팅 표현 보기 칩·사전 주석 📕(대화 줄·자막·Quizbank 답 뒤)이라, 고치면 Quizbank 답 뒤 📕에서 연 수업의 네이티브도 빠짐. 무료 한 사람 쓰는 날 0.2번 노출 감소로 어림. 빈 공간 캡처 없음 — 코드로만 봄.",
@@ -39,18 +39,19 @@
   "kind": "remove",
   "what": "📏 실력 확인 지움 정리 — 코드·손익 계산은 이미 빠짐, hub/app/ADS.md 위쪽 손글 4곳만 '실력 확인'이 남음(원칙 '지금 순간 여덟'·결과 화면 목록·넣지 않는 곳 둘)",
   "where": "hub/app/ADS.md 위쪽 11·19·30·31줄(손글 — ads:map이 안 고침)",
-  "why": "없어진 자리(보는 것 3): 순간은 일곱(ads-facts moments 7 = modeled 7, unmodeled 없음)인데 원칙 줄은 '여덟 · 📏 실력 확인 결과 닫기'라 문서와 코드가 어긋남. 지난번 안 그대로 — 이번 범위에서 ADS.md 손글은 안 바뀜(미반영). 손익 변화 없음(이미 '지금'에 들어 있음).",
+  "why": "없어진 자리(보는 것 3): 순간은 일곱(ads-facts moments 7 = modeled 7, unmodeled 없음)인데 원칙 줄은 '여덟 · 📏 실력 확인 결과 닫기'라 문서와 코드가 어긋남. 지난번 안 그대로 — 이번 범위 6f32a50..014361d에서도 hub/app/ADS.md 손글은 안 바뀜(11·19·30·31줄에 '실력 확인' 그대로, 미반영). 손익 변화 없음(이미 '지금'에 들어 있음).",
   "appBuild": false,
   "severity": "report",
-  "basis": "6f32a50의 hub/app/ADS.md 11줄 '지금 순간 여덟: … 📏 실력 확인 결과 닫기 …' · 19줄 results 목록 '…·실력 확인' · 30줄 '실력 확인 ▶를 누를 때' · 31줄 '실력 확인 표 옆'. tmp/watch/ads-facts.json moments 7개(skillCheckEnd 없음). 문서만 고치면 됨."
+  "basis": "014361d의 hub/app/ADS.md 11줄 '지금 순간 여덟: … 📏 실력 확인 결과 닫기 …' · 19줄 results 목록 '…·실력 확인' · 30줄 '실력 확인 ▶를 누를 때' · 31줄 '실력 확인 표 옆'. tmp/watch/ads-facts.json moments 7개(skillCheckEnd 없음, unmodeled 없음). 문서만 고치면 됨."
  },
  {
   "kind": "add",
-  "what": "(넣지 않음 — 기록) 수업 통화 계획의 넘어가는 시점(소재 사이 '다음 거 할까요'(ask)·show → draw → move 단계 사이·소재가 다 끝나 보통 수업으로 넘어갈 때) 전면, 통화 화면에서 육각형이 빠진 자리에 네이티브",
-  "where": "AI 통화 `call` · RoleplayScreen.tsx lessonRef(planRunFor·stepRunFor) ／ lib/roleplay/lessonPlan.ts advanceRun ／ roleplay/CallParts.tsx CallStage(studyMap 칸 지움)",
-  "why": "새 UI 검토(0번·0-1번·0-2번): 이번에 생긴 수업 단계 경계는 실시간 음성 통화 안 — 튜터가 말로 넘기는 차례라 소리·마이크가 겹치고(0-1 '방·통화 안 됨'), 넣지 않는 곳 'AI 통화 도중'. 소재가 끝나도(advanceRun null) 끝 화면 없이 보통 수업으로 이어져 '닫을 끝 자리'가 아님 — 통화가 끝나면 이미 callEnd 전면·call-end 네이티브. 육각형(SkillHexagon)이 빠진 자리는 튜터·내 얼굴 칸 안이라(넣지 않는 곳 '화면 칸 안') 빈 띠가 아니라 칸이 늘어난 것 — 통화 중 광고는 버튼 아래 CallAdStrip(call-live) 하나뿐 그대로. 새 끝 화면·목록·전체 화면 층은 안 생김.",
+  "what": "(넣지 않음 — 기록) 수업 통화의 새 UI·넘어가는 시점 — 칠판 카드(보여 주기) 아래·옆 네이티브, ⏭ 다음 틀을 누를 때·소재(틀) 사이·숙제 리뷰로 여는 첫 마디 전 전면",
+  "where": "AI 통화 `call` · roleplay/CallParts.tsx CallStage board·CallControls onSkip ／ RoleplayScreen.tsx skipLesson·keepLesson ／ lib/roleplay/lessonPlan.ts lastHomework",
+  "why": "새 UI 검토(0번·0-1번·0-2번): 칠판 카드는 통화 중 튜터 얼굴 칸 안의 학습 내용(넣지 않는 곳 'AI 통화 도중'·'화면 칸 안'), ⏭는 말하는 차례에 누르는 버튼(행동마다 전면 금지·잘못 누름)이고 누르면 튜터가 곧바로 다음 틀을 말로 시작 — 실시간 음성이라 소리·마이크가 겹침(0-1 '방·통화 안 됨'). 숙제 리뷰는 통화 첫 마디라 '들어가자마자'. 통화 중 광고는 버튼 아래 CallAdStrip(call-live) 하나 그대로. 새 끝 화면·목록·전체 화면 층은 안 생김 — 숙제는 기존 HomeworkSheet(homework-sheet·replay-end·quiz-end 네이티브, homeworkEnd 전면)에 틀 문제·예습이 늘어난 것뿐이라 자리 그대로. 지난번 '수업 계획 넘어가는 시점' 기록을 이번 변화로 갱신.",
   "appBuild": true,
-  "basis": "diff 735dba7: RoleplayScreen.tsx −studyMap={<SkillHexagon …/>} · CallParts.tsx CallStage −studyMap prop·−{studyMap} · SkillHexagon.tsx 지움. b7e9201·6ceeefa·4fe629a·7114f5e: lessonPlan.ts 흐름 show → draw → move → ask, advanceRun null = 소재 끝(그 뒤 보통 수업 통화) · RoleplayScreen.tsx lessonRef가 학습자 차례마다 stepRunFor · director.ts 감독 규칙만. 이 범위에 NativeAdSlot·maybeShowInterstitial 줄 변화 없음(callEnd 1103줄·call-end 1280줄·CallAdStrip 1349줄 그대로). 숫자는 기록용 — 무료는 통화 시간이 맛보기 평생 10분뿐이라 어디서나 쓰는 날 0.03번으로 어림. 빈 공간 캡처 없음 — 코드로만 봄.",
+  "risky": true,
+  "severity": "report",
   "econ": {
    "extraAds": [
     {
@@ -60,8 +61,7 @@
     }
    ]
   },
-  "risky": true,
-  "severity": "report",
+  "basis": "diff 6f32a50..014361d: CallParts.tsx +board(칠판 카드 <p data-call-board>)·+onSkip(⏭ CallButton) · RoleplayScreen.tsx +skipLesson·keepLesson·touchedRef(통화 기록 lesson) · CallReplay.tsx homeworkQuiz(… lesson, callId)·noteLedger 틀마다 · lessonPlan.ts lastHomework 리뷰. 이 범위에 NativeAdSlot·maybeShowInterstitial 줄 변화 없음(git diff로 확인). 숫자는 기록용 — 무료는 통화가 맛보기 평생 10분뿐이라 어디서나 쓰는 날 0.03번으로 어림. 빈 공간 캡처 없음 — 통화 화면은 넣지 않는 곳이라 찍지 않음.",
   "per1000Mid": 3620,
   "freePersonMid": 4
  },
