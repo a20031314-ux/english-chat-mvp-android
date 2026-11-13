@@ -218,6 +218,8 @@ export type LessonRequest = {
   asked?: boolean;
   /** 대화 첫 마디(학습자가 아직 말하지 않음). */
   open?: boolean;
+  /** 학습자가 ⏭를 눌러 이 소재로 넘어옴 — 인사 없이 바로 시작. */
+  skip?: boolean;
   next?: { pattern: string; meaning: string; words: string[] };
 };
 /** 수업 소재 글 길이 상한(서버가 자름). */
@@ -242,6 +244,7 @@ export function readLesson(raw: unknown): LessonRequest | undefined {
     step,
     ...(one.asked === true ? { asked: true } : {}),
     ...(one.open === true ? { open: true } : {}),
+    ...(one.skip === true ? { skip: true } : {}),
     ...(next && nextPattern ? { next: { pattern: nextPattern, meaning: text(next.meaning), words: words(next.words) } } : {}),
   };
 }
@@ -846,7 +849,8 @@ export function redoFormSlip(redo: string, heard: string): boolean {
 
 /** 통화 첫 마디(학습자가 아직 아무 말도 안 함) — 침묵 차례가 아니다(수업 첫 마디에 "들렸어요?"가 붙던 것, 2026-11-12). */
 export function openingTurn(request: Pick<DirectorRequest, "history" | "studyOpen" | "lesson">): boolean {
-  return Boolean(request.studyOpen || request.lesson?.open) || !request.history.some((line) => line.who === "learner");
+  // 첫 질문 뒤의 침묵은 침묵 차례다 — 튜터 말이 하나도 없을 때만 첫 마디(변경 감시 리뷰 2026-11-12). ⏭(skip)도 침묵이 아니다.
+  return Boolean(request.studyOpen || request.lesson?.open || request.lesson?.skip) || request.history.length === 0;
 }
 
 export const CAUGHT_IT: Partial<Record<string, string>> = {
@@ -1678,12 +1682,17 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
     ? `; then answer it and start the next point in the same line: move to a moment where "${lesson.next.pattern}" (${lesson.next.meaning}) fits, use it yourself twice and ask one easy question`
     : "; then answer it and simply carry on the conversation";
   const move = `"move" is true only when their turn asks to stop this and do something else${startNext}. Otherwise false.`;
+  // 첫 마디는 인사부터, ⏭는 인사 없이 바로, 말없는 차례(침묵)는 침묵 규칙("This turn")만 — 단계 지시를 붙이지 않는다.
+  const lead = lesson.open ? `They have not spoken yet. Greet them in a few words, then ` : lesson.skip ? `They tapped to move on to something new. No greeting and no comment on that — straight away, ` : `Now `;
+  const quiet = lesson.open || lesson.skip ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : "";
+  const silent = !spoke && !lesson.open && !lesson.skip;
   const step = (() => {
+    if (silent) return "";
     switch (lesson.step) {
       case "show":
-        return `${lesson.open || !spoke ? `They have not spoken yet. Greet them in a few words, then ` : `Now `}move the conversation to a moment from your own life where this pattern fits, use it yourself twice in your own words — something different in the blank each time — and ask them one easy question.${lesson.open || !spoke ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : ""}`;
+        return `${lead}move the conversation to a moment from your own life where this pattern fits, use it yourself twice in your own words — something different in the blank each time — and ask them one easy question.${quiet}`;
       case "draw":
-        return `${lesson.open || !spoke ? `They have not spoken yet. Greet them in a few words, then ask` : `Now ask`} one question that is most naturally answered with this pattern — about their own life or one of the words.`;
+        return `${lead}ask one question that is most naturally answered with this pattern — about their own life or one of the words.${quiet}`;
       case "move":
         return `They have used it once. Now take the conversation to a different situation where the same pattern fits — another person, place or time — and ask a question whose natural answer uses the pattern again, not a question about something else.`;
       case "ask":
@@ -1692,7 +1701,7 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
           : `They have used it twice. Answer their turn, then ask once, in your own words, whether they want to try something new. "move" is false on this turn.`;
     }
   })();
-  return [head, recast, step, lesson.step === "ask" ? "" : move].filter(Boolean).join("\n");
+  return [head, recast, step, lesson.step === "ask" || silent ? "" : move].filter(Boolean).join("\n");
 }
 
 /**

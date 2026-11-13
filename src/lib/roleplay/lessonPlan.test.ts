@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { allFramesFor } from "../curriculum/frames.ts";
 import type { LogEvent } from "../curriculum/logLedger.ts";
-import { advanceRun, lessonStage, patternIn, pickLesson, lessonSpotOf, startRun, type LessonItem } from "./lessonPlan.ts";
+import { advanceRun, lessonBoardOf, lessonRequestOf, lessonStage, patternIn, pickLesson, lessonSpotOf, startRun, type LessonItem } from "./lessonPlan.ts";
 
 const quiz = (k: string, r: "ok" | "miss" | "again", t = 100): LogEvent => ({ k, src: "quiz", r, t });
 const talk = (k: string, t = 200): LogEvent => ({ k, src: "call", r: "used", t });
@@ -101,4 +101,22 @@ test("멈춘 자리: 지금 소재·단계, 물어본 뒤면 다음 소재 처�
   assert.deepEqual(lessonSpotOf(run), { key: "f|a", step: "show" });
   assert.deepEqual(lessonSpotOf({ ...run, step: "ask" }), { key: "f|b", step: "draw" });
   assert.equal(lessonSpotOf(null), null);
+});
+
+test("칠판 카드는 보여 주기 단계에서만 틀 한 줄, ⏭는 다음 소재가 있을 때만(th·es)", () => {
+  const frames = allFramesFor("th");
+  const plan = pickLesson({ frames, events: [], start: 1, spot: null });
+  let run = startRun(plan.items)!;
+  const first = frames.find((f) => `f|${f.id}` === plan.items[0].key)!;
+  assert.deepEqual(lessonBoardOf(frames, run), { pattern: first.pattern, canSkip: true });
+  run = advanceRun(run, { spoke: true, used: false, move: false })!;
+  assert.equal(lessonBoardOf(frames, run)?.pattern, "", "끌어내기부터는 답이 되므로 숨김");
+  const last = { ...run, at: plan.items.length - 1, step: "show" as const };
+  assert.equal(lessonBoardOf(frames, last)?.canSkip, false);
+  assert.equal(lessonBoardOf(frames, null), null);
+  const es = allFramesFor("es");
+  const esRun = startRun(pickLesson({ frames: es, events: [], start: 1, spot: null }).items)!;
+  assert.equal(lessonRequestOf(es, esRun, "skip")?.skip, true);
+  assert.equal(lessonRequestOf(es, esRun, "open")?.open, true);
+  assert.equal(lessonRequestOf(es, esRun)?.skip, undefined);
 });

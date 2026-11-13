@@ -50,7 +50,10 @@ export function CallStage({
   coach,
   gender,
   onCaptionTap,
+  board,
 }: {
+  /** 수업 통화 칠판 카드: 보여 주기 단계의 틀 한 줄(학습 언어). 그 뒤 단계엔 없음 — 답이 되므로. */
+  board?: string;
   /** 자막 줄을 누름 — 그 줄의 해석을 펴고 접는다(2026-11-03). */
   onCaptionTap?: () => void;
   language: string;
@@ -87,6 +90,11 @@ export function CallStage({
             <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 object-cover" />
           ) : null}
         </p>
+        {board ? (
+          <p dir="auto" className="rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-chat font-medium text-ink" data-call-board>
+            {board}
+          </p>
+        ) : null}
         <div className="flex min-h-[4.5rem] w-full max-w-md flex-col items-center justify-start gap-3" aria-live="polite">
           {speaker === "thinking" ? (
             <span aria-hidden className="composing-dots inline-flex gap-1 text-slate-400">
@@ -165,12 +173,15 @@ export function CallControls({
   canAnswer,
   captions,
   onMissed,
+  onSkip,
   onToggleCaptions,
   onHint,
   onEnd,
   leaving = false,
   help = true,
 }: {
+  /** 수업 통화 ⏭ — 다음 소재가 있을 때만. */
+  onSkip?: () => void;
   ui: UICopy;
   /** 내 차례라 못 알아들었어요·힌트를 누를 수 있다. */
   canAnswer: boolean;
@@ -188,6 +199,7 @@ export function CallControls({
     <CallButtonRow>
       {help === "none" ? null : <CallButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} hidden={!help} />}
       <CallButton icon="💬" label={ui.roleplayCaptions} onClick={onToggleCaptions} pressed={captions} />
+      {onSkip ? <CallButton icon="⏭" label={ui.lessonSkip} onClick={onSkip} disabled={!canAnswer} /> : null}
       {help === "none" ? null : <CallButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} hidden={!help} />}
       <CallButton icon="📞" label={ui.roleplayPause} onClick={onEnd} tone="end" callout={leaving} />
     </CallButtonRow>

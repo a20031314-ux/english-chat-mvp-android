@@ -23,6 +23,7 @@ import {
   redoFormSlip,
   readLesson,
   lessonRules,
+  openingTurn,
   lessonDrilled,
   undrilled,
 } from "./director.ts";
@@ -1686,4 +1687,22 @@ test("다시 써도 고쳐 버렸으면 고친 칸을 비우고 고친 문장만
   const cleared = undrilled({ assessment: "on_track", say: { text: "تصريف الفعل: Me llamo Ana. Repítelo." }, note: "تصريف الفعل", next: { free: true } as never, better: "Me llamo Ana.", retry: "ask", offer: true });
   assert.deepEqual([cleared.better, cleared.retry, cleared.offer, cleared.note], [undefined, undefined, undefined, ""]);
   assert.deepEqual(cleared.say, { text: "Me llamo Ana." });
+});
+
+test("첫 마디는 튜터 말이 하나도 없을 때·수업 첫 소재·⏭만 — 첫 질문 뒤 침묵은 침묵 차례", () => {
+  assert.equal(openingTurn({ history: [] }), true);
+  assert.equal(openingTurn({ history: [{ who: "tutor", text: "¿Cómo te llamas?" }] }), false);
+  const lesson = { pattern: "Me llamo ___.", meaning: "", words: [], step: "show" as const };
+  assert.equal(openingTurn({ history: [{ who: "tutor", text: "Hola" }], lesson: { ...lesson, skip: true } }), true);
+  assert.equal(readLesson({ ...lesson, skip: true })?.skip, true);
+});
+
+test("수업 소재 지시: ⏭는 인사 없이 바로, 말없는 차례엔 단계 지시를 붙이지 않음", () => {
+  const base = { pattern: "我是___。", meaning: "Saying who you are", words: [] };
+  const skip = lessonRules({ ...base, step: "show", skip: true }, false);
+  assert.match(skip, /tapped to move on/);
+  assert.doesNotMatch(skip, /Greet them/);
+  const silent = lessonRules({ ...base, step: "draw" }, false);
+  assert.doesNotMatch(silent, /Greet them|Now ask|"move" is true/);
+  assert.match(silent, /never corrected/);
 });

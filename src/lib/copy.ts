@@ -15,6 +15,7 @@ export const LOCALE_OPTIONS = uiLocaleOptions();
 
 const generatedRoleplayOverlay = {
   roleplayPause: "Pause",
+  lessonSkip: "Something else",
   roleplayResume: "Carry on",
   roleplayPast: "Past conversations",
   roleplayTimeLeft: "About {minutes} min of calls left",
@@ -726,6 +727,7 @@ export const copy = {
     roleplayTip: "도움말",
     roleplayTranslations: "번역",
     roleplayMissed: "못 알아들었어요",
+    lessonSkip: "다른 거 할래요",
     roleplayCaptions: "자막",
     roleplayMyLines: "내 말",
     stageScriptsTitle: "상황",
@@ -1953,6 +1955,7 @@ export const copy = {
     roleplayTip: "Tip",
     roleplayTranslations: "Translation",
     roleplayMissed: "I didn't catch that",
+    lessonSkip: "Something else",
     roleplayCaptions: "Captions",
     roleplayMyLines: "My lines",
     stageScriptsTitle: "Situations",
@@ -3179,6 +3182,7 @@ export const copy = {
     roleplayTip: "Consejo",
     roleplayTranslations: "Traducción",
     roleplayMissed: "No te entendí",
+    lessonSkip: "Otra cosa",
     roleplayCaptions: "Subtítulos",
     roleplayMyLines: "Mis frases",
     stageScriptsTitle: "Situaciones",

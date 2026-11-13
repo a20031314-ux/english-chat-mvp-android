@@ -617,6 +617,20 @@ export function missedLine(
   return { state: asking, instruction: currentInstruction(scenario, bank, asking) };
 }
 
+/** 수업 통화 ⏭: 학습자 말 없이 튜터 차례로 — 못 알아들음(missed)이 아니라 다음 소재를 바로 시작(lessonPlan.ts). */
+export function skippedLine(
+  scenario: RoleplayScenario,
+  bank: SentenceBank,
+  state: SessionState,
+): { state: SessionState; instruction: Instruction } {
+  const node = scenario.nodes[state.nodeId];
+  if (state.finished || state.closing || state.pending || state.queue.length > 0 || !node || !isLearnerNode(node)) {
+    return { state, instruction: currentInstruction(scenario, bank, state) };
+  }
+  const going: SessionState = { ...state, listeningSince: null, pending: { heard: "", attempts: state.attempts, hesitationMs: 0 } };
+  return { state: going, instruction: currentInstruction(scenario, bank, going) };
+}
+
 /**
  * Carry out what the director decided.
  *

@@ -615,7 +615,8 @@
     "quizAskOrder": "順番に並べよう",
     "quizAskFix": "正しく直すと？",
     "quizAskSay": "声に出して言おう",
-    "quizAskReply": "合う返事は？"
+    "quizAskReply": "合う返事は？",
+    "lessonSkip": "ほかのことをする"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1233,7 +1234,8 @@
     "quizAskOrder": "按顺序排好",
     "quizAskFix": "怎么改才对？",
     "quizAskSay": "大声说出来",
-    "quizAskReply": "哪个回答合适？"
+    "quizAskReply": "哪个回答合适？",
+    "lessonSkip": "换个别的"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1854,7 +1856,8 @@
     "quizAskOrder": "Sắp xếp theo thứ tự",
     "quizAskFix": "Sửa thế nào cho đúng?",
     "quizAskSay": "Nói thành tiếng",
-    "quizAskReply": "Câu đáp nào phù hợp?"
+    "quizAskReply": "Câu đáp nào phù hợp?",
+    "lessonSkip": "Làm cái khác"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2478,7 +2481,8 @@
     "quizAskOrder": "Remettez dans l'ordre",
     "quizAskFix": "Comment la corriger ?",
     "quizAskSay": "Dites-le à voix haute",
-    "quizAskReply": "Quelle réponse convient ?"
+    "quizAskReply": "Quelle réponse convient ?",
+    "lessonSkip": "Autre chose"
   },
   "it": {
     "archive": "Report",
@@ -3295,7 +3299,8 @@
     "quizAskOrder": "Mettilo in ordine",
     "quizAskFix": "Come si corregge?",
     "quizAskSay": "Dillo ad alta voce",
-    "quizAskReply": "Quale risposta va bene?"
+    "quizAskReply": "Quale risposta va bene?",
+    "lessonSkip": "Qualcos'altro"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3922,7 +3927,8 @@
     "quizAskOrder": "Coloque em ordem",
     "quizAskFix": "Como corrigir?",
     "quizAskSay": "Diga em voz alta",
-    "quizAskReply": "Qual resposta se encaixa?"
+    "quizAskReply": "Qual resposta se encaixa?",
+    "lessonSkip": "Outra coisa"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4737,7 +4743,8 @@
     "quizAskOrder": "Расставьте по порядку",
     "quizAskFix": "Как исправить?",
     "quizAskSay": "Скажите вслух",
-    "quizAskReply": "Какой ответ подходит?"
+    "quizAskReply": "Какой ответ подходит?",
+    "lessonSkip": "Что-нибудь другое"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5362,7 +5369,8 @@
     "quizAskOrder": "Susun urutannya",
     "quizAskFix": "Bagaimana membetulkannya?",
     "quizAskSay": "Ucapkan dengan keras",
-    "quizAskReply": "Balasan mana yang cocok?"
+    "quizAskReply": "Balasan mana yang cocok?",
+    "lessonSkip": "Yang lain saja"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5980,7 +5988,8 @@
     "quizAskOrder": "رتّبها",
     "quizAskFix": "كيف تصحّحها؟",
     "quizAskSay": "قلها بصوت عالٍ",
-    "quizAskReply": "أيّ ردّ يناسب؟"
+    "quizAskReply": "أيّ ردّ يناسب؟",
+    "lessonSkip": "شيء آخر"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6598,7 +6607,8 @@
     "quizAskOrder": "เรียงลำดับ",
     "quizAskFix": "แก้ให้ถูกอย่างไร?",
     "quizAskSay": "พูดออกเสียง",
-    "quizAskReply": "คำตอบไหนเหมาะ?"
+    "quizAskReply": "คำตอบไหนเหมาะ?",
+    "lessonSkip": "ทำอย่างอื่น"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7216,6 +7226,7 @@
     "quizAskOrder": "क्रम से लगाइए",
     "quizAskFix": "इसे कैसे सुधारें?",
     "quizAskSay": "ज़ोर से बोलिए",
-    "quizAskReply": "कौन-सा जवाब सही है?"
+    "quizAskReply": "कौन-सा जवाब सही है?",
+    "lessonSkip": "कुछ और"
   }
 }

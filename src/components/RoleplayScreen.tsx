@@ -49,7 +49,7 @@ import { talkStatsOf } from "@/lib/roleplay/talkStats";
 import { OPENING_LINES } from "@/lib/roleplay/talkTags";
 import { applyTalkTags } from "@/lib/roleplay/talkMemory";
 import { loadBank, stageCuts } from "@/lib/curriculum/vocabBank";
-import { lessonRequestOf, planRunFor, stepRunFor, type LessonRun } from "@/lib/roleplay/lessonPlan";
+import { lessonBoardOf, lessonRequestOf, planRunFor, stepRunFor, type LessonRun } from "@/lib/roleplay/lessonPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
 import { REVIEW_LINES, type Review, type StuckTurn } from "@/lib/roleplay/review";
@@ -60,6 +60,7 @@ import {
   currentInstruction,
   directionFailed,
   missedLine,
+  skippedLine,
   resumeListening,
   startSession,
   submitSpeech,
@@ -260,6 +261,14 @@ export function RoleplayScreen({
   const fixesKept = useRef(false);
   /** 수업 통화의 소재 진행(lessonPlan.ts) — ready 전이면 이어 받은 통화라 첫 학습자 차례에 계획을 세운다. */
   const lessonRef = useRef<{ run: LessonRun | null; ready: boolean }>({ run: null, ready: false });
+  /** 칠판 카드(보여 주기 단계의 틀 한 줄)·⏭ — 진행이 바뀔 때마다 lessonBoardOf. */
+  const [lessonBoard, setLessonBoard] = useState<{ pattern: string; canSkip: boolean } | null>(null);
+  /** ⏭를 눌러 생긴 튜터 차례 — 진행은 이미 넘겼고, 감독에게 skip으로. */
+  const skipRef = useRef(false);
+  const keepLesson = useCallback((language: string, run: LessonRun | null) => {
+    lessonRef.current = { run, ready: true };
+    setLessonBoard(lessonBoardOf(allFramesFor(language), run));
+  }, []);
   const [fixesText, setFixesText] = useState("");
   const [lead, setLead] = useState(0);
   // 내 차례가 열리고 말이 없으면 3초 뒤 🙉·💡(앱 망설임 셈 review.ts LONG_SILENCE_MS와 같은 값).
@@ -339,6 +348,8 @@ export function RoleplayScreen({
     setPrior(lifeFactsPrompt(readLifeFacts(scenario.language), Date.now()));
     setFixesText(fixesPrompt(readFixes(scenario.language), Date.now()));
     lessonRef.current = { run: null, ready: false };
+    skipRef.current = false;
+    setLessonBoard(null);
     setLead(openLesson ? 1 : 0);
     setDirecting(false);
     factsKept.current = false;
@@ -470,12 +481,15 @@ export function RoleplayScreen({
     setDirecting(true);
     // 수업 통화: 이번 학습자 말로 소재 단계를 넘기고(틀이 나왔나 — 판정 아님), 지금 소재를 감독에게.
     const lessonBox = lessonRef.current;
+    const skipping = skipRef.current;
+    skipRef.current = false;
     if (scenario.openEnded && coachOn && !game) {
-      if (!lessonBox.ready) lessonRef.current = { run: planRunFor(scenario.language), ready: true };
-      else if (lessonBox.run)
-        lessonRef.current = { run: stepRunFor(scenario.language, lessonBox.run, { heard: instruction.request.heard, missed: Boolean(instruction.request.missed) }), ready: true };
+      if (!lessonBox.ready) keepLesson(scenario.language, planRunFor(scenario.language));
+      else if (lessonBox.run && !skipping)
+        keepLesson(scenario.language, stepRunFor(scenario.language, lessonBox.run, { heard: instruction.request.heard, missed: Boolean(instruction.request.missed) }));
     }
-    const lessonNow = scenario.openEnded && coachOn && !game ? lessonRequestOf(allFramesFor(scenario.language), lessonRef.current.run) : undefined;
+    const lessonNow =
+      scenario.openEnded && coachOn && !game ? lessonRequestOf(allFramesFor(scenario.language), lessonRef.current.run, skipping ? "skip" : undefined) : undefined;
     void fetchDirection({
       // Verbatim, every line the notes do not cover; the notes for the rest.
       request: {
@@ -489,7 +503,7 @@ export function RoleplayScreen({
         ...(scenario.openEnded ? { tutorGender } : {}),
         ...(scenario.openEnded && coachOn ? { coach: true, ...(redo.line ? { redo: redo.line, redoTries: redo.tries } : {}) } : {}),
         // 수업 통화: 말없이 지나간 차례가 몇 번째인지 — 튜터가 먼저 묻고(1) 힌트(2 이상)(2026-11-07).
-        ...(scenario.openEnded && coachOn && !instruction.request.heard.trim() && !instruction.request.missed ? { silent: silentRun(said) } : {}),
+        ...(scenario.openEnded && coachOn && !skipping && !instruction.request.heard.trim() && !instruction.request.missed ? { silent: silentRun(said) } : {}),
         // 게임: 이번 판 학습자 차례 수(말없는 차례는 안 셈)·스무고개 답.
         ...(game ? { game, gameCount: learnerTurns(said.slice(roundStart.current)), ...(game === "twenty" ? { gameSecret } : {}) } : {}),
       },
@@ -576,7 +590,7 @@ export function RoleplayScreen({
       // 수업 소재: 다른 걸 하자(또는 물어본 뒤 좋다) → 다음 소재. 튜터가 이번 줄에서 이미 시작했다.
       const lessonRun = lessonRef.current.run;
       if (direction?.move && lessonRun && !missedTurn)
-        lessonRef.current = { run: stepRunFor(scenario.language, lessonRun, { heard: instruction.request.heard, missed: false, move: true }), ready: true };
+        keepLesson(scenario.language, stepRunFor(scenario.language, lessonRun, { heard: instruction.request.heard, missed: false, move: true }));
       // 스무고개 판이 끝남(맞힘·스무 번) → 다음 답, 다음 차례부터 새 판으로 센다.
       if (game === "twenty" && direction?.round === "over") {
         const next = pickSecret(usedSecrets.current);
@@ -811,6 +825,26 @@ export function RoleplayScreen({
    * 감독에게 같은 말을 더 쉽게 다시 해 달라고 한다(session.missedLine → 감독 한 차례, 통화 시간 안).
    * 쉽게 다시 한 줄을 또 못 알아들으면 자유대화는 쉬운 다른 화제로(missedAgain), 정해진 장면은 감독을 부르지 않고 그 줄을 뜻과 함께 자막으로 보여 주고 내 차례로 돌아온다.
    */
+  /** ⏭: 지금 소재를 두고 다음 소재로 — 튜터가 바로 이어 시작한다(lessonRules skip). 다음 소재가 있을 때만 보인다. */
+  const skipLesson = useCallback(() => {
+    const run = lessonRef.current.run;
+    if (!scenario || !state || instruction?.do !== "listen" || reviewing || !run || run.at + 1 >= run.items.length) return;
+    recorderRef.current?.cancel();
+    recorderRef.current = null;
+    releaseRestRef.current();
+    setRecording(false);
+    setLearnerTalking(false);
+    setVoiceOn(false);
+    setPending("");
+    keepLesson(scenario.language, stepRunFor(scenario.language, run, { heard: "", missed: false, move: true }));
+    skipRef.current = true;
+    const going = skippedLine(scenario, bank, state);
+    setState(going.state);
+    setInstruction(going.instruction);
+  // bank는 scenario에서 나온다(missLine과 같음).
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scenario, state, instruction, reviewing, keepLesson]);
+
   const missLine = useCallback(() => {
     if (!scenario || !state || instruction?.do !== "listen" || reviewing) return;
     const tutorAt = said.map((line) => line.who).lastIndexOf("tutor");
@@ -1018,8 +1052,8 @@ export function RoleplayScreen({
     setDirecting(true);
     void (async () => {
       const run = game ? null : planRunFor(language);
-      lessonRef.current = { run, ready: true };
-      const lesson = lessonRequestOf(allFramesFor(language), run, true);
+      keepLesson(language, run);
+      const lesson = lessonRequestOf(allFramesFor(language), run, "open");
       if (cancel) return;
       if (!lesson && !game) {
         setDirecting(false);
@@ -1319,6 +1353,7 @@ export function RoleplayScreen({
         </div>
       ) : null}
       <CallStage
+        board={coachOn && lessonBoard?.pattern ? lessonBoard.pattern : undefined}
         gender={tutorGender}
         language={scenario.language}
         speaker={speaker}
@@ -1340,6 +1375,7 @@ export function RoleplayScreen({
         canAnswer={canAnswer}
         captions={showCaptions}
         onMissed={missLine}
+        onSkip={coachOn && lessonBoard?.canSkip ? skipLesson : undefined}
         onToggleCaptions={toggleCaptions}
         onHint={openHelp}
         help={!scenario.openEnded ? true : coachOn ? "none" : lettersBeginner || ((hesitating || helpCue) && !voiceOn && canAnswer)}

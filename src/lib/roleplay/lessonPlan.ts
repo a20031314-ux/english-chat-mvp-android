@@ -141,7 +141,7 @@ export function lessonSpotOf(run: LessonRun | null): LessonSpot | null {
 }
 
 /** 순수: 감독에게 보낼 지금 소재(뜻은 영어 한 줄 — 모델에게만 가고 화면엔 안 보임, 예문은 싣지 않음). */
-export function lessonRequestOf(frames: readonly Frame[], run: LessonRun | null, open = false): LessonRequest | undefined {
+export function lessonRequestOf(frames: readonly Frame[], run: LessonRun | null, how?: "open" | "skip"): LessonRequest | undefined {
   const item = currentItem(run);
   if (!run || !item) return undefined;
   const frameOf = (key: string) => frames.find((frame) => frameKey(frame) === key);
@@ -155,9 +155,29 @@ export function lessonRequestOf(frames: readonly Frame[], run: LessonRun | null,
     words: item.words,
     step: run.step,
     ...(run.asked ? { asked: true } : {}),
-    ...(open ? { open: true } : {}),
+    ...(how === "open" ? { open: true } : how === "skip" ? { skip: true } : {}),
     ...(after && nextFrame ? { next: { pattern: nextFrame.pattern, meaning: nextFrame.meaning.en, words: after.words } } : {}),
   };
+}
+
+/** 순수: 칠판 카드·⏭ — 보여 주기 단계에서만 틀 한 줄(그 뒤엔 답이 되므로 숨김), ⏭는 다음 소재가 있을 때만. */
+export function lessonBoardOf(frames: readonly Frame[], run: LessonRun | null): { pattern: string; canSkip: boolean } | null {
+  const item = currentItem(run);
+  if (!run || !item) return null;
+  const frame = frames.find((one) => frameKey(one) === item.key);
+  return {
+    pattern: run.step === "show" && frame ? frame.pattern : "",
+    canSkip: run.at + 1 < run.items.length,
+  };
+}
+
+/** 이 폰 저장소(사생활 모드·막힌 저장소에서 읽기만으로도 던질 수 있음). */
+function phoneStore(): Storage | null {
+  try {
+    return globalThis.localStorage ?? null;
+  } catch {
+    return null;
+  }
 }
 
 const SPOT = "lessonSpot.v1";
@@ -187,7 +207,7 @@ export function planRunFor(language: string): LessonRun | null {
     frames: allFramesFor(language),
     events: readLedger(language),
     start: first ? Math.min(first.expression, first.grammar) : 1,
-    spot: readSpot(globalThis.localStorage, language),
+    spot: readSpot(phoneStore(), language),
   });
   return startRun(plan.items);
 }
@@ -200,6 +220,6 @@ export function stepRunFor(language: string, run: LessonRun, turn: { heard: stri
     used: !turn.missed && Boolean(frame && patternIn(frame.pattern, turn.heard)),
     move: Boolean(turn.move),
   });
-  keepSpot(globalThis.localStorage, language, lessonSpotOf(next));
+  keepSpot(phoneStore(), language, lessonSpotOf(next));
   return next;
 }
