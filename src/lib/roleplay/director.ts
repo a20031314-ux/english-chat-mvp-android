@@ -1703,7 +1703,8 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
           : `They have used it twice. Answer their turn, then ask once, in your own words, whether they want to try something new. "move" is false on this turn.`;
     }
   })();
-  return [head, recast, step, lesson.step === "ask" || silent ? "" : move].filter(Boolean).join("\n");
+  // move 줄(다음 틀 이름이 들어 있음)은 학습자가 말한 차례에만 — 첫 마디·⏭에 붙으면 모델이 다음 틀로 건너뜀(운영 es·en 2026-11-13).
+  return [head, recast, step, lesson.step === "ask" || !spoke ? "" : move].filter(Boolean).join("\n");
 }
 
 /**

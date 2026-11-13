@@ -1615,7 +1615,8 @@ test("수업 소재 지시: 틀은 판정 없이 되받기, 큰 실수는 수업
   assert.match(show, /do not point it out, do not ask them to say it again/);
   assert.match(show, /do not praise or comment on it/);
   assert.match(show, /Only a big mistake outside the pattern is handled/);
-  assert.match(show, /"move" is true only when/);
+  assert.doesNotMatch(show, /"move" is true only when/, "첫 마디엔 move 줄 없음");
+  assert.match(lessonRules({ ...base, step: "show" }, true), /"move" is true only when/);
   assert.doesNotMatch(show, /\b(example|e\.g\.)/i, "베낄 예문 없음");
   assert.match(lessonRules({ ...base, step: "draw" }, true), /^.*\n.*\nNow ask one question/s);
   assert.match(lessonRules({ ...base, step: "move" }, true), /different situation/);
@@ -1701,6 +1702,7 @@ test("수업 소재 지시: ⏭는 인사 없이 바로, 말없는 차례엔 단
   const base = { pattern: "我是___。", meaning: "Saying who you are", words: [] };
   const skip = lessonRules({ ...base, step: "show", skip: true }, false);
   assert.match(skip, /tapped to move on/);
+  assert.doesNotMatch(lessonRules({ ...base, step: "show", skip: true, next: { pattern: "我喜欢___。", meaning: "", words: [] } }, false), /我喜欢/, "말 없는 차례엔 다음 틀 이름이 없다");
   assert.doesNotMatch(skip, /Greet them/);
   const silent = lessonRules({ ...base, step: "draw" }, false);
   assert.doesNotMatch(silent, /Greet them|Now ask|"move" is true/);
