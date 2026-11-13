@@ -26,6 +26,7 @@ import {
   openingTurn,
   lessonDrilled,
   undrilled,
+  stillDrilled,
 } from "./director.ts";
 
 const cafe = findScenario("cafe-order")!;
@@ -1736,4 +1737,18 @@ test("수업 단계 지시: 끌어내기는 빈칸을 묻고, 옮겨 쓰기는 �
   assert.match(lessonRules({ ...base, step: "move" }, true), /exactly as written[\s\S]*Not a question about someone else/);
   assert.match(lessonRules({ ...base, step: "show" }, true), /never a word that makes the sentence odd/);
   assert.match(lessonRules({ ...base, step: "draw", open: true, review: "undone" }, false), /Mention the homework once/);
+});
+
+test("다시 쓴 줄도 말로 짚으면 여전히 고친 것 — 짚는 말·다시 말해 보기", () => {
+  const first = { note: "이름 패턴이에요" };
+  assert.equal(stillDrilled(first, { say: { text: "이름 패턴이에요. My name is Kenji. Say it again." } }), true);
+  assert.equal(stillDrilled(first, { say: { text: "Oh, Kenji! Nice to meet you." }, retry: "ask" }), true);
+  assert.equal(stillDrilled(first, { say: { text: "Oh, your name is Kenji! Nice to meet you." } }), false);
+  assert.equal(stillDrilled({ note: "" }, { say: { text: "Hi Kenji" } }), false);
+});
+
+test("move 줄에는 다음 틀 이름이 없다 — 좋다고 한 차례에만", () => {
+  const base = { pattern: "Me llamo ___.", meaning: "", words: [], next: { pattern: "Soy de ___.", meaning: "", words: [] } };
+  for (const step of ["show", "draw", "move"] as const) assert.doesNotMatch(lessonRules({ ...base, step }, true), /Soy de/, step);
+  assert.match(lessonRules({ ...base, step: "ask", asked: true }, true), /Soy de/);
 });

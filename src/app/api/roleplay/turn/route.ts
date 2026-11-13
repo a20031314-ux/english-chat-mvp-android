@@ -20,6 +20,7 @@ import {
   readLesson,
   lessonDrilled,
   lessonRedoPrompt,
+  stillDrilled,
   undrilled,
   readSpokenLines,
   recordedLines,
@@ -488,7 +489,7 @@ export async function POST(request: NextRequest) {
       void recordTokens("roleplayTurn", again.usage);
       const redoText = again.choices[0]?.message?.content ?? "";
       const redone = parse(redoText);
-      if (redone && !lessonDrilled(turn, redone)) return { direction: redone, text: redoText };
+      if (redone && !lessonDrilled(turn, redone) && !stillDrilled(direction, redone)) return { direction: redone, text: redoText };
     } catch (error) {
       console.error("[roleplay/turn] lesson redo", error);
     }

@@ -1683,10 +1683,11 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
   const words = lesson.words.length ? ` Words that fit it: ${lesson.words.join(", ")}.` : "";
   const head = `Today's lesson point, for you only: the pattern "${lesson.pattern}" (${lesson.meaning}).${words} Never explain it, name it as grammar or show it as a rule — it lives only in the conversation.`;
   const recast = `This point is never corrected — it overrides "How you tutor" for it. If their turn could have used this pattern and did not, or got any part of the pattern wrong (a wrong form inside it counts): do not point it out, do not ask them to say it again, and leave "note", "better", "meant" and "retry" empty for it — instead, in your reply, say back what they meant using the pattern, naturally, as part of the conversation (the way a friend picks up your words), then carry on. When they do use it, do not praise or comment on it either; just answer. Only a big mistake outside the pattern is handled as "How you tutor" says.`;
+  // 다음 틀 이름은 "다른 거 해 볼까요?"에 좋다고 한 차례에만 — 다른 차례에 실으면 모델이 끌려가 다음 틀을 미리 물음(P4 점검 es "¿De dónde eres?" 2026-11-13).
   const startNext = lesson.next
     ? `; then answer it and start the next point in the same line: move to a moment where "${lesson.next.pattern}" (${lesson.next.meaning}) fits, use it yourself twice and ask one easy question`
     : "; then answer it and simply carry on the conversation";
-  const move = `"move" is true only when their turn asks to stop this and do something else${startNext}. Otherwise false.`;
+  const move = `"move" is true only when their turn asks to stop this and do something else; then answer it in a few words and ask them one easy question about their day. Otherwise false.`;
   // 첫 마디는 인사부터, ⏭는 인사 없이 바로, 말없는 차례(침묵)는 침묵 규칙("This turn")만 — 단계 지시를 붙이지 않는다.
   const lead = lesson.open ? `They have not spoken yet. Greet them in a few words, then ` : lesson.skip ? `They tapped to move on to something new. Drop your last question — do not repeat it, do not ask whether they heard you, no greeting and no comment on the tap — and straight away, ` : `Now `;
   const quiet = lesson.open || lesson.skip ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : "";
@@ -1707,7 +1708,7 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
       case "show":
         return `${review}${lead}move the conversation to a moment from your own life where this pattern fits and use it yourself twice — two true, natural sentences about you, with something different in the blank each time (never a word that makes the sentence odd) — then ask them one easy question that they could answer with the same pattern.${quiet}`;
       case "draw":
-        return `${review}${lead}ask one question about the thing that fills the blank — about their own life or one of the words — so that the most natural short answer is this pattern with their own word in the blank. Not a question about anything else.${quiet}`;
+        return `${review}${lead}ask one question about the thing that fills the blank — about their own life or one of the words — so that the most natural short answer is this pattern with their own word in the blank. If they have already told you that, do not ask it again: set up a small new moment in a sentence (someone new they meet, a form to fill, a phone call) where saying it as a whole sentence is natural, and ask what they would say there. Not a question about anything else.${quiet}`;
       case "move":
         return `${review}${opening ? lead : "They have used it once. Now "}take the conversation to a different situation where the same pattern fits — another place, time or occasion in their own life — and ask them about the blank again, so that their natural answer is the pattern exactly as written (same words around the blank, about themselves), only with a new word in the blank. Not a question about someone else or about anything else.${quiet}`;
       case "ask":
@@ -1733,9 +1734,17 @@ export function lessonDrilled(request: Pick<DirectorRequest, "lesson" | "heard" 
   return frameUsed(pattern, fixed) && !frameUsed(pattern, heard);
 }
 
+/** 다시 쓴 줄도 여전히 틀을 짚나 — 처음 줄의 짚는 말(note)을 그대로 말하거나 다시 말해 보기를 시킴(P4 점검 en "My name are" 2026-11-13: 교정 칸은 비웠는데 말로 "Say it again"). */
+export function stillDrilled(first: Pick<Direction, "note">, redone: Pick<Direction, "say" | "retry">): boolean {
+  if (redone.retry === "ask") return true;
+  const note = (first.note ?? "").trim();
+  const said = "text" in redone.say ? redone.say.text : "";
+  return note.length >= 2 && said.includes(note);
+}
+
 /** 고쳐 버린 차례를 다시 쓰게 하는 한 줄(같은 대화 뒤에 붙임). */
 export function lessonRedoPrompt(pattern: string): string {
-  return `Your answer above corrected the lesson pattern "${pattern}". That is not allowed. Write this turn again, as the same JSON: "note", "better", "meant", "smoother" and "retry" empty and "offer" false — say back what they meant using the pattern, naturally, as part of the conversation, then carry on with a question.`;
+  return `Your answer above corrected the lesson pattern "${pattern}". That is not allowed. Write this turn again, as the same JSON: "note", "better", "meant", "smoother" and "retry" empty and "offer" false. In "say": no word about a mistake in any language, no "say it again" — say back what they meant using the pattern, naturally, as part of the conversation, then carry on with a question.`;
 }
 
 /** 다시 써도 고쳐 버렸으면: 고친 칸을 다 비우고 고친 문장만 말한다(대화가 끊기지 않게, 드묾). */
