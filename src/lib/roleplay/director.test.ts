@@ -1752,3 +1752,11 @@ test("move 줄에는 다음 틀 이름이 없다 — 좋다고 한 차례에만"
   for (const step of ["show", "draw", "move"] as const) assert.doesNotMatch(lessonRules({ ...base, step }, true), /Soy de/, step);
   assert.match(lessonRules({ ...base, step: "ask", asked: true }, true), /Soy de/);
 });
+
+test("다시 쓴 줄에 앱 언어 글자가 섞이면 말로 짚은 것(라틴이 아닌 앱 언어만)", () => {
+  const ko = { native: "ko", target: "en" };
+  assert.equal(stillDrilled({ note: "x" }, { say: { text: "주어와 동사가 맞지 않아요. My name is Kenji. Say it again." } }, ko), true);
+  assert.equal(stillDrilled({ note: "x" }, { say: { text: "So your name is Kenji! Nice to meet you." } }, ko), false);
+  assert.equal(stillDrilled({ note: "x" }, { say: { text: "الزمن خطأ. Me llamo Ana." } }, { native: "ar", target: "es" }), true);
+  assert.equal(stillDrilled({ note: "x" }, { say: { text: "わたしは学生です。" } }, { native: "zh", target: "ja" }), false, "한자는 일본어 줄에도 있어 zh 앱 + ja 학습이면 가르지 않음");
+});

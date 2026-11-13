@@ -1735,12 +1735,27 @@ export function lessonDrilled(request: Pick<DirectorRequest, "lesson" | "heard" 
 }
 
 /** 다시 쓴 줄도 여전히 틀을 짚나 — 처음 줄의 짚는 말(note)을 그대로 말하거나 다시 말해 보기를 시킴(P4 점검 en "My name are" 2026-11-13: 교정 칸은 비웠는데 말로 "Say it again"). */
-export function stillDrilled(first: Pick<Direction, "note">, redone: Pick<Direction, "say" | "retry">): boolean {
+export function stillDrilled(first: Pick<Direction, "note">, redone: Pick<Direction, "say" | "retry">, languages?: { native: string; target: string }): boolean {
   if (redone.retry === "ask") return true;
   const note = (first.note ?? "").trim();
   const said = "text" in redone.say ? redone.say.text : "";
-  return note.length >= 2 && said.includes(note);
+  if (note.length >= 2 && said.includes(note)) return true;
+  // 짚는 말은 앱 언어로 나온다 — 글자가 다른 앱 언어의 글자가 섞였으면 말로 짚은 것(되받기 줄엔 앱 언어가 없음, 운영 en/ko "주어와 동사가 맞지 않아요").
+  // 한자는 일본어 줄에도 있다 — 중국어 앱으로 일본어를 배우면 가르지 않는다.
+  const script = languages && !(languages.native === "zh" && languages.target === "ja") ? NATIVE_SCRIPT[languages.native] : undefined;
+  return Boolean(script && languages && NATIVE_SCRIPT[languages.target] !== script && script.test(said));
 }
+
+/** 앱 언어의 글자(라틴이 아닌 것만 — 라틴끼리는 가르지 못함). */
+const NATIVE_SCRIPT: Partial<Record<string, RegExp>> = {
+  ko: /\p{Script=Hangul}/u,
+  ja: /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
+  zh: /\p{Script=Han}/u,
+  ar: /\p{Script=Arabic}/u,
+  th: /\p{Script=Thai}/u,
+  hi: /\p{Script=Devanagari}/u,
+  ru: /\p{Script=Cyrillic}/u,
+};
 
 /** 고쳐 버린 차례를 다시 쓰게 하는 한 줄(같은 대화 뒤에 붙임). */
 export function lessonRedoPrompt(pattern: string): string {
