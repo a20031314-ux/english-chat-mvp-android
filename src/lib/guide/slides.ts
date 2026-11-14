@@ -7,7 +7,8 @@
  */
 /** title·desc는 그림 안에 그려진 글(scripts/guide-slides/compose.mjs가 읽어 그림)이고, 앱은 읽어 주기(alt)로만 쓴다. */
 export type GuideSlide = { shot: string; title: string; desc: string };
-export type GuideSlideGroup = { id: string; title: string; slides: GuideSlide[] };
+/** covers: 이 칸이 대신하는 예전 칸 글 id — 새로워진 점 "자세히"(whatsNew guide)가 그 칸 id로 열면 이 칸을 고른 채 연다. */
+export type GuideSlideGroup = { id: string; title: string; covers?: string[]; slides: GuideSlide[] };
 
 /** 장 id → 칸들. 그림을 찍은 앱 언어만. */
 const SLIDES: Record<string, Record<string, GuideSlideGroup[]>> = {
@@ -16,6 +17,7 @@ const SLIDES: Record<string, Record<string, GuideSlideGroup[]>> = {
       {
         id: "keep",
         title: "{ui:keepTitle}",
+        covers: ["my.start", "my.next", "my.map"],
         slides: [
           { shot: "my-keep-1", title: "Quizbank", desc: "퀴즈를 한 흐름으로 풀어요 — − · + 로 쉽게·어렵게" },
           { shot: "my-keep-2", title: "맞힐수록 다음 단계로", desc: "같은 문법·표현을 맞히면 한 단계씩 어려워지고, 틀리면 그 단계에서 다른 문장으로 다시" },
@@ -34,6 +36,7 @@ const SLIDES: Record<string, Record<string, GuideSlideGroup[]>> = {
       {
         id: "log",
         title: "{ui:logbankTitle}",
+        covers: ["my.growth", "my.graph", "my.element"],
         slides: [
           { shot: "my-log-1", title: "Logbank", desc: "주·월마다 배운 것 — 퀴즈로 배운 수(학습), 대화에서 쓴 수(활용)" },
           { shot: "my-log-2", title: "그날 학습", desc: "날을 누르면 언제 무엇을 했는지 시간 순서로" },
