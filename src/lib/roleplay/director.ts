@@ -1669,8 +1669,8 @@ export function parseDirection(
     ...(retry === "ask" && better && !meant && record.offer === true ? { offer: true } : {}),
     ...turnMeasure(record, request, scenario),
     ...aimMeasure(record, request, scenario),
-    // 다음 거 할까요를 묻는 차례에는 아직 답이 없다 — move를 버린다(운영 en 2026-11-12: 묻지도 않고 move).
-    ...(request.lesson && !(request.lesson.step === "ask" && !request.lesson.asked) && record.move === true && request.heard.trim() && !request.missed ? { move: true as const } : {}),
+    // 묻는 차례엔 move를 버리고(운영 en 2026-11-12: 묻지도 않고 move), 물은 다음 말한 차례엔 다시 말해 보기가 아니면 늘 move — 모델 판단에 맡기지 않는다(전수 점검 2026-11-14).
+    ...(request.lesson && request.heard.trim() && !request.missed && (request.lesson.step === "ask" ? request.lesson.asked && retry !== "ask" : record.move === true) ? { move: true as const } : {}),
     ...(roundOverOf(record as { round?: unknown }, scenario.openEnded ? request.game : undefined) ? { round: "over" as const } : {}),
   };
 }
@@ -1684,9 +1684,10 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
   const head = `Today's lesson point, for you only: the pattern "${lesson.pattern}" (${lesson.meaning}).${words} Never explain it, name it as grammar or show it as a rule — it lives only in the conversation.`;
   const recast = `This point is never corrected — it overrides "How you tutor" for it. If their turn could have used this pattern and did not, or got any part of the pattern wrong (a wrong form inside it counts): do not point it out, do not ask them to say it again, and leave "note", "better", "meant" and "retry" empty for it — instead, in your reply, say back what they meant using the pattern, naturally, as part of the conversation (the way a friend picks up your words) — as their words, clearly about them (after a word like "so", or turned to "you"), never as if it were about you — then carry on. When they do use it, do not praise or comment on it either; just answer. Only a big mistake outside the pattern is handled as "How you tutor" says.`;
   // 다음 틀 이름은 "다른 거 해 볼까요?"에 좋다고 한 차례에만 — 다른 차례에 실으면 모델이 끌려가 다음 틀을 미리 물음(P4 점검 es "¿De dónde eres?" 2026-11-13).
+  // 다음 틀 이름은 "다른 거 해 볼까요?" 다음 차례에만 — 다른 차례에 실으면 모델이 끌려가 다음 틀을 미리 물음(P4 점검 es "¿De dónde eres?" 2026-11-13).
   const startNext = lesson.next
-    ? `; then answer it and start the next point in the same line: move to a moment where "${lesson.next.pattern}" (${lesson.next.meaning}) fits, use it yourself twice and ask one easy question`
-    : "; then answer it and simply carry on the conversation";
+    ? `, then in the same line move to a moment where "${lesson.next.pattern}" (${lesson.next.meaning}) fits, use it yourself twice and ask one easy question`
+    : ", then simply carry on the conversation";
   const move = `"move" is true only when their turn asks to stop this and do something else; then answer it in a few words and ask them one easy question about their day. Otherwise false.`;
   // 첫 마디는 인사부터, ⏭는 인사 없이 바로, 말없는 차례(침묵)는 침묵 규칙("This turn")만 — 단계 지시를 붙이지 않는다.
   const lead = lesson.open ? `They have not spoken yet. Greet them in a few words, then ` : lesson.skip ? `They tapped to move on to something new. Drop your last question — do not repeat it, do not ask whether they heard you, no greeting and no comment on the tap — and straight away, ` : `Now `;
@@ -1713,8 +1714,8 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
         return `${review}${opening ? lead : "They have used it once. Now "}take the conversation to a different situation where the same pattern fits — another place, time or occasion in their own life — and ask them about the blank again, so that their natural answer is the pattern exactly as written (same words around the blank, about themselves), only with a new word in the blank. Not a question about someone else or about anything else.${quiet}`;
       case "ask":
         return lesson.asked
-          ? // 기본은 넘어가기 — 튜터가 묻지 않고 내용 질문을 했던 차례 뒤에 "좋아요"가 와도 move가 꺼지던 것(전수 점검 ko/pt·th/vi·vi/ar·zh/ko 2026-11-13).
-            `Your last line asked whether to try something new. "move" is true unless their turn says no or that they want to keep talking about this — agreeing, asking for something new, or simply answering counts as yes${startNext}. Only when "move" is false, keep talking about what they said.`
+          ? // 물은 다음 말한 차례는 앱이 넘긴다 — 모델은 묻기도 move도 자주 빠뜨림(전수 점검 2026-11-13·14: 묻지 않고 내용 질문, "좋아요"에도 move 꺼짐).
+            `The lesson moves on to the next point now, whatever they said. React to their turn in a few words${startNext}. Do not ask again whether to move on. Only if this turn corrects a big mistake ("How you tutor"), do just that — the move waits.`
           : `They have used it twice. React to their turn in a few words, with no question of your own, then end your line by asking once, in your own words, whether they want to try something new — that is the only question in this turn. "move" is false on this turn.`;
     }
   })();

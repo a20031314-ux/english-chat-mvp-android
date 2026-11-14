@@ -1625,9 +1625,8 @@ test("수업 소재 지시: 틀은 판정 없이 되받기, 큰 실수는 수업
   assert.match(ask, /asking once/);
   assert.doesNotMatch(ask, /___が好きです/, "묻는 차례엔 다음 틀을 아직 안 꺼냄");
   const asked = lessonRules({ ...base, step: "ask", asked: true, next: { pattern: "___が好きです。", meaning: "Liking", words: [] } }, true);
-  assert.match(asked, /start the next point in the same line: move to a moment where "___が好きです。"/);
+  assert.match(asked, /moves on to the next point now, whatever they said.*move to a moment where "___が好きです。"/s);
   assert.match(ask, /the only question in this turn/, "묻는 차례엔 내용 질문 없이 넘어갈지만");
-  assert.match(asked, /"move" is true unless their turn says no/, "물은 뒤엔 넘어가기가 기본");
 });
 
 test("수업 소재: move는 수업 소재를 보냈고 학습자가 말한 차례에서만", () => {
@@ -1646,6 +1645,9 @@ test("수업 소재: move는 수업 소재를 보냈고 학습자가 말한 차�
   assert.equal(parseDirection(raw, context({ heard: "", lesson }))?.move, undefined, "말 없는 차례는 버림");
   assert.equal(parseDirection(raw, context({ heard: "vale", lesson: { ...lesson, step: "ask" } }))?.move, undefined, "묻는 차례에는 아직 답이 없다");
   assert.equal(parseDirection(raw, context({ heard: "vale", lesson: { ...lesson, step: "ask", asked: true } }))?.move, true);
+  const stayed = JSON.stringify({ say: "¿Y qué más?", assessment: "on_track", next: "free", move: false });
+  assert.equal(parseDirection(stayed, context({ heard: "Sí, vale.", lesson: { ...lesson, step: "ask", asked: true } }))?.move, true, "물은 다음 말한 차례는 모델이 false여도 넘어감");
+  assert.equal(parseDirection(stayed, context({ heard: "Sí, vale.", lesson }))?.move, undefined, "다른 단계는 모델 판단 그대로");
 });
 
 test("수업 소재가 있으면 How you tutor 맨 앞에 예외 — 틀은 고치지도 평하지도 않는다", () => {
