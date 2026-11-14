@@ -4314,6 +4314,36 @@
       "base": "ac34be4",
       "head": "c629876",
       "status": "open"
+    },
+    {
+      "id": "a261114-3-1",
+      "at": "2026-11-14 17:12",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "Quizbank 문법 빈칸 물음에 문법 이름(빈칸에 들어갈 관계사는?) — QuizPlayer askLine, 한국어·영어 앱만",
+      "files": [
+        "src/components/studyMap/QuizPlayer.tsx",
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/InlineQuiz.tsx",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/components/studyMap/LessonHost.tsx",
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/notes/NotebookSection.tsx"
+      ],
+      "features": [
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "Quizbank",
+        "소재 수업"
+      ],
+      "base": "f04b33f",
+      "head": "a3aa3a4",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -4784,9 +4814,23 @@
         "a261113-3-8",
         "a261113-3-9"
       ]
+    },
+    {
+      "at": "2026-11-14 17:12",
+      "from": "3",
+      "base": "f04b33f",
+      "head": "a3aa3a4",
+      "what": "Quizbank 문법 빈칸 물음에 문법 이름(빈칸에 들어갈 관계사는?) — QuizPlayer askLine, 한국어·영어 앱만",
+      "tabs": [
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261114-3-1"
+      ]
     }
   ],
   "seq": {
-    "261113-3": 9
+    "261114-3": 1
   }
 }

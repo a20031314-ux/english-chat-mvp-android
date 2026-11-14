@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (56)
+## 탭이 확인할 것 (57)
 
 ### 탭 1 메인
 
@@ -110,6 +110,10 @@
 - **a261113-3-8** (2026-11-13 14:56, 탭 3 · c629876) 수업 통화 감독 지시(lessonRules·stillDrilled) 고침 — 서버만, 화면 변화 없음
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 수업 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/studyMap/Logbank.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/QuizPlayer.tsx` · `app/api/curriculum/ask/route.ts` · `app/api/curriculum/generate/route.ts` · `app/api/curriculum/mission-check/route.ts` · `app/api/curriculum/missions/route.ts` · `app/api/curriculum/pick/route.ts` · `app/api/notes/place/route.ts` · `components/notes/NotebookSection.tsx` … 34개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261114-3-1** (2026-11-14 17:12, 탭 3 · a3aa3a4) Quizbank 문법 빈칸 물음에 문법 이름(빈칸에 들어갈 관계사는?) — QuizPlayer askLine, 한국어·영어 앱만
+  - 기능: 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · Quizbank · 소재 수업
+  - 볼 곳: `components/studyMap/QuizPlayer.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
