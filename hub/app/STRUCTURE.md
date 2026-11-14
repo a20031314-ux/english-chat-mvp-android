@@ -192,7 +192,7 @@
 | `chatDraft` | — | AI 채팅 |
 | `openVideo` | 대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트, 학습 기록 공통 | 영상 학습 탭 |
 | `practice` | AI 채팅, 학습 기록 공통 | 앱 틀, AI 채팅, AI 통화 |
-| `startCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
+| `startCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
 | `openCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
 | `sayOwnLine` | — | AI 통화 |
 | `openNotes` | 앱 틀 | My 탭 |
