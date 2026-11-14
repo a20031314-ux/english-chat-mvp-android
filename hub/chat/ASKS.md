@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (61)
+## 탭이 확인할 것 (62)
 
 ### 탭 1 메인
 
@@ -122,6 +122,10 @@
 - **a261114-1-1** (2026-11-14 21:18, 탭 1 · 688d106) 사용법(GuideSheet)에 장 안 넘겨 보기(SlideDeck·lib/guide/slides.ts) — 장면이 있는 장은 예전 카드·칸 글 대신, 지금 한국어 My만. 그 탭 사용법 장도 같은 틀(칸 칩 → 핵심 1장 + 흐름·세부, 기능 부분만 잘라 그림 안에 이름·설명)로 만들지 봐 주세요
   - 기능: 사용법 · 칸 설명
   - 볼 곳: `components/studyMap/BankHelp.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/StudyMapTab.tsx` · `app/api/video-index/find/route.ts` · `app/api/curriculum/ask/route.ts` · `app/api/curriculum/choices/route.ts` · `app/api/curriculum/fixed-lesson/route.ts` · `app/api/curriculum/frame-lesson/route.ts` · `app/api/curriculum/generate/route.ts` · `app/api/curriculum/item-lesson/route.ts` … 20개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261114-1-2** (2026-11-14 22:23, 탭 1 · bb1259d) 사용법 통화 장(ai-call)을 넘겨 보기 장면으로(한국어) — 자유대화·수업·게임·가르치기·통화 기록. 글은 모드 설명창과 같은 말. 통화 화면이 바뀌면 scripts/guide-slides/shoot-call.mjs → compose로 그림을 다시
+  - 기능: 사용법 · 칸 설명
+  - 볼 곳: `components/studyMap/BankHelp.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/StudyMapTab.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI

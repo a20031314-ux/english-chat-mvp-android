@@ -4662,6 +4662,26 @@
       "base": "d10419e",
       "head": "688d106",
       "status": "open"
+    },
+    {
+      "id": "a261114-1-2",
+      "at": "2026-11-14 22:23",
+      "kind": "apply",
+      "from": "1",
+      "to": "2",
+      "what": "사용법 통화 장(ai-call)을 넘겨 보기 장면으로(한국어) — 자유대화·수업·게임·가르치기·통화 기록. 글은 모드 설명창과 같은 말. 통화 화면이 바뀌면 scripts/guide-slides/shoot-call.mjs → compose로 그림을 다시",
+      "files": [
+        "src/components/studyMap/BankHelp.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/StudyMapTab.tsx"
+      ],
+      "features": [
+        "사용법",
+        "칸 설명"
+      ],
+      "base": "1ae2cf6398368946aae666a7515ab1d8212aee74",
+      "head": "bb1259d",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -5189,11 +5209,25 @@
       "asks": [
         "a261114-1-1"
       ]
+    },
+    {
+      "at": "2026-11-14 22:23",
+      "from": "1",
+      "base": "1ae2cf6398368946aae666a7515ab1d8212aee74",
+      "head": "bb1259d",
+      "what": "사용법 통화 장(ai-call)을 넘겨 보기 장면으로(한국어) — 자유대화·수업·게임·가르치기·통화 기록. 글은 모드 설명창과 같은 말. 통화 화면이 바뀌면 scripts/guide-slides/shoot-call.mjs → compose로 그림을 다시",
+      "tabs": [
+        "1",
+        "2"
+      ],
+      "asks": [
+        "a261114-1-2"
+      ]
     }
   ],
   "seq": {
     "261114-3": 1,
     "261114-2": 3,
-    "261114-1": 1
+    "261114-1": 2
   }
 }
