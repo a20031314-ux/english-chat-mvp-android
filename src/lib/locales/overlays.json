@@ -629,7 +629,8 @@
     "callInfoTwenty3": "当てるか20回終わると次のラウンド",
     "callInfoTeach1": "今回はチューターが{native}を学ぶ生徒です",
     "callInfoTeach2": "チューターの{native}の文が正しいか見て、{target}で直して説明します",
-    "callInfoTeach3": "自分の{target}の間違いは顔の下にカードで出ます"
+    "callInfoTeach3": "自分の{target}の間違いは顔の下にカードで出ます",
+    "todayTutorCall": "{name}と通話"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1261,7 +1262,8 @@
     "callInfoTwenty3": "猜中或问完20个就开始下一轮",
     "callInfoTeach1": "这次导师是学习{native}的学生",
     "callInfoTeach2": "判断导师说的{native}句子对不对，用{target}纠正并解释",
-    "callInfoTeach3": "你{target}里的错误会以卡片显示在头像下方"
+    "callInfoTeach3": "你{target}里的错误会以卡片显示在头像下方",
+    "todayTutorCall": "和{name}通话"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1896,7 +1898,8 @@
     "callInfoTwenty3": "Đoán đúng hoặc hết 20 câu thì sang vòng mới",
     "callInfoTeach1": "Lần này gia sư là học viên đang học {native}",
     "callInfoTeach2": "Cho biết câu {native} của gia sư đúng chưa, rồi sửa và giải thích bằng {target}",
-    "callInfoTeach3": "Lỗi {target} của bạn hiện thành thẻ dưới ảnh của bạn"
+    "callInfoTeach3": "Lỗi {target} của bạn hiện thành thẻ dưới ảnh của bạn",
+    "todayTutorCall": "Gọi với {name}"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2534,7 +2537,8 @@
     "callInfoTwenty3": "Trouve-la ou épuise les 20 questions, et une nouvelle manche commence",
     "callInfoTeach1": "Cette fois, ton tuteur est un élève qui apprend le {native}",
     "callInfoTeach2": "Dis-lui si sa phrase en {native} est juste, puis corrige-la et explique en {target}",
-    "callInfoTeach3": "Tes erreurs en {target} apparaissent sur une carte sous ton visage"
+    "callInfoTeach3": "Tes erreurs en {target} apparaissent sur une carte sous ton visage",
+    "todayTutorCall": "Appel avec {name}"
   },
   "it": {
     "archive": "Report",
@@ -3365,7 +3369,8 @@
     "callInfoTwenty3": "Se la indovini o finisci le 20 domande, parte un nuovo round",
     "callInfoTeach1": "Questa volta il tutor è uno studente di {native}",
     "callInfoTeach2": "Digli se la sua frase in {native} è giusta, poi correggila e spiegala in {target}",
-    "callInfoTeach3": "Gli errori nel tuo {target} compaiono in una scheda sotto il tuo viso"
+    "callInfoTeach3": "Gli errori nel tuo {target} compaiono in una scheda sotto il tuo viso",
+    "todayTutorCall": "Chiamata con {name}"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4006,7 +4011,8 @@
     "callInfoTwenty3": "Acertou ou acabaram as 20 perguntas, começa outra rodada",
     "callInfoTeach1": "Desta vez o tutor é um aluno aprendendo {native}",
     "callInfoTeach2": "Diga se a frase dele em {native} está certa, depois corrija e explique em {target}",
-    "callInfoTeach3": "Seus erros em {target} aparecem num cartão abaixo do seu rosto"
+    "callInfoTeach3": "Seus erros em {target} aparecem num cartão abaixo do seu rosto",
+    "todayTutorCall": "Chamada com {name}"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4835,7 +4841,8 @@
     "callInfoTwenty3": "Угадали или вопросы кончились — начинается новый раунд",
     "callInfoTeach1": "На этот раз репетитор — ученик, который учит {native} язык",
     "callInfoTeach2": "Скажите, правильно ли он сказал, поправьте и объясните (язык объяснения — {target})",
-    "callInfoTeach3": "Ваши ошибки (язык — {target}) появляются на карточке под вашим лицом"
+    "callInfoTeach3": "Ваши ошибки (язык — {target}) появляются на карточке под вашим лицом",
+    "todayTutorCall": "Звонок с {name}"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5474,7 +5481,8 @@
     "callInfoTwenty3": "Tertebak atau 20 pertanyaan habis, mulai ronde baru",
     "callInfoTeach1": "Kali ini tutor jadi murid yang belajar bahasa {native}",
     "callInfoTeach2": "Bilang apakah kalimatnya dalam bahasa {native} benar, lalu perbaiki dan jelaskan dalam bahasa {target}",
-    "callInfoTeach3": "Kesalahanmu dalam bahasa {target} muncul sebagai kartu di bawah wajahmu"
+    "callInfoTeach3": "Kesalahanmu dalam bahasa {target} muncul sebagai kartu di bawah wajahmu",
+    "todayTutorCall": "Telepon dengan {name}"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6106,7 +6114,8 @@
     "callInfoTwenty3": "إذا خمّنته أو انتهت الأسئلة العشرون تبدأ جولة جديدة",
     "callInfoTeach1": "هذه المرة المعلّم طالب يتعلّم {native}",
     "callInfoTeach2": "قل له إن كانت جملته بـ{native} صحيحة، ثم صحّحها واشرحها بـ{target}",
-    "callInfoTeach3": "تظهر أخطاؤك في {target} في بطاقة تحت صورتك"
+    "callInfoTeach3": "تظهر أخطاؤك في {target} في بطاقة تحت صورتك",
+    "todayTutorCall": "مكالمة مع {name}"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6738,7 +6747,8 @@
     "callInfoTwenty3": "ทายถูกหรือครบ 20 ข้อ ก็เริ่มรอบใหม่",
     "callInfoTeach1": "รอบนี้ติวเตอร์เป็นนักเรียนที่เรียนภาษา{native}",
     "callInfoTeach2": "บอกว่าประโยคภาษา{native}ของติวเตอร์ถูกไหม แล้วแก้และอธิบายเป็นภาษา{target}",
-    "callInfoTeach3": "ข้อผิดพลาดภาษา{target}ของคุณจะขึ้นเป็นการ์ดใต้หน้าของคุณ"
+    "callInfoTeach3": "ข้อผิดพลาดภาษา{target}ของคุณจะขึ้นเป็นการ์ดใต้หน้าของคุณ",
+    "todayTutorCall": "โทรคุยกับ{name}"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7370,6 +7380,7 @@
     "callInfoTwenty3": "पहचान लें या 20 सवाल ख़त्म हों, तो नया राउंड शुरू",
     "callInfoTeach1": "इस बार ट्यूटर {native} सीखने वाला छात्र है",
     "callInfoTeach2": "बताएँ कि ट्यूटर का {native} वाक्य सही है या नहीं, फिर {target} में सुधारकर समझाएँ",
-    "callInfoTeach3": "आपकी {target} की गलतियाँ आपके चेहरे के नीचे कार्ड में दिखती हैं"
+    "callInfoTeach3": "आपकी {target} की गलतियाँ आपके चेहरे के नीचे कार्ड में दिखती हैं",
+    "todayTutorCall": "{name} के साथ कॉल"
   }
 }

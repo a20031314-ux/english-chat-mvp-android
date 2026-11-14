@@ -22,7 +22,7 @@
 │          오늘의 학습 = 오늘 타임라인(계정 카드 아래, notes/NotebookSection 맨 위 studyMap/TodayCards → Logbank TodayTimeline — ⏱ 오늘 분):
 │              오늘 학습 시간 줄(Logbank SessionRows, 그날 세부와 같은 줄 — 누르면 DayTimeline 그 덩어리) → 같은 선 위 할 것 칸(TodaySlot, 끝나면 ✓·다 끝나면 제목 ✓):
 │              ▶ Quizbank n/10(curriculum/quizFocus.ts 신호, n = todayCards.ts answeredToday — 0단계면 오늘의 글자 묶음 → Languagebank 글자 칸 curriculum/lettersOpen.ts)
-│              · 숙제(있을 때 → openCall replay) · 🎓 수업(startCall lesson, ✓ = 오늘 수업 통화 callStore mode lesson)
+│              · 숙제(있을 때 → openCall replay) · 고른 튜터와 통화(→ 튜터 프로필 AiTutorSheet — 문 넷, ✓ = 오늘 이 언어 통화 callStore 아무 모드)
 │          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단어 → 뜻 → 표현·문법 → 시작 단계, curriculum/firstCheck.ts)
 │          칸 셋 = 위 칸 이름 줄이 탭(notes/NotebookSection MyLayers — 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면 FullScreenLayer, ✕로 제자리)
 │          [Logbank 하늘] studyMap/Logbank — 기록만
