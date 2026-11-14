@@ -4615,6 +4615,53 @@
       "base": "7c5afb0",
       "head": "91f6b42",
       "status": "open"
+    },
+    {
+      "id": "a261114-1-1",
+      "at": "2026-11-14 21:18",
+      "kind": "apply",
+      "from": "1",
+      "to": "2",
+      "what": "사용법(GuideSheet)에 장 안 넘겨 보기(SlideDeck·lib/guide/slides.ts) — 장면이 있는 장은 예전 카드·칸 글 대신, 지금 한국어 My만. 그 탭 사용법 장도 같은 틀(칸 칩 → 핵심 1장 + 흐름·세부, 기능 부분만 잘라 그림 안에 이름·설명)로 만들지 봐 주세요",
+      "files": [
+        "src/components/studyMap/BankHelp.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/app/api/video-index/find/route.ts",
+        "src/app/api/curriculum/ask/route.ts",
+        "src/app/api/curriculum/choices/route.ts",
+        "src/app/api/curriculum/fixed-lesson/route.ts",
+        "src/app/api/curriculum/frame-lesson/route.ts",
+        "src/app/api/curriculum/generate/route.ts",
+        "src/app/api/curriculum/item-lesson/route.ts",
+        "src/app/api/curriculum/mission-check/route.ts",
+        "src/app/api/curriculum/mission-seen/route.ts",
+        "src/app/api/curriculum/missions/route.ts",
+        "src/app/api/curriculum/option-notes/route.ts",
+        "src/app/api/curriculum/pick/route.ts",
+        "src/app/api/curriculum/progress/route.ts",
+        "src/app/api/curriculum/qbank/route.ts",
+        "src/app/api/curriculum/quiz-stats/route.ts",
+        "src/app/api/curriculum/recall/route.ts",
+        "src/app/api/curriculum/restore/route.ts",
+        "src/app/api/curriculum/review/route.ts",
+        "src/app/api/curriculum/route.ts",
+        "src/app/api/curriculum/script/route.ts",
+        "src/app/api/curriculum/scripts/route.ts",
+        "src/app/api/curriculum/spots/route.ts",
+        "src/app/api/curriculum/stages/route.ts",
+        "src/app/api/curriculum/typed-check/route.ts",
+        "src/app/api/curriculum/words/route.ts",
+        "src/app/api/notebook/route.ts",
+        "src/app/api/notes/place/route.ts"
+      ],
+      "features": [
+        "사용법",
+        "칸 설명"
+      ],
+      "base": "d10419e",
+      "head": "688d106",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -5128,10 +5175,25 @@
         "2"
       ],
       "asks": []
+    },
+    {
+      "at": "2026-11-14 21:18",
+      "from": "1",
+      "base": "d10419e",
+      "head": "688d106",
+      "what": "사용법(GuideSheet)에 장 안 넘겨 보기(SlideDeck·lib/guide/slides.ts) — 장면이 있는 장은 예전 카드·칸 글 대신, 지금 한국어 My만. 그 탭 사용법 장도 같은 틀(칸 칩 → 핵심 1장 + 흐름·세부, 기능 부분만 잘라 그림 안에 이름·설명)로 만들지 봐 주세요",
+      "tabs": [
+        "1",
+        "2"
+      ],
+      "asks": [
+        "a261114-1-1"
+      ]
     }
   ],
   "seq": {
     "261114-3": 1,
-    "261114-2": 3
+    "261114-2": 3,
+    "261114-1": 1
   }
 }

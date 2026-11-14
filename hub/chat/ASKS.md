@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (60)
+## 탭이 확인할 것 (61)
 
 ### 탭 1 메인
 
@@ -118,6 +118,10 @@
 - **a261114-3-1** (2026-11-14 17:12, 탭 3 · a3aa3a4) Quizbank 문법 빈칸 물음에 문법 이름(빈칸에 들어갈 관계사는?) — QuizPlayer askLine, 한국어·영어 앱만
   - 기능: 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · Quizbank · 소재 수업
   - 볼 곳: `components/studyMap/QuizPlayer.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261114-1-1** (2026-11-14 21:18, 탭 1 · 688d106) 사용법(GuideSheet)에 장 안 넘겨 보기(SlideDeck·lib/guide/slides.ts) — 장면이 있는 장은 예전 카드·칸 글 대신, 지금 한국어 My만. 그 탭 사용법 장도 같은 틀(칸 칩 → 핵심 1장 + 흐름·세부, 기능 부분만 잘라 그림 안에 이름·설명)로 만들지 봐 주세요
+  - 기능: 사용법 · 칸 설명
+  - 볼 곳: `components/studyMap/BankHelp.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/StudyMapTab.tsx` · `app/api/video-index/find/route.ts` · `app/api/curriculum/ask/route.ts` · `app/api/curriculum/choices/route.ts` · `app/api/curriculum/fixed-lesson/route.ts` · `app/api/curriculum/frame-lesson/route.ts` · `app/api/curriculum/generate/route.ts` · `app/api/curriculum/item-lesson/route.ts` … 20개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
