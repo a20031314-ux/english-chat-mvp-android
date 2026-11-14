@@ -1670,7 +1670,7 @@ export function parseDirection(
     ...turnMeasure(record, request, scenario),
     ...aimMeasure(record, request, scenario),
     // 묻는 차례엔 move를 버리고(운영 en 2026-11-12: 묻지도 않고 move), 물은 다음 말한 차례엔 다시 말해 보기가 아니면 늘 move — 모델 판단에 맡기지 않는다(전수 점검 2026-11-14).
-    ...(request.lesson && request.heard.trim() && !request.missed && (request.lesson.step === "ask" ? request.lesson.asked && retry !== "ask" : record.move === true) ? { move: true as const } : {}),
+    ...(request.lesson && request.heard.trim() && !request.missed && (request.lesson.step === "ask" ? request.lesson.asked && retry !== "ask" && !(retry === "miss" && !givingUp) : record.move === true) ? { move: true as const } : {}),
     ...(roundOverOf(record as { round?: unknown }, scenario.openEnded ? request.game : undefined) ? { round: "over" as const } : {}),
   };
 }
@@ -1683,8 +1683,7 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
   const words = lesson.words.length ? ` Words that fit it: ${lesson.words.join(", ")}.` : "";
   const head = `Today's lesson point, for you only: the pattern "${lesson.pattern}" (${lesson.meaning}).${words} Never explain it, name it as grammar or show it as a rule — it lives only in the conversation.`;
   const recast = `This point is never corrected — it overrides "How you tutor" for it. If their turn could have used this pattern and did not, or got any part of the pattern wrong (a wrong form inside it counts): do not point it out, do not ask them to say it again, and leave "note", "better", "meant" and "retry" empty for it — instead, in your reply, say back what they meant using the pattern, naturally, as part of the conversation (the way a friend picks up your words) — as their words, clearly about them (after a word like "so", or turned to "you"), never as if it were about you — then carry on. When they do use it, do not praise or comment on it either; just answer. Only a big mistake outside the pattern is handled as "How you tutor" says.`;
-  // 다음 틀 이름은 "다른 거 해 볼까요?"에 좋다고 한 차례에만 — 다른 차례에 실으면 모델이 끌려가 다음 틀을 미리 물음(P4 점검 es "¿De dónde eres?" 2026-11-13).
-  // 다음 틀 이름은 "다른 거 해 볼까요?" 다음 차례에만 — 다른 차례에 실으면 모델이 끌려가 다음 틀을 미리 물음(P4 점검 es "¿De dónde eres?" 2026-11-13).
+  // 다음 틀 이름은 "다른 거 해 볼까요?"를 물은 다음 차례에만 — 다른 차례에 실으면 모델이 끌려가 다음 틀을 미리 물음(P4 점검 es "¿De dónde eres?" 2026-11-13).
   const startNext = lesson.next
     ? `, then in the same line move to a moment where "${lesson.next.pattern}" (${lesson.next.meaning}) fits, use it yourself twice and ask one easy question`
     : ", then simply carry on the conversation";

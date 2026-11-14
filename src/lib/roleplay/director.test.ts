@@ -1648,6 +1648,8 @@ test("수업 소재: move는 수업 소재를 보냈고 학습자가 말한 차�
   const stayed = JSON.stringify({ say: "¿Y qué más?", assessment: "on_track", next: "free", move: false });
   assert.equal(parseDirection(stayed, context({ heard: "Sí, vale.", lesson: { ...lesson, step: "ask", asked: true } }))?.move, true, "물은 다음 말한 차례는 모델이 false여도 넘어감");
   assert.equal(parseDirection(stayed, context({ heard: "Sí, vale.", lesson }))?.move, undefined, "다른 단계는 모델 판단 그대로");
+  const miss = JSON.stringify({ say: "Casi. Me gusta el café. Otra vez.", assessment: "on_track", next: "free", retry: "miss" });
+  assert.equal(parseDirection(miss, context({ heard: "Me gusto el café.", redo: "Me gusta el café.", lesson: { ...lesson, step: "ask", asked: true } }))?.move, undefined, "다시 말해 보기 중이면 넘김을 기다림");
 });
 
 test("수업 소재가 있으면 How you tutor 맨 앞에 예외 — 틀은 고치지도 평하지도 않는다", () => {
