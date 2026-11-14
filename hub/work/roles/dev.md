@@ -26,7 +26,7 @@
 > 남은 것만 한 줄씩(2026-11-09 다시 씀). 그 전 열린 일 원문은 `hub/archive/roles-dev-2026-11-09.md` — 거기서 아직 남은 일을 찾으면 여기로 한 줄 옮긴다.
 > 사용자 결정 대기는 `hub/STATE.md` "결정 대기", 점검·리뷰가 넘긴 버그는 `hub/work/inbox.md`의 `→ dev` 줄.
 
-- **2.80 자르기 전 — 사용법 넘겨 보기 장면 넓히기:** 한국어 My·통화 장은 넘겨 보기로 바뀜(`lib/guide/slides.ts`·`scripts/guide-slides/`). 남은 것: 다른 앱 언어 13개(shoot.mjs·shoot-call.mjs의 한국어 버튼 이름 고르기를 copy로, 장면 글 옮기기), 수업 숙제 화면 장면(실제 수업 통화 끝까지 필요), 다른 장(AI 튜터 채팅·대화·영상·사람·Room — 같은 틀: 칸 칩 → 핵심 1장 + 흐름·세부, 아이콘으로 통하는 건 설명 안 함), 칸 머리 ?(`lib/guide/banks.ts` BankHelp — 예전 Stagebank 글)를 사용법 그 칸으로 열지, 넘겨 보기가 생긴 언어의 예전 My 칸 글·학습 흐름(`overview.ts`) 정리. `whatsNew.ts` 94 항목도 없음.
+- **2.80 자르기 전 — 사용법 넘겨 보기 장면 넓히기:** 한국어 앱은 모든 장(My·AI 튜터·통화·대화·영상·사람·Room)이 넘겨 보기로 바뀜(`lib/guide/slides.ts`·`scripts/guide-slides/`). 남은 것: 다른 앱 언어 13개(shoot.mjs·shoot-call.mjs의 한국어 버튼 이름 고르기를 copy로, crop-tabs.mjs 자르는 자리, 장면 글 옮기기), 수업 숙제 화면 장면(실제 수업 통화 끝까지 필요), 칸 머리 ?(`lib/guide/banks.ts` BankHelp — 예전 Stagebank 글)를 사용법 그 칸으로 열지, 넘겨 보기가 생긴 언어의 예전 My 칸 글·학습 흐름(`overview.ts`) 정리. `whatsNew.ts` 94 항목도 없음.
 - **이름 정리 56묶음:** `hub/app/FEATURES.md` 끝 목록 — 같은 기능이면 한 키로, 다른 기능이면 이름을 바꾼다. 먼저 "알아요"(checkKnown·itemsMastered·knownTag·markKnown)·"복습"·"이어서 하기". 고치면 `node scripts/check-copy-keys.mjs --write`.
 - **지울 것 1:** `hub/app/FEATURES.md` "지울 것" — 아침 알림(`morningNotify.ts` — 되살릴지 사용자 결정 뒤).
 - **옛 앱 전용 서버·lib:** 최소 지원 버전을 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용"과 그 서버만 쓰는 lib(`checkup.ts`·`recall.ts`·`stageScripts` 대본 쪽 등)를 지운다.

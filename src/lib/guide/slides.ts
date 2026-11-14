@@ -13,6 +13,64 @@ export type GuideSlideGroup = { id: string; title: string; covers?: string[]; sl
 /** 장 id → 칸들. 그림을 찍은 앱 언어만. */
 const SLIDES: Record<string, Record<string, GuideSlideGroup[]>> = {
   ko: {
+    "ai-chat": [
+      {
+        id: "chat",
+        title: "{ui:talkAiTutor}",
+        covers: ["chat.next", "chat.talk", "chat.stuck", "chat.meaning", "chat.analyse", "chat.words", "chat.menu", "chat.history"],
+        slides: [
+          { shot: "tab-chat-1", title: "학습 언어로 대화", desc: "튜터가 답하고, 고칠 곳은 ✎ 칩으로 알려 줘요" },
+          { shot: "tab-chat-2", title: "고친 문장", desc: "칩을 누르면 고친 문장과 더 자연스러운 말" },
+          { shot: "tab-chat-3", title: "막히면 편한 말로", desc: "튜터가 학습 언어로 이어 주고 표현을 보여 줘요 — 그 표현으로 말해 봐요" },
+        ],
+      },
+    ],
+    messages: [
+      {
+        id: "talk",
+        title: "{ui:homeTabTalk}",
+        covers: ["talk.list", "messages.dm", "messages.groups"],
+        slides: [
+          { shot: "tab-talk-1", title: "대화 목록", desc: "맨 위 AI 튜터, 아래 단체방과 1:1 메시지" },
+          { shot: "tab-talk-2", title: "단체방", desc: "줄을 집어 묻고 답해요 — 📞로 같이 통화" },
+          { shot: "tab-talk-3", title: "1:1 메시지", desc: "줄을 눌러 묻거나 답하고, 📞로 둘만의 통화" },
+        ],
+      },
+    ],
+    video: [
+      {
+        id: "video",
+        title: "{ui:homeTabVideo}",
+        covers: ["video.library", "video.subtitles", "video.bar", "video.ask", "video.import", "video.edit"],
+        slides: [
+          { shot: "tab-video-1", title: "이달의 영상", desc: "골라서 학습 언어 자막으로 봐요" },
+          { shot: "tab-video-2", title: "자막 한 줄씩", desc: "문장을 누르면 그 구간만 다시 — 단어는 📕로" },
+          { shot: "tab-video-3", title: "물어보기", desc: "점을 끌어 부분을 고르고 뜻·문법을 물어봐요" },
+        ],
+      },
+    ],
+    people: [
+      {
+        id: "people",
+        title: "{ui:homeTabPeople}",
+        covers: ["people.find", "people.invite", "people.rewards", "people.board", "people.icons"],
+        slides: [
+          { shot: "tab-people-1", title: "사람", desc: "같은 언어를 배우는 사람 — 팔로우·메시지" },
+          { shot: "tab-people-2", title: "게시판", desc: "자유·질문·메이트·단체방 주제로 글을 쓰고 메이트를 구해요" },
+        ],
+      },
+    ],
+    rooms: [
+      {
+        id: "rooms",
+        title: "{ui:homeTabRooms}",
+        covers: ["room.find", "room.layouts", "room.quote", "room.stuck", "room.game", "room.mafia", "room.watch", "room.host"],
+        slides: [
+          { shot: "tab-rooms-1", title: "열린 방", desc: "방을 만들거나 들어가요 — 말하기 또는 듣기만" },
+          { shot: "tab-rooms-2", title: "방 안", desc: "자리에 오르면 말하고, 자막·채팅으로 함께 — 방장은 🎭 게임" },
+        ],
+      },
+    ],
     "ai-call": [
       {
         id: "talk",

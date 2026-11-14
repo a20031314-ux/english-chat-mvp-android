@@ -69,6 +69,7 @@ function SlideDeck({ groups, ui, locale, section }: { groups: GuideSlideGroup[];
   };
   return (
     <div data-guide-slides className="flex flex-col gap-3">
+      {groups.length > 1 ? (
       <div className="flex flex-wrap gap-2" role="tablist">
         {groups.map((one) => (
           <button
@@ -88,6 +89,7 @@ function SlideDeck({ groups, ui, locale, section }: { groups: GuideSlideGroup[];
           </button>
         ))}
       </div>
+      ) : null}
       <div
         ref={track}
         key={group.id}
