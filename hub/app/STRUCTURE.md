@@ -19,9 +19,10 @@
 하단 탭  My │ 대화 │ 사람 │ Room │ 영상 학습   (아이콘만, features.ts bottomTabs — 첫 화면 My)
 │
 ├ My map ─ 계정 카드 · 🎁 초대 보상 · 🤝 메이트·팀
-│          오늘의 학습(계정 카드 아래, studyMap/TodayCards — 할 것만 같은 모양 줄, 끝나면 ✓·다 끝나면 제목 ✓, 숫자 없음):
-│              ▶ Quizbank(curriculum/quizFocus.ts 신호, ✓ = todayCards.ts answeredToday ≥ 10 — 0단계면 오늘의 글자 묶음 → Languagebank 글자 칸 curriculum/lettersOpen.ts)
-│              · 숙제(있을 때 → openCall replay) · 📞 수업(startCall lesson, ✓ = 오늘 수업 통화 callStore mode lesson)
+│          오늘의 학습 = 오늘 타임라인(계정 카드 아래, notes/NotebookSection 맨 위 studyMap/TodayCards → Logbank TodayTimeline — ⏱ 오늘 분):
+│              오늘 학습 시간 줄(Logbank SessionRows, 그날 세부와 같은 줄 — 누르면 DayTimeline 그 덩어리) → 같은 선 위 할 것 칸(TodaySlot, 끝나면 ✓·다 끝나면 제목 ✓):
+│              ▶ Quizbank n/10(curriculum/quizFocus.ts 신호, n = todayCards.ts answeredToday — 0단계면 오늘의 글자 묶음 → Languagebank 글자 칸 curriculum/lettersOpen.ts)
+│              · 숙제(있을 때 → openCall replay) · 🎓 수업(startCall lesson, ✓ = 오늘 수업 통화 callStore mode lesson)
 │          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단어 → 뜻 → 표현·문법 → 시작 단계, curriculum/firstCheck.ts)
 │          칸 셋 = 위 칸 이름 줄이 탭(notes/NotebookSection MyLayers — 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면 FullScreenLayer, ✕로 제자리)
 │          [Logbank 하늘] studyMap/Logbank — 기록만
@@ -45,7 +46,7 @@
 
 어디서나 뜨는 층
   AI 통화 CallHost(startCall · practice · openCall) → RoleplayScreen
-     통화 중: roleplay/CallParts CallStage(위 튜터 얼굴·수업 칠판 카드(보여 주기 때만)·💬 자막 · 아래 내 사진) · CallControls(🙉 · 💡 — 자유대화는 막혔을 때만, 수업은 없음 · 수업 ⏭ 다음 틀이 있을 때)
+     통화 중: roleplay/CallParts CallStage(맨 위 모드 이름 ⓘ → CallModeInfo 설명창 — 모드마다 처음 한 번 저절로, callModeSeen.v1 이 폰 · 위 튜터 얼굴·수업 칠판 카드(보여 주기 때만)·💬 자막 · 아래 내 사진) · CallControls(🙉 · 💡 — 자유대화는 막혔을 때만, 수업은 없음 · 수업 ⏭ 다음 틀이 있을 때)
        교정: 자유대화 = 내 얼굴 아래 카드(CoachCardView quiet) · 수업 = 튜터가 짚고 다시 말해 보기(director coachRules) · 게임 = 감독 규칙 roleplay/callGames.ts
        수업 계획: lib/roleplay/lessonPlan.ts(지난 숙제 리뷰 lastHomework → 틀 최대 셋 · show → draw → move → ask, 멈춘 자리 lessonSpot.v1 이 폰, 다룬 틀은 통화 기록 lesson) → 감독 lesson(lessonRules — 틀은 되받기, move면 다음 틀, 첫 마디 review)
      끝: CallSummary · 튜터 메모 · 이렇게도 말할 수 있었어요(roleplay/CallReplay — 장면 ReplayPlayer) · 대본(CallPages) · 통화 정리(roleplay/CallRecap — 줄마다 같이 배우기 studyMap/StudyChips → openLesson · 🔎 My에서 찾기)

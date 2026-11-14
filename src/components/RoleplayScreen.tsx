@@ -6,7 +6,7 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
+import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallModeInfo, callModeSeen, CallStage, CallSummary, type CallModeKind, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallReplay } from "@/components/roleplay/CallReplay";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
@@ -1126,6 +1126,10 @@ export function RoleplayScreen({
         ? ui.callModeStudy
         : ui.callModeTalk
     : (scenario?.title ?? "");
+  // 모드 이름 · ⓘ 설명창(사용자 2026-11-14) — 그 모드를 처음 열면 한 번 저절로(CallParts callModeSeen).
+  const modeKind: CallModeKind | null = scenario?.openEnded ? (game === "teach" ? "teach" : game ? "twenty" : coachOn ? "lesson" : "talk") : null;
+  const modeIcon = modeKind === "teach" ? "🧑‍🏫" : modeKind === "twenty" ? "🎲" : modeKind === "lesson" ? "🎓" : "📞";
+  const [modeInfo, setModeInfo] = useState(() => (modeKind ? !callModeSeen(modeKind) : false));
   const callOver = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
   /** 중단: 내가 한 말이 없으면 남길 것도 없어 그냥 닫고, 있으면 마이크·소리를 멈추고 끝 화면으로(기록은 끝나지 않은 채 — 이어서 하기). */
   const hangUp = () => {
@@ -1365,7 +1369,11 @@ export function RoleplayScreen({
           />
         </div>
       ) : null}
+      {modeKind && modeInfo ? (
+        <CallModeInfo ui={ui} kind={modeKind} icon={modeIcon} name={headTitle} locale={nativeLanguage} language={scenario.language} onClose={() => setModeInfo(false)} />
+      ) : null}
       <CallStage
+        mode={modeKind ? { icon: modeIcon, name: headTitle, onInfo: () => setModeInfo(true) } : undefined}
         board={coachOn && lessonBoard?.pattern ? lessonBoard.pattern : undefined}
         gender={tutorGender}
         language={scenario.language}

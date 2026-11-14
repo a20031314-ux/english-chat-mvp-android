@@ -1727,7 +1727,7 @@ test("숙제 리뷰 첫 마디: 틀림은 말하지 않고 다시 꺼냄, 안 �
   const base = { pattern: "Me gusta ___.", meaning: "Liking", words: [], open: true };
   const missed = lessonRules({ ...base, step: "draw", review: "missed" }, false);
   assert.match(missed, /got it wrong there\. Do not mention the mistake, the answer or a score/);
-  assert.match(missed, /Greet them in a few words, then ask one question/);
+  assert.match(missed, /Greet them in a few words, say in a few easy words that this call is a lesson[^.]*, then ask one question/);
   assert.match(lessonRules({ ...base, step: "draw", review: "undone" }, false), /no blame/);
   const right = lessonRules({ ...base, step: "move", review: "right" }, false);
   assert.match(right, /did their homework on this pattern well/);

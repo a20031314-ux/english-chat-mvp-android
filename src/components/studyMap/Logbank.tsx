@@ -34,7 +34,7 @@ import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
 import { weakKeys } from "@/lib/curriculum/ladder";
 import { focusQuiz } from "@/lib/curriculum/quizFocus";
-import { cardHistory, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session } from "@/lib/curriculum/studyTimeline";
+import { cardHistory, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session, type SessionSummary } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
 import { quizGloss } from "@/lib/curriculum/stageScripts";
@@ -105,6 +105,42 @@ function useDayResults(language: string): DayResult[] {
 
 /** notes = 그날 통화 카드(callNotes — 튜터 메모, 원문이 밀려난 통화도). */
 type Day = { day: string; items: LogItem[]; quiz: QuizDays[string] | null; results: DayResult[]; calls: SavedConversation[]; notes: CallNote[] };
+
+/** 날마다 묶은 기록 — Logbank와 My 맨 위 오늘의 학습(TodayTimeline)이 같은 재료. */
+function useLogDays(language: string, items: readonly LogItem[]) {
+  const quiz = useQuizDays(language);
+  const results = useDayResults(language);
+  const allCalls = useSyncExternalStore(subscribeCalls, readCalls, () => [] as SavedConversation[]);
+  const calls = useMemo(() => allCalls.filter((call) => call.language === language), [allCalls, language]);
+  const callNotes = useCallNotes(language);
+  const allDays = useMemo(() => logDays(items, quiz, results, calls, callNotes), [items, quiz, results, calls, callNotes]);
+  return { quiz, results, calls, callNotes, allDays };
+}
+
+/** 사건 장부(curriculum/logLedger.ts) — 오늘의 학습·Quizbank·배운 것·타임라인이 같은 기록. */
+function useLedger(language: string): LogEvent[] {
+  const [tick, setTick] = useState(0);
+  useEffect(() => {
+    const on = () => setTick((n) => n + 1);
+    window.addEventListener(LEDGER_EVENT, on);
+    return () => window.removeEventListener(LEDGER_EVENT, on);
+  }, []);
+  return useMemo(() => {
+    void tick;
+    return readLedger(language);
+  }, [tick, language]);
+}
+
+/** 그날 학습 시간 덩어리(통화 카드·통화 기록·수업 결과·장부 사건, studyTimeline.ts sessionsOf). */
+function daySessions(ledger: readonly LogEvent[], day: Day): Session[] {
+  const events = ledger.filter((event) => sameDay(dayOfSeconds(event.t), day.day));
+  const noted = new Set(day.notes.map((note) => note.id));
+  const calls = [
+    ...day.notes.map((note) => ({ id: note.id, at: note.at, secs: note.secs })),
+    ...day.calls.filter((call) => !noted.has(call.id)).map((call) => ({ id: call.id, at: call.startedAt, secs: callSeconds(call) })),
+  ];
+  return sessionsOf({ events, calls, results: day.results.map((one) => ({ at: one.at, ...(one.secs ? { secs: one.secs } : {}), item: one.item })) });
+}
 
 /**
  * 날마다 묶기 — 그날 한 공부 전부(일일 총학습, 2026-11-01): 서버 배움·숙지·고침 + 이 폰의 결과(수업·꺼내 쓰기·상황·통화·Quizbank).
@@ -231,12 +267,7 @@ export function Logbank({
   head?: ReactNode;
 }) {
   const insight = useExpressionInsightOptional();
-  const quiz = useQuizDays(language);
-  const results = useDayResults(language);
-  const allCalls = useSyncExternalStore(subscribeCalls, readCalls, () => [] as SavedConversation[]);
-  const calls = useMemo(() => allCalls.filter((call) => call.language === language), [allCalls, language]);
-  const callNotes = useCallNotes(language);
-  const allDays = useMemo(() => logDays(items, quiz, results, calls, callNotes), [items, quiz, results, calls, callNotes]);
+  const { quiz, results, calls, callNotes, allDays } = useLogDays(language, items);
   const callDays = useCallDays(language);
   // 정리용 통화 숫자: 따로 남긴 줄(callDays, 1년) + 그 전에 저장돼 줄이 없는 통화 기록.
   const callRows = useMemo(() => {
@@ -264,17 +295,7 @@ export function Logbank({
   const summary = useMemo(() => summarize({ period, items, results, quiz, calls: callRows, dayOf: localDay }), [period, items, results, quiz, callRows]);
   const chart = useMemo(() => bars(period, "time", input), [period, input]);
   const sum = useMemo(() => totals(period, "time", input), [period, input]);
-  // 사건 장부(curriculum/logLedger.ts) — 오늘 카드·Quizbank·배운 것·타임라인이 같은 기록.
-  const [ledgerTick, setLedgerTick] = useState(0);
-  useEffect(() => {
-    const on = () => setLedgerTick((n) => n + 1);
-    window.addEventListener(LEDGER_EVENT, on);
-    return () => window.removeEventListener(LEDGER_EVENT, on);
-  }, []);
-  const ledger = useMemo(() => {
-    void ledgerTick;
-    return readLedger(language);
-  }, [ledgerTick, language]);
+  const ledger = useLedger(language);
   const [nowAt] = useState(() => Date.now());
   // 학습 곡선 선 = 날마다 그날 끝까지 활용(대화에서 맞게 쓴 것) 누적(growthView.ts usedAt — 2026-11-07 밤 사용자 "학습곡선은 누적으로" → 표에서 익힘을 빼며 "1번으로").
   const knownDays = useMemo(() => {
@@ -648,6 +669,7 @@ function DayTimeline({
   grammarName,
   keyLabel,
   fallback,
+  startOpen,
 }: {
   ui: UICopy;
   language: string;
@@ -657,19 +679,13 @@ function DayTimeline({
   grammarName: (stage: number, index: number) => string;
   keyLabel: (key: string) => string;
   fallback: ReactNode;
+  /** 처음부터 열어 둘 학습 시간(시작 ms) — 오늘의 학습에서 한 덩어리를 눌렀을 때. */
+  startOpen?: number;
 }) {
-  const [openAt, setOpenAt] = useState<number | null>(null);
+  const [openAt, setOpenAt] = useState<number | null>(startOpen ?? null);
   const [card, setCard] = useState<string | null>(null);
   const clock = useClock(locale);
-  const sessions = useMemo(() => {
-    const events = ledger.filter((event) => sameDay(dayOfSeconds(event.t), day.day));
-    const noted = new Set(day.notes.map((note) => note.id));
-    const calls = [
-      ...day.notes.map((note) => ({ id: note.id, at: note.at, secs: note.secs })),
-      ...day.calls.filter((call) => !noted.has(call.id)).map((call) => ({ id: call.id, at: call.startedAt, secs: callSeconds(call) })),
-    ];
-    return sessionsOf({ events, calls, results: day.results.map((one) => ({ at: one.at, ...(one.secs ? { secs: one.secs } : {}), item: one.item })) });
-  }, [ledger, day]);
+  const sessions = useMemo(() => daySessions(ledger, day), [ledger, day]);
   const summaries = useMemo(() => sessions.map((one) => summarizeSession(one, ledger, (t) => dayOfSeconds(t))), [sessions, ledger]);
   if (!sessions.length) return <>{fallback}</>;
   const fixed = day.items.filter((item) => item.kind === "fixed");
@@ -679,10 +695,6 @@ function DayTimeline({
   const studied = new Set(summaries.flatMap((one) => [...one.fresh, ...one.again])).size;
   const [y, m, d] = day.day.split("-").map(Number);
   const midnight = new Date(y ?? 1970, (m ?? 1) - 1, d ?? 1).getTime();
-  const partsLine = (parts: Record<CardPart, number>) =>
-    LEARN_PARTS.filter((part) => parts[part])
-      .map((part) => `${learnPartName(ui, part)} ${parts[part]}`)
-      .join(" · ");
   const open = openAt === null ? -1 : sessions.findIndex((one) => one.start === openAt);
   const session = open >= 0 ? sessions[open]! : null;
   const summary = open >= 0 ? summaries[open]! : null;
@@ -807,38 +819,7 @@ function DayTimeline({
         <span>18</span>
         <span>24</span>
       </div>
-      <ol data-timeline-sessions className="flex flex-col">
-        {sessions.map((one, i) => {
-          const sum = summaries[i]!;
-          const next = sessions[i + 1];
-          const fixedN = day.notes.filter((note) => one.callIds.includes(note.id)).reduce((n, note) => n + note.fixed, 0);
-          return (
-            <li key={one.start} className="flex gap-3">
-              <div className="flex w-11 shrink-0 flex-col items-center">
-                <span className="text-meta font-semibold tabular-nums text-ink">{clock.format(one.start)}</span>
-                <span className={`my-1.5 h-2.5 w-2.5 rounded-full bg-info`} />
-                {next ? <span className="w-0.5 flex-1 bg-line" /> : null}
-              </div>
-              <div className="flex min-w-0 flex-1 flex-col gap-1.5 pb-3">
-                <button type="button" data-timeline-open={one.start} onClick={() => setOpenAt(one.start)} className={`flex flex-col gap-1.5 px-3 py-2.5 text-start hover:bg-white/5 ${box}`}>
-                  <span className="flex items-center gap-2">
-                    <span className={`min-w-0 truncate text-note font-semibold text-info`}>{one.places.map((place) => `${PLACE_ICON[place]} ${placeName(ui, place)}`).join(" · ")}</span>
-                    <span className="min-w-0 flex-1 truncate text-meta tabular-nums text-slate-400">{`${range(one)} · ${ui.planMinutes.replace("{n}", String(sessionMinutes(one)))}`}</span>
-                    <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
-                  </span>
-                  {partsLine(sum.parts) ? <span className="text-meta text-slate-300">{partsLine(sum.parts)}</span> : null}
-                  <span className="flex flex-wrap gap-1.5">
-                    {sum.ok || sum.miss ? <span className={chipCls}>{`✓ ${sum.ok}  ✗ ${sum.miss}`}</span> : null}
-                    {fixedN ? <span className={chipCls}>{`✎ ${fixedN}`}</span> : null}
-                    {sum.looked ? <span className={chipCls}>{ui.tlLookedN.replace("{n}", String(sum.looked))}</span> : null}
-                  </span>
-                </button>
-                {next ? <span className="ps-1 text-meta text-slate-500">{restLabel(ui, next.start - one.end)}</span> : null}
-              </div>
-            </li>
-          );
-        })}
-      </ol>
+      <SessionRows ui={ui} day={day} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt} />
       <FixedLines items={fixed} />
       <div className="flex justify-end">
         <ClearDay ui={ui} language={language} day={day} />
@@ -846,6 +827,153 @@ function DayTimeline({
     </div>
   );
 }
+
+/** 학습 시간 덩어리 줄들(시각 · 어디서 · 분 · 요소별 수 · ✓✗) — 그날 세부와 My 맨 위 오늘의 학습이 같이 씀. children = 뒤에 이어 붙는 칸(오늘 할 것). */
+function SessionRows({
+  ui,
+  day,
+  sessions,
+  summaries,
+  clock,
+  onOpen,
+  children,
+}: {
+  ui: UICopy;
+  day: Pick<Day, "notes">;
+  sessions: readonly Session[];
+  summaries: readonly SessionSummary[];
+  clock: Intl.DateTimeFormat;
+  onOpen: (start: number) => void;
+  children?: ReactNode;
+}) {
+  const box = "rounded-xl border border-line bg-white/[0.02]";
+  const chipCls = "rounded-full border border-line px-2 py-0.5 text-meta tabular-nums text-slate-300";
+  const partsLine = (parts: Record<CardPart, number>) =>
+    LEARN_PARTS.filter((part) => parts[part])
+      .map((part) => `${learnPartName(ui, part)} ${parts[part]}`)
+      .join(" · ");
+  const range = (one: Session) => {
+    const from = clock.format(one.start);
+    const to = clock.format(one.end);
+    return from === to ? from : `${from}–${to}`;
+  };
+  return (
+    <ol data-timeline-sessions className="flex flex-col">
+      {sessions.map((one, i) => {
+        const sum = summaries[i]!;
+        const next = sessions[i + 1];
+        const fixedN = day.notes.filter((note) => one.callIds.includes(note.id)).reduce((n, note) => n + note.fixed, 0);
+        return (
+          <li key={one.start} className="flex gap-3">
+            <div className="flex w-11 shrink-0 flex-col items-center">
+              <span className="text-meta font-semibold tabular-nums text-ink">{clock.format(one.start)}</span>
+              <span className={`my-1.5 h-2.5 w-2.5 rounded-full bg-info`} />
+              {next || children ? <span className="w-0.5 flex-1 bg-line" /> : null}
+            </div>
+            <div className="flex min-w-0 flex-1 flex-col gap-1.5 pb-3">
+              <button type="button" data-timeline-open={one.start} onClick={() => onOpen(one.start)} className={`flex flex-col gap-1.5 px-3 py-2.5 text-start hover:bg-white/5 ${box}`}>
+                <span className="flex items-center gap-2">
+                  <span className={`min-w-0 truncate text-note font-semibold text-info`}>{one.places.map((place) => `${PLACE_ICON[place]} ${placeName(ui, place)}`).join(" · ")}</span>
+                  <span className="min-w-0 flex-1 truncate text-meta tabular-nums text-slate-400">{`${range(one)} · ${ui.planMinutes.replace("{n}", String(sessionMinutes(one)))}`}</span>
+                  <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
+                </span>
+                {partsLine(sum.parts) ? <span className="text-meta text-slate-300">{partsLine(sum.parts)}</span> : null}
+                <span className="flex flex-wrap gap-1.5">
+                  {sum.ok || sum.miss ? <span className={chipCls}>{`✓ ${sum.ok}  ✗ ${sum.miss}`}</span> : null}
+                  {fixedN ? <span className={chipCls}>{`✎ ${fixedN}`}</span> : null}
+                  {sum.looked ? <span className={chipCls}>{ui.tlLookedN.replace("{n}", String(sum.looked))}</span> : null}
+                </span>
+              </button>
+              {next ? <span className="ps-1 text-meta text-slate-500">{restLabel(ui, next.start - one.end)}</span> : null}
+            </div>
+          </li>
+        );
+      })}
+    {children}
+    </ol>
+  );
+}
+
+/**
+ * 오늘 칸 하나(오늘의 학습 아래쪽 할 것 — 사용자 2026-11-14 "타임라인 중심으로 합치기"): 학습 시간 줄과 같은 선 위,
+ * 왼쪽 빈 동그라미(끝나면 ✓) · 아이콘 · 이름 · 오른쪽 기준(퀴즈 4/10) · ›.
+ */
+export function TodaySlot({ kind, done, icon, name, goal, sub, last, onClick }: { kind: string; done: boolean; icon: ReactNode; name: string; goal?: string; sub?: string; last?: boolean; onClick: () => void }) {
+  return (
+    <li className="flex gap-3">
+      <div className="flex w-11 shrink-0 flex-col items-center">
+        <span aria-hidden className={`mt-2.5 flex h-5 w-5 items-center justify-center rounded-full border text-caption ${done ? "border-good text-good" : "border-line text-transparent"}`}>✓</span>
+        {last ? null : <span className="w-0.5 flex-1 bg-line" />}
+      </div>
+      <div className="flex min-w-0 flex-1 pb-2">
+        <button
+          type="button"
+          data-today-card={kind}
+          data-done={done ? "1" : undefined}
+          onClick={onClick}
+          className={`flex min-h-11 w-full items-center gap-2 rounded-xl border border-dashed px-3 py-2 text-start hover:bg-white/5 ${done ? "border-line opacity-60" : "border-line"}`}
+        >
+          <span aria-hidden className="flex w-6 shrink-0 items-center justify-center text-title">{icon}</span>
+          <span className="flex min-w-0 flex-1 flex-col">
+            <span className="truncate text-chat font-semibold text-ink">{name}</span>
+            {sub ? <span dir="auto" className="truncate text-caption text-slate-400">{sub}</span> : null}
+          </span>
+          {goal ? <span data-today-goal className={`shrink-0 text-note tabular-nums ${done ? "text-good" : "text-slate-300"}`}>{goal}</span> : null}
+          <span aria-hidden className="shrink-0 text-caption text-slate-300 rtl:rotate-180">›</span>
+        </button>
+      </div>
+    </li>
+  );
+}
+
+/**
+ * My 맨 위 오늘의 학습 = 오늘 타임라인(사용자 2026-11-14): 오늘 한 학습 시간 줄(그날 세부와 같은 줄, 누르면 그 덩어리 세부)
+ * 뒤에 오늘 할 것 칸(children = TodaySlot). 머리 = title · ⏱ 오늘 학습 분.
+ */
+export function TodayTimeline({
+  ui,
+  language,
+  locale,
+  title,
+  grammarName = () => "",
+  children,
+}: {
+  ui: UICopy;
+  language: string;
+  locale: string;
+  title: ReactNode;
+  grammarName?: (stage: number, index: number) => string;
+  children?: ReactNode;
+}) {
+  const { allDays } = useLogDays(language, NO_ITEMS);
+  const ledger = useLedger(language);
+  const clock = useClock(locale);
+  const [today] = useState(() => localDay(Date.now()));
+  const day: Day = useMemo(() => allDays.find((one) => sameDay(one.day, today)) ?? { day: today, items: [], quiz: null, results: [], calls: [], notes: [] }, [allDays, today]);
+  const sessions = useMemo(() => daySessions(ledger, day), [ledger, day]);
+  const summaries = useMemo(() => sessions.map((one) => summarizeSession(one, ledger, (t) => dayOfSeconds(t))), [sessions, ledger]);
+  const minutes = sessions.reduce((sum, one) => sum + sessionMinutes(one), 0);
+  const [openAt, setOpenAt] = useState<number | null>(null);
+  const keyLabel = (key: string) => reviewLabel(language, key) || key.slice(2);
+  return (
+    <div data-today-timeline className="flex flex-col gap-2">
+      <div className="flex items-center gap-2">
+        <div className="flex min-w-0 flex-1 items-center gap-2">{title}</div>
+        {minutes ? <span data-today-minutes title={ui.logStudyTime} className="shrink-0 text-note tabular-nums text-slate-300">{`⏱ ${minutes}′`}</span> : null}
+      </div>
+      <SessionRows ui={ui} day={day} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt}>
+        {children}
+      </SessionRows>
+      {openAt !== null ? (
+        <LogSheet title={dayFormat(locale, today)} ui={ui} onClose={() => setOpenAt(null)}>
+          <DayTimeline ui={ui} language={language} locale={locale} day={day} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} startOpen={openAt} fallback={null} />
+        </LogSheet>
+      ) : null}
+    </div>
+  );
+}
+
+const NO_ITEMS: readonly LogItem[] = [];
 
 function placeOfSrc(src: LogEvent["src"]): Place {
   return src === "dict" ? "dict" : src === "call" ? "call" : src === "chat" ? "chat" : src === "people" ? "people" : "quiz";

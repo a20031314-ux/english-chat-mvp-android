@@ -10,6 +10,7 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { MyAvatarFace } from "@/components/account/AccountCard";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
+import { BodyLayer } from "@/components/FullScreenLayer";
 import { CallButton, CallButtonRow, CallCaption, CHAT_FACE_SIZE, formatCallTime, SpeakingRing, TalkingBars, useCallClock } from "@/components/speech/CallKit";
 import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
 import { useTutorGender } from "@/lib/tutorGender";
@@ -51,7 +52,10 @@ export function CallStage({
   gender,
   onCaptionTap,
   board,
+  mode,
 }: {
+  /** 열린 통화의 모드(자유대화·수업·게임·가르치기) — 맨 위에 이름 · ⓘ(누르면 설명창, CallModeInfo). 대본 장면엔 없음. */
+  mode?: { icon: string; name: string; onInfo: () => void };
   /** 수업 통화 칠판 카드: 보여 주기 단계의 틀 한 줄(학습 언어). 그 뒤 단계엔 없음 — 답이 되므로. */
   board?: string;
   /** 자막 줄을 누름 — 그 줄의 해석을 펴고 접는다(2026-11-03). */
@@ -73,7 +77,16 @@ export function CallStage({
   const clock = useCallClock();
   return (
     <div className="flex min-h-0 flex-1 flex-col" data-call-stage>
-      <p className="shrink-0 px-4 pt-3 text-center text-meta tabular-nums text-slate-400">
+      {mode ? (
+        <div className="flex shrink-0 justify-center px-4 pt-3">
+          <button type="button" data-call-mode-info onClick={mode.onInfo} className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-white/15 px-3 py-1 text-note text-ink hover:bg-white/10">
+            <span aria-hidden>{mode.icon}</span>
+            <span>{mode.name}</span>
+            <span aria-hidden className="text-slate-400">ⓘ</span>
+          </button>
+        </div>
+      ) : null}
+      <p className={`shrink-0 px-4 text-center text-meta tabular-nums text-slate-400 ${mode ? "pt-1" : "pt-3"}`}>
         {clock}
         {timeLeft ? <span className="text-slate-500"> · {timeLeft}</span> : null}
       </p>
@@ -503,3 +516,80 @@ export function CallAdStrip() {
   );
 }
 
+
+export type CallModeKind = "talk" | "lesson" | "twenty" | "teach";
+
+const MODE_SEEN_KEY = "callModeSeen.v1";
+
+/** 이 모드 설명창을 이 폰에서 본 적이 있나(처음 한 번만 저절로 뜸). */
+export function callModeSeen(kind: CallModeKind): boolean {
+  try {
+    return (JSON.parse(localStorage.getItem(MODE_SEEN_KEY) ?? "[]") as string[]).includes(kind);
+  } catch {
+    return true;
+  }
+}
+
+function markModeSeen(kind: CallModeKind) {
+  try {
+    const seen = JSON.parse(localStorage.getItem(MODE_SEEN_KEY) ?? "[]") as string[];
+    if (!seen.includes(kind)) localStorage.setItem(MODE_SEEN_KEY, JSON.stringify([...seen, kind]));
+  } catch {
+    // 이번에만.
+  }
+}
+
+function languageLabel(locale: string, code: string): string {
+  try {
+    return new Intl.DisplayNames([locale], { type: "language" }).of(code) ?? code;
+  } catch {
+    return code;
+  }
+}
+
+/** 모드마다 설명 세 줄(튜터가 하는 것 · 내가 하는 것 · 끝나면) — 문구 키는 copy.ts callInfo*. */
+export function callModeLines(ui: UICopy, kind: CallModeKind, names: { native: string; target: string }): string[] {
+  const fill = (text: string) => text.replaceAll("{native}", names.native).replaceAll("{target}", names.target);
+  const lines: Record<CallModeKind, string[]> = {
+    talk: [ui.callInfoTalk1, ui.callInfoTalk2, ui.callInfoTalk3],
+    lesson: [ui.callInfoLesson1, ui.callInfoLesson2, ui.callInfoLesson3],
+    twenty: [ui.callInfoTwenty1, ui.callInfoTwenty2, ui.callInfoTwenty3],
+    teach: [ui.callInfoTeach1, ui.callInfoTeach2, ui.callInfoTeach3],
+  };
+  return lines[kind].map(fill);
+}
+
+/**
+ * 통화 모드 설명창(사용자 2026-11-14 "개편된 AI 튜터 기능의 설명이 없어 — 가르치기를 누르면 그냥 통화처럼 보여"):
+ * 통화 위 아래쪽 시트 — 모드 이름 + 세 줄. 그 모드를 처음 열 때 한 번 저절로, 그 뒤엔 맨 위 모드 이름 ⓘ로. 통화는 뒤에서 그대로.
+ */
+export function CallModeInfo({ ui, kind, icon, name, locale, language, onClose }: { ui: UICopy; kind: CallModeKind; icon: string; name: string; locale: string; language: string; onClose: () => void }) {
+  const close = () => {
+    markModeSeen(kind);
+    onClose();
+  };
+  const lines = callModeLines(ui, kind, { native: languageLabel(locale, locale), target: languageLabel(locale, language) });
+  return (
+    <BodyLayer>
+      <div data-call-mode-sheet={kind} className="fixed inset-0 z-[140] flex items-end justify-center bg-black/50" onClick={close}>
+        <div className="w-full max-w-md rounded-t-2xl border border-line bg-surface p-4 pb-[max(1rem,env(safe-area-inset-bottom))]" onClick={(event) => event.stopPropagation()}>
+          <p className="flex items-center gap-2 text-body font-semibold text-ink">
+            <span aria-hidden className="text-title">{icon}</span>
+            <span>{name}</span>
+          </p>
+          <ol className="mt-3 flex flex-col gap-2">
+            {lines.map((line, i) => (
+              <li key={i} className="flex gap-2 text-note text-slate-200">
+                <span aria-hidden className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-line text-caption tabular-nums text-slate-400">{i + 1}</span>
+                <span>{line}</span>
+              </li>
+            ))}
+          </ol>
+          <button type="button" onClick={close} className="mt-4 w-full rounded-xl bg-white/15 px-4 py-2.5 text-note text-ink hover:bg-white/20">
+            {ui.whatsNewDone}
+          </button>
+        </div>
+      </div>
+    </BodyLayer>
+  );
+}

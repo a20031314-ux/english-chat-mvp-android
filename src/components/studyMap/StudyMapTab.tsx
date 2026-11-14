@@ -12,7 +12,6 @@ import { NotebookSection } from "@/components/notes/NotebookSection";
 import { FirstCheck } from "@/components/studyMap/FirstCheck";
 import { startStageOf } from "@/lib/curriculum/firstCheck";
 import { AccountCard } from "@/components/account/AccountCard";
-import { TodayCards } from "@/components/studyMap/TodayCards";
 import { saveFillCheck } from "@/lib/curriculum/fillCheck";
 
 type StageRef = { id: string; order: number };
@@ -85,10 +84,9 @@ export function StudyMapTab({ ui, locale, targetLanguage }: { ui: UICopy; locale
         <TabTitle tab="map" label={ui.homeTabProfile} />
       </header>
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
-        {/* 프로필 = 계정 카드 + 오늘의 학습(할 것 — 퀴즈·숙제·수업·실력 확인). 기록은 아래 Logbank(사용자 2026-11-10). */}
-        <div className="mx-auto mb-4 flex max-w-2xl flex-col gap-3">
+        {/* 프로필 = 계정 카드, 그 아래 오늘의 학습(오늘 타임라인 — NotebookSection 맨 위). */}
+        <div className="mx-auto mb-3 flex max-w-2xl flex-col gap-3">
           <AccountCard ui={ui} locale={locale} />
-          {!loading && started ? <TodayCards ui={ui} language={targetLanguage} locale={locale} /> : null}
         </div>
         {loading ? (
           <p className="text-sm text-slate-400">{ui.mapLoading}</p>

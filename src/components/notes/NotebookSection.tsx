@@ -20,6 +20,7 @@ import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { LettersBank, LettersRow } from "@/components/studyMap/ScriptPractice";
 import { LETTERS_OPEN_EVENT, peekLettersOpen } from "@/lib/curriculum/lettersOpen";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
+import { TodayCards } from "@/components/studyMap/TodayCards";
 import { Logbank } from "@/components/studyMap/Logbank";
 import { BankHelpButton } from "@/components/studyMap/BankHelp";
 import { scheduleMorning } from "@/lib/morningNotify";
@@ -122,6 +123,10 @@ export function NotebookSection({
     return node ? nameOf(node.id) : "";
   };
   return (
+    <>
+    <div className="mb-4">
+      <TodayCards ui={ui} language={language} locale={locale} grammarName={grammarName} />
+    </div>
     <MyLayers
       ui={ui}
       language={language}
@@ -163,6 +168,7 @@ export function NotebookSection({
       }
       logbank={(head) => <Logbank ui={ui} locale={locale} language={language} items={book.logItems ?? []} nodeName={nameOf} grammarName={grammarName} head={head} />}
     />
+    </>
   );
 }
 

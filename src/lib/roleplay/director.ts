@@ -1689,7 +1689,7 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
     : ", then simply carry on the conversation";
   const move = `"move" is true only when their turn asks to stop this and do something else; then answer it in a few words and ask them one easy question about their day. Otherwise false.`;
   // 첫 마디는 인사부터, ⏭는 인사 없이 바로, 말없는 차례(침묵)는 침묵 규칙("This turn")만 — 단계 지시를 붙이지 않는다.
-  const lead = lesson.open ? `They have not spoken yet. Greet them in a few words, then ` : lesson.skip ? `They tapped to move on to something new. Drop your last question — do not repeat it, do not ask whether they heard you, no greeting and no comment on the tap — and straight away, ` : `Now `;
+  const lead = lesson.open ? `They have not spoken yet. Greet them in a few words, say in a few easy words that this call is a lesson where you practise one way of saying things together, then ` : lesson.skip ? `They tapped to move on to something new. Drop your last question — do not repeat it, do not ask whether they heard you, no greeting and no comment on the tap — and straight away, ` : `Now `;
   const quiet = lesson.open || lesson.skip ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : "";
   // 숙제 리뷰(사용자 2026-11-12 설계 5절): 첫 마디에서 지난 숙제의 그 틀로 시작 — 틀린 것·답·점수는 말하지 않는다.
   const review =
