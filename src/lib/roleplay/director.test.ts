@@ -1622,10 +1622,12 @@ test("수업 소재 지시: 틀은 판정 없이 되받기, 큰 실수는 수업
   assert.match(lessonRules({ ...base, step: "draw" }, true), /^.*\n.*\nNow ask one question/s);
   assert.match(lessonRules({ ...base, step: "move" }, true), /different situation/);
   const ask = lessonRules({ ...base, step: "ask", next: { pattern: "___が好きです。", meaning: "Liking", words: [] } }, true);
-  assert.match(ask, /ask once/);
+  assert.match(ask, /asking once/);
   assert.doesNotMatch(ask, /___が好きです/, "묻는 차례엔 다음 틀을 아직 안 꺼냄");
   const asked = lessonRules({ ...base, step: "ask", asked: true, next: { pattern: "___が好きです。", meaning: "Liking", words: [] } }, true);
   assert.match(asked, /start the next point in the same line: move to a moment where "___が好きです。"/);
+  assert.match(ask, /the only question in this turn/, "묻는 차례엔 내용 질문 없이 넘어갈지만");
+  assert.match(asked, /"move" is true unless their turn says no/, "물은 뒤엔 넘어가기가 기본");
 });
 
 test("수업 소재: move는 수업 소재를 보냈고 학습자가 말한 차례에서만", () => {

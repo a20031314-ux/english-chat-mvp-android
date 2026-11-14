@@ -1713,8 +1713,9 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
         return `${review}${opening ? lead : "They have used it once. Now "}take the conversation to a different situation where the same pattern fits — another place, time or occasion in their own life — and ask them about the blank again, so that their natural answer is the pattern exactly as written (same words around the blank, about themselves), only with a new word in the blank. Not a question about someone else or about anything else.${quiet}`;
       case "ask":
         return lesson.asked
-          ? `You already asked whether to try something new. "move" is true when their turn agrees or asks for it${startNext}. Otherwise false, and keep talking about what they said.`
-          : `They have used it twice. Answer their turn, then ask once, in your own words, whether they want to try something new. "move" is false on this turn.`;
+          ? // 기본은 넘어가기 — 튜터가 묻지 않고 내용 질문을 했던 차례 뒤에 "좋아요"가 와도 move가 꺼지던 것(전수 점검 ko/pt·th/vi·vi/ar·zh/ko 2026-11-13).
+            `Your last line asked whether to try something new. "move" is true unless their turn says no or that they want to keep talking about this — agreeing, asking for something new, or simply answering counts as yes${startNext}. Only when "move" is false, keep talking about what they said.`
+          : `They have used it twice. React to their turn in a few words, with no question of your own, then end your line by asking once, in your own words, whether they want to try something new — that is the only question in this turn. "move" is false on this turn.`;
     }
   })();
   // move 줄(다음 틀 이름이 들어 있음)은 학습자가 말한 차례에만 — 첫 마디·⏭에 붙으면 모델이 다음 틀로 건너뜀(운영 es·en 2026-11-13).
