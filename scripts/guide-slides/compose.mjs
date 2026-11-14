@@ -16,7 +16,7 @@ const img = (n) => `data:image/png;base64,${fs.readFileSync(path.join(RAW, `${n}
 /** shots: 위아래로 그대로 · flow: [그림, 이름표, 위에서 자를 px, 높이 px] 사이에 "↓ 맞히면". */
 const LAYOUT = {
   "my-keep-1": { shots: ["keep-core"] },
-  "my-keep-2": { flow: [["keep-core", "고르기", 44, 170], ["type-spot", "틀린 곳 찾기", 0, 113], ["type-type", "문장 쓰기", 0, 120]], arrow: "↓ 맞히면" },
+  "my-keep-2": { flow: [["keep-core", "고르기", 36, 220], ["type-spot", "틀린 곳 찾기", 0, 113], ["type-type", "문장 쓰기", 0, 120]], arrow: "↓ 맞히면" },
   "my-keep-3": { shots: ["keep-after"] },
   "my-lang-1": { shots: ["lang-core"] },
   "my-lang-2": { shots: ["lang-bundle", "lang-flip"] },
