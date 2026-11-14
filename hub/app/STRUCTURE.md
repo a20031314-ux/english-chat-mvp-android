@@ -14,7 +14,7 @@
 앱 열기 ─ AI 동의(iOS만) ─ 배울 언어 고르기(처음 설치만 — 국기 여러 개 ✓ → 언어마다 튜터 얼굴 하나, LanguagePick·lib/firstLanguage.ts)
         ─ 새로워진 점(업데이트 뒤 한 번) ─ 초대 환영(초대 링크로 왔을 때)
 │
-상단바   내 배울 언어 국기 모두(누르면 그 언어로 · 지금 국기 → 언어 설정 시트, lib/myLanguages.ts) · 포인트/플랜 → 결제 화면 · ? 사용법(지금 탭의 장, GuideSheet — 장면이 있는 장은 칸 칩 + 넘겨 보기 SlideDeck, lib/guide/slides.ts·/api/guide slides=1, 지금 한국어 My) · 💬 의견 보내기
+상단바   내 배울 언어 국기 모두(누르면 그 언어로 · 지금 국기 → 언어 설정 시트, lib/myLanguages.ts) · 포인트/플랜 → 결제 화면 · ? 사용법(지금 탭의 장, GuideSheet — 장면이 있는 장은 칸 칩 + 넘겨 보기 SlideDeck, lib/guide/slides.ts·/api/guide slides=1, 지금 한국어 My·통화) · 💬 의견 보내기
 │        └ 업데이트 배너
 하단 탭  My │ 대화 │ 사람 │ Room │ 영상 학습   (아이콘만, features.ts bottomTabs — 첫 화면 My)
 │

@@ -13,6 +13,45 @@ export type GuideSlideGroup = { id: string; title: string; covers?: string[]; sl
 /** 장 id → 칸들. 그림을 찍은 앱 언어만. */
 const SLIDES: Record<string, Record<string, GuideSlideGroup[]>> = {
   ko: {
+    "ai-call": [
+      {
+        id: "talk",
+        title: "📞 {ui:callModeTalk}",
+        covers: ["call.talk"],
+        slides: [
+          { shot: "call-talk-1", title: "자유대화", desc: "튜터와 하고 싶은 이야기를 편하게 해요" },
+          { shot: "call-talk-2", title: "고친 말은 카드로", desc: "말을 끊지 않고, 고친 말은 내 얼굴 아래 카드로 보여요" },
+        ],
+      },
+      {
+        id: "lesson",
+        title: "🎓 {ui:callModeStudy}",
+        covers: ["call.coach"],
+        slides: [
+          { shot: "call-lesson-1", title: "수업", desc: "튜터가 문장구조 하나를 칠판에 보여 주고, 그 틀로 내 이야기를 하게 해요" },
+          { shot: "call-lesson-2", title: "틀리면 짚고 다시", desc: "큰 실수는 튜터가 짚어 주고 다시 말해 봐요 — 끝나면 숙제가 생겨요" },
+        ],
+      },
+      {
+        id: "twenty",
+        title: "🎲 {ui:callModeGame}",
+        slides: [{ shot: "call-game-1", title: "게임 · 스무고개", desc: "튜터가 떠올린 것을 예/아니오 질문 20번 안에 맞혀요" }],
+      },
+      {
+        id: "teach",
+        title: "🧑‍🏫 {ui:gameTeach}",
+        slides: [{ shot: "call-teach-1", title: "가르치기", desc: "튜터가 한국어를 배우는 학생 — 튜터의 한국어 문장을 보고 영어로 고쳐 주고 설명해요" }],
+      },
+      {
+        id: "past",
+        title: "{ui:callRecordsTitle}",
+        covers: ["call.review", "call.pause"],
+        slides: [
+          { shot: "call-past-1", title: "돌아보기", desc: "지난 통화를 다시 보고, 내가 하려던 말을 고친 문장으로 확인해요" },
+          { shot: "call-past-2", title: "통화 정리", desc: "고친 말을 한곳에 — 칩을 누르면 그 문장구조·문법 수업" },
+        ],
+      },
+    ],
     my: [
       {
         id: "keep",

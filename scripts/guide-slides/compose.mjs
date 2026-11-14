@@ -24,6 +24,14 @@ const LAYOUT = {
   "my-log-1": { shots: ["log-core"] },
   "my-log-2": { shots: ["log-timeline"] },
   "my-log-3": { shots: ["log-session"] },
+  "call-talk-1": { shots: ["call-talk"] },
+  "call-talk-2": { shots: ["call-quiet"] },
+  "call-lesson-1": { shots: ["call-lesson"] },
+  "call-lesson-2": { shots: ["call-fix-card"] },
+  "call-game-1": { shots: ["call-twenty"] },
+  "call-teach-1": { shots: ["call-teach"] },
+  "call-past-1": { flow: [["call-records", "통화 기록", 0, 81], ["call-review", "돌아보기", 0, 380]], arrow: "↓", base: 390 },
+  "call-past-2": { shots: ["call-recap"] },
 };
 
 const css = `*{box-sizing:border-box;margin:0}body{background:#000;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif}
@@ -45,7 +53,7 @@ for (const groups of Object.values(chapters)) {
       const lay = LAYOUT[slide.shot];
       if (!lay) throw new Error(`LAYOUT에 ${slide.shot} 없음`);
       const body = lay.flow
-        ? `<div class="st">${lay.flow.map(([n, label, off, h], i) => `${i ? `<div class="ar">${lay.arrow}</div>` : ""}<div class="sc" style="height:${Math.round((h * 358) / 386)}px"><img src="${img(n)}" style="margin-top:-${Math.round((off * 358) / 386)}px"><em>${label}</em></div>`).join("")}</div>`
+        ? `<div class="st">${lay.flow.map(([n, label, off, h], i) => `${i ? `<div class="ar">${lay.arrow}</div>` : ""}<div class="sc" style="height:${Math.round((h * 358) / (lay.base ?? 386))}px"><img src="${img(n)}" style="margin-top:-${Math.round((off * 358) / (lay.base ?? 386))}px"><em>${label}</em></div>`).join("")}</div>`
         : `<div class="shots">${lay.shots.map((n) => `<img src="${img(n)}" style="max-height:${Math.floor(520 / lay.shots.length)}px">`).join("")}</div>`;
       await page.setContent(`<style>${css}</style><div class="s"><div class="cap"><b></b><span></span></div>${body}</div>`);
       await page.evaluate(([t, d]) => { document.querySelector(".cap b").textContent = t; document.querySelector(".cap span").textContent = d; }, [slide.title, slide.desc]);
