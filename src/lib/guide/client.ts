@@ -3,23 +3,24 @@ import type { UICopy } from "@/lib/copy";
 import type { Guide, GuideChapter } from "@/lib/guide/content";
 import type { GuideOverview } from "@/lib/guide/overview";
 import type { BankGuide, BankId } from "@/lib/guide/banks";
+import type { GuideSlideGroup } from "@/lib/guide/slides";
 
 /**
  * 사용법 글을 받아 두는 곳(GuideSheet·WhatsNewSheet가 같이 쓴다).
  * 서버(/api/guide)가 글을 주고, 마지막으로 받은 것을 폰에 둬서 지하에서도 열린다.
  */
-export type GuideData = { tabs: Guide; chapters?: GuideChapter[]; overview?: GuideOverview; banks?: Record<BankId, BankGuide> };
+export type GuideData = { tabs: Guide; chapters?: GuideChapter[]; overview?: GuideOverview; banks?: Record<BankId, BankGuide>; slides?: Record<string, GuideSlideGroup[]> };
 
 function cacheKey(locale: string): string {
-  // v3: My 큰 칸 "?" 설명(banks)이 든 저장(2026-10-31) — 예전 저장은 다시 받는다.
-  return `guide.v3.${locale}`;
+  // v4: 넘겨 보기 장면(slides)이 든 저장(2026-11-14) — 예전 저장은 다시 받는다.
+  return `guide.v4.${locale}`;
 }
 
 export function readCachedGuide(locale: string): GuideData | null {
   try {
     const raw = globalThis.localStorage?.getItem(cacheKey(locale));
     if (raw) return JSON.parse(raw) as GuideData;
-    const before = globalThis.localStorage?.getItem(`guide.v2.${locale}`);
+    const before = globalThis.localStorage?.getItem(`guide.v3.${locale}`) ?? globalThis.localStorage?.getItem(`guide.v2.${locale}`);
     if (before) return JSON.parse(before) as GuideData;
     // 예전 저장(탭별 글만): 묶음 없이라도 연다.
     const old = globalThis.localStorage?.getItem(`guide.v1.${locale}`);
@@ -38,16 +39,17 @@ const inFlight = new Map<string, Promise<GuideData | null>>();
  * `r272=1`: 2.72 화면(프로필 칩·도움됐어요·줄 지우기·게시판 ♡) — 없으면 그 세 칸은 예전 글(roomsBefore272.json).
  * `overview=1`: 학습 흐름·장마다 카드 둘(lib/guide/overview.ts).
  * `banks=1`: My 큰 칸 셋의 "?" 설명(lib/guide/banks.ts).
+ * `slides=1`: 장 안의 넘겨 보기 장면(lib/guide/slides.ts) — 그림이 있는 앱 언어만 온다.
  * `chapters=1`: 하단 탭 대화·영상·사람·Room·My 빌드 — 같은 글을 기능별 묶음으로도 받는다.
  */
 export function loadGuide(locale: string): Promise<GuideData | null> {
   const running = inFlight.get(locale);
   if (running) return running;
-  const request = fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1&rooms=269&seat=1&chapters=1&game=1&icons=1&r272=1&r273=1&r274=1&r275=1&r276=1&r277=1&r278=1&r279=1&r280=1&r281=1&r282=1&r283=1&overview=1&banks=1`))
+  const request = fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1&rooms=269&seat=1&chapters=1&game=1&icons=1&r272=1&r273=1&r274=1&r275=1&r276=1&r277=1&r278=1&r279=1&r280=1&r281=1&r282=1&r283=1&overview=1&banks=1&slides=1`))
     .then((response) => (response.ok ? response.json() : null))
     .then((data: Partial<GuideData> | null) => {
       if (!data?.tabs) return null;
-      const kept: GuideData = { tabs: data.tabs, ...(data.chapters ? { chapters: data.chapters } : {}), ...(data.overview ? { overview: data.overview } : {}), ...(data.banks ? { banks: data.banks } : {}) };
+      const kept: GuideData = { tabs: data.tabs, ...(data.chapters ? { chapters: data.chapters } : {}), ...(data.overview ? { overview: data.overview } : {}), ...(data.banks ? { banks: data.banks } : {}), ...(data.slides ? { slides: data.slides } : {}) };
       try {
         globalThis.localStorage?.setItem(cacheKey(locale), JSON.stringify(kept));
       } catch {

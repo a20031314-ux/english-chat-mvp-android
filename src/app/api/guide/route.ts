@@ -24,6 +24,7 @@ import before283 from "@/lib/guide/before283.json";
 import { guideOverview } from "@/lib/guide/overview";
 import { guideOverviewBefore283 } from "@/lib/guide/overviewBefore283";
 import { bankGuides } from "@/lib/guide/banks";
+import { guideSlides } from "@/lib/guide/slides";
 
 export const runtime = "nodejs";
 
@@ -256,7 +257,9 @@ export async function GET(request: NextRequest) {
   const overview = chapters && request.nextUrl.searchParams.get("overview") === "1" ? (r283 ? guideOverview(language) : guideOverviewBefore283(language)) : undefined;
   // `banks=1`(2026-10-31): My 큰 칸 셋(Stagebank·Quizbank·Logbank)의 "?" 설명(lib/guide/banks.ts) — 그 버튼이 있는 빌드만 묻는다.
   const banks = request.nextUrl.searchParams.get("banks") === "1" ? bankGuides(language) : undefined;
-  return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs, ...(chapters ? { chapters } : {}), ...(overview ? { overview } : {}), ...(banks ? { banks } : {}) });
+  // `slides=1`(2026-11-14): 장 안의 넘겨 보기 장면(lib/guide/slides.ts) — 그리는 빌드만, 그림을 찍은 앱 언어만.
+  const slides = chapters && request.nextUrl.searchParams.get("slides") === "1" ? guideSlides(language) : undefined;
+  return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs, ...(chapters ? { chapters } : {}), ...(overview ? { overview } : {}), ...(banks ? { banks } : {}), ...(slides ? { slides } : {}) });
 }
 
 /** 뺀 칸(RETIRED_MY_SECTIONS)을 건너뛰고 "1. …" 번호를 다시 매긴다(숫자로 시작하는 제목만, 14개 언어 모두 "n. "). */

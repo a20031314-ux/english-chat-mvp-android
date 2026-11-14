@@ -108,7 +108,7 @@ Moyeo(`call.`, 단체통화) · Pingo(`talk.`, 1:1) · Spin(`spin.`, 성인인�
 
 ## 대표 장면 (스크린샷 · 홍보 · 새로워진 점)
 
-캡처는 실제 앱을 실제 입력으로 돌려 만든다. 빈 화면은 쓰지 않는다. 하루 흐름 순서: **Logbank 오늘 → Quizbank 문제 → 답 뒤 학습 표시 → 다시 학습에서 맞힘 → 튜터와 수업 통화 → 통화 끝 숙제 → Languagebank에서 찾아봄 → 사람·Room**. 스토어 그림은 `store-shots/`, 사용법 그림은 `scripts/capture-whats-new.mjs guide`.
+캡처는 실제 앱을 실제 입력으로 돌려 만든다. 빈 화면은 쓰지 않는다. 하루 흐름 순서: **Logbank 오늘 → Quizbank 문제 → 답 뒤 학습 표시 → 다시 학습에서 맞힘 → 튜터와 수업 통화 → 통화 끝 숙제 → Languagebank에서 찾아봄 → 사람·Room**. 스토어 그림은 `store-shots/`, 사용법 그림은 `scripts/capture-whats-new.mjs guide`, 사용법 넘겨 보기 장면은 `scripts/guide-slides/`(기능이 보이는 부분만 잘라 그림 안에 기능 이름·설명 한 줄, 🔊처럼 아이콘으로 통하는 것은 설명 안 함).
 
 ## 문구 톤
 

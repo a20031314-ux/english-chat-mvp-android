@@ -3,7 +3,7 @@
   "features": [
     { "id": "top-languages", "area": "shell", "name": "배울 언어 국기 줄", "copy": null, "does": "상단바에 내 배울 언어 국기 모두 — 누르면 그 언어로, 지금 국기 → 언어 설정 시트(배울 언어·앱 언어)", "code": ["src/components/LearningLanguageFlag.tsx", "src/lib/myLanguages.ts"], "status": "live" },
     { "id": "first-language", "area": "shell", "name": "처음 언어·튜터 고르기", "copy": null, "does": "처음 설치 때 국기 여러 개 → 언어마다 튜터 얼굴 하나", "code": ["src/components/LanguagePick.tsx", "src/lib/firstLanguage.ts"], "status": "live" },
-    { "id": "guide", "area": "shell", "name": "사용법", "copy": "guideOpen", "does": "상단 ? — 지금 탭의 장(그림·영상 한 줄), 맨 앞 탭은 쓸 기능 고르기", "code": ["src/components/GuideSheet.tsx", "src/lib/guide/content.ts"], "status": "live" },
+    { "id": "guide", "area": "shell", "name": "사용법", "copy": "guideOpen", "does": "상단 ? — 지금 탭의 장(그림·영상 한 줄), 맨 앞 탭은 쓸 기능 고르기. 넘겨 보기 장면이 있는 장(지금 한국어 My)은 칸 칩 → 첫 장 핵심, 넘기면 세부 — 기능 이름·설명은 그림 안", "code": ["src/components/GuideSheet.tsx", "src/lib/guide/content.ts", "src/lib/guide/slides.ts"], "status": "live" },
     { "id": "whats-new", "area": "shell", "name": "새로워진 점", "copy": "whatsNewTitle", "does": "업데이트 뒤 한 번, 앱 언어별 캡처", "code": ["src/components/WhatsNewSheet.tsx", "src/lib/whatsNew.ts"], "status": "live" },
     { "id": "feedback", "area": "feedback", "name": "의견 보내기", "copy": "feedbackOpen", "does": "상단 💬 — 글·사진, 반영되면 소식 시트와 포인트", "code": ["src/components/FeedbackButton.tsx", "src/components/FeedbackFixedSheet.tsx"], "status": "live" },
 

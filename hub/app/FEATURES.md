@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | 배울 언어 국기 줄 | 상단바에 내 배울 언어 국기 모두 — 누르면 그 언어로, 지금 국기 → 언어 설정 시트(배울 언어·앱 언어) | 1 메인 | `components/LearningLanguageFlag.tsx` · `lib/myLanguages.ts` |  |
 | 처음 언어·튜터 고르기 | 처음 설치 때 국기 여러 개 → 언어마다 튜터 얼굴 하나 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/LanguagePick.tsx` · `lib/firstLanguage.ts` |  |
-| 사용법 `guideOpen` | 상단 ? — 지금 탭의 장(그림·영상 한 줄), 맨 앞 탭은 쓸 기능 고르기 | 1 메인 · 2 My | `components/GuideSheet.tsx` · `lib/guide/content.ts` |  |
+| 사용법 `guideOpen` | 상단 ? — 지금 탭의 장(그림·영상 한 줄), 맨 앞 탭은 쓸 기능 고르기. 넘겨 보기 장면이 있는 장(지금 한국어 My)은 칸 칩 → 첫 장 핵심, 넘기면 세부 — 기능 이름·설명은 그림 안 | 1 메인 · 2 My | `components/GuideSheet.tsx` · `lib/guide/content.ts` · `lib/guide/slides.ts` |  |
 | 새로워진 점 `whatsNewTitle` | 업데이트 뒤 한 번, 앱 언어별 캡처 | 1 메인 · 3 AI | `components/WhatsNewSheet.tsx` · `lib/whatsNew.ts` |  |
 
 ### 의견 보내기·반영 소식

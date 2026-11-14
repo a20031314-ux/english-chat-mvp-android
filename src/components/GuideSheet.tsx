@@ -10,6 +10,7 @@ import type { Locale, UICopy } from "@/lib/copy";
 import type { GuideChapter, GuideGo, GuideSection, GuideTabId } from "@/lib/guide/content";
 import { fillGuideLabels, loadGuide, readCachedGuide, type GuideData } from "@/lib/guide/client";
 import type { GuideCard, GuideOverview } from "@/lib/guide/overview";
+import type { GuideSlideGroup } from "@/lib/guide/slides";
 import {
   FEATURE_PRESETS,
   applyPreset,
@@ -48,6 +49,78 @@ const SCREEN_CHAPTER: Record<string, string> = {
   map: "flow",
   vocab: "notes",
 };
+
+/**
+ * 장 안의 넘겨 보기(2026-11-14, lib/guide/slides.ts): 칸 칩 → 첫 장 = 그 칸의 핵심, 옆으로 넘기면 세부.
+ * 기능 이름·설명은 그림 안에 있다 — 여기선 칸 이름(화면 문구)만.
+ */
+function SlideDeck({ groups, ui, locale }: { groups: GuideSlideGroup[]; ui: UICopy; locale: string }) {
+  const [groupId, setGroupId] = useState(groups[0]?.id ?? "");
+  const [at, setAt] = useState(0);
+  const track = useRef<HTMLDivElement>(null);
+  const group = groups.find((one) => one.id === groupId) ?? groups[0];
+  if (!group) return null;
+  const go = (index: number) => {
+    const root = track.current;
+    if (!root) return;
+    const next = Math.max(0, Math.min(group.slides.length - 1, index));
+    root.scrollTo({ left: next * root.clientWidth * (document.dir === "rtl" ? -1 : 1), behavior: "smooth" });
+  };
+  return (
+    <div data-guide-slides className="flex flex-col gap-3">
+      <div className="flex flex-wrap gap-2" role="tablist">
+        {groups.map((one) => (
+          <button
+            key={one.id}
+            type="button"
+            role="tab"
+            data-guide-slide-group={one.id}
+            aria-selected={one.id === group.id}
+            onClick={() => {
+              setGroupId(one.id);
+              setAt(0);
+              track.current?.scrollTo({ left: 0 });
+            }}
+            className={`rounded-full px-3 py-1 text-caption ${one.id === group.id ? "bg-platinum text-canvas" : "border border-line text-slate-300 hover:bg-white/10"}`}
+          >
+            {fillGuideLabels(one.title, ui)}
+          </button>
+        ))}
+      </div>
+      <div
+        ref={track}
+        key={group.id}
+        onScroll={(event) => {
+          const root = event.currentTarget;
+          setAt(Math.round(Math.abs(root.scrollLeft) / Math.max(1, root.clientWidth)));
+        }}
+        className="flex snap-x snap-mandatory overflow-x-auto"
+      >
+        {group.slides.map((slide) => (
+          <div key={slide.shot} className="flex w-full shrink-0 snap-center justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={apiUrl(`/guide/${locale}/${slide.shot}.webp`)} alt={`${slide.title} — ${slide.desc}`} loading="lazy" className="max-h-[70vh] w-auto max-w-full rounded-2xl" />
+          </div>
+        ))}
+      </div>
+      {group.slides.length > 1 ? (
+        <div className="flex items-center justify-between">
+          <button type="button" aria-label={ui.studyChapterPrev} onClick={() => go(at - 1)} disabled={at === 0} className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-slate-200 disabled:opacity-30">
+            <span aria-hidden className="inline-block rtl:rotate-180">‹</span>
+          </button>
+          <div className="flex gap-1.5">
+            {group.slides.map((slide, index) => (
+              <span key={slide.shot} className={`h-1.5 rounded-full ${index === at ? "w-4 bg-platinum" : "w-1.5 bg-white/20"}`} />
+            ))}
+          </div>
+          <button type="button" aria-label={ui.studyChapterNext} onClick={() => go(at + 1)} disabled={at >= group.slides.length - 1} className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-slate-200 disabled:opacity-30">
+            <span aria-hidden className="inline-block rtl:rotate-180">›</span>
+          </button>
+        </div>
+      ) : null}
+    </div>
+  );
+}
 
 /**
  * The picture of one step, in this person's interface language, or the English
@@ -374,7 +447,9 @@ export function GuideButton({
     .filter((chapter) => availableGo.includes(chapter.go))
     .map((chapter) => ({ ...chapter, sections: chapter.sections.filter((section) => section.id !== "call.ownline") }));
   const sectionChapter = target.section ? chapters.find((chapter) => chapter.sections.some((row) => row.id === target.section))?.id : undefined;
-  const overview = shown?.overview;
+  const slides = shown?.slides;
+  // 넘겨 보기가 있는 My 장이면 맨 앞 학습 흐름(예전 칸 그림)은 안 보인다 — 장마다 칸이 그 몫을 한다.
+  const overview = slides?.my ? undefined : shown?.overview;
   const focusChapter = sectionChapter ?? (target.chapter === "flow" && !overview ? "my" : target.chapter);
   // 큰 그림이 있으면 흐름 다음에 My(학습의 뼈대)부터.
   const ordered = overview
@@ -561,8 +636,9 @@ export function GuideButton({
                   // 고르기 화면은 장마다 첫 칸 하나만(그림 먼저, 짧게).
                   const sections = picking ? chapter.sections.slice(0, 1) : chapter.sections;
                   // 큰 그림 카드가 있는 장은 칸들을 접힌 "세부 기능" 안에(새로워진 점 "자세히"로 온 칸이면 펼침).
-                  const cards = !choosing ? overview?.chapters[chapter.id] : undefined;
-                  const expanded = !cards || detailsOpen.includes(chapter.id) || sectionChapter === chapter.id;
+                  const deck = !choosing ? slides?.[chapter.id] : undefined;
+                  const cards = !choosing && !deck ? overview?.chapters[chapter.id] : undefined;
+                  const expanded = !deck && (!cards || detailsOpen.includes(chapter.id) || sectionChapter === chapter.id);
                   return (
                     <div key={chapter.id} data-guide-chapter={chapter.id} className="scroll-mt-4">
                       <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2">
@@ -584,6 +660,11 @@ export function GuideButton({
                           ) : null}
                         </div>
                       </div>
+                      {deck ? (
+                        <div className={on ? "" : "opacity-60"}>
+                          <SlideDeck groups={deck} ui={ui} locale={locale} />
+                        </div>
+                      ) : null}
                       {cards ? (
                         <div className={on ? "" : "opacity-60"}>
                           <CardRow>
