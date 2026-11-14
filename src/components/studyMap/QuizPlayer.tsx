@@ -28,6 +28,7 @@ import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { openLesson } from "@/lib/appIntents";
 import { DictionarySheet } from "@/components/studyMap/Dictionary";
 import { useOptionNotes } from "@/lib/curriculum/optionNotes";
+import { askWithName, grammarAskName } from "@/lib/curriculum/grammarAsk";
 
 /**
  * 약한 곳 퀴즈(lib/curriculum/quiz.ts, 2026-10-28 사용자 "틀린 부분을 퀴즈로"): 오늘 할 것의 "퀴즈" 칸을 누르면 열린다.
@@ -314,7 +315,7 @@ export function QuestionView({
     >
       {/* One short question line per shape (user 2026-11-11: options alone did not say what to pick) — a question, not an explanation. Checks read data-kind. */}
       <p dir="auto" data-quiz-ask className="text-note font-semibold text-slate-300">
-        {askLine(question, ui)}
+        {askLine(question, ui, grammarAskName(language, locale, bankKey), locale)}
       </p>
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} glossFirst={glossFirst} /> : null}
@@ -1133,12 +1134,16 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
 }
 
 /** 문제 모양마다 물음 한 줄(짧게, 설명 없이). */
-function askLine(question: QuizQuestion, ui: UICopy): string {
+/**
+ * 보기 없는 빈칸이 문법 칸이면 물음에 문법 이름(grammarAsk.ts — 형태를 뺀 이름, 앱 언어 한국어·영어만): "빈칸에 들어갈 관계사는?".
+ * 고르기엔 안 붙인다 — 오답이 다른 문법이면 이름이 곧 답(ja "맞는 의문 조사는?" + よ/か/を/が, 2026-11-14 확인).
+ */
+function askLine(question: QuizQuestion, ui: UICopy, grammar = "", locale = ""): string {
   switch (question.kind) {
     case "choose":
       return ui.quizAskChoose;
     case "type":
-      return question.whole ? ui.quizAskWhole : ui.quizAskBlank;
+      return question.whole ? ui.quizAskWhole : grammar ? askWithName(ui.quizAskBlankOf, grammar, locale) : ui.quizAskBlank;
     case "talk":
     case "multi":
       return ui.quizAskBlank;
