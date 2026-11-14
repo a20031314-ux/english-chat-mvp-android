@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (57)
+## 탭이 확인할 것 (60)
 
 ### 탭 1 메인
 
@@ -83,6 +83,10 @@
 - **a261113-3-7** (2026-11-13 14:56, 탭 3 · c629876) 수업 통화 감독 지시(lessonRules·stillDrilled) 고침 — 서버만, 화면 변화 없음
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 수업 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/account/AccountCard.tsx` · `components/account/ProfileFacts.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/learner/ask/route.ts` · `app/api/points/sync/route.ts` · `app/dev/call-preview/page.tsx` … 74개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261114-2-1** (2026-11-14 20:20, 탭 2 · 91f6b42) 오늘의 학습을 오늘 타임라인으로(Logbank SessionRows·TodaySlot·useLogDays 공유, 오늘의 학습 자리 NotebookSection 맨 위) · 통화 맨 위 모드 이름 ⓘ 설명창(CallParts CallModeInfo, RoleplayScreen) · 수업·가르치기 튜터 첫 마디가 모드를 말함(director.ts lead·callGames.ts) — 통화 화면·첫 마디가 그 탭 흐름과 맞나
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 모드 설명 · 자유대화 · 수업 · 게임 · 가르치기 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `app/dev/call-preview/page.tsx` · `components/account/AccountCard.tsx` · `components/account/ProfileFacts.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/learner/ask/route.ts` · `app/api/points/sync/route.ts` … 48개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -194,6 +198,10 @@
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 수업 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `app/api/chat/route.ts` · `app/api/roleplay/context/route.ts` · `app/api/roleplay/review/route.ts` · `app/api/roleplay/turn/route.ts` · `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx` · `components/ChatWindow.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/callHooks.ts` · `components/CallHost.tsx` … 27개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261114-2-2** (2026-11-14 20:20, 탭 2 · 91f6b42) 오늘의 학습을 오늘 타임라인으로(Logbank SessionRows·TodaySlot·useLogDays 공유, 오늘의 학습 자리 NotebookSection 맨 위) · 통화 맨 위 모드 이름 ⓘ 설명창(CallParts CallModeInfo, RoleplayScreen) · 수업·가르치기 튜터 첫 마디가 모드를 말함(director.ts lead·callGames.ts) — 통화 화면·첫 마디가 그 탭 흐름과 맞나
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 모드 설명 · 자유대화 · 수업 · 게임 · 가르치기 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/RoleplayScreen.tsx` · `components/roleplay/CallParts.tsx` · `components/CallHost.tsx` · `components/RoleplayPast.tsx` · `app/api/roleplay/turn/route.ts` · `app/api/chat/route.ts` · `app/api/roleplay/context/route.ts` · `app/api/roleplay/review/route.ts` · `components/CallList.tsx` · `components/ChatWindow.tsx` … 26개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
 
@@ -248,6 +256,10 @@
 - **a261113-3-9** (2026-11-13 14:56, 탭 3 · c629876) 수업 통화 감독 지시(lessonRules·stillDrilled) 고침 — 서버만, 화면 변화 없음
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 수업 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomParts.tsx` · `components/rooms/RoomPeople.tsx` · `components/rooms/RoomView.tsx` · `components/rooms/RoomsScreen.tsx` · `components/rooms/TeamSpace.tsx` … 25개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261114-2-3** (2026-11-14 20:20, 탭 2 · 91f6b42) 오늘의 학습을 오늘 타임라인으로(Logbank SessionRows·TodaySlot·useLogDays 공유, 오늘의 학습 자리 NotebookSection 맨 위) · 통화 맨 위 모드 이름 ⓘ 설명창(CallParts CallModeInfo, RoleplayScreen) · 수업·가르치기 튜터 첫 마디가 모드를 말함(director.ts lead·callGames.ts) — 통화 화면·첫 마디가 그 탭 흐름과 맞나
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 모드 설명 · 자유대화 · 수업 · 게임 · 가르치기 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomParts.tsx` · `components/rooms/RoomPeople.tsx` · `components/rooms/RoomView.tsx` · `components/rooms/RoomsScreen.tsx` · `components/rooms/TeamSpace.tsx` … 20개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (11, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
