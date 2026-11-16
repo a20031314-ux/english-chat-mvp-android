@@ -5000,6 +5000,26 @@
       "base": "adadace1",
       "head": "2ce818b3",
       "status": "open"
+    },
+    {
+      "id": "a261116-1-1",
+      "at": "2026-11-16 13:11",
+      "kind": "apply",
+      "from": "1",
+      "to": "2",
+      "what": "사용법 넘겨 보기 장면이 14개 앱 언어 모두로(lib/guide/slides.ts·slideTitles.ts). 각 탭 화면이 바뀌면 scripts/guide-slides/로 그 언어 그림을 다시",
+      "files": [
+        "src/components/studyMap/BankHelp.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/StudyMapTab.tsx"
+      ],
+      "features": [
+        "사용법",
+        "칸 설명"
+      ],
+      "base": "2c10b5b",
+      "head": "cec020d",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -5573,9 +5593,24 @@
         "a261116-3-2",
         "a261116-3-3"
       ]
+    },
+    {
+      "at": "2026-11-16 13:11",
+      "from": "1",
+      "base": "2c10b5b",
+      "head": "cec020d",
+      "what": "사용법 넘겨 보기 장면이 14개 앱 언어 모두로(lib/guide/slides.ts·slideTitles.ts). 각 탭 화면이 바뀌면 scripts/guide-slides/로 그 언어 그림을 다시",
+      "tabs": [
+        "1",
+        "2"
+      ],
+      "asks": [
+        "a261116-1-1"
+      ]
     }
   ],
   "seq": {
-    "261116-3": 3
+    "261116-3": 3,
+    "261116-1": 1
   }
 }
