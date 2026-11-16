@@ -36,6 +36,13 @@
 
 ## 새 보고
 
+### 2026-11-16 · 가상 사용자 화면 점검 · 168장 · 새 앱 문제 없음 — `guide` 장면이 그림 깨짐(점검 쪽, 장면 갱신 필요)
+- 무엇을: 지금 main(fdf8014) www, `sim:screens` ja:ko·en:ja·es:ar·en:ko 42장면, 조합별로 모아 직접 봄
+- 결과: 막힘 48 — 모두 11-07과 같은 알려진 것(My 첫 화면이 첫 측정이라 `map-leave`·`selfcheck`·`ledger`·`notes`·`notes-words`·`vocab-search`·`growth`·`map`, `board-likes`·`sentence-ask`·`word-card`·`icons-create`). 프로필 시트 맨 위층 검사 3장면 4조합 ✓(UI 숨겨짐 없음). 글자 잘림·다른 언어 문구·아랍어 방향 깨짐·빈 화면 새로 없음. 새로 본 것: 한국어 앱(ja:ko·en:ko) 사용법 AI 튜터 장 넘겨 보기 그림이 깨진 그림 + 제목 글만 — 점검 서버가 `/api`만 운영으로 넘기고 `/guide/…webp`는 www에 없어서(빌드가 일부러 뺌, 앱은 운영 주소에서 받음 — 운영 `/guide/ko/tab-chat-1.webp` 200 확인). 앱 문제 아님
+- 제안: qa 점검 스크립트 `scripts/sim-users/screens.mjs` 프록시에 `/guide/`(·`/whats-new/`·`/icons/`)도 운영으로 넘기기 — 앱 고칠 것 없음
+- 장면: `ja:ko guide`
+- 결정:
+
 ### 2026-11-16 · 변경 감시 · 숫자 그대로, 리뷰 minor 1(받아쓰기 시험 원본 소리), 광고 새 안 없음
 - 무엇을: 265bc12..873638b(커밋 5개, 코드 20파일 +141/−361) — 목소리 대비 gpt-4o-mini-tts 지움, 사용법 장면 문구를 그림 안으로
 - 결과: 비용표 546·손익 185·광고 93칸·퀴즈 원인 2개 모두 그대로(알릴 것 0). 리뷰 major 0 · minor 1(scripts/stt-trial.mjs:113 — 원본 소리를 Realtime으로 만들어 고쳐 읽거나 답하면 받아쓰기 오류율로 잘못 잡힘). 광고 안 6개 모두 지난번 그대로(새 UI GuideSheet는 그림 한 장이라 자리 없음), 지금 +486,562원 → 넣으면 +522,764원/1,000명·월(무료 한 사람 +449 → +486원)
