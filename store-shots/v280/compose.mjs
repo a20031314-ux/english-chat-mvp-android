@@ -19,8 +19,10 @@ const TEXT = {
   ko: {
     overview: ["언어 공부의 모든 것"],
     overviewPills: ["Quizbank", "AI 튜터", "Logbank"],
-    quiz: ["퀴즈로 매일 배우세요"],
-    level: ["맞힐수록 어려워져요"],
+    quiz: ["다양한 유형의 퀴즈로<br>매일 학습"],
+    typed: "What can I do for you?",
+    quizKinds: ["고르기", "뜻", "틀린 곳", "쓰기"],
+    log: ["배운 것이 쌓여요"],
     call: ["튜터와 통화하세요"],
     lesson: ["수업도 통화로"],
     chat: ["채팅하면 바로 고쳐 줘요"],
@@ -38,18 +40,23 @@ const size = (name) => {
 const uri = (name) => `data:image/png;base64,${(CLEAN[name] ?? fs.readFileSync(path.join(raw, `${name}.png`))).toString("base64")}`;
 const CLEAN = {};
 /** 조각 하나만 크게: 원본 px [x0, y0, x1, y1]만 잘라 폭 w로. 화면의 곁가지(시간 줄·버튼 줄)는 자르는 자리로 뺀다. */
-const piece = (name, box, w = 960) => {
+const piece = (name, box, w = 960, over = "") => {
   const s = size(name);
   const [x0, y0, x1, y1] = box ?? [0, 0, s.w, s.h];
   const k = w / (x1 - x0);
-  return `<div class="card" style="width:${w}px;height:${Math.round((y1 - y0) * k)}px"><img src="${uri(name)}" style="width:${Math.round(s.w * k)}px;transform:translate(${-x0 * k}px,${-y0 * k}px)"></div>`;
+  return `<div class="card" style="width:${w}px;height:${Math.round((y1 - y0) * k)}px"><img src="${uri(name)}" style="width:${Math.round(s.w * k)}px;transform:translate(${-x0 * k}px,${-y0 * k}px)">${over}</div>`;
 };
 const pills = (names) => `<div class="pills">${names.map((n, i) => `${i ? '<span class="to">→</span>' : ""}<span class="pill p${i}">${n}</span>`).join("")}</div>`;
 
 const shots = () => [
   ["01-overview", T.overview, `<div class="col">${piece("call-talk", [120, 140, 660, 500], 700)}${pills(T.overviewPills)}</div>`],
-  ["02-quiz", T.quiz, piece("keep-core")],
-  ["03-level", T.level, piece("type-spot")],
+  ["02-quiz", T.quiz, `<div class="grid">${[
+    ["keep-after", [0, 0, 772, 600]],
+    ["type-meaning", [0, 0, 772, 540]],
+    ["type-spots", [0, 0, 772, 600]],
+    ["type-type", [0, 0, 772, 235]],
+  ].map(([name, box], i) => `<div><div class="tag">${T.quizKinds[i]}</div>${piece(name, box, 470, i === 3 ? `<span class="typed">${T.typed}</span>` : "")}</div>`).join("")}</div>`],
+  ["03-log", T.log, piece("log-core")],
   ["04-call", T.call, `<div class="col">${piece("call-talk", [0, 140, 780, 640])}${piece("call-fix-card")}</div>`],
   ["05-lesson", T.lesson, piece("call-lesson", [0, 100, 780, 520])],
   ["06-chat", T.chat, piece("tab-chat-2", [50, 0, 700, 473])],
@@ -62,16 +69,20 @@ const page = ([, [title, sub], body]) => `<!doctype html><html><head><meta chars
 body{width:1080px;height:1920px;overflow:hidden;display:flex;flex-direction:column;padding:230px 0 120px;font-family:${FONT};color:#fff;
   background:radial-gradient(120% 70% at 50% 0%,#1d3b6e 0%,#0b1220 55%,#05070d 100%)}
 header{padding:0 70px;text-align:center}
-h1{font-size:76px;font-weight:800;letter-spacing:-1.5px;line-height:1.15}
+h1{font-size:76px;font-weight:800;letter-spacing:-1.5px;line-height:1.2;word-break:keep-all}
 .sub{margin-top:22px;font-size:40px;font-weight:500;color:#b9c7e6}
 main{flex:1;display:flex;align-items:center;justify-content:center}
 .col{display:flex;flex-direction:column;align-items:center;gap:36px}
+.grid{display:grid;grid-template-columns:470px 470px;gap:44px 24px;align-items:start}
+.tag{display:inline-block;margin:0 0 12px 14px;padding:8px 22px;border-radius:999px;background:#16a34a;font-size:30px;font-weight:700}
 .pills{display:flex;align-items:center;gap:18px;margin-top:30px}
 .pill{padding:18px 34px;border-radius:999px;font-size:40px;font-weight:700}
 .p0{background:#16a34a}.p1{background:#3b82f6}.p2{background:#0ea5e9}
 .to{font-size:40px;color:#7fa7ff}
 .card{overflow:hidden;border-radius:34px;background:#000;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 2px rgba(255,255,255,.08)}
+.card{position:relative}
 .card img{display:block}
+.typed{position:absolute;left:30px;top:101px;font-size:21px;color:#fff}
 .piece{position:relative}
 .tag{display:inline-block;margin:0 0 12px 18px;padding:8px 22px;border-radius:999px;background:#3b82f6;font-size:30px;font-weight:700}
 .arrow{font-size:46px;line-height:1;color:#7fa7ff;margin:-18px 0}
