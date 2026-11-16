@@ -1,6 +1,7 @@
-// 2.80 스토어 8장(1080×1920): 사용법 장면용으로 찍은 실제 화면 조각(tmp/guide-slides/raw/<앱 언어>,
-// scripts/guide-slides/shoot*.mjs·crop-tabs.mjs)을 이어 붙이고 위에 제목 한 줄 + 부제 한 줄.
+// 2.80 스토어 8장(1080×1920) — 장마다 핵심 화면 조각 하나만 크게(사용자 2026-11-16 "최대한 단순화"). 사용법 장면용으로 찍은 실제 화면 조각(tmp/guide-slides/raw/<앱 언어>,
+// scripts/guide-slides/shoot*.mjs·crop-tabs.mjs)을 잘라 크게, 위에 제목 한 줄 + 부제 한 줄.
 // 메시지 순서는 hub/work/drafts/marketing-layers-2026-11-01.md(틀 > 양 > 적용 · 연결 · 약점), 영상 학습은 뺌.
+// 수업 장은 얼굴 위에 겹친 시간 줄(회색 글자)을 지운 그림을 쓴다 — cleanTimer().
 // Run(저장소 맨 위): node store-shots/v280/compose.mjs [ko] → store-shots/out/v280/<앱 언어>/01-…08-.png
 import fs from "node:fs";
 import path from "node:path";
@@ -16,14 +17,13 @@ const out = path.join(root, "store-shots", "out", "v280", locale);
 
 const TEXT = {
   ko: {
-    overview: ["언어 공부의 모든 것", "퀴즈로 채우고, 튜터와 말하고, 기록이 쌓여요"],
-    overviewTags: ["Quizbank", "AI 튜터 통화", "Logbank"],
-    quiz: ["퀴즈로 매일 배우세요", "맞힐수록 한 단계씩 어려워져요"],
-    quizTags: ["고르기", "틀린 곳", "쓰기"],
-    weak: ["부족한 곳은 다시 채워져요", "틀린 것만 다시 나와요"],
-    call: ["튜터와 편하게 통화하세요", "고친 말은 카드로 보여요"],
-    modes: ["수업하고, 놀고, 가르쳐 보세요", "수업 · 스무고개 · 가르치기"],
-    chat: ["튜터와 채팅하세요", "고친 문장을 바로 보세요"],
+    overview: ["언어 공부의 모든 것", "퀴즈 · AI 튜터 · 기록, 한 앱에"],
+    overviewPills: ["Quizbank", "AI 튜터", "Logbank"],
+    quiz: ["퀴즈로 매일 배우세요", "부족한 곳은 다시 나와요"],
+    level: ["맞힐수록 어려워져요", "고르기 → 틀린 곳 → 쓰기"],
+    call: ["튜터와 통화하세요", "고친 말은 카드로 보여요"],
+    lesson: ["수업도 통화로", "칠판의 문장으로 말해 봐요"],
+    chat: ["채팅하면 바로 고쳐 줘요", "더 자연스러운 말까지"],
     lang: ["배울 말이 모두 여기에", "뜻과 예문을 한눈에"],
     people: ["다른 사람과 교류하세요", "같은 언어를 배우는 사람들과"],
   },
@@ -35,37 +35,41 @@ const size = (name) => {
   const head = fs.readFileSync(path.join(raw, `${name}.png`)).subarray(16, 24);
   return { w: head.readUInt32BE(0), h: head.readUInt32BE(4) };
 };
-const uri = (name) => `data:image/png;base64,${fs.readFileSync(path.join(raw, `${name}.png`)).toString("base64")}`;
-/** 조각: 폭 w로 줄이고, 위에서 y(줄인 뒤 px)부터 높이 h만. h 없으면 끝까지. */
-const piece = (name, w, h, y = 0, tag = "") => {
+const uri = (name) => `data:image/png;base64,${(CLEAN[name] ?? fs.readFileSync(path.join(raw, `${name}.png`))).toString("base64")}`;
+const CLEAN = {};
+/** 조각 하나만 크게: 원본 px [x0, y0, x1, y1]만 잘라 폭 w로. 화면의 곁가지(시간 줄·버튼 줄)는 자르는 자리로 뺀다. */
+const piece = (name, box, w = 960) => {
   const s = size(name);
-  const full = Math.round((s.h * w) / s.w);
-  const show = Math.min(h ?? full, full - y);
-  return `<div class="piece">${tag ? `<div class="tag">${tag}</div>` : ""}<div class="card" style="width:${w}px;height:${show}px"><img src="${uri(name)}" style="width:${w}px;transform:translateY(${-y}px)"></div></div>`;
+  const [x0, y0, x1, y1] = box ?? [0, 0, s.w, s.h];
+  const k = w / (x1 - x0);
+  return `<div class="card" style="width:${w}px;height:${Math.round((y1 - y0) * k)}px"><img src="${uri(name)}" style="width:${Math.round(s.w * k)}px;transform:translate(${-x0 * k}px,${-y0 * k}px)"></div>`;
 };
-const arrow = `<div class="arrow">↓</div>`;
+const pills = (names) => `<div class="pills">${names.map((n, i) => `${i ? '<span class="to">→</span>' : ""}<span class="pill p${i}">${n}</span>`).join("")}</div>`;
 
-const SHOTS = [
-  ["01-overview", T.overview, `<div class="col">${piece("keep-core", 860, 300, 0, T.overviewTags[0])}${arrow}${piece("call-talk", 860, 330, 100, T.overviewTags[1])}${arrow}${piece("log-core", 860, 330, 0, T.overviewTags[2])}</div>`],
-  ["02-quiz", T.quiz, `<div class="col">${piece("keep-core", 880, 520, 0, T.quizTags[0])}${arrow}${piece("type-spot", 880, null, 0, T.quizTags[1])}${arrow}${piece("type-type", 880, null, 0, T.quizTags[2])}</div>`],
-  ["03-weak", T.weak, `<div class="col">${piece("keep-after", 940)}${piece("log-session", 940, 560)}</div>`],
-  ["04-call", T.call, `<div class="col">${piece("call-talk", 940, 900)}${piece("call-fix-card", 940)}</div>`],
-  ["05-modes", T.modes, `<div class="col">${piece("call-lesson", 940, 900)}<div class="row">${piece("call-twenty", 460, 330)}${piece("call-teach", 460, 330)}</div></div>`],
-  ["06-chat", T.chat, `<div class="col">${piece("tab-chat-1", 940)}${piece("tab-chat-2", 940)}</div>`],
-  ["07-lang", T.lang, `<div class="col">${piece("lang-core", 940, 620)}${piece("lang-word", 940, 680)}</div>`],
-  ["08-people", T.people, `<div class="col">${piece("tab-people-1", 940, null, 40)}${piece("tab-rooms-1", 940, 760)}</div>`],
+const shots = () => [
+  ["01-overview", T.overview, `<div class="col">${piece("call-talk", [120, 140, 660, 500], 700)}${pills(T.overviewPills)}</div>`],
+  ["02-quiz", T.quiz, piece("keep-core")],
+  ["03-level", T.level, piece("type-spot")],
+  ["04-call", T.call, `<div class="col">${piece("call-talk", [0, 140, 780, 640])}${piece("call-fix-card")}</div>`],
+  ["05-lesson", T.lesson, piece("call-lesson", [0, 100, 780, 520])],
+  ["06-chat", T.chat, piece("tab-chat-2", [50, 0, 700, 473])],
+  ["07-lang", T.lang, piece("lang-word", [0, 100, 772, 620])],
+  ["08-people", T.people, piece("tab-people-1", [0, 60, 780, 500])],
 ];
 
 const page = ([, [title, sub], body]) => `<!doctype html><html><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0}
-body{width:1080px;height:1920px;overflow:hidden;font-family:${FONT};color:#fff;
+body{width:1080px;height:1920px;overflow:hidden;display:flex;flex-direction:column;padding:230px 0 120px;font-family:${FONT};color:#fff;
   background:radial-gradient(120% 70% at 50% 0%,#1d3b6e 0%,#0b1220 55%,#05070d 100%)}
-header{padding:120px 70px 0;text-align:center}
+header{padding:0 70px;text-align:center}
 h1{font-size:76px;font-weight:800;letter-spacing:-1.5px;line-height:1.15}
 .sub{margin-top:22px;font-size:40px;font-weight:500;color:#b9c7e6}
-main{position:absolute;left:0;right:0;top:400px;bottom:60px;display:flex;align-items:center;justify-content:center}
-.col{display:flex;flex-direction:column;align-items:center;gap:28px}
-.row{display:flex;gap:20px}
+main{flex:1;display:flex;align-items:center;justify-content:center}
+.col{display:flex;flex-direction:column;align-items:center;gap:36px}
+.pills{display:flex;align-items:center;gap:18px;margin-top:30px}
+.pill{padding:18px 34px;border-radius:999px;font-size:40px;font-weight:700}
+.p0{background:#16a34a}.p1{background:#3b82f6}.p2{background:#0ea5e9}
+.to{font-size:40px;color:#7fa7ff}
 .card{overflow:hidden;border-radius:34px;background:#000;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 2px rgba(255,255,255,.08)}
 .card img{display:block}
 .piece{position:relative}
@@ -73,10 +77,39 @@ main{position:absolute;left:0;right:0;top:400px;bottom:60px;display:flex;align-i
 .arrow{font-size:46px;line-height:1;color:#7fa7ff;margin:-18px 0}
 </style></head><body><header><h1 dir="auto">${title}</h1><div class="sub" dir="auto">${sub}</div></header><main>${body}</main></body></html>`;
 
-fs.mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
+/** 통화 화면 맨 위 시간 줄(원본 y 88~138의 무채색 글자)을 검게 — 얼굴 테두리 색은 남는다. */
+async function cleanTimer(name) {
+  const tab = await browser.newPage();
+  const data = await tab.evaluate(async (src) => {
+    const img = new Image();
+    img.src = src;
+    await img.decode();
+    const c = document.createElement("canvas");
+    c.width = img.width;
+    c.height = img.height;
+    const g = c.getContext("2d");
+    g.drawImage(img, 0, 0);
+    const d = g.getImageData(0, 88, c.width, 50);
+    // 얼굴 동그라미(가운데, 원본 반지름 약 106 — 테두리 고리 안쪽) 안은 건드리지 않는다.
+    const cx = c.width / 2, cy = 232, rr = 106 * 106;
+    for (let i = 0; i < d.data.length; i += 4) {
+      const x = (i / 4) % c.width, y = 88 + Math.floor(i / 4 / c.width);
+      if ((x - cx) ** 2 + (y - cy) ** 2 < rr) continue;
+      const [r, gg, b] = [d.data[i], d.data[i + 1], d.data[i + 2]];
+      const hi = Math.max(r, gg, b);
+      if (hi > 12 && hi - Math.min(r, gg, b) < 60) d.data[i] = d.data[i + 1] = d.data[i + 2] = 5;
+    }
+    g.putImageData(d, 0, 88);
+    return c.toDataURL("image/png").split(",")[1];
+  }, `data:image/png;base64,${fs.readFileSync(path.join(raw, `${name}.png`)).toString("base64")}`);
+  CLEAN[name] = Buffer.from(data, "base64");
+  await tab.close();
+}
+await cleanTimer("call-lesson");
+fs.mkdirSync(out, { recursive: true });
 const tab = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
-for (const shot of SHOTS) {
+for (const shot of shots()) {
   await tab.setContent(page(shot));
   await tab.evaluate(() => document.fonts.ready);
   await tab.screenshot({ path: path.join(out, `${shot[0]}.png`) });
