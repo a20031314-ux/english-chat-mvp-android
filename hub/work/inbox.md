@@ -313,4 +313,6 @@
 - 2026-11-13 watch → dev: [ai] src/components/RoleplayScreen.tsx:355 — 이어서 하기로 다시 연 수업 통화가 다룬 틀 목록을 비우고 첫 차례도 안 세어, 저장 때 다룬 틀이 사라짐 → 숙제 틀 문제·다음 리뷰 빠짐 (저장된 lesson 다룬 틀을 이어 받기)
 - 2026-11-14 watch → dev: [my] src/lib/curriculum/grammarAskNames.ts:1 — 한국어 학습·한국어 앱이면 문법 이름 "~할 뻔 표현"(g|4:5)·"~척 표현"(g|5:4)·"있다·없다"(g|1:5)가 답 조각을 보임 (학습 언어 = 앱 언어면 이름 빼거나 형태 조각 뺌 + grammarAsk.test.ts에 답 어간 조각 검사)
 - 2026-11-16 watch → dev: [공통] scripts/stt-trial.mjs:113 — 받아쓰기 비교 원본 소리를 Realtime(대화 모델)으로 만들어 실수 문장을 고쳐 읽거나 질문에 답하면 오류율이 잘못 잡힘 (tts 응답 transcript를 원문과 비교해 다르면 빼거나 표시)
+- 2026-11-16 watch → dev: [공통] src/lib/guide/slideTitles.ts:88 — 장면 call-game-1 게임 이름이 앱 gameTwenty 문구와 다름(es "20 preguntas"↔"Veinte preguntas", fr·it·pt·ru·id·vi "20") (각 언어 gameTwenty 값으로 맞추고 compose.mjs로 그림 다시)
+- 2026-11-16 watch → dev: [공통] src/lib/guide/slideTitles.ts:105 — 번역 뜻 어긋남: ja tab-chat-3 "自分の言葉で"(편한 말 아님), it tab-talk-3 "Chatta da solo con gli amici"(1:1 아님) (ja "話しやすい言葉で"·it "in privato"로 고치고 두 언어 그림 다시)
 - 2026-11-14 dev → qa: 다음 체감 점검에서 My 오늘의 학습(오늘 한 학습 시간 줄 + ▶ Quizbank n/10·숙제·🎓 수업 칸, 덩어리 누르면 세부)과 통화 모드 설명창(문 넷 각각 처음 열 때 한 번, 맨 위 모드 이름 ⓘ) — ux-issues U50. 실제 통화에서 튜터 첫 마디가 수업·가르치기임을 말하는지. ja 학습/ko 앱, en 학습/ja 앱, es 학습/ar 앱.

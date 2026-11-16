@@ -36,6 +36,12 @@
 
 ## 새 보고
 
+### 2026-11-16 · 변경 감시 · 숫자 그대로, 리뷰 minor 2(사용법 장면 문구 게임 이름·번역 둘), 광고 새 안 없음
+- 무엇을: 873638b..0832322, 커밋 4개(코드 1개 cec020d 사용법 넘겨 보기 14개 언어), 줄 공통·ai, diff 758줄
+- 결과: 비용표·손익·광고 지도·퀴즈 원인 모두 그대로(알림 0). 리뷰 major 0·minor 2 — ① `slideTitles.ts:88` call-game-1 게임 이름이 앱 `gameTwenty`와 다름(es "20 preguntas" vs "Veinte preguntas", fr·it·pt·ru·id·vi도 "20") ② `slideTitles.ts:105` 번역 뜻 어긋남 둘(ja tab-chat-3 "自分の言葉で", it tab-talk-3 "da solo"). 광고·화면 점검은 이번 범위에 해당 없음
+- 제안: dev(탭 1)가 문구 고치고 그 언어 장면 그림 다시(서버·웹 바로 반영, 앱 빌드 불필요) — inbox 2줄
+- 결정:
+
 ### 2026-11-16 · 가상 사용자 화면 점검 · 168장 · 새 앱 문제 없음 — `guide` 장면이 그림 깨짐(점검 쪽, 장면 갱신 필요)
 - 무엇을: 지금 main(fdf8014) www, `sim:screens` ja:ko·en:ja·es:ar·en:ko 42장면, 조합별로 모아 직접 봄
 - 결과: 막힘 48 — 모두 11-07과 같은 알려진 것(My 첫 화면이 첫 측정이라 `map-leave`·`selfcheck`·`ledger`·`notes`·`notes-words`·`vocab-search`·`growth`·`map`, `board-likes`·`sentence-ask`·`word-card`·`icons-create`). 프로필 시트 맨 위층 검사 3장면 4조합 ✓(UI 숨겨짐 없음). 글자 잘림·다른 언어 문구·아랍어 방향 깨짐·빈 화면 새로 없음. 새로 본 것: 한국어 앱(ja:ko·en:ko) 사용법 AI 튜터 장 넘겨 보기 그림이 깨진 그림 + 제목 글만 — 점검 서버가 `/api`만 운영으로 넘기고 `/guide/…webp`는 www에 없어서(빌드가 일부러 뺌, 앱은 운영 주소에서 받음 — 운영 `/guide/ko/tab-chat-1.webp` 200 확인). 앱 문제 아님
