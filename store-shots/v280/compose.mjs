@@ -17,15 +17,13 @@ const out = path.join(root, "store-shots", "out", "v280", locale);
 
 const TEXT = {
   ko: {
-    steps: ["배우기", "써 보기", "기록"],
-    overview: ["언어 공부의 모든 것"],
+    call: ["AI 튜터와 학습하세요"],
     quiz: ["다양한 유형의 퀴즈로<br>매일 학습"],
     typed: "What can I do for you?",
     quizKinds: ["고르기", "뜻", "틀린 곳", "쓰기"],
     lang: ["배울 말이 모두 여기에"],
-    lesson: ["수업도 통화로"],
-    call: ["튜터와 통화하세요"],
-    chat: ["채팅하면 바로 고쳐 줘요"],
+    lesson: ["AI 튜터와 수업하세요"],
+    chat: ["AI 튜터와 채팅하세요"],
     people: ["다른 사람과 교류하세요"],
     log: ["배운 것이 쌓여요"],
   },
@@ -49,24 +47,25 @@ const piece = (name, box, w = 960, over = "") => {
 const arrow = `<div class="arrow">↓</div>`;
 const pills = (names) => `<div class="pills">${names.map((n, i) => `${i ? '<span class="to">→</span>' : ""}<span class="pill p${i}">${n}</span>`).join("")}</div>`;
 
-// 학습 흐름: 장마다 맨 위 배우기 · 써 보기 · 기록 중 지금 칸만 밝게(step), 장 순서도 그 흐름대로. 조각 안도 한 흐름만(쓴 말 → 고친 말 등).
+// 장 순서 = 학습 흐름(통화 → 퀴즈·사전·수업 → 채팅·사람 → 기록). 흐름 표시 줄은 두지 않는다(사용자 2026-11-16).
+// 1장 = 통화 장면 한 화면: 위 튜터(call-talk) + 아래 내 얼굴·고친 말 카드(call-fix, /dev/call-preview)를 폰 한 장처럼 붙임.
+const callScene = () => `<div class="phone">${piece("call-talk", [0, 0, 780, 700], 700)}${piece("call-fix", [0, 380, 732, 946], 700)}</div>`;
 const shots = () => [
-  ["01-overview", T.overview, `<div class="col">${piece("call-talk", [120, 140, 660, 500], 640)}${pills(T.steps)}</div>`, -1],
+  ["01-call", T.call, callScene()],
   ["02-quiz", T.quiz, `<div class="grid">${[
     ["keep-after", [0, 0, 772, 600]],
     ["type-meaning", [0, 0, 772, 540]],
     ["type-spots", [0, 0, 772, 600]],
     ["type-type", [0, 0, 772, 235]],
-  ].map(([name, box], i) => `<div><div class="tag">${T.quizKinds[i]}</div>${piece(name, box, 470, i === 3 ? `<span class="typed">${T.typed}</span>` : "")}</div>`).join("")}</div>`, 0],
-  ["03-lang", T.lang, piece("lang-word", [0, 110, 772, 350]), 0],
-  ["04-lesson", T.lesson, piece("call-lesson", [0, 100, 780, 520]), 0],
-  ["05-call", T.call, `<div class="col">${piece("call-talk", [120, 140, 660, 500], 640)}${arrow}${piece("call-fix-card")}</div>`, 1],
-  ["06-chat", T.chat, piece("tab-chat-2", [50, 0, 700, 240]), 1],
-  ["07-people", T.people, piece("tab-people-1", [0, 60, 780, 330]), 1],
-  ["08-log", T.log, piece("log-core", [0, 0, 772, 420]), 2],
+  ].map(([name, box], i) => `<div><div class="tag">${T.quizKinds[i]}</div>${piece(name, box, 470, i === 3 ? `<span class="typed">${T.typed}</span>` : "")}</div>`).join("")}</div>`],
+  ["03-lang", T.lang, piece("lang-word", [0, 110, 772, 350])],
+  ["04-lesson", T.lesson, piece("call-lesson", [0, 100, 780, 520])],
+  ["05-chat", T.chat, piece("tab-chat-2", [50, 0, 700, 240])],
+  ["06-people", T.people, piece("tab-people-1", [0, 60, 780, 330])],
+  ["07-log", T.log, piece("log-core", [0, 0, 772, 420])],
 ];
 
-const page = ([, [title, sub], body, step]) => `<!doctype html><html><head><meta charset="utf-8"><style>
+const page = ([, [title, sub], body]) => `<!doctype html><html><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0}
 body{width:1080px;height:1920px;overflow:hidden;display:flex;flex-direction:column;padding:230px 0 120px;font-family:${FONT};color:#fff;
   background:radial-gradient(120% 70% at 50% 0%,#1d3b6e 0%,#0b1220 55%,#05070d 100%)}
@@ -77,10 +76,9 @@ main{flex:1;display:flex;align-items:center;justify-content:center}
 .col{display:flex;flex-direction:column;align-items:center;gap:36px}
 .grid{display:grid;grid-template-columns:470px 470px;gap:44px 24px;align-items:start}
 .tag{display:inline-block;margin:0 0 12px 14px;padding:8px 22px;border-radius:999px;background:#16a34a;font-size:30px;font-weight:700}
-.steps{display:flex;justify-content:center;align-items:center;gap:14px;margin-bottom:34px;font-size:32px;font-weight:700;color:#4b5b7a}
-.steps .on{color:#fff;background:#16a34a;padding:8px 26px;border-radius:999px}
-.steps .dot{color:#4b5b7a}
 .arrow{font-size:52px;line-height:1;color:#7fa7ff}
+.phone{display:flex;flex-direction:column;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 3px rgba(255,255,255,.12)}
+.phone .card{border-radius:0;box-shadow:none}
 .pills{display:flex;align-items:center;gap:18px;margin-top:30px}
 .pill{padding:18px 34px;border-radius:999px;font-size:40px;font-weight:700}
 .p0{background:#16a34a}.p1{background:#3b82f6}.p2{background:#0ea5e9}
@@ -92,7 +90,7 @@ main{flex:1;display:flex;align-items:center;justify-content:center}
 .piece{position:relative}
 .tag{display:inline-block;margin:0 0 12px 18px;padding:8px 22px;border-radius:999px;background:#3b82f6;font-size:30px;font-weight:700}
 .arrow{font-size:46px;line-height:1;color:#7fa7ff;margin:-18px 0}
-</style></head><body><header>${step >= 0 ? `<div class="steps">${T.steps.map((n, i) => `<span class="${i === step ? "on" : ""}">${n}</span>`).join('<span class="dot">›</span>')}</div>` : ""}<h1 dir="auto">${title}</h1>${sub ? `<div class="sub" dir="auto">${sub}</div>` : ""}</header><main>${body}</main></body></html>`;
+</style></head><body><header><h1 dir="auto">${title}</h1>${sub ? `<div class="sub" dir="auto">${sub}</div>` : ""}</header><main>${body}</main></body></html>`;
 
 const browser = await chromium.launch();
 /** 통화 화면 맨 위 시간 줄(원본 y 88~138의 무채색 글자)을 검게 — 얼굴 테두리 색은 남는다. */
@@ -124,6 +122,7 @@ async function cleanTimer(name) {
   await tab.close();
 }
 await cleanTimer("call-lesson");
+await cleanTimer("call-talk");
 fs.mkdirSync(out, { recursive: true });
 const tab = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
 for (const shot of shots()) {
