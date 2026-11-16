@@ -1,4 +1,4 @@
-// 사용법 넘겨 보기 장면 한 장씩 만들기: 잘라 찍은 그림(shoot.mjs → tmp/guide-slides/raw) + 기능 이름·설명(src/lib/guide/slides.ts)
+// 사용법 넘겨 보기 장면 한 장씩 만들기: 잘라 찍은 그림(shoot*.mjs·crop-tabs.mjs → tmp/guide-slides/raw) + 문구 한 줄(src/lib/guide/slides.ts title)
 // → public/guide/<앱 언어>/<shot>.webp. 저장소 맨 위에서 node --experimental-strip-types scripts/guide-slides/compose.mjs [ko]
 // 장면마다 어느 그림을 어떻게 놓을지는 아래 LAYOUT(shot 이름 → 그림). 글은 slides.ts 하나에서만 고친다.
 import fs from "node:fs";
@@ -47,14 +47,19 @@ const LAYOUT = {
   "call-past-2": { shots: ["call-recap"] },
 };
 
+// 문구 한 줄이 스크린샷 안에(사용자 2026-11-16 "설명 아래 스크린샷이 아니라 스크린샷 안에 문구 — 상세 설명은 빼고"):
+// 그림은 아래에 붙고, 위쪽은 어둡게 이어지며 그 위에 큰 흰 글씨 한 줄.
 const css = `*{box-sizing:border-box;margin:0}body{background:#000;font-family:'Noto Sans CJK KR','Noto Sans KR',sans-serif}
-.s{width:390px;height:700px;background:#0d0d0d;border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:14px;overflow:hidden}
-.cap{background:#FFD60A;color:#111;border-radius:16px;padding:12px 16px}.cap b{display:block;font-size:20px;font-weight:800;margin-bottom:4px}.cap span{font-size:15px;line-height:1.45;font-weight:500}
-.shots{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px;justify-content:center;align-items:center}
-.shots img{max-width:100%;min-height:0;object-fit:contain;border-radius:14px;border:1px solid #2c2c2c}
-.st{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px;justify-content:center}.ar{text-align:center;color:#FFD60A;font-weight:800;font-size:14px;margin:-2px 0}
-.sc{position:relative;overflow:hidden;border-radius:12px;border:1px solid #2c2c2c;flex:none}.sc img{width:100%;display:block}
-.sc em{position:absolute;right:6px;top:6px;font-style:normal;font-size:12px;font-weight:800;background:#FFD60A;color:#111;border-radius:999px;padding:2px 8px}`;
+.s{position:relative;width:390px;height:700px;background:#0b0b0b;border-radius:22px;overflow:hidden}
+.body{position:absolute;left:0;right:0;bottom:0;max-height:560px;display:flex;flex-direction:column;justify-content:flex-end}
+.one{width:100%;display:block}
+.many{padding:0 14px 16px;display:flex;flex-direction:column;gap:8px;align-items:center}
+.many img{max-width:100%;min-height:0;object-fit:contain;border-radius:14px;border:1px solid #2c2c2c}
+.ar{text-align:center;color:#FFD60A;font-weight:800;font-size:14px;margin:-2px 0}
+.sc{position:relative;overflow:hidden;border-radius:12px;border:1px solid #2c2c2c;flex:none;width:100%}.sc img{width:100%;display:block}
+.sc em{position:absolute;right:6px;top:6px;font-style:normal;font-size:12px;font-weight:800;background:#FFD60A;color:#111;border-radius:999px;padding:2px 8px}
+.fade{position:absolute;left:0;right:0;top:0;height:280px;background:linear-gradient(#0b0b0b 0%,#0b0b0b 50%,rgba(11,11,11,0) 100%)}
+.t{position:absolute;left:26px;right:26px;top:48px;color:#fff;font-size:30px;line-height:1.28;font-weight:800;letter-spacing:-.5px}`;
 
 const chapters = guideSlides(locale);
 if (!chapters) throw new Error(`slides.ts에 ${locale} 장면이 없음`);
@@ -65,11 +70,14 @@ for (const groups of Object.values(chapters)) {
     for (const slide of group.slides) {
       const lay = LAYOUT[slide.shot];
       if (!lay) throw new Error(`LAYOUT에 ${slide.shot} 없음`);
+      const k = (px) => Math.round((px * 362) / (lay.base ?? 386));
       const body = lay.flow
-        ? `<div class="st">${lay.flow.map(([n, label, off, h], i) => `${i ? `<div class="ar">${lay.arrow}</div>` : ""}<div class="sc" style="height:${Math.round((h * 358) / (lay.base ?? 386))}px"><img src="${img(n)}" style="margin-top:-${Math.round((off * 358) / (lay.base ?? 386))}px"><em>${label}</em></div>`).join("")}</div>`
-        : `<div class="shots">${lay.shots.map((n) => `<img src="${img(n)}" style="max-height:${Math.floor(520 / lay.shots.length)}px">`).join("")}</div>`;
-      await page.setContent(`<style>${css}</style><div class="s"><div class="cap"><b></b><span></span></div>${body}</div>`);
-      await page.evaluate(([t, d]) => { document.querySelector(".cap b").textContent = t; document.querySelector(".cap span").textContent = d; }, [slide.title, slide.desc]);
+        ? `<div class="many">${lay.flow.map(([n, label, off, h], i) => `${i ? `<div class="ar">${lay.arrow}</div>` : ""}<div class="sc" style="height:${k(h)}px"><img src="${img(n)}" style="margin-top:-${k(off)}px"><em>${label}</em></div>`).join("")}</div>`
+        : lay.shots.length > 1
+          ? `<div class="many">${lay.shots.map((n) => `<img src="${img(n)}" style="max-height:${Math.floor(500 / lay.shots.length)}px">`).join("")}</div>`
+          : `<img class="one" src="${img(lay.shots[0])}">`;
+      await page.setContent(`<style>${css}</style><div class="s"><div class="body">${body}</div><div class="fade"></div><div class="t"></div></div>`);
+      await page.evaluate((t) => { document.querySelector(".t").textContent = t; }, slide.title);
       await page.waitForTimeout(150);
       const png = path.join(WORK, `${slide.shot}.png`);
       await page.locator(".s").screenshot({ path: png });

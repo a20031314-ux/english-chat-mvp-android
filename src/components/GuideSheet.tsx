@@ -52,7 +52,7 @@ const SCREEN_CHAPTER: Record<string, string> = {
 
 /**
  * 장 안의 넘겨 보기(2026-11-14, lib/guide/slides.ts): 칸 칩 → 첫 장 = 그 칸의 핵심, 옆으로 넘기면 세부.
- * 기능 이름·설명은 그림 안에 있다 — 여기선 칸 이름(화면 문구)만.
+ * 문구는 그림 안에 있다 — 여기선 칸 이름(화면 문구)만.
  */
 function SlideDeck({ groups, ui, locale, section }: { groups: GuideSlideGroup[]; ui: UICopy; locale: string; section?: string }) {
   // 새로워진 점 "자세히"가 예전 칸 id로 열면 그 칸을 대신하는 칸을 고른 채로(slides.ts covers).
@@ -103,7 +103,7 @@ function SlideDeck({ groups, ui, locale, section }: { groups: GuideSlideGroup[];
           // 높이를 미리 잡아 둔다 — 그림이 늦게 와도 "자세히"로 연 장까지 내려간 자리가 밀리지 않게.
           <div key={slide.shot} className="flex h-[70vh] w-full shrink-0 snap-center justify-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={apiUrl(`/guide/${locale}/${slide.shot}.webp`)} alt={`${slide.title} — ${slide.desc}`} loading="lazy" className="h-full w-auto max-w-full rounded-2xl object-contain" />
+            <img src={apiUrl(`/guide/${locale}/${slide.shot}.webp`)} alt={slide.title} loading="lazy" className="h-full w-auto max-w-full rounded-2xl object-contain" />
           </div>
         ))}
       </div>
