@@ -58,11 +58,13 @@ const shots = () => [
     ["type-spots", [0, 0, 772, 600]],
     ["type-type", [0, 0, 772, 235]],
   ].map(([name, box], i) => `<div><div class="tag">${T.quizKinds[i]}</div>${piece(name, box, 470, i === 3 ? `<span class="typed">${T.typed}</span>` : "")}</div>`).join("")}</div>`],
-  ["03-lang", T.lang, piece("lang-word", [0, 110, 772, 350])],
+  // 사전 전체(종류별 개수) → 묶음 → 넘겨 보기 카드
+  ["03-lang", T.lang, `<div class="col">${piece("lang-core", [0, 170, 772, 525], 700)}${arrow}${piece("lang-bundle", [0, 0, 772, 330], 700)}${arrow}${piece("lang-flip", [0, 50, 752, 524], 700)}</div>`],
   ["04-lesson", T.lesson, piece("call-lesson", [0, 100, 780, 520])],
   ["05-chat", T.chat, piece("tab-chat-2", [50, 0, 700, 240])],
   ["06-people", T.people, piece("tab-people-1", [0, 60, 780, 330])],
-  ["07-log", T.log, piece("log-core", [0, 0, 772, 420])],
+  // 학습 곡선 — store-shots/v280/shoot-log.mjs가 지난 14일 치를 넣어 찍은 그림
+  ["07-log", T.log, piece("log-curve")],
 ];
 
 const page = ([, [title, sub], body]) => `<!doctype html><html><head><meta charset="utf-8"><style>
@@ -76,7 +78,7 @@ main{flex:1;display:flex;align-items:center;justify-content:center}
 .col{display:flex;flex-direction:column;align-items:center;gap:36px}
 .grid{display:grid;grid-template-columns:470px 470px;gap:44px 24px;align-items:start}
 .tag{display:inline-block;margin:0 0 12px 14px;padding:8px 22px;border-radius:999px;background:#16a34a;font-size:30px;font-weight:700}
-.arrow{font-size:52px;line-height:1;color:#7fa7ff}
+.arrow{font-size:50px;line-height:1;color:#7fa7ff;margin:-10px 0}
 .phone{display:flex;flex-direction:column;border-radius:44px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 3px rgba(255,255,255,.12)}
 .phone .card{border-radius:0;box-shadow:none}
 .pills{display:flex;align-items:center;gap:18px;margin-top:30px}
@@ -89,7 +91,6 @@ main{flex:1;display:flex;align-items:center;justify-content:center}
 .typed{position:absolute;left:30px;top:101px;font-size:21px;color:#fff}
 .piece{position:relative}
 .tag{display:inline-block;margin:0 0 12px 18px;padding:8px 22px;border-radius:999px;background:#3b82f6;font-size:30px;font-weight:700}
-.arrow{font-size:46px;line-height:1;color:#7fa7ff;margin:-18px 0}
 </style></head><body><header><h1 dir="auto">${title}</h1>${sub ? `<div class="sub" dir="auto">${sub}</div>` : ""}</header><main>${body}</main></body></html>`;
 
 const browser = await chromium.launch();
