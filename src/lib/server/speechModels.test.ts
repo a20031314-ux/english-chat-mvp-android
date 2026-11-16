@@ -3,21 +3,18 @@ import test from "node:test";
 import { NextRequest } from "next/server.js";
 
 delete process.env.OPENAI_TURN_TRANSCRIBE_MODEL;
-delete process.env.TTS_ENGINE;
-const { turnTranscribeModel, ttsEngine, wantsTrialReport, isNextGenTranscribe } = await import("./speechModels.ts");
+const { turnTranscribeModel, wantsTrialReport, isNextGenTranscribe } = await import("./speechModels.ts");
 const { realtimeVoice, readAloudInstructions } = await import("./realtimeSpeech.ts");
 
 const ask = (user: string, extra: Record<string, string> = {}) =>
   new NextRequest("https://example.test/api/tts", { headers: { "x-rc-user": user, ...extra } });
 
 test("점검 사용자만 머리글로 모델을 고른다", () => {
-  const trial = { "x-stt-model": "gpt-transcribe", "x-tts-engine": "speech", "x-speech-trial-report": "1" };
+  const trial = { "x-stt-model": "gpt-transcribe", "x-speech-trial-report": "1" };
   assert.equal(turnTranscribeModel(ask("simcheck-speechx-a", trial)), "gpt-transcribe");
-  assert.equal(ttsEngine(ask("simcheck-speechx-a", trial)), "speech");
   assert.equal(wantsTrialReport(ask("simcheck-speechx-a", trial)), true);
   // 실제 사용자는 같은 머리글을 보내도 기본값
   assert.equal(turnTranscribeModel(ask("real-user-1", trial)), "scribe_v2");
-  assert.equal(ttsEngine(ask("real-user-1", trial)), "realtime");
   assert.equal(wantsTrialReport(ask("real-user-1", trial)), false);
   // 목록 밖 모델 이름은 무시
   assert.equal(turnTranscribeModel(ask("simcheck-speechx-a", { "x-stt-model": "whatever" })), "scribe_v2");
@@ -25,11 +22,8 @@ test("점검 사용자만 머리글로 모델을 고른다", () => {
 
 test("Vercel 값이 기본값을 바꾼다", () => {
   process.env.OPENAI_TURN_TRANSCRIBE_MODEL = "gpt-transcribe";
-  process.env.TTS_ENGINE = "realtime";
   assert.equal(turnTranscribeModel(), "gpt-transcribe");
-  assert.equal(ttsEngine(), "realtime");
   delete process.env.OPENAI_TURN_TRANSCRIBE_MODEL;
-  delete process.env.TTS_ENGINE;
 });
 
 test("새 받아쓰기 모델 구분", () => {

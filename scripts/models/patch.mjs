@@ -4,7 +4,7 @@
 //
 // 환경변수 MODEL_WHATIF(JSON):
 //   { "routes": { "<기능>": "<제공자>: <모델>" },          aiDefaults DEFAULT_ROUTES에 덮어씀(제공자는 openai|anthropic — 단가는 모델 이름으로만 찾음)
-//     "speech": { "turnTranscribe": "…", "ttsEngine": "…" }, aiDefaults SPEECH_DEFAULTS에 덮어씀
+//     "speech": { "turnTranscribe": "…", "voxtralTtsModel": "…" }, aiDefaults SPEECH_DEFAULTS에 덮어씀
 //     "prices": { "text": { "<모델>": { "input": 0.1, "output": 0.5 } }, "stt": { "<모델>": 0.003 }, "tts": { "<모델>": 0.02 } } }
 import { DEFAULT_ROUTES, SPEECH_DEFAULTS } from "../../src/lib/aiDefaults.ts";
 import { STT_USD_PER_MINUTE, TEXT_USD_PER_MTOK, TTS_USD_PER_MINUTE_BY_MODEL } from "../../src/lib/billing/modelPrices.ts";

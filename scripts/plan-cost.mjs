@@ -252,7 +252,7 @@ export function render() {
     "## 계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`)",
     "",
     "기능마다 지금 코드 기본값이 고르는 모델과 그 단가(`src/lib/billing/modelPrices.ts`)로 위 숫자를 냈습니다. 기본 모델을 바꾸는 커밋을 main에 올리면 GitHub Actions(`cost`)가 이 파일을 다시 계산해 커밋합니다 — 손으로 고치지 않습니다.",
-    "Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운영은 그 모델을 쓰지만, 저장소에서는 볼 수 없어 이 표에 반영되지 않습니다.",
+    "Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL` 값을 넣었다면 운영은 그 모델을 쓰지만, 저장소에서는 볼 수 없어 이 표에 반영되지 않습니다.",
     "",
     "| 기능 | 모델 | 입력/출력 (100만 토큰당) | 출처 |",
     "|---|---|---|---|",

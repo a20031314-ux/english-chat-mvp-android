@@ -6,7 +6,7 @@
  * - 성격·말투는 **태도만** 바꾼다: 높임(해요체/반말, tu/vous…)은 늘 학습자를 따르고(languageFocus tutorSpeechRules),
  *   차례 길이·고칠 것·표준어(아랍어 الفصحى, 일본어 표준어 — 교토·부산 사투리 안 씀)는 그대로.
  * - 글로 된 입버릇·예문은 넣지 않는다 — 모델이 매번 그대로 베낀다(RULES "모델에게 주는 지시에 베낄 예문 금지").
- * - 목소리 `voice`는 OpenAI 읽기 지시(gpt-4o-mini-tts instructions·Realtime delivery) — Voxtral은 지시를 못 받아서,
+ * - 목소리 `voice`는 OpenAI 읽기 지시(Realtime delivery) — Voxtral은 지시를 못 받아서,
  *   이 지시로 읽힌 참고 소리(scripts/voice-refs.mjs → voiceRefs.generated.ts)를 흉내 내어 같은 목소리·어조가 된다(원가 그대로).
  * - 실존 인물·특정 캐릭터 흉내·어린이 목소리 없음. 모두 20대 중반~30대 성인.
  * - `ref`는 참고 소리로 읽힐 그 사람다운 한두 문장(학습 언어). 말 내용이 아니라 어조를 담으려고 쓴다 — 화면·지시에는 안 나간다.

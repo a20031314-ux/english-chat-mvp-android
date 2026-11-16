@@ -126,7 +126,7 @@ export type RoleplayScenario = {
    * the line was written in advance. That is what lets the tutor step in
    * without the learner hearing anyone new arrive.
    *
-   * Must be a voice gpt-4o-mini-tts accepts; a test holds that.
+   * Must be one of the scene voices in roleplay/voices.ts; a test holds that.
    */
   voice: string;
   /**
