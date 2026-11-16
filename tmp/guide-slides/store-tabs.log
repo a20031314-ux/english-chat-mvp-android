@@ -1,0 +1,14 @@
+(node:162) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/claude/english-chat-mvp-android/tmp/copycheck/capture-1794662840499.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/claude/english-chat-mvp-android/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ko chat-correct
+ko chat-fix-open
+ko chat-expression
+ko FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('[role=slider]')[22m
+
+    at Object.ask (/home/claude/english-chat-mvp-android/scripts/capture-whats-new.mjs:2461:30)
+    at async chat-ask (/home/claude/english-chat-mvp-android/scripts/capture-whats-new.mjs:2129:5)
+    at async file:///home/claude/english-chat-mvp-android/scripts/capture-whats-new.mjs:2783:7

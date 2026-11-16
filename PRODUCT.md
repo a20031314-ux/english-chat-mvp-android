@@ -4,7 +4,7 @@
 > 기능 하나하나의 이름·코드는 `hub/app/FEATURES.md`(기능 장부), 화면 흐름은 `hub/app/STRUCTURE.md`, 퀴즈 규칙은 `hub/app/QUIZ.md`.
 > 결정 경위·예전 모양은 `hub/chat/log/`, 2026-11-09까지의 긴 판은 `hub/archive/PRODUCT-2026-11-09.md`.
 >
-> 기준: main(2026-11-09). Play에 올라간 앱은 2.79 — 그 앱의 My는 예전 Stagebank 화면이고, 이 문서의 My는 다음 빌드(2.80)부터다. 서버는 main 그대로.
+> 기준: main(2026-11-16). Play에 올라간 앱은 2.79 — 그 앱의 My는 예전 Stagebank 화면이고, 이 문서의 My는 저장소 버전 2.80(versionCode 94) 빌드부터다. 서버는 main 그대로.
 
 ## 한 줄 소개
 
