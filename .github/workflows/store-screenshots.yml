@@ -6,9 +6,9 @@
 # the screenshots comes from store-shots/content/<locale>.json.
 name: "Store: screenshots"
 
+# 2.80부터 Play에 올린 7장은 store-shots/v280/(실제 운영 화면 조각)로 만든다 — 이 작업이 찍는 예전 세트가
+# 버전 태그마다 PR로 덮지 않게 태그 실행을 끔(2026-11-16). 손으로 돌리면 예전 세트로 덮으니 v280 방식으로 바꾸기 전엔 돌리지 않는다.
 on:
-  push:
-    tags: ["v*"]
   workflow_dispatch:
     inputs:
       locale:
