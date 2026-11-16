@@ -1,18 +1,20 @@
 // 사용법 AI 튜터·대화·영상 학습·사람·Room 장 넘겨 보기 재료: capture-whats-new.mjs가 찍은 전체 화면에서 기능 부분만 자른다 → tmp/guide-slides/raw/tab-*.png.
-// 저장소 맨 위에서(한국어 앱 · 영어 학습):
+// 저장소 맨 위에서(앱 언어 하나씩, 학습 언어는 capture-whats-new TARGET_FOR):
 //   npm run build:capacitor
 //   CAPTURE_RUN=<새 값> API_BASE=https://www.languagebank.net node --experimental-strip-types scripts/capture-whats-new.mjs store-tabs --only ko   (chat-correct·chat-fix-open·chat-expression까지만 쓰므로 그 뒤 실패는 상관없음)
-//   같은 식으로 guide-social · guide-more · guide-video --only ko → public/guide/ko에 쓴 그림을 tmp/guide-slides/src-ko/로 옮기고 `git checkout -- public/guide/ko`(옛 앱 사용법 그림은 그대로 둔다)
-//   node scripts/guide-slides/crop-tabs.mjs → node --experimental-strip-types scripts/guide-slides/compose.mjs ko
+//   같은 식으로 guide-social · guide-more · guide-video --only ko → public/guide/<앱 언어>에 쓴 그림을 tmp/guide-slides/src/<앱 언어>/로 옮기고 `git checkout -- public/guide/<앱 언어>`(옛 앱 사용법 그림은 그대로 둔다)
+//   node scripts/guide-slides/crop-tabs.mjs <앱 언어> → node --experimental-strip-types scripts/guide-slides/compose.mjs <앱 언어>
 // 자르는 자리(원본 픽셀 y 위·아래)는 화면이 바뀌면 다시 본다.
 import fs from "node:fs";
 import { execFileSync } from "node:child_process";
 
-const SRC = "tmp/guide-slides/src-ko", RAW = "tmp/guide-slides/raw";
+const LOCALE = process.argv[2] || "ko";
+const SRC = `tmp/guide-slides/src/${LOCALE}`, RAW = `tmp/guide-slides/raw/${LOCALE}`;
 const CROPS = {
-  "tab-chat-1": [`tmp/store-raw/ko/chat-correct.png`, 200, 700],
-  "tab-chat-2": [`tmp/store-raw/ko/chat-fix-open.png`, 200, 700],
-  "tab-chat-3": [`tmp/store-raw/ko/chat-expression.png`, 830, 1260],
+  "tab-chat-1": [`tmp/store-raw/${LOCALE}/chat-correct.png`, 200, 700],
+  "tab-chat-2": [`tmp/store-raw/${LOCALE}/chat-fix-open.png`, 200, 700],
+  // 편한 말 줄 + "이렇게 말해요" — 튜터 답 길이가 언어마다 달라 자리가 다르다.
+  "tab-chat-3": [`tmp/store-raw/${LOCALE}/chat-expression.png`, ...({ ko: [830, 1260], en: [450, 960], id: [860, 1330] }[LOCALE] ?? [740, 1240])],
   "tab-talk-1": [`${SRC}/talk-calls.webp`, 60, 590],
   "tab-talk-2": [`${SRC}/r69-groups.webp`, 0, 560],
   "tab-talk-3": [`${SRC}/talk-dm.webp`, 0, 740],

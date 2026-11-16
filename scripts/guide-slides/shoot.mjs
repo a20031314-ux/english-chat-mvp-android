@@ -1,19 +1,24 @@
 // 사용법 넘겨 보기 장면(lib/guide/slides.ts)의 재료 — 실제 앱에서 기능이 보이는 부분만 잘라 찍는다(겹쳐 그리기 없음).
 // 저장소 맨 위에서: npm run build:capacitor → node scripts/guide-slides/shoot.mjs → node scripts/guide-slides/compose.mjs
-// 지금은 한국어 앱 · 영어 학습(시험 사용자 simcheck-guidemy-…, 끝나면 지움). 다른 앱 언어는 문구(copy)로 고르는 자리를 바꿔야 한다("다음" 버튼·"문장" 물음).
+// LOCALE=<앱 언어>(기본 ko) — 학습 언어는 영어(en 앱이면 스페인어), 버튼 이름은 copy에서. 시험 사용자 simcheck-guidemy-…는 끝나면 지움. 그림은 tmp/guide-slides/raw/<앱 언어>/.
 import fs from "node:fs";
-import { chromium, serve, state, api } from "../ux-check/lib.mjs";
-const PORT = 4575, OUT = "tmp/guide-slides/raw";
-fs.rmSync(OUT, { recursive: true, force: true }); fs.mkdirSync(OUT, { recursive: true });
+import { chromium, serve, state, api, loadCopy } from "../ux-check/lib.mjs";
+const LOCALE = process.env.LOCALE || "ko";
+const LEARN = LOCALE === "en" ? "es" : "en"; // capture-whats-new TARGET_FOR와 같게
+const ui = (await loadCopy())[LOCALE];
+const esc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const NEXT = new RegExp(`^(${esc(ui.quizNext)}|${esc(ui.scriptNext)})( ›)?$`);
+const PORT = Number(process.env.PORT || 4575), OUT = `tmp/guide-slides/raw/${LOCALE}`;
+fs.mkdirSync(OUT, { recursive: true });
 const server = await serve(PORT);
 const browser = await chromium.launch();
 state.uid = `simcheck-guidemy-${Date.now().toString(36)}`;
-await api("/api/learner/self-check", { language: "en", stage: "en-1" });
+await api("/api/learner/self-check", { language: LEARN, stage: `${LEARN}-1` });
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, colorScheme: "dark" });
-await ctx.addInitScript(() => {
-  localStorage.setItem("appTargetLanguage", "en"); localStorage.setItem("appUiLocale", "ko");
+await ctx.addInitScript(([learn, locale]) => {
+  localStorage.setItem("appTargetLanguage", learn); localStorage.setItem("appUiLocale", locale);
   localStorage.setItem("whatsNewSeenVersion", "9.99"); localStorage.setItem("appFeatures", JSON.stringify({ off: [], chosen: true }));
-});
+}, [LEARN, LOCALE]);
 const page = await ctx.newPage();
 const wait = (ms) => page.waitForTimeout(ms);
 const got = [];
@@ -49,7 +54,7 @@ await wait(1500);
 await cut("keep-core", [page.locator("[data-quiz-gauge]").first(), q()]);
 for (let k = 0; k < 2; k++) { await page.locator("[data-quiz-gauge] button").last().click().catch(() => {}); await wait(2500); }
 const kinds = new Set(); let after = false;
-for (let n = 0; n < 30 && (n < 12 || kinds.size < 4); n++) {
+for (let n = 0; n < 45 && (n < 12 || !kinds.has("type") || !kinds.has("spot")); n++) {
   const one = q();
   if (!(await one.count())) { await wait(2000); continue; }
   const kind = await one.getAttribute("data-kind");
@@ -62,15 +67,15 @@ for (let n = 0; n < 30 && (n < 12 || kinds.size < 4); n++) {
     else if (await one.locator("[data-spot-words] button").count()) {
       for (let t = 0; t < 4; t++) {
         const b = one.locator("[data-spot-words] button:not([disabled])");
-        if (!(await b.count()) || (await one.locator("button", { hasText: /^다음$/ }).count())) break;
+        if (!(await b.count()) || (await one.locator("button", { hasText: NEXT }).count())) break;
         await b.nth(t).click({ timeout: 2000 }).catch(() => {}); await wait(800);
       }
-      if (!(await one.locator("button", { hasText: /^다음$/ }).count()) && (await one.locator("[data-quiz-giveup]").count())) await one.locator("[data-quiz-giveup]").first().click({ timeout: 2000 }).catch(() => {});
+      if (!(await one.locator("button", { hasText: NEXT }).count()) && (await one.locator("[data-quiz-giveup]").count())) await one.locator("[data-quiz-giveup]").first().click({ timeout: 2000 }).catch(() => {});
     } else if (await one.locator("[data-quiz-giveup]").count()) await one.locator("[data-quiz-giveup]").first().click({ timeout: 3000 });
-  } catch (e) { console.log("답 실패", kind); }
+  } catch { console.log("답 실패", kind); }
   await wait(3500);
   if (!after && (await one.locator("[data-quiz-again]").count())) { after = true; await top(one, 60); await cut("keep-after", [q()], { maxH: 460 }); }
-  const next = one.locator("button", { hasText: /^다음$/ }).last();
+  const next = one.locator("button", { hasText: NEXT }).last();
   if (await next.count()) await next.click().catch(() => {});
   await wait(1500);
 }
@@ -81,18 +86,21 @@ await page.locator('[data-my-jump-to="log"]').first().click(); await wait(1500);
 await page.locator('[data-my-layer="log"] [data-my-enlarge]').first().click(); await wait(3000);
 for (let i = 0; i < 20 && !(await page.locator("[data-learned-table]").count()); i++) await wait(500);
 await cut("log-core", [page.locator("[data-log-period]").first()], { maxH: 360 });
-await page.locator("[data-day-row]").first().click(); await wait(3000);
+await page.locator("[data-day-row]").first().dispatchEvent("click").catch(() => {}); await wait(3000);
 await cut("log-timeline", [page.locator("[data-timeline]").first()], { maxH: 400 });
 const open = page.locator("[data-timeline-open]").first();
-if (await open.count()) { await open.click(); await wait(2500); await top(page.locator("[data-timeline-session]").first(), 10); await wait(400); await cut("log-session", [page.locator("[data-timeline-session]").first()], { maxH: 420 }); }
+if (await open.count()) { await open.dispatchEvent("click").catch(() => {}); await wait(2500); await top(page.locator("[data-timeline-session]").first(), 10); await wait(400); await cut("log-session", [page.locator("[data-timeline-session]").first()], { maxH: 420 }); }
 
 // Languagebank
 await page.goto(`http://localhost:${PORT}/?screen=map`, { waitUntil: "domcontentloaded" });
 for (let i = 0; i < 40 && !(await page.locator('[data-my-jump-to="lang"]').count()); i++) await wait(500);
 await wait(2500);
-if (await page.locator("[data-my-full-close]").count()) { await page.locator("[data-my-full-close]").first().click().catch(() => {}); await wait(1500); }
-await page.locator('[data-my-jump-to="lang"]').first().click(); await wait(1500);
-await page.locator('[data-my-layer="lang"] [data-my-enlarge]').first().click(); await wait(3000);
+// 다시 연 My에 첫 측정이 뜨면 건너뛴다(이 언어 단계는 이미 정함).
+if (await page.locator("[data-first-skip]").count()) { await page.locator("[data-first-skip]").first().click().catch(() => {}); await wait(2500); }
+for (let i = 0; i < 20 && !(await page.locator('[data-my-jump-to="lang"]').count()); i++) await wait(500);
+for (let k = 0; k < 3 && (await page.locator("[data-my-full-close]").count()); k++) { await page.locator("[data-my-full-close]").first().dispatchEvent("click").catch(() => {}); await wait(1200); }
+await page.locator('[data-my-jump-to="lang"]').first().dispatchEvent("click"); await wait(1500);
+await page.locator('[data-my-layer="lang"] [data-my-enlarge]').first().dispatchEvent("click"); await wait(3000);
 const lk = page.locator("[data-lb-kind]");
 await cut("lang-core", [page.locator("[data-lb-search]").first(), lk.nth(0), lk.nth(2)], { maxH: 640 });
 await lk.nth(0).locator("button").first().click(); await wait(2500);
@@ -107,7 +115,7 @@ await cut("lang-flip-open", [page.locator("[data-bank-flip]").first()], { maxH: 
 await page.keyboard.press("Escape"); await wait(800);
 const x = page.locator("[data-bank-flip] button", { hasText: "✕" }).first();
 if (await x.count()) { await x.click().catch(() => {}); await wait(800); }
-await bundle.locator("button.rounded-lg.border").filter({ hasNotText: /퀴즈|대화/ }).first().click().catch(() => {});
+await bundle.locator("button.rounded-lg.border:not([data-lb-order])").first().dispatchEvent("click").catch(() => {});
 await wait(3500);
 await cut("lang-word", [page.locator("[data-dictionary-entry], [data-dictionary-card]").first()], { maxH: 460 });
 
