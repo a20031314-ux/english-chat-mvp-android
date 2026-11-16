@@ -1,25 +1,29 @@
-languagebank menentukan apa yang dipelajari setiap hari dan membuatmu mengucapkannya dengan suara. Pelajari salah satu dari 14 bahasa, dengan aplikasi dalam salah satu dari 14 bahasa.
+languagebank adalah aplikasi belajar bahasa dengan berbicara dan menulis bersama tutor AI. Pelajari 14 bahasa dengan 14 bahasa aplikasi.
 
-ALUR BELAJAR HARIANMU
-1. Mulai dari tahapmu: baca percakapan singkat dan jawab "Bisa", "Hampir", atau "Belum" untuk mulai di tahap yang pas dari lima tahap. Aksara baru? Mulai dari huruf dan bunyi.
-2. Pelajaran harian: pilih 5, 10, atau 20 menit sehari dan lihat berapa hari selesai. "Sesuai urutan" atau "Sesuai riwayatku" menentukan naskah dan struktur kalimat hari itu.
-3. Ucapkan naskah: ucapkan kalimatmu dalam naskah situasi dengan 🎤 — Ulangi, Huruf pertama, Disembunyikan, atau Dengan kata sendiri. Kalimat sempurna dapat ★; benar tapi kaku diberi cara yang lebih wajar, dan kata yang kurang jelas ditandai. Mengucapkannya dengan cara lain yang benar juga lulus, dan di hari yang sama kamu bisa lanjut dari tempat berhenti.
-4. Ganti dalam struktur kalimat: ucapkan satu struktur berkali-kali dengan mengganti katanya saja.
-5. Ulangi: di akhir naskah tandai tiap ungkapan "Sudah tahu" atau "Masih bingung". Yang membingungkan dan kalimat yang salah kembali sebagai kuis singkat setelah 2 dan 7 hari, dan terkumpul di atas tab Saya, di "Yang salah terakhir kali". Nyalakan "Pengingat pagi" agar muncul di layar kunci.
-6. Latihan berkelanjutan: setelah pelajaran harian, pilih Ulangi, Acak, Kosakata, Tata bahasa, atau Ungkapan lalu ketuk ▶ Lanjut belajar untuk kuis singkat yang mencampur isian, urutan kata, mendengar, dan berbicara.
-7. Yang dipelajari hari ini: struktur kalimat, tata bahasa, dan kata hari itu, masing-masing dengan naskah dan kalimat asalnya.
+Belajar bersama tutor AI
+• Ngobrol: telepon tutor dan bicara dengan bebas. Koreksi muncul sebagai kartu di bawah wajahmu.
+• Pelajaran: tutor menampilkan pola kalimat di papan dan mengajakmu memakainya. Kesalahan besar langsung ditunjukkan supaya kamu mengucapkannya lagi. Di akhir ada PR.
+• Permainan dan Ajari aku: main Dua puluh pertanyaan, atau jelaskan sesuatu kepada tutor yang sedang belajar bahasamu.
+• Chat: kalimat yang dikoreksi langsung terlihat. Kalau buntu, tulis dalam bahasamu sendiri dan tutor melanjutkan dalam bahasa yang kamu pelajari.
 
-PAKAI DALAM PERCAKAPAN
-• Chat dengan tutor AI: ngobrol seperti dengan teman; hanya yang salah dikoreksi. Buntu? Tulis dalam bahasa Indonesia, tutor tetap melanjutkan dalam bahasa yang kamu pelajari, dan "Lihat cara mengatakannya" menunjukkan kalimat yang kamu maksud. Kalau kamu memakai sendiri ungkapan yang sudah kamu tandai, kalimatnya diberi tanda "Dipakai lagi".
-• Panggilan AI: bicara dengan suara. Walau berantakan, tutor menemukan maksudmu, dan setelahnya bisa ditinjau.
-• Analisis kalimat: di kalimat mana pun, pilih bagian yang tidak kamu pahami dan tanyakan artinya.
-• Video: video asli dipecah per kalimat untuk diulang dan ditanyakan.
+Beragam kuis (Quizbank)
+• Pilih, arti, cari kesalahan, dan tulis kalimat dalam satu alur.
+• Makin sering benar, makin sulit, dan yang salah atau yang membuatmu buntu dalam percakapan akan muncul lagi.
+• Kamu bisa membuatnya lebih mudah atau lebih sulit.
 
-BELAJAR BERSAMA ORANG
-• Di Ruang, bicara dengan suara bersama yang belajar bahasa yang sama, dengan teks langsung, lalu lanjutkan di grup dan pesan pribadi.
+Semua kata untuk dipelajari di sini (Languagebank)
+• Lihat kata, ungkapan, dan tata bahasa menurut jenis dan tingkat, lalu pelajari tiap kelompok lewat kuis atau percakapan.
+• Balik kartu untuk menghafal arti, kata, dan contoh kalimat.
 
-TANPA NILAI LEVEL
-• Setiap kalimat ditunjukkan salah dan kurangnya; riwayatmu menentukan langkah berikutnya.
+Hasil belajarmu terus bertambah (Logbank)
+• Kurva belajar menunjukkan, hari demi hari, apa yang kamu pelajari di kuis dan apa yang kamu pakai dalam percakapan.
+• Lihat kembali apa yang kamu lakukan setiap hari, per jam.
 
-HARGA
-• Naskah per tahap gratis (dengan iklan). "Paket naskah" menambah panggilan singkat dan chat; Lite, Plus, dan Premium tanpa iklan dengan lebih banyak chat dan waktu panggilan harian.
+Belajar bersama orang lain
+• Terhubung dengan pembelajar bahasa yang sama lewat profil, papan, dan pesan, lalu ngobrol dengan suara di Ruang.
+
+Memulai
+• Saat pertama dibuka, tes singkat menentukan tingkat awalmu. Tidak ada skor tingkat.
+
+Harga
+• Quizbank, Languagebank, dan pelajaran gratis (dengan iklan). Coba 10 menit panggilan dan 10 pesan chat; Lite, Plus, dan Premium tanpa iklan dan menambah waktu panggilan serta pesan setiap hari.
