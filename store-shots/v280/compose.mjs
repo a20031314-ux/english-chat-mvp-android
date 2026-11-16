@@ -1,5 +1,5 @@
 // 2.80 스토어 8장(1080×1920) — 장마다 핵심 화면 조각 하나만 크게(사용자 2026-11-16 "최대한 단순화"). 사용법 장면용으로 찍은 실제 화면 조각(tmp/guide-slides/raw/<앱 언어>,
-// scripts/guide-slides/shoot*.mjs·crop-tabs.mjs)을 잘라 크게, 위에 제목 한 줄 + 부제 한 줄.
+// scripts/guide-slides/shoot*.mjs·crop-tabs.mjs)을 잘라 크게, 위에 제목 한 줄만(부제·세부 설명 없음, 사용자 2026-11-16).
 // 메시지 순서는 hub/work/drafts/marketing-layers-2026-11-01.md(틀 > 양 > 적용 · 연결 · 약점), 영상 학습은 뺌.
 // 수업 장은 얼굴 위에 겹친 시간 줄(회색 글자)을 지운 그림을 쓴다 — cleanTimer().
 // Run(저장소 맨 위): node store-shots/v280/compose.mjs [ko] → store-shots/out/v280/<앱 언어>/01-…08-.png
@@ -17,15 +17,15 @@ const out = path.join(root, "store-shots", "out", "v280", locale);
 
 const TEXT = {
   ko: {
-    overview: ["언어 공부의 모든 것", "퀴즈 · AI 튜터 · 기록, 한 앱에"],
+    overview: ["언어 공부의 모든 것"],
     overviewPills: ["Quizbank", "AI 튜터", "Logbank"],
-    quiz: ["퀴즈로 매일 배우세요", "부족한 곳은 다시 나와요"],
-    level: ["맞힐수록 어려워져요", "고르기 → 틀린 곳 → 쓰기"],
-    call: ["튜터와 통화하세요", "고친 말은 카드로 보여요"],
-    lesson: ["수업도 통화로", "칠판의 문장으로 말해 봐요"],
-    chat: ["채팅하면 바로 고쳐 줘요", "더 자연스러운 말까지"],
-    lang: ["배울 말이 모두 여기에", "뜻과 예문을 한눈에"],
-    people: ["다른 사람과 교류하세요", "같은 언어를 배우는 사람들과"],
+    quiz: ["퀴즈로 매일 배우세요"],
+    level: ["맞힐수록 어려워져요"],
+    call: ["튜터와 통화하세요"],
+    lesson: ["수업도 통화로"],
+    chat: ["채팅하면 바로 고쳐 줘요"],
+    lang: ["배울 말이 모두 여기에"],
+    people: ["다른 사람과 교류하세요"],
   },
 };
 const T = TEXT[locale];
@@ -75,7 +75,7 @@ main{flex:1;display:flex;align-items:center;justify-content:center}
 .piece{position:relative}
 .tag{display:inline-block;margin:0 0 12px 18px;padding:8px 22px;border-radius:999px;background:#3b82f6;font-size:30px;font-weight:700}
 .arrow{font-size:46px;line-height:1;color:#7fa7ff;margin:-18px 0}
-</style></head><body><header><h1 dir="auto">${title}</h1><div class="sub" dir="auto">${sub}</div></header><main>${body}</main></body></html>`;
+</style></head><body><header><h1 dir="auto">${title}</h1>${sub ? `<div class="sub" dir="auto">${sub}</div>` : ""}</header><main>${body}</main></body></html>`;
 
 const browser = await chromium.launch();
 /** 통화 화면 맨 위 시간 줄(원본 y 88~138의 무채색 글자)을 검게 — 얼굴 테두리 색은 남는다. */
