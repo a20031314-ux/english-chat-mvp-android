@@ -4,11 +4,13 @@
 import fs from "node:fs";
 import { chromium, serve, state, api, loadCopy } from "../ux-check/lib.mjs";
 const LOCALE = process.env.LOCALE || "ko";
-const LEARN = LOCALE === "en" ? "es" : "en"; // capture-whats-new TARGET_FOR와 같게
+// CAPTURE_TARGET=<배우는 언어>: 검색어 맞춤 등록정보용(앱 언어 × 다른 배우는 언어) — 그림은 raw/<앱>-<배우는>/.
+const LEARN = process.env.CAPTURE_TARGET || (LOCALE === "en" ? "es" : "en");
+const RAWKEY = process.env.CAPTURE_TARGET ? `${LOCALE}-${process.env.CAPTURE_TARGET}` : LOCALE;
 const ui = (await loadCopy())[LOCALE];
 const esc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const NEXT = new RegExp(`^(${esc(ui.quizNext)}|${esc(ui.scriptNext)})( ›)?$`);
-const PORT = Number(process.env.PORT || 4575), OUT = `tmp/guide-slides/raw/${LOCALE}`;
+const PORT = Number(process.env.PORT || 4575), OUT = `tmp/guide-slides/raw/${RAWKEY}`;
 fs.mkdirSync(OUT, { recursive: true });
 const server = await serve(PORT);
 const browser = await chromium.launch();

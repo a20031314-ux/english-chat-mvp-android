@@ -5,7 +5,9 @@
 import fs from "node:fs";
 import { chromium, serve, state, api, loadCopy } from "../ux-check/lib.mjs";
 const LOCALE = process.env.LOCALE || "ko";
-const LEARN = LOCALE === "en" ? "es" : "en";
+// CAPTURE_TARGET=<배우는 언어>: 검색어 맞춤 등록정보용(앱 언어 × 다른 배우는 언어) — 그림은 raw/<앱>-<배우는>/.
+const LEARN = process.env.CAPTURE_TARGET || (LOCALE === "en" ? "es" : "en");
+const RAWKEY = process.env.CAPTURE_TARGET ? `${LOCALE}-${process.env.CAPTURE_TARGET}` : LOCALE;
 const ui = (await loadCopy())[LOCALE];
 /** 고친 말 카드의 까닭 한 줄(미리 보기 화면에 넣음) — 앱 언어로. */
 const WHY = {
@@ -15,7 +17,7 @@ const WHY = {
   ru: "Это было вчера, поэтому went, а не go.", id: "Itu kemarin, jadi went, bukan go.", ar: "حدث ذلك أمس، لذا نقول went وليس go.",
   th: "เป็นเรื่องเมื่อวาน จึงใช้ went ไม่ใช่ go", hi: "यह कल हुआ था, इसलिए go नहीं went।",
 };
-const PORT = 4583, DEV = process.env.DEV_URL || "http://localhost:3011", OUT = `tmp/guide-slides/raw/${LOCALE}`;
+const PORT = 4583, DEV = process.env.DEV_URL || "http://localhost:3011", OUT = `tmp/guide-slides/raw/${RAWKEY}`;
 fs.mkdirSync(OUT, { recursive: true });
 const server = await serve(PORT);
 const browser = await chromium.launch({ args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", "--autoplay-policy=no-user-gesture-required"] });

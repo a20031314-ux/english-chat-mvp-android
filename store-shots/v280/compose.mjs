@@ -21,13 +21,16 @@ const play = args.includes("--play");
 const which = args.find((a) => !a.startsWith("--")) ?? "ko";
 const LOCALES = which === "all" ? Object.keys(COPY) : which.split(",");
 let locale, raw, out, T, FONT;
-function use(loc) {
-  locale = loc;
-  raw = path.join(root, "tmp", "guide-slides", "raw", loc);
-  out = path.join(root, "store-shots", "out", "v280", loc);
+// 검색어 맞춤 등록정보는 "<앱 언어>-<배우는 언어>"(예: ko-ja) — 글은 앱 언어 것, 그림은 raw/ko-ja/, 쓰기 칸 답이 없어 퀴즈 칸 셋, Play 폴더엔 안 넣음(Console에 직접).
+function use(key) {
+  const loc = key.split("-")[0];
+  locale = key;
+  raw = path.join(root, "tmp", "guide-slides", "raw", key);
+  out = path.join(root, "store-shots", "out", "v280", key);
   const c = COPY[loc], titles = SLIDE_TITLES[loc];
   T = { call: [c.call], quiz: [c.quiz], lesson: [c.lesson], chat: [c.chat], quizKinds: c.kinds, lang: [titles["my-lang-1"]], people: [titles["tab-people-1"]], log: [titles["my-log-1"]] };
   FONT = FONTS[loc] ?? FONTS.default;
+
 }
 const rawKo = path.join(root, "tmp", "guide-slides", "raw", "ko");
 
@@ -149,7 +152,7 @@ for (const loc of LOCALES) {
     await tab.screenshot({ path: path.join(out, `${shot[0]}.png`) });
   }
   // --play: 그 등록정보 phoneScreenshots를 이 7장으로 통째로 바꾼다(예전 장 지움, Play는 파일 이름 순서로 올림).
-  if (play) {
+  if (play && LISTING[loc]) {
     const dir = path.join(root, "fastlane", "metadata", "android", LISTING[loc], "images", "phoneScreenshots");
     fs.mkdirSync(dir, { recursive: true });
     for (const f of fs.readdirSync(dir)) fs.rmSync(path.join(dir, f));

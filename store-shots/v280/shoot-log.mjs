@@ -5,8 +5,10 @@ import fs from "node:fs";
 import { chromium, serve, state, api } from "../../scripts/ux-check/lib.mjs";
 
 const LOCALE = process.env.LOCALE || "ko";
-const LEARN = LOCALE === "en" ? "es" : "en";
-const PORT = Number(process.env.PORT || 4576), OUT = `tmp/guide-slides/raw/${LOCALE}`;
+// CAPTURE_TARGET=<배우는 언어>: 검색어 맞춤 등록정보용(앱 언어 × 다른 배우는 언어) — 그림은 raw/<앱>-<배우는>/.
+const LEARN = process.env.CAPTURE_TARGET || (LOCALE === "en" ? "es" : "en");
+const RAWKEY = process.env.CAPTURE_TARGET ? `${LOCALE}-${process.env.CAPTURE_TARGET}` : LOCALE;
+const PORT = Number(process.env.PORT || 4576), OUT = `tmp/guide-slides/raw/${RAWKEY}`;
 fs.mkdirSync(OUT, { recursive: true });
 
 // 날마다 [푼 수, 맞힌 비율] — 오래된 날부터, 마지막이 오늘.

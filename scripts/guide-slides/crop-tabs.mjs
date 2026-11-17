@@ -9,12 +9,14 @@ import fs from "node:fs";
 import { execFileSync } from "node:child_process";
 
 const LOCALE = process.argv[2] || "ko";
-const SRC = `tmp/guide-slides/src/${LOCALE}`, RAW = `tmp/guide-slides/raw/${LOCALE}`;
+// CAPTURE_TARGET이면 store-raw/<앱>-<배우는>/의 채팅 화면 → raw/<앱>-<배우는>/(영상·사람·Room은 앱 언어 것을 그대로 씀)
+const TGT = process.env.CAPTURE_TARGET, KEY = TGT ? `${LOCALE}-${TGT}` : LOCALE;
+const SRC = `tmp/guide-slides/src/${LOCALE}`, RAW = `tmp/guide-slides/raw/${KEY}`;
 const CROPS = {
-  "tab-chat-1": [`tmp/store-raw/${LOCALE}/chat-correct.png`, 200, 700],
-  "tab-chat-2": [`tmp/store-raw/${LOCALE}/chat-fix-open.png`, 200, 700],
+  "tab-chat-1": [`tmp/store-raw/${KEY}/chat-correct.png`, 200, 700],
+  "tab-chat-2": [`tmp/store-raw/${KEY}/chat-fix-open.png`, 200, 700],
   // 편한 말 줄 + "이렇게 말해요" — 튜터 답 길이가 언어마다 달라 자리가 다르다.
-  "tab-chat-3": [`tmp/store-raw/${LOCALE}/chat-expression.png`, ...({ ko: [830, 1260], en: [450, 960], id: [860, 1330] }[LOCALE] ?? [740, 1240])],
+  "tab-chat-3": [`tmp/store-raw/${KEY}/chat-expression.png`, ...({ ko: [830, 1260], en: [450, 960], id: [860, 1330] }[LOCALE] ?? [740, 1240])],
   "tab-talk-1": [`${SRC}/talk-calls.webp`, 60, 590],
   "tab-talk-2": [`${SRC}/r69-groups.webp`, 0, 560],
   "tab-talk-3": [`${SRC}/talk-dm.webp`, 0, 740],
