@@ -92,9 +92,10 @@ export function CallStage({
       </p>
 
       {/* 위: AI 튜터 */}
-      <section className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6 text-center" data-call-tutor>
+      <section className="flex min-h-0 flex-1 flex-col items-center justify-center-safe gap-3 overflow-y-auto px-6 py-2 text-center" data-call-tutor>
         <SpeakingRing speaking={speaker === "tutor"}>
-          <AiAvatar size={96} language={language} gender={partner.gender} />
+          {/* Smaller face when the board card or a long caption is up, so the caption fits its half (2026-11-17 overlap report). */}
+          <AiAvatar size={board || (caption?.text.length ?? 0) > 90 ? 64 : 96} language={language} gender={partner.gender} />
         </SpeakingRing>
         <p className="flex items-center gap-2 text-title font-semibold text-ink">
           <bdi>{partner.givenName}</bdi>
@@ -124,7 +125,7 @@ export function CallStage({
       <div aria-hidden className="mx-6 shrink-0 border-t border-white/10" />
 
       {/* 아래: 나 */}
-      <section className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6 text-center" data-call-me>
+      <section className="flex min-h-0 flex-1 flex-col items-center justify-center-safe gap-3 overflow-y-auto px-6 py-2 text-center" data-call-me>
         <SpeakingRing speaking={speaker === "learner"} waiting={speaker === "listening"} tone="good">
           <MyAvatarFace size={96} />
         </SpeakingRing>

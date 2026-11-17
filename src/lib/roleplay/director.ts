@@ -1689,7 +1689,7 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
     : ", then simply carry on the conversation";
   const move = `"move" is true only when their turn asks to stop this and do something else; then answer it in a few words and ask them one easy question about their day. Otherwise false.`;
   // 첫 마디는 인사부터, ⏭는 인사 없이 바로, 말없는 차례(침묵)는 침묵 규칙("This turn")만 — 단계 지시를 붙이지 않는다.
-  const lead = lesson.open ? `They have not spoken yet. Greet them in a few words, say in a few easy words that this call is a lesson where you practise one way of saying things together, then ` : lesson.skip ? `They tapped to move on to something new. Drop your last question — do not repeat it, do not ask whether they heard you, no greeting and no comment on the tap — and straight away, ` : `Now `;
+  const lead = lesson.open ? `They have not spoken yet. Greet them and say that this is a lesson, in one short sentence — no word on how it works or what you will practise (the screen already explains it), then ` : lesson.skip ? `They tapped to move on to something new. Drop your last question — do not repeat it, do not ask whether they heard you, no greeting and no comment on the tap — and straight away, ` : `Now `;
   const quiet = lesson.open || lesson.skip ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : "";
   // 숙제 리뷰(사용자 2026-11-12 설계 5절): 첫 마디에서 지난 숙제의 그 틀로 시작 — 틀린 것·답·점수는 말하지 않는다.
   const review =
@@ -1708,7 +1708,7 @@ export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
       case "show":
         return `${review}${lead}move the conversation to a moment from your own life where this pattern fits and use it yourself twice — two true, natural sentences about you, with something different in the blank each time (never a word that makes the sentence odd) — then ask them one easy question that they could answer with the same pattern.${quiet}`;
       case "draw":
-        return `${review}${lead}ask one question that they can only answer well with this pattern — about the thing that fills the blank, in their own life or one of the words. If they have already told you that, do not ask it again: set up a small new moment in a sentence (someone new they meet, a form to fill, a phone call) where saying it as a whole sentence is natural, and ask what they would say there. A question about their day, their weekend or anything the pattern does not answer is wrong on this turn.${quiet}`;
+        return `${review}${lead}ask one question that they can only answer well with this pattern — about the thing that fills the blank, in their own life or one of the words. If they have already told you that, never ask for it again, not even in another setting ("at work", "to someone new") — ask about a different thing that can fill the same blank (one of the words, or someone or something else in their life). A question about their day, their weekend or anything the pattern does not answer is wrong on this turn.${quiet}`;
       case "move":
         return `${review}${opening ? lead : "They have used it once. Now "}take the conversation to a different situation where the same pattern fits — another place, time or occasion in their own life — and ask them about the blank again, so that their natural answer is the pattern exactly as written (same words around the blank, about themselves), only with a new word in the blank. Not a question about someone else or about anything else.${quiet}`;
       case "ask":

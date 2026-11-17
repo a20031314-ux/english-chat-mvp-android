@@ -33,9 +33,12 @@ export type HomeworkReview = { key: string; how: HomeworkHow };
 /** 멈춘 자리 — 통화를 끝내면 다음 수업이 여기서. */
 export type LessonSpot = { key: string; step: Exclude<LessonStep, "ask"> };
 /** 통화 하나 동안의 진행. */
-export type LessonRun = { items: LessonItem[]; at: number; step: LessonStep; asked: boolean };
+/** misses = 끌어내기·옮겨 쓰기에서 틀이 안 나온 차례 수(단계가 바뀌면 0) — LESSON_MISSES면 그 틀은 놓고 넘어감. */
+export type LessonRun = { items: LessonItem[]; at: number; step: LessonStep; asked: boolean; misses?: number };
 
 export const LESSON_ITEMS = 3;
+/** 끌어내기·옮겨 쓰기에서 틀이 두 번 안 나오면 같은 걸 또 묻지 않고 넘어감(사용자 2026-11-17 "대답했는데 다른 상황의 같은 질문을 물어봐" — My name is ___에 Joe만 말하면 이름을 세 번 물음). */
+export const LESSON_MISSES = 2;
 const LAST_STAGE = 5;
 /** 단계 오르기: 그 단계 틀 중 대화에서 쓴 몫(사용자 결정 대기 — 전부/80%, 그 전까지 전부). */
 export const STAGE_UP_SHARE = 1;
@@ -132,14 +135,18 @@ export function advanceRun(run: LessonRun, turn: { spoke: boolean; used: boolean
   if (turn.move) return next();
   if (!turn.spoke) return run;
   const hasNext = run.at + 1 < run.items.length;
+  const finish = (): LessonRun | null => (hasNext ? { items: run.items, at: run.at, step: "ask", asked: false } : null);
+  const missed = (): LessonRun | null => {
+    const misses = (run.misses ?? 0) + 1;
+    return misses >= LESSON_MISSES ? finish() : { ...run, misses };
+  };
   switch (run.step) {
     case "show":
-      return { ...run, step: turn.used ? "move" : "draw" };
+      return { items: run.items, at: run.at, step: turn.used ? "move" : "draw", asked: false };
     case "draw":
-      return turn.used ? { ...run, step: "move" } : run;
+      return turn.used ? { items: run.items, at: run.at, step: "move", asked: false } : missed();
     case "move":
-      if (!turn.used) return run;
-      return hasNext ? { ...run, step: "ask", asked: false } : null;
+      return turn.used ? finish() : missed();
     case "ask":
       return { ...run, asked: true };
   }

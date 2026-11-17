@@ -157,3 +157,18 @@ test("통화 기록: 다룬 틀·다음 틀", () => {
   assert.deepEqual(lessonTraceOf(null, ["f|a", "f|b", "f|c"], items), { covered: ["f|a", "f|b", "f|c"] });
   assert.equal(lessonTraceOf(run, [], items), null);
 });
+
+test("끌어내기·옮겨 쓰기에서 틀이 두 번 안 나오면 같은 걸 또 묻지 않고 넘어감", () => {
+  let run = startRun(items)!;
+  run = advanceRun(run, { spoke: true, used: false, move: false })!;
+  assert.equal(run.step, "draw");
+  run = advanceRun(run, { spoke: true, used: false, move: false })!;
+  assert.deepEqual([run.step, run.misses], ["draw", 1]);
+  run = advanceRun(run, { spoke: true, used: false, move: false })!;
+  assert.deepEqual([run.step, run.asked, run.misses], ["ask", false, undefined], "다음 거 할까요로");
+  let last = startRun([items[0]])!;
+  last = advanceRun(last, { spoke: true, used: true, move: false })!;
+  assert.equal(last.step, "move");
+  last = advanceRun(last, { spoke: true, used: false, move: false })!;
+  assert.equal(advanceRun(last, { spoke: true, used: false, move: false }), null, "마지막 틀이면 수업 계획 끝");
+});
