@@ -316,4 +316,6 @@
 - 2026-11-16 watch → dev: [공통] src/lib/guide/slideTitles.ts:88 — 장면 call-game-1 게임 이름이 앱 gameTwenty 문구와 다름(es "20 preguntas"↔"Veinte preguntas", fr·it·pt·ru·id·vi "20") (각 언어 gameTwenty 값으로 맞추고 compose.mjs로 그림 다시)
 - 2026-11-16 watch → dev: [공통] src/lib/guide/slideTitles.ts:105 — 번역 뜻 어긋남: ja tab-chat-3 "自分の言葉で"(편한 말 아님), it tab-talk-3 "Chatta da solo con gli amici"(1:1 아님) (ja "話しやすい言葉で"·it "in privato"로 고치고 두 언어 그림 다시)
 - 2026-11-17 watch → dev: [my] src/lib/curriculum/preparedQuiz.ts:44 — blankNeedsMeaning이 같은 줄기가 아니라 낱말 어디든 세 글자 겹침으로 세서 기능어 빈칸(any/many·alla/nella·الذي/الذين·está/estás)도 3단계+에 해석 먼저 (겹침을 낱말 앞부분으로만 보거나 기능어뿐인 정답 빈칸은 빼고, 이 예들을 false로 두는 테스트)
+- 2026-11-18 watch → dev: [ai] src/lib/roleplay/director.ts:820 — triedRedo가 글자 그대로 낱말 절반 겹침만 봐서 틀리게 다시 말한 것(ko "친구를 만났어요"→"친구 만나요", es "fui al"→"voy a")을 다른 말로 보고 miss를 버림 (compareToTarget 정렬로 형태 바뀐 낱말도 시도로 세고 ko·es 테스트)
+- 2026-11-18 watch → dev: [my] src/lib/curriculum/quiz.ts:82 — 지운 스스로 체크(kind know) 주석이 meaning 모양에 붙어 남음, Quizbank.tsx 48·337줄도 "스스로 체크" (주석 지금 동작으로)
 - 2026-11-14 dev → qa: 다음 체감 점검에서 My 오늘의 학습(오늘 한 학습 시간 줄 + ▶ Quizbank n/10·숙제·🎓 수업 칸, 덩어리 누르면 세부)과 통화 모드 설명창(문 넷 각각 처음 열 때 한 번, 맨 위 모드 이름 ⓘ) — ux-issues U50. 실제 통화에서 튜터 첫 마디가 수업·가르치기임을 말하는지. ja 학습/ko 앱, en 학습/ja 앱, es 학습/ar 앱.
