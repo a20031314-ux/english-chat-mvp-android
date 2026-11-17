@@ -4,11 +4,11 @@
  * 튜터는 어울리는 화제로 몰고 자기가 써 보이기만 한다(director.ts recent). 순수.
  */
 import type { LogEvent } from "../curriculum/logLedger.ts";
-import { RECENT_MAX } from "./director.ts";
+import { LESSON_RECENT_MAX } from "./director.ts";
 
 const WEEK_SECONDS = 7 * 24 * 60 * 60;
 
-export function recentLearned(events: readonly LogEvent[], nowSeconds: number, max = RECENT_MAX): string[] {
+export function recentLearned(events: readonly LogEvent[], nowSeconds: number, max = LESSON_RECENT_MAX): string[] {
   const missed = new Map<string, number>();
   const seen = new Map<string, number>();
   for (const event of events) {

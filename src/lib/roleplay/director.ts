@@ -209,14 +209,14 @@ export type DirectorRequest = {
 export type AimResult = "used" | "wrong";
 const AIM_RESULTS: readonly AimResult[] = ["used", "wrong"];
 /** 수업 통화 요즘 배운 것: 최대 개수·하나의 글 길이(서버가 자름). */
-export const RECENT_MAX = 8;
+export const LESSON_RECENT_MAX = 8;
 const RECENT_CHARS = 40;
 
 /** 서버: 앱이 보낸 요즘 배운 것을 읽는다 — 글이 아닌 것은 버리고 개수·길이를 자른다. */
 export function readRecent(raw: unknown): string[] | undefined {
   if (!Array.isArray(raw)) return undefined;
   const list = raw.filter((one): one is string => typeof one === "string").map((one) => one.trim().slice(0, RECENT_CHARS)).filter(Boolean);
-  const unique = [...new Set(list)].slice(0, RECENT_MAX);
+  const unique = [...new Set(list)].slice(0, LESSON_RECENT_MAX);
   return unique.length ? unique : undefined;
 }
 
