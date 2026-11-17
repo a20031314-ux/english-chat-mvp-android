@@ -5020,6 +5020,27 @@
       "base": "2c10b5b",
       "head": "cec020d",
       "status": "open"
+    },
+    {
+      "id": "a261117-3-1",
+      "at": "2026-11-17 23:22",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "Quizbank 문법 빈칸 — 내용 낱말을 덮으면 해석 먼저(preparedQuiz blankNeedsMeaning)",
+      "files": [
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/StudyMapTab.tsx"
+      ],
+      "features": [
+        "첫 측정",
+        "Quizbank"
+      ],
+      "base": "5186787",
+      "head": "5493749",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -5607,10 +5628,22 @@
       "asks": [
         "a261116-1-1"
       ]
+    },
+    {
+      "at": "2026-11-17 23:22",
+      "from": "3",
+      "base": "5186787",
+      "head": "5493749",
+      "what": "Quizbank 문법 빈칸 — 내용 낱말을 덮으면 해석 먼저(preparedQuiz blankNeedsMeaning)",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261117-3-1"
+      ]
     }
   ],
   "seq": {
-    "261116-3": 3,
-    "261116-1": 1
+    "261117-3": 1
   }
 }

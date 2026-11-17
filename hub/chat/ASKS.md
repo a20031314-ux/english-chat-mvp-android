@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (67)
+## 탭이 확인할 것 (68)
 
 ### 탭 1 메인
 
@@ -142,6 +142,10 @@
 - **a261116-1-1** (2026-11-16 13:11, 탭 1 · cec020d) 사용법 넘겨 보기 장면이 14개 앱 언어 모두로(lib/guide/slides.ts·slideTitles.ts). 각 탭 화면이 바뀌면 scripts/guide-slides/로 그 언어 그림을 다시
   - 기능: 사용법 · 칸 설명
   - 볼 곳: `components/studyMap/BankHelp.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/StudyMapTab.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261117-3-1** (2026-11-17 23:22, 탭 3 · 5493749) Quizbank 문법 빈칸 — 내용 낱말을 덮으면 해석 먼저(preparedQuiz blankNeedsMeaning)
+  - 기능: 첫 측정 · Quizbank
+  - 볼 곳: `components/studyMap/Quizbank.tsx` · `components/studyMap/FirstCheck.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/StudyMapTab.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
