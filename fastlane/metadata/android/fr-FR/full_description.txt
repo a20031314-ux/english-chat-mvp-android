@@ -1,25 +1,29 @@
-languagebank fixe ce que vous étudiez chaque jour et vous le fait dire à voix haute. Apprenez l'une des 14 langues, avec l'app dans l'une des 14 langues.
+languagebank est une application pour apprendre une langue en parlant et en écrivant avec un tuteur IA. Apprenez l'une des 14 langues dans l'une des 14 langues de l'application.
 
-VOTRE PARCOURS DU JOUR
-1. Partez de votre étape : lisez une courte conversation et répondez « Oui, je peux », « Presque » ou « Pas encore » pour commencer à la bonne étape sur cinq. Écriture nouvelle ? Commencez par les lettres et les sons.
-2. Leçon du jour : choisissez 5, 10 ou 20 minutes par jour et voyez en combien de jours vous finirez. « Dans l'ordre » ou « Selon mon parcours » fixe les dialogues et structures du jour.
-3. Dites le dialogue : dites vos répliques dans des dialogues de situations avec 🎤 — Répéter, Premières lettres, Masqué ou Avec vos mots. Une réplique parfaite reçoit ★ ; correcte mais peu naturelle, une tournure plus naturelle est proposée, et les mots mal entendus sont signalés. Une autre formulation correcte passe aussi, et vous reprenez où vous en étiez le même jour.
-4. Changer dans la structure de phrase : dites une même structure plusieurs fois en changeant seulement les mots.
-5. Révision : à la fin d'un dialogue, marquez chaque expression « Je sais » ou « Pas sûr ». Ce qui est flou et les répliques ratées reviennent en petit quiz après 2 et 7 jours, et se regroupent en haut de Moi, dans « Ce que tu as raté la dernière fois ». Avec le « Rappel du matin », ils s'affichent sur l'écran verrouillé.
-6. Pratique continue : après la leçon du jour, choisissez Révision, Aléatoire, Vocabulaire, Grammaire ou Expressions et touchez ▶ Continuer pour un quiz court qui mêle textes à trous, ordre des mots, écoute et oral.
-7. Ce que tu as appris aujourd'hui : structures, grammaire et mots du jour, chacun avec le dialogue et la phrase d'où il vient.
+Apprendre avec un tuteur IA
+• Discuter : appelez votre tuteur et parlez librement. Les corrections s'affichent sur une carte sous votre visage.
+• Cours : le tuteur affiche une structure de phrase au tableau et vous la fait utiliser. Les grosses erreurs sont signalées pour que vous redisiez la phrase. Un devoir arrive à la fin.
+• Jeu et Apprends-moi : jouez à Vingt questions, ou expliquez des choses à un tuteur qui apprend votre langue.
+• Chat : les phrases corrigées s'affichent tout de suite. Bloqué ? Écrivez dans votre langue, le tuteur continue dans celle que vous apprenez.
 
-UTILISEZ-LE EN CONVERSATION
-• Chat avec le tuteur IA : parlez comme entre amis, seules les erreurs sont corrigées. Bloqué ? Écrivez en français, le tuteur continue dans la langue apprise ; « Voir comment le dire » montre la phrase voulue. Utilisez de vous-même une expression que vous avez marquée et la ligne affiche « Réutilisé ».
-• Appels IA : parlez à voix haute. Même si c'est confus, le tuteur retrouve ce que vous vouliez dire, et vous pouvez revoir l'appel ensuite.
-• Analyse de phrase : dans n'importe quelle phrase, choisissez juste la partie incomprise et demandez ce qu'elle veut dire.
-• Vidéo : de vraies vidéos découpées en phrases à réécouter et questionner.
+Des quiz de toutes sortes (Quizbank)
+• Choisir, sens, trouver l'erreur et écrire la phrase, dans un même enchaînement.
+• Ça devient plus difficile quand vous réussissez, et ce que vous avez raté ou qui vous a bloqué en conversation revient.
+• Rendez-le plus facile ou plus difficile vous-même.
 
-APPRENDRE AVEC D'AUTRES
-• Dans les Salons, parlez de vive voix avec ceux qui apprennent la même langue, sous-titres en direct, puis continuez en groupe ou en message privé.
+Tous les mots à apprendre, au même endroit (Languagebank)
+• Parcourez mots, expressions et grammaire par type et par niveau, et apprenez chaque série avec un quiz ou une conversation.
+• Retournez des cartes pour mémoriser sens, mots et exemples.
 
-PAS DE NOTE DE NIVEAU
-• Chaque phrase reçoit ses erreurs et ses manques ; votre historique décide de la suite.
+Vos progrès s'accumulent (Logbank)
+• Une courbe d'apprentissage montre, jour après jour, ce que vous avez étudié en quiz et ce que vous avez utilisé en conversation.
+• Revoyez ce que vous avez fait chaque jour, heure par heure.
 
-TARIFS
-• Les dialogues par étape sont gratuits (avec publicité). La formule « Dialogues » ajoute des appels courts et le chat ; Lite, Plus et Premium suppriment la publicité et donnent plus de chat et de minutes d'appel par jour.
+Apprendre avec d'autres
+• Échangez avec ceux qui apprennent la même langue via les profils, le tableau et les messages, et parlez de vive voix dans un Salon.
+
+Pour commencer
+• Au premier lancement, un court test fixe votre niveau de départ. Il n'y a pas de score de niveau.
+
+Tarifs
+• Quizbank, Languagebank et les cours sont gratuits (avec publicités). Essayez 10 minutes d'appel et 10 messages ; Lite, Plus et Premium retirent les publicités et ajoutent du temps d'appel et des messages chaque jour.

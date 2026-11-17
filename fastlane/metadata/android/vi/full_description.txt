@@ -1,25 +1,29 @@
-languagebank định ra mỗi ngày học gì và cho bạn nói thành tiếng những gì đã học. Học một trong 14 ngôn ngữ, với ứng dụng bằng một trong 14 ngôn ngữ.
+languagebank là ứng dụng học ngoại ngữ bằng cách nói và viết cùng gia sư AI. Học 14 ngôn ngữ bằng 14 ngôn ngữ giao diện.
 
-MỘT NGÀY HỌC
-1. Bắt đầu đúng giai đoạn: đọc một đoạn hội thoại ngắn rồi chọn "Được", "Gần được" hoặc "Chưa được" để bắt đầu ở giai đoạn phù hợp trong năm giai đoạn. Chữ viết mới? Bắt đầu từ chữ cái và âm.
-2. Bài học hằng ngày: chọn 5, 10 hoặc 20 phút mỗi ngày để biết mấy ngày xong. "Theo lộ trình" hoặc "Theo kết quả của tôi" xếp kịch bản và cấu trúc câu cho ngày hôm đó.
-3. Nói theo kịch bản: nói câu của bạn trong kịch bản tình huống bằng 🎤 — Nói theo, Chỉ chữ đầu, Ẩn hoặc Bằng lời của bạn. Câu hoàn hảo được ★; đúng nhưng chưa tự nhiên sẽ có cách nói tự nhiên hơn, và từ nghe chưa rõ được chỉ ra. Nói cách khác mà đúng cũng qua, và trong ngày bạn có thể học tiếp từ chỗ dừng.
-4. Đổi trong cấu trúc câu: nói một cấu trúc nhiều lần, chỉ đổi từ.
-5. Ôn lại: cuối kịch bản đánh dấu từng cách nói "Tôi biết rồi" hoặc "Còn lẫn lộn". Chỗ còn lẫn lộn và câu sai quay lại thành câu đố ngắn sau 2 và 7 ngày, và gom ở trên cùng mục Của tôi, trong "Lần trước sai ở đâu". Bật "Nhắc buổi sáng" để thấy trên màn hình khóa.
-6. Học liên tục: sau bài học hằng ngày, chọn Ôn tập, Ngẫu nhiên, Từ vựng, Ngữ pháp hoặc Cách diễn đạt rồi chạm ▶ Học tiếp để làm câu đố ngắn gồm điền chỗ trống, sắp xếp từ, nghe và nói.
-7. Hôm nay đã học: cấu trúc câu, ngữ pháp và từ của ngày, mỗi thứ kèm kịch bản và câu nó xuất hiện.
+Học cùng gia sư AI
+• Nói chuyện: gọi gia sư và trò chuyện thoải mái. Câu đã sửa hiện thành thẻ dưới khuôn mặt bạn.
+• Bài học: gia sư đưa mẫu câu lên bảng và giúp bạn nói bằng mẫu đó. Lỗi lớn được chỉ ra ngay để bạn nói lại. Cuối buổi có bài tập.
+• Trò chơi và Dạy tôi: chơi Hai mươi câu hỏi, hoặc giải thích cho gia sư đang học ngôn ngữ của bạn.
+• Trò chuyện: câu đã sửa hiện ra ngay. Khi bí, cứ viết bằng tiếng mẹ đẻ, gia sư sẽ tiếp tục bằng ngôn ngữ bạn đang học.
 
-DÙNG TRONG HỘI THOẠI
-• Chat với gia sư AI: trò chuyện như bạn bè, chỉ sửa chỗ sai. Bí? Viết bằng tiếng Việt, gia sư vẫn tiếp tục bằng ngôn ngữ bạn học, và "Xem cách nói" cho thấy câu bạn muốn nói. Khi bạn tự dùng cách nói đã đánh dấu, câu đó hiện "Đã dùng lại".
-• Gọi AI: nói thành tiếng. Dù lộn xộn, gia sư vẫn tìm ra ý bạn, và sau đó có thể xem lại.
-• Phân tích câu: ở câu nào cũng được, chọn phần chưa hiểu và hỏi nghĩa.
-• Video: video thật chia theo câu để nghe lại và hỏi.
+Nhiều dạng câu đố (Quizbank)
+• Chọn, nghĩa, tìm lỗi và viết câu nối tiếp nhau trong một luồng.
+• Càng trả lời đúng càng khó hơn, còn những gì bạn sai hoặc bí khi nói chuyện sẽ quay lại.
+• Bạn tự chỉnh dễ hơn hoặc khó hơn.
 
-HỌC CÙNG MỌI NGƯỜI
-• Trong Phòng nói, trò chuyện bằng giọng với người học cùng ngôn ngữ, có phụ đề trực tiếp, rồi tiếp tục trong nhóm và tin nhắn riêng.
+Mọi từ cần học ở một nơi (Languagebank)
+• Xem từ, cách diễn đạt và ngữ pháp theo loại và cấp độ, học từng nhóm bằng câu đố hoặc hội thoại.
+• Lật thẻ để ghi nhớ nghĩa, từ và câu ví dụ.
 
-KHÔNG CHẤM ĐIỂM TRÌNH ĐỘ
-• Mỗi câu chỉ ra lỗi và chỗ còn thiếu; lịch sử của bạn quyết định bước tiếp theo.
+Những gì đã học tích lũy dần (Logbank)
+• Đường cong học tập cho thấy mỗi ngày bạn học bao nhiêu qua câu đố và dùng bao nhiêu khi nói chuyện.
+• Xem lại từng ngày bạn đã làm gì, theo từng giờ.
 
-GIÁ
-• Kịch bản theo giai đoạn miễn phí (có quảng cáo). "Gói kịch bản" thêm cuộc gọi ngắn và trò chuyện; Lite, Plus và Premium không quảng cáo, nhiều chat và thời gian gọi mỗi ngày hơn.
+Học cùng người khác
+• Giao lưu với người học cùng ngôn ngữ qua hồ sơ, bảng tin và tin nhắn, và nói chuyện bằng giọng trong Phòng nói.
+
+Bắt đầu
+• Lần đầu mở app, một bài kiểm tra ngắn xác định cấp độ bắt đầu. Không có điểm cấp độ.
+
+Chi phí
+• Quizbank, Languagebank và bài học miễn phí (có quảng cáo). Dùng thử 10 phút gọi và 10 tin nhắn; Lite, Plus và Premium bỏ quảng cáo và tăng thời gian gọi, số tin nhắn mỗi ngày.
