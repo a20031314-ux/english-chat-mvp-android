@@ -325,7 +325,6 @@ export function QuestionView({
       {question.kind === "multi" ? <MultiView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "spots" ? <SpotsView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "know" ? <KnowView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "meaning" ? (
         <PickView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} />
       ) : null}
@@ -1153,8 +1152,6 @@ function askLine(question: QuizQuestion, ui: UICopy, grammar = "", locale = ""):
       return ui.quizAskSpot;
     case "meaning":
       return ui.quizAskMeaning;
-    case "know":
-      return ui.quizAskKnow;
     case "order":
       return ui.quizAskOrder;
     case "fix":
@@ -1502,46 +1499,6 @@ function OrderView({
             {ui.quizCheck}
           </button>
         </>
-      )}
-    </div>
-  );
-}
-
-/**
- * 낱말 스스로 체크(퀴즈 다시 짜기 3단계 — 그럴듯한 보기가 셋 안 모이는 낱말, quiz.ts cardQuiz kind "know"):
- * 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 펼침 → (알아요였으면) [맞았어요 | 틀렸어요]. 알아요 + 맞았어요만 맞음.
- */
-function KnowView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: Extract<QuizQuestion, { kind: "know" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
-  const [said, setSaid] = useState<"know" | null>(null);
-  const open = Boolean(answered) || said === "know";
-  const pill = "rounded-full border border-line px-4 py-1.5 text-note text-slate-100 hover:bg-white/10";
-  return (
-    <div className="flex flex-col gap-3" data-know>
-      <CardFace
-        word={question.card.word}
-        meaning={open ? question.card.meaning : null}
-        line={<Marked text={question.text} mark={question.mark} />}
-        lineGloss={open ? quizGloss(question.gloss, locale, language) : null}
-        speak={{ text: question.text, tag }}
-      />
-      {answered ? null : said === "know" ? (
-        <div className="flex flex-wrap gap-2">
-          <button type="button" data-know-right onClick={() => onAnswer({ correct: true })} className={pill}>
-            {ui.quizRight}
-          </button>
-          <button type="button" data-know-wrong onClick={() => onAnswer({ correct: false })} className={pill}>
-            {ui.quizWrong}
-          </button>
-        </div>
-      ) : (
-        <div className="flex flex-wrap gap-2">
-          <button type="button" data-know-yes onClick={() => setSaid("know")} className={pill}>
-            {ui.markKnown}
-          </button>
-          <button type="button" data-quiz-giveup onClick={() => onAnswer({ correct: false })} className={pill}>
-            {ui.markUnknown}
-          </button>
-        </div>
       )}
     </div>
   );

@@ -80,7 +80,6 @@ export type QuizQuestion =
   | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string; /** 문단(story-errors P1~P4): 선지 칸 · 틀린 곳 수를 안 보임(P4·게이지 위쪽). */ picks?: number[]; hideCount?: true; /** 뜻이 틀린 곳이 든 문단 — 뜻 줄은 답한 뒤에만(체감 점검 2026-11-12 "해석의 일찍과 비교만 하면 late가 보임"). */ glossAfter?: true }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   /** 낱말 스스로 체크(그럴듯한 보기가 셋 안 모일 때): 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 → [맞았어요 | 틀렸어요]. */
-  | { kind: "know"; text: string; mark: string; gloss: ScriptGloss; from: string; card: QuizCardFace }
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string; /** 카드 모양(개편, cardQuiz) — 낱말·예문은 보이고 뜻 칸만 가림. */ card?: QuizCardFace };
 
 /**
@@ -1356,8 +1355,8 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   // 최근 세 문제에 보기로 나온 뜻은 빼고(같은 보기가 다음 문제 정답·오답으로 다시 — easy-repeat).
   const recent = new Set((RECENT_OPTIONS.get(language) ?? []).flatMap((one) => [...one]));
   // 이 문제의 정답 뜻이 방금 보기로 나왔으면 고르기는 소거로 풀림 — 표현은 쓰기(낱말 가림)로(2026-11-10 구성 고치기, 11-07 "have — 앞 문제 오답이던 소유하다가 정답").
-  // 낱말은 한 모양이라 쓰기 대신 스스로 체크(퀴즈 다시 짜기 3단계).
-  if (recent.has(norm(gloss))) return kind === "w" ? { kind: "know", text: source.text, mark: source.piece!, gloss: source.gloss, from: key, card: face } : cardQuiz(language, key, "show", seed);
+  // 낱말은 한 모양이라 이번엔 안 낸다(Quizbank가 다음 낱말로 넘어감 — 다음 묶음에 다시).
+  if (recent.has(norm(gloss))) return kind === "w" ? null : cardQuiz(language, key, "show", seed);
   const seen = new Set([norm(gloss)]);
   const samePos = others.filter((other) => !source.pos || other.pos === source.pos);
   const near = samePos.filter((other) => at < 0 || Math.abs(other.at - at) <= 200);
@@ -1370,9 +1369,10 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   // 같은 주제(동물·몸·직업…) 먼저 — 문장에 넣어도 말이 되는 보기(platypus 옆 "쇠고기 조각", señal 옆 "우주선"이 문맥으로 지워짐, 체감 점검 2026-11-12).
   const sameTopic = (list: typeof others) => (source.topic && source.topic !== "function" ? list.filter((other) => other.topic === source.topic) : []);
   const wrong: string[] = [];
-  // 낱말(퀴즈 다시 짜기 3단계, 사용자 2026-11-10 "선지가 다수일 시 고르기"): 같은 품사·모양이 비슷한 뜻만 보기로 — 셋이 안 모이면
-  // 한눈에 지워지는 보기로 채우지 않고 스스로 체크(kind "know"). 표현은 품사가 없어 예전 차례 그대로.
-  const candidates = kind === "w" ? [...shaped(shuffled(sameTopic(near), random)), ...shaped(shuffled(sameTopic(samePos), random)), ...shaped(shuffled(near, random)), ...shaped(shuffled(samePos, random))] : [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random), ...shuffled(shaped(others), random), ...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)];
+  // 낱말(퀴즈 다시 짜기 3단계, 사용자 2026-11-10 "선지가 다수일 시 고르기"): 같은 품사·모양이 비슷한 뜻 먼저, 모자라면 같은 품사 아무 모양,
+  // 그다음 순위가 가까운 모양 비슷한 뜻(품사 무관) — 그래도 셋이 안 모이면 그 낱말은 퀴즈에 안 낸다(null). 스스로 체크는 뺐다(사용자 2026-11-17
+  // "알아요를 누르면 그냥 맞다고 해버림" → "뜻 고르기로 대체"). 표현은 품사가 없어 예전 차례 그대로.
+  const candidates = kind === "w" ? [...shaped(shuffled(sameTopic(near), random)), ...shaped(shuffled(sameTopic(samePos), random)), ...shaped(shuffled(near, random)), ...shaped(shuffled(samePos, random)), ...shuffled(near, random), ...shuffled(samePos, random), ...shaped(shuffled(others.filter((other) => at < 0 || Math.abs(other.at - at) <= 200), random))] : [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random), ...shuffled(shaped(others), random), ...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)];
   // 뜻풀이 하나라도 겹치면 같이 지워지거나 둘 다 맞음("때, 시간"과 "시간") — 겹치는 보기는 안 냄.
   const seenSenses = new Set(senses(gloss));
   for (const other of candidates) {
@@ -1384,7 +1384,7 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
     for (const part of parts) seenSenses.add(part);
     wrong.push(other.gloss);
   }
-  if (wrong.length < 3) return kind === "w" ? { kind: "know", text: source.text, mark: source.piece!, gloss: source.gloss, from: key, card: face } : null;
+  if (wrong.length < 3) return null;
   RECENT_OPTIONS.set(language, [new Set([norm(gloss), ...wrong.map(norm)]), ...(RECENT_OPTIONS.get(language) ?? [])].slice(0, RECENT_OPTION_QUESTIONS));
   const right: ScriptGloss = { en: "", raw: gloss };
   const options = shuffled([right, ...wrong.map((raw): ScriptGloss => ({ en: "", raw }))], random);
