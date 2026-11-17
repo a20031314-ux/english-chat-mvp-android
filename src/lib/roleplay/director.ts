@@ -2,6 +2,7 @@ import { gameRules, roundOverOf, type CallGame } from "./callGames.ts";
 import { chatPartnerForLanguage, type TutorGender } from "../chatPartner.ts";
 import { quotesOwnLine } from "./noteCheck.ts";
 import { compareToTarget, formSlip } from "./practice.ts";
+import { segmentWords } from "../wordSegments.ts";
 import { personaBrief } from "../tutorPersona.ts";
 import {
   interfaceLanguageName,
@@ -811,6 +812,19 @@ export function redoFormSlip(redo: string, heard: string): boolean {
   return compareToTarget(redo, heard).outcomes.some((outcome) => outcome.kind === "changed" && formSlip(outcome.word, outcome.heardAs));
 }
 
+/**
+ * 기다리던 문장(redo)을 다시 말해 본 차례인가 — 기다리던 문장 낱말의 절반 이상이 들은 말에 있으면 그렇다.
+ * 아니면 학습자가 다른 말을 한 것: 판정(pass·miss)하지 않고 그 말로 대화를 잇는다(운영 es/ar 2026-11-18 —
+ * "Sí, la entrada fue barata."에 "Casi" + 기다리던 문장을 또 시킴). 띄어쓰기 없는 언어는 wordSegments로 자른다.
+ */
+export function triedRedo(redo: string, heard: string, language?: string): boolean {
+  const words = (text: string) => segmentWords(text.normalize("NFC").toLocaleLowerCase(), language).map((word) => word.replace(/[^\p{L}\p{M}\p{N}']+/gu, "")).filter(Boolean);
+  const want = words(redo);
+  if (!want.length || !heard.trim()) return false;
+  const got = new Set(words(heard));
+  return want.filter((word) => got.has(word)).length * 2 >= want.length;
+}
+
 /** 통화 첫 마디(학습자가 아직 아무 말도 안 함) — 침묵 차례가 아니다(수업 첫 마디에 "들렸어요?"가 붙던 것, 2026-11-12). */
 export function openingTurn(request: Pick<DirectorRequest, "history" | "studyOpen">): boolean {
   // 첫 질문 뒤의 침묵은 침묵 차례다 — 튜터 말이 하나도 없을 때만 첫 마디(변경 감시 리뷰 2026-11-12). ⏭(skip)도 침묵이 아니다.
@@ -994,7 +1008,9 @@ ${request.context.trim()}`
       : "",
     coaching
       ? request.redo
-        ? (request.redoTries ?? 1) >= REDO_MAX_TRIES
+        ? request.heard.trim() && !triedRedo(request.redo, request.heard, request.targetLanguage)
+          ? `You asked them to say "${request.redo}" again, but this turn is not a try at it — they said something new instead. Drop that sentence: no "almost", no "again", do not say it or ask for it. "retry" is never "pass" or "miss" this turn — answer what they said now as conversation ("ask" only if this new turn has its own mistake or awkward wording).`
+          : (request.redoTries ?? 1) >= REDO_MAX_TRIES
           ? `You have asked them twice to say "${request.redo}". This turn is their last try: "pass" if they said it right; otherwise "miss" — tell them it is fine in a few words and carry the conversation on with a question. Do not ask them to say it again.`
           : `You asked them to say "${request.redo}" again, and this turn is their try at it: "pass" if they said it right, "miss" if not.`
         : `Nothing is waiting to be repeated: "retry" is "ask" or empty this turn.`
@@ -1569,7 +1585,7 @@ export function parseDirection(
       : named === "ask" && !(better || meant)
         ? ""
         : // pass·miss는 기다리는 문장이 있을 때만. 마지막 시도에서 다시 묻는 ask는 miss(넘어감)로.
-          (named === "pass" || named === "miss") && !waiting
+          (named === "pass" || named === "miss") && (!waiting || !triedRedo(request.redo ?? "", request.heard, request.targetLanguage))
           ? ""
           : // 기다리던 문장을 또 말해 보라는 ask = 아직(miss). 운영에서 같은 문장으로 ask가 온 적 있음.
             named === "ask" && waiting && sameWords(better || meant, request.redo ?? "")

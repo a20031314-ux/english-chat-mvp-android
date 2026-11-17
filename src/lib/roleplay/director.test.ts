@@ -23,6 +23,7 @@ import {
   redoFormSlip,
   readRecent,
   openingTurn,
+  triedRedo,
 } from "./director.ts";
 
 const cafe = findScenario("cafe-order")!;
@@ -1430,7 +1431,7 @@ test("튜터 수업: 같은 문장은 두 번까지 — 마지막 시도에서 �
 test("튜터 수업 지시: 기다리는 문장이 있으면 그 문장을, 마지막이면 다시 묻지 말라고", () => {
   assert.match(coachBrief({ coach: true }), /Nothing is waiting to be repeated/);
   assert.match(coachBrief({ coach: true, redo: "I went home.", redoTries: 1 }), /You asked them to say "I went home\." again/);
-  assert.match(coachBrief({ coach: true, redo: "I went home.", redoTries: 2 }), /their last try[\s\S]*Do not ask them to say it again/);
+  assert.match(coachBrief({ coach: true, redo: "I went home.", redoTries: 2, heard: "I go home." }), /their last try[\s\S]*Do not ask them to say it again/);
   assert.match(coachBrief({ coach: true }), /do not make up an answer for them/);
   assert.doesNotMatch(coachBrief({ redo: "I went home.", redoTries: 1 }), /I went home/, "그냥 대화는 기다리는 문장을 안 씀");
 });
@@ -1634,4 +1635,23 @@ test("수업 통화 첫 마디는 침묵 차례가 아니다 — '들렸어요?'
 test("첫 마디는 튜터 말이 하나도 없을 때 — 첫 질문 뒤 침묵은 침묵 차례", () => {
   assert.equal(openingTurn({ history: [] }), true);
   assert.equal(openingTurn({ history: [{ who: "tutor", text: "¿Cómo te llamas?" }] }), false);
+});
+
+test("다시 말해 보라고 했는데 다른 말을 하면 판정하지 않고 대화를 잇는다 — es·ja·ko", () => {
+  assert.equal(triedRedo("La película estaba muy aburrida.", "La pelicula estaba muy aburrido.", "es"), true);
+  assert.equal(triedRedo("La película estaba muy aburrida.", "Sí, la entrada fue barata.", "es"), false);
+  assert.equal(triedRedo("電車がとても遅れました。", "電車がとても遅れたでした", "ja"), true);
+  assert.equal(triedRedo("電車がとても遅れました。", "はい、安いランチを食べました。", "ja"), false);
+  assert.equal(triedRedo("어제 친구를 만났어요.", "어제 친구를 만났어요", "ko"), true);
+  assert.equal(triedRedo("x", "", "en"), false);
+  const es = findScenario("open-talk-es")!;
+  const esBank = sentencesFor("es");
+  const req = (heard: string) => request({ scenarioId: es.id, nodeId: "talk", coach: true, heard, redo: "La película estaba muy aburrida.", redoTries: 1, targetLanguage: "es", nativeLanguage: "ar" });
+  const prompt = (heard: string) => tutorSystemPrompt({ scenario: es, bank: esBank, recorded: recordedLines(es, SCENARIOS, esBank), request: req(heard) });
+  assert.match(prompt("Sí, la entrada fue barata."), /this turn is not a try at it/);
+  assert.match(prompt("La película estaba muy aburrida."), /this turn is their try at it/);
+  const context = (heard: string) => ({ scenario: es, bank: esBank, recordedIds: new Set(recordedLines(es, SCENARIOS, esBank).map((line) => line.id)), request: req(heard) });
+  const miss = JSON.stringify({ say: "¡Qué bien! ¿Y con quién fuiste?", assessment: "on_track", next: "free", retry: "miss" });
+  assert.equal(parseDirection(miss, context("Sí, la entrada fue barata."))?.retry, undefined, "다른 말엔 miss를 버림");
+  assert.equal(parseDirection(miss, context("La película estaba muy aburrido."))?.retry, "miss");
 });
