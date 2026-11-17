@@ -14,7 +14,6 @@ import { languageEvidence } from "../inputLanguage.ts";
 import { explanationInLearningLanguage } from "../languageLearningAnalysis.ts";
 import { targetLanguageFocusHints, tutorSpeechRules } from "../languageFocus.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
-import { frameUsed } from "../curriculum/scriptBank.ts";
 import { FN_GROUPS, type FnGroup } from "../curriculum/fnGroups.ts";
 import { LEAD_HOW, type Heard, type Lead, type LeadHow } from "./turnTally.ts";
 import {
@@ -131,16 +130,16 @@ export type DirectorRequest = {
    */
   prior?: string;
   /**
-   * 옛 앱(2.79 이하)이 보내는 수업 통화의 부족한 칸 이름(앱 언어). 새 앱은 `lesson` — 최소 지원 2.80이면 지움.
+   * 옛 앱(2.79 이하)이 보내는 수업 통화의 부족한 칸 이름(앱 언어). 새 앱은 `recent` — 최소 지원 2.80이면 지움.
    */
   study?: string;
   /** 옛 앱: 그 칸을 말하는 첫 마디. */
   studyOpen?: boolean;
   /**
-   * 수업 통화의 지금 소재(lessonPlan.ts, hub/work/drafts/lesson-plan-2026-11-12.md) — 앱이 단계를 정한다.
-   * 틀은 판정하지 않고 튜터가 그 틀로 되받는다. 예문은 싣지 않는다(베낄 문장 금지).
+   * 수업 통화(coach): 요즘 퀴즈로 배운 낱말·표현(학습 언어, 앱이 이 폰 기록에서 고름 — 사용자 2026-11-18 "배운 것을 반영하되 자유대화처럼").
+   * 튜터가 어울리는 화제로 몰고 자기가 써 보이기만 — 시키거나 판정하지 않는다. 낱말만, 예문은 싣지 않는다.
    */
-  lesson?: LessonRequest;
+  recent?: string[];
   /**
    * 수업 통화(coach)에서 학습자가 말없이 지나간 차례가 이번까지 몇 번 이어졌나(2026-11-07) — 화면에 🙉·💡가 없어
    * 튜터가 먼저: 1이면 들었는지 묻고 질문을 쉽게 다시, 2 이상이면 이어 말할 문장 앞부분 힌트.
@@ -209,47 +208,16 @@ export type DirectorRequest = {
 /** 자유대화 채우기 측정: 앞 차례 겨냥을 이번 말에서 맞게 씀(used)·썼지만 틀림(wrong). */
 export type AimResult = "used" | "wrong";
 const AIM_RESULTS: readonly AimResult[] = ["used", "wrong"];
-/** 수업 소재(앱이 보냄): 틀·뜻(앱 언어)·넣을 낱말·단계, 물어본 뒤인가, 좋다면 이어 갈 다음 틀. */
-export type LessonRequest = {
-  pattern: string;
-  meaning: string;
-  words: string[];
-  step: "show" | "draw" | "move" | "ask";
-  asked?: boolean;
-  /** 대화 첫 마디(학습자가 아직 말하지 않음). */
-  open?: boolean;
-  /** 학습자가 ⏭를 눌러 이 소재로 넘어옴 — 인사 없이 바로 시작. */
-  skip?: boolean;
-  /** 지난 숙제에서 이 틀이 어땠나(첫 소재가 숙제 리뷰일 때, 첫 마디에만). */
-  review?: "missed" | "right" | "undone";
-  next?: { pattern: string; meaning: string; words: string[] };
-};
-/** 수업 소재 글 길이 상한(서버가 자름). */
-export const LESSON_MAX_CHARS = 160;
+/** 수업 통화 요즘 배운 것: 최대 개수·하나의 글 길이(서버가 자름). */
+export const RECENT_MAX = 8;
+const RECENT_CHARS = 40;
 
-/** 서버: 앱이 보낸 수업 소재를 읽는다 — 모르는 꼴은 버린다(없는 것으로). */
-export function readLesson(raw: unknown): LessonRequest | undefined {
-  if (!raw || typeof raw !== "object") return undefined;
-  const one = raw as Record<string, unknown>;
-  const text = (value: unknown) => (typeof value === "string" ? value.trim().slice(0, LESSON_MAX_CHARS) : "");
-  const words = (value: unknown) =>
-    Array.isArray(value) ? value.map(text).filter(Boolean).slice(0, 3) : [];
-  const pattern = text(one.pattern);
-  const step = one.step;
-  if (!pattern || (step !== "show" && step !== "draw" && step !== "move" && step !== "ask")) return undefined;
-  const next = one.next && typeof one.next === "object" ? (one.next as Record<string, unknown>) : null;
-  const nextPattern = next ? text(next.pattern) : "";
-  return {
-    pattern,
-    meaning: text(one.meaning),
-    words: words(one.words),
-    step,
-    ...(one.asked === true ? { asked: true } : {}),
-    ...(one.open === true ? { open: true } : {}),
-    ...(one.skip === true ? { skip: true } : {}),
-    ...(one.review === "missed" || one.review === "right" || one.review === "undone" ? { review: one.review } : {}),
-    ...(next && nextPattern ? { next: { pattern: nextPattern, meaning: text(next.meaning), words: words(next.words) } } : {}),
-  };
+/** 서버: 앱이 보낸 요즘 배운 것을 읽는다 — 글이 아닌 것은 버리고 개수·길이를 자른다. */
+export function readRecent(raw: unknown): string[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  const list = raw.filter((one): one is string => typeof one === "string").map((one) => one.trim().slice(0, RECENT_CHARS)).filter(Boolean);
+  const unique = [...new Set(list)].slice(0, RECENT_MAX);
+  return unique.length ? unique : undefined;
 }
 
 /** aim·aimCheck 글 길이 상한(서버가 자름). */
@@ -355,8 +323,6 @@ export type Direction = {
   aim?: AimResult;
   /** 스무고개: 이 차례에 판이 끝남(맞힘·스무 번) — 앱이 다음 답을 고른다(callGames.ts). */
   round?: "over";
-  /** 수업 소재: 학습자가 다른 걸 하자고 함(또는 물어본 뒤 좋다고 함) — 앱이 다음 소재로(lessonPlan.ts advanceRun). */
-  move?: true;
 };
 
 export type { Heard, Lead, LeadHow };
@@ -578,21 +544,16 @@ export function isCoaching(request: Pick<DirectorRequest, "coach">, scenario: Pi
   return Boolean(request.coach && scenario.openEnded);
 }
 
-export function coachRules(target: string, native: string, bilingual: boolean, lessonPattern = ""): string {
-  return `How you tutor:${
-    lessonPattern
-      ? `
-- First, the one exception: the lesson pattern "${lessonPattern}" (see "Today's lesson point") is never corrected, drilled or graded. A mistake in it — a wrong form inside it counts — or not using it is answered only by saying it back the right way inside your reply, as conversation. "note", "better", "meant", "retry" and "offer" stay empty for it, and you never ask them to say it again. When they use it, no word that grades it (right, correct, good) — just answer.`
-      : ""
-  }
+export function coachRules(target: string, native: string, bilingual: boolean): string {
+  return `How you tutor:
 - They speak ${native} and you understand it completely. They may say anything in ${native}, or mix it into ${target}, at any time.
-- Pick up only big mistakes: the ones that change or blur what they mean, or that any listener would notice at once — the wrong time (tense), a word that means something else, words in an order that does not work, a missing word the sentence needs, ${native} in the middle of a ${target} sentence. Let everything else go: a small ending or article (as likely the speech recogniser's doing as theirs), informal speech, answering in a fragment, pronunciation. A turn without a big mistake is just conversation.
-- A turn with a big mistake is three spoken beats and nothing else, in this order: (1) point out what was wrong in one short phrase in ${native} — name the mistake (the time, the word, the order, the missing word), the same words as "note", said out loud; (2) their whole sentence said right, once, in ${target}, in your own manner — your rhythm and everyday wording, still at the speech level they use with you — spoken as your own line, never wrapped in quotation marks or read out as a cited example; the words stay their sentence put right, not a different story of yours; (3) ask them to say it again in a few words of ${target}, in that same manner: a short nudge rather than a polite set phrase, and not in ${native}. Ask no new question. Do not react to what they told you, and do not use a ready line. Leave "open" and "follow" empty. Put the right sentence alone in "better" ("meant" when it had to be rebuilt from what they were trying to say) and set "retry" to "ask". Change only the words that are wrong: every other word, and every sentence of their turn that was already right, stays exactly as they said it (do not drop a pronoun, swap a word for one you like better or tidy the punctuation) — leave out of "better" any sentence that had no mistake. Do not put the corrected sentence in "note".
+- Pick up mistakes and awkward wording: a mistake changes or blurs what they mean, or any listener would notice it at once — the wrong time (tense), a word that means something else, words in an order that does not work, a missing word the sentence needs, ${native} in the middle of a ${target} sentence; awkward wording is understandable but something a person who grew up with ${target} would clearly never say that way. Let everything else go: a small ending or article (as likely the speech recogniser's doing as theirs), informal speech, answering in a fragment, pronunciation, another wording that is only as good. A turn with neither is just conversation.
+- A turn with a mistake or awkward wording is three spoken beats and nothing else, in this order: (1) point out what was wrong in one short phrase in ${native} — name the mistake (the time, the word, the order, the missing word), or say that it sounds unnatural, the same words as "note", said out loud; (2) their whole sentence said right, once, in ${target}, in your own manner — your rhythm and everyday wording, still at the speech level they use with you — spoken as your own line, never wrapped in quotation marks or read out as a cited example; the words stay their sentence put right, not a different story of yours; (3) ask them to say it again in a few words of ${target}, in that same manner: a short nudge rather than a polite set phrase, and not in ${native}. Ask no new question. Do not react to what they told you, and do not use a ready line. Leave "open" and "follow" empty. Put the right sentence alone in "better" ("meant" when it had to be rebuilt from what they were trying to say) and set "retry" to "ask". Change only the words that are wrong: every other word, and every sentence of their turn that was already right, stays exactly as they said it (do not drop a pronoun, swap a word for one you like better or tidy the punctuation) — leave out of "better" any sentence that had no mistake. Do not put the corrected sentence in "note".
 - On the turn after you asked: if they said it right, small slips allowed, set "retry" to "pass", praise it in a word or two and carry the conversation on with a question. If not, set "retry" to "miss", say the right sentence once more — shorter if you can, still in your own manner — and ask once more in a few words of ${target}. Never ask a third time for the same sentence: after a second miss, tell them it is fine and carry on. If they said something else instead of repeating it, leave "retry" empty and carry on.
 - When they say a whole sentence in ${native}: a few words to show you understood, then the ${target} sentence for exactly what they said, and have them say it ("meant", "retry": "ask") — even when you understood it perfectly. Checking back with a question is only for when you truly cannot tell what they meant.
 - When they said nothing at all (what you heard is empty): they may not have caught you, or not know how to answer — there are no buttons on their screen for this, so you check. What to do is written under "This turn".
 - When they say they do not know, or cannot say it: do not make up an answer for them. Make it easier — ask again in fewer words, offer two choices to pick from, or give the start of a sentence they can finish. Only when they asked how to say something in particular, hand them that sentence to say.
-- Now and then, never right after a correction and no more than once in three turns, when they got through fine but a much more natural everyday way exists, offer it and ask them to try it: that sentence goes in "better", with "retry" set to "ask" and "offer" set to true (it is not a correction: what they said was fine).
+- For awkward wording (nothing wrong, only unnatural), put the natural sentence in "better" and set "offer" to true as well — it is not a mistake.
 - ${
     bilingual
       ? `You may say up to one short sentence in ${native} in a turn — comfort, or what the correction is about — never small talk or a question in ${native}.`
@@ -851,9 +812,9 @@ export function redoFormSlip(redo: string, heard: string): boolean {
 }
 
 /** 통화 첫 마디(학습자가 아직 아무 말도 안 함) — 침묵 차례가 아니다(수업 첫 마디에 "들렸어요?"가 붙던 것, 2026-11-12). */
-export function openingTurn(request: Pick<DirectorRequest, "history" | "studyOpen" | "lesson">): boolean {
+export function openingTurn(request: Pick<DirectorRequest, "history" | "studyOpen">): boolean {
   // 첫 질문 뒤의 침묵은 침묵 차례다 — 튜터 말이 하나도 없을 때만 첫 마디(변경 감시 리뷰 2026-11-12). ⏭(skip)도 침묵이 아니다.
-  return Boolean(request.studyOpen || request.lesson?.open || request.lesson?.skip) || request.history.length === 0;
+  return Boolean(request.studyOpen) || request.history.length === 0;
 }
 
 export const CAUGHT_IT: Partial<Record<string, string>> = {
@@ -939,7 +900,7 @@ ${scenario.openEnded && !coaching ? `- When what they just said had a mistake, l
 ${
   coaching
     ? `- One or two short sentences.
-${coachRules(target, native, Boolean(request.bilingual && request.nativeLanguage !== request.targetLanguage), request.lesson?.pattern)}`
+${coachRules(target, native, Boolean(request.bilingual && request.nativeLanguage !== request.targetLanguage))}`
     : scenario.openEnded
       ? `- One or two short sentences. They chose free conversation for this call, so what you say out loud is only the conversation. Never correct a sentence out loud, never ask them to repeat it, and never mention practice, mistakes or a lesson.
 - Corrections are written, never spoken: they appear on their screen while you keep talking. "better" is their own last sentence put right — only when it has a real mistake: grammar, a wrong form, a word that is wrong for what they meant. Change only the words that are wrong: every other word, and every sentence of their turn that was already right, stays exactly as they said it (do not drop a pronoun, swap a word for one you like better or tidy the punctuation) — leave out of "better" any sentence that had no mistake. "meant" is for a sentence too broken to just put right: write what they were trying to say, as a ${target} speaker would. Fill "better" or "meant", never both, and never refer to them in what you say.
@@ -954,7 +915,7 @@ ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bi
 `}
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", ${request.game === "teach" ? `"slip_right": "<the correct ${native} sentence you are about to break, or empty on a turn you only ask a question>", "slip": "<what you broke in it, in a few ${target} words, or empty>", ` : ""}"say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false${request.game === "twenty" ? `, "round": "over" | ""` : ""}${request.lesson ? `, "move": true | false` : ""}}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", ${request.game === "teach" ? `"slip_right": "<the correct ${native} sentence you are about to break, or empty on a turn you only ask a question>", "slip": "<what you broke in it, in a few ${target} words, or empty>", ` : ""}"say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false${request.game === "twenty" ? `, "round": "over" | ""` : ""}}
 ${MEASURE_RULES(Boolean(scenario.openEnded), target, native)}
 ${
   coaching
@@ -1071,8 +1032,10 @@ Do it inside the conversation, in your own manner. Never say this out loud, neve
         ? `This turn: they have said nothing for ${request.silent} turns in a row. Do not ask whether they heard you again. Give a hint: say out loud the start of a sentence in ${target} that answers your last question, stopping where their own words would go, and invite them to finish it — in ${target}, at most a few words of ${native}. Put that same start in "note". "assessment" is "stuck".`
         : `This turn: they said nothing. Say only your last question again, in fewer and easier words of ${target} — nothing in ${native}, and do not ask whether they heard you: the app says that first, in their language. "assessment" is "stuck".`
       : "",
-    request.lesson ? lessonRules(request.lesson, request.heard.trim() !== "") : "",
-    !request.lesson && request.study?.trim()
+    isCoaching(request, scenario) && request.recent?.length
+      ? `Words and expressions they studied recently, for you only: ${request.recent.join(", ")}. Steer the conversation toward things where a few of them fit naturally, and use them yourself when they fit. Never quiz them, point them out, name them as practice or ask them to use one — it is just conversation.`
+      : "",
+    request.study?.trim()
       ? request.studyOpen
         ? `They have not spoken yet. They chose to study. Their weak point from their record is "${request.study.trim()}". Your line names that point and says today you will work on it, in your own manner. One or two short sentences. Leave "note", "better", "meant", "smoother" and "retry" empty. Do not correct anything and do not ask them to repeat a sentence.`
         : `Their weak point from their record is "${request.study.trim()}". Keep this conversation on that point.`
@@ -1108,9 +1071,7 @@ export function tutorMessages(
     role: "user",
     content: request.missed
       ? "(they did not catch what you just said)"
-      : request.heard.trim() ||
-        // ⏭: 침묵이 아니라 다음 소재로 가자는 것 — "(silence)"로 보내면 튜터가 "들렸어요?"·같은 질문을 다시 함(운영 2026-11-13).
-        (request.lesson?.skip ? "(they tapped the button to move on to something new — not silence)" : "(silence — they have not said anything)"),
+      : request.heard.trim() || "(silence — they have not said anything)",
   });
   return messages;
 }
@@ -1249,7 +1210,6 @@ export function parseDirection(
     fn?: unknown;
     native?: unknown;
     aim?: unknown;
-    move?: unknown;
   };
 
   const assessment = ASSESSMENTS.includes(record.assessment as Assessment)
@@ -1669,110 +1629,8 @@ export function parseDirection(
     ...(retry === "ask" && better && !meant && record.offer === true ? { offer: true } : {}),
     ...turnMeasure(record, request, scenario),
     ...aimMeasure(record, request, scenario),
-    // 묻는 차례엔 move를 버리고(운영 en 2026-11-12: 묻지도 않고 move), 물은 다음 말한 차례엔 다시 말해 보기가 아니면 늘 move — 모델 판단에 맡기지 않는다(전수 점검 2026-11-14).
-    ...(request.lesson && request.heard.trim() && !request.missed && (request.lesson.step === "ask" ? request.lesson.asked && retry !== "ask" && !(retry === "miss" && !givingUp) : record.move === true) ? { move: true as const } : {}),
     ...(roundOverOf(record as { round?: unknown }, scenario.openEnded ? request.game : undefined) ? { round: "over" as const } : {}),
   };
-}
-
-/**
- * 수업 소재 지시(사용자 2026-11-12): 틀은 판정하지 않고 되받기, 큰 실수는 수업 교정 그대로(B안).
- * 단계는 앱이 정한다 — 모델은 그 단계의 일만, 그리고 "move"(다른 걸 하자/좋다)만 알려 준다.
- */
-export function lessonRules(lesson: LessonRequest, spoke: boolean): string {
-  const words = lesson.words.length ? ` Words that fit it: ${lesson.words.join(", ")}.` : "";
-  const head = `Today's lesson point, for you only: the pattern "${lesson.pattern}" (${lesson.meaning}).${words} Never explain it, name it as grammar or show it as a rule — it lives only in the conversation.`;
-  const recast = `This point is never corrected — it overrides "How you tutor" for it. If their turn could have used this pattern and did not, or got any part of the pattern wrong (a wrong form inside it counts): do not point it out, do not ask them to say it again, and leave "note", "better", "meant" and "retry" empty for it — instead, in your reply, say back what they meant using the pattern, naturally, as part of the conversation (the way a friend picks up your words) — as their words, clearly about them (after a word like "so", or turned to "you"), never as if it were about you — then carry on. When they do use it, do not praise or comment on it either; just answer. Only a big mistake outside the pattern is handled as "How you tutor" says.`;
-  // 다음 틀 이름은 "다른 거 해 볼까요?"를 물은 다음 차례에만 — 다른 차례에 실으면 모델이 끌려가 다음 틀을 미리 물음(P4 점검 es "¿De dónde eres?" 2026-11-13).
-  const startNext = lesson.next
-    ? `, then in the same line move to a moment where "${lesson.next.pattern}" (${lesson.next.meaning}) fits, use it yourself twice and ask one easy question`
-    : ", then simply carry on the conversation";
-  const move = `"move" is true only when their turn asks to stop this and do something else; then answer it in a few words and ask them one easy question about their day. Otherwise false.`;
-  // 첫 마디는 인사부터, ⏭는 인사 없이 바로, 말없는 차례(침묵)는 침묵 규칙("This turn")만 — 단계 지시를 붙이지 않는다.
-  const lead = lesson.open ? `They have not spoken yet. Greet them and say that this is a lesson, in one short sentence — no word on how it works or what you will practise (the screen already explains it), then ` : lesson.skip ? `They tapped to move on to something new. Drop your last question — do not repeat it, do not ask whether they heard you, no greeting and no comment on the tap — and straight away, ` : `Now `;
-  const quiet = lesson.open || lesson.skip ? ` Leave "note", "better", "meant", "smoother" and "retry" empty.` : "";
-  // 숙제 리뷰(사용자 2026-11-12 설계 5절): 첫 마디에서 지난 숙제의 그 틀로 시작 — 틀린 것·답·점수는 말하지 않는다.
-  const review =
-    (lesson.open || lesson.skip) && lesson.review
-      ? {
-          missed: `This pattern was in their homework from last time, and they got it wrong there. Do not mention the mistake, the answer or a score — just bring the pattern back. `,
-          undone: `This pattern was in their homework from last time, and they have not done it yet. Mention the homework once, in a few words and with no blame, then do it with them by talking. `,
-          right: `They did their homework on this pattern well last time — say so in a few words. `,
-        }[lesson.review]
-      : "";
-  const opening = lesson.open || lesson.skip;
-  const silent = !spoke && !lesson.open && !lesson.skip;
-  const step = (() => {
-    if (silent) return "";
-    switch (lesson.step) {
-      case "show":
-        return `${review}${lead}move the conversation to a moment from your own life where this pattern fits and use it yourself twice — two true, natural sentences about you, with something different in the blank each time (never a word that makes the sentence odd) — then ask them one easy question that they could answer with the same pattern.${quiet}`;
-      case "draw":
-        return `${review}${lead}ask one question that they can only answer well with this pattern — about the thing that fills the blank, in their own life or one of the words. If they have already told you that, never ask for it again, not even in another setting ("at work", "to someone new") — ask about a different thing that can fill the same blank (one of the words, or someone or something else in their life). A question about their day, their weekend or anything the pattern does not answer is wrong on this turn.${quiet}`;
-      case "move":
-        return `${review}${opening ? lead : "They have used it once. Now "}take the conversation to a different situation where the same pattern fits — another place, time or occasion in their own life — and ask them about the blank again, so that their natural answer is the pattern exactly as written (same words around the blank, about themselves), only with a new word in the blank. Not a question about someone else or about anything else.${quiet}`;
-      case "ask":
-        return lesson.asked
-          ? // 물은 다음 말한 차례는 앱이 넘긴다 — 모델은 묻기도 move도 자주 빠뜨림(전수 점검 2026-11-13·14: 묻지 않고 내용 질문, "좋아요"에도 move 꺼짐).
-            `The lesson moves on to the next point now, whatever they said. React to their turn in a few words${startNext}. Do not ask again whether to move on. Only if this turn corrects a big mistake ("How you tutor"), do just that — the move waits.`
-          : `They have used it twice. React to their turn in a few words, with no question of your own, then end your line by asking once, in your own words, whether they want to try something new — that is the only question in this turn. "move" is false on this turn.`;
-    }
-  })();
-  // move 줄(다음 틀 이름이 들어 있음)은 학습자가 말한 차례에만 — 첫 마디·⏭에 붙으면 모델이 다음 틀로 건너뜀(운영 es·en 2026-11-13).
-  return [head, recast, step, lesson.step === "ask" || !spoke ? "" : move].filter(Boolean).join("\n");
-}
-
-/**
- * 튜터가 수업 틀을 고쳐 버렸나(운영 es·en 2026-11-12 — 지시만으로는 "Me llama" → 다시 말해 보기가 남음).
- * 학습자 말에는 틀이 없고 고친 문장에는 있으면, 그 고침은 틀에 대한 것이다. 틀 밖 큰 실수(학습자 말에 틀이 있음)는 그대로(B안).
- */
-export function lessonDrilled(request: Pick<DirectorRequest, "lesson" | "heard" | "missed">, direction: Pick<Direction, "better" | "meant" | "retry" | "offer">): boolean {
-  const pattern = request.lesson?.pattern;
-  const heard = request.heard.trim();
-  if (!pattern || !heard || request.missed) return false;
-  const fixed = (direction.meant || direction.better || "").trim();
-  if (!fixed) return false;
-  return frameUsed(pattern, fixed) && !frameUsed(pattern, heard);
-}
-
-/** 다시 쓴 줄도 여전히 틀을 짚나 — 처음 줄의 짚는 말(note)을 그대로 말하거나 다시 말해 보기를 시킴(P4 점검 en "My name are" 2026-11-13: 교정 칸은 비웠는데 말로 "Say it again"). */
-export function stillDrilled(first: Pick<Direction, "note">, redone: Pick<Direction, "say" | "retry">, languages?: { native: string; target: string }): boolean {
-  if (redone.retry === "ask") return true;
-  const note = (first.note ?? "").trim();
-  const said = "text" in redone.say ? redone.say.text : "";
-  if (note.length >= 2 && said.includes(note)) return true;
-  // 짚는 말은 앱 언어로 나온다 — 글자가 다른 앱 언어의 글자가 섞였으면 말로 짚은 것(되받기 줄엔 앱 언어가 없음, 운영 en/ko "주어와 동사가 맞지 않아요").
-  // 한자는 일본어 줄에도 있다 — 중국어 앱으로 일본어를 배우면 가르지 않는다.
-  const script = languages && !(languages.native === "zh" && languages.target === "ja") ? NATIVE_SCRIPT[languages.native] : undefined;
-  return Boolean(script && languages && NATIVE_SCRIPT[languages.target] !== script && script.test(said));
-}
-
-/** 앱 언어의 글자(라틴이 아닌 것만 — 라틴끼리는 가르지 못함). */
-const NATIVE_SCRIPT: Partial<Record<string, RegExp>> = {
-  ko: /\p{Script=Hangul}/u,
-  ja: /[\p{Script=Hiragana}\p{Script=Katakana}]/u,
-  zh: /\p{Script=Han}/u,
-  ar: /\p{Script=Arabic}/u,
-  th: /\p{Script=Thai}/u,
-  hi: /\p{Script=Devanagari}/u,
-  ru: /\p{Script=Cyrillic}/u,
-};
-
-/** 고쳐 버린 차례를 다시 쓰게 하는 한 줄(같은 대화 뒤에 붙임). */
-export function lessonRedoPrompt(pattern: string): string {
-  return `Your answer above corrected the lesson pattern "${pattern}". That is not allowed. Write this turn again, as the same JSON: "note", "better", "meant", "smoother" and "retry" empty and "offer" false. In "say": no word about a mistake in any language, no "say it again" — say back what they meant using the pattern, naturally, as part of the conversation, then carry on with a question.`;
-}
-
-/** 다시 써도 고쳐 버렸으면: 고친 칸을 다 비우고 고친 문장만 말한다(대화가 끊기지 않게, 드묾). */
-export function undrilled(direction: Direction): Direction {
-  const fixed = (direction.meant || direction.better || "").trim();
-  const rest = { ...direction };
-  delete rest.better;
-  delete rest.meant;
-  delete rest.retry;
-  delete rest.offer;
-  delete rest.smoother;
-  return { ...rest, note: "", say: fixed ? { text: fixed } : direction.say };
 }
 
 /** 자유대화 채우기 측정 읽기: aimCheck를 보낸 그냥 대화 차례에서만, 학습자 말이 있을 때만. 모르는 값은 버린다. */

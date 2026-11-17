@@ -48,14 +48,14 @@
 
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
-| 통화 모드 설명 | 통화 중 맨 위 모드 이름 ⓘ → 설명창(튜터가 하는 것 · 내가 하는 것 · 끝나면, 세 줄) — 그 모드를 처음 열면 한 번 저절로(callModeSeen.v1 이 폰), 튜터 첫 마디도 모드를 말함(수업·가르치기·게임) | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` |  |
+| 통화 모드 설명 | 통화 중 맨 위 모드 이름 ⓘ → 설명창(튜터가 하는 것 · 내가 하는 것 · 끝나면, 세 줄) — 그 모드를 처음 열면 한 번 저절로(callModeSeen.v1 이 폰), 튜터 첫 마디도 모드를 말함(가르치기·게임) | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` |  |
 | 자유대화 `callModeTalk` | 📞 — 고르기 없이 인사, 고친 말은 내 얼굴 아래 카드로(말로 안 짚음) | 3 AI · 4 사람 | `components/CallHost.tsx` · `components/RoleplayScreen.tsx` |  |
-| 수업 `callModeStudy` | 🎓 — 수업 계획(틀 최대 셋: 보여 주기(칠판 카드) → 끌어내기 → 옮겨 쓰기, 틀은 되받기만, ⏭ 다음 틀), 큰 실수는 짚고 다시 말해 보기, 끝나면 숙제 | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/director.ts` · `lib/roleplay/lessonPlan.ts` |  |
+| 수업 `callModeStudy` | 🎓 — 틀 없이 자유대화처럼, 요즘 퀴즈로 배운 말이 나오는 화제로(튜터가 써 보이기만), 틀리거나 어색한 말은 튜터가 말로 짚고 다시 말해 보기, 끝나면 숙제 | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/director.ts` · `lib/roleplay/recentLearned.ts` | 수업 계획(틀 셋·칠판 카드·⏭ 다음 문장·숙제 리뷰) |
 | 게임 `callModeGame` | 🎲 — 스무고개(앱이 답을 들고 감독) — 게임 안 이름은 gameTwenty(스무고개) | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/callGames.ts` |  |
 | 가르치기 `gameTeach` | 🧑‍🏫 — 튜터가 내 모국어를 막 배우는 학습자를 연기, 나는 학습 언어로 설명 | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/callGames.ts` |  |
 | 통화 끝 화면 | 요약 한 줄 · 튜터 메모 · 이렇게도 말할 수 있었어요 · 전체 대본 · 통화 정리 · 이번 통화의 고쳐 씀 | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` · `components/roleplay/CallRecap.tsx` |  |
 | 이렇게도 말할 수 있었어요 `replayTitle` | 끝난 대본으로 장면 둘 — 바뀐 조각만 빈칸 → 말하기 → 한 줄 전체 | 3 AI | `components/roleplay/CallReplay.tsx` |  |
-| 숙제 `homeworkTag` | 수업 통화 끝 — [퀴즈 \| 대화](퀴즈에 다룬 틀·다음 틀 예습), 다음 수업은 숙제 리뷰로 시작, 숙제 줄은 튜터 줄·Logbank 오늘 카드 | 2 My · 3 AI · 4 사람 | `lib/roleplay/homeworkQuiz.ts` |  |
+| 숙제 `homeworkTag` | 수업 통화 끝 — [퀴즈 \| 대화](퀴즈는 짚은 말·장면 조각), 숙제 줄은 튜터 줄·Logbank 오늘 카드 | 2 My · 3 AI · 4 사람 | `lib/roleplay/homeworkQuiz.ts` |  |
 | 통화 기록 `callRecordsTitle` | 튜터 프로필 — 칩 [자유대화 \| 수업 \| 게임 \| 가르치기], 이어서 하기·돌아보기(이 폰) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/CallList.tsx` · `lib/roleplay/callStore.ts` |  |
 
 ### 친구 초대·보상
@@ -81,7 +81,7 @@
 
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
-| 첫 측정 | 학습 언어로 처음 My를 열면 — 글자 → 낱말 예/아니오 → 뜻 → 표현·문법 → 시작 단계(건너뛰기 = 1단계) | 2 My · 3 AI | `components/studyMap/FirstCheck.tsx` · `lib/curriculum/firstCheck.ts` | 단계 고르기(대화 예시) · 단계 오르내리기 시험(PlacementPlayer) · 초급·중급·고급 체크 |
+| 첫 측정 | 학습 언어로 처음 My를 열면 — 글자 → 낱말 예/아니오 → 뜻 → 표현·문법 → 시작 단계(건너뛰기 = 1단계) | 2 My | `components/studyMap/FirstCheck.tsx` · `lib/curriculum/firstCheck.ts` | 단계 고르기(대화 예시) · 단계 오르내리기 시험(PlacementPlayer) · 초급·중급·고급 체크 |
 | Logbank `logbankTitle` | My 첫 칸, 기록만 — 배운 것 표 · 학습 곡선 · 그날 세부 = 학습 타임라인(%·띠·육각형 없음) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/studyMap/Logbank.tsx` · `lib/curriculum/logLedger.ts` | 복습 칸 · 📈 실력 기록 · 이번 주 확인 · 띠·육각형 %·부족한 점 |
 | 오늘의 학습 `notebookToday` | My 맨 위 계정 카드 아래 = 오늘 타임라인 — 오늘 한 학습 시간 줄(Logbank 그날 세부와 같은 줄, 누르면 그 덩어리 세부) 뒤에 오늘 할 것 칸: ▶ Quizbank n/10(오늘 답한 서로 다른 것, 0단계면 오늘의 글자 묶음) · 숙제(있을 때) · 고른 튜터와 통화(튜터 얼굴, 누르면 튜터 프로필 — 문 넷·메모·통화 기록, 오늘 어떤 모드든 통화 한 번이면 ✓), 다 끝나면 제목 ✓ · ⏱ 오늘 분 | 1 메인 · 2 My · 3 AI | `components/studyMap/TodayCards.tsx` · `lib/curriculum/todayCards.ts` · `components/studyMap/Logbank.tsx` | 오늘 할 것(Stagebank) · 다음 추천 · 오늘 카드 셋(막힌 것·다시 학습·새로 학습·써 보기) · 📏 실력 확인(2주마다 다시 측정·Logbank 기록 표) |
 | 학습 타임라인 | Logbank 그날 세부 — 학습 시간(10분 쉼으로 끊음) → 요소별 카드 → 카드 지난 기록 | 1 메인 · 2 My · 3 AI | `lib/curriculum/studyTimeline.ts` |  |
