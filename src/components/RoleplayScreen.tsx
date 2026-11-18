@@ -1179,6 +1179,8 @@ export function RoleplayScreen({
           subtitle={timeLine ?? scenario.tutorRole}
           onClose={closeEnd}
         />
+        {/* The end screen scrolls as a whole between header and close — summary and homework used up the height and clipped the transcript pages (2026-11-18). */}
+        <div className="flex min-h-0 flex-1 flex-col overflow-y-auto [&>*]:shrink-0" data-call-end-body>
         <CallSummary
           gender={tutorGender}
           ui={ui}
@@ -1225,6 +1227,7 @@ export function RoleplayScreen({
           />
         </div>
       ) : null}
+      <div className="flex h-[70dvh] min-h-80 flex-col">
       <CallPages ui={ui}>
         {said.map((line, index) => {
           const view = learnerLineView(said, index, { showAll: true, over: true });
@@ -1261,10 +1264,12 @@ export function RoleplayScreen({
           </li>
         ) : null}
       </CallPages>
+      </div>
         {/* 끝 화면 네이티브(무료·안드로이드만, 2026-11-02 사용자 요청 — 통화 하단 광고) — 통화 도중이 아니라 끝난 뒤, 대본 장과 닫기 버튼 사이.
             새 앱 무료는 통화 시간이 없어 📞를 누르면 첫 차례에 이 화면(포인트 없음)으로 와서, 통화를 해 보려는 무료 사용자가 모두 본다. */}
         <div className="shrink-0 px-4">
           <NativeAdSlot feedId="results" slotKey="call-end" spaced />
+        </div>
         </div>
         <CallFooter ui={ui} instruction={instruction} outOfPoints={outOfPoints} onClose={closeEnd} />
       </FullScreenLayer>

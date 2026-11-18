@@ -89,7 +89,7 @@ export function CallStage({
       </p>
 
       {/* 위: AI 튜터 */}
-      <section className="flex min-h-0 flex-1 flex-col items-center justify-center-safe gap-3 overflow-y-auto px-6 py-2 text-center" data-call-tutor>
+      <section className="flex min-h-0 flex-1 flex-col items-center justify-center-safe gap-3 overflow-y-auto px-6 py-2 text-center [&>*]:shrink-0" data-call-tutor>
         <SpeakingRing speaking={speaker === "tutor"}>
           {/* Smaller face when a long caption is up, so it fits its half (2026-11-17 overlap report). */}
           <AiAvatar size={(caption?.text.length ?? 0) > 90 ? 64 : 96} language={language} gender={partner.gender} />
@@ -117,9 +117,10 @@ export function CallStage({
       <div aria-hidden className="mx-6 shrink-0 border-t border-white/10" />
 
       {/* 아래: 나 */}
-      <section className="flex min-h-0 flex-1 flex-col items-center justify-center-safe gap-3 overflow-y-auto px-6 py-2 text-center" data-call-me>
+      <section className="flex min-h-0 flex-1 flex-col items-center justify-center-safe gap-3 overflow-y-auto px-6 py-2 text-center [&>*]:shrink-0" data-call-me>
         <SpeakingRing speaking={speaker === "learner"} waiting={speaker === "listening"} tone="good">
-          <MyAvatarFace size={96} />
+          {/* Smaller own face while a correction card is up, so the card fits its half (2026-11-18 clipped card). */}
+          <MyAvatarFace size={coach ? 64 : 96} />
         </SpeakingRing>
         {speaker === "listening" ? (
           <div className="flex h-6 items-end justify-center" aria-hidden>
