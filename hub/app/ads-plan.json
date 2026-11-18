@@ -1,11 +1,61 @@
 [
  {
+  "kind": "move",
+  "what": "숙제 끝 전면(homeworkEnd)을 통화 끝 화면 안에서는 안 띄우기 — 숙제 화면(HomeworkSheet)·돌아보기(RoleplayPast)에서 숙제를 다 끝내고 닫을 때만",
+  "where": "AI 통화 `call` · roleplay/CallReplay.tsx 249줄 HomeworkTabs → <SceneChips … homework /> ／ 280~284줄 closeScene maybeShowInterstitial('homeworkEnd') ／ RoleplayScreen.tsx 1089줄 <CallReplay homework={hadFix(said)}> · 986줄 closeEnd callEnd",
+  "why": "같은 흐름에 전면 두 번(보는 것 3)·끝 화면 안 흐름 한가운데(보는 것 1). 순간 설명(ads-facts homeworkEnd '통화 끝 화면 안 장면은 없음')과 SceneChips 주석('통화 끝 화면의 장면은 통화 끝 전면과 같은 흐름이라 없음')은 끝 화면 안을 빼라고 하는데, HomeworkTabs는 끝 화면 몸통에서든 숙제 화면에서든 SceneChips에 늘 homework를 넘김 — 끝 화면에서 숙제 퀴즈를 하고(또는 퀴즈가 없고) 대화 시뮬레이션을 끝까지 하고 닫으면 끝 화면 위에서 homeworkEnd 전면, 이어 끝 화면을 ✕로 닫으면 callEnd 전면(간격 3분만 막음). 이번 범위 4af2344에서 숙제가 수업 통화(lesson)에서 '코치가 하나라도 고친 모든 통화'(hadFix)로 넓어져 이 겹침이 통화 대부분으로 번짐. 고치는 법: HomeworkTabs에 inSheet(숙제 화면·돌아보기에서 열 때만 true)를 받아 SceneChips homework로 넘김 — 끝 화면 안 장면은 callEnd 하나로.",
+  "appBuild": true,
+  "basis": "diff 이번 범위 e4cec198..c115e6c1: CallReplay.tsx lesson → homework(hadFix) 이름만 바꿈, 249줄 homework 그대로 · 283줄 조건 그대로 · RoleplayScreen.tsx 1095줄 homework={hadFix(said)}(전에는 lesson 모드만). lib/ads.ts maybeShowInterstitial은 interstitialMinGapSeconds(3분)만 봄 — 끝 화면에서 퀴즈+장면을 3분 넘게 하면 두 번 다 뜸. 손익: 끝 화면 숙제를 끝까지 하는 무료 통화(쓰는 날 callEnd 0.03 × 고친 게 있음 약 0.8 × 끝 화면에서 숙제 끝냄 약 0.3 × 3분 넘김 약 0.5 ≈ 0.004)에서 두 번째 전면이 빠짐 → econ interstitial −0.004 any. 빈 공간 캡처 없음 — 코드로만 봄.",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "interstitial",
+     "perActiveDay": -0.004,
+     "when": "any"
+    }
+   ]
+  },
+  "severity": "notify",
+  "per1000Mid": -483,
+  "freePersonMid": 0
+ },
+ {
+  "kind": "model",
+  "what": "손익·광고 문서를 지금 코드에 맞추기 — 숙제가 '코치가 고친 모든 통화'로 넓어진 몫(homeworkEnd·homework-sheet·replay-end) 어림 올리기 + hub/app/ADS.md 손글 '실력 확인'·'오늘 카드 📞'·'버튼 넷' 정리",
+  "where": "scripts/sim-users/economics.json extraAds(homeworkEnd 0.007 · homework-sheet 0.01 · replay-end 0.03) ／ hub/app/ADS.md 위쪽 11·19·30·31·32줄(손글 — ads:map이 안 고침)",
+  "why": "손익 계산 빠짐(보는 것 4)·없어진 자리(보는 것 3). ① 숙제(자동으로 장면 받기·Logbank 숙제 줄·[퀴즈 | 대화])가 수업 통화만 → 코치가 하나라도 고친 통화 전부(hadFix)로 넓어졌는데 economics.json은 'homeworkEnd — 수업 숙제'(0.007)·homework-sheet(0.01)로 수업 몫만 셈. 장면은 둘 → 대화 시뮬레이션 하나(slice(0,1), kind sim)라 통화마다 replay-end는 늘지 않지만 장면을 받는 통화가 늘어 조금 늚. ② 지난번 안 그대로(미반영): ADS.md 11줄 '순간 여덟 · 📏 실력 확인 결과 닫기'(ads-facts moments 7 = modeled 7), 19줄 결과 화면 목록의 '실력 확인', 30·31줄 '오늘 카드 ▶·📞'·'오늘 카드 줄 사이' → '오늘 타임라인 할 것 칸·튜터 칸'. 이번 범위에서 더할 것: 32줄 '버튼 넷 아래'는 통화 하나가 되며 CallControls가 🙉 · 💡(막혔을 때만)라 '버튼 줄 아래'로, 11줄 '숙제 둘 다 끝내고 닫기'는 위 안(통화 끝 화면 밖)과 같이.",
+  "appBuild": false,
+  "basis": "diff 이번 범위 e4cec198..c115e6c1: CallReplay.tsx lesson → homework(hadFix) — make()·giveHomework·homeworkQuiz가 고친 통화마다 · SceneChips stored.scenes.slice(0, 1) · replay.ts kind 'sim' 하나. 자유대화·수업·게임·가르치기 문 넷 중 수업이 숙제를 주던 몫을 약 3할로 보고, 지금은 고친 통화 약 8할 → 숙제 쪽 노출 약 2.5배: homeworkEnd 0.007 → 약 0.015(+0.008 interstitial any), homework-sheet 0.01 → 0.025(+0.015 native any), replay-end 0.03 → 0.035(+0.005 native any — 장면 하나라 조금만). 무료는 맛보기 통화 평생 10분이라 숫자가 작음. ADS.md 손글은 diff에 없음(미반영). 문서·economics.json만 고치면 되어 앱 빌드 없음.",
+  "econ": {
+   "extraAds": [
+    {
+     "format": "interstitial",
+     "perActiveDay": 0.008,
+     "when": "any"
+    },
+    {
+     "format": "native",
+     "perActiveDay": 0.015,
+     "when": "any"
+    },
+    {
+     "format": "native",
+     "perActiveDay": 0.005,
+     "when": "any"
+    }
+   ]
+  },
+  "severity": "report",
+  "per1000Mid": 1893,
+  "freePersonMid": 2
+ },
+ {
   "kind": "add",
   "what": "문단 틀린 곳(P1~P4) 문제로 끝난 묶음 경계에서도 quizBreak 전면 — 10문제를 안 채웠어도(3분 간격·sinceBreak 0으로)",
   "where": "My 탭 `my` · studyMap/InlineQuiz.tsx next()(묶음 경계) ／ studyMap/Quizbank.tsx 문단 paraDue",
   "why": "콘텐츠 사이 논리적 쉼(AdMob 허용)에 전면이 빠져 있음 — 문단 문제는 묶음 끝 문제(Quizbank.tsx paraDue, 하루 2개까지)라 다 짚고 [다음]을 누르면 다음 묶음을 받는 순간이 쉼. 지금은 sinceBreak가 문제 수만 세어 첫 묶음(7 + 문단 1 = 8문제)에서는 전면이 없음. 문제 도중·답 보기 중·게이지를 누를 때는 아님. 지난번 안 그대로 — 이번 범위 9f78a86..4b0a0da에서도 InlineQuiz.tsx·Quizbank.tsx는 안 바뀜(110줄 sinceBreak >= AD_ROUND(10)만, 미반영).",
   "appBuild": true,
-  "basis": "코드(4b0a0da): InlineQuiz.tsx 21줄 AD_ROUND 10 · 110~112줄 sinceBreak >= AD_ROUND일 때만 maybeShowInterstitial('quizBreak') · 130줄 문제 하나에 +1. Quizbank.tsx 묶음 7 + 문단 1 그대로라 횟수 어림 그대로: 무료 My 쓰는 날 quizBreaksPerDay 0.8 → 1.1. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄. 이번 범위 9f78a86..4b0a0da: QuizPlayer.tsx에서 낱말 스스로 체크(KnowView, kind know)를 지움 — 보기가 안 모이는 낱말은 안 냄(quiz.ts). 묶음 문제 수가 조금 줄 수 있으나 InlineQuiz 묶음 경계·sinceBreak 셈은 그대로라 어림 그대로. 이번 범위 02390968..e4cec198: InlineQuiz.tsx·Quizbank.tsx 안 바뀜(110줄 sinceBreak >= AD_ROUND(10) 그대로, 미반영) — 바뀐 것은 통화 화면 셋(RoleplayScreen·RoleplayPast·CallParts)뿐이라 어림 그대로.",
+  "basis": "코드(4b0a0da): InlineQuiz.tsx 21줄 AD_ROUND 10 · 110~112줄 sinceBreak >= AD_ROUND일 때만 maybeShowInterstitial('quizBreak') · 130줄 문제 하나에 +1. Quizbank.tsx 묶음 7 + 문단 1 그대로라 횟수 어림 그대로: 무료 My 쓰는 날 quizBreaksPerDay 0.8 → 1.1. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄. 이번 범위 9f78a86..4b0a0da: QuizPlayer.tsx에서 낱말 스스로 체크(KnowView, kind know)를 지움 — 보기가 안 모이는 낱말은 안 냄(quiz.ts). 묶음 문제 수가 조금 줄 수 있으나 InlineQuiz 묶음 경계·sinceBreak 셈은 그대로라 어림 그대로. 이번 범위 02390968..e4cec198: InlineQuiz.tsx·Quizbank.tsx 안 바뀜(110줄 sinceBreak >= AD_ROUND(10) 그대로, 미반영) — 바뀐 것은 통화 화면 셋(RoleplayScreen·RoleplayPast·CallParts)뿐이라 어림 그대로. 이번 범위 e4cec198..c115e6c1: InlineQuiz.tsx·Quizbank.tsx 안 바뀜(21줄 AD_ROUND 10 · 110줄 sinceBreak >= AD_ROUND 그대로, 미반영) — 바뀐 것은 통화·숙제 화면이라 어림 그대로.",
   "econ": {
    "my": {
     "quizBreaksPerDay": 1.1
@@ -17,12 +67,12 @@
  },
  {
   "kind": "move",
-  "what": "통화 끝 화면 call-end 네이티브를 스크롤 몸통(data-call-end-body) 맨 끝에서 꺼내 닫기(CallFooter) 바로 위 고정 자리로 되돌리기 — 대본 장 70dvh 상자 아래로 밀려 처음 화면에서 안 보임",
-  "where": "AI 통화 `call` · RoleplayScreen.tsx 1270~1272줄 <div shrink-0 px-4><NativeAdSlot results call-end spaced/></div> ／ 1183줄 data-call-end-body 닫는 </div>(1273줄) 뒤·CallFooter(1274줄) 앞",
-  "why": "광고 자리가 새 흐름에서 거의 안 보이게 된 것(보는 것 3·0번). 이번 범위 02390968..e4cec198에서 끝 화면을 머리와 닫기 사이 한 스크롤 몸통으로 감싸며 call-end가 그 안 맨 끝(요약·튜터 메모·이렇게도 말할 수 있었어요·고쳐 씀·대본 장 h-[70dvh] min-h-80 다음)으로 들어감 — 전에는 대본 장(flex-1)과 닫기 사이 shrink-0 고정이라 끝 화면에 들어서면 늘 보였음. 대본 상자 높이가 내용과 상관없이 70dvh라 요약 한 칸만 더해도 화면 높이를 넘어 광고는 스크롤해야 닿음. 코드 주석대로 이 자리를 가장 많이 보는 사람은 포인트 없는 무료(📞 → 첫 차례에 끝 화면, 대본 한두 줄)인데, 이들은 내릴 거리가 없어 대부분 [닫기]로 나감. 고정 자리로 되돌려도 원칙 그대로(끝난 뒤 · 닫기와 my-6 띄움 · 한 화면 하나), 대본은 몸통 안 자기 상자라 다시 잘리지 않음 — 몸통 높이만 광고 자리(120px + 여백)만큼 줄어듦. 이번 변경은 원칙 위반은 아님(끝 화면 안, 버튼 옆 아님).",
+  "what": "끝 네이티브 두 곳을 처음 화면에 보이는 자리로 — 통화 끝 call-end는 스크롤 몸통(data-call-end-body) 맨 끝에서 닫기(CallFooter) 바로 위 고정으로, 사용법 guide-end는 시트 맨 끝에서 연 장(focusChapter) 넘겨 보기 아래로",
+  "where": "AI 통화 `call` · RoleplayScreen.tsx 1165~1168줄 <div shrink-0 px-4><NativeAdSlot results call-end spaced/></div> → 1169줄 몸통 닫는 </div> 뒤·1170줄 CallFooter 앞 ／ 앱 틀 `shell` · GuideSheet.tsx 713줄 guide-end → ordered.map 안 data-guide-chapter={focusChapter} 끝",
+  "why": "광고 자리가 새 흐름에서 거의 안 보이게 된 것(보는 것 3·0번) — 지난번 두 안(통화 끝·사용법 끝)을 같은 문제로 하나로 묶음, 둘 다 미반영. 통화 끝: 대본 장이 h-[70dvh] min-h-80 상자라 요약 한 칸만 있어도 call-end는 스크롤해야 닿음. 이번 범위 4af2344에서 숙제(이렇게도 말할 수 있었어요 → 숙제 [퀴즈 | 대화])가 고친 통화마다 끝 화면 몸통에 들어가 몸통이 더 길어져 더 안 보임. 사용법: 한국어 앱 장 일곱이 h-[70vh] 장면이라 guide-end는 연 장에서 화면 여러 장 아래. 둘 다 옮겨도 원칙 그대로(끝난 뒤·읽는 화면 끝 · 버튼과 한 줄 넘게 · 한 화면 하나).",
   "appBuild": true,
-  "severity": "report",
-  "basis": "diff 02390968..e4cec198 RoleplayScreen.tsx: +data-call-end-body 몸통(overflow-y-auto [&>*]:shrink-0)이 CallSummary~call-end를 감쌈, +<div h-[70dvh] min-h-80>가 CallPages를 감쌈, call-end 뒤에 몸통 닫는 </div> — 02390968에서는 CallPages 다음 shrink-0 call-end, 그다음 CallFooter(몸통 없음). NativeAdSlot.tsx: 자리는 늘 120px, 플러그인이 스크롤을 따라 옮기므로 내려야만 화면에 들어옴(followSlotMoves). 손익 계산(economics.json '통화 끝 화면(results call-end)' 0.07 any)은 자리 위치를 모르고 지금도 0.07로 셈 — 되돌려도 계산상 변화가 없어 per1000Mid는 비움(계산이 노출 위치를 못 셈). 실제 잃는 몫 어림: 끝 화면에서 끝까지 내리는 사람을 약 3할로 보면 쓰는 날 0.07 → 약 0.02(−0.05), 쓰는 날 한 달 약 10일로 한 사람 월 0.5번 — ads.mjs estimate --format=native --per-month=0.5 → 1,000명당 월 low 630 · mid 1,575 · high 2,520원(되돌리면 이만큼 되찾음). 빈 공간 캡처 없음 — 코드로만 봄(통화 끝 화면 실제 높이·첫 화면에 광고가 걸리는지는 기기 확인 필요)."
+  "basis": "이번 범위 e4cec198..c115e6c1: RoleplayScreen.tsx 1079줄 data-call-end-body 몸통 · 1126줄 h-[70dvh] · 1167줄 call-end가 몸통 안 맨 끝 그대로(미반영) · 1089~1099줄 CallReplay homework={hadFix(said)}로 숙제 칸이 고친 통화마다. GuideSheet.tsx 안 바뀜(104줄 h-[70vh] · 713줄 guide-end 그대로, 미반영 — slides.ts·slideTitles.ts는 통화 장면 문구만 바뀜). 손익 계산(economics.json call-end 0.07 · guide-end 0.05 any)은 자리 위치를 모르고 지금도 그 값으로 셈 — 옮겨도 계산상 변화가 없어 per1000Mid는 비움. 지난번 어림: call-end 되돌리면 1,000명당 월 mid 약 1,575원 되찾음(ads.mjs estimate --format=native --per-month=0.5). 빈 공간 캡처 없음 — 코드로만 봄(실제 높이는 기기 확인 필요).",
+  "severity": "report"
  },
  {
   "kind": "remove",
@@ -31,7 +81,7 @@
   "why": "넣지 않는 곳 '대화·통화 위에서 연 사전·표현 카드(above)'와 어긋남 — 같은 같이 배우기 💬 칩이 isFrameExpression이면 FrameLesson(광고 있음), 아니면 ExpressionCard(광고 없음)로 갈림. 지난번 안 그대로 — 이번 범위 9f78a86..4b0a0da에서도 FrameLesson.tsx는 안 바뀜(529·683줄 NativeAdSlot은 여전히 above를 안 봄, 미반영). 사용자 결정 거리.",
   "appBuild": true,
   "severity": "report",
-  "basis": "코드(6f32a50): ExpressionCard.tsx useContext(LayerAboveContext) · `above ? null : <NativeAdSlot sheets expression-card>` · Dictionary.tsx 같은 규칙 · FrameLesson.tsx 529·683줄은 4b0a0da에서도 above를 보지 않음(LayerAbove grep 없음). above로 여는 곳은 채팅 표현 보기 칩·사전 주석 📕(대화 줄·자막·Quizbank 답 뒤)이라, 고치면 Quizbank 답 뒤 📕에서 연 수업의 네이티브도 빠짐. 무료 한 사람 쓰는 날 0.2번 노출 감소로 어림. 빈 공간 캡처 없음 — 코드로만 봄. 이번 범위 9f78a86..4b0a0da: 수업 통화가 틀(칠판·⏭)을 빼면서 통화 정리 줄의 같이 배우기 칩(above로 여는 곳 하나)은 그대로라 노출 어림 그대로. 이번 범위 02390968..e4cec198: FrameLesson.tsx 안 바뀜(529·683줄 NativeAdSlot은 여전히 above를 안 봄, 미반영) — 통화 끝 화면이 통째로 스크롤하게 됐어도 통화 정리 줄 같이 배우기 칩(above로 여는 곳)은 그대로라 어림 그대로.",
+  "basis": "코드(6f32a50): ExpressionCard.tsx useContext(LayerAboveContext) · `above ? null : <NativeAdSlot sheets expression-card>` · Dictionary.tsx 같은 규칙 · FrameLesson.tsx 529·683줄은 4b0a0da에서도 above를 보지 않음(LayerAbove grep 없음). above로 여는 곳은 채팅 표현 보기 칩·사전 주석 📕(대화 줄·자막·Quizbank 답 뒤)이라, 고치면 Quizbank 답 뒤 📕에서 연 수업의 네이티브도 빠짐. 무료 한 사람 쓰는 날 0.2번 노출 감소로 어림. 빈 공간 캡처 없음 — 코드로만 봄. 이번 범위 9f78a86..4b0a0da: 수업 통화가 틀(칠판·⏭)을 빼면서 통화 정리 줄의 같이 배우기 칩(above로 여는 곳 하나)은 그대로라 노출 어림 그대로. 이번 범위 02390968..e4cec198: FrameLesson.tsx 안 바뀜(529·683줄 NativeAdSlot은 여전히 above를 안 봄, 미반영) — 통화 끝 화면이 통째로 스크롤하게 됐어도 통화 정리 줄 같이 배우기 칩(above로 여는 곳)은 그대로라 어림 그대로. 이번 범위 e4cec198..c115e6c1: FrameLesson.tsx 안 바뀜(529·683줄 NativeAdSlot 여전히 above 안 봄, 미반영) — 통화 정리 줄 같이 배우기 칩(above로 여는 곳)은 그대로라 어림 그대로.",
   "econ": {
    "extraAds": [
     {
@@ -45,56 +95,12 @@
   "freePersonMid": -9
  },
  {
-  "kind": "remove",
-  "what": "📏 실력 확인 지움 정리 — 코드·손익 계산은 이미 빠짐, hub/app/ADS.md 위쪽 손글 4곳만 '실력 확인'이 남음(원칙 '지금 순간 여덟'·결과 화면 목록·넣지 않는 곳 둘)",
-  "where": "hub/app/ADS.md 위쪽 11·19·30·31줄(손글 — ads:map이 안 고침)",
-  "why": "없어진 자리(보는 것 3): 순간은 일곱(ads-facts moments 7 = modeled 7, unmodeled 없음)인데 원칙 줄은 '여덟 · 📏 실력 확인 결과 닫기'라 문서와 코드가 어긋남. 지난번 안 그대로 — 이번 범위 9f78a86..4b0a0da에서도 hub/app/ADS.md 손글은 안 바뀜(11·19·30·31줄에 '실력 확인' 그대로, 미반영). 같이 고칠 것: 30·31줄 '오늘 카드 ▶·📞'·'오늘 카드 줄 사이'는 이번에 오늘의 학습이 오늘 타임라인(TodaySlot 칸 ▶ Quizbank n/10 · 숙제 · 고른 튜터와 통화 → 튜터 프로필)으로 바뀌어 📞 줄이 없어짐 — '오늘 타임라인 할 것 칸·튜터 칸'으로. 손익 변화 없음(이미 '지금'에 들어 있음).",
-  "appBuild": false,
-  "severity": "report",
-  "basis": "4b0a0da의 hub/app/ADS.md 11·19·30·31줄 그대로(diff 9f78a86..4b0a0da에 ADS.md 없음). tmp/watch/ads-facts.json moments 7개(unmodeled 없음). ADS.md 손글에는 수업 칠판·⏭·숙제 리뷰를 가리키는 줄이 없어 이번 수업 통화 변화로 고칠 줄은 더 없음. 문서만 고치면 됨. 이번 범위 02390968..e4cec198: hub/app/ADS.md 안 바뀜(11줄 '순간 여덟 · 📏 실력 확인 결과 닫기' 그대로, 미반영). ads-facts moments 7 = modeled 7 그대로."
- },
- {
-  "kind": "move",
-  "what": "사용법(?) 창 끝 네이티브(sheets guide-end)를 맨 끝에서 '연 장(focusChapter)의 넘겨 보기 아래'로 — 한국어 앱에서 장 일곱이 모두 70vh 장면이 되어 끝 자리가 연 장에서 화면 여섯~일곱 장 아래로 밀림",
-  "where": "앱 틀 `shell` · GuideSheet.tsx 713줄 guide-end ／ ordered.map 안 data-guide-chapter={focusChapter} 끝(SlideDeck ‹ › 줄 아래)",
-  "why": "광고 자리가 새 흐름에서 거의 안 보이게 된 것(보는 것 3·0번). 이번 범위 db145e3..265bc12에서 넘겨 보기 장면이 사용법 모든 장(한국어 앱)으로 넓어지고 장면 높이가 h-[70vh]로 고정됨 — 사용법은 지금 탭의 장으로 내려가 열리는데(scrollIntoView) 시트 끝 guide-end는 My 다음 장 일곱을 다 지난 맨 아래라 거의 닿지 않음. 연 장 넘겨 보기의 ‹ › 줄 아래에 한 줄 넘게 띄워(spaced) 두면 읽는 화면 끝 네이티브 원칙 그대로, 한 시트에 하나(끝 자리는 뺌), 다음 장 머리 '이 화면으로 가기' 버튼과도 한 줄 넘게 띄움. 연 장이 맨 끝 장이거나 칸 글(카드) 장(ko 밖 앱 언어)이면 지금처럼 끝에. 쓸 기능 고르기(choosing)에는 그대로 없음. 이번 범위 9f78a86..4b0a0da(slideTitles.ts에서 수업 칠판 장면 문구 call-lesson-1 \"칠판의 문장으로 말해 보세요\"를 지금 수업에 맞게 고침)에서도 장면 높이 h-[70vh]·장 일곱·713줄 guide-end 자리 그대로라 미반영 — 장면 글이 줄어 연 장이 짧아지지 않음(높이 고정).",
-  "appBuild": true,
-  "severity": "report",
-  "basis": "diff db145e3..265bc12: slides.ts ko에 ai-chat·messages·video·people·rooms·ai-call 장 더함(my는 전부터) · GuideSheet.tsx 장면 div h-[70vh] 고정 · 713줄 {!choosing ? <NativeAdSlot sheets guide-end spaced/>}는 ordered.map 뒤 그대로 · 457줄 focusChapter로 scrollIntoView. 손익 계산(economics.json '사용법(?) 창 끝 guide-end' 0.05 any)은 장 길이를 모르고 이미 0.05로 셈 — 옮기면 그 값이 실제에 가까워질 뿐 계산상 변화가 없어 per1000Mid는 비움(계산이 노출 위치를 못 셈). 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄, 그림 높이 70vh 아래 빈 띠는 확인 필요. 이번 범위 265bc12..873638b: GuideSheet.tsx는 img alt만 `${title} — ${desc}` → title(2줄), slides.ts GuideSlide에서 desc 뺌·title을 '~하세요' 한 줄로 — NativeAdSlot·maybeShowInterstitial 줄 변화 없음(104줄 h-[70vh], 713줄 guide-end 그대로). 나머지는 서버 TTS(gpt-4o-mini-tts 대비 지움)라 광고 자리와 무관. 이번 범위 9f78a86..4b0a0da: GuideSheet.tsx 안 바뀜(104줄 h-[70vh], 713줄 guide-end 그대로), slideTitles.ts 문구만. 이번 범위 02390968..e4cec198: GuideSheet.tsx 안 바뀜(104줄 h-[70vh], 713줄 guide-end 그대로, 미반영)."
- },
- {
   "kind": "add",
-  "what": "(넣지 않음 — 기록) 수업 통화의 넘어가는 시점 — 튜터가 틀리거나 어색한 말을 짚고 '다시 말해 보기'를 기다릴 때·다시 말한 뒤 대화로 돌아갈 때 전면, 요즘 배운 말로 화제를 바꿀 때 전면 · 통화 모드 설명창(CallModeInfo) 안 네이티브·닫을 때 전면",
-  "where": "AI 통화 `call` · RoleplayScreen.tsx(수업 = 자유대화와 같은 차례 흐름) ／ lib/roleplay/director.ts coachRules·recent(요즘 배운 것 lib/roleplay/recentLearned.ts) ／ roleplay/CallParts.tsx CallStage·CallControls·CallModeInfo(BodyLayer 시트, 모드마다 처음 한 번 저절로)",
-  "why": "새 UI 검토(0번·0-1번·0-2번) — 이번 범위 9f78a86..4b0a0da에서 수업 통화의 칠판 카드(CallStage board)·⏭ 다음 틀(CallControls onSkip, skipLesson)·지난 숙제 리뷰 첫 마디(lessonPlan.ts lastHomework)·틀 단계(show→draw→move→ask)가 모두 없어져 지난 기록의 그 자리들은 사라짐. 지금 수업은 자유대화와 같은 화면(튜터 얼굴·💬 자막·내 사진, CallControls 🙉만 — 💡 없음)이고 넘어가는 시점은 감독 안에만 있음: 튜터가 짚고 '다시 말해 보기'를 기다리는 차례·다시 말한 뒤(또는 다른 말을 하면 판정 없이) 대화를 잇는 차례·요즘 배운 말로 화제를 트는 차례 — 모두 실시간 음성의 말하는 차례 한가운데라 전면은 과제 도중·소리·마이크가 겹침(0-1 '통화 중 안 됨'), 화면에 버튼·칸이 새로 생기지 않아 네이티브 자리도 없음(넣지 않는 곳 'AI 통화 도중'). 모드 설명창(CallModeInfo)은 그대로 — 통화가 뒤에서 도는 중 뜨는 세 줄 시트라 안 네이티브는 [확인] 옆·통화 도중, 닫을 때 전면은 통화로 돌아가는 순간이라 안 됨. 설명창이 떠 있는 동안 아래 CallAdStrip(call-live)은 맨 위 층이 아니라 떨어짐 — 한 화면 하나 그대로. 끝 화면은 그대로(call-end 네이티브·callEnd 전면, 숙제 [퀴즈 | 대화] homework-sheet·homeworkEnd) — 숙제 퀴즈가 틀 문제·예습 대신 짚은 말·장면 조각만이 되어 문제 수가 줄 수 있지만 끝 자리·순간은 같음. 새 끝 화면·목록·층 없음.",
+  "what": "(넣지 않음 — 기록) 통화 하나·코치 띠의 넘어가는 시점(고친 말 띠가 뜰 때·따라 말해 ✓ 받을 때 전면, 띠 옆 네이티브) · 튜터 줄·튜터 프로필 📞 문 하나(누를 때 전면) · 대화 시뮬레이션 시작 · 통화 설명창 · 오늘 타임라인·튜터 프로필 시트·사용법 넘겨 보기·Logbank 칩·퀴즈 문제 화면 안",
+  "where": "AI 통화 `call` · roleplay/CallParts.tsx CallStage·CoachCardView·CallModeInfo·CallAdStrip ／ RoleplayScreen.tsx gradeRedo ／ roleplay/CallReplay.tsx ReplayPlayer ／ 대화 탭 `talk` · AiTutorRow.tsx CallDoor ／ 사람 탭 `people` · AiTutorProfile.tsx ／ CallList.tsx ／ My 탭 `my` · studyMap/TodayCards.tsx·Logbank.tsx·QuizPlayer.tsx ／ 앱 틀 `shell` · GuideSheet.tsx",
+  "why": "새 UI 검토(0번·0-1번·0-2번) — 기록용, 안 됨. 지난번 '수업 통화의 넘어가는 시점' 기록은 수업 모드가 지워져(4af2344) 대상 화면이 없어 뺌, 이번 범위 새 UI로 바꿔 적고 My·사용법 기록과 하나로 묶음. ① 코치 띠(CoachCardView — 같은 언어 짝 튜터 얼굴·이름, 소리 없음)는 통화 중 내 얼굴 아래에 고친 말을 띄우고 따라 말하면 앱이 ✓ — 띠가 뜰 때·✓ 받을 때는 실시간 음성의 말하는 차례 한가운데라 전면 안 됨(0-1 '통화 중'), 띠 옆 네이티브는 따라 말하는 칸 옆·넣지 않는 곳 'AI 통화 도중'. 통화 중 광고는 버튼 줄 아래 call-live(CallAdStrip) 하나 그대로, 띠가 뜨면 내 얼굴 96 → 64로 줄어 자리 높이는 그대로. ② AiTutorRow·AiTutorProfile·사람 탭 튜터 둘의 📞 문 하나: 누를 때 전면은 통화 들어가기 직전·행동마다(0-1), 튜터 프로필은 1:1 틀. 대화 목록은 talk-list 네이티브·배너가 이미 있음. ③ CallList는 칩 넷 → 한 목록, call-records 네이티브 그대로. ④ 대화 시뮬레이션(ReplayPlayer) 시작할 때 전면은 콘텐츠가 열린 직후, 끝 replay-end 네이티브 그대로(장면 하나라 slotKey replay-end-sim). ⑤ 통화 설명창(CallModeInfo, 모드마다 → 처음 한 번)은 통화가 뒤에서 도는 중이라 안 네이티브·닫을 때 전면 안 됨. ⑥ My·사용법(지난 기록 그대로 — 이번 범위에 TodayCards.tsx는 튜터 칸 문구만, Logbank·QuizPlayer·GuideSheet 안 바뀜): 오늘 타임라인 줄 사이·전부 ✓ 전면, 튜터 프로필 시트 끝 네이티브·닫을 때 전면, 넘겨 보기 광고 장·장 사이 네이티브, Logbank 칩·칩 수업 닫기, 퀴즈 문제 화면 안 — 누르는 줄·버튼 옆·행동마다·한 화면 하나 규칙으로 안 됨.",
   "appBuild": true,
-  "risky": true,
-  "severity": "report",
-  "econ": {
-   "extraAds": [
-    {
-     "format": "interstitial",
-     "perActiveDay": 0.03,
-     "when": "any"
-    },
-    {
-     "format": "native",
-     "perActiveDay": 0.02,
-     "when": "any"
-    }
-   ]
-  },
-  "basis": "diff 이번 범위 9f78a86..4b0a0da: CallParts.tsx board prop·data-call-board 칠판 <p>·onSkip ⏭ CallButton(lessonSkip) 지움 · RoleplayScreen.tsx keepLesson·skipLesson·lessonBoard 지움 · lessonPlan.ts lastHomework 지움 · CallReplay.tsx homeworkQuiz(language, said, scenes)만·frames 장부 기록 지움 · director.ts recent·다시 말해 보기 뒤 다른 말이면 판정 안 함 — NativeAdSlot·maybeShowInterstitial 줄 변화 없음(RoleplayScreen 1090줄 callEnd·1267줄 call-end, CallParts 503줄 call-live, CallReplay 203줄 homework-sheet·287줄 homeworkEnd·486줄 replay-end). 숫자는 기록용 — 무료는 통화가 맛보기 평생 10분뿐이라 수업 차례 사이 전면 어디서나 쓰는 날 0.03번 + 설명창 네이티브 0.02번으로 어림(지난번 칠판·⏭ 어림 자리를 그대로 옮김). 빈 공간 캡처 없음 — 통화 화면은 넣지 않는 곳이라 찍지 않음. 이번 범위 02390968..e4cec198: 통화 중 화면은 CallParts.tsx CallStage 두 칸에 [&>*]:shrink-0을 붙이고 고친 말 카드(coach)가 뜨면 내 얼굴 96 → 64로 줄인 것뿐 — 새 버튼·칸·층 없음, call-live(504줄 CallAdStrip)·callEnd(1090줄) 자리 그대로라 통화 도중 판단 그대로. 지난 통화 화면(RoleplayPast.tsx — 통화 기록에서 연 FullScreenLayer)은 머리 아래를 통째로 스크롤하게 감싸고 대본 장을 70dvh 상자에 넣음 — 광고 줄 없음(전에도 없음), 아래 통화 기록 시트의 call-records는 맨 위 층이 아니라 떨어짐; 돌아보기 끝 네이티브를 둘 수는 있으나 무료는 통화 기록이 거의 없어(call-records 쓰는 날 0.02번) 안으로 내지 않음.",
-  "per1000Mid": 4548,
-  "freePersonMid": 5
- },
- {
-  "kind": "add",
-  "what": "(넣지 않음 — 기록) 새 오늘 타임라인(오늘 학습 시간 줄·할 것 칸 사이)·전부 ✓ 순간 전면 · 오늘 칸에서 연 튜터 프로필 시트 끝 네이티브·닫을 때 전면 · 사용법 넘겨 보기 장면 사이(광고 장) · Logbank 부족한 것 칩 아래 · 같이 배우기 칩 수업을 닫을 때 전면 · 퀴즈 문제 화면 안(물음 줄 아래·뜻 줄 옆·보기 사이·게이지 아래) 네이티브·게이지 옮길 때 전면 · 사용법 장 사이마다 네이티브(장마다 하나)",
-  "where": "My 탭 `my` · studyMap/TodayCards.tsx(TodaySlot·AiTutorSheet) ／ studyMap/Logbank.tsx TodayTimeline·SessionRows·WeakChips ／ notes/NotebookSection.tsx ／ 앱 틀 `shell` · GuideSheet.tsx SlideDeck ／ 사람 탭 `people` · AiTutorProfile.tsx AiTutorSheet ／ studyMap/QuizPlayer.tsx QuestionView ／ GuideSheet.tsx ordered.map 장 사이",
-  "why": "새 UI 검토(0번·0-1번·0-2번) — 지난 범위 기록을 하나로 모음(이번 범위 db145e3..265bc12에서 TodayCards·Logbank·QuizPlayer·Quizbank·InlineQuiz는 안 바뀜). ① 오늘 타임라인은 학습 시간 줄(누르면 그날 세부 = log-sheet 네이티브가 이미 있음)과 할 것 칸이 한 선 위에 붙은 누르는 줄이라 줄 사이는 잘못 누름, 전부 ✓는 닫을 끝 화면이 없어 '갑자기'. My 바닥 칸 끝 logbank-list가 있어 한 화면 하나 규칙으로도 자리 없음. ② '고른 튜터와 통화' 칸이 여는 튜터 프로필 시트는 사람 프로필과 같은 1:1 틀(넣지 않는 곳 '1:1')이고 문 넷(통화 버튼) 바로 아래라 네이티브는 버튼 옆, 닫거나 문을 누를 때 전면은 핵심 콘텐츠 이동·통화 들어가기 직전(0-1 '통화 들어갈 때 안 됨'). 안의 통화 기록(CallList)은 이미 call-records 네이티브. ③ 사용법 넘겨 보기(SlideDeck)는 칸 칩·‹ › 버튼 사이 가로로 넘기는 그림이라 광고 장을 끼우면 넘기다 누름 — 시트 끝 guide-end(sheets) 네이티브가 deck이 있어도 그대로 붙음. ④ 칩·칩 수업 닫기는 지난 판단 그대로. ⑤ 퀴즈 문제 화면: 물음 줄 바로 아래가 입력칸(쓰는 중)·보기는 버튼·게이지 옮기기는 행동, 문제 아래 quiz-inline 네이티브가 이미 있어 한 화면 하나. ⑥ 이번 범위: 한국어 앱 사용법의 모든 장(My·AI 통화·AI 튜터·대화·영상·사람·Room)이 70vh 넘겨 보기 장면이 되어, 장 사이마다 네이티브를 두면 세로로 내리며 화면마다 광고가 바뀌는 꼴(한 시트에 같은 피드 여러 개)이고 바로 아래가 다음 장 머리 ‘이 화면으로 가기’ 버튼 — 안 됨. 장면 사이 광고 장은 ‹ › 버튼·옆 넘기기 사이라 잘못 누름. ⑦ 이번 범위 265bc12..873638b의 새·바뀐 UI(0번): 사용법 넘겨 보기 장면이 '문구 한 줄 + 스크린샷'으로 바뀜(GuideSheet.tsx alt만, 장면 그림 public/guide/ko/*.webp 다시 만듦) — 새 끝 화면·목록·층 없음, 장면 안은 그림 한 장이라 배너·네이티브를 둘 칸이 없고 장면 사이 광고 장·장 사이 네이티브는 ③·⑥ 그대로 안 됨, 넘길 때 전면은 행동마다라 안 됨. 서버 TTS 변경은 화면 없음. ⑧ 이번 범위 9f78a86..4b0a0da: My 쪽 바뀐 화면은 QuizPlayer.tsx 낱말 스스로 체크(KnowView — [알아요 | 모르겠어요] → [맞았어요 | 틀렸어요]) 지움뿐 — 문제 화면이 줄었을 뿐 새 끝 화면·목록·층 없음, 문제 아래 quiz-inline 네이티브 그대로라 ⑤ 판단 그대로.",
-  "appBuild": true,
-  "basis": "diff 638b7a9..db145e3: TodayCards.tsx TodayRow→TodaySlot·TodayTimeline, 📞 수업 줄 → tutor 칸(setProfile → AiTutorSheet) · Logbank.tsx +TodaySlot·TodayTimeline·SessionRows(그날 세부와 같은 줄) · GuideSheet.tsx +SlideDeck(snap-x, 708줄 guide-end 네이티브 그대로) — NativeAdSlot·maybeShowInterstitial 새 줄 없음, AiTutorProfile.tsx에 NativeAdSlot 없음. 빈 공간 캡처(tmp/ads-blank·tmp/sim-users) 없음 — 코드로만 봄. 숫자는 기록용: 지난번(칩 네이티브 My 0.3 + 오늘 줄 전면 My 0.3 + 칩 수업 닫기 어디서나 0.05) + 튜터 프로필 끝 네이티브 My 0.2 + 넘겨 보기 광고 장 어디서나 0.05. 퀴즈 화면 기록(diff b874bc3..638b7a9 QuizPlayer.tsx askLine, NativeAdSlot 변화 없음)은 쓰는 날 0.5번 노출로 어림해 합침. 이번 범위 db145e3..265bc12: GuideSheet.tsx SlideDeck 칸 하나면 칩 숨김·장면 h-[70vh] 고정·section→covers — NativeAdSlot·maybeShowInterstitial 줄 변화 없음(713줄 guide-end 그대로). 장 사이 네이티브는 사용법을 여는 날 0.05번 × 장 2~3개로 어림해 기존 넘겨 보기 광고 장 숫자에 0.05 더함. 이번 범위 265bc12..873638b: GuideSheet.tsx 2줄(주석·alt), slides.ts desc 뺌 — 광고 줄 변화 없음, 숫자 그대로. 이번 범위 9f78a86..4b0a0da: TodayCards·Logbank·GuideSheet·InlineQuiz·Quizbank 안 바뀜, QuizPlayer.tsx는 KnowView·askLine know 줄만 지움(NativeAdSlot·maybeShowInterstitial 줄 변화 없음) — 숫자 그대로. 이번 범위 02390968..e4cec198: TodayCards·Logbank·GuideSheet·InlineQuiz·Quizbank·QuizPlayer 안 바뀜 — 숫자 그대로.",
+  "basis": "diff 이번 범위 e4cec198..c115e6c1: CallParts.tsx CallModeKind·callModeSeen → callInfoSeen, 모드 이름 → 📞 통화 · AiTutorRow.tsx CallDoors 넷 → CallDoor 하나 · AiTutorProfile.tsx 문 넷 → 📞 · CallList.tsx 칩 지움 · callGames.ts·director.ts 수업·게임 규칙 지움 · CallReplay.tsx 장면 칩 둘 → ▶ 대화 시뮬레이션 하나 — NativeAdSlot·maybeShowInterstitial 새 줄·지운 줄 없음(CallParts 509줄 call-live · RoleplayScreen 986줄 callEnd·1167줄 call-end · CallReplay 199줄 homework-sheet·283줄 homeworkEnd·481줄 replay-end · CallList 66줄 call-records 그대로). 빈 공간 캡처 없음 — 통화 화면은 넣지 않는 곳이라 찍지 않음, My·사용법은 코드로만 봄. 숫자는 기록용: 통화 쪽 코치 띠 순간 전면 any 0.03 + 띠 옆·설명창 네이티브 any 0.02(지난 수업 통화 기록 어림을 옮김) + My·사용법 지난 기록 그대로.",
   "econ": {
    "extraAds": [
     {
@@ -126,12 +132,22 @@
      "format": "native",
      "perActiveDay": 0.05,
      "when": "any"
+    },
+    {
+     "format": "interstitial",
+     "perActiveDay": 0.03,
+     "when": "any"
+    },
+    {
+     "format": "native",
+     "perActiveDay": 0.02,
+     "when": "any"
     }
    ]
   },
-  "risky": true,
   "severity": "report",
-  "per1000Mid": 93290,
-  "freePersonMid": 96
+  "risky": true,
+  "per1000Mid": 97838,
+  "freePersonMid": 101
  }
 ]
