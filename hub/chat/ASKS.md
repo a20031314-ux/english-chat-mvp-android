@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (84)
+## 탭이 확인할 것 (87)
 
 ### 탭 1 메인
 
@@ -112,6 +112,10 @@
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `app/dev/call-preview/page.tsx` · `components/AppHome.tsx` · `components/LanguagePick.tsx` · `components/FindInMy.tsx` · `components/GuideSheet.tsx` · `components/NextStepCard.tsx` · `components/WhatsNewSheet.tsx` · `app/api/guide/route.ts` · `components/EnglishAnalysisViewer.tsx` · `components/LedgerLinks.tsx` … 76개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261119-3-4** (2026-11-19 05:21, 탭 3 · 651d28a) 체감 점검 고칠 것: 코치 띠 맞는 문장 짝짓기, 숙제 대화 빈칸 겹침, 오늘의 학습 숙제·Quizbank ✓, 문법 고르기 뜻 먼저, 뜻 고르기 정해 둔 오답, 숙제 빈칸 고르기 규칙
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/FindInMy.tsx` · `components/LanguagePick.tsx` · `components/EnglishAnalysisViewer.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/learner/ask/route.ts` · `app/api/points/sync/route.ts` … 72개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
 
@@ -190,6 +194,10 @@
 - **a261119-1-1** (2026-11-19 03:38, 탭 1 · c115e6c) 예전 설명·기능 지움: 사용법은 장면만(노트 장·글 칸 없음), 칸 머리 ?는 사용법 장면, 아침 알림·옛 API 6개 지움, Logbank 틀린 것 카드 이름 Quizbank
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/notes/NotebookSection.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/TodayCards.tsx` · `app/api/curriculum/generate/route.ts` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/Dictionary.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/Quizbank.tsx` · `app/api/curriculum/mission-check/route.ts` … 30개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261119-3-5** (2026-11-19 05:21, 탭 3 · 651d28a) 체감 점검 고칠 것: 코치 띠 맞는 문장 짝짓기, 숙제 대화 빈칸 겹침, 오늘의 학습 숙제·Quizbank ✓, 문법 고르기 뜻 먼저, 뜻 고르기 정해 둔 오답, 숙제 빈칸 고르기 규칙
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `app/api/curriculum/typed-check/route.ts` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/notes/NotebookSection.tsx` · `app/api/curriculum/item-lesson/route.ts` · `components/studyMap/ExpressionCard.tsx` … 33개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
@@ -356,6 +364,10 @@
 - **a261119-1-3** (2026-11-19 03:38, 탭 1 · c115e6c) 예전 설명·기능 지움: 사용법은 장면만(노트 장·글 칸 없음), 칸 머리 ?는 사용법 장면, 아침 알림·옛 API 6개 지움, Logbank 틀린 것 카드 이름 Quizbank
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `app/api/icons/route.ts` · `app/api/media/route.ts` · `app/api/random/route.ts` · `app/api/rooms/fix/route.ts` · `app/api/rooms/game/route.ts` · `components/rooms/IconPacks.tsx` · `components/rooms/BoardView.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/RoomPeople.tsx` … 24개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261119-3-6** (2026-11-19 05:21, 탭 3 · 651d28a) 체감 점검 고칠 것: 코치 띠 맞는 문장 짝짓기, 숙제 대화 빈칸 겹침, 오늘의 학습 숙제·Quizbank ✓, 문법 고르기 뜻 먼저, 뜻 고르기 정해 둔 오답, 숙제 빈칸 고르기 규칙
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/AiTutorProfile.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `app/api/rooms/fix/route.ts` · `app/api/icons/route.ts` · `app/api/invite/route.ts` · `app/api/media/route.ts` · `app/api/random/route.ts` · `app/api/rooms/game/route.ts` · `components/rooms/RoomsScreen.tsx` … 25개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (11, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
