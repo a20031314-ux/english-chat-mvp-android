@@ -1,25 +1,29 @@
-languagebank decide cosa studiare ogni giorno e te lo fa dire ad alta voce. Impara una delle 14 lingue, con l'app in una delle 14 lingue.
+languagebank è un'app per imparare le lingue parlando e scrivendo con un tutor IA. Impara una delle 14 lingue in una delle 14 lingue dell'app.
 
-IL TUO PERCORSO DI OGNI GIORNO
-1. Parti dalla tua fase: leggi una breve conversazione e rispondi «Sì, ci riesco», «Quasi» o «Non ancora» per iniziare dalla fase giusta tra cinque. Scrittura nuova? Parti da lettere e suoni.
-2. Lezione del giorno: scegli 5, 10 o 20 minuti al giorno e vedi in quanti giorni finisci. «In ordine» o «In base ai miei progressi» fissa i copioni e le strutture del giorno.
-3. Parla con il copione: di' le tue battute nei copioni di situazioni con 🎤 — Ripeti, Prime lettere, Nascosto o Con parole tue. Una battuta perfetta riceve ★; se è corretta ma poco naturale ti propone un modo più naturale, e segnala le parole poco chiare. Dirlo in un altro modo corretto vale lo stesso, e puoi riprendere da dove avevi lasciato nello stesso giorno.
-4. Cambia nella struttura della frase: ripeti una struttura più volte cambiando solo le parole.
-5. Ripasso: alla fine del copione segna ogni espressione «Lo so» o «Non sono sicuro». Ciò che non è chiaro e le battute sbagliate tornano come breve quiz dopo 2 e 7 giorni, e si raccolgono in cima a Io, in «Cosa hai sbagliato l'ultima volta». Con il «Promemoria del mattino» compaiono sulla schermata di blocco.
-6. Pratica continua: dopo la lezione del giorno scegli Ripasso, Casuale, Vocabolario, Grammatica o Espressioni e tocca ▶ Continua a studiare per un breve quiz che mescola spazi vuoti, ordine delle parole, ascolto e parlato.
-7. Cosa hai imparato oggi: strutture, grammatica e parole del giorno, ognuna con il copione e la frase da cui viene.
+Impara con un tutor IA
+• Parlare: chiama il tutor e parla liberamente. Le correzioni compaiono in una scheda sotto il tuo volto.
+• Lezione: il tutor mostra una struttura alla lavagna e ti fa usarla. Gli errori importanti vengono segnalati perché tu possa ripetere. Alla fine arriva un compito.
+• Gioco e Insegnami: gioca a Venti domande o spiega le cose a un tutor che impara la tua lingua.
+• Chat: le frasi corrette compaiono subito. Se ti blocchi, scrivi nella tua lingua e il tutor continua in quella che stai imparando.
 
-USALO NELLE CONVERSAZIONI
-• Chat con il tutor IA: parla come con un amico, vengono corretti solo gli errori. Bloccato? Scrivi in italiano e il tutor continua nella lingua che studi; «Vedi come si dice» mostra la frase che volevi. Se usi da solo un'espressione che hai segnato, la riga mostra «Usato di nuovo».
-• Chiamate IA: parla ad alta voce. Anche se viene male, il tutor trova cosa volevi dire, e poi puoi rivederla.
-• Analisi della frase: in qualsiasi frase scegli solo la parte che non capisci e chiedi cosa significa.
-• Video: video veri divisi in frasi da riascoltare e chiedere.
+Quiz di ogni tipo (Quizbank)
+• Scegliere, significato, trovare l'errore e scrivere la frase, in un unico flusso.
+• Diventa più difficile quando rispondi bene, e ciò che hai sbagliato o che ti ha bloccato in conversazione ritorna.
+• Puoi renderlo più facile o più difficile tu stesso.
 
-IMPARA CON ALTRE PERSONE
-• Nelle Stanze parla a voce con chi impara la stessa lingua, con sottotitoli in diretta, e continua in gruppo o in messaggi privati.
+Tutte le parole da imparare, in un posto (Languagebank)
+• Sfoglia parole, espressioni e grammatica per tipo e livello, e impara ogni gruppo con un quiz o una conversazione.
+• Gira le schede per memorizzare significati, parole ed esempi.
 
-NIENTE PUNTEGGI DI LIVELLO
-• Ogni frase riceve i suoi errori e le sue lacune; il tuo storico decide cosa viene dopo.
+Quello che impari si accumula (Logbank)
+• Una curva di apprendimento mostra, giorno per giorno, cosa hai studiato nei quiz e cosa hai usato parlando.
+• Rivedi cosa hai fatto ogni giorno, ora per ora.
 
-PREZZI
-• I copioni per fase sono gratis (con pubblicità). Il piano «Copioni» aggiunge chiamate brevi e chat; Lite, Plus e Premium tolgono la pubblicità e danno più chat e minuti di chiamata al giorno.
+Impara con altre persone
+• Entra in contatto con chi impara la stessa lingua tramite profili, bacheca e messaggi, e parla a voce in una Stanza.
+
+Per iniziare
+• Al primo avvio un breve test fissa il tuo livello di partenza. Non ci sono punteggi di livello.
+
+Prezzi
+• Quizbank, Languagebank e le lezioni sono gratis (con pubblicità). Prova 10 minuti di chiamata e 10 messaggi; Lite, Plus e Premium tolgono la pubblicità e aggiungono tempo di chiamata e messaggi ogni giorno.

@@ -9,7 +9,7 @@
  * 이 참고 소리의 어조·빠르기·결을 흉내 내는 것이 캐릭터 목소리의 전부다(원가 그대로).
  *
  * 쓰는 법(목소리 표 `chatPartner.ts`·캐릭터 `tutorPersona.ts`가 바뀌었을 때만): node --experimental-strip-types scripts/voice-refs.mjs
- * → 운영 /api/tts를 지시를 받는 엔진으로 강제(점검 머리글, 기본 speech = gpt-4o-mini-tts, `VOICE_REF_ENGINE=realtime`)해 읽히고
+ * → 운영 /api/tts를 지시를 받는 Realtime 엔진으로 강제(점검 머리글 x-tts-engine: realtime)해 읽히고
  * src/lib/server/voiceRefs.generated.ts에 base64로 쓴다. `VOICE_REF_OUT=<폴더>`면 mp3도 남긴다(들어보기 페이지용).
  */
 import fs from "node:fs";
@@ -21,7 +21,7 @@ const { tutorVoice } = await import("../src/lib/chatPartner.ts");
 const { learningLanguageSpeechTag } = await import("../src/lib/learningLanguages.ts");
 const { VOXTRAL_LANGUAGES } = await import("../src/lib/server/voxtralLanguages.ts");
 const { tutorPersona } = await import("../src/lib/tutorPersona.ts");
-const ENGINE = process.env.VOICE_REF_ENGINE || "speech";
+const ENGINE = "realtime";
 const KEEP = process.env.VOICE_REF_OUT || "";
 
 // 튜터가 자기 얘기를 하는 평범한 두 문장(받아쓰기로 확인한 글). 성별에 따라 꼴이 바뀌는 말(hi 등)은 남자 꼴이어도 목소리만 쓴다.

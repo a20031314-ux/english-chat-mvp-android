@@ -6,19 +6,14 @@ import { EXTERNAL_STT_MODELS } from "./sttProviders.ts";
 /**
  * 음성 모델(받아쓰기·읽어 주기)을 한곳에서 고른다.
  *
- * OpenAI가 지금 쓰는 음성 모델을 모두 끝낸다(공식 종료 표, 2026-10-21 확인):
- * - gpt-4o-mini-tts·tts-1 → 2027-01-06, 대체는 Realtime API의 gpt-realtime-2.1-mini(같은 /v1/audio/speech로는 안 됨)
- * - gpt-4o-mini-transcribe·gpt-4o-transcribe·whisper-1 → 2027-02-26, 대체는 gpt-transcribe(파일)·gpt-live-transcribe(실시간)
- * 기본값(2026-10-27 교체): 한 마디·영상 받아쓰기 Scribe v2, 목소리 realtime(gpt-realtime-2.1-mini). Vercel 값이 있으면 그것이 먼저.
+ * 기본값: 한 마디·영상 받아쓰기 Scribe v2(실패하면 gpt-transcribe), 목소리 Voxtral(id·th 빼고) → 실패하면 Realtime(gpt-realtime-2.1-mini).
+ * Vercel 값이 있으면 그것이 먼저. (gpt-4o-mini-transcribe·gpt-4o-transcribe·whisper-1은 2027-02-26 종료 — 점검 비교용으로만 남음.)
  *
  * 점검 사용자(x-rc-user: simcheck-…)만 머리글로 다른 모델을 골라 볼 수 있다 — 실제 사용자는 언제나 기본값.
  */
 
 /** 점검에서 골라 볼 수 있는 받아쓰기 모델. 목록 밖의 이름은 무시한다. */
 export const TRANSCRIBE_TRIAL_MODELS = ["gpt-4o-mini-transcribe", "gpt-4o-transcribe", "gpt-transcribe", "scribe_v2", "assemblyai-sync"] as const;
-/** 읽어 주기 방식: speech = /v1/audio/speech(gpt-4o-mini-tts), realtime = Realtime API로 그대로 읽게. */
-export const TTS_ENGINES = ["speech", "realtime"] as const;
-export type TtsEngine = (typeof TTS_ENGINES)[number];
 
 function trialHeader(request: NextRequest | undefined, name: string): string {
   if (!request) return "";
@@ -71,18 +66,6 @@ export function openaiTurnTranscribeModel(): string {
  */
 export function isNextGenTranscribe(model: string): boolean {
   return /^gpt-(live-)?transcribe/.test(model);
-}
-
-export function ttsEngine(request?: NextRequest): TtsEngine {
-  const trial = trialHeader(request, "x-tts-engine");
-  if ((TTS_ENGINES as readonly string[]).includes(trial)) return trial as TtsEngine;
-  const set = process.env.TTS_ENGINE?.trim();
-  if (set === "realtime" || set === "speech") return set;
-  return SPEECH_DEFAULTS.ttsEngine;
-}
-
-export function speechTtsModel(): string {
-  return process.env.OPENAI_TTS_MODEL?.trim() || SPEECH_DEFAULTS.speechTtsModel;
 }
 
 export function realtimeTtsModel(): string {

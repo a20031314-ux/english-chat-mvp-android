@@ -1,14 +1,14 @@
 /**
- * 글을 그대로 읽어 주는 소리를 Realtime API로 만든다 — gpt-4o-mini-tts(/v1/audio/speech)가 2027-01-06에 끝나서.
+ * 글을 그대로 읽어 주는 소리를 Realtime API로 만든다 — /api/tts의 Voxtral 대비·id·th 목소리, 장면 대사 녹음(scripts/build-roleplay-audio.mjs).
  *
  * OpenAI가 권한 대체(gpt-realtime-2.1-mini)는 읽어 주기 전용이 아니라 대화 모델이다. 그래서
  * ① 지시로 "받은 글을 낱말 그대로 읽기만, 대답·번역·덧붙임 없이"를 못 박고,
  * ② 글은 사용자 말 한 줄로 넣고 답 하나만 만들게 하고,
- * ③ 읽은 말(전사)을 같이 받아, 점검에서 원문과 얼마나 같은지 잰다(`scripts/speech-trial.mjs`).
+ * ③ 읽은 말(전사)을 같이 받아, 점검에서 원문과 얼마나 같은지 잰다(점검 머리글 x-speech-trial-report).
  * 나오는 소리는 지금과 같은 24kHz 16비트 PCM이라 앱 쪽(X-TTS-Format: pcm_s16le_24k)은 그대로.
  */
 
-/** Realtime이 받는 목소리. gpt-4o-mini-tts에만 있던 셋은 가까운 목소리로. */
+/** Realtime이 받는 목소리. 장면 목소리 목록(roleplay/voices.ts) 중 Realtime에 없는 셋은 가까운 목소리로. */
 const REALTIME_VOICES = new Set(["alloy", "ash", "ballad", "coral", "echo", "sage", "shimmer", "verse", "marin", "cedar"]);
 const NEAREST: Record<string, string> = { fable: "ballad", nova: "coral", onyx: "ash" };
 

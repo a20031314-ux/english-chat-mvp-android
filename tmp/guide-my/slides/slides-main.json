@@ -1,0 +1,218 @@
+[
+  {
+    "bank": "today",
+    "id": "core",
+    "title": "오늘의 학습",
+    "desc": "오늘 할 것만 한 줄씩 — 누르면 바로 시작해요",
+    "file": "today-01-core.png",
+    "core": true,
+    "focus": {
+      "y": 195,
+      "b": 454.9375
+    }
+  },
+  {
+    "bank": "keep",
+    "id": "core",
+    "title": "Quizbank",
+    "desc": "다시 볼 것과 새 문제가 한 흐름으로 이어져요",
+    "file": "keep-01-core.png",
+    "core": true,
+    "focus": {
+      "y": 91,
+      "b": 394.9375
+    }
+  },
+  {
+    "bank": "keep",
+    "id": "gauge",
+    "title": "난이도",
+    "desc": "− · + 로 문제를 쉽게·어렵게 바꿔요",
+    "file": "keep-02-gauge.png",
+    "core": false,
+    "focus": {
+      "y": 59,
+      "b": 183.4375
+    }
+  },
+  {
+    "bank": "keep",
+    "id": "after",
+    "title": "답한 뒤",
+    "desc": "[다시]를 누르면 또 나와요 · 📕 Languagebank는 사전으로",
+    "file": "keep-03-after.png",
+    "core": false,
+    "focus": {
+      "y": 345.5,
+      "b": 497.6875
+    }
+  },
+  {
+    "bank": "keep",
+    "id": "notes",
+    "title": "📕 사전 주석",
+    "desc": "답한 뒤 문장 속 단어·표현을 누르면 사전·수업이 열려요",
+    "file": "keep-04-notes.png",
+    "core": false,
+    "focus": {
+      "y": 387.5,
+      "b": 532.1875
+    }
+  },
+  {
+    "bank": "keep",
+    "id": "word",
+    "title": "단어 문제",
+    "desc": "예문 속에서 이 단어의 뜻을 골라요",
+    "file": "keep-05-word.png",
+    "core": false,
+    "focus": {
+      "y": 91,
+      "b": 552.4375
+    }
+  },
+  {
+    "bank": "keep",
+    "id": "spot",
+    "title": "틀린 곳 찾기",
+    "desc": "문장에서 틀린 곳을 눌러 찾아요",
+    "file": "keep-06-spot.png",
+    "core": false,
+    "focus": {
+      "y": 91,
+      "b": 284.4375
+    }
+  },
+  {
+    "bank": "keep",
+    "id": "type",
+    "title": "문장 쓰기",
+    "desc": "문법·표현은 고르기 → 빈칸 → 틀린 곳 → 문장 쓰기 순서로 어려워져요",
+    "file": "keep-07-type.png",
+    "core": false,
+    "focus": {
+      "y": 91,
+      "b": 352.6875
+    }
+  },
+  {
+    "bank": "keep",
+    "id": "spots",
+    "title": "문단 틀린 곳",
+    "desc": "긴 글을 읽고 틀린 단어를 찾아요",
+    "file": "keep-08-spots.png",
+    "core": false,
+    "focus": {
+      "y": 91,
+      "b": 513.9375
+    }
+  },
+  {
+    "bank": "today",
+    "id": "quiz",
+    "title": "▶ Quizbank",
+    "desc": "오늘 10문제 답하면 ✓",
+    "file": "today-02-quiz.png",
+    "core": false,
+    "focus": {
+      "y": 235.5,
+      "b": 384.9375
+    }
+  },
+  {
+    "bank": "today",
+    "id": "lesson",
+    "title": "📞 수업",
+    "desc": "튜터와 수업 통화를 하면 ✓ — 숙제가 생기면 줄이 하나 더 생겨요",
+    "file": "today-03-lesson.png",
+    "core": false,
+    "focus": {
+      "y": 292.5,
+      "b": 463.6875
+    }
+  },
+  {
+    "bank": "log",
+    "id": "core",
+    "title": "Logbank",
+    "desc": "배운 것 — 퀴즈로 배운 수(학습) · 대화에서 쓴 수(활용)",
+    "file": "log-01-core.png",
+    "core": true,
+    "focus": {
+      "y": 174,
+      "b": 418.1875
+    }
+  },
+  {
+    "bank": "log",
+    "id": "period",
+    "title": "주 · 월",
+    "desc": "기간을 바꾸고 ‹ › 로 지난 기록을 넘겨 봐요",
+    "file": "log-02-period.png",
+    "core": false,
+    "focus": {
+      "y": 108,
+      "b": 236.4375
+    }
+  },
+  {
+    "bank": "log",
+    "id": "days",
+    "title": "날마다 한 줄",
+    "desc": "그날 학습한 수 — 누르면 그날 기록",
+    "file": "log-03-days.png",
+    "core": false,
+    "focus": {
+      "y": 305,
+      "b": 449.4375
+    }
+  },
+  {
+    "bank": "log",
+    "id": "time",
+    "title": "⏱ 학습 시간 · 📅 공부한 날",
+    "desc": "누르면 날마다 학습 시간 막대",
+    "file": "log-04-time.png",
+    "core": false,
+    "focus": {
+      "y": 362,
+      "b": 491.9375
+    }
+  },
+  {
+    "bank": "log",
+    "id": "timeline",
+    "title": "그날 학습 타임라인",
+    "desc": "언제 무엇을 했는지 시간 순서로",
+    "file": "log-05-timeline.png",
+    "core": false,
+    "focus": {
+      "y": 58.5,
+      "b": 413.9375
+    }
+  },
+  {
+    "bank": "log",
+    "id": "session",
+    "title": "한 번 한 공부",
+    "desc": "단어·문법·표현마다 맞음 ✓ · 틀림 ✗",
+    "file": "log-06-session.png",
+    "core": false,
+    "focus": {
+      "y": 58.5,
+      "b": 564.4375
+    }
+  },
+  {
+    "bank": "log",
+    "id": "card",
+    "title": "카드 지난 기록",
+    "desc": "그 단어를 언제 어떻게 풀었는지",
+    "file": "log-07-card.png",
+    "core": false,
+    "focus": {
+      "y": 58.5,
+      "b": 422.4375
+    }
+  }
+]

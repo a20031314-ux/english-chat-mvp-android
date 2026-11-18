@@ -87,7 +87,7 @@ export function videoPointCostUsd(options: { transcribed: boolean }): number {
 export const TUTOR_USD_PER_MTOK = textPrice(codeTextModel("roleplayTutor"), { input: 0.4, output: 1.6 });
 
 /**
- * USD per minute of speech from gpt-4o-mini-tts.
+ * USD per minute of tutor speech from the code-default voice model (codeTtsModel).
  *
  * The weakest number in this file and the largest share of what a minute of
  * call learning costs, so it is the one to check against a real bill first.

@@ -18,22 +18,28 @@
  * point these move behind a URL instead — the paths already look like URLs for
  * that reason.
  *
+ * Needs ffmpeg on PATH.
  * Run: node --experimental-strip-types scripts/build-roleplay-audio.mjs
  *      --prune   also delete files no sentence points at any more
  *      --dry     say what would happen and synthesise nothing
  */
-import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import os from "node:os";
 import path from "node:path";
 import { SCENARIOS, SENTENCES } from "../src/lib/roleplay/catalog.ts";
 import { sentenceAudioPath, sentenceIdsUsed } from "../src/lib/roleplay/script.ts";
+import { SPEECH_DEFAULTS } from "../src/lib/aiDefaults.ts";
+import { realtimeSpeech, realtimeVoice } from "../src/lib/server/realtimeSpeech.ts";
 
 const PRUNE = process.argv.includes("--prune");
 const DRY = process.argv.includes("--dry");
-const MODEL = process.env.OPENAI_TTS_MODEL ?? "gpt-4o-mini-tts";
+// 앱 서버와 같은 Realtime 읽기(server/realtimeSpeech.ts) — 24kHz PCM을 ffmpeg로 mp3에.
+const MODEL = SPEECH_DEFAULTS.realtimeTtsModel;
 const PUBLIC_DIR = "public";
 
 /** Roughly what a second of speech costs, for the summary at the end. */
-const USD_PER_1M_AUDIO_TOKENS = 12;
+const USD_PER_1M_AUDIO_TOKENS = 20; // gpt-realtime-2.1-mini 오디오 출력
 const AUDIO_TOKENS_PER_SECOND = 20;
 /** Speech runs about this fast, which is only used to estimate the bill. */
 const CHARS_PER_SECOND = 14;
@@ -103,25 +109,19 @@ function speechInstructions(role) {
 }
 
 async function synthesize(key, text, voice, role) {
-  const response = await fetch("https://api.openai.com/v1/audio/speech", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${key}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      voice,
-      input: text,
-      response_format: "mp3",
-      instructions: speechInstructions(role),
-    }),
-  });
-  if (!response.ok) {
-    const detail = await response.text();
-    throw new Error(`${response.status} ${detail.slice(0, 300)}`);
-  }
-  return Buffer.from(await response.arrayBuffer());
+  const made = realtimeSpeech({ apiKey: key, model: MODEL, voice: realtimeVoice(voice), text, delivery: speechInstructions(role) });
+  const chunks = [];
+  for await (const chunk of made.audio) chunks.push(chunk);
+  const report = await made.done;
+  if (report.error || !chunks.length) throw new Error(`realtime: ${report.error ?? "no audio"}`);
+  const dir = mkdtempSync(path.join(os.tmpdir(), "roleplay-audio-"));
+  const pcm = path.join(dir, "line.pcm");
+  const mp3 = path.join(dir, "line.mp3");
+  writeFileSync(pcm, Buffer.concat(chunks));
+  execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", pcm, "-b:a", "64k", mp3]);
+  const audio = readFileSync(mp3);
+  rmSync(dir, { recursive: true, force: true });
+  return audio;
 }
 
 const wanted = recordingsWanted();

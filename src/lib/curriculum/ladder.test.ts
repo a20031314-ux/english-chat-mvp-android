@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder } from "./ladder.ts";
 import { grammarAsk, pickCells, spotQuestion } from "./ladderQuiz.ts";
 import { formChoice } from "./quiz.ts";
-import { meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
+import { blankNeedsMeaning, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import type { SpotItem } from "./spotErrors.ts";
 
 test("사다리: 맞으면 다음 칸, 틀리면 그 칸, 3칸은 틀린 곳 문항이 있을 때만, 4칸 맞히면 끝", () => {
@@ -146,4 +146,22 @@ test("해석 먼저: 1~2단계는 늘, 3단계부터는 해석 없이 갈리는 
   const es: PreparedItem = { key: "g|3:2", kind: "grammar", stage: 3, gloss: "x", before: "¿", after: " ayudarme?", answer: "Podrías", options: ["Podrías", "Podríais", "Puedo"], line: "¿Podrías ayudarme?", why: "x", needsMeaning: true };
   const esQ = grammarAsk(es, 1, null, "es", { stage: 5 })?.question;
   assert.ok(esQ?.kind === "choose" && !esQ.prepared?.meaningLater);
+});
+
+test("빈칸이 내용 낱말까지 덮으면 단계와 상관없이 해석 먼저 — en·es(라틴)·ja(띄어쓰기 없음)·ko", () => {
+  const need = (answer: string, options: string[], language: string) => blankNeedsMeaning({ answer, options }, language);
+  assert.equal(need("so loud that", ["such loud that", "so loud that", "so loudly that", "such a loud that"], "en"), true);
+  assert.equal(need("If it rains", ["If it will rain", "If it rained", "If it rains", "If it rain"], "en"), true);
+  assert.equal(need("which", ["who", "where", "which", "whose"], "en"), false, "보기마다 다른 낱말이면 빈칸만으로 떠올림");
+  assert.equal(need("because", ["so", "because", "but"], "en"), false);
+  assert.equal(need("Llovía", ["Llueve", "Llovía", "Ha llovido", "Llovió"], "es"), true);
+  assert.equal(need("Lo", ["Le", "Los", "La", "Lo"], "es"), false);
+  assert.equal(need("です", ["です", "ます", "だ"], "ja"), false);
+  assert.equal(need("食べたい", ["食べたい", "食べます", "食べた"], "ja"), true);
+  assert.equal(need("가", ["가", "가요", "가세요"], "ko"), true);
+  const item: PreparedItem = { key: "g|3:7", kind: "grammar", stage: 3, gloss: "음악이 너무 시끄러워서 나는 귀를 막아야 했다.", before: "The music was ", after: " I had to cover my ears.", answer: "so loud that", options: ["such loud that", "so loud that", "so loudly that", "such a loud that"], line: "The music was so loud that I had to cover my ears.", why: "x" };
+  const blank = grammarAsk(item, 2, null, "en", { stage: 4 })?.question;
+  assert.ok(blank?.kind === "type" && blank.glossFirst);
+  const choose = grammarAsk(item, 1, null, "en", { stage: 4 })?.question;
+  assert.ok(choose?.kind === "choose" && choose.prepared?.meaningLater, "고르기는 보기가 알려 주니 그대로 답한 뒤에");
 });

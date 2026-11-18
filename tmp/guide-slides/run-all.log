@@ -1,0 +1,303 @@
+== store-tabs 10:37:57
+en chat-correct
+en chat-fix-open
+en chat-expression
+en FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+es chat-correct
+es chat-fix-open
+es chat-expression
+es FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+ja chat-correct
+ja chat-fix-open
+ja chat-expression
+ja FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+zh chat-correct
+zh chat-fix-open
+zh chat-expression
+zh FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+vi chat-correct
+vi chat-fix-open
+vi chat-expression
+vi FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+fr chat-correct
+fr chat-fix-open
+fr chat-expression
+fr FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+it chat-correct
+it chat-fix-open
+it chat-expression
+it FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+pt chat-correct
+pt chat-fix-open
+pt chat-expression
+pt FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+ru chat-correct
+ru chat-fix-open
+ru chat-expression
+ru FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+id chat-correct
+id chat-fix-open
+id chat-expression
+id FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+ar chat-correct
+ar chat-fix-open
+ar chat-expression
+ar FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+th chat-correct
+th chat-fix-open
+th chat-expression
+th FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+hi chat-correct
+hi chat-fix-open
+hi chat-expression
+hi FAILED: locator.boundingBox: Timeout 30000ms exceeded.
+== guide-social 10:49:41
+en r69-people
+en r69-board
+en r69-groups
+en r69-free
+en talk-calls
+en invite-rewards
+es r69-people
+es r69-board
+es r69-groups
+es r69-free
+es talk-calls
+es invite-rewards
+ja r69-people
+ja r69-board
+ja r69-groups
+ja r69-free
+ja talk-calls
+ja invite-rewards
+zh r69-people
+zh r69-board
+zh r69-groups
+zh r69-free
+zh talk-calls
+zh invite-rewards
+vi r69-people
+vi r69-board
+vi r69-groups
+vi r69-free
+vi talk-calls
+vi invite-rewards
+fr r69-people
+fr r69-board
+fr r69-groups
+fr r69-free
+fr talk-calls
+fr invite-rewards
+it r69-people
+it r69-board
+it r69-groups
+it r69-free
+it talk-calls
+it invite-rewards
+pt r69-people
+pt r69-board
+pt r69-groups
+pt r69-free
+pt talk-calls
+pt invite-rewards
+ru r69-people
+ru r69-board
+ru r69-groups
+ru r69-free
+ru talk-calls
+ru invite-rewards
+id r69-people
+id r69-board
+id r69-groups
+id r69-free
+id talk-calls
+id invite-rewards
+ar r69-people
+ar r69-board
+ar r69-groups
+ar r69-free
+ar talk-calls
+ar invite-rewards
+th r69-people
+th r69-board
+th r69-groups
+th r69-free
+th talk-calls
+th invite-rewards
+hi r69-people
+hi r69-board
+hi r69-groups
+hi r69-free
+hi talk-calls
+hi invite-rewards
+== guide-more 10:56:14
+en talk-dm
+en talk-calls
+en room-game
+en people-icons
+en people-invite
+es talk-dm
+es talk-calls
+es room-game
+es people-icons
+es people-invite
+ja talk-dm
+ja talk-calls
+ja room-game
+ja people-icons
+ja people-invite
+zh talk-dm
+zh talk-calls
+zh room-game
+zh people-icons
+zh people-invite
+vi talk-dm
+vi talk-calls
+vi room-game
+vi people-icons
+vi people-invite
+fr talk-dm
+fr talk-calls
+fr room-game
+fr people-icons
+fr people-invite
+it talk-dm
+it talk-calls
+it room-game
+it people-icons
+it people-invite
+pt talk-dm
+pt talk-calls
+pt room-game
+pt people-icons
+pt people-invite
+ru talk-dm
+ru talk-calls
+ru room-game
+ru people-icons
+ru people-invite
+id talk-dm
+id talk-calls
+id room-game
+id people-icons
+id people-invite
+ar talk-dm
+ar talk-calls
+ar room-game
+ar people-icons
+ar people-invite
+th talk-dm
+th talk-calls
+th room-game
+th people-icons
+th people-invite
+hi talk-dm
+hi talk-calls
+hi room-game
+hi people-icons
+hi people-invite
+== guide-video 11:05:31
+en video-library
+en video-study
+en video-bar
+en video-ask (영상 68프레임)
+en video-ask
+es video-library
+es video-study
+es video-bar
+es video-ask (영상 70프레임)
+es video-ask
+ja video-library
+ja video-study
+ja video-bar
+ja video-ask (영상 68프레임)
+ja video-ask
+zh video-library
+zh video-study
+zh video-bar
+zh video-ask (영상 72프레임)
+zh video-ask
+vi video-library
+vi video-study
+vi video-bar
+vi video-ask (영상 70프레임)
+vi video-ask
+fr video-library
+fr video-study
+fr video-bar
+fr video-ask (영상 68프레임)
+fr video-ask
+it video-library
+it video-study
+it video-bar
+it video-ask (영상 70프레임)
+it video-ask
+pt video-library
+pt video-study
+pt video-bar
+pt video-ask (영상 70프레임)
+pt video-ask
+ru video-library
+ru video-study
+ru video-bar
+ru video-ask (영상 71프레임)
+ru video-ask
+id video-library
+id video-study
+id video-bar
+id video-ask (영상 68프레임)
+id video-ask
+ar video-library
+ar video-study
+ar video-bar
+ar video-ask (영상 70프레임)
+ar video-ask
+th video-library
+th video-study
+th video-bar
+th video-ask (영상 70프레임)
+th video-ask
+hi video-library
+hi video-study
+hi video-bar
+hi video-ask (영상 69프레임)
+hi video-ask
+== shoot en 11:10:48
+30
+== shoot es 11:16:39
+30
+== shoot ja 11:20:49
+29
+== shoot zh 11:26:42
+30
+== shoot vi 11:31:39
+못 찍음 lang-word
+모양 [ 'meaning', 'spot', 'type', 'spots' ]
+35
+== shoot fr 11:36:48
+못 찍음 lang-word
+모양 [ 'type', 'spot', 'meaning', 'spots' ]
+35
+== shoot it 11:41:58
+못 찍음 lang-word
+모양 [ 'type', 'spot', 'meaning', 'spots' ]
+35
+== shoot pt 11:47:09
+모양 [ 'meaning', 'spot', 'spots' ]
+35
+== shoot ru 11:53:29
+모양 [ 'meaning', 'spot', 'spots', 'type' ]
+36
+== shoot id 11:58:21
+모양 [ 'type', 'spot', 'meaning', 'spots' ]
+36
+== shoot ar 12:02:31
+모양 [ 'spot', 'meaning', 'spots' ]
+35
+== shoot th 12:08:29
+모양 [ 'meaning', 'spot', 'type', 'spots' ]
+36
+== shoot hi 12:12:41
+모양 [ 'meaning', 'spots' ]
+34
+== 끝 12:18:29

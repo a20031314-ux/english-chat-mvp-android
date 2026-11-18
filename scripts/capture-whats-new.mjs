@@ -2682,6 +2682,10 @@ for (const locale of only ?? Object.keys(copy)) {
       }
     } catch {}
   }, [TARGET_FOR(locale), locale]);
+  // 사람 기능 첫 "나를 소개해요" 칩 화면(PeopleFactsAsk)이 사람·게시판 그림을 덮지 않게 — 고정 응답 계정(PEOPLE.me)은 이미 본 것으로.
+  await context.addInitScript((me) => {
+    try { localStorage.setItem("profileFactsAsked.v1", JSON.stringify([me])); } catch {}
+  }, PEOPLE.me.id);
   const page = await context.newPage();
   await page.route("**/api/**", (route) => {
     const headers = { ...route.request().headers(), "x-rc-user": captureUser };

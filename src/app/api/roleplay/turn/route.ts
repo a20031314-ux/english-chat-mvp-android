@@ -17,10 +17,7 @@ import {
   playableBy,
   parseDirection,
   AIM_MAX_CHARS,
-  readLesson,
-  lessonDrilled,
-  lessonRedoPrompt,
-  undrilled,
+  readRecent,
   readSpokenLines,
   recordedLines,
   tutorMessages,
@@ -169,7 +166,7 @@ export async function POST(request: NextRequest) {
   // conversations whose first turn the script took on its own.
   if (readCount(body.directedTurns) === 0) void meterRequest(request, "roleplaySession");
 
-  const lessonOf = readLesson(body.lesson);
+  const recent = readRecent(body.recent);
   const turn: DirectorRequest = {
     scenarioId: scenario.id,
     nodeId,
@@ -183,8 +180,8 @@ export async function POST(request: NextRequest) {
       : {}),
     ...(typeof body.study === "string" && body.study.trim() ? { study: body.study.trim().slice(0, 80) } : {}),
     ...(body.studyOpen === true ? { studyOpen: true } : {}),
-    // 수업 통화의 지금 소재(lessonPlan.ts) — 옛 앱은 study만 보낸다.
-    ...(lessonOf ? { lesson: lessonOf } : {}),
+    // 수업 통화의 요즘 배운 것(학습 언어 낱말·표현) — 옛 앱은 study만 보낸다.
+    ...(recent ? { recent } : {}),
     // 수업 통화에서 말없이 지나간 차례가 이어진 수(2026-11-07, 화면에 🙉·💡 없음 — 튜터가 먼저 묻고 힌트).
     ...(readCount(body.silent) > 0 ? { silent: Math.min(9, readCount(body.silent)) } : {}),
     ...(typeof body.fixes === "string" && body.fixes.trim() ? { fixes: body.fixes.trim().slice(0, 800) } : {}),
@@ -475,26 +472,6 @@ export async function POST(request: NextRequest) {
       request: turn,
     });
   /**
-   * 수업 틀을 고쳐 버린 차례는 한 번 다시 쓰게 한다(lessonDrilled — 드물 때만 한 번 더 부름). 그래도 고치면 고친 칸을 비운다.
-   * 받은 줄(lead)은 맞장구라 그대로 둔다.
-   */
-  const keepLesson = async (direction: Direction, text: string): Promise<{ direction: Direction; text: string }> => {
-    if (!turn.lesson || !lessonDrilled(turn, direction)) return { direction, text };
-    try {
-      const again = await client.chat.completions.create({
-        ...ask,
-        messages: [...ask.messages, { role: "assistant" as const, content: text }, { role: "system" as const, content: lessonRedoPrompt(turn.lesson.pattern) }],
-      });
-      void recordTokens("roleplayTurn", again.usage);
-      const redoText = again.choices[0]?.message?.content ?? "";
-      const redone = parse(redoText);
-      if (redone && !lessonDrilled(turn, redone)) return { direction: redone, text: redoText };
-    } catch (error) {
-      console.error("[roleplay/turn] lesson redo", error);
-    }
-    return { direction: undrilled(direction), text };
-  };
-  /**
    * The answer as spoken, for a pack turn: the tutor's reaction and the pack
    * question it picked (pack/turn.ts). Called after noteDirection, so what is
    * kept of the tutor's line is what it wrote.
@@ -527,9 +504,8 @@ export async function POST(request: NextRequest) {
       if (!parsed) {
         return jsonWithCors(request, { error: "NO_DIRECTION" }, { status: 502 });
       }
-      const { direction, text: content } = await keepLesson(parsed, first);
-      noteDirection(direction);
-      const spoken = playPack(direction, content);
+      noteDirection(parsed);
+      const spoken = playPack(parsed, first);
       return jsonWithCors(
         request,
         canPlayBank ? forThisBuild(spoken) : flattenForOldClients(forThisBuild(spoken), bank),
@@ -584,9 +560,8 @@ export async function POST(request: NextRequest) {
           if (!parsed) {
             write({ error: "NO_DIRECTION" });
           } else {
-            const kept = await keepLesson(parsed, text);
-            noteDirection(kept.direction);
-            write({ direction: forThisBuild(playPack(kept.direction, kept.text)) });
+            noteDirection(parsed);
+            write({ direction: forThisBuild(playPack(parsed, text)) });
           }
         } catch (error) {
           console.error("[roleplay/turn] mid-answer", error);

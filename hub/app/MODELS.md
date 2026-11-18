@@ -32,7 +32,7 @@
 | 미션 쓰기·지도에 넣기·약점 미션·미션 확인 | gpt-4.1 / gpt-4.1-mini | **gpt-6-luna** | 오류 1(지도에 넣기 1/13), 미션 2~3초 → 3~4.5초. 2.74 이하 앱만 화면이 있음 |
 | Claude 실패 때 대비(글 기능 전부) | gpt-4o-mini·4.1·4.1-mini | **gpt-6-luna** | 채팅 한 통 교정·답 정상 |
 | 통화 돌아보기 대비 | gpt-5-mini(12-11 종료) | **gpt-5.6-terra** | 채팅으로 확인 정상 |
-| 튜터 목소리 | gpt-4o-mini-tts | **gpt-realtime-2.1-mini**(realtime 엔진) → **2026-11-02 Voxtral**(id·th 빼고, 아래) | en·ja·es·th·ko 정상. 첫 소리 전 실패하면 예전 모델(01-06까지) |
+| 튜터 목소리 | gpt-4o-mini-tts | **gpt-realtime-2.1-mini**(realtime 엔진) → **2026-11-02 Voxtral**(id·th 빼고, 아래) | en·ja·es·th·ko 정상. 첫 소리 전 실패하면 오류(대비 없음) |
 | 통화·Room 받아쓰기 | gpt-4o-mini-transcribe | **Scribe v2**, 실패하면 gpt-transcribe | ElevenLabs가 429 system_busy를 몇 분씩 냄(5번 중 5번, 2분 뒤 정상) → 429·5xx면 1분 쉬고 바로 gpt-transcribe |
 | 영상 받아쓰기 | whisper-1 | **Scribe v2 일괄**(낱말 시간 → 줄 나누기 `tokensToLines`), 실패하면 gpt-transcribe(시간 없이 한 줄) | en Scribe로 줄·낱말 시간 정상, 나머지 4개 언어는 429로 gpt-transcribe 대비 정상 |
 
@@ -52,7 +52,6 @@
 | gpt-4.1 | 미션 쓰기·지도에 넣기·약점 미션(`curriculum`) | 2027-01-14 | 새 앱(2.75~)은 화면 없음 → **약점 미션은 새 앱 사용자에게 안 씀**, 옛 앱용은 gpt-6-luna 또는 01-14에 끔 | 약점 미션은 채팅·통화마다 서버가 지도 있는 사람 모두에게 써서 지금도 돈이 나감(보이지 않는 할 일) |
 | gpt-4.1-mini | 미션 확인(`mission`) | 2027-01-14 | 옛 앱만 → gpt-6-luna 또는 01-14에 끔 | Haiku 시도는 점검에서 실패가 많았음(10-22) |
 | gpt-4o-mini·4.1·4.1-mini | 나머지 글 기능의 **대비**(Claude 실패 때) | 2027-01-14 | gpt-6-luna 하나로 | `OPENAI_TEXT_DEFAULTS` 값만. 대비라 품질 시험은 짧게 |
-| gpt-4o-mini-tts | 튜터 목소리 | **2027-01-06** | gpt-realtime-2.1-mini("그대로 읽기") | 비교 끝(충실도 같음, 비용 1.8배 — 통화 1분 11 → 16.7원). **사용자 샘플 청취 OK만 남음**. 다른 후보 ElevenLabs(키 있음, 안 들어 봄) |
 | gpt-4o-mini-transcribe | 통화·Room 한 마디 받아쓰기 | 2027-02-26 | **Scribe v2**(ElevenLabs) | 학습자 영어 낱말 오류 25% → 17%, 분당 $0.0036. 실패 때 gpt-transcribe |
 | whisper-1 | 영상 받아쓰기(자막 없을 때) | 2027-02-26 | Scribe v2 일괄 | 낱말 시간 필요 — 코드 작업 |
 | gpt-realtime-2.1 | 비용 계산에만 | 공지 없음 | — | — |
@@ -74,7 +73,7 @@
 | 통화 돌아보기(기본은 Sonnet 5.5, 이건 실패 때 대비) | `OPENAI_REVIEW_MODEL` | gpt-5-mini | **2026-12-11 (가장 먼저, 2026-10-26 기준 46일)** | gpt-5.6-terra |
 | 통화·방 받아쓰기 | `OPENAI_TURN_TRANSCRIBE_MODEL` | gpt-4o-mini-transcribe | **2027-02-26** | gpt-transcribe 또는 gpt-live-transcribe |
 | 영상 받아쓰기 | `OPENAI_TRANSCRIBE_MODEL` | whisper-1 | **2027-02-26** | gpt-transcribe 또는 gpt-live-transcribe |
-| 튜터 목소리(TTS) | `OPENAI_TTS_MODEL` | gpt-4o-mini-tts | **2027-01-06** | gpt-realtime-2.1-mini |
+| 튜터 목소리 대비(Voxtral 실패 때)·id·th 목소리 | `OPENAI_REALTIME_TTS_MODEL` | gpt-realtime-2.1-mini | 종료 공지 없음 | — (그 뒤 대비 없음) |
 | 사진·랜덤 화면 검사 | — | omni-moderation-latest(무료) | 종료 공지 없음 | — |
 | (비용 계산에만) 실시간 통화 | `OPENAI_REALTIME_MODEL` | gpt-realtime-2.1 | 종료 공지 없음 | — |
 
@@ -123,6 +122,9 @@
 | Next.js | 웹·API 틀 | — | `next` |
 
 ## 3. 새 소식 (예약 작업이 위에 더함)
+
+- 2026-11-16 · **gpt-4o-mini-tts 지움**(사용자 "지금 쓰고 있지 않으면 지워줘" → 마지막 대비로만 쓰던 것을 지우기로): /api/tts는 Voxtral → Realtime(gpt-realtime-2.1-mini), Realtime이 첫 소리 전에 실패하면 오류. 장면 대사 녹음(`build-roleplay-audio.mjs`)·목소리 참고 소리(`voice-refs.mjs`)도 Realtime으로. Vercel `TTS_ENGINE`·`OPENAI_TTS_MODEL`은 이제 안 읽음.
+- 2026-11-16 · 종료일·가격 바뀐 것 없음, 새 후보 1(지켜봄): **ElevenLabs Scribe v3**(11-10 출시, `scribe_v3`) — Scribe v2와 같은 시간당 $0.20(공식)에 낱말 오류 27% 적다고 발표, 받아쓰기 세 곳(통화·Room·영상) 모델 이름만 바꾸면 됨, 손익 +56원 안팎(500원 아래) — 학습자 발음은 사람이 샘플을 들어 볼 것. 그 밖: OpenAI 새 공지 11-10 gpt-image-2(안 씀), Haiku 5.5·Sonnet 5.5 Active(2027-10·09 전엔 안 끝남), gpt-6.1-terra $1/$5 그대로 +265원 지켜봄, Gemini 4 Hydrogen($1.50/$7.50)·Meta Muse Ember($0.10/$0.50)는 키 없고 이득 없어 후보 아님. 남은 종료: realtime 목소리 대비 gpt-4o-mini-tts 2027-01-06(51일, 대비만 — 이미 알려짐) — [OpenAI 종료](https://developers.openai.com/api/docs/deprecations) · [Claude 종료](https://platform.claude.com/en/docs/about-claude/model-deprecations) · [ElevenLabs 가격](https://elevenlabs.io/pricing/api) · [Scribe v3 출시(제3자)](https://letsdatascience.com/news/elevenlabs-launches-scribe-v3-and-v3-live-speech-to-text-mod-82ce234a) · [11월 가격 정리(제3자)](https://compareai.today/blog/ai-api-pricing-november-2026)
 
 - 2026-11-09 · 종료일·가격 바뀐 것 없음, 후보 단계 그대로(지켜봄 2): 우리가 쓰는 모델의 종료 공지 새로 없음(OpenAI 새 공지는 11-05 gpt-5.5-cyber-preview 2027-02-01 하나 — 안 씀, Haiku 5.5·Sonnet 5.5 Active·2027-10·09 전엔 안 끝남). 후보 기능 묶음을 코드에 맞춤 — Sonnet 기능에 fixedLesson·wordSenses, Haiku 기능에 callReplay·roleplayBranch(11-02 뒤 새로 생김). 다시 계산: Sonnet 8개 기능 → gpt-6.1-terra 많이 쓰는 사람 한 달 +265원(그대로, 500원 기준 아래), 가입자 1,000명당 +123,000원 안팎. gpt-6.1-terra $1/$5 다시 확인(제3자). 새 모델 Gemini 4 Carbon(10-28, $2/$10 → $4/$20)은 키 없고 Sonnet보다 비싸 후보 아님. 남은 종료: realtime 목소리 대비 gpt-4o-mini-tts 2027-01-06(58일, 대비만 — 그 뒤 대비 없음, 이미 알려짐) — [OpenAI 종료](https://developers.openai.com/docs/deprecations) · [Claude 종료](https://platform.claude.com/en/docs/about-claude/model-deprecations) · [GPT-6.1 Terra 가격(제3자)](https://getdeploying.com/llms/gpt-6.1-terra)
 

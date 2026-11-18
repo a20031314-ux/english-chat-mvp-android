@@ -10,7 +10,7 @@ import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
 import { voxtralConfigured, voxtralEnabled, voxtralRawStream, voxtralReference, voxtralSpeech, voxtralSpeed, voxtralStream, voxtralVoices } from "@/lib/server/voxtralSpeech";
 import { stretchStream } from "@/lib/server/timeStretch";
 import { parseTutorSpeed } from "@/lib/tutorSpeedValue";
-import { realtimeTtsModel, speechTtsModel, trialValue, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
+import { realtimeTtsModel, trialValue, wantsTrialReport } from "@/lib/server/speechModels";
 import {
   isKanaMora,
   spokenFormForTts,
@@ -21,7 +21,7 @@ import {
 
 export const dynamic = "force-dynamic";
 
-// 모델은 server/speechModels.ts에서 고른다(gpt-4o-mini-tts 2027-01-06 종료 → Realtime으로 옮기는 중).
+// 엔진: Voxtral(id·th 빼고) → 첫 소리 전에 실패하면 Realtime(gpt-realtime-2.1-mini). 모델 이름은 server/speechModels.ts.
 const MAX_CHARS = 2000;
 
 /**
@@ -87,8 +87,7 @@ async function synthesize(
 ) {
   // 사람마다 고른 말 빠르기(lib/tutorSpeed.ts, 0.8~1.2 — 1이면 안 보냄). 주소에 들어가 캐시도 빠르기별로 따로.
   const speed = parseTutorSpeed(rawSpeed);
-  const client = getOpenAIClient();
-  if (!client) {
+  if (!getOpenAIClient()) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
@@ -108,13 +107,11 @@ async function synthesize(
 
   const lang = rawLang.trim() || "en-US";
   const spoken = spokenFormForTts(text, lang);
-  const MODEL = speechTtsModel();
-  const useInstructions = !MODEL.startsWith("tts-1");
   // 장면 목소리가 없으면 그 언어 튜터의 목소리 — 고른 여자·남자(`tutor` f|m, lib/tutorGender.ts), 안 보낸 예전 앱은 그 언어의 예전 튜터(2026-11-01).
   const voice = isTtsVoice(rawVoice)
     ? rawVoice
     : tutorVoice(coerceLanguageCode(speechLangPrefix(lang)), serverTutorGender(coerceLanguageCode(speechLangPrefix(lang)), rawTutor));
-  // 튜터 목소리면 그 사람의 목소리·어조 지시를 덧붙인다(lib/tutorPersona.ts, 2026-11-02) — 예전 엔진(id·th, Voxtral 실패 때)과
+  // 튜터 목소리면 그 사람의 목소리·어조 지시를 덧붙인다(lib/tutorPersona.ts, 2026-11-02) — Realtime(id·th, Voxtral 실패 때)과
   // Voxtral 참고 소리 만들기(scripts/voice-refs.mjs)가 같은 사람으로 읽게.
   const speechLanguage = coerceLanguageCode(speechLangPrefix(lang));
   const tutorWho = tutorGenderOfVoice(speechLanguage, voice);
@@ -137,14 +134,14 @@ async function synthesize(
     return jsonWithCors(request, { engine: "voxtral", spoken, ms: made.ms, wavBase64: made.wav.toString("base64") });
   }
 
-  // 기본 엔진 Voxtral(2026-11-02, id·th 빼고 — 튜터의 지금 목소리를 흉내, server/voxtralSpeech.ts). 점검 머리글로 realtime·speech를 고르면 예전 엔진.
-  // 첫 소리 전에 실패하면 아래 예전 엔진으로 — 소리가 안 나는 것보다 낫다.
+  // 기본 엔진 Voxtral(2026-11-02, id·th 빼고 — 튜터의 지금 목소리를 흉내, server/voxtralSpeech.ts). 점검 머리글 x-tts-engine: realtime이면 Realtime.
+  // 첫 소리 전에 실패하면 아래 Realtime으로 — 소리가 안 나는 것보다 낫다.
   const languageCode = coerceLanguageCode(speechLangPrefix(lang));
   const reference = voxtralReference(languageCode, voice);
   const forcedEngine = trialValue(request, "x-tts-engine");
   // 가나 한 박자(あ, きゃ)를 튜터 목소리에 맡기면 다른 문장을 지어 낸다. 그 소리만 읽는 엔진으로 보낸다.
   const kanaMora = isKanaMora(spoken);
-  if (reference && voxtralEnabled() && !kanaMora && forcedEngine !== "realtime" && forcedEngine !== "speech") {
+  if (reference && voxtralEnabled() && !kanaMora && forcedEngine !== "realtime") {
     const started = Date.now();
     try {
       // 점검 사용자는 x-tts-voxtral-speed로 빠르기를 견줘 볼 수 있다.
@@ -166,106 +163,46 @@ async function synthesize(
     }
   }
 
-  if (ttsEngine(request) === "realtime") {
-    const started = Date.now();
-    const made = realtimeSpeech({ apiKey: process.env.OPENAI_API_KEY ?? "", model: realtimeTtsModel(), voice, text: spoken, delivery });
-    if (wantsTrialReport(request)) {
-      // 점검: 소리를 다 모아 읽은 말·토큰·시간과 함께(점검 사용자만 이 머리글이 먹는다).
-      const chunks: Uint8Array[] = [];
-      try {
-        for await (const chunk of made.audio as unknown as AsyncIterable<Uint8Array>) chunks.push(chunk);
-      } catch {}
-      const report = await made.done;
-      const pcm = Buffer.concat(chunks);
-      return jsonWithCors(request, {
-        engine: "realtime",
-        model: realtimeTtsModel(),
-        voice,
-        spoken,
-        ...report,
-        audioSeconds: pcm.byteLength / 48000,
-        pcmBase64: pcm.toString("base64"),
-        ms: Date.now() - started,
-      });
-    }
-    // 첫 소리가 오기 전에 실패하면 예전 방식으로(사람에게는 소리가 안 나는 것보다 낫다).
-    const reader = made.audio.getReader();
+  const started = Date.now();
+  const made = realtimeSpeech({ apiKey: process.env.OPENAI_API_KEY ?? "", model: realtimeTtsModel(), voice, text: spoken, delivery });
+  if (wantsTrialReport(request)) {
+    // 점검: 소리를 다 모아 읽은 말·토큰·시간과 함께(점검 사용자만 이 머리글이 먹는다).
+    const chunks: Uint8Array[] = [];
     try {
-      const first = await reader.read();
-      const body = new ReadableStream<Uint8Array>({
-        start(controller) {
-          if (first.value) controller.enqueue(first.value);
-          if (first.done) controller.close();
-        },
-        async pull(controller) {
-          const next = await reader.read().catch(() => ({ done: true as const, value: undefined }));
-          if (next.done) controller.close();
-          else controller.enqueue(next.value);
-        },
-        cancel() {
-          void reader.cancel();
-        },
-      });
-      return new NextResponse(stretchStream(body, speed), { status: 200, headers: streamHeaders(request, lang, shared) });
-    } catch (error) {
-      console.error("[tts] realtime failed, falling back:", error);
-    }
-  }
-
-  try {
-    const speech = await client.audio.speech.create({
-      model: MODEL,
-      // The same voice the call uses for this language. They were different —
-      // "nova" here, "ash" or "cedar" on the call — which is fine while the two
-      // never meet, and wrong the moment a spoken line and a live tutor belong
-      // to the same conversation: the tutor changes person mid-sentence.
-      //
-      // A roleplay scene passes its own voice, so a line the director wrote on
-      // the spot comes out of the same mouth as the recorded ones around it.
-      // Anything else — including every build that predates the parameter —
-      // gets the call's voice exactly as before.
+      for await (const chunk of made.audio as unknown as AsyncIterable<Uint8Array>) chunks.push(chunk);
+    } catch {}
+    const report = await made.done;
+    const pcm = Buffer.concat(chunks);
+    return jsonWithCors(request, {
+      engine: "realtime",
+      model: realtimeTtsModel(),
       voice,
-      input: spoken,
-      response_format: "pcm",
-      ...(useInstructions
-        ? {
-            // A scene's own voice is a character speaking, and it has to
-            // match the lines recorded into the app beside it. Those were made
-            // with a character brief (scripts/build-roleplay-audio.mjs); this
-            // route's usual one is about pronunciation and language leakage,
-            // written for chat and video, and says nothing about who is
-            // talking. Same voice name, two different performances — reported
-            // from a phone as the tutor not sounding like one person.
-            //
-            // The role itself is not carried here. It would have to ride in the
-            // URL, and the URL is the cache key: every warmed line would miss
-            // and every build that does not send it would be inconsistent
-            // again. Role-neutral gets the delivery back without any of that.
-            instructions: delivery,
-            stream_format: "audio",
-          }
-        : {}),
+      spoken,
+      ...report,
+      audioSeconds: pcm.byteLength / 48000,
+      pcmBase64: pcm.toString("base64"),
+      ms: Date.now() - started,
     });
-    if (wantsTrialReport(request)) {
-      const pcm = Buffer.from(await speech.arrayBuffer());
-      return jsonWithCors(request, { engine: "speech", model: MODEL, voice, spoken, audioSeconds: pcm.byteLength / 48000, pcmBase64: pcm.toString("base64") });
-    }
-    const body = speech.body;
-    if (!body || speed !== 1) {
-      const bytes = Buffer.from(await speech.arrayBuffer());
-      if (speed !== 1) {
-        const stretched = new Response(stretchStream(new Blob([bytes]).stream(), speed));
-        return new NextResponse(stretched.body, { status: 200, headers: streamHeaders(request, lang, shared) });
-      }
-      return new NextResponse(bytes, {
-        status: 200,
-        headers: streamHeaders(request, lang, shared),
-      });
-    }
-    return new NextResponse(body, {
-      status: 200,
-      headers: streamHeaders(request, lang, shared),
+  }
+  // 첫 소리가 오기 전에 실패하면 오류 — Realtime 뒤 대비는 없다.
+  const reader = made.audio.getReader();
+  try {
+    const first = await reader.read();
+    const body = new ReadableStream<Uint8Array>({
+      start(controller) {
+        if (first.value) controller.enqueue(first.value);
+        if (first.done) controller.close();
+      },
+      async pull(controller) {
+        const next = await reader.read().catch(() => ({ done: true as const, value: undefined }));
+        if (next.done) controller.close();
+        else controller.enqueue(next.value);
+      },
+      cancel() {
+        void reader.cancel();
+      },
     });
+    return new NextResponse(stretchStream(body, speed), { status: 200, headers: streamHeaders(request, lang, shared) });
   } catch (error) {
     console.error("TTS failed:", error);
     return jsonWithCors(request, { error: "TTS_FAILED" }, { status: 502 });

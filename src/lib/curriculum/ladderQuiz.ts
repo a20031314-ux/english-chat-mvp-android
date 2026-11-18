@@ -5,7 +5,7 @@
  */
 import { cardQuiz, cardSourceOf, type QuizQuestion } from "./quiz.ts";
 import type { ScriptGloss } from "./stageScripts.ts";
-import { chooseFromPrepared, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
+import { blankNeedsMeaning, chooseFromPrepared, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import { spotCells, type SpotItem } from "./spotErrors.ts";
 import { askRung, type Rung } from "./ladder.ts";
 
@@ -123,7 +123,9 @@ export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem |
   if (rung === 1) question = chooseFromPrepared(item, first);
   if (rung === 2) {
     const near = item.options.filter((option) => option !== item.answer);
-    question = { kind: "type", text: item.line, before: item.before, after: item.after, answer: item.answer, gloss: { en: "", raw: item.gloss }, from: item.key, near, ...(first ? { glossFirst: true } : {}), ...(how.cue ? { cue: how.cue } : {}) };
+    // 빈칸이 내용 낱말까지 덮으면(so loud that · If it rains) 단계와 상관없이 해석 먼저 — 고르기에선 보기가 알려 주던 것.
+    const blankFirst = first || blankNeedsMeaning(item, language);
+    question = { kind: "type", text: item.line, before: item.before, after: item.after, answer: item.answer, gloss: { en: "", raw: item.gloss }, from: item.key, near, ...(blankFirst ? { glossFirst: true } : {}), ...(how.cue ? { cue: how.cue } : {}) };
   }
   if (rung === 3) question = spotQ;
   if (rung === 4) question = wholeOf(item.line, { en: "", raw: item.gloss }, item.key, how.cue);

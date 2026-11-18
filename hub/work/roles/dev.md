@@ -26,7 +26,7 @@
 > 남은 것만 한 줄씩(2026-11-09 다시 씀). 그 전 열린 일 원문은 `hub/archive/roles-dev-2026-11-09.md` — 거기서 아직 남은 일을 찾으면 여기로 한 줄 옮긴다.
 > 사용자 결정 대기는 `hub/STATE.md` "결정 대기", 점검·리뷰가 넘긴 버그는 `hub/work/inbox.md`의 `→ dev` 줄.
 
-- **2.80 자르기 전 — 설명이 지금 화면과 다름:** Logbank·Quizbank 칸 ?(`lib/guide/banks.ts`)·사용법 My 장(`lib/guide/overview.ts`·`content.ts`)이 예전 Stagebank·탭 Quizbank·육각형을 설명. 새 앱용 글을 따로 두고(옛 앱 2.79는 예전 글 그대로 받게 `?my=`처럼 나눔) 그림을 다시 찍는다 — 사용자 결정 대기(STATE). `whatsNew.ts` 94 항목도 없음.
+- **사용법 넘겨 보기 장면 다듬기:** 14개 앱 언어 모두 들어감(`lib/guide/slides.ts`·`slideTitles.ts`·`scripts/guide-slides/`). 남은 것: 몇 언어는 흐름 첫 그림이 고르기 문제가 아님(pt·ar·ru 등 — 이름표만 고르기), 문장 쓰기 문제가 안 나와 흐름이 두 단계인 언어, 수업 숙제 화면 장면, 친구 초대 장면, 칸 머리 ?(BankHelp — 예전 글)를 사용법 그 칸으로 열지, 예전 칸 글·학습 흐름(`overview.ts`·`content.ts` 칸 글)은 옛 앱 2.79만 받게 된 뒤 정리. `whatsNew.ts` 94 항목도 없음.
 - **이름 정리 56묶음:** `hub/app/FEATURES.md` 끝 목록 — 같은 기능이면 한 키로, 다른 기능이면 이름을 바꾼다. 먼저 "알아요"(checkKnown·itemsMastered·knownTag·markKnown)·"복습"·"이어서 하기". 고치면 `node scripts/check-copy-keys.mjs --write`.
 - **지울 것 1:** `hub/app/FEATURES.md` "지울 것" — 아침 알림(`morningNotify.ts` — 되살릴지 사용자 결정 뒤).
 - **옛 앱 전용 서버·lib:** 최소 지원 버전을 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용"과 그 서버만 쓰는 lib(`checkup.ts`·`recall.ts`·`stageScripts` 대본 쪽 등)를 지운다.
@@ -36,7 +36,7 @@
 - **사전 예문 오류 고치기:** `hub/work/drafts/dict-errors-2026-11-10.txt`(ar 110 · fr 3) — word-sentences 고치고 `--check`.
 - **앱 언어별 짧은 뜻 미리 채우기:** 사전 예문은 14개 언어 다 채움(2026-11-10) — 짧은 뜻은 사용자 결정 대기(Haiku 묶음 API로 수십 달러 추정).
 - **같이 배우기 남은 것:** 문법 이름이 ko·en 밖 앱 언어에서 영어(stageScripts TRANSLATED에 문법 이름 옮기기 — Cursor 에이전트), 반말·구어 표현은 틀이 안 잡힘(framesInLine 넓히기), 유의어(데이터 없음 — 만들면 Cursor 에이전트로 고정 데이터), 활용형 맞추기(es comer처럼 틀 예문에 그 꼴이 없으면 칸이 안 보임), 사람 대화에서 맞게 쓴 말은 장부에 안 남아 대화 수에 안 듦(4번 탭과).
-- **수업 계획 남은 것:** `hub/work/drafts/lesson-plan-2026-11-12.md` — P1 끝(2026-11-12). P2 칠판 카드·⏭(앱 빌드) → P3 숙제 몫 넓히기·다음 수업 숙제 리뷰 → P4 단계 오르기 기준(사용자 대기, 코드는 `STAGE_UP_SHARE` 1)·가상 사용자 수업 통화 점검. 감독 `study`·`studyOpen`은 Play 2.79용 — 최소 지원 2.80이면 지움.
+- **수업 통화(틀 없음):** 실제 기기 한 번 — 요즘 배운 말이 대화에 나오나·어색함 짚기가 너무 잦지 않나. 사용법 장면 그림 `call-lesson`(칠판이 보임) 다시 찍기(`scripts/guide-slides/shoot-call.mjs` → compose). 감독 `study`·`studyOpen`은 Play 2.79용 — 최소 지원 2.80이면 지움.
 - **섞어 말하기 통화(설계만):** `hub/work/drafts/call-mix-2026-11-08.md` — 정할 것 셋 사용자 대기.
 - **체감 점검 2026-11-09 남은 지적:** 쉬운 단어(`presumedWords` 순위 0부터·카드 없을 때 묶음 퀴즈로 빠짐), 뜻 없는 빈칸(`glossFirst`), U11 숙제 끝 화면 — 보고서 `hub/work/drafts/ux-check-2026-11-09.md`, 순서는 사용자.
 

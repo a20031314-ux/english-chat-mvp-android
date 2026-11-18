@@ -5,7 +5,7 @@
  * `hub/app/costs.md`)이 같은 이름을 읽어야, 기본 모델을 바꾸는 커밋 하나로 비용 표도 저절로 따라온다(main push → CI가 다시 계산).
  * 전에는 비용 쪽이 모델 이름을 따로 적고 있어서, 채팅을 Haiku로 바꾼 뒤에도 비용 표는 gpt-4o-mini 단가로 계산됐다.
  *
- * 순수 파일: 환경변수·서버 모듈을 읽지 않는다(앱 화면 쪽 `cost.ts`도 가져다 씀). Vercel 값(`MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE`)이
+ * 순수 파일: 환경변수·서버 모듈을 읽지 않는다(앱 화면 쪽 `cost.ts`도 가져다 씀). Vercel 값(`MODEL_ROUTES`·`OPENAI_*_MODEL`)이
  * 있으면 운영은 그것을 쓰지만 저장소에서는 볼 수 없어서, 비용 표는 이 기본값으로 계산한다고 적는다.
  */
 
@@ -139,12 +139,9 @@ export const SPEECH_DEFAULTS = {
   secondTranscribe: "scribe_v2",
   /** 영상에 자막이 없을 때(`OPENAI_TRANSCRIBE_MODEL`). */
   videoTranscribe: "scribe_v2",
-  /** 튜터 목소리 엔진(`TTS_ENGINE`): speech = /v1/audio/speech, realtime = Realtime으로 그대로 읽기. */
-  ttsEngine: "realtime" as "speech" | "realtime",
   /** 바깥 받아쓰기(Scribe v2)가 실패했을 때 OpenAI로 한 번 더 — gpt-4o-mini-transcribe·whisper-1(2027-02-26 종료)의 대체. */
   openaiTranscribe: "gpt-transcribe",
-  /** realtime 목소리가 첫 소리 전에 실패했을 때만(2027-01-06 종료 — 그 뒤엔 대비 없음). */
-  speechTtsModel: "gpt-4o-mini-tts",
+  /** Voxtral이 첫 소리 전에 실패했을 때·id·th 목소리(Realtime으로 그대로 읽기). 그 뒤 대비는 없다. */
   realtimeTtsModel: "gpt-realtime-2.1-mini",
   /** 튜터 목소리 기본(2026-11-02): id·th 밖의 학습 언어는 Voxtral(튜터 목소리 흉내, server/voxtralSpeech.ts) — 실패하면 위 realtime. */
   voxtralTtsModel: "voxtral-mini-tts-3-0",
@@ -153,6 +150,5 @@ export const SPEECH_DEFAULTS = {
 /** 지금 코드 기본값의 튜터 목소리 모델. */
 export function codeTtsModel(): string {
   // 비용 표의 목소리 = 대부분의 줄을 읽는 Voxtral(id·th만 realtime — 학습자가 적어 표에서는 뺌).
-  if (SPEECH_DEFAULTS.voxtralTtsModel) return SPEECH_DEFAULTS.voxtralTtsModel;
-  return SPEECH_DEFAULTS.ttsEngine === "realtime" ? SPEECH_DEFAULTS.realtimeTtsModel : SPEECH_DEFAULTS.speechTtsModel;
+  return SPEECH_DEFAULTS.voxtralTtsModel || SPEECH_DEFAULTS.realtimeTtsModel;
 }

@@ -102,7 +102,10 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
   `--only en,ko,ja,zh,es,hi` → `node store-shots/promo/make.mjs room <언어>` → `tmp/promo/room/<언어>/promo-room-<언어>.mp4`(자막 6개 언어는 make.mjs `COPY.room`).
   친구 초대 편: `promo-invite`(사람 탭 친구 초대 → 링크 복사 → 친구 화면 "Minji님이 초대했어요" → 팀 단체방 → 워크스페이스) → `make.mjs invite <언어>`.
   웹에는 휴대폰 공유 창이 없어 "초대 링크를 복사했어요"가 뜨는 웹 동작 그대로 찍힌다.
-- **스토어 8장 마케팅 층위 (지금 올리는 세트, 2026-11-03, `hub/work/drafts/marketing-layers-2026-11-01.md` §3)**: 1 언어 공부의 모든 것 → 2 문장 틀 → 3 Quizbank → 4 AI 통화 중(🎓 고친 말 카드·버튼 넷) → 5 통화 끝(요약 칸·고친 대본) → 6 사람 → 7 통화 정리 → 다시 보기 → 8 Logbank(언어능력 육각형). 14개 언어 모두 8번은 `08-logbank.png`.
+- **스토어 7장 (2.80 세트, 지금 올리는 세트, 사용자 2026-11-16 "최대한 단순화 · 학습 흐름 · 제목 한 줄만")**: 1 AI 튜터와 학습(통화 한 화면 + 고친 말 카드) → 2 다양한 유형의 퀴즈(풀이 화면 넷) → 3 사전 전체 → 묶음 → 넘겨 보기 카드 → 4 수업 칠판 → 5 채팅 교정 → 6 사람 → 7 Logbank 학습 곡선.
+  재료 = 사용법 넘겨 보기 장면용 실제 화면 조각: `npm run build:capacitor` 뒤 `LOCALE=<앱 언어> node scripts/guide-slides/shoot.mjs`·`shoot-call.mjs`·`crop-tabs.mjs <언어>`(→ `tmp/guide-slides/raw/<언어>`), `LOCALE=<언어> node store-shots/v280/shoot-log.mjs`(학습 곡선 — 이 폰 장부에 14일 치를 넣고 찍음)
+  → `node --experimental-strip-types store-shots/v280/compose.mjs all --play`(14개 등록정보 `phoneScreenshots`를 7장으로 통째로 바꿈). 글은 `store-shots/v280/strings.mjs`. 태그마다 돌던 "Store: screenshots"(예전 세트)는 태그 실행을 껐다.
+- **스토어 8장 마케팅 층위 (2.79까지 올린 세트, 2026-11-03, `hub/work/drafts/marketing-layers-2026-11-01.md` §3)**: 1 언어 공부의 모든 것 → 2 문장 틀 → 3 Quizbank → 4 AI 통화 중(🎓 고친 말 카드·버튼 넷) → 5 통화 끝(요약 칸·고친 대본) → 6 사람 → 7 통화 정리 → 다시 보기 → 8 Logbank(언어능력 육각형). 14개 언어 모두 8번은 `08-logbank.png`.
   `npm run build:capacitor` 뒤 `CHROMIUM`(크롬 경로) `node store-shots/layers/capture.mjs <앱 언어>`(ONLY=lesson,quiz,review,call,preview로 일부만, 동시에 돌리면 PORT를 다르게) → `node store-shots/layers/compose.mjs <언어,…> [--play]`(--play = 14개 등록정보 `phoneScreenshots` 01-overview … 08-weak로, 예전 장 지움). 그 다음 `node store-shots/flow/capture-logbank.mjs <언어,…>` → `FLOW_ONLY=… node store-shots/flow/compose.mjs`의 4-logbank를 `08-logbank.png`로 덮고 `08-weak.png`는 지운다. 글·그림 속 학습 언어·숫자는 `store-shots/layers/strings.mjs`.
 - **스토어 학습 흐름 8장 (2.78 세트, 위 층위 세트로 바뀜, 2.78~, 사용자 2026-10-30 "기능 나열이 아니라 뭘 해야 할지·학습 흐름이 명확하게, 큰 줄기 → 세부는 뒤쪽")**:
   1장 하루 흐름 한눈에(① 일일 학습 → ② 말하기 → ③ 지속 학습 → ④ 대화, 단계 이름은 앱 버튼 문구 그대로) → 2~5장 그 단계 하나씩(위에 단계 막대, 큰 화면 하나, 3장은 지속 학습 카드 위에 푼 문제) → 6~8장 세부(막히면 편한 말로·통화와 영상·사람과 함께, 화면 둘).

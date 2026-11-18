@@ -67,7 +67,7 @@ test("코드 기본 모델마다 단가가 있다 — 기본값을 바꾸면 비
   for (const model of [SPEECH_DEFAULTS.turnTranscribe, SPEECH_DEFAULTS.secondTranscribe, SPEECH_DEFAULTS.videoTranscribe]) {
     assert.ok(STT_USD_PER_MINUTE[model], `받아쓰기 ${model} 단가 없음`);
   }
-  for (const model of [SPEECH_DEFAULTS.speechTtsModel, SPEECH_DEFAULTS.realtimeTtsModel]) {
+  for (const model of [SPEECH_DEFAULTS.voxtralTtsModel, SPEECH_DEFAULTS.realtimeTtsModel]) {
     assert.ok(TTS_USD_PER_MINUTE_BY_MODEL[model], `목소리 ${model} 단가 없음`);
   }
 });

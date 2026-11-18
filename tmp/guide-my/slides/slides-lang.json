@@ -1,0 +1,74 @@
+[
+  {
+    "bank": "lang",
+    "id": "core",
+    "title": "Languagebank",
+    "desc": "배울 단어·표현·문법이 단계별로 모두 — 숫자는 개수",
+    "file": "lang-01-core.png",
+    "core": true,
+    "focus": {
+      "y": 167.5,
+      "b": 705.9375
+    }
+  },
+  {
+    "bank": "lang",
+    "id": "search",
+    "title": "찾기",
+    "desc": "단어나 뜻을 쓰면 바로 찾아요",
+    "file": "lang-02-search.png",
+    "core": false,
+    "focus": {
+      "y": 71,
+      "b": 321.9375
+    }
+  },
+  {
+    "bank": "lang",
+    "id": "grid",
+    "title": "종류 × 단계",
+    "desc": "[주제 | 품사]로 나누고 칸을 누르면 그 묶음",
+    "file": "lang-03-grid.png",
+    "core": false,
+    "focus": {
+      "y": 113.5625,
+      "b": 842
+    }
+  },
+  {
+    "bank": "lang",
+    "id": "bundle",
+    "title": "묶음",
+    "desc": "[퀴즈 | 대화] 순서로 보고, ▶로 넘겨 보기",
+    "file": "lang-04-bundle.png",
+    "core": false,
+    "focus": {
+      "y": 363,
+      "b": 763.4375
+    }
+  },
+  {
+    "bank": "lang",
+    "id": "flip",
+    "title": "▶ 넘겨 보기",
+    "desc": "뜻·단어·예문 중 하나를 가리고 떠올려요 → [다시 | 됐어요]",
+    "file": "lang-05-flip.png",
+    "core": false,
+    "focus": {
+      "y": 332.3125,
+      "b": 842
+    }
+  },
+  {
+    "bank": "lang",
+    "id": "word",
+    "title": "단어 화면",
+    "desc": "뜻 여러 개와 예문 — 🔊로 들어 봐요",
+    "file": "lang-06-word.png",
+    "core": false,
+    "focus": {
+      "y": 71,
+      "b": 610.9375
+    }
+  }
+]

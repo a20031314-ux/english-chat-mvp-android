@@ -98,6 +98,8 @@ export function RoleplayPast({
           {ui.billingClose}
         </button>
       </header>
+      {/* Scrolls as a whole like the end screen, so the transcript pages are not squeezed (2026-11-18). */}
+      <div className="flex min-h-0 flex-1 flex-col overflow-y-auto [&>*]:shrink-0">
       <CallSummary
         ui={ui}
         language={saved.language}
@@ -119,6 +121,7 @@ export function RoleplayPast({
         />
       ) : null}
 
+      <div className="flex h-[70dvh] min-h-80 flex-col">
       <CallPages ui={ui}>
         {lines.map((line, index) => (
           <RoleplayLine
@@ -149,6 +152,8 @@ export function RoleplayPast({
           </li>
         ) : null}
       </CallPages>
+      </div>
+      </div>
     </FullScreenLayer>
   );
 }

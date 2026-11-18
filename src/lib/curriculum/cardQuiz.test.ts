@@ -37,16 +37,17 @@ test("카드 변형: 뜻 가리기 = 밑줄 낱말 + 뜻 넷 중 하나, 뜻만 
   assert.ok(typedRight("食べる", "たべる", { language: "ja" }));
 });
 
-test("낱말 한 모양: 그럴듯한 보기(같은 품사·비슷한 모양)가 셋 안 모이면 스스로 체크 know (es·th)", () => {
+test("낱말 한 모양: 보기가 셋 안 모이면 그 낱말은 퀴즈에 안 냄, 같은 품사가 모자라면 순위 가까운 비슷한 모양 뜻으로 (es·th)", () => {
   registerQuizSources("es", [card("w|grande", "Es una casa grande.", "grande", "큰", "adj"), card("w|enorme", "Un perro enorme.", "enorme", "큰", "adj")]);
   const show = cardQuiz("es", "w|grande", "show", "s");
   assert.equal(show?.kind === "type" && show.before, "Es una casa ");
-  const know = cardQuiz("es", "w|grande", "hide", "s");
-  assert.equal(know?.kind, "know");
-  if (know?.kind === "know") assert.deepEqual([know.mark, know.card.meaning], ["grande", "큰"]);
-  // 다른 품사 뜻만 있으면 보기로 안 씀(한눈에 지워짐) → know.
+  // 겹치지 않는 뜻이 셋 안 됨 → 스스로 체크 대신 안 냄(사용자 2026-11-17 "뜻 고르기로 대체").
+  assert.equal(cardQuiz("es", "w|grande", "hide", "s"), null);
+  // 같은 품사가 없으면 순위가 가깝고 모양이 비슷한 다른 품사 뜻으로 고르기.
   registerQuizSources("th", [card("w|ใหญ่", "บ้านใหญ่มาก", "ใหญ่", "크다", "adj"), card("w|กิน", "กินข้าว", "กิน", "먹다", "verb"), card("w|นอน", "นอนเร็ว", "นอน", "자다", "verb"), card("w|ไป", "ไปบ้าน", "ไป", "가다", "verb")]);
-  assert.equal(cardQuiz("th", "w|ใหญ่", "hide", "s")?.kind, "know");
+  const th = cardQuiz("th", "w|ใหญ่", "hide", "s");
+  assert.equal(th?.kind, "meaning");
+  if (th?.kind === "meaning") assert.deepEqual(th.options.map((o) => o.raw).sort(), ["가다", "먹다", "자다", "크다"]);
   assert.equal(cardQuiz("es", "g|1:2", "show", "s"), null);
 });
 
@@ -66,9 +67,9 @@ test("카드 뜻 가림 오답: 빈도 순위가 가까운 같은 품사 먼저,
   const a = cardQuiz("it", "w|casa", "hide", "s1");
   if (a?.kind !== "meaning") return assert.fail("meaning");
   const prev = new Set(a.options.map((o) => o.raw));
-  // 정답 뜻이 방금 보기로 나온 낱말은 고르기 대신 스스로 체크(소거로 풀림 — 낱말은 한 모양, 3단계).
+  // 정답 뜻이 방금 보기로 나온 낱말은 이번엔 안 냄(소거로 풀림 — 낱말은 한 모양).
   const shownWord = words.find((w, i) => w !== "casa" && prev.has(`뜻${i}`))!;
-  assert.equal(cardQuiz("it", `w|${shownWord}`, "hide", "s1")?.kind, "know");
+  assert.equal(cardQuiz("it", `w|${shownWord}`, "hide", "s1"), null);
   const freshWord = words.find((w, i) => w !== "casa" && !prev.has(`뜻${i}`))!;
   const b = cardQuiz("it", `w|${freshWord}`, "hide", "s1");
   if (b?.kind !== "meaning") return assert.fail("meaning b");

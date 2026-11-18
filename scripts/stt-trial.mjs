@@ -110,7 +110,7 @@ await Promise.all(
   Array.from({ length: 3 }, async () => {
     while (jobs.length) {
       const job = jobs.shift();
-      const made = await post("/api/tts", { text: job.text, lang: job.lang }, { "x-tts-engine": "speech" });
+      const made = await post("/api/tts", { text: job.text, lang: job.lang }, { "x-tts-engine": "realtime" });
       const pcm = made.pcmBase64 ? Buffer.from(made.pcmBase64, "base64") : Buffer.alloc(0);
       const row = { ...job, heard: {} };
       if (!pcm.length) {
