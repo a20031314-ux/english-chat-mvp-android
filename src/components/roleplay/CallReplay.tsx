@@ -81,8 +81,8 @@ async function fetchScenes(input: {
 
 /**
  * 끝난 통화 화면·돌아보기의 이렇게도 말할 수 있었어요(lib/roleplay/replay.ts, 2026-11-08).
- * 수업 통화는 처음 그려질 때 장면을 받아 두고 그 통화를 숙제로 — 숙제는 [퀴즈 | 대화](2026-11-08 사용자 "숙제 > 하위탭(퀴즈, 대화)"):
- * 퀴즈 = 그 통화에서 고친 말·장면 조각(homeworkQuiz.ts), 대화 = 장면. 자유대화는 줄을 눌러야 장면을 받고 숙제가 아니다. 받은 장면은 이 폰에만.
+ * 코치가 고친 말이 있는 통화는 처음 그려질 때 장면을 받아 두고 숙제로 — 숙제는 [퀴즈 | 대화](2026-11-08 사용자 "숙제 > 하위탭(퀴즈, 대화)"):
+ * 퀴즈 = 그 통화에서 고친 말·장면 조각(homeworkQuiz.ts), 대화 = 장면. 고친 말이 없는 통화는 눌러야 장면을 받고 숙제가 아니다. 받은 장면은 이 폰에만.
  * 🎭는 Room 게임과 겹쳐 쓰지 않는다(2026-11-08).
  */
 export function CallReplay({
@@ -91,7 +91,7 @@ export function CallReplay({
   locale,
   scenarioId,
   callId,
-  lesson,
+  homework,
   said,
   level,
   isPremium,
@@ -103,7 +103,8 @@ export function CallReplay({
   locale: LearningLanguageCode;
   scenarioId: string;
   callId: string;
-  lesson: boolean;
+  /** 코치가 하나라도 고친 통화 — 끝 화면에 숙제(transcriptMarks.ts hadFix). */
+  homework: boolean;
   said: readonly TranscriptLine[];
   level: number;
   isPremium: boolean;
@@ -117,7 +118,7 @@ export function CallReplay({
   const [sheet, setSheet] = useState(false);
   const asked = useRef(false);
   const canMake = Boolean(callId) && replayable(said);
-  const quiz = useMemo(() => (stored && lesson ? homeworkQuiz(language, said, stored.scenes) : []), [stored, lesson, language, said]);
+  const quiz = useMemo(() => (stored && homework ? homeworkQuiz(language, said, stored.scenes) : []), [stored, homework, language, said]);
 
   const make = async () => {
     if (asked.current || !canMake) return;
@@ -132,15 +133,15 @@ export function CallReplay({
     }
     const row: StoredReplay = { callId, scenes, results: {}, at: Date.now() };
     keepReplay(storage(), language, row);
-    if (lesson) giveHomework(storage(), language, { kind: "replay", callId, at: Date.now() });
+    if (homework) giveHomework(storage(), language, { kind: "replay", callId, at: Date.now() });
     setStored(row);
   };
 
-  // 수업 통화는 끝 화면에 오면 바로 만들어 둔다(숙제). 자유대화는 눌러야.
+  // 코치가 고친 통화는 끝 화면에 오면 바로 만들어 둔다(숙제). 고친 게 없으면 눌러야.
   useEffect(() => {
-    if (lesson && !stored && canMake) void make();
+    if (homework && !stored && canMake) void make();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lesson, callId]);
+  }, [homework, callId]);
 
   useEffect(() => {
     if (openFirst && stored) setSheet(true);
@@ -150,7 +151,7 @@ export function CallReplay({
   if (!canMake && !stored) return null;
 
   const body = stored ? (
-    lesson ? (
+    homework ? (
       <HomeworkTabs ui={ui} language={language} locale={locale} stored={stored} quiz={quiz} gender={gender} isPremium={isPremium} onStored={setStored} />
     ) : (
       <SceneChips ui={ui} language={language} locale={locale} stored={stored} hasQuiz={false} gender={gender} isPremium={isPremium} onStored={setStored} />
@@ -170,11 +171,11 @@ export function CallReplay({
 
   return (
     <section className="shrink-0 border-b border-white/10 px-4 py-2.5" data-call-replay={stored ? "ready" : loading ? "making" : "idle"}>
-      <p className="truncate text-note font-semibold text-ink">{lesson ? ui.homeworkTag : ui.replayTitle}</p>
+      <p className="truncate text-note font-semibold text-ink">{homework ? ui.homeworkTag : ui.replayTitle}</p>
       {body}
       {sheet && stored ? (
         <HomeworkSheet ui={ui} language={language} gender={gender} onClose={() => setSheet(false)}>
-          {lesson ? (
+          {homework ? (
             <HomeworkTabs ui={ui} language={language} locale={locale} stored={stored} quiz={quiz} gender={gender} isPremium={isPremium} onStored={setStored} />
           ) : (
             <SceneChips ui={ui} language={language} locale={locale} stored={stored} hasQuiz={false} gender={gender} isPremium={isPremium} onStored={setStored} />

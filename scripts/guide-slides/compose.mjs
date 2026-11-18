@@ -58,10 +58,6 @@ const LAYOUT = {
   "tab-rooms-2": { shots: ["tab-rooms-2"] },
   "call-talk-1": { shots: ["call-talk"] },
   "call-talk-2": { shots: ["call-quiet"] },
-  "call-lesson-1": { shots: ["call-lesson"] },
-  "call-lesson-2": { shots: ["call-fix-card"] },
-  "call-game-1": { shots: ["call-twenty"] },
-  "call-teach-1": { shots: ["call-teach"] },
   "call-past-1": { flow: [["call-records", "{ui:callRecordsTitle}", 0, 81], ["call-review", "{ui:packSeeRetro}", 0, 380]], arrow: "", base: 390 },
   "call-past-2": { shots: ["call-recap"] },
 };

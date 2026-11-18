@@ -63,7 +63,7 @@ export function TodayCards({ ui, language, locale, grammarName }: { ui: UICopy; 
       ),
     });
   }
-  // 고른 튜터 한 칸(사용자 2026-11-14 "수업이 다른 방식이랑 같은 층위 — 튜터로"): 누르면 튜터 프로필(문 넷 · 메모 · 통화 기록), 오늘 어떤 모드든 통화 한 번이면 ✓.
+  // 고른 튜터 한 칸(사용자 2026-11-14 "수업이 다른 방식이랑 같은 층위 — 튜터로"): 누르면 튜터 프로필(📞 통화 · 메모 · 통화 기록), 오늘 통화 한 번이면 ✓.
   rows.push({
     id: "tutor",
     done: called,
@@ -131,7 +131,7 @@ function useCalledToday(language: string): boolean {
   }, [language, tick]);
 }
 
-/** 수업 숙제(있고, 그 통화 기록이 남아 있을 때만). 누르면 그 통화 돌아보기 위 숙제 화면(openCall replay → CallReplay HomeworkSheet). */
+/** 통화 숙제(있고, 그 통화 기록이 남아 있을 때만). 누르면 그 통화 돌아보기 위 숙제 화면(openCall replay → CallReplay HomeworkSheet). */
 function useHomework(language: string): Homework | null {
   const [homework, setHomework] = useState<Homework | null>(null);
   useEffect(() => {

@@ -204,11 +204,12 @@ test("통화 시간: 잰 초가 있으면 그것(이어서 한 통화의 쉰 시
   assert.equal(callSeconds({ startedAt: 0, updatedAt: 90_000 }), 90);
 });
 
-test("수업 통화 표시(mode)는 읽고 쓸 때 남고, 없거나 모르는 값이면 자유대화", () => {
+test("옛 통화 기록의 수업·게임 표시(mode)는 읽지 않는다 — 통화는 하나(2026-11-19)", () => {
   const base = { id: "a", scenarioId: "open-talk-es", language: "es", title: "Fui a la playa", startedAt: 1, updatedAt: 2, said: [], state: { nodeId: "talk", history: [] } };
-  assert.equal(normalizeSaved({ ...base, mode: "lesson" })?.mode, "lesson");
-  assert.equal(normalizeSaved({ ...base, mode: "game", game: "twenty" })?.game, "twenty");
-  assert.equal(normalizeSaved({ ...base, mode: "game", game: "chess" })?.mode, undefined);
-  assert.equal(normalizeSaved(base)?.mode, undefined);
-  assert.equal(normalizeSaved({ ...base, mode: "study" })?.mode, undefined);
+  const lesson = normalizeSaved({ ...base, mode: "lesson" });
+  assert.ok(lesson);
+  assert.equal("mode" in lesson!, false);
+  const game = normalizeSaved({ ...base, mode: "game", game: "twenty" });
+  assert.ok(game);
+  assert.equal("game" in game!, false);
 });

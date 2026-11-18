@@ -1,4 +1,3 @@
-import { gameRules, roundOverOf, type CallGame } from "./callGames.ts";
 import { chatPartnerForLanguage, type TutorGender } from "../chatPartner.ts";
 import { quotesOwnLine } from "./noteCheck.ts";
 import { compareToTarget, formSlip } from "./practice.ts";
@@ -137,12 +136,12 @@ export type DirectorRequest = {
   /** 옛 앱: 그 칸을 말하는 첫 마디. */
   studyOpen?: boolean;
   /**
-   * 수업 통화(coach): 요즘 퀴즈로 배운 낱말·표현(학습 언어, 앱이 이 폰 기록에서 고름 — 사용자 2026-11-18 "배운 것을 반영하되 자유대화처럼").
+   * 열린 통화마다(2026-11-19, 예전엔 수업 통화만): 요즘 퀴즈로 배운 낱말·표현(학습 언어, 앱이 이 폰 기록에서 고름 — 사용자 2026-11-18 "배운 것을 반영하되 자유대화처럼").
    * 튜터가 어울리는 화제로 몰고 자기가 써 보이기만 — 시키거나 판정하지 않는다. 낱말만, 예문은 싣지 않는다.
    */
   recent?: string[];
   /**
-   * 수업 통화(coach)에서 학습자가 말없이 지나간 차례가 이번까지 몇 번 이어졌나(2026-11-07) — 화면에 🙉·💡가 없어
+   * 옛 앱 수업 통화(coach)에서 학습자가 말없이 지나간 차례가 이번까지 몇 번 이어졌나(2026-11-07) — 화면에 🙉·💡가 없어
    * 튜터가 먼저: 1이면 들었는지 묻고 질문을 쉽게 다시, 2 이상이면 이어 말할 문장 앞부분 힌트.
    */
   silent?: number;
@@ -171,28 +170,20 @@ export type DirectorRequest = {
   missed?: boolean;
   /** 🙉를 같은 질문에 두 번째로 — 쉽게 다시 한 줄도 못 알아들었다. 그 질문은 두고 쉬운 다른 화제로. */
   missedAgain?: boolean;
-  /** 튜터와 게임(callGames.ts, 2026-11-08) — 자유대화 장면에서만. */
-  game?: CallGame;
-  /** 스무고개 이번 판의 답(앱이 고름, 영어). */
-  gameSecret?: string;
-  /** 이번 판에서 학습자가 한 차례 수. */
-  gameCount?: number;
-  /** 게임 통화의 첫 마디(튜터가 먼저 규칙을 말함). */
-  gameStart?: boolean;
   /**
    * 고른 튜터(여자·남자, lib/tutorGender.ts) — "그냥 대화"에서만. 이름·성별을 말해 둬서 화면의 이름·목소리와 맞고,
    * 말하는 사람의 성에 따라 꼴이 바뀌는 언어(ru·hi·ar·es·fr·it·pt)에서 자기를 말하는 꼴이 맞게. 없으면 그 언어의 예전 튜터.
    */
   tutorGender?: TutorGender;
   /**
-   * 튜터 수업(2026-11-02 사용자 "진짜 튜터 역할로 표현·발화 교정·피드백에 집중한 모드") — "그냥 대화"에서만.
+   * 튜터 수업(2026-11-02) — 옛 앱 2.79 이하만 보냄(새 앱은 통화 하나 + 코치 띠, 2026-11-19). 최소 지원 2.80이면 지움.
    * 큰 실수만 소리로 짚고(고친 문장 → 다시 말해 보기), 내 말(앱 언어)을 알아듣고, 짧은 내 말 한마디를 섞는다.
-   * 통화 화면 🎓로 켜고 끔(lib/callStyle.ts) — 차례마다 실려서 통화 중에 바꿔도 다음 차례부터.
    */
   coach?: boolean;
   /**
-   * 튜터 수업: 튜터가 다시 말해 보라고 해서 기다리는 문장(앱이 들고 있다가 다음 차례에 실음). 비면 기다리는 것 없음 —
+   * 튜터 수업(옛 앱): 튜터가 다시 말해 보라고 해서 기다리는 문장(앱이 들고 있다가 다음 차례에 실음). 비면 기다리는 것 없음 —
    * 그때는 pass·miss가 올 수 없다(운영 2026-11-02: 기다리는 것 없이 "pass"가 와서 아무 줄에 ✓가 붙을 뻔함).
+   * 새 앱(코치 띠): 화면에 보인 바른 문장을 학습자가 따라 말한 차례에만 실림 — 튜터는 맞장구만 하고 대화를 잇는다(채점은 앱).
    */
   redo?: string;
   /** 그 문장을 지금까지 몇 번 말해 보라고 했나(1·2). 2면 이번이 마지막 — 또 틀려도 다시 묻지 않고 넘어간다. */
@@ -322,8 +313,6 @@ export type Direction = {
   native?: boolean;
   /** 자유대화 채우기: aimCheck를 보냈을 때만 — 앞 차례 겨냥을 이번 말에서 해냈나. */
   aim?: AimResult;
-  /** 스무고개: 이 차례에 판이 끝남(맞힘·스무 번) — 앱이 다음 답을 고른다(callGames.ts). */
-  round?: "over";
 };
 
 export type { Heard, Lead, LeadHow };
@@ -910,7 +899,7 @@ ${scenario.openEnded && !coaching ? `- If they are stuck — silence, the wrong 
 - "note" is never a translation or an explanation of your own line, or of the question you ask next. It is about their words: what they could say.
 - Only their messages are theirs. What you said earlier — a story, a plan, something you watched — is yours: never ask them about it or say they told you it.
 - If they asked or said something else, answer it briefly, like a person would.
-${scenario.openEnded && !coaching ? `- When what they just said had a mistake, let the right form come up in your own reply, the way someone who heard them would naturally say it back: use their idea again with the wording put right, inside your reaction or your question. Never point it out, never stress it and never ask them to say it again — it is part of the conversation, not a correction. When there was no mistake, do nothing of the kind.\n` : ""}${scenario.openEnded && !coaching ? `- Now and then — about one turn in three, when they are managing, never two in a row and never right after a correction — end on a reaction or a short remark of your own instead of a question, and leave them room to take the conversation where they want.\n` : ""}${tutorSpeechRules(request.targetLanguage, partner?.gender)}
+${scenario.openEnded && !coaching ? `- When what they just said had a mistake, let the right form come up in your own reply, the way someone who heard them would naturally say it back: use their idea again with the wording put right, inside your reaction or your question. Never point it out, never stress it and never ask them to say it again — it is part of the conversation, not a correction. When there was no mistake, do nothing of the kind.\n` : ""}${scenario.openEnded && !coaching ? `- Now and then — about one turn in three, when they are managing, never two in a row and never right after a correction — end on a reaction or a short remark of your own instead of a question, and leave them room to take the conversation where they want.\n` : ""}${scenario.openEnded && !coaching ? `- Once in a while, when they are managing well, ask them to explain something from their side that you do not know — a custom, a place, a food, how something works where they live, or what a word in ${native} means — as someone curious, and let them do the explaining. Not two turns running, and not when they are struggling.\n` : ""}${tutorSpeechRules(request.targetLanguage, partner?.gender)}
 ${
   coaching
     ? `- One or two short sentences.
@@ -929,7 +918,7 @@ ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bi
 `}
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", ${request.game === "teach" ? `"slip_right": "<the correct ${native} sentence you are about to break, or empty on a turn you only ask a question>", "slip": "<what you broke in it, in a few ${target} words, or empty>", ` : ""}"say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false${request.game === "twenty" ? `, "round": "over" | ""` : ""}}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false}
 ${MEASURE_RULES(Boolean(scenario.openEnded), target, native)}
 ${
   coaching
@@ -1015,15 +1004,8 @@ ${request.context.trim()}`
           : `You asked them to say "${request.redo}" again, and this turn is their try at it: "pass" if they said it right, "miss" if not.`
         : `Nothing is waiting to be repeated: "retry" is "ask" or empty this turn.`
       : "",
-    scenario.openEnded && request.game
-      ? gameRules({
-          game: request.game,
-          target: request.targetLanguage,
-          native: request.nativeLanguage,
-          count: request.gameCount ?? 0,
-          start: request.gameStart,
-          secret: request.gameSecret,
-        })
+    !coaching && scenario.openEnded && request.redo?.trim() && request.heard.trim() && triedRedo(request.redo, request.heard, request.targetLanguage)
+      ? `Their screen showed them their last sentence put right ("${request.redo.trim()}"), and on this turn they said it again. Take it as them saying it once more, not as news: at most a word or two about it, in your own manner, then carry the conversation on from where it was. Do not correct it again and do not point out any difference.`
       : "",
     request.missed && request.missedAgain && scenario.openEnded
       ? `They pressed "I didn't catch that" again: they did not understand your easier version either. Let that question go — do not repeat it or explain it — and move to a different, easier topic from their own life — something they told you earlier in this call or in what you know of them (their work or studies, plans, family, a place, a hobby), or else their day today; not food or drinks unless they talked about them — with one short question they can answer with a word or two (or two choices to pick from). Use the most common words. Do not mention that they missed it and do not apologise.${NOREASSURE} Leave "note", "better", "meant" and "smoother" empty, and give "stuck" as the assessment.`
@@ -1048,7 +1030,7 @@ Do it inside the conversation, in your own manner. Never say this out loud, neve
         ? `This turn: they have said nothing for ${request.silent} turns in a row. Do not ask whether they heard you again. Give a hint: say out loud the start of a sentence in ${target} that answers your last question, stopping where their own words would go, and invite them to finish it — in ${target}, at most a few words of ${native}. Put that same start in "note". "assessment" is "stuck".`
         : `This turn: they said nothing. Say only your last question again, in fewer and easier words of ${target} — nothing in ${native}, and do not ask whether they heard you: the app says that first, in their language. "assessment" is "stuck".`
       : "",
-    isCoaching(request, scenario) && request.recent?.length
+    scenario.openEnded && request.recent?.length
       ? `Words and expressions they studied recently, for you only: ${request.recent.join(", ")}. Steer the conversation toward things where a few of them fit naturally, and use them yourself when they fit. Never quiz them, point them out, name them as practice or ask them to use one — it is just conversation.`
       : "",
     request.study?.trim()
@@ -1645,7 +1627,6 @@ export function parseDirection(
     ...(retry === "ask" && better && !meant && record.offer === true ? { offer: true } : {}),
     ...turnMeasure(record, request, scenario),
     ...aimMeasure(record, request, scenario),
-    ...(roundOverOf(record as { round?: unknown }, scenario.openEnded ? request.game : undefined) ? { round: "over" as const } : {}),
   };
 }
 

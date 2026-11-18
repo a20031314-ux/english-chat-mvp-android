@@ -22,7 +22,7 @@
 │          오늘의 학습 = 오늘 타임라인(계정 카드 아래, notes/NotebookSection 맨 위 studyMap/TodayCards → Logbank TodayTimeline — ⏱ 오늘 분):
 │              오늘 학습 시간 줄(Logbank SessionRows, 그날 세부와 같은 줄 — 누르면 DayTimeline 그 덩어리) → 같은 선 위 할 것 칸(TodaySlot, 끝나면 ✓·다 끝나면 제목 ✓):
 │              ▶ Quizbank n/10(curriculum/quizFocus.ts 신호, n = todayCards.ts answeredToday — 0단계면 오늘의 글자 묶음 → Languagebank 글자 칸 curriculum/lettersOpen.ts)
-│              · 숙제(있을 때 → openCall replay) · 고른 튜터와 통화(→ 튜터 프로필 AiTutorSheet — 문 넷, ✓ = 오늘 이 언어 통화 callStore 아무 모드)
+│              · 숙제(있을 때 → openCall replay) · 고른 튜터와 통화(→ 튜터 프로필 AiTutorSheet — 📞 통화, ✓ = 오늘 이 언어 통화 callStore)
 │          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단어 → 뜻 → 표현·문법 → 시작 단계, curriculum/firstCheck.ts)
 │          칸 셋 = 위 칸 이름 줄이 탭(notes/NotebookSection MyLayers — 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면 FullScreenLayer, ✕로 제자리)
 │          [Logbank 하늘] studyMap/Logbank — 기록만
@@ -35,23 +35,23 @@
 │              · 묶음 ▶ 넘겨 보기(BankFlip) · 글자가 다른 언어면 첫 줄 글자·소리 칸(ScriptPractice LettersRow·LettersBank)
 │          칸 머리 ?(Logbank·Quizbank) → studyMap/BankHelp(lib/guide/banks.ts)
 │
-├ 대화 talk ─ AI 튜터 줄(AiTutorRow — 고른·팔로우한 튜터마다, 마지막 말, 통화 문 넷 CallDoors [📞 자유대화 · 🎓 수업 · 🎲 게임 · 🧑‍🏫 가르치기], 숙제 줄 TutorHomework·점)
+├ 대화 talk ─ AI 튜터 줄(AiTutorRow — 고른·팔로우한 튜터마다, 마지막 말, 통화 문 하나 CallDoor 📞, 숙제 줄 TutorHomework·점)
 │           │   └ 줄 → AI 채팅 ChatWindow(튜터별 대화방 — ⋮ 튜터 목소리·말 빠르기·튜터가 쓰는 말·고친 문장 보기·채팅 기록 · 편한 말 줄 → 표현 보기 ExpressionPeek → 같이 배우기 studyMap/StudyChips)
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
 │           └ 1:1 메시지(요청 → 열림, 📞 → 둘만의 비공개 방 = AI 통화와 같은 통화 화면 rooms/RoomCall)
-├ 사람 people ─ 맨 위 AI 튜터 둘(AiTutorPeople — 💬 · 문 넷 아이콘) → 튜터 프로필(AiTutorProfile — ProfileFrame · 문 넷 · 숙제 · 마지막 메모 · 팔로우·메시지·통화 기록)
+├ 사람 people ─ 맨 위 AI 튜터 둘(AiTutorPeople — 💬 · 📞) → 튜터 프로필(AiTutorProfile — ProfileFrame · 📞 통화 · 숙제 · 마지막 메모 · 팔로우·메시지·통화 기록)
 │             · [👤 사람 | 📋 게시판] · 프로필 시트(팔로우·메시지·메이트·차단·신고) · 처음 "나를 소개해요" · ➕ 친구 초대
 ├ Room room ─ 로비("열린 방" · + 새 방) → 방(자리 8칸·듣는 줄·자막·댓글) · 👥 이 방 사람들과 단체방 · 🎭 게임(라이어·마피아)
 └ 영상 학습 video ─ 이달의 영상 · 링크 넣기 · 학습 언어 자막 · 문장 바 → 문장분석 시트
 
 어디서나 뜨는 층
   AI 통화 CallHost(startCall · practice · openCall) → RoleplayScreen
-     통화 중: roleplay/CallParts CallStage(맨 위 모드 이름 ⓘ → CallModeInfo 설명창 — 모드마다 처음 한 번 저절로, callModeSeen.v1 이 폰 · 위 튜터 얼굴·💬 자막 · 아래 내 사진) · CallControls(🙉 · 💡 — 자유대화는 막혔을 때만, 수업은 없음)
-       교정: 자유대화 = 내 얼굴 아래 카드(CoachCardView quiet) · 수업 = 튜터가 짚고 다시 말해 보기(director coachRules) · 게임 = 감독 규칙 roleplay/callGames.ts
-       수업: 틀 없이 자유대화처럼 — 요즘 배운 것 lib/roleplay/recentLearned.ts(장부 최근 7일 퀴즈 낱말·표현) → 감독 recent(화제에 녹이기만), 틀림·어색함은 coachRules가 짚고 다시 말해 보기
+     통화 중: roleplay/CallParts CallStage(맨 위 📞 통화 ⓘ → CallModeInfo 설명창 — 처음 한 번 저절로, callInfoSeen.v1 이 폰 · 위 튜터 얼굴·💬 자막 · 아래 내 사진) · CallControls(🙉 · 💡 — 막혔을 때만)
+       튜터는 대화만(감독 free — 요즘 배운 것 lib/roleplay/recentLearned.ts 장부 최근 7일 퀴즈 낱말·표현 → recent 화제에 녹이기만, 가끔 내 쪽 것 설명해 달라고)
+       교정 = 코치 띠(CallParts CoachCardView — 같은 언어 짝 튜터 얼굴·이름, 소리 없음): 따라 말하면 앱 채점 transcriptMarks.ts gradeRedo(✓·한 번 더), 튜터에겐 redo만(맞장구)
      끝: CallSummary · 튜터 메모 · 이렇게도 말할 수 있었어요(roleplay/CallReplay — 장면 ReplayPlayer) · 대본(CallPages) · 통화 정리(roleplay/CallRecap — 줄마다 같이 배우기 studyMap/StudyChips → openLesson · 🔎 My에서 찾기)
-         · 이번 통화의 고쳐 씀(CallGrowthPairs) · 수업이면 숙제 [퀴즈 | 대화](HomeworkSheet, roleplay/homeworkQuiz.ts — 짚은 말·장면 조각) · 0단계면 📝 글자·소리 숙제(openLettersBank)
-     통화 기록 CallList(튜터 프로필, 칩 [자유대화 | 수업 | 게임 | 가르치기], lib/roleplay/callStore.ts 이 폰)
+         · 이번 통화의 고쳐 씀(CallGrowthPairs) · 고친 게 있으면 숙제 [퀴즈 | 대화](HomeworkSheet, roleplay/homeworkQuiz.ts — 짚은 말·장면 조각) · 0단계면 📝 글자·소리 숙제(openLettersBank)
+     통화 기록 CallList(튜터 프로필, 한 목록, lib/roleplay/callStore.ts 이 폰)
   소재 수업 studyMap/LessonHost(openLesson) → FrameLesson [설명 › 퀴즈 › 대화] · GrammarExplain(문법 한 장) · ExpressionCard(표현 카드) · FixedExplain(고정 수업)
   사전 시트 Dictionary DictionarySheet · 사전 주석 studyMap/DictNotes(대화 줄 LineTools · 영상 자막 · 퀴즈 답 뒤 · 예문 옆 📕)
   문장분석 시트 · 표현 시트 · 🔎 My에서 찾기(FindInMy → openLesson, 없으면 사전 시트) · 결제 화면

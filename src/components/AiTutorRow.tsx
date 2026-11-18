@@ -6,7 +6,7 @@ import { CONVERSATION_SESSIONS_KEY, lastLineFor, normalizeConversationSession, t
 import { getLearningLanguage } from "@/lib/learningLanguages";
 import { useTutorGender } from "@/lib/tutorGender";
 import { tutorChatRows, useFollowedTutors } from "@/lib/tutorFollows";
-import { AiAvatar, CallDoors, HomeworkDot, TutorHomework, useTutorDesk, type CallKind } from "@/components/AiTutorProfile";
+import { AiAvatar, CallDoor, HomeworkDot, TutorHomework, useTutorDesk } from "@/components/AiTutorProfile";
 
 function savedSessions(): ConversationSession[] {
   try {
@@ -32,7 +32,7 @@ export function AiTutorRows({
   targetLanguage: string;
   canCall: boolean;
   onChat: (gender: TutorGender) => void;
-  onCall: (gender: TutorGender, kind: CallKind) => void;
+  onCall: (gender: TutorGender) => void;
 }) {
   const chosen = useTutorGender(targetLanguage);
   const followed = useFollowedTutors(targetLanguage);
@@ -50,7 +50,7 @@ export function AiTutorRows({
           canCall={canCall}
           main={gender === chosen}
           onChat={() => onChat(gender)}
-          onCall={(kind) => onCall(gender, kind)}
+          onCall={() => onCall(gender)}
         />
       ))}
     </div>
@@ -61,7 +61,7 @@ export function AiTutorRows({
  * 대화 목록의 AI 튜터 한 줄(2026-10-20, `hub/work/drafts/one-list-tabs.md`).
  * 2026-10-27 사용자 "AI 튜터를 아예 사람들과 통합": 사람 탭에 프로필(AiTutorProfile)이 있고, 대화 목록에는 다른 대화처럼
  * 그 사람(이름·국기)과의 대화 한 줄 — 줄을 누르면 채팅. 통화 기록 목록은 사람 탭 프로필 시트(CallList). 사람 탭이 없을 때만 채팅 ⋮.
- * 2026-11-09(시안 "튜터 화면"): 문 넷 📞 자유대화 · 🎓 수업 · 🎲 게임 · 🧑‍🏫 가르치기(같은 층, CallDoors) — 지금 고른 튜터(main)는 이름 버튼 2×2 + 그 튜터 숙제 줄, 다른 튜터는 아이콘 넷.
+ * 통화 문 하나(CallDoor, 2026-11-19) — 지금 고른 튜터(main)는 이름 버튼 + 그 튜터 숙제 줄, 다른 튜터는 📞 아이콘.
  * 숙제가 남았으면 얼굴 모서리에 점. 숫자(통화 수·고친 말)는 Logbank 몫이라 없다.
  */
 export function AiTutorRow({
@@ -84,7 +84,7 @@ export function AiTutorRow({
   /** 지금 고른 튜터 — 넓은 문 + 숙제 줄. */
   main: boolean;
   onChat: () => void;
-  onCall: (kind: CallKind) => void;
+  onCall: () => void;
 }) {
   const partner = chatPartnerForLanguage(targetLanguage, gender);
   const { homework } = useTutorDesk(targetLanguage, gender);
@@ -116,11 +116,11 @@ export function AiTutorRow({
         </button>
         {canCall && !main ? (
           <div className="flex basis-full justify-end gap-2 px-1">
-            <CallDoors ui={ui} look="icons" onPick={onCall} />
+            <CallDoor ui={ui} look="icons" onPick={onCall} />
           </div>
         ) : null}
       </div>
-      {canCall && main ? <CallDoors ui={ui} className="mt-2 px-1" onPick={onCall} /> : null}
+      {canCall && main ? <div className="mt-2 px-1"><CallDoor ui={ui} onPick={onCall} /></div> : null}
       {main && homework ? <TutorHomework ui={ui} homework={homework} className="mt-2" /> : null}
     </div>
   );

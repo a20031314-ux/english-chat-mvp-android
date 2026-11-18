@@ -53,7 +53,7 @@ export function CallStage({
   onCaptionTap,
   mode,
 }: {
-  /** 열린 통화의 모드(자유대화·수업·게임·가르치기) — 맨 위에 이름 · ⓘ(누르면 설명창, CallModeInfo). 대본 장면엔 없음. */
+  /** 열린 통화 — 맨 위에 "통화" · ⓘ(누르면 설명창, CallModeInfo). 대본 장면엔 없음. */
   mode?: { icon: string; name: string; onInfo: () => void };
   /** 자막 줄을 누름 — 그 줄의 해석을 펴고 접는다(2026-11-03). */
   onCaptionTap?: () => void;
@@ -66,7 +66,7 @@ export function CallStage({
   caption: { text: string; meaning?: string } | null;
   /** 대본 장면이면 지금 할 일(열린 대화에는 없음). */
   goal?: string;
-  /** 튜터 수업: 고친 말·건넨 표현 카드 — 내 얼굴 아래(없으면 대본 장면의 할 일). */
+  /** 코치 띠: 고친 말·더 자연스러운 말 — 내 얼굴 아래(없으면 대본 장면의 할 일). */
   coach?: CoachCard | null;
 }) {
   const chosen = useTutorGender(language);
@@ -130,7 +130,7 @@ export function CallStage({
           <TalkingBars on={speaker === "learner"} />
         )}
         {coach ? (
-          <CoachCardView key={`${coach.said}|${coach.right}`} card={coach} />
+          <CoachCardView key={`${coach.said}|${coach.right}`} card={coach} language={language} coachGender={partner.gender === "f" ? "m" : "f"} />
         ) : goal ? (
           <p className="max-w-md text-meta text-slate-400">{goal}</p>
         ) : null}
@@ -140,20 +140,26 @@ export function CallStage({
 }
 
 /**
- * 튜터 수업 카드(2026-11-02): ✎ 고친 말이면 내 말(틀린 곳 빨간 취소선) → 고친 문장, 💬 내 말·부서진 말이면 흐리게 내 말 → 학습 언어 문장,
- * 💡 표현이면 건넨 표현만(자유대화의 💡는 내 말 → 더 자연스러운 말). 고친 문장 앞 🔁(다시 말할 차례) / ✓(맞힘). 까닭 한 줄은 앱 언어, 작게. 화면 속 설명 글 없이 아이콘만.
+ * 코치 띠(2026-11-19 사용자 "수업모드는 제3튜터로 자막으로"): 튜터는 대화만, 고친 말은 같은 언어의 짝 튜터(고르지 않은 쪽)가 화면에 — 소리 없음.
+ * ✎ 고친 말이면 내 말(틀린 곳 빨간 취소선) → 고친 문장, 💬 내 말·부서진 말이면 흐리게 내 말 → 학습 언어 문장,
+ * 💡 더 자연스러운 말이면 내 말 → 그 말. 고친 문장 앞 →(따라 말해 봐도 됨) / ✓(따라 말해 맞힘). 까닭 한 줄은 앱 언어, 작게. 설명 글 없이.
  */
-function CoachCardView({ card }: { card: CoachCard }) {
+function CoachCardView({ card, language, coachGender }: { card: CoachCard; language: string; coachGender: TutorGender }) {
   const icon = card.kind === "offer" ? "💡" : card.kind === "meant" ? "💬" : "✎";
-  // 자유대화 카드(quiet): 다시 말할 차례가 아니라 🔁 대신 →, 틀린 말이면 노란 테두리로 한 번 번쩍(coach-pop), 한 차례 지나면 흐림(old).
-  const tone = card.quiet && card.kind !== "offer" ? "border-warn/60 bg-warn/10" : "border-white/10 bg-white/5";
-  const lead = card.kind === "offer" && !card.passed ? "💡" : card.passed ? "✓" : card.quiet ? "→" : "🔁";
+  // 틀린 말이면 노란 테두리로 한 번 번쩍(coach-pop), 한 차례 지나면 흐림(old).
+  const tone = card.kind !== "offer" ? "border-warn/60 bg-warn/10" : "border-white/10 bg-white/5";
+  const lead = card.passed ? "✓" : card.kind === "offer" ? "💡" : "→";
+  const coach = chatPartnerForLanguage(language, coachGender);
   return (
     <div
-      className={`w-full max-w-md rounded-xl border px-3 py-2.5 text-start transition-opacity ${tone} ${card.quiet && !card.old ? "coach-pop" : ""} ${card.old ? "opacity-50" : ""}`}
+      className={`w-full max-w-md rounded-xl border px-3 py-2.5 text-start transition-opacity ${tone} ${!card.old && !card.passed ? "coach-pop" : ""} ${card.old ? "opacity-50" : ""}`}
       data-call-coach={card.kind}
-      data-call-coach-quiet={card.quiet ? (card.old ? "old" : "new") : undefined}
+      data-call-coach-state={card.passed ? "passed" : card.old ? "old" : "new"}
     >
+      <p className="mb-1 flex items-center gap-1.5 text-caption text-slate-400" data-call-coach-who>
+        <AiAvatar size={20} language={language} gender={coachGender} />
+        <bdi>{coach.givenName}</bdi>
+      </p>
       {card.kind !== "offer" && card.said ? (
         <p className="flex items-start gap-1.5 text-meta text-slate-400">
           <span aria-hidden>{icon}</span>
@@ -171,7 +177,6 @@ function CoachCardView({ card }: { card: CoachCard }) {
 
 /**
  * 통화 중 아래 버튼 넷: 🙉 못 알아들었어요 · 💬 자막 · 💡 힌트 · 끝내기(빨강).
- * 통화 중 🎓 튜터 수업 켬/끔은 뺌(2026-11-07 사용자 "빼줘") — 교정 방식은 통화를 열 때 고른 자유대화/공부가 정한다.
  * 끝내기는 통화를 내려놓는 것 — 기록에 남아 통화 기록에서 이어서 할 수 있다(예전 "중단").
  * 그냥 대화는 튜터가 끊지 않는다(2026-11-06) — 튜터가 작별 인사를 한 차례(leaving)엔 끝내기가 눈에 띄게, 다시 말하면 그대로 이어짐.
  */
@@ -196,14 +201,14 @@ export function CallControls({
   onEnd: () => void;
   /** 튜터가 작별로 읽은 차례 — 끝내기를 강조. */
   leaving?: boolean;
-  /** 🙉·💡를 보일 때(2026-11-07): false = 자리만 지키고 숨김(자유대화 — 망설이거나 막혔을 때 true), "none" = 아예 없음(수업 — 튜터가 먼저 묻고 힌트). */
-  help?: boolean | "none";
+  /** 🙉·💡를 보일 때(2026-11-07): false = 자리만 지키고 숨김(망설이거나 막혔을 때 true). */
+  help?: boolean;
 }) {
   return (
     <CallButtonRow>
-      {help === "none" ? null : <CallButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} hidden={!help} />}
+      <CallButton icon="🙉" label={ui.roleplayMissed} onClick={onMissed} disabled={!canAnswer} hidden={!help} />
       <CallButton icon="💬" label={ui.roleplayCaptions} onClick={onToggleCaptions} pressed={captions} />
-      {help === "none" ? null : <CallButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} hidden={!help} />}
+      <CallButton icon="💡" label={ui.missionHint} onClick={onHint} disabled={!canAnswer} hidden={!help} />
       <CallButton icon="📞" label={ui.roleplayPause} onClick={onEnd} tone="end" callout={leaving} />
     </CallButtonRow>
   );
@@ -284,7 +289,7 @@ export function CallFooter({
 }
 
 /**
- * 끝난 화면 맨 위 통화 요약 한 줄(사용자 2026-11-01 "통화 요약 한 줄"): 튜터 얼굴·이름 · ⏱ 통화 시간 · ✎ 고친 말 · 💡 힌트 · 🙉 못 알아들은 말 · 🔁 튜터 수업에서 다시 말해 맞힌 수.
+ * 끝난 화면 맨 위 통화 요약 한 줄(사용자 2026-11-01 "통화 요약 한 줄"): 튜터 얼굴·이름 · ⏱ 통화 시간 · ✎ 고친 말 · 💡 힌트 · 🙉 못 알아들은 말 · ✓ 코치 띠를 따라 말해 맞힌 수.
  * 0인 칸은 뺀다. 이름은 아이콘의 title·aria-label로(화면 속 설명 글 없음).
  */
 export function CallSummary({
@@ -507,23 +512,20 @@ export function CallAdStrip() {
 }
 
 
-export type CallModeKind = "talk" | "lesson" | "twenty" | "teach";
+const INFO_SEEN_KEY = "callInfoSeen.v1";
 
-const MODE_SEEN_KEY = "callModeSeen.v1";
-
-/** 이 모드 설명창을 이 폰에서 본 적이 있나(처음 한 번만 저절로 뜸). */
-export function callModeSeen(kind: CallModeKind): boolean {
+/** 통화 설명창을 이 폰에서 본 적이 있나(처음 한 번만 저절로 뜸, 2026-11-19 통화 하나). */
+export function callInfoSeen(): boolean {
   try {
-    return (JSON.parse(localStorage.getItem(MODE_SEEN_KEY) ?? "[]") as string[]).includes(kind);
+    return localStorage.getItem(INFO_SEEN_KEY) === "1";
   } catch {
     return true;
   }
 }
 
-function markModeSeen(kind: CallModeKind) {
+function markInfoSeen() {
   try {
-    const seen = JSON.parse(localStorage.getItem(MODE_SEEN_KEY) ?? "[]") as string[];
-    if (!seen.includes(kind)) localStorage.setItem(MODE_SEEN_KEY, JSON.stringify([...seen, kind]));
+    localStorage.setItem(INFO_SEEN_KEY, "1");
   } catch {
     // 이번에만.
   }
@@ -537,34 +539,28 @@ function languageLabel(locale: string, code: string): string {
   }
 }
 
-/** 모드마다 설명 세 줄(튜터가 하는 것 · 내가 하는 것 · 끝나면) — 문구 키는 copy.ts callInfo*. */
-export function callModeLines(ui: UICopy, kind: CallModeKind, names: { native: string; target: string }): string[] {
+/** 통화 설명 세 줄(튜터 · 코치 · 끝나면) — 문구 키는 copy.ts callInfoTalk1~3. */
+export function callInfoLines(ui: UICopy, names: { native: string; target: string }): string[] {
   const fill = (text: string) => text.replaceAll("{native}", names.native).replaceAll("{target}", names.target);
-  const lines: Record<CallModeKind, string[]> = {
-    talk: [ui.callInfoTalk1, ui.callInfoTalk2, ui.callInfoTalk3],
-    lesson: [ui.callInfoLesson1, ui.callInfoLesson2, ui.callInfoLesson3],
-    twenty: [ui.callInfoTwenty1, ui.callInfoTwenty2, ui.callInfoTwenty3],
-    teach: [ui.callInfoTeach1, ui.callInfoTeach2, ui.callInfoTeach3],
-  };
-  return lines[kind].map(fill);
+  return [ui.callInfoTalk1, ui.callInfoTalk2, ui.callInfoTalk3].map(fill);
 }
 
 /**
- * 통화 모드 설명창(사용자 2026-11-14 "개편된 AI 튜터 기능의 설명이 없어 — 가르치기를 누르면 그냥 통화처럼 보여"):
- * 통화 위 아래쪽 시트 — 모드 이름 + 세 줄. 그 모드를 처음 열 때 한 번 저절로, 그 뒤엔 맨 위 모드 이름 ⓘ로. 통화는 뒤에서 그대로.
+ * 통화 설명창(사용자 2026-11-14 "개편된 AI 튜터 기능의 설명이 없어"):
+ * 통화 위 아래쪽 시트 — 통화 이름 + 세 줄. 처음 열 때 한 번 저절로, 그 뒤엔 맨 위 이름 ⓘ로. 통화는 뒤에서 그대로.
  */
-export function CallModeInfo({ ui, kind, icon, name, locale, language, onClose }: { ui: UICopy; kind: CallModeKind; icon: string; name: string; locale: string; language: string; onClose: () => void }) {
+export function CallModeInfo({ ui, name, locale, language, onClose }: { ui: UICopy; name: string; locale: string; language: string; onClose: () => void }) {
   const close = () => {
-    markModeSeen(kind);
+    markInfoSeen();
     onClose();
   };
-  const lines = callModeLines(ui, kind, { native: languageLabel(locale, locale), target: languageLabel(locale, language) });
+  const lines = callInfoLines(ui, { native: languageLabel(locale, locale), target: languageLabel(locale, language) });
   return (
     <BodyLayer>
-      <div data-call-mode-sheet={kind} className="fixed inset-0 z-[140] flex items-end justify-center bg-black/50" onClick={close}>
+      <div data-call-mode-sheet="call" className="fixed inset-0 z-[140] flex items-end justify-center bg-black/50" onClick={close}>
         <div className="w-full max-w-md rounded-t-2xl border border-line bg-surface p-4 pb-[max(1rem,env(safe-area-inset-bottom))]" onClick={(event) => event.stopPropagation()}>
           <p className="flex items-center gap-2 text-body font-semibold text-ink">
-            <span aria-hidden className="text-title">{icon}</span>
+            <span aria-hidden className="text-title">📞</span>
             <span>{name}</span>
           </p>
           <ol className="mt-3 flex flex-col gap-2">

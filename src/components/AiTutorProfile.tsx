@@ -104,12 +104,10 @@ export function chatWithTutor(targetLanguage: string, gender: TutorGender | unde
   sendAppIntent("openTab", { tab: "chat" });
 }
 
-export type CallKind = "talk" | "lesson" | "twenty" | "teach";
-
-/** 그 튜터와 통화: 튜터 목소리를 그 사람으로 정하고(채팅·통화가 같이 따라감, lib/tutorGender.ts) 그 종류의 통화를 연다. */
-export function callTutor(targetLanguage: string, gender: TutorGender | undefined, kind: CallKind = "talk") {
+/** 그 튜터와 통화: 튜터 목소리를 그 사람으로 정하고(채팅·통화가 같이 따라감, lib/tutorGender.ts) 통화를 연다. */
+export function callTutor(targetLanguage: string, gender: TutorGender | undefined) {
   if (gender) writeTutorGender(targetLanguage, gender);
-  sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : kind === "talk" ? {} : { game: kind });
+  sendAppIntent("startCall", {});
 }
 
 /**
@@ -153,7 +151,7 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UIC
             >
               <span aria-hidden>💬</span>
             </button>
-            {canCall ? <CallDoors ui={ui} look="icons" onPick={(kind) => callTutor(targetLanguage, gender, kind)} /> : null}
+            {canCall ? <CallDoor ui={ui} look="icons" onPick={() => callTutor(targetLanguage, gender)} /> : null}
           </div>
         </div>
       </div>
@@ -231,58 +229,40 @@ function shortDay(at: number, locale: string): string {
 }
 
 /**
- * 통화 문 넷 — 자유대화 · 수업 · 게임 · 가르치기를 같은 층으로(사용자 2026-11-09 "같은 층위로 나열" → "가르치기는 문 하나로 꺼내줘"):
- * 같은 크기·같은 모양, 누르면 바로 그 통화. 게임 = 스무고개(게임에 하나만 남아 고르기 없음), 가르치기는 고급 표시만(잠그지 않음).
- * "wide"는 프로필·고른 튜터 줄(이름 버튼 2×2), "icons"는 다른 튜터 줄·사람 탭 줄(아이콘만).
+ * 통화 문 하나(2026-11-19 사용자 "통화탭을 한 구조로" · "게임, 가르치기도 그냥 합치고") — 누르면 바로 통화.
+ * "wide"는 프로필·고른 튜터 줄(이름 버튼), "icons"는 다른 튜터 줄·사람 탭 줄(아이콘만).
  */
-export function CallDoors({ ui, onPick, look = "wide", className = "" }: { ui: UICopy; onPick: (kind: CallKind) => void; look?: "wide" | "icons"; className?: string }) {
-  const doors: { kind: CallKind; icon: string; label: string; advanced?: boolean }[] = [
-    { kind: "talk", icon: "📞", label: ui.callModeTalk },
-    { kind: "lesson", icon: "🎓", label: ui.callModeStudy },
-    { kind: "twenty", icon: "🎲", label: ui.callModeGame },
-    { kind: "teach", icon: "🧑‍🏫", label: ui.gameTeach, advanced: true },
-  ];
+export function CallDoor({ ui, onPick, look = "wide", className = "" }: { ui: UICopy; onPick: () => void; look?: "wide" | "icons"; className?: string }) {
   if (look === "icons") {
     return (
-      <>
-        {doors.map((door) => (
-          <button
-            key={door.kind}
-            type="button"
-            data-call-choice={door.kind}
-            onClick={() => onPick(door.kind)}
-            aria-label={door.label}
-            title={door.label}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-title hover:bg-white/10"
-          >
-            <span aria-hidden>{door.icon}</span>
-          </button>
-        ))}
-      </>
+      <button
+        type="button"
+        data-call-door
+        onClick={onPick}
+        aria-label={ui.homeTabCall}
+        title={ui.homeTabCall}
+        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-title hover:bg-white/10"
+      >
+        <span aria-hidden>📞</span>
+      </button>
     );
   }
   return (
-    <div data-call-doors className={`grid grid-cols-2 gap-2 ${className}`}>
-      {doors.map((door) => (
-        <button
-          key={door.kind}
-          type="button"
-          data-call-choice={door.kind}
-          onClick={() => onPick(door.kind)}
-          className="flex min-h-11 items-center justify-center gap-1.5 rounded-xl border border-white/20 px-2 text-note font-medium text-ink hover:bg-white/10"
-        >
-          <span aria-hidden>{door.icon}</span>
-          <span className="truncate">{door.label}</span>
-          {door.advanced ? <span className="shrink-0 rounded-full bg-warn/20 px-1.5 text-caption text-warn">{ui.mapLevelAdvanced}</span> : null}
-        </button>
-      ))}
-    </div>
+    <button
+      type="button"
+      data-call-door
+      onClick={onPick}
+      className={`flex min-h-11 w-full items-center justify-center gap-1.5 rounded-xl border border-white/20 px-2 text-note font-medium text-ink hover:bg-white/10 ${className}`}
+    >
+      <span aria-hidden>📞</span>
+      <span className="truncate">{ui.homeTabCall}</span>
+    </button>
   );
 }
 
 /**
  * AI 튜터 프로필 시트 — 사람 프로필과 같은 틀(ProfileFrame, 2026-11-02 사용자 "프로필 구조 통일").
- * 2026-11-09 "이 튜터와의 공부"(시안): 문 자유대화 · 수업 · 게임 · 가르치기(같은 층) → 숙제 → 튜터 메모 → 아래 팔로우 · 메시지 · 통화 기록.
+ * "이 튜터와의 공부"(시안 2026-11-09): 📞 통화 → 숙제 → 튜터 메모 → 아래 팔로우 · 메시지 · 통화 기록.
  */
 export function AiTutorSheet({
   ui,
@@ -325,7 +305,7 @@ export function AiTutorSheet({
         </p>
       }
     >
-      {canCall ? <CallDoors ui={ui} className="mt-3" onPick={(kind) => go(() => callTutor(targetLanguage, who, kind))()} /> : null}
+      {canCall ? <CallDoor ui={ui} className="mt-3" onPick={go(() => callTutor(targetLanguage, who))} /> : null}
       {desk.homework ? (
         <div className="mt-3" onClickCapture={() => onClose()}>
           <TutorHomework ui={ui} homework={desk.homework} />

@@ -533,7 +533,7 @@ function AppHomeInner({
                           writeTutorGender(targetLanguage, gender);
                           openTab("chat");
                         }}
-                        onCall={(gender, kind) => callTutor(targetLanguage, gender, kind)}
+                        onCall={(gender) => callTutor(targetLanguage, gender)}
                         targetLanguage={targetLanguage}
                       />
                     </>

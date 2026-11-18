@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { silentRun, markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
+import { gradeRedo, gradedCoachCard, hadFix, markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextShownRedo, tallyCall, tipOnLastTutorLine, withTranslation } from "./transcriptMarks.ts";
 import type { TranscriptLine } from "./review.ts";
 
 const ja: TranscriptLine[] = [
@@ -63,7 +63,7 @@ test("통화 요약 수: 고친 말·힌트·못 알아들은 말(일본어·스
   assert.deepEqual(tallyCall(lines), { fixed: 2, hints: 1, missed: 1, redone: 0 });
 });
 
-test("튜터 수업: 다시 말해 맞힌 줄(🔁)을 세고, 맨 마지막 내 줄에 맞힘/아직을 붙인다(일본어·스페인어)", () => {
+test("코치 띠: 따라 말해 맞힌 줄을 세고, 맨 마지막 내 줄에 맞힘/아직을 붙인다(일본어·스페인어)", () => {
   const lines: TranscriptLine[] = [
     { who: "tutor", text: "昨日友達に会いました。もう一回言ってみて？" },
     { who: "learner", text: "昨日友達に会いました" },
@@ -78,61 +78,45 @@ test("튜터 수업: 다시 말해 맞힌 줄(🔁)을 세고, 맨 마지막 내
   assert.deepEqual(tallyCall(es), { fixed: 0, hints: 0, missed: 0, redone: 1 });
 });
 
-test("튜터 수업 기다림: ask → miss → miss면 넘어감, pass면 끝, 다른 문장 ask는 처음부터(일본어)", () => {
+test("코치 띠 채점: 다 같으면·줄임말만 다르면 맞힘, 다른 꼴이면 아직(영어·스페인어·일본어)", () => {
+  assert.equal(gradeRedo("I went to a café yesterday.", "I went to a café yesterday"), "pass");
+  assert.equal(gradeRedo("I am going to the park.", "I'm going to the park"), "pass");
+  assert.equal(gradeRedo("Ayer fui a la playa con mis amigos.", "Ayer fui a la playa con mis amigo"), "miss", "같은 낱말의 다른 꼴");
+  assert.equal(gradeRedo("Ayer fui a la playa con mis amigos.", "Ayer fui la playa con mis amigos"), "pass", "긴 문장에서 한 낱말 빠짐");
+  assert.equal(gradeRedo("Fui al parque.", "Fui parque"), "miss", "짧은 문장은 다 맞아야");
+  assert.equal(gradeRedo("昨日友達に会いました。", "昨日友達に会いました"), "pass");
+});
+
+test("코치 띠 기다림: 아직이면 한 번 더, 두 번째면 끝, 다른 말이면 띠가 떠 있는 한 차례만", () => {
   const none = { line: "", tries: 0 };
-  const asked = nextRedo(none, "ask", "昨日友達に会いました。");
-  assert.deepEqual(asked, { line: "昨日友達に会いました。", tries: 1 });
-  const again = nextRedo(asked, "miss", "昨日友達に会いました。");
-  assert.deepEqual(again, { line: "昨日友達に会いました。", tries: 2 });
-  assert.deepEqual(nextRedo(again, "miss", ""), none, "두 번 묻고 또 틀리면 넘어감");
-  assert.deepEqual(nextRedo(asked, "pass", undefined), none);
-  assert.deepEqual(nextRedo(asked, "ask", "カフェに行きました。"), { line: "カフェに行きました。", tries: 1 });
-  assert.deepEqual(nextRedo(none, "miss", "x"), none, "기다리는 것 없이 온 miss는 무시");
-  assert.deepEqual(nextRedo(asked, undefined, ""), none, "다른 말을 하면 기다림 끝");
+  const wait = { line: "Ayer fui a la playa.", tries: 0 };
+  assert.deepEqual(nextShownRedo(wait, { repeated: true, graded: "miss", cardUp: true }), { line: wait.line, tries: 1 });
+  assert.deepEqual(nextShownRedo({ ...wait, tries: 1 }, { repeated: true, graded: "miss", cardUp: true }), none);
+  assert.deepEqual(nextShownRedo(wait, { repeated: true, graded: "pass", cardUp: true }), none);
+  assert.deepEqual(nextShownRedo(wait, { repeated: false, cardUp: true }), wait);
+  assert.deepEqual(nextShownRedo(wait, { repeated: false, cardUp: false }), none);
+  assert.deepEqual(nextShownRedo(none, { repeated: false, cardUp: true }), none);
 });
 
-test("튜터 수업 카드: 고침 → 아직 → 맞힘 → 다음 차례에 사라짐, 내 말 문장·표현은 종류가 다름(일본어·스페인어)", () => {
-  const heard = "昨日友達を会いました";
-  const fixed = nextCoachCard(null, { retry: "ask", better: "昨日友達に会いました。", note: "会う는 に", heard, gaveUp: false });
-  assert.deepEqual(fixed, { kind: "fix", said: heard, right: "昨日友達に会いました。", why: "会う는 に" });
-  const missed = nextCoachCard(fixed, { retry: "miss", better: "昨日友達に会いました。", heard: "昨日友達が会いました", gaveUp: false });
-  assert.equal(missed?.said, heard, "처음 틀린 말을 그대로 둠");
-  assert.equal(missed?.why, "会う는 に", "새 까닭이 없으면 앞 까닭");
-  const passed = nextCoachCard(missed, { retry: "pass", heard: "昨日友達に会いました", gaveUp: false });
-  assert.equal(passed?.passed, true);
-  assert.equal(nextCoachCard(passed, { heard: "カフェに行きました", gaveUp: false }), null);
-  assert.equal(nextCoachCard(missed, { retry: "miss", heard: "x", gaveUp: true }), null, "두 번 틀려 넘어가면 사라짐");
-
-  const meant = nextCoachCard(null, { retry: "ask", meant: "Vi una película el fin de semana.", heard: "vi película 주말에", gaveUp: false });
-  assert.equal(meant?.kind, "meant");
-  const offer = nextCoachCard(null, { retry: "ask", better: "Vi una peli el finde.", offer: true, note: "더 구어체", heard: "Vi una película el fin de semana", gaveUp: false });
-  assert.deepEqual(offer, { kind: "offer", said: "Vi una película el fin de semana", right: "Vi una peli el finde.", why: "" });
-  assert.equal(nextCoachCard(null, { retry: "pass", heard: "x", gaveUp: false }), null, "기다리는 카드 없이 온 pass는 무시");
-});
-
-test("자유대화 카드: 말로 안 짚은 고친 말·더 자연스러운 말을 바로, 한 차례 흐리게 남겼다 사라짐", () => {
+test("코치 띠: 고친 말·더 자연스러운 말을 바로, 맞히면 ✓, 한 차례 흐리게 남겼다 사라짐(스페인어·일본어)", () => {
   const heard = "Ayer yo voy a la playa";
-  const fix = nextCoachCard(null, { better: "Ayer fui a la playa.", note: "어제 일이라 과거형", heard, gaveUp: false, quiet: true });
-  assert.deepEqual(fix, { kind: "fix", said: heard, right: "Ayer fui a la playa.", why: "어제 일이라 과거형", quiet: true });
-  const dim = nextCoachCard(fix, { heard: "Me gustó mucho", gaveUp: false, quiet: true });
+  const fix = nextCoachCard(null, { better: "Ayer fui a la playa.", note: "어제 일이라 과거형", heard });
+  assert.deepEqual(fix, { kind: "fix", said: heard, right: "Ayer fui a la playa.", why: "어제 일이라 과거형" });
+  const passed = gradedCoachCard(fix!, "pass", true);
+  assert.equal(passed.passed, true);
+  assert.equal(gradedCoachCard(fix!, "miss", true).old, true, "더 기다리지 않으면 흐림");
+  const dim = nextCoachCard(fix, { heard: "Me gustó mucho" });
   assert.equal(dim?.old, true);
-  assert.equal(nextCoachCard(dim, { heard: "Sí", gaveUp: false, quiet: true }), null);
-  const smooth = nextCoachCard(null, { smoother: "週末は海に行ってきました。", heard: "週末は海に行きました。", gaveUp: false, quiet: true });
+  assert.equal(nextCoachCard(dim, { heard: "Sí" }), null);
+  const meant = nextCoachCard(null, { meant: "Vi una película el fin de semana.", heard: "vi película 주말에" });
+  assert.equal(meant?.kind, "meant");
+  const smooth = nextCoachCard(null, { smoother: "週末は海に行ってきました。", heard: "週末は海に行きました。" });
   assert.equal(smooth?.kind, "offer");
-  assert.equal(smooth?.quiet, true);
-  assert.equal(nextCoachCard(null, { heard: "", better: "x", gaveUp: false, quiet: true }), null, "들은 말 없으면 카드 없음");
+  assert.equal(nextCoachCard(null, { heard: "", better: "x" }), null, "들은 말 없으면 띠 없음");
 });
 
-test("말없이 지나간 내 차례 수: 튜터 줄은 건너뛰고 말한 줄에서 멈춤", () => {
-  const said = [
-    { who: "tutor", text: "¿Qué tal?" },
-    { who: "learner", text: "Bien" },
-    { who: "tutor", text: "¿Y hoy?" },
-    { who: "learner", text: "…" },
-    { who: "tutor", text: "聞こえましたか？" },
-    { who: "learner", text: "…" },
-  ];
-  assert.equal(silentRun(said), 2);
-  assert.equal(silentRun(said.slice(0, 4)), 1);
-  assert.equal(silentRun([]), 1);
+test("숙제는 코치가 하나라도 고친 통화에만", () => {
+  assert.equal(hadFix(ja), false);
+  assert.equal(hadFix([...ja.slice(0, 1), { ...ja[1]!, better: "昨日友達に会いました。" }]), true);
+  assert.equal(hadFix([{ who: "learner", text: "vi película", meant: "Vi una película." }]), true);
 });

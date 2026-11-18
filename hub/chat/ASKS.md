@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (78)
+## 탭이 확인할 것 (81)
 
 ### 탭 1 메인
 
@@ -108,6 +108,10 @@
   - 기능: 통화 모드 설명 · 자유대화 · 통화 끝 화면 · Logbank · 오늘의 학습
   - 볼 곳: `app/dev/call-preview/page.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261119-3-1** (2026-11-19 02:41, 탭 3 · b3848b8) 통화 하나로 합침: 문 넷(자유대화·수업·게임·가르치기) → 📞 통화 하나(CallDoor), 수업·스무고개·가르치기 모드 지움, 고친 말은 코치(짝 튜터) 띠 — 따라 말하면 앱 채점, 고친 게 있으면 숙제, startCall에서 lesson·game 인자 지움, 통화 기록 칩 지움
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `app/dev/call-preview/page.tsx` · `components/AppHome.tsx` · `components/LanguagePick.tsx` · `components/FindInMy.tsx` · `components/GuideSheet.tsx` · `components/NextStepCard.tsx` · `components/WhatsNewSheet.tsx` · `app/api/guide/route.ts` · `components/EnglishAnalysisViewer.tsx` · `components/LedgerLinks.tsx` … 76개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
 
@@ -178,6 +182,10 @@
 - **a261118-3-8** (2026-11-18 18:12, 탭 3 · 02db05c) 통화 화면 잘림 — CallStage 칸 shrink-0·끝 화면/돌아보기 통째 스크롤
   - 기능: 통화 모드 설명 · 자유대화 · 통화 끝 화면 · Logbank · 오늘의 학습
   - 볼 곳: `components/studyMap/Logbank.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261119-3-2** (2026-11-19 02:41, 탭 3 · b3848b8) 통화 하나로 합침: 문 넷(자유대화·수업·게임·가르치기) → 📞 통화 하나(CallDoor), 수업·스무고개·가르치기 모드 지움, 고친 말은 코치(짝 튜터) 띠 — 따라 말하면 앱 채점, 고친 게 있으면 숙제, startCall에서 lesson·game 인자 지움, 통화 기록 칩 지움
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/studyMap/TodayCards.tsx` · `components/studyMap/Logbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/DictNotes.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/GrammarExplain.tsx` · `components/studyMap/LanguageBank.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/StudyChips.tsx` … 37개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
@@ -332,6 +340,10 @@
 - **a261118-3-6** (2026-11-18 00:13, 탭 3 · 55e8f25) 수업 통화에서 틀을 뺌(lessonPlan·칠판·⏭·숙제 틀 문제 지움, recent·어색함 짚기)
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 모드 설명 · 자유대화 · 수업 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/AiTutorProfile.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomParts.tsx` · `components/rooms/RoomPeople.tsx` … 28개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261119-3-3** (2026-11-19 02:41, 탭 3 · b3848b8) 통화 하나로 합침: 문 넷(자유대화·수업·게임·가르치기) → 📞 통화 하나(CallDoor), 수업·스무고개·가르치기 모드 지움, 고친 말은 코치(짝 튜터) 띠 — 따라 말하면 앱 채점, 고친 게 있으면 숙제, startCall에서 lesson·game 인자 지움, 통화 기록 칩 지움
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/AiTutorProfile.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/TeamSpace.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomParts.tsx` … 27개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (11, 14일 뒤 저절로 빠짐 — 경위는 git 기록)

@@ -6,6 +6,7 @@ import type { StuckTurn, TranscriptLine } from "./review.ts";
 import { REDO_MAX_TRIES } from "./director.ts";
 import type { TurnMark } from "./turnTally.ts";
 import { focusFix } from "./fixFocus.ts";
+import { compareToTarget, formSlip } from "./practice.ts";
 
 /**
  * Put what was said about their sentence under their sentence.
@@ -96,76 +97,61 @@ export function tallyCall(lines: TranscriptLine[]): { fixed: number; hints: numb
   return { fixed, hints, missed, redone };
 }
 
-/** 튜터 수업에서 기다리는 "다시 말해 보기" — 문장과 그 문장을 말해 보라고 한 횟수. */
+/** 코치 띠의 바른 문장과 따라 말해 본 횟수(2026-11-19 통화 하나 — 시키지 않고 건넴). */
 export type RedoWait = { line: string; tries: number };
 
-/**
- * 감독 답의 retry로 다음 기다림을 정한다(2026-11-02). ask = 새 문장(같은 문장이면 횟수 +1), miss = 한 번 더(이미 마지막이었으면 넘어감),
- * pass·그 밖 = 끝. 서버도 같은 규칙으로 pass·miss를 거르지만(director.ts) 앱이 들고 있는 값이 다음 차례에 실리니 여기서도 지킨다.
- */
-export function nextRedo(current: RedoWait, retry: "ask" | "pass" | "miss" | undefined, sentence: string | undefined): RedoWait {
-  const done = { line: "", tries: 0 };
-  const said = (sentence ?? "").trim();
-  if (retry === "ask") {
-    if (!said) return current.line ? current : done;
-    return { line: said, tries: current.line && current.line === said ? current.tries + 1 : 1 };
-  }
-  if (retry === "miss") {
-    if (!current.line || current.tries >= REDO_MAX_TRIES) return done;
-    return { line: said || current.line, tries: current.tries + 1 };
-  }
-  return done;
+/** 이 통화에서 코치가 하나라도 고쳤나 — 그러면 끝 화면에 숙제. */
+export function hadFix(lines: readonly TranscriptLine[]): boolean {
+  return lines.some((line) => line.who === "learner" && Boolean((line.better || line.meant || "").trim()));
 }
 
 /**
- * 튜터 수업 통화 중 내 얼굴 아래 카드(사용자 2026-11-02 "튜터가 표현을 알려 주거나 내 말을 고쳐 줄 때 화면에 표시").
- * fix = 내 말을 고침(틀린 곳 표시 → 고친 문장) · meant = 내 말(앱 언어)·부서진 말을 학습 언어 문장으로 · offer = 맞게 말했는데 더 자연스러운 표현.
- * why = 고친 까닭 한 줄(앱 언어), passed = 다시 말해서 맞힘(다음 보통 차례에 사라짐).
+ * 따라 말한 줄 채점(모델 없음): 낱말이 다 같으면(줄임말 차이는 같음) 맞힘, 긴 문장(다섯 낱말 이상)에서
+ * 같은 낱말의 다른 꼴이 아닌 한 낱말만 다르면(받아쓰기 탓일 수 있음) 맞힘, 그 밖엔 아직.
  */
-/**
- * quiet = 자유대화 카드(2026-11-07): 튜터는 말로 짚지 않고 화면에만 — 다시 말해 보기(🔁) 없음.
- * old = 그 뒤 한 차례가 지나 흐려진 카드(그다음 차례에 사라짐).
- */
-export type CoachCard = { kind: "fix" | "meant" | "offer"; said: string; right: string; why: string; passed?: boolean; quiet?: boolean; old?: boolean };
+export function gradeRedo(redo: string, heard: string): "pass" | "miss" {
+  const { outcomes, added, clean } = compareToTarget(redo, heard);
+  if (clean) return "pass";
+  const off = outcomes.filter((outcome) => outcome.kind !== "kept");
+  if (off.some((outcome) => outcome.kind === "changed" && formSlip(outcome.word, outcome.heardAs))) return "miss";
+  return outcomes.length >= 5 && off.length + added.length <= 1 ? "pass" : "miss";
+}
 
+/**
+ * 새 고친 말이 없는 차례의 기다림: 따라 말해 맞혔으면 끝, 아직이면 한 번 더(REDO_MAX_TRIES까지),
+ * 다른 말을 했으면 띠가 아직 떠 있는 한 차례만 그대로 두고 끝.
+ */
+export function nextShownRedo(current: RedoWait, turn: { repeated: boolean; graded?: "pass" | "miss"; cardUp: boolean }): RedoWait {
+  const done = { line: "", tries: 0 };
+  if (!current.line) return done;
+  if (turn.repeated) return turn.graded === "miss" && current.tries + 1 < REDO_MAX_TRIES ? { line: current.line, tries: current.tries + 1 } : done;
+  return turn.cardUp ? current : done;
+}
+
+/**
+ * 코치 띠(2026-11-02 카드 → 2026-11-19 코치): fix = 내 말을 고침(틀린 곳 표시 → 고친 문장) · meant = 내 말(앱 언어)·부서진 말을
+ * 학습 언어 문장으로 · offer = 맞게 말했는데 더 자연스러운 표현. why = 고친 까닭 한 줄(앱 언어), passed = 따라 말해 맞힘.
+ * old = 그 뒤 한 차례가 지나 흐려진 띠(그다음 차례에 사라짐).
+ */
+export type CoachCard = { kind: "fix" | "meant" | "offer"; said: string; right: string; why: string; passed?: boolean; old?: boolean };
+
+/** 튜터 차례마다: 고친 말·더 자연스러운 말이 있으면 새 띠, 없으면 떠 있던 띠를 한 차례 흐리게 남겼다 지움. */
 export function nextCoachCard(
   current: CoachCard | null,
-  turn: { retry?: "ask" | "pass" | "miss"; better?: string; meant?: string; note?: string; offer?: boolean; smoother?: string; heard: string; gaveUp: boolean; quiet?: boolean },
+  turn: { better?: string; meant?: string; note?: string; smoother?: string; heard: string },
 ): CoachCard | null {
   const right = (turn.meant || turn.better || "").trim();
   const why = (turn.note ?? "").trim();
-  // 자유대화: 고친 말·더 자연스러운 말을 그 차례에 바로 카드로, 새 카드가 없으면 한 차례 흐리게 남겼다가 사라짐.
-  if (turn.quiet && !turn.retry) {
-    const said = turn.heard.trim();
-    // 맞는 앞 문장까지 지우지 않게 바뀐 문장만(fixFocus.ts, 2026-11-08 점검).
-    if (right && said) return { kind: turn.meant ? "meant" : "fix", ...(turn.meant ? { said, right } : focusFix(said, right)), why, quiet: true };
-    const smoother = (turn.smoother ?? "").trim();
-    if (smoother && said) return { kind: "offer", said, right: smoother, why: "", quiet: true };
-    return current?.quiet && !current.old ? { ...current, old: true } : null;
-  }
-  if (turn.retry === "ask") {
-    if (!right) return current;
-    const kind = turn.offer ? "offer" : turn.meant ? "meant" : "fix";
-    const pair = kind === "fix" ? focusFix(turn.heard.trim(), right) : { said: turn.heard.trim(), right };
-    return { kind, ...pair, why: turn.offer ? "" : why };
-  }
-  if (turn.retry === "miss") {
-    if (!current || turn.gaveUp) return null;
-    // 처음 틀린 말은 그대로 두고(무엇을 고쳤는지), 고친 문장·까닭만 새것으로.
-    return { ...current, right: right || current.right, why: why || current.why, passed: false };
-  }
-  if (turn.retry === "pass") return current ? { ...current, passed: true } : null;
-  return null;
+  const said = turn.heard.trim();
+  // 맞는 앞 문장까지 지우지 않게 바뀐 문장만(fixFocus.ts, 2026-11-08 점검).
+  if (right && said) return { kind: turn.meant ? "meant" : "fix", ...(turn.meant ? { said, right } : focusFix(said, right)), why };
+  const smoother = (turn.smoother ?? "").trim();
+  if (smoother && said) return { kind: "offer", said, right: smoother, why: "" };
+  return current && !current.old ? { ...current, old: true } : null;
 }
 
-/** 끝에서부터 말없이 지나간 내 차례("…")가 몇 번 이어졌나 — 튜터 줄은 건너뛰고, 말한 내 줄에서 멈춘다. */
-export function silentRun(said: readonly { who: string; text: string }[]): number {
-  let run = 0;
-  for (let i = said.length - 1; i >= 0; i -= 1) {
-    const line = said[i];
-    if (line.who !== "learner") continue;
-    if (line.text.trim() && line.text.trim() !== "…") break;
-    run += 1;
-  }
-  return Math.max(1, run);
+/** 따라 말한 차례의 띠: 맞히면 ✓, 아직이면 그대로(한 번 더), 더 기다리지 않으면 흐리게. */
+export function gradedCoachCard(current: CoachCard, graded: "pass" | "miss", over: boolean): CoachCard {
+  if (graded === "pass") return { ...current, passed: true, old: false };
+  return over ? { ...current, passed: false, old: true } : { ...current, passed: false, old: false };
 }

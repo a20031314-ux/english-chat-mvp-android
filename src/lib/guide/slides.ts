@@ -94,25 +94,9 @@ const LAYOUT: Record<string, Group[]> = {
   "ai-call": [
     {
       id: "talk",
-      title: "📞 {ui:callModeTalk}",
-      covers: ["call.talk"],
+      title: "📞 {ui:homeTabCall}",
+      covers: ["call.talk", "call.coach"],
       slides: ["call-talk-1", "call-talk-2"],
-    },
-    {
-      id: "lesson",
-      title: "🎓 {ui:callModeStudy}",
-      covers: ["call.coach"],
-      slides: ["call-lesson-1", "call-lesson-2"],
-    },
-    {
-      id: "twenty",
-      title: "🎲 {ui:callModeGame}",
-      slides: ["call-game-1"],
-    },
-    {
-      id: "teach",
-      title: "🧑‍🏫 {ui:gameTeach}",
-      slides: ["call-teach-1"],
     },
     {
       id: "past",

@@ -1,4 +1,3 @@
-import { isCallGame, type CallGame } from "./callGames.ts";
 import type { ConversationMemory } from "./memory.ts";
 import type { TranscriptLine } from "./review.ts";
 import { afterSaying, currentInstruction, type SessionState } from "./session.ts";
@@ -61,10 +60,6 @@ export type SavedConversation = {
    * between (2026-11-02). Older rows have none; callSeconds() falls back.
    */
   activeSecs?: number;
-  /** 수업 통화(My에서 연 것, 2026-11-07)·게임(튜터 프로필, 2026-11-08). 없으면 자유대화 — 예전 기록도 자유대화로 센다. */
-  mode?: "lesson" | "game";
-  /** 게임 통화의 게임(callGames.ts). */
-  game?: CallGame;
   state: SessionState;
   said: TranscriptLine[];
   memory: ConversationMemory;
@@ -132,8 +127,6 @@ export function normalizeSaved(raw: unknown): SavedConversation | null {
     updatedAt: row.updatedAt,
     ...(typeof row.finishedAt === "number" ? { finishedAt: row.finishedAt } : {}),
     ...(typeof row.activeSecs === "number" && row.activeSecs >= 0 ? { activeSecs: row.activeSecs } : {}),
-    ...(row.mode === "lesson" ? { mode: "lesson" as const } : {}),
-    ...(row.mode === "game" && isCallGame(row.game) ? { mode: "game" as const, game: row.game } : {}),
     state,
     said: row.said as TranscriptLine[],
     memory:

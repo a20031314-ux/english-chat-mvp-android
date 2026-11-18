@@ -27,7 +27,7 @@ const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, de
 await ctx.addInitScript(([learn, locale]) => {
   localStorage.setItem("appTargetLanguage", learn); localStorage.setItem("appUiLocale", locale); localStorage.setItem("whatsNewSeenVersion", "9.99");
   localStorage.setItem("appFeatures", JSON.stringify({ off: [], chosen: true })); localStorage.setItem("roleplayCaptions", "1");
-  localStorage.setItem("callModeSeen.v1", JSON.stringify({ talk: 1, lesson: 1, twenty: 1, teach: 1 }));
+  localStorage.setItem("callInfoSeen.v1", "1");
 }, [LEARN, LOCALE]);
 const page = await ctx.newPage();
 await page.route("**/api/entitlement*", async (route) => {
@@ -52,8 +52,8 @@ async function cut(name, locators, { pad = 10, maxH = 520, top = 0 } = {}) {
 
 // 통화 넷: 튜터 줄 문 → 통화 화면, 튜터 첫 마디(자막)까지.
 await page.goto(`http://localhost:${PORT}/?screen=talk`, { waitUntil: "domcontentloaded" }); await wait(8000);
-for (const kind of ["talk", "lesson", "twenty", "teach"]) {
-  await page.locator(`[data-tutor-row="main"] [data-call-choice="${kind}"]`).first().click();
+for (const kind of ["talk"]) {
+  await page.locator(`[data-tutor-row="main"] [data-call-door]`).first().click();
   for (let i = 0; i < 40 && !(await page.locator("[data-call-stage]").count()); i++) await wait(500);
   await page.locator("[data-call-mode-sheet] button").last().click({ timeout: 1500 }).catch(() => {});
   await wait(11000);
@@ -108,12 +108,10 @@ for (let i = 0; i < 20 && !(await recap.count()); i++) await wait(500);
 await recap.evaluate((el) => el.scrollIntoView({ block: "start" })).catch(() => {}); await wait(800);
 await cut("call-recap", [recap], { maxH: 480 });
 
-// 통화 미리 보기(개발 서버): 자유대화 고친 말 카드 · 수업 짚기 카드.
+// 통화 미리 보기(개발 서버): 코치 띠.
 const why = WHY[LOCALE];
-await page.goto(`${DEV}/dev/call-preview?v=ai&lang=${LOCALE}&learn=${LEARN}&quiet=1&why=${encodeURIComponent(why)}`); await page.locator("[data-call-coach]").first().waitFor({ timeout: 20000 }).catch(() => {}); await wait(1500);
+await page.goto(`${DEV}/dev/call-preview?v=ai&lang=${LOCALE}&learn=${LEARN}&why=${encodeURIComponent(why)}`); await page.locator("[data-call-coach]").first().waitFor({ timeout: 20000 }).catch(() => {}); await wait(1500);
 await cut("call-quiet", [page.locator("[data-call-coach]").first()], { pad: 12 });
-await page.goto(`${DEV}/dev/call-preview?v=ai&lang=${LOCALE}&learn=${LEARN}&card=fix&board=1&why=${encodeURIComponent(why)}`); await page.locator("[data-call-coach]").first().waitFor({ timeout: 20000 }).catch(() => {}); await wait(1500);
-await cut("call-fix-card", [page.locator("[data-call-coach]").first()], { pad: 12 });
 
 await api("/api/simcheck/forget", { prefix: "guidemy-" });
 await ctx.close(); await browser.close(); server.close();

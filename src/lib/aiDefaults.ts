@@ -82,7 +82,7 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   notes: HAIKU,
   learnerAsk: HAIKU,
   roleplayContext: HAIKU,
-  // 🎭 이렇게도 말할 수 있었어요(2026-11-08): 통화 끝에 장면 둘 — 수업 통화마다 한 번이라 기본 Haiku(사용자 원칙 2026-10-21).
+  // 🎭 이렇게도 말할 수 있었어요(2026-11-08): 통화 끝에 장면 둘 — 고친 게 있는 통화마다 한 번이라 기본 Haiku(사용자 원칙 2026-10-21).
   callReplay: HAIKU,
   video: HAIKU,
   vision: HAIKU,

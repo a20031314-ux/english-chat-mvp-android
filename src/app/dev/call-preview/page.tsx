@@ -2,7 +2,7 @@
 
 /**
  * 통화·대화 화면 미리 보기(개발용, `next dev`의 /dev/call-preview) — 사람끼리 통화(RoomCallStage)와 1:1·단체방 말풍선 얼굴을
- * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 튜터 수업 — 🎓·카드 &card=fix|meant|offer|passed, 카드 문구 &said=&right=&why=, 작별 차례 끝내기 강조 &leaving=1, 자막 &caption=1·해석 &meaning=1, 자유대화 카드 &quiet=1|old, 🙉·💡 숨김 &help=0|none)|ai-end(끝 요약 🔁, 숙제 글자·소리 &homework=1, 튜터 메모 &note=1)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
+ * 계정 둘·마이크 없이 본다. ?v=dm|group|call1|call3|ai(AI 통화 — 코치 띠 &card=fix|meant|offer|passed, 띠 문구 &said=&right=&why=, 흐린 띠 &old=1, 작별 차례 끝내기 강조 &leaving=1, 자막 &caption=1·해석 &meaning=1, 🙉·💡 숨김 &help=0)|ai-end(끝 요약 🔁, 숙제 글자·소리 &homework=1, 튜터 메모 &note=1)|ai-end(끝 요약 🔁), &lang=ko·&learn=ja 등. 앱 빌드에는 안 들어간다(build-capacitor가 /dev를 옆으로 옮김).
  */
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
@@ -54,9 +54,8 @@ function Preview() {
     right: params.get("right") ?? base.right,
     why: params.get("why") ?? base.why,
   };
-  // 자유대화 카드(&quiet=1, 흐린 것 &quiet=old) — 말로 안 짚고 화면에만(2026-11-07).
-  const quiet = params.get("quiet");
-  const quietMarks = quiet ? { quiet: true, ...(quiet === "old" ? { old: true } : {}) } : {};
+  // 흐린 코치 띠(&old=1) — 한 차례 지난 것.
+  const quietMarks = params.get("old") === "1" ? { old: true } : {};
   const coachCardBase =
     cardKind === "meant"
       ? { kind: "meant" as const, said: sample.native, right: sample.offer, why: "" }
@@ -73,8 +72,9 @@ function Preview() {
           timeLeft={null}
           caption={params.get("caption") === "1" ? { text: CAPTION[learn]?.text ?? CAPTION.en.text, ...(params.get("meaning") === "1" ? { meaning: CAPTION[learn]?.meaning ?? CAPTION.en.meaning } : {}) } : null}
           coach={params.get("caption") === "1" ? null : coachCard}
+          mode={{ icon: "📞", name: ui.homeTabCall, onInfo: noop }}
         />
-        <CallControls ui={ui} canAnswer captions={false} onMissed={noop} onToggleCaptions={noop} onHint={noop} onEnd={noop} leaving={params.get("leaving") === "1"} help={params.get("help") === "0" ? false : params.get("help") === "none" ? "none" : true} />
+        <CallControls ui={ui} canAnswer captions={false} onMissed={noop} onToggleCaptions={noop} onHint={noop} onEnd={noop} leaving={params.get("leaving") === "1"} help={params.get("help") !== "0"} />
       </div>
     );
   }

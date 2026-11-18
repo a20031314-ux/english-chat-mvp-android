@@ -8,7 +8,7 @@ import { CallRecap } from "@/components/roleplay/CallRecap";
 import { CallReplay } from "@/components/roleplay/CallReplay";
 import { findScenario } from "@/lib/roleplay/catalog";
 import { CallPages, CallSummary, MeFace, TutorFace } from "@/components/roleplay/CallParts";
-import { tallyCall } from "@/lib/roleplay/transcriptMarks";
+import { hadFix, tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { buildRecap } from "@/lib/roleplay/recap";
 import { RoleplayLine } from "@/components/RoleplayReview";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
@@ -113,7 +113,7 @@ export function RoleplayPast({
           locale={nativeLanguage}
           scenarioId={saved.scenarioId}
           callId={saved.id}
-          lesson={saved.mode === "lesson"}
+          homework={hadFix(saved.said)}
           said={saved.said}
           level={saved.state.difficulty?.level ?? 2}
           isPremium={isPremium}

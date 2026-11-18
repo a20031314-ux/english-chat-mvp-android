@@ -5,7 +5,7 @@
 > **쓰는 탭**은 코드에서 자동(`node scripts/scope.mjs <기능 id>`로 파일까지) — 둘 이상인 기능을 고치면 끝내기 훅이 그 탭들에 확인 요청을 만들게 한다(`hub/chat/ASKS.md`).
 > 기능을 빼면 줄을 지우고 코드·문구 14개 언어·사용법·문서를 같은 커밋에서 지운다. 옛 앱이 쓰는 서버만 "옛 앱 전용"으로 남기고 지울 조건을 적는다.
 
-## 지금 앱 (42)
+## 지금 앱 (39)
 
 ### 앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법
 
@@ -48,15 +48,12 @@
 
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
-| 통화 모드 설명 | 통화 중 맨 위 모드 이름 ⓘ → 설명창(튜터가 하는 것 · 내가 하는 것 · 끝나면, 세 줄) — 그 모드를 처음 열면 한 번 저절로(callModeSeen.v1 이 폰), 튜터 첫 마디도 모드를 말함(가르치기·게임) | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` |  |
-| 자유대화 `callModeTalk` | 📞 — 고르기 없이 인사, 고친 말은 내 얼굴 아래 카드로(말로 안 짚음) | 3 AI · 4 사람 | `components/CallHost.tsx` · `components/RoleplayScreen.tsx` |  |
-| 수업 `callModeStudy` | 🎓 — 틀 없이 자유대화처럼, 요즘 퀴즈로 배운 말이 나오는 화제로(튜터가 써 보이기만), 틀리거나 어색한 말은 튜터가 말로 짚고 다시 말해 보기, 끝나면 숙제 | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/director.ts` · `lib/roleplay/recentLearned.ts` | 수업 계획(틀 셋·칠판 카드·⏭ 다음 문장·숙제 리뷰) |
-| 게임 `callModeGame` | 🎲 — 스무고개(앱이 답을 들고 감독) — 게임 안 이름은 gameTwenty(스무고개) | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/callGames.ts` |  |
-| 가르치기 `gameTeach` | 🧑‍🏫 — 튜터가 내 모국어를 막 배우는 학습자를 연기, 나는 학습 언어로 설명 | 1 메인 · 2 My · 3 AI · 4 사람 | `lib/roleplay/callGames.ts` |  |
+| 통화 설명 | 통화 중 맨 위 📞 통화 ⓘ → 설명창(튜터 · 코치 · 끝나면, 세 줄) — 처음 한 번 저절로(callInfoSeen.v1 이 폰) | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` |  |
+| 통화 `homeTabCall` | 📞 하나 — 고르기 없이 인사, 튜터는 대화만(요즘 퀴즈로 배운 말이 나오는 화제·가끔 내 쪽 것을 설명해 달라고), 고친 말은 코치(같은 언어 짝 튜터) 띠가 내 얼굴 아래 소리 없이 — 따라 말하면 앱이 낱말 대조로 ✓ | 1 메인 · 2 My · 3 AI · 4 사람 | `components/CallHost.tsx` · `components/RoleplayScreen.tsx` · `lib/roleplay/transcriptMarks.ts` · `lib/roleplay/recentLearned.ts` | 통화 문 넷(자유대화·🎓 수업·🎲 게임 스무고개·🧑‍🏫 가르치기) · 수업 튜터가 말로 짚고 다시 말해 보기 · 수업 계획(틀 셋·칠판 카드·⏭ 다음 문장·숙제 리뷰) |
 | 통화 끝 화면 | 요약 한 줄 · 튜터 메모 · 이렇게도 말할 수 있었어요 · 전체 대본 · 통화 정리 · 이번 통화의 고쳐 씀 | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` · `components/roleplay/CallRecap.tsx` |  |
 | 이렇게도 말할 수 있었어요 `replayTitle` | 끝난 대본으로 장면 둘 — 바뀐 조각만 빈칸 → 말하기 → 한 줄 전체 | 3 AI | `components/roleplay/CallReplay.tsx` |  |
-| 숙제 `homeworkTag` | 수업 통화 끝 — [퀴즈 \| 대화](퀴즈는 짚은 말·장면 조각), 숙제 줄은 튜터 줄·Logbank 오늘 카드 | 2 My · 3 AI · 4 사람 | `lib/roleplay/homeworkQuiz.ts` |  |
-| 통화 기록 `callRecordsTitle` | 튜터 프로필 — 칩 [자유대화 \| 수업 \| 게임 \| 가르치기], 이어서 하기·돌아보기(이 폰) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/CallList.tsx` · `lib/roleplay/callStore.ts` |  |
+| 숙제 `homeworkTag` | 코치가 하나라도 고친 통화 끝 — [퀴즈 \| 대화](퀴즈는 고친 말·장면 조각), 숙제 줄은 튜터 줄·Logbank 오늘 카드 | 2 My · 3 AI · 4 사람 | `lib/roleplay/homeworkQuiz.ts` |  |
+| 통화 기록 `callRecordsTitle` | 튜터 프로필 — 한 목록, 이어서 하기·돌아보기(이 폰) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/CallList.tsx` · `lib/roleplay/callStore.ts` |  |
 
 ### 친구 초대·보상
 
@@ -109,11 +106,12 @@
 | 결제 화면 `billingScreenTitle` (화면: 플랜 및 결제) | 플랜(라이트·플러스·프리미엄)·포인트 상점 | 1 메인 · 3 AI · 4 사람 | `components/BillingScreen.tsx` · `components/PointStore.tsx` |  |
 | 광고 | 무료·안드로이드만 — 자리 전체는 hub/app/ADS.md | 1 메인 · 2 My · 3 AI · 4 사람 | `components/NativeAdSlot.tsx` · `lib/ads.ts` |  |
 
-## 옛 앱 전용 서버 (3) — 새 앱 화면엔 없음
+## 옛 앱 전용 서버 (4) — 새 앱 화면엔 없음
 
 | 무엇 | 쓰는 앱 | 코드 | 지울 때 |
 |---|---|---|---|
 | Stagebank 서버(대본·단계 시험·꺼내 쓰기·돌아보기) | 옛 앱 2.79 이하 My Stagebank가 부름 — 새 앱은 Quizbank 익힘 기록(scripts check)만 씀 | `app/api/curriculum/recall/route.ts` · `app/api/curriculum/ask/route.ts` · `app/api/curriculum/fixed-lesson/route.ts` | 최소 지원 버전 2.80 이상 |
+| 통화 튜터 수업 서버(말로 짚기·다시 말해 보기) | 옛 앱 2.79 이하 통화 🎓 튜터 수업이 coach: true로 부름 — 새 앱은 코치 띠(앱 채점), director.ts coachRules·spokenCoachFix·silent·study | `lib/roleplay/director.ts` | 최소 지원 버전 2.80 이상 |
 | 오늘의 팩 서버 | 옛 앱 2.48~2.75 오늘의 팩 | `app/api/pack/today/route.ts` · `app/api/pack/finish/route.ts` | 최소 지원 버전 2.76 이상 |
 | 목표 지도 서버 | 옛 앱 2.48~2.74 목표 지도·미션·노트 목차 | `app/api/curriculum/progress/route.ts` · `app/api/curriculum/missions/route.ts` · `app/api/notes/place/route.ts` | 최소 지원 버전 2.75 이상 |
 

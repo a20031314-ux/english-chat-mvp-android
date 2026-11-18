@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useSyncExternalStore } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { sendAppIntent } from "@/lib/appIntents";
@@ -11,7 +11,7 @@ import { isUnfinished, type SavedConversation } from "@/lib/roleplay/saved";
 /**
  * AI 통화 기록 — 채팅(메시지)과 따로(2026-10-27 사용자 "통화 기능과 메시지 기능은 분리해줘. 한 탭에 넣더라도 기록이 따로 남도록").
  * 예전엔 AI 대화 안에 🗒 카드로 섞여 있었다. 목록은 AI 튜터 프로필에서 연다. 사람 탭이 없을 때만 채팅 ⋮.
- * 위 칩 [자유대화 | 수업]으로 기록을 나눠 봄(2026-11-07, 📞는 지금 칩의 통화로). 새 통화(📞)·이어서 하기·돌아보기·지우기. 기록은 예전처럼 이 폰에만(callStore → saved.ts, 최근 20개).
+ * 통화는 하나라 한 목록(2026-11-19). 새 통화(📞)·이어서 하기·돌아보기·지우기. 기록은 예전처럼 이 폰에만(callStore → saved.ts, 최근 20개).
  */
 export function CallList({
   ui,
@@ -27,17 +27,7 @@ export function CallList({
   canCall: boolean;
   onClose: () => void;
 }) {
-  const all = useSyncExternalStore(subscribeCalls, readCalls, readCallsOnServer).filter((call) => call.language === language);
-  // 자유대화 / 수업 기록을 따로(2026-11-07 사용자 "통화기록도 구분해서"). mode 없는 예전 기록은 자유대화.
-  // 게임 통화도 따로(2026-11-08 사용자 "자유대화, 수업, 게임으로 나눠줘").
-  // 가르치기는 2026-11-09부터 게임 밖 문 하나(사용자 "문 하나로 꺼내줘") — 기록은 mode "game"·game "teach" 그대로, 칩만 따로.
-  const [kind, setKind] = useState<"talk" | "lesson" | "game" | "teach">("talk");
-  const kindOf = (call: { mode?: string; game?: string }): "talk" | "lesson" | "game" | "teach" =>
-    call.mode === "lesson" ? "lesson" : call.mode === "game" ? (call.game === "teach" ? "teach" : "game") : "talk";
-  const counts = { talk: 0, lesson: 0, game: 0, teach: 0 };
-  for (const call of all) counts[kindOf(call)] += 1;
-  const calls = all.filter((call) => kindOf(call) === kind);
-  // 게임 칸의 📞는 마지막에 한 게임으로.
+  const calls = useSyncExternalStore(subscribeCalls, readCalls, readCallsOnServer).filter((call) => call.language === language);
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-3">
@@ -48,7 +38,7 @@ export function CallList({
               type="button"
               onClick={() => {
                 onClose();
-                sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : kind === "game" ? { game: "twenty" } : kind === "teach" ? { game: "teach" } : {});
+                sendAppIntent("startCall", {});
               }}
               aria-label={ui.talkAiCall}
               title={ui.talkAiCall}
@@ -66,21 +56,6 @@ export function CallList({
           </button>
         </div>
       </header>
-      <div role="tablist" className="flex shrink-0 flex-wrap gap-2 px-3 pt-3" data-call-kinds>
-        {(["talk", "lesson", "game", "teach"] as const).map((one) => (
-          <button
-            key={one}
-            type="button"
-            role="tab"
-            aria-selected={kind === one}
-            data-call-kind={one}
-            onClick={() => setKind(one)}
-            className={`rounded-full border px-3 py-1 text-meta ${kind === one ? "border-white/50 bg-white/15 text-white" : "border-white/15 text-slate-400"}`}
-          >
-            {one === "talk" ? ui.callModeTalk : one === "lesson" ? ui.callModeStudy : one === "game" ? ui.callModeGame : ui.gameTeach} <span className="tabular-nums opacity-70">{counts[one]}</span>
-          </button>
-        ))}
-      </div>
       <ol className="min-h-0 flex-1 space-y-2 overflow-y-auto p-3">
         {calls.map((call) => (
           <CallRow key={call.id} call={call} ui={ui} locale={locale} onLeave={onClose} />

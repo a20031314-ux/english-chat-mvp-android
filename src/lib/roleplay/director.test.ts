@@ -1655,3 +1655,22 @@ test("다시 말해 보라고 했는데 다른 말을 하면 판정하지 않고
   assert.equal(parseDirection(miss, context("Sí, la entrada fue barata."))?.retry, undefined, "다른 말엔 miss를 버림");
   assert.equal(parseDirection(miss, context("La película estaba muy aburrido."))?.retry, "miss");
 });
+
+test("통화 하나(코치 띠): 말로 짚지 않고, 요즘 배운 말·설명해 달라·따라 말한 차례는 맞장구만 — es·ja·ko 앱", () => {
+  for (const [lang, words, redo, heard] of [
+    ["es", ["la estación", "barato"], "Ayer fui a la playa.", "ayer fui a la playa"],
+    ["ja", ["駅", "安い"], "昨日友達に会いました。", "昨日友達に会いました"],
+  ] as const) {
+    const scene = findScenario(`open-talk-${lang}`)!;
+    const bank = sentencesFor(lang);
+    const prompt = (extra: Partial<DirectorRequest>) =>
+      tutorSystemPrompt({ scenario: scene, bank, recorded: recordedLines(scene, SCENARIOS, bank), request: request({ scenarioId: scene.id, nodeId: "talk", targetLanguage: lang, nativeLanguage: "ko", ...extra }) });
+    const plain = prompt({ recent: [...words] });
+    assert.match(plain, new RegExp(`studied recently, for you only: ${words.join(", ")}\\.`));
+    assert.match(plain, /Never correct a sentence out loud/);
+    assert.match(plain, /ask them to explain something from their side/);
+    assert.doesNotMatch(plain, /How you tutor/);
+    assert.match(prompt({ redo, heard }), /said it again\. Take it as them saying it once more/);
+    assert.doesNotMatch(prompt({ redo, heard: "me gusta el café" }), /said it again\. Take it/, "다른 말이면 없음");
+  }
+});

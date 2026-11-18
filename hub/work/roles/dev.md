@@ -31,13 +31,11 @@
 - **지울 것 1:** `hub/app/FEATURES.md` "지울 것" — 아침 알림(`morningNotify.ts` — 되살릴지 사용자 결정 뒤).
 - **옛 앱 전용 서버·lib:** 최소 지원 버전을 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용"과 그 서버만 쓰는 lib(`checkup.ts`·`recall.ts`·`stageScripts` 대본 쪽 등)를 지운다.
 - **My에서 찾기:** 문법·표현 열쇠가 없는 말은 사전 시트로 바뀜(2026-11-09) — 서버 `/api/notebook` locate가 고른 노트 칸(관용·세부)은 새 앱에서 안 씀. 옛 앱이 안 부르게 되면 locate 응답을 줄인다.
-- **앎·말하기 분리 남은 것:** 수업 통화를 장부 `call` 대신 학습으로 셀지(3번 탭 callHooks와 겹침), — 사용자 결정 대기(STATE).
 - **퀴즈 다시 짜기 남은 것:** 앱 → `/api/curriculum/spots` 미리 만들기 연결(한 문장 새로 쓰기 칸), `qstat:v1` 한 달 쌓이면 사다리·게이지 값 고치기(Elo식 추정 여부) — 설계안 `hub/work/drafts/quiz-redesign-2026-11-10.md` §10.
 - **사전 예문 오류 고치기:** `hub/work/drafts/dict-errors-2026-11-10.txt`(ar 110 · fr 3) — word-sentences 고치고 `--check`.
 - **앱 언어별 짧은 뜻 미리 채우기:** 사전 예문은 14개 언어 다 채움(2026-11-10) — 짧은 뜻은 사용자 결정 대기(Haiku 묶음 API로 수십 달러 추정).
 - **같이 배우기 남은 것:** 문법 이름이 ko·en 밖 앱 언어에서 영어(stageScripts TRANSLATED에 문법 이름 옮기기 — Cursor 에이전트), 반말·구어 표현은 틀이 안 잡힘(framesInLine 넓히기), 유의어(데이터 없음 — 만들면 Cursor 에이전트로 고정 데이터), 활용형 맞추기(es comer처럼 틀 예문에 그 꼴이 없으면 칸이 안 보임), 사람 대화에서 맞게 쓴 말은 장부에 안 남아 대화 수에 안 듦(4번 탭과).
-- **수업 통화(틀 없음):** 실제 기기 한 번 — 요즘 배운 말이 대화에 나오나·어색함 짚기가 너무 잦지 않나. 사용법 장면 그림 `call-lesson`(칠판이 보임) 다시 찍기(`scripts/guide-slides/shoot-call.mjs` → compose). 감독 `study`·`studyOpen`은 Play 2.79용 — 최소 지원 2.80이면 지움.
-- **통화 한 구조 + 코치(설계만):** `hub/work/drafts/call-coach-2026-11-19.md` — 🎓 수업 문을 없애고 교정은 제3튜터 자막 띠로, 정할 것 넷 사용자 대기(2.80 전 추천).
+- **통화 하나(코치 띠) 남은 것:** 실제 기기 한 번 — 띠가 말하는 중에 방해되지 않나·따라 말하기 채점이 받아쓰기 탓으로 너무 짠가·요즘 배운 말이 대화에 나오나. 사용법 장면 그림 `call-talk-1·2` 다시 찍기(코치 얼굴, `scripts/guide-slides/shoot-call.mjs` → compose). 감독 `coach`·`study`·`studyOpen` 길은 Play 2.79용(FEATURES 옛 앱 전용) — 최소 지원 2.80이면 지움.
 - **섞어 말하기 통화(설계만):** `hub/work/drafts/call-mix-2026-11-08.md` — 정할 것 셋 사용자 대기.
 - **체감 점검 2026-11-09 남은 지적:** 쉬운 단어(`presumedWords` 순위 0부터·카드 없을 때 묶음 퀴즈로 빠짐), 뜻 없는 빈칸(`glossFirst`), U11 숙제 끝 화면 — 보고서 `hub/work/drafts/ux-check-2026-11-09.md`, 순서는 사용자.
 

@@ -1,12 +1,11 @@
 "use client";
 
-import { learnerTurns, pickSecret, type CallGame } from "@/lib/roleplay/callGames";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallModeInfo, callModeSeen, CallStage, CallSummary, type CallModeKind, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
+import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallModeInfo, callInfoSeen, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallReplay } from "@/components/roleplay/CallReplay";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
@@ -40,7 +39,7 @@ import {
   primeMicrophone,
   type Recorder,
 } from "@/lib/roleplay/listen";
-import { correctionOf, offeredOf } from "@/lib/roleplay/director";
+import { correctionOf, offeredOf, triedRedo } from "@/lib/roleplay/director";
 import { fixesFromLines, fixesPrompt, mergeFixes, readFixes, settleFixes } from "@/lib/roleplay/fixMemory";
 import { lifeDay, lifeFactsPrompt, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
 import { CallGrowthPairs } from "@/components/studyMap/Growth";
@@ -66,7 +65,7 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { answeredAfterMissed, silentRun, markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextRedo, tallyCall, type CoachCard, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { answeredAfterMissed, gradeRedo, hadFix, gradedCoachCard, markAboutTheirLine, markMissed, markStuck, nextCoachCard, nextShownRedo, tallyCall, type CoachCard, tipOnLastTutorLine, withTranslation } from "@/lib/roleplay/transcriptMarks";
 import { markTurn } from "@/lib/roleplay/turnTally";
 import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import { sayLine } from "@/lib/speech/sayLine";
@@ -113,8 +112,6 @@ type Spoken = TranscriptLine;
 
 /** 자유대화에서 내 차례가 열리고 이만큼 말이 없으면 🙉·💡를 띄운다(2026-11-07). */
 const HELP_AFTER_MS = 3000;
-/** 수업 통화에서 첫 말을 기다리는 시간 — 이 뒤엔 튜터가 "들었어요?"·힌트로 먼저(기본 12초보다 짧게). */
-const LESSON_NO_SPEECH_MS = 7000;
 /**
  * 자유대화에서 내 차례가 말없이 저절로 넘어가기까지(2026-11-08 통화 체감 점검 — 🙉·💡가 3초에 뜨고 12초에 차례가 끝나
  * 누를 틈이 9초뿐이었음). 기본 12초보다 길게 — 버튼이 뜬 뒤 15초.
@@ -129,8 +126,6 @@ export function RoleplayScreen({
   resume,
   onSaved,
   practice: practiceRequest,
-  lesson: lessonRequest = false,
-  game: gameRequest = null,
 }: {
   scenarioId: string;
   /** What the learner speaks, so the director's notes are written in it. */
@@ -154,13 +149,6 @@ export function RoleplayScreen({
    * the conversation with each phrase ticked once said (learner/practice.ts).
    */
   practice?: PracticeRequest | null;
-  /**
-   * 수업 통화(2026-11-07 사용자 "커리큘럼과 자유대화는 외부에서 분리"): My에서 연 통화 — 튜터가 말로 짚고 다시 말해 보기.
-   * 📞(대화·사람 탭)은 늘 자유대화. 이어서 하기는 그 기록의 mode를 따른다.
-   */
-  lesson?: boolean;
-  /** 게임 통화(튜터 프로필 📞 → 게임 — 퀴즈·스무고개, lib/roleplay/callGames.ts, 2026-11-08). 자유대화처럼 화면으로만 고친다. */
-  game?: CallGame | null;
 }) {
   // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
   useEffect(() => enterScene("call"), []);
@@ -196,19 +184,11 @@ export function RoleplayScreen({
   const [showCaptions, toggleCaptions] = useStoredToggle(SHOW_CAPTIONS_KEY, lettersBeginner);
   // 자막 해석 켬/끔(2026-11-06) — 자막 줄을 누르면 바뀌고 다음 줄·다음 통화도 그대로.
   const [showMeaning, toggleMeaning] = useStoredToggle(CALL_MEANING_KEY, lettersBeginner);
-  // 튜터 수업(2026-11-02): 큰 실수만 소리로 짚고 다시 말해 보기 — 그냥 대화에서만. 수업 통화인지는 들어온 문이 정한다
-  // (My = 수업, 📞 = 자유대화, 2026-11-07) — 통화 안 고르기·🎓 버튼 없음. 이어서 하기는 그 기록의 mode.
-  const coachOn = Boolean(catalogScene?.openEnded && (resume && resume.scenarioId === scenarioId ? resume.mode === "lesson" : lessonRequest));
-  // 게임(이어서 하기는 그 기록의 게임). 수업과 같이 오지 않는다.
-  const game: CallGame | null = catalogScene?.openEnded && !coachOn ? (resume && resume.scenarioId === scenarioId ? (resume.mode === "game" ? (resume.game ?? null) : null) : gameRequest) : null;
-  // 스무고개: 이번 판 답(앱이 고름 — 판 가운데 바뀌지 않게)·이번 통화에서 낸 답·이번 판 학습자 차례 수.
-  const [gameSecret, setGameSecret] = useState(() => (game === "twenty" ? pickSecret([]) : ""));
-  const usedSecrets = useRef<string[]>(gameSecret ? [gameSecret] : []);
-  const roundStart = useRef(0);
-  /** 튜터가 다시 말해 보라고 한 문장 — 내 얼굴 아래 🔁 한 줄. 맞히거나 넘어가면 지움. tries = 그 문장을 말해 보라고 한 횟수. */
+  // 통화는 하나(2026-11-19 사용자 "통화탭을 한 구조로 … 수업모드는 제3튜터로 자막으로" · "게임, 가르치기도 그냥 합치고"):
+  // 튜터는 대화만, 고친 말은 코치(짝 튜터) 띠가 화면에 — 따라 말하면 앱이 낱말 대조로 채점(transcriptMarks.ts gradeRedo).
+  /** 코치 띠의 바른 문장 — 다음 차례에 따라 말하면 채점. tries = 따라 말해 본 횟수. */
   const [redo, setRedo] = useState<{ line: string; tries: number }>({ line: "", tries: 0 });
-  const redoLine = redo.line;
-  /** 튜터 수업 카드 — 고친 말·건넨 표현을 통화 화면에 띄움(lib/roleplay/transcriptMarks.ts nextCoachCard). */
+  /** 코치 띠 — 고친 말·더 자연스러운 말(lib/roleplay/transcriptMarks.ts nextCoachCard). */
   const [coachCard, setCoachCard] = useState<CoachCard | null>(null);
   // 그냥 대화: 튜터가 학습자 말을 작별로 읽은 차례(2026-11-06) — 통화는 열어 두고 끝내기만 강조. 다음 차례에 다시 판단.
   const [leaving, setLeaving] = useState(false);
@@ -259,7 +239,6 @@ export function RoleplayScreen({
   const factsKept = useRef(false);
   const fixesKept = useRef(false);
   const [fixesText, setFixesText] = useState("");
-  const [lead, setLead] = useState(0);
   // 내 차례가 열리고 말이 없으면 3초 뒤 🙉·💡(앱 망설임 셈 review.ts LONG_SILENCE_MS와 같은 값).
   useEffect(() => {
     if (!recording || voiceOn) {
@@ -327,15 +306,12 @@ export function RoleplayScreen({
     // (saved.ts).
     const picked = carrying ? resumeFrom(carrying, scenario, bank, Date.now()) : null;
     const fresh = picked ? picked.state : startSession(scenario);
-    // 게임 통화는 첫 마디를 튜터가 먼저(그 게임 규칙 설명, 2026-11-08, 아래 lead 효과). 자유대화·수업·이어서 하기는 보통 인사.
-    const openLesson = Boolean(scenario.openEnded && !carrying && game);
     setState(fresh);
-    setInstruction(openLesson ? null : currentInstruction(scenario, bank, fresh));
+    setInstruction(currentInstruction(scenario, bank, fresh));
     setSaid(picked ? picked.said : []);
     setMemory(carrying ? carrying.memory : EMPTY_MEMORY);
     setPrior(lifeFactsPrompt(readLifeFacts(scenario.language), Date.now()));
     setFixesText(fixesPrompt(readFixes(scenario.language), Date.now()));
-    setLead(openLesson ? 1 : 0);
     setDirecting(false);
     factsKept.current = false;
     fixesKept.current = false;
@@ -380,8 +356,6 @@ export function RoleplayScreen({
       scenarioId: scenario.id,
       language: scenario.language,
       title: titleFor(said, scenario.title),
-      ...(coachOn ? { mode: "lesson" as const } : {}),
-      ...(game ? { mode: "game" as const, game } : {}),
       startedAt: startedAt.current || now,
       updatedAt: now,
       ...(state.finished ? { finishedAt: now } : {}),
@@ -464,8 +438,12 @@ export function RoleplayScreen({
     if (!scenario || !state || instruction?.do !== "direct") return;
     let cancelled = false;
     setDirecting(true);
-    // 수업 통화: 요즘 퀴즈로 배운 낱말·표현을 튜터에게(대화에 녹이기만 — director.ts recent).
-    const recent = scenario.openEnded && coachOn && !game ? recentLearned(readLedger(scenario.language), Date.now() / 1000) : [];
+    // 요즘 퀴즈로 배운 낱말·표현을 튜터에게(대화에 녹이기만 — director.ts recent).
+    const recent = scenario.openEnded ? recentLearned(readLedger(scenario.language), Date.now() / 1000) : [];
+    // 코치 띠의 바른 문장을 따라 말한 차례인가 → 앱이 채점하고(gradeRedo), 튜터에겐 따라 말했다는 것만 알린다.
+    const heardNow = instruction.request.heard;
+    const repeated = Boolean(scenario.openEnded && redo.line && !instruction.request.missed && triedRedo(redo.line, heardNow, scenario.language));
+    const graded = repeated ? gradeRedo(redo.line, heardNow) : undefined;
     void fetchDirection({
       // Verbatim, every line the notes do not cover; the notes for the rest.
       request: {
@@ -477,11 +455,7 @@ export function RoleplayScreen({
         ...(fixesText ? { fixes: fixesText } : {}),
         ...(tutorIsBilingual(scenario.language, nativeLanguage) ? { bilingual: true } : {}),
         ...(scenario.openEnded ? { tutorGender } : {}),
-        ...(scenario.openEnded && coachOn ? { coach: true, ...(redo.line ? { redo: redo.line, redoTries: redo.tries } : {}) } : {}),
-        // 수업 통화: 말없이 지나간 차례가 몇 번째인지 — 튜터가 먼저 묻고(1) 힌트(2 이상)(2026-11-07).
-        ...(scenario.openEnded && coachOn && !instruction.request.heard.trim() && !instruction.request.missed ? { silent: silentRun(said) } : {}),
-        // 게임: 이번 판 학습자 차례 수(말없는 차례는 안 셈)·스무고개 답.
-        ...(game ? { game, gameCount: learnerTurns(said.slice(roundStart.current)), ...(game === "twenty" ? { gameSecret } : {}) } : {}),
+        ...(repeated ? { redo: redo.line } : {}),
       },
       nativeLanguage,
       isPremium,
@@ -530,10 +504,8 @@ export function RoleplayScreen({
         const left = settleFixes(scenario.language, instruction.request.heard, Boolean(better || meant));
         setFixesText(fixesPrompt(left, Date.now()));
       }
-      // 튜터 수업: 다시 말해 보라고 했으면(ask) 그 문장을 띄우고, 다시 말한 줄에는 맞힘/아직(pass·miss)을 붙인다.
-      const retry = missedTurn ? undefined : direction?.retry;
-      // 맞힘/아직은 기다리던 문장이 있을 때만(서버도 같은 규칙).
-      const redoMark = redoLine && (retry === "pass" || retry === "miss") ? retry : undefined;
+      // 코치 띠를 따라 말한 줄에는 맞힘/아직(pass·miss) — 앱 채점.
+      const redoMark = missedTurn ? undefined : graded;
       if (better || meant || smoother || about || redoMark) {
         setSaid((current) =>
           markAboutTheirLine(current, {
@@ -554,7 +526,7 @@ export function RoleplayScreen({
           leadHow: direction.leadHow,
           fnGroup: direction.fnGroup,
           native: direction.native,
-          bigFix: Boolean(meant) || (retry === "ask" && !direction.offer),
+          bigFix: Boolean(meant),
           hesitationMs: state.pending?.hesitationMs ?? 0,
           usedHint: hintedRef.current,
           captions: showCaptions,
@@ -563,29 +535,20 @@ export function RoleplayScreen({
         setSaid((current) => markAboutTheirLine(current, { turn: markTurn({ ...signals, afterMissed: answeredAfterMissed(current) }) }));
       }
       if (!missedTurn) hintedRef.current = false;
-      // 스무고개 판이 끝남(맞힘·스무 번) → 다음 답, 다음 차례부터 새 판으로 센다.
-      if (game === "twenty" && direction?.round === "over") {
-        const next = pickSecret(usedSecrets.current);
-        usedSecrets.current = [...usedSecrets.current, next];
-        setGameSecret(next);
-        roundStart.current = said.length + 1;
-      }
-      if (!missedTurn) {
-        const waitNext = nextRedo(redo, retry, meant || better || offered);
+      if (!missedTurn && scenario.openEnded) {
+        const fresh = (meant || better || offered || "").trim();
+        const waitNext = fresh ? { line: fresh, tries: 0 } : nextShownRedo(redo, { repeated, graded, cardUp: Boolean(coachCard && !coachCard.old) });
         setRedo(waitNext);
         setCoachCard((current) =>
-          nextCoachCard(current, {
-            retry,
-            better: better || offered,
-            meant,
-            note: direction?.note,
-            offer: direction?.offer,
-            smoother: direction?.smoother,
-            heard: instruction.request.heard,
-            gaveUp: retry === "miss" && !waitNext.line,
-            // 자유대화(🎓 끔): 말로 안 짚은 고친 말을 화면 카드로 바로(2026-11-07).
-            quiet: Boolean(scenario.openEnded && !coachOn),
-          }),
+          graded && !fresh && current
+            ? gradedCoachCard(current, graded, !waitNext.line)
+            : nextCoachCard(current, {
+                better: better || offered,
+                meant,
+                note: direction?.note,
+                smoother: direction?.smoother,
+                heard: instruction.request.heard,
+              }),
         );
       }
       if (direction?.assessment === "stuck" && !missedTurn) {
@@ -861,8 +824,8 @@ export function RoleplayScreen({
           setVoiceOn(yes);
         },
         onSettled: () => setSettled((count) => count + 1),
-        // 수업 통화는 🙉·💡가 없어 튜터가 먼저 묻는다 — 말이 없으면 더 일찍 넘긴다. 자유대화는 버튼을 누를 틈을 준다.
-        ...(coachOn ? { noSpeechMs: LESSON_NO_SPEECH_MS } : scenario.openEnded ? { noSpeechMs: TALK_NO_SPEECH_MS } : {}),
+        // 🙉·💡를 누를 틈을 준다(기본 12초보다 길게).
+        ...(scenario.openEnded ? { noSpeechMs: TALK_NO_SPEECH_MS } : {}),
       });
       setRecording(true);
     } catch {
@@ -994,78 +957,11 @@ export function RoleplayScreen({
     };
   }, []);
 
-  // 게임 통화는 튜터가 첫 마디(규칙)를 한다.
-  useEffect(() => {
-    if (lead === 0 || !scenario) return;
-    const session = stateRef.current;
-    if (!session) return;
-    let cancel = false;
-    const language = scenario.language;
-    setDirecting(true);
-    void (async () => {
-      if (cancel) return;
-      if (!game) {
-        setDirecting(false);
-        setInstruction(currentInstruction(scenario, bank, session));
-        return;
-      }
-      const answer = await fetchDirection({
-        request: {
-          scenarioId: scenario.id,
-          nodeId: "talk",
-          mode: "free",
-          heard: "",
-          history: [],
-          freeTurns: session.freeTurns,
-          directedTurns: session.directedTurns,
-          level: session.difficulty.level,
-          ...(game ? { game, gameStart: true, gameCount: 0, ...(game === "twenty" ? { gameSecret } : {}) } : { coach: true }),
-          ...(fixesText ? { fixes: fixesText } : {}),
-          ...(prior ? { prior } : {}),
-          ...(tutorIsBilingual(language, nativeLanguage) ? { bilingual: true } : {}),
-          tutorGender,
-        },
-        nativeLanguage,
-        isPremium,
-        practice: null,
-        sessionId: conversationId.current,
-      });
-      if (cancel) return;
-      setDirecting(false);
-      if (isOutOfPoints(answer)) {
-        setOutOfPoints(answer.daily ? "daily" : "points");
-        setInstruction({ do: "finish" });
-        return;
-      }
-      const text = answer && "text" in answer.say ? answer.say.text.trim() : "";
-      if (!text) {
-        setInstruction(currentInstruction(scenario, bank, session));
-        return;
-      }
-      setState({ ...session, nodeId: "talk", queue: [{ text }] });
-      setInstruction({ do: "say", text, voice: scenario.voice });
-    })();
-    return () => {
-      cancel = true;
-    };
-    // 고른 순간에만. 그림·첫 마디에 쓰는 값은 그 렌더의 것.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lead]);
 
-  // 그냥 대화는 머리에 고른 모드 이름(앱 언어) — 예전엔 학습 언어 장면 이름 "Just talk"가 늘 떴음(점검 2026-11-07).
-  const headTitle = scenario?.openEnded
-    ? game
-      ? game === "teach"
-        ? ui.gameTeach
-        : `${ui.callModeGame} · ${ui.gameTwenty}`
-      : coachOn
-        ? ui.callModeStudy
-        : ui.callModeTalk
-    : (scenario?.title ?? "");
-  // 모드 이름 · ⓘ 설명창(사용자 2026-11-14) — 그 모드를 처음 열면 한 번 저절로(CallParts callModeSeen).
-  const modeKind: CallModeKind | null = scenario?.openEnded ? (game === "teach" ? "teach" : game ? "twenty" : coachOn ? "lesson" : "talk") : null;
-  const modeIcon = modeKind === "teach" ? "🧑‍🏫" : modeKind === "twenty" ? "🎲" : modeKind === "lesson" ? "🎓" : "📞";
-  const [modeInfo, setModeInfo] = useState(() => (modeKind ? !callModeSeen(modeKind) : false));
+  // 그냥 대화는 머리에 "통화"(앱 언어) — 학습 언어 장면 이름 "Just talk"가 아니라(점검 2026-11-07).
+  const headTitle = scenario?.openEnded ? ui.homeTabCall : (scenario?.title ?? "");
+  // 통화 이름 · ⓘ 설명창(사용자 2026-11-14) — 처음 한 번 저절로(CallParts callInfoSeen).
+  const [modeInfo, setModeInfo] = useState(() => (scenario?.openEnded ? !callInfoSeen() : false));
   const callOver = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
   /** 중단: 내가 한 말이 없으면 남길 것도 없어 그냥 닫고, 있으면 마이크·소리를 멈추고 끝 화면으로(기록은 끝나지 않은 채 — 이어서 하기). */
   const hangUp = () => {
@@ -1120,7 +1016,7 @@ export function RoleplayScreen({
         redone: tally.redone ?? 0,
         gender: tutorGender,
       });
-      // 대화 비교(자유대화만, 문장 없이 숫자 — 처음 통화의 긴 두 줄만 따로, lib/roleplay/talkStats.ts, 2026-11-07).
+      // 대화 비교(열린 통화만, 문장 없이 숫자 — 처음 통화의 긴 두 줄만 따로, lib/roleplay/talkStats.ts, 2026-11-07).
       if (openTalk) {
         void loadBank(language)
           .then((bank) => {
@@ -1196,7 +1092,7 @@ export function RoleplayScreen({
             locale={nativeLanguage}
             scenarioId={scenario.id}
             callId={savedId.current}
-            lesson={coachOn}
+            homework={hadFix(said)}
             said={said}
             level={state?.difficulty.level ?? 2}
             isPremium={isPremium}
@@ -1310,11 +1206,11 @@ export function RoleplayScreen({
           />
         </div>
       ) : null}
-      {modeKind && modeInfo ? (
-        <CallModeInfo ui={ui} kind={modeKind} icon={modeIcon} name={headTitle} locale={nativeLanguage} language={scenario.language} onClose={() => setModeInfo(false)} />
+      {scenario.openEnded && modeInfo ? (
+        <CallModeInfo ui={ui} name={headTitle} locale={nativeLanguage} language={scenario.language} onClose={() => setModeInfo(false)} />
       ) : null}
       <CallStage
-        mode={modeKind ? { icon: modeIcon, name: headTitle, onInfo: () => setModeInfo(true) } : undefined}
+        mode={scenario.openEnded ? { icon: "📞", name: headTitle, onInfo: () => setModeInfo(true) } : undefined}
         gender={tutorGender}
         language={scenario.language}
         speaker={speaker}
@@ -1338,7 +1234,7 @@ export function RoleplayScreen({
         onMissed={missLine}
         onToggleCaptions={toggleCaptions}
         onHint={openHelp}
-        help={!scenario.openEnded ? true : coachOn ? "none" : lettersBeginner || ((hesitating || helpCue) && !voiceOn && canAnswer)}
+        help={!scenario.openEnded ? true : lettersBeginner || ((hesitating || helpCue) && !voiceOn && canAnswer)}
         onEnd={hangUp}
         leaving={leaving}
       />
