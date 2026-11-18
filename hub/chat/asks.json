@@ -5706,25 +5706,51 @@
       "base": "55e8f25^",
       "head": "55e8f25",
       "status": "open"
+    },
+    {
+      "id": "a261118-3-7",
+      "at": "2026-11-18 18:12",
+      "kind": "apply",
+      "from": "3",
+      "to": "1",
+      "what": "통화 화면 잘림 — CallStage 칸 shrink-0·끝 화면/돌아보기 통째 스크롤",
+      "files": [
+        "src/app/dev/call-preview/page.tsx"
+      ],
+      "features": [
+        "통화 모드 설명",
+        "자유대화",
+        "통화 끝 화면",
+        "Logbank",
+        "오늘의 학습"
+      ],
+      "base": "HEAD~1",
+      "head": "02db05c",
+      "status": "open"
+    },
+    {
+      "id": "a261118-3-8",
+      "at": "2026-11-18 18:12",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "통화 화면 잘림 — CallStage 칸 shrink-0·끝 화면/돌아보기 통째 스크롤",
+      "files": [
+        "src/components/studyMap/Logbank.tsx"
+      ],
+      "features": [
+        "통화 모드 설명",
+        "자유대화",
+        "통화 끝 화면",
+        "Logbank",
+        "오늘의 학습"
+      ],
+      "base": "HEAD~1",
+      "head": "02db05c",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-09 14:53",
-      "from": "3",
-      "base": "8bce8d8",
-      "head": "55c16ce",
-      "what": "Quizbank 표현은 첫 측정 표현 단계부터, 넣어 둔 문법은 바로 아래 단계부터",
-      "tabs": [
-        "1",
-        "2",
-        "3"
-      ],
-      "asks": [
-        "a261109-4",
-        "a261109-5"
-      ]
-    },
     {
       "at": "2026-11-09 15:09",
       "from": "2",
@@ -6340,9 +6366,25 @@
         "a261118-3-5",
         "a261118-3-6"
       ]
+    },
+    {
+      "at": "2026-11-18 18:12",
+      "from": "3",
+      "base": "HEAD~1",
+      "head": "02db05c",
+      "what": "통화 화면 잘림 — CallStage 칸 shrink-0·끝 화면/돌아보기 통째 스크롤",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261118-3-7",
+        "a261118-3-8"
+      ]
     }
   ],
   "seq": {
-    "261118-3": 6
+    "261118-3": 8
   }
 }
