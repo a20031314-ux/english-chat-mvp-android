@@ -58,6 +58,10 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8959652589063151~4979642668" />
+        <!-- 시험 광고에만 뜨는 "AdMob native ad validator" 창을 끔 — 시험 기기에서 퀴즈·키보드를 가림(사용자 2026-11-18). 실제 광고엔 원래 안 뜸. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.NATIVE_AD_DEBUGGER_ENABLED"
+            android:value="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
