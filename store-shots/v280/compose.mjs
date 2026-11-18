@@ -28,7 +28,7 @@ function use(key) {
   raw = path.join(root, "tmp", "guide-slides", "raw", key);
   out = path.join(root, "store-shots", "out", "v280", key);
   const c = COPY[loc], titles = SLIDE_TITLES[loc];
-  T = { call: [c.call], quiz: [c.quiz], lesson: [c.lesson], chat: [c.chat], quizKinds: c.kinds, lang: [titles["my-lang-1"]], people: [titles["tab-people-1"]], log: [titles["my-log-1"]] };
+  T = { call: [c.call], quiz: [c.quiz], chat: [c.chat], quizKinds: c.kinds, lang: [titles["my-lang-1"]], people: [titles["tab-people-1"]], log: [titles["my-log-1"]] };
   FONT = FONTS[loc] ?? FONTS.default;
 
 }
@@ -75,7 +75,6 @@ const shots = () => [
   ["02-quiz", T.quiz, quizGrid()],
   // 사전 전체(종류별 개수) → 묶음 → 넘겨 보기 카드
   ["03-lang", T.lang, `<div class="col">${piece("lang-core", [0, 170, 772, 525], 700)}${arrow}${piece("lang-bundle", [0, 0, 772, 330], 700)}${arrow}${piece("lang-flip", [0, 50, 752, 524], 700)}</div>`],
-  ["04-lesson", T.lesson, piece("call-lesson", [0, 100, 780, 520])],
   ["05-chat", T.chat, piece("tab-chat-2", [50, 0, 700, 240])],
   ["06-people", T.people, piece("tab-people-1", [0, 60, 780, 330])],
   // 학습 곡선 — store-shots/v280/shoot-log.mjs가 지난 14일 치를 넣어 찍은 그림
@@ -143,7 +142,6 @@ const tab = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
 for (const loc of LOCALES) {
   use(loc);
   for (const k of Object.keys(CLEAN)) delete CLEAN[k];
-  await cleanTimer("call-lesson");
   await cleanTimer("call-talk");
   fs.mkdirSync(out, { recursive: true });
   for (const shot of shots()) {

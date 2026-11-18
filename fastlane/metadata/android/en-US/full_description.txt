@@ -1,9 +1,7 @@
 languagebank is a language app where you learn by speaking and writing with an AI tutor. Learn any of 14 languages in any of 14 app languages.
 
 Learn with an AI tutor
-• Just talk: call your tutor and chat freely. Corrections appear as a card under your face.
-• Lesson: your tutor shows a sentence pattern on the board and gets you to use it. Big mistakes are pointed out so you can say it again. Homework comes at the end.
-• Game and Teach me: play Twenty questions, or explain things to a tutor who is learning your language.
+• Call: talk freely with your tutor. A coach shows corrections as captions under your face; say it again and it checks right away. Homework comes when something was corrected.
 • Chat: corrected sentences show up right away. Stuck? Write in your own language and the tutor carries on in the one you are learning.
 
 Many kinds of quizzes (Quizbank)
