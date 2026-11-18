@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { blanked, freshPieces, giveHomework, keepReplay, noteReplayResult, parseReplay, pieceSaid, readHomework, replayable, replayFor, replayPrompt, wholeLineOf, wholeSaid } from "./replay.ts";
+import { blanked, freshPieces, giveHomework, homeworkForToday, keepReplay, noteReplayResult, parseReplay, pieceSaid, readHomework, replayable, replayFor, replayPrompt, wholeLineOf, wholeSaid } from "./replay.ts";
 
 const es = {
   scenes: [
@@ -97,4 +97,15 @@ test("빈칸: 통화에서 그대로 말한 조각은 비우지 않음(줄 전�
   const jaFresh = freshPieces(ja, [{ who: "learner", text: "昨日、ラーメンを食べましたよ" }]);
   assert.equal(jaFresh[0]!.lines[1]!.who === "me" && jaFresh[0]!.lines[1]!.piece, null);
   assert.equal(jaFresh[0]!.lines[3]!.who === "me" && jaFresh[0]!.lines[3]!.piece, "おいしかった");
+});
+
+test("오늘의 학습 숙제: 안 끝냈거나 오늘 끝낸 것만 — 지난날 끝낸 숙제는 안 보임", () => {
+  const day = 24 * 60 * 60 * 1000;
+  const sameDay = (a: number, b: number) => Math.floor(a / day) === Math.floor(b / day);
+  const now = 10 * day + 5000;
+  assert.equal(homeworkForToday(null, sameDay, now), null);
+  const open = { kind: "replay" as const, callId: "c1", at: 3 * day };
+  assert.equal(homeworkForToday(open, sameDay, now), open);
+  assert.equal(homeworkForToday({ ...open, done: 10 * day + 10 }, sameDay, now)?.callId, "c1");
+  assert.equal(homeworkForToday({ ...open, done: 4 * day }, sameDay, now), null);
 });

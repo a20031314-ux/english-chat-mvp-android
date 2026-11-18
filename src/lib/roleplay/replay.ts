@@ -253,6 +253,7 @@ function settle(store: Storage | undefined | null, language: string, next: Store
   const homework = readHomework(store, language);
   if (homework && homework.callId === next.callId && homework.kind === "replay" && !homework.done && homeworkComplete(next, hasQuiz)) {
     write(store, `${HOMEWORK}.${language}`, { ...homework, done: at });
+    homeworkChanged(language);
   }
   return next;
 }
@@ -263,6 +264,23 @@ function settle(store: Storage | undefined | null, language: string, next: Store
  */
 export type Homework = { kind: "replay"; callId: string; at: number; done?: number };
 
+/** 숙제를 주거나 끝냈을 때 같은 창 안에 알림(storage 이벤트는 다른 창에만 와서 오늘의 학습 칸이 그대로였음 — 체감 점검 2026-11-19). */
+export const HOMEWORK_EVENT = "homework-changed";
+
+function homeworkChanged(language: string) {
+  try {
+    globalThis.dispatchEvent?.(new CustomEvent(HOMEWORK_EVENT, { detail: { language } }));
+  } catch {
+    // 브라우저 밖(테스트).
+  }
+}
+
+/** 오늘의 학습에 보일 숙제: 아직 안 끝냈거나 오늘 끝낸 것만(지난날 끝낸 숙제는 다음 날 ✓로 남지 않게). */
+export function homeworkForToday(row: Homework | null, sameDay: (a: number, b: number) => boolean, now: number): Homework | null {
+  if (!row) return null;
+  return !row.done || sameDay(row.done, now) ? row : null;
+}
+
 export function readHomework(store: Storage | undefined | null, language: string): Homework | null {
   const row = read<Homework | null>(store, `${HOMEWORK}.${language}`, null);
   return row && row.kind === "replay" && typeof row.callId === "string" && typeof row.at === "number" ? row : null;
@@ -270,4 +288,5 @@ export function readHomework(store: Storage | undefined | null, language: string
 
 export function giveHomework(store: Storage | undefined | null, language: string, homework: Homework): void {
   write(store, `${HOMEWORK}.${language}`, homework);
+  homeworkChanged(language);
 }

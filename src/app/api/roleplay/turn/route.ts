@@ -181,6 +181,7 @@ export async function POST(request: NextRequest) {
     ...(body.studyOpen === true ? { studyOpen: true } : {}),
     // 요즘 배운 것(학습 언어 낱말·표현) — 열린 통화마다(2026-11-19). 옛 앱은 study만 보낸다.
     ...(recent ? { recent } : {}),
+    ...(body.newToScript === true ? { newToScript: true } : {}),
     // 옛 앱 수업 통화에서 말없이 지나간 차례가 이어진 수(2026-11-07, 화면에 🙉·💡 없음 — 튜터가 먼저 묻고 힌트).
     ...(readCount(body.silent) > 0 ? { silent: Math.min(9, readCount(body.silent)) } : {}),
     ...(typeof body.fixes === "string" && body.fixes.trim() ? { fixes: body.fixes.trim().slice(0, 800) } : {}),

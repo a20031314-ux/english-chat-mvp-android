@@ -4,6 +4,9 @@ import { soundsAlike } from "./loanword.ts";
 
 test("소리 그대로 옮긴 뜻 풀이를 알아본다 (es·en·ja·ar·ko·ru)", () => {
   assert.equal(soundsAlike("micrófono", "ميكروفون"), true);
+  assert.equal(soundsAlike("romántico", "رومانسي"), true, "-tico ↔ -سي (2026-11-19)");
+  assert.equal(soundsAlike("romántico", "رومانسي، رومنطيقي"), true, "아랍어 쉼표로 나눔");
+  assert.equal(soundsAlike("práctico", "عملي"), false);
   assert.equal(soundsAlike("tv", "テレビ"), true);
   assert.equal(soundsAlike("テレビ", "텔레비전"), true);
   assert.equal(soundsAlike("hospital", "hospital"), true);

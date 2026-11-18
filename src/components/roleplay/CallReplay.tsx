@@ -13,7 +13,7 @@ import { chatPartnerForLanguage, tutorVoice, type TutorGender } from "@/lib/chat
 import type { UICopy } from "@/lib/copy";
 import { coerceLanguageCode, learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import type { QuizQuestion } from "@/lib/curriculum/quiz";
-import { homeworkQuiz } from "@/lib/roleplay/homeworkQuiz";
+import { homeworkQuiz, sceneAfterQuiz } from "@/lib/roleplay/homeworkQuiz";
 import { compareToTarget } from "@/lib/roleplay/practice";
 import {
   blanked,
@@ -246,7 +246,7 @@ function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestio
           <span className="tabular-nums text-slate-300">{stored.quiz ? `${stored.quiz.ok}/${stored.quiz.of}` : quiz.length}</span>
         </button>
       ) : (
-        <SceneChips {...shared} hasQuiz={quiz.length > 0} homework />
+        <SceneChips {...shared} hasQuiz={quiz.length > 0} quiz={quiz} homework />
       )}
       {playing ? (
         <QuizPlayer
@@ -275,7 +275,7 @@ function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestio
 }
 
 /** 대화: 대화 시뮬레이션 하나(통화 흐름 그대로 → 한 걸음 더, 2026-11-19) → 장면 연습. 이 폰의 옛 기록(장면 둘)은 첫 장면만. */
-function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored, hasQuiz, homework = false }: Shared & { hasQuiz: boolean; homework?: boolean }) {
+function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored, hasQuiz, quiz = [], homework = false }: Shared & { hasQuiz: boolean; quiz?: readonly QuizQuestion[]; homework?: boolean }) {
   const [playing, setPlaying] = useState<ReplayScene | null>(null);
   // 숙제의 마지막 반쪽(퀴즈가 없거나 이미 함)인 장면을 끝까지 하고 닫으면 숙제가 끝난 자리 — 전면 한 번(homeworkEnd). 통화 끝 화면의 장면은 통화 끝 전면과 같은 흐름이라 없음.
   const finishedScene = useRef(false);
@@ -309,7 +309,7 @@ function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored,
           ui={ui}
           language={language}
           locale={locale}
-          scene={playing}
+          scene={sceneAfterQuiz(playing, quiz)}
           gender={gender}
           isPremium={isPremium}
           onDone={(result) => {

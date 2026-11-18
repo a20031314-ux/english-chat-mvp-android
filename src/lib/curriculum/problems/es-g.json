@@ -328,9 +328,9 @@
   "type": "choose",
   "name": "재귀동사(일과)",
   "ask": "뜻에 맞는 스페인어를 고르세요.",
-  "gloss": "나는 일찍 일어나서 빨리 샤워해.",
+  "gloss": "나는 일찍 일어나서 빨리 아침을 먹어.",
   "before": "",
-  "after": " temprano y me ducho rápido.",
+  "after": " temprano y desayuno rápido.",
   "answer": "Me levanto",
   "why": "levantarse는 재귀동사라 yo에는 me levanto예요.",
   "options": [
@@ -339,7 +339,7 @@
    "Levanto",
    "Me levanta"
   ],
-  "line": "Me levanto temprano y me ducho rápido."
+  "line": "Me levanto temprano y desayuno rápido."
  },
  "g|3:3": {
   "kind": "grammar",

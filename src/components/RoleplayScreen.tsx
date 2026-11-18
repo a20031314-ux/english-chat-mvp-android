@@ -440,10 +440,13 @@ export function RoleplayScreen({
     setDirecting(true);
     // 요즘 퀴즈로 배운 낱말·표현을 튜터에게(대화에 녹이기만 — director.ts recent).
     const recent = scenario.openEnded ? recentLearned(readLedger(scenario.language), Date.now() / 1000) : [];
-    // 코치 띠의 바른 문장을 따라 말한 차례인가 → 앱이 채점하고(gradeRedo), 튜터에겐 따라 말했다는 것만 알린다.
+    // 코치 띠의 바른 문장을 따라 말한 차례인가 → 앱이 채점하고(gradeRedo), 튜터에겐 띠 문장을 실어 맞장구만.
+    // 일본어·중국어는 받아쓰기가 가나·한자를 바꿔 써 낱말 대조가 못 알아봄(점검 2026-11-19 준호 ✓ 한 번도 없음) — 감독 판단(saidAgain)을 같이 본다.
     const heardNow = instruction.request.heard;
-    const repeated = Boolean(scenario.openEnded && redo.line && !instruction.request.missed && triedRedo(redo.line, heardNow, scenario.language));
-    const graded = repeated ? gradeRedo(redo.line, heardNow) : undefined;
+    const looked = Boolean(scenario.openEnded && redo.line && !instruction.request.missed && triedRedo(redo.line, heardNow, scenario.language));
+    const scriptBlind = /^(ja|zh)/.test(scenario.language);
+    const askRedo = Boolean(scenario.openEnded && redo.line && !instruction.request.missed && heardNow.trim() && (looked || scriptBlind));
+    const localGrade = looked ? gradeRedo(redo.line, heardNow) : undefined;
     void fetchDirection({
       // Verbatim, every line the notes do not cover; the notes for the rest.
       request: {
@@ -452,10 +455,11 @@ export function RoleplayScreen({
         context: memory.text,
         ...(prior ? { prior } : {}),
         ...(recent.length ? { recent } : {}),
+        ...(lettersBeginner ? { newToScript: true } : {}),
         ...(fixesText ? { fixes: fixesText } : {}),
         ...(tutorIsBilingual(scenario.language, nativeLanguage) ? { bilingual: true } : {}),
         ...(scenario.openEnded ? { tutorGender } : {}),
-        ...(repeated ? { redo: redo.line } : {}),
+        ...(askRedo ? { redo: redo.line } : {}),
       },
       nativeLanguage,
       isPremium,
@@ -481,6 +485,9 @@ export function RoleplayScreen({
         return;
       }
       const direction = answer;
+      const saidAgain = askRedo ? direction?.saidAgain : undefined;
+      const repeated = looked || Boolean(scriptBlind && saidAgain);
+      const graded: "pass" | "miss" | undefined = !repeated ? undefined : scriptBlind && saidAgain ? (saidAgain === "right" ? "pass" : "miss") : localGrade;
       // The tutor's own reading of the turn is what marks it: it is the one
       // judgement in the scene that looked at what they meant, not at whether
       // a recorded phrase happened to match.

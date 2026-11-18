@@ -140,6 +140,8 @@ export type DirectorRequest = {
    * 튜터가 어울리는 화제로 몰고 자기가 써 보이기만 — 시키거나 판정하지 않는다. 낱말만, 예문은 싣지 않는다.
    */
   recent?: string[];
+  /** 아직 학습 언어 글자를 못 읽음(0단계 — 글자·소리부터, 2026-11-19 점검 준호 "한자를 못 읽음"). 일본어면 가나로만 쓴다. */
+  newToScript?: boolean;
   /**
    * 옛 앱 수업 통화(coach)에서 학습자가 말없이 지나간 차례가 이번까지 몇 번 이어졌나(2026-11-07) — 화면에 🙉·💡가 없어
    * 튜터가 먼저: 1이면 들었는지 묻고 질문을 쉽게 다시, 2 이상이면 이어 말할 문장 앞부분 힌트.
@@ -255,6 +257,8 @@ export type DirectionNext = { step: string } | { free: true } | { end: true };
 
 /** The director's decision, once checked against the scene. */
 export type Direction = {
+  /** 코치 띠 문장을 따라 말한 차례인가·맞았나(감독 판단 — 앱 낱말 대조가 글자 꼴 차이로 못 볼 때 씀, 2026-11-19). */
+  saidAgain?: "right" | "wrong";
   assessment: Assessment;
   say: DirectionLine;
   /** A tip in the learner's own language, shown under the line. May be empty. */
@@ -907,7 +911,7 @@ ${coachRules(target, native, Boolean(request.bilingual && request.nativeLanguage
     : scenario.openEnded
       ? `- One or two short sentences. They chose free conversation for this call, so what you say out loud is only the conversation. Never correct a sentence out loud, never ask them to repeat it, and never mention practice, mistakes or a lesson.
 - Corrections are written, never spoken: they appear on their screen while you keep talking. "better" is their own last sentence put right — only when it has a real mistake: grammar, a wrong form, a word that is wrong for what they meant. Change only the words that are wrong: every other word, and every sentence of their turn that was already right, stays exactly as they said it (do not drop a pronoun, swap a word for one you like better or tidy the punctuation) — leave out of "better" any sentence that had no mistake. "meant" is for a sentence too broken to just put right: write what they were trying to say, as a ${target} speaker would. Fill "better" or "meant", never both, and never refer to them in what you say.
-- When "better" or "meant" is filled, "note" names the mistake in one short phrase in ${native} (the time, the word, the order, the missing word) — no corrected sentence and no longer explanation in it. Otherwise leave "note" empty.`
+- When "better" or "meant" is filled, "note" names the mistake in one short phrase in ${native} (the time, the word, the order, the missing word) — only a change you actually made between their words and "better", never a kind of mistake that is not there — no corrected sentence and no longer explanation in it. Otherwise leave "note" empty.`
       : `- One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "better" is their own last sentence put right, written the way someone who grew up with ${target} would say it — only when it has a real mistake: grammar, a wrong form, a word that is wrong for what they meant. Change only the words that are wrong: every other word, and every sentence of their turn that was already right, stays exactly as they said it (do not drop a pronoun, swap a word for one you like better or tidy the punctuation) — leave out of "better" any sentence that had no mistake. It is shown under their words, not said aloud, and you never refer to it. A sentence with no mistake that a native would just phrase differently is not "better": that goes in "smoother".
 - "meant" is for a sentence too broken to just put right: words in the wrong order or missing, a word from ${native} in the middle, a word that says something else ("I am go cafe yesterday", "I want 예약 a table"). Work out what they were trying to say from what they said and what you had just asked, and write that as a ${target} speaker would say it. Keep the kind of sentence it was: what they told you stays a statement, what they asked stays a question. Fill "better" or "meant", never both.
@@ -918,7 +922,7 @@ ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bi
 `}
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false${!coaching && request.redo?.trim() ? `, "said_again": "right" | "wrong" | ""` : ""}}
 ${MEASURE_RULES(Boolean(scenario.openEnded), target, native)}
 ${
   coaching
@@ -970,6 +974,9 @@ Get back to your list as soon as it feels natural.`
     : [];
   const now = [
     `Level: ${request.level} of 5. At 1–2 use short, common words and one idea per sentence; at 4–5 talk naturally.`,
+    request.newToScript && request.targetLanguage === "ja"
+      ? `They cannot read kanji yet: write "say" and every sentence you put in "better", "meant" or "smoother" in hiragana and katakana only — no kanji — with a space between words, as children's books do.`
+      : "",
     usual.length > 0
       ? `What you usually say around here — when one fits, say it word for word:\n${usual.join("\n")}`
       : "",
@@ -1004,8 +1011,8 @@ ${request.context.trim()}`
           : `You asked them to say "${request.redo}" again, and this turn is their try at it: "pass" if they said it right, "miss" if not.`
         : `Nothing is waiting to be repeated: "retry" is "ask" or empty this turn.`
       : "",
-    !coaching && scenario.openEnded && request.redo?.trim() && request.heard.trim() && triedRedo(request.redo, request.heard, request.targetLanguage)
-      ? `Their screen showed them their last sentence put right ("${request.redo.trim()}"), and on this turn they said it again. Take it as them saying it once more, not as news: at most a word or two about it, in your own manner, then carry the conversation on from where it was. Do not correct it again and do not point out any difference.`
+    !coaching && scenario.openEnded && request.redo?.trim() && request.heard.trim()
+      ? `Their screen showed them their last sentence put right ("${request.redo.trim()}"). If on this turn they are saying that sentence again — in any spelling or script (kana or kanji, with or without spaces, the same words) — set "said_again" to "right" when they said it correctly and "wrong" when it still has a mistake, and take it as them saying it once more, not as news: at most a word or two about it, in your own manner, then carry the conversation on from where it was. Do not correct it again and do not point out any difference. If this turn is something else, leave "said_again" empty and simply answer it.`
       : "",
     request.missed && request.missedAgain && scenario.openEnded
       ? `They pressed "I didn't catch that" again: they did not understand your easier version either. Let that question go — do not repeat it or explain it — and move to a different, easier topic from their own life — something they told you earlier in this call or in what you know of them (their work or studies, plans, family, a place, a hobby), or else their day today; not food or drinks unless they talked about them — with one short question they can answer with a word or two (or two choices to pick from). Use the most common words. Do not mention that they missed it and do not apologise.${NOREASSURE} Leave "note", "better", "meant" and "smoother" empty, and give "stuck" as the assessment.`
@@ -1207,6 +1214,7 @@ export function parseDirection(
     how?: unknown;
     fn?: unknown;
     native?: unknown;
+    said_again?: unknown;
     aim?: unknown;
   };
 
@@ -1645,7 +1653,7 @@ export function aimMeasure(
  * 모르는 값은 버린다(빈 값 = 판단 못 함).
  */
 export function turnMeasure(
-  record: { heard?: unknown; lead?: unknown; how?: unknown; fn?: unknown; native?: unknown },
+  record: { heard?: unknown; lead?: unknown; how?: unknown; fn?: unknown; native?: unknown; said_again?: unknown },
   request: Pick<DirectorRequest, "heard" | "missed">,
   scenario: Pick<RoleplayScenario, "openEnded">,
 ): Pick<Direction, "heard" | "lead" | "leadHow" | "fnGroup" | "native"> {
@@ -1660,5 +1668,6 @@ export function turnMeasure(
     ...(leadHow ? { leadHow } : {}),
     ...(fnGroup ? { fnGroup } : {}),
     ...(record.native === true ? { native: true } : {}),
+    ...(record.said_again === "right" || record.said_again === "wrong" ? { saidAgain: record.said_again as "right" | "wrong" } : {}),
   };
 }

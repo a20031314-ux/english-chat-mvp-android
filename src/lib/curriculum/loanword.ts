@@ -127,10 +127,13 @@ function commonRun(a: string, b: string): number {
  * 같은 차례로 겹치는 자음으로 견준다(아래 줄).
  */
 export function soundsAlike(word: string, gloss: string): boolean {
-  const mine = soundBones(word);
-  if (!mine || mine.length < 2) return false;
+  const bones = soundBones(word);
+  if (!bones || bones.length < 2) return false;
+  // 끝 -tic·-tico는 아랍어·러시아어 등에서 -سي/-с로 옮겨지기도 한다(romántico ↔ رومانسي, 체감 점검 2026-11-19 easy-leak).
+  if (/tk$/.test(bones) && bones.length >= 4 && soundsAlike(word.replace(/ti(c|co|ca|que|k|ko)$/iu, "s"), gloss)) return true;
+  const mine = bones;
   return gloss
-    .split(/[,;，、；/()（）]/u)
+    .split(/[,;，、；،/()（）]/u)
     .map((part) => part.trim())
     .filter(Boolean)
     .some((part) => {

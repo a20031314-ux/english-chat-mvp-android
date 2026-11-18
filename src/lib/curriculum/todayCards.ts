@@ -22,10 +22,13 @@ export function partOf(key: string): CardPart | null {
 
 const quizLike = (event: LogEvent) => event.src === "quiz" || event.src === "exam" || event.src === "judge";
 
-/** 순수: 오늘(dayOf가 today인 날) 퀴즈로 답한 서로 다른 열쇠 수. */
+/**
+ * 순수: 오늘(dayOf가 today인 날) Quizbank로 답한 서로 다른 열쇠 수 — 첫 측정(exam)은 세지 않는다
+ * (체감 점검 2026-11-19 "측정만 했는데 ▶ Quizbank 10/10 ✓").
+ */
 export function answeredToday(events: readonly LogEvent[], today: string, dayOf: (t: number) => string): number {
   const keys = new Set<string>();
-  for (const event of events) if (quizLike(event) && (event.r === "ok" || event.r === "miss") && dayOf(event.t) === today) keys.add(event.k);
+  for (const event of events) if (quizLike(event) && event.src !== "exam" && (event.r === "ok" || event.r === "miss") && dayOf(event.t) === today) keys.add(event.k);
   return keys.size;
 }
 

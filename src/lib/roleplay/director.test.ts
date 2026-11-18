@@ -1433,7 +1433,8 @@ test("튜터 수업 지시: 기다리는 문장이 있으면 그 문장을, 마�
   assert.match(coachBrief({ coach: true, redo: "I went home.", redoTries: 1 }), /You asked them to say "I went home\." again/);
   assert.match(coachBrief({ coach: true, redo: "I went home.", redoTries: 2, heard: "I go home." }), /their last try[\s\S]*Do not ask them to say it again/);
   assert.match(coachBrief({ coach: true }), /do not make up an answer for them/);
-  assert.doesNotMatch(coachBrief({ redo: "I went home.", redoTries: 1 }), /I went home/, "그냥 대화는 기다리는 문장을 안 씀");
+  assert.match(coachBrief({ redo: "I went home.", redoTries: 1 }), /Their screen showed them their last sentence put right \("I went home\."\)[\s\S]*"said_again"/, "통화 하나: 코치 띠 문장 — 따라 말했나는 감독이 said_again으로");
+  assert.doesNotMatch(coachBrief({ redo: "I went home.", redoTries: 1 }), /You asked them to say/, "말로 시킨 게 아님");
 });
 
 test("a correct sentence said more naturally rides as smoother, never next to a fix", () => {
@@ -1670,7 +1671,16 @@ test("통화 하나(코치 띠): 말로 짚지 않고, 요즘 배운 말·설명
     assert.match(plain, /Never correct a sentence out loud/);
     assert.match(plain, /ask them to explain something from their side/);
     assert.doesNotMatch(plain, /How you tutor/);
-    assert.match(prompt({ redo, heard }), /said it again\. Take it as them saying it once more/);
-    assert.doesNotMatch(prompt({ redo, heard: "me gusta el café" }), /said it again\. Take it/, "다른 말이면 없음");
+    assert.match(prompt({ redo, heard }), /in any spelling or script \(kana or kanji[\s\S]*set "said_again" to "right"/);
+    assert.doesNotMatch(prompt({ heard }), /said_again/, "띠 문장이 없으면 없음");
+  }
+});
+
+test("글자를 아직 못 읽는 일본어 학습자: 가나로만(0단계) — 다른 언어엔 없음", () => {
+  for (const [lang, expect] of [["ja", true], ["es", false]] as const) {
+    const scene = findScenario(`open-talk-${lang}`)!;
+    const bank = sentencesFor(lang);
+    const text = tutorSystemPrompt({ scenario: scene, bank, recorded: recordedLines(scene, SCENARIOS, bank), request: request({ scenarioId: scene.id, nodeId: "talk", targetLanguage: lang, nativeLanguage: "ko", newToScript: true }) });
+    assert.equal(/cannot read kanji yet/.test(text), expect);
   }
 });

@@ -8,7 +8,7 @@ import { AiAvatar, AiTutorSheet } from "@/components/AiTutorProfile";
 import { chatPartnerForLanguage } from "@/lib/chatPartner";
 import { useTutorGender } from "@/lib/tutorGender";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
-import { readHomework, type Homework } from "@/lib/roleplay/replay";
+import { HOMEWORK_EVENT, homeworkForToday, readHomework, type Homework } from "@/lib/roleplay/replay";
 import { readCalls, subscribeCalls } from "@/lib/roleplay/callStore";
 import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
@@ -137,7 +137,7 @@ function useHomework(language: string): Homework | null {
   useEffect(() => {
     const load = () => {
       try {
-        const row = readHomework(globalThis.localStorage, language);
+        const row = homeworkForToday(readHomework(globalThis.localStorage, language), (a, b) => localDay(new Date(a)) === localDay(new Date(b)), Date.now());
         setHomework(row && readCalls().some((call) => call.id === row.callId) ? row : null);
       } catch {
         setHomework(null);
@@ -147,10 +147,12 @@ function useHomework(language: string): Homework | null {
     const off = subscribeCalls(load);
     window.addEventListener("focus", load);
     window.addEventListener("storage", load);
+    window.addEventListener(HOMEWORK_EVENT, load);
     return () => {
       off();
       window.removeEventListener("focus", load);
       window.removeEventListener("storage", load);
+      window.removeEventListener(HOMEWORK_EVENT, load);
     };
   }, [language]);
   return homework;

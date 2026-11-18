@@ -14,6 +14,19 @@ test("바뀐 문장만: 맞는 앞 문장은 빠짐 — 스페인어·일본어�
   });
 });
 
+test("고친 쪽에 틀린 문장만 오면 그 문장과 짝짓고 맞는 문장은 띠에 안 나옴 — 스페인어·영어·일본어(점검 11-19)", () => {
+  assert.deepEqual(focusFix("Hola Mateo. Hoy es un día con mucho trabajo. Yo soy muy cansada porque trabajo en el hospital.", "Estoy muy cansada porque trabajo en el hospital."), {
+    said: "Yo soy muy cansada porque trabajo en el hospital.",
+    right: "Estoy muy cansada porque trabajo en el hospital.",
+  });
+  assert.deepEqual(focusFix("It is my first time in Singapore. I stay there for three day.", "I'm staying there for three days."), {
+    said: "I stay there for three day.",
+    right: "I'm staying there for three days.",
+  });
+  assert.deepEqual(focusFix("ラーメンが好きです。昨日テレビ見ました。", "昨日テレビを見ました。"), { said: "昨日テレビ見ました。", right: "昨日テレビを見ました。" });
+  assert.deepEqual(focusFix("Sí. Me gusta.", "Fui al mercado con mi madre ayer."), { said: "Sí. Me gusta.", right: "Fui al mercado con mi madre ayer." }, "닮은 문장이 없으면 그대로");
+});
+
 test("한 문장이거나 다 바뀌면 그대로", () => {
   assert.deepEqual(focusFix("I go home", "I went home"), { said: "I go home", right: "I went home" });
   assert.deepEqual(focusFix("A. B.", "C."), { said: "A. B.", right: "C." });

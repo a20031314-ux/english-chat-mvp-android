@@ -55,6 +55,19 @@ Answer with exactly one line per word, in the same order, as <number>|<form in t
   return out.length >= words.length / 2 ? out : null;
 }
 
+/**
+ * 모델이 고른 뜻이 예문(word-sentences)과 어긋난 낱말의 영어 뜻 — 카드를 다시 만들지 않고 이 뜻으로 바꿔 내보낸다(앱 언어 뜻은 이걸 옮김).
+ * 체감 점검 2026-11-19: lecho 정답 "강바닥"인데 예문은 소파 = 잠자리.
+ */
+const GLOSS_FIX: Record<string, Record<string, string>> = {
+  es: { lecho: "bed, place to sleep" },
+};
+
+function fixedGloss(language: string, cards: WordCard[]): WordCard[] {
+  const table = GLOSS_FIX[language];
+  return table ? cards.map((card) => (table[card.w] ? { ...card, gloss: table[card.w]! } : card)) : cards;
+}
+
 /** 묶음 하나(순위 chunk*50 ~)의 카드. 앱 언어가 영어가 아니면 뜻을 그 말로. */
 export async function wordCards(language: string, chunk: number, ui: string, uiName: string, onMake?: () => void): Promise<WordCard[]> {
   const bank = await loadBank(language);
@@ -83,6 +96,7 @@ export async function wordCards(language: string, chunk: number, ui: string, uiN
       }
     }
   }
+  cards = fixedGloss(language, cards);
   if (ui === "en") return cards;
   const lines = cards.flatMap((card) => [card.gloss, card.exampleGloss]);
   // 옮긴 뜻은 원문 줄에 묶는다 — 예전 열쇠는 카드가 바뀌어도 그대로 남아 다른 예문의 뜻이 붙었다(2026-10-31 태국어 ถัง).

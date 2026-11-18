@@ -950,7 +950,8 @@ function ChooseView({
   const notes = useOptionNotes(answered && !question.prepared ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer, mine: question.mine } : null, language, locale);
   return (
     <div className="flex flex-col gap-3">
-      {(question.prepared && !question.prepared.meaningLater && formChoice(question.options, question.answer, language)) || answered ? (
+      {/* 문법(g|)은 뜻이 인칭·시제를 하나로 정한다(체감 점검 2026-11-19 Tiene/Tengo·Pueden/Puedes·Llovía/Llovió·should/must) — 뜻 먼저. 표현은 뜻이 답이 될 수 있어 같은 낱말 꼴일 때만. */}
+      {(question.prepared && !question.prepared.meaningLater && (question.from.startsWith("g|") || formChoice(question.options, question.answer, language))) || answered ? (
         <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>

@@ -139,3 +139,29 @@ test("낱말 보기: 같은 주제 먼저, 뜻풀이가 겹치는 보기는 안 
     assert.ok(!(raws.includes("때, 시간") && raws.includes("시간")), "보기끼리 겹치지 않음");
   }
 });
+
+test("정해 둔 뜻 오답(MEANING_DECOYS)이 먼저 — 예문 자리에 맞는 보기 (en·es, 체감 점검 2026-11-19)", () => {
+  registerQuizSources("en", [
+    card("w|stethoscope", "The doctor listened to my heart with a stethoscope.", "stethoscope", "청진기"),
+    card("w|microphone", "Speak into the microphone.", "microphone", "마이크"),
+    card("w|mirror", "Look in the mirror.", "mirror", "거울"),
+    card("w|flashlight", "Bring a flashlight.", "flashlight", "손전등"),
+    card("w|scar", "He has a scar.", "scar", "흉터"),
+    card("w|thigh", "My thigh hurts.", "thigh", "허벅지"),
+    card("w|palm", "Open your palm.", "palm", "손바닥"),
+  ]);
+  const q = cardQuiz("en", "w|stethoscope", "hide", "s");
+  assert.equal(q?.kind, "meaning");
+  const raws = q?.kind === "meaning" ? q.options.map((one) => one.raw).sort() : [];
+  assert.deepEqual(raws, ["거울", "마이크", "손전등", "청진기"]);
+  registerQuizSources("es", [
+    card("w|clavar", "Voy a clavar un cuadro en la pared.", "clavar", "يسمّر", "verb"),
+    card("w|pintar", "Voy a pintar la pared.", "pintar", "يرسم، يدهن", "verb"),
+    card("w|mover", "Hay que mover la mesa.", "mover", "يحرّك", "verb"),
+    card("w|limpiar", "Tengo que limpiar.", "limpiar", "ينظّف", "verb"),
+    card("w|charlar", "Me gusta charlar.", "charlar", "الدردشة", "verb"),
+  ]);
+  const es = cardQuiz("es", "w|clavar", "hide", "s");
+  const esRaws = es?.kind === "meaning" ? es.options.map((one) => one.raw) : [];
+  assert.ok(!esRaws.includes("الدردشة"), "명사꼴 뜻은 정해 둔 셋에 밀림");
+});

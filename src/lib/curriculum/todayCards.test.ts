@@ -29,7 +29,7 @@ test("체크 셋: 앎에서 퀴즈 틀림·[다시] → 다시 볼 것, 대화�
   assert.equal(stateOf([...known, ev(key, "again", T0 + 30), ev(key, "ok", T0 + DAY)]).level, "known", "다시 맞히면 앎");
 });
 
-test("오늘 끝: 오늘 퀴즈로 답한 서로 다른 열쇠가 TODAY_GOAL 이상 — 대화·찾아봄·어제 답은 안 셈 (ja·es)", () => {
+test("오늘 끝: 오늘 퀴즈로 답한 서로 다른 열쇠가 TODAY_GOAL 이상 — 대화·찾아봄·어제 답·첫 측정은 안 셈 (ja·es)", () => {
   const today = utcDay(T0);
   const answers = Array.from({ length: TODAY_GOAL - 1 }, (_, i) => ev(`w|n${i}`, i % 2 ? "ok" : "miss", T0 + i, { m: "pick" }));
   const noise: LogEvent[] = [
@@ -37,6 +37,8 @@ test("오늘 끝: 오늘 퀴즈로 답한 서로 다른 열쇠가 TODAY_GOAL 이
     { k: "w|食べる", src: "call", r: "used", t: T0 + 60 },
     { k: "w|casa", src: "dict", r: "look", t: T0 + 70 },
     ev("w|ayer", "ok", T0 - DAY),
+    { k: "w|駅", src: "exam", r: "ok", t: T0 + 90, m: "pick" },
+    { k: "e|qué tal", src: "exam", r: "miss", t: T0 + 91, m: "pick" },
   ];
   assert.equal(answeredToday([...answers, ...noise], today, utcDay), TODAY_GOAL - 1);
   assert.equal(answeredToday([...answers, ...noise, ev("w|último", "ok", T0 + 80, { m: "pick" })], today, utcDay), TODAY_GOAL);
