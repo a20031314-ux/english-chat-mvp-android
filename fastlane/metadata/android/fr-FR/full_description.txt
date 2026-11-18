@@ -1,9 +1,7 @@
 languagebank est une application pour apprendre une langue en parlant et en écrivant avec un tuteur IA. Apprenez l'une des 14 langues dans l'une des 14 langues de l'application.
 
 Apprendre avec un tuteur IA
-• Discuter : appelez votre tuteur et parlez librement. Les corrections s'affichent sur une carte sous votre visage.
-• Cours : le tuteur affiche une structure de phrase au tableau et vous la fait utiliser. Les grosses erreurs sont signalées pour que vous redisiez la phrase. Un devoir arrive à la fin.
-• Jeu et Apprends-moi : jouez à Vingt questions, ou expliquez des choses à un tuteur qui apprend votre langue.
+• Appel : parlez librement avec votre tuteur. Un coach affiche les corrections en sous-titres sous votre visage ; redites la phrase et c’est vérifié tout de suite. Un devoir arrive quand quelque chose a été corrigé.
 • Chat : les phrases corrigées s'affichent tout de suite. Bloqué ? Écrivez dans votre langue, le tuteur continue dans celle que vous apprenez.
 
 Des quiz de toutes sortes (Quizbank)

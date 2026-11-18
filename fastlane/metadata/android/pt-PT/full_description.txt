@@ -1,9 +1,7 @@
 O languagebank é uma app para aprender línguas a falar e a escrever com um tutor de IA. Aprenda qualquer uma de 14 línguas em qualquer uma de 14 línguas da app.
 
 Aprenda com um tutor de IA
-• Conversar: ligue ao tutor e fale à vontade. As correções aparecem num cartão por baixo da sua cara.
-• Aula: o tutor mostra uma estrutura de frase no quadro e leva-o a usá-la. Os erros grandes são apontados para que volte a dizer. No fim há uma tarefa.
-• Jogo e Me ensine: jogue às Vinte perguntas ou explique coisas a um tutor que está a aprender a sua língua.
+• Chamada: fale à vontade com o tutor. Um treinador mostra as correções em legendas por baixo da sua cara; repita e é verificado logo. Se algo foi corrigido, há uma tarefa.
 • Chat: as frases corrigidas aparecem logo. Se ficar preso, escreva na sua língua e o tutor continua na que está a aprender.
 
 Vários tipos de quiz (Quizbank)

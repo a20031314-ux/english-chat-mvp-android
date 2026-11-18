@@ -1,9 +1,7 @@
 languagebank là ứng dụng học ngoại ngữ bằng cách nói và viết cùng gia sư AI. Học 14 ngôn ngữ bằng 14 ngôn ngữ giao diện.
 
 Học cùng gia sư AI
-• Nói chuyện: gọi gia sư và trò chuyện thoải mái. Câu đã sửa hiện thành thẻ dưới khuôn mặt bạn.
-• Bài học: gia sư đưa mẫu câu lên bảng và giúp bạn nói bằng mẫu đó. Lỗi lớn được chỉ ra ngay để bạn nói lại. Cuối buổi có bài tập.
-• Trò chơi và Dạy tôi: chơi Hai mươi câu hỏi, hoặc giải thích cho gia sư đang học ngôn ngữ của bạn.
+• Gọi: trò chuyện thoải mái với gia sư. Huấn luyện viên hiện câu đã sửa thành phụ đề dưới khuôn mặt bạn; nói lại là được kiểm tra ngay. Có câu được sửa thì có bài tập.
 • Trò chuyện: câu đã sửa hiện ra ngay. Khi bí, cứ viết bằng tiếng mẹ đẻ, gia sư sẽ tiếp tục bằng ngôn ngữ bạn đang học.
 
 Nhiều dạng câu đố (Quizbank)

@@ -1,9 +1,7 @@
 languagebank adalah aplikasi belajar bahasa dengan berbicara dan menulis bersama tutor AI. Pelajari 14 bahasa dengan 14 bahasa aplikasi.
 
 Belajar bersama tutor AI
-• Ngobrol: telepon tutor dan bicara dengan bebas. Koreksi muncul sebagai kartu di bawah wajahmu.
-• Pelajaran: tutor menampilkan pola kalimat di papan dan mengajakmu memakainya. Kesalahan besar langsung ditunjukkan supaya kamu mengucapkannya lagi. Di akhir ada PR.
-• Permainan dan Ajari aku: main Dua puluh pertanyaan, atau jelaskan sesuatu kepada tutor yang sedang belajar bahasamu.
+• Panggilan: ngobrol bebas dengan tutor. Pelatih menampilkan koreksi sebagai teks di bawah wajahmu; ucapkan lagi dan langsung diperiksa. Kalau ada yang dikoreksi, ada PR.
 • Chat: kalimat yang dikoreksi langsung terlihat. Kalau buntu, tulis dalam bahasamu sendiri dan tutor melanjutkan dalam bahasa yang kamu pelajari.
 
 Beragam kuis (Quizbank)
