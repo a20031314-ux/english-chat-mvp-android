@@ -575,9 +575,6 @@
     "talkNewUse": "初めて使えたもの",
     "growUsedAll": "今までの活用",
     "replayTitle": "こんなふうにも言えました",
-    "replaySame": "同じ流れ",
-    "replayFurther": "もう一歩",
-    "replayBranch": "別の道",
     "replayWhole": "一文まるごと",
     "replayMaking": "場面を作っています…",
     "replayType": "入力",
@@ -614,7 +611,8 @@
     "callInfoTalk1": "チューターと好きなことを話します — 最近学んだ言葉が出てきます",
     "callInfoTalk2": "直した言い方はコーチが自分の顔の下に出します — 言い直すと ✓",
     "callInfoTalk3": "通話のあと、直した言い方から宿題ができます",
-    "todayTutorCall": "{name}と通話"
+    "todayTutorCall": "{name}と通話",
+    "replaySim": "会話シミュレーション"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1192,9 +1190,6 @@
     "talkNewUse": "第一次用上的",
     "growUsedAll": "至今用上",
     "replayTitle": "也可以这样说",
-    "replaySame": "同样的思路",
-    "replayFurther": "再进一步",
-    "replayBranch": "另一种走向",
     "replayWhole": "整句",
     "replayMaking": "正在准备场景…",
     "replayType": "输入",
@@ -1231,7 +1226,8 @@
     "callInfoTalk1": "和导师随便聊你想聊的——会用到你最近学的词",
     "callInfoTalk2": "改正的说法由教练显示在你的头像下方——跟着说一遍得 ✓",
     "callInfoTalk3": "挂断后，会根据改正的说法布置作业",
-    "todayTutorCall": "和{name}通话"
+    "todayTutorCall": "和{name}通话",
+    "replaySim": "对话模拟"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1812,9 +1808,6 @@
     "talkNewUse": "Lần đầu bạn dùng",
     "growUsedAll": "Đã dùng đến nay",
     "replayTitle": "Bạn cũng có thể nói thế này",
-    "replaySame": "Cùng mạch",
-    "replayFurther": "Thêm một bước",
-    "replayBranch": "Hướng khác",
     "replayWhole": "Cả câu",
     "replayMaking": "Đang chuẩn bị cảnh…",
     "replayType": "Gõ",
@@ -1851,7 +1844,8 @@
     "callInfoTalk1": "Trò chuyện với gia sư về bất cứ điều gì — từ bạn mới học sẽ xuất hiện",
     "callInfoTalk2": "Huấn luyện viên hiện câu được sửa dưới ảnh của bạn — nói lại để được ✓",
     "callInfoTalk3": "Sau khi gác máy, bài tập được tạo từ các câu đã sửa",
-    "todayTutorCall": "Gọi với {name}"
+    "todayTutorCall": "Gọi với {name}",
+    "replaySim": "Mô phỏng hội thoại"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2435,9 +2429,6 @@
     "talkNewUse": "Utilisé pour la première fois",
     "growUsedAll": "Utilisé à ce jour",
     "replayTitle": "Tu aurais aussi pu le dire comme ça",
-    "replaySame": "Même fil",
-    "replayFurther": "Un pas de plus",
-    "replayBranch": "Autre chemin",
     "replayWhole": "La phrase entière",
     "replayMaking": "Préparation des scènes…",
     "replayType": "Écrire",
@@ -2474,7 +2465,8 @@
     "callInfoTalk1": "Parle de ce que tu veux avec ton tuteur — les mots que tu apprends reviennent",
     "callInfoTalk2": "Ton coach affiche les corrections sous ton visage — redis-le pour un ✓",
     "callInfoTalk3": "Après l’appel, tes corrections deviennent des devoirs",
-    "todayTutorCall": "Appel avec {name}"
+    "todayTutorCall": "Appel avec {name}",
+    "replaySim": "Simulation de conversation"
   },
   "it": {
     "archive": "Report",
@@ -3251,9 +3243,6 @@
     "talkNewUse": "Usato per la prima volta",
     "growUsedAll": "Usate finora",
     "replayTitle": "Avresti potuto dirlo anche così",
-    "replaySame": "Stesso filo",
-    "replayFurther": "Un passo in più",
-    "replayBranch": "Un’altra strada",
     "replayWhole": "La frase intera",
     "replayMaking": "Preparo le scene…",
     "replayType": "Scrivi",
@@ -3290,7 +3279,8 @@
     "callInfoTalk1": "Parla con il tuo tutor di quello che vuoi — tornano le parole che stai imparando",
     "callInfoTalk2": "Il tuo coach mostra le correzioni sotto il tuo viso — ripetilo per un ✓",
     "callInfoTalk3": "Dopo la chiamata, dalle correzioni nascono i compiti",
-    "todayTutorCall": "Chiamata con {name}"
+    "todayTutorCall": "Chiamata con {name}",
+    "replaySim": "Simulazione di conversazione"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3877,9 +3867,6 @@
     "talkNewUse": "Usou pela primeira vez",
     "growUsedAll": "Usadas até agora",
     "replayTitle": "Você também poderia dizer assim",
-    "replaySame": "Mesmo fio",
-    "replayFurther": "Um passo além",
-    "replayBranch": "Outro caminho",
     "replayWhole": "A frase inteira",
     "replayMaking": "Preparando as cenas…",
     "replayType": "Digitar",
@@ -3916,7 +3903,8 @@
     "callInfoTalk1": "Converse com seu tutor sobre o que quiser — aparecem palavras que você está aprendendo",
     "callInfoTalk2": "Seu coach mostra as correções abaixo do seu rosto — repita para ganhar um ✓",
     "callInfoTalk3": "Depois da chamada, a lição de casa vem das suas correções",
-    "todayTutorCall": "Chamada com {name}"
+    "todayTutorCall": "Chamada com {name}",
+    "replaySim": "Simulação de conversa"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4691,9 +4679,6 @@
     "talkNewUse": "Впервые использовали",
     "growUsedAll": "Применено всего",
     "replayTitle": "Можно было сказать и так",
-    "replaySame": "Тот же ход",
-    "replayFurther": "Ещё шаг",
-    "replayBranch": "Другой путь",
     "replayWhole": "Фраза целиком",
     "replayMaking": "Готовим сцены…",
     "replayType": "Написать",
@@ -4730,7 +4715,8 @@
     "callInfoTalk1": "Говорите с репетитором о чём угодно — в разговоре будут слова, которые вы учите",
     "callInfoTalk2": "Коуч показывает исправления под вашим лицом — повторите, чтобы получить ✓",
     "callInfoTalk3": "После звонка из исправлений появится домашнее задание",
-    "todayTutorCall": "Звонок с {name}"
+    "todayTutorCall": "Звонок с {name}",
+    "replaySim": "Репетиция разговора"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5315,9 +5301,6 @@
     "talkNewUse": "Pertama kali kamu pakai",
     "growUsedAll": "Dipakai sejauh ini",
     "replayTitle": "Kamu juga bisa bilang begini",
-    "replaySame": "Alur yang sama",
-    "replayFurther": "Selangkah lagi",
-    "replayBranch": "Jalan lain",
     "replayWhole": "Kalimat utuh",
     "replayMaking": "Menyiapkan adegan…",
     "replayType": "Ketik",
@@ -5354,7 +5337,8 @@
     "callInfoTalk1": "Ngobrol dengan tutor tentang apa saja — kata yang sedang kamu pelajari akan muncul",
     "callInfoTalk2": "Pelatih menampilkan perbaikan di bawah wajahmu — ucapkan lagi untuk ✓",
     "callInfoTalk3": "Setelah menutup telepon, PR dibuat dari perbaikanmu",
-    "todayTutorCall": "Telepon dengan {name}"
+    "todayTutorCall": "Telepon dengan {name}",
+    "replaySim": "Simulasi percakapan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5932,9 +5916,6 @@
     "talkNewUse": "استخدمتها لأول مرة",
     "growUsedAll": "استخدمتها حتى الآن",
     "replayTitle": "كان يمكنك أن تقولها هكذا أيضًا",
-    "replaySame": "نفس المسار",
-    "replayFurther": "خطوة أبعد",
-    "replayBranch": "طريق آخر",
     "replayWhole": "الجملة كاملة",
     "replayMaking": "جارٍ تحضير المشاهد…",
     "replayType": "اكتب",
@@ -5971,7 +5952,8 @@
     "callInfoTalk1": "تحدّث مع المعلّم عن أي شيء تحبه — ستظهر كلمات تتعلّمها مؤخرًا",
     "callInfoTalk2": "يعرض المدرّب التصحيحات تحت صورتك — كرّرها لتحصل على ✓",
     "callInfoTalk3": "بعد إنهاء المكالمة يصبح ما صُحّح واجبًا منزليًا",
-    "todayTutorCall": "مكالمة مع {name}"
+    "todayTutorCall": "مكالمة مع {name}",
+    "replaySim": "محاكاة المحادثة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6549,9 +6531,6 @@
     "talkNewUse": "ใช้เป็นครั้งแรก",
     "growUsedAll": "ใช้จริงทั้งหมด",
     "replayTitle": "พูดแบบนี้ก็ได้นะ",
-    "replaySame": "แนวเดิม",
-    "replayFurther": "อีกขั้น",
-    "replayBranch": "อีกทางหนึ่ง",
     "replayWhole": "ทั้งประโยค",
     "replayMaking": "กำลังเตรียมฉาก…",
     "replayType": "พิมพ์",
@@ -6588,7 +6567,8 @@
     "callInfoTalk1": "คุยกับติวเตอร์เรื่องอะไรก็ได้ — คำที่เพิ่งเรียนจะโผล่มา",
     "callInfoTalk2": "โค้ชแสดงคำที่แก้ไว้ใต้หน้าของคุณ — พูดตามอีกครั้งเพื่อรับ ✓",
     "callInfoTalk3": "หลังวางสาย การบ้านจะมาจากคำที่แก้",
-    "todayTutorCall": "โทรคุยกับ{name}"
+    "todayTutorCall": "โทรคุยกับ{name}",
+    "replaySim": "จำลองบทสนทนา"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7166,9 +7146,6 @@
     "talkNewUse": "पहली बार इस्तेमाल किया",
     "growUsedAll": "अब तक इस्तेमाल",
     "replayTitle": "आप ऐसे भी कह सकते थे",
-    "replaySame": "वही धारा",
-    "replayFurther": "एक कदम आगे",
-    "replayBranch": "दूसरा रास्ता",
     "replayWhole": "पूरा वाक्य",
     "replayMaking": "दृश्य तैयार हो रहे हैं…",
     "replayType": "लिखें",
@@ -7205,6 +7182,7 @@
     "callInfoTalk1": "ट्यूटर से जो चाहें उस पर बात करें — हाल में सीखे शब्द आएँगे",
     "callInfoTalk2": "कोच सुधार आपके चेहरे के नीचे दिखाता है — दोबारा बोलें तो ✓",
     "callInfoTalk3": "कॉल के बाद सुधारों से होमवर्क बनता है",
-    "todayTutorCall": "{name} के साथ कॉल"
+    "todayTutorCall": "{name} के साथ कॉल",
+    "replaySim": "बातचीत का अभ्यास"
   }
 }

@@ -5,44 +5,39 @@ import { blanked, freshPieces, giveHomework, keepReplay, noteReplayResult, parse
 const es = {
   scenes: [
     {
-      kind: "same",
+      kind: "sim",
       lines: [
         { who: "tutor", text: "¿Qué hiciste el fin de semana?" },
         { who: "me", text: "Fui a la playa con mi amiga y comimos mariscos.", meaning: "친구랑 바닷가에 가서 해산물을 먹었어요.", piece: "y comimos mariscos" },
         { who: "tutor", text: "¡Qué bien! ¿Te gustó?" },
         { who: "me", text: "Sí, me encantó porque hacía sol.", meaning: "네, 해가 나서 정말 좋았어요.", piece: "porque hacía sol" },
-      ],
-    },
-    {
-      kind: "further",
-      lines: [
         { who: "tutor", text: "¿Vas a volver pronto?" },
-        { who: "me", text: "Quiero volver el mes que viene.", meaning: "다음 달에 다시 가고 싶어요.", piece: "el mes que viene" },
-        { who: "tutor", text: "¿Con quién?" },
         { who: "me", text: "Con mi familia, si tienen tiempo.", meaning: "가족이랑요, 시간이 되면요.", piece: "no está en la frase" },
       ],
     },
   ],
 };
 
-test("장면 읽기: same이 먼저, 조각이 줄에 없으면 빈칸 없이", () => {
+test("대화 시뮬레이션 하나: 조각이 줄에 없으면 빈칸 없이, 이름이 달라도 첫 쓸 만한 장면 하나", () => {
   const scenes = parseReplay(JSON.stringify(es));
-  assert.equal(scenes.length, 2);
-  assert.equal(scenes[0]!.kind, "same");
-  const last = scenes[1]!.lines[3]!;
+  assert.equal(scenes.length, 1);
+  assert.equal(scenes[0]!.kind, "sim");
+  const last = scenes[0]!.lines[5]!;
   assert.equal(last.who === "me" ? last.piece : "x", null);
   assert.equal(blanked(scenes[0]!.lines[1] as never), "Fui a la playa con mi amiga ___.");
+  const two = parseReplay({ scenes: [{ ...es.scenes[0]!, kind: "same" }, es.scenes[0]] });
+  assert.equal(two.length, 1, "장면 둘이 와도 하나");
+  assert.equal(two[0]!.kind, "sim");
 });
 
-test("장면 읽기: same이 없거나 내 줄이 하나뿐이면 버림, 코드 울타리도 봐줌", () => {
-  assert.deepEqual(parseReplay({ scenes: [es.scenes[1]] }), []);
-  const one = { scenes: [{ kind: "same", lines: [es.scenes[0]!.lines[0], es.scenes[0]!.lines[1]] }] };
-  assert.deepEqual(parseReplay(one), []);
-  assert.equal(parseReplay("```json\n" + JSON.stringify(es) + "\n```").length, 2);
+test("장면 읽기: 내 줄이 셋보다 적으면 버림, 코드 울타리도 봐줌", () => {
+  const short = { scenes: [{ kind: "sim", lines: es.scenes[0]!.lines.slice(0, 4) }] };
+  assert.deepEqual(parseReplay(short), []);
+  assert.equal(parseReplay("```json\n" + JSON.stringify(es) + "\n```").length, 1);
   assert.deepEqual(parseReplay("not json"), []);
-  assert.equal(parseReplay(JSON.stringify({ scenes: JSON.stringify(es.scenes) })).length, 2);
-  assert.equal(parseReplay(JSON.stringify({ scenes: JSON.stringify(es.scenes) + "}" })).length, 2);
-  assert.equal(parseReplay("Here you go: " + JSON.stringify(es)).length, 2);
+  assert.equal(parseReplay(JSON.stringify({ scenes: JSON.stringify(es.scenes) })).length, 1);
+  assert.equal(parseReplay(JSON.stringify({ scenes: JSON.stringify(es.scenes) + "}" })).length, 1);
+  assert.equal(parseReplay("Here you go: " + JSON.stringify(es)).length, 1);
 });
 
 test("빈칸 맞음: 조각 낱말이 다 들리면 — 앞뒤는 봐줌, 띄어쓰기 없는 일본어도", () => {
@@ -86,10 +81,10 @@ test("저장: 이 폰에 통화마다, 결과를 남기면 그 통화 숙제가 
   const scenes = parseReplay(es);
   keepReplay(store, "es", { callId: "c1", scenes, results: {}, at: 1 });
   giveHomework(store, "es", { kind: "replay", callId: "c1", at: 1 });
-  assert.equal(replayFor(store, "es", "c1")?.scenes.length, 2);
+  assert.equal(replayFor(store, "es", "c1")?.scenes.length, 1);
   assert.equal(replayFor(store, "ja", "c1"), null);
-  noteReplayResult(store, "es", "c1", "same", { ok: 2, of: 2, whole: true, at: 5 });
-  assert.equal(replayFor(store, "es", "c1")?.results.same?.ok, 2);
+  noteReplayResult(store, "es", "c1", "sim", { ok: 2, of: 2, whole: true, at: 5 });
+  assert.equal(replayFor(store, "es", "c1")?.results.sim?.ok, 2);
   assert.equal(readHomework(store, "es")?.done, 5);
 });
 
@@ -97,8 +92,8 @@ test("빈칸: 통화에서 그대로 말한 조각은 비우지 않음(줄 전�
   const scenes = parseReplay(es);
   const fresh = freshPieces(scenes, [{ who: "learner", text: "Sí, porque hacía sol." }, { who: "tutor", text: "y comimos mariscos" }]);
   const pieces = fresh[0]!.lines.filter((line) => line.who === "me").map((line) => (line.who === "me" ? line.piece : ""));
-  assert.deepEqual(pieces, ["y comimos mariscos", null]);
-  const ja = parseReplay({ scenes: [{ kind: "same", lines: [{ who: "tutor", text: "何を？" }, { who: "me", text: "一緒にラーメンを食べました。", meaning: "같이 라멘", piece: "ラーメンを食べました" }, { who: "tutor", text: "どう？" }, { who: "me", text: "おいしかったです。", meaning: "맛있었어요", piece: "おいしかった" }] }] });
+  assert.deepEqual(pieces, ["y comimos mariscos", null, null]);
+  const ja = parseReplay({ scenes: [{ kind: "sim", lines: [{ who: "tutor", text: "何を？" }, { who: "me", text: "一緒にラーメンを食べました。", meaning: "같이 라멘", piece: "ラーメンを食べました" }, { who: "tutor", text: "どう？" }, { who: "me", text: "おいしかったです。", meaning: "맛있었어요", piece: "おいしかった" }, { who: "tutor", text: "また行く？" }, { who: "me", text: "来週また行きたいです。", meaning: "다음 주에 또 가고 싶어요", piece: "また行きたい" }] }] });
   const jaFresh = freshPieces(ja, [{ who: "learner", text: "昨日、ラーメンを食べましたよ" }]);
   assert.equal(jaFresh[0]!.lines[1]!.who === "me" && jaFresh[0]!.lines[1]!.piece, null);
   assert.equal(jaFresh[0]!.lines[3]!.who === "me" && jaFresh[0]!.lines[3]!.piece, "おいしかった");

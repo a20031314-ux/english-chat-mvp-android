@@ -161,7 +161,7 @@ export const MODEL_CALLS_PER_REQUEST = {
   // Folding lines the tutor no longer reads verbatim into its notes. Once per
   // ten lines past the thirtieth, so only long conversations make any.
   roleplayContext: 1,
-  // 🎭 끝난 통화로 연습 장면 둘(2026-11-08) — 코치가 고친 통화 끝마다(2026-11-19 통화 하나), 고친 게 없으면 눌렀을 때만.
+  // 🎭 끝난 통화로 대화 시뮬레이션 하나(2026-11-08, 하나로 2026-11-19) — 코치가 고친 통화 끝마다(2026-11-19 통화 하나), 고친 게 없으면 눌렀을 때만.
   callReplay: 1,
   // Looking back at a turn the learner got stuck on. Only ever from a button
   // they pressed, so this counts the ones who wanted to know why.

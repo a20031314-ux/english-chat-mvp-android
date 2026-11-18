@@ -28,7 +28,6 @@ import {
   replayFor,
   wholeLineOf,
   wholeSaid,
-  type ReplayKind,
   type ReplayLine,
   type ReplayScene,
   type StoredReplay,
@@ -46,10 +45,6 @@ function storage(): Storage | undefined {
   }
 }
 
-const KIND_ICON: Record<ReplayKind, string> = { same: "🔁", further: "➡️", branch: "🔀" };
-function kindName(ui: UICopy, kind: ReplayKind) {
-  return kind === "same" ? ui.replaySame : kind === "further" ? ui.replayFurther : ui.replayBranch;
-}
 
 async function fetchScenes(input: {
   scenarioId: string;
@@ -165,7 +160,7 @@ export function CallReplay({
       onClick={() => void make()}
       className="mt-2 rounded-full border border-white/20 px-3 py-1.5 text-meta text-white hover:bg-white/10"
     >
-      {failed ? "↻" : "▶"} {ui.replaySame} · {ui.replayFurther}
+      {failed ? "↻" : "▶"} {ui.replaySim}
     </button>
   );
 
@@ -279,7 +274,7 @@ function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestio
   );
 }
 
-/** 대화: 장면 칩(같은 흐름 · 한 걸음 더/다른 갈래) → 장면 연습. */
+/** 대화: 대화 시뮬레이션 하나(통화 흐름 그대로 → 한 걸음 더, 2026-11-19) → 장면 연습. 이 폰의 옛 기록(장면 둘)은 첫 장면만. */
 function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored, hasQuiz, homework = false }: Shared & { hasQuiz: boolean; homework?: boolean }) {
   const [playing, setPlaying] = useState<ReplayScene | null>(null);
   // 숙제의 마지막 반쪽(퀴즈가 없거나 이미 함)인 장면을 끝까지 하고 닫으면 숙제가 끝난 자리 — 전면 한 번(homeworkEnd). 통화 끝 화면의 장면은 통화 끝 전면과 같은 흐름이라 없음.
@@ -292,7 +287,7 @@ function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored,
   return (
     <>
       <div className="mt-2 flex flex-wrap gap-2">
-        {stored.scenes.map((scene) => {
+        {stored.scenes.slice(0, 1).map((scene) => {
           const result = stored.results[scene.kind];
           return (
             <button
@@ -302,8 +297,8 @@ function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored,
               onClick={() => setPlaying(scene)}
               className="flex items-center gap-1.5 rounded-full border border-white/20 px-3 py-1.5 text-meta text-white hover:bg-white/10"
             >
-              <span aria-hidden>{KIND_ICON[scene.kind]}</span>
-              <span>{kindName(ui, scene.kind)}</span>
+              <span aria-hidden>{result ? "↻" : "▶"}</span>
+              <span>{ui.replaySim}</span>
               {result ? <span className="tabular-nums text-slate-300">✓ {result.ok}/{result.of}</span> : null}
             </button>
           );
@@ -429,8 +424,7 @@ function ReplayPlayer({
     <FullScreenLayer>
       <div className="flex shrink-0 items-center gap-3 border-b border-white/10 px-4 py-3" data-replay-player={scene.kind}>
         <AiAvatar size={28} language={language} gender={partner.gender} />
-        <span aria-hidden>{KIND_ICON[scene.kind]}</span>
-        <span className="min-w-0 flex-1 truncate text-note font-semibold text-white">{kindName(ui, scene.kind)}</span>
+        <span className="min-w-0 flex-1 truncate text-note font-semibold text-white">{ui.replaySim}</span>
         <button type="button" onClick={onClose} aria-label={ui.guideClose} title={ui.guideClose} className="px-2 text-title text-slate-300">
           ✕
         </button>

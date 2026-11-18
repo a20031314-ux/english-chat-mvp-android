@@ -14,7 +14,7 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 /**
- * 🎭 이렇게도 말할 수 있었어요(lib/roleplay/replay.ts, 2026-11-08): 끝난 통화 대본으로 연습 장면 둘.
+ * 🎭 이렇게도 말할 수 있었어요(lib/roleplay/replay.ts, 2026-11-08): 끝난 통화 대본으로 대화 시뮬레이션 하나(2026-11-19).
  * 코치가 고친 통화는 끝나면 앱이 한 번 부르고, 고친 게 없는 통화는 끝 화면에서 눌렀을 때만. 대본·장면은 서버에 남기지 않는다(답으로만 돌려줌).
  */
 export async function POST(request: NextRequest) {

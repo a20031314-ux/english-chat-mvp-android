@@ -2,9 +2,10 @@
  * 🎭 이렇게도 말할 수 있었어요(2026-11-08 사용자 "결과화면에서 가능했던 대화흐름(학습자의 발화보다 더 고차원의 대화)을 가정해서
  * 몇 개를 수행하게 — 스크립트를 변형한 형태로" → "1,2는 추천대로, 3은 녹음받아쓰기 방식을 먼저, 4는 숙제 중 하나로").
  *
- * 끝난 통화 대본을 뼈대로 장면 둘: ① 같은 흐름에서 내 말을 그 상황에 맞는 말로(늘, 단계 제한 없음 — 사용자 2026-11-08) ② 한 걸음 더(더 깊은 화제) 또는 다른 갈래(다른 대답).
+ * 끝난 통화 대본을 뼈대로 장면 하나 = 대화 시뮬레이션(2026-11-19 사용자 "하나로 합칠순 없나? 대화 시뮬레이션으로"):
+ * 앞은 통화의 흐름 그대로 내 말을 그 상황에 맞는 말로(단계 제한 없음), 뒤는 내가 짧게 끝낸 곳에서 한 걸음 더(더 자세히).
  * 연습은 대본처럼: 튜터 줄 듣고 → 내 차례엔 앱 언어 뜻 + 바뀐 조각만 빈칸 → 🎙 말해서 받아쓰기(모델 판단 없음, 낱말 대조) →
- * 마지막에 뜻만 보고 한 줄 전체. 수업 통화는 끝나면 저절로 만들고 그 통화의 숙제가 되며, 자유대화는 끝 화면에서 눌러야 만든다.
+ * 마지막에 뜻만 보고 한 줄 전체. 코치가 고친 통화는 끝나면 저절로 만들고 그 통화의 숙제가 되며, 고친 게 없으면 끝 화면에서 눌러야 만든다.
  *
  * 장면 속 내 줄은 내 말을 고쳐 쓴 것이라 학습자 문장 — 서버에 남기지 않고 이 폰에만(`callReplays.v1.<언어>`, 통화 20개).
  * 순수 모듈(저장은 localStorage를 받아서): 서버 라우트·화면·테스트가 같이 쓴다.
@@ -12,8 +13,8 @@
 import { compareToTarget, shadowPasses, typedMatches } from "./practice.ts";
 import { isSpaceless } from "../wordSegments.ts";
 
-export type ReplayKind = "same" | "further" | "branch";
-export const REPLAY_KINDS: readonly ReplayKind[] = ["same", "further", "branch"];
+/** sim = 대화 시뮬레이션 하나. same·further·branch는 이 폰에 남은 옛 기록(장면 둘)만 — 화면은 첫 장면 하나만 연다. */
+export type ReplayKind = "sim" | "same" | "further" | "branch";
 
 /** 장면 한 줄: 튜터 줄, 또는 내 줄(앱 언어 뜻 + 빈칸으로 비울 바뀐 조각). */
 export type ReplayLine =
@@ -37,8 +38,8 @@ export function homeworkComplete(row: StoredReplay, hasQuiz: boolean): boolean {
 
 export const MAX_REPLAY_CALLS = 20;
 const MAX_LINE_CHARS = 220;
-const MIN_ME_LINES = 2;
-const MAX_ME_LINES = 4;
+const MIN_ME_LINES = 3;
+const MAX_ME_LINES = 6;
 
 /* ---------- 모델에게 주는 지시·받은 답 읽기 ---------- */
 
@@ -64,27 +65,27 @@ export function replayPrompt(input: ReplayInput): string {
         : `LEARNER: ${line.text.trim()}${line.better ? `   (put right: ${line.better.trim()})` : ""}`,
     )
     .join("\n");
-  return `You write two short practice scenes from a real phone call between a ${input.target} tutor and a learner. The learner will act out their own part again, saying what a fluent speaker would naturally say in that moment.
+  return `You write one short practice conversation from a real phone call between a ${input.target} tutor and a learner. The learner will act out their own part again, saying what a fluent speaker would naturally say in that moment.
 
 The call:
 ${transcript}
 
-Write exactly two scenes, in ${input.target}.
-Scene 1, "same": follow the call's own flow and topic. Keep the tutor's lines close to what the tutor said (shorten them if long). Rewrite each of the learner's turns as the most fitting thing to say there: the same meaning and the same facts, with the words and phrasing a fluent speaker would naturally choose for this situation and this person, mistakes put right. Do not hold back to the learner's level and do not show off — natural everyday speech that suits the moment.
-Scene 2: pick whichever fits the call better — "further": the conversation goes one step deeper where the learner stopped short (the tutor follows up on something they said, and they answer with more detail); or "branch": at one key moment the learner gives a different, fuller answer and the talk goes that way. New details must fit what they told the tutor about themselves.
+Write exactly one scene, in ${input.target}, as one conversation in two parts.
+First part: follow the call's own flow and topic. Keep the tutor's lines close to what the tutor said (shorten them if long). Rewrite each of the learner's turns as the most fitting thing to say there: the same meaning and the same facts, with the words and phrasing a fluent speaker would naturally choose for this situation and this person, mistakes put right. Do not hold back to the learner's level and do not show off — natural everyday speech that suits the moment. Keep only the turns most worth practising if the call was long.
+Second part, carrying straight on: where the learner stopped short, the tutor follows up on something they said and the conversation goes one step deeper — they answer with more detail, one or two turns. New details must fit what they told the tutor about themselves.
 
-Each scene: starts with a tutor line, then alternates, ${MIN_ME_LINES} to ${MAX_ME_LINES} learner lines, each under 18 words. For every learner line give:
+The scene starts with a tutor line, then alternates, ${MIN_ME_LINES} to ${MAX_ME_LINES} learner lines in all, each under 18 words. For every learner line give:
 - "meaning": what it means, in ${input.native}, natural and short.
 - "piece": the word or phrase in the line most worth learning for this situation (one to five words, copied exactly from the line). Not a name, not a number. When that turn of the call was put right, the piece is the part that was put right (the words that differ from what the learner said). Otherwise pick words the learner did not use in the call — never words they already said correctly.
 
-Answer only JSON: {"scenes":[{"kind":"same","lines":[{"who":"tutor","text":"..."},{"who":"me","text":"...","meaning":"...","piece":"..."}]},{"kind":"further","lines":[...]}]}`;
+Answer only JSON: {"scenes":[{"kind":"sim","lines":[{"who":"tutor","text":"..."},{"who":"me","text":"...","meaning":"...","piece":"..."}]}]}`;
 }
 
 function clean(text: unknown): string {
   return typeof text === "string" ? text.replace(/\s+/g, " ").trim().slice(0, MAX_LINE_CHARS) : "";
 }
 
-/** 받은 답을 읽는다 — 장면 꼴이 아니면 버리고, 빈칸 조각이 줄에 없으면 빈칸 없이(줄 전체). 첫 장면은 늘 same. */
+/** 받은 답을 읽는다 — 장면 꼴이 아니면 버리고, 빈칸 조각이 줄에 없으면 빈칸 없이(줄 전체). 장면은 하나(sim) — 이름이 달라도 첫 쓸 만한 장면. */
 export function parseReplay(raw: unknown): ReplayScene[] {
   let value = raw;
   if (typeof raw === "string") {
@@ -112,15 +113,11 @@ export function parseReplay(raw: unknown): ReplayScene[] {
     }
   }
   if (!Array.isArray(scenes)) return [];
-  const out: ReplayScene[] = [];
   for (const scene of scenes.slice(0, 3)) {
-    const kind = (scene as { kind?: unknown })?.kind;
-    if (typeof kind !== "string" || !REPLAY_KINDS.includes(kind as ReplayKind)) continue;
-    if (out.some((one) => one.kind === kind)) continue;
-    const rows = (scene as { lines?: unknown }).lines;
+    const rows = (scene as { lines?: unknown })?.lines;
     if (!Array.isArray(rows)) continue;
     const lines: ReplayLine[] = [];
-    for (const row of rows.slice(0, 12)) {
+    for (const row of rows.slice(0, 16)) {
       const who = (row as { who?: unknown })?.who;
       const text = clean((row as { text?: unknown }).text);
       if (!text) continue;
@@ -138,12 +135,9 @@ export function parseReplay(raw: unknown): ReplayScene[] {
     const mine = lines.filter((line) => line.who === "me").length;
     if (mine < MIN_ME_LINES || mine > MAX_ME_LINES + 1) continue;
     if (lines[0]?.who !== "tutor") continue;
-    out.push({ kind: kind as ReplayKind, lines });
+    return [{ kind: "sim", lines }];
   }
-  const same = out.find((scene) => scene.kind === "same");
-  if (!same) return [];
-  const other = out.find((scene) => scene.kind !== "same");
-  return other ? [same, other] : [same];
+  return [];
 }
 
 /**
