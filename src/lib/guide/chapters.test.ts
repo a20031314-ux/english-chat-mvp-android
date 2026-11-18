@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { GUIDE_CHAPTERS, GUIDE_CLIPS, GUIDE_EN, GUIDE_KO, GUIDE_SECTION_IDS, guideChapters, guideSection, type Guide, type GuideTabId } from "./content.ts";
-import { RELEASE_NOTES, newGuideSections } from "../whatsNew.ts";
+import { RELEASE_NOTES } from "../whatsNew.ts";
 
 const translations = JSON.parse(readFileSync(new URL("./translations.json", import.meta.url), "utf8")) as Record<string, Guide>;
 const ALL: Record<string, Guide> = { ko: GUIDE_KO, en: GUIDE_EN, ...translations };
@@ -61,8 +61,6 @@ test("새로워진 점이 가리키는 칸이 있다", () => {
       if (item.guide) assert.ok(guideSection(GUIDE_KO, item.guide), `${note.version} ${item.id} → ${item.guide}`);
     }
   }
-  assert.ok(newGuideSections("2.69").includes("people.board"));
-  assert.deepEqual(newGuideSections("0.1"), []);
 });
 
 test("글에 탭 경로를 쓰지 않는다(지금 글, 14개 언어)", () => {

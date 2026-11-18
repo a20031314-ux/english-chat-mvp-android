@@ -1120,8 +1120,8 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
       {wrong.length ? (
         <div data-day-wrong className={card}>
           <span className="flex items-center gap-2">
-            <span className="min-w-0 flex-1 text-caption font-semibold text-ink">{`${ui.keepTitle} · ${ui.weakTitle}`}</span>
-            {remove(ui.weakTitle, () => clearQuizDay(language, day.day, true), "wrong")}
+            <span className="min-w-0 flex-1 text-caption font-semibold text-ink">{ui.keepTitle}</span>
+            {remove(ui.keepTitle, () => clearQuizDay(language, day.day, true), "wrong")}
           </span>
           <span className="flex flex-wrap gap-1">
             {wrong.slice(0, 12).map((label) => (

@@ -1,4 +1,4 @@
-import { kvGetJson, kvListPush, kvListRange, kvSetJson } from "@/lib/server/kv";
+import { kvGetJson, kvListPush, kvSetJson } from "@/lib/server/kv";
 import {
   buildTranscriptRecord,
   parseTranscriptRecord,
@@ -21,9 +21,6 @@ import type { PreparedTranscript } from "@/lib/videoSubtitle/types";
  */
 
 const TTL_SECONDS = 400 * 24 * 60 * 60;
-/** How many videos a search reads. Enough to start; an inverted index replaces this walk later. */
-export const SEARCH_WINDOW = 400;
-
 function recordKey(language: string, videoId: string): string {
   return `videoTranscript:v1:${language}:${videoId}`;
 }
@@ -71,21 +68,4 @@ export async function keepVideoTranscript(
   } catch (error) {
     console.error("[video-transcript-store] keep failed", error);
   }
-}
-
-/** The most recently added videos with kept words, newest first. */
-export async function recentVideoTranscripts(
-  language: string,
-  limit = SEARCH_WINDOW,
-): Promise<TranscriptRecord[]> {
-  const ids = await kvListRange(listKey(language), -limit, -1);
-  const unique = [...new Set(ids)].reverse();
-  const records: TranscriptRecord[] = [];
-  for (let i = 0; i < unique.length; i += 25) {
-    const batch = await Promise.all(
-      unique.slice(i, i + 25).map((id) => readVideoTranscript(language, id)),
-    );
-    for (const record of batch) if (record) records.push(record);
-  }
-  return records;
 }

@@ -59,16 +59,6 @@ export async function saveNewMap(userId: string, map: StudyMap): Promise<Curricu
   return record;
 }
 
-/** Put the map that was replaced back, and keep the one that replaced it as the spare. */
-export async function restorePreviousMap(userId: string, language: string): Promise<CurriculumRecord | null> {
-  const previous = await kvGetJson<CurriculumRecord>(previousKey(userId, language));
-  if (!previous) return null;
-  const current = await readCurriculum(userId, language);
-  if (current) await kvSetJson(previousKey(userId, language), current, CURRICULUM_TTL_SECONDS);
-  await kvSetJson(curriculumKey(userId, language), previous, CURRICULUM_TTL_SECONDS);
-  return previous;
-}
-
 /**
  * Mark one topic. Refused (null) when the map has changed since the screen
  * that asked was drawn, or the topic is not on it.

@@ -1,7 +1,4 @@
 {
   "_": "scripts/leftovers.mjs 기준 — 2026-11-09에 이미 있던 남은 코드. 줄어들기만 한다(--write는 지운 것만 뺌). 새로 생긴 것은 지우거나 사용자에게 묻는다(asks.mjs delete).",
-  "known": [
-    "ledger:morning:src/lib/curriculum/morningDigest.ts",
-    "ledger:morning:src/lib/morningNotify.ts"
-  ]
+  "known": []
 }

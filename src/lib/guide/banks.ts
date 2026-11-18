@@ -1,4 +1,5 @@
 /**
+ * 옛 앱 2.79 이하 전용(새 앱의 칸 머리 ?는 사용법 넘겨 보기 장면을 연다 — notes/NotebookSection). 최소 지원 버전이 2.80을 넘으면 지운다.
  * My 큰 칸(Stagebank · Quizbank · Logbank)의 "?" 설명(2026-10-31 사용자 "BANK류에 ? 버튼으로 설명 — 뭘 학습 가능하고, 어떻게 학습하는지,
  * 스크린샷이나 가능하면 학습 영상까지"). /api/guide `banks=1`이 주고 BankHelp(studyMap/BankHelp)가 그린다 — 칸마다 배울 수 있는 것(한 줄씩, Stagebank는
  * 그 언어 실제 분량 숫자도 같이) · 영상(있으면) · 이렇게 해요(그림 + 한 줄). 칸마다 글은 한 줄(RULES 6).

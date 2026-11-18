@@ -68,7 +68,6 @@
     "room:sig": { "feature": "말하는 방", "scope": "room", "onAccountDelete": "해당 없음", "what": "소리 연결 신호" },
     "roomgame:v1": { "feature": "말하는 방 게임", "scope": "user", "onAccountDelete": "해당 없음", "what": "방장이 오늘 시작한 게임 판 수(하루 30)" },
     "rp:daily": { "feature": "자유 통화", "scope": "user", "onAccountDelete": "해당 없음", "what": "오늘 쓴 자유 통화 분" },
-    "scriptChoices:v2": { "feature": "My 단계 대본 고르기", "scope": "shared", "onAccountDelete": "해당 없음", "what": "대본 내 줄마다 빈칸과 오답(문법·어휘로 헷갈리는 것), 대본마다 한 번 모델이 만들고 정답처럼 받아들여질 오답은 확인해 뺀 것 — 학습자 글 없음" },
     "readings:v1": { "feature": "단계 학습 읽는 법", "scope": "shared", "onAccountDelete": "해당 없음", "what": "글자가 다른 학습 언어의 단계 학습 줄 읽는 법(가나·병음·로마자), 단계마다 한 번 모델이 만든 것 — 학습자 글 없음" },
     "wordsextra:v1": { "feature": "My 단어장 찾아서 늘어나는 단어 은행", "scope": "shared", "onAccountDelete": "해당 없음(누가 찾았는지 없음)", "what": "사용자가 찾은 낱말 중 빈도 목록에 없던 것 — 사전형·품사·주제·읽기·예문·뜻(모델이 만듦) 50개 묶음과 개수·찾은 꼴 → 묶음 번호, 앱 언어로 옮긴 뜻(gloss), 하루 더하기 한도 셈(rate, 사용자 id로 하루 뒤 사라짐)" },
     "quiznotes:v1": { "feature": "My 퀴즈 보기 뜻·틀린 까닭", "scope": "shared", "onAccountDelete": "해당 없음", "what": "고르기 문제(문장·보기·정답·앱 언어)마다 모델이 쓴 보기별 뜻과 틀린 까닭 — 180일, 누가 물었는지·고른 보기 없음" },

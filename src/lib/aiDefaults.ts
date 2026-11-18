@@ -33,9 +33,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   roleplayTutor: "gpt-6-luna",
   roleplayPractice: "gpt-6-luna",
   scriptJudge: "gpt-6-luna",
-  roleplayBranch: "gpt-6-luna",
   scriptRecheck: "gpt-6-luna",
-  scriptChoices: "gpt-6-luna",
   ask: "gpt-6-luna",
   mission: "gpt-6-luna",
   curriculum: "gpt-6-luna",
@@ -92,13 +90,11 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   // 따라 말하기·통화 다시 말해보기는 낱말 대조라 roleplayPractice(Haiku).
   scriptJudge: HAIKU,
   // 장면 통화 가지 고르기(2026-11-02): 규칙이 못 받은 말만, 가지 뜻 중 하나 또는 없음 — 시범에서 Haiku로 51% → 90%, 틀린 가지 0.
-  roleplayBranch: HAIKU,
   scriptRecheck: SONNET,
   // 틀린 곳 고르기 미리 만들기(2026-11-10 사용자 "써도 돼"): 바꾸기 Haiku → 판정 Sonnet, 문장마다 한 번·모두가 같이(server/spotMake.ts).
   spotMake: HAIKU,
   spotJudge: SONNET,
   // 대본 고르기 오답(2026-10-29): 대본마다 한 번 만들어 모두가 같이 쓰므로(호출 수가 대본 수로 끝남) 더 나은 모델로.
-  scriptChoices: SONNET,
   // Stagebank 고정 수업(2026-11-02, server/fixedLesson.ts): 틀 × 앱 언어마다 한 번 쓰고 모두가 오래 보므로 Sonnet. 초안 Haiku + Sonnet 검수로 바꾸면 약 절반(사용자에게 안내함).
   fixedLesson: SONNET,
   // 단어 사전 여러 뜻(2026-11-06, server/wordSenses.ts): 낱말 × 앱 언어마다 한 번 만들어 고정(모두가 오래 봄) — Sonnet.

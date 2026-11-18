@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (81)
+## 탭이 확인할 것 (84)
 
 ### 탭 1 메인
 
@@ -187,6 +187,10 @@
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/studyMap/TodayCards.tsx` · `components/studyMap/Logbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/DictNotes.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/GrammarExplain.tsx` · `components/studyMap/LanguageBank.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/StudyChips.tsx` … 37개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261119-1-1** (2026-11-19 03:38, 탭 1 · c115e6c) 예전 설명·기능 지움: 사용법은 장면만(노트 장·글 칸 없음), 칸 머리 ?는 사용법 장면, 아침 알림·옛 API 6개 지움, Logbank 틀린 것 카드 이름 Quizbank
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/notes/NotebookSection.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/TodayCards.tsx` · `app/api/curriculum/generate/route.ts` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/Dictionary.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/Quizbank.tsx` · `app/api/curriculum/mission-check/route.ts` … 30개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
 
@@ -270,6 +274,10 @@
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 모드 설명 · 자유대화 · 수업 · 게임 · 가르치기 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/RoleplayScreen.tsx` · `components/roleplay/CallParts.tsx` · `components/CallHost.tsx` · `components/RoleplayPast.tsx` · `app/api/roleplay/turn/route.ts` · `app/api/chat/route.ts` · `app/api/roleplay/context/route.ts` · `app/api/roleplay/review/route.ts` · `components/CallList.tsx` · `components/ChatWindow.tsx` … 26개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261119-1-2** (2026-11-19 03:38, 탭 1 · c115e6c) 예전 설명·기능 지움: 사용법은 장면만(노트 장·글 칸 없음), 칸 머리 ?는 사용법 장면, 아침 알림·옛 API 6개 지움, Logbank 틀린 것 카드 이름 Quizbank
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `components/RoleplayScreen.tsx` · `components/videoLearning/VideoLearningTab.tsx` · `components/videoLearning/VideoPlayer.tsx` · `components/videoLearning/relayPlayer.ts` · `app/api/chat/route.ts` · `app/api/roleplay/turn/route.ts` · `app/api/chat/verify/route.ts` · `app/api/roleplay/context/route.ts` · `app/api/roleplay/practice/route.ts` · `app/api/roleplay/replay/route.ts` … 26개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
 
@@ -344,6 +352,10 @@
 - **a261119-3-3** (2026-11-19 02:41, 탭 3 · b3848b8) 통화 하나로 합침: 문 넷(자유대화·수업·게임·가르치기) → 📞 통화 하나(CallDoor), 수업·스무고개·가르치기 모드 지움, 고친 말은 코치(짝 튜터) 띠 — 따라 말하면 앱 채점, 고친 게 있으면 숙제, startCall에서 lesson·game 인자 지움, 통화 기록 칩 지움
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/AiTutorProfile.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/TeamSpace.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomParts.tsx` … 27개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261119-1-3** (2026-11-19 03:38, 탭 1 · c115e6c) 예전 설명·기능 지움: 사용법은 장면만(노트 장·글 칸 없음), 칸 머리 ?는 사용법 장면, 아침 알림·옛 API 6개 지움, Logbank 틀린 것 카드 이름 Quizbank
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
+  - 볼 곳: `app/api/icons/route.ts` · `app/api/media/route.ts` · `app/api/random/route.ts` · `app/api/rooms/fix/route.ts` · `app/api/rooms/game/route.ts` · `components/rooms/IconPacks.tsx` · `components/rooms/BoardView.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/RoomPeople.tsx` … 24개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (11, 14일 뒤 저절로 빠짐 — 경위는 git 기록)

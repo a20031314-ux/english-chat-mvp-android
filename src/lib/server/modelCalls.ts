@@ -122,15 +122,9 @@ export const MODEL_CALLS_PER_REQUEST = {
   // the shape of the spending visible before anyone prices against it.
   videoPrepare: 3,
   videoWindow: 3,
-  // Two calls a batch: the meaning of each line, then the line in the UI
-  // language (glossEnglishLines). Only builds before 2.67 send these.
-  videoGloss: 2,
-  videoAnalyze: 1,
   // Answered from translations kept from an earlier viewer of the same video
   // (server/subtitleGlossStore.ts). No model call; counted so the ratio to
-  // videoGloss / translate says how much of video translation the store
-  // carries.
-  videoGlossKept: 0,
+  // translate says how much of video translation the store carries.
   translateKept: 0,
   // The roleplay's only model call. Its tutor speaks from files, so a scripted
   // scene costs one transcription per learner turn and nothing else — which is
@@ -178,9 +172,7 @@ export const MODEL_CALLS_PER_REQUEST = {
   // 고르기 문제를 답한 뒤 보기마다 뜻·틀린 까닭(2026-11-03) — 문제마다 한 번 만들어 모두가 같이 씀(quiznotes:v1), 저장된 것이면 부르지 않음.
   quizOptionNotes: 1,
   // 장면 통화에서 규칙 맞추기가 못 받은 말만 가지 고르기(2026-11-02) — 규칙으로 맞으면 부르지 않음.
-  roleplayBranch: 1,
   // 대본 고르기 오답 — 대본마다 한 번(공유 저장), 사용자 수와 상관없음. 만들기 + 확인 = 2.
-  scriptChoices: 2,
   // Not model calls — both are zero — but counted here so the ledger can answer
   // what the bank is for. A turn where the character reached for a line that
   // already exists costs no synthesis and plays a read somebody checked; one

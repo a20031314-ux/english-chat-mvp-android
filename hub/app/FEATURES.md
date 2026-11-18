@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | 배울 언어 국기 줄 | 상단바에 내 배울 언어 국기 모두 — 누르면 그 언어로, 지금 국기 → 언어 설정 시트(배울 언어·앱 언어) | 1 메인 | `components/LearningLanguageFlag.tsx` · `lib/myLanguages.ts` |  |
 | 처음 언어·튜터 고르기 | 처음 설치 때 국기 여러 개 → 언어마다 튜터 얼굴 하나 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/LanguagePick.tsx` · `lib/firstLanguage.ts` |  |
-| 사용법 `guideOpen` | 상단 ? — 지금 탭의 장(그림·영상 한 줄), 맨 앞 탭은 쓸 기능 고르기. 넘겨 보기 장면(14개 앱 언어 모두, 모든 장 — 하나뿐인 칸은 칩 없이)은 칸 칩 → 첫 장 핵심, 넘기면 세부 — 기능 이름·설명은 그림 안 | 1 메인 · 2 My | `components/GuideSheet.tsx` · `lib/guide/content.ts` · `lib/guide/slides.ts` |  |
+| 사용법 `guideOpen` | 상단 ? — 지금 탭의 장, 맨 앞 탭은 쓸 기능 고르기. 장마다 넘겨 보기 장면만(14개 앱 언어, 칸 칩 → 첫 장 핵심, 넘기면 세부 — 기능 이름·설명은 그림 안), 장면 없는 장은 안 보임 | 1 메인 · 2 My | `components/GuideSheet.tsx` · `lib/guide/slides.ts` | 학습 흐름 · 장마다 카드 둘·칸 글 · 노트·단어장 장 |
 | 새로워진 점 `whatsNewTitle` | 업데이트 뒤 한 번, 앱 언어별 캡처 | 1 메인 · 3 AI | `components/WhatsNewSheet.tsx` · `lib/whatsNew.ts` |  |
 
 ### 의견 보내기·반영 소식
@@ -90,7 +90,7 @@
 | 소재 수업 | 어디서나 여는 층(openLesson) — 문장구조 수업 [설명 › 퀴즈 › 대화] · 문법 한 장 · 표현 카드 | 2 My | `components/studyMap/LessonHost.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/GrammarExplain.tsx` |  |
 | 같이 배우기 `lbStudyWith` | 칩 최대 셋 → 소재 수업 — Languagebank 단어 화면(그 단어와 같이) · 채팅 표현 보기 아래 · 통화 정리 줄(하고 싶었던 말에 든 문장구조·표현·문법), 덜 다진 것 먼저, 모델 없음 | 1 메인 · 2 My · 3 AI | `components/studyMap/StudyChips.tsx` · `lib/curriculum/wordUse.ts` |  |
 | 사전 주석 | 학습 언어 문장 아래 📕 + 그 문장의 단어·표현 칩 → 사전 시트·소재 수업(대화 줄·자막·퀴즈 답 뒤) | 1 메인 · 2 My · 3 AI | `components/studyMap/DictNotes.tsx` · `lib/curriculum/dictNotes.ts` |  |
-| 칸 설명 | Logbank·Quizbank 머리 ? — 핵심 하나 + 세부 한 줄씩 | 1 메인 · 2 My | `components/studyMap/BankHelp.tsx` · `lib/guide/banks.ts` |  |
+| 칸 설명 | Logbank·Quizbank·Languagebank 머리 ? — 사용법 My 장의 그 칸 넘겨 보기로 엶 | 1 메인 · 2 My | `components/notes/NotebookSection.tsx` · `lib/guide/slides.ts` | 칸 설명 시트(옛 Quizbank 탭·단어 시험·Logbank 육각형 글) |
 
 ### 문장분석·표현 시트 (여러 화면에서 열림)
 
@@ -106,20 +106,20 @@
 | 결제 화면 `billingScreenTitle` (화면: 플랜 및 결제) | 플랜(라이트·플러스·프리미엄)·포인트 상점 | 1 메인 · 3 AI · 4 사람 | `components/BillingScreen.tsx` · `components/PointStore.tsx` |  |
 | 광고 | 무료·안드로이드만 — 자리 전체는 hub/app/ADS.md | 1 메인 · 2 My · 3 AI · 4 사람 | `components/NativeAdSlot.tsx` · `lib/ads.ts` |  |
 
-## 옛 앱 전용 서버 (4) — 새 앱 화면엔 없음
+## 옛 앱 전용 서버 (5) — 새 앱 화면엔 없음
 
 | 무엇 | 쓰는 앱 | 코드 | 지울 때 |
 |---|---|---|---|
 | Stagebank 서버(대본·단계 시험·꺼내 쓰기·돌아보기) | 옛 앱 2.79 이하 My Stagebank가 부름 — 새 앱은 Quizbank 익힘 기록(scripts check)만 씀 | `app/api/curriculum/recall/route.ts` · `app/api/curriculum/ask/route.ts` · `app/api/curriculum/fixed-lesson/route.ts` | 최소 지원 버전 2.80 이상 |
 | 통화 튜터 수업 서버(말로 짚기·다시 말해 보기) | 옛 앱 2.79 이하 통화 🎓 튜터 수업이 coach: true로 부름 — 새 앱은 코치 띠(앱 채점), director.ts coachRules·spokenCoachFix·silent·study | `lib/roleplay/director.ts` | 최소 지원 버전 2.80 이상 |
+| 사용법 글·칸 설명 서버(칸 글·학습 흐름·카드·? 설명) | 옛 앱 2.79 이하 사용법·Stagebank·Quizbank·Logbank ?가 /api/guide(overview·banks·칸 글)로 읽음 — 새 앱은 장면(slides)만 | `lib/guide/content.ts` · `lib/guide/overview.ts` · `lib/guide/banks.ts` | 최소 지원 버전 2.80 이상 |
 | 오늘의 팩 서버 | 옛 앱 2.48~2.75 오늘의 팩 | `app/api/pack/today/route.ts` · `app/api/pack/finish/route.ts` | 최소 지원 버전 2.76 이상 |
 | 목표 지도 서버 | 옛 앱 2.48~2.74 목표 지도·미션·노트 목차 | `app/api/curriculum/progress/route.ts` · `app/api/curriculum/missions/route.ts` · `app/api/notes/place/route.ts` | 최소 지원 버전 2.75 이상 |
 
-## 지울 것 (1) — 화면은 없어졌는데 코드가 남음
+## 지울 것 (0) — 화면은 없어졌는데 코드가 남음
 
 | 무엇 | 왜 남았나 | 남은 코드 |
 |---|---|---|
-| 아침 알림 | Stagebank ⚙에서 켜던 것 — 개편에 켜고 끌 곳이 없어 My를 열면 걸린 알림을 지움 — 되살리려면 사용자 결정 — 아니면 플러그인·코드 지움 | `lib/morningNotify.ts` · `lib/curriculum/morningDigest.ts` |
 
 ## 이름 정리할 것 — 같은 말을 쓰는 다른 문구 키 (55)
 

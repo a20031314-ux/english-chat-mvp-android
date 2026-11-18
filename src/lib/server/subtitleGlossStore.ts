@@ -47,16 +47,6 @@ export function videoLineKey(input: {
   return `videoLine:v1:${input.targetLanguage}:${input.interfaceLanguage}:${input.videoId}:${hash(clean(input.text))}`;
 }
 
-export function glossBatchKey(input: {
-  targetLanguage: string;
-  interfaceLanguage: string;
-  lines: string[];
-}): string {
-  return `videoGloss:v1:${input.targetLanguage}:${input.interfaceLanguage}:${hash(
-    input.lines.map(clean).join("\n"),
-  )}`;
-}
-
 export async function readVideoLine(
   key: string,
 ): Promise<string | null> {
@@ -78,35 +68,3 @@ export type KeptGlossItem = {
   interpretation: string;
   analysisTranslation?: string;
 };
-
-/**
- * A batch, stored by position rather than by cue id: ids are minted on the
- * device and need not agree between two viewers, while the lines do.
- */
-export async function readGlossBatch(key: string): Promise<KeptGlossItem[] | null> {
-  const stored = await kvGetJson<unknown>(key);
-  if (!Array.isArray(stored)) return null;
-  const items: KeptGlossItem[] = [];
-  for (const row of stored) {
-    if (!row || typeof row !== "object") return null;
-    const interpretation = (row as { interpretation?: unknown }).interpretation;
-    const analysis = (row as { analysisTranslation?: unknown }).analysisTranslation;
-    if (typeof interpretation !== "string") return null;
-    items.push({
-      interpretation,
-      ...(typeof analysis === "string" && analysis ? { analysisTranslation: analysis } : {}),
-    });
-  }
-  return items;
-}
-
-export async function keepGlossBatch(key: string, items: KeptGlossItem[]): Promise<void> {
-  // A batch with an empty line is a partial answer; keeping it would hand the
-  // gap to every later viewer as if it were the translation.
-  if (items.length === 0 || items.some((item) => !item.interpretation.trim())) return;
-  try {
-    await kvSetJson(key, items, TTL_SECONDS);
-  } catch (error) {
-    console.error("[subtitle-gloss-store] batch", error);
-  }
-}

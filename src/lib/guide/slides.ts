@@ -115,6 +115,8 @@ const LAYOUT: Record<string, Group[]> = {
     {
       id: "lang",
       title: "{ui:languagebankTitle}",
+      // 칸 머리 ?가 이 칸으로 연다(My 칸 셋의 ?, notes/NotebookSection).
+      covers: ["my.lang"],
       slides: ["my-lang-1", "my-lang-2", "my-lang-3"],
     },
     {

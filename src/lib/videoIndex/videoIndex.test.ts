@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { findExpression, formsOf, matchVideos, wordsOf } from "./match.ts";
+import { findExpression, formsOf, wordsOf } from "./match.ts";
 import { buildTranscriptRecord, parseTranscriptRecord, transcriptAsSttSegments, type TranscriptRecord } from "./transcript.ts";
 
 const SEGMENTS = [
@@ -106,17 +106,6 @@ test("other languages match as written", () => {
   assert.ok(korean);
   assert.equal(findExpression(korean.lines, "다른 데", "ko").length, 1);
   assert.equal(findExpression(korean.lines, "다른 곳", "ko").length, 0);
-});
-
-test("videos saying more of the wanted expressions rank first", () => {
-  const both = record("both1234567");
-  const one = record("one12345678", [
-    { startTime: 0, endTime: 2, text: "I ended up late. We end up here. They end up there." },
-  ]);
-  const none = record("none1234567", [{ startTime: 0, endTime: 2, text: "Nothing to see." }]);
-  const ranked = matchVideos([one, none, both], ["end up", "stand someone up", "end up"]);
-  assert.deepEqual(ranked.map((match) => match.videoId), ["both1234567", "one12345678"]);
-  assert.equal(ranked[1]?.hitCount, 3);
 });
 
 test("a phrase is found inside a Japanese, Chinese or Thai line", () => {

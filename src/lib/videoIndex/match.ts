@@ -1,4 +1,4 @@
-import type { TranscriptLine, TranscriptRecord } from "./transcript.ts";
+import type { TranscriptLine } from "./transcript.ts";
 import { segmentChunk } from "../wordSegments.ts";
 
 /**
@@ -235,41 +235,4 @@ export function findExpression(
     }
   });
   return hits;
-}
-
-/**
- * Rank videos by how much of what the learner is working on is said in them.
- * A video that says more of the expressions beats one that says one of them
- * many times; ties go to more occurrences, then the shorter video.
- */
-export function matchVideos(
-  records: TranscriptRecord[],
-  expressions: string[],
-  limit = 20,
-): VideoMatch[] {
-  const wanted = [...new Set(expressions.map((e) => e.replace(/\s+/g, " ").trim()).filter(Boolean))];
-  const matches: VideoMatch[] = [];
-  for (const record of records) {
-    const found = wanted
-      .map((expression) => ({
-        expression,
-        hits: findExpression(record.lines, expression, record.language),
-      }))
-      .filter((entry) => entry.hits.length > 0);
-    if (found.length === 0) continue;
-    matches.push({
-      videoId: record.videoId,
-      ...(record.title ? { title: record.title } : {}),
-      durationSeconds: record.durationSeconds,
-      found,
-      hitCount: found.reduce((sum, entry) => sum + entry.hits.length, 0),
-    });
-  }
-  matches.sort(
-    (a, b) =>
-      b.found.length - a.found.length ||
-      b.hitCount - a.hitCount ||
-      a.durationSeconds - b.durationSeconds,
-  );
-  return matches.slice(0, limit);
 }

@@ -14,7 +14,7 @@
 앱 열기 ─ AI 동의(iOS만) ─ 배울 언어 고르기(처음 설치만 — 국기 여러 개 ✓ → 언어마다 튜터 얼굴 하나, LanguagePick·lib/firstLanguage.ts)
         ─ 새로워진 점(업데이트 뒤 한 번) ─ 초대 환영(초대 링크로 왔을 때)
 │
-상단바   내 배울 언어 국기 모두(누르면 그 언어로 · 지금 국기 → 언어 설정 시트, lib/myLanguages.ts) · 포인트/플랜 → 결제 화면 · ? 사용법(지금 탭의 장, GuideSheet — 장면이 있는 장은 칸 칩 + 넘겨 보기 SlideDeck, lib/guide/slides.ts·/api/guide slides=1, 14개 앱 언어 모든 장) · 💬 의견 보내기
+상단바   내 배울 언어 국기 모두(누르면 그 언어로 · 지금 국기 → 언어 설정 시트, lib/myLanguages.ts) · 포인트/플랜 → 결제 화면 · ? 사용법(지금 탭의 장, GuideSheet — 장마다 칸 칩 + 넘겨 보기 SlideDeck만, lib/guide/slides.ts·/api/guide slides=1, 14개 앱 언어 · 장면 없는 장은 안 보임) · 💬 의견 보내기
 │        └ 업데이트 배너
 하단 탭  My │ 대화 │ 사람 │ Room │ 영상 학습   (아이콘만, features.ts bottomTabs — 첫 화면 My)
 │
@@ -33,7 +33,7 @@
 │          [Quizbank 초록] studyMap/Quizbank → InlineQuiz → QuizPlayer — 한 흐름(hub/app/QUIZ.md), 답 뒤 맞음/틀림·[다시]·📕 문
 │          [Languagebank 노랑] studyMap/LanguageBank — 찾기(Dictionary DictionaryBody) · 자주 쓴 말(대화 수) · 종류(칠하기 = 첫 측정 추정, 숫자 = 개수, firstCheck.ts estimateChance) → 묶음([퀴즈 | 대화] 순서) → 단어 화면(마지막 틀림 ✗ · 대화 수, 같이 배우기 칩 → openLesson, curriculum/wordUse.ts) · 표현·문법 → openLesson
 │              · 묶음 ▶ 넘겨 보기(BankFlip) · 글자가 다른 언어면 첫 줄 글자·소리 칸(ScriptPractice LettersRow·LettersBank)
-│          칸 머리 ?(Logbank·Quizbank) → studyMap/BankHelp(lib/guide/banks.ts)
+│          칸 머리 ?(Logbank·Quizbank·Languagebank) → 사용법 My 장의 그 칸 넘겨 보기(openGuide my · lib/guide/slides.ts covers)
 │
 ├ 대화 talk ─ AI 튜터 줄(AiTutorRow — 고른·팔로우한 튜터마다, 마지막 말, 통화 문 하나 CallDoor 📞, 숙제 줄 TutorHomework·점)
 │           │   └ 줄 → AI 채팅 ChatWindow(튜터별 대화방 — ⋮ 튜터 목소리·말 빠르기·튜터가 쓰는 말·고친 문장 보기·채팅 기록 · 편한 말 줄 → 표현 보기 ExpressionPeek → 같이 배우기 studyMap/StudyChips)
@@ -95,7 +95,7 @@
 
 ### 앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법 `shell`
 - 화면: `AiConsentGate` · `AppHome` · `FeatureMap` · `FullScreenLayer` · `GuideSheet` · `LanguagePick` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `ShellUpdate` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
-- API: `guide`(My 탭) · `whats-new`
+- API: `guide` · `whats-new`
 - 웹 페이지: `/`
 - 다른 영역이 씀: `AppHome` ← 학습 기록 공통, 사람 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 9곳 · `LanguageSelector` ← 웹 전용 페이지 · `TabIcons` ← 여러 영역 6곳 · `TargetLanguageSelector` ← 웹 전용 페이지
 
@@ -111,7 +111,7 @@
 
 ### AI 통화 (어디서나 뜨는 층 CallHost — 대화·사람 탭 📞) `call`
 - 화면: `CallHost` · `CallList` · `RoleplayOwnLine` · `RoleplayPast` · `RoleplayReview` · `RoleplayScreen` · `roleplay/CallParts` · `roleplay/CallRecap` · `roleplay/CallReplay` · `roleplay/TurnDiagBox` · `roleplay/callHooks`
-- API: `pack/finish` · `pack/today` · `roleplay/branch` · `roleplay/context`(My 탭) · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, My 탭, 계정·로그인) · `roleplay/practice`(My 탭) · `roleplay/replay` · `roleplay/review`(My 탭) · `roleplay/turn`(My 탭)
+- API: `pack/finish` · `pack/today` · `roleplay/context`(My 탭) · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, My 탭, 계정·로그인) · `roleplay/practice`(My 탭) · `roleplay/replay` · `roleplay/review`(My 탭) · `roleplay/turn`(My 탭)
 - 다른 영역이 씀: `CallHost` ← 앱 틀 · `roleplay/CallParts` ← My 탭
 
 ### 말하기·통화 공용 부품 — 한 줄 말해 보기, 통화 화면 조각·말풍선 얼굴 자리 (AI 통화·사람 통화·채팅·My가 같이 씀) `speech`
@@ -130,7 +130,7 @@
 
 ### 영상 학습 탭 `video`
 - 화면: `contentDiscovery/ContentDiscoveryPanel` · `videoLearning/CatalogLibrary` · `videoLearning/CurrentSubtitleCard` · `videoLearning/SavedVideoSessions` · `videoLearning/SegmentPlayButton` · `videoLearning/StudyMaterialsList` · `videoLearning/SubtitleDebugPanel` · `videoLearning/SubtitleGenerationStatus` · `videoLearning/VideoLearningTab` · `videoLearning/VideoPlayer` · `videoLearning/VideoUrlInput` · `videoLearning/VideoWatchFullscreenDock` · `videoLearning/relayPlayer`
-- API: `content-discovery/avatar` · `content-discovery/channels` · `content-discovery` · `video-library` · `video-subtitles/analyze` · `video-subtitles/gloss` · `video-subtitles/prepare` · `video-subtitles/prepare-from-stt` · `video-subtitles/transcribe-chunk` · `video-subtitles/window`
+- API: `content-discovery/avatar` · `content-discovery/channels` · `content-discovery` · `video-library` · `video-subtitles/prepare` · `video-subtitles/prepare-from-stt` · `video-subtitles/transcribe-chunk` · `video-subtitles/window`
 - 다른 영역이 씀: `videoLearning/VideoLearningTab` ← 앱 틀
 
 ### 사람 탭 — 프로필 목록·게시판·사진 `people`
@@ -149,8 +149,8 @@
 - 다른 영역이 씀: `rooms/RandomScreen` ← 앱 틀
 
 ### My 탭 — 계정 카드·칸 셋 Logbank·Quizbank·Languagebank·첫 측정·소재 수업 `my`
-- 화면: `notes/NotebookSection` · `studyMap/BankFlip` · `studyMap/BankHelp` · `studyMap/DictNotes` · `studyMap/Dictionary` · `studyMap/ExpressionCard` · `studyMap/FirstCheck` · `studyMap/FixedExplain` · `studyMap/FrameLesson` · `studyMap/GrammarExplain` · `studyMap/Growth` · `studyMap/InlineQuiz` · `studyMap/LanguageBank` · `studyMap/LessonHost` · `studyMap/LineParts` · `studyMap/Logbank` · `studyMap/QuizPlayer` · `studyMap/Quizbank` · `studyMap/ScriptPractice` · `studyMap/StudyChips` · `studyMap/StudyMapTab` · `studyMap/TodayCards` · `studyMap/UpNext` · `studyMap/bankTone`
-- API: `curriculum/ask` · `curriculum/choices` · `curriculum/fixed-lesson` · `curriculum/frame-lesson` · `curriculum/generate` · `curriculum/item-lesson` · `curriculum/mission-check` · `curriculum/mission-seen` · `curriculum/missions` · `curriculum/option-notes` · `curriculum/pick` · `curriculum/progress` · `curriculum/qbank`(AI 통화) · `curriculum/quiz-stats` · `curriculum/recall` · `curriculum/restore` · `curriculum/review` · `curriculum`(AI 통화) · `curriculum/script` · `curriculum/scripts`(AI 통화) · `curriculum/spots` · `curriculum/stages` · `curriculum/typed-check` · `curriculum/words` · `notebook`(문장분석·표현 시트) · `notes/place` · `video-index/find`
+- 화면: `notes/NotebookSection` · `studyMap/BankFlip` · `studyMap/DictNotes` · `studyMap/Dictionary` · `studyMap/ExpressionCard` · `studyMap/FirstCheck` · `studyMap/FixedExplain` · `studyMap/FrameLesson` · `studyMap/GrammarExplain` · `studyMap/Growth` · `studyMap/InlineQuiz` · `studyMap/LanguageBank` · `studyMap/LessonHost` · `studyMap/LineParts` · `studyMap/Logbank` · `studyMap/QuizPlayer` · `studyMap/Quizbank` · `studyMap/ScriptPractice` · `studyMap/StudyChips` · `studyMap/StudyMapTab` · `studyMap/TodayCards` · `studyMap/UpNext` · `studyMap/bankTone`
+- API: `curriculum/ask` · `curriculum/fixed-lesson` · `curriculum/frame-lesson` · `curriculum/generate` · `curriculum/item-lesson` · `curriculum/mission-check` · `curriculum/mission-seen` · `curriculum/missions` · `curriculum/option-notes` · `curriculum/pick` · `curriculum/progress` · `curriculum/qbank`(AI 통화) · `curriculum/quiz-stats` · `curriculum/recall` · `curriculum/review` · `curriculum`(AI 통화) · `curriculum/script` · `curriculum/scripts`(AI 통화) · `curriculum/spots` · `curriculum/stages` · `curriculum/typed-check` · `curriculum/words` · `notebook`(문장분석·표현 시트) · `notes/place`
 - 다른 영역이 씀: `studyMap/DictNotes` ← AI 채팅, 영상 학습 탭 · `studyMap/Dictionary` ← 문장분석·표현 시트 · `studyMap/Growth` ← AI 통화 · `studyMap/LessonHost` ← 앱 틀 · `studyMap/QuizPlayer` ← AI 통화 · `studyMap/StudyChips` ← AI 채팅, AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
 
 ### 계정·로그인 `account`
@@ -188,7 +188,7 @@
 
 | 신호 | 보내는 영역 | 받는 영역 |
 |---|---|---|
-| `openTab` | 여러 영역 7곳 | 앱 틀 |
+| `openTab` | 여러 영역 6곳 | 앱 틀 |
 | `chatDraft` | — | AI 채팅 |
 | `openVideo` | 대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트, 학습 기록 공통 | 영상 학습 탭 |
 | `practice` | AI 채팅, 학습 기록 공통 | 앱 틀, AI 채팅, AI 통화 |
@@ -196,13 +196,13 @@
 | `openCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
 | `sayOwnLine` | — | AI 통화 |
 | `openNotes` | 앱 틀 | My 탭 |
-| `openGuide` | 앱 틀 | 앱 틀 |
+| `openGuide` | 앱 틀, My 탭 | 앱 틀 |
 | `openLesson` | — | My 탭 |
 
 ## 자동: 쓰지 않는 것 (지울지 확인)
 
 - 아무도 안 가져다 쓰는 화면 코드: 없음
-- 앱·스크립트 어디서도 안 부르는 API: `curriculum/restore` · `roleplay/branch` · `video-index/find` · `video-subtitles/analyze` · `video-subtitles/gloss`
-- 밖에서 부르는 API: `curriculum/choices` My 대본 고르기 방식(2026-10-29~)이 씀 — 2026-11-01 대본이 따라 말하기 하나가 되며 새 앱에서 뺌. Play에 나간 앱(2.75)은 이 방식이 없어 아무도 안 부름 — 다음 정리 때 지움(op scriptChoices도) · `pack/today` 옛 앱 2.48~2.75가 오늘의 팩에 씀 — 2.76부터 새 앱에서 뺌(2026-11-01 화면 코드 PackCard 지움), 최소 지원 버전을 2.76 이상으로 올리면 지움 · `pack/finish` 옛 앱 2.48~2.75가 오늘의 팩 끝(회고)에 씀 — 2.76부터 새 앱에서 뺌, 최소 지원 버전을 2.76 이상으로 올리면 지움 · `curriculum/pick` 옛 앱 2.48~2.74가 문장분석 "지도에 넣기"에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/progress` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/mission-check` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/mission-seen` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/missions` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/review` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `learner/ask` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `notes/place` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `learner/profile` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `curriculum/qbank/seed` Vercel 예약 작업(vercel.json) — 출시 초반 문제은행 미리 채우기 · `curriculum/fixed-lesson/seed` Vercel 예약 작업(vercel.json) — Stagebank 고정 수업 미리 만들기(앱 언어 ko·en) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `curriculum/spots` 퀴즈 다시 짜기 — 틀린 곳 고르기 문항 미리 만들기(server/spotMake.ts), 화면은 설계안 5단계에서 붙임. 지금은 운영 확인만 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `learner/growth` 옛 앱 2.48~2.74가 My 망·그래프(여섯 요소)에 씀 — 2.75부터 화면은 네 갈래(/api/notebook parts), 최소 지원 버전을 2.75 이상으로 올리면 화면용으로는 지움(점검 스크립트는 씀) · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀 · `build` 시험 앱 껍데기(운영 웹을 불러 쓰는 디버그 APK)의 ShellUpdate가 새 배포 확인에 씀 · `curriculum/recall` 꺼내 쓰기(RecallPlayer) — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움 · `curriculum/ask` 오늘 배운 것 직접 묻기 — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움 · `curriculum/fixed-lesson` 지나온 단계 돌아보기(StageReview) — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움
+- 앱·스크립트 어디서도 안 부르는 API: 없음
+- 밖에서 부르는 API: `pack/today` 옛 앱 2.48~2.75가 오늘의 팩에 씀 — 2.76부터 새 앱에서 뺌(2026-11-01 화면 코드 PackCard 지움), 최소 지원 버전을 2.76 이상으로 올리면 지움 · `pack/finish` 옛 앱 2.48~2.75가 오늘의 팩 끝(회고)에 씀 — 2.76부터 새 앱에서 뺌, 최소 지원 버전을 2.76 이상으로 올리면 지움 · `curriculum/pick` 옛 앱 2.48~2.74가 문장분석 "지도에 넣기"에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/progress` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/mission-check` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/mission-seen` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/missions` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `curriculum/review` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `learner/ask` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `notes/place` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `learner/profile` 옛 앱 2.48~2.74가 My 예전 기능(목표 지도·미션·직접 묻기·노트 목차)에 씀 — 2026-10-27 새 앱에서 뺌, 최소 지원 버전을 2.75 이상으로 올리면 지움 · `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `curriculum/qbank/seed` Vercel 예약 작업(vercel.json) — 출시 초반 문제은행 미리 채우기 · `curriculum/fixed-lesson/seed` Vercel 예약 작업(vercel.json) — Stagebank 고정 수업 미리 만들기(앱 언어 ko·en) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `curriculum/spots` 퀴즈 다시 짜기 — 틀린 곳 고르기 문항 미리 만들기(server/spotMake.ts), 화면은 설계안 5단계에서 붙임. 지금은 운영 확인만 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `learner/growth` 옛 앱 2.48~2.74가 My 망·그래프(여섯 요소)에 씀 — 2.75부터 화면은 네 갈래(/api/notebook parts), 최소 지원 버전을 2.75 이상으로 올리면 화면용으로는 지움(점검 스크립트는 씀) · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀 · `build` 시험 앱 껍데기(운영 웹을 불러 쓰는 디버그 APK)의 ShellUpdate가 새 배포 확인에 씀 · `curriculum/recall` 꺼내 쓰기(RecallPlayer) — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움 · `curriculum/ask` 오늘 배운 것 직접 묻기 — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움 · `curriculum/fixed-lesson` 지나온 단계 돌아보기(StageReview) — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움
 
 <!-- 자동 끝 -->

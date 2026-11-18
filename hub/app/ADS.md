@@ -87,7 +87,6 @@
 | `room-lobby` | `room-lobby-after-2` | 두 번째 방 뒤에 네이티브 광고 하나(무료·안드로이드만). 방에 들어가면 방 화면이 덮어 멈춘다. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-after-5` | 다섯 번째 방 뒤에 하나 더(같은 피드 3개 한도 안, 2026-11-01). | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
 | `room-lobby` | `room-lobby-login` | 로그인 전이면 로그인 카드 아래 빈 공간에 네이티브 하나(무료·안드로이드만, 방 밖) — 버튼과 띄움. | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
-| `sheets` | `bank-help-${bank}` | 시트 맨 끝(그림·영상 아래) 네이티브 하나(2026-11-01 — 읽는 안내 시트, 시트가 맨 위 층일 때만). | My 탭 `my` · `studyMap/BankHelp.tsx` |
 | `sheets` | `call-records` | 기록 목록 끝 네이티브 하나(둘러보는 목록 끝 — 기록이 있을 때만, 마지막 줄 버튼과 한 줄 넘게 띄움). | AI 통화 (어디서나 뜨는 층 CallHost `call` · `CallList.tsx` |
 | `sheets` | `dictionary-sheet` | 사전 시트 아래 네이티브 하나(읽는 시트 끝 — My·Quizbank에서 열 때만, 대화·통화 위(above)에서는 없음: 쓰고 말하는 흐름 위라서). | My 탭 `my` · `studyMap/Dictionary.tsx` |
 | `sheets` | `expression-card` | 예문 아래 네이티브 하나(읽는 카드 끝 — 대화·통화 위에서 연 카드(above)에는 없음). | My 탭 `my` · `studyMap/ExpressionCard.tsx` |
@@ -99,7 +98,7 @@
 | `video-library` | `video-library-after-3` | 세 번째 영상 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 | `video-library` | `video-library-after-8` | 여덟 번째 영상 뒤에 하나 더(2026-11-01 — 같은 피드 두 번째, 한 피드 3개 한도 안, 첫 광고와 한 화면에 안 겹침). | 영상 학습 탭 `video` · `videoLearning/CatalogLibrary.tsx` |
 
-피드 10개, 자리 29개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
+피드 10개, 자리 28개. 플러그인 한도: 한 피드에 광고 3개, 동시에 피드 2개 — 그래서 보이는 탭·맨 위 층에서만 붙이고 키보드가 올라오면 뗀다(`NativeAdSlot` `active`·층).
 
 ### 배너 · 앱 오프닝 · 보상형
 

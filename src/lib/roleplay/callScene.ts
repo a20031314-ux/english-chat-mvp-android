@@ -46,22 +46,6 @@ export type SceneSentence = {
  */
 export type SceneTutor = { name: string; gender: "f" | "m"; native?: string };
 
-/** 라틴 글자가 아닌 학습 언어의 튜터 이름(chatPartner.ts PARTNERS와 같은 사람). 없으면 name 그대로. */
-export const TUTOR_NATIVE_NAMES: Record<string, { f: string; m: string }> = {
-  ko: { f: "서연", m: "민준" },
-  ja: { f: "ゆき", m: "はると" },
-  zh: { f: "小美", m: "阿晨" },
-  ru: { f: "Аня", m: "Дима" },
-  ar: { f: "ليلى", m: "عمر" },
-  hi: { f: "प्रिया", m: "अर्जुन" },
-  th: { f: "พลอย", m: "นิรันดร์" },
-};
-
-/** 장면에 쓸 튜터 — 앱 이름과 학습 언어 글자 이름. */
-export function sceneTutor(language: string, gender: "f" | "m", name: string): SceneTutor {
-  return { name, gender, native: TUTOR_NATIVE_NAMES[language]?.[gender] ?? name };
-}
-
 const fill = (text: string, tutor?: SceneTutor) => (tutor ? text.split(TUTOR_SLOT).join(tutor.native ?? tutor.name) : text);
 const fillGloss = (text: string, tutor?: SceneTutor) => (tutor ? text.split(TUTOR_SLOT).join(tutor.name) : text);
 

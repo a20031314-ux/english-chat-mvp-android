@@ -47,11 +47,9 @@
    **사용법 창 안이라도 첫 화면·쓸 기능 고르기·시트 머리 같은 조작 화면은 같은 규칙**(이름·체크·버튼만) — 설명 글은 사용법 장의 칸 본문에만(2026-10-23 세 번째 지적: 고르기 화면 위 설명·"숨겨 둔 기능이에요" 안내 넣었다가 뺌).
 5. **운영 확인:** 서버 기능은 push 뒤 운영 API로 직접 확인(테스트 사용자 `x-rc-user`, 이름에 용도 표시). 실제 사용자 데이터에 테스트가 섞이지 않게 한다.
    점검에서 찾아 고친 것은 **배포 뒤 같은 점검을 다시** + 건드린 영역 묶음 전체를 회귀로 돌려 둘 다 기록한다(단위 테스트만으로 '고쳤다' 하지 않음, 사용자 2026-10-20).
-6. **사용법·안내는 그림 먼저:** 설명은 단계별 스크린샷(UI 언어별) + 한두 줄. 긴 글로 설명하지 않는다(사용자 결정 2026-10-16).
-   **칸마다 글은 한 줄**(버튼 이름·숫자·한도만, 사용자 2026-10-29 "텍스트가 너무 많아") — 더 할 말은 그림이나 짧은 영상(`GUIDE_CLIPS`)으로. 그림 없는 칸을 새로 만들지 않는다.
-   흐름이 있는 칸은 **조작 + 영상 안 자막 설명** 영상으로(사용자 2026-10-29 "기능 사용 + 그 안에 설명까지") — `scripts/guide-clips.mjs`(14개 언어 자막, 버튼 이름은 copy 그대로), 새 화면 영상은 `GUIDE_CLIPS_SINCE`로 그 빌드에만.
-   영상은 **쓰는 부분만 확대(4:5) + 실제 속도**, 장면마다 보여 주기·자막 → 누르기 → 결과 → 설명 자막 순서, 모든 기능을 넣지 않는다(사용자 2026-10-29 "넘기는 속도가 너무 빨라… 부분적으로 줌인").
-   화면이 바뀌면 `capture-whats-new.mjs guide`로 사용법 그림도 다시 찍는다.
+6. **사용법은 넘겨 보기 장면만:** 장마다 칸 칩 → 첫 장면 = 그 칸 핵심, 넘기면 세부. 문구는 그림 안에 제목 한 줄(부제·세부 설명 없음), 직관적인 아이콘(🔊 등)은 설명 안 함(사용자 2026-11-14).
+   장면 = 실제 화면에서 그 기능 부분만 자른 그림(`scripts/guide-slides/` shoot·shoot-call·crop-tabs → compose, 14개 앱 언어), 배치·문구는 `src/lib/guide/slides.ts`·`slideTitles.ts`. 화면이 바뀌면 그 장면을 다시 찍는다.
+   칸 머리 ?·새로워진 점 "자세히"도 이 장면으로 연다(칸 id → slides.ts covers). 장면 없는 장은 새 앱에 안 보인다.
 7. **PRODUCT.md:** 화면·기능·한도·저장하는 것이 바뀌면 같은 커밋에서 고친다(구조·흐름은 `hub/app/STRUCTURE.md`, 기능별 자세한 규칙은 PRODUCT.md).
 8. **저장 데이터:** 서버에 새 키 묶음을 만들면 `scripts/data-map.json`에 기능·누구 것·계정 지울 때 한 줄(없으면 CI `data-map` 실패), 지도는 `hub/app/data-map.md`에 저절로.
    점검(가상 사용자)은 `simcheck-` id만 쓰고 끝날 때 지운다(`sim-users/forget.mjs`).
@@ -97,9 +95,8 @@
 - 버전을 자를 때: `src/lib/whatsNew.ts` 항목(**`code`=versionCode 필수** — 업데이트 배너가 Play의 versionCode로 바뀐 점을 찾음, **`guide`=사용법 칸 id** — 설명은 사용법 칸에만, hub/app/DESIGN.md "안내 글") + 14개 언어 문구 + `scripts/capture-whats-new.mjs <버전>` 캡처(`CAPTURE_USER`로 데이터 있는 테스트 사용자),
   출시 노트 `fastlane/metadata/android/*/changelogs/<versionCode>.txt`(store-listing 스킬, 500자) PR, PRODUCT.md "기준"·"버전별 변화", STATE 버전 표.
   자르기 전에 **사용자 체감 점검**(위 절)을 한 번 돌려 지난번과 비교한 점수를 log에 남긴다.
-- **버전을 자를 때마다 사용법(?)도 새로:** 그 버전에서 바뀐 기능마다 사용법 글(`src/lib/guide/`, 14개 언어)을 지금 화면에 맞게 다시 쓰고
-  `capture-whats-new.mjs guide`(새 `CAPTURE_RUN`)로 단계 그림을 UI 언어별로 다시 찍어 같은 PR/커밋에 넣는다. 옛 빌드가 다른 화면을 쓰면
-  예전 글을 스냅숏으로 남기고 새 앱만 새 글을 받게 한다(예: `/api/guide?my=1`, `before-my.json`). 새로워진 점 캡처와 같이 확인한다(사용자 결정 2026-10-16).
+- **버전을 자를 때마다 사용법(?)도 새로:** 그 버전에서 바뀐 화면의 넘겨 보기 장면을 14개 앱 언어로 다시 찍고(`scripts/guide-slides/`), 장면 배치·제목(`slides.ts`·`slideTitles.ts`)을 같은 커밋에 넣는다.
+  옛 빌드가 읽는 사용법 글(`content.ts`·`overview.ts`·`banks.ts`)은 옛 앱 전용 — 고치지 않고 최소 지원 버전이 2.80을 넘으면 지운다. 새로워진 점 캡처와 같이 확인한다.
 - 탭·창구·사용법 그림이 바뀌면 서비스 지도도 `npm run service-map` → 같은 주소에 다시 올린다(hub/README.md "서비스 지도").
 - PC 빌드 안내는 한 줄: `npm run pc:build`(`scripts/pc-build.ps1` — build.gradle·package-lock·cap sync가 다시 쓰는 파일 되돌리기 → `git pull --ff-only` → `npm ci` → `build:android` → 버전 확인 → Android Studio 열기) → Sync → Signed Bundle.
   처음 한 번(스크립트가 PC에 없을 때)만: `git checkout -- android/app/build.gradle package-lock.json; git pull` 후 `npm run pc:build`. `npm install`을 쓰면 PC에서 lock 파일이 바뀌어 다음 pull이 막힌다(2026-10-18 겪음).

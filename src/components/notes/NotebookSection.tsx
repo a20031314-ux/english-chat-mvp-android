@@ -11,7 +11,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import type { CustomNode, FixCard } from "@/lib/notes/notebook";
 import type { LogItem, StageParts } from "@/lib/notes/stageParts";
-import { onAppIntent } from "@/lib/appIntents";
+import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { useScriptPack } from "@/lib/curriculum/useScriptPack";
 import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
@@ -22,8 +22,6 @@ import { LETTERS_OPEN_EVENT, peekLettersOpen } from "@/lib/curriculum/lettersOpe
 import { useItemStats } from "@/lib/curriculum/useItemStats";
 import { TodayCards } from "@/components/studyMap/TodayCards";
 import { Logbank } from "@/components/studyMap/Logbank";
-import { BankHelpButton } from "@/components/studyMap/BankHelp";
-import { scheduleMorning } from "@/lib/morningNotify";
 
 /**
  * My 칸 셋 [Logbank · Quizbank · Languagebank] — 위 칸 이름 줄이 탭, 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면.
@@ -47,6 +45,8 @@ type Book = {
 const NO_REVIEW: ReviewMap = {};
 
 type MyLayer = "log" | "keep" | "lang";
+/** 칸 머리 ?가 여는 사용법 칸(lib/guide/slides.ts my 칸의 covers). */
+const HELP_SECTION: Record<MyLayer, string> = { keep: "my.start", lang: "my.lang", log: "my.growth" };
 const ORDER_WITH_QUIZ: MyLayer[] = ["log", "keep", "lang"];
 const ORDER_LETTERS: MyLayer[] = ["log", "lang"];
 
@@ -96,10 +96,6 @@ export function NotebookSection({
   // 0단계 — 글자·소리(curriculum/lettersFirst.ts): 글자가 다른 학습 언어에서 글자부터 고르면 Quizbank 대신 글자 칸.
   const [lettersFlag, setLetters] = useLettersFirst(language);
   const lettersOn = lettersFlag && needsLetters(language);
-  // 예전 아침 알림(Stagebank ⚙에서 켜던 것)은 개편에 켜고 끌 곳이 없어 걸어 둔 것을 지운다(2026-11-09).
-  useEffect(() => {
-    void scheduleMorning([], ui.morningSetting);
-  }, [ui.morningSetting]);
 
   useEffect(() => {
     let cancelled = false;
@@ -129,8 +125,6 @@ export function NotebookSection({
     </div>
     <MyLayers
       ui={ui}
-      language={language}
-      locale={locale}
       tab={tab}
       onOpen={openLayer}
       languagebank={
@@ -233,8 +227,6 @@ function LayerJump({
 
 function MyLayers({
   ui,
-  language,
-  locale,
   tab,
   onOpen,
   languagebank,
@@ -242,8 +234,6 @@ function MyLayers({
   logbank,
 }: {
   ui: UICopy;
-  language: string;
-  locale: string;
   /** 지금 보는 탭(위 칸 이름 줄). */
   tab: MyLayer;
   onOpen: (layer: MyLayer) => void;
@@ -278,7 +268,19 @@ function MyLayers({
     const order = parts ? ORDER_WITH_QUIZ : ORDER_LETTERS;
     const shown: MyLayer = order.includes(tab) ? tab : "lang";
     const titleOf = (id: MyLayer) => (id === "keep" ? ui.keepTitle : id === "lang" ? ui.languagebankTitle : ui.logbankTitle);
-    const help = (id: MyLayer) => (id === "lang" ? null : <BankHelpButton ui={ui} locale={locale} language={language} bank={id} title={titleOf(id)} />);
+    // 칸 머리 ?: 사용법 My 장의 그 칸 넘겨 보기(lib/guide/slides.ts covers).
+    const help = (id: MyLayer) => (
+      <button
+        type="button"
+        data-bank-help={id}
+        onClick={() => sendAppIntent("openGuide", { chapter: "my", section: HELP_SECTION[id] })}
+        aria-label={`${titleOf(id)} · ${ui.guideOpen}`}
+        title={ui.guideOpen}
+        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line text-caption text-slate-400 hover:bg-white/10 hover:text-ink"
+      >
+        ?
+      </button>
+    );
     const bodyOf = (id: MyLayer): { summary: ReactNode; body: ReactNode } =>
       id === "keep" && parts ? parts.keep : id === "log" ? { summary: null, body: logbank(parts?.review.body ?? null) } : { summary: null, body: languagebank };
     const { summary, body } = bodyOf(shown);
@@ -292,7 +294,7 @@ function MyLayers({
       return (
         <>
           <FullScreenLayer>
-            <LayerJump items={items} onJump={pressTab} active={shown} onClose={() => setFull(false)} closeLabel={ui.billingClose} help={help(shown) ?? undefined} />
+            <LayerJump items={items} onJump={pressTab} active={shown} onClose={() => setFull(false)} closeLabel={ui.billingClose} help={help(shown)} />
             <div className="min-h-0 flex-1 overflow-y-auto">
               <div key={shown} data-my-layer={shown} data-my-full className="px-3 pb-6 pt-3">
                 {toned}

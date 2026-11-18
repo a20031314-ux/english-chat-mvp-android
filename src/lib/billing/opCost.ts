@@ -133,9 +133,6 @@ export const OP_COST: Record<string, OpCost> = {
   tts: { kind: "tts", seconds: 6, basis: "assumed" },
   videoPrepare: { kind: "subtitle", basis: "assumed" },
   videoWindow: { kind: "subtitle", basis: "assumed" },
-  videoGloss: llm("video"),
-  videoAnalyze: llm("video"),
-  videoGlossKept: counter,
   translateKept: counter,
   roleplayListen: listen("turn"),
   roomListen: listen("turn"),
@@ -162,8 +159,6 @@ export const OP_COST: Record<string, OpCost> = {
   // 보기마다 뜻·틀린 까닭: 지시 약 200 + 문장·보기 약 100토큰, 답은 보기 셋·넷의 뜻 + 한 줄씩 약 250토큰(앱 언어).
   quizOptionNotes: estimated("vocab", { input: 350, output: 250 }),
   // 장면 통화 가지 고르기: 장면 설명·앞 튜터 줄·가지 2~3개(뜻 + 예시 3) 약 450토큰, 답 {"pick":n}.
-  roleplayBranch: estimated("roleplayBranch", { input: 450, output: 10 }),
-  scriptChoices: llm("scriptChoices"),
   roleplayBankLine: counter,
   roleplayInventedLine: counter,
   roleplaySplitTurn: counter,

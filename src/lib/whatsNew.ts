@@ -287,13 +287,6 @@ export function notesBetween(
     .sort((a, b) => compareVersions(b.version, a.version));
 }
 
-/** 이 빌드의 노트가 가리키는 사용법 칸: 사용법 창에서 "새로" 표시. */
-export function newGuideSections(current: string, notes: ReleaseNote[] = RELEASE_NOTES): string[] {
-  if (!current) return [];
-  const note = notes.find((row) => compareVersions(row.version, current) === 0);
-  return note ? note.items.flatMap((item) => (item.guide ? [item.guide] : [])) : [];
-}
-
 /** The newest release that has notes. */
 export function latestNotedVersion(notes: ReleaseNote[] = RELEASE_NOTES): string {
   return [...notes].sort((a, b) => compareVersions(b.version, a.version))[0]?.version ?? "";

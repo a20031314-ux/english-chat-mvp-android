@@ -22,8 +22,6 @@ import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
 import { GuideButton } from "@/components/GuideSheet";
-import { appVersion } from "@/lib/appVersion";
-import { newGuideSections } from "@/lib/whatsNew";
 import type { GuideGo } from "@/lib/guide/content";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import { readEntryDoor } from "@/lib/doors";
@@ -44,7 +42,6 @@ import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
 import { isIosApp, socialFeaturesEnabled } from "@/lib/platform";
-import { onMorningTap } from "@/lib/morningNotify";
 import { bottomTabs, featureOfTab, isFeatureOn, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
@@ -229,8 +226,6 @@ function AppHomeInner({
     document.addEventListener("visibilitychange", onHide);
     return () => document.removeEventListener("visibilitychange", onHide);
   }, []);
-  // 아침 알림을 눌러 열면 My(lib/morningNotify.ts).
-  useEffect(() => onMorningTap(() => sendAppIntent("openTab", { tab: "map" })), []);
 
   useEffect(() => {
     try {
@@ -378,16 +373,9 @@ function AppHomeInner({
     ...(roleplayAvailable ? (["roleplay"] as const) : []),
     "video",
     "map",
-    "notes",
     ...(socialOn ? (["talk", "people", "rooms"] as const) : []),
   ];
-  const goFromGuide = (go: GuideGo) => openTab(go === "notes" ? "vocab" : go);
-  const guideTabs = [
-    ...aiTabItems,
-    // 단어장은 탭에서 빠졌지만(노트 안) 사용법은 그대로 둔다.
-    { id: "vocab" as const, label: ui.homeTabVocab },
-    ...(socialOn ? [{ id: "rooms" as const, label: ui.homeTabRooms }] : []),
-  ] as { id: Exclude<AppTab, "people" | "messages" | "talk" | "random">; label: string }[];
+  const goFromGuide = (go: GuideGo) => openTab(go === "notes" ? "map" : go);
 
   if (pickPending) {
     return (
@@ -424,10 +412,8 @@ function AppHomeInner({
                 ui={ui}
                 locale={locale}
                 tab={shownTab}
-                tabs={guideTabs}
                 availableGo={guideGo}
                 onGo={goFromGuide}
-                newSections={newGuideSections(appVersion())}
                 features={door ? null : features}
                 onChosen={() => openTab("map")}
               />
