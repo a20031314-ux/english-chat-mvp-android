@@ -6922,25 +6922,28 @@
       "base": "4bcaf97",
       "head": "4bcaf97",
       "status": "open"
+    },
+    {
+      "id": "a261120-3-2",
+      "at": "2026-11-20 19:08",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "소재 수업 설명 만드는 중 표시(띠)",
+      "files": [
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/components/studyMap/LessonHost.tsx"
+      ],
+      "features": [
+        "소재 수업"
+      ],
+      "base": "a8c1a14ace274abf849d7d6ed0ab69ba628f48ef",
+      "head": "3422263",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-09 17:23",
-      "from": "2",
-      "base": "f3d12a5db02c06c9dd2ba846489a4279dd510baa",
-      "head": "f1be0fa",
-      "what": "같이 배우기 칩(StudyChips)을 채팅 표현 보기 아래·통화 정리 줄에 붙임, 표현 보기 열면 장부 chat miss",
-      "tabs": [
-        "1",
-        "2",
-        "3"
-      ],
-      "asks": [
-        "a261109-2-5",
-        "a261109-2-6"
-      ]
-    },
     {
       "at": "2026-11-09 17:34",
       "from": "6",
@@ -7576,10 +7579,23 @@
         "a261120-1-3",
         "a261120-1-4"
       ]
+    },
+    {
+      "at": "2026-11-20 19:08",
+      "from": "3",
+      "base": "a8c1a14ace274abf849d7d6ed0ab69ba628f48ef",
+      "head": "3422263",
+      "what": "소재 수업 설명 만드는 중 표시(띠)",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261120-3-2"
+      ]
     }
   ],
   "seq": {
-    "261120-3": 1,
+    "261120-3": 2,
     "261120-1": 4
   }
 }
