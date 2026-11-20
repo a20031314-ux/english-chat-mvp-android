@@ -117,7 +117,7 @@ export function CallStage({
       <div aria-hidden className="mx-6 shrink-0 border-t border-white/10" />
 
       {/* 아래: 나 */}
-      {/* 고친 말 카드가 뜨면 아래 반을 넓히고 내 얼굴을 줄여 카드가 스크롤 없이 다 보이게(사용자 2026-11-20 "살짝 잘려서 스크롤"). */}
+      {/* With a correction card up the lower half grows and my face shrinks, so the card shows without scrolling (user, 2026-11-20). */}
       <section className={`flex min-h-0 flex-col items-center justify-center-safe overflow-y-auto px-6 py-2 text-center [&>*]:shrink-0 ${coach ? "flex-[1.6] gap-2" : "flex-1 gap-3"}`} data-call-me>
         <SpeakingRing speaking={speaker === "learner"} waiting={speaker === "listening"} tone="good">
           {/* Smaller own face while a correction card is up, so the card fits its half (2026-11-18 clipped card). */}
