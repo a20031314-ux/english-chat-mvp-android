@@ -481,11 +481,11 @@ export function FrameLesson({
                   onClick={onClose}
                   className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10"
                 >
-                  {ui.checkKnown}
+                  {ui.lessonKnownSkip}
                 </button>
               ) : null}
               <button type="button" data-lesson-next onClick={goNext} className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
-                {ui.scriptNext}
+                {ui.lessonToQuiz}
               </button>
             </div>
           </div>

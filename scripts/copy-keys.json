@@ -102,7 +102,7 @@
       "chatHistoryNew+startNewSession",
       "explanation+featureViewList",
       "replayType+tlWrite",
-      "checkKnown+itemsMastered+knownTag+markKnown",
+      "itemsMastered+knownTag+markKnown",
       "lessonOrder+missOrder",
       "discoverTopicTravel+selfUseTravel",
       "dashboardPracticing+filterPracticing+practiceNow",
