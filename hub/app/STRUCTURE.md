@@ -48,7 +48,7 @@
   AI 통화 CallHost(startCall · practice · openCall) → RoleplayScreen
      통화 중: roleplay/CallParts CallStage(맨 위 📞 통화 ⓘ → CallModeInfo 설명창 — 처음 한 번 저절로, callInfoSeen.v1 이 폰 · 위 튜터 얼굴·💬 자막 · 아래 내 사진) · CallControls(🙉 · 💡 — 막혔을 때만)
        튜터는 대화만(감독 free — 요즘 배운 것 lib/roleplay/recentLearned.ts 장부 최근 7일 퀴즈 낱말·표현 → recent 화제에 녹이기만, 가끔 내 쪽 것 설명해 달라고)
-       교정 = 코치 띠(CallParts CoachCardView — 같은 언어 짝 튜터 얼굴·이름, 소리 없음): 따라 말하면 앱 채점 transcriptMarks.ts gradeRedo(✓·한 번 더), 튜터에겐 redo만(맞장구)
+       교정 = 코치 띠(CallParts CoachCardView — 카드만, 얼굴 없음·소리 없음, 뜨면 아래 반을 넓히고 내 얼굴을 줄임): 따라 말하면 앱 채점 transcriptMarks.ts gradeRedo(✓·한 번 더), 튜터에겐 redo만(맞장구)
      끝: CallSummary · 튜터 메모 · 이렇게도 말할 수 있었어요(roleplay/CallReplay — 장면 ReplayPlayer) · 대본(CallPages) · 통화 정리(roleplay/CallRecap — 줄마다 같이 배우기 studyMap/StudyChips → openLesson · 🔎 My에서 찾기)
          · 이번 통화의 고쳐 씀(CallGrowthPairs) · 고친 게 있으면 숙제 [퀴즈 | 대화](HomeworkSheet, roleplay/homeworkQuiz.ts — 짚은 말·장면 조각) · 0단계면 📝 글자·소리 숙제(openLettersBank)
      통화 기록 CallList(튜터 프로필, 한 목록, lib/roleplay/callStore.ts 이 폰)
