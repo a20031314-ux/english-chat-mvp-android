@@ -3,9 +3,6 @@
 import { useEffect, useSyncExternalStore } from "react";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
-import { sendAppIntent } from "@/lib/appIntents";
-import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
-import { findExpression } from "@/lib/videoIndex/match";
 import type { LedgerState, Place } from "@/lib/learner/ledger";
 
 /**
@@ -74,55 +71,4 @@ export function useLedger(language: string): CompactItem[] {
     void refreshLedger(language);
   }, [language]);
   return items;
-}
-
-/** Phrases from the ledger found in a line. Spaceless scripts and Korean particles are handled by findExpression. */
-export function ledgerIn(items: CompactItem[], line: string, language: string): CompactItem[] {
-  if (!line.trim() || items.length === 0) return [];
-  const lines = [{ start: 0, end: 0, text: line }];
-  const found = items.filter((item) => findExpression(lines, item.text, language).length > 0);
-  // A shorter phrase inside a longer one found too is the same finding.
-  return found.filter(
-    (item) => !found.some((other) => other !== item && other.text.length > item.text.length && other.text.toLowerCase().includes(item.text.toLowerCase())),
-  );
-}
-
-/**
- * Only a video can be gone back to: it opens at that scene. A chat or a call
- * would only open the tab, with nothing there to do, so those have no "go
- * back" (user, 2026-10-29: buttons that just move to a feature are removed —
- * "채팅에서 써 보기" went the same way).
- */
-export function canGoToFirstMet(place: Place): boolean {
-  return place.tab === "video" && Boolean(place.videoId);
-}
-
-/** Take the learner back to the video scene where a phrase was first met. */
-export function goToFirstMet(place: Place) {
-  if (!canGoToFirstMet(place)) return;
-  sendAppIntent("openTab", { tab: "video" });
-  sendAppIntent("openVideo", {
-    url: normalizeYouTubeWatchUrl(place.videoId!),
-    ...(typeof place.t === "number" ? { startSeconds: place.t } : {}),
-  });
-}
-
-const SHOW_KEY = "ledgerLinksShown";
-export function linksShown(): boolean {
-  try {
-    return localStorage.getItem(SHOW_KEY) !== "0";
-  } catch {
-    return true;
-  }
-}
-
-export function useLinksShown(): boolean {
-  return useSyncExternalStore(
-    (listener) => {
-      listeners.add(listener);
-      return () => listeners.delete(listener);
-    },
-    linksShown,
-    () => true,
-  );
 }

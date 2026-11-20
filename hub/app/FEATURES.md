@@ -106,13 +106,14 @@
 | 결제 화면 `billingScreenTitle` (화면: 플랜 및 결제) | 플랜(라이트·플러스·프리미엄)·포인트 상점 | 1 메인 · 3 AI · 4 사람 | `components/BillingScreen.tsx` · `components/PointStore.tsx` |  |
 | 광고 | 무료·안드로이드만 — 자리 전체는 hub/app/ADS.md | 1 메인 · 2 My · 3 AI · 4 사람 | `components/NativeAdSlot.tsx` · `lib/ads.ts` |  |
 
-## 옛 앱 전용 서버 (5) — 새 앱 화면엔 없음
+## 옛 앱 전용 서버 (6) — 새 앱 화면엔 없음
 
 | 무엇 | 쓰는 앱 | 코드 | 지울 때 |
 |---|---|---|---|
 | Stagebank 서버(대본·단계 시험·꺼내 쓰기·돌아보기) | 옛 앱 2.79 이하 My Stagebank가 부름 — 새 앱은 Quizbank 익힘 기록(scripts check)만 씀 | `app/api/curriculum/recall/route.ts` · `app/api/curriculum/ask/route.ts` · `app/api/curriculum/fixed-lesson/route.ts` | 최소 지원 버전 2.80 이상 |
 | 통화 튜터 수업 서버(말로 짚기·다시 말해 보기) | 옛 앱 2.79 이하 통화 🎓 튜터 수업이 coach: true로 부름 — 새 앱은 코치 띠(앱 채점), director.ts coachRules·spokenCoachFix·silent·study | `lib/roleplay/director.ts` | 최소 지원 버전 2.80 이상 |
 | 사용법 글·칸 설명 서버(칸 글·학습 흐름·카드·? 설명) | 옛 앱 2.79 이하 사용법·Stagebank·Quizbank·Logbank ?가 /api/guide(overview·banks·칸 글)로 읽음 — 새 앱은 장면(slides)만 | `lib/guide/content.ts` · `lib/guide/overview.ts` · `lib/guide/banks.ts` | 최소 지원 버전 2.80 이상 |
+| 영상 자막 뜻·번역 서버 | 옛 앱 2.48~2.66 영상 탭이 자막 줄 뜻·번역에 부름 — 새 앱은 translate | `app/api/video-subtitles/gloss/route.ts` · `lib/videoSubtitle/glossEnglishLines.ts` | 최소 지원 버전 2.67 이상 |
 | 오늘의 팩 서버 | 옛 앱 2.48~2.75 오늘의 팩 | `app/api/pack/today/route.ts` · `app/api/pack/finish/route.ts` | 최소 지원 버전 2.76 이상 |
 | 목표 지도 서버 | 옛 앱 2.48~2.74 목표 지도·미션·노트 목차 | `app/api/curriculum/progress/route.ts` · `app/api/curriculum/missions/route.ts` · `app/api/notes/place/route.ts` | 최소 지원 버전 2.75 이상 |
 

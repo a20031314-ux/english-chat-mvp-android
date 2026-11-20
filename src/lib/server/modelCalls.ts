@@ -122,9 +122,14 @@ export const MODEL_CALLS_PER_REQUEST = {
   // the shape of the spending visible before anyone prices against it.
   videoPrepare: 3,
   videoWindow: 3,
+  // Two calls a batch: the meaning of each line, then the line in the UI
+  // language (glossEnglishLines). Only builds before 2.67 send these.
+  videoGloss: 2,
   // Answered from translations kept from an earlier viewer of the same video
   // (server/subtitleGlossStore.ts). No model call; counted so the ratio to
-  // translate says how much of video translation the store carries.
+  // videoGloss / translate says how much of video translation the store
+  // carries.
+  videoGlossKept: 0,
   translateKept: 0,
   // The roleplay's only model call. Its tutor speaks from files, so a scripted
   // scene costs one transcription per learner turn and nothing else — which is

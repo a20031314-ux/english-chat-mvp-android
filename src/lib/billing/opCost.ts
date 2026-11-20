@@ -133,6 +133,8 @@ export const OP_COST: Record<string, OpCost> = {
   tts: { kind: "tts", seconds: 6, basis: "assumed" },
   videoPrepare: { kind: "subtitle", basis: "assumed" },
   videoWindow: { kind: "subtitle", basis: "assumed" },
+  videoGloss: llm("video"),
+  videoGlossKept: counter,
   translateKept: counter,
   roleplayListen: listen("turn"),
   roomListen: listen("turn"),

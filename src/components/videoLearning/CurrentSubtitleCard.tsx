@@ -2,7 +2,6 @@
 
 import { DictNotes } from "@/components/studyMap/DictNotes";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
-import { LedgerLinks } from "@/components/LedgerLinks";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { SegmentPlayButton } from "@/components/videoLearning/SegmentPlayButton";
 import type { UICopy } from "@/lib/copy";
@@ -83,7 +82,6 @@ export function CurrentSubtitleCard({
                 playing ? "text-neutral-900" : "text-slate-100"
               }`}
             />
-            <LedgerLinks ui={ui} kind="heard" here="video" line={cue.original} language={ledgerLanguage} />
             <DictNotes text={cue.original} language={ledgerLanguage} tone={playing ? "light" : "dark"} className="mt-1.5" />
           </div>
           <SegmentPlayButton
