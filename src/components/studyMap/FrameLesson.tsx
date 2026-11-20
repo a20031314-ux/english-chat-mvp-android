@@ -392,11 +392,19 @@ export function FrameLesson({
         {step === "explain" ? (
           <div data-lesson-explain className="flex flex-col gap-3">
             {scene ? <SceneCard scene={scene} piece={pieceIn(language, key, scene.line)} tag={tag} /> : null}
-            {lesson === undefined ? <p className="text-caption text-slate-400">…</p> : null}
+            {lesson === undefined ? (
+              <div data-lesson-making role="status" className="flex flex-col gap-1.5">
+                <p className="text-caption text-slate-400">{ui.lessonMaking}</p>
+                {/* 만드는 데 몇 초 걸려서 차오르는 띠로(사용자 2026-11-20) — 다 되면 띠 대신 설명. */}
+                <div className="h-1 overflow-hidden rounded-full bg-white/10">
+                  <div className="making-bar h-full rounded-full bg-status-learned" />
+                </div>
+              </div>
+            ) : null}
             {/* Structured explanation (2026-10-30, user): meaning → structure (each fixed part and what it does) → usage → examples. */}
             {grammarPage ? (
               <GrammarExplain page={grammarPage} ui={ui} language={language} />
-            ) : (
+            ) : lesson === undefined && !meaningText ? null : (
             <section data-lesson-meaning>
               <h3 className="text-meta font-semibold text-slate-400">{ui.aboutMeaning}</h3>
               <p dir="auto" className="mt-0.5 text-note text-ink">
