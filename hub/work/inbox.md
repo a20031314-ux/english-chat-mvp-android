@@ -161,6 +161,8 @@
 - 2026-10-31 dev → qa: 다음 빌드에서 국적·언어를 안 적은 계정으로 사람 탭 → "나를 소개해요"가 한 번 뜨고(배우는 언어에 지금 언어 칠해짐) 건너뛰면 다시 안 뜨는지, 할 수 있는 언어 여러 개 고르기·완료 뒤 사람 카드·프로필 시트에 국적(사진 모서리)·언어 칩(국기 없음), 배울 언어를 바꾸면 프로필 배우는 언어에 더해지는지. 서버 쪽(바로): 2.75 앱 사람 목록에서 모국어 안 적은 사람에게 앱 언어 칩이 안 나오는지. ja/ko · en/ja · es/ar.
 - 2026-11-01 dev → qa: 다음 빌드에서 AI 통화(새 실제 통화 화면): 가운데 튜터 얼굴·시간만 있고 글이 없는지, 💬 자막 → 튜터 마지막 한 줄, 끈 채 다음 통화에도 기억, 🙉 못 알아들었어요 → 튜터가 더 쉽게 다시 말하는지(같은 질문에 머무는지), 다시 한 말도 🙉 → 그 줄이 뜻과 함께 자막, 💡 힌트 → 패널 위에 방금 질문 글, 빨간 끝내기 → 통화 기록에서 이어서 하기, 끝나면 전체 대본·번역 켬/끔·통화 정리 "🙉 못 알아들었어요". 소리: 튜터 두 줄이 끊김 없이. My 문장구조 수업·꺼내 쓰기 말하기도 한 번(같은 부품 옮김). en/ko, ja/ko, ar 앱.
 - 2026-10-31 store → qa: 다음 빌드(2.76 이후 앱) 결제 화면에 대본 플랜 2,900원(`script_monthly`)이 Play 가격으로 뜨고 테스트 구매 뒤 대본 플랜 혜택(사흘마다 통화 5분·채팅 20)이 붙는지 — 결제 테스트 계정이 필요해 기기에서.
+- 2026-11-20 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:495 — 설명 화면 다음 버튼이 늘 '문제 풀기'(lessonToQuiz)인데 문제를 못 만든 표현·문법 수업은 대화 단계나 끝으로 감 (다음 단계에 따라 이름 고르기)
+- 2026-11-20 watch → dev: [공통] src/lib/server/subtitleGlossStore.ts:72 — 되살린 videoGloss:v1 키 묶음이 scripts/data-map.json에 없음, 키 템플릿이 여러 줄이라 data-map.mjs --check도 통과 (data-map.json에 한 줄 + 템플릿 한 줄로)
 - 2026-11-18 watch → dev: [my] src/lib/curriculum/loanword.ts:133 — soundsAlike -tic 줄이 바꿀 꼴 없는 낱말(mistake·biblioteca 등 약 400개)에서 같은 인자로 자기를 다시 불러 RangeError, cardQuiz가 try 없이 불러 Quizbank·첫 측정·사다리 화면이 깨짐 (바꾼 결과가 원래 낱말과 같으면 다시 부르지 않기 + 테스트)
 - 2026-11-18 watch → dev: [my] src/app/api/curriculum/typed-check/route.ts:65 — 뜻 먼저 채점에 "설명·강조 어미 없는 꼴도 맞음"이 있어 그 어미가 목표인 문법 문항(ja ～んです 등)에서 빠뜨린 답이 맞음으로 (g| 문항은 그 허용 빼거나 배우는 문법을 요청에 실어 줌)
 - 2026-11-18 watch → dev: [ai] src/lib/roleplay/homeworkQuiz.ts:99 — sceneAfterQuiz가 낱말 경계 없이 includes라 짧은 고친 말(la·a·de)이면 다른 장면 조각(por la noche 등) 빈칸까지 없앰 (띄어쓰기 언어는 낱말 단위로, wordSegments)
