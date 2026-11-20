@@ -61,6 +61,8 @@ jobs:
           IOS_BUNDLE_ID: ${{ vars.IOS_BUNDLE_ID }}
           # 통화·결제 진단(platform.ts turnDiagnosticsEnabled). Run workflow에서 "diag"를 체크할 때만 — 기본은 꺼짐(심사용).
           NEXT_PUBLIC_IOS_DIAG: ${{ inputs.diag && '1' || '0' }}
+          # 맥 러너(7GB)의 Node 기본 힙으로는 Next 빌드가 모자람(2026-11-21 heap out of memory).
+          NODE_OPTIONS: --max-old-space-size=6144
         run: npm run build:ios
 
       - name: App Store Connect 키
