@@ -86,6 +86,8 @@ const page = await browser.newPage({ viewport: { width: 420, height: 740 }, devi
 for (const groups of Object.values(chapters)) {
   for (const group of groups) {
     for (const slide of group.slides) {
+      // ONLY=call-talk-2,call-past-2: 그 장면만 다시 만든다(다른 장면의 raw 그림이 없어도).
+      if (process.env.ONLY && !process.env.ONLY.split(",").includes(slide.shot)) continue;
       let lay = LAYOUT[slide.shot];
       if (!lay) throw new Error(`LAYOUT에 ${slide.shot} 없음`);
       // 흐름 그림 중 이 언어에서 못 찍은 단계(예: 문장 쓰기 문제가 안 나옴)는 빼고 이어 붙인다 — 둘은 남아야 흐름.

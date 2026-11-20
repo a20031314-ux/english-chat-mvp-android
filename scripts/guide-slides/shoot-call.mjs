@@ -111,7 +111,8 @@ await cut("call-recap", [recap], { maxH: 480 });
 // 통화 미리 보기(개발 서버): 코치 띠.
 const why = WHY[LOCALE];
 await page.goto(`${DEV}/dev/call-preview?v=ai&lang=${LOCALE}&learn=${LEARN}&why=${encodeURIComponent(why)}`); await page.locator("[data-call-coach]").first().waitFor({ timeout: 20000 }).catch(() => {}); await wait(1500);
-await cut("call-quiet", [page.locator("[data-call-coach]").first()], { pad: 12 });
+// 내 얼굴 + 그 아래 고친 말 카드(얼굴 없는 코치 띠, 2026-11-20).
+await cut("call-quiet", [page.locator("[data-call-me]").first()], { pad: 4 });
 
 await api("/api/simcheck/forget", { prefix: "guidemy-" });
 await ctx.close(); await browser.close(); server.close();
