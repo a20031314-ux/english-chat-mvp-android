@@ -6629,20 +6629,28 @@
       "base": "d87c0b106cae34ec22be71367c2d71d76584c2c2",
       "head": "651d28a",
       "status": "open"
+    },
+    {
+      "id": "a261120-3-1",
+      "at": "2026-11-20 19:01",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "소재 수업 설명 화면 버튼 이름 바꿈(알아요, 건너뛰기 · 문제 풀기)",
+      "files": [
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/components/studyMap/LessonHost.tsx"
+      ],
+      "features": [
+        "소재 수업"
+      ],
+      "base": "4bcaf976fffa3795422c17a677a1c550a498d52b",
+      "head": "9c23575",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-09 15:46",
-      "from": "2",
-      "base": "d8aac4eae8d9632512b98a9c1ba3e1cf3eae2435",
-      "head": "efc36d3",
-      "what": "Languagebank 숫자 = 실력 확인 추정, skillCheck.ts estimateChance 추가",
-      "tabs": [
-        "2"
-      ],
-      "asks": []
-    },
     {
       "at": "2026-11-09 17:02",
       "from": "2",
@@ -7274,10 +7282,22 @@
         "a261119-3-5",
         "a261119-3-6"
       ]
+    },
+    {
+      "at": "2026-11-20 19:01",
+      "from": "3",
+      "base": "4bcaf976fffa3795422c17a677a1c550a498d52b",
+      "head": "9c23575",
+      "what": "소재 수업 설명 화면 버튼 이름 바꿈(알아요, 건너뛰기 · 문제 풀기)",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261120-3-1"
+      ]
     }
   ],
   "seq": {
-    "261119-3": 6,
-    "261119-1": 3
+    "261120-3": 1
   }
 }

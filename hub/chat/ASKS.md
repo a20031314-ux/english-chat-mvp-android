@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (87)
+## 탭이 확인할 것 (88)
 
 ### 탭 1 메인
 
@@ -198,6 +198,10 @@
 - **a261119-3-5** (2026-11-19 05:21, 탭 3 · 651d28a) 체감 점검 고칠 것: 코치 띠 맞는 문장 짝짓기, 숙제 대화 빈칸 겹침, 오늘의 학습 숙제·Quizbank ✓, 문법 고르기 뜻 먼저, 뜻 고르기 정해 둔 오답, 숙제 빈칸 고르기 규칙
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `app/api/curriculum/typed-check/route.ts` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/notes/NotebookSection.tsx` · `app/api/curriculum/item-lesson/route.ts` · `components/studyMap/ExpressionCard.tsx` … 33개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261120-3-1** (2026-11-20 19:01, 탭 3 · 9c23575) 소재 수업 설명 화면 버튼 이름 바꿈(알아요, 건너뛰기 · 문제 풀기)
+  - 기능: 소재 수업
+  - 볼 곳: `components/studyMap/FrameLesson.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
