@@ -158,7 +158,7 @@
 - "새 대화 시작" — `chatHistoryNew`, `startNewSession`
 - "설명" — `explanation`, `featureViewList`
 - "쓰기" — `replayType`, `tlWrite`
-- "알아요" — `checkKnown`, `itemsMastered`, `knownTag`, `markKnown`
+- "알아요" — `itemsMastered`, `knownTag`, `markKnown`
 - "어순" — `lessonOrder`, `missOrder`
 - "여행" — `discoverTopicTravel`, `selfUseTravel`
 - "연습 중" — `dashboardPracticing`, `filterPracticing`, `practiceNow`
