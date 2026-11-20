@@ -23,11 +23,11 @@ window.__SHOTS=['01-call.png','02-quiz.png','03-lang.png','05-chat.png','06-peop
 window.__doLang=async(folder)=>{await __closePanel(); const left=await __clear(); if(left) return 'clear fail '+left; for(const n of __SHOTS){await __addOne(await __get(folder,n));} return __names().length;};
 window.__MAP={'ko-KR':'ko-KR','ru-RU':'ru-RU','vi':'vi','es-419':'es-ES','es-ES':'es-ES','ar':'ar','it-IT':'it-IT','id':'id','ja-JP':'ja-JP','zh-CN':'zh-CN','th':'th','pt-BR':'pt-PT','pt-PT':'pt-PT','fr-FR':'fr-FR','fr-CA':'fr-FR','hi-IN':'hi-IN','en-US':'en-US','en-GB':'en-US'};
 window.__folderOf=c=>__MAP[c]||'en-US';
-window.__dd=()=>[...document.querySelectorAll('[role=button],[role=combobox],dropdown-button,material-dropdown-select')].find(e=>/(– [A-Za-z0-9-]+|^언어 선택)\s*arrow_drop_down$/.test(e.textContent.replace(/\s+/g,' ').trim())&&e.textContent.length<70);
+window.__dd=()=>[...document.querySelectorAll('[role=button],[role=combobox],dropdown-button,material-dropdown-select')].find(e=>/(– [A-Za-z0-9-]+|^언어 선택)\s*arrow_drop_down$/.test(e.textContent.replace(/\s+/g,' ').trim().replace(/^(warning|error)\s*/,''))&&e.textContent.length<80);
 window.__curLang=()=>__dd()?.textContent.trim().match(/– ([A-Za-z]+(?:-[A-Za-z0-9]+)?)(?=arrow|\s|$)/)?.[1];
 window.__visibleOpts=()=>[...document.querySelectorAll('material-select-item[role=option]')].some(o=>o.getBoundingClientRect().height>0);
 window.__switch=async(code)=>{if(__curLang()===code) return code; if(!__visibleOpts()){__dd().click(); await S(1200);} const opt=[...document.querySelectorAll('material-select-item[role=option]')].find(o=>o.textContent.replace(/\s+/g,' ').includes('– '+code)); if(!opt) throw new Error('no opt '+code); opt.click(); await S(2500); return __curLang();};
-window.__langs=async()=>{__dd().click(); await S(1200); const L=[...document.querySelectorAll('material-select-item[role=option]')].map(o=>o.textContent.replace(/\s+/g,' ').match(/– ([A-Za-z]+(?:-[A-Za-z0-9]+)?)/)?.[1]).filter(Boolean); __dd().click(); await S(600); return L;};
+window.__langs=async()=>{__dd().click(); await S(1200); const O=[...document.querySelectorAll('material-select-item[role=option]')].map(o=>o.textContent.replace(/\s+/g,' ')); O.sort((x,y)=>(/기본값/.test(y)?1:0)-(/기본값/.test(x)?1:0)); const L=O.map(t=>t.match(/– ([A-Za-z]+(?:-[A-Za-z0-9]+)?)/)?.[1]).filter(Boolean); __dd().click(); await S(600); return L;};
 window.__btn=t=>[...document.querySelectorAll('button')].find(b=>b.textContent.trim()===t);
 window.__listing=async()=>{window.__TX=window.__TX||await fetch('https://raw.githubusercontent.com/a20031314-ux/english-chat-mvp-android/main/scripts/play-console/texts-2.80.json').then(r=>r.json()); window.__log=[]; window.__done=false; window.__KO=null;
  try{
