@@ -32,7 +32,7 @@ window.__btn=t=>[...document.querySelectorAll('button')].find(b=>b.textContent.t
 window.__listing=async()=>{window.__TX=window.__TX||await fetch('https://raw.githubusercontent.com/a20031314-ux/english-chat-mvp-android/main/scripts/play-console/texts-2.80.json').then(r=>r.json()); window.__log=[]; window.__done=false; window.__KO=null;
  try{
   for(let i=0;i<60&&!__btn('다음');i++) await S(500);
-  if(!__findSec()){ __btn('다음').click(); for(let i=0;i<40&&!__findSec();i++) await S(500); }
+  await S(3000); for(let k=0;k<6&&!__findSec();k++){ __btn('다음')?.click(); for(let i=0;i<16&&!__findSec();i++) await S(500); }
   for(let i=0;i<20&&!__dd();i++) await S(500);
   const L=await __langs(); __log.push('langs '+L.length+' default '+L[0]);
   const def=L[0]; await __switch(def); const t0=await __setText(def); const r0=window.__noShots?6:await __doLang(__folderOf(def)); __log.push(def+' '+(t0?'':'TEXTFAIL ')+r0);
