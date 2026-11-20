@@ -27,7 +27,6 @@ import {
 } from "@/lib/learningCards";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 import { noteUpdateLevel } from "@/lib/appUpdate";
-import { LedgerLinks } from "@/components/LedgerLinks";
 import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
 import { roomCopy } from "@/lib/rooms/copy";
 import { MessageBubble } from "./MessageBubble";
@@ -2163,21 +2162,6 @@ export function ChatWindow({
                   <p dir="auto" className="text-end text-caption text-good">
                     ✓ {ui.reuseDone} · {turn.reused.join(" · ")}
                   </p>
-                ) : null}
-
-                {/* Phrases in their sentence met in another tab, or just
-                    mastered (hub/work/drafts/tab-connections.md). */}
-                {turn.mode === "chat" && !turn.ownLanguage && turn.userMessage.trim() ? (
-                  <div className="flex justify-end">
-                    <LedgerLinks
-                      ui={ui}
-                      kind="mine"
-                      masteredOnly
-                      here="chat"
-                      line={turn.correctionResult?.corrected?.trim() || turn.userMessage}
-                      language={sessionLanguageCode}
-                    />
-                  </div>
                 ) : null}
 
                 {turn.ownLanguage && turn.userMessage.trim() ? (

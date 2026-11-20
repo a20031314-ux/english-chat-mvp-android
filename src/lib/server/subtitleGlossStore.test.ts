@@ -1,6 +1,14 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { isVideoId, keepVideoLine, readVideoLine, videoLineKey } from "./subtitleGlossStore.ts";
+import {
+  glossBatchKey,
+  isVideoId,
+  keepGlossBatch,
+  keepVideoLine,
+  readGlossBatch,
+  readVideoLine,
+  videoLineKey,
+} from "./subtitleGlossStore.ts";
 
 // No KV credentials are set here, so these exercise the in-memory fallback.
 
@@ -46,6 +54,30 @@ test("line keys ignore spacing differences, not wording", () => {
     videoLineKey({ ...base, text: "¿Qué tal estás?" }),
     videoLineKey({ ...base, text: "¿Qué tal están?" }),
   );
+});
+
+test("a batch is found again by its lines, whoever sends it", async () => {
+  const lines = ["¿Qué tal estás?", "Muy bien, gracias."];
+  const key = glossBatchKey({ targetLanguage: "es", interfaceLanguage: "ko", lines });
+  await keepGlossBatch(key, [
+    { interpretation: "잘 지내?" },
+    { interpretation: "잘 지내, 고마워.", analysisTranslation: "아주 좋아, 고마워." },
+  ]);
+  const again = glossBatchKey({ targetLanguage: "es", interfaceLanguage: "ko", lines: [...lines] });
+  assert.deepEqual(await readGlossBatch(again), [
+    { interpretation: "잘 지내?" },
+    { interpretation: "잘 지내, 고마워.", analysisTranslation: "아주 좋아, 고마워." },
+  ]);
+});
+
+test("a batch with a missing line is not kept", async () => {
+  const key = glossBatchKey({
+    targetLanguage: "th",
+    interfaceLanguage: "ko",
+    lines: ["สวัสดีครับ", "ไปไหนมา"],
+  });
+  await keepGlossBatch(key, [{ interpretation: "안녕하세요" }, { interpretation: "" }]);
+  assert.equal(await readGlossBatch(key), null);
 });
 
 test("only YouTube-shaped ids are accepted", () => {

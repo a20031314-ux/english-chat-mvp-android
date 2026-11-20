@@ -4,7 +4,6 @@ import { ChatFaceSlot } from "@/components/speech/CallKit";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { TTSButton } from "@/components/TTSButton";
 import { SayItBack } from "@/components/speech/Attempt";
-import { LedgerLinks } from "@/components/LedgerLinks";
 import { CorrectionChip, LineTools } from "@/components/conversation/LineTools";
 import { readCorrectionView } from "@/lib/correctionView";
 import { rememberFix } from "@/lib/curriculum/gaps";
@@ -338,16 +337,6 @@ export function RoleplayLine({
                 </button>
               ) : null
             }
-          />
-        ) : null}
-        {ledgerLanguage && line.who === "learner" && line.text.trim() && line.text !== "…" ? (
-          <LedgerLinks
-            ui={ui}
-            kind="mine"
-            masteredOnly
-            here="call"
-            line={line.who === "learner" ? line.meant || line.better || line.text : line.text}
-            language={ledgerLanguage}
           />
         ) : null}
         {canSayAgain && sayingAgain ? (
