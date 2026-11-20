@@ -1,10 +1,10 @@
 {
  "_": "변경 감시(scripts/watch/watch.mjs)의 기준값 — 손으로 고치지 않는다. last = 마지막으로 본 main 커밋, metrics = 그때 잰 값.",
- "last": "651d28a0ff6be5017da307df7125809494035f97",
- "at": "2026-11-18T20:23:05.393Z",
+ "last": "ee706f57bef7782f9d1926855a06171f1435830b",
+ "at": "2026-11-20T12:23:11.468Z",
  "screensFiredAt": "2026-11-18T18:27:32.582Z",
  "metrics": {
-  "commit": "651d28a",
+  "commit": "077a992",
   "tables": {
    "costs": {
     "요금별 한 달 비용 (30일) · 무료(2.75 이하 앱) · 하루 한도": "대본 25줄 · 팩 1번 · 통화 없음(처음 10포인트 별도) · 채팅 7번",
@@ -189,6 +189,10 @@
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · notebookPhrases · 모델 호출": "1",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · notebookPhrases · 값 매기는 법": "claude-haiku-5-5 2700/900 토큰 (기능 notes)",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · notebookPhrases · 근거": "가정",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · videoGloss · 한 번": "1원",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · videoGloss · 모델 호출": "2",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · videoGloss · 값 매기는 법": "claude-haiku-5-5 2000/300 토큰 (기능 video)",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · videoGloss · 근거": "가정",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · recallPrompts · 한 번": "0.9원",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · recallPrompts · 모델 호출": "2",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · recallPrompts · 값 매기는 법": "claude-haiku-5-5 600/500 토큰 (기능 translate)",
@@ -405,6 +409,10 @@
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · translateKept · 모델 호출": "0",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · translateKept · 값 매기는 법": "돈 안 듦(비율용 기록)",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · translateKept · 근거": "—",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · videoGlossKept · 한 번": "0원",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · videoGlossKept · 모델 호출": "0",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · videoGlossKept · 값 매기는 법": "돈 안 듦(비율용 기록)",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · videoGlossKept · 근거": "—",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · chat · 모델": "claude-haiku-5-5",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · chat · 입력/출력 (100만 토큰당)": "$0.1 / $0.5",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · chat · 출처": "platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트)",

@@ -1,24 +1,27 @@
-Start speaking Korean with languagebank. It sets your Korean for the day, gets you saying situation scripts out loud, and brings back what you got wrong a few days later. New to Hangul? Start with letters and sounds.
+Start speaking Korean with languagebank. Call and chat with an AI tutor in Korean: it shows you the corrected line right away, and a daily quiz locks in what you learn. New to Hangul? Start with letters and sounds.
 
-YOUR DAILY LEARNING FLOW
-1. Start at your stage: read a short conversation and answer "Yes, I can", "Almost" or "Not yet" to start at the right one of five stages. New to a script? Begin with letters and sounds.
-2. Today's plan: pick 5, 10 or 20 minutes a day and see how many days it takes to finish. "In order" or "From my record" sets the day's scripts and sentence structures.
-3. Speak the script: say your lines in situation scripts with 🎤 — Repeat after, First letters, Hidden or Own words. A perfect line gets ★; a correct but stiff one gets a more natural way to say it, and unclear words are pointed out. Saying it another correct way still passes, and you can pick up where you stopped the same day.
-4. Swap the sentence structure: say one structure many times, changing only the words.
-5. Review: at the end of a script mark each phrase "I know it" or "Not sure". What confused you and lines you missed come back as a short quiz after 2 and 7 days, and gather at the top of My under "What you got wrong last time". Turn on "Morning reminder" to see them on your lock screen.
-6. What you learned today: the day's sentence structures, grammar and words, each showing which script and line it came from.
+Learn with an AI tutor
+• Call: talk freely with your tutor. A coach shows corrections as captions under your face; say it again and it checks right away. Homework comes when something was corrected.
+• Chat: corrected sentences show up right away. Stuck? Write in your own language and the tutor carries on in the one you are learning.
 
-USE IT IN CONVERSATION
-• AI tutor chat: talk like friends; only the slips get fixed. Stuck? Write in your own language and the tutor carries on in the one you're learning — "Show how to say it" shows the line you wanted. Use a phrase you marked on your own and the line shows "Used again".
-• AI calls: speak out loud. Even when it comes out messy, the tutor finds what you meant, and you can look back afterwards.
-• Sentence analysis: pick just the part you don't get in any sentence and ask what it means.
-• Video: real videos split into sentences to replay and ask about.
+Many kinds of quizzes (Quizbank)
+• Choose, meaning, find the error and write the sentence, all in one flow.
+• It gets harder as you get answers right, and what you missed or got stuck on in conversation comes back.
+• Make it easier or harder yourself.
 
-LEARN WITH PEOPLE
-• In Rooms, talk by voice with others learning the same language, with live captions, and carry on in group chats and one-to-one messages.
+Every word to learn, in one place (Languagebank)
+• Browse words, expressions and grammar by type and level, and learn each set with a quiz or a conversation.
+• Flip cards to memorize meanings, words and examples.
 
-NO LEVEL SCORES
-• Every sentence gets its mistakes and gaps pointed out; your record decides what comes next.
+Watch what you learn add up (Logbank)
+• A learning curve shows what you studied in quizzes and what you used in conversation, day by day.
+• Look back at what you did each day, hour by hour.
 
-PRICING
-• Stage scripts are free (with ads). The Scripts plan adds short calls and chat; Lite, Plus and Premium remove ads and add more chat and daily call time.
+Learn with other people
+• Connect with learners of the same language through profiles, the board and messages, and talk by voice in a Room.
+
+Getting started
+• A short check on first launch sets your starting level. There are no level scores.
+
+Pricing
+• Quizbank, Languagebank and lessons are free (with ads). Try 10 minutes of calls and 10 chat messages; Lite, Plus and Premium remove ads and add daily call time and chat messages.

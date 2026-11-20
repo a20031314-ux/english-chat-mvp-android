@@ -92,7 +92,7 @@ export function CallStage({
       <section className="flex min-h-0 flex-1 flex-col items-center justify-center-safe gap-3 overflow-y-auto px-6 py-2 text-center [&>*]:shrink-0" data-call-tutor>
         <SpeakingRing speaking={speaker === "tutor"}>
           {/* Smaller face when a long caption is up, so it fits its half (2026-11-17 overlap report). */}
-          <AiAvatar size={(caption?.text.length ?? 0) > 90 ? 64 : 96} language={language} gender={partner.gender} />
+          <AiAvatar size={coach || (caption?.text.length ?? 0) > 90 ? 64 : 96} language={language} gender={partner.gender} />
         </SpeakingRing>
         <p className="flex items-center gap-2 text-title font-semibold text-ink">
           <bdi>{partner.givenName}</bdi>
@@ -117,10 +117,11 @@ export function CallStage({
       <div aria-hidden className="mx-6 shrink-0 border-t border-white/10" />
 
       {/* 아래: 나 */}
-      <section className="flex min-h-0 flex-1 flex-col items-center justify-center-safe gap-3 overflow-y-auto px-6 py-2 text-center [&>*]:shrink-0" data-call-me>
+      {/* 고친 말 카드가 뜨면 아래 반을 넓히고 내 얼굴을 줄여 카드가 스크롤 없이 다 보이게(사용자 2026-11-20 "살짝 잘려서 스크롤"). */}
+      <section className={`flex min-h-0 flex-col items-center justify-center-safe overflow-y-auto px-6 py-2 text-center [&>*]:shrink-0 ${coach ? "flex-[1.6] gap-2" : "flex-1 gap-3"}`} data-call-me>
         <SpeakingRing speaking={speaker === "learner"} waiting={speaker === "listening"} tone="good">
           {/* Smaller own face while a correction card is up, so the card fits its half (2026-11-18 clipped card). */}
-          <MyAvatarFace size={coach ? 64 : 96} />
+          <MyAvatarFace size={coach ? 48 : 96} />
         </SpeakingRing>
         {speaker === "listening" ? (
           <div className="flex h-6 items-end justify-center" aria-hidden>
@@ -130,7 +131,7 @@ export function CallStage({
           <TalkingBars on={speaker === "learner"} />
         )}
         {coach ? (
-          <CoachCardView key={`${coach.said}|${coach.right}`} card={coach} language={language} coachGender={partner.gender === "f" ? "m" : "f"} />
+          <CoachCardView key={`${coach.said}|${coach.right}`} card={coach} />
         ) : goal ? (
           <p className="max-w-md text-meta text-slate-400">{goal}</p>
         ) : null}
@@ -144,22 +145,17 @@ export function CallStage({
  * ✎ 고친 말이면 내 말(틀린 곳 빨간 취소선) → 고친 문장, 💬 내 말·부서진 말이면 흐리게 내 말 → 학습 언어 문장,
  * 💡 더 자연스러운 말이면 내 말 → 그 말. 고친 문장 앞 →(따라 말해 봐도 됨) / ✓(따라 말해 맞힘). 까닭 한 줄은 앱 언어, 작게. 설명 글 없이.
  */
-function CoachCardView({ card, language, coachGender }: { card: CoachCard; language: string; coachGender: TutorGender }) {
+function CoachCardView({ card }: { card: CoachCard }) {
   const icon = card.kind === "offer" ? "💡" : card.kind === "meant" ? "💬" : "✎";
   // 틀린 말이면 노란 테두리로 한 번 번쩍(coach-pop), 한 차례 지나면 흐림(old).
   const tone = card.kind !== "offer" ? "border-warn/60 bg-warn/10" : "border-white/10 bg-white/5";
   const lead = card.passed ? "✓" : card.kind === "offer" ? "💡" : "→";
-  const coach = chatPartnerForLanguage(language, coachGender);
   return (
     <div
       className={`w-full max-w-md rounded-xl border px-3 py-2.5 text-start transition-opacity ${tone} ${!card.old && !card.passed ? "coach-pop" : ""} ${card.old ? "opacity-50" : ""}`}
       data-call-coach={card.kind}
       data-call-coach-state={card.passed ? "passed" : card.old ? "old" : "new"}
     >
-      <p className="mb-1 flex items-center gap-1.5 text-caption text-slate-400" data-call-coach-who>
-        <AiAvatar size={20} language={language} gender={coachGender} />
-        <bdi>{coach.givenName}</bdi>
-      </p>
       {card.kind !== "offer" && card.said ? (
         <p className="flex items-start gap-1.5 text-meta text-slate-400">
           <span aria-hidden>{icon}</span>

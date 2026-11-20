@@ -35,7 +35,7 @@
 - **사전 예문 오류 고치기:** `hub/work/drafts/dict-errors-2026-11-10.txt`(ar 110 · fr 3) — word-sentences 고치고 `--check`.
 - **앱 언어별 짧은 뜻 미리 채우기:** 사전 예문은 14개 언어 다 채움(2026-11-10) — 짧은 뜻은 사용자 결정 대기(Haiku 묶음 API로 수십 달러 추정).
 - **같이 배우기 남은 것:** 문법 이름이 ko·en 밖 앱 언어에서 영어(stageScripts TRANSLATED에 문법 이름 옮기기 — Cursor 에이전트), 반말·구어 표현은 틀이 안 잡힘(framesInLine 넓히기), 유의어(데이터 없음 — 만들면 Cursor 에이전트로 고정 데이터), 활용형 맞추기(es comer처럼 틀 예문에 그 꼴이 없으면 칸이 안 보임), 사람 대화에서 맞게 쓴 말은 장부에 안 남아 대화 수에 안 듦(4번 탭과).
-- **통화 하나(코치 띠) 남은 것:** 실제 기기 한 번 — 띠가 말하는 중에 방해되지 않나·따라 말하기 채점이 받아쓰기 탓으로 너무 짠가·요즘 배운 말이 대화에 나오나. 사용법 장면 그림 `call-talk-1·2` 다시 찍기(코치 얼굴, `scripts/guide-slides/shoot-call.mjs` → compose). 감독 `coach`·`study`·`studyOpen` 길은 Play 2.79용(FEATURES 옛 앱 전용) — 최소 지원 2.80이면 지움.
+- **통화 하나(코치 띠) 남은 것:** 실제 기기 한 번 — 띠가 말하는 중에 방해되지 않나·따라 말하기 채점이 받아쓰기 탓으로 너무 짠가·요즘 배운 말이 대화에 나오나. 사용법 장면 그림 `call-talk-1·2` 다시 찍기(코치 띠 — 얼굴 없음, `scripts/guide-slides/shoot-call.mjs` → compose). 감독 `coach`·`study`·`studyOpen` 길은 Play 2.79용(FEATURES 옛 앱 전용) — 최소 지원 2.80이면 지움.
 - **섞어 말하기 통화(설계만):** `hub/work/drafts/call-mix-2026-11-08.md` — 정할 것 셋 사용자 대기.
 - **체감 점검 2026-11-09 남은 지적:** 쉬운 단어(`presumedWords` 순위 0부터·카드 없을 때 묶음 퀴즈로 빠짐), 뜻 없는 빈칸(`glossFirst`), U11 숙제 끝 화면 — 보고서 `hub/work/drafts/ux-check-2026-11-09.md`, 순서는 사용자.
 

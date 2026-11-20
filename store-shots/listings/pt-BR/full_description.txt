@@ -1,24 +1,27 @@
-O languagebank define o que estudar a cada dia e faz você falar em voz alta. Aprenda qualquer um de 14 idiomas, com o app em qualquer um de 14 idiomas.
+O languagebank é um app para aprender idiomas falando e escrevendo com um tutor de IA. Aprenda qualquer um de 14 idiomas, com o app em qualquer um de 14 idiomas.
 
-SEU DIA DE ESTUDO
-1. Comece na sua etapa: leia uma conversa curta e responda «Sim, consigo», «Quase» ou «Ainda não» para começar na etapa certa entre cinco. Escrita nova? Comece pelas letras e sons.
-2. Plano de hoje: escolha 5, 10 ou 20 minutos por dia e veja em quantos dias termina. «Na ordem» ou «Pelo meu histórico» define os roteiros e estruturas do dia.
-3. Fale o roteiro: diga suas falas em roteiros de situações com 🎤 — Repetir, Primeiras letras, Oculto ou Com suas palavras. Uma fala perfeita recebe ★; se está certa mas pouco natural, você recebe uma forma mais natural, e as palavras pouco claras são assinaladas. Dizer de outra forma correta também passa, e no mesmo dia dá para continuar de onde parou.
-4. Troque na estrutura da frase: diga uma estrutura várias vezes trocando só as palavras.
-5. Revisão: no fim do roteiro marque cada expressão «Eu sei» ou «Não tenho certeza». O que ficou confuso e as falas erradas voltam como um quiz curto depois de 2 e 7 dias e se juntam no topo de Meu espaço, em «O que você errou da última vez». Com o «Lembrete da manhã» aparecem no tela de bloqueio.
-6. O que você aprendeu hoje: estruturas, gramática e palavras do dia, cada uma com o roteiro e a frase de onde veio.
+Aprenda com um tutor de IA
+• Ligação: converse à vontade com o tutor. Um treinador mostra as correções em legendas embaixo do seu rosto; repita e a verificação é na hora. Se algo foi corrigido, vem uma lição de casa.
+• Chat: as frases corrigidas aparecem na hora. Se travar, escreva no seu idioma e o tutor continua no idioma que você está aprendendo.
 
-USE NA CONVERSA
-• Chat com o tutor de IA: converse como com um amigo; só os erros são corrigidos. Travou? Escreva em português e o tutor continua no idioma que você aprende; «Ver como se diz» mostra a frase que você queria. Se você usar por conta própria uma expressão que marcou, a linha mostra «Usou de novo».
-• Chamadas com IA: fale em voz alta. Mesmo que saia confuso, o tutor descobre o que você queria dizer, e depois dá para rever.
-• Análise de frases: em qualquer frase escolha só a parte que você não entende e pergunte o que significa.
-• Vídeo: vídeos reais divididos em frases para repetir e perguntar.
+Vários tipos de quiz (Quizbank)
+• Escolher, significado, achar o erro e escrever a frase, tudo num fluxo só.
+• Fica mais difícil conforme você acerta, e o que você errou ou o que te travou numa conversa volta a aparecer.
+• Você pode deixar mais fácil ou mais difícil.
 
-APRENDA COM PESSOAS
-• Nas Salas fale por voz com quem aprende o mesmo idioma, com legendas ao vivo, e continue em grupos e mensagens privadas.
+Todas as palavras para aprender, num lugar só (Languagebank)
+• Veja palavras, expressões e gramática por tipo e nível, e aprenda cada grupo com um quiz ou uma conversa.
+• Vire cartões para memorizar significados, palavras e exemplos.
 
-SEM PONTUAÇÃO DE NÍVEL
-• Cada frase recebe seus erros e lacunas; seu histórico decide o que vem a seguir.
+Veja o que você aprendeu se acumular (Logbank)
+• Uma curva de aprendizado mostra, dia a dia, o que você estudou nos quizzes e o que usou nas conversas.
+• Reveja o que fez em cada dia, hora a hora.
 
-PREÇOS
-• Os roteiros por etapa são grátis (com anúncios). O plano «Roteiros» inclui chamadas curtas e chat; Lite, Plus e Premium tiram os anúncios e trazem mais chat e minutos de chamada por dia.
+Aprenda com outras pessoas
+• Conecte-se com quem aprende o mesmo idioma por perfis, mural e mensagens, e converse por voz numa Sala.
+
+Para começar
+• Na primeira vez que você abre o app, um teste curto define seu nível inicial. Não há pontuação de nível.
+
+Preços
+• Quizbank, Languagebank e as aulas são gratuitos (com anúncios). Experimente 10 minutos de ligação e 10 mensagens; Lite, Plus e Premium tiram os anúncios e aumentam o tempo de ligação e as mensagens diárias.

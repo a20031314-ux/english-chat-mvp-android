@@ -6922,44 +6922,70 @@
       "base": "4bcaf97",
       "head": "4bcaf97",
       "status": "open"
+    },
+    {
+      "id": "a261120-3-2",
+      "at": "2026-11-20 19:08",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "소재 수업 설명 만드는 중 표시(띠)",
+      "files": [
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/components/studyMap/LessonHost.tsx"
+      ],
+      "features": [
+        "소재 수업"
+      ],
+      "base": "a8c1a14ace274abf849d7d6ed0ab69ba628f48ef",
+      "head": "3422263",
+      "status": "open"
+    },
+    {
+      "id": "a261120-3-3",
+      "at": "2026-11-20 19:59",
+      "kind": "apply",
+      "from": "3",
+      "to": "1",
+      "what": "통화 코치 띠 얼굴 뺌·띠 뜨면 얼굴 작게",
+      "files": [
+        "src/app/dev/call-preview/page.tsx"
+      ],
+      "features": [
+        "통화 설명",
+        "통화",
+        "통화 끝 화면",
+        "Logbank",
+        "오늘의 학습"
+      ],
+      "base": "5b2ff39e069356c4bdcfa63dd120a418118a0464",
+      "head": "7711b98",
+      "status": "open"
+    },
+    {
+      "id": "a261120-3-4",
+      "at": "2026-11-20 19:59",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "통화 코치 띠 얼굴 뺌·띠 뜨면 얼굴 작게",
+      "files": [
+        "src/components/studyMap/Logbank.tsx"
+      ],
+      "features": [
+        "통화 설명",
+        "통화",
+        "통화 끝 화면",
+        "Logbank",
+        "오늘의 학습"
+      ],
+      "base": "5b2ff39e069356c4bdcfa63dd120a418118a0464",
+      "head": "7711b98",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-09 17:23",
-      "from": "2",
-      "base": "f3d12a5db02c06c9dd2ba846489a4279dd510baa",
-      "head": "f1be0fa",
-      "what": "같이 배우기 칩(StudyChips)을 채팅 표현 보기 아래·통화 정리 줄에 붙임, 표현 보기 열면 장부 chat miss",
-      "tabs": [
-        "1",
-        "2",
-        "3"
-      ],
-      "asks": [
-        "a261109-2-5",
-        "a261109-2-6"
-      ]
-    },
-    {
-      "at": "2026-11-09 17:34",
-      "from": "6",
-      "base": "f8e65b71f169052ce56e0d2fd3c915e2ea50483d",
-      "head": "f8e65b7",
-      "what": "iOS에서도 AI 통화·포인트를 켬(platform.ts voiceCallAvailable 지움) — 통화 탭·📞·다음 걸음 통화·결제 화면 통화 시간 줄·포인트 가게가 iOS에 나옴. 웹·안드로이드는 원래 켜져 있어 그대로",
-      "tabs": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "asks": [
-        "a261109-6-1",
-        "a261109-6-2",
-        "a261109-6-3",
-        "a261109-6-4"
-      ]
-    },
     {
       "at": "2026-11-09 17:40",
       "from": "5",
@@ -7576,10 +7602,39 @@
         "a261120-1-3",
         "a261120-1-4"
       ]
+    },
+    {
+      "at": "2026-11-20 19:08",
+      "from": "3",
+      "base": "a8c1a14ace274abf849d7d6ed0ab69ba628f48ef",
+      "head": "3422263",
+      "what": "소재 수업 설명 만드는 중 표시(띠)",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261120-3-2"
+      ]
+    },
+    {
+      "at": "2026-11-20 19:59",
+      "from": "3",
+      "base": "5b2ff39e069356c4bdcfa63dd120a418118a0464",
+      "head": "7711b98",
+      "what": "통화 코치 띠 얼굴 뺌·띠 뜨면 얼굴 작게",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261120-3-3",
+        "a261120-3-4"
+      ]
     }
   ],
   "seq": {
-    "261120-3": 1,
+    "261120-3": 4,
     "261120-1": 4
   }
 }

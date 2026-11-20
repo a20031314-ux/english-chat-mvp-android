@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (91)
+## 탭이 확인할 것 (94)
 
 ### 탭 1 메인
 
@@ -116,6 +116,10 @@
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/FindInMy.tsx` · `components/LanguagePick.tsx` · `components/EnglishAnalysisViewer.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/learner/ask/route.ts` · `app/api/points/sync/route.ts` … 72개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261120-3-3** (2026-11-20 19:59, 탭 3 · 7711b98) 통화 코치 띠 얼굴 뺌·띠 뜨면 얼굴 작게
+  - 기능: 통화 설명 · 통화 · 통화 끝 화면 · Logbank · 오늘의 학습
+  - 볼 곳: `app/dev/call-preview/page.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
 
@@ -206,6 +210,14 @@
 - **a261120-1-2** (2026-11-20 19:07, 탭 1 · 4bcaf97) 채팅·영상 자막·통화 돌아보기 줄 아래 표현 장부 칩(LedgerLinks) 지움, 옛 앱 영상 번역 서버 되살림
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/studyMap/Logbank.tsx` · `app/api/curriculum/ask/route.ts` · `app/api/curriculum/frame-lesson/route.ts` · `app/api/curriculum/generate/route.ts` · `app/api/curriculum/item-lesson/route.ts` · `app/api/curriculum/mission-check/route.ts` · `app/api/curriculum/missions/route.ts` · `app/api/curriculum/option-notes/route.ts` · `app/api/curriculum/pick/route.ts` · `app/api/curriculum/qbank/route.ts` … 31개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261120-3-2** (2026-11-20 19:08, 탭 3 · 3422263) 소재 수업 설명 만드는 중 표시(띠)
+  - 기능: 소재 수업
+  - 볼 곳: `components/studyMap/FrameLesson.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261120-3-4** (2026-11-20 19:59, 탭 3 · 7711b98) 통화 코치 띠 얼굴 뺌·띠 뜨면 얼굴 작게
+  - 기능: 통화 설명 · 통화 · 통화 끝 화면 · Logbank · 오늘의 학습
+  - 볼 곳: `components/studyMap/Logbank.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
