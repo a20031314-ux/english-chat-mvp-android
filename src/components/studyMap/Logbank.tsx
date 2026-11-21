@@ -1305,6 +1305,13 @@ function Learned({
   // 줄 = 무엇(어휘·문법·표현·문장구조), 칸 = 학습(그 기간에 푼 것) · 활용(대화에서 맞게 씀) — 익힘은 뺌(같은 밤 "기준이 모호, 활용과 겹침"),
   // 아래 다시 맞힘 · 고쳐 씀 · 통화. 계산 curriculum/growthView.ts.
   const [open, setOpen] = useState<{ part: CardPart; col: GrowCol } | "call" | "recovered" | "fixed" | null>(null);
+  // 쌓기에서 누른 카드(블록 하나 또는 그날 한 요소) — 위 표 칸과 같은 카드 시트.
+  const [stackCards, setStackCards] = useState<{ title: string; keys: readonly string[] } | null>(null);
+  const stackLabel = (key: string) => {
+    if (!key.startsWith("g|")) return keyLabel(key);
+    const [stage, index] = key.slice(2).split(":").map(Number);
+    return grammarName(stage ?? 0, index ?? 0) || keyLabel(key);
+  };
   const days = useMemo(() => periodDays(period, today), [period, today]);
   const progress = useMemo(() => progressIn(ledger, (t) => inPeriod(period, dayOfSeconds(t))), [ledger, period]);
   const inTime = useMemo(() => (t: number) => inPeriod(period, dayOfSeconds(t)), [period]);
@@ -1369,7 +1376,7 @@ function Learned({
           </tbody>
         </table>
       ) : null}
-      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} onDay={onDay} /> : null}
+      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} /> : null}
       {extras.length ? (
         <div data-growth className="flex flex-wrap gap-1.5">
           {extras.map((one) => (
@@ -1389,6 +1396,11 @@ function Learned({
       {openCell ? (
         <LogSheet title={`${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
           <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
+        </LogSheet>
+      ) : null}
+      {stackCards ? (
+        <LogSheet title={stackCards.title} ui={ui} onClose={() => setStackCards(null)}>
+          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(stackCards.keys.slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}
       {open === "recovered" ? (
@@ -1510,7 +1522,7 @@ function LearnedCards({
 /**
  * 날마다 쌓기(사용자 2026-11-21 "각각 위치를 정해서 순차적으로 쌓는 게 낫지 않을까 — 오늘의 총 학습량에서 단어 비율이 많았다 이런 게 보이게"):
  * 기간의 날마다 기둥 하나, 그날 퀴즈로 답한 서로 다른 것 하나 = 블록 하나, 자리는 아래부터 단어 → 문법 → 표현 → 문장구조(요소 색, bankTone PART_BG).
- * 이 기간 앞날에 이미 답한 것은 흐린 블록(기둥 합에서 흐린 것을 빼면 위 "학습"과 같다). 기둥을 누르면 아래에 그날 비율 막대·요소별 수·📞, "학습 n ›"이 그날 학습 타임라인.
+ * 이 기간 앞날에 이미 답한 것은 흐린 블록(기둥 합에서 흐린 것을 빼면 위 "학습"과 같다). 블록을 누르면 그 카드(사용자 2026-11-21 "클릭하면 학습카드"), 기둥을 누르면 아래에 그날 비율 막대·요소별 수·📞, "학습 n ›"이 그날 학습 타임라인.
  * 숫자는 개수만(퍼센트 없음 — DESIGN.md "값 꼬리표"). 한 칸이 너무 많으면 블록 대신 이어진 막대로.
  */
 function DayStacks({
@@ -1520,7 +1532,9 @@ function DayStacks({
   today,
   notes,
   dateLabel,
+  keyLabel,
   onDay,
+  onCards,
 }: {
   ui: UICopy;
   locale: string;
@@ -1528,7 +1542,10 @@ function DayStacks({
   today: string;
   notes: readonly CallNote[];
   dateLabel: (day: string) => string;
+  keyLabel: (key: string) => string;
   onDay: (day: string) => void;
+  /** 카드 시트 열기 — 블록 하나(그 카드) · 그날 한 요소(그 카드들). */
+  onCards: (title: string, keys: readonly string[]) => void;
 }) {
   const callsOf = (day: string) => notes.filter((note) => sameDay(localDay(note.at), day)).length;
   const active = stacks.filter((one) => one.n || callsOf(one.day));
@@ -1549,15 +1566,11 @@ function DayStacks({
           const on = sameDay(one.day, shown.day);
           const future = dayValue(one.day) > dayValue(today);
           return (
-            <button
+            <div
               key={one.day}
-              type="button"
               data-day-stack={one.day}
-              aria-pressed={on}
-              aria-label={`${dayFormat(locale, one.day)} ${ui.lbFresh} ${one.n}`}
-              disabled={future}
-              onClick={() => setPick(one.day)}
-              className={`flex h-full min-w-0 flex-1 flex-col-reverse items-stretch rounded-lg px-0.5 pb-0.5 ${on ? "bg-white/10" : "hover:bg-white/5"} ${future ? "opacity-30" : ""}`}
+              onClick={future ? undefined : () => setPick(one.day)}
+              className={`flex h-full min-w-0 flex-1 cursor-pointer flex-col-reverse items-stretch rounded-lg px-0.5 pb-0.5 ${on ? "bg-white/10" : "hover:bg-white/5"} ${future ? "opacity-30" : ""}`}
             >
               {LEARN_PARTS.map((part) => {
                 const n = one.parts[part];
@@ -1571,19 +1584,39 @@ function DayStacks({
                     </span>
                   );
                 }
-                return Array.from({ length: n }, (_, k) => (
-                  <span key={`${part}-${k}`} data-stack-block={part} className={`mt-0.5 block ${PART_BG[part]} ${k >= n - dim ? "opacity-40" : ""}`} style={{ height: unit - 2 }} />
+                return one.keys[part].map((key, k) => (
+                  <button
+                    key={key}
+                    type="button"
+                    data-stack-block={part}
+                    aria-label={keyLabel(key)}
+                    title={keyLabel(key)}
+                    onClick={() => {
+                      setPick(one.day);
+                      onCards(`${learnPartName(ui, part)} · ${keyLabel(key)}`, [key]);
+                    }}
+                    className={`mt-0.5 block w-full ${PART_BG[part]} ${k >= n - dim ? "opacity-40" : ""} hover:brightness-125`}
+                    style={{ height: unit - 2 }}
+                  />
                 ));
               })}
-            </button>
+            </div>
           );
         })}
       </div>
       <div className="flex gap-1" dir="ltr">
         {stacks.map((one, i) => (
-          <span key={one.day} className={`min-w-0 flex-1 text-center text-meta tabular-nums ${sameDay(one.day, shown.day) ? "text-ink" : "text-slate-500"}`}>
+          <button
+            key={one.day}
+            type="button"
+            aria-pressed={sameDay(one.day, shown.day)}
+            aria-label={`${dayFormat(locale, one.day)} ${ui.lbFresh} ${one.n}`}
+            disabled={dayValue(one.day) > dayValue(today)}
+            onClick={() => setPick(one.day)}
+            className={`min-h-6 min-w-0 flex-1 text-center text-meta tabular-nums ${sameDay(one.day, shown.day) ? "text-ink" : "text-slate-500"}`}
+          >
             {i % every === 0 || i === stacks.length - 1 ? dateLabel(one.day) : ""}
-          </span>
+          </button>
         ))}
       </div>
       <div data-day-stack-detail={shown.day} className="flex flex-col gap-2 border-t border-line pt-2">
@@ -1594,14 +1627,14 @@ function DayStacks({
           </span>
           {shown.n || calls ? <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span> : null}
         </button>
-        {shown.n ? <PartSplit ui={ui} parts={shown.parts} /> : null}
+        {shown.n ? <PartSplit ui={ui} parts={shown.parts} onPart={(part) => onCards(`${dayFormat(locale, shown.day)} · ${learnPartName(ui, part)} ${shown.parts[part]}`, shown.keys[part])} /> : null}
       </div>
     </div>
   );
 }
 
-/** 요소 비율: 이어진 막대 하나(자리 순서 그대로) + 요소마다 색 네모·이름·수. 학습 시간 줄(SessionRows)과 쌓기 아래가 같이 씀. */
-function PartSplit({ ui, parts }: { ui: UICopy; parts: Record<CardPart, number> }) {
+/** 요소 비율: 이어진 막대 하나(자리 순서 그대로) + 요소마다 색 네모·이름·수. 학습 시간 줄(SessionRows)과 쌓기 아래가 같이 씀 — 쌓기 아래(onPart)에선 요소를 누르면 그 카드들. */
+function PartSplit({ ui, parts, onPart }: { ui: UICopy; parts: Record<CardPart, number>; onPart?: (part: CardPart) => void }) {
   const shown = LEARN_PARTS.filter((part) => parts[part]);
   return (
     <span data-part-split className="flex flex-col gap-1.5">
@@ -1611,12 +1644,19 @@ function PartSplit({ ui, parts }: { ui: UICopy; parts: Record<CardPart, number> 
         ))}
       </span>
       <span className="flex flex-wrap gap-x-3 gap-y-1 text-meta tabular-nums text-slate-300">
-        {shown.map((part) => (
-          <span key={part} className="inline-flex items-center gap-1.5">
-            <PartMark part={part} />
-            {`${learnPartName(ui, part)} ${parts[part]}`}
-          </span>
-        ))}
+        {shown.map((part) =>
+          onPart ? (
+            <button key={part} type="button" data-part-cards={part} onClick={() => onPart(part)} className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-line px-2.5 hover:bg-white/5">
+              <PartMark part={part} />
+              {`${learnPartName(ui, part)} ${parts[part]}`}
+            </button>
+          ) : (
+            <span key={part} className="inline-flex items-center gap-1.5">
+              <PartMark part={part} />
+              {`${learnPartName(ui, part)} ${parts[part]}`}
+            </span>
+          ),
+        )}
       </span>
     </span>
   );

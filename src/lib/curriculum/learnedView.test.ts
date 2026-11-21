@@ -52,8 +52,8 @@ test("날마다 쌓기: 그날 서로 다른 것 요소별 · 기간 앞날에 �
     { k: "w|comer", src: "quiz" as const, r: "ok" as const, m: "pick" as const, t: t0 },
   ];
   const stacks = stacksOf(events, ["2026-11-02", "2026-11-03"], day);
-  assert.deepEqual(stacks[0], { day: "2026-11-02", n: 2, parts: { word: 1, grammar: 1, expression: 0, frame: 0 }, again: { word: 0, grammar: 0, expression: 0, frame: 0 } });
-  assert.deepEqual(stacks[1], { day: "2026-11-03", n: 2, parts: { word: 1, grammar: 0, expression: 1, frame: 0 }, again: { word: 1, grammar: 0, expression: 0, frame: 0 } });
+  assert.deepEqual(stacks[0], { day: "2026-11-02", n: 2, parts: { word: 1, grammar: 1, expression: 0, frame: 0 }, again: { word: 0, grammar: 0, expression: 0, frame: 0 }, keys: { word: ["w|食べる"], grammar: ["g|1:2"], expression: [], frame: [] } });
+  assert.deepEqual(stacks[1], { day: "2026-11-03", n: 2, parts: { word: 1, grammar: 0, expression: 1, frame: 0 }, again: { word: 1, grammar: 0, expression: 0, frame: 0 }, keys: { word: ["w|食べる"], grammar: [], expression: ["e|¿de dónde eres?"], frame: [] } });
   // 기둥 합 − again = 기간 서로 다른 것(食べる·1:2·¿de dónde eres? = 3), 기간 앞날(11-01)의 comer는 안 셈.
   const total = stacks.reduce((sum, one) => sum + one.n - Object.values(one.again).reduce((a, b) => a + b, 0), 0);
   assert.equal(total, 3);

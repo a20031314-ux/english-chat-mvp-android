@@ -65,9 +65,9 @@ export function curveReady(points: readonly CurvePoint[]): boolean {
 /**
  * 날마다 쌓기(Logbank 쌓기 기둥·학습 곡선 막대 — 사용자 2026-11-21 "각각 위치를 정해서 순차적으로 쌓는 게 낫지 않을까, 오늘 총 학습량에서 단어 비율이 많았다 이런 게 보이게").
  * parts = 그날 퀴즈로 답한 서로 다른 것(요소별), again = 그중 이 기간 앞날에 이미 답한 것 — 기둥을 다 더해도 again을 빼면 기간 "학습"(서로 다른 것)과 같다.
- * n = 그날 학습(parts 합) — "학습"은 언제나 서로 다른 것의 수(lbFresh 한 뜻).
+ * n = 그날 학습(parts 합) — "학습"은 언제나 서로 다른 것의 수(lbFresh 한 뜻). keys = 요소마다 그 열쇠(쌓는 차례 — 처음 답한 것 먼저, again은 뒤).
  */
-export type DayStack = { day: string; n: number; parts: Record<CardPart, number>; again: Record<CardPart, number> };
+export type DayStack = { day: string; n: number; parts: Record<CardPart, number>; again: Record<CardPart, number>; keys: Record<CardPart, string[]> };
 
 const zeroParts = (): Record<CardPart, number> => ({ word: 0, grammar: 0, expression: 0, frame: 0 });
 
@@ -83,13 +83,20 @@ export function stacksOf(events: readonly LogEvent[], days: readonly string[], d
   return days.map((day, i) => {
     const parts = zeroParts();
     const again = zeroParts();
+    const fresh: Record<CardPart, string[]> = { word: [], grammar: [], expression: [], frame: [] };
+    const old: Record<CardPart, string[]> = { word: [], grammar: [], expression: [], frame: [] };
     for (const key of keys[i]!) {
       const part = partOf(key)!;
       parts[part] += 1;
-      if (seen.has(key)) again[part] += 1;
+      if (seen.has(key)) {
+        again[part] += 1;
+        old[part].push(key);
+      } else fresh[part].push(key);
     }
     for (const key of keys[i]!) seen.add(key);
-    return { day, n: keys[i]!.size, parts, again };
+    const byPart = { word: [], grammar: [], expression: [], frame: [] } as Record<CardPart, string[]>;
+    for (const part of LEARN_PARTS) byPart[part] = [...fresh[part], ...old[part]];
+    return { day, n: keys[i]!.size, parts, again, keys: byPart };
   });
 }
 
