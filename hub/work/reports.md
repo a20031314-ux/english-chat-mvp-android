@@ -36,6 +36,16 @@
 
 ## 새 보고
 
+### 2026-11-22 · 가상 사용자 화면 점검 · 운영 Anthropic 키가 401(invalid x-api-key) — Claude 기능 전부 OpenAI 대체로 돌고, 점검 사용자에겐 500
+- 무엇을: 지금 main(c4a599b) www, `sim:screens` ja:ko·en:ja·es:ar·en:ko 42장면(168장), 조합별로 모아 직접 봄 + 운영 API 직접 확인
+- 결과: 4조합 모두 모델을 부르는 시트가 실패 문구 — 채팅 "표현 보기"(표현을 불러오지 못했어요), 문장분석·빠른 질문·단어 저장(en:ko), 방 댓글 "학습 언어로"(문장을 만들지 못했어요), 프로필 "한국어로 보기"(번역하지 못했어요). 운영 확인: 같은 `/api/translate`·`/api/chat`(how_to_say)가 익명·일반 id는 200, `simcheck-` id만 빈 500. 점검 경로를 Haiku로 고정(`x-sim-model-routes`)하니 오류 내용 `anthropic 401 authentication_error: invalid x-api-key` — **운영 Vercel `ANTHROPIC_API_KEY`가 무효**. 실제 사용자는 `llm.ts` 대체(OpenAI gpt-6-luna)로 답을 받고 있어 화면은 되지만, Claude로 정한 기능(채팅 교정 Haiku·확인 Sonnet·문제 판정 등)이 모두 다른 모델·다른 단가로 도는 중(11-16 점검 땐 정상). 점검 사용자만 500인 건 대체가 붙이는 `x-sim-models` 헤더 값의 "(대체)" 한글이 헤더로 못 들어가서로 보임(추정, cors.ts·llm.ts:189).
+  그 밖: 막힘 60 — 48은 알려진 것(첫 측정 때문의 My 장면·board-likes·sentence-ask·word-card·icons-create), en:ko는 브라우저가 중간에 꺼져 뒤 장면 13개 ✗ → 다시 찍어 10개 ✓(people-profile·profile-translate는 앞 장면이 있어야 해 점검 쪽), en:ja chat-reading 1번 ✗(다른 조합 ✓). 프로필 시트 맨 위층 검사 3장면 4조합 ✓(UI 숨겨짐 없음). 아랍어 방향·글자 잘림·다른 언어 문구 새로 없음.
+  장면 갱신 필요(점검 쪽): `icons` 장면이 사람 목록 마지막 "메시지"를 눌러 실제 사용자로 보이는 1:1(Mayur Luhadia) 화면 위에서 찍힘 — 테스트 계정으로 거르기. `guide` 그림 깨짐은 11-16과 같음.
+- 제안: **사람이 Vercel `ANTHROPIC_API_KEY`를 새 키로 바꾸고 다시 배포**(서버만, 앱 빌드 필요 없음) — Anthropic 콘솔에서 키가 지워졌거나 바뀌었는지 확인. dev는 `x-sim-models` 헤더를 ASCII로(서버만).
+- 장면: `ja:ko chat-expression`
+- 장면: `en:ko word-card`
+- 결정:
+
 ### 2026-11-21 · 변경 감시 · 숫자 그대로, 리뷰 minor 1(학습 곡선 활용 카드에 다른 날 문장), 광고 안 6개 그대로
 - 무엇을: 8c41bf1..07642e4 커밋 2개(앱 코드 1개 — Logbank 학습 곡선 점 › → 그날 새로 활용한 카드·쓴 문장 07642e4), 파일 4개
 - 결과: 돈·광고·퀴즈 숫자 그대로(알림 0). 리뷰 major 0 · minor 1(growthView.ts usedLineFor가 그날 문장이 없으면 다른 날·다른 곳 문장을 가져와 "📞 통화 · 시각 ✓" 아래 그때 쓴 것처럼 보임). 광고 안 6개 — 새 안 없음, 새 활용 카드 시트는 기존 LogSheet라 끝 네이티브가 저절로 붙음(카드 사이·문장 옆·›/✕ 전면은 원칙상 안 됨): 지금 1,000명당 월 +486,562원(무료 한 사람 +449원) → 안 넣으면 +533,457원(+497원). 가상 사용자 화면 점검(Logbank)은 이번엔 바로 돌리기 성공.
