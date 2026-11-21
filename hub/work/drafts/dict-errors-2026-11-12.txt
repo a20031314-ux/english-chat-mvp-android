@@ -1,0 +1,2 @@
+# 사전 예문 문장 오류 — 2026-11-12 틀린 곳 매주 보태기 판정에서(fr·pt·ru, 고칠 방향 포함). pt·ru: 없음
+w|tarder#1	Je vais pas tarder à rentrer.	ne 빠진 구어 → Je ne vais pas tarder à rentrer.
