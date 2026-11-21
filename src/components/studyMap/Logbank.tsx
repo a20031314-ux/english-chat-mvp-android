@@ -24,8 +24,8 @@ import type { LogItem, PartId } from "@/lib/notes/stageParts";
 import { LEDGER_EVENT, migrateLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { CardFace } from "@/components/studyMap/QuizPlayer";
 import { DictionarySheet } from "@/components/studyMap/Dictionary";
-import { progressIn, usedAt } from "@/lib/curriculum/growthView";
-import { forgetGrowthDay } from "@/lib/curriculum/growthLines";
+import { progressIn, usedAt, usedFirstOn, usedLineFor, type NewUse } from "@/lib/curriculum/growthView";
+import { forgetGrowthDay, readGrowthLines } from "@/lib/curriculum/growthLines";
 import { forgetTalkDay } from "@/lib/roleplay/talkMemory";
 import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
 import { curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, stacksOf, type DayStack, type LearnedItem } from "@/lib/curriculum/learnedView";
@@ -1307,6 +1307,8 @@ function Learned({
   const [open, setOpen] = useState<{ part: CardPart; col: GrowCol } | "call" | "recovered" | "fixed" | null>(null);
   // 쌓기에서 누른 카드(블록 하나 또는 그날 한 요소) — 위 표 칸과 같은 카드 시트.
   const [stackCards, setStackCards] = useState<{ title: string; keys: readonly string[] } | null>(null);
+  // 학습 곡선 점 → 그날 새로 활용한 것(대화에서 처음 맞게 쓴 것)과 쓴 문장.
+  const [usedDay, setUsedDay] = useState<string | null>(null);
   const stackLabel = (key: string) => {
     if (!key.startsWith("g|")) return keyLabel(key);
     const [stage, index] = key.slice(2).split(":").map(Number);
@@ -1326,6 +1328,7 @@ function Learned({
   const periodCalls = useMemo(() => calls.filter((call) => inPeriod(period, localDay(call.startedAt))).sort((a, b) => b.startedAt - a.startedAt), [calls, period]);
   const all = useMemo(() => curveOf(ledger, days, null, (t) => dayOfSeconds(t)), [ledger, days]);
   const stacks = useMemo(() => stacksOf(ledger, days, (t) => dayOfSeconds(t)), [ledger, days]);
+  const newUsed = useMemo(() => days.map((day) => usedFirstOn(ledger, day, (t) => dayOfSeconds(t)).length), [ledger, days]);
   // 쌓기 기둥은 기간 끝날까지(오늘 뒤는 빈 자리 — 이번 주가 차 오르는 게 보이게).
   const wholeDays = useMemo(() => periodDays(period, periodLastDay(period)), [period]);
   const wholeStacks = useMemo(() => stacksOf(ledger, wholeDays, (t) => dayOfSeconds(t)), [ledger, wholeDays]);
@@ -1391,11 +1394,16 @@ function Learned({
       ) : null}
       <TalkCompare ui={ui} language={language} locale={locale} keyLabel={keyLabel} />
       {curveReady(all) ? (
-        <LearnCurve ui={ui} stacks={stacks} known={known} dateLabel={dateLabel} onDay={onDay} />
+        <LearnCurve ui={ui} stacks={stacks} known={known} newUsed={newUsed} dateLabel={dateLabel} onUsed={setUsedDay} />
       ) : null}
       {openCell ? (
         <LogSheet title={`${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
           <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
+        </LogSheet>
+      ) : null}
+      {usedDay ? (
+        <LogSheet title={`${dayFormat(locale, usedDay)} · ${ui.growUsed} ${newUsed[days.indexOf(usedDay)] ?? 0}`} ui={ui} onClose={() => setUsedDay(null)}>
+          <UsedCards ui={ui} language={language} locale={locale} uses={usedFirstOn(ledger, usedDay, (t) => dayOfSeconds(t))} itemsOf={itemsOf} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}
       {stackCards ? (
@@ -1666,7 +1674,23 @@ function PartSplit({ ui, parts, onPart }: { ui: UICopy; parts: Record<CardPart, 
  * 학습 곡선: 선 = 그날 끝까지 활용 누적 — 날마다 학습 수는 바로 위 쌓기 기둥(DayStacks)이 보여서 막대는 두지 않는다(2026-11-21),(growthView.ts usedAt — 대화에서 맞게 쓴 열쇠 수, 줄지 않음, 2026-11-07 밤).
  * 눈금이 둘이라 숫자 눈금은 없고, 날을 누르면 그날 "학습 n · 지금까지 활용 N". 선의 세로는 기간 첫날 값 아래 여유 ~ 가장 높은 값 위 여유로 잡아 오름이 보이게.
  */
-function LearnCurve({ ui, stacks: amounts, known, dateLabel, onDay }: { ui: UICopy; stacks: readonly DayStack[]; known: readonly (number | null)[]; dateLabel: (day: string) => string; onDay?: (day: string) => void }) {
+function LearnCurve({
+  ui,
+  stacks: amounts,
+  known,
+  newUsed,
+  dateLabel,
+  onUsed,
+}: {
+  ui: UICopy;
+  stacks: readonly DayStack[];
+  known: readonly (number | null)[];
+  /** 날마다 그날 새로 활용한 수(곡선이 그날 오른 만큼) — 0이면 ›가 없다. */
+  newUsed: readonly number[];
+  dateLabel: (day: string) => string;
+  /** 점 → 그날 새로 활용한 카드·쓴 문장(사용자 2026-11-21). */
+  onUsed: (day: string) => void;
+}) {
   const [pick, setPick] = useState<number | null>(null);
   const W = 320;
   const H = 80;
@@ -1717,14 +1741,65 @@ function LearnCurve({ ui, stacks: amounts, known, dateLabel, onDay }: { ui: UICo
             <svg aria-hidden width="8" height="8" className={LOG.fill}><circle cx="4" cy="4" r="3" /></svg>
             {`${ui.growUsedAll} ${known[shown] ?? 0}`}
           </span>
-          {onDay && at.n ? (
-            <button type="button" data-curve-open={at.day} onClick={() => onDay(at.day)} aria-label={dateLabel(at.day)} className="ms-auto flex h-8 w-8 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 rtl:rotate-180">
+          {newUsed[shown] ? (
+            <button type="button" data-curve-open={at.day} onClick={() => onUsed(at.day)} aria-label={dateLabel(at.day)} className="ms-auto flex h-8 w-8 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 rtl:rotate-180">
               ›
             </button>
           ) : null}
         </p>
       ) : null}
     </figure>
+  );
+}
+
+/**
+ * 그날 새로 활용한 것(학습 곡선 점 ›): 카드(배운 것 표와 같은 LearnedCards) 아래에 어디서·언제 처음 맞게 썼나 + 그때 쓴 내 문장.
+ * 문장은 이 폰에 남은 것만(growthLines — 서버엔 학습자 문장을 남기지 않는다), 없으면 어디서·언제만.
+ */
+function UsedCards({
+  ui,
+  language,
+  locale,
+  uses,
+  itemsOf,
+  grammarName,
+  keyLabel,
+}: {
+  ui: UICopy;
+  language: string;
+  locale: string;
+  uses: readonly NewUse[];
+  itemsOf: (keys: readonly string[]) => LearnedItem[];
+  grammarName: (stage: number, index: number) => string;
+  keyLabel: (key: string) => string;
+}) {
+  const [lines] = useState(() => readGrowthLines(language).used);
+  const when = useMemo(() => {
+    try {
+      return new Intl.DateTimeFormat(locale, { hour: "2-digit", minute: "2-digit" });
+    } catch {
+      return new Intl.DateTimeFormat(undefined, { hour: "2-digit", minute: "2-digit" });
+    }
+  }, [locale]);
+  return (
+    <div data-used-cards className="flex flex-col gap-4">
+      {uses.map((use) => {
+        const line = usedLineFor(lines, use, (t) => dayOfSeconds(t));
+        return (
+          <div key={use.key} data-used-card={use.key} className="flex flex-col gap-2">
+            <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf([use.key])} grammarName={grammarName} keyLabel={keyLabel} />
+            <div className="flex flex-col gap-1 rounded-xl border border-line px-3 py-2">
+              <span className="text-meta tabular-nums text-slate-400">{`${PLACE_ICON[use.s]} ${placeName(ui, use.s)} · ${when.format(use.t * 1000)} ✓`}</span>
+              {line ? (
+                <p dir="auto" data-used-line className="text-note text-ink">
+                  {line.x}
+                </p>
+              ) : null}
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 

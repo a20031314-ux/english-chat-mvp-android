@@ -82,3 +82,26 @@ test("맞나 틀리나 점수: 학습에만(활용은 대화에서 쓴 것만) �
   assert.equal(stateOf([events[0]!, { k: "g|1:4", src: "judge", r: "miss", t: day(3) }]).level, "hard", "앎에서 판단 틀림 → 다시 볼 것");
   assert.equal(usedAt(events, day(1)), 1, "활용 누적은 대화만");
 });
+
+test("그날 새로 활용: 대화에서 처음 맞게 쓴 날만 · 문장은 그날 것 (ja·es)", async () => {
+  const { usedFirstOn, usedLineFor } = await import("./growthView.ts");
+  const day = (t: number) => new Date(t * 1000).toISOString().slice(0, 10);
+  const D = 86400;
+  const t0 = Date.UTC(2026, 10, 20) / 1000 + 3600;
+  const events = [
+    { k: "w|食べる", src: "call" as const, r: "used" as const, t: t0 },
+    { k: "w|食べる", src: "chat" as const, r: "used" as const, t: t0 + D },
+    { k: "e|¿de dónde eres?", src: "chat" as const, r: "used" as const, t: t0 + D + 60 },
+    { k: "w|comer", src: "quiz" as const, r: "ok" as const, m: "pick" as const, t: t0 + D },
+    { k: "g|1:2", src: "people" as const, r: "miss" as const, t: t0 + D },
+  ];
+  const second = usedFirstOn(events, "2026-11-21", day);
+  assert.deepEqual(second, [{ key: "e|¿de dónde eres?", t: t0 + D + 60, s: "chat" }]);
+  assert.deepEqual(usedFirstOn(events, "2026-11-20", day).map((one) => one.key), ["w|食べる"]);
+  const lines = [
+    { k: ["e|¿de dónde eres?"], x: "Hola, ¿de dónde eres?", t: t0 - D, s: "chat" as const },
+    { k: ["e|¿de dónde eres?", "w|comer"], x: "¿De dónde eres? Quiero comer.", t: t0 + D + 50, s: "chat" as const },
+  ];
+  assert.equal(usedLineFor(lines, second[0]!, day)?.x, "¿De dónde eres? Quiero comer.");
+  assert.equal(usedLineFor([], second[0]!, day), null);
+});

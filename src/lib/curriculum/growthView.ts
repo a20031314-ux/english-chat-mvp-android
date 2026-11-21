@@ -112,3 +112,31 @@ export function growthPairs(misses: readonly MissLine[], useds: readonly UsedLin
   }
   return pairs.sort((a, b) => b.used.t - a.used.t);
 }
+
+/* ───────── 그날 새로 활용 — 학습 곡선 점을 누르면(사용자 2026-11-21 "학습 곡선은 클릭해서 볼 수 있는 데이터야? 대화 내용이나 맞힌 것들") ───────── */
+
+/** 그날 새로 활용한 것: 대화에서 처음 맞게 쓴 날이 그날인 열쇠(곡선이 그날 오른 만큼), 늦게 쓴 것부터 · 어디서·언제 처음 썼나. */
+export type NewUse = { key: string; t: number; s: TalkSource };
+
+export function usedFirstOn(events: readonly LogEvent[], day: string, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): NewUse[] {
+  const first = new Map<string, LogEvent>();
+  for (const event of events) {
+    if (!applied(event) || !partOf(event.k)) continue;
+    const have = first.get(event.k);
+    if (!have || event.t < have.t) first.set(event.k, event);
+  }
+  return [...first.values()]
+    .filter((event) => dayOf(event.t) === day)
+    .sort((a, b) => b.t - a.t)
+    .map((event) => ({ key: event.k, t: event.t, s: event.src as TalkSource }));
+}
+
+/** 그 열쇠를 쓴 내 문장(이 폰 growthLines — 그날 것 먼저, 없으면 가장 가까운 것). 남아 있지 않으면 null. */
+export function usedLineFor(lines: readonly UsedLine[], use: NewUse, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): UsedLine | null {
+  const mine = lines.filter((line) => line.k.includes(use.key));
+  if (!mine.length) return null;
+  const day = dayOf(use.t);
+  const sameDay = mine.filter((line) => dayOf(line.t) === day);
+  const pool = sameDay.length ? sameDay : mine;
+  return pool.reduce((best, line) => (Math.abs(line.t - use.t) < Math.abs(best.t - use.t) ? line : best));
+}

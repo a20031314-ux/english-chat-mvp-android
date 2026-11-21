@@ -28,7 +28,7 @@
 │          [Logbank 하늘] studyMap/Logbank — 기록만
 │              [주 | 월] ‹기간› → 배운 것 표(Learned — 단어 · 문법 · 표현 · 문장구조 요소 색 bankTone PartMark × 학습 · 활용, curriculum/growthView.ts)
 │                → 쌓기 기둥(DayStacks — 날마다 요소 자리 순서로 블록, curriculum/learnedView.ts stacksOf) → 블록 누르면 그 카드 · 누른 날 비율 막대(PartSplit — 학습 시간 줄과 같이 씀, 요소 칩 → 그날 그 요소 카드들 LearnedCards)
-│                · ↺ 다시 맞힘 · ✎✓ 고쳐 씀(curriculum/growthLines.ts) · 📞 통화(CallResultCard) · 학습 곡선(활용 누적 선, curriculum/learnedView.ts) · 대화 비교(TalkCompare)
+│                · ↺ 다시 맞힘 · ✎✓ 고쳐 씀(curriculum/growthLines.ts) · 📞 통화(CallResultCard) · 학습 곡선(활용 누적 선, curriculum/learnedView.ts — 점 › → 그날 새로 활용 UsedCards: 카드 + 📞/💬/👤 시각 + 내 문장 curriculum/growthView.ts usedFirstOn·growthLines) · 대화 비교(TalkCompare)
 │              쌓기 아래 "학습 n ›" → 그날 = 학습 타임라인(DayTimeline → 학습 시간 → 카드 CardTimeline, curriculum/studyTimeline.ts) · ⏱ 학습 시간 막대
 │              재료: 이 폰 사건 장부 logbank.v1.<언어>(curriculum/logLedger.ts) + 수업 결과 + 통화 카드 + 서버 /api/notebook logItems
 │          [Quizbank 초록] studyMap/Quizbank → InlineQuiz → QuizPlayer — 한 흐름(hub/app/QUIZ.md), 답 뒤 맞음/틀림·[다시]·📕 문
