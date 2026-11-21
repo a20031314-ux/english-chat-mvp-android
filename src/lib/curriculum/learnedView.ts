@@ -62,23 +62,35 @@ export function curveReady(points: readonly CurvePoint[]): boolean {
 /* ───────── 학습량 · 확인된 실력 · 내 것 (2026-11-07 사용자 "Logbank는 학습량 + 채운 %, Languagebank는 채운 것만, 학습량은 푼 수") ───────── */
 
 
-/** 날마다 푼 수 — 새로(그 열쇠를 처음 푼 답) · 다시(전에 푼 적 있는 열쇠). */
-export type AmountPoint = { day: string; fresh: number; again: number };
+/**
+ * 날마다 쌓기(Logbank 쌓기 기둥·학습 곡선 막대 — 사용자 2026-11-21 "각각 위치를 정해서 순차적으로 쌓는 게 낫지 않을까, 오늘 총 학습량에서 단어 비율이 많았다 이런 게 보이게").
+ * parts = 그날 퀴즈로 답한 서로 다른 것(요소별), again = 그중 이 기간 앞날에 이미 답한 것 — 기둥을 다 더해도 again을 빼면 기간 "학습"(서로 다른 것)과 같다.
+ * n = 그날 학습(parts 합) — "학습"은 언제나 서로 다른 것의 수(lbFresh 한 뜻).
+ */
+export type DayStack = { day: string; n: number; parts: Record<CardPart, number>; again: Record<CardPart, number> };
 
-export function amountOf(events: readonly LogEvent[], days: readonly string[], dayOf: (t: number) => string): AmountPoint[] {
+const zeroParts = (): Record<CardPart, number> => ({ word: 0, grammar: 0, expression: 0, frame: 0 });
+
+export function stacksOf(events: readonly LogEvent[], days: readonly string[], dayOf: (t: number) => string): DayStack[] {
   const at = new Map(days.map((day, i) => [day, i]));
-  const out = days.map((day) => ({ day, fresh: 0, again: 0 }));
-  const seen = new Set<string>();
-  for (const event of [...events].sort((a, b) => a.t - b.t)) {
+  const keys = days.map(() => new Set<string>());
+  for (const event of events) {
     if (!answered(event) || !partOf(event.k)) continue;
     const i = at.get(dayOf(event.t));
-    if (i !== undefined) {
-      if (seen.has(event.k)) out[i]!.again += 1;
-      else out[i]!.fresh += 1;
-    }
-    seen.add(event.k);
+    if (i !== undefined) keys[i]!.add(event.k);
   }
-  return out;
+  const seen = new Set<string>();
+  return days.map((day, i) => {
+    const parts = zeroParts();
+    const again = zeroParts();
+    for (const key of keys[i]!) {
+      const part = partOf(key)!;
+      parts[part] += 1;
+      if (seen.has(key)) again[part] += 1;
+    }
+    for (const key of keys[i]!) seen.add(key);
+    return { day, n: keys[i]!.size, parts, again };
+  });
 }
 
 /**

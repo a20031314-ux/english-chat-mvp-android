@@ -1,6 +1,6 @@
 "use client";
 
-import { bankTone } from "@/components/studyMap/bankTone";
+import { bankTone, PART_BG, PartMark } from "@/components/studyMap/bankTone";
 import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
@@ -28,7 +28,7 @@ import { progressIn, usedAt } from "@/lib/curriculum/growthView";
 import { forgetGrowthDay } from "@/lib/curriculum/growthLines";
 import { forgetTalkDay } from "@/lib/roleplay/talkMemory";
 import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
-import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
+import { curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, stacksOf, type DayStack, type LearnedItem } from "@/lib/curriculum/learnedView";
 import { partOf, type CardPart } from "@/lib/curriculum/todayCards";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
@@ -752,7 +752,7 @@ function DayTimeline({
           return (
             <section key={part} data-timeline-part={part} className={`flex flex-col ${box}`}>
               <header className="flex items-center gap-2 border-b border-line px-3 py-2">
-                <span className="flex-1 text-note font-semibold text-ink">{`${LEARN_ICON[part]} ${learnPartName(ui, part)} ${cards.length}`}</span>
+                <span className="flex flex-1 items-center gap-2 text-note font-semibold text-ink"><PartMark part={part} />{`${learnPartName(ui, part)} ${cards.length}`}</span>
                 <span className="text-meta tabular-nums text-slate-400">{`✓ ${okN}${missN ? ` ✗ ${missN}` : ""}`}</span>
               </header>
               <ul className="flex flex-col">
@@ -848,10 +848,7 @@ function SessionRows({
 }) {
   const box = "rounded-xl border border-line bg-white/[0.02]";
   const chipCls = "rounded-full border border-line px-2 py-0.5 text-meta tabular-nums text-slate-300";
-  const partsLine = (parts: Record<CardPart, number>) =>
-    LEARN_PARTS.filter((part) => parts[part])
-      .map((part) => `${learnPartName(ui, part)} ${parts[part]}`)
-      .join(" · ");
+  const hasParts = (parts: Record<CardPart, number>) => LEARN_PARTS.some((part) => parts[part]);
   const range = (one: Session) => {
     const from = clock.format(one.start);
     const to = clock.format(one.end);
@@ -877,7 +874,7 @@ function SessionRows({
                   <span className="min-w-0 flex-1 truncate text-meta tabular-nums text-slate-400">{`${range(one)} · ${ui.planMinutes.replace("{n}", String(sessionMinutes(one)))}`}</span>
                   <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
                 </span>
-                {partsLine(sum.parts) ? <span className="text-meta text-slate-300">{partsLine(sum.parts)}</span> : null}
+                {hasParts(sum.parts) ? <PartSplit ui={ui} parts={sum.parts} /> : null}
                 <span className="flex flex-wrap gap-1.5">
                   {sum.ok || sum.miss ? <span className={chipCls}>{`✓ ${sum.ok}  ✗ ${sum.miss}`}</span> : null}
                   {fixedN ? <span className={chipCls}>{`✎ ${fixedN}`}</span> : null}
@@ -1191,7 +1188,7 @@ function CallResultCard({ ui, language, call, note, removable = true }: { ui: UI
                   {item.said ? <span dir="auto" className="text-slate-500 line-through">{item.said}</span> : null}
                   {item.said ? <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span> : null}
                   <span dir="auto" className="text-slate-200">{item.line}</span>
-                  {key ? <span aria-hidden className="ms-1 text-slate-500">{key.startsWith("f|") ? "🧩" : "🔤"}</span> : null}
+                  {key && partOf(key) ? <PartMark part={partOf(key)!} className="ms-1.5 align-middle" /> : null}
                 </button>
               );
             })}
@@ -1262,7 +1259,6 @@ function periodDays(period: Period, today: string): string[] {
   return out;
 }
 
-const LEARN_ICON: Record<CardPart, string> = { word: "🔤", grammar: "📐", expression: "💬", frame: "🧩" };
 
 type GrowCol = "studied" | "used";
 const GROW_COLS: readonly GrowCol[] = ["studied", "used"];
@@ -1322,7 +1318,10 @@ function Learned({
   const rows = LEARN_PARTS.filter((part) => GROW_COLS.some((col) => cell(part, col).length));
   const periodCalls = useMemo(() => calls.filter((call) => inPeriod(period, localDay(call.startedAt))).sort((a, b) => b.startedAt - a.startedAt), [calls, period]);
   const all = useMemo(() => curveOf(ledger, days, null, (t) => dayOfSeconds(t)), [ledger, days]);
-  const amounts = useMemo(() => amountOf(ledger, days, (t) => dayOfSeconds(t)), [ledger, days]);
+  const stacks = useMemo(() => stacksOf(ledger, days, (t) => dayOfSeconds(t)), [ledger, days]);
+  // 쌓기 기둥은 기간 끝날까지(오늘 뒤는 빈 자리 — 이번 주가 차 오르는 게 보이게).
+  const wholeDays = useMemo(() => periodDays(period, periodLastDay(period)), [period]);
+  const wholeStacks = useMemo(() => stacksOf(ledger, wholeDays, (t) => dayOfSeconds(t)), [ledger, wholeDays]);
   const extras = [
     { id: "recovered" as const, icon: "↺", label: ui.growRecovered, n: progress.recovered.length },
     { id: "fixed" as const, icon: "✎✓", label: ui.growFixed, n: pairs.length },
@@ -1349,8 +1348,7 @@ function Learned({
             {rows.map((part) => (
               <tr key={part} data-learned-part={part} className="border-t border-line">
                 <td className="py-1.5 text-slate-300">
-                  <span aria-hidden>{LEARN_ICON[part]} </span>
-                  {learnPartName(ui, part)}
+                  <span className="inline-flex items-center gap-2"><PartMark part={part} />{learnPartName(ui, part)}</span>
                 </td>
                 {GROW_COLS.map((col) => {
                   const n = cell(part, col).length;
@@ -1371,6 +1369,7 @@ function Learned({
           </tbody>
         </table>
       ) : null}
+      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} onDay={onDay} /> : null}
       {extras.length ? (
         <div data-growth className="flex flex-wrap gap-1.5">
           {extras.map((one) => (
@@ -1385,11 +1384,10 @@ function Learned({
       ) : null}
       <TalkCompare ui={ui} language={language} locale={locale} keyLabel={keyLabel} />
       {curveReady(all) ? (
-        <LearnCurve ui={ui} amounts={amounts} known={known} dateLabel={dateLabel} onDay={onDay} />
+        <LearnCurve ui={ui} stacks={stacks} known={known} dateLabel={dateLabel} onDay={onDay} />
       ) : null}
-      {onDay ? <DayRows ui={ui} locale={locale} amounts={amounts} notes={notes} onDay={onDay} /> : null}
       {openCell ? (
-        <LogSheet title={`${LEARN_ICON[openCell.part]} ${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
+        <LogSheet title={`${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
           <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}
@@ -1509,44 +1507,132 @@ function LearnedCards({
   );
 }
 
-/** 날마다 한 줄(새것부터) — 누르면 그날 학습 타임라인(2026-11-09, 시안 ①의 날 목록). 푼 것·통화가 있는 날만. */
-function DayRows({ ui, locale, amounts, notes, onDay }: { ui: UICopy; locale: string; amounts: readonly AmountPoint[]; notes: readonly CallNote[]; onDay: (day: string) => void }) {
-  const rows = amounts
-    .map((one) => ({ ...one, calls: notes.filter((note) => localDay(note.at) === one.day).length }))
-    .filter((one) => one.fresh + one.again + one.calls > 0)
-    .reverse();
-  if (!rows.length) return null;
+/**
+ * 날마다 쌓기(사용자 2026-11-21 "각각 위치를 정해서 순차적으로 쌓는 게 낫지 않을까 — 오늘의 총 학습량에서 단어 비율이 많았다 이런 게 보이게"):
+ * 기간의 날마다 기둥 하나, 그날 퀴즈로 답한 서로 다른 것 하나 = 블록 하나, 자리는 아래부터 단어 → 문법 → 표현 → 문장구조(요소 색, bankTone PART_BG).
+ * 이 기간 앞날에 이미 답한 것은 흐린 블록(기둥 합에서 흐린 것을 빼면 위 "학습"과 같다). 기둥을 누르면 아래에 그날 비율 막대·요소별 수·📞, "학습 n ›"이 그날 학습 타임라인.
+ * 숫자는 개수만(퍼센트 없음 — DESIGN.md "값 꼬리표"). 한 칸이 너무 많으면 블록 대신 이어진 막대로.
+ */
+function DayStacks({
+  ui,
+  locale,
+  stacks,
+  today,
+  notes,
+  dateLabel,
+  onDay,
+}: {
+  ui: UICopy;
+  locale: string;
+  stacks: readonly DayStack[];
+  today: string;
+  notes: readonly CallNote[];
+  dateLabel: (day: string) => string;
+  onDay: (day: string) => void;
+}) {
+  const callsOf = (day: string) => notes.filter((note) => sameDay(localDay(note.at), day)).length;
+  const active = stacks.filter((one) => one.n || callsOf(one.day));
+  const fallback = (active.find((one) => sameDay(one.day, today)) ?? active[active.length - 1])?.day ?? null;
+  const [pick, setPick] = useState<string | null>(null);
+  if (!active.length) return null;
+  const shown = stacks.find((one) => pick && sameDay(one.day, pick)) ?? stacks.find((one) => fallback && sameDay(one.day, fallback))!;
+  const max = Math.max(1, ...stacks.map((one) => one.n));
+  // 기둥 높이 160px 안에서 블록 하나 높이(간격 2px 포함) — 10px 아래로 내려가면 블록을 나누지 않고 이어진 막대로.
+  const unit = Math.min(12, 160 / max);
+  const split = unit >= 7;
+  const every = stacks.length > 10 ? 5 : 1;
+  const calls = callsOf(shown.day);
   return (
-    <ol data-day-rows className="flex flex-col overflow-hidden rounded-xl border border-line">
-      {rows.map((one) => (
-        <li key={one.day} className="border-t border-line first:border-t-0">
-          <button type="button" data-day-row={one.day} onClick={() => onDay(one.day)} className="flex min-h-11 w-full items-center gap-3 px-3 py-2 text-start hover:bg-white/5">
-            <span className="min-w-0 flex-1 truncate text-note text-ink">{dayFormat(locale, one.day)}</span>
-            <span className="shrink-0 text-meta tabular-nums text-slate-400">
-              {[one.fresh + one.again ? `${ui.lbFresh} ${one.fresh + one.again}` : "", one.calls ? `📞 ${one.calls}` : ""].filter(Boolean).join(" · ")}
-            </span>
-            <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
-          </button>
-        </li>
-      ))}
-    </ol>
+    <div data-day-stacks className="flex flex-col gap-2 rounded-xl border border-line p-3">
+      <div className="flex items-end gap-1 border-b border-line" style={{ height: Math.ceil(max * unit) + 8 }} dir="ltr">
+        {stacks.map((one) => {
+          const on = sameDay(one.day, shown.day);
+          const future = dayValue(one.day) > dayValue(today);
+          return (
+            <button
+              key={one.day}
+              type="button"
+              data-day-stack={one.day}
+              aria-pressed={on}
+              aria-label={`${dayFormat(locale, one.day)} ${ui.lbFresh} ${one.n}`}
+              disabled={future}
+              onClick={() => setPick(one.day)}
+              className={`flex h-full min-w-0 flex-1 flex-col-reverse items-stretch rounded-lg px-0.5 pb-0.5 ${on ? "bg-white/10" : "hover:bg-white/5"} ${future ? "opacity-30" : ""}`}
+            >
+              {LEARN_PARTS.map((part) => {
+                const n = one.parts[part];
+                if (!n) return null;
+                const dim = one.again[part];
+                if (!split) {
+                  return (
+                    <span key={part} className="flex flex-col-reverse">
+                      <span className={`block ${PART_BG[part]}`} style={{ height: (n - dim) * unit }} />
+                      {dim ? <span className={`block ${PART_BG[part]} opacity-40`} style={{ height: dim * unit }} /> : null}
+                    </span>
+                  );
+                }
+                return Array.from({ length: n }, (_, k) => (
+                  <span key={`${part}-${k}`} data-stack-block={part} className={`mt-0.5 block ${PART_BG[part]} ${k >= n - dim ? "opacity-40" : ""}`} style={{ height: unit - 2 }} />
+                ));
+              })}
+            </button>
+          );
+        })}
+      </div>
+      <div className="flex gap-1" dir="ltr">
+        {stacks.map((one, i) => (
+          <span key={one.day} className={`min-w-0 flex-1 text-center text-meta tabular-nums ${sameDay(one.day, shown.day) ? "text-ink" : "text-slate-500"}`}>
+            {i % every === 0 || i === stacks.length - 1 ? dateLabel(one.day) : ""}
+          </span>
+        ))}
+      </div>
+      <div data-day-stack-detail={shown.day} className="flex flex-col gap-2 border-t border-line pt-2">
+        <button type="button" data-day-row={shown.day} onClick={() => onDay(shown.day)} disabled={!shown.n && !calls} className="flex min-h-9 items-center gap-3 text-start disabled:opacity-60">
+          <span className="min-w-0 flex-1 truncate text-note font-semibold text-ink">{dayFormat(locale, shown.day)}</span>
+          <span className="shrink-0 text-meta tabular-nums text-slate-400">
+            {[shown.n ? `${ui.lbFresh} ${shown.n}` : "", calls ? `📞 ${calls}` : ""].filter(Boolean).join(" · ")}
+          </span>
+          {shown.n || calls ? <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span> : null}
+        </button>
+        {shown.n ? <PartSplit ui={ui} parts={shown.parts} /> : null}
+      </div>
+    </div>
+  );
+}
+
+/** 요소 비율: 이어진 막대 하나(자리 순서 그대로) + 요소마다 색 네모·이름·수. 학습 시간 줄(SessionRows)과 쌓기 아래가 같이 씀. */
+function PartSplit({ ui, parts }: { ui: UICopy; parts: Record<CardPart, number> }) {
+  const shown = LEARN_PARTS.filter((part) => parts[part]);
+  return (
+    <span data-part-split className="flex flex-col gap-1.5">
+      <span className="flex h-2 w-full gap-0.5 overflow-hidden rounded-full" dir="ltr">
+        {shown.map((part) => (
+          <span key={part} className={PART_BG[part]} style={{ flexGrow: parts[part] }} />
+        ))}
+      </span>
+      <span className="flex flex-wrap gap-x-3 gap-y-1 text-meta tabular-nums text-slate-300">
+        {shown.map((part) => (
+          <span key={part} className="inline-flex items-center gap-1.5">
+            <PartMark part={part} />
+            {`${learnPartName(ui, part)} ${parts[part]}`}
+          </span>
+        ))}
+      </span>
+    </span>
   );
 }
 
 /**
- * 학습 곡선: 아래 막대 = 날마다 푼 열쇠 수(한 색 — 새로·다시 구분은 안 보임),
- * 위 선 = 그날 끝까지 활용 누적(growthView.ts usedAt — 대화에서 맞게 쓴 열쇠 수, 줄지 않음, 2026-11-07 밤).
+ * 학습 곡선: 선 = 그날 끝까지 활용 누적 — 날마다 학습 수는 바로 위 쌓기 기둥(DayStacks)이 보여서 막대는 두지 않는다(2026-11-21),(growthView.ts usedAt — 대화에서 맞게 쓴 열쇠 수, 줄지 않음, 2026-11-07 밤).
  * 눈금이 둘이라 숫자 눈금은 없고, 날을 누르면 그날 "학습 n · 지금까지 활용 N". 선의 세로는 기간 첫날 값 아래 여유 ~ 가장 높은 값 위 여유로 잡아 오름이 보이게.
  */
-function LearnCurve({ ui, amounts, known, dateLabel, onDay }: { ui: UICopy; amounts: readonly AmountPoint[]; known: readonly (number | null)[]; dateLabel: (day: string) => string; onDay?: (day: string) => void }) {
+function LearnCurve({ ui, stacks: amounts, known, dateLabel, onDay }: { ui: UICopy; stacks: readonly DayStack[]; known: readonly (number | null)[]; dateLabel: (day: string) => string; onDay?: (day: string) => void }) {
   const [pick, setPick] = useState<number | null>(null);
   const W = 320;
-  const H = 120;
+  const H = 80;
   const top = 10;
-  const barTop = H * 0.55;
-  const max = Math.max(1, ...amounts.map((one) => one.fresh + one.again));
+  const barTop = H - 8;
   const step = W / Math.max(1, amounts.length);
-  const barW = Math.max(2, Math.min(18, step * 0.6));
   const x = (i: number) => step * i + step / 2;
   const values = known.filter((one): one is number => one !== null);
   const high = Math.max(1, ...values);
@@ -1567,11 +1653,9 @@ function LearnCurve({ ui, amounts, known, dateLabel, onDay }: { ui: UICopy; amou
       <svg viewBox={`0 0 ${W} ${H + 16}`} role="img" aria-label={ui.lbCurve} direction="ltr" className="h-auto w-full">
         <line x1={0} x2={W} y1={H} y2={H} className="stroke-white/10" strokeWidth="0.6" />
         {amounts.map((one, i) => {
-          const h1 = ((one.fresh + one.again) / max) * (H - barTop - 4);
           return (
             <g key={one.day} data-curve-day={one.day} onClick={() => setPick(i)} className="cursor-pointer">
               <rect x={x(i) - step / 2} y={0} width={step} height={H} className="fill-transparent" />
-              {h1 ? <rect x={x(i) - barW / 2} y={H - h1} width={barW} height={h1} rx="1.5" className={`${LOG.fill} opacity-60`} /> : null}
               {i === shown ? <rect x={x(i) - step / 2 + 1} y={1} width={step - 2} height={H - 1} rx="3" className="fill-white/5" /> : null}
             </g>
           );
@@ -1590,14 +1674,10 @@ function LearnCurve({ ui, amounts, known, dateLabel, onDay }: { ui: UICopy; amou
         <p data-curve-detail className="flex flex-wrap items-center gap-x-3 text-meta tabular-nums text-slate-400">
           <span className="text-slate-300">{dateLabel(at.day)}</span>
           <span className="inline-flex items-center gap-1">
-            <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-60`}><rect width="8" height="8" rx="2" /></svg>
-            {`${ui.lbFresh} ${at.fresh + at.again}`}
-          </span>
-          <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={LOG.fill}><circle cx="4" cy="4" r="3" /></svg>
             {`${ui.growUsedAll} ${known[shown] ?? 0}`}
           </span>
-          {onDay && at.fresh + at.again ? (
+          {onDay && at.n ? (
             <button type="button" data-curve-open={at.day} onClick={() => onDay(at.day)} aria-label={dateLabel(at.day)} className="ms-auto flex h-8 w-8 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 rtl:rotate-180">
               ›
             </button>

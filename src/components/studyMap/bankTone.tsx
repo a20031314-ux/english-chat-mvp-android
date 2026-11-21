@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext } from "react";
+import type { CardPart as PartId } from "@/lib/curriculum/todayCards";
 
 /**
  * My 큰 칸마다 색(2026-11-01 사용자 "ui 색상은 각각의 탭에 맞춰줘"): 칸 테두리·제목만 칸 색이던 것을 칸 안의 강조(빈칸·고른 것·정답 보기·체크 줄·시험 줄)까지.
@@ -92,4 +93,22 @@ export function bankTone(id: BankToneId): BankTone {
 
 export function useBankTone(): BankTone {
   return TONES[useContext(BankToneContext)];
+}
+
+/**
+ * 배우는 요소 넷의 색(사용자 2026-11-21 "아이콘도 색깔 구별로 통일") — 단어·문법·표현·문장구조를 이모지 대신 같은 색 네모 하나로.
+ * 쌓는 자리도 이 순서(아래부터 단어 → 문법 → 표현 → 문장구조, learnedView.ts LEARN_PARTS). hub/app/DESIGN.md "요소 색".
+ */
+export type { PartId };
+
+export const PART_BG: Record<PartId, string> = {
+  word: "bg-part-word",
+  grammar: "bg-part-grammar",
+  expression: "bg-part-expression",
+  frame: "bg-part-frame",
+};
+
+/** 요소 표시 — 작은 색 네모(쌓기 블록과 같은 모양)(이름은 옆 글자나 부모 aria-label이 말함). */
+export function PartMark({ part, className = "" }: { part: PartId; className?: string }) {
+  return <span aria-hidden data-part-mark={part} className={`inline-block h-2.5 w-2.5 shrink-0 ${PART_BG[part]} ${className}`} />;
 }

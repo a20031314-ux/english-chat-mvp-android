@@ -2,6 +2,8 @@
 
 import { useMemo, type ReactNode } from "react";
 import { openLesson } from "@/lib/appIntents";
+import { PartMark } from "@/components/studyMap/bankTone";
+import { partOf } from "@/lib/curriculum/todayCards";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LessonScene } from "@/lib/curriculum/lessonKey";
 import { readLedger } from "@/lib/curriculum/logLedger";
@@ -44,7 +46,7 @@ export function StudyChipRow({
             onClick={() => openLesson({ language, key: one.key, ...(scene ? { scene } : {}), ...(above ? { above: true } : {}) })}
             className="rounded-lg border border-line px-2.5 py-1 text-start text-note text-ink hover:bg-white/5"
           >
-            <span aria-hidden className="me-1">{one.key.startsWith("e|") ? "💬" : one.key.startsWith("g|") ? "📐" : "🧩"}</span>
+            <PartMark part={partOf(one.key) ?? "frame"} className="me-1.5 align-middle" />
             {one.label}
           </button>
         ))}

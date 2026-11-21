@@ -48,6 +48,12 @@
   --color-status-learned: oklch(87.9% 0.169 91.605); /* amber-300 */
   --color-status-pending: rgba(255, 255, 255, 0.25);
 
+  /* 배우는 요소 넷 — 쌓는 자리도 이 순서(아래부터). 의미색(맞음·틀림)과 겹치지 않는 색 (DESIGN.md "요소 색") */
+  --color-part-word: oklch(85.5% 0.138 181.071); /* teal-300 */
+  --color-part-grammar: oklch(81.1% 0.111 293.571); /* violet-300 */
+  --color-part-expression: oklch(83.7% 0.128 66.29); /* orange-300 */
+  --color-part-frame: oklch(82.3% 0.12 346.018); /* pink-300 */
+
   /* 글자 크기 — 줄 높이는 정하지 않음(text-[12px]처럼 물려받음) */
   --text-meta: 11px; /* 시각·개수·작은 표시 */
   --text-caption: 12px; /* 보조 설명, 칩 */

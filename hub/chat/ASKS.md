@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (94)
+## 탭이 확인할 것 (96)
 
 ### 탭 1 메인
 
@@ -119,6 +119,10 @@
 - **a261120-3-3** (2026-11-20 19:59, 탭 3 · 7711b98) 통화 코치 띠 얼굴 뺌·띠 뜨면 얼굴 작게
   - 기능: 통화 설명 · 통화 · 통화 끝 화면 · Logbank · 오늘의 학습
   - 볼 곳: `app/dev/call-preview/page.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261121-2-1** (2026-11-21 21:34, 탭 2 · 5636e87) Logbank 쌓기 기둥(날마다 요소 자리 순서로 블록, 누른 날 비율 막대) · 요소 아이콘 이모지 → 색 네모(PartMark) — 같이 배우기 칩(StudyChips)·학습 시간 줄도 같은 색 네모
+  - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · My에서 찾기
+  - 볼 곳: `components/FindInMy.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -309,6 +313,10 @@
 - **a261120-1-3** (2026-11-20 19:07, 탭 1 · 4bcaf97) 채팅·영상 자막·통화 돌아보기 줄 아래 표현 장부 칩(LedgerLinks) 지움, 옛 앱 영상 번역 서버 되살림
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `app/api/video-subtitles/gloss/route.ts` · `components/ChatWindow.tsx` · `components/RoleplayReview.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `components/RoleplayPast.tsx` · `components/RoleplayScreen.tsx` · `components/roleplay/CallParts.tsx` · `components/roleplay/CallRecap.tsx` · `components/videoLearning/VideoLearningTab.tsx` · `components/CallHost.tsx` … 30개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261121-2-2** (2026-11-21 21:34, 탭 2 · 5636e87) Logbank 쌓기 기둥(날마다 요소 자리 순서로 블록, 누른 날 비율 막대) · 요소 아이콘 이모지 → 색 네모(PartMark) — 같이 배우기 칩(StudyChips)·학습 시간 줄도 같은 색 네모
+  - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · My에서 찾기
+  - 볼 곳: `components/ExpressionPeek.tsx` · `components/roleplay/CallRecap.tsx` · `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
