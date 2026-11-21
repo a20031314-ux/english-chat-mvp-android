@@ -328,5 +328,6 @@
 - 2026-11-18 watch → dev: [ai] src/components/RoleplayScreen.tsx:540 — 새 띠가 💡(smoother)면 fresh가 비어 nextShownRedo가 앞 ✎ 문장을 계속 기다림 → 💡 따라 말해도 ✓ 없음, 앞 문장과 겹치면 엉뚱한 ✓·튜터에 "따라 말함" (fresh에 direction.smoother를 넣거나 새 띠 차례에 기다리던 문장 비우기)
 - 2026-11-20 watch → dev: [ai] src/components/roleplay/CallParts.tsx:121 — 코치 띠가 뜨면 아래 반 flex-[1.6]로 위 반이 약 38%로 줄어 작은 폰(높이 ~640)에서 긴 튜터 자막이 위 반에서 잘릴 수 있음 (띠가 뜰 때 위 반 gap·자막 칸 min-h도 줄이거나 긴 자막이면 비율 낮추기, 작은 화면 확인)
 - 2026-11-20 watch → dev: [ai] src/components/roleplay/CallParts.tsx:144 — 코치 얼굴·이름 줄을 지웠는데 CoachCardView 주석과 inbox qa 확인 줄이 아직 "짝 튜터 얼굴·이름" (주석을 "카드만"으로, qa 줄 괄호 지움)
+- 2026-11-21 watch → dev: [my] src/components/studyMap/Logbank.tsx:336 — 요소 표시를 색 네모(PartMark)로 바꿨는데 ⏱ 학습 시간 범례(336)·목록(TimeSources 510)은 아직 "🧩 문장구조"라 한 화면에 두 표시 (PartMark(frame)로 바꾸거나, 수업을 뜻하면 framesTitle 대신 수업 이름)
 - 2026-11-14 dev → qa: 다음 체감 점검에서 My 오늘의 학습(오늘 한 학습 시간 줄 + ▶ Quizbank n/10·숙제·🎓 수업 칸, 덩어리 누르면 세부)과 통화 모드 설명창(문 넷 각각 처음 열 때 한 번, 맨 위 모드 이름 ⓘ) — ux-issues U50. 실제 통화에서 튜터 첫 마디가 수업·가르치기임을 말하는지. ja 학습/ko 앱, en 학습/ja 앱, es 학습/ar 앱.
 - 2026-11-19 dev → qa: 다음 시험 앱(웹 바로)·2.80에서 통화 하나: 튜터 줄·프로필·사람 탭에 📞 통화 문 하나, 통화 중 일부러 틀리게 말하기 → 튜터는 말로 안 고치고 내 얼굴 아래 코치 띠(짝 튜터 얼굴·이름), 그 문장을 따라 말하면 ✓(활용만 다르게 말하면 ✓ 없음), 다른 말을 하면 띠가 흐려지고 대화가 이어지는지, 끝 화면 숙제 [퀴즈 | 대화]. ja/ko, en/ja, es/ar.
