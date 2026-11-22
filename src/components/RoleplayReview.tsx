@@ -411,9 +411,11 @@ export function RoleplayReviewPanel({
 
         {review ? (
           <>
-            <p className="mt-3 whitespace-pre-line text-[13px] leading-relaxed text-neutral-200">
-              {review.why}
-            </p>
+            {review.why ? (
+              <p className="mt-3 whitespace-pre-line text-[13px] leading-relaxed text-neutral-200">
+                {review.why}
+              </p>
+            ) : null}
             {/* 통화 중 💡: 문장 대신 쓸 수 있는 표현 조각만(2026-11-08 사용자) — 문장은 학습자가 만든다. */}
             {turn.live && review.pieces?.length ? (
               <ul className="mt-3 space-y-2" data-hint-pieces>

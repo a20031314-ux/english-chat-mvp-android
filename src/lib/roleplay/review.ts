@@ -198,9 +198,9 @@ ${transcript}
 The ${input.tutorRole} has just said "${turn.asked}".
 ${started}
 
-Do not give them a whole answer: they should build the sentence themselves. Give them a few pieces to build it with.
-- "why": one short sentence in ${input.nativeLanguage}, speaking to them politely: what they are being asked${turn.heard ? ", and that they can carry on from what they started" : ""}. No praise, no scolding, no answer in it.
-- "pieces": two or three short expressions in ${input.targetLanguage} they can use in their answer — each two to five words, a chunk a speaker would really say here${turn.heard ? " (the first one is the words they need to carry on from what they started, not a finished sentence)" : ""}: a verb phrase, a time word with its preposition, a way to start the answer. Never a complete sentence, never the whole answer, not names or numbers alone. Each with "meaning": what it means in ${input.nativeLanguage}, nothing else.${
+Do not give them a whole answer and do not explain or translate what they were asked: they heard it, they need words. Give them only what they are missing.
+- "pieces": two or three short expressions in ${input.targetLanguage} they can use in their answer right now — each two to five words, a chunk a speaker would really say here: a verb phrase, a time word with its preposition, a way to start the answer. Never a complete sentence, never the whole answer, not names or numbers alone. ${turn.heard ? `Put first the one thing they seem stuck on, guessed from what they started: the ${input.targetLanguage} word for a word they said in ${input.nativeLanguage}, the form of a word they got wrong, or the words that carry on from where they stopped. ` : ""}Each with "meaning": what it means in ${input.nativeLanguage}, nothing else.
+- "why": ${turn.heard ? `at most one short phrase in ${input.nativeLanguage} naming that one thing (for example which word or which form), or "" when nothing in particular is wrong` : `""`}. Never a description of the question, no praise, no scolding.${
     input.focus
       ? `
 
@@ -225,9 +225,6 @@ export function parseReview(raw: string): Review | null {
   const read = (value: unknown, limit: number) =>
     typeof value === "string" ? value.trim().slice(0, limit) : "";
   const why = read(record.why, MAX_REVIEW_CHARS);
-  // Without the explanation there is no review: the line on its own is the
-  // "here is the right answer" card this exists instead of.
-  if (!why) return null;
   const rawPieces = (parsed as { pieces?: unknown }).pieces;
   const pieces = Array.isArray(rawPieces)
     ? rawPieces
@@ -238,6 +235,9 @@ export function parseReview(raw: string): Review | null {
         .filter((piece) => piece.text)
         .slice(0, 3)
     : [];
+  // Without the explanation there is no review: the line on its own is the
+  // "here is the right answer" card this exists instead of. 통화 중 💡는 조각만으로도 된다(설명은 막힌 게 있을 때만).
+  if (!why && !pieces.length) return null;
   return {
     why,
     say: read(record.say, 200),

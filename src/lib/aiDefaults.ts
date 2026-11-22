@@ -41,6 +41,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   curriculumMapFill: "gpt-6-luna",
   learnerRead: "gpt-6-luna",
   roleplayReview: "gpt-5.6-terra",
+  roleplayHint: "gpt-6-luna",
   chatVerify: "gpt-6-luna",
   fixedLesson: "gpt-6-luna",
   wordSenses: "gpt-6-luna",
@@ -103,6 +104,8 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   learnerRead: HAIKU,
   ask: HAIKU,
   roleplayReview: SONNET,
+  // 통화 중 💡(2026-11-22 사용자 "힌트가 딜레이가 있고 문장 설명에 가까움"): 기다리는 중이라 빠른 Haiku로 짧게 — 막힌 낱말 하나 + 쓸 조각.
+  roleplayHint: HAIKU,
   // My 지도 그리기(대화 예시로 "이게 내 수준"을 고른 뒤 그 단계 범위로) — 사용자 생각 2026-10-22: Sonnet이 그린다.
   // 이 호출만 Sonnet이 먼저 생각하게 둔다(completeChat think) — 생각을 끄면 지도가 얇아졌다(점검 8/14 "map too thin").
   curriculumMap: SONNET,

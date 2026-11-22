@@ -165,6 +165,7 @@ export const MODEL_CALLS_PER_REQUEST = {
   // Looking back at a turn the learner got stuck on. Only ever from a button
   // they pressed, so this counts the ones who wanted to know why.
   roleplayReview: 1,
+  roleplayHint: 1,
   // One attempt at saying a line the review handed them. Counts how many go on
   // from reading the explanation to using it, which is the harder step.
   roleplayPractice: 1,

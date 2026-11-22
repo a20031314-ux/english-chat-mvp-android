@@ -93,14 +93,23 @@ test("통화 중 힌트는 문장 대신 쓸 수 있는 표현 조각을 묻는�
   const live = prompt({ live: true, heard: "I want to 예약 a" });
   assert.match(live, /paused, waiting for their answer/);
   assert.match(live, /"I want to 예약 a"/);
-  assert.match(live, /carry on from what they started/);
+  assert.match(live, /carry on from where they stopped/);
+  assert.match(live, /seem stuck on/);
+  assert.match(live, /do not explain or translate what they were asked/);
   assert.match(live, /Never a complete sentence/);
   assert.doesNotMatch(live, /"say"/);
   assert.match(live, /mixed in words from Korean/);
   assert.doesNotMatch(live, /already moved on/, "돌아보기 문구가 아니다");
   const silent = prompt({ live: true, heard: "" });
   assert.match(silent, /not managed to say anything yet/);
-  assert.doesNotMatch(silent, /carry on from what they started/);
+  assert.doesNotMatch(silent, /seem stuck on/);
+  assert.match(silent, /"why": ""/);
+});
+
+test("통화 중 힌트: 설명 없이 조각만 와도 보인다, 둘 다 없으면 없음 (en·es)", () => {
+  assert.deepEqual(parseReview(JSON.stringify({ why: "", pieces: [{ text: "a reservation", meaning: "예약" }] }))?.pieces?.map((piece) => piece.text), ["a reservation"]);
+  assert.equal(parseReview(JSON.stringify({ why: "", pieces: [{ text: "me siento cansada", meaning: "피곤해요" }] }))?.why, "");
+  assert.equal(parseReview(JSON.stringify({ why: "", pieces: [] })), null);
 });
 
 test("힌트 조각 읽기: 셋까지, 글자 없는 것은 버림 — 스페인어·일본어", () => {

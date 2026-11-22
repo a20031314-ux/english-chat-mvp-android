@@ -64,6 +64,7 @@ export const TASKS = {
   curriculumMapFill: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? D.curriculumMapFill, about: "My 지도 나눠 그리기 — 주제 몇 개씩 연습 채우기" },
   learnerRead: { tier: "high", openai: () => env("OPENAI_LEARNER_MODEL") ?? D.learnerRead, about: "학습자 프로필·자주 틀리는 것 읽기" },
   roleplayReview: { tier: "high", openai: () => env("OPENAI_REVIEW_MODEL") ?? D.roleplayReview, about: "통화 돌아보기 평가" },
+  roleplayHint: { tier: "basic", openai: () => D.roleplayHint, about: "통화 중 💡 힌트 — 막힌 낱말·쓸 조각(짧게, 빠르게)" },
   chatVerify: { tier: "high", openai: () => env("OPENAI_VERIFY_MODEL") ?? D.chatVerify, about: "채팅 고친 문장 확인(위험한 줄만, 열 때)" },
   fixedLesson: { tier: "high", openai: () => D.fixedLesson, about: "Stagebank 고정 수업 쓰기(틀 × 앱 언어마다 한 번·공유, 검사기 통과만 저장)" },
   wordSenses: { tier: "high", openai: () => D.wordSenses, about: "단어 사전 단어의 여러 뜻(단어 × 앱 언어마다 한 번·공유)" },

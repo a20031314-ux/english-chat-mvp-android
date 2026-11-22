@@ -24,10 +24,6 @@ export const dynamic = "force-dynamic";
  * where judgement actually pays: working out whether they missed the question,
  * missed the words, or simply answered slowly.
  */
-function reviewModel(): string {
-  return routeFor("roleplayReview").model;
-}
-
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
@@ -66,7 +62,9 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "nothing to review" }, { status: 400 });
   }
 
-  await meterRequest(request, "roleplayReview");
+  // 통화 중 💡는 따로(빠른 모델·짧은 답), 돌아보기는 그대로.
+  const task = turn.live ? ("roleplayHint" as const) : ("roleplayReview" as const);
+  await meterRequest(request, task);
 
   // The one turn whose silence the app sends today: the learner asked to look
   // back at it, so its real response latency and tries come with the request.
@@ -91,9 +89,9 @@ export async function POST(request: NextRequest) {
   );
 
   try {
-    const model = reviewModel();
+    const model = routeFor(task).model;
     const reasoning = isReasoningModel(model);
-    const completion = await completeChat(client, "roleplayReview", {
+    const completion = await completeChat(client, task, {
       messages: [
         {
           role: "system",
@@ -112,7 +110,7 @@ export async function POST(request: NextRequest) {
         },
       ],
       response_format: { type: "json_object" },
-      ...(reasoning ? { max_completion_tokens: 2000 } : { max_tokens: 900 }),
+      ...(reasoning ? { max_completion_tokens: turn.live ? 800 : 2000 } : { max_tokens: turn.live ? 300 : 900 }),
     });
     const review = parseReview(completion.choices[0]?.message?.content ?? "");
     if (!review) {
