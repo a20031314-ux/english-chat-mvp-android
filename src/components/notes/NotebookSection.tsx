@@ -16,7 +16,7 @@ import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { useScriptPack } from "@/lib/curriculum/useScriptPack";
 import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
 import { Quizbank } from "@/components/studyMap/Quizbank";
-import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
+import { needsLetters } from "@/lib/curriculum/letterLangs";
 import { LettersBank, LettersRow } from "@/components/studyMap/ScriptPractice";
 import { LETTERS_OPEN_EVENT, peekLettersOpen } from "@/lib/curriculum/lettersOpen";
 import { useItemStats } from "@/lib/curriculum/useItemStats";
@@ -80,7 +80,7 @@ export function NotebookSection({
     scrollToTabs();
   };
   // 오늘 카드(Logbank)를 누르면 Quizbank로 — 그 판의 열쇠는 Quizbank가 가져감(curriculum/quizFocus.ts).
-  // 글자·소리 칸(Languagebank 안)을 여는 신호 — 오늘 카드(0단계)·통화 숙제.
+  // 글자·소리 칸(Languagebank 안)을 여는 신호 — 오늘 카드(글자부터)·통화 숙제.
   useEffect(() => {
     const quiz = () => setTab("keep");
     const letters = () => setTab("lang");
@@ -93,9 +93,6 @@ export function NotebookSection({
   }, []);
   // 단어장 열기 신호(openNotes words·?screen=vocab) → Quizbank.
   useEffect(() => onAppIntent("openNotes", () => setTab("keep")), []);
-  // 0단계 — 글자·소리(curriculum/lettersFirst.ts): 글자가 다른 학습 언어에서 글자부터 고르면 Quizbank 대신 글자 칸.
-  const [lettersFlag, setLetters] = useLettersFirst(language);
-  const lettersOn = lettersFlag && needsLetters(language);
 
   useEffect(() => {
     let cancelled = false;
@@ -137,14 +134,14 @@ export function NotebookSection({
             needsLetters(language)
               ? {
                   row: (open) => <LettersRow ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} onOpen={open} />,
-                  body: <LettersBank ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} onDone={lettersOn ? () => setLetters(false) : undefined} />,
+                  body: <LettersBank ui={ui} targetLanguage={language} locale={locale} isPremium={isPremium} />,
                 }
               : undefined
           }
         />
       }
       plan={
-        !lettersOn && book.parts?.some((row) => row.scripts)
+        book.parts?.some((row) => row.scripts)
           ? (render) => (
               <Quizbank
                 ui={ui}
@@ -238,7 +235,7 @@ function MyLayers({
   tab: MyLayer;
   onOpen: (layer: MyLayer) => void;
   languagebank: ReactNode;
-  /** Quizbank — 0단계 글자 묶음이면 없음(칸 둘). */
+  /** Quizbank — 문제 재료가 없을 때만 없음(칸 둘). */
   plan: ((render: (parts: PlanParts) => ReactNode) => ReactNode) | null;
   /** Logbank 칸 안(머리 아이콘을 받아서). */
   logbank: (head: ReactNode) => ReactNode;

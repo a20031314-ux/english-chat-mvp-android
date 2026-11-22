@@ -23,7 +23,7 @@ import { TodaySlot, TodayTimeline } from "@/components/studyMap/Logbank";
 /**
  * 오늘의 학습(My 맨 위, 프로필 카드 아래) = 오늘 타임라인(사용자 2026-11-14 "기준이 모호해 · Logbank에 이미 일일 타임라인 — 타임라인 중심으로 합치기, 구체화해서"):
  * 위는 오늘 한 학습 시간 줄(Logbank 그날 세부와 같은 줄 — TodayTimeline), 이어서 오늘 할 것 칸(TodaySlot):
- * ▶ Quizbank(기준 n/10 — 오늘 답한 서로 다른 것, 0단계면 오늘의 글자 묶음) · 고른 튜터와 통화(누르면 튜터 프로필 — 문 넷) · 숙제(있을 때).
+ * ▶ Quizbank(기준 n/10 — 오늘 답한 서로 다른 것) · 글자부터면 오늘의 글자 묶음 · 고른 튜터와 통화(누르면 튜터 프로필 — 문 넷) · 숙제(있을 때).
  * 칸마다 끝나면 ✓, 다 끝나면 제목 옆 ✓. 날마다 지난 기록은 Logbank.
  */
 export function TodayCards({ ui, language, locale, grammarName }: { ui: UICopy; language: string; locale: string; grammarName?: (stage: number, index: number) => string }) {
@@ -38,15 +38,14 @@ export function TodayCards({ ui, language, locale, grammarName }: { ui: UICopy; 
   const [lettersDone, setLettersDone] = useState(false);
   type Row = { id: string; done: boolean; render: (last: boolean) => ReactNode };
   const rows: Row[] = [];
-  if (letters) rows.push({ id: "letters", done: lettersDone, render: (last) => <LettersRow ui={ui} language={language} locale={locale} last={last} onDone={setLettersDone} /> });
-  else
-    rows.push({
+  rows.push({
       id: "quiz",
       done: quiz,
       render: (last) => (
         <TodaySlot kind="study" done={quiz} last={last} icon="▶" name={ui.keepTitle} goal={`${Math.min(answered, TODAY_GOAL)}/${TODAY_GOAL}`} onClick={() => focusQuiz(language, [])} />
       ),
     });
+  if (letters) rows.push({ id: "letters", done: lettersDone, render: (last) => <LettersRow ui={ui} language={language} locale={locale} last={last} onDone={setLettersDone} /> });
   if (homework) {
     rows.push({
       id: "homework",
@@ -173,8 +172,8 @@ function lettersTarget(language: string, next: string | null): string | null {
 }
 
 /**
- * 0단계(글자부터, curriculum/lettersFirst.ts)면 퀴즈 줄 자리에 오늘의 글자 묶음 → Languagebank 글자·소리 칸
- * (0단계엔 Quizbank 칸이 없음). 그날 처음 고른 묶음을 지나면 ✓(todayLetters.v1).
+ * 글자부터(curriculum/lettersFirst.ts)면 Quizbank 줄 다음에 오늘의 글자 묶음 → Languagebank 글자·소리 칸.
+ * 그날 처음 고른 묶음을 지나면 ✓(todayLetters.v1), 묶음을 다 지나면 줄이 없어진다.
  */
 function LettersRow({ ui, language, locale, last, onDone }: { ui: UICopy; language: string; locale: string; last: boolean; onDone: (done: boolean) => void }) {
   const { isPremium } = usePremium();
@@ -185,9 +184,10 @@ function LettersRow({ ui, language, locale, last, onDone }: { ui: UICopy; langua
   // 그날 처음 고른 묶음을 하루 그대로(이 폰).
   const target = data?.course ? lettersTarget(language, next) : null;
   const group = groups.find((one) => one.id === target);
-  const done = Boolean(group && passed.has(group.id));
+  // 묶음을 다 지나면 줄 없이 끝난 것으로(제목 ✓를 막지 않게).
+  const done = Boolean(data?.course && !next) || Boolean(group && passed.has(group.id));
   useEffect(() => onDone(done), [done, onDone]);
-  if (!data?.course || !group) return null;
+  if (!data?.course || !group || !next) return null;
   return (
     <TodaySlot
       kind="letters"

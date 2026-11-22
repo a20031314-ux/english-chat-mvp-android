@@ -87,7 +87,7 @@ export function ScriptSheet({
   data: ScriptData;
   onPassed: (next: ScriptData) => void;
   onClose: () => void;
-  /** 이 묶음 카드부터 바로(0단계 일일 학습에서 누른 묶음). */
+  /** 이 묶음 카드부터 바로(오늘의 학습 글자 줄에서 누른 묶음). */
   initialGroup?: string | null;
 }) {
   const course = data.course!;
@@ -313,9 +313,8 @@ export function LettersRow({ ui, targetLanguage, locale, isPremium, onOpen }: { 
 
 /**
  * 글자·소리 칸 안: 모든 묶음을 칩으로(지난 묶음 ✓, 다음 묶음은 테두리) — 누르면 그 묶음 연습(ScriptSheet).
- * 0단계(글자부터)에서 다 지나면 "1단계 ›"(onDone, 예전 LettersPlan과 같음).
  */
-export function LettersBank({ ui, targetLanguage, locale, isPremium, onDone }: { ui: UICopy; targetLanguage: string; locale: string; isPremium: boolean; onDone?: () => void }) {
+export function LettersBank({ ui, targetLanguage, locale, isPremium }: { ui: UICopy; targetLanguage: string; locale: string; isPremium: boolean }) {
   const [data, setData] = useScript(targetLanguage, locale, isPremium);
   const [open, setOpen] = useState<string | null>(null);
   if (!data?.course || !data.progress) return <p className="py-6 text-center text-meta text-slate-500">…</p>;
@@ -347,16 +346,6 @@ export function LettersBank({ ui, targetLanguage, locale, isPremium, onDone }: {
           );
         })}
       </div>
-      {/* Stage 1 can be opened at any time (user 2026-11-23 "0단계 스킵은 안 돼?"); quiet until every group is passed. */}
-      {onDone ? (
-        <button
-          type="button"
-          onClick={onDone}
-          className={`mt-1 w-full rounded-xl py-2.5 text-note font-semibold ${data.progress.finished ? "bg-status-learned text-black" : "border border-line text-slate-300 hover:bg-white/5"}`}
-        >
-          {ui.stageNumber.replace("{n}", "1")} ›
-        </button>
-      ) : null}
       {open ? (
         <ScriptSheet
           ui={ui}
