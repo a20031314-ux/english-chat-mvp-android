@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (99)
+## 탭이 확인할 것 (100)
 
 ### 탭 1 메인
 
@@ -230,6 +230,10 @@
 - **a261122-3-2** (2026-11-22 15:20, 탭 3 · d6eaea0) FullScreenLayer 깊이만큼 z(안에서 연 층이 위로)
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 게시판 · 친구 초대 · Room · 방 게임 · Logbank · 오늘의 학습 · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 광고
   - 볼 곳: `components/notes/NotebookSection.tsx` · `components/studyMap/BankFlip.tsx` · `components/studyMap/Dictionary.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/ScriptPractice.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261122-3-4** (2026-11-22 19:56, 탭 3 · c21d520) 첫 측정 계산·Languagebank 칠하기(measuredNow·quizShade)
+  - 기능: 첫 측정 · Quizbank · Languagebank · 칸 설명
+  - 볼 곳: `components/studyMap/FirstCheck.tsx` · `components/studyMap/LanguageBank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/Quizbank.tsx` · `lib/notes/myParts.ts` · `lib/notes/stageParts.ts`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI

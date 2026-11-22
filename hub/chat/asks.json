@@ -7197,25 +7197,35 @@
       "base": "ffe41ca201f10ed57d3c89863f62aca90d20bcea",
       "head": "d6eaea0",
       "status": "open"
+    },
+    {
+      "id": "a261122-3-4",
+      "at": "2026-11-22 19:56",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "첫 측정 계산·Languagebank 칠하기(measuredNow·quizShade)",
+      "files": [
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/LanguageBank.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/Quizbank.tsx",
+        "src/lib/notes/myParts.ts",
+        "src/lib/notes/stageParts.ts"
+      ],
+      "features": [
+        "첫 측정",
+        "Quizbank",
+        "Languagebank",
+        "칸 설명"
+      ],
+      "base": "41b2ba16a80021ad9c11b7566364e4a5f0332525",
+      "head": "c21d520",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-10 00:15",
-      "from": "2",
-      "base": "HEAD",
-      "head": "b305d55",
-      "what": "값 꼬리표 정리 — 낱말마다 붙던 '학습·n번 학습' 표시(퀴즈 답 뒤 칩·사전·카드 기록·타임라인)·'새로/다시 학습'·'학습 n번'을 지움, '학습 n'은 그 기간에 퀴즈로 답한 서로 다른 것의 수 한 뜻. 사전은 마지막 틀림 ✗만. CardProgressDots·cardProgress.ts 지움. 새 규칙 RULES 4·DESIGN '값 꼬리표' — 그 탭 화면에도 값마다 붙은 글 꼬리표가 있는지 같은 기준으로 봐 주세요",
-      "tabs": [
-        "1",
-        "2",
-        "3"
-      ],
-      "asks": [
-        "a261110-2-1",
-        "a261110-2-2"
-      ]
-    },
     {
       "at": "2026-11-10 00:19",
       "from": "1",
@@ -7840,9 +7850,22 @@
         "a261122-3-2",
         "a261122-3-3"
       ]
+    },
+    {
+      "at": "2026-11-22 19:56",
+      "from": "3",
+      "base": "41b2ba16a80021ad9c11b7566364e4a5f0332525",
+      "head": "c21d520",
+      "what": "첫 측정 계산·Languagebank 칠하기(measuredNow·quizShade)",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261122-3-4"
+      ]
     }
   ],
   "seq": {
-    "261122-3": 3
+    "261122-3": 4
   }
 }
