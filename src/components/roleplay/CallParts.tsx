@@ -491,7 +491,10 @@ export function CallPages({ ui, children }: { ui: UICopy; children: ReactNode })
  * 화면 높이가 낮으면(680px 미만) 튜터·내 칸이 눌려서 넣지 않는다. 광고가 없는 사람(구독·iOS·웹 꺼짐)은 칸 자체가 없다.
  */
 const CALL_AD_MIN_HEIGHT = 680;
-export function CallAdStrip() {
+/**
+ * hidden: 코치 카드·💡 힌트가 떠 있을 때 — 광고는 네이티브라 웹 화면 위에 그려져 힌트 시트를 가리고, 코치 카드가 뜨면 튜터 자막이 잘렸다(사용자 2026-11-22).
+ */
+export function CallAdStrip({ hidden = false }: { hidden?: boolean }) {
   const [tall, setTall] = useState(false);
   useEffect(() => {
     const check = () => setTall(window.innerHeight >= CALL_AD_MIN_HEIGHT);
@@ -499,7 +502,7 @@ export function CallAdStrip() {
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
-  if (!tall) return null;
+  if (!tall || hidden) return null;
   return (
     <div className="shrink-0 px-4 pb-[env(safe-area-inset-bottom)]" data-call-ad>
       <NativeAdSlot feedId="call" slotKey="call-live" spaced />

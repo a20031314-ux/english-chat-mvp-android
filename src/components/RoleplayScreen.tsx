@@ -1245,7 +1245,7 @@ export function RoleplayScreen({
         onEnd={hangUp}
         leaving={leaving}
       />
-      <CallAdStrip />
+      <CallAdStrip hidden={Boolean(reviewing || coachCard)} />
 
       {reviewing ? (
         <RoleplayReviewPanel
