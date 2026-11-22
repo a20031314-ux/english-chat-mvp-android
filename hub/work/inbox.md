@@ -331,3 +331,6 @@
 - 2026-11-22 watch → dev: [공통] src/app/api/whats-new/route.ts — 카드에 guide가 있으면 버전 상관없이 guide/content.ts 옛 칸 제목·글·그림을 먼저 써서 2.79 이하 업데이트 배너(code=94)에 call.talk·my.next·my.growth가 옛 Quizbank·육각형 %·옛 통화 그림으로 나감, my.lang만 새 문구 (code 94 이상 노트는 guideText 대신 카드 문구·2.80 그림, 서버만 — 2.80 출시 전에)
 - 2026-11-14 dev → qa: 다음 체감 점검에서 My 오늘의 학습(오늘 한 학습 시간 줄 + ▶ Quizbank n/10·숙제·🎓 수업 칸, 덩어리 누르면 세부)과 통화 모드 설명창(문 넷 각각 처음 열 때 한 번, 맨 위 모드 이름 ⓘ) — ux-issues U50. 실제 통화에서 튜터 첫 마디가 수업·가르치기임을 말하는지. ja 학습/ko 앱, en 학습/ja 앱, es 학습/ar 앱.
 - 2026-11-19 dev → qa: 다음 시험 앱(웹 바로)·2.80에서 통화 하나: 튜터 줄·프로필·사람 탭에 📞 통화 문 하나, 통화 중 일부러 틀리게 말하기 → 튜터는 말로 안 고치고 내 얼굴 아래 코치 띠(짝 튜터 얼굴·이름), 그 문장을 따라 말하면 ✓(활용만 다르게 말하면 ✓ 없음), 다른 말을 하면 띠가 흐려지고 대화가 이어지는지, 끝 화면 숙제 [퀴즈 | 대화]. ja/ko, en/ja, es/ar.
+- 2026-11-22 watch → dev: [my] src/components/studyMap/Logbank.tsx:1361 — 빈 화면 조건 `!rows.length && !pairs.length`라 통화만 있는 기간엔 배운 것 칸·쌓기 📞 날이 안 그려짐 (빈 조건에 기간 통화 수를 더하거나 DayStacks를 조건 밖으로)
+- 2026-11-22 watch → dev: [my] src/components/studyMap/FirstCheck.tsx:419 — 첫 측정 결과가 아직 "0단계 · 글자부터"(다른 화면은 글자부터만) (stageNumber 0 빼고 글자부터 이름만)
+- 2026-11-22 watch → dev: [my] src/components/studyMap/Logbank.tsx:1165 — CallResultCard removable이 늘 true인 죽은 갈래 (매개변수·조건 지우기)
