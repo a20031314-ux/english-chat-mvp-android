@@ -96,7 +96,7 @@ Rewrite your notes to cover all of it. Keep only what you would need to carry on
 
 Plain sentences, in English, at most 80 words. Nothing about this being practice.
 
-Also write "facts": what you learned about their life — work, plans, places, people, things they did or like. Not grammar, not a sentence you corrected, not something you only suggested. One short English sentence each. Today is ${input.today}. When they said when it happened, write that day instead of a relative word. An empty list when nothing about their life was said.
+Also write "facts": what you learned about their life — work, plans, places, people, things they did or like. Not grammar, not a sentence you corrected, not something you only suggested. One short English sentence each, starting with what kind it is: "habit: " for something they do again and again, "plan YYYY-MM-DD: " for something still to come on that day ("plan: " when no day was said), "about: " for anything else (work, people, places, likes, things done). Today is ${input.today}. When they said when it happened, write that day instead of a relative word. An empty list when nothing about their life was said.
 
 ${input.summary ? `
 The call is over. Also write "summary": a short note from you, ${input.summary.name}, to them about this whole call, the way you talk (${input.summary.manner}). Write it in ${input.summary.language}, speaking to them as "you": at most three short sentences, about 60 words in all, no questions, no lists.

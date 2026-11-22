@@ -6,6 +6,7 @@ import type { RoleplayScenario } from "./script.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
 import {
   correctionOf,
+  followUpFact,
   offeredOf,
   DIRECTED_TURN_LIMIT,
   FREE_TURN_LIMIT,
@@ -1683,4 +1684,25 @@ test("글자를 아직 못 읽는 일본어 학습자: 가나로만(0단계) —
     const text = tutorSystemPrompt({ scenario: scene, bank, recorded: recordedLines(scene, SCENARIOS, bank), request: request({ scenarioId: scene.id, nodeId: "talk", targetLanguage: lang, nativeLanguage: "ko", newToScript: true }) });
     assert.equal(/cannot read kanji yet/.test(text), expect);
   }
+});
+
+test("followUpFact: 통화 초반에 기억 하나 — 날 지난 예정 → 습관 → 올 예정 → 그 밖", () => {
+  const prior = [
+    "Today is 2026-11-25.",
+    "2026-11-22: about: Su hermana estudia en la universidad.",
+    "2026-11-22: habit: 毎朝ジムに行く。",
+    "2026-11-22: plan 2026-11-24: They have an exam on Monday.",
+    "2026-11-22: plan 2026-12-10: Business trip to Singapore.",
+  ].join("\n");
+  const hello = [{ who: "tutor" as const, text: "Hi!" }];
+  assert.equal(followUpFact(prior, hello), "2026-11-22: plan 2026-11-24: They have an exam on Monday.");
+  const noDue = prior.replace("plan 2026-11-24", "plan 2026-11-30");
+  assert.equal(followUpFact(noDue, hello), "2026-11-22: habit: 毎朝ジムに行く。");
+  // 처음(튜터 말 없음)·세 번째 튜터 말부터는 없음, 기억이 없으면 없음
+  assert.equal(followUpFact(prior, []), null);
+  const late = [...hello, { who: "learner" as const, text: "a" }, { who: "tutor" as const, text: "b" }, { who: "learner" as const, text: "c" }, { who: "tutor" as const, text: "d" }];
+  assert.equal(followUpFact(prior, late), null);
+  assert.equal(followUpFact("", hello), null);
+  // 꼬리표 없는 옛 기억은 "그 밖"
+  assert.equal(followUpFact("Today is 2026-11-25.\n2026-11-20: They work at a hospital in Madrid.", hello), "2026-11-20: They work at a hospital in Madrid.");
 });

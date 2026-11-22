@@ -818,6 +818,31 @@ export function triedRedo(redo: string, heard: string, language?: string): boole
   return want.filter((word) => got.has(word)).length * 2 >= want.length;
 }
 
+/**
+ * 이어 물을 기억 하나(사용자 2026-11-22 "오늘도 운동 갔어? 식의 대화") — 열린 통화 초반, 튜터 말이 한두 번 나간 뒤에만.
+ * prior = lifeFactsPrompt("Today is D.\nD: kind: text"). 고르는 순서: 날이 지난 예정 → 습관 → 아직 올 예정 → 그 밖, 같은 종류 안에서는 날마다 돌려 가며.
+ */
+export function followUpFact(prior: string | undefined, history: readonly SpokenLine[]): string | null {
+  const tutorSaid = history.filter((line) => line.who === "tutor").length;
+  if (!prior?.trim() || tutorSaid < 1 || tutorSaid > 2) return null;
+  const lines = prior.trim().split("\n");
+  const today = /^Today is (\d{4}-\d{2}-\d{2})/.exec(lines[0] ?? "")?.[1];
+  if (!today) return null;
+  const ranked: { rank: number; line: string }[] = [];
+  for (const line of lines.slice(1)) {
+    const fact = /^\d{4}-\d{2}-\d{2}: (.+)$/.exec(line.trim())?.[1];
+    if (!fact) continue;
+    const plan = /^plan(?: (\d{4}-\d{2}-\d{2}))?:/i.exec(fact);
+    const rank = plan ? (plan[1] && plan[1] <= today ? 4 : 2) : /^habit:/i.test(fact) ? 3 : 1;
+    ranked.push({ rank, line: line.trim() });
+  }
+  if (!ranked.length) return null;
+  const best = Math.max(...ranked.map((one) => one.rank));
+  const pool = ranked.filter((one) => one.rank === best);
+  const dayNumber = Math.floor(Date.parse(`${today}T00:00:00Z`) / 86_400_000);
+  return pool[dayNumber % pool.length]!.line;
+}
+
 /** 통화 첫 마디(학습자가 아직 아무 말도 안 함) — 침묵 차례가 아니다(수업 첫 마디에 "들렸어요?"가 붙던 것, 2026-11-12). */
 export function openingTurn(request: Pick<DirectorRequest, "history" | "studyOpen">): boolean {
   // 첫 질문 뒤의 침묵은 침묵 차례다 — 튜터 말이 하나도 없을 때만 첫 마디(변경 감시 리뷰 2026-11-12). ⏭(skip)도 침묵이 아니다.
@@ -990,6 +1015,9 @@ Get back to your list as soon as it feels natural.`
             mustReturn(request, scenario) ? ` Come back to it now, with "step:${current.id}".` : ""
           }`
         : `Right now you are on step:${current.id} — ${current.goal}.`,
+    scenario.openEnded && followUpFact(request.prior, request.history)
+      ? `One thing you remember about them, with the day you heard it: "${followUpFact(request.prior, request.history)}". In this reply or your next one, after reacting to what they just said, ask one short, warm follow-up about it, as a friend who remembers: for a habit, whether they did it again today or lately; for a plan whose day has passed, how it went; for a plan still ahead, how it is coming along; otherwise how that person, place or thing is doing. Use words at their level, ask it once, and do not ask it again if you already did in this call.`
+      : "",
     request.prior?.trim()
       ? `What you remember about them from earlier conversations. Each line starts with the day you heard it. Bring one up only when it fits what they just said, in your own manner, and never read this list out loud. Do not invent a memory that is not written here.
 ${request.prior.trim()}`
