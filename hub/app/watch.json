@@ -2,7 +2,7 @@
  "_": "변경 감시(scripts/watch/watch.mjs)의 기준값 — 손으로 고치지 않는다. last = 마지막으로 본 main 커밋, metrics = 그때 잰 값.",
  "last": "4d615e252ca636a028a328f31918636c664d8000",
  "at": "2026-11-22T14:24:16.558Z",
- "screensFiredAt": "2026-11-21T16:24:11.625Z",
+ "screensFiredAt": "2026-11-22T14:29:11.546Z",
  "metrics": {
   "commit": "4d615e2",
   "tables": {
