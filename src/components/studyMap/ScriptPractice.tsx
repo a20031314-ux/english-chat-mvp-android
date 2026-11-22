@@ -347,8 +347,13 @@ export function LettersBank({ ui, targetLanguage, locale, isPremium, onDone }: {
           );
         })}
       </div>
-      {onDone && data.progress.finished ? (
-        <button type="button" onClick={onDone} className="mt-1 w-full rounded-xl bg-status-learned py-2.5 text-note font-semibold text-black">
+      {/* Stage 1 can be opened at any time (user 2026-11-23 "0단계 스킵은 안 돼?"); quiet until every group is passed. */}
+      {onDone ? (
+        <button
+          type="button"
+          onClick={onDone}
+          className={`mt-1 w-full rounded-xl py-2.5 text-note font-semibold ${data.progress.finished ? "bg-status-learned text-black" : "border border-line text-slate-300 hover:bg-white/5"}`}
+        >
           {ui.stageNumber.replace("{n}", "1")} ›
         </button>
       ) : null}
