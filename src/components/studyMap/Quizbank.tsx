@@ -494,14 +494,26 @@ export function Quizbank({
   };
   const keepBody = (
     <div data-keep-learning data-focus-serial={focusSerial}>
-      {/* 게이지(6단계): 숫자 없이 점 다섯, 가운데 = 지금 단계. 다음 묶음부터 바뀐다. */}
-      <div data-quiz-gauge={gauge} className="mb-2 flex items-center justify-end gap-1.5">
+      {/* 게이지: 이름표 "난이도" + 오른쪽으로 갈수록 높아지는 막대 다섯(지금 칸까지 채움) — 글 설명 없이 난이도 조절로 보이게(사용자 2026-11-22 "C로"). 다음 묶음부터 바뀐다. */}
+      <div data-quiz-gauge={gauge} className="mb-2 flex items-center gap-1.5">
+        <span data-quiz-gauge-name className="me-auto text-caption text-slate-400">
+          {ui.discoverLevelLabel}
+        </span>
         <button type="button" aria-label={ui.gaugeEasier} title={ui.gaugeEasier} onClick={() => moveGauge(gauge - 1)} disabled={gauge <= -2} className="h-6 w-6 rounded-full border border-line text-caption text-slate-300 disabled:opacity-30">
           −
         </button>
-        {[-2, -1, 0, 1, 2].map((dot) => (
-          <button key={dot} type="button" aria-label={dot < gauge ? ui.gaugeEasier : ui.gaugeHarder} aria-pressed={dot === gauge} onClick={() => moveGauge(dot)} className={`h-2.5 w-2.5 rounded-full ${dot === gauge ? "bg-good" : dot === 0 ? "bg-slate-400" : "bg-slate-600"}`} />
-        ))}
+        <span className="flex h-5 items-end gap-1" dir="ltr">
+          {[-2, -1, 0, 1, 2].map((dot, i) => (
+            <button
+              key={dot}
+              type="button"
+              aria-label={`${ui.discoverLevelLabel} ${i + 1}`}
+              aria-pressed={dot === gauge}
+              onClick={() => moveGauge(dot)}
+              className={`w-1.5 rounded-full ${["h-1.5", "h-2.5", "h-3.5", "h-4", "h-5"][i]} ${dot <= gauge ? "bg-good" : "bg-slate-600"}`}
+            />
+          ))}
+        </span>
         <button type="button" aria-label={ui.gaugeHarder} title={ui.gaugeHarder} onClick={() => moveGauge(gauge + 1)} disabled={gauge >= 2} className="h-6 w-6 rounded-full border border-line text-caption text-slate-300 disabled:opacity-30">
           +
         </button>

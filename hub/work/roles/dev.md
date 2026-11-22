@@ -27,7 +27,7 @@
 > 사용자 결정 대기는 `hub/STATE.md` "결정 대기", 점검·리뷰가 넘긴 버그는 `hub/work/inbox.md`의 `→ dev` 줄.
 
 - **사용법 넘겨 보기 장면 다듬기:** 14개 앱 언어 모두 들어감(`lib/guide/slides.ts`·`slideTitles.ts`·`scripts/guide-slides/`). 남은 것: 몇 언어는 흐름 첫 그림이 고르기 문제가 아님(pt·ar·ru 등 — 이름표만 고르기), 문장 쓰기 문제가 안 나와 흐름이 두 단계인 언어, 수업 숙제 화면 장면, 친구 초대 장면, 칸 머리 ?(BankHelp — 예전 글)를 사용법 그 칸으로 열지, 예전 칸 글·학습 흐름(`overview.ts`·`content.ts` 칸 글)은 옛 앱 2.79만 받게 된 뒤 정리. `whatsNew.ts` 94 항목도 없음.
-- **Logbank 쌓기 장면:** 사용법 `log-core` 장면이 쌓기 기둥 전 화면 — 버전 자를 때 `scripts/guide-slides/shoot.mjs` 다시(14개 앱 언어). 남은 숫자 어긋남 둘은 inbox `qa → dev` 2026-11-21 줄.
+- **Logbank 쌓기·Quizbank 게이지 장면:** 사용법 `log-core`(쌓기 기둥 전)·Quizbank 장면(게이지 이름표·막대 전)이 옛 화면 — 버전 자를 때 `scripts/guide-slides/shoot.mjs` 다시(14개 앱 언어). 남은 숫자 어긋남 둘은 inbox `qa → dev` 2026-11-21 줄.
 - **이름 정리 56묶음:** `hub/app/FEATURES.md` 끝 목록 — 같은 기능이면 한 키로, 다른 기능이면 이름을 바꾼다. 먼저 "알아요"(checkKnown·itemsMastered·knownTag·markKnown)·"복습"·"이어서 하기". 고치면 `node scripts/check-copy-keys.mjs --write`.
 - **지울 것 1:** `hub/app/FEATURES.md` "지울 것" — 아침 알림(`morningNotify.ts` — 되살릴지 사용자 결정 뒤).
 - **옛 앱 전용 서버·lib:** 최소 지원 버전을 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용"과 그 서버만 쓰는 lib(`checkup.ts`·`recall.ts`·`stageScripts` 대본 쪽 등)를 지운다.
