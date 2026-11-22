@@ -11,7 +11,7 @@ import { glossFor } from "@/lib/curriculum/stageScripts";
 import { openLesson } from "@/lib/appIntents";
 import { LETTERS_OPEN_EVENT, takeLettersOpen } from "@/lib/curriculum/lettersOpen";
 import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
-import { estimateChance, measured } from "@/lib/curriculum/firstCheck";
+import { estimateChance, measuredNow, quizShade } from "@/lib/curriculum/firstCheck";
 import { oftenUsed, talkCounts } from "@/lib/curriculum/wordUse";
 
 /**
@@ -116,12 +116,13 @@ export function LanguageBank({
     void ledgerTick;
     return readLedger(language);
   }, [language, ledgerTick]);
-  // 칠하기 = 추정(2026-11-09 사용자 "추정을 다시 넣고, 학습 단어는 해당 카드에만"): 가장 최근 첫 측정·실력 확인 하나로
-  // 칸마다 아는 정도(firstCheck.ts estimateChance)를 칠하기로만. 학습(퀴즈 기록)은 낱말 카드에만. 잰 적이 없으면 칠하지 않음.
+  // 칠하기 = 첫 측정에서 시작해 퀴즈로 고쳐 감(사용자 2026-11-22 "첫측정 → 점차 실제실력"): 낱말 경계는 Quizbank가 고쳐 가는 값
+  // (firstCheck.ts measuredNow), 퀴즈로 직접 답한 칸은 마지막 답(quizShade — 맞음 칠함·틀림 비움). 잰 적이 없으면 칠하지 않음.
   const check = useMemo(() => {
     void ledgerTick;
-    return measured(language);
+    return measuredNow(language);
   }, [language, ledgerTick]);
+  const answered = useMemo(() => quizShade(ledger), [ledger]);
   // 대화에서 쓴 수(curriculum/wordUse.ts) — 퀴즈 칠하기와 따로, 자주 쓴 말 줄·대화 순서에만.
   const talks = useMemo(() => talkCounts(ledger), [ledger]);
   const often = useMemo(() => oftenUsed(ledger, 8), [ledger]);
@@ -150,6 +151,8 @@ export function LanguageBank({
   }, [check, items.word]);
   const valueOf = (one: Item) => {
     if (!check) return 0;
+    const direct = answered.get(one.key);
+    if (direct !== undefined) return direct;
     const kind = one.key.startsWith("w|") ? "word" : one.key.startsWith("e|") ? "expr" : "gram";
     const chance = estimateChance(check, { kind, rank: one.rank, lv: one.lv });
     return kind === "word" ? Math.min(1, chance * wordScale) : chance;

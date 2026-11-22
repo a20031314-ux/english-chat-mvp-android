@@ -5,6 +5,8 @@ import {
   climbNext,
   climbStart,
   estimateB,
+  capYesNo,
+  MEANING_ASK,
   estimateChance,
   fakeSlots,
   letterQuestions,
@@ -78,12 +80,13 @@ test("가짜에 다 [앎]이면 예/아니오를 믿지 않음(null), 뜻 고르
   assert.equal(level.picked, true);
 });
 
-test("뜻 고르기: b 근처 다섯, 맞히면 b가 오르고 틀리면 내림", async () => {
+test("뜻 고르기: b 아래 하나·경계·위로 셋(+예비 셋), 맞히면 b가 오르고 틀리면 내림", async () => {
   const words = await loadBank("en");
   const cuts = stageCuts("en");
   const ranks = meaningRanks(800, words, new Set());
-  assert.equal(ranks.length, 5);
-  assert.ok(ranks.every((rank) => rank > 300 && rank < 1200), ranks.join());
+  assert.equal(ranks.length, 8);
+  assert.ok(ranks.slice(0, MEANING_ASK).every((rank) => rank > 300 && rank < 2200), ranks.join());
+  assert.ok(ranks[4]! > ranks[0]!, "위로 묻는 낱말이 더 드묾");
   const up = wordLevel(800, ranks.map((rank) => ({ rank, correct: true })), words.length, cuts);
   const down = wordLevel(800, ranks.map((rank) => ({ rank, correct: false })), words.length, cuts);
   assert.ok(up.b > 800 && down.b < 800, `${up.b} ${down.b}`);
@@ -160,4 +163,57 @@ test("estimateChance: 낱말은 경계 b 곡선, 표현·문법은 잰 단계 �
   assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 1 }), 1);
   assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 2 }), 0.5);
   assert.equal(estimateChance(check, { kind: "gram", rank: 0, lv: 4 }), 0);
+});
+
+/**
+ * 가상 학습자(참 경계 trueB): 예/아니오에서 모르는 낱말도 "본 적 있어요"를 넉넉히 누르고(over), 뜻 고르기는 알면 맞히고 모르면 넷 중 하나 찍기.
+ * 예전엔 over가 있으면 경계가 끝(7,000)까지 붙음(가상 사용자 2026-11-22 민지·Layla). 이제 예/아니오는 3단계 끝까지만, 그 위는 뜻 고르기로.
+ */
+async function runPerson(language: string, trueB: number, over: number, seed: string): Promise<number> {
+  const words = await loadBank(language);
+  const cuts = stageCuts(language);
+  const fakes = fakesOf(language);
+  const random = seeded(`${seed}|person`);
+  const shown: YnCard[] = [];
+  const answers: YnAnswer[] = [];
+  for (let i = 0; i < YN_TOTAL; i += 1) {
+    const card = nextYnCard({ words, cuts, fakes, answers, shown, seed });
+    if (!card) break;
+    shown.push(card);
+    const knows = card.rank !== null && random() < knowChance({ b: trueB, n: 0 }, card.rank);
+    answers.push({ rank: card.rank, yes: knows || random() < (card.rank === null ? over / 3 : over) });
+  }
+  const b0 = capYesNo(estimateB(answers, words.length), cuts);
+  const skip = new Set(answers.flatMap((one) => (one.rank === null ? [] : [one.rank])));
+  const meaning = meaningRanks(b0 ?? 350, words, skip)
+    .slice(0, MEANING_ASK)
+    .map((rank) => ({ rank, correct: random() < knowChance({ b: trueB, n: 0 }, rank) || random() < 0.25 }));
+  return wordLevel(b0, meaning, words.length, cuts).b;
+}
+
+test("가상 학습자: 넉넉히 '본 적 있어요'를 눌러도 경계가 끝까지 붙지 않고 참값 근처 (en·es)", async () => {
+  for (const language of ["en", "es"]) {
+    for (const [trueB, low, high] of [
+      [1200, 500, 3200],
+      [2500, 1000, 5500],
+      [5000, 1800, 7000],
+    ] as const) {
+      const got = [];
+      for (let i = 0; i < 40; i += 1) got.push(await runPerson(language, trueB, 0.35, `${language}|${trueB}|${i}`));
+      got.sort((a, b) => a - b);
+      const median = got[Math.floor(got.length / 2)]!;
+      assert.ok(median >= low && median <= high, `${language} 참 ${trueB} → 가운데 ${Math.round(median)} (${got.map(Math.round).join(",")})`);
+      if (trueB <= 2500) assert.ok(got.filter((b) => b >= 6500).length <= 2, `${language} 참 ${trueB}: 끝에 붙은 것 ${got.filter((b) => b >= 6500).length}`);
+    }
+  }
+});
+
+test("가상 학습자: '본 적 있어요'를 아주 넉넉히(70%) 눌러도 참 1,200인 사람이 2,000을 안 넘음 (en·es) — 예전 가운데 2,400~2,600", async () => {
+  for (const language of ["en", "es"]) {
+    const got = [];
+    for (let i = 0; i < 40; i += 1) got.push(await runPerson(language, 1200, 0.7, `${language}|over|${i}`));
+    got.sort((a, b) => a - b);
+    const median = got[Math.floor(got.length / 2)]!;
+    assert.ok(median <= 2000, `${language} 가운데 ${Math.round(median)}`);
+  }
 });

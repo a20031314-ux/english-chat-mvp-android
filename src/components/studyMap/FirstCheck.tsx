@@ -13,12 +13,12 @@ import { learningLanguageSpeechTag } from "@/lib/learningLanguages";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { scriptFor } from "@/lib/curriculum/scripts/index";
 import { needsLetters } from "@/lib/curriculum/letterLangs";
-import { loadBank, stageCuts, BANK_CHUNK, type BankWord } from "@/lib/curriculum/vocabBank";
+import { loadBank, stageCuts, quizPos, BANK_CHUNK, type BankWord } from "@/lib/curriculum/vocabBank";
 import { fetchWordChunk } from "@/lib/curriculum/useWordBank";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { chooseFromPrepared, meaningFirst, turnFresh, type PreparedItem } from "@/lib/curriculum/preparedQuiz";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
-import { askedTexts, cardQuiz, noteAsked, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { askedTexts, cardQuiz, noteAsked, registerQuizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
 import { noteLedger } from "@/lib/curriculum/logLedger";
 import { kindOf, readLadder, saveLadder, stepLadder } from "@/lib/curriculum/ladder";
 import { emptyCircle, type Circle } from "@/lib/curriculum/circle";
@@ -28,6 +28,8 @@ import {
   climbOut,
   climbStart,
   estimateB,
+  capYesNo,
+  MEANING_ASK,
   falseYes,
   letterQuestions,
   lettersWeak,
@@ -70,28 +72,28 @@ const FAKE_FILES: Record<string, () => Promise<{ default: { words: string[] } }>
 async function meaningQuestion(language: string, ui: string, words: readonly BankWord[], rank: number, seed: string): Promise<Asked | null> {
   const word = words[rank];
   if (!word) return null;
-  const { cards } = await fetchWordChunk(language, ui, Math.floor(rank / BANK_CHUNK));
+  const chunk = Math.floor(rank / BANK_CHUNK);
+  const { cards } = await fetchWordChunk(language, ui, chunk);
   const card = cards.find((one) => one.w === word.w);
   if (!card?.gloss?.trim() || !card.example?.includes(card.piece)) return null;
-  const posOf = new Map(words.slice(Math.floor(rank / BANK_CHUNK) * BANK_CHUNK, (Math.floor(rank / BANK_CHUNK) + 1) * BANK_CHUNK).map((one) => [one.w, one.pos]));
-  const norm = (text: string) => text.trim().toLocaleLowerCase();
-  const others = cards.filter((one) => one.w !== card.w && one.gloss?.trim() && norm(one.gloss) !== norm(card.gloss));
-  const random = seeded(`${seed}|${card.w}`);
-  const same = others.filter((one) => posOf.get(one.w) === word.pos).sort(() => random() - 0.5);
-  const rest = others.filter((one) => posOf.get(one.w) !== word.pos).sort(() => random() - 0.5);
-  const wrong: string[] = [];
-  for (const one of [...same, ...rest]) {
-    if (wrong.length >= 3) break;
-    if (!wrong.some((w) => norm(w) === norm(one.gloss))) wrong.push(one.gloss.trim());
-  }
-  if (wrong.length < 3) return null;
-  const right = { en: "", raw: card.gloss.trim() };
-  const options = [right, ...wrong.map((raw) => ({ en: "", raw }))].sort(() => random() - 0.5);
-  return {
-    key: `w|${card.w}`,
-    rank,
-    question: { kind: "meaning", text: card.example, options, answer: options.indexOf(right), gloss: { en: "", raw: card.exampleGloss }, from: `w|${card.w}`, mark: card.piece, card: { word: card.w, meaning: card.gloss.trim() } },
-  };
+  // Quizbank 뜻 고르기와 같은 오답(quiz.ts cardQuiz — 같은 품사·같은 주제·비슷한 모양의 뜻, 소리 옮김은 안 냄). 예전엔 묶음 안 아무 뜻이라
+  // 문장에 넣으면 하나만 남았다(가상 사용자 2026-11-22 "사업가 / 고통 / 고전", duchess).
+  const listed = new Map(words.slice(chunk * BANK_CHUNK, (chunk + 1) * BANK_CHUNK).map((one) => [one.w, one]));
+  registerQuizSources(
+    language,
+    cards
+      .filter((one) => one.gloss?.trim() && one.example?.includes(one.piece))
+      .map((one) => {
+        const at = listed.get(one.w);
+        return {
+          key: `w|${one.w}`,
+          sources: [{ text: one.example, gloss: { en: "", raw: one.exampleGloss }, from: `w|${one.w}`, stage: 0, piece: one.piece, who: "me" as const, wordGloss: one.gloss, ...(at?.pos ? { pos: quizPos(at.pos) } : {}), ...(at?.topic ? { topic: at.topic } : {}) }],
+        };
+      }),
+  );
+  const question = cardQuiz(language, `w|${card.w}`, "hide", seed);
+  if (!question || question.kind !== "meaning") return null;
+  return { key: `w|${card.w}`, rank, question };
 }
 
 export function FirstCheck({
@@ -198,14 +200,14 @@ export function FirstCheck({
   // 뜻 고르기 문제 받기(낱말 카드 묶음 — 이 폰에 없으면 서버, 10초 넘으면 건너뜀).
   const toMeaning = async (yn: readonly YnAnswer[]) => {
     const list = words ?? [];
-    const b = estimateB(yn, list.length);
+    const b = capYesNo(estimateB(yn, list.length), cuts);
     b0.current = b;
     setStep("meaning");
     const skip = new Set(yn.flatMap((one) => (one.rank === null ? [] : [one.rank])));
     const ranks = meaningRanks(b ?? Math.round((cuts[0] ?? 700) * 0.5), list, skip);
-    const timeout = new Promise<null>((resolve) => window.setTimeout(() => resolve(null), 10_000));
+    const timeout = new Promise<null>((resolve) => window.setTimeout(() => resolve(null), 15_000));
     const made = await Promise.all(ranks.map((rank) => Promise.race([meaningQuestion(language, locale, list, rank, seed).catch(() => null), timeout])));
-    const qs = made.filter((one): one is Asked => Boolean(one));
+    const qs = made.filter((one): one is Asked => Boolean(one)).slice(0, MEANING_ASK);
     if (!qs.length) {
       startClimbStep([], {});
       return;

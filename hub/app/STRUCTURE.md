@@ -23,7 +23,7 @@
 │              오늘 학습 시간 줄(Logbank SessionRows, 그날 세부와 같은 줄 — 누르면 DayTimeline 그 덩어리) → 같은 선 위 할 것 칸(TodaySlot, 끝나면 ✓·다 끝나면 제목 ✓):
 │              ▶ Quizbank n/10(curriculum/quizFocus.ts 신호, n = todayCards.ts answeredToday — 0단계면 오늘의 글자 묶음 → Languagebank 글자 칸 curriculum/lettersOpen.ts)
 │              · 숙제(있을 때 → openCall replay) · 고른 튜터와 통화(→ 튜터 프로필 AiTutorSheet — 📞 통화, ✓ = 오늘 이 언어 통화 callStore)
-│          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단어 → 뜻 → 표현·문법 → 시작 단계, curriculum/firstCheck.ts)
+│          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단어 → 뜻 → 표현·문법 → 시작 단계, curriculum/firstCheck.ts — 다시 재지 않고 퀴즈로 고쳐 감)
 │          칸 셋 = 위 칸 이름 줄이 탭(notes/NotebookSection MyLayers — 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면 FullScreenLayer, ✕로 제자리)
 │          [Logbank 하늘] studyMap/Logbank — 기록만
 │              [주 | 월] ‹기간› → 배운 것 표(Learned — 단어 · 문법 · 표현 · 문장구조 요소 색 bankTone PartMark × 학습 · 활용, curriculum/growthView.ts)
@@ -32,7 +32,7 @@
 │              쌓기 아래 "학습 n ›" → 그날 = 학습 타임라인(DayTimeline → 학습 시간 → 카드 CardTimeline, curriculum/studyTimeline.ts) · ⏱ 학습 시간 막대
 │              재료: 이 폰 사건 장부 logbank.v1.<언어>(curriculum/logLedger.ts) + 수업 결과 + 통화 카드 + 서버 /api/notebook logItems
 │          [Quizbank 초록] studyMap/Quizbank → InlineQuiz → QuizPlayer — 한 흐름(hub/app/QUIZ.md), 답 뒤 맞음/틀림·[다시]·📕 문
-│          [Languagebank 노랑] studyMap/LanguageBank — 찾기(Dictionary DictionaryBody) · 자주 쓴 말(대화 수) · 종류(칠하기 = 첫 측정 추정, 숫자 = 개수, firstCheck.ts estimateChance) → 묶음([퀴즈 | 대화] 순서) → 단어 화면(마지막 틀림 ✗ · 대화 수, 같이 배우기 칩 → openLesson, curriculum/wordUse.ts) · 표현·문법 → openLesson
+│          [Languagebank 노랑] studyMap/LanguageBank — 찾기(Dictionary DictionaryBody) · 자주 쓴 말(대화 수) · 종류(칠하기 = 첫 측정에서 시작해 퀴즈로 고쳐 감 firstCheck.ts measuredNow·quizShade, 숫자 = 개수) → 묶음([퀴즈 | 대화] 순서) → 단어 화면(마지막 틀림 ✗ · 대화 수, 같이 배우기 칩 → openLesson, curriculum/wordUse.ts) · 표현·문법 → openLesson
 │              · 묶음 ▶ 넘겨 보기(BankFlip) · 글자가 다른 언어면 첫 줄 글자·소리 칸(ScriptPractice LettersRow·LettersBank)
 │          칸 머리 ?(Logbank·Quizbank·Languagebank) → 사용법 My 장의 그 칸 넘겨 보기(openGuide my · lib/guide/slides.ts covers)
 │

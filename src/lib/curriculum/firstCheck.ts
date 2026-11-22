@@ -4,7 +4,7 @@
  *
  *   ① 글자: 소리 듣고 글자 고르기 6문제, 셋 넘게 틀리면 글자부터(그 뒤 ②③은 건너뜀 — 못 읽는 글자로 낱말을 물을 수 없음).
  *   ② 낱말 범위: 예/아니오 24장(진짜 20 + 가짜 4) → 경계 b 최대가능도 → 뜻 고르기 5문제로 b를 고침(vocabLevel.noteLevel).
- *   ③ 표현·문법: 1단계부터 번갈아, 단계마다 세 문제 중 둘 맞히면 위 단계, 둘 틀리면 그 종류 멈춤(11-07 저녁 — 모아서 판정).
+ *   ③ 표현·문법: 1단계부터 번갈아, 단계마다 세 문제 중 둘 맞히면 위 단계(4단계부터는 셋 다), 넘을 수 없게 틀리면 그 종류 멈춤.
  *
  * 예전 placement.ts(단계 오르내리기 시험, PlacementPlayer)와는 다른 것 — 그쪽은 개편 밖 화면만 쓴다.
  * 결과는 Logbank %를 칠하지 않는다(설계 5절): 낱말 경계는 Quizbank·Languagebank 진하기, 단계는 지금 단계.
@@ -227,11 +227,27 @@ export function nextYnCard(input: {
 
 /* ───────── ② 뜻 고르기 ───────── */
 
-/** 뜻 고르기 낱말 순위: b 근처(아는 확률 0.75 · 0.6 · 0.5 · 0.65 · 0.55). */
+/**
+ * 예/아니오만으로 올라갈 수 있는 경계(단계 끝 순위 cuts[YN_TOP_CUT] — 기본 3단계 끝).
+ * 빈도 순위로는 드문 자리에 일상 낱말(selfie·grandparent·housemate)이 있어 "본 적 있어요"만으로 경계가 끝(7,000)까지 올라갔다
+ * (가상 사용자 2026-11-22 민지 "약 7,000개", Layla 4,700 — 사용자 "첫 측정 문제 해결"). 그 위는 뜻 고르기로만.
+ */
+export const YN_TOP_CUT = 2;
+export function capYesNo(b: number | null, cuts: readonly number[]): number | null {
+  return b === null ? null : Math.min(b, cuts[YN_TOP_CUT] ?? 2500);
+}
+
+/** 뜻 고르기에 내는 문제 수 — 후보는 더 뽑아 두고(보기가 안 모이면 다음 후보), 앞에서부터 이만큼. */
+export const MEANING_ASK = 5;
+
+/**
+ * 뜻 고르기 낱말 순위(앞에서부터 MEANING_ASK개를 씀): 경계 아래 하나(0.75), 경계(0.55), 위로 셋(0.4 · 0.3 · 0.2 — 위로 올라갈 근거는 여기서만),
+ * 그다음 예비(0.6 · 0.45 · 0.35).
+ */
 export function meaningRanks(b: number, words: readonly BankWord[], skip: ReadonlySet<number>): number[] {
   const used = new Set(skip);
   const out: number[] = [];
-  for (const p of [0.75, 0.6, 0.5, 0.65, 0.55]) {
+  for (const p of [0.75, 0.55, 0.4, 0.3, 0.2, 0.6, 0.45, 0.35]) {
     const index = nearest(words, rankAt(b, p), used);
     if (index === null) continue;
     used.add(index);
@@ -242,7 +258,8 @@ export function meaningRanks(b: number, words: readonly BankWord[], skip: Readon
 
 /** 예/아니오 결과(또는 믿지 못할 때 1단계 끝 어림)에서 뜻 고르기로 b를 고친 Level. */
 export function wordLevel(b0: number | null, meaning: readonly { rank: number; correct: boolean }[], total: number, cuts: readonly number[]): Level {
-  let level: Level = { b: b0 ?? Math.round((cuts[0] ?? 700) * 0.5), n: b0 === null ? 0 : 10 };
+  // 예/아니오는 어림일 뿐 — 뜻 고르기 답이 경계를 크게 움직이게 n을 작게(예전 10이면 다섯 문제가 거의 못 움직임).
+  let level: Level = { b: b0 ?? Math.round((cuts[0] ?? 700) * 0.5), n: b0 === null ? 0 : 2 };
   for (const one of meaning) level = noteLevel(level, one.rank, one.correct, { choose: true, total });
   return { ...level, b: Math.round(level.b), n: Math.max(level.n, PROBE), picked: true };
 }
@@ -264,6 +281,11 @@ export type ClimbKind = "expression" | "grammar";
  */
 export const STAGE_ASK = 3;
 export const STAGE_PASS = 2;
+/** 4단계부터는 셋 다 맞혀야 넘음(모양만 보고 고르거나 문맥으로 찍어 4~5단계가 나옴 — 가상 사용자 2026-11-22 민지 표현 4·Layla 표현 5). */
+export const HIGH_STAGE = 4;
+export function stagePass(stage: number): number {
+  return stage >= HIGH_STAGE ? STAGE_ASK : STAGE_PASS;
+}
 export type ClimbLane = { stage: number; passed: number; right: number; wrong: number; stopped: boolean };
 export type Climb = { lanes: Record<ClimbKind, ClimbLane>; asked: number; turn: ClimbKind };
 
@@ -289,13 +311,14 @@ export function climbAnswer(climb: Climb, kind: ClimbKind, correct: boolean): Cl
   const lane = { ...climb.lanes[kind] };
   if (correct) lane.right += 1;
   else lane.wrong += 1;
-  if (lane.right >= STAGE_PASS) {
+  const pass = stagePass(lane.stage);
+  if (lane.right >= pass) {
     lane.passed = lane.stage;
     lane.stage += 1;
     lane.right = 0;
     lane.wrong = 0;
     if (lane.stage > STAGES) lane.stopped = true;
-  } else if (lane.wrong > STAGE_ASK - STAGE_PASS) {
+  } else if (lane.wrong > STAGE_ASK - pass) {
     lane.stopped = true;
   }
   const other: ClimbKind = kind === "expression" ? "grammar" : "expression";
@@ -360,13 +383,39 @@ export function measured(language: string): Measured | null {
 }
 
 /**
- * Languagebank 추정: 첫 측정 하나로 칸마다 "아는 정도" 0~1.
+ * 지금 어림(사용자 2026-11-22 "첫 측정 → 점차 실제 실력"): 첫 측정에서 시작해, 낱말 경계는 Quizbank가 퀴즈 묶음마다 고쳐 가는 값
+ * (quizCircle.v1.<언어>의 lv — 첫 측정이 처음 값을 넣음). 다시 재는 시험은 없다.
+ */
+export function measuredNow(language: string, store: Pick<Storage, "getItem"> | null = typeof localStorage === "undefined" ? null : localStorage): Measured | null {
+  const first = measured(language);
+  if (!first) return null;
+  try {
+    const circle = JSON.parse(store?.getItem(`quizCircle.v1.${language}`) ?? "null") as { lv?: { b?: unknown } } | null;
+    const b = circle?.lv?.b;
+    return typeof b === "number" && Number.isFinite(b) && b >= 0 ? { ...first, b } : first;
+  } catch {
+    return first;
+  }
+}
+
+/**
+ * Languagebank 추정: 지금 어림(measuredNow)으로 칸마다 "아는 정도" 0~1. 퀴즈로 직접 답한 칸은 부르는 쪽이 마지막 답으로 덮는다(quizShade).
  *   낱말 = 빈도 순위가 경계 b 근처면 반쯤(vocabLevel.knowChance — 측정과 같은 곡선)
  *   표현·문법 = 잰 단계 아래는 1, 그 단계는 0.5, 위는 0
- * 퀴즈 기록(학습)은 섞지 않는다 — 그건 낱말 카드에만.
  */
 export function estimateChance(check: Measured, item: { kind: "word" | "expr" | "gram"; rank: number; lv: number }): number {
   if (item.kind === "word") return knowChance({ b: check.b, n: 0 }, item.rank);
   const stage = item.kind === "expr" ? check.expression : check.grammar;
   return item.lv < stage ? 1 : item.lv === stage ? 0.5 : 0;
+}
+
+/** 퀴즈로 직접 답한 칸의 칠하기: 마지막 답이 맞음이면 다 칠함, 틀림이면 비움, 답한 적 없으면 추정 그대로(null). 첫 측정 답(exam)도 센다. */
+export function quizShade(events: readonly { k: string; src: string; r: string; t: number }[]): Map<string, number> {
+  const last = new Map<string, { r: string; t: number }>();
+  for (const one of events) {
+    if ((one.src !== "quiz" && one.src !== "exam") || (one.r !== "ok" && one.r !== "miss")) continue;
+    const before = last.get(one.k);
+    if (!before || one.t >= before.t) last.set(one.k, { r: one.r, t: one.t });
+  }
+  return new Map([...last].map(([key, one]) => [key, one.r === "ok" ? 1 : 0]));
 }
