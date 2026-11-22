@@ -27,3 +27,10 @@ test("뜻이 다른 말은 그대로 문제로 (es·en·ja·ar·ko)", () => {
     ["stethoscope", "청진기"], ["maternal", "어머니와 관련된"], ["listo", "جاهز"], ["cuerpo", "جسم"],
   ]) assert.equal(soundsAlike(word!, gloss!), false, `${word} ↔ ${gloss}`);
 });
+
+test("-tic 줄: 뼈대만 -tk로 끝나는 낱말(mistake·biblioteca·práctica 아닌 것)에서 끝없이 부르지 않음 (en·es·ja)", () => {
+  assert.equal(soundsAlike("mistake", "실수"), false);
+  assert.equal(soundsAlike("biblioteca", "도서관"), false);
+  assert.equal(soundsAlike("ステーキ", "스테이크"), true);
+  assert.equal(soundsAlike("romántico", "رومانسي"), true);
+});

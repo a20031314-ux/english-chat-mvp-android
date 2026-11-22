@@ -1703,6 +1703,10 @@ test("followUpFact: 통화 초반에 기억 하나 — 날 지난 예정 → 습
   const late = [...hello, { who: "learner" as const, text: "a" }, { who: "tutor" as const, text: "b" }, { who: "learner" as const, text: "c" }, { who: "tutor" as const, text: "d" }];
   assert.equal(followUpFact(prior, late), null);
   assert.equal(followUpFact("", hello), null);
+  // 오늘 예정은 아직 올 예정(습관이 먼저), 7일 넘게 지난 예정은 빼고 그 밖으로
+  assert.equal(followUpFact(prior.replace("plan 2026-11-24", "plan 2026-11-25"), hello), "2026-11-22: habit: 毎朝ジムに行く。");
+  const stale = "Today is 2026-12-20.\n2026-11-22: plan 2026-11-24: They have an exam on Monday.\n2026-11-22: about: Su hermana estudia en la universidad.";
+  assert.equal(followUpFact(stale, hello), "2026-11-22: about: Su hermana estudia en la universidad.");
   // 꼬리표 없는 옛 기억은 "그 밖"
   assert.equal(followUpFact("Today is 2026-11-25.\n2026-11-20: They work at a hospital in Madrid.", hello), "2026-11-20: They work at a hospital in Madrid.");
 });

@@ -164,7 +164,6 @@
 - 2026-10-31 store → qa: 다음 빌드(2.76 이후 앱) 결제 화면에 대본 플랜 2,900원(`script_monthly`)이 Play 가격으로 뜨고 테스트 구매 뒤 대본 플랜 혜택(사흘마다 통화 5분·채팅 20)이 붙는지 — 결제 테스트 계정이 필요해 기기에서.
 - 2026-11-20 watch → dev: [my] src/components/studyMap/FrameLesson.tsx:495 — 설명 화면 다음 버튼이 늘 '문제 풀기'(lessonToQuiz)인데 문제를 못 만든 표현·문법 수업은 대화 단계나 끝으로 감 (다음 단계에 따라 이름 고르기)
 - 2026-11-20 watch → dev: [공통] src/lib/server/subtitleGlossStore.ts:72 — 되살린 videoGloss:v1 키 묶음이 scripts/data-map.json에 없음, 키 템플릿이 여러 줄이라 data-map.mjs --check도 통과 (data-map.json에 한 줄 + 템플릿 한 줄로)
-- 2026-11-18 watch → dev: [my] src/lib/curriculum/loanword.ts:133 — soundsAlike -tic 줄이 바꿀 꼴 없는 낱말(mistake·biblioteca 등 약 400개)에서 같은 인자로 자기를 다시 불러 RangeError, cardQuiz가 try 없이 불러 Quizbank·첫 측정·사다리 화면이 깨짐 (바꾼 결과가 원래 낱말과 같으면 다시 부르지 않기 + 테스트)
 - 2026-11-18 watch → dev: [my] src/app/api/curriculum/typed-check/route.ts:65 — 뜻 먼저 채점에 "설명·강조 어미 없는 꼴도 맞음"이 있어 그 어미가 목표인 문법 문항(ja ～んです 등)에서 빠뜨린 답이 맞음으로 (g| 문항은 그 허용 빼거나 배우는 문법을 요청에 실어 줌)
 - 2026-11-18 watch → dev: [ai] src/lib/roleplay/homeworkQuiz.ts:99 — sceneAfterQuiz가 낱말 경계 없이 includes라 짧은 고친 말(la·a·de)이면 다른 장면 조각(por la noche 등) 빈칸까지 없앰 (띄어쓰기 언어는 낱말 단위로, wordSegments)
 - 2026-11-14 watch → dev: [공통] src/lib/guide/slides.ts:165 — 가르치기 장면 그림 속 설명이 "영어로 고쳐 주고"로 학습 언어를 영어로 고정, 한국어 앱의 다른 학습 언어 사용자에게 틀림 (학습 언어를 특정하지 않는 말로 + 그림 다시)
@@ -328,8 +327,6 @@
 - 2026-11-18 watch → dev: [ai] src/components/RoleplayScreen.tsx:540 — 새 띠가 💡(smoother)면 fresh가 비어 nextShownRedo가 앞 ✎ 문장을 계속 기다림 → 💡 따라 말해도 ✓ 없음, 앞 문장과 겹치면 엉뚱한 ✓·튜터에 "따라 말함" (fresh에 direction.smoother를 넣거나 새 띠 차례에 기다리던 문장 비우기)
 - 2026-11-20 watch → dev: [ai] src/components/roleplay/CallParts.tsx:121 — 코치 띠가 뜨면 아래 반 flex-[1.6]로 위 반이 약 38%로 줄어 작은 폰(높이 ~640)에서 긴 튜터 자막이 위 반에서 잘릴 수 있음 (띠가 뜰 때 위 반 gap·자막 칸 min-h도 줄이거나 긴 자막이면 비율 낮추기, 작은 화면 확인)
 - 2026-11-20 watch → dev: [ai] src/components/roleplay/CallParts.tsx:144 — 코치 얼굴·이름 줄을 지웠는데 CoachCardView 주석과 inbox qa 확인 줄이 아직 "짝 튜터 얼굴·이름" (주석을 "카드만"으로, qa 줄 괄호 지움)
-- 2026-11-22 watch → dev: [ai] src/lib/roleplay/director.ts:836 — 날 지난 예정이 기억이 남는 60~180일 동안 늘 1순위라 답을 들은 뒤에도 통화마다 같은 걸 또 묻고 습관 이어 묻기가 밀림 (지난 예정은 날짜+7일쯤 안에만 1순위, 그 뒤엔 낮추거나 빼기)
-- 2026-11-22 watch → dev: [ai] src/lib/roleplay/director.ts:836 — `plan[1] <= today`라 오늘 예정도 "지난 예정"으로 쳐 아직 안 한 일을 "어떻게 됐어?"로 물음 (`<`로, 오늘 것은 올 예정 쪽으로)
 - 2026-11-22 watch → dev: [my] src/components/studyMap/FirstCheck.tsx:90 — 뜻 고르기 후보 8개를 Promise.all로 만들어 cardQuiz 최근 보기 빼기가 도착 순서로 쌓여 이웃 문제가 같은 뜻을 정답·오답으로 가짐, 안 낸 예비 보기가 Quizbank 첫 문제를 막음 (묶음 받기·registerQuizSources 먼저, meaningRanks 순서로 cardQuiz 하나씩 5개에서 멈춤)
 - 2026-11-14 dev → qa: 다음 체감 점검에서 My 오늘의 학습(오늘 한 학습 시간 줄 + ▶ Quizbank n/10·숙제·🎓 수업 칸, 덩어리 누르면 세부)과 통화 모드 설명창(문 넷 각각 처음 열 때 한 번, 맨 위 모드 이름 ⓘ) — ux-issues U50. 실제 통화에서 튜터 첫 마디가 수업·가르치기임을 말하는지. ja 학습/ko 앱, en 학습/ja 앱, es 학습/ar 앱.
 - 2026-11-19 dev → qa: 다음 시험 앱(웹 바로)·2.80에서 통화 하나: 튜터 줄·프로필·사람 탭에 📞 통화 문 하나, 통화 중 일부러 틀리게 말하기 → 튜터는 말로 안 고치고 내 얼굴 아래 코치 띠(짝 튜터 얼굴·이름), 그 문장을 따라 말하면 ✓(활용만 다르게 말하면 ✓ 없음), 다른 말을 하면 띠가 흐려지고 대화가 이어지는지, 끝 화면 숙제 [퀴즈 | 대화]. ja/ko, en/ja, es/ar.

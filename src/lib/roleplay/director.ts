@@ -820,7 +820,7 @@ export function triedRedo(redo: string, heard: string, language?: string): boole
 
 /**
  * 이어 물을 기억 하나(사용자 2026-11-22 "오늘도 운동 갔어? 식의 대화") — 열린 통화 초반, 튜터 말이 한두 번 나간 뒤에만.
- * prior = lifeFactsPrompt("Today is D.\nD: kind: text"). 고르는 순서: 날이 지난 예정 → 습관 → 아직 올 예정 → 그 밖, 같은 종류 안에서는 날마다 돌려 가며.
+ * prior = lifeFactsPrompt("Today is D.\nD: kind: text"). 고르는 순서: 날이 지난 지 7일 안의 예정 → 습관 → 아직 올 예정(오늘 포함) → 그 밖(7일 넘게 지난 예정은 뺌), 같은 종류 안에서는 날마다 돌려 가며.
  */
 export function followUpFact(prior: string | undefined, history: readonly SpokenLine[]): string | null {
   const tutorSaid = history.filter((line) => line.who === "tutor").length;
@@ -833,7 +833,10 @@ export function followUpFact(prior: string | undefined, history: readonly Spoken
     const fact = /^\d{4}-\d{2}-\d{2}: (.+)$/.exec(line.trim())?.[1];
     if (!fact) continue;
     const plan = /^plan(?: (\d{4}-\d{2}-\d{2}))?:/i.exec(fact);
-    const rank = plan ? (plan[1] && plan[1] <= today ? 4 : 2) : /^habit:/i.test(fact) ? 3 : 1;
+    // 날 지난 예정은 그 날부터 7일 안에만 맨 앞(그 뒤엔 답을 들었을 것 — 통화마다 또 묻지 않게), 오늘 예정은 아직 올 예정(11-22 변경 감시).
+    const due = plan?.[1] ? Math.round((Date.parse(`${today}T00:00:00Z`) - Date.parse(`${plan[1]}T00:00:00Z`)) / 86_400_000) : null;
+    const rank = plan ? (due !== null && due > 0 ? (due <= 7 ? 4 : 0) : 2) : /^habit:/i.test(fact) ? 3 : 1;
+    if (rank === 0) continue;
     ranked.push({ rank, line: line.trim() });
   }
   if (!ranked.length) return null;

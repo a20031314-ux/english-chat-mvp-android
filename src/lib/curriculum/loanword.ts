@@ -130,7 +130,9 @@ export function soundsAlike(word: string, gloss: string): boolean {
   const bones = soundBones(word);
   if (!bones || bones.length < 2) return false;
   // 끝 -tic·-tico는 아랍어·러시아어 등에서 -سي/-с로 옮겨지기도 한다(romántico ↔ رومانسي, 체감 점검 2026-11-19 easy-leak).
-  if (/tk$/.test(bones) && bones.length >= 4 && soundsAlike(word.replace(/ti(c|co|ca|que|k|ko)$/iu, "s"), gloss)) return true;
+  // 바꿀 꼴이 없으면(mistake·biblioteca — 뼈대는 -tk로 끝나도 낱말은 -tic이 아님) 다시 부르지 않는다: 같은 인자로 끝없이 불러 RangeError였다(11-18 변경 감시).
+  const swapped = word.replace(/ti(c|co|ca|que|k|ko)$/iu, "s");
+  if (swapped !== word && /tk$/.test(bones) && bones.length >= 4 && soundsAlike(swapped, gloss)) return true;
   const mine = bones;
   return gloss
     .split(/[,;，、；،/()（）]/u)
