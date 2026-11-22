@@ -494,7 +494,7 @@ export function Quizbank({
   };
   const keepBody = (
     <div data-keep-learning data-focus-serial={focusSerial}>
-      {/* 게이지: 이름표 "난이도" + 오른쪽으로 갈수록 높아지는 막대 다섯(지금 칸까지 채움) — 글 설명 없이 난이도 조절로 보이게(사용자 2026-11-22 "C로"). 다음 묶음부터 바뀐다. */}
+      {/* 게이지: 이름표(discoverLevelLabel) + 오른쪽으로 갈수록 높아지는 막대 다섯(지금 칸까지 채움) — 글 설명 없이 난이도 조절로 보이게(사용자 2026-11-22 C안). 다음 묶음부터 바뀐다. */}
       <div data-quiz-gauge={gauge} className="mb-2 flex items-center gap-1.5">
         <span data-quiz-gauge-name className="me-auto text-caption text-slate-400">
           {ui.discoverLevelLabel}

@@ -139,6 +139,10 @@
 - **a261122-3-11** (2026-11-22 23:49, 탭 3 · ae5a8ef) 글자·소리 카드 소리를 미리 만든 파일로(playLetter, TTSButton play)
   - 기능: 오늘의 학습 · Languagebank · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석
   - 볼 곳: `components/TTSButton.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/ExpressionInsightSheet.tsx` · `components/VocabSenseList.tsx` · `components/VocabWordPreview.tsx` · `components/EnglishAnalysisProvider.tsx` · `components/ExpressionInsightProvider.tsx` · `components/VocabPreviewProvider.tsx` · `app/learning/LearningClient.tsx`
+
+- **a261122-2-1** (2026-11-22 23:55, 탭 2 · 3ffcd1e) Logbank 표 아래 칩 줄(↺ 다시 맞힘·✎✓ 고쳐 씀·📞 통화) 지움 → 쌓기 안(블록 흰 점·누른 날 칩), 통화 모아 보기는 튜터 프로필 통화 기록
+  - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · My에서 찾기
+  - 볼 곳: `components/FindInMy.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -357,6 +361,10 @@
 - **a261121-2-2** (2026-11-21 21:34, 탭 2 · 5636e87) Logbank 쌓기 기둥(날마다 요소 자리 순서로 블록, 누른 날 비율 막대) · 요소 아이콘 이모지 → 색 네모(PartMark) — 같이 배우기 칩(StudyChips)·학습 시간 줄도 같은 색 네모
   - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · My에서 찾기
   - 볼 곳: `components/ExpressionPeek.tsx` · `components/roleplay/CallRecap.tsx` · `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261122-2-2** (2026-11-22 23:55, 탭 2 · 3ffcd1e) Logbank 표 아래 칩 줄(↺ 다시 맞힘·✎✓ 고쳐 씀·📞 통화) 지움 → 쌓기 안(블록 흰 점·누른 날 칩), 통화 모아 보기는 튜터 프로필 통화 기록
+  - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · My에서 찾기
+  - 볼 곳: `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx` · `components/ExpressionPeek.tsx` · `components/roleplay/CallRecap.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람

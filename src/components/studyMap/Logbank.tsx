@@ -1,6 +1,6 @@
 "use client";
 
-import { bankTone, PART_BG, PartMark } from "@/components/studyMap/bankTone";
+import { bankTone, PART_BG, PART_BG_DIM, PartMark } from "@/components/studyMap/bankTone";
 import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
@@ -364,7 +364,6 @@ export function Logbank({
             period={period}
             today={today}
             known={knownDays}
-            calls={calls}
             notes={callNotes}
             grammarName={grammarName}
             keyLabel={keyLabel}
@@ -1304,7 +1303,6 @@ function Learned({
   period,
   today,
   known,
-  calls,
   notes,
   grammarName,
   keyLabel,
@@ -1319,7 +1317,6 @@ function Learned({
   today: string;
   /** 날마다 그날 끝의 확인된 실력(days와 같은 차례, 오늘 뒤는 null). */
   known: readonly (number | null)[];
-  calls: readonly SavedConversation[];
   notes: readonly CallNote[];
   grammarName: (stage: number, index: number) => string;
   keyLabel: (key: string) => string;
@@ -1329,11 +1326,12 @@ function Learned({
   // 배운 것 = 표 하나(2026-11-07 밤 사용자 "배운 것·늘어난 것·어휘·새로가 UI로 구분이 안 돼" → "바꿔줘, 대화에서 씀은 활용으로"):
   // 줄 = 무엇(어휘·문법·표현·문장구조), 칸 = 학습(그 기간에 푼 것) · 활용(대화에서 맞게 씀) — 익힘은 뺌(같은 밤 "기준이 모호, 활용과 겹침"),
   // 아래 다시 맞힘 · 고쳐 씀 · 통화. 계산 curriculum/growthView.ts.
-  const [open, setOpen] = useState<{ part: CardPart; col: GrowCol } | "call" | "recovered" | "fixed" | null>(null);
+  const [open, setOpen] = useState<{ part: CardPart; col: GrowCol } | null>(null);
   // 쌓기에서 누른 카드(블록 하나 또는 그날 한 요소) — 위 표 칸과 같은 카드 시트.
   const [stackCards, setStackCards] = useState<{ title: string; keys: readonly string[] } | null>(null);
   // 학습 곡선 점 → 그날 새로 활용한 것(대화에서 처음 맞게 쓴 것)과 쓴 문장.
   const [usedDay, setUsedDay] = useState<string | null>(null);
+  const [fixedDay, setFixedDay] = useState<string | null>(null);
   const stackLabel = (key: string) => {
     if (!key.startsWith("g|")) return keyLabel(key);
     const [stage, index] = key.slice(2).split(":").map(Number);
@@ -1350,22 +1348,19 @@ function Learned({
   const itemsOf = (keys: readonly string[]): LearnedItem[] => keys.map((key) => allItems.get(key) ?? { key, ok: 0, miss: 0, last: 0, lastOk: false });
   const cell = (part: CardPart, col: GrowCol) => progress[col].filter((key) => partOf(key) === part);
   const rows = LEARN_PARTS.filter((part) => GROW_COLS.some((col) => cell(part, col).length));
-  const periodCalls = useMemo(() => calls.filter((call) => inPeriod(period, localDay(call.startedAt))).sort((a, b) => b.startedAt - a.startedAt), [calls, period]);
   const all = useMemo(() => curveOf(ledger, days, null, (t) => dayOfSeconds(t)), [ledger, days]);
   const stacks = useMemo(() => stacksOf(ledger, days, (t) => dayOfSeconds(t)), [ledger, days]);
   const newUsed = useMemo(() => days.map((day) => usedFirstOn(ledger, day, (t) => dayOfSeconds(t)).length), [ledger, days]);
   // 쌓기 기둥은 기간 끝날까지(오늘 뒤는 빈 자리 — 이번 주가 차 오르는 게 보이게).
   const wholeDays = useMemo(() => periodDays(period, periodLastDay(period)), [period]);
   const wholeStacks = useMemo(() => stacksOf(ledger, wholeDays, (t) => dayOfSeconds(t)), [ledger, wholeDays]);
-  const extras = [
-    { id: "recovered" as const, icon: "↺", label: ui.growRecovered, n: progress.recovered.length },
-    { id: "fixed" as const, icon: "✎✓", label: ui.growFixed, n: pairs.length },
-    { id: "call" as const, icon: "📞", label: ui.homeTabCall, n: periodCalls.length },
-  ].filter((one) => one.n > 0);
-  if (!rows.length && !extras.length) return null;
-  const chip = "flex items-center gap-1 rounded-full border border-line px-3 py-1 text-note tabular-nums text-slate-200 hover:bg-white/5";
+  // ↺ 다시 맞힘·✎✓ 고쳐 씀은 따로 칩 줄 없이 쌓기 안으로(사용자 2026-11-22 "다시 맞힘·통화 기록은 각각 한 곳으로 — 기록, 튜터 화면"):
+  // 그날 다시 맞힌 열쇠(블록에 ↺ 점 · 누른 날 칩), 그날 고쳐 쓴 줄(누른 날 칩).
+  const backByDay = useMemo(() => new Map(wholeDays.map((day) => [day, progressIn(ledger, (t) => sameDay(dayOfSeconds(t), day)).recovered])), [ledger, wholeDays]);
+  const fixedOf = (day: string) => pairs.filter((pair) => sameDay(dayOfSeconds(pair.used.t), day));
+  if (!rows.length && !pairs.length) return null;
   const colName = (col: GrowCol) => ({ studied: ui.lbFresh, used: ui.growUsed })[col];
-  const openCell = typeof open === "object" && open ? open : null;
+  const openCell = open;
   return (
     <div data-learned className="flex flex-col gap-2">
       <h3 className="text-caption font-semibold text-slate-300">{ui.itemsLearned}</h3>
@@ -1404,19 +1399,7 @@ function Learned({
           </tbody>
         </table>
       ) : null}
-      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} /> : null}
-      {extras.length ? (
-        <div data-growth className="flex flex-wrap gap-1.5">
-          {extras.map((one) => (
-            <button key={one.id} type="button" data-growth-chip={one.id} title={one.label} onClick={() => setOpen(one.id)} className={chip}>
-              <span aria-hidden>{one.icon}</span>
-              {/* Fixes show the icon alone (user, 2026-11-08); the name is in aria-label and title. */}
-              <span className={one.id === "fixed" ? "sr-only" : undefined}>{one.label}</span>
-              <span className="font-semibold text-ink">{one.n}</span>
-            </button>
-          ))}
-        </div>
-      ) : null}
+      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} backOf={(day) => backByDay.get(day) ?? []} fixedOf={(day) => fixedOf(day).length} onFixed={(day) => setFixedDay(day)} /> : null}
       <TalkCompare ui={ui} language={language} locale={locale} keyLabel={keyLabel} />
       {curveReady(all) ? (
         <LearnCurve ui={ui} stacks={stacks} known={known} newUsed={newUsed} dateLabel={dateLabel} onUsed={setUsedDay} />
@@ -1440,26 +1423,9 @@ function Learned({
           <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(stackCards.keys.slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}
-      {open === "recovered" ? (
-        <LogSheet title={`↺ ${ui.growRecovered} · ${progress.recovered.length}`} ui={ui} onClose={() => setOpen(null)}>
-          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(progress.recovered.slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
-        </LogSheet>
-      ) : null}
-      {open === "fixed" ? (
-        <LogSheet title={`✎✓ ${pairs.length}`} ui={ui} onClose={() => setOpen(null)}>
-          <PairList pairs={pairs} locale={locale} />
-        </LogSheet>
-      ) : null}
-      {open === "call" ? (
-        <LogSheet title={`📞 ${ui.homeTabCall} · ${periodCalls.length}`} ui={ui} onClose={() => setOpen(null)}>
-          <div data-learned-calls className="flex flex-col gap-1">
-            {periodCalls.map((call) => (
-              <div key={call.id}>
-                <p className="mt-2 text-meta text-slate-500">{dayFormat(locale, localDay(call.startedAt))}</p>
-                <CallResultCard ui={ui} language={language} call={call} note={notes.find((note) => note.id === call.id)?.summary ?? ""} removable={false} />
-              </div>
-            ))}
-          </div>
+      {fixedDay ? (
+        <LogSheet title={`${dayFormat(locale, fixedDay)} · ✎✓ ${ui.growFixed} ${fixedOf(fixedDay).length}`} ui={ui} onClose={() => setFixedDay(null)}>
+          <PairList pairs={fixedOf(fixedDay)} locale={locale} />
         </LogSheet>
       ) : null}
     </div>
@@ -1559,7 +1525,7 @@ function LearnedCards({
 /**
  * 날마다 쌓기(사용자 2026-11-21 "각각 위치를 정해서 순차적으로 쌓는 게 낫지 않을까 — 오늘의 총 학습량에서 단어 비율이 많았다 이런 게 보이게"):
  * 기간의 날마다 기둥 하나, 그날 퀴즈로 답한 서로 다른 것 하나 = 블록 하나, 자리는 아래부터 단어 → 문법 → 표현 → 문장구조(요소 색, bankTone PART_BG).
- * 이 기간 앞날에 이미 답한 것은 흐린 블록(기둥 합에서 흐린 것을 빼면 위 "학습"과 같다). 블록을 누르면 그 카드(사용자 2026-11-21 "클릭하면 학습카드"), 기둥을 누르면 아래에 그날 비율 막대·요소별 수·📞, "학습 n ›"이 그날 학습 타임라인.
+ * 이 기간 앞날에 이미 답한 것은 흐린 블록(기둥 합에서 흐린 것을 빼면 위 "학습"과 같다), 그날 다시 맞힌 것(틀린 날 뒤 맞힘)은 블록에 흰 점 — 누른 날 아래 ↺ 다시 맞힘·✎✓ 고쳐 씀 칩. 블록을 누르면 그 카드(사용자 2026-11-21 "클릭하면 학습카드"), 기둥을 누르면 아래에 그날 비율 막대·요소별 수·📞, "학습 n ›"이 그날 학습 타임라인.
  * 숫자는 개수만(퍼센트 없음 — DESIGN.md "값 꼬리표"). 한 칸이 너무 많으면 블록 대신 이어진 막대로.
  */
 function DayStacks({
@@ -1572,6 +1538,9 @@ function DayStacks({
   keyLabel,
   onDay,
   onCards,
+  backOf,
+  fixedOf,
+  onFixed,
 }: {
   ui: UICopy;
   locale: string;
@@ -1583,6 +1552,11 @@ function DayStacks({
   onDay: (day: string) => void;
   /** 카드 시트 열기 — 블록 하나(그 카드) · 그날 한 요소(그 카드들). */
   onCards: (title: string, keys: readonly string[]) => void;
+  /** 그날 다시 맞힌 열쇠(틀린 날 뒤 다른 날 맞힘) — 블록에 ↺ 점, 누른 날 칩. */
+  backOf: (day: string) => readonly string[];
+  /** 그날 고쳐 쓴 줄 수(대화) — 누른 날 칩 ✎✓ → onFixed. */
+  fixedOf: (day: string) => number;
+  onFixed: (day: string) => void;
 }) {
   const callsOf = (day: string) => notes.filter((note) => sameDay(localDay(note.at), day)).length;
   const active = stacks.filter((one) => one.n || callsOf(one.day));
@@ -1621,6 +1595,7 @@ function DayStacks({
                     </span>
                   );
                 }
+                const back = new Set(backOf(one.day));
                 return one.keys[part].map((key, k) => (
                   <button
                     key={key}
@@ -1632,9 +1607,12 @@ function DayStacks({
                       setPick(one.day);
                       onCards(`${learnPartName(ui, part)} · ${keyLabel(key)}`, [key]);
                     }}
-                    className={`mt-0.5 block w-full ${PART_BG[part]} ${k >= n - dim ? "opacity-40" : ""} hover:brightness-125`}
+                    data-stack-back={back.has(key) ? "" : undefined}
+                    className={`relative mt-0.5 flex w-full items-center justify-center ${k >= n - dim ? PART_BG_DIM[part] : PART_BG[part]} hover:brightness-125`}
                     style={{ height: unit - 2 }}
-                  />
+                  >
+                    {back.has(key) ? <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-white" /> : null}
+                  </button>
                 ));
               })}
             </div>
@@ -1665,6 +1643,21 @@ function DayStacks({
           {shown.n || calls ? <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span> : null}
         </button>
         {shown.n ? <PartSplit ui={ui} parts={shown.parts} onPart={(part) => onCards(`${dayFormat(locale, shown.day)} · ${learnPartName(ui, part)} ${shown.parts[part]}`, shown.keys[part])} /> : null}
+        {backOf(shown.day).length || fixedOf(shown.day) ? (
+          <span data-day-growth className="flex flex-wrap gap-x-3 gap-y-1 text-meta tabular-nums text-slate-300">
+            {backOf(shown.day).length ? (
+              <button type="button" data-day-back onClick={() => onCards(`${dayFormat(locale, shown.day)} · ↺ ${ui.growRecovered} ${backOf(shown.day).length}`, backOf(shown.day))} className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-line px-2.5 hover:bg-white/5">
+                <span aria-hidden className="inline-flex h-2.5 w-2.5 items-center justify-center bg-slate-500"><span className="h-1 w-1 rounded-full bg-white" /></span>
+                {`↺ ${ui.growRecovered} ${backOf(shown.day).length}`}
+              </button>
+            ) : null}
+            {fixedOf(shown.day) ? (
+              <button type="button" data-day-fixed title={ui.growFixed} aria-label={`${ui.growFixed} ${fixedOf(shown.day)}`} onClick={() => onFixed(shown.day)} className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-line px-2.5 hover:bg-white/5">
+                {`✎✓ ${fixedOf(shown.day)}`}
+              </button>
+            ) : null}
+          </span>
+        ) : null}
       </div>
     </div>
   );

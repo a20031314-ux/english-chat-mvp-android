@@ -7648,6 +7648,69 @@
       ],
       "base": "4d615e2",
       "head": "ae5a8ef",
+
+      "id": "a261122-2-1",
+      "at": "2026-11-22 23:55",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "Logbank 표 아래 칩 줄(↺ 다시 맞힘·✎✓ 고쳐 씀·📞 통화) 지움 → 쌓기 안(블록 흰 점·누른 날 칩), 통화 모아 보기는 튜터 프로필 통화 기록",
+      "files": [
+        "src/components/FindInMy.tsx"
+      ],
+      "features": [
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "칸 설명",
+        "My에서 찾기"
+      ],
+      "base": "3ffcd1eb8886f378e228a14bfde9bab1edf690c6",
+      "head": "3ffcd1e",
+      "status": "open"
+    },
+    {
+      "id": "a261122-2-2",
+      "at": "2026-11-22 23:55",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "Logbank 표 아래 칩 줄(↺ 다시 맞힘·✎✓ 고쳐 씀·📞 통화) 지움 → 쌓기 안(블록 흰 점·누른 날 칩), 통화 모아 보기는 튜터 프로필 통화 기록",
+      "files": [
+        "src/components/RoleplayScreen.tsx",
+        "src/components/roleplay/CallReplay.tsx",
+        "src/components/ExpressionPeek.tsx",
+        "src/components/roleplay/CallRecap.tsx",
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx"
+      ],
+      "features": [
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "칸 설명",
+        "My에서 찾기"
+      ],
+      "base": "3ffcd1eb8886f378e228a14bfde9bab1edf690c6",
+      "head": "3ffcd1e",
       "status": "open"
     }
   ],
@@ -8282,6 +8345,12 @@
       "base": "4d615e2",
       "head": "ae5a8ef",
       "what": "글자·소리 카드 소리를 미리 만든 파일로(playLetter, TTSButton play)",
+
+      "at": "2026-11-22 23:55",
+      "from": "2",
+      "base": "3ffcd1eb8886f378e228a14bfde9bab1edf690c6",
+      "head": "3ffcd1e",
+      "what": "Logbank 표 아래 칩 줄(↺ 다시 맞힘·✎✓ 고쳐 씀·📞 통화) 지움 → 쌓기 안(블록 흰 점·누른 날 칩), 통화 모아 보기는 튜터 프로필 통화 기록",
       "tabs": [
         "1",
         "2",
@@ -8290,10 +8359,16 @@
       "asks": [
         "a261122-3-11",
         "a261122-3-12"
+
+        "a261122-2-1",
+        "a261122-2-2"
       ]
     }
   ],
   "seq": {
     "261122-3": 12
+
+    "261122-3": 10,
+    "261122-2": 2
   }
 }

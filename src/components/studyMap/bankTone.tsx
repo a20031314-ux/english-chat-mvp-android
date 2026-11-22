@@ -108,6 +108,14 @@ export const PART_BG: Record<PartId, string> = {
   frame: "bg-part-frame",
 };
 
+/** 흐린 블록(이 기간 앞날에 이미 답한 것) — 색만 흐리게, 위에 얹는 점(↺)은 그대로 보이게. */
+export const PART_BG_DIM: Record<PartId, string> = {
+  word: "bg-part-word/40",
+  grammar: "bg-part-grammar/40",
+  expression: "bg-part-expression/40",
+  frame: "bg-part-frame/40",
+};
+
 /** 요소 표시 — 작은 색 네모(쌓기 블록과 같은 모양)(이름은 옆 글자나 부모 aria-label이 말함). */
 export function PartMark({ part, className = "" }: { part: PartId; className?: string }) {
   return <span aria-hidden data-part-mark={part} className={`inline-block h-2.5 w-2.5 shrink-0 ${PART_BG[part]} ${className}`} />;
