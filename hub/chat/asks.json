@@ -7714,25 +7714,31 @@
       "base": "e2d2bdb",
       "head": "9af7d0c",
       "status": "open"
+    },
+    {
+      "id": "a261123-3-1",
+      "at": "2026-11-23 00:44",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "0단계 글자 칸 [1단계 ›] 늘 보임",
+      "files": [
+        "src/components/studyMap/ScriptPractice.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/components/studyMap/StudyMapTab.tsx"
+      ],
+      "features": [
+        "오늘의 학습",
+        "글자·소리",
+        "칸 설명"
+      ],
+      "base": "6375dd25991270ed2cc475aa61b1e4953aaa422e",
+      "head": "acc335d",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-11 11:00",
-      "from": "2",
-      "base": "6a56c8c",
-      "head": "951d6b2",
-      "what": "퀴즈 3단계: 단어 문제는 예문 속 뜻만(고르기·스스로 체크), 넣어 둔 영어 낱말 쓰기 문제·사전 올리기 지움",
-      "tabs": [
-        "1",
-        "2",
-        "3"
-      ],
-      "asks": [
-        "a261111-2-1",
-        "a261111-2-2"
-      ]
-    },
     {
       "at": "2026-11-11 11:48",
       "from": "2",
@@ -8354,10 +8360,22 @@
         "a261122-2-1",
         "a261122-2-2"
       ]
+    },
+    {
+      "at": "2026-11-23 00:44",
+      "from": "3",
+      "base": "6375dd25991270ed2cc475aa61b1e4953aaa422e",
+      "head": "acc335d",
+      "what": "0단계 글자 칸 [1단계 ›] 늘 보임",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261123-3-1"
+      ]
     }
   ],
   "seq": {
-    "261122-3": 12,
-    "261122-2": 2
+    "261123-3": 1
   }
 }

@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (110)
+## 탭이 확인할 것 (111)
 
 ### 탭 1 메인
 
@@ -266,6 +266,10 @@
 - **a261122-3-12** (2026-11-22 23:49, 탭 3 · ae5a8ef) 글자·소리 카드 소리를 미리 만든 파일로(playLetter, TTSButton play)
   - 기능: 오늘의 학습 · Languagebank · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석
   - 볼 곳: `components/studyMap/ScriptPractice.tsx` · `components/studyMap/Dictionary.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/FixedExplain.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/StudyMapTab.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261123-3-1** (2026-11-23 00:44, 탭 3 · acc335d) 0단계 글자 칸 [1단계 ›] 늘 보임
+  - 기능: 오늘의 학습 · 글자·소리 · 칸 설명
+  - 볼 곳: `components/studyMap/ScriptPractice.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/StudyMapTab.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
