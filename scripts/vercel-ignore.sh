@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Vercel "Ignored Build Step"(vercel.json ignoreCommand): 0 = 빌드 건너뜀, 1 = 빌드.
 # 허브·.claude·AGENTS.md·CLAUDE.md만 바뀐 커밋은 건너뛴다.
+# 그래서 환경변수만 바꾸고 허브 커밋을 Redeploy하면 Canceled — 허브 밖 파일을 바꾼 커밋을 올려 다시 빌드한다(2026-11-22 Anthropic 키 교체 때).
 # 지난 배포 커밋이 얕은 clone에 없으면(허브 커밋이 10개 넘게 쌓였을 때) git diff가 128로 실패해
 # 배포가 전부 Error가 됐다(2026-11-10 14:35부터) — 없으면 받아 보고, 그래도 없거나 다른 오류면 빌드한다.
 prev="${VERCEL_GIT_PREVIOUS_SHA:-}"
