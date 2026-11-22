@@ -200,7 +200,8 @@ ${started}
 
 Do not give them a whole answer and do not explain or translate what they were asked: they heard it, they need words. Give them only what they are missing.
 - "pieces": two or three short expressions in ${input.targetLanguage} they can use in their answer right now — each two to five words, a chunk a speaker would really say here: a verb phrase, a time word with its preposition, a way to start the answer. Never a complete sentence, never the whole answer, not names or numbers alone. ${turn.heard ? `Put first the one thing they seem stuck on, guessed from what they started: the ${input.targetLanguage} word for a word they said in ${input.nativeLanguage}, the form of a word they got wrong, or the words that carry on from where they stopped. ` : ""}Each with "meaning": what it means in ${input.nativeLanguage}, nothing else.
-- "why": ${turn.heard ? `at most one short phrase in ${input.nativeLanguage} naming that one thing (for example which word or which form), or "" when nothing in particular is wrong` : `""`}. Never a description of the question, no praise, no scolding.${
+- "why": ${turn.heard ? `at most one short phrase in ${input.nativeLanguage} naming that one thing (for example which word or which form), or "" when nothing in particular is wrong` : `""`}. Never a description of the question, no praise, no scolding.
+Write "why" and every "meaning" only in ${input.nativeLanguage} — the learner reads ${input.nativeLanguage}, not ${input.targetLanguage} or English; quote a ${input.targetLanguage} word inside it only when you name it.${
     input.focus
       ? `
 
