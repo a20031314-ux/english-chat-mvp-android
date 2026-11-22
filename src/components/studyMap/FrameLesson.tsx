@@ -586,7 +586,7 @@ export function FrameLesson({
               ) : null}
               {result ? (
                 result.good ? (
-                  <LineGrade ui={ui} exact={false} unclear={[]} practice={result.practice} />
+                  <LineGrade ui={ui} exact={false} unclear={[]} practice={result.practice} typed />
                 ) : result.practice?.note ? (
                   <p className="text-note text-slate-200">{result.practice.note}</p>
                 ) : null

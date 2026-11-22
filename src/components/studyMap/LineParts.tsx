@@ -16,6 +16,7 @@ export function LineGrade({
   unclear,
   practice = null,
   pauses = [],
+  typed = false,
 }: {
   ui: UICopy;
   exact: boolean;
@@ -24,11 +25,13 @@ export function LineGrade({
   pauses?: readonly [string, number][];
   /** 떠올려 말한 줄의 세 갈래(natural·awkward) — 대본과 낱말이 다를 때만 의미가 있다. */
   practice?: Practice | null;
+  /** 써서 낸 답(수업 대화 칸) — 소리 말("잘 들렸어요")이 아니라 "맞았어요"(사용자 2026-11-22 "쓰기 문제인데 잘 들렸어요"). */
+  typed?: boolean;
 }) {
   const perfect = exact && unclear.length === 0 && pauses.length === 0;
   const awkward = !exact && practice?.verdict === "awkward";
   const natural = !exact && practice?.verdict === "natural";
-  const label = perfect ? `★ ${ui.scriptPerfect}` : awkward ? `△ ${ui.scriptAwkward}` : natural ? `✓ ${ui.scriptNatural}` : `✓ ${ui.scriptClean}`;
+  const label = perfect ? `★ ${ui.scriptPerfect}` : awkward ? `△ ${ui.scriptAwkward}` : natural ? `✓ ${ui.scriptNatural}` : typed ? `✓ ${ui.quizRight}` : `✓ ${ui.scriptClean}`;
   return (
     <div className="mt-1.5 flex flex-col gap-1">
       <p className={`text-caption font-semibold ${perfect ? "text-status-learned" : awkward ? "text-warn" : "text-emerald-300"}`}>{label}</p>

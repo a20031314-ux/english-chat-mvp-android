@@ -514,7 +514,7 @@ function ReplayPlayer({
               ) : done ? (
                 <>
                   <p dir="auto" className={`mt-1 text-chat ${done.ok ? "text-emerald-300" : "text-amber-200"}`}>{done.ok ? "✓ " : ""}{one.text}</p>
-                  {!done.ok ? <Attempt outcomes={compareToTarget(one.text, done.heard).outcomes} ui={ui} /> : null}
+                  {!done.ok ? <Attempt outcomes={compareToTarget(one.text, done.heard).outcomes} ui={ui} typed={done.typed} /> : null}
                 </>
               ) : (
                 <p dir="auto" className="mt-1 text-chat text-white">{blanked(one) ?? "…"}</p>
@@ -529,7 +529,7 @@ function ReplayPlayer({
             {answer ? (
               <>
                 <p dir="auto" className={`mt-1 text-chat ${answer.ok ? "text-emerald-300" : "text-amber-200"}`}>{answer.ok ? "✓ " : ""}{whole.text}</p>
-                {!answer.ok ? <Attempt outcomes={compareToTarget(whole.text, answer.heard).outcomes} ui={ui} /> : null}
+                {!answer.ok ? <Attempt outcomes={compareToTarget(whole.text, answer.heard).outcomes} ui={ui} typed={answer.typed} /> : null}
               </>
             ) : null}
           </li>

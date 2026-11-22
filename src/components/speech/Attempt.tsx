@@ -16,7 +16,8 @@ import { compareToTarget, type Practice, type WordOutcome } from "@/lib/roleplay
  * turned into which is arithmetic the learner can check against their own ears,
  * and it stands whether or not the sentence explaining it ever arrives.
  */
-export function Attempt({ outcomes, ui, pauses = [] }: { outcomes: WordOutcome[]; ui: UICopy; pauses?: readonly [string, number][] }) {
+/** typed: 써서 낸 답이면 머리를 "이렇게 들렸어요" 대신 "내가 쓴 문장"(사용자 2026-11-22 "쓰기 문제인데 들렸어요"). */
+export function Attempt({ outcomes, ui, pauses = [], typed = false }: { outcomes: WordOutcome[]; ui: UICopy; pauses?: readonly [string, number][]; typed?: boolean }) {
   // 멈칫한 곳(2026-10-29): 그 뒤에 나온 낱말 앞에 ⏸ — 들린 낱말(kept = 대본 낱말, changed = 들린 꼴)을 차례로 맞춰 본다.
   const bareWord = (text: string) => text.toLocaleLowerCase().replace(/[^\p{L}\p{M}\p{N}]+/gu, "");
   const pauseAt = new Set<number>();
@@ -36,7 +37,7 @@ export function Attempt({ outcomes, ui, pauses = [] }: { outcomes: WordOutcome[]
     shown ? (shown.match(at === "lead" ? /^[^\p{L}\p{M}\p{N}']*/u : /[^\p{L}\p{M}\p{N}']*$/u)?.[0] ?? "") : "";
   return (
     <div className="mt-3 rounded-xl bg-white/5 p-3">
-      <p className="text-[11px] text-neutral-500">{ui.roleplayPracticeHeard}</p>
+      <p className="text-[11px] text-neutral-500">{typed ? ui.reviewMySentence : ui.roleplayPracticeHeard}</p>
       <p dir="auto" className="mt-1 text-[14px] leading-relaxed">
         {outcomes.map((outcome, index) => (
           <span key={index}>
