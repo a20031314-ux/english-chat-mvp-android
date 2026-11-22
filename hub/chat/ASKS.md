@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (96)
+## 탭이 확인할 것 (99)
 
 ### 탭 1 메인
 
@@ -124,6 +124,10 @@
   - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · My에서 찾기
   - 볼 곳: `components/FindInMy.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261122-3-1** (2026-11-22 15:20, 탭 3 · d6eaea0) FullScreenLayer 깊이만큼 z(안에서 연 층이 위로)
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 게시판 · 친구 초대 · Room · 방 게임 · Logbank · 오늘의 학습 · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 광고
+  - 볼 곳: `components/FullScreenLayer.tsx` · `components/AiConsentGate.tsx` · `components/FeedbackButton.tsx` · `components/FeedbackFixedSheet.tsx` · `components/GuideSheet.tsx` · `components/LanguagePick.tsx` · `components/NativeAdSlot.tsx` · `components/UpdateNotice.tsx` · `components/WhatsNewSheet.tsx` · `components/account/AccountCard.tsx` … 1개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
 
@@ -222,6 +226,10 @@
 - **a261120-3-4** (2026-11-20 19:59, 탭 3 · 7711b98) 통화 코치 띠 얼굴 뺌·띠 뜨면 얼굴 작게
   - 기능: 통화 설명 · 통화 · 통화 끝 화면 · Logbank · 오늘의 학습
   - 볼 곳: `components/studyMap/Logbank.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261122-3-2** (2026-11-22 15:20, 탭 3 · d6eaea0) FullScreenLayer 깊이만큼 z(안에서 연 층이 위로)
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 게시판 · 친구 초대 · Room · 방 게임 · Logbank · 오늘의 학습 · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 광고
+  - 볼 곳: `components/notes/NotebookSection.tsx` · `components/studyMap/BankFlip.tsx` · `components/studyMap/Dictionary.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/ScriptPractice.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
@@ -404,6 +412,10 @@
 - **a261120-1-4** (2026-11-20 19:07, 탭 1 · 4bcaf97) 채팅·영상 자막·통화 돌아보기 줄 아래 표현 장부 칩(LedgerLinks) 지움, 옛 앱 영상 번역 서버 되살림
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/rooms/TeamSpace.tsx` · `components/rooms/RoomGroups.tsx` · `app/api/icons/route.ts` · `app/api/media/route.ts` · `app/api/random/route.ts` · `app/api/rooms/fix/route.ts` · `app/api/rooms/game/route.ts` · `components/rooms/MessagesTab.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/BoardView.tsx` … 25개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261122-3-3** (2026-11-22 15:20, 탭 3 · d6eaea0) FullScreenLayer 깊이만큼 z(안에서 연 층이 위로)
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 게시판 · 친구 초대 · Room · 방 게임 · Logbank · 오늘의 학습 · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 광고
+  - 볼 곳: `components/ProfileFrame.tsx` · `components/invite/InviteButton.tsx` · `components/invite/InviteRewards.tsx` · `components/invite/InviteWelcome.tsx` · `components/rooms/BoardView.tsx` · `components/rooms/IconEditor.tsx` · `components/rooms/IconPacks.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MediaImage.tsx` · `components/rooms/RoomDm.tsx` … 5개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (12, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
