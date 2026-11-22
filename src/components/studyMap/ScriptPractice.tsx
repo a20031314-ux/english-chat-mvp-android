@@ -8,7 +8,7 @@ import { useEffect, useMemo, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { learningLanguageSpeechTag } from "@/lib/learningLanguages";
-import { playTts } from "@/lib/ttsPlayer";
+import { playLetter } from "@/lib/curriculum/letterSounds";
 import type { UICopy } from "@/lib/copy";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
@@ -103,7 +103,7 @@ export function ScriptSheet({
   const group = course.groups.find((entry) => entry.id === groupId) ?? null;
   const passed = useMemo(() => new Set(data.passed), [data.passed]);
 
-  const say = (text: string) => void playTts(text, speech).catch(() => undefined);
+  const say = (text: string) => void playLetter(targetLanguage, text, speech).catch(() => undefined);
 
   const start = () => {
     if (!group) return;
@@ -188,7 +188,7 @@ export function ScriptSheet({
                   <li key={index} className="flex flex-col gap-1 rounded-xl border border-line bg-white/5 px-3 py-2">
                     <div className="flex items-center justify-between gap-1">
                       <span dir="auto" className="text-heading font-semibold text-ink">{item.char}</span>
-                      <TTSButton text={item.say} lang={speech} />
+                      <TTSButton text={item.say} lang={speech} play={() => playLetter(targetLanguage, item.say, speech)} />
                     </div>
                     <span dir="ltr" className="text-caption text-slate-300">{item.reading}</span>
                     {item.word ? (
@@ -259,7 +259,7 @@ export function ScriptSheet({
                     <li key={index} className="flex items-center gap-1.5 rounded-xl border border-bad/50 px-2.5 py-1.5">
                       <span dir="auto" className="text-body font-semibold text-ink">{item.char}</span>
                       <span dir="ltr" className="text-caption text-slate-300">{item.reading}</span>
-                      <TTSButton text={item.say} lang={speech} />
+                      <TTSButton text={item.say} lang={speech} play={() => playLetter(targetLanguage, item.say, speech)} />
                     </li>
                   ))}
                 </ul>

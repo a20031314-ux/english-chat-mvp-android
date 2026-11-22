@@ -16,9 +16,11 @@ type TTSButtonProps = {
   lang?: string;
   /** A scene voice (roleplay/voices.ts): lines the app wrote, cached once for everyone. Leave out for anything a learner wrote. */
   voice?: string;
+  /** Plays something other than live TTS (e.g. a checked letter-sound file); no prefetch then. */
+  play?: () => Promise<void>;
 };
 
-export function TTSButton({ text, className, ariaLabel, lang, voice }: TTSButtonProps) {
+export function TTSButton({ text, className, ariaLabel, lang, voice, play }: TTSButtonProps) {
   const [busy, setBusy] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const learningLanguage = useLearningLanguageOptional();
@@ -30,7 +32,7 @@ export function TTSButton({ text, className, ariaLabel, lang, voice }: TTSButton
 
   useEffect(() => {
     const trimmed = text.trim();
-    if (!trimmed) return;
+    if (!trimmed || play) return;
 
     const node = buttonRef.current;
     let visible = !node;
@@ -61,7 +63,7 @@ export function TTSButton({ text, className, ariaLabel, lang, voice }: TTSButton
       observer.disconnect();
       window.clearTimeout(debounce);
     };
-  }, [text, speechLang, voice]);
+  }, [text, speechLang, voice, play]);
 
   const handleSpeak = async () => {
     const trimmed = text.trim();
@@ -71,7 +73,7 @@ export function TTSButton({ text, className, ariaLabel, lang, voice }: TTSButton
 
     setBusy(true);
     try {
-      await playTts(trimmed, speechLang, voice);
+      await (play ? play() : playTts(trimmed, speechLang, voice));
     } catch (error) {
       console.error("TTS failed:", error);
     } finally {
@@ -85,7 +87,7 @@ export function TTSButton({ text, className, ariaLabel, lang, voice }: TTSButton
       type="button"
       onPointerDown={() => {
         const trimmed = text.trim();
-        if (trimmed) prefetchTts(trimmed, speechLang, voice);
+        if (trimmed && !play) prefetchTts(trimmed, speechLang, voice);
       }}
       onClick={() => {
         void handleSpeak();

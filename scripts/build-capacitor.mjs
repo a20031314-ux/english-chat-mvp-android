@@ -173,8 +173,9 @@ cpSync(outDir, wwwDir, { recursive: true });
  * come in one set per interface language, and the app fetches only its own.
  * Next copies everything in public/ into the export, so they are taken out.
  */
+// letter-sounds: 글자·소리 카드 소리(scripts/letter-sounds.mjs) — 앱은 웹에서 받는다.
 // icons: 기본 아이콘 묶음(Noto, rooms/builtinIcons.ts) — 앱은 /api/icons로 받아 웹의 정적 파일로 넘어간다.
-for (const served of ["whats-new", "guide", "feedback-fix", "icons"]) {
+for (const served of ["whats-new", "guide", "feedback-fix", "icons", "letter-sounds"]) {
   rmSync(path.join(wwwDir, served), { recursive: true, force: true });
 }
 
