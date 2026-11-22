@@ -117,6 +117,7 @@ export function jsonWithCors(
   const models = simModelsHeader();
   return NextResponse.json(data, {
     status: init?.status ?? 200,
-    headers: models ? { ...corsHeaders(request), "x-sim-models": models } : corsHeaders(request),
+    // Header values must be ASCII — a non-ASCII model note made every reply to a check user an empty 500 (2026-11-22).
+    headers: models ? { ...corsHeaders(request), "x-sim-models": models.replace(/[^\x20-\x7e]/g, "?") } : corsHeaders(request),
   });
 }

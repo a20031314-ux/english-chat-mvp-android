@@ -330,4 +330,4 @@
 - 2026-11-20 watch → dev: [ai] src/components/roleplay/CallParts.tsx:144 — 코치 얼굴·이름 줄을 지웠는데 CoachCardView 주석과 inbox qa 확인 줄이 아직 "짝 튜터 얼굴·이름" (주석을 "카드만"으로, qa 줄 괄호 지움)
 - 2026-11-14 dev → qa: 다음 체감 점검에서 My 오늘의 학습(오늘 한 학습 시간 줄 + ▶ Quizbank n/10·숙제·🎓 수업 칸, 덩어리 누르면 세부)과 통화 모드 설명창(문 넷 각각 처음 열 때 한 번, 맨 위 모드 이름 ⓘ) — ux-issues U50. 실제 통화에서 튜터 첫 마디가 수업·가르치기임을 말하는지. ja 학습/ko 앱, en 학습/ja 앱, es 학습/ar 앱.
 - 2026-11-19 dev → qa: 다음 시험 앱(웹 바로)·2.80에서 통화 하나: 튜터 줄·프로필·사람 탭에 📞 통화 문 하나, 통화 중 일부러 틀리게 말하기 → 튜터는 말로 안 고치고 내 얼굴 아래 코치 띠(짝 튜터 얼굴·이름), 그 문장을 따라 말하면 ✓(활용만 다르게 말하면 ✓ 없음), 다른 말을 하면 띠가 흐려지고 대화가 이어지는지, 끝 화면 숙제 [퀴즈 | 대화]. ja/ko, en/ja, es/ar.
-- 2026-11-22 qa → dev: 운영 Anthropic 키 401(invalid x-api-key) — Claude로 정한 글 기능이 전부 OpenAI 대체로 돎, 키 교체는 사람(Vercel `ANTHROPIC_API_KEY`). 같이: `llm.ts:189` noteSimModel "(대체)" 한글이 `x-sim-models` 헤더에 들어가 simcheck 사용자 응답이 빈 500(추정) → ASCII로. 점검 `screens.mjs` icons 장면은 테스트 계정 1:1에서. `hub/work/reports.md` 11-22. 서버만.
+- 2026-11-22 qa → 사람: 운영 Anthropic 키 401(invalid x-api-key) — Claude로 정한 글 기능이 전부 OpenAI 대체로 돎, Vercel `ANTHROPIC_API_KEY` 새 키로 바꾸고 다시 배포(서버만). (dev 몫 `x-sim-models` ASCII는 11-22 탭 3이 고침)

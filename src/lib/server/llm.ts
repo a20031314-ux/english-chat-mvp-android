@@ -186,7 +186,7 @@ export async function completeChat(
   } catch (error) {
     if (env("MODEL_FALLBACK") === "off" || simRoutes.getStore()) throw error;
     console.error(`[llm] ${task} on ${route.model} failed — falling back to OpenAI`, error);
-    noteSimModel(`${task}=openai:${TASKS[task].openai()}(대체)`);
+    noteSimModel(`${task}=openai:${TASKS[task].openai()}(fallback)`);
     return client.chat.completions.create(forOpenAIModel(TASKS[task].openai(), rest));
   }
 }
