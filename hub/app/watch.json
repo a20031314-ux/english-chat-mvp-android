@@ -1,10 +1,10 @@
 {
  "_": "변경 감시(scripts/watch/watch.mjs)의 기준값 — 손으로 고치지 않는다. last = 마지막으로 본 main 커밋, metrics = 그때 잰 값.",
- "last": "348de845b39c38ab0faac6c9ac9170a30fd32878",
- "at": "2026-11-22T12:23:44.067Z",
+ "last": "4d615e252ca636a028a328f31918636c664d8000",
+ "at": "2026-11-22T14:24:16.558Z",
  "screensFiredAt": "2026-11-21T16:24:11.625Z",
  "metrics": {
-  "commit": "348de84",
+  "commit": "4d615e2",
   "tables": {
    "costs": {
     "요금별 한 달 비용 (30일) · 무료(2.75 이하 앱) · 하루 한도": "대본 25줄 · 팩 1번 · 통화 없음(처음 10포인트 별도) · 채팅 7번",
@@ -329,6 +329,10 @@
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · qbankSeed · 모델 호출": "1",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · qbankSeed · 값 매기는 법": "claude-haiku-5-5 500/400 토큰 (기능 translate)",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · qbankSeed · 근거": "가정",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · roleplayHint · 한 번": "0.3원",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · roleplayHint · 모델 호출": "1",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · roleplayHint · 값 매기는 법": "claude-haiku-5-5 1300/150 토큰 (기능 roleplayHint)",
+    "기능별 한 번 비용 (요금 한도 밖 기능 포함) · roleplayHint · 근거": "가정",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · chatReply · 한 번": "0.3원",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · chatReply · 모델 호출": "1",
     "기능별 한 번 비용 (요금 한도 밖 기능 포함) · chatReply · 값 매기는 법": "claude-haiku-5-5 1400/120 토큰 (기능 chat)",
@@ -488,6 +492,9 @@
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · roleplayReview · 모델": "claude-sonnet-5-5",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · roleplayReview · 입력/출력 (100만 토큰당)": "$2 / $10",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · roleplayReview · 출처": "platform.claude.com pricing 2026-10-22",
+    "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · roleplayHint · 모델": "claude-haiku-5-5",
+    "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · roleplayHint · 입력/출력 (100만 토큰당)": "$0.1 / $0.5",
+    "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · roleplayHint · 출처": "platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트)",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · chatVerify · 모델": "claude-sonnet-5-5",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · chatVerify · 입력/출력 (100만 토큰당)": "$2 / $10",
     "계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`) · chatVerify · 출처": "platform.claude.com pricing 2026-10-22",
