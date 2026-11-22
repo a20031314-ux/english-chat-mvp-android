@@ -44,8 +44,16 @@ function useLayer(): number {
 /** 대화·통화(z-[95]) 위에서 연 층이면 true — 그 위로 띄운다(LessonHost가 openLesson above로 감쌈, 2026-11-08 사전 주석). */
 export const LayerAboveContext = createContext(false);
 
+/**
+ * How many full-screen layers this one sits inside. A layer opened from inside another (the homework quiz inside the
+ * homework sheet) must draw above it; with the same z the order on body decided, and a layer mounted in the same commit
+ * as its parent could land underneath and never be seen (2026-11-22 homework sheet).
+ */
+const LayerDepthContext = createContext(0);
+
 export function FullScreenLayer({ children }: { children: ReactNode }) {
   const above = useContext(LayerAboveContext);
+  const depth = useContext(LayerDepthContext);
   // False while rendering on the server, true once on the client, without a
   // state write in an effect and without a hydration mismatch.
   const onClient = useSyncExternalStore(
@@ -58,7 +66,11 @@ export function FullScreenLayer({ children }: { children: ReactNode }) {
   if (!onClient) return null;
   return createPortal(
     <AdLayerContext.Provider value={layer}>
-      <div className={`fixed inset-0 ${above ? "z-[130]" : "z-[70]"} flex flex-col bg-[#050505]`}>{children}</div>
+      <LayerDepthContext.Provider value={depth + 1}>
+        <div className="fixed inset-0 flex flex-col bg-[#050505]" style={{ zIndex: (above ? 130 : 70) + depth }}>
+          {children}
+        </div>
+      </LayerDepthContext.Provider>
     </AdLayerContext.Provider>,
     document.body,
   );
