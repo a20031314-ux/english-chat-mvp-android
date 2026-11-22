@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (101)
+## 탭이 확인할 것 (103)
 
 ### 탭 1 메인
 
@@ -128,6 +128,10 @@
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 게시판 · 친구 초대 · Room · 방 게임 · Logbank · 오늘의 학습 · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 광고
   - 볼 곳: `components/FullScreenLayer.tsx` · `components/AiConsentGate.tsx` · `components/FeedbackButton.tsx` · `components/FeedbackFixedSheet.tsx` · `components/GuideSheet.tsx` · `components/LanguagePick.tsx` · `components/NativeAdSlot.tsx` · `components/UpdateNotice.tsx` · `components/WhatsNewSheet.tsx` · `components/account/AccountCard.tsx` … 1개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261122-3-6** (2026-11-22 22:55, 탭 3 · 0d93ded) 통화 광고 칸 숨김 조건
+  - 기능: 통화 설명 · 통화 · 통화 끝 화면 · Logbank · 오늘의 학습
+  - 볼 곳: `app/dev/call-preview/page.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
 
@@ -238,6 +242,10 @@
 - **a261122-3-5** (2026-11-22 22:53, 탭 3 · 131c25b) LineGrade·Attempt typed 표시
   - 기능: 통화 · 이렇게도 말할 수 있었어요 · 소재 수업
   - 볼 곳: `components/studyMap/FrameLesson.tsx` · `components/studyMap/LineParts.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261122-3-7** (2026-11-22 22:55, 탭 3 · 0d93ded) 통화 광고 칸 숨김 조건
+  - 기능: 통화 설명 · 통화 · 통화 끝 화면 · Logbank · 오늘의 학습
+  - 볼 곳: `components/studyMap/Logbank.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
