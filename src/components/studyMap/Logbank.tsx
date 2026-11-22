@@ -24,7 +24,7 @@ import type { LogItem, PartId } from "@/lib/notes/stageParts";
 import { LEDGER_EVENT, migrateLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { CardFace } from "@/components/studyMap/QuizPlayer";
 import { DictionarySheet } from "@/components/studyMap/Dictionary";
-import { progressIn, usedAt, usedFirstOn, usedLineFor, type NewUse } from "@/lib/curriculum/growthView";
+import { lastUsesIn, progressIn, usedAt, usedFirstOn, usedLineFor, type NewUse } from "@/lib/curriculum/growthView";
 import { forgetGrowthDay, readGrowthLines } from "@/lib/curriculum/growthLines";
 import { forgetTalkDay } from "@/lib/roleplay/talkMemory";
 import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
@@ -239,7 +239,7 @@ function readPeriodKind(): PeriodKind {
 
 const PART_ORDER: PartId[] = ["grammar", "vocab", "expression", "pronunciation"];
 /** 어디서 했는지 → 아이콘(LogItem where · 수업 결과 종류 · 퀴즈). */
-const WHERE_ICON: Record<string, string> = { chat: "💬", call: "📞", video: "🎬", vocab: "📖", map: "🧩", mission: "🎭", review: "📝", lesson: "🧩", recall: "🎯", script: "🎭", quiz: "📝" };
+const WHERE_ICON: Record<string, string> = { chat: "💬", call: "📞", video: "🎬", vocab: "📖", mission: "🎭", review: "📝", recall: "🎯", script: "🎭", quiz: "📝" };
 
 
 /**
@@ -331,10 +331,10 @@ export function Logbank({
     }
   };
   const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? bankTone("log").chip : "border border-line text-slate-300"}`;
-  const timeLegend: { cls: string; icon: string; title: string }[] = [
-    { cls: "fill-info text-info", icon: "📞", title: ui.callRecordsTitle },
-    { cls: "fill-info/55 text-info/70", icon: "🧩", title: ui.framesTitle },
-    { cls: "fill-slate-400 text-slate-400", icon: "📝", title: ui.keepTitle },
+  const timeLegend: { cls: string; place: Place; title: string }[] = [
+    { cls: "fill-info text-info", place: "call", title: ui.callRecordsTitle },
+    { cls: "fill-info/55 text-info/70", place: "lesson", title: ui.framesTitle },
+    { cls: "fill-slate-400 text-slate-400", place: "quiz", title: ui.keepTitle },
   ];
   // 날 문자열이 둘(logDays localDay "2026-11-9" · 장부·기간 "2026-11-09") — 숫자로 맞춰 찾는다.
   const dayDetail = openDay ? allDays.find((one) => sameDay(one.day, openDay)) ?? null : null;
@@ -386,9 +386,9 @@ export function Logbank({
             <LogChart bars={chart} kind={kind} legend={timeLegend} unit="′" dateLabel={dateLabel} onDay={(day) => setOpenDay(day)} />
             <div className="flex flex-wrap gap-x-3 text-meta text-slate-400">
               {timeLegend.map((one) => (
-                <span key={one.icon} title={one.title} className="inline-flex items-center gap-1">
+                <span key={one.place} title={one.title} className="inline-flex items-center gap-1">
                   <svg aria-hidden width="8" height="8" className={one.cls}><rect width="8" height="8" rx="2" /></svg>
-                  {`${one.icon} ${one.title}`}
+                  {one.title}
                 </span>
               ))}
             </div>
@@ -505,11 +505,11 @@ function LogChart({
 function TimeSources({ ui, summary, input, period }: { ui: UICopy; summary: PeriodSummary; input: LogInputs; period: Period }) {
   const results = input.results.filter((one) => inPeriod(period, one.day));
   const minutesOf = (kind: DayResult["kind"]) => Math.round(results.filter((one) => one.kind === kind).reduce((n, one) => n + resultMinutes(one), 0));
-  const rows: { icon: string; title: string; count: string; minutes: number; show: boolean }[] = [
-    { icon: "📞", title: ui.callRecordsTitle, count: String(summary.calls), minutes: summary.callMinutes, show: summary.calls > 0 },
-    { icon: "🧩", title: ui.framesTitle, count: String(summary.lessons), minutes: minutesOf("lesson"), show: summary.lessons > 0 },
-    { icon: "🎯", title: ui.recallTitle, count: String(summary.recalls), minutes: minutesOf("recall"), show: summary.recalls > 0 },
-    { icon: "📝", title: ui.keepTitle, count: ui.quizScore.replace("{n}", String(summary.quizRight)).replace("{m}", String(summary.quizN)), minutes: Math.round(summary.quizN * ESTIMATE.quizQuestion), show: summary.quizN > 0 },
+  const rows: { icon: Place | "recall"; title: string; count: string; minutes: number; show: boolean }[] = [
+    { icon: "call", title: ui.callRecordsTitle, count: String(summary.calls), minutes: summary.callMinutes, show: summary.calls > 0 },
+    { icon: "lesson", title: ui.framesTitle, count: String(summary.lessons), minutes: minutesOf("lesson"), show: summary.lessons > 0 },
+    { icon: "recall", title: ui.recallTitle, count: String(summary.recalls), minutes: minutesOf("recall"), show: summary.recalls > 0 },
+    { icon: "quiz", title: ui.keepTitle, count: ui.quizScore.replace("{n}", String(summary.quizRight)).replace("{m}", String(summary.quizN)), minutes: Math.round(summary.quizN * ESTIMATE.quizQuestion), show: summary.quizN > 0 },
   ];
   const shown = rows.filter((one) => one.show);
   if (!shown.length) return <p className="text-note text-slate-500">—</p>;
@@ -517,7 +517,7 @@ function TimeSources({ ui, summary, input, period }: { ui: UICopy; summary: Peri
     <ul data-log-sources className="flex flex-col gap-1">
       {shown.map((one) => (
         <li key={one.icon} className="flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-note">
-          <span aria-hidden>{one.icon}</span>
+          <PlaceIcon place={one.icon} />
           <span className="min-w-0 flex-1 truncate text-ink">{one.title}</span>
           <span className="shrink-0 tabular-nums text-slate-300">{one.count}</span>
           <span className="w-12 shrink-0 text-end tabular-nums text-slate-400">{`${one.minutes}′`}</span>
@@ -627,7 +627,33 @@ function FixedLines({ items }: { items: readonly LogItem[] }) {
   );
 }
 
-const PLACE_ICON: Record<Place, string> = { quiz: "📝", call: "📞", lesson: "🧩", dict: "📕", chat: "💬", people: "👤" };
+const PLACE_ICON: Record<Exclude<Place, "lesson">, string> = { quiz: "📝", call: "📞", dict: "📕", chat: "💬", people: "👤" };
+
+/**
+ * 어디서 했나 표시 — 문장구조 수업(lesson)은 이모지 대신 문장구조 색 네모(요소 색과 한 표시, 사용자 2026-11-21 "아이콘도 색깔 구별로 통일").
+ * 나머지 곳(퀴즈·통화·사전·채팅·사람)은 그대로 이모지.
+ */
+function PlaceIcon({ place }: { place: Place | "recall" | "script" }) {
+  if (place === "lesson") return <PartMark part="frame" className="align-middle" />;
+  if (place === "recall") return <span aria-hidden>🎯</span>;
+  if (place === "script") return <span aria-hidden>🎭</span>;
+  return <span aria-hidden>{PLACE_ICON[place]}</span>;
+}
+
+/** 곳 여러 개를 " · "로 — 아이콘 + 이름. */
+function PlaceList({ ui, places }: { ui: UICopy; places: readonly Place[] }) {
+  return (
+    <>
+      {places.map((place, i) => (
+        <span key={place} className="inline-flex items-center gap-1">
+          {i ? <span className="me-1 text-slate-500">·</span> : null}
+          <PlaceIcon place={place} />
+          {placeName(ui, place)}
+        </span>
+      ))}
+    </>
+  );
+}
 
 function placeName(ui: UICopy, place: Place): string {
   return { quiz: ui.keepTitle, call: ui.homeTabCall, lesson: ui.framesTitle, dict: ui.languagebankTitle, chat: ui.homeTabChat, people: ui.homeTabPeople }[place];
@@ -725,7 +751,7 @@ function DayTimeline({
         <div className="flex items-center gap-2">
           <button type="button" data-timeline-back onClick={() => setOpenAt(null)} aria-label="‹" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-title text-slate-300 hover:bg-white/10 rtl:rotate-180">‹</button>
           <div className="flex min-w-0 flex-1 flex-col">
-            <span className={`truncate text-body font-semibold text-info`}>{session.places.map((place) => `${PLACE_ICON[place]} ${placeName(ui, place)}`).join(" · ")}</span>
+            <span className={`flex min-w-0 flex-wrap items-center gap-x-1 truncate text-body font-semibold text-info`}><PlaceList ui={ui} places={session.places} /></span>
             <span className="text-meta tabular-nums text-slate-400">{`${range(session)} · ${ui.planMinutes.replace("{n}", String(sessionMinutes(session)))}`}</span>
           </div>
           {summary.ok || summary.miss ? (
@@ -870,7 +896,7 @@ function SessionRows({
             <div className="flex min-w-0 flex-1 flex-col gap-1.5 pb-3">
               <button type="button" data-timeline-open={one.start} onClick={() => onOpen(one.start)} className={`flex flex-col gap-1.5 px-3 py-2.5 text-start hover:bg-white/5 ${box}`}>
                 <span className="flex items-center gap-2">
-                  <span className={`min-w-0 truncate text-note font-semibold text-info`}>{one.places.map((place) => `${PLACE_ICON[place]} ${placeName(ui, place)}`).join(" · ")}</span>
+                  <span className={`flex min-w-0 flex-wrap items-center gap-x-1 truncate text-note font-semibold text-info`}><PlaceList ui={ui} places={one.places} /></span>
                   <span className="min-w-0 flex-1 truncate text-meta tabular-nums text-slate-400">{`${range(one)} · ${ui.planMinutes.replace("{n}", String(sessionMinutes(one)))}`}</span>
                   <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
                 </span>
@@ -1022,7 +1048,7 @@ function CardTimeline({
             {talks.map((row, i) => (
               <li key={`${row.t}-${i}`} className="flex items-center gap-2 text-note tabular-nums text-ink">
                 <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${row.r === "used" ? "bg-info" : "bg-bad"}`} />
-                <span className="min-w-0 truncate">{`${when.format(row.t * 1000)} · ${PLACE_ICON[row.src]} ${placeName(ui, row.src)} ${row.r === "used" ? "✓" : "✗"}`}</span>
+                <span className="inline-flex min-w-0 items-center gap-1 truncate">{`${when.format(row.t * 1000)} ·`}<PlaceIcon place={row.src} />{`${placeName(ui, row.src)} ${row.r === "used" ? "✓" : "✗"}`}</span>
               </li>
             ))}
           </ul>
@@ -1040,7 +1066,7 @@ function CardTimeline({
                 {i < rows.length - 1 ? <span className="w-0.5 flex-1 bg-line" /> : null}
               </div>
               <div className="flex min-w-0 flex-1 flex-col pb-3">
-                <span className="text-note tabular-nums text-ink">{`${when.format(row.t * 1000)} · ${PLACE_ICON[place]} ${placeName(ui, place)}`}</span>
+                <span className="inline-flex items-center gap-1 text-note tabular-nums text-ink">{`${when.format(row.t * 1000)} ·`}<PlaceIcon place={place} />{placeName(ui, place)}</span>
                 <span className="text-meta text-slate-400">{resultText(row)}</span>
               </div>
             </li>
@@ -1051,7 +1077,6 @@ function CardTimeline({
   );
 }
 
-const RESULT_ICON: Record<DayResult["kind"], string> = { lesson: "🧩", recall: "🎯", script: "🎭" };
 
 /** 그날 카드 중 원문(통화 기록)이 이제 없는 것. */
 function orphanNotes(day: Pick<Day, "calls" | "notes">): CallNote[] {
@@ -1100,7 +1125,7 @@ function DayResults({ ui, language, day }: { ui: UICopy; language: string; day: 
       {day.results.map((result, i) => (
         <div key={`${result.item}-${result.at}-${i}`} data-day-result={result.kind} className={card}>
           <span className="flex items-center gap-2 text-caption">
-            <span aria-hidden>{RESULT_ICON[result.kind]}</span>
+            <PlaceIcon place={result.kind} />
             <span dir="auto" className="min-w-0 flex-1 truncate font-semibold text-ink">{result.kind === "recall" ? ui.recallTitle : result.title}</span>
             <span className={`shrink-0 tabular-nums ${result.passed ? "text-good" : "text-slate-400"}`}>{`${result.right}/${result.total}${result.passed ? " ✓" : ""}`}</span>
             {remove(result.title, () => removeDayResult(language, result.at, result.item), "result")}
@@ -1398,7 +1423,11 @@ function Learned({
       ) : null}
       {openCell ? (
         <LogSheet title={`${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
-          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
+          {openCell.col === "used" ? (
+            <UsedCards ui={ui} language={language} locale={locale} withDay uses={lastUsesIn(ledger, cell(openCell.part, openCell.col).slice(0, 120), inTime)} itemsOf={itemsOf} grammarName={grammarName} keyLabel={keyLabel} />
+          ) : (
+            <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
+          )}
         </LogSheet>
       ) : null}
       {usedDay ? (
@@ -1753,7 +1782,7 @@ function LearnCurve({
 }
 
 /**
- * 그날 새로 활용한 것(학습 곡선 점 ›): 카드(배운 것 표와 같은 LearnedCards) 아래에 어디서·언제 처음 맞게 썼나 + 그때 쓴 내 문장.
+ * 활용 카드(학습 곡선 점 › = 그날 새로 활용 · 배운 것 표 "활용" 칸 = 기간 안 마지막으로 쓴 때, withDay면 날짜도): 카드(배운 것 표와 같은 LearnedCards) 아래에 어디서·언제 처음 맞게 썼나 + 그때 쓴 내 문장.
  * 문장은 이 폰에 남은 것만(growthLines — 서버엔 학습자 문장을 남기지 않는다), 없으면 어디서·언제만.
  */
 function UsedCards({
@@ -1764,11 +1793,13 @@ function UsedCards({
   itemsOf,
   grammarName,
   keyLabel,
+  withDay = false,
 }: {
   ui: UICopy;
   language: string;
   locale: string;
   uses: readonly NewUse[];
+  withDay?: boolean;
   itemsOf: (keys: readonly string[]) => LearnedItem[];
   grammarName: (stage: number, index: number) => string;
   keyLabel: (key: string) => string;
@@ -1789,7 +1820,7 @@ function UsedCards({
           <div key={use.key} data-used-card={use.key} className="flex flex-col gap-2">
             <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf([use.key])} grammarName={grammarName} keyLabel={keyLabel} />
             <div className="flex flex-col gap-1 rounded-xl border border-line px-3 py-2">
-              <span className="text-meta tabular-nums text-slate-400">{`${PLACE_ICON[use.s]} ${placeName(ui, use.s)} · ${when.format(use.t * 1000)} ✓`}</span>
+              <span className="inline-flex items-center gap-1 text-meta tabular-nums text-slate-400"><PlaceIcon place={use.s} />{`${placeName(ui, use.s)} · ${withDay ? `${dayFormat(locale, dayOfSeconds(use.t))} ` : ""}${when.format(use.t * 1000)} ✓`}</span>
               {line ? (
                 <p dir="auto" data-used-line className="text-note text-ink">
                   {line.x}

@@ -131,12 +131,27 @@ export function usedFirstOn(events: readonly LogEvent[], day: string, dayOf: (t:
     .map((event) => ({ key: event.k, t: event.t, s: event.src as TalkSource }));
 }
 
-/** 그 열쇠를 쓴 내 문장(이 폰 growthLines — 그날 것 먼저, 없으면 가장 가까운 것). 남아 있지 않으면 null. */
+/**
+ * 그 열쇠를 그때 쓴 내 문장(이 폰 growthLines): 같은 날·같은 곳(통화·채팅·사람) 줄 중 시각이 가장 가까운 것.
+ * 다른 날·다른 곳 문장은 그때 쓴 것처럼 보이므로 쓰지 않는다 — 없으면 null(카드엔 어디서·언제만).
+ */
 export function usedLineFor(lines: readonly UsedLine[], use: NewUse, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): UsedLine | null {
-  const mine = lines.filter((line) => line.k.includes(use.key));
-  if (!mine.length) return null;
   const day = dayOf(use.t);
-  const sameDay = mine.filter((line) => dayOf(line.t) === day);
-  const pool = sameDay.length ? sameDay : mine;
+  const pool = lines.filter((line) => line.k.includes(use.key) && line.s === use.s && dayOf(line.t) === day);
+  if (!pool.length) return null;
   return pool.reduce((best, line) => (Math.abs(line.t - use.t) < Math.abs(best.t - use.t) ? line : best));
+}
+
+/** 기간(inDay)에 대화에서 맞게 쓴 마지막 때 — 열쇠 순서 그대로(배운 것 표 "활용" 칸 카드에 쓴 문장을 붙일 때). */
+export function lastUsesIn(events: readonly LogEvent[], keys: readonly string[], inDay: (t: number) => boolean): NewUse[] {
+  const last = new Map<string, LogEvent>();
+  for (const event of events) {
+    if (!applied(event) || !inDay(event.t)) continue;
+    const have = last.get(event.k);
+    if (!have || event.t > have.t) last.set(event.k, event);
+  }
+  return keys.flatMap((key) => {
+    const event = last.get(key);
+    return event ? [{ key, t: event.t, s: event.src as TalkSource }] : [];
+  });
 }

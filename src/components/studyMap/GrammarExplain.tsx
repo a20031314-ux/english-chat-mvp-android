@@ -5,6 +5,7 @@
  * 규칙 → 꼴 표(원래 꼴 → 바뀐 꼴 · 한 줄) → 예외 → 쓰임 → 흔한 실수(틀린 꼴 → 바른 꼴 · 까닭) → 이 문법을 쓰는 문장구조(누르면 그 수업).
  * 문장구조 수업 설명(FixedExplain)과 같은 칸 모양.
  */
+import { PartMark } from "@/components/studyMap/bankTone";
 import { openLesson } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import type { GrammarLesson } from "@/lib/curriculum/fixedLessons/grammar";
@@ -72,7 +73,7 @@ export function GrammarExplain({ page, ui, language }: { page: GrammarLesson; ui
       ) : null}
       {frames.length ? (
         <section data-grammar-frames>
-          <h3 className="text-meta font-semibold text-slate-400">🧩 {ui.framesTitle}</h3>
+          <h3 className="flex items-center gap-1.5 text-meta font-semibold text-slate-400"><PartMark part="frame" />{ui.framesTitle}</h3>
           <div className="mt-1 flex flex-wrap gap-1.5">
             {frames.map((frame) => (
               <button

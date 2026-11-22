@@ -104,4 +104,20 @@ test("그날 새로 활용: 대화에서 처음 맞게 쓴 날만 · 문장은 �
   ];
   assert.equal(usedLineFor(lines, second[0]!, day)?.x, "¿De dónde eres? Quiero comer.");
   assert.equal(usedLineFor([], second[0]!, day), null);
+  // 다른 날 문장·다른 곳(통화) 문장은 그때 쓴 것처럼 붙이지 않는다.
+  assert.equal(usedLineFor([lines[0]!], second[0]!, day), null);
+  assert.equal(usedLineFor([{ ...lines[1]!, s: "call" as const }], second[0]!, day), null);
+});
+
+test("기간 활용 마지막 때: 열쇠 순서 · 기간 밖·퀴즈는 안 셈 (th·es)", async () => {
+  const { lastUsesIn } = await import("./growthView.ts");
+  const events = [
+    { k: "w|กิน", src: "call" as const, r: "used" as const, t: 100 },
+    { k: "w|กิน", src: "chat" as const, r: "used" as const, t: 300 },
+    { k: "w|comer", src: "people" as const, r: "used" as const, t: 200 },
+    { k: "w|comer", src: "quiz" as const, r: "ok" as const, m: "pick" as const, t: 250 },
+    { k: "w|beber", src: "chat" as const, r: "used" as const, t: 900 },
+  ];
+  const uses = lastUsesIn(events, ["w|comer", "w|กิน", "w|beber"], (t) => t < 500);
+  assert.deepEqual(uses, [{ key: "w|comer", t: 200, s: "people" }, { key: "w|กิน", t: 300, s: "chat" }]);
 });
