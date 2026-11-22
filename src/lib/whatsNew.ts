@@ -44,17 +44,26 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.80(94): 통화 하나(코치 띠·숙제 [퀴즈 | 대화]), My = Quizbank · Languagebank · Logbank(Stagebank 없어짐), 사전 Languagebank, Logbank 쌓기.
+    // 그림은 사용법 장면(public/guide/<언어>/)에서 화면 부분만 잘라 씀(scripts/whats-new-from-guide.mjs).
+    // 첫 측정 고침·튜터 이어 묻기·사전 주석·넘겨 보기·소재 수업 버튼 이름은 사용법·출시 노트에만.
+    version: "2.80",
+    code: 94,
+    items: [
+      { id: "call-coach", title: "whatsNewRealCallTitle", body: "whatsNewRealCallBody", shot: "call-coach", tab: "talk", guide: "call.talk" },
+      { id: "my-banks", title: "whatsNewBanksTitle", body: "whatsNewBanksBody", shot: "my-banks", tab: "map", guide: "my.next" },
+      { id: "languagebank", title: "whatsNewLangbankTitle", body: "whatsNewLangbankBody", shot: "languagebank", tab: "map", guide: "my.lang" },
+      { id: "logbank", title: "whatsNewLogTitle", body: "whatsNewLogBody", shot: "logbank", tab: "map", guide: "my.growth" },
+    ],
+  },
+  {
     // 2.79(93): Play는 2.75 → 2.79(2.76~2.78은 Play에 안 나감). My 큰 칸 셋(Stagebank·Quizbank·Logbank), 문장구조 수업(설명 › 퀴즈 › 대화)·꺼내 쓰기,
     // Quizbank 직접 쓰기·틀린 곳 고치기·정기 시험(모인 소재 20개)·다시 보기, 실제 통화 화면(위 튜터·아래 나, 💬·💡·🙉)·튜터 그림·목소리 남녀·통화 정리 → 그 문장으로 수업.
     // 단어 시험·어휘 수준 맞추기·배울 수 있는 것·칸 ? 설명·대화 말풍선 얼굴·사람 대화 통화 화면은 사용법·출시 노트에만.
+    // 화면(Stagebank·통화 문 넷)이 2.80에 없어 비움 — 2.79에서 오는 사람은 2.80 카드만 본다. 예전 카드: my-banks·lesson·quizbank·real-call.
     version: "2.79",
     code: 93,
-    items: [
-      { id: "my-banks", title: "whatsNewBanksTitle", body: "whatsNewBanksBody", shot: "my-banks", tab: "map", guide: "my.start" },
-      { id: "lesson", title: "whatsNewLessonTitle", body: "whatsNewLessonBody", shot: "lesson", tab: "map", guide: "my.map" },
-      { id: "quizbank", title: "whatsNewQuizbankTitle", body: "whatsNewQuizbankBody", shot: "quizbank", tab: "map", guide: "my.next" },
-      { id: "real-call", title: "whatsNewRealCallTitle", body: "whatsNewRealCallBody", shot: "real-call", tab: "talk", guide: "call.talk" },
-    ],
+    items: [],
   },
   {
     // 2.78(92): Play에 안 나감 — 사용자는 2.75 → 2.79로 바로 온다. 이 카드들이 그리던 화면(지속 학습 카드·묶음 퀴즈 버튼 줄)은 2.79에 없어 비움.
