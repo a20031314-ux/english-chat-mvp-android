@@ -1016,7 +1016,7 @@ Get back to your list as soon as it feels natural.`
           }`
         : `Right now you are on step:${current.id} — ${current.goal}.`,
     scenario.openEnded && followUpFact(request.prior, request.history)
-      ? `One thing you remember about them, with the day you heard it: "${followUpFact(request.prior, request.history)}". In this reply or your next one, after reacting to what they just said, ask one short, warm follow-up about it, as a friend who remembers: for a habit, whether they did it again today or lately; for a plan whose day has passed, how it went; for a plan still ahead, how it is coming along; otherwise how that person, place or thing is doing. Use words at their level, ask it once, and do not ask it again if you already did in this call.`
+      ? `One thing you remember about them, with the day you heard it: "${followUpFact(request.prior, request.history)}". In this reply, after a few words reacting to what they just said, ask one short, warm follow-up about exactly this — not mixed with anything else you remember — as a friend who remembers: for a habit, whether they did it again today or lately; for a plan whose day has passed, how it went; for a plan still ahead, how it is coming along; otherwise how that person, place or thing is doing. Use words at their level. If you already asked about it in this call, do not ask again.`
       : "",
     request.prior?.trim()
       ? `What you remember about them from earlier conversations. Each line starts with the day you heard it. Bring one up only when it fits what they just said, in your own manner, and never read this list out loud. Do not invent a memory that is not written here.
