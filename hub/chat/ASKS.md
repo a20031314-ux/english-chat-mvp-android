@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (100)
+## 탭이 확인할 것 (101)
 
 ### 탭 1 메인
 
@@ -234,6 +234,10 @@
 - **a261122-3-4** (2026-11-22 19:56, 탭 3 · c21d520) 첫 측정 계산·Languagebank 칠하기(measuredNow·quizShade)
   - 기능: 첫 측정 · Quizbank · Languagebank · 칸 설명
   - 볼 곳: `components/studyMap/FirstCheck.tsx` · `components/studyMap/LanguageBank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/Quizbank.tsx` · `lib/notes/myParts.ts` · `lib/notes/stageParts.ts`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261122-3-5** (2026-11-22 22:53, 탭 3 · 131c25b) LineGrade·Attempt typed 표시
+  - 기능: 통화 · 이렇게도 말할 수 있었어요 · 소재 수업
+  - 볼 곳: `components/studyMap/FrameLesson.tsx` · `components/studyMap/LineParts.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
