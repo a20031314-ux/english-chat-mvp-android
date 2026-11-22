@@ -210,7 +210,7 @@ ${input.focus}`
       : ""
   }
 
-Reply as JSON only: {"why": "...", "pieces": [{"text": "...", "meaning": "..."}]}`;
+Reply as JSON only: {"why": "<${input.nativeLanguage} or empty>", "pieces": [{"text": "<${input.targetLanguage}>", "meaning": "<${input.nativeLanguage}>"}]}`;
 }
 
 /** The review out of the model's answer, or null when there is nothing to show. */
