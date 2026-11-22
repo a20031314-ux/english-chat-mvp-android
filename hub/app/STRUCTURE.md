@@ -51,7 +51,7 @@
        튜터는 대화만(감독 free — 요즘 배운 것 lib/roleplay/recentLearned.ts 장부 최근 7일 퀴즈 낱말·표현 → recent 화제에 녹이기만, 가끔 내 쪽 것 설명해 달라고)
        교정 = 코치 띠(CallParts CoachCardView — 카드만, 얼굴 없음·소리 없음, 뜨면 아래 반을 넓히고 내 얼굴을 줄임): 따라 말하면 앱 채점 transcriptMarks.ts gradeRedo(✓·한 번 더), 튜터에겐 redo만(맞장구)
      끝: CallSummary · 튜터 메모 · 이렇게도 말할 수 있었어요(roleplay/CallReplay — 장면 ReplayPlayer) · 대본(CallPages) · 통화 정리(roleplay/CallRecap — 줄마다 같이 배우기 studyMap/StudyChips → openLesson · 🔎 My에서 찾기)
-         · 이번 통화의 고쳐 씀(CallGrowthPairs) · 고친 게 있으면 숙제 [퀴즈 | 대화](HomeworkSheet, roleplay/homeworkQuiz.ts — 짚은 말·장면 조각) · 0단계면 📝 글자·소리 숙제(openLettersBank)
+         · 이번 통화의 고쳐 씀(CallGrowthPairs) · 고친 게 있으면 숙제 [퀴즈 | 대화](숙제 줄로 열면 HomeworkSheet — 큰 칸 둘, 안 한 쪽 바로 시작·퀴즈 뒤 대화로 이어 감, roleplay/homeworkQuiz.ts — 짚은 말·장면 조각) · 0단계면 📝 글자·소리 숙제(openLettersBank)
      통화 기록 CallList(튜터 프로필, 한 목록, lib/roleplay/callStore.ts 이 폰)
   소재 수업 studyMap/LessonHost(openLesson) → FrameLesson [설명 › 퀴즈 › 대화] · GrammarExplain(문법 한 장) · ExpressionCard(표현 카드) · FixedExplain(고정 수업)
   사전 시트 Dictionary DictionarySheet · 사전 주석 studyMap/DictNotes(대화 줄 LineTools · 영상 자막 · 퀴즈 답 뒤 · 예문 옆 📕)

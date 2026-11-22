@@ -171,9 +171,9 @@ export function CallReplay({
       {sheet && stored ? (
         <HomeworkSheet ui={ui} language={language} gender={gender} onClose={() => setSheet(false)}>
           {homework ? (
-            <HomeworkTabs ui={ui} language={language} locale={locale} stored={stored} quiz={quiz} gender={gender} isPremium={isPremium} onStored={setStored} />
+            <HomeworkTabs ui={ui} language={language} locale={locale} stored={stored} quiz={quiz} gender={gender} isPremium={isPremium} onStored={setStored} sheet />
           ) : (
-            <SceneChips ui={ui} language={language} locale={locale} stored={stored} hasQuiz={false} gender={gender} isPremium={isPremium} onStored={setStored} />
+            <SceneChips ui={ui} language={language} locale={locale} stored={stored} hasQuiz={false} gender={gender} isPremium={isPremium} onStored={setStored} big />
           )}
         </HomeworkSheet>
       ) : null}
@@ -212,14 +212,66 @@ type Shared = {
   onStored: (row: StoredReplay) => void;
 };
 
-/** 숙제 = [퀴즈 | 대화]. 퀴즈가 없으면(고친 말·조각이 없음) 대화만. 처음 탭은 아직 안 한 쪽. */
-function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestion[] }) {
+/**
+ * 숙제 = [퀴즈 | 대화]. 퀴즈가 없으면(고친 말·조각이 없음) 대화만. 처음 탭은 아직 안 한 쪽.
+ * sheet(숙제 화면, 숙제 줄에서 엶): 탭 대신 큰 칸 둘을 위아래로, 열자마자 안 한 쪽을 바로 시작하고 퀴즈를 끝내면 대화로 이어 감(사용자 2026-11-22 "화면이 비어 보임").
+ */
+function HomeworkTabs({ quiz, sheet = false, ...shared }: Shared & { quiz: readonly QuizQuestion[]; sheet?: boolean }) {
   const { ui, language, locale, stored, onStored } = shared;
   const [tab, setTab] = useState<"quiz" | "talk">(() => (quiz.length && !stored.quiz ? "quiz" : "talk"));
-  const [playing, setPlaying] = useState(false);
   const talkDone = Object.keys(stored.results).length > 0;
+  const [playing, setPlaying] = useState(() => sheet && quiz.length > 0 && !stored.quiz);
+  const [startTalk, setStartTalk] = useState(() => (sheet && !(quiz.length > 0 && !stored.quiz) && !talkDone ? 1 : 0));
+  const quizDoneNow = useRef(false);
   const tabClass = (on: boolean) =>
     `flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-meta ${on ? "border-white/60 bg-white/15 text-white" : "border-white/15 text-slate-300 hover:bg-white/10"}`;
+  const quizPlayer = playing ? (
+    <QuizPlayer
+      ui={ui}
+      locale={locale}
+      language={language}
+      quizKey={`hw|${stored.callId}`}
+      title={ui.homeworkTag}
+      seed={stored.callId}
+      unit={quiz}
+      bundleKeys={quiz.map((_, at) => `hw|${stored.callId}|${at}`)}
+      onBundle={(results) => {
+        quizDoneNow.current = true;
+        const counted = results.filter((one) => !one.skipped);
+        const next = noteHomeworkQuiz(storage(), language, stored.callId, { ok: counted.filter((one) => one.correct).length, of: results.length, at: Date.now() });
+        if (next) onStored(next);
+      }}
+      onDone={() => undefined}
+      homeworkLast={talkDone}
+      glossFirst
+      scoreEnd
+      onClose={() => {
+        setPlaying(false);
+        if (sheet && quizDoneNow.current && !talkDone) setStartTalk((n) => n + 1);
+        quizDoneNow.current = false;
+      }}
+    />
+  ) : null;
+  if (sheet) {
+    return (
+      <div className="flex flex-col gap-3" data-homework-cards>
+        {quiz.length ? (
+          <button
+            type="button"
+            data-homework-quiz
+            onClick={() => setPlaying(true)}
+            className="flex w-full items-center gap-3 rounded-2xl border border-white/20 bg-white/5 px-4 py-5 text-start text-white hover:bg-white/10"
+          >
+            <span aria-hidden className="text-title">{stored.quiz ? "↻" : "▶"}</span>
+            <span className="min-w-0 flex-1 text-body font-semibold">{ui.quizTag}</span>
+            <span className="tabular-nums text-note text-slate-300">{stored.quiz ? `✓ ${stored.quiz.ok}/${stored.quiz.of}` : quiz.length}</span>
+          </button>
+        ) : null}
+        <SceneChips {...shared} hasQuiz={quiz.length > 0} quiz={quiz} homework big startKey={startTalk} />
+        {quizPlayer}
+      </div>
+    );
+  }
   return (
     <div className="mt-2">
       {quiz.length ? (
@@ -248,35 +300,32 @@ function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestio
       ) : (
         <SceneChips {...shared} hasQuiz={quiz.length > 0} quiz={quiz} homework />
       )}
-      {playing ? (
-        <QuizPlayer
-          ui={ui}
-          locale={locale}
-          language={language}
-          quizKey={`hw|${stored.callId}`}
-          title={ui.homeworkTag}
-          seed={stored.callId}
-          unit={quiz}
-          bundleKeys={quiz.map((_, at) => `hw|${stored.callId}|${at}`)}
-          onBundle={(results) => {
-            const counted = results.filter((one) => !one.skipped);
-            const next = noteHomeworkQuiz(storage(), language, stored.callId, { ok: counted.filter((one) => one.correct).length, of: results.length, at: Date.now() });
-            if (next) onStored(next);
-          }}
-          onDone={() => undefined}
-          homeworkLast={talkDone}
-          glossFirst
-          scoreEnd
-          onClose={() => setPlaying(false)}
-        />
-      ) : null}
+      {quizPlayer}
     </div>
   );
 }
 
 /** 대화: 대화 시뮬레이션 하나(통화 흐름 그대로 → 한 걸음 더, 2026-11-19) → 장면 연습. 이 폰의 옛 기록(장면 둘)은 첫 장면만. */
-function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored, hasQuiz, quiz = [], homework = false }: Shared & { hasQuiz: boolean; quiz?: readonly QuizQuestion[]; homework?: boolean }) {
+function SceneChips({
+  ui,
+  language,
+  locale,
+  stored,
+  gender,
+  isPremium,
+  onStored,
+  hasQuiz,
+  quiz = [],
+  homework = false,
+  big = false,
+  startKey = 0,
+}: Shared & { hasQuiz: boolean; quiz?: readonly QuizQuestion[]; homework?: boolean; big?: boolean; startKey?: number }) {
   const [playing, setPlaying] = useState<ReplayScene | null>(null);
+  // 숙제 화면이 "지금 대화를 시작"하라고 하면(startKey가 바뀜) 첫 장면을 바로 연다.
+  useEffect(() => {
+    if (startKey > 0 && stored.scenes[0]) setPlaying(stored.scenes[0]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [startKey]);
   // 숙제의 마지막 반쪽(퀴즈가 없거나 이미 함)인 장면을 끝까지 하고 닫으면 숙제가 끝난 자리 — 전면 한 번(homeworkEnd). 통화 끝 화면의 장면은 통화 끝 전면과 같은 흐름이라 없음.
   const finishedScene = useRef(false);
   const closeScene = () => {
@@ -286,9 +335,24 @@ function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored,
   };
   return (
     <>
-      <div className="mt-2 flex flex-wrap gap-2">
+      <div className={big ? "flex flex-col gap-3" : "mt-2 flex flex-wrap gap-2"}>
         {stored.scenes.slice(0, 1).map((scene) => {
           const result = stored.results[scene.kind];
+          if (big) {
+            return (
+              <button
+                key={scene.kind}
+                type="button"
+                data-replay-scene={scene.kind}
+                onClick={() => setPlaying(scene)}
+                className="flex w-full items-center gap-3 rounded-2xl border border-white/20 bg-white/5 px-4 py-5 text-start text-white hover:bg-white/10"
+              >
+                <span aria-hidden className="text-title">{result ? "↻" : "▶"}</span>
+                <span className="min-w-0 flex-1 text-body font-semibold">{ui.replaySim}</span>
+                <span className="tabular-nums text-note text-slate-300">{result ? `✓ ${result.ok}/${result.of}` : scene.lines.filter((one) => one.who === "me").length}</span>
+              </button>
+            );
+          }
           return (
             <button
               key={scene.kind}
