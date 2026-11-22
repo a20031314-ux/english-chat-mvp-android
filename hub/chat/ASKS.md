@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (111)
+## 탭이 확인할 것 (112)
 
 ### 탭 1 메인
 
@@ -270,6 +270,10 @@
 - **a261123-3-1** (2026-11-23 00:44, 탭 3 · acc335d) 0단계 글자 칸 [1단계 ›] 늘 보임
   - 기능: 오늘의 학습 · 글자·소리 · 칸 설명
   - 볼 곳: `components/studyMap/ScriptPractice.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/StudyMapTab.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261123-3-2** (2026-11-23 00:51, 탭 3 · 8e69d48) 글자부터: Quizbank 늘 보임, 오늘의 학습에 글자 줄 추가
+  - 기능: 오늘의 학습 · 글자·소리 · 칸 설명
+  - 볼 곳: `components/notes/NotebookSection.tsx` · `components/studyMap/ScriptPractice.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/StudyMapTab.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI

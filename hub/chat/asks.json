@@ -7736,25 +7736,31 @@
       "base": "6375dd25991270ed2cc475aa61b1e4953aaa422e",
       "head": "acc335d",
       "status": "open"
+    },
+    {
+      "id": "a261123-3-2",
+      "at": "2026-11-23 00:51",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "글자부터: Quizbank 늘 보임, 오늘의 학습에 글자 줄 추가",
+      "files": [
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/ScriptPractice.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/components/studyMap/StudyMapTab.tsx"
+      ],
+      "features": [
+        "오늘의 학습",
+        "글자·소리",
+        "칸 설명"
+      ],
+      "base": "e3929f58997afd60aa69ff2b46e61c38d24d5a6b",
+      "head": "8e69d48",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-11 11:48",
-      "from": "2",
-      "base": "fb78f5b",
-      "head": "2766924",
-      "what": "퀴즈 4단계: 문법·표현 사다리·종류 비율, 맞나 틀리나 지움(QuizPlayer — 통화 숙제 퀴즈도 같은 화면)",
-      "tabs": [
-        "1",
-        "2",
-        "3"
-      ],
-      "asks": [
-        "a261111-2-3",
-        "a261111-2-4"
-      ]
-    },
     {
       "at": "2026-11-11 12:16",
       "from": "2",
@@ -8373,9 +8379,22 @@
       "asks": [
         "a261123-3-1"
       ]
+    },
+    {
+      "at": "2026-11-23 00:51",
+      "from": "3",
+      "base": "e3929f58997afd60aa69ff2b46e61c38d24d5a6b",
+      "head": "8e69d48",
+      "what": "글자부터: Quizbank 늘 보임, 오늘의 학습에 글자 줄 추가",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261123-3-2"
+      ]
     }
   ],
   "seq": {
-    "261123-3": 1
+    "261123-3": 2
   }
 }
