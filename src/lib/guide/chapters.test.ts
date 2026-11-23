@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { GUIDE_CHAPTERS, GUIDE_CLIPS, GUIDE_EN, GUIDE_KO, GUIDE_SECTION_IDS, guideChapters, guideSection, type Guide, type GuideTabId } from "./content.ts";
 import { RELEASE_NOTES } from "../whatsNew.ts";
+import { guideSlides } from "./slides.ts";
 
 const translations = JSON.parse(readFileSync(new URL("./translations.json", import.meta.url), "utf8")) as Record<string, Guide>;
 const ALL: Record<string, Guide> = { ko: GUIDE_KO, en: GUIDE_EN, ...translations };
@@ -58,7 +59,9 @@ test("영상 파일이 14개 언어 모두 있다(못 받으면 영어로 떨어
 test("새로워진 점이 가리키는 칸이 있다", () => {
   for (const note of RELEASE_NOTES) {
     for (const item of note.items) {
-      if (item.guide) assert.ok(guideSection(GUIDE_KO, item.guide), `${note.version} ${item.id} → ${item.guide}`);
+      // 새 앱은 넘겨 보기 칸(slides covers)으로, 옛 앱은 칸 글로 연다 — 둘 중 하나면 된다.
+      const covered = Object.values(guideSlides("ko") ?? {}).some((groups) => groups.some((group) => group.covers?.includes(item.guide!)));
+      if (item.guide) assert.ok(covered || guideSection(GUIDE_KO, item.guide), `${note.version} ${item.id} → ${item.guide}`);
     }
   }
 });
