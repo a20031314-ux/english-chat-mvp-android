@@ -41,6 +41,9 @@ export async function POST(request: NextRequest) {
   const filled = (piece: string) => (sentence.includes("___") ? sentence.replace("___", piece) : sentence.replace(/＿+/, piece));
   const expected = kind === "blank" ? filled(answer) : answer;
   const learner = kind === "blank" ? filled(typed) : typed;
+  // 문장 전체 쓰기(사다리 4칸, 빈칸이 문장 전부): 뜻을 보고 처음부터 쓴 번역이라, 앱 답과 낱말·구조가 달라도 그 뜻의 맞는 문장이면 맞음
+  // (사용자 2026-11-23 "여기 물이 있나요?" → "Do you have water here?"가 "Do you have any water?"와 달라 틀림으로 나옴).
+  const whole = Boolean(meaning) && sentence.replace(/_+|＿+/g, "").trim() === "";
   const task = meaning
     ? `Language: ${name}
 Meaning the learner was shown: ${meaning}
@@ -61,7 +64,9 @@ Learner's sentence: ${learner}`;
     messages: [
       {
         role: "system",
-        content: meaning
+        content: whole
+          ? `You grade one translation exercise. The learner was shown a sentence in their own language and wrote it from scratch in ${name}. The app's answer is one correct translation, not the only one. ok when the learner's sentence is grammatical by standard usage with no spelling mistake and a natural speaker would accept it as a translation of the shown meaning: other words, word order or structure are fine, and so are small differences the shown meaning allows (adding or leaving out "any", "here", a polite or plain form, a contraction). Not ok: any grammar or spelling error, a meaning the shown sentence does not allow, or leaving out or adding something that changes what is said. Reply with JSON only: {"ok":true} or {"ok":false}.`
+          : meaning
           ? `You grade one fill-in-the-blank answer. The learner was shown a translation of the whole sentence and had to write the missing part. The app's answer is one correct way, not the only one. The learner's sentence is ok when it is grammatical by standard usage with no spelling mistake, fits the rest of the sentence, and says what the shown translation says. A different word or a more or less specific phrasing is fine as long as the shown translation could describe it — the learner cannot know a nuance the translation does not show: a plainer or more polite form, a form without an explanatory or emphatic ending, or the same word in another accepted script (kana instead of kanji, or the reverse) is fine. Not ok: any grammar or spelling error (wrong verb form, agreement, missing article or particle), a tense or mood that the rest of the sentence or the translation rules out (a past event put in the present, for instance), a meaning the translation does not allow, or a missing part that the translation clearly includes. Reply with JSON only: {"ok":true} or {"ok":false}.`
           : open
           ? `You grade one fill-in-the-blank answer. The learner saw only the sentence with a blank, no translation, so any word that fits is fine — the sentence does not need to mean the same as the app's answer. Check the sentence to judge on its own, as a careful teacher of the language: ok when it is fully grammatical by standard usage (agreement of gender, number, person and case; articles, particles and prepositions; word forms) with no spelling mistake, and it makes sense as an everyday sentence. Not ok: any grammar or spelling error, a form a teacher would correct, or a sentence that does not make sense. Reply with JSON only: {"ok":true} or {"ok":false}.`
