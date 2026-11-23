@@ -185,8 +185,9 @@ test("연습(patient): 멈칫(0.9초)은 알리기만 하고 끝내지 않는다
   assert.ok(finishedAt !== null && finishedAt - 3200 >= PATIENT_SILENCE_MS - 120, "말을 마치고 5초 뒤 끝");
 });
 
-test("통화 차례 끝: 1.2초 멈칫은 끝이 아니고, 1.8초 조용하면 끝 (CALL_SILENCE_MS)", async () => {
-  const { CALL_SILENCE_MS } = await import("./hearFrame.ts");
+test("통화 차례 끝(기본 내 말 기다리기 1.8초): 1.2초 멈칫은 끝이 아니고, 2초 조용하면 끝", async () => {
+  const { DEFAULT_TURN_WAIT } = await import("../turnWait.ts");
+  const CALL_SILENCE_MS = DEFAULT_TURN_WAIT * 1000;
   const run = (quietMs: number) => {
     let turn = TURN_NOT_STARTED;
     let now = 0;

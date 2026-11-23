@@ -7789,27 +7789,96 @@
       "base": "2d8bd81cc97e0c2b3eb071fb7d3710a0bf557e19",
       "head": "7056644",
       "status": "open"
+    },
+    {
+      "id": "a261123-2-2",
+      "at": "2026-11-23 21:00",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "통화 내 말 기다리기(0.9~2초) — 채팅 ⋮ 말 빠르기 아래·통화 ⓘ 창에 같은 칸(TurnWaitPicker), 새 문구 turnWait",
+      "files": [
+        "src/app/dev/call-preview/page.tsx"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화 설명",
+        "통화",
+        "통화 끝 화면",
+        "1:1 메시지",
+        "단체방",
+        "Room",
+        "Logbank",
+        "오늘의 학습"
+      ],
+      "base": "16b5da0cf417c762a583df784948a38a3e8251bc",
+      "head": "16b5da0",
+      "status": "open"
+    },
+    {
+      "id": "a261123-2-3",
+      "at": "2026-11-23 21:00",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "통화 내 말 기다리기(0.9~2초) — 채팅 ⋮ 말 빠르기 아래·통화 ⓘ 창에 같은 칸(TurnWaitPicker), 새 문구 turnWait",
+      "files": [
+        "src/components/ChatWindow.tsx",
+        "src/components/RoleplayScreen.tsx",
+        "src/components/roleplay/CallParts.tsx",
+        "src/components/speech/CallKit.tsx",
+        "src/components/CallHost.tsx",
+        "src/components/RoleplayPast.tsx",
+        "src/components/MessageBubble.tsx",
+        "src/components/RoleplayReview.tsx",
+        "src/components/roleplay/callHooks.ts",
+        "src/components/roleplay/TurnDiagBox.tsx"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화 설명",
+        "통화",
+        "통화 끝 화면",
+        "1:1 메시지",
+        "단체방",
+        "Room",
+        "Logbank",
+        "오늘의 학습"
+      ],
+      "base": "16b5da0cf417c762a583df784948a38a3e8251bc",
+      "head": "16b5da0",
+      "status": "open"
+    },
+    {
+      "id": "a261123-2-4",
+      "at": "2026-11-23 21:00",
+      "kind": "apply",
+      "from": "2",
+      "to": "4",
+      "what": "통화 내 말 기다리기(0.9~2초) — 채팅 ⋮ 말 빠르기 아래·통화 ⓘ 창에 같은 칸(TurnWaitPicker), 새 문구 turnWait",
+      "files": [
+        "src/components/rooms/RoomCall.tsx",
+        "src/components/rooms/RoomDm.tsx",
+        "src/components/rooms/RoomGroups.tsx",
+        "src/components/rooms/RoomView.tsx"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화 설명",
+        "통화",
+        "통화 끝 화면",
+        "1:1 메시지",
+        "단체방",
+        "Room",
+        "Logbank",
+        "오늘의 학습"
+      ],
+      "base": "16b5da0cf417c762a583df784948a38a3e8251bc",
+      "head": "16b5da0",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-13 14:04",
-      "from": "3",
-      "base": "9755d90",
-      "head": "9755d90",
-      "what": "수업 통화 칠판 카드(CallStage board)·⏭(CallControls onSkip, 문구 lessonSkip 14개 언어)·session.skippedLine 더함, director openingTurn 좁힘(첫 질문 뒤 침묵 = 침묵 차례) — CallParts를 쓰는 화면(My 탭 등)이 그대로인지",
-      "tabs": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "asks": [
-        "a261113-3-1",
-        "a261113-3-2",
-        "a261113-3-3"
-      ]
-    },
     {
       "at": "2026-11-13 14:33",
       "from": "3",
@@ -8407,10 +8476,28 @@
       "asks": [
         "a261123-3-9"
       ]
+    },
+    {
+      "at": "2026-11-23 21:00",
+      "from": "2",
+      "base": "16b5da0cf417c762a583df784948a38a3e8251bc",
+      "head": "16b5da0",
+      "what": "통화 내 말 기다리기(0.9~2초) — 채팅 ⋮ 말 빠르기 아래·통화 ⓘ 창에 같은 칸(TurnWaitPicker), 새 문구 turnWait",
+      "tabs": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "asks": [
+        "a261123-2-2",
+        "a261123-2-3",
+        "a261123-2-4"
+      ]
     }
   ],
   "seq": {
     "261123-3": 9,
-    "261123-2": 1
+    "261123-2": 4
   }
 }

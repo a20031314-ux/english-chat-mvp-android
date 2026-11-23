@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (120)
+## 탭이 확인할 것 (123)
 
 ### 탭 1 메인
 
@@ -151,6 +151,10 @@
 - **a261123-3-6** (2026-11-23 18:35, 탭 3 · 7950b2c) 기능어 뜻 고르기 같은 품사만
   - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/FindInMy.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/EnglishAnalysisProvider.tsx` · `app/learning/LearningClient.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261123-2-2** (2026-11-23 21:00, 탭 2 · 16b5da0) 통화 내 말 기다리기(0.9~2초) — 채팅 ⋮ 말 빠르기 아래·통화 ⓘ 창에 같은 칸(TurnWaitPicker), 새 문구 turnWait
+  - 기능: AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 1:1 메시지 · 단체방 · Room · Logbank · 오늘의 학습
+  - 볼 곳: `app/dev/call-preview/page.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -402,6 +406,10 @@
   - 기능: 통화 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · 소재 수업 · 칸 설명
   - 볼 곳: `components/RoleplayScreen.tsx` · `components/CallHost.tsx` · `components/roleplay/TurnDiagBox.tsx` · `components/RoleplayOwnLine.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/CallReplay.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261123-2-3** (2026-11-23 21:00, 탭 2 · 16b5da0) 통화 내 말 기다리기(0.9~2초) — 채팅 ⋮ 말 빠르기 아래·통화 ⓘ 창에 같은 칸(TurnWaitPicker), 새 문구 turnWait
+  - 기능: AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 1:1 메시지 · 단체방 · Room · Logbank · 오늘의 학습
+  - 볼 곳: `components/ChatWindow.tsx` · `components/RoleplayScreen.tsx` · `components/roleplay/CallParts.tsx` · `components/speech/CallKit.tsx` · `components/CallHost.tsx` · `components/RoleplayPast.tsx` · `components/MessageBubble.tsx` · `components/RoleplayReview.tsx` · `components/roleplay/callHooks.ts` · `components/roleplay/TurnDiagBox.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
 
@@ -500,6 +508,10 @@
 - **a261123-3-5** (2026-11-23 14:56, 탭 3 · 9664a94) 옛 앱 서버 지움(최소 지원 2.76)
   - 기능: 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 1:1 메시지 · 단체방 · 사람 · 게시판 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면
   - 볼 곳: `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomParts.tsx` · `components/rooms/RoomPeople.tsx` · `components/rooms/RoomView.tsx` · `components/rooms/RoomsScreen.tsx` · `components/rooms/TeamSpace.tsx` … 22개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261123-2-4** (2026-11-23 21:00, 탭 2 · 16b5da0) 통화 내 말 기다리기(0.9~2초) — 채팅 ⋮ 말 빠르기 아래·통화 ⓘ 창에 같은 칸(TurnWaitPicker), 새 문구 turnWait
+  - 기능: AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 1:1 메시지 · 단체방 · Room · Logbank · 오늘의 학습
+  - 볼 곳: `components/rooms/RoomCall.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomView.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (1, 14일 뒤 저절로 빠짐 — 경위는 git 기록)

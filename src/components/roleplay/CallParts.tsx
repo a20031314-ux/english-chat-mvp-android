@@ -11,7 +11,7 @@ import { AiAvatar } from "@/components/AiTutorProfile";
 import { MyAvatarFace } from "@/components/account/AccountCard";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { BodyLayer } from "@/components/FullScreenLayer";
-import { CallButton, CallButtonRow, CallCaption, CHAT_FACE_SIZE, formatCallTime, SpeakingRing, TalkingBars, useCallClock } from "@/components/speech/CallKit";
+import { CallButton, CallButtonRow, CallCaption, CHAT_FACE_SIZE, formatCallTime, SpeakingRing, TalkingBars, TurnWaitPicker, useCallClock } from "@/components/speech/CallKit";
 import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
 import { useTutorGender } from "@/lib/tutorGender";
 import type { UICopy } from "@/lib/copy";
@@ -570,6 +570,7 @@ export function CallModeInfo({ ui, name, locale, language, onClose }: { ui: UICo
               </li>
             ))}
           </ol>
+          <TurnWaitPicker ui={ui} className="mt-4 border-t border-line pt-3" />
           <button type="button" onClick={close} className="mt-4 w-full rounded-xl bg-white/15 px-4 py-2.5 text-note text-ink hover:bg-white/20">
             {ui.whatsNewDone}
           </button>

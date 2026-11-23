@@ -459,7 +459,7 @@ export async function listenForTurn(input: {
   noSpeechMs?: number;
   /** 연습: 멈칫해도 끊지 않고(PATIENT_SILENCE_MS) onPaused로 알린다. */
   patient?: boolean;
-  /** 이만큼 조용하면 차례 끝(기본 900ms — 통화는 CALL_SILENCE_MS). patient가 앞선다. */
+  /** 이만큼 조용하면 차례 끝(기본 900ms — 통화는 내 말 기다리기 lib/turnWait.ts). patient가 앞선다. */
   trailingMs?: number;
   onPaused?: (paused: boolean) => void;
 }): Promise<Recorder> {

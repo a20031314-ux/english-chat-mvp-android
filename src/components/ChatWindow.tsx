@@ -3,7 +3,7 @@
 import { noteChatLine } from "@/lib/roleplay/chatGrowth";
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { MyAvatarFace } from "@/components/account/AccountCard";
-import { CHAT_FACE_SIZE } from "@/components/speech/CallKit";
+import { CHAT_FACE_SIZE, TurnWaitPicker } from "@/components/speech/CallKit";
 import { setTalkShare, talkShareOn } from "@/lib/curriculum/talkQuiz";
 import { enterScene } from "@/lib/notes/sceneShots";
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -1961,6 +1961,8 @@ export function ChatWindow({
                     ))}
                   </div>
                 </div>
+                {/* 내 말 기다리기: 통화에서 멈춘 뒤 차례를 넘기기까지(lib/turnWait.ts, 2026-11-23 사용자). */}
+                <TurnWaitPicker ui={ui} className="border-t border-line px-3 py-2" />
                 {/* 대화의 튜터 문장을 모두의 퀴즈 예문으로(걸러서, lib/curriculum/talkQuiz.ts — 기본 켬, 처리방침 2026-11-01). */}
                 <button
                   type="button"

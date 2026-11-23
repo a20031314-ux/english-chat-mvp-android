@@ -595,7 +595,8 @@
     "whatsNewLangbankTitle": "学ぶ言葉がぜんぶある辞書、Languagebank",
     "whatsNewLangbankBody": "単語・表現・文法を調べて、まとめてめくったりクイズで解いたり。",
     "whatsNewLogTitle": "学んだことはLogbankに毎日たまります",
-    "whatsNewLogBody": "週・月ごとに学んだことと会話で使ったことを見て、日をタップするとその日の学習が出ます。"
+    "whatsNewLogBody": "週・月ごとに学んだことと会話で使ったことを見て、日をタップするとその日の学習が出ます。",
+    "turnWait": "待ってもらう時間（秒）"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1193,7 +1194,8 @@
     "whatsNewLangbankTitle": "Languagebank：要学的词都在这本词典里",
     "whatsNewLangbankBody": "查单词、表达和语法，按组翻卡片或做测验。",
     "whatsNewLogTitle": "学过的东西每天积累在 Logbank",
-    "whatsNewLogBody": "按周、按月查看学过的和在对话中用过的，点一天就能看到那天的学习。"
+    "whatsNewLogBody": "按周、按月查看学过的和在对话中用过的，点一天就能看到那天的学习。",
+    "turnWait": "等我说完（秒）"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1794,7 +1796,8 @@
     "whatsNewLangbankTitle": "Languagebank: mọi thứ bạn sẽ học, trong một cuốn từ điển",
     "whatsNewLangbankBody": "Tra từ, cách diễn đạt và ngữ pháp; lật thẻ theo nhóm hoặc làm quiz.",
     "whatsNewLogTitle": "Những gì bạn học tích lại mỗi ngày ở Logbank",
-    "whatsNewLogBody": "Xem những gì đã học và đã dùng theo tuần hoặc tháng; chạm vào một ngày để xem buổi học hôm đó."
+    "whatsNewLogBody": "Xem những gì đã học và đã dùng theo tuần hoặc tháng; chạm vào một ngày để xem buổi học hôm đó.",
+    "turnWait": "Chờ tôi nói (giây)"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2398,7 +2401,8 @@
     "whatsNewLangbankTitle": "Languagebank : tout ce que tu vas apprendre, dans un dictionnaire",
     "whatsNewLangbankBody": "Cherche mots, expressions et grammaire ; parcours un groupe en cartes ou en quiz.",
     "whatsNewLogTitle": "Ce que tu apprends s’accumule dans Logbank",
-    "whatsNewLogBody": "Vois ce que tu as appris et utilisé par semaine ou par mois ; touche un jour pour voir ce que tu as étudié."
+    "whatsNewLogBody": "Vois ce que tu as appris et utilisé par semaine ou par mois ; touche un jour pour voir ce que tu as étudié.",
+    "turnWait": "M’attendre (s)"
   },
   "it": {
     "archive": "Report",
@@ -3196,7 +3200,8 @@
     "whatsNewLangbankBody": "Cerca parole, espressioni e grammatica; sfoglia un gruppo a schede o con un quiz.",
     "whatsNewLogTitle": "Ciò che impari si accumula in Logbank",
     "whatsNewLogBody": "Guarda cosa hai imparato e usato per settimana o mese; tocca un giorno per vedere lo studio di quel giorno.",
-    "reviewMySentence": "Quello che hai scritto"
+    "reviewMySentence": "Quello che hai scritto",
+    "turnWait": "Aspettami (s)"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3803,7 +3808,8 @@
     "whatsNewLangbankTitle": "Languagebank: tudo o que você vai aprender, num dicionário",
     "whatsNewLangbankBody": "Procure palavras, expressões e gramática; passe um grupo em cartões ou faça um quiz.",
     "whatsNewLogTitle": "O que você aprende se acumula no Logbank",
-    "whatsNewLogBody": "Veja o que aprendeu e usou por semana ou mês; toque num dia para ver o estudo daquele dia."
+    "whatsNewLogBody": "Veja o que aprendeu e usou por semana ou mês; toque num dia para ver o estudo daquele dia.",
+    "turnWait": "Esperar por mim (s)"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4599,7 +4605,8 @@
     "whatsNewLangbankBody": "Ищите слова, выражения и грамматику; листайте набор карточек или проходите квиз.",
     "whatsNewLogTitle": "Выученное копится в Logbank каждый день",
     "whatsNewLogBody": "Смотрите выученное и использованное по неделям или месяцам; нажмите на день, чтобы увидеть занятия за него.",
-    "reviewMySentence": "Что вы написали"
+    "reviewMySentence": "Что вы написали",
+    "turnWait": "Ждать меня (с)"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5204,7 +5211,8 @@
     "whatsNewLangbankTitle": "Languagebank: semua yang akan kamu pelajari, dalam satu kamus",
     "whatsNewLangbankBody": "Cari kata, ungkapan, dan tata bahasa; balik kartu per kelompok atau kerjakan kuisnya.",
     "whatsNewLogTitle": "Yang kamu pelajari terkumpul di Logbank tiap hari",
-    "whatsNewLogBody": "Lihat yang dipelajari dan dipakai per minggu atau bulan; ketuk satu hari untuk melihat belajarmu hari itu."
+    "whatsNewLogBody": "Lihat yang dipelajari dan dipakai per minggu atau bulan; ketuk satu hari untuk melihat belajarmu hari itu.",
+    "turnWait": "Tunggu saya (dtk)"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5802,7 +5810,8 @@
     "whatsNewLangbankTitle": "Languagebank: كل ما ستتعلّمه في قاموس واحد",
     "whatsNewLangbankBody": "ابحث عن الكلمات والتعابير والقواعد، وقلّب مجموعة كبطاقات أو حلّها كاختبار.",
     "whatsNewLogTitle": "ما تتعلّمه يتجمّع في Logbank كل يوم",
-    "whatsNewLogBody": "شاهد ما تعلّمته وما استخدمته حسب الأسبوع أو الشهر، واضغط على يوم لترى دراسة ذلك اليوم."
+    "whatsNewLogBody": "شاهد ما تعلّمته وما استخدمته حسب الأسبوع أو الشهر، واضغط على يوم لترى دراسة ذلك اليوم.",
+    "turnWait": "انتظرني (ث)"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6400,7 +6409,8 @@
     "whatsNewLangbankTitle": "Languagebank: ทุกคำที่จะได้เรียนอยู่ในพจนานุกรมเดียว",
     "whatsNewLangbankBody": "ค้นคำ สำนวน และไวยากรณ์ เปิดดูทีละชุดหรือทำควิซ",
     "whatsNewLogTitle": "สิ่งที่เรียนสะสมใน Logbank ทุกวัน",
-    "whatsNewLogBody": "ดูสิ่งที่เรียนและได้ใช้รายสัปดาห์หรือรายเดือน แตะวันใดก็ได้เพื่อดูการเรียนของวันนั้น"
+    "whatsNewLogBody": "ดูสิ่งที่เรียนและได้ใช้รายสัปดาห์หรือรายเดือน แตะวันใดก็ได้เพื่อดูการเรียนของวันนั้น",
+    "turnWait": "รอฉันพูด (วินาที)"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6998,6 +7008,7 @@
     "whatsNewLangbankTitle": "Languagebank: जो कुछ आप सीखेंगे, एक ही शब्दकोश में",
     "whatsNewLangbankBody": "शब्द, अभिव्यक्ति और व्याकरण खोजें; किसी समूह को कार्ड की तरह पलटें या क्विज़ करें।",
     "whatsNewLogTitle": "जो सीखते हैं, वह रोज़ Logbank में जमा होता है",
-    "whatsNewLogBody": "हफ़्ते या महीने के हिसाब से सीखा और इस्तेमाल किया हुआ देखें; किसी दिन पर टैप करें तो उस दिन की पढ़ाई दिखेगी।"
+    "whatsNewLogBody": "हफ़्ते या महीने के हिसाब से सीखा और इस्तेमाल किया हुआ देखें; किसी दिन पर टैप करें तो उस दिन की पढ़ाई दिखेगी।",
+    "turnWait": "मेरा इंतज़ार (सेकंड)"
   }
 }

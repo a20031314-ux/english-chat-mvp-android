@@ -49,7 +49,7 @@
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
 | 통화 설명 | 통화 중 맨 위 📞 통화 ⓘ → 설명창(튜터 · 코치 · 끝나면, 세 줄) — 처음 한 번 저절로(callInfoSeen.v1 이 폰) | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` |  |
-| 통화 `homeTabCall` | 📞 하나 — 고르기 없이 인사, 튜터는 대화만(요즘 퀴즈로 배운 말이 나오는 화제·가끔 내 쪽 것을 설명해 달라고), 고친 말은 코치(같은 언어 짝 튜터) 띠가 내 얼굴 아래 소리 없이 — 따라 말하면 앱이 낱말 대조로 ✓ | 1 메인 · 2 My · 3 AI · 4 사람 | `components/CallHost.tsx` · `components/RoleplayScreen.tsx` · `lib/roleplay/transcriptMarks.ts` · `lib/roleplay/recentLearned.ts` | 통화 문 넷(자유대화·🎓 수업·🎲 게임 스무고개·🧑‍🏫 가르치기) · 수업 튜터가 말로 짚고 다시 말해 보기 · 수업 계획(틀 셋·칠판 카드·⏭ 다음 문장·숙제 리뷰) |
+| 통화 `homeTabCall` | 📞 하나 — 고르기 없이 인사, 튜터는 대화만(요즘 퀴즈로 배운 말이 나오는 화제·가끔 내 쪽 것을 설명해 달라고), 고친 말은 코치(같은 언어 짝 튜터) 띠가 내 얼굴 아래 소리 없이 — 따라 말하면 앱이 낱말 대조로 ✓, 내 말 기다리기(멈춘 뒤 0.9~2초, 채팅 ⋮·통화 ⓘ에서 고름, 기본 1.8초) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/CallHost.tsx` · `components/RoleplayScreen.tsx` · `lib/roleplay/transcriptMarks.ts` · `lib/roleplay/recentLearned.ts` | 통화 문 넷(자유대화·🎓 수업·🎲 게임 스무고개·🧑‍🏫 가르치기) · 수업 튜터가 말로 짚고 다시 말해 보기 · 수업 계획(틀 셋·칠판 카드·⏭ 다음 문장·숙제 리뷰) |
 | 통화 끝 화면 | 요약 한 줄 · 튜터 메모 · 이렇게도 말할 수 있었어요 · 전체 대본 · 통화 정리 · 이번 통화의 고쳐 씀 | 1 메인 · 2 My · 3 AI | `components/roleplay/CallParts.tsx` · `components/roleplay/CallRecap.tsx` |  |
 | 이렇게도 말할 수 있었어요 `replayTitle` | 끝난 대본으로 대화 시뮬레이션 하나(통화 흐름 그대로 → 짧게 끝낸 곳에서 한 걸음 더) — 바뀐 조각만 빈칸 → 말하기 → 한 줄 전체 | 3 AI | `components/roleplay/CallReplay.tsx` | 장면 둘(같은 흐름 · 한 걸음 더/다른 갈래) |
 | 숙제 `homeworkTag` | 코치가 하나라도 고친 통화 끝 — [퀴즈 \| 대화](퀴즈는 고친 말·장면 조각), 숙제 줄은 튜터 줄·Logbank 오늘 카드 | 2 My · 3 AI · 4 사람 | `lib/roleplay/homeworkQuiz.ts` |  |

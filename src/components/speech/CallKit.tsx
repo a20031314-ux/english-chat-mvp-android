@@ -6,6 +6,8 @@
  * 위 칸 = 상대(들), 가는 선, 아래 칸 = 나, 맨 아래 둥근 버튼 줄, 자막은 켰을 때만 한 줄.
  */
 import { useEffect, useState, type ReactNode } from "react";
+import type { UICopy } from "@/lib/copy";
+import { TURN_WAITS, useTurnWait, writeTurnWait } from "@/lib/turnWait";
 
 /** 통화를 연 뒤로 흐른 시간 m:ss — 1초마다. */
 export function useCallClock(): string {
@@ -182,3 +184,29 @@ export const CALL_CAPTIONS_KEY = "roleplayCaptions";
 
 /** AI 통화 자막의 해석 켬/끔 — 자막 줄을 누르면 바뀌고 다음 통화도 그대로(2026-11-06 사용자 "자막 해석도 켜고 끌 수 있게", 예전엔 누른 그 줄만). */
 export const CALL_MEANING_KEY = "callMeaning.v1";
+
+/**
+ * 내 말 기다리기(lib/turnWait.ts, 사용자 2026-11-23): 0.9~2초 다섯 칸 — 채팅 ⋮(말 빠르기 아래)와 통화 ⓘ 창이 같이 씀.
+ * 말 빠르기 줄과 같은 모양.
+ */
+export function TurnWaitPicker({ ui, className = "" }: { ui: UICopy; className?: string }) {
+  const wait = useTurnWait();
+  return (
+    <div data-turn-wait={wait} className={className}>
+      <p className="text-meta text-slate-400">{ui.turnWait}</p>
+      <div className="mt-1 flex gap-0.5" role="group" aria-label={ui.turnWait}>
+        {TURN_WAITS.map((one) => (
+          <button
+            key={one}
+            type="button"
+            aria-pressed={wait === one}
+            onClick={() => writeTurnWait(one)}
+            className={`min-w-0 flex-1 rounded-lg py-1 text-xs tabular-nums ${wait === one ? "bg-platinum text-slate-900" : "text-slate-200 hover:bg-white/10"}`}
+          >
+            {one}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
