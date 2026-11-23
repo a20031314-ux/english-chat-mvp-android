@@ -3210,7 +3210,8 @@
     "whatsNewLangbankTitle": "Languagebank: tutto ciò che imparerai, in un dizionario",
     "whatsNewLangbankBody": "Cerca parole, espressioni e grammatica; sfoglia un gruppo a schede o con un quiz.",
     "whatsNewLogTitle": "Ciò che impari si accumula in Logbank",
-    "whatsNewLogBody": "Guarda cosa hai imparato e usato per settimana o mese; tocca un giorno per vedere lo studio di quel giorno."
+    "whatsNewLogBody": "Guarda cosa hai imparato e usato per settimana o mese; tocca un giorno per vedere lo studio di quel giorno.",
+    "reviewMySentence": "Quello che hai scritto"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4618,7 +4619,8 @@
     "whatsNewLangbankTitle": "Languagebank: всё, что вы выучите, в одном словаре",
     "whatsNewLangbankBody": "Ищите слова, выражения и грамматику; листайте набор карточек или проходите квиз.",
     "whatsNewLogTitle": "Выученное копится в Logbank каждый день",
-    "whatsNewLogBody": "Смотрите выученное и использованное по неделям или месяцам; нажмите на день, чтобы увидеть занятия за него."
+    "whatsNewLogBody": "Смотрите выученное и использованное по неделям или месяцам; нажмите на день, чтобы увидеть занятия за него.",
+    "reviewMySentence": "Что вы написали"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
