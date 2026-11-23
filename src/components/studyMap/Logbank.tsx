@@ -342,7 +342,17 @@ export function Logbank({
   const keyLabel = (key: string) => reviewLabel(language, key) || key.slice(2);
   return (
     <div data-logbank className="flex flex-col gap-3">
-      <WeakChips ui={ui} language={language} ledger={ledger} label={keyLabel} />
+      <WeakChips
+        ui={ui}
+        language={language}
+        ledger={ledger}
+        label={(key) => {
+          // 문법은 이름(g|단계:번호 → 문법 표), 이름을 못 찾으면 칩을 안 낸다 — "3:3" 같은 번호가 그대로 보였음(사용자 2026-11-23).
+          if (!key.startsWith("g|")) return reviewLabel(language, key);
+          const [stage, index] = key.slice(2).split(":").map(Number);
+          return grammarName(stage ?? 0, index ?? 0);
+        }}
+      />
       {head}
       <section data-log-period={kind} className="flex flex-col gap-3 rounded-xl border border-line p-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1833,7 +1843,7 @@ function UsedCards({
  */
 function WeakChips({ ui, language, ledger, label }: { ui: UICopy; language: string; ledger: readonly LogEvent[]; label: (key: string) => string }) {
   const [now] = useState(() => Math.floor(Date.now() / 1000));
-  const keys = useMemo(() => weakKeys(ledger, now), [ledger, now]);
+  const keys = useMemo(() => weakKeys(ledger, now).filter((key) => label(key).trim()), [ledger, now, label]);
   if (!keys.length) return null;
   return (
     <div data-weak-chips className="flex flex-wrap items-center gap-1.5">
