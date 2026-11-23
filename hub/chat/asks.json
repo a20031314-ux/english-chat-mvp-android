@@ -7848,27 +7848,38 @@
       "base": "945bf496854f942b7a498f60db997a2f6f0d3e41",
       "head": "7950b2c",
       "status": "open"
+    },
+    {
+      "id": "a261123-2-1",
+      "at": "2026-11-23 19:06",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "통화 차례 끝 쉼 900ms → 1.8초(CALL_SILENCE_MS, 머뭇거림에 튜터가 끼어들지 않게) — 튜터 답이 그만큼 늦게 시작",
+      "files": [
+        "src/components/RoleplayScreen.tsx",
+        "src/components/CallHost.tsx",
+        "src/components/roleplay/TurnDiagBox.tsx",
+        "src/components/RoleplayOwnLine.tsx",
+        "src/components/RoleplayPast.tsx",
+        "src/components/roleplay/CallReplay.tsx"
+      ],
+      "features": [
+        "통화",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "소재 수업",
+        "칸 설명"
+      ],
+      "base": "b56f8ed5655c7ae27b351f996963269830268c25",
+      "head": "b56f8ed",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-12 09:07",
-      "from": "2",
-      "base": "97a9dbca06f29c4fd58ee898da7aa0a6ad6c0a63",
-      "head": "b9284a4",
-      "what": "실력 확인 지움·숙제 채점(typed-check 뜻 줄·shadowPasses 꼴 실수)·퀴즈 보기/뜻 줄 — 통화 숙제·따라 말하기 화면 확인",
-      "tabs": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "asks": [
-        "a261112-2-1",
-        "a261112-2-2",
-        "a261112-2-3"
-      ]
-    },
     {
       "at": "2026-11-12 13:48",
       "from": "2",
@@ -8486,9 +8497,24 @@
         "a261123-3-6",
         "a261123-3-7"
       ]
+    },
+    {
+      "at": "2026-11-23 19:06",
+      "from": "2",
+      "base": "b56f8ed5655c7ae27b351f996963269830268c25",
+      "head": "b56f8ed",
+      "what": "통화 차례 끝 쉼 900ms → 1.8초(CALL_SILENCE_MS, 머뭇거림에 튜터가 끼어들지 않게) — 튜터 답이 그만큼 늦게 시작",
+      "tabs": [
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261123-2-1"
+      ]
     }
   ],
   "seq": {
-    "261123-3": 7
+    "261123-3": 7,
+    "261123-2": 1
   }
 }

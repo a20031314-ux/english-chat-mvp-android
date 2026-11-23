@@ -184,3 +184,23 @@ test("연습(patient): 멈칫(0.9초)은 알리기만 하고 끝내지 않는다
   run(QUIET, 6000);
   assert.ok(finishedAt !== null && finishedAt - 3200 >= PATIENT_SILENCE_MS - 120, "말을 마치고 5초 뒤 끝");
 });
+
+test("통화 차례 끝: 1.2초 멈칫은 끝이 아니고, 1.8초 조용하면 끝 (CALL_SILENCE_MS)", async () => {
+  const { CALL_SILENCE_MS } = await import("./hearFrame.ts");
+  const run = (quietMs: number) => {
+    let turn = TURN_NOT_STARTED;
+    let now = 0;
+    let finished = false;
+    for (const [level, ms] of [[0.2, 1000], [0, quietMs]] as [number, number][]) {
+      for (let elapsed = 0; elapsed < ms; elapsed += 60) {
+        now += 60;
+        const heard = hearFrame(turn, level, now, CALL_SILENCE_MS);
+        turn = heard.turn;
+        finished = finished || heard.finished;
+      }
+    }
+    return finished;
+  };
+  assert.equal(run(1200), false);
+  assert.equal(run(2000), true);
+});

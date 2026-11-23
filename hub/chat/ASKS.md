@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (117)
+## 탭이 확인할 것 (118)
 
 ### 탭 1 메인
 
@@ -389,6 +389,10 @@
 - **a261122-2-2** (2026-11-22 23:56, 탭 2 · 9af7d0c) Logbank 표 아래 칩 줄(↺ 다시 맞힘·✎✓ 고쳐 씀·📞 통화) 지움 → 쌓기 안(블록 흰 점·누른 날 칩), 통화 모아 보기는 튜터 프로필 통화 기록
   - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · My에서 찾기
   - 볼 곳: `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx` · `components/ExpressionPeek.tsx` · `components/roleplay/CallRecap.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261123-2-1** (2026-11-23 19:06, 탭 2 · b56f8ed) 통화 차례 끝 쉼 900ms → 1.8초(CALL_SILENCE_MS, 머뭇거림에 튜터가 끼어들지 않게) — 튜터 답이 그만큼 늦게 시작
+  - 기능: 통화 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · 소재 수업 · 칸 설명
+  - 볼 곳: `components/RoleplayScreen.tsx` · `components/CallHost.tsx` · `components/roleplay/TurnDiagBox.tsx` · `components/RoleplayOwnLine.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/CallReplay.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람

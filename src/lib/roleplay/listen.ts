@@ -459,6 +459,8 @@ export async function listenForTurn(input: {
   noSpeechMs?: number;
   /** 연습: 멈칫해도 끊지 않고(PATIENT_SILENCE_MS) onPaused로 알린다. */
   patient?: boolean;
+  /** 이만큼 조용하면 차례 끝(기본 900ms — 통화는 CALL_SILENCE_MS). patient가 앞선다. */
+  trailingMs?: number;
   onPaused?: (paused: boolean) => void;
 }): Promise<Recorder> {
   // iOS: 에코 제거를 켜면 애플 음성 처리(VoiceProcessingIO)를 거쳐 녹음이 기계음처럼 지직거렸다
@@ -485,7 +487,7 @@ export async function listenForTurn(input: {
     speaking: (yes) => input.onSpeaking?.(yes),
     settled: () => input.onSettled?.(),
     paused: (yes) => input.onPaused?.(yes),
-  }, input.noSpeechMs, input.patient ? PATIENT_SILENCE_MS : undefined);
+  }, input.noSpeechMs, input.patient ? PATIENT_SILENCE_MS : input.trailingMs);
 
   const release = () => {
     watch.stop();

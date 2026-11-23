@@ -39,6 +39,7 @@ import {
   primeMicrophone,
   type Recorder,
 } from "@/lib/roleplay/listen";
+import { CALL_SILENCE_MS } from "@/lib/roleplay/hearFrame";
 import { correctionOf, offeredOf, triedRedo } from "@/lib/roleplay/director";
 import { fixesFromLines, fixesPrompt, mergeFixes, readFixes, settleFixes } from "@/lib/roleplay/fixMemory";
 import { lifeDay, lifeFactsPrompt, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
@@ -826,6 +827,7 @@ export function RoleplayScreen({
       recorderRef.current = await listenForTurn({
         language: scenario.language,
         isPremium,
+        trailingMs: CALL_SILENCE_MS,
         onSpeaking: (yes) => {
           if (yes) setLearnerTalking(true);
           setVoiceOn(yes);
@@ -898,6 +900,7 @@ export function RoleplayScreen({
       more = await listenForTurn({
         language: scenario.language,
         isPremium,
+        trailingMs: CALL_SILENCE_MS,
         noSpeechMs: REST_OF_SENTENCE_MS,
         onSpeaking: (yes) => {
           if (yes) setLearnerTalking(true);

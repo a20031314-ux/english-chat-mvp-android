@@ -53,6 +53,12 @@ const TRAILING_SILENCE_MS = 900;
  * 위 900ms 쉼은 "멈칫"으로만 알리고(화면이 잘 모르겠어요·다 말했어요를 띄움), 이만큼 조용해야 끝난다.
  */
 export const PATIENT_SILENCE_MS = 5000;
+/**
+ * 통화(튜터와 말하기)의 차례 끝 쉼(2026-11-23 사용자 "조금만 망설이거나 머뭇거리면 튜터가 말을 시작해"):
+ * 배우는 사람은 문장 가운데서 낱말을 찾느라 1초 넘게 멈춘다 — 900ms면 그 틈에 차례가 넘어간다.
+ * 1.8초: 답이 그만큼 늦게 시작하지만 끊기는 쪽이 더 나쁘다(위 설명). 900ms 쉼은 화면의 "멈칫" 표시로만 남는다.
+ */
+export const CALL_SILENCE_MS = 1800;
 export const PAUSE_NOTICE_MS = TRAILING_SILENCE_MS;
 
 /**
