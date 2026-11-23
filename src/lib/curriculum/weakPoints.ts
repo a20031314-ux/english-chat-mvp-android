@@ -277,36 +277,3 @@ export function openWeakCount(all: Record<string, TopicMissions>): number {
   }
   return open;
 }
-
-/**
- * A phrase — or a whole sentence — the learner chose to put on their map from
- * the sentence sheet, and what they asked about it if they asked. Same shape
- * of mission as a weak spot, written around their choice.
- */
-export function pickMissionPrompt(input: { target: string; uiName: string; level: string }): string {
-  return weakMissionPrompt(input)
-    .replace(
-      /^A learner of .*? keeps making the same kind of mistake in conversation\. Write one mission for their study map that makes them practise getting it right, and choose the topic of the map it belongs to\./,
-      `A learner of ${input.target} (${input.level}) picked something from a conversation, a video or their word list and asked to learn it. Write one mission for their study map that makes them produce it themselves, and choose the topic of the map it belongs to. If they picked a whole sentence, the mission practises its most useful phrase.`,
-    )
-    .replace(
-      /- "focus": what they keep getting wrong, written in .*?\n/,
-      `- "focus": what the mission practises, written in ${input.uiName} — a few words a learner understands; never copied from ${input.target}.\n`,
-    );
-}
-
-export function pickMissionMessage(input: {
-  picked: string;
-  sentence: string;
-  asked?: { question: string; answer: string };
-  goal: string;
-  topics: Array<{ id: string; title: string; summary: string; done: boolean }>;
-}): string {
-  return JSON.stringify({
-    picked: input.picked,
-    inSentence: input.sentence,
-    ...(input.asked ? { theyAsked: input.asked.question, answerTheyGot: input.asked.answer.slice(0, 400) } : {}),
-    learnerGoal: input.goal,
-    topics: input.topics,
-  });
-}

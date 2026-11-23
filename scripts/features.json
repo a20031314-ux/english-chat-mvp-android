@@ -47,10 +47,7 @@
 
     { "id": "stagebank-api", "area": "my", "name": "Stagebank 서버(대본·단계 시험·꺼내 쓰기·돌아보기)", "copy": null, "does": "옛 앱 2.79 이하 My Stagebank가 부름 — 새 앱은 Quizbank 익힘 기록(scripts check)만 씀", "code": ["src/app/api/curriculum/recall/route.ts", "src/app/api/curriculum/ask/route.ts", "src/app/api/curriculum/fixed-lesson/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
     { "id": "coach-api", "area": "call", "name": "통화 튜터 수업 서버(말로 짚기·다시 말해 보기)", "copy": null, "does": "옛 앱 2.79 이하 통화 🎓 튜터 수업이 coach: true로 부름 — 새 앱은 코치 띠(앱 채점), director.ts coachRules·spokenCoachFix·silent·study", "code": ["src/lib/roleplay/director.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
-    { "id": "guide-text-api", "area": "shell", "name": "사용법 글·칸 설명 서버(칸 글·학습 흐름·카드·? 설명)", "copy": null, "does": "옛 앱 2.79 이하 사용법·Stagebank·Quizbank·Logbank ?가 /api/guide(overview·banks·칸 글)로 읽음 — 새 앱은 장면(slides)만", "code": ["src/lib/guide/content.ts", "src/lib/guide/overview.ts", "src/lib/guide/banks.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
-    { "id": "video-gloss-api", "area": "video", "name": "영상 자막 뜻·번역 서버", "copy": null, "does": "옛 앱 2.48~2.66 영상 탭이 자막 줄 뜻·번역에 부름 — 새 앱은 translate", "code": ["src/app/api/video-subtitles/gloss/route.ts", "src/lib/videoSubtitle/glossEnglishLines.ts"], "status": "old-app", "until": "최소 지원 버전 2.67 이상" },
-    { "id": "pack-api", "area": "call", "name": "오늘의 팩 서버", "copy": null, "does": "옛 앱 2.48~2.75 오늘의 팩", "code": ["src/app/api/pack/today/route.ts", "src/app/api/pack/finish/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.76 이상" },
-    { "id": "map-api", "area": "my", "name": "목표 지도 서버", "copy": null, "does": "옛 앱 2.48~2.74 목표 지도·미션·노트 목차", "code": ["src/app/api/curriculum/progress/route.ts", "src/app/api/curriculum/missions/route.ts", "src/app/api/notes/place/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.75 이상" }
+    { "id": "guide-text-api", "area": "shell", "name": "사용법 글·칸 설명 서버(칸 글·학습 흐름·카드·? 설명)", "copy": null, "does": "옛 앱 2.79 이하 사용법·Stagebank·Quizbank·Logbank ?가 /api/guide(overview·banks·칸 글)로 읽음 — 새 앱은 장면(slides)만", "code": ["src/lib/guide/content.ts", "src/lib/guide/overview.ts", "src/lib/guide/banks.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" }
 
   ]
 }

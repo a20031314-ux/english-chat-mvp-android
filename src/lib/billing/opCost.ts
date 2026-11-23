@@ -77,18 +77,12 @@ export const OP_COST: Record<string, OpCost> = {
   randomFrame: { kind: "flat", usd: 0.000005, basis: "assumed" },
   chatStart: llm("chat"),
   learnerAsk: llm("learnerAsk"),
-  analysisInput: llm("analysis"),
-  analysisElement: llm("analysis"),
   expressionInsight: llm("expression"),
   // 원문·고친 문장·설명만 보내는 짧은 확인(2026-10-21 어림).
   chatVerify: estimated("chatVerify", { input: 900, output: 200 }),
   expressionAsk: llm("ask"),
   expressionAskRetry: llm("ask"),
   expressionAskQuick: llm("ask"),
-  // 지도 그리기: 지시·단계 범위 약 3,500토큰 + 지도 JSON과 먼저 생각하는 몫 약 8,000(Sonnet, 2026-10-22 어림).
-  // 나눠 그리기(2026-10-23): 뼈대만(생각 포함) — 예전 한 번에 쓰던 8000보다 짧다. 채우기는 아래 따로.
-  curriculumGenerate: estimated("curriculumMap", { input: 3500, output: 4000 }),
-  curriculumMapFill: estimated("curriculumMapFill", { input: 4000, output: 1800 }),
   // 단계 다섯 개 글(약 120줄) 한 번 옮기기, 학습 언어 × 앱 언어마다 한 번(2026-10-22 어림).
   stageCopy: estimated("translate", { input: 3500, output: 4500 }),
   // 빈도 단어 50개 카드 한 번 만들기 + 뜻 100줄 옮기기(2026-10-29 어림), 묶음 × 앱 언어마다 한 번.
@@ -114,16 +108,12 @@ export const OP_COST: Record<string, OpCost> = {
   stageReadings: estimated("translate", { input: 6000, output: 9000 }),
   // 영어 구문 목록(38개) 분류 프롬프트 약 3,400자 + 문장 두 줄, 답은 max_tokens 150의 짧은 JSON(2026-10-21 어림).
   learnerObserve: estimated("learnerRead", { input: 900, output: 80 }),
-  curriculumMissions: llm("curriculum"),
-  learnerPick: llm("curriculum"),
-  notesPlace: llm("notes"),
   // 틀 목록(1~3단계 최대 약 60줄, 2026-10-28 "다시 연습")이 더해져 약 800토큰 늘었다.
   notebookFix: estimated("notes", { input: 2300, output: 120 }),
   // 칸 목록(지금·뒤 단계 문법 + 고정 칸 약 60줄) + 표현 30개, 답은 30줄 JSON(2026-10-24 어림).
   notebookPhrases: estimated("notes", { input: 2700, output: 900 }),
   // 칸 목록 + 고른 부분·문장, 답은 칸 id + 한 줄 설명(2026-10-24 어림).
   notebookLocate: estimated("notes", { input: 2400, output: 80 }),
-  missionCheck: llm("mission"),
   // 실수 종류 프롬프트 약 1,100~2,200자(이미 아는 실수 30개까지) + 두 줄, 답 짧은 JSON(2026-10-21 어림).
   weakRead: estimated("learnerRead", { input: 600, output: 80 }),
   weakMission: llm("curriculum"),
@@ -132,9 +122,6 @@ export const OP_COST: Record<string, OpCost> = {
   translate: llm("translate"),
   tts: { kind: "tts", seconds: 6, basis: "assumed" },
   videoPrepare: { kind: "subtitle", basis: "assumed" },
-  videoWindow: { kind: "subtitle", basis: "assumed" },
-  videoGloss: llm("video"),
-  videoGlossKept: counter,
   translateKept: counter,
   roleplayListen: listen("turn"),
   roomListen: listen("turn"),

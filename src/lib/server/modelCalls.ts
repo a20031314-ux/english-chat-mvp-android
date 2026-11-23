@@ -46,8 +46,6 @@ export const MODEL_CALLS_PER_REQUEST = {
   chatStart: 1,
   // A question about their own progress, answered from what is kept (learner/ask).
   learnerAsk: 1,
-  analysisInput: 5,
-  analysisElement: 1,
   expressionInsight: 1,
   // 채팅 고친 문장을 확인 모델에 한 번 더(위험한 줄만, 열 때 또는 바로 보기의 뒤에서) — /api/chat/verify.
   chatVerify: 1,
@@ -58,11 +56,6 @@ export const MODEL_CALLS_PER_REQUEST = {
   expressionAskRetry: 1,
   // A one-tap question from the sentence sheet (meaning / form / alternatives).
   expressionAskQuick: 1,
-  // A study map drawn from a goal (curriculum/generate.ts). One call, larger
-  // than most — it writes the whole map at once.
-  curriculumGenerate: 1,
-  // 나눠 그리기의 채우기 한 묶음(주제 3개 안팎, 2026-10-23) — 지도 하나에 보통 3묶음.
-  curriculumMapFill: 1,
   // 단계 범위 화면 글을 앱 언어로 한 번 옮김(server/stageCopy.ts) — 학습 언어 × 앱 언어마다 한 번, 저장된 뒤엔 0.
   stageCopy: 1,
   // 빈도 단어 카드(server/wordCards.ts) — 50개 묶음 × 앱 언어마다 한 번(만들기 1 + 옮기기 1), 저장된 뒤엔 0.
@@ -92,20 +85,12 @@ export const MODEL_CALLS_PER_REQUEST = {
   // One chat sentence read for the constructions in it (learner/classify.ts),
   // after the reply has gone out. Small model, ids in and out.
   learnerObserve: 1,
-  // A topic's missions, written once the first time it is practised.
-  curriculumMissions: 1,
-  // A phrase the learner put on their map from the sentence sheet, written as a task.
-  learnerPick: 1,
-  // 노트: 처음 보는 표현·단어·문장 묶음을 고정 목차의 주제로(/api/notes/place). 학습 언어별 공유 캐시라 대부분은 안 부름.
-  notesPlace: 1,
   // 노트: 튜터가 고친 한 줄을 어느 칸에 넣을지 + 한 줄 설명(server/notebookStore.ts), 답이 나간 뒤.
   notebookFix: 1,
   // 노트: 습득한 표현(장부 배움·숙지) 최대 30개를 틀의 칸에 한 번에(/api/notebook GET 뒤, 하루 6번까지).
   notebookPhrases: 1,
   // 노트: 문장분석 시트 "My에서 찾기" — 궁금한 부분 하나의 칸 + 한 줄 설명(이미 칸이 있으면 안 부름, 하루 40번).
   notebookLocate: 1,
-  // One mission answer checked: verdict, correction and the other person's reply.
-  missionCheck: 1,
   // A corrected chat or call line read for the kind of mistake it was
   // (curriculum/weakPoints.ts), after the reply. Small model, keys in and out.
   weakRead: 1,
@@ -121,15 +106,6 @@ export const MODEL_CALLS_PER_REQUEST = {
   // and the rest went by uncounted. Counting it does not charge for it; it makes
   // the shape of the spending visible before anyone prices against it.
   videoPrepare: 3,
-  videoWindow: 3,
-  // Two calls a batch: the meaning of each line, then the line in the UI
-  // language (glossEnglishLines). Only builds before 2.67 send these.
-  videoGloss: 2,
-  // Answered from translations kept from an earlier viewer of the same video
-  // (server/subtitleGlossStore.ts). No model call; counted so the ratio to
-  // videoGloss / translate says how much of video translation the store
-  // carries.
-  videoGlossKept: 0,
   translateKept: 0,
   // The roleplay's only model call. Its tutor speaks from files, so a scripted
   // scene costs one transcription per learner turn and nothing else — which is

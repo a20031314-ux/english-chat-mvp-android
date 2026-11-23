@@ -35,9 +35,7 @@ test("예전 보고서와 같은 값으로 매긴다", () => {
   assert.equal(opUsd("roleplayListen"), (ROLEPLAY_TURN.learnerSpeakingSeconds / 60) * CALL_TRANSCRIBE_USD_PER_MINUTE);
   // 예전 정액($0.002)과 같은 규모 — 이제 그 기능의 코드 기본 모델 단가로.
   assert.ok(opUsd("roleplayReview") > 0.0005 && opUsd("roleplayReview") < 0.02);
-  assert.equal(opUsd("videoWindow"), opUsd("videoPrepare"));
   // 문장 분석은 호출 다섯 번
-  assert.ok(Math.abs(opUsd("analysisInput") - 5 * opUsd("analysisElement")) < 1e-12);
   // 잰 토큰이 있으면 그 값을 쓴다
   assert.ok(opUsd("chat", { chat: { input: 4000, output: 600 } }) > opUsd("chat"));
 });

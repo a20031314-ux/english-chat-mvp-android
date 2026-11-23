@@ -11,8 +11,8 @@
 | Play에 올라간 앱 | **2.79 (versionCode 93)** — My는 예전 Stagebank 화면 | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
 | 다음 앱 버전 | **2.80 (versionCode 94) — 저장소 버전 올림(2026-11-16), 빌드·Play는 사람. 새로워진 점 94(카드 넷, 그림 = 사용법 장면) · 출시 노트 94 PR #39(2026-11-22).** My = Logbank · Quizbank · Languagebank(개편이 모두에게, 예전 My 화면 코드 지움 2026-11-09), 통화 하나·코치 띠·숙제, 사전 주석·넘겨 보기, 학습 타임라인 | — |
 | 서버 | main에 push하면 Vercel이 바로 배포(웹·시험 앱 껍데기도 바로 새 화면) | — |
-| 업데이트 권장 배너 기준 | 2.66 | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
-| 최소 지원 버전 | 2.48 — 올리면 `hub/app/FEATURES.md` "옛 앱 전용" 서버를 지울 수 있음 | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
+| 업데이트 권장 배너 기준 | 2.79 | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
+| 최소 지원 버전 | **2.76** — 그보다 옛 앱은 업데이트해야 열림(사용자 2026-11-23 "옛 앱은 서버 지워줘"). 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용" 서버를 지울 수 있음 | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
 | iOS | 1차 = 다음 안드로이드 출시와 같은 커밋 — **통화·포인트 켬**(사용자 2026-11-09), 사람 기능 끔. 다음: 진단 TestFlight로 기기 기능 점검. 순서·점검 목록 `hub/work/drafts/ios-launch.md` "다시 정함 3". 앱 ID 6824542951 | `npm run build:ios` |
 
 ## 역할

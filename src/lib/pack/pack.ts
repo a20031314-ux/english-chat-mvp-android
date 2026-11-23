@@ -369,11 +369,6 @@ export function advance(pack: Pack, turn: Omit<PackTurn, "index" | "gap">, chose
   };
 }
 
-/** Whether every question has been asked and answered. */
-export function packDone(pack: Pack): boolean {
-  return pack.cursor >= pack.items.length && pack.turns.some((t) => t.index === pack.items.length - 1);
-}
-
 export type Retro = {
   /** Questions answered, out of the pack's. */
   answered: number;
@@ -494,13 +489,6 @@ export function readAsk(raw: string, options: Candidate[]): Candidate | null {
   return options.find((option) => option.slot === n) ?? null;
 }
 
-/** A pack id: the day, or the day and which of its extra packs. */
-export const PACK_ID_PATTERN = /^\d{4}-\d{2}-\d{2}(?:\.[2-9])?$/;
-
-export function isPackDay(value: unknown): value is string {
-  return typeof value === "string" && PACK_ID_PATTERN.test(value);
-}
-
 /** The id of a day's nth pack; the first is the day itself. */
 export function packIdFor(day: string, n: number): string {
   return n <= 1 ? day : `${day}.${n}`;
@@ -510,23 +498,4 @@ export function packIdFor(day: string, n: number): string {
 export function packDayOf(id: string): { day: string; n: number } {
   const [day, n] = id.split(".");
   return { day: day!, n: n ? Number(n) : 1 };
-}
-
-/** What the pack card shows, and the practice goal the call is opened with. */
-export function packSummary(pack: Pack) {
-  const answered = new Set(pack.turns.filter((t) => t.index >= 0).map((t) => t.index)).size;
-  return {
-    day: pack.day,
-    centre: pack.centre,
-    side: pack.side,
-    questions: pack.items.length,
-    answered,
-    minutes: 7,
-    phrases: pack.phrases.map((p) => p.text),
-    status: (pack.finishedAt || packDone(pack) ? "done" : pack.turns.length ? "doing" : "new") as "new" | "doing" | "done",
-    practice: {
-      pack: pack.day,
-      ...(pack.phrases.length ? { phrases: pack.phrases.map((p) => p.text) } : {}),
-    },
-  };
 }

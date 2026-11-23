@@ -116,7 +116,6 @@ test("검출: 태국어 튜터가 มึง/วะ를 쓰면 오류", () => {
 // ── 기능 묶음 ──
 import { checkHttp, checkText, checkShape } from "./detect.mjs";
 import { SUITES, suiteById } from "./suites/index.mjs";
-import { elementNames } from "./suites/ask.mjs";
 
 test("묶음: id가 겹치지 않고 채팅이 맨 앞, 모두 run·every가 있다", () => {
   const ids = SUITES.map((s) => s.id);
@@ -147,13 +146,6 @@ test("공통 검사: HTTP와 응답 형태", () => {
   assert.equal(checkHttp("x", { status: 200, ms: 50_000 }, { slowWarnMs: 45_000, slowErrorMs: 85_000 })[0].severity, "warn");
   assert.deepEqual(checkShape("x", { map: { id: "a", topics: [1] } }, ["map.id", "map.topics"]), []);
   assert.ok(checkShape("x", { map: { topics: [] } }, ["map.id", "map.topics"])[0].note.includes("map.id"));
-});
-
-test("직접 묻기: 앱이 보내는 요소 이름을 14개 언어 모두 읽는다", () => {
-  for (const l of LANGUAGES) {
-    const names = elementNames(l);
-    assert.equal(Object.keys(names).length, 6, l);
-  }
 });
 
 test("언어 가리기: 괄호 풀이·로마자 이름·짧은 라틴 글은 오탐하지 않는다", () => {

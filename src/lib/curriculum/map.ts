@@ -24,15 +24,6 @@ export const MAP_SCHEMA_VERSION = 1;
 export const SECTOR_IDS = ["A", "B", "C", "D"] as const;
 export type SectorId = (typeof SECTOR_IDS)[number];
 
-/** What each sector is for, in the words the generator is given. */
-export const SECTOR_BRIEFS: Record<SectorId, string> = {
-  // 예시를 괄호로 달았더니 목표와 상관없이 자기소개·주문이 지도마다 나왔다(2026-10-22) — 예시 없이.
-  A: "Situations — the real moments the goal is about.",
-  B: "Expressions and grammar — the structures and set phrases those situations need.",
-  C: "Vocabulary — the words and word families those situations use.",
-  D: "Pronunciation and listening — how it sounds and how to follow it at natural speed.",
-};
-
 export const ACTIVITY_TABS = ["chat", "roleplay", "video", "vocab"] as const;
 export type ActivityTab = (typeof ACTIVITY_TABS)[number];
 
@@ -52,15 +43,6 @@ export type MapActivity = {
    */
   listenFor?: string;
 };
-
-/** The expressions a video activity asks to listen for, one per entry. */
-export function listenForPhrases(activity: Pick<MapActivity, "listenFor">): string[] {
-  return (activity.listenFor ?? "")
-    .split("|")
-    .map((phrase) => phrase.replace(/\s+/g, " ").trim())
-    .filter(Boolean)
-    .slice(0, 4);
-}
 
 export type MapLink = { to: string; why: string };
 

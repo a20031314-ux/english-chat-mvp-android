@@ -11,8 +11,6 @@ import type { AnalysisDimension } from "@/lib/salience/types";
 import { speechLooksWrongLanguage } from "@/lib/videoSubtitle/languageMatch";
 import { exampleMixesInterfaceLanguage } from "@/lib/exampleLanguage";
 
-export const ENGLISH_ANALYSIS_LANGUAGES = ANALYSIS_LANGUAGES;
-
 export type EnglishChunkType =
   | "subject"
   | "grammar_pattern"
@@ -201,68 +199,6 @@ function exampleSentenceMismatchesTarget(
   return speechLooksWrongLanguage(sentence, targetLanguage);
 }
 
-export function normalizeEnglishInputAnalysis(
-  raw: unknown,
-  input: string,
-): EnglishInputAnalysis | null {
-  if (!raw || typeof raw !== "object") return null;
-  const o = raw as Record<string, unknown>;
-  const source = asLine(o.input) || asLine(input);
-  if (!source) return null;
-  const translation = asLine(o.translation) || asLine(o.naturalMeaning);
-  const nuance = asLine(o.nuance);
-  const correctionNote = asLine(o.correctionNote);
-  const language = asLine(o.language);
-
-  const elements: LanguageKeyElement[] = [];
-  if (Array.isArray(o.elements)) {
-    for (const item of o.elements) {
-      if (!item || typeof item !== "object") continue;
-      const e = item as Record<string, unknown>;
-      const text = asLine(e.text);
-      const gloss = asLine(e.gloss);
-      if (!text || !gloss) continue;
-      const label = asLine(e.label) || text;
-      const reading = asLine(e.reading);
-      elements.push({
-        text,
-        label,
-        gloss,
-        ...(reading ? { reading } : {}),
-      });
-      if (elements.length >= 4) break;
-    }
-  }
-
-  if (elements.length === 0 && Array.isArray(o.chunks)) {
-    for (const item of o.chunks) {
-      if (!item || typeof item !== "object") continue;
-      const c = item as Record<string, unknown>;
-      const text = asLine(c.text);
-      if (!text) continue;
-      if (c.analysisRecommended === false) continue;
-      elements.push({ text, label: text, gloss: translation || text });
-      if (elements.length >= 4) break;
-    }
-  }
-
-  const chunks: EnglishChunk[] = elements.map((element) => ({
-    text: element.text,
-    type: "expression",
-    analysisRecommended: true,
-  }));
-
-  return {
-    input: source,
-    elements,
-    chunks,
-    ...(translation ? { translation } : {}),
-    ...(nuance ? { nuance } : {}),
-    ...(correctionNote ? { correctionNote } : {}),
-    ...(language ? { language } : {}),
-  };
-}
-
 export function parseDimensionResults(
   o: Record<string, unknown>,
 ): Partial<Record<AnalysisDimension, string>> | undefined {
@@ -279,47 +215,4 @@ export function parseDimensionResults(
     out[dimension] = text;
   }
   return Object.keys(out).length ? out : undefined;
-}
-
-export function mapSentenceSpanToEnglishElement(
-  analysis: SentenceSpanAnalysis,
-  targetLanguage?: string,
-  interfaceLanguage?: string,
-): EnglishElementAnalysis {
-  const examples = asExamples(
-    analysis.examples.map((example) => ({
-      sentence: example.sentence,
-      translation: example.meaning,
-    })),
-    2,
-    targetLanguage,
-    interfaceLanguage,
-  );
-  const dimensionResults = Object.keys(analysis.dimensionResults).length
-    ? analysis.dimensionResults
-    : undefined;
-  // Viewers older than the dimension list read a grammar note and nothing
-  // else — not even top-level examples — so without this they show only the
-  // meaning line. Newer viewers skip grammar whenever dimensionResults is set.
-  const legacyGrammar =
-    dimensionResults && interfaceLanguage
-      ? [
-          {
-            name: analysis.selectedText,
-            general: legacyDimensionProse(interfaceLanguage, dimensionResults),
-            inThisSentence: analysis.meaningInContext,
-            ...(examples.length ? { examples } : {}),
-          },
-        ]
-      : undefined;
-  return {
-    selectedText: analysis.selectedText,
-    contextSentence: analysis.contextSentence,
-    title: analysis.selectedText,
-    meaningInContext: analysis.meaningInContext,
-    ...(analysis.reading ? { reading: analysis.reading } : {}),
-    ...(examples.length ? { examples } : {}),
-    ...(dimensionResults ? { dimensionResults } : {}),
-    ...(legacyGrammar ? { grammar: legacyGrammar } : {}),
-  };
 }

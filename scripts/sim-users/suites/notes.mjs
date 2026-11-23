@@ -1,16 +1,12 @@
 /**
  * 노트(My)·업데이트 안내 묶음.
  *
- *   노트 자리 찾기(/api/notes/place): 학습 언어 표현·단어를 장 8 × 주제 3 목차의 주제 id로 — 없는 id가 나오면 오류,
- *   다시 물으면 공유 저장분에서 바로(모델 호출 없음, pending 0)
  *   새로워진 점(/api/whats-new): 앱 언어로 제목·설명이 오는지, 그림 주소가 있는지
  *   노트 틀(/api/notebook, 2026-10-24): 표현을 단어장에 저장(배움) → 노트를 열면 답 뒤에 모델이 칸을 고름 → 다시 열어
  *   칸이 뼈대에 있는 id인지, 단계 사다리·관용·세부 고정 칸이 있는지, 단계 이름이 앱 언어인지
  *
- * 자리 찾기는 학습 언어별로 모두가 같이 쓰는 저장소에 남는다(지우지 않음) — 진짜 학습자가 만날 법한 표현만 보낸다.
  * 학습자 문장은 보내지 않는다(문장은 서버에 저장하지 않는 규칙). 14명 중 1명.
  */
-import { NOTE_TOPIC_IDS } from "../../../src/lib/notes/outline.ts";
 import { readFileSync } from "node:fs";
 import { checkHttp, checkText, issue } from "../detect.mjs";
 
@@ -24,9 +20,8 @@ export default {
   id: "notes",
   label: "노트·업데이트 안내",
   every: 14,
-  note: "노트 자리는 공유 저장소에 남음",
   estimate() {
-    return { requests: 7, usd: 0.003 };
+    return { requests: 5, usd: 0.002 };
   },
   async run({ persona, userId, call, bank, step }) {
     const P = "notes";
@@ -37,26 +32,6 @@ export default {
       .filter((t) => t && t.length <= 40)
       .slice(0, 3);
     const texts = [...new Set([bank.vocabWord[persona.target], ...pieces].filter(Boolean))];
-
-    const first = await call(userId, "/api/notes/place", { body: { language: persona.target, texts }, timeout: 40_000 });
-    const pIssues = checkHttp(P, first);
-    const places = first.body?.places ?? {};
-    if (first.status === 200) {
-      const bad = Object.entries(places).filter(([, topic]) => topic !== "none" && !NOTE_TOPIC_IDS.includes(topic));
-      if (bad.length) pIssues.push(issue("error", "notes_logic", `목차에 없는 주제: ${bad.map(([k, t]) => `${k}→${t}`).join(", ")}`));
-      if (Object.keys(places).length < texts.length && !first.body?.limited) pIssues.push(issue("warn", "notes_logic", `자리를 못 찾은 것 ${texts.length - Object.keys(places).length}개`));
-      const none = Object.values(places).filter((t) => t === "none").length;
-      if (none === texts.length) pIssues.push(issue("warn", "notes_logic", "모두 '자리 없음'"));
-    }
-    step({ title: "노트 자리 찾기", input: texts.join(" | "), status: first.status, ms: first.ms, outputs: [{ label: "자리", text: Object.entries(places).map(([k, t]) => `${k} → ${t}`).join(" · ") }], issues: pIssues });
-
-    const second = await call(userId, "/api/notes/place", { body: { language: persona.target, texts } });
-    const cIssues = checkHttp(P, second);
-    if (second.status === 200 && (second.body?.pending ?? 0) > 0) cIssues.push(issue("warn", "notes_logic", `다시 물었는데 저장분에 없는 것 ${second.body.pending}개`));
-    for (const [key, topic] of Object.entries(places)) {
-      if (second.body?.places?.[key] && second.body.places[key] !== topic) cIssues.push(issue("error", "notes_logic", `같은 표현의 자리가 바뀜: ${key}`));
-    }
-    step({ title: "노트 자리 다시 (저장분)", status: second.status, ms: second.ms, outputs: [{ label: "대기", text: String(second.body?.pending ?? 0) }], issues: cIssues });
 
     // ── 노트 틀: 습득한 표현이 칸에 들어가는지 ──
     const B = "notebook";

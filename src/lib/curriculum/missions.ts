@@ -1,24 +1,4 @@
-/**
- * A topic on the study map, turned into things to do.
- *
- * A topic used to end at a button that opened the chat tab: the tutor there did
- * not know the topic, and "done" was whatever the learner ticked. A mission is
- * one thing to say in the topic's situation, given as a task and not as an
- * answer — "greet a colleague you have just met and say your name" — so the
- * learner has to produce it. Then it is checked: done, close (shown the
- * corrected sentence), or not yet (nudged, never told). Hints come in three
- * steps, the last of which is the answer, and how many were used is kept.
- *
- * Missions are written once per topic, the first time someone practises it,
- * in the interface language the map was drawn in — the same rule as the map
- * itself, whose screen already says so when the app is switched to another.
- * What the learner has to say, the example answer and the second hint are in
- * the language being learned.
- *
- * Pure: shapes, prompts, and the bookkeeping. The routes call models and store.
- */
 
-export const MISSIONS_PER_TOPIC = { min: 3, max: 5 } as const;
 
 export type Mission = {
   id: string;
@@ -109,103 +89,12 @@ function startOf(hint: string, answer: string): string {
   return `${cut.replace(/[、。,.!?！？\s]+$/u, "")}…`;
 }
 
-/** Keep the well-formed missions; null when too few survive to practise. */
-export function normalizeMissions(raw: unknown): Mission[] | null {
-  const list = Array.isArray((raw as { missions?: unknown })?.missions)
-    ? ((raw as { missions: unknown[] }).missions)
-    : [];
-  const missions: Mission[] = [];
-  for (const item of list) {
-    const row = (item ?? {}) as Record<string, unknown>;
-    const task = text(row.task, 200);
-    const answer = text(row.answer, 200);
-    const hints = Array.isArray(row.hints) ? row.hints.map((h) => text(h, 160)) : [];
-    if (!task || !answer || !hints[0] || !hints[1]) continue;
-    if (revealsAnswer(task, answer)) continue;
-    const expression = text(row.expression, 80);
-    missions.push({
-      id: `m${missions.length + 1}`,
-      task,
-      answer,
-      hints: [hints[0], startOf(hints[1], answer)],
-      ...(expression && !revealsAnswer(task, expression) ? { expression } : {}),
-    });
-    if (missions.length === MISSIONS_PER_TOPIC.max) break;
-  }
-  return missions.length >= MISSIONS_PER_TOPIC.min ? missions : null;
-}
-
-export function missionsSystemPrompt(input: { target: string; uiName: string; level: string }): string {
-  return `You write short speaking and writing missions for a ${input.level} learner of ${input.target}, for one topic of their study map.
-
-A mission is one thing to say in the topic's situation. Give it as a task, the way a teacher would — "Greet a colleague you have just met and tell them your name", "Ask what they recommend" — never as the sentence to say. The learner has to come up with the words.
-
-Write ${MISSIONS_PER_TOPIC.min} to ${MISSIONS_PER_TOPIC.max} missions that walk through the situation in order, each one sentence or two for the learner to produce, at their level. Use the topic's expressions where they fit.
-
-For each mission:
-- "task": what to do, in ${input.uiName}. Do not quote or translate the answer in it.
-- "hints": exactly two hints. The first, in ${input.uiName}: which idea or kind of expression to reach for, without the words. The second, in ${input.target}: only the first two to four words of a good answer, never a whole sentence, ending with "…".
-- "answer": one natural way to do it, in ${input.target}, as a person would say it.
-- "expression": the phrase this mission practises, in ${input.target}, two to six words, exactly as it appears in "answer" — the part any good answer would contain.
-
-Return only a json object: {"missions":[{"task":"...","hints":["...","..."],"answer":"...","expression":"..."}]}`;
-}
-
-export function missionsUserMessage(input: {
-  goal: string;
-  topic: { title: string; summary: string; sector: string };
-  starter?: string;
-  listenFor?: string[];
-}): string {
-  return JSON.stringify({
-    learnerGoal: input.goal,
-    topic: input.topic.title,
-    about: input.topic.summary,
-    kind: input.topic.sector,
-    ...(input.starter ? { openingLine: input.starter } : {}),
-    ...(input.listenFor?.length ? { expressions: input.listenFor } : {}),
-  });
-}
-
-export function checkSystemPrompt(input: { target: string; uiName: string; focus: string }): string {
-  return `You check one answer from a learner of ${input.target}. They were given a task in a situation and wrote or said something to do it.
-
-Decide:
-- "pass": it does the task and someone who speaks ${input.target} would understand it and find it natural enough. Small slips that do not change the meaning still pass; put the polished sentence in "better" if there is one.
-- "close": it does the task, but with mistakes a ${input.target} speaker would notice — wrong form, wrong word, missing word, unnatural order. Put their sentence corrected in "better", keeping their words and meaning.
-- "miss": it does not do the task yet — off the task, not in ${input.target}, too little to tell, or not understandable. Do not give the answer. "feedback" says what to try, in one short sentence.
-
-Do not compare word for word with the example answer: many answers are right.
-
-"feedback": one short sentence in ${input.uiName} — for pass, what was good; for close, what the correction changed; for miss, a nudge toward the task without the words.
-"reply": for pass and close, one short line in ${input.target} from the other person in the situation, reacting naturally, as the conversation would go on. Empty for miss.
-"better": in ${input.target}, or empty.
-${input.focus ? `\nWhat goes wrong in ${input.target} in particular:\n${input.focus}\n` : ""}
-Return only a json object: {"verdict":"pass"|"close"|"miss","better":"...","feedback":"...","reply":"..."}`;
-}
-
 export type MissionCheck = {
   verdict: MissionVerdict;
   better: string;
   feedback: string;
   reply: string;
 };
-
-export function normalizeCheck(raw: unknown, answer: string): MissionCheck | null {
-  const row = (raw ?? {}) as Record<string, unknown>;
-  const verdict = row.verdict;
-  if (verdict !== "pass" && verdict !== "close" && verdict !== "miss") return null;
-  const better = text(row.better, 300);
-  const same = (a: string, b: string) =>
-    a.toLowerCase().replace(/[^\p{L}\p{M}\p{N}]/gu, "") === b.toLowerCase().replace(/[^\p{L}\p{M}\p{N}]/gu, "");
-  return {
-    verdict,
-    // A correction that comes back as what they wrote is not one.
-    better: verdict === "miss" || !better || same(better, answer) ? "" : better,
-    feedback: text(row.feedback, 240),
-    reply: verdict === "miss" ? "" : text(row.reply, 240),
-  };
-}
 
 /**
  * How long after the last try a mission can count as produced from memory.
@@ -363,23 +252,4 @@ export function statusFromMissions(state: TopicMissions): "doing" | "done" {
 /** Learned items ready to be produced from memory. */
 export function dueMissions(state: TopicMissions, now = Date.now()): Mission[] {
   return state.missions.filter((m) => itemState(state, m.id, now).due);
-}
-
-/** Whether the topic's own missions have been written, beside any added for mistakes. */
-export function hasTopicMissions(state: TopicMissions | null | undefined): boolean {
-  return Boolean(state?.missions.some((m) => !m.weak && !m.picked));
-}
-
-/**
- * The topic's own missions written after missions for mistakes were already
- * added to it: the topic's first, ids kept apart (m1… and w1…), and what was
- * done on the added ones kept.
- */
-export function withTopicMissions(state: TopicMissions | null | undefined, written: Mission[]): TopicMissions {
-  const added = (state?.missions ?? []).filter((m) => m.weak || m.picked);
-  return {
-    missions: [...written.filter((m) => !m.weak && !m.picked), ...added],
-    results: state?.results ?? {},
-    ...(state?.seen ? { seen: state.seen } : {}),
-  };
 }

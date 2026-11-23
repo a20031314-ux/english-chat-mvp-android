@@ -1,21 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { ENGLISH_CONSTRUCTIONS } from "./constructions.ts";
-import {
-  MIN_TURNS_FOR_LEVEL,
-  applyTurn,
-  bandProgress,
-  currentLevel,
-  emptyProfile,
-  isoWeek,
-  nextBand,
-  overcome,
-  parseProfile,
-  profileBrief,
-  statusOf,
-  withPlan,
-  type LearnerProfile,
-} from "./profile.ts";
+import { MIN_TURNS_FOR_LEVEL, applyTurn, bandProgress, currentLevel, emptyProfile, isoWeek, overcome, parseProfile, statusOf, withPlan, type LearnerProfile } from "./profile.ts";
 
 const DAY = 86400000;
 const T0 = Date.UTC(2026, 9, 5); // Monday of 2026-W41
@@ -71,34 +57,11 @@ test("used well and missed in the same turn counts as missed; unknown ids are ig
   assert.equal(p.turns, 1);
 });
 
-test("no level is claimed before enough turns", () => {
-  const p = turns(emptyProfile("en", T0), [["be-verb", true]]);
-  assert.ok(p.turns < MIN_TURNS_FOR_LEVEL);
-  assert.equal(currentLevel(p), null);
-  assert.equal(nextBand(p), "A1");
-});
-
 function master(profile: LearnerProfile, ids: string[], at: number): LearnerProfile {
   let p = profile;
   for (const id of ids) p = turns(p, [[id, true], [id, true], [id, true]], at);
   return p;
 }
-
-test("the level is the highest band reached with every band below it", () => {
-  const a1 = ENGLISH_CONSTRUCTIONS.filter((c) => c.band === "A1").map((c) => c.id);
-  const b1 = ENGLISH_CONSTRUCTIONS.filter((c) => c.band === "B1").map((c) => c.id);
-  let p = master(emptyProfile("en", T0), a1, T0);
-  assert.equal(currentLevel(p), "A1");
-  // B1 mastered but A2 not: still A1.
-  p = master(p, b1, T0);
-  assert.equal(currentLevel(p), "A1");
-  assert.equal(nextBand(p), "A2");
-  const a2 = ENGLISH_CONSTRUCTIONS.filter((c) => c.band === "A2").map((c) => c.id);
-  p = master(p, a2.slice(0, Math.ceil(a2.length * 0.6)), T0);
-  assert.equal(currentLevel(p), "B1");
-  const rows = bandProgress(p);
-  assert.equal(rows.find((r) => r.band === "B1")?.share, 1);
-});
 
 test("one history row per week, keeping the latest numbers of that week", () => {
   let p = turns(emptyProfile("en", T0), [["be-verb", true]], T0);
@@ -130,18 +93,6 @@ test("a stored profile reads back; another language or version starts fresh", ()
   assert.deepEqual(back, p);
   assert.equal(parseProfile(p, "es").turns, 0);
   assert.equal(parseProfile({ ...p, v: 9 }, "en").turns, 0);
-});
-
-test("the brief names weak constructions and the next band's, with the plan", () => {
-  const p = turns(emptyProfile("en", T0), [
-    ["word-form", false],
-    ["word-form", false],
-  ]);
-  const brief = profileBrief(p);
-  assert.equal(brief.weak.length, 1);
-  assert.match(brief.weak[0]!, /Word form/);
-  assert.ok(brief.nextBandConstructions.some((line) => line.startsWith("be verb")));
-  assert.deepEqual(brief.plan, { focus: "weak", method: "mixed" });
 });
 
 test("the classifier's answer is read into outcomes, missed winning over used", async () => {

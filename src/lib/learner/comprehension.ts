@@ -191,14 +191,6 @@ export function applyLearnerLine(
   return changed ? { ...record, items, updatedAt: now } : record;
 }
 
-/** Items in a state, most recent first. */
-export function itemsIn(record: ComprehensionRecord, state: ItemState, limit = 20): ComprehensionItem[] {
-  return Object.values(record.items)
-    .filter((item) => item.state === state)
-    .sort((a, b) => b.lastAt - a.lastAt)
-    .slice(0, limit);
-}
-
 export function parseComprehension(value: unknown, language: string): ComprehensionRecord {
   if (!value || typeof value !== "object") return emptyComprehension(language, 0);
   const row = value as Record<string, unknown>;

@@ -51,14 +51,6 @@ export async function hasPreviousMap(userId: string, language: string): Promise<
   return (await kvGetJson<CurriculumRecord>(previousKey(userId, language))) !== null;
 }
 
-export async function saveNewMap(userId: string, map: StudyMap): Promise<CurriculumRecord> {
-  const current = await readCurriculum(userId, map.language);
-  if (current) await kvSetJson(previousKey(userId, map.language), current, CURRICULUM_TTL_SECONDS);
-  const record: CurriculumRecord = { map, status: {}, updatedAt: new Date().toISOString() };
-  await kvSetJson(curriculumKey(userId, map.language), record, CURRICULUM_TTL_SECONDS);
-  return record;
-}
-
 /**
  * Mark one topic. Refused (null) when the map has changed since the screen
  * that asked was drawn, or the topic is not on it.
@@ -131,68 +123,6 @@ async function advanceStatus(
   const saved = await setTopicStatus(userId, language, mapId, topicId, next);
   if (saved) status = next;
   return status;
-}
-
-/** Record a checked answer, from a mission or a review, and move the topic along. */
-export async function recordMissionCheck(input: {
-  userId: string;
-  language: string;
-  mapId: string;
-  topicId: string;
-  missionId: string;
-  verdict: MissionVerdict;
-  hints: number;
-  tries: number;
-  where?: "mission" | "review";
-}): Promise<{ topic: TopicMissions; status: TopicStatus } | null> {
-  const all = await readMissions(input.userId, input.language, input.mapId);
-  const before = all[input.topicId];
-  if (!before) return null;
-  const topic = applyCheck(before, input.missionId, input.verdict, input.hints, input.tries, Date.now(), input.where ?? "mission");
-  if (topic !== before) {
-    all[input.topicId] = topic;
-    await kvSetJson(missionsKey(input.userId, input.language, input.mapId), all, CURRICULUM_TTL_SECONDS);
-  }
-  const status = await advanceStatus(input.userId, input.language, input.mapId, input.topicId, topic);
-  return { topic, status };
-}
-
-/** The example answer was opened. */
-export async function recordMissionSeen(input: {
-  userId: string;
-  language: string;
-  mapId: string;
-  topicId: string;
-  missionId: string;
-}): Promise<void> {
-  const all = await readMissions(input.userId, input.language, input.mapId);
-  const before = all[input.topicId];
-  if (!before) return;
-  const topic = markSeen(before, input.missionId);
-  if (topic === before) return;
-  all[input.topicId] = topic;
-  await kvSetJson(missionsKey(input.userId, input.language, input.mapId), all, CURRICULUM_TTL_SECONDS);
-}
-
-/** Learned items ready to be produced from memory, across the current map. */
-export async function readDueItems(
-  userId: string,
-  language: string,
-  limit = 10,
-): Promise<{ mapId: string; items: Array<{ topicId: string; topicTitle: string; mission: Mission }> } | null> {
-  const record = await readCurriculum(userId, language);
-  if (!record) return null;
-  const all = await readMissions(userId, language, record.map.id);
-  const items: Array<{ topicId: string; topicTitle: string; mission: Mission }> = [];
-  for (const topic of [...record.map.topics].sort((a, b) => a.order - b.order)) {
-    const missions = all[topic.id];
-    if (!missions) continue;
-    for (const mission of dueMissions(missions)) {
-      items.push({ topicId: topic.id, topicTitle: topic.title, mission });
-      if (items.length >= limit) return { mapId: record.map.id, items };
-    }
-  }
-  return { mapId: record.map.id, items };
 }
 
 /**

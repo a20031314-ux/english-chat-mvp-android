@@ -61,7 +61,7 @@ export type UpdateLevel = "none" | "available" | "required";
  * server — it takes the app away from whoever has not updated, and during
  * closed testing that may be someone who cannot be asked to.
  */
-export const MIN_SUPPORTED_APP_VERSION = "2.48";
+export const MIN_SUPPORTED_APP_VERSION = "2.76";
 
 /**
  * The oldest build that is not asked to update.
@@ -69,7 +69,7 @@ export const MIN_SUPPORTED_APP_VERSION = "2.48";
  * Cheap to move, because it only raises a banner. This is the lever to reach
  * for; MIN_SUPPORTED is the one to leave alone.
  */
-export const RECOMMENDED_APP_VERSION = "2.66";
+export const RECOMMENDED_APP_VERSION = "2.79";
 
 /**
  * 대본 앱: My 단계 대본이 있는 첫 빌드(2.76). 이 빌드부터 무료는 채팅·통화 없이 대본만(billing/plans.ts termsFor scriptsApp),

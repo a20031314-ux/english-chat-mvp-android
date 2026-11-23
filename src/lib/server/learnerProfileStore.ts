@@ -102,16 +102,6 @@ export async function readLearnerProfile(userId: string, language: string): Prom
   return parseProfile(await kvGetJson(key(userId, language)), language);
 }
 
-export async function saveLearnerPlan(
-  userId: string,
-  language: string,
-  plan: Partial<LearnerPlan>,
-): Promise<LearnerProfile> {
-  const next = withPlan(await readLearnerProfile(userId, language), plan);
-  await kvSetJson(key(userId, language), next, TTL_SECONDS);
-  return next;
-}
-
 /**
  * Read one chat turn into the profile. Run after the reply has gone out
  * (next/server `after`), so a slow or failed call never costs the learner

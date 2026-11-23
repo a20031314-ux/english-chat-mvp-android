@@ -1,11 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { ladderFor, stageById, stageProgress, stageScopeForPrompt, STAGE_DONE_SHARE } from "./index.ts";
+import { ladderFor, stageById, stageProgress, STAGE_DONE_SHARE } from "./index.ts";
 import { emptyLedger, ledgerKey, type Ledger, type LedgerItem } from "../../learner/ledger.ts";
 import { findConstruction } from "../../learner/constructions.ts";
-import { parseSelfCheck, pitchFor } from "../../learner/selfCheck.ts";
+import { parseSelfCheck } from "../../learner/selfCheck.ts";
 import { buildBrief } from "../../learner/brief.ts";
-import { mapSystemPrompt } from "../prompt.ts";
 import { textsOf, viewsFrom, withTexts } from "../../server/stageCopy.ts";
 
 const BANDS = ["A1", "A2", "B1", "B2", "C1"];
@@ -76,24 +75,6 @@ test("진행: 영어 표현을 다 숙지하면 다음 단계 문턱을 넘는�
   assert.equal(progress.mastered, stage.expressions.length);
   assert.equal(progress.open.length, 0);
   assert.ok(progress.share >= STAGE_DONE_SHARE);
-});
-
-test("체크: 단계 id를 받고 시작 수준을 정한다", () => {
-  const check = parseSelfCheck({ stage: "ko-4" }, 1);
-  assert.equal(check?.stage, "ko-4");
-  assert.equal(pitchFor(check!), "intermediate");
-  assert.equal(pitchFor(parseSelfCheck({ stage: "en-1", gaps: ["natural"] }, 1)!), "beginner");
-  assert.equal(parseSelfCheck({ stage: "en-1; drop" }, 1), null);
-});
-
-test("지시문: 단계 범위가 들어가고 베낄 예시는 없다", () => {
-  const stage = stageById("ja-3")!;
-  const base = { goal: "x", level: "beginner" as const, target: "Japanese", uiName: "Korean", library: [] };
-  const withStage = mapSystemPrompt({ ...base, stageScope: stageScopeForPrompt(stage, "Japanese") });
-  assert.ok(withStage.includes(stage.expressions[0]!));
-  assert.match(withStage, /Never split one situation/);
-  const plain = mapSystemPrompt(base);
-  assert.doesNotMatch(plain, /café|Ordering|introducing yourself|polite request/i);
 });
 
 test("튜터 요약: 고른 단계의 아직 못 쓴 표현을 두 개까지", () => {

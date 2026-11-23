@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { parseSelfCheck, pitchFor } from "./selfCheck.ts";
+import { parseSelfCheck } from "./selfCheck.ts";
 import { buildBrief, SELF_UNTIL_TURNS } from "./brief.ts";
 import { nextSteps } from "./next.ts";
 import { emptyLedger } from "./ledger.ts";
@@ -19,12 +19,6 @@ test("a self-check keeps known ids, at most two focuses, and is null when empty"
   assert.equal(check.use, undefined);
   assert.equal(check.at, T0);
   assert.deepEqual(parseSelfCheck({ use: "travel" }, T0), { gaps: [], focus: [], use: "travel", at: T0 });
-});
-
-test("the hidden pitch: many gaps, or speaking and accuracy together, start lower", () => {
-  assert.equal(pitchFor({ gaps: ["speaking", "accuracy"], focus: [], at: T0 }), "beginner");
-  assert.equal(pitchFor({ gaps: ["words", "listening", "natural"], focus: [], at: T0 }), "beginner");
-  assert.equal(pitchFor({ gaps: ["natural"], focus: ["speaking"], at: T0 }), "intermediate");
 });
 
 test("try this: the ticked gaps come after measured steps and before the map's situations", () => {

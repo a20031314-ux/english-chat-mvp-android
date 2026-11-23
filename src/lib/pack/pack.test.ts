@@ -2,20 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { sentencesFor } from "../roleplay/catalog.ts";
 import type { Direction } from "../roleplay/director.ts";
-import {
-  PACK_ITEMS,
-  advance,
-  asksBack,
-  candidates,
-  chooseFocus,
-  composePack,
-  packDone,
-  packPrompt,
-  readAsk,
-  retro,
-  type ComposeInput,
-  type Pack,
-} from "./pack.ts";
+import { PACK_ITEMS, advance, asksBack, candidates, chooseFocus, composePack, packPrompt, readAsk, retro, type ComposeInput, type Pack } from "./pack.ts";
 import { packBankFor } from "./questions.ts";
 import { reactionOnly, shapePackDirection } from "./turn.ts";
 
@@ -160,39 +147,6 @@ test("the tutor's pick is read by number, and nothing else counts", () => {
   assert.match(packPrompt(compose(), []), /"end"/);
 });
 
-test("the retro says what the turns show, and only what changed", () => {
-  let pack = compose({
-    phrases: [{ text: "end up", state: "learned" }],
-    growth: [
-      { id: "speaking", points: 10, stage: 2, measured: true },
-      { id: "accuracy", points: 10, stage: 2, measured: true },
-    ],
-  });
-  const step = (latencyMs: number, corrected: boolean, used: string[] = []) => {
-    const options = candidates(pack);
-    pack = advance(pack, { at: NOW + pack.turns.length * 30000, latencyMs, attempts: 1, corrected, stuck: false, used }, options[0] ?? null);
-  };
-  step(1000, false); // the greeting
-  step(2000, false); // quick, clean
-  step(6000, true); // slow, corrected
-  step(1500, false, ["end up"]);
-  const done = retro(pack, { "end up": "mastered" }, [
-    { id: "speaking", points: 14, stage: 3, measured: true },
-    { id: "accuracy", points: 10, stage: 2, measured: true },
-  ]);
-  assert.equal(done.answered, 3);
-  assert.deepEqual(done.quick, { done: 2, of: 3 });
-  assert.deepEqual(done.clean, { done: 2, of: 3 });
-  assert.deepEqual(done.phrases, [{ text: "end up", used: true, mastered: true }]);
-  assert.ok(done.changed.some((c) => c.kind === "mastered" && c.phrase === "end up"));
-  assert.deepEqual(done.changed[0], { kind: "grew", element: "speaking", points: 4, stageUp: true });
-  assert.ok(!done.changed.some((c) => c.kind === "grew" && c.element === "accuracy"), "no points, no line");
-  // Nothing moved in the record: nothing is claimed.
-  const unchanged = retro(pack, { "end up": "learned" });
-  assert.deepEqual(unchanged.changed, []);
-  assert.equal(packDone(pack), false);
-});
-
 const bank = sentencesFor("en");
 function said(text: string, assessment: Direction["assessment"] = "on_track"): Direction {
   return { assessment, say: { text }, note: "", next: { step: "talk" } };
@@ -231,19 +185,6 @@ test("a pack turn speaks the reaction in fixed words and then the pack's questio
   const answered = shapePackDirection(said("Me? I love tea. And you?"), null, { ...input, planned: chosen });
   assert.deepEqual(answered.direction.say, { text: "Me? I love tea. And you?" });
   assert.equal(answered.asked, null);
-});
-
-test("an extra pack is named by its day and number, and only by those", async () => {
-  const { isPackDay, packIdFor, packDayOf } = await import("./pack.ts");
-  assert.equal(packIdFor("2026-10-16", 1), "2026-10-16");
-  assert.equal(packIdFor("2026-10-16", 3), "2026-10-16.3");
-  assert.deepEqual(packDayOf("2026-10-16.2"), { day: "2026-10-16", n: 2 });
-  assert.deepEqual(packDayOf("2026-10-16"), { day: "2026-10-16", n: 1 });
-  assert.equal(isPackDay("2026-10-16.2"), true);
-  assert.equal(isPackDay("2026-10-16.1"), false);
-  assert.equal(isPackDay("2026-10-16.10"), false);
-  const { parsePracticeGoal } = await import("../learner/practice.ts");
-  assert.equal(parsePracticeGoal({ pack: "2026-10-16.2" })?.pack, "2026-10-16.2");
 });
 
 test("a run of quick questions starts with a line that says so, in its language, and only the first", async () => {

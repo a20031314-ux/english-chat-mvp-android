@@ -145,13 +145,6 @@ export function currentLevel(profile: LearnerProfile): Band | null {
   return level;
 }
 
-/** The band being worked towards: the first one not yet reached. */
-export function nextBand(profile: LearnerProfile): Band | null {
-  const level = currentLevel(profile);
-  const index = level ? BANDS.indexOf(level) + 1 : 0;
-  return BANDS[index] ?? null;
-}
-
 export function constructionsByStatus(profile: LearnerProfile): Record<ConstructionStatus, string[]> {
   const out: Record<ConstructionStatus, string[]> = { unseen: [], weak: [], learning: [], mastered: [] };
   for (const construction of constructionsFor(profile.language)) {
@@ -266,35 +259,5 @@ export function parseProfile(value: unknown, language: string): LearnerProfile {
     history,
     plan,
     updatedAt: typeof row.updatedAt === "number" ? row.updatedAt : 0,
-  };
-}
-
-/**
- * What the map generator is told about this learner, in plain words it can act
- * on: where they are, what is weak, what comes next, and how they want to work.
- */
-export function profileBrief(profile: LearnerProfile): {
-  level: Band | null;
-  weak: string[];
-  learning: string[];
-  nextBandConstructions: string[];
-  plan: LearnerPlan;
-} {
-  const byStatus = constructionsByStatus(profile);
-  const next = nextBand(profile);
-  const name = (id: string) => {
-    const c = findConstruction(id);
-    return c ? `${c.en} (${c.hint})` : id;
-  };
-  return {
-    level: currentLevel(profile),
-    weak: byStatus.weak.map(name),
-    learning: byStatus.learning.map(name),
-    nextBandConstructions: next
-      ? constructionsFor(profile.language)
-          .filter((c) => c.band === next && statusOf(profile.entries[c.id]) !== "mastered")
-          .map((c) => name(c.id))
-      : [],
-    plan: profile.plan,
   };
 }

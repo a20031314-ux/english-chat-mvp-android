@@ -143,19 +143,18 @@ export async function POST(request: NextRequest) {
 
 /**
  * The model answers in JSON, but not always as {"translated": "…"}: it can wrap it once more
- * ({"translated": {"translated": "…"}}) or use another key. Reading only a string under "translated" turned those
- * into an echo of the source (virtual users 2026-11-23: 7 of 98, the same lines every time). Take the first string
- * that is not the source, one level down if need be.
+ * ({"translated": {"translated": "…"}}) or name the field differently. Reading only a string under "translated"
+ * turned those into an echo of the source (virtual users 2026-11-23: 7 of 98, the same lines every time).
+ * Only answer-like fields are read — never "language", "note" and the like.
  */
+const ANSWER_KEYS = ["translated", "translation", "text", "result", "output"];
 function pickTranslation(parsed: unknown, source: string): string {
-  if (!parsed || typeof parsed !== "object") return "";
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return "";
   const record = parsed as Record<string, unknown>;
-  const ordered = ["translated", "translation", ...Object.keys(record).filter((key) => key !== "translated" && key !== "translation")];
-  for (const key of ordered) {
+  for (const key of ANSWER_KEYS) {
     const value = record[key];
     if (typeof value === "string" && value.trim() && value.trim() !== source.trim()) return value.trim();
-    // {"translated": {"translated": "…"}} — one layer too many (seen 2026-11-23).
-    if (value && typeof value === "object" && !Array.isArray(value)) {
+    if (value && typeof value === "object") {
       const inner = pickTranslation(value, source);
       if (inner) return inner;
     }

@@ -40,7 +40,6 @@
     "lm:optout": { "feature": "학습 지표", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "지표 기록 거부" },
     "lm:session": { "feature": "학습 지표", "scope": "user", "onAccountDelete": "해당 없음", "what": "세션 요약" },
     "lm:text": { "feature": "학습 지표", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "문장 원문 — LEARNER_TEXT_STORE=on일 때만(지금 꺼짐)" },
-    "notePlace:v1": { "feature": "노트", "scope": "shared", "onAccountDelete": "해당 없음", "what": "노트 자리 찾기 결과(언어별 공유, 재사용)" },
     "pack:v1": { "feature": "오늘의 팩", "scope": "user", "onAccountDelete": "남음(4일 뒤 만료)", "what": "오늘의 팩 진행" },
     "points:bought": { "feature": "포인트", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "산 포인트" },
     "points:credited": { "feature": "포인트", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "이미 넣은 구매 거래(두 번 막기)" },

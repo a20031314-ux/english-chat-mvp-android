@@ -81,19 +81,3 @@ export function stageProgress(stage: Stage, ledger: Ledger): StageProgress {
   const total = stage.expressions.length;
   return { total, mastered, learned, open, share: total ? (mastered + learned / 2) / total : 0 };
 }
-
-/** 지도를 그리는 모델에게 주는 단계 범위(영어 설명 + 학습 언어 표현). */
-export function stageScopeForPrompt(stage: Stage, target: string): string {
-  const list = (rows: string[]) => rows.map((row) => `  - ${row}`).join("\n");
-  return `The learner is working through one fixed stage of a ${target} course. Build the map only from this stage's scope:
-- What they will be able to do at the end:
-${list(stage.canDo.map((text) => text.en))}
-- Situations:
-${list(stage.situations.map((text) => text.en))}
-- Grammar (each with an example):
-${list(stage.grammar.map((g) => `${g.name.en} — ${g.example}`))}
-- Core ${target} expressions they should be able to say (use them in starters, listenFor and tasks; spread them across topics):
-${list(stage.expressions)}
-- Listening: ${stage.listening.en}
-- Pronunciation: ${stage.pronunciation.en}`;
-}

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { RECUR_WINDOW_MS, addWeakMission, applyMistakes, emptyWeakRecord, normalizeWeakMission, patternPrompt, readPatterns, recurringPatterns } from "./weakPoints.ts";
-import { hasTopicMissions, withTopicMissions, type Mission } from "./missions.ts";
+import { type Mission } from "./missions.ts";
 
 const DAY = 24 * 60 * 60 * 1000;
 
@@ -84,17 +84,3 @@ test("a mission for a mistake: on a topic the map has, without giving its answer
 
 const own = (id: string): Mission => ({ id, task: `t${id}`, answer: `a${id}`, hints: ["h", "s…"] });
 const weak = { task: "tw", answer: "aw", hints: ["h", "s…"] as [string, string], weak: "past-tense", focus: "과거형" };
-
-test("added before the topic was opened, the topic's own missions still get written, and go first", () => {
-  const { topic: added, missionId } = addWeakMission(undefined, weak);
-  assert.equal(missionId, "w1");
-  assert.equal(hasTopicMissions(added), false);
-  const merged = withTopicMissions(
-    { ...added, results: { w1: { outcome: "pass", hints: 1, tries: 1, learnedAt: 1 } } },
-    [own("m1"), own("m2"), own("m3")],
-  );
-  assert.deepEqual(merged.missions.map((m) => m.id), ["m1", "m2", "m3", "w1"]);
-  assert.ok(merged.results.w1, "what was done on it is kept");
-  assert.equal(hasTopicMissions(merged), true);
-  assert.equal(addWeakMission(merged, weak).missionId, "w2");
-});

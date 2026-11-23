@@ -39,24 +39,6 @@ export const PREMIUM_DAILY_ASK_LIMIT = 100;
  */
 export const FREE_DAILY_QUICK_ASK_LIMIT = 30;
 export const PREMIUM_DAILY_QUICK_ASK_LIMIT = 300;
-
-/**
- * Study maps a learner may have drawn, per day.
- *
- * One larger model call each, and a map is something you follow for weeks, so
- * this is only a floor under somebody pressing "new goal" in a loop. Generous
- * enough to rewrite a goal that came out wrong a couple of times.
- */
-export const FREE_DAILY_MAP_LIMIT = 3;
-export const PREMIUM_DAILY_MAP_LIMIT = 10;
-
-/**
- * Topics turned into missions in a day. Each topic is written once and kept,
- * so this only stops a loop; a learner working through a map opens a few.
- * Checking a mission is a sent chat and counts against the chat limit.
- */
-export const FREE_DAILY_MISSION_SET_LIMIT = 20;
-export const PREMIUM_DAILY_MISSION_SET_LIMIT = 100;
 /**
  * Internal meter only — not a Play IAP. Custom (user-imported) first prepares
  * round up to this many seconds per point. Library + replay are 0 points.

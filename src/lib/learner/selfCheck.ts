@@ -57,20 +57,6 @@ export function parseSelfCheck(value: unknown, now: number): SelfCheck | null {
   return { gaps, focus, ...(use ? { use } : {}), ...(stage ? { stage } : {}), at };
 }
 
-/**
- * The level a first map is pitched at, never shown. Someone who ticks most of
- * the gaps is starting out; anyone else gets the middle, and the tutors move
- * from there on what the turns show (learner/brief.ts).
- */
-export function pitchFor(check: SelfCheck): "beginner" | "intermediate" | "advanced" {
-  // 대화 예시로 단계를 골랐으면 그게 먼저(1·2 → 처음, 3·4 → 중간, 5 → 높게).
-  const order = check.stage ? Number(check.stage.slice(-1)) : 0;
-  if (order) return order <= 2 ? "beginner" : order <= 4 ? "intermediate" : "advanced";
-  return check.gaps.length >= 3 || (check.gaps.includes("speaking") && check.gaps.includes("accuracy"))
-    ? "beginner"
-    : "intermediate";
-}
-
 const GAP_MAP_RULE: Record<GapId, string> = {
   speaking: "Words do not come out quickly: put short, frequent speaking situations (A) early, each with a roleplay call as the first activity.",
   accuracy: "They cannot build sentences correctly yet: give the expressions-and-grammar sector (B) more topics, each tied to a situation where it is needed.",
@@ -93,17 +79,6 @@ const USE_MAP_RULE: Record<UseId, string> = {
   work: "They will use it at work: draw the situations from the workplace (meetings, colleagues, email, calls).",
   video: "They want to follow videos and shows: draw the situations from what people say on screen, and lean on listening.",
 };
-
-/** The lines a map is drawn by, in place of a written goal's detail and a chosen plan. */
-export function selfCheckMapRules(check: SelfCheck): string {
-  const lines = [
-    "What they told us about themselves (they chose these; nothing is measured yet):",
-    ...check.gaps.map((gap) => `- ${GAP_MAP_RULE[gap]}`),
-    ...check.focus.map((focus) => `- ${FOCUS_MAP_RULE[focus]}`),
-    `- ${USE_MAP_RULE[check.use ?? "daily"]}`,
-  ];
-  return lines.join("\n");
-}
 
 /** What a tutor does about each gap while there is little else to go on (learner/brief.ts). */
 export const GAP_TUTOR_RULE: Record<GapId, string> = {

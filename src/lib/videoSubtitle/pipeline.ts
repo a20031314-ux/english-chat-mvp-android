@@ -371,24 +371,4 @@ export async function prepareVideoTranscript(
   };
 }
 
-export async function translateSubtitleWindow(
-  input: TranslateWindowInput,
-): Promise<{ cues: SubtitleSegment[]; viewerContext: ViewerContext }> {
-  if (!getOpenAIClient()) {
-    throw new VideoPipelineError("MISSING_OPENAI_KEY");
-  }
-  if (input.currentSegments.length === 0) {
-    return {
-      cues: [],
-      viewerContext:
-        input.viewerContext ??
-        emptyViewerContext({
-          topic: input.context.topic,
-          summary: input.context.summary,
-        }),
-    };
-  }
-  return translateSubtitleWindowPipeline(input);
-}
-
 export type { SceneContext };
