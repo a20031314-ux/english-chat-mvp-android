@@ -335,3 +335,7 @@
 - 2026-11-22 watch → dev: [my] src/components/studyMap/FirstCheck.tsx:419 — 첫 측정 결과가 아직 "0단계 · 글자부터"(다른 화면은 글자부터만) (stageNumber 0 빼고 글자부터 이름만)
 - 2026-11-22 watch → dev: [my] src/components/studyMap/Logbank.tsx:1165 — CallResultCard removable이 늘 true인 죽은 갈래 (매개변수·조건 지우기)
 - 2026-11-23 dev → qa: 최소 지원 2.76으로 옛 앱 서버를 지움 — 가상 사용자 묶음 ask·pack은 없어짐, map은 "My 첫 열기"(지도 없음·요약 2요청), sheet는 해석·고를 단위·빠른 질문·단어장, notes는 자리 찾기 빠짐. qa.md 가상 사용자 점검 줄을 지금 묶음에 맞게.
+- 2026-11-23 watch → dev: [ai] src/lib/videoSubtitle/pipeline.ts:8 — 안 쓰는 import translateSubtitleWindowPipeline 하나로 자막 창 번역 사슬(translateSegments·generateMeaningBasedSubtitle 355줄 등)이 살아 있음 (import와 사슬 지우기)
+- 2026-11-23 watch → dev: [ai] src/lib/server/packStore.ts:13 — 안 쓰는 import 15개·packDaysKey·growthElements, roleplay/turn/route.ts:133 오늘의 팩 갈래(닿지 않음), data-map pack:days 줄 (지우기)
+- 2026-11-23 watch → dev: [my] src/lib/studyMapClient.ts:72 — drawStudyMap이 지운 /api/curriculum/generate를 부름(부르는 곳 없음, 불리면 404), curriculumStore.ts:4 applyCheck·dueMissions·markSeen, curriculum/missions.ts:67~82, learner/self-check/route.ts:14 낡은 주석 (지우기)
+- 2026-11-23 watch → dev: [공통] src/lib/englishAnalysis.ts:165 — asExamples·ANALYSIS_LANGUAGES·legacyDimensionProse 안 씀, learnerProfileStore.ts:19 withPlan, refineCaptions.ts:2~3 parseMeaningExtraction·extractMeaningSystem (지우기 — leftovers --check가 못 잡음)
