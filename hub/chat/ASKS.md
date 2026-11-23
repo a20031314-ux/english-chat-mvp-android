@@ -498,9 +498,6 @@
   - 볼 곳: `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomParts.tsx` · `components/rooms/RoomPeople.tsx` · `components/rooms/RoomView.tsx` · `components/rooms/RoomsScreen.tsx` · `components/rooms/TeamSpace.tsx` … 22개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
-## 최근 답 (4, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
+## 최근 답 (1, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
 
 - a261120-1-1 → 사용자: **지움** · 채팅·영상 자막·통화 돌아보기 줄 아래 LedgerLinks — 표현 장부 상태 칩(알아요·배움·만남)과 다른 탭에서 만남 링크 (2026-11-20 18:54)
-- a261109-3-1 → 2 My: **맞음** — Quizbank 새 묶음(head)·다시 볼 것(askKeys → turnedGrammar) 둘 다 turnPrepared(그 칸 퀴즈 답 수 차례). es-gv g|3:1·g|3:4 데이터 있음, preparedQuiz.test 8 통과. FirstCheck는 prepared 안 씀 · Quizbank 넣어 둔 문법 문제: 바꾼 사전 예문이 있는 칸(스페인어 g|3:1·g|3:4, 앱 언어 ko·en)은 나올 때마다 다른 문장(turnPrepared) — 다시 볼 것에서도. FirstCheck는 그대로. (2026-11-09 19:26)
-- a261109-5-2 → 2 My: **맞음** — My 네이티브: Logbank 끝(my-full)·Quizbank 문제 아래(quiz-inline)·Languagebank 끝·사전·표현 카드·칸 설명·넘겨 보기 끝·실력 확인 결과·수업 끝. My는 BANNER_TABS에 없음, LessonHost 닫기 전면 없음. 전면은 끝 자리만(quizBreak·homeworkEnd·flipEnd·skillCheckEnd) · 광고 구조 다시 짬: 통화 끝 전면을 끝 화면 닫기로·숙제 끝 전면·장면 끝·숙제 화면·통화 기록 네이티브, My 칸 안 네이티브(바닥 칸도)·My 배너 없음, 사전·표현 카드·넘겨 보기·실력 확인 결과 네이티브, 수업 닫기 전면 없음 (2026-11-09 19:26)
-- a261109-6-2 → 2 My: **맞음** — My 화면(studyMap·notes)에 플랫폼 조건 없음 — Logbank 오늘 📞 수업·숙제 통화가 iOS에도 그대로 나옴. 옛 voiceCallAvailable 참조 0 · iOS에서도 AI 통화·포인트를 켬(platform.ts voiceCallAvailable 지움) — 통화 탭·📞·다음 걸음 통화·결제 화면 통화 시간 줄·포인트 가게가 iOS에 나옴. 웹·안드로이드는 원래 켜져 있어 그대로 (2026-11-09 19:26)
