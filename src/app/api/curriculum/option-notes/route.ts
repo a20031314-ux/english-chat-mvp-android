@@ -64,6 +64,7 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
       },
     ],
   }).catch(() => null);
+  let parseError = "";
   const firstRaw = (await ask(false))?.choices[0]?.message?.content ?? "";
   let notes = parseNotes(firstRaw);
   // 앱 언어 글자가 따로 있는 언어(ar·ja·ko·zh·th·hi·ru)인데 뜻이 그 글자로 안 쓰였으면 한 번 더(운영 2026-11-03 es→ar 뜻이 스페인어로 옴).
@@ -74,7 +75,7 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
     if (again.length && again.every((one) => !one.meaning || script.test(one.meaning))) notes = again;
   }
   // 빈 답이면 점검 사용자(simcheck-)에게만 모델 답을 보인다 — 왜 비었는지 보려고.
-  if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [], ...simDetail(request, firstRaw.slice(-300)) });
+  if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [], ...simDetail(request, `${parseError} len=${firstRaw.length} n=${notes.length} ${firstRaw.slice(0, 120)}`) });
   if (!mine) await kvSetJson(key, notes, TTL).catch(() => undefined);
   return jsonWithCors(request, { notes });
 
@@ -95,7 +96,8 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
         return { meaning: text(row.meaning, 120), why: i === answer ? "" : text(row.why, 200) };
       });
     }
-  } catch {
+  } catch (error) {
+    parseError = error instanceof Error ? error.message.slice(0, 120) : "parse";
     notes = [];
   }
   return notes;
