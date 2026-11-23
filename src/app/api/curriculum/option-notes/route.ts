@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
         content: `A learner of ${target} has just answered a multiple-choice blank. For every option, in order, write in ${native}:
 - "meaning": its part of speech and its usual meaning — at most 8 words, no example, no usage notes (for a phrase, what it means as a whole).
 - "why": for the correct option, empty. For every other option, one plain sentence of at most 15 words a teacher would say about why it does not fit this blank — the grammar reason (wrong form, wrong part of speech, agreement, tense, particle) or that the meaning does not fit the sentence. Read the option together with the words right before and after the blank first: if it breaks the grammar there (two verbs in a row, a missing "to", a form the word before cannot take), that is the main reason — not a nuance of meaning. Name the one main reason; do not just say it is wrong, and do not add a second explanation. If it would actually also be correct here, say so plainly.
-Both "meaning" and "why" are written in ${native} — never in ${target} — quoting ${target} words only where needed. Keep the options in the order given, and copy each option exactly into "option". Reply with JSON only: {"notes":[{"option":"…","meaning":"…","why":"…"}, …]} with exactly one entry per option.`,
+Quote ${target} words with single quotes ('like this'), never with double quotes. Both "meaning" and "why" are written in ${native} — never in ${target} — quoting ${target} words only where needed. Keep the options in the order given, and copy each option exactly into "option". Reply with JSON only: {"notes":[{"option":"…","meaning":"…","why":"…"}, …]} with exactly one entry per option.`,
       },
       ...(strict ? [{ role: "system" as const, content: `The last answer used the wrong language. Every "meaning" and "why" must be in ${native}.` }] : []),
       {
@@ -82,7 +82,7 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
   function parseNotes(reply: string): Note[] {
   let notes: Note[] = [];
   try {
-    const parsed = JSON.parse(reply.slice(reply.indexOf("{"), reply.lastIndexOf("}") + 1)) as { notes?: unknown };
+    const parsed = readReply(reply);
     // 목록을 글로 한 번 더 싸서 보내는 일이 있다({"notes":"[{…}]"}, 운영 2026-11-23 — 그동안 보기 설명이 통째로 비었음).
     if (typeof parsed.notes === "string") parsed.notes = JSON.parse(parsed.notes) as unknown;
     if (Array.isArray(parsed.notes)) {
@@ -113,3 +113,20 @@ const UI_SCRIPT: Record<string, RegExp> = {
   hi: /\p{Script=Devanagari}/u,
   ru: /\p{Script=Cyrillic}/u,
 };
+
+/**
+ * 모델 답 읽기. 목록을 글로 싸서 보내며 그 안의 따옴표를 잘못 벗기는 일이 있어({"notes":"[{\"why\":\"\\"I'm\\" …"}]"},
+ * 운영 2026-11-23 — 보기 설명이 통째로 비었음) 그대로 안 읽히면 싼 글을 한 겹 벗겨 다시 읽는다.
+ */
+function readReply(reply: string): { notes?: unknown } {
+  const body = reply.slice(reply.indexOf("{"), reply.lastIndexOf("}") + 1);
+  try {
+    return JSON.parse(body) as { notes?: unknown };
+  } catch {
+    const start = body.indexOf("[");
+    const end = body.lastIndexOf("]");
+    if (start < 0 || end <= start) throw new Error("no list");
+    const inner = body.slice(start, end + 1).replace(/\\\\/g, "\\").replace(/\\"/g, '"');
+    return { notes: JSON.parse(inner) as unknown };
+  }
+}
