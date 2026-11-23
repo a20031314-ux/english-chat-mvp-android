@@ -15,11 +15,12 @@ import { growthLinesOf } from "@/lib/roleplay/talkGrowth";
 import type { TranscriptLine } from "@/lib/roleplay/review";
 
 /**
- * 남은 통화 시간 한 줄: 예전 통화 첫 화면의 줄 → 통화 머리의 상태 한 줄(2026-10-23, conversation-unify 3단계).
- * 통화를 열 때 한 번 묻고, 서버가 답을 못 하면 null(머리에는 튜터 역할이 대신 나온다).
+ * 남은 통화 시간 한 줄(통화 머리). 통화를 열 때 서버에 한 번 묻고, 그 뒤로는 통화가 도는 동안 흐른 시간을 빼서 줄인다 —
+ * 한 번 묻고 그대로 두어 2분 넘게 통화해도 "10분 남음"이던 것(사용자 2026-11-23). 서버가 답을 못 하면 null(머리에는 튜터 역할).
  */
-export function useCallTimeLine(ui: UICopy, isPremium: boolean): string | null {
-  const [timeLine, setTimeLine] = useState<string | null>(null);
+export function useCallTimeLine(ui: UICopy, isPremium: boolean, running = true): string | null {
+  const [base, setBase] = useState<{ kind: "today"; seconds: number; daily: number } | { kind: "points"; seconds: number } | null>(null);
+  const [spent, setSpent] = useState(0);
   useEffect(() => {
     let live = true;
     void fetch(apiUrl("/api/entitlement"), { headers: entitlementHeaders(isPremium) })
@@ -27,16 +28,12 @@ export function useCallTimeLine(ui: UICopy, isPremium: boolean): string | null {
       .then((data: { callPointsLeft?: unknown; callCarrySeconds?: unknown; callPointSeconds?: unknown; callTodayLeftSeconds?: unknown; callDailyMinutes?: unknown } | null) => {
         if (!live || !data) return;
         if (typeof data.callTodayLeftSeconds === "number" && typeof data.callDailyMinutes === "number") {
-          setTimeLine(
-            ui.roleplayTodayLeft
-              .replace("{minutes}", String(Math.ceil(data.callTodayLeftSeconds / 60)))
-              .replace("{daily}", String(data.callDailyMinutes)),
-          );
+          setBase({ kind: "today", seconds: data.callTodayLeftSeconds, daily: data.callDailyMinutes });
           return;
         }
         if (typeof data.callPointsLeft === "number" && typeof data.callPointSeconds === "number") {
           const carry = typeof data.callCarrySeconds === "number" ? data.callCarrySeconds : 0;
-          setTimeLine(ui.roleplayTimeLeft.replace("{minutes}", String(Math.floor((data.callPointsLeft * data.callPointSeconds + carry) / 60))));
+          setBase({ kind: "points", seconds: data.callPointsLeft * data.callPointSeconds + carry });
         }
       })
       .catch(() => undefined);
@@ -46,7 +43,17 @@ export function useCallTimeLine(ui: UICopy, isPremium: boolean): string | null {
     // 통화를 열 때 한 번.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return timeLine;
+  // 통화가 도는 동안만 흐른 시간을 센다(끝 화면에서는 멈춤).
+  useEffect(() => {
+    if (!running || !base) return;
+    const timer = window.setInterval(() => setSpent((value) => value + 5), 5000);
+    return () => window.clearInterval(timer);
+  }, [running, base]);
+  if (!base) return null;
+  const left = Math.max(0, base.seconds - spent);
+  return base.kind === "today"
+    ? ui.roleplayTodayLeft.replace("{minutes}", String(Math.ceil(left / 60))).replace("{daily}", String(base.daily))
+    : ui.roleplayTimeLeft.replace("{minutes}", String(Math.floor(left / 60)));
 }
 
 export { useStoredToggle } from "@/components/speech/CallKit";

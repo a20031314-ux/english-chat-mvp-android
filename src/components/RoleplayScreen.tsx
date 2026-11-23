@@ -154,7 +154,6 @@ export function RoleplayScreen({
   // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
   useEffect(() => enterScene("call"), []);
   const { isPremium } = usePremium();
-  const timeLine = useCallTimeLine(ui, isPremium);
   // 그냥 대화는 고른 튜터(여자·남자)의 목소리로 — 통화 동안은 처음 값 그대로(lib/tutorGender.ts, 2026-11-01).
   const catalogScene = findScenario(scenarioId);
   const [tutorGender] = useState(() => readTutorGender(catalogScene?.language));
@@ -973,6 +972,7 @@ export function RoleplayScreen({
   // 통화 이름 · ⓘ 설명창(사용자 2026-11-14) — 처음 한 번 저절로(CallParts callInfoSeen).
   const [modeInfo, setModeInfo] = useState(() => (scenario?.openEnded ? !callInfoSeen() : false));
   const callOver = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
+  const timeLine = useCallTimeLine(ui, isPremium, !callOver);
   /** 중단: 내가 한 말이 없으면 남길 것도 없어 그냥 닫고, 있으면 마이크·소리를 멈추고 끝 화면으로(기록은 끝나지 않은 채 — 이어서 하기). */
   const hangUp = () => {
     if (!said.some((line) => line.who === "learner")) {
