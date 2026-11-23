@@ -334,3 +334,4 @@
 - 2026-11-22 watch → dev: [my] src/components/studyMap/Logbank.tsx:1361 — 빈 화면 조건 `!rows.length && !pairs.length`라 통화만 있는 기간엔 배운 것 칸·쌓기 📞 날이 안 그려짐 (빈 조건에 기간 통화 수를 더하거나 DayStacks를 조건 밖으로)
 - 2026-11-22 watch → dev: [my] src/components/studyMap/FirstCheck.tsx:419 — 첫 측정 결과가 아직 "0단계 · 글자부터"(다른 화면은 글자부터만) (stageNumber 0 빼고 글자부터 이름만)
 - 2026-11-22 watch → dev: [my] src/components/studyMap/Logbank.tsx:1165 — CallResultCard removable이 늘 true인 죽은 갈래 (매개변수·조건 지우기)
+- 2026-11-23 watch → dev: [공통] src/app/api/translate/route.ts:47 — pickTranslation이 translated가 비거나 원문 그대로면 아무 글자 칸(language·note 등)을 번역으로 골라 echoed 재시도도 건너뛰고 자막 줄이면 공용 저장 (번역 칸 이름 목록 text·translation·result 또는 중첩 translated만 읽기)
