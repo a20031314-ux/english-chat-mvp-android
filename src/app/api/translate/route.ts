@@ -117,9 +117,7 @@ export async function POST(request: NextRequest) {
       });
       const raw = completion.choices[0]?.message?.content;
       if (!raw) return null;
-      const parsed = JSON.parse(raw) as { translated?: unknown; translation?: unknown };
-      const value = typeof parsed.translated === "string" ? parsed.translated : typeof parsed.translation === "string" ? parsed.translation : "";
-      return value.trim();
+      return pickTranslation(JSON.parse(raw), text);
     };
     const echoed = (value: string | null) => !value || value === text.trim();
     let first = await translateOnce();
@@ -138,4 +136,20 @@ export async function POST(request: NextRequest) {
     console.error("[translate]", error);
     return jsonWithCors(request, { error: "TRANSLATION_FAILED", ...simDetail(request, error) }, { status: 500 });
   }
+}
+
+/**
+ * The model answers in JSON, but not always under "translated": some lines come back as {"text": "<translation>"},
+ * mirroring the input shape, or under another key. Reading only "translated" turned those into an echo of the
+ * source (virtual users 2026-11-23: id→ru, hi→ja every time). Take the first string that is not the source.
+ */
+function pickTranslation(parsed: unknown, source: string): string {
+  if (!parsed || typeof parsed !== "object") return "";
+  const record = parsed as Record<string, unknown>;
+  const ordered = ["translated", "translation", ...Object.keys(record).filter((key) => key !== "translated" && key !== "translation")];
+  for (const key of ordered) {
+    const value = record[key];
+    if (typeof value === "string" && value.trim() && value.trim() !== source.trim()) return value.trim();
+  }
+  return typeof record.translated === "string" ? record.translated.trim() : "";
 }
