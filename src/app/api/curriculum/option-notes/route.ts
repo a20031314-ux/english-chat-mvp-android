@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
         role: "system",
         content: `A learner of ${target} has just answered a multiple-choice blank. For every option, in order, write in ${native}:
 - "meaning": its part of speech and its usual meaning — at most 8 words, no example, no usage notes (for a phrase, what it means as a whole).
-- "why": for the correct option, empty. For every other option, one plain sentence of at most 15 words a teacher would say about why it does not fit this blank — the grammar reason (wrong form, wrong part of speech, agreement, tense, particle) or that the meaning does not fit the sentence. Name the one main reason; do not just say it is wrong, and do not add a second explanation. If it would actually also be correct here, say so plainly.
+- "why": for the correct option, empty. For every other option, one plain sentence of at most 15 words a teacher would say about why it does not fit this blank — the grammar reason (wrong form, wrong part of speech, agreement, tense, particle) or that the meaning does not fit the sentence. Read the option together with the words right before and after the blank first: if it breaks the grammar there (two verbs in a row, a missing "to", a form the word before cannot take), that is the main reason — not a nuance of meaning. Name the one main reason; do not just say it is wrong, and do not add a second explanation. If it would actually also be correct here, say so plainly.
 Both "meaning" and "why" are written in ${native} — never in ${target} — quoting ${target} words only where needed. Keep the options in the order given, and copy each option exactly into "option". Reply with JSON only: {"notes":[{"option":"…","meaning":"…","why":"…"}, …]} with exactly one entry per option.`,
       },
       ...(strict ? [{ role: "system" as const, content: `The last answer used the wrong language. Every "meaning" and "why" must be in ${native}.` }] : []),
@@ -82,6 +82,8 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
   let notes: Note[] = [];
   try {
     const parsed = JSON.parse(reply.slice(reply.indexOf("{"), reply.lastIndexOf("}") + 1)) as { notes?: unknown };
+    // 목록을 글로 한 번 더 싸서 보내는 일이 있다({"notes":"[{…}]"}, 운영 2026-11-23 — 그동안 보기 설명이 통째로 비었음).
+    if (typeof parsed.notes === "string") parsed.notes = JSON.parse(parsed.notes) as unknown;
     if (Array.isArray(parsed.notes)) {
       // 모델이 정답을 앞으로 옮겨 쓰는 일이 있었다(운영 2026-11-03 es: 뜻이 한 칸씩 밀림) — 보기 글로 짝을 맞추고, 못 맞추면 순서대로.
       const rows = parsed.notes.map((one) => (one ?? {}) as Record<string, unknown>);
