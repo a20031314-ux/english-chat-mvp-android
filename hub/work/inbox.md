@@ -339,3 +339,5 @@
 - 2026-11-23 watch → dev: [ai] src/lib/server/packStore.ts:13 — 안 쓰는 import 15개·packDaysKey·growthElements, roleplay/turn/route.ts:133 오늘의 팩 갈래(닿지 않음), data-map pack:days 줄 (지우기)
 - 2026-11-23 watch → dev: [my] src/lib/studyMapClient.ts:72 — drawStudyMap이 지운 /api/curriculum/generate를 부름(부르는 곳 없음, 불리면 404), curriculumStore.ts:4 applyCheck·dueMissions·markSeen, curriculum/missions.ts:67~82, learner/self-check/route.ts:14 낡은 주석 (지우기)
 - 2026-11-23 watch → dev: [공통] src/lib/englishAnalysis.ts:165 — asExamples·ANALYSIS_LANGUAGES·legacyDimensionProse 안 씀, learnerProfileStore.ts:19 withPlan, refineCaptions.ts:2~3 parseMeaningExtraction·extractMeaningSystem (지우기 — leftovers --check가 못 잡음)
+- 2026-11-23 watch → dev: [my] src/app/api/curriculum/typed-check/route.ts:30 — 문장 전체 쓰기(ladderQuiz wholeOf)도 kind "blank"라 typed 60자 넘으면 400 → recheckTyped false → 맞는 번역도 틀림(en-e4·e5·g5 등 60자 넘는 답) (whole일 때 한도 200으로)
+- 2026-11-23 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:514 — 틀린 곳 답 뒤 "왜" 줄이 ko 밖 12개 앱 언어에서 영어 원문 (앱 언어로 옮긴 글, 없으면 ko·en 앱에서만)
