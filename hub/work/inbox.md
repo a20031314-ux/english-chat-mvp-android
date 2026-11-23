@@ -341,3 +341,4 @@
 - 2026-11-23 watch → dev: [공통] src/lib/englishAnalysis.ts:165 — asExamples·ANALYSIS_LANGUAGES·legacyDimensionProse 안 씀, learnerProfileStore.ts:19 withPlan, refineCaptions.ts:2~3 parseMeaningExtraction·extractMeaningSystem (지우기 — leftovers --check가 못 잡음)
 - 2026-11-23 watch → dev: [my] src/app/api/curriculum/typed-check/route.ts:30 — 문장 전체 쓰기(ladderQuiz wholeOf)도 kind "blank"라 typed 60자 넘으면 400 → recheckTyped false → 맞는 번역도 틀림(en-e4·e5·g5 등 60자 넘는 답) (whole일 때 한도 200으로)
 - 2026-11-23 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:514 — 틀린 곳 답 뒤 "왜" 줄이 ko 밖 12개 앱 언어에서 영어 원문 (앱 언어로 옮긴 글, 없으면 ko·en 앱에서만)
+- 2026-11-23 watch → dev: [ai] src/components/roleplay/callHooks.ts:137 — 통화 남은 시간을 벽시계로 빼서 서버(첫 차례부터·차례 사이 60초 상한)보다 빨리 줄어듦, 오래 멈추면 0분까지 (차례 응답 뒤 /api/entitlement로 다시 맞추거나 서버와 같은 셈)
