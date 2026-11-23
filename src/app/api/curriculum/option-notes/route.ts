@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
   const native = INTERFACE_LANGUAGE_LABELS[ui] ?? ui;
   const ask = (strict: boolean) => completeChat(client, "vocab", {
     response_format: { type: "json_object" },
-    max_tokens: 600,
+    max_tokens: 1200,
     messages: [
       {
         role: "system",
@@ -74,7 +74,7 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
     if (again.length && again.every((one) => !one.meaning || script.test(one.meaning))) notes = again;
   }
   // 빈 답이면 점검 사용자(simcheck-)에게만 모델 답을 보인다 — 왜 비었는지 보려고.
-  if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [], ...simDetail(request, firstRaw.slice(0, 600)) });
+  if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [], ...simDetail(request, firstRaw.slice(-300)) });
   if (!mine) await kvSetJson(key, notes, TTL).catch(() => undefined);
   return jsonWithCors(request, { notes });
 
