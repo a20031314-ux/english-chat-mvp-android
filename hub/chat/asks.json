@@ -7877,27 +7877,59 @@
       "base": "b56f8ed5655c7ae27b351f996963269830268c25",
       "head": "b56f8ed",
       "status": "open"
+    },
+    {
+      "id": "a261123-3-8",
+      "at": "2026-11-23 19:20",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "퀴즈 답 뒤 근거(틀린 곳 이유·보기 설명)",
+      "files": [
+        "src/app/api/curriculum/option-notes/route.ts",
+        "src/components/studyMap/QuizPlayer.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/InlineQuiz.tsx",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/components/studyMap/LessonHost.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/app/api/curriculum/ask/route.ts",
+        "src/app/api/curriculum/fixed-lesson/route.ts",
+        "src/app/api/curriculum/frame-lesson/route.ts",
+        "src/app/api/curriculum/item-lesson/route.ts",
+        "src/app/api/curriculum/qbank/route.ts",
+        "src/app/api/curriculum/quiz-stats/route.ts",
+        "src/app/api/curriculum/recall/route.ts",
+        "src/app/api/curriculum/route.ts",
+        "src/app/api/curriculum/script/route.ts",
+        "src/app/api/curriculum/scripts/route.ts",
+        "src/app/api/curriculum/spots/route.ts",
+        "src/app/api/curriculum/stages/route.ts",
+        "src/app/api/curriculum/typed-check/route.ts",
+        "src/app/api/curriculum/words/route.ts",
+        "src/app/api/notebook/route.ts"
+      ],
+      "features": [
+        "통화",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "소재 수업",
+        "칸 설명"
+      ],
+      "base": "7ee61e7766ac4b1a1d8dcc193c0b11ed87b3a0c4",
+      "head": "b2e3185",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-12 13:48",
-      "from": "2",
-      "base": "2cb8c1a46f8c398bc8006202f11b7f6c0a5e1cd4",
-      "head": "0e8aa09",
-      "what": "수업 통화 다시 말해 보기: 꼴 실수면 pass→miss(director.ts redoFormSlip·ALMOST_AGAIN) — 수업 통화에서 확인",
-      "tabs": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "asks": [
-        "a261112-2-4",
-        "a261112-2-5",
-        "a261112-2-6"
-      ]
-    },
     {
       "at": "2026-11-12 14:10",
       "from": "3",
@@ -8511,10 +8543,24 @@
       "asks": [
         "a261123-2-1"
       ]
+    },
+    {
+      "at": "2026-11-23 19:20",
+      "from": "3",
+      "base": "7ee61e7766ac4b1a1d8dcc193c0b11ed87b3a0c4",
+      "head": "b2e3185",
+      "what": "퀴즈 답 뒤 근거(틀린 곳 이유·보기 설명)",
+      "tabs": [
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261123-3-8"
+      ]
     }
   ],
   "seq": {
-    "261123-3": 7,
+    "261123-3": 8,
     "261123-2": 1
   }
 }

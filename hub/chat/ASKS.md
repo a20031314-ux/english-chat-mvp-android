@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (118)
+## 탭이 확인할 것 (119)
 
 ### 탭 1 메인
 
@@ -290,6 +290,10 @@
 - **a261123-3-7** (2026-11-23 18:35, 탭 3 · 7950b2c) 기능어 뜻 고르기 같은 품사만
   - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `app/api/curriculum/item-lesson/route.ts` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/Quizbank.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/notes/NotebookSection.tsx` … 8개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261123-3-8** (2026-11-23 19:20, 탭 3 · b2e3185) 퀴즈 답 뒤 근거(틀린 곳 이유·보기 설명)
+  - 기능: 통화 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · 소재 수업 · 칸 설명
+  - 볼 곳: `app/api/curriculum/option-notes/route.ts` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/Quizbank.tsx` … 17개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
