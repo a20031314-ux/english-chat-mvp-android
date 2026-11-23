@@ -67,6 +67,11 @@ Quote ${target} words with single quotes ('like this'), never with double quotes
   let parseError = "";
   const firstRaw = (await ask(false))?.choices[0]?.message?.content ?? "";
   let notes = parseNotes(firstRaw);
+  // Haiku가 목록을 글로 싸며 안쪽 따옴표를 깨뜨리면 못 읽는다(운영 2026-11-23 fr) — 한 번만 다시 묻는다.
+  if (notes.length !== options.length) {
+    await meterRequest(request, "quizOptionNotes");
+    notes = parseNotes((await ask(false))?.choices[0]?.message?.content ?? "");
+  }
   // 앱 언어 글자가 따로 있는 언어(ar·ja·ko·zh·th·hi·ru)인데 뜻이 그 글자로 안 쓰였으면 한 번 더(운영 2026-11-03 es→ar 뜻이 스페인어로 옴).
   const script = UI_SCRIPT[ui];
   if (script && notes.length && notes.some((one) => one.meaning && !script.test(one.meaning))) {
@@ -84,7 +89,7 @@ Quote ${target} words with single quotes ('like this'), never with double quotes
   try {
     const parsed = readReply(reply);
     // 목록을 글로 한 번 더 싸서 보내는 일이 있다({"notes":"[{…}]"}, 운영 2026-11-23 — 그동안 보기 설명이 통째로 비었음).
-    if (typeof parsed.notes === "string") parsed.notes = JSON.parse(parsed.notes) as unknown;
+    if (typeof parsed.notes === "string") parsed.notes = JSON.parse(parsed.notes.replace(/\\'/g, "'")) as unknown;
     if (Array.isArray(parsed.notes)) {
       // 모델이 정답을 앞으로 옮겨 쓰는 일이 있었다(운영 2026-11-03 es: 뜻이 한 칸씩 밀림) — 보기 글로 짝을 맞추고, 못 맞추면 순서대로.
       const rows = parsed.notes.map((one) => (one ?? {}) as Record<string, unknown>);
