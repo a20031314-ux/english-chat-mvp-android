@@ -142,9 +142,10 @@ export async function POST(request: NextRequest) {
 }
 
 /**
- * The model answers in JSON, but not always under "translated": some lines come back as {"text": "<translation>"},
- * mirroring the input shape, or under another key. Reading only "translated" turned those into an echo of the
- * source (virtual users 2026-11-23: id→ru, hi→ja every time). Take the first string that is not the source.
+ * The model answers in JSON, but not always as {"translated": "…"}: it can wrap it once more
+ * ({"translated": {"translated": "…"}}) or use another key. Reading only a string under "translated" turned those
+ * into an echo of the source (virtual users 2026-11-23: 7 of 98, the same lines every time). Take the first string
+ * that is not the source, one level down if need be.
  */
 function pickTranslation(parsed: unknown, source: string): string {
   if (!parsed || typeof parsed !== "object") return "";
@@ -153,6 +154,11 @@ function pickTranslation(parsed: unknown, source: string): string {
   for (const key of ordered) {
     const value = record[key];
     if (typeof value === "string" && value.trim() && value.trim() !== source.trim()) return value.trim();
+    // {"translated": {"translated": "…"}} — one layer too many (seen 2026-11-23).
+    if (value && typeof value === "object" && !Array.isArray(value)) {
+      const inner = pickTranslation(value, source);
+      if (inner) return inner;
+    }
   }
   return typeof record.translated === "string" ? record.translated.trim() : "";
 }
