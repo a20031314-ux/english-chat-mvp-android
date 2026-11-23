@@ -1,0 +1,4 @@
+• Nouveau My : Appris aujourd'hui en haut, puis Quizbank (des quiz à ton niveau), Languagebank (un dictionnaire de tout ce que tu vas apprendre) et Logbank (tes acquis, jour après jour).
+• Un seul appel : le tuteur discute, et ta phrase corrigée s'affiche sur une carte sous ton visage. Répète-la pour un ✓.
+• S'il y a des corrections, tu as un Devoir : Quiz et Simulation de conversation.
+• Le tuteur se souvient de ce que tu lui as dit la dernière fois. Le test de niveau initial est plus précis.
