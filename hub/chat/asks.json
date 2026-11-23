@@ -7766,27 +7766,32 @@
       "base": "7ee61e7766ac4b1a1d8dcc193c0b11ed87b3a0c4",
       "head": "b2e3185",
       "status": "open"
+    },
+    {
+      "id": "a261123-3-9",
+      "at": "2026-11-23 20:51",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "Logbank 부족한 것 칩 이름",
+      "files": [
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/app/api/notebook/route.ts"
+      ],
+      "features": [
+        "Logbank",
+        "오늘의 학습",
+        "칸 설명"
+      ],
+      "base": "2d8bd81cc97e0c2b3eb071fb7d3710a0bf557e19",
+      "head": "7056644",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-12 14:27",
-      "from": "3",
-      "base": "0296181",
-      "head": "0296181",
-      "what": "수업 통화가 수업 계획(lessonPlan.ts — 틀 최대 셋, 되받기·말로 넘기기)으로, studyPicture·cellName·문구 22개(fn*·miss*·why*·lead* 등)·fillCheck.readFillCheck·fillInputs.callTurnsOf 지움 — My 오늘의 학습 📞 수업 줄·Logbank 통화 칸·Languagebank가 그대로인지, saveFillCheck는 이제 읽는 곳이 없음(글자부터 버튼)",
-      "tabs": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "asks": [
-        "a261112-3-4",
-        "a261112-3-5",
-        "a261112-3-6"
-      ]
-    },
     {
       "at": "2026-11-13 14:04",
       "from": "3",
@@ -8389,10 +8394,23 @@
         "3"
       ],
       "asks": []
+    },
+    {
+      "at": "2026-11-23 20:51",
+      "from": "3",
+      "base": "2d8bd81cc97e0c2b3eb071fb7d3710a0bf557e19",
+      "head": "7056644",
+      "what": "Logbank 부족한 것 칩 이름",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261123-3-9"
+      ]
     }
   ],
   "seq": {
-    "261123-3": 8,
+    "261123-3": 9,
     "261123-2": 1
   }
 }
