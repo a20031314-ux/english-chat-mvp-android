@@ -11,6 +11,7 @@
  * - say    뜻만 보고 말하기(🎤, 대본과 같은 판정) — 늘 마지막.
  * 맞음 = 셋 중 둘 이상. 순수 모듈: 화면(TodayPlan QuizPlayer)과 테스트가 같이 쓴다.
  */
+import { posGroup } from "./vocabBank.ts";
 import { meaningDecoyKeys, wordNearMisses } from "./wordDecoys.ts";
 import { DECOYS } from "./frames/decoys/index.ts";
 import { PLAIN_DECOYS } from "./frames/decoys/plain/index.ts";
@@ -1372,7 +1373,10 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   // 낱말(퀴즈 다시 짜기 3단계, 사용자 2026-11-10 "선지가 다수일 시 고르기"): 같은 품사·모양이 비슷한 뜻 먼저, 모자라면 같은 품사 아무 모양,
   // 그다음 순위가 가까운 모양 비슷한 뜻(품사 무관) — 그래도 셋이 안 모이면 그 낱말은 퀴즈에 안 낸다(null). 스스로 체크는 뺐다(사용자 2026-11-17
   // "알아요를 누르면 그냥 맞다고 해버림" → "뜻 고르기로 대체"). 표현은 품사가 없어 예전 차례 그대로.
-  const candidates = kind === "w" ? [...shaped(shuffled(sameTopic(near), random)), ...shaped(shuffled(sameTopic(samePos), random)), ...shaped(shuffled(near, random)), ...shaped(shuffled(samePos, random)), ...shuffled(near, random), ...shuffled(samePos, random), ...shaped(shuffled(others.filter((other) => at < 0 || Math.abs(other.at - at) <= 200), random))] : [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random), ...shuffled(shaped(others), random), ...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)];
+  // 기능어(관사·전치사·대명사·조사…)는 같은 품사 뜻끼리만 — 모자라 명사 뜻으로 채우면 "the" 옆에 "피해자·전체의 양"이 붙어
+  // 한눈에 지워진다(사용자 2026-11-23 스크린샷). 같은 품사로 셋이 안 모이면 그 낱말은 안 낸다.
+  const functionWord = kind === "w" && Boolean(source.pos) && posGroup(source.pos ?? "") === "function";
+  const candidates = functionWord ? [...shaped(shuffled(near, random)), ...shuffled(samePos, random)] : kind === "w" ? [...shaped(shuffled(sameTopic(near), random)), ...shaped(shuffled(sameTopic(samePos), random)), ...shaped(shuffled(near, random)), ...shaped(shuffled(samePos, random)), ...shuffled(near, random), ...shuffled(samePos, random), ...shaped(shuffled(others.filter((other) => at < 0 || Math.abs(other.at - at) <= 200), random))] : [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random), ...shuffled(shaped(others), random), ...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)];
   // 그 예문 자리에 맞는 보기를 정해 둔 낱말·표현(wordDecoys.ts MEANING_DECOYS)은 그 뜻 먼저.
   const forced = meaningDecoyKeys(language, key).flatMap((other) => {
     const from = other.startsWith("w|") ? GAP_SOURCES.get(language) : EXPRESSION_CARDS.get(language);

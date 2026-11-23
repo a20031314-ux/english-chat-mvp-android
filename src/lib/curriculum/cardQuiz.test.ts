@@ -51,6 +51,17 @@ test("낱말 한 모양: 보기가 셋 안 모이면 그 낱말은 퀴즈에 안
   assert.equal(cardQuiz("es", "g|1:2", "show", "s"), null);
 });
 
+test("기능어 뜻 고르기: 같은 품사 뜻으로만 — 모자라면 안 냄, 명사 뜻으로 채우지 않음 (fr·ja)", () => {
+  // 사용자 2026-11-23: "the" 보기에 "피해자·전체의 양"(명사)이 붙어 한눈에 지워짐.
+  registerQuizSources("fr", [card("w|le", "Le chat dort.", "Le", "정관사", "article"), card("w|un", "Un chien court.", "Un", "하나, 임의의 하나", "article"), card("w|victime", "La victime parle.", "victime", "피해자", "noun"), card("w|total", "Le total est bon.", "total", "전체의 양", "noun"), card("w|homme", "Un homme vient.", "homme", "남자", "noun")]);
+  assert.equal(cardQuiz("fr", "w|le", "hide", "s"), null);
+  // 같은 품사(조사)가 넷이면 그 뜻들로 낸다.
+  registerQuizSources("ja", [card("w|が", "猫が寝る。", "が", "주어 표시", "particle"), card("w|を", "水を飲む。", "を", "목적어 표시", "particle"), card("w|に", "家に帰る。", "に", "~에, ~로", "particle"), card("w|で", "駅で会う。", "で", "~에서(장소)", "particle"), card("w|水", "水を飲む。", "水", "물", "noun")]);
+  const ja = cardQuiz("ja", "w|が", "hide", "s");
+  assert.equal(ja?.kind, "meaning");
+  if (ja?.kind === "meaning") assert.ok(!ja.options.some((option) => option.raw === "물"), ja.options.map((o) => o.raw).join(","));
+});
+
 test("카드 뜻 가림 오답: 빈도 순위가 가까운 같은 품사 먼저, 바로 앞 문제 보기는 다시 안 씀 (th·it)", () => {
   const many = (lang: string, words: string[]) =>
     words.map((w, i) => card(`w|${w}`, `${w} ${w}.`, w, `뜻${i}`));
