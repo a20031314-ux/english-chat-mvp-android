@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
         content: `A learner of ${target} has just answered a multiple-choice blank. For every option, in order, write in ${native}:
 - "meaning": its part of speech and its usual meaning — at most 8 words, no example, no usage notes (for a phrase, what it means as a whole).
 - "why": for the correct option, empty. For every other option, one plain sentence of at most 15 words a teacher would say about why it does not fit this blank — the grammar reason (wrong form, wrong part of speech, agreement, tense, particle) or that the meaning does not fit the sentence. Read the option together with the words right before and after the blank first: if it breaks the grammar there (two verbs in a row, a missing "to", a form the word before cannot take), that is the main reason — not a nuance of meaning. Name the one main reason; do not just say it is wrong, and do not add a second explanation. If it would actually also be correct here, say so plainly.
-Quote ${target} words with single quotes ('like this'), never with double quotes. Both "meaning" and "why" are written in ${native} — never in ${target} — quoting ${target} words only where needed. Keep the options in the order given, and copy each option exactly into "option". Reply with JSON only: {"notes":[{"option":"…","meaning":"…","why":"…"}, …]} with exactly one entry per option.`,
+Quote ${target} words with single quotes ('like this'), never with double quotes. Both "meaning" and "why" are written in ${native} — never in ${target} — quoting ${target} words only where needed. Number the options as given (1, 2, 3, …). Reply with JSON only, flat keys, one pair per option: {"meaning_1":"…","why_1":"…","meaning_2":"…","why_2":"…", …}.`,
       },
       ...(strict ? [{ role: "system" as const, content: `The last answer used the wrong language. Every "meaning" and "why" must be in ${native}.` }] : []),
       {
@@ -74,10 +74,10 @@ Quote ${target} words with single quotes ('like this'), never with double quotes
   }
   // 앱 언어 글자가 따로 있는 언어(ar·ja·ko·zh·th·hi·ru)인데 뜻이 그 글자로 안 쓰였으면 한 번 더(운영 2026-11-03 es→ar 뜻이 스페인어로 옴).
   const script = UI_SCRIPT[ui];
-  if (script && notes.length && notes.some((one) => one.meaning && !script.test(one.meaning))) {
+  if (script && notes.length && notes.some((one, i) => (one.meaning && !script.test(one.meaning)) || (i !== answer && one.why && !script.test(one.why)))) {
     await meterRequest(request, "quizOptionNotes");
     const again = parseNotes((await ask(true))?.choices[0]?.message?.content ?? "");
-    if (again.length && again.every((one) => !one.meaning || script.test(one.meaning))) notes = again;
+    if (again.length && again.every((one, i) => (!one.meaning || script.test(one.meaning)) && (i === answer || !one.why || script.test(one.why)))) notes = again;
   }
   // 빈 답이면 점검 사용자(simcheck-)에게만 모델 답을 보인다 — 왜 비었는지 보려고.
   if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [], ...simDetail(request, `${parseError} len=${firstRaw.length} n=${notes.length} ${firstRaw.slice(0, 120)}`) });
@@ -87,19 +87,10 @@ Quote ${target} words with single quotes ('like this'), never with double quotes
   function parseNotes(reply: string): Note[] {
   let notes: Note[] = [];
   try {
-    const parsed = readReply(reply);
-    // 목록을 글로 한 번 더 싸서 보내는 일이 있다({"notes":"[{…}]"}, 운영 2026-11-23 — 그동안 보기 설명이 통째로 비었음).
-    if (typeof parsed.notes === "string") parsed.notes = JSON.parse(parsed.notes.replace(/\\'/g, "'")) as unknown;
-    if (Array.isArray(parsed.notes)) {
-      // 모델이 정답을 앞으로 옮겨 쓰는 일이 있었다(운영 2026-11-03 es: 뜻이 한 칸씩 밀림) — 보기 글로 짝을 맞추고, 못 맞추면 순서대로.
-      const rows = parsed.notes.map((one) => (one ?? {}) as Record<string, unknown>);
-      const norm = (value: unknown) => (typeof value === "string" ? value.trim().toLocaleLowerCase() : "");
-      const byText = options.map((option) => rows.find((row) => norm(row.option) === option.trim().toLocaleLowerCase()));
-      const matched = byText.every(Boolean);
-      notes = options.map((_, i) => {
-        const row = (matched ? byText[i] : rows[i]) ?? {};
-        return { meaning: text(row.meaning, 120), why: i === answer ? "" : text(row.why, 200) };
-      });
+    const parsed = readReply(reply) as Record<string, unknown>;
+    // 평평한 열쇠(meaning_1·why_1 …) — 목록으로 받으면 Haiku가 글로 싸며 안쪽 따옴표를 깨뜨려 보기 설명이 통째로 비었다(운영 2026-11-23).
+    if (options.every((_, i) => typeof parsed[`meaning_${i + 1}`] === "string")) {
+      notes = options.map((_, i) => ({ meaning: text(parsed[`meaning_${i + 1}`], 120), why: i === answer ? "" : text(parsed[`why_${i + 1}`], 200) }));
     }
   } catch (error) {
     parseError = error instanceof Error ? error.message.slice(0, 120) : "parse";
@@ -119,19 +110,7 @@ const UI_SCRIPT: Record<string, RegExp> = {
   ru: /\p{Script=Cyrillic}/u,
 };
 
-/**
- * 모델 답 읽기. 목록을 글로 싸서 보내며 그 안의 따옴표를 잘못 벗기는 일이 있어({"notes":"[{\"why\":\"\\"I'm\\" …"}]"},
- * 운영 2026-11-23 — 보기 설명이 통째로 비었음) 그대로 안 읽히면 싼 글을 한 겹 벗겨 다시 읽는다.
- */
-function readReply(reply: string): { notes?: unknown } {
-  const body = reply.slice(reply.indexOf("{"), reply.lastIndexOf("}") + 1);
-  try {
-    return JSON.parse(body) as { notes?: unknown };
-  } catch {
-    const start = body.indexOf("[");
-    const end = body.lastIndexOf("]");
-    if (start < 0 || end <= start) throw new Error("no list");
-    const inner = body.slice(start, end + 1).replace(/\\\\/g, "\\").replace(/\\"/g, '"');
-    return { notes: JSON.parse(inner) as unknown };
-  }
+/** 모델 답 읽기(첫 { 부터 마지막 } 까지). */
+function readReply(reply: string): unknown {
+  return JSON.parse(reply.slice(reply.indexOf("{"), reply.lastIndexOf("}") + 1));
 }
