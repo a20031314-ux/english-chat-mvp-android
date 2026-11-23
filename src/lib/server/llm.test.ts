@@ -254,6 +254,10 @@ test("도구 입력이 한 겹 싸여 오면 벗긴다", () => {
   assert.deepEqual(unwrapToolInput({ respond: '{"assistantMessage":"¡Vale!"}' }), { assistantMessage: "¡Vale!" });
   assert.deepEqual(unwrapToolInput({ assistantMessage: "いいね", spokenReply: "" }), { assistantMessage: "いいね", spokenReply: "" });
   assert.equal(unwrapToolInput(null), undefined);
+  // 답 칸이 같은 이름으로 한 겹 더(번역, 2026-11-23) — 프랑스어·러시아어 답
+  assert.deepEqual(unwrapToolInput({ translated: { translated: "Ah, t'es débordé ?" } }), { translated: "Ah, t'es débordé ?" });
+  assert.deepEqual(unwrapToolInput({ translated: { translated: "Ты занят?" } }), { translated: "Ты занят?" });
+  assert.deepEqual(unwrapToolInput({ map: { title: "x" } }), { map: { title: "x" } });
 });
 
 test("Sonnet·Opus는 도구 강제 없이 auto(5.5 세대가 강제를 거절)", () => {

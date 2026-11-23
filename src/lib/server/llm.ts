@@ -336,6 +336,11 @@ export function unwrapToolInput(input: unknown): Record<string, unknown> | undef
   if (!input || typeof input !== "object" || Array.isArray(input)) return undefined;
   const obj = input as Record<string, unknown>;
   const keys = Object.keys(obj);
+  // {"translated": {"translated": "…"}} — the answer's own key wrapped once more (Haiku, translate 2026-11-23).
+  if (keys.length === 1) {
+    const inner = obj[keys[0]];
+    if (inner && typeof inner === "object" && !Array.isArray(inner) && keys[0] in (inner as Record<string, unknown>)) return inner as Record<string, unknown>;
+  }
   if (keys.length === 1 && ["respond", "response", "input", "answer", "json"].includes(keys[0])) {
     const inner = obj[keys[0]];
     if (inner && typeof inner === "object" && !Array.isArray(inner)) return inner as Record<string, unknown>;
