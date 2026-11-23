@@ -92,6 +92,7 @@ export async function POST(request: NextRequest) {
 
   try {
     // Haiku가 가끔 번역 칸을 비우거나 원문을 그대로 돌려준다(가상 사용자 98번 중 4번, 2026-10-22 release271) — 한 번만 다시.
+    let lastRaw = "";
     const translateOnce = async (): Promise<string | null> => {
       const completion = await completeChat(client, "translate", {
         messages: [
@@ -117,6 +118,7 @@ export async function POST(request: NextRequest) {
       });
       const raw = completion.choices[0]?.message?.content;
       if (!raw) return null;
+      lastRaw = raw;
       return pickTranslation(JSON.parse(raw), text);
     };
     const echoed = (value: string | null) => !value || value === text.trim();
@@ -131,7 +133,8 @@ export async function POST(request: NextRequest) {
     const translated = first || text;
 
     if (lineKey && translated !== text) void keepVideoLine(lineKey, translated);
-    return jsonWithCors(request, { translated });
+    // 원문이 그대로 나가면 가상 사용자(simcheck-)에게만 모델 답을 보인다 — 왜 그런지 보려고.
+    return jsonWithCors(request, { translated, ...(translated === text ? simDetail(request, lastRaw) : {}) });
   } catch (error) {
     console.error("[translate]", error);
     return jsonWithCors(request, { error: "TRANSLATION_FAILED", ...simDetail(request, error) }, { status: 500 });
