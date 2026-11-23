@@ -7,14 +7,14 @@
 
 | 단계 | 후보 | 바꿀 곳 | 지금 → 후보 | 손익(한 사람 한 달, 가장 크게 바뀐 요금) | 품질 시험 | 종료 | 왜 |
 |---|---|---|---|---|---|---|---|
-| **지켜봄** | gpt-6.1-terra (openai) | chatVerify·scriptRecheck·scriptChoices·fixedLesson·wordSenses·roleplayReview·curriculumMap·curriculumMapFill | claude-sonnet-5-5 → gpt-6.1-terra | 라이트 4,900원 많이 쓰는 사람 +265원 | 큰 문제 4.5% (지금 12.4%) · 2613ms (지금 2307ms) · 178줄 | — | 손익 차이 작음 — 2026-10-26 출시, Sonnet 5.5($2/$10)의 절반 값 — 지금 Sonnet이 맡은 기능(교정 확인·대본 다시 보기·고르기 오답·통화 돌아보기·지도 그리기) 대신. 통화 돌아보기 대비 gpt-5.6-terra($2/$12)보다도 쌈 |
+| **지켜봄** | gpt-6.1-terra (openai) | chatVerify·scriptRecheck·spotJudge·fixedLesson·wordSenses·roleplayReview·curriculumMap·curriculumMapFill | claude-sonnet-5-5 → gpt-6.1-terra | 라이트 4,900원 많이 쓰는 사람 +265원 | 큰 문제 4.5% (지금 12.4%) · 2613ms (지금 2307ms) · 178줄 | — | 손익 차이 작음 — 2026-10-26 출시, Sonnet 5.5($2/$10)의 절반 값 — 지금 Sonnet이 맡은 기능(교정 확인·대본 다시 보기·틀린 곳 판정·통화 돌아보기·지도 그리기) 대신. 통화 돌아보기 대비 gpt-5.6-terra($2/$12)보다도 쌈 |
 | **지켜봄** | scribe_v3 (elevenlabs) | turnTranscribe·secondTranscribe·videoTranscribe | scribe_v2 → scribe_v3 | 라이트 4,900원 많이 쓰는 사람 +56원 | — | — | 손익 차이 작음 — 2026-11-10 출시, Scribe v2와 같은 값(시간당 $0.20)에 낱말 오류 27% 적다고 발표(102개 언어) — 모델 이름만 바꾸면 됨. 학습자 발음은 시험 안 함(받아쓰기라 사람이 샘플을 들어 볼 것). 실시간 v3 Live는 $0.22 |
-| **지켜봄** | gpt-6-luna (openai) | chat·howToSay·roomFix·roomGame·translate·vocab·analysis·expression·notes·learnerAsk·roleplayContext·video·vision·roleplayPractice·scriptJudge·learnerRead·ask·callReplay·roleplayBranch | claude-haiku-5-5 → gpt-6-luna | 변화 없음 | 아직 | — | 손익 차이 작음 — Haiku 5.5와 같은 값($0.10/$0.50)의 OpenAI 작은 모델 — 이미 대비 모델·통화 튜터로 씀. 값이 같아 손익 차이가 생길 때만 시험 |
+| **지켜봄** | gpt-6-luna (openai) | chat·howToSay·roomFix·roomGame·translate·vocab·analysis·expression·notes·learnerAsk·roleplayContext·video·vision·roleplayPractice·scriptJudge·learnerRead·ask·callReplay·spotMake·roleplayHint | claude-haiku-5-5 → gpt-6-luna | 변화 없음 | 아직 | — | 손익 차이 작음 — Haiku 5.5와 같은 값($0.10/$0.50)의 OpenAI 작은 모델 — 이미 대비 모델·통화 튜터로 씀. 값이 같아 손익 차이가 생길 때만 시험 |
 
 ## gpt-6.1-terra — 지켜봄
 
-- 가격: {"input":1,"output":5} · 근거 https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol (제3자 기준 — OpenAI 출시 글 인용) · compareai.today 2026-11 같은 값(제3자 기준) · 확인 2026-11-16
-- 계산: 2026-11-16 · 커밋 8d7a828b · 바뀐 칸 187
+- 가격: {"input":1,"output":5} · 근거 https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol (제3자 기준 — OpenAI 출시 글 인용) · compareai.today 2026-11 같은 값(제3자 기준) · 확인 2026-11-23
+- 계산: 2026-11-23 · 커밋 15c2c682 · 바뀐 칸 187
   - 대본 플랜 2,900원 많이 쓰는 사람: 1,226원 → 1,490원 (+264원)
   - 라이트 4,900원 많이 쓰는 사람: 974원 → 1,239원 (+265원)
   - 플러스 6,500원 많이 쓰는 사람: 2,308원 → 2,573원 (+265원)
@@ -27,12 +27,12 @@
   - 프리미엄 12,900원 한 사람: 6,139원 → 6,403원 (+264원)
   - 가입자 1,000명당(광고 중간·전환 2%): 474,077원 → 597,084원 (+123,007원)
 - 품질 시험 2026-11-01: 같은 28명·같은 문장 — 큰 문제 4.5% vs 지금 12.4%, 오류 0% vs 0%, 응답 중앙 2613ms vs 2307ms. 채팅 교정으로 본 대리 지표. 후보만 틀린 예: 맥락: 튜터가 본 적 없는 집을 'adorei a casa'라며 없던 일을 전제함 / 맥락: 숙제 에세이를 대신 써 주겠다고 받아들임(휘말림)
-- 바꾸는 법: Vercel `MODEL_ROUTES`에 {"chatVerify":"openai: gpt-6.1-terra","scriptRecheck":"openai: gpt-6.1-terra","scriptChoices":"openai: gpt-6.1-terra","fixedLesson":"openai: gpt-6.1-terra","wordSenses":"openai: gpt-6.1-terra","roleplayReview":"openai: gpt-6.1-terra","curriculumMap":"openai: gpt-6.1-terra","curriculumMapFill":"openai: gpt-6.1-terra"} (먼저 운영 확인) → 좋으면 `src/lib/aiDefaults.ts` DEFAULT_ROUTES
+- 바꾸는 법: Vercel `MODEL_ROUTES`에 {"chatVerify":"openai: gpt-6.1-terra","scriptRecheck":"openai: gpt-6.1-terra","spotJudge":"openai: gpt-6.1-terra","fixedLesson":"openai: gpt-6.1-terra","wordSenses":"openai: gpt-6.1-terra","roleplayReview":"openai: gpt-6.1-terra","curriculumMap":"openai: gpt-6.1-terra","curriculumMapFill":"openai: gpt-6.1-terra"} (먼저 운영 확인) → 좋으면 `src/lib/aiDefaults.ts` DEFAULT_ROUTES
 
 ## scribe_v3 — 지켜봄
 
-- 가격: {"perMinute":0.00333} · 근거 https://elevenlabs.io/pricing/api (공식, 2026-11-16) · https://letsdatascience.com/news/elevenlabs-launches-scribe-v3-and-v3-live-speech-to-text-mod-82ce234a · 확인 2026-11-16
-- 계산: 2026-11-16 · 커밋 8d7a828b · 바뀐 칸 187
+- 가격: {"perMinute":0.00333} · 근거 https://elevenlabs.io/pricing/api (공식, 2026-11-16) · https://letsdatascience.com/news/elevenlabs-launches-scribe-v3-and-v3-live-speech-to-text-mod-82ce234a · 확인 2026-11-23
+- 계산: 2026-11-23 · 커밋 15c2c682 · 바뀐 칸 187
   - 대본 플랜 2,900원 많이 쓰는 사람: 1,226원 → 1,240원 (+14원)
   - 라이트 4,900원 많이 쓰는 사람: 974원 → 1,030원 (+56원)
   - 플러스 6,500원 많이 쓰는 사람: 2,308원 → 2,364원 (+56원)

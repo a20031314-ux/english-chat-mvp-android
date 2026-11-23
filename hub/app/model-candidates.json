@@ -7,7 +7,7 @@
   "tasks": [
    "chatVerify",
    "scriptRecheck",
-   "scriptChoices",
+   "spotJudge",
    "fixedLesson",
    "wordSenses",
    "roleplayReview",
@@ -20,12 +20,12 @@
   },
   "replaces": "claude-sonnet-5-5",
   "deadline": null,
-  "why": "2026-10-26 출시, Sonnet 5.5($2/$10)의 절반 값 — 지금 Sonnet이 맡은 기능(교정 확인·대본 다시 보기·고르기 오답·통화 돌아보기·지도 그리기) 대신. 통화 돌아보기 대비 gpt-5.6-terra($2/$12)보다도 쌈",
+  "why": "2026-10-26 출시, Sonnet 5.5($2/$10)의 절반 값 — 지금 Sonnet이 맡은 기능(교정 확인·대본 다시 보기·틀린 곳 판정·통화 돌아보기·지도 그리기) 대신. 통화 돌아보기 대비 gpt-5.6-terra($2/$12)보다도 쌈",
   "source": "https://aiweekly.co/alerts/openai-ships-gpt-61-terra-at-15-per-million-half-of-sol (제3자 기준 — OpenAI 출시 글 인용) · compareai.today 2026-11 같은 값(제3자 기준)",
-  "checked": "2026-11-16",
+  "checked": "2026-11-23",
   "cost": {
-   "at": "2026-11-16",
-   "commit": "8d7a828b",
+   "at": "2026-11-23",
+   "commit": "15c2c682",
    "changed": 187,
    "head": [
     {
@@ -141,7 +141,8 @@
    "learnerRead",
    "ask",
    "callReplay",
-   "roleplayBranch"
+   "spotMake",
+   "roleplayHint"
   ],
   "price": {
    "input": 0.1,
@@ -151,11 +152,11 @@
   "deadline": null,
   "why": "Haiku 5.5와 같은 값($0.10/$0.50)의 OpenAI 작은 모델 — 이미 대비 모델·통화 튜터로 씀. 값이 같아 손익 차이가 생길 때만 시험",
   "source": "https://letsdatascience.com/news/openai-and-anthropic-release-lower-cost-ai-models-bae08745 (제3자 기준 — 업체 발표 가격)",
-  "checked": "2026-11-16",
+  "checked": "2026-11-23",
   "cost": {
-   "at": "2026-11-16",
-   "commit": "8d7a828b",
-   "changed": 91,
+   "at": "2026-11-23",
+   "commit": "15c2c682",
+   "changed": 92,
    "head": [],
    "best": 0,
    "worst": 0
@@ -178,10 +179,10 @@
   "deadline": null,
   "why": "2026-11-10 출시, Scribe v2와 같은 값(시간당 $0.20)에 낱말 오류 27% 적다고 발표(102개 언어) — 모델 이름만 바꾸면 됨. 학습자 발음은 시험 안 함(받아쓰기라 사람이 샘플을 들어 볼 것). 실시간 v3 Live는 $0.22",
   "source": "https://elevenlabs.io/pricing/api (공식, 2026-11-16) · https://letsdatascience.com/news/elevenlabs-launches-scribe-v3-and-v3-live-speech-to-text-mod-82ce234a",
-  "checked": "2026-11-16",
+  "checked": "2026-11-23",
   "cost": {
-   "at": "2026-11-16",
-   "commit": "8d7a828b",
+   "at": "2026-11-23",
+   "commit": "15c2c682",
    "changed": 187,
    "head": [
     {
