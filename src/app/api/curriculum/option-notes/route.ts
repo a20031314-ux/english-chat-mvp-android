@@ -4,7 +4,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { coerceLanguageCode, INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 import { completeChat } from "@/lib/server/llm";
 import { kvGetJson, kvSetJson } from "@/lib/server/kv";
-import { meterRequest } from "@/lib/server/meterRequest";
+import { meterRequest, simDetail } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 
 export const dynamic = "force-dynamic";
@@ -64,7 +64,8 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
       },
     ],
   }).catch(() => null);
-  let notes = parseNotes((await ask(false))?.choices[0]?.message?.content ?? "");
+  const firstRaw = (await ask(false))?.choices[0]?.message?.content ?? "";
+  let notes = parseNotes(firstRaw);
   // 앱 언어 글자가 따로 있는 언어(ar·ja·ko·zh·th·hi·ru)인데 뜻이 그 글자로 안 쓰였으면 한 번 더(운영 2026-11-03 es→ar 뜻이 스페인어로 옴).
   const script = UI_SCRIPT[ui];
   if (script && notes.length && notes.some((one) => one.meaning && !script.test(one.meaning))) {
@@ -72,7 +73,8 @@ Both "meaning" and "why" are written in ${native} — never in ${target} — quo
     const again = parseNotes((await ask(true))?.choices[0]?.message?.content ?? "");
     if (again.length && again.every((one) => !one.meaning || script.test(one.meaning))) notes = again;
   }
-  if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [] });
+  // 빈 답이면 점검 사용자(simcheck-)에게만 모델 답을 보인다 — 왜 비었는지 보려고.
+  if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [], ...simDetail(request, firstRaw.slice(0, 600)) });
   if (!mine) await kvSetJson(key, notes, TTL).catch(() => undefined);
   return jsonWithCors(request, { notes });
 

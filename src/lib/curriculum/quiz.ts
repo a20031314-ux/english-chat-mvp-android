@@ -66,7 +66,7 @@ export type QuizQuestion =
    * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
    */
-  | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; from: string; near?: string[]; mine?: boolean; /** 앞 문맥 한 줄(누를 수 없음, 틀린 곳 데이터 shape "l"). */ lead?: string; /** 늘 틀린 곳이 있음(틀린 곳 데이터) — "틀린 곳 없음" 버튼 없음. */ hasError?: true; /** 선지(게이지 아래쪽): 이 칸만 칸 색 밑줄로, 이 칸만 누를 수 있음. */ picks?: number[]; /** 뜻이 틀린 곳(type meaning)이면 뜻 줄이 답이라 답한 뒤에만. */ glossAfter?: true }
+  | { kind: "spot"; text: string; right: string; words: string[]; bad: number[]; want: string; gloss?: ScriptGloss; note?: string; /** 틀린 곳 데이터의 왜(답한 뒤, 사용자 2026-11-23 "근거가 부족해"). */ why?: ScriptGloss; from: string; near?: string[]; mine?: boolean; /** 앞 문맥 한 줄(누를 수 없음, 틀린 곳 데이터 shape "l"). */ lead?: string; /** 늘 틀린 곳이 있음(틀린 곳 데이터) — "틀린 곳 없음" 버튼 없음. */ hasError?: true; /** 선지(게이지 아래쪽): 이 칸만 칸 색 밑줄로, 이 칸만 누를 수 있음. */ picks?: number[]; /** 뜻이 틀린 곳(type meaning)이면 뜻 줄이 답이라 답한 뒤에만. */ glossAfter?: true }
   /**
    * 복합 빈칸(2026-11-01 사용자 "복합퀴즈 — 한 문제에 학습 소재가 여러 개"): 한 문장에 이미 맞힌 소재 둘·셋을 동시에 비운다.
    * chunks = 빈칸 사이 글(빈칸 수 + 1개), blanks = 빈칸마다 열쇠·답·헷갈리는 오답. 결과는 빈칸마다 그 열쇠에(curriculum/multiQuiz.ts).
@@ -78,7 +78,7 @@ export type QuizQuestion =
    */
   | { kind: "talk"; text: string; lines: { who: "me" | "them"; text: string; gloss?: string }[]; at: number; before: string; after: string; answer: string; near?: string[]; options?: string[]; mine?: boolean; from: string }
   /** 복합 틀린 곳(같은 날): 한 문장에 확실히 틀린 꼴이 둘·셋 — 모두 찾아 고친다. errors마다 그 열쇠·낱말 자리·바른 말. */
-  | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[] }[]; gloss: ScriptGloss; from: string; /** 문단(story-errors P1~P4): 선지 칸 · 틀린 곳 수를 안 보임(P4·게이지 위쪽). */ picks?: number[]; hideCount?: true; /** 뜻이 틀린 곳이 든 문단 — 뜻 줄은 답한 뒤에만(체감 점검 2026-11-12 "해석의 일찍과 비교만 하면 late가 보임"). */ glossAfter?: true }
+  | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[]; /** 문단: 틀린 꼴·왜 틀렸나(데이터, 앱 언어는 quizGloss). */ wrong?: string; why?: ScriptGloss }[]; gloss: ScriptGloss; from: string; /** 문단(story-errors P1~P4): 선지 칸 · 틀린 곳 수를 안 보임(P4·게이지 위쪽). */ picks?: number[]; hideCount?: true; /** 뜻이 틀린 곳이 든 문단 — 뜻 줄은 답한 뒤에만(체감 점검 2026-11-12 "해석의 일찍과 비교만 하면 late가 보임"). */ glossAfter?: true }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   /** 낱말 스스로 체크(그럴듯한 보기가 셋 안 모일 때): 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 → [맞았어요 | 틀렸어요]. */
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string; /** 카드 모양(개편, cardQuiz) — 낱말·예문은 보이고 뜻 칸만 가림. */ card?: QuizCardFace };

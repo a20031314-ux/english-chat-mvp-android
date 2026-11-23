@@ -16,7 +16,7 @@ import { buildQuiz, firstCue, fixedRight, formChoice, joinWords, moreExamples, n
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
-import { quizGloss, SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
+import { quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
 import { useBankTone } from "@/components/studyMap/bankTone";
 import { multiBlankRight, spotsFixRight, type MultiQuestion, type SpotsQuestion } from "@/lib/curriculum/multiQuiz";
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
@@ -510,6 +510,11 @@ function Explain({ question, tag }: { question: Extract<QuizQuestion, { kind: "f
   );
 }
 
+/** 틀린 곳 데이터의 "왜"(한국어·영어로 씀) — 한국어 앱은 한국어, 그 밖은 영어(다른 앱 언어 옮김은 아직 없음). 정답이 아니라 이유라 영어 학습자에게도 보인다. */
+function whyText(why: ScriptGloss, locale: string): string {
+  return (locale === "ko" ? why.ko : why.en) ?? why.en ?? "";
+}
+
 type Graded = "exact" | "loose" | "also" | false;
 
 /** 원래 정답과 다른데 맞음으로 본 답 아래 한 줄: "이 답도 맞아요. 원래 정답: X". */
@@ -915,6 +920,11 @@ function SpotView({
           {question.note}
         </p>
       ) : null}
+      {answered && question.why ? (
+        <p dir="auto" data-quiz-why className="text-caption text-slate-300">
+          {whyText(question.why, locale)}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -947,7 +957,8 @@ function ChooseView({
   const [fitting, setFitting] = useState<number[]>([]);
   const { checking, grade } = useTypedGrade(language);
   const shown = answered ? question.options[question.answer]! : "＿＿＿";
-  const notes = useOptionNotes(answered && !question.prepared ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer, mine: question.mine } : null, language, locale);
+  // 넣어 둔 문제도 보기마다 뜻·왜 안 맞나(사용자 2026-11-23 "틀린 선지, 맞는 선지의 근거가 부족해" — 한 줄 why만으로는 will이 왜 아닌지 안 보임).
+  const notes = useOptionNotes(answered ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer, mine: question.mine } : null, language, locale);
   return (
     <div className="flex flex-col gap-3">
       {/* 문법(g|)은 뜻이 인칭·시제를 하나로 정한다(체감 점검 2026-11-19 Tiene/Tengo·Pueden/Puedes·Llovía/Llovió·should/must) — 뜻 먼저. 표현은 뜻이 답이 될 수 있어 같은 낱말 꼴일 때만. */}
@@ -1407,7 +1418,8 @@ function SpotsView({ ui, locale, language, question, answered, onAnswer, tag }: 
           {question.errors.map((error, i) => (
             <p key={i} dir="auto" className="text-caption text-slate-300">
               <span aria-hidden className={done[i] ? "text-good" : "text-bad"}>{done[i] ? "✓ " : "✗ "}</span>
-              <bdi className="text-slate-500 line-through">{error.near[0]}</bdi> → <bdi className={`font-semibold ${tone.accent}`}>{error.want}</bdi>
+              <bdi className="text-slate-500 line-through">{error.near[0] ?? error.wrong}</bdi> → <bdi className={`font-semibold ${tone.accent}`}>{error.want}</bdi>
+              {error.why ? <span data-quiz-why className="block text-meta text-slate-400">{whyText(error.why, locale)}</span> : null}
             </p>
           ))}
           <div className="mt-1 flex items-start gap-2 rounded-xl bg-white/[0.04] px-3 py-2">

@@ -67,6 +67,7 @@ export function spotQuestion(item: SpotItem, language: string, key: string, numb
     want: err.right,
     gloss: { en: item.gloss.en, ko: item.gloss.ko },
     note: "",
+    why: { en: err.why.en, ko: err.why.ko },
     from: key,
     hasError: true,
     ...(err.type === "meaning" || !first ? { glossAfter: true as const } : {}),
@@ -85,7 +86,7 @@ export function paragraphQuestion(item: SpotItem, language: string, first = true
     total += cells.length;
   }
   const words = lineCells.flat();
-  const errors = item.errors.map((err) => ({ key: err.g ?? (err.w ? `w|${err.w}` : `g|${item.stage}:0`), bad: [offsets[err.line]! + err.at], want: err.right, near: [] as string[] }));
+  const errors = item.errors.map((err) => ({ key: err.g ?? (err.w ? `w|${err.w}` : `g|${item.stage}:0`), bad: [offsets[err.line]! + err.at], want: err.right, near: [] as string[], wrong: err.wrong, why: { en: err.why.en, ko: err.why.ko } }));
   if (errors.some((err) => !words[err.bad[0]!])) return null;
   const fixed = item.lines.map((line, li) => {
     let out = line;
