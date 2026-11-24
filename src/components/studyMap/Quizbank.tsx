@@ -420,7 +420,10 @@ export function Quizbank({
     }
     // 같은 단계 문법은 이 학습자에게 무거운 칸(모국어·아는 언어에 없는 개념)부터 — 프로필 모국어 → 국적 → 앱 언어.
     const speaks = learnerLanguages(factsOf(readCachedAccount()?.profile.facts), locale).known;
-    const head = prepared ? pickPrepared(prepared, { stage, grammar: counts.g, expression: prepared.some((item) => item.kind === "expression") ? counts.e : 0, skip: new Set([...lastCircle.current, ...preparedRest(language, prepared)]), ...(speaks.length ? { weight: (key: string) => knownSlotWeight(speaks, language, key) } : {}) }) : [];
+    // 칸마다 마지막으로 퀴즈에 낸 때(이 폰 장부) — 오래된 칸부터 돌린다.
+    const lastAsked = new Map<string, number>();
+    for (const event of readLedger(language)) if (event.src === "quiz" && event.t > (lastAsked.get(event.k) ?? 0)) lastAsked.set(event.k, event.t);
+    const head = prepared ? pickPrepared(prepared, { stage, lastAt: (key) => lastAsked.get(key) ?? 0, grammar: counts.g, expression: prepared.some((item) => item.kind === "expression") ? counts.e : 0, skip: new Set([...lastCircle.current, ...preparedRest(language, prepared)]), ...(speaks.length ? { weight: (key: string) => knownSlotWeight(speaks, language, key) } : {}) }) : [];
     lastCircle.current = new Set([...head.map((item) => item.key), ...keys]);
     if (!keys.length && !head.length) return null;
     void growBank(language, locale, keys.map((key) => ({ key, stage })));

@@ -105,3 +105,17 @@ test("turnFresh: 최근에 낸 문장은 건너뛰고 다음 차례, 다 냈으�
     assert.equal(turnFresh(item, 1, [line, v1, v2]).line, v1);
   }
 });
+
+test("pickPrepared: 오래 안 낸 칸부터 돌림 — 어제 낸 be동사보다 안 낸 칸 먼저 (en·ja)", () => {
+  const item = (key: string, stage = 1): PreparedItem => ({ key, kind: "grammar", stage, gloss: "", before: "", after: "", answer: "a", options: ["a", "b"], line: "a", why: "" });
+  const items = [item("g|1:0"), item("g|1:1"), item("g|1:2"), item("g|1:3")];
+  const asked: Record<string, number> = { "g|1:0": 200, "g|1:1": 100 };
+  const picked = pickPrepared(items, { stage: 1, grammar: 2, expression: 0, lastAt: (key) => asked[key] ?? 0, weight: (key) => (key === "g|1:0" ? 1.5 : 1) });
+  assert.deepEqual(picked.map((one) => one.key), ["g|1:2", "g|1:3"]);
+  // 다 냈으면 가장 오래전 것부터.
+  const all: Record<string, number> = { "g|1:0": 400, "g|1:1": 100, "g|1:2": 300, "g|1:3": 200 };
+  assert.deepEqual(pickPrepared(items, { stage: 1, grammar: 2, expression: 0, lastAt: (key) => all[key] ?? 0 }).map((one) => one.key), ["g|1:1", "g|1:3"]);
+  // 같은 규칙이 일본어 칸에도(언어와 상관없음).
+  const ja = [item("g|1:0"), item("g|1:1")];
+  assert.deepEqual(pickPrepared(ja, { stage: 1, grammar: 1, expression: 0, lastAt: (key) => (key === "g|1:0" ? 50 : 0) }).map((one) => one.key), ["g|1:1"]);
+});

@@ -100,11 +100,16 @@ export function chooseFromPrepared(item: PreparedItem, first = true): QuizQuesti
 /** 지금 단계의 문법, 그다음 표현. 앞 단계는 그 단계가 떨어졌을 때만. 더 높은 단계는 넣지 않는다. */
 export function pickPrepared(
   items: readonly PreparedItem[],
-  options: { stage: number; skip?: ReadonlySet<string>; grammar?: number; expression?: number; weight?: (key: string) => number },
+  options: { stage: number; skip?: ReadonlySet<string>; grammar?: number; expression?: number; weight?: (key: string) => number; lastAt?: (key: string) => number },
 ): PreparedItem[] {
   const skip = options.skip ?? new Set<string>();
-  // 언어 조합 비중(languagePairs.ts knownSlotWeight, 2026-11-08): 같은 단계 안에서 무거운 칸(모국어에 없는 개념)부터, 같으면 원래 차례.
-  const heavier = (list: PreparedItem[]) => (options.weight ? list.map((item, i) => ({ item, i, w: options.weight!(item.key) })).sort((a, b) => b.w - a.w || a.i - b.i).map((one) => one.item) : list);
+  // 마지막으로 낸 때가 오래된 칸부터(안 낸 칸 = 0이 맨 앞) — 차례가 고정이라 날마다 첫 묶음이 be동사였음(사용자 2026-11-24 "문법 요소가 여러 개인데 왜 be동사만").
+  // 같으면 언어 조합 비중(languagePairs.ts knownSlotWeight, 2026-11-08: 모국어에 없는 개념부터), 그다음 원래 차례.
+  const heavier = (list: PreparedItem[]) =>
+    list
+      .map((item, i) => ({ item, i, at: options.lastAt?.(item.key) ?? 0, w: options.weight?.(item.key) ?? 1 }))
+      .sort((a, b) => a.at - b.at || b.w - a.w || a.i - b.i)
+      .map((one) => one.item);
   const take = (kind: PreparedItem["kind"], n: number) => {
     const open = items.filter((item) => item.kind === kind && item.stage <= options.stage && !skip.has(item.key));
     const here = heavier(open.filter((item) => item.stage === options.stage));
