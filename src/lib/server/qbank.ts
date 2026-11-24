@@ -96,7 +96,7 @@ async function makeGrammar(language: string, key: string, entry: BankEntry, onJu
 Write four NEW short, natural, everyday sentences in ${name} that each clearly use this grammar point. Level ${slot.stage}: ${slot.stage <= 1 ? "very short, simple words only" : slot.stage <= 3 ? "short, common words" : "natural everyday length"}. Different situations from each other and from the sentences given. No digits (write numbers as words), no names of real people or brands, nothing rude.
 For each sentence give the exact part (as written in the sentence) that shows this grammar point — it becomes the blank — and three wrong options for that blank: forms a learner would really produce by getting THIS grammar point wrong (wrong conjugation, agreement, tense, particle/case/preposition, word order). Each wrong option must be grammatically wrong in this sentence in every reading — the sentence must hold a clear clue (subject, time word, auxiliary, agreement). Never an acceptable alternative (no contraction, synonym, politeness or spelling variant that is also correct), never a misspelling or a made-up word, never a different meaning that would also fit.
 Then one short English sentence saying which clue in the sentence decides the answer.
-G|<sentence in ${name}>|<English translation>|<the blank part exactly as in the sentence>|<wrong;wrong;wrong>|<why in English>
+G|<sentence in ${name}>|<plain literal English translation — nothing added or explained>|<the blank part exactly as in the sentence>|<wrong;wrong;wrong>|<why in English>
 Answer with exactly four G lines, nothing else.`,
       },
       { role: "user", content: `Sentences already used (do not repeat): ${have.join(" / ")}` },
@@ -234,8 +234,10 @@ export async function bankFor(language: string, key: string, stage: number, resu
         // 오답은 조각의 기본 꼴에 붙인다(예문마다 대소문자가 달라도 같은 칸).
         const slot = target.piece;
         const list = [...(entry.decoys[slot] ?? [])];
+        // 문법 칸은 문장마다 제 오답이라 조각 오답 묶음이 없다.
+        if (grammar) more.decoys.length = 0;
         for (const decoy of more.decoys) if (acceptDecoy(slot, decoy, list) && !entry.items.some((item) => item.t.toLocaleLowerCase().includes(decoy.toLocaleLowerCase()))) list.push({ d: decoy, n: 0, k: 0 });
-        entry.decoys[slot] = list.slice(-6);
+        if (!grammar) entry.decoys[slot] = list.slice(-6);
         // 하나도 못 건졌으면 모델 답을 묶음에 잠깐 남긴다(점검 — 앱에는 안 감, 다음 성장 때 덮임).
         (entry as BankEntry & { last?: string }).last = !more.items.length || (!grammar && !list.length) ? more.raw.slice(0, 2400) : "";
         entry.grownAt = entry.served;
