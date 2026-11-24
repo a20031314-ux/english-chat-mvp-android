@@ -366,7 +366,7 @@ export function FrameLesson({
   // 문법 칸 이름에 퀴즈·대화의 답이 그대로 든 경우(예: "A は B です" — 답 は): 그 단계에서는 답 자리를 가림(RULES 11①, 사용자 2026-11-24).
   const answersHere = useMemo(() => {
     const out = questions.flatMap((q) =>
-      q.kind === "choose" ? [q.options[q.answer] ?? ""] : q.kind === "type" && !q.whole ? [q.answer] : q.kind === "spot" ? [q.want] : [],
+      q.kind === "choose" ? [q.options[q.answer] ?? ""] : q.kind === "type" ? [q.answer] : q.kind === "spot" ? [q.want] : [],
     );
     for (const one of turns) {
       const piece = pieceOfTurn(one);
