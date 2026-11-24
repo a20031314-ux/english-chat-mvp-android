@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (135)
+## 탭이 확인할 것 (137)
 
 ### 탭 1 메인
 
@@ -159,6 +159,10 @@
 - **a261124-3-4** (2026-11-24 23:01, 탭 3 · 69f16fe) Quizbank: 그 단계 문법 칸 다 끝내면 위로·1~5단계 끝나면 다음 회차(같은 칸 새 문장), 문제은행이 문법 칸 문장을 만들고(판정 통과만) 튜터 줄도 문법 칸으로
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `components/AppHome.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/FeatureMap.tsx` · `components/GuideSheet.tsx` · `components/EnglishAnalysisProvider.tsx` · `components/FindInMy.tsx` · `components/WhatsNewSheet.tsx` · `app/api/expression-ask/route.ts` · `app/api/expression-insight/route.ts` · `app/api/expression-units/route.ts` … 66개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-3-7** (2026-11-24 23:28, 탭 3 · 8adff1b) Quizbank 대화 채우기(이 폰 채팅·통화의 고침받은 내 줄·소재 든 줄, talkQuiz.ts TalkLine에 was 추가) · 튜터 줄 공유를 Quizbank 열 때마다로
+  - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `app/api/curriculum/qbank/seed/route.ts` · `components/FindInMy.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/EnglishAnalysisProvider.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -330,6 +334,10 @@
 - **a261124-3-5** (2026-11-24 23:01, 탭 3 · 69f16fe) Quizbank: 그 단계 문법 칸 다 끝내면 위로·1~5단계 끝나면 다음 회차(같은 칸 새 문장), 문제은행이 문법 칸 문장을 만들고(판정 통과만) 튜터 줄도 문법 칸으로
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `app/api/curriculum/qbank/route.ts` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/Quizbank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/DictNotes.tsx` · `components/studyMap/GrammarExplain.tsx` … 26개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-3-8** (2026-11-24 23:28, 탭 3 · 8adff1b) Quizbank 대화 채우기(이 폰 채팅·통화의 고침받은 내 줄·소재 든 줄, talkQuiz.ts TalkLine에 was 추가) · 튜터 줄 공유를 Quizbank 열 때마다로
+  - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/studyMap/QuizPlayer.tsx` · `components/studyMap/Quizbank.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/notes/NotebookSection.tsx` · `app/api/curriculum/item-lesson/route.ts` · `components/studyMap/ExpressionCard.tsx` · `app/api/curriculum/qbank/route.ts` … 10개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI

@@ -8571,23 +8571,93 @@
       "base": "589f08daca2b1dd37e2c0271f50f156ef4579fc4",
       "head": "69f16fe",
       "status": "open"
+    },
+    {
+      "id": "a261124-3-7",
+      "at": "2026-11-24 23:28",
+      "kind": "apply",
+      "from": "3",
+      "to": "1",
+      "what": "Quizbank 대화 채우기(이 폰 채팅·통화의 고침받은 내 줄·소재 든 줄, talkQuiz.ts TalkLine에 was 추가) · 튜터 줄 공유를 Quizbank 열 때마다로",
+      "files": [
+        "src/app/api/curriculum/qbank/seed/route.ts",
+        "src/components/FindInMy.tsx",
+        "src/components/EnglishAnalysisViewer.tsx",
+        "src/components/EnglishAnalysisProvider.tsx"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "b2ceb7f904d78f5bc06f0880cc95ac938fd6ebff",
+      "head": "8adff1b",
+      "status": "open"
+    },
+    {
+      "id": "a261124-3-8",
+      "at": "2026-11-24 23:28",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "Quizbank 대화 채우기(이 폰 채팅·통화의 고침받은 내 줄·소재 든 줄, talkQuiz.ts TalkLine에 was 추가) · 튜터 줄 공유를 Quizbank 열 때마다로",
+      "files": [
+        "src/components/studyMap/QuizPlayer.tsx",
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/InlineQuiz.tsx",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/app/api/curriculum/item-lesson/route.ts",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/app/api/curriculum/qbank/route.ts",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/studyMap/LessonHost.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/components/studyMap/Dictionary.tsx",
+        "src/app/api/curriculum/words/route.ts",
+        "src/components/studyMap/BankFlip.tsx",
+        "src/components/studyMap/DictNotes.tsx",
+        "src/components/studyMap/LanguageBank.tsx",
+        "src/lib/curriculum/ladderQuiz.ts",
+        "src/lib/server/spotMake.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "b2ceb7f904d78f5bc06f0880cc95ac938fd6ebff",
+      "head": "8adff1b",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-14 22:23",
-      "from": "1",
-      "base": "1ae2cf6398368946aae666a7515ab1d8212aee74",
-      "head": "bb1259d",
-      "what": "사용법 통화 장(ai-call)을 넘겨 보기 장면으로(한국어) — 자유대화·수업·게임·가르치기·통화 기록. 글은 모드 설명창과 같은 말. 통화 화면이 바뀌면 scripts/guide-slides/shoot-call.mjs → compose로 그림을 다시",
-      "tabs": [
-        "1",
-        "2"
-      ],
-      "asks": [
-        "a261114-1-2"
-      ]
-    },
     {
       "at": "2026-11-14 22:44",
       "from": "1",
@@ -9189,10 +9259,26 @@
         "a261124-3-5",
         "a261124-3-6"
       ]
+    },
+    {
+      "at": "2026-11-24 23:28",
+      "from": "3",
+      "base": "b2ceb7f904d78f5bc06f0880cc95ac938fd6ebff",
+      "head": "8adff1b",
+      "what": "Quizbank 대화 채우기(이 폰 채팅·통화의 고침받은 내 줄·소재 든 줄, talkQuiz.ts TalkLine에 was 추가) · 튜터 줄 공유를 Quizbank 열 때마다로",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261124-3-7",
+        "a261124-3-8"
+      ]
     }
   ],
   "seq": {
-    "261124-3": 6,
+    "261124-3": 8,
     "261124-1": 6
   }
 }
