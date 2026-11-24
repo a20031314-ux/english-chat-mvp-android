@@ -342,3 +342,5 @@
 - 2026-11-23 watch → dev: [my] src/app/api/curriculum/typed-check/route.ts:30 — 문장 전체 쓰기(ladderQuiz wholeOf)도 kind "blank"라 typed 60자 넘으면 400 → recheckTyped false → 맞는 번역도 틀림(en-e4·e5·g5 등 60자 넘는 답) (whole일 때 한도 200으로)
 - 2026-11-23 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:514 — 틀린 곳 답 뒤 "왜" 줄이 ko 밖 12개 앱 언어에서 영어 원문 (앱 언어로 옮긴 글, 없으면 ko·en 앱에서만)
 - 2026-11-23 watch → dev: [ai] src/components/roleplay/callHooks.ts:137 — 통화 남은 시간을 벽시계로 빼서 서버(첫 차례부터·차례 사이 60초 상한)보다 빨리 줄어듦, 오래 멈추면 0분까지 (차례 응답 뒤 /api/entitlement로 다시 맞추거나 서버와 같은 셈)
+- 2026-11-24 watch → dev: [my] src/components/studyMap/Quizbank.tsx:276 — 측정 무작위 칸(4칸 문장)을 한 번 맞히면 사다리가 바로 끝으로 올라 고르기·빈칸·틀린 곳을 건너뛰고 새 묶음에서 빠짐 (무작위로 맞히면 한 칸만 올리기)
+- 2026-11-24 watch → dev: [my] src/components/studyMap/Quizbank.tsx:326 — 측정 무작위 칸이 지금 칸~4칸에서만 나와 칸별 정답률 통계가 2026-11-24 앞뒤로 다른 표본 (통계에 측정 방식 표시 또는 집계에서 날짜로 나눔)
