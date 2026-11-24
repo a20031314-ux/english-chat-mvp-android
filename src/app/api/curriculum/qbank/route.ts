@@ -7,7 +7,7 @@ import { isSimRequest } from "@/lib/server/simData";
 import type { BankResult } from "@/lib/curriculum/qbankRules";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const maxDuration = 120;
 
 /**
  * POST { language, ui, keys: [{ key, stage }], results: [{ key, text, correct, options?, picked? }] } — 자라는 문제은행(server/qbank.ts).

@@ -104,7 +104,7 @@ C — a context item: a short first line spoken before, which is the ONLY clue d
 C|<first line in ${name}>|<second sentence in ${name}>|<plain English translation of the second sentence>|<the blank part in the second sentence>|<wrong;wrong;wrong>|<why in English, naming the clue in the first line>
 M — a meaning item: two sentences that differ ONLY in this grammar form, both grammatical, but with different meanings; plus a one-sentence situation in English that only one of them fits.
 M|<situation in English>|<sentence that fits>|<sentence that does not fit>|<why in English>
-X — a wrong-sentence item: one sentence that gets THIS grammar point wrong (a mistake learners really make) and three different correct sentences using the same grammar point.
+X — a wrong-sentence item: one sentence that gets THIS grammar point wrong (a mistake learners really make) and three different correct sentences using the same grammar point — about other things, never the corrected version of the wrong sentence.
 X|<the wrong sentence>|<English meaning of what it tries to say>|<correct;correct;correct>|<why in English: what is wrong and the right form>
 Answer with exactly four G lines, one C line, one M line and one X line, nothing else.`,
       },
@@ -139,7 +139,19 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
     }
     if (cells[0] === "X" && cells.length >= 5) {
       const [, wrongLine, meaning, rights, why] = cells as [string, string, string, string, string];
-      const good = rights.split(";").map((one) => one.trim()).filter((one) => plain(one) && one !== wrongLine).slice(0, 3);
+      // 맞는 문장이 틀린 문장을 고친 것뿐이면(낱말 하나만 다름) 나란히 놓여 답이 샌다 — 뺀다.
+      // 글자로 견줌(띄어쓰기 없는 말도): 앞뒤로 같은 글자를 걷고 남은 차이가 몇 글자뿐이면 같은 문장을 고친 것.
+      const bare = (text: string) => text.toLocaleLowerCase().replace(/[\p{P}\s]/gu, "");
+      const near = (a: string, b: string) => {
+        const x = bare(a);
+        const y = bare(b);
+        let head = 0;
+        while (head < x.length && head < y.length && x[head] === y[head]) head += 1;
+        let tail = 0;
+        while (tail < x.length - head && tail < y.length - head && x[x.length - 1 - tail] === y[y.length - 1 - tail]) tail += 1;
+        return Math.max(x.length, y.length) - head - tail <= 4;
+      };
+      const good = rights.split(";").map((one) => one.trim()).filter((one) => plain(one) && one !== wrongLine && !near(one, wrongLine)).slice(0, 3);
       if (!plain(wrongLine) || !english(meaning) || !english(why) || good.length < 3) continue;
       existing.add(wrongLine);
       made.push({ v: "x", t: wrongLine, p: "", g: meaning, w: good, y: why });
