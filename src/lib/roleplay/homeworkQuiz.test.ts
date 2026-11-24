@@ -48,3 +48,16 @@ test("숙제 빈칸: 통화에서 한 말을 다듬은 줄만, 같은 줄에 조
   assert.ok(!answers.includes("me manejo bastante bien"), "통화에 없던 줄");
   assert.ok(answers.includes("ラーメンを食べました"), "띄어쓰기 없는 줄도 글자로 닮음을 봄");
 });
+
+test("숙제 고치기: 코치 한마디가 있으면 답한 뒤 왜(Quizbank 틀린 곳과 같게) — es·ja", () => {
+  const said = [
+    { who: "tutor" as const, text: "¿Qué tal?" },
+    { who: "learner" as const, text: "Yo soy muy cansada hoy", better: "Yo estoy muy cansada hoy", about: "상태는 estar" },
+    { who: "learner" as const, text: "昨日映画を見ます", better: "昨日映画を見ました" },
+  ];
+  const quiz = homeworkQuiz("es", said, []);
+  const withWhy = quiz.find((q) => q.kind === "spot" && q.right.includes("estoy"));
+  assert.ok(withWhy?.kind === "spot" && withWhy.why?.ko === "상태는 estar");
+  const ja = homeworkQuiz("ja", said.slice(2), []);
+  assert.ok(ja[0]?.kind === "spot" && !ja[0].why, "한마디가 없으면 왜 없음");
+});

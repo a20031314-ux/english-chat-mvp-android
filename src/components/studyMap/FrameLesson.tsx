@@ -24,7 +24,11 @@ import { GrammarExplain } from "@/components/studyMap/GrammarExplain";
 import type { GrammarLesson } from "@/lib/curriculum/fixedLessons/grammar";
 import { openLesson } from "@/lib/appIntents";
 import { ladderFor } from "@/lib/curriculum/stages/index";
-import { lessonQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { askedTexts, lessonQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
+import { usePrepared } from "@/lib/curriculum/preparedLoad";
+import { turnFresh } from "@/lib/curriculum/preparedQuiz";
+import { preparedLessonQuiz } from "@/lib/curriculum/ladderQuiz";
+import { loadSpots, spotsFor } from "@/lib/curriculum/spotLoad";
 import { pieceIn, type LessonScene } from "@/lib/curriculum/lessonKey";
 import { growBank } from "@/lib/curriculum/qbank";
 import { noteQuizLog } from "@/lib/curriculum/quizLogStore";
@@ -142,17 +146,40 @@ export function FrameLesson({
       // 표현은 그 표현을 칠하고, 문법 칸은 칠하지 않는다(재료의 조각은 다른 문장구조 조각이라 엉뚱한 곳이 칠해짐).
       .map((source) => ({ text: source.text, gloss: source.gloss, slot: key.startsWith("e|") ? (pieceOf(source.text, key.slice(2)) ?? undefined) : undefined }));
   }, [frame, language, key, stageOf]);
+  // Quizbank와 같은 재료(연결 묶음 quiz-make): 넣어 둔 칸(까닭 붙은 고르기)·틀린 곳 문항.
+  const prepared = usePrepared(language, locale);
+  const [spotsReady, setSpotsReady] = useState(0);
+  useEffect(() => {
+    if (frame) return;
+    let live = true;
+    void loadSpots(language).then(() => live && setSpotsReady((n) => n + 1));
+    return () => {
+      live = false;
+    };
+  }, [language, frame]);
   const questions = useMemo<QuizQuestion[]>(() => {
     void grown;
+    void spotsReady;
     // 표현·문법 칸도 설명 › 퀴즈 › 대화(2026-11-02 사용자 "기본 연습방식은 설명>문제>적용인데 다른 것들은…") — 표현은 상대 줄 예문도 재료로,
     // 한 문제만 만들어져도 냄(문제은행이 예문을 더하면 grown으로 다시 만듦). 못 만들면 예전처럼 설명 › 대화.
     if (!frame) {
       // 문법 한 장이 있으면 그 세 문제(그 문법만 묻도록 쓰고 검사한 것).
-      if (grammarPage?.quiz?.length) {
-        const set = fixedQuizQuestions(language, grammarPage.quiz, key);
-        if (set.length) return set;
+      const page = grammarPage?.quiz?.length ? fixedQuizQuestions(language, grammarPage.quiz, key) : [];
+      const made = page.length ? page : lessonQuiz(language, key, { seed, stage: stageOf, later: new Set(shownExamples.map((example) => example.text)), them: key.startsWith("e|"), min: 1 });
+      // 넣어 둔 칸이 있으면 Quizbank와 같은 문제가 먼저(고르기 · 틀린 곳 · 다른 문장 빈칸 — 까닭·해석 먼저 규칙 같음), 나머지는 위 문제로 채움.
+      const item = prepared?.find((one) => one.key === key);
+      if (item) {
+        const asked = askedTexts(language, key);
+        const one = turnFresh(item, 0, asked);
+        const other = turnFresh(item, 1, [...asked, one.line]);
+        const spots = spotsFor(language, key);
+        const spot = spots.find((s) => !asked.includes(s.lines[0] ?? "")) ?? spots[0] ?? null;
+        const same = preparedLessonQuiz(one, spot, language, stageOf, other);
+        const texts = new Set(same.map((q) => ("text" in q ? q.text : "")));
+        const rest = made.filter((q) => q.kind !== "choose" && !("text" in q && texts.has(q.text)));
+        if (same.length) return [...same, ...rest].slice(0, Math.max(3, same.length));
       }
-      return lessonQuiz(language, key, { seed, stage: stageOf, later: new Set(shownExamples.map((example) => example.text)), them: key.startsWith("e|"), min: 1 });
+      return made;
     }
     // 설명에서 보여 준 예문 넷은 뒤로 — 대본 줄·문제은행 예문이 있으면 그걸로(가상 사용자 2026-11-01 easy-copy).
     // 세 문제가 같은 답을 세 번 묻지 않게: 빈칸 쓰기 · 틀린 곳 고치기 · 낱말 순서, 문제마다 다른 문장(quiz.ts lessonQuiz, 2026-11-01 U25).
@@ -160,7 +187,7 @@ export function FrameLesson({
     // 고정 수업이 있으면 그 세 문제(쓰기 · 고르기 · 고치기)가 먼저, 모자라면 만든 문제로 채움.
     const set = fixed?.quiz?.length ? fixedQuizQuestions(language, fixed.quiz, `f|${frame.id}`) : [];
     return set.length >= 3 ? set : [...set, ...made].slice(0, Math.max(3, set.length));
-  }, [language, frame, key, stageOf, seed, shownExamples, grown, fixed, grammarPage]);
+  }, [language, frame, key, stageOf, seed, shownExamples, grown, fixed, grammarPage, prepared, spotsReady]);
   const [qIndex, setQIndex] = useState(0);
   // 퀴즈 아래 네이티브 교체 번호 — 문제가 바뀔 때 앞 광고가 60초 넘었으면 새것(문제 도중에는 안 바꿈, lib/ads.ts NATIVE_REFRESH_MS).
   const adRound = useNativeRefresh(`q${qIndex}`, step === "quiz");

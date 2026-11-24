@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder, recentRuns, stepReach, REACH_BATCH, firstTryRung, gaugeWordScale, type Reach } from "./ladder.ts";
-import { grammarAsk, pickCells, spotQuestion } from "./ladderQuiz.ts";
+import { grammarAsk, pickCells, preparedLessonQuiz, spotQuestion } from "./ladderQuiz.ts";
 import { formChoice } from "./quiz.ts";
 import { blankNeedsMeaning, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import type { SpotItem } from "./spotErrors.ts";
@@ -221,4 +221,20 @@ test("nextRound: 다 끝났고 새 문장이 있는 칸만 다시, 하나라도 
   assert.equal(next.ladder["g|1:1"], undefined);
   assert.equal(next.ladder["g|1:0"], DONE);
   assert.equal(nextRound(["g|1:0"], { "g|1:0": DONE }, round, () => false), null);
+});
+
+test("소재 수업 퀴즈도 Quizbank 재료로: 고르기(까닭) · 틀린 곳(까닭) · 다른 문장 빈칸만 — ja·es", () => {
+  const item: PreparedItem = { key: "g|1:1", kind: "grammar", stage: 1, gloss: "나는 학생이에요.", before: "私は学生", after: "。", answer: "です", options: ["です", "ます", "だ"], line: "私は学生です。", why: "명사 뒤" };
+  const other: PreparedItem = { ...item, before: "これは本", line: "これは本です。", gloss: "이것은 책이에요." };
+  const spot: SpotItem = { id: "ja-s-1", stage: 1, shape: "s", src: "new", lines: ["私は学生ます。"], errors: [{ line: 0, at: 2, wrong: "ます", right: "です", type: "form", kind: "form", g: "g|1:1", why: { en: "after a noun", ko: "명사 뒤" } }], gloss: { en: "I am a student.", ko: "나는 학생이에요." } };
+  const all = preparedLessonQuiz(item, spot, "ja", 1, other);
+  assert.deepEqual(all.map((q) => q.kind), ["choose", "spot", "type"]);
+  assert.ok(all[0]!.kind === "choose" && all[0]!.prepared?.why === "명사 뒤");
+  assert.ok(all[1]!.kind === "spot" && all[1]!.why?.ko === "명사 뒤");
+  assert.ok(all[2]!.kind === "type" && all[2]!.text === "これは本です。" && all[2]!.glossFirst, "빈칸은 고르기와 다른 문장, 1단계는 해석 먼저");
+  // 다른 문장이 없으면 빈칸을 내지 않음(방금 고른 보기 베끼기).
+  assert.deepEqual(preparedLessonQuiz(item, null, "ja", 1, item).map((q) => q.kind), ["choose"]);
+  const es: PreparedItem = { key: "g|3:2", kind: "grammar", stage: 3, gloss: "어제 비가 왔어요.", before: "Ayer ", after: " mucho.", answer: "llovió", options: ["llovió", "llovía", "llueve"], line: "Ayer llovió mucho.", why: "끝난 일" };
+  const choose = preparedLessonQuiz(es, null, "es", 3)[0];
+  assert.ok(choose?.kind === "choose" && choose.prepared?.meaningLater, "3단계는 해석을 답한 뒤에(Quizbank와 같은 규칙)");
 });

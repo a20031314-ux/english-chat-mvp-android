@@ -5,7 +5,7 @@ import type { ReplayScene } from "./replay.ts";
 
 /**
  * 숙제 퀴즈(2026-11-08 사용자 "숙제는 숙제 > 하위탭(퀴즈, 대화) 구조로"): 그 통화에서 나온 것만, 모델 없음.
- * ① 튜터가 고친 내 줄의 바뀐 문장만 → 틀린 곳 찾아 고치기(눌러서 찾고 바른 꼴을 씀, 자리가 안 잡히면 안 냄) — 최대 셋
+ * ① 튜터가 고친 내 줄의 바뀐 문장만 → 틀린 곳 찾아 고치기(눌러서 찾고 바른 꼴을 씀, 자리가 안 잡히면 안 냄, 코치 한마디가 있으면 답한 뒤 왜) — 최대 셋
  * ② 장면(대화 탭)의 내 줄 조각 → 앱 언어 뜻을 먼저 보고 빈칸 쓰기 — 합쳐 여섯까지. 내가 통화에서 그대로 말한 조각·①의 답·
  *    한 문장 통째는 안 비움, 같은 문장은 한 번(2026-11-08 통화 체감 점검 표시 반영). 통화에서 내가 한 말을 다듬은 줄만
  *    (장면이 새로 지어낸 줄은 배운 적 없는 말 — 2026-11-19 점검 hard-level), 같은 줄에 조각의 첫 낱말이 또 있으면 안 비움(por la noche ↔ por la mañana, easy-leak).
@@ -20,7 +20,7 @@ function sentencesOfLine(text: string): string[] {
 
 export function homeworkQuiz(
   language: string,
-  said: readonly { who: "tutor" | "learner"; text: string; better?: string; meant?: string }[],
+  said: readonly { who: "tutor" | "learner"; text: string; better?: string; meant?: string; about?: string }[],
   scenes: readonly ReplayScene[],
 ): QuizQuestion[] {
   const out: QuizQuestion[] = [];
@@ -39,8 +39,11 @@ export function homeworkQuiz(
     // 바뀐 문장만, 앱 언어 낱말이 섞인 줄은 빼고, 고칠 자리를 직접 써야 하는 문제만(한 번 누르면 끝나는 고르기는 안 냄 — 점검 easy-level).
     const { said: wrong, right } = focusFix(fullWrong, fullRight);
     if (seen.has(norm(right)) || mixedScript(wrong, right)) continue;
-    const question = spotFromCard(language, { wrong, right });
-    if (!question) continue;
+    const made = spotFromCard(language, { wrong, right });
+    if (!made) continue;
+    // 코치가 그 줄에 단 한마디(앱 언어)를 Quizbank 틀린 곳처럼 답한 뒤 "왜"로(연결 묶음 quiz-make, 2026-11-24).
+    const about = line.about?.trim();
+    const question = about ? { ...made, why: { en: about, ko: about } } : made;
     seen.add(norm(right));
     fixedWords.push(norm(question.want));
     out.push(question);

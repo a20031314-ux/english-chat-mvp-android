@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (137)
+## 탭이 확인할 것 (139)
 
 ### 탭 1 메인
 
@@ -339,6 +339,10 @@
   - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/studyMap/QuizPlayer.tsx` · `components/studyMap/Quizbank.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/notes/NotebookSection.tsx` · `app/api/curriculum/item-lesson/route.ts` · `components/studyMap/ExpressionCard.tsx` · `app/api/curriculum/qbank/route.ts` … 10개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-1-7** (2026-11-24 23:40, 탭 1 · 91e72029) 소재 수업 퀴즈가 넣어 둔 칸(고르기 까닭·틀린 곳·다른 문장 빈칸)을 먼저 내고, 숙제 고치기에 코치 한마디가 '왜'로 — My 소재 수업·통화 숙제 퀴즈 화면 확인
+  - 기능: 통화 · 이렇게도 말할 수 있었어요 · 숙제 · Quizbank · 소재 수업 · 칸 설명
+  - 볼 곳: `components/studyMap/FrameLesson.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/StudyMapTab.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
 
@@ -453,6 +457,10 @@
 - **a261124-1-5** (2026-11-24 22:55, 탭 1 · fbfebef7) 장부 점검으로 옛 것 지움: 소재 수업 끝 다음 추천 버튼(UpNext)·문장분석 알아요/모르겠어요(MarkForMap)·내 문장 말해보기(RoleplayOwnLine)·보내는 곳 없는 신호 chatDraft·openVideo·sayOwnLine·웹 /learning 교재·쓸 기능 고르기의 노트 스위치·안 쓰는 문구 338키. 문구 고침: My 로딩 '지도를 불러오는 중' → '불러오는 중'(키 loading), 의견 예시·Languagebank 칠하기 도움말·영상 라이브러리 부제. 각 탭 화면에서 빈 자리·안 뜨는 문구가 없는지
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 사람 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/CallHost.tsx` · `components/ChatWindow.tsx` · `components/videoLearning/VideoLearningTab.tsx` · `components/CallList.tsx` · `components/RoleplayScreen.tsx` · `components/roleplay/CallParts.tsx` · `components/roleplay/CallReplay.tsx` · `components/roleplay/CallRecap.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` … 2개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-1-8** (2026-11-24 23:40, 탭 1 · 91e72029) 소재 수업 퀴즈가 넣어 둔 칸(고르기 까닭·틀린 곳·다른 문장 빈칸)을 먼저 내고, 숙제 고치기에 코치 한마디가 '왜'로 — My 소재 수업·통화 숙제 퀴즈 화면 확인
+  - 기능: 통화 · 이렇게도 말할 수 있었어요 · 숙제 · Quizbank · 소재 수업 · 칸 설명
+  - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/RoleplayPast.tsx` · `components/RoleplayScreen.tsx` · `components/CallHost.tsx` · `lib/roleplay/talkMemory.ts`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람

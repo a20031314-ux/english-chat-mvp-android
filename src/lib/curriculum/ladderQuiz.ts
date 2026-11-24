@@ -144,3 +144,24 @@ export function expressionAsk(language: string, key: string, current: number, se
   const source = cardSourceOf(language, key, seed);
   return source ? { rung, question: wholeOf(source.text, source.gloss, key, cue) } : null;
 }
+
+/**
+ * 소재 수업 퀴즈의 넣어 둔 칸(문법·표현) — Quizbank와 같은 재료로(연결 묶음 quiz-make, 사용자 2026-11-24 "맞추는 걸로"):
+ * 고르기(까닭 — chooseFromPrepared) → 틀린 곳(틀린 곳 문항이 있으면, 까닭 — spotQuestion) → 빈칸 쓰기(next — 고르기와 다른 문장일 때만).
+ * 해석 먼저는 Quizbank와 같은 규칙(meaningFirst · 빈칸이 내용까지 덮으면 blankNeedsMeaning). 순수.
+ */
+export function preparedLessonQuiz(item: PreparedItem, spot: SpotItem | null, language: string, stage: number, next?: PreparedItem): QuizQuestion[] {
+  const first = meaningFirst(stage, item);
+  const out: QuizQuestion[] = [];
+  const choose = chooseFromPrepared(item, first);
+  if (choose) out.push(choose);
+  const spotQ = spot ? spotQuestion(spot, language, item.key, false, first) : null;
+  if (spotQ) out.push(spotQ);
+  // 빈칸은 다른 문장으로만 — 방금 고른 문장이면 보기를 베끼면 됨(RULES 11④). 다른 문장이 없으면 빈칸은 수업의 다른 재료(lessonQuiz)가 맡는다.
+  if (next && next.line !== item.line && next.line !== spot?.lines[0]) {
+    const near = next.options.filter((option) => option !== next.answer);
+    const blankFirst = meaningFirst(stage, next) || blankNeedsMeaning(next, language);
+    out.push({ kind: "type", text: next.line, before: next.before, after: next.after, answer: next.answer, gloss: { en: "", raw: next.gloss }, from: item.key, near, ...(blankFirst ? { glossFirst: true } : {}) });
+  }
+  return out;
+}

@@ -46,7 +46,7 @@
 - 무엇을: 장부 연결 묶음 6개(`hub/app/FEATURES.md` "연결 묶음") 중 퀴즈 문제 만들기를 손으로 비교, `node scripts/clones.mjs`(모델 없음)로 두 파일에 같은 코드 120낱말 넘는 곳.
 - 결과: ① quiz-make — Quizbank는 넣어 둔 문제·틀린 곳 이유·해석 먼저(`lib/curriculum/ladderQuiz.ts:8·51·70`, `preparedQuiz.ts`)를 쓰는데, 소재 수업 퀴즈는 `lessonQuiz`(`lib/curriculum/quiz.ts:1170`, `FrameLesson.tsx:155·159`)·숙제 퀴즈는 `homeworkQuiz`(`lib/roleplay/homeworkQuiz.ts:21`)로 만들어 넣어 둔 문제·이유가 없음(같은 QuizPlayer로 그려서 보기 설명만 같이 씀). 일부러인지 확인 필요. ② 복제 15곳 — 목록 `hub/app/clones.md`(기준 `scripts/clones.json`에 넣음, 다음부터 새 것만 보고). 눈에 띄는 것: 1:1과 단체방 같은 코드(`RoomDm.tsx:595` ↔ `RoomGroups.tsx:513`), 지금 My 갈래와 옛 Stagebank 갈래(`notes/myParts.ts` ↔ `notes/stageParts.ts`), 수업 서버 둘(`server/frameLesson.ts` ↔ `server/itemLesson.ts`), 영상 링크 판별 두 벌(`contentDiscovery/search/supportedVideo.ts` ↔ `videoLearning.ts`).
 - 제안: ①은 맞출지(소재 수업·숙제 퀴즈도 넣어 둔 문제·이유를 쓰게 — 앱 빌드 필요) 일부러 다름으로 둘지(differs에 적음) 정해 주세요. ②는 하나씩 공용 함수로 합칠지 정해 주세요.
-- 결정: 
+- 결정: ① 맞춤(사용자 2026-11-24 "맞추는 걸로") — 소재 수업 퀴즈가 넣어 둔 칸·틀린 곳 문항·까닭을, 숙제 고치기가 코치 한마디를 "왜"로. ② 복제는 아직.
 
 ### 2026-11-24 · 변경 감시 · 숫자 그대로, 리뷰 minor 2(영어 밖 표현은 퀴즈 단계 안 따름·게이지가 초보 낱말 수준을 거의 못 옮김), 새 광고 안 없음
 - 무엇을: 1f36c5c..589f08d, 커밋 5개(코드 2 — Quizbank 종류 비율·문법 표현 단계·처음 맞히면 두 칸 위·게이지 단어 경계 2d370f5 · 단어 카드 seat 뜻 9a21e45), 코드 5파일
