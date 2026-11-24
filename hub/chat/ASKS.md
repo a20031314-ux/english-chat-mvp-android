@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (124)
+## 탭이 확인할 것 (125)
 
 ### 탭 1 메인
 
@@ -306,6 +306,10 @@
 - **a261124-3-1** (2026-11-24 13:12, 탭 3 · 9472285) Quizbank 측정 칸 지금 칸 이상
   - 기능: Quizbank · 칸 설명
   - 볼 곳: `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/StudyMapTab.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-3-2** (2026-11-24 13:15, 탭 3 · e9ac881) 새 문법 오래 안 낸 칸부터
+  - 기능: 첫 측정 · Quizbank · 칸 설명
+  - 볼 곳: `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/StudyMapTab.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
