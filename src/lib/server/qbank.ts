@@ -105,7 +105,7 @@ C|<first line in ${name}>|<second sentence in ${name}>|<plain English translatio
 M — a reply item: a short line the other person says in a conversation, and two possible replies that differ ONLY in this grammar form, both grammatical on their own, but only one is the right reply to that line (the other means something that does not answer it).
 M|<the other person's line in ${name}>|<plain English translation of that line>|<reply that fits>|<reply that does not fit>|<why in English>
 X — a wrong-sentence item: one sentence that gets THIS grammar point wrong (a mistake learners really make) and three different correct sentences using the same grammar point — about other things, never the corrected version of the wrong sentence.
-X|<the wrong sentence>|<English meaning of what it tries to say>|<correct;correct;correct>|<why in English: what is wrong and the right form>
+X|<the wrong sentence>|<the same sentence with only the mistake fixed>|<English meaning of what it tries to say>|<correct;correct;correct>|<why in English: what is wrong and the right form>
 Answer with exactly four G lines, one C line, one M line and one X line, nothing else.`,
       },
       { role: "user", content: `Sentences already used (do not repeat): ${have.join(" / ")}` },
@@ -139,8 +139,8 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
       made.push({ v: "m", l: them, t: right, p: "", g: themGloss, w: [wrongLine], y: why });
       continue;
     }
-    if (cells[0] === "X" && cells.length >= 5) {
-      const [, wrongLine, meaning, rights, why] = cells as [string, string, string, string, string];
+    if (cells[0] === "X" && cells.length >= 6) {
+      const [, wrongLine, fixedLine, meaning, rights, why] = cells as [string, string, string, string, string, string];
       // 맞는 문장이 틀린 문장을 고친 것뿐이면(낱말 하나만 다름) 나란히 놓여 답이 샌다 — 뺀다.
       // 글자로 견줌(띄어쓰기 없는 말도): 앞뒤로 같은 글자를 걷고 남은 차이가 몇 글자뿐이면 같은 문장을 고친 것.
       const bare = (text: string) => text.toLocaleLowerCase().replace(/[\p{P}\s]/gu, "");
@@ -154,9 +154,10 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
         return Math.max(x.length, y.length) - head - tail <= 4;
       };
       const good = rights.split(";").map((one) => one.trim()).filter((one) => plain(one) && one !== wrongLine && !near(one, wrongLine)).slice(0, 3);
-      if (!plain(wrongLine) || !english(meaning) || !note(why) || good.length < 3) continue;
+      // 고친 문장은 틀린 문장과 몇 글자만 달라야(답한 뒤 그 자리만 지우고 바꿔 보임).
+      if (!plain(wrongLine) || !english(meaning) || !note(why) || good.length < 3 || !fixedLine || fixedLine === wrongLine || fixedLine.length > 140 || !near(fixedLine, wrongLine) && Math.abs(fixedLine.length - wrongLine.length) > 12) continue;
       existing.add(wrongLine);
-      made.push({ v: "x", t: wrongLine, p: "", g: meaning, w: good, y: why });
+      made.push({ v: "x", t: wrongLine, p: fixedLine, g: meaning, w: good, y: why });
       continue;
     }
     if (cells[0] !== "G" || cells.length < 6) continue;
@@ -182,7 +183,7 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
 BLANK — fill in the blank: (1) the sentence with the answer is natural and correct; (2) it really practises "${slot.name}"; (3) NONE of the wrong options is acceptable in the blank in any register or reading; (4) the answer is not given away elsewhere.
 CONTEXT — same as BLANK, and the context line is what decides the answer (it must be natural and the answer must follow from it).
 REPLY — the learner picks which of two replies answers the other person's line: both replies are grammatical and natural, they differ only in "${slot.name}", and exactly one is a right reply to that line.
-WRONG — the learner picks the wrong sentence among four: the wrong one is clearly wrong in "${slot.name}" (not just unusual), and the three others are fully correct and natural.
+WRONG — the learner picks the wrong sentence among four: the wrong one is clearly wrong in "${slot.name}" (not just unusual), its fixed version is correct and changes only the mistake, and the three others are fully correct and natural.
 Answer JSON only: {"ok":[true|false, ...]} in item order.`,
       },
       {
@@ -192,7 +193,7 @@ Answer JSON only: {"ok":[true|false, ...]} in item order.`,
             one.v === "m"
               ? `${i}: REPLY · other person: ${one.l} (${one.g})\n   right reply: ${one.t}\n   wrong reply: ${one.w[0]}`
               : one.v === "x"
-                ? `${i}: WRONG · wrong: ${one.t} (meant: ${one.g})\n   correct: ${one.w.join(" / ")}`
+                ? `${i}: WRONG · wrong: ${one.t} (meant: ${one.g}, fixed: ${one.p})\n   correct: ${one.w.join(" / ")}`
                 : `${i}: ${one.v === "c" ? `CONTEXT · context line: ${one.l}\n   ` : "BLANK · "}${one.t.replace(one.p, "___")}\n   answer "${one.p}" · wrong ${one.w.map((w) => `"${w}"`).join(", ")} · meaning: ${one.g}`,
           )
           .join("\n"),

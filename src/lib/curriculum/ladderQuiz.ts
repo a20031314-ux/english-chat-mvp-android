@@ -117,7 +117,7 @@ export function paragraphQuestion(item: SpotItem, language: string, first = true
 export type ChoiceVariant =
   | { v: "c"; lead: string; line: string; before: string; after: string; answer: string; options: string[]; gloss: string; why: string }
   | { v: "m"; them: string; themGloss: string; right: string; wrong: string; why: string }
-  | { v: "x"; wrong: string; rights: string[]; why: string };
+  | { v: "x"; wrong: string; rights: string[]; why: string; /** 고친 문장(답한 뒤 틀린 자리만 지우고 바꿔 보임). */ fixed?: string };
 
 /** 고르기 모양 하나 → 문제. seed로 보기 차례 고정. 순수. */
 export function choiceQuestion(variant: ChoiceVariant, key: string, seed: string): QuizQuestion | null {
@@ -131,7 +131,7 @@ export function choiceQuestion(variant: ChoiceVariant, key: string, seed: string
   if (variant.v === "m") {
     return { kind: "reply", them: variant.them, themGloss: { en: "", raw: variant.themGloss }, text: variant.right, options: order.map((i) => lines[i]!), answer: order.indexOf(0), gloss: { en: "" }, from: key, shown: true, why: variant.why };
   }
-  return { kind: "pick", text: variant.wrong, lines: order.map((i) => lines[i]!), answer: order.indexOf(0), why: variant.why, from: key };
+  return { kind: "pick", text: variant.wrong, lines: order.map((i) => lines[i]!), answer: order.indexOf(0), why: variant.why, from: key, ...(variant.fixed ? { fixed: variant.fixed } : {}) };
 }
 
 /** 문법 칸 하나 → 낼 칸과 문제. spot = 그 칸의 틀린 곳 문항(최근에 안 낸 것 하나, 없으면 null). choices = 고르기의 다른 모양(turn으로 차례). 끝났으면 null. */

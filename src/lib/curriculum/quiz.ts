@@ -82,7 +82,7 @@ export type QuizQuestion =
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   /** 낱말 스스로 체크(그럴듯한 보기가 셋 안 모일 때): 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 → [맞았어요 | 틀렸어요]. */
   /** 틀린 문장 고르기(ladderQuiz.ts choiceQuestion): 넷 중 틀린 문장. why = 답한 뒤 까닭(앱 언어). */
-  | { kind: "pick"; text: string; lines: string[]; answer: number; why: string; from: string }
+  | { kind: "pick"; text: string; lines: string[]; answer: number; why: string; from: string; /** 고친 문장 — 답한 뒤 틀린 자리만 지우고 바꿔 보임. */ fixed?: string }
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string; /** 카드 모양(개편, cardQuiz) — 낱말·예문은 보이고 뜻 칸만 가림. */ card?: QuizCardFace };
 
 /**

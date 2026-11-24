@@ -171,7 +171,8 @@ export function grownChoices(grown: readonly GrownGrammar[], ui: string): Choice
     } else {
       // 맞는 문장이 틀린 문장을 고친 것뿐이면 나란히 놓여 답이 샌다(서버도 거르지만 그 전에 만든 것까지).
       const rights = wrong.filter((line) => !nearLine(line, one.text));
-      if (rights.length >= 3) out.push({ v: "x", wrong: one.text, rights: rights.slice(0, 3), why });
+      const fixed = one.piece && one.piece !== one.text ? one.piece : "";
+      if (rights.length >= 3) out.push({ v: "x", wrong: one.text, rights: rights.slice(0, 3), why, ...(fixed ? { fixed } : {}) });
     }
   }
   return out;

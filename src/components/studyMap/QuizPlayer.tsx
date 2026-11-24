@@ -22,6 +22,7 @@ import { multiBlankRight, spotsFixRight, type MultiQuestion, type SpotsQuestion 
 import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { readKindLog, saveKind, styleKinds } from "@/lib/curriculum/learnStyle";
 import { noteBankResult } from "@/lib/curriculum/qbank";
+import { fixSpan } from "@/lib/curriculum/talkFill";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice, type WordOutcome } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
@@ -321,7 +322,7 @@ export function QuestionView({
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} glossFirst={glossFirst} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView ui={ui} strict={Boolean(bankKey?.startsWith("w|"))} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "pick" ? <LinePickView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "pick" ? <LinePickView language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "talk" ? <TalkView ui={ui} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "multi" ? <MultiView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "spots" ? <SpotsView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -1059,8 +1060,10 @@ function ChooseView({
 }
 
 /** 틀린 문장 고르기(ladderQuiz.ts choiceQuestion): 넷 중 틀린 하나, 답한 뒤 까닭(앱 언어). */
-function LinePickView({ question, answered, onAnswer, tag }: { question: Extract<QuizQuestion, { kind: "pick" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+function LinePickView({ language, question, answered, onAnswer, tag }: { language: string; question: Extract<QuizQuestion, { kind: "pick" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
   const [picked, setPicked] = useState<number | null>(null);
+  // 답한 뒤 틀린 문장: 틀린 자리만 지움 표시 → 바른 꼴(talkFill.ts fixSpan — 띄어쓰기 없는 말도), 자리를 못 찾으면 고친 문장 한 줄.
+  const fix = question.fixed ? fixSpan(question.text, question.fixed, language) : null;
   return (
     <div className="flex flex-col gap-3" data-quiz-pick>
       <div className="flex flex-col gap-2">
@@ -1079,7 +1082,24 @@ function LinePickView({ question, answered, onAnswer, tag }: { question: Extract
               }}
               className={`rounded-xl border px-3 py-2.5 text-start text-chat ${style}`}
             >
-              {line}
+              {answered && isRight && question.fixed ? (
+                fix ? (
+                  <span data-quiz-fixed>
+                    {question.fixed.slice(0, fix.start)}
+                    {fix.wrong ? <del className="text-bad">{fix.wrong}</del> : null}
+                    {fix.wrong ? " " : ""}
+                    <strong className="font-semibold text-good">{fix.answer}</strong>
+                    {question.fixed.slice(fix.end)}
+                  </span>
+                ) : (
+                  <span data-quiz-fixed className="flex flex-col">
+                    <del className="text-bad">{line}</del>
+                    <span className="text-good">{question.fixed}</span>
+                  </span>
+                )
+              ) : (
+                line
+              )}
             </button>
           );
         })}
@@ -1089,7 +1109,7 @@ function LinePickView({ question, answered, onAnswer, tag }: { question: Extract
           <p data-quiz-why dir="auto" className="min-w-0 flex-1 text-note text-slate-300">
             {question.why}
           </p>
-          <TTSButton text={question.lines.find((_, i) => i !== question.answer) ?? question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+          <TTSButton text={question.fixed ?? question.lines.find((_, i) => i !== question.answer) ?? question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
         </div>
       ) : null}
     </div>

@@ -149,4 +149,6 @@ test("grownChoices: 틀린 문장의 맞는 문장이 그 문장을 고친 것�
   assert.equal(got.length, 1);
   assert.ok(got[0]!.v === "x" && !got[0]!.rights.includes("Yo he escrito una carta."));
   assert.equal(grownChoices([{ ...x, wrong: x.wrong.slice(0, 3) }], "ko").length, 0);
+  const fixed = grownChoices([{ ...x, piece: "Yo he escrito una carta." }], "ko")[0];
+  assert.ok(fixed?.v === "x" && fixed.fixed === "Yo he escrito una carta.");
 });
