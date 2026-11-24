@@ -11,10 +11,6 @@
 export type AppIntents = {
   /** Switch to a bottom tab. */
   openTab: { tab: "map" | "chat" | "roleplay" | "video" | "vocab" };
-  /** Put a first line in the chat input, for the learner to send or change. */
-  chatDraft: { text: string };
-  /** Load a video and, once it plays, jump to the scene. */
-  openVideo: { url: string; startSeconds?: number; durationSeconds?: number };
   /**
    * AI 튜터와 통화(2026-10-23, conversation-unify 3단계 — 통화 첫 화면 없이 📞로 바로). `resumeId`면 멈춘 그 통화를 이어서.
    * CallHost가 받는다(앱 어디서나 떠 있는 통화 화면).
@@ -25,8 +21,6 @@ export type AppIntents = {
   /** id 없음 = 통화 기록 목록(CallList, 2026-10-27 채팅과 통화 기록 분리). */
   /** replay = 그 통화의 🎭 장면을 바로(숙제 줄, 2026-11-08). */
   openCall: { id?: string; replay?: boolean };
-  /** 내 문장 말해보기(예전 통화 첫 화면 → AI 대화 ⋮ 메뉴). */
-  sayOwnLine: Record<string, never>;
   /** 노트(My)의 한 부분을 연다 — 단어장 탭이 노트로 들어온 뒤 "단어장으로" 가던 곳. */
   openNotes: { section: "words" };
   /**

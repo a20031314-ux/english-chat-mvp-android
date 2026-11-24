@@ -2,7 +2,7 @@
 /**
  * 문구 장부 검사(사용자 2026-11-09 "기능겹침, 같은기능 여러 단어, 옛 기능이 잔재함" → 규칙·장부·검사):
  *
- *  1. 안 쓰는 문구 키 — copy.ts의 ko 키 중 앱·서버·스크립트 어디에도 이름이 안 나오는 것(옛 화면을 지우고 남은 문구).
+ *  1. 안 쓰는 문구 키 — copy.ts의 ko 키 중 앱·서버·스크립트 어디서도 불리지 않는 것(옛 화면을 지우고 남은 문구). 낱말 데이터·문구 생성 스크립트에 이름만 있는 것은 안 씀으로 센다.
  *  2. 같은 말 다른 키 — ko 문구가 글자까지 같은데 키가 다른 것(같은 기능을 두 이름으로 부르거나, 다른 기능에 같은 이름).
  *     일부러 같은 말이면(같은 버튼이 두 화면에 — "닫기") scripts/copy-keys.json "same"에 그 묶음을 적는다.
  *
@@ -76,17 +76,25 @@ function readLedger() {
   }
 }
 
-/** 앱·서버·스크립트 글 전체(copy.ts·로캘 json 빼고) — 키 이름이 낱말로 나오면 쓰는 것. */
+/**
+ * 앱·서버·스크립트 글(copy.ts·로캘 json·낱말 데이터·문구 생성 스크립트 빼고).
+ * 2026-11-24: 낱말이 아무 데나 나오면 쓰는 것으로 셌더니 gen-locales 목록·낱말 데이터("archive")에 이름만 남은 키 300여 개가
+ * 화면 없이 살아남았다 — 이제 `ui.키` · `"키"` · `[키` · `{ui:키}` · `{ 키,` 꼴로 불린 것만 센다.
+ */
 function corpus() {
   const parts = [];
   const skip = new Set([copyFile, path.join(root, "src/lib/locales/overlays.json"), path.join(root, "src/lib/locales/generated.json")]);
+  const skipDir = /src\/lib\/curriculum\/(vocab|word-sentences|word-traits|pairs|frames|fixedLessons|stages)|node_modules/;
+  const skipScript = /scripts\/(gen-locales[^/]*|_en[^/]*\.json|check-language-coverage\.mjs|check-copy-keys\.mjs|translate-ui-overlays\.mjs|copy-keys\.json)$/;
   const walk = (dir) => {
     if (!fs.existsSync(dir)) return;
     for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
       if (e.name === "node_modules" || e.name.startsWith(".")) continue;
       const p = path.join(dir, e.name);
-      if (e.isDirectory()) walk(p);
-      else if (/\.(tsx?|mjs|js|cjs|json)$/.test(e.name) && !skip.has(p) && fs.statSync(p).size < 4_000_000) parts.push(fs.readFileSync(p, "utf8"));
+      const rel = path.relative(root, p).split(path.sep).join("/");
+      if (e.isDirectory()) {
+        if (!skipDir.test(rel)) walk(p);
+      } else if (/\.(tsx?|mjs|js|cjs|json)$/.test(e.name) && !skip.has(p) && !skipScript.test(rel) && fs.statSync(p).size < 4_000_000) parts.push(fs.readFileSync(p, "utf8"));
     }
   };
   walk(path.join(root, "src"));
@@ -94,10 +102,18 @@ function corpus() {
   return parts.join("\n");
 }
 
+/** 키가 코드에서 불렸나(낱말로만 나온 것은 안 셈). */
+function calledKeys(text) {
+  const out = new Set();
+  for (const m of text.matchAll(/(?:\.|\{ui:|["'`[])([A-Za-z_$][\w$]*)\b/g)) out.add(m[1]);
+  for (const m of text.matchAll(/[{,]\s*([A-Za-z_$][\w$]*)\s*(?=[,}:=])/g)) out.add(m[1]);
+  return out;
+}
+
 const entries = koEntries();
 const ledger = readLedger();
 const all = corpus();
-const words = new Set(all.match(/[A-Za-z_$][\w$]*/g));
+const words = calledKeys(all);
 const dynamic = ledger.dynamic ?? [];
 const unused = [...entries.keys()].filter((key) => !words.has(key) && !dynamic.some((prefix) => key.startsWith(prefix))).sort();
 

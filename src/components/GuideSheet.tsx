@@ -516,7 +516,7 @@ export function GuideButton({
                 {!choosing ? <NativeAdSlot feedId="sheets" slotKey="guide-end" spaced /> : null}
               </div>
             ) : (
-              <p className="mt-10 text-center text-note text-slate-400">{failed ? ui.guideUnavailable : ui.guideLoading}</p>
+              <p className="mt-10 text-center text-note text-slate-400">{failed ? ui.guideUnavailable : ui.loading}</p>
             )}
           </div>
           {picking && !chapters.length ? (

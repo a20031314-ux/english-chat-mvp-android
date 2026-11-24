@@ -5,7 +5,7 @@
 > **쓰는 탭**은 코드에서 자동(`node scripts/scope.mjs <기능 id>`로 파일까지) — 둘 이상인 기능을 고치면 끝내기 훅이 그 탭들에 확인 요청을 만들게 한다(`hub/chat/ASKS.md`).
 > 기능을 빼면 줄을 지우고 코드·문구 14개 언어·사용법·문서를 같은 커밋에서 지운다. 옛 앱이 쓰는 서버만 "옛 앱 전용"으로 남기고 지울 조건을 적는다.
 
-## 지금 앱 (39)
+## 지금 앱 (45)
 
 ### 앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법
 
@@ -15,6 +15,8 @@
 | 처음 언어·튜터 고르기 | 처음 설치 때 국기 여러 개 → 언어마다 튜터 얼굴 하나 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/LanguagePick.tsx` · `lib/firstLanguage.ts` |  |
 | 사용법 `guideOpen` | 상단 ? — 지금 탭의 장, 맨 앞 탭은 쓸 기능 고르기. 장마다 넘겨 보기 장면만(14개 앱 언어, 칸 칩 → 첫 장 핵심, 넘기면 세부 — 기능 이름·설명은 그림 안), 장면 없는 장은 안 보임 | 1 메인 · 2 My | `components/GuideSheet.tsx` · `lib/guide/slides.ts` | 학습 흐름 · 장마다 카드 둘·칸 글 · 노트·단어장 장 |
 | 새로워진 점 `whatsNewTitle` | 업데이트 뒤 한 번, 앱 언어별 캡처 | 1 메인 | `components/WhatsNewSheet.tsx` · `lib/whatsNew.ts` |  |
+| 업데이트 알림 | 새 빌드가 있으면 배너, 최소 지원 버전 밑이면 막는 화면 · 시험 앱 껍데기는 새 배포 줄 | 1 메인 | `components/UpdateNotice.tsx` · `components/ShellUpdate.tsx` |  |
+| AI 데이터 동의 | iOS 처음 열 때 한 번 — 무엇을 누구에게 보내는지·동의(이 기기) | 1 메인 | `components/AiConsentGate.tsx` |  |
 
 ### 의견 보내기·반영 소식
 
@@ -37,6 +39,7 @@
 | 튜터 프로필 | 사람 프로필과 같은 틀 — 소개 · 통화 문 넷 · 숙제 · 마지막 메모 · 팔로우·메시지·통화 기록 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/AiTutorProfile.tsx` · `lib/roleplay/tutorDesk.ts` |  |
 | 사람 `homeTabPeople` | 맨 위 AI 튜터 둘 + 사람 카드·프로필(팔로우·메시지·메이트·차단·신고) | 1 메인 · 2 My · 4 사람 | `components/rooms/PeopleTab.tsx` · `components/rooms/RoomPeople.tsx` |  |
 | 게시판 | 학습 언어별, 주제 칩 자유·질문·메이트·단체방 | 4 사람 | `components/rooms/BoardView.tsx` |  |
+| 아이콘·짤 | 1:1·단체방·게시판 🙂 — 마켓(받기·신고)·편집기 | 4 사람 | `components/rooms/IconPacks.tsx` · `components/rooms/IconEditor.tsx` |  |
 
 ### AI 채팅 (대화 → AI 튜터 줄)
 
@@ -98,6 +101,7 @@
 |---|---|---|---|---|
 | 문장분석 | 채팅·통화 돌아보기·영상의 문장 → 분석 시트 | 1 메인 | `components/EnglishAnalysisViewer.tsx` |  |
 | My에서 찾기 `findInMy` | 🔎 — 그 말의 문법·표현 수업을 열고, 없으면 사전 시트 | 1 메인 · 3 AI | `components/FindInMy.tsx` | 노트 칸 열고 이 장면 넣기 |
+| 표현 시트 | 표현을 누르면 — 뜻·이 문장에서·쓰임 | 1 메인 | `components/ExpressionInsightSheet.tsx` · `components/ExpressionInsightProvider.tsx` |  |
 
 ### 요금·포인트·광고
 
@@ -105,6 +109,18 @@
 |---|---|---|---|---|
 | 결제 화면 `billingScreenTitle` (화면: 플랜 및 결제) | 플랜(라이트·플러스·프리미엄)·포인트 상점 | 1 메인 · 3 AI · 4 사람 | `components/BillingScreen.tsx` · `components/PointStore.tsx` |  |
 | 광고 | 무료·안드로이드만 — 자리 전체는 hub/app/ADS.md | 1 메인 · 2 My · 3 AI · 4 사람 | `components/NativeAdSlot.tsx` · `lib/ads.ts` |  |
+
+### 계정·로그인
+
+| 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
+|---|---|---|---|---|
+| 계정 카드·로그인 | My 맨 위·사람 기능 앞 — 로그인(Google·이메일 코드·아이디)·사진·닉네임·자기소개·프로필 칸 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/account/AccountCard.tsx` · `components/account/ProfileFacts.tsx` |  |
+
+### 랜덤 연결 — 창구 Spin(성인인증·짝 맞추기, 웹만)
+
+| 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
+|---|---|---|---|---|
+| 랜덤 연결 | 창구 Spin(웹만, 서버 스위치 꺼짐) — 성인인증·랜덤 채팅·영상 | 4 사람 | `components/rooms/RandomScreen.tsx` |  |
 
 ## 옛 앱 전용 서버 (4) — 새 앱 화면엔 없음
 
@@ -120,62 +136,66 @@
 | 무엇 | 왜 남았나 | 남은 코드 |
 |---|---|---|
 
-## 이름 정리할 것 — 같은 말을 쓰는 다른 문구 키 (55)
+## 부품 (50) — 기능 줄에 딸린 화면 코드
+
+> 화면 코드는 모두 기능 줄 code나 여기에 있다(`--check`). 기능을 지우면 그 부품도 같이 지운다.
+
+- 광고 — `WebAdSlot.tsx`
+- AI 채팅 — `ChatHistoryPanel.tsx` · `ExpressionPeek.tsx` · `ReportContentDialog.tsx` · `SelectableEnglishText.tsx`
+- 문장분석 — `AnalyzableEnglish.tsx` · `EnglishAnalysisProvider.tsx` · `SentenceAskPanel.tsx` · `VocabPreviewProvider.tsx` · `VocabSenseList.tsx` · `VocabWordPreview.tsx`
+- 결제 화면 — `PointsIcon.tsx`
+- 통화 끝 화면 — `RoleplayReview.tsx`
+- 통화 — `roleplay/TurnDiagBox.tsx`
+- 통화 기록 — `RoleplayPast.tsx`
+- 1:1 메시지 — `rooms/MediaImage.tsx` · `rooms/MessagesTab.tsx` · `rooms/RoomCall.tsx`
+- 사용법 — `FeatureMap.tsx`
+- 친구 초대 — `invite/InviteWelcome.tsx`
+- 소재 수업 — `studyMap/FixedExplain.tsx`
+- Logbank — `studyMap/Growth.tsx`
+- 사람 — `SuspendedNotice.tsx` · `rooms/MateAsk.tsx`
+- Quizbank — `studyMap/QuizPlayer.tsx`
+- Room — `rooms/RoomParts.tsx` · `rooms/VideoStage.tsx`
+- 영상 학습 — `contentDiscovery/ContentDiscoveryPanel.tsx` · `videoLearning/CatalogLibrary.tsx` · `videoLearning/CurrentSubtitleCard.tsx` · `videoLearning/SavedVideoSessions.tsx` · `videoLearning/SegmentPlayButton.tsx` · `videoLearning/StudyMaterialsList.tsx` · `videoLearning/SubtitleDebugPanel.tsx` · `videoLearning/SubtitleGenerationStatus.tsx` · `videoLearning/VideoPlayer.tsx` · `videoLearning/VideoUrlInput.tsx` · `videoLearning/VideoWatchFullscreenDock.tsx`
+- 공용: 🔊 듣기 — `TTSButton.tsx`
+- 공용: My 칸 색 — `studyMap/bankTone.tsx`
+- 공용: My 탭 틀 — `studyMap/StudyMapTab.tsx`
+- 공용: 대화 줄 할 일 한 줄 — `conversation/LineTools.tsx`
+- 공용: 앱 틀 — `Providers.tsx`
+- 공용: 앱 틀(상단바·하단 탭) — `AppHome.tsx`
+- 공용: 탭 아이콘 — `TabIcons.tsx`
+- 공용: 통화 화면 조각(AI·사람) — `speech/CallKit.tsx`
+- 공용: 프로필 시트 틀(사람·튜터) — `ProfileFrame.tsx`
+- 공용: 한 줄 말하기 조각(수업·퀴즈) — `studyMap/LineParts.tsx`
+- 공용: 한 줄 말해 보기 — `speech/Attempt.tsx`
+- 공용: 화면 덮는 층 — `FullScreenLayer.tsx`
+
+## 이름 정리할 것 — 같은 말을 쓰는 다른 문구 키 (26)
 
 > `node scripts/check-copy-keys.mjs`가 찾는다. 같은 기능이면 한 키로 합치고, 다른 기능이면 이름을 바꾼다. 고치면 `--write`로 기준을 줄인다. 새로 생기면 CI가 실패한다.
 
 - "{n}단계" — `dictionaryStage`, `stageNumber`
 - "건너뛰기" — `featurePickSkip`, `quizSkip`
-- "검색 결과가 없어요." — `learningSearchNoResults`, `vocabNoResults`
-- "고급" — `discoverLevelAdvanced`, `mapLevelAdvanced`
-- "교정" — `correctionTitle`, `reportAnalysisCorrected`, `reportStatCorrections`
-- "기능어" — `missParticle`, `posFunction`
-- "내 {targetLanguage} 교재" — `learningBookNav`, `learningBookTitle`
-- "내 표현" — `ledgerTitle`, `reportMyExpression`
-- "뉘앙스" — `reportAnalysisCategoryNuance`, `videoLearnNuance`
 - "단계" — `myViewMap`, `vocabByStage`
-- "단어" — `partVocab`, `quizTypeVocabulary`, `reviewFilterVocab`, `vocabFilterWords`
-- "단어 선택" — `reportAnalysisCategoryWordChoice`, `vocabPickTitle`
+- "단어" — `partVocab`, `vocabFilterWords`
 - "단어장" — `homeTabVocab`, `vocabTitle`
 - "대화" — `homeTabTalk`, `homeworkTalk`
-- "대화 돌아보기" — `reportReviewTitle`, `reportTimelineTitle`
-- "더 자연스럽게" — `chatNaturalChip`, `reportBetterExpression`
-- "듣기" — `listen`, `skillListen`
-- "또 다른 표현" — `cardMoreNatural`, `natural`
 - "랜덤" — `homeTabRandom`, `studyRandom`
 - "로그인" — `accountCodeConfirm`, `accountLoginTitle`, `accountSignIn`
-- "리포트" — `archive`, `homeTabReports`, `reportMenuTitle`
-- "리포트 보기" — `openSession`, `reportViewCta`
-- "리포트 생성" — `createReport`, `reportCreateConfirmCta`
 - "말하기" — `quizKindSay`, `selfFocusSpeaking`
-- "문법" — `notebookGrammar`, `partGrammar`, `quizTypeGrammar`, `reviewFilterGrammar`
+- "문법" — `notebookGrammar`, `partGrammar`
 - "문장" — `inspectTabSentence`, `videoLearnSessionLines`
 - "문장구조" — `amountFrames`, `framesTitle`
-- "발음" — `myElPronunciation`, `partPronunciation`
 - "번역" — `chatReading`, `roleplayTranslations`, `translate`, `translation`
 - "사람" — `homeTabPeople`, `topicPeople`
-- "새 대화 시작" — `chatHistoryNew`, `startNewSession`
 - "설명" — `explanation`, `featureViewList`
 - "쓰기" — `replayType`, `tlWrite`
-- "알아요" — `itemsMastered`, `knownTag`, `markKnown`
-- "어순" — `lessonOrder`, `missOrder`
 - "여행" — `discoverTopicTravel`, `selfUseTravel`
-- "연습 중" — `dashboardPracticing`, `filterPracticing`
-- "예문" — `dictionaryExample`, `example`, `reportAnalysisExample`, `reviewExamples`
-- "오늘 저장" — `dashboardSavedToday`, `progressSavedToday`
+- "예문" — `dictionaryExample`, `example`
 - "의견 보내기" — `feedbackOpen`, `feedbackTitle`
 - "이 문장에서는" — `exploreMeaningHere`, `insightInSentence`
-- "이렇게 바꿔보세요" — `correctionTryThis`, `reviewBetterSentence`
-- "이어서 읽기" — `studyContinue`, `webReadResume`
 - "이어서 하기" — `mapContinue`, `roleplayResume`, `scriptResume`
-- "익숙한 표현" — `dashboardUsable`, `filterUsable`
-- "익숙함" — `reviewFamiliar`, `vocabStatusFamiliar`
 - "읽기" — `discoverOpenRead`, `discoverTypeReading`
 - "자막" — `discoverCaptionsLabel`, `roleplayCaptions`
-- "자연스러움" — `myElNatural`, `reportScoreFactorNaturalness`
-- "정확도" — `myElAccuracy`, `reportScoreFactorAccuracy`
 - "찾는 중…" — `discoverSearching`, `findInMyBusy`
-- "표현" — `homeTabSaved`, `partExpression`, `quizTypeExpression`, `reportStatExpressions`, `vocabFilterPhrases`
-- "표현 알아보기" — `askExpression`, `reportExpressionsTitle`
-- "확인" — `missionCheck`, `quizCheck`, `whatsNewDone`
-- "힌트" — `missionHint`, `whyHint`
+- "표현" — `partExpression`, `reportStatExpressions`, `vocabFilterPhrases`
+- "확인" — `quizCheck`, `whatsNewDone`

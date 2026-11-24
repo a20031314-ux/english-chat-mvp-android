@@ -32,7 +32,7 @@ test("Room은 사람이 켜져 있어야 켜진다", () => {
 test("묶음: 전부는 아무것도 끄지 않고, 꺼 둔 목록으로 묶음을 다시 찾는다", () => {
   assert.deepEqual(presetOff("all"), []);
   for (const preset of FEATURE_PRESETS) assert.equal(matchingPreset(presetOff(preset.id)), preset.id);
-  assert.equal(matchingPreset(["notes"]), null);
+  assert.equal(matchingPreset(["rooms"]), null);
   assert.deepEqual(presetOff("solo").sort(), ["people", "rooms", "video"]);
 });
 
@@ -44,7 +44,8 @@ test("저장값 정리: 모르는 값은 버리고, chosen이 없으면 고른 �
 
 test("사용법 장마다 기능이 정해져 있다(AI 채팅·My만 늘 켜짐)", () => {
   const locked = GUIDE_CHAPTERS.filter((chapter) => featureOfGo(chapter.go) === null).map((chapter) => chapter.id);
-  assert.deepEqual(locked.sort(), ["ai-chat", "my"]);
+  // notes 장은 옛 앱 사용법 글(content.ts)에만 — 숨기는 스위치 없음.
+  assert.deepEqual(locked.sort(), ["ai-chat", "my", "notes"]);
   const covered = new Set(GUIDE_CHAPTERS.map((chapter) => featureOfGo(chapter.go)).filter(Boolean));
   for (const feature of FEATURE_IDS) assert.ok(covered.has(feature), feature);
 });
@@ -53,7 +54,7 @@ test("탭 → 기능: 채팅·My는 숨길 수 없다", () => {
   assert.equal(featureOfTab("chat"), null);
   assert.equal(featureOfTab("map"), null);
   assert.equal(featureOfTab("messages"), "people");
-  assert.equal(featureOfTab("vocab"), "notes");
+  assert.equal(featureOfTab("vocab"), null);
 });
 
 test("하단 탭: 사람을 숨기면 채팅 모양, Room은 사람과 같이, 통화는 탭이 아님(📞)", async () => {

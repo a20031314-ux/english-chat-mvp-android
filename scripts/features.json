@@ -5,11 +5,15 @@
     { "id": "first-language", "area": "shell", "name": "처음 언어·튜터 고르기", "copy": null, "does": "처음 설치 때 국기 여러 개 → 언어마다 튜터 얼굴 하나", "code": ["src/components/LanguagePick.tsx", "src/lib/firstLanguage.ts"], "status": "live" },
     { "id": "guide", "area": "shell", "name": "사용법", "copy": "guideOpen", "does": "상단 ? — 지금 탭의 장, 맨 앞 탭은 쓸 기능 고르기. 장마다 넘겨 보기 장면만(14개 앱 언어, 칸 칩 → 첫 장 핵심, 넘기면 세부 — 기능 이름·설명은 그림 안), 장면 없는 장은 안 보임", "code": ["src/components/GuideSheet.tsx", "src/lib/guide/slides.ts"], "status": "live", "replaces": ["학습 흐름", "장마다 카드 둘·칸 글", "노트·단어장 장"] },
     { "id": "whats-new", "area": "shell", "name": "새로워진 점", "copy": "whatsNewTitle", "does": "업데이트 뒤 한 번, 앱 언어별 캡처", "code": ["src/components/WhatsNewSheet.tsx", "src/lib/whatsNew.ts"], "status": "live" },
+
     { "id": "feedback", "area": "feedback", "name": "의견 보내기", "copy": "feedbackOpen", "does": "상단 💬 — 글·사진, 반영되면 소식 시트와 포인트", "code": ["src/components/FeedbackButton.tsx", "src/components/FeedbackFixedSheet.tsx"], "status": "live" },
 
     { "id": "tutor-row", "area": "talk", "name": "AI 튜터 줄", "copy": null, "does": "대화 탭 맨 위 — 고른·팔로우한 튜터마다 한 줄, 마지막 말, 통화 문 넷, 숙제 줄·점", "code": ["src/components/AiTutorRow.tsx", "src/lib/tutorFollows.ts"], "status": "live" },
+
     { "id": "tutor-profile", "area": "people", "name": "튜터 프로필", "copy": null, "does": "사람 프로필과 같은 틀 — 소개 · 통화 문 넷 · 숙제 · 마지막 메모 · 팔로우·메시지·통화 기록", "code": ["src/components/AiTutorProfile.tsx", "src/lib/roleplay/tutorDesk.ts"], "status": "live" },
+
     { "id": "ai-chat", "area": "chat", "name": "AI 채팅", "copy": "homeTabChat", "does": "튜터별 대화방, 입력창 하나(학습 언어면 대화, 편한 말이면 학습 언어로 이어감 + 표현 보기), 교정 칩", "code": ["src/components/ChatWindow.tsx", "src/components/MessageBubble.tsx"], "status": "live" },
+
     { "id": "call-mode-info", "area": "call", "name": "통화 설명", "does": "통화 중 맨 위 📞 통화 ⓘ → 설명창(튜터 · 코치 · 끝나면, 세 줄) — 처음 한 번 저절로(callInfoSeen.v1 이 폰)", "code": ["src/components/roleplay/CallParts.tsx"], "status": "live" },
     { "id": "call-free", "area": "call", "name": "통화", "copy": "homeTabCall", "does": "📞 하나 — 고르기 없이 인사, 튜터는 대화만(요즘 퀴즈로 배운 말이 나오는 화제·가끔 내 쪽 것을 설명해 달라고), 고친 말은 코치(같은 언어 짝 튜터) 띠가 내 얼굴 아래 소리 없이 — 따라 말하면 앱이 낱말 대조로 ✓, 내 말 기다리기(멈춘 뒤 0.9~2초, 채팅 ⋮·통화 ⓘ에서 고름, 기본 1.8초)", "code": ["src/components/CallHost.tsx", "src/components/RoleplayScreen.tsx", "src/lib/roleplay/transcriptMarks.ts", "src/lib/roleplay/recentLearned.ts"], "replaces": ["통화 문 넷(자유대화·🎓 수업·🎲 게임 스무고개·🧑‍🏫 가르치기)", "수업 튜터가 말로 짚고 다시 말해 보기", "수업 계획(틀 셋·칠판 카드·⏭ 다음 문장·숙제 리뷰)"], "status": "live" },
     { "id": "call-end", "area": "call", "name": "통화 끝 화면", "copy": null, "does": "요약 한 줄 · 튜터 메모 · 이렇게도 말할 수 있었어요 · 전체 대본 · 통화 정리 · 이번 통화의 고쳐 씀", "code": ["src/components/roleplay/CallParts.tsx", "src/components/roleplay/CallRecap.tsx"], "status": "live" },
@@ -19,11 +23,15 @@
 
     { "id": "dm", "area": "talk", "name": "1:1 메시지", "copy": "homeTabMessages", "does": "요청 → 열림, 📞 둘만의 비공개 방", "code": ["src/components/rooms/RoomDm.tsx"], "status": "live" },
     { "id": "groups", "area": "talk", "name": "단체방", "copy": null, "does": "단체 대화 · 팀 워크스페이스 · 📞 단체방 통화", "code": ["src/components/rooms/RoomGroups.tsx", "src/components/rooms/TeamSpace.tsx"], "status": "live" },
+
     { "id": "people", "area": "people", "name": "사람", "copy": "homeTabPeople", "does": "맨 위 AI 튜터 둘 + 사람 카드·프로필(팔로우·메시지·메이트·차단·신고)", "code": ["src/components/rooms/PeopleTab.tsx", "src/components/rooms/RoomPeople.tsx"], "status": "live" },
     { "id": "board", "area": "people", "name": "게시판", "copy": null, "does": "학습 언어별, 주제 칩 자유·질문·메이트·단체방", "code": ["src/components/rooms/BoardView.tsx"], "status": "live" },
+
     { "id": "invite", "area": "invite", "name": "친구 초대", "copy": null, "does": "➕ → 초대 보상 카드 + 공유", "code": ["src/components/invite/InviteButton.tsx", "src/components/invite/InviteRewards.tsx"], "status": "live" },
+
     { "id": "rooms", "area": "room", "name": "Room", "copy": "homeTabRooms", "does": "로비 열린 방 → 방(자리 8칸·듣는 줄·자막·댓글), 👥 단체방으로", "code": ["src/components/rooms/RoomsScreen.tsx", "src/components/rooms/RoomView.tsx"], "status": "live" },
     { "id": "room-game", "area": "room", "name": "방 게임", "copy": null, "does": "🎭 방장이 라이어 게임·마피아", "code": ["src/components/rooms/RoomGame.tsx"], "status": "live" },
+
     { "id": "video", "area": "video", "name": "영상 학습", "copy": "homeTabVideo", "does": "이달의 영상·링크 넣기·학습 언어 자막·문장 바 → 문장분석", "code": ["src/components/videoLearning/VideoLearningTab.tsx"], "status": "live" },
 
     { "id": "first-check", "area": "my", "name": "첫 측정", "copy": null, "does": "학습 언어로 처음 My를 열면 — 글자 → 낱말 예/아니오 → 뜻 → 표현·문법 → 시작 단계(건너뛰기 = 1단계)", "code": ["src/components/studyMap/FirstCheck.tsx", "src/lib/curriculum/firstCheck.ts"], "status": "live", "replaces": ["단계 고르기(대화 예시)", "단계 오르내리기 시험(PlacementPlayer)", "초급·중급·고급 체크"] },
@@ -42,13 +50,80 @@
 
     { "id": "analysis", "area": "sheet", "name": "문장분석", "copy": null, "does": "채팅·통화 돌아보기·영상의 문장 → 분석 시트", "code": ["src/components/EnglishAnalysisViewer.tsx"], "status": "live" },
     { "id": "find-in-my", "area": "sheet", "name": "My에서 찾기", "copy": "findInMy", "does": "🔎 — 그 말의 문법·표현 수업을 열고, 없으면 사전 시트", "code": ["src/components/FindInMy.tsx"], "status": "live", "replaces": ["노트 칸 열고 이 장면 넣기"] },
+
     { "id": "billing", "area": "billing", "name": "결제 화면", "copy": "billingScreenTitle", "does": "플랜(라이트·플러스·프리미엄)·포인트 상점", "code": ["src/components/BillingScreen.tsx", "src/components/PointStore.tsx"], "status": "live" },
     { "id": "ads", "area": "billing", "name": "광고", "copy": null, "does": "무료·안드로이드만 — 자리 전체는 hub/app/ADS.md", "code": ["src/components/NativeAdSlot.tsx", "src/lib/ads.ts"], "status": "live" },
 
-    { "id": "stagebank-api", "area": "my", "name": "Stagebank 서버(대본·단계 시험·꺼내 쓰기·돌아보기)", "copy": null, "does": "옛 앱 2.79 이하 My Stagebank가 부름 — 새 앱은 Quizbank 익힘 기록(scripts check)만 씀", "code": ["src/app/api/curriculum/recall/route.ts", "src/app/api/curriculum/ask/route.ts", "src/app/api/curriculum/fixed-lesson/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
-    { "id": "coach-api", "area": "call", "name": "통화 튜터 수업 서버(말로 짚기·다시 말해 보기)", "copy": null, "does": "옛 앱 2.79 이하 통화 🎓 튜터 수업이 coach: true로 부름 — 새 앱은 코치 띠(앱 채점), director.ts coachRules·spokenCoachFix·silent·study", "code": ["src/lib/roleplay/director.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
-    { "id": "guide-text-api", "area": "shell", "name": "사용법 글·칸 설명 서버(칸 글·학습 흐름·카드·? 설명)", "copy": null, "does": "옛 앱 2.79 이하 사용법·Stagebank·Quizbank·Logbank ?가 /api/guide(overview·banks·칸 글)로 읽음 — 새 앱은 장면(slides)만", "code": ["src/lib/guide/content.ts", "src/lib/guide/overview.ts", "src/lib/guide/banks.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
-    { "id": "next-step-api", "area": "learner", "name": "오늘 해볼 것 서버(채팅 빈 화면 카드·연습 목표)", "copy": null, "does": "옛 앱 2.80 이하 채팅 빈 화면 '오늘 해볼 것' 카드가 /api/learner/next로 읽고, 고른 연습을 /api/chat·/api/roleplay/turn에 practice로 보냄 — 새 앱엔 카드·practice 신호 없음(할 것은 My 오늘의 학습)", "code": ["src/app/api/learner/next/route.ts", "src/lib/learner/next.ts", "src/lib/learner/practice.ts"], "status": "old-app", "until": "최소 지원 버전 2.81 이상" }
+    { "id": "account", "area": "account", "name": "계정 카드·로그인", "copy": null, "does": "My 맨 위·사람 기능 앞 — 로그인(Google·이메일 코드·아이디)·사진·닉네임·자기소개·프로필 칸", "code": ["src/components/account/AccountCard.tsx", "src/components/account/ProfileFacts.tsx"], "status": "live" },
 
-  ]
+    { "id": "update-notice", "area": "shell", "name": "업데이트 알림", "copy": null, "does": "새 빌드가 있으면 배너, 최소 지원 버전 밑이면 막는 화면 · 시험 앱 껍데기는 새 배포 줄", "code": ["src/components/UpdateNotice.tsx", "src/components/ShellUpdate.tsx"], "status": "live" },
+    { "id": "ai-consent", "area": "shell", "name": "AI 데이터 동의", "copy": null, "does": "iOS 처음 열 때 한 번 — 무엇을 누구에게 보내는지·동의(이 기기)", "code": ["src/components/AiConsentGate.tsx"], "status": "live" },
+
+    { "id": "icons", "area": "people", "name": "아이콘·짤", "copy": null, "does": "1:1·단체방·게시판 🙂 — 마켓(받기·신고)·편집기", "code": ["src/components/rooms/IconPacks.tsx", "src/components/rooms/IconEditor.tsx"], "status": "live" },
+
+    { "id": "random", "area": "random", "name": "랜덤 연결", "copy": null, "does": "창구 Spin(웹만, 서버 스위치 꺼짐) — 성인인증·랜덤 채팅·영상", "code": ["src/components/rooms/RandomScreen.tsx"], "status": "live" },
+
+    { "id": "insight", "area": "sheet", "name": "표현 시트", "copy": null, "does": "표현을 누르면 — 뜻·이 문장에서·쓰임", "code": ["src/components/ExpressionInsightSheet.tsx", "src/components/ExpressionInsightProvider.tsx"], "status": "live" },
+
+    { "id": "stagebank-api", "area": "my", "name": "Stagebank 서버(대본·단계 시험·꺼내 쓰기·돌아보기)", "copy": null, "does": "옛 앱 2.79 이하 My Stagebank가 부름 — 새 앱은 Quizbank 익힘 기록(scripts check)만 씀", "code": ["src/app/api/curriculum/recall/route.ts", "src/app/api/curriculum/ask/route.ts", "src/app/api/curriculum/fixed-lesson/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
+
+    { "id": "coach-api", "area": "call", "name": "통화 튜터 수업 서버(말로 짚기·다시 말해 보기)", "copy": null, "does": "옛 앱 2.79 이하 통화 🎓 튜터 수업이 coach: true로 부름 — 새 앱은 코치 띠(앱 채점), director.ts coachRules·spokenCoachFix·silent·study", "code": ["src/lib/roleplay/director.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
+
+    { "id": "guide-text-api", "area": "shell", "name": "사용법 글·칸 설명 서버(칸 글·학습 흐름·카드·? 설명)", "copy": null, "does": "옛 앱 2.79 이하 사용법·Stagebank·Quizbank·Logbank ?가 /api/guide(overview·banks·칸 글)로 읽음 — 새 앱은 장면(slides)만", "code": ["src/lib/guide/content.ts", "src/lib/guide/overview.ts", "src/lib/guide/banks.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
+
+    { "id": "next-step-api", "area": "learner", "name": "오늘 해볼 것 서버(채팅 빈 화면 카드·연습 목표)", "copy": null, "does": "옛 앱 2.80 이하 채팅 빈 화면 '오늘 해볼 것' 카드가 /api/learner/next로 읽고, 고른 연습을 /api/chat·/api/roleplay/turn에 practice로 보냄 — 새 앱엔 카드·practice 신호 없음(할 것은 My 오늘의 학습)", "code": ["src/app/api/learner/next/route.ts", "src/lib/learner/next.ts", "src/lib/learner/practice.ts"], "status": "old-app", "until": "최소 지원 버전 2.81 이상" }
+  ],
+  "parts": {
+    "_": "화면 코드 중 기능 줄 code에 없는 것 — 어느 기능의 부품인지(기능 id) 또는 \"공용: …\". 새 화면 파일은 기능 줄이나 여기 중 한 곳에 있어야 한다(--check). 부품만 남고 기능이 없어지면 부품도 지운다.",
+    "src/components/AppHome.tsx": "공용: 앱 틀(상단바·하단 탭)",
+    "src/components/Providers.tsx": "공용: 앱 틀",
+    "src/components/FullScreenLayer.tsx": "공용: 화면 덮는 층",
+    "src/components/TabIcons.tsx": "공용: 탭 아이콘",
+    "src/components/TTSButton.tsx": "공용: 🔊 듣기",
+    "src/components/conversation/LineTools.tsx": "공용: 대화 줄 할 일 한 줄",
+    "src/components/speech/CallKit.tsx": "공용: 통화 화면 조각(AI·사람)",
+    "src/components/speech/Attempt.tsx": "공용: 한 줄 말해 보기",
+    "src/components/ProfileFrame.tsx": "공용: 프로필 시트 틀(사람·튜터)",
+    "src/components/studyMap/bankTone.tsx": "공용: My 칸 색",
+    "src/components/studyMap/StudyMapTab.tsx": "공용: My 탭 틀",
+    "src/components/studyMap/LineParts.tsx": "공용: 한 줄 말하기 조각(수업·퀴즈)",
+    "src/components/FeatureMap.tsx": "guide",
+    "src/components/ChatHistoryPanel.tsx": "ai-chat",
+    "src/components/ExpressionPeek.tsx": "ai-chat",
+    "src/components/ReportContentDialog.tsx": "ai-chat",
+    "src/components/SelectableEnglishText.tsx": "ai-chat",
+    "src/components/AnalyzableEnglish.tsx": "analysis",
+    "src/components/EnglishAnalysisProvider.tsx": "analysis",
+    "src/components/SentenceAskPanel.tsx": "analysis",
+    "src/components/VocabPreviewProvider.tsx": "analysis",
+    "src/components/VocabSenseList.tsx": "analysis",
+    "src/components/VocabWordPreview.tsx": "analysis",
+    "src/components/RoleplayPast.tsx": "call-list",
+    "src/components/RoleplayReview.tsx": "call-end",
+    "src/components/roleplay/TurnDiagBox.tsx": "call-free",
+    "src/components/SuspendedNotice.tsx": "people",
+    "src/components/rooms/MateAsk.tsx": "people",
+    "src/components/rooms/MediaImage.tsx": "dm",
+    "src/components/rooms/MessagesTab.tsx": "dm",
+    "src/components/rooms/RoomCall.tsx": "dm",
+    "src/components/rooms/RoomParts.tsx": "rooms",
+    "src/components/rooms/VideoStage.tsx": "rooms",
+    "src/components/invite/InviteWelcome.tsx": "invite",
+    "src/components/studyMap/QuizPlayer.tsx": "quizbank",
+    "src/components/studyMap/FixedExplain.tsx": "lesson",
+    "src/components/studyMap/Growth.tsx": "logbank",
+    "src/components/WebAdSlot.tsx": "ads",
+    "src/components/PointsIcon.tsx": "billing",
+    "src/components/contentDiscovery/ContentDiscoveryPanel.tsx": "video",
+    "src/components/videoLearning/CatalogLibrary.tsx": "video",
+    "src/components/videoLearning/CurrentSubtitleCard.tsx": "video",
+    "src/components/videoLearning/SavedVideoSessions.tsx": "video",
+    "src/components/videoLearning/SegmentPlayButton.tsx": "video",
+    "src/components/videoLearning/StudyMaterialsList.tsx": "video",
+    "src/components/videoLearning/SubtitleDebugPanel.tsx": "video",
+    "src/components/videoLearning/SubtitleGenerationStatus.tsx": "video",
+    "src/components/videoLearning/VideoPlayer.tsx": "video",
+    "src/components/videoLearning/VideoUrlInput.tsx": "video",
+    "src/components/videoLearning/VideoWatchFullscreenDock.tsx": "video"
+  }
 }

@@ -391,11 +391,11 @@ export function FirstCheck({
             </div>
           </div>
         ) : (
-          <p className="text-sm text-slate-400">{ui.mapLoading}</p>
+          <p className="text-sm text-slate-400">{ui.loading}</p>
         )
       ) : null}
 
-      {step === "meaning" && !question ? <p className="text-sm text-slate-400">{ui.mapLoading}</p> : null}
+      {step === "meaning" && !question ? <p className="text-sm text-slate-400">{ui.loading}</p> : null}
       {question ? (
         <QuestionView
           key={`${step}-${at}`}

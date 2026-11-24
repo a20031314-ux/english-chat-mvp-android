@@ -95,10 +95,10 @@
 > "다른 영역이 씀"은 이 영역 화면 코드를 가져다 쓰는 다른 영역. 고치기 전에 여기서 영향 범위를 본다.
 
 ### 앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법 `shell`
-- 화면: `AiConsentGate` · `AppHome` · `FeatureMap` · `FullScreenLayer` · `GuideSheet` · `LanguagePick` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `ShellUpdate` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
+- 화면: `AiConsentGate` · `AppHome` · `FeatureMap` · `FullScreenLayer` · `GuideSheet` · `LanguagePick` · `LearningLanguageFlag` · `Providers` · `ShellUpdate` · `TabIcons` · `UpdateNotice` · `WhatsNewSheet`
 - API: `guide` · `whats-new`
 - 웹 페이지: `/`
-- 다른 영역이 씀: `AppHome` ← 사람 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 9곳 · `LanguageSelector` ← 웹 전용 페이지 · `TabIcons` ← 여러 영역 6곳 · `TargetLanguageSelector` ← 웹 전용 페이지
+- 다른 영역이 씀: `AppHome` ← 사람 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 9곳 · `TabIcons` ← 여러 영역 6곳
 
 ### 대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀 `talk`
 - 화면: `AiTutorRow` · `rooms/MateAsk` · `rooms/MessagesTab` · `rooms/RoomDm` · `rooms/RoomGroups` · `rooms/TeamSpace`
@@ -111,7 +111,7 @@
 - 다른 영역이 씀: `ChatWindow` ← 앱 틀 · `conversation/LineTools` ← AI 통화, Room 탭
 
 ### AI 통화 (어디서나 뜨는 층 CallHost — 대화·사람 탭 📞) `call`
-- 화면: `CallHost` · `CallList` · `RoleplayOwnLine` · `RoleplayPast` · `RoleplayReview` · `RoleplayScreen` · `roleplay/CallParts` · `roleplay/CallRecap` · `roleplay/CallReplay` · `roleplay/TurnDiagBox` · `roleplay/callHooks`
+- 화면: `CallHost` · `CallList` · `RoleplayPast` · `RoleplayReview` · `RoleplayScreen` · `roleplay/CallParts` · `roleplay/CallRecap` · `roleplay/CallReplay` · `roleplay/TurnDiagBox` · `roleplay/callHooks`
 - API: `roleplay/context`(My 탭) · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, My 탭, 계정·로그인) · `roleplay/practice`(My 탭) · `roleplay/replay` · `roleplay/review`(My 탭) · `roleplay/turn`(My 탭)
 - 다른 영역이 씀: `CallHost` ← 앱 틀 · `roleplay/CallParts` ← My 탭
 
@@ -120,12 +120,12 @@
 - 다른 영역이 씀: `speech/Attempt` ← AI 통화, My 탭 · `speech/CallKit` ← 대화 탭, AI 채팅, AI 통화, Room 탭
 
 ### 문장분석·표현 시트 (여러 화면에서 열림) `sheet`
-- 화면: `AnalyzableEnglish` · `EnglishAnalysisProvider` · `EnglishAnalysisViewer` · `ExpressionInsightProvider` · `ExpressionInsightSheet` · `FindInMy` · `MarkForMap` · `SelectableEnglishText` · `SentenceAskPanel` · `TTSButton` · `VocabPreviewProvider` · `VocabSenseList` · `VocabWordPreview`
+- 화면: `AnalyzableEnglish` · `EnglishAnalysisProvider` · `EnglishAnalysisViewer` · `ExpressionInsightProvider` · `ExpressionInsightSheet` · `FindInMy` · `SelectableEnglishText` · `SentenceAskPanel` · `TTSButton` · `VocabPreviewProvider` · `VocabSenseList` · `VocabWordPreview`
 - API: `expression-ask` · `expression-insight` · `expression-units` · `learning-spans` · `translate`(대화 탭, AI 통화, 사람 탭, Room 탭, 계정·로그인) · `tts`(AI 통화, My 탭) · `vocab/gloss` · `vocab`
-- 다른 영역이 씀: `AnalyzableEnglish` ← AI 채팅, 영상 학습 탭, 웹 전용 페이지 · `EnglishAnalysisProvider` ← 앱 틀, 웹 전용 페이지 · `ExpressionInsightProvider` ← 앱 틀, 웹 전용 페이지 · `FindInMy` ← AI 통화 · `SelectableEnglishText` ← AI 채팅 · `TTSButton` ← AI 채팅, AI 통화, My 탭
+- 다른 영역이 씀: `AnalyzableEnglish` ← AI 채팅, 영상 학습 탭 · `EnglishAnalysisProvider` ← 앱 틀 · `ExpressionInsightProvider` ← 앱 틀 · `FindInMy` ← AI 통화 · `SelectableEnglishText` ← AI 채팅 · `TTSButton` ← AI 채팅, AI 통화, My 탭
 
 ### 학습 기록 공통 — 표현 장부·튜터 요약 (여러 화면이 같이 씀) `learner`
-- API: `learner/brief` · `learner/comprehension`(문장분석·표현 시트, 영상 학습 탭) · `learner/growth` · `learner/ledger`(대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트) · `learner/next` · `learner/self-check`(My 탭)
+- API: `learner/brief` · `learner/comprehension`(문장분석·표현 시트, 영상 학습 탭) · `learner/growth` · `learner/ledger`(대화 탭, AI 채팅, AI 통화) · `learner/next` · `learner/self-check`(My 탭)
 
 ### 영상 학습 탭 `video`
 - 화면: `contentDiscovery/ContentDiscoveryPanel` · `videoLearning/CatalogLibrary` · `videoLearning/CurrentSubtitleCard` · `videoLearning/SavedVideoSessions` · `videoLearning/SegmentPlayButton` · `videoLearning/StudyMaterialsList` · `videoLearning/SubtitleDebugPanel` · `videoLearning/SubtitleGenerationStatus` · `videoLearning/VideoLearningTab` · `videoLearning/VideoPlayer` · `videoLearning/VideoUrlInput` · `videoLearning/VideoWatchFullscreenDock` · `videoLearning/relayPlayer`
@@ -148,7 +148,7 @@
 - 다른 영역이 씀: `rooms/RandomScreen` ← 앱 틀
 
 ### My 탭 — 계정 카드·칸 셋 Logbank·Quizbank·Languagebank·첫 측정·소재 수업 `my`
-- 화면: `notes/NotebookSection` · `studyMap/BankFlip` · `studyMap/DictNotes` · `studyMap/Dictionary` · `studyMap/ExpressionCard` · `studyMap/FirstCheck` · `studyMap/FixedExplain` · `studyMap/FrameLesson` · `studyMap/GrammarExplain` · `studyMap/Growth` · `studyMap/InlineQuiz` · `studyMap/LanguageBank` · `studyMap/LessonHost` · `studyMap/LineParts` · `studyMap/Logbank` · `studyMap/QuizPlayer` · `studyMap/Quizbank` · `studyMap/ScriptPractice` · `studyMap/StudyChips` · `studyMap/StudyMapTab` · `studyMap/TodayCards` · `studyMap/UpNext` · `studyMap/bankTone`
+- 화면: `notes/NotebookSection` · `studyMap/BankFlip` · `studyMap/DictNotes` · `studyMap/Dictionary` · `studyMap/ExpressionCard` · `studyMap/FirstCheck` · `studyMap/FixedExplain` · `studyMap/FrameLesson` · `studyMap/GrammarExplain` · `studyMap/Growth` · `studyMap/InlineQuiz` · `studyMap/LanguageBank` · `studyMap/LessonHost` · `studyMap/LineParts` · `studyMap/Logbank` · `studyMap/QuizPlayer` · `studyMap/Quizbank` · `studyMap/ScriptPractice` · `studyMap/StudyChips` · `studyMap/StudyMapTab` · `studyMap/TodayCards` · `studyMap/bankTone`
 - API: `curriculum/ask` · `curriculum/fixed-lesson` · `curriculum/frame-lesson` · `curriculum/item-lesson` · `curriculum/option-notes` · `curriculum/qbank`(AI 통화) · `curriculum/quiz-stats` · `curriculum/recall` · `curriculum`(AI 통화) · `curriculum/script` · `curriculum/scripts`(AI 통화) · `curriculum/spots` · `curriculum/stages` · `curriculum/typed-check` · `curriculum/words` · `notebook`(문장분석·표현 시트)
 - 다른 영역이 씀: `studyMap/DictNotes` ← AI 채팅, 영상 학습 탭 · `studyMap/Dictionary` ← 문장분석·표현 시트 · `studyMap/Growth` ← AI 통화 · `studyMap/LessonHost` ← 앱 틀 · `studyMap/QuizPlayer` ← AI 통화 · `studyMap/StudyChips` ← AI 채팅, AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
 
@@ -175,9 +175,7 @@
 - 다른 영역이 씀: `FeedbackButton` ← 앱 틀 · `FeedbackFixedSheet` ← 앱 틀
 
 ### 웹 전용 페이지 `web`
-- 화면: `LearningBookPanel` · `LearningReviewModal`
-- 웹 페이지: `/door/[id]/[[...lang]]` · `/learning` · `/privacy`
-- 다른 영역이 씀: `LearningBookPanel` ← 앱 틀
+- 웹 페이지: `/door/[id]/[[...lang]]` · `/privacy`
 
 ### 예약 작업·점검·개발용 (앱 화면 아님) `ops`
 - API: `account/purge` · `build` · `curriculum/fixed-lesson/seed` · `curriculum/qbank/seed` · `media/sweep` · `ops/reports` · `simcheck/forget`
@@ -188,11 +186,8 @@
 | 신호 | 보내는 영역 | 받는 영역 |
 |---|---|---|
 | `openTab` | AI 통화, 사람 탭 | 앱 틀 |
-| `chatDraft` | — | AI 채팅 |
-| `openVideo` | — | 영상 학습 탭 |
 | `startCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
 | `openCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
-| `sayOwnLine` | — | AI 통화 |
 | `openNotes` | 앱 틀 | My 탭 |
 | `openGuide` | 앱 틀, My 탭 | 앱 틀 |
 | `openLesson` | — | My 탭 |

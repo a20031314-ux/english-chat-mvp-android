@@ -1,26 +1,12 @@
-/** 채팅 기록·저장 항목의 모양(예전 ArchivePanel 화면에서 떼어 냄 — 그 화면은 그려지는 곳이 없어 지움, 2026-10-23). */
+/** 채팅 기록의 모양(이 기기). */
 import {
   coerceLanguageCode,
   type LearningLanguageCode,
 } from "./learningLanguages.ts";
 import { isTutorGender, type TutorGender } from "./chatPartner.ts";
 
-export const ARCHIVE_STORAGE_KEY = "savedItems";
 /** AI 대화 기록(이 기기). ChatWindow가 쓰고, 대화 탭 튜터 줄이 마지막 말을 읽는다. */
 export const CONVERSATION_SESSIONS_KEY = "conversationSessions";
-
-export type SavedItem = {
-  id: string;
-  type: "correction" | "expression";
-  title: string;
-  original?: string;
-  corrected?: string;
-  natural?: string;
-  explanation?: string;
-  example?: string;
-  languageCode: LearningLanguageCode;
-  createdAt: number;
-};
 
 export type ChatMessage = {
   id: string;
@@ -87,29 +73,6 @@ function shownText(message: ChatMessage): string {
   } catch {
     return message.content;
   }
-}
-
-export function normalizeSavedItem(raw: unknown): SavedItem | null {
-  if (!raw || typeof raw !== "object") return null;
-  const o = raw as Record<string, unknown>;
-  if (typeof o.id !== "string" || !o.id) return null;
-  if (o.type !== "correction" && o.type !== "expression") return null;
-  if (typeof o.title !== "string") return null;
-  if (typeof o.createdAt !== "number") return null;
-  return {
-    id: o.id,
-    type: o.type,
-    title: o.title,
-    languageCode: coerceLanguageCode(o.languageCode),
-    createdAt: o.createdAt,
-    ...(typeof o.original === "string" ? { original: o.original } : {}),
-    ...(typeof o.corrected === "string" ? { corrected: o.corrected } : {}),
-    ...(typeof o.natural === "string" ? { natural: o.natural } : {}),
-    ...(typeof o.explanation === "string"
-      ? { explanation: o.explanation }
-      : {}),
-    ...(typeof o.example === "string" ? { example: o.example } : {}),
-  };
 }
 
 export function normalizeConversationSession(

@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BodyLayer } from "@/components/FullScreenLayer";
 import { CallList } from "@/components/CallList";
-import { RoleplayOwnLine } from "@/components/RoleplayOwnLine";
 import { RoleplayPast } from "@/components/RoleplayPast";
 import { RoleplayScreen } from "@/components/RoleplayScreen";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -46,7 +44,6 @@ export function CallHost({
   const [resuming, setResuming] = useState<SavedConversation | null>(null);
   const [reading, setReading] = useState<SavedConversation | null>(null);
   const [replayOpen, setReplayOpen] = useState(false);
-  const [ownLine, setOwnLine] = useState(false);
   const [listing, setListing] = useState(false);
   const { isPremium } = usePremium();
 
@@ -79,7 +76,6 @@ export function CallHost({
       }),
     [],
   );
-  useEffect(() => onAppIntent("sayOwnLine", () => setOwnLine(true)), []);
 
   return (
     <>
@@ -113,21 +109,6 @@ export function CallHost({
           nativeLanguage={nativeLanguage}
           isPremium={isPremium}
         />
-      ) : null}
-      {ownLine ? (
-        <BodyLayer>
-          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/70 sm:items-center" role="dialog" aria-modal="true">
-            <div className="flex w-full max-w-md justify-center rounded-t-2xl bg-surface px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-4 sm:rounded-2xl">
-              <RoleplayOwnLine
-                targetLanguage={targetLanguage}
-                nativeLanguage={nativeLanguage}
-                isPremium={isPremium}
-                ui={ui}
-                onClose={() => setOwnLine(false)}
-              />
-            </div>
-          </div>
-        </BodyLayer>
       ) : null}
     </>
   );

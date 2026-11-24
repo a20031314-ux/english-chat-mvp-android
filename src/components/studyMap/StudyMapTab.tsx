@@ -89,7 +89,7 @@ export function StudyMapTab({ ui, locale, targetLanguage }: { ui: UICopy; locale
           <AccountCard ui={ui} locale={locale} />
         </div>
         {loading ? (
-          <p className="text-sm text-slate-400">{ui.mapLoading}</p>
+          <p className="text-sm text-slate-400">{ui.loading}</p>
         ) : started ? (
           <div className="mx-auto max-w-2xl">
             <NotebookSection ui={ui} locale={locale} language={targetLanguage} isPremium={isPremium} />

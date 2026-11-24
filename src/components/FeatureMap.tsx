@@ -125,7 +125,6 @@ export function FeatureMap({
     feature: null,
     chapter: "my",
     icon: "map",
-    children: [{ key: "notes", label: ui.notesTitle, feature: "notes", chapter: "notes" }],
   };
   const tree: Node[] = social
     ? [

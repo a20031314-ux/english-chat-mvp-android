@@ -7,7 +7,6 @@ import { maybeShowAppOpen, maybeShowInterstitial, setAppOpenAllowedHere, setBann
 import { ChatWindow } from "@/components/ChatWindow";
 import { FirstLanguagePick, LanguageSettingsButton } from "@/components/LanguagePick";
 import { LearnsSync } from "@/components/account/AccountCard";
-import { readAppLocale } from "@/components/LearningBookPanel";
 import { EnglishAnalysisProvider } from "@/components/EnglishAnalysisProvider";
 import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvider";
 import { TAB_ICON_META } from "@/components/TabIcons";
@@ -45,7 +44,7 @@ import { isIosApp, socialFeaturesEnabled } from "@/lib/platform";
 import { bottomTabs, featureOfTab, isFeatureOn, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
-import { APP_LOCALE_STORAGE_KEY, isLocale, type Locale } from "@/lib/copy";
+import { APP_LOCALE_STORAGE_KEY, isLocale, readAppLocale, type Locale } from "@/lib/copy";
 import {
   DEFAULT_LEARNING_LANGUAGE_CODE,
   isLearningLanguageCode,
@@ -110,7 +109,6 @@ const FEATURE_CHAPTER: Record<FeatureId, string> = {
   video: "video",
   people: "people",
   rooms: "rooms",
-  notes: "notes",
 };
 
 function AppHomeInner({

@@ -2,8 +2,6 @@
 
 import { DictNotesToggle } from "@/components/studyMap/DictNotes";
 import { noteSpot } from "@/lib/resumeSpot";
-import { offerUpNext } from "@/lib/curriculum/upNext";
-import { UpNextButton } from "@/components/studyMap/UpNext";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot, useNativeRefresh } from "@/components/NativeAdSlot";
@@ -338,11 +336,7 @@ export function FrameLesson({
     : [];
   const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : grammarPage?.name || lesson?.title || subject?.title || "");
   // 닫기(✕·끝 화면 "닫기" 같음): 전면 광고 없음 — 수업은 어디서나 열려(openLesson) 닫으면 퀴즈·통화·채팅으로 돌아가는 도중이라. 끝 화면 네이티브만.
-  const close = () => {
-    // 닫으면 My 아래에 다음 추천 줄(lib/curriculum/upNext.ts, 2026-11-02).
-    offerUpNext(itemId);
-    onClose();
-  };
+  const close = () => onClose();
 
   return (
     <FullScreenLayer>
@@ -685,8 +679,6 @@ export function FrameLesson({
                 {ui.billingClose}
               </button>
             </div>
-            {/* 다음 추천: 오늘 할 것의 다음 항목(다 했으면 Quizbank)으로 바로(2026-11-02 사용자 요청 — 권장 학습 흐름으로 다른 학습으로 이동). */}
-            <UpNextButton ui={ui} own={itemId} close={close} />
             {/* 끝 화면 점수 아래 네이티브 하나(닫을 때 전면 없음 — 수업은 다른 흐름으로 돌아가는 도중) — 버튼과 한 줄 넘게 띄움. */}
             <NativeAdSlot feedId="results" slotKey={`lesson-end-${itemId}`} spaced />
           </div>

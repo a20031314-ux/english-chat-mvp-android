@@ -1,7 +1,7 @@
 /**
  * 쓸 기능 고르기(2026-10-21, hub/work/drafts/feature-modules.md): 사용자가 쓰지 않을 기능을 숨겨 화면을 단순하게.
  *
- * - 고를 수 있는 것: 통화·영상·사람(대화의 1:1·단체방 포함)·Room·노트. AI 채팅과 My(지도)는 늘 켜짐 — 학습 기록의 뿌리.
+ * - 고를 수 있는 것: 통화·영상·사람(대화의 1:1·단체방 포함)·Room. AI 채팅과 My는 늘 켜짐 — 학습 기록의 뿌리.
  * - Room은 사람이 켜져 있어야 켜진다(방은 사람 기능의 일부).
  * - 숨김은 지우기가 아니다: 기록·친구·방은 그대로, 다시 켜면 돌아온다. 이 기기에만 저장한다(계정 저장은 아직).
  * - 새 사용자(처음 설치)는 첫 화면에서 고른다. 아무것도 안 고르고 넘기면 전부 켜짐(사용자 결정 2026-10-21).
@@ -12,8 +12,8 @@
 import { USE_SIGNAL_KEYS, WHATS_NEW_SEEN_KEY } from "./whatsNew.ts";
 import type { GuideGo } from "./guide/content.ts";
 
-export type FeatureId = "call" | "video" | "people" | "rooms" | "notes";
-export const FEATURE_IDS: FeatureId[] = ["call", "video", "people", "rooms", "notes"];
+export type FeatureId = "call" | "video" | "people" | "rooms";
+export const FEATURE_IDS: FeatureId[] = ["call", "video", "people", "rooms"];
 
 export type FeatureState = {
   /** 꺼 둔 기능. */
@@ -27,9 +27,9 @@ export const FEATURES_STORAGE_KEY = "appFeatures";
 export type FeaturePresetId = "solo" | "video" | "people" | "all";
 /** 묶음: 켜는 기능. 고른 뒤 하나씩 바꿀 수 있다. */
 export const FEATURE_PRESETS: { id: FeaturePresetId; on: FeatureId[] }[] = [
-  { id: "solo", on: ["call", "notes"] },
-  { id: "video", on: ["video", "notes"] },
-  { id: "people", on: ["call", "people", "rooms", "notes"] },
+  { id: "solo", on: ["call"] },
+  { id: "video", on: ["video"] },
+  { id: "people", on: ["call", "people", "rooms"] },
   { id: "all", on: [...FEATURE_IDS] },
 ];
 
@@ -56,8 +56,6 @@ export function featureOfGo(go: GuideGo): FeatureId | null {
       return "people";
     case "rooms":
       return "rooms";
-    case "notes":
-      return "notes";
     default:
       return null;
   }
@@ -76,8 +74,6 @@ export function featureOfTab(tab: string): FeatureId | null {
       return "people";
     case "rooms":
       return "rooms";
-    case "vocab":
-      return "notes";
     default:
       return null;
   }

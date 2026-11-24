@@ -8,23 +8,15 @@ import { setTalkShare, talkShareOn } from "@/lib/curriculum/talkQuiz";
 import { enterScene } from "@/lib/notes/sceneShots";
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-  ARCHIVE_STORAGE_KEY,
   CONVERSATION_SESSIONS_KEY,
   ChatMessage,
   ConversationSession,
   resumableFor,
   normalizeConversationSession,
-  normalizeSavedItem,
-  SavedItem,
 } from "@/lib/chatArchive";
 import { ChatHttpError, postChatStream } from "@/lib/chatStream";
 import { APP_LOCALE_STORAGE_KEY, isLocale, Locale } from "@/lib/copy";
 import { useUiCopy } from "@/hooks/useUiCopy";
-import {
-  loadLearningCards,
-  persistLearningCards,
-  type LearningCard,
-} from "@/lib/learningCards";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 import { noteUpdateLevel } from "@/lib/appUpdate";
 import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
@@ -60,8 +52,6 @@ import {
   detectConversationMode,
   type ConversationMode,
 } from "@/lib/conversationMode";
-import { onAppIntent } from "@/lib/appIntents";
-import { isUnfinished, type SavedConversation } from "@/lib/roleplay/saved";
 import { ExpressionPeek } from "@/components/ExpressionPeek";
 import { rememberHowToSay } from "@/lib/curriculum/gaps";
 import { noteLedger } from "@/lib/curriculum/logLedger";
@@ -306,34 +296,6 @@ let chatStreamWorks = true;
 
 function makeSessionId() {
   return `session-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-}
-
-function loadSavedItems(): SavedItem[] {
-  if (typeof window === "undefined") {
-    return [];
-  }
-
-  try {
-    const raw = window.localStorage.getItem(ARCHIVE_STORAGE_KEY);
-    if (!raw) {
-      return [];
-    }
-    const parsed = JSON.parse(raw) as unknown;
-    if (!Array.isArray(parsed)) return [];
-    return parsed
-      .map(normalizeSavedItem)
-      .filter((item): item is SavedItem => item !== null);
-  } catch {
-    return [];
-  }
-}
-
-function persistSavedItems(items: SavedItem[]) {
-  if (typeof window === "undefined") {
-    return;
-  }
-  window.localStorage.setItem(ARCHIVE_STORAGE_KEY, JSON.stringify(items));
-  window.dispatchEvent(new Event("archiveUpdated"));
 }
 
 function loadConversationSessions(): ConversationSession[] {
@@ -701,48 +663,6 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
   return turns;
 }
 
-function buildCorrectionSavedItem(
-  turn: ChatTurn,
-  languageCode: LearningLanguageCode,
-): SavedItem | null {
-  if (!turn.correctionResult) {
-    return null;
-  }
-
-  return {
-    id: `correction-${turn.id}`,
-    type: "correction",
-    title: turn.correctionResult.corrected,
-    original: turn.userMessage,
-    corrected: turn.correctionResult.corrected,
-    natural: turn.correctionResult.natural,
-    explanation: turn.correctionResult.explanation,
-    languageCode,
-    createdAt: Date.now(),
-  };
-}
-
-function buildExpressionSavedItem(
-  turn: ChatTurn,
-  languageCode: LearningLanguageCode,
-): SavedItem | null {
-  if (!turn.expressionResult) {
-    return null;
-  }
-
-  return {
-    id: `expression-${turn.id}`,
-    type: "expression",
-    title: turn.expressionResult.expression,
-    original: turn.userMessage,
-    corrected: turn.expressionResult.expression,
-    explanation: "",
-    example: turn.expressionResult.example,
-    languageCode,
-    createdAt: Date.now(),
-  };
-}
-
 type ChatWindowProps = {
   tabMode?: boolean;
   locale?: Locale;
@@ -810,11 +730,7 @@ export function ChatWindow({
   // find a toggle for. Every place that starts a conversation resets to this.
   const [turns, setTurns] = useState<ChatTurn[]>([]);
   const [input, setInput] = useState("");
-  // A study-map topic can hand over the first line to send.
-  useEffect(() => onAppIntent("chatDraft", ({ text }) => setInput(text)), []);
   const [isSending, setIsSending] = useState(false);
-  const [savedItems, setSavedItems] = useState<SavedItem[]>([]);
-  const [, setLearningCards] = useState<LearningCard[]>([]);
   const [conversationSessions, setConversationSessions] = useState<ConversationSession[]>(
     [],
   );
@@ -977,10 +893,8 @@ export function ChatWindow({
   };
 
   useEffect(() => {
-    setSavedItems(loadSavedItems());
     const sessions = loadConversationSessions();
     setConversationSessions(sessions);
-    setLearningCards(loadLearningCards());
 
     const resumable = findResumableSession(sessions, targetLanguage);
     setSessionLanguageCode(targetLanguage);
@@ -1015,15 +929,6 @@ export function ChatWindow({
     const timer = window.setTimeout(() => setBookToast(null), 3800);
     return () => window.clearTimeout(timer);
   }, [bookToast]);
-
-  useEffect(() => {
-    const handleArchiveUpdated = () => {
-      setSavedItems(loadSavedItems());
-    };
-
-    window.addEventListener("archiveUpdated", handleArchiveUpdated);
-    return () => window.removeEventListener("archiveUpdated", handleArchiveUpdated);
-  }, []);
 
   useEffect(() => {
     if (!currentSessionId) {
@@ -1463,65 +1368,6 @@ export function ChatWindow({
     );
   };
 
-
-  const saveItemFromTurn = (item: SavedItem | null) => {
-    if (!item) {
-      return;
-    }
-    setSavedItems((previous) => {
-      if (previous.some((saved) => saved.id === item.id)) {
-        return previous;
-      }
-      const updated = [item, ...previous];
-      persistSavedItems(updated);
-      return updated;
-    });
-  };
-
-  const saveLearningCardFromTurn = (turn: ChatTurn) => {
-    const corrected =
-      turn.mode === "how_to_say"
-        ? turn.expressionResult?.expression
-        : turn.correctionResult?.corrected;
-    const explanation =
-      turn.mode === "how_to_say"
-        ? ""
-        : turn.correctionResult?.explanation;
-
-    const createdAt = Date.now();
-    const newItem: LearningCard = {
-      id: createdAt,
-      original: turn.userMessage || "",
-      corrected: corrected || "",
-      explanation: explanation || "",
-      languageCode: sessionLanguageCode,
-      createdAt,
-      savedAt: createdAt,
-      status: "new",
-      reviewCount: 0,
-      lastReviewedAt: null,
-    };
-
-    if (turn.mode === "chat" && turn.correctionResult) {
-      const { natural, corrected: corr, hasError } = turn.correctionResult;
-      if (hasError && natural.trim() !== corr.trim()) {
-        newItem.natural = natural.trim();
-      }
-    }
-
-    try {
-      const safeExisting = loadLearningCards();
-      setLearningCards((prev) => {
-        const base = prev.length > 0 ? prev : safeExisting;
-        const updated = [...base, newItem];
-        persistLearningCards(updated);
-        setBookToast(ui.savedToBookToast.replace("{count}", String(updated.length)));
-        return updated;
-      });
-    } catch (e) {
-      console.error("Save error:", e);
-    }
-  };
 
   const startNewChat = () => {
     setTurns([]);

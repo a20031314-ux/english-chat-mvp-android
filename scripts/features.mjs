@@ -8,6 +8,9 @@
  *     - live·old-app 줄의 code 파일이 없음(지웠는데 줄이 남음 — 줄도 지운다)
  *     - copy 키가 copy.ts에 없음, 두 줄이 같은 copy 키·같은 이름
  *     - hub/app/FEATURES.md가 원본과 다름(node scripts/features.mjs로 다시 씀)
+ *     - 화면 코드(src/components 아래 .tsx)가 기능 줄 code에도 parts에도 없음(2026-11-24 사용자 "장부 자체를 점검" —
+ *       장부 밖 화면 조각은 겹침·옛 것 검사에 안 걸려 옛 카드가 한 달 남았다), parts가 없는 파일·없는 기능 id를 가리킴
+ *     - 화면끼리 신호(appIntents.ts) 중 보내는 곳이나 받는 곳이 없는 것
  *   remove 줄의 코드가 남아 있는 것은 실패가 아니라 "지울 것" 표로 — 줄어드는 게 목표.
  */
 import fs from "node:fs";
@@ -49,6 +52,52 @@ for (const one of ledger.features) {
   }
   if (one.status !== "remove") for (const file of one.code ?? []) if (!exists(file)) problems.push(`${one.id}: ${file}이 없음 — 기능을 뺐으면 장부 줄도 지운다`);
   if (!["live", "old-app", "remove"].includes(one.status)) problems.push(`${one.id}: status ${one.status}`);
+}
+
+// 화면 코드는 모두 장부에: 기능 줄 code 또는 parts(부품 → 기능 id · "공용: …").
+const parts = Object.fromEntries(Object.entries(ledger.parts ?? {}).filter(([file]) => file !== "_"));
+const inLines = new Set(ledger.features.flatMap((one) => one.code ?? []));
+const screenFiles = [];
+const walkScreens = (dir) => {
+  for (const e of fs.readdirSync(path.join(root, dir), { withFileTypes: true })) {
+    const rel = `${dir}/${e.name}`;
+    if (e.isDirectory()) walkScreens(rel);
+    else if (e.name.endsWith(".tsx") && !e.name.includes(".test.")) screenFiles.push(rel);
+  }
+};
+walkScreens("src/components");
+for (const file of screenFiles) {
+  if (!inLines.has(file) && !parts[file]) problems.push(`${file}: 장부 밖 화면 코드 — 기능 줄 code나 parts(부품: 기능 id 또는 "공용: …")에 넣고, 같은 일을 하는 기능이 이미 있으면 지운다`);
+}
+for (const [file, owner] of Object.entries(parts)) {
+  if (!exists(file)) problems.push(`parts ${file}이 없음 — 지웠으면 parts 줄도 지운다`);
+  if (inLines.has(file)) problems.push(`parts ${file}: 기능 줄 code에도 있음 — 한 곳에만`);
+  if (!owner.startsWith("공용:") && !seenId.has(owner)) problems.push(`parts ${file}: 기능 id ${owner}가 장부에 없음`);
+}
+
+// 화면끼리 신호(src/lib/appIntents.ts)는 보내는 곳과 받는 곳이 둘 다 있어야 — 한쪽만 남으면 옛 화면이 받는 쪽에 그대로 산다
+// (2026-11-24: chatDraft·openVideo·sayOwnLine을 받기만 하고 아무도 안 보내 "내 문장 말해보기" 화면이 열 길 없이 남음).
+{
+  const intents = fs.readFileSync(path.join(root, "src/lib/appIntents.ts"), "utf8");
+  const typeBlock = intents.slice(intents.indexOf("export type AppIntents = {"), intents.indexOf("\n};", intents.indexOf("export type AppIntents = {")));
+  const names = [...typeBlock.matchAll(/^ {2}([A-Za-z]+):/gm)].map((m) => m[1]);
+  const wrappers = new Map([...intents.matchAll(/export function (\w+)\([^)]*\)[^{]*\{\s*sendAppIntent\("(\w+)"/g)].map((m) => [m[2], m[1]]));
+  const code = [];
+  const walkCode = (dir) => {
+    for (const e of fs.readdirSync(path.join(root, dir), { withFileTypes: true })) {
+      const rel = `${dir}/${e.name}`;
+      if (e.isDirectory()) walkCode(rel);
+      else if (/\.tsx?$/.test(e.name) && !e.name.includes(".test.") && rel !== "src/lib/appIntents.ts") code.push(fs.readFileSync(path.join(root, rel), "utf8"));
+    }
+  };
+  walkCode("src");
+  const all = code.join("\n");
+  for (const name of names) {
+    const sent = all.includes(`sendAppIntent("${name}"`) || (wrappers.has(name) && new RegExp(`\\b${wrappers.get(name)}\\(`).test(all));
+    const heard = all.includes(`onAppIntent("${name}"`) || all.includes(`takeAppIntent("${name}"`);
+    if (!sent) problems.push(`신호 ${name}: 보내는 곳이 없음 — 받는 쪽 코드와 신호를 지운다(appIntents.ts)`);
+    if (!heard) problems.push(`신호 ${name}: 받는 곳이 없음 — 보내는 쪽 코드와 신호를 지운다(appIntents.ts)`);
+  }
 }
 
 const cell = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\n/g, " ");
@@ -97,6 +146,18 @@ lines.push("|---|---|---|");
 for (const one of remove) {
   const left = (one.code ?? []).filter(exists);
   lines.push(`| ${cell(one.name)} | ${cell(one.does)}${one.note ? ` — ${cell(one.note)}` : ""} | ${left.length ? left.map((f) => `\`${f.replace(/^src\//, "")}\``).join(" · ") : "없음 — 줄을 지운다"} |`);
+}
+lines.push("");
+const partList = Object.entries(parts);
+lines.push(`## 부품 (${partList.length}) — 기능 줄에 딸린 화면 코드`);
+lines.push("");
+lines.push("> 화면 코드는 모두 기능 줄 code나 여기에 있다(\`--check\`). 기능을 지우면 그 부품도 같이 지운다.");
+lines.push("");
+const byOwner = new Map();
+for (const [file, owner] of partList) byOwner.set(owner, [...(byOwner.get(owner) ?? []), file]);
+const ownerName = (owner) => (owner.startsWith("공용:") ? owner : `${ledger.features.find((one) => one.id === owner)?.name ?? owner}`);
+for (const [owner, list] of [...byOwner].sort(([a], [b]) => Number(a.startsWith("공용:")) - Number(b.startsWith("공용:")) || a.localeCompare(b))) {
+  lines.push(`- ${cell(ownerName(owner))} — ${list.map((f) => `\`${f.replace(/^src\/components\//, "")}\``).join(" · ")}`);
 }
 lines.push("");
 const dups = copyKeys.known?.duplicate ?? [];
