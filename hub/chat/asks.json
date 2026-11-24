@@ -7918,23 +7918,35 @@
       "base": "403db6e3dd1b449358d20b98e1a47e1cac1e9850",
       "head": "e9ac881",
       "status": "open"
+    },
+    {
+      "id": "a261124-3-3",
+      "at": "2026-11-24 13:28",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "Quizbank 비율·단계·사다리·게이지",
+      "files": [
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/studyMap/TodayCards.tsx"
+      ],
+      "features": [
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "칸 설명"
+      ],
+      "base": "a1d342009db3bfba66875e4da182d7323df734f8",
+      "head": "2d370f5",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-14 17:12",
-      "from": "3",
-      "base": "f04b33f",
-      "head": "a3aa3a4",
-      "what": "Quizbank 문법 빈칸 물음에 문법 이름(빈칸에 들어갈 관계사는?) — QuizPlayer askLine, 한국어·영어 앱만",
-      "tabs": [
-        "2",
-        "3"
-      ],
-      "asks": [
-        "a261114-3-1"
-      ]
-    },
     {
       "at": "2026-11-14 20:20",
       "from": "2",
@@ -8526,9 +8538,22 @@
       "asks": [
         "a261124-3-2"
       ]
+    },
+    {
+      "at": "2026-11-24 13:28",
+      "from": "3",
+      "base": "a1d342009db3bfba66875e4da182d7323df734f8",
+      "head": "2d370f5",
+      "what": "Quizbank 비율·단계·사다리·게이지",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261124-3-3"
+      ]
     }
   ],
   "seq": {
-    "261124-3": 2
+    "261124-3": 3
   }
 }
