@@ -375,7 +375,7 @@ Reply with JSON only: {"ok":true,"en":"<English translation>","key":"g|…","par
 }
 
 /** 대화에서 온 튜터 줄을 하루에 이만큼까지 판정(모델 한 번씩). */
-export const OFFER_BUDGET = 300;
+export const OFFER_BUDGET = 1000;
 
 /**
  * 대화에서 온 튜터 줄(2026-11-01 사용자 "예문을 통화·채팅 문장으로" → B-1 "사용자 정보가 있는 문장은 걸러서", lib/curriculum/talkQuiz.ts):

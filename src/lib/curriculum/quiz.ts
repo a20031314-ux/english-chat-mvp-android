@@ -76,7 +76,7 @@ export type QuizQuestion =
    * 대화 조각 빈칸(2026-11-01 사용자 "예문을 통화·채팅 문장으로 — 문맥은 대화를 떼 와서", curriculum/talkQuiz.ts): 이 폰의 AI 채팅·통화 기록에서
    * 앞 두세 줄과 함께, 마지막 줄(at)의 소재 자리를 비운다. mine = 내가 고침받은 줄의 고친 꼴. options = 칠 수 없는 조각(한자)은 고르기.
    */
-  | { kind: "talk"; text: string; lines: { who: "me" | "them"; text: string; gloss?: string }[]; at: number; before: string; after: string; answer: string; near?: string[]; options?: string[]; mine?: boolean; from: string }
+  | { kind: "talk"; text: string; lines: { who: "me" | "them"; text: string; gloss?: string }[]; at: number; before: string; after: string; answer: string; near?: string[]; options?: string[]; mine?: boolean; /** 고침받은 줄이면 내가 처음 한 말(줄 그어 보임, talkFill.ts). */ was?: string; from: string }
   /** 복합 틀린 곳(같은 날): 한 문장에 확실히 틀린 꼴이 둘·셋 — 모두 찾아 고친다. errors마다 그 열쇠·낱말 자리·바른 말. */
   | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[]; /** 문단: 틀린 꼴·왜 틀렸나(데이터, 앱 언어는 quizGloss). */ wrong?: string; why?: ScriptGloss }[]; gloss: ScriptGloss; from: string; /** 문단(story-errors P1~P4): 선지 칸 · 틀린 곳 수를 안 보임(P4·게이지 위쪽). */ picks?: number[]; hideCount?: true; /** 뜻이 틀린 곳이 든 문단 — 뜻 줄은 답한 뒤에만(체감 점검 2026-11-12 "해석의 일찍과 비교만 하면 late가 보임"). */ glossAfter?: true }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */

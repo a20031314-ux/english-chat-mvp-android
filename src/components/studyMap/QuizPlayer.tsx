@@ -1078,6 +1078,12 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
           return (
             <li key={i} className={`flex ${mine ? "justify-end" : "justify-start"}`}>
               <div className={`max-w-[85%] rounded-2xl px-3 py-2 ${mine ? "bg-white/10" : "bg-white/[0.04]"} ${last ? "" : "opacity-70"}`}>
+                {/* 고침받은 줄이면 내가 처음 한 말을 줄 그어(curriculum/talkFill.ts). */}
+                {last && question.was ? (
+                  <p dir="auto" className="mb-0.5 text-meta text-slate-500 line-through" data-talk-was>
+                    {question.was}
+                  </p>
+                ) : null}
                 <p dir="auto" className="text-chat text-slate-100">
                   {last ? (
                     <>

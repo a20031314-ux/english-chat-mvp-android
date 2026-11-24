@@ -12,7 +12,7 @@ test("채팅 기록: 내 줄은 틀렸으면 고친 꼴로(fixed), 튜터 줄은
     ],
   });
   assert.deepEqual(lines, [
-    { who: "me", text: "I went to school yesterday.", fixed: true },
+    { who: "me", text: "I went to school yesterday.", fixed: true, was: "I go to school yesterday." },
     { who: "them", text: "Oh nice! How about you, did you like it?" },
     { who: "them", text: "You can say it like this." },
   ]);
@@ -22,7 +22,7 @@ test("통화 기록: 튜터 줄은 번역을 뜻으로, 내 줄은 더 나은 �
   const lines = callLines({ said: [{ who: "tutor", text: "¿Qué quieres tomar?", translation: "뭐 마실래?" }, { who: "learner", text: "Quiero un café", better: "Quiero un café, por favor." }] });
   assert.deepEqual(lines, [
     { who: "them", text: "¿Qué quieres tomar?", gloss: "뭐 마실래?" },
-    { who: "me", text: "Quiero un café, por favor.", fixed: true },
+    { who: "me", text: "Quiero un café, por favor.", fixed: true, was: "Quiero un café" },
   ]);
 });
 

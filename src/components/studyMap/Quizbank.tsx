@@ -35,6 +35,7 @@ import { InlineQuiz, type QuizBatch } from "@/components/studyMap/InlineQuiz";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { recordQuiz, type QuizLog } from "@/lib/curriculum/nextStudy";
 import { commonWords, hitsIn, readTalks, shareable, talkShareOn } from "@/lib/curriculum/talkQuiz";
+import { noteFill, readFillMemo, talkFills } from "@/lib/curriculum/talkFill";
 import { QUIZ_LOG_EVENT, readQuizLog, saveQuizLog } from "@/lib/curriculum/quizLogStore";
 import { growBank, grownItems, offerBank } from "@/lib/curriculum/qbank";
 import { noteQuizDay } from "@/lib/curriculum/quizDays";
@@ -192,21 +193,14 @@ export function Quizbank({
     // 열쇠 안에 "|"가 있어(w|낱말) 줄바꿈으로 잇고 나눈다.
     setCircleNeed(needKey ? needKey.split("\n") : []);
   }, [needKey]);
-  // 대화의 튜터 줄 중 걸러진 것을 하루 한 번 다섯 줄까지 모두의 문제은행에 내놓는다(설정 talkShare — 기본 켬, AI 대화 ⋮에서 끔).
+  // 대화의 튜터 줄 중 걸러진 것을 모두의 문제은행에 내놓는다(사용자 2026-11-24 "튜터 발화는 전체 사용자 공용 문장으로") — Quizbank를 열 때마다
+  // 아직 안 보낸 줄을 다섯씩 네 번까지(보낸 줄은 이 폰이 기억, offerBank). 설정 talkShare — 기본 켬, AI 대화 ⋮에서 끔.
   const bankReady = Boolean(bank?.total);
   useEffect(() => {
     if (!bankReady || !talkShareOn()) return;
     const frequency = (peekBank(language) ?? []).map((word) => word.w);
     if (!frequency.length) return;
     const words = commonWords(language, frequency);
-    const stamp = `talkOfferDay.v1.${language}`;
-    const today = new Date().toDateString();
-    try {
-      if (localStorage.getItem(stamp) === today) return;
-      localStorage.setItem(stamp, today);
-    } catch {
-      return;
-    }
     const offers: { key: string; text: string; stage: number }[] = [];
     for (const conv of readTalks(language)) {
       for (const line of conv) {
@@ -216,7 +210,10 @@ export function Quizbank({
         if (!offers.some((one) => one.text === line.text)) offers.push({ key: hit?.key ?? "g", text: line.text, stage });
       }
     }
-    if (offers.length) void offerBank(language, offers.slice(-12));
+    if (!offers.length) return;
+    void (async () => {
+      for (let i = 0; i < 4; i += 1) await offerBank(language, offers.slice(-60));
+    })();
   }, [language, stage, bankReady]);
   useEffect(() => {
     setLog(readQuizLog(language));
@@ -270,6 +267,11 @@ export function Quizbank({
     // 이 답 전에 그 칸을 본 적 있나(처음 보는 칸을 1칸에서 바로 맞히면 두 칸 위로).
     const before = new Set(readLedger(language).filter((event) => event.src === "quiz" || event.src === "exam").map((event) => event.k));
     for (const { key, correct, shape, miss } of results) {
+      const talkId = talkIds.current.get(key);
+      if (talkId) {
+        noteFill(language, talkId, correct, Math.floor(Date.now() / 1000));
+        talkIds.current.delete(key);
+      }
       noteQuizDay(language, localDay(), correct, key, shape, miss);
       logged = recordQuiz(logged, key, correct);
       // 사다리(문법·표현): 낸 칸에서 맞으면 다음 칸, 틀리면 그 칸(ladder.ts). 무작위 모양(측정)으로 낸 것은 사다리를 안 옮김.
@@ -385,12 +387,22 @@ export function Quizbank({
     return made.questions.length ? made : null;
   };
   /** 다시 볼 것 묶음 — 장부·체크 셋에서(오늘 카드와 같은 기록, todayCards.ts reviewKeys), 방금 묶음에 나온 열쇠는 빼고. */
+  /** 대화 채우기(curriculum/talkFill.ts): 이 폰 채팅·통화에서 고침받은 줄 먼저, 그다음 소재가 든 줄 — 낸 것은 답이 오면 이 폰에 남김. */
+  const talkIds = useRef(new Map<string, string>());
+  const talkTake = (n: number): { keys: string[]; questions: QuizQuestion[] } => {
+    const made = talkFills(language, readTalks(language), { stage: readReach(language, stage).s, memo: readFillMemo(language), now: Math.floor(Date.now() / 1000), n: n + 2 }).filter((one) => !lastCircle.current.has(one.key)).slice(0, n);
+    for (const one of made) talkIds.current.set(one.key, one.id);
+    return { keys: made.map((one) => one.key), questions: made.map((one) => one.question) };
+  };
   const reviewBatchOf = () => {
     const ledger = readLedger(language);
     const keys = ledgerReview({ events: ledger, states: checkStates(ledger), now: Math.floor(Date.now() / 1000), today: (t) => dayOfSeconds(t) }).filter((key) => !lastCircle.current.has(key));
     void growBank(language, locale, keys.slice(0, 16).map((key) => ({ key, stage })));
     const made = askKeys(keys.slice(0, 8), (rest) => bundleQuiz(language, rest, { seed: `${day}-${round}`, stage, style: "type", fallback: "choose", strict: true, spots: { cards: spotCards, anyCard: true } }));
-    return made.questions.length ? made : null;
+    // 다시 볼 것 묶음 앞에 대화 채우기 둘까지(대화에서 고침받은 것이 다시 볼 것의 맨 앞).
+    const talk = talkTake(2);
+    const all = { keys: [...talk.keys, ...made.keys], questions: [...talk.questions, ...made.questions] };
+    return all.questions.length ? all : null;
   };
   const takeBatch = (made: { keys: string[]; questions: QuizQuestion[] } | null): QuizBatch | null => {
     if (!made) return null;
@@ -485,6 +497,10 @@ export function Quizbank({
         used.push(item.key);
       }
     }
+    // 대화 채우기 하나(있을 때 — 고침받은 내 줄 먼저).
+    const talk = talkTake(1);
+    questions.push(...talk.questions);
+    used.push(...talk.keys);
     // 낱말·표현은 카드 한 장에서 한 칸 가림(카드가 없을 때만 넣어 둔 영어 단어 문제·묶음 퀴즈).
     for (const key of keys) {
       const question = askCard(key, asked, ladderNow, `${day}-${round}`) ?? (key.startsWith("w|") ? undefined : bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0]);

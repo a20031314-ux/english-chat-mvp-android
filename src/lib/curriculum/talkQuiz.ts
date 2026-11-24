@@ -15,7 +15,7 @@ import { allScriptsFor } from "./stageScripts.ts";
 import { pieceAt, pieceOf, type QuizQuestion } from "./quiz.ts";
 import { segmentWords } from "../wordSegments.ts";
 
-export type TalkLine = { who: "me" | "them"; text: string; gloss?: string; fixed?: boolean };
+export type TalkLine = { who: "me" | "them"; text: string; gloss?: string; fixed?: boolean; /** 고친 줄이면 내가 처음 한 말(이 폰에만, talkFill.ts). */ was?: string };
 export type TalkQuestion = Extract<QuizQuestion, { kind: "talk" }>;
 const lower = (text: string) => text.toLocaleLowerCase();
 
@@ -125,7 +125,7 @@ export function chatLines(session: ChatSession): TalkLine[] {
       // 바로 앞 내 줄을 고친 꼴로(틀렸을 때만).
       const fix = body.correctionResult;
       const last = out[out.length - 1];
-      if (fix?.hasError && fix.corrected && last?.who === "me" && !body.ownLanguage) out[out.length - 1] = { who: "me", text: cleanLine(fix.corrected), fixed: true };
+      if (fix?.hasError && fix.corrected && last?.who === "me" && !body.ownLanguage) out[out.length - 1] = { who: "me", text: cleanLine(fix.corrected), fixed: true, was: last.text };
       else if (body.ownLanguage && last?.who === "me") out.pop();
       const reply = cleanLine(body.assistantMessage ?? "");
       if (reply) out.push({ who: "them", text: reply });
@@ -142,7 +142,7 @@ export function callLines(call: Call): TalkLine[] {
     const text = cleanLine(line.text ?? "");
     if (!text || text === "…") return [];
     if (line.who === "tutor") return [{ who: "them", text, ...(line.translation ? { gloss: line.translation } : {}) }];
-    return line.better ? [{ who: "me", text: cleanLine(line.better), fixed: true }] : [{ who: "me", text }];
+    return line.better ? [{ who: "me", text: cleanLine(line.better), fixed: true, was: text }] : [{ who: "me", text }];
   });
 }
 
