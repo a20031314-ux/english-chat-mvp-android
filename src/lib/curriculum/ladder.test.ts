@@ -238,19 +238,19 @@ test("소재 수업 퀴즈도 Quizbank 재료로: 고르기(까닭) · 틀린 �
   assert.ok(choose?.kind === "choose" && choose.prepared?.meaningLater, "3단계는 해석을 답한 뒤에(Quizbank와 같은 규칙)");
 });
 
-test("고르기의 다른 모양: 문맥(앞 줄)·뜻 차이·틀린 문장을 차례로 — es·ja", async () => {
+test("고르기의 다른 모양: 문맥(앞 줄)·대답 고르기·틀린 문장을 차례로 — es·ja", async () => {
   const { choiceQuestion } = await import("./ladderQuiz.ts");
   const item: PreparedItem = { key: "g|3:1", kind: "grammar", stage: 3, gloss: "x", before: "Ayer ", after: " paella.", answer: "comí", options: ["comí", "como", "comía"], line: "Ayer comí paella.", why: "w" };
   const choices = [
     { v: "c" as const, lead: "¿Qué hiciste anoche?", line: "Anoche cené en casa.", before: "Anoche ", after: " en casa.", answer: "cené", options: ["cené", "ceno", "cenaré"], gloss: "어젯밤 집에서 저녁을 먹었어.", why: "anoche → 끝난 과거" },
-    { v: "m" as const, situation: "지금 막 끝난 일", right: "昨日、映画を見ました。", wrong: "昨日、映画を見ます。", why: "昨日 → 過去" },
+    { v: "m" as const, them: "昨日、映画を見ましたか。", themGloss: "어제 영화 봤어요?", right: "いいえ、見ませんでした。", wrong: "いいえ、見ません。", why: "昨日 → 過去" },
     { v: "x" as const, wrong: "Ayer yo como paella.", rights: ["Ayer comí paella.", "Hoy como paella.", "Mañana comeré paella."], why: "ayer → comí" },
   ];
   assert.equal(grammarAsk(item, 1, null, "es", { choices, turn: 0 })?.question.kind, "choose");
   const lead = grammarAsk(item, 1, null, "es", { choices, turn: 1 })?.question;
   assert.ok(lead?.kind === "choose" && lead.lead === "¿Qué hiciste anoche?" && lead.options.includes("cené"));
   const pair = grammarAsk(item, 1, null, "es", { choices, turn: 2 })?.question;
-  assert.ok(pair?.kind === "pick" && pair.mode === "meaning" && pair.lines.length === 2 && pair.lines[pair.answer] === "昨日、映画を見ました。");
+  assert.ok(pair?.kind === "reply" && pair.shown && pair.them === "昨日、映画を見ましたか。" && pair.options.length === 2 && pair.options[pair.answer] === "いいえ、見ませんでした。" && pair.why === "昨日 → 過去");
   const odd = choiceQuestion(choices[2]!, "g|3:1", "s");
-  assert.ok(odd?.kind === "pick" && odd.mode === "odd" && odd.lines.length === 4 && odd.lines[odd.answer] === "Ayer yo como paella.");
+  assert.ok(odd?.kind === "pick" && odd.lines.length === 4 && odd.lines[odd.answer] === "Ayer yo como paella.");
 });

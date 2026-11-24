@@ -134,7 +134,7 @@ export async function growBank(language: string, ui: string, keys: readonly { ke
           // 앱 언어 뜻은 다른 뜻풀이처럼 glossFor가 찾게(rememberGlosses), 한국어는 ko 칸에.
           if (item.uiGloss && ui !== "en" && ui !== "ko") moved[item.gloss] = item.uiGloss;
           const gloss: ScriptGloss = { en: item.gloss, ...(ui === "ko" && item.uiGloss ? { ko: item.uiGloss } : {}) };
-          // 틀린 문장(x)·뜻 차이(m)의 wrong은 문장이라 길다.
+          // 틀린 문장(x)·대답 고르기(m)의 wrong은 문장이라 길다.
           const shapeOf = item.v === "c" || item.v === "m" || item.v === "x" ? item.v : undefined;
           const wrongMax = shapeOf === "m" || shapeOf === "x" ? 160 : 40;
           const wrong = Array.isArray(item.wrong) ? item.wrong.filter((one): one is string => typeof one === "string" && one.length > 0 && one.length <= wrongMax).slice(0, 3) : [];

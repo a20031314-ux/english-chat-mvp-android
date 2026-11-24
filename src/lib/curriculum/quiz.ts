@@ -59,7 +59,7 @@ export type QuizQuestion =
   | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
   | { kind: "say"; text: string; gloss: ScriptGloss; from: string; mark?: string }
   /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
-  | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
+  | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string; /** 상대 줄을 처음부터 보임(읽고 대답 고르기 — 문법 칸 대답 고르기, ladderQuiz.ts choiceQuestion). 없으면 듣고 고르기. */ shown?: true; /** 답한 뒤 까닭(앱 언어). */ why?: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
   | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 뜻 줄을 답하기 전에도(문법 사다리 2칸 — 뜻 없이는 답이 여럿). */ glossFirst?: true; /** 쓰기 도움(게이지): 없으면 첫 글자, "len" 첫 글자 + 글자 수, "none" 없음. */ cue?: "len" | "none" }
   /**
@@ -81,8 +81,8 @@ export type QuizQuestion =
   | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[]; /** 문단: 틀린 꼴·왜 틀렸나(데이터, 앱 언어는 quizGloss). */ wrong?: string; why?: ScriptGloss }[]; gloss: ScriptGloss; from: string; /** 문단(story-errors P1~P4): 선지 칸 · 틀린 곳 수를 안 보임(P4·게이지 위쪽). */ picks?: number[]; hideCount?: true; /** 뜻이 틀린 곳이 든 문단 — 뜻 줄은 답한 뒤에만(체감 점검 2026-11-12 "해석의 일찍과 비교만 하면 late가 보임"). */ glossAfter?: true }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   /** 낱말 스스로 체크(그럴듯한 보기가 셋 안 모일 때): 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 → [맞았어요 | 틀렸어요]. */
-  /** 문장 고르기(ladderQuiz.ts choiceQuestion): meaning = 상황(prompt, 앱 언어)에 맞는 문장 · odd = 넷 중 틀린 문장. why = 답한 뒤 까닭(앱 언어). */
-  | { kind: "pick"; mode: "meaning" | "odd"; text: string; prompt?: string; lines: string[]; answer: number; why: string; from: string }
+  /** 틀린 문장 고르기(ladderQuiz.ts choiceQuestion): 넷 중 틀린 문장. why = 답한 뒤 까닭(앱 언어). */
+  | { kind: "pick"; text: string; lines: string[]; answer: number; why: string; from: string }
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string; /** 카드 모양(개편, cardQuiz) — 낱말·예문은 보이고 뜻 칸만 가림. */ card?: QuizCardFace };
 
 /**

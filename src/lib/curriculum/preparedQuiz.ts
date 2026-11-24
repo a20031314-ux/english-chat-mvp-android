@@ -151,7 +151,7 @@ export function withGrown(item: PreparedItem, extra: readonly PreparedVariant[])
   return more.length ? { ...item, variants: [...(item.variants ?? []), ...more] } : item;
 }
 
-/** 문제은행이 만든 고르기의 다른 모양(문맥·뜻 차이·틀린 문장) → ladderQuiz.ts ChoiceVariant. 앱 언어 뜻·상황·까닭이 있을 때만. 순수. */
+/** 문제은행이 만든 고르기의 다른 모양(문맥·대답 고르기·틀린 문장) → ladderQuiz.ts ChoiceVariant. 앱 언어 뜻·까닭이 있을 때만. 순수. */
 export function grownChoices(grown: readonly GrownGrammar[], ui: string): ChoiceVariant[] {
   const out: ChoiceVariant[] = [];
   for (const one of grown) {
@@ -165,8 +165,9 @@ export function grownChoices(grown: readonly GrownGrammar[], ui: string): Choice
       if (!one.lead || at < 0 || !one.piece || wrong.length < 2) continue;
       out.push({ v: "c", lead: one.lead, line: one.text, before: one.text.slice(0, at), after: one.text.slice(at + one.piece.length), answer: one.piece, options: [one.piece, ...wrong.slice(0, 3)], gloss, why });
     } else if (one.v === "m") {
-      if (!wrong[0]) continue;
-      out.push({ v: "m", situation: gloss, right: one.text, wrong: wrong[0], why });
+      // 상대 줄(lead)이 있어야 — 그 전에 만든 상황 한 줄 모양은 안 냄.
+      if (!wrong[0] || !one.lead) continue;
+      out.push({ v: "m", them: one.lead, themGloss: gloss, right: one.text, wrong: wrong[0], why });
     } else {
       // 맞는 문장이 틀린 문장을 고친 것뿐이면 나란히 놓여 답이 샌다(서버도 거르지만 그 전에 만든 것까지).
       const rights = wrong.filter((line) => !nearLine(line, one.text));

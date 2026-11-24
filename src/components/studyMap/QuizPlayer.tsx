@@ -1058,22 +1058,15 @@ function ChooseView({
   );
 }
 
-/**
- * 문장 고르기(ladderQuiz.ts choiceQuestion): 뜻 차이 = 상황 한 줄(앱 언어) + 꼴만 다른 두 문장 · 틀린 문장 = 넷 중 틀린 하나. 답한 뒤 까닭(앱 언어).
- */
+/** 틀린 문장 고르기(ladderQuiz.ts choiceQuestion): 넷 중 틀린 하나, 답한 뒤 까닭(앱 언어). */
 function LinePickView({ question, answered, onAnswer, tag }: { question: Extract<QuizQuestion, { kind: "pick" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
   const [picked, setPicked] = useState<number | null>(null);
   return (
-    <div className="flex flex-col gap-3" data-quiz-pick={question.mode}>
-      {question.prompt ? (
-        <p dir="auto" className="text-note text-slate-300">
-          {question.prompt}
-        </p>
-      ) : null}
+    <div className="flex flex-col gap-3" data-quiz-pick>
       <div className="flex flex-col gap-2">
         {question.lines.map((line, i) => {
           const isRight = i === question.answer;
-          const style = answered ? (isRight ? (question.mode === "odd" ? "border-bad bg-bad/10 text-ink" : "border-good bg-good/10 text-ink") : picked === i ? "border-bad text-bad" : "border-line text-slate-500") : "border-line text-slate-100 hover:bg-white/5";
+          const style = answered ? (isRight ? "border-bad bg-bad/10 text-ink" : picked === i ? "border-bad text-bad" : "border-line text-slate-500") : "border-line text-slate-100 hover:bg-white/5";
           return (
             <button
               key={i}
@@ -1096,7 +1089,7 @@ function LinePickView({ question, answered, onAnswer, tag }: { question: Extract
           <p data-quiz-why dir="auto" className="min-w-0 flex-1 text-note text-slate-300">
             {question.why}
           </p>
-          <TTSButton text={question.mode === "odd" ? question.lines.find((_, i) => i !== question.answer) ?? question.text : question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+          <TTSButton text={question.lines.find((_, i) => i !== question.answer) ?? question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
         </div>
       ) : null}
     </div>
@@ -1223,7 +1216,7 @@ function askLine(question: QuizQuestion, ui: UICopy, grammar = "", locale = ""):
     case "meaning":
       return ui.quizAskMeaning;
     case "pick":
-      return question.mode === "meaning" ? ui.quizAskPickMeaning : ui.quizAskPickOdd;
+      return ui.quizAskPickOdd;
     case "order":
       return ui.quizAskOrder;
     case "fix":
@@ -1727,21 +1720,24 @@ function ReplyView({
 }) {
   const tone = useBankTone();
   const [picked, setPicked] = useState<number | null>(null);
+  const shown = Boolean(question.shown);
   useEffect(() => {
-    void playTts(question.them, tag, SCRIPT_VOICES.them);
-  }, [question.them, tag]);
+    if (!shown) void playTts(question.them, tag, SCRIPT_VOICES.them);
+  }, [question.them, tag, shown]);
   return (
     <div className="flex flex-col gap-3" data-reply>
       <div className="flex items-start gap-2 self-start rounded-2xl bg-white/10 px-3 py-2">
         <TTSButton text={question.them} lang={tag} voice={SCRIPT_VOICES.them} className="shrink-0" />
-        {answered ? (
+        {answered || shown ? (
           <span className="min-w-0">
             <span dir="auto" className="block text-chat text-slate-100">
               {question.them}
             </span>
-            <span dir="auto" className="mt-0.5 block text-meta text-slate-400">
-              {quizGloss(question.themGloss, locale, language) ?? ""}
-            </span>
+            {answered ? (
+              <span dir="auto" className="mt-0.5 block text-meta text-slate-400">
+                {quizGloss(question.themGloss, locale, language) ?? ""}
+              </span>
+            ) : null}
           </span>
         ) : (
           <span aria-hidden className="self-center text-chat text-slate-500">…</span>
@@ -1776,6 +1772,11 @@ function ReplyView({
           );
         })}
       </div>
+      {answered && question.why ? (
+        <p data-quiz-why dir="auto" className="text-note text-slate-300">
+          {question.why}
+        </p>
+      ) : null}
     </div>
   );
 }

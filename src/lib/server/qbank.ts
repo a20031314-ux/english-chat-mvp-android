@@ -102,8 +102,8 @@ G|<sentence in ${name}>|<plain literal English translation — nothing added or 
 Then three more items of other kinds about the same grammar point (all sentences new, natural, short):
 C — a context item: a short first line spoken before, which is the ONLY clue deciding the form in the second sentence (without the first line, two options could fit).
 C|<first line in ${name}>|<second sentence in ${name}>|<plain English translation of the second sentence>|<the blank part in the second sentence>|<wrong;wrong;wrong>|<why in English, naming the clue in the first line>
-M — a meaning item: two sentences that differ ONLY in this grammar form, both grammatical, but with different meanings; plus a one-sentence situation in English that only one of them fits.
-M|<situation in English>|<sentence that fits>|<sentence that does not fit>|<why in English>
+M — a reply item: a short line the other person says in a conversation, and two possible replies that differ ONLY in this grammar form, both grammatical on their own, but only one is the right reply to that line (the other means something that does not answer it).
+M|<the other person's line in ${name}>|<plain English translation of that line>|<reply that fits>|<reply that does not fit>|<why in English>
 X — a wrong-sentence item: one sentence that gets THIS grammar point wrong (a mistake learners really make) and three different correct sentences using the same grammar point — about other things, never the corrected version of the wrong sentence.
 X|<the wrong sentence>|<English meaning of what it tries to say>|<correct;correct;correct>|<why in English: what is wrong and the right form>
 Answer with exactly four G lines, one C line, one M line and one X line, nothing else.`,
@@ -120,7 +120,7 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
   const plain = (text: string) => Boolean(text) && text.length <= 140 && !/\p{Nd}/u.test(text) && !existing.has(text);
   for (const line of raw.split(/\r?\n/)) {
     const cells = line.replace(/^[\s>*\-•\d.)]*/u, "").replace(/\*\*/g, "").split("|").map((cell) => cell.trim());
-    // 고르기의 다른 모양(ladderQuiz.ts ChoiceVariant): 문맥 C · 뜻 차이 M · 틀린 문장 X.
+    // 고르기의 다른 모양(ladderQuiz.ts ChoiceVariant): 문맥 C · 대답 고르기 M · 틀린 문장 X.
     if (cells[0] === "C" && cells.length >= 7) {
       const [, lead, text, gloss, piece, wrongs, why] = cells as [string, string, string, string, string, string, string];
       if (!plain(lead) || !english(gloss) || !note(why) || !piece || piece.length > 40 || !acceptItem(entry, text, piece, existing)) continue;
@@ -132,11 +132,11 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
       made.push({ v: "c", l: lead, t: text, p: exact, g: gloss, w: wrong, y: why });
       continue;
     }
-    if (cells[0] === "M" && cells.length >= 5) {
-      const [, situation, right, wrongLine, why] = cells as [string, string, string, string, string];
-      if (!english(situation) || !note(why) || !plain(right) || !plain(wrongLine) || right === wrongLine) continue;
+    if (cells[0] === "M" && cells.length >= 6) {
+      const [, them, themGloss, right, wrongLine, why] = cells as [string, string, string, string, string, string];
+      if (!plain(them) || !english(themGloss) || !note(why) || !plain(right) || !plain(wrongLine) || right === wrongLine) continue;
       existing.add(right);
-      made.push({ v: "m", t: right, p: "", g: situation, w: [wrongLine], y: why });
+      made.push({ v: "m", l: them, t: right, p: "", g: themGloss, w: [wrongLine], y: why });
       continue;
     }
     if (cells[0] === "X" && cells.length >= 5) {
@@ -181,7 +181,7 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
         content: `You are a strict native ${name} teacher checking grammar quiz items about "${slot.name}". Item kinds:
 BLANK — fill in the blank: (1) the sentence with the answer is natural and correct; (2) it really practises "${slot.name}"; (3) NONE of the wrong options is acceptable in the blank in any register or reading; (4) the answer is not given away elsewhere.
 CONTEXT — same as BLANK, and the context line is what decides the answer (it must be natural and the answer must follow from it).
-MEANING — the learner picks which of two sentences fits the situation: both sentences are grammatical and natural, they differ only in "${slot.name}", and exactly one fits the situation.
+REPLY — the learner picks which of two replies answers the other person's line: both replies are grammatical and natural, they differ only in "${slot.name}", and exactly one is a right reply to that line.
 WRONG — the learner picks the wrong sentence among four: the wrong one is clearly wrong in "${slot.name}" (not just unusual), and the three others are fully correct and natural.
 Answer JSON only: {"ok":[true|false, ...]} in item order.`,
       },
@@ -190,7 +190,7 @@ Answer JSON only: {"ok":[true|false, ...]} in item order.`,
         content: made
           .map((one, i) =>
             one.v === "m"
-              ? `${i}: MEANING · situation: ${one.g}\n   fits: ${one.t}\n   does not fit: ${one.w[0]}`
+              ? `${i}: REPLY · other person: ${one.l} (${one.g})\n   right reply: ${one.t}\n   wrong reply: ${one.w[0]}`
               : one.v === "x"
                 ? `${i}: WRONG · wrong: ${one.t} (meant: ${one.g})\n   correct: ${one.w.join(" / ")}`
                 : `${i}: ${one.v === "c" ? `CONTEXT · context line: ${one.l}\n   ` : "BLANK · "}${one.t.replace(one.p, "___")}\n   answer "${one.p}" · wrong ${one.w.map((w) => `"${w}"`).join(", ")} · meaning: ${one.g}`,

@@ -1,6 +1,6 @@
 /**
  * 사다리 칸 → 문제(퀴즈 다시 짜기 4단계, ladder.ts). 순수.
- *   문법(넣어 둔 문제 PreparedItem — turnFresh로 고른 문장): 1 고르기(맞는 꼴 · 문맥 · 뜻 차이 · 틀린 문장 — 문제은행 고르기 재료가 있으면 차례로)
+ *   문법(넣어 둔 문제 PreparedItem — turnFresh로 고른 문장): 1 고르기(맞는 꼴 · 문맥 · 대답 고르기 · 틀린 문장 — 문제은행 고르기 재료가 있으면 차례로)
  *     · 2 빈칸 쓰기(뜻 먼저) · 3 틀린 곳(spot-errors)
  *   표현(카드): 1 뜻 고르기(cardQuiz hide) · 2 빈칸 쓰기(cardQuiz show) — 표현 틀린 곳 데이터가 없어 2에서 끝
  */
@@ -111,12 +111,12 @@ export function paragraphQuestion(item: SpotItem, language: string, first = true
 
 /**
  * 고르기의 다른 모양(문제은행이 만들어 판정한 것, server/qbank.ts makeGrammar — 사용자 2026-11-24 "좀 더 헷갈리는 선지나 또 다른 유형으로"):
- *   c 문맥 고르기 — 앞 줄 하나가 답을 정함 · m 뜻 차이 — 꼴만 다른 두 문장 중 상황에 맞는 것 · x 틀린 문장 — 넷 중 틀린 하나.
- * gloss·situation·why는 앱 언어(없으면 그 모양은 안 냄).
+ *   c 문맥 고르기 — 앞 줄 하나가 답을 정함 · m 대답 고르기 — 상대 말에 이어 꼴만 다른 두 대답 중 맞는 것(사용자 2026-11-25 "대화 상황에서 내 발화를 선택하는 형태")
+ *   · x 틀린 문장 — 넷 중 틀린 하나. gloss·themGloss·why는 앱 언어(없으면 그 모양은 안 냄).
  */
 export type ChoiceVariant =
   | { v: "c"; lead: string; line: string; before: string; after: string; answer: string; options: string[]; gloss: string; why: string }
-  | { v: "m"; situation: string; right: string; wrong: string; why: string }
+  | { v: "m"; them: string; themGloss: string; right: string; wrong: string; why: string }
   | { v: "x"; wrong: string; rights: string[]; why: string };
 
 /** 고르기 모양 하나 → 문제. seed로 보기 차례 고정. 순수. */
@@ -128,16 +128,10 @@ export function choiceQuestion(variant: ChoiceVariant, key: string, seed: string
   const lines = variant.v === "m" ? [variant.right, variant.wrong] : [variant.wrong, ...variant.rights.slice(0, 3)];
   if (lines.length < 2 || lines.some((line) => !line.trim()) || new Set(lines).size !== lines.length) return null;
   const order = shuffled(lines.map((_, i) => i), rng(`${key}|${seed}|${lines[0]}`));
-  return {
-    kind: "pick",
-    mode: variant.v === "m" ? "meaning" : "odd",
-    text: variant.v === "m" ? variant.right : variant.wrong,
-    ...(variant.v === "m" ? { prompt: variant.situation } : {}),
-    lines: order.map((i) => lines[i]!),
-    answer: order.indexOf(0),
-    why: variant.why,
-    from: key,
-  };
+  if (variant.v === "m") {
+    return { kind: "reply", them: variant.them, themGloss: { en: "", raw: variant.themGloss }, text: variant.right, options: order.map((i) => lines[i]!), answer: order.indexOf(0), gloss: { en: "" }, from: key, shown: true, why: variant.why };
+  }
+  return { kind: "pick", text: variant.wrong, lines: order.map((i) => lines[i]!), answer: order.indexOf(0), why: variant.why, from: key };
 }
 
 /** 문법 칸 하나 → 낼 칸과 문제. spot = 그 칸의 틀린 곳 문항(최근에 안 낸 것 하나, 없으면 null). choices = 고르기의 다른 모양(turn으로 차례). 끝났으면 null. */
