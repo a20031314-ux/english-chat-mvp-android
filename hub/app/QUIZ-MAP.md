@@ -5,13 +5,33 @@
 
 ## 1. 한 판의 흐름
 
+```svg
+<svg viewBox="0 0 680 500" width="100%" style="max-width:680px;font-family:inherit" role="img">
+<defs><marker id="qa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--muted)" stroke-width="1.5"/></marker></defs>
+<rect x="240" y="30" width="200" height="44" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="340" y="52" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">Quizbank 열기</text>
+<path d="M340 74 L340 90 L200 90 L200 110" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<path d="M340 90 L480 90 L480 110" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<rect x="80" y="112" width="240" height="56" rx="8" fill="var(--surface)" stroke="var(--qa)" stroke-width="1.5"/><text x="200" y="131" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">다시 볼 것</text><text x="200" y="151" text-anchor="middle" dominant-baseline="central" font-size="12" fill="var(--muted)">틀린 것 · 대화에서 막힌 것</text>
+<text x="340" y="140" text-anchor="middle" dominant-baseline="central" font-size="16" fill="var(--muted)">⇄</text>
+<rect x="360" y="112" width="240" height="56" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="480" y="131" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">새 묶음 7문제</text><text x="480" y="151" text-anchor="middle" dominant-baseline="central" font-size="12" fill="var(--muted)">약한 종류를 더 많이</text>
+<path d="M200 168 L200 200" fill="none" stroke="var(--muted)" stroke-width="1.2"/>
+<path d="M480 168 L480 200" fill="none" stroke="var(--muted)" stroke-width="1.2"/>
+<path d="M130 200 L550 200" fill="none" stroke="var(--muted)" stroke-width="1.2"/>
+<path d="M130 200 L130 238" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<path d="M340 200 L340 238" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<path d="M550 200 L550 238" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<rect x="40" y="240" width="180" height="56" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="130" y="259" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">단어</text><text x="130" y="279" text-anchor="middle" dominant-baseline="central" font-size="12" fill="var(--muted)">예문 속 뜻 고르기</text>
+<rect x="250" y="240" width="180" height="56" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="340" y="259" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">문법</text><text x="340" y="279" text-anchor="middle" dominant-baseline="central" font-size="12" fill="var(--muted)">고르기 → 빈칸 → 틀린 곳</text>
+<rect x="460" y="240" width="180" height="56" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="550" y="259" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">표현</text><text x="550" y="279" text-anchor="middle" dominant-baseline="central" font-size="12" fill="var(--muted)">고르기 → 빈칸</text>
+<path d="M130 296 L130 338" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<path d="M340 296 L340 338" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<path d="M550 296 L550 338" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<rect x="40" y="340" width="600" height="56" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="340" y="359" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">답</text><text x="340" y="379" text-anchor="middle" dominant-baseline="central" font-size="12" fill="var(--muted)">맞힘 → 다음 칸 · 틀림 → 다시 볼 것으로 ↻</text>
+<rect x="40" y="420" width="600" height="56" rx="8" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/><text x="340" y="439" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">묶음 끝에 가끔</text><text x="340" y="459" text-anchor="middle" dominant-baseline="central" font-size="12" fill="var(--muted)">문단 틀린 곳 · 대화 채우기(내 채팅·통화 줄)</text>
+</svg>
 ```
-Quizbank 열기
- ├ 맡긴 열쇠가 있으면(넘겨 보기 남은 카드 등) 다섯씩 먼저
- ├ 다시 볼 것이 있으면 ── [다시 볼 것 묶음] 대화 채우기 ≤2 → 대화에서 막힌 것 → [다시]·앎에서 틀린 것 → 처음 보고 틀린 것(1시간 뒤) · 8개까지
- │                         ↕ 번갈아 (다 맞히면 다시 볼 것이 안 생겨 새 묶음만)
- └ [새 묶음 7문제] 대화 채우기 1 → 문법 칸(지금 축·닿은 단계 + 다음 유형 하나) → 표현(영어는 넣어 둔 문제) → 낱말(경계 근처 + 아래 단계 하나) → 문단(단계에 따라)
-```
+
+다시 볼 것 = 대화 채우기 ≤2 → 대화에서 막힌 것 → [다시]·틀린 것(8개까지). 새 묶음 = 대화 채우기 1 → 문법 → 표현 → 낱말 → 문단(단계에 따라). 맡긴 열쇠(넘겨 보기 남은 카드 등)가 있으면 다섯씩 먼저.
 
 ## 2. 새 묶음 7문제의 종류 수
 
@@ -22,23 +42,42 @@ Quizbank 열기
 
 다 맞히면 세 종류가 함께 줄어 비율은 출발과 같다. 14일 틀린 비율이 평균보다 높은 종류는 10%p마다 5%p 늘어난다(15~60%).
 
-## 3. 문법 칸 하나 — 사다리 세 칸
+## 3. 문법 — 유형 먼저, 축마다 1→5단계
 
+```svg
+<svg viewBox="0 0 680 330" width="100%" style="max-width:680px;font-family:inherit" role="img">
+<defs><marker id="qa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--muted)" stroke-width="1.5"/></marker></defs>
+<rect x="40" y="30" width="120" height="44" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="100" y="52" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">① 고르기</text>
+<rect x="180" y="30" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="220" y="52" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">1단계</text>
+<rect x="272" y="30" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="312" y="52" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">2단계</text>
+<rect x="364" y="30" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="404" y="52" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">3단계</text>
+<rect x="456" y="30" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="496" y="52" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">4단계</text>
+<rect x="548" y="30" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="588" y="52" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">5단계</text>
+<path d="M588 74 L588 87 L220 87 L220 98" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<rect x="40" y="100" width="120" height="44" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="100" y="122" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">② 빈칸 쓰기</text>
+<rect x="180" y="100" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="220" y="122" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">1단계</text>
+<rect x="272" y="100" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="312" y="122" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">2단계</text>
+<rect x="364" y="100" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="404" y="122" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">3단계</text>
+<rect x="456" y="100" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="496" y="122" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">4단계</text>
+<rect x="548" y="100" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="588" y="122" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">5단계</text>
+<path d="M588 144 L588 157 L220 157 L220 168" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<rect x="40" y="170" width="120" height="44" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="100" y="192" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">③ 틀린 곳</text>
+<rect x="180" y="170" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="220" y="192" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">1단계</text>
+<rect x="272" y="170" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="312" y="192" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">2단계</text>
+<rect x="364" y="170" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="404" y="192" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">3단계</text>
+<rect x="456" y="170" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="496" y="192" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">4단계</text>
+<rect x="548" y="170" width="80" height="44" rx="8" fill="var(--surface)" stroke="var(--store)" stroke-width="1.5"/><text x="588" y="192" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">5단계</text>
+<path d="M588 214 L588 248" fill="none" stroke="var(--muted)" stroke-width="1.2" marker-end="url(#qa)"/>
+<rect x="180" y="250" width="448" height="56" rx="8" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/><text x="404" y="269" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">다음 회차</text><text x="404" y="289" text-anchor="middle" dominant-baseline="central" font-size="12" fill="var(--muted)">같은 문법, 새 문장으로 ①부터 다시</text>
+</svg>
 ```
-① 고르기 ──맞힘──▶ ② 빈칸 쓰기 ──맞힘──▶ ③ 틀린 곳 찾아 고치기 ──맞힘──▶ 끝   (틀리면 그 칸에 머물고 다른 문장으로)
-① 고르기는 차례로 모양이 바뀜: 맞는 꼴 → 문맥(앞 줄이 답을 정함) → 대답 고르기(상대 말에 꼴만 다른 두 대답 중 맞는 것) → 틀린 문장(넷 중 하나)
-   — 다른 모양은 문제은행이 만들어 판정한 것이 있을 때만, 없으면 맞는 꼴
-③ 틀린 곳 문항이 없는 칸(표현 포함)은 ②에서 끝 · 문장 전체 쓰기는 퀴즈에 없음(통화·채팅·대화 채우기가 맡음)
-```
+
+- ① 고르기는 나올 때마다 모양이 바뀜: 맞는 꼴 → 문맥 → 대답 고르기 → 틀린 문장(문제은행에 있을 때만, 없으면 맞는 꼴).
+- 틀리면 그 칸에서 다른 문장, 그 문제는 다시 볼 것으로. 틀린 곳 문항이 없는 칸·표현은 ②에서 끝. 문장 전체 쓰기는 퀴즈에 없음(통화·채팅이 맡음).
 
 ## 4. 단계와 회차
 
 ```
-유형 먼저 — 축마다 1→5단계:
-  고르기   1단계 → 2 → 3 → 4 → 5
-  빈칸 쓰기 1단계 → 2 → 3 → 4 → 5     (고르기를 지난 칸)
-  틀린 곳   1단계 → 2 → 3 → 4 → 5     (빈칸을 지난 칸, 틀린 곳 문항이 있는 칸만)
-  → 다 끝나면 다음 회차(같은 칸, 새 문장 — 문제은행이 만들어 판정한 문장·튜터 줄. 새 문장이 없는 칸은 건너뜀)
 단계 안: 그 단계 축 칸을 다 지나면 위로, 또는 그 단계 이상 답 8개마다 80% 이상이면 위·40% 이하면 아래(첫 측정 단계 밑으로는 안 내려감, 최고 5) · 축이 바뀌면 첫 측정 단계부터
 섞기: 묶음에 문법이 둘 이상이면 하나는 이 축을 이미 지난 칸에서 다음 유형으로
 표현은 회차 없음(아래 단계 것도 계속 나옴) · 낱말은 끝이 없음 · 문단은 1~2단계 네 묶음에 하나, 3단계 둘에 하나, 4~5단계 묶음마다(하루 둘까지)

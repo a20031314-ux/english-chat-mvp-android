@@ -350,8 +350,9 @@ function renderDoc(text, extraAfterHeading = () => "") {
   const flush = () => { if (chunk.length) { parts.push(md(chunk.join("\n"))); chunk = []; } };
   for (const raw of text.replace(/<!--[\s\S]*?-->/g, "").split("\n")) {
     if (raw.startsWith("```")) {
-      if (pre) { parts.push(`<pre class="flow">${esc(pre.join("\n"))}</pre>`); pre = null; }
-      else { flush(); pre = []; }
+      // ```svg = 스크립트가 만든 구조도(문제 지도) — 그대로 그림으로.
+      if (pre) { parts.push(pre.svg ? `<div class="diagram">${pre.join("\n")}</div>` : `<pre class="flow">${esc(pre.join("\n"))}</pre>`); pre = null; }
+      else { flush(); pre = []; pre.svg = raw.trim() === "```svg"; }
       continue;
     }
     if (pre) { pre.push(raw); continue; }

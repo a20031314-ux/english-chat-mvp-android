@@ -132,6 +132,47 @@ function perfect(lang: string, data: Data) {
   return { axisDay, stageDay, roundDay, wordStageDay, g1: doneDay.get("g1") ?? roundDay[2], eDone: doneDay.get("e"), per, firstBatch: asked.slice(0, 12) };
 }
 
+// 구조도(SVG) — 허브 페이지 "문제 지도" 칸이 그림으로 그린다(```svg 울타리). 색은 허브 페이지 변수라 밝은·어두운 화면 모두.
+const box = (x: number, y: number, w: number, h: number, title: string, sub = "", tone = "") => {
+  const stroke = tone ? `var(--${tone})` : "var(--line)";
+  const head = sub ? y + h / 2 - 9 : y + h / 2;
+  return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="8" fill="var(--surface)" stroke="${stroke}" stroke-width="${tone ? 1.5 : 1}"/>` +
+    `<text x="${x + w / 2}" y="${head}" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="var(--ink)">${title}</text>` +
+    (sub ? `<text x="${x + w / 2}" y="${y + h / 2 + 11}" text-anchor="middle" dominant-baseline="central" font-size="12" fill="var(--muted)">${sub}</text>` : "");
+};
+const line = (d: string, head = true) => `<path d="${d}" fill="none" stroke="var(--muted)" stroke-width="1.2"${head ? ' marker-end="url(#qa)"' : ""}/>`;
+const svg = (h: number, body: string[]) =>
+  [`<svg viewBox="0 0 680 ${h}" width="100%" style="max-width:680px;font-family:inherit" role="img">`,
+    `<defs><marker id="qa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="var(--muted)" stroke-width="1.5"/></marker></defs>`,
+    ...body, "</svg>"];
+const flowSvg = () => svg(500, [
+  box(240, 30, 200, 44, "Quizbank 열기"),
+  line("M340 74 L340 90 L200 90 L200 110"), line("M340 90 L480 90 L480 110"),
+  box(80, 112, 240, 56, "다시 볼 것", "틀린 것 · 대화에서 막힌 것", "qa"),
+  `<text x="340" y="140" text-anchor="middle" dominant-baseline="central" font-size="16" fill="var(--muted)">⇄</text>`,
+  box(360, 112, 240, 56, "새 묶음 7문제", "약한 종류를 더 많이", "store"),
+  line("M200 168 L200 200", false), line("M480 168 L480 200", false), line("M130 200 L550 200", false),
+  line("M130 200 L130 238"), line("M340 200 L340 238"), line("M550 200 L550 238"),
+  box(40, 240, 180, 56, "단어", "예문 속 뜻 고르기", "store"),
+  box(250, 240, 180, 56, "문법", "고르기 → 빈칸 → 틀린 곳", "store"),
+  box(460, 240, 180, 56, "표현", "고르기 → 빈칸", "store"),
+  line("M130 296 L130 338"), line("M340 296 L340 338"), line("M550 296 L550 338"),
+  box(40, 340, 600, 56, "답", "맞힘 → 다음 칸 · 틀림 → 다시 볼 것으로 ↻"),
+  box(40, 420, 600, 56, "묶음 끝에 가끔", "문단 틀린 곳 · 대화 채우기(내 채팅·통화 줄)", "accent"),
+]);
+const ladderSvg = () => {
+  const rows = ["① 고르기", "② 빈칸 쓰기", "③ 틀린 곳"];
+  const body: string[] = [];
+  rows.forEach((name, r) => {
+    const y = 30 + r * 70;
+    body.push(box(40, y, 120, 44, name));
+    for (let i = 0; i < 5; i += 1) body.push(box(180 + i * 92, y, 80, 44, `${i + 1}단계`, "", "store"));
+    if (r < 2) body.push(line(`M588 ${y + 44} L588 ${y + 57} L220 ${y + 57} L220 ${y + 68}`));
+  });
+  body.push(line("M588 214 L588 248"));
+  body.push(box(180, 250, 448, 56, "다음 회차", "같은 문법, 새 문장으로 ①부터 다시", "accent"));
+  return svg(330, body);
+};
 const pct = (v: number) => `${Math.round(v)}%`;
 const cnt = (c: Record<string, number>) => `낱말 ${c.w} · 문법 ${c.g} · 표현 ${c.e}`;
 
@@ -161,13 +202,9 @@ async function build(): Promise<string> {
   lines.push("");
   lines.push("## 1. 한 판의 흐름");
   lines.push("");
-  lines.push("```");
-  lines.push("Quizbank 열기");
-  lines.push(" ├ 맡긴 열쇠가 있으면(넘겨 보기 남은 카드 등) 다섯씩 먼저");
-  lines.push(" ├ 다시 볼 것이 있으면 ── [다시 볼 것 묶음] 대화 채우기 ≤2 → 대화에서 막힌 것 → [다시]·앎에서 틀린 것 → 처음 보고 틀린 것(1시간 뒤) · 8개까지");
-  lines.push(" │                         ↕ 번갈아 (다 맞히면 다시 볼 것이 안 생겨 새 묶음만)");
-  lines.push(" └ [새 묶음 7문제] 대화 채우기 1 → 문법 칸(지금 축·닿은 단계 + 다음 유형 하나) → 표현(영어는 넣어 둔 문제) → 낱말(경계 근처 + 아래 단계 하나) → 문단(단계에 따라)");
-  lines.push("```");
+  lines.push("```svg", ...flowSvg(), "```");
+  lines.push("");
+  lines.push("다시 볼 것 = 대화 채우기 ≤2 → 대화에서 막힌 것 → [다시]·틀린 것(8개까지). 새 묶음 = 대화 채우기 1 → 문법 → 표현 → 낱말 → 문단(단계에 따라). 맡긴 열쇠(넘겨 보기 남은 카드 등)가 있으면 다섯씩 먼저.");
   lines.push("");
   lines.push("## 2. 새 묶음 7문제의 종류 수");
   lines.push("");
@@ -178,23 +215,16 @@ async function build(): Promise<string> {
   lines.push("");
   lines.push("다 맞히면 세 종류가 함께 줄어 비율은 출발과 같다. 14일 틀린 비율이 평균보다 높은 종류는 10%p마다 5%p 늘어난다(15~60%).");
   lines.push("");
-  lines.push("## 3. 문법 칸 하나 — 사다리 세 칸");
+  lines.push("## 3. 문법 — 유형 먼저, 축마다 1→5단계");
   lines.push("");
-  lines.push("```");
-  lines.push("① 고르기 ──맞힘──▶ ② 빈칸 쓰기 ──맞힘──▶ ③ 틀린 곳 찾아 고치기 ──맞힘──▶ 끝   (틀리면 그 칸에 머물고 다른 문장으로)");
-  lines.push("① 고르기는 차례로 모양이 바뀜: 맞는 꼴 → 문맥(앞 줄이 답을 정함) → 대답 고르기(상대 말에 꼴만 다른 두 대답 중 맞는 것) → 틀린 문장(넷 중 하나)");
-  lines.push("   — 다른 모양은 문제은행이 만들어 판정한 것이 있을 때만, 없으면 맞는 꼴");
-  lines.push("③ 틀린 곳 문항이 없는 칸(표현 포함)은 ②에서 끝 · 문장 전체 쓰기는 퀴즈에 없음(통화·채팅·대화 채우기가 맡음)");
-  lines.push("```");
+  lines.push("```svg", ...ladderSvg(), "```");
+  lines.push("");
+  lines.push("- ① 고르기는 나올 때마다 모양이 바뀜: 맞는 꼴 → 문맥 → 대답 고르기 → 틀린 문장(문제은행에 있을 때만, 없으면 맞는 꼴).");
+  lines.push("- 틀리면 그 칸에서 다른 문장, 그 문제는 다시 볼 것으로. 틀린 곳 문항이 없는 칸·표현은 ②에서 끝. 문장 전체 쓰기는 퀴즈에 없음(통화·채팅이 맡음).");
   lines.push("");
   lines.push("## 4. 단계와 회차");
   lines.push("");
   lines.push("```");
-  lines.push("유형 먼저 — 축마다 1→5단계:");
-  lines.push("  고르기   1단계 → 2 → 3 → 4 → 5");
-  lines.push("  빈칸 쓰기 1단계 → 2 → 3 → 4 → 5     (고르기를 지난 칸)");
-  lines.push("  틀린 곳   1단계 → 2 → 3 → 4 → 5     (빈칸을 지난 칸, 틀린 곳 문항이 있는 칸만)");
-  lines.push("  → 다 끝나면 다음 회차(같은 칸, 새 문장 — 문제은행이 만들어 판정한 문장·튜터 줄. 새 문장이 없는 칸은 건너뜀)");
   lines.push(`단계 안: 그 단계 축 칸을 다 지나면 위로, 또는 그 단계 이상 답 ${REACH_BATCH}개마다 ${pct(REACH_UP * 100)} 이상이면 위·${pct(REACH_DOWN * 100)} 이하면 아래(첫 측정 단계 밑으로는 안 내려감, 최고 ${REACH_TOP}) · 축이 바뀌면 첫 측정 단계부터`);
   lines.push("섞기: 묶음에 문법이 둘 이상이면 하나는 이 축을 이미 지난 칸에서 다음 유형으로");
   lines.push("표현은 회차 없음(아래 단계 것도 계속 나옴) · 낱말은 끝이 없음 · 문단은 1~2단계 네 묶음에 하나, 3단계 둘에 하나, 4~5단계 묶음마다(하루 둘까지)");
