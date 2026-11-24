@@ -493,15 +493,17 @@ export async function fetchPremiumFromRevenueCat(): Promise<boolean> {
     return fetchPlanFromServer().catch(() => readCachedPremium());
   }
 
+  // 결제(RevenueCat)를 못 쓰는 폰(시험 앱 껍데기 등)도 운영자·점검 계정은 서버에 묻는다.
+  const staffOr = async () => (await refreshStaffGrant()) || readCachedPremium();
   const ready = await ensureConfigured();
   if (!ready) {
-    return readCachedPremium();
+    return staffOr();
   }
 
   try {
     const plugin = getPurchasesPlugin();
     if (!plugin) {
-      return readCachedPremium();
+      return staffOr();
     }
     const { customerInfo } = await withBillingTimeout(
       "getCustomerInfo",
@@ -512,7 +514,7 @@ export async function fetchPremiumFromRevenueCat(): Promise<boolean> {
     return paid || (await refreshStaffGrant());
   } catch (error) {
     console.error("[billing] getCustomerInfo failed", error);
-    return readCachedPremium();
+    return staffOr();
   }
 }
 

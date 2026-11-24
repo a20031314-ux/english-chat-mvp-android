@@ -101,8 +101,8 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
         }
         setIsPremium(result.isPremium);
         setIsBillingNative(result.isNative);
-        // 웹: 앱에서 산 구독을 서버가 계정으로 확인한 값으로 바로 맞춘다.
-        if (!result.isNative) void refreshPremium();
+        // 웹: 앱에서 산 구독을 서버가 계정으로 확인한 값으로 바로 맞춘다. 앱: 산 구독 + 운영자·점검 계정(서버)을 화면에 맞춘다.
+        void refreshPremium();
       } catch (error) {
         console.error("[premium] init failed", error);
       }
@@ -115,9 +115,8 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
     };
   }, [refreshPremium]);
 
-  // 웹: 로그인·로그아웃하면 요금을 다시 묻는다(구독은 계정에 묶여 있다).
+  // 로그인·로그아웃하면 요금을 다시 묻는다(웹 구독은 계정에 묶여 있고, 운영자·점검 계정은 앱에서도 로그인으로 정해진다).
   useEffect(() => {
-    if (isBillingNativePlatform()) return;
     return subscribeSession(() => void refreshPremium());
   }, [refreshPremium]);
 
