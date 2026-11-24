@@ -1,7 +1,7 @@
 /**
  * 자라는 문제은행 — 서버(2026-10-30 사용자 "그때그때 AI가 만들기, 문제은행식으로 계속 증식"). 규칙은 curriculum/qbankRules.ts.
  *
- * 열쇠(e|표현 · f|문장구조 · w|낱말)마다 모두가 같이 쓰는 묶음 `qbank:v1:<언어>:<열쇠>`: 모델(Haiku, translate 경로)이 만든 새 예문(학습 언어 + 영어 뜻)과
+ * 열쇠(e|표현 · f|문장구조 · w|낱말 · g|문법 칸)마다 모두가 같이 쓰는 묶음 `qbank:v1:<언어>:<열쇠>`: 모델(Haiku, translate 경로)이 만든 새 예문(학습 언어 + 영어 뜻)과
  * 조각마다 헷갈리는 오답. 앱이 보낸 풀이 결과(문장·맞음·보기·고른 보기 — 학습자가 친 글 없음)로 셈을 올리고, 너무 쉬운 예문·아무도 안 고르는 오답은 빼며,
  * needGrow면 한 번 더 만든다. 하루 전체 성장은 DAILY_BUDGET번까지(넘으면 있는 것만 돌려줌). 앱 언어 뜻은 stageCopy.translated로 옮겨 둔다.
  *
@@ -17,7 +17,7 @@ import { textsFingerprint, translated } from "./stageCopy.ts";
 import { INTERFACE_LANGUAGE_LABELS, SUPPORTED_LEARNING_LANGUAGES } from "../learningLanguages.ts";
 import { allFramesFor } from "../curriculum/frames.ts";
 import { ladderFor } from "../curriculum/stages/index.ts";
-import { acceptDecoy, acceptForms, acceptItem, applyResults, emptyEntry, needGrow, publicView, type BankDecoy, type BankEntry, type BankResult } from "../curriculum/qbankRules.ts";
+import { acceptDecoy, acceptForms, acceptItem, applyResults, CAP, emptyEntry, needGrow, publicView, type BankDecoy, type BankEntry, type BankResult } from "../curriculum/qbankRules.ts";
 import { allScriptsFor } from "../curriculum/stageScripts.ts";
 import { dictCount } from "./wordDict.ts";
 
@@ -45,12 +45,95 @@ export function targetOf(language: string, key: string): { piece: string; what: 
     const known = (ladderFor(language)?.stages ?? []).some((stage) => stage.expressions.includes(expression));
     return known ? { piece: expression, what: `the expression "${expression}"` } : null;
   }
+  if (key.startsWith("g|")) {
+    const slot = grammarSlot(language, key);
+    return slot ? { piece: "", what: `the grammar point "${slot.name}"` } : null;
+  }
   if (key.startsWith("w|")) {
     const word = key.slice(2).trim();
     if (!word || word.length > 30 || /[\p{Nd}<>{}]/u.test(word)) return null;
     return { piece: word, what: `the word "${word}"` };
   }
   return null;
+}
+
+/** 문법 칸 열쇠 g|<단계>:<번호> → 그 칸 이름(영어)·예문·단계(앱 데이터로만). */
+export function grammarSlot(language: string, key: string): { name: string; example: string; stage: number } | null {
+  const match = /^g\|(\d):(\d{1,2})$/.exec(key);
+  if (!match) return null;
+  const stage = (ladderFor(language)?.stages ?? []).find((one) => one.order === Number(match[1]));
+  const one = stage?.grammar[Number(match[2])];
+  return stage && one ? { name: one.name.en, example: one.example, stage: stage.order } : null;
+}
+
+/** 모델 답에서 JSON 하나. */
+function jsonIn(text: string): Record<string, unknown> | null {
+  try {
+    return JSON.parse(text.slice(text.indexOf("{"), text.lastIndexOf("}") + 1)) as Record<string, unknown>;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * 문법 칸 문장 만들기(2026-11-24 사용자 "풀이 단계에 따라 미리 생성 → 제공, 문제를 점차 늘리기"): 그 칸을 보여 주는 새 문장 넷 —
+ * 문장마다 비울 조각·그 자리에 그럴듯하지만 틀린 꼴 셋·까닭 한 줄(Haiku, translate 경로) → 형식 검사 → 판정(spotJudge, Sonnet — 정답만 맞고
+ * 오답은 어느 읽기로도 안 맞나, 칸 이름의 문법을 정말 보여 주나) → 통과만. 앱이 다음 회차 문장으로 쓴다(ladder.ts nextRound).
+ */
+async function makeGrammar(language: string, key: string, entry: BankEntry, onJudge?: () => void): Promise<{ items: { t: string; p: string; g: string; w?: string[]; y?: string }[]; decoys: string[]; raw: string } | null> {
+  const slot = grammarSlot(language, key);
+  const client = getOpenAIClient();
+  if (!slot || !client) return null;
+  const name = INTERFACE_LANGUAGE_LABELS[language] ?? language;
+  const have = [slot.example, ...entry.items.map((item) => item.t)].slice(0, 12);
+  const completion = await completeChat(client, "translate", {
+    temperature: 0.8,
+    max_tokens: 6000,
+    messages: [
+      {
+        role: "system",
+        content: `You write grammar quiz items for learners of ${name} at level ${slot.stage} of 5 (1 = absolute beginner). Grammar point: "${slot.name}".
+Write four NEW short, natural, everyday sentences in ${name} that each clearly use this grammar point. Level ${slot.stage}: ${slot.stage <= 1 ? "very short, simple words only" : slot.stage <= 3 ? "short, common words" : "natural everyday length"}. Different situations from each other and from the sentences given. No digits (write numbers as words), no names of real people or brands, nothing rude.
+For each sentence give the exact part (as written in the sentence) that shows this grammar point — it becomes the blank — and three wrong options for that blank: forms a learner would really produce by getting THIS grammar point wrong (wrong conjugation, agreement, tense, particle/case/preposition, word order). Each wrong option must be grammatically wrong in this sentence in every reading — the sentence must hold a clear clue (subject, time word, auxiliary, agreement). Never an acceptable alternative (no contraction, synonym, politeness or spelling variant that is also correct), never a misspelling or a made-up word, never a different meaning that would also fit.
+Then one short English sentence saying which clue in the sentence decides the answer.
+G|<sentence in ${name}>|<English translation>|<the blank part exactly as in the sentence>|<wrong;wrong;wrong>|<why in English>
+Answer with exactly four G lines, nothing else.`,
+      },
+      { role: "user", content: `Sentences already used (do not repeat): ${have.join(" / ")}` },
+    ],
+  });
+  const raw = String(completion.choices[0]?.message?.content ?? "") || `(empty answer: ${String(completion.choices[0]?.finish_reason ?? "?")})`;
+  const made: { t: string; p: string; g: string; w: string[]; y: string }[] = [];
+  const existing = new Set(have);
+  for (const line of raw.split(/\r?\n/)) {
+    const cells = line.replace(/^[\s>*\-•\d.)]*/u, "").replace(/\*\*/g, "").split("|").map((cell) => cell.trim());
+    if (cells[0] !== "G" || cells.length < 6) continue;
+    const [, text, gloss, piece, wrongs, why] = cells as [string, string, string, string, string, string];
+    const englishGloss = Boolean(gloss) && !/[^\p{Script=Latin}\p{P}\p{S}\p{N}\p{Zs}]/u.test(gloss);
+    if (!piece || piece.length > 40 || !englishGloss || !why || why.length > 240 || !acceptItem(entry, text, piece, existing)) continue;
+    const at = text.toLocaleLowerCase().indexOf(piece.toLocaleLowerCase());
+    const exact = text.toLocaleLowerCase().length === text.length ? text.slice(at, at + piece.length) : piece;
+    const wrong = acceptForms(text, exact, wrongs.split(";"));
+    if (wrong.length < 2) continue;
+    existing.add(text);
+    made.push({ t: text, p: exact, g: gloss, w: wrong, y: why });
+  }
+  if (!made.length) return { items: [], decoys: [], raw };
+  onJudge?.();
+  const judged = await completeChat(client, "spotJudge", {
+    temperature: 0,
+    max_tokens: 1500,
+    messages: [
+      {
+        role: "system",
+        content: `You are a strict native ${name} teacher checking fill-in-the-blank grammar quiz items about "${slot.name}". For each item check: (1) the sentence with the answer filled in is natural and correct; (2) it really practises "${slot.name}"; (3) NONE of the wrong options is acceptable in the blank in any register or reading; (4) the answer is not given away elsewhere in the sentence. Answer JSON only: {"ok":[true|false, ...]} in item order.`,
+      },
+      { role: "user", content: made.map((one, i) => `${i}: ${one.t.replace(one.p, "___")}\n   answer "${one.p}" · wrong ${one.w.map((w) => `"${w}"`).join(", ")} · meaning: ${one.g}`).join("\n") },
+    ],
+  }).catch(() => null);
+  const verdict = jsonIn(String(judged?.choices[0]?.message?.content ?? ""));
+  const ok = Array.isArray(verdict?.ok) ? (verdict!.ok as unknown[]) : [];
+  return { items: made.filter((_, i) => ok[i] === true), decoys: [], raw };
 }
 
 async function makeMore(language: string, key: string, stage: number, entry: BankEntry): Promise<{ items: { t: string; p: string; g: string; w?: string[] }[]; decoys: string[]; raw: string } | null> {
@@ -115,7 +198,7 @@ function today(): string {
 /**
  * 열쇠 하나: 결과를 셈에 넣고, 필요하면 키우고, 앱에 보낼 모양을 돌려준다. onMake는 모델을 부를 때마다(계량).
  */
-export async function bankFor(language: string, key: string, stage: number, results: readonly BankResult[], onMake?: () => void, options: { dictFirst?: boolean } = {}): Promise<BankEntry | null> {
+export async function bankFor(language: string, key: string, stage: number, results: readonly BankResult[], onMake?: () => void, options: { dictFirst?: boolean; onJudge?: () => void } = {}): Promise<BankEntry | null> {
   const target = targetOf(language, key);
   if (!target) return null;
   const storeKey = bankKey(language, key);
@@ -130,12 +213,13 @@ export async function bankFor(language: string, key: string, stage: number, resu
   // 사전 예문이 둘 이상인 낱말(w|)은 키우지 않는다 — 예문은 예문 없는 낱말만 만든다(2026-11-06, server/wordDict.ts).
   // 사전 예문을 퀴즈에 쓰는 앱(dictFirst)만 — 옛 앱(2.78 이하)은 카드 한 줄 + 문제은행뿐이라 예전대로 키운다.
   const dictWord = Boolean(options.dictFirst) && key.startsWith("w|") && (await dictCount(language, key.slice(2).trim()).catch(() => 0)) >= 2;
-  if (onMake && !dictWord && !bankFrozen() && needGrow(entry, day, { forms: key.startsWith("w|") })) {
+  const grammar = key.startsWith("g|");
+  if (onMake && !dictWord && !bankFrozen() && needGrow(entry, day, { forms: key.startsWith("w|"), own: grammar })) {
     const spent = await kvIncrBy(`qbank:v1:budget:${day}`, 1, 2 * 24 * 60 * 60).catch(() => DAILY_BUDGET + 1);
     if (spent <= DAILY_BUDGET) {
       onMake?.();
       let failed = "";
-      const more = await makeMore(language, key, stage, entry).catch((error: unknown) => {
+      const more = await (grammar ? makeGrammar(language, key, entry, options.onJudge) : makeMore(language, key, stage, entry)).catch((error: unknown) => {
         failed = String(error instanceof Error ? error.message : error).slice(0, 300);
         return null;
       });
@@ -146,14 +230,14 @@ export async function bankFor(language: string, key: string, stage: number, resu
       }
       if (more) {
         entry = { ...entry, items: [...entry.items], decoys: { ...entry.decoys } };
-        for (const item of more.items) entry.items.push({ ...item, s: stage, n: 0, r: 0 });
+        for (const item of more.items) entry.items.push({ ...item, s: grammar ? (grammarSlot(language, key)?.stage ?? stage) : stage, n: 0, r: 0 });
         // 오답은 조각의 기본 꼴에 붙인다(예문마다 대소문자가 달라도 같은 칸).
         const slot = target.piece;
         const list = [...(entry.decoys[slot] ?? [])];
         for (const decoy of more.decoys) if (acceptDecoy(slot, decoy, list) && !entry.items.some((item) => item.t.toLocaleLowerCase().includes(decoy.toLocaleLowerCase()))) list.push({ d: decoy, n: 0, k: 0 });
         entry.decoys[slot] = list.slice(-6);
         // 하나도 못 건졌으면 모델 답을 묶음에 잠깐 남긴다(점검 — 앱에는 안 감, 다음 성장 때 덮임).
-        (entry as BankEntry & { last?: string }).last = !more.items.length || !list.length ? more.raw.slice(0, 2400) : "";
+        (entry as BankEntry & { last?: string }).last = !more.items.length || (!grammar && !list.length) ? more.raw.slice(0, 2400) : "";
         entry.grownAt = entry.served;
         entry.dayGrows = entry.day === day ? entry.dayGrows + 1 : 1;
         entry.day = day;
@@ -177,7 +261,11 @@ export async function bankView(language: string, key: string, entry: BankEntry, 
   if (ui === "en" || !view.items.length) return { ...view, items: view.items.map((item) => ({ ...item })) };
   const uiName = INTERFACE_LANGUAGE_LABELS[ui] ?? "English";
   const moved = await translated(view.items.map((item) => item.gloss), ui, uiName, `qbank:v1:gloss:${language}:${textsFingerprint(view.items.map((item) => item.gloss))}:${ui}`, onMake).catch(() => null);
-  return { ...view, items: view.items.map((item, i) => ({ ...item, ...(moved?.[i] ? { uiGloss: moved[i] } : {}) })) };
+  // 문법 칸 문장의 까닭도 앱 언어로(답한 뒤 보임).
+  const whys = view.items.map((item) => item.why ?? "").filter(Boolean);
+  const whyMoved = whys.length ? await translated(whys, ui, uiName, `qbank:v1:why:${language}:${textsFingerprint(whys)}:${ui}`, onMake).catch(() => null) : null;
+  const whyOf = new Map(whys.map((why, i) => [why, whyMoved?.[i] ?? ""]));
+  return { ...view, items: view.items.map((item, i) => ({ ...item, ...(moved?.[i] ? { uiGloss: moved[i] } : {}), ...(item.why && whyOf.get(item.why) ? { uiWhy: whyOf.get(item.why) } : {}) })) };
 }
 
 /** 미리 채울 열쇠 — 단계 1부터, 단계마다 14개 언어의 문장구조 틀(f|) 다음 단계 핵심 표현(e|). 늘 같은 순서(커서로 이어 감). */
@@ -237,6 +325,53 @@ export async function seedBanks(onMake?: () => void, limit = SEED_PER_RUN): Prom
   return { made, skipped, at, total: keys.length, done: at >= keys.length };
 }
 
+/**
+ * 대화의 튜터 줄 → 문법 칸 문장(2026-11-24 사용자 "튜터의 발화도 문장은행에 추가해서 문제 요소로"): 앱이 거른 줄(shareable)을 한 번에 —
+ * 개인 정보·민감한 내용·앞 대화 의존·문법 오류면 버리고, 1~5단계 문법 칸 중 이 문장이 분명히 보여 주는 칸 하나, 비울 조각, 그럴듯한 꼴 오답 셋, 까닭.
+ * 형식 검사 뒤 그 칸 묶음에 o:"talk"로 더한다(누가 보냈는지는 남기지 않음). 돌려줌: 더한 수(0·1).
+ */
+async function offerGrammar(language: string, raw: string, onMake?: () => void): Promise<number> {
+  const client = getOpenAIClient();
+  const text = raw.trim();
+  if (!client || !text || text.length > 140 || /\p{Nd}/u.test(text)) return 0;
+  const slots = (ladderFor(language)?.stages ?? []).flatMap((stage) => stage.grammar.map((one, i) => ({ key: `g|${stage.order}:${i}`, name: one.name.en, stage: stage.order })));
+  if (!slots.length) return 0;
+  const spent = await kvIncrBy(`qbank:v1:offer:${today()}`, 1, 2 * 24 * 60 * 60).catch(() => OFFER_BUDGET + 1);
+  if (spent > OFFER_BUDGET) return 0;
+  onMake?.();
+  const name = INTERFACE_LANGUAGE_LABELS[language] ?? language;
+  const completion = await completeChat(client, "translate", {
+    temperature: 0,
+    max_tokens: 1200,
+    response_format: { type: "json_object" },
+    messages: [
+      {
+        role: "system",
+        content: `You screen one ${name} sentence taken from a tutor's line in a language-learning chat, before it is shown to other learners as a grammar quiz.
+Reject it (ok false) if ANY of these is true: it could identify or describe a specific real person or their private life (names, places they live or work, family details, plans with dates); it touches health, relationships, money, politics, religion, sexuality, or anything sensitive; it only makes sense with the earlier conversation; it has any grammar or spelling mistake; it is not a natural everyday sentence.
+Otherwise pick the ONE grammar point from the list that this sentence most clearly practises (none fits → ok false), the exact part of the sentence (as written) that shows it — it becomes the blank — three wrong options for that blank that a learner would really produce by getting this grammar point wrong (each wrong in this sentence in every reading; never an acceptable alternative, never a misspelling), and one short English sentence saying which clue decides the answer.
+Grammar points: ${slots.map((slot) => `${slot.key} ${slot.name}`).join(" · ")}
+Reply with JSON only: {"ok":true,"en":"<English translation>","key":"g|…","part":"<blank part>","wrong":["…","…","…"],"why":"<English>"} or {"ok":false}.`,
+      },
+      { role: "user", content: text },
+    ],
+  }).catch(() => null);
+  const parsed = jsonIn(String(completion?.choices[0]?.message?.content ?? ""));
+  const slot = slots.find((one) => one.key === parsed?.key);
+  const part = typeof parsed?.part === "string" ? parsed.part : "";
+  const en = typeof parsed?.en === "string" ? parsed.en : "";
+  const why = typeof parsed?.why === "string" ? parsed.why : "";
+  if (parsed?.ok !== true || !slot || !part || part.length > 40 || !en || en.length > 200 || !why || why.length > 240 || !text.includes(part)) return 0;
+  const wrong = acceptForms(text, part, Array.isArray(parsed.wrong) ? parsed.wrong.filter((one): one is string => typeof one === "string") : []);
+  if (wrong.length < 2) return 0;
+  const storeKey = bankKey(language, slot.key);
+  const fresh = (await kvGetJson<BankEntry>(storeKey).catch(() => null)) ?? emptyEntry();
+  if (fresh.items.some((item) => item.t === text) || fresh.items.filter((item) => !item.off).length >= CAP) return 0;
+  const next: BankEntry = { ...fresh, items: [...fresh.items, { t: text, p: part, g: en, w: wrong, y: why, s: slot.stage, n: 0, r: 0, o: "talk" }] };
+  await kvSetJson(storeKey, next, TTL_SECONDS).catch(() => undefined);
+  return 1;
+}
+
 /** 대화에서 온 튜터 줄을 하루에 이만큼까지 판정(모델 한 번씩). */
 export const OFFER_BUDGET = 300;
 
@@ -253,7 +388,13 @@ export async function offerToBank(language: string, offers: readonly { key: stri
   const name = INTERFACE_LANGUAGE_LABELS[language] ?? language;
   let added = 0;
   for (const offer of offers) {
-    const target = targetOf(language, offer.key);
+    // 열쇠 "g" = 소재 조각이 안 잡힌 튜터 줄 — 어느 문법 칸 문장인지 모델이 고른다(offerGrammar).
+    if (offer.key === "g") {
+      added += await offerGrammar(language, offer.text, onMake).catch(() => 0);
+      continue;
+    }
+    // 문법 칸(g|)은 비울 조각이 문장마다라 대화 줄로는 아직 안 받는다.
+    const target = offer.key.startsWith("g|") ? null : targetOf(language, offer.key);
     const text = offer.text.trim();
     if (!target || !text || text.length > 140 || /\p{Nd}/u.test(text) || !text.toLocaleLowerCase().includes(target.piece.toLocaleLowerCase())) continue;
     const storeKey = bankKey(language, offer.key);

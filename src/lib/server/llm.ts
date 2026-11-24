@@ -67,7 +67,7 @@ export const TASKS = {
   fixedLesson: { tier: "high", openai: () => D.fixedLesson, about: "Stagebank 고정 수업 쓰기(틀 × 앱 언어마다 한 번·공유, 검사기 통과만 저장)" },
   wordSenses: { tier: "high", openai: () => D.wordSenses, about: "단어 사전 단어의 여러 뜻(단어 × 앱 언어마다 한 번·공유)" },
   spotMake: { tier: "basic", openai: () => D.spotMake, about: "틀린 곳 고르기 문항 만들기(사전 예문 칸 하나 바꾸기, 문장마다 한 번·공유)" },
-  spotJudge: { tier: "high", openai: () => D.spotJudge, about: "틀린 곳 고르기 문항 판정(답이 둘로 읽히나·나머지가 맞나, 통과만 저장)" },
+  spotJudge: { tier: "high", openai: () => D.spotJudge, about: "퀴즈 문항 판정 — 틀린 곳 고르기·문제은행 문법 칸 빈칸(답이 둘로 읽히나·오답이 정말 틀리나, 통과만 저장)" },
 } satisfies Record<TextTask, { tier: Tier; openai: () => string; about: string }>;
 
 export type Task = keyof typeof TASKS;

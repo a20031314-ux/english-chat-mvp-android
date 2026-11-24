@@ -100,6 +100,8 @@ export const OP_COST: Record<string, OpCost> = {
   // 출력에 Haiku 앞 생각 몫을 얹음(2026-11-02 낱말 꼴 오답 — 운영에서 1600 한도를 생각으로 다 쓴 빈 답 확인).
   qbankGrow: estimated("translate", { input: 700, output: 1500 }),
   qbankSeed: estimated("translate", { input: 500, output: 400 }),
+  // 문제은행 문법 칸 문장 판정 한 번(server/qbank.ts makeGrammar — 넷을 한 번에, Sonnet).
+  qbankJudge: estimated("spotJudge", { input: 600, output: 300 }),
   // 틀린 곳 고르기 한 번(바꾸기 Haiku 또는 판정 Sonnet — 큰 쪽 Sonnet으로 어림, 생각 몫 얹음).
   spotMake: estimated("spotJudge", { input: 700, output: 900 }),
   qbankOffer: estimated("translate", { input: 300, output: 60 }),

@@ -199,3 +199,26 @@ test("처음 본 칸을 1칸에서 바로 맞히면 두 칸 위로, 본 적 있�
   assert.equal(firstTryRung(1, false, false), 1);
   assert.equal(gaugeWordScale(2) > 1 && gaugeWordScale(-2) < 1 && gaugeWordScale(0) === 1, true);
 });
+
+test("climbCleared: 지금 단계 칸이 다 끝나면 위로, 남은 칸이 있으면 그대로", async () => {
+  const { climbCleared, REACH_TOP } = await import("./ladder.ts");
+  const openAt = new Set([2, 5]);
+  assert.deepEqual(climbCleared({ s: 1, n: 3, ok: 3 }, 1, (s) => openAt.has(s)), { s: 2, n: 0, ok: 0 });
+  assert.deepEqual(climbCleared({ s: 2, n: 3, ok: 3 }, 1, (s) => openAt.has(s)), { s: 2, n: 3, ok: 3 });
+  assert.deepEqual(climbCleared({ s: 3, n: 0, ok: 0 }, 1, (s) => openAt.has(s)), { s: 5, n: 0, ok: 0 });
+  assert.equal(climbCleared({ s: 4, n: 0, ok: 0 }, 1, () => false).s, REACH_TOP);
+});
+
+test("nextRound: 다 끝났고 새 문장이 있는 칸만 다시, 하나라도 남았으면 그대로", async () => {
+  const { nextRound, noteRoundUsed, DONE } = await import("./ladder.ts");
+  const round = noteRoundUsed({ r: 1, used: {} }, "g|1:0", ["He is my brother."]);
+  assert.deepEqual(round.used["g|1:0"], ["He is my brother."]);
+  assert.equal(nextRound(["g|1:0", "g|1:1"], { "g|1:0": DONE, "g|1:1": 3 }, round, () => true), null);
+  const next = nextRound(["g|1:0", "g|1:1"], { "g|1:0": DONE, "g|1:1": DONE }, round, (key) => key === "g|1:1");
+  assert.ok(next);
+  assert.deepEqual(next.reopened, ["g|1:1"]);
+  assert.equal(next.round.r, 2);
+  assert.equal(next.ladder["g|1:1"], undefined);
+  assert.equal(next.ladder["g|1:0"], DONE);
+  assert.equal(nextRound(["g|1:0"], { "g|1:0": DONE }, round, () => false), null);
+});

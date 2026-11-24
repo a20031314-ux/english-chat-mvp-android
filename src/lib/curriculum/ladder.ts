@@ -311,3 +311,62 @@ export function firstTryRung(rung: number, correct: boolean, seenBefore: boolean
 export function gaugeWordScale(gauge: Gauge): number {
   return gauge <= -2 ? 0.6 : gauge === -1 ? 0.8 : gauge === 1 ? 1.25 : gauge >= 2 ? 1.6 : 1;
 }
+
+/**
+ * 지금 단계 칸을 다 끝냈으면 통과로 쳐서 위로(사용자 2026-11-24 "위로 안 올라가는 건 원인이 뭐야" — 1년 시뮬레이션에서 단계가 4에 멈춤):
+ * 단계는 지금 단계 이상 칸의 답으로만 움직이는데, 지금 단계 칸이 다 끝나면 아래 칸만 나와 답이 안 쌓였다.
+ * open(stage) = 그 단계에 아직 안 끝난 칸이 있나(그날 쉬는 칸도 안 끝난 칸). 순수.
+ */
+export function climbCleared(reach: Reach, base: number, open: (stage: number) => boolean): Reach {
+  let s = Math.max(Math.max(1, base), Math.min(REACH_TOP, reach.s));
+  if (open(s)) return s === reach.s ? reach : { ...reach, s };
+  while (s < REACH_TOP && !open(s)) s += 1;
+  return { s, n: 0, ok: 0 };
+}
+
+/**
+ * 회차(사용자 2026-11-24 "번들로 1~5단계까지 쭉, 다 맞히면 또 다른 번들"): 1~5단계 칸을 다 끝내면 새 문장이 있는 칸만 다시 1칸부터 —
+ * 맞힌 문제를 다시 내는 게 아니라 같은 칸의 다른 문장(바꾼 사전 예문·문제은행이 만든 문장)으로. 끝낸 칸의 문장은 used에 남겨 다음 회차에 안 낸다.
+ * 이 폰 quizRound.v1.<언어>.
+ */
+export type QuizRound = { r: number; used: Record<string, string[]> };
+const ROUND_KEY = "quizRound.v1";
+
+export function readRound(language: string): QuizRound {
+  try {
+    const raw = typeof localStorage === "undefined" ? null : localStorage.getItem(`${ROUND_KEY}.${language}`);
+    const one = raw ? (JSON.parse(raw) as QuizRound) : null;
+    if (one && typeof one.r === "number" && one.used && typeof one.used === "object") return one;
+  } catch {
+    // 처음.
+  }
+  return { r: 1, used: {} };
+}
+
+export function saveRound(language: string, round: QuizRound): void {
+  try {
+    if (typeof localStorage !== "undefined") localStorage.setItem(`${ROUND_KEY}.${language}`, JSON.stringify(round));
+  } catch {
+    // 이번에만.
+  }
+}
+
+/** 칸 하나를 끝냈을 때 그 회차에 낸 문장을 남긴다(최근 40개). 순수. */
+export function noteRoundUsed(round: QuizRound, key: string, lines: readonly string[]): QuizRound {
+  if (!lines.length) return round;
+  const list = [...new Set([...(round.used[key] ?? []), ...lines])].slice(-40);
+  return { ...round, used: { ...round.used, [key]: list } };
+}
+
+/**
+ * 다음 회차를 열까: 모든 칸이 끝났고(keys 전부 DONE) 새 문장이 있는 칸이 하나라도 있으면 — 그 칸들의 사다리를 지우고 회차 +1.
+ * fresh(key) = 그 칸에 used에 없는 문장이 있나. 돌려줌: 바뀌었으면 새 사다리·회차, 아니면 null. 순수.
+ */
+export function nextRound(keys: readonly string[], ladder: Ladder, round: QuizRound, fresh: (key: string) => boolean): { ladder: Ladder; round: QuizRound; reopened: string[] } | null {
+  if (!keys.length || keys.some((key) => rungOf(ladder, key) < DONE)) return null;
+  const reopened = keys.filter(fresh);
+  if (!reopened.length) return null;
+  const next = { ...ladder };
+  for (const key of reopened) delete next[key];
+  return { ladder: next, round: { ...round, r: round.r + 1 }, reopened };
+}

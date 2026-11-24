@@ -29,6 +29,8 @@ export type BankItem = {
    * 형태만 달라진 같은 단어로 선지를 구성"). 모델이 문장마다 "이 꼴은 여기서 틀림"을 보고 만든 것 — 고르기 오답으로 먼저 쓴다.
    */
   w?: string[];
+  /** 문법 칸(g|)만: 정답이 왜 맞고 오답이 왜 틀리나(영어 한 줄 — 앱 언어로 옮겨 보냄, 2026-11-24 문법 칸 문장 늘리기). */
+  y?: string;
   /** 어디서 왔나: 없음 = 모델이 만듦, "talk" = 대화의 튜터 줄(걸러서, 2026-11-01). */
   o?: "talk";
   /** 빠짐(너무 쉬움 "easy" · 이상함 "odd"). */
@@ -102,11 +104,13 @@ export function applyResults(entry: BankEntry, results: readonly BankResult[], o
 }
 
 /** 오늘 더 만들어야 하나(어떤 열쇠의 묶음). forms = 낱말(w|) 열쇠 — 예문마다 꼴 오답이 든 예문이 둘도 안 되면 한 번 더(예전 묶음 채우기). */
-export function needGrow(entry: BankEntry, today: string, options: { forms?: boolean } = {}): boolean {
+export function needGrow(entry: BankEntry, today: string, options: { forms?: boolean; own?: boolean } = {}): boolean {
   const dayGrows = entry.day === today ? entry.dayGrows : 0;
   if (dayGrows >= GROW_PER_DAY) return false;
   const live = liveItems(entry).length;
   if (live === 0) return true;
+  // 문법 칸(own — 문장마다 제 오답·까닭): 조각마다 오답 묶음이 없다. 다음 회차에 쓸 문장이 넷 안 되면, 그 뒤엔 풀린 만큼.
+  if (options.own) return live < 4 || (live < CAP && entry.served - entry.grownAt >= GROW_EVERY);
   if (options.forms && liveItems(entry).filter((item) => (item.w?.length ?? 0) >= 2).length < 2 && entry.items.length < CAP) return true;
   const thinDecoys = Object.values(entry.decoys).some((list) => list.length < MIN_DECOYS) || Object.keys(entry.decoys).length === 0;
   if (thinDecoys) return true;
@@ -166,11 +170,11 @@ export function acceptForms(sentence: string, piece: string, forms: readonly str
 }
 
 /** 앱에 보낼 모양: 살아 있는 예문(덜 풀린 것 먼저, 열둘까지)과 조각마다 오답. 낱말 예문은 그 문장의 꼴 오답(wrong)도. */
-export function publicView(entry: BankEntry): { items: { text: string; piece: string; gloss: string; stage: number; wrong?: string[] }[]; decoys: Record<string, string[]> } {
+export function publicView(entry: BankEntry): { items: { text: string; piece: string; gloss: string; stage: number; wrong?: string[]; why?: string }[]; decoys: Record<string, string[]> } {
   const items = liveItems(entry)
     .sort((a, b) => a.n - b.n)
     .slice(0, 12)
-    .map((item) => ({ text: item.t, piece: item.p, gloss: item.g, stage: item.s, ...(item.w?.length ? { wrong: item.w } : {}) }));
+    .map((item) => ({ text: item.t, piece: item.p, gloss: item.g, stage: item.s, ...(item.w?.length ? { wrong: item.w } : {}), ...(item.y ? { why: item.y } : {}) }));
   const decoys = Object.fromEntries(Object.entries(entry.decoys).map(([piece, list]) => [piece, list.map((d) => d.d)]));
   return { items, decoys };
 }

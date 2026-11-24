@@ -119,3 +119,22 @@ test("pickPrepared: 오래 안 낸 칸부터 돌림 — 어제 낸 be동사보�
   const ja = [item("g|1:0"), item("g|1:1")];
   assert.deepEqual(pickPrepared(ja, { stage: 1, grammar: 1, expression: 0, lastAt: (key) => (key === "g|1:0" ? 50 : 0) }).map((one) => one.key), ["g|1:1"]);
 });
+
+test("grownVariants·withGrown: 문제은행 문법 문장을 같은 칸의 다른 문장으로(앱 언어 뜻·까닭이 있을 때만)", async () => {
+  const { grownVariants, withGrown } = await import("./preparedQuiz.ts");
+  const grown = [
+    { text: "Ayer comimos paella.", piece: "comimos", wrong: ["comemos", "comíamos", "comeremos"], why: "Ayer marks a finished past action.", gloss: { en: "Yesterday we ate paella.", ko: "어제 우리는 파에야를 먹었다." }, ui: { code: "ko", gloss: "어제 우리는 파에야를 먹었다.", why: "ayer(어제) → 끝난 과거." } },
+    { text: "昨日、本を読みました。", piece: "読みました", wrong: ["読みます", "読んでいます"], why: "昨日 asks for the past.", gloss: { en: "I read a book yesterday." }, ui: { code: "ja", gloss: "昨日本を読んだ。", why: "昨日 → 過去" } },
+    { text: "Ella es alta.", piece: "es", wrong: ["eres"], why: "x", gloss: { en: "She is tall." } },
+  ];
+  const ko = grownVariants(grown, "ko");
+  assert.equal(ko.length, 1);
+  assert.equal(ko[0]!.before, "Ayer ");
+  assert.equal(ko[0]!.answer, "comimos");
+  assert.deepEqual(ko[0]!.options, ["comimos", "comemos", "comíamos", "comeremos"]);
+  assert.equal(grownVariants(grown, "en").length, 2);
+  assert.equal(grownVariants(grown, "ar").length, 0);
+  const item: PreparedItem = { key: "g|2:3", kind: "grammar", stage: 2, gloss: "g", before: "", after: "", answer: "a", options: ["a", "b"], line: "Ayer comimos paella.", why: "w" };
+  assert.equal(withGrown(item, ko), item);
+  assert.equal(withGrown(item, grownVariants(grown, "en")).variants?.length, 1);
+});

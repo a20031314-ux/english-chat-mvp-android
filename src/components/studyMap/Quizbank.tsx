@@ -2,7 +2,7 @@
 
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
-import { DONE, firstTryRung, gaugeWordScale, readReach, recentRuns, saveReach, stepReach, gaugeCue, rightToday, gaugeNumbered, gaugeRung, kindCounts, kindOf, kindShares, missRates, paraDue, readGauge, readLadder, readPara, rungOf, saveGauge, saveLadder, savePara, stepLadder, stepPara, type Gauge } from "@/lib/curriculum/ladder";
+import { climbCleared, nextRound, noteRoundUsed, readRound, saveRound, DONE, firstTryRung, gaugeWordScale, readReach, recentRuns, saveReach, stepReach, gaugeCue, rightToday, gaugeNumbered, gaugeRung, kindCounts, kindOf, kindShares, missRates, paraDue, readGauge, readLadder, readPara, rungOf, saveGauge, saveLadder, savePara, stepLadder, stepPara, type Gauge } from "@/lib/curriculum/ladder";
 import { measured } from "@/lib/curriculum/firstCheck";
 import { gaugeField, noteStat, RANDOM_SHARE, statField } from "@/lib/curriculum/quizStats";
 import { expressionAsk, grammarAsk, paragraphQuestion } from "@/lib/curriculum/ladderQuiz";
@@ -22,7 +22,7 @@ import { confirmDue, knownState } from "@/lib/curriculum/known";
 import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
-import { pickPrepared, turnFresh } from "@/lib/curriculum/preparedQuiz";
+import { grownVariants, pickPrepared, turnFresh, withGrown } from "@/lib/curriculum/preparedQuiz";
 import { knownSlotWeight } from "@/lib/curriculum/languagePairs";
 import { learnerLanguages } from "@/lib/curriculum/learnerLanguages";
 import { readCachedAccount } from "@/lib/account/session";
@@ -36,7 +36,7 @@ import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { recordQuiz, type QuizLog } from "@/lib/curriculum/nextStudy";
 import { commonWords, hitsIn, readTalks, shareable, talkShareOn } from "@/lib/curriculum/talkQuiz";
 import { QUIZ_LOG_EVENT, readQuizLog, saveQuizLog } from "@/lib/curriculum/quizLogStore";
-import { growBank, offerBank } from "@/lib/curriculum/qbank";
+import { growBank, grownItems, offerBank } from "@/lib/curriculum/qbank";
 import { noteQuizDay } from "@/lib/curriculum/quizDays";
 import { emptyCircle, growCircle, noteAnswer, trimCircle, type Circle } from "@/lib/curriculum/circle";
 import { loadVocabulary } from "@/lib/vocabulary";
@@ -212,7 +212,8 @@ export function Quizbank({
       for (const line of conv) {
         if (!shareable(language, line, words)) continue;
         const hit = hitsIn(language, line.text, 5)[0];
-        if (hit && !offers.some((one) => one.text === line.text)) offers.push({ key: hit.key, text: line.text, stage });
+        // 소재 조각이 안 잡힌 줄은 "g" — 서버가 어느 문법 칸 문장인지 고른다(server/qbank.ts offerGrammar).
+        if (!offers.some((one) => one.text === line.text)) offers.push({ key: hit?.key ?? "g", text: line.text, stage });
       }
     }
     if (offers.length) void offerBank(language, offers.slice(-12));
@@ -278,7 +279,12 @@ export function Quizbank({
       if (kind) noteStat(language, statField(kind, rung ?? 0, stage, gauge, random, correct));
       if (rung !== undefined) {
         // 무작위 칸도 지금 칸 이상이라, 맞히면 사다리를 올린다(틀린 것은 측정이라 안 내림).
-        if (!random || correct) ladder = stepLadder(ladder, key, random ? rung : firstTryRung(rung, correct, before.has(key)), correct);
+        if (!random || correct) {
+          const was = rungOf(ladder, key);
+          ladder = stepLadder(ladder, key, random ? rung : firstTryRung(rung, correct, before.has(key)), correct);
+          // 칸을 끝냈으면 이번 회차에 낸 문장을 남긴다 — 다음 회차엔 다른 문장으로(ladder.ts nextRound).
+          if (was < DONE && rungOf(ladder, key) >= DONE) saveRound(language, noteRoundUsed(readRound(language), key, askedTexts(language, key)));
+        }
         askedRung.current.delete(key);
         randomKeys.current.delete(key);
       }
@@ -327,6 +333,8 @@ export function Quizbank({
     const pool = fresh.length ? fresh : list;
     return pool[(round + key.length) % pool.length] ?? null;
   };
+  /** 넣어 둔 칸 + 문제은행이 만든 그 칸 문장(문법 칸만, preparedQuiz.ts grownVariants — 앱 언어 뜻·까닭이 온 것). */
+  const grown = (item: PreparedItem): PreparedItem => (item.kind === "grammar" ? withGrown(item, grownVariants(grownItems(language, item.key), locale)) : item);
   /** 문법·표현 열쇠 하나 → 사다리 칸 문제(ladderQuiz.ts). 낸 칸을 기억해 답이 오면 사다리를 옮긴다. */
   const ladderAsk = (key: string, events: readonly { k: string; src: string }[], ladder: ReturnType<typeof readLadder>, item?: PreparedItem): QuizQuestion | null => {
     const prep = item ?? prepared?.find((one) => one.key === key);
@@ -337,7 +345,7 @@ export function Quizbank({
     const current = random ? reached + Math.floor(Math.random() * (5 - reached)) : gaugeRung(reached, gauge);
     const cue = gaugeCue(gauge);
     const made = prep
-      ? grammarAsk(turnFresh(prep, preparedTurn(events, key), askedTexts(language, key)), current, spotOf(key), language, { cue, numbered: gaugeNumbered(gauge), stage })
+      ? grammarAsk(turnFresh(grown(prep), preparedTurn(events, key), [...askedTexts(language, key), ...(readRound(language).used[key] ?? [])]), current, spotOf(key), language, { cue, numbered: gaugeNumbered(gauge), stage })
       : key.startsWith("e|")
         ? expressionAsk(language, key, current, `${day}-${round}`, cue)
         : null;
@@ -437,11 +445,32 @@ export function Quizbank({
     // 칸마다 마지막으로 퀴즈에 낸 때(이 폰 장부) — 오래된 칸부터 돌린다.
     const lastAsked = new Map<string, number>();
     for (const event of readLedger(language)) if (event.src === "quiz" && event.t > (lastAsked.get(event.k) ?? 0)) lastAsked.set(event.k, event.t);
-    // 문법·표현은 첫 측정 단계가 아니라 퀴즈로 닿은 단계부터(readReach).
-    const head = prepared ? pickPrepared(prepared, { stage: readReach(language, stage).s, lastAt: (key) => lastAsked.get(key) ?? 0, grammar: counts.g, expression: prepared.some((item) => item.kind === "expression") ? counts.e : 0, skip: new Set([...lastCircle.current, ...preparedRest(language, prepared)]), ...(speaks.length ? { weight: (key: string) => knownSlotWeight(speaks, language, key) } : {}) }) : [];
+    // 회차(ladder.ts nextRound): 1~5단계 문법 칸을 다 끝냈고 새 문장이 있는 칸이 있으면 그 칸들을 다시 1칸부터, 단계도 첫 측정 단계부터 다시.
+    if (prepared?.length) {
+      const roundNow = readRound(language);
+      // 문법 칸끼리만 — 표현은 새 문장이 아직 없어 문법이 표현을 기다리지 않게.
+      const opened = nextRound(prepared.filter((item) => item.kind === "grammar").map((item) => item.key), readLadder(language), roundNow, (key) => {
+        const item = prepared.find((one) => one.key === key);
+        const used = new Set(roundNow.used[key] ?? []);
+        if (!item) return false;
+        const all = grown(item);
+        return [all.line, ...(all.variants ?? []).map((one) => one.line)].some((line) => !used.has(line));
+      });
+      if (opened) {
+        saveLadder(language, opened.ladder);
+        saveRound(language, opened.round);
+        saveReach(language, { s: Math.max(1, stage), n: 0, ok: 0 });
+      }
+    }
+    // 문법·표현은 첫 측정 단계가 아니라 퀴즈로 닿은 단계부터(readReach) — 그 단계 문법 칸을 다 끝냈으면 위로(climbCleared, 표현은 아래 단계 것도 계속 나옴).
+    const ladderOpen = readLadder(language);
+    const reachNow = prepared ? climbCleared(readReach(language, stage), stage, (s) => prepared.some((item) => item.kind === "grammar" && item.stage === s && rungOf(ladderOpen, item.key) < DONE)) : readReach(language, stage);
+    if (prepared) saveReach(language, reachNow);
+    const head = prepared ? pickPrepared(prepared, { stage: reachNow.s, lastAt: (key) => lastAsked.get(key) ?? 0, grammar: counts.g, expression: prepared.some((item) => item.kind === "expression") ? counts.e : 0, skip: new Set([...lastCircle.current, ...preparedRest(language, prepared)]), ...(speaks.length ? { weight: (key: string) => knownSlotWeight(speaks, language, key) } : {}) }) : [];
     lastCircle.current = new Set([...head.map((item) => item.key), ...keys]);
     if (!keys.length && !head.length) return null;
-    void growBank(language, locale, keys.map((key) => ({ key, stage })));
+    // 문법 칸은 낼 때마다 다음 회차 문장을 미리 부탁(서버가 칸마다 넷까지 만들고 판정, 모두가 같이 씀 — server/qbank.ts makeGrammar).
+    void growBank(language, locale, [...head.filter((item) => item.kind === "grammar").map((item) => ({ key: item.key, stage: item.stage })), ...keys.map((key) => ({ key, stage }))]);
     // 다음 묶음에 나올 새 낱말도 미리(문제은행 미리 받기).
     void growBank(language, locale, levelPick(8, { skip: new Set(keys) }).map((key) => ({ key, stage })));
     const questions: QuizQuestion[] = [];

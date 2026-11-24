@@ -119,3 +119,32 @@ export function pickPrepared(
   };
   return [...take("grammar", options.grammar ?? 1), ...take("expression", options.expression ?? 1)];
 }
+
+/** 문제은행이 만든 문법 칸 문장 하나(curriculum/qbank.ts GrownItem 중 쓰는 칸만). */
+export type GrownGrammar = { text: string; piece: string; wrong?: readonly string[]; why?: string; gloss: { en: string; ko?: string }; ui?: { code: string; gloss?: string; why?: string } };
+
+/**
+ * 문제은행 문장 → 같은 칸의 다른 문장(PreparedVariant, 2026-11-24 회차 묶음): 앱 언어 뜻·까닭이 있을 때만(영어 앱은 원문).
+ * 빈칸 조각이 문장에 그대로 있고 꼴 오답이 둘 이상인 것만. 순수.
+ */
+export function grownVariants(grown: readonly GrownGrammar[], ui: string): PreparedVariant[] {
+  const out: PreparedVariant[] = [];
+  for (const one of grown) {
+    const at = one.text.indexOf(one.piece);
+    const wrong = (one.wrong ?? []).filter((w) => w && w !== one.piece);
+    if (at < 0 || !one.piece || wrong.length < 2 || !one.why) continue;
+    const gloss = ui === "en" ? one.gloss.en : one.ui?.code === ui ? one.ui.gloss : ui === "ko" ? one.gloss.ko : undefined;
+    const why = ui === "en" ? one.why : one.ui?.code === ui ? one.ui.why : undefined;
+    if (!gloss || !why) continue;
+    out.push({ before: one.text.slice(0, at), after: one.text.slice(at + one.piece.length), answer: one.piece, options: [one.piece, ...wrong.slice(0, 3)], line: one.text, gloss, why });
+  }
+  return out;
+}
+
+/** 넣어 둔 칸 + 문제은행 문장(같은 문장은 한 번). 순수. */
+export function withGrown(item: PreparedItem, extra: readonly PreparedVariant[]): PreparedItem {
+  if (!extra.length) return item;
+  const have = new Set([item.line, ...(item.variants ?? []).map((one) => one.line)]);
+  const more = extra.filter((one) => !have.has(one.line));
+  return more.length ? { ...item, variants: [...(item.variants ?? []), ...more] } : item;
+}

@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
   const debug: Record<string, string> = {};
   for (const key of new Set([...wanted.keys(), ...resultKeys])) {
     const mine = results.filter((one) => one.key === key);
-    const entry = await bankFor(language, key, wanted.get(key) ?? 1, mine, wanted.has(key) && !simUser ? meter : undefined, { dictFirst: body.dict === 1 }).catch(() => null);
+    const entry = await bankFor(language, key, wanted.get(key) ?? 1, mine, wanted.has(key) && !simUser ? meter : undefined, { dictFirst: body.dict === 1, onJudge: () => void meterRequest(request, "qbankJudge") }).catch(() => null);
     if (entry && wanted.has(key)) banks[key] = await bankView(language, key, entry, ui, meter).catch(() => null);
     if (entry) debug[key] = (entry as { last?: string }).last ?? "";
   }
