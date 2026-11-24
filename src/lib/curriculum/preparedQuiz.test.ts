@@ -138,3 +138,15 @@ test("grownVariants·withGrown: 문제은행 문법 문장을 같은 칸의 다�
   assert.equal(withGrown(item, ko), item);
   assert.equal(withGrown(item, grownVariants(grown, "en")).variants?.length, 1);
 });
+
+test("grownChoices: 틀린 문장의 맞는 문장이 그 문장을 고친 것이면 뺌 — es·ja", async () => {
+  const { grownChoices, nearLine } = await import("./preparedQuiz.ts");
+  assert.equal(nearLine("Yo he escribido una carta.", "Yo he escrito una carta."), true);
+  assert.equal(nearLine("昨日映画を見ます。", "昨日映画を見ました。"), true);
+  assert.equal(nearLine("Yo he escribido una carta.", "Nunca hemos ido a Cuba."), false);
+  const x = { text: "Yo he escribido una carta.", piece: "", v: "x" as const, wrong: ["Yo he escrito una carta.", "¿Has llegado ya?", "Nunca hemos ido a Cuba.", "Ya he comido."], why: "w", gloss: { en: "I have written a letter." }, ui: { code: "ko", gloss: "편지를 썼다", why: "escribir → escrito" } };
+  const got = grownChoices([x], "ko");
+  assert.equal(got.length, 1);
+  assert.ok(got[0]!.v === "x" && !got[0]!.rights.includes("Yo he escrito una carta."));
+  assert.equal(grownChoices([{ ...x, wrong: x.wrong.slice(0, 3) }], "ko").length, 0);
+});

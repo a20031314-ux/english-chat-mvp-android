@@ -167,9 +167,23 @@ export function grownChoices(grown: readonly GrownGrammar[], ui: string): Choice
     } else if (one.v === "m") {
       if (!wrong[0]) continue;
       out.push({ v: "m", situation: gloss, right: one.text, wrong: wrong[0], why });
-    } else if (wrong.length >= 3) {
-      out.push({ v: "x", wrong: one.text, rights: wrong.slice(0, 3), why });
+    } else {
+      // 맞는 문장이 틀린 문장을 고친 것뿐이면 나란히 놓여 답이 샌다(서버도 거르지만 그 전에 만든 것까지).
+      const rights = wrong.filter((line) => !nearLine(line, one.text));
+      if (rights.length >= 3) out.push({ v: "x", wrong: one.text, rights: rights.slice(0, 3), why });
     }
   }
   return out;
+}
+
+/** 두 문장이 몇 글자만 다른가(앞뒤 같은 글자를 걷고 남은 차이 넷 이하, 문장부호·띄어쓰기 무시 — 띄어쓰기 없는 말도). 순수. */
+export function nearLine(a: string, b: string): boolean {
+  const bare = (text: string) => text.toLocaleLowerCase().replace(/[\p{P}\s]/gu, "");
+  const x = bare(a);
+  const y = bare(b);
+  let head = 0;
+  while (head < x.length && head < y.length && x[head] === y[head]) head += 1;
+  let tail = 0;
+  while (tail < x.length - head && tail < y.length - head && x[x.length - 1 - tail] === y[y.length - 1 - tail]) tail += 1;
+  return Math.max(x.length, y.length) - head - tail <= 4;
 }
