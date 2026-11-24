@@ -61,6 +61,8 @@ Answer with exactly one line per word, in the same order, as <number>|<form in t
  */
 const GLOSS_FIX: Record<string, Record<string, string>> = {
   es: { lecho: "bed, place to sleep" },
+  // 사용자 2026-11-24: 예문은 "take a seat · Is this seat taken"(자리)인데 뜻이 "의자"로 옮겨짐.
+  en: { seat: "seat, place to sit" },
 };
 
 function fixedGloss(language: string, cards: WordCard[]): WordCard[] {
