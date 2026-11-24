@@ -272,7 +272,8 @@ export function Quizbank({
       const kind = kindOf(key);
       if (kind) noteStat(language, statField(kind, rung ?? 0, stage, gauge, random, correct));
       if (rung !== undefined) {
-        if (!random) ladder = stepLadder(ladder, key, rung, correct);
+        // 무작위 칸도 지금 칸 이상이라, 맞히면 사다리를 올린다(틀린 것은 측정이라 안 내림).
+        if (!random || correct) ladder = stepLadder(ladder, key, rung, correct);
         askedRung.current.delete(key);
         randomKeys.current.delete(key);
       }
@@ -319,8 +320,10 @@ export function Quizbank({
   const ladderAsk = (key: string, events: readonly { k: string; src: string }[], ladder: ReturnType<typeof readLadder>, item?: PreparedItem): QuizQuestion | null => {
     const prep = item ?? prepared?.find((one) => one.key === key);
     // 게이지가 낼 칸을 옮기고(gaugeRung), 열에 하나는 측정으로 칸을 무작위로(quizStats.ts — 사다리는 안 옮김).
+    // 무작위 칸은 지금 칸 이상에서만 — 다 맞혀 올라간 칸이 측정 때문에 1칸 고르기로 다시 나오던 것(사용자 2026-11-24 "be동사 다 맞혔는데 다시 나와").
     const random = Math.random() < RANDOM_SHARE;
-    const current = random ? 1 + Math.floor(Math.random() * 4) : gaugeRung(Math.min(4, rungOf(ladder, key)), gauge);
+    const reached = Math.min(4, rungOf(ladder, key));
+    const current = random ? reached + Math.floor(Math.random() * (5 - reached)) : gaugeRung(reached, gauge);
     const cue = gaugeCue(gauge);
     const made = prep
       ? grammarAsk(turnFresh(prep, preparedTurn(events, key), askedTexts(language, key)), current, spotOf(key), language, { cue, numbered: gaugeNumbered(gauge), stage })
