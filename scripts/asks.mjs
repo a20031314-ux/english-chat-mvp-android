@@ -9,7 +9,10 @@
  *        닿는 다른 탭이 없어도 "범위 봄" 기록을 남긴다(끝내기 훅이 이것을 본다).
  *   node scripts/asks.mjs delete --from 2 --what "옛 다음 문제 고르기(pickNext)" --files src/lib/a.ts,src/lib/b.ts [--why "새 것과 같이 불림"]
  *        옛 코드를 지울지 사용자에게 묻는 요청(받는 쪽 user). 시작 훅이 모든 채팅에 띄우고, 채팅이 사용자에게 묻고 답을 적는다.
- *   node scripts/asks.mjs answer <id> --by 3 --status 맞음|고침|해당없음 [--note "…"]      탭 요청에 답
+ *   node scripts/asks.mjs fix --to 2 --what "quiz.ts:203 — 무엇 (고칠 것)" --files src/lib/a.ts [--from watch] [--severity major|minor]
+ *        리뷰 지적(변경 감시 등)을 그 탭에 고칠 것으로(사용자 2026-11-24 "리뷰문제는 에이전트들한테 전달되고 있는 거야?" — inbox는 아무도 안 가져감).
+ *        같은 탭·같은 what이 열려 있으면 새로 안 만든다. 시작 훅과 /take N이 그 탭 요청 중 맨 먼저 보인다.
+ *   node scripts/asks.mjs answer <id> --by 3 --status 맞음|고침|해당없음 [--note "…"]      탭 요청에 답(fix: 고침|해당없음)
  *   node scripts/asks.mjs answer <id> --by user --status 지움|남김 [--until "2.81 뒤"] [--note]  삭제 질문에 사용자 답
  *   node scripts/asks.mjs list [--to 3|user] [--all]
  *   node scripts/asks.mjs --check     원본·판이 맞는지(CI)
@@ -52,12 +55,19 @@ function tabName(tab) {
   }
 }
 
+/** 탭 안 순서: 고칠 것(major → minor, 새 것 먼저) → 확인 요청(새 것 먼저) */
+function sortForTab(list) {
+  const rank = (a) => (a.kind === "fix" ? (a.severity === "major" ? 0 : 1) : 2);
+  return [...list].sort((a, b) => rank(a) - rank(b) || String(b.at).localeCompare(String(a.at)));
+}
+
 function render(data) {
   const lines = [];
   lines.push("# 확인 요청");
   lines.push("");
   lines.push("> **자동 생성 — 손으로 고치지 않는다.** 원본 `hub/chat/asks.json` → `node scripts/asks.mjs`(머리 주석에 쓰는 법).");
   lines.push("> 기능을 바꾼 채팅이 그 코드가 닿는 **다른 탭마다** \"거기서도 이렇게 되나\" 요청을 만들고(`apply`), 받는 탭이 확인해 답한다(`answer`). 옛 코드를 지울지는 **사용자에게** 묻는다(`delete`).");
+  lines.push("> 리뷰 지적(변경 감시)은 그 탭에 🔧 **고칠 것**으로 온다(`fix`) — 탭 안에서 맨 먼저.");
   lines.push("> 시작 훅이 열린 요청을 채팅에 넣고, `/take N`은 그 탭 요청부터 처리한다. 끝내기 훅은 다른 탭에 닿는 변경에 요청이 없으면 막는다.");
   lines.push("");
   const open = data.asks.filter((a) => a.status === "open");
@@ -79,7 +89,12 @@ function render(data) {
   for (const [tab, list] of [...byTab].sort()) {
     lines.push(`### 탭 ${tabName(tab)}`);
     lines.push("");
-    for (const a of list) {
+    for (const a of sortForTab(list)) {
+      if (a.kind === "fix") {
+        lines.push(`- **${a.id}** 🔧 고칠 것${a.severity === "major" ? " (major)" : ""} (${a.at}, ${a.from === "watch" ? "변경 감시" : `탭 ${a.from}`}) ${a.what}`);
+        lines.push(`  - 할 것: 지금 코드에서 맞나 보고 고침 → \`answer ${a.id} --status 고침\`, 아니면 \`--status 해당없음 --note 이유\``);
+        continue;
+      }
       lines.push(`- **${a.id}** (${a.at}, 탭 ${a.from}${a.head ? ` · ${a.head}` : ""}) ${a.what}`);
       if (a.features?.length) lines.push(`  - 기능: ${a.features.join(" · ")}`);
       lines.push(`  - 볼 곳: ${(a.files ?? []).slice(0, 10).map((f) => `\`${f.replace(/^src\//, "")}\``).join(" · ")}${(a.files ?? []).length > 10 ? ` … ${a.files.length - 10}개 더` : ""}`);
@@ -184,6 +199,26 @@ function del(args) {
   console.log(`사용자 삭제 질문 ${ask.id} — 지금 사용자에게 묻고(AskUserQuestion) 답을 answer로 적는다`);
 }
 
+function fix(args) {
+  const to = opt(args, "to");
+  const what = opt(args, "what");
+  if (!to || !what) throw new Error('fix에는 --to <탭> --what "파일:줄 — 무엇 (고칠 것)"이 필요');
+  const from = opt(args, "from") ?? "watch";
+  const severity = opt(args, "severity") === "major" ? "major" : "minor";
+  const files = (opt(args, "files") ?? "").split(",").filter(Boolean);
+  const data = readAsks();
+  const same = data.asks.find((a) => a.status === "open" && a.kind === "fix" && String(a.to) === String(to) && a.what === what);
+  if (same) return console.log(`이미 열림: ${same.id}`);
+  let head = "";
+  try {
+    head = git("rev-parse", "--short", "HEAD");
+  } catch {}
+  const ask = { id: nextId(data, from), at: opt(args, "at") ?? nowKst(), kind: "fix", from: String(from), to: String(to), severity, what, files, head, status: "open" };
+  data.asks.push(ask);
+  write(data);
+  console.log(`고칠 것 ${ask.id} → 탭 ${tabName(to)}`);
+}
+
 function answer(args) {
   const id = args[1];
   const status = opt(args, "status");
@@ -191,7 +226,7 @@ function answer(args) {
   const data = readAsks();
   const ask = data.asks.find((a) => a.id === id);
   if (!ask) throw new Error(`없는 요청: ${id}`);
-  const allowed = ask.kind === "delete" ? ["지움", "남김"] : ["맞음", "고침", "해당없음"];
+  const allowed = ask.kind === "delete" ? ["지움", "남김"] : ask.kind === "fix" ? ["고침", "해당없음"] : ["맞음", "고침", "해당없음"];
   if (!allowed.includes(status)) throw new Error(`--status는 ${allowed.join("|")}`);
   if (ask.kind === "delete" && by !== "user") throw new Error("삭제 질문의 답은 사용자만 — --by user (사용자가 답한 것을 적을 때)");
   if (ask.kind === "delete" && status === "남김" && !opt(args, "until")) throw new Error('남김이면 --until "언제 다시 볼지"(예: "2.81 자를 때")');
@@ -222,6 +257,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       console.log(`확인 요청: 열림 ${data.asks.filter((a) => a.status === "open").length}`);
     } else if (args[0] === "apply") await apply(args);
     else if (args[0] === "delete") del(args);
+    else if (args[0] === "fix") fix(args);
     else if (args[0] === "answer") answer(args);
     else if (args[0] === "render") write(readAsks());
     else list(args);

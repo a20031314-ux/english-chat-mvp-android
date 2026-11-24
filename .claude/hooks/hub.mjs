@@ -101,15 +101,25 @@ function asksText() {
         toUser.map((a) => `- ${a.id} (탭 ${a.from}) ${a.what}: ${(a.files ?? []).join(", ")}`).join("\n"),
     );
   }
+  // 짧게(사용자 2026-11-24): 전부 쏟으면 훅 출력이 잘려 아무도 못 읽음 — 탭마다 🔧 고칠 것 먼저 몇 개 + 수, 나머지는 asks.mjs list.
   const byTab = new Map();
   for (const a of open.filter((x) => x.to !== "user")) byTab.set(a.to, [...(byTab.get(a.to) ?? []), a]);
   if (byTab.size) {
+    const rank = (a) => (a.kind === "fix" ? (a.severity === "major" ? 0 : 1) : 2);
+    const cut = (t, n = 110) => (t.length > n ? t.slice(0, n) + "…" : t);
     parts.push(
-      "[허브] 탭에 온 확인 요청 (hub/chat/ASKS.md) — 이 채팅이 그 탭이면 다른 일보다 먼저: 볼 곳 화면에서도 새 동작인지·옛 동작이 남았는지 확인 → 필요하면 고치고 → " +
-        "`node scripts/asks.mjs answer <id> --by <탭> --status 맞음|고침|해당없음 --note \"…\"` → 커밋.\n" +
+      "[허브] 탭에 온 요청 (hub/chat/ASKS.md) — 이 채팅이 그 탭이면 다른 일보다 먼저. 🔧 고칠 것(리뷰 지적)은 지금 코드에서 맞나 보고 고침 → `answer <id> --by <탭> --status 고침|해당없음`. " +
+        "확인 요청은 볼 곳 화면에서 새 동작인지·옛 동작이 남았는지 → `--status 맞음|고침|해당없음 --note \"…\"` → 커밋. 그 탭 전부: `node scripts/asks.mjs list --to <탭>`.\n" +
         [...byTab]
           .sort()
-          .map(([tab, list]) => `탭 ${tab}: ` + list.map((a) => `${a.id} (탭 ${a.from}에서) ${a.what}`).join(" / "))
+          .map(([tab, list]) => {
+            const sorted = [...list].sort((a, b) => rank(a) - rank(b) || String(b.at).localeCompare(String(a.at)));
+            const fixes = sorted.filter((a) => a.kind === "fix");
+            const applies = sorted.filter((a) => a.kind !== "fix");
+            const shown = [...fixes.slice(0, 3).map((a) => `🔧${a.severity === "major" ? "(major)" : ""} ${a.id} ${cut(a.what)}`), ...applies.slice(0, 1).map((a) => `${a.id} (탭 ${a.from}에서) ${cut(a.what, 70)}`)];
+            const rest = list.length - shown.length;
+            return `탭 ${tab} — 고칠 것 ${fixes.length} · 확인 요청 ${applies.length}: ` + shown.join(" / ") + (rest > 0 ? ` / … ${rest}개 더` : "");
+          })
           .join("\n"),
     );
   }
@@ -251,7 +261,7 @@ if (mode === "start" || mode === "compact") {
   const asks = asksText();
   if (asks) parts.push(asks);
   const inbox = inboxLines();
-  if (inbox.length) parts.push("역할끼리 넘긴 일 (hub/work/inbox.md):\n" + inbox.join("\n"));
+  if (inbox.length) parts.push(`역할끼리 넘긴 일 (hub/work/inbox.md, ${inbox.length}줄 — 최근 5줄, 내 역할 것은 그 파일에서):\n` + inbox.slice(0, 5).map((l) => (l.length > 160 ? l.slice(0, 160) + "…" : l)).join("\n"));
   const handoffs = lastHandoffs();
   if (handoffs) parts.push("최근 인계 기록 (hub/chat/log):\n" + handoffs);
   process.stdout.write(parts.join("\n\n") + "\n");
