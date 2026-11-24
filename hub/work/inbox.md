@@ -353,3 +353,5 @@
 - 2026-11-24 watch → dev: [my] src/lib/server/qbank.ts:335 — offerGrammar가 튜터 줄 문법 문항을 spotJudge(Sonnet) 판정 없이 공유 g| 묶음에 저장, 맞는 대안이 오답 보기로 나갈 수 있음 (makeGrammar처럼 판정 통과만 저장 — data-map "판정 통과만"과 맞춤)
 - 2026-11-24 watch → dev: [my] src/lib/curriculum/talkFill.ts:79 — 대화 채우기가 늘 치기 문제라 ja·zh 한자 답(見ました 등)은 입력기 없으면 못 침 (typeOf처럼 읽기 없는 한자 답은 고르기로)
 - 2026-11-24 watch → dev: [공통] src/lib/billing/opCost.ts:107 — qbankOffer 단가가 옛 어림(입력 300·출력 60), 문법 칸 길은 칸 목록 전체·max_tokens 1200·하루 상한 1000이라 비용표가 작게 잡힘 (토큰 다시 재서 단가 고침)
+- 2026-11-24 watch → dev: [my] src/lib/curriculum/ladder.ts:281 — readReach가 저장된 hi를 버려 게이지 "위 단계를 맞히면 닿은 단계도 한 번에"가 여덟 번째 답일 때만 됨(Quizbank.tsx:268·431에서 답마다 다시 읽음) (hi도 돌려주기 + localStorage 왕복 테스트, Quizbank.tsx:486-493 묶음 시작 saveReach에서도 hi 유지)
+- 2026-11-24 watch → dev: [my] src/lib/curriculum/ladder.ts:269 — stepReach hi가 게이지와 상관없이 위 단계 정답을 다 셈, 위를 고치면 게이지 0에서도 섞기 ahead(Quizbank.tsx:500)·다시 볼 것 5단계 칸 하나로 2→5 (hi는 게이지로 올려 낸 칸만 — 상한 gaugeStage(now, gauge) 넘기기)
