@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder } from "./ladder.ts";
+import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder, recentRuns, stepReach, REACH_BATCH, firstTryRung, gaugeWordScale, type Reach } from "./ladder.ts";
 import { grammarAsk, pickCells, spotQuestion } from "./ladderQuiz.ts";
 import { formChoice } from "./quiz.ts";
 import { blankNeedsMeaning, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
@@ -164,4 +164,38 @@ test("빈칸이 내용 낱말까지 덮으면 단계와 상관없이 해석 먼�
   assert.ok(blank?.kind === "type" && blank.glossFirst);
   const choose = grammarAsk(item, 1, null, "en", { stage: 4 })?.question;
   assert.ok(choose?.kind === "choose" && choose.prepared?.meaningLater, "고르기는 보기가 알려 주니 그대로 답한 뒤에");
+});
+
+test("종류 비율: 요즘 연달아 다 맞힌 문법은 잠깐 줄고, 틀리거나 이틀 지나면 원래대로", () => {
+  const now = 1_800_000_000;
+  const g = (i: number, r: "ok" | "miss", ago = 60) => ({ k: `g|1:${i}`, src: "quiz", r, t: now - ago - i });
+  const runs = recentRuns([...Array.from({ length: 6 }, (_, i) => g(i, "ok"))], now);
+  assert.equal(runs.g, 6);
+  const plain = kindShares(1, { w: null, g: null, e: null });
+  const cut = kindShares(1, { w: null, g: null, e: null }, runs);
+  assert.ok(cut.g < plain.g, `${cut.g} < ${plain.g}`);
+  // 마지막 답이 틀림이면 연달아 맞음 0.
+  assert.equal(recentRuns([g(0, "ok", 120), g(1, "miss", 30)].sort((a, b) => a.t - b.t), now).g, 0);
+  // 이틀 넘은 답은 안 셈.
+  assert.equal(recentRuns(Array.from({ length: 6 }, (_, i) => g(i, "ok", 3 * 86400)), now).g, 0);
+});
+
+test("닿은 단계: 여덟 답 중 80% 이상 맞으면 한 단계 위, 40% 이하면 아래(첫 측정 단계 밑으론 안 감)", () => {
+  let reach: Reach = { s: 1, n: 0, ok: 0 };
+  for (let i = 0; i < REACH_BATCH; i += 1) reach = stepReach(reach, 1, 1, i !== 0);
+  assert.equal(reach.s, 2);
+  for (let i = 0; i < REACH_BATCH; i += 1) reach = stepReach(reach, 1, 2, i < 2);
+  assert.equal(reach.s, 1);
+  // 첫 측정이 2단계면 1로 안 내려감, 아래 단계 칸 답은 안 셈.
+  let two: Reach = { s: 2, n: 0, ok: 0 };
+  for (let i = 0; i < REACH_BATCH; i += 1) two = stepReach(two, 2, 2, false);
+  assert.equal(two.s, 2);
+  assert.deepEqual(stepReach({ s: 3, n: 0, ok: 0 }, 1, 1, true), { s: 3, n: 0, ok: 0 });
+});
+
+test("처음 본 칸을 1칸에서 바로 맞히면 두 칸 위로, 본 적 있거나 틀리면 그대로", () => {
+  assert.equal(stepLadder({}, "g|1:0", firstTryRung(1, true, false), true)["g|1:0"], 3);
+  assert.equal(stepLadder({}, "g|1:0", firstTryRung(1, true, true), true)["g|1:0"], 2);
+  assert.equal(firstTryRung(1, false, false), 1);
+  assert.equal(gaugeWordScale(2) > 1 && gaugeWordScale(-2) < 1 && gaugeWordScale(0) === 1, true);
 });

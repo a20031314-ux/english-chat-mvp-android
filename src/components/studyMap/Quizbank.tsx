@@ -2,7 +2,7 @@
 
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
-import { DONE, gaugeCue, rightToday, gaugeNumbered, gaugeRung, kindCounts, kindOf, kindShares, missRates, paraDue, readGauge, readLadder, readPara, rungOf, saveGauge, saveLadder, savePara, stepLadder, stepPara, type Gauge } from "@/lib/curriculum/ladder";
+import { DONE, firstTryRung, gaugeWordScale, readReach, recentRuns, saveReach, stepReach, gaugeCue, rightToday, gaugeNumbered, gaugeRung, kindCounts, kindOf, kindShares, missRates, paraDue, readGauge, readLadder, readPara, rungOf, saveGauge, saveLadder, savePara, stepLadder, stepPara, type Gauge } from "@/lib/curriculum/ladder";
 import { measured } from "@/lib/curriculum/firstCheck";
 import { gaugeField, noteStat, RANDOM_SHARE, statField } from "@/lib/curriculum/quizStats";
 import { expressionAsk, grammarAsk, paragraphQuestion } from "@/lib/curriculum/ladderQuiz";
@@ -181,7 +181,9 @@ export function Quizbank({
     if (!bank) return [] as string[];
     const usable = (key: string) => bank.ready.has(key);
     const mine = mineKeys.filter((key) => !circleRef.current.items[key] && !knownWord(key) && !options.skip?.has(key) && (options.want || usable(key))).slice(0, n);
-    const rest = pickLevelWords(circleRef.current, levelOf(circleRef.current, stage, cuts), { n: n - mine.length, ranked, cuts, usable, known: knownWord, skip: new Set([...(options.skip ?? []), ...mine]), want: options.want });
+    // 게이지가 단어 경계도 옮김(+는 더 어려운 낱말, −는 쉬운 낱말 — 기록된 경계는 그대로).
+    const lv = levelOf(circleRef.current, stage, cuts);
+    const rest = pickLevelWords(circleRef.current, { ...lv, b: lv.b * gaugeWordScale(gauge) }, { n: n - mine.length, ranked, cuts, usable, known: knownWord, skip: new Set([...(options.skip ?? []), ...mine]), want: options.want });
     return [...mine, ...rest];
   };
   // 수준 근처인데 아직 카드가 없는 낱말(열둘까지) — 그 묶음을 받아 오게.
@@ -263,6 +265,9 @@ export function Quizbank({
     if (!results.length) return;
     let logged = log;
     let ladder = readLadder(language);
+    let reach = readReach(language, stage);
+    // 이 답 전에 그 칸을 본 적 있나(처음 보는 칸을 1칸에서 바로 맞히면 두 칸 위로).
+    const before = new Set(readLedger(language).filter((event) => event.src === "quiz" || event.src === "exam").map((event) => event.k));
     for (const { key, correct, shape, miss } of results) {
       noteQuizDay(language, localDay(), correct, key, shape, miss);
       logged = recordQuiz(logged, key, correct);
@@ -273,12 +278,18 @@ export function Quizbank({
       if (kind) noteStat(language, statField(kind, rung ?? 0, stage, gauge, random, correct));
       if (rung !== undefined) {
         // 무작위 칸도 지금 칸 이상이라, 맞히면 사다리를 올린다(틀린 것은 측정이라 안 내림).
-        if (!random || correct) ladder = stepLadder(ladder, key, rung, correct);
+        if (!random || correct) ladder = stepLadder(ladder, key, random ? rung : firstTryRung(rung, correct, before.has(key)), correct);
         askedRung.current.delete(key);
         randomKeys.current.delete(key);
       }
     }
     saveLadder(language, ladder);
+    // 문법·표현이 닿은 단계(ladder.ts stepReach): 넣어 둔 칸의 답만, 그 칸 단계로.
+    for (const { key, correct } of results) {
+      const item = prepared?.find((one) => one.key === key);
+      if (item) reach = stepReach(reach, stage, item.stage, correct);
+    }
+    saveReach(language, reach);
     // 문단 답(묶음 퀴즈 spots — 틀린 곳마다 한 결과): 다 맞히면 문단 난이도 한 칸 위, 둘 이상 놓치면 아래(ladder.ts stepPara).
     const para = paraAsked.current;
     if (para && results.every((one) => para.keys.has(one.key))) {
@@ -402,7 +413,10 @@ export function Quizbank({
   const makeFresh = (): QuizBatch | null => {
     if (!bank || !ranked.length) return null;
     // 종류 비율(ladder.ts kindShares — 단어 40 · 문법 35 · 표현 25, 1~2단계 50 · 30 · 20, 최근 14일 틀린 비율이 높은 쪽으로).
-    const counts = kindCounts(BATCH_SIZE, kindShares(stage, missRates(readLedger(language), Math.floor(Date.now() / 1000))));
+    // 요즘 연달아 다 맞힌 종류는 잠깐 줄임(recentRuns — 이틀, 틀리면 바로 원래대로).
+    const ledgerNow = readLedger(language);
+    const nowSec = Math.floor(Date.now() / 1000);
+    const counts = kindCounts(BATCH_SIZE, kindShares(stage, missRates(ledgerNow, nowSec), recentRuns(ledgerNow, nowSec)));
     const keys = levelPick(Math.max(0, counts.w - 1), { skip: new Set([...lastCircle.current, ...rightToday(readLedger(language), Math.floor(Date.now() / 1000))]) });
     if (keys.length) {
       const low = presumedWords(circleRef.current, levelOf(circleRef.current, stage, cuts), { ranked, usable: (key) => bank.ready.has(key), known: knownWord, n: 1, seed: round });
@@ -423,7 +437,8 @@ export function Quizbank({
     // 칸마다 마지막으로 퀴즈에 낸 때(이 폰 장부) — 오래된 칸부터 돌린다.
     const lastAsked = new Map<string, number>();
     for (const event of readLedger(language)) if (event.src === "quiz" && event.t > (lastAsked.get(event.k) ?? 0)) lastAsked.set(event.k, event.t);
-    const head = prepared ? pickPrepared(prepared, { stage, lastAt: (key) => lastAsked.get(key) ?? 0, grammar: counts.g, expression: prepared.some((item) => item.kind === "expression") ? counts.e : 0, skip: new Set([...lastCircle.current, ...preparedRest(language, prepared)]), ...(speaks.length ? { weight: (key: string) => knownSlotWeight(speaks, language, key) } : {}) }) : [];
+    // 문법·표현은 첫 측정 단계가 아니라 퀴즈로 닿은 단계부터(readReach).
+    const head = prepared ? pickPrepared(prepared, { stage: readReach(language, stage).s, lastAt: (key) => lastAsked.get(key) ?? 0, grammar: counts.g, expression: prepared.some((item) => item.kind === "expression") ? counts.e : 0, skip: new Set([...lastCircle.current, ...preparedRest(language, prepared)]), ...(speaks.length ? { weight: (key: string) => knownSlotWeight(speaks, language, key) } : {}) }) : [];
     lastCircle.current = new Set([...head.map((item) => item.key), ...keys]);
     if (!keys.length && !head.length) return null;
     void growBank(language, locale, keys.map((key) => ({ key, stage })));

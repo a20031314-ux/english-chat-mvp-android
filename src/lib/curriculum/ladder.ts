@@ -83,15 +83,39 @@ export function missRates(events: readonly { k: string; src: string; r: string; 
 }
 const rate = (one: { n: number; miss: number }) => (one.n >= MIN_ANSWERS ? one.miss / one.n : null);
 
-/** 종류 비율(%, 합 100) — 출발값에서 약한 쪽으로. */
-export function kindShares(stage: number, rates: Record<Kind, number | null>): Record<Kind, number> {
+/** 잠깐 줄이기 기준: 최근 이틀 안 그 종류의 마지막 답들이 연달아 맞음이면(사용자 2026-11-24 "문법 문제를 다 맞히면 문법 비율을 일시적으로 줄이는 식"). */
+export const RUN_HOURS = 48;
+/** 연달아 맞힌 수 → 그 종류 몫에서 뺄 %p(틀리면 0으로, 이틀이 지나면 사라짐). */
+export function runCut(run: number): number {
+  return run >= 10 ? 20 : run >= 5 ? 10 : 0;
+}
+
+/** 종류마다 최근 이틀 안의 마지막 퀴즈 답부터 거꾸로 센 연달아 맞음. 순수. */
+export function recentRuns(events: readonly { k: string; src: string; r: string; t: number }[], now: number): Record<Kind, number> {
+  const since = now - RUN_HOURS * 3600;
+  const out: Record<Kind, number> = { w: 0, g: 0, e: 0 };
+  const stopped: Record<Kind, boolean> = { w: false, g: false, e: false };
+  for (let i = events.length - 1; i >= 0; i -= 1) {
+    const event = events[i]!;
+    if (event.t < since) break;
+    if (event.src !== "quiz" || (event.r !== "ok" && event.r !== "miss")) continue;
+    const kind = kindOf(event.k);
+    if (!kind || stopped[kind]) continue;
+    if (event.r === "ok") out[kind] += 1;
+    else stopped[kind] = true;
+  }
+  return out;
+}
+
+/** 종류 비율(%, 합 100) — 출발값에서 약한 쪽으로(14일 틀린 비율), 요즘 연달아 다 맞힌 종류는 잠깐 줄임(runs). */
+export function kindShares(stage: number, rates: Record<Kind, number | null>, runs?: Record<Kind, number>): Record<Kind, number> {
   const base = stage <= 2 ? KIND_BASE_LOW : KIND_BASE;
   const known = KINDS.filter((kind) => rates[kind] !== null);
   const mean = known.length ? known.reduce((sum, kind) => sum + (rates[kind] as number), 0) / known.length : 0;
   const raw = Object.fromEntries(KINDS.map((kind) => {
     const r = rates[kind];
     const shift = r === null || known.length < 2 ? 0 : Math.round(((r - mean) * 100) / 10) * 5;
-    return [kind, Math.min(60, Math.max(15, base[kind] + shift))];
+    return [kind, Math.min(60, Math.max(15, base[kind] + shift - runCut(runs?.[kind] ?? 0)))];
   })) as Record<Kind, number>;
   const total = KINDS.reduce((sum, kind) => sum + raw[kind], 0);
   return Object.fromEntries(KINDS.map((kind) => [kind, (raw[kind] * 100) / total])) as Record<Kind, number>;
@@ -233,4 +257,57 @@ export function rightToday(events: readonly { k: string; src: string; r: string;
     if ((last.get(event.k)?.t ?? -1) <= event.t) last.set(event.k, { r: event.r, t: event.t });
   }
   return new Set([...last].filter(([, one]) => one.r === "ok").map(([key]) => key));
+}
+
+/**
+ * 문법·표현이 닿은 단계(사용자 2026-11-24 "1년을 풀어도 1단계?"): 첫 측정 단계에서 출발해, 지금 닿은 단계 이상의 칸 답을
+ * REACH_BATCH개 모아 맞힌 비율이 REACH_UP 이상이면 한 단계 위, REACH_DOWN 이하면 한 단계 아래(첫 측정 단계 밑으로는 안 내려감).
+ * 새 묶음은 이 단계 칸부터 내고 다 풀면 아래 단계 — 단어 수준 경계처럼 퀴즈로 실제 실력을 따라간다. 이 폰 reach.v1.<언어>.
+ */
+export type Reach = { s: number; n: number; ok: number };
+const REACH_KEY = "reach.v1";
+export const REACH_BATCH = 8;
+export const REACH_UP = 0.8;
+export const REACH_DOWN = 0.4;
+export const REACH_TOP = 5;
+
+export function stepReach(reach: Reach, base: number, itemStage: number, correct: boolean): Reach {
+  const floor = Math.max(1, base);
+  const now = Math.max(floor, Math.min(REACH_TOP, reach.s));
+  if (itemStage < now) return { ...reach, s: now };
+  const n = reach.n + 1;
+  const ok = reach.ok + (correct ? 1 : 0);
+  if (n < REACH_BATCH) return { s: now, n, ok };
+  const rate = ok / n;
+  const s = rate >= REACH_UP ? Math.min(REACH_TOP, now + 1) : rate <= REACH_DOWN ? Math.max(floor, now - 1) : now;
+  return { s, n: 0, ok: 0 };
+}
+
+export function readReach(language: string, base: number): Reach {
+  try {
+    const raw = typeof localStorage === "undefined" ? null : localStorage.getItem(`${REACH_KEY}.${language}`);
+    const one = raw ? (JSON.parse(raw) as Reach) : null;
+    if (one && typeof one.s === "number") return { s: Math.max(base, Math.min(REACH_TOP, one.s)), n: one.n || 0, ok: one.ok || 0 };
+  } catch {
+    // 처음.
+  }
+  return { s: Math.max(1, base), n: 0, ok: 0 };
+}
+
+export function saveReach(language: string, reach: Reach): void {
+  try {
+    if (typeof localStorage !== "undefined") localStorage.setItem(`${REACH_KEY}.${language}`, JSON.stringify(reach));
+  } catch {
+    // 이번에만.
+  }
+}
+
+/** 처음 본 칸을 1칸(고르기)에서 바로 맞히면 3칸으로(쉬운 칸을 나흘씩 끌지 않게, 사용자 2026-11-24). 순수. */
+export function firstTryRung(rung: number, correct: boolean, seenBefore: boolean): number {
+  return correct && rung === 1 && !seenBefore ? 2 : rung;
+}
+
+/** 게이지가 단어 수준 경계에 주는 배수(사용자 2026-11-24 — 게이지가 단어에도). */
+export function gaugeWordScale(gauge: Gauge): number {
+  return gauge <= -2 ? 0.6 : gauge === -1 ? 0.8 : gauge === 1 ? 1.25 : gauge >= 2 ? 1.6 : 1;
 }
