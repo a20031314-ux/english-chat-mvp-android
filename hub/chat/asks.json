@@ -9177,25 +9177,95 @@
       "base": "346824f",
       "head": "4624fac",
       "status": "open"
+    },
+    {
+      "id": "a261125-3-6",
+      "at": "2026-11-25 00:57",
+      "kind": "apply",
+      "from": "3",
+      "to": "1",
+      "what": "틀린 문장 고르기: 답한 뒤 틀린 자리 지움 표시 → 바른 꼴",
+      "files": [
+        "src/app/api/curriculum/qbank/seed/route.ts",
+        "src/components/FindInMy.tsx",
+        "src/components/EnglishAnalysisViewer.tsx",
+        "src/components/EnglishAnalysisProvider.tsx"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "1996a92c4a9b8f6826991ce71cc577a78e0c3377",
+      "head": "3227f4a",
+      "status": "open"
+    },
+    {
+      "id": "a261125-3-7",
+      "at": "2026-11-25 00:57",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "틀린 문장 고르기: 답한 뒤 틀린 자리 지움 표시 → 바른 꼴",
+      "files": [
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/QuizPlayer.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/InlineQuiz.tsx",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/LanguageBank.tsx",
+        "src/components/studyMap/Quizbank.tsx",
+        "src/app/api/curriculum/item-lesson/route.ts",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/app/api/curriculum/qbank/route.ts",
+        "src/components/studyMap/LessonHost.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/components/studyMap/Dictionary.tsx",
+        "src/app/api/curriculum/words/route.ts",
+        "src/components/studyMap/BankFlip.tsx",
+        "src/components/studyMap/DictNotes.tsx",
+        "src/lib/notes/myParts.ts",
+        "src/lib/notes/stageParts.ts",
+        "src/lib/curriculum/ladderQuiz.ts",
+        "src/lib/server/spotMake.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "1996a92c4a9b8f6826991ce71cc577a78e0c3377",
+      "head": "3227f4a",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-17 23:57",
-      "from": "3",
-      "base": "46a7f7b",
-      "head": "dfb8653",
-      "what": "Quizbank 낱말 스스로 체크 지움 → 뜻 고르기(quiz.ts cardQuiz, QuizPlayer KnowView 지움)",
-      "tabs": [
-        "1",
-        "2",
-        "3"
-      ],
-      "asks": [
-        "a261117-3-2",
-        "a261117-3-3"
-      ]
-    },
     {
       "at": "2026-11-18 00:01",
       "from": "3",
@@ -9803,10 +9873,26 @@
         "a261125-1-1",
         "a261125-1-2"
       ]
+    },
+    {
+      "at": "2026-11-25 00:57",
+      "from": "3",
+      "base": "1996a92c4a9b8f6826991ce71cc577a78e0c3377",
+      "head": "3227f4a",
+      "what": "틀린 문장 고르기: 답한 뒤 틀린 자리 지움 표시 → 바른 꼴",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261125-3-6",
+        "a261125-3-7"
+      ]
     }
   ],
   "seq": {
-    "261125-3": 5,
+    "261125-3": 7,
     "261125-1": 2
   }
 }
