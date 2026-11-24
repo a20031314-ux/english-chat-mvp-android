@@ -1,10 +1,10 @@
 /**
  * 사다리 칸 → 문제(퀴즈 다시 짜기 4단계, ladder.ts). 순수.
- *   문법(넣어 둔 문제 PreparedItem — turnFresh로 고른 문장): 1 고르기 · 2 빈칸 쓰기(뜻 먼저) · 3 틀린 곳(spot-errors) · 4 문장 전체 쓰기
- *   표현(카드): 1 뜻 고르기(cardQuiz hide) · 2 빈칸 쓰기(cardQuiz show) · 4 문장 전체 쓰기 — 3은 표현 틀린 곳 데이터가 없어 건너뜀
+ *   문법(넣어 둔 문제 PreparedItem — turnFresh로 고른 문장): 1 고르기(맞는 꼴 · 문맥 · 뜻 차이 · 틀린 문장 — 문제은행 고르기 재료가 있으면 차례로)
+ *     · 2 빈칸 쓰기(뜻 먼저) · 3 틀린 곳(spot-errors)
+ *   표현(카드): 1 뜻 고르기(cardQuiz hide) · 2 빈칸 쓰기(cardQuiz show) — 표현 틀린 곳 데이터가 없어 2에서 끝
  */
-import { cardQuiz, cardSourceOf, type QuizQuestion } from "./quiz.ts";
-import type { ScriptGloss } from "./stageScripts.ts";
+import { cardQuiz, rng, shuffled, type QuizQuestion } from "./quiz.ts";
 import { blankNeedsMeaning, chooseFromPrepared, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import { spotCells, type SpotItem } from "./spotErrors.ts";
 import { askRung, type Rung } from "./ladder.ts";
@@ -109,19 +109,51 @@ export function paragraphQuestion(item: SpotItem, language: string, first = true
   };
 }
 
-function wholeOf(text: string, gloss: ScriptGloss, key: string, cue?: "len" | "none"): QuizQuestion {
-  return { kind: "type", text, before: "", after: "", answer: text, gloss, from: key, whole: true, glossFirst: true, ...(cue ? { cue } : {}) };
+/**
+ * 고르기의 다른 모양(문제은행이 만들어 판정한 것, server/qbank.ts makeGrammar — 사용자 2026-11-24 "좀 더 헷갈리는 선지나 또 다른 유형으로"):
+ *   c 문맥 고르기 — 앞 줄 하나가 답을 정함 · m 뜻 차이 — 꼴만 다른 두 문장 중 상황에 맞는 것 · x 틀린 문장 — 넷 중 틀린 하나.
+ * gloss·situation·why는 앱 언어(없으면 그 모양은 안 냄).
+ */
+export type ChoiceVariant =
+  | { v: "c"; lead: string; line: string; before: string; after: string; answer: string; options: string[]; gloss: string; why: string }
+  | { v: "m"; situation: string; right: string; wrong: string; why: string }
+  | { v: "x"; wrong: string; rights: string[]; why: string };
+
+/** 고르기 모양 하나 → 문제. seed로 보기 차례 고정. 순수. */
+export function choiceQuestion(variant: ChoiceVariant, key: string, seed: string): QuizQuestion | null {
+  if (variant.v === "c") {
+    const base = chooseFromPrepared({ key, kind: "grammar", stage: 1, gloss: variant.gloss, before: variant.before, after: variant.after, answer: variant.answer, options: variant.options, line: variant.line, why: variant.why }, false);
+    return base && base.kind === "choose" ? { ...base, lead: variant.lead } : null;
+  }
+  const lines = variant.v === "m" ? [variant.right, variant.wrong] : [variant.wrong, ...variant.rights.slice(0, 3)];
+  if (lines.length < 2 || lines.some((line) => !line.trim()) || new Set(lines).size !== lines.length) return null;
+  const order = shuffled(lines.map((_, i) => i), rng(`${key}|${seed}|${lines[0]}`));
+  return {
+    kind: "pick",
+    mode: variant.v === "m" ? "meaning" : "odd",
+    text: variant.v === "m" ? variant.right : variant.wrong,
+    ...(variant.v === "m" ? { prompt: variant.situation } : {}),
+    lines: order.map((i) => lines[i]!),
+    answer: order.indexOf(0),
+    why: variant.why,
+    from: key,
+  };
 }
 
-/** 문법 칸 하나 → 낼 칸과 문제. spot = 그 칸의 틀린 곳 문항(최근에 안 낸 것 하나, 없으면 null). 끝났으면 null. */
-export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem | null, language: string, how: { cue?: "len" | "none"; numbered?: boolean; stage?: number } = {}): { rung: Rung; question: QuizQuestion } | null {
+/** 문법 칸 하나 → 낼 칸과 문제. spot = 그 칸의 틀린 곳 문항(최근에 안 낸 것 하나, 없으면 null). choices = 고르기의 다른 모양(turn으로 차례). 끝났으면 null. */
+export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem | null, language: string, how: { cue?: "len" | "none"; numbered?: boolean; stage?: number; choices?: readonly ChoiceVariant[]; turn?: number } = {}): { rung: Rung; question: QuizQuestion } | null {
   // 해석: 1~2단계는 늘, 3단계부터는 해석 없이 답이 갈리는 문장만 먼저(4칸 문장 만들기는 해석이 곧 문제라 늘).
   const first = meaningFirst(how.stage ?? 1, item);
   const spotQ = spot ? spotQuestion(spot, language, item.key, how.numbered, first) : null;
   const rung = askRung(current, (one) => one !== 3 || Boolean(spotQ));
   if (!rung) return null;
   let question: QuizQuestion | null = null;
-  if (rung === 1) question = chooseFromPrepared(item, first);
+  if (rung === 1) {
+    // 보통 고르기와 다른 모양을 차례로(그 칸이 나온 횟수 turn) — 다른 모양이 안 되면 보통 고르기.
+    const choices = how.choices ?? [];
+    const at = choices.length ? Math.floor(how.turn ?? 0) % (choices.length + 1) : 0;
+    question = (at > 0 ? choiceQuestion(choices[at - 1]!, item.key, String(how.turn ?? 0)) : null) ?? chooseFromPrepared(item, first);
+  }
   if (rung === 2) {
     const near = item.options.filter((option) => option !== item.answer);
     // 빈칸이 내용 낱말까지 덮으면(so loud that · If it rains) 단계와 상관없이 해석 먼저 — 고르기에선 보기가 알려 주던 것.
@@ -129,20 +161,15 @@ export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem |
     question = { kind: "type", text: item.line, before: item.before, after: item.after, answer: item.answer, gloss: { en: "", raw: item.gloss }, from: item.key, near, ...(blankFirst ? { glossFirst: true } : {}), ...(how.cue ? { cue: how.cue } : {}) };
   }
   if (rung === 3) question = spotQ;
-  if (rung === 4) question = wholeOf(item.line, { en: "", raw: item.gloss }, item.key, how.cue);
   return question ? { rung, question } : null;
 }
 
-/** 표현 카드 하나 → 낼 칸과 문제(3은 건너뜀). */
-export function expressionAsk(language: string, key: string, current: number, seed: string, cue?: "len" | "none"): { rung: Rung; question: QuizQuestion } | null {
+/** 표현 카드 하나 → 낼 칸과 문제(1 뜻 고르기 · 2 빈칸 쓰기 — 틀린 곳 데이터가 없어 2에서 끝). */
+export function expressionAsk(language: string, key: string, current: number, seed: string): { rung: Rung; question: QuizQuestion } | null {
   const rung = askRung(current, (one) => one !== 3);
   if (!rung) return null;
-  if (rung === 1 || rung === 2) {
-    const question = cardQuiz(language, key, rung === 1 ? "hide" : "show", seed);
-    return question ? { rung, question } : null;
-  }
-  const source = cardSourceOf(language, key, seed);
-  return source ? { rung, question: wholeOf(source.text, source.gloss, key, cue) } : null;
+  const question = cardQuiz(language, key, rung === 1 ? "hide" : "show", seed);
+  return question ? { rung, question } : null;
 }
 
 /**

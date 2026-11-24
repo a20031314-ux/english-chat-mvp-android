@@ -55,13 +55,13 @@ export type QuizCard = { wrong: string; right: string; note?: string };
 
 export type QuizQuestion =
   | { kind: "fix"; wrong: string; right: string; note?: string; words: string[]; bad: number[]; options?: string[]; answer?: number }
-  | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string; mine?: boolean; /** 넣어 둔 표현·문법 문제. 뜻을 먼저 보여주고(meaningLater면 답한 뒤에), 보기 재채점 없이 이 정답만 맞다. 틀리면 why. */ prepared?: { why: string; meaningLater?: true } }
+  | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string; mine?: boolean; /** 문맥 고르기: 답을 정하는 앞 줄(학습 언어, ladderQuiz.ts choiceQuestion). */ lead?: string; /** 넣어 둔 표현·문법 문제. 뜻을 먼저 보여주고(meaningLater면 답한 뒤에), 보기 재채점 없이 이 정답만 맞다. 틀리면 why. */ prepared?: { why: string; meaningLater?: true } }
   | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
   | { kind: "say"; text: string; gloss: ScriptGloss; from: string; mark?: string }
   /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
   | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
-  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 뜻 줄을 답하기 전에도(문법 사다리 2칸 — 뜻 없이는 답이 여럿). */ glossFirst?: true; /** 문장 만들기(사다리 4칸): 뜻만 보고 문장 전체 쓰기 — 빈칸 줄 없음, 서버가 같은 뜻의 맞는 문장인지 봄. */ whole?: true; /** 쓰기 도움(게이지): 없으면 첫 글자, "len" 첫 글자 + 글자 수, "none" 없음. */ cue?: "len" | "none" }
+  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 뜻 줄을 답하기 전에도(문법 사다리 2칸 — 뜻 없이는 답이 여럿). */ glossFirst?: true; /** 쓰기 도움(게이지): 없으면 첫 글자, "len" 첫 글자 + 글자 수, "none" 없음. */ cue?: "len" | "none" }
   /**
    * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
@@ -81,6 +81,8 @@ export type QuizQuestion =
   | { kind: "spots"; text: string; right: string; words: string[]; errors: { key: string; bad: number[]; want: string; near: string[]; /** 문단: 틀린 꼴·왜 틀렸나(데이터, 앱 언어는 quizGloss). */ wrong?: string; why?: ScriptGloss }[]; gloss: ScriptGloss; from: string; /** 문단(story-errors P1~P4): 선지 칸 · 틀린 곳 수를 안 보임(P4·게이지 위쪽). */ picks?: number[]; hideCount?: true; /** 뜻이 틀린 곳이 든 문단 — 뜻 줄은 답한 뒤에만(체감 점검 2026-11-12 "해석의 일찍과 비교만 하면 late가 보임"). */ glossAfter?: true }
   /** 뜻 고르기: 문장을 보고 뜻(앱 언어) 고르기(보기 = 다른 줄의 뜻). */
   /** 낱말 스스로 체크(그럴듯한 보기가 셋 안 모일 때): 밑줄 낱말 → [알아요 | 모르겠어요] → 뜻 → [맞았어요 | 틀렸어요]. */
+  /** 문장 고르기(ladderQuiz.ts choiceQuestion): meaning = 상황(prompt, 앱 언어)에 맞는 문장 · odd = 넷 중 틀린 문장. why = 답한 뒤 까닭(앱 언어). */
+  | { kind: "pick"; mode: "meaning" | "odd"; text: string; prompt?: string; lines: string[]; answer: number; why: string; from: string }
   | { kind: "meaning"; text: string; options: ScriptGloss[]; answer: number; gloss: ScriptGloss; from: string; /** 단어 퀴즈: 문장 안 밑줄 낱말 — 보기는 그 낱말의 뜻. */ mark?: string; /** 카드 모양(개편, cardQuiz) — 낱말·예문은 보이고 뜻 칸만 가림. */ card?: QuizCardFace };
 
 /**
@@ -1296,16 +1298,6 @@ export function cardFaceOf(language: string, key: string): { word: string; meani
   const source = (pool?.get(key) ?? []).find((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece));
   if (!source?.wordGloss || !source.piece) return null;
   return { word: key.slice(2), meaning: source.wordGloss.trim(), text: source.text, piece: source.piece, gloss: source.gloss };
-}
-
-/** 카드 예문 하나(최근에 이 열쇠로 낸 문장은 뒤로 — cardQuiz와 같은 고르기). 사다리 4칸 문장 전체 쓰기가 씀. */
-export function cardSourceOf(language: string, key: string, seed: string): QuizSource | undefined {
-  const pool = key.startsWith("w|") ? GAP_SOURCES.get(language) : key.startsWith("e|") ? EXPRESSION_CARDS.get(language) : undefined;
-  const usable = (pool?.get(key) ?? []).filter((one) => one.wordGloss?.trim() && one.piece && one.text.includes(one.piece));
-  const asked = askedTexts(language, key);
-  const unasked = usable.filter((one) => !asked.includes(one.text));
-  const oldest = [...usable].sort((a, b) => asked.indexOf(b.text) - asked.indexOf(a.text))[0];
-  return unasked.length ? unasked[Math.floor(rng(`${seed}|${key}|src`)() * unasked.length)] : oldest;
 }
 
 export function cardQuiz(language: string, key: string, mode: "hide" | "show", seed: string): QuizQuestion | null {

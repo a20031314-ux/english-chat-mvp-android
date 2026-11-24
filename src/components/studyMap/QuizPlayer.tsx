@@ -321,6 +321,7 @@ export function QuestionView({
       {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} glossFirst={glossFirst} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView ui={ui} strict={Boolean(bankKey?.startsWith("w|"))} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "pick" ? <LinePickView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "talk" ? <TalkView ui={ui} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "multi" ? <MultiView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "spots" ? <SpotsView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -725,7 +726,7 @@ function TypeView({
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>
       ) : null}
-      {question.whole && !answered ? null : (
+      {(
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
           {question.before}
@@ -967,6 +968,12 @@ function ChooseView({
           {quizGloss(question.gloss, locale, language) ?? ""}
         </p>
       ) : null}
+      {/* 문맥 고르기: 답을 정하는 앞 줄(ladderQuiz.ts choiceQuestion). */}
+      {question.lead ? (
+        <p dir="auto" data-quiz-lead className="rounded-xl bg-white/[0.04] px-3 py-2 text-chat text-slate-300">
+          {question.lead}
+        </p>
+      ) : null}
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
           {question.before}
@@ -1046,6 +1053,51 @@ function ChooseView({
         <p data-quiz-other-word className="text-caption text-slate-300">
           {ui.quizOtherWord}
         </p>
+      ) : null}
+    </div>
+  );
+}
+
+/**
+ * 문장 고르기(ladderQuiz.ts choiceQuestion): 뜻 차이 = 상황 한 줄(앱 언어) + 꼴만 다른 두 문장 · 틀린 문장 = 넷 중 틀린 하나. 답한 뒤 까닭(앱 언어).
+ */
+function LinePickView({ question, answered, onAnswer, tag }: { question: Extract<QuizQuestion, { kind: "pick" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+  const [picked, setPicked] = useState<number | null>(null);
+  return (
+    <div className="flex flex-col gap-3" data-quiz-pick={question.mode}>
+      {question.prompt ? (
+        <p dir="auto" className="text-note text-slate-300">
+          {question.prompt}
+        </p>
+      ) : null}
+      <div className="flex flex-col gap-2">
+        {question.lines.map((line, i) => {
+          const isRight = i === question.answer;
+          const style = answered ? (isRight ? (question.mode === "odd" ? "border-bad bg-bad/10 text-ink" : "border-good bg-good/10 text-ink") : picked === i ? "border-bad text-bad" : "border-line text-slate-500") : "border-line text-slate-100 hover:bg-white/5";
+          return (
+            <button
+              key={i}
+              type="button"
+              dir="auto"
+              disabled={Boolean(answered)}
+              onClick={() => {
+                setPicked(i);
+                onAnswer({ correct: isRight, picked: line });
+              }}
+              className={`rounded-xl border px-3 py-2.5 text-start text-chat ${style}`}
+            >
+              {line}
+            </button>
+          );
+        })}
+      </div>
+      {answered ? (
+        <div className="flex items-start gap-2">
+          <p data-quiz-why dir="auto" className="min-w-0 flex-1 text-note text-slate-300">
+            {question.why}
+          </p>
+          <TTSButton text={question.mode === "odd" ? question.lines.find((_, i) => i !== question.answer) ?? question.text : question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
+        </div>
       ) : null}
     </div>
   );
@@ -1160,7 +1212,7 @@ function askLine(question: QuizQuestion, ui: UICopy, grammar = "", locale = ""):
     case "choose":
       return ui.quizAskChoose;
     case "type":
-      return question.whole ? ui.quizAskWhole : grammar ? askWithName(ui.quizAskBlankOf, grammar, locale) : ui.quizAskBlank;
+      return grammar ? askWithName(ui.quizAskBlankOf, grammar, locale) : ui.quizAskBlank;
     case "talk":
     case "multi":
       return ui.quizAskBlank;
@@ -1170,6 +1222,8 @@ function askLine(question: QuizQuestion, ui: UICopy, grammar = "", locale = ""):
       return ui.quizAskSpot;
     case "meaning":
       return ui.quizAskMeaning;
+    case "pick":
+      return question.mode === "meaning" ? ui.quizAskPickMeaning : ui.quizAskPickOdd;
     case "order":
       return ui.quizAskOrder;
     case "fix":

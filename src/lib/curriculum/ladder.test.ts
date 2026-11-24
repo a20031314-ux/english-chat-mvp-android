@@ -1,21 +1,28 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder, recentRuns, stepReach, REACH_BATCH, firstTryRung, gaugeWordScale, type Reach } from "./ladder.ts";
+import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder, recentRuns, stepReach, REACH_BATCH, gaugeWordScale, axisOf, type Reach } from "./ladder.ts";
 import { grammarAsk, pickCells, preparedLessonQuiz, spotQuestion } from "./ladderQuiz.ts";
 import { formChoice } from "./quiz.ts";
 import { blankNeedsMeaning, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import type { SpotItem } from "./spotErrors.ts";
 
-test("사다리: 맞으면 다음 칸, 틀리면 그 칸, 3칸은 틀린 곳 문항이 있을 때만, 4칸 맞히면 끝", () => {
+test("사다리: 고르기 → 빈칸 → 틀린 곳, 맞으면 다음 칸·틀리면 그 칸, 3칸 맞히면 끝, 옛 5(끝)는 끝", () => {
   let ladder = {};
   ladder = stepLadder(ladder, "g|1:0", 1, true);
   assert.equal(rungOf(ladder, "g|1:0"), 2);
   ladder = stepLadder(ladder, "g|1:0", 2, false);
   assert.equal(rungOf(ladder, "g|1:0"), 2);
-  assert.equal(askRung(3, (rung) => rung !== 3), 4);
-  ladder = stepLadder(ladder, "g|1:0", 4, true);
+  assert.equal(askRung(3, (rung) => rung !== 3), null);
+  ladder = stepLadder(ladder, "g|1:0", 3, true);
   assert.equal(rungOf(ladder, "g|1:0"), DONE);
   assert.equal(askRung(DONE, () => true), null);
+  assert.equal(rungOf({ "g|1:1": 5 }, "g|1:1"), DONE);
+});
+
+test("유형 먼저: 축 = 안 끝난 칸의 가장 낮은 사다리 칸, 다 끝나면 없음", () => {
+  assert.equal(axisOf(["g|1:0", "g|2:0"], { "g|1:0": 2 }), 1);
+  assert.equal(axisOf(["g|1:0", "g|2:0"], { "g|1:0": 2, "g|2:0": 3 }), 2);
+  assert.equal(axisOf(["g|1:0"], { "g|1:0": DONE }), null);
 });
 
 test("종류 비율: 출발값(1~2단계 단어 많이), 틀린 비율이 높은 종류로 옮김, 15~60, 묶음 일곱에 종류마다 하나 이상", () => {
@@ -39,21 +46,19 @@ test("종류 비율: 출발값(1~2단계 단어 많이), 틀린 비율이 높은
   assert.equal(rates.w, null);
 });
 
-test("사다리 문제: 문법 1 고르기 · 2 빈칸(뜻 먼저) · 3 틀린 곳(앞 줄) · 4 문장 전체 — ko·ja", () => {
+test("사다리 문제: 문법 1 고르기 · 2 빈칸(뜻 먼저) · 3 틀린 곳(앞 줄, 없으면 끝) — ko·ja", () => {
   const item: PreparedItem = { key: "g|1:1", kind: "grammar", stage: 1, gloss: "나는 학생이에요.", before: "私は学生", after: "。", answer: "です", options: ["です", "ます", "だ"], line: "私は学生です。", why: "명사 뒤" };
   const spot: SpotItem = { id: "ja-s-1", stage: 1, shape: "l", src: "new", lead: "自己紹介をします。", lines: ["私は学生ます。"], errors: [{ line: 0, at: 2, wrong: "ます", right: "です", type: "form", kind: "form", g: "g|1:1", why: { en: "x", ko: "x" } }], gloss: { en: "I am a student.", ko: "나는 학생이에요." } };
   assert.equal(grammarAsk(item, 1, null, "ja")?.question.kind, "choose");
   const two = grammarAsk(item, 2, null, "ja")?.question;
   assert.ok(two?.kind === "type" && two.glossFirst && two.near?.includes("ます"));
-  assert.equal(grammarAsk(item, 3, null, "ja")?.rung, 4, "틀린 곳 문항이 없으면 4칸");
+  assert.equal(grammarAsk(item, 3, null, "ja"), null, "틀린 곳 문항이 없으면 낼 칸 없음");
   const three = grammarAsk(item, 3, spot, "ja");
   assert.equal(three?.rung, 3);
   if (three?.question.kind === "spot") {
     assert.equal(three.question.lead, "自己紹介をします。");
     assert.equal(three.question.right, "私は学生です。");
   }
-  const four = grammarAsk(item, 4, spot, "ja")?.question;
-  assert.ok(four?.kind === "type" && four.whole && four.answer === "私は学生です。");
   const ko: SpotItem = { id: "ko-s-1", stage: 1, shape: "s", src: "new", lines: ["사과을 먹어요."], errors: [{ line: 0, at: 0, wrong: "사과을", right: "사과를", type: "form", kind: "particle", g: "g|1:4", why: { en: "x", ko: "x" } }], gloss: { en: "x", ko: "x" } };
   const q = spotQuestion(ko, "ko", "g|1:4");
   assert.ok(q?.kind === "spot" && q.right === "사과를 먹어요." && q.bad[0] === 0);
@@ -72,9 +77,8 @@ test("부족한 것: 최근 두 번 넘게 틀리고 마지막도 틀린 것만,
   assert.deepEqual(weakKeys(events, now), ["g|1:2", "e|por favor"]);
 });
 
-test("게이지: 내리면 낮은 칸·글자 수 도움·선지(밑줄), 올리면 위 칸·도움 없음·표시 없음", async () => {
-  const { gaugeRung, gaugeCue, gaugeNumbered } = await import("./ladder.ts");
-  assert.deepEqual([gaugeRung(4, -2), gaugeRung(4, -1), gaugeRung(1, 0), gaugeRung(1, 1), gaugeRung(1, 2), gaugeRung(DONE, 2)], [2, 3, 1, 2, 3, DONE]);
+test("게이지: 내리면 글자 수 도움·선지(밑줄), 올리면 도움 없음·표시 없음", async () => {
+  const { gaugeCue, gaugeNumbered } = await import("./ladder.ts");
   assert.deepEqual([gaugeCue(-2), gaugeCue(0), gaugeCue(2)], ["len", undefined, "none"]);
   assert.deepEqual([gaugeNumbered(0), gaugeNumbered(1)], [true, false]);
   const { firstCue } = await import("./quiz.ts");
@@ -138,8 +142,6 @@ test("해석 먼저: 1~2단계는 늘, 3단계부터는 해석 없이 갈리는 
   assert.ok(blank?.kind === "type" && !blank.glossFirst);
   const spotHigh = grammarAsk(item, 3, spot, "ja", { stage: 3 })?.question;
   assert.ok(spotHigh?.kind === "spot" && spotHigh.glossAfter);
-  const whole = grammarAsk(item, 4, null, "ja", { stage: 5 })?.question;
-  assert.ok(whole?.kind === "type" && whole.glossFirst, "문장 만들기는 해석이 곧 문제");
   assert.equal(meaningFirst(2), true);
   assert.equal(meaningFirst(3, { needsMeaning: true }), true);
   assert.equal(meaningFirst(3, {}), false);
@@ -193,10 +195,7 @@ test("닿은 단계: 여덟 답 중 80% 이상 맞으면 한 단계 위, 40% 이
   assert.deepEqual(stepReach({ s: 3, n: 0, ok: 0 }, 1, 1, true), { s: 3, n: 0, ok: 0 });
 });
 
-test("처음 본 칸을 1칸에서 바로 맞히면 두 칸 위로, 본 적 있거나 틀리면 그대로", () => {
-  assert.equal(stepLadder({}, "g|1:0", firstTryRung(1, true, false), true)["g|1:0"], 3);
-  assert.equal(stepLadder({}, "g|1:0", firstTryRung(1, true, true), true)["g|1:0"], 2);
-  assert.equal(firstTryRung(1, false, false), 1);
+test("게이지 낱말 배수", () => {
   assert.equal(gaugeWordScale(2) > 1 && gaugeWordScale(-2) < 1 && gaugeWordScale(0) === 1, true);
 });
 
@@ -237,4 +236,21 @@ test("소재 수업 퀴즈도 Quizbank 재료로: 고르기(까닭) · 틀린 �
   const es: PreparedItem = { key: "g|3:2", kind: "grammar", stage: 3, gloss: "어제 비가 왔어요.", before: "Ayer ", after: " mucho.", answer: "llovió", options: ["llovió", "llovía", "llueve"], line: "Ayer llovió mucho.", why: "끝난 일" };
   const choose = preparedLessonQuiz(es, null, "es", 3)[0];
   assert.ok(choose?.kind === "choose" && choose.prepared?.meaningLater, "3단계는 해석을 답한 뒤에(Quizbank와 같은 규칙)");
+});
+
+test("고르기의 다른 모양: 문맥(앞 줄)·뜻 차이·틀린 문장을 차례로 — es·ja", async () => {
+  const { choiceQuestion } = await import("./ladderQuiz.ts");
+  const item: PreparedItem = { key: "g|3:1", kind: "grammar", stage: 3, gloss: "x", before: "Ayer ", after: " paella.", answer: "comí", options: ["comí", "como", "comía"], line: "Ayer comí paella.", why: "w" };
+  const choices = [
+    { v: "c" as const, lead: "¿Qué hiciste anoche?", line: "Anoche cené en casa.", before: "Anoche ", after: " en casa.", answer: "cené", options: ["cené", "ceno", "cenaré"], gloss: "어젯밤 집에서 저녁을 먹었어.", why: "anoche → 끝난 과거" },
+    { v: "m" as const, situation: "지금 막 끝난 일", right: "昨日、映画を見ました。", wrong: "昨日、映画を見ます。", why: "昨日 → 過去" },
+    { v: "x" as const, wrong: "Ayer yo como paella.", rights: ["Ayer comí paella.", "Hoy como paella.", "Mañana comeré paella."], why: "ayer → comí" },
+  ];
+  assert.equal(grammarAsk(item, 1, null, "es", { choices, turn: 0 })?.question.kind, "choose");
+  const lead = grammarAsk(item, 1, null, "es", { choices, turn: 1 })?.question;
+  assert.ok(lead?.kind === "choose" && lead.lead === "¿Qué hiciste anoche?" && lead.options.includes("cené"));
+  const pair = grammarAsk(item, 1, null, "es", { choices, turn: 2 })?.question;
+  assert.ok(pair?.kind === "pick" && pair.mode === "meaning" && pair.lines.length === 2 && pair.lines[pair.answer] === "昨日、映画を見ました。");
+  const odd = choiceQuestion(choices[2]!, "g|3:1", "s");
+  assert.ok(odd?.kind === "pick" && odd.mode === "odd" && odd.lines.length === 4 && odd.lines[odd.answer] === "Ayer yo como paella.");
 });

@@ -6,7 +6,7 @@
 // 허브 페이지 "문제 지도" 칸이 이 파일을 보여 준다(scripts/hub-page.mjs).
 import fs from "node:fs";
 import path from "node:path";
-import { kindShares, kindCounts, stepReach, stepLadder, firstTryRung, rungOf, DONE, climbCleared, nextRound, noteRoundUsed, startParaLevel, REACH_BATCH, REACH_UP, REACH_DOWN, REACH_TOP, RUN_HOURS, KIND_BASE, KIND_BASE_LOW, type Reach, type QuizRound } from "../src/lib/curriculum/ladder.ts";
+import { kindShares, kindCounts, stepReach, stepLadder, rungOf, DONE, axisOf, climbCleared, nextRound, noteRoundUsed, startParaLevel, REACH_BATCH, REACH_UP, REACH_DOWN, REACH_TOP, RUN_HOURS, KIND_BASE, KIND_BASE_LOW, type Reach, type QuizRound } from "../src/lib/curriculum/ladder.ts";
 import { pickPrepared, type PreparedItem } from "../src/lib/curriculum/preparedQuiz.ts";
 import { noteLevelBatch, startLevel, PROBE, BATCH, BATCH_STEP, type Level } from "../src/lib/curriculum/vocabLevel.ts";
 import { stageCuts, stageOfRank } from "../src/lib/curriculum/vocabBank.ts";
@@ -63,6 +63,7 @@ function perfect(lang: string, data: Data) {
   const doneDay = new Map<string, number>();
   const stageDay: Record<number, number> = { 1: 1 };
   const roundDay: Record<number, number> = { 1: 1 };
+  const axisDay: Record<string, number> = {};
   const wordStageDay: Record<number, number> = {};
   const asked: string[] = [];
   const lastAt = new Map<string, number>();
@@ -81,16 +82,27 @@ function perfect(lang: string, data: Data) {
         reach = { s: 1, n: 0, ok: 0 };
         roundDay[round.r] ??= day;
       }
-      reach = climbCleared(reach, 1, (s) => grammar.some((i) => i.stage === s && rungOf(ladder, i.key) < DONE));
-      const skip = new Set(data.items.map((i) => i.key).filter((k) => rungOf(ladder, k) >= DONE || today.has(k)));
-      const head = pickPrepared(data.items, { stage: reach.s, grammar: counts.g, expression: hasExpr ? counts.e : 0, skip, lastAt: (k) => lastAt.get(k) ?? 0 });
+      const axis = axisOf(grammar.map((i) => i.key), ladder);
+      if (axis && round.a !== axis) {
+        round = { ...round, a: axis };
+        reach = { s: 1, n: 0, ok: 0 };
+        axisDay[`${round.r}·${axis}`] ??= day;
+      }
+      reach = axis ? climbCleared(reach, 1, (s) => grammar.some((i) => i.stage === s && rungOf(ladder, i.key) === axis)) : reach;
+      const rest = data.items.map((i) => i.key).filter((k) => rungOf(ladder, k) >= DONE || today.has(k));
+      const off = grammar.filter((i) => rungOf(ladder, i.key) !== axis).map((i) => i.key);
+      const head = pickPrepared(data.items, { stage: reach.s, grammar: counts.g, expression: hasExpr ? counts.e : 0, skip: new Set([...rest, ...off]), lastAt: (k) => lastAt.get(k) ?? 0 });
+      if (axis && axis < 3 && head.filter((i) => i.kind === "grammar").length >= 2) {
+        const ahead = pickPrepared(data.items, { stage: 5, grammar: 1, expression: 0, skip: new Set([...rest, ...grammar.filter((i) => rungOf(ladder, i.key) !== axis + 1).map((i) => i.key)]), lastAt: (k) => lastAt.get(k) ?? 0 })[0];
+        const at = head.map((i) => i.kind).lastIndexOf("grammar");
+        if (ahead && at >= 0) head.splice(at, 1, ahead);
+      }
       for (const it of head) {
         const rung = Math.max(1, rungOf(ladder, it.key));
         const was = rungOf(ladder, it.key);
-        // 3칸(틀린 곳)은 그 칸 틀린 곳 데이터가 있을 때만 — 없으면 4칸으로.
-        ladder = stepLadder(ladder, it.key, firstTryRung(rung, true, seen.has(it.key)), true);
-        if (rungOf(ladder, it.key) === 3 && it.kind === "grammar" && !data.spotKeys.has(it.key)) ladder = { ...ladder, [it.key]: 4 };
-        if (it.kind === "expression" && rungOf(ladder, it.key) === 3) ladder = { ...ladder, [it.key]: 4 };
+        // 3칸(틀린 곳)은 그 칸 틀린 곳 데이터가 있을 때만 — 없으면(표현 포함) 2에서 끝.
+        ladder = stepLadder(ladder, it.key, rung, true);
+        if (rungOf(ladder, it.key) === 3 && (it.kind === "expression" || !data.spotKeys.has(it.key))) ladder = { ...ladder, [it.key]: DONE };
         seen.add(it.key);
         today.add(it.key);
         lastAt.set(it.key, t);
@@ -117,7 +129,7 @@ function perfect(lang: string, data: Data) {
     if (allG && round.r === 1) doneDay.set("g1", doneDay.get("g1") ?? day);
     if (hasExpr && data.items.filter((i) => i.kind === "expression").every((i) => rungOf(ladder, i.key) >= DONE)) doneDay.set("e", doneDay.get("e") ?? day);
   }
-  return { stageDay, roundDay, wordStageDay, g1: doneDay.get("g1") ?? roundDay[2], eDone: doneDay.get("e"), per, firstBatch: asked.slice(0, 12) };
+  return { axisDay, stageDay, roundDay, wordStageDay, g1: doneDay.get("g1") ?? roundDay[2], eDone: doneDay.get("e"), per, firstBatch: asked.slice(0, 12) };
 }
 
 const pct = (v: number) => `${Math.round(v)}%`;
@@ -138,7 +150,7 @@ async function build(): Promise<string> {
     const at = (s: number, list: PreparedItem[]) => list.filter((i) => i.stage === s).length;
     stageRows.push(`| ${lang} | ${[1, 2, 3, 4, 5].map((s) => `${at(s, g)}${g.filter((i) => i.stage === s && data.spotKeys.has(i.key)).length < at(s, g) ? `(③${g.filter((i) => i.stage === s && data.spotKeys.has(i.key)).length})` : ""}`).join(" | ")} | ${e.length ? [1, 2, 3, 4, 5].map((s) => at(s, e)).join("·") : "카드"} | ${["P1", "P2", "P3", "P4"].map((p) => data.storyAt[p] ?? 0).join("·")} | ${data.words} |`);
     const run = perfect(lang, data);
-    timeRows.push(`| ${lang} | ${[2, 3, 4, 5].map((s) => (run.stageDay[s] ? `${run.stageDay[s]}일` : "—")).join(" | ")} | ${run.g1 ? `${run.g1}일` : "—"} | ${[2, 3].map((r) => (run.roundDay[r] ? `${run.roundDay[r]}일` : "—")).join(" | ")} | ${run.eDone ? `${run.eDone}일` : e.length ? "—" : "카드"} | ${[2, 3, 4, 5, 6].map((s) => (run.wordStageDay[s] ? `${run.wordStageDay[s]}일` : "—")).join(" · ")} |`);
+    timeRows.push(`| ${lang} | ${["1·2", "1·3"].map((k) => (run.axisDay[k] ? `${run.axisDay[k]}일` : "—")).join(" | ")} | ${run.g1 ? `${run.g1}일` : "—"} | ${[2, 3].map((r) => (run.roundDay[r] ? `${run.roundDay[r]}일` : "—")).join(" | ")} | ${run.eDone ? `${run.eDone}일` : e.length ? "—" : "카드"} | ${[2, 3, 4, 5, 6].map((s) => (run.wordStageDay[s] ? `${run.wordStageDay[s]}일` : "—")).join(" · ")} |`);
     if (lang === "en") rows.push(...run.firstBatch.map((k) => `\`${k}\``));
   }
   const lines: string[] = [];
@@ -154,7 +166,7 @@ async function build(): Promise<string> {
   lines.push(" ├ 맡긴 열쇠가 있으면(넘겨 보기 남은 카드 등) 다섯씩 먼저");
   lines.push(" ├ 다시 볼 것이 있으면 ── [다시 볼 것 묶음] 대화 채우기 ≤2 → 대화에서 막힌 것 → [다시]·앎에서 틀린 것 → 처음 보고 틀린 것(1시간 뒤) · 8개까지");
   lines.push(" │                         ↕ 번갈아 (다 맞히면 다시 볼 것이 안 생겨 새 묶음만)");
-  lines.push(" └ [새 묶음 7문제] 대화 채우기 1 → 문법 칸(닿은 단계부터) → 표현(영어는 넣어 둔 문제) → 낱말(경계 근처 + 아래 단계 하나) → 문단(단계에 따라)");
+  lines.push(" └ [새 묶음 7문제] 대화 채우기 1 → 문법 칸(지금 축·닿은 단계 + 다음 유형 하나) → 표현(영어는 넣어 둔 문제) → 낱말(경계 근처 + 아래 단계 하나) → 문단(단계에 따라)");
   lines.push("```");
   lines.push("");
   lines.push("## 2. 새 묶음 7문제의 종류 수");
@@ -166,20 +178,25 @@ async function build(): Promise<string> {
   lines.push("");
   lines.push("다 맞히면 세 종류가 함께 줄어 비율은 출발과 같다. 14일 틀린 비율이 평균보다 높은 종류는 10%p마다 5%p 늘어난다(15~60%).");
   lines.push("");
-  lines.push("## 3. 문법 칸 하나 — 사다리");
+  lines.push("## 3. 문법 칸 하나 — 사다리 세 칸");
   lines.push("");
   lines.push("```");
-  lines.push("① 고르기 ──처음에 맞힘──▶ ③ 틀린 곳(그 칸 틀린 곳 데이터가 있을 때, 없으면 ④) ──▶ ④ 문장 쓰기 ──▶ 끝");
-  lines.push("    └─틀림/두 번째─▶ ② 빈칸 쓰기 ──▶ ③ …");
-  lines.push("한 칸은 하루에 한 번(맞히면 20시간 쉼) → 다 맞혀도 칸 하나에 3일");
+  lines.push("① 고르기 ──맞힘──▶ ② 빈칸 쓰기 ──맞힘──▶ ③ 틀린 곳 찾아 고치기 ──맞힘──▶ 끝   (틀리면 그 칸에 머물고 다른 문장으로)");
+  lines.push("① 고르기는 차례로 모양이 바뀜: 맞는 꼴 → 문맥(앞 줄이 답을 정함) → 뜻 차이(꼴만 다른 두 문장 중 상황에 맞는 것) → 틀린 문장(넷 중 하나)");
+  lines.push("   — 다른 모양은 문제은행이 만들어 판정한 것이 있을 때만, 없으면 맞는 꼴");
+  lines.push("③ 틀린 곳 문항이 없는 칸(표현 포함)은 ②에서 끝 · 문장 전체 쓰기는 퀴즈에 없음(통화·채팅·대화 채우기가 맡음)");
   lines.push("```");
   lines.push("");
   lines.push("## 4. 단계와 회차");
   lines.push("");
   lines.push("```");
-  lines.push(`1단계 칸 ─다 끝내면─▶ 2단계 ─▶ … ─▶ 5단계   (그 단계 이상 답 ${REACH_BATCH}개마다 ${pct(REACH_UP * 100)} 이상이면 한 단계 위, ${pct(REACH_DOWN * 100)} 이하면 아래 · 첫 측정 단계 밑으로는 안 내려감 · 최고 ${REACH_TOP})`);
-  lines.push("   ▲                                             │");
-  lines.push("   └──── 1~5단계 문법을 다 끝내면 다음 회차 ◀────┘   (같은 칸, 새 문장 — 문제은행이 만들어 판정한 문장·튜터 줄. 새 문장이 없는 칸은 건너뜀)");
+  lines.push("유형 먼저 — 축마다 1→5단계:");
+  lines.push("  고르기   1단계 → 2 → 3 → 4 → 5");
+  lines.push("  빈칸 쓰기 1단계 → 2 → 3 → 4 → 5     (고르기를 지난 칸)");
+  lines.push("  틀린 곳   1단계 → 2 → 3 → 4 → 5     (빈칸을 지난 칸, 틀린 곳 문항이 있는 칸만)");
+  lines.push("  → 다 끝나면 다음 회차(같은 칸, 새 문장 — 문제은행이 만들어 판정한 문장·튜터 줄. 새 문장이 없는 칸은 건너뜀)");
+  lines.push(`단계 안: 그 단계 축 칸을 다 지나면 위로, 또는 그 단계 이상 답 ${REACH_BATCH}개마다 ${pct(REACH_UP * 100)} 이상이면 위·${pct(REACH_DOWN * 100)} 이하면 아래(첫 측정 단계 밑으로는 안 내려감, 최고 ${REACH_TOP}) · 축이 바뀌면 첫 측정 단계부터`);
+  lines.push("섞기: 묶음에 문법이 둘 이상이면 하나는 이 축을 이미 지난 칸에서 다음 유형으로");
   lines.push("표현은 회차 없음(아래 단계 것도 계속 나옴) · 낱말은 끝이 없음 · 문단은 1~2단계 네 묶음에 하나, 3단계 둘에 하나, 4~5단계 묶음마다(하루 둘까지)");
   lines.push("```");
   lines.push("");
@@ -193,10 +210,10 @@ async function build(): Promise<string> {
   lines.push("");
   lines.push("## 5. 다 맞히면 언제 어디에 닿나 (어림)");
   lines.push("");
-  lines.push(`문법 단계 2~5에 닿는 날 · 1회차 문법을 다 끝낸 날 · 2·3회차 시작 · 표현(넣어 둔 문제)을 다 끝낸 날 · 낱말 경계가 단계 2·3·4·5·6(확장)에 닿는 날(경계는 처음 ${PROBE}개는 답마다, 그 뒤 ${BATCH}개마다 ×${BATCH_STEP}).`);
+  lines.push(`1회차에서 빈칸 쓰기·틀린 곳 축이 시작하는 날(고르기 1~5단계를 다 지난 뒤) · 1회차 문법을 다 끝낸 날 · 2·3회차 시작 · 표현(넣어 둔 문제)을 다 끝낸 날 · 낱말 경계가 단계 2·3·4·5·6(확장)에 닿는 날(경계는 처음 ${PROBE}개는 답마다, 그 뒤 ${BATCH}개마다 ×${BATCH_STEP}).`);
   lines.push("");
-  lines.push("| 언어 | 문법 2 | 3 | 4 | 5 | 1회차 끝 | 2회차 | 3회차 | 표현 끝 | 낱말 2·3·4·5·6 |");
-  lines.push("|---|---|---|---|---|---|---|---|---|---|");
+  lines.push("| 언어 | 빈칸 시작 | 틀린 곳 시작 | 1회차 끝 | 2회차 | 3회차 | 표현 끝 | 낱말 2·3·4·5·6 |");
+  lines.push("|---|---|---|---|---|---|---|---|");
   lines.push(...timeRows);
   lines.push("");
   lines.push(`영어 첫 열두 문법·표현 문제 차례: ${rows.join(" → ")}`);

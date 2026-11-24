@@ -2,7 +2,7 @@
 
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
 import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
-import { climbCleared, nextRound, noteRoundUsed, readRound, saveRound, DONE, firstTryRung, gaugeWordScale, readReach, recentRuns, saveReach, stepReach, gaugeCue, rightToday, gaugeNumbered, gaugeRung, kindCounts, kindOf, kindShares, missRates, paraDue, readGauge, readLadder, readPara, rungOf, saveGauge, saveLadder, savePara, stepLadder, stepPara, type Gauge } from "@/lib/curriculum/ladder";
+import { axisOf, climbCleared, nextRound, noteRoundUsed, readRound, saveRound, DONE, gaugeWordScale, readReach, recentRuns, saveReach, stepReach, gaugeCue, rightToday, gaugeNumbered, kindCounts, kindOf, kindShares, missRates, paraDue, readGauge, readLadder, readPara, rungOf, saveGauge, saveLadder, savePara, stepLadder, stepPara, type Gauge } from "@/lib/curriculum/ladder";
 import { measured } from "@/lib/curriculum/firstCheck";
 import { gaugeField, noteStat, RANDOM_SHARE, statField } from "@/lib/curriculum/quizStats";
 import { expressionAsk, grammarAsk, paragraphQuestion } from "@/lib/curriculum/ladderQuiz";
@@ -22,7 +22,7 @@ import { confirmDue, knownState } from "@/lib/curriculum/known";
 import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
-import { grownVariants, pickPrepared, turnFresh, withGrown } from "@/lib/curriculum/preparedQuiz";
+import { grownChoices, grownVariants, pickPrepared, turnFresh, withGrown } from "@/lib/curriculum/preparedQuiz";
 import { knownSlotWeight } from "@/lib/curriculum/languagePairs";
 import { learnerLanguages } from "@/lib/curriculum/learnerLanguages";
 import { readCachedAccount } from "@/lib/account/session";
@@ -267,7 +267,6 @@ export function Quizbank({
     let ladder = readLadder(language);
     let reach = readReach(language, stage);
     // 이 답 전에 그 칸을 본 적 있나(처음 보는 칸을 1칸에서 바로 맞히면 두 칸 위로).
-    const before = new Set(readLedger(language).filter((event) => event.src === "quiz" || event.src === "exam").map((event) => event.k));
     for (const { key, correct, shape, miss } of results) {
       const talkId = talkIds.current.get(key);
       if (talkId) {
@@ -285,7 +284,9 @@ export function Quizbank({
         // 무작위 칸도 지금 칸 이상이라, 맞히면 사다리를 올린다(틀린 것은 측정이라 안 내림).
         if (!random || correct) {
           const was = rungOf(ladder, key);
-          ladder = stepLadder(ladder, key, random ? rung : firstTryRung(rung, correct, before.has(key)), correct);
+          ladder = stepLadder(ladder, key, rung, correct);
+          // 다음 칸(틀린 곳)을 낼 수 없으면 끝으로 — 표현, 틀린 곳 문항이 없는 문법 칸.
+          if (rungOf(ladder, key) === 3 && (key.startsWith("e|") || !spotsFor(language, key).length)) ladder = { ...ladder, [key]: DONE };
           // 칸을 끝냈으면 이번 회차에 낸 문장을 남긴다 — 다음 회차엔 다른 문장으로(ladder.ts nextRound).
           if (was < DONE && rungOf(ladder, key) >= DONE) saveRound(language, noteRoundUsed(readRound(language), key, askedTexts(language, key)));
         }
@@ -342,16 +343,16 @@ export function Quizbank({
   /** 문법·표현 열쇠 하나 → 사다리 칸 문제(ladderQuiz.ts). 낸 칸을 기억해 답이 오면 사다리를 옮긴다. */
   const ladderAsk = (key: string, events: readonly { k: string; src: string }[], ladder: ReturnType<typeof readLadder>, item?: PreparedItem): QuizQuestion | null => {
     const prep = item ?? prepared?.find((one) => one.key === key);
-    // 게이지가 낼 칸을 옮기고(gaugeRung), 열에 하나는 측정으로 칸을 무작위로(quizStats.ts — 사다리는 안 옮김).
-    // 무작위 칸은 지금 칸 이상에서만 — 다 맞혀 올라간 칸이 측정 때문에 1칸 고르기로 다시 나오던 것(사용자 2026-11-24 "be동사 다 맞혔는데 다시 나와").
+    // 열에 하나는 측정으로 칸을 무작위로(quizStats.ts — 지금 칸 이상에서만, 사다리는 맞혔을 때만 옮김). 게이지는 칸이 아니라 도움(첫 글자·선지 표시)만.
     const random = Math.random() < RANDOM_SHARE;
-    const reached = Math.min(4, rungOf(ladder, key));
-    const current = random ? reached + Math.floor(Math.random() * (5 - reached)) : gaugeRung(reached, gauge);
+    const reached = Math.min(DONE - 1, rungOf(ladder, key));
+    const current = random ? reached + Math.floor(Math.random() * (DONE - reached)) : reached;
     const cue = gaugeCue(gauge);
+    const turn = preparedTurn(events, key);
     const made = prep
-      ? grammarAsk(turnFresh(grown(prep), preparedTurn(events, key), [...askedTexts(language, key), ...(readRound(language).used[key] ?? [])]), current, spotOf(key), language, { cue, numbered: gaugeNumbered(gauge), stage })
+      ? grammarAsk(turnFresh(grown(prep), turn, [...askedTexts(language, key), ...(readRound(language).used[key] ?? [])]), current, spotOf(key), language, { cue, numbered: gaugeNumbered(gauge), stage, choices: grownChoices(grownItems(language, key), locale), turn })
       : key.startsWith("e|")
-        ? expressionAsk(language, key, current, `${day}-${round}`, cue)
+        ? expressionAsk(language, key, current, `${day}-${round}`)
         : null;
     if (!made) return null;
     askedRung.current.set(key, made.rung);
@@ -475,11 +476,29 @@ export function Quizbank({
         saveReach(language, { s: Math.max(1, stage), n: 0, ok: 0 });
       }
     }
-    // 문법·표현은 첫 측정 단계가 아니라 퀴즈로 닿은 단계부터(readReach) — 그 단계 문법 칸을 다 끝냈으면 위로(climbCleared, 표현은 아래 단계 것도 계속 나옴).
+    // 유형 먼저(ladder.ts axisOf): 지금 축(고르기 → 빈칸 → 틀린 곳)의 문법 칸만, 퀴즈로 닿은 단계까지(readReach). 축이 바뀌면 단계를 첫 측정 단계부터 다시,
+    // 그 축의 그 단계 칸을 다 지나면 위로(climbCleared). 표현은 축과 상관없이 제 사다리.
     const ladderOpen = readLadder(language);
-    const reachNow = prepared ? climbCleared(readReach(language, stage), stage, (s) => prepared.some((item) => item.kind === "grammar" && item.stage === s && rungOf(ladderOpen, item.key) < DONE)) : readReach(language, stage);
+    const grammarItems = prepared?.filter((item) => item.kind === "grammar") ?? [];
+    const axis = axisOf(grammarItems.map((item) => item.key), ladderOpen);
+    let reachBase = readReach(language, stage);
+    const roundAxis = readRound(language);
+    if (axis && roundAxis.a !== axis) {
+      saveRound(language, { ...roundAxis, a: axis });
+      reachBase = { s: Math.max(1, stage), n: 0, ok: 0 };
+    }
+    const reachNow = axis ? climbCleared(reachBase, stage, (s) => grammarItems.some((item) => item.stage === s && rungOf(ladderOpen, item.key) === axis)) : reachBase;
     if (prepared) saveReach(language, reachNow);
-    const head = prepared ? pickPrepared(prepared, { stage: reachNow.s, lastAt: (key) => lastAsked.get(key) ?? 0, grammar: counts.g, expression: prepared.some((item) => item.kind === "expression") ? counts.e : 0, skip: new Set([...lastCircle.current, ...preparedRest(language, prepared)]), ...(speaks.length ? { weight: (key: string) => knownSlotWeight(speaks, language, key) } : {}) }) : [];
+    const offAxis = grammarItems.filter((item) => rungOf(ladderOpen, item.key) !== axis).map((item) => item.key);
+    const rest = preparedRest(language, prepared);
+    const pickOpts = { lastAt: (key: string) => lastAsked.get(key) ?? 0, ...(speaks.length ? { weight: (key: string) => knownSlotWeight(speaks, language, key) } : {}) };
+    const head = prepared ? pickPrepared(prepared, { stage: reachNow.s, grammar: counts.g, expression: prepared.some((item) => item.kind === "expression") ? counts.e : 0, skip: new Set([...lastCircle.current, ...rest, ...offAxis]), ...pickOpts }) : [];
+    // 섞기: 문법이 둘 이상이면 하나는 이 축을 이미 지난 칸에서 다음 유형으로(쓰는 차례가 첫 주부터, 간격 두고 다시 봄).
+    if (prepared && axis && axis < 3 && head.filter((item) => item.kind === "grammar").length >= 2) {
+      const ahead = pickPrepared(prepared, { stage: 5, grammar: 1, expression: 0, skip: new Set([...lastCircle.current, ...rest, ...grammarItems.filter((item) => rungOf(ladderOpen, item.key) !== axis + 1).map((item) => item.key)]), ...pickOpts })[0];
+      const at = head.map((item) => item.kind).lastIndexOf("grammar");
+      if (ahead && at >= 0) head.splice(at, 1, ahead);
+    }
     lastCircle.current = new Set([...head.map((item) => item.key), ...keys]);
     if (!keys.length && !head.length) return null;
     // 문법 칸은 낼 때마다 다음 회차 문장을 미리 부탁(서버가 칸마다 넷까지 만들고 판정, 모두가 같이 씀 — server/qbank.ts makeGrammar).

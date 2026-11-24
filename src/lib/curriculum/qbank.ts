@@ -12,7 +12,7 @@ import { apiUrl } from "../apiBase.ts";
 import { rememberGlosses, type ScriptGloss } from "./stageScripts.ts";
 
 /** wrong = 낱말(w|) 예문의 이 문장에 안 맞는 같은 낱말의 다른 꼴(고르기 오답, 2026-11-02). */
-export type GrownItem = { text: string; piece: string; gloss: ScriptGloss; stage: number; wrong?: string[]; /** 문법 칸(g|): 까닭(영어)과 받을 때의 앱 언어 뜻·까닭. */ why?: string; ui?: { code: string; gloss?: string; why?: string } };
+export type GrownItem = { text: string; piece: string; gloss: ScriptGloss; stage: number; wrong?: string[]; /** 문법 칸(g|): 까닭(영어)과 받을 때의 앱 언어 뜻·까닭. */ why?: string; ui?: { code: string; gloss?: string; why?: string }; /** 고르기의 다른 모양(qbankRules.ts BankItem.v)과 문맥 앞 줄. */ v?: "c" | "m" | "x"; lead?: string };
 type Grown = { items: GrownItem[]; decoys: Record<string, string[]> };
 
 const GROWN = new Map<string, Grown>();
@@ -122,7 +122,7 @@ export async function growBank(language: string, ui: string, keys: readonly { ke
       body: JSON.stringify({ language, ui, keys: wanted, results, dict: 1 }),
     });
     if (!response.ok) return;
-    const body = (await response.json()) as { banks?: Record<string, { items: { text: string; piece: string; gloss: string; uiGloss?: string; stage: number; wrong?: string[]; why?: string; uiWhy?: string }[]; decoys: Record<string, string[]> }> };
+    const body = (await response.json()) as { banks?: Record<string, { items: { text: string; piece: string; gloss: string; uiGloss?: string; stage: number; wrong?: string[]; why?: string; uiWhy?: string; v?: string; lead?: string }[]; decoys: Record<string, string[]> }> };
     let count = 0;
     const moved: Record<string, string> = {};
     const fresh: Record<string, Grown> = {};
@@ -134,10 +134,14 @@ export async function growBank(language: string, ui: string, keys: readonly { ke
           // 앱 언어 뜻은 다른 뜻풀이처럼 glossFor가 찾게(rememberGlosses), 한국어는 ko 칸에.
           if (item.uiGloss && ui !== "en" && ui !== "ko") moved[item.gloss] = item.uiGloss;
           const gloss: ScriptGloss = { en: item.gloss, ...(ui === "ko" && item.uiGloss ? { ko: item.uiGloss } : {}) };
-          const wrong = Array.isArray(item.wrong) ? item.wrong.filter((one): one is string => typeof one === "string" && one.length > 0 && one.length <= 40).slice(0, 3) : [];
+          // 틀린 문장(x)·뜻 차이(m)의 wrong은 문장이라 길다.
+          const shapeOf = item.v === "c" || item.v === "m" || item.v === "x" ? item.v : undefined;
+          const wrongMax = shapeOf === "m" || shapeOf === "x" ? 160 : 40;
+          const wrong = Array.isArray(item.wrong) ? item.wrong.filter((one): one is string => typeof one === "string" && one.length > 0 && one.length <= wrongMax).slice(0, 3) : [];
           const why = typeof item.why === "string" && item.why.length <= 300 ? item.why : "";
           const mine = { code: ui, ...(item.uiGloss ? { gloss: item.uiGloss } : {}), ...(item.uiWhy ? { why: item.uiWhy } : {}) };
-          return { text: item.text, piece: item.piece, stage: item.stage, gloss, ...(wrong.length ? { wrong } : {}), ...(why ? { why, ui: mine } : {}) };
+          const lead = typeof item.lead === "string" && item.lead.length <= 160 ? item.lead : "";
+          return { text: item.text, piece: item.piece, stage: item.stage, gloss, ...(wrong.length ? { wrong } : {}), ...(why ? { why, ui: mine } : {}), ...(shapeOf ? { v: shapeOf } : {}), ...(lead ? { lead } : {}) };
         }),
       };
       registerGrown(language, key, grown);

@@ -3,7 +3,7 @@
 // 문제은행 문법 문장은 회차마다 칸마다 하나씩 있다고 어림(실제는 서버가 칸마다 넷씩 만들고 판정에서 일부 떨어짐). 숫자는 어림, 흐름의 모양을 본다.
 //   node --experimental-strip-types scripts/sim/quiz-year.mts <언어> <low|mid|high> [new|old]   (old = 단계 올리기·회차 없이)
 import fs from "node:fs";
-import { kindShares, kindCounts, missRates, recentRuns, stepReach, stepLadder, firstTryRung, rightToday, rungOf, DONE, climbCleared, nextRound, noteRoundUsed, type Reach, type QuizRound } from "../../src/lib/curriculum/ladder.ts";
+import { kindShares, kindCounts, missRates, recentRuns, stepReach, stepLadder, rightToday, rungOf, DONE, axisOf, climbCleared, nextRound, noteRoundUsed, type Reach, type QuizRound } from "../../src/lib/curriculum/ladder.ts";
 import { pickPrepared, type PreparedItem } from "../../src/lib/curriculum/preparedQuiz.ts";
 import { noteLevelBatch, startLevel, knowChance, type Level } from "../../src/lib/curriculum/vocabLevel.ts";
 import { stageCuts, stageOfRank } from "../../src/lib/curriculum/vocabBank.ts";
@@ -53,7 +53,10 @@ for (let day = 0; day < 365; day++) {
     if (NEW) {
       const opened = nextRound(items.filter((i) => i.kind === "grammar").map((i) => i.key), ladder, round, (k) => lines(k).some((l) => !(round.used[k] ?? []).includes(l)));
       if (opened) { ladder = opened.ladder; round = opened.round; reach = { s: P.base, n: 0, ok: 0 }; log.push(`    ${day + 1}일째 ${round.r}회차 시작`); }
-      reach = climbCleared(reach, P.base, (s) => items.some((i) => i.kind === "grammar" && i.stage === s && rungOf(ladder, i.key) < DONE));
+      const axis = axisOf(items.filter((i) => i.kind === "grammar").map((i) => i.key), ladder);
+      if (axis && round.a !== axis) { round = { ...round, a: axis }; reach = { s: P.base, n: 0, ok: 0 }; }
+      reach = axis ? climbCleared(reach, P.base, (s) => items.some((i) => i.kind === "grammar" && i.stage === s && rungOf(ladder, i.key) === axis)) : reach;
+      for (const i of items) if (i.kind === "grammar" && rungOf(ladder, i.key) !== axis) skip.add(i.key);
     }
     const head = pickPrepared(items, { stage: reach.s, grammar: counts.g, expression: hasExpr ? counts.e : 0, skip, lastAt: (k) => lastAt.get(k) ?? 0 });
     if (!head.some((i) => i.kind === "grammar") && outDay < 0 && items.filter((i) => i.kind === "grammar").every((i) => skip.has(i.key) && rungOf(ladder, i.key) >= DONE)) outDay = day;
@@ -65,7 +68,8 @@ for (let day = 0; day < 365; day++) {
       const ok = rnd() < p;
       const seen = ledger.some((e) => e.k === it.key);
       const was = rungOf(ladder, it.key);
-      ladder = stepLadder(ladder, it.key, firstTryRung(rung, ok, seen), ok);
+      ladder = stepLadder(ladder, it.key, rung, ok);
+      if (rungOf(ladder, it.key) === 3 && it.kind === "expression") ladder = { ...ladder, [it.key]: DONE };
       if (was < DONE && rungOf(ladder, it.key) >= DONE) { const fresh = lines(it.key).find((l) => !(round.used[it.key] ?? []).includes(l)); if (fresh) round = noteRoundUsed(round, it.key, [fresh]); }
       reach = stepReach(reach, P.base, it.stage, ok);
       skill.set(it.key, own + 0.35);

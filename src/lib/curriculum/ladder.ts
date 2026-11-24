@@ -1,18 +1,18 @@
 /**
  * 문법·표현 사다리와 종류 비율(퀴즈 다시 짜기 4단계, hub/work/drafts/quiz-redesign-2026-11-10.md §3·§8). 순수 — 저장은 이 폰 localStorage만.
  *
- * 칸(g|·e|·f|)마다 사다리 칸 하나:
- *   1 알아보기 — 맞는 꼴 고르기          2 꼴 만들기 — 빈칸 쓰기(첫 글자 도움)
- *   3 틀린 곳 — 고르고 고치기(고정 데이터 spot-errors, 그 칸 문항이 있을 때만)
- *   4 문장 만들기 — 뜻만 보고 문장 전체 쓰기
- * 맞히면 다음 칸, 틀리면 그 칸에서 다른 문장으로(설계안 §3). 4를 맞히면 끝(DONE) — 새 묶음에서 쉬고, 틀린 것은 다시 볼 것으로.
+ * 칸(g|·e|·f|)마다 사다리 칸 하나(사용자 2026-11-24 "문장 쓰기는 무슨 소재를 학습하는지 불명확 — 고르기를 고도화하고 빈칸·틀린 곳으로"):
+ *   1 고르기 — 맞는 꼴·문맥·뜻 차이·틀린 문장(ladderQuiz.ts)   2 빈칸 쓰기 — 그 문법 자리만 쓰기
+ *   3 틀린 곳 — 찾아 고치기(그 칸 문항이 있을 때만, 없으면 2에서 끝)
+ * 맞히면 다음 칸, 틀리면 그 칸에서 다른 문장으로. 3을 맞히면 끝(DONE). 문장 전체 쓰기는 대화(통화·채팅·대화 채우기)가 맡는다.
+ * 순서는 유형 먼저(axisOf): 모든 칸의 고르기를 1~5단계로 → 빈칸 1~5단계 → 틀린 곳 1~5단계 → 다음 회차.
  * 낱말(w|)은 사다리 없음(한 모양, 3단계).
  *
  * 종류 비율(§8, 사용자 2026-11-10 "학습자가 뭐가 부족한지에 따라 비율이 변하도록"): 출발 단어 40 · 문법 35 · 표현 25(1~2단계 50 · 30 · 20),
  * 최근 14일 퀴즈 답의 종류별 틀린 비율이 평균보다 높은 쪽으로 옮김(10%p마다 5%p), 한 종류 15~60%.
  */
-export type Rung = 1 | 2 | 3 | 4;
-export const DONE = 5;
+export type Rung = 1 | 2 | 3;
+export const DONE = 4;
 export type Kind = "w" | "g" | "e";
 
 const KEY = "ladder.v1";
@@ -47,7 +47,8 @@ export function saveLadder(language: string, ladder: Ladder): void {
 /** 지금 칸(없으면 1). */
 export function rungOf(ladder: Ladder, key: string): number {
   const at = ladder[key];
-  return typeof at === "number" && at >= 1 && at <= DONE ? at : 1;
+  // 옛 4칸 사다리(문장 쓰기·끝 5)는 지금 끝(4)으로.
+  return typeof at === "number" && at >= 1 ? Math.min(at, DONE) : 1;
 }
 
 /** 답 하나 → 사다리. 맞음 = 낸 칸 + 1(앞 칸을 건너뛰었으면 그다음), 틀림 = 낸 칸 그대로. */
@@ -58,7 +59,7 @@ export function stepLadder(ladder: Ladder, key: string, rung: number, correct: b
 
 /** 낼 칸: 지금 칸부터 낼 수 있는 첫 칸(3은 틀린 곳 문항이 있을 때만). 끝났으면 null. */
 export function askRung(current: number, can: (rung: Rung) => boolean): Rung | null {
-  for (let rung = Math.max(1, current); rung <= 4; rung += 1) if (can(rung as Rung)) return rung as Rung;
+  for (let rung = Math.max(1, current); rung < DONE; rung += 1) if (can(rung as Rung)) return rung as Rung;
   return null;
 }
 
@@ -185,16 +186,6 @@ export function saveGauge(language: string, gauge: Gauge): void {
   }
 }
 
-/** 게이지로 낼 칸: 내리면 낮은 칸에 머물고(−2 → 2칸까지, −1 → 3칸까지), 올리면 위 칸부터(+1 → 2칸부터, +2 → 3칸부터). 사다리 기록은 그대로. */
-export function gaugeRung(current: number, gauge: Gauge): number {
-  if (current >= DONE) return current;
-  if (gauge <= -2) return Math.min(current, 2);
-  if (gauge === -1) return Math.min(current, 3);
-  if (gauge === 1) return Math.max(current, 2);
-  if (gauge >= 2) return Math.max(current, 3);
-  return current;
-}
-
 /** 쓰기 도움: 내리면 첫 글자 + 글자 수, 많이 올리면 없음, 그 사이 첫 글자. */
 export function gaugeCue(gauge: Gauge): "len" | "none" | undefined {
   return gauge <= -1 ? "len" : gauge >= 2 ? "none" : undefined;
@@ -302,11 +293,6 @@ export function saveReach(language: string, reach: Reach): void {
   }
 }
 
-/** 처음 본 칸을 1칸(고르기)에서 바로 맞히면 3칸으로(쉬운 칸을 나흘씩 끌지 않게, 사용자 2026-11-24). 순수. */
-export function firstTryRung(rung: number, correct: boolean, seenBefore: boolean): number {
-  return correct && rung === 1 && !seenBefore ? 2 : rung;
-}
-
 /** 게이지가 단어 수준 경계에 주는 배수(사용자 2026-11-24 — 게이지가 단어에도). */
 export function gaugeWordScale(gauge: Gauge): number {
   return gauge <= -2 ? 0.6 : gauge === -1 ? 0.8 : gauge === 1 ? 1.25 : gauge >= 2 ? 1.6 : 1;
@@ -329,7 +315,7 @@ export function climbCleared(reach: Reach, base: number, open: (stage: number) =
  * 맞힌 문제를 다시 내는 게 아니라 같은 칸의 다른 문장(바꾼 사전 예문·문제은행이 만든 문장)으로. 끝낸 칸의 문장은 used에 남겨 다음 회차에 안 낸다.
  * 이 폰 quizRound.v1.<언어>.
  */
-export type QuizRound = { r: number; used: Record<string, string[]> };
+export type QuizRound = { r: number; used: Record<string, string[]>; /** 지난 묶음의 축 — 바뀌면 단계를 첫 측정 단계부터 다시. */ a?: number };
 const ROUND_KEY = "quizRound.v1";
 
 export function readRound(language: string): QuizRound {
@@ -369,4 +355,14 @@ export function nextRound(keys: readonly string[], ladder: Ladder, round: QuizRo
   const next = { ...ladder };
   for (const key of reopened) delete next[key];
   return { ladder: next, round: { ...round, r: round.r + 1 }, reopened };
+}
+
+/**
+ * 유형 먼저(사용자 2026-11-24 "고르기에서 맞힌 문제는 바로 다음 단계로, 각 축에서 1~5단계를 다 맞히면 같은 소재의 다른 유형"):
+ * 지금 축 = 아직 안 끝난 칸들의 가장 낮은 사다리 칸. 그 축의 칸만 1~5단계 차례로 내고, 축의 칸을 다 지나면 다음 축. 다 끝났으면 null. 순수.
+ */
+export function axisOf(keys: readonly string[], ladder: Ladder): Rung | null {
+  let low = DONE;
+  for (const key of keys) low = Math.min(low, rungOf(ladder, key));
+  return low >= DONE ? null : (low as Rung);
 }

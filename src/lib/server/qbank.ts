@@ -80,7 +80,9 @@ function jsonIn(text: string): Record<string, unknown> | null {
  * 문장마다 비울 조각·그 자리에 그럴듯하지만 틀린 꼴 셋·까닭 한 줄(Haiku, translate 경로) → 형식 검사 → 판정(spotJudge, Sonnet — 정답만 맞고
  * 오답은 어느 읽기로도 안 맞나, 칸 이름의 문법을 정말 보여 주나) → 통과만. 앱이 다음 회차 문장으로 쓴다(ladder.ts nextRound).
  */
-async function makeGrammar(language: string, key: string, entry: BankEntry, onJudge?: () => void): Promise<{ items: { t: string; p: string; g: string; w?: string[]; y?: string }[]; decoys: string[]; raw: string } | null> {
+type GrammarMade = { t: string; p: string; g: string; w: string[]; y: string; v?: "c" | "m" | "x"; l?: string };
+
+async function makeGrammar(language: string, key: string, entry: BankEntry, onJudge?: () => void): Promise<{ items: GrammarMade[]; decoys: string[]; raw: string } | null> {
   const slot = grammarSlot(language, key);
   const client = getOpenAIClient();
   if (!slot || !client) return null;
@@ -97,16 +99,52 @@ Write four NEW short, natural, everyday sentences in ${name} that each clearly u
 For each sentence give the exact part (as written in the sentence) that shows this grammar point — it becomes the blank — and three wrong options for that blank: forms a learner would really produce by getting THIS grammar point wrong (wrong conjugation, agreement, tense, particle/case/preposition, word order). Each wrong option must be grammatically wrong in this sentence in every reading — the sentence must hold a clear clue (subject, time word, auxiliary, agreement). Never an acceptable alternative (no contraction, synonym, politeness or spelling variant that is also correct), never a misspelling or a made-up word, never a different meaning that would also fit.
 Then one short English sentence saying which clue in the sentence decides the answer.
 G|<sentence in ${name}>|<plain literal English translation — nothing added or explained>|<the blank part exactly as in the sentence>|<wrong;wrong;wrong>|<why in English>
-Answer with exactly four G lines, nothing else.`,
+Then three more items of other kinds about the same grammar point (all sentences new, natural, short):
+C — a context item: a short first line spoken before, which is the ONLY clue deciding the form in the second sentence (without the first line, two options could fit).
+C|<first line in ${name}>|<second sentence in ${name}>|<plain English translation of the second sentence>|<the blank part in the second sentence>|<wrong;wrong;wrong>|<why in English, naming the clue in the first line>
+M — a meaning item: two sentences that differ ONLY in this grammar form, both grammatical, but with different meanings; plus a one-sentence situation in English that only one of them fits.
+M|<situation in English>|<sentence that fits>|<sentence that does not fit>|<why in English>
+X — a wrong-sentence item: one sentence that gets THIS grammar point wrong (a mistake learners really make) and three different correct sentences using the same grammar point.
+X|<the wrong sentence>|<English meaning of what it tries to say>|<correct;correct;correct>|<why in English: what is wrong and the right form>
+Answer with exactly four G lines, one C line, one M line and one X line, nothing else.`,
       },
       { role: "user", content: `Sentences already used (do not repeat): ${have.join(" / ")}` },
     ],
   });
   const raw = String(completion.choices[0]?.message?.content ?? "") || `(empty answer: ${String(completion.choices[0]?.finish_reason ?? "?")})`;
-  const made: { t: string; p: string; g: string; w: string[]; y: string }[] = [];
+  const made: GrammarMade[] = [];
   const existing = new Set(have);
+  const english = (text: string) => Boolean(text) && text.length <= 240 && !/[^\p{Script=Latin}\p{P}\p{S}\p{N}\p{Zs}]/u.test(text);
+  const plain = (text: string) => Boolean(text) && text.length <= 140 && !/\p{Nd}/u.test(text) && !existing.has(text);
   for (const line of raw.split(/\r?\n/)) {
     const cells = line.replace(/^[\s>*\-•\d.)]*/u, "").replace(/\*\*/g, "").split("|").map((cell) => cell.trim());
+    // 고르기의 다른 모양(ladderQuiz.ts ChoiceVariant): 문맥 C · 뜻 차이 M · 틀린 문장 X.
+    if (cells[0] === "C" && cells.length >= 7) {
+      const [, lead, text, gloss, piece, wrongs, why] = cells as [string, string, string, string, string, string, string];
+      if (!plain(lead) || !english(gloss) || !english(why) || !piece || piece.length > 40 || !acceptItem(entry, text, piece, existing)) continue;
+      const at = text.toLocaleLowerCase().indexOf(piece.toLocaleLowerCase());
+      const exact = text.toLocaleLowerCase().length === text.length ? text.slice(at, at + piece.length) : piece;
+      const wrong = acceptForms(text, exact, wrongs.split(";"));
+      if (wrong.length < 2) continue;
+      existing.add(text);
+      made.push({ v: "c", l: lead, t: text, p: exact, g: gloss, w: wrong, y: why });
+      continue;
+    }
+    if (cells[0] === "M" && cells.length >= 5) {
+      const [, situation, right, wrongLine, why] = cells as [string, string, string, string, string];
+      if (!english(situation) || !english(why) || !plain(right) || !plain(wrongLine) || right === wrongLine) continue;
+      existing.add(right);
+      made.push({ v: "m", t: right, p: "", g: situation, w: [wrongLine], y: why });
+      continue;
+    }
+    if (cells[0] === "X" && cells.length >= 5) {
+      const [, wrongLine, meaning, rights, why] = cells as [string, string, string, string, string];
+      const good = rights.split(";").map((one) => one.trim()).filter((one) => plain(one) && one !== wrongLine).slice(0, 3);
+      if (!plain(wrongLine) || !english(meaning) || !english(why) || good.length < 3) continue;
+      existing.add(wrongLine);
+      made.push({ v: "x", t: wrongLine, p: "", g: meaning, w: good, y: why });
+      continue;
+    }
     if (cells[0] !== "G" || cells.length < 6) continue;
     const [, text, gloss, piece, wrongs, why] = cells as [string, string, string, string, string, string];
     const englishGloss = Boolean(gloss) && !/[^\p{Script=Latin}\p{P}\p{S}\p{N}\p{Zs}]/u.test(gloss);
@@ -122,13 +160,29 @@ Answer with exactly four G lines, nothing else.`,
   onJudge?.();
   const judged = await completeChat(client, "spotJudge", {
     temperature: 0,
-    max_tokens: 1500,
+    max_tokens: 2000,
     messages: [
       {
         role: "system",
-        content: `You are a strict native ${name} teacher checking fill-in-the-blank grammar quiz items about "${slot.name}". For each item check: (1) the sentence with the answer filled in is natural and correct; (2) it really practises "${slot.name}"; (3) NONE of the wrong options is acceptable in the blank in any register or reading; (4) the answer is not given away elsewhere in the sentence. Answer JSON only: {"ok":[true|false, ...]} in item order.`,
+        content: `You are a strict native ${name} teacher checking grammar quiz items about "${slot.name}". Item kinds:
+BLANK — fill in the blank: (1) the sentence with the answer is natural and correct; (2) it really practises "${slot.name}"; (3) NONE of the wrong options is acceptable in the blank in any register or reading; (4) the answer is not given away elsewhere.
+CONTEXT — same as BLANK, and the context line is what decides the answer (it must be natural and the answer must follow from it).
+MEANING — the learner picks which of two sentences fits the situation: both sentences are grammatical and natural, they differ only in "${slot.name}", and exactly one fits the situation.
+WRONG — the learner picks the wrong sentence among four: the wrong one is clearly wrong in "${slot.name}" (not just unusual), and the three others are fully correct and natural.
+Answer JSON only: {"ok":[true|false, ...]} in item order.`,
       },
-      { role: "user", content: made.map((one, i) => `${i}: ${one.t.replace(one.p, "___")}\n   answer "${one.p}" · wrong ${one.w.map((w) => `"${w}"`).join(", ")} · meaning: ${one.g}`).join("\n") },
+      {
+        role: "user",
+        content: made
+          .map((one, i) =>
+            one.v === "m"
+              ? `${i}: MEANING · situation: ${one.g}\n   fits: ${one.t}\n   does not fit: ${one.w[0]}`
+              : one.v === "x"
+                ? `${i}: WRONG · wrong: ${one.t} (meant: ${one.g})\n   correct: ${one.w.join(" / ")}`
+                : `${i}: ${one.v === "c" ? `CONTEXT · context line: ${one.l}\n   ` : "BLANK · "}${one.t.replace(one.p, "___")}\n   answer "${one.p}" · wrong ${one.w.map((w) => `"${w}"`).join(", ")} · meaning: ${one.g}`,
+          )
+          .join("\n"),
+      },
     ],
   }).catch(() => null);
   const verdict = jsonIn(String(judged?.choices[0]?.message?.content ?? ""));
