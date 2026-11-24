@@ -8,8 +8,8 @@ test("fixSpan: 고친 곳만 — 영어·스페인어·일본어, 통째로 고�
   assert.equal(es?.answer, "comí");
   assert.equal(es?.wrong, "como");
   const ja = fixSpan("昨日、映画を見ます。", "昨日、映画を見ました。", "ja");
-  assert.equal(ja?.answer, "ました");
-  assert.equal(ja?.wrong, "ます");
+  assert.equal(ja?.answer, "見ました");
+  assert.equal(ja?.wrong, "見ます");
   assert.equal(fixSpan("Me gusta.", "Me gustan los perros grandes y negros.", "es"), null);
   assert.equal(fixSpan("I very like it.", "I like it.", "en"), null);
 });

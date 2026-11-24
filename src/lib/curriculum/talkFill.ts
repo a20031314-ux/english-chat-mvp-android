@@ -7,7 +7,7 @@
  */
 import type { QuizQuestion } from "./quiz.ts";
 import { hitsIn, type TalkLine } from "./talkQuiz.ts";
-import { segmentWords } from "../wordSegments.ts";
+import { isSpaceless, segmentWords } from "../wordSegments.ts";
 
 export type TalkFillLine = TalkLine & { was?: string };
 export type TalkFillQuestion = Extract<QuizQuestion, { kind: "talk" }>;
@@ -39,6 +39,8 @@ export function fixSpan(was: string, fixed: string, language: string): { start: 
   while (head < a.length && head < b.length && bare(a[head]!.w) === bare(b[head]!.w)) head += 1;
   let tail = 0;
   while (tail < a.length - head && tail < b.length - head && bare(a[a.length - 1 - tail]!.w) === bare(b[b.length - 1 - tail]!.w)) tail += 1;
+  // 띄어쓰기 없는 말은 어미만 바뀐 고침(見ます → 見ました)이 흔해 앞 낱말 하나를 같이 비운다 — 어미만으로는 앞 줄에도 흔히 보여 답이 샌다.
+  if (head > 0 && isSpaceless(fixed) && head < b.length - tail) head -= 1;
   const changed = b.slice(head, b.length - tail);
   if (!changed.length || changed.length > 4 || changed.length / b.length >= 0.7) return null;
   const start = changed[0]!.s;
