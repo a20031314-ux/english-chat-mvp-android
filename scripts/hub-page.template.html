@@ -116,6 +116,17 @@ details.about[open] summary { margin-bottom: 8px; }
 .jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
 .jump a { font-size: 12.5px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); text-decoration: none; }
 .jump a:hover { border-color: var(--accent); color: var(--accent); }
+.finder { position: sticky; top: 0; z-index: 5; background: var(--bg, #fff); padding: 8px 0 10px; margin: 0 0 10px; border-bottom: 1px solid var(--line); }
+.finder input { width: 100%; box-sizing: border-box; font: inherit; font-size: 14px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; background: transparent; color: var(--ink); }
+.finder input:focus { outline: none; border-color: var(--accent); }
+.finder .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.finder .tabs button { font: inherit; font-size: 12.5px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; }
+.finder .tabs button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.finder .tabs button .n { margin-inline-start: 4px; font-size: 11px; opacity: .7; }
+.finder .found { font-size: 12px; margin-top: 6px; opacity: .75; }
+.tab-off, .search-off { display: none !important; }
+mark.hit { background: #ffe58a; color: inherit; border-radius: 2px; }
+mark.hit.now { background: #ffb347; }
 a.area-link { text-decoration: none; }
 a.area-link code { border-bottom: 1px dashed var(--accent); }
 .see-also { font-size: 12.5px; margin: 2px 0 8px; }
@@ -146,6 +157,12 @@ a.area-link code { border-bottom: 1px dashed var(--accent); }
     <div class="stamp mono" id="stamp"></div>
   </header>
 
+  <div class="finder" role="search">
+    <input type="search" id="find" placeholder="허브 전체에서 찾기 (Enter = 다음)" aria-label="허브에서 찾기" autocomplete="off">
+    <div class="tabs" role="toolbar" aria-label="칸 고르기" id="tabs"></div>
+    <div class="found" id="found" hidden></div>
+  </div>
+
   <section aria-label="버전" class="versions" id="versions"></section>
   <div class="ask" id="ask" hidden></div>
 
@@ -163,7 +180,7 @@ a.area-link code { border-bottom: 1px dashed var(--accent); }
 
   <section aria-label="역할" class="lanes" id="lanes"></section>
 
-  <nav class="jump" aria-label="칸으로 가기" id="jump"></nav>
+  <nav class="jump" aria-label="칸으로 가기" id="jump" hidden></nav>
 
   <section class="panel app-structure" aria-labelledby="app-h" id="app-structure" hidden>
     <h2 id="app-h">앱 전체구조 <small>(hub/app/STRUCTURE.md, 흐름은 손으로 · 영역별 코드는 코드에서 자동)</small></h2>
@@ -203,11 +220,11 @@ a.area-link code { border-bottom: 1px dashed var(--accent); }
   </section>
 
   <div class="lower">
-    <section class="panel" aria-labelledby="log-h">
+    <section class="panel" aria-labelledby="log-h" id="log-panel">
       <h2 id="log-h">인계 기록</h2>
       <div class="log" id="log"></div>
     </section>
-    <section class="panel decisions" aria-labelledby="dec-h">
+    <section class="panel decisions" aria-labelledby="dec-h" id="dec-panel">
       <h2 id="dec-h">계속 지키는 결정</h2>
       <div id="decisions" class="md"></div>
       <h2 id="rules-h">작업 지침 <small>(hub/RULES.md, 모든 채팅이 읽음)</small></h2>
@@ -474,4 +491,117 @@ document.getElementById("rules").innerHTML = Object.entries(HUB.rules || {})
   .filter(([title]) => title !== "_")
   .map(([title, body]) => `<h3>${title.replace(/[<>&]/g, "")}</h3>${md(body)}`)
   .join("");
+
+// 탭·검색(사용자 2026-11-24 "검색하거나 탭을 선택해서 볼 수 있게"): 칸 하나만 보기, 글을 찾으면 그 글이 든 칸만 보이고 칠함.
+(() => {
+  const groups = [
+    ["all", "전체", []],
+    ["now", "지금", ["versions", "ask", "asks", "forgotten", "lanes"]],
+    ...jumps.filter(([id]) => id !== "log-h").map(([id, label]) => [id, label, [id]]),
+    ["log", "인계 기록", ["log-panel"]],
+    ["rules", "결정·지침", ["dec-panel"]],
+  ];
+  const all = [...new Set(groups.flatMap(([, , ids]) => ids))].map((id) => document.getElementById(id)).filter(Boolean);
+  const lower = document.querySelector(".lower");
+  const tabs = document.getElementById("tabs");
+  const input = document.getElementById("find");
+  const found = document.getElementById("found");
+  let tab = (location.hash.match(/tab=([\w-]+)/) || [])[1] || "all";
+  const inTab = (el) => tab === "all" || (groups.find(([id]) => id === tab)?.[2] ?? []).includes(el.id);
+  const counts = new Map();
+  const drawTabs = () => {
+    tabs.innerHTML = groups
+      .map(([id, label]) => `<button type="button" data-tab="${id}" aria-pressed="${id === tab}">${esc(label)}${input.value.trim().length >= 2 && id !== "all" ? `<span class="n">${counts.get(id) ?? 0}</span>` : ""}</button>`)
+      .join("");
+  };
+  const unmark = () => {
+    for (const m of document.querySelectorAll("mark.hit")) m.replaceWith(document.createTextNode(m.textContent));
+    for (const el of all) el.normalize();
+  };
+  let hits = [];
+  let at = -1;
+  const apply = () => {
+    unmark();
+    const q = input.value.trim().toLowerCase();
+    counts.clear();
+    hits = [];
+    at = -1;
+    for (const el of all) {
+      el.classList.toggle("tab-off", !inTab(el));
+      el.classList.remove("search-off");
+      if (q.length < 2) continue;
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      for (let n = walker.nextNode(); n; n = walker.nextNode()) if (n.nodeValue.toLowerCase().includes(q)) nodes.push(n);
+      let n = 0;
+      for (const node of nodes) {
+        const text = node.nodeValue;
+        const low = text.toLowerCase();
+        const frag = document.createDocumentFragment();
+        let from = 0;
+        for (let i = low.indexOf(q); i >= 0; i = low.indexOf(q, i + q.length)) {
+          frag.append(text.slice(from, i));
+          const mark = document.createElement("mark");
+          mark.className = "hit";
+          mark.textContent = text.slice(i, i + q.length);
+          frag.append(mark);
+          from = i + q.length;
+          n += 1;
+        }
+        frag.append(text.slice(from));
+        node.replaceWith(frag);
+      }
+      for (const [gid, , ids] of groups) if (ids.includes(el.id)) counts.set(gid, (counts.get(gid) ?? 0) + n);
+      if (!n) el.classList.add("search-off");
+      else for (const d of el.querySelectorAll("details")) if (d.querySelector("mark.hit")) d.open = true;
+    }
+    if (lower) lower.classList.toggle("tab-off", ["log-panel", "dec-panel"].every((id) => document.getElementById(id)?.classList.contains("tab-off") || document.getElementById(id)?.classList.contains("search-off")));
+    hits = [...document.querySelectorAll("mark.hit")].filter((m) => m.offsetParent !== null);
+    found.hidden = q.length < 2;
+    found.textContent = hits.length ? `${hits.length}곳` : "없음";
+    drawTabs();
+  };
+  const next = () => {
+    if (!hits.length) return;
+    hits[at]?.classList.remove("now");
+    at = (at + 1) % hits.length;
+    hits[at].classList.add("now");
+    hits[at].scrollIntoView({ block: "center" });
+    found.textContent = `${at + 1} / ${hits.length}곳`;
+  };
+  tabs.addEventListener("click", (event) => {
+    const b = event.target.closest("button[data-tab]");
+    if (!b) return;
+    tab = b.dataset.tab;
+    history.replaceState(null, "", tab === "all" ? location.pathname + location.search : `#tab=${tab}`);
+    apply();
+    window.scrollTo({ top: 0 });
+  });
+  let timer = 0;
+  input.addEventListener("input", () => {
+    clearTimeout(timer);
+    timer = setTimeout(apply, 200);
+  });
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      next();
+    }
+    if (event.key === "Escape") {
+      input.value = "";
+      apply();
+    }
+  });
+  // 본문 속 #칸 링크(영역 이름 등)를 누르면 그 칸이 든 탭으로.
+  document.addEventListener("click", (event) => {
+    const a = event.target.closest("a[href^='#']");
+    if (!a || tab === "all") return;
+    const target = document.querySelector(a.getAttribute("href"));
+    if (target && target.closest(".tab-off")) {
+      tab = "all";
+      apply();
+    }
+  });
+  apply();
+})();
 </script>
