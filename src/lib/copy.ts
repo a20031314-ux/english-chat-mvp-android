@@ -93,7 +93,7 @@ const generatedBillingOverlay = {
     "Pick a title from this month’s library, or paste your own link. Library titles are free; custom links use import points.",
   videoLearnLibraryTitle: "This month’s library",
   videoLearnLibrarySubtitleFree:
-    "Free trial: {used}/{limit} episodes. It doesn’t refill each month — subscribe to open the full monthly pack.",
+    "Free trial: {used}/{limit} episodes. It doesn’t refill each month — subscribe to watch every video this month.",
   videoLearnLibrarySubtitlePremium:
     "Every video this month · no points charged",
   videoLearnLibraryEmpty:
@@ -1900,7 +1900,7 @@ export const copy = {
       "{used}/{limit} import points this month · 1 point per 3 minutes · library and saved videos are free",
     videoLearnLibraryTitle: "This month’s library",
     videoLearnLibrarySubtitleFree:
-      "Free trial: {used}/{limit} episodes. It doesn’t refill each month — subscribe to open the full monthly pack.",
+      "Free trial: {used}/{limit} episodes. It doesn’t refill each month — subscribe to watch every video this month.",
     videoLearnLibrarySubtitlePremium:
       "Every video this month · no points charged",
     videoLearnLibraryEmpty:
@@ -2715,7 +2715,7 @@ export const copy = {
       "{used}/{limit} puntos de importación este mes · 1 punto cada 3 min · biblioteca y guardados son gratis",
     videoLearnLibraryTitle: "Biblioteca de este mes",
     videoLearnLibrarySubtitleFree:
-      "Prueba gratis: {used}/{limit} episodios. No se renueva cada mes; suscríbete para abrir el pack mensual.",
+      "Prueba gratis: {used}/{limit} episodios. No se renueva cada mes; suscríbete para ver todos los videos del mes.",
     videoLearnLibrarySubtitlePremium:
       "Todos los videos del mes · sin descontar puntos",
     videoLearnLibraryEmpty:

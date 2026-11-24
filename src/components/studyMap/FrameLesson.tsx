@@ -28,6 +28,7 @@ import { askedTexts, lessonQuiz, pieceOf, quizSources, type QuizQuestion } from 
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { turnFresh } from "@/lib/curriculum/preparedQuiz";
 import { preparedLessonQuiz } from "@/lib/curriculum/ladderQuiz";
+import { maskAnswers } from "@/lib/curriculum/lessonTitle";
 import { loadSpots, spotsFor } from "@/lib/curriculum/spotLoad";
 import { pieceIn, type LessonScene } from "@/lib/curriculum/lessonKey";
 import { growBank } from "@/lib/curriculum/qbank";
@@ -362,6 +363,19 @@ export function FrameLesson({
       })
     : [];
   const titleText = frame?.pattern ?? (key.startsWith("e|") ? key.slice(2) : grammarPage?.name || lesson?.title || subject?.title || "");
+  // 문법 칸 이름에 퀴즈·대화의 답이 그대로 든 경우(예: "A は B です" — 답 は): 그 단계에서는 답 자리를 가림(RULES 11①, 사용자 2026-11-24).
+  const answersHere = useMemo(() => {
+    const out = questions.flatMap((q) =>
+      q.kind === "choose" ? [q.options[q.answer] ?? ""] : q.kind === "type" && !q.whole ? [q.answer] : q.kind === "spot" ? [q.want] : [],
+    );
+    for (const one of turns) {
+      const piece = pieceOfTurn(one);
+      if (piece) out.push(piece);
+    }
+    return out;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [questions, turns]);
+  const maskedTitle = (text: string) => maskAnswers(text, answersHere);
   // 닫기(✕·끝 화면 "닫기" 같음): 전면 광고 없음 — 수업은 어디서나 열려(openLesson) 닫으면 퀴즈·통화·채팅으로 돌아가는 도중이라. 끝 화면 네이티브만.
   const close = () => onClose();
 
@@ -372,7 +386,7 @@ export function FrameLesson({
           {/* Quiz and talk steps hide the pattern (user, 2026-10-30: the title gave the answer away) — only what the pattern is for. */}
           <h2 dir="auto" className="text-body font-semibold text-ink">
             {/* 문법 칸은 늘 문법 이름(예: 현재완료) — 생성된 설명 첫 줄이 제목 자리에 통째로 올라가던 것(2026-11-03 사용자). */}
-            {hideFrame && !key.startsWith("g|") ? meaningHead || (key.startsWith("e|") ? "" : titleText) : titleText} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
+            {hideFrame && !key.startsWith("g|") ? meaningHead || (key.startsWith("e|") ? "" : titleText) : hideFrame ? maskedTitle(titleText) : titleText} {passed || justPassed ? <span className="text-caption text-good">✓</span> : null}
           </h2>
           {hideFrame || !meaningText || key.startsWith("g|") ? null : (
             <p dir="auto" className="mt-0.5 text-caption text-slate-400">
