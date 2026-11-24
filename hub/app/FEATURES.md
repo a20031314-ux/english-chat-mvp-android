@@ -28,7 +28,7 @@
 
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
-| AI 튜터 줄 | 대화 탭 맨 위 — 고른·팔로우한 튜터마다 한 줄, 마지막 말, 통화 문 넷, 숙제 줄·점 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/AiTutorRow.tsx` · `lib/tutorFollows.ts` |  |
+| AI 튜터 줄 | 대화 탭 맨 위 — 고른·팔로우한 튜터마다 한 줄, 마지막 말, 📞 통화 문 하나, 숙제 줄·점 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/AiTutorRow.tsx` · `lib/tutorFollows.ts` |  |
 | 1:1 메시지 `homeTabMessages` (화면: 메시지) | 요청 → 열림, 📞 둘만의 비공개 방 | 1 메인 · 4 사람 | `components/rooms/RoomDm.tsx` |  |
 | 단체방 | 단체 대화 · 팀 워크스페이스 · 📞 단체방 통화 | 1 메인 · 4 사람 | `components/rooms/RoomGroups.tsx` · `components/rooms/TeamSpace.tsx` |  |
 
@@ -36,7 +36,7 @@
 
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
-| 튜터 프로필 | 사람 프로필과 같은 틀 — 소개 · 통화 문 넷 · 숙제 · 마지막 메모 · 팔로우·메시지·통화 기록 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/AiTutorProfile.tsx` · `lib/roleplay/tutorDesk.ts` |  |
+| 튜터 프로필 | 사람 프로필과 같은 틀 — 소개 · 📞 통화 문 하나 · 숙제 · 마지막 메모 · 팔로우·메시지·통화 기록 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/AiTutorProfile.tsx` · `lib/roleplay/tutorDesk.ts` |  |
 | 사람 `homeTabPeople` | 맨 위 AI 튜터 둘 + 사람 카드·프로필(팔로우·메시지·메이트·차단·신고) | 1 메인 · 2 My · 4 사람 | `components/rooms/PeopleTab.tsx` · `components/rooms/RoomPeople.tsx` |  |
 | 게시판 | 학습 언어별, 주제 칩 자유·질문·메이트·단체방 | 4 사람 | `components/rooms/BoardView.tsx` |  |
 | 아이콘·짤 | 1:1·단체방·게시판 🙂 — 마켓(받기·신고)·편집기 | 4 사람 | `components/rooms/IconPacks.tsx` · `components/rooms/IconEditor.tsx` |  |
@@ -83,7 +83,7 @@
 |---|---|---|---|---|
 | 첫 측정 | 학습 언어로 처음 My를 열면 — 글자 → 낱말 예/아니오 → 뜻 → 표현·문법 → 시작 단계(건너뛰기 = 1단계) | 2 My | `components/studyMap/FirstCheck.tsx` · `lib/curriculum/firstCheck.ts` | 단계 고르기(대화 예시) · 단계 오르내리기 시험(PlacementPlayer) · 초급·중급·고급 체크 |
 | Logbank `logbankTitle` | My 첫 칸, 기록만 — 배운 것 표 · 쌓기 기둥(날마다 요소 자리 순서로 블록 — 누르면 그 카드, 다시 맞힌 블록은 흰 점, 누른 날 비율 막대·요소 칩·↺ 다시 맞힘·✎✓ 고쳐 씀 칩 → 카드들) · 학습 곡선(활용 누적 — 점 › → 그날 새로 활용한 카드·쓴 문장) · 그날 세부 = 학습 타임라인(%·띠·육각형 없음) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/studyMap/Logbank.tsx` · `lib/curriculum/logLedger.ts` | 복습 칸 · 📈 실력 기록 · 이번 주 확인 · 띠·육각형 %·부족한 점 · 날마다 한 줄 목록 · 학습 곡선 학습 막대 · ↺ 다시 맞힘·✎✓ 고쳐 씀·📞 통화 칩 줄(통화는 튜터 프로필 통화 기록) |
-| 오늘의 학습 `notebookToday` | My 맨 위 계정 카드 아래 = 오늘 타임라인 — 오늘 한 학습 시간 줄(Logbank 그날 세부와 같은 줄, 누르면 그 덩어리 세부) 뒤에 오늘 할 것 칸: ▶ Quizbank n/10(오늘 답한 서로 다른 것) · 글자부터면 오늘의 글자 묶음 · 숙제(있을 때) · 고른 튜터와 통화(튜터 얼굴, 누르면 튜터 프로필 — 문 넷·메모·통화 기록, 오늘 어떤 모드든 통화 한 번이면 ✓), 다 끝나면 제목 ✓ · ⏱ 오늘 분 | 1 메인 · 2 My · 3 AI | `components/studyMap/TodayCards.tsx` · `lib/curriculum/todayCards.ts` · `components/studyMap/Logbank.tsx` | 오늘 할 것(Stagebank) · 다음 추천 · 오늘 카드 셋(막힌 것·다시 학습·새로 학습·써 보기) · 📏 실력 확인(2주마다 다시 측정·Logbank 기록 표) |
+| 오늘의 학습 `notebookToday` | My 맨 위 계정 카드 아래 = 오늘 타임라인 — 오늘 한 학습 시간 줄(Logbank 그날 세부와 같은 줄, 누르면 그 덩어리 세부) 뒤에 오늘 할 것 칸: ▶ Quizbank n/10(오늘 답한 서로 다른 것) · 글자부터면 오늘의 글자 묶음 · 숙제(있을 때) · 고른 튜터와 통화(튜터 얼굴, 누르면 튜터 프로필 — 📞·메모·통화 기록, 오늘 통화 한 번이면 ✓), 다 끝나면 제목 ✓ · ⏱ 오늘 분 | 1 메인 · 2 My · 3 AI | `components/studyMap/TodayCards.tsx` · `lib/curriculum/todayCards.ts` · `components/studyMap/Logbank.tsx` | 오늘 할 것(Stagebank) · 다음 추천 · 오늘 카드 셋(막힌 것·다시 학습·새로 학습·써 보기) · 📏 실력 확인(2주마다 다시 측정·Logbank 기록 표) |
 | 학습 타임라인 | Logbank 그날 세부 — 학습 시간(10분 쉼으로 끊음) → 요소별 카드 → 카드 지난 기록 | 1 메인 · 2 My · 3 AI | `lib/curriculum/studyTimeline.ts` |  |
 | 학습 수 `lbFresh` (화면: 학습) | 그 기간에 퀴즈로 답한 서로 다른 것의 수 — Logbank 배운 것 표 열·쌓기 기둥·그날 칸. 낱말마다 붙는 표시 없음(사전에 마지막 틀림 ✗만) | 1 메인 · 2 My · 3 AI | `lib/curriculum/growthView.ts` · `lib/curriculum/studyTimeline.ts` | 체크 셋 이름(New·적용이 힘듦·알아요) 표시 · 점 셋 · 낱말 표시 학습 · n번 학습 · 새로 학습 · 다시 학습 · 학습 n번(공부 묶음 수) |
 | Quizbank `keepTitle` | 한 흐름 퀴즈 — 다시 볼 것(막힌 것 먼저)과 새 묶음 번갈아, 낱말은 예문 속 뜻 고르기(보기가 안 모이면 그 낱말은 안 냄), 문법·표현은 사다리(고르기 → 빈칸 → 틀린 곳 → 문장), 문단 틀린 곳(P1~P4), 게이지(난이도 − 높아지는 막대 다섯 +)로 난이도, 종류 비율은 약한 쪽으로·연달아 다 맞힌 종류는 잠깐 줄임, 문법·표현은 퀴즈로 닿은 단계부터(그 단계 문법 칸을 다 끝내면 위로), 1~5단계 문법을 다 끝내면 다음 회차(같은 칸 새 문장 — 문제은행·튜터 줄), 대화 채우기(이 폰 채팅·통화에서 고침받은 내 줄·소재가 든 줄 — 한 곳 빈칸), 답 뒤 📕 | 1 메인 · 2 My · 3 AI | `components/studyMap/Quizbank.tsx` · `components/studyMap/InlineQuiz.tsx` · `lib/curriculum/quiz.ts` · `lib/curriculum/ladder.ts` | Quizbank 탭 [어휘 \| 다시 보기 \| 시험] · 📝 단어 시험 · 정기 시험 · 😴 쉬워요 줄 · ⚙ 어떤 낱말 · 낱말 쓰기·예문 없이 쓰기·맞나 틀리나 · 넣어 둔 영어 낱말 쓰기 문제(en-w) · 아는 확률로 모양 고르기(quizTier) · 맞나 틀리나(문법 실수 끼우기) · 낱말 스스로 체크(알아요 \| 모르겠어요) |
@@ -135,6 +135,19 @@
 
 | 무엇 | 왜 남았나 | 남은 코드 |
 |---|---|---|
+
+## 연결 묶음 (6) — 같은 일을 여러 기능이 함
+
+> 한 기능 쪽만 바뀌면(고도화·변경) 나머지 기능을 같이 맞추거나 hub/chat/log에 `- 연결 <묶음>: <기능 id> 맞춤|일부러 다름 — 이유|해당 없음 — 이유`(`node scripts/links.mjs --diff <시작 커밋>` — 끝내기 훅·CI). 계속 다르게 둘 것은 differs에. 주 1회 예약 작업 "연결 맞춤 점검"이 묶음마다 두 코드를 비교해 한쪽에만 있는 개선을 `hub/work/reports.md`에.
+
+| 묶음 | 맞출 것 | 기능 · 그 기능의 파일 | 일부러 다름 |
+|---|---|---|---|
+| 퀴즈 문제 만들기 `quiz-make` | 문제 모양·오답 보기·넣어 둔 문제·틀린 곳 이유·보기 설명·난이도 — Quizbank를 고도화하면 다른 퀴즈도 같은 문제 재료·근거를 쓰는지 | Quizbank `components/studyMap/Quizbank.tsx`·`lib/curriculum/ladder.ts`·`lib/curriculum/ladderQuiz.ts` / 소재 수업 `components/studyMap/FrameLesson.tsx` / 숙제 `lib/roleplay/homeworkQuiz.ts` / 첫 측정 `lib/curriculum/firstCheck.ts`·`components/studyMap/FirstCheck.tsx` / 공용 `components/studyMap/QuizPlayer.tsx`·`lib/curriculum/quiz.ts` |  |
+| 따라 말하기 채점 `say-grade` | 말한 문장을 목표 문장과 대조해 ✓·한 번 더·틀린 낱말 표시 — 통화 코치 띠·대화 시뮬레이션·수업·퀴즈 말하기가 같은 잣대인지 | 통화 `lib/roleplay/transcriptMarks.ts`·`components/RoleplayScreen.tsx` / 이렇게도 말할 수 있었어요 `components/roleplay/CallReplay.tsx`·`lib/roleplay/replay.ts` / 소재 수업 `components/studyMap/LineParts.tsx` / Quizbank `components/studyMap/QuizPlayer.tsx` / 공용 `lib/roleplay/practice.ts`·`components/speech/Attempt.tsx` |  |
+| 내 줄 교정 보이기 `correction-view` | 내가 쓴·말한 줄의 고친 꼴·이유 표시(CorrectionChip·CorrectionCard) — AI 채팅·통화 돌아보기·사람 대화가 같은 모양인지 | AI 채팅 `components/MessageBubble.tsx`·`components/ChatWindow.tsx` / 통화 끝 화면 `components/RoleplayReview.tsx` / Room `components/rooms/RoomParts.tsx` / 공용 `components/conversation/LineTools.tsx` |  |
+| 튜터 문 `tutor-door` | 튜터 얼굴·💬·📞·숙제 줄로 들어가는 문 — 대화 탭 튜터 줄·튜터 프로필·사람 탭 튜터 둘·오늘의 학습 튜터 칸이 같은 문·같은 이름인지 | AI 튜터 줄 `components/AiTutorRow.tsx` / 튜터 프로필 `components/AiTutorProfile.tsx` / 사람 `components/rooms/PeopleTab.tsx` / 오늘의 학습 `components/studyMap/TodayCards.tsx` |  |
+| 통화 화면 `call-screen` | 얼굴 칸·자막·🙉·버튼 줄·끝내기 — AI 통화와 사람 통화(1:1·Room)가 같은 화면인지 | 통화 `components/roleplay/CallParts.tsx` / 1:1 메시지 `components/rooms/RoomCall.tsx` / Room `components/rooms/VideoStage.tsx`·`components/rooms/RoomView.tsx` / 공용 `components/speech/CallKit.tsx` |  |
+| 사전 열기 `dict-open` | 낱말·표현을 누르면 사전 시트·소재 수업 — 사전 주석·My에서 찾기·Languagebank가 같은 시트·같은 순서인지 | 사전 주석 `components/studyMap/DictNotes.tsx`·`lib/curriculum/dictNotes.ts` / My에서 찾기 `components/FindInMy.tsx` / Languagebank `components/studyMap/LanguageBank.tsx` / 공용 `components/studyMap/Dictionary.tsx` |  |
 
 ## 부품 (50) — 기능 줄에 딸린 화면 코드
 

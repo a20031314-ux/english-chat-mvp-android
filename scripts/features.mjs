@@ -11,12 +11,14 @@
  *     - 화면 코드(src/components 아래 .tsx)가 기능 줄 code에도 parts에도 없음(2026-11-24 사용자 "장부 자체를 점검" —
  *       장부 밖 화면 조각은 겹침·옛 것 검사에 안 걸려 옛 카드가 한 달 남았다), parts가 없는 파일·없는 기능 id를 가리킴
  *     - 화면끼리 신호(appIntents.ts) 중 보내는 곳이나 받는 곳이 없는 것
+ *     - 연결 묶음(links — scripts/links.mjs)이 없는 기능·파일을 가리킴
  *   remove 줄의 코드가 남아 있는 것은 실패가 아니라 "지울 것" 표로 — 줄어드는 게 목표.
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { scopeOf } from "./scope.mjs";
+import { linkProblems } from "./links.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ledger = JSON.parse(fs.readFileSync(path.join(root, "scripts/features.json"), "utf8"));
@@ -100,6 +102,8 @@ for (const [file, owner] of Object.entries(parts)) {
   }
 }
 
+problems.push(...linkProblems());
+
 const cell = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\n/g, " ");
 const name = (one) => (one.copy ? `${one.name} \`${one.copy}\`${koValue(one.copy) && koValue(one.copy) !== one.name ? ` (화면: ${koValue(one.copy)})` : ""}` : one.name);
 const tabNames = JSON.parse(fs.readFileSync(path.join(root, "hub/chat/tabs.json"), "utf8")).tabs;
@@ -146,6 +150,21 @@ lines.push("|---|---|---|");
 for (const one of remove) {
   const left = (one.code ?? []).filter(exists);
   lines.push(`| ${cell(one.name)} | ${cell(one.does)}${one.note ? ` — ${cell(one.note)}` : ""} | ${left.length ? left.map((f) => `\`${f.replace(/^src\//, "")}\``).join(" · ") : "없음 — 줄을 지운다"} |`);
+}
+lines.push("");
+const linkGroups = ledger.links ?? [];
+lines.push(`## 연결 묶음 (${linkGroups.length}) — 같은 일을 여러 기능이 함`);
+lines.push("");
+lines.push("> 한 기능 쪽만 바뀌면(고도화·변경) 나머지 기능을 같이 맞추거나 hub/chat/log에 `- 연결 <묶음>: <기능 id> 맞춤|일부러 다름 — 이유|해당 없음 — 이유`(`node scripts/links.mjs --diff <시작 커밋>` — 끝내기 훅·CI). 계속 다르게 둘 것은 differs에. 주 1회 예약 작업 \"연결 맞춤 점검\"이 묶음마다 두 코드를 비교해 한쪽에만 있는 개선을 `hub/work/reports.md`에.");
+lines.push("");
+lines.push("| 묶음 | 맞출 것 | 기능 · 그 기능의 파일 | 일부러 다름 |");
+lines.push("|---|---|---|---|");
+const featureName = (id) => ledger.features.find((one) => one.id === id)?.name ?? id;
+for (const group of linkGroups) {
+  const members = Object.entries(group.members).map(([id, m]) => `${featureName(id)} ${m.files.map((f) => `\`${f.replace(/^src\//, "")}\``).join("·")}`).join(" / ");
+  const core = (group.core ?? []).length ? ` / 공용 ${group.core.map((f) => `\`${f.replace(/^src\//, "")}\``).join("·")}` : "";
+  const differs = Object.entries(group.differs ?? {}).map(([id, why]) => `${featureName(id)}: ${why}`).join(" · ");
+  lines.push(`| ${cell(group.name)} \`${group.id}\` | ${cell(group.what)} | ${cell(members + core)} | ${cell(differs)} |`);
 }
 lines.push("");
 const partList = Object.entries(parts);

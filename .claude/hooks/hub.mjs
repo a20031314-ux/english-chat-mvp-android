@@ -329,6 +329,9 @@ if (mode === "stop") {
   const anySrc = commits.some((c) => c.src);
   const scope = anySrc ? scopeUnasked(commits, state?.base) : null;
   const oldUnsaid = anySrc && !commits.some((c) => c.oldNote);
+  // 연결 묶음(scripts/links.mjs): 한 기능 쪽만 바뀌었으면 나머지 기능을 맞추거나 log에 "- 연결 …" 줄.
+  const links =
+    anySrc && state?.base && fs.existsSync(path.join(ROOT, "scripts", "links.mjs")) ? runScript([path.join(ROOT, "scripts", "links.mjs"), "--diff", state.base]) : { ok: true };
   const leftovers =
     anySrc && fs.existsSync(path.join(ROOT, "scripts", "leftovers.mjs")) ? runScript([path.join(ROOT, "scripts", "leftovers.mjs"), "--check"]) : { ok: true };
   // 압축된 채팅은 한 번 양도를 권한다(이미 hub/chat/handoff/에 남겼으면 안 함).
@@ -341,7 +344,7 @@ if (mode === "stop") {
       // 못 적으면 다음 끝에 한 번 더 권할 뿐.
     }
   }
-  if (missing.length === 0 && unchecked.length === 0 && !mapProblems && !askPass && !scope && !oldUnsaid && leftovers.ok) process.exit(0);
+  if (missing.length === 0 && unchecked.length === 0 && !mapProblems && !askPass && !scope && !oldUnsaid && leftovers.ok && links.ok) process.exit(0);
 
   const reasons = [];
   if (missing.length) {
@@ -377,6 +380,14 @@ if (mode === "stop") {
       "앱 코드를 바꿨는데 옛 방식을 어떻게 했는지 기록이 없다. 바꾼 것이 옛 방식(알고리즘·화면·계산)을 대신했으면 옛 코드가 아직 불리는지 찾아(scripts/scope.mjs가 보이는 \"같은 이름\"·장부 replaces) " +
         "같은 커밋에서 지우거나, 지울지 사용자에게 묻는다(`node scripts/asks.mjs delete --from <탭> --what \"…\" --files …` 후 바로 AskUserQuestion). " +
         "그리고 hub/chat/log 항목에 한 줄: `- 옛 것: 없음` / `- 옛 것: 지움 <무엇>` / `- 옛 것: 사용자에게 물음 <ask id>`. 커밋·push하라.",
+    );
+  }
+  if (!links.ok) {
+    reasons.push(
+      "연결된 기능 중 한쪽만 바뀌었다(고도화·변경이 다른 기능에 안 퍼짐 — hub/app/FEATURES.md \"연결 묶음\"). " +
+        "볼 쪽 기능을 이 채팅에서 같이 맞추거나, 다르게 두는 게 맞으면 hub/chat/log 항목에 기능마다 한 줄을 남기고 커밋·push하라. " +
+        "계속 다르게 둘지 애매하면 사용자에게 AskUserQuestion으로 묻고, 사용자가 정한 것은 scripts/features.json links의 differs에 적는다:\n" +
+        links.out,
     );
   }
   if (!leftovers.ok) {

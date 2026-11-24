@@ -1,0 +1,20 @@
+{
+  "_": "scripts/clones.mjs 기준 — 보고 정리한(또는 일부러 둔) 복제. 새로 생긴 것만 예약 작업이 보고한다.",
+  "known": [
+    "src/lib/notes/myParts.ts|src/lib/notes/stageParts.ts|; const measured = parts . filter ( ( part ) =",
+    "src/lib/contentDiscovery/search/discoverChannelVideos.ts|src/lib/contentDiscovery/search/typedYoutubeSearch.ts|) . filter ( ( row ) : row is VideoCandidate =",
+    "src/lib/contentDiscovery/search/supportedVideo.ts|src/lib/videoLearning.ts|( raw : string ) : string | null { const trimmed",
+    "src/lib/contentDiscovery/providers/youtubeProvider.ts|src/lib/contentDiscovery/search/providers/youtubeSearchProvider.ts|thumbnails ? : { medium ? : { url ? : string",
+    "src/components/studyMap/FirstCheck.tsx|src/lib/curriculum/wordSentencesLoad.ts|} > > = { ar : ( ) = > import",
+    "src/lib/notes/myParts.ts|src/lib/notes/stageParts.ts|) ) ; const index = new Map ( days . map",
+    "src/components/FeedbackButton.tsx|src/lib/notes/sceneShots.ts|/ Math . max ( N , image . naturalWidth ) )",
+    "src/lib/guide/overview.ts|src/lib/guide/overviewBefore283.ts|( language : string ) : GuideOverview { const lines = TEXT",
+    "src/lib/learner/comprehension.ts|src/lib/learner/ledger.ts|( text : string ) : string { return text . toLowerCase",
+    "src/lib/server/preparedCopy.ts|src/lib/server/stageCopy.ts|. map ( ( text , index ) = > S )",
+    "src/app/api/expression-units/route.ts|src/app/api/learning-spans/route.ts|{ if ( ! sentence | | sentence . length > N",
+    "src/lib/videoSubtitle/groupMeaningUnits.ts|src/lib/videoSubtitle/sttChunks.ts|function stripLeadingOverlap ( previous : string , next : string ) :",
+    "src/components/rooms/RoomDm.tsx|src/components/rooms/RoomGroups.tsx|} < / bdi > : < bdi > < QuoteText text",
+    "src/lib/roleplay/fixMemory.ts|src/lib/roleplay/lifeFacts.ts|} ; type Store = { getItem ( key : string )",
+    "src/lib/server/frameLesson.ts|src/lib/server/itemLesson.ts|text . trim ( ) ) ) ; for ( const line"
+  ]
+}
