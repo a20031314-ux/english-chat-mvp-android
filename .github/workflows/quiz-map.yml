@@ -1,0 +1,47 @@
+# 문제 지도(hub/app/QUIZ-MAP.md)가 퀴즈 코드·문제 데이터보다 뒤처지지 않게 한다.
+#
+# - main push: npm run quiz:map으로 다시 만들고, 바뀌었으면 커밋(허브만 바뀐 커밋이라 Vercel은 다시 배포하지 않음).
+# - 그 밖의 push·PR: 만들어지는지만 본다(실패 = 스크립트가 코드와 어긋남).
+# 키·네트워크가 필요 없다.
+name: quiz-map
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quiz-map-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  quiz-map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 문제 지도 다시 만들기
+        run: npm run quiz:map
+      - name: main이면 hub/app/QUIZ-MAP.md 커밋
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet -- hub/app/QUIZ-MAP.md; then
+            echo "문제 지도 그대로"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hub/app/QUIZ-MAP.md
+          git commit -m "문제 지도 자동 갱신 (${GITHUB_SHA::7} 기준)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1

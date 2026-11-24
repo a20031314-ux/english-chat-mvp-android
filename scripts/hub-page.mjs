@@ -113,6 +113,13 @@ try {
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
+// 문제 지도(hub/app/QUIZ-MAP.md, scripts/quiz-map.mts가 코드·문제 데이터에서 만듦 — 다 맞히면 어떤 순서·구조로 나오나).
+let quizMap = "";
+try {
+  quizMap = read("app/QUIZ-MAP.md");
+} catch {
+  // 아직 없으면 칸을 숨긴다.
+}
 // 잊힌 일(hub/work/forgotten.md, scripts/hub-forgotten.mjs가 만듦 — 예약 작업 "잊힌 일 알림"이 매일).
 let forgotten = "";
 try {
@@ -134,7 +141,7 @@ try {
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
-const data = { state, rules, roles, inbox, logs, dataMap, structure, ads, quiz, forgotten, models, asks, commit, builtAt: new Date().toISOString() };
+const data = { state, rules, roles, inbox, logs, dataMap, structure, ads, quiz, quizMap, forgotten, models, asks, commit, builtAt: new Date().toISOString() };
 const template = fs.readFileSync(path.join(ROOT, "scripts", "hub-page.template.html"), "utf8");
 const html = template.replace("/*HUB_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
 fs.mkdirSync(path.dirname(OUT), { recursive: true });

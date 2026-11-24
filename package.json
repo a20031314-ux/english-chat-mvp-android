@@ -8,6 +8,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:capacitor": "node scripts/build-capacitor.mjs",
+    "quiz:map": "node --experimental-strip-types --no-warnings scripts/quiz-map.mts",
     "build:android": "npm run build:capacitor && npx cap sync android",
     "pc:build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/pc-build.ps1",
     "build:ios": "npm run build:capacitor && node scripts/ios-project.mjs && npx cap sync ios",

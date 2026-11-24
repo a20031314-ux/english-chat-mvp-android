@@ -183,6 +183,12 @@ a.area-link code { border-bottom: 1px dashed var(--accent); }
     <p class="how">퀴즈·문제은행·낱말 은행·오답·채점을 바꾸는 채팅이 먼저 읽고, 같은 커밋에서 고칩니다(RULES 11). 영역 이름을 누르면 앱 전체구조의 그 영역으로 갑니다.</p>
   </section>
 
+  <section class="panel app-structure" aria-labelledby="quizmap-h" id="quizmap" hidden>
+    <h2 id="quizmap-h">문제 지도 <small>(hub/app/QUIZ-MAP.md, 코드·문제 데이터에서 자동 — 다 맞히면 어떤 순서·구조로 나오나)</small></h2>
+    <div id="quizmap-body" class="md"></div>
+    <p class="how">main push 때 CI <code>quiz-map</code>이 다시 만듭니다. 규칙의 글은 위 퀴즈 알고리즘, 실력이 섞인 1년은 <code>scripts/sim/quiz-year.mts</code>.</p>
+  </section>
+
   <section class="panel app-structure" aria-labelledby="models-h" id="models" hidden>
     <h2 id="models-h">모델 교체 <small>(hub/app/model-swap.md, 자동 — 예약 작업 "AI 모델 살피기"가 매주 월요일)</small></h2>
     <div id="models-body" class="md"></div>
@@ -413,6 +419,13 @@ if (HUB.quiz) {
   document.getElementById("quiz-body").innerHTML = html;
   document.getElementById("quiz").hidden = false;
   jumps.push(["quiz", "퀴즈 알고리즘"]);
+}
+
+// 문제 지도(hub/app/QUIZ-MAP.md — scripts/quiz-map.mts가 만듦).
+if (HUB.quizMap) {
+  document.getElementById("quizmap-body").innerHTML = renderDoc(HUB.quizMap);
+  document.getElementById("quizmap").hidden = false;
+  jumps.push(["quizmap", "문제 지도"]);
 }
 
 // 모델 교체 후보(hub/app/model-swap.md — scripts/models/whatif.mjs가 만듦).
