@@ -8999,23 +8999,93 @@
       "base": "2fcdb4d71b88e65c9444f3fd32526d790ae30bc1",
       "head": "55a19dc",
       "status": "open"
+    },
+    {
+      "id": "a261125-3-4",
+      "at": "2026-11-25 00:40",
+      "kind": "apply",
+      "from": "3",
+      "to": "1",
+      "what": "Quizbank 고르기의 뜻 차이를 대답 고르기로(reply shown·why)",
+      "files": [
+        "src/app/api/curriculum/qbank/seed/route.ts",
+        "src/components/FindInMy.tsx",
+        "src/components/EnglishAnalysisViewer.tsx",
+        "src/components/EnglishAnalysisProvider.tsx"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "ec33c4ada5f2ee1e6bb67c5145bedb2aa972774d",
+      "head": "346824f",
+      "status": "open"
+    },
+    {
+      "id": "a261125-3-5",
+      "at": "2026-11-25 00:40",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "Quizbank 고르기의 뜻 차이를 대답 고르기로(reply shown·why)",
+      "files": [
+        "src/components/studyMap/QuizPlayer.tsx",
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/InlineQuiz.tsx",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/Quizbank.tsx",
+        "src/app/api/curriculum/item-lesson/route.ts",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/app/api/curriculum/qbank/route.ts",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/studyMap/LessonHost.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/components/studyMap/Dictionary.tsx",
+        "src/app/api/curriculum/words/route.ts",
+        "src/components/studyMap/BankFlip.tsx",
+        "src/components/studyMap/DictNotes.tsx",
+        "src/components/studyMap/LanguageBank.tsx",
+        "src/lib/curriculum/ladderQuiz.ts",
+        "src/lib/server/spotMake.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "ec33c4ada5f2ee1e6bb67c5145bedb2aa972774d",
+      "head": "346824f",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-16 13:11",
-      "from": "1",
-      "base": "2c10b5b",
-      "head": "cec020d",
-      "what": "사용법 넘겨 보기 장면이 14개 앱 언어 모두로(lib/guide/slides.ts·slideTitles.ts). 각 탭 화면이 바뀌면 scripts/guide-slides/로 그 언어 그림을 다시",
-      "tabs": [
-        "1",
-        "2"
-      ],
-      "asks": [
-        "a261116-1-1"
-      ]
-    },
     {
       "at": "2026-11-17 23:22",
       "from": "3",
@@ -9620,9 +9690,25 @@
         "a261125-3-2",
         "a261125-3-3"
       ]
+    },
+    {
+      "at": "2026-11-25 00:40",
+      "from": "3",
+      "base": "ec33c4ada5f2ee1e6bb67c5145bedb2aa972774d",
+      "head": "346824f",
+      "what": "Quizbank 고르기의 뜻 차이를 대답 고르기로(reply shown·why)",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261125-3-4",
+        "a261125-3-5"
+      ]
     }
   ],
   "seq": {
-    "261125-3": 3
+    "261125-3": 5
   }
 }
