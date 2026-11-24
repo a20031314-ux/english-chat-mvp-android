@@ -345,3 +345,6 @@
 - 2026-11-23 watch → dev: [ai] src/components/roleplay/callHooks.ts:137 — 통화 남은 시간을 벽시계로 빼서 서버(첫 차례부터·차례 사이 60초 상한)보다 빨리 줄어듦, 오래 멈추면 0분까지 (차례 응답 뒤 /api/entitlement로 다시 맞추거나 서버와 같은 셈)
 - 2026-11-24 watch → dev: [my] src/components/studyMap/Quizbank.tsx:276 — 측정 무작위 칸(4칸 문장)을 한 번 맞히면 사다리가 바로 끝으로 올라 고르기·빈칸·틀린 곳을 건너뛰고 새 묶음에서 빠짐 (무작위로 맞히면 한 칸만 올리기)
 - 2026-11-24 watch → dev: [my] src/components/studyMap/Quizbank.tsx:326 — 측정 무작위 칸이 지금 칸~4칸에서만 나와 칸별 정답률 통계가 2026-11-24 앞뒤로 다른 표본 (통계에 측정 방식 표시 또는 집계에서 날짜로 나눔)
+- 2026-11-24 watch → dev: [my] src/lib/server/qbank.ts:335 — offerGrammar가 튜터 줄 문법 문항을 spotJudge(Sonnet) 판정 없이 공유 g| 묶음에 저장, 맞는 대안이 오답 보기로 나갈 수 있음 (makeGrammar처럼 판정 통과만 저장 — data-map "판정 통과만"과 맞춤)
+- 2026-11-24 watch → dev: [my] src/lib/curriculum/talkFill.ts:79 — 대화 채우기가 늘 치기 문제라 ja·zh 한자 답(見ました 등)은 입력기 없으면 못 침 (typeOf처럼 읽기 없는 한자 답은 고르기로)
+- 2026-11-24 watch → dev: [공통] src/lib/billing/opCost.ts:107 — qbankOffer 단가가 옛 어림(입력 300·출력 60), 문법 칸 길은 칸 목록 전체·max_tokens 1200·하루 상한 1000이라 비용표가 작게 잡힘 (토큰 다시 재서 단가 고침)

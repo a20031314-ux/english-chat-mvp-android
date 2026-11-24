@@ -36,6 +36,12 @@
 
 ## 새 보고
 
+### 2026-11-24 · 변경 감시 · 리뷰 major 1: 튜터 줄 문법 문항이 Sonnet 판정 없이 공유 문제은행(g|)에 들어감 · 돈 칸 그대로(qbankJudge 한 번 5.9원 생김)
+- 무엇을: 589f08d..0f9e503, 커밋 9개(코드 6 — 대화 채우기 d2627bf·0f9e503 · 문법 칸 뜻 69f16fe · 기능 장부 전체 점검 eb9b386 · 단계 멈춤·문법 회차·문제은행 문법 칸 ee97b2c · 오늘 해볼 것 카드 지움 fbfebef), 60파일 +929 −7,821줄
+- 결과: 비용표 새 칸 하나(qbankJudge 한 번 5.9원), 손익·광고 지도·퀴즈 원인 그대로(알릴 것 0). 리뷰 major 1·minor 2 — major(두 번 확인): `src/lib/server/qbank.ts:335` offerGrammar가 튜터 줄 문법 문항을 Haiku 한 번 + acceptForms만 거쳐 모두가 쓰는 `g|` 묶음에 저장(makeGrammar는 spotJudge 통과만) — 맞는 대안이 오답 보기로 든 문항이 새 문항 먼저(n:0) 정렬로 바로 나갈 수 있음, data-map "판정 통과만"과 다름. minor: `talkFill.ts:79` 대화 채우기가 늘 치기 문제라 ja·zh 한자 답은 입력기 없으면 못 침(typeOf 거름 없음) · `billing/opCost.ts:107` qbankOffer 단가가 옛 어림(입력 300·출력 60)인데 문법 칸 길은 칸 목록 전체·max_tokens 1200, 하루 상한 300→1000이라 비용표가 작게 잡힘. 광고: 바뀐 화면(대화 채우기·회차·채팅 빈 화면)에 새 자리 없음 → 새 안 0, 지난 안 6개 이어 적음(지금 +521,970원 → 안을 넣으면 +573,693원, 무료 한 사람 +483 → +536원). 화면 점검 예약 작업은 부르기가 권한에 막혀 못 부름(다음 실행이 다시 시도)
+- 제안: dev(my)가 offerGrammar도 spotJudge 판정 뒤 저장(또는 o:"talk" 문항은 판정 전까지 안 내보냄) — 서버만이라 바로 반영. 대화 채우기 한자 답 거름·qbankOffer 단가 다시 잼 — 앞은 앱 빌드, 뒤는 서버. 광고 안은 지난번 그대로(사용자가 "바꿔줘")
+- 결정:
+
 ### 2026-11-24 · 연결 맞춤 점검(처음 · 손으로) · 퀴즈 고도화가 Quizbank에만 — 소재 수업·숙제 퀴즈는 옛 문제 만들기, 복제 15곳 기준
 - 무엇을: 장부 연결 묶음 6개(`hub/app/FEATURES.md` "연결 묶음") 중 퀴즈 문제 만들기를 손으로 비교, `node scripts/clones.mjs`(모델 없음)로 두 파일에 같은 코드 120낱말 넘는 곳.
 - 결과: ① quiz-make — Quizbank는 넣어 둔 문제·틀린 곳 이유·해석 먼저(`lib/curriculum/ladderQuiz.ts:8·51·70`, `preparedQuiz.ts`)를 쓰는데, 소재 수업 퀴즈는 `lessonQuiz`(`lib/curriculum/quiz.ts:1170`, `FrameLesson.tsx:155·159`)·숙제 퀴즈는 `homeworkQuiz`(`lib/roleplay/homeworkQuiz.ts:21`)로 만들어 넣어 둔 문제·이유가 없음(같은 QuizPlayer로 그려서 보기 설명만 같이 씀). 일부러인지 확인 필요. ② 복제 15곳 — 목록 `hub/app/clones.md`(기준 `scripts/clones.json`에 넣음, 다음부터 새 것만 보고). 눈에 띄는 것: 1:1과 단체방 같은 코드(`RoomDm.tsx:595` ↔ `RoomGroups.tsx:513`), 지금 My 갈래와 옛 Stagebank 갈래(`notes/myParts.ts` ↔ `notes/stageParts.ts`), 수업 서버 둘(`server/frameLesson.ts` ↔ `server/itemLesson.ts`), 영상 링크 판별 두 벌(`contentDiscovery/search/supportedVideo.ts` ↔ `videoLearning.ts`).
