@@ -135,7 +135,7 @@ export function choiceQuestion(variant: ChoiceVariant, key: string, seed: string
 }
 
 /** 문법 칸 하나 → 낼 칸과 문제. spot = 그 칸의 틀린 곳 문항(최근에 안 낸 것 하나, 없으면 null). choices = 고르기의 다른 모양(turn으로 차례). 끝났으면 null. */
-export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem | null, language: string, how: { cue?: "len" | "none"; numbered?: boolean; stage?: number; choices?: readonly ChoiceVariant[]; turn?: number } = {}): { rung: Rung; question: QuizQuestion } | null {
+export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem | null, language: string, how: { cue?: "len" | "none"; numbered?: boolean; stage?: number; choices?: readonly ChoiceVariant[]; turn?: number; /** 게이지 −2~+2 — 고르기 모양: 내리면 맞는 꼴만, 올리면 다른 모양만(+2는 대답 고르기·틀린 문장만). */ level?: number } = {}): { rung: Rung; question: QuizQuestion } | null {
   // 해석: 1~2단계는 늘, 3단계부터는 해석 없이 답이 갈리는 문장만 먼저(4칸 문장 만들기는 해석이 곧 문제라 늘).
   const first = meaningFirst(how.stage ?? 1, item);
   const spotQ = spot ? spotQuestion(spot, language, item.key, how.numbered, first) : null;
@@ -144,9 +144,16 @@ export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem |
   let question: QuizQuestion | null = null;
   if (rung === 1) {
     // 보통 고르기와 다른 모양을 차례로(그 칸이 나온 횟수 turn) — 다른 모양이 안 되면 보통 고르기.
-    const choices = how.choices ?? [];
-    const at = choices.length ? Math.floor(how.turn ?? 0) % (choices.length + 1) : 0;
-    question = (at > 0 ? choiceQuestion(choices[at - 1]!, item.key, String(how.turn ?? 0)) : null) ?? chooseFromPrepared(item, first);
+    const level = how.level ?? 0;
+    const all = level < 0 ? [] : how.choices ?? [];
+    const hard = level >= 2 ? all.filter((one) => one.v !== "c") : all;
+    const choices = hard.length ? hard : all;
+    const turn = Math.floor(how.turn ?? 0);
+    // 0은 맞는 꼴도 차례에 넣고, 올리면 다른 모양만 돌림(없으면 맞는 꼴).
+    const plain = level > 0 ? 0 : 1;
+    const at = choices.length ? turn % (choices.length + plain) : -1;
+    const pick = at >= plain ? choices[at - plain] : undefined;
+    question = (pick ? choiceQuestion(pick, item.key, String(turn)) : null) ?? chooseFromPrepared(item, first);
   }
   if (rung === 2) {
     const near = item.options.filter((option) => option !== item.answer);

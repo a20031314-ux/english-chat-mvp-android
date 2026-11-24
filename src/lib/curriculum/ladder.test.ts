@@ -53,6 +53,16 @@ test("사다리 문제: 문법 1 고르기 · 2 빈칸(뜻 먼저) · 3 틀린 �
   const two = grammarAsk(item, 2, null, "ja")?.question;
   assert.ok(two?.kind === "type" && two.glossFirst && two.near?.includes("ます"));
   assert.equal(grammarAsk(item, 3, null, "ja"), null, "틀린 곳 문항이 없으면 낼 칸 없음");
+  // 게이지 = 고르기 모양: 내리면 맞는 꼴만, 올리면 다른 모양만, +2는 대답 고르기·틀린 문장만.
+  const choices = [
+    { v: "c" as const, lead: "誰ですか。", line: "私は学生です。", before: "私は学生", after: "。", answer: "です", options: ["です", "ます", "だ"], gloss: "나는 학생이에요.", why: "x" },
+    { v: "x" as const, wrong: "私は学生ます。", rights: ["私は先生です。", "これは本です。", "猫が好きです。"], why: "x", fixed: "私は学生です。" },
+  ];
+  const kinds = (level: number) => [0, 1, 2, 3].map((turn) => grammarAsk(item, 1, null, "ja", { choices, turn, level })?.question).map((q) => (q?.kind === "choose" && q.lead ? "c" : q?.kind));
+  assert.deepEqual(kinds(-1), ["choose", "choose", "choose", "choose"]);
+  assert.deepEqual(kinds(0), ["choose", "c", "pick", "choose"]);
+  assert.deepEqual(kinds(1), ["c", "pick", "c", "pick"]);
+  assert.deepEqual(kinds(2), ["pick", "pick", "pick", "pick"]);
   const three = grammarAsk(item, 3, spot, "ja");
   assert.equal(three?.rung, 3);
   if (three?.question.kind === "spot") {
@@ -77,10 +87,9 @@ test("부족한 것: 최근 두 번 넘게 틀리고 마지막도 틀린 것만,
   assert.deepEqual(weakKeys(events, now), ["g|1:2", "e|por favor"]);
 });
 
-test("게이지: 내리면 글자 수 도움·선지(밑줄), 올리면 도움 없음·표시 없음", async () => {
-  const { gaugeCue, gaugeNumbered } = await import("./ladder.ts");
-  assert.deepEqual([gaugeCue(-2), gaugeCue(0), gaugeCue(2)], ["len", undefined, "none"]);
-  assert.deepEqual([gaugeNumbered(0), gaugeNumbered(1)], [true, false]);
+test("게이지: 문장 단계를 위·아래로(1~5 안), 쓰기 도움 글자(len·none)", async () => {
+  const { gaugeStage } = await import("./ladder.ts");
+  assert.deepEqual([gaugeStage(2, -2), gaugeStage(2, 0), gaugeStage(2, 2), gaugeStage(4, 2)], [1, 2, 4, 5]);
   const { firstCue } = await import("./quiz.ts");
   assert.equal(firstCue("hablo", "len"), "h＿＿＿＿");
   assert.equal(firstCue("ทะเล", "none"), "");
@@ -253,4 +262,13 @@ test("고르기의 다른 모양: 문맥(앞 줄)·대답 고르기·틀린 문�
   assert.ok(pair?.kind === "reply" && pair.shown && pair.them === "昨日、映画を見ましたか。" && pair.options.length === 2 && pair.options[pair.answer] === "いいえ、見ませんでした。" && pair.why === "昨日 → 過去");
   const odd = choiceQuestion(choices[2]!, "g|3:1", "s");
   assert.ok(odd?.kind === "pick" && odd.lines.length === 4 && odd.lines[odd.answer] === "Ayer yo como paella.");
+});
+
+test("닿은 단계: 게이지로 위 단계를 맞혀 오면 거기까지 한 번에 (stepReach hi)", () => {
+  let reach: Reach = { s: 2, n: 0, ok: 0 };
+  for (let i = 0; i < REACH_BATCH; i += 1) reach = stepReach(reach, 1, 4, true);
+  assert.equal(reach.s, 4);
+  let plain: Reach = { s: 2, n: 0, ok: 0 };
+  for (let i = 0; i < REACH_BATCH; i += 1) plain = stepReach(plain, 1, 2, true);
+  assert.equal(plain.s, 3);
 });

@@ -186,14 +186,12 @@ export function saveGauge(language: string, gauge: Gauge): void {
   }
 }
 
-/** 쓰기 도움: 내리면 첫 글자 + 글자 수, 많이 올리면 없음, 그 사이 첫 글자. */
-export function gaugeCue(gauge: Gauge): "len" | "none" | undefined {
-  return gauge <= -1 ? "len" : gauge >= 2 ? "none" : undefined;
-}
-
-/** 틀린 곳 한 문장: 가운데까지 선지(밑줄), 올리면 표시 없음. */
-export function gaugeNumbered(gauge: Gauge): boolean {
-  return gauge <= 0;
+/**
+ * 게이지 = 문제 수준(사용자 2026-11-25 "문제 수준 자체가 바뀌게", 도움은 안 바꿈): 문법·표현 문장을 닿은 단계에서 게이지만큼 위·아래 단계로.
+ * 닿은 단계 자체는 그대로 — 위 단계를 맞히면 stepReach가 그만큼 빨리 올린다.
+ */
+export function gaugeStage(reach: number, gauge: Gauge): number {
+  return Math.max(1, Math.min(REACH_TOP, reach + gauge));
 }
 
 /* ───────── 문단(5단계, 설계안 §4 문단 안 난이도 넷) ───────── */
@@ -255,7 +253,7 @@ export function rightToday(events: readonly { k: string; src: string; r: string;
  * REACH_BATCH개 모아 맞힌 비율이 REACH_UP 이상이면 한 단계 위, REACH_DOWN 이하면 한 단계 아래(첫 측정 단계 밑으로는 안 내려감).
  * 새 묶음은 이 단계 칸부터 내고 다 풀면 아래 단계 — 단어 수준 경계처럼 퀴즈로 실제 실력을 따라간다. 이 폰 reach.v1.<언어>.
  */
-export type Reach = { s: number; n: number; ok: number };
+export type Reach = { s: number; n: number; ok: number; /** 이번 여덟 답에서 맞힌 가장 높은 단계(게이지로 위 단계를 풀 때). */ hi?: number };
 const REACH_KEY = "reach.v1";
 export const REACH_BATCH = 8;
 export const REACH_UP = 0.8;
@@ -268,9 +266,11 @@ export function stepReach(reach: Reach, base: number, itemStage: number, correct
   if (itemStage < now) return { ...reach, s: now };
   const n = reach.n + 1;
   const ok = reach.ok + (correct ? 1 : 0);
-  if (n < REACH_BATCH) return { s: now, n, ok };
+  const hi = correct ? Math.max(reach.hi ?? now, Math.min(REACH_TOP, itemStage)) : reach.hi;
+  if (n < REACH_BATCH) return { s: now, n, ok, ...(hi && hi > now ? { hi } : {}) };
   const rate = ok / n;
-  const s = rate >= REACH_UP ? Math.min(REACH_TOP, now + 1) : rate <= REACH_DOWN ? Math.max(floor, now - 1) : now;
+  // 잘 맞혔으면 한 단계 위 — 게이지로 더 위 단계를 맞혀 왔으면 거기까지.
+  const s = rate >= REACH_UP ? Math.min(REACH_TOP, Math.max(now + 1, hi ?? 0)) : rate <= REACH_DOWN ? Math.max(floor, now - 1) : now;
   return { s, n: 0, ok: 0 };
 }
 
