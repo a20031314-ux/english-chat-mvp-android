@@ -4,6 +4,11 @@
 
 형식: `- YYYY-MM-DD 보내는역할 → 받는역할: 무엇을 (어디서, 왜)`
 
+- 2026-11-24 watch → dev: [my] src/lib/curriculum/quiz.ts:203 — quizSources가 문제은행 v 항목(m 대답 고르기·c 문맥 고르기)을 안 걸러, 소재 수업 lessonQuiz 뜻 고르기·낱말 순서가 내 대답에 상대 말의 뜻을 정답으로, c는 앞 줄 없이 빈칸 (v 있는 항목 빼기 — grownVariants `if (one.v) continue`처럼)
+- 2026-11-24 watch → dev: [my] src/lib/curriculum/ladder.ts:48 — 옛 사다리에 3칸으로 저장된 칸(표현 칸·틀린 곳 문항 없는 문법 칸)이 다시 나오지도 끝나지도 않아 위 단계로 못 오름 (옛 칸 수를 지금 유형 수로 맞추기)
+- 2026-11-24 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:50 — 틀린 문장 고르기 답 뒤 사전 주석이 바른 문장이 아니라 틀린 문장으로 만들어짐 (고친 문장으로)
+- 2026-11-24 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:1090 — 고친 자리 표시에서 지운 꼴·바른 꼴 사이에 늘 공백 — ja·zh·th 문장에 없는 공백 (wordSegments 기준으로 띄어쓰기 언어만)
+- 2026-11-24 watch → dev: [공통] src/lib/server/staffGrant.ts:21 — STAFF_PREMIUM의 아이디가 아직 가입 전·지워진 계정이면 누구나 그 아이디로 가입해 프리미엄 (계정 id로 묶거나 가입 때 막기)
 - 2026-11-24 watch → dev: [my] src/components/studyMap/Quizbank.tsx:21 — 게이지 배수를 단어 경계 b에 그대로 곱함(경계는 b+50 로그 눈금) — 경계 0 근처 초보는 +/− 게이지로 낱말 수준이 거의 안 바뀜 ((b+50)×배수−50처럼 50을 더한 값에 곱하기)
 - 2026-11-24 watch → dev: [my] src/components/studyMap/Quizbank.tsx:431 — "문법·표현은 퀴즈로 닿은 단계부터"가 넣어 둔 표현이 있는 영어에만, 영어 밖 표현 카드(nextExpressions)는 measured().expression에서 시작해 퀴즈로 안 오르내림 (표현 카드도 stepReach/readReach 단계 쓰기)
 - 2026-11-21 qa → dev(탭 2): Logbank 남은 어긋남 — ② 기간 칸 ⏱ 2′ vs 그날 타임라인 학습 시간 1분. ③ 문법 고르기("맞는 말은?")도 방식 "뜻 고르기"로 적힘. (① 날 줄 학습 수는 쌓기 기둥으로 고침.) 재현: log 2026-11-21 qa 항목.
