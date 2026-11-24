@@ -1,29 +1,20 @@
 /**
- * 첫 단계 고르기 — 첫 측정 계산(2026-11-07 사용자 "이대로 만들어줘", 설계 hub/work/drafts/placement-2026-11-06.md 3·4절).
- * 순수 모듈 — 모델 없음. 화면은 studyMap/FirstCheck.tsx.
+ * 첫 단계 고르기 — 첫 측정 계산. 순수 모듈 — 모델 없음. 화면은 studyMap/FirstCheck.tsx.
  *
- *   ① 글자: 소리 듣고 글자 고르기 6문제, 셋 넘게 틀리면 글자부터(그 뒤 ②③은 건너뜀 — 못 읽는 글자로 낱말을 물을 수 없음).
- *   ② 낱말 범위: 예/아니오 24장(진짜 20 + 가짜 4) → 경계 b 최대가능도 → 뜻 고르기 5문제로 b를 고침(vocabLevel.noteLevel).
- *   ③ 표현·문법: 1단계부터 번갈아, 단계마다 세 문제 중 둘 맞히면 위 단계(4단계부터는 셋 다), 넘을 수 없게 틀리면 그 종류 멈춤.
+ *   ① 글자: 소리 듣고 글자 고르기 6문제, 셋 넘게 틀리면 글자부터(그 뒤 ②는 건너뜀 — 못 읽는 글자로 문단을 볼 수 없음).
+ *   ② 문단 고르기: 단계 문단을 보고 [쉬워요 · 딱 맞아요 · 어려워요] — 고른 단계가 낱말·표현·문법 시작값(그 뒤는 Quizbank가 맞춰 감).
  *
- * 예전 placement.ts(단계 오르내리기 시험, PlacementPlayer)와는 다른 것 — 그쪽은 개편 밖 화면만 쓴다.
- * 결과는 Logbank %를 칠하지 않는다(설계 5절): 낱말 경계는 Quizbank·Languagebank 진하기, 단계는 지금 단계.
+ * 결과는 Logbank %를 칠하지 않는다: 낱말 경계는 Quizbank·Languagebank 진하기, 단계는 지금 단계.
  */
-import { posGroup, type BankWord } from "./vocabBank.ts";
-import { knowChance, noteLevel, PROBE, type Level } from "./vocabLevel.ts";
+import { knowChance, startLevel } from "./vocabLevel.ts";
+import { tilesOf } from "./quiz.ts";
+import type { SpotItem } from "./spotErrors.ts";
 import type { ScriptCourse } from "./scripts/types.ts";
 
 export const LETTER_N = 6;
 /** 이만큼 넘게 틀리면 글자부터. */
 export const LETTER_MISS_MAX = 3;
-export const YN_REAL = 20;
-export const YN_FAKE = 4;
-export const YN_TOTAL = YN_REAL + YN_FAKE;
-/** 오르기 최대 문제 수(두 종류 합) — 단계마다 2~3문제라 예전 10에서 늘림. */
-export const CLIMB_MAX = 18;
 export const STAGES = 5;
-/** 거짓 앎이 이만큼이면 예/아니오를 버리고 뜻 고르기만. */
-export const FAKE_TRUST_MAX = 0.5;
 
 /* ───────── 씨앗 난수 ───────── */
 
@@ -94,245 +85,89 @@ export function lettersWeak(answers: readonly boolean[]): boolean {
   return answers.filter((ok) => !ok).length > LETTER_MISS_MAX;
 }
 
-/* ───────── ② 예/아니오 ───────── */
-
-export type YnCard = { word: string; reading?: string; rank: number | null };
-export type YnAnswer = { rank: number | null; yes: boolean };
-
-/** 예/아니오에 쓸 낱말: 명사·동사·형용사·부사(기능어·고유명사 뺌). */
-function fitsYn(word: BankWord): boolean {
-  return posGroup(word.pos) !== "function" && !/prop/i.test(word.pos) && word.w.length > 1;
-}
-
-/** 가짜 낱말 자리(24장 중 넷 — 처음 셋 안에는 없음, 이웃하지 않게). */
-export function fakeSlots(seed: string): number[] {
-  const random = seeded(`fake|${seed}`);
-  const slots: number[] = [];
-  let guard = 0;
-  while (slots.length < YN_FAKE && guard < 500) {
-    guard += 1;
-    const at = 3 + Math.floor(random() * (YN_TOTAL - 3));
-    if (slots.some((one) => Math.abs(one - at) < 2)) continue;
-    slots.push(at);
-  }
-  return slots.sort((a, b) => a - b);
-}
-
-const OFFSET = 50;
-const SIGMA = 0.35;
-const B_MIN = 50;
-const B_MAX = 7000;
-const GRID = 60;
-
-/** b 후보(로그 눈금 60칸, 목록 길이로 자름). */
-function bGrid(total: number): number[] {
-  const top = Math.max(B_MIN + 1, Math.min(B_MAX, total - 1));
-  return Array.from({ length: GRID }, (_, i) => Math.exp(Math.log(B_MIN) + ((Math.log(top) - Math.log(B_MIN)) * i) / (GRID - 1)));
-}
-
-/** 거짓 앎 비율 f(가짜에 [앎]) — 하나도 없으면 0.02(드문 실수 몫). */
-export function falseYes(answers: readonly YnAnswer[]): number {
-  const fakes = answers.filter((one) => one.rank === null);
-  if (!fakes.length) return 0.02;
-  return Math.max(0.02, fakes.filter((one) => one.yes).length / fakes.length);
-}
+/* ───────── ② 문단 고르기 ───────── */
 
 /**
- * 경계 b 최대가능도: [앎] 확률 = p + (1 − p)·f (모르면서 아는 척 f), [모름] = (1 − p)(1 − f). p는 vocabLevel.knowChance.
- * f ≥ 0.5면 null(예/아니오를 믿지 않음 — 뜻 고르기만).
+ * 문단 고르기(2026-11-25 사용자 "문단을 보고 어렵다, 쉽다, 이게 내 수준이다를 바로 선택 — 어차피 수준은 점차 맞춰나가니까"):
+ * 단계 문단(story-errors — 일부러 틀린 곳은 바로잡아 보여 줌)을 한 장씩, [쉬워요]면 한 단계 위, [어려워요]면 한 단계 아래,
+ * [딱 맞아요]면 그 단계. 위아래로 한 번 방향이 바뀌면(쉬움 ↔ 어려움 사이) 쉬웠던 단계에서 멈춘다. 결과 = 낱말·표현·문법 모두 그 단계.
  */
-export function estimateB(answers: readonly YnAnswer[], total: number): number | null {
-  const f = falseYes(answers);
-  if (f >= FAKE_TRUST_MAX) return null;
-  const real = answers.filter((one): one is { rank: number; yes: boolean } => one.rank !== null);
-  if (!real.length) return null;
-  let best = B_MIN;
-  let bestLog = -Infinity;
-  for (const b of bGrid(total)) {
-    let log = 0;
-    for (const one of real) {
-      const p = knowChance({ b, n: 0 }, one.rank);
-      const yes = p + (1 - p) * f;
-      log += Math.log(Math.max(1e-9, one.yes ? yes : 1 - yes));
+export const PARA_START = 2;
+export type ParaRate = "easy" | "fit" | "hard";
+export type ParaWalk = { stage: number; seen: { stage: number; rate: ParaRate }[]; done: number | null };
+
+export function startParaWalk(stages: readonly number[] = [1, 2, 3, 4, 5]): ParaWalk {
+  const start = stages.includes(PARA_START) ? PARA_START : (stages[0] ?? 1);
+  return { stage: start, seen: [], done: stages.length ? null : 1 };
+}
+
+/** 답 하나(새 객체). stages = 문단이 있는 단계. */
+export function rateParagraph(walk: ParaWalk, rate: ParaRate, stages: readonly number[] = [1, 2, 3, 4, 5]): ParaWalk {
+  if (walk.done !== null) return walk;
+  const seen = [...walk.seen, { stage: walk.stage, rate }];
+  const finish = (stage: number): ParaWalk => ({ stage, seen, done: stage });
+  if (rate === "fit") return finish(walk.stage);
+  const up = rate === "easy";
+  const next = up ? stages.find((one) => one > walk.stage) : [...stages].reverse().find((one) => one < walk.stage);
+  if (next === undefined) return finish(walk.stage);
+  const before = seen.find((one) => one.stage === next);
+  // 이미 본 단계로 되돌아가면(2 쉬움 → 3 어려움, 또는 3 어려움 → 2 쉬움) 쉬웠던 쪽에서 멈춤.
+  if (before) return finish(up ? walk.stage : next);
+  return { stage: next, seen, done: null };
+}
+
+/** 문단의 바른 글(틀린 곳을 right로 — 칸은 quiz.ts tilesOf, at = 그 줄의 칸 번호). */
+export function fixedLines(item: Pick<SpotItem, "lines" | "errors">, language: string): string[] {
+  return item.lines.map((line, index) => {
+    const errs = item.errors.filter((err) => err.line === index).sort((x, y) => y.at - x.at);
+    if (!errs.length) return line;
+    const spans: ({ from: number; to: number } | null)[] = [];
+    let cursor = 0;
+    for (const tile of tilesOf(line, language)) {
+      const from = line.indexOf(tile, cursor);
+      spans.push(from < 0 ? null : { from, to: from + tile.length });
+      if (from >= 0) cursor = from + tile.length;
     }
-    if (log > bestLog) {
-      bestLog = log;
-      best = b;
+    let out = line;
+    for (const err of errs) {
+      const span = spans[err.at];
+      const cell = span ? out.slice(span.from, span.to) : "";
+      const at = span ? cell.indexOf(err.wrong) : -1;
+      if (span && at >= 0) {
+        out = out.slice(0, span.from) + cell.slice(0, at) + err.right + cell.slice(at + err.wrong.length) + out.slice(span.to);
+        continue;
+      }
+      // 칸 자리가 어긋나면(일본어 칸 합치기 등) 그 줄에 한 번만 나오는 틀린 꼴을 바꾼다.
+      if (out.split(err.wrong).length === 2) out = out.replace(err.wrong, err.right);
     }
-  }
-  return Math.round(best);
+    return out;
+  });
 }
 
-/** 순위 → 아는 확률이 p가 되는 순위(경계 b 기준). */
-function rankAt(b: number, p: number): number {
-  return Math.exp(Math.log(b + OFFSET) - SIGMA * Math.log(p / (1 - p))) - OFFSET;
-}
-
-/** 순위 target에 가장 가까운 쓸 만한 낱말(쓴 것·바로 앞과 같은 주제 뺌). */
-function nearest(words: readonly BankWord[], target: number, used: ReadonlySet<number>, lastTopic?: string): number | null {
-  const at = Math.max(0, Math.min(words.length - 1, Math.round(target)));
-  for (let step = 0; step < words.length; step += 1) {
-    for (const index of step ? [at + step, at - step] : [at]) {
-      const word = words[index];
-      if (!word || used.has(index) || !fitsYn(word)) continue;
-      if (lastTopic && word.topic && word.topic === lastTopic && step < 40) continue;
-      return index;
-    }
-  }
-  return null;
-}
-
-/**
- * 다음 예/아니오 카드. 가짜 자리면 가짜, 아니면 진짜:
- * 처음 다섯은 단계 구간마다 하나(쉬운 구간부터, 구간 안 25% 자리), 그 뒤는 지금 어림 b의 위·아래 번갈아(아는 확률 0.3 ↔ 0.7).
- */
-export function nextYnCard(input: {
-  words: readonly BankWord[];
-  cuts: readonly number[];
-  fakes: readonly string[];
-  answers: readonly YnAnswer[];
-  shown: readonly YnCard[];
-  seed: string;
-}): YnCard | null {
-  const { words, cuts, answers, shown } = input;
-  const at = shown.length;
-  if (at >= YN_TOTAL) return null;
-  const slots = fakeSlots(input.seed);
-  if (slots.includes(at)) {
-    const random = seeded(`${input.seed}|fake|${at}`);
-    const pool = input.fakes.filter((word) => !shown.some((one) => one.word === word));
-    const word = pool[Math.floor(random() * pool.length)];
-    if (word) return { word, rank: null };
-  }
-  const used = new Set(shown.flatMap((one) => (one.rank === null ? [] : [one.rank])));
-  const realSoFar = shown.filter((one) => one.rank !== null).length;
-  const lastRank = [...shown].reverse().find((one) => one.rank !== null)?.rank;
-  const lastTopic = lastRank !== undefined && lastRank !== null ? words[lastRank]?.topic : undefined;
-  let target: number;
-  if (realSoFar < 5) {
-    const starts = [0, ...cuts.slice(0, 4)];
-    const ends = cuts.slice(0, 5);
-    const lo = starts[realSoFar] ?? 0;
-    const hi = ends[realSoFar] ?? lo + 500;
-    target = lo + (hi - lo) * 0.25;
-  } else {
-    const b = estimateB(answers, words.length) ?? (cuts[0] ?? 700);
-    target = rankAt(b, realSoFar % 2 ? 0.3 : 0.7);
-  }
-  const index = nearest(words, Math.min(target, words.length - 1), used, lastTopic);
-  if (index === null) return null;
-  const word = words[index]!;
-  return { word: word.w, ...(word.reading && word.reading !== word.w ? { reading: word.reading } : {}), rank: index };
-}
-
-/* ───────── ② 뜻 고르기 ───────── */
-
-/**
- * 예/아니오만으로 올라갈 수 있는 경계(단계 끝 순위 cuts[YN_TOP_CUT] — 기본 3단계 끝).
- * 빈도 순위로는 드문 자리에 일상 낱말(selfie·grandparent·housemate)이 있어 "본 적 있어요"만으로 경계가 끝(7,000)까지 올라갔다
- * (가상 사용자 2026-11-22 민지 "약 7,000개", Layla 4,700 — 사용자 "첫 측정 문제 해결"). 그 위는 뜻 고르기로만.
- */
-export const YN_TOP_CUT = 2;
-export function capYesNo(b: number | null, cuts: readonly number[]): number | null {
-  return b === null ? null : Math.min(b, cuts[YN_TOP_CUT] ?? 2500);
-}
-
-/** 뜻 고르기에 내는 문제 수 — 후보는 더 뽑아 두고(보기가 안 모이면 다음 후보), 앞에서부터 이만큼. */
-export const MEANING_ASK = 5;
-
-/**
- * 뜻 고르기 낱말 순위(앞에서부터 MEANING_ASK개를 씀): 경계 아래 하나(0.75), 경계(0.55), 위로 셋(0.4 · 0.3 · 0.2 — 위로 올라갈 근거는 여기서만),
- * 그다음 예비(0.6 · 0.45 · 0.35).
- */
-export function meaningRanks(b: number, words: readonly BankWord[], skip: ReadonlySet<number>): number[] {
-  const used = new Set(skip);
-  const out: number[] = [];
-  for (const p of [0.75, 0.55, 0.4, 0.3, 0.2, 0.6, 0.45, 0.35]) {
-    const index = nearest(words, rankAt(b, p), used);
-    if (index === null) continue;
-    used.add(index);
-    out.push(index);
+/** 단계마다 문단 하나(씨앗으로 고름 — 짧은 꼴 P1·P2 먼저). */
+export function paragraphsByStage(items: readonly SpotItem[], seed: string): Map<number, SpotItem> {
+  const out = new Map<number, SpotItem>();
+  for (let stage = 1; stage <= STAGES; stage += 1) {
+    const here = items.filter((item) => item.stage === stage);
+    if (!here.length) continue;
+    const shortest = Math.min(...here.map((item) => item.lines.length));
+    const pool = here.filter((item) => item.lines.length === shortest);
+    const random = seeded(`${seed}|para|${stage}`);
+    out.set(stage, pool[Math.floor(random() * pool.length)]!);
   }
   return out;
 }
 
-/** 예/아니오 결과(또는 믿지 못할 때 1단계 끝 어림)에서 뜻 고르기로 b를 고친 Level. */
-export function wordLevel(b0: number | null, meaning: readonly { rank: number; correct: boolean }[], total: number, cuts: readonly number[]): Level {
-  // 예/아니오는 어림일 뿐 — 뜻 고르기 답이 경계를 크게 움직이게 n을 작게(예전 10이면 다섯 문제가 거의 못 움직임).
-  let level: Level = { b: b0 ?? Math.round((cuts[0] ?? 700) * 0.5), n: b0 === null ? 0 : 2 };
-  for (const one of meaning) level = noteLevel(level, one.rank, one.correct, { choose: true, total });
-  return { ...level, b: Math.round(level.b), n: Math.max(level.n, PROBE), picked: true };
+/** 고른 단계 → 낱말 경계(그 단계 어림, vocabLevel.startLevel)·표현·문법 시작 단계. */
+export function paraResult(stage: number, cuts: readonly number[], at: number = Date.now()): FirstCheckResult {
+  const s = Math.max(1, Math.min(STAGES, stage));
+  return { at, letters: false, b: Math.round(startLevel(s, cuts).b), expression: s, grammar: s };
 }
 
 /** 화면에 보일 낱말 수(어림) — 50 아래는 50, 1,000 아래는 50 단위, 그 위는 100 단위. */
 export function wordsAbout(b: number): number {
   if (b < 50) return 50;
   return b < 1000 ? Math.round(b / 50) * 50 : Math.round(b / 100) * 100;
-}
-
-/* ───────── ③ 표현·문법 오르기 ───────── */
-
-export type ClimbKind = "expression" | "grammar";
-/**
- * 오르기는 단계마다 모아서 판정(2026-11-07 사용자 "모아서 판정하거나 단일문제는 좀더 미시적으로" → "다 바꿔줘"):
- * 한 단계에 세 문제까지, 둘 맞히면 넘음(셋째는 안 냄), 둘 틀리면 그 종류는 거기서 멈춤.
- * 예전(한 문제 맞히면 위, 틀리면 한 번 더)은 넷 중 하나 찍기로 단계가 올라가 5단계 과대(체감 점검 오후 민지·Layla).
- * 찍기만으로 한 단계를 넘을 확률: 셋 중 둘 이상 = 3·¼²·¾ + ¼³ ≈ 16%(예전 ¼ + ¾·¼ ≈ 44%).
- */
-export const STAGE_ASK = 3;
-export const STAGE_PASS = 2;
-/** 4단계부터는 셋 다 맞혀야 넘음(모양만 보고 고르거나 문맥으로 찍어 4~5단계가 나옴 — 가상 사용자 2026-11-22 민지 표현 4·Layla 표현 5). */
-export const HIGH_STAGE = 4;
-export function stagePass(stage: number): number {
-  return stage >= HIGH_STAGE ? STAGE_ASK : STAGE_PASS;
-}
-export type ClimbLane = { stage: number; passed: number; right: number; wrong: number; stopped: boolean };
-export type Climb = { lanes: Record<ClimbKind, ClimbLane>; asked: number; turn: ClimbKind };
-
-/** 종류마다 1단계부터. */
-export function startClimb(has: Record<ClimbKind, boolean>): Climb {
-  const lane = (on: boolean): ClimbLane => ({ stage: 1, passed: 0, right: 0, wrong: 0, stopped: !on });
-  return { lanes: { expression: lane(has.expression), grammar: lane(has.grammar) }, asked: 0, turn: has.grammar && !has.expression ? "grammar" : "expression" };
-}
-
-/** 다음에 물을 종류·단계(끝이면 null). */
-export function climbNext(climb: Climb): { kind: ClimbKind; stage: number } | null {
-  if (climb.asked >= CLIMB_MAX) return null;
-  const order: ClimbKind[] = climb.turn === "expression" ? ["expression", "grammar"] : ["grammar", "expression"];
-  for (const kind of order) {
-    const lane = climb.lanes[kind];
-    if (!lane.stopped) return { kind, stage: lane.stage };
-  }
-  return null;
-}
-
-/** 답 하나(새 객체). 그 단계에서 둘 맞히면 위 단계(5 넘으면 멈춤), 둘 틀리면 멈춤. */
-export function climbAnswer(climb: Climb, kind: ClimbKind, correct: boolean): Climb {
-  const lane = { ...climb.lanes[kind] };
-  if (correct) lane.right += 1;
-  else lane.wrong += 1;
-  const pass = stagePass(lane.stage);
-  if (lane.right >= pass) {
-    lane.passed = lane.stage;
-    lane.stage += 1;
-    lane.right = 0;
-    lane.wrong = 0;
-    if (lane.stage > STAGES) lane.stopped = true;
-  } else if (lane.wrong > STAGE_ASK - pass) {
-    lane.stopped = true;
-  }
-  const other: ClimbKind = kind === "expression" ? "grammar" : "expression";
-  return { lanes: { ...climb.lanes, [kind]: lane }, asked: climb.asked + 1, turn: other };
-}
-
-/** 문제가 떨어진 종류·단계: 그 종류를 거기서 멈춤(넘은 단계는 그대로). */
-export function climbOut(climb: Climb, kind: ClimbKind): Climb {
-  return { ...climb, lanes: { ...climb.lanes, [kind]: { ...climb.lanes[kind], stopped: true } } };
-}
-
-/** 시작 단계 = 마지막으로 넘은 단계 + 1(1~5). */
-export function climbStart(lane: ClimbLane): number {
-  return Math.max(1, Math.min(STAGES, lane.passed + 1));
 }
 
 /* ───────── 결과 ───────── */
@@ -345,8 +180,6 @@ export type FirstCheckResult = {
   b: number;
   expression: number;
   grammar: number;
-  /** 가짜에 [앎] 비율 — 기록용. */
-  f?: number;
 };
 
 const KEY = "firstCheck.v1";

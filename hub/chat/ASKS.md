@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (144)
+## 탭이 확인할 것 (146)
 
 ### 탭 1 메인
 
@@ -359,6 +359,10 @@
   - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/studyMap/QuizPlayer.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/Quizbank.tsx` · `app/api/curriculum/item-lesson/route.ts` · `components/studyMap/ExpressionCard.tsx` · `app/api/curriculum/qbank/route.ts` · `components/studyMap/StudyMapTab.tsx` … 10개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261125-1-1** (2026-11-25 00:50, 탭 1 · 4624fac) 첫 측정을 문단 고르기로: 예/아니오 24·뜻 고르기 5·표현·문법 오르기를 지우고, 단계 문단 한 장씩 [어려워요 · 딱 맞아요 · 쉬워요] → 고른 단계가 낱말·표현·문법 시작값(가늠 건너뜀). 가짜 낱말 데이터 지움
+  - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/studyMap/FirstCheck.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/LanguageBank.tsx` · `components/studyMap/Quizbank.tsx` · `app/api/curriculum/item-lesson/route.ts` · `components/studyMap/ExpressionCard.tsx` … 12개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
 
@@ -477,6 +481,10 @@
 - **a261124-1-8** (2026-11-24 23:40, 탭 1 · 91e72029) 소재 수업 퀴즈가 넣어 둔 칸(고르기 까닭·틀린 곳·다른 문장 빈칸)을 먼저 내고, 숙제 고치기에 코치 한마디가 '왜'로 — My 소재 수업·통화 숙제 퀴즈 화면 확인
   - 기능: 통화 · 이렇게도 말할 수 있었어요 · 숙제 · Quizbank · 소재 수업 · 칸 설명
   - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/RoleplayPast.tsx` · `components/RoleplayScreen.tsx` · `components/CallHost.tsx` · `lib/roleplay/talkMemory.ts`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261125-1-2** (2026-11-25 00:50, 탭 1 · 4624fac) 첫 측정을 문단 고르기로: 예/아니오 24·뜻 고르기 5·표현·문법 오르기를 지우고, 단계 문단 한 장씩 [어려워요 · 딱 맞아요 · 쉬워요] → 고른 단계가 낱말·표현·문법 시작값(가늠 건너뜀). 가짜 낱말 데이터 지움
+  - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/ChatWindow.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/callHooks.ts` · `components/roleplay/CallRecap.tsx` · `components/CallHost.tsx` · `components/RoleplayScreen.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `lib/pack/pack.ts` … 2개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람

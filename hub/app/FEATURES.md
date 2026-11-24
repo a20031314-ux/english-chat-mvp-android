@@ -81,7 +81,7 @@
 
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
-| 첫 측정 | 학습 언어로 처음 My를 열면 — 글자 → 낱말 예/아니오 → 뜻 → 표현·문법 → 시작 단계(건너뛰기 = 1단계) | 2 My | `components/studyMap/FirstCheck.tsx` · `lib/curriculum/firstCheck.ts` | 단계 고르기(대화 예시) · 단계 오르내리기 시험(PlacementPlayer) · 초급·중급·고급 체크 |
+| 첫 측정 | 학습 언어로 처음 My를 열면 — 글자(글자가 다른 언어) → 단계 문단 한 장씩 [어려워요 · 딱 맞아요 · 쉬워요] → 시작 단계(건너뛰기 = 1단계) | 2 My | `components/studyMap/FirstCheck.tsx` · `lib/curriculum/firstCheck.ts` | 단계 고르기(대화 예시) · 단계 오르내리기 시험(PlacementPlayer) · 초급·중급·고급 체크 · 낱말 예/아니오·뜻 고르기·표현·문법 오르기 |
 | Logbank `logbankTitle` | My 첫 칸, 기록만 — 배운 것 표 · 쌓기 기둥(날마다 요소 자리 순서로 블록 — 누르면 그 카드, 다시 맞힌 블록은 흰 점, 누른 날 비율 막대·요소 칩·↺ 다시 맞힘·✎✓ 고쳐 씀 칩 → 카드들) · 학습 곡선(활용 누적 — 점 › → 그날 새로 활용한 카드·쓴 문장) · 그날 세부 = 학습 타임라인(%·띠·육각형 없음) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/studyMap/Logbank.tsx` · `lib/curriculum/logLedger.ts` | 복습 칸 · 📈 실력 기록 · 이번 주 확인 · 띠·육각형 %·부족한 점 · 날마다 한 줄 목록 · 학습 곡선 학습 막대 · ↺ 다시 맞힘·✎✓ 고쳐 씀·📞 통화 칩 줄(통화는 튜터 프로필 통화 기록) |
 | 오늘의 학습 `notebookToday` | My 맨 위 계정 카드 아래 = 오늘 타임라인 — 오늘 한 학습 시간 줄(Logbank 그날 세부와 같은 줄, 누르면 그 덩어리 세부) 뒤에 오늘 할 것 칸: ▶ Quizbank n/10(오늘 답한 서로 다른 것) · 글자부터면 오늘의 글자 묶음 · 숙제(있을 때) · 고른 튜터와 통화(튜터 얼굴, 누르면 튜터 프로필 — 📞·메모·통화 기록, 오늘 통화 한 번이면 ✓), 다 끝나면 제목 ✓ · ⏱ 오늘 분 | 1 메인 · 2 My · 3 AI | `components/studyMap/TodayCards.tsx` · `lib/curriculum/todayCards.ts` · `components/studyMap/Logbank.tsx` | 오늘 할 것(Stagebank) · 다음 추천 · 오늘 카드 셋(막힌 것·다시 학습·새로 학습·써 보기) · 📏 실력 확인(2주마다 다시 측정·Logbank 기록 표) |
 | 학습 타임라인 | Logbank 그날 세부 — 학습 시간(10분 쉼으로 끊음) → 요소별 카드 → 카드 지난 기록 | 1 메인 · 2 My · 3 AI | `lib/curriculum/studyTimeline.ts` |  |

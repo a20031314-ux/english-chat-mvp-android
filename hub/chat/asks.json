@@ -9083,22 +9083,103 @@
       "base": "ec33c4ada5f2ee1e6bb67c5145bedb2aa972774d",
       "head": "346824f",
       "status": "open"
+    },
+    {
+      "id": "a261125-1-1",
+      "at": "2026-11-25 00:50",
+      "kind": "apply",
+      "from": "1",
+      "to": "2",
+      "what": "첫 측정을 문단 고르기로: 예/아니오 24·뜻 고르기 5·표현·문법 오르기를 지우고, 단계 문단 한 장씩 [어려워요 · 딱 맞아요 · 쉬워요] → 고른 단계가 낱말·표현·문법 시작값(가늠 건너뜀). 가짜 낱말 데이터 지움",
+      "files": [
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/QuizPlayer.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/InlineQuiz.tsx",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/LanguageBank.tsx",
+        "src/components/studyMap/Quizbank.tsx",
+        "src/app/api/curriculum/item-lesson/route.ts",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/app/api/curriculum/qbank/route.ts",
+        "src/components/studyMap/LessonHost.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/components/studyMap/Dictionary.tsx",
+        "src/app/api/curriculum/words/route.ts",
+        "src/components/studyMap/BankFlip.tsx",
+        "src/components/studyMap/DictNotes.tsx",
+        "src/lib/notes/myParts.ts",
+        "src/lib/notes/stageParts.ts",
+        "src/lib/curriculum/ladderQuiz.ts",
+        "src/lib/server/spotMake.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "346824f",
+      "head": "4624fac",
+      "status": "open"
+    },
+    {
+      "id": "a261125-1-2",
+      "at": "2026-11-25 00:50",
+      "kind": "apply",
+      "from": "1",
+      "to": "3",
+      "what": "첫 측정을 문단 고르기로: 예/아니오 24·뜻 고르기 5·표현·문법 오르기를 지우고, 단계 문단 한 장씩 [어려워요 · 딱 맞아요 · 쉬워요] → 고른 단계가 낱말·표현·문법 시작값(가늠 건너뜀). 가짜 낱말 데이터 지움",
+      "files": [
+        "src/components/roleplay/CallReplay.tsx",
+        "src/components/ChatWindow.tsx",
+        "src/components/RoleplayPast.tsx",
+        "src/components/roleplay/callHooks.ts",
+        "src/components/roleplay/CallRecap.tsx",
+        "src/components/CallHost.tsx",
+        "src/components/RoleplayScreen.tsx",
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx",
+        "src/lib/pack/pack.ts",
+        "src/lib/server/ledgerStore.ts",
+        "src/lib/roleplay/talkMemory.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "346824f",
+      "head": "4624fac",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-17 23:22",
-      "from": "3",
-      "base": "5186787",
-      "head": "5493749",
-      "what": "Quizbank 문법 빈칸 — 내용 낱말을 덮으면 해석 먼저(preparedQuiz blankNeedsMeaning)",
-      "tabs": [
-        "2"
-      ],
-      "asks": [
-        "a261117-3-1"
-      ]
-    },
     {
       "at": "2026-11-17 23:57",
       "from": "3",
@@ -9706,9 +9787,26 @@
         "a261125-3-4",
         "a261125-3-5"
       ]
+    },
+    {
+      "at": "2026-11-25 00:50",
+      "from": "1",
+      "base": "346824f",
+      "head": "4624fac",
+      "what": "첫 측정을 문단 고르기로: 예/아니오 24·뜻 고르기 5·표현·문법 오르기를 지우고, 단계 문단 한 장씩 [어려워요 · 딱 맞아요 · 쉬워요] → 고른 단계가 낱말·표현·문법 시작값(가늠 건너뜀). 가짜 낱말 데이터 지움",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261125-1-1",
+        "a261125-1-2"
+      ]
     }
   ],
   "seq": {
-    "261125-3": 5
+    "261125-3": 5,
+    "261125-1": 2
   }
 }

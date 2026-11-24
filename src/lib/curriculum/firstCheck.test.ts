@@ -1,142 +1,79 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import {
-  climbAnswer,
-  climbNext,
-  climbStart,
-  estimateB,
-  capYesNo,
-  MEANING_ASK,
   estimateChance,
-  fakeSlots,
+  fixedLines,
   letterQuestions,
   lettersWeak,
-  meaningRanks,
-  nextYnCard,
-  seeded,
-  startClimb,
-  wordLevel,
-  wordsAbout,
-  YN_FAKE,
-  YN_TOTAL,
-  type YnAnswer,
-  type YnCard,
+  paragraphsByStage,
+  paraResult,
+  rateParagraph,
+  startParaWalk,
+  type ParaRate,
 } from "./firstCheck.ts";
-import { loadBank, stageCuts } from "./vocabBank.ts";
-import { knowChance } from "./vocabLevel.ts";
+import { stageCuts } from "./vocabBank.ts";
+import { startLevel } from "./vocabLevel.ts";
+import { tilesOf } from "./quiz.ts";
 import { scriptFor } from "./scripts/index.ts";
-import { readFileSync } from "node:fs";
+import type { SpotItem } from "./spotErrors.ts";
 
-const fakesOf = (language: string) => (JSON.parse(readFileSync(new URL(`./pseudowords/${language}.json`, import.meta.url), "utf8")) as { words: string[] }).words;
+const LANGS = ["ar", "en", "es", "fr", "hi", "id", "it", "ja", "ko", "pt", "ru", "th", "vi", "zh"];
+const parasOf = (language: string) => JSON.parse(readFileSync(new URL(`./story-errors/${language}.json`, import.meta.url), "utf8")) as SpotItem[];
 
-/** 참 경계 trueB인 사람이 24장을 다 넘김(가짜에 [앎] 확률 lie). */
-async function runYn(language: string, trueB: number, lie: number, seed: string) {
-  const words = await loadBank(language);
-  const cuts = stageCuts(language);
-  const fakes = fakesOf(language);
-  const random = seeded(`${seed}|person`);
-  const shown: YnCard[] = [];
-  const answers: YnAnswer[] = [];
-  for (let i = 0; i < YN_TOTAL; i += 1) {
-    const card = nextYnCard({ words, cuts, fakes, answers, shown, seed });
-    if (!card) break;
-    shown.push(card);
-    const yes = card.rank === null ? random() < lie : random() < knowChance({ b: trueB, n: 0 }, card.rank);
-    answers.push({ rank: card.rank, yes });
-  }
-  return { words, cuts, shown, answers, b: estimateB(answers, words.length) };
-}
+const walk = (rates: ParaRate[], stages?: number[]) => {
+  let state = startParaWalk(stages);
+  for (const rate of rates) state = rateParagraph(state, rate, stages);
+  return state;
+};
 
-test("예/아니오: 24장, 가짜 넷(처음 셋 밖), 같은 낱말 두 번 없음, 처음 다섯은 쉬운 구간부터 (ja·es)", async () => {
-  for (const language of ["ja", "es"]) {
-    const { shown } = await runYn(language, 800, 0, `${language}-a`);
-    assert.equal(shown.length, YN_TOTAL, language);
-    assert.equal(shown.filter((one) => one.rank === null).length, YN_FAKE, language);
-    assert.ok(shown.slice(0, 3).every((one) => one.rank !== null), language);
-    assert.equal(new Set(shown.map((one) => one.word)).size, shown.length, language);
-    const firstFive = shown.filter((one) => one.rank !== null).slice(0, 5).map((one) => one.rank!);
-    assert.deepEqual([...firstFive].sort((a, b) => a - b), firstFive, `${language} ${firstFive}`);
-  }
-  assert.ok(fakeSlots("x").every((at) => at >= 3 && at < YN_TOTAL));
+test("문단 고르기: 2단계에서 시작, 쉬우면 위·어려우면 아래, 딱 맞으면 그 단계", () => {
+  assert.equal(startParaWalk().stage, 2);
+  assert.equal(walk(["fit"]).done, 2);
+  assert.equal(walk(["easy", "fit"]).done, 3);
+  assert.equal(walk(["easy", "easy", "easy", "easy"]).done, 5);
+  assert.equal(walk(["hard", "hard"]).done, 1);
+  assert.equal(walk(["hard", "fit"]).done, 1);
+  assert.equal(walk(["easy"]).done, null);
 });
 
-test("예/아니오 어림: 참 경계 150·800·2,500을 대략 맞힘(여러 씨앗 가운데값이 두 배 안) (en·ja·th·ko)", async () => {
-  for (const language of ["en", "ja", "th", "ko"]) {
-    for (const trueB of [150, 800, 2500]) {
-      const got: number[] = [];
-      for (let s = 0; s < 9; s += 1) got.push((await runYn(language, trueB, 0.05, `${language}-${trueB}-${s}`)).b ?? 0);
-      got.sort((a, b) => a - b);
-      const mid = got[4]!;
-      assert.ok(mid > trueB / 2 && mid < trueB * 2, `${language} 참 ${trueB} → ${got.join(",")}`);
+test("문단 고르기: 방향이 바뀌면 쉬웠던 단계에서 멈춤, 문단 없는 단계는 건너뜀", () => {
+  assert.equal(walk(["easy", "hard"]).done, 2);
+  assert.equal(walk(["hard", "easy"]).done, 1);
+  assert.equal(walk(["easy", "easy", "hard"]).done, 3);
+  // 5단계 문단이 없는 언어: 4에서 쉬워요 → 4에서 끝.
+  assert.equal(walk(["easy", "easy", "easy"], [1, 2, 3, 4]).done, 4);
+  // 2단계가 없으면 가장 낮은 단계부터.
+  assert.equal(startParaWalk([1, 3, 4]).stage, 1);
+  assert.equal(walk(["easy"], [1, 3, 4]).stage, 3);
+});
+
+test("문단 바로잡기: 14개 언어 모든 문단에서 틀린 칸이 바른 꼴로 (공백 없는 ja·zh·th 포함)", () => {
+  for (const language of LANGS) {
+    for (const item of parasOf(language)) {
+      const fixed = fixedLines(item, language);
+      assert.equal(fixed.length, item.lines.length, item.id);
+      for (const err of item.errors) {
+        const cell = tilesOf(fixed[err.line]!, language).join(" ");
+        assert.ok(fixed[err.line]!.includes(err.right), `${item.id} ${err.wrong}→${err.right}: ${fixed[err.line]}`);
+        assert.notEqual(fixed[err.line], item.lines[err.line], `${item.id} 안 바뀜 ${cell}`);
+      }
     }
   }
 });
 
-test("가짜에 다 [앎]이면 예/아니오를 믿지 않음(null), 뜻 고르기만으로 1단계 끝 아래에서 시작", async () => {
-  const { b, words, cuts } = await runYn("es", 3000, 1, "liar");
-  assert.equal(b, null);
-  const level = wordLevel(b, [], words.length, cuts);
-  assert.ok(level.b < cuts[0]!, String(level.b));
-  assert.equal(level.picked, true);
-});
-
-test("뜻 고르기: b 아래 하나·경계·위로 셋(+예비 셋), 맞히면 b가 오르고 틀리면 내림", async () => {
-  const words = await loadBank("en");
-  const cuts = stageCuts("en");
-  const ranks = meaningRanks(800, words, new Set());
-  assert.equal(ranks.length, 8);
-  assert.ok(ranks.slice(0, MEANING_ASK).every((rank) => rank > 300 && rank < 2200), ranks.join());
-  assert.ok(ranks[4]! > ranks[0]!, "위로 묻는 낱말이 더 드묾");
-  const up = wordLevel(800, ranks.map((rank) => ({ rank, correct: true })), words.length, cuts);
-  const down = wordLevel(800, ranks.map((rank) => ({ rank, correct: false })), words.length, cuts);
-  assert.ok(up.b > 800 && down.b < 800, `${up.b} ${down.b}`);
-  assert.equal(wordsAbout(37), 50);
-  assert.equal(wordsAbout(812), 800);
-  assert.equal(wordsAbout(2468), 2500);
-});
-
-test("표현·문법 오르기: 단계마다 셋 중 둘 맞혀야 넘음, 둘 틀리면 멈춤, 최대 18문제", () => {
-  let climb = startClimb({ expression: true, grammar: true });
-  const answer = (kind: "expression" | "grammar", ok: boolean) => {
-    const next = climbNext(climb)!;
-    assert.equal(next.kind, kind);
-    climb = climbAnswer(climb, kind, ok);
-  };
-  answer("expression", true);
-  answer("grammar", true);
-  assert.equal(climb.lanes.expression.stage, 1, "한 문제 맞혀선 안 넘음");
-  answer("expression", true); // 표현 1 넘음(둘)
-  answer("grammar", false);
-  assert.equal(climb.lanes.expression.stage, 2);
-  answer("expression", false);
-  answer("grammar", true); // 문법 1 넘음(셋 중 둘)
-  answer("expression", true);
-  answer("grammar", false);
-  answer("expression", false); // 표현 2: 맞1 틀2 → 멈춤
-  answer("grammar", false); // 문법 2: 틀2 → 멈춤
-  assert.equal(climbNext(climb), null);
-  assert.equal(climbStart(climb.lanes.expression), 2);
-  assert.equal(climbStart(climb.lanes.grammar), 2);
-  let all = startClimb({ expression: true, grammar: true });
-  for (let i = 0; i < 40 && climbNext(all); i += 1) all = climbAnswer(all, climbNext(all)!.kind, true);
-  assert.equal(climbStart(all.lanes.expression), 5);
-  assert.equal(climbStart(all.lanes.grammar), 5);
-  assert.ok(all.asked <= 18);
-  const none = startClimb({ expression: false, grammar: true });
-  assert.equal(climbNext(none)?.kind, "grammar");
-  assert.equal(climbStart(none.lanes.expression), 1);
-});
-
-test("찍기만 하는 사람(넷 중 하나): 예전보다 단계가 덜 올라감 — 2단계 이상 시작 15% 아래", () => {
-  const random = seeded("guess");
-  let over = 0;
-  const runs = 4000;
-  for (let r = 0; r < runs; r += 1) {
-    let climb = startClimb({ expression: false, grammar: true });
-    for (let i = 0; i < 40 && climbNext(climb); i += 1) climb = climbAnswer(climb, "grammar", random() < 0.25);
-    if (climbStart(climb.lanes.grammar) >= 2) over += 1;
+test("단계마다 문단 하나(있는 단계만), 고른 단계 → 낱말 경계·표현·문법 (en·th·es)", () => {
+  for (const language of ["en", "th", "es"]) {
+    const map = paragraphsByStage(parasOf(language), "s");
+    for (const [stage, item] of map) assert.equal(item.stage, stage, language);
+    assert.ok(map.has(1) && map.has(2), language);
+    const cuts = stageCuts(language);
+    const three = paraResult(3, cuts, 0);
+    assert.equal(three.expression, 3);
+    assert.equal(three.grammar, 3);
+    assert.equal(three.b, Math.round(startLevel(3, cuts).b));
+    assert.ok(paraResult(1, cuts, 0).b < paraResult(4, cuts, 0).b, language);
   }
-  assert.ok(over / runs < 0.2, String(over / runs));
 });
 
 test("글자: 여섯 문제, 정답이 보기에 있고 보기 넷이 다름, 넷 틀리면 글자부터 (ja·th·ar)", () => {
@@ -163,57 +100,4 @@ test("estimateChance: 낱말은 경계 b 곡선, 표현·문법은 잰 단계 �
   assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 1 }), 1);
   assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 2 }), 0.5);
   assert.equal(estimateChance(check, { kind: "gram", rank: 0, lv: 4 }), 0);
-});
-
-/**
- * 가상 학습자(참 경계 trueB): 예/아니오에서 모르는 낱말도 "본 적 있어요"를 넉넉히 누르고(over), 뜻 고르기는 알면 맞히고 모르면 넷 중 하나 찍기.
- * 예전엔 over가 있으면 경계가 끝(7,000)까지 붙음(가상 사용자 2026-11-22 민지·Layla). 이제 예/아니오는 3단계 끝까지만, 그 위는 뜻 고르기로.
- */
-async function runPerson(language: string, trueB: number, over: number, seed: string): Promise<number> {
-  const words = await loadBank(language);
-  const cuts = stageCuts(language);
-  const fakes = fakesOf(language);
-  const random = seeded(`${seed}|person`);
-  const shown: YnCard[] = [];
-  const answers: YnAnswer[] = [];
-  for (let i = 0; i < YN_TOTAL; i += 1) {
-    const card = nextYnCard({ words, cuts, fakes, answers, shown, seed });
-    if (!card) break;
-    shown.push(card);
-    const knows = card.rank !== null && random() < knowChance({ b: trueB, n: 0 }, card.rank);
-    answers.push({ rank: card.rank, yes: knows || random() < (card.rank === null ? over / 3 : over) });
-  }
-  const b0 = capYesNo(estimateB(answers, words.length), cuts);
-  const skip = new Set(answers.flatMap((one) => (one.rank === null ? [] : [one.rank])));
-  const meaning = meaningRanks(b0 ?? 350, words, skip)
-    .slice(0, MEANING_ASK)
-    .map((rank) => ({ rank, correct: random() < knowChance({ b: trueB, n: 0 }, rank) || random() < 0.25 }));
-  return wordLevel(b0, meaning, words.length, cuts).b;
-}
-
-test("가상 학습자: 넉넉히 '본 적 있어요'를 눌러도 경계가 끝까지 붙지 않고 참값 근처 (en·es)", async () => {
-  for (const language of ["en", "es"]) {
-    for (const [trueB, low, high] of [
-      [1200, 500, 3200],
-      [2500, 1000, 5500],
-      [5000, 1800, 7000],
-    ] as const) {
-      const got = [];
-      for (let i = 0; i < 40; i += 1) got.push(await runPerson(language, trueB, 0.35, `${language}|${trueB}|${i}`));
-      got.sort((a, b) => a - b);
-      const median = got[Math.floor(got.length / 2)]!;
-      assert.ok(median >= low && median <= high, `${language} 참 ${trueB} → 가운데 ${Math.round(median)} (${got.map(Math.round).join(",")})`);
-      if (trueB <= 2500) assert.ok(got.filter((b) => b >= 6500).length <= 2, `${language} 참 ${trueB}: 끝에 붙은 것 ${got.filter((b) => b >= 6500).length}`);
-    }
-  }
-});
-
-test("가상 학습자: '본 적 있어요'를 아주 넉넉히(70%) 눌러도 참 1,200인 사람이 2,000을 안 넘음 (en·es) — 예전 가운데 2,400~2,600", async () => {
-  for (const language of ["en", "es"]) {
-    const got = [];
-    for (let i = 0; i < 40; i += 1) got.push(await runPerson(language, 1200, 0.7, `${language}|over|${i}`));
-    got.sort((a, b) => a - b);
-    const median = got[Math.floor(got.length / 2)]!;
-    assert.ok(median <= 2000, `${language} 가운데 ${Math.round(median)}`);
-  }
 });

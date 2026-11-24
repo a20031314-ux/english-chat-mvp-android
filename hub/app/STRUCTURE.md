@@ -23,7 +23,7 @@
 │              오늘 학습 시간 줄(Logbank SessionRows, 그날 세부와 같은 줄 — 누르면 DayTimeline 그 덩어리) → 같은 선 위 할 것 칸(TodaySlot, 끝나면 ✓·다 끝나면 제목 ✓):
 │              ▶ Quizbank n/10(curriculum/quizFocus.ts 신호, n = todayCards.ts answeredToday) · 글자부터(lettersFirst.ts)면 오늘의 글자 묶음 → Languagebank 글자 칸 curriculum/lettersOpen.ts
 │              · 숙제(있을 때 → openCall replay) · 고른 튜터와 통화(→ 튜터 프로필 AiTutorSheet — 📞 통화, ✓ = 오늘 이 언어 통화 callStore)
-│          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단어 → 뜻 → 표현·문법 → 시작 단계, curriculum/firstCheck.ts — 다시 재지 않고 퀴즈로 고쳐 감)
+│          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단계 문단 [어려워요 · 딱 맞아요 · 쉬워요] → 시작 단계, curriculum/firstCheck.ts·spotLoad loadParas — 다시 재지 않고 퀴즈로 고쳐 감)
 │          칸 셋 = 위 칸 이름 줄이 탭(notes/NotebookSection MyLayers — 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면 FullScreenLayer, ✕로 제자리)
 │          [Logbank 하늘] studyMap/Logbank — 기록만
 │              [주 | 월] ‹기간› → 배운 것 표(Learned — 단어 · 문법 · 표현 · 문장구조 요소 색 bankTone PartMark × 학습 · 활용, curriculum/growthView.ts)
