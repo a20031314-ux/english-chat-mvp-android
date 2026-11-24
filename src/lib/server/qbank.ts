@@ -114,6 +114,8 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
   const raw = String(completion.choices[0]?.message?.content ?? "") || `(empty answer: ${String(completion.choices[0]?.finish_reason ?? "?")})`;
   const made: GrammarMade[] = [];
   const existing = new Set(have);
+  // 까닭은 학습 언어 꼴을 따옴표로 들 수 있어(たら·escrito) 글자 종류는 안 본다.
+  const note = (text: string) => Boolean(text) && text.length <= 300;
   const english = (text: string) => Boolean(text) && text.length <= 240 && !/[^\p{Script=Latin}\p{P}\p{S}\p{N}\p{Zs}]/u.test(text);
   const plain = (text: string) => Boolean(text) && text.length <= 140 && !/\p{Nd}/u.test(text) && !existing.has(text);
   for (const line of raw.split(/\r?\n/)) {
@@ -121,7 +123,7 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
     // 고르기의 다른 모양(ladderQuiz.ts ChoiceVariant): 문맥 C · 뜻 차이 M · 틀린 문장 X.
     if (cells[0] === "C" && cells.length >= 7) {
       const [, lead, text, gloss, piece, wrongs, why] = cells as [string, string, string, string, string, string, string];
-      if (!plain(lead) || !english(gloss) || !english(why) || !piece || piece.length > 40 || !acceptItem(entry, text, piece, existing)) continue;
+      if (!plain(lead) || !english(gloss) || !note(why) || !piece || piece.length > 40 || !acceptItem(entry, text, piece, existing)) continue;
       const at = text.toLocaleLowerCase().indexOf(piece.toLocaleLowerCase());
       const exact = text.toLocaleLowerCase().length === text.length ? text.slice(at, at + piece.length) : piece;
       const wrong = acceptForms(text, exact, wrongs.split(";"));
@@ -132,7 +134,7 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
     }
     if (cells[0] === "M" && cells.length >= 5) {
       const [, situation, right, wrongLine, why] = cells as [string, string, string, string, string];
-      if (!english(situation) || !english(why) || !plain(right) || !plain(wrongLine) || right === wrongLine) continue;
+      if (!english(situation) || !note(why) || !plain(right) || !plain(wrongLine) || right === wrongLine) continue;
       existing.add(right);
       made.push({ v: "m", t: right, p: "", g: situation, w: [wrongLine], y: why });
       continue;
@@ -152,7 +154,7 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
         return Math.max(x.length, y.length) - head - tail <= 4;
       };
       const good = rights.split(";").map((one) => one.trim()).filter((one) => plain(one) && one !== wrongLine && !near(one, wrongLine)).slice(0, 3);
-      if (!plain(wrongLine) || !english(meaning) || !english(why) || good.length < 3) continue;
+      if (!plain(wrongLine) || !english(meaning) || !note(why) || good.length < 3) continue;
       existing.add(wrongLine);
       made.push({ v: "x", t: wrongLine, p: "", g: meaning, w: good, y: why });
       continue;
