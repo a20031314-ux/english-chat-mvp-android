@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (132)
+## 탭이 확인할 것 (135)
 
 ### 탭 1 메인
 
@@ -155,6 +155,10 @@
 - **a261123-2-2** (2026-11-23 21:00, 탭 2 · 16b5da0) 통화 내 말 기다리기(0.9~2초) — 채팅 ⋮ 말 빠르기 아래·통화 ⓘ 창에 같은 칸(TurnWaitPicker), 새 문구 turnWait
   - 기능: AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 1:1 메시지 · 단체방 · Room · Logbank · 오늘의 학습
   - 볼 곳: `app/dev/call-preview/page.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-3-4** (2026-11-24 23:01, 탭 3 · 69f16fe) Quizbank: 그 단계 문법 칸 다 끝내면 위로·1~5단계 끝나면 다음 회차(같은 칸 새 문장), 문제은행이 문법 칸 문장을 만들고(판정 통과만) 튜터 줄도 문법 칸으로
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `components/AppHome.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/FeatureMap.tsx` · `components/GuideSheet.tsx` · `components/EnglishAnalysisProvider.tsx` · `components/FindInMy.tsx` · `components/WhatsNewSheet.tsx` · `app/api/expression-ask/route.ts` · `app/api/expression-insight/route.ts` · `app/api/expression-units/route.ts` … 66개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 2 My
@@ -322,6 +326,10 @@
 - **a261124-1-4** (2026-11-24 22:55, 탭 1 · fbfebef7) 장부 점검으로 옛 것 지움: 소재 수업 끝 다음 추천 버튼(UpNext)·문장분석 알아요/모르겠어요(MarkForMap)·내 문장 말해보기(RoleplayOwnLine)·보내는 곳 없는 신호 chatDraft·openVideo·sayOwnLine·웹 /learning 교재·쓸 기능 고르기의 노트 스위치·안 쓰는 문구 338키. 문구 고침: My 로딩 '지도를 불러오는 중' → '불러오는 중'(키 loading), 의견 예시·Languagebank 칠하기 도움말·영상 라이브러리 부제. 각 탭 화면에서 빈 자리·안 뜨는 문구가 없는지
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 사람 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/DictNotes.tsx` · `components/studyMap/GrammarExplain.tsx` · `components/studyMap/LanguageBank.tsx` · `components/studyMap/Logbank.tsx` … 7개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-3-5** (2026-11-24 23:01, 탭 3 · 69f16fe) Quizbank: 그 단계 문법 칸 다 끝내면 위로·1~5단계 끝나면 다음 회차(같은 칸 새 문장), 문제은행이 문법 칸 문장을 만들고(판정 통과만) 튜터 줄도 문법 칸으로
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `app/api/curriculum/qbank/route.ts` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/Quizbank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/DictNotes.tsx` · `components/studyMap/GrammarExplain.tsx` … 26개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
@@ -548,6 +556,10 @@
 - **a261124-1-6** (2026-11-24 22:55, 탭 1 · fbfebef7) 장부 점검으로 옛 것 지움: 소재 수업 끝 다음 추천 버튼(UpNext)·문장분석 알아요/모르겠어요(MarkForMap)·내 문장 말해보기(RoleplayOwnLine)·보내는 곳 없는 신호 chatDraft·openVideo·sayOwnLine·웹 /learning 교재·쓸 기능 고르기의 노트 스위치·안 쓰는 문구 338키. 문구 고침: My 로딩 '지도를 불러오는 중' → '불러오는 중'(키 loading), 의견 예시·Languagebank 칠하기 도움말·영상 라이브러리 부제. 각 탭 화면에서 빈 자리·안 뜨는 문구가 없는지
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 사람 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/AiTutorProfile.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/RoomParts.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-3-6** (2026-11-24 23:01, 탭 3 · 69f16fe) Quizbank: 그 단계 문법 칸 다 끝내면 위로·1~5단계 끝나면 다음 회차(같은 칸 새 문장), 문제은행이 문법 칸 문장을 만들고(판정 통과만) 튜터 줄도 문법 칸으로
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `components/AiTutorProfile.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `app/api/icons/route.ts` · `app/api/media/route.ts` · `app/api/random/route.ts` · `app/api/rooms/fix/route.ts` · `app/api/rooms/game/route.ts` · `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` … 27개 더
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (1, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
