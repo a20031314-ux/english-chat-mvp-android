@@ -90,7 +90,7 @@ async function makeGrammar(language: string, key: string, entry: BankEntry, onJu
   const have = [slot.example, ...entry.items.map((item) => item.t)].slice(0, 12);
   const completion = await completeChat(client, "translate", {
     temperature: 0.8,
-    max_tokens: 6000,
+    max_tokens: 12000,
     messages: [
       {
         role: "system",
@@ -160,7 +160,7 @@ Answer with exactly four G lines, one C line, one M line and one X line, nothing
   onJudge?.();
   const judged = await completeChat(client, "spotJudge", {
     temperature: 0,
-    max_tokens: 2000,
+    max_tokens: 6000,
     messages: [
       {
         role: "system",
@@ -187,7 +187,9 @@ Answer JSON only: {"ok":[true|false, ...]} in item order.`,
   }).catch(() => null);
   const verdict = jsonIn(String(judged?.choices[0]?.message?.content ?? ""));
   const ok = Array.isArray(verdict?.ok) ? (verdict!.ok as unknown[]) : [];
-  return { items: made.filter((_, i) => ok[i] === true), decoys: [], raw };
+  // 점검용(x-qbank-debug): 받은 모양과 판정을 남긴다(앱에는 안 감).
+  const shapes = made.map((one, i) => `${one.v ?? "g"}${ok[i] === true ? "✓" : "✗"}`).join(" ");
+  return { items: made.filter((_, i) => ok[i] === true), decoys: [], raw: `${shapes}\n${raw}` };
 }
 
 async function makeMore(language: string, key: string, stage: number, entry: BankEntry): Promise<{ items: { t: string; p: string; g: string; w?: string[] }[]; decoys: string[]; raw: string } | null> {
@@ -293,7 +295,7 @@ export async function bankFor(language: string, key: string, stage: number, resu
         for (const decoy of more.decoys) if (acceptDecoy(slot, decoy, list) && !entry.items.some((item) => item.t.toLocaleLowerCase().includes(decoy.toLocaleLowerCase()))) list.push({ d: decoy, n: 0, k: 0 });
         if (!grammar) entry.decoys[slot] = list.slice(-6);
         // 하나도 못 건졌으면 모델 답을 묶음에 잠깐 남긴다(점검 — 앱에는 안 감, 다음 성장 때 덮임).
-        (entry as BankEntry & { last?: string }).last = !more.items.length || (!grammar && !list.length) ? more.raw.slice(0, 2400) : "";
+        (entry as BankEntry & { last?: string }).last = grammar || !more.items.length || !list.length ? more.raw.slice(0, 2400) : "";
         entry.grownAt = entry.served;
         entry.dayGrows = entry.day === day ? entry.dayGrows + 1 : 1;
         entry.day = day;
