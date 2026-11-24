@@ -108,6 +108,8 @@ export function Quizbank({
   }, [language]);
   // 무작위 모양으로 낸 열쇠(측정 — quizStats.ts RANDOM_SHARE), 이번 묶음 문단(답이 오면 문단 난이도를 옮김).
   const randomKeys = useRef<Set<string>>(new Set());
+  // 대화 채우기로 낸 열쇠 → 줄 지문(답이 오면 이 폰에 남김, curriculum/talkFill.ts).
+  const talkIds = useRef(new Map<string, string>());
   const paraAsked = useRef<{ keys: Set<string>; errors: number } | null>(null);
   // 지금 묶음이 다시 볼 것인지(번갈아 내기), Logbank 오늘 카드가 맡긴 열쇠(curriculum/quizFocus.ts).
   const reviewBatch = useRef(false);
@@ -388,7 +390,6 @@ export function Quizbank({
   };
   /** 다시 볼 것 묶음 — 장부·체크 셋에서(오늘 카드와 같은 기록, todayCards.ts reviewKeys), 방금 묶음에 나온 열쇠는 빼고. */
   /** 대화 채우기(curriculum/talkFill.ts): 이 폰 채팅·통화에서 고침받은 줄 먼저, 그다음 소재가 든 줄 — 낸 것은 답이 오면 이 폰에 남김. */
-  const talkIds = useRef(new Map<string, string>());
   const talkTake = (n: number): { keys: string[]; questions: QuizQuestion[] } => {
     const made = talkFills(language, readTalks(language), { stage: readReach(language, stage).s, memo: readFillMemo(language), now: Math.floor(Date.now() / 1000), n: n + 2 }).filter((one) => !lastCircle.current.has(one.key)).slice(0, n);
     for (const one of made) talkIds.current.set(one.key, one.id);
@@ -497,10 +498,10 @@ export function Quizbank({
         used.push(item.key);
       }
     }
-    // 대화 채우기 하나(있을 때 — 고침받은 내 줄 먼저).
+    // 대화 채우기 하나를 묶음 맨 앞에(있을 때 — 고침받은 내 줄 먼저).
     const talk = talkTake(1);
-    questions.push(...talk.questions);
-    used.push(...talk.keys);
+    questions.unshift(...talk.questions);
+    used.unshift(...talk.keys);
     // 낱말·표현은 카드 한 장에서 한 칸 가림(카드가 없을 때만 넣어 둔 영어 단어 문제·묶음 퀴즈).
     for (const key of keys) {
       const question = askCard(key, asked, ladderNow, `${day}-${round}`) ?? (key.startsWith("w|") ? undefined : bundleQuiz(language, [key], { seed: `${day}-${round}-${key}`, stage, style: "choose", fallback: "type", strict: true }).questions[0]);
