@@ -30,7 +30,7 @@
 - **Logbank 쌓기·Quizbank 게이지 장면:** 사용법 `log-core`(쌓기 기둥 전)·Quizbank 장면(게이지 이름표·막대 전)이 옛 화면 — 버전 자를 때 `scripts/guide-slides/shoot.mjs` 다시(14개 앱 언어). 남은 숫자 어긋남 둘은 inbox `qa → dev` 2026-11-21 줄.
 - **이름 정리 56묶음:** `hub/app/FEATURES.md` 끝 목록 — 같은 기능이면 한 키로, 다른 기능이면 이름을 바꾼다. 먼저 "알아요"(checkKnown·itemsMastered·knownTag·markKnown)·"복습"·"이어서 하기". 고치면 `node scripts/check-copy-keys.mjs --write`.
 - **지울 것 1:** `hub/app/FEATURES.md` "지울 것" — 아침 알림(`morningNotify.ts` — 되살릴지 사용자 결정 뒤).
-- **옛 앱 전용 서버·lib:** 최소 지원 버전을 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용"과 그 서버만 쓰는 lib(`checkup.ts`·`recall.ts`·`stageScripts` 대본 쪽 등)를 지운다.
+- **옛 앱 전용 서버·lib:** 최소 지원 버전을 2.81 이상으로 올리면 오늘 해볼 것 서버(`/api/learner/next`·`learner/next.ts`·`learner/practice.ts`, chat·turn의 practice 받기, 가상 사용자 `next` 묶음)도 지운다. 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용"과 그 서버만 쓰는 lib(`checkup.ts`·`recall.ts`·`stageScripts` 대본 쪽 등)를 지운다.
 - **My에서 찾기:** 문법·표현 열쇠가 없는 말은 사전 시트로 바뀜(2026-11-09) — 서버 `/api/notebook` locate가 고른 노트 칸(관용·세부)은 새 앱에서 안 씀. 옛 앱이 안 부르게 되면 locate 응답을 줄인다.
 - **퀴즈 다시 짜기 남은 것:** 앱 → `/api/curriculum/spots` 미리 만들기 연결(한 문장 새로 쓰기 칸), `qstat:v1` 한 달 쌓이면 사다리·게이지 값 고치기(Elo식 추정 여부) — 설계안 `hub/work/drafts/quiz-redesign-2026-11-10.md` §10.
 - **사전 예문 오류 고치기:** `hub/work/drafts/dict-errors-2026-11-10.txt`(ar 110 · fr 3) — word-sentences 고치고 `--check`.

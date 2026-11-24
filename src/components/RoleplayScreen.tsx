@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
-import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallModeInfo, callInfoSeen, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
@@ -18,7 +17,6 @@ import { maybeShowInterstitial } from "@/lib/ads";
 import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
-import { saidPhrase } from "@/lib/learner/practice";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
 import { openLettersBank } from "@/lib/curriculum/lettersOpen";
 import { captureSceneSoon, enterScene } from "@/lib/notes/sceneShots";
@@ -126,7 +124,6 @@ export function RoleplayScreen({
   onClose,
   resume,
   onSaved,
-  practice: practiceRequest,
 }: {
   scenarioId: string;
   /** What the learner speaks, so the director's notes are written in it. */
@@ -144,12 +141,6 @@ export function RoleplayScreen({
    * it down is the caller's business; this only says what there is to write.
    */
   onSaved?: (saved: SavedConversation) => void;
-  /**
-   * What this conversation was started to practise, from "try this" or the
-   * map: sent with every turn so the character keeps to it, and shown above
-   * the conversation with each phrase ticked once said (learner/practice.ts).
-   */
-  practice?: PracticeRequest | null;
 }) {
   // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
   useEffect(() => enterScene("call"), []);
@@ -162,18 +153,6 @@ export function RoleplayScreen({
   const [state, setState] = useState<SessionState | null>(null);
   const [instruction, setInstruction] = useState<Instruction | null>(null);
   const [said, setSaid] = useState<Spoken[]>([]);
-  const [practiceStopped, setPracticeStopped] = useState(false);
-  const practice = practiceStopped ? null : (practiceRequest ?? null);
-  const practiceSaid = useMemo(() => {
-    const done = new Set<string>();
-    if (!scenario) return done;
-    for (const phrase of practice?.goal.phrases ?? []) {
-      if (said.some((line) => line.who === "learner" && saidPhrase(line.text, phrase, scenario.language))) {
-        done.add(phrase);
-      }
-    }
-    return done;
-  }, [practice, said, scenario]);
   // The character's translations: folded by default, each one a tap away, or
   // all on show — the learner's choice, kept for next time. Nothing waits on
   // a translation either way; this is about what is on screen.
@@ -463,7 +442,6 @@ export function RoleplayScreen({
       },
       nativeLanguage,
       isPremium,
-      practice: practice?.goal ?? null,
       sessionId: conversationId.current,
       signals: state.pending
         ? { hesitationMs: state.pending.hesitationMs, attempts: state.pending.attempts }
@@ -1122,17 +1100,6 @@ export function RoleplayScreen({
             }}
           />
         ) : null}
-      {practice ? (
-        <div className="shrink-0 border-b border-white/10 px-3 py-2">
-          <PracticeBanner
-            ui={ui}
-            request={practice}
-            said={practiceSaid}
-            targetLanguage={scenario.language}
-            onStop={() => setPracticeStopped(true)}
-          />
-        </div>
-      ) : null}
       <div className="flex h-[70dvh] min-h-80 flex-col">
       <CallPages ui={ui}>
         {said.map((line, index) => {
@@ -1205,17 +1172,6 @@ export function RoleplayScreen({
   return (
     <FullScreenLayer>
       {turnDiagnosticsEnabled() ? <TurnDiagBox /> : null}
-      {practice ? (
-        <div className="shrink-0 border-b border-white/10 px-3 py-2">
-          <PracticeBanner
-            ui={ui}
-            request={practice}
-            said={practiceSaid}
-            targetLanguage={scenario.language}
-            onStop={() => setPracticeStopped(true)}
-          />
-        </div>
-      ) : null}
       {scenario.openEnded && modeInfo ? (
         <CallModeInfo ui={ui} name={headTitle} locale={nativeLanguage} language={scenario.language} onClose={() => setModeInfo(false)} />
       ) : null}

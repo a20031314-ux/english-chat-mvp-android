@@ -46,7 +46,7 @@
 └ 영상 학습 video ─ 이달의 영상 · 링크 넣기 · 학습 언어 자막 · 문장 바 → 문장분석 시트
 
 어디서나 뜨는 층
-  AI 통화 CallHost(startCall · practice · openCall) → RoleplayScreen
+  AI 통화 CallHost(startCall · openCall) → RoleplayScreen
      통화 중: roleplay/CallParts CallStage(맨 위 📞 통화 ⓘ → CallModeInfo 설명창 — 처음 한 번 저절로, callInfoSeen.v1 이 폰 · 위 튜터 얼굴·💬 자막 · 아래 내 사진) · CallControls(🙉 · 💡 — 막혔을 때만)
        튜터는 대화만(감독 free — 요즘 배운 것 lib/roleplay/recentLearned.ts 장부 최근 7일 퀴즈 낱말·표현 → recent 화제에 녹이기만, 가끔 내 쪽 것 설명해 달라고)
        교정 = 코치 띠(CallParts CoachCardView — 카드만, 얼굴 없음·소리 없음, 뜨면 아래 반을 넓히고 내 얼굴을 줄임): 따라 말하면 앱 채점 transcriptMarks.ts gradeRedo(✓·한 번 더), 튜터에겐 redo만(맞장구)
@@ -60,14 +60,14 @@
 
 - **사람 기능이 꺼지면**(iOS 1차, `src/lib/platform.ts` `socialFeaturesEnabled`): 하단은 My │ 채팅 │ 영상 학습(통화는 채팅 머리 📞), 대화·사람·Room·메시지·단체방 전부 없음.
   플랫폼마다 다른 것은 `platform.ts`에만 둔다(광고 `adsAvailable`, Google 로그인, 영상 받기 등).
-- **쓸 기능 고르기**(`src/lib/features.ts`): 사용자가 통화·영상·사람·Room을 숨기면 `AppHome`이 탭에서 빼고(`tabHidden`), 숨긴 탭으로 가는 `openTab`·`practice`는 사용법의 그 장을 연다(`openGuide` hidden). 스위치는 사용법 창(`GuideSheet`)에만, 장 ↔ 기능은 `featureOfGo`.
+- **쓸 기능 고르기**(`src/lib/features.ts`): 사용자가 통화·영상·사람·Room을 숨기면 `AppHome`이 탭에서 빼고(`tabHidden`), 숨긴 탭으로 가는 `openTab`은 사용법의 그 장을 연다(`openGuide` hidden). 스위치는 사용법 창(`GuideSheet`)에만, 장 ↔ 기능은 `featureOfGo`.
   새 탭이나 새 사용법 장을 만들면 `featureOfTab`·`featureOfGo`·`FEATURE_CHAPTER`(AppHome)·`FeatureMap`(구조도 칸)을 같이 본다. 하단 탭 목록은 `features.ts` `bottomTabs` 하나. 창구 모드에서는 쓰지 않는다.
 - **대화 화면 하나의 문법:** AI 대화·AI 통화·1:1·단체방·Room 줄은 **누르면** 할 일 한 줄(`conversation/LineTools` — 듣기·번역·분석·📕 + 화면마다 `extra`). 내 줄 교정은 어디서나 `CorrectionChip`/`CorrectionCard`. 줄에 버튼을 늘 달지 않는다.
   통화 화면 파일: `RoleplayScreen`은 차례 흐름만 — 튜터 줄 소리 `lib/roleplay/linePlayer.ts`, 대본 표시 `lib/roleplay/transcriptMarks.ts`, 남은 시간·통화 정리 저장 `roleplay/callHooks.ts`, 머리·바닥 `roleplay/CallParts.tsx`. 한 줄 말해 보기(`sayLine`·`Attempt`)는 `lib/speech/sayLine.ts`·`components/speech/Attempt.tsx`(영역 speech).
 - **안에서 쓰는 이름과 화면 이름이 다르다:** My = `map`, 대화 = `talk`(옛 `messages`도 여기로), 통화 = `roleplay`, Room = `rooms`, Quizbank 칸 = `keep`, Logbank 칸 = `log`, Languagebank 칸 = `lang`.
   옛 링크 `?screen=…`는 `AppHome.tsx` `resolveTab`이 새 자리로 보낸다 — 탭을 바꾸면 여기와 사용법(`GUIDE_CHAPTERS`)·새로워진 점 `guide` 칸·캡처 스크립트를 같이 본다.
 - **탭끼리는 서로를 직접 부르지 않는다.** 이동은 `appIntents` 신호(아래 자동 표)로 하고, 받는 쪽이 처리한다. My 안 칸끼리는 이 폰 안 신호(`quizFocus.ts` QUIZ_FOCUS_EVENT · `lettersOpen.ts` LETTERS_OPEN_EVENT).
-- **오늘 해볼 것·표현 장부(`learner`)는 채팅·통화 첫 화면이 같이 쓴다.** 바꾸면 두 곳을 다 본다.
+- **표현 장부(`learner`)는 채팅·통화·문장분석이 같이 쓴다.** 바꾸면 그 화면들을 다 본다. 채팅·통화 빈 화면에 할 것 카드는 두지 않는다 — 할 것은 My 오늘의 학습 한 곳.
 - **광고**(무료·안드로이드만, 자리·설정·손익 전체는 `hub/app/ADS.md` — 자동): 배너는 영상·대화 목록만(My·채팅·통화·Room·사람에는 없음). 네이티브는 목록 사이·My 칸 안(Logbank 끝·Quizbank 문제 아래·Languagebank 끝 — 바닥 칸·전체 화면 모두)·끝 화면·읽는 시트 끝(`NativeAdSlot`, 층이 맨 위일 때만), 전면은 끝난 자리를 닫을 때만. 웹은 같은 자리에 AdSense만(`WebAdSlot`).
 - **창구(웹, `src/lib/doors.ts`):** 겉은 다른 서비스, 속은 같은 앱. `call.` = Moyeo(첫 화면 Room), `talk.` = Pingo(첫 화면 사람 "🟢 지금 접속 중"), `spin.` = Spin(🎲 랜덤 탭 `random`, 웹만, 서버 스위치 `RANDOM_ENABLED`). 창구 주소의 `/`·`/<언어>` → 소개 페이지(`app/door/…`), `?screen=`이 붙으면 창구 모드.
 - **다시 켤 때 하던 자리로**(`lib/resumeSpot.ts` resumeSpot.v1 이 폰): 하단 탭·My 칸과 전체 화면·열어 둔 소재 수업을 남겨, 1시간 안이면 그 자리로. 주소 ?screen·창구가 앞선다.
@@ -98,7 +98,7 @@
 - 화면: `AiConsentGate` · `AppHome` · `FeatureMap` · `FullScreenLayer` · `GuideSheet` · `LanguagePick` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `ShellUpdate` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
 - API: `guide` · `whats-new`
 - 웹 페이지: `/`
-- 다른 영역이 씀: `AppHome` ← 학습 기록 공통, 사람 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 9곳 · `LanguageSelector` ← 웹 전용 페이지 · `TabIcons` ← 여러 영역 6곳 · `TargetLanguageSelector` ← 웹 전용 페이지
+- 다른 영역이 씀: `AppHome` ← 사람 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 9곳 · `LanguageSelector` ← 웹 전용 페이지 · `TabIcons` ← 여러 영역 6곳 · `TargetLanguageSelector` ← 웹 전용 페이지
 
 ### 대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀 `talk`
 - 화면: `AiTutorRow` · `rooms/MateAsk` · `rooms/MessagesTab` · `rooms/RoomDm` · `rooms/RoomGroups` · `rooms/TeamSpace`
@@ -124,10 +124,8 @@
 - API: `expression-ask` · `expression-insight` · `expression-units` · `learning-spans` · `translate`(대화 탭, AI 통화, 사람 탭, Room 탭, 계정·로그인) · `tts`(AI 통화, My 탭) · `vocab/gloss` · `vocab`
 - 다른 영역이 씀: `AnalyzableEnglish` ← AI 채팅, 영상 학습 탭, 웹 전용 페이지 · `EnglishAnalysisProvider` ← 앱 틀, 웹 전용 페이지 · `ExpressionInsightProvider` ← 앱 틀, 웹 전용 페이지 · `FindInMy` ← AI 통화 · `SelectableEnglishText` ← AI 채팅 · `TTSButton` ← AI 채팅, AI 통화, My 탭
 
-### 학습 기록 공통 — 오늘 해볼 것·표현 장부 (여러 화면이 같이 씀) `learner`
-- 화면: `NextStepCard`
+### 학습 기록 공통 — 표현 장부·튜터 요약 (여러 화면이 같이 씀) `learner`
 - API: `learner/brief` · `learner/comprehension`(문장분석·표현 시트, 영상 학습 탭) · `learner/growth` · `learner/ledger`(대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트) · `learner/next` · `learner/self-check`(My 탭)
-- 다른 영역이 씀: `NextStepCard` ← AI 채팅, AI 통화
 
 ### 영상 학습 탭 `video`
 - 화면: `contentDiscovery/ContentDiscoveryPanel` · `videoLearning/CatalogLibrary` · `videoLearning/CurrentSubtitleCard` · `videoLearning/SavedVideoSessions` · `videoLearning/SegmentPlayButton` · `videoLearning/StudyMaterialsList` · `videoLearning/SubtitleDebugPanel` · `videoLearning/SubtitleGenerationStatus` · `videoLearning/VideoLearningTab` · `videoLearning/VideoPlayer` · `videoLearning/VideoUrlInput` · `videoLearning/VideoWatchFullscreenDock` · `videoLearning/relayPlayer`
@@ -161,7 +159,7 @@
 
 ### 요금·포인트·광고 `billing`
 - 화면: `BillingScreen` · `NativeAdSlot` · `PointStore` · `PointsIcon` · `WebAdSlot`
-- API: `ads/config`(여러 영역 6곳) · `ads/ssv` · `ads/txt` · `entitlement`(여러 영역 14곳) · `points/sync`(여러 영역 14곳)
+- API: `ads/config`(여러 영역 6곳) · `ads/ssv` · `ads/txt` · `entitlement`(여러 영역 13곳) · `points/sync`(여러 영역 13곳)
 - 웹 페이지: `/subscribe`
 - 다른 영역이 씀: `BillingScreen` ← 앱 틀, AI 채팅, 영상 학습 탭, 사람 탭 · `NativeAdSlot` ← 여러 영역 8곳 · `PointsIcon` ← 영상 학습 탭, 의견 보내기·반영 소식
 
@@ -192,7 +190,6 @@
 | `openTab` | AI 통화, 사람 탭 | 앱 틀 |
 | `chatDraft` | — | AI 채팅 |
 | `openVideo` | — | 영상 학습 탭 |
-| `practice` | AI 채팅, 학습 기록 공통 | 앱 틀, AI 채팅, AI 통화 |
 | `startCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
 | `openCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
 | `sayOwnLine` | — | AI 통화 |
@@ -204,6 +201,6 @@
 
 - 아무도 안 가져다 쓰는 화면 코드: 없음
 - 앱·스크립트 어디서도 안 부르는 API: 없음
-- 밖에서 부르는 API: `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `curriculum/qbank/seed` Vercel 예약 작업(vercel.json) — 출시 초반 문제은행 미리 채우기 · `curriculum/fixed-lesson/seed` Vercel 예약 작업(vercel.json) — Stagebank 고정 수업 미리 만들기(앱 언어 ko·en) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `curriculum/spots` 퀴즈 다시 짜기 — 틀린 곳 고르기 문항 미리 만들기(server/spotMake.ts), 화면은 설계안 5단계에서 붙임. 지금은 운영 확인만 · `learner/growth` 옛 앱 2.48~2.74가 My 망·그래프(여섯 요소)에 씀 — 2.75부터 화면은 네 갈래(/api/notebook parts), 최소 지원 버전을 2.75 이상으로 올리면 화면용으로는 지움(점검 스크립트는 씀) · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀 · `build` 시험 앱 껍데기(운영 웹을 불러 쓰는 디버그 APK)의 ShellUpdate가 새 배포 확인에 씀 · `curriculum/recall` 꺼내 쓰기(RecallPlayer) — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움 · `curriculum/ask` 오늘 배운 것 직접 묻기 — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움 · `curriculum/fixed-lesson` 지나온 단계 돌아보기(StageReview) — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움
+- 밖에서 부르는 API: `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `curriculum/qbank/seed` Vercel 예약 작업(vercel.json) — 출시 초반 문제은행 미리 채우기 · `curriculum/fixed-lesson/seed` Vercel 예약 작업(vercel.json) — Stagebank 고정 수업 미리 만들기(앱 언어 ko·en) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `curriculum/spots` 퀴즈 다시 짜기 — 틀린 곳 고르기 문항 미리 만들기(server/spotMake.ts), 화면은 설계안 5단계에서 붙임. 지금은 운영 확인만 · `learner/growth` 옛 앱 2.48~2.74가 My 망·그래프(여섯 요소)에 씀 — 2.75부터 화면은 네 갈래(/api/notebook parts), 최소 지원 버전을 2.75 이상으로 올리면 화면용으로는 지움(점검 스크립트는 씀) · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀 · `learner/next` 옛 앱 2.80 이하 채팅 빈 화면 '오늘 해볼 것' 카드가 씀 — 새 앱은 카드를 지움, 최소 지원 버전을 2.81 이상으로 올리면 지움(가상 사용자 점검 next 묶음도 같이) · `build` 시험 앱 껍데기(운영 웹을 불러 쓰는 디버그 APK)의 ShellUpdate가 새 배포 확인에 씀 · `curriculum/recall` 꺼내 쓰기(RecallPlayer) — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움 · `curriculum/ask` 오늘 배운 것 직접 묻기 — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움 · `curriculum/fixed-lesson` 지나온 단계 돌아보기(StageReview) — 옛 앱 2.79 이하 My Stagebank가 씀 — 2026-11-09 개편을 모두에게 켜며 새 앱 화면을 지움, 최소 지원 버전을 2.80 이상으로 올리면 지움
 
 <!-- 자동 끝 -->

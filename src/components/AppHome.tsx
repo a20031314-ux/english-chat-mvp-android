@@ -294,20 +294,6 @@ function AppHomeInner({
 
   // The study map sends learners to the tab a topic is practised in.
   useEffect(() => onAppIntent("openTab", ({ tab: next }) => openTab(next)), [openTab]);
-  // A conversation to practise something goes to the tab it is held in; the
-  // tab starts it (appIntents.ts). A map topic opens on the map.
-  useEffect(
-    () =>
-      onAppIntent("practice", ({ tab: next }) => {
-        // 통화로 하는 연습은 CallHost가 그 자리에서 연다. 통화를 숨겼으면 사용법의 그 장으로.
-        if (next === "roleplay") {
-          if (offList.split(",").includes("call")) sendAppIntent("openGuide", { chapter: FEATURE_CHAPTER.call, hidden: true });
-          return;
-        }
-        openTab(next);
-      }),
-    [openTab, offList],
-  );
 
   useEffect(() => {
     const onPopState = (event: PopStateEvent) => {

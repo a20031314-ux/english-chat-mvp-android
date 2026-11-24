@@ -6,9 +6,8 @@ import { CallList } from "@/components/CallList";
 import { RoleplayOwnLine } from "@/components/RoleplayOwnLine";
 import { RoleplayPast } from "@/components/RoleplayPast";
 import { RoleplayScreen } from "@/components/RoleplayScreen";
-import type { PracticeRequest } from "@/components/NextStepCard";
 import { usePremium } from "@/contexts/PremiumContext";
-import { onAppIntent, takeAppIntent } from "@/lib/appIntents";
+import { onAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
@@ -19,7 +18,7 @@ import type { SavedConversation } from "@/lib/roleplay/saved";
  * AI 튜터와의 통화 — 앱 어디서나 떠 있는 층(2026-10-23, `hub/work/drafts/conversation-unify-2026-10-23.md` 3단계).
  *
  * 예전 통화 탭의 첫 화면(팩·오늘 해볼 것·안내·남은 시간·내 문장 말해보기·지난 대화)을 없애고, 1:1처럼 📞를 누르면 바로 통화.
- * - 시작: `startCall`(AI 튜터 줄·튜터 프로필·AI 대화 머리의 📞 — 통화는 하나, 2026-11-19), `practice`(tab roleplay — My 써 보기 카드 등).
+ * - 시작: `startCall`(AI 튜터 줄·튜터 프로필·AI 대화 머리의 📞 — 통화는 하나, 2026-11-19).
  * - 끝나면 통화는 통화 기록 목록(CallList)에만 남는다 — 채팅과 따로(2026-10-27). `openCall` id 없음 = 목록, id = 돌아보기.
  * - 마이크는 사람이 누른 뒤에만 연다(링크 `?screen=roleplay`는 통화를 열지 않고 AI 대화로).
  */
@@ -43,10 +42,7 @@ export function CallHost({
   onActiveChange?: (active: boolean) => void;
 }) {
   const openTalk = scenariosForLanguage(targetLanguage).find((scenario) => scenario.openEnded)?.id ?? null;
-  // 이 층이 붙기 전에 보낸 요청(지도의 "말로" 등)은 붙을 때 한 번 가져간다.
-  const [arrived] = useState(() => (enabled ? takeAppIntent("practice", (detail) => detail.tab === "roleplay") : null));
-  const [playing, setPlaying] = useState<string | null>(() => (arrived && openTalk ? openTalk : null));
-  const [practice, setPractice] = useState<PracticeRequest | null>(arrived);
+  const [playing, setPlaying] = useState<string | null>(null);
   const [resuming, setResuming] = useState<SavedConversation | null>(null);
   const [reading, setReading] = useState<SavedConversation | null>(null);
   const [replayOpen, setReplayOpen] = useState(false);
@@ -60,21 +56,9 @@ export function CallHost({
 
   useEffect(
     () =>
-      onAppIntent("practice", (request) => {
-        if (request.tab !== "roleplay" || !enabled || !openTalk) return;
-        takeAppIntent("practice", (detail) => detail.tab === "roleplay");
-        setPractice(request);
-        setResuming(null);
-        setPlaying(openTalk);
-      }),
-    [enabled, openTalk],
-  );
-  useEffect(
-    () =>
       onAppIntent("startCall", ({ resumeId }) => {
         if (!enabled || !openTalk) return;
         const carry = resumeId ? (readCalls().find((row) => row.id === resumeId) ?? null) : null;
-        setPractice(null);
         setResuming(carry);
         setPlaying(carry?.scenarioId ?? openTalk);
       }),
@@ -107,11 +91,9 @@ export function CallHost({
           ui={ui}
           resume={resuming}
           onSaved={keepCall}
-          practice={practice}
           onClose={() => {
             setPlaying(null);
             setResuming(null);
-            setPractice(null);
           }}
         />
       ) : null}

@@ -47,7 +47,8 @@
 
     { "id": "stagebank-api", "area": "my", "name": "Stagebank 서버(대본·단계 시험·꺼내 쓰기·돌아보기)", "copy": null, "does": "옛 앱 2.79 이하 My Stagebank가 부름 — 새 앱은 Quizbank 익힘 기록(scripts check)만 씀", "code": ["src/app/api/curriculum/recall/route.ts", "src/app/api/curriculum/ask/route.ts", "src/app/api/curriculum/fixed-lesson/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
     { "id": "coach-api", "area": "call", "name": "통화 튜터 수업 서버(말로 짚기·다시 말해 보기)", "copy": null, "does": "옛 앱 2.79 이하 통화 🎓 튜터 수업이 coach: true로 부름 — 새 앱은 코치 띠(앱 채점), director.ts coachRules·spokenCoachFix·silent·study", "code": ["src/lib/roleplay/director.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
-    { "id": "guide-text-api", "area": "shell", "name": "사용법 글·칸 설명 서버(칸 글·학습 흐름·카드·? 설명)", "copy": null, "does": "옛 앱 2.79 이하 사용법·Stagebank·Quizbank·Logbank ?가 /api/guide(overview·banks·칸 글)로 읽음 — 새 앱은 장면(slides)만", "code": ["src/lib/guide/content.ts", "src/lib/guide/overview.ts", "src/lib/guide/banks.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" }
+    { "id": "guide-text-api", "area": "shell", "name": "사용법 글·칸 설명 서버(칸 글·학습 흐름·카드·? 설명)", "copy": null, "does": "옛 앱 2.79 이하 사용법·Stagebank·Quizbank·Logbank ?가 /api/guide(overview·banks·칸 글)로 읽음 — 새 앱은 장면(slides)만", "code": ["src/lib/guide/content.ts", "src/lib/guide/overview.ts", "src/lib/guide/banks.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
+    { "id": "next-step-api", "area": "learner", "name": "오늘 해볼 것 서버(채팅 빈 화면 카드·연습 목표)", "copy": null, "does": "옛 앱 2.80 이하 채팅 빈 화면 '오늘 해볼 것' 카드가 /api/learner/next로 읽고, 고른 연습을 /api/chat·/api/roleplay/turn에 practice로 보냄 — 새 앱엔 카드·practice 신호 없음(할 것은 My 오늘의 학습)", "code": ["src/app/api/learner/next/route.ts", "src/lib/learner/next.ts", "src/lib/learner/practice.ts"], "status": "old-app", "until": "최소 지원 버전 2.81 이상" }
 
   ]
 }

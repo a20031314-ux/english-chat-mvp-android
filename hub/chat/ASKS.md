@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (126)
+## 탭이 확인할 것 (129)
 
 ### 탭 1 메인
 
@@ -315,6 +315,10 @@
   - 기능: 첫 측정 · Logbank · 오늘의 학습 · Quizbank · 칸 설명
   - 볼 곳: `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/TodayCards.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-1-1** (2026-11-24 22:30, 탭 1 · 5627038d) 채팅 빈 화면 '오늘 해볼 것' 카드(NextStepCard)·연습 띠(PracticeBanner)·practice 신호 지움 — 채팅 빈 화면·통화 화면에 카드/띠가 안 뜨는지, 튜터가 먼저 인사하는지
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 사람 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/notes/NotebookSection.tsx` · `components/studyMap/DictNotes.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/GrammarExplain.tsx` · `components/studyMap/LanguageBank.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/StudyChips.tsx` · `components/studyMap/TodayCards.tsx` … 7개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
 
@@ -422,6 +426,10 @@
   - 기능: AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 1:1 메시지 · 단체방 · Room · Logbank · 오늘의 학습
   - 볼 곳: `components/ChatWindow.tsx` · `components/RoleplayScreen.tsx` · `components/roleplay/CallParts.tsx` · `components/speech/CallKit.tsx` · `components/CallHost.tsx` · `components/RoleplayPast.tsx` · `components/MessageBubble.tsx` · `components/RoleplayReview.tsx` · `components/roleplay/callHooks.ts` · `components/roleplay/TurnDiagBox.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-1-2** (2026-11-24 22:30, 탭 1 · 5627038d) 채팅 빈 화면 '오늘 해볼 것' 카드(NextStepCard)·연습 띠(PracticeBanner)·practice 신호 지움 — 채팅 빈 화면·통화 화면에 카드/띠가 안 뜨는지, 튜터가 먼저 인사하는지
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 사람 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/CallHost.tsx` · `components/ChatWindow.tsx` · `components/RoleplayScreen.tsx` · `components/CallList.tsx` · `components/videoLearning/VideoLearningTab.tsx` · `components/roleplay/TurnDiagBox.tsx` · `components/roleplay/CallParts.tsx` · `components/roleplay/CallReplay.tsx` · `components/roleplay/CallRecap.tsx` · `components/conversation/LineTools.tsx` … 4개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람
 
@@ -524,6 +532,10 @@
 - **a261123-2-4** (2026-11-23 21:00, 탭 2 · 16b5da0) 통화 내 말 기다리기(0.9~2초) — 채팅 ⋮ 말 빠르기 아래·통화 ⓘ 창에 같은 칸(TurnWaitPicker), 새 문구 turnWait
   - 기능: AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 1:1 메시지 · 단체방 · Room · Logbank · 오늘의 학습
   - 볼 곳: `components/rooms/RoomCall.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomView.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-1-3** (2026-11-24 22:30, 탭 1 · 5627038d) 채팅 빈 화면 '오늘 해볼 것' 카드(NextStepCard)·연습 띠(PracticeBanner)·practice 신호 지움 — 채팅 빈 화면·통화 화면에 카드/띠가 안 뜨는지, 튜터가 먼저 인사하는지
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 사람 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/AiTutorProfile.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ## 최근 답 (1, 14일 뒤 저절로 빠짐 — 경위는 git 기록)

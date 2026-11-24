@@ -8,8 +8,6 @@
  * input, VideoLearningTab loads a video and seeks to the scene.
  */
 
-import type { PracticeGoal } from "@/lib/learner/practice";
-
 export type AppIntents = {
   /** Switch to a bottom tab. */
   openTab: { tab: "map" | "chat" | "roleplay" | "video" | "vocab" };
@@ -17,19 +15,6 @@ export type AppIntents = {
   chatDraft: { text: string };
   /** Load a video and, once it plays, jump to the scene. */
   openVideo: { url: string; startSeconds?: number; durationSeconds?: number };
-  /**
-   * Start a conversation with something to practise in it (learner/practice.ts):
-   * chat opens with the tutor speaking first, a call opens the open conversation
-   * already in the situation. AppHome switches to the tab; the tab starts it.
-   */
-  practice: {
-    tab: "chat" | "roleplay";
-    goal: PracticeGoal;
-    /** What the learner sees it called, in the interface language. */
-    title?: string;
-    /** The mistake as the learner's map names it, in the interface language. */
-    mistakeLabel?: string;
-  };
   /**
    * AI 튜터와 통화(2026-10-23, conversation-unify 3단계 — 통화 첫 화면 없이 📞로 바로). `resumeId`면 멈춘 그 통화를 이어서.
    * CallHost가 받는다(앱 어디서나 떠 있는 통화 화면).

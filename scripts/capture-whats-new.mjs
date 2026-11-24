@@ -193,7 +193,6 @@ const GUIDE_ITEMS = [
   { shot: "stage-parts" },
   // 2.76: 사용법 my.map 그림은 대본 목록(새로워진 점과 같은 장면).
   { shot: "stage-scripts" },
-  { shot: "chatnext" },
 ];
 // `guide-parts`: 2.75 네 갈래·게시판 주제 칩 그림만 다시(채팅을 쓰지 않음).
 const GUIDE_PARTS_ITEMS = [{ shot: "parts-net" }, { shot: "parts-graph" }, { shot: "stage-next" }, { shot: "stage-parts" }, { shot: "board-topics" }];
@@ -2225,18 +2224,6 @@ const STEPS = {
     await page.mouse.wheel(0, -90);
     await wait(800);
   },
-  async chatnext({ page, ui, wait }) {
-    // A fresh conversation, so the card shows.
-    await page.evaluate(() => {
-      for (const key of ["conversationSessions", "activeConversationSessionId", "activeConversationSessionIds"]) localStorage.removeItem(key);
-    });
-    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
-    await wait(3000);
-    for (let i = 0; i < 30 && !(await page.getByRole("button", { name: ui.nextByChat }).count()); i++) await wait(500);
-    await page.getByRole("button", { name: ui.nextByChat }).first().click();
-    for (let i = 0; i < 40 && !(await page.getByText(ui.practiceNow).count()); i++) await wait(500);
-    await wait(5000);
-  },
   async "video-library"({ page, ui, wait }) {
     await page.goto(`${BASE}/?screen=video`, { waitUntil: "networkidle" });
     await wait(2500);
@@ -2551,7 +2538,6 @@ const SPOTS = {
   "chat-fix": ({ page, ui }) => page.getByRole("button", { name: new RegExp(escape(ui.chatCorrectionChip)) }).last(),
   growth: ({ page, ui }) => page.getByText(ui.myNext, { exact: true }),
   graph: ({ page, ui }) => exactLabel(page, ui.myViewGraph),
-  chatnext: ({ page, ui }) => page.getByText(ui.practiceNow, { exact: true }),
   "chat-expression": ({ page, ui }) => exactLabel(page, ui.chatUseExpression).last(),
   "chat-reading": ({ page, ui }) => exactLabel(page, ui.chatReading).last(),
   "chat-ask": ({ page }) => page.locator("[role=dialog] [role=slider]"),

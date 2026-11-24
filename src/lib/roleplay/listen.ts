@@ -1,4 +1,3 @@
-import type { PracticeGoal } from "@/lib/learner/practice";
 import { readTopics } from "./talkStats.ts";
 import { readTags, type OpeningLine, type TalkTags } from "./talkTags.ts";
 import { findScenario } from "./catalog.ts";
@@ -694,8 +693,6 @@ export async function fetchDirection(input: {
    * line is spoken from the finished answer like any other.
    */
   onLead?: (id: string) => void;
-  /** What an open conversation was started to practise (learner/practice.ts). */
-  practice?: PracticeGoal | null;
 }): Promise<Direction | OutOfPoints | null> {
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
@@ -722,7 +719,6 @@ export async function fetchDirection(input: {
     context: input.request.context ?? "",
     nativeLanguage: input.nativeLanguage,
     ...(input.signals ? { learnerSignals: input.signals } : {}),
-    ...(input.practice ? { practice: input.practice } : {}),
   });
 
   if (streamingWorks) {
