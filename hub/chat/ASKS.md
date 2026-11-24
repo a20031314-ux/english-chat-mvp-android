@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (123)
+## 탭이 확인할 것 (124)
 
 ### 탭 1 메인
 
@@ -302,6 +302,10 @@
 - **a261123-3-9** (2026-11-23 20:51, 탭 3 · 7056644) Logbank 부족한 것 칩 이름
   - 기능: Logbank · 오늘의 학습 · 칸 설명
   - 볼 곳: `components/studyMap/Logbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/StudyMapTab.tsx` · `app/api/notebook/route.ts`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261124-3-1** (2026-11-24 13:12, 탭 3 · 9472285) Quizbank 측정 칸 지금 칸 이상
+  - 기능: Quizbank · 칸 설명
+  - 볼 곳: `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/StudyMapTab.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI

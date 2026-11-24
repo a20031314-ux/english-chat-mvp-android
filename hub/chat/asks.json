@@ -7876,27 +7876,29 @@
       "base": "16b5da0cf417c762a583df784948a38a3e8251bc",
       "head": "16b5da0",
       "status": "open"
+    },
+    {
+      "id": "a261124-3-1",
+      "at": "2026-11-24 13:12",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "Quizbank 측정 칸 지금 칸 이상",
+      "files": [
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/StudyMapTab.tsx"
+      ],
+      "features": [
+        "Quizbank",
+        "칸 설명"
+      ],
+      "base": "be5b8d169e94f92f5b6d4c3baf4e65dc0b69fa31",
+      "head": "9472285",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-13 14:33",
-      "from": "3",
-      "base": "3683464",
-      "head": "3683464",
-      "what": "숙제 퀴즈가 수업 계획의 다룬 틀·예습을 냄(homeworkQuiz → { questions, keys }, 최대 8), 결과 quiz.frames·장부 퀴즈 답, 통화 기록 lesson 칸, 다음 수업 숙제 리뷰 — My 오늘의 학습 숙제 줄·Logbank 학습 수(숙제 틀 답이 장부에 들어감)·튜터 줄 숙제가 그대로인지",
-      "tabs": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "asks": [
-        "a261113-3-4",
-        "a261113-3-5",
-        "a261113-3-6"
-      ]
-    },
     {
       "at": "2026-11-13 14:56",
       "from": "3",
@@ -8494,10 +8496,22 @@
         "a261123-2-3",
         "a261123-2-4"
       ]
+    },
+    {
+      "at": "2026-11-24 13:12",
+      "from": "3",
+      "base": "be5b8d169e94f92f5b6d4c3baf4e65dc0b69fa31",
+      "head": "9472285",
+      "what": "Quizbank 측정 칸 지금 칸 이상",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261124-3-1"
+      ]
     }
   ],
   "seq": {
-    "261123-3": 9,
-    "261123-2": 4
+    "261124-3": 1
   }
 }
