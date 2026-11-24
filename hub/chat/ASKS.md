@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (148)
+## 탭이 확인할 것 (149)
 
 ### 탭 1 메인
 
@@ -370,6 +370,10 @@
 - **a261125-3-7** (2026-11-25 00:57, 탭 3 · 3227f4a) 틀린 문장 고르기: 답한 뒤 틀린 자리 지움 표시 → 바른 꼴
   - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/studyMap/FirstCheck.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/LanguageBank.tsx` · `components/studyMap/Quizbank.tsx` · `app/api/curriculum/item-lesson/route.ts` · `components/studyMap/ExpressionCard.tsx` … 12개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261125-3-8** (2026-11-25 01:37, 탭 3 · 3a0a1f4) 게이지 = 문제 수준(문장 단계·고르기 모양)
+  - 기능: Logbank · 오늘의 학습 · Quizbank · 소재 수업 · 칸 설명
+  - 볼 곳: `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI

@@ -9263,27 +9263,37 @@
       "base": "1996a92c4a9b8f6826991ce71cc577a78e0c3377",
       "head": "3227f4a",
       "status": "open"
+    },
+    {
+      "id": "a261125-3-8",
+      "at": "2026-11-25 01:37",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "게이지 = 문제 수준(문장 단계·고르기 모양)",
+      "files": [
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/components/studyMap/LessonHost.tsx"
+      ],
+      "features": [
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "소재 수업",
+        "칸 설명"
+      ],
+      "base": "53bc2a7a591e70fcd773cb7169424b4fab33e763",
+      "head": "3a0a1f4",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-18 00:01",
-      "from": "3",
-      "base": "dfb8653",
-      "head": "55e3b49",
-      "what": "수업 통화 — 틀 두 번 안 나오면 넘김·⏭ 다음 문장·첫 마디·CallStage 넘침",
-      "tabs": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "asks": [
-        "a261118-3-1",
-        "a261118-3-2",
-        "a261118-3-3"
-      ]
-    },
     {
       "at": "2026-11-18 00:13",
       "from": "3",
@@ -9889,10 +9899,23 @@
         "a261125-3-6",
         "a261125-3-7"
       ]
+    },
+    {
+      "at": "2026-11-25 01:37",
+      "from": "3",
+      "base": "53bc2a7a591e70fcd773cb7169424b4fab33e763",
+      "head": "3a0a1f4",
+      "what": "게이지 = 문제 수준(문장 단계·고르기 모양)",
+      "tabs": [
+        "2"
+      ],
+      "asks": [
+        "a261125-3-8"
+      ]
     }
   ],
   "seq": {
-    "261125-3": 7,
+    "261125-3": 8,
     "261125-1": 2
   }
 }
