@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { RightWithChanges, SaidWithMistakes } from "@/components/RoleplayReview";
+import { LineGrade } from "@/components/studyMap/LineParts";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -643,7 +644,7 @@ type ReplayAnswer = {
 
 /**
  * 말한(쓴) 줄의 결과(사용자 2026-11-26 "어떤 부분이 틀리고 어색한지 불분명, 설명도 없고"):
- * 대본 그대로면 ✓. 아니면 판단(뜻·앞 튜터 말과 함께)을 받아 — 맞음/어색함이면 ✓ 내 말 + (어색함이면 💡 더 자연스러운 말),
+ * 대본 그대로면 ✓. 아니면 판단(뜻·앞 튜터 말과 함께)을 받아 — 맞음/어색함이면 내 말 + 수업 말하기와 같은 LineGrade(✓ 자연스러워요 · △ 어색해요 + 더 자연스러운 말),
  * 틀림이면 ① 바른 문장(놓친·바뀐 곳만 초록 굵게) ② 내가 한 말(틀린 낱말 빨간 취소선·빠진 자리 ‸ — 통화 고친 말과 같은 모양, 연결 correction-view)
  * ③ 까닭 한 줄(앱 언어). 괄호로 엇갈린 낱말 맞추기는 안 씀.
  */
@@ -655,17 +656,20 @@ function AnswerView({ ui, target, answer }: { ui: UICopy; target: string; answer
       <p className="mt-2 text-meta leading-relaxed text-slate-200" data-replay-note>{answer.note}</p>
     ) : null;
   if (answer.ok) {
-    const own = answer.verdict && answer.heard.trim() ? answer.heard : target;
+    // 판단으로 통과한 내 말(대본과 다름): 내 말 + 수업 말하기와 같은 표시(✓ 자연스러워요 · △ 어색해요 + 더 자연스러운 말, 연결 say-grade).
+    if (answer.verdict && answer.heard.trim()) {
+      return (
+        <>
+          <p dir="auto" className="mt-1 text-chat text-emerald-300">{answer.heard}</p>
+          <LineGrade ui={ui} exact={false} unclear={[]} typed={answer.typed} practice={{ good: true, note: answer.note ?? "", verdict: answer.verdict, ...(answer.better ? { better: answer.better } : {}) }} />
+          <p dir="auto" className="mt-1 text-meta text-slate-500">{target}</p>
+          {note}
+        </>
+      );
+    }
     return (
       <>
-        <p dir="auto" className="mt-1 text-chat text-emerald-300">✓ {own}</p>
-        {answer.verdict === "awkward" && answer.better ? (
-          <p dir="auto" className="mt-1 text-note text-slate-200" title={ui.chatNaturalChip}>
-            <span aria-label={ui.chatNaturalChip}>💡 </span>
-            <RightWithChanges said={answer.heard} right={answer.better} />
-          </p>
-        ) : null}
-        {own !== target ? <p dir="auto" className="mt-1 text-meta text-slate-500">{target}</p> : null}
+        <p dir="auto" className="mt-1 text-chat text-emerald-300">✓ {target}</p>
         {note}
       </>
     );
