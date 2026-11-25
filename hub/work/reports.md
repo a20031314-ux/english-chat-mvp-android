@@ -36,6 +36,19 @@
 
 ## 새 보고
 
+### 2026-11-25 · 연결 맞춤 점검 · 한쪽만 바뀐 것 15 — 소재 수업 퀴즈는 고르기 새 모양 없음, AI 채팅만 고친 이유 안 보임, My에서 찾기 옛 이름 "단어 사전", 새 복제 1
+- 무엇을: 연결 묶음 6개(`scripts/features.json` links) 기능마다 파일을 읽어 비교(에이전트 셋) → 찾은 것마다 다른 에이전트가 파일:줄을 다시 확인(14개 중 맞음 12·일부 맞음 2, 틀림 0). `clones.mjs --new` · `features.mjs --check`(통과, 장부 밖 기능 없음).
+- 결과:
+  - quiz-make ① 소재 수업 퀴즈는 고르기로 `chooseFromPrepared`만 — Quizbank의 새 고르기 모양(문맥·대답 고르기·틀린 문장 → 답 뒤 지움 표시)이 수업엔 안 나옴(`ladderQuiz.ts:184` ↔ Quizbank `Quizbank.tsx:352`·`ladderQuiz.ts:145-156`), 문제은행 문장(withGrown)도 안 섞음(`FrameLesson.tsx:172-178` ↔ `Quizbank.tsx:342`) ② 틀린 곳 문항 번호 선지가 수업만 없음(`ladderQuiz.ts:186` false ↔ `Quizbank.tsx:352` numbered) — 확인 필요 ③ 수업은 `glossFirst`를 늘 넘겨 "3단계부터 해석은 답 뒤" 규칙이 덮임(`FrameLesson.tsx:558` ↔ `ladderQuiz.ts:161·191`) — 확인 필요. (`quiz.ts:203` 문제은행 v 항목이 수업에 새는 것은 이미 탭 2 고칠 것 a261125-watch-1.) 숙제·첫 측정: 해당 없음.
+  - say-grade ④ 통과 기준이 셋 다름 — 통화 코치 띠 `transcriptMarks.ts:112-118`(틀린+덧붙은 ≤1) · 대화 시뮬레이션 한 줄 `practice.ts:238-247`(80%·덧붙은 ≤1) · 조각 `replay.ts:167-171`(전부 맞아야) · Quizbank 말하기 `QuizPlayer.tsx:1847`(모델 판단) ⑤ ja·zh 받아쓰기 보조 판단이 통화에만(`RoleplayScreen.tsx:423·466-468` ↔ `CallReplay.tsx:467` compareOnly) — 기기 확인 필요 ⑥ 코치 띠엔 따라 말한 시도의 틀린 낱말 표시 없음(`CallParts.tsx:144-170` ↔ `CallReplay.tsx:517`·`QuizPlayer.tsx:1907`) — 일부러일 수 있음.
+  - correction-view ⑦ AI 채팅만 고친 이유가 안 보임 — 만들어 두고(`ChatWindow.tsx:248-262`) 안 넘김(`:1902-1907`, `MessageBubble.tsx:19`) ↔ Room `RoomParts.tsx:1140`·돌아보기 `RoleplayReview.tsx:290-297` ⑧ Room 고친 문장은 평문(공용 `LineTools.tsx:151-153`), 채팅 `MessageBubble.tsx:154-163`·돌아보기 `RoleplayReview.tsx:206·287`은 고친 자리 강조 ⑨ Room엔 💡 더 자연스러운 말 없음(서버 `api/rooms/fix`에도 없음) ↔ `MessageBubble.tsx:240-273` — 확인 필요 ⑩ 고친 문장 듣기가 셋 다 다름(채팅 🔊 = 고친 문장 `MessageBubble.tsx:114-116`, 돌아보기 줄 도구는 원문 `RoleplayReview.tsx:319-320`, Room 카드엔 🔊 없음). 칩 문구도 키 둘(`rooms/copy.ts:135` fixChip ↔ `copy.ts` chatCorrectionChip, 같은 글자).
+  - call-screen ⑪ 1:1 통화 긴 자막 넘침 처리·얼굴 줄이기 없음(`RoomCall.tsx:77·95` ↔ `CallParts.tsx:92·95·121`, AI 통화는 11-17·18에 고침) ⑫ 영상 통화 칸엔 🙉·🔇 표시 없고 카메라 켜면 말하는 표시도 없음(`VideoStage.tsx:156·211` ↔ `RoomCall.tsx:27-34·97-104`). 끝내기 이름(중단 ↔ 나가기)·🙉 숨김 규칙 차이는 일부러로 봄.
+  - tutor-door ⑬ 오늘의 학습에서 연 튜터 프로필은 "쓸 기능 고르기"로 통화를 숨겨도 📞·통화 칸이 보임(`TodayCards.tsx:66-76·99` ↔ `AppHome.tsx:134` callOn). 그 밖에: 튜터 줄·프로필은 끝낸 숙제를 날짜 없이 계속 ✓로(`tutorDesk.ts:12-22` ↔ `TodayCards.tsx:139` homeworkForToday), 사람 탭 튜터 둘엔 숙제 점·줄 없음(`AiTutorProfile.tsx:129-160` ↔ `AiTutorRow.tsx:98·124`) — 일부러인지 확인 필요.
+  - dict-open ⑭ My에서 찾기 사전 시트 제목만 옛 이름 "단어 사전"(`FindInMy.tsx:67` → `Dictionary.tsx:322` ↔ `DictNotes.tsx:92` languagebankTitle) ⑮ My에서 찾기는 원래 꼴을 안 찾아 "went"·"학교에" 같은 꼴은 낱말 화면이 안 열림(`FindInMy.tsx:49`·`Dictionary.tsx:132` ↔ `dictNotes.ts:144-149` baseCandidates). 표현 열 때 찾아봄 기록은 사전 주석만(`DictNotes.tsx:74`) — 확인 필요.
+  - 새 복제 1: `curriculum/preparedQuiz.ts:181-191` nearLine ↔ `server/qbank.ts:145-153` near — 같은 일(고친 문장과 몇 글자만 다른가 ≤4), 지금은 글자까지 같음. 한쪽만 고치면 앱이 거르는 것과 문제은행이 만드는 것이 어긋남 → qbank가 nearLine을 가져다 쓰면 됨.
+- 제안: ⑦⑭⑮⑬⑪는 맞추기(앱 빌드 — 웹·시험 앱은 바로). ①은 지난번 "맞춤" 뒤 Quizbank에 새로 들어온 것이라 수업에도 넣을지 정해 주세요(앱 빌드). ④⑤⑥②③⑧⑨⑩⑫는 맞출지 일부러 다름(differs)으로 둘지. 복제는 서버만(바로 반영).
+- 결정:
+
 ### 2026-11-24 · 변경 감시 · 리뷰 major 1: 게이지 "위 단계를 맞히면 닿은 단계도 한 번에"가 거의 안 됨(readReach가 hi를 버림) · 돈·광고·퀴즈 숫자 그대로
 - 무엇을: 53bc2a7..46e4895, 커밋 3개(코드 1 — 게이지 = 문제 수준 2f1fb09), 4파일(Quizbank.tsx·ladder.ts·ladderQuiz.ts·ladder.test.ts)
 - 결과: 비용표·손익·광고 지도·퀴즈 원인 모두 그대로(바뀐 칸 0, 알릴 것 0). 리뷰 major 1·minor 1 — major(두 번째 확인에서 원래 지적은 아님, 대신 드러난 것을 직접 확인): `ladder.ts:281` readReach가 `{s,n,ok}`만 돌려 저장된 hi를 버림 → Quizbank는 답마다 다시 읽어(Quizbank.tsx:268·431) 앞 답에서 모은 hi가 사라짐, 그래서 커밋·QUIZ.md:71의 "위 단계를 맞혀 오면 그만큼 한 번에"는 여덟 번째 답이 위 단계 정답일 때만, 그 밖엔 +1. 테스트는 메모리 안에서만 이어 불러 못 잡음. minor: `ladder.ts:269` hi가 게이지와 상관없이 위 단계 정답을 다 셈 — major를 고치면 게이지 0에서도 섞기 ahead·다시 볼 것으로 온 5단계 칸 하나로 2→5가 될 수 있음. 광고: 바뀐 화면은 게이지뿐, 새 자리 없음(게이지·단계 바뀜은 "넣지 않음"에 기록) → 새 안 0, 지난 안 6개 이어 적음(지금 1,000명당 월 +521,970원 → 안 4개 +573,693원, 무료 한 사람 +483 → +536원). 가상 사용자 화면 점검은 예약 작업 실행이 권한에 막혀 못 부름.
