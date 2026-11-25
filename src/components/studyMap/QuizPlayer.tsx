@@ -1047,7 +1047,8 @@ function ChooseView({
                   </span>
                 ) : null}
               </span>
-              {answered && noteOpen(i) && notes[i]?.meaning ? (
+              {/* 틀린 보기는 까닭 줄이 뜻을 괄호로 품고 그 말이 주로 언제 쓰이는지 말함(사용자 2026-11-26 "find out(뜻)은 주로 ~할 때") — 뜻 줄은 까닭이 없을 때만. */}
+              {answered && noteOpen(i) && notes[i]?.meaning && (isRight || !notes[i]?.why) ? (
                 <span data-option-meaning dir="auto" className="mt-0.5 block text-meta text-slate-400">
                   {notes[i]!.meaning}
                 </span>
