@@ -12042,6 +12042,20 @@
       "base": "25e33a6a7d94f6f8ab8d0777fb873b7782b70795",
       "head": "25e33a6",
       "status": "open"
+    },
+    {
+      "id": "a261126-watch-1",
+      "at": "2026-11-26 05:27",
+      "kind": "fix",
+      "from": "watch",
+      "to": "3",
+      "severity": "minor",
+      "what": "src/components/roleplay/CallReplay.tsx:620 — 대화 시뮬레이션 틀린 줄 판단(fetchPractice)을 받는 중에도 '다음'이 눌려 onDone이 옛 ok로 한 번만 보고 → 화면은 ✓인데 저장 점수·숙제 결과(noteReplayResult)는 틀림 (받는 중엔 다음을 막거나 모든 판단 뒤에 끝 보고)",
+      "files": [
+        "src/components/roleplay/CallReplay.tsx"
+      ],
+      "head": "25e33a6a",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -12663,6 +12677,7 @@
   ],
   "seq": {
     "261126-3": 6,
-    "261126-2": 6
+    "261126-2": 6,
+    "261126-watch": 1
   }
 }

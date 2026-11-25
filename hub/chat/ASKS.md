@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (209)
+## 탭이 확인할 것 (210)
 
 ### 탭 1 메인
 
@@ -563,6 +563,8 @@
 
 ### 탭 3 AI
 
+- **a261126-watch-1** 🔧 고칠 것 (2026-11-26 05:27, 변경 감시) src/components/roleplay/CallReplay.tsx:620 — 대화 시뮬레이션 틀린 줄 판단(fetchPractice)을 받는 중에도 '다음'이 눌려 onDone이 옛 ok로 한 번만 보고 → 화면은 ✓인데 저장 점수·숙제 결과(noteReplayResult)는 틀림 (받는 중엔 다음을 막거나 모든 판단 뒤에 끝 보고)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261126-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261126-2-5** (2026-11-26 05:27, 탭 2 · 25e33a6) 학습 설명 말투·구체성 규칙 한 곳(explainTone.ts) — 채팅 교정·Room 교정·표현 시트·수업 옮기기 말투가 해요체·짧게·구체적으로 바뀜
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `app/api/chat/route.ts` · `components/ChatWindow.tsx` · `app/api/chat/verify/route.ts` · `app/api/roleplay/listen/route.ts` · `app/api/roleplay/practice/route.ts` · `app/api/roleplay/turn/route.ts` · `components/roleplay/callHooks.ts` · `components/roleplay/CallParts.tsx` · `app/api/content-discovery/route.ts` · `app/api/roleplay/context/route.ts` … 26개 더
