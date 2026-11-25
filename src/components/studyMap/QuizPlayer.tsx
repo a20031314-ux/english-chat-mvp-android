@@ -961,6 +961,11 @@ function ChooseView({
   const shown = answered ? question.options[question.answer]! : "＿＿＿";
   // 넣어 둔 문제도 보기마다 뜻·왜 안 맞나(사용자 2026-11-23 "틀린 선지, 맞는 선지의 근거가 부족해" — 한 줄 why만으로는 will이 왜 아닌지 안 보임).
   const notes = useOptionNotes(answered ? { sentence: `${question.before}___${question.after}`, options: question.options, answer: question.answer, mine: question.mine } : null, language, locale);
+  // 보기 설명은 다 펼치지 않는다(사용자 2026-11-26 "딱딱하고 길어, 궁금한 것만 눌러서") — 내가 고른 틀린 보기만 열고, 나머지는 답한 뒤 보기를 누르면 열림·닫힘.
+  const [toggled, setToggled] = useState<{ text: string; list: number[] }>({ text: "", list: [] });
+  const flipped = toggled.text === question.text ? toggled.list : [];
+  const hasNote = (i: number) => Boolean(notes[i]?.meaning || (i !== question.answer && notes[i]?.why));
+  const noteOpen = (i: number) => flipped.includes(i) !== (i !== question.answer && picked === i);
   return (
     <div className="flex flex-col gap-3">
       {/* 문법(g|)은 뜻이 인칭·시제를 하나로 정한다(체감 점검 2026-11-19 Tiene/Tengo·Pueden/Puedes·Llovía/Llovió·should/must) — 뜻 먼저. 표현은 뜻이 답이 될 수 있어 같은 낱말 꼴일 때만. */}
@@ -1002,8 +1007,13 @@ function ChooseView({
               key={i}
               type="button"
               dir="auto"
-              disabled={Boolean(answered) || checking || fitting.includes(i)}
+              disabled={answered ? !hasNote(i) : checking || fitting.includes(i)}
+              aria-expanded={answered && hasNote(i) ? noteOpen(i) : undefined}
               onClick={async () => {
+                if (answered) {
+                  setToggled({ text: question.text, list: flipped.includes(i) ? flipped.filter((one) => one !== i) : [...flipped, i] });
+                  return;
+                }
                 setPicked(i);
                 if (question.prepared) {
                   onAnswer({ correct: isRight, picked: option });
@@ -1029,13 +1039,20 @@ function ChooseView({
               }}
               className={`${chip} text-start ${style}`}
             >
-              <span className={answered && !isRight && picked === i && !alsoOk ? "line-through" : ""}>{option}</span>
-              {answered && notes[i]?.meaning ? (
+              <span className="flex items-center gap-2">
+                <span className={`min-w-0 flex-1 ${answered && !isRight && picked === i && !alsoOk ? "line-through" : ""}`}>{option}</span>
+                {answered && hasNote(i) ? (
+                  <span aria-hidden className={`shrink-0 text-meta text-slate-500 transition-transform ${noteOpen(i) ? "rotate-180" : ""}`}>
+                    ⌄
+                  </span>
+                ) : null}
+              </span>
+              {answered && noteOpen(i) && notes[i]?.meaning ? (
                 <span data-option-meaning dir="auto" className="mt-0.5 block text-meta text-slate-400">
                   {notes[i]!.meaning}
                 </span>
               ) : null}
-              {answered && !isRight && notes[i]?.why ? (
+              {answered && noteOpen(i) && !isRight && notes[i]?.why ? (
                 <span data-option-why dir="auto" className="mt-0.5 block text-meta text-bad">
                   {notes[i]!.why}
                 </span>

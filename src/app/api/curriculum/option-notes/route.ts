@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic";
  *
  * 고르기 문제를 답한 뒤 보기마다 뜻(앱 언어 — 품사 + 뜻 한 줄)과, 틀린 보기면 이 자리에 왜 안 맞는지 한 줄
  * (2026-11-03 사용자 "정답·오답이 각각 무슨 뜻인지, 오답은 왜 오답인지가 안 떠"). 문제(문장·보기·정답·앱 언어)마다 한 번 만들어
- * 모두가 같이 쓴다(quiznotes:v2, 180일 — 학습자 자신의 줄로 만든 문제(mine)는 저장 안 함) — 문제은행 문장은 사용자끼리 같아서 대부분 저장된 것을 돌려준다. 학습자가 고른 보기·누가 물었는지는 남기지 않는다.
+ * 모두가 같이 쓴다(quiznotes:v3 — 짧은 해요체 한 줄, 2026-11-26, 180일 — 학습자 자신의 줄로 만든 문제(mine)는 저장 안 함) — 문제은행 문장은 사용자끼리 같아서 대부분 저장된 것을 돌려준다. 학습자가 고른 보기·누가 물었는지는 남기지 않는다.
  * 기능은 vocab(Haiku) — 단가는 op quizOptionNotes.
  */
 const TTL = 180 * 24 * 60 * 60;
@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
   if (!language || !sentence || options.length < 2 || answer < 0 || answer >= options.length) {
     return jsonWithCors(request, { error: "bad input" }, { status: 400 });
   }
-  const key = `quiznotes:v2:f:${createHash("sha256").update(JSON.stringify([language, ui, sentence, options, answer])).digest("hex").slice(0, 32)}`;
+  const key = `quiznotes:v3:f:${createHash("sha256").update(JSON.stringify([language, ui, sentence, options, answer])).digest("hex").slice(0, 32)}`;
   const cached = mine ? null : await kvGetJson<Note[]>(key).catch(() => null);
   if (cached?.length === options.length) return jsonWithCors(request, { notes: cached, cached: true });
 
@@ -53,8 +53,9 @@ export async function POST(request: NextRequest) {
       {
         role: "system",
         content: `A learner of ${target} has just answered a multiple-choice blank. For every option, in order, write in ${native}:
-- "meaning": its part of speech and its usual meaning — at most 8 words, no example, no usage notes (for a phrase, what it means as a whole).
-- "why": for the correct option, empty. For every other option, one plain sentence of at most 15 words a teacher would say about why it does not fit this blank — the grammar reason (wrong form, wrong part of speech, agreement, tense, particle) or that the meaning does not fit the sentence. Read the option together with the words right before and after the blank first: if it breaks the grammar there (two verbs in a row, a missing "to", a form the word before cannot take), that is the main reason — not a nuance of meaning. Name the one main reason; do not just say it is wrong, and do not add a second explanation. If it would actually also be correct here, say so plainly.
+- "meaning": its part of speech and its usual meaning — at most 6 words, no example, no usage notes (for a phrase, what it means as a whole). If the option is not a real word or phrase (a broken form), leave "meaning" empty — the "why" says what is wrong.
+- "why": for the correct option, empty. For every other option, one short spoken line of at most 10 words, the way a friendly tutor would say it out loud — the one grammar reason (wrong form, wrong part of speech, agreement, tense, particle) or that the meaning does not fit. Read the option together with the words right before and after the blank first: if it breaks the grammar there (two verbs in a row, a missing "to", a form the word before cannot take), that is the reason — not a nuance of meaning. One reason only, no "because … therefore", no grammar jargon a learner would not know, do not repeat the option, do not just say it is wrong. If it would actually also be correct here, say so plainly.
+Tone: casual-polite and warm, never formal or textbook-like. In Korean use 해요체 endings (…예요, …해요, …없어요), never 합니다체 or "…므로"; in Japanese use short です/ます; in other languages the everyday polite register.
 Quote ${target} words with single quotes ('like this'), never with double quotes. Both "meaning" and "why" are written in ${native} — never in ${target} — quoting ${target} words only where needed. Number the options as given (1, 2, 3, …). Reply with JSON only, flat keys, one pair per option: {"meaning_1":"…","why_1":"…","meaning_2":"…","why_2":"…", …}.`,
       },
       ...(strict ? [{ role: "system" as const, content: `The last answer used the wrong language. Every "meaning" and "why" must be in ${native}.` }] : []),
@@ -80,7 +81,7 @@ Quote ${target} words with single quotes ('like this'), never with double quotes
     if (again.length && again.every((one, i) => (!one.meaning || script.test(one.meaning)) && (i === answer || !one.why || script.test(one.why)))) notes = again;
   }
   // 빈 답이면 점검 사용자(simcheck-)에게만 모델 답을 보인다 — 왜 비었는지 보려고.
-  if (notes.length !== options.length || notes.every((one) => !one.meaning)) return jsonWithCors(request, { notes: [], ...simDetail(request, `${parseError} len=${firstRaw.length} n=${notes.length} ${firstRaw.slice(0, 120)}`) });
+  if (notes.length !== options.length || notes.every((one, i) => !one.meaning && (i === answer || !one.why))) return jsonWithCors(request, { notes: [], ...simDetail(request, `${parseError} len=${firstRaw.length} n=${notes.length} ${firstRaw.slice(0, 120)}`) });
   if (!mine) await kvSetJson(key, notes, TTL).catch(() => undefined);
   return jsonWithCors(request, { notes });
 
@@ -91,6 +92,8 @@ Quote ${target} words with single quotes ('like this'), never with double quotes
     // 평평한 열쇠(meaning_1·why_1 …) — 목록으로 받으면 Haiku가 글로 싸며 안쪽 따옴표를 깨뜨려 보기 설명이 통째로 비었다(운영 2026-11-23).
     if (options.every((_, i) => typeof parsed[`meaning_${i + 1}`] === "string")) {
       notes = options.map((_, i) => ({ meaning: text(parsed[`meaning_${i + 1}`], 120), why: i === answer ? "" : text(parsed[`why_${i + 1}`], 200) }));
+      // 깨진 꼴은 뜻이 비어 오므로 그 자리를 why로 판단 — 뜻도 까닭도 없는 보기가 있으면 못 읽은 것.
+      if (notes.some((one, i) => !one.meaning && (i === answer || !one.why))) notes = [];
     }
   } catch (error) {
     parseError = error instanceof Error ? error.message.slice(0, 120) : "parse";
