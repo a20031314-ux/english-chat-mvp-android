@@ -247,12 +247,6 @@
       "format": "native",
       "perActiveDay": 0.03,
       "when": "any",
-      "what": "통화 중 버튼 아래(call call-live) — 포인트를 산 무료만"
-    },
-    {
-      "format": "native",
-      "perActiveDay": 0.03,
-      "when": "any",
       "what": "이렇게도 말할 수 있었어요 장면 끝(results replay-end)"
     },
     {

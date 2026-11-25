@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (203)
+## 탭이 확인할 것 (205)
 
 ### 탭 1 메인
 
@@ -49,6 +49,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-69 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-72** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/server/voxtralSpeech.ts:167 — 스트림 읽기 오류·20초 제한도 done으로 보고 정상 close — 잘린 소리가 공용 캐시에 들어갈 수 있음 — 끝 표시 없으면 오류로 → realtime 대체
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-72 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261126-3-4** (2026-11-26 04:52, 탭 3 · b40e151) 통화 중 버튼 아래 네이티브 광고(CallAdStrip·call-live) 지움 — 통화 도중엔 광고 없음, 끝 화면 call-end·닫기 전면만
+  - 기능: 통화 설명 · 통화 · 통화 끝 화면 · Logbank · 오늘의 학습
+  - 볼 곳: `app/dev/call-preview/page.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261126-2-1** (2026-11-26 03:56, 탭 2 · a0c3e85) Quizbank 고르기 답 뒤 보기 설명: 고른 틀린 보기만 열고 나머지는 눌러야 열림(QuizPlayer ChooseView) · 설명 말투 짧은 해요체 한 줄(option-notes quiznotes:v3)
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `app/dev/roleplay-review/page.tsx` · `app/dev/call-preview/page.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/points/sync/route.ts` · `components/AnalyzableEnglish.tsx` · `components/account/AccountCard.tsx` … 66개 더
@@ -344,6 +348,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-17 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-18** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/curriculum/scriptChoice.ts:13 — fillBlank가 띄어쓰기 언어면 빈칸 앞뒤에 늘 공백 — 낱말 중간에서 끊기는 줄(ko 조사 등)은 정답도 틀림, 원문 경계에 공백이 있을 때만
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-18 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261126-3-5** (2026-11-26 04:52, 탭 3 · b40e151) 통화 중 버튼 아래 네이티브 광고(CallAdStrip·call-live) 지움 — 통화 도중엔 광고 없음, 끝 화면 call-end·닫기 전면만
+  - 기능: 통화 설명 · 통화 · 통화 끝 화면 · Logbank · 오늘의 학습
+  - 볼 곳: `components/studyMap/Logbank.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261126-3-2** (2026-11-26 03:51, 탭 3 · 3eda193) 변경 감시 지적 27개 고침: 통화(늦은 튜터 차례·끝난 시간 고정·해석 옛 값·💡 따라 말하기 ✓·남은 시간 서버로 다시 맞춤), 돌아보기는 숙제를 덮어쓰지 않음, 숙제 빈칸 낱말 단위 비교, 따라 말하기 악센트 봐줌·꼴 바꾼 다시 말하기도 시도, 쓴 줄은 글 그대로 판단, 채팅 맛보기 보내기 전에 잡음, 교정 diff 태국어 낱말 단위(textDiff — 채팅·Room 교정 칩도), 안 쓰는 자막 번역 사슬 지움
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `components/studyMap/Logbank.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/QuizPlayer.tsx` · `app/api/curriculum/ask/route.ts` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/TodayCards.tsx` · `app/api/curriculum/frame-lesson/route.ts` · `app/api/curriculum/item-lesson/route.ts` … 25개 더

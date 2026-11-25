@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { RoleplayLine, RoleplayReviewPanel, type TranscriptLine } from "@/components/RoleplayReview";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { CallAdStrip, CallControls, CallFooter, CallHeader, CallPages, CallModeInfo, callInfoSeen, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
+import { CallControls, CallFooter, CallHeader, CallPages, CallModeInfo, callInfoSeen, CallStage, CallSummary, LearnerComposing, LettersHomework, MeFace, TutorFace, TutorNote, type CallSpeaker } from "@/components/roleplay/CallParts";
 import { CallReplay } from "@/components/roleplay/CallReplay";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { useCallRecap, useCallTimeLine, useStoredToggle } from "@/components/roleplay/callHooks";
@@ -1214,7 +1214,6 @@ export function RoleplayScreen({
         onEnd={hangUp}
         leaving={leaving}
       />
-      <CallAdStrip hidden={Boolean(reviewing || coachCard)} />
 
       {reviewing ? (
         <RoleplayReviewPanel
