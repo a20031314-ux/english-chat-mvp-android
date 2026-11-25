@@ -11690,27 +11690,57 @@
       "base": "b40e151",
       "head": "b40e151",
       "status": "open"
+    },
+    {
+      "id": "a261126-3-6",
+      "at": "2026-11-26 04:58",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "숙제 퀴즈(QuizPlayer) 맞혀도 저절로 안 넘김, 대화 시뮬레이션 판단(practice ownWords)·바뀐 곳·까닭 한 줄(RoleplayReview SaidWithMistakes·RightWithChanges)",
+      "files": [
+        "src/app/api/curriculum/option-notes/route.ts",
+        "src/components/studyMap/QuizPlayer.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/InlineQuiz.tsx",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/components/studyMap/LessonHost.tsx",
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/app/api/curriculum/ask/route.ts",
+        "src/app/api/curriculum/fixed-lesson/route.ts",
+        "src/app/api/curriculum/frame-lesson/route.ts",
+        "src/app/api/curriculum/item-lesson/route.ts",
+        "src/app/api/curriculum/qbank/route.ts",
+        "src/app/api/curriculum/quiz-stats/route.ts",
+        "src/app/api/curriculum/recall/route.ts",
+        "src/app/api/curriculum/route.ts",
+        "src/app/api/curriculum/script/route.ts",
+        "src/app/api/curriculum/scripts/route.ts",
+        "src/app/api/curriculum/spots/route.ts",
+        "src/app/api/curriculum/stages/route.ts",
+        "src/app/api/curriculum/typed-check/route.ts",
+        "src/app/api/curriculum/words/route.ts",
+        "src/app/api/notebook/route.ts"
+      ],
+      "features": [
+        "통화",
+        "이렇게도 말할 수 있었어요",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "소재 수업",
+        "칸 설명"
+      ],
+      "base": "e5bb6004e6cc4bc8cbbe5fe0264adeea27c93806",
+      "head": "74f1976",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-19 03:38",
-      "from": "1",
-      "base": "c115e6c",
-      "head": "c115e6c",
-      "what": "예전 설명·기능 지움: 사용법은 장면만(노트 장·글 칸 없음), 칸 머리 ?는 사용법 장면, 아침 알림·옛 API 6개 지움, Logbank 틀린 것 카드 이름 Quizbank",
-      "tabs": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "asks": [
-        "a261119-1-1",
-        "a261119-1-2",
-        "a261119-1-3"
-      ]
-    },
     {
       "at": "2026-11-19 05:21",
       "from": "3",
@@ -12311,10 +12341,24 @@
         "a261126-3-4",
         "a261126-3-5"
       ]
+    },
+    {
+      "at": "2026-11-26 04:58",
+      "from": "3",
+      "base": "e5bb6004e6cc4bc8cbbe5fe0264adeea27c93806",
+      "head": "74f1976",
+      "what": "숙제 퀴즈(QuizPlayer) 맞혀도 저절로 안 넘김, 대화 시뮬레이션 판단(practice ownWords)·바뀐 곳·까닭 한 줄(RoleplayReview SaidWithMistakes·RightWithChanges)",
+      "tabs": [
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261126-3-6"
+      ]
     }
   ],
   "seq": {
-    "261126-3": 5,
+    "261126-3": 6,
     "261126-2": 3
   }
 }

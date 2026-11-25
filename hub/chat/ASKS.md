@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (205)
+## 탭이 확인할 것 (206)
 
 ### 탭 1 메인
 
@@ -348,6 +348,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-17 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-18** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/curriculum/scriptChoice.ts:13 — fillBlank가 띄어쓰기 언어면 빈칸 앞뒤에 늘 공백 — 낱말 중간에서 끊기는 줄(ko 조사 등)은 정답도 틀림, 원문 경계에 공백이 있을 때만
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-18 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261126-3-6** (2026-11-26 04:58, 탭 3 · 74f1976) 숙제 퀴즈(QuizPlayer) 맞혀도 저절로 안 넘김, 대화 시뮬레이션 판단(practice ownWords)·바뀐 곳·까닭 한 줄(RoleplayReview SaidWithMistakes·RightWithChanges)
+  - 기능: 통화 · 이렇게도 말할 수 있었어요 · Logbank · 오늘의 학습 · Quizbank · 소재 수업 · 칸 설명
+  - 볼 곳: `app/api/curriculum/option-notes/route.ts` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/TodayCards.tsx` … 16개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261126-3-5** (2026-11-26 04:52, 탭 3 · b40e151) 통화 중 버튼 아래 네이티브 광고(CallAdStrip·call-live) 지움 — 통화 도중엔 광고 없음, 끝 화면 call-end·닫기 전면만
   - 기능: 통화 설명 · 통화 · 통화 끝 화면 · Logbank · 오늘의 학습
   - 볼 곳: `components/studyMap/Logbank.tsx`
