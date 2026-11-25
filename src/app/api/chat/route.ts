@@ -37,8 +37,8 @@ import { findIrregularSlips, koreanSlipHint, repairIrregularSlips } from "@/lib/
 import {
   getDailyUsed,
   incrementDailyUsed,
-  chatTrialLeft,
-  spendChatTrial,
+  claimChatTrial,
+  refundChatTrial,
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { normalizeHowToSayExpression } from "@/lib/howToSay";
@@ -331,7 +331,7 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 Their message may have mistakes (wrong word, wrong ending, a word from another language mixed in). Reply to what they clearly meant, the way a friend would who understood them.
 
 ${voice}
-${spoken}${bilingualBlock}${standardVarietyTail(targetLanguage)}
+${spoken}${bilingualBlock}${standardVarietyTail(targetLanguage, Boolean(options.bilingual))}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"..."}`;
@@ -350,7 +350,7 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 ${voice}
 ${spoken}
 
-${englishCorrectionPolicy(explanationLanguage, explanationGuard)}${bilingualBlock}${standardVarietyTail(targetLanguage)}
+${englishCorrectionPolicy(explanationLanguage, explanationGuard)}${bilingualBlock}${standardVarietyTail(targetLanguage, Boolean(options.bilingual))}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","naturalNote":"...","explanation":"..."}}`;
@@ -373,7 +373,7 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 ${voice}
 ${spoken}
 
-${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, explanationGuard)}${bilingualBlock}${standardVarietyTail(targetLanguage)}
+${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, explanationGuard)}${bilingualBlock}${standardVarietyTail(targetLanguage, Boolean(options.bilingual))}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","naturalNote":"...","explanation":"..."}}`;
@@ -1164,14 +1164,21 @@ export async function POST(request: NextRequest) {
     chatLimit !== null &&
     (await getDailyUsed(userId)) >= chatLimit + (await chatBonusToday(userId, tier))
   ) {
-    if ((await chatTrialLeft(userId, terms)) <= 0) {
+    // 보내기 전에 한 통을 잡는다 — 동시에 보내도 10통을 넘지 않게. 답을 못 보내면 돌려준다(giveBackTrial).
+    if (!(await claimChatTrial(userId, terms))) {
       return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
     }
     usingChatTrial = true;
   }
+  let chatCounted = false;
   const countChat = async () => {
+    chatCounted = true;
     await incrementDailyUsed(userId);
-    if (usingChatTrial) await spendChatTrial(userId);
+  };
+  const giveBackTrial = async () => {
+    if (!usingChatTrial || chatCounted) return;
+    usingChatTrial = false;
+    await refundChatTrial(userId).catch((error) => console.error("[chat-trial-refund]", error));
   };
 
   // 답이 나간 뒤의 기록들(문장은 저장하지 않고 표현·지표만). 옛 앱은 답 뒤에, 새 앱은 교정까지 보낸 뒤에.
@@ -1394,6 +1401,7 @@ export async function POST(request: NextRequest) {
             send({ type: "error", error: "CHAT_FAILED", ...(detail ? { detail } : {}) });
             controller.close();
             finish(null);
+            await giveBackTrial();
             return;
           }
           await countChat();
@@ -1431,6 +1439,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, reused.length ? { ...data, reused } : data);
   } catch (error) {
     console.error("[chat]", error);
+    await giveBackTrial();
     const detail = simErrorDetail(error);
     return jsonWithCors(request, { error: "CHAT_FAILED", ...(detail ? { detail } : {}) }, { status: 500 });
   }

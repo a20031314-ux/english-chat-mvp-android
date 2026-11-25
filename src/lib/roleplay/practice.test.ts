@@ -265,3 +265,13 @@ test("shadowPasses: a long line still forgives a misheard word, but not another 
   assert.equal(formSlip("office", "offers"), false);
   assert.equal(formSlip("the", "the"), false);
 });
+
+test("formSlip: 악센트만 다른 것·짧은 낱말은 꼴 실수가 아님 — 바르게 따라 말하면 통과(es·fr·th)", () => {
+  assert.equal(formSlip("está", "esta"), false);
+  assert.equal(formSlip("qué", "que"), false);
+  assert.equal(formSlip("café", "cafe"), false);
+  assert.equal(formSlip("hablamos", "hablo"), true);
+  assert.equal(shadowPasses("Hoy no está muy lejos de mi casa", "Hoy no esta muy lejos de mi casa"), true);
+  // 태국어 모음 부호는 악센트로 지우지 않는다 — 다른 꼴은 그대로 다른 꼴.
+  assert.equal(formSlip("ทำงาน", "ทำงาน"), false);
+});

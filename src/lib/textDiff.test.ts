@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { tokenDiffMarks } from "./textDiff.ts";
+import { correctionReplacementSnippet, diffWords, tokenDiffMarks } from "./textDiff.ts";
 import { tokenize } from "./textTokens.ts";
 
 /** 표시된 낱말과 빠진 말을 읽기 쉬운 한 줄로: [틀린]{+빠진}. */
@@ -63,4 +63,13 @@ test("낱말을 이어 붙인 글이 문장과 다르면 표시하지 않는다"
   const { marks, gapsAfter } = tokenDiffMarks(["다른", " ", "글"], "a b", "a c", "original");
   assert.equal(marks.size, 0);
   assert.equal(gapsAfter.size, 0);
+});
+
+test("태국어는 낱말로 나눠 바뀐 낱말만 — 문장 전체가 한 덩어리가 아님(es는 그대로)", () => {
+  const parts = diffWords("ฉันไปตลาดเมื่อวาน", "ฉันไปโรงเรียนเมื่อวาน");
+  assert.ok(parts.some((part) => part.type === "equal" && part.text.includes("ฉัน")));
+  assert.equal(parts.map((part) => (part.type === "add" ? "" : part.text)).join(""), "ฉันไปตลาดเมื่อวาน");
+  const snippet = correctionReplacementSnippet("ฉันไปตลาดเมื่อวาน", "ฉันไปโรงเรียนเมื่อวาน");
+  assert.ok(!snippet.includes("เมื่อวาน"), snippet);
+  assert.equal(correctionReplacementSnippet("Yo fui al mercado", "Yo fui a la escuela").includes("Yo"), false);
 });

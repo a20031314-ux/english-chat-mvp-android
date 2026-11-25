@@ -248,7 +248,7 @@ test("lite has no monthly points; premium before its switch keeps 80", async () 
 });
 
 test("채팅 맛보기: 대본 앱 무료만 평생 10통, 쓰면 줄고 다른 요금·익명에는 없다", async () => {
-  const { chatTrialLeft, spendChatTrial } = await import("./entitlementStore.ts");
+  const { chatTrialLeft, claimChatTrial, refundChatTrial } = await import("./entitlementStore.ts");
   const newFree = termsFor("free", Date.now(), undefined, { scriptsApp: true });
   const oldFree = termsFor("free");
   assert.equal(newFree.dailyChat, 0);
@@ -256,8 +256,13 @@ test("채팅 맛보기: 대본 앱 무료만 평생 10통, 쓰면 줄고 다른 
   assert.equal(await chatTrialLeft("chat-trial", oldFree), 0);
   assert.equal(await chatTrialLeft("chat-trial", termsFor("lite")), 0);
   assert.equal(await chatTrialLeft(SHARED_ANONYMOUS_ID, newFree), 0);
-  for (let i = 0; i < 3; i += 1) await spendChatTrial("chat-trial");
+  for (let i = 0; i < 3; i += 1) assert.equal(await claimChatTrial("chat-trial", newFree), true);
   assert.equal(await chatTrialLeft("chat-trial", newFree), 7);
-  for (let i = 0; i < 9; i += 1) await spendChatTrial("chat-trial");
+  await refundChatTrial("chat-trial");
+  assert.equal(await chatTrialLeft("chat-trial", newFree), 8);
+  // 동시에 보내도 남은 통만큼만 잡힌다.
+  const claims = await Promise.all(Array.from({ length: 12 }, () => claimChatTrial("chat-trial", newFree)));
+  assert.equal(claims.filter(Boolean).length, 8);
   assert.equal(await chatTrialLeft("chat-trial", newFree), 0);
+  assert.equal(await claimChatTrial("chat-trial", termsFor("lite")), false);
 });

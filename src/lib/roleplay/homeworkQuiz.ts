@@ -2,6 +2,7 @@ import { spotFromCard, type QuizQuestion } from "../curriculum/quiz.ts";
 import { focusFix, mixedScript, overlap } from "./fixFocus.ts";
 import { sentencesOf } from "./reactions.ts";
 import type { ReplayScene } from "./replay.ts";
+import { segmentWords } from "../wordSegments.ts";
 
 /**
  * 숙제 퀴즈(2026-11-08 사용자 "숙제는 숙제 > 하위탭(퀴즈, 대화) 구조로"): 그 통화에서 나온 것만, 모델 없음.
@@ -13,6 +14,22 @@ import type { ReplayScene } from "./replay.ts";
  */
 export const HOMEWORK_QUIZ_MAX = 6;
 const MAX_FIXES = 3;
+
+const normText = (text: string) => text.toLocaleLowerCase().replace(/[\p{P}\s]+/gu, " ").trim();
+
+/** 낱말 단위(wordSegments — ja·zh·th도 낱말로) — 글자 includes면 짧은 답(a·la·de)이 다른 낱말 속에서도 걸림. */
+function wordsOf(text: string, language?: string): string[] {
+  return segmentWords(normText(text), language);
+}
+
+/** needle 낱말들이 hay 낱말 속에 그 순서로 붙어 있나. */
+function hasWords(hay: readonly string[], needle: readonly string[]): boolean {
+  if (!needle.length || needle.length > hay.length) return false;
+  for (let i = 0; i + needle.length <= hay.length; i++) {
+    if (needle.every((word, j) => hay[i + j] === word)) return true;
+  }
+  return false;
+}
 
 function sentencesOfLine(text: string): string[] {
   return sentencesOf(text).map((part) => part.trim());
@@ -29,7 +46,7 @@ export function homeworkQuiz(
   // 내가 통화에서 그대로 말한 말(그 조각을 비우면 베끼기 — 2026-11-08 점검 easy-copy).
   const mineLines = said.filter((line) => line.who === "learner" && line.text.trim() && line.text.trim() !== "…").map((line) => line.text);
   const mine = mineLines.map(norm).join(" | ");
-  const fixedWords: string[] = [];
+  const fixedWords: string[][] = [];
 
   for (const line of said) {
     if (out.length >= MAX_FIXES) break;
@@ -45,7 +62,7 @@ export function homeworkQuiz(
     const about = line.about?.trim();
     const question = about ? { ...made, why: { en: about, ko: about } } : made;
     seen.add(norm(right));
-    fixedWords.push(norm(question.want));
+    fixedWords.push(wordsOf(question.want, language));
     out.push(question);
   }
 
@@ -58,7 +75,8 @@ export function homeworkQuiz(
       const key = norm(piece);
       if (at < 0 || !key || seen.has(key) || seen.has(norm(line.text))) continue;
       // 통화에서 그대로 말한 조각·방금 고치기 문제의 답·한 문장 통째(뜻 없이는 답이 여럿)는 비우지 않는다.
-      if (mine.includes(key) || fixedWords.some((word) => word && key.includes(word))) continue;
+      const pieceWords = wordsOf(piece, language);
+      if (mine.includes(key) || fixedWords.some((words) => hasWords(pieceWords, words))) continue;
       const sentence = sentencesOfLine(line.text).find((part) => part.includes(piece));
       if (sentence && norm(sentence) === key) continue;
       // 통화에서 내가 한 말을 다듬은 줄만 — 가장 닮은 내 줄과 낱말 40% 이상.
@@ -87,19 +105,18 @@ export function homeworkQuiz(
  * 숙제 대화(대화 시뮬레이션): 퀴즈에서 이미 글로 쓴 조각은 빈칸 없이 — 뜻만 보고 한 줄 전체를 말한다
  * (2026-11-19 체감 점검 셋 다 "퀴즈와 바로 뒤 대화가 같은 문장·같은 빈칸").
  */
-export function sceneAfterQuiz(scene: ReplayScene, quiz: readonly QuizQuestion[]): ReplayScene {
-  const norm = (text: string) => text.toLocaleLowerCase().replace(/[\p{P}\s]+/gu, " ").trim();
+export function sceneAfterQuiz(scene: ReplayScene, quiz: readonly QuizQuestion[], language?: string): ReplayScene {
   const done = quiz
     .map((question) => (question.kind === "spot" ? question.want : question.kind === "type" ? question.answer : ""))
-    .map(norm)
-    .filter(Boolean);
+    .map((text) => wordsOf(text, language))
+    .filter((words) => words.length);
   if (!done.length) return scene;
   return {
     ...scene,
     lines: scene.lines.map((line) => {
       if (line.who !== "me" || !line.piece) return line;
-      const key = norm(line.piece);
-      return done.some((one) => key.includes(one) || one.includes(key)) ? { ...line, piece: null } : line;
+      const key = wordsOf(line.piece, language);
+      return done.some((one) => hasWords(key, one) || hasWords(one, key)) ? { ...line, piece: null } : line;
     }),
   };
 }

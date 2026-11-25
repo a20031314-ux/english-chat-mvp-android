@@ -977,6 +977,8 @@ export async function fetchPractice(input: {
   compareOnly?: boolean;
   /** 오늘 대본 한도에 닿았을 때(429 SCRIPT_LIMIT). */
   onLimit?: () => void;
+  /** 말이 아니라 쓴 줄(typedLine) — 서버가 받아쓰기 봐주기 없이 글 그대로 본다. */
+  typed?: boolean;
 }): Promise<Practice | null> {
   try {
     const response = await fetch(apiUrl("/api/roleplay/practice"), {
@@ -996,6 +998,7 @@ export async function fetchPractice(input: {
         ...(input.mode ? { mode: input.mode } : {}),
         ...(input.compareOnly ? { check: "compare" } : {}),
         ...(input.unclear?.length ? { unclear: input.unclear } : {}),
+        ...(input.typed ? { typed: true } : {}),
       }),
     });
     if (response.status === 429) {

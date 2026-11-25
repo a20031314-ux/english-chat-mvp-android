@@ -7,7 +7,6 @@ import {
   critiqueTranslationUser,
   extractMeaningSystem,
   extractMeaningUser,
-  firstInterpretationSystem,
   generateTranslationSystem,
   generateTranslationUser,
   onePassUser,
@@ -164,32 +163,3 @@ test("critique prompt may see the source but generate prompt must not", () => {
   assert.match(critiqueTranslationSystem(ctx), /tidy written prose/);
 });
 
-test("first-reading prompt is for analysis, not a caption", () => {
-  assert.match(firstInterpretationSystem(ctx), /FIRST READING/i);
-  assert.match(firstInterpretationSystem(ctx), /NOT an on-screen caption/);
-  assert.ok(firstInterpretationSystem(ctx).includes("discourse frames"));
-});
-
-test("batch first reading uses the source line, not the caption", async () => {
-  const { firstInterpretationsForAnalysis } = await import("./refineCaptions.ts");
-  const readings = await firstInterpretationsForAnalysis(
-    { sourceLang: "en", targetLang: "ko", sourceType: "subtitle" },
-    [{ id: "a", sourceText: ctx.sourceText }],
-    async (_system, user) => {
-      assert.ok(user.includes(ctx.sourceText));
-      assert.equal(user.includes("괜히 복잡해져"), false);
-      return {
-        items: [
-          {
-            id: "a",
-            translated: "내가 하고 싶은 말은 이게 꼭 나쁜 접근법은 아니라는 거야.",
-          },
-        ],
-      };
-    },
-  );
-  assert.equal(
-    readings.get("a"),
-    "내가 하고 싶은 말은 이게 꼭 나쁜 접근법은 아니라는 거야.",
-  );
-});

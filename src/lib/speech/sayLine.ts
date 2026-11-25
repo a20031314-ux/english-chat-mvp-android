@@ -96,6 +96,7 @@ export async function typedLine(
       frame: input.frame,
       scriptId: input.scriptId,
       mode: input.mode,
+      typed: true,
       onLimit: () => {
         limited = true;
         input.onLimit?.();

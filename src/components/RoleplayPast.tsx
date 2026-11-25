@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { translateUtterance } from "@/lib/translateUtterance";
 import { withTranslation } from "@/lib/roleplay/transcriptMarks";
+import { keepCall, readCalls } from "@/lib/roleplay/callStore";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { CallRecap } from "@/components/roleplay/CallRecap";
 import { CallReplay } from "@/components/roleplay/CallReplay";
@@ -16,6 +17,13 @@ import { callSeconds, type SavedConversation } from "@/lib/roleplay/saved";
 import type { UICopy } from "@/lib/copy";
 import { sayLine } from "@/lib/speech/sayLine";
 import { coerceLanguageCode, type LearningLanguageCode } from "@/lib/learningLanguages";
+
+/** 돌아보기에서 받은 튜터 줄 해석을 그 통화 기록에 넣는다(순서·시각은 그대로). */
+function keepGloss(id: string, text: string, translated: string) {
+  const row = readCalls().find((one) => one.id === id);
+  if (!row) return;
+  keepCall({ ...row, said: withTranslation(row.said, text, translated) });
+}
 
 /**
  * A conversation that has already happened, read back.
@@ -52,7 +60,7 @@ export function RoleplayPast({
   const sayAgain = (target: string) =>
     sayLine(target, { targetLanguage: coerceLanguageCode(saved.language), nativeLanguage, isPremium });
   const recap = useMemo(() => buildRecap(saved.language, saved.said), [saved]);
-  // 결과창에는 튜터 줄 해석을 붙인다(2026-11-03 사용자) — 그때 안 받아 둔 줄은 열 때 한 번 받는다(이 화면에서만, 저장은 그대로).
+  // 결과창에는 튜터 줄 해석을 붙인다(2026-11-03 사용자) — 그때 안 받아 둔 줄은 열 때 한 번 받아 통화 기록에도 넣어 둔다(다음에 다시 안 받음).
   const [glosses, setGlosses] = useState<Record<string, string>>({});
   const lines = useMemo(() => Object.entries(glosses).reduce((current, [text, translated]) => withTranslation(current, text, translated), saved.said), [saved, glosses]);
   useEffect(() => {
@@ -62,7 +70,9 @@ export function RoleplayPast({
     for (const text of missing) {
       void translateUtterance({ text, locale: nativeLanguage, interfaceLanguage: nativeLanguage, targetLanguage: coerceLanguageCode(saved.language), sourceType: "conversation" })
         .then((translated) => {
-          if (alive && translated) setGlosses((current) => ({ ...current, [text]: translated }));
+          if (!translated) return;
+          keepGloss(saved.id, text, translated);
+          if (alive) setGlosses((current) => ({ ...current, [text]: translated }));
         })
         .catch(() => undefined);
     }

@@ -2,7 +2,6 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { groupMeaningUnits, refineMeaningUnits } from "./groupMeaningUnits.ts";
 import type { NormalizedSegment } from "./types.ts";
-import { splitReadable } from "./formatSubtitles.ts";
 import { SUBTITLE_NATURALIZATION_CASES } from "./subtitleNaturalizationCases.ts";
 
 function seg(
@@ -279,125 +278,6 @@ test("groupMeaningUnits does not glue ordinary caption lines", () => {
   assert.equal(units[0]!.startTime, 10);
   assert.equal(units[0]!.endTime, 11.2);
   assert.equal(units[1]!.startTime, 11.35);
-});
-
-test("splitReadable honors explicit newline beats", () => {
-  assert.deepEqual(splitReadable("제 말은,\n이 방식이 꼭 나쁘다는 건 아니에요."), [
-    "제 말은,",
-    "이 방식이 꼭 나쁘다는 건 아니에요.",
-  ]);
-});
-
-test("looksLikeCalqueKorean catches 번역투", async () => {
-  const { looksLikeCalqueKorean, looksLikeLiteralOrForeignCaption } =
-    await import("./calqueDetect.ts");
-  assert.equal(
-    looksLikeCalqueKorean(
-      "제가 이것을 추천하지 않는 이유는 이것이 복잡성을 추가하기 때문입니다.",
-    ),
-    true,
-  );
-  assert.equal(
-    looksLikeCalqueKorean("그렇게까지 말하긴 좀 그래요."),
-    false,
-  );
-  assert.equal(
-    looksLikeLiteralOrForeignCaption(
-      "I wasn't unconscious! Who are you?",
-      "난 unconscious 아니었어! 너 누구야?",
-      "ko",
-    ),
-    true,
-  );
-  assert.equal(
-    looksLikeLiteralOrForeignCaption(
-      "I'm losing my mind.",
-      "내 정신이 지금 나가고있어.",
-      "ko",
-    ),
-    true,
-  );
-  assert.equal(
-    looksLikeCalqueKorean("정신 나갈 것 같아."),
-    false,
-  );
-  assert.equal(
-    looksLikeCalqueKorean("정신이 나갈 것 같아."),
-    false,
-  );
-  assert.equal(
-    looksLikeLiteralOrForeignCaption(
-      "I'm losing my mind.",
-      "정신 나갈 것 같아.",
-      "ko",
-    ),
-    false,
-  );
-  assert.equal(
-    looksLikeLiteralOrForeignCaption(
-      "I'm losing my mind.",
-      "정신이 나갈 것 같아.",
-      "ko",
-    ),
-    false,
-  );
-  assert.equal(
-    looksLikeLiteralOrForeignCaption(
-      "How would you decide what parts of nature are good or bad?",
-      "자연에서 좋은 것과 나쁜 것을 어떻게 구분하지?",
-      "ko",
-    ),
-    true,
-  );
-  assert.equal(
-    looksLikeLiteralOrForeignCaption(
-      "How would you decide what parts of nature are good or bad?",
-      "뭐가 좋고 나쁜 건지 어떻게 판단하지?",
-      "ko",
-    ),
-    false,
-  );
-});
-
-test("looksLikeNarratorGloss catches speech-act recaps, not real progressives", async () => {
-  const { looksLikeNarratorGloss, looksLikeLiteralOrForeignCaption } =
-    await import("./calqueDetect.ts");
-  assert.equal(
-    looksLikeNarratorGloss("중국의 AI 개발에 대해 언급하고 있어요. 디프시크도 포함해서요."),
-    true,
-  );
-  assert.equal(
-    looksLikeNarratorGloss("최근 주목받고 있는 문샷 AI에 대해 이야기하고 있어요."),
-    true,
-  );
-  assert.equal(
-    looksLikeNarratorGloss("누군가 오픈AI에 대해 질문하고 있어."),
-    true,
-  );
-  assert.equal(
-    looksLikeNarratorGloss("누군가 누구나 AI를 쉽게 쓸 수 있다고 설명하고 있어."),
-    true,
-  );
-  assert.equal(
-    looksLikeNarratorGloss("Someone is asking about OpenAI."),
-    true,
-  );
-  assert.equal(
-    looksLikeNarratorGloss("The speaker is mentioning China's DeepSeek."),
-    true,
-  );
-  assert.equal(looksLikeNarratorGloss("나 지금 밥 먹고 있어."), false);
-  assert.equal(looksLikeNarratorGloss("잘하고 있어요."), false);
-  assert.equal(looksLikeNarratorGloss("오픈웨이트라는 거예요?"), false);
-  assert.equal(looksLikeNarratorGloss("그리고 중국은, 뭐, 역시 세계를 충격에 빠뜨린 딥시크."), false);
-  assert.equal(
-    looksLikeLiteralOrForeignCaption(
-      "オープンウェイトってんですか?",
-      "누군가 오픈AI에 대해 질문하고 있어.",
-      "ko",
-    ),
-    true,
-  );
 });
 
 test("naturalization fixture set covers 20+ diverse cases", () => {

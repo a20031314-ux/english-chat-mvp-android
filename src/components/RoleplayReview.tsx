@@ -432,7 +432,9 @@ export function RoleplayReviewPanel({
             ) : null}
             {review.say ? (
               <div className="mt-3 rounded-xl bg-white/5 p-3">
-                <p className="text-[11px] text-neutral-500">{turn.live ? "✎" : ui.roleplayReviewSay}</p>
+                <p className="text-[11px] text-neutral-500" {...(turn.live ? { title: ui.roleplayReviewSay, "aria-label": ui.roleplayReviewSay } : {})}>
+                  {turn.live ? "✎" : ui.roleplayReviewSay}
+                </p>
                 <p className="mt-1 text-[14px] text-neutral-100">{review.say}</p>
                 {review.meaning ? (
                   <p className="mt-0.5 text-[12px] text-neutral-500">{review.meaning}</p>

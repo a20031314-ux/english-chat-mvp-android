@@ -246,12 +246,19 @@ export function shadowPasses(target: string, heard: string, compared: Comparison
   return kept / total >= 0.8 && compared.added.length <= 1;
 }
 
-/** 같은 줄기의 다른 꼴: 글자 셋 넘게 앞이 같고 끝만 다름(대소문자·문장부호는 뺌). */
+/** 라틴 글자 악센트만 뺌(é → e) — 태국어·힌디어 모음 부호(\p{M} 다른 블록)는 그대로. */
+const withoutAccents = (text: string) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").normalize("NFC");
+
+/**
+ * 같은 줄기의 다른 꼴: 글자 셋 넘게 앞이 같고 끝만 다름(대소문자·문장부호는 뺌).
+ * 악센트만 다른 것(que/qué·esta/está — 받아쓰기는 소리로 적음)과 짧은 낱말(넷 미만)은 꼴 실수로 안 본다.
+ */
 export function formSlip(word: string, heardAs: string): boolean {
   const bare = (text: string) => text.toLocaleLowerCase().replace(/[^\p{L}\p{M}\p{N}]+/gu, "");
   const a = [...bare(word)];
   const b = [...bare(heardAs)];
-  if (a.length < 3 || b.length < 3 || a.join("") === b.join("")) return false;
+  if (a.length < 4 || b.length < 4 || a.join("") === b.join("")) return false;
+  if (withoutAccents(a.join("")) === withoutAccents(b.join(""))) return false;
   let same = 0;
   while (same < a.length && same < b.length && a[same] === b[same]) same += 1;
   return same >= Math.min(4, Math.min(a.length, b.length) - 1);
@@ -325,6 +332,14 @@ function unclearPart(unclear: readonly string[] | undefined, nativeLanguage: str
   if (!unclear?.length) return "";
   return `\nThe recogniser hesitated over ${unclear.length === 1 ? "this word" : "these words"}: ${unclear.map((word) => `"${word}"`).join(", ")}. It still wrote ${unclear.length === 1 ? "it" : "them"} correctly, so ${unclear.length === 1 ? "it counts" : "they count"} as said and does not change "good" — but hesitation usually means the sounds were not quite clear. In the note, after saying what went well, name the least clear word and give one concrete, short tip a ${nativeLanguage} speaker can act on (which sound in the word to make clearer, e.g. a final consonant or a vowel), without claiming to know about stress, rhythm or accent.\n`;
 }
+
+/**
+ * 쓴 줄(typedLine — 채팅 입력)이면 판단 지시 끝에 붙인다: 위 지시들은 받아쓰기(소리) 기준이라 철자·악센트·문장부호를
+ * 봐주는데, 손으로 쓴 글에는 받아쓰기 실수가 없다(변경 감시 2026-11-25).
+ */
+export const TYPED_LINE_TAIL = `
+
+This line was typed by the learner, not spoken: there is no recogniser. Ignore everything above about recogniser slips, homophones and dropped punctuation. Judge the written text as written — a misspelt word, a missing or wrong accent or diacritic, or a wrong character is the learner's mistake, so "good" is false when one changes or breaks a word. Missing final punctuation alone is fine.`;
 
 /**
  * 내 정보로 바꿔 말하기(2026-10-29 가상 사용자 민지 "이름을 내 이름으로 말하자 아쉬워요" → 사용자 "3번 고쳐줘"):

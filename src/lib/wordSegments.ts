@@ -85,6 +85,18 @@ export function segmentChunk(chunk: string, language?: string): string[] {
   return words.length ? rejoin(words, language) : [chunk];
 }
 
+/**
+ * One chunk without spaces cut into every piece, punctuation included — joined back it is the chunk again
+ * (a diff that renders tokens side by side needs that; segmentChunk drops what is not a word).
+ */
+export function segmentChunkWhole(chunk: string, language?: string): string[] {
+  if (!isSpaceless(chunk)) return [chunk];
+  const segmenter = segmenterFor(language);
+  if (!segmenter) return [chunk];
+  const parts = [...segmenter.segment(chunk)].map((part) => part.segment);
+  return parts.length ? parts : [chunk];
+}
+
 /** A line's words: whitespace first, then each chunk cut if its script needs it. */
 export function segmentWords(text: string, language?: string): string[] {
   return text

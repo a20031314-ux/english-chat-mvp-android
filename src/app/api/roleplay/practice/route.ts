@@ -9,7 +9,7 @@ import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
-import { compareToTarget, shadowPasses, frameUsePrompt, ownWordsPrompt, parsePractice, practicePrompt, recallPrompt, type Practice } from "@/lib/roleplay/practice";
+import { compareToTarget, shadowPasses, frameUsePrompt, ownWordsPrompt, parsePractice, practicePrompt, recallPrompt, TYPED_LINE_TAIL, type Practice } from "@/lib/roleplay/practice";
 import { noteMostlyUi } from "@/lib/notes/notebook";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest, simDetail } from "@/lib/server/meterRequest";
@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
   const comparison = compareToTarget(target, heard);
   // Saying a line again is what grows pronunciation (learner/growth.ts): an
   // attempt when something was heard, a point when every word came out right.
-  if (heard && typeof body.meaning !== "string" && typeof body.frame !== "string") {
+  if (heard && body.typed !== true && typeof body.meaning !== "string" && typeof body.frame !== "string") {
     after(() =>
       recordPronunciation({ userId: requestUserId(request), language: scenario.language, clean: comparison.clean }),
     );
@@ -117,7 +117,9 @@ export async function POST(request: NextRequest) {
     const unclear = Array.isArray(body.unclear)
       ? (body.unclear as unknown[]).filter((word): word is string => typeof word === "string" && word.trim().length > 0 && word.length <= 40).slice(0, 3)
       : [];
-    const system = frame
+    // 쓴 줄(채팅 입력)은 받아쓰기 봐주기 없이 글 그대로 본다.
+    const typed = body.typed === true;
+    const spokenSystem = frame
       ? frameUsePrompt({ frame, meaning, example: target, heard, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
       : meaning
       ? ownWordsPrompt({ meaning, reference: target, heard, before, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
@@ -131,6 +133,7 @@ export async function POST(request: NextRequest) {
           targetLanguage: interfaceLanguageName(scenario.language),
           nativeLanguage: nativeName,
         });
+    const system = typed ? spokenSystem + TYPED_LINE_TAIL : spokenSystem;
     type Turn = { role: "system" | "user" | "assistant"; content: string };
     // 점검(simcheck-)에만 돌려주는 토큰 기록 — 판단·2차 판단 비용을 재려고(2026-10-29).
     const spent: string[] = [];

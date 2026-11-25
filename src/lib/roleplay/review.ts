@@ -135,6 +135,8 @@ export function reviewPrompt(input: {
   targetLanguage: string;
   nativeLanguage: string;
   turn: StuckTurn;
+  /** 💡 조각(pieces)을 못 그리는 옛 앱(2.79 이하) — why 한 줄만 보이니 say·meaning도 채운다. */
+  legacyHint?: boolean;
 }): string {
   const { turn } = input;
   const transcript = turn.history
@@ -180,7 +182,7 @@ Reply as JSON only: {"why": "...", "say": "...", "meaning": "..."}`;
  * 앞부분이 편한 말로 섞여 있어도 그 뜻을 학습 언어 문장으로.
  */
 function livePrompt(
-  input: { focus?: string; tutorRole: string; setting: string; targetLanguage: string; nativeLanguage: string; turn: StuckTurn },
+  input: { focus?: string; tutorRole: string; setting: string; targetLanguage: string; nativeLanguage: string; turn: StuckTurn; legacyHint?: boolean },
   transcript: string,
 ): string {
   const { turn } = input;
@@ -210,7 +212,17 @@ ${input.focus}`
       : ""
   }
 
-Reply as JSON only: {"why": "<${input.nativeLanguage} or empty>", "pieces": [{"text": "<${input.targetLanguage}>", "meaning": "<${input.nativeLanguage}>"}]}`;
+${
+    input.legacyHint
+      ? `
+This app version shows only "why", "say" and "meaning", not the pieces. So also write:
+- "say": one short way they could answer now in ${input.targetLanguage}, built from the pieces${turn.heard ? " and carrying on from what they started" : ""}.
+- "meaning": that sentence in ${input.nativeLanguage}, and nothing else.
+
+Reply as JSON only: {"why": "<${input.nativeLanguage} or empty>", "pieces": [{"text": "<${input.targetLanguage}>", "meaning": "<${input.nativeLanguage}>"}], "say": "<${input.targetLanguage}>", "meaning": "<${input.nativeLanguage}>"}`
+      : `
+Reply as JSON only: {"why": "<${input.nativeLanguage} or empty>", "pieces": [{"text": "<${input.targetLanguage}>", "meaning": "<${input.nativeLanguage}>"}]}`
+  }`;
 }
 
 /** The review out of the model's answer, or null when there is nothing to show. */

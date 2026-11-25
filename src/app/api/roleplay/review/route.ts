@@ -11,7 +11,7 @@ import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
-import { requestAppVersion } from "@/lib/appVersion";
+import { compareVersions, requestAppVersion } from "@/lib/appVersion";
 
 export const dynamic = "force-dynamic";
 
@@ -30,6 +30,13 @@ export async function OPTIONS(request: NextRequest) {
 
 function readCount(raw: unknown): number {
   return typeof raw === "number" && Number.isFinite(raw) && raw > 0 ? Math.floor(raw) : 0;
+}
+
+/** 💡 조각(pieces)을 그리는 화면은 2.80부터 — 그 밑 앱은 why·say·meaning만 읽는다. 웹(버전 없음)은 지금 화면. */
+const HINT_PIECES_SINCE = "2.80";
+function legacyHint(headers: Headers): boolean {
+  const version = requestAppVersion(headers);
+  return version !== "unknown" && compareVersions(version, HINT_PIECES_SINCE) < 0;
 }
 
 export async function POST(request: NextRequest) {
@@ -106,6 +113,7 @@ export async function POST(request: NextRequest) {
               : { focus: targetLanguageFocusHints(coerceLanguageCode(scenario.language)) }),
             nativeLanguage: interfaceLanguageName(coerceLanguageCode(body.nativeLanguage)),
             turn,
+            legacyHint: legacyHint(request.headers),
           }),
         },
       ],

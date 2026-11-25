@@ -254,9 +254,23 @@ export async function chatTrialLeft(userId: string, terms: { tier: string; daily
   return Math.max(0, FREE_SCRIPTS_APP_CHAT_TRIAL - (await kvGetNumber(chatTrialKey(userId))));
 }
 
-/** 맛보기 한 통을 썼다. */
-export async function spendChatTrial(userId: string): Promise<void> {
-  await kvIncrBy(chatTrialKey(userId), 1);
+/**
+ * 맛보기 한 통을 보내기 전에 잡는다(한 번에 늘리고 넘으면 되돌림) — 남았나 본 뒤 답 뒤에 깎으면
+ * 동시에 보낸 메시지가 모두 "남음"을 보고 10통을 넘긴다(변경 감시 2026-11-25). 잡았으면 true.
+ */
+export async function claimChatTrial(userId: string, terms: { tier: string; dailyChat: number | null }): Promise<boolean> {
+  if (terms.tier !== "free" || terms.dailyChat !== 0 || !isIdentified(userId)) return false;
+  const used = await kvIncrBy(chatTrialKey(userId), 1);
+  if (used > FREE_SCRIPTS_APP_CHAT_TRIAL) {
+    await kvIncrBy(chatTrialKey(userId), -1);
+    return false;
+  }
+  return true;
+}
+
+/** 잡아 둔 맛보기 한 통을 돌려준다(답을 못 보냈을 때). */
+export async function refundChatTrial(userId: string): Promise<void> {
+  await kvIncrBy(chatTrialKey(userId), -1);
 }
 
 export async function getDailyUsed(userId: string): Promise<number> {

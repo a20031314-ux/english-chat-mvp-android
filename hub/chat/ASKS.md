@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (255)
+## 탭이 확인할 것 (231)
 
 ### 탭 1 메인
 
@@ -49,6 +49,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-69 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-72** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/server/voxtralSpeech.ts:167 — 스트림 읽기 오류·20초 제한도 done으로 보고 정상 close — 잘린 소리가 공용 캐시에 들어갈 수 있음 — 끝 표시 없으면 오류로 → realtime 대체
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-72 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261126-3-1** (2026-11-26 03:51, 탭 3 · 3eda193) 변경 감시 지적 27개 고침: 통화(늦은 튜터 차례·끝난 시간 고정·해석 옛 값·💡 따라 말하기 ✓·남은 시간 서버로 다시 맞춤), 돌아보기는 숙제를 덮어쓰지 않음, 숙제 빈칸 낱말 단위 비교, 따라 말하기 악센트 봐줌·꼴 바꾼 다시 말하기도 시도, 쓴 줄은 글 그대로 판단, 채팅 맛보기 보내기 전에 잡음, 교정 diff 태국어 낱말 단위(textDiff — 채팅·Room 교정 칩도), 안 쓰는 자막 번역 사슬 지움
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `app/dev/roleplay-review/page.tsx` · `app/dev/call-preview/page.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/points/sync/route.ts` · `components/AnalyzableEnglish.tsx` · `components/account/AccountCard.tsx` … 66개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261125-3-6** (2026-11-25 00:57, 탭 3 · 3227f4a) 틀린 문장 고르기: 답한 뒤 틀린 자리 지움 표시 → 바른 꼴
   - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `app/api/curriculum/qbank/seed/route.ts` · `components/FindInMy.tsx` · `components/EnglishAnalysisViewer.tsx` · `components/EnglishAnalysisProvider.tsx`
@@ -336,6 +340,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-17 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-18** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/curriculum/scriptChoice.ts:13 — fillBlank가 띄어쓰기 언어면 빈칸 앞뒤에 늘 공백 — 낱말 중간에서 끊기는 줄(ko 조사 등)은 정답도 틀림, 원문 경계에 공백이 있을 때만
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-18 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261126-3-2** (2026-11-26 03:51, 탭 3 · 3eda193) 변경 감시 지적 27개 고침: 통화(늦은 튜터 차례·끝난 시간 고정·해석 옛 값·💡 따라 말하기 ✓·남은 시간 서버로 다시 맞춤), 돌아보기는 숙제를 덮어쓰지 않음, 숙제 빈칸 낱말 단위 비교, 따라 말하기 악센트 봐줌·꼴 바꾼 다시 말하기도 시도, 쓴 줄은 글 그대로 판단, 채팅 맛보기 보내기 전에 잡음, 교정 diff 태국어 낱말 단위(textDiff — 채팅·Room 교정 칩도), 안 쓰는 자막 번역 사슬 지움
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `components/studyMap/Logbank.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/QuizPlayer.tsx` · `app/api/curriculum/ask/route.ts` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/TodayCards.tsx` · `app/api/curriculum/frame-lesson/route.ts` · `app/api/curriculum/item-lesson/route.ts` … 25개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261125-3-8** (2026-11-25 01:37, 탭 3 · 3a0a1f4) 게이지 = 문제 수준(문장 단계·고르기 모양)
   - 기능: Logbank · 오늘의 학습 · Quizbank · 소재 수업 · 칸 설명
   - 볼 곳: `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx`
@@ -535,60 +543,6 @@
 
 ### 탭 3 AI
 
-- **a261125-watch-92** 🔧 고칠 것 (2026-11-23 00:00, 변경 감시) src/lib/videoSubtitle/pipeline.ts:8 — 안 쓰는 import translateSubtitleWindowPipeline 하나로 자막 창 번역 사슬(translateSegments·generateMeaningBasedSubtitle)이 살아 있음 — import와 사슬 지우기
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-92 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-94** 🔧 고칠 것 (2026-11-23 00:00, 변경 감시) src/components/roleplay/callHooks.ts:49 — 통화 남은 시간을 도는 동안 5초씩 벽시계로 빼서 서버 셈(첫 차례부터·차례 사이 60초 상한)보다 빨리 줄어듦 — 차례 응답 뒤 /api/entitlement로 다시 맞추거나 서버와 같은 셈
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-94 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-90** 🔧 고칠 것 (2026-11-20 00:00, 변경 감시) src/components/roleplay/CallParts.tsx:121 — [ai] src/components/roleplay/CallParts.tsx:121 — 코치 띠가 뜨면 아래 반 flex-[1.6]로 위 반이 약 38%로 줄어 작은 폰(높이 ~640)에서 긴 튜터 자막이 위 반에서 잘릴 수 있음 (띠가 뜰 때 위 반 gap·자막 칸 min-h도 줄이거나 긴 자막이면 비율 낮추기, 작은 화면 확인) (확인 못 함 — 맞는지부터)
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-90 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-91** 🔧 고칠 것 (2026-11-20 00:00, 변경 감시) hub/work/inbox.md:339 — CoachCardView 주석은 '짝 튜터가 화면에'로 됐지만 inbox qa 확인 줄에 아직 '(짝 튜터 얼굴·이름)' — 괄호 지우기
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-91 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-65** 🔧 고칠 것 (2026-11-18 00:00, 변경 감시) src/lib/roleplay/homeworkQuiz.ts:103 — sceneAfterQuiz가 조각을 글자 includes로 비교해 짧은 답(la·a·de)이면 다른 장면 조각 빈칸까지 없앰 — 낱말 단위(wordSegments)로 비교
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-65 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-87** 🔧 고칠 것 (2026-11-18 00:00, 변경 감시) src/lib/roleplay/director.ts:813 — triedRedo가 segmentWords 낱말 그대로 절반 겹침만 봐서 형태가 바뀐 다시 말하기(ko '친구를 만났어요'→'친구 만나요', es 'fui al'→'voy a')를 다른 말로 봄 — compareToTarget 정렬로 형태 바뀐 낱말도 시도로 + ko·es 테스트
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-87 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-88** 🔧 고칠 것 (2026-11-18 00:00, 변경 감시) src/components/RoleplayPast.tsx:116 — 돌아보기가 homework={hadFix(saved.said)}를 넘겨 옛 자유대화 기록을 열기만 해도 /api/roleplay/replay 호출·giveHomework로 지금 숙제를 덮어씀 — 저절로 만들기·숙제 주기는 방금 끝난 통화 끝 화면에서만
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-88 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-89** 🔧 고칠 것 (2026-11-18 00:00, 변경 감시) src/components/RoleplayScreen.tsx:524 — 새 띠가 💡(smoother)면 fresh가 비어 nextShownRedo가 앞 ✎ 문장을 계속 기다림 → 💡 따라 말해도 ✓ 없음 — fresh에 direction.smoother를 넣거나 새 띠 차례에 기다리던 문장 비우기
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-89 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-66** 🔧 고칠 것 (2026-11-12 00:00, 변경 감시) src/lib/roleplay/practice.ts:250 — formSlip이 que/qué·esta/está 같은 악센트·동음 차이도 꼴 실수로 봐 바르게 따라 말해도 다시 — NFD 악센트 뺀 값이 같으면 봐주고 짧은 낱말 제외 + 테스트
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-66 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-67** 🔧 고칠 것 (2026-11-09 00:00, 변경 감시) src/components/roleplay/CallReplay.tsx:301 — 통화 끝 화면의 HomeworkTabs(sheet 아님)도 SceneChips에 homework를 넘겨 homeworkEnd 전면이 끝 화면에서도 뜸 — homework·homeworkLast는 HomeworkSheet(sheet)에서만
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-67 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-83** 🔧 고칠 것 (2026-11-08 00:00, 변경 감시) src/components/roleplay/CallReplay.tsx:131 — 돌아보기에서 옛 통화를 열기만 해도 장면을 만들고(모델 호출) giveHomework로 지금 숙제를 덮어씀 — 자동 만들기·숙제는 막 끝난 통화 끝 화면에서만
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-83 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-84** 🔧 고칠 것 (2026-11-08 00:00, 변경 감시) src/lib/roleplay/homeworkQuiz.ts:61 — 장면 조각을 고치기 답과 글자 includes로 비교해 답이 'a'·'el'처럼 짧으면 장면 빈칸이 거의 다 빠짐 — 낱말 단위로
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-84 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-85** 🔧 고칠 것 (2026-11-08 00:00, 변경 감시) src/lib/roleplay/review.ts:145 — 💡 live 힌트가 pieces만 만들고 say·meaning이 비어 앱 버전을 안 가리는 review 라우트 때문에 2.79 등 옛 앱은 why 한 줄만 — 옛 앱엔 say·meaning도 채우거나 requestAppVersion으로 프롬프트 나누기
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-85 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-86** 🔧 고칠 것 (2026-11-08 00:00, 변경 감시) src/components/RoleplayReview.tsx:435 — 돌아보기 💡 힌트 머리 ✎(turn.live)에 title·aria-label 없음 — 다른 ✎ 자리(283행)처럼 붙이기
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-86 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-81** 🔧 고칠 것 (2026-11-07 00:00, 변경 감시) src/lib/roleplay/director.ts:1650 — '들렸어요?'를 붙일 때 say를 { text }로 새로 만들어 say.translation이 버려짐 — 기존 say를 펼쳐 text만 바꾸기(옛 앱 수업 통화)
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-81 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-82** 🔧 고칠 것 (2026-11-07 00:00, 변경 감시) src/lib/roleplay/director.ts:1650 — 앱 언어 '들렸어요?'를 학습 언어 줄과 한 텍스트로 합쳐 학습 언어 TTS가 다른 언어를 읽음 — 앱 언어 한 마디는 따로 내기(옛 앱 수업 통화)
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-82 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-79** 🔧 고칠 것 (2026-11-06 00:00, 변경 감시) src/components/roleplay/callHooks.ts:81 — 통화 끝에 said 전체를 장부에 넣어 이어서 한 통화는 앞 세션 줄이 또 쌓임 — 이번 세션 줄만 또는 통화 id로 이미 넣은 줄 건너뛰기
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-79 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-21** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/lib/speech/sayLine.ts:87 — typedLine이 쓴 글을 음성 인식 판단(practice)으로 보내 철자·문장부호 실수도 good — 요청에 typed 표시, 라우트에서 쓴 글 기준 판단
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-21 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-73** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/lib/roleplay/director.ts:953 — JSON 칸 설명 better '틀린 게 없으면 비움'이 수업 offer 규칙(550행 better에 자연스러운 문장)과 어긋남 — 설명에 offer 경우 덧붙이기(옛 앱 수업 통화 전용)
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-73 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-74** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/app/api/chat/route.ts:1170 — 채팅 맛보기를 남았는지 본 뒤 답 뒤에 깎아 동시 전송이면 10통 초과 — 보내기 전에 kvIncrBy로 잡고 실패 시 돌려주기
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-74 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-75** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/components/RoleplayScreen.tsx:366 — 통화 중단 뒤 늦게 온 튜터 차례가 said에 붙어 끝 화면 대본·저장에 들어감 — say 효과 맨 앞에서 hungUpRef면 return
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-75 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-76** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/components/RoleplayScreen.tsx:341 — 끝난 뒤 저장될 때마다 activeSecs가 now 기준으로 늘어남 — finished면 끝난 순간 값 고정
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-76 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-77** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/components/RoleplayScreen.tsx:159 — 해석 켬 버튼은 없는데 저장된 SHOW_TRANSLATIONS 값을 계속 읽어 통화 중 줄마다 번역 호출, 끌 방법 없음 — 옛 값 무시
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-77 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-78** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/components/RoleplayPast.tsx:58 — 돌아보기 열 때마다 해석 없는 튜터 줄을 다시 번역하고 저장 안 함 — 받은 번역 저장
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-78 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-68** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/app/api/chat/route.ts:334 — 아랍어 standardVarietyTail('표준어로만')이 bilingual 튜터 규칙 뒤에 그대로 붙어 앱 언어 한 문장 규칙과 부딪침(353·376도) — bilingual이면 아랍어 부분에만 걸리게 문구 바꾸기
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-68 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-70** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/components/roleplay/CallRecap.tsx:88 — textDiff tokenize가 wordSegments를 안 거쳐 태국어는 문장 전체가 한 토큰 — 통화 정리 diff·🔎 My에서 찾기가 문장 전체로 — 태국어는 wordSegments 토큰으로
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-70 --status 고침`, 아니면 `--status 해당없음 --note 이유`
-- **a261125-watch-71** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/components/roleplay/CallParts.tsx:438 — CallPages 넘김 맞춤 setTimeout(settle)이 언마운트 때 안 지워짐 — useEffect 정리에서 clearTimeout
-  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-71 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-1-2** (2026-11-25 00:50, 탭 1 · 4624fac) 첫 측정을 문단 고르기로: 예/아니오 24·뜻 고르기 5·표현·문법 오르기를 지우고, 단계 문단 한 장씩 [어려워요 · 딱 맞아요 · 쉬워요] → 고른 단계가 낱말·표현·문법 시작값(가늠 건너뜀). 가짜 낱말 데이터 지움
   - 기능: AI 채팅 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/ChatWindow.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/callHooks.ts` · `components/roleplay/CallRecap.tsx` · `components/CallHost.tsx` · `components/RoleplayScreen.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `lib/pack/pack.ts` … 2개 더
@@ -714,6 +668,10 @@
 
 - **a261125-watch-97** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/components/AiTutorProfile.tsx:22 — 앱 언어 값이 localStorage에 없으면 튜터 프로필이 en으로 — readAppLocale() 쓰거나 locale prop
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-97 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261126-3-3** (2026-11-26 03:51, 탭 3 · 3eda193) 변경 감시 지적 27개 고침: 통화(늦은 튜터 차례·끝난 시간 고정·해석 옛 값·💡 따라 말하기 ✓·남은 시간 서버로 다시 맞춤), 돌아보기는 숙제를 덮어쓰지 않음, 숙제 빈칸 낱말 단위 비교, 따라 말하기 악센트 봐줌·꼴 바꾼 다시 말하기도 시도, 쓴 줄은 글 그대로 판단, 채팅 맛보기 보내기 전에 잡음, 교정 diff 태국어 낱말 단위(textDiff — 채팅·Room 교정 칩도), 안 쓰는 자막 번역 사슬 지움
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 숙제 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `app/api/rooms/fix/route.ts` · `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomParts.tsx` · `components/rooms/RoomPeople.tsx` · `components/rooms/RoomView.tsx` · `components/rooms/RoomsScreen.tsx` … 27개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261125-3-3** (2026-11-25 00:28, 탭 3 · 55a19dc) Quizbank 사다리 세 칸(고르기 → 빈칸 → 틀린 곳)·유형 먼저, 고르기 새 모양(문맥·뜻 차이·틀린 문장), 문장 전체 쓰기 뺌(소재 수업 FrameLesson whole 조건도 지움)
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결
   - 볼 곳: `app/api/board/route.ts` · `app/api/dm/route.ts` · `app/api/groups/route.ts` · `app/api/icons/route.ts` · `app/api/invite/route.ts` · `app/api/media/route.ts` · `app/api/random/route.ts` · `app/api/rooms/fix/route.ts` · `app/api/rooms/game/route.ts` · `app/api/rooms/route.ts` … 25개 더
@@ -831,6 +789,25 @@
   - 볼 곳: `components/AiTutorProfile.tsx` · `components/rooms/RoomView.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/RoomsScreen.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
-## 최근 답 (1, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
+## 최근 답 (20, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
 
-- a261120-1-1 → 사용자: **지움** · 채팅·영상 자막·통화 돌아보기 줄 아래 LedgerLinks — 표현 장부 상태 칩(알아요·배움·만남)과 다른 탭에서 만남 링크 (2026-11-20 18:54)
+- a261125-watch-94 → 3 AI: **고침** — useCallTimeLine이 튜터 줄이 늘 때마다 /api/entitlement로 다시 맞추고 그 사이만 5초씩 뺌 · src/components/roleplay/callHooks.ts:49 — 통화 남은 시간을 도는 동안 5초씩 벽시계로 빼서 서버 셈(첫 차례부터·차례 사이 60초 상한)보다 빨리 줄어듦 — 차례 응답 뒤 /api/entitlement로 다시 맞추거나 서버와 같은 셈 (2026-11-26 03:51)
+- a261125-watch-92 → 3 AI: **고침** — 안 쓰는 import와 자막 창 번역 사슬(translateSegments·generateMeaningBasedSubtitle)과 그 사슬만 쓰던 파일 12개·테스트 정리 · src/lib/videoSubtitle/pipeline.ts:8 — 안 쓰는 import translateSubtitleWindowPipeline 하나로 자막 창 번역 사슬(translateSegments·generateMeaningBasedSubtitle)이 살아 있음 — import와 사슬 지우기 (2026-11-26 03:51)
+- a261125-watch-91 → 3 AI: **고침** — inbox qa 줄 괄호 지움 · hub/work/inbox.md:339 — CoachCardView 주석은 '짝 튜터가 화면에'로 됐지만 inbox qa 확인 줄에 아직 '(짝 튜터 얼굴·이름)' — 괄호 지우기 (2026-11-26 03:51)
+- a261125-watch-90 → 3 AI: **고침** — 코치 띠가 뜨면 위 반 gap·자막 칸 min-h를 줄임(위 반은 원래 스크롤됨) — 작은 기기 화면 확인은 못 함 · src/components/roleplay/CallParts.tsx:121 — [ai] src/components/roleplay/CallParts.tsx:121 — 코치 띠가 뜨면 아래 반 flex-[1.6]로 위 반이 약 38%로 줄어 작은 폰(높이 ~640)에서 긴 튜터 자막이 위 반에서 잘릴 수 있음 (띠가 뜰 때 위 반 gap·자막 칸 min-h도 줄이거나 긴 자막이면 비율 낮추기, 작은 화면 확인) (확인 못 함 — 맞는지부터) (2026-11-26 03:51)
+- a261125-watch-89 → 3 AI: **고침** — fresh에 direction.smoother를 넣어 💡 띠 문장을 따라 말하면 ✓ · src/components/RoleplayScreen.tsx:524 — 새 띠가 💡(smoother)면 fresh가 비어 nextShownRedo가 앞 ✎ 문장을 계속 기다림 → 💡 따라 말해도 ✓ 없음 — fresh에 direction.smoother를 넣거나 새 띠 차례에 기다리던 문장 비우기 (2026-11-26 03:51)
+- a261125-watch-88 → 3 AI: **고침** — RoleplayPast는 justEnded 없이 CallReplay — 옛 기록을 열기만 해서는 장면 호출·숙제 덮어쓰기 없음 · src/components/RoleplayPast.tsx:116 — 돌아보기가 homework={hadFix(saved.said)}를 넘겨 옛 자유대화 기록을 열기만 해도 /api/roleplay/replay 호출·giveHomework로 지금 숙제를 덮어씀 — 저절로 만들기·숙제 주기는 방금 끝난 통화 끝 화면에서만 (2026-11-26 03:51)
+- a261125-watch-87 → 3 AI: **고침** — triedRedo: 낱말 집합이 모자라면 compareToTarget 정렬로 그대로 맞은 낱말 + 앞 자모가 같은 꼴 바뀐 낱말을 시도로 + ko·es 테스트 · src/lib/roleplay/director.ts:813 — triedRedo가 segmentWords 낱말 그대로 절반 겹침만 봐서 형태가 바뀐 다시 말하기(ko '친구를 만났어요'→'친구 만나요', es 'fui al'→'voy a')를 다른 말로 봄 — compareToTarget 정렬로 형태 바뀐 낱말도 시도로 + ko·es 테스트 (2026-11-26 03:51)
+- a261125-watch-86 → 3 AI: **고침** — 💡 머리 ✎에 title·aria-label(roleplayReviewSay) · src/components/RoleplayReview.tsx:435 — 돌아보기 💡 힌트 머리 ✎(turn.live)에 title·aria-label 없음 — 다른 ✎ 자리(283행)처럼 붙이기 (2026-11-26 03:51)
+- a261125-watch-85 → 3 AI: **고침** — review 라우트가 x-app-version 2.80 밑이면 legacyHint — 💡 live 프롬프트가 say·meaning도 채움 · src/lib/roleplay/review.ts:145 — 💡 live 힌트가 pieces만 만들고 say·meaning이 비어 앱 버전을 안 가리는 review 라우트 때문에 2.79 등 옛 앱은 why 한 줄만 — 옛 앱엔 say·meaning도 채우거나 requestAppVersion으로 프롬프트 나누기 (2026-11-26 03:51)
+- a261125-watch-84 → 3 AI: **고침** — 고치기 답과 장면 조각을 낱말 단위(hasWords)로 비교 · src/lib/roleplay/homeworkQuiz.ts:61 — 장면 조각을 고치기 답과 글자 includes로 비교해 답이 'a'·'el'처럼 짧으면 장면 빈칸이 거의 다 빠짐 — 낱말 단위로 (2026-11-26 03:51)
+- a261125-watch-83 → 3 AI: **고침** — CallReplay justEnded 추가 — 저절로 만들기·giveHomework는 방금 끝난 통화 끝 화면에서만 · src/components/roleplay/CallReplay.tsx:131 — 돌아보기에서 옛 통화를 열기만 해도 장면을 만들고(모델 호출) giveHomework로 지금 숙제를 덮어씀 — 자동 만들기·숙제는 막 끝난 통화 끝 화면에서만 (2026-11-26 03:51)
+- a261125-watch-82 → 3 AI: **고침** — 앱 언어 들렸어요?는 튜터 줄 대신 그 줄 아래 note로 — 학습 언어 TTS가 앱 언어를 안 읽음, 테스트 고침 · src/lib/roleplay/director.ts:1650 — 앱 언어 '들렸어요?'를 학습 언어 줄과 한 텍스트로 합쳐 학습 언어 TTS가 다른 언어를 읽음 — 앱 언어 한 마디는 따로 내기(옛 앱 수업 통화) (2026-11-26 03:51)
+- a261125-watch-81 → 3 AI: **고침** — 들렸어요?를 튜터 줄에 합치지 않으니 say(번역 포함)를 새로 만들지 않음 · src/lib/roleplay/director.ts:1650 — '들렸어요?'를 붙일 때 say를 { text }로 새로 만들어 say.translation이 버려짐 — 기존 say를 펼쳐 text만 바꾸기(옛 앱 수업 통화) (2026-11-26 03:51)
+- a261125-watch-79 → 3 AI: **고침** — useCallRecap since(이번에 연 시각) — 장부·고쳐 씀에 이번 세션 줄만 · src/components/roleplay/callHooks.ts:81 — 통화 끝에 said 전체를 장부에 넣어 이어서 한 통화는 앞 세션 줄이 또 쌓임 — 이번 세션 줄만 또는 통화 id로 이미 넣은 줄 건너뛰기 (2026-11-26 03:51)
+- a261125-watch-78 → 3 AI: **고침** — 돌아보기에서 받은 해석을 keepGloss로 통화 기록에 저장(순서·시각 그대로) · src/components/RoleplayPast.tsx:58 — 돌아보기 열 때마다 해석 없는 튜터 줄을 다시 번역하고 저장 안 함 — 받은 번역 저장 (2026-11-26 03:51)
+- a261125-watch-77 → 3 AI: **고침** — roleplayShowTranslations 저장값을 읽지 않음 — 통화 중 줄마다 번역은 자막 해석만, 끝 화면은 그대로 · src/components/RoleplayScreen.tsx:159 — 해석 켬 버튼은 없는데 저장된 SHOW_TRANSLATIONS 값을 계속 읽어 통화 중 줄마다 번역 호출, 끌 방법 없음 — 옛 값 무시 (2026-11-26 03:51)
+- a261125-watch-76 → 3 AI: **고침** — state.finished 순간을 finishedAtRef로 고정해 updatedAt·activeSecs가 그 뒤 안 늘어남 · src/components/RoleplayScreen.tsx:341 — 끝난 뒤 저장될 때마다 activeSecs가 now 기준으로 늘어남 — finished면 끝난 순간 값 고정 (2026-11-26 03:51)
+- a261125-watch-75 → 3 AI: **고침** — say 효과 맨 앞에서 hungUpRef면 return · src/components/RoleplayScreen.tsx:366 — 통화 중단 뒤 늦게 온 튜터 차례가 said에 붙어 끝 화면 대본·저장에 들어감 — say 효과 맨 앞에서 hungUpRef면 return (2026-11-26 03:51)
+- a261125-watch-74 → 3 AI: **고침** — claimChatTrial로 보내기 전에 한 통을 원자적으로 잡고 넘으면 되돌림, 답 실패 시 refundChatTrial + 동시 12통 테스트 · src/app/api/chat/route.ts:1170 — 채팅 맛보기를 남았는지 본 뒤 답 뒤에 깎아 동시 전송이면 10통 초과 — 보내기 전에 kvIncrBy로 잡고 실패 시 돌려주기 (2026-11-26 03:51)
+- a261125-watch-73 → 3 AI: **고침** — JSON 칸 설명 better에 수업(coaching)이면 offer 때 자연스러운 문장 덧붙임 · src/lib/roleplay/director.ts:953 — JSON 칸 설명 better '틀린 게 없으면 비움'이 수업 offer 규칙(550행 better에 자연스러운 문장)과 어긋남 — 설명에 offer 경우 덧붙이기(옛 앱 수업 통화 전용) (2026-11-26 03:51)

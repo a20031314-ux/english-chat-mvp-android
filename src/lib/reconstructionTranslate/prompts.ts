@@ -158,25 +158,6 @@ export function generateTranslationUser(
 }
 
 /**
- * First reading for the analysis panel. Source stays in view.
- * Fuller than a caption; may keep discourse frames. Not a subtitle.
- */
-export function firstInterpretationSystem(ctx: TranslationContext): string {
-  const target = langName(ctx.targetLang);
-  const source = langName(ctx.sourceLang);
-  return `Write a FIRST READING of this ${source} line in ${target} for a learner analysis panel.
-
-This is NOT an on-screen caption. Do not subtitle-compress.
-Keep the information the speaker packed in, including discourse frames
-("what I'm trying to say", "the reason is") when they are doing work.
-Match the source register in ${target} (casual source → casual ${target}, not a textbook).
-Do not add tutor notes. Do not invent facts.
-Do not recap the speaker ("someone is talking about X", "~에 대해 이야기하고 있어요"). Write the line they said.
-
-Return ONLY JSON: {"translated":"..."}`;
-}
-
-/**
  * Step 3 (optional): review the 2-pass line. Source is allowed here
  * so meaning drift can be caught — but the job is still "rewrite if
  * translationese", not "translate the source again".

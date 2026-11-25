@@ -89,7 +89,8 @@ export function CallStage({
       </p>
 
       {/* 위: AI 튜터 */}
-      <section className="flex min-h-0 flex-1 flex-col items-center justify-center-safe gap-3 overflow-y-auto px-6 py-2 text-center [&>*]:shrink-0" data-call-tutor>
+      {/* 코치 띠가 뜨면 위 반이 줄어드니 틈·자막 칸 높이도 줄인다(작은 폰에서 긴 자막이 덜 밀리게). */}
+      <section className={`flex min-h-0 flex-1 flex-col items-center justify-center-safe overflow-y-auto px-6 py-2 text-center [&>*]:shrink-0 ${coach ? "gap-1.5" : "gap-3"}`} data-call-tutor>
         <SpeakingRing speaking={speaker === "tutor"}>
           {/* Smaller face when a long caption is up, so it fits its half (2026-11-17 overlap report). */}
           <AiAvatar size={coach || (caption?.text.length ?? 0) > 90 ? 64 : 96} language={language} gender={partner.gender} />
@@ -101,7 +102,7 @@ export function CallStage({
             <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 object-cover" />
           ) : null}
         </p>
-        <div className="flex min-h-[4.5rem] w-full max-w-md flex-col items-center justify-start gap-3" aria-live="polite">
+        <div className={`flex w-full max-w-md flex-col items-center justify-start ${coach ? "min-h-0 gap-2" : "min-h-[4.5rem] gap-3"}`} aria-live="polite">
           {speaker === "thinking" ? (
             <span aria-hidden className="composing-dots inline-flex gap-1 text-slate-400">
               <span>•</span>
@@ -393,6 +394,10 @@ export function CallPages({ ui, children }: { ui: UICopy; children: ReactNode })
   const [page, setPage] = useState(0);
   const [pages, setPages] = useState(1);
   const settle = useRef<number | null>(null);
+  // 넘김 맞춤 타이머는 화면이 닫히면 지운다.
+  useEffect(() => () => {
+    if (settle.current) window.clearTimeout(settle.current);
+  }, []);
 
   const measure = useCallback(() => {
     const el = ref.current;

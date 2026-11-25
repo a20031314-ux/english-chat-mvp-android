@@ -61,3 +61,23 @@ test("숙제 고치기: 코치 한마디가 있으면 답한 뒤 왜(Quizbank �
   const ja = homeworkQuiz("ja", said.slice(2), []);
   assert.ok(ja[0]?.kind === "spot" && !ja[0].why, "한마디가 없으면 왜 없음");
 });
+
+test("대화 시뮬레이션: 짧은 답(la·a)은 낱말로 비교 — 다른 낱말 속 글자로는 안 지움, 태국어도 낱말로", () => {
+  const scene = {
+    kind: "sim" as const,
+    lines: [
+      { who: "me" as const, text: "Después lavo los platos.", meaning: "그다음 설거지해요.", piece: "lavo los platos" },
+      { who: "me" as const, text: "Voy a la playa.", meaning: "해변에 가요.", piece: "a la playa" },
+      { who: "me" as const, text: "ฉันไปตลาดเมื่อวาน", meaning: "어제 시장에 갔어요.", piece: "ไปตลาด" },
+    ],
+  };
+  const quiz = [
+    { kind: "type", text: "Voy a la playa.", before: "Voy a ", after: " playa.", answer: "la", gloss: { en: "", raw: "" }, from: "homework" },
+    { kind: "type", text: "ฉันไปตลาด", before: "ฉัน", after: "", answer: "ไปตลาด", gloss: { en: "", raw: "" }, from: "homework" },
+  ] as never;
+  const out = sceneAfterQuiz(scene, quiz, "es").lines.map((line) => line.piece);
+  assert.equal(out[0], "lavo los platos");
+  assert.equal(out[1], null);
+  const th = sceneAfterQuiz(scene, quiz, "th").lines.map((line) => line.piece);
+  assert.equal(th[2], null);
+});

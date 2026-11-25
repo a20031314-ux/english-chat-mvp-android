@@ -815,7 +815,23 @@ export function triedRedo(redo: string, heard: string, language?: string): boole
   const want = words(redo);
   if (!want.length || !heard.trim()) return false;
   const got = new Set(words(heard));
-  return want.filter((word) => got.has(word)).length * 2 >= want.length;
+  if (want.filter((word) => got.has(word)).length * 2 >= want.length) return true;
+  // 꼴을 바꿔 다시 말한 것(ko 만났어요 → 만나요, es al → a)도 시도: 낱말 정렬(compareToTarget)에서 그대로 맞은 낱말 +
+  // 앞이 같은 꼴로 바뀐 낱말(NFD — 한글은 자모로 풀어 앞 두 자모 이상, 짧은 낱말은 그 길이만큼)이 절반 이상.
+  const jamo = (text: string) => [...text.normalize("NFD").toLocaleLowerCase().replace(/[^\p{L}\p{M}\p{N}]+/gu, "")];
+  const sameStart = (a: string, b: string) => {
+    const x = jamo(a);
+    const y = jamo(b);
+    const need = Math.min(2, x.length, y.length);
+    if (!need) return false;
+    let same = 0;
+    while (same < x.length && same < y.length && x[same] === y[same]) same += 1;
+    return same >= need;
+  };
+  const near = compareToTarget(redo, heard).outcomes.filter(
+    (outcome) => outcome.kind === "kept" || (outcome.kind === "changed" && sameStart(outcome.word, outcome.heardAs)),
+  ).length;
+  return near * 2 >= want.length;
 }
 
 /**
@@ -950,7 +966,7 @@ ${request.bilingual && request.nativeLanguage !== request.targetLanguage ? `${bi
 `}
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false${!coaching && request.redo?.trim() ? `, "said_again": "right" | "wrong" | ""` : ""}}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence with its mistake fixed, in ${target} — empty when nothing in it was wrong${coaching ? ", or the natural sentence when you set offer" : ""}>", "meant": "<what they were trying to say, in ${target}, or empty>", "smoother": "<their correct sentence said more naturally, in ${target}, or empty>", ${coaching ? `"retry": "ask" | "pass" | "miss" | "", "offer": true | false, ` : ""}"assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}, "heard": "yes" | "off" | "vague" | "", ${scenario.openEnded ? `"lead": "lead" | "follow" | "min" | "", "how": "ask" | "topic" | "extend" | "", "aim": "used" | "wrong" | "", ` : ""}"fn": "${FN_GROUPS.join('" | "')}" | "", "native": true | false${!coaching && request.redo?.trim() ? `, "said_again": "right" | "wrong" | ""` : ""}}
 ${MEASURE_RULES(Boolean(scenario.openEnded), target, native)}
 ${
   coaching
@@ -1642,19 +1658,18 @@ export function parseDirection(
     }
   }
 
-  // 수업 통화 첫 침묵(2026-11-07): "들었어요?"는 앱 언어 고정 한 마디로 앞에 붙인다 — 모델에게 맡기면 학습 언어로 묻는 일이 잦았다(운영 ja·es).
+  // 수업 통화 첫 침묵(2026-11-07, 옛 앱 2.79 이하 수업 통화): "들렸어요?"는 앱 언어 고정 한 마디 — 모델에게 맡기면 학습 언어로 묻는 일이 잦았다(운영 ja·es).
+  // 튜터 줄(say)에 합치면 학습 언어 목소리가 앱 언어를 읽고 해석(translation)도 버려져서, 줄은 그대로 두고 그 줄 아래 한마디(note)로 띄운다(변경 감시 2026-11-25).
+  let caughtNote = "";
   if (coaching && !openingTurn(request) && !request.heard.trim() && !request.missed && (request.silent ?? 1) < 2) {
     const caught = CAUGHT_IT[request.nativeLanguage];
-    const spokenNow = "id" in say ? bank[say.id]?.text ?? "" : say.text;
-    if (caught && request.nativeLanguage !== request.targetLanguage && !spokenNow.startsWith(caught)) {
-      say = { text: [caught, spokenNow].filter(Boolean).join(" ") };
-    }
+    if (caught && request.nativeLanguage !== request.targetLanguage) caughtNote = caught;
   }
 
   return {
     assessment,
     say,
-    note: freeTalk ? coachNote : coachNote || (keptBetter || keptMeant ? "" : note),
+    note: freeTalk ? coachNote : caughtNote || coachNote || (keptBetter || keptMeant ? "" : note),
     next,
     ...(keptBetter ? { better: keptBetter } : {}),
     ...(keptMeant ? { meant: keptMeant } : {}),

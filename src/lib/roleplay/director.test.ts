@@ -1565,10 +1565,11 @@ test("수업 통화: 말이 없으면 튜터가 먼저 들었는지 묻고, 두 
   assert.doesNotMatch(freeTalk, /When they said nothing at all/);
 });
 
-test("수업 통화 첫 침묵: 앱 언어 '들렸어요?'를 앞에 붙이고, 두 번째 침묵·자유대화엔 안 붙임", () => {
+test("수업 통화 첫 침묵: 앱 언어 '들렸어요?'는 줄 아래 한마디(note)로 — 튜터 줄(학습 언어 목소리)에 합치지 않음, 두 번째 침묵·자유대화엔 없음", () => {
   const raw = { say: "¿Qué tal tu día?", assessment: "stuck", next: "free" };
   const first = parse(raw, { coach: true, heard: "", silent: 1, nodeId: "talk", targetLanguage: "es", nativeLanguage: "ar" }, open);
-  assert.equal(first?.say && "text" in first.say ? first.say.text : "", "هل سمعتني؟ ¿Qué tal tu día?");
+  assert.equal(first?.say && "text" in first.say ? first.say.text : "", "¿Qué tal tu día?");
+  assert.equal(first?.note, "هل سمعتني؟");
   const second = parse({ say: "Hoy estoy…", assessment: "stuck", next: "free" }, { coach: true, heard: "", silent: 2, nodeId: "talk", targetLanguage: "es", nativeLanguage: "ar" }, open);
   assert.equal(second?.say && "text" in second.say ? second.say.text : "", "Hoy estoy…");
   const free = parse(raw, { heard: "", nodeId: "talk", targetLanguage: "es", nativeLanguage: "ar" }, open);
@@ -1631,7 +1632,8 @@ test("수업 통화 첫 마디는 침묵 차례가 아니다 — '들렸어요?'
   const first = parseDirection(raw, context({ history: [] }));
   assert.equal(first && "text" in first.say ? first.say.text : "", "¡Hola! Me llamo Mateo. ¿Cómo te llamas?");
   const silent = parseDirection(raw, context({ history: [{ who: "tutor", text: "¿Cómo te llamas?" }, { who: "learner", text: "Ana" }, { who: "tutor", text: "¿De dónde eres?" }] }));
-  assert.match(silent && "text" in silent.say ? silent.say.text : "", /^제 말 들렸어요\?/, "말을 한 뒤의 침묵은 그대로");
+  assert.equal(silent?.note, "제 말 들렸어요?", "말을 한 뒤의 침묵은 그대로");
+  assert.equal(first?.note ?? "", "");
 });
 
 test("첫 마디는 튜터 말이 하나도 없을 때 — 첫 질문 뒤 침묵은 침묵 차례", () => {
@@ -1646,6 +1648,10 @@ test("다시 말해 보라고 했는데 다른 말을 하면 판정하지 않고
   assert.equal(triedRedo("電車がとても遅れました。", "はい、安いランチを食べました。", "ja"), false);
   assert.equal(triedRedo("어제 친구를 만났어요.", "어제 친구를 만났어요", "ko"), true);
   assert.equal(triedRedo("x", "", "en"), false);
+  // 꼴을 바꿔 다시 말해도 시도(변경 감시 2026-11-25).
+  assert.equal(triedRedo("친구를 만났어요", "친구 만나요", "ko"), true);
+  assert.equal(triedRedo("fui al cine", "voy a cine", "es"), true);
+  assert.equal(triedRedo("La película estaba muy aburrida.", "Me gusta mucho el fútbol.", "es"), false);
   const es = findScenario("open-talk-es")!;
   const esBank = sentencesFor("es");
   const req = (heard: string) => request({ scenarioId: es.id, nodeId: "talk", coach: true, heard, redo: "La película estaba muy aburrida.", redoTries: 1, targetLanguage: "es", nativeLanguage: "ar" });

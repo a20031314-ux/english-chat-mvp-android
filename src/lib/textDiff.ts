@@ -1,3 +1,5 @@
+import { segmentChunkWhole } from "./wordSegments.ts";
+
 export type DiffPart = {
   type: "equal" | "remove" | "add";
   text: string;
@@ -29,6 +31,11 @@ function tokenize(text: string): string[] {
       /[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/.test(part)
     ) {
       out.push(...Array.from(part));
+      continue;
+    }
+    // 태국어·라오어·크메르어·미얀마어(띄어쓰기 없음, 글자 하나로 자르면 모음 부호가 떨어짐): 낱말로(wordSegments).
+    if (/[\u0e00-\u0eff\u1000-\u109f\u1780-\u17ff]/.test(part)) {
+      out.push(...segmentChunkWhole(part));
       continue;
     }
     out.push(part);

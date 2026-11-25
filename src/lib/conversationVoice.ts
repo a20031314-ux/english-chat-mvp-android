@@ -97,10 +97,13 @@ If they are a learner, you may keep lines a bit shorter or use easier words — 
  * 아랍어는 현대 표준어 하나로(사용자 2026-11-01). 말투 줄에만 두면 "사우디 친구" 설정에 밀려 답의 60%가 걸프 방언이었다 —
  * 맨 끝(JSON 모양 바로 앞)에 한 번 더 둔다(bilingualBlock과 같은 이유). 다른 언어는 빈 문자열.
  */
-export function standardVarietyTail(targetLanguage: string): string {
-  return targetLanguage === "ar"
-    ? "\n\nWrite assistantMessage in Modern Standard Arabic (الفصحى) only — not one dialect word or spelling (no وش، شو، إيش، الحين، كيفك، تبي، عشان، هيك، كتير، ليش, or the like). Friendly and simple, but standard."
-    : "";
+export function standardVarietyTail(targetLanguage: string, bilingual = false): string {
+  if (targetLanguage !== "ar") return "";
+  const ban = "not one dialect word or spelling (no وش، شو، إيش، الحين، كيفك، تبي، عشان، هيك، كتير، ليش, or the like). Friendly and simple, but standard.";
+  // 내 말도 하는 튜터(bilingual): 앱 언어 한 문장 규칙과 부딪히지 않게 아랍어 부분에만(변경 감시 2026-11-25).
+  return bilingual
+    ? `\n\nThe Arabic in assistantMessage is Modern Standard Arabic (الفصحى) only — ${ban} This is about the Arabic part only; the line in the learner's own language stays exactly as the rule above says.`
+    : `\n\nWrite assistantMessage in Modern Standard Arabic (الفصحى) only — ${ban}`;
 }
 
 /**

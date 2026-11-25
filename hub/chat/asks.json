@@ -9584,7 +9584,11 @@
         "src/lib/speech/sayLine.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "typedLine이 typed:true를 보내고 practice 라우트가 받아쓰기 봐주기 없이 글 그대로 판단(TYPED_LINE_TAIL), 발음 기록 안 함",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-22",
@@ -10200,7 +10204,11 @@
         "src/lib/roleplay/homeworkQuiz.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "sceneAfterQuiz를 낱말 단위(wordSegments, 언어 인자)로 비교 + es·th 테스트",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-66",
@@ -10214,7 +10222,11 @@
         "src/lib/roleplay/practice.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "formSlip: 라틴 악센트만 다르면 봐줌(태국어·힌디 부호는 그대로), 넷 미만 낱말 제외 + 테스트",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-67",
@@ -10228,7 +10240,11 @@
         "src/components/roleplay/CallReplay.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "통화 끝 화면 HomeworkTabs는 SceneChips에 homework 안 넘기고 QuizPlayer homeworkLast도 sheet에서만",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-68",
@@ -10242,7 +10258,11 @@
         "src/app/api/chat/route.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "standardVarietyTail(language, bilingual) — bilingual이면 아랍어 부분에만, 앱 언어 줄은 위 규칙대로",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-69",
@@ -10270,7 +10290,11 @@
         "src/components/roleplay/CallRecap.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "textDiff tokenize가 태국어·라오·크메르·미얀마 글자를 wordSegments segmentChunkWhole로 낱말 단위 + 테스트",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-71",
@@ -10284,7 +10308,11 @@
         "src/components/roleplay/CallParts.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "CallPages 언마운트 때 settle 타이머 clearTimeout",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-72",
@@ -10312,7 +10340,11 @@
         "src/lib/roleplay/director.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "JSON 칸 설명 better에 수업(coaching)이면 offer 때 자연스러운 문장 덧붙임",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-74",
@@ -10326,7 +10358,11 @@
         "src/app/api/chat/route.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "claimChatTrial로 보내기 전에 한 통을 원자적으로 잡고 넘으면 되돌림, 답 실패 시 refundChatTrial + 동시 12통 테스트",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-75",
@@ -10340,7 +10376,11 @@
         "src/components/RoleplayScreen.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "say 효과 맨 앞에서 hungUpRef면 return",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-76",
@@ -10354,7 +10394,11 @@
         "src/components/RoleplayScreen.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "state.finished 순간을 finishedAtRef로 고정해 updatedAt·activeSecs가 그 뒤 안 늘어남",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-77",
@@ -10368,7 +10412,11 @@
         "src/components/RoleplayScreen.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "roleplayShowTranslations 저장값을 읽지 않음 — 통화 중 줄마다 번역은 자막 해석만, 끝 화면은 그대로",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-78",
@@ -10382,7 +10430,11 @@
         "src/components/RoleplayPast.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "돌아보기에서 받은 해석을 keepGloss로 통화 기록에 저장(순서·시각 그대로)",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-79",
@@ -10396,7 +10448,11 @@
         "src/components/roleplay/callHooks.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "useCallRecap since(이번에 연 시각) — 장부·고쳐 씀에 이번 세션 줄만",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-80",
@@ -10424,7 +10480,11 @@
         "src/lib/roleplay/director.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "들렸어요?를 튜터 줄에 합치지 않으니 say(번역 포함)를 새로 만들지 않음",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-82",
@@ -10438,7 +10498,11 @@
         "src/lib/roleplay/director.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "앱 언어 들렸어요?는 튜터 줄 대신 그 줄 아래 note로 — 학습 언어 TTS가 앱 언어를 안 읽음, 테스트 고침",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-83",
@@ -10452,7 +10516,11 @@
         "src/components/roleplay/CallReplay.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "CallReplay justEnded 추가 — 저절로 만들기·giveHomework는 방금 끝난 통화 끝 화면에서만",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-84",
@@ -10466,7 +10534,11 @@
         "src/lib/roleplay/homeworkQuiz.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "고치기 답과 장면 조각을 낱말 단위(hasWords)로 비교",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-85",
@@ -10480,7 +10552,11 @@
         "src/lib/roleplay/review.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "review 라우트가 x-app-version 2.80 밑이면 legacyHint — 💡 live 프롬프트가 say·meaning도 채움",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-86",
@@ -10494,7 +10570,11 @@
         "src/components/RoleplayReview.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "💡 머리 ✎에 title·aria-label(roleplayReviewSay)",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-87",
@@ -10508,7 +10588,11 @@
         "src/lib/roleplay/director.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "triedRedo: 낱말 집합이 모자라면 compareToTarget 정렬로 그대로 맞은 낱말 + 앞 자모가 같은 꼴 바뀐 낱말을 시도로 + ko·es 테스트",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-88",
@@ -10522,7 +10606,11 @@
         "src/components/RoleplayPast.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "RoleplayPast는 justEnded 없이 CallReplay — 옛 기록을 열기만 해서는 장면 호출·숙제 덮어쓰기 없음",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-89",
@@ -10536,7 +10624,11 @@
         "src/components/RoleplayScreen.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "fresh에 direction.smoother를 넣어 💡 띠 문장을 따라 말하면 ✓",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-90",
@@ -10550,7 +10642,11 @@
         "src/components/roleplay/CallParts.tsx"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "코치 띠가 뜨면 위 반 gap·자막 칸 min-h를 줄임(위 반은 원래 스크롤됨) — 작은 기기 화면 확인은 못 함",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-91",
@@ -10564,7 +10660,11 @@
         "hub/work/inbox.md"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "inbox qa 줄 괄호 지움",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-92",
@@ -10578,7 +10678,11 @@
         "src/lib/videoSubtitle/pipeline.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "안 쓰는 import와 자막 창 번역 사슬(translateSegments·generateMeaningBasedSubtitle)과 그 사슬만 쓰던 파일 12개·테스트 정리",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-93",
@@ -10606,7 +10710,11 @@
         "src/components/roleplay/callHooks.ts"
       ],
       "head": "46e4895e",
-      "status": "open"
+      "status": "고침",
+      "by": "3",
+      "note": "useCallTimeLine이 튜터 줄이 늘 때마다 /api/entitlement로 다시 맞추고 그 사이만 5초씩 뺌",
+      "until": "",
+      "answeredAt": "2026-11-26 03:51"
     },
     {
       "id": "a261125-watch-95",
@@ -10775,27 +10883,328 @@
       ],
       "head": "1ee2a404",
       "status": "open"
+    },
+    {
+      "id": "a261126-3-1",
+      "at": "2026-11-26 03:51",
+      "kind": "apply",
+      "from": "3",
+      "to": "1",
+      "what": "변경 감시 지적 27개 고침: 통화(늦은 튜터 차례·끝난 시간 고정·해석 옛 값·💡 따라 말하기 ✓·남은 시간 서버로 다시 맞춤), 돌아보기는 숙제를 덮어쓰지 않음, 숙제 빈칸 낱말 단위 비교, 따라 말하기 악센트 봐줌·꼴 바꾼 다시 말하기도 시도, 쓴 줄은 글 그대로 판단, 채팅 맛보기 보내기 전에 잡음, 교정 diff 태국어 낱말 단위(textDiff — 채팅·Room 교정 칩도), 안 쓰는 자막 번역 사슬 지움",
+      "files": [
+        "src/app/dev/roleplay-review/page.tsx",
+        "src/app/dev/call-preview/page.tsx",
+        "src/app/api/ads/config/route.ts",
+        "src/app/api/ads/ssv/route.ts",
+        "src/app/api/entitlement/route.ts",
+        "src/app/api/expression-ask/route.ts",
+        "src/app/api/feedback/news/route.ts",
+        "src/app/api/points/sync/route.ts",
+        "src/components/AnalyzableEnglish.tsx",
+        "src/components/account/AccountCard.tsx",
+        "src/components/account/ProfileFacts.tsx",
+        "src/components/BillingScreen.tsx",
+        "src/components/UpdateNotice.tsx",
+        "src/components/FeedbackFixedSheet.tsx",
+        "src/app/api/expression-insight/route.ts",
+        "src/app/api/translate/route.ts",
+        "src/app/api/vocab/gloss/route.ts",
+        "src/app/api/ops/reports/route.ts",
+        "src/app/api/account/me/route.ts",
+        "src/app/api/curriculum/fixed-lesson/seed/route.ts",
+        "src/app/api/curriculum/qbank/seed/route.ts",
+        "src/app/api/expression-units/route.ts",
+        "src/app/api/learning-spans/route.ts",
+        "src/app/api/tts/route.ts",
+        "src/app/api/vocab/route.ts",
+        "src/components/ExpressionInsightSheet.tsx",
+        "src/components/VocabPreviewProvider.tsx",
+        "src/app/api/learner/comprehension/route.ts",
+        "src/app/api/learner/ledger/route.ts",
+        "src/components/LanguagePick.tsx",
+        "src/components/FullScreenLayer.tsx",
+        "src/components/NativeAdSlot.tsx",
+        "src/app/api/ads/txt/route.ts",
+        "src/components/WebAdSlot.tsx",
+        "src/app/dev/update-notice/page.tsx",
+        "src/components/FeedbackButton.tsx",
+        "src/components/FindInMy.tsx",
+        "src/components/PointStore.tsx",
+        "src/components/SentenceAskPanel.tsx",
+        "src/app/ops/OpsInbox.tsx",
+        "src/components/ExpressionInsightProvider.tsx",
+        "src/components/EnglishAnalysisProvider.tsx",
+        "src/components/AiConsentGate.tsx",
+        "src/components/GuideSheet.tsx",
+        "src/components/WhatsNewSheet.tsx",
+        "src/components/EnglishAnalysisViewer.tsx",
+        "src/app/subscribe/SubscribeClient.tsx",
+        "src/app/ops/page.tsx",
+        "src/components/TTSButton.tsx",
+        "src/app/subscribe/page.tsx",
+        "src/components/VocabSenseList.tsx",
+        "src/components/VocabWordPreview.tsx",
+        "src/app/api/account/config/route.ts",
+        "src/app/api/account/delete/route.ts",
+        "src/app/api/account/email/start/route.ts",
+        "src/app/api/account/email/verify/route.ts",
+        "src/app/api/account/google/route.ts",
+        "src/app/api/account/password/change/route.ts",
+        "src/app/api/account/password/login/route.ts",
+        "src/app/api/account/password/signup/route.ts",
+        "src/app/api/account/profile/route.ts",
+        "src/app/api/build/route.ts",
+        "src/app/api/feedback/fixed/route.ts",
+        "src/app/api/feedback/route.ts",
+        "src/app/api/guide/route.ts",
+        "src/app/api/learner/brief/route.ts",
+        "src/app/api/learner/growth/route.ts",
+        "src/app/api/learner/next/route.ts",
+        "src/app/api/learner/self-check/route.ts",
+        "src/app/api/simcheck/forget/route.ts",
+        "src/app/api/whats-new/route.ts",
+        "src/app/api/account/purge/route.ts",
+        "src/app/api/feedback/image/route.ts",
+        "src/app/api/media/sweep/route.ts",
+        "src/app/manifest.ts",
+        "src/lib/billing/videoPrepQuota.ts"
+      ],
+      "features": [
+        "처음 언어·튜터 고르기",
+        "사용법",
+        "새로워진 점",
+        "의견 보내기",
+        "AI 튜터 줄",
+        "튜터 프로필",
+        "AI 채팅",
+        "통화 설명",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "숙제",
+        "통화 기록",
+        "1:1 메시지",
+        "단체방",
+        "사람",
+        "게시판",
+        "친구 초대",
+        "Room",
+        "방 게임",
+        "영상 학습",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "글자·소리",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기",
+        "결제 화면",
+        "광고",
+        "계정 카드·로그인",
+        "업데이트 알림",
+        "AI 데이터 동의",
+        "아이콘·짤",
+        "랜덤 연결",
+        "표현 시트"
+      ],
+      "base": "3eda193",
+      "head": "3eda193",
+      "status": "open"
+    },
+    {
+      "id": "a261126-3-2",
+      "at": "2026-11-26 03:51",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "변경 감시 지적 27개 고침: 통화(늦은 튜터 차례·끝난 시간 고정·해석 옛 값·💡 따라 말하기 ✓·남은 시간 서버로 다시 맞춤), 돌아보기는 숙제를 덮어쓰지 않음, 숙제 빈칸 낱말 단위 비교, 따라 말하기 악센트 봐줌·꼴 바꾼 다시 말하기도 시도, 쓴 줄은 글 그대로 판단, 채팅 맛보기 보내기 전에 잡음, 교정 diff 태국어 낱말 단위(textDiff — 채팅·Room 교정 칩도), 안 쓰는 자막 번역 사슬 지움",
+      "files": [
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/QuizPlayer.tsx",
+        "src/app/api/curriculum/ask/route.ts",
+        "src/components/studyMap/InlineQuiz.tsx",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/components/studyMap/LessonHost.tsx",
+        "src/components/studyMap/TodayCards.tsx",
+        "src/app/api/curriculum/frame-lesson/route.ts",
+        "src/app/api/curriculum/item-lesson/route.ts",
+        "src/app/api/curriculum/option-notes/route.ts",
+        "src/app/api/curriculum/qbank/route.ts",
+        "src/app/api/curriculum/recall/route.ts",
+        "src/app/api/curriculum/script/route.ts",
+        "src/app/api/curriculum/scripts/route.ts",
+        "src/app/api/curriculum/spots/route.ts",
+        "src/app/api/curriculum/stages/route.ts",
+        "src/app/api/curriculum/typed-check/route.ts",
+        "src/app/api/curriculum/words/route.ts",
+        "src/app/api/notebook/route.ts",
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/studyMap/DictNotes.tsx",
+        "src/components/studyMap/Dictionary.tsx",
+        "src/components/studyMap/LanguageBank.tsx",
+        "src/components/studyMap/StudyChips.tsx",
+        "src/components/studyMap/Growth.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/BankFlip.tsx",
+        "src/components/studyMap/ScriptPractice.tsx",
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/FixedExplain.tsx",
+        "src/app/api/curriculum/fixed-lesson/route.ts",
+        "src/app/api/curriculum/quiz-stats/route.ts",
+        "src/app/api/curriculum/route.ts"
+      ],
+      "features": [
+        "처음 언어·튜터 고르기",
+        "사용법",
+        "새로워진 점",
+        "의견 보내기",
+        "AI 튜터 줄",
+        "튜터 프로필",
+        "AI 채팅",
+        "통화 설명",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "숙제",
+        "통화 기록",
+        "1:1 메시지",
+        "단체방",
+        "사람",
+        "게시판",
+        "친구 초대",
+        "Room",
+        "방 게임",
+        "영상 학습",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "글자·소리",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기",
+        "결제 화면",
+        "광고",
+        "계정 카드·로그인",
+        "업데이트 알림",
+        "AI 데이터 동의",
+        "아이콘·짤",
+        "랜덤 연결",
+        "표현 시트"
+      ],
+      "base": "3eda193",
+      "head": "3eda193",
+      "status": "open"
+    },
+    {
+      "id": "a261126-3-3",
+      "at": "2026-11-26 03:51",
+      "kind": "apply",
+      "from": "3",
+      "to": "4",
+      "what": "변경 감시 지적 27개 고침: 통화(늦은 튜터 차례·끝난 시간 고정·해석 옛 값·💡 따라 말하기 ✓·남은 시간 서버로 다시 맞춤), 돌아보기는 숙제를 덮어쓰지 않음, 숙제 빈칸 낱말 단위 비교, 따라 말하기 악센트 봐줌·꼴 바꾼 다시 말하기도 시도, 쓴 줄은 글 그대로 판단, 채팅 맛보기 보내기 전에 잡음, 교정 diff 태국어 낱말 단위(textDiff — 채팅·Room 교정 칩도), 안 쓰는 자막 번역 사슬 지움",
+      "files": [
+        "src/app/api/rooms/fix/route.ts",
+        "src/components/rooms/BoardView.tsx",
+        "src/components/rooms/MateAsk.tsx",
+        "src/components/rooms/MessagesTab.tsx",
+        "src/components/rooms/RoomDm.tsx",
+        "src/components/rooms/RoomGroups.tsx",
+        "src/components/rooms/RoomParts.tsx",
+        "src/components/rooms/RoomPeople.tsx",
+        "src/components/rooms/RoomView.tsx",
+        "src/components/rooms/RoomsScreen.tsx",
+        "src/components/rooms/TeamSpace.tsx",
+        "src/components/AiTutorProfile.tsx",
+        "src/app/api/icons/route.ts",
+        "src/app/api/invite/route.ts",
+        "src/app/api/media/route.ts",
+        "src/app/api/random/route.ts",
+        "src/app/api/rooms/game/route.ts",
+        "src/app/api/dm/route.ts",
+        "src/app/api/rooms/route.ts",
+        "src/components/invite/InviteWelcome.tsx",
+        "src/components/rooms/PeopleTab.tsx",
+        "src/components/rooms/RandomScreen.tsx",
+        "src/components/rooms/RoomCall.tsx",
+        "src/components/rooms/RoomGame.tsx",
+        "src/components/rooms/VideoStage.tsx",
+        "src/components/AiTutorRow.tsx",
+        "src/components/rooms/IconPacks.tsx",
+        "src/app/invite/InviteLanding.tsx",
+        "src/components/ProfileFrame.tsx",
+        "src/components/invite/InviteButton.tsx",
+        "src/components/invite/InviteRewards.tsx",
+        "src/components/rooms/IconEditor.tsx",
+        "src/components/rooms/MediaImage.tsx",
+        "src/app/invite/page.tsx",
+        "src/app/api/board/route.ts",
+        "src/app/api/groups/route.ts",
+        "src/app/api/social/route.ts"
+      ],
+      "features": [
+        "처음 언어·튜터 고르기",
+        "사용법",
+        "새로워진 점",
+        "의견 보내기",
+        "AI 튜터 줄",
+        "튜터 프로필",
+        "AI 채팅",
+        "통화 설명",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "숙제",
+        "통화 기록",
+        "1:1 메시지",
+        "단체방",
+        "사람",
+        "게시판",
+        "친구 초대",
+        "Room",
+        "방 게임",
+        "영상 학습",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "글자·소리",
+        "소재 수업",
+        "같이 배우기",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기",
+        "결제 화면",
+        "광고",
+        "계정 카드·로그인",
+        "업데이트 알림",
+        "AI 데이터 동의",
+        "아이콘·짤",
+        "랜덤 연결",
+        "표현 시트"
+      ],
+      "base": "3eda193",
+      "head": "3eda193",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-18 00:13",
-      "from": "3",
-      "base": "55e8f25^",
-      "head": "55e8f25",
-      "what": "수업 통화에서 틀을 뺌(lessonPlan·칠판·⏭·숙제 틀 문제 지움, recent·어색함 짚기)",
-      "tabs": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "asks": [
-        "a261118-3-4",
-        "a261118-3-5",
-        "a261118-3-6"
-      ]
-    },
     {
       "at": "2026-11-18 18:12",
       "from": "3",
@@ -11396,11 +11805,27 @@
       "asks": [
         "a261125-3-8"
       ]
+    },
+    {
+      "at": "2026-11-26 03:51",
+      "from": "3",
+      "base": "3eda193",
+      "head": "3eda193",
+      "what": "변경 감시 지적 27개 고침: 통화(늦은 튜터 차례·끝난 시간 고정·해석 옛 값·💡 따라 말하기 ✓·남은 시간 서버로 다시 맞춤), 돌아보기는 숙제를 덮어쓰지 않음, 숙제 빈칸 낱말 단위 비교, 따라 말하기 악센트 봐줌·꼴 바꾼 다시 말하기도 시도, 쓴 줄은 글 그대로 판단, 채팅 맛보기 보내기 전에 잡음, 교정 diff 태국어 낱말 단위(textDiff — 채팅·Room 교정 칩도), 안 쓰는 자막 번역 사슬 지움",
+      "tabs": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "asks": [
+        "a261126-3-1",
+        "a261126-3-2",
+        "a261126-3-3"
+      ]
     }
   ],
   "seq": {
-    "261125-3": 8,
-    "261125-1": 2,
-    "261125-watch": 106
+    "261126-3": 3
   }
 }

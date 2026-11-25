@@ -92,6 +92,7 @@ export function CallReplay({
   isPremium,
   gender,
   openFirst = false,
+  justEnded = false,
 }: {
   ui: UICopy;
   language: string;
@@ -106,6 +107,8 @@ export function CallReplay({
   gender?: TutorGender;
   /** 숙제 줄에서 열었을 때 — 숙제 화면을 바로 연다. */
   openFirst?: boolean;
+  /** 방금 끝난 통화의 끝 화면 — 장면을 저절로 만들고 숙제를 주는 건 여기서만(돌아보기로 옛 통화를 열면 안 함). */
+  justEnded?: boolean;
 }) {
   const [stored, setStored] = useState<StoredReplay | null>(() => (callId ? replayFor(storage(), language, callId) : null));
   const [loading, setLoading] = useState(false);
@@ -128,13 +131,13 @@ export function CallReplay({
     }
     const row: StoredReplay = { callId, scenes, results: {}, at: Date.now() };
     keepReplay(storage(), language, row);
-    if (homework) giveHomework(storage(), language, { kind: "replay", callId, at: Date.now() });
+    if (homework && justEnded) giveHomework(storage(), language, { kind: "replay", callId, at: Date.now() });
     setStored(row);
   };
 
-  // 코치가 고친 통화는 끝 화면에 오면 바로 만들어 둔다(숙제). 고친 게 없으면 눌러야.
+  // 코치가 고친 통화는 방금 끝난 끝 화면에 오면 바로 만들어 둔다(숙제). 고친 게 없거나 돌아보기면 눌러야.
   useEffect(() => {
-    if (homework && !stored && canMake) void make();
+    if (homework && justEnded && !stored && canMake) void make();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [homework, callId]);
 
@@ -242,7 +245,8 @@ function HomeworkTabs({ quiz, sheet = false, ...shared }: Shared & { quiz: reado
         if (next) onStored(next);
       }}
       onDone={() => undefined}
-      homeworkLast={talkDone}
+      // 숙제 끝 전면은 숙제 화면(sheet)에서만 — 통화 끝 화면은 통화 끝 전면과 같은 흐름.
+      homeworkLast={sheet && talkDone}
       glossFirst
       scoreEnd
       onClose={() => {
@@ -298,7 +302,7 @@ function HomeworkTabs({ quiz, sheet = false, ...shared }: Shared & { quiz: reado
           <span className="tabular-nums text-slate-300">{stored.quiz ? `${stored.quiz.ok}/${stored.quiz.of}` : quiz.length}</span>
         </button>
       ) : (
-        <SceneChips {...shared} hasQuiz={quiz.length > 0} quiz={quiz} homework />
+        <SceneChips {...shared} hasQuiz={quiz.length > 0} quiz={quiz} />
       )}
       {quizPlayer}
     </div>
@@ -373,7 +377,7 @@ function SceneChips({
           ui={ui}
           language={language}
           locale={locale}
-          scene={sceneAfterQuiz(playing, quiz)}
+          scene={sceneAfterQuiz(playing, quiz, language)}
           gender={gender}
           isPremium={isPremium}
           onDone={(result) => {

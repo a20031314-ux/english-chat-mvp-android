@@ -76,7 +76,6 @@ import { withTutorGender } from "@/lib/roleplay/justTalk";
 /** How long to wait for the rest of a sentence the pause cut off. */
 const REST_OF_SENTENCE_MS = 3500;
 
-const SHOW_TRANSLATIONS_KEY = "roleplayShowTranslations";
 /**
  * 통화 중 자막(튜터가 마지막에 한 말 한 줄): 기본은 꺼짐 — 실제 통화처럼 듣고 말하기(사용자 2026-11-01 "기본은 가리고 선택적으로",
  * 0~1단계도 똑같이 끔). 켜면 이 기기에 남는다. 내 말·고친 말은 통화 중에 안 보이고 끝난 뒤 대본에서.
@@ -156,7 +155,6 @@ export function RoleplayScreen({
   // The character's translations: folded by default, each one a tap away, or
   // all on show — the learner's choice, kept for next time. Nothing waits on
   // a translation either way; this is about what is on screen.
-  const [showTranslations] = useStoredToggle(SHOW_TRANSLATIONS_KEY);
   // 글자를 아직 모르는 학습자(0단계를 고른 채, curriculum/lettersFirst.ts — 2026-11-06 사용자 "알파벳도 모를 시 일단 학습을 진행하되
   // 숙제로 0단계"): 통화는 그대로 하고, 한 번도 안 눌렀으면 자막과 해석을 켠 채 시작, 끝 화면에 숙제 "글자·소리".
   const [lettersBeginner] = useState(() => (catalogScene ? readLettersFirst(catalogScene.language) : false));
@@ -267,6 +265,8 @@ export function RoleplayScreen({
   // 이번 차례에 💡 힌트를 열었나(차례 재기 — 실전 대화 막힌 까닭).
   const hintedRef = useRef(false);
   const activeBefore = useRef(0);
+  /** 통화가 끝난(state.finished) 순간 — 저장·시간 셈이 여기서 멈춘다. */
+  const finishedAtRef = useRef(0);
 
   useEffect(() => {
     if (!scenario) return;
@@ -300,6 +300,7 @@ export function RoleplayScreen({
       `${Date.now()}-${Math.random()}`;
     startedAt.current = carrying?.startedAt ?? Date.now();
     openedAt.current = Date.now();
+    finishedAtRef.current = 0;
     activeBefore.current = carrying ? callSeconds(carrying) : 0;
     setReviewing(null);
     setOutOfPoints(false);
@@ -329,7 +330,9 @@ export function RoleplayScreen({
   useEffect(() => {
     if (!scenario || !state || !onSaved || !savedId.current) return;
     if (said.length === 0) return;
-    const now = Date.now();
+    // 끝난 통화는 끝난 순간 값으로 고정 — 그 뒤 저장될 때마다 늘지 않게.
+    if (state.finished && !finishedAtRef.current) finishedAtRef.current = Date.now();
+    const now = finishedAtRef.current || Date.now();
     onSaved({
       id: savedId.current,
       scenarioId: scenario.id,
@@ -349,6 +352,8 @@ export function RoleplayScreen({
   /** Play the current line, then hand control back to the state machine. */
   useEffect(() => {
     if (!scenario || !state || instruction?.do !== "say") return;
+    // 끊은 뒤 늦게 온 튜터 차례는 대본·저장에 넣지 않는다.
+    if (hungUpRef.current) return;
     /**
      * The gloss that ships with a recorded line, if it is any use to this
      * learner.
@@ -521,7 +526,8 @@ export function RoleplayScreen({
       }
       if (!missedTurn) hintedRef.current = false;
       if (!missedTurn && scenario.openEnded) {
-        const fresh = (meant || better || offered || "").trim();
+        // 새 띠가 💡(smoother)여도 그 문장을 기다린다 — 따라 말하면 ✓.
+        const fresh = (meant || better || offered || direction?.smoother || "").trim();
         const waitNext = fresh ? { line: fresh, tries: 0 } : nextShownRedo(redo, { repeated, graded, cardUp: Boolean(coachCard && !coachCard.old) });
         setRedo(waitNext);
         setCoachCard((current) =>
@@ -695,11 +701,12 @@ export function RoleplayScreen({
   useEffect(() => {
     // 끝난 화면(결과)은 늘 해석을 붙인다(2026-11-03 사용자 "결과창에는 해석을 붙여줘") — callOver는 아래에서 정해져 여기선 같은 조건을 다시.
     const over = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
-    if (!showTranslations && !over) return;
+    // 통화 중 줄마다 해석은 자막 해석(showMeaning) 쪽이 맡는다 — 해석 켬 버튼이 없으니 옛 저장값(roleplayShowTranslations)은 읽지 않는다.
+    if (!over) return;
     for (const line of said) {
       if (line.who === "tutor" && !line.translation && line.text.trim()) translateLine(line.text);
     }
-  }, [showTranslations, state?.finished, instruction?.do, hungUp, said, translateLine]);
+  }, [state?.finished, instruction?.do, hungUp, said, translateLine]);
 
   const sayItBack = useCallback(
     async (target: string) => {
@@ -950,7 +957,9 @@ export function RoleplayScreen({
   // 통화 이름 · ⓘ 설명창(사용자 2026-11-14) — 처음 한 번 저절로(CallParts callInfoSeen).
   const [modeInfo, setModeInfo] = useState(() => (scenario?.openEnded ? !callInfoSeen() : false));
   const callOver = Boolean(state?.finished || instruction?.do === "finish" || hungUp);
-  const timeLine = useCallTimeLine(ui, isPremium, !callOver);
+  // 튜터 줄이 하나 늘 때마다(서버가 그 차례를 셈한 뒤) 남은 시간을 서버에 다시 묻는다.
+  const tutorTurns = said.reduce((n, line) => n + (line.who === "tutor" ? 1 : 0), 0);
+  const timeLine = useCallTimeLine(ui, isPremium, !callOver, tutorTurns);
   /** 중단: 내가 한 말이 없으면 남길 것도 없어 그냥 닫고, 있으면 마이크·소리를 멈추고 끝 화면으로(기록은 끝나지 않은 채 — 이어서 하기). */
   const hangUp = () => {
     if (!said.some((line) => line.who === "learner")) {
@@ -964,7 +973,7 @@ export function RoleplayScreen({
     audioRef.current?.pause();
     setHungUp(true);
   };
-  const { recap } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium);
+  const { recap } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium, openedAt.current);
   /**
    * 끝 화면을 닫을 때(✕·닫기) 전면 광고 한 번 — 통화가 끝까지 끝났고(중단 아님) 내가 한마디라도 했을 때만.
    * 포인트 없음·마이크 거부로 첫 차례에 끝난 통화(📞를 누르자마자)엔 없고, 끝 화면에 들어서자마자 뜨지 않아 call-end 네이티브와 겹치지 않는다.
@@ -1085,6 +1094,7 @@ export function RoleplayScreen({
             level={state?.difficulty.level ?? 2}
             isPremium={isPremium}
             gender={tutorGender}
+            justEnded
           />
         ) : null}
         <div className="px-4"><CallGrowthPairs ui={ui} language={scenario.language} locale={nativeLanguage} since={Math.floor(openedAt.current / 1000)} /></div>

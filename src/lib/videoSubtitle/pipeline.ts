@@ -5,14 +5,12 @@ import { getOpenAIClient } from "@/lib/server/openai";
 import { normalizeTranscript } from "@/lib/videoSubtitle/normalizeTranscript";
 import { sketchVideoContent } from "@/lib/videoSubtitle/sketchVideoContent";
 import { transcribeAudio } from "@/lib/videoSubtitle/transcribeAudio";
-import { translateSubtitleWindowPipeline } from "@/lib/videoSubtitle/translateSegments";
 import type {
   NormalizedSegment,
   PreparedTranscript,
   SttSegment,
   SttSource,
   SubtitleSegment,
-  TranslateWindowInput,
 } from "@/lib/videoSubtitle/types";
 import { parseYouTubeInput } from "@/lib/videoLearning";
 import { transcribeYouTubeCaptions } from "@/lib/videoSubtitle/youtubeCaptions";
