@@ -32,6 +32,7 @@
 - **지울 것 1:** `hub/app/FEATURES.md` "지울 것" — 아침 알림(`morningNotify.ts` — 되살릴지 사용자 결정 뒤).
 - **옛 앱 전용 서버·lib:** 최소 지원 버전을 2.81 이상으로 올리면 오늘 해볼 것 서버(`/api/learner/next`·`learner/next.ts`·`learner/practice.ts`, chat·turn의 practice 받기, 가상 사용자 `next` 묶음)도 지운다. 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용"과 그 서버만 쓰는 lib(`checkup.ts`·`recall.ts`·`stageScripts` 대본 쪽 등)를 지운다.
 - **My에서 찾기:** 문법·표현 열쇠가 없는 말은 사전 시트로 바뀜(2026-11-09) — 서버 `/api/notebook` locate가 고른 노트 칸(관용·세부)은 새 앱에서 안 씀. 옛 앱이 안 부르게 되면 locate 응답을 줄인다.
+- **퀴즈 사다리 남은 것:** 넣어 둔 40칸에 고르기 다른 모양(문맥·대답·틀린 문장) 재료(Cursor 에이전트), 틀린 곳 다양화("없음" 문항·헷갈리는 맞는 칸), 표현에 회차 없음, 13개 언어 문장 색인, 게이지 +2 위 단계 화면 확인 — 3번 인계 노트.
 - **퀴즈 다시 짜기 남은 것:** 앱 → `/api/curriculum/spots` 미리 만들기 연결(한 문장 새로 쓰기 칸), `qstat:v1` 한 달 쌓이면 사다리·게이지 값 고치기(Elo식 추정 여부) — 설계안 `hub/work/drafts/quiz-redesign-2026-11-10.md` §10.
 - **사전 예문 오류 고치기:** `hub/work/drafts/dict-errors-2026-11-10.txt`(ar 110 · fr 3) — word-sentences 고치고 `--check`.
 - **앱 언어별 짧은 뜻 미리 채우기:** 사전 예문은 14개 언어 다 채움(2026-11-10) — 짧은 뜻은 사용자 결정 대기(Haiku 묶음 API로 수십 달러 추정).
