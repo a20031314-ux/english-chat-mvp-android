@@ -102,7 +102,9 @@ export async function itemLesson(language: string, item: LessonItem, ui: string,
       });
     };
     lesson = (await once()) ?? (await once()) ?? (await once());
-    if (!lesson) {
+    // 새 지시(v3)로 못 만들면 예전에 만들어 둔 v2(운영 2026-11-26 — 열쇠를 올리며 저장분을 버리지 않게). 옮기기는 새 말투.
+    if (!lesson) lesson = await kvGetJson<FrameLesson>(`itemlesson:v2:${language}:${item.key}`).catch(() => null);
+    if (!lesson?.turns?.length) {
       await kvSetJson(failKey, Date.now(), FAIL_SECONDS).catch(() => undefined);
       return null;
     }

@@ -2,7 +2,7 @@ import type { AnalysisDimension } from "./types.ts";
 
 const DIMENSION_ROLE: Record<AnalysisDimension, string> = {
   syntax:
-    "Only THIS span's slot in THIS sentence (complements, auxiliary chain, what it attaches to). Do not define the word, conjugate it, or give extra examples.",
+    "Only what the learner must put with this span to use it themselves — what comes right after it (a person, a noun, a verb form) or the form it needs. Do not describe how it links to other parts of the sentence (and, commas, a second request). If there is nothing like that, reply SKIP. Do not define the word, conjugate it, or give extra examples.",
   usageInContext:
     "Only typical situations vs why this wording was chosen HERE. Do not recap inflection, word-origin, or a dictionary gloss.",
   phonology:
@@ -17,7 +17,7 @@ const DIMENSION_ROLE: Record<AnalysisDimension, string> = {
 
 const DIMENSION_ROLE_KO: Record<AnalysisDimension, string> = {
   syntax:
-    "이 문장 안에서 이 표현이 어디에 붙는지(보어, 조동사 연쇄)만 한국어로. 뜻을 풀거나 활용을 설명하거나 예문을 만들지 마세요.",
+    "이 표현을 직접 쓸 때 꼭 같이 붙여야 하는 것만(바로 뒤에 오는 사람·명사·동사 꼴, 필요한 형태) 한국어로. 문장의 다른 부분과 어떻게 이어지는지(and·쉼표·두 번째 부탁)는 쓰지 마세요. 그런 게 없으면 SKIP. 뜻을 풀거나 활용을 설명하거나 예문을 만들지 마세요.",
   usageInContext:
     "이런 말을 언제 쓰는지, 이 문장에서 왜 이 형태인지만 한국어로. 불규칙 활용이나 어원을 반복하지 마세요.",
   phonology:

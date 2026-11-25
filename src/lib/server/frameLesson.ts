@@ -87,6 +87,12 @@ export async function frameLesson(language: string, frame: Frame, ui: string, ui
   if (!lesson?.turns?.length) {
     onMake?.();
     lesson = await makeLesson(language, frame).catch(() => null);
+    // 새 지시(v6)로 못 만들면 예전에 만들어 둔 v5 — 3·4단계는 단계 거르기로 자주 비어 저장분으로 버텼다(운영 2026-11-26, 열쇠를 올리자 f3·f4가 빔). 옮기기는 새 말투.
+    if (!lesson) {
+      const old = await kvGetJson<FrameLesson>(`framelesson:v5:${language}:${frame.id}`).catch(() => null);
+      const fit = old?.turns?.length ? await stageFit(language, frame, old.turns) : [];
+      lesson = old && fit.length >= 2 ? { ...old, turns: fit } : null;
+    }
     if (!lesson) return null;
     await kvSetJson(key, lesson, TTL_SECONDS).catch(() => undefined);
   }
