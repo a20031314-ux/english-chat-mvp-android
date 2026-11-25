@@ -9,10 +9,12 @@
 
 없음
 
-## 탭이 확인할 것 (210)
+## 탭이 확인할 것 (211)
 
 ### 탭 1 메인
 
+- **a261126-watch-2** 🔧 고칠 것 (2026-11-26 07:24, 변경 감시) src/lib/server/stageCopy.ts:331 — translated()가 수업 설명뿐 아니라 낱말 뜻(wordDict·wordCards)·Quizbank 뜻/까닭·단계 이름표까지 옮기는데 설명용 지시(EXPLAIN_TONE: 빼기·구체화)가 모두에 붙어 뜻이 줄거나 덧붙을 수 있음, :t1 열쇠로 옮김 저장분이 14개 언어 한꺼번에 다시 만들어짐 (번역엔 말투만, 내용 덜기·구체화는 설명 줄 옮기는 frameLesson·itemLesson 호출에만 인자로)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261126-watch-2 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-63** 🔧 고칠 것 (2026-11-24 00:00, 변경 감시) src/lib/server/qbank.ts:406 — offerGrammar가 튜터 줄 문법 문항을 spotJudge(Sonnet) 판정 없이 공유 g| 묶음에 저장 — makeGrammar처럼 판정 통과만 저장
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-63 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-95** 🔧 고칠 것 (2026-11-24 00:00, 변경 감시) src/lib/server/staffGrant.ts:14 — STAFF_PREMIUM이 이메일·로그인 아이디도 받아, 아직 가입 안 한(또는 지운) 아이디로 누구나 가입하면 프리미엄 — 계정 id로만 묶거나 가입 때 그 아이디·이메일 막기
