@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic";
  *
  * 고르기 문제를 답한 뒤 보기마다 뜻(앱 언어 — 품사 + 뜻 한 줄)과, 틀린 보기면 이 자리에 왜 안 맞는지 한 줄
  * (2026-11-03 사용자 "정답·오답이 각각 무슨 뜻인지, 오답은 왜 오답인지가 안 떠"). 문제(문장·보기·정답·앱 언어)마다 한 번 만들어
- * 모두가 같이 쓴다(quiznotes:v7 — 틀린 보기는 그 말이 주로 언제 쓰이는지, 짧은 해요체 한 줄, 2026-11-26, 180일 — 학습자 자신의 줄로 만든 문제(mine)는 저장 안 함) — 문제은행 문장은 사용자끼리 같아서 대부분 저장된 것을 돌려준다. 학습자가 고른 보기·누가 물었는지는 남기지 않는다.
+ * 모두가 같이 쓴다(quiznotes:v8 — 틀린 보기는 그 말이 주로 언제 쓰이는지, 짧은 해요체 한 줄, 2026-11-26, 180일 — 학습자 자신의 줄로 만든 문제(mine)는 저장 안 함) — 문제은행 문장은 사용자끼리 같아서 대부분 저장된 것을 돌려준다. 학습자가 고른 보기·누가 물었는지는 남기지 않는다.
  * 기능은 vocab(Haiku) — 단가는 op quizOptionNotes.
  */
 const TTL = 180 * 24 * 60 * 60;
@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
   if (!language || !sentence || options.length < 2 || answer < 0 || answer >= options.length) {
     return jsonWithCors(request, { error: "bad input" }, { status: 400 });
   }
-  const key = `quiznotes:v7:f:${createHash("sha256").update(JSON.stringify([language, ui, sentence, options, answer])).digest("hex").slice(0, 32)}`;
+  const key = `quiznotes:v8:f:${createHash("sha256").update(JSON.stringify([language, ui, sentence, options, answer])).digest("hex").slice(0, 32)}`;
   const cached = mine ? null : await kvGetJson<Note[]>(key).catch(() => null);
   if (cached?.length === options.length) return jsonWithCors(request, { notes: cached, cached: true });
 
@@ -79,10 +79,14 @@ Quote ${target} words with single quotes ('like this'), never with double quotes
   }
   // 앱 언어 글자가 따로 있는 언어(ar·ja·ko·zh·th·hi·ru)인데 뜻이 그 글자로 안 쓰였으면 한 번 더(운영 2026-11-03 es→ar 뜻이 스페인어로 옴).
   const script = UI_SCRIPT[ui];
-  if (script && notes.length && notes.some((one, i) => (one.meaning && !script.test(one.meaning)) || (i !== answer && one.why && !script.test(one.why)))) {
+  // 따옴표·괄호 안(학습 언어 인용·뜻 괄호)은 빼고 본다 — 영어 까닭에 괄호 속 한국어 뜻만 있어도 통과하던 일(운영 2026-11-26).
+  const bare = (line: string) => line.replace(/'[^']*'|‘[^’]*’|「[^」]*」|\([^)]*\)|\[[^\]]*\]/gu, "");
+  if (script && notes.length && notes.some((one, i) => (one.meaning && !script.test(one.meaning)) || (i !== answer && one.why && !script.test(bare(one.why))))) {
     await meterRequest(request, "quizOptionNotes");
     const again = parseNotes((await ask(true))?.choices[0]?.message?.content ?? "");
-    if (again.length && again.every((one, i) => (!one.meaning || script.test(one.meaning)) && (i === answer || !one.why || script.test(one.why)))) notes = again;
+    if (again.length && again.every((one, i) => (!one.meaning || script.test(one.meaning)) && (i === answer || !one.why || script.test(bare(one.why))))) notes = again;
+    // 다시 물어도 앱 언어가 아니면 저장하지 않고 빈 답(다음에 다시 만듦) — 다른 말 설명을 180일 돌려주지 않게.
+    else return jsonWithCors(request, { notes: [] });
   }
   // 빈 답이면 점검 사용자(simcheck-)에게만 모델 답을 보인다 — 왜 비었는지 보려고.
   if (notes.length !== options.length || notes.every((one, i) => !one.meaning && (i === answer || !one.why))) return jsonWithCors(request, { notes: [], ...simDetail(request, `${parseError} len=${firstRaw.length} n=${notes.length} ${firstRaw.slice(0, 120)}`) });
