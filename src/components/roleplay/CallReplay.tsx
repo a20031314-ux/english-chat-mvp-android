@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { AiAvatar } from "@/components/AiTutorProfile";
-import { Attempt } from "@/components/speech/Attempt";
+import { RightWithChanges, SaidWithMistakes } from "@/components/RoleplayReview";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { maybeShowInterstitial } from "@/lib/ads";
@@ -14,7 +14,8 @@ import type { UICopy } from "@/lib/copy";
 import { coerceLanguageCode, learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import type { QuizQuestion } from "@/lib/curriculum/quiz";
 import { homeworkQuiz, sceneAfterQuiz } from "@/lib/roleplay/homeworkQuiz";
-import { compareToTarget } from "@/lib/roleplay/practice";
+import { fetchPractice } from "@/lib/roleplay/listen";
+import { justTalkId } from "@/lib/roleplay/justTalk";
 import {
   blanked,
   freshPieces,
@@ -424,7 +425,8 @@ function ReplayPlayer({
   const voice = tutorVoice(language, partner.gender);
   const whole = wholeLineOf(scene);
   const [step, setStep] = useState<Step>({ at: 0 });
-  const [answers, setAnswers] = useState<Record<string, { heard: string; ok: boolean; typed: boolean }>>({});
+  // note: 맞지 않은 줄의 까닭 한 줄(앱 언어, practice 판단 — 사용자 2026-11-26 "어떤 부분이 틀리고 어색한지 불분명, 설명도 없고"). null = 받는 중.
+  const [answers, setAnswers] = useState<Record<string, ReplayAnswer>>({});
   const [listening, setListening] = useState(false);
   const [typing, setTyping] = useState(false);
   const [draft, setDraft] = useState("");
@@ -461,8 +463,34 @@ function ReplayPlayer({
   const judge = (heard: string, typed: boolean) => {
     if (!target) return;
     const ok = step.at === "whole" || !target.piece ? wholeSaid(target.text, heard, typed) : typed ? wholeSaid(target.text, fillTyped(target, heard), true) : pieceSaid(target.piece, heard);
-    setAnswers((current) => ({ ...current, [answerKey]: { heard: typed && target.piece && step.at !== "whole" ? fillTyped(target, heard) : heard, ok, typed } }));
+    const said = typed && target.piece && step.at !== "whole" ? fillTyped(target, heard) : heard;
+    const key = answerKey;
+    setAnswers((current) => ({ ...current, [key]: { heard: said, ok, typed, ...(ok ? {} : { note: null }) } }));
     void playTts(target.text, tag, voice);
+    if (ok) return;
+    // 틀린 줄은 무엇이 다른지·왜를 한 줄로(앱 언어). 판단이 "괜찮음"이면 ✓로 바꾼다(받아쓰기 탓·같은 뜻 다른 꼴).
+    // 뜻(앱 언어)·바로 앞 튜터 말과 함께 — 맞음 / 맞지만 어색함(통과, 더 자연스러운 말) / 틀림(문법·뜻)으로(practice.ts ownWordsPrompt).
+    const at = step.at === "whole" ? scene.lines.indexOf(target) : index;
+    const before = [...scene.lines.slice(0, Math.max(0, at))].reverse().find((one) => one.who === "tutor")?.text ?? "";
+    void fetchPractice({ scenarioId: justTalkId(code), target: target.text, heard: said, nativeLanguage: locale, isPremium, typed, meaning: target.meaning, before })
+      .then((practice) =>
+        setAnswers((current) => {
+          const row = current[key];
+          if (!row) return current;
+          const better = practice?.better?.trim() ?? "";
+          return {
+            ...current,
+            [key]: {
+              ...row,
+              ok: Boolean(practice?.good),
+              note: practice?.note ?? "",
+              ...(practice?.verdict ? { verdict: practice.verdict } : {}),
+              ...(better ? { better } : {}),
+            },
+          };
+        }),
+      )
+      .catch(() => setAnswers((current) => (current[key] ? { ...current, [key]: { ...current[key]!, note: "" } } : current)));
   };
 
   const speak = async () => {
@@ -516,10 +544,7 @@ function ReplayPlayer({
               {hide ? (
                 <p className="mt-1 text-chat text-slate-500">…</p>
               ) : done ? (
-                <>
-                  <p dir="auto" className={`mt-1 text-chat ${done.ok ? "text-emerald-300" : "text-amber-200"}`}>{done.ok ? "✓ " : ""}{one.text}</p>
-                  {!done.ok ? <Attempt outcomes={compareToTarget(one.text, done.heard).outcomes} ui={ui} typed={done.typed} /> : null}
-                </>
+                <AnswerView ui={ui} target={one.text} answer={done} />
               ) : (
                 <p dir="auto" className="mt-1 text-chat text-white">{blanked(one) ?? "…"}</p>
               )}
@@ -530,12 +555,7 @@ function ReplayPlayer({
           <li className="rounded-2xl border border-white/30 px-3 py-2" data-replay-whole>
             <p className="text-meta font-semibold text-slate-200">{ui.replayWhole}</p>
             <p className="mt-1 text-chat text-slate-200">{whole.meaning}</p>
-            {answer ? (
-              <>
-                <p dir="auto" className={`mt-1 text-chat ${answer.ok ? "text-emerald-300" : "text-amber-200"}`}>{answer.ok ? "✓ " : ""}{whole.text}</p>
-                {!answer.ok ? <Attempt outcomes={compareToTarget(whole.text, answer.heard).outcomes} ui={ui} typed={answer.typed} /> : null}
-              </>
-            ) : null}
+            {answer ? <AnswerView ui={ui} target={whole.text} answer={answer} /> : null}
           </li>
         ) : null}
         {step.at === "end" ? (
@@ -607,6 +627,64 @@ function ReplayPlayer({
         ) : null}
       </div>
     </FullScreenLayer>
+  );
+}
+
+type ReplayAnswer = {
+  heard: string;
+  ok: boolean;
+  typed: boolean;
+  /** 까닭 한 줄(앱 언어). null = 받는 중, "" = 없음. */
+  note?: string | null;
+  verdict?: "natural" | "awkward" | "wrong";
+  /** 내 말을 고친(더 자연스러운) 한 줄 — 대본 줄과 다를 때 보인다. */
+  better?: string;
+};
+
+/**
+ * 말한(쓴) 줄의 결과(사용자 2026-11-26 "어떤 부분이 틀리고 어색한지 불분명, 설명도 없고"):
+ * 대본 그대로면 ✓. 아니면 판단(뜻·앞 튜터 말과 함께)을 받아 — 맞음/어색함이면 ✓ 내 말 + (어색함이면 💡 더 자연스러운 말),
+ * 틀림이면 ① 바른 문장(놓친·바뀐 곳만 초록 굵게) ② 내가 한 말(틀린 낱말 빨간 취소선·빠진 자리 ‸ — 통화 고친 말과 같은 모양, 연결 correction-view)
+ * ③ 까닭 한 줄(앱 언어). 괄호로 엇갈린 낱말 맞추기는 안 씀.
+ */
+function AnswerView({ ui, target, answer }: { ui: UICopy; target: string; answer: ReplayAnswer }) {
+  const note =
+    answer.note === null ? (
+      <p aria-hidden className="mt-2 text-meta text-slate-500">…</p>
+    ) : answer.note ? (
+      <p className="mt-2 text-meta leading-relaxed text-slate-200" data-replay-note>{answer.note}</p>
+    ) : null;
+  if (answer.ok) {
+    const own = answer.verdict && answer.heard.trim() ? answer.heard : target;
+    return (
+      <>
+        <p dir="auto" className="mt-1 text-chat text-emerald-300">✓ {own}</p>
+        {answer.verdict === "awkward" && answer.better ? (
+          <p dir="auto" className="mt-1 text-note text-slate-200" title={ui.chatNaturalChip}>
+            <span aria-label={ui.chatNaturalChip}>💡 </span>
+            <RightWithChanges said={answer.heard} right={answer.better} />
+          </p>
+        ) : null}
+        {own !== target ? <p dir="auto" className="mt-1 text-meta text-slate-500">{target}</p> : null}
+        {note}
+      </>
+    );
+  }
+  // 고친 말이 대본 줄과 다르면(내 말에 더 가까운 바른 꼴) 그걸 바른 문장으로.
+  const right = answer.better && answer.verdict === "wrong" ? answer.better : target;
+  return (
+    <>
+      <p dir="auto" className="mt-1 text-chat text-slate-100" data-replay-right>
+        <RightWithChanges said={answer.heard} right={right} />
+      </p>
+      <div className="mt-2 rounded-xl bg-white/5 p-3" data-replay-said>
+        <p className="text-meta text-slate-500">{answer.typed ? ui.reviewMySentence : ui.roleplayPracticeHeard}</p>
+        <p className="mt-1 text-chat text-slate-200">
+          <SaidWithMistakes said={answer.heard} right={right} />
+        </p>
+      </div>
+      {note}
+    </>
   );
 }
 

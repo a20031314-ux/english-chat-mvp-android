@@ -188,6 +188,8 @@ export function QuizPlayer({
             onNext={() => setIndex((n) => n + 1)}
             bankKey={bundleKeys?.[index] ?? quizKey}
             glossFirst={glossFirst}
+            // 숙제 퀴즈: 맞혀도 저절로 넘기지 않는다 — 답·코치 한마디(왜)를 보고 "다음"(사용자 2026-11-26 "맞히면 그냥 바로 넘어가버려").
+            autoAdvance={false}
           />
         ) : null}
         {done && questions.length ? (
