@@ -4,6 +4,7 @@
  * 누가 처음 열 때 응답 뒤(next/server after)에 만들고, 그동안은 예전 짧은 설명(itemLesson). 실패 3번이면 건너뜀.
  * 학습자 글은 받지 않는다. 멈추기: Vercel `FIXED_LESSON_MAKE=off`(고정 수업과 같은 스위치).
  */
+import { EXPLAIN_TONE } from "../explainTone.ts";
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
@@ -37,7 +38,7 @@ function prompt(language: string, ui: string, item: Item): { system: string; use
   const uiName = INTERFACE_LANGUAGE_LABELS[ui] ?? ui;
   const system = `You write one fixed grammar page for a language-learning app: one ${lang} grammar point, taught to a speaker of ${uiName}. It is stored and shown to every such learner, so it must be correct, concrete and useful.
 
-Write every explanation in natural ${uiName} (short, plain, friendly; grammar words only when unavoidable). Every ${lang} word or sentence is written in ${lang}.
+Write every explanation in natural ${uiName} (short, plain, friendly; grammar words only when unavoidable). ${EXPLAIN_TONE} Every ${lang} word or sentence is written in ${lang}.
 
 Parts:
 - name: the grammar point's name in ${uiName}, short (like a textbook heading).

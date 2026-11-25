@@ -86,7 +86,7 @@
     "ask": "뜻에 맞는 영어 문장을 고르세요.",
     "gloss": "좋아! 역에서 봐.",
     "answer": "Sounds good! See you at the station.",
-    "why": "역에서 만나자는 말은 Sounds good! See you at the station처럼 station 앞에 at the가 와요.",
+    "why": "역에서 만나자는 말은 'Sounds good! See you at ___'로 말해요.",
     "options": [
       "Sounds good! See you at station.",
       "Sounds good! Seeing you at the station.",
@@ -102,7 +102,7 @@
     "ask": "뜻에 맞는 영어 문장을 고르세요.",
     "gloss": "라떼 하나 주세요.",
     "answer": "Can I get a latte, please?",
-    "why": "음료 하나를 부탁할 때는 Can I get a latte, please처럼 can 뒤에 동사 원형과 a가 와요.",
+    "why": "음료 하나를 부탁할 때는 'Can I get a ___, please?'로 말해요.",
     "options": [
       "Can I get a latte, please?",
       "Can I get latte, please?",
@@ -118,7 +118,7 @@
     "ask": "뜻에 맞는 영어 문장을 고르세요.",
     "gloss": "라지로 바꿔도 될까요?",
     "answer": "Can I change it to a large?",
-    "why": "크기를 바꿔 달라는 말은 Can I change it to a large처럼 large 앞에 a가 와요.",
+    "why": "크기를 바꿔 달라는 말은 'Can I change it to ___?'로 말해요.",
     "options": [
       "Can I change it to large?",
       "Can I changed it to a large?",
@@ -134,7 +134,7 @@
     "ask": "뜻에 맞는 영어 문장을 고르세요.",
     "gloss": "실례합니다, 제 키가 작동하지 않아요.",
     "answer": "Excuse me, my key isn't working.",
-    "why": "지금 안 된다는 말은 Excuse me, my key isn't working처럼 isn't 뒤에 working을 써요.",
+    "why": "지금 안 된다는 말은 'Excuse me, my ___ isn't working'로 말해요.",
     "options": [
       "Excuse me, key isn't working.",
       "Excuse me, my key isn't working.",
@@ -150,7 +150,7 @@
     "ask": "뜻에 맞는 영어 문장을 고르세요.",
     "gloss": "헬스장에 얼마나 자주 가?",
     "answer": "How often do you go to the gym?",
-    "why": "얼마나 자주인지는 How often do you go to the gym처럼 do 뒤에 동사 원형 go가 오고 gym 앞에 the가 와요.",
+    "why": "얼마나 자주인지는 'How often do you ___?'로 말해요.",
     "options": [
       "How often do you go to gym?",
       "How often do you goes to the gym?",
@@ -166,7 +166,7 @@
     "ask": "뜻에 맞는 영어 문장을 고르세요.",
     "gloss": "주말에는 보통 쉬어요.",
     "answer": "I usually relax on weekends.",
-    "why": "주말 습관이라서 I usually relax on weekends처럼 usually 뒤에 동사 원형 relax가 와요.",
+    "why": "주말 습관이라서 'I usually ___ on weekends'로 말해요.",
     "options": [
       "I usually relax on weekends.",
       "I usually relaxing on weekends.",

@@ -1,3 +1,4 @@
+import { EXPLAIN_TONE } from "@/lib/explainTone";
 import { completeChat, routeFor, simErrorDetail } from "@/lib/server/llm";
 import { chatBonusToday } from "@/lib/server/adChat";
 import { takeAiHelp } from "@/lib/server/aiHelp";
@@ -189,7 +190,7 @@ function englishCorrectionPolicy(
 - corrected: fully corrected English (fix grammar/wording mistakes; keep meaning).
 - natural: how a native speaker would most naturally say the same thing in this conversation — also when the user's message is already correct. Make it DIFFERENT from corrected only when a native would clearly say it another way (a more idiomatic phrase, a cleaner structure, a word that fits better, the usual spoken form). Swapping in a synonym that is no better is not an alternative. If corrected is already how a native would say it, repeat corrected.
 - naturalNote: only when natural differs from corrected — ONE short sentence in ${explanationLanguage} on what makes natural sound more natural (name the phrase). Otherwise "".
-- explanation: 1–2 short sentences in ${explanationLanguage} explaining WHAT was wrong and why (point to the mistaken word/pattern). Do not include a label like "설명" / "Explanation".
+- explanation: 1–2 short sentences in ${explanationLanguage} explaining WHAT was wrong and why (point to the mistaken word/pattern). Do not include a label like "설명" / "Explanation". ${EXPLAIN_TONE}
 - If corrected differs from the user's message (even slightly), explanation MUST be non-empty.
 - Only if the user's message needs no change at all, set explanation to "".
 - Do NOT treat contractions vs full forms as errors (I'm = I am, don't = do not, it's = it is, etc.). Prefer keeping the user's contraction style in corrected unless there is a real grammar mistake.
@@ -233,7 +234,7 @@ function detailedTargetCorrectionPolicy(
 - corrected: fully corrected ${targetName}. Fix REAL mistakes — agreement, conjugation/inflection, particles/case markers, function words, word order that breaks the language, wrong tense/aspect/mood, wrong politeness form when the form is ungrammatical for the intended move, wrong collocation that sounds broken.
 - natural: how a native speaker would most naturally say the same thing in this conversation — also when the user's message is already correct. Make it DIFFERENT from corrected only when a native would clearly say it another way (a more idiomatic phrase, a cleaner structure, a word that fits better, the usual spoken form). Swapping in a synonym that is no better is not an alternative. If corrected is already how a native would say it, repeat corrected.
 - naturalNote: only when natural differs from corrected — ONE short sentence in ${explanationLanguage} on what makes natural sound more natural (name the phrase). Otherwise "".
-- explanation: 1–2 short sentences in ${explanationLanguage} explaining WHAT was wrong and why (point to the mistaken word/pattern). Do not include a label like "설명" / "Explanation".
+- explanation: 1–2 short sentences in ${explanationLanguage} explaining WHAT was wrong and why (point to the mistaken word/pattern). Do not include a label like "설명" / "Explanation". ${EXPLAIN_TONE}
 - If corrected differs from the user's message (even slightly), explanation MUST be non-empty.
 - Only if the user's message needs no change at all, set explanation to "".
 

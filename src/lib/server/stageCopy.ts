@@ -3,6 +3,7 @@
  * 다른 앱 언어는 처음 한 번 모델이 옮겨 저장한다(학습 언어 × 데이터 버전 × 앱 언어마다 한 번, 사람마다가 아님).
  * 옮기다 실패하면 영어로 보인다 — 화면이 비지 않게.
  */
+import { EXPLAIN_TONE_VERSION, TRANSLATE_TONE } from "../explainTone.ts";
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
@@ -172,8 +173,10 @@ export function lastCopyFailure(): string {
 /** 영어 글 묶음을 앱 언어로(저장해 두고 다시 씀). 실패하면 null. */
 export async function translated(source: string[], ui: string, uiName: string, cacheKey: string, onTranslate?: () => void, strict = false): Promise<string[] | null> {
   lastFailure = "";
+  // 말투 규칙(explainTone.ts)이 바뀌면 옮긴 글도 새로(옛 합니다체 글을 돌려주지 않게).
+  const toneKey = `${cacheKey}:t${EXPLAIN_TONE_VERSION}`;
   try {
-    const kept = await kvGetJson<string[]>(cacheKey);
+    const kept = await kvGetJson<string[]>(toneKey);
     if (Array.isArray(kept) && kept.length === source.length) return kept;
   } catch {
     // 저장소가 안 되면 아래에서 옮긴다.
@@ -192,7 +195,7 @@ export async function translated(source: string[], ui: string, uiName: string, c
         messages: [
           {
             role: "system",
-            content: `Translate each numbered line from English into ${uiName}. They are labels and glosses on a language-learning app screen read by a ${uiName} speaker, so every translation must be written in ${uiName} — never in the language being studied, even when a line is about that language. Keep the meaning plain and natural, the same length or shorter; leave words in quotes, grammar terms written in another language (like "ser" or "-ar"), and anything already in another script as they are.${strict ? " Translate every English word; no English word may be left in the translation unless it is inside quotes." : ""} Answer with exactly ${part.length} lines in the same order, each as <number>|<translation>, and nothing else.`,
+            content: `Translate each numbered line from English into ${uiName}. They are labels and glosses on a language-learning app screen read by a ${uiName} speaker, so every translation must be written in ${uiName} — never in the language being studied, even when a line is about that language. Keep the meaning plain and natural, the same length or shorter. ${TRANSLATE_TONE} leave words in quotes, grammar terms written in another language (like "ser" or "-ar"), and anything already in another script as they are.${strict ? " Translate every English word; no English word may be left in the translation unless it is inside quotes." : ""} Answer with exactly ${part.length} lines in the same order, each as <number>|<translation>, and nothing else.`,
           },
           { role: "user", content: part.map((text, index) => `${index + 1}|${text.replace(/\s+/g, " ")}`).join("\n") },
         ],
@@ -215,7 +218,7 @@ export async function translated(source: string[], ui: string, uiName: string, c
       }
       out.push(...texts);
     }
-    await kvSetJson(cacheKey, out, TTL_SECONDS).catch(() => undefined);
+    await kvSetJson(toneKey, out, TTL_SECONDS).catch(() => undefined);
     return out;
   } catch (error) {
     lastFailure = String((error as Error)?.message ?? error).slice(0, 200);

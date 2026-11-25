@@ -6,6 +6,7 @@
  * Word-tab dictionary lookup stays on the existing vocab path.
  */
 
+import { EXPLAIN_TONE } from "../explainTone.ts";
 import {
   explanationLanguageGuard,
   interfaceLanguageDisplayName,
@@ -189,6 +190,7 @@ This is the sentence-analysis tab after the learner highlighted a range and tapp
 They chose the span. Do not pick a different span. Do not analyze every word in the sentence.
 
 Write learner-facing text in ${explanationName}.
+${EXPLAIN_TONE}
 ${guard}
 The learner's native language is ${nativeName}. Contrast with it only when it clarifies, and still write that contrast in ${explanationName}.
 ${levelHint(input.learnerLevel)}
@@ -209,7 +211,7 @@ ONLY what THIS selected span means in THIS sentence. One short natural line. Not
 
 2) Language-profile sections
 Fill ONLY these keys. Other analysis axes are off for ${languageName} — do not invent them.
-Each section is 1–3 short sentences that THAT section alone owns. If nothing unique belongs there, set the value to SKIP.
+Each section is 1–2 short sentences that THAT section alone owns — only what helps the learner use this span; if a section would only describe sentence structure the learner can already see, set it to SKIP. If nothing unique belongs there, set the value to SKIP.
 Do not repeat the same fact in two sections. meaningInContext is the gloss; sections are the analysis.
 
 Active sections (do not repeat their facts across keys): ${siblings}.

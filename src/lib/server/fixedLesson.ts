@@ -11,6 +11,7 @@
  *     · 그 밖의 앱 언어는 누가 처음 열 때 뒤에서 만든다(그동안은 예전 수업)
  * 학습자 글은 받지 않는다. 멈추기: Vercel `FIXED_LESSON_SEED=off`(미리 만들기만) · `FIXED_LESSON_MAKE=off`(새로 만들기 전부).
  */
+import { EXPLAIN_TONE } from "../explainTone.ts";
 import { kvGetJson, kvGetJsonMany, kvHashGetAll, kvHashIncrMany, kvSetJson } from "./kv.ts";
 import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
@@ -45,7 +46,7 @@ function prompt(language: string, ui: string, frame: Frame): { system: string; u
   const uiName = INTERFACE_LANGUAGE_LABELS[ui] ?? ui;
   const system = `You write one fixed lesson for a language-learning app: one ${lang} sentence pattern, taught to a speaker of ${uiName}. The lesson is stored and shown to every such learner, so it must be correct, concrete and useful.
 
-Write every explanation in natural ${uiName} (short, plain, friendly, no jargon unless unavoidable). Every sentence the learner says or reads in ${lang} is written in ${lang}.
+Write every explanation in natural ${uiName} (short, plain, friendly, no jargon unless unavoidable). ${EXPLAIN_TONE} Every sentence the learner says or reads in ${lang} is written in ${lang}.
 
 The lesson has these parts:
 - meaning: what the pattern lets you say, as the natural ${uiName} equivalent with ___ for the slot, plus a few words of when.

@@ -1,3 +1,4 @@
+import { EXPLAIN_TONE } from "@/lib/explainTone";
 import { createHash } from "node:crypto";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -59,7 +60,7 @@ export async function POST(request: NextRequest) {
   · If it is a broken form: say which word is wrong and what goes there instead, in the same sentence.
   Write it as a single sentence.
   Read the option together with the words right before and after the blank first. One point only, no "because … therefore", no grammar jargon a learner would not know. If it would actually also be correct here, say so plainly.
-Tone: casual-polite and warm, never formal or textbook-like. In Korean use 해요체 endings (…예요, …해요, …없어요), never 합니다체 or "…므로"; in Japanese use short です/ます; in other languages the everyday polite register.
+${EXPLAIN_TONE}
 Quote ${target} words with single quotes ('like this'), never with double quotes. Both "meaning" and "why" are written in ${native} — never in ${target} — quoting ${target} words only where needed. Number the options as given (1, 2, 3, …). Reply with JSON only, flat keys, one pair per option: {"real_1":true,"meaning_1":"…","why_1":"…","real_2":false,"meaning_2":"","why_2":"…", …}.`,
       },
       ...(strict ? [{ role: "system" as const, content: `The last answer used the wrong language. Every "meaning" and "why" must be in ${native}.` }] : []),

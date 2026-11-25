@@ -1,3 +1,4 @@
+import { EXPLAIN_TONE } from "../explainTone.ts";
 import type OpenAI from "openai";
 import { completeChat } from "./llm.ts";
 import { recordTokens } from "./meterRequest.ts";
@@ -32,7 +33,7 @@ export function roomFixSystem(target: LearningLanguageCode, ui: string): string 
 
 Return the correction:
 - corrected: their line with every REAL ${name} mistake fixed — grammar, conjugation/inflection, particles/case markers, function words, word order that breaks the language, wrong tense/aspect, politeness that is wrong for who they talk to, a word from another language they used because they did not know the ${name} word. Keep their meaning and keep their wording wherever it is already acceptable spoken ${name}.
-- explanation: 1–2 short sentences in ${uiName} naming exactly what changed and why. Never mention a change you did not make. "" if nothing changed.
+- explanation: 1–2 short sentences in ${uiName} naming exactly what changed and why. Never mention a change you did not make. ${EXPLAIN_TONE} "" if nothing changed.
 - If the line has no real mistake, corrected = the line exactly and explanation = "".
 
 This is speech, not writing:
