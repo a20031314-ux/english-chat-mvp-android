@@ -150,7 +150,7 @@
 ### My 탭 — 계정 카드·칸 셋 Logbank·Quizbank·Languagebank·첫 측정·소재 수업 `my`
 - 화면: `notes/NotebookSection` · `studyMap/BankFlip` · `studyMap/DictNotes` · `studyMap/Dictionary` · `studyMap/ExpressionCard` · `studyMap/FirstCheck` · `studyMap/FixedExplain` · `studyMap/FrameLesson` · `studyMap/GrammarExplain` · `studyMap/Growth` · `studyMap/InlineQuiz` · `studyMap/LanguageBank` · `studyMap/LessonHost` · `studyMap/LineParts` · `studyMap/Logbank` · `studyMap/QuizPlayer` · `studyMap/Quizbank` · `studyMap/ScriptPractice` · `studyMap/StudyChips` · `studyMap/StudyMapTab` · `studyMap/TodayCards` · `studyMap/bankTone`
 - API: `curriculum/ask` · `curriculum/fixed-lesson` · `curriculum/frame-lesson` · `curriculum/item-lesson` · `curriculum/option-notes` · `curriculum/qbank`(AI 통화) · `curriculum/quiz-stats` · `curriculum/recall` · `curriculum`(AI 통화) · `curriculum/script` · `curriculum/scripts`(AI 통화) · `curriculum/spots` · `curriculum/stages` · `curriculum/typed-check` · `curriculum/words` · `notebook`(문장분석·표현 시트)
-- 다른 영역이 씀: `studyMap/DictNotes` ← AI 채팅, 영상 학습 탭 · `studyMap/Dictionary` ← 문장분석·표현 시트 · `studyMap/Growth` ← AI 통화 · `studyMap/LessonHost` ← 앱 틀 · `studyMap/QuizPlayer` ← AI 통화 · `studyMap/StudyChips` ← AI 채팅, AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
+- 다른 영역이 씀: `studyMap/DictNotes` ← AI 채팅, 영상 학습 탭 · `studyMap/Dictionary` ← 문장분석·표현 시트 · `studyMap/Growth` ← AI 통화 · `studyMap/LessonHost` ← 앱 틀 · `studyMap/LineParts` ← AI 통화 · `studyMap/QuizPlayer` ← AI 통화 · `studyMap/StudyChips` ← AI 채팅, AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
 
 ### 계정·로그인 `account`
 - 화면: `account/AccountCard` · `account/ProfileFacts`
