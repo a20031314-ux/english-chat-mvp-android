@@ -85,9 +85,17 @@ Quote ${target} words with single quotes ('like this'), never with double quotes
   if (script && notes.length && notes.some((one, i) => (one.meaning && !script.test(one.meaning)) || (i !== answer && one.why && !script.test(bare(one.why))))) {
     await meterRequest(request, "quizOptionNotes");
     const again = parseNotes((await ask(true))?.choices[0]?.message?.content ?? "");
-    if (again.length && again.every((one, i) => (!one.meaning || script.test(one.meaning)) && (i === answer || !one.why || script.test(bare(one.why))))) notes = again;
-    // 다시 물어도 앱 언어가 아니면 저장하지 않고 빈 답(다음에 다시 만듦) — 다른 말 설명을 180일 돌려주지 않게.
-    else return jsonWithCors(request, { notes: [] });
+    // 다시 물은 답에서 앱 언어인 칸만 남긴다 — 한 칸만 걸려도 통째로 비우던 것(아랍어 앱에서 보기 설명이 아예 안 뜸, 체감 점검 2026-11-27 Layla 012·015).
+    const pick = again.length === options.length ? again : notes;
+    const keep = pick.map((one, i) => ({
+      meaning: one.meaning && script.test(one.meaning) ? one.meaning : "",
+      why: i !== answer && one.why && script.test(bare(one.why)) ? one.why : "",
+    }));
+    const clean = keep.every((one, i) => one.meaning === pick[i]!.meaning && one.why === pick[i]!.why);
+    if (keep.every((one) => !one.meaning && !one.why)) return jsonWithCors(request, { notes: [], ...simDetail(request, `ui-script ${JSON.stringify(pick).slice(0, 300)}`) });
+    // 빠진 칸이 있으면 저장하지 않는다(다음에 다시 만듦) — 다른 말 설명을 180일 돌려주지 않게.
+    if (!clean) return jsonWithCors(request, { notes: keep });
+    notes = keep;
   }
   // 빈 답이면 점검 사용자(simcheck-)에게만 모델 답을 보인다 — 왜 비었는지 보려고.
   if (notes.length !== options.length || notes.every((one, i) => !one.meaning && (i === answer || !one.why))) return jsonWithCors(request, { notes: [], ...simDetail(request, `${parseError} len=${firstRaw.length} n=${notes.length} ${firstRaw.slice(0, 120)}`) });
