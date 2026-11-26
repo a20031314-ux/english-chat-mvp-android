@@ -2,7 +2,7 @@
 #
 # - main push: npm run quiz:map으로 다시 만들고, 바뀌었으면 커밋(허브만 바뀐 커밋이라 Vercel은 다시 배포하지 않음).
 # - 그 밖의 push·PR: 만들어지는지만 본다(실패 = 스크립트가 코드와 어긋남).
-# 키·네트워크가 필요 없다.
+# 키가 필요 없다(npm 의존성만 받는다).
 name: quiz-map
 
 on:
@@ -27,6 +27,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+      # 퀴즈 코드가 apiBase.ts(@capacitor/core)까지 불러오므로 의존성을 먼저 깐다.
+      - name: 의존성 설치
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: 문제 지도 다시 만들기
         run: npm run quiz:map
       - name: main이면 hub/app/QUIZ-MAP.md 커밋
