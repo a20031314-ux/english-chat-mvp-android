@@ -24,7 +24,7 @@ concurrency: store-screenshots
 
 jobs:
   shots:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Playwright가 ubuntu 26.04용 chromium을 아직 못 깖(2026-11-27)
     steps:
       - uses: actions/checkout@v4
         with:
