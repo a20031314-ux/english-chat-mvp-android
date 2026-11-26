@@ -94,7 +94,7 @@ Quote ${target} words with single quotes ('like this'), never with double quotes
     const clean = keep.every((one, i) => one.meaning === pick[i]!.meaning && one.why === pick[i]!.why);
     if (keep.every((one) => !one.meaning && !one.why)) return jsonWithCors(request, { notes: [], ...simDetail(request, `ui-script ${JSON.stringify(pick).slice(0, 300)}`) });
     // 빠진 칸이 있으면 저장하지 않는다(다음에 다시 만듦) — 다른 말 설명을 180일 돌려주지 않게.
-    if (!clean) return jsonWithCors(request, { notes: keep });
+    if (!clean) return jsonWithCors(request, { notes: keep, ...simDetail(request, `ui-script ${JSON.stringify(pick.map((one) => one.why)).slice(0, 400)}`) });
     notes = keep;
   }
   // 빈 답이면 점검 사용자(simcheck-)에게만 모델 답을 보인다 — 왜 비었는지 보려고.
