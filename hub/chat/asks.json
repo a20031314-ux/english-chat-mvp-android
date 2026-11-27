@@ -12554,6 +12554,34 @@
       "base": "6914c578b5944d1df28483ae5a572071ea2be423",
       "head": "6914c57",
       "status": "open"
+    },
+    {
+      "id": "a261128-watch-1",
+      "at": "2026-11-28 07:25",
+      "kind": "fix",
+      "from": "watch",
+      "to": "2",
+      "severity": "minor",
+      "what": "src/components/studyMap/QuizPlayer.tsx:1158 — 대화 채우기(TalkView) open 채점이라 소재 낱말·표현을 안 쓰고 대화에 맞는 다른 말만 쳐도 그 소재를 맞힌 것으로 셈(TypeView는 'also'면 다시 치게 함), 머리 주석 'open 다시 보기는 안 함'도 틀림 (also이고 소재가 w|면 TypeView처럼 다시 치게 하거나 소재 학습으로 안 셈, 주석 고침)",
+      "files": [
+        "src/components/studyMap/QuizPlayer.tsx"
+      ],
+      "head": "fb1e0a93",
+      "status": "open"
+    },
+    {
+      "id": "a261128-watch-2",
+      "at": "2026-11-28 07:25",
+      "kind": "fix",
+      "from": "watch",
+      "to": "2",
+      "severity": "minor",
+      "what": "src/lib/curriculum/quiz.ts:257 — blankShape가 기본 게이지(첫 글자만)에서도 낱말마다 글자 수·아포스트로피 자리를 보여 게이지 'len'(첫 글자+글자 수)과 같은 도움이 됨 — 게이지 한 칸이 사라지고 firstCue가 숨기는 한자 답·세 글자 미만 답 길이도 드러남 (글자 수 밑줄은 cue len일 때만, 기본은 낱말 수만; 한자·짧은 답은 firstCue 기준으로 감춤)",
+      "files": [
+        "src/lib/curriculum/quiz.ts"
+      ],
+      "head": "fb1e0a93",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -13177,6 +13205,7 @@
     }
   ],
   "seq": {
-    "261128-3": 2
+    "261128-3": 2,
+    "261128-watch": 2
   }
 }

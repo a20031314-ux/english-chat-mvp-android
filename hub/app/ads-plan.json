@@ -6,7 +6,7 @@
   "why": "손익 계산 빠짐(보는 것 4)·없어진 자리(보는 것 3), 지난번 안 그대로 미반영. ① 숙제는 코치가 하나라도 고친 통화 전부(hadFix)인데 economics.json은 'homeworkEnd — 수업 숙제'(0.007)·homework-sheet(0.01)로 수업 몫만 셈. 이번 범위 a0c3e85a에서 homeworkEnd가 숙제 화면(sheet)에서만 뜨게 돼(CallReplay HomeworkTabs homeworkLast={sheet && talkDone}, 몸통 SceneChips에 homework 안 넘김) 지난번 겹침 안(move)은 반영됨 — 그만큼 homeworkEnd 올림 폭을 반으로. ② 칸 ? 시트(BankHelp)는 지워졌는데 bank-help 0.05 my가 남음. ③ ADS.md 손글: ads-facts moments 7(callEnd·chatLeave·flipEnd·homeworkEnd·quizBreak·roomLeave·videoLeave)인데 '여덟 · 📏 실력 확인'. 지난번 안 그대로 미반영.",
   "appBuild": false,
   "severity": "report",
-  "basis": "이번 범위 d5ee7e2..bec03c3: 바뀐 화면은 RoleplayPast·RoleplayScreen([할 수 있었던 말] 창을 끝 화면·통화 기록 돌아보기에서도 엶)·CallReplay(AnswerView 맞은 줄 표시)·FrameLesson(수업 퀴즈에서 본 문장 빼기)·Quizbank(본 문장이면 빈칸으로), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. economics.json(homeworkEnd '수업 숙제'·homework-sheet·replay-end·bank-help·log-sheet·letters-end '0단계') ·ADS.md 손글('순간 여덟·📏 실력 확인'·'칸 ?'·'오늘 카드 ▶·📞') 그대로 — 미반영. 어림은 지난번 그대로.",
+  "basis": "이번 범위 bec03c3..fb1e0a9: 바뀐 화면은 RoleplayReview(통화 💡 힌트 창이 시작 조각만 — 물은 말·설명·뜻 숨김)·RoleplayScreen(빨간 버튼 이름 중단 → 끊기, 힌트 기록에서 뜻 뺌)·QuizPlayer(쓰기 빈칸이 글자 수만큼 밑줄·대화 채우기 채점에 앞 대화 보냄), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. economics.json(homeworkEnd '수업 숙제'·homework-sheet·replay-end·bank-help·log-sheet·letters-end '0단계') ·ADS.md 손글('순간 여덟·📏 실력 확인'·'칸 ?'·'오늘 카드 ▶·📞') 그대로 — 미반영. 어림은 지난번 그대로.",
   "econ": {
    "extraAds": [
     {
@@ -46,7 +46,7 @@
   "why": "콘텐츠 사이 논리적 쉼(AdMob 허용)에 전면이 빠져 있음 — 문단 문제는 묶음 끝 문제라 다 짚고 [다음]을 누르면 다음 묶음을 받는 순간이 쉼인데 sinceBreak가 문제 수만 세어 첫 묶음(7 + 문단 1)에서는 전면이 없음. 글자부터 학습자는 오늘의 학습에 오늘의 글자 묶음 줄이 날마다 생겨 그 묶음 퀴즈 끝이 하루 학습 한 덩어리의 끝 — 결과를 본 뒤 시트를 닫는 것은 flipEnd와 같은 꼴의 '끝난 자리 닫기'. 지난번 안 그대로 미반영.",
   "appBuild": true,
   "severity": "notify",
-  "basis": "이번 범위 d5ee7e2..bec03c3: 바뀐 화면은 RoleplayPast·RoleplayScreen([할 수 있었던 말] 창을 끝 화면·통화 기록 돌아보기에서도 엶)·CallReplay(AnswerView 맞은 줄 표시)·FrameLesson(수업 퀴즈에서 본 문장 빼기)·Quizbank(본 문장이면 빈칸으로), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. InlineQuiz.tsx 112줄 quizBreak(sinceBreak 조건)·ScriptPractice.tsx(전면 없음) 그대로 — 미반영. Quizbank.tsx 변경은 문법 고르기 → 빈칸 바꿈뿐이라 묶음 경계와 무관. 횟수 어림 그대로. 빈 공간 캡처 없음 — 코드로만 봄.",
+  "basis": "이번 범위 bec03c3..fb1e0a9: 바뀐 화면은 RoleplayReview(통화 💡 힌트 창이 시작 조각만 — 물은 말·설명·뜻 숨김)·RoleplayScreen(빨간 버튼 이름 중단 → 끊기, 힌트 기록에서 뜻 뺌)·QuizPlayer(쓰기 빈칸이 글자 수만큼 밑줄·대화 채우기 채점에 앞 대화 보냄), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. InlineQuiz.tsx 112줄 quizBreak(sinceBreak 조건)·ScriptPractice.tsx(전면 없음) 그대로 — 미반영. Quizbank.tsx 변경은 문법 고르기 → 빈칸 바꿈뿐이라 묶음 경계와 무관. 횟수 어림 그대로. 빈 공간 캡처 없음 — 코드로만 봄.",
   "econ": {
    "my": {
     "quizBreaksPerDay": 1.1
@@ -69,7 +69,7 @@
   "why": "광고 자리가 새 흐름에서 거의 안 보임(보는 것 3·0번). 칸 머리 ?(Logbank·Quizbank·Languagebank)도 사용법 My 장으로 열려 그 몫까지 안 보임. 옮겨도 원칙 그대로(읽는 화면 끝 · 장 머리 스위치와 한 줄 넘게 · 한 화면 하나). 지난번 안 그대로 미반영.",
   "appBuild": true,
   "severity": "report",
-  "basis": "이번 범위 d5ee7e2..bec03c3: 바뀐 화면은 RoleplayPast·RoleplayScreen([할 수 있었던 말] 창을 끝 화면·통화 기록 돌아보기에서도 엶)·CallReplay(AnswerView 맞은 줄 표시)·FrameLesson(수업 퀴즈에서 본 문장 빼기)·Quizbank(본 문장이면 빈칸으로), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. GuideSheet.tsx 516줄 guide-end(모든 장 뒤) 그대로 — 미반영. 어림 그대로.",
+  "basis": "이번 범위 bec03c3..fb1e0a9: 바뀐 화면은 RoleplayReview(통화 💡 힌트 창이 시작 조각만 — 물은 말·설명·뜻 숨김)·RoleplayScreen(빨간 버튼 이름 중단 → 끊기, 힌트 기록에서 뜻 뺌)·QuizPlayer(쓰기 빈칸이 글자 수만큼 밑줄·대화 채우기 채점에 앞 대화 보냄), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. GuideSheet.tsx 516줄 guide-end(모든 장 뒤) 그대로 — 미반영. 어림 그대로.",
   "econ": {
    "extraAds": [
     {
@@ -89,7 +89,7 @@
   "why": "넣지 않는 곳 '대화·통화 위에서 연 사전·표현 카드(above)'와 어긋남 — 같은 같이 배우기 칩이 문장구조 표현이면 FrameLesson(광고 있음), 아니면 ExpressionCard(광고 없음)로 갈림. 통화 정리 줄 칩도 above로 여는 곳이라 '통화 중 광고 없음'(00b64d5)과 결이 같음. 지난번 안 그대로 미반영, 사용자 결정 거리.",
   "appBuild": true,
   "severity": "report",
-  "basis": "이번 범위 d5ee7e2..bec03c3: 바뀐 화면은 RoleplayPast·RoleplayScreen([할 수 있었던 말] 창을 끝 화면·통화 기록 돌아보기에서도 엶)·CallReplay(AnswerView 맞은 줄 표시)·FrameLesson(수업 퀴즈에서 본 문장 빼기)·Quizbank(본 문장이면 빈칸으로), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. FrameLesson.tsx 574·726줄 NativeAdSlot, above 읽기 없음 — 미반영(이번 변경은 퀴즈 문장 거르기뿐). 어림 그대로.",
+  "basis": "이번 범위 bec03c3..fb1e0a9: 바뀐 화면은 RoleplayReview(통화 💡 힌트 창이 시작 조각만 — 물은 말·설명·뜻 숨김)·RoleplayScreen(빨간 버튼 이름 중단 → 끊기, 힌트 기록에서 뜻 뺌)·QuizPlayer(쓰기 빈칸이 글자 수만큼 밑줄·대화 채우기 채점에 앞 대화 보냄), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. FrameLesson.tsx 574·726줄 NativeAdSlot, above 읽기 없음 — 미반영(이번 변경은 퀴즈 문장 거르기뿐). 어림 그대로.",
   "econ": {
    "extraAds": [
     {
@@ -104,12 +104,12 @@
  },
  {
   "kind": "move",
-  "what": "[할 수 있었던 말] 창이 끝 화면 위에 열린 동안 call-end 네이티브 떼기(active={!reviewing}) + 통화 기록 돌아보기(RoleplayPast) 대본 아래에 네이티브 하나(results call-past, 창이 열리면 뗌)",
-  "where": "AI 통화 `call` · RoleplayScreen.tsx 1155줄 call-end NativeAdSlot(active 없음)·1160줄 RoleplayReviewPanel ／ RoleplayPast.tsx CallPages 뒤(지금 광고 없음)·RoleplayReviewPanel",
-  "why": "원칙 위반 — 이번 범위(1d12f16)에서 끝 화면에 [할 수 있었던 말] 창이 열리게 됐는데, 그 창은 층(FullScreenLayer·BodyLayer)이 아닌 absolute div라 call-end 네이티브가 그대로 붙어 있음. 네이티브는 SDK가 웹뷰 위에 그리므로 어두운 창 위로 광고가 뜨고, 창 안 '한 번 말해 보기'(마이크)·닫기 버튼 곁 — 말하는 중·버튼 옆(잘못 누름). 함께: 돌아보기는 읽는 전체 화면 층인데 광고가 없음(CallList call-records는 그 층에 덮여 뗌) — 읽는 화면 끝 네이티브 하나 원칙에 맞음.",
+  "what": "통화 끝 화면 광고 맞추기 — ① [할 수 있었던 말] 창이 끝 화면 위에 열린 동안 call-end 네이티브 떼기(active={!reviewing}) ② 통화 기록 돌아보기(RoleplayPast) 대본 아래에 네이티브 하나(results call-past, 창이 열리면 뗌) ③ (이번 범위) 빨간 버튼이 '끊기'가 돼 내가 끊고 끝낸 통화도 끝 화면을 ✕·닫기로 닫을 때 callEnd 전면(내 말 두 줄 이상일 때만 — 첫 차례에 끊은 것·통화 정리·글자 숙제로 이어 가는 닫기는 그대로 없음)",
+  "where": "AI 통화 `call` · RoleplayScreen.tsx 1155줄 call-end NativeAdSlot(active 없음)·1160줄 RoleplayReviewPanel ／ RoleplayPast.tsx CallPages 뒤(지금 광고 없음)·RoleplayReviewPanel ／ RoleplayScreen.tsx 984줄 closeEnd(!hungUp 조건)·965줄 hangUp ／ roleplay/CallParts.tsx 208줄 CallButton roleplayPause(이번 범위 '끊기')",
+  "why": "원칙 위반 — 이번 범위(1d12f16)에서 끝 화면에 [할 수 있었던 말] 창이 열리게 됐는데, 그 창은 층(FullScreenLayer·BodyLayer)이 아닌 absolute div라 call-end 네이티브가 그대로 붙어 있음. 네이티브는 SDK가 웹뷰 위에 그리므로 어두운 창 위로 광고가 뜨고, 창 안 '한 번 말해 보기'(마이크)·닫기 버튼 곁 — 말하는 중·버튼 옆(잘못 누름). 함께: 돌아보기는 읽는 전체 화면 층인데 광고가 없음(CallList call-records는 그 층에 덮여 뗌) — 읽는 화면 끝 네이티브 하나 원칙에 맞음. ③ 이번 범위(11e51879)에서 빨간 버튼 이름이 중단 → 끊기(14개 언어)라 내가 끊는 것이 통화를 끝내는 보통 길이 됐는데, callEnd는 '중단 아님'(!hungUp)일 때만이라 끊고 끝낸 통화의 끝 화면 닫기에는 전면이 없음 — 끝 화면을 닫는 것은 끝난 자리 닫기(AdMob 논리적 쉼), 통화는 이미 끊겨 소리·마이크 겹침 없음, 끝 화면에 들어설 때가 아니라 닫을 때라 call-end 네이티브와 안 겹침.",
   "appBuild": true,
   "severity": "notify",
-  "basis": "이번 범위 d5ee7e2..bec03c3: 바뀐 화면은 RoleplayPast·RoleplayScreen([할 수 있었던 말] 창을 끝 화면·통화 기록 돌아보기에서도 엶)·CallReplay(AnswerView 맞은 줄 표시)·FrameLesson(수업 퀴즈에서 본 문장 빼기)·Quizbank(본 문장이면 빈칸으로), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. NativeAdSlot은 층 맨 위·키보드만 보고 떼며(NativeAdSlot.tsx 39줄) 창은 같은 FullScreenLayer 안 div. 어림: 끝 화면에서 창을 여는 것 무료 쓰는 날 0.01번 → 그만큼 call-end 노출 −0.01 native any(끝 화면에 돌아오면 다시 붙어 실제 손실은 더 작음), 돌아보기는 무료 통화가 맛보기 평생 10분이라 드묾 → +0.01 native any. 빈 공간 캡처 없음 — 대본 아래 높이는 기기 확인 필요.",
+  "basis": "이번 범위 bec03c3..fb1e0a9: 바뀐 화면은 RoleplayReview(통화 💡 힌트 창이 시작 조각만 — 물은 말·설명·뜻 숨김)·RoleplayScreen(빨간 버튼 이름 중단 → 끊기, 힌트 기록에서 뜻 뺌)·QuizPlayer(쓰기 빈칸이 글자 수만큼 밑줄·대화 채우기 채점에 앞 대화 보냄), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. NativeAdSlot은 층 맨 위·키보드만 보고 떼며(NativeAdSlot.tsx 39줄) 창은 같은 FullScreenLayer 안 div. 어림: 끝 화면에서 창을 여는 것 무료 쓰는 날 0.01번 → 그만큼 call-end 노출 −0.01 native any(끝 화면에 돌아오면 다시 붙어 실제 손실은 더 작음), 돌아보기는 무료 통화가 맛보기 평생 10분이라 드묾 → +0.01 native any. 빈 공간 캡처 없음 — 대본 아래 높이는 기기 확인 필요. ③ 어림: 지금 callEnd 0.03(끝까지 간 통화만) — 무료는 맛보기 평생 10분이라 통화가 드물고, 끊기로 끝내는 몫을 끝까지 간 것보다 조금 적게 잡아 +0.02 interstitial any(3분 간격 한도 안, 한 통화에 한 번). 1,000명당 값은 scenario 계산.",
   "econ": {
    "extraAds": [
     {
@@ -121,21 +121,26 @@
      "format": "native",
      "perActiveDay": 0.01,
      "when": "any"
+    },
+    {
+     "format": "interstitial",
+     "perActiveDay": 0.02,
+     "when": "any"
     }
    ]
   },
-  "per1000Mid": 0,
-  "freePersonMid": 0
+  "per1000Mid": 2413,
+  "freePersonMid": 2
  },
  {
   "kind": "add",
-  "what": "(넣지 않음 — 기록) 통화 중 어디에도(코치 띠가 뜰 때·따라 말해 ✓ 받을 때 전면, 띠 옆·버튼 줄 아래 네이티브 — 사용자 2026-11-26 자리째 지움) · 튜터 줄·튜터 프로필 📞 문(누를 때 전면) · 통화 설명창 · 대화 시뮬레이션 시작 · 오늘 타임라인·튜터 프로필 시트·사용법 넘겨 보기·Logbank 칩·퀴즈 문제 화면 안 · 첫 측정 화면·결과 · Languagebank 칠하기 · 글자 시트 카드·퀴즈 차례 · Quizbank 게이지 줄·답 뒤 근거 줄 · (이번 범위) 대화 시뮬레이션 줄마다 판단(AnswerView — 받는 중 …·LineGrade ✓/△·바른 문장·내 말·까닭 한 줄) · 숙제 퀴즈 맞힌 뒤 [다음]을 누를 때까지 머무는 답 화면(autoAdvance false) · 보기 설명 펼침(답 뒤 보기를 눌러 열고 닫기 — 이번 범위 option-notes가 앱 언어 칸만 남겨 아랍어 앱 등에서도 뜸, 화면 모양 그대로)",
-  "where": "AI 통화 `call` · RoleplayScreen.tsx·roleplay/CallParts.tsx CallStage·CoachCardView·CallModeInfo ／ roleplay/CallReplay.tsx ReplayPlayer·AnswerView(이번 범위) ／ 대화 탭 `talk` · AiTutorRow.tsx CallDoor ／ 사람 탭 `people` · AiTutorProfile.tsx ／ My 탭 `my` · studyMap/TodayCards.tsx·Logbank.tsx·FirstCheck.tsx·LanguageBank.tsx·ScriptPractice.tsx·Quizbank.tsx ／ studyMap/QuizPlayer.tsx ChooseView 보기 펼침·autoAdvance(이번 범위) ／ api/curriculum/option-notes(이번 범위 — 화면 없음) ／ 앱 틀 `shell` · GuideSheet.tsx",
+  "what": "(넣지 않음 — 기록) 통화 중 어디에도(코치 띠가 뜰 때·따라 말해 ✓ 받을 때 전면, 띠 옆·버튼 줄 아래 네이티브 — 사용자 2026-11-26 자리째 지움) · 튜터 줄·튜터 프로필 📞 문(누를 때 전면) · 통화 설명창 · 대화 시뮬레이션 시작 · 오늘 타임라인·튜터 프로필 시트·사용법 넘겨 보기·Logbank 칩·퀴즈 문제 화면 안 · 첫 측정 화면·결과 · Languagebank 칠하기 · 글자 시트 카드·퀴즈 차례 · Quizbank 게이지 줄·답 뒤 근거 줄 · (이번 범위) 대화 시뮬레이션 줄마다 판단(AnswerView — 받는 중 …·LineGrade ✓/△·바른 문장·내 말·까닭 한 줄) · 숙제 퀴즈 맞힌 뒤 [다음]을 누를 때까지 머무는 답 화면(autoAdvance false) · 보기 설명 펼침(답 뒤 보기를 눌러 열고 닫기 — 이번 범위 option-notes가 앱 언어 칸만 남겨 아랍어 앱 등에서도 뜸, 화면 모양 그대로) · (이번 범위) 통화 💡 힌트 창(시작 조각만) · 빨간 끊기 버튼 · 쓰기 빈칸 밑줄 모양 · 대화 채우기 채점 기다리는 중",
+  "where": "AI 통화 `call` · RoleplayScreen.tsx·roleplay/CallParts.tsx CallStage·CoachCardView·CallModeInfo ／ roleplay/CallReplay.tsx ReplayPlayer·AnswerView(이번 범위) ／ 대화 탭 `talk` · AiTutorRow.tsx CallDoor ／ 사람 탭 `people` · AiTutorProfile.tsx ／ My 탭 `my` · studyMap/TodayCards.tsx·Logbank.tsx·FirstCheck.tsx·LanguageBank.tsx·ScriptPractice.tsx·Quizbank.tsx ／ studyMap/QuizPlayer.tsx ChooseView 보기 펼침·autoAdvance(이번 범위) ／ api/curriculum/option-notes(이번 범위 — 화면 없음) ／ 앱 틀 `shell` · GuideSheet.tsx ／ RoleplayReview.tsx RoleplayReviewPanel turn.live(이번 범위) ／ studyMap/QuizPlayer.tsx TypeView·TalkView blankShape·grade context(이번 범위)",
   "why": "새 UI 검토(0번·0-1번·0-2번) — 기록용, 안 됨. ① 통화 중: 사용자가 자리째 빼라고 함(ADS.md 넣지 않는 곳 'AI 통화 도중: 화면 어디에도') — 다시 넣는 안은 내지 않음, 끝 화면 call-end·닫기 callEnd만. ② 대화 시뮬레이션 판단 줄: 말하는(쓰는) 차례 한가운데·판단 답 기다리는 중(note null '…')이라 전면·네이티브 안 됨, 끝은 replay-end 네이티브가 이미 있음(한 화면 하나). ③ 숙제 퀴즈 답 화면: [다음] 버튼·보기 버튼 바로 옆(잘못 누름)이고 문제 사이라 묶음 경계 아님 — 숙제 화면은 homework-sheet·끝 quiz-end 네이티브·homeworkEnd 전면이 이미 있음, 통화 끝 화면 몸통에서는 call-end가 그 화면의 광고 하나. ④ 보기 설명 펼침(이번 범위 — 서버가 칸 일부만 돌려줘도 뜨게 됐을 뿐 새 화면·새 자리 없음, QuizPlayer.tsx는 주석 한 줄): 답 뒤 보기가 누르는 버튼이 돼(disabled → 토글) 그 옆은 잘못 누름 정책, 문제 아래 quiz-inline이 이미 있음. option-notes는 API라 화면 없음. ⑤ 나머지는 지난 기록 그대로.",
   "appBuild": true,
   "severity": "report",
   "risky": true,
-  "basis": "이번 범위 d5ee7e2..bec03c3: 바뀐 화면은 RoleplayPast·RoleplayScreen([할 수 있었던 말] 창을 끝 화면·통화 기록 돌아보기에서도 엶)·CallReplay(AnswerView 맞은 줄 표시)·FrameLesson(수업 퀴즈에서 본 문장 빼기)·Quizbank(본 문장이면 빈칸으로), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. 0번 검토 이번 범위: [할 수 있었던 말] 창(RoleplayReviewPanel — 한 번 말해 보기 SayItBack 마이크·닫기 버튼, 바닥에 붙은 시트)은 말하는 차례·버튼 옆이라 창 안 광고 안 됨. AnswerView 맞은 줄 표시·수업 퀴즈·Quizbank 빈칸은 문제·답 화면 안이라 새 자리 없음(quiz-inline·replay-end가 이미 그 화면의 하나). 숫자는 기록용(합계 제외), 지난번 어림 그대로.",
+  "basis": "이번 범위 bec03c3..fb1e0a9: 바뀐 화면은 RoleplayReview(통화 💡 힌트 창이 시작 조각만 — 물은 말·설명·뜻 숨김)·RoleplayScreen(빨간 버튼 이름 중단 → 끊기, 힌트 기록에서 뜻 뺌)·QuizPlayer(쓰기 빈칸이 글자 수만큼 밑줄·대화 채우기 채점에 앞 대화 보냄), 새 NativeAdSlot·maybeShowInterstitial 줄 없음, flowDiff 없음. 0번 검토 이번 범위: [할 수 있었던 말] 창(RoleplayReviewPanel — 한 번 말해 보기 SayItBack 마이크·닫기 버튼, 바닥에 붙은 시트)은 말하는 차례·버튼 옆이라 창 안 광고 안 됨. AnswerView 맞은 줄 표시·수업 퀴즈·Quizbank 빈칸은 문제·답 화면 안이라 새 자리 없음(quiz-inline·replay-end가 이미 그 화면의 하나). 숫자는 기록용(합계 제외), 지난번 어림 그대로. 0번 검토 이번 범위: 💡 힌트 창은 통화 도중(turn.live) 말할 차례에 여는 창이라 '통화 도중 화면 어디에도' — 안 됨. 끊기 버튼은 누르는 버튼(그 옆은 잘못 누름) — 버튼 자체엔 안 되고 그 뒤 끝 화면 닫기는 위 call-end 안 ③. 쓰기 빈칸 밑줄은 문제 화면 안(쓰는 중), 대화 채우기 채점은 서버 답 기다리는 중(checking) — 안 됨, 문제 아래 quiz-inline·끝 quiz-end가 이미 그 화면의 하나. 숫자는 기록용(합계 제외), 지난번 어림 그대로.",
   "econ": {
    "extraAds": [
     {

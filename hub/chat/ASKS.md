@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (220)
+## 탭이 확인할 것 (222)
 
 ### 탭 1 메인
 
@@ -248,6 +248,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-105** 🔧 고칠 것 (major) (2026-11-24 00:00, 변경 감시) src/lib/curriculum/ladder.ts:281 — readReach가 저장된 hi를 버려 게이지 '위 단계를 맞히면 닿은 단계도 한 번에'가 여덟 번째 답일 때만 됨(Quizbank.tsx:268·431에서 답마다 다시 읽음) (hi도 돌려주기 + localStorage 왕복 테스트, Quizbank.tsx 묶음 시작 saveReach에서도 hi 유지)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-105 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-watch-1** 🔧 고칠 것 (2026-11-28 07:25, 변경 감시) src/components/studyMap/QuizPlayer.tsx:1158 — 대화 채우기(TalkView) open 채점이라 소재 낱말·표현을 안 쓰고 대화에 맞는 다른 말만 쳐도 그 소재를 맞힌 것으로 셈(TypeView는 'also'면 다시 치게 함), 머리 주석 'open 다시 보기는 안 함'도 틀림 (also이고 소재가 w|면 TypeView처럼 다시 치게 하거나 소재 학습으로 안 셈, 주석 고침)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-watch-2** 🔧 고칠 것 (2026-11-28 07:25, 변경 감시) src/lib/curriculum/quiz.ts:257 — blankShape가 기본 게이지(첫 글자만)에서도 낱말마다 글자 수·아포스트로피 자리를 보여 게이지 'len'(첫 글자+글자 수)과 같은 도움이 됨 — 게이지 한 칸이 사라지고 firstCue가 숨기는 한자 답·세 글자 미만 답 길이도 드러남 (글자 수 밑줄은 cue len일 때만, 기본은 낱말 수만; 한자·짧은 답은 firstCue 기준으로 감춤)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-2 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261127-watch-1** 🔧 고칠 것 (2026-11-27 19:30, 변경 감시) src/components/studyMap/Quizbank.tsx:211 — 본 문장을 고르기(1칸) 대신 빈칸(2칸)으로 다시 내면 askedRung이 2라 틀려도 stepLadder가 사다리를 2로 올려 고르기 칸을 건너뜀 (again 차례는 원래 칸을 남기거나 틀렸을 때 올리지 않기)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261127-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261127-watch-3** 🔧 고칠 것 (2026-11-27 19:30, 변경 감시) src/lib/curriculum/lessonTitle.ts:337 — '/'가 든 문법 이름을 목록으로 보고 뒤를 통째로 가려 제목이 망가짐(vi 'nghĩ là / nói là (…)' → 'nghĩ ＿ / ＿ (～＿·＿)', 'Yes/no questions…' → '＿/＿…'), 앞 칸 낱말 일부는 남음 (괄호 앞까지 칸 전체를 하나로, 답 없는 묶음은 그대로)
