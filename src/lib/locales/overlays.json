@@ -553,7 +553,8 @@
     "whatsNewLogTitle": "学んだことはLogbankに毎日たまります",
     "whatsNewLogBody": "週・月ごとに学んだことと会話で使ったことを見て、日をタップするとその日の学習が出ます。",
     "turnWait": "待ってもらう時間（秒）",
-    "loading": "読み込み中…"
+    "loading": "読み込み中…",
+    "roleplayWhyStuck": "言えたこと"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1109,7 +1110,8 @@
     "whatsNewLogTitle": "学过的东西每天积累在 Logbank",
     "whatsNewLogBody": "按周、按月查看学过的和在对话中用过的，点一天就能看到那天的学习。",
     "turnWait": "等我说完（秒）",
-    "loading": "加载中…"
+    "loading": "加载中…",
+    "roleplayWhyStuck": "可以说的话"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1668,7 +1670,8 @@
     "whatsNewLogTitle": "Những gì bạn học tích lại mỗi ngày ở Logbank",
     "whatsNewLogBody": "Xem những gì đã học và đã dùng theo tuần hoặc tháng; chạm vào một ngày để xem buổi học hôm đó.",
     "turnWait": "Chờ tôi nói (giây)",
-    "loading": "Đang tải…"
+    "loading": "Đang tải…",
+    "roleplayWhyStuck": "Câu bạn có thể nói"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2229,7 +2232,8 @@
     "whatsNewLogTitle": "Ce que tu apprends s’accumule dans Logbank",
     "whatsNewLogBody": "Vois ce que tu as appris et utilisé par semaine ou par mois ; touche un jour pour voir ce que tu as étudié.",
     "turnWait": "M’attendre (s)",
-    "loading": "Chargement…"
+    "loading": "Chargement…",
+    "roleplayWhyStuck": "Ce que vous auriez pu dire"
   },
   "it": {
     "billingClose": "Chiudi",
@@ -2923,7 +2927,8 @@
     "whatsNewLogBody": "Guarda cosa hai imparato e usato per settimana o mese; tocca un giorno per vedere lo studio di quel giorno.",
     "reviewMySentence": "Quello che hai scritto",
     "turnWait": "Aspettami (s)",
-    "loading": "Caricamento…"
+    "loading": "Caricamento…",
+    "roleplayWhyStuck": "Cosa avresti potuto dire"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3483,7 +3488,8 @@
     "whatsNewLogTitle": "O que você aprende se acumula no Logbank",
     "whatsNewLogBody": "Veja o que aprendeu e usou por semana ou mês; toque num dia para ver o estudo daquele dia.",
     "turnWait": "Esperar por mim (s)",
-    "loading": "Carregando…"
+    "loading": "Carregando…",
+    "roleplayWhyStuck": "O que você poderia ter dito"
   },
   "ru": {
     "billingClose": "Закрыть",
@@ -4175,7 +4181,8 @@
     "whatsNewLogBody": "Смотрите выученное и использованное по неделям или месяцам; нажмите на день, чтобы увидеть занятия за него.",
     "reviewMySentence": "Что вы написали",
     "turnWait": "Ждать меня (с)",
-    "loading": "Загрузка…"
+    "loading": "Загрузка…",
+    "roleplayWhyStuck": "Что можно было сказать"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -4736,7 +4743,8 @@
     "whatsNewLogTitle": "Yang kamu pelajari terkumpul di Logbank tiap hari",
     "whatsNewLogBody": "Lihat yang dipelajari dan dipakai per minggu atau bulan; ketuk satu hari untuk melihat belajarmu hari itu.",
     "turnWait": "Tunggu saya (dtk)",
-    "loading": "Memuat…"
+    "loading": "Memuat…",
+    "roleplayWhyStuck": "Yang bisa kamu katakan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5292,7 +5300,8 @@
     "whatsNewLogTitle": "ما تتعلّمه يتجمّع في Logbank كل يوم",
     "whatsNewLogBody": "شاهد ما تعلّمته وما استخدمته حسب الأسبوع أو الشهر، واضغط على يوم لترى دراسة ذلك اليوم.",
     "turnWait": "انتظرني (ث)",
-    "loading": "جارٍ التحميل…"
+    "loading": "جارٍ التحميل…",
+    "roleplayWhyStuck": "ما كان يمكنك قوله"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -5848,7 +5857,8 @@
     "whatsNewLogTitle": "สิ่งที่เรียนสะสมใน Logbank ทุกวัน",
     "whatsNewLogBody": "ดูสิ่งที่เรียนและได้ใช้รายสัปดาห์หรือรายเดือน แตะวันใดก็ได้เพื่อดูการเรียนของวันนั้น",
     "turnWait": "รอฉันพูด (วินาที)",
-    "loading": "กำลังโหลด…"
+    "loading": "กำลังโหลด…",
+    "roleplayWhyStuck": "สิ่งที่พูดได้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6404,6 +6414,7 @@
     "whatsNewLogTitle": "जो सीखते हैं, वह रोज़ Logbank में जमा होता है",
     "whatsNewLogBody": "हफ़्ते या महीने के हिसाब से सीखा और इस्तेमाल किया हुआ देखें; किसी दिन पर टैप करें तो उस दिन की पढ़ाई दिखेगी।",
     "turnWait": "मेरा इंतज़ार (सेकंड)",
-    "loading": "लोड हो रहा है…"
+    "loading": "लोड हो रहा है…",
+    "roleplayWhyStuck": "जो आप कह सकते थे"
   }
 }
