@@ -30,6 +30,8 @@ export async function POST(request: NextRequest) {
   const typed = text(body.typed, kind === "fix" ? 200 : 60);
   // 학습자가 먼저 본 뜻 줄(숙제·사다리 빈칸) — 그 뜻을 말하면 정해진 낱말과 달라도 맞음.
   const meaning = !open && kind === "blank" ? text(body.meaning, 200).slice(0, 200) : "";
+  // 대화 채우기: 그 줄 앞 대화(앱 2026-11-28~) — 대화에 자연스럽게 맞는 다른 말도 맞음("How's your day going?" 뒤 What are you doing?).
+  const context = open ? text(body.context, 300).slice(0, 300) : "";
   if (!sentence || !answer || !typed || sentence.length > 200 || answer.length > 200 || typed.length > (kind === "fix" ? 200 : 60)) {
     return jsonWithCors(request, { error: "bad input" }, { status: 400 });
   }
@@ -50,7 +52,7 @@ Meaning the learner was shown: ${meaning}
 App's answer: ${expected}
 Learner's sentence: ${learner}`
     : open
-    ? `Language: ${name}
+    ? `Language: ${name}${context ? `\nConversation just before this line:\n${context}\n(Judge it as the next line of this conversation — right if it is correct and makes sense there.)` : ""}
 Sentence to judge: ${learner}
 (The app's own answer was "${answer}", giving: ${expected} — other words can be right too.)`
     : `Language: ${name}

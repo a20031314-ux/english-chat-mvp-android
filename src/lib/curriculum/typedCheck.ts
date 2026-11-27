@@ -16,6 +16,8 @@ export type TypedCheck = {
   open?: boolean;
   /** 뜻 줄을 먼저 보인 빈칸(숙제·사다리) — 그 뜻을 말하면 맞음(정해진 낱말과 달라도, 체감 점검 2026-11-12). */
   meaning?: string;
+  /** open일 때 그 줄 앞 대화(대화 채우기, 2026-11-28) — 대화에 자연스럽게 맞는 다른 말도 받는다. 300자까지. */
+  context?: string;
 };
 
 const asked = new Map<string, Promise<boolean>>();

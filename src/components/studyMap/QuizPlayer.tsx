@@ -536,7 +536,7 @@ function useTypedGrade(language: string) {
   const { isPremium } = usePremium();
   const [checking, setChecking] = useState(false);
   // "also" = 기기 채점은 틀림인데 서버가 맞는 다른 답으로 봄 — 맞음으로 세고 원래 정답을 같이 보여 준다(사용자 2026-11-01 "일단 정답 처리, 원래 정답은 이런 것도 가능").
-  const grade = async (local: Graded, input: { kind: "blank" | "fix"; sentence: string; answer: string; typed: string; open?: boolean; meaning?: string }, plainWrong: boolean): Promise<Graded> => {
+  const grade = async (local: Graded, input: { kind: "blank" | "fix"; sentence: string; answer: string; typed: string; open?: boolean; meaning?: string; context?: string }, plainWrong: boolean): Promise<Graded> => {
     if (local || plainWrong) return local;
     setChecking(true);
     const ok = await recheckTyped({ language, ...input }, entitlementHeaders(isPremium));
@@ -1149,7 +1149,9 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
   const submit = async (typed: string) => {
     const local = typedRight(question.answer, typed, { language, near: question.near });
     const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
-    const final = await grade(local, { kind: "blank", sentence, answer: question.answer, typed: typed.trim() }, plainWrong);
+    // 대화 안 빈칸은 대화에 맞으면 맞음 — 앞 줄을 같이 보내 채점(사용자 2026-11-28 "What are도 맞는 답인데 틀렸다고 떠").
+    const context = question.lines.slice(0, question.at).map((line) => line.text).join("\n").slice(-300);
+    const final = await grade(local, { kind: "blank", sentence, answer: question.answer, typed: typed.trim(), open: true, ...(context ? { context } : {}) }, plainWrong);
     setResult(final);
     onAnswer({ correct: Boolean(final) });
   };
