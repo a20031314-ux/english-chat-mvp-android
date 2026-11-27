@@ -104,10 +104,43 @@ export function diffWords(original: string, corrected: string): DiffPart[] {
 /**
  * Original-side highlight parts: wrong words + gap markers for missing words.
  */
+/**
+ * 줄이 여러 문장이고 고친 문장이 그 일부만 고친 것이면(코치·튜터는 틀린 문장 하나만 돌려줌) 그 문장 묶음만 맞댄다 —
+ * 줄 전체와 맞대면 맞게 한 다른 문장까지 지워진다(사용자 2026-11-28 "틀린 부분이 있을 때 맞는 부분도 지워버려").
+ * 가장 비슷한 이어진 문장(최대 셋)을 고르고, 비슷함이 반 아래면 줄 전체로.
+ */
+export function focusSpan(original: string, corrected: string): { before: string; core: string; after: string } {
+  const whole = { before: "", core: original, after: "" };
+  const sentences = original.match(/[^.!?。！？؟]+(?:[.!?。！？؟]+|$)\s*/gu) ?? [];
+  if (sentences.length < 2 || sentences.join("") !== original) return whole;
+  const letters = (text: string) => (text.match(/[\p{L}\p{N}]/gu) ?? []).length;
+  const want = letters(corrected);
+  if (!want || want >= letters(original) * 0.8) return whole;
+  let best = { score: 0, from: 0, to: sentences.length };
+  for (let from = 0; from < sentences.length; from += 1) {
+    for (let to = from + 1; to <= Math.min(sentences.length, from + 3); to += 1) {
+      const window = sentences.slice(from, to).join("");
+      const same = diffWords(window, corrected).filter((part) => part.type === "equal").reduce((sum, part) => sum + letters(part.text), 0);
+      const score = same / Math.max(letters(window), want);
+      if (score > best.score) best = { score, from, to };
+    }
+  }
+  if (best.score < 0.5) return whole;
+  return { before: sentences.slice(0, best.from).join(""), core: sentences.slice(best.from, best.to).join(""), after: sentences.slice(best.to).join("") };
+}
+
 export function originalHighlightParts(
   original: string,
   corrected: string,
 ): HighlightPart[] {
+  const focus = focusSpan(original, corrected);
+  if (focus.core !== original) {
+    return [
+      ...(focus.before ? [{ text: focus.before, error: false }] : []),
+      ...originalHighlightParts(focus.core.trimEnd(), corrected),
+      ...(focus.after || /\s$/.test(focus.core) ? [{ text: (/\s$/.test(focus.core) ? " " : "") + focus.after, error: false }] : []),
+    ];
+  }
   const diffs = diffWords(original, corrected);
   const out: HighlightPart[] = [];
   let pendingMissing: string[] = [];
@@ -146,7 +179,7 @@ export function correctedHighlightParts(
   original: string,
   corrected: string,
 ): CorrectedHighlightPart[] {
-  return diffWords(original, corrected)
+  return diffWords(focusSpan(original, corrected).core.trimEnd(), corrected)
     .filter((p) => p.type === "equal" || p.type === "add")
     .map((p) => ({
       text: p.type === "equal" ? p.matchText || p.text : p.text,

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { correctionReplacementSnippet, diffWords, tokenDiffMarks } from "./textDiff.ts";
+import { correctionReplacementSnippet, diffWords, originalHighlightParts, tokenDiffMarks } from "./textDiff.ts";
 import { tokenize } from "./textTokens.ts";
 
 /** 표시된 낱말과 빠진 말을 읽기 쉬운 한 줄로: [틀린]{+빠진}. */
@@ -72,4 +72,15 @@ test("태국어는 낱말로 나눠 바뀐 낱말만 — 문장 전체가 한 �
   const snippet = correctionReplacementSnippet("ฉันไปตลาดเมื่อวาน", "ฉันไปโรงเรียนเมื่อวาน");
   assert.ok(!snippet.includes("เมื่อวาน"), snippet);
   assert.equal(correctionReplacementSnippet("Yo fui al mercado", "Yo fui a la escuela").includes("Yo"), false);
+});
+
+test("고친 문장이 줄의 한 문장만이면 그 문장만 맞댐 — 맞게 한 다른 문장은 안 지움(en·es·ja, 사용자 2026-11-28)", () => {
+  const strike = (o: string, c: string) => originalHighlightParts(o, c).filter((p) => p.error && p.text).map((p) => p.text.trim()).join("|");
+  assert.equal(strike("Hi, I was reading a book. What was you doing?", "What were you doing?"), "was");
+  assert.equal(strike("Yeah, I buy often. Mm-hmm. Do you have favorite food?", "Yeah, I buy it often."), "");
+  assert.equal(strike("Ayer fui al cine. Mañana voy a la playa con mis amigo.", "Mañana voy a la playa con mis amigos."), "amigo.");
+  assert.ok(!strike("昨日は学校に行きました。今日はいそがしいです。", "今日は忙しかったです。").includes("昨"), "앞 문장 그대로");
+  assert.equal(originalHighlightParts("Hi, I was reading a book. What was you doing?", "What were you doing?").map((p) => p.text).join(""), "Hi, I was reading a book. What was you doing?", "글은 그대로 다 보임");
+  // 한 문장 줄은 예전대로.
+  assert.equal(strike("I go to park yesterday.", "I went to the park yesterday."), "go");
 });
