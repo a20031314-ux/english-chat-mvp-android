@@ -594,7 +594,8 @@ export function typeOf(language: string, source: QuizSource, key = ""): QuizQues
   if (!short) return null;
   const near = key ? nearOf(language, key, piece) : [];
   // 문장구조(f|) 빈칸은 뜻 먼저 — 뜻 없이 "___ a cat."이면 I am·I see도 맞아 문장구조가 아니라 아무 낱말 맞히기가 된다(체감 점검 2026-11-27 hard-ambiguous). 채점은 같은 뜻인지로.
-  const frame = source.from.startsWith("f|") && Boolean(source.gloss.raw || source.gloss.en);
+  // 열쇠는 key로 온다 — source.from은 출처("qbank"·대본 등)라 f|가 아닐 때가 많다(2026-11-28 사용자 화면: 고친 뒤에도 뜻 없이 나옴).
+  const frame = (key || source.from).startsWith("f|") && Boolean(source.gloss.raw || source.gloss.en);
   return { kind: "type", text: source.text, before: source.text.slice(0, at), after: source.text.slice(at + piece.length), answer: piece, gloss: source.gloss, from: source.from, ...(near.length ? { near } : {}), ...(frame ? { glossFirst: true as const } : {}) };
 }
 

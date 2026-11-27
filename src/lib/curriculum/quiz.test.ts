@@ -492,6 +492,9 @@ test("빠진 말을 넣기만 한 고침은 틀린 곳 문제가 안 됨 — 멀
   assert.ok(en?.kind === "type" && en.glossFirst);
   const es = typeOf("es", { text: "Tengo un gato.", gloss: { en: "", raw: "고양이가 있어요." }, from: "f|es-f1-02", stage: 1, piece: "Tengo", who: "me" });
   assert.ok(es?.kind === "type" && es.glossFirst);
+  // 실제 앱: 출처는 from("qbank" 등), 열쇠는 key.
+  const fromBank = typeOf("en", { text: "It was a good song on the radio.", gloss: { en: "", raw: "그건 라디오에서 나온 좋은 노래였어요." }, from: "qbank", stage: 1, piece: "It was", who: "me" }, "f|en-f1-05");
+  assert.ok(fromBank?.kind === "type" && fromBank.glossFirst, "열쇠가 key로 와도 뜻 먼저");
   const word = typeOf("en", { text: "I have a cat.", gloss: { en: "", raw: "고양이가 한 마리 있어요." }, from: "w|cat", stage: 1, piece: "cat", who: "me" });
   assert.ok(word?.kind === "type" && !word.glossFirst, "낱말 빈칸은 그대로");
 });
