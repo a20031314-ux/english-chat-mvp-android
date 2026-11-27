@@ -798,12 +798,13 @@ export function RoleplayScreen({
       setSaid((current) => tipOnLastTutorLine(current, tip));
     }
     setReviewing(null);
-    if (!scenario || !state) return;
+    // 끝난 통화(끝 화면에서 연 창)는 닫기만 — 다시 듣기 상태로 돌리면 끝 화면이 흔들린다.
+    if (!scenario || !state || state.finished || instruction?.do === "finish" || hungUp) return;
     const resumed = resumeListening(scenario, bank, state, Date.now());
     setState(resumed.state);
     setInstruction(resumed.instruction);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scenario, state, reviewing]);
+  }, [scenario, state, reviewing, instruction, hungUp]);
 
   const startRecording = async () => {
     if (recording || recorderRef.current || !scenario) return;
@@ -1155,6 +1156,10 @@ export function RoleplayScreen({
         </div>
         </div>
         <CallFooter ui={ui} instruction={instruction} outOfPoints={outOfPoints} onClose={closeEnd} />
+        {/* 끝 화면 대본의 [할 수 있었던 말]도 통화 중과 같은 창(사용자 2026-11-27 — 끝 화면엔 창이 없어 눌러도 안 뜨던 것). */}
+        {reviewing ? (
+          <RoleplayReviewPanel turn={reviewing.turn} review={reviewing.review} failed={reviewing.failed} ui={ui} onClose={closeReview} onSayItBack={sayItBack} />
+        ) : null}
       </FullScreenLayer>
     );
   }

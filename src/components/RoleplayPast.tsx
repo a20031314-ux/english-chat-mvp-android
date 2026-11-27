@@ -11,7 +11,9 @@ import { findScenario } from "@/lib/roleplay/catalog";
 import { CallPages, CallSummary, MeFace, TutorFace } from "@/components/roleplay/CallParts";
 import { hadFix, tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { buildRecap } from "@/lib/roleplay/recap";
-import { RoleplayLine } from "@/components/RoleplayReview";
+import { RoleplayLine, RoleplayReviewPanel } from "@/components/RoleplayReview";
+import { fetchReview, fetchPractice, listenOnce } from "@/lib/roleplay/listen";
+import type { Review, StuckTurn } from "@/lib/roleplay/review";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { callSeconds, type SavedConversation } from "@/lib/roleplay/saved";
 import type { UICopy } from "@/lib/copy";
@@ -57,6 +59,13 @@ export function RoleplayPast({
   nativeLanguage: LearningLanguageCode;
   isPremium: boolean;
 }) {
+  const [reviewing, setReviewing] = useState<{ turn: StuckTurn; review: Review | null; failed: boolean } | null>(null);
+  const openReview = (turn: StuckTurn) => {
+    setReviewing({ turn, review: null, failed: false });
+    void fetchReview({ scenarioId: saved.scenarioId, turn, nativeLanguage, isPremium }).then((review) =>
+      setReviewing((current) => (current && current.turn === turn ? { ...current, review, failed: review === null } : current)),
+    );
+  };
   const sayAgain = (target: string) =>
     sayLine(target, { targetLanguage: coerceLanguageCode(saved.language), nativeLanguage, isPremium });
   const recap = useMemo(() => buildRecap(saved.language, saved.said), [saved]);
@@ -136,14 +145,12 @@ export function RoleplayPast({
         {lines.map((line, index) => (
           <RoleplayLine
             key={index}
-            // Nothing here asks the model anything, so the line is drawn
-            // without the two things that would: looking back at a stuck turn,
-            // and fetching a gloss that was never fetched at the time.
-            line={line.stuck ? { ...line, stuck: undefined } : line}
+            // 막힌 차례의 [할 수 있었던 말]은 통화 중·끝 화면과 같은 창(사용자 2026-11-27 — 여기선 버튼을 숨겼고 끝 화면에선 눌러도 안 떴음).
+            line={line}
             ui={ui}
             face={line.who === "learner" ? <MeFace /> : <TutorFace />}
             flat
-            onReview={() => undefined}
+            onReview={openReview}
             onAnalyze={analyze}
             onSayAgain={sayAgain}
             ledgerLanguage={saved.language}
@@ -164,6 +171,20 @@ export function RoleplayPast({
       </CallPages>
       </div>
       </div>
+      {reviewing ? (
+        <RoleplayReviewPanel
+          turn={reviewing.turn}
+          review={reviewing.review}
+          failed={reviewing.failed}
+          ui={ui}
+          onClose={() => setReviewing(null)}
+          onSayItBack={async (target) => {
+            const { heard } = await listenOnce({ language: saved.language, isPremium });
+            const practice = heard ? await fetchPractice({ scenarioId: saved.scenarioId, target, heard, nativeLanguage, isPremium }) : null;
+            return { heard, practice };
+          }}
+        />
+      ) : null}
     </FullScreenLayer>
   );
 }
