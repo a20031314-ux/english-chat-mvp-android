@@ -8,7 +8,7 @@
 
 | 항목 | 값 | 어디서 바꾸나 |
 |---|---|---|
-| Play에 올라간 앱 | **2.80 (versionCode 94)**(사용자 2026-11-23) | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
+| Play에 올라간 앱 | **2.80 (versionCode 94)**(Play 확인 2026-11-27) | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
 | 다음 앱 버전 | **2.81 (versionCode 95) — 저장소 버전은 아직 2.80.** 퀴즈 근거(틀린 곳 이유·보기 설명)·기능어 뜻 고르기·글자부터 Quizbank·글자 소리 파일 | — |
 | 서버 | main에 push하면 Vercel이 바로 배포(웹·시험 앱 껍데기도 바로 새 화면) | — |
 | 업데이트 권장 배너 기준 | 2.79 | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
