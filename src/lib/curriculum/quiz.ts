@@ -628,6 +628,23 @@ export function firstCue(answer: string, mode?: "len" | "none"): string {
   return `${parts[0]}…`;
 }
 
+/**
+ * 문장 속 빈칸 모양 — 낱말마다 글자 수만큼 밑줄, 낱말 사이는 띄움("It was" → "＿＿ ＿＿＿"). 몇 낱말·몇 글자인지가 보여
+ * 뜻 줄이 느슨하게 옮겨져도 다른 말(I heard)로 새지 않게(사용자 2026-11-28 "글자 수로 알려주면 — 밑줄이나 구분으로").
+ * 쓰기 도움을 끈 게이지("none")는 예전처럼 "＿＿＿".
+ */
+export function blankShape(answer: string, mode?: "len" | "none"): string {
+  const text = answer.trim();
+  if (mode === "none" || !text) return "＿＿＿";
+  let parts: string[];
+  try {
+    parts = [...new Intl.Segmenter(undefined, { granularity: "grapheme" }).segment(text)].map((one) => one.segment);
+  } catch {
+    parts = [...text];
+  }
+  return parts.map((one) => (/[\p{L}\p{N}\p{M}]/u.test(one) ? "＿" : /\s/.test(one) ? " " : one)).join("").replace(/ {2,}/g, " ");
+}
+
 export function typedRight(answer: string, typed: string, options: { language?: string; near?: readonly string[] } = {}): "exact" | "loose" | false {
   const norm = (text: string) => {
     const base = text.normalize("NFC").toLocaleLowerCase().replace(/[’‘`´]/g, "'").replace(/[\p{P}\p{S}]+/gu, " ").replace(/\s+/g, " ").trim();

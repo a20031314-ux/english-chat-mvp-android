@@ -12,7 +12,7 @@ import { TTSButton } from "@/components/TTSButton";
 import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/LineParts";
 import { usePremium } from "@/contexts/PremiumContext";
 import { isLocale, type UICopy } from "@/lib/copy";
-import { buildQuiz, firstCue, fixedRight, formChoice, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
+import { blankShape, buildQuiz, firstCue, fixedRight, formChoice, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
@@ -698,7 +698,7 @@ function TypeView({
           line={
             <>
               {question.before}
-              <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : "＿＿＿"}</strong>
+              <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : blankShape(question.answer, "cue" in question ? question.cue : undefined)}</strong>
               {question.after}
             </>
           }
@@ -733,7 +733,7 @@ function TypeView({
       <div className="flex items-start gap-2">
         <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
           {question.before}
-          <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : "＿＿＿"}</strong>
+          <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : blankShape(question.answer, "cue" in question ? question.cue : undefined)}</strong>
           {question.after}
         </p>
         {answered ? <TTSButton text={question.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
@@ -1175,7 +1175,7 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
                   {last ? (
                     <>
                       {question.before}
-                      <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : "＿＿＿"}</strong>
+                      <strong className={`font-semibold ${answered ? tone.accent : tone.blank}`}>{answered ? question.answer : blankShape(question.answer)}</strong>
                       {question.after}
                     </>
                   ) : (

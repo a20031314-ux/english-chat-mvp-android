@@ -498,3 +498,12 @@ test("빠진 말을 넣기만 한 고침은 틀린 곳 문제가 안 됨 — 멀
   const word = typeOf("en", { text: "I have a cat.", gloss: { en: "", raw: "고양이가 한 마리 있어요." }, from: "w|cat", stage: 1, piece: "cat", who: "me" });
   assert.ok(word?.kind === "type" && !word.glossFirst, "낱말 빈칸은 그대로");
 });
+
+test("문장 속 빈칸 모양 — 낱말마다 글자 수만큼 밑줄(en·es·ja), 도움 끈 게이지는 그대로 (사용자 2026-11-28)", async () => {
+  const { blankShape } = await import("./quiz.ts");
+  assert.equal(blankShape("It was"), "＿＿ ＿＿＿");
+  assert.equal(blankShape("I don't"), "＿ ＿＿＿'＿");
+  assert.equal(blankShape("Me encantaría"), "＿＿ ＿＿＿＿＿＿＿＿＿＿");
+  assert.equal(blankShape("行きます"), "＿＿＿＿");
+  assert.equal(blankShape("It was", "none"), "＿＿＿");
+});
