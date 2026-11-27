@@ -352,8 +352,19 @@ export function seedKeys(): { language: string; key: string; stage: number }[] {
       for (const expression of step?.expressions ?? []) out.push({ language, key: `e|${expression}`, stage });
     }
   }
+  // 문법 칸(g|)은 뒤에 붙인다 — 커서가 이어 가니 앞 순서를 바꾸지 않는다(사용자 2026-11-27 "문법 칸도 미리 채우기에" —
+  // 처음 푸는 사람·점검 사용자에게도 다음 회차 문장이 준비돼 같은 문장이 되풀이되지 않게).
+  for (let stage = 1; stage <= 5; stage += 1) {
+    for (const language of languages) {
+      const step = (ladderFor(language)?.stages ?? []).find((one) => one.order === stage);
+      (step?.grammar ?? []).forEach((_, index) => out.push({ language, key: `g|${stage}:${index}`, stage }));
+    }
+  }
   return out;
 }
+
+/** 한 번 돌 때 문법 칸은 이만큼까지 — 만들기(Haiku) + 판정(Sonnet)이라 한 칸이 오래 걸린다(Vercel 300초). */
+export const SEED_GRAMMAR_PER_RUN = 6;
 
 export const SEED_PER_RUN = 30;
 const SEED_CURSOR = "qbank:v1:seed:cursor";
@@ -362,13 +373,14 @@ const SEED_CURSOR = "qbank:v1:seed:cursor";
  * 한 번 돌 때 SEED_PER_RUN개까지 비어 있는(예문 없음) 열쇠를 채운다. 이미 예문이 있는 열쇠는 건너뛴다(모델 안 부름).
  * onMake는 모델을 부를 때마다(계량). 끝까지 돌면 done.
  */
-export async function seedBanks(onMake?: () => void, limit = SEED_PER_RUN): Promise<{ made: number; skipped: number; at: number; total: number; done: boolean; off?: string }> {
+export async function seedBanks(onMake?: () => void, limit = SEED_PER_RUN, onJudge?: () => void): Promise<{ made: number; skipped: number; at: number; total: number; done: boolean; off?: string }> {
   const keys = seedKeys();
   if (bankFrozen()) return { made: 0, skipped: 0, at: 0, total: keys.length, done: false, off: "frozen" };
   if (process.env.QBANK_SEED?.trim() === "off") return { made: 0, skipped: 0, at: 0, total: keys.length, done: false, off: "seed off" };
   let at = (await kvGetJson<{ at: number }>(SEED_CURSOR).catch(() => null))?.at ?? 0;
   let made = 0;
   let skipped = 0;
+  let grammarMade = 0;
   const day = today();
   // 한 번에 너무 오래 걸리지 않게(Vercel 한도) — 모델 호출 limit번 또는 살펴본 열쇠 limit×20개까지.
   while (at < keys.length && made < limit && made + skipped < limit * 20) {
@@ -378,6 +390,21 @@ export async function seedBanks(onMake?: () => void, limit = SEED_PER_RUN): Prom
     const entry = (await kvGetJson<BankEntry>(storeKey).catch(() => null)) ?? emptyEntry();
     if (entry.items.some((item) => !item.off) || !targetOf(one.language, one.key)) {
       skipped += 1;
+      continue;
+    }
+    if (one.key.startsWith("g|")) {
+      // 문법 칸: 앱이 키울 때와 같은 makeGrammar(판정 통과만), 한 번에 SEED_GRAMMAR_PER_RUN개 — 넘으면 커서를 되돌려 다음 번에.
+      if (grammarMade >= SEED_GRAMMAR_PER_RUN) {
+        at -= 1;
+        break;
+      }
+      onMake?.();
+      grammarMade += 1;
+      made += 1;
+      const grown = await makeGrammar(one.language, one.key, entry, onJudge).catch(() => null);
+      if (!grown?.items.length) continue;
+      const stage = grammarSlot(one.language, one.key)?.stage ?? one.stage;
+      await kvSetJson(storeKey, { ...entry, items: grown.items.map((item) => ({ ...item, s: stage, n: 0, r: 0 })), day, dayGrows: 1, grownAt: entry.served }, TTL_SECONDS).catch(() => undefined);
       continue;
     }
     onMake?.();
