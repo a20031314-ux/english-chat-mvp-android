@@ -39,6 +39,7 @@ import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
 import { quizGloss } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
+import { SaidWithMistakes } from "@/components/RoleplayReview";
 
 const LOG = bankTone("log");
 
@@ -623,7 +624,7 @@ function FixedLines({ items }: { items: readonly LogItem[] }) {
       {items.map((item, i) => (
         <li key={`${item.at}-${i}`} className="text-meta">
           <span aria-hidden className="me-1">{WHERE_ICON[String(item.where ?? "")] ?? "✎"}</span>
-          <span dir="auto" className="text-slate-500 line-through">{item.text}</span>
+          {item.right ? <SaidWithMistakes said={item.text} right={item.right} className="text-slate-500" /> : <span dir="auto" className="text-slate-500 line-through">{item.text}</span>}
           {item.right ? (
             <>
               <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span>
@@ -1219,7 +1220,7 @@ function CallResultCard({ ui, language, call, note, removable = true }: { ui: UI
                   }
                   className="text-start text-meta hover:opacity-80"
                 >
-                  {item.said ? <span dir="auto" className="text-slate-500 line-through">{item.said}</span> : null}
+                  {item.said ? <SaidWithMistakes said={item.said} right={item.line} className="text-slate-500" /> : null}
                   {item.said ? <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span> : null}
                   <span dir="auto" className="text-slate-200">{item.line}</span>
                   {key && partOf(key) ? <PartMark part={partOf(key)!} className="ms-1.5 align-middle" /> : null}

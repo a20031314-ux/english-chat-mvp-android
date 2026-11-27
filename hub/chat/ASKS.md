@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (227)
+## 탭이 확인할 것 (228)
 
 ### 탭 1 메인
 
@@ -607,6 +607,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261127-watch-4 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261126-watch-1** 🔧 고칠 것 (2026-11-26 05:27, 변경 감시) src/components/roleplay/CallReplay.tsx:620 — 대화 시뮬레이션 틀린 줄 판단(fetchPractice)을 받는 중에도 '다음'이 눌려 onDone이 옛 ok로 한 번만 보고 → 화면은 ✓인데 저장 점수·숙제 결과(noteReplayResult)는 틀림 (받는 중엔 다음을 막거나 모든 판단 뒤에 끝 보고)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261126-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-2-1** (2026-11-28 08:49, 탭 2 · e3d9bb1) 틀린 → 맞은 짝의 틀린 문장을 통째 취소선 대신 틀린 곳만(SaidWithMistakes) — 수업 흔한 실수·대화 장면·Logbank 고쳐 씀
+  - 기능: 통화 · Logbank · 오늘의 학습 · 소재 수업 · 칸 설명
+  - 볼 곳: `components/RoleplayScreen.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-4-3** (2026-11-28 08:42, 탭 4 · d822766) 튜터 프로필 마지막 메모를 누르면 그 통화 돌아보기
   - 기능: 처음 언어·튜터 고르기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 사람 · 오늘의 학습
   - 볼 곳: `components/ChatWindow.tsx` · `components/roleplay/CallParts.tsx` · `components/roleplay/CallReplay.tsx`

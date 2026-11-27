@@ -19,6 +19,7 @@ import { bestAnswerPair, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@
 import { compareTalk, type CompareRow } from "@/lib/roleplay/talkStats";
 import { bankTone } from "@/components/studyMap/bankTone";
 import { ladderFor } from "@/lib/curriculum/stages";
+import { SaidWithMistakes } from "@/components/RoleplayReview";
 
 const LOG = bankTone("log");
 
@@ -72,7 +73,7 @@ export function PairList({ pairs, locale, max }: { pairs: readonly GrowthPair[];
               <span aria-hidden>{SOURCE_ICON[pair.miss.s]} </span>
               {shortDay(locale, pair.miss.t)}
             </span>
-            <span dir="auto" className="min-w-0 line-through decoration-bad/70">{pair.miss.w}</span>
+            <SaidWithMistakes said={pair.miss.w} right={pair.miss.r} className="min-w-0" />
           </p>
           <p dir="auto" className="ps-6 text-caption text-slate-400">→ {pair.miss.r}</p>
           <p className="flex items-baseline gap-2 text-chat text-ink">

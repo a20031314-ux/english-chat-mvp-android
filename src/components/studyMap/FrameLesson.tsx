@@ -40,6 +40,7 @@ import type { Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
 import { LineGrade } from "@/components/studyMap/LineParts";
+import { SaidWithMistakes } from "@/components/RoleplayReview";
 
 /**
  * 문장구조 수업(curriculum/frameLesson.ts, 2026-10-30 사용자 "일반적인 설명(문법, 구문) > 문제풀이 > 대화" → 주고받기형):
@@ -732,8 +733,8 @@ export function SceneCard({ scene, piece, tag }: { scene: LessonScene; piece: st
         </p>
       ) : null}
       {scene.said && scene.said.trim() !== scene.line.trim() ? (
-        <p dir="auto" className="text-note text-slate-500 line-through">
-          {scene.said}
+        <p className="text-note text-slate-500">
+          <SaidWithMistakes said={scene.said} right={scene.line} />
         </p>
       ) : null}
       <div className="flex items-start gap-2">

@@ -4,6 +4,7 @@ import { TTSButton } from "@/components/TTSButton";
 import type { UICopy } from "@/lib/copy";
 import type { FixedLesson as Fixed } from "@/lib/curriculum/fixedLessons/check";
 import { SCRIPT_VOICES } from "@/lib/curriculum/stageScripts";
+import { SaidWithMistakes } from "@/components/RoleplayReview";
 
 /**
  * 고정 수업 설명(2026-11-02 사용자 "어느 부분이 ~가 되고 어떻게 이어지는지, 흔한 실수도 왜 틀리는지"):
@@ -73,7 +74,7 @@ export function FixedExplain({ fixed, ui, tag }: { fixed: Fixed; ui: UICopy; tag
             {fixed.mistakes.map((one, index) => (
               <li key={index} className="rounded-xl bg-white/[0.06] px-3 py-2">
                 <span dir="auto" className="block text-chat">
-                  <span className="text-bad line-through">{one.wrong}</span>
+                  <SaidWithMistakes said={one.wrong} right={one.right} />
                   <span className="mx-1.5 text-slate-500">→</span>
                   <span className="text-status-learned">{one.right}</span>
                 </span>

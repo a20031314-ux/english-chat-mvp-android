@@ -10,6 +10,7 @@ import { openLesson } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import type { GrammarLesson } from "@/lib/curriculum/fixedLessons/grammar";
 import { allFramesFor } from "@/lib/curriculum/frames";
+import { SaidWithMistakes } from "@/components/RoleplayReview";
 
 export function GrammarExplain({ page, ui, language }: { page: GrammarLesson; ui: UICopy; language: string }) {
   const [stage, index] = page.key.slice(2).split(":").map(Number);
@@ -59,7 +60,7 @@ export function GrammarExplain({ page, ui, language }: { page: GrammarLesson; ui
             {page.mistakes.map((one, at) => (
               <li key={at} className="rounded-xl bg-white/[0.06] px-3 py-2">
                 <span dir="auto" className="block text-chat">
-                  <span className="text-bad line-through">{one.wrong}</span>
+                  <SaidWithMistakes said={one.wrong} right={one.right} />
                   <span className="mx-1.5 text-slate-500">→</span>
                   <span className="text-status-learned">{one.right}</span>
                 </span>
