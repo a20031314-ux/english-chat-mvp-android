@@ -12382,6 +12382,62 @@
       "base": "5f0cd549f5500766f81bb33a897caead167c6e98",
       "head": "5f0cd54",
       "status": "open"
+    },
+    {
+      "id": "a261127-watch-1",
+      "at": "2026-11-27 19:30",
+      "kind": "fix",
+      "from": "watch",
+      "to": "2",
+      "severity": "minor",
+      "what": "src/components/studyMap/Quizbank.tsx:211 — 본 문장을 고르기(1칸) 대신 빈칸(2칸)으로 다시 내면 askedRung이 2라 틀려도 stepLadder가 사다리를 2로 올려 고르기 칸을 건너뜀 (again 차례는 원래 칸을 남기거나 틀렸을 때 올리지 않기)",
+      "files": [
+        "src/components/studyMap/Quizbank.tsx"
+      ],
+      "head": "bec03c3e",
+      "status": "open"
+    },
+    {
+      "id": "a261127-watch-2",
+      "at": "2026-11-27 19:30",
+      "kind": "fix",
+      "from": "watch",
+      "to": "1",
+      "severity": "minor",
+      "what": "src/lib/speech/sayLine.ts:88 — 로마자 낱말 끝 わ를 모두 は로 바꿔 denwa→でんは·kawa→かは로 맞는 말이 틀림 채점, 띄어 쓴 'kore wa'는 못 잡음 (따로 선 wa 토큰만 は로)",
+      "files": [
+        "src/lib/speech/sayLine.ts"
+      ],
+      "head": "bec03c3e",
+      "status": "open"
+    },
+    {
+      "id": "a261127-watch-3",
+      "at": "2026-11-27 19:30",
+      "kind": "fix",
+      "from": "watch",
+      "to": "2",
+      "severity": "minor",
+      "what": "src/lib/curriculum/lessonTitle.ts:337 — '/'가 든 문법 이름을 목록으로 보고 뒤를 통째로 가려 제목이 망가짐(vi 'nghĩ là / nói là (…)' → 'nghĩ ＿ / ＿ (～＿·＿)', 'Yes/no questions…' → '＿/＿…'), 앞 칸 낱말 일부는 남음 (괄호 앞까지 칸 전체를 하나로, 답 없는 묶음은 그대로)",
+      "files": [
+        "src/lib/curriculum/lessonTitle.ts"
+      ],
+      "head": "bec03c3e",
+      "status": "open"
+    },
+    {
+      "id": "a261127-watch-4",
+      "at": "2026-11-27 19:30",
+      "kind": "fix",
+      "from": "watch",
+      "to": "3",
+      "severity": "minor",
+      "what": "src/lib/locales/overlays.json — roleplayWhyStuck 일본어 '言えたこと'는 '말해 낸 것'으로 읽혀 '할 수 있었던 말'과 반대 뜻 ('言えたはずのこと' 등으로, generated.json도)",
+      "files": [
+        "src/lib/locales/overlays.json"
+      ],
+      "head": "bec03c3e",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -13007,6 +13063,7 @@
     }
   ],
   "seq": {
-    "261127-2": 3
+    "261127-2": 3,
+    "261127-watch": 4
   }
 }
