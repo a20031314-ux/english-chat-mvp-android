@@ -1,0 +1,15 @@
+# 사전 예문 문장 오류 — 2026-11-19 틀린 곳 매주 보태기 쓰기 에이전트가 본 것(es·hi·zh, 고칠 방향 포함). 사전 데이터는 안 고침
+w|quedarse#1	Puedes quedarse a cenar si quieres.	재귀 대명사 주어와 맞춤 → quedarte
+w|suicidarse#0	Hablaron con calma para que no se quisiera suicidarse.	se 겹침 → no quisiera suicidarse (금지 주제 — 문항엔 안 씀)
+w|pudrir#0	La fruta puede pudrir si hace calor.	이 뜻은 재귀 → pudrirse
+w|hinchar#0	…la mejilla de Javier empezó a hinchar.	재귀 → hincharse
+w|obsesionar#0	No dejes que el trabajo llegue a obsesionar tanto.	목적 대명사 빠짐 → obsesionarte
+w|canadá#1	El invierno en canadá es muy frío.	고유명사 대문자 → Canadá
+w|कितना#0	यह कितना का है?	का 앞 사격형 → कितने का
+w|चिकना#1	बाल धोने के बाद चिकना लग रहे थे।	बाल 복수 → चिकने
+w|पसंद आना#1	फिल्म बच्चों को पसंद आना चाहिए।	표준어는 फिल्म(여성)에 맞춤 → पसंद आनी चाहिए (आना는 구어)
+w|स्कूल#1	स्कूल आज छुट्टी है।	어색 → आज स्कूल की छुट्टी है
+w|करोड़#0	इस शहर में करोड़ लोग रहते हैं।	수 없이 करोड़ 어색 → करोड़ों लोग (가벼움)
+w|一#0	一就够了。	양사 빠짐 → 一个就够了
+w|一#1	还差一。	양사 빠짐 → 还差一个
+w|盘子#1	孙悦端着装满药的盘子，一间一间病房地送。	어색 → 一间一间地送 (의료 주제 — 문항엔 안 씀)
