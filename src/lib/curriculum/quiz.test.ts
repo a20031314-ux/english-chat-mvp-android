@@ -480,3 +480,18 @@ test("similarShape: 뜻 고르기 오답은 모양이 비슷한 뜻부터(2026-1
   assert.equal(similarShape("話す", "伝える"), true);
   assert.equal(similarShape("พูด", "บอกให้รู้"), false);
 });
+
+test("빠진 말을 넣기만 한 고침은 틀린 곳 문제가 안 됨 — 멀쩡한 낱말을 누르게 하지 않음(en·es·ja, 체감 점검 2026-11-27)", async () => {
+  const { diffSpan, typeOf } = await import("./quiz.ts");
+  assert.equal(diffSpan("en", "What can I talk before meeting?", "What can I talk about before the meeting?"), null);
+  assert.equal(diffSpan("es", "Voy cine mañana.", "Voy al cine mañana."), null);
+  assert.equal(diffSpan("ja", "学校行きます。", "学校に行きます。"), null);
+  assert.equal(diffSpan("en", "I go to America next month.", "I am going to America next month.")?.want, "am going");
+  // 문장구조 빈칸은 뜻 먼저(뜻 없이는 I am·I see도 맞음).
+  const en = typeOf("en", { text: "I have a cat.", gloss: { en: "", raw: "고양이가 한 마리 있어요." }, from: "f|en-f1-18", stage: 1, piece: "I have", who: "me" });
+  assert.ok(en?.kind === "type" && en.glossFirst);
+  const es = typeOf("es", { text: "Tengo un gato.", gloss: { en: "", raw: "고양이가 있어요." }, from: "f|es-f1-02", stage: 1, piece: "Tengo", who: "me" });
+  assert.ok(es?.kind === "type" && es.glossFirst);
+  const word = typeOf("en", { text: "I have a cat.", gloss: { en: "", raw: "고양이가 한 마리 있어요." }, from: "w|cat", stage: 1, piece: "cat", who: "me" });
+  assert.ok(word?.kind === "type" && !word.glossFirst, "낱말 빈칸은 그대로");
+});

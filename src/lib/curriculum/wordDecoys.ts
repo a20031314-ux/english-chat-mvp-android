@@ -21,6 +21,16 @@ export const MEANING_DECOYS: Record<string, Record<string, string[]>> = {
     "w|autonomy": ["w|support", "w|attention", "w|advice"],
     "w|accelerate": ["w|slow", "w|stop", "w|turn"],
     "w|stethoscope": ["w|microphone", "w|mirror", "w|flashlight"],
+    // 2026-11-27 체감 점검 표시(ux-marks-2026-11-27.md easy-decoy): "My ___ is dead" 옆 "평화로운", "Don't ___ your money" 옆 "나사로 고정하다·~의 소유예요".
+    // 같은 묶음(순위 50개)에 있는 낱말만 — 묶음 밖 낱말은 카드가 안 불려 와 보기로 못 씀.
+    "w|cell": ["w|radio", "w|tv", "w|machine"],
+    "w|waste": ["w|prepare", "w|raise", "w|mention"],
+  },
+  ja: {
+    // 2026-11-27: 命(いのち) 옆 "테니스·만성의", ない 옆 성격 형용사(차분한·부지런한) — 時間が___んだ 자리에 들어가는 꼴로.
+    "w|命": ["w|秘密", "w|勝利", "w|機会"],
+    "w|ない": ["w|多い", "w|いい", "w|好き"],
+    "e|よろしくお願いします": ["e|ありがとうございます", "e|すみません", "e|頑張ってください"],
   },
   es: {
     "w|clavar": ["w|pintar", "w|mover", "w|limpiar"],
@@ -28,6 +38,11 @@ export const MEANING_DECOYS: Record<string, Record<string, string[]>> = {
     "e|la cuenta": ["w|menú", "w|postre", "w|propina"],
     "e|en cuanto a": ["e|a pesar de", "e|por cierto", "e|en cambio"],
     "w|lecho": ["w|asiento", "w|mesa", "w|manta"],
+    // 2026-11-27: taza 옆 "비밀번호·제품", alguna vez 옆 "천천히 말해 주세요", me encantaría 옆 "الحمد لله·بالمناسبة".
+    "w|taza": ["w|mate", "w|bolso", "w|manzana"],
+    "w|guarda": ["w|asistente", "w|ciudadano", "w|brujo"],
+    "e|alguna vez": ["e|otra vez"],
+    "e|me encantaría": ["e|me da igual", "e|me viene bien", "e|no me gusta"],
   },
 };
 

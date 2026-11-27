@@ -95,12 +95,12 @@
     "type": "choose",
     "name": "빈도부사와 어순",
     "ask": "뜻에 맞는 영어를 고르세요.",
-    "gloss": "그녀는 아침마다 항상 차를 마신다.",
+    "gloss": "그녀는 아침마다 항상 차를 마셔요.",
     "before": "She ",
-    "after": " drinks tea in the morning.",
-    "answer": "always",
-    "why": "항상이므로 빈도부사 always는 일반동사 앞에 둬요.",
-    "options": ["never", "always", "sometimes", "often"],
+    "after": " tea in the morning.",
+    "answer": "always drinks",
+    "why": "빈도부사 always는 일반동사 앞에 두고, she라서 drinks예요.",
+    "options": ["drinks always", "always drinks", "always drink", "always drinking"],
     "line": "She always drinks tea in the morning."
   }
 }

@@ -667,24 +667,32 @@ function AnswerView({ ui, target, answer }: { ui: UICopy; target: string; answer
         </>
       );
     }
+    // 맞은 줄은 내가 한 말을 보이고, 대본과 다르면 대본은 아래 작게(체감 점검 2026-11-27 — 내 말 대신 모범 문장만 보여 맞게 말한 줄 앎).
+    const mine = answer.heard.trim();
+    const differs = Boolean(mine) && mine.toLocaleLowerCase() !== target.trim().toLocaleLowerCase();
     return (
       <>
-        <p dir="auto" className="mt-1 text-chat text-emerald-300">✓ {target}</p>
+        <p dir="auto" className="mt-1 text-chat text-emerald-300">✓ {differs ? mine : target}</p>
+        {differs ? <p dir="auto" className="mt-1 text-meta text-slate-500">{target}</p> : null}
         {note}
       </>
     );
   }
   // 고친 말이 대본 줄과 다르면(내 말에 더 가까운 바른 꼴) 그걸 바른 문장으로.
   const right = answer.better && answer.verdict === "wrong" ? answer.better : target;
+  // 취소선은 내 말을 고친 문장(better)과 맞댈 때만 — 대본 줄과 맞대면 맞는 다른 말(I am ↔ I'm)까지 빨갛고(민지 166),
+  // 가나로 한 말과 한자 문장(きょう ↔ 今日)은 낱말로 맞댈 수 없어 같은 말도 빨갛다(준호 128).
+  const kanaVsHan = !/\p{Script=Han}/u.test(answer.heard) && /\p{Script=Han}/u.test(right);
+  const mark = right !== target && !kanaVsHan;
   return (
     <>
       <p dir="auto" className="mt-1 text-chat text-slate-100" data-replay-right>
-        <RightWithChanges said={answer.heard} right={right} />
+        {mark ? <RightWithChanges said={answer.heard} right={right} /> : right}
       </p>
       <div className="mt-2 rounded-xl bg-white/5 p-3" data-replay-said>
         <p className="text-meta text-slate-500">{answer.typed ? ui.reviewMySentence : ui.roleplayPracticeHeard}</p>
-        <p className="mt-1 text-chat text-slate-200">
-          <SaidWithMistakes said={answer.heard} right={right} />
+        <p dir="auto" className="mt-1 text-chat text-slate-200">
+          {mark ? <SaidWithMistakes said={answer.heard} right={right} /> : answer.heard}
         </p>
       </div>
       {note}

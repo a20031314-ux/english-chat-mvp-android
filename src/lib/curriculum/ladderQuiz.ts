@@ -4,10 +4,11 @@
  *     · 2 빈칸 쓰기(뜻 먼저) · 3 틀린 곳(spot-errors)
  *   표현(카드): 1 뜻 고르기(cardQuiz hide) · 2 빈칸 쓰기(cardQuiz show) — 표현 틀린 곳 데이터가 없어 2에서 끝
  */
-import { cardQuiz, rng, shuffled, type QuizQuestion } from "./quiz.ts";
+import { cardQuiz, formChoice, rng, shuffled, type QuizQuestion } from "./quiz.ts";
 import { blankNeedsMeaning, chooseFromPrepared, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import { spotCells, type SpotItem } from "./spotErrors.ts";
 import { askRung, type Rung } from "./ladder.ts";
+import { isSpaceless } from "../wordSegments.ts";
 
 /** 바른 줄: 틀린 칸을 칸 위치로 되돌림 — 칸을 줄에서 차례로 찾아 그 자리만(같은 글자가 앞에 있어도, 문장부호·띄어쓰기는 그대로). */
 export function fixedLine(line: string, cells: readonly string[], at: number, wrong: string, right: string): string {
@@ -153,7 +154,10 @@ export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem |
     const plain = level > 0 ? 0 : 1;
     const at = choices.length ? turn % (choices.length + plain) : -1;
     const pick = at >= plain ? choices[at - plain] : undefined;
-    question = (pick ? choiceQuestion(pick, item.key, String(turn)) : null) ?? chooseFromPrepared(item, first);
+    // 보기가 서로 다른 낱말(so/because/but)이면 뜻 줄이 곧 답 — 단계와 상관없이 답한 뒤에(뜻 없이는 갈리지 않는 칸만 needsMeaning, 체감 점검 2026-11-27 easy-leak "-아서 = because").
+    // 띄어쓰기 없는 말(です/ます/だ)은 낱말 나눔으로 꼴인지 가를 수 없어 그대로.
+    const leaks = !item.needsMeaning && !isSpaceless(item.line) && !formChoice(item.options, item.options.indexOf(item.answer), language);
+    question = (pick ? choiceQuestion(pick, item.key, String(turn)) : null) ?? chooseFromPrepared(item, first && !leaks);
   }
   if (rung === 2) {
     const near = item.options.filter((option) => option !== item.answer);

@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (211)
+## 탭이 확인할 것 (214)
 
 ### 탭 1 메인
 
@@ -51,6 +51,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-69 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-72** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/server/voxtralSpeech.ts:167 — 스트림 읽기 오류·20초 제한도 done으로 보고 정상 close — 잘린 소리가 공용 캐시에 들어갈 수 있음 — 끝 표시 없으면 오류로 → realtime 대체
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-72 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261127-2-1** (2026-11-27 18:28, 탭 2 · 5f0cd54) 체감 점검 표시 고침: Quizbank·수업 퀴즈 반복·뜻 줄·제목 가림, 문장구조 빈칸 뜻 먼저, 숙제 틀린 곳(diffSpan), 대화 시뮬레이션 채점 표시·코치 note
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `components/FindInMy.tsx` · `components/EnglishAnalysisViewer.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/points/sync/route.ts` · `components/LanguagePick.tsx` · `components/EnglishAnalysisProvider.tsx` … 62개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261126-2-4** (2026-11-26 05:27, 탭 2 · 25e33a6) 학습 설명 말투·구체성 규칙 한 곳(explainTone.ts) — 채팅 교정·Room 교정·표현 시트·수업 옮기기 말투가 해요체·짧게·구체적으로 바뀜
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `app/api/expression-insight/route.ts` · `app/api/curriculum/fixed-lesson/seed/route.ts` · `components/account/AccountCard.tsx` · `components/account/ProfileFacts.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/points/sync/route.ts` … 64개 더
@@ -567,6 +571,10 @@
 
 - **a261126-watch-1** 🔧 고칠 것 (2026-11-26 05:27, 변경 감시) src/components/roleplay/CallReplay.tsx:620 — 대화 시뮬레이션 틀린 줄 판단(fetchPractice)을 받는 중에도 '다음'이 눌려 onDone이 옛 ok로 한 번만 보고 → 화면은 ✓인데 저장 점수·숙제 결과(noteReplayResult)는 틀림 (받는 중엔 다음을 막거나 모든 판단 뒤에 끝 보고)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261126-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261127-2-2** (2026-11-27 18:28, 탭 2 · 5f0cd54) 체감 점검 표시 고침: Quizbank·수업 퀴즈 반복·뜻 줄·제목 가림, 문장구조 빈칸 뜻 먼저, 숙제 틀린 곳(diffSpan), 대화 시뮬레이션 채점 표시·코치 note
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/RoleplayPast.tsx` · `components/RoleplayScreen.tsx` · `app/api/chat/route.ts` · `app/api/roleplay/context/route.ts` · `app/api/roleplay/review/route.ts` · `app/api/roleplay/turn/route.ts` · `app/api/roleplay/practice/route.ts` · `components/speech/Attempt.tsx` · `components/CallHost.tsx` … 30개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261126-2-5** (2026-11-26 05:27, 탭 2 · 25e33a6) 학습 설명 말투·구체성 규칙 한 곳(explainTone.ts) — 채팅 교정·Room 교정·표현 시트·수업 옮기기 말투가 해요체·짧게·구체적으로 바뀜
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `app/api/chat/route.ts` · `components/ChatWindow.tsx` · `app/api/chat/verify/route.ts` · `app/api/roleplay/listen/route.ts` · `app/api/roleplay/practice/route.ts` · `app/api/roleplay/turn/route.ts` · `components/roleplay/callHooks.ts` · `components/roleplay/CallParts.tsx` · `app/api/content-discovery/route.ts` · `app/api/roleplay/context/route.ts` … 26개 더
@@ -576,6 +584,10 @@
 
 - **a261125-watch-97** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/components/AiTutorProfile.tsx:22 — 앱 언어 값이 localStorage에 없으면 튜터 프로필이 en으로 — readAppLocale() 쓰거나 locale prop
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-97 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261127-2-3** (2026-11-27 18:28, 탭 2 · 5f0cd54) 체감 점검 표시 고침: Quizbank·수업 퀴즈 반복·뜻 줄·제목 가림, 문장구조 빈칸 뜻 먼저, 숙제 틀린 곳(diffSpan), 대화 시뮬레이션 채점 표시·코치 note
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `components/AiTutorProfile.tsx` · `app/api/rooms/fix/route.ts` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `app/api/icons/route.ts` · `app/api/invite/route.ts` · `app/api/media/route.ts` · `app/api/random/route.ts` · `app/api/rooms/game/route.ts` · `components/rooms/RoomsScreen.tsx` … 25개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261126-2-6** (2026-11-26 05:27, 탭 2 · 25e33a6) 학습 설명 말투·구체성 규칙 한 곳(explainTone.ts) — 채팅 교정·Room 교정·표현 시트·수업 옮기기 말투가 해요체·짧게·구체적으로 바뀜
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `app/api/rooms/fix/route.ts` · `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomParts.tsx` · `components/rooms/RoomPeople.tsx` · `components/rooms/RoomView.tsx` · `components/rooms/RoomsScreen.tsx` … 25개 더

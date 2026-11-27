@@ -51131,10 +51131,10 @@
    "blank": "guarda"
   },
   {
-   "text": "Guarda el secreto hasta el final.",
-   "en": "Keep the secret until the end.",
-   "ko": "끝까지 비밀을 지켜.",
-   "blank": "Guarda"
+   "text": "El guarda del museo cerró la puerta a las seis.",
+   "en": "The museum guard closed the door at six.",
+   "ko": "박물관 경비원이 여섯 시에 문을 닫았어.",
+   "blank": "guarda"
   }
  ],
  "w|guardabosques": [

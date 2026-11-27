@@ -1,3 +1,4 @@
+import { hasLatin, romajiToHiragana } from "../romaji.ts";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
 import { fetchPractice, listenOnce, pausesIn, unclearWords } from "@/lib/roleplay/listen";
 import { justTalkId } from "@/lib/roleplay/justTalk";
@@ -81,7 +82,10 @@ export async function typedLine(
     onLimit?: () => void;
   },
 ): Promise<{ heard: string; practice: Practice | null }> {
-  const heard = typed.trim();
+  // 일본어를 로마자로 친 줄은 히라가나로 바꿔 채점 — 퀴즈 칸은 받아 주는데 수업 대화 칸만 틀림이던 것(체감 점검 2026-11-27 wrong-judge korewa).
+  const raw = typed.trim();
+  // 조사 は는 로마자로 wa — 낱말 끝 わ는 は로(korewa → これは, watashiwa → わたしは).
+  const heard = input.targetLanguage === "ja" && hasLatin(raw) && !/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(raw) ? romajiToHiragana(raw).replace(/(?<=\p{Script=Hiragana})わ(?=\s|$|[、。？！?!])/gu, "は") : raw;
   if (!heard) return { heard: "", practice: null };
   let limited = false;
   const ask = () =>

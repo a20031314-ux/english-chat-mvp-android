@@ -272,3 +272,19 @@ test("닿은 단계: 게이지로 위 단계를 맞혀 오면 거기까지 한 �
   for (let i = 0; i < REACH_BATCH; i += 1) plain = stepReach(plain, 1, 2, true);
   assert.equal(plain.s, 3);
 });
+
+test("보기가 서로 다른 낱말이면 뜻 줄은 답한 뒤 — 1~2단계도(en·es), 띄어쓰기 없는 말은 그대로(ja) (체감 점검 2026-11-27)", () => {
+  const en: PreparedItem = { key: "g|2:6", kind: "grammar", stage: 2, gloss: "구름이 많아서 우산을 챙겼어요.", before: "I took an umbrella ", after: " it looked cloudy.", answer: "because", options: ["so", "because", "but"], line: "I took an umbrella because it looked cloudy.", why: "x" };
+  const enQ = grammarAsk(en, 1, null, "en", { stage: 2 })?.question;
+  assert.ok(enQ?.kind === "choose" && enQ.prepared?.meaningLater, "because는 -아서가 알려 줌");
+  const es: PreparedItem = { key: "g|2:9", kind: "grammar", stage: 2, gloss: "비가 와서 집에 있었어요.", before: "Me quedé en casa ", after: " llovía.", answer: "porque", options: ["pero", "porque", "aunque"], line: "Me quedé en casa porque llovía.", why: "x" };
+  const esQ = grammarAsk(es, 1, null, "es", { stage: 2 })?.question;
+  assert.ok(esQ?.kind === "choose" && esQ.prepared?.meaningLater);
+  const needs = grammarAsk({ ...en, needsMeaning: true }, 1, null, "en", { stage: 2 })?.question;
+  assert.ok(needs?.kind === "choose" && !needs.prepared?.meaningLater, "뜻이 있어야 갈리는 칸은 뜻 먼저");
+  const form = grammarAsk({ ...en, options: ["drinks always", "always drinks", "always drink"], answer: "always drinks", before: "She ", after: " tea.", line: "She always drinks tea." }, 1, null, "en", { stage: 2 })?.question;
+  assert.ok(form?.kind === "choose" && !form.prepared?.meaningLater, "꼴 고르기는 뜻 먼저 그대로");
+  const ja: PreparedItem = { key: "g|1:1", kind: "grammar", stage: 1, gloss: "학생이에요?", before: "学生です", after: "。", answer: "か", options: ["よ", "か", "を", "が"], line: "学生ですか。", why: "x" };
+  const jaQ = grammarAsk(ja, 1, null, "ja", { stage: 1 })?.question;
+  assert.ok(jaQ?.kind === "choose" && !jaQ.prepared?.meaningLater);
+});

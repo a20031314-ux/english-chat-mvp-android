@@ -175,7 +175,9 @@ export function FrameLesson({
         const other = turnFresh(item, 1, [...asked, one.line]);
         const spots = spotsFor(language, key);
         const spot = spots.find((s) => !asked.includes(s.lines[0] ?? "")) ?? spots[0] ?? null;
-        const same = preparedLessonQuiz(one, spot, language, stageOf, other);
+        // Quizbank에서 방금 낸 문장·설명에서 보여 준 예문은 빼고(체감 점검 2026-11-27 easy-repeat·easy-copy — 수업 퀴즈 첫 문제가 설명 첫 예문·방금 푼 문제 그대로).
+        const seenText = new Set([...asked, ...shownExamples.map((example) => example.text)]);
+        const same = preparedLessonQuiz(one, spot, language, stageOf, other).filter((q) => !("text" in q && seenText.has(q.text)));
         const texts = new Set(same.map((q) => ("text" in q ? q.text : "")));
         const rest = made.filter((q) => q.kind !== "choose" && !("text" in q && texts.has(q.text)));
         if (same.length) return [...same, ...rest].slice(0, Math.max(3, same.length));

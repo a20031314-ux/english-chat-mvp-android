@@ -348,8 +348,12 @@ export function Quizbank({
     const reached = Math.min(DONE - 1, rungOf(ladder, key));
     const current = random ? reached + Math.floor(Math.random() * (DONE - reached)) : reached;
     const turn = preparedTurn(events, key);
-    const made = prep
-      ? grammarAsk(turnFresh(grown(prep), turn, [...askedTexts(language, key), ...(readRound(language).used[key] ?? [])]), current, spotOf(key), language, { numbered: true, stage, level: gauge, choices: grownChoices(grownItems(language, key), locale), turn })
+    const seenLines = [...askedTexts(language, key), ...(readRound(language).used[key] ?? [])];
+    const fresh = prep ? turnFresh(grown(prep), turn, seenLines) : null;
+    // 다른 문장이 없어 본 문장이 또 나오면 고르기 대신 빈칸 쓰기로 — 같은 문장·같은 보기면 답을 외워 맞힌다(체감 점검 2026-11-27 easy-repeat "Do you have ___ water?" 세 번).
+    const again = Boolean(fresh && current === 1 && seenLines.includes(fresh.line));
+    const made = fresh
+      ? grammarAsk(fresh, again ? 2 : current, spotOf(key), language, { numbered: true, stage, level: gauge, choices: again ? [] : grownChoices(grownItems(language, key), locale), turn })
       : key.startsWith("e|")
         ? expressionAsk(language, key, current, `${day}-${round}`)
         : null;

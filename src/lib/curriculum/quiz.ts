@@ -593,7 +593,9 @@ export function typeOf(language: string, source: QuizSource, key = ""): QuizQues
   const short = isSpaceless(piece) ? [...piece].length <= 8 : segmentWords(piece, language).length <= 3 && piece.length <= 24;
   if (!short) return null;
   const near = key ? nearOf(language, key, piece) : [];
-  return { kind: "type", text: source.text, before: source.text.slice(0, at), after: source.text.slice(at + piece.length), answer: piece, gloss: source.gloss, from: source.from, ...(near.length ? { near } : {}) };
+  // 문장구조(f|) 빈칸은 뜻 먼저 — 뜻 없이 "___ a cat."이면 I am·I see도 맞아 문장구조가 아니라 아무 낱말 맞히기가 된다(체감 점검 2026-11-27 hard-ambiguous). 채점은 같은 뜻인지로.
+  const frame = source.from.startsWith("f|") && Boolean(source.gloss.raw || source.gloss.en);
+  return { kind: "type", text: source.text, before: source.text.slice(0, at), after: source.text.slice(at + piece.length), answer: piece, gloss: source.gloss, from: source.from, ...(near.length ? { near } : {}), ...(frame ? { glossFirst: true as const } : {}) };
 }
 
 /**
@@ -843,6 +845,10 @@ export function diffSpan(language: string, wrong: string, right: string): { word
   const bad = words.map((_, i) => i).slice(head, words.length - tail);
   const want = goal.slice(head, goal.length - tail);
   if (!bad.length || !want.length || bad.length > 3 || want.length > 3) return null;
+  // 틀린 쪽 낱말이 바른 쪽에 순서대로 다 있으면 빠진 말을 넣기만 한 것(talk ___ before ___ meeting → about·the) — 멀쩡한 낱말(before)을 틀렸다고 누르게 된다(체감 점검 2026-11-27 hard-ambiguous).
+  let found = 0;
+  for (const word of want) if (found < bad.length && norm(word) === norm(words[bad[found]!]!)) found += 1;
+  if (found === bad.length) return null;
   // 문장 끝 부호는 고칠 말에 넣지 않는다("Japan." → "Japan").
   const glue = isSpaceless(right) ? "" : " ";
   const text = want.join(glue).replace(/^[\p{P}]+|[\p{P}]+$/gu, "");

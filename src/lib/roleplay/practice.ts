@@ -1,3 +1,4 @@
+import { EXPLAIN_TONE } from "../explainTone.ts";
 import { segmentChunk } from "../wordSegments.ts";
 /**
  * Saying the line again, and being told what came out instead.
@@ -373,7 +374,7 @@ Be plain about scale. A word or two out of a short sentence is normal and worth 
 The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage} (2026-10-27: a Japanese line got a note in Japanese for a Korean reader). Quote words of the sentence only where you must.
 
 Reply as JSON only, writing in ${input.nativeLanguage}, politely and in one consistent level of politeness:
-{"good": true or false, "note": "<one or two sentences>"}
+{"good": true or false, "note": "<one short sentence>"}
 
 "good" is true when nothing is worth raising. "note" is still written then — say what came through well, briefly, without praise it did not earn.`;
 }
@@ -402,9 +403,9 @@ Verdicts:
 - "awkward": the meanings match, but the line has a grammar slip or is phrased in a way a native would not say here — still a pass; give the correct, natural line in "better".
 - "natural": the meanings match and it is fine as said.
 When in doubt between "natural" and "awkward", choose "natural". A near-homophone slip (step 2) is never a reason for "awkward" or "wrong"; a grammar slip with the same meaning is "awkward", never "natural".
-"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural").
+"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural") — the learner's own line with only what is wrong or unnatural changed, keeping every word that was fine (do not swap in the script line or rephrase correct parts, e.g. a full form for a contraction).
 
-The note is for someone who speaks ${input.nativeLanguage}: write it entirely in ${input.nativeLanguage}, quoting ${input.targetLanguage} words only where you must, in one or two sentences.
+The note is for someone who speaks ${input.nativeLanguage}: write it entirely in ${input.nativeLanguage}, quoting ${input.targetLanguage} words only where you must, in one short sentence. ${EXPLAIN_TONE}
 - "wrong": name only the meaning that differs (what the script says vs what came across) and the ${input.targetLanguage} words that would carry it. Say nothing about parts whose meaning matched, however differently they were worded. Treat it as something they said, not as a sound: do not tell them to pronounce it more clearly.
 - "awkward": the slip, and the natural way to say it.
 - "natural": one short line that it works; if the wording differs from the script, quote how the script says it.
@@ -413,7 +414,7 @@ The note is for someone who speaks ${input.nativeLanguage}: write it entirely in
 - If almost nothing came through, say gently to try again a little slower.
 
 Reply as JSON only, politely and in one consistent level of politeness:
-{"scriptMeaning": "...", "saidMeaning": "...", "good": true or false, "verdict": "natural or awkward or wrong", "better": "<line or empty>", "note": "<one or two sentences>"}`;
+{"scriptMeaning": "...", "saidMeaning": "...", "good": true or false, "verdict": "natural or awkward or wrong", "better": "<line or empty>", "note": "<one short sentence>"}`;
 }
 
 /**
@@ -443,12 +444,12 @@ Also sort it into one of three verdicts:
 - "awkward": completely grammatical and understandable, but no native would phrase it like this here (clumsy, stiff or odd word choice) — still counts as a pass; give the more natural way in "better".
 - "wrong": the meaning changed or got lost, or there is any grammar mistake (wrong verb form or tense, wrong preposition or particle, wrong agreement), even if the meaning still comes through — give the correct way in "better".
 When in doubt between "natural" and "awkward", choose "natural"; when in doubt between "awkward" and "wrong" because of a grammar slip, choose "wrong".
-"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural.
+"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural") — the learner's own line with only what is wrong or unnatural changed, keeping every word that was fine (do not swap in the script line or rephrase correct parts, e.g. a full form for a contraction). In the note, for "awkward" say briefly why the better line sounds more natural.
 
-The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what did not come across or what sounds wrong, and how to fix it. When "good" is true, one short line on what worked; if the native line has a more natural turn worth knowing, mention it.
+The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what did not come across or what sounds wrong, and how to fix it. ${EXPLAIN_TONE} When "good" is true, one short line on what worked; if the native line has a more natural turn worth knowing, mention it.
 
 Reply as JSON only, politely and in one consistent level of politeness:
-{"good": true or false, "verdict": "natural or awkward or wrong", "better": "<more natural or correct line, or empty>", "note": "<one or two sentences>"}`;
+{"good": true or false, "verdict": "natural or awkward or wrong", "better": "<more natural or correct line, or empty>", "note": "<one short sentence>"}`;
 }
 
 /**
@@ -476,12 +477,12 @@ Also sort it into one of three verdicts:
 - "awkward": completely grammatical and understandable, but no native would phrase it like this here (clumsy, stiff or odd word choice) — still counts as a pass; give the more natural way in "better".
 - "wrong": the meaning changed or got lost, or there is any grammar mistake (wrong verb form or tense, wrong preposition or particle, wrong agreement), even if the meaning still comes through — give the correct way in "better".
 When in doubt between "natural" and "awkward", choose "natural"; when in doubt between "awkward" and "wrong" because of a grammar slip, choose "wrong".
-"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation.
+"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural") — the learner's own line with only what is wrong or unnatural changed, keeping every word that was fine (do not swap in the script line or rephrase correct parts, e.g. a full form for a contraction). In the note, for "awkward" say briefly why the better line sounds more natural. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation.
 
 The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what is off in how the pattern was used and how to fix it. When "good" is true, one short line on what worked.
 
 Reply as JSON only, politely and in one consistent level of politeness:
-{"good": true or false, "verdict": "natural or awkward or wrong", "better": "<more natural or correct line, or empty>", "note": "<one or two sentences>"}`;
+{"good": true or false, "verdict": "natural or awkward or wrong", "better": "<more natural or correct line, or empty>", "note": "<one short sentence>"}`;
 }
 
 export function parsePractice(raw: string): Practice | null {
