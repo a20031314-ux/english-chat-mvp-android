@@ -138,7 +138,8 @@ export function originalHighlightParts(
     return [
       ...(focus.before ? [{ text: focus.before, error: false }] : []),
       ...originalHighlightParts(focus.core.trimEnd(), corrected),
-      ...(focus.after || /\s$/.test(focus.core) ? [{ text: (/\s$/.test(focus.core) ? " " : "") + focus.after, error: false }] : []),
+      // 잘라 낸 공백을 그대로 돌려줘 글자 위치가 원문과 같게(채팅 말풍선 tokenDiffMarks가 위치로 맞춤).
+      ...(focus.after || focus.core !== focus.core.trimEnd() ? [{ text: focus.core.slice(focus.core.trimEnd().length) + focus.after, error: false }] : []),
     ];
   }
   const diffs = diffWords(original, corrected);

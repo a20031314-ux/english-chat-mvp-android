@@ -81,6 +81,10 @@ test("고친 문장이 줄의 한 문장만이면 그 문장만 맞댐 — 맞�
   assert.equal(strike("Ayer fui al cine. Mañana voy a la playa con mis amigo.", "Mañana voy a la playa con mis amigos."), "amigo.");
   assert.ok(!strike("昨日は学校に行きました。今日はいそがしいです。", "今日は忙しかったです。").includes("昨"), "앞 문장 그대로");
   assert.equal(originalHighlightParts("Hi, I was reading a book. What was you doing?", "What were you doing?").map((p) => p.text).join(""), "Hi, I was reading a book. What was you doing?", "글은 그대로 다 보임");
+  const spaced = "Hi, I was reading a book.  What was you doing?";
+  assert.equal(originalHighlightParts(spaced, "What were you doing?").map((p) => p.text).join(""), spaced, "공백 둘도 그대로");
+  const marks = tokenDiffMarks(["Hi,", " ", "I", " ", "was", " ", "reading", " ", "a", " ", "book.", " ", "What", " ", "was", " ", "you", " ", "doing?"], "Hi, I was reading a book. What was you doing?", "What were you doing?", "original");
+  assert.deepEqual([...marks.marks.keys()], [14], "채팅 말풍선도 뒤 was만");
   // 한 문장 줄은 예전대로.
   assert.equal(strike("I go to park yesterday.", "I went to the park yesterday."), "go");
 });
