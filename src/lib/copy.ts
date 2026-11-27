@@ -10,7 +10,7 @@ export const APP_LOCALE_STORAGE_KEY = "appUiLocale";
 /** UI languages follow learning languages — do not maintain a separate list. */
 
 const generatedRoleplayOverlay = {
-  roleplayPause: "Pause",
+  roleplayPause: "Hang up",
   roleplayResume: "Carry on",
   roleplayPast: "Past conversations",
   roleplayTimeLeft: "About {minutes} min of calls left",
@@ -903,7 +903,7 @@ export const copy = {
     roleplayReviewLoading: "돌아보는 중…",
     roleplayReviewFailed: "지금은 회고를 만들지 못했어요. 잠시 후 다시 눌러보세요.",
     roleplayOutOfPoints: "무료로 쓸 수 있는 통화 학습 시간을 다 썼어요. 구독하면 이어서 할 수 있어요.",
-    roleplayPause: "중단",
+    roleplayPause: "끊기",
     roleplayResume: "이어서 하기",
     roleplayPast: "지난 대화",
     roleplayTimeLeft: "남은 통화 시간 약 {minutes}분",
@@ -1718,7 +1718,7 @@ export const copy = {
     roleplayReviewLoading: "Looking back…",
     roleplayReviewFailed: "Couldn't put this together just now. Try the button again in a moment.",
     roleplayOutOfPoints: "That's the free call practice used up. A subscription carries on from here.",
-    roleplayPause: "Pause",
+    roleplayPause: "Hang up",
     roleplayResume: "Carry on",
     roleplayPast: "Past conversations",
     roleplayTimeLeft: "About {minutes} min of calls left",
@@ -2533,7 +2533,7 @@ export const copy = {
     roleplayReviewLoading: "Repasando…",
     roleplayReviewFailed: "No se pudo preparar ahora mismo. Vuelve a pulsar en un momento.",
     roleplayOutOfPoints: "Has agotado la práctica de llamada gratuita. La suscripción continúa desde aquí.",
-    roleplayPause: "Pausar",
+    roleplayPause: "Colgar",
     roleplayResume: "Continuar",
     roleplayPast: "Conversaciones anteriores",
     roleplayTimeLeft: "Te quedan unos {minutes} min de llamada",
