@@ -36,7 +36,7 @@
 
 | 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |
 |---|---|---|---|---|
-| 튜터 프로필 | 사람 프로필과 같은 틀 — 소개 · 📞 통화 문 하나 · 숙제 · 마지막 메모 · 팔로우·메시지·통화 기록 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/AiTutorProfile.tsx` · `lib/roleplay/tutorDesk.ts` |  |
+| 튜터 프로필 | 사람 프로필과 같은 틀 — 소개 · 📞 통화 문 하나 · 숙제 · 마지막 메모(누르면 그 통화 돌아보기) · 팔로우·메시지·통화 기록 | 1 메인 · 2 My · 3 AI · 4 사람 | `components/AiTutorProfile.tsx` · `lib/roleplay/tutorDesk.ts` |  |
 | 사람 `homeTabPeople` | 맨 위 AI 튜터 둘 + 사람 카드·프로필(팔로우·메시지·메이트·차단·신고) | 1 메인 · 2 My · 4 사람 | `components/rooms/PeopleTab.tsx` · `components/rooms/RoomPeople.tsx` |  |
 | 게시판 | 학습 언어별, 주제 칩 자유·질문·메이트·단체방 | 4 사람 | `components/rooms/BoardView.tsx` |  |
 | 아이콘·짤 | 1:1·단체방·게시판 🙂 — 마켓(받기·신고)·편집기 | 4 사람 | `components/rooms/IconPacks.tsx` · `components/rooms/IconEditor.tsx` |  |

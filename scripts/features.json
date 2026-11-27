@@ -10,7 +10,7 @@
 
     { "id": "tutor-row", "area": "talk", "name": "AI 튜터 줄", "copy": null, "does": "대화 탭 맨 위 — 고른·팔로우한 튜터마다 한 줄, 마지막 말, 📞 통화 문 하나, 숙제 줄·점", "code": ["src/components/AiTutorRow.tsx", "src/lib/tutorFollows.ts"], "status": "live" },
 
-    { "id": "tutor-profile", "area": "people", "name": "튜터 프로필", "copy": null, "does": "사람 프로필과 같은 틀 — 소개 · 📞 통화 문 하나 · 숙제 · 마지막 메모 · 팔로우·메시지·통화 기록", "code": ["src/components/AiTutorProfile.tsx", "src/lib/roleplay/tutorDesk.ts"], "status": "live" },
+    { "id": "tutor-profile", "area": "people", "name": "튜터 프로필", "copy": null, "does": "사람 프로필과 같은 틀 — 소개 · 📞 통화 문 하나 · 숙제 · 마지막 메모(누르면 그 통화 돌아보기) · 팔로우·메시지·통화 기록", "code": ["src/components/AiTutorProfile.tsx", "src/lib/roleplay/tutorDesk.ts"], "status": "live" },
 
     { "id": "ai-chat", "area": "chat", "name": "AI 채팅", "copy": "homeTabChat", "does": "튜터별 대화방, 입력창 하나(학습 언어면 대화, 편한 말이면 학습 언어로 이어감 + 표현 보기), 교정 칩", "code": ["src/components/ChatWindow.tsx", "src/components/MessageBubble.tsx"], "status": "live" },
 

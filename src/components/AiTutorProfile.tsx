@@ -312,12 +312,7 @@ export function AiTutorSheet({
         </div>
       ) : null}
       {desk.memo?.summary ? (
-        <div data-tutor-memo className="mt-3 rounded-xl bg-surface-sunk p-3">
-          <p className="text-caption text-slate-400">{shortDay(desk.memo.at, locale)}</p>
-          <p dir="auto" className="mt-1 whitespace-pre-line text-body leading-relaxed text-slate-200">
-            {desk.memo.summary}
-          </p>
-        </div>
+        <MemoCard memo={desk.memo} locale={locale} label={ui.packSeeRetro} onLeave={onClose} />
       ) : null}
       {/* 사람 프로필처럼: 팔로우(대화 탭에 그 튜터 줄) · 메시지(그 튜터와의 AI 대화) · 통화 기록 — 차단·신고는 기본 튜터라 없음. */}
       <div className="mt-4 grid grid-cols-3 gap-2 border-t border-white/10 pt-3">
@@ -339,5 +334,40 @@ export function AiTutorSheet({
         ) : null}
       </div>
     </ProfileFrame>
+  );
+}
+
+/**
+ * 마지막 메모 — 그 통화가 통화 기록에 아직 있으면 눌러서 그 통화 돌아보기(대본·메모)를 연다(사용자 2026-11-28).
+ * 기록이 20통 밖으로 밀려 없으면 글만.
+ */
+function MemoCard({ memo, locale, label, onLeave }: { memo: CallNote; locale: string; label: string; onLeave: () => void }) {
+  const kept = readCalls().some((call) => call.id === memo.id);
+  const body = (
+    <>
+      <p className="flex items-center text-caption text-slate-400">
+        {shortDay(memo.at, locale)}
+        {kept ? <span aria-hidden className="ms-auto text-title leading-none text-slate-500">›</span> : null}
+      </p>
+      <p dir="auto" className="mt-1 whitespace-pre-line text-body leading-relaxed text-slate-200">
+        {memo.summary}
+      </p>
+    </>
+  );
+  if (!kept) return <div data-tutor-memo className="mt-3 rounded-xl bg-surface-sunk p-3">{body}</div>;
+  return (
+    <button
+      type="button"
+      data-tutor-memo
+      aria-label={label}
+      title={label}
+      onClick={() => {
+        onLeave();
+        sendAppIntent("openCall", { id: memo.id });
+      }}
+      className="mt-3 block w-full rounded-xl bg-surface-sunk p-3 text-start hover:bg-white/5"
+    >
+      {body}
+    </button>
   );
 }

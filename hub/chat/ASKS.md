@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (224)
+## 탭이 확인할 것 (227)
 
 ### 탭 1 메인
 
@@ -53,6 +53,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-69 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-72** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/server/voxtralSpeech.ts:167 — 스트림 읽기 오류·20초 제한도 done으로 보고 정상 close — 잘린 소리가 공용 캐시에 들어갈 수 있음 — 끝 표시 없으면 오류로 → realtime 대체
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-72 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-4-1** (2026-11-28 08:42, 탭 4 · d822766) 튜터 프로필 마지막 메모를 누르면 그 통화 돌아보기
+  - 기능: 처음 언어·튜터 고르기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 사람 · 오늘의 학습
+  - 볼 곳: `components/LanguagePick.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-3-3** (2026-11-28 07:57, 탭 3 · 25f4b52) 통화 끝 튜터 메모가 앱 언어가 아니면 한 번 더 쓰게 하고, 그래도 아니면 메모를 안 보냄(roleplay/context)
   - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `components/FindInMy.tsx` · `app/api/curriculum/qbank/seed/route.ts` · `components/EnglishAnalysisViewer.tsx` · `components/EnglishAnalysisProvider.tsx` · `app/api/account/config/route.ts` · `app/api/account/delete/route.ts` · `app/api/account/email/start/route.ts` · `app/api/account/email/verify/route.ts` · `app/api/account/google/route.ts` · `app/api/account/me/route.ts` … 34개 더
@@ -376,6 +380,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-17 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-18** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/curriculum/scriptChoice.ts:13 — fillBlank가 띄어쓰기 언어면 빈칸 앞뒤에 늘 공백 — 낱말 중간에서 끊기는 줄(ko 조사 등)은 정답도 틀림, 원문 경계에 공백이 있을 때만
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-18 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-4-2** (2026-11-28 08:42, 탭 4 · d822766) 튜터 프로필 마지막 메모를 누르면 그 통화 돌아보기
+  - 기능: 처음 언어·튜터 고르기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 사람 · 오늘의 학습
+  - 볼 곳: `components/studyMap/TodayCards.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-3-4** (2026-11-28 07:57, 탭 3 · 25f4b52) 통화 끝 튜터 메모가 앱 언어가 아니면 한 번 더 쓰게 하고, 그래도 아니면 메모를 안 보냄(roleplay/context)
   - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
   - 볼 곳: `app/api/curriculum/script/route.ts` · `app/api/curriculum/scripts/route.ts` · `app/api/curriculum/stages/route.ts` · `app/api/notebook/route.ts` · `components/studyMap/ScriptPractice.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/Quizbank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/notes/NotebookSection.tsx` · `app/api/curriculum/words/route.ts` … 21개 더
@@ -599,6 +607,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261127-watch-4 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261126-watch-1** 🔧 고칠 것 (2026-11-26 05:27, 변경 감시) src/components/roleplay/CallReplay.tsx:620 — 대화 시뮬레이션 틀린 줄 판단(fetchPractice)을 받는 중에도 '다음'이 눌려 onDone이 옛 ok로 한 번만 보고 → 화면은 ✓인데 저장 점수·숙제 결과(noteReplayResult)는 틀림 (받는 중엔 다음을 막거나 모든 판단 뒤에 끝 보고)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261126-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-4-3** (2026-11-28 08:42, 탭 4 · d822766) 튜터 프로필 마지막 메모를 누르면 그 통화 돌아보기
+  - 기능: 처음 언어·튜터 고르기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 사람 · 오늘의 학습
+  - 볼 곳: `components/ChatWindow.tsx` · `components/roleplay/CallParts.tsx` · `components/roleplay/CallReplay.tsx`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261127-2-2** (2026-11-27 18:28, 탭 2 · 5f0cd54) 체감 점검 표시 고침: Quizbank·수업 퀴즈 반복·뜻 줄·제목 가림, 문장구조 빈칸 뜻 먼저, 숙제 틀린 곳(diffSpan), 대화 시뮬레이션 채점 표시·코치 note
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `components/roleplay/CallReplay.tsx` · `components/RoleplayPast.tsx` · `components/RoleplayScreen.tsx` · `app/api/chat/route.ts` · `app/api/roleplay/context/route.ts` · `app/api/roleplay/review/route.ts` · `app/api/roleplay/turn/route.ts` · `app/api/roleplay/practice/route.ts` · `components/speech/Attempt.tsx` · `components/CallHost.tsx` … 30개 더
