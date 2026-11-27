@@ -87,3 +87,17 @@ test("날 지난 예정은 그 날 뒤에 한 번 물었으면 끝", () => {
   assert.equal(followUpFact(prior, [{ who: "tutor" }]), null);
   assert.ok(followUpFact(prior.replace(" [asked 2026-11-25]", ""), [{ who: "tutor" }]));
 });
+
+test("한 번 한 일·좋아하는 것·습관을 나눠 묻는다", () => {
+  const hello = [{ who: "tutor" }];
+  const prior = [
+    "Today is 2026-11-28.",
+    "2026-11-27: done 2026-11-27: They went to a café with a friend.",
+    "2026-11-27: like: Les encanta hacer ejercicio.",
+    "2026-11-20: habit: 毎朝ジムに行く。",
+  ].join("\n");
+  assert.match(followUpFact(prior, hello) ?? "", /café/, "어제 한 일은 '어땠어?' 한 번");
+  assert.match(followUpFact(`${prior.replace("friend.", "friend. [asked 2026-11-28]")}`, hello) ?? "", /ジム/, "물었으면 다음은 습관 — 좋아하는 것은 안 물음");
+  assert.equal(followUpFact("Today is 2026-11-28.\n2026-11-27: like: Les encanta hacer ejercicio.", hello), null);
+  assert.equal(followUpFact("Today is 2026-12-05.\n2026-11-27: done 2026-11-27: They went to a café.", hello), null, "3일 지난 한 번 한 일은 안 물음");
+});

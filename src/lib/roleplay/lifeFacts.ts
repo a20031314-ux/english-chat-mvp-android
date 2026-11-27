@@ -140,7 +140,8 @@ const ASK_AGAIN_DAYS = { habit: 7, other: 14 } as const;
 
 /**
  * 이어 물을 기억 하나(사용자 2026-11-22 "오늘도 운동 갔어? 식의 대화") — 열린 통화 초반, 튜터 말이 한두 번 나간 뒤에만.
- * prior = lifeFactsPrompt("Today is D.\nD: kind: text[ [asked D]]"). 고르는 순서: 날이 지난 지 7일 안의 예정 → 습관 → 아직 올 예정(오늘 포함) → 그 밖(7일 넘게 지난 예정은 뺌), 같은 종류 안에서는 날마다 돌려 가며.
+ * prior = lifeFactsPrompt("Today is D.\nD: kind: text[ [asked D]]"). 종류: habit(되풀이) · like(좋아함 — 묻지 않음) · done D(한 번 한 일 — 3일 안 한 번만) · plan D · about(늘 그런 것).
+ * 고르는 순서: 날이 지난 지 7일 안의 예정 → 3일 안에 한 번 한 일 → 습관 → 아직 올 예정(오늘 포함) → 그 밖(7일 넘게 지난 예정은 뺌), 같은 종류 안에서는 날마다 돌려 가며.
  * 최근에 이어 물은 기억([asked D])은 쉰다 — 통화를 몇 번 해도 같은 걸 또 묻지 않게(사용자 2026-11-28).
  */
 export function followUpFact(prior: string | undefined, history: readonly { who: string }[]): string | null {
@@ -158,6 +159,15 @@ export function followUpFact(prior: string | undefined, history: readonly { who:
     const asked = match[2];
     const plan = /^plan(?: (\d{4}-\d{2}-\d{2}))?:/i.exec(fact);
     const habit = /^habit:/i.test(fact);
+    // 좋아하는 것은 묻지 않는다(화제로만 — 기억 목록에 남음). 한 번 한 일은 그 날부터 3일 안, 한 번만 "어땠어?"(사용자 2026-11-28 "그때 카페를 갔다와 운동을 좋아한다는 다르잖아").
+    if (/^like:/i.test(fact)) continue;
+    const once = /^done(?: (\d{4}-\d{2}-\d{2}))?:/i.exec(fact);
+    if (once) {
+      const ago = daysSince(once[1] ?? line.trim().slice(0, 10));
+      if (asked || ago > 3) continue;
+      ranked.push({ rank: 3.5, line: line.trim() });
+      continue;
+    }
     // 날 지난 예정은 그 날부터 7일 안에만 맨 앞(그 뒤엔 답을 들었을 것 — 통화마다 또 묻지 않게), 오늘 예정은 아직 올 예정(11-22 변경 감시).
     const due = plan?.[1] ? daysSince(plan[1]) : null;
     if (asked) {
