@@ -407,11 +407,12 @@ export function RoleplayReviewPanel({
       >
         {/* 통화 중 💡 힌트(turn.live): 지금 이어 말할 말 — 이름은 기존 문구 missionHint·roleplayBetter·roleplayResume. */}
         <h3 className="text-sm font-semibold text-white">{turn.live ? `💡 ${ui.missionHint}` : ui.roleplayReviewTitle}</h3>
-        <p className="mt-1 text-[12px] text-neutral-500">{turn.asked}</p>
+        {/* 💡는 조각만 — 물은 말·설명·뜻은 안 보임(사용자 2026-11-28). */}
+        {turn.live ? null : <p className="mt-1 text-[12px] text-neutral-500">{turn.asked}</p>}
 
         {review ? (
           <>
-            {review.why ? (
+            {review.why && !turn.live ? (
               <p className="mt-3 whitespace-pre-line text-[13px] leading-relaxed text-neutral-200">
                 {review.why}
               </p>
@@ -423,14 +424,13 @@ export function RoleplayReviewPanel({
                   <li key={piece.text} className="flex items-start gap-2 rounded-xl bg-white/5 px-3 py-2">
                     <div className="min-w-0 flex-1">
                       <p dir="auto" className="text-chat text-slate-100">{piece.text}</p>
-                      {piece.meaning ? <p dir="auto" className="mt-0.5 text-meta text-slate-500">{piece.meaning}</p> : null}
                     </div>
                     <TTSButton text={piece.text} className="shrink-0" />
                   </li>
                 ))}
               </ul>
             ) : null}
-            {review.say ? (
+            {review.say && !(turn.live && review.pieces?.length) ? (
               <div className="mt-3 rounded-xl bg-white/5 p-3">
                 <p className="text-[11px] text-neutral-500" {...(turn.live ? { title: ui.roleplayReviewSay, "aria-label": ui.roleplayReviewSay } : {})}>
                   {turn.live ? "✎" : ui.roleplayReviewSay}

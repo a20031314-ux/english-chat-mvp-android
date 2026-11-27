@@ -200,10 +200,16 @@ ${transcript}
 The ${input.tutorRole} has just said "${turn.asked}".
 ${started}
 
-Do not give them a whole answer and do not explain or translate what they were asked: they heard it, they need words. Give them only what they are missing.
+Do not give them a whole answer and do not explain or translate what they were asked: they heard it, they need words. Give them only what they are missing.${
+    input.legacyHint
+      ? `
 - "pieces": two or three short expressions in ${input.targetLanguage} they can use in their answer right now — each two to five words, a chunk a speaker would really say here: a verb phrase, a time word with its preposition, a way to start the answer. Never a complete sentence, never the whole answer, not names or numbers alone. ${turn.heard ? `Put first the one thing they seem stuck on, guessed from what they started: the ${input.targetLanguage} word for a word they said in ${input.nativeLanguage}, the form of a word they got wrong, or the words that carry on from where they stopped. ` : ""}Each with "meaning": what it means in ${input.nativeLanguage}, nothing else.
 - "why": ${turn.heard ? `at most one short phrase in ${input.nativeLanguage} naming that one thing (for example which word or which form), or "" when nothing in particular is wrong` : `""`}. Never a description of the question, no praise, no scolding.
-Write "why" and every "meaning" only in ${input.nativeLanguage} — the learner reads ${input.nativeLanguage}, not ${input.targetLanguage} or English; quote a ${input.targetLanguage} word inside it only when you name it.${
+Write "why" and every "meaning" only in ${input.nativeLanguage} — the learner reads ${input.nativeLanguage}, not ${input.targetLanguage} or English; quote a ${input.targetLanguage} word inside it only when you name it.`
+      : `
+- "pieces": two or three openings in ${input.targetLanguage} that start their answer and stop just before the part only they can fill in (their own job, place, time, thing) — two to five words each, the way a speaker would really begin here. ${turn.heard ? `Put first the words that carry on from where they stopped, or the ${input.targetLanguage} word for a word they said in ${input.nativeLanguage}. ` : ""}Never a complete sentence, never the whole answer, no alternatives joined with "/", no names or numbers alone, nothing in ${input.nativeLanguage}.
+The learner sees only these openings: no explanation, no translation, no repeated question.`
+  }${
     input.focus
       ? `
 
@@ -221,8 +227,16 @@ This app version shows only "why", "say" and "meaning", not the pieces. So also 
 
 Reply as JSON only: {"why": "<${input.nativeLanguage} or empty>", "pieces": [{"text": "<${input.targetLanguage}>", "meaning": "<${input.nativeLanguage}>"}], "say": "<${input.targetLanguage}>", "meaning": "<${input.nativeLanguage}>"}`
       : `
-Reply as JSON only: {"why": "<${input.nativeLanguage} or empty>", "pieces": [{"text": "<${input.targetLanguage}>", "meaning": "<${input.nativeLanguage}>"}]}`
+Reply as JSON only: {"pieces": [{"text": "<${input.targetLanguage}>"}]}`
   }`;
+}
+
+/**
+ * 통화 중 💡 힌트는 말 그대로 힌트 — 시작 조각만(사용자 2026-11-28 "알려드릴게요 이런 텍스트 없이").
+ * 모델이 설명·뜻을 붙여 와도 조각 그리는 앱(2.80~)에는 조각 글자만 보낸다.
+ */
+export function hintOnly(review: Review): Review {
+  return { why: "", say: "", meaning: "", ...(review.pieces?.length ? { pieces: review.pieces.map((piece) => ({ text: piece.text, meaning: "" })) } : {}) };
 }
 
 /** The review out of the model's answer, or null when there is nothing to show. */

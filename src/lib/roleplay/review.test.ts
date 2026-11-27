@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { REVIEW_LINES, parseReview, reviewPrompt, type StuckTurn } from "./review.ts";
+import { REVIEW_LINES, hintOnly, parseReview, reviewPrompt, type StuckTurn } from "./review.ts";
 
 function turn(partial: Partial<StuckTurn> = {}): StuckTurn {
   return {
@@ -18,13 +18,15 @@ function turn(partial: Partial<StuckTurn> = {}): StuckTurn {
   };
 }
 
-function prompt(partial: Partial<StuckTurn> = {}): string {
+function prompt(partial: Partial<StuckTurn> & { legacyHint?: boolean } = {}): string {
+  const { legacyHint, ...rest } = partial;
   return reviewPrompt({
+    ...(legacyHint ? { legacyHint } : {}),
     tutorRole: "barista",
     setting: "A café counter at lunchtime.",
     targetLanguage: "English",
     nativeLanguage: "Korean",
-    turn: turn(partial),
+    turn: turn(rest),
   });
 }
 
@@ -94,7 +96,10 @@ test("통화 중 힌트는 문장 대신 쓸 수 있는 표현 조각을 묻는�
   assert.match(live, /paused, waiting for their answer/);
   assert.match(live, /"I want to 예약 a"/);
   assert.match(live, /carry on from where they stopped/);
-  assert.match(live, /seem stuck on/);
+  assert.match(live, /stop just before the part only they can fill in/);
+  assert.match(live, /no alternatives joined with "\/"/);
+  assert.doesNotMatch(live, /"why"/, "💡는 설명을 안 받는다(사용자 2026-11-28)");
+  assert.doesNotMatch(live, /"meaning"/, "💡는 뜻도 안 받는다");
   assert.match(live, /do not explain or translate what they were asked/);
   assert.match(live, /Never a complete sentence/);
   assert.doesNotMatch(live, /"say"/);
@@ -102,8 +107,18 @@ test("통화 중 힌트는 문장 대신 쓸 수 있는 표현 조각을 묻는�
   assert.doesNotMatch(live, /already moved on/, "돌아보기 문구가 아니다");
   const silent = prompt({ live: true, heard: "" });
   assert.match(silent, /not managed to say anything yet/);
-  assert.doesNotMatch(silent, /seem stuck on/);
-  assert.match(silent, /"why": ""/);
+  assert.doesNotMatch(silent, /carry on from where they stopped/);
+  const legacy = prompt({ live: true, heard: "", legacyHint: true });
+  assert.match(legacy, /"why": ""/, "옛 앱(2.79 이하)은 why·say로만 그린다");
+  assert.match(legacy, /"say"/);
+});
+
+test("hintOnly: 💡 답에서 설명·뜻을 빼고 조각 글자만 — 영어·일본어", () => {
+  const en = hintOnly({ why: "친구가 직업을 물어봤어요. 알려드릴게요.", say: "", meaning: "", pieces: [{ text: "I work as a", meaning: "저는 ~로 일해요" }] });
+  assert.deepEqual(en, { why: "", say: "", meaning: "", pieces: [{ text: "I work as a", meaning: "" }] });
+  const ja = hintOnly({ why: "", say: "", meaning: "", pieces: [{ text: "仕事は", meaning: "일은" }] });
+  assert.equal(ja.pieces?.[0]?.text, "仕事は");
+  assert.equal(ja.pieces?.[0]?.meaning, "");
 });
 
 test("통화 중 힌트: 설명 없이 조각만 와도 보인다, 둘 다 없으면 없음 (en·es)", () => {

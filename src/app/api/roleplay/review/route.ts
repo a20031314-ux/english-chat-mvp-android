@@ -4,7 +4,7 @@ import { NextRequest, after } from "next/server";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
 import { readSpokenLines } from "@/lib/roleplay/director";
-import { parseReview, reviewPrompt, type StuckTurn } from "@/lib/roleplay/review";
+import { hintOnly, parseReview, reviewPrompt, type StuckTurn } from "@/lib/roleplay/review";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -124,7 +124,7 @@ export async function POST(request: NextRequest) {
     if (!review) {
       return jsonWithCors(request, { error: "NO_REVIEW" }, { status: 502 });
     }
-    return jsonWithCors(request, review);
+    return jsonWithCors(request, turn.live && !legacyHint(request.headers) ? hintOnly(review) : review);
   } catch (error) {
     console.error("[roleplay/review]", error);
     return jsonWithCors(request, { error: "REVIEW_FAILED" }, { status: 502 });

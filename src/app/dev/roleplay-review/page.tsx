@@ -67,6 +67,13 @@ const CASES: { label: string; turn: StuckTurn; review: Review | null; failed: bo
     },
     failed: false,
   },
+  {
+    // 통화 중 💡 — 조각만(물은 말·설명·뜻 없음, 사용자 2026-11-28).
+    label: "💡 통화 중 힌트",
+    turn: { asked: "Talking about your job is a good place to start. What kind of job do you do?", heard: "", attempts: 1, hesitationMs: 6000, history: [], live: true },
+    review: { why: "", say: "", meaning: "", pieces: [{ text: "I work as a", meaning: "" }, { text: "I work at", meaning: "" }, { text: "My job is", meaning: "" }] },
+    failed: false,
+  },
   { label: "만드는 중", turn: SIZE_TURN, review: null, failed: false },
   { label: "실패", turn: SIZE_TURN, review: null, failed: true },
 ];

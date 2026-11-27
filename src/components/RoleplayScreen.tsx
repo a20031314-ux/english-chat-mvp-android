@@ -793,7 +793,7 @@ export function RoleplayScreen({
     if (hinted) {
       // 힌트가 표현 조각이면(2026-11-08) 조각들을 · 로 이어 남긴다.
       const tip = hinted.pieces?.length
-        ? hinted.pieces.map((piece) => (piece.meaning ? `${piece.text} — ${piece.meaning}` : piece.text)).join(" · ")
+        ? hinted.pieces.map((piece) => piece.text).join(" · ")
         : hinted.meaning ? `${hinted.say} — ${hinted.meaning}` : hinted.say;
       setSaid((current) => tipOnLastTutorLine(current, tip));
     }
