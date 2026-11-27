@@ -518,17 +518,6 @@ export function FrameLesson({
               ))}
             </ul>
             <div className="flex items-center justify-end gap-2">
-              {/* The first screen shows what this lesson teaches, so a learner who knows it can skip — the next test checks it (user, 2026-11-01). */}
-              {!passed && !justPassed ? (
-                <button
-                  type="button"
-                  data-lesson-known
-                  onClick={onClose}
-                  className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10"
-                >
-                  {ui.lessonKnownSkip}
-                </button>
-              ) : null}
               <button type="button" data-lesson-next onClick={goNext} className="rounded-full bg-white/90 px-5 py-1.5 text-caption font-semibold text-slate-900">
                 {ui.lessonToQuiz}
               </button>
