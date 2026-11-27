@@ -1,0 +1,58 @@
+# Play 트랙 버전 읽기 → 허브에 적기 (Play에서 아무것도 바꾸지 않음)
+#
+# 사람이 Play에 올린 버전을 채팅이 기억으로 적으면 늘 늦거나 틀린다(사용자 2026-11-28).
+# 매일 Play API로 트랙마다 versionCode·출시 이름을 읽어(fastlane track_versions, 읽기만)
+# hub/STATE.md "Play에 올라간 앱"과 hub/app/play-versions.md를 고치고, 바뀌었을 때만 main에 커밋한다.
+# 허브만 바뀐 커밋이라 Vercel은 다시 배포하지 않는다(vercel.json).
+name: "Play: 트랙 버전 읽기"
+
+on:
+  schedule:
+    # 매일 09:17·21:17 한국 시간
+    - cron: "17 0,12 * * *"
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/play-versions.yml
+      - scripts/play-versions.mjs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: play-versions
+
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/play-setup
+        with:
+          play-json: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+      - name: 트랙 버전 읽기 (읽기만)
+        env:
+          PLAY_VERSIONS_OUT: ${{ runner.temp }}/play-versions.json
+        run: |
+          bundle exec fastlane android track_versions
+          cat "$PLAY_VERSIONS_OUT"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 허브에 적기
+        run: node scripts/play-versions.mjs "${{ runner.temp }}/play-versions.json"
+      - name: 바뀌었으면 커밋
+        run: |
+          if git diff --quiet -- hub/STATE.md hub/app/play-versions.md && [ -z "$(git status --porcelain hub/app/play-versions.md)" ]; then
+            echo "Play 버전 그대로"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hub/STATE.md hub/app/play-versions.md
+          git commit -m "Play 트랙 버전 자동 갱신"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1

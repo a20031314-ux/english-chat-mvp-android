@@ -104,6 +104,7 @@
   처음 한 번(스크립트가 PC에 없을 때)만: `git checkout -- android/app/build.gradle package-lock.json; git pull` 후 `npm run pc:build`. `npm install`을 쓰면 PC에서 lock 파일이 바뀌어 다음 pull이 막힌다(2026-10-18 겪음).
 - 업데이트 배너: 2.67부터는 폰이 Play에 직접 물어 출시마다 저절로 뜬다. `RECOMMENDED_APP_VERSION`은 2.66 이하 옛 빌드용 — 그 버전이 Play에서 받을 수 있을 때만 올린다(사용자에게 확인).
 - Play 업로드·서명·fastlane은 사람이 한다.
+- **Play에 올라간 버전은 기억으로 적지 않는다**(사용자 2026-11-28 "2.81이 올라가 있는데 허브엔 2.79 — 되풀이"): 워크플로 `play-versions`가 하루 두 번 Play API로 읽어 STATE "Play에 올라간 앱"·`hub/app/play-versions.md`를 고친다. 그 칸은 손으로 바꾸지 않고, 저장소 versionCode보다 Play가 높다고 적히면 저장소 버전부터 맞춘다.
 
 ## 데이터·보안
 - 학습자 문장은 서버에 저장하지 않는다(표현만). 예외 둘: 사용자가 직접 보낸 "의견 보내기"(90일), **노트의 짚은 장면 카드**(튜터가 고친 줄만, `notebook:v1`, 계정·학습 id를 지우면 함께 — 사용자 결정 2026-10-23). 다른 곳에 문장을 남기려면 사용자에게 먼저 묻는다.

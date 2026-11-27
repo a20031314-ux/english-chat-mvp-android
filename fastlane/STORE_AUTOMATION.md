@@ -175,3 +175,8 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
 ## 로컬에서 확인
 - `npm run check:store` : 등록정보 점검
 - `npm run check:store -- --version-code current` : 현재 versionCode 출시 노트까지 점검
+
+## Play 트랙 버전 읽기 (`play-versions.yml`, 읽기만)
+
+하루 두 번 `fastlane android track_versions`로 트랙마다 versionCode·출시 이름을 읽어 `scripts/play-versions.mjs`가
+`hub/STATE.md` "Play에 올라간 앱"과 `hub/app/play-versions.md`를 고친다. Play에서 바꾸는 것은 없다.

@@ -8,6 +8,7 @@
 #   internal       build a signed bundle and upload it to a testing track
 #   promote        move a tested release to production at a rollout fraction
 #   rollout        change the production rollout fraction, or halt it
+#   track_versions read which versionCode / release name is on each track (read only)
 #
 # Full guide: fastlane/STORE_AUTOMATION.md
 
@@ -27,6 +28,25 @@ platform :android do
   desc "Download the live store listing into fastlane/metadata (changes nothing on Play)"
   lane :pull_listing do
     download_from_play_store(metadata_path: METADATA_PATH)
+  end
+
+  desc "Write which versionCodes and release names are on each track to PLAY_VERSIONS_OUT (read only)"
+  lane :track_versions do
+    out = ENV["PLAY_VERSIONS_OUT"] || "play-versions.json"
+    tracks = {}
+    %w[production beta alpha internal].each do |track|
+      begin
+        tracks[track] = {
+          "codes" => google_play_track_version_codes(track: track),
+          "names" => google_play_track_release_names(track: track),
+        }
+      rescue => e
+        UI.important("#{track}: #{e.message}")
+        tracks[track] = { "codes" => [], "names" => [], "error" => e.message.to_s[0, 200] }
+      end
+    end
+    File.write(out, JSON.pretty_generate({ "checkedAt" => Time.now.utc.iso8601, "tracks" => tracks }))
+    UI.success("Play track versions written to #{out}")
   end
 
   desc "Upload listing texts and images only. No bundle, no release."
