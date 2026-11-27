@@ -115,3 +115,15 @@ test("the note is read when it is there, and alone is enough", () => {
   assert.equal(parseMemory('{"notes": "Likes cafés.", "facts": []}')?.summary, undefined);
   assert.equal(parseMemory(`{"notes": "x", "summary": "${"가".repeat(500)}"}`)?.summary?.length, 400);
 });
+
+test("tutor memo must be in the app language — English memo on a Korean app is caught", async () => {
+  const { writtenIn } = await import("../server/stageCopy.ts");
+  assert.equal(writtenIn("ko", 'Thanks for the lovely chat about your book. Next, practise "I usually cook" (not "I cook usually").'), false);
+  assert.equal(writtenIn("ko", '책 이야기 즐거웠어요. 다음엔 "I usually cook"처럼 빈도 말을 동사 앞에 둬 봐요.'), true);
+  assert.equal(writtenIn("ja", "本の話、楽しかったです。次は 'I usually cook' の語順を練習しましょう。"), true);
+  assert.equal(writtenIn("es", "Thanks for the chat."), true, "Latin-script app languages are not checked");
+  const en = contextPrompt({ tutorRole: "friend", setting: "", previous: "", lines: [{ who: "learner", text: "hi" }], today: "2026-11-28", summary: { language: "English", target: "Spanish", name: "Lucia", manner: "warm" } });
+  assert.doesNotMatch(en, /not in English like your notes/);
+  const ko = contextPrompt({ tutorRole: "friend", setting: "", previous: "", lines: [{ who: "learner", text: "hi" }], today: "2026-11-28", summary: { language: "Korean (한국어)", target: "English", name: "Emma", manner: "warm" } });
+  assert.match(ko, /Korean \(한국어\) — not in English like your notes/);
+});

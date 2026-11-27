@@ -10,6 +10,7 @@ import { getOpenAIClient } from "@/lib/server/openai";
 import { chatPartnerForLanguage, serverTutorGender, type TutorGender } from "@/lib/chatPartner";
 import { interfaceLanguagePromptLabel, isLearningLanguageCode, learningLanguageName } from "@/lib/learningLanguages";
 import { tutorPersona } from "@/lib/tutorPersona";
+import { writtenIn } from "@/lib/server/stageCopy";
 
 export const dynamic = "force-dynamic";
 
@@ -68,8 +69,9 @@ export async function POST(request: NextRequest) {
 
   await meterRequest(request, "roleplayContext");
 
-  try {
-    const completion = await completeChat(client, "roleplayContext", {
+  const locale = typeof body.locale === "string" ? body.locale : "";
+  const ask = (strict: boolean) =>
+    completeChat(client, "roleplayContext", {
       messages: [
         {
           role: "system",
@@ -84,16 +86,26 @@ export async function POST(request: NextRequest) {
             ...(opening.length ? { opening: { language: scenario.language, lines: opening } } : {}),
           }),
         },
+        ...(strict && summary ? [{ role: "system" as const, content: `The last "summary" was in the wrong language. Write "summary" in ${summary.language}, quoting ${summary.target} only where needed.` }] : []),
       ],
       response_format: { type: "json_object" },
       max_tokens: summary ? (opening.length ? 1200 : 800) : 500, // Claude 여유(2026-10-22). 노트와 사실 목록(+ 끝이면 튜터 요약).
     });
+
+  try {
+    let completion = await ask(false);
+    // 튜터 메모가 앱 언어가 아니면 한 번 더 — 노트가 영어라 메모도 영어로 쓴 일(운영 2026-11-28 한국어 앱·영어 통화).
+    const first = summary ? parseMemory(completion.choices[0]?.message?.content ?? "") : null;
+    if (summary && first?.summary && !writtenIn(locale, first.summary)) {
+      await meterRequest(request, "roleplayContext");
+      completion = await ask(true);
+    }
     const folded = parseMemory(completion.choices[0]?.message?.content ?? "");
     if (!folded) {
       return jsonWithCors(request, { error: "NO_CONTEXT" }, { status: 502 });
     }
     const tags = opening.length ? readTags(scenario.language, opening, { uses: folded.uses, asks: folded.asks }) : null;
-    return jsonWithCors(request, { notes: folded.notes, facts: folded.facts, ...(summary && folded.summary ? { summary: folded.summary } : {}), ...(summary && folded.topics?.length ? { topics: folded.topics } : {}), ...(tags ? { uses: tags.uses, asks: tags.asks } : {}) });
+    return jsonWithCors(request, { notes: folded.notes, facts: folded.facts, ...(summary && folded.summary && writtenIn(locale, folded.summary) ? { summary: folded.summary } : {}), ...(summary && folded.topics?.length ? { topics: folded.topics } : {}), ...(tags ? { uses: tags.uses, asks: tags.asks } : {}) });
   } catch (error) {
     console.error("[roleplay/context]", error);
     return jsonWithCors(request, { error: "CONTEXT_FAILED" }, { status: 502 });

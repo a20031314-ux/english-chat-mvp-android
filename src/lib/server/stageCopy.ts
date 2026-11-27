@@ -150,6 +150,19 @@ export function looksLike(ui: string, texts: string[]): boolean {
   return hits / lettered.length >= (ui === "vi" ? 0.4 : 0.5);
 }
 
+/**
+ * 튜터 메모 같은 긴 글 하나가 그 앱 언어로 쓰였나 — 따옴표·괄호 속 학습 언어 인용은 빼고, 남은 글자의 30% 넘게 그 문자여야 한다
+ * (운영 2026-11-28 한국어 앱에 영어 통화 메모가 영어로 옴). 라틴 문자 앱 언어는 검사하지 않는다.
+ */
+export function writtenIn(ui: string, text: string): boolean {
+  const pattern = UI_SCRIPT[ui];
+  if (!pattern) return true;
+  const bare = text.replace(/"[^"]*"|“[^”]*”|'[^']*'|‘[^’]*’|「[^」]*」|\([^)]*\)|\[[^\]]*\]/gu, "");
+  const letters = [...bare].filter((one) => /\p{L}/u.test(one));
+  if (!letters.length) return true;
+  return letters.filter((one) => pattern.test(one)).length / letters.length >= 0.3;
+}
+
 /** 라틴 문자가 아닌 앱 언어. */
 const NON_LATIN_UI = new Set(["ja", "zh", "ru", "ar", "th", "hi", "ko"]);
 

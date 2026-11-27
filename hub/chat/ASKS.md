@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (222)
+## 탭이 확인할 것 (224)
 
 ### 탭 1 메인
 
@@ -53,6 +53,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-69 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-72** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/server/voxtralSpeech.ts:167 — 스트림 읽기 오류·20초 제한도 done으로 보고 정상 close — 잘린 소리가 공용 캐시에 들어갈 수 있음 — 끝 표시 없으면 오류로 → realtime 대체
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-72 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-3-3** (2026-11-28 07:57, 탭 3 · 25f4b52) 통화 끝 튜터 메모가 앱 언어가 아니면 한 번 더 쓰게 하고, 그래도 아니면 메모를 안 보냄(roleplay/context)
+  - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `components/FindInMy.tsx` · `app/api/curriculum/qbank/seed/route.ts` · `components/EnglishAnalysisViewer.tsx` · `components/EnglishAnalysisProvider.tsx` · `app/api/account/config/route.ts` · `app/api/account/delete/route.ts` · `app/api/account/email/start/route.ts` · `app/api/account/email/verify/route.ts` · `app/api/account/google/route.ts` · `app/api/account/me/route.ts` … 34개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-3-1** (2026-11-28 06:24, 탭 3 · 6914c57) 통화 중 💡 힌트 창을 시작 조각만으로(물은 말·설명·뜻 안 보임, RoleplayReview turn.live만 바뀜 — 끝난 뒤 돌아보기 창은 그대로)
   - 기능: 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · Logbank · 오늘의 학습 · Quizbank · 소재 수업 · 칸 설명
   - 볼 곳: `app/dev/roleplay-review/page.tsx` · `app/dev/call-preview/page.tsx` · `app/api/account/config/route.ts` · `app/api/account/delete/route.ts` · `app/api/account/email/start/route.ts` · `app/api/account/email/verify/route.ts` · `app/api/account/google/route.ts` · `app/api/account/me/route.ts` · `app/api/account/password/change/route.ts` · `app/api/account/password/login/route.ts` … 33개 더
@@ -372,6 +376,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-17 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-18** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/curriculum/scriptChoice.ts:13 — fillBlank가 띄어쓰기 언어면 빈칸 앞뒤에 늘 공백 — 낱말 중간에서 끊기는 줄(ko 조사 등)은 정답도 틀림, 원문 경계에 공백이 있을 때만
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-18 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-3-4** (2026-11-28 07:57, 탭 3 · 25f4b52) 통화 끝 튜터 메모가 앱 언어가 아니면 한 번 더 쓰게 하고, 그래도 아니면 메모를 안 보냄(roleplay/context)
+  - 기능: 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기
+  - 볼 곳: `app/api/curriculum/script/route.ts` · `app/api/curriculum/scripts/route.ts` · `app/api/curriculum/stages/route.ts` · `app/api/notebook/route.ts` · `components/studyMap/ScriptPractice.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/Quizbank.tsx` · `components/studyMap/StudyMapTab.tsx` · `components/notes/NotebookSection.tsx` · `app/api/curriculum/words/route.ts` … 21개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-3-2** (2026-11-28 06:24, 탭 3 · 6914c57) 통화 중 💡 힌트 창을 시작 조각만으로(물은 말·설명·뜻 안 보임, RoleplayReview turn.live만 바뀜 — 끝난 뒤 돌아보기 창은 그대로)
   - 기능: 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · Logbank · 오늘의 학습 · Quizbank · 소재 수업 · 칸 설명
   - 볼 곳: `components/studyMap/Logbank.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/QuizPlayer.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/StudyMapTab.tsx` · `app/api/curriculum/ask/route.ts` … 15개 더
