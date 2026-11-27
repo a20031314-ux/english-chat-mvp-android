@@ -17,7 +17,8 @@ export const LIFE_ONCE_DAYS = 60;
 /** 여러 번 들었어도 빠지는 날. */
 export const LIFE_KEEP_DAYS = 180;
 
-export type LifeFact = { text: string; at: number; n: number; calls: string[] };
+/** asked = 튜터가 이 기억을 이어 물은 날(followUpFact로 고른 통화가 끝날 때) — 같은 걸 통화마다 묻지 않게(사용자 2026-11-28 "오늘도 카페 갔어?"가 계속). */
+export type LifeFact = { text: string; at: number; n: number; calls: string[]; asked?: number };
 
 type Store = { getItem(key: string): string | null; setItem(key: string, value: string): void };
 
@@ -131,5 +132,57 @@ export function lifeFactsPrompt(facts: readonly LifeFact[], now: number): string
     .sort((a, b) => b.at - a.at)
     .slice(0, LIFE_PROMPT_MAX);
   if (!kept.length) return "";
-  return `Today is ${dayStamp(now)}.\n${kept.map((fact) => `${dayStamp(fact.at)}: ${fact.text}`).join("\n")}`;
+  return `Today is ${dayStamp(now)}.\n${kept.map((fact) => `${dayStamp(fact.at)}: ${fact.text}${fact.asked ? ` [asked ${dayStamp(fact.asked)}]` : ""}`).join("\n")}`;
+}
+
+/** 다시 이어 묻기까지 쉬는 날 — 습관 7일, 그 밖(사람·일·장소) 14일. 날 지난 예정은 그 날 뒤에 한 번 물었으면 끝. */
+const ASK_AGAIN_DAYS = { habit: 7, other: 14 } as const;
+
+/**
+ * 이어 물을 기억 하나(사용자 2026-11-22 "오늘도 운동 갔어? 식의 대화") — 열린 통화 초반, 튜터 말이 한두 번 나간 뒤에만.
+ * prior = lifeFactsPrompt("Today is D.\nD: kind: text[ [asked D]]"). 고르는 순서: 날이 지난 지 7일 안의 예정 → 습관 → 아직 올 예정(오늘 포함) → 그 밖(7일 넘게 지난 예정은 뺌), 같은 종류 안에서는 날마다 돌려 가며.
+ * 최근에 이어 물은 기억([asked D])은 쉰다 — 통화를 몇 번 해도 같은 걸 또 묻지 않게(사용자 2026-11-28).
+ */
+export function followUpFact(prior: string | undefined, history: readonly { who: string }[]): string | null {
+  const tutorSaid = history.filter((line) => line.who === "tutor").length;
+  if (!prior?.trim() || tutorSaid < 1 || tutorSaid > 2) return null;
+  const lines = prior.trim().split("\n");
+  const today = /^Today is (\d{4}-\d{2}-\d{2})/.exec(lines[0] ?? "")?.[1];
+  if (!today) return null;
+  const daysSince = (day: string) => Math.round((Date.parse(`${today}T00:00:00Z`) - Date.parse(`${day}T00:00:00Z`)) / 86_400_000);
+  const ranked: { rank: number; line: string }[] = [];
+  for (const line of lines.slice(1)) {
+    const match = /^\d{4}-\d{2}-\d{2}: (.+?)(?: \[asked (\d{4}-\d{2}-\d{2})\])?$/.exec(line.trim());
+    const fact = match?.[1];
+    if (!fact) continue;
+    const asked = match[2];
+    const plan = /^plan(?: (\d{4}-\d{2}-\d{2}))?:/i.exec(fact);
+    const habit = /^habit:/i.test(fact);
+    // 날 지난 예정은 그 날부터 7일 안에만 맨 앞(그 뒤엔 답을 들었을 것 — 통화마다 또 묻지 않게), 오늘 예정은 아직 올 예정(11-22 변경 감시).
+    const due = plan?.[1] ? daysSince(plan[1]) : null;
+    if (asked) {
+      if (due !== null && due > 0 && asked >= plan![1]!) continue;
+      if (daysSince(asked) < (habit ? ASK_AGAIN_DAYS.habit : ASK_AGAIN_DAYS.other)) continue;
+    }
+    const rank = plan ? (due !== null && due > 0 ? (due <= 7 ? 4 : 0) : 2) : habit ? 3 : 1;
+    if (rank === 0) continue;
+    ranked.push({ rank, line: line.trim() });
+  }
+  if (!ranked.length) return null;
+  const best = Math.max(...ranked.map((one) => one.rank));
+  const pool = ranked.filter((one) => one.rank === best);
+  const dayNumber = Math.floor(Date.parse(`${today}T00:00:00Z`) / 86_400_000);
+  return pool[dayNumber % pool.length]!.line;
+}
+
+/** 이번 통화에서 이어 물은 기억에 그날을 적는다(prior는 통화를 시작할 때 만든 글, line = followUpFact가 고른 줄). */
+export function markLifeAsked(language: string, line: string, at: number, store: Store | null = browserStore()): void {
+  if (!store) return;
+  const text = /^\d{4}-\d{2}-\d{2}: (.+?)(?: \[asked \d{4}-\d{2}-\d{2}\])?$/.exec(line.trim())?.[1];
+  if (!text) return;
+  const all = readAll(store);
+  const found = (all[language] ?? []).find((fact) => sameFact(fact.text, text));
+  if (!found) return;
+  found.asked = at;
+  store.setItem(KEY, JSON.stringify(all));
 }
