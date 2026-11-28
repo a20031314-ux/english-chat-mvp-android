@@ -18,6 +18,7 @@ import { cachedGlosses, fetchWordChunk } from "@/lib/curriculum/useWordBank";
 import { glossFor } from "@/lib/curriculum/stageScripts";
 import { studyWith, talkCounts } from "@/lib/curriculum/wordUse";
 import { StudyChipRow } from "@/components/studyMap/StudyChips";
+import { SearchFieldIcon } from "@/components/TabIcons";
 
 /**
  * Quizbank 어휘 탭의 단어 사전(2026-11-04). 빈도 목록을 단어·뜻으로 찾고, 항목은 품사·단계·짧은 뜻·예문 둘.
@@ -173,14 +174,13 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
               {search && !picked ? (
               <form
                 role="search"
-                className="mt-3"
+                className="relative mt-3"
                 onSubmit={(event) => event.preventDefault()}
               >
                 <input
                   dir="auto"
                   value={query}
                   aria-label={ui.dictionarySearch}
-                  placeholder={ui.dictionarySearch}
                   autoCapitalize="none"
                   autoCorrect="off"
                   spellCheck={false}
@@ -188,8 +188,9 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                     setQuery(event.target.value);
                     setPicked(null);
                   }}
-                  className={`w-full rounded-xl border border-line bg-transparent px-3 py-2 text-chat text-slate-100 outline-none ${tone.focus}`}
+                  className={`w-full rounded-xl border border-line bg-transparent py-2 pe-3 ps-9 text-chat text-slate-100 outline-none ${tone.focus}`}
                 />
+                <SearchFieldIcon />
               </form>
               ) : null}
               {picked ? (

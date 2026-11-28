@@ -13341,22 +13341,112 @@
       "base": "f2349617adb4df5c774b2e295cc96a9271f4d5c2",
       "head": "f234961",
       "status": "open"
+    },
+    {
+      "id": "a261128-2-2",
+      "at": "2026-11-28 09:17",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "검색칸 자리표시 글 대신 돋보기 아이콘(사전 찾기·영상 채널·자연어 찾기)",
+      "files": [
+        "src/components/TabIcons.tsx",
+        "src/components/FeatureMap.tsx",
+        "src/components/FindInMy.tsx",
+        "src/components/GuideSheet.tsx"
+      ],
+      "features": [
+        "사용법",
+        "이렇게도 말할 수 있었어요",
+        "사람",
+        "Room",
+        "영상 학습",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "My에서 찾기",
+        "랜덤 연결"
+      ],
+      "base": "ca48dd427b4ee700791ae847aa082f75d2181754",
+      "head": "ca48dd4",
+      "status": "open"
+    },
+    {
+      "id": "a261128-2-3",
+      "at": "2026-11-28 09:17",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "검색칸 자리표시 글 대신 돋보기 아이콘(사전 찾기·영상 채널·자연어 찾기)",
+      "files": [
+        "src/components/contentDiscovery/ContentDiscoveryPanel.tsx",
+        "src/components/videoLearning/VideoLearningTab.tsx",
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx",
+        "src/components/roleplay/CallReplay.tsx"
+      ],
+      "features": [
+        "사용법",
+        "이렇게도 말할 수 있었어요",
+        "사람",
+        "Room",
+        "영상 학습",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "My에서 찾기",
+        "랜덤 연결"
+      ],
+      "base": "ca48dd427b4ee700791ae847aa082f75d2181754",
+      "head": "ca48dd4",
+      "status": "open"
+    },
+    {
+      "id": "a261128-2-4",
+      "at": "2026-11-28 09:17",
+      "kind": "apply",
+      "from": "2",
+      "to": "4",
+      "what": "검색칸 자리표시 글 대신 돋보기 아이콘(사전 찾기·영상 채널·자연어 찾기)",
+      "files": [
+        "src/components/rooms/MessagesTab.tsx",
+        "src/components/rooms/PeopleTab.tsx",
+        "src/components/rooms/RandomScreen.tsx",
+        "src/components/rooms/RoomsScreen.tsx"
+      ],
+      "features": [
+        "사용법",
+        "이렇게도 말할 수 있었어요",
+        "사람",
+        "Room",
+        "영상 학습",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "My에서 찾기",
+        "랜덤 연결"
+      ],
+      "base": "ca48dd427b4ee700791ae847aa082f75d2181754",
+      "head": "ca48dd4",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-22 19:56",
-      "from": "3",
-      "base": "41b2ba16a80021ad9c11b7566364e4a5f0332525",
-      "head": "c21d520",
-      "what": "첫 측정 계산·Languagebank 칠하기(measuredNow·quizShade)",
-      "tabs": [
-        "2"
-      ],
-      "asks": [
-        "a261122-3-4"
-      ]
-    },
     {
       "at": "2026-11-22 22:53",
       "from": "3",
@@ -13971,12 +14061,30 @@
         "a261128-3-9",
         "a261128-3-10"
       ]
+    },
+    {
+      "at": "2026-11-28 09:17",
+      "from": "2",
+      "base": "ca48dd427b4ee700791ae847aa082f75d2181754",
+      "head": "ca48dd4",
+      "what": "검색칸 자리표시 글 대신 돋보기 아이콘(사전 찾기·영상 채널·자연어 찾기)",
+      "tabs": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "asks": [
+        "a261128-2-2",
+        "a261128-2-3",
+        "a261128-2-4"
+      ]
     }
   ],
   "seq": {
     "261128-3": 10,
     "261128-watch": 2,
     "261128-4": 3,
-    "261128-2": 1
+    "261128-2": 4
   }
 }

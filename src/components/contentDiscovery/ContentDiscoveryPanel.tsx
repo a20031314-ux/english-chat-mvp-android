@@ -24,6 +24,7 @@ import {
 import { importPointsForDuration } from "@/lib/billing/videoPrep";
 import { formatPoints } from "@/lib/billing/points";
 import { PointsIcon } from "@/components/PointsIcon";
+import { SearchFieldIcon } from "@/components/TabIcons";
 
 const INITIAL_VISIBLE = 8;
 const REVEAL_COUNT = 8;
@@ -700,8 +701,10 @@ export function ContentDiscoveryPanel({
               {ui.discoverChannelSearch}
             </span>
             <div className="flex gap-2">
+              <div className="relative min-w-0 flex-1">
               <input
                 value={channelQuery}
+                aria-label={ui.discoverChannelSearch}
                 onChange={(event) => setChannelQuery(event.target.value)}
                 onFocus={() => {
                   if (channelBlurTimer.current) {
@@ -721,9 +724,10 @@ export function ContentDiscoveryPanel({
                   event.preventDefault();
                   void findChannels(channelQuery, false);
                 }}
-                placeholder={ui.discoverChannelSearchPlaceholder}
-                className="min-w-0 flex-1 rounded-xl border border-white/15 bg-[#121212] px-3 py-2 text-sm text-slate-100 outline-none focus:border-white/40"
+                className="w-full rounded-xl border border-white/15 bg-[#121212] py-2 pe-3 ps-9 text-sm text-slate-100 outline-none focus:border-white/40"
               />
+              <SearchFieldIcon />
+              </div>
               <button
                 type="button"
                 onClick={() => void findChannels(channelQuery, false)}
@@ -971,12 +975,14 @@ export function ContentDiscoveryPanel({
           <span className="mb-1 block text-[11px] font-medium uppercase tracking-wide text-slate-500">
             {ui.discoverNaturalLabel}
           </span>
+          <span className="relative block">
           <input
             value={naturalQuery}
             onChange={(event) => setNaturalQuery(event.target.value)}
-            placeholder={ui.discoverNaturalPlaceholder}
-            className="w-full rounded-xl border border-white/15 bg-[#121212] px-3 py-2 text-sm text-slate-100 outline-none focus:border-white/40"
+            className="w-full rounded-xl border border-white/15 bg-[#121212] py-2 pe-3 ps-9 text-sm text-slate-100 outline-none focus:border-white/40"
           />
+          <SearchFieldIcon />
+          </span>
         </label>
 
         {!fixedContentType ? (

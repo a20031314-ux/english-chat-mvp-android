@@ -236,3 +236,13 @@ export function TabTitle({ tab, label }: { tab: TabId; label: string }) {
     </h1>
   );
 }
+
+/** 검색칸 안 돋보기(사용자 2026-11-28 "검색창엔 텍스트 없이 아이콘만") — 칸 앞쪽에 겹쳐 둔다, 이름은 칸의 aria-label. */
+export function SearchFieldIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden className="pointer-events-none absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500">
+      <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="2" />
+      <path d="M15.5 15.5 20 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
