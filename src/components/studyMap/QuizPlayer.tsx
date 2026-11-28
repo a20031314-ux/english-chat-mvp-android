@@ -325,7 +325,7 @@ export function QuestionView({
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView ui={ui} strict={Boolean(bankKey?.startsWith("w|"))} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "pick" ? <LinePickView language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "talk" ? <TalkView ui={ui} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
+      {question.kind === "talk" ? <TalkView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "multi" ? <MultiView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "spots" ? <SpotsView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "order" ? <OrderView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -1138,9 +1138,11 @@ function LinePickView({ language, question, answered, onAnswer, tag }: { languag
 
 /**
  * 대화 조각 빈칸(curriculum/talkQuiz.ts): 내 AI 채팅·통화에서 떼 온 두세 줄 + 마지막 줄의 소재 자리를 비움.
- * 채점은 빈칸 쓰기와 같음(그 소재를 썼는지 — 다른 말을 넣는 open 다시 보기는 안 함). 칠 수 없는 조각은 고르기. 뜻은 답한 뒤 그 줄에만(통화 줄은 번역이 있음).
+ * 채점은 빈칸 쓰기와 같음(그 소재를 썼는지 — 다른 말을 넣는 open 다시 보기는 안 함). 칠 수 없는 조각은 고르기.
+ * 빈칸 줄의 뜻은 처음부터 그 줄 아래(사용자 2026-11-28 "해석이 있어야 문제풀이가 의미가 있지") — 문맥 짐작이 아니라 뜻을 보고 꼴을 떠올리게.
+ * 뜻이 있는 줄은 통화 튜터 줄뿐(번역). 앱 언어 = 학습 언어면 뜻 줄이 곧 답이라 안 보임.
  */
-function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UICopy; language: string; question: Extract<QuizQuestion, { kind: "talk" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
+function TalkView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: Extract<QuizQuestion, { kind: "talk" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
   const tone = useBankTone();
   const [result, setResult] = useState<Graded | null>(null);
   const [picked, setPicked] = useState<string | null>(null);
@@ -1156,6 +1158,7 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
     onAnswer({ correct: Boolean(final) });
   };
   const target = question.lines[question.at];
+  const meaning = target?.gloss ? quizGloss({ en: "", raw: target.gloss }, locale, language) : null;
   return (
     <div className="flex flex-col gap-3" data-talk>
       <ul className="flex flex-col gap-1.5">
@@ -1182,9 +1185,9 @@ function TalkView({ ui, language, question, answered, onAnswer, tag }: { ui: UIC
                     line.text
                   )}
                 </p>
-                {last && answered && target?.gloss ? (
-                  <p dir="auto" className="mt-0.5 text-meta text-slate-400">
-                    {target.gloss}
+                {last && meaning ? (
+                  <p dir="auto" className="mt-0.5 text-meta text-slate-400" data-talk-gloss>
+                    {meaning}
                   </p>
                 ) : null}
               </div>
