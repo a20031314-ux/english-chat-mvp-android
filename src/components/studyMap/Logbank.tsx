@@ -880,6 +880,7 @@ function SessionRows({
   summaries,
   clock,
   onOpen,
+  fold = false,
   children,
 }: {
   ui: UICopy;
@@ -888,6 +889,8 @@ function SessionRows({
   summaries: readonly SessionSummary[];
   clock: Intl.DateTimeFormat;
   onOpen: (start: number) => void;
+  /** 오늘의 학습: 마지막 학습 덩어리만, 앞의 것은 이전 학습 n을 눌러 펼침(사용자 2026-11-28). */
+  fold?: boolean;
   children?: ReactNode;
 }) {
   const box = "rounded-xl border border-line bg-white/[0.02]";
@@ -898,9 +901,23 @@ function SessionRows({
     const to = clock.format(one.end);
     return from === to ? from : `${from}–${to}`;
   };
+  const [open, setOpen] = useState(false);
+  const hidden = fold && !open ? Math.max(0, sessions.length - 1) : 0;
   return (
     <ol data-timeline-sessions className="flex flex-col">
+      {fold && sessions.length > 1 ? (
+        <li className="flex gap-3">
+          <div className="flex w-11 shrink-0 justify-center">
+            <span aria-hidden className="min-h-4 w-0.5 bg-line" />
+          </div>
+          <button type="button" data-timeline-fold aria-expanded={open} onClick={() => setOpen((on) => !on)} className="mb-2 inline-flex items-center gap-1.5 self-start rounded-full border border-line px-3 py-1 text-meta tabular-nums text-slate-300 hover:bg-white/5">
+            {ui.tlEarlier.replace("{n}", String(sessions.length - 1))}
+            <span aria-hidden>{open ? "▴" : "▾"}</span>
+          </button>
+        </li>
+      ) : null}
       {sessions.map((one, i) => {
+        if (i < hidden) return null;
         const sum = summaries[i]!;
         const next = sessions[i + 1];
         const fixedN = day.notes.filter((note) => one.callIds.includes(note.id)).reduce((n, note) => n + note.fixed, 0);
@@ -1015,7 +1032,7 @@ export function TodayTimeline({
         <div className="flex min-w-0 flex-1 items-center gap-2">{title}</div>
         {minutes ? <span data-today-minutes title={ui.logStudyTime} className="shrink-0 text-note tabular-nums text-slate-300">{`⏱ ${minutes}′`}</span> : null}
       </div>
-      <SessionRows ui={ui} day={day} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt}>
+      <SessionRows ui={ui} day={day} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt} fold>
         {children}
       </SessionRows>
       {openAt !== null ? (
