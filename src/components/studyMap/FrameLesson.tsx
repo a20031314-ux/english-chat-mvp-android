@@ -504,7 +504,7 @@ export function FrameLesson({
                 <li key={index} className="flex flex-wrap items-start gap-2 rounded-xl bg-white/[0.06] px-3 py-2">
                   <span className="min-w-0 flex-1">
                     <span dir="auto" className="block text-chat text-ink">
-                      <ExampleMarks text={example.text} slot={example.slot} core={frame?.core} />
+                      <ExampleMarks text={example.text} slot={example.slot} core={frame ? fixedPieces(frame.pattern, frame.core) : undefined} />
                     </span>
                     {/* No meaning line when it would just repeat the sentence (English learners with an untranslated app language). */}
                     {quizGloss(example.gloss, locale, language) ? (
@@ -765,6 +765,18 @@ export function SceneCard({ scene, piece, tag }: { scene: LessonScene; piece: st
  * 표현 칸은 그 표현(slot)을 칠한다(사용자 2026-11-02 "강조가 학습 부분이 아니라 다른 부분에").
  * 틀 조각이 문장에 없으면(활용형 등) 빈칸 밖 전체를 칠한다.
  */
+/**
+ * 예문에서 칠할 틀 조각: 틀의 빈칸 밖 글("Do you have any ___?" → Do you have any)을 먼저, 예문에 없으면 핵심 조각(core — any).
+ * core만 칠하면 "Do you have any cookies?"에 any만 칠해져 무엇을 배우는지 안 보였다(사용자 2026-11-28 "저 노란 밑줄은 뭐고").
+ */
+function fixedPieces(pattern: string, core: readonly string[]): string[] {
+  const outside = pattern
+    .split(/_{2,}|…/)
+    .map((part) => part.replace(/[.?!。？！]+$/u, "").trim())
+    .filter((part) => /\p{L}/u.test(part));
+  return [...outside, ...core];
+}
+
 function ExampleMarks({ text, slot, core }: { text: string; slot?: string; core?: string[] }) {
   const hole = slot ? text.indexOf(slot) : -1;
   const ranges: Array<[number, number]> = [];

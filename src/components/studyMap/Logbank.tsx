@@ -2,7 +2,7 @@
 
 import { bankTone, PART_BG, PART_BG_DIM, PartMark } from "@/components/studyMap/bankTone";
 import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
-import { FullScreenLayer, LayerAboveContext } from "@/components/FullScreenLayer";
+import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { useExpressionInsightOptional } from "@/contexts/ExpressionInsightContext";
 import type { UICopy } from "@/lib/copy";
@@ -553,9 +553,7 @@ function TimeSources({ ui, summary, input, period }: { ui: UICopy; summary: Peri
 
 /** 세부 화면(전체 화면 층 — My 전체 화면 위): 머리 제목 + ✕, 안은 스크롤. */
 function LogSheet({ title, ui, onClose, children }: { title: string; ui: UICopy; onClose: () => void; children: ReactNode }) {
-  // My 칸 전체 화면(z 70) 위에 늘 — 작은 칸에서 연 시트가 뒤늦게 열린 전체 화면 밑에 깔려 ✕로 닫아야 보이던 일(사용자 2026-11-28).
   return (
-    <LayerAboveContext.Provider value>
     <FullScreenLayer>
       {/* 포털이라도 누름은 React 트리로 올라가 뒤의 My 칸 크게 보기가 받는다 — 여기서 멈춤. */}
       <div className="contents" onClick={(event) => event.stopPropagation()}>
@@ -570,7 +568,6 @@ function LogSheet({ title, ui, onClose, children }: { title: string; ui: UICopy;
         </div>
       </div>
     </FullScreenLayer>
-    </LayerAboveContext.Provider>
   );
 }
 
@@ -610,7 +607,7 @@ function DayBody({
                 dir="auto"
                 onClick={() => {
                   const key = lessonKeyOf(language, item);
-                  if (key) openLesson({ language, key, above: true });
+                  if (key) openLesson({ language, key });
                   else if (part !== "grammar") insight?.open({ sentence: item.text, selected: item.text });
                 }}
                 className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-info/20 text-info" : "bg-info/10 text-info/70"}`}
@@ -1239,7 +1236,7 @@ function CallResultCard({ ui, language, call, note, removable = true }: { ui: UI
                   data-day-call-fix
                   onClick={() =>
                     key
-                      ? openLesson({ language, key, above: true, scene: { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}) } })
+                      ? openLesson({ language, key, scene: { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}) } })
                       : sendAppIntent("openCall", { id: call.id })
                   }
                   className="text-start text-meta hover:opacity-80"
@@ -1435,7 +1432,7 @@ function Learned({
           </tbody>
         </table>
       ) : null}
-      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} onCard={(key) => (key.startsWith("w|") ? setWord(key.slice(2)) : openLesson({ language, key, above: true }))} backOf={(day) => backByDay.get(day) ?? []} fixedOf={(day) => fixedOf(day).length} onFixed={(day) => setFixedDay(day)} /> : null}
+      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} onCard={(key) => (key.startsWith("w|") ? setWord(key.slice(2)) : openLesson({ language, key }))} backOf={(day) => backByDay.get(day) ?? []} fixedOf={(day) => fixedOf(day).length} onFixed={(day) => setFixedDay(day)} /> : null}
       <TalkCompare ui={ui} language={language} locale={locale} period={period} keyLabel={keyLabel} />
       {curveReady(all) ? (
         <LearnCurve ui={ui} stacks={stacks} known={known} newUsed={newUsed} dateLabel={dateLabel} onUsed={setUsedDay} />
@@ -1443,21 +1440,21 @@ function Learned({
       {openCell ? (
         <LogSheet title={`${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
           {openCell.col === "used" ? (
-            <UsedCards ui={ui} language={language} locale={locale} withDay uses={lastUsesIn(ledger, cell(openCell.part, openCell.col).slice(0, 120), inTime)} itemsOf={itemsOf} grammarName={grammarName} keyLabel={keyLabel} />
+            <UsedCards ui={ui} language={language} locale={locale} withDay uses={lastUsesIn(ledger, cell(openCell.part, openCell.col).slice(0, 120), inTime)} itemsOf={itemsOf} grammarName={grammarName} keyLabel={keyLabel} onLeave={() => setOpen(null)} />
           ) : (
-            <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
+            <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} onLeave={() => setOpen(null)} />
           )}
         </LogSheet>
       ) : null}
       {usedDay ? (
         <LogSheet title={`${dayFormat(locale, usedDay)} · ${ui.growUsed} ${newUsed[days.indexOf(usedDay)] ?? 0}`} ui={ui} onClose={() => setUsedDay(null)}>
-          <UsedCards ui={ui} language={language} locale={locale} uses={usedFirstOn(ledger, usedDay, (t) => dayOfSeconds(t))} itemsOf={itemsOf} grammarName={grammarName} keyLabel={keyLabel} />
+          <UsedCards ui={ui} language={language} locale={locale} uses={usedFirstOn(ledger, usedDay, (t) => dayOfSeconds(t))} itemsOf={itemsOf} grammarName={grammarName} keyLabel={keyLabel}  onLeave={() => setUsedDay(null)} />
         </LogSheet>
       ) : null}
-      {word ? <DictionarySheet ui={ui} language={language} locale={locale} word={word} title={ui.languagebankTitle} onClose={() => setWord(null)} above /> : null}
+      {word ? <DictionarySheet ui={ui} language={language} locale={locale} word={word} title={ui.languagebankTitle} onClose={() => setWord(null)} /> : null}
       {stackCards ? (
         <LogSheet title={stackCards.title} ui={ui} onClose={() => setStackCards(null)}>
-          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(stackCards.keys.slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
+          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(stackCards.keys.slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} onLeave={() => setStackCards(null)} />
         </LogSheet>
       ) : null}
       {fixedDay ? (
@@ -1477,6 +1474,7 @@ function LearnedCards({
   items,
   grammarName,
   keyLabel,
+  onLeave,
 }: {
   ui: UICopy;
   language: string;
@@ -1484,6 +1482,7 @@ function LearnedCards({
   items: readonly LearnedItem[];
   grammarName: (stage: number, index: number) => string;
   keyLabel: (key: string) => string;
+  onLeave?: () => void;
 }) {
   const [word, setWord] = useState<string | null>(null);
   const prepared = usePrepared(language, locale);
@@ -1537,7 +1536,12 @@ function LearnedCards({
               <button
                 type="button"
                 data-learned-open
-                onClick={() => (one.key.startsWith("w|") ? setWord(one.key.slice(2)) : openLesson({ language, key: one.key, above: true }))}
+                onClick={() => {
+                  if (one.key.startsWith("w|")) return setWord(one.key.slice(2));
+                  // 소재 수업은 바닥 층(z 70)이라 이 시트(전체 화면 안이면 71) 밑에 깔린다 — 시트를 닫고 연다(사용자 2026-11-28).
+                  onLeave?.();
+                  openLesson({ language, key: one.key });
+                }}
                 className="rounded-full border border-line px-3 py-0.5 text-caption text-slate-300 hover:bg-white/10"
               >
                 <span aria-hidden>📕 </span>
@@ -1554,7 +1558,7 @@ function LearnedCards({
           </li>
         );
       })}
-      {word ? <DictionarySheet ui={ui} language={language} locale={locale} word={word} title={ui.languagebankTitle} onClose={() => setWord(null)} above /> : null}
+      {word ? <DictionarySheet ui={ui} language={language} locale={locale} word={word} title={ui.languagebankTitle} onClose={() => setWord(null)} /> : null}
     </ul>
   );
 }
@@ -1827,6 +1831,7 @@ function UsedCards({
   itemsOf,
   grammarName,
   keyLabel,
+  onLeave,
   withDay = false,
 }: {
   ui: UICopy;
@@ -1837,6 +1842,7 @@ function UsedCards({
   itemsOf: (keys: readonly string[]) => LearnedItem[];
   grammarName: (stage: number, index: number) => string;
   keyLabel: (key: string) => string;
+  onLeave?: () => void;
 }) {
   const [lines] = useState(() => readGrowthLines(language).used);
   const when = useMemo(() => {
@@ -1852,7 +1858,7 @@ function UsedCards({
         const line = usedLineFor(lines, use, (t) => dayOfSeconds(t));
         return (
           <div key={use.key} data-used-card={use.key} className="flex flex-col gap-2">
-            <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf([use.key])} grammarName={grammarName} keyLabel={keyLabel} />
+            <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf([use.key])} grammarName={grammarName} keyLabel={keyLabel} onLeave={onLeave} />
             <div className="flex flex-col gap-1 rounded-xl border border-line px-3 py-2">
               <span className="inline-flex items-center gap-1 text-meta tabular-nums text-slate-400"><PlaceIcon place={use.s} />{`${placeName(ui, use.s)} · ${withDay ? `${dayFormat(locale, dayOfSeconds(use.t))} ` : ""}${when.format(use.t * 1000)} ✓`}</span>
               {line ? (
@@ -1885,7 +1891,7 @@ function WeakChips({ ui, language, ledger, label }: { ui: UICopy; language: stri
           type="button"
           dir="auto"
           data-weak-key={key}
-          onClick={() => (key.startsWith("w|") ? focusQuiz(language, [key]) : openLesson({ language, key, above: true }))}
+          onClick={() => (key.startsWith("w|") ? focusQuiz(language, [key]) : openLesson({ language, key }))}
           className={`rounded-full border border-line px-2.5 py-0.5 text-caption text-ink hover:bg-white/10`}
         >
           {label(key)}
