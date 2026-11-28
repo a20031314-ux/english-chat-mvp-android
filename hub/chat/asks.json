@@ -13472,23 +13472,36 @@
       ],
       "head": "49ed170d",
       "status": "open"
+    },
+    {
+      "id": "a261128-2-5",
+      "at": "2026-11-28 09:29",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "Logbank 대화 비교 말풍선 장면, 통화 끝 대화 숫자 저장 지움, 빈 기간 ⏱ 칩 없음",
+      "files": [
+        "src/components/RoleplayScreen.tsx",
+        "src/components/CallHost.tsx",
+        "src/components/RoleplayPast.tsx",
+        "src/components/roleplay/CallReplay.tsx",
+        "src/components/roleplay/TurnDiagBox.tsx",
+        "src/app/api/roleplay/context/route.ts",
+        "src/app/api/roleplay/turn/route.ts"
+      ],
+      "features": [
+        "통화",
+        "이렇게도 말할 수 있었어요",
+        "Logbank",
+        "오늘의 학습",
+        "칸 설명"
+      ],
+      "base": "89988795240621540fd4db1d6cb9e09e04b8d5db",
+      "head": "1a31e9b",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-22 22:53",
-      "from": "3",
-      "base": "56e24c8d53270857a0f264768f660fe49fc1ab72",
-      "head": "131c25b",
-      "what": "LineGrade·Attempt typed 표시",
-      "tabs": [
-        "2",
-        "3"
-      ],
-      "asks": [
-        "a261122-3-5"
-      ]
-    },
     {
       "at": "2026-11-22 22:55",
       "from": "3",
@@ -14107,12 +14120,26 @@
         "a261128-2-3",
         "a261128-2-4"
       ]
+    },
+    {
+      "at": "2026-11-28 09:29",
+      "from": "2",
+      "base": "89988795240621540fd4db1d6cb9e09e04b8d5db",
+      "head": "1a31e9b",
+      "what": "Logbank 대화 비교 말풍선 장면, 통화 끝 대화 숫자 저장 지움, 빈 기간 ⏱ 칩 없음",
+      "tabs": [
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261128-2-5"
+      ]
     }
   ],
   "seq": {
     "261128-3": 10,
     "261128-watch": 4,
     "261128-4": 3,
-    "261128-2": 4
+    "261128-2": 5
   }
 }

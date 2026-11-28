@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (239)
+## 탭이 확인할 것 (240)
 
 ### 탭 1 메인
 
@@ -631,6 +631,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261127-watch-4 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261126-watch-1** 🔧 고칠 것 (2026-11-26 05:27, 변경 감시) src/components/roleplay/CallReplay.tsx:620 — 대화 시뮬레이션 틀린 줄 판단(fetchPractice)을 받는 중에도 '다음'이 눌려 onDone이 옛 ok로 한 번만 보고 → 화면은 ✓인데 저장 점수·숙제 결과(noteReplayResult)는 틀림 (받는 중엔 다음을 막거나 모든 판단 뒤에 끝 보고)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261126-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-2-5** (2026-11-28 09:29, 탭 2 · 1a31e9b) Logbank 대화 비교 말풍선 장면, 통화 끝 대화 숫자 저장 지움, 빈 기간 ⏱ 칩 없음
+  - 기능: 통화 · 이렇게도 말할 수 있었어요 · Logbank · 오늘의 학습 · 칸 설명
+  - 볼 곳: `components/RoleplayScreen.tsx` · `components/CallHost.tsx` · `components/RoleplayPast.tsx` · `components/roleplay/CallReplay.tsx` · `components/roleplay/TurnDiagBox.tsx` · `app/api/roleplay/context/route.ts` · `app/api/roleplay/turn/route.ts`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-2-3** (2026-11-28 09:17, 탭 2 · ca48dd4) 검색칸 자리표시 글 대신 돋보기 아이콘(사전 찾기·영상 채널·자연어 찾기)
   - 기능: 사용법 · 이렇게도 말할 수 있었어요 · 사람 · Room · 영상 학습 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · My에서 찾기 · 랜덤 연결
   - 볼 곳: `components/contentDiscovery/ContentDiscoveryPanel.tsx` · `components/videoLearning/VideoLearningTab.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `components/roleplay/CallReplay.tsx`
