@@ -121,7 +121,7 @@
 
 ### 문장분석·표현 시트 (여러 화면에서 열림) `sheet`
 - 화면: `AnalyzableEnglish` · `EnglishAnalysisProvider` · `EnglishAnalysisViewer` · `ExpressionInsightProvider` · `ExpressionInsightSheet` · `FindInMy` · `SelectableEnglishText` · `SentenceAskPanel` · `TTSButton` · `VocabPreviewProvider` · `VocabSenseList` · `VocabWordPreview`
-- API: `expression-ask` · `expression-insight` · `expression-units` · `learning-spans` · `translate`(대화 탭, AI 통화, 사람 탭, Room 탭, 계정·로그인) · `tts`(AI 통화, My 탭) · `vocab/gloss` · `vocab`
+- API: `expression-ask` · `expression-insight` · `expression-units` · `learning-spans` · `translate`(여러 영역 6곳) · `tts`(AI 통화, My 탭) · `vocab/gloss` · `vocab`
 - 다른 영역이 씀: `AnalyzableEnglish` ← AI 채팅, 영상 학습 탭 · `EnglishAnalysisProvider` ← 앱 틀 · `ExpressionInsightProvider` ← 앱 틀 · `FindInMy` ← AI 통화 · `SelectableEnglishText` ← AI 채팅 · `TTSButton` ← AI 채팅, AI 통화, My 탭
 
 ### 학습 기록 공통 — 표현 장부·튜터 요약 (여러 화면이 같이 씀) `learner`
