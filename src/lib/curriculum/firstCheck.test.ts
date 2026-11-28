@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
   estimateChance,
+  measuredNow,
   fixedLines,
   letterQuestions,
   lettersWeak,
@@ -100,4 +101,10 @@ test("estimateChance: 낱말은 경계 b 곡선, 표현·문법은 잰 단계 �
   assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 1 }), 1);
   assert.equal(estimateChance(check, { kind: "expr", rank: 0, lv: 2 }), 0.5);
   assert.equal(estimateChance(check, { kind: "gram", rank: 0, lv: 4 }), 0);
+});
+
+test("measuredNow: 첫 측정이 없어도 Quizbank 낱말 경계가 있으면 그걸로, 표현·문법은 1단계(사용자 2026-11-28 'UI가 텅 비어 보여')", () => {
+  const store = (circle: unknown) => ({ getItem: (key: string) => (key.startsWith("quizCircle.v1.") ? JSON.stringify(circle) : null) });
+  assert.deepEqual(measuredNow("ja", store({ lv: { b: 1200 } })), { b: 1200, expression: 1, grammar: 1 });
+  assert.equal(measuredNow("es", store(null)), null);
 });

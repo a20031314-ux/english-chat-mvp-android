@@ -221,14 +221,17 @@ export function measured(language: string): Measured | null {
  */
 export function measuredNow(language: string, store: Pick<Storage, "getItem"> | null = typeof localStorage === "undefined" ? null : localStorage): Measured | null {
   const first = measured(language);
-  if (!first) return null;
+  let b: number | null = null;
   try {
     const circle = JSON.parse(store?.getItem(`quizCircle.v1.${language}`) ?? "null") as { lv?: { b?: unknown } } | null;
-    const b = circle?.lv?.b;
-    return typeof b === "number" && Number.isFinite(b) && b >= 0 ? { ...first, b } : first;
+    const raw = circle?.lv?.b;
+    b = typeof raw === "number" && Number.isFinite(raw) && raw >= 0 ? raw : null;
   } catch {
-    return first;
+    b = null;
   }
+  // 첫 측정을 건너뛰었거나 이 폰에 없어도 Quizbank가 고쳐 온 낱말 경계가 있으면 그걸로(표현·문법은 1단계 — 건너뛰기 = 1단계, 사용자 2026-11-28 "UI가 텅 비어 보여").
+  if (!first) return b === null ? null : { b, expression: 1, grammar: 1 };
+  return b === null ? first : { ...first, b };
 }
 
 /**

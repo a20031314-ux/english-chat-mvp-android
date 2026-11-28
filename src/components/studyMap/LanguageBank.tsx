@@ -117,7 +117,7 @@ export function LanguageBank({
     return readLedger(language);
   }, [language, ledgerTick]);
   // 칠하기 = 첫 측정에서 시작해 퀴즈로 고쳐 감(사용자 2026-11-22 "첫측정 → 점차 실제실력"): 낱말 경계는 Quizbank가 고쳐 가는 값
-  // (firstCheck.ts measuredNow), 퀴즈로 직접 답한 칸은 마지막 답(quizShade — 맞음 칠함·틀림 비움). 잰 적이 없으면 칠하지 않음.
+  // (firstCheck.ts measuredNow), 퀴즈로 직접 답한 칸은 마지막 답(quizShade — 맞음 칠함·틀림 비움, 측정이 없어도). 측정도 Quizbank 경계도 없으면 추정 칠하기는 없음.
   const check = useMemo(() => {
     void ledgerTick;
     return measuredNow(language);
@@ -150,9 +150,10 @@ export function LanguageBank({
     return sum > 0 ? Math.min(1, check.b / sum) : 1;
   }, [check, items.word]);
   const valueOf = (one: Item) => {
-    if (!check) return 0;
+    // 퀴즈로 직접 답한 칸은 측정이 없어도 마지막 답으로 칠한다.
     const direct = answered.get(one.key);
     if (direct !== undefined) return direct;
+    if (!check) return 0;
     const kind = one.key.startsWith("w|") ? "word" : one.key.startsWith("e|") ? "expr" : "gram";
     const chance = estimateChance(check, { kind, rank: one.rank, lv: one.lv });
     return kind === "word" ? Math.min(1, chance * wordScale) : chance;
