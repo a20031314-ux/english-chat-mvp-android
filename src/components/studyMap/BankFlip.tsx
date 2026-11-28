@@ -104,8 +104,9 @@ export function BankFlip({ ui, language, locale, words, onClose }: { ui: UICopy;
                   <button type="button" data-flip-answer="unsure" onClick={() => answer(false)} className="flex-1 rounded-xl border border-line py-2.5 text-note text-slate-200 hover:bg-white/5">
                     {ui.flipAgainBtn}
                   </button>
-                  <button type="button" data-flip-answer="known" onClick={() => answer(true)} className="flex-1 rounded-xl bg-white/90 py-2.5 text-note font-semibold text-slate-900">
-                    {ui.flipGotBtn}
+                  {/* 넘기기 아이콘만(사용자 2026-11-28) — 이름은 aria-label·title. */}
+                  <button type="button" data-flip-answer="known" aria-label={ui.flipGotBtn} title={ui.flipGotBtn} onClick={() => answer(true)} className="flex-1 rounded-xl bg-white/90 py-2.5 text-title font-semibold leading-none text-slate-900">
+                    <span aria-hidden className="inline-block rtl:rotate-180">→</span>
                   </button>
                 </div>
               ) : (
