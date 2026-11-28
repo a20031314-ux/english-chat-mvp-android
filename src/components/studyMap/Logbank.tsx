@@ -895,7 +895,7 @@ function SessionRows({
     <ol data-timeline-sessions className="flex flex-col">
       {fold && sessions.length > 1 ? (
         <li className="flex gap-3">
-          <div className="flex w-11 shrink-0 justify-center">
+          <div className="flex w-16 shrink-0 justify-center">
             <span aria-hidden className="min-h-4 w-0.5 bg-line" />
           </div>
           <button type="button" data-timeline-fold aria-expanded={open} onClick={() => setOpen((on) => !on)} className="mb-2 inline-flex items-center gap-1.5 self-start rounded-full border border-line px-3 py-1 text-meta tabular-nums text-slate-300 hover:bg-white/5">
@@ -911,10 +911,10 @@ function SessionRows({
           <li key={one.start} className="flex flex-col">
             {/* 학습한 동안 = 왼쪽 굵은 색 막대(시작 시각 → 끝 시각), 쉰 동안 = 가는 회색 선 — 시작~끝을 글로 쓰는 대신(사용자 2026-11-28). */}
             <div className="flex gap-3">
-              <div className="flex w-11 shrink-0 flex-col items-center">
-                <span className="text-meta font-semibold tabular-nums text-ink">{clock.format(one.start)}</span>
-                <span data-timeline-span aria-hidden className="my-1 min-h-6 w-1.5 flex-1 rounded-full bg-info" />
-                {clock.format(one.end) !== clock.format(one.start) ? <span className="text-meta tabular-nums text-slate-500">{clock.format(one.end)}</span> : null}
+              <div className="flex w-16 shrink-0 flex-col items-center">
+                <span className="whitespace-nowrap text-meta font-semibold tabular-nums text-ink">{clock.format(one.start)}</span>
+                <span data-timeline-span aria-hidden className="my-0.5 min-h-2 w-1.5 flex-1 rounded-full bg-info" />
+                {clock.format(one.end) !== clock.format(one.start) ? <span className="whitespace-nowrap text-meta tabular-nums text-slate-500">{clock.format(one.end)}</span> : null}
               </div>
               <button type="button" data-timeline-open={one.start} aria-label={range(one)} onClick={() => onOpen(one.start)} className={`flex min-w-0 flex-1 flex-col gap-1.5 px-3 py-2.5 text-start hover:bg-white/5 ${box}`}>
                 <span className="flex items-center gap-2">
@@ -926,7 +926,7 @@ function SessionRows({
             </div>
             {next || children ? (
               <div className="flex gap-3">
-                <div className="flex w-11 shrink-0 justify-center">
+                <div className="flex w-16 shrink-0 justify-center">
                   <span aria-hidden className="min-h-3 w-0.5 bg-line" />
                 </div>
               </div>
@@ -946,7 +946,7 @@ function SessionRows({
 export function TodaySlot({ kind, done, icon, name, goal, sub, last, onClick }: { kind: string; done: boolean; icon: ReactNode; name: string; goal?: string; sub?: string; last?: boolean; onClick: () => void }) {
   return (
     <li className="flex gap-3">
-      <div className="flex w-11 shrink-0 flex-col items-center">
+      <div className="flex w-16 shrink-0 flex-col items-center">
         <span aria-hidden className={`mt-2.5 flex h-5 w-5 items-center justify-center rounded-full border text-caption ${done ? "border-good text-good" : "border-line text-transparent"}`}>✓</span>
         {last ? null : <span className="w-0.5 flex-1 bg-line" />}
       </div>
