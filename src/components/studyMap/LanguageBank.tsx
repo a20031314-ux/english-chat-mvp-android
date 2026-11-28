@@ -362,8 +362,9 @@ export function LanguageBank({
                     </div>
                     {/* 넘겨 보기(2026-11-08): 단어 묶음만 — 표현·문법은 수업으로 연다. */}
                     {kind === "word" ? (
-                      <button type="button" data-lb-flip aria-label={ui.flipStart} title={ui.flipStart} onClick={() => setFlip(bundle.map((one) => one.word ?? one.name))} className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-note text-slate-900">
+                      <button type="button" data-lb-flip onClick={() => setFlip(bundle.map((one) => one.word ?? one.name))} className="flex h-8 items-center gap-1 rounded-full bg-white/90 px-3 text-caption font-semibold text-slate-900">
                         <span aria-hidden>▶</span>
+                        {ui.flipStart}
                       </button>
                     ) : null}
                   </div>
