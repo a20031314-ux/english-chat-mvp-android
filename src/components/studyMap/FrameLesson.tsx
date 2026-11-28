@@ -761,13 +761,9 @@ export function SceneCard({ scene, piece, tag }: { scene: LessonScene; piece: st
 }
 
 /**
- * 예문 칠하기: 배우는 부분을 칠한다. 문장구조는 빈칸에 들어간 말(slot)이 아니라 틀의 핵심 조각(core)을,
- * 표현 칸은 그 표현(slot)을 칠한다(사용자 2026-11-02 "강조가 학습 부분이 아니라 다른 부분에").
- * 틀 조각이 문장에 없으면(활용형 등) 빈칸 밖 전체를 칠한다.
- */
-/**
- * 예문에서 칠할 틀 조각: 틀의 빈칸 밖 글("Do you have any ___?" → Do you have any)을 먼저, 예문에 없으면 핵심 조각(core — any).
- * core만 칠하면 "Do you have any cookies?"에 any만 칠해져 무엇을 배우는지 안 보였다(사용자 2026-11-28 "저 노란 밑줄은 뭐고").
+ * 예문 칠하기 — 위 "구조"와 같은 모양으로(사용자 2026-11-28 "노란 밑줄이 do you have any 뒤쪽에 붙어 있어야 이게 뭔지 알 수 있잖아"):
+ * 문장구조는 틀 글(빈칸 밖 "Do you have any", 예문에 없으면 핵심 조각 core)을 회색 칸, 빈칸에 들어간 말(slot — cookies)을 노란 점선 밑줄.
+ * 표현 칸(core 없음)은 그 표현(slot)을 노랗게 칠한다.
  */
 function fixedPieces(pattern: string, core: readonly string[]): string[] {
   const outside = pattern
@@ -779,34 +775,33 @@ function fixedPieces(pattern: string, core: readonly string[]): string[] {
 
 function ExampleMarks({ text, slot, core }: { text: string; slot?: string; core?: string[] }) {
   const hole = slot ? text.indexOf(slot) : -1;
-  const ranges: Array<[number, number]> = [];
+  type Range = { from: number; to: number; kind: "fixed" | "slot" | "piece" };
+  const ranges: Range[] = [];
   if (core) {
+    if (slot && hole >= 0) ranges.push({ from: hole, to: hole + slot.length, kind: "slot" });
     // 긴 조각부터, 빈칸 자리와 겹치지 않고 앞서 고른 것과도 겹치지 않는 곳만.
-    for (const piece of [...core].filter(Boolean).sort((a, b) => b.length - a.length)) {
+    for (const piece of [...core].filter(Boolean).sort((x, y) => y.length - x.length)) {
       for (let at = text.indexOf(piece); at >= 0; at = text.indexOf(piece, at + piece.length)) {
         const end = at + piece.length;
-        const inHole = hole >= 0 && at < hole + (slot?.length ?? 0) && end > hole;
-        if (!inHole && !ranges.some(([a, b]) => at < b && end > a)) ranges.push([at, end]);
+        if (!ranges.some((one) => at < one.to && end > one.from)) ranges.push({ from: at, to: end, kind: "fixed" });
       }
     }
-    if (!ranges.length && slot && hole >= 0) {
-      ranges.push([0, hole], [hole + slot.length, text.length]);
-    }
   } else if (slot && hole >= 0) {
-    ranges.push([hole, hole + slot.length]);
+    ranges.push({ from: hole, to: hole + slot.length, kind: "piece" });
   }
   if (!ranges.length) return <>{text}</>;
-  ranges.sort((a, b) => a[0] - b[0]);
+  ranges.sort((x, y) => x.from - y.from);
+  const style = { fixed: "rounded-md bg-white/10 px-0.5", slot: "border-b-2 border-dashed border-status-learned text-status-learned", piece: "rounded-lg bg-status-learned/25 px-0.5" } as const;
   const parts: React.ReactNode[] = [];
   let cursor = 0;
-  ranges.forEach(([from, to], index) => {
+  ranges.forEach(({ from, to, kind }, index) => {
     // 칠하는 조각의 앞뒤 빈칸은 칠하지 않는다.
-    while (from < to && /\s/.test(text[from])) from += 1;
-    while (to > from && /\s/.test(text[to - 1])) to -= 1;
-    if (from >= to) return;
+    while (from < to && /\s/.test(text[from]!)) from += 1;
+    while (to > from && /\s/.test(text[to - 1]!)) to -= 1;
+    if (from >= to || from < cursor) return;
     parts.push(text.slice(cursor, from));
     parts.push(
-      <span key={index} className="rounded-lg bg-status-learned/25 px-0.5">
+      <span key={index} className={style[kind]}>
         {text.slice(from, to)}
       </span>,
     );
