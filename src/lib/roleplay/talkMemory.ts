@@ -1,12 +1,10 @@
 /**
  * 대화 비교의 문장 쪽(이 폰에만, 2026-11-07 밤): 같은 종류 튜터 질문에 한 내 대답(처음·마지막) · 문법·표현을 처음 맞게 쓴 문장.
- * 통화 끝 튜터 메모 호출의 표시(talkTags.ts)가 오면 applyTalkTags가 한 번에: 숫자(callNotes talk 문형 칸) · 이 저장소 · 장부(표시로 새로 잡힌 문법 used) · 고쳐 씀 줄.
+ * 통화 끝 튜터 메모 호출의 표시(talkTags.ts)가 오면 applyTalkTags가 한 번에: 이 저장소 · 장부(표시로 새로 잡힌 문법 used) · 고쳐 씀 줄.
  */
 import type { TranscriptLine } from "./review.ts";
 import { OPENING_LINES, type QuestionKind, type TalkTags } from "./talkTags.ts";
-import { shapeOf } from "./talkStats.ts";
 import { recapLedgerKeys } from "./recap.ts";
-import { setCallExtra } from "./callNotes.ts";
 import { noteLedger } from "../curriculum/logLedger.ts";
 import { noteGrowthLines } from "../curriculum/growthLines.ts";
 import { segmentWords } from "../wordSegments.ts";
@@ -56,16 +54,6 @@ const fixedLine = (line: TranscriptLine) => {
   return Boolean(right && right !== line.text.trim());
 };
 
-/** 같은 종류 질문 짝 하나: 처음·마지막이 다른 날이고 대답이 길어진 것 중 가장 많이 늘어난 것. */
-export function bestAnswerPair(answers: Answers, dayOf: (ms: number) => string): { kind: QuestionKind; first: Answer; last: Answer } | null {
-  let best: { kind: QuestionKind; first: Answer; last: Answer } | null = null;
-  for (const [kind, pair] of Object.entries(answers) as [QuestionKind, { first: Answer; last: Answer }][]) {
-    if (!pair?.first || !pair.last || dayOf(pair.first.at) === dayOf(pair.last.at) || pair.last.n <= pair.first.n) continue;
-    if (!best || pair.last.n - pair.first.n > best.last.n - best.first.n) best = { kind, ...pair };
-  }
-  return best;
-}
-
 /**
  * 통화 끝 표시를 받아서. said = 그 통화 전체 줄(처음 OPENING_LINES줄이 표시의 번호와 같은 자리), at = 통화 시각(ms).
  * 순수 아님(저장) — 저장소를 넘기면 그것에.
@@ -78,10 +66,7 @@ export function applyTalkTags(input: { language: string; callId: string; said: r
     const detected = recapLedgerKeys(language, [line]).used;
     return [...new Set([...(i >= 0 ? (tags.uses[i] ?? []) : []), ...detected])];
   };
-  // 1. 숫자(문형 칸)
-  const shape = shapeOf(said, keysOf);
-  setCallExtra(language, input.callId, { talk: { shaped: shape.shaped, kinds: shape.kinds, top: shape.top } }, store);
-  // 2. 처음 쓴 것 · 장부 · 고쳐 씀(표시로 새로 잡힌 문법만 — 감지기 몫은 callHooks가 이미)
+  // 1. 처음 쓴 것 · 장부 · 고쳐 씀(표시로 새로 잡힌 문법만 — 감지기 몫은 callHooks가 이미)
   const firstUses = readFirstUses(language, store);
   const ledger: { k: string; src: "call"; r: "used" }[] = [];
   const used: { k: string[]; x: string; t: number; s: "call" }[] = [];
@@ -104,7 +89,7 @@ export function applyTalkTags(input: { language: string; callId: string; said: r
   // 표시 몫(모델이 고른 문법)은 한 통화에 열쇠마다 한 번만.
   if (ledger.length) noteLedger(language, [...new Map(ledger.map((one) => [one.k, one])).values()]);
   if (used.length) noteGrowthLines(language, { used }, store);
-  // 3. 같은 종류 질문에 한 대답(그 질문 뒤 첫 내 줄)
+  // 2. 같은 종류 질문에 한 대답(그 질문 뒤 첫 내 줄)
   const answers = readAnswers(language, store);
   for (const [at, kind] of Object.entries(tags.asks)) {
     const i = Number(at);
@@ -127,4 +112,66 @@ export function forgetTalkDay(language: string, day: string, dayOf: (ms: number)
   const uses = readFirstUses(language, store);
   for (const [key, use] of Object.entries(uses)) if (dayOf(use.at) === day) delete uses[key];
   write(`${FIRST_USE_KEY}.${language}`, uses, store);
+}
+
+/**
+ * 대화 비교 장면(사용자 2026-11-28 "캡처샷에 표시를 넣어 더 나아졌음을 명시적으로, 나아진 게 없으면 억지로 띄우지 말고"):
+ * 같은 종류 질문에 한 처음·최근 대답(둘 다 고침받지 않은 줄 — applyTalkTags가 고친 줄은 안 남김)에서
+ * 되묻는 문장(?로 끝남)은 빼고, 질문에 있던 낱말도 빼고 센 "내 말" 낱말 수가 3개 넘게 늘었거나, 최근 대답에 처음 맞게 쓴 문법·표현이 있으면 장면.
+ * marks = 최근 대답에서 밑줄 칠 글자 범위([시작, 끝)) — 처음 대답·질문에 없던 내 말 낱말과 그 대답에서 처음 쓴 표현.
+ */
+export type AnswerGain = { first: Answer; last: Answer; before: number; after: number; keys: string[]; marks: [number, number][] };
+
+const QUESTION_END = /[?？]\s*$/u;
+
+function ownWords(text: string, question: string, language: string): string[] {
+  const asked = new Set(segmentWords(question, language).map((token) => token.toLowerCase()));
+  const said = (text.match(/[^.!?。！？]+[.!?。！？]*/gu) ?? [text]).filter((sentence) => !QUESTION_END.test(sentence.trim())).join(" ");
+  return segmentWords(said, language).filter((token) => LETTER.test(token) && !asked.has(token.toLowerCase()));
+}
+
+export function answerGain(language: string, answers: Answers, firstUses: Record<string, FirstUse>, dayOf: (ms: number) => string): AnswerGain | null {
+  let best: AnswerGain | null = null;
+  for (const pair of Object.values(answers)) {
+    if (!pair?.first || !pair.last || dayOf(pair.first.at) === dayOf(pair.last.at)) continue;
+    const { first, last } = pair;
+    const before = ownWords(first.a, first.q, language).length;
+    const mine = ownWords(last.a, last.q, language);
+    const after = mine.length;
+    const keys = Object.entries(firstUses)
+      .filter(([, use]) => use.at === last.at && use.line === last.a)
+      .map(([key]) => key);
+    if (!keys.length && after - before < 3) continue;
+    // 밑줄: 처음 대답에 없던 내 말 낱말(차례대로 글자 위치를 찾음) + 처음 쓴 표현 조각.
+    const old = new Set(segmentWords(first.a, language).map((token) => token.toLowerCase()));
+    const marks: [number, number][] = [];
+    let from = 0;
+    const lower = last.a.toLowerCase();
+    for (const token of segmentWords(last.a, language)) {
+      const at = lower.indexOf(token.toLowerCase(), from);
+      if (at < 0) continue;
+      from = at + token.length;
+      if (mine.includes(token) && !old.has(token.toLowerCase())) marks.push([at, at + token.length]);
+    }
+    for (const key of keys) {
+      if (!key.startsWith("e|")) continue;
+      const at = lower.indexOf(key.slice(2).toLowerCase());
+      if (at >= 0) marks.push([at, at + key.length - 2]);
+    }
+    const gain: AnswerGain = { first, last, before, after, keys, marks: mergeMarks(marks) };
+    const score = (one: AnswerGain) => one.keys.length * 3 + (one.after - one.before);
+    if (!best || score(gain) > score(best)) best = gain;
+  }
+  return best;
+}
+
+/** 겹치거나 공백 하나로 붙은 범위는 하나로(낱말마다 끊긴 밑줄 대신 이어진 조각). */
+function mergeMarks(marks: [number, number][]): [number, number][] {
+  const out: [number, number][] = [];
+  for (const [a, b] of [...marks].sort((x, y) => x[0] - y[0])) {
+    const lastOne = out[out.length - 1];
+    if (lastOne && a <= lastOne[1] + 1) lastOne[1] = Math.max(lastOne[1], b);
+    else out.push([a, b]);
+  }
+  return out;
 }

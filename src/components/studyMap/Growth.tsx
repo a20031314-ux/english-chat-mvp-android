@@ -14,14 +14,11 @@ import type { UICopy } from "@/lib/copy";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import { growthPairs, type GrowthPair } from "@/lib/curriculum/growthView";
 import { GROWTH_LINES_EVENT, readGrowthLines } from "@/lib/curriculum/growthLines";
-import { CALL_NOTES_EVENT, readCallNotes } from "@/lib/roleplay/callNotes";
-import { bestAnswerPair, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
-import { compareTalk, type CompareRow } from "@/lib/roleplay/talkStats";
-import { bankTone } from "@/components/studyMap/bankTone";
+import { CALL_NOTES_EVENT } from "@/lib/roleplay/callNotes";
+import { answerGain, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
 import { ladderFor } from "@/lib/curriculum/stages";
 import { SaidWithMistakes } from "@/components/RoleplayReview";
 
-const LOG = bankTone("log");
 
 function useTick(events: readonly string[], language: string): number {
   const [tick, setTick] = useState(0);
@@ -105,16 +102,6 @@ export function CallGrowthPairs({ ui, language, locale, since }: { ui: UICopy; l
   );
 }
 
-function rowName(ui: UICopy, id: CompareRow["id"]): string {
-  return { mine3: ui.talkMine3, share: ui.talkMineShare, shaped: ui.talkShaped, kinds: ui.talkKinds, top: ui.talkTop, words: ui.talkWords, level: ui.talkLevel, fixed: "✎", asked: ui.talkAsked, topics: ui.talkTopics }[id];
-}
-
-function rowValue(id: CompareRow["id"], value: number): string {
-  if (id === "level" || id === "fixed" || id === "share" || id === "shaped") return `${Math.round(100 * value)}%`;
-  if (id === "words" || id === "asked" || id === "kinds") return value.toFixed(1).replace(/\.0$/, "");
-  return String(Math.round(value));
-}
-
 const TALK_EVENTS = [CALL_NOTES_EVENT, TALK_MEMORY_EVENT] as const;
 
 /** g|단계:번호 → 단계 문법 이름(앱 언어, 없으면 영어) — 노트 칸 이름이 없을 때. */
@@ -128,88 +115,70 @@ export function ladderName(language: string, locale: string, key: string): strin
 const localDay = (ms: number) => dayOfSeconds(Math.floor(ms / 1000));
 
 /**
- * 대화 비교(자유대화): 맨 위 같은 종류 튜터 질문에 한 대답 짝(처음 → 지금) · 처음 3통 vs 최근 3통 가운데 많이 나아진 칸 셋까지 ·
- * 처음 맞게 써 본 문법·표현(표시가 생긴 첫 통화 뒤, 최근 셋, 그 문장). 셋 다 없으면 없음. keyLabel = 열쇠 → 앱 언어 이름(Logbank).
+ * 대화 비교(사용자 2026-11-28 "캡처샷에 표시를 넣어 더 나아졌음을 명시적으로, 나아진 게 없으면 억지로 띄우지 말고"):
+ * 같은 종류 튜터 질문에 한 처음·최근 대답을 통화 대본처럼 말풍선 두 장면으로 — 최근 대답의 나아진 곳에 밑줄,
+ * 아래 칩(처음 맞게 쓴 문법·표현 이름 · 내 말 낱말 수 처음 → 지금). 나아진 게 없으면(talkMemory.ts answerGain) 칸 없음.
  */
 export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; language: string; locale: string; keyLabel: (key: string) => string }) {
   const tick = useTick(TALK_EVENTS, language);
-  const view = useMemo(() => {
+  const gain = useMemo(() => {
     void tick;
-    const notes = readCallNotes(language).filter((note) => note.talk);
-    const compared = compareTalk(notes.map((note) => ({ at: note.at, talk: note.talk!, ...(note.topics ? { topics: note.topics } : {}) })));
-    const pair = bestAnswerPair(readAnswers(language), localDay);
-    const tagged = notes.filter((note) => note.talk?.shaped !== undefined).map((note) => note.at).sort((a, b) => a - b);
-    const firstTagged = tagged[0];
-    const fresh =
-      firstTagged === undefined
-        ? []
-        : Object.entries(readFirstUses(language))
-            .filter(([, use]) => localDay(use.at) !== localDay(firstTagged) && use.at > firstTagged)
-            .sort((a, b) => b[1].at - a[1].at)
-            .slice(0, 3)
-            .map(([key, use]) => ({ key, ...use }));
-    if (!compared && !pair && !fresh.length) return null;
-    return { rows: compared?.rows ?? [], pair, fresh };
+    return answerGain(language, readAnswers(language), readFirstUses(language), localDay);
   }, [tick, language]);
-  if (!view) return null;
+  if (!gain) return null;
   const day = (at: number) => shortDay(locale, Math.floor(at / 1000));
+  const names = gain.keys.map((key) => keyLabel(key) || ladderName(language, locale, key)).filter(Boolean);
+  const grew = gain.after - gain.before >= 3;
   return (
-    <section data-talk-compare className="flex flex-col gap-2 rounded-xl border border-line p-3">
+    <section data-talk-compare className="flex flex-col gap-1.5 rounded-xl border border-line p-3">
       <h3 className="text-caption font-semibold text-slate-300">
         <span aria-hidden>📞 </span>
         {ui.talkCompareTitle}
       </h3>
-      {view.pair ? (
-        <div data-talk-pair className="flex flex-col gap-1">
-          <p dir="auto" className="text-caption text-slate-300">
-            <span aria-hidden>🗨 </span>
-            {view.pair.last.q}
-          </p>
-          <p className="flex items-baseline gap-2 text-caption text-slate-500">
-            <span className="shrink-0 tabular-nums">{day(view.pair.first.at)}</span>
-            <span dir="auto" className="min-w-0">{view.pair.first.a}</span>
-            <span className="ms-auto shrink-0 tabular-nums">{view.pair.first.n}</span>
-          </p>
-          <p className={`flex items-baseline gap-2 rounded-lg p-1.5 text-chat text-ink ${LOG.soft}`}>
-            <span className="shrink-0 text-caption tabular-nums text-slate-400">{day(view.pair.last.at)}</span>
-            <span dir="auto" className="min-w-0 font-semibold">{view.pair.last.a}</span>
-            <span className="ms-auto shrink-0 text-caption font-semibold tabular-nums">{view.pair.last.n}</span>
-          </p>
-        </div>
-      ) : null}
-      {view.rows.length ? (
-        <table className="w-full text-caption tabular-nums">
-          <thead>
-            <tr className="text-meta text-slate-500">
-              <th className="py-0.5 text-start font-normal" />
-              <th className="py-0.5 text-end font-normal">{ui.talkFirst}</th>
-              <th className="py-0.5 text-end font-normal">{ui.talkRecent}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {view.rows.map((row) => (
-              <tr key={row.id} data-talk-row={row.id}>
-                <td className="py-0.5 text-slate-300" title={row.id === "fixed" ? ui.talkFixed : undefined}>{rowName(ui, row.id)}</td>
-                <td className="py-0.5 text-end text-slate-500">{rowValue(row.id, row.then)}</td>
-                <td className="py-0.5 text-end font-semibold text-ink">{rowValue(row.id, row.now)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : null}
-      {view.fresh.length ? (
-        <div data-talk-fresh className="flex flex-col gap-1">
-          <p className="text-meta text-slate-500">{ui.talkNewUse}</p>
-          {view.fresh.map((one) => (
-            <p key={one.key} data-talk-fresh-key={one.key} className="flex flex-wrap items-baseline gap-x-2 text-caption">
-              <span className={`rounded-full px-2 py-0.5 text-meta ${LOG.soft}`}>{keyLabel(one.key) || ladderName(language, locale, one.key)}</span>
-              <span dir="auto" className="text-ink">{one.line}</span>
-              <span className="text-meta tabular-nums text-slate-500">{day(one.at)}</span>
-            </p>
+      <p className="mt-1 text-meta tabular-nums text-slate-500">{day(gain.first.at)}</p>
+      <TalkBubble who="tutor" text={gain.first.q} />
+      <TalkBubble who="me" text={gain.first.a} dim />
+      <div className="my-1 border-t border-line" />
+      <p className="text-meta tabular-nums text-slate-500">{day(gain.last.at)}</p>
+      <TalkBubble who="tutor" text={gain.last.q} />
+      <TalkBubble who="me" text={gain.last.a} marks={gain.marks} />
+      {names.length || grew ? (
+        <div data-talk-gain className="flex flex-wrap justify-end gap-1">
+          {names.map((name) => (
+            <span key={name} className="rounded-full bg-good/15 px-2 py-0.5 text-meta text-good">{name}</span>
           ))}
+          {grew ? <span className="rounded-full bg-good/15 px-2 py-0.5 text-meta tabular-nums text-good">{ui.talkWordsGrew.replace("{a}", String(gain.before)).replace("{b}", String(gain.after))}</span> : null}
         </div>
       ) : null}
     </section>
+  );
+}
+
+/** 대화 비교 말풍선 — 튜터는 왼쪽, 나는 오른쪽(아랍어는 거꾸로), marks = 밑줄 칠 글자 범위. */
+function TalkBubble({ who, text, dim = false, marks = [] }: { who: "tutor" | "me"; text: string; dim?: boolean; marks?: readonly [number, number][] }) {
+  const parts: { text: string; mark: boolean }[] = [];
+  let at = 0;
+  for (const [a, b] of marks) {
+    if (a > at) parts.push({ text: text.slice(at, a), mark: false });
+    parts.push({ text: text.slice(a, b), mark: true });
+    at = b;
+  }
+  if (at < text.length) parts.push({ text: text.slice(at), mark: false });
+  return (
+    <div className={`flex ${who === "me" ? "justify-end" : ""}`}>
+      <p
+        dir="auto"
+        className={`max-w-[85%] rounded-2xl px-3 py-1.5 text-chat ${who === "me" ? `rounded-ee-sm bg-info/15 text-ink ${dim ? "opacity-70" : ""}` : "rounded-es-sm bg-white/[0.06] text-slate-200"}`}
+      >
+        {parts.map((part, index) =>
+          part.mark ? (
+            <span key={index} className="underline decoration-good decoration-2 underline-offset-4">{part.text}</span>
+          ) : (
+            <span key={index}>{part.text}</span>
+          ),
+        )}
+      </p>
+    </div>
   );
 }
 

@@ -386,6 +386,8 @@ export function Logbank({
             dateLabel={dateLabel}
             onDay={(day) => setOpenDay(day)}
           />
+        {/* 그 기간에 학습 시간·날이 없으면 ⏱ 0′ 📅 0 칩을 띄우지 않는다(사용자 2026-11-28 "띄울 게 없을 땐 억지로 띄우지 마"). */}
+        {sum.minutes || summary.activeDays ? (
         <button
           type="button"
           data-log-time
@@ -396,7 +398,8 @@ export function Logbank({
           <span title={ui.logStudyTime}>{`⏱ ${sum.minutes ?? 0}′`}</span>
           <span title={ui.logStudyDays} aria-label={`${ui.logStudyDays} ${summary.activeDays}`}>{`📅 ${summary.activeDays}`}</span>
         </button>
-        {showTime ? (
+        ) : null}
+        {showTime && (sum.minutes || summary.activeDays) ? (
           <>
             <LogChart bars={chart} kind={kind} legend={timeLegend} unit="′" dateLabel={dateLabel} onDay={(day) => setOpenDay(day)} />
             <div className="flex flex-wrap gap-x-3 text-meta text-slate-400">
@@ -410,7 +413,7 @@ export function Logbank({
           </>
         ) : null}
       </section>
-      {showTime ? <TimeSources ui={ui} summary={summary} input={input} period={period} /> : null}
+      {showTime && (sum.minutes || summary.activeDays) ? <TimeSources ui={ui} summary={summary} input={input} period={period} /> : null}
       {/* Logbank 아래 네이티브 하나(바닥 칸·전체 화면 모두 — My 탭은 배너가 없어 한 화면에 광고 하나) — 둘러보는 목록 자리 규칙. */}
       <NativeAdSlot feedId="my-full" slotKey="logbank-list" spaced />
       {dayDetail ? (

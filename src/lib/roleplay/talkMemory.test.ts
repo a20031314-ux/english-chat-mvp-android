@@ -1,8 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { codeOf, grammarList, readTags, tagPrompt, type OpeningLine } from "./talkTags.ts";
-import { applyTalkTags, bestAnswerPair, readAnswers, readFirstUses } from "./talkMemory.ts";
-import { readCallNotes, saveCallNote } from "./callNotes.ts";
+import { answerGain, applyTalkTags, readAnswers, readFirstUses } from "./talkMemory.ts";
+import { saveCallNote } from "./callNotes.ts";
 import type { TranscriptLine } from "./review.ts";
 
 function memoryStore() {
@@ -37,14 +37,15 @@ test("표시 적용: 문형 칸 숫자·처음 쓴 것·같은 질문 대답(처
   };
   call("a", day1, [{ who: "tutor", text: "¿Qué hiciste el fin de semana?" }, { who: "learner", text: "Playa" }, { who: "learner", text: "Yo ir playa", better: "Fui a la playa" }], { 2: [`g|${g[5]!.id}`] });
   call("b", day9, [{ who: "tutor", text: "¿Y este fin de semana?" }, { who: "learner", text: "Fui a la playa con mi hermana y comimos paella" }], { 1: [`g|${g[5]!.id}`] });
-  const notes = readCallNotes(language, store);
-  assert.equal(notes.find((n) => n.id === "a")!.talk!.shaped, 0, "고쳐진 줄의 문법은 안 셈");
-  assert.equal(notes.find((n) => n.id === "b")!.talk!.shaped, 1);
   assert.equal(readFirstUses(language, store)[`g|${g[5]!.id}`]!.at, day9);
-  const pair = bestAnswerPair(readAnswers(language, store), (ms) => new Date(ms).toISOString().slice(0, 10))!;
-  assert.equal(pair.kind, "weekend");
-  assert.equal(pair.first.a, "Playa");
-  assert.ok(pair.last.n > pair.first.n);
+  const gain = answerGain(language, readAnswers(language, store), readFirstUses(language, store), (ms) => new Date(ms).toISOString().slice(0, 10))!;
+  assert.equal(gain.first.a, "Playa");
+  assert.ok(gain.after - gain.before >= 3);
+  assert.deepEqual(gain.keys, [`g|${g[5]!.id}`], "처음 맞게 쓴 문법");
+  // 밑줄은 처음 대답·질문에 없던 내 말 — "Fui a la playa con mi hermana y comimos paella"에서 Playa는 빼고
+  const marked = gain.marks.map(([a, b]) => gain.last.a.slice(a, b)).join("|");
+  assert.match(marked, /Fui a la/);
+  assert.match(marked, /comimos paella/);
 });
 
 test("그날 지우기: 그날 대답·처음 쓴 것을 지움, 고쳐진 대답은 짝에 안 들어감", async () => {
@@ -62,4 +63,14 @@ test("그날 지우기: 그날 대답·처음 쓴 것을 지움, 고쳐진 대�
   forgetTalkDay(language, iso(day1), iso, store);
   assert.deepEqual(readAnswers(language, store), {});
   assert.deepEqual(readFirstUses(language, store), {});
+});
+
+test("answerGain: 되묻는 말·질문 되풀이로만 길어진 대답은 장면 없음, ja 낱말 세기", () => {
+  const dayOf = (ms: number) => new Date(ms).toISOString().slice(0, 10);
+  const d1 = Date.UTC(2026, 10, 26), d2 = Date.UTC(2026, 10, 27);
+  const echo = { asks: { first: { at: d1, q: "Were you doing live coding there?", a: "I am doing live coding", n: 5 }, last: { at: d2, q: "Were you doing live coding there?", a: "Yeah, that's right. And what will you do today?", n: 9 } } };
+  assert.equal(answerGain("en", echo as never, {}, dayOf), null);
+  const ja = { weekend: { first: { at: d1, q: "週末は何をしましたか？", a: "カフェ", n: 1 }, last: { at: d2, q: "週末はどうでしたか？", a: "友達とカフェに行って、ケーキを食べました", n: 8 } } };
+  const gain = answerGain("ja", ja as never, {}, dayOf)!;
+  assert.ok(gain && gain.after - gain.before >= 3);
 });

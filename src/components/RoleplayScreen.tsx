@@ -43,10 +43,8 @@ import { fixesFromLines, fixesPrompt, mergeFixes, readFixes, settleFixes } from 
 import { lifeDay, lifeFactsPrompt, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
 import { CallGrowthPairs } from "@/components/studyMap/Growth";
 import { saveCallNote, setCallExtra, setCallSummary } from "@/lib/roleplay/callNotes";
-import { talkStatsOf } from "@/lib/roleplay/talkStats";
 import { OPENING_LINES } from "@/lib/roleplay/talkTags";
 import { applyTalkTags } from "@/lib/roleplay/talkMemory";
-import { loadBank, stageCuts } from "@/lib/curriculum/vocabBank";
 import { recentLearned } from "@/lib/roleplay/recentLearned";
 import { readLedger } from "@/lib/curriculum/logLedger";
 import { EMPTY_MEMORY, foldDue, rawLines, type ConversationMemory } from "@/lib/roleplay/memory";
@@ -1014,15 +1012,6 @@ export function RoleplayScreen({
         redone: tally.redone ?? 0,
         gender: tutorGender,
       });
-      // 대화 비교(열린 통화만, 문장 없이 숫자 — 처음 통화의 긴 두 줄만 따로, lib/roleplay/talkStats.ts, 2026-11-07).
-      if (openTalk) {
-        void loadBank(language)
-          .then((bank) => {
-            const talk = talkStatsOf(language, said, bank, stageCuts(language)[0] ?? 700);
-            if (talk) setCallExtra(language, callId, { talk });
-          })
-          .catch(() => undefined);
-      }
     }
     void fetchContext({
       scenarioId: scenario.id,
