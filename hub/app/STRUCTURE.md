@@ -27,7 +27,7 @@
 │          칸 셋 = 위 칸 이름 줄이 탭(notes/NotebookSection MyLayers — 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면 FullScreenLayer, ✕로 제자리)
 │          [Logbank 하늘] studyMap/Logbank — 기록만
 │              [주 | 월] ‹기간› → 배운 것 표(Learned — 단어 · 문법 · 표현 · 문장구조 요소 색 bankTone PartMark × 학습 · 활용, curriculum/growthView.ts)
-│                → 쌓기 기둥(DayStacks — 날마다 요소 자리 순서로 블록, curriculum/learnedView.ts stacksOf) → 블록 누르면 그 카드(다시 맞힌 블록은 흰 점, progressIn recovered) · 누른 날 비율 막대(PartSplit — 학습 시간 줄과 같이 씀, 요소 칩 → 그날 그 요소 카드들 LearnedCards) · ↺ 다시 맞힘 칩 → 그날 카드 · ✎✓ 고쳐 씀 칩 → 그날 짝(PairList, curriculum/growthLines.ts)
+│                → 쌓기 기둥(DayStacks — 날마다 요소 자리 순서로 블록, curriculum/learnedView.ts stacksOf) → 블록 누르면 Languagebank 그 카드(낱말 DictionarySheet · 그 밖 openLesson, 다시 맞힌 블록은 흰 점, progressIn recovered) · 누른 날 비율 막대(PartSplit — 학습 시간 줄과 같이 씀, 요소 칩 → 그날 그 요소 카드들 LearnedCards) · ↺ 다시 맞힘 칩 → 그날 카드 · ✎✓ 고쳐 씀 칩 → 그날 짝(PairList, curriculum/growthLines.ts)
 │                · 학습 곡선(활용 누적 선, curriculum/learnedView.ts — 점 › → 그날 새로 활용 UsedCards: 카드 + 📞/💬/👤 시각 + 내 문장 curriculum/growthView.ts usedFirstOn·growthLines) · 대화 비교(TalkCompare — 되풀이되는 질문 종류(SAME_QUESTION_KINDS)에 한 처음·최근 대답 말풍선 두 장면, 처음 쓴 조각 밑줄·칩, 없으면 없음 roleplay/talkMemory.ts answerGain) · 대화에서 처음 맞게 쓴 것(기간에 셋 넘게 쌓이면, talkFirstsIn)
 │              쌓기 아래 "학습 n ›" → 그날 = 학습 타임라인(DayTimeline → 학습 시간 → 카드 CardTimeline, curriculum/studyTimeline.ts) · ⏱ 학습 시간 막대
 │              재료: 이 폰 사건 장부 logbank.v1.<언어>(curriculum/logLedger.ts) + 수업 결과 + 통화 카드 + 서버 /api/notebook logItems

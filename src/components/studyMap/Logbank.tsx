@@ -37,11 +37,9 @@ import { focusQuiz } from "@/lib/curriculum/quizFocus";
 import { cardHistory, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session, type SessionSummary } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
-import { glossFor, quizGloss } from "@/lib/curriculum/stageScripts";
-import { frameById } from "@/lib/curriculum/frames";
+import { quizGloss } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { SaidWithMistakes } from "@/components/RoleplayReview";
-import { cachedExpressionCard } from "@/lib/curriculum/useExpressionCards";
 
 const LOG = bankTone("log");
 
@@ -1366,6 +1364,7 @@ function Learned({
   const [open, setOpen] = useState<{ part: CardPart; col: GrowCol } | null>(null);
   // 쌓기에서 누른 카드(블록 하나 또는 그날 한 요소) — 위 표 칸과 같은 카드 시트.
   const [stackCards, setStackCards] = useState<{ title: string; keys: readonly string[] } | null>(null);
+  const [word, setWord] = useState<string | null>(null);
   // 학습 곡선 점 → 그날 새로 활용한 것(대화에서 처음 맞게 쓴 것)과 쓴 문장.
   const [usedDay, setUsedDay] = useState<string | null>(null);
   const [fixedDay, setFixedDay] = useState<string | null>(null);
@@ -1436,7 +1435,7 @@ function Learned({
           </tbody>
         </table>
       ) : null}
-      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} backOf={(day) => backByDay.get(day) ?? []} fixedOf={(day) => fixedOf(day).length} onFixed={(day) => setFixedDay(day)} /> : null}
+      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} onCard={(key) => (key.startsWith("w|") ? setWord(key.slice(2)) : openLesson({ language, key, above: true }))} backOf={(day) => backByDay.get(day) ?? []} fixedOf={(day) => fixedOf(day).length} onFixed={(day) => setFixedDay(day)} /> : null}
       <TalkCompare ui={ui} language={language} locale={locale} period={period} keyLabel={keyLabel} />
       {curveReady(all) ? (
         <LearnCurve ui={ui} stacks={stacks} known={known} newUsed={newUsed} dateLabel={dateLabel} onUsed={setUsedDay} />
@@ -1455,6 +1454,7 @@ function Learned({
           <UsedCards ui={ui} language={language} locale={locale} uses={usedFirstOn(ledger, usedDay, (t) => dayOfSeconds(t))} itemsOf={itemsOf} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}
+      {word ? <DictionarySheet ui={ui} language={language} locale={locale} word={word} title={ui.languagebankTitle} onClose={() => setWord(null)} above /> : null}
       {stackCards ? (
         <LogSheet title={stackCards.title} ui={ui} onClose={() => setStackCards(null)}>
           <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(stackCards.keys.slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
@@ -1488,31 +1488,7 @@ function LearnedCards({
   const [word, setWord] = useState<string | null>(null);
   const prepared = usePrepared(language, locale);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
-  const bold = (text: string, piece: string) => {
-    const at = piece ? text.indexOf(piece) : -1;
-    return at < 0 ? (
-      <>{text}</>
-    ) : (
-      <>
-        {text.slice(0, at)}
-        <strong className="font-semibold text-ink">{piece}</strong>
-        {text.slice(at + piece.length)}
-      </>
-    );
-  };
   const face = (key: string) => {
-    // 문장구조: 틀 + 뜻 + 첫 예문(채운 칸 굵게) — 틀 한 줄만 보이던 것(사용자 2026-11-28).
-    if (key.startsWith("f|")) {
-      const frame = frameById(language, key.slice(2));
-      const example = frame?.examples[0];
-      if (!frame || !example) return null;
-      return { word: frame.pattern, meaning: glossFor(frame.meaning, locale), line: bold(example.text, example.slot), lineGloss: quizGloss(example.gloss, locale, language), speak: { text: example.text, tag } };
-    }
-    if (key.startsWith("e|") && !cardFaceOf(language, key)) {
-      const card = cachedExpressionCard(language, locale, key.slice(2));
-      if (!card) return null;
-      return { word: key.slice(2), meaning: card.gloss, line: bold(card.example, card.piece), lineGloss: card.exampleGloss || null, speak: { text: card.example, tag } };
-    }
     if (key.startsWith("w|") || key.startsWith("e|")) {
       const one = cardFaceOf(language, key);
       if (!one) return null;
@@ -1599,6 +1575,7 @@ function DayStacks({
   keyLabel,
   onDay,
   onCards,
+  onCard,
   backOf,
   fixedOf,
   onFixed,
@@ -1613,6 +1590,8 @@ function DayStacks({
   onDay: (day: string) => void;
   /** 카드 시트 열기 — 블록 하나(그 카드) · 그날 한 요소(그 카드들). */
   onCards: (title: string, keys: readonly string[]) => void;
+  /** 블록 하나 = Languagebank 카드 팝업(낱말은 사전 시트, 그 밖은 소재 수업) — 사용자 2026-11-28. */
+  onCard: (key: string) => void;
   /** 그날 다시 맞힌 열쇠(틀린 날 뒤 다른 날 맞힘) — 블록에 ↺ 점, 누른 날 칩. */
   backOf: (day: string) => readonly string[];
   /** 그날 고쳐 쓴 줄 수(대화) — 누른 날 칩 ✎✓ → onFixed. */
@@ -1667,7 +1646,7 @@ function DayStacks({
                     title={keyLabel(key)}
                     onClick={() => {
                       setPick(one.day);
-                      onCards(`${learnPartName(ui, part)} · ${keyLabel(key)}`, [key]);
+                      onCard(key);
                     }}
                     data-stack-back={back.has(key) ? "" : undefined}
                     className={`relative mt-0.5 flex w-full items-center justify-center ${k >= n - dim ? PART_BG_DIM[part] : PART_BG[part]} hover:brightness-125`}

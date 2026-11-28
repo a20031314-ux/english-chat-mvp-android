@@ -26,15 +26,6 @@ function sourceOf(card: Card, stage: number): QuizSource {
   return { text: card.example, gloss: { en: "", raw: card.exampleGloss }, from: `e|${card.w}`, stage, piece: card.piece, who: "me", wordGloss: card.gloss };
 }
 
-/** 이 폰에 남은 표현 카드 하나(1~5단계 어디든) — 퀴즈를 연 적 없는 화면(Logbank 카드)에서도 뜻·예문을 보이게(사용자 2026-11-28). */
-export function cachedExpressionCard(language: string, ui: string, expression: string): Card | null {
-  for (let stage = 1; stage <= 5; stage += 1) {
-    const found = readCached(language, ui, stage)?.find((one) => one.w === expression);
-    if (found) return found;
-  }
-  return null;
-}
-
 /** 표현 뜻(앱 언어) — 카드가 온 것만. */
 const meaningOf = new Map<string, string>();
 export function useExpressionCards(language: string, ui: string, upTo: number) {
