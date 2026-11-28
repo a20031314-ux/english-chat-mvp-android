@@ -863,7 +863,7 @@ function DayTimeline({
         <span>18</span>
         <span>24</span>
       </div>
-      <SessionRows ui={ui} day={day} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt} />
+      <SessionRows ui={ui} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt} />
       <FixedLines items={fixed} />
       <div className="flex justify-end">
         <ClearDay ui={ui} language={language} day={day} />
@@ -875,7 +875,6 @@ function DayTimeline({
 /** 학습 시간 덩어리 줄들(시각 · 어디서 · 분 · 요소별 수 · ✓✗) — 그날 세부와 My 맨 위 오늘의 학습이 같이 씀. children = 뒤에 이어 붙는 칸(오늘 할 것). */
 function SessionRows({
   ui,
-  day,
   sessions,
   summaries,
   clock,
@@ -884,7 +883,6 @@ function SessionRows({
   children,
 }: {
   ui: UICopy;
-  day: Pick<Day, "notes">;
   sessions: readonly Session[];
   summaries: readonly SessionSummary[];
   clock: Intl.DateTimeFormat;
@@ -894,7 +892,6 @@ function SessionRows({
   children?: ReactNode;
 }) {
   const box = "rounded-xl border border-line bg-white/[0.02]";
-  const chipCls = "rounded-full border border-line px-2 py-0.5 text-meta tabular-nums text-slate-300";
   const hasParts = (parts: Record<CardPart, number>) => LEARN_PARTS.some((part) => parts[part]);
   const range = (one: Session) => {
     const from = clock.format(one.start);
@@ -920,7 +917,6 @@ function SessionRows({
         if (i < hidden) return null;
         const sum = summaries[i]!;
         const next = sessions[i + 1];
-        const fixedN = day.notes.filter((note) => one.callIds.includes(note.id)).reduce((n, note) => n + note.fixed, 0);
         return (
           <li key={one.start} className="flex flex-col">
             {/* 학습한 동안 = 왼쪽 굵은 색 막대(시작 시각 → 끝 시각), 쉰 동안 = 가는 회색 선 — 시작~끝을 글로 쓰는 대신(사용자 2026-11-28). */}
@@ -936,12 +932,8 @@ function SessionRows({
                   <span className="min-w-0 flex-1 truncate text-end text-meta tabular-nums text-slate-400">{ui.planMinutes.replace("{n}", String(sessionMinutes(one)))}</span>
                   <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
                 </span>
-                {hasParts(sum.parts) ? <PartSplit ui={ui} parts={sum.parts} /> : null}
-                <span className="flex flex-wrap gap-1.5">
-                  {sum.ok || sum.miss ? <span className={chipCls}>{`✓ ${sum.ok}  ✗ ${sum.miss}`}</span> : null}
-                  {fixedN ? <span className={chipCls}>{`✎ ${fixedN}`}</span> : null}
-                  {sum.looked ? <span className={chipCls}>{ui.tlLookedN.replace("{n}", String(sum.looked))}</span> : null}
-                </span>
+                {/* 카드는 어디서·몇 분·요소 비율 막대만 — 요소별 수·✓✗·고쳐 씀·찾아봄은 누르면 나오는 세부에(사용자 2026-11-28). */}
+                {hasParts(sum.parts) ? <PartSplit ui={ui} parts={sum.parts} bare /> : null}
               </button>
             </div>
             {next || children ? (
@@ -1032,7 +1024,7 @@ export function TodayTimeline({
         <div className="flex min-w-0 flex-1 items-center gap-2">{title}</div>
         {minutes ? <span data-today-minutes title={ui.logStudyTime} className="shrink-0 text-note tabular-nums text-slate-300">{`⏱ ${minutes}′`}</span> : null}
       </div>
-      <SessionRows ui={ui} day={day} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt} fold>
+      <SessionRows ui={ui} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt} fold>
         {children}
       </SessionRows>
       {openAt !== null ? (
@@ -1726,7 +1718,7 @@ function DayStacks({
 }
 
 /** 요소 비율: 이어진 막대 하나(자리 순서 그대로) + 요소마다 색 네모·이름·수. 학습 시간 줄(SessionRows)과 쌓기 아래가 같이 씀 — 쌓기 아래(onPart)에선 요소를 누르면 그 카드들. */
-function PartSplit({ ui, parts, onPart }: { ui: UICopy; parts: Record<CardPart, number>; onPart?: (part: CardPart) => void }) {
+function PartSplit({ ui, parts, onPart, bare = false }: { ui: UICopy; parts: Record<CardPart, number>; onPart?: (part: CardPart) => void; /** 막대만(학습 시간 줄 — 세부는 누르면). */ bare?: boolean }) {
   const shown = LEARN_PARTS.filter((part) => parts[part]);
   return (
     <span data-part-split className="flex flex-col gap-1.5">
@@ -1735,6 +1727,7 @@ function PartSplit({ ui, parts, onPart }: { ui: UICopy; parts: Record<CardPart, 
           <span key={part} className={PART_BG[part]} style={{ flexGrow: parts[part] }} />
         ))}
       </span>
+      {bare ? null : (
       <span className="flex flex-wrap gap-x-3 gap-y-1 text-meta tabular-nums text-slate-300">
         {shown.map((part) =>
           onPart ? (
@@ -1750,6 +1743,7 @@ function PartSplit({ ui, parts, onPart }: { ui: UICopy; parts: Record<CardPart, 
           ),
         )}
       </span>
+      )}
     </span>
   );
 }
