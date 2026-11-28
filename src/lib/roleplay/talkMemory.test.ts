@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { codeOf, grammarList, readTags, tagPrompt, type OpeningLine } from "./talkTags.ts";
-import { answerGain, applyTalkTags, markPieces, readAnswers, readFirstUses } from "./talkMemory.ts";
+import { answerGain, applyTalkTags, markPieces, readAnswers, readFirstUses, talkFirstsIn } from "./talkMemory.ts";
 import { saveCallNote } from "./callNotes.ts";
 import type { TranscriptLine } from "./review.ts";
 
@@ -74,4 +74,21 @@ test("answerGain: 되묻는 말·질문 되풀이로만 길어진 대답은 장�
   const ja = { weekend: { first: { at: d1, q: "週末は何をしましたか？", a: "カフェ", n: 1 }, last: { at: d2, q: "週末はどうでしたか？", a: "友達とカフェに行って、ケーキを食べました", n: 8 } } };
   const gain = answerGain("ja", ja as never, {}, dayOf)!;
   assert.ok(gain && gain.after - gain.before >= 3);
+});
+
+test("짝은 같은 질문이 되풀이되는 종류만 — 음식 질문 둘은 다른 질문이라 비교 안 함(사용자 2026-11-28)", () => {
+  const dayOf = (ms: number) => new Date(ms).toISOString().slice(0, 10);
+  const d1 = Date.UTC(2026, 10, 26), d2 = Date.UTC(2026, 10, 27);
+  const food = { food: { first: { at: d1, q: "What do you like to eat with hot chocolate?", a: "Nothing. Just hot chocolate and I do my work", n: 9 }, last: { at: d2, q: "What do you put in your carbonara ramen?", a: "Nothing but it is just packed so I can make it easily", n: 12 } } };
+  assert.equal(answerGain("en", food as never, {}, dayOf), null);
+});
+
+test("talkFirstsIn: 기간 안 처음 맞게 쓴 것이 셋 넘게 쌓여야, 한 줄은 한 덩어리", () => {
+  const at = Date.UTC(2026, 10, 27);
+  const uses = { "g|2:2": { at, line: "So I can make it easily" }, "f|en-f1-05": { at, line: "So I can make it easily" }, "e|by the way": { at: at + 1, line: "By the way, I went home" } };
+  const lines = talkFirstsIn(uses, () => true);
+  assert.equal(lines.length, 2);
+  assert.deepEqual(lines[0]!.keys.sort(), ["f|en-f1-05", "g|2:2"]);
+  assert.deepEqual(talkFirstsIn({ "g|2:2": uses["g|2:2"] }, () => true), [], "하나뿐이면 없음");
+  assert.deepEqual(talkFirstsIn(uses, () => false), []);
 });

@@ -386,7 +386,7 @@ export function Logbank({
             dateLabel={dateLabel}
             onDay={(day) => setOpenDay(day)}
           />
-        {/* 그 기간에 학습 시간·날이 없으면 ⏱ 0′ 📅 0 칩을 띄우지 않는다(사용자 2026-11-28 "띄울 게 없을 땐 억지로 띄우지 마"). */}
+        {/* 그 기간에 학습 시간·날이 없으면 ⏱ 0′ 📅 0 칩을 띄우지 않는다(사용자 2026-11-28). */}
         {sum.minutes || summary.activeDays ? (
         <button
           type="button"
@@ -1432,7 +1432,7 @@ function Learned({
         </table>
       ) : null}
       {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} backOf={(day) => backByDay.get(day) ?? []} fixedOf={(day) => fixedOf(day).length} onFixed={(day) => setFixedDay(day)} /> : null}
-      <TalkCompare ui={ui} language={language} locale={locale} keyLabel={keyLabel} />
+      <TalkCompare ui={ui} language={language} locale={locale} period={period} keyLabel={keyLabel} />
       {curveReady(all) ? (
         <LearnCurve ui={ui} stacks={stacks} known={known} newUsed={newUsed} dateLabel={dateLabel} onUsed={setUsedDay} />
       ) : null}

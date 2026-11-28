@@ -130,9 +130,16 @@ function ownWords(text: string, question: string, language: string): string[] {
   return segmentWords(said, language).filter((token) => LETTER.test(token) && !asked.has(token.toLowerCase()));
 }
 
+/**
+ * 짝을 짓는 질문 종류 — 통화마다 거의 같은 질문이 되풀이되는 것만(오늘 어땠어·주말·지난 일·계획).
+ * 음식·취미·의견처럼 매번 다른 질문이 드는 종류는 비교가 분명하지 않아 짓지 않는다(사용자 2026-11-28 "비교할 게 명확하지 않으면 억지로 끌고 올 필요는 없을 것 같아").
+ */
+export const SAME_QUESTION_KINDS = ["day", "weekend", "past", "plans"] as const satisfies readonly QuestionKind[];
+
 export function answerGain(language: string, answers: Answers, firstUses: Record<string, FirstUse>, dayOf: (ms: number) => string): AnswerGain | null {
   let best: AnswerGain | null = null;
-  for (const pair of Object.values(answers)) {
+  for (const kind of SAME_QUESTION_KINDS) {
+    const pair = answers[kind];
     if (!pair?.first || !pair.last || dayOf(pair.first.at) === dayOf(pair.last.at)) continue;
     const { first, last } = pair;
     const before = ownWords(first.a, first.q, language).length;
@@ -175,4 +182,21 @@ function mergeMarks(marks: [number, number][]): [number, number][] {
     else out.push([a, b]);
   }
   return out;
+}
+
+/**
+ * 기간 안 대화에서 처음 맞게 쓴 것(사용자 2026-11-28 "차라리 학습 요소가 쌓이면 주기적으로 보여 주던가") — 한 줄에 여럿이면 한 덩어리.
+ * TALK_FIRSTS_MIN개 이상 쌓인 기간에만 Logbank가 보여 준다.
+ */
+export const TALK_FIRSTS_MIN = 3;
+export function talkFirstsIn(firstUses: Record<string, FirstUse>, inRange: (at: number) => boolean): { line: string; at: number; keys: string[] }[] {
+  const byLine = new Map<string, { line: string; at: number; keys: string[] }>();
+  for (const [key, use] of Object.entries(firstUses)) {
+    if (!use.line || !inRange(use.at)) continue;
+    const one = byLine.get(use.line) ?? { line: use.line, at: use.at, keys: [] };
+    one.keys.push(key);
+    byLine.set(use.line, one);
+  }
+  const lines = [...byLine.values()].sort((a, b) => b.keys.length - a.keys.length || b.at - a.at);
+  return lines.reduce((n, one) => n + one.keys.length, 0) >= TALK_FIRSTS_MIN ? lines : [];
 }

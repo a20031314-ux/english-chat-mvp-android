@@ -15,7 +15,8 @@ import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import { growthPairs, type GrowthPair } from "@/lib/curriculum/growthView";
 import { GROWTH_LINES_EVENT, readGrowthLines } from "@/lib/curriculum/growthLines";
 import { CALL_NOTES_EVENT } from "@/lib/roleplay/callNotes";
-import { answerGain, markPieces, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
+import { answerGain, markPieces, readAnswers, readFirstUses, talkFirstsIn, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
+import { inPeriod, type Period } from "@/lib/curriculum/periodSummary";
 import { ladderFor } from "@/lib/curriculum/stages";
 import { SaidWithMistakes } from "@/components/RoleplayReview";
 
@@ -117,45 +118,68 @@ const localDay = (ms: number) => dayOfSeconds(Math.floor(ms / 1000));
 /**
  * 대화 비교(사용자 2026-11-28 "캡처샷에 표시를 넣어 더 나아졌음을 명시적으로, 나아진 게 없으면 억지로 띄우지 말고"):
  * 같은 종류 튜터 질문에 한 처음·최근 대답을 통화 대본처럼 말풍선 두 장면으로 — 최근 대답에서 처음 맞게 쓴 조각에 밑줄,
- * 아래 칩(처음 맞게 쓴 문법·표현 이름 · 내 말 낱말 수 처음 → 지금). 나아진 게 없으면(talkMemory.ts answerGain) 칸 없음.
+ * 아래 칩(처음 맞게 쓴 문법·표현 이름 · 내 말 낱말 수 처음 → 지금). 짝은 같은 질문이 되풀이되는 종류만, 나아진 게 없으면(talkMemory.ts answerGain) 칸 없음.
+ * 그 기간 대화에서 처음 맞게 쓴 것이 TALK_FIRSTS_MIN개 넘게 쌓이면 따로 "대화에서 처음 맞게 쓴 것" — 내 말풍선 셋까지, 조각 밑줄 + 칩.
  */
-export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; language: string; locale: string; keyLabel: (key: string) => string }) {
+export function TalkCompare({ ui, language, locale, period, keyLabel }: { ui: UICopy; language: string; locale: string; period: Period; keyLabel: (key: string) => string }) {
   const tick = useTick(TALK_EVENTS, language);
-  const gain = useMemo(() => {
+  const { gain, firsts } = useMemo(() => {
     void tick;
-    return answerGain(language, readAnswers(language), readFirstUses(language), localDay);
-  }, [tick, language]);
-  if (!gain) return null;
+    const uses = readFirstUses(language);
+    return {
+      gain: answerGain(language, readAnswers(language), uses, localDay),
+      firsts: talkFirstsIn(uses, (at) => inPeriod(period, localDay(at))).slice(0, 3),
+    };
+  }, [tick, language, period]);
+  if (!gain && !firsts.length) return null;
   const day = (at: number) => shortDay(locale, Math.floor(at / 1000));
-  const names = gain.keys.map((key) => keyLabel(key) || ladderName(language, locale, key)).filter(Boolean);
+  const nameOf = (key: string) => keyLabel(key) || ladderName(language, locale, key);
   // 밑줄 = 칩이 가리키는 조각만: 표현은 그 말, 문장구조·문법은 이름에서 빈칸·설명을 뗀 학습 언어 부분("I can ___." → I can, "can: 능력" → can).
-  const marks = markPieces(
-    gain.last.a,
-    gain.keys.map((key, i) => (key.startsWith("e|") ? key.slice(2) : (names[i] ?? "").split(/[:：]/)[0]!.replace(/_+|…/g, " ").replace(/[.?!。？！]/gu, ""))),
-  );
-  const grew = gain.after - gain.before >= 3;
+  const marksOf = (line: string, keys: readonly string[]) =>
+    markPieces(line, keys.map((key) => (key.startsWith("e|") ? key.slice(2) : nameOf(key).split(/[:：]/)[0]!.replace(/_+|…/g, " ").replace(/[.?!。？！]/gu, ""))));
+  const chips = (names: readonly string[], extra?: string) =>
+    names.length || extra ? (
+      <div data-talk-gain className="flex flex-wrap justify-end gap-1">
+        {names.map((name) => (
+          <span key={name} className="rounded-full bg-good/15 px-2 py-0.5 text-meta text-good">{name}</span>
+        ))}
+        {extra ? <span className="rounded-full bg-good/15 px-2 py-0.5 text-meta tabular-nums text-good">{extra}</span> : null}
+      </div>
+    ) : null;
   return (
-    <section data-talk-compare className="flex flex-col gap-1.5 rounded-xl border border-line p-3">
-      <h3 className="text-caption font-semibold text-slate-300">
-        <span aria-hidden>📞 </span>
-        {ui.talkCompareTitle}
-      </h3>
-      <p className="mt-1 text-meta tabular-nums text-slate-500">{day(gain.first.at)}</p>
-      <TalkBubble who="tutor" text={gain.first.q} />
-      <TalkBubble who="me" text={gain.first.a} dim />
-      <div className="my-1 border-t border-line" />
-      <p className="text-meta tabular-nums text-slate-500">{day(gain.last.at)}</p>
-      <TalkBubble who="tutor" text={gain.last.q} />
-      <TalkBubble who="me" text={gain.last.a} marks={marks} />
-      {names.length || grew ? (
-        <div data-talk-gain className="flex flex-wrap justify-end gap-1">
-          {names.map((name) => (
-            <span key={name} className="rounded-full bg-good/15 px-2 py-0.5 text-meta text-good">{name}</span>
-          ))}
-          {grew ? <span className="rounded-full bg-good/15 px-2 py-0.5 text-meta tabular-nums text-good">{ui.talkWordsGrew.replace("{a}", String(gain.before)).replace("{b}", String(gain.after))}</span> : null}
-        </div>
+    <>
+      {gain ? (
+        <section data-talk-compare className="flex flex-col gap-1.5 rounded-xl border border-line p-3">
+          <h3 className="text-caption font-semibold text-slate-300">
+            <span aria-hidden>📞 </span>
+            {ui.talkCompareTitle}
+          </h3>
+          <p className="mt-1 text-meta tabular-nums text-slate-500">{day(gain.first.at)}</p>
+          <TalkBubble who="tutor" text={gain.first.q} />
+          <TalkBubble who="me" text={gain.first.a} dim />
+          <div className="my-1 border-t border-line" />
+          <p className="text-meta tabular-nums text-slate-500">{day(gain.last.at)}</p>
+          <TalkBubble who="tutor" text={gain.last.q} />
+          <TalkBubble who="me" text={gain.last.a} marks={marksOf(gain.last.a, gain.keys)} />
+          {chips(
+            gain.keys.map(nameOf).filter(Boolean),
+            gain.after - gain.before >= 3 ? ui.talkWordsGrew.replace("{a}", String(gain.before)).replace("{b}", String(gain.after)) : undefined,
+          )}
+        </section>
       ) : null}
-    </section>
+      {firsts.length ? (
+        <section data-talk-firsts className="flex flex-col gap-1.5 rounded-xl border border-line p-3">
+          <h3 className="text-caption font-semibold text-slate-300">{ui.talkFirstsTitle}</h3>
+          {firsts.map((one) => (
+            <div key={one.line} className="flex flex-col gap-1">
+              <p className="text-meta tabular-nums text-slate-500">{day(one.at)}</p>
+              <TalkBubble who="me" text={one.line} marks={marksOf(one.line, one.keys)} />
+              {chips(one.keys.map(nameOf).filter(Boolean))}
+            </div>
+          ))}
+        </section>
+      ) : null}
+    </>
   );
 }
 
