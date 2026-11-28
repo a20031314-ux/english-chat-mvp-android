@@ -157,7 +157,8 @@ export function looksLike(ui: string, texts: string[]): boolean {
 export function writtenIn(ui: string, text: string): boolean {
   const pattern = UI_SCRIPT[ui];
   if (!pattern) return true;
-  const bare = text.replace(/"[^"]*"|“[^”]*”|'[^']*'|‘[^’]*’|「[^」]*」|\([^)]*\)|\[[^\]]*\]/gu, "");
+  // 작은따옴표는 낱말 밖에서 연 것만 인용으로 — l'école·I'm 같은 생략은 그대로(변경 감시 리뷰 2026-11-28).
+  const bare = text.replace(/"[^"]*"|“[^”]*”|(?<!\p{L})'[^']*'(?!\p{L})|‘[^’]*’|「[^」]*」|\([^)]*\)|\[[^\]]*\]/gu, "");
   const letters = [...bare].filter((one) => /\p{L}/u.test(one));
   if (!letters.length) return true;
   return letters.filter((one) => pattern.test(one)).length / letters.length >= 0.3;

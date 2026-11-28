@@ -122,6 +122,7 @@ test("tutor memo must be in the app language — English memo on a Korean app is
   assert.equal(writtenIn("ko", '책 이야기 즐거웠어요. 다음엔 "I usually cook"처럼 빈도 말을 동사 앞에 둬 봐요.'), true);
   assert.equal(writtenIn("ja", "本の話、楽しかったです。次は 'I usually cook' の語順を練習しましょう。"), true);
   assert.equal(writtenIn("es", "Thanks for the chat."), true, "Latin-script app languages are not checked");
+  assert.equal(writtenIn("ru", "Мы говорили про l'école и I'm fine — 'it's' получилось."), true, "apostrophes inside words are not quotes");
   const en = contextPrompt({ tutorRole: "friend", setting: "", previous: "", lines: [{ who: "learner", text: "hi" }], today: "2026-11-28", summary: { language: "English", target: "Spanish", name: "Lucia", manner: "warm" } });
   assert.doesNotMatch(en, /not in English like your notes/);
   const ko = contextPrompt({ tutorRole: "friend", setting: "", previous: "", lines: [{ who: "learner", text: "hi" }], today: "2026-11-28", summary: { language: "Korean (한국어)", target: "English", name: "Emma", manner: "warm" } });

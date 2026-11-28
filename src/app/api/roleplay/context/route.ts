@@ -98,7 +98,8 @@ export async function POST(request: NextRequest) {
     const first = summary ? parseMemory(completion.choices[0]?.message?.content ?? "") : null;
     if (summary && first?.summary && !writtenIn(locale, first.summary)) {
       await meterRequest(request, "roleplayContext");
-      completion = await ask(true);
+      // 다시 쓰기가 실패해도 첫 답의 노트·사실은 살린다(메모만 빠짐) — 변경 감시 리뷰 2026-11-28.
+      completion = await ask(true).catch(() => completion);
     }
     const folded = parseMemory(completion.choices[0]?.message?.content ?? "");
     if (!folded) {
