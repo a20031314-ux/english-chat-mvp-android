@@ -9,10 +9,12 @@
 
 없음
 
-## 탭이 확인할 것 (237)
+## 탭이 확인할 것 (239)
 
 ### 탭 1 메인
 
+- **a261128-watch-4** 🔧 고칠 것 (2026-11-28 09:25, 변경 감시) src/lib/server/stageCopy.ts:160 — writtenIn이 '…' 짝을 인용으로 지워 l'école·I'm 같은 생략이 둘이면 사이 본문까지 지워져 앱 언어 메모를 틀림으로 봄 (앞뒤가 글자가 아닐 때만 인용으로, 생략 낀 테스트)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-4 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261127-watch-2** 🔧 고칠 것 (2026-11-27 19:30, 변경 감시) src/lib/speech/sayLine.ts:88 — 로마자 낱말 끝 わ를 모두 は로 바꿔 denwa→でんは·kawa→かは로 맞는 말이 틀림 채점, 띄어 쓴 'kore wa'는 못 잡음 (따로 선 wa 토큰만 は로)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261127-watch-2 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261126-watch-2** 🔧 고칠 것 (2026-11-26 07:24, 변경 감시) src/lib/server/stageCopy.ts:331 — translated()가 수업 설명뿐 아니라 낱말 뜻(wordDict·wordCards)·Quizbank 뜻/까닭·단계 이름표까지 옮기는데 설명용 지시(EXPLAIN_TONE: 빼기·구체화)가 모두에 붙어 뜻이 줄거나 덧붙을 수 있음, :t1 열쇠로 옮김 저장분이 14개 언어 한꺼번에 다시 만들어짐 (번역엔 말투만, 내용 덜기·구체화는 설명 줄 옮기는 frameLesson·itemLesson 호출에만 인자로)
@@ -623,6 +625,8 @@
 
 ### 탭 3 AI
 
+- **a261128-watch-3** 🔧 고칠 것 (2026-11-28 09:25, 변경 감시) src/app/api/roleplay/context/route.ts:101 — 메모 언어 재호출(ask(true))이 실패하면 502로 첫 호출의 노트·facts까지 버려 통화 기억이 안 남음 (ask(true)를 따로 try, 실패하면 첫 결과로 잇고 summary만 빼기)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-3 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261127-watch-4** 🔧 고칠 것 (2026-11-27 19:30, 변경 감시) src/lib/locales/overlays.json — roleplayWhyStuck 일본어 '言えたこと'는 '말해 낸 것'으로 읽혀 '할 수 있었던 말'과 반대 뜻 ('言えたはずのこと' 등으로, generated.json도)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261127-watch-4 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261126-watch-1** 🔧 고칠 것 (2026-11-26 05:27, 변경 감시) src/components/roleplay/CallReplay.tsx:620 — 대화 시뮬레이션 틀린 줄 판단(fetchPractice)을 받는 중에도 '다음'이 눌려 onDone이 옛 ok로 한 번만 보고 → 화면은 ✓인데 저장 점수·숙제 결과(noteReplayResult)는 틀림 (받는 중엔 다음을 막거나 모든 판단 뒤에 끝 보고)

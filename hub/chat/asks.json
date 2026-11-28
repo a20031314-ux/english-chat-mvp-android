@@ -13444,6 +13444,34 @@
       "base": "ca48dd427b4ee700791ae847aa082f75d2181754",
       "head": "ca48dd4",
       "status": "open"
+    },
+    {
+      "id": "a261128-watch-3",
+      "at": "2026-11-28 09:25",
+      "kind": "fix",
+      "from": "watch",
+      "to": "3",
+      "severity": "minor",
+      "what": "src/app/api/roleplay/context/route.ts:101 — 메모 언어 재호출(ask(true))이 실패하면 502로 첫 호출의 노트·facts까지 버려 통화 기억이 안 남음 (ask(true)를 따로 try, 실패하면 첫 결과로 잇고 summary만 빼기)",
+      "files": [
+        "src/app/api/roleplay/context/route.ts"
+      ],
+      "head": "49ed170d",
+      "status": "open"
+    },
+    {
+      "id": "a261128-watch-4",
+      "at": "2026-11-28 09:25",
+      "kind": "fix",
+      "from": "watch",
+      "to": "1",
+      "severity": "minor",
+      "what": "src/lib/server/stageCopy.ts:160 — writtenIn이 '…' 짝을 인용으로 지워 l'école·I'm 같은 생략이 둘이면 사이 본문까지 지워져 앱 언어 메모를 틀림으로 봄 (앞뒤가 글자가 아닐 때만 인용으로, 생략 낀 테스트)",
+      "files": [
+        "src/lib/server/stageCopy.ts"
+      ],
+      "head": "49ed170d",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -14083,7 +14111,7 @@
   ],
   "seq": {
     "261128-3": 10,
-    "261128-watch": 2,
+    "261128-watch": 4,
     "261128-4": 3,
     "261128-2": 4
   }
