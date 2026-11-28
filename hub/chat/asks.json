@@ -13952,22 +13952,83 @@
       "base": "b54603da9271052d9ea710e5ad60f79da43cb2b3",
       "head": "8af54a0",
       "status": "open"
+    },
+    {
+      "id": "a261128-2-13",
+      "at": "2026-11-28 15:07",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "빈칸 쓰기는 늘 해석 먼저(QuizPlayer TypeView) — 숙제 퀴즈·대화 시뮬레이션 빈칸도 같음",
+      "files": [
+        "src/components/FindInMy.tsx",
+        "src/components/EnglishAnalysisViewer.tsx",
+        "src/components/EnglishAnalysisProvider.tsx"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "9b3eb5817ca915dac7dae8a2a67e7d002187977b",
+      "head": "46fc8bb",
+      "status": "open"
+    },
+    {
+      "id": "a261128-2-14",
+      "at": "2026-11-28 15:07",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "빈칸 쓰기는 늘 해석 먼저(QuizPlayer TypeView) — 숙제 퀴즈·대화 시뮬레이션 빈칸도 같음",
+      "files": [
+        "src/components/roleplay/CallReplay.tsx",
+        "src/components/RoleplayPast.tsx",
+        "src/components/RoleplayScreen.tsx",
+        "src/components/CallHost.tsx",
+        "src/components/ChatWindow.tsx",
+        "src/components/roleplay/callHooks.ts",
+        "src/components/roleplay/CallRecap.tsx",
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx",
+        "src/lib/roleplay/talkMemory.ts",
+        "src/lib/pack/pack.ts"
+      ],
+      "features": [
+        "AI 채팅",
+        "통화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "9b3eb5817ca915dac7dae8a2a67e7d002187977b",
+      "head": "46fc8bb",
+      "status": "open"
     }
   ],
   "scopes": [
-    {
-      "at": "2026-11-23 00:44",
-      "from": "3",
-      "base": "6375dd25991270ed2cc475aa61b1e4953aaa422e",
-      "head": "acc335d",
-      "what": "0단계 글자 칸 [1단계 ›] 늘 보임",
-      "tabs": [
-        "2"
-      ],
-      "asks": [
-        "a261123-3-1"
-      ]
-    },
     {
       "at": "2026-11-23 00:51",
       "from": "3",
@@ -14582,12 +14643,28 @@
         "a261128-2-11",
         "a261128-2-12"
       ]
+    },
+    {
+      "at": "2026-11-28 15:07",
+      "from": "2",
+      "base": "9b3eb5817ca915dac7dae8a2a67e7d002187977b",
+      "head": "46fc8bb",
+      "what": "빈칸 쓰기는 늘 해석 먼저(QuizPlayer TypeView) — 숙제 퀴즈·대화 시뮬레이션 빈칸도 같음",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261128-2-13",
+        "a261128-2-14"
+      ]
     }
   ],
   "seq": {
     "261128-3": 10,
     "261128-watch": 7,
     "261128-4": 3,
-    "261128-2": 12
+    "261128-2": 14
   }
 }
