@@ -32,7 +32,7 @@ export type AppIntents = {
    * Stagebank의 소재 수업(문장구조·표현·문법 칸)을 연다 — "모를 때 이동해서 확인"(2026-11-01 설계, hub/work/drafts/quiz-pages-2026-11-01.md).
    * 통화 정리·대본 틀린 줄·Logbank 칩·Quizbank 틀린 문제가 보내고 LessonHost(앱 어디서나 뜨는 층)가 받는다. 열어 본 소재는 정기 시험 재료로 모인다.
    */
-  openLesson: { language: string; key: string; /** 대화·통화 화면 위에서 열면(사전 주석) 그 위 층으로. */ above?: boolean; /** 통화 등에서 그 문장을 들고 옴(curriculum/lessonKey.ts LessonScene) — 수업 맨 위 카드·시험 재료. */ scene?: { line: string; said?: string; before?: string; meaning?: string } };
+  openLesson: { language: string; key: string; /** 대화·통화 화면 위에서 열면(사전 주석) 그 위 층으로. */ above?: boolean; /** 작은 창으로(Logbank 블록·칩) — 설명만, 문제 풀기를 누르면 전체 화면 수업. */ peek?: boolean; /** 통화 등에서 그 문장을 들고 옴(curriculum/lessonKey.ts LessonScene) — 수업 맨 위 카드·시험 재료. */ scene?: { line: string; said?: string; before?: string; meaning?: string } };
 };
 
 const PREFIX = "talkbank:";

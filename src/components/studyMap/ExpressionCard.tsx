@@ -7,7 +7,7 @@ import { DictNotesToggle } from "@/components/studyMap/DictNotes";
  * 카드는 server/expressionCards.ts(이 폰 exprCards.v2 — useExpressionCards와 같은 저장). 카드가 없으면 부르는 쪽이 예전 수업으로.
  */
 import { useContext, useEffect, useState } from "react";
-import { FullScreenLayer, LayerAboveContext } from "@/components/FullScreenLayer";
+import { FullScreenLayer, LayerAboveContext, PeekLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { SceneCard } from "@/components/studyMap/FrameLesson";
 import { TTSButton } from "@/components/TTSButton";
@@ -51,6 +51,7 @@ export function ExpressionCard({
   stage,
   scene,
   onMissing,
+  peek = false,
   onClose,
 }: {
   ui: UICopy;
@@ -61,6 +62,8 @@ export function ExpressionCard({
   scene?: LessonScene;
   /** 카드가 없을 때(아직 못 만듦) — 부르는 쪽이 예전 수업을 연다. */
   onMissing: () => void;
+  /** 작은 창으로(Logbank 블록·칩). */
+  peek?: boolean;
   onClose: () => void;
 }) {
   const [card, setCard] = useState<Card | null | undefined>(undefined);
@@ -78,8 +81,9 @@ export function ExpressionCard({
   const above = useContext(LayerAboveContext);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
   const at = card ? card.example.indexOf(card.piece) : -1;
+  const Layer = peek ? PeekLayer : FullScreenLayer;
   return (
-    <FullScreenLayer>
+    <Layer onClose={onClose}>
       <header className="flex shrink-0 items-start gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
         <h2 dir="auto" data-expression-card className="min-w-0 flex-1 text-body font-semibold text-ink">
           {expression}
@@ -128,6 +132,6 @@ export function ExpressionCard({
           </>
         ) : null}
       </div>
-    </FullScreenLayer>
+    </Layer>
   );
 }

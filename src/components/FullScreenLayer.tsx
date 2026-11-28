@@ -51,7 +51,7 @@ export const LayerAboveContext = createContext(false);
  */
 const LayerDepthContext = createContext(0);
 
-export function FullScreenLayer({ children }: { children: ReactNode }) {
+export function FullScreenLayer({ children }: { children: ReactNode; /** PeekLayer와 같은 자리에서 바꿔 쓰려고 받음(전체 화면은 바깥이 없어 안 씀). */ onClose?: () => void }) {
   const above = useContext(LayerAboveContext);
   const depth = useContext(LayerDepthContext);
   // False while rendering on the server, true once on the client, without a
@@ -91,4 +91,33 @@ export function BodyLayer({ children }: { children: ReactNode }) {
   const layer = useLayer();
   if (!onClient) return null;
   return createPortal(<AdLayerContext.Provider value={layer}>{children}</AdLayerContext.Provider>, document.body);
+}
+
+/**
+ * 작은 창(아래에서 올라오는 시트) — 수업·표현 카드를 Logbank 블록·칩에서 열 때(사용자 2026-11-28 "작은 창으로 뜨게 해 줘").
+ * FullScreenLayer와 같은 자리(children = 머리 + 본문)를 받아 화면 높이 80%까지, 바깥을 누르면 닫음. 대화·통화 위(above)면 그 위로.
+ */
+export function PeekLayer({ children, onClose }: { children: ReactNode; onClose: () => void }) {
+  const above = useContext(LayerAboveContext);
+  const onClient = useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false,
+  );
+  const layer = useLayer();
+  if (!onClient) return null;
+  return createPortal(
+    <AdLayerContext.Provider value={layer}>
+      <div className={`fixed inset-0 ${above ? "z-[130]" : "z-[90]"} flex items-end justify-center bg-black/60 sm:items-center`} onClick={onClose}>
+        <div
+          data-peek-layer
+          className="flex max-h-[80vh] w-full max-w-lg flex-col overflow-hidden rounded-t-2xl border border-line bg-surface pb-[env(safe-area-inset-bottom)] sm:rounded-2xl"
+          onClick={(event) => event.stopPropagation()}
+        >
+          {children}
+        </div>
+      </div>
+    </AdLayerContext.Provider>,
+    document.body,
+  );
 }

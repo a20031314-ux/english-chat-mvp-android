@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (244)
+## 탭이 확인할 것 (247)
 
 ### 탭 1 메인
 
@@ -57,6 +57,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-69 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-72** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/server/voxtralSpeech.ts:167 — 스트림 읽기 오류·20초 제한도 done으로 보고 정상 close — 잘린 소리가 공용 캐시에 들어갈 수 있음 — 끝 표시 없으면 오류로 → realtime 대체
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-72 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-2-7** (2026-11-28 15:00, 탭 2 · b54603d) openLesson peek(작은 창) 추가 — Logbank만 씀, 수업·표현 카드에 PeekLayer
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · Logbank · 오늘의 학습 · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤
+  - 볼 곳: `components/FullScreenLayer.tsx` · `components/AiConsentGate.tsx` · `components/FeedbackButton.tsx` · `components/FeedbackFixedSheet.tsx` · `components/GuideSheet.tsx` · `components/LanguagePick.tsx` · `components/NativeAdSlot.tsx` · `components/UpdateNotice.tsx` · `components/WhatsNewSheet.tsx` · `components/account/AccountCard.tsx` … 4개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-2-2** (2026-11-28 09:17, 탭 2 · ca48dd4) 검색칸 자리표시 글 대신 돋보기 아이콘(사전 찾기·영상 채널·자연어 찾기)
   - 기능: 사용법 · 이렇게도 말할 수 있었어요 · 사람 · Room · 영상 학습 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · My에서 찾기 · 랜덤 연결
   - 볼 곳: `components/TabIcons.tsx` · `components/FeatureMap.tsx` · `components/FindInMy.tsx` · `components/GuideSheet.tsx`
@@ -637,6 +641,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261127-watch-4 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261126-watch-1** 🔧 고칠 것 (2026-11-26 05:27, 변경 감시) src/components/roleplay/CallReplay.tsx:620 — 대화 시뮬레이션 틀린 줄 판단(fetchPractice)을 받는 중에도 '다음'이 눌려 onDone이 옛 ok로 한 번만 보고 → 화면은 ✓인데 저장 점수·숙제 결과(noteReplayResult)는 틀림 (받는 중엔 다음을 막거나 모든 판단 뒤에 끝 보고)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261126-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-2-8** (2026-11-28 15:00, 탭 2 · b54603d) openLesson peek(작은 창) 추가 — Logbank만 씀, 수업·표현 카드에 PeekLayer
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · Logbank · 오늘의 학습 · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤
+  - 볼 곳: `components/CallList.tsx` · `components/RoleplayPast.tsx` · `components/RoleplayScreen.tsx` · `components/roleplay/CallParts.tsx` · `components/roleplay/CallReplay.tsx` · `components/CallHost.tsx` · `components/ChatWindow.tsx` · `components/roleplay/CallRecap.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` … 1개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-2-6** (2026-11-28 14:25, 탭 2 · 5cf3ba8) 대화 채우기 빈칸 줄 뜻을 답하기 전부터 보임(QuizPlayer TalkView)
   - 기능: 이렇게도 말할 수 있었어요 · Logbank · 오늘의 학습 · Quizbank · 소재 수업 · 칸 설명
   - 볼 곳: `components/roleplay/CallReplay.tsx`
@@ -670,6 +678,10 @@
 
 - **a261125-watch-97** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/components/AiTutorProfile.tsx:22 — 앱 언어 값이 localStorage에 없으면 튜터 프로필이 en으로 — readAppLocale() 쓰거나 locale prop
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-97 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-2-9** (2026-11-28 15:00, 탭 2 · b54603d) openLesson peek(작은 창) 추가 — Logbank만 씀, 수업·표현 카드에 PeekLayer
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 튜터 줄 · 튜터 프로필 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · Logbank · 오늘의 학습 · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 같이 배우기 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤
+  - 볼 곳: `components/ProfileFrame.tsx` · `components/invite/InviteButton.tsx` · `components/invite/InviteRewards.tsx` · `components/invite/InviteWelcome.tsx` · `components/rooms/BoardView.tsx` · `components/rooms/IconEditor.tsx` · `components/rooms/IconPacks.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MediaImage.tsx` · `components/rooms/RoomDm.tsx` … 8개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-2-4** (2026-11-28 09:17, 탭 2 · ca48dd4) 검색칸 자리표시 글 대신 돋보기 아이콘(사전 찾기·영상 채널·자연어 찾기)
   - 기능: 사용법 · 이렇게도 말할 수 있었어요 · 사람 · Room · 영상 학습 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · 칸 설명 · My에서 찾기 · 랜덤 연결
   - 볼 곳: `components/rooms/MessagesTab.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/RandomScreen.tsx` · `components/rooms/RoomsScreen.tsx`

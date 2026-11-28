@@ -3,7 +3,7 @@
 import { DictNotesToggle } from "@/components/studyMap/DictNotes";
 import { noteSpot } from "@/lib/resumeSpot";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { FullScreenLayer, PeekLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot, useNativeRefresh } from "@/components/NativeAdSlot";
 import { typedLine } from "@/lib/speech/sayLine";
 import { typedMatches } from "@/lib/roleplay/practice";
@@ -66,6 +66,7 @@ export function FrameLesson({
   subject,
   scene,
   passed,
+  peek = false,
   onPassed,
   onClose,
 }: {
@@ -78,6 +79,8 @@ export function FrameLesson({
   /** 통화 등에서 들고 온 그 문장 — 설명 맨 위 카드(2026-11-01 사용자 "그 문장을 두고 단계 학습으로 이동해서 소재를 설명"). */
   scene?: LessonScene;
   passed: boolean;
+  /** 작은 창으로(Logbank 블록·칩) — 설명만, 문제 풀기를 누르면 전체 화면. */
+  peek?: boolean;
   onPassed?: (id: string) => void;
   onClose: () => void;
 }) {
@@ -382,9 +385,12 @@ export function FrameLesson({
   // 닫기(✕·끝 화면 "닫기" 같음): 전면 광고 없음 — 수업은 어디서나 열려(openLesson) 닫으면 퀴즈·통화·채팅으로 돌아가는 도중이라. 끝 화면 네이티브만.
   const close = () => onClose();
 
+  // 작은 창은 설명 단계만 — 문제 풀기로 넘어가면 같은 수업을 전체 화면으로.
+  const small = peek && step === "explain";
+  const Layer = small ? PeekLayer : FullScreenLayer;
   return (
-    <FullScreenLayer>
-      <header className="flex shrink-0 items-start gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
+    <Layer onClose={close}>
+      <header className={`flex shrink-0 items-start gap-2 border-b border-line px-4 pb-3 ${small ? "pt-3" : "pt-[max(0.75rem,env(safe-area-inset-top))]"}`}>
         <div className="min-w-0 flex-1">
           {/* Quiz and talk steps hide the pattern (user, 2026-10-30: the title gave the answer away) — only what the pattern is for. */}
           <h2 dir="auto" className="text-body font-semibold text-ink">
@@ -407,7 +413,7 @@ export function FrameLesson({
         </button>
       </header>
       {/* Three steps: explanation → quiz → talk (2026-10-30, user). Tapping a past step goes back to it. */}
-      <ol data-lesson-steps className="flex shrink-0 items-center gap-1.5 border-b border-line px-4 py-2">
+      <ol data-lesson-steps className={`${small ? "hidden" : "flex"} shrink-0 items-center gap-1.5 border-b border-line px-4 py-2`}>
         {steps.map((one, index) => (
           <li key={one.id} className="flex items-center gap-1.5">
             {index > 0 ? <span aria-hidden className="text-meta text-slate-600 rtl:rotate-180">›</span> : null}
@@ -717,7 +723,7 @@ export function FrameLesson({
           </div>
         ) : null}
       </div>
-    </FullScreenLayer>
+    </Layer>
   );
 }
 
@@ -791,7 +797,7 @@ function ExampleMarks({ text, slot, core }: { text: string; slot?: string; core?
   }
   if (!ranges.length) return <>{text}</>;
   ranges.sort((x, y) => x.from - y.from);
-  const style = { fixed: "rounded-md bg-white/10 px-0.5", slot: "border-b-2 border-dashed border-status-learned text-status-learned", piece: "rounded-lg bg-status-learned/25 px-0.5" } as const;
+  const style = { fixed: "rounded-lg bg-white/10 px-0.5", slot: "border-b-2 border-dashed border-status-learned text-status-learned", piece: "rounded-lg bg-status-learned/25 px-0.5" } as const;
   const parts: React.ReactNode[] = [];
   let cursor = 0;
   ranges.forEach(({ from, to, kind }, index) => {

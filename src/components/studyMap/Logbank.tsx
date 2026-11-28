@@ -607,7 +607,7 @@ function DayBody({
                 dir="auto"
                 onClick={() => {
                   const key = lessonKeyOf(language, item);
-                  if (key) openLesson({ language, key });
+                  if (key) openLesson({ language, key, peek: true });
                   else if (part !== "grammar") insight?.open({ sentence: item.text, selected: item.text });
                 }}
                 className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-info/20 text-info" : "bg-info/10 text-info/70"}`}
@@ -1236,7 +1236,7 @@ function CallResultCard({ ui, language, call, note, removable = true }: { ui: UI
                   data-day-call-fix
                   onClick={() =>
                     key
-                      ? openLesson({ language, key, scene: { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}) } })
+                      ? openLesson({ language, key, peek: true, scene: { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}) } })
                       : sendAppIntent("openCall", { id: call.id })
                   }
                   className="text-start text-meta hover:opacity-80"
@@ -1432,7 +1432,7 @@ function Learned({
           </tbody>
         </table>
       ) : null}
-      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} onCard={(key) => (key.startsWith("w|") ? setWord(key.slice(2)) : openLesson({ language, key }))} backOf={(day) => backByDay.get(day) ?? []} fixedOf={(day) => fixedOf(day).length} onFixed={(day) => setFixedDay(day)} /> : null}
+      {onDay ? <DayStacks ui={ui} locale={locale} stacks={wholeStacks} today={today} notes={notes} dateLabel={dateLabel} keyLabel={stackLabel} onDay={onDay} onCards={(title, keys) => setStackCards({ title, keys })} onCard={(key) => (key.startsWith("w|") ? setWord(key.slice(2)) : openLesson({ language, key, peek: true }))} backOf={(day) => backByDay.get(day) ?? []} fixedOf={(day) => fixedOf(day).length} onFixed={(day) => setFixedDay(day)} /> : null}
       <TalkCompare ui={ui} language={language} locale={locale} period={period} keyLabel={keyLabel} />
       {curveReady(all) ? (
         <LearnCurve ui={ui} stacks={stacks} known={known} newUsed={newUsed} dateLabel={dateLabel} onUsed={setUsedDay} />
@@ -1540,7 +1540,7 @@ function LearnedCards({
                   if (one.key.startsWith("w|")) return setWord(one.key.slice(2));
                   // 소재 수업은 바닥 층(z 70)이라 이 시트(전체 화면 안이면 71) 밑에 깔린다 — 시트를 닫고 연다(사용자 2026-11-28).
                   onLeave?.();
-                  openLesson({ language, key: one.key });
+                  openLesson({ language, key: one.key, peek: true });
                 }}
                 className="rounded-full border border-line px-3 py-0.5 text-caption text-slate-300 hover:bg-white/10"
               >
@@ -1891,7 +1891,7 @@ function WeakChips({ ui, language, ledger, label }: { ui: UICopy; language: stri
           type="button"
           dir="auto"
           data-weak-key={key}
-          onClick={() => (key.startsWith("w|") ? focusQuiz(language, [key]) : openLesson({ language, key }))}
+          onClick={() => (key.startsWith("w|") ? focusQuiz(language, [key]) : openLesson({ language, key, peek: true }))}
           className={`rounded-full border border-line px-2.5 py-0.5 text-caption text-ink hover:bg-white/10`}
         >
           {label(key)}
