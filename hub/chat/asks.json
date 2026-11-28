@@ -14026,6 +14026,62 @@
       "base": "9b3eb5817ca915dac7dae8a2a67e7d002187977b",
       "head": "46fc8bb",
       "status": "open"
+    },
+    {
+      "id": "a261128-watch-8",
+      "at": "2026-11-28 15:29",
+      "kind": "fix",
+      "from": "watch",
+      "to": "2",
+      "severity": "major",
+      "what": "src/components/studyMap/Logbank.tsx:610 — 그날 세부 칩(610)·통화 고친 줄(1234)에서 작은 창으로 연 수업이 '문제 풀기'면 전체 화면 z 70으로 바뀌어 My 전체 화면 안 그날 세부 시트(z 71) 밑에 깔림 — 눌렀는데 안 뜸 (LearnedCards처럼 openLesson 전에 시트 닫기 onLeave, 또는 peek에서 넘어간 층을 z 90 이상으로)",
+      "files": [
+        "src/components/studyMap/Logbank.tsx"
+      ],
+      "head": "c8b0c605",
+      "status": "open"
+    },
+    {
+      "id": "a261128-watch-9",
+      "at": "2026-11-28 15:29",
+      "kind": "fix",
+      "from": "watch",
+      "to": "3",
+      "severity": "minor",
+      "what": "src/lib/roleplay/talkMemory.ts:160 — 대화 비교 밑줄 markPieces가 wordSegments를 안 거치고 경계를 [a-zà-ÿ]로만 봐 키릴·아랍·ł·ı·ư 등은 낱말 안쪽에도 밑줄, 테스트 en·ja뿐 (경계 \\p{L}\\p{M} 또는 segmentWords 위치, es·ru/ar 테스트)",
+      "files": [
+        "src/lib/roleplay/talkMemory.ts"
+      ],
+      "head": "c8b0c605",
+      "status": "open"
+    },
+    {
+      "id": "a261128-watch-10",
+      "at": "2026-11-28 15:29",
+      "kind": "fix",
+      "from": "watch",
+      "to": "2",
+      "severity": "minor",
+      "what": "src/components/studyMap/Growth.tsx:172 — 새 칸 '대화에서 처음 맞게 쓴 것'이 Logbank '활용'(학습 곡선·배운 것 표 활용 열)과 같은 일을 다른 이름·다른 재료로 한 번 더 보여 숫자가 엇갈릴 수 있음 (활용 칸으로 합치거나 같은 이름·장부 재료로, links 묶기)",
+      "files": [
+        "src/components/studyMap/Growth.tsx"
+      ],
+      "head": "c8b0c605",
+      "status": "open"
+    },
+    {
+      "id": "a261128-watch-11",
+      "at": "2026-11-28 15:29",
+      "kind": "fix",
+      "from": "watch",
+      "to": "1",
+      "severity": "minor",
+      "what": "hub/app/STRUCTURE.md:30 — 학습 시간 줄에서 비율 막대를 지웠는데 'PartSplit — 학습 시간 줄과 같이 씀'이 남음, 오늘의 학습 '이전 학습 n' 접기도 23줄에 없음 (문서는 지금만 — 두 줄 고치기)",
+      "files": [
+        "hub/app/STRUCTURE.md"
+      ],
+      "head": "c8b0c605",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -14663,7 +14719,7 @@
   ],
   "seq": {
     "261128-3": 10,
-    "261128-watch": 7,
+    "261128-watch": 11,
     "261128-4": 3,
     "261128-2": 14
   }

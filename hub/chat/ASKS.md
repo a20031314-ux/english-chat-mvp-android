@@ -9,10 +9,12 @@
 
 없음
 
-## 탭이 확인할 것 (252)
+## 탭이 확인할 것 (256)
 
 ### 탭 1 메인
 
+- **a261128-watch-11** 🔧 고칠 것 (2026-11-28 15:29, 변경 감시) hub/app/STRUCTURE.md:30 — 학습 시간 줄에서 비율 막대를 지웠는데 'PartSplit — 학습 시간 줄과 같이 씀'이 남음, 오늘의 학습 '이전 학습 n' 접기도 23줄에 없음 (문서는 지금만 — 두 줄 고치기)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-11 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-5** 🔧 고칠 것 (2026-11-28 11:25, 변경 감시) src/lib/server/stageCopy.ts:161 — writtenIn 작은따옴표 인용을 앞뒤가 글자가 아닐 때만 빼게 바뀌어 조사가 바로 붙는 ko·ja·zh·th 메모('…'를·'…'の)는 인용이 안 빠져 다시 쓰기 호출·메모 빠짐 (앞뒤 검사를 라틴 문자로만 좁히기)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-5 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-4** 🔧 고칠 것 (2026-11-28 09:25, 변경 감시) src/lib/server/stageCopy.ts:160 — writtenIn이 '…' 짝을 인용으로 지워 l'école·I'm 같은 생략이 둘이면 사이 본문까지 지워져 앱 언어 메모를 틀림으로 봄 (앞뒤가 글자가 아닐 때만 인용으로, 생략 낀 테스트)
@@ -280,10 +282,14 @@
 
 ### 탭 2 My
 
+- **a261128-watch-8** 🔧 고칠 것 (major) (2026-11-28 15:29, 변경 감시) src/components/studyMap/Logbank.tsx:610 — 그날 세부 칩(610)·통화 고친 줄(1234)에서 작은 창으로 연 수업이 '문제 풀기'면 전체 화면 z 70으로 바뀌어 My 전체 화면 안 그날 세부 시트(z 71) 밑에 깔림 — 눌렀는데 안 뜸 (LearnedCards처럼 openLesson 전에 시트 닫기 onLeave, 또는 peek에서 넘어간 층을 z 90 이상으로)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-8 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-1** 🔧 고칠 것 (major) (2026-11-24 00:00, 변경 감시) src/lib/curriculum/quiz.ts:200 — quizSources가 문제은행 v 항목(m 대답·c 문맥 고르기)을 안 걸러 소재 수업 뜻 고르기·순서에 섞임 — grownItems에서 v 있는 항목 빼기
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-105** 🔧 고칠 것 (major) (2026-11-24 00:00, 변경 감시) src/lib/curriculum/ladder.ts:281 — readReach가 저장된 hi를 버려 게이지 '위 단계를 맞히면 닿은 단계도 한 번에'가 여덟 번째 답일 때만 됨(Quizbank.tsx:268·431에서 답마다 다시 읽음) (hi도 돌려주기 + localStorage 왕복 테스트, Quizbank.tsx 묶음 시작 saveReach에서도 hi 유지)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-105 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-watch-10** 🔧 고칠 것 (2026-11-28 15:29, 변경 감시) src/components/studyMap/Growth.tsx:172 — 새 칸 '대화에서 처음 맞게 쓴 것'이 Logbank '활용'(학습 곡선·배운 것 표 활용 열)과 같은 일을 다른 이름·다른 재료로 한 번 더 보여 숫자가 엇갈릴 수 있음 (활용 칸으로 합치거나 같은 이름·장부 재료로, links 묶기)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-10 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-7** 🔧 고칠 것 (2026-11-28 11:25, 변경 감시) src/components/studyMap/Growth.tsx:187 — 아랍어(RTL) 화면에서 낱말 수 칩 '{a} → {b}' 숫자 순서가 뒤집혀 줄었다로 읽힘 (칩에 dir=ltr 또는 bdi)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-7 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-1** 🔧 고칠 것 (2026-11-28 07:25, 변경 감시) src/components/studyMap/QuizPlayer.tsx:1158 — 대화 채우기(TalkView) open 채점이라 소재 낱말·표현을 안 쓰고 대화에 맞는 다른 말만 쳐도 그 소재를 맞힌 것으로 셈(TypeView는 'also'면 다시 치게 함), 머리 주석 'open 다시 보기는 안 함'도 틀림 (also이고 소재가 w|면 TypeView처럼 다시 치게 하거나 소재 학습으로 안 셈, 주석 고침)
@@ -641,6 +647,8 @@
 
 ### 탭 3 AI
 
+- **a261128-watch-9** 🔧 고칠 것 (2026-11-28 15:29, 변경 감시) src/lib/roleplay/talkMemory.ts:160 — 대화 비교 밑줄 markPieces가 wordSegments를 안 거치고 경계를 [a-zà-ÿ]로만 봐 키릴·아랍·ł·ı·ư 등은 낱말 안쪽에도 밑줄, 테스트 en·ja뿐 (경계 \p{L}\p{M} 또는 segmentWords 위치, es·ru/ar 테스트)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-9 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-6** 🔧 고칠 것 (2026-11-28 11:25, 변경 감시) src/lib/roleplay/talkMemory.ts:475 — answerGain 되묻는 문장 빼기(QUESTION_END)·문장 자르기에 아랍어 물음표 ؟가 없어 ar 학습자는 되물은 말까지 세어 나아지지 않은 대답도 대화 비교로 뜸 (؟ 넣기)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-6 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-3** 🔧 고칠 것 (2026-11-28 09:25, 변경 감시) src/app/api/roleplay/context/route.ts:101 — 메모 언어 재호출(ask(true))이 실패하면 502로 첫 호출의 노트·facts까지 버려 통화 기억이 안 남음 (ask(true)를 따로 try, 실패하면 첫 결과로 잇고 summary만 빼기)
