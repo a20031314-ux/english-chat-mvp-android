@@ -905,17 +905,18 @@ function SessionRows({
         const next = sessions[i + 1];
         const fixedN = day.notes.filter((note) => one.callIds.includes(note.id)).reduce((n, note) => n + note.fixed, 0);
         return (
-          <li key={one.start} className="flex gap-3">
-            <div className="flex w-11 shrink-0 flex-col items-center">
-              <span className="text-meta font-semibold tabular-nums text-ink">{clock.format(one.start)}</span>
-              <span className={`my-1.5 h-2.5 w-2.5 rounded-full bg-info`} />
-              {next || children ? <span className="w-0.5 flex-1 bg-line" /> : null}
-            </div>
-            <div className="flex min-w-0 flex-1 flex-col gap-1.5 pb-3">
-              <button type="button" data-timeline-open={one.start} onClick={() => onOpen(one.start)} className={`flex flex-col gap-1.5 px-3 py-2.5 text-start hover:bg-white/5 ${box}`}>
+          <li key={one.start} className="flex flex-col">
+            {/* 학습한 동안 = 왼쪽 굵은 색 막대(시작 시각 → 끝 시각), 쉰 동안 = 가는 회색 선 — 시작~끝을 글로 쓰는 대신(사용자 2026-11-28). */}
+            <div className="flex gap-3">
+              <div className="flex w-11 shrink-0 flex-col items-center">
+                <span className="text-meta font-semibold tabular-nums text-ink">{clock.format(one.start)}</span>
+                <span data-timeline-span aria-hidden className="my-1 min-h-6 w-1.5 flex-1 rounded-full bg-info" />
+                {clock.format(one.end) !== clock.format(one.start) ? <span className="text-meta tabular-nums text-slate-500">{clock.format(one.end)}</span> : null}
+              </div>
+              <button type="button" data-timeline-open={one.start} aria-label={range(one)} onClick={() => onOpen(one.start)} className={`flex min-w-0 flex-1 flex-col gap-1.5 px-3 py-2.5 text-start hover:bg-white/5 ${box}`}>
                 <span className="flex items-center gap-2">
                   <span className={`flex min-w-0 flex-wrap items-center gap-x-1 truncate text-note font-semibold text-info`}><PlaceList ui={ui} places={one.places} /></span>
-                  <span className="min-w-0 flex-1 truncate text-meta tabular-nums text-slate-400">{`${range(one)} · ${ui.planMinutes.replace("{n}", String(sessionMinutes(one)))}`}</span>
+                  <span className="min-w-0 flex-1 truncate text-end text-meta tabular-nums text-slate-400">{ui.planMinutes.replace("{n}", String(sessionMinutes(one)))}</span>
                   <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
                 </span>
                 {hasParts(sum.parts) ? <PartSplit ui={ui} parts={sum.parts} /> : null}
@@ -925,8 +926,15 @@ function SessionRows({
                   {sum.looked ? <span className={chipCls}>{ui.tlLookedN.replace("{n}", String(sum.looked))}</span> : null}
                 </span>
               </button>
-              {next ? <span className="ps-1 text-meta text-slate-500">{restLabel(ui, next.start - one.end)}</span> : null}
             </div>
+            {next || children ? (
+              <div className="flex gap-3">
+                <div className="flex w-11 shrink-0 justify-center">
+                  <span aria-hidden className="min-h-4 w-0.5 bg-line" />
+                </div>
+                {next ? <span className="py-1.5 text-meta text-slate-500">{restLabel(ui, next.start - one.end)}</span> : null}
+              </div>
+            ) : null}
           </li>
         );
       })}
