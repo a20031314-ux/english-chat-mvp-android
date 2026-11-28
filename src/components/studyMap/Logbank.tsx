@@ -34,7 +34,7 @@ import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
 import { weakKeys } from "@/lib/curriculum/ladder";
 import { focusQuiz } from "@/lib/curriculum/quizFocus";
-import { cardHistory, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session, type SessionSummary } from "@/lib/curriculum/studyTimeline";
+import { cardHistory, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
 import { quizGloss } from "@/lib/curriculum/stageScripts";
@@ -682,12 +682,6 @@ function modeName(ui: UICopy, mode: LogMode | undefined): string {
   return mode === "pick" ? ui.tlPick : mode === "sure" ? ui.tlBare : mode === "write" ? ui.tlWrite : "";
 }
 
-function restLabel(ui: UICopy, ms: number): string {
-  const minutes = Math.round(ms / 60_000);
-  const span = minutes < 60 ? ui.planMinutes.replace("{n}", String(minutes)) : ui.tlHoursMin.replace("{h}", String(Math.floor(minutes / 60))).replace("{m}", String(minutes % 60));
-  return ui.tlRest.replace("{t}", span);
-}
-
 function useClock(locale: string) {
   return useMemo(() => {
     try {
@@ -863,7 +857,7 @@ function DayTimeline({
         <span>18</span>
         <span>24</span>
       </div>
-      <SessionRows ui={ui} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt} />
+      <SessionRows ui={ui} sessions={sessions} clock={clock} onOpen={setOpenAt} />
       <FixedLines items={fixed} />
       <div className="flex justify-end">
         <ClearDay ui={ui} language={language} day={day} />
@@ -876,7 +870,6 @@ function DayTimeline({
 function SessionRows({
   ui,
   sessions,
-  summaries,
   clock,
   onOpen,
   fold = false,
@@ -884,7 +877,6 @@ function SessionRows({
 }: {
   ui: UICopy;
   sessions: readonly Session[];
-  summaries: readonly SessionSummary[];
   clock: Intl.DateTimeFormat;
   onOpen: (start: number) => void;
   /** 오늘의 학습: 마지막 학습 덩어리만, 앞의 것은 이전 학습 n을 눌러 펼침(사용자 2026-11-28). */
@@ -892,7 +884,6 @@ function SessionRows({
   children?: ReactNode;
 }) {
   const box = "rounded-xl border border-line bg-white/[0.02]";
-  const hasParts = (parts: Record<CardPart, number>) => LEARN_PARTS.some((part) => parts[part]);
   const range = (one: Session) => {
     const from = clock.format(one.start);
     const to = clock.format(one.end);
@@ -915,7 +906,6 @@ function SessionRows({
       ) : null}
       {sessions.map((one, i) => {
         if (i < hidden) return null;
-        const sum = summaries[i]!;
         const next = sessions[i + 1];
         return (
           <li key={one.start} className="flex flex-col">
@@ -932,16 +922,13 @@ function SessionRows({
                   <span className="min-w-0 flex-1 truncate text-end text-meta tabular-nums text-slate-400">{ui.planMinutes.replace("{n}", String(sessionMinutes(one)))}</span>
                   <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
                 </span>
-                {/* 카드는 어디서·몇 분·요소 비율 막대만 — 요소별 수·✓✗·고쳐 씀·찾아봄은 누르면 나오는 세부에(사용자 2026-11-28). */}
-                {hasParts(sum.parts) ? <PartSplit ui={ui} parts={sum.parts} bare /> : null}
               </button>
             </div>
             {next || children ? (
               <div className="flex gap-3">
                 <div className="flex w-11 shrink-0 justify-center">
-                  <span aria-hidden className="min-h-4 w-0.5 bg-line" />
+                  <span aria-hidden className="min-h-3 w-0.5 bg-line" />
                 </div>
-                {next ? <span className="py-1.5 text-meta text-slate-500">{restLabel(ui, next.start - one.end)}</span> : null}
               </div>
             ) : null}
           </li>
@@ -1009,7 +996,6 @@ export function TodayTimeline({
   const [today] = useState(() => localDay(Date.now()));
   const day: Day = useMemo(() => allDays.find((one) => sameDay(one.day, today)) ?? { day: today, items: [], quiz: null, results: [], calls: [], notes: [] }, [allDays, today]);
   const sessions = useMemo(() => daySessions(ledger, day), [ledger, day]);
-  const summaries = useMemo(() => sessions.map((one) => summarizeSession(one, ledger, (t) => dayOfSeconds(t))), [sessions, ledger]);
   const minutes = sessions.reduce((sum, one) => sum + sessionMinutes(one), 0);
   const [openAt, setOpenAt] = useState<number | null>(null);
   // 문법은 이름으로 — "2:2" 같은 번호가 대화 비교 칩에 그대로 보였음(사용자 2026-11-28 "2:2 이건 뭐야").
@@ -1024,7 +1010,7 @@ export function TodayTimeline({
         <div className="flex min-w-0 flex-1 items-center gap-2">{title}</div>
         {minutes ? <span data-today-minutes title={ui.logStudyTime} className="shrink-0 text-note tabular-nums text-slate-300">{`⏱ ${minutes}′`}</span> : null}
       </div>
-      <SessionRows ui={ui} sessions={sessions} summaries={summaries} clock={clock} onOpen={setOpenAt} fold>
+      <SessionRows ui={ui} sessions={sessions} clock={clock} onOpen={setOpenAt} fold>
         {children}
       </SessionRows>
       {openAt !== null ? (
@@ -1718,7 +1704,7 @@ function DayStacks({
 }
 
 /** 요소 비율: 이어진 막대 하나(자리 순서 그대로) + 요소마다 색 네모·이름·수. 학습 시간 줄(SessionRows)과 쌓기 아래가 같이 씀 — 쌓기 아래(onPart)에선 요소를 누르면 그 카드들. */
-function PartSplit({ ui, parts, onPart, bare = false }: { ui: UICopy; parts: Record<CardPart, number>; onPart?: (part: CardPart) => void; /** 막대만(학습 시간 줄 — 세부는 누르면). */ bare?: boolean }) {
+function PartSplit({ ui, parts, onPart }: { ui: UICopy; parts: Record<CardPart, number>; onPart?: (part: CardPart) => void }) {
   const shown = LEARN_PARTS.filter((part) => parts[part]);
   return (
     <span data-part-split className="flex flex-col gap-1.5">
@@ -1727,7 +1713,6 @@ function PartSplit({ ui, parts, onPart, bare = false }: { ui: UICopy; parts: Rec
           <span key={part} className={PART_BG[part]} style={{ flexGrow: parts[part] }} />
         ))}
       </span>
-      {bare ? null : (
       <span className="flex flex-wrap gap-x-3 gap-y-1 text-meta tabular-nums text-slate-300">
         {shown.map((part) =>
           onPart ? (
@@ -1743,7 +1728,6 @@ function PartSplit({ ui, parts, onPart, bare = false }: { ui: UICopy; parts: Rec
           ),
         )}
       </span>
-      )}
     </span>
   );
 }
