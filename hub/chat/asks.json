@@ -13499,6 +13499,48 @@
       "base": "89988795240621540fd4db1d6cb9e09e04b8d5db",
       "head": "1a31e9b",
       "status": "open"
+    },
+    {
+      "id": "a261128-watch-5",
+      "at": "2026-11-28 11:25",
+      "kind": "fix",
+      "from": "watch",
+      "to": "1",
+      "severity": "minor",
+      "what": "src/lib/server/stageCopy.ts:161 — writtenIn 작은따옴표 인용을 앞뒤가 글자가 아닐 때만 빼게 바뀌어 조사가 바로 붙는 ko·ja·zh·th 메모('…'를·'…'の)는 인용이 안 빠져 다시 쓰기 호출·메모 빠짐 (앞뒤 검사를 라틴 문자로만 좁히기)",
+      "files": [
+        "src/lib/server/stageCopy.ts"
+      ],
+      "head": "0fcbe802",
+      "status": "open"
+    },
+    {
+      "id": "a261128-watch-6",
+      "at": "2026-11-28 11:25",
+      "kind": "fix",
+      "from": "watch",
+      "to": "3",
+      "severity": "minor",
+      "what": "src/lib/roleplay/talkMemory.ts:475 — answerGain 되묻는 문장 빼기(QUESTION_END)·문장 자르기에 아랍어 물음표 ؟가 없어 ar 학습자는 되물은 말까지 세어 나아지지 않은 대답도 대화 비교로 뜸 (؟ 넣기)",
+      "files": [
+        "src/lib/roleplay/talkMemory.ts"
+      ],
+      "head": "0fcbe802",
+      "status": "open"
+    },
+    {
+      "id": "a261128-watch-7",
+      "at": "2026-11-28 11:25",
+      "kind": "fix",
+      "from": "watch",
+      "to": "2",
+      "severity": "minor",
+      "what": "src/components/studyMap/Growth.tsx:187 — 아랍어(RTL) 화면에서 낱말 수 칩 '{a} → {b}' 숫자 순서가 뒤집혀 줄었다로 읽힘 (칩에 dir=ltr 또는 bdi)",
+      "files": [
+        "src/components/studyMap/Growth.tsx"
+      ],
+      "head": "0fcbe802",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -14138,7 +14180,7 @@
   ],
   "seq": {
     "261128-3": 10,
-    "261128-watch": 4,
+    "261128-watch": 7,
     "261128-4": 3,
     "261128-2": 5
   }

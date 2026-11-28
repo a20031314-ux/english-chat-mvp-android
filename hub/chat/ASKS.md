@@ -9,10 +9,12 @@
 
 없음
 
-## 탭이 확인할 것 (240)
+## 탭이 확인할 것 (243)
 
 ### 탭 1 메인
 
+- **a261128-watch-5** 🔧 고칠 것 (2026-11-28 11:25, 변경 감시) src/lib/server/stageCopy.ts:161 — writtenIn 작은따옴표 인용을 앞뒤가 글자가 아닐 때만 빼게 바뀌어 조사가 바로 붙는 ko·ja·zh·th 메모('…'를·'…'の)는 인용이 안 빠져 다시 쓰기 호출·메모 빠짐 (앞뒤 검사를 라틴 문자로만 좁히기)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-5 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-4** 🔧 고칠 것 (2026-11-28 09:25, 변경 감시) src/lib/server/stageCopy.ts:160 — writtenIn이 '…' 짝을 인용으로 지워 l'école·I'm 같은 생략이 둘이면 사이 본문까지 지워져 앱 언어 메모를 틀림으로 봄 (앞뒤가 글자가 아닐 때만 인용으로, 생략 낀 테스트)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-4 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261127-watch-2** 🔧 고칠 것 (2026-11-27 19:30, 변경 감시) src/lib/speech/sayLine.ts:88 — 로마자 낱말 끝 わ를 모두 は로 바꿔 denwa→でんは·kawa→かは로 맞는 말이 틀림 채점, 띄어 쓴 'kore wa'는 못 잡음 (따로 선 wa 토큰만 は로)
@@ -270,6 +272,8 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-105** 🔧 고칠 것 (major) (2026-11-24 00:00, 변경 감시) src/lib/curriculum/ladder.ts:281 — readReach가 저장된 hi를 버려 게이지 '위 단계를 맞히면 닿은 단계도 한 번에'가 여덟 번째 답일 때만 됨(Quizbank.tsx:268·431에서 답마다 다시 읽음) (hi도 돌려주기 + localStorage 왕복 테스트, Quizbank.tsx 묶음 시작 saveReach에서도 hi 유지)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-105 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-watch-7** 🔧 고칠 것 (2026-11-28 11:25, 변경 감시) src/components/studyMap/Growth.tsx:187 — 아랍어(RTL) 화면에서 낱말 수 칩 '{a} → {b}' 숫자 순서가 뒤집혀 줄었다로 읽힘 (칩에 dir=ltr 또는 bdi)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-7 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-1** 🔧 고칠 것 (2026-11-28 07:25, 변경 감시) src/components/studyMap/QuizPlayer.tsx:1158 — 대화 채우기(TalkView) open 채점이라 소재 낱말·표현을 안 쓰고 대화에 맞는 다른 말만 쳐도 그 소재를 맞힌 것으로 셈(TypeView는 'also'면 다시 치게 함), 머리 주석 'open 다시 보기는 안 함'도 틀림 (also이고 소재가 w|면 TypeView처럼 다시 치게 하거나 소재 학습으로 안 셈, 주석 고침)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-1 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-2** 🔧 고칠 것 (2026-11-28 07:25, 변경 감시) src/lib/curriculum/quiz.ts:257 — blankShape가 기본 게이지(첫 글자만)에서도 낱말마다 글자 수·아포스트로피 자리를 보여 게이지 'len'(첫 글자+글자 수)과 같은 도움이 됨 — 게이지 한 칸이 사라지고 firstCue가 숨기는 한자 답·세 글자 미만 답 길이도 드러남 (글자 수 밑줄은 cue len일 때만, 기본은 낱말 수만; 한자·짧은 답은 firstCue 기준으로 감춤)
@@ -625,6 +629,8 @@
 
 ### 탭 3 AI
 
+- **a261128-watch-6** 🔧 고칠 것 (2026-11-28 11:25, 변경 감시) src/lib/roleplay/talkMemory.ts:475 — answerGain 되묻는 문장 빼기(QUESTION_END)·문장 자르기에 아랍어 물음표 ؟가 없어 ar 학습자는 되물은 말까지 세어 나아지지 않은 대답도 대화 비교로 뜸 (؟ 넣기)
+  - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-6 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261128-watch-3** 🔧 고칠 것 (2026-11-28 09:25, 변경 감시) src/app/api/roleplay/context/route.ts:101 — 메모 언어 재호출(ask(true))이 실패하면 502로 첫 호출의 노트·facts까지 버려 통화 기억이 안 남음 (ask(true)를 따로 try, 실패하면 첫 결과로 잇고 summary만 빼기)
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261128-watch-3 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261127-watch-4** 🔧 고칠 것 (2026-11-27 19:30, 변경 감시) src/lib/locales/overlays.json — roleplayWhyStuck 일본어 '言えたこと'는 '말해 낸 것'으로 읽혀 '할 수 있었던 말'과 반대 뜻 ('言えたはずのこと' 등으로, generated.json도)
