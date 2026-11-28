@@ -202,7 +202,7 @@ export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; la
           <p className="text-meta text-slate-500">{ui.talkNewUse}</p>
           {view.fresh.map((one) => (
             <p key={one.key} data-talk-fresh-key={one.key} className="flex flex-wrap items-baseline gap-x-2 text-caption">
-              <span className={`rounded-full px-2 py-0.5 text-meta ${LOG.soft}`}>{keyLabel(one.key) || ladderName(language, locale, one.key) || one.key.slice(2)}</span>
+              <span className={`rounded-full px-2 py-0.5 text-meta ${LOG.soft}`}>{keyLabel(one.key) || ladderName(language, locale, one.key)}</span>
               <span dir="auto" className="text-ink">{one.line}</span>
               <span className="text-meta tabular-nums text-slate-500">{day(one.at)}</span>
             </p>

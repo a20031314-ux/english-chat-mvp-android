@@ -27,7 +27,7 @@ import { DictionarySheet } from "@/components/studyMap/Dictionary";
 import { lastUsesIn, progressIn, usedAt, usedFirstOn, usedLineFor, type NewUse } from "@/lib/curriculum/growthView";
 import { forgetGrowthDay, readGrowthLines } from "@/lib/curriculum/growthLines";
 import { forgetTalkDay } from "@/lib/roleplay/talkMemory";
-import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
+import { PairList, TalkCompare, ladderName, useGrowthPairs } from "@/components/studyMap/Growth";
 import { curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, stacksOf, type DayStack, type LearnedItem } from "@/lib/curriculum/learnedView";
 import { partOf, type CardPart } from "@/lib/curriculum/todayCards";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
@@ -340,7 +340,12 @@ export function Logbank({
   // 날 문자열이 둘(logDays localDay "2026-11-9" · 장부·기간 "2026-11-09") — 숫자로 맞춰 찾는다.
   const dayDetail = openDay ? allDays.find((one) => sameDay(one.day, openDay)) ?? null : null;
   const dateLabel = (day: string) => (kind === "week" ? weekdayLabel(locale, day) : String(asDate(day).getDate()));
-  const keyLabel = (key: string) => reviewLabel(language, key) || key.slice(2);
+  // 문법은 이름으로 — "2:2" 같은 번호가 대화 비교 칩에 그대로 보였음(사용자 2026-11-28 "2:2 이건 뭐야").
+  const keyLabel = (key: string) => {
+    if (!key.startsWith("g|")) return reviewLabel(language, key) || key.slice(2);
+    const [stage, index] = key.slice(2).split(":").map(Number);
+    return grammarName?.(stage ?? 0, index ?? 0) || ladderName(language, locale, key);
+  };
   return (
     <div data-logbank className="flex flex-col gap-3">
       <WeakChips
@@ -987,7 +992,12 @@ export function TodayTimeline({
   const summaries = useMemo(() => sessions.map((one) => summarizeSession(one, ledger, (t) => dayOfSeconds(t))), [sessions, ledger]);
   const minutes = sessions.reduce((sum, one) => sum + sessionMinutes(one), 0);
   const [openAt, setOpenAt] = useState<number | null>(null);
-  const keyLabel = (key: string) => reviewLabel(language, key) || key.slice(2);
+  // 문법은 이름으로 — "2:2" 같은 번호가 대화 비교 칩에 그대로 보였음(사용자 2026-11-28 "2:2 이건 뭐야").
+  const keyLabel = (key: string) => {
+    if (!key.startsWith("g|")) return reviewLabel(language, key) || key.slice(2);
+    const [stage, index] = key.slice(2).split(":").map(Number);
+    return grammarName?.(stage ?? 0, index ?? 0) || ladderName(language, locale, key);
+  };
   return (
     <div data-today-timeline className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
