@@ -551,9 +551,8 @@ export function FrameLesson({
               }}
               bankKey={key}
               showExamples={false}
-              // 수업 퀴즈는 답한 뒤 맞음/틀림을 보고 "다음"으로 넘어간다(가상 사용자 2026-11-01 — 쓰기 답이 표시 없이 넘어감), 빈칸 쓰기는 뜻 줄을 먼저(틀을 떠올릴 단서 — 틀은 이미 배움).
+              // 수업 퀴즈는 답한 뒤 맞음/틀림을 보고 "다음"으로 넘어간다(가상 사용자 2026-11-01 — 쓰기 답이 표시 없이 넘어감).
               autoAdvance={false}
-              glossFirst
               onNext={() => {
                 setAnswered(null);
                 if (qIndex + 1 < questions.length) setQIndex(qIndex + 1);

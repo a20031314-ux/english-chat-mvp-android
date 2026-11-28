@@ -75,7 +75,6 @@ export function QuizPlayer({
   bundleKeys,
   onBundle,
   homeworkLast = false,
-  glossFirst = false,
   scoreEnd = false,
 }: {
   ui: UICopy;
@@ -112,8 +111,6 @@ export function QuizPlayer({
   onBundle?: (results: { key: string; correct: boolean; skipped: boolean }[]) => void;
   /** 통화 숙제의 남은 반쪽(대화는 이미 함) — 끝까지 풀고 닫으면 숙제가 끝난 자리라 전면(homeworkEnd). 아니면 닫아도 숙제 도중이라 없음. */
   homeworkLast?: boolean;
-  /** 빈칸 쓰기에서 앱 언어 뜻을 먼저 보여 준다(통화 숙제 — 뜻 없이는 답이 여럿, 2026-11-08 점검). */
-  glossFirst?: boolean;
   /** 끝 화면 제목을 맞음/틀림 대신 점수만(통화 숙제 — 4/6에 "틀렸어요"가 실패처럼 보임, 2026-11-08 점검). */
   scoreEnd?: boolean;
 }) {
@@ -188,7 +185,6 @@ export function QuizPlayer({
             onAnswer={answer}
             onNext={() => setIndex((n) => n + 1)}
             bankKey={bundleKeys?.[index] ?? quizKey}
-            glossFirst={glossFirst}
             // 숙제 퀴즈: 맞혀도 저절로 넘기지 않는다 — 답·코치 한마디(왜)를 보고 "다음"(사용자 2026-11-26 "맞히면 그냥 바로 넘어가버려").
             autoAdvance={false}
           />
@@ -241,7 +237,6 @@ export function QuestionView({
   showExamples = true,
   explainLink = false,
   autoAdvance = true,
-  glossFirst = false,
   dictDoor = false,
 }: {
   ui: UICopy;
@@ -259,8 +254,6 @@ export function QuestionView({
   explainLink?: boolean;
   /** 맞힌 고르기·쓰기를 잠깐 뒤 저절로 넘김(문장구조 수업은 끔 — 결과를 보고 "다음"). */
   autoAdvance?: boolean;
-  /** 빈칸 쓰기의 뜻 줄을 답하기 전에도(문장구조 수업 — 배운 틀을 뜻을 보고 떠올림). 낱말 문제는 늘 답한 뒤에만(2026-10-31). */
-  glossFirst?: boolean;
   /**
    * 개편 Quizbank(lib/reform.ts): 답한 뒤 그 소재의 사전 문 — 낱말은 사전 시트(그 낱말 화면), 표현·문법·문장구조는 그 수업(openLesson).
    * 답하기 전에는 없다(정답이 보임). 틀리거나 모르겠어요면 진하게.
@@ -322,7 +315,7 @@ export function QuestionView({
         {askLine(question, ui, grammarAskName(language, locale, bankKey), locale)}
       </p>
       {question.kind === "fix" ? <FixView question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} glossFirst={glossFirst} /> : null}
+      {question.kind === "type" ? <TypeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} strict={Boolean(bankKey?.startsWith("w|"))} /> : null}
       {question.kind === "spot" ? <SpotView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "choose" ? <ChooseView ui={ui} strict={Boolean(bankKey?.startsWith("w|"))} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "pick" ? <LinePickView language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
@@ -646,7 +639,6 @@ function TypeView({
   onAnswer,
   tag,
   strict = false,
-  glossFirst: glossFirstProp = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -657,8 +649,6 @@ function TypeView({
   tag: string;
   /** 낱말 문제(w|): 그 낱말을 썼는지 본다 — 문장에 맞는 다른 낱말은 맞음으로 세지 않는다(가상 사용자 2026-11-01 "totally 자리에 really도 맞았어요"). */
   strict?: boolean;
-  /** 뜻 줄을 답하기 전에도(문장구조 수업). */
-  glossFirst?: boolean;
 }) {
   const tone = useBankTone();
   const [result, setResult] = useState<Graded | null>(null);
@@ -666,8 +656,8 @@ function TypeView({
   const [otherWord, setOtherWord] = useState(false);
   const { checking, grade } = useTypedGrade(language);
   const gloss = quizGloss(question.gloss, locale, language);
-  // 뜻 먼저: 문장구조 수업(prop) · 문법 사다리 2칸·4칸(문제에 glossFirst).
-  const glossFirst = glossFirstProp || Boolean(question.glossFirst);
+  // 빈칸 쓰기는 늘 뜻 먼저(사용자 2026-11-28 "문제를 푸는 문장에는 해석이 붙어 있어야" — 뜻 없이는 내용 낱말까지 덮인 빈칸을 맞힐 길이 없음).
+  // 앱 언어 = 학습 언어면 quizGloss가 null(뜻 줄이 곧 답).
   const card = question.card;
   const submit = async (typed: string) => {
     if (card) {
@@ -681,7 +671,7 @@ function TypeView({
     const plainWrong = Boolean(question.near?.some((one) => typedRight(one, typed, { language }) === "exact"));
     const sentence = `${question.before}___${question.after}`;
     // 낱말 문제는 문장에 맞는지(open)로 물어 맞으면 "그 낱말을" 다시 치게, 뜻 줄을 먼저 보인 수업은 같은 뜻인지(Pienso que = Creo que), 그 밖은 문장에 맞으면 맞음.
-    const shownMeaning = !strict && glossFirst && gloss ? gloss : undefined;
+    const shownMeaning = !strict && gloss ? gloss : undefined;
     const final = await grade(local, { kind: "blank", sentence, answer: question.answer, typed: typed.trim(), open: strict || !shownMeaning, ...(shownMeaning ? { meaning: shownMeaning } : {}) }, plainWrong);
     if (strict && final === "also") {
       setOtherWord(true);
@@ -725,9 +715,9 @@ function TypeView({
   }
   return (
     <div className="flex flex-col gap-3">
-      {answered || (glossFirst && gloss) ? (
+      {gloss ? (
         <p dir="auto" data-quiz-gloss className="text-note text-slate-400">
-          {quizGloss(question.gloss, locale, language) ?? ""}
+          {gloss}
         </p>
       ) : null}
       {(

@@ -487,16 +487,11 @@ test("빠진 말을 넣기만 한 고침은 틀린 곳 문제가 안 됨 — 멀
   assert.equal(diffSpan("es", "Voy cine mañana.", "Voy al cine mañana."), null);
   assert.equal(diffSpan("ja", "学校行きます。", "学校に行きます。"), null);
   assert.equal(diffSpan("en", "I go to America next month.", "I am going to America next month.")?.want, "am going");
-  // 문장구조 빈칸은 뜻 먼저(뜻 없이는 I am·I see도 맞음).
+  // 빈칸 쓰기는 뜻 줄을 늘 함께 싣는다(화면이 답하기 전부터 보임 — QuizPlayer TypeView).
   const en = typeOf("en", { text: "I have a cat.", gloss: { en: "", raw: "고양이가 한 마리 있어요." }, from: "f|en-f1-18", stage: 1, piece: "I have", who: "me" });
-  assert.ok(en?.kind === "type" && en.glossFirst);
+  assert.ok(en?.kind === "type" && en.gloss.raw === "고양이가 한 마리 있어요.");
   const es = typeOf("es", { text: "Tengo un gato.", gloss: { en: "", raw: "고양이가 있어요." }, from: "f|es-f1-02", stage: 1, piece: "Tengo", who: "me" });
-  assert.ok(es?.kind === "type" && es.glossFirst);
-  // 실제 앱: 출처는 from("qbank" 등), 열쇠는 key.
-  const fromBank = typeOf("en", { text: "It was a good song on the radio.", gloss: { en: "", raw: "그건 라디오에서 나온 좋은 노래였어요." }, from: "qbank", stage: 1, piece: "It was", who: "me" }, "f|en-f1-05");
-  assert.ok(fromBank?.kind === "type" && fromBank.glossFirst, "열쇠가 key로 와도 뜻 먼저");
-  const word = typeOf("en", { text: "I have a cat.", gloss: { en: "", raw: "고양이가 한 마리 있어요." }, from: "w|cat", stage: 1, piece: "cat", who: "me" });
-  assert.ok(word?.kind === "type" && !word.glossFirst, "낱말 빈칸은 그대로");
+  assert.ok(es?.kind === "type" && es.gloss.raw === "고양이가 있어요.");
 });
 
 test("문장 속 빈칸 모양 — 낱말마다 글자 수만큼 밑줄(en·es·ja), 도움 끈 게이지는 그대로 (사용자 2026-11-28)", async () => {

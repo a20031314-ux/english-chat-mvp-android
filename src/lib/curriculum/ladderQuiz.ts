@@ -5,7 +5,7 @@
  *   표현(카드): 1 뜻 고르기(cardQuiz hide) · 2 빈칸 쓰기(cardQuiz show) — 표현 틀린 곳 데이터가 없어 2에서 끝
  */
 import { cardQuiz, formChoice, rng, shuffled, type QuizQuestion } from "./quiz.ts";
-import { blankNeedsMeaning, chooseFromPrepared, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
+import { chooseFromPrepared, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import { spotCells, type SpotItem } from "./spotErrors.ts";
 import { askRung, type Rung } from "./ladder.ts";
 import { isSpaceless } from "../wordSegments.ts";
@@ -162,8 +162,7 @@ export function grammarAsk(item: PreparedItem, current: number, spot: SpotItem |
   if (rung === 2) {
     const near = item.options.filter((option) => option !== item.answer);
     // 빈칸이 내용 낱말까지 덮으면(so loud that · If it rains) 단계와 상관없이 해석 먼저 — 고르기에선 보기가 알려 주던 것.
-    const blankFirst = first || blankNeedsMeaning(item, language);
-    question = { kind: "type", text: item.line, before: item.before, after: item.after, answer: item.answer, gloss: { en: "", raw: item.gloss }, from: item.key, near, ...(blankFirst ? { glossFirst: true } : {}), ...(how.cue ? { cue: how.cue } : {}) };
+    question = { kind: "type", text: item.line, before: item.before, after: item.after, answer: item.answer, gloss: { en: "", raw: item.gloss }, from: item.key, near, ...(how.cue ? { cue: how.cue } : {}) };
   }
   if (rung === 3) question = spotQ;
   return question ? { rung, question } : null;
@@ -180,7 +179,7 @@ export function expressionAsk(language: string, key: string, current: number, se
 /**
  * 소재 수업 퀴즈의 넣어 둔 칸(문법·표현) — Quizbank와 같은 재료로(연결 묶음 quiz-make, 사용자 2026-11-24 "맞추는 걸로"):
  * 고르기(까닭 — chooseFromPrepared) → 틀린 곳(틀린 곳 문항이 있으면, 까닭 — spotQuestion) → 빈칸 쓰기(next — 고르기와 다른 문장일 때만).
- * 해석 먼저는 Quizbank와 같은 규칙(meaningFirst · 빈칸이 내용까지 덮으면 blankNeedsMeaning). 순수.
+ * 해석 먼저는 Quizbank와 같은 규칙(고르기는 meaningFirst, 빈칸 쓰기는 늘 — QuizPlayer TypeView). 순수.
  */
 export function preparedLessonQuiz(item: PreparedItem, spot: SpotItem | null, language: string, stage: number, next?: PreparedItem): QuizQuestion[] {
   const first = meaningFirst(stage, item);
@@ -192,8 +191,7 @@ export function preparedLessonQuiz(item: PreparedItem, spot: SpotItem | null, la
   // 빈칸은 다른 문장으로만 — 방금 고른 문장이면 보기를 베끼면 됨(RULES 11④). 다른 문장이 없으면 빈칸은 수업의 다른 재료(lessonQuiz)가 맡는다.
   if (next && next.line !== item.line && next.line !== spot?.lines[0]) {
     const near = next.options.filter((option) => option !== next.answer);
-    const blankFirst = meaningFirst(stage, next) || blankNeedsMeaning(next, language);
-    out.push({ kind: "type", text: next.line, before: next.before, after: next.after, answer: next.answer, gloss: { en: "", raw: next.gloss }, from: item.key, near, ...(blankFirst ? { glossFirst: true } : {}) });
+    out.push({ kind: "type", text: next.line, before: next.before, after: next.after, answer: next.answer, gloss: { en: "", raw: next.gloss }, from: item.key, near });
   }
   return out;
 }

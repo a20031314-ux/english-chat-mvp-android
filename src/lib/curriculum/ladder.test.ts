@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { askRung, DONE, kindCounts, kindShares, missRates, rungOf, stepLadder, recentRuns, stepReach, REACH_BATCH, gaugeWordScale, axisOf, type Reach } from "./ladder.ts";
 import { grammarAsk, pickCells, preparedLessonQuiz, spotQuestion } from "./ladderQuiz.ts";
 import { formChoice } from "./quiz.ts";
-import { blankNeedsMeaning, meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
+import { meaningFirst, type PreparedItem } from "./preparedQuiz.ts";
 import type { SpotItem } from "./spotErrors.ts";
 
 test("사다리: 고르기 → 빈칸 → 틀린 곳, 맞으면 다음 칸·틀리면 그 칸, 3칸 맞히면 끝, 옛 5(끝)는 끝", () => {
@@ -51,7 +51,7 @@ test("사다리 문제: 문법 1 고르기 · 2 빈칸(뜻 먼저) · 3 틀린 �
   const spot: SpotItem = { id: "ja-s-1", stage: 1, shape: "l", src: "new", lead: "自己紹介をします。", lines: ["私は学生ます。"], errors: [{ line: 0, at: 2, wrong: "ます", right: "です", type: "form", kind: "form", g: "g|1:1", why: { en: "x", ko: "x" } }], gloss: { en: "I am a student.", ko: "나는 학생이에요." } };
   assert.equal(grammarAsk(item, 1, null, "ja")?.question.kind, "choose");
   const two = grammarAsk(item, 2, null, "ja")?.question;
-  assert.ok(two?.kind === "type" && two.glossFirst && two.near?.includes("ます"));
+  assert.ok(two?.kind === "type" && two.gloss.raw === "나는 학생이에요." && two.near?.includes("ます"));
   assert.equal(grammarAsk(item, 3, null, "ja"), null, "틀린 곳 문항이 없으면 낼 칸 없음");
   // 게이지 = 고르기 모양: 내리면 맞는 꼴만, 올리면 다른 모양만, +2는 대답 고르기·틀린 문장만.
   const choices = [
@@ -147,8 +147,6 @@ test("해석 먼저: 1~2단계는 늘, 3단계부터는 해석 없이 갈리는 
   assert.ok(high?.kind === "choose" && high.prepared?.meaningLater);
   const needs = grammarAsk({ ...item, needsMeaning: true }, 1, null, "ja", { stage: 4 })?.question;
   assert.ok(needs?.kind === "choose" && !needs.prepared?.meaningLater);
-  const blank = grammarAsk(item, 2, null, "ja", { stage: 3 })?.question;
-  assert.ok(blank?.kind === "type" && !blank.glossFirst);
   const spotHigh = grammarAsk(item, 3, spot, "ja", { stage: 3 })?.question;
   assert.ok(spotHigh?.kind === "spot" && spotHigh.glossAfter);
   assert.equal(meaningFirst(2), true);
@@ -159,22 +157,12 @@ test("해석 먼저: 1~2단계는 늘, 3단계부터는 해석 없이 갈리는 
   assert.ok(esQ?.kind === "choose" && !esQ.prepared?.meaningLater);
 });
 
-test("빈칸이 내용 낱말까지 덮으면 단계와 상관없이 해석 먼저 — en·es(라틴)·ja(띄어쓰기 없음)·ko", () => {
-  const need = (answer: string, options: string[], language: string) => blankNeedsMeaning({ answer, options }, language);
-  assert.equal(need("so loud that", ["such loud that", "so loud that", "so loudly that", "such a loud that"], "en"), true);
-  assert.equal(need("If it rains", ["If it will rain", "If it rained", "If it rains", "If it rain"], "en"), true);
-  assert.equal(need("which", ["who", "where", "which", "whose"], "en"), false, "보기마다 다른 낱말이면 빈칸만으로 떠올림");
-  assert.equal(need("because", ["so", "because", "but"], "en"), false);
-  assert.equal(need("Llovía", ["Llueve", "Llovía", "Ha llovido", "Llovió"], "es"), true);
-  assert.equal(need("Lo", ["Le", "Los", "La", "Lo"], "es"), false);
-  assert.equal(need("です", ["です", "ます", "だ"], "ja"), false);
-  assert.equal(need("食べたい", ["食べたい", "食べます", "食べた"], "ja"), true);
-  assert.equal(need("가", ["가", "가요", "가세요"], "ko"), true);
+test("고르기는 보기가 알려 주니 3단계부터 해석은 답한 뒤에, 빈칸 쓰기는 뜻 줄을 싣고 감 — en", () => {
   const item: PreparedItem = { key: "g|3:7", kind: "grammar", stage: 3, gloss: "음악이 너무 시끄러워서 나는 귀를 막아야 했다.", before: "The music was ", after: " I had to cover my ears.", answer: "so loud that", options: ["such loud that", "so loud that", "so loudly that", "such a loud that"], line: "The music was so loud that I had to cover my ears.", why: "x" };
   const blank = grammarAsk(item, 2, null, "en", { stage: 4 })?.question;
-  assert.ok(blank?.kind === "type" && blank.glossFirst);
+  assert.ok(blank?.kind === "type" && blank.gloss.raw === item.gloss);
   const choose = grammarAsk(item, 1, null, "en", { stage: 4 })?.question;
-  assert.ok(choose?.kind === "choose" && choose.prepared?.meaningLater, "고르기는 보기가 알려 주니 그대로 답한 뒤에");
+  assert.ok(choose?.kind === "choose" && choose.prepared?.meaningLater);
 });
 
 test("종류 비율: 요즘 연달아 다 맞힌 문법은 잠깐 줄고, 틀리거나 이틀 지나면 원래대로", () => {
@@ -239,7 +227,7 @@ test("소재 수업 퀴즈도 Quizbank 재료로: 고르기(까닭) · 틀린 �
   assert.deepEqual(all.map((q) => q.kind), ["choose", "spot", "type"]);
   assert.ok(all[0]!.kind === "choose" && all[0]!.prepared?.why === "명사 뒤");
   assert.ok(all[1]!.kind === "spot" && all[1]!.why?.ko === "명사 뒤");
-  assert.ok(all[2]!.kind === "type" && all[2]!.text === "これは本です。" && all[2]!.glossFirst, "빈칸은 고르기와 다른 문장, 1단계는 해석 먼저");
+  assert.ok(all[2]!.kind === "type" && all[2]!.text === "これは本です。", "빈칸은 고르기와 다른 문장");
   // 다른 문장이 없으면 빈칸을 내지 않음(방금 고른 보기 베끼기).
   assert.deepEqual(preparedLessonQuiz(item, null, "ja", 1, item).map((q) => q.kind), ["choose"]);
   const es: PreparedItem = { key: "g|3:2", kind: "grammar", stage: 3, gloss: "어제 비가 왔어요.", before: "Ayer ", after: " mucho.", answer: "llovió", options: ["llovió", "llovía", "llueve"], line: "Ayer llovió mucho.", why: "끝난 일" };

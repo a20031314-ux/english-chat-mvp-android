@@ -61,7 +61,7 @@ export type QuizQuestion =
   /** 대화 응답(정기 시험, curriculum/exam.ts): 상대 줄을 듣고 알맞은 내 대답 고르기 — 상대 줄 글은 답한 뒤에. */
   | { kind: "reply"; them: string; themGloss: ScriptGloss; text: string; options: string[]; answer: number; gloss: ScriptGloss; from: string; /** 상대 줄을 처음부터 보임(읽고 대답 고르기 — 문법 칸 대답 고르기, ladderQuiz.ts choiceQuestion). 없으면 듣고 고르기. */ shown?: true; /** 답한 뒤 까닭(앱 언어). */ why?: string }
   /** 빈칸 쓰기(2026-10-30 사용자 "빈칸에 들어갈 단어를 타이핑하는 단순 문제를 대거"): 뜻과 빈칸 문장을 보고 비운 말을 직접 친다 — 보기 없음. */
-  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 뜻 줄을 답하기 전에도(문법 사다리 2칸 — 뜻 없이는 답이 여럿). */ glossFirst?: true; /** 쓰기 도움(게이지): 없으면 첫 글자, "len" 첫 글자 + 글자 수, "none" 없음. */ cue?: "len" | "none" }
+  | { kind: "type"; text: string; before: string; after: string; answer: string; gloss: ScriptGloss; from: string; /** 그 자리의 헷갈리는 오답 — 한 글자 차이여도 이 꼴은 오타로 봐주지 않는다. */ near?: string[]; /** 카드 모양(개편, cardQuiz) — 뜻·예문 뜻은 보이고 낱말 칸과 예문 빈칸만 가림. 답은 예문 속 꼴, 사전형(word)도 맞음. */ card?: QuizCardFace; /** 쓰기 도움(게이지): 없으면 첫 글자, "len" 첫 글자 + 글자 수, "none" 없음. */ cue?: "len" | "none" }
   /**
    * 틀린 곳 찾아 고치기(2026-10-30 사용자 "문장 내에서 틀린 부분을 맞추고 수정하는 식"): 문장의 낱말을 눌러 틀린 곳을 찾고 바른 꼴을 직접 친다.
    * bad가 비면 틀린 곳 없는 문장("틀린 곳 없음"이 답, 찍어 맞히기 막기). want = 틀린 낱말 자리에 들어갈 바른 말. mine = 튜터가 고친 내 줄.
@@ -593,10 +593,7 @@ export function typeOf(language: string, source: QuizSource, key = ""): QuizQues
   const short = isSpaceless(piece) ? [...piece].length <= 8 : segmentWords(piece, language).length <= 3 && piece.length <= 24;
   if (!short) return null;
   const near = key ? nearOf(language, key, piece) : [];
-  // 문장구조(f|) 빈칸은 뜻 먼저 — 뜻 없이 "___ a cat."이면 I am·I see도 맞아 문장구조가 아니라 아무 낱말 맞히기가 된다(체감 점검 2026-11-27 hard-ambiguous). 채점은 같은 뜻인지로.
-  // 열쇠는 key로 온다 — source.from은 출처("qbank"·대본 등)라 f|가 아닐 때가 많다(2026-11-28 사용자 화면: 고친 뒤에도 뜻 없이 나옴).
-  const frame = (key || source.from).startsWith("f|") && Boolean(source.gloss.raw || source.gloss.en);
-  return { kind: "type", text: source.text, before: source.text.slice(0, at), after: source.text.slice(at + piece.length), answer: piece, gloss: source.gloss, from: source.from, ...(near.length ? { near } : {}), ...(frame ? { glossFirst: true as const } : {}) };
+  return { kind: "type", text: source.text, before: source.text.slice(0, at), after: source.text.slice(at + piece.length), answer: piece, gloss: source.gloss, from: source.from, ...(near.length ? { near } : {}) };
 }
 
 /**

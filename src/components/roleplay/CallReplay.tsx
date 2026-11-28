@@ -249,7 +249,6 @@ function HomeworkTabs({ quiz, sheet = false, ...shared }: Shared & { quiz: reado
       onDone={() => undefined}
       // 숙제 끝 전면은 숙제 화면(sheet)에서만 — 통화 끝 화면은 통화 끝 전면과 같은 흐름.
       homeworkLast={sheet && talkDone}
-      glossFirst
       scoreEnd
       onClose={() => {
         setPlaying(false);

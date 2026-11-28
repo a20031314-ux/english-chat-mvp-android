@@ -3,7 +3,6 @@
  * 뜻은 보기 앞에 나오고, 정답은 파일에 적힌 보기뿐이다. 순수.
  */
 import { rng, shuffled, type QuizQuestion } from "./quiz.ts";
-import { segmentWords } from "../wordSegments.ts";
 import type { ChoiceVariant } from "./ladderQuiz.ts";
 
 export type PreparedItem = {
@@ -26,33 +25,8 @@ export type PreparedItem = {
 export type PreparedVariant = Pick<PreparedItem, "before" | "after" | "answer" | "options" | "line" | "gloss" | "why" | "needsMeaning">;
 
 /**
- * 보기 없는 빈칸이 내용까지 덮는가(사용자 2026-11-17 "해석이 없으면 맞출 수 없고 의미가 없는 문제"): 정답 낱말 중 다른 보기에도 든 것
- * (같은 낱말이나 같은 줄기 — rain·rains·rained, loud — 다른 보기 하나에라도)은 고르기에선 보기가 알려 주지만 빈칸에선 해석 말고는 알 길이 없다.
- * 그런 빈칸은 단계와 상관없이 해석을 먼저. 보기마다 낱말이 다른 빈칸(which·who·where)은 그대로. 순수.
- */
-export function blankNeedsMeaning(item: Pick<PreparedItem, "answer" | "options">, language: string): boolean {
-  const words = (text: string) => segmentWords(text, language).map((word) => [...word.toLocaleLowerCase().replace(/[^\p{L}\p{M}\p{N}]/gu, "")]).filter((word) => word.length);
-  // 같은 줄기로 볼 겹친 글자 수: 한글은 한 음절(가·가요, 오니까·오기), 한자·가나는 2, 라틴·키릴·아랍·데바나가리·타이 등은 3(peux·peut, rain·rains).
-  // 똑같은 짧은 낱말(the·a·de — 세 글자 이하)이 겹친 것만으로는 안 센다.
-  const least = (word: string[]) => {
-    const text = word.join("");
-    return /\p{Script=Hangul}/u.test(text) ? 1 : /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(text) ? 2 : 3;
-  };
-  const shares = (a: string[], b: string[]) => {
-    const n = least(a);
-    if (a.join("") === b.join("") && a.length <= 3 && n === 3) return false;
-    if (a.length >= 3 && b.length >= 3 && (a.join("").startsWith(b.join("")) || b.join("").startsWith(a.join("")))) return true;
-    for (let at = 0; at + n <= a.length; at += 1) if (b.join("").includes(a.slice(at, at + n).join(""))) return true;
-    return false;
-  };
-  const others = item.options.filter((option) => option !== item.answer).map(words);
-  // 정답 낱말이 다른 보기 하나에라도 같은 줄기로 들어 있으면 — 고르기에선 보기가 알려 주던 내용(rains·rained, llovía·llovió, ذهبت·أذهب).
-  return words(item.answer).some((word) => others.some((option) => option.some((one) => shares(word, one))));
-}
-
-/**
  * 해석을 문제 앞에 보일까(사용자 2026-11-12 "1+2로" — 어휘가 아닌 문법·틀린 곳 문제):
- * 1~2단계 학습자는 늘(문장 자체를 못 읽음), 3단계부터는 해석 없이는 답이 갈리는 문장만. 나머지는 답한 뒤에.
+ * 1~2단계 학습자는 늘(문장 자체를 못 읽음), 3단계부터는 해석 없이는 답이 갈리는 문장만. 나머지는 답한 뒤에. 고르기·틀린 곳만 — 빈칸 쓰기는 늘 해석 먼저(사용자 2026-11-28, QuizPlayer TypeView).
  */
 export function meaningFirst(stage: number, item?: { needsMeaning?: true }): boolean {
   return stage <= 2 || Boolean(item?.needsMeaning);
