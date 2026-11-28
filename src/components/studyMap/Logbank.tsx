@@ -2,7 +2,7 @@
 
 import { bankTone, PART_BG, PART_BG_DIM, PartMark } from "@/components/studyMap/bankTone";
 import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
-import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { FullScreenLayer, LayerAboveContext } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { useExpressionInsightOptional } from "@/contexts/ExpressionInsightContext";
 import type { UICopy } from "@/lib/copy";
@@ -553,7 +553,9 @@ function TimeSources({ ui, summary, input, period }: { ui: UICopy; summary: Peri
 
 /** 세부 화면(전체 화면 층 — My 전체 화면 위): 머리 제목 + ✕, 안은 스크롤. */
 function LogSheet({ title, ui, onClose, children }: { title: string; ui: UICopy; onClose: () => void; children: ReactNode }) {
+  // My 칸 전체 화면(z 70) 위에 늘 — 작은 칸에서 연 시트가 뒤늦게 열린 전체 화면 밑에 깔려 ✕로 닫아야 보이던 일(사용자 2026-11-28).
   return (
+    <LayerAboveContext.Provider value>
     <FullScreenLayer>
       {/* 포털이라도 누름은 React 트리로 올라가 뒤의 My 칸 크게 보기가 받는다 — 여기서 멈춤. */}
       <div className="contents" onClick={(event) => event.stopPropagation()}>
@@ -568,6 +570,7 @@ function LogSheet({ title, ui, onClose, children }: { title: string; ui: UICopy;
         </div>
       </div>
     </FullScreenLayer>
+    </LayerAboveContext.Provider>
   );
 }
 
@@ -607,7 +610,7 @@ function DayBody({
                 dir="auto"
                 onClick={() => {
                   const key = lessonKeyOf(language, item);
-                  if (key) openLesson({ language, key });
+                  if (key) openLesson({ language, key, above: true });
                   else if (part !== "grammar") insight?.open({ sentence: item.text, selected: item.text });
                 }}
                 className={`rounded-full px-2 py-0.5 text-meta ${item.kind === "mastered" ? "bg-info/20 text-info" : "bg-info/10 text-info/70"}`}
@@ -1236,7 +1239,7 @@ function CallResultCard({ ui, language, call, note, removable = true }: { ui: UI
                   data-day-call-fix
                   onClick={() =>
                     key
-                      ? openLesson({ language, key, scene: { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}) } })
+                      ? openLesson({ language, key, above: true, scene: { line: item.line, ...(item.said ? { said: item.said } : {}), ...(item.before ? { before: item.before } : {}) } })
                       : sendAppIntent("openCall", { id: call.id })
                   }
                   className="text-start text-meta hover:opacity-80"
@@ -1532,7 +1535,7 @@ function LearnedCards({
               <button
                 type="button"
                 data-learned-open
-                onClick={() => (one.key.startsWith("w|") ? setWord(one.key.slice(2)) : openLesson({ language, key: one.key }))}
+                onClick={() => (one.key.startsWith("w|") ? setWord(one.key.slice(2)) : openLesson({ language, key: one.key, above: true }))}
                 className="rounded-full border border-line px-3 py-0.5 text-caption text-slate-300 hover:bg-white/10"
               >
                 <span aria-hidden>📕 </span>
@@ -1549,7 +1552,7 @@ function LearnedCards({
           </li>
         );
       })}
-      {word ? <DictionarySheet ui={ui} language={language} locale={locale} word={word} title={ui.languagebankTitle} onClose={() => setWord(null)} /> : null}
+      {word ? <DictionarySheet ui={ui} language={language} locale={locale} word={word} title={ui.languagebankTitle} onClose={() => setWord(null)} above /> : null}
     </ul>
   );
 }
@@ -1603,7 +1606,8 @@ function DayStacks({
   const every = stacks.length > 10 ? 5 : 1;
   const calls = callsOf(shown.day);
   return (
-    <div data-day-stacks className="flex flex-col gap-2 rounded-xl border border-line p-3">
+    // 기둥·블록을 누르면 그날·그 카드 — 작은 칸이 전체 화면으로 커지지 않게(data-no-enlarge).
+    <div data-day-stacks data-no-enlarge className="flex flex-col gap-2 rounded-xl border border-line p-3">
       <div className="flex items-end gap-1 border-b border-line" style={{ height: Math.ceil(max * unit) + 8 }} dir="ltr">
         {stacks.map((one) => {
           const on = sameDay(one.day, shown.day);
@@ -1876,7 +1880,7 @@ function WeakChips({ ui, language, ledger, label }: { ui: UICopy; language: stri
           type="button"
           dir="auto"
           data-weak-key={key}
-          onClick={() => (key.startsWith("w|") ? focusQuiz(language, [key]) : openLesson({ language, key }))}
+          onClick={() => (key.startsWith("w|") ? focusQuiz(language, [key]) : openLesson({ language, key, above: true }))}
           className={`rounded-full border border-line px-2.5 py-0.5 text-caption text-ink hover:bg-white/10`}
         >
           {label(key)}
