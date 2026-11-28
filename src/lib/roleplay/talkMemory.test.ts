@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { codeOf, grammarList, readTags, tagPrompt, type OpeningLine } from "./talkTags.ts";
-import { answerGain, applyTalkTags, readAnswers, readFirstUses } from "./talkMemory.ts";
+import { answerGain, applyTalkTags, markPieces, readAnswers, readFirstUses } from "./talkMemory.ts";
 import { saveCallNote } from "./callNotes.ts";
 import type { TranscriptLine } from "./review.ts";
 
@@ -42,10 +42,11 @@ test("표시 적용: 문형 칸 숫자·처음 쓴 것·같은 질문 대답(처
   assert.equal(gain.first.a, "Playa");
   assert.ok(gain.after - gain.before >= 3);
   assert.deepEqual(gain.keys, [`g|${g[5]!.id}`], "처음 맞게 쓴 문법");
-  // 밑줄은 처음 대답·질문에 없던 내 말 — "Fui a la playa con mi hermana y comimos paella"에서 Playa는 빼고
-  const marked = gain.marks.map(([a, b]) => gain.last.a.slice(a, b)).join("|");
-  assert.match(marked, /Fui a la/);
-  assert.match(marked, /comimos paella/);
+  // 밑줄은 칩이 가리키는 조각만 — 새 낱말 전부가 아니라(사용자 2026-11-28)
+  const line = "Nothing but it is just packed so I can make it easily";
+  assert.deepEqual(markPieces(line, ["I can ", "can"]).map(([a, b]) => line.slice(a, b)), ["I can"]);
+  assert.deepEqual(markPieces("Candy can help", ["can"]).map(([a, b]) => "Candy can help".slice(a, b)), ["can"], "낱말 안의 can은 아님");
+  assert.deepEqual(markPieces("友達とカフェに行きました", ["行き"]), [[7, 9]], "띄어쓰기 없는 말은 그대로 찾음");
 });
 
 test("그날 지우기: 그날 대답·처음 쓴 것을 지움, 고쳐진 대답은 짝에 안 들어감", async () => {

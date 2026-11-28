@@ -118,9 +118,9 @@ export function forgetTalkDay(language: string, day: string, dayOf: (ms: number)
  * 대화 비교 장면(사용자 2026-11-28 "캡처샷에 표시를 넣어 더 나아졌음을 명시적으로, 나아진 게 없으면 억지로 띄우지 말고"):
  * 같은 종류 질문에 한 처음·최근 대답(둘 다 고침받지 않은 줄 — applyTalkTags가 고친 줄은 안 남김)에서
  * 되묻는 문장(?로 끝남)은 빼고, 질문에 있던 낱말도 빼고 센 "내 말" 낱말 수가 3개 넘게 늘었거나, 최근 대답에 처음 맞게 쓴 문법·표현이 있으면 장면.
- * marks = 최근 대답에서 밑줄 칠 글자 범위([시작, 끝)) — 처음 대답·질문에 없던 내 말 낱말과 그 대답에서 처음 쓴 표현.
+ * 밑줄은 처음 맞게 쓴 문법·표현·문장구조 조각만(markPieces) — 새 낱말 전부에 치면 무엇이 나아졌는지 안 보임(사용자 2026-11-28 "이건 비교해서 뭐가 바뀌었다는 의미야?").
  */
-export type AnswerGain = { first: Answer; last: Answer; before: number; after: number; keys: string[]; marks: [number, number][] };
+export type AnswerGain = { first: Answer; last: Answer; before: number; after: number; keys: string[] };
 
 const QUESTION_END = /[?？]\s*$/u;
 
@@ -142,27 +142,28 @@ export function answerGain(language: string, answers: Answers, firstUses: Record
       .filter(([, use]) => use.at === last.at && use.line === last.a)
       .map(([key]) => key);
     if (!keys.length && after - before < 3) continue;
-    // 밑줄: 처음 대답에 없던 내 말 낱말(차례대로 글자 위치를 찾음) + 처음 쓴 표현 조각.
-    const old = new Set(segmentWords(first.a, language).map((token) => token.toLowerCase()));
-    const marks: [number, number][] = [];
-    let from = 0;
-    const lower = last.a.toLowerCase();
-    for (const token of segmentWords(last.a, language)) {
-      const at = lower.indexOf(token.toLowerCase(), from);
-      if (at < 0) continue;
-      from = at + token.length;
-      if (mine.includes(token) && !old.has(token.toLowerCase())) marks.push([at, at + token.length]);
-    }
-    for (const key of keys) {
-      if (!key.startsWith("e|")) continue;
-      const at = lower.indexOf(key.slice(2).toLowerCase());
-      if (at >= 0) marks.push([at, at + key.length - 2]);
-    }
-    const gain: AnswerGain = { first, last, before, after, keys, marks: mergeMarks(marks) };
+    const gain: AnswerGain = { first, last, before, after, keys };
     const score = (one: AnswerGain) => one.keys.length * 3 + (one.after - one.before);
     if (!best || score(gain) > score(best)) best = gain;
   }
   return best;
+}
+
+/** 문장에서 조각들이 있는 글자 범위([시작, 끝)) — 대소문자 무시, 라틴 글자는 낱말 경계에서만, 겹치면 하나로. */
+export function markPieces(text: string, pieces: readonly string[]): [number, number][] {
+  const lower = text.toLowerCase();
+  const found: [number, number][] = [];
+  for (const raw of pieces) {
+    const piece = raw.trim().toLowerCase();
+    if (!piece) continue;
+    for (let at = lower.indexOf(piece); at >= 0; at = lower.indexOf(piece, at + 1)) {
+      const edge = (i: number) => i < 0 || i >= lower.length || !/[a-zà-ÿ]/u.test(lower[i]!);
+      if (/[a-z]/.test(piece) && !(edge(at - 1) && edge(at + piece.length))) continue;
+      found.push([at, at + piece.length]);
+      break;
+    }
+  }
+  return mergeMarks(found);
 }
 
 /** 겹치거나 공백 하나로 붙은 범위는 하나로(낱말마다 끊긴 밑줄 대신 이어진 조각). */

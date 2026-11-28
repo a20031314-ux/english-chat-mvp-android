@@ -15,7 +15,7 @@ import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import { growthPairs, type GrowthPair } from "@/lib/curriculum/growthView";
 import { GROWTH_LINES_EVENT, readGrowthLines } from "@/lib/curriculum/growthLines";
 import { CALL_NOTES_EVENT } from "@/lib/roleplay/callNotes";
-import { answerGain, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
+import { answerGain, markPieces, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
 import { ladderFor } from "@/lib/curriculum/stages";
 import { SaidWithMistakes } from "@/components/RoleplayReview";
 
@@ -116,7 +116,7 @@ const localDay = (ms: number) => dayOfSeconds(Math.floor(ms / 1000));
 
 /**
  * 대화 비교(사용자 2026-11-28 "캡처샷에 표시를 넣어 더 나아졌음을 명시적으로, 나아진 게 없으면 억지로 띄우지 말고"):
- * 같은 종류 튜터 질문에 한 처음·최근 대답을 통화 대본처럼 말풍선 두 장면으로 — 최근 대답의 나아진 곳에 밑줄,
+ * 같은 종류 튜터 질문에 한 처음·최근 대답을 통화 대본처럼 말풍선 두 장면으로 — 최근 대답에서 처음 맞게 쓴 조각에 밑줄,
  * 아래 칩(처음 맞게 쓴 문법·표현 이름 · 내 말 낱말 수 처음 → 지금). 나아진 게 없으면(talkMemory.ts answerGain) 칸 없음.
  */
 export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; language: string; locale: string; keyLabel: (key: string) => string }) {
@@ -128,6 +128,11 @@ export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; la
   if (!gain) return null;
   const day = (at: number) => shortDay(locale, Math.floor(at / 1000));
   const names = gain.keys.map((key) => keyLabel(key) || ladderName(language, locale, key)).filter(Boolean);
+  // 밑줄 = 칩이 가리키는 조각만: 표현은 그 말, 문장구조·문법은 이름에서 빈칸·설명을 뗀 학습 언어 부분("I can ___." → I can, "can: 능력" → can).
+  const marks = markPieces(
+    gain.last.a,
+    gain.keys.map((key, i) => (key.startsWith("e|") ? key.slice(2) : (names[i] ?? "").split(/[:：]/)[0]!.replace(/_+|…/g, " ").replace(/[.?!。？！]/gu, ""))),
+  );
   const grew = gain.after - gain.before >= 3;
   return (
     <section data-talk-compare className="flex flex-col gap-1.5 rounded-xl border border-line p-3">
@@ -141,7 +146,7 @@ export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; la
       <div className="my-1 border-t border-line" />
       <p className="text-meta tabular-nums text-slate-500">{day(gain.last.at)}</p>
       <TalkBubble who="tutor" text={gain.last.q} />
-      <TalkBubble who="me" text={gain.last.a} marks={gain.marks} />
+      <TalkBubble who="me" text={gain.last.a} marks={marks} />
       {names.length || grew ? (
         <div data-talk-gain className="flex flex-wrap justify-end gap-1">
           {names.map((name) => (
