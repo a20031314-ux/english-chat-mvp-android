@@ -29,3 +29,21 @@ test("talkFills: 고침받은 줄 먼저(내가 한 말 was·처음 꼴은 틀�
   assert.ok(!talkFills("en", [conv], { stage: 5, memo, now: 1000, n: 3 }).some((one) => one.id === got[0]!.id));
   assert.match(lineId("x"), /^t\|/);
 });
+
+test("talkFills: 고침받지 않은 내 줄은 빈칸으로 안 냄, 튜터 줄은 냄 — 영어·스페인어·일본어", () => {
+  const en = talkFills("en", [[
+    { who: "them" as const, text: "What do you put in it?" },
+    { who: "me" as const, text: "Nothing but it is just packed so I can make it easily" },
+  ]], { stage: 5, memo: {}, now: 1000, n: 3 });
+  assert.equal(en.length, 0);
+  const tutor = talkFills("en", [[
+    { who: "me" as const, text: "What will you do?" },
+    { who: "them" as const, text: "I'm going to make some dinner later.", gloss: "나 이따 저녁 해 먹으려고." },
+  ]], { stage: 5, memo: {}, now: 1000, n: 3 });
+  assert.equal(tutor[0]?.question.answer, "going to");
+  assert.equal(tutor[0]?.question.lines.at(-1)?.gloss, "나 이따 저녁 해 먹으려고.");
+  const es = talkFills("es", [[{ who: "them" as const, text: "¿Y tú?" }, { who: "me" as const, text: "Quiero comer pizza esta noche." }]], { stage: 5, memo: {}, now: 1000, n: 3 });
+  assert.equal(es.length, 0);
+  const ja = talkFills("ja", [[{ who: "me" as const, text: "何をしますか？" }, { who: "them" as const, text: "晩ご飯を食べたいです。" }]], { stage: 5, memo: {}, now: 1000, n: 3 });
+  assert.equal(ja[0]?.question.answer, "たいです");
+});

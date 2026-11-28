@@ -16,6 +16,7 @@ import { blankShape, buildQuiz, firstCue, fixedRight, formChoice, joinWords, mor
 import { recheckTyped } from "@/lib/curriculum/typedCheck";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { isSpaceless } from "@/lib/wordSegments";
+import { translateUtterance } from "@/lib/translateUtterance";
 import { quizGloss, SCRIPT_VOICES, type ScriptGloss } from "@/lib/curriculum/stageScripts";
 import { useBankTone } from "@/components/studyMap/bankTone";
 import { multiBlankRight, spotsFixRight, type MultiQuestion, type SpotsQuestion } from "@/lib/curriculum/multiQuiz";
@@ -1140,8 +1141,48 @@ function LinePickView({ language, question, answered, onAnswer, tag }: { languag
  * 대화 조각 빈칸(curriculum/talkQuiz.ts): 내 AI 채팅·통화에서 떼 온 두세 줄 + 마지막 줄의 소재 자리를 비움.
  * 채점은 빈칸 쓰기와 같음(그 소재를 썼는지 — 다른 말을 넣는 open 다시 보기는 안 함). 칠 수 없는 조각은 고르기.
  * 빈칸 줄의 뜻은 처음부터 그 줄 아래(사용자 2026-11-28 "해석이 있어야 문제풀이가 의미가 있지") — 문맥 짐작이 아니라 뜻을 보고 꼴을 떠올리게.
- * 뜻이 있는 줄은 통화 튜터 줄뿐(번역). 앱 언어 = 학습 언어면 뜻 줄이 곧 답이라 안 보임.
+ * 통화 튜터 줄은 저장된 번역, 없으면(채팅 줄·고침받은 내 줄) 처음 낼 때 /api/translate로 한 번 옮겨 이 폰에만(talkGloss.v1, 서버엔 안 남김).
+ * 앱 언어 = 학습 언어면 뜻 줄이 곧 답이라 안 보임.
  */
+const TALK_GLOSS = "talkGloss.v1";
+
+/** 대화 채우기 빈칸 줄의 뜻 — 저장된 번역이 없을 때만 한 번 옮기고 이 폰에 남김(최근 200줄). */
+function useTalkGloss(question: Extract<QuizQuestion, { kind: "talk" }>, locale: string, language: string): string | null {
+  const stored = question.lines[question.at]?.gloss;
+  const id = `${locale}|${language}|${question.text}`;
+  const [text, setText] = useState<string | null>(() => {
+    if (stored || locale === language) return null;
+    try {
+      return (JSON.parse(localStorage.getItem(TALK_GLOSS) ?? "{}") as Record<string, string>)[id] ?? null;
+    } catch {
+      return null;
+    }
+  });
+  useEffect(() => {
+    if (stored || locale === language || text) return;
+    let live = true;
+    const context = question.lines.slice(0, question.at).map((line) => line.text);
+    translateUtterance({ text: question.text, locale, interfaceLanguage: locale, targetLanguage: language, sourceType: "conversation", context })
+      .then((got) => {
+        if (!live || !got) return;
+        setText(got);
+        try {
+          const memo = JSON.parse(localStorage.getItem(TALK_GLOSS) ?? "{}") as Record<string, string>;
+          memo[id] = got;
+          const kept = Object.entries(memo).slice(-200);
+          localStorage.setItem(TALK_GLOSS, JSON.stringify(Object.fromEntries(kept)));
+        } catch {
+          // 이번에만.
+        }
+      })
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, [id, stored, locale, language, text, question]);
+  return text;
+}
+
 function TalkView({ ui, locale, language, question, answered, onAnswer, tag }: { ui: UICopy; locale: string; language: string; question: Extract<QuizQuestion, { kind: "talk" }>; answered: Answer | null; onAnswer: (answer: Answer) => void; tag: string }) {
   const tone = useBankTone();
   const [result, setResult] = useState<Graded | null>(null);
@@ -1158,7 +1199,8 @@ function TalkView({ ui, locale, language, question, answered, onAnswer, tag }: {
     onAnswer({ correct: Boolean(final) });
   };
   const target = question.lines[question.at];
-  const meaning = target?.gloss ? quizGloss({ en: "", raw: target.gloss }, locale, language) : null;
+  const fetched = useTalkGloss(question, locale, language);
+  const meaning = target?.gloss ? quizGloss({ en: "", raw: target.gloss }, locale, language) : fetched;
   return (
     <div className="flex flex-col gap-3" data-talk>
       <ul className="flex flex-col gap-1.5">

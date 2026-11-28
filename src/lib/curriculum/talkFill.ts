@@ -103,10 +103,10 @@ export function talkFills(language: string, convs: readonly (readonly TalkFillLi
       make(conv, at, cut, { ...(hit ? { key: hit.key } : {}), ...(cut.wrong ? { near: [cut.wrong] } : {}), was: line.was, mine: true });
     });
   }
-  // ② 소재가 든 줄(튜터 줄·내가 맞게 쓴 줄).
+  // ② 소재가 든 튜터 줄. 고침받지 않은 내 줄은 맞는 문장인지 모르니 빈칸으로 내지 않는다(사용자 2026-11-28 — 틀린 내 말이 문제로 나옴).
   for (const conv of convs) {
     conv.forEach((line, at) => {
-      if (out.length >= options.n || at === 0 || line.fixed) return;
+      if (out.length >= options.n || at === 0 || line.who !== "them") return;
       const hit = hitsIn(language, line.text, options.stage)[0];
       if (!hit) return;
       make(conv, at, { start: hit.at, end: hit.at + hit.piece.length, answer: hit.piece }, { key: hit.key });
