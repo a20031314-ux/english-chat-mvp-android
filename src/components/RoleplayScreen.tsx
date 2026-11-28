@@ -40,7 +40,7 @@ import {
 import { turnWaitMs } from "@/lib/turnWait";
 import { correctionOf, offeredOf, triedRedo } from "@/lib/roleplay/director";
 import { fixesFromLines, fixesPrompt, mergeFixes, readFixes, settleFixes } from "@/lib/roleplay/fixMemory";
-import { followUpFact, lifeDay, lifeFactsPrompt, markLifeAsked, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
+import { lifeDay, lifeFactsPrompt, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
 import { CallGrowthPairs } from "@/components/studyMap/Growth";
 import { saveCallNote, setCallExtra, setCallSummary } from "@/lib/roleplay/callNotes";
 import { talkStatsOf } from "@/lib/roleplay/talkStats";
@@ -1003,9 +1003,6 @@ export function RoleplayScreen({
     // 통화 카드(문장 없이 — 원문이 20통 밖으로 밀려나도 Logbank에 남음, lib/roleplay/callNotes.ts, 2026-11-06).
     const tally = tallyCall(said);
     const openTalk = Boolean(scenario.openEnded);
-    // 이어 묻기는 튜터 두 번째 말에 붙는다 — 거기까지 갔으면 그 기억에 오늘을 적어 다음 통화들이 또 묻지 않게(사용자 2026-11-28).
-    const asked = openTalk && said.filter((line) => line.who === "tutor").length >= 2 ? followUpFact(prior, [{ who: "tutor" }]) : null;
-    if (asked) markLifeAsked(language, asked, Date.now());
     if (callId) {
       saveCallNote(language, {
         id: callId,

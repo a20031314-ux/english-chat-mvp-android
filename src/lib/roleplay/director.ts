@@ -1,7 +1,5 @@
 import { chatPartnerForLanguage, type TutorGender } from "../chatPartner.ts";
 import { quotesOwnLine } from "./noteCheck.ts";
-import { followUpFact } from "./lifeFacts.ts";
-export { followUpFact };
 import { compareToTarget, formSlip } from "./practice.ts";
 import { segmentWords } from "../wordSegments.ts";
 import { personaBrief } from "../tutorPersona.ts";
@@ -1008,11 +1006,8 @@ Get back to your list as soon as it feels natural.`
             mustReturn(request, scenario) ? ` Come back to it now, with "step:${current.id}".` : ""
           }`
         : `Right now you are on step:${current.id} — ${current.goal}.`,
-    scenario.openEnded && followUpFact(request.prior, request.history)
-      ? `One thing you remember about them, with the day you heard it: "${followUpFact(request.prior, request.history)}". In this reply, after a few words reacting to what they just said, ask one short, warm follow-up about exactly this — not mixed with anything else you remember — as a friend who remembers: for a habit, whether they did it again today or lately; for something they did once, how it was — never whether they did it again; for a plan whose day has passed, how it went; for a plan still ahead, how it is coming along; otherwise how that person, place or thing is doing. Use words at their level. If you already asked about it in this call, do not ask again.`
-      : "",
     request.prior?.trim()
-      ? `What you remember about them from earlier conversations. Each line starts with the day you heard it. Bring one up only when it fits what they just said, in your own manner, and never read this list out loud. A line ending in [asked D] is one you already asked about on day D — do not ask about it again unless they bring it up. Do not invent a memory that is not written here.
+      ? `What you know about them from earlier conversations, like a friend would. Each line starts with the day you heard it: "habit" is something they do again and again, "like" something they enjoy, "done D" something they did once on day D, "plan D" something coming on day D, "about" something that stays true. Let this shape how you talk with them, the way a friend's memory does: when what they say touches one of these, you may link to it in passing. Do not steer the talk toward a memory, do not open with one, and do not bring one up just to show you remember. Never read this list out loud and never invent a memory that is not written here.
 ${request.prior.trim()}`
       : "",
     request.fixes?.trim()

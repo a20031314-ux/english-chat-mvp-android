@@ -9,7 +9,7 @@
 
 없음
 
-## 탭이 확인할 것 (231)
+## 탭이 확인할 것 (234)
 
 ### 탭 1 메인
 
@@ -53,6 +53,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-69 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-72** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/server/voxtralSpeech.ts:167 — 스트림 읽기 오류·20초 제한도 done으로 보고 정상 close — 잘린 소리가 공용 캐시에 들어갈 수 있음 — 끝 표시 없으면 오류로 → realtime 대체
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-72 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-3-8** (2026-11-28 09:00, 탭 3 · f234961) 통화 이어 묻기 지움 — 기억은 알고만 있고 대화가 닿을 때만
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `components/account/AccountCard.tsx` · `components/account/ProfileFacts.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/points/sync/route.ts` · `app/dev/call-preview/page.tsx` · `components/BillingScreen.tsx` … 39개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-3-5** (2026-11-28 08:53, 탭 3 · 7852640) 통화 이어 묻기: 물은 기억은 쉼(습관 7일·그 밖 14일), lifeFacts asked
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `components/account/AccountCard.tsx` · `components/account/ProfileFacts.tsx` · `app/api/ads/config/route.ts` · `app/api/ads/ssv/route.ts` · `app/api/entitlement/route.ts` · `app/api/expression-ask/route.ts` · `app/api/feedback/news/route.ts` · `app/api/points/sync/route.ts` · `app/dev/call-preview/page.tsx` · `components/BillingScreen.tsx` … 39개 더
@@ -384,6 +388,10 @@
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-17 --status 고침`, 아니면 `--status 해당없음 --note 이유`
 - **a261125-watch-18** 🔧 고칠 것 (2026-11-01 00:00, 변경 감시) src/lib/curriculum/scriptChoice.ts:13 — fillBlank가 띄어쓰기 언어면 빈칸 앞뒤에 늘 공백 — 낱말 중간에서 끊기는 줄(ko 조사 등)은 정답도 틀림, 원문 경계에 공백이 있을 때만
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-18 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-3-9** (2026-11-28 09:00, 탭 3 · f234961) 통화 이어 묻기 지움 — 기억은 알고만 있고 대화가 닿을 때만
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `components/studyMap/Logbank.tsx` · `app/api/curriculum/ask/route.ts` · `components/notes/NotebookSection.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/StudyMapTab.tsx` · `app/api/curriculum/frame-lesson/route.ts` · `app/api/curriculum/item-lesson/route.ts` · `app/api/curriculum/option-notes/route.ts` · `app/api/curriculum/qbank/route.ts` · `app/api/curriculum/recall/route.ts` … 19개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-3-6** (2026-11-28 08:53, 탭 3 · 7852640) 통화 이어 묻기: 물은 기억은 쉼(습관 7일·그 밖 14일), lifeFacts asked
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `components/studyMap/Logbank.tsx` · `app/api/curriculum/ask/route.ts` · `components/notes/NotebookSection.tsx` · `components/studyMap/TodayCards.tsx` · `components/studyMap/StudyMapTab.tsx` · `app/api/curriculum/frame-lesson/route.ts` · `app/api/curriculum/item-lesson/route.ts` · `app/api/curriculum/option-notes/route.ts` · `app/api/curriculum/qbank/route.ts` · `app/api/curriculum/recall/route.ts` … 19개 더
@@ -636,6 +644,10 @@
 
 - **a261125-watch-97** 🔧 고칠 것 (2026-11-02 00:00, 변경 감시) src/components/AiTutorProfile.tsx:22 — 앱 언어 값이 localStorage에 없으면 튜터 프로필이 en으로 — readAppLocale() 쓰거나 locale prop
   - 할 것: 지금 코드에서 맞나 보고 고침 → `answer a261125-watch-97 --status 고침`, 아니면 `--status 해당없음 --note 이유`
+- **a261128-3-10** (2026-11-28 09:00, 탭 3 · f234961) 통화 이어 묻기 지움 — 기억은 알고만 있고 대화가 닿을 때만
+  - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
+  - 볼 곳: `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomParts.tsx` · `components/rooms/RoomPeople.tsx` · `components/rooms/RoomView.tsx` · `components/rooms/RoomsScreen.tsx` · `components/rooms/TeamSpace.tsx` … 20개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 - **a261128-3-7** (2026-11-28 08:53, 탭 3 · 7852640) 통화 이어 묻기: 물은 기억은 쉼(습관 7일·그 밖 14일), lifeFacts asked
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 통화 설명 · 통화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · Logbank · 오늘의 학습 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고 · 계정 카드·로그인 · 업데이트 알림 · AI 데이터 동의 · 아이콘·짤 · 랜덤 연결 · 표현 시트
   - 볼 곳: `components/rooms/BoardView.tsx` · `components/rooms/MateAsk.tsx` · `components/rooms/MessagesTab.tsx` · `components/rooms/RoomDm.tsx` · `components/rooms/RoomGroups.tsx` · `components/rooms/RoomParts.tsx` · `components/rooms/RoomPeople.tsx` · `components/rooms/RoomView.tsx` · `components/rooms/RoomsScreen.tsx` · `components/rooms/TeamSpace.tsx` … 20개 더
