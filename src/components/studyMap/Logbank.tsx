@@ -37,9 +37,11 @@ import { focusQuiz } from "@/lib/curriculum/quizFocus";
 import { cardHistory, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session, type SessionSummary } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
-import { quizGloss } from "@/lib/curriculum/stageScripts";
+import { glossFor, quizGloss } from "@/lib/curriculum/stageScripts";
+import { frameById } from "@/lib/curriculum/frames";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { SaidWithMistakes } from "@/components/RoleplayReview";
+import { cachedExpressionCard } from "@/lib/curriculum/useExpressionCards";
 
 const LOG = bankTone("log");
 
@@ -1486,7 +1488,31 @@ function LearnedCards({
   const [word, setWord] = useState<string | null>(null);
   const prepared = usePrepared(language, locale);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
+  const bold = (text: string, piece: string) => {
+    const at = piece ? text.indexOf(piece) : -1;
+    return at < 0 ? (
+      <>{text}</>
+    ) : (
+      <>
+        {text.slice(0, at)}
+        <strong className="font-semibold text-ink">{piece}</strong>
+        {text.slice(at + piece.length)}
+      </>
+    );
+  };
   const face = (key: string) => {
+    // 문장구조: 틀 + 뜻 + 첫 예문(채운 칸 굵게) — 틀 한 줄만 보이던 것(사용자 2026-11-28).
+    if (key.startsWith("f|")) {
+      const frame = frameById(language, key.slice(2));
+      const example = frame?.examples[0];
+      if (!frame || !example) return null;
+      return { word: frame.pattern, meaning: glossFor(frame.meaning, locale), line: bold(example.text, example.slot), lineGloss: quizGloss(example.gloss, locale, language), speak: { text: example.text, tag } };
+    }
+    if (key.startsWith("e|") && !cardFaceOf(language, key)) {
+      const card = cachedExpressionCard(language, locale, key.slice(2));
+      if (!card) return null;
+      return { word: key.slice(2), meaning: card.gloss, line: bold(card.example, card.piece), lineGloss: card.exampleGloss || null, speak: { text: card.example, tag } };
+    }
     if (key.startsWith("w|") || key.startsWith("e|")) {
       const one = cardFaceOf(language, key);
       if (!one) return null;
